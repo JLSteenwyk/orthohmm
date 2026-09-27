@@ -2222,8 +2222,14 @@ tested across all five fixed-seed score/order/self-hit arms. Independent
 integer-key reconstruction reproduced its input hashes, and all five candidate
 files were byte-identical to the historical 54,445-family output. Historical
 and fresh score vectors remained distinct. This bounded ordering control does
-not establish semantic constraint equivalence, final phylogenetic/F1
-reproduction, or cross-runtime determinism; production defaults remain unchanged.
+not establish final phylogenetic/F1 reproduction or cross-runtime determinism;
+production defaults remain unchanged. A subsequent
+[membership-boundary audit](CANONICAL_MEMBERSHIP_CONSTRAINTS_20260926.md)
+found all 8,440 directed source/target constraints in the same semantic order
+as the historical trace for every canonical arm. Raw trace bytes differ, but
+the pinned membership consumer ignores those differing numeric metadata fields.
+Its inputs are therefore equivalent conditional on identical family outcomes;
+newly inferred trees and those outcomes remain to be validated.
 [Canonical candidate control](OB_CANONICAL_CANDIDATE_RESULT_22323.md).
 [Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),

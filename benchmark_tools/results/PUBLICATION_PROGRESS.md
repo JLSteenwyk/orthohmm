@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Reconciliation Constraint Inputs Match Semantically (2026-09-26)
+
+The preceding turn validated canonical candidate files. This continuation
+reread the objective and inspected the frozen membership consumer. It consumes
+only directed source/target gene sets, not trace support/margin metadata. The
+[new audit](CANONICAL_MEMBERSHIP_CONSTRAINTS_20260926.md) finds all 8,440
+constraints identical in semantic content and sequence order across each of
+the five canonical arms and historical trace, despite differing raw JSON bytes.
+
+Thirty-two focused tests pass, including actual-consumer fixtures showing
+unused metadata invariance and the separate group-ordering effect of constraint
+permutation. Thus consumer inputs agree conditional on identical family
+outcomes; no newly inferred tree, root partition or F1 is yet admitted.
+Manuscript source and claims are updated. Production defaults and historical
+results remain unchanged.
+
+Next prepare fresh phylogeny-stage validation from the canonical full-fresh
+candidates using pinned installed code/configuration, with no historical tree
+checkpoint reuse and no repeat all-to-all search. Retain residual differences.
+No native experiment is currently running from this work; broader publication
+requirements remain active and DGX stays deferred.
+
 ## Canonical Full-Data Inputs and Outputs Independently Validated (2026-09-26)
 
 The preceding turn submitted job 22323. This continuation reread the objective,
