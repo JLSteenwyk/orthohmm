@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Selected Numba Components Mapped (2026-09-27)
+
+Previous turn mapped NumPy binary declarations. Inspected the pinned Numba
+wheel and matched five selected notice declarations to eight hashed members.
+The [mapping](NUMBA_COMPONENT_MAPPING_20260927.md) separates Python modules,
+algorithm attribution and bundled headers from runtime use. Documentation
+assets named in the notice were absent under the stated filename searches;
+that does not establish absence of related code everywhere. CUDA header
+presence is retained without claiming GPU use or permission clearance.
+Broader native/static attribution, scientific uncertainty, dedicated timing
+and release requirements remain incomplete; no installed file changed.
+
 ## NumPy Bundled Component Declarations Mapped (2026-09-27)
 
 Previous turn reviewed VGNC inference-method limits. Examined the pinned

@@ -1,0 +1,123 @@
+{
+  "complete_component_inventory": false,
+  "components": [
+    {
+      "component": "appdirs",
+      "evidence_scope": "vendored Python module",
+      "members": [
+        {
+          "bytes": 22388,
+          "member": "numba/misc/appdirs.py",
+          "sha256": "cf25ea0457e3d4445c91c1115ff1bd77700019c88ab81d3a023e7f9a7c86ad34"
+        }
+      ],
+      "notice_line": 5
+    },
+    {
+      "component": "NetworkX",
+      "evidence_scope": "attributed algorithm, not complete NetworkX distribution",
+      "members": [
+        {
+          "bytes": 32454,
+          "member": "numba/core/controlflow.py",
+          "sha256": "1470634a62938b75cffaa092038a32c06e558d2d071ca5c8d6dab9d7fdf6f59c"
+        }
+      ],
+      "notice_line": 32
+    },
+    {
+      "component": "cloudpickle",
+      "evidence_scope": "vendored Python package",
+      "members": [
+        {
+          "bytes": 308,
+          "member": "numba/cloudpickle/__init__.py",
+          "sha256": "2332a6f4cce58df847f9098dfe8fb33f9422993c1bb6025e4636bc9eb1856a74"
+        },
+        {
+          "bytes": 59103,
+          "member": "numba/cloudpickle/cloudpickle.py",
+          "sha256": "015e0c11a7025522f37d0bb595d73130ce5e81f4b705841e21466e15ec340a36"
+        },
+        {
+          "bytes": 323,
+          "member": "numba/cloudpickle/cloudpickle_fast.py",
+          "sha256": "008e5929fd806cb3710fc957c8b0e9299cb3799da87c5b5d2b565616afde7357"
+        }
+      ],
+      "notice_line": 416
+    },
+    {
+      "component": "CUDA Half Precision Headers",
+      "evidence_scope": "bundled headers; runtime use not established",
+      "members": [
+        {
+          "bytes": 126844,
+          "member": "numba/cuda/cuda_fp16.h",
+          "sha256": "d480b499d35d92f29bbc07b4f9fe2e6154bb585ad5a8ec88d674546c18aaafa0"
+        },
+        {
+          "bytes": 89130,
+          "member": "numba/cuda/cuda_fp16.hpp",
+          "sha256": "bc9ecd52bd97dad2a100fee88f2740882a0e8d53ba9f8406a170fa9bd4abae5c"
+        }
+      ],
+      "notice_line": 496
+    },
+    {
+      "component": "pythoncapi_compat",
+      "evidence_scope": "bundled header; binary incorporation not established",
+      "members": [
+        {
+          "bytes": 45414,
+          "member": "numba/pythoncapi_compat.h",
+          "sha256": "c01f0f08f0aa62aa58477608740aeba32609dd6b047391a11b5c4a029d03499a"
+        }
+      ],
+      "notice_line": 510
+    }
+  ],
+  "documentation_declaration": {
+    "component": "jquery.graphviz.svg",
+    "matches": [],
+    "notice_line": 79,
+    "searched_member_substrings": [
+      "docs/dagmap/",
+      "jquery.graphviz"
+    ]
+  },
+  "inventory": {
+    "bytes": 38019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_inference_notices_20260927.json",
+    "sha256": "ad688c76086757457fb6c24e8f7d5b8681a16a95ab64a09476324760cfc96aae"
+  },
+  "limitations": [
+    "Selected declarations only; CPython/Unicode, NumPy and numba-cuda source-attribution mapping remains incomplete.",
+    "Header presence does not establish CUDA runtime use, compiled incorporation or permission analysis.",
+    "Filename absence is not proof that no related code is present elsewhere.",
+    "No exact upstream source equivalence, build provenance or full static component closure established."
+  ],
+  "networkx_attribution": [
+    {
+      "line": 470,
+      "text": "# Based on the implementation from NetworkX"
+    },
+    {
+      "line": 472,
+      "text": "# https://github.com/networkx/networkx/blob/858e7cb183541a78969fed0cbcd02346f5866c02/networkx/algorithms/dominance.py    # noqa: E501"
+    }
+  ],
+  "notice": {
+    "bytes": 26322,
+    "path": "numba-0.67.0.dist-info/licenses/LICENSES.third-party",
+    "sha256": "fdc60ca21d827beb3835ffc6b7a99bda14a5cfcb379d0c82c05e3c1ff4a482f2"
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "status": "numba_selected_notice_to_member_mapping",
+  "wheel": {
+    "bytes": 3821881,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/numba-0.67.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+  }
+}
