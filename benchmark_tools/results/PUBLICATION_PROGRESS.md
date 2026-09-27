@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Residual Difference Localized to Candidate Expansion (2026-09-26)
+
+The preceding turn completed and pushed job-22320 readback. This continuation
+reread the full objective and compared retained intermediate partitions without
+new native inference. All four 0.11.0 pre-candidate stage files are byte-identical
+to their historical records, including the explicitly bound candidate seed.
+The [trace](OB_CANDIDATE_RESIDUAL_TRACE_20260926.md) localizes the remaining
+93-gene discrepancy to candidate expansion: 8,427 shared merge events and 13
+distinct events per side, with support/margin differences around 1e-14 among
+shared events. This is localization, not a tested numerical mechanism.
+
+Fifty-three focused tests pass. All changed groups/genes and distinct merge
+events are retained; no reference labels were used to select examples, and no
+scores/defaults changed. Manuscript source is updated, not the historical
+rendered preview. Next independently vary score values and hit order on the
+same fixed candidate seeds, explicitly controlling self hits, before considering
+a fix or another end-to-end run. Publication-wide unfinished requirements
+remain active; DGX stays deferred.
+
 ## Dependency Replay Complete and Independently Read Back (2026-09-26)
 
 The preceding turn completed and pushed the provenance register. This turn
