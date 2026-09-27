@@ -41,7 +41,9 @@ requirements and must not be confused with these audit commands.
   executes all eight stages on the installation fixture with separate fresh
   environments. It also detects and corrects two historical absolute MAFFT
   convenience links in a new asset copy. Full-OrthoBench inputs are pinned,
-  but the new controller's full-data mode has not yet been executed.
+  and [full-data job 22337](results/INTEGRATED_FULL_OB_PROTOCOL_20260927.md)
+  is now running under a protocol frozen before submission. No full-data
+  result from this controller has yet been admitted.
 
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.

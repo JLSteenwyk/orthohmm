@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Full Integrated OrthoBench Job 22337 Running (2026-09-27)
+
+Protocol commit `8ae66d1` was pushed before submission. The
+[submission receipt](integrated_full_ob_submission_20260927.json) binds job
+22337 to the frozen plan and protocol. Scheduler inspection confirms RUNNING
+on `bizon` with 32 CPUs. Both fresh environment installations and pip checks
+completed; native inference entered built-in HMM all-to-all search. No result
+or score is admitted yet. Next: monitor this exact job, then independently
+check terminal accounting, artifacts, installed payloads and the full historical
+partition/70-family score comparison. Preserve any failure without automatic
+retry. This is shared-host reproduction, not controlled timing or DGX work.
+
 ## Full Integrated OrthoBench Run Prepared (2026-09-27)
 
 Previous turn progressed integrated installation-fixture execution and corrected

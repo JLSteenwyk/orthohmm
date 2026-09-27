@@ -7,6 +7,11 @@ controller at dataset scale after its successful installation-fixture run.
 It is a selective reproducibility rerun, not tuning or a replacement for the
 earlier admitted full run 22326.
 
+Submission update: protocol commit `8ae66d1` preceded
+[job 22337](integrated_full_ob_submission_20260927.json). Its latest observed
+state is RUNNING; installations completed and built-in HMM search started.
+This update does not change the frozen endpoints or imply completion/admission.
+
 ## Fixed Execution
 
 - Local `bizon` node, 32 CPUs, 128 GiB requested RAM and 24-hour job limit.

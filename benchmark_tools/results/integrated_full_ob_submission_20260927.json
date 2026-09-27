@@ -1,0 +1,35 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=32",
+    "--mem=128G",
+    "--time=24:00:00",
+    "--no-requeue",
+    "--export=NONE",
+    "--job-name=ob_integrated_publication",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/slurm-%j.log",
+    "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/slurm-%j.err",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927",
+    "--wrap",
+    "exec /home/bizon/anaconda3/bin/python -I -S -B /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_full_job.py --plan /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/plan.json --sha256 5cab1cd592e6f6d69276c84d0ab5e1b9dc91e1e12a44ace757db87d08df2d899"
+  ],
+  "job_id": "22337",
+  "plan": {
+    "bytes": 64737,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/plan.json",
+    "sha256": "5cab1cd592e6f6d69276c84d0ab5e1b9dc91e1e12a44ace757db87d08df2d899"
+  },
+  "protocol": {
+    "bytes": 3178,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_full_ob_protocol_20260927.json",
+    "sha256": "ba863efc15b03238a7c29e61960a625e6b969df0fd4ddd686f6ac55e172afc48"
+  },
+  "protocol_commit": "8ae66d1",
+  "publication_ready": false,
+  "sbatch_response": "22337"
+}
