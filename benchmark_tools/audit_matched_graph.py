@@ -134,6 +134,38 @@ def verify_edges(path, expected):
         raise ValueError("Graph differs from independent edge derivation")
 
 
+def execution_bindings(path, execution, native, python, installed):
+    expected_env = dict(PATH="/usr/bin:/bin", HOME=str(path), LC_ALL="C",
+                        OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1",
+                        MKL_NUM_THREADS="1", PYTHONHASHSEED="0")
+    if execution["environment"] != expected_env:
+        raise ValueError("Recorded execution environment differs")
+    expected_records = dict(private_numeric=record(path / "numeric.json"),
+                            native_receipt=record(path / "graph/receipt.json"))
+    if any(execution[key] != item for key, item in expected_records.items()):
+        raise ValueError("Execution artifact binding differs")
+    if execution["logs"] != [record(path / name) for name in ("graph.log", "graph.time.txt")]:
+        raise ValueError("Execution log inventory differs")
+    if (native["numeric"] != expected_records["private_numeric"]
+            or native["status"] != "native_graph_completed_pending_independent_readback"
+            or native["executable"] != str(python) or native["prefix"] != str(python.parent.parent)):
+        raise ValueError("Native input/runtime binding differs")
+    expected_outputs = [record(path / "graph" / name) for name in
+                        ("rbnh_edges.npz", "multipass_edges.npz", "initial.tsv", "multipass.tsv", "final.tsv")]
+    expected_checkpoint = record(path / "graph/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json")
+    if native["outputs"] != expected_outputs or native["checkpoint_manifest"] != expected_checkpoint:
+        raise ValueError("Native output inventory differs")
+    # Membership alone permits empty or duplicate lists; require the full module set.
+    modules = native["modules"]
+    expected_names = {"accuracy.py", "externals.py", "refinement.py"}
+    prefix = python.parent.parent.resolve()
+    if (len(modules) != len(expected_names)
+            or {Path(r["path"]).name for r in modules} != expected_names
+            or any(r not in installed["checked_records"] or
+                   not Path(r["path"]).resolve().is_relative_to(prefix) for r in modules)):
+        raise ValueError("Native module inventory differs")
+
+
 def audit(submission_path, output):
     if output.exists():
         raise FileExistsError(output)
@@ -172,6 +204,7 @@ def audit(submission_path, output):
         if len(execution["stages"]) != 1 or execution["stages"][0]["command"] != expected_command or execution["stages"][0]["returncode"] != 0:
             raise ValueError("Changed inference command")
         native = json.loads((path / "graph/receipt.json").read_text())
+        execution_bindings(path, execution, native, python, installed)
         if (native["source"] != record(worker) or native["settings"] != manifest["graph_settings"]
                 or not native["isolated"] or native["truth_loaded"]
                 or any(r not in installed["checked_records"] for r in native["modules"])):
@@ -198,8 +231,8 @@ def audit(submission_path, output):
                          inputs=dataset["inputs"], genes=len(numeric["gene_names"]), groups=len(groups["final"])))
     result = dict(status="all_native_graphs_verified_pending_orthology_scoring", source=record(__file__),
                   submission=record(submission_path), accounting=accounting, cells=rows,
-                  checks=["Raw-to-normalized numeric mapping", "Exact saved checkpoint arrays", "Independent RBNH and singleton edge derivation", "Complete unique-gene partitions", "Pinned settings/source and terminal success"],
-                  limitations=["Does not independently rerun Leiden or derive the refinement decisions.", "No orthology scores calculated; simulations remain development-exposed."],
+                  checks=["Raw-to-normalized numeric mapping", "Exact saved checkpoint arrays", "Independent RBNH and singleton edge derivation", "Complete unique-gene partitions", "Pinned settings/source and terminal success", "Exact recorded environment and artifact/runtime bindings"],
+                  limitations=["Does not independently rerun Leiden or derive the refinement decisions.", "Environment is checked against the runner receipt, not independently observed inside the historical process.", "No orthology scores calculated; simulations remain development-exposed."],
                   accuracy_evaluated=False, publication_ready=False)
     with output.open("x") as stream:
         json.dump(result, stream, indent=2, sort_keys=True)

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Matched-Graph Environment and Artifact Bindings Verified (2026-09-26)
+
+The preceding status turn was a verified wait: Slurm confirmed job 22179
+RUNNING at 2:00:59, with 91.67% of initial search complete. This turn reread
+the full objective and revalidated that job RUNNING at 2:03:15; no restart.
+
+Closed a concrete readback gap: exact recorded environment, private/native
+artifact paths, output/log inventories and complete installed module identity
+are now enforced. All 70 native cells passed the stronger audit, and their
+evidence records are identical to the original readback. The focused audit,
+scorer and runner suite passed 45 tests. The original scores and pinned report
+remain unchanged; [additive audit and limitations](MATCHED_GRAPH_BINDING_AUDIT_20260926.md).
+The broader matched-graph, statistics, figure and resource suite passed 90 tests.
+
+This is additional provenance validation, not independent validation of the
+historical process environment or new biological evidence. Installed full-run
+readback, controlled timing, broader uncertainty/generalization and release
+requirements remain open. Full goal active; DGX remains deferred.
+
 ## Matched-Control Resource Records Consolidated (2026-09-26)
 
 The preceding turn completed relocated count-level statistical reproduction.
