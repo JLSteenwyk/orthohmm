@@ -1,0 +1,141 @@
+{
+  "accuracy_evaluated": false,
+  "admission": {
+    "bytes": 44981566,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/admission.json",
+    "sha256": "b5e8e01f4281835ba6a0f693cc75d36b77ebf7c1a679c2152450dda52562baba"
+  },
+  "changed_families": [],
+  "historical_scores_replaced": false,
+  "job_id": 22329,
+  "limitations": [
+    "Downstream cached-candidate comparison, not fresh search or independent generalization",
+    "Tree byte differences, if present, do not by themselves establish topology differences"
+  ],
+  "membership": {
+    "fresh": {
+      "constraints": 40169,
+      "detached_constraints": 11334,
+      "detached_genes": 26107,
+      "ortholog_pairs_removed": 191368,
+      "policy": "high_confidence_pair",
+      "root_hogs_added": 11186,
+      "supported_constraints": 28835
+    },
+    "historical": {
+      "constraints": 40169,
+      "detached_constraints": 11334,
+      "detached_genes": 26107,
+      "ortholog_pairs_removed": 191368,
+      "policy": "high_confidence_pair",
+      "root_hogs_added": 11186,
+      "supported_constraints": 28835
+    }
+  },
+  "pairs": {
+    "annotations_changed": 0,
+    "confidence_tables_equal": true,
+    "left_only": 0,
+    "pair_sets_equal": true,
+    "right_only": 0,
+    "shared": 5959560
+  },
+  "partition": {
+    "current_groups": 366068,
+    "current_only_groups": 0,
+    "genes_in_changed_groups": 0,
+    "identical_groups": 366068,
+    "label_invariant_equal": true,
+    "original_groups": 366068,
+    "original_only_groups": 0
+  },
+  "plan": {
+    "bytes": 1035097,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/plan.json",
+    "sha256": "57247bf76d26c1ff54cf13aa4c9d0a9622f0b8a2902c45ef222842513888d030"
+  },
+  "publication_ready": false,
+  "reports": [
+    {
+      "bytes": 30048831,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/events.json",
+      "sha256": "8072eaaa208cfa4d6911292d99635b5284d5df15bc689560e1c0f908753afc7f"
+    },
+    {
+      "bytes": 23306,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/hierarchy.json",
+      "sha256": "8dbd5461d7b262a38646f2dd4e873331360f4312c5629c0e3d9b22f1fc132386"
+    },
+    {
+      "bytes": 14954203,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/sequences.json",
+      "sha256": "d71aa04cbb0331f436ebf45c5029dceadced916fa4c4b1d21ba9fefe0544ed35"
+    },
+    {
+      "bytes": 30047510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/structure.json",
+      "sha256": "0e6f022df3e5bf1bde8baf3054234fddd0c0f93f455a449856e638823ae7a1cd"
+    },
+    {
+      "bytes": 29951773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/events.json",
+      "sha256": "e868975325e8713782a61d08e575a3532d2145366f3e67e8ed15b7f13f1b2742"
+    },
+    {
+      "bytes": 23307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/hierarchy.json",
+      "sha256": "309f98c9514a274719fd47905589fbf1b97be768a32549ac4cd6c5feaeb2a9d8"
+    },
+    {
+      "bytes": 14905623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/sequences.json",
+      "sha256": "2564e22ea196a2fc5f3d05459cceac30f56c8250b92dd4adb1dac81c3bd7d574"
+    },
+    {
+      "bytes": 29950448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/structure.json",
+      "sha256": "9234d3504af1525d5c8eb5b744018ffeb7f39c3ddd9356bc908004503714881e"
+    }
+  ],
+  "source": {
+    "bytes": 9826,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_qfo_fresh_phylogeny.py",
+    "sha256": "c6c732fa3ecca8c23dd4d0f4be9764991d7188e4305354dab56c8e24dd3a7bf8"
+  },
+  "species_tree_bytes_equal": true,
+  "status": "fresh_qfo_phylogeny_scientific_readback_complete",
+  "summaries": {
+    "fresh": {
+      "bypassed_families": 327475,
+      "candidate_families": 351739,
+      "checkpoint_hits": 0,
+      "duplications": 230951,
+      "ortholog_pairs": 5959560,
+      "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/native/inference/orthohmm_phylogeny",
+      "reconciled_families": 24264,
+      "remapped_checkpoint_hits": 0,
+      "root_hogs": 366068,
+      "schema_version": 1,
+      "speciations": 251608,
+      "species_tree_checkpoint_hit": false,
+      "species_tree_families": 26,
+      "uncertain_events": 78285
+    },
+    "historical": {
+      "bypassed_families": 327475,
+      "candidate_families": 351739,
+      "checkpoint_hits": 0,
+      "duplications": 230951,
+      "ortholog_pairs": 5959560,
+      "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny",
+      "reconciled_families": 24264,
+      "remapped_checkpoint_hits": 0,
+      "root_hogs": 366068,
+      "schema_version": 1,
+      "speciations": 251608,
+      "species_tree_checkpoint_hit": false,
+      "species_tree_families": 26,
+      "uncertain_events": 78285
+    }
+  }
+}

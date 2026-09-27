@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Retained-Order QfO Reproducibility Validated (2026-09-27)
+
+Previous turn was a verified wait. Corrected audit 22332 now COMPLETED 0:0 in
+00:22:44. Successful execution/result bindings, 745 plan records and all eight
+scientific report identities/statuses were rechecked. The
+[validated comparison](QFO_FRESH_PHYLOGENY_RESULT_22329.md) establishes exact
+label-invariant equality of 366,068 root groups and all 5,959,560 native pairs
+including confidence/species annotations, with identical species-tree bytes
+and no changed family partition. Native 22329 used no tree checkpoint reuse.
+This validates retained-order downstream reproducibility, not canonical-order
+equivalence, improved accuracy or independent generalization. Next bind reuse
+to completed 22332, preserving the recorded audit sources, then freeze and
+submit the canonical arm. No native rerun or historical score replacement;
+all wider publication gates remain open.
+
 ## Corrected Readback Submitted As 22332 (2026-09-27)
 
 Submitted frozen corrected audit as job 22332, 2 CPUs/128 GiB/3 hours,

@@ -1,0 +1,62 @@
+{
+  "accuracy_evaluated": false,
+  "checked_source_and_plan_records": 745,
+  "execution": {
+    "bytes": 581,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2_execution.json",
+    "sha256": "4e9a81e32a7aeebb7e1e8f151327ca9160e7e4afc92b5d9ae89dd1b7cb19cfc6"
+  },
+  "native_job": 22329,
+  "plan": {
+    "bytes": 180101,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2_plan.json",
+    "sha256": "d42e759f2d42442f250a440a1138be30660b2d842c2477bb4d44024e54edcdca"
+  },
+  "publication_ready": false,
+  "readback_job": 22332,
+  "reports": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/events.json",
+      "status": "frozen_phylogeny_event_pair_semantics_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/hierarchy.json",
+      "status": "phylogeny_selection_and_hierarchy_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/sequences.json",
+      "status": "phylogeny_sequence_content_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/fresh/structure.json",
+      "status": "phylogeny_structure_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/events.json",
+      "status": "frozen_phylogeny_event_pair_semantics_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/hierarchy.json",
+      "status": "phylogeny_selection_and_hierarchy_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/sequences.json",
+      "status": "phylogeny_sequence_content_verified"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/historical/structure.json",
+      "status": "phylogeny_structure_verified"
+    }
+  ],
+  "result": {
+    "bytes": 5708,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2/result.json",
+    "sha256": "30d70985b0792718525cc34e71e142144703cf76c322a6015648faf8ac9dff03"
+  },
+  "status": "completed_readback_receipts_verified",
+  "submission": {
+    "bytes": 2395,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_v2_submission.json",
+    "sha256": "d06a1671d93418ef7ee8620bcd44b478d6b19aef3ea1efdcd4be811c0843d24d"
+  }
+}
