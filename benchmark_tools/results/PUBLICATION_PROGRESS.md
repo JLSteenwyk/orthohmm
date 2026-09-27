@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Paired QfO Replay Submitted (2026-09-27)
+
+After committing and pushing protocol/launcher `3c7d1fc`, submitted once as
+job `22328` on local node bizon (two CPUs, 128 GiB, four hours, no requeue).
+Scheduler inspection confirms RUNNING and the retained-order worker has
+written its start receipt. The exact submission is preserved in
+`benchmarks/work/qfo_order_replay_20260927/submission.json` and the tracked
+`qfo_order_replay_submission_22328.json`. Canonical follows serially.
+No full-arm completion or scientific readback is yet claimed. Next implement
+and test independent readback under the already frozen endpoints, then check
+the same job rather than resubmitting. Do not edit its pinned launcher/policy.
+
 ## Paired QfO Candidate Replay Frozen (2026-09-27)
 
 The preceding user-facing turn was a status report, not a new analysis.
