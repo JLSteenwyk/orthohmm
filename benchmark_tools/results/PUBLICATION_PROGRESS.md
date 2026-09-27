@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Canonical QfO Launcher And Admission Gate Added (2026-09-27)
+
+Previous turn validated the filtered-cache fixture. Added the full
+[canonical launcher and gate](QFO_CANONICAL_LAUNCHER_20260927.md) in new files,
+leaving the 731 queued-reader sources unchanged. Fifty-seven focused tests
+pass. A real scheduler probe rejects pending readback 22330 before creating
+the canonical directory. Native 22329 is still RUNNING; no canonical plan or
+job exists. Next admit successful native/readback completion, then freeze and
+commit the actual canonical plan before a single submission. Full results,
+accuracy effects and publication readiness remain unproven; DGX deferred.
+
 ## Filtered Raw-Tree Reuse Validated On Fixture (2026-09-27)
 
 Previous turn prepared/queued independent readback. Native 22329 remains

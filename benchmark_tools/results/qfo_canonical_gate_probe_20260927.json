@@ -1,0 +1,16 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS\n22329|RUNNING|0:0|00:14:46|32\n22329.batch|RUNNING|0:0|00:14:46|32\n22330|PENDING|0:0|00:00:00|0\n",
+  "destination_created": false,
+  "error": "Requested job is not uniquely confirmed COMPLETED with exit 0:0",
+  "gate_source": {
+    "bytes": 6415,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_qfo_raw_tree_reuse.py",
+    "sha256": "4d8a9c7c0d53dcde2183b1c80350dd97fffb21abc0b147ce35bc6e7e9e2171de"
+  },
+  "source": {
+    "bytes": 7654,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_canonical_phylogeny.py",
+    "sha256": "a0ec4e644e68da7a0b7b59b53adbeca964337beff4030eb7df9d1c5fe19c00da"
+  },
+  "status": "pending_readback_correctly_rejected"
+}
