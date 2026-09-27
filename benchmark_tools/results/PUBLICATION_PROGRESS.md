@@ -1,5 +1,15 @@
 # Publication Progress
 
+## Full Unit Regression Refreshed (2026-09-27)
+
+Previous turn integrated the GO/EC interpretation. Ran the complete unit
+suite at `3eb446e`: 10,874 passed, ten opt-in native checks skipped, and 22
+existing frozen-source warnings in 325.62 seconds. No retries or fixes were
+needed. Scoped source status was clean before/after; unrelated changes remain.
+The [receipt](PUBLICATION_TEST_REFRESH_20260927_v3.md) preserves JUnit identity,
+exact skips and scope. This adds current-revision regression evidence, not
+biological validation, timing comparison or publication readiness.
+
 ## GO/EC Interpretation Added To Manuscript (2026-09-27)
 
 Previous turn completed the eight-method scored-pair panel. Added its bounded

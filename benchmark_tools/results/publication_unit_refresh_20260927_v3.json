@@ -1,0 +1,94 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-m",
+    "pytest",
+    "tests/unit",
+    "-q",
+    "--junitxml=benchmarks/work/publication_unit_refresh_20260927_v3.xml"
+  ],
+  "errors": 0,
+  "exit_code": 0,
+  "failures": 0,
+  "junit": {
+    "bytes": 1461316,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_unit_refresh_20260927_v3.xml",
+    "sha256": "3f40f0509abe3067a39148e30d335a08472db8fd5b521fe10f3d51d99d04653c"
+  },
+  "junit_suite": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "bizon",
+    "name": "pytest",
+    "skipped": "10",
+    "tests": "10884",
+    "time": "325.170",
+    "timestamp": "2026-09-27T11:22:40.246871-04:00"
+  },
+  "limitations": [
+    "Unit suite only; ten opt-in installed native checks skipped",
+    "No independent biological accuracy, controlled timing or publication readiness established"
+  ],
+  "passed": 10874,
+  "publication_ready": false,
+  "pytest_version": "9.0.2",
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "revision": "3eb446e80ec59bdef8c18d9be2cd72c33191fed6",
+  "scoped_source_status_before_and_after": "clean for tests/unit, benchmark_tools/*.py, orthohmm; unrelated sample changes preserved",
+  "skipped": [
+    {
+      "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+      "name": "test_independent_complete_recheck",
+      "reason": "Installed native runtime"
+    },
+    {
+      "classname": "tests.unit.test_audit_orthomcl_database",
+      "name": "test_installed_formatdb_normalization_is_detected",
+      "reason": "Opt-in installed legacy database round trip"
+    },
+    {
+      "classname": "tests.unit.test_describe_legacy_residue_deletions",
+      "name": "test_native_query_and_database_delete_o",
+      "reason": "Opt-in installed native query and database parser probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[False]",
+      "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[True]",
+      "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_perl_launcher",
+      "name": "test_installed_perl_probe_has_no_relative_lookup",
+      "reason": "Opt-in native Perl probe"
+    },
+    {
+      "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+      "name": "test_installed_checkpoint",
+      "reason": "Opt-in installed frozen OrthoMCL runtime"
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[False]",
+      "reason": "Opt-in installed legacy engine smoke"
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[True]",
+      "reason": "Opt-in installed legacy engine smoke"
+    },
+    {
+      "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+      "name": "test_installed_staged_native_inference",
+      "reason": "Installed dedicated Python and native fixture required"
+    }
+  ],
+  "status": "current_unit_suite_passed",
+  "terminal_elapsed_seconds": 325.62,
+  "warning_detail": "11 repetitions each of frozen parser.py:24 and writer.py:57 invalid-escape DeprecationWarnings",
+  "warnings": 22
+}

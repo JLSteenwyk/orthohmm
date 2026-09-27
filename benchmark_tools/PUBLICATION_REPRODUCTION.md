@@ -82,14 +82,16 @@ RUNNING observation does not establish current liveness or completion.
   The [exact integrated-wheel notice texts](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md)
   have been collected and verified separately for release review, not redistribution clearance.
 
-- [Latest full unit regression](results/PUBLICATION_TEST_REFRESH_20260927_v2.md)
-  records 10,819 passes and ten opt-in skips at revision `75d42e7`.
+- [Latest full unit regression](results/PUBLICATION_TEST_REFRESH_20260927_v3.md)
+  records 10,874 passes and ten opt-in skips at revision `3eb446e`.
+  The 10,819-pass run remains historical evidence at `75d42e7`.
   The earlier 10,729-pass run remains historical evidence at `9914060`.
   The [separate installed-native follow-up](results/PUBLICATION_NATIVE_TEST_REFRESH_20260927.md)
   passed the earlier run's ten skipped tests; it is not automatically a
   native-suite pass at every subsequent revision. The later
   [ELF inventory](results/INTEGRATED_WHEEL_ELF_20260927.md) has 41 focused
-  passing tests and postdates the latest full suite. Preserve these scopes
+  passing focused tests and is included in the latest full suite, alongside
+  base-archive staging and GO/EC scored-pair tools. Preserve these scopes
   and the 22 frozen-source warnings; tests do not establish biological
   accuracy or controlled performance.
 
