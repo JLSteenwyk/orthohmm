@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Full QfO Readback Queued (2026-09-27)
+
+Committed and pushed readback `ce78398`, then submitted job `22330` on bizon
+with `afterok:22329`, two CPUs, 128 GiB, three hours and no requeue. The
+source-pinned readback plan binds 731 current harness/scientific Python files;
+do not edit these while this audit is pending/running. New files and ledger
+updates do not alter those records. Exact submission is retained in
+`qfo_fresh_phylogeny_readback_submission_20260927.json`. Canonical reuse must
+require successful scheduler accounting, `readback_execution.json`, unchanged
+plan/source/output identities and all scientific reports, not a result file
+alone. Fresh native 22329 remains RUNNING; 22330 waits on its dependency.
+No full result or publication readiness claim is made.
+
 ## Full QfO Scientific Readback Prepared (2026-09-27)
 
 The previous turn launched fresh phylogeny 22329; scheduler inspection still
