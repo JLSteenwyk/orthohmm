@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Canonical Six-Endpoint Assessment Admitted (2026-09-27)
+
+Previous turn was a verified wait on job 22336. It completed 0:0 in 00:30:00,
+eight CPUs. Independent admission succeeded, including frozen dependencies,
+execution and complete output inventories, 15 tasks and native endpoint/family
+validation. Full local receipt SHA256
+`194d38a5ef6448e9f2b81a1def944a51dd16885037f73e180b0330b4feb51cd6`.
+Added a hash-bound comparison exporter and nine tests; combined exporter and
+admission tests: 19 passed. Real export rechecked admission dependencies and
+preserves both rows and native axes. Five endpoint scores are exactly unchanged;
+FAS differs by -0.000405182646 under unseeded native sampling. No isolated
+ordering effect or paired confidence interval is claimed. See
+[completed result](QFO_CANONICAL_ASSESSMENT_RESULT_22336.md) and
+[generated table](qfo_canonical_comparison_20260927/scores.md).
+Manuscript source and claim checklist now reflect admitted accuracy results.
+No new method selection or production changes. Scoring is no longer live;
+next regenerate and inspect the manuscript review, then continue remaining
+generalization, uncertainty, dedicated-resource and release gates. The v23
+render remains historical, not the current manuscript source.
+
 ## Historical QfO Comparator Readmitted (2026-09-27)
 
 Previous turn was a verified wait on live assessment 22336. Scheduler still

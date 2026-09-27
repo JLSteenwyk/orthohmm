@@ -2338,10 +2338,16 @@ contradict canonical prediction equivalence on QfO. They are not a fresh
 search, independent accuracy confirmation or controlled timing comparison.
 All 5,959,535 canonical native pairs passed independent conversion validation
 with zero mapping loss. Their [six-endpoint scoring protocol](QFO_CANONICAL_SCORING_PROTOCOL_20260927.md)
-is frozen; final accuracy admission remains pending. Historical QfO scores
-must not be transferred to these changed predictions, and no score has been
-replaced or default retuned. Native FAS uses unseeded sampling, preventing
-attribution of its score difference solely to candidate ordering.
+was followed by a [completed and independently validated assessment](QFO_CANONICAL_ASSESSMENT_RESULT_22336.md).
+GO, EC, VGNC, SwissTrees and TreeFam-A scores were exactly unchanged. FAS was
+0.762588129455 versus historical 0.762993312100; native unseeded sampling
+prevents attributing that difference solely to candidate ordering. The
+secondary six-metric mean was 0.761442488335 versus 0.761510018776, with the
+entire change arising from FAS. This heterogeneous mean is not F1, and native
+uncertainty fields do not establish paired confidence intervals. Both
+evaluated arms remain separately recorded; no historical score was replaced,
+ordering selected for its score or default retuned. Unchanged scores on five
+endpoints do not negate the observed prediction differences.
 
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original

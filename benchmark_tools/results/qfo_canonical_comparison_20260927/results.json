@@ -1,0 +1,204 @@
+{
+  "canonical_admission": {
+    "bytes": 577996,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_assessment_20260927/admission.json",
+    "sha256": "194d38a5ef6448e9f2b81a1def944a51dd16885037f73e180b0330b4feb51cd6"
+  },
+  "canonical_mean": 0.761442488334736,
+  "historical_mean": 0.7615100187756848,
+  "historical_readmission": {
+    "bytes": 23887,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_canonical_historical_readmission_20260927.json",
+    "sha256": "26853f680d5858b09ed580d1bbf64dab0920d5eacd62bf84b4fb3ea988086145"
+  },
+  "limitations": [
+    "Development-exposed downstream ordering experiment, not independent generalization",
+    "FAS is an unseeded native sample; differences are not solely attributable to ordering",
+    "Six-endpoint mean is a project-defined secondary summary, not F1",
+    "Native standard errors are not paired difference confidence intervals"
+  ],
+  "native_tasks": 15,
+  "publication_ready": false,
+  "rows": [
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "canonical": 0.49034928,
+      "canonical_native": {
+        "metric_x": 84211,
+        "metric_y": 0.49034928,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0,
+        "stderr_y": 0.0016002345
+      },
+      "difference": 0.0,
+      "endpoint": "GO",
+      "historical": 0.49034928,
+      "historical_native": {
+        "metric_x": 84211,
+        "metric_y": 0.49034928,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0,
+        "stderr_y": 0.0016002345
+      },
+      "sampling_confounded": false,
+      "semantics": "avg Schlicker"
+    },
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "canonical": 0.9656505,
+      "canonical_native": {
+        "metric_x": 117460,
+        "metric_y": 0.9656505,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0,
+        "stderr_y": 0.00072247848
+      },
+      "difference": 0.0,
+      "endpoint": "EC",
+      "historical": 0.9656505,
+      "historical_native": {
+        "metric_x": 117460,
+        "metric_y": 0.9656505,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0,
+        "stderr_y": 0.00072247848
+      },
+      "sampling_confounded": false,
+      "semantics": "avg Schlicker"
+    },
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "canonical": 0.9016900956268489,
+      "canonical_native": {
+        "metric_x": 0.8214255870310019,
+        "metric_y": 0.9993391958521832,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0.004852238696288214,
+        "stderr_y": 0.0003590985209209903
+      },
+      "difference": 0.0,
+      "endpoint": "VGNC",
+      "historical": 0.9016900956268489,
+      "historical_native": {
+        "metric_x": 0.8214255870310019,
+        "metric_y": 0.9993391958521832,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0.004852238696288214,
+        "stderr_y": 0.0003590985209209903
+      },
+      "sampling_confounded": false,
+      "semantics": "harmonic mean of native TPR and PPV"
+    },
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "canonical": 0.8335132205147882,
+      "canonical_native": {
+        "metric_x": 0.73934126,
+        "metric_y": 0.95517675,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0.032223764,
+        "stderr_y": 0.030869478
+      },
+      "difference": 0.0,
+      "endpoint": "SwissTrees",
+      "historical": 0.8335132205147882,
+      "historical_native": {
+        "metric_x": 0.73934126,
+        "metric_y": 0.95517675,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0.032223764,
+        "stderr_y": 0.030869478
+      },
+      "sampling_confounded": false,
+      "semantics": "harmonic mean of native TPR and PPV"
+    },
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "canonical": 0.614863704412014,
+      "canonical_native": {
+        "metric_x": 0.45246406,
+        "metric_y": 0.95911016,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0.0066114283,
+        "stderr_y": 0.0038298441
+      },
+      "difference": 0.0,
+      "endpoint": "TreeFam-A",
+      "historical": 0.614863704412014,
+      "historical_native": {
+        "metric_x": 0.45246406,
+        "metric_y": 0.95911016,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0.0066114283,
+        "stderr_y": 0.0038298441
+      },
+      "sampling_confounded": false,
+      "semantics": "harmonic mean of native TPR and PPV"
+    },
+    {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "FAS"
+      },
+      "canonical": 0.7625881294547653,
+      "canonical_native": {
+        "metric_x": 5959535.0,
+        "metric_y": 0.7625881294547653,
+        "participant_id": "ohmm_qfo_canonical_20260927",
+        "stderr_x": 0,
+        "stderr_y": 0.00043863947152806236
+      },
+      "difference": -0.0004051826456924479,
+      "endpoint": "FAS",
+      "historical": 0.7629933121004577,
+      "historical_native": {
+        "metric_x": 5959560.0,
+        "metric_y": 0.7629933121004577,
+        "participant_id": "ohmm_qfo_corrected_factorial_p1_c1_r1",
+        "stderr_x": 0,
+        "stderr_y": 0.0004368836408145141
+      },
+      "sampling_confounded": true,
+      "semantics": "FAS"
+    }
+  ],
+  "scheduler": {
+    "AllocCPUS": "8",
+    "Elapsed": "00:30:00",
+    "ExitCode": "0:0",
+    "JobIDRaw": "22336",
+    "State": "COMPLETED"
+  },
+  "source": {
+    "bytes": 5077,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_qfo_canonical_comparison.py",
+    "sha256": "4a031edee7985fa7863e53e0f746dba15932aa04f46e326b5e53703b0fd0b3af"
+  },
+  "status": "canonical_qfo_ordering_comparison",
+  "table": {
+    "bytes": 965,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_canonical_comparison_20260927/scores.md",
+    "sha256": "6181494ad62f6e9c5af3e6cee647955eaa6e8b0c41584ae476b8a8d507ed4a2b"
+  }
+}
