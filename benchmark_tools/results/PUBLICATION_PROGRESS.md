@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Reader Security Upgrade Validated (2026-09-27)
+
+The preceding status-only turn did not advance the goal. Revalidated the new
+repository alert and upstream release notes, then installed Biopython 1.87
+in a separate five-package, offline hash-locked reader environment. The four
+readers reproduce all scientific fields on the retained native fixture;
+2,702 package files match wheel payloads before/after, and zero installed
+versions are affected by the 12 snapshot advisory ranges. The initial overly
+strict comparison rejected version/path metadata; that failure and outputs
+are retained, with the corrected comparator explicitly validating references
+and recording version differences. Historical runs and locks are unchanged.
+See [security upgrade](READER_SECURITY_UPGRADE_20260927.md). No DGX access,
+native inference, scoring or dedicated timing was run. Next work remains
+combined executable release integration and the existing scientific gates.
+
 ## Reproduction Guide And Remaining Gates Reconciled (2026-09-27)
 
 Previous turn progressed fresh reader dependencies. Revisited all seven

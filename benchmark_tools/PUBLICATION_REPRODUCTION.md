@@ -21,6 +21,10 @@ requirements and must not be confused with these audit commands.
   runs the [exported independent validators](results/RELOCATED_INDEPENDENT_READERS_20260927.md)
   outside the checkout using five locally installed, hash-locked packages.
   All four fixture readers pass, with 2,700 package files checked before/after.
+  The subsequent [Biopython security upgrade](results/READER_SECURITY_UPGRADE_20260927.md)
+  validates the separate 1.87 lock with unchanged scientific fields and 2,702
+  audited package files. Use that patched reader lock for new installations;
+  retain the earlier lock only as historical provenance.
   This is separate from the inference runtime; base Python/OS remain shared.
 
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)

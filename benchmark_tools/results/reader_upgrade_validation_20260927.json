@@ -1,0 +1,354 @@
+{
+  "advisory_comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-x3vf-39hj-gxr4",
+      "locked_versions": [
+        "1.87"
+      ],
+      "number": 70,
+      "package": "biopython",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-qwm4-qh6w-59xr",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 56,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 55,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-wf93-45jw-7689",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 54,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-jp4c-xjxw-mgf9",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 53,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-58qw-9mgm-455v",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 52,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-6vgw-5pg2-w6jp",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 51,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-4xh5-x5gv-qwph",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 50,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5rjg-fvgr-3xxf",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 49,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-cx63-2mw6-8hw5",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 48,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-mq26-g339-26xf",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 47,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-r9hx-vwmv-q579",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 46,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    }
+  ],
+  "affected_alerts": 0,
+  "checked_records": [
+    {
+      "bytes": 18792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_dependency_alerts_20260927_v2.json",
+      "sha256": "31e7ba7522ffed7a73dda4334e8e220a02250233cd5224acc01ff6f56c7c0f9d"
+    },
+    {
+      "bytes": 540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_reader_requirements_20260927_v2.txt",
+      "sha256": "53df1cabd91c2fb18179951ebc95166ae49ba843f4015e0f417468d2a8265063"
+    },
+    {
+      "bytes": 5750,
+      "path": "/tmp/orthohmm-independent-readers-20260927/manifest.json",
+      "sha256": "c2a77c7a2635b9193f4321f96db65028a4d5158facd8e52bb4285fe68804f334"
+    },
+    {
+      "bytes": 99256,
+      "path": "/tmp/orthohmm-reader-patched-20260927/install_report.json",
+      "sha256": "b3ffec2364ae47a964199c1dfd3ec4fbe96386b3b519f78545301cbd31c48fb0"
+    }
+  ],
+  "command": [
+    "/usr/bin/strace",
+    "-f",
+    "-s",
+    "4096",
+    "-e",
+    "trace=%file",
+    "-o",
+    "/tmp/orthohmm-reader-patched-20260927/validation_v2/readers.strace",
+    "/tmp/orthohmm-reader-patched-20260927/venv/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import sys;from pathlib import Path;sys.path.insert(0,'/tmp/orthohmm-independent-readers-20260927');from benchmark_tools.audit_publication_pipeline import audit;print(audit(Path('/tmp/orthohmm-fresh-runtime-20260927/native'),Path('/tmp/orthohmm-reader-patched-20260927/validation_v2/readback'))['status'])"
+  ],
+  "comparisons": [
+    {
+      "biopython_versions": {},
+      "current": {
+        "bytes": 4114,
+        "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readback/structure.json",
+        "sha256": "34b69473e9c5e25cc10ef2268d893d49cb0e007427862fa5a9b6e64cea14d99e"
+      },
+      "equal": true,
+      "name": "structure",
+      "previous": {
+        "bytes": 4114,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/structure.json",
+        "sha256": "34b69473e9c5e25cc10ef2268d893d49cb0e007427862fa5a9b6e64cea14d99e"
+      }
+    },
+    {
+      "biopython_versions": {
+        "current": "1.87",
+        "previous": "1.86"
+      },
+      "current": {
+        "bytes": 4492,
+        "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readback/sequences.json",
+        "sha256": "5db6d6f40b423b8a07206d725ab876a5f73d8a21cf9ac455ef031903c627369f"
+      },
+      "equal": true,
+      "name": "sequences",
+      "previous": {
+        "bytes": 4478,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/sequences.json",
+        "sha256": "77253160d2c4bca29c3ed7d86ec9504d0333b08c26914a5c5ece50d941ab3604"
+      }
+    },
+    {
+      "biopython_versions": {},
+      "current": {
+        "bytes": 4965,
+        "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readback/events.json",
+        "sha256": "8319e2f4692369e1ed96fe4efc3b73247d031ab75a2753ce423bfed5b53fbf5c"
+      },
+      "equal": true,
+      "name": "events",
+      "previous": {
+        "bytes": 4951,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/events.json",
+        "sha256": "188c45ab6e48d46f77337f84a89d239892a8e32d6474af0ff107e6843febe397"
+      }
+    },
+    {
+      "biopython_versions": {},
+      "current": {
+        "bytes": 2785,
+        "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readback/hierarchy.json",
+        "sha256": "1e50ce2bd3b9030615761efb5f6431a1ed0f011723b35655bd50345f92d16d2c"
+      },
+      "equal": true,
+      "name": "hierarchy",
+      "previous": {
+        "bytes": 2771,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/hierarchy.json",
+        "sha256": "bfd126f11eb55b428aad96c2ee7fc4ae57b5423b0c7e524e0d9bbd48fe9149a5"
+      }
+    },
+    {
+      "biopython_versions": {},
+      "current": {
+        "bytes": 2533,
+        "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readback/result.json",
+        "sha256": "b9733e0f08f91658351035c345e47fdd7c2be49558f3d52aabe31a223b8939ab"
+      },
+      "equal": true,
+      "name": "result",
+      "previous": {
+        "bytes": 2477,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/result.json",
+        "sha256": "5da190978ff7d5916bcd3d0c6a17814a19264bcc89478d5e2b5bc4ca97ca732f"
+      }
+    }
+  ],
+  "comprehensive_security_clearance": false,
+  "environment": {
+    "HOME": "/tmp",
+    "LANG": "C.UTF-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin"
+  },
+  "full_dataset_equivalence": false,
+  "inference_rerun": false,
+  "inventory": {
+    "package": [
+      {
+        "name": "biopython",
+        "version": "1.87"
+      },
+      {
+        "name": "dendropy",
+        "version": "5.1.0"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "pip",
+        "version": "26.2.1"
+      },
+      {
+        "name": "setuptools",
+        "version": "83.0.0"
+      }
+    ]
+  },
+  "limitations": [
+    "Same-host 16-gene fixture; no satellite merges or full-dataset equivalence.",
+    "Version-range check covers only the supplied repository advisory snapshot, not exploitability or all dependencies.",
+    "Payload checks exclude generated RECORD, bytecode and relocated non-site wheel data.",
+    "The recorded file trace is not a sandbox; base Python and OS remain shared.",
+    "Historical installations and lockfiles remain unchanged."
+  ],
+  "matched_payload_files": 2702,
+  "payload_after": {
+    "bytes": 491367,
+    "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/payload_after.json",
+    "sha256": "2145cb4d7bc3312a4c7dc0ae661ae6fbf7db051d76ecd9779eaac779c11351a4"
+  },
+  "payload_before": {
+    "bytes": 491367,
+    "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/payload_before.json",
+    "sha256": "2145cb4d7bc3312a4c7dc0ae661ae6fbf7db051d76ecd9779eaac779c11351a4"
+  },
+  "pip_check": "No broken requirements found.\n",
+  "publication_ready": false,
+  "source": {
+    "bytes": 8466,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_reader_upgrade.py",
+    "sha256": "79d70508d654d1c66cc47682c88f33a2477777862b9159defb9cd9f6a8756666"
+  },
+  "status": "reader_upgrade_fixture_equivalence_verified",
+  "trace": {
+    "bytes": 594620,
+    "path": "/tmp/orthohmm-reader-patched-20260927/validation_v2/readers.strace",
+    "sha256": "b3a95f2c954a411b25e1bc65211584658954f67e40e00f020b1710480be7505c"
+  },
+  "wheels": [
+    {
+      "name": "biopython",
+      "version": "1.87",
+      "wheel": {
+        "bytes": 3216226,
+        "path": "/tmp/orthohmm-reader-patched-20260927/wheels/biopython-1.87-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+      }
+    },
+    {
+      "name": "DendroPy",
+      "version": "5.1.0",
+      "wheel": {
+        "bytes": 505450,
+        "path": "/tmp/orthohmm-reader-patched-20260927/wheels/dendropy-5.1.0-py3-none-any.whl",
+        "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+      }
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6",
+      "wheel": {
+        "bytes": 16801050,
+        "path": "/tmp/orthohmm-reader-patched-20260927/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+      }
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1",
+      "wheel": {
+        "bytes": 1816632,
+        "path": "/tmp/orthohmm-reader-patched-20260927/wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      }
+    },
+    {
+      "name": "setuptools",
+      "version": "83.0.0",
+      "wheel": {
+        "bytes": 1008090,
+        "path": "/tmp/orthohmm-reader-patched-20260927/wheels/setuptools-83.0.0-py3-none-any.whl",
+        "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+      }
+    }
+  ]
+}
