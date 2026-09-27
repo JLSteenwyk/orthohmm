@@ -9,6 +9,11 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Three Kingdoms OrthoMCL retained-input trace](results/THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md)
+  verifies all twelve native input copies, all 443,217 merged search sequences
+  and the genome map against staged inputs. It does not establish immutable
+  historical consumption, complete BLAST/BPO provenance or genome-wide accuracy.
+
 - [Full OrthoBench recovery protocol](results/FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
   freezes the 251,378-gene end-to-end run through the new explicit entrypoint.
   Job 22326 was submitted after protocol commit and entered native search;

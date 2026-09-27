@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Three Kingdoms OrthoMCL Input Trace Completed (2026-09-27)
+
+The previous continuation was a verified wait on live native job 22326. This
+turn reread the objective, rechecked native/audit scheduler state and addressed
+an independent provenance gap while search continues. The
+[retained OrthoMCL input trace](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md)
+finds all twelve native copies byte-identical to staged inputs, all 443,217
+merged FASTA sequences identical, and complete correct genome mapping.
+Twenty-four focused tests pass; source/input/log identities were rechecked.
+This is retained content identity, not immutable historical execution proof,
+and does not close the older high-sensitivity input-hash gap. No scoring rerun
+or source pinned by the active jobs was changed. Job 22326 remains RUNNING;
+22327 remains PENDING on its dependency. DGX remains deferred; the full goal
+is still active.
+
 ## Recovery Evidence Integrated Into Review 21 (2026-09-27)
 
 The preceding continuation added and queued independent readback. This turn

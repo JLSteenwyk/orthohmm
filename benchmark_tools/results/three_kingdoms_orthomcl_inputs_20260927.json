@@ -1,0 +1,520 @@
+{
+  "checked_records": [
+    {
+      "bytes": 26195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+      "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+    },
+    {
+      "bytes": 212402026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.fa",
+      "sha256": "97781be16b399d1451dc3e933eaf179c61f33db4e3937f143611a602d2f11ee0"
+    },
+    {
+      "bytes": 7848847,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.gg",
+      "sha256": "6b34698784dc41d6b75c037bee7b45d5dabf75c66d3810a0727752d9f8283d3a"
+    },
+    {
+      "bytes": 1233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/orthomcl.log",
+      "sha256": "7fa6e5eda71d2ef75eef489d38e142ccefaf30073c2817b4963b7eada1e7e230"
+    },
+    {
+      "bytes": 26305,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/recovery_run.log",
+      "sha256": "58556b15d8a3c503bfec2b3158ede5b49eb155ec9188fa9a75d8e4863058510c"
+    },
+    {
+      "bytes": 1896,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/input.sha256",
+      "sha256": "1bd6d64a488a0fb5c29ad8b3a80d24ec42da8dc03f9bf2b89eb4fe8700bbdcbe"
+    },
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 22455028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Amph.fa",
+      "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 15376532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Anol.fa",
+      "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 33366601,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Arab.fa",
+      "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 6750862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Asfu.fa",
+      "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 42222249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Dani.fa",
+      "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 21984251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Oryz.fa",
+      "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 5875882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Scer.fa",
+      "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 8582364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Scom.fa",
+      "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 20561355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Sela.fa",
+      "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 3805824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Spom.fa",
+      "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Xeno.fa",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    },
+    {
+      "bytes": 95382422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Zeam.fa",
+      "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+    }
+  ],
+  "copies_vs_staged": {
+    "changed_sequences": [],
+    "content_equal": true,
+    "expected_genes": 443217,
+    "extra_ids": [],
+    "missing_ids": [],
+    "observed_genes": 443217
+  },
+  "historical_consumption_proven": false,
+  "limitations": [
+    "Retained sequence-content and species-mapping identity, not immutable execution attestation.",
+    "Logs document the original merged search input and recovered genome map; no BLAST database or BPO audit here.",
+    "Does not close the historical high-sensitivity input-hash gap or establish proteome-wide accuracy."
+  ],
+  "merged_vs_copies": {
+    "changed_sequences": [],
+    "content_equal": true,
+    "expected_genes": 443217,
+    "extra_ids": [],
+    "missing_ids": [],
+    "observed_genes": 443217
+  },
+  "merged_vs_staged": {
+    "changed_sequences": [],
+    "content_equal": true,
+    "expected_genes": 443217,
+    "extra_ids": [],
+    "missing_ids": [],
+    "observed_genes": 443217
+  },
+  "per_species": [
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 43615,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 43615
+      },
+      "native_copy": {
+        "bytes": 22455028,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Amph.fa",
+        "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+      },
+      "species": "Amph",
+      "staged": {
+        "bytes": 22455028,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Amph.fasta",
+        "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 19176,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 19176
+      },
+      "native_copy": {
+        "bytes": 15376532,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Anol.fa",
+        "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+      },
+      "species": "Anol",
+      "staged": {
+        "bytes": 15376532,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Anol.fasta",
+        "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 48321,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 48321
+      },
+      "native_copy": {
+        "bytes": 33366601,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Arab.fa",
+        "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+      },
+      "species": "Arab",
+      "staged": {
+        "bytes": 33366601,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Arab.fasta",
+        "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 9623,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 9623
+      },
+      "native_copy": {
+        "bytes": 6750862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Asfu.fa",
+        "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+      },
+      "species": "Asfu",
+      "staged": {
+        "bytes": 6750862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Asfu.fasta",
+        "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 52089,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 52089
+      },
+      "native_copy": {
+        "bytes": 42222249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Dani.fa",
+        "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+      },
+      "species": "Dani",
+      "staged": {
+        "bytes": 42222249,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Dani.fasta",
+        "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 42582,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 42582
+      },
+      "native_copy": {
+        "bytes": 21984251,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Oryz.fa",
+        "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+      },
+      "species": "Oryz",
+      "staged": {
+        "bytes": 21984251,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Oryz.fasta",
+        "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 6600,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 6600
+      },
+      "native_copy": {
+        "bytes": 5875882,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Scer.fa",
+        "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+      },
+      "species": "Scer",
+      "staged": {
+        "bytes": 5875882,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scer.fasta",
+        "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 13194,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 13194
+      },
+      "native_copy": {
+        "bytes": 8582364,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Scom.fa",
+        "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+      },
+      "species": "Scom",
+      "staged": {
+        "bytes": 8582364,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Scom.fasta",
+        "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 34825,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 34825
+      },
+      "native_copy": {
+        "bytes": 20561355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Sela.fa",
+        "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+      },
+      "species": "Sela",
+      "staged": {
+        "bytes": 20561355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Sela.fasta",
+        "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 5146,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 5146
+      },
+      "native_copy": {
+        "bytes": 3805824,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Spom.fa",
+        "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+      },
+      "species": "Spom",
+      "staged": {
+        "bytes": 3805824,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Spom.fasta",
+        "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 36461,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 36461
+      },
+      "native_copy": {
+        "bytes": 25382533,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Xeno.fa",
+        "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+      },
+      "species": "Xeno",
+      "staged": {
+        "bytes": 25382533,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+        "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+      }
+    },
+    {
+      "byte_equal": true,
+      "comparison": {
+        "changed_sequences": [],
+        "content_equal": true,
+        "expected_genes": 131585,
+        "extra_ids": [],
+        "missing_ids": [],
+        "observed_genes": 131585
+      },
+      "native_copy": {
+        "bytes": 95382422,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/data/Zeam.fa",
+        "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+      },
+      "species": "Zeam",
+      "staged": {
+        "bytes": 95382422,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Zeam.fasta",
+        "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "reader_sources": [
+    {
+      "bytes": 9391,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_sources.py",
+      "sha256": "c9e7535489c27aa9a0b5def72ccddd9c4e3e2017761a187aa167ab96b8a995cd"
+    },
+    {
+      "bytes": 10242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_orthomcl_provenance.py",
+      "sha256": "5d3cd8aed96db948ab1288792fa38743fd41e27257a9b9bb6b24439344121768"
+    }
+  ],
+  "scores_changed": false,
+  "source": {
+    "bytes": 4436,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_orthomcl_inputs.py",
+    "sha256": "0edac2a3e626ea34d0797d58bbd477860bb9e04fcf40db1c0e3ac2289b25c5ef"
+  },
+  "species_mapping": {
+    "Amph": {
+      "genes": 43615,
+      "input_species": "Amph"
+    },
+    "Anol": {
+      "genes": 19176,
+      "input_species": "Anol"
+    },
+    "Arab": {
+      "genes": 48321,
+      "input_species": "Arab"
+    },
+    "Asfu": {
+      "genes": 9623,
+      "input_species": "Asfu"
+    },
+    "Dani": {
+      "genes": 52089,
+      "input_species": "Dani"
+    },
+    "Oryz": {
+      "genes": 42582,
+      "input_species": "Oryz"
+    },
+    "Scer": {
+      "genes": 6600,
+      "input_species": "Scer"
+    },
+    "Scom": {
+      "genes": 13194,
+      "input_species": "Scom"
+    },
+    "Sela": {
+      "genes": 34825,
+      "input_species": "Sela"
+    },
+    "Spom": {
+      "genes": 5146,
+      "input_species": "Spom"
+    },
+    "Xeno": {
+      "genes": 36461,
+      "input_species": "Xeno"
+    },
+    "Zeam": {
+      "genes": 131585,
+      "input_species": "Zeam"
+    }
+  },
+  "status": "retained_three_kingdoms_orthomcl_input_content_audited"
+}
