@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Installed Run Search Matches in Presence, Candidates Differ (2026-09-26)
+
+The preceding turn completed all fresh-run readbacks and retained the score
+disagreement. This turn reread the goal and compared all historical/fresh
+normalized directed nonself hits, without native inference. All 18,235,373
+pair identities match; 10,222 scores differ by at most 8.881784197001252e-16,
+none outside 1e-12 absolute/relative tolerance. Candidate partitions already
+differ before trees, affecting 30,881 genes. See the
+[complete comparison](INSTALLED_OB_SEARCH_COMPARISON_20260926.md).
+
+This rules out an observed accepted-hit presence loss between these artifacts,
+not every search/runtime difference. It does not attribute downstream changes
+to numerical roundoff. Next compare derived graph edges with the same
+implementation, then localize graph/clustering/profile/candidate divergence
+as needed. All 43 focused tests pass; historical scores and frozen sources
+are unchanged. Other publication requirements remain open, DGX deferred.
+
 ## Fresh Installed OrthoBench Readback Completed With Disagreement (2026-09-26)
 
 The preceding status turn established new terminal evidence: job 22179

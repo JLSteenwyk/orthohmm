@@ -1,0 +1,109 @@
+{
+  "candidate_partitions": {
+    "current_groups": 54495,
+    "current_only_groups": 2623,
+    "genes_in_changed_groups": 30881,
+    "identical_groups": 51872,
+    "label_invariant_equal": false,
+    "original_groups": 54445,
+    "original_only_groups": 2573
+  },
+  "checked_records": [
+    {
+      "bytes": 51869,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/installed_orthobench_readback_20260926.json",
+      "sha256": "79fc6ce6a169d486235c811c7d6eec9019127958c07e56d8ff982675cd4149e0"
+    },
+    {
+      "bytes": 2342,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/execution.json",
+      "sha256": "f9c948d792cd2739b665ffce05019dcd01d3237b7b229b86aa7081748fb7db4b"
+    },
+    {
+      "bytes": 803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "c270d5bd4a71faad54edcbd3cae187abed2c41de70d6b765891790f664820172"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+    },
+    {
+      "bytes": 1005640,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ec7f34055237e77d4b84150640cb94ae12589bde32339cca9c8b1f726a68e7ff"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "6fa8e279a6db7dfd21fbebe95fecfb176cb0550d7370b9c0f297c6315d7d0bd8"
+    },
+    {
+      "bytes": 147892192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "447520822a24a4d7adae13658383269e33c195d90778545ecda1eb92aa307c48"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "21c8a064dd9878c288dc67479600821c974155f8016c62b27fa786e468b6899b"
+    },
+    {
+      "bytes": 952325450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "44f201dbc7e4eccf06d9401e5ce1b20fdf6ad523e15ee6007fe1c58f3941842d"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_installed_orthobench_20260926/inference/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "117519224fb5c720de25412ebc989a99fc8d119e77cbb221aedcc03530738c63"
+    }
+  ],
+  "limitations": [
+    "Post-hoc provenance diagnostic, not a new accuracy endpoint.",
+    "Compares accepted normalized directed nonself hits; absent raw candidates cannot identify a filter/scorer cause.",
+    "Historical cache and fresh checkpoint are different execution paths/environments.",
+    "Differences before clustering do not quantify their causal contribution to final score changes.",
+    "No raw-score, E-value or complete upstream runtime equivalence is established."
+  ],
+  "native_inference_rerun": false,
+  "scores_replaced": false,
+  "search": {
+    "counts": {
+      "fresh_rows": 18486508,
+      "fresh_self_rows_excluded": 251135,
+      "fresh_unique_nonself": 18235373,
+      "historical_only": 0,
+      "historical_unique": 18235373,
+      "shared": 18235373,
+      "shared_changed": 10222,
+      "shared_exact": 18225151
+    },
+    "directed_nonself_presence_equal": true,
+    "max_shared_absolute_difference": 8.881784197001252e-16,
+    "max_shared_relative_difference": 4.0987776641924614e-16,
+    "normalized_scores_exact": false,
+    "witnesses": {
+      "shared_changed": {
+        "fresh": 0.32616731618882977,
+        "historical": 0.3261673161888297,
+        "pair": [
+          "ENSCAFP00000000026",
+          "ENSMODP00000052309"
+        ]
+      }
+    }
+  },
+  "source": {
+    "bytes": 8570,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/compare_installed_ob_search.py",
+    "sha256": "baeae4ec82966f2b7c1440ba70bdc0814e44081cebb88d4314bddadb82d02c24"
+  },
+  "status": "retained_search_and_candidate_comparison_complete"
+}
