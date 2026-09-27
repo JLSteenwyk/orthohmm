@@ -1,0 +1,94 @@
+{
+  "accuracy_evaluated": false,
+  "fixture_checks": {
+    "events.json": "frozen_phylogeny_event_pair_semantics_verified",
+    "hierarchy.json": "phylogeny_selection_and_hierarchy_verified",
+    "sequences.json": "phylogeny_sequence_content_verified",
+    "structure.json": "phylogeny_structure_verified"
+  },
+  "fixture_counts": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  },
+  "fixture_membership": {
+    "constraints": 1,
+    "detached_constraints": 0,
+    "detached_genes": 0,
+    "ortholog_pairs_removed": 0,
+    "root_hogs_added": 0,
+    "supported_constraints": 1
+  },
+  "fixture_records": [
+    {
+      "bytes": 176752,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/plan.json",
+      "sha256": "03e0e517fe7158e85df5be2b60a7324d08c60d16911f546fd8e18abde7477213"
+    },
+    {
+      "bytes": 1056,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/execution.json",
+      "sha256": "65c54eebb1a197203ae789e9835697f4f7cacf0f540b3eea6afce08999593b71"
+    },
+    {
+      "bytes": 668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/native_complete.json",
+      "sha256": "5aac6ef09d0d52f323981138fa2439eb7460c2af30e9f43e2a6c3ca791396c94"
+    },
+    {
+      "bytes": 5261,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/replay.json",
+      "sha256": "cd7b16a32d5dbebb264dc7c3e9fea529a406728396f3f02f2381b0d5cf29220b"
+    },
+    {
+      "bytes": 5163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/structure.json",
+      "sha256": "a0de936f6470e90af00ee0cbecf94d293b0cea15ddc45a79a27e9f1b5c01e885"
+    },
+    {
+      "bytes": 5664,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/sequences.json",
+      "sha256": "5a24e88854c45d3c5cb6298ce22cf8d9c801b555d4a45f04d80074277eaeae1b"
+    },
+    {
+      "bytes": 6426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/events.json",
+      "sha256": "320db0a0754e43b799227c4cd84d25ddd2f6512942686491db47c89441aa6bb0"
+    },
+    {
+      "bytes": 3467,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/hierarchy.json",
+      "sha256": "67665ed6e7b02bdfec21c61f378d6c04833a0594c8f929d4aa4a9ac265e61b2f"
+    }
+  ],
+  "full_parameters": {
+    "attempts": 1,
+    "checkpoint_reuse": false,
+    "cpu": 32,
+    "memory_gib": 128,
+    "scoring": false,
+    "timeout_seconds": 28800
+  },
+  "full_plan": {
+    "bytes": 174893,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/plan.json",
+    "sha256": "2ded17c15cf3510e02f1683973edf211dc8b7f7f86037dcf83e121a948dfafdc"
+  },
+  "preparation_failure": "Initial preparation raised TypeError for duplicate PATH keyword before native execution; environment mapping corrected before successful fixture plan.",
+  "source": {
+    "bytes": 8603,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_canonical_ob_phylogeny.py",
+    "sha256": "ee01bb1a3b8ffdd1e7af0918276d6fcb7b46602fda42fc1d6ee3e2352b3effa4"
+  },
+  "status": "fixture_readback_passed_full_plan_prepared"
+}

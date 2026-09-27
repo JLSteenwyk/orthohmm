@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Fresh Canonical Phylogeny Prepared (2026-09-26)
+
+The preceding status-only turn made no scientific progress. This continuation
+reread the full objective and validated the completed 16-gene fixture with all
+four independent phylogeny readers. Sequence identity, event/pair semantics,
+hierarchy and the nonempty membership constraint pass, with no checkpoint reuse.
+The expanded focused suite passes 98 tests. The full input/runtime plan is
+prepared and its checked records revalidated; no full native run is submitted
+yet. See the [frozen protocol](CANONICAL_OB_PHYLOGENY_PROTOCOL_20260926.md).
+
+Next commit/push the launcher, tests and evidence, submit one 32-CPU/128-GiB
+eight-hour attempt, then audit and score the resulting root partition. This
+tests reproducibility, not generalization; historical scores remain unchanged.
+Other publication gaps remain open, and DGX remains deferred.
+
 ## Reconciliation Constraint Inputs Match Semantically (2026-09-26)
 
 The preceding turn validated canonical candidate files. This continuation
