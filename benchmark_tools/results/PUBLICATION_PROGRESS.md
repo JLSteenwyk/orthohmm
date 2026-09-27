@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native Comparator Conversion Verified; Proteinortho Input Difference Found (2026-09-26)
+
+The preceding turn verified OrthoFinder evidence. This turn reread the goal and
+audited SonicParanoid/Proteinortho native matrices against their retained
+OrthoBench partitions. Both conversions match exactly after explicitly counted
+singleton padding. SonicParanoid's 12 staged input hashes match; three
+Proteinortho hashes do not. The failed identity gate was preserved in commit
+15337bf before further investigation.
+
+The [difference readback](OB_MATRIX_PROVENANCE_20260926.md) identifies 177
+proteins with exactly 869 deleted `*` characters, including internal ones.
+Two changed human proteins occur in full RefOG023 membership. No causal
+attribution, accuracy-effect bound or matching-input promotion follows. The
+current score-table notes now disclose this limitation; scores remain unchanged.
+Native versions/settings and available tool-reported timing are retained,
+along with Proteinortho's two historical invocations and missing resource data.
+All 26 focused tests pass; no input or inference output was changed.
+
+Job 22179 was revalidated RUNNING at 2:26:55, still in clustering after completed
+initial search. Full-run readback and the remaining provenance, timing,
+uncertainty/generalization and release requirements remain active; DGX deferred.
+
 ## OrthoFinder OrthoBench Native Evidence Consolidated (2026-09-26)
 
 The preceding turn progressed the manuscript. This turn reread the full goal

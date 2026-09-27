@@ -18,6 +18,13 @@ Do not average across columns or interpret the table as a universal ranking.
 Per-method prediction semantics and Three Kingdoms input-consumption limitations
 are retained in the manifest.
 
+An additional [native-table/input audit](OB_MATRIX_PROVENANCE_20260926.md)
+reproduces SonicParanoid and Proteinortho's OrthoBench group conversions, but
+finds a Proteinortho input-comparability limitation: 177 staged proteins differ
+by deletion of 869 `*` symbols; two occur in full RefOG023 membership. The
+retained score is unchanged, but this row must not be described as having
+verified byte-identical input. The effect on accuracy is unmeasured.
+
 Nine tests pass, covering exact source values/units, corrected-only selection,
 contemporary SonicParanoid selection, duplicate/missing/admission/metric errors,
 source-digest rejection and output preservation. Initial execution exposed that
