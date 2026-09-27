@@ -1,0 +1,196 @@
+{
+  "artifacts": [
+    {
+      "bytes": 25268,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/started.json",
+      "sha256": "8667657fa96183fabdbe376ebff357ce430ead0b4001f77033ab16dd2a9d7cb0"
+    },
+    {
+      "bytes": 6122,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/complete.json",
+      "sha256": "cafb7926e7925c1283a9b144cac849e78f210346a06cb20d92268c193ed27109"
+    },
+    {
+      "bytes": 1714,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/score.json",
+      "sha256": "be331c5ba7279cd87a11b0fc22fbd2cfb22b3723bee382b5b31e184b46274414"
+    },
+    {
+      "bytes": 1526,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/data.json",
+      "sha256": "9ab98eea8e0f7b1943e5f8bdde21d4a022916297dc01c5bc4b36db3ee133cce2"
+    },
+    {
+      "bytes": 1165119,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/post_install_payload_audit.json",
+      "sha256": "b05fbf88e2afb036affa9edf095b46dbe7c2796a35cb8f6901bb3eead2b76b33"
+    },
+    {
+      "bytes": 139687,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/inference_install.json",
+      "sha256": "dd73ca1301922946444a6fcc4d7625b2eaf01b0a19aba1014a171088d7c9f4f6"
+    },
+    {
+      "bytes": 99256,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/reader_install.json",
+      "sha256": "b3ffec2364ae47a964199c1dfd3ec4fbe96386b3b519f78545301cbd31c48fb0"
+    },
+    {
+      "bytes": 2545,
+      "path": "/tmp/orthohmm-integrated-workflow-20260927-v2/readback/result.json",
+      "sha256": "b9fef00f1651eafe89d1f93f6bbf778d43eba1ad0664e332311d65de90a54076"
+    }
+  ],
+  "asset_relocation": {
+    "bytes": 1061,
+    "path": "/tmp/orthohmm-integrated-assets-20260927/relocation.json",
+    "sha256": "f82486a136bc5d570241189128d4b2874da25b06715ea93e7a65e988e4097b79"
+  },
+  "completed_stages": 8,
+  "dataset": "installation_fixture",
+  "driver": {
+    "bytes": 13821,
+    "path": "/tmp/orthohmm-integrated-workflow-driver-20260927/run_v2.py",
+    "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+  },
+  "forbidden_prefixes_checked": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "/home/bizon/anaconda3/lib/python3.10/site-packages"
+  ],
+  "forbidden_prefixes_found": [],
+  "full_data_manifest": {
+    "bytes": 26275,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_orthobench_data_20260927.json",
+    "sha256": "fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061"
+  },
+  "full_orthobench_run_executed": false,
+  "genes": 16,
+  "groups": 3,
+  "limitations": [
+    "Local supplied assets and a trusted installer are prerequisites; acquisition is not automated.",
+    "Installation uses pinned wheels but this controller does not independently audit all installed payload bytes.",
+    "Same-host workflow integration, not new biological validation or controlled comparative timing."
+  ],
+  "native_checkpoint_reuse": false,
+  "packages": {
+    "inference": {
+      "inventory": {
+        "package": [
+          {
+            "name": "dendropy",
+            "version": "5.1.0"
+          },
+          {
+            "name": "igraph",
+            "version": "1.0.0"
+          },
+          {
+            "name": "leidenalg",
+            "version": "0.11.0"
+          },
+          {
+            "name": "llvmlite",
+            "version": "0.49.0"
+          },
+          {
+            "name": "numba",
+            "version": "0.67.0"
+          },
+          {
+            "name": "numpy",
+            "version": "2.2.6"
+          },
+          {
+            "name": "orthohmm",
+            "version": "0.5.0"
+          },
+          {
+            "name": "pip",
+            "version": "26.2.1"
+          },
+          {
+            "name": "python-igraph",
+            "version": "1.0.0"
+          },
+          {
+            "name": "setuptools",
+            "version": "83.0.0"
+          },
+          {
+            "name": "texttable",
+            "version": "1.7.0"
+          }
+        ]
+      },
+      "post_run_matched_files": 3052
+    },
+    "reader": {
+      "inventory": {
+        "package": [
+          {
+            "name": "biopython",
+            "version": "1.87"
+          },
+          {
+            "name": "dendropy",
+            "version": "5.1.0"
+          },
+          {
+            "name": "numpy",
+            "version": "2.2.6"
+          },
+          {
+            "name": "pip",
+            "version": "26.2.1"
+          },
+          {
+            "name": "setuptools",
+            "version": "83.0.0"
+          }
+        ]
+      },
+      "post_run_matched_files": 2702
+    }
+  },
+  "preflight_failure": {
+    "driver": {
+      "bytes": 11916,
+      "path": "/tmp/orthohmm-integrated-workflow-driver-20260927/run.py",
+      "sha256": "7841d62820b7765fa9d442c460607a1d3c7be35be7581be715bdc2900251c522"
+    },
+    "reason": "Two historical MAFFT convenience links resolved outside the portable asset root; stopped before installation or inference",
+    "trace": {
+      "bytes": 68486,
+      "path": "/tmp/orthohmm-integrated-workflow-driver-20260927/workflow.strace",
+      "sha256": "e6a29361d7a253e74358d92f723dd61f15599ba8503c1f539dcfb6ec3af70bc0"
+    }
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 13821,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py",
+    "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+  },
+  "status": "integrated_install_inference_readback_scoring_complete",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/tmp/orthohmm-integrated-workflow-20260927-v2/native/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  },
+  "trace": {
+    "bytes": 17695088,
+    "path": "/tmp/orthohmm-integrated-workflow-driver-20260927/workflow_v2.strace",
+    "sha256": "c9796e10d63999916ae53462bd87a8bb65f9ea4dea6ac1d9709499b1335e7b73"
+  }
+}

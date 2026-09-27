@@ -37,6 +37,12 @@ requirements and must not be confused with these audit commands.
   full score output. Raw upstream inputs and the reader interpreter must be
   supplied separately; the local archive is not a public release.
 
+- [Integrated installation-to-scoring controller](results/INTEGRATED_WORKFLOW_20260927.md)
+  executes all eight stages on the installation fixture with separate fresh
+  environments. It also detects and corrects two historical absolute MAFFT
+  convenience links in a new asset copy. Full-OrthoBench inputs are pinned,
+  but the new controller's full-data mode has not yet been executed.
+
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.
   The [separate installed-native follow-up](results/PUBLICATION_NATIVE_TEST_REFRESH_20260927.md)

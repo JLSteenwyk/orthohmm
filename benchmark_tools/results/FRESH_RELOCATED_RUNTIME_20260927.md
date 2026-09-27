@@ -1,5 +1,12 @@
 # Fresh Relocated Recovery Runtime
 
+**Subsequent portability correction:** the integrated-workflow preflight found
+two unused MAFFT convenience links still pointing at the original build prefix.
+Earlier native execution traces remain valid for the paths actually exercised,
+but do not establish portability of those links or the entire old asset tree.
+See the [fresh relative-link copy and integration test](INTEGRATED_WORKFLOW_20260927.md).
+The original assets, archive and receipt have not been rewritten.
+
 The [execution receipt](fresh_relocated_runtime_20260927.json) records a fresh
 offline installation and native fixture execution outside the checkout.
 Unlike the earlier harness-only relocation, this run used a new virtual

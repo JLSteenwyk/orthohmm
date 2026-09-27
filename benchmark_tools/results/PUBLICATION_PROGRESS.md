@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Integrated Workflow Executed On Installation Fixture (2026-09-27)
+
+Previous turn completed scoring archive restoration. Added a stdlib controller
+for two fresh offline installations, frozen inference, four independent
+readers and scoring. All eight stages pass on the 16-gene fixture; no native
+checkpoints reused. Independent post-run inventories/payload audits match
+16 packages and 5,754 files. Twenty-two focused tests pass. Initial preflight
+exposed two historical absolute MAFFT convenience links; made a new asset copy
+with relative links and retained the old evidence. One actual inference attempt
+completed; original-prefix checks pass on its complete process-tree file trace.
+Prepared and checked the full OrthoBench input manifest, but did not execute
+the new controller on that dataset or transfer the earlier full-run admission.
+See [integration scope and MAFFT correction](INTEGRATED_WORKFLOW_20260927.md).
+Full workflow validation, acquisition/archive integration and existing
+scientific/timing gates remain open. No DGX or controlled timing work.
+
 ## Full Scoring Component Archived And Restored (2026-09-27)
 
 Previous turn advanced full-data scoring relocation. Built a deterministic
