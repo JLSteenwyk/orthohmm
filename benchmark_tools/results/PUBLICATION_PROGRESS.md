@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Canonical Native Conversion Adapter Frozen (2026-09-27)
+
+Previous turn froze scoring protocol and verified environment. Added a narrow
+canonical adapter reusing the existing native-pair converter and mapping filter.
+It rechecks successful audit 22334, its frozen result/source records, independent
+native admission, all 78 input proteomes, unique genes and full 984,137-gene
+ownership before conversion. Exact 5,959,535 pairs and zero mapping loss are
+mandatory; partial outputs and failure receipts remain separate from success.
+Conversion plan `benchmarks/work/qfo_canonical_conversion_20260927/plan.json`
+pins 743 source files plus the protocol: 179,356 bytes, SHA256
+`ccb3d035dcc5db1e0515c1dabba093dc6982addce041090f8f6ba637aeb0266c`.
+Next submit once after commit/push with 2 CPUs, 128 GiB and a 2-hour limit,
+verify source pins before/after, then admit conversion before scoring. No
+endpoint evaluated or historical score changed; publication remains incomplete.
+
 ## Canonical Scoring Protocol And Environment Verified (2026-09-27)
 
 Previous turn validated canonical prediction differences. Inspected the retained
