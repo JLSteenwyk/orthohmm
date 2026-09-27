@@ -1,5 +1,23 @@
 # Publication Progress
 
+## QfO OrthoFinder Provenance Consolidated (2026-09-26)
+
+The preceding turn prepared the post-run phylogeny workflow. This continuation
+reread the goal, verified 22324 still RUNNING, and used the wait to consolidate
+the full and checkpoint QfO OrthoFinder rows. The new
+[receipt and scope notes](QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md)
+bind both rows to the same 3.1.5 execution and recheck 185 retained records.
+Native-pair and checkpoint-clique semantics remain distinct; shared full-run
+inference time is not assigned as standalone sequence-only runtime.
+
+The retained full-run GNU-time wall measurement is 42,018 seconds; conversion
+intervals are 193.521242 and 249.173882 seconds. These are descriptive
+shared-host records, not dedicated timing evidence. Thirty focused tests pass.
+All scores remain unchanged. At elapsed 13:02, 22324 remained RUNNING with
+32 CPUs. Next inspect this same job to terminal state and execute the committed
+post-run audit workflow; continue cross-tool provenance consolidation separately.
+No DGX access or live inference change occurred. The goal remains active.
+
 ## Full Post-Run Workflow and Baseline Preflight (2026-09-26)
 
 The preceding turn made progress on native admission. This continuation reread
