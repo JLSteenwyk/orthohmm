@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Reconstructed Conda Payloads Audited (2026-09-27)
+
+Previous turn completed the separate-base integrated fixture. Reconfirmed
+job 22337 RUNNING and checked all 6,664 declared Conda entries: 5,182 direct
+regular-byte matches, 1,286 symlink-target matches, 195 matches to installer
+prefix-rewrite digests and one preserved Python cache byte mismatch.
+Recompiling its installed source produces matching headers and code fields,
+not identical serialized bytes. The [qualified audit](RECONSTRUCTED_CONDA_PAYLOADS_20260927.md)
+also records 17 archive-only license payloads. No active environment or native
+run changed; complete transformation verification, rights/runtime closure,
+full-job admission and the broader scientific/timing gates remain open.
+
 ## Separate Base Runtime Fixture Completed (2026-09-27)
 
 Previous turn established the 19-package base graph and explicit pip gap.
