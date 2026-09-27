@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Canonical Three-Way Comparison Validated (2026-09-27)
+
+Previous turn was a verified wait. Audit 22334 now COMPLETED 0:0 in 00:14:40.
+Execution binding, all 740 plan records, four canonical scientific reports
+and compared artifact hashes revalidate. The
+[three-way result](QFO_CANONICAL_RESULT_22333.md) confirms historical/fresh
+retained equality but canonical differences: 110 removed and 85 added native
+pairs, seven shared-pair annotation changes, and 44 genes in changed root
+groups. Canonical totals are 366,071 root groups and 5,959,535 pairs; all
+species-tree bytes/topologies are unchanged. Do not transfer historical scores.
+Next freeze same-reference conversion/scoring for the validated canonical arm
+and quantify endpoint effects without selecting settings on the result. No
+new inference is required; all wider publication requirements remain open.
+
 ## Canonical Three-Way Audit Queued (2026-09-27)
 
 Submitted independent audit 22334 with afterok:22333, after commit/push
