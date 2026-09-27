@@ -1,0 +1,159 @@
+{
+  "archive": {
+    "bytes": 29110,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_relocated_entrypoint_20260927.tar.gz",
+    "sha256": "6e80229731241ac4a087fb882b44914e0182152e4cc70fad85deee9513191f99"
+  },
+  "evidence": [
+    {
+      "bytes": 1297,
+      "path": "/tmp/orthohmm-recovery-entrypoint-20260927/manifest.json",
+      "sha256": "e35fdc6fbbc565e1939ab66048f6c053db11e5d87f49849a28bd8859e8e52426"
+    },
+    {
+      "bytes": 1377,
+      "path": "/tmp/orthohmm-recovery-entrypoint-20260927/execution.json",
+      "sha256": "ac1247a442f6cb03ae06692e9dd0f51570720dac808529d1c118ce0cec6f7c19"
+    },
+    {
+      "bytes": 12977,
+      "path": "/tmp/orthohmm-recovery-entrypoint-20260927/native/started.json",
+      "sha256": "52ff7f13fc98f42777b2c3a66f1f7791fee7ccd996e3fb2b89510e02c00c6fb8"
+    },
+    {
+      "bytes": 1634,
+      "path": "/tmp/orthohmm-recovery-entrypoint-20260927/native/complete.json",
+      "sha256": "b27f5a6d466c898c7a8282b394d641842951544508c2b7768d5c30a15fb44941"
+    },
+    {
+      "bytes": 2538,
+      "path": "/tmp/orthohmm-recovery-entrypoint-20260927/readback/result.json",
+      "sha256": "449f5b5a98fae49cc2cc445274419afc2dea96cc43fc678b604651c1ae918dff"
+    }
+  ],
+  "historical_fixture_bytes_equal": true,
+  "historical_fixture_partition": {
+    "bytes": 332,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+    "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+  },
+  "inputs": [
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S1.fa",
+        "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-recovery-entrypoint-20260927/input/S1.fa",
+        "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S2.fa",
+        "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-recovery-entrypoint-20260927/input/S2.fa",
+        "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S3.fa",
+        "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-recovery-entrypoint-20260927/input/S3.fa",
+        "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S4.fa",
+        "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-recovery-entrypoint-20260927/input/S4.fa",
+        "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+      }
+    }
+  ],
+  "limitations": [
+    "Harness, input and output relocation on the same host only.",
+    "Existing installed environment and original MAFFT/FastTree were reused; not an isolated fresh installation.",
+    "No filesystem access trace: no claim of complete independence from original paths.",
+    "Fixture has an empty satellite merge trace; full-data and cross-platform relocation remain untested.",
+    "Archive is local, not a published release or cleared redistribution bundle."
+  ],
+  "manifest": {
+    "files": {
+      "benchmark_tools/candidate_hit_order_policy.py": {
+        "bytes": 4201,
+        "sha256": "cc70b884e40fe73a3c25ef9ae60a2133508127323a11382a8c610e0d192ec811"
+      },
+      "benchmark_tools/probe_ob_canonical_candidates.py": {
+        "bytes": 5724,
+        "sha256": "c6f55261ce34e17681f793afce5bfeebcbc615c6df585e4bce4f62628e48060e"
+      },
+      "benchmark_tools/results/publication_recovery_requirements_20260926.txt": {
+        "bytes": 1286,
+        "sha256": "813751262c9405155cc2f1974a2c32187b352f88307e2332e0cec9df35708ae3"
+      },
+      "benchmark_tools/run_publication_pipeline.py": {
+        "bytes": 6504,
+        "sha256": "acab3b802b90ea2c4bc4ebc679f5f64431b1672ad85ca38f7ced212965edec87"
+      }
+    },
+    "limitations": [
+      "Wheels, native tools and datasets are not included",
+      "The diagnostic helper's other entrypoints are not exported workflows",
+      "Hashes detect changes relative to this manifest, not manifest authenticity"
+    ],
+    "prerequisites": [
+      "Validated installed recovery Python environment",
+      "MAFFT with helper executables and FastTree",
+      "Input FASTA files and a fresh output directory"
+    ],
+    "publication_ready": false,
+    "revision": "ebac5b26a06fa389192bbd54a01737ceb3f7a425",
+    "scope": "Relocatable runtime harness only; no native execution implied"
+  },
+  "publication_ready": false,
+  "root_partition": {
+    "bytes": 332,
+    "path": "/tmp/orthohmm-recovery-entrypoint-20260927/native/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+    "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+  },
+  "source": {
+    "bytes": 2636,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_recovery_entrypoint.py",
+    "sha256": "b4c4abbda669dddf5a59af4c453480d3cc7e8d1cf6ce6e9249b200e04e42ec59"
+  },
+  "status": "relocated_entrypoint_fixture_verified",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/tmp/orthohmm-recovery-entrypoint-20260927/native/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  },
+  "tests_passed": 13
+}

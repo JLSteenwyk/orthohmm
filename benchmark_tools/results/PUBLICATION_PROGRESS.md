@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Recovery Harness Relocation Verified (2026-09-27)
+
+The previous turn completed manuscript review 22. This turn inspected runtime
+imports, added a committed-source exporter, and executed the frozen entrypoint
+outside the checkout with copied fixture inputs. The
+[relocation result](RELOCATED_ENTRYPOINT_FIXTURE_20260927.md) passes all four
+scientific readers and reproduces the earlier fixture's exact root partition.
+All 13 focused tests pass. The export and receipts are preserved in a local
+hash-recorded archive. This reused the existing installed environment and
+external tools; it does not establish full-data or cross-platform relocation,
+fresh installation or complete independence from original paths. Next address
+environment/tool provisioning and remaining publication gates. No production
+default or historical result changed; DGX remains deferred and the goal active.
+
 ## Full Recovery Integrated Into Review 22 (2026-09-27)
 
 The previous turn completed and pushed the audited full-input recovery.

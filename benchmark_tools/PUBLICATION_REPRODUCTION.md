@@ -9,6 +9,12 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Relocated recovery entrypoint](results/RELOCATED_ENTRYPOINT_FIXTURE_20260927.md)
+  exports the exact committed minimal runtime harness and verifies a 16-gene
+  execution outside the checkout with four scientific readers. It reuses the
+  existing Python environment and external tools, so it is not a portable
+  installation or full-data reproduction on another host.
+
 - [Completed full OrthoBench recovery](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md)
   reproduces all 59,770 root groups and all 70 family-score records from raw
   FASTA in the new recovery installation. Native 22326 and independent audit
