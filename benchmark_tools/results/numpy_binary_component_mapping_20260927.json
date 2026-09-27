@@ -1,0 +1,93 @@
+{
+  "components": [
+    {
+      "binary_component_identity_independently_proven": false,
+      "component": "OpenBLAS",
+      "literal_pattern_matches": [
+        {
+          "bytes": 25021457,
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a"
+        }
+      ],
+      "notice_line": 76,
+      "provider_description": "bundled as a dynamically linked library",
+      "provider_file_pattern": "numpy.libs/libscipy_openblas*.so",
+      "provider_license_label": "BSD-3-Clause",
+      "version_suffix_filename_candidates": []
+    },
+    {
+      "binary_component_identity_independently_proven": false,
+      "component": "LAPACK",
+      "literal_pattern_matches": [
+        {
+          "bytes": 25021457,
+          "member": "numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "sha256": "0bd815d04b6b54990e3cccc7528fbb696456d09569f533d0390c13f0cdc4dd4a"
+        }
+      ],
+      "notice_line": 112,
+      "provider_description": "bundled in OpenBLAS",
+      "provider_file_pattern": "numpy.libs/libscipy_openblas*.so",
+      "provider_license_label": "BSD-3-Clause-Attribution",
+      "version_suffix_filename_candidates": []
+    },
+    {
+      "binary_component_identity_independently_proven": false,
+      "component": "GCC runtime library",
+      "literal_pattern_matches": [],
+      "notice_line": 167,
+      "provider_description": "dynamically linked to files compiled with gcc",
+      "provider_file_pattern": "numpy.libs/libgfortran*.so",
+      "provider_license_label": "GPL-3.0-with-GCC-exception",
+      "version_suffix_filename_candidates": [
+        {
+          "bytes": 2833617,
+          "member": "numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+          "sha256": "c6090048eccc763522c12ef016f81da6b627cb3a044f55cf0479a839c41c0980"
+        }
+      ]
+    },
+    {
+      "binary_component_identity_independently_proven": false,
+      "component": "libquadmath",
+      "literal_pattern_matches": [],
+      "notice_line": 951,
+      "provider_description": "dynamically linked to files compiled with gcc",
+      "provider_file_pattern": "numpy.libs/libquadmath*.so",
+      "provider_license_label": "LGPL-2.1-or-later",
+      "version_suffix_filename_candidates": [
+        {
+          "bytes": 250985,
+          "member": "numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+          "sha256": "6ed5137f412781ad7863439fb543613f620b43c32b63292a0029246162f5bbc6"
+        }
+      ]
+    }
+  ],
+  "inventory": {
+    "bytes": 38019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_inference_notices_20260927.json",
+    "sha256": "ad688c76086757457fb6c24e8f7d5b8681a16a95ab64a09476324760cfc96aae"
+  },
+  "limitations": [
+    "Provider-declared attribution and filename correspondence, not independent binary composition proof.",
+    "Version-suffixed candidates do not literally match the provider patterns; no silent glob widening.",
+    "LAPACK is declared bundled in OpenBLAS, not a separate shared object.",
+    "Source-only and excluded build-tool declarations are not treated as installed binary components.",
+    "Component versions, build recipes, source correspondence, transitive static dependencies and redistribution review remain incomplete."
+  ],
+  "notice": {
+    "bytes": 47755,
+    "path": "numpy-2.2.6.dist-info/LICENSE.txt",
+    "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "status": "numpy_provider_declared_binary_component_mapping",
+  "wheel": {
+    "bytes": 16801050,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+  }
+}

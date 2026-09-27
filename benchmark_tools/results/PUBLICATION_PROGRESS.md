@@ -1,5 +1,16 @@
 # Publication Progress
 
+## NumPy Bundled Component Declarations Mapped (2026-09-27)
+
+Previous turn reviewed VGNC inference-method limits. Examined the pinned
+NumPy wheel's embedded binary-component declarations and hashed the three
+corresponding shared-object payloads. The [mapping](NUMPY_BINARY_COMPONENT_MAPPING_20260927.md)
+distinguishes four provider declarations from three files, source/build-tool
+declarations from binary contents, and literal filename matches from qualified
+version-suffix candidates. No code executed or runtime changed. This advances
+component provenance without claiming complete source/build attribution,
+redistribution clearance, statistical completion or publication readiness.
+
 ## VGNC Replacement Inference Methods Reviewed (2026-09-27)
 
 Previous turn completed the full unit regression. Reviewed primary sources
