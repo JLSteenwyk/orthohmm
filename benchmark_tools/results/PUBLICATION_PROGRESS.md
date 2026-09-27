@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Canonical Conversion Submitted As 22335 (2026-09-27)
+
+Fifty focused adapter, existing converter and canonical-reader tests pass.
+After commit/push `09ef86d`, submitted one 2 CPU/128 GiB/2-hour conversion
+job, 22335, with no requeue. The
+[submission receipt](qfo_canonical_conversion_submission_20260927.json)
+records the exact source-checking isolated bootstrap and plan binding.
+Receipt SHA256 `07f530899101cd20b5851929d2cb1921f1240a69c2fc1c10e70a11c3ad9e4c85`.
+Require terminal success plus `execution.json` after source rechecks, then
+independently verify conversion counts/mapping and input identity before scoring.
+No scoring job has been submitted. Preserve pinned sources while this job runs.
+
 ## Canonical Native Conversion Adapter Frozen (2026-09-27)
 
 Previous turn froze scoring protocol and verified environment. Added a narrow

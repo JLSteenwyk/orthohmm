@@ -1,0 +1,24 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=2",
+    "--mem=128G",
+    "--time=02:00:00",
+    "--no-requeue",
+    "--job-name=qfo_canonical_pairs",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/conversion-%j.log",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927",
+    "--wrap=/home/bizon/anaconda3/bin/python -I -c 'import hashlib,json,os,pathlib,sys\np=pathlib.Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/plan.json'\"'\"')\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'ccb3d035dcc5db1e0515c1dabba093dc6982addce041090f8f6ba637aeb0266c'\"'\"'\nplan=json.loads(p.read_text())\ndef check():\n for r in plan[\"checked_records\"]:\n  b=pathlib.Path(r[\"path\"]).read_bytes()\n  assert len(b)==r[\"bytes\"] and hashlib.sha256(b).hexdigest()==r[\"sha256\"],r[\"path\"]\ncheck()\nsys.path.insert(0,plan[\"repo\"])\nfrom benchmark_tools.prepare_qfo_canonical_pairs import prepare,record,save\nprepare(pathlib.Path(plan[\"repo\"]))\ncheck()\nsave(pathlib.Path(plan[\"directory\"])/\"execution.json\",dict(status=\"conversion_complete\",job_id=os.environ[\"SLURM_JOB_ID\"],plan=record(p),result=record(pathlib.Path(plan[\"repo\"])/\"benchmarks/results/qfo_canonical_pairs_20260927/results.json\")))\n'"
+  ],
+  "commit": "09ef86d128db4c3a70ce0566617620604ddc1696",
+  "job_id": "22335",
+  "plan": {
+    "bytes": 179356,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_canonical_conversion_20260927/plan.json",
+    "sha256": "ccb3d035dcc5db1e0515c1dabba093dc6982addce041090f8f6ba637aeb0266c"
+  },
+  "stderr": ""
+}
