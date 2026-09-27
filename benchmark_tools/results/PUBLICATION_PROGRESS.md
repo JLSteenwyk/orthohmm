@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Full Integrated OrthoBench Independently Admitted (2026-09-27)
+
+Previous turn was a verified wait on the live scoring worker. Job 22337 then
+completed successfully in 02:40:05. The separate admission pass validated
+frozen provenance and installed packages, reran all four scientific readers,
+and recomputed both full partitions' 70 reference-family scores. All 59,770
+groups, partition bytes and family scores match the historical baseline;
+weighted F1 remains 74.10607351873405%. The [result and receipt](INTEGRATED_FULL_OB_RESULT_22337.md)
+retain shared-host resource scope and the original-base-Python dependency.
+No native retry, default change or historical score replacement occurred.
+The same-host integrated OrthoBench check is complete; dedicated timing,
+remaining scientific uncertainty, cross-host/all-method reproduction, rights
+review and public archival release are not. Publication readiness is false.
+
 ## Base Archive Staging Automated (2026-09-27)
 
 Previous turn was a verified wait on job 22337, which remains RUNNING.

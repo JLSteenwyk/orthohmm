@@ -17,7 +17,7 @@ These are distinct executed paths, not interchangeable evidence:
 | [Restored scoring archive](results/OB_SCORING_ARCHIVE_20260927.md) | Full OrthoBench scoring outside the checkout, using supplied raw inputs and reader | Fresh acquisition, installation or inference |
 | [Integrated fixture](results/INTEGRATED_WORKFLOW_20260927.md) | Eight stages on 16 genes, with fresh inference/reader environments | Full-data validation |
 | [Reconstructed-base fixture](results/RECONSTRUCTED_BASE_FIXTURE_20260927.md) | Same fixture using a separately acquired base Python; no original Python/repository prefix in its execution trace | Cross-host restoration, OS isolation or complete security/rights clearance |
-| [Full integrated job 22337](results/INTEGRATED_FULL_OB_PROTOCOL_20260927.md) | Submitted after protocol freeze; running at this update | Any completed or independently admitted result |
+| [Full integrated job 22337](results/INTEGRATED_FULL_OB_RESULT_22337.md) | Eight stages completed; separate admission reproduced all groups and 70 family scores | Controlled timing, independent accuracy or cross-host restoration |
 
 For a new execution, acquire and verify the selected inputs and local assets
 first, then follow the integrated controller's documented command with fresh
@@ -67,9 +67,10 @@ RUNNING observation does not establish current liveness or completion.
   executes all eight stages on the installation fixture with separate fresh
   environments. It also detects and corrects two historical absolute MAFFT
   convenience links in a new asset copy. Full-OrthoBench inputs are pinned,
-  and [full-data job 22337](results/INTEGRATED_FULL_OB_PROTOCOL_20260927.md)
-  is now running under a protocol frozen before submission. No full-data
-  result from this controller has yet been admitted.
+  and [full-data job 22337](results/INTEGRATED_FULL_OB_RESULT_22337.md)
+  completed under a protocol frozen before submission. Independent admission
+  reproduced all 59,770 groups and 70 family scores, with byte-identical root
+  partitions. This run used the original base Python on the shared host.
   The [independent post-completion admission command](results/INTEGRATED_FULL_OB_ADMISSION_20260927.md)
   is implemented and tested; it refuses a still-running or failed job.
   The [exact integrated-wheel notice texts](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md)
