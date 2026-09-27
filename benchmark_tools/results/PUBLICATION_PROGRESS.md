@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Admitted Full Run Added To Manuscript (2026-09-27)
+
+Previous turn completed and pushed independent admission of job 22337.
+Updated the manuscript and claim checklist to replace their stale running
+status with the verified full-data result and its bounded scope. The
+[v26 HTML review](MANUSCRIPT_RENDER_REVIEW_20260927_v26.md) also includes the
+previously added reconstructed-base evidence. All 262 local references resolve
+to 248 tracked targets, Pandoc stderr is empty, and eight renderer tests pass.
+No new PDF or visual review was performed; v25 PDF remains historical.
+No scores or defaults changed. Dedicated timing, uncertainty, broader
+reproduction and release requirements remain unfinished.
+
 ## Full Integrated OrthoBench Independently Admitted (2026-09-27)
 
 Previous turn was a verified wait on the live scoring worker. Job 22337 then

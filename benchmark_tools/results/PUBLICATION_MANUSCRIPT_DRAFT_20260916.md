@@ -2388,8 +2388,14 @@ replace them with relative links and reject escaping links. Earlier
 bounded execution traces remain valid, but the old whole asset tree was
 not independently portable. The subsequent
 [full-data execution protocol](INTEGRATED_FULL_OB_PROTOCOL_20260927.md)
-was frozen before job 22337, which remains running and has no admitted result
-at this manuscript update. Whole-workflow shared-host measurements are not
+was frozen before job 22337, which subsequently completed all eight stages
+without native checkpoint reuse. Its [independent admission](INTEGRATED_FULL_OB_RESULT_22337.md)
+checked provenance and installed packages, reran the four scientific readers,
+and recomputed both full partitions' scores. All 59,770 groups covering
+251,378 genes and all 70 reference-family score records matched the historical
+baseline; root partition bytes were identical. Weighted F1 remained
+74.10607351873405%. This establishes same-host integrated reproduction, not
+new biological validation. Whole-workflow shared-host measurements are not
 inference-only or controlled comparative timings.
 
 A [separately reconstructed base runtime](RECONSTRUCTED_BASE_FIXTURE_20260927.md)
@@ -2406,7 +2412,7 @@ bytes; recompiling its installed source reproduced its header and compared
 code-object fields, not byte identity. These checks support same-host fixture
 reconstruction, not cross-host restoration, complete runtime closure or
 full-dataset scientific validation. They do not apply retroactively to job
-22337, which uses the earlier base interpreter.
+22337, which used the earlier base interpreter.
 
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
