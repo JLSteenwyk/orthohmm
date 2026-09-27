@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Canonical Readback Integrated (2026-09-27)
+
+Previous turn was a verified wait on progressing native 22329. Added the
+[canonical readback integration](QFO_CANONICAL_READBACK_20260927.md) in new
+files: scheduler/provenance/cache admission, four readers and all three native
+contrasts. Fifty-three focused tests pass; actual four-file fixture cache
+receipts validate against the original fresh artifacts. Full canonical
+execution remains unsubmitted. Native 22329 still RUNNING and 22330 waiting.
+Next use their successful completion to freeze the real canonical plan/job and
+reader binding. No pinned source, default or historical score was modified;
+the full publication goal and outstanding external gates remain open.
+
 ## Three-Way Native Comparison Validated On Fixture (2026-09-27)
 
 Previous turn added canonical admission/launcher. While native 22329 remains

@@ -1,0 +1,21 @@
+{
+  "copied_files": 4,
+  "scope": "Fixture cache validation only, not full QfO runtime admission",
+  "source": {
+    "bytes": 8719,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_qfo_canonical_phylogeny.py",
+    "sha256": "769eb5cab7cf74c8f1fda71941489c69963fb24343a740972700f20f86a8c6e4"
+  },
+  "source_complete": {
+    "bytes": 8529,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/native/complete.json",
+    "sha256": "adb3bcdfe8e42f1e0cb48e54ceedeb0c523dbe5de729d27ee77dfb88e9bddd09"
+  },
+  "status": "real_fixture_cache_receipt_verified",
+  "target_complete": {
+    "bytes": 11917,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/complete.json",
+    "sha256": "2b9e03fc3c101450913c5620cb943ce9deeea083471d9379a0e8d8211f855c6d"
+  },
+  "tests_passed": 53
+}
