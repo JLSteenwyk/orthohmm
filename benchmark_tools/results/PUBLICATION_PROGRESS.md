@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Canonical Score Admission Adapter Tested (2026-09-27)
+
+Previous turn launched assessment 22336; scheduler confirms it running and the
+native log selects all six intended endpoints with the correct participant and
+reference directories. Added an independent admission adapter in a new file,
+leaving every running-job source pin unchanged. It binds completed job 22336,
+the exact plan/submission, verified conversion, command, environment, preflight,
+log and complete output inventory. Existing validators then require all 15
+fresh successful workflow tasks, six native metric axes, SwissTrees family
+metrics and aggregation equality, followed by dependency rechecks. Forty-eight
+focused admission, runner and native-validator tests pass. No real score is
+admitted yet; next run this checker only after scoring is terminal successful.
+Do not interpret native FAS sampling differences as a paired ordering effect.
+
 ## Canonical QfO Scoring Submitted As 22336 (2026-09-27)
 
 Submitted the frozen single assessment after commit/push `97a277a`: job 22336,
