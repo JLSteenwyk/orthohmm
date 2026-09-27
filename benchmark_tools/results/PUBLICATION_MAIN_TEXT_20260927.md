@@ -26,8 +26,10 @@ accuracy or efficiency claims.
 ## Methods
 
 The retained configurations are high-sensitivity OrthoHMM and the satellite_v2
-phylogenetic pipeline. The prospective method was frozen at `7f3a9e4`, with
-BLOSUM62, E-value threshold 1e-4, Leiden CPM resolution 0.1 and seed 4.
+phylogenetic pipeline. The original OrthoHMM preprint [@orthohmm2024preprint]
+describes its lineage, not all subsequent implementation changes. The prospective
+method was frozen at `7f3a9e4`, with BLOSUM62, E-value threshold 1e-4, Leiden
+CPM resolution 0.1 and seed 4 [@leiden2019; @cpm2011].
 The phylogenetic configuration expands candidate families, infers gene and
 species trees, and applies positive-paralogy pair inference. Historical runs
 retain their actual revisions rather than inheriting this prospective pin.
@@ -35,8 +37,11 @@ The [method diagram](figures_publication_method_20260916/publication_method.pdf)
 distinguishes initial search, profile refinement, candidate expansion and
 phylogenetic inference.
 
-Comparators were OrthoFinder 3.1.5, SonicParanoid 2.0.9, ProteinOrtho 6.3.6,
-FastOMA 0.3.5 and OrthoMCL 1.4. OrthoFinder's sequence-only MCL checkpoint was
+Comparators were OrthoFinder 3.1.5 [@orthofinder2026; @orthofinder2026correction],
+SonicParanoid 2.0.9 [@sonicparanoid2024], ProteinOrtho 6.3.6 [@proteinortho2023],
+FastOMA 0.3.5 [@fastoma2025] and OrthoMCL 1.4 [@orthomcl2003]. These method
+references do not replace run-specific executable provenance.
+OrthoFinder's sequence-only MCL checkpoint was
 a diagnostic output, not a separately finalized phylogenetic analysis.
 FastOMA used a supplied OrthoFinder species tree. QfO inputs included native
 ortholog pairs, native post-clustering relations or group-derived cross-species
@@ -44,12 +49,14 @@ pairs as appropriate; these are not interchangeable output semantics. The
 [generated comparison](qfo_corrected_comparison_20260926_v7/scores.md)
 reports each conversion and prediction count.
 
-OrthoBench measures curated group recovery. QfO reports GO and EC similarity,
+OrthoBench measures curated group recovery [@orthobench2020]. QfO
+[@qfo2016; @qfo2020] reports GO and EC similarity,
 VGNC, SwissTrees and TreeFam-A F1, and FAS separately. Their arithmetic mean
 is a project-defined secondary summary, not an official QfO F1. Three Kingdoms
-is supplementary BUSCO-reference recovery, not genome-wide orthology truth.
+is supplementary BUSCO-reference recovery [@busco2021], not genome-wide orthology truth.
 QfO and OrthoBench were repeatedly inspected during development. The
-[YGOB protocol](YGOB_VALIDATION_PROTOCOL_20260916.md) froze evaluation before
+[YGOB protocol](YGOB_VALIDATION_PROTOCOL_20260916.md), using the curated
+homology/synteny resource [@ygob2005], froze evaluation before
 test-score inspection; overlap assessment limits its interpretation to
 novel-taxon transfer rather than family-disjoint validation.
 
@@ -105,7 +112,7 @@ expansion universally improves orthology inference.
 
 In 35 matched-recall simulation datasets spanning seven conditions and five
 seeds, HMM-derived search evidence yielded mean downstream graph F1 of
-83.6097%, versus 80.5180% for DIAMOND. The adjusted paired seed-block interval
+83.6097%, versus 80.5180% for DIAMOND [@diamond2021]. The adjusted paired seed-block interval
 for the +3.0917-point difference was [1.6782, 4.5313]. Profile expansion and
 phylogeny were off. This is a development-exposed fixed-graph comparison,
 not a comparison against OrthoFinder or a matched-effort result. Score
@@ -122,7 +129,8 @@ universe and assumes exchangeable pillars; it does not establish unrestricted
 generalization or resolved pairwise orthology.
 [YGOB results](YGOB_FROZEN_RESULTS_20260916.md).
 
-The prespecified whole-genome-duplicate application assessed paralog separation
+The prespecified whole-genome-duplicate application used experimental evidence
+from Kuzmin and colleagues [@kuzmin2020] and assessed paralog separation
 together with retention of reference homologs. Phylogenetic OrthoHMM's greater
 separation than high sensitivity did not remove its homolog-recovery losses.
 Full OrthoFinder remained an important negative comparison. Raw separation
@@ -164,3 +172,9 @@ Historical locks are retained as provenance; patched replacement environments
 must be distinguished from the binaries used for original scores. The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
 requirements. No submission-ready release or archival DOI is claimed.
+
+## References
+
+The bibliography attributes the methods and resources cited above. Full
+execution evidence and additional dependency references remain in the extended
+manuscript; this selected list is not complete software attribution.

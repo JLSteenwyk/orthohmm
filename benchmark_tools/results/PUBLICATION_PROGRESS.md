@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Main Text Formal Citations Integrated (2026-09-27)
+
+Previous turn completed the three-page layout review. Added 16 formal method,
+benchmark and biological-source citations from the retained reviewed CSL
+bibliography. The renderer now validates and records an explicit bibliography
+before citeproc rendering; 13 focused tests pass. Independent HTML parsing
+matches every cited ID to one bibliography entry, with empty Pandoc stderr
+and no untracked local evidence links. The [citation record](PUBLICATION_MAIN_CITATIONS_20260927.md)
+distinguishes cited HTML from the unchanged earlier PDF and records reproduction
+and citation-coverage limits. No numerical endpoint, frozen setting or native
+run changed. Scientific uncertainty, controlled timing and release remain open.
+
 ## Condensed Main Text Rendered And Visually Reviewed (2026-09-27)
 
 Previous turn drafted the concise scientific narrative. Rendered it and fixed

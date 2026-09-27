@@ -39,7 +39,24 @@ def local_assets(document, manuscript, repo):
     return occurrences, targets
 
 
-def render(repo, manuscript, output, report):
+def citation_ids(document):
+    identifiers = set()
+
+    def visit(node):
+        if isinstance(node, list):
+            for child in node:
+                visit(child)
+        elif isinstance(node, dict):
+            if node.get("t") == "Cite":
+                identifiers.update(c["citationId"] for c in node["c"][0])
+            for child in node.values():
+                visit(child)
+
+    visit(document)
+    return identifiers
+
+
+def render(repo, manuscript, output, report, bibliography=None):
     repo, manuscript = repo.resolve(), manuscript.resolve()
     output, report = output.absolute(), report.absolute()
     if output.parent.resolve() != manuscript.parent or output == report:
@@ -54,11 +71,30 @@ def render(repo, manuscript, output, report):
     sources = [record(p) for p in (manuscript, binary, __file__, print_header)]
     parse_command = [binary, "--from=markdown", "--to=json", str(manuscript)]
     parsed = subprocess.run(parse_command, capture_output=True, text=True, check=True, timeout=60)
-    occurrences, targets = local_assets(json.loads(parsed.stdout), manuscript, repo)
+    document = json.loads(parsed.stdout)
+    occurrences, targets = local_assets(document, manuscript, repo)
+    citations = citation_ids(document)
+    bibliography_args = []
+    if bibliography is not None:
+        bibliography = bibliography.resolve()
+        if not bibliography.is_relative_to(repo):
+            raise ValueError("Bibliography escapes repository")
+        sources.append(record(bibliography))
+        entries = json.loads(bibliography.read_text())
+        identifiers = [entry["id"] for entry in entries]
+        if any(not isinstance(key, str) or not key for key in identifiers):
+            raise ValueError("Bibliography identifiers must be nonempty strings")
+        if len(set(identifiers)) != len(identifiers):
+            raise ValueError("Duplicate bibliography identifiers")
+        if citations - set(identifiers):
+            raise ValueError(f"Missing citation identifiers: {sorted(citations - set(identifiers))}")
+        bibliography_args = ["--citeproc", "--bibliography", str(bibliography)]
+    elif citations:
+        raise ValueError("Manuscript citations require an explicit bibliography")
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     command = [binary, "--from=markdown", "--to=html5", "--standalone",
                "--metadata=pagetitle:OrthoHMM publication working draft",
-               "--include-in-header", str(print_header), str(manuscript)]
+               "--include-in-header", str(print_header), *bibliography_args, str(manuscript)]
     rendered = subprocess.run(command, capture_output=True, text=True, check=True, timeout=60)
     for item in [*sources, *targets.values()]:
         check(item)
@@ -68,6 +104,7 @@ def render(repo, manuscript, output, report):
         sources=sources, html=record(output), parse_command=parse_command, render_command=command,
         pandoc_version=subprocess.check_output([binary, "--version"], text=True),
         stderr=dict(parse=parsed.stderr, render=rendered.stderr),
+        citation_ids=sorted(citations),
         local_occurrences=len(occurrences), unique_targets=len(targets),
         occurrences=occurrences, targets=list(targets.values()),
         untracked_targets=sorted(set(targets) - tracked),
@@ -85,5 +122,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "manuscript", "output", "report"):
         parser.add_argument("--" + name, required=True, type=Path)
+    parser.add_argument("--bibliography", type=Path)
     args = parser.parse_args()
-    render(args.repo, args.manuscript, args.output, args.report)
+    render(args.repo, args.manuscript, args.output, args.report, args.bibliography)
