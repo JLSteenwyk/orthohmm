@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Filtered Raw-Tree Reuse Validated On Fixture (2026-09-27)
+
+Previous turn prepared/queued independent readback. Native 22329 remains
+RUNNING and 22330 PENDING on dependency. Added new, unpinned cache helpers
+without editing queued source identities. The [fixture](QFO_PHYLOGENY_CACHE_FIXTURE_20260927.md)
+reuses one admitted raw tree, infers species tree afresh, passes all four
+readers and exactly reproduces root bytes and 36 pair/confidence records.
+Forty-five focused tests pass. Changed-family caches are excluded to avoid
+stale files when canonical membership turns a family into a singleton.
+Full canonical admission/launcher still needs implementation; no full reuse
+or accuracy equivalence is claimed. Historical results, DGX deferral and
+outstanding publication gates remain unchanged.
+
 ## Full QfO Readback Queued (2026-09-27)
 
 Committed and pushed readback `ce78398`, then submitted job `22330` on bizon

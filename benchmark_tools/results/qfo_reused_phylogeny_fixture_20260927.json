@@ -1,0 +1,56 @@
+{
+  "complete": {
+    "bytes": 11917,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/complete.json",
+    "sha256": "2b9e03fc3c101450913c5620cb943ce9deeea083471d9379a0e8d8211f855c6d"
+  },
+  "genes": 16,
+  "limitation": "Same-input 16-gene fixture, not full QfO cache admission",
+  "pairs": {
+    "annotations_changed": 0,
+    "confidence_tables_equal": true,
+    "left_only": 0,
+    "pair_sets_equal": true,
+    "right_only": 0,
+    "shared": 36
+  },
+  "reports": [
+    {
+      "bytes": 6163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/readback/events.json",
+      "sha256": "3bb79d80f5e4dc04dbbf068b388996fc1e4405e8750c8c19dbe9bac9d7e10454"
+    },
+    {
+      "bytes": 3476,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/readback/hierarchy.json",
+      "sha256": "1837366ace24d2bf8ceec7cd1030e9279333ce553c46a0805a5feec3c37dc44e"
+    },
+    {
+      "bytes": 5673,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/readback/sequences.json",
+      "sha256": "27670eecaff061e86b0555e1d1ecc015dc4da70160d8fc12b312e3a4b3891863"
+    },
+    {
+      "bytes": 5163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/readback/structure.json",
+      "sha256": "67316be6f000e13f22bede2ac380212f3d7a8f7d0b556311560a137b730581e2"
+    }
+  ],
+  "root_file_bytes_equal": true,
+  "status": "cache_fixture_four_readers_verified",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 1,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_reused_phylogeny_fixture_20260927/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  }
+}
