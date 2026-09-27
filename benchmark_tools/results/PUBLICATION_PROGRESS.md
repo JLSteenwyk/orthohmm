@@ -1,5 +1,17 @@
 # Publication Progress
 
+## QfO Ordering Result Integrated Into Review 23 (2026-09-27)
+
+The previous turn was a verified wait. Native 22329 remains RUNNING and 22330
+pending; while waiting, incorporated the admitted QfO candidate-order result
+and dependency trace into the manuscript and claim checklist. The
+[new review](MANUSCRIPT_RENDER_REVIEW_20260927_v23.md) explicitly withholds
+historical score attribution to the canonical pipeline until downstream
+validation. Eight renderer tests pass; 249 local occurrences/235 tracked
+targets validate, all 44 PDF pages pass bounds checks, and pages 43/44 were
+visually inspected. Earlier review 22 remains unchanged. No frozen Python
+source, inference setting or score changed. Full publication gates remain open.
+
 ## Canonical Readback Integrated (2026-09-27)
 
 Previous turn was a verified wait on progressing native 22329. Added the

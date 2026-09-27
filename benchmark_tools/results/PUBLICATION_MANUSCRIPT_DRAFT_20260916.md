@@ -2307,6 +2307,21 @@ confirmation, QfO reproduction or cross-platform determinism. Canonical
 ordering remains an explicit experimental policy, production defaults are
 unchanged, and earlier discrepant runs remain retained.
 
+A prespecified [paired QfO candidate replay](QFO_ORDER_REPLAY_RESULT_22328.md)
+tested the same ordering policy on 90,687,327 admitted hits and identical
+profile-refined seeds across 984,137 genes. Retained order exactly reproduced
+the historical 351,739 candidate groups and 40,169 directed membership
+constraints. Canonical order changed two groups containing 49 genes and five
+constraint positions, despite preserving both total counts. A
+[dependency trace](QFO_ORDER_DEPENDENCY_TRACE_20260927.md) localized the
+difference to two proteins exchanging singleton/family assignments; all
+351,737 shared families retained their IDs and both arms selected the same
+ordered 26 species-tree marker families. This is not an accuracy comparison:
+unchanged marker inputs do not establish downstream tree or prediction
+equivalence. The frozen downstream comparison remains unfinished. Historical
+QfO scores are therefore not yet attributable to the installed canonical
+end-to-end pipeline, and no score has been replaced or default retuned.
+
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original
 CPU-wheel lock pins pip and setuptools versions affected by 11 retained
