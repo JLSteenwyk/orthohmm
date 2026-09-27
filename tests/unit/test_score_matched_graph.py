@@ -6,6 +6,7 @@ import pytest
 
 from benchmark_tools.score_matched_graph import CONDITIONS, SEEDS, render, score_cell, summarize
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
+from benchmark_tools import score_matched_graph as scorer
 
 
 def rows():
@@ -82,3 +83,24 @@ def test_pairs_use_orthology_truth_not_ancestral_family(tmp_path):
     assert (result["score"]["tp"], result["score"]["fp"], result["score"]["fn"]) == (1, 0, 1)
     assert result["score"]["f1"] == pytest.approx(2/3)
     assert result["gene_coverage"] == 1 and result["nonsingleton_coverage"] == pytest.approx(2/3)
+
+
+@pytest.mark.parametrize("sha", [scorer.READBACK_SHA, scorer.READBACK_V2_SHA])
+def test_recognized_readback_still_requires_source_check(tmp_path, monkeypatch, sha):
+    path = tmp_path / "readback.json"
+    path.write_text(json.dumps(dict(status="all_native_graphs_verified_pending_orthology_scoring",
+                                    accuracy_evaluated=False, source={"fixture": True})))
+    monkeypatch.setattr(scorer, "record", lambda _: dict(sha256=sha))
+    def reject_source(item):
+        assert item == {"fixture": True}
+        raise ValueError("source validation reached")
+    monkeypatch.setattr(scorer, "check", reject_source)
+    with pytest.raises(ValueError, match="source validation reached"):
+        scorer.run(path, tmp_path / "out")
+
+
+def test_unknown_readback_rejected(tmp_path):
+    path = tmp_path / "readback.json"
+    path.write_text("{}")
+    with pytest.raises(ValueError, match="Unrecognized"):
+        scorer.run(path, tmp_path / "out")

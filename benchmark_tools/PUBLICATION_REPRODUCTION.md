@@ -16,7 +16,7 @@ are statistical reproduction only and do not submit scheduler jobs.
 
   ```bash
   python -m benchmark_tools.score_matched_graph \
-    --readback benchmark_tools/results/matched_graph_readback_20260926.json \
+    --readback benchmark_tools/results/matched_graph_readback_v2_20260926.json \
     --output /absolute/fresh/matched_graph_scores
   python -m benchmark_tools.plot_matched_graph \
     --results /absolute/fresh/matched_graph_scores/results.json \
@@ -28,6 +28,9 @@ are statistical reproduction only and do not submit scheduler jobs.
   reproduction. Exact native commands and resources remain in the
   [search submission](results/search_sensitivity_submission_20260926.json) and
   [graph submission](results/matched_graph_submission_20260926.json).
+  The v2 readback adds exact environment/artifact bindings with identical cell
+  evidence. The historical v1 report is retained; its auditor source hash
+  predates the current strengthened auditor, so use v2 in the current checkout.
 
 - [Current cross-dataset score table](results/CURRENT_BENCHMARK_SCORES_20260926.md)
   combines retained OrthoBench, corrected QfO and supplementary Three Kingdoms

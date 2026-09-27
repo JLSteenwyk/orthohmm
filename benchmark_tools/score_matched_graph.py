@@ -14,6 +14,7 @@ from benchmark_tools.summarize_simulation_panel import validate_score
 
 
 READBACK_SHA = "af7a9e0cdba97b7b84c9fc6925e577594802b7bf74c99ac19840baf2e42594f4"
+READBACK_V2_SHA = "bbc9e6b40c75682e0336e3a466b8c2e740eed54f4b6a762203984bfa8c673a9f"
 CONDITIONS = ("baseline", "divergent", "divergent_turnover", "missing20", "taxon_count_control", "turnover", "uneven_taxa")
 SEEDS = tuple(range(20261106, 20261111))
 METRICS = ("f1", "precision", "recall")
@@ -114,7 +115,7 @@ def run(readback_path, output):
     if output.exists():
         raise FileExistsError(output)
     readback_record = record(readback_path)
-    if readback_record["sha256"] != READBACK_SHA:
+    if readback_record["sha256"] not in {READBACK_SHA, READBACK_V2_SHA}:
         raise ValueError("Unrecognized graph admission")
     readback = json.loads(readback_path.read_text())
     if readback["status"] != "all_native_graphs_verified_pending_orthology_scoring" or readback["accuracy_evaluated"]:

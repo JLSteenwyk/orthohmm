@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Matched-Search Errors Traced Across All Graph Stages (2026-09-26)
+
+The preceding turn made progress by strengthening the native readback. This
+turn reread the full goal and completed a post-hoc, protocol-recorded trace of
+all 70 matched graph cells through direct hits, graph edges/components and
+initial/multipass/final partitions. Every final cell reproduces its frozen score.
+[Complete results and limitations](MATCHED_GRAPH_STAGE_TRACE_RESULT_20260926.md).
+
+The HMM advantage is largely present at initial clustering. Final refinement
+slightly reduces mean F1 in both arms, adding mostly false pairs; both positive
+and negative results are retained without retuning. No causal or independent
+confirmation claim is made. The 65-test focused suite passes. The scorer and
+reproduction guide now accept/select the exact strengthened readback, and a
+fresh rescore reproduced all original records, contrasts and bootstrap settings.
+
+Main job 22179 was verified RUNNING at 2:10:41. Initial search, edge thresholds
+and edge identification completed; it is now at clustering. Full native-run
+readback still awaits terminal success. Dedicated timing, remaining uncertainty,
+generalization and release requirements remain open; full goal active, DGX
+deferred. No scientific defaults changed or inference rerun.
+
 ## Matched-Graph Environment and Artifact Bindings Verified (2026-09-26)
 
 The preceding status turn was a verified wait: Slurm confirmed job 22179
