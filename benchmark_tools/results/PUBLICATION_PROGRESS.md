@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Canonical Scoring Protocol And Environment Verified (2026-09-27)
+
+Previous turn validated canonical prediction differences. Inspected the retained
+native-pair converter and six-endpoint scoring helpers; rehashed all 704 frozen
+scoring-environment records successfully. The
+[canonical scoring protocol](QFO_CANONICAL_SCORING_PROTOCOL_20260927.md)
+now freezes input identity, native-pair semantics, exact count/mapping-loss
+gates, references, six challenges, namespaces, resources and independent score
+admission before evaluation. It explicitly retains unseeded FAS sample artifacts
+and prohibits interpreting sample-to-sample changes as ordering effects alone.
+No endpoint has been scored or historical score replaced. Next implement the
+narrow canonical conversion/scoring adapters using the existing helpers, test
+their admission bindings, and schedule conversion before scoring.
+
 ## Canonical Three-Way Comparison Validated (2026-09-27)
 
 Previous turn was a verified wait. Audit 22334 now COMPLETED 0:0 in 00:14:40.
