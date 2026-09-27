@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Separate Base Runtime Fixture Completed (2026-09-27)
+
+Previous turn established the 19-package base graph and explicit pip gap.
+Reconfirmed full job 22337 RUNNING. Acquired all 19 pinned archives and
+installed them into a separate prefix; preserved an initial reserved-name
+preflight rejection. Bootstrapped pinned pip with the new interpreter and
+completed the unchanged eight-stage fixture with that interpreter for both
+installation and execution. Partition/score/scientific summary match the
+earlier fixture. Post-run audits match 6,229 wheel payload files; the fixture
+trace has no original Anaconda or repository prefix. The [result](RECONSTRUCTED_BASE_FIXTURE_20260927.md)
+is same-host 16-gene evidence, not a full-data or cross-host claim. OS libraries,
+Conda installed-payload completeness, rights/security and other publication
+gates remain; full job 22337 was not modified or admitted by this work.
+
 ## Base Dependency Closure Checked (2026-09-27)
 
 Previous turn verified five selected library files against exact archives.
