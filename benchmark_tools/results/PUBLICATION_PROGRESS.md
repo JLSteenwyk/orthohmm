@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Fresh QfO Phylogeny Submitted (2026-09-27)
+
+After committing/pushing preparation `d8f178e`, submitted retained-order
+fresh inference once as job `22329`: local bizon, 32 CPUs, 128 GiB, six-hour
+limit and no requeue. Scheduler confirms RUNNING; the native start receipt
+exists with the frozen plan and installed interpreter. Exact submission is
+tracked in `qfo_fresh_phylogeny_submission_22329.json`. No completion claim.
+Next implement independent full readback without modifying pinned runtime
+sources, poll this same job, and admit raw-tree reuse only after scientific
+checks. Canonical execution is not yet submitted. Historical scores remain
+unchanged; DGX is deferred and the full publication goal remains active.
+
 ## Fresh QfO Phylogeny Arm Prepared (2026-09-27)
 
 The preceding turn traced dependencies and froze the downstream comparison.

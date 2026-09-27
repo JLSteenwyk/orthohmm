@@ -1,0 +1,39 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=32",
+    "--mem=128G",
+    "--time=06:00:00",
+    "--no-requeue",
+    "--job-name=qfo_fresh_retained_phylo",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/native-%j.log",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927",
+    "--wrap=exec /usr/bin/env -i HOME=/home/bizon LANG=C.UTF-8 MAFFT_BINARIES=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/libexec/mafft MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PATH=/usr/bin:/bin PYTHONHASHSEED=0 SLURM_JOB_ID=\"$SLURM_JOB_ID\" SLURM_CPUS_PER_TASK=\"$SLURM_CPUS_PER_TASK\" /usr/bin/time -v -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/time.txt /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/venv/bin/python -I -c 'import hashlib,pathlib,runpy,sys; p=pathlib.Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_fresh_phylogeny.py'\"'\"'); assert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'c7e5df776aff7654d43d74147420ab2886a8e80e4180b526751409861f670f80'\"'\"'; sys.argv=[str(p),\"worker\",\"--plan\",'\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/plan.json'\"'\"',\"--sha256\",'\"'\"'57247bf76d26c1ff54cf13aa4c9d0a9622f0b8a2902c45ef222842513888d030'\"'\"']; runpy.run_path(str(p),run_name=\"__main__\")'"
+  ],
+  "commit": "d8f178e0f2096fd6576f9dff19f29eff0e7ada0f",
+  "job_id": "22329",
+  "native_command": [
+    "/usr/bin/time",
+    "-v",
+    "-o",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/time.txt",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/venv/bin/python",
+    "-I",
+    "-c",
+    "import hashlib,pathlib,runpy,sys; p=pathlib.Path('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_fresh_phylogeny.py'); assert hashlib.sha256(p.read_bytes()).hexdigest()=='c7e5df776aff7654d43d74147420ab2886a8e80e4180b526751409861f670f80'; sys.argv=[str(p),\"worker\",\"--plan\",'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/plan.json',\"--sha256\",'57247bf76d26c1ff54cf13aa4c9d0a9622f0b8a2902c45ef222842513888d030']; runpy.run_path(str(p),run_name=\"__main__\")"
+  ],
+  "plan": {
+    "bytes": 1035097,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/plan.json",
+    "sha256": "57247bf76d26c1ff54cf13aa4c9d0a9622f0b8a2902c45ef222842513888d030"
+  },
+  "source": {
+    "bytes": 7861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_fresh_phylogeny.py",
+    "sha256": "c7e5df776aff7654d43d74147420ab2886a8e80e4180b526751409861f670f80"
+  },
+  "stderr": ""
+}
