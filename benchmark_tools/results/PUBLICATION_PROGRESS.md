@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Manuscript Review v24 Rendered And Inspected (2026-09-27)
+
+Previous turn completed and committed independent canonical QfO scoring
+admission and comparison. Regenerated the current manuscript in fresh v24
+HTML/PDF paths, preserving v23. Eight renderer tests pass. Asset audit checks
+253 local occurrences/239 tracked targets and rechecks source/target/HTML
+identities after rendering. PDF has 45 pages, no block-bounds violations at
+one-point tolerance. Visually inspected rasterized pages 43-45 containing
+the new QfO results and final availability text; no clipping or overlap.
+See [review record](MANUSCRIPT_RENDER_REVIEW_20260927_v24.md). This does not
+close scientific, dedicated-timing, redistribution or archival requirements.
+No live required inference/scoring job remains from this ordering experiment;
+DGX remains deferred and no unrelated job was changed.
+
 ## Canonical Six-Endpoint Assessment Admitted (2026-09-27)
 
 Previous turn was a verified wait on job 22336. It completed 0:0 in 00:30:00,
