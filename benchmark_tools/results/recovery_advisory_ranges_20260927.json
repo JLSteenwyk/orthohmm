@@ -1,0 +1,223 @@
+{
+  "affected_alerts": 0,
+  "alerts_without_installed_package": 0,
+  "checked_records": [
+    {
+      "bytes": 17584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovery_dependency_alerts_20260927.json",
+      "sha256": "e5440ba1c18a0685274c89794db36cd1754ab2b20341574ad6c70dee295f1e46"
+    },
+    {
+      "bytes": 13393,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_recovery_install_20260926_v2.json",
+      "sha256": "754379010f1f82704c5acb72f307596127c6823fd58836cc87b1297f8efc9032"
+    },
+    {
+      "bytes": 140490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/install_report.json",
+      "sha256": "5fe2f001841d8680dcce021777c97db98a44452d2859d1eecdcd2288d586b439"
+    },
+    {
+      "bytes": 1286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_recovery_requirements_20260926.txt",
+      "sha256": "813751262c9405155cc2f1974a2c32187b352f88307e2332e0cec9df35708ae3"
+    },
+    {
+      "bytes": 639791,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/audit_v2.json",
+      "sha256": "f1636e6e3222c135d2f174bb3f2c247f74e646d8653d087f068960f4926f2559"
+    }
+  ],
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/venv/bin/python",
+    "-I",
+    "-c",
+    "import json,importlib.metadata as m;print(json.dumps([dict(name=d.metadata['Name'],version=d.version) for d in m.distributions()]))"
+  ],
+  "comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-qwm4-qh6w-59xr",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 56,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 55,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-wf93-45jw-7689",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 54,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-jp4c-xjxw-mgf9",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 53,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-58qw-9mgm-455v",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 52,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-6vgw-5pg2-w6jp",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 51,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-4xh5-x5gv-qwph",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 50,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5rjg-fvgr-3xxf",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 49,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-cx63-2mw6-8hw5",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 48,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-mq26-g339-26xf",
+      "locked_versions": [
+        "26.2.1"
+      ],
+      "number": 47,
+      "package": "pip",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-r9hx-vwmv-q579",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 46,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    }
+  ],
+  "comprehensive_security_clearance": false,
+  "evaluator": {
+    "bytes": 2783,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dependency_lock.py",
+    "sha256": "cd1638d3e0f3f40c3a58748a4c77b761a009e97af29844106b6e748bdc31713c"
+  },
+  "inventory": {
+    "package": [
+      {
+        "name": "dendropy",
+        "version": "5.1.0"
+      },
+      {
+        "name": "igraph",
+        "version": "1.0.0"
+      },
+      {
+        "name": "leidenalg",
+        "version": "0.11.0"
+      },
+      {
+        "name": "llvmlite",
+        "version": "0.49.0"
+      },
+      {
+        "name": "numba",
+        "version": "0.67.0"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "orthohmm",
+        "version": "0.5.0"
+      },
+      {
+        "name": "pip",
+        "version": "26.2.1"
+      },
+      {
+        "name": "python-igraph",
+        "version": "1.0.0"
+      },
+      {
+        "name": "setuptools",
+        "version": "83.0.0"
+      },
+      {
+        "name": "texttable",
+        "version": "1.7.0"
+      }
+    ]
+  },
+  "limitations": [
+    "Only ranges returned by the repository-alert snapshot, not all installed dependencies' vulnerabilities.",
+    "Live version inventory checked; prior byte audit is referenced, not rerun here.",
+    "No reachability, build-chain, OS/native-library or exploitability clearance.",
+    "Historical locks and repository alerts remain unchanged."
+  ],
+  "publication_ready": false,
+  "repository_alerts_closed": false,
+  "retrieved_utc": "2026-09-27T04:16:35.285307+00:00",
+  "snapshot": {
+    "bytes": 17584,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovery_dependency_alerts_20260927.json",
+    "sha256": "e5440ba1c18a0685274c89794db36cd1754ab2b20341574ad6c70dee295f1e46"
+  },
+  "source": {
+    "bytes": 3882,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovery_advisories.py",
+    "sha256": "d55d44b833e06d742ca8467234e60218042a808f90de740832490d9bcae8c33f"
+  },
+  "status": "recovery_inventory_repository_advisory_ranges_checked"
+}

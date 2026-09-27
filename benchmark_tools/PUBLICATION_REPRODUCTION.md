@@ -9,6 +9,11 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Recovery advisory range review](results/RECOVERY_ADVISORY_REVIEW_20260927.md)
+  matches the live recovery package inventory to its install report and checks
+  the 11 fresh repository-alert ranges. None affects those installed versions;
+  this is not comprehensive security clearance or closure of repository alerts.
+
 - [Three Kingdoms OrthoMCL retained-input trace](results/THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md)
   verifies all twelve native input copies, all 443,217 merged search sequences
   and the genome map against staged inputs. It does not establish immutable

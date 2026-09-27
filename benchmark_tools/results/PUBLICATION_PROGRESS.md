@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Recovery Advisory Range Check Completed (2026-09-27)
+
+The previous continuation was a verified wait on live native job 22326. This
+turn reread the objective and confirmed native RUNNING/audit PENDING, then
+checked whether the installer advisory review covers the new recovery
+environment. The [fresh bounded review](RECOVERY_ADVISORY_REVIEW_20260927.md)
+finds the same 11 open repository alerts, all on the historical installer lock.
+The live recovery distribution inventory exactly matches its installation
+report, with zero affected versions in those 11 ranges. Nine focused tests
+pass. This is not comprehensive security clearance; no alert, package, old
+lock or source pinned by the active jobs changed. Continue monitoring 22326
+and 22327. The broader goal remains active and DGX stays deferred.
+
 ## Three Kingdoms OrthoMCL Input Trace Completed (2026-09-27)
 
 The previous continuation was a verified wait on live native job 22326. This
