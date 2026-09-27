@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Integrated Wheel Notice Texts Collected (2026-09-27)
+
+Previous turn implemented independent admission while full job 22337 continued.
+Reconfirmed the job RUNNING, then inventoried its two completed installation
+reports without modifying the run. Collected 80 exact notice candidates from
+12 distinct wheel artifacts (shared packages deduplicated by digest), including
+the recovery Leiden and patched Biopython artifacts. The notice-only export
+and relocated copy both verify; 28 focused tests pass. See
+[selected artifact notices](INTEGRATED_DEPENDENCY_NOTICES_20260927.md).
+This advances release review, not license clearance, binary redistribution,
+scientific admission or timing. Job 22337 remains the only active native
+reproduction tracked here; continue to monitor it and preserve any failure.
+
 ## Independent Admission Implemented While Job 22337 Runs (2026-09-27)
 
 Previous turn made progress by freezing and submitting the full integrated

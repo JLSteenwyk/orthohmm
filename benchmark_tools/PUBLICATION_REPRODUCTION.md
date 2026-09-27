@@ -46,6 +46,8 @@ requirements and must not be confused with these audit commands.
   result from this controller has yet been admitted.
   The [independent post-completion admission command](results/INTEGRATED_FULL_OB_ADMISSION_20260927.md)
   is implemented and tested; it refuses a still-running or failed job.
+  The [exact integrated-wheel notice texts](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md)
+  have been collected and verified separately for release review, not redistribution clearance.
 
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.
