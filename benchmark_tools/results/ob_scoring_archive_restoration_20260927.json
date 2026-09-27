@@ -1,0 +1,64 @@
+{
+  "archive": {
+    "bytes": 1383071,
+    "path": "/tmp/orthohmm-ob-score-restore-stage-20260927/scoring.tar.gz",
+    "sha256": "64f193cbedfe2f03251ae539ebf355a43bd4d6961d5297bb02cd162bf04c457b"
+  },
+  "command": [
+    "/tmp/orthohmm-reader-patched-20260927/venv/bin/python",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-ob-score-restored-20260927/worker.py",
+    "--worker",
+    "/tmp/orthohmm-ob-score-restored-20260927",
+    "--output",
+    "/tmp/orthohmm-ob-score-restored-20260927/restored_score.json"
+  ],
+  "deterministic_archive_bytes_equal": true,
+  "environment": {
+    "HOME": "/tmp",
+    "LANG": "C.UTF-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin"
+  },
+  "external_files": 93,
+  "forbidden_prefixes_checked": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "/home/bizon/anaconda3/lib/python3.10/site-packages"
+  ],
+  "forbidden_prefixes_found": [],
+  "full_score_equal": true,
+  "genes": 251378,
+  "groups": 59770,
+  "inference_rerun": false,
+  "limitations": [
+    "Caller supplies an independently installed reader interpreter and acquired reference data.",
+    "Same-host scoring restoration, not fresh inference or cross-platform verification.",
+    "No public deposition or redistribution rights clearance."
+  ],
+  "publication_ready": false,
+  "refogs": 70,
+  "repeated_archive": {
+    "bytes": 1383071,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_ob_scoring_archive_20260927/repeat.tar.gz",
+    "sha256": "64f193cbedfe2f03251ae539ebf355a43bd4d6961d5297bb02cd162bf04c457b"
+  },
+  "restoration": {
+    "bytes": 1420,
+    "path": "/tmp/orthohmm-ob-score-restored-20260927/restoration.json",
+    "sha256": "ebfa0c17d4c50d00247d8a85cd1aa2b077e94861d1dbd36276354e30d960e477"
+  },
+  "score": {
+    "bytes": 15378,
+    "path": "/tmp/orthohmm-ob-score-restored-20260927/restored_score.json",
+    "sha256": "0525f414fa03578da72fb01d6116fd9696a8a230b25b8421335c672f5c4be3a3"
+  },
+  "status": "archived_full_ob_score_restored_exactly",
+  "trace": {
+    "bytes": 738486,
+    "path": "/tmp/orthohmm-ob-score-restore-stage-20260927/restore.strace",
+    "sha256": "7ed58a82a1a1a0b74db963853d523a34b1a2b4b386f8e582fc7d2f78688506a1"
+  },
+  "upstream_revision": "872d6f30592ab5ff837224db16a514b3f2bb916a"
+}

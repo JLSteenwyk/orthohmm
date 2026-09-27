@@ -32,6 +32,10 @@ requirements and must not be confused with these audit commands.
   reader environment. All 70 reference-family score records reproduce exactly
   from the retained full prediction partition. This is full-data scoring,
   not a new native run or a complete portable acquisition-to-inference workflow.
+  Its [deterministic scoring archive](results/OB_SCORING_ARCHIVE_20260927.md)
+  has also been restored and executed outside the checkout, with byte-identical
+  full score output. Raw upstream inputs and the reader interpreter must be
+  supplied separately; the local archive is not a public release.
 
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.

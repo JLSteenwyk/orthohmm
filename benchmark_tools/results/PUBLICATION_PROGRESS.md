@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Full Scoring Component Archived And Restored (2026-09-27)
+
+Previous turn advanced full-data scoring relocation. Built a deterministic
+40-member, 1,383,071-byte scoring archive; repeated build bytes match exactly.
+Raw upstream inputs, runtime and native tools are deliberately excluded.
+Executed the bundled standalone restorer outside the checkout with 93
+separately supplied checksum-verified acquisition files and the patched reader
+interpreter. All 70 family records and the entire score file reproduce
+byte-for-byte. The restore/worker trace has neither original project nor main
+site-packages prefixes. Forty focused tests pass. See
+[archive restoration](OB_SCORING_ARCHIVE_20260927.md). This removes the
+original controller/admission-path requirement for scoring restoration, not
+runtime installation or inference integration. No DGX, native inference,
+controlled timing, public deposition or redistribution-clearance action.
+Next remains the combined full workflow and existing scientific gates.
+
 ## Full OrthoBench Scoring Relocated (2026-09-27)
 
 Previous turn made progress by validating the patched reader environment.
