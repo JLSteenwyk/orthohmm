@@ -1,0 +1,109 @@
+{
+  "accuracy_evaluated": false,
+  "complete": {
+    "bytes": 1706,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/complete.json",
+    "sha256": "ce35658ae4a15bf8cc6a8b4a2a1fad277bd28b5daab8c8fec9b14841f314a81e"
+  },
+  "constraints": {
+    "bytes": 3,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/inference/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  "fixture_genes": 16,
+  "focused_tests_passed": 86,
+  "full_dataset_reproduced": false,
+  "install_after": {
+    "bytes": 639791,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/install_after.json",
+    "sha256": "f1636e6e3222c135d2f174bb3f2c247f74e646d8653d087f068960f4926f2559"
+  },
+  "limitations": [
+    "Same-host execution; no cross-platform reproducibility claim.",
+    "Canonical ordering remains an explicit experimental policy."
+  ],
+  "native_log": {
+    "bytes": 2038,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926.log",
+    "sha256": "d3ab3517f7bd3cd8e0382ab46b7f990f2dd44d26e0036de08272709b295d1d61"
+  },
+  "prior_failures": {
+    "launcher": {
+      "log": {
+        "bytes": 32,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_20260926.log",
+        "sha256": "70ba72aacf9be9387cbba2a2461fdd30593e24913e0c1094a2d13e01bdb59a65"
+      },
+      "reason": "Frozen argument processor exited zero before inference because output directory did not exist; new launcher creates it and converts early SystemExit into RuntimeError",
+      "receipt": {
+        "bytes": 88,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_20260926/failure.json",
+        "sha256": "c819591d7bb70e7de5c85e7e25935b24e52fa65f13ca1f96629d4f342a8569dd"
+      },
+      "source": {
+        "bytes": 6323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_20260926/launcher_initial.py",
+        "sha256": "44982564d2da4b8de6d6441c7669bb1d1aa708f12c86b549331efb3c70503897"
+      }
+    },
+    "readback": {
+      "error": "Require the recorded membership constraints exactly when applied",
+      "resolution": "Empty merge trace is recorded but passed to event oracle as no constraints; no native rerun",
+      "source": {
+        "bytes": 3775,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/readback/auditor_initial.py",
+        "sha256": "c2408eafffac8d9c9a0893e4b0a060f43a77b49e7ccbb1708fae80449936d2b7"
+      }
+    }
+  },
+  "publication_ready": false,
+  "reports": {
+    "events": {
+      "bytes": 6262,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/readback_v2/events.json",
+      "sha256": "9208d7a9fb0dfa29fedda91fbcbf4cfeddbd054143de906cd66236a75e154e47"
+    },
+    "hierarchy": {
+      "bytes": 3519,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/readback_v2/hierarchy.json",
+      "sha256": "15bf05f799e690707bfb9ca0d9d4fb2257048d99c929e4490c8190552de171d1"
+    },
+    "sequences": {
+      "bytes": 5772,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/readback_v2/sequences.json",
+      "sha256": "f7526fb09740ecb7f472a05f05084c4281f630f353200966746c4cbcd4c328ea"
+    },
+    "structure": {
+      "bytes": 5243,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/readback_v2/structure.json",
+      "sha256": "547114185a5e6b5ea87e3c8e496b4f3842093a5f3183e06a4c9d54642e639736"
+    }
+  },
+  "source": {
+    "bytes": 4082,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_publication_pipeline.py",
+    "sha256": "f68766d98d831e52696d70691c00f23f8342d3ddca0730d81444f8e2ca849e38"
+  },
+  "started": {
+    "bytes": 13634,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/started.json",
+    "sha256": "96d3e4d97c383f87aa2304b7a6d3bf379c8898d2a5e6787ceed8710d798462ae"
+  },
+  "status": "canonical_full_pipeline_scientific_readback_verified",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  }
+}

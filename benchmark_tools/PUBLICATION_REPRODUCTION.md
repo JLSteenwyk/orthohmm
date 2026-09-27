@@ -9,6 +9,12 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Explicit full-pipeline fixture](results/PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md)
+  runs raw FASTA through the frozen installed HMM pipeline with candidate-only
+  canonical ordering and fresh inferred phylogeny. Four independent readers
+  validate the 16-gene result. Full-data validation of this entrypoint is still
+  outstanding; earlier recovery scores are not transferred to it.
+
 - [Fresh recovery-install phylogeny fixture](results/PUBLICATION_RECOVERY_PHYLOGENY_20260926.md)
   validates inferred species/gene trees and reconciliation in the new hash-locked
   venv with four independent scientific readbacks. This 16-gene same-host test

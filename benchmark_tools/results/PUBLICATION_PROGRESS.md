@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Explicit Full-Pipeline Entrypoint Tested (2026-09-26)
+
+The previous continuation made concrete progress by validating fresh installed
+phylogeny. This continuation reread the objective and implemented the
+[explicit full-pipeline canonical wrapper](PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md).
+A raw-FASTA fixture completed search through inferred reconciliation in the
+fresh recovery venv, with 16 genes, three root groups and 36 ortholog pairs.
+All four independent readbacks and 86 focused tests pass; the post-run package
+audit is unchanged. Both the pre-inference output-directory failure and the
+empty-constraint readback failure are retained and explained. No native process
+from this experiment remains running.
+
+The fixture applies ordering to 96 hits but makes no satellite merges. Next
+freeze and execute a full OrthoBench reproduction using this entrypoint, with
+source/environment/input pins and independent scoring/readback. Do not transfer
+earlier full-data scores to this wrapper before validation. Production defaults
+are unchanged. Broader scientific, timing and archival requirements remain
+open; DGX stays deferred and the full goal remains active.
+
 ## Fresh Recovery Phylogeny Validated (2026-09-26)
 
 The preceding user-status turn made no changes; this continuation reread the
