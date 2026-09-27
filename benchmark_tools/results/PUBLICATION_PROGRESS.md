@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Full Post-Run Workflow and Baseline Preflight (2026-09-26)
+
+The preceding turn made progress on native admission. This continuation reread
+the objective and confirmed job 22324 still RUNNING, at elapsed 7:25 with
+1,220 reconciled gene-tree files produced. It adds the complete post-run
+workflow: admission, four scientific readers, full-coverage partition checks,
+frozen scoring, both historical contrasts and family-level differences.
+
+Both retained baseline score objects were independently recomputed exactly,
+including all 70 family records. Historical F1 remains 74.10607351873405% and
+fresh-installed F1 73.82156906618316%. No canonical final score was inspected.
+115 focused tests pass after correcting three new fixture type mismatches;
+the failed test run and correction are described in the
+[workflow notes](CANONICAL_OB_PHYLOGENY_ADMISSION_20260926.md).
+
+The live native plan, inputs, installed scientific sources and runtime remain
+unchanged. Next poll the same job and execute the committed readback command
+after successful completion. No result is silently promoted and no production
+default changed. Dedicated scaling, remaining uncertainty and publication
+packaging gaps remain open; DGX stays deferred.
+
 ## Admission Checks Prepared While 22324 Runs (2026-09-26)
 
 The previous turn made progress by validating, committing and submitting the

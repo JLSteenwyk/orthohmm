@@ -24,6 +24,37 @@ even when their output hashes are consistently regenerated. A synthetic test
 also explicitly proves that successful artifact binding alone does not validate
 group contents or admit scores.
 
+## Complete Post-Run Workflow
+
+`benchmark_tools.readback_canonical_ob_phylogeny` now chains native admission,
+all four independent readers, strict full-coverage root-group loading and
+three-way frozen scoring. It recomputes both retained baseline scores and
+requires exact agreement before comparing canonical results. It preserves
+partition changes and every changed reference-family record even when overall
+scores agree. It refuses an existing output directory and retains partial
+audit files if a later check fails.
+
+```bash
+python -m benchmark_tools.readback_canonical_ob_phylogeny \
+  --repo . \
+  --directory benchmarks/work/canonical_ob_phylogeny_20260926 \
+  --job 22324 \
+  --output benchmarks/work/canonical_ob_phylogeny_20260926/readback
+```
+
+Run only after successful native completion. This command includes admission;
+the individual admission command below is an alternative preliminary check,
+not a requirement to rerun inference. A comparison preflight recomputed both
+retained full-data score objects exactly: historical F1 74.10607351873405% and
+fresh-installed F1 73.82156906618316%, with all 70 RefOG records matching.
+See the [baseline preflight receipt](canonical_ob_readback_baseline_preflight_20260926.json).
+No canonical final result was inspected during this preflight.
+
+The expanded suite passes 115 tests. Its initial run had three failures because
+new comparison fixtures used mutable sets whereas the strict partition reader
+returns frozensets. The fixtures were corrected to the existing contract; the
+scientific scorer and partition-comparison implementation were not changed.
+
 After job 22324 completes, run from the repository root:
 
 ```bash
