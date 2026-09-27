@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Paired QfO Candidate Replay Frozen (2026-09-27)
+
+The preceding user-facing turn was a status report, not a new analysis.
+Prepared the [paired protocol](QFO_ORDER_REPLAY_PROTOCOL_20260927.md) and
+hash-pinned full input/runtime plan. Twenty-two focused tests pass; both
+isolated small-fixture arms complete. Full execution has not yet been
+submitted at this milestone. Next submit once on bizon, then independently
+validate partitions and ordered semantic constraints before interpreting
+equivalence. No accuracy score or default changed. DGX remains deferred;
+publication readiness and the other outstanding gates remain unproven.
+
 ## Corrected QfO Ordering Compatibility Audited (2026-09-27)
 
 The previous turn validated the fresh relocated small runtime. This turn
