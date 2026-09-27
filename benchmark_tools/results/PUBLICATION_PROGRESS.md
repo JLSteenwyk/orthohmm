@@ -1,5 +1,17 @@
 # Publication Progress
 
+## QfO Native Completed; Readback Inventory Failure (2026-09-27)
+
+Previous turn was a verified wait. Job 22329 now completed successfully in
+01:53:08; audit 22330 failed after 16 seconds on its full-directory versus
+FASTA-only inventory check. Direct comparison confirms all 78 planned FASTAs
+unchanged, with one extra staging manifest. The
+[failure diagnosis](QFO_FRESH_READBACK_FAILURE_22330.md) preserves terminal
+states, receipt/log hashes, limitations and next actions. No native restart,
+scientific admission or canonical submission has occurred. Next correct and
+test explicit metadata handling, freeze a distinct audit attempt, then require
+its successful readback before reuse. Full publication gates remain open.
+
 ## QfO Ordering Result Integrated Into Review 23 (2026-09-27)
 
 The previous turn was a verified wait. Native 22329 remains RUNNING and 22330
