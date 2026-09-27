@@ -1,0 +1,1529 @@
+{
+  "files": [
+    {
+      "file": {
+        "bytes": 17157264,
+        "path": "/home/bizon/anaconda3/bin/python3.10",
+        "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b",
+          "file_entry": {
+            "_path": "bin/python3.10",
+            "file_mode": "binary",
+            "path_type": "hardlink",
+            "prefix_placeholder": "/croot/python-split_1694437906621/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+            "sha256": "ece86e58c751c094602e9a459da3c92fc817805d1f33e1f116bdde18126e41c8",
+            "sha256_in_prefix": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b",
+            "size_in_bytes": 17157264
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 83576,
+        "path": "/home/bizon/anaconda3/lib/libbz2.so.1.0.8",
+        "sha256": "2aa4427cfdbae9ef95a402de9291102dd293e58d29409df9812c3c8fa9216ccd"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": null,
+          "file_entry": null,
+          "installed_sha256_matches": null,
+          "metadata": {
+            "bytes": 1684,
+            "path": "/home/bizon/anaconda3/conda-meta/bzip2-1.0.8-h7b6447c_0.json",
+            "sha256": "7fbbb8e31aab0bd4edbeede4d94c6e44aa170f38da94a2a6a5a1e0bb432a1f70"
+          },
+          "package": {
+            "build": "h7b6447c_0",
+            "license": "bzip2",
+            "md5": "9303f4af7c004e069bae22bde8d800ee",
+            "name": "bzip2",
+            "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d",
+            "version": "1.0.8"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 5172040,
+        "path": "/home/bizon/anaconda3/lib/libcrypto.so.3",
+        "sha256": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec",
+          "file_entry": {
+            "_path": "lib/libcrypto.so.3",
+            "file_mode": "binary",
+            "path_type": "hardlink",
+            "prefix_placeholder": "/croot/openssl_1740989479866/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+            "sha256": "f8971e88ee32f5377880931b8a363a4d43e77aa903e7206287a95486a6773887",
+            "sha256_in_prefix": "e51457dff39af720f0a88552a93457879db1538a1f87494022ad42e27767aaec",
+            "size_in_bytes": 5172040
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 55997,
+            "path": "/home/bizon/anaconda3/conda-meta/openssl-3.0.16-h5eee18b_0.json",
+            "sha256": "5a62ace651dac984a89a5494c0b324388f323c5786945a6defa56afa7a43d664"
+          },
+          "package": {
+            "build": "h5eee18b_0",
+            "license": "Apache-2.0",
+            "md5": "5875526739afa058cfa84da1fa7a2ef4",
+            "name": "openssl",
+            "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97",
+            "version": "3.0.16"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 72144,
+        "path": "/home/bizon/anaconda3/lib/libffi.so.8.1.2",
+        "sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194",
+          "file_entry": {
+            "_path": "lib/libffi.so.8.1.2",
+            "path_type": "hardlink",
+            "sha256": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194",
+            "sha256_in_prefix": "a5d54aeb8ed2fd5e0ccf9d38b28cad6dec76517f69224a5d9687c1970b57b194",
+            "size_in_bytes": 72144
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 5884,
+            "path": "/home/bizon/anaconda3/conda-meta/libffi-3.4.4-h6a678d5_0.json",
+            "sha256": "457c8c46b6293c38a81da3f842774ecfe3cf8ee257925885acd9c74d1a3da091"
+          },
+          "package": {
+            "build": "h6a678d5_0",
+            "license": "MIT",
+            "md5": "06e288f9250abef59b9a367d151fc339",
+            "name": "libffi",
+            "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c",
+            "version": "3.4.4"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 475272,
+        "path": "/home/bizon/anaconda3/lib/libgcc_s.so.1",
+        "sha256": "d912bad5e511194c15b506fe7eafe4454bc2dc4073a0fdebc60e86af59a0f2bc"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": null,
+          "file_entry": null,
+          "installed_sha256_matches": null,
+          "metadata": {
+            "bytes": 2074,
+            "path": "/home/bizon/anaconda3/conda-meta/libgcc-ng-11.2.0-h1234567_1.json",
+            "sha256": "6b04ef667b6087bb48ee7c58bfa934f8087f207c67448f51cf9a11e0b853702f"
+          },
+          "package": {
+            "build": "h1234567_1",
+            "license": "GPL-3.0-only WITH GCC-exception-3.1",
+            "md5": "a87728dabf3151fb9cfa990bd2eb0464",
+            "name": "libgcc-ng",
+            "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7",
+            "version": "11.2.0"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 1265616,
+        "path": "/home/bizon/anaconda3/lib/libgomp.so.1.0.0",
+        "sha256": "e3b68c5f37afb7b70bd12273b69706ab33a397714e8336910f0e47f8f1cf6854"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": null,
+          "file_entry": null,
+          "installed_sha256_matches": null,
+          "metadata": {
+            "bytes": 1311,
+            "path": "/home/bizon/anaconda3/conda-meta/libgomp-11.2.0-h1234567_1.json",
+            "sha256": "84e4ae4e142d13e33ed5d5f99a1608cd9538393e3dfb8ca6c109603f26146514"
+          },
+          "package": {
+            "build": "h1234567_1",
+            "license": "GPL-3.0-only WITH GCC-exception-3.1",
+            "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+            "name": "libgomp",
+            "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90",
+            "version": "11.2.0"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 218304,
+        "path": "/home/bizon/anaconda3/lib/liblzma.so.5.6.4",
+        "sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503",
+          "file_entry": {
+            "_path": "lib/liblzma.so.5.6.4",
+            "path_type": "hardlink",
+            "sha256": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503",
+            "sha256_in_prefix": "6b126e186cc43702dcacb626e0455f8aecf030d969d6d4a407ce4cc35293c503",
+            "size_in_bytes": 218304
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 67687,
+            "path": "/home/bizon/anaconda3/conda-meta/xz-5.6.4-h5eee18b_1.json",
+            "sha256": "65df806d93a629904eac994f001476fd885ff5f7d8444d81c6840ef813b88e51"
+          },
+          "package": {
+            "build": "h5eee18b_1",
+            "license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+            "md5": "3581505fa450962d631bd82b8616350e",
+            "name": "xz",
+            "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c",
+            "version": "5.6.4"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 13799640,
+        "path": "/home/bizon/anaconda3/lib/libstdc++.so.6.0.32",
+        "sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8",
+          "file_entry": {
+            "_path": "lib/libstdc++.so.6.0.32",
+            "path_type": "hardlink",
+            "sha256": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8",
+            "sha256_in_prefix": "31cbe74fef348ed0f1bcaaf0e8b941259bb9232bd635615b157ec4315ba102a8",
+            "size_in_bytes": 13799640
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 2236,
+            "path": "/home/bizon/anaconda3/conda-meta/libstdcxx-ng-13.2.0-hc0a3c3a_7.json",
+            "sha256": "32bbbd93ab902c6a342c8796ccc3ca877982c2a5e8228ffa041c760bbb5ff151"
+          },
+          "package": {
+            "build": "hc0a3c3a_7",
+            "license": "GPL-3.0-only WITH GCC-exception-3.1",
+            "md5": "53ebd4c833fa01cb2c6353e99f905406",
+            "name": "libstdcxx-ng",
+            "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f",
+            "version": "13.2.0"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 35944,
+        "path": "/home/bizon/anaconda3/lib/libuuid.so.1.3.0",
+        "sha256": "b42fa6cf1dcaca6b84e8155c4649d6bad561eaca2e8fa9473db178dbaa4aec53"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": null,
+          "file_entry": null,
+          "installed_sha256_matches": null,
+          "metadata": {
+            "bytes": 1969,
+            "path": "/home/bizon/anaconda3/conda-meta/libuuid-1.41.5-h5eee18b_0.json",
+            "sha256": "94623248e360bb775e693b7365f6e53aeea9b8e31039576cacd9be2670d9ebb9"
+          },
+          "package": {
+            "build": "h5eee18b_0",
+            "license": "BSD-3-Clause",
+            "md5": "4a6a2354414c9080327274aa514e5299",
+            "name": "libuuid",
+            "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a",
+            "version": "1.41.5"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 124744,
+        "path": "/home/bizon/anaconda3/lib/libz.so.1.2.13",
+        "sha256": "0b0e682a9dc7fd4895a6783288f851b793dc89633f28714027974fa4d66f3914"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": null,
+          "file_entry": null,
+          "installed_sha256_matches": null,
+          "metadata": {
+            "bytes": 1951,
+            "path": "/home/bizon/anaconda3/conda-meta/zlib-1.2.13-h5eee18b_0.json",
+            "sha256": "450d5fcfd62fe57fb2e4487d9bd55734e1b4e17670966f988d7ec292d619d111"
+          },
+          "package": {
+            "build": "h5eee18b_0",
+            "license": "Zlib",
+            "md5": "333e31fbfbb5057c92fa845ad6adef93",
+            "name": "zlib",
+            "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794",
+            "version": "1.2.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 62472,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_bisect.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d",
+            "sha256_in_prefix": "ea887752eba075d2474bd853e3a5e503bcf032305e5c51cd14028b4e77034b4d",
+            "size_in_bytes": 62472
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 251704,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_blake2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_blake2.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80",
+            "sha256_in_prefix": "f421e8df1b7ea5d31515dee9a2684bd36aa67ec685928570988d353a59fdce80",
+            "size_in_bytes": 251704
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 88896,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_bz2.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad",
+            "sha256_in_prefix": "b19678449d12d9beb6cbbbd33fb555ebfc853871cce5a2a519726e35ab5d7bad",
+            "size_in_bytes": 88896
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 27008,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_contextvars.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7",
+            "sha256_in_prefix": "6ed0d89ae1638f7b8c0ffcc509636d6915b1c63b72f5152256d0ea08c71ba2c7",
+            "size_in_bytes": 27008
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 142696,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_csv.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6",
+            "sha256_in_prefix": "df056cebe877d3018dcdfde2e872a00fbffa7fc108179fa7eec15421a3f7bcf6",
+            "size_in_bytes": 142696
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 548912,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_ctypes.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9",
+            "sha256_in_prefix": "a30a8aed3d972d7bb87069b0936065dd4b6c763e9f6f7f149f12c920bdfbc2b9",
+            "size_in_bytes": 548912
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 580080,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_datetime.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8",
+            "sha256_in_prefix": "2fc84a2c46a4df59e1a577e3e90697bc70e8823c3c96377ae37fb01f3849d7b8",
+            "size_in_bytes": 580080
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 211136,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_hashlib.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a",
+            "sha256_in_prefix": "fc629b71bf317522fb415d5d2d922f7a4b5d46b87cd6fa8c57525496e0e3a72a",
+            "size_in_bytes": 211136
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 104128,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_heapq.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_heapq.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6",
+            "sha256_in_prefix": "786b8377efa7f3c3fa22964dc1a2356313ba5165d31a17632020d6570f50d2d6",
+            "size_in_bytes": 104128
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 163064,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_json.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af",
+            "sha256_in_prefix": "96e880f7dc1ea92de1274e0c48e68a14ca774e8dc2acc8dfa4298316f1e8a1af",
+            "size_in_bytes": 163064
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 145376,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_lzma.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d",
+            "sha256_in_prefix": "c290899c3d2ba97ad1c1eca27392dada5d0baf2930e271b8680c60afcc4e335d",
+            "size_in_bytes": 145376
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 65648,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_multiprocessing.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "d2788e972576382303d0ada0c63f638e50d03e4b4c35b0f8cbb0e6217b2291d2"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "d2788e972576382303d0ada0c63f638e50d03e4b4c35b0f8cbb0e6217b2291d2",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_multiprocessing.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "d2788e972576382303d0ada0c63f638e50d03e4b4c35b0f8cbb0e6217b2291d2",
+            "sha256_in_prefix": "d2788e972576382303d0ada0c63f638e50d03e4b4c35b0f8cbb0e6217b2291d2",
+            "size_in_bytes": 65648
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 29720,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_opcode.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9",
+            "sha256_in_prefix": "6509bb6108534aa66f5ffa927309997192266c383692034ab55003f0dcf57af9",
+            "size_in_bytes": 29720
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 532464,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_pickle.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626",
+            "sha256_in_prefix": "e02187f9da864f3b18012db3f8532639e38636e07d4476f945315d1fd4f7b626",
+            "size_in_bytes": 532464
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 76248,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_posixsubprocess.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2",
+            "sha256_in_prefix": "6504b0340b5b8dab668aeccca4342499d658c79aa04c600cb5677860f1ff5ae2",
+            "size_in_bytes": 76248
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 55448,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_queue.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2",
+            "sha256_in_prefix": "4947caa8236f98db027ec195ba21f8d46c090234a37f297060461c5d309d15e2",
+            "size_in_bytes": 55448
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 67328,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_random.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369",
+            "sha256_in_prefix": "ac1ccbb60ce2006a9c11ee60ec2fc5c05e24c39da941e55f94204d92bb3c1369",
+            "size_in_bytes": 67328
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 98040,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_sha512.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f",
+            "sha256_in_prefix": "b45b862451f4704e44689acb20375ea6adb7074927cbfcaf0758b3818df9000f",
+            "size_in_bytes": 98040
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 283512,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_socket.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_socket.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c",
+            "sha256_in_prefix": "7c91726d7fa1955364a2d7f789800748406d311957d66be94d21862f8e19304c",
+            "size_in_bytes": 283512
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 219400,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_struct.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4",
+            "sha256_in_prefix": "af2b5503de6cb31de79ec9ce4269ff3bb501fc85fb6b8153bcbbe7515d86f4f4",
+            "size_in_bytes": 219400
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 26632,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "f0d7955ed55f2d634833d2adca3dfe9207503cd00dad3a68f19b28bccc039460"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "f0d7955ed55f2d634833d2adca3dfe9207503cd00dad3a68f19b28bccc039460",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/_uuid.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "f0d7955ed55f2d634833d2adca3dfe9207503cd00dad3a68f19b28bccc039460",
+            "sha256_in_prefix": "f0d7955ed55f2d634833d2adca3dfe9207503cd00dad3a68f19b28bccc039460",
+            "size_in_bytes": 26632
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 231120,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/array.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef",
+            "sha256_in_prefix": "11002ce4700ab79912a0bb087c5fe23780cc5c30698674cfa0a16974899771ef",
+            "size_in_bytes": 231120
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 122768,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/binascii.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238",
+            "sha256_in_prefix": "e1e71d3c1634ee3c2b305a574b01a4375b7dd5bf8f1cf91930d03ee2e40ac238",
+            "size_in_bytes": 122768
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 194648,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/cmath.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "312112cd8e6c36be58a04541670ab456b0c975027515541463523fe618280438"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "312112cd8e6c36be58a04541670ab456b0c975027515541463523fe618280438",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/cmath.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "312112cd8e6c36be58a04541670ab456b0c975027515541463523fe618280438",
+            "sha256_in_prefix": "312112cd8e6c36be58a04541670ab456b0c975027515541463523fe618280438",
+            "size_in_bytes": 194648
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 57440,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/fcntl.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d",
+            "sha256_in_prefix": "9ddc8f3f5e9dc8f9853a84388d334b63a50c7ac837770a9fc7c6044a4258690d",
+            "size_in_bytes": 57440
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 259288,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733",
+            "sha256_in_prefix": "81fac6b419fc71268e60e10ccec0410b602db8f71ea94ab4d3efc739aa62d733",
+            "size_in_bytes": 259288
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 95568,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "80ef2c703389fc8e681a10ab01bc250be9b433f922a3c2d818d786af0e7494f0"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "80ef2c703389fc8e681a10ab01bc250be9b433f922a3c2d818d786af0e7494f0",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/mmap.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "80ef2c703389fc8e681a10ab01bc250be9b433f922a3c2d818d786af0e7494f0",
+            "sha256_in_prefix": "80ef2c703389fc8e681a10ab01bc250be9b433f922a3c2d818d786af0e7494f0",
+            "size_in_bytes": 95568
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 50280,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/resource.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b",
+            "sha256_in_prefix": "2652d574c4b386e3d2d8db4883aee9b6468342e102b45fce0ada79ff1c44c59b",
+            "size_in_bytes": 50280
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 113568,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/select.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b",
+            "sha256_in_prefix": "bef537130c58a31fa345ba20523179ed2df7c30eadc6014b61e2d672d0ac6e6b",
+            "size_in_bytes": 113568
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 138024,
+        "path": "/home/bizon/anaconda3/lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c"
+      },
+      "owners": [
+        {
+          "expected_installed_sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c",
+          "file_entry": {
+            "_path": "lib/python3.10/lib-dynload/zlib.cpython-310-x86_64-linux-gnu.so",
+            "path_type": "hardlink",
+            "sha256": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c",
+            "sha256_in_prefix": "12cd038d0c1875763042aa7ca3fa6b6ded4646770b6c2f8f18ed5fa87ad4f46c",
+            "size_in_bytes": 138024
+          },
+          "installed_sha256_matches": true,
+          "metadata": {
+            "bytes": 803398,
+            "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+            "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+          },
+          "package": {
+            "build": "h955ad1f_0",
+            "license": "PSF-2.0",
+            "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+            "name": "python",
+            "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+            "version": "3.10.13"
+          },
+          "provider": "conda"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 236616,
+        "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+        "sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "29f1921116f5b1ed2f3cf21e9ae45c79",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "29f1921116f5b1ed2f3cf21e9ae45c79",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 2125328,
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+        "sha256": "e7a914a33fd4f6d25057b8d48c7c5f3d55ab870ec4ee27693d6c5f3a532e6226"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "322a201a92c7d698255513be320065ad",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "322a201a92c7d698255513be320065ad",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/libc.so.6\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+        "sha256": "efb09ce48f6ecdf4803547ef500bc371f9485e8c34b80913313c4a7cdb109664"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "b720f4f84b8e913d0436f147ff97f960",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "b720f4f84b8e913d0436f147ff97f960",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/libdl.so.2\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 952616,
+        "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+        "sha256": "c09178edd7fbc58aa8415f4bbe54dd76c5ff6c6398ba3e56e5a4743fd7e9adfc"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "04e9d3fefab43d6664f5de40077ef95d",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "04e9d3fefab43d6664f5de40077ef95d",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/libm.so.6\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+        "sha256": "8886af025eed1782e4b4675918250bf902206dab45151b6bc7f22b9c7249f6ae"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "8000d6c58bdbeeae588ef45a4064c42e",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "8000d6c58bdbeeae588ef45a4064c42e",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/libpthread.so.0\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 14624,
+        "path": "/usr/lib/x86_64-linux-gnu/librt.so.1",
+        "sha256": "5c070d1a8ff908c799bce07f86dadef98512a8aa0643fed917598f96fc1256e1"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "f6eb644710d9c81e4c2890053ed66af2",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "f6eb644710d9c81e4c2890053ed66af2",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/librt.so.1\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    },
+    {
+      "file": {
+        "bytes": 14408,
+        "path": "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+        "sha256": "17a4fca0e7fece307d2bfda63efd3be2051a6d83981be0c3481d63ac6f2a0e96"
+      },
+      "owners": [
+        {
+          "architecture": "amd64",
+          "expected_installed_md5": "6f0b21db56cafc6637d99182ffd7216b",
+          "installed_md5_matches": true,
+          "md5_record": {
+            "bytes": 21606,
+            "path": "/var/lib/dpkg/info/libc6:amd64.md5sums",
+            "sha256": "8e3efc6f8ae02160ce2d9d3fa92725466493beed4710afac7750580eaa665057"
+          },
+          "observed_md5": "6f0b21db56cafc6637d99182ffd7216b",
+          "ownership_stdout": "libc6:amd64: /usr/lib/x86_64-linux-gnu/libutil.so.1\n",
+          "package": "libc6:amd64",
+          "provider": "dpkg",
+          "status": "install ok installed",
+          "version": "2.39-0ubuntu8.4"
+        }
+      ]
+    }
+  ],
+  "input": {
+    "bytes": 229869,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_search_libraries_20260927.json",
+    "sha256": "11c98d5483b56bdd09abd3a167d98823438f0445f137a6802237eb3d109147d2"
+  },
+  "limitations": [
+    "Local package ownership metadata, not trusted upstream archive authentication",
+    "Only previously observed library backing files and interpreter; not complete runtime closure",
+    "Missing installed-file digests remain unknown; package archive digests do not substitute",
+    "MD5 checks are local consistency evidence, not cryptographic authenticity",
+    "Provider license declarations are not legal compatibility or redistribution clearance",
+    "No installation, upgrade or native process intervention"
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "status": "observed_base_runtime_package_attribution"
+}

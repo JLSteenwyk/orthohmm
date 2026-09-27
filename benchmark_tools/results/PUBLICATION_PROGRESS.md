@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Observed Base Runtime Providers Attributed (2026-09-27)
+
+Previous turn captured live search-stage libraries. Reconfirmed job 22337
+RUNNING and mapped all 46 non-wheel library paths plus the interpreter to
+exact local package file records: ten Conda providers and Ubuntu libc6.
+Thirty-five Conda SHA256 checks and seven system MD5 checks match; five
+Conda installed-file digests remain unavailable rather than presumed valid.
+The [attribution](INTEGRATED_BASE_RUNTIME_PACKAGES_20260927.md) preserves
+provider versions/builds and metadata identities but is not upstream
+authentication, complete runtime closure or clearance. No packages or native
+processes changed. Full-run admission and the broader publication gates remain.
+
 ## Live Search Libraries Identified (2026-09-27)
 
 Previous turn inventoried declared wheel dependencies. Reconfirmed job 22337
