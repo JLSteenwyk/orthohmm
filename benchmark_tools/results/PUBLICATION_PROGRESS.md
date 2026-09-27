@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Paired QfO Ordering Difference Confirmed (2026-09-27)
+
+The previous turn froze and launched job 22328. It completed 0:0 in 3:08;
+independent readback validates all 984,137 genes and 40,169 constraints.
+The [result](QFO_ORDER_REPLAY_RESULT_22328.md) shows exact historical
+reproduction for retained order, but canonical ordering changes two candidate
+groups containing 49 genes and five ordered semantic constraint positions.
+Forty-four focused tests pass. No scoring or parameter changes were made.
+Next trace differences and freeze downstream phylogeny validation; historical
+QfO scores cannot yet be transferred to the canonical installed pipeline.
+This job is terminal, not awaiting or eligible for an automatic retry.
+Dedicated timing, uncertainty and release gates remain open; DGX stays deferred.
+
 ## Paired QfO Replay Submitted (2026-09-27)
 
 After committing and pushing protocol/launcher `3c7d1fc`, submitted once as
