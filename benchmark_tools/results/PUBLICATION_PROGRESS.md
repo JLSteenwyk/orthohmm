@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Full Unit Regression Refreshed (2026-09-27)
+
+Previous turn completed the updated PDF layout review. Reconfirmed full
+job 22337 RUNNING and ran the entire current `tests/unit` suite without
+source edits: 10,819 passed, ten opt-in native checks skipped, 22 known
+frozen-source warnings. No failure or retry; scoped source status stayed
+clean. The [revision-bound receipt](PUBLICATION_TEST_REFRESH_20260927_v2.md)
+supersedes the older current-source count without replacing its evidence.
+HMM search in job 22337 advanced to 25% during this check; independent
+full-workflow admission remains pending, with all broader gates unchanged.
+
 ## Updated Draft PDF Checked (2026-09-27)
 
 Previous turn integrated the latest reproducibility evidence into the draft.
