@@ -1,0 +1,27 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--cpus-per-task=2",
+    "--mem=64G",
+    "--time=04:00:00",
+    "--no-requeue",
+    "--dependency=afterok:22324",
+    "--job-name=ohm-canonical-readback",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback-slurm-%j.log",
+    "--wrap",
+    "env -i PATH=/usr/bin:/bin HOME=/home/bizon LANG=C.UTF-8 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -I -c 'import sys,json,hashlib,importlib.metadata as metadata\nfrom pathlib import Path\npath=Path(sys.argv[1]); raw=path.read_bytes()\nif hashlib.sha256(raw).hexdigest()!=sys.argv[2]: raise ValueError(\"Changed readback plan\")\nplan=json.loads(raw)\nif sys.executable!=plan[\"python\"] or sys.version!=plan[\"python_version\"]: raise ValueError(\"Changed Python\")\nif {n:metadata.version(n) for n in plan[\"versions\"]}!=plan[\"versions\"]: raise ValueError(\"Changed reader dependencies\")\ndef verify():\n    for item in plan[\"sources\"]:\n        raw=Path(item[\"path\"]).read_bytes()\n        if len(raw)!=item[\"bytes\"] or hashlib.sha256(raw).hexdigest()!=item[\"sha256\"]: raise ValueError(\"Changed source: \"+item[\"path\"])\nverify()\nsys.path.insert(0,plan[\"repo\"])\nfrom benchmark_tools.readback_canonical_ob_phylogeny import readback\nif sys.argv[3]==\"run\":\n    readback(Path(plan[\"repo\"]),Path(plan[\"native_directory\"]),plan[\"native_job\"],Path(plan[\"output\"]))\n    verify()\nelif sys.argv[3]!=\"verify\": raise ValueError(\"Unknown mode\")\n' /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback_plan.json dc4c1a93aa69e45c37325ba4a8787ed012751c9cd1e97ebf437f7198c3f7b4a9 run"
+  ],
+  "commit": "178544e1bc75a4e6855a6345e4601dfefb5113d2",
+  "job_id": "22325",
+  "native_dependency": 22324,
+  "plan": {
+    "bytes": 172139,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback_plan.json",
+    "sha256": "dc4c1a93aa69e45c37325ba4a8787ed012751c9cd1e97ebf437f7198c3f7b4a9"
+  },
+  "preflight": "source/runtime checks and reader import passed in clean environment",
+  "scientific_scores_admitted": false
+}

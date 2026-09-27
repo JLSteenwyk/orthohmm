@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Automatic Post-Run Audit Queued: 22325 (2026-09-26)
+
+The preceding turn completed QfO OrthoFinder provenance consolidation. This
+continuation reread the goal, verified 22324 RUNNING, and queued readback job
+22325 with `afterok:22324`, two CPUs, 64 GiB, four hours and no requeue.
+Scheduler inspection confirms the dependency is unfulfilled and the job is
+PENDING; native job 22324 was RUNNING at elapsed 16:05 with 32 CPUs.
+
+The [submission receipt](canonical_ob_readback_submission_22325.json) records
+the exact bootstrap and plan SHA256
+`dc4c1a93aa69e45c37325ba4a8787ed012751c9cd1e97ebf437f7198c3f7b4a9`.
+A clean-environment preflight verified the Python/dependency versions, all
+714 pinned local Python sources, and reader import. The queued command checks
+these sources before and after readback. Do not edit those pinned Python files
+until 22325 terminates. A native failure will not start scoring or trigger a
+retry. Missing or partial reader outputs are not admitted scores.
+
+Manuscript source and the claim checklist now incorporate QfO OrthoFinder's
+shared-run provenance and resource limitations; the older rendered preview
+has not been refreshed. Next inspect 22324 and 22325 to terminal states and
+independently review the resulting audit and comparisons. Publication gaps
+remain; DGX is still deferred and untouched.
+
 ## QfO OrthoFinder Provenance Consolidated (2026-09-26)
 
 The preceding turn prepared the post-run phylogeny workflow. This continuation

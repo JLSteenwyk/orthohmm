@@ -1074,6 +1074,15 @@ has higher GO/EC similarity and FAS. Full OrthoFinder SwissTrees
 precision/recall are 0.937853/0.774548, and TreeFam-A precision/recall
 are 0.924527/0.692578. Relative to OrthoHMM, this is lower precision
 and higher recall on both reference-tree tests, not a uniform advantage.
+The [retained QfO provenance consolidation](QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md)
+binds both OrthoFinder rows to the same 3.1.5 native execution on 78 proteomes
+and 984,137 proteins. The diagnostic checkpoint has 167,209 groups; it was
+not a separately timed sequence-only inference. Full-run GNU time records
+42,018 wall seconds and 6,479,368 KiB maximum process RSS. Conversion took
+193.52 seconds for native pairs and 249.17 seconds for checkpoint cliques.
+These shared-host quantities have different measurement scopes, and maximum
+process RSS is not aggregate concurrent-process memory. They do not support
+a controlled speed or memory ranking.
 FastOMA's corrected native pairs are now admitted: GO 0.436894, EC 0.897168,
 VGNC F1 0.950096, SwissTrees F1 0.780219, TreeFam-A F1 0.657902 and FAS
 0.654366 (secondary mean 0.729441), from 15,008,180 native pairs with zero
