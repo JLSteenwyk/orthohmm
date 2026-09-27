@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Fresh Recovery Python Environment Validated (2026-09-26)
+
+The previous turn identified the exact Leiden wheel. This continuation reread
+the objective, prepared a new venv and dedicated 11-wheel directory, installed
+offline with a complete hash lock, and ran standard/high-sensitivity smoke
+tests. Both cover all 38 fixture genes in four groups. The
+[version-2 installation audit](PUBLICATION_RECOVERY_INSTALL_20260926.md)
+checks 3,052 package files against wheels, 33 scientific sources against frozen
+Git blobs, and the Leiden payload against the validated private snapshot.
+
+The initial audit rejected installer-regenerated NumPy bytecode; its source
+and failure message are preserved. The reader now excludes that cache only
+with byte-verified corresponding source, and limits RECORD exclusion to the
+11 top-level distribution records. Twelve vendored RECORDs are checked in v2.
+Twenty-three focused tests and pip check pass. Non-site header/script payload
+and generated installer files are explicitly outside byte-equality claims.
+
+No old environment, production default or benchmark score changed. Next validate
+fresh inferred phylogeny in this environment and integrate the explicit
+canonical-order reproduction entrypoint; do not transfer full-data scores from
+the private diagnostic environment without new validation. Broader scientific,
+controlled-timing and archive requirements remain open. DGX stays deferred.
+
 ## Exact Recovery Dependency Wheel Identified (2026-09-26)
 
 The preceding turn integrated the tested recovery into the guide. This turn

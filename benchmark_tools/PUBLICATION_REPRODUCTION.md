@@ -412,7 +412,10 @@ that lock for the recovery environment. See the
 The [verified recovery wheel](results/LEIDEN_RECOVERY_WHEEL_20260926.md)
 now supplies a provider-digest-checked artifact whose 15 payload files match
 that private distribution exactly. Its single-component hash lock is not a
-complete environment, and a fresh installation has not yet been validated.
+complete environment. A [fresh 11-wheel recovery installation](results/PUBLICATION_RECOVERY_INSTALL_20260926.md)
+now passes source/package byte checks and standard/high-sensitivity fixtures,
+using a separate complete Python lock. Full native phylogeny and benchmark
+reproduction in that new installation have not yet been validated.
 The canonical-order policy remains benchmark-only, not an enabled production
 default. Do not present this as a new accuracy-tuned method or transfer the
 recovery result to QfO or another platform without validation.
