@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Canonical QfO Plan Admitted And Frozen (2026-09-27)
+
+Previous turn validated the retained-order result. Reuse now requires successful
+readback 22332, its corrected plan/submission and execution receipt. Before
+updating the three orchestration files (reuse gate, canonical launcher and
+canonical reader), copied their exact audit-pinned bytes into
+`qfo_fresh_phylogeny_20260927/readback_v2_source_archive`. Only those three
+named files can use archived identities; all scientific readers and other
+dependencies remain checked at their original paths. The gate retains explicit
+original-to-archive identity mappings and separately pins current orchestration.
+Fifty-eight focused tests pass, including rejection of failed audit 22330,
+changed archived bytes and changed scientific sources.
+
+Full real admission passed: 295,263 checked dependencies and 145,649 native
+outputs. The local `reuse_admission_22332.json` is 135,926,191 bytes, SHA256
+`535a3b0ffc1355546bab89fd30fed1afaf9a77822d72dbb9e05109a44dc199e9`.
+Canonical preparation also passed, rechecking paired candidate admission.
+`benchmarks/work/qfo_canonical_phylogeny_20260927/plan.json` is 90,998,805 bytes,
+SHA256 `465a0509d7d00640d32cde8411b145ad454cf52627be8469083e37f695fb195d`.
+Large manifests remain local. Canonical inference is not yet submitted: next
+submit this frozen plan once after commit/push, using installed isolated Python,
+32 CPUs, 128 GiB, 6 hours and no requeue. Raw-tree reuse is conditional on exact
+family inputs/tools; species-tree and reconciliation outputs are not reused.
+No accuracy endpoint, historical score or production default changed. Full
+publication requirements remain open.
+
 ## Retained-Order QfO Reproducibility Validated (2026-09-27)
 
 Previous turn was a verified wait. Corrected audit 22332 now COMPLETED 0:0 in

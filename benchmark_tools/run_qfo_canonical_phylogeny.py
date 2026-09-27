@@ -79,7 +79,7 @@ def worker(path, sha):
         raise ValueError("Canonical full run requires scheduled allocation")
     gate = json.loads(Path(plan["reuse_admission"]["path"]).read_text())
     if (gate["status"] != "fresh_qfo_raw_tree_reuse_admitted" or gate["native_job"] != 22329
-            or gate["readback_job"] != 22330):
+            or gate["readback_job"] != 22332):
         raise ValueError("Wrong reuse admission")
     target = Path(plan["directory"]) / "native"
     target.mkdir(exist_ok=False)

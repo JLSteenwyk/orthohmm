@@ -9,12 +9,35 @@ from benchmark_tools.readback_qfo_fresh_phylogeny import admit as admit_native
 from benchmark_tools.run_qfo_order_replay import record, save
 from benchmark_tools.verify_ygob_validation import require_completed_job
 
-READBACK_JOB = 22330
-READBACK_PLAN_SHA = "39d503975671f356a5b44081cd81f37a4a40b3e2c7f74a9ccc6cba617b0446fd"
-SUBMISSION_SHA = "339f0a7403d57d67c1ecc889e855bbe840c4abdd580328daff41c9854e9a0604"
+READBACK_JOB = 22332
+READBACK_PLAN_SHA = "d42e759f2d42442f250a440a1138be30660b2d842c2477bb4d44024e54edcdca"
+SUBMISSION_SHA = "d06a1671d93418ef7ee8620bcd44b478d6b19aef3ea1efdcd4be811c0843d24d"
+ARCHIVED_ORCHESTRATION = (
+    "admit_qfo_raw_tree_reuse.py", "run_qfo_canonical_phylogeny.py",
+    "readback_qfo_canonical_phylogeny.py",
+)
 REPORTS = dict(structure="phylogeny_structure_verified", sequences="phylogeny_sequence_content_verified",
                events="frozen_phylogeny_event_pair_semantics_verified",
                hierarchy="phylogeny_selection_and_hierarchy_verified")
+
+
+def audited_records(repo, directory, records):
+    """Preserve audited orchestration bytes while binding new orchestration separately."""
+    replacements = {str(repo / "benchmark_tools" / name):
+                    directory / "readback_v2_source_archive" / name
+                    for name in ARCHIVED_ORCHESTRATION}
+    if not replacements.keys() <= {r["path"] for r in records}:
+        raise ValueError("Missing audited orchestration identity")
+    verified, archived = [], []
+    for item in records:
+        path = replacements.get(item["path"], Path(item["path"]))
+        actual = record(path)
+        if actual["bytes"] != item["bytes"] or actual["sha256"] != item["sha256"]:
+            raise ValueError("Changed audited dependency: " + item["path"])
+        verified.append(actual)
+        if item["path"] in replacements:
+            archived.append(dict(original=item, archived=actual))
+    return verified, archived
 
 
 def collect_records(value):
@@ -55,26 +78,26 @@ def admit(repo, directory):
     scheduler = require_completed_job(accounting, READBACK_JOB)
     if scheduler["AllocCPUS"] != "2":
         raise ValueError("Wrong readback CPU allocation")
-    path = directory / "readback_plan.json"
+    path = directory / "readback_v2_plan.json"
     if record(path)["sha256"] != READBACK_PLAN_SHA:
         raise ValueError("Changed readback plan")
     plan = json.loads(path.read_text())
     if (plan["repo"] != str(repo) or plan["directory"] != str(directory)
-            or plan["output"] != str(directory / "readback") or plan["native_job_id"] != 22329):
+            or plan["output"] != str(directory / "readback_v2") or plan["native_job_id"] != 22329):
         raise ValueError("Wrong readback locations or native job")
-    frozen = repo / "benchmark_tools/results/qfo_fresh_phylogeny_readback_submission_20260927.json"
+    frozen = repo / "benchmark_tools/results/qfo_fresh_phylogeny_readback_v2_submission_20260927.json"
     if record(frozen)["sha256"] != SUBMISSION_SHA:
         raise ValueError("Changed frozen readback submission")
-    submission_path = directory / "readback_submission.json"
+    submission_path = directory / "readback_v2_submission.json"
     submission = json.loads(submission_path.read_text())
     if (submission != json.loads(frozen.read_text()) or submission["job_id"] != str(READBACK_JOB)
             or submission["plan"] != record(path)):
         raise ValueError("Wrong readback submission")
     native = admit_native(repo, directory)
-    output = directory / "readback"
+    output = directory / "readback_v2"
     result_path, admission_path = output / "result.json", output / "admission.json"
     result = json.loads(result_path.read_text())
-    execution_path = directory / "readback_execution.json"
+    execution_path = directory / "readback_v2_execution.json"
     verify_completion(json.loads(execution_path.read_text()), result, record(path),
                       record(result_path), record(admission_path))
     if native != json.loads(admission_path.read_text()) or result["plan"] != native["plan"]:
@@ -91,7 +114,8 @@ def admit(repo, directory):
             raise ValueError("Wrong scientific universe")
         reports.append(report)
     native_plan = json.loads((directory / "plan.json").read_text())
-    checked = collect_records([plan["checked_records"], native_plan["checked_records"], native,
+    verified_sources, archived = audited_records(repo, directory, plan["checked_records"])
+    checked = collect_records([verified_sources, native_plan["checked_records"], native,
         reports, result, *[record(p) for p in (path, frozen, submission_path, result_path, admission_path,
                                              execution_path, Path(__file__))]])
     for item in checked:
@@ -99,6 +123,7 @@ def admit(repo, directory):
             raise ValueError("Changed reuse dependency: " + item["path"])
     return dict(status="fresh_qfo_raw_tree_reuse_admitted", native_job=22329,
         readback_job=READBACK_JOB, scheduler=scheduler, checked_records=checked,
+        audited_orchestration_archive=archived,
         source_directory=str(directory / "native/inference/orthohmm_phylogeny"),
         admitted_outputs=native["outputs"], native_plan=record(directory / "plan.json"),
         readback_result=record(result_path), historical_equivalence_required=False,

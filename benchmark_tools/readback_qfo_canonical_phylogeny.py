@@ -85,7 +85,7 @@ def admit(repo, directory, job, plan_sha, submission_sha):
     verify_execution(plan, record(plan_path), job, started, record(native / "started.json"), complete,
                      cache, record(native / "cache_manifest.json"), record(native / "cache_copies.json"))
     gate = json.loads(Path(plan["reuse_admission"]["path"]).read_text())
-    if gate["status"] != "fresh_qfo_raw_tree_reuse_admitted" or gate["native_job"] != 22329 or gate["readback_job"] != 22330:
+    if gate["status"] != "fresh_qfo_raw_tree_reuse_admitted" or gate["native_job"] != 22329 or gate["readback_job"] != 22332:
         raise ValueError("Wrong retained-arm reuse admission")
     verify_cache(plan, gate, cache, copies, native / "inference/orthohmm_phylogeny")
     outputs = [record(p) for p in sorted((native / "inference").rglob("*")) if p.is_file()]
