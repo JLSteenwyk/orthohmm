@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Historical QfO Comparator Readmitted (2026-09-27)
+
+Previous turn was a verified wait on live assessment 22336. Scheduler still
+reports that job running; native trace records successful GO, EC, VGNC,
+SwissTrees and TreeFam-A tasks, with FAS outstanding. No partial scores admitted.
+Re-executed `admit_qfo_corrected_factorial_assessment` for historical cell 7
+(`p1_c1_r1`), scoring job 21787 and conversion 21772, using the pinned pair
+manifest SHA256 `d5fea582e753aa6efb1421ba3ec0959d03ab31bc5b4d3d778e7370816c633e03`.
+The full validator succeeded: scheduler, frozen checkouts, inputs, environment,
+execution, output inventory, 15 tasks and native metrics checked. All 16
+selected scientific/provenance fields exactly match the original admission,
+including the complete assessment. The
+[compact comparison receipt](qfo_canonical_historical_readmission_20260927.json)
+binds both admissions; the full fresh readmission is retained under the
+canonical assessment work directory. This satisfies the frozen protocol's
+historical-comparator recheck, not canonical score admission or independent
+generalization. Next wait for successful terminal scoring and run its separate
+admission before producing endpoint differences. No inference/scoring retry.
+
 ## Completed QfO Controls Integrated Into Manuscript (2026-09-27)
 
 Previous turn was a verified wait on live assessment 22336. Rechecked the
