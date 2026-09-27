@@ -27,6 +27,12 @@ requirements and must not be confused with these audit commands.
   retain the earlier lock only as historical provenance.
   This is separate from the inference runtime; base Python/OS remain shared.
 
+- [Full OrthoBench scoring outside the checkout](results/PORTABLE_OB_SCORE_20260927.md)
+  connects separately acquired raw inputs, exported readers and the patched
+  reader environment. All 70 reference-family score records reproduce exactly
+  from the retained full prediction partition. This is full-data scoring,
+  not a new native run or a complete portable acquisition-to-inference workflow.
+
 - [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
   records 10,729 passes and ten opt-in skips at revision `9914060`.
   The [separate installed-native follow-up](results/PUBLICATION_NATIVE_TEST_REFRESH_20260927.md)

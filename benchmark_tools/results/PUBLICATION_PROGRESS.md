@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Full OrthoBench Scoring Relocated (2026-09-27)
+
+Previous turn made progress by validating the patched reader environment.
+Connected that environment and exported reader sources to separately acquired
+OrthoBench inputs and retained full predictions. Recomputed the complete
+70-family score object from 251,378 genes and 59,770 groups outside the
+checkout: exact agreement, F1 74.10607351873405%. Verified 94 copied data
+files and no original project/main site-packages prefixes in the worker file
+trace. The initial pre-scoring check rejected blank low-certainty lines;
+diagnosed and corrected only that ID validation, preserving failed artifacts
+and raw reference/scoring semantics. Forty-seven focused tests pass. See
+[portable scoring](PORTABLE_OB_SCORE_20260927.md). The controller still needs
+the retained historical admission; a combined full workflow and release
+restoration remain next, along with existing uncertainty and timing gates.
+No native inference, DGX access or controlled timing run was performed.
+
 ## Reader Security Upgrade Validated (2026-09-27)
 
 The preceding status-only turn did not advance the goal. Revalidated the new

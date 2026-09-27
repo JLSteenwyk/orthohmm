@@ -1,0 +1,103 @@
+{
+  "command": [
+    "/usr/bin/strace",
+    "-f",
+    "-s",
+    "4096",
+    "-e",
+    "trace=%file",
+    "-o",
+    "/tmp/orthohmm-portable-ob-score-20260927-v2/worker.strace",
+    "/tmp/orthohmm-reader-patched-20260927/venv/bin/python",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-portable-ob-score-20260927-v2/worker.py",
+    "--worker",
+    "/tmp/orthohmm-portable-ob-score-20260927-v2",
+    "--output",
+    "/tmp/orthohmm-portable-ob-score-20260927-v2/score.json"
+  ],
+  "environment": {
+    "HOME": "/tmp",
+    "LANG": "C.UTF-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/bin:/bin"
+  },
+  "files": [
+    {
+      "bytes": 9253,
+      "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/worker.py",
+      "sha256": "3200eb633e01b8e9f749c70a061768065314109f303be1d017f6b1fc3e94a291"
+    },
+    {
+      "bytes": 19915,
+      "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/inputs.json",
+      "sha256": "748186e7e2d80608a6e2a10332192ad0aadff9ce42993a8af3636c44d8cd76b5"
+    },
+    {
+      "bytes": 15378,
+      "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/score.json",
+      "sha256": "0525f414fa03578da72fb01d6116fd9696a8a230b25b8421335c672f5c4be3a3"
+    },
+    {
+      "bytes": 0,
+      "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/worker.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 404265,
+      "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/worker.strace",
+      "sha256": "37d10efe1ff95a1dc3702dd33396d2bacb9c1addf4c82024b5a634ec352dfc6d"
+    }
+  ],
+  "forbidden_literal_prefixes": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "/home/bizon/anaconda3/lib/python3.10/site-packages"
+  ],
+  "forbidden_prefixes_found": [],
+  "full_score_equal": true,
+  "genes": 251378,
+  "groups": 59770,
+  "inference_rerun": false,
+  "limitations": [
+    "Same-host full-data scoring only; no new inference or independent validation.",
+    "Original scheduler admission is retained evidence, not rerun by the portable worker.",
+    "File trace prefix checks are not a sandbox or OS isolation proof.",
+    "Raw benchmark inputs are private acquisition copies, not a redistributable archive."
+  ],
+  "prediction": {
+    "bytes": 6301075,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/native/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+    "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+  },
+  "publication_ready": false,
+  "reader_manifest": {
+    "bytes": 5750,
+    "path": "/tmp/orthohmm-portable-ob-score-20260927-v2/readers/manifest.json",
+    "sha256": "c2a77c7a2635b9193f4321f96db65028a4d5158facd8e52bb4285fe68804f334"
+  },
+  "redistribution_cleared": false,
+  "refogs": 70,
+  "retained": {
+    "bytes": 36152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback/result.json",
+    "sha256": "339dc8e3f72bbfc657a86856f7c5aaa9c29fad1a49537889f1a09e3c3c5acc35"
+  },
+  "scores": {
+    "exact_refogs": 15,
+    "f_score": 74.10607351873405,
+    "precision": 81.77045380181866,
+    "recall": 67.75533630827974,
+    "refogs": 70,
+    "weighted_false_negative": 305.5181884790494,
+    "weighted_false_positive": 143.12060832971704,
+    "weighted_true_positive": 641.9818115209503
+  },
+  "source": {
+    "bytes": 9253,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_portable_ob_score.py",
+    "sha256": "3200eb633e01b8e9f749c70a061768065314109f303be1d017f6b1fc3e94a291"
+  },
+  "status": "portable_full_orthobench_score_exactly_reproduced"
+}
