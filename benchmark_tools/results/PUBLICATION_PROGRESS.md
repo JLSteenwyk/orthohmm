@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Full Current Unit Suite Passed (2026-09-27)
+
+Previous turn preserved canonical scoring sources. Ran the entire current
+unit suite at `9914060112f57b79e75401aeb907c3a6d6b2b05f`: 10,729 passed,
+10 opt-in native-runtime checks skipped, 22 frozen-source syntax warnings,
+zero failures/errors and exit zero in 315.96 seconds. JUnit agrees with
+10,739 cases and explicitly records all skips. Scoped code/test status is
+clean before/after; unrelated sample changes preserved. See the
+[verification report](PUBLICATION_TEST_REFRESH_20260927.md). No fix/retry or
+new native benchmark was required. This refresh replaces stale unit counts
+for current regression claims, not historical execution evidence or scientific
+completion. Next inspect the skipped integration prerequisites and remaining
+release/provenance gates; dedicated timing remains unavailable and DGX deferred.
+
 ## Canonical Assessment Source Pins Preserved (2026-09-27)
 
 Previous turn progressed the eight-method provenance register. Checked the
