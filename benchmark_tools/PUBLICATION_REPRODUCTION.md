@@ -13,8 +13,8 @@ requirements and must not be confused with these audit commands.
   reproduces all 59,770 root groups and all 70 family-score records from raw
   FASTA in the new recovery installation. Native 22326 and independent audit
   22327 completed successfully. This is same-host reproducibility, not new
-  accuracy evidence or controlled comparative timing. Manuscript review v21
-  predates this completion.
+  accuracy evidence or controlled comparative timing. Manuscript review v22
+  includes this completion; v21 remains the earlier snapshot.
 
 - [Recovery advisory range review](results/RECOVERY_ADVISORY_REVIEW_20260927.md)
   matches the live recovery package inventory to its install report and checks
@@ -74,13 +74,12 @@ requirements and must not be confused with these audit commands.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v21.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v22.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
-  Version 20 includes installed-runtime discrepancies and QfO provenance.
-  It predates the completed canonical phylogeny recovery; consult the current
-  manuscript source and result below for that finding. It adds no native VGNC
-  confidence intervals.
+  Version 22 includes the completed full-input OrthoBench recovery; version 21
+  predates that completion, and version 20 predates the canonical phylogeny
+  recovery. None adds native VGNC confidence intervals or controlled timing.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)

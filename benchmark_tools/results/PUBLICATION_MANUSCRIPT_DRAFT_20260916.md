@@ -2289,9 +2289,23 @@ scientific sources, external tools, settings and historical references. The
 [dependent readback workflow](FULL_RECOVERY_READBACK_PROTOCOL_20260926.md)
 requires successful terminal scheduler state and exact execution provenance,
 then independently validates scientific outputs and recomputes the complete
-historical/current score objects. At this review snapshot, native inference
-was still running and no score from the new run was admitted. Its shared-host
-resource records will remain descriptive, not controlled comparative timing.
+historical/current score objects. Native job 22326 and independent audit 22327
+subsequently completed successfully. The
+[full-input recovery result](FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md)
+reproduced all 59,770 root groups across 251,378 genes, including exact root
+partition file bytes, and all 70 reference-family score records. Recomputed
+F1 was 74.106074%, precision 81.770454% and recall 67.755336%, with 15 exact
+RefOGs. Four independent scientific readers passed; before/after installation
+audits were identical. Unlike the earlier partial-stage replay, this run
+regenerated search, alignments and inferred species/gene trees from raw FASTA.
+GNU time recorded 9,438 wall seconds, 268,824.98 user seconds, 3,254.68 system
+seconds and 6,163,636 KiB maximum process RSS. The latter is not simultaneous
+process-tree peak memory, and shared-host timing is descriptive rather than
+a controlled comparison. This establishes same-host full-pipeline recovery
+for the explicit entrypoint and pinned environment, not independent accuracy
+confirmation, QfO reproduction or cross-platform determinism. Canonical
+ordering remains an explicit experimental policy, production defaults are
+unchanged, and earlier discrepant runs remain retained.
 
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original

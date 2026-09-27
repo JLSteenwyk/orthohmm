@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Full Recovery Integrated Into Review 22 (2026-09-27)
+
+The previous turn completed and pushed the audited full-input recovery.
+This turn updated the manuscript and claim checklist from pending to supported
+same-host reproduction, without broadening accuracy or timing claims. The
+[version-22 review](MANUSCRIPT_RENDER_REVIEW_20260927_v22.md) includes regenerated
+HTML/PDF, 247 local occurrences across 233 tracked targets, no missing targets,
+eight passing renderer tests and zero bounds violations across 44 pages.
+Changed closing pages 43-44 were visually checked. Review v21 remains the
+historical pre-completion snapshot. No native rerun or production change was
+made. Remaining scientific, dedicated-host timing and release gates stay open;
+DGX remains deferred and the full goal is active.
+
 ## Full End-To-End OrthoBench Recovery Completed (2026-09-27)
 
 After verified waits on the same live jobs, native 22326 completed 0:0 in
