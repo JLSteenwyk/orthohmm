@@ -1,0 +1,68 @@
+{
+  "admission_requirements": [
+    "Successful terminal Slurm accounting and matching command/plan records",
+    "Eight completed stages, matching frozen inputs, sources, assets and lock files",
+    "Successful four-reader scientific readback and full-universe root partition",
+    "Post-run exact installed inventories and wheel-payload audits",
+    "Full historical score and label-invariant partition comparison, including negative differences"
+  ],
+  "attempts": 1,
+  "checkpoint_reuse": false,
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-I",
+    "-S",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/workflow.py",
+    "--assets",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets",
+    "--readers",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/readers",
+    "--reader-wheels",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/reader_wheels",
+    "--reader-lock",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/reader_requirements.txt",
+    "--data",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/data.json",
+    "--data-sha256",
+    "fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061",
+    "--base-python",
+    "/home/bizon/anaconda3/bin/python",
+    "--installer-python",
+    "/tmp/orthohmm-reader-patched-20260927/venv/bin/python",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/run",
+    "--cpu",
+    "32",
+    "--timeout",
+    "79200"
+  ],
+  "controlled_timing": false,
+  "dataset": "orthobench",
+  "endpoint": "Compare the full root-group partition and complete 70-family score object to admitted run 22326; retain all differences, no outcome-driven selection.",
+  "expected_genes": 251378,
+  "expected_refogs": 70,
+  "historical_readback": {
+    "bytes": 36152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback/result.json",
+    "sha256": "339dc8e3f72bbfc657a86856f7c5aaa9c29fad1a49537889f1a09e3c3c5acc35"
+  },
+  "limitations": [
+    "Single shared-host workflow reproduction, not independent generalization or controlled timing",
+    "No DGX work, automatic retries, checkpoint reuse, tuning or historical score replacement"
+  ],
+  "plan": {
+    "bytes": 64737,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/plan.json",
+    "sha256": "5cab1cd592e6f6d69276c84d0ab5e1b9dc91e1e12a44ace757db87d08df2d899"
+  },
+  "publication_ready": false,
+  "resources": {
+    "cpus": 32,
+    "hours": 24,
+    "memory_gib": 128,
+    "node": "bizon"
+  },
+  "runner_revision": "4d037b1",
+  "status": "frozen_before_submission"
+}

@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Full Integrated OrthoBench Run Prepared (2026-09-27)
+
+Previous turn progressed integrated installation-fixture execution and corrected
+MAFFT convenience-link portability. Prepared persistent private assets and
+pinned one full-data execution, with 215 file records, 32 CPUs, 128 GiB and
+no checkpoint reuse or automatic retry. Nineteen focused launcher/controller
+tests pass. The [protocol](INTEGRATED_FULL_OB_PROTOCOL_20260927.md) requires
+full partition and 70-family score comparison against admitted run 22326,
+retaining all differences. This is shared-host reproducibility, not dedicated
+timing; DGX remains deferred. Submission and terminal admission are separate
+events and are not implied by preparation.
+
 ## Integrated Workflow Executed On Installation Fixture (2026-09-27)
 
 Previous turn completed scoring archive restoration. Added a stdlib controller
