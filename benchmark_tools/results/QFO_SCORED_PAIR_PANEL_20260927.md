@@ -24,6 +24,16 @@ method identity and order; non-admitted, duplicate or changed method panels
 are rejected. FastOMA's supplied-tree and OrthoFinder checkpoint scopes remain
 unchanged. These counts concern scored eligible relations, not all predictions.
 
+A subsequent [direct-admission binding audit](qfo_scored_pair_raw_binding_20260927.json)
+revalidated all panel input hashes but found no direct raw-file record for any
+of the 16 endpoints in the original admissions' `checked_records` or
+`metric_files` lists. Those admissions pin aggregate endpoint files. Raw-file
+hashes were recorded by the new panel; count/mean agreement is not proof that
+these raw bytes are identical to those at historical admission time. This
+limited search does not establish that no other historical raw identity exists.
+The panel remains a description of the presently retained, hash-pinned raw
+tables consistent with admitted aggregates, not full historical provenance.
+
 At retained six-decimal precision, differences among these methods' GO/EC
 means reflect different pair sets and denominators. Intersection-only means
 would erase this distinction and are not substitute endpoints. Identical

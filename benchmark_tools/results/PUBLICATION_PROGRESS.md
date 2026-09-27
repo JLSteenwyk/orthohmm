@@ -1,5 +1,18 @@
 # Publication Progress
 
+## GO/EC Raw Admission Binding Qualified (2026-09-27)
+
+Previous turn mapped selected Numba notices. Revisited the all-method GO/EC
+panel's provenance boundary and revalidated its 43 pinned source/input entries.
+None of its 16 raw files has a direct record in the original admissions'
+`checked_records` or `metric_files` lists. The [receipt](qfo_scored_pair_raw_binding_20260927.json)
+records the exact limited search; absence there does not imply absence from
+every historical artifact. Updated the panel note and manuscript to distinguish
+currently hash-pinned raw tables consistent with admitted aggregates from
+proven historical raw-byte identity. No raw data, scores or previous reports
+were changed, and no native rescore was launched. Full transitive provenance
+remains incomplete alongside statistical and timing requirements.
+
 ## Selected Numba Components Mapped (2026-09-27)
 
 Previous turn mapped NumPy binary declarations. Inspected the pinned Numba

@@ -488,6 +488,12 @@ not different functional scores for shared pairs. Restricting comparison to
 the intersection would change the endpoint and erase these differences.
 This is descriptive arithmetic, not causal attribution, proof of identical
 unavailable full-precision scores or a solution to family-aware uncertainty.
+The raw tables are pinned by this new audit and agree with admitted aggregate
+counts and means. A [direct-record provenance check](qfo_scored_pair_raw_binding_20260927.json)
+found no raw-table hashes in the original admissions' checked-record or
+metric-file lists for these 16 endpoints. Thus this result describes retained
+raw tables, not established historical raw-byte identity; other possible
+historical records were not exhaustively searched by that check.
 
 The independently admitted recovered replay is reported separately from
 these historical method rows. Its profile branch had SwissTrees F1

@@ -1,0 +1,279 @@
+{
+  "checked_fields": [
+    "checked_records",
+    "metric_files"
+  ],
+  "current_panel_input_hashes_revalidated": true,
+  "direct_bound_endpoints": 0,
+  "limitations": [
+    "Only direct admission record lists inspected; absence is not proof that no other historical raw identity exists.",
+    "Current raw hashes and count/mean agreement do not prove historical raw-byte identity.",
+    "No raw files, admitted scores or existing panel results modified; no native rescore performed."
+  ],
+  "panel": {
+    "bytes": 80749,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_scored_pair_panel_20260927.json",
+    "sha256": "7dee4e55b6fbf62db2ace5cecb80192e2ef2c99f047f0f34ebe7bea56bd3f335"
+  },
+  "publication_ready": false,
+  "rows": [
+    {
+      "admission": {
+        "bytes": 280266,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21782.json",
+        "sha256": "8ba2d51aa48bdfde6580b832f1bfedb0c14ef7cc19c897c238337bb3e96e4e83"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "GO",
+      "raw": {
+        "bytes": 1294060,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/GO/GO_ohmm-qfo-corrected-factorial-p1-c0-r0_733a36d4f95a_raw.txt.gz",
+        "sha256": "57554816b5fb92eaf5f854e4be2f33643a062d8e8a8a590399663ce4ee2ac885"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 248974,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+        "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "GO",
+      "raw": {
+        "bytes": 790056,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/GO/GO_ohmm-qfo-corrected-factorial-p1-c1-r1_0673848e08fb_raw.txt.gz",
+        "sha256": "07b33b202029e0f4dbd7bddc90edca5305cd0d75e4332f9279c77b269a7e74c0"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 152067213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_full_assessment_admission_20260918.json",
+        "sha256": "f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthofinder_3_1_5_full",
+      "metric": "GO",
+      "raw": {
+        "bytes": 1481020,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/GO/GO_qfo-corrected-orthofinder-full_e86ea7a5d9cf_raw.txt.gz",
+        "sha256": "e246a2b3072a8994ee72d98d05b50e7bb2f14d3c162ae1084d48d401917c1207"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 152068416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_sequence_only_assessment_admission_20260918.json",
+        "sha256": "ecd8721dc2e8f2399ccf86fd7d89f917447325ee4e812bae29bfaf3b2bbe851e"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "GO",
+      "raw": {
+        "bytes": 15539312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/GO/GO_qfo-corrected-orthofinder-sequence-only_f755b04809e5_raw.txt.gz",
+        "sha256": "b43105edc74acbd20e8467e983d48b609c2879493cd100e466a50bbee50d1f9f"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 5641618,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+        "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "GO",
+      "raw": {
+        "bytes": 1738409,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/GO/GO_qfo-corrected-sonic_3927d957d5e1_raw.txt.gz",
+        "sha256": "a703f8e7a5f1eeb076467d4ca8b759240c2d6fcf9c5f4e3374a114a6793360f0"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 300518,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+        "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "proteinortho_6_3_6",
+      "metric": "GO",
+      "raw": {
+        "bytes": 840243,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/GO/GO_qfo-corrected-proteinortho_7fe9d7d444c5_raw.txt.gz",
+        "sha256": "84460a1c16b152354fedd5c731be07e0753374e9b65572867708428575a18e32"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 31667841,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_fastoma_assessment_admission_20260918.json",
+        "sha256": "e40d1c4aaf89fafc3ea7fed8c198a4cf22e7ffe07a0eb522cf1730f36dada694"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "fastoma_0_3_5",
+      "metric": "GO",
+      "raw": {
+        "bytes": 1461475,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/GO/GO_qfo-corrected-fastoma_a2cb4409e76d_raw.txt.gz",
+        "sha256": "65daec440020e04845dc7d0e75c55befa5a42c689f770a46545f17b4d00bd006"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 695510,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_score_admission_22176.json",
+        "sha256": "86448fbd694941a6814177d1bd4565467e52554c47d34bb3d65a642687f9dd93"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthomcl_1_4",
+      "metric": "GO",
+      "raw": {
+        "bytes": 1572351,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/GO/GO_qfo-corrected-orthomcl-recovered_a0a595d6efdd_raw.txt.gz",
+        "sha256": "fd85cba706ca4e89d5be0bd83b130b2fde3c16b86901fff37990a0aa22439a98"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 280266,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21782.json",
+        "sha256": "8ba2d51aa48bdfde6580b832f1bfedb0c14ef7cc19c897c238337bb3e96e4e83"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "EC",
+      "raw": {
+        "bytes": 988713,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/EC/EC_ohmm-qfo-corrected-factorial-p1-c0-r0_4ccec9a82745_raw.txt.gz",
+        "sha256": "01423186c032045cfc34abdca5a1d3f4b65a2b37e5f9b6c395ead4f5deee7ec0"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 248974,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+        "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "EC",
+      "raw": {
+        "bytes": 642059,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/EC/EC_ohmm-qfo-corrected-factorial-p1-c1-r1_1dfcce7e7fd1_raw.txt.gz",
+        "sha256": "2c9d4f39a1c00e73133bc57f862f6e1170ab79db59a73c9ea9fcd371984a023f"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 152067213,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_full_assessment_admission_20260918.json",
+        "sha256": "f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthofinder_3_1_5_full",
+      "metric": "EC",
+      "raw": {
+        "bytes": 954863,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/EC/EC_qfo-corrected-orthofinder-full_7e52803a40be_raw.txt.gz",
+        "sha256": "57e5df5d29b258122c05ead96c7bc6f3e99b86a734da112d6325fb470dfce20e"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 152068416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_sequence_only_assessment_admission_20260918.json",
+        "sha256": "ecd8721dc2e8f2399ccf86fd7d89f917447325ee4e812bae29bfaf3b2bbe851e"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "EC",
+      "raw": {
+        "bytes": 7592445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/EC/EC_qfo-corrected-orthofinder-sequence-only_db9c8568a80d_raw.txt.gz",
+        "sha256": "6e9b8677f51f49fad8517dd2198e1050f42a699ecd8aa684258cf8f0937a6853"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 5641618,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+        "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "EC",
+      "raw": {
+        "bytes": 1333444,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/EC/EC_qfo-corrected-sonic_17b484ac9184_raw.txt.gz",
+        "sha256": "10896e8060048915cdf21a44e2c903e79e2f1fa4f4fa2bfde9002998048add6b"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 300518,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+        "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "proteinortho_6_3_6",
+      "metric": "EC",
+      "raw": {
+        "bytes": 787746,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/EC/EC_qfo-corrected-proteinortho_3898fffa2d59_raw.txt.gz",
+        "sha256": "b4aa17616637b2355f8f5d3f8d265c246a6ef32b7e08416d0889b42c9797671c"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 31667841,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_fastoma_assessment_admission_20260918.json",
+        "sha256": "e40d1c4aaf89fafc3ea7fed8c198a4cf22e7ffe07a0eb522cf1730f36dada694"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "fastoma_0_3_5",
+      "metric": "EC",
+      "raw": {
+        "bytes": 947072,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/EC/EC_qfo-corrected-fastoma_52b6f0222d43_raw.txt.gz",
+        "sha256": "1ff19c8a85d814615275bc0b79e07f15291492d4d62bdf1dd969bc9a58399307"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 695510,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_score_admission_22176.json",
+        "sha256": "86448fbd694941a6814177d1bd4565467e52554c47d34bb3d65a642687f9dd93"
+      },
+      "direct_admission_matches": [],
+      "direct_hash_binding": false,
+      "method": "orthomcl_1_4",
+      "metric": "EC",
+      "raw": {
+        "bytes": 1181642,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/EC/EC_qfo-corrected-orthomcl-recovered_073e0498f55a_raw.txt.gz",
+        "sha256": "56954085b834e92dbc28b159503605139e20371b9d7d99864c76f33c64506e53"
+      }
+    }
+  ],
+  "status": "scored_pair_direct_admission_binding_audited",
+  "total_endpoints": 16
+}
