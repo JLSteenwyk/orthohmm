@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Historical OrthoBench Partition Recovered (2026-09-26)
+
+The preceding continuation was a verified wait. This turn reread the full
+objective, polled the same native/audit handles through completion, and verified
+22324 COMPLETED/0:0 at 25:58 and 22325 COMPLETED/0:0 at 2:30. The audit's source,
+output and scientific-reader records were rehashed after terminal completion.
+See the [result](CANONICAL_OB_PHYLOGENY_RESULT_22324.md).
+
+All 59,770 historical root groups and all 70 family score records match exactly;
+F1 is 74.10607351873405%, recovering the difference from fresh-installed
+73.82156906618316%. Four independent scientific readers pass; all 251,378
+proteins are covered and no phylogeny checkpoint was reused. This is bounded
+reproduction with matched dependency and canonical input ordering, not general
+determinism or independent accuracy confirmation. Historical results, negative
+fresh-installed evidence and production defaults remain intact.
+
+Manuscript source and claim checklist now state this result. The v20 preview
+predates it and remains a historical snapshot. Both jobs are terminal; no live
+source pin from this experiment prevents further work. Next integrate the
+validated reproduction path into publication workflow documentation, continue
+cross-tool/dataset provenance and address remaining scientific/archival gaps.
+Controlled scaling remains unrun and DGX remains deferred. The goal is active.
+
 ## Working Manuscript Preview Refreshed (2026-09-26)
 
 The preceding continuation was a verified wait on live job 22324. This turn

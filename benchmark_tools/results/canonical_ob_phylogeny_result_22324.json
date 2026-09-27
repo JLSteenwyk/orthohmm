@@ -1,0 +1,445 @@
+{
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS\n22324|COMPLETED|0:0|00:25:58|32\n22324.batch|COMPLETED|0:0|00:25:58|32\n22325|COMPLETED|0:0|00:02:30|2\n22325.batch|COMPLETED|0:0|00:02:30|2\n",
+  "comparisons": {
+    "fresh_installed": {
+      "changed_reference_families": [
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 748.0,
+            "false_positive": 171.0,
+            "genes": 57,
+            "refog": "RefOG007.txt",
+            "splits": 7,
+            "true_positive": 848.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 1192.0,
+            "false_positive": 123.0,
+            "genes": 57,
+            "refog": "RefOG007.txt",
+            "splits": 9,
+            "true_positive": 404.0
+          },
+          "refog": "RefOG007.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 3336.0,
+            "false_positive": 171.0,
+            "genes": 94,
+            "refog": "RefOG011.txt",
+            "splits": 9,
+            "true_positive": 1035.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 2811.0,
+            "false_positive": 449.0,
+            "genes": 94,
+            "refog": "RefOG011.txt",
+            "splits": 6,
+            "true_positive": 1560.0
+          },
+          "refog": "RefOG011.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 5625.0,
+            "false_positive": 1730.0,
+            "genes": 125,
+            "refog": "RefOG021.txt",
+            "splits": 15,
+            "true_positive": 2125.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 5335.0,
+            "false_positive": 1848.0,
+            "genes": 125,
+            "refog": "RefOG021.txt",
+            "splits": 15,
+            "true_positive": 2415.0
+          },
+          "refog": "RefOG021.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 1968.0,
+            "false_positive": 172.0,
+            "genes": 69,
+            "refog": "RefOG023.txt",
+            "splits": 10,
+            "true_positive": 378.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 1982.0,
+            "false_positive": 160.0,
+            "genes": 69,
+            "refog": "RefOG023.txt",
+            "splits": 11,
+            "true_positive": 364.0
+          },
+          "refog": "RefOG023.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 69.0,
+            "false_positive": 95.0,
+            "genes": 20,
+            "refog": "RefOG027.txt",
+            "splits": 4,
+            "true_positive": 121.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 69.0,
+            "false_positive": 239.0,
+            "genes": 20,
+            "refog": "RefOG027.txt",
+            "splits": 4,
+            "true_positive": 121.0
+          },
+          "refog": "RefOG027.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 170.0,
+            "false_positive": 489.0,
+            "genes": 32,
+            "refog": "RefOG035.txt",
+            "splits": 6,
+            "true_positive": 326.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 170.0,
+            "false_positive": 487.0,
+            "genes": 32,
+            "refog": "RefOG035.txt",
+            "splits": 6,
+            "true_positive": 326.0
+          },
+          "refog": "RefOG035.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 33.0,
+            "false_positive": 11.0,
+            "genes": 13,
+            "refog": "RefOG053.txt",
+            "splits": 4,
+            "true_positive": 45.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 33.0,
+            "false_positive": 10.0,
+            "genes": 13,
+            "refog": "RefOG053.txt",
+            "splits": 4,
+            "true_positive": 45.0
+          },
+          "refog": "RefOG053.txt"
+        },
+        {
+          "current": {
+            "exact": false,
+            "false_negative": 1097.0,
+            "false_positive": 241.0,
+            "genes": 50,
+            "refog": "RefOG058.txt",
+            "splits": 14,
+            "true_positive": 128.0
+          },
+          "original": {
+            "exact": false,
+            "false_negative": 1097.0,
+            "false_positive": 49.0,
+            "genes": 50,
+            "refog": "RefOG058.txt",
+            "splits": 14,
+            "true_positive": 128.0
+          },
+          "refog": "RefOG058.txt"
+        }
+      ],
+      "partitions": {
+        "current_groups": 59770,
+        "current_only_groups": 3118,
+        "genes_in_changed_groups": 26433,
+        "identical_groups": 56652,
+        "label_invariant_equal": false,
+        "original_groups": 59812,
+        "original_only_groups": 3160
+      },
+      "score_differences_percentage_points": {
+        "f_score": 0.2845044525508911,
+        "precision": 0.6668287982381571,
+        "recall": 0.015892645252847615
+      },
+      "score_objects_equal": false
+    },
+    "historical": {
+      "changed_reference_families": [],
+      "partitions": {
+        "current_groups": 59770,
+        "current_only_groups": 0,
+        "genes_in_changed_groups": 0,
+        "identical_groups": 59770,
+        "label_invariant_equal": true,
+        "original_groups": 59770,
+        "original_only_groups": 0
+      },
+      "score_differences_percentage_points": {
+        "f_score": 0.0,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "score_objects_equal": true
+    }
+  },
+  "counts": {
+    "bypassed_families": 45764,
+    "candidate_families": 54445,
+    "checkpoint_hits": 0,
+    "duplications": 59379,
+    "ortholog_pairs": 966439,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/inference/orthohmm_phylogeny",
+    "reconciled_families": 8681,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 59770,
+    "schema_version": 1,
+    "speciations": 104016,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 200,
+    "uncertain_events": 13034
+  },
+  "genes": 251378,
+  "historical_scores_replaced": false,
+  "independent_readbacks": {
+    "events": {
+      "dendropy_version": "5.0.8",
+      "limitations": [
+        "Independent rule implementation, but the same DendroPy parser family is used.",
+        "Conditional on saved rooted trees and supplied constraint sidecar; no biological truth claim.",
+        "Does not prove optimal rooting, HMM search correctness or hierarchy-table correctness.",
+        "Constraint historical provenance must be pinned separately by caller."
+      ],
+      "membership_totals": {
+        "constraints": 8440,
+        "detached_constraints": 2588,
+        "detached_genes": 8401,
+        "ortholog_pairs_removed": 16885,
+        "root_hogs_added": 2117,
+        "supported_constraints": 5852
+      },
+      "scientific_scores_admitted": false,
+      "status": "frozen_phylogeny_event_pair_semantics_verified",
+      "totals": {
+        "bypassed_families": 45764,
+        "duplications": 59379,
+        "nodes": 337845,
+        "ortholog_pairs": 966439,
+        "reconciled_families": 8681,
+        "root_hogs": 59770,
+        "speciations": 104016,
+        "uncertain_events": 13034
+      }
+    },
+    "hierarchy": {
+      "hierarchy_semantics": "Node hierarchy before satellite-membership filtering, not final root-HOG partition.",
+      "limitations": [
+        "Conditional on prior event/pair readback and frozen family membership.",
+        "Does not establish correctness of initial candidate selection or biological truth.",
+        "Hierarchy is not substituted for the benchmarked root groups or native ortholog pairs."
+      ],
+      "scientific_scores_admitted": false,
+      "status": "phylogeny_selection_and_hierarchy_verified",
+      "totals": {
+        "bypass_rows": 45764,
+        "bypassed_families": 45764,
+        "hierarchical_groups": 209159,
+        "internal_node_rows": 163395,
+        "reconciled_families": 8681
+      }
+    },
+    "sequences": {
+      "biopython_version": "1.86",
+      "gene_alignments": 8681,
+      "limitations": [
+        "Exact candidate residues; aligned residues compared ignoring case and removing only '-' gaps.",
+        "Validates identity and concatenation, not biological alignment quality or tree optimality.",
+        "Node reconciliation events, pair completeness and native-run admission remain separate."
+      ],
+      "reconciliation_semantics_recomputed": false,
+      "scientific_scores_admitted": false,
+      "species_alignments": 200,
+      "status": "phylogeny_sequence_content_verified",
+      "supermatrix_columns": 181089
+    },
+    "structure": {
+      "dendropy_version": "5.0.8",
+      "families": 54445,
+      "genes": 251378,
+      "limitations": [
+        "Structural consistency does not prove biological correctness or reproduce event inference.",
+        "Native pairs are validated separately; they are not equated with root-group pairs.",
+        "Candidate sequences, alignment content, node events and pair completeness remain separate checks.",
+        "Caller must gate native completion, exact input inventory and frozen provenance."
+      ],
+      "ortholog_pairs": 966439,
+      "pair_confidence_counts": {
+        "high": 849010,
+        "medium": 117429
+      },
+      "parsed_trees": 26044,
+      "reconciled_families": 8681,
+      "reconciliation_semantics_recomputed": false,
+      "root_groups": 59770,
+      "scientific_scores_admitted": false,
+      "species": 12,
+      "status": "phylogeny_structure_verified"
+    }
+  },
+  "limitations": [
+    "Development-exposed partial-stage reproducibility experiment, not independent validation.",
+    "Conditional rule/content audits do not establish biological truth or optimal trees.",
+    "Shared-host resource measurements cannot support controlled speed comparisons.",
+    "Reproduces the historical root partition and all family scores in this controlled OrthoBench case, not general cross-runtime determinism.",
+    "Whole fresh run was not repeated; validated fresh search and canonical candidates were reused, with alignments and trees inferred anew.",
+    "The malformed live Slurm AveCPU sample is excluded; retained replay timing/RSS is descriptive stage-level evidence."
+  ],
+  "native_completion": {
+    "bytes": 656,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/native_complete.json",
+    "sha256": "64bb0001f2283254575b13550a95cb6e6dc02f0abeae97a478df28565050b1e4"
+  },
+  "plans": [
+    {
+      "bytes": 174893,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/plan.json",
+      "sha256": "2ded17c15cf3510e02f1683973edf211dc8b7f7f86037dcf83e121a948dfafdc"
+    },
+    {
+      "bytes": 172139,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback_plan.json",
+      "sha256": "dc4c1a93aa69e45c37325ba4a8787ed012751c9cd1e97ebf437f7198c3f7b4a9"
+    }
+  ],
+  "production_defaults_changed": false,
+  "publication_ready": false,
+  "readbacks": [
+    {
+      "bytes": 7074,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/admission.json",
+      "sha256": "773a7f60f0d9a05109e9dff222541aaf634f5edd16f77b10d3d4976d39855fbe"
+    },
+    {
+      "bytes": 10608652,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/structure.json",
+      "sha256": "7199bad7ea44ac412b2779d37ab876ed967225c7031c5add6d8b968297b800ae"
+    },
+    {
+      "bytes": 5404481,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/sequences.json",
+      "sha256": "aaeb77e874946ad37f24d995d0bd65ee2ef4b4b3ef398e2423963497949b5a94"
+    },
+    {
+      "bytes": 10609980,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/events.json",
+      "sha256": "64a4728198fce055f481060986be06a5cc900c1d901a4bde8118571cf299cce7"
+    },
+    {
+      "bytes": 6009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/hierarchy.json",
+      "sha256": "d0d2715976bb0911173731806e93845668f8af010f4baaf095e9f33c226b1958"
+    }
+  ],
+  "replay": {
+    "bytes": 5913,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/replay.json",
+    "sha256": "d4a9188ae3dac8c1116ecfd7d05fb56dca2e58cdd7b8460db3e9b2a61dba8ff9"
+  },
+  "resources": {
+    "peak_process_tree_rss_bytes": 1693839360,
+    "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+    "stages": {
+      "phylogeny": {
+        "peak_process_tree_rss_bytes": 1693839360,
+        "peak_process_tree_rss_gib": 1.577511,
+        "system_cpu_s": 3226.815301,
+        "user_cpu_s": 43004.462335,
+        "wall_s": 1555.400956
+      }
+    },
+    "system_cpu_s": 3227.046545,
+    "user_cpu_s": 43005.304147,
+    "wall_s": 1555.403741
+  },
+  "result": {
+    "bytes": 60143,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback/result.json",
+    "sha256": "1451c0992611f3b36c53e898e22977a1d9d54f90f708ac784037fce42888db8f"
+  },
+  "scheduler": {
+    "22324": {
+      "AllocCPUS": "32",
+      "Elapsed": "00:25:58",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22324",
+      "State": "COMPLETED"
+    },
+    "22325": {
+      "AllocCPUS": "2",
+      "Elapsed": "00:02:30",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22325",
+      "State": "COMPLETED"
+    }
+  },
+  "scores": {
+    "canonical": {
+      "exact_refogs": 15,
+      "f_score": 74.10607351873405,
+      "precision": 81.77045380181866,
+      "recall": 67.75533630827974,
+      "refogs": 70
+    },
+    "fresh_installed": {
+      "exact_refogs": 15,
+      "f_score": 73.82156906618316,
+      "precision": 81.1036250035805,
+      "recall": 67.73944366302689,
+      "refogs": 70
+    },
+    "historical": {
+      "exact_refogs": 15,
+      "f_score": 74.10607351873405,
+      "precision": 81.77045380181866,
+      "recall": 67.75533630827974,
+      "refogs": 70
+    }
+  },
+  "status": "fresh_canonical_orthobench_partition_and_scores_reproduced",
+  "submissions": [
+    {
+      "bytes": 1580,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/submission.json",
+      "sha256": "837245f4eafd0e145a7432c689cd0d507eb02da9caac0d30993579b60fd6e8bc"
+    },
+    {
+      "bytes": 2408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_20260926/readback_submission.json",
+      "sha256": "424be30d9e09cfbd98b1a87921ff455b8acff10427bd90bc44bca98847713d33"
+    }
+  ]
+}

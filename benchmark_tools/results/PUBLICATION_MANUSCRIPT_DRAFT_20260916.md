@@ -2238,7 +2238,19 @@ found all 8,440 directed source/target constraints in the same semantic order
 as the historical trace for every canonical arm. Raw trace bytes differ, but
 the pinned membership consumer ignores those differing numeric metadata fields.
 Its inputs are therefore equivalent conditional on identical family outcomes;
-newly inferred trees and those outcomes remain to be validated.
+newly inferred trees and those outcomes were not validated by that boundary check.
+In a subsequent [fresh phylogeny-stage reproduction](CANONICAL_OB_PHYLOGENY_RESULT_22324.md),
+the canonical full-fresh candidate input and matched private clustering
+distribution yielded exactly the historical 59,770-group root partition and
+all 70 reference-family score records: F1 74.106074%, precision 81.770454%
+and recall 67.755336%. All 8,681 reconciled families and the species tree were
+inferred without historical checkpoint reuse, and four independent scientific
+readers passed. This recovers the historical result in the tested OrthoBench
+case; it is not cross-platform determinism, QfO confirmation, or a new
+independent accuracy result. The differing fresh-installed run is retained,
+and production defaults remain unchanged. Search was reused from the validated
+fresh run, so the 1,555.40-second replay is a descriptive phylogeny-stage time,
+not a fresh full-pipeline or controlled comparative timing measurement.
 [Canonical candidate control](OB_CANONICAL_CANDIDATE_RESULT_22323.md).
 [Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
