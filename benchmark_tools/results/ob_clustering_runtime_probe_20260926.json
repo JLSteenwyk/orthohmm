@@ -1,0 +1,299 @@
+{
+  "accuracy_evaluated": false,
+  "arms": [
+    {
+      "arm": "current_launcher",
+      "execution": {
+        "attempts": 1,
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "-I",
+          "-c",
+          "import sys; sys.path.insert(0,sys.argv.pop(1)); import runpy; runpy.run_module('orthohmm.leiden_worker',run_name='__main__')",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload"
+        ],
+        "inputs": [
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload/gene_names.txt",
+            "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+          },
+          {
+            "bytes": 224,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload/metadata.json",
+            "sha256": "6a413f641d187fe50bd8e758604f35fc40f2ba6d7807ec6e566124dfb8a23f77"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload/sources.npy",
+            "sha256": "32fda97a61cbc4180416c9bad57402eeb80fb779b925be289be1df61f80bca74"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload/targets.npy",
+            "sha256": "d4fe7fdbb36c4d84bff2fc3f9251b34409c6049b7fa161d8cd481fa0cba18c24"
+          },
+          {
+            "bytes": 14425104,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/payload/weights.npy",
+            "sha256": "c8373a2512fad5d1bf848b8a3b30ac04f797675b589f48bac8729d2af0dc9e5b"
+          }
+        ],
+        "log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/native.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "returncode": 0,
+        "timed_out": false,
+        "wall_seconds": 21.312509708004654
+      },
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "b87ffc233f1862ab5ac958de18e7f13d5377ad73613cdd6a595b4ef45f0b96d7"
+      },
+      "versus_installed": {
+        "current_groups": 58772,
+        "current_only_groups": 1032,
+        "genes_in_changed_groups": 23352,
+        "identical_groups": 57740,
+        "label_invariant_equal": false,
+        "original_groups": 58827,
+        "original_only_groups": 1087
+      }
+    },
+    {
+      "arm": "current_launcher_repeat",
+      "execution": {
+        "attempts": 1,
+        "command": [
+          "/home/bizon/anaconda3/bin/python",
+          "-I",
+          "-c",
+          "import sys; sys.path.insert(0,sys.argv.pop(1)); import runpy; runpy.run_module('orthohmm.leiden_worker',run_name='__main__')",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload"
+        ],
+        "inputs": [
+          {
+            "bytes": 4567716,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload/gene_names.txt",
+            "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+          },
+          {
+            "bytes": 231,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload/metadata.json",
+            "sha256": "d8f70079f36b13df1a418207b6f7f95d01cec5a3e6fe094fba8cbe3cba23c6a6"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload/sources.npy",
+            "sha256": "32fda97a61cbc4180416c9bad57402eeb80fb779b925be289be1df61f80bca74"
+          },
+          {
+            "bytes": 7212616,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload/targets.npy",
+            "sha256": "d4fe7fdbb36c4d84bff2fc3f9251b34409c6049b7fa161d8cd481fa0cba18c24"
+          },
+          {
+            "bytes": 14425104,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/payload/weights.npy",
+            "sha256": "c8373a2512fad5d1bf848b8a3b30ac04f797675b589f48bac8729d2af0dc9e5b"
+          }
+        ],
+        "log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/native.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "returncode": 0,
+        "timed_out": false,
+        "wall_seconds": 21.523191081010737
+      },
+      "prediction": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/current_launcher_repeat/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "b87ffc233f1862ab5ac958de18e7f13d5377ad73613cdd6a595b4ef45f0b96d7"
+      },
+      "versus_installed": {
+        "current_groups": 58772,
+        "current_only_groups": 1032,
+        "genes_in_changed_groups": 23352,
+        "identical_groups": 57740,
+        "label_invariant_equal": false,
+        "original_groups": 58827,
+        "original_only_groups": 1087
+      }
+    }
+  ],
+  "checked_records": [
+    {
+      "bytes": 16017,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/installed_ob_clustering_probe_20260926.json",
+      "sha256": "2fd69ad44dfe5ff5d1bb6f4d82b31523d6cce06d2a2e8173ad036ef68f527f13"
+    },
+    {
+      "bytes": 80393,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/plan.json",
+      "sha256": "c062abc0410ed85433cb73c7c2b41c09424bcfc374f45097c731b25bfa58abe3"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "20221c74398b2fc72cabcfcf4795512eb0ab51ab37f7dc90df87e4b8e9c609e7"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/payload/gene_names.txt",
+      "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+    },
+    {
+      "bytes": 220,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/payload/metadata.json",
+      "sha256": "47d133132a490bf96f98af8361ac3121592a95b815c7010657714575ea8225fc"
+    },
+    {
+      "bytes": 7212616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/payload/sources.npy",
+      "sha256": "32fda97a61cbc4180416c9bad57402eeb80fb779b925be289be1df61f80bca74"
+    },
+    {
+      "bytes": 7212616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/payload/targets.npy",
+      "sha256": "d4fe7fdbb36c4d84bff2fc3f9251b34409c6049b7fa161d8cd481fa0cba18c24"
+    },
+    {
+      "bytes": 14425104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/installed_ob_clustering_probe_20260926/historical/payload/weights.npy",
+      "sha256": "c8373a2512fad5d1bf848b8a3b30ac04f797675b589f48bac8729d2af0dc9e5b"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 32293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 13330873,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+      "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+    },
+    {
+      "bytes": 637129,
+      "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+      "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+    }
+  ],
+  "historical_runtime_identity_established": false,
+  "historical_scores_replaced": false,
+  "installed_runtime": {
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/bin/python",
+    "files": [
+      {
+        "bytes": 10166,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+        "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+      },
+      {
+        "bytes": 32293,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/helpers.py",
+        "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+      },
+      {
+        "bytes": 1411,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/leiden_worker.py",
+        "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+      },
+      {
+        "bytes": 13330873,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+        "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+      },
+      {
+        "bytes": 645473,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+        "sha256": "2c31efe9883b887cccb4c07074e86b13cdb2209acad32dcb74523158fe385af0"
+      }
+    ],
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "versions": {
+      "igraph": "1.0.0",
+      "leidenalg": "0.12.0",
+      "numpy": "2.2.6"
+    }
+  },
+  "limitations": [
+    "Current Anaconda environment at the recorded historical launcher path, not attested historical dependency identity.",
+    "Same graph, weights, ordered gene/edge indices, seed, CPM setting and scientific worker sources.",
+    "Whole-runtime comparison, not an isolated causal test of the leidenalg version.",
+    "Initial clustering only; no final-score or whole-pipeline causal attribution.",
+    "Two planned calls and one retained installed result; shared-host times are descriptive only."
+  ],
+  "plan": {
+    "bytes": 7647,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_clustering_runtime_probe_20260926/plan.json",
+    "sha256": "5eaf9d243ff3eb84b3c18365c4af3962356a85ecf9891fe8eb300382cf1a59b8"
+  },
+  "repeat": {
+    "current_groups": 58772,
+    "current_only_groups": 0,
+    "genes_in_changed_groups": 0,
+    "identical_groups": 58772,
+    "label_invariant_equal": true,
+    "original_groups": 58772,
+    "original_only_groups": 0
+  },
+  "runtime": {
+    "executable": "/home/bizon/anaconda3/bin/python",
+    "files": [
+      {
+        "bytes": 10166,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/externals.py",
+        "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+      },
+      {
+        "bytes": 32293,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/helpers.py",
+        "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+      },
+      {
+        "bytes": 1411,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/leiden_worker.py",
+        "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+      },
+      {
+        "bytes": 13330873,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+        "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+      },
+      {
+        "bytes": 637129,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+        "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+      }
+    ],
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "versions": {
+      "igraph": "1.0.0",
+      "leidenalg": "0.11.0",
+      "numpy": "2.2.6"
+    }
+  },
+  "source": {
+    "bytes": 6410,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_ob_clustering_runtime.py",
+    "sha256": "bd4239b7d78755223b5957d745c70b5627cb39f6d924749a93262e742fbbe410"
+  },
+  "status": "current_launcher_runtime_contrast_complete"
+}

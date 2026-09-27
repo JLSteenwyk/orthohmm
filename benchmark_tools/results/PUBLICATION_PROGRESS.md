@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Runtime Contrast Changes Initial Grouping Reproducibly (2026-09-26)
+
+The preceding turn ruled out an initial-clustering effect of observed tiny
+weight changes in the installed runtime. This turn reread the goal and ran
+two planned current-Anaconda calls on exactly the retained historical graph,
+holding indexing, seed, CPM setting and scientific worker source fixed. Both
+exit 0 and yield 58,772 groups, versus installed 58,827. Across runtimes,
+23,352 genes' initial memberships change; each runtime's repeat agrees.
+The [runtime contrast](OB_CLUSTERING_RUNTIME_PROBE_20260926.md) preserves
+commands, package/native-module identities and every output; 77 tests pass.
+
+The launcher environment currently has leidenalg 0.11.0 versus installed
+0.12.0, but historical runtime identity and single-dependency causality are
+not established. Next isolate the dependency in a private environment before
+considering a pin or downstream replay. The manuscript now records completed
+full-run readbacks, numerical disagreement and these bounded diagnostics;
+the earlier v19 rendered preview is historical, not refreshed this turn.
+No benchmark score/default changed. Other publication requirements remain
+active, and DGX remains deferred.
+
 ## Tiny Weight Differences Do Not Change Installed Initial Clustering (2026-09-26)
 
 The preceding turn completed graph score/order controls. This turn reread

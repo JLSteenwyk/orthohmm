@@ -2173,10 +2173,29 @@ FastTree bytes with rebuilt MAFFT, the installed OrthoHMM pipeline passes the
 unchanged 16-protein fixture and all independent phylogeny readbacks; five
 primary outputs match the earlier fixture byte-for-byte. These small-fixture
 results do not establish full-dataset equivalence, cross-platform operation
-or controlled runtime performance. The fresh installed full OrthoBench run
-has not yet been admitted; its [protocol and post-completion readback workflow](../PUBLICATION_REPRODUCTION.md#full-installed-orthobench-readback)
-remain separate from the historical validations. No new runtime replaced a
-retained benchmark executable, and no scientific score was changed.
+or controlled runtime performance. The fresh installed full OrthoBench run,
+using rebuilt MAFFT and the identified historical FastTree executable, completed
+and passed all five independent output readbacks. It was not numerically
+equivalent: weighted RefOG F1 was 73.821569%, versus historical 74.106074%,
+with eight of 70 reference-family records changed. Historical benchmark scores
+were not replaced. [Full-run readback](INSTALLED_ORTHOBENCH_READBACK_20260926.md).
+
+Post-hoc diagnostics found identical retained directed search-hit presence and
+identical initial graph topology, with maximum score/weight differences of
+8.881784197001252e-16. Those weight differences did not alter initial clustering
+in the installed runtime. In contrast, holding the graph, indexing, seed and
+scientific worker source fixed while changing from the installed runtime to
+the current Anaconda replay-launcher environment changed initial groupings for
+23,352 genes (58,827 versus 58,772 groups); each runtime's fixed repeat agreed.
+The environments report leidenalg 0.12.0 and 0.11.0, respectively, but this
+whole-runtime contrast neither isolates that dependency nor establishes the
+historical environment's unchanged identity. It does not causally account for
+the full-run score difference. Dependency/runtime sensitivity therefore remains
+an unresolved reproducibility limitation, not evidence supporting a new default.
+[Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
+[graph](INSTALLED_OB_GRAPH_PROBE_20260926.md),
+[weight control](INSTALLED_OB_CLUSTERING_PROBE_20260926.md), and
+[runtime contrast](OB_CLUSTERING_RUNTIME_PROBE_20260926.md).
 
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original
