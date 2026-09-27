@@ -1,0 +1,178 @@
+{
+  "archive": {
+    "bytes": 99065669,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fresh_runtime_20260927.tar.gz",
+    "sha256": "7c8c9daa2add23fc64aaea8998ba4f333c5688dfd12893ea43c4afe99764a1b6"
+  },
+  "archive_exclusions": [
+    "environment/venv",
+    "home"
+  ],
+  "copied_wheel_and_tool_files": 69,
+  "evidence": [
+    {
+      "bytes": 1297,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/manifest.json",
+      "sha256": "e35fdc6fbbc565e1939ab66048f6c053db11e5d87f49849a28bd8859e8e52426"
+    },
+    {
+      "bytes": 35929,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/copied_assets.json",
+      "sha256": "8f8be7f1609d549da79a4ec4231e937a08833a7b8acc415d03e66b16274d5067"
+    },
+    {
+      "bytes": 4628,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/environment/preparation.json",
+      "sha256": "ea9e6398a452a70bf110fbf9992d8488a8b6fb7defaf1eb92948311e133b3ab7"
+    },
+    {
+      "bytes": 139643,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/environment/install_report.json",
+      "sha256": "9de2a9743eb101469a4a7af4aa39854514490d4c2a4abc9c6d15e5a4b81113ca"
+    },
+    {
+      "bytes": 2517,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/environment/result.json",
+      "sha256": "8e4d918d3693572f0450be5f90fbc1e87e9ff7ab380569b85a5db8da3105c05b"
+    },
+    {
+      "bytes": 590250,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/environment/payload_before.json",
+      "sha256": "dbc794329d1716331dd7e6a94ab5105fb018d34a508f676bf165b0d091529c95"
+    },
+    {
+      "bytes": 590250,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/environment/payload_after.json",
+      "sha256": "dbc794329d1716331dd7e6a94ab5105fb018d34a508f676bf165b0d091529c95"
+    },
+    {
+      "bytes": 1933,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/execution.json",
+      "sha256": "0410d686032531832a3ff0aa16c0532a3838d06ff4a74d6e2e10f2e096b06b5f"
+    },
+    {
+      "bytes": 2326471,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/native.strace",
+      "sha256": "64723757557944e30c43f9c4b761886397126929db43aa8689e0fd84c076410d"
+    },
+    {
+      "bytes": 10488,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/native/started.json",
+      "sha256": "d15181aaa36797a9b867ff0faacecfce387d8e6a85b0f0429e64fc3fbd71ef26"
+    },
+    {
+      "bytes": 1628,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/native/complete.json",
+      "sha256": "3c0012ea46d65db88049f2ca5c9872989f632f04d64f8fa49883469813595b9c"
+    },
+    {
+      "bytes": 2490,
+      "path": "/tmp/orthohmm-fresh-runtime-20260927/readback/result.json",
+      "sha256": "eab97e28589e787d14c03eb895f773801a13bad2eb607769c2cd79b8b8988ff1"
+    }
+  ],
+  "focused_tests_passed": 19,
+  "historical_partition": {
+    "bytes": 332,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_pipeline_fixture_v2_20260926/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+    "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+  },
+  "historical_partition_bytes_equal": true,
+  "inputs": [
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S1.fa",
+        "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/input/S1.fa",
+        "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S2.fa",
+        "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/input/S2.fa",
+        "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S3.fa",
+        "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/input/S3.fa",
+        "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+      }
+    },
+    {
+      "original": {
+        "bytes": 862,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S4.fa",
+        "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+      },
+      "relocated": {
+        "bytes": 862,
+        "path": "/tmp/orthohmm-fresh-runtime-20260927/input/S4.fa",
+        "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+      }
+    }
+  ],
+  "installed_distributions": 11,
+  "installed_files_checked": 3052,
+  "limitations": [
+    "Same-host small-fixture execution, not full-dataset or cross-platform reproduction.",
+    "Base interpreter and operating-system libraries remain shared; installation used the prior trusted pip controller.",
+    "Copied external binaries were relocated, not rebuilt; no redistribution clearance is inferred.",
+    "Independent readers ran from the original checkout after native execution.",
+    "The fixture has an empty satellite merge trace.",
+    "The local archive is not a deposited release and does not include the generated virtual environment."
+  ],
+  "publication_ready": false,
+  "root_partition": {
+    "bytes": 332,
+    "path": "/tmp/orthohmm-fresh-runtime-20260927/native/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+    "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+  },
+  "source": {
+    "bytes": 3592,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/install_recovery_environment.py",
+    "sha256": "060abc5c57b54266b9c8afb3cece3591414ffb137bd0d21e1b160cc9a80d6d8e"
+  },
+  "status": "fresh_relocated_runtime_fixture_verified",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/tmp/orthohmm-fresh-runtime-20260927/native/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  },
+  "trace_check": {
+    "absent_literal_prefixes": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a",
+      "/tmp/orthohmm-recovery-entrypoint-20260927"
+    ],
+    "limitation": "Literal prefix search of file syscalls, not a filesystem sandbox or universal access proof",
+    "scope": "Native inference and traced descendants only"
+  },
+  "unchanged_installed_payload": true
+}

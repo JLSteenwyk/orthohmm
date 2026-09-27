@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Fresh Relocated Runtime Verified (2026-09-27)
+
+The previous turn verified only harness relocation. This turn added an offline
+installer and exercised a fresh venv outside the checkout with copied wheels,
+relocated MAFFT/FastTree, exported harness and copied fixture inputs. The
+[fresh-runtime result](FRESH_RELOCATED_RUNTIME_20260927.md) verifies eleven
+distributions and 3,052 package files before/after inference, passes all four
+scientific readers and matches the earlier fixture's exact root partition.
+Native file-syscall tracing contains no original checkout/software-mount
+prefix. Nineteen focused tests pass; a local hash-recorded archive preserves
+the workflow evidence. This remains a same-host small fixture with shared
+base Python/system libraries, not full-data or cross-platform reproduction.
+No historical environment or production default changed. Dedicated timing,
+scientific uncertainty and release gates remain open; DGX remains deferred.
+
 ## Recovery Harness Relocation Verified (2026-09-27)
 
 The previous turn completed manuscript review 22. This turn inspected runtime

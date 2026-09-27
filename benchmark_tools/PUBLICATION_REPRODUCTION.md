@@ -9,6 +9,12 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
+- [Fresh relocated runtime](results/FRESH_RELOCATED_RUNTIME_20260927.md)
+  validates a new offline-installed environment and relocated MAFFT/FastTree
+  on the small full-pipeline fixture, with package-byte audits and native
+  file-access tracing. This still shares the host's base Python/system
+  libraries and is not full-data or cross-platform validation.
+
 - [Relocated recovery entrypoint](results/RELOCATED_ENTRYPOINT_FIXTURE_20260927.md)
   exports the exact committed minimal runtime harness and verifies a 16-gene
   execution outside the checkout with four scientific readers. It reuses the
