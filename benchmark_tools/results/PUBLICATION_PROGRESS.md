@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Full QfO Scientific Readback Prepared (2026-09-27)
+
+The previous turn launched fresh phylogeny 22329; scheduler inspection still
+confirms RUNNING. Added independent admission and four-reader orchestration
+for both historical and fresh outputs, full-universe partition comparisons,
+family differences and streaming native-pair/confidence comparisons. Fifty-five
+focused tests pass, including randomized stream-versus-set checks and rejected
+provenance/reuse mutations. The small fixture passes all four readers and
+exactly matches its historical 36 pairs/confidences. Preparation and source
+pins are in `qfo_fresh_phylogeny_readback_preparation_20260927.json`.
+Next queue this readback after successful native termination, with no native
+retry and no canonical reuse until it passes. Full QfO outputs are not yet
+validated; historical scores and publication limitations remain unchanged.
+
 ## Fresh QfO Phylogeny Submitted (2026-09-27)
 
 After committing/pushing preparation `d8f178e`, submitted retained-order

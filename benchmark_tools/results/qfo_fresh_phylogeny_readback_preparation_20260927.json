@@ -1,0 +1,54 @@
+{
+  "fixture": {
+    "bytes": 1644,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/readback_driver_fixture/result.json",
+    "sha256": "2b9917ba1f481861d43f63c2dfa9d3f5d0a9b61c4d324e974ec5a5d43088fa9f"
+  },
+  "fixture_result": {
+    "genes": 16,
+    "pairs": {
+      "annotations_changed": 0,
+      "confidence_tables_equal": true,
+      "left_only": 0,
+      "pair_sets_equal": true,
+      "right_only": 0,
+      "shared": 36
+    },
+    "reports": [
+      {
+        "bytes": 6243,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/readback_driver_fixture/events.json",
+        "sha256": "c98ba2a091e2b27f0f310b36bbf8ac5e921a77d78adb3e197dbea1592b510881"
+      },
+      {
+        "bytes": 3514,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/readback_driver_fixture/hierarchy.json",
+        "sha256": "25cc40a92e2072e4562ff22614ebb38380a6794af06d72df8a851f928dbf633e"
+      },
+      {
+        "bytes": 5753,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/readback_driver_fixture/sequences.json",
+        "sha256": "ced204ca1a1152f5e6f55b0a76b508dfec8559b6cf74e00c7ba4c161cbcebf0e"
+      },
+      {
+        "bytes": 5223,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_fixture_20260927/readback_driver_fixture/structure.json",
+        "sha256": "8c6382207a094d885cca5863b97449aa4e8288e25b844f7a4aee5cfe2b34f330"
+      }
+    ],
+    "source": {
+      "bytes": 9956,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_qfo_fresh_phylogeny.py",
+      "sha256": "2410ec03e82c443cd9b87149ee984ca38330e9087a71856a822d20a92448d0e2"
+    },
+    "status": "fixture_scientific_readback_complete"
+  },
+  "pinned_sources": 731,
+  "plan": {
+    "bytes": 176701,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fresh_phylogeny_20260927/readback_plan.json",
+    "sha256": "39d503975671f356a5b44081cd81f37a4a40b3e2c7f74a9ccc6cba617b0446fd"
+  },
+  "status": "prepared_pending_native_completion",
+  "tests_passed": 55
+}
