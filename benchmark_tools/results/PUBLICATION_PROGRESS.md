@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Live Search Libraries Identified (2026-09-27)
+
+Previous turn inventoried declared wheel dependencies. Reconfirmed job 22337
+RUNNING and collected read-only parent/worker library snapshots bound to
+scheduler membership, exact native command and stable process start ticks.
+The [snapshot](INTEGRATED_SEARCH_LIBRARIES_20260927.md) finds 72 unique library
+paths, 26 with exact selected-wheel member bytes. HMM Viterbi/k-mer native
+libraries and Numba OpenMP are mapped in the sampled worker; base Anaconda
+and system libraries remain outside the wheel lock. No TBB mapping was seen
+in these snapshots, not a whole-workflow exclusion. All 139 per-process file
+records rehash unchanged. A collection-metadata checker error was corrected
+without touching inference. HMM search reached 25.69%; full admission and
+remaining timing, uncertainty, rights and release gates remain open.
+
 ## Selected Wheel Native Dependencies Inspected (2026-09-27)
 
 Previous turn completed the refreshed full unit suite. Reconfirmed full
