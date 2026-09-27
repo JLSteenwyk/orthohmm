@@ -1,0 +1,24 @@
+{
+  "aggregate": {
+    "bytes": 134872527,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/Apr_20/tmp/all.fa",
+    "sha256": "0701c3545ca653586ae276e47e59ddea4229d4fc2c239e6c24412f4459aef5cd"
+  },
+  "complete_audit_passed": false,
+  "error": "Native aggregate sequences differ from frozen inputs",
+  "exit_code": 1,
+  "input_inventory": {
+    "bytes": 4564,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/installed_ob_input_inventory_20260926.json",
+    "sha256": "8b429398e6c381fcdec8289c641a7f20969edcad5595e3d3f6930335601571bd"
+  },
+  "requested_output_not_written": true,
+  "run": "Apr_20",
+  "scores_changed": false,
+  "source": {
+    "bytes": 9053,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_orthomcl_provenance.py",
+    "sha256": "2e3e9aafb385e030eb9031498a1152a716da18d8c33e77a51b19ad24654a30a4"
+  },
+  "status": "native_aggregate_identity_failed"
+}
