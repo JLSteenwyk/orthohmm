@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Downstream Dependency Replay Prepared and Smoke-Tested (2026-09-26)
+
+The preceding turn isolated the Leiden-distribution effect on initial groups.
+This turn reread the goal and prepared two fixed saved-hit replays through
+profiles, refinement and candidate merging, using private diagnostic venvs.
+Both small fixtures pass all four clustering stages and candidate expansion.
+A cwd-dependent child-import failure was retained and corrected in fixture
+invocation before full submission; no full native attempt was made at this
+preparation milestone. The [protocol](OB_DEPENDENCY_REPLAY_PROTOCOL_20260926.md)
+pins parameters, plan, input/source identities and one attempt per arm.
+
+Submission and live state will be recorded separately. Do not edit the active
+driver/replay helper after launch. Final scores, default/dependency changes,
+phylogeny and controlled timing are outside this diagnostic. Historical results
+are unchanged; other publication requirements remain open and DGX deferred.
+
 ## Private Leiden Distribution Overlay Reproduces Runtime Effect (2026-09-26)
 
 The preceding turn established a whole-runtime initial-clustering difference.

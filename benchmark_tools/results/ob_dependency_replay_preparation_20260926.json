@@ -1,0 +1,388 @@
+{
+  "earlier_plan_never_submitted": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_20260926/plan.json",
+  "plan": {
+    "bytes": 84422,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/plan.json",
+    "sha256": "950a472f1ca767851c69446412edc0b26ea5fc5646160c1d385f6318327b87ba"
+  },
+  "preserved_preclustering_failure": {
+    "cause": "Smoke invoked from repository cwd; production launcher uses private arm cwd",
+    "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/smoke012",
+    "error": "Clustering child import resolution differs from driver",
+    "native_clustering_started": false
+  },
+  "smokes": {
+    "smoke011_private_cwd": {
+      "candidate_partition": {
+        "bytes": 709,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/smoke011_private_cwd/replay/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+        "sha256": "91944a392022103c511c8738fa0333befd47fe47e50ba7a49ac7e581fdc237ec"
+      },
+      "clustering_calls": 4,
+      "report": {
+        "bytes": 15115,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/smoke011_private_cwd/stage_report.json",
+        "sha256": "473689726b73f4b5ce35c3deb18f220a6f20672081be1a88358950e5022dfa3c"
+      },
+      "runtime": {
+        "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/leiden011_venv/bin/python",
+        "native": [
+          {
+            "bytes": 13330873,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+            "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+          },
+          {
+            "bytes": 637129,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so",
+            "sha256": "cd22f76ac006ec5273b8177f0f1326019c0e750450114f727f552bce9e44bc7d"
+          }
+        ],
+        "plain_child_import_probe": [
+          "0.11.0",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_leiden_overlay_probe_20260926/distribution/leidenalg/_c_leiden.abi3.so"
+        ],
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+        "sources": [
+          {
+            "bytes": 0,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 127,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/__main__.py",
+            "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+          },
+          {
+            "bytes": 14046,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/accuracy.py",
+            "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+          },
+          {
+            "bytes": 7908,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/args_processing.py",
+            "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+          },
+          {
+            "bytes": 10166,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+            "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+          },
+          {
+            "bytes": 2977,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          {
+            "bytes": 32293,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 1411,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/leiden_worker.py",
+            "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+          },
+          {
+            "bytes": 6812,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/metrics.py",
+            "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+          },
+          {
+            "bytes": 30663,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/orthohmm.py",
+            "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+          },
+          {
+            "bytes": 15939,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/parser.py",
+            "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+          },
+          {
+            "bytes": 29732,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/phylogeny.py",
+            "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+          },
+          {
+            "bytes": 41369,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/phylogeny_pipeline.py",
+            "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+          },
+          {
+            "bytes": 61183,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/refinement.py",
+            "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+          },
+          {
+            "bytes": 0,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 21146,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/engine.py",
+            "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+          },
+          {
+            "bytes": 1865,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/evalue.py",
+            "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+          },
+          {
+            "bytes": 27982,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/matrices.py",
+            "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+          },
+          {
+            "bytes": 9180,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/msa_center_star.py",
+            "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+          },
+          {
+            "bytes": 6728,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/msa_profile.py",
+            "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+          },
+          {
+            "bytes": 22855,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/prefilter.py",
+            "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+          },
+          {
+            "bytes": 6143,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/profile.py",
+            "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+          },
+          {
+            "bytes": 25077,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/profile_expansion.py",
+            "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+          },
+          {
+            "bytes": 4509,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/sequences.py",
+            "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+          },
+          {
+            "bytes": 5324,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/species_prune.py",
+            "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+          },
+          {
+            "bytes": 17693,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/viterbi.py",
+            "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+          },
+          {
+            "bytes": 4420,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/viterbi_cuda_ctypes.py",
+            "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+          },
+          {
+            "bytes": 22,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/version.py",
+            "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+          },
+          {
+            "bytes": 2949,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/writer.py",
+            "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+          }
+        ],
+        "versions": {
+          "igraph": "1.0.0",
+          "leidenalg": "0.11.0",
+          "numpy": "2.2.6"
+        }
+      }
+    },
+    "smoke012_private_cwd": {
+      "candidate_partition": {
+        "bytes": 709,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/smoke012_private_cwd/replay/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+        "sha256": "91944a392022103c511c8738fa0333befd47fe47e50ba7a49ac7e581fdc237ec"
+      },
+      "clustering_calls": 4,
+      "report": {
+        "bytes": 15175,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/smoke012_private_cwd/stage_report.json",
+        "sha256": "e8d2dec2896414fd590cff99e6692de47ac49e6c8822fb3a9a7da3417daeb32a"
+      },
+      "runtime": {
+        "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/leiden012_venv/bin/python",
+        "native": [
+          {
+            "bytes": 13330873,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/igraph/_igraph.abi3.so",
+            "sha256": "4cb2b4e7f88005ccd68fe0a20feb086b84335196e884c5bdd13f11d15c8b555d"
+          },
+          {
+            "bytes": 645473,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so",
+            "sha256": "2c31efe9883b887cccb4c07074e86b13cdb2209acad32dcb74523158fe385af0"
+          }
+        ],
+        "plain_child_import_probe": [
+          "0.12.0",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/leidenalg/_c_leiden.abi3.so"
+        ],
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+        "sources": [
+          {
+            "bytes": 0,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 127,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/__main__.py",
+            "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+          },
+          {
+            "bytes": 14046,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/accuracy.py",
+            "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+          },
+          {
+            "bytes": 7908,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/args_processing.py",
+            "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+          },
+          {
+            "bytes": 10166,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/externals.py",
+            "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+          },
+          {
+            "bytes": 2977,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          {
+            "bytes": 32293,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 1411,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/leiden_worker.py",
+            "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+          },
+          {
+            "bytes": 6812,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/metrics.py",
+            "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+          },
+          {
+            "bytes": 30663,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/orthohmm.py",
+            "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+          },
+          {
+            "bytes": 15939,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/parser.py",
+            "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+          },
+          {
+            "bytes": 29732,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/phylogeny.py",
+            "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+          },
+          {
+            "bytes": 41369,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/phylogeny_pipeline.py",
+            "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+          },
+          {
+            "bytes": 61183,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/refinement.py",
+            "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+          },
+          {
+            "bytes": 0,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 21146,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/engine.py",
+            "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+          },
+          {
+            "bytes": 1865,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/evalue.py",
+            "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+          },
+          {
+            "bytes": 27982,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/matrices.py",
+            "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+          },
+          {
+            "bytes": 9180,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/msa_center_star.py",
+            "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+          },
+          {
+            "bytes": 6728,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/msa_profile.py",
+            "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+          },
+          {
+            "bytes": 22855,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/prefilter.py",
+            "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+          },
+          {
+            "bytes": 6143,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/profile.py",
+            "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+          },
+          {
+            "bytes": 25077,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/profile_expansion.py",
+            "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+          },
+          {
+            "bytes": 4509,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/sequences.py",
+            "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+          },
+          {
+            "bytes": 5324,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/species_prune.py",
+            "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+          },
+          {
+            "bytes": 17693,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/viterbi.py",
+            "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+          },
+          {
+            "bytes": 4420,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/search/viterbi_cuda_ctypes.py",
+            "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+          },
+          {
+            "bytes": 22,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/version.py",
+            "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+          },
+          {
+            "bytes": 2949,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_overlay_20260926/venv_clean/lib/python3.10/site-packages/orthohmm/writer.py",
+            "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+          }
+        ],
+        "versions": {
+          "igraph": "1.0.0",
+          "leidenalg": "0.12.0",
+          "numpy": "2.2.6"
+        }
+      }
+    }
+  }
+}
