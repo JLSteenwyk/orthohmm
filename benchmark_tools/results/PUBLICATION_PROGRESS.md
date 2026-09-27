@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Full-Data Canonical Candidate Control Prepared (2026-09-26)
+
+The preceding turn added the regression fixture and experimental policy. This
+continuation reread the objective and prepared an isolated input adapter around
+the unchanged factorial driver. It canonicalizes only directed-hit order and
+records exact input-array identities before candidate expansion. The five
+input definitions preserve both score vectors and the explicit self-hit control.
+The [protocol](OB_CANONICAL_CANDIDATE_PROTOCOL_20260926.md) pins the full-data
+plan and limits before execution.
+
+All five isolated four-gene fixture arms and external readbacks pass, as do
+44 focused tests. No production function or retained driver was edited. This
+preparation milestone does not admit full-data outputs; record submission and
+terminal readback separately. Publication-wide requirements and end-to-end
+validation remain open; DGX stays deferred.
+
 ## Small Ordering Regression and Experimental Policy (2026-09-26)
 
 The preceding turn established the full-data hit-order effect. This continuation
