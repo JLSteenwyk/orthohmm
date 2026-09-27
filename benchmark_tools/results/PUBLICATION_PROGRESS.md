@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Exact Recovery Dependency Wheel Identified (2026-09-26)
+
+The preceding turn integrated the tested recovery into the guide. This turn
+reread the objective and addressed the private-snapshot dependency gap by
+acquiring the Leiden 0.11 CPython abi3 Linux x86_64 wheel from PyPI without
+installation. Its size/digest match the provider metadata. A new strict ZIP/
+RECORD reader verifies all 15 payload members byte-for-byte against the
+validated private distribution, including all three native libraries.
+
+Only three explicitly installer-generated metadata files are excluded from
+snapshot byte equality; wheel RECORD content is independently verified.
+Six focused archive tests pass. The
+[component receipt and hash lock](LEIDEN_RECOVERY_WHEEL_20260926.md) retain
+the source, identity and limits. No existing environment, scientific default,
+historical result or native run changed. Next assemble and validate a fresh
+complete recovery environment using this component and the already audited
+remaining wheels; a portable full-pipeline entrypoint and broader publication
+requirements remain unfinished. DGX remains deferred.
+
 ## Tested Recovery Integrated Into Reproduction Guide (2026-09-26)
 
 The preceding turn established exact historical OrthoBench recovery. This

@@ -1,0 +1,41 @@
+{
+  "artifact_url": "https://files.pythonhosted.org/packages/b0/a4/a89e2ce16a580f7bea066ed49364f0b3e04a6412f0c3692975bee8515141/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+  "audit": {
+    "bytes": 9060,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/leiden011_recovery_wheel_audit_20260926.json",
+    "sha256": "bf7b7264cc20dedd527df5379ed39efb30a51cf925d9879066b194eb5e0fa0fe"
+  },
+  "download_command": [
+    "python",
+    "-m",
+    "pip",
+    "download",
+    "--isolated",
+    "--index-url",
+    "https://pypi.org/simple",
+    "--only-binary=:all:",
+    "--no-deps",
+    "--dest",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_leiden011_wheel_20260926",
+    "leidenalg==0.11.0"
+  ],
+  "installed": false,
+  "lock": {
+    "bytes": 176,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/leiden011_recovery_wheel_20260926.txt",
+    "sha256": "842dcc9b4427c71c2264730170760223abe8e0c9aee7757508f1a5d710605463"
+  },
+  "provider_record": {
+    "bytes": 23807,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_leiden011_wheel_20260926/pypi_release.json",
+    "sha256": "faa3ba23ee31916664bfa590463c0c9a9298ea94fc0b15c2a1cd0540a0f3878c"
+  },
+  "provider_url": "https://pypi.org/pypi/leidenalg/0.11.0/json",
+  "publication_ready": false,
+  "status": "provider_digest_and_validated_snapshot_payload_match",
+  "wheel": {
+    "bytes": 2738084,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_leiden011_wheel_20260926/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+  }
+}

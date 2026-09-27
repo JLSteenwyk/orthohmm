@@ -409,6 +409,10 @@ string alone is not an adequate replacement for the distribution/file pins.
 The clean overlay wheel lock includes Leiden 0.12; do not silently substitute
 that lock for the recovery environment. See the
 [private distribution experiment](results/OB_LEIDEN_OVERLAY_PROBE_20260926.md).
+The [verified recovery wheel](results/LEIDEN_RECOVERY_WHEEL_20260926.md)
+now supplies a provider-digest-checked artifact whose 15 payload files match
+that private distribution exactly. Its single-component hash lock is not a
+complete environment, and a fresh installation has not yet been validated.
 The canonical-order policy remains benchmark-only, not an enabled production
 default. Do not present this as a new accuracy-tuned method or transfer the
 recovery result to QfO or another platform without validation.
