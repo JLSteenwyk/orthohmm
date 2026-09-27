@@ -208,7 +208,35 @@ The archive therefore closes one previously uninspected software-package
 lead but does not recover the benchmark inputs. No scores or uncertainty
 estimates changed, and no maintainer contact was sent.
 
-Request the QfO 2020/2020.2 reference-generation source bundle from the QfO
+### Public-Only Search Resumed (2026-09-27)
+
+The user explicitly requested internet searches instead of contacting anyone.
+The contact draft below is historical and **must not be sent** under the current
+instruction. Renewed exact-filename and release-7 searches did not recover
+`treefam2reference.txt` or a verified original NHX collection.
+
+The public [CyVerse TreeFam integration notes](https://cyverse.atlassian.net/wiki/spaces/iptol/pages/242170711/TreeFam)
+document the historical anonymous `db.treefam.org:3308` database and list
+`treefam_7`. They also describe tree storage, but do not supply the requested
+archive or QfO mapping. Local DNS lookups for both that host and the earlier
+`vegasrv.sanger.ac.uk` returned no address; no database connection was attempted.
+This does not establish permanent loss. [InterMine's own documentation](https://app.readthedocs.org/projects/intermine/downloads/pdf/latest/)
+points back to the already investigated Sanger release-7 MySQL path and two
+gene/ortholog tables, not an independent tree/mapping mirror.
+
+The [Selectome paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC2686563/)
+identifies releases based on TreeFam 4 and 6, not the required release 7;
+those derived trees cannot silently replace the benchmark source. The public
+[OrthoFinder2 supplement](https://zenodo.org/records/1481147) exposes a 2.0-GB
+archive, but its listing does not establish that the missing originals are
+inside. It was not downloaded or declared a recovered source in this check.
+The Broccoli Zenodo landing page returned HTTP 429; no rate-limit bypass was
+attempted. No original source file was downloaded, admitted or substituted,
+and no email, issue or support request was sent.
+
+### Historical Contact Draft (Not Authorized)
+
+The earlier proposed next step was to request the QfO 2020/2020.2 reference-generation source bundle from the QfO
 maintainers, and the release-7 archive from TreeFam/EBI if necessary. A draft
 request follows; **no email, issue or support submission has been sent**.
 

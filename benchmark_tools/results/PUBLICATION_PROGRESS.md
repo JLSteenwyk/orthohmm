@@ -1,5 +1,18 @@
 # Publication Progress
 
+## DGX Access Resumed; Public-Only Source Search (2026-09-27)
+
+The user renewed DGX use and prohibited maintainer contact in favor of internet
+searches. [Fresh SSH and observation checks](DGX_RESUMPTION_20260927.md) confirm
+the idle 20-core host and existing 20-CPU/96-GiB protocol. Updated observer
+deployment identifies exactly one unreadable unit file, the dashboard admin
+service; administrator read-only access has been requested. No native timing
+job or service change occurred. Public TreeFam searches examined historical
+database documentation and archive leads without recovering the original
+trees/mapping. The source-retrieval note now explicitly marks the old contact
+draft unauthorized. No scores changed; controlled timing and source recovery
+remain incomplete.
+
 ## Main Text Formal Citations Integrated (2026-09-27)
 
 Previous turn completed the three-page layout review. Added 16 formal method,
