@@ -79,7 +79,9 @@ With validated local assets and a trusted installer, the complete command is:
   --output /fresh/full-workflow --cpu 32
 ```
 
-The new controller's full-OrthoBench mode has **not** been executed. The
+The new controller's full-OrthoBench mode was subsequently submitted as
+[job 22337 under a frozen protocol](INTEGRATED_FULL_OB_PROTOCOL_20260927.md).
+It is running, not completed or independently admitted. The
 previous separately admitted full native run and full scoring restoration
 remain the dataset-scale evidence; their results are not transferred to a
 new controller execution. Acquisition/bootstrap, full workflow validation,

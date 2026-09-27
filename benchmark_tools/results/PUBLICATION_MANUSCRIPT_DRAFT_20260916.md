@@ -2361,12 +2361,49 @@ for those 11 ranges. This does not establish a secure complete build chain,
 current installed-environment clearance, portable release or closed repository
 alerts; the historical lock remains evidence only, not for new installation.
 
+A subsequent [reader-only security upgrade](READER_SECURITY_UPGRADE_20260927.md)
+replaced Biopython 1.86 with 1.87 after a twelfth repository advisory was
+recorded. The five-package reader installation passed dependency checks,
+before/after wheel-payload audits and all four scientific readers on the
+16-gene fixture, with unchanged scientific fields. None of its verified
+versions fell within the 12 retained advisory ranges. This bounded check
+does not establish comprehensive security or close historical repository
+alerts; the inference environment and historical locks were not changed.
+
+The [full OrthoBench scoring archive restoration](OB_SCORING_ARCHIVE_20260927.md)
+recomputed the complete 70-family score object from the retained 59,770-group
+partition and 251,378-gene universe outside the checkout. The score file
+matched byte-for-byte, including F1 74.10607351873405%. Its 40-file archive
+excludes raw reference data, installed environments and native tools; those
+inputs and the patched reader were supplied separately. This demonstrates
+same-host scoring restoration, not fresh native inference, new accuracy
+evidence or a complete distributable workflow.
+
+An [integrated controller](INTEGRATED_WORKFLOW_20260927.md) subsequently
+completed fresh offline installation, native inference and independent
+readback/scoring in eight stages on the 16-gene fixture. Synthetic reference
+labels test integration, not biological accuracy. An initial preflight
+identified two unused absolute MAFFT convenience links; fresh asset copies
+replace them with relative links and reject escaping links. Earlier
+bounded execution traces remain valid, but the old whole asset tree was
+not independently portable. The subsequent
+[full-data execution protocol](INTEGRATED_FULL_OB_PROTOCOL_20260927.md)
+was frozen before job 22337, which remains running and has no admitted result
+at this manuscript update. Whole-workflow shared-host measurements are not
+inference-only or controlled comparative timings.
+
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
 In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB
 redistribution and exact Three Kingdoms input notices remain unresolved.
 No repository-wide license or local archive is treated as blanket clearance
 for acquired material; final file-level and software-notice review is pending.
+An [exact-artifact notice export](INTEGRATED_DEPENDENCY_NOTICES_20260927.md)
+collects 80 embedded notice candidates from the 12 distinct wheels selected
+by the integrated inference and reader installations. All exported bytes
+verify after relocation. This supplies review material, not complete
+compiled-component attribution, license compatibility or redistribution
+clearance for runtimes, tools or datasets.
 
 A [relocatable figure-evidence bundle](PUBLICATION_FIGURE_BUNDLE_20260918.md)
 preserves 18 retained panels, their 61 outputs, original manifests and

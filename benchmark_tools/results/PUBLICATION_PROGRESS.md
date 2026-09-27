@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Reproducibility Evidence Added To Manuscript (2026-09-27)
+
+Previous turn checked a new TreeFam API archive lead. Reconfirmed full job
+22337 RUNNING and updated the manuscript/claim checklist with the separately
+validated reader upgrade, scoring restoration, integrated fixture, MAFFT
+link correction and notice export. Corrected the workflow note's stale
+pre-submission statement. The [v25 HTML review](MANUSCRIPT_RENDER_REVIEW_20260927_v25.md)
+has 258 local references to 244 tracked targets, no Pandoc stderr and eight
+passing renderer tests. No fresh PDF/layout review or full-job admission is
+implied. Preserve the frozen run and independently admit it after terminal
+accounting; dedicated scaling and TreeFam source uncertainty remain open.
+
 ## TreeFam Release-7 API Lead Checked (2026-09-27)
 
 Previous turn was a verified wait on full integrated job 22337; this turn
