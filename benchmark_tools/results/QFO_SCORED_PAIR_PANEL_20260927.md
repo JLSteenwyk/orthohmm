@@ -1,5 +1,11 @@
 # All-Method Corrected GO/EC Pair Panel
 
+Follow-up: the [transitive binding check](QFO_SCORED_PAIR_TRANSITIVE_BINDING_20260927.md)
+now verifies all 16 raw tables through execution reports pinned by their
+admissions. The original results below are unchanged. The direct-list-only
+limitation recorded below is historical and does not describe this stronger
+follow-up's scope.
+
 The [machine-readable panel](qfo_scored_pair_panel_20260927.json) extends the
 [three-method diagnostic](QFO_SCORED_PAIR_OVERLAP_20260927.md) to all eight
 methods in the unchanged corrected comparison v7 manifest. All 56 pairwise

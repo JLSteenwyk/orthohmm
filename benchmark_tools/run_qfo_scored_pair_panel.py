@@ -10,6 +10,19 @@ from benchmark_tools.map_corrected_vgnc_blocks import MANIFEST, MANIFEST_SHA
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 
 
+def execution_binding(admission):
+    execution = admission.get("execution_report")
+    if execution is None:
+        candidates = [r for r in admission["checked_records"]
+                      if "/qfo_corrected_assessment_v1/" in r["path"]
+                      and r["path"].endswith("/results.json")]
+        if len(candidates) != 1:
+            raise ValueError("Ambiguous historical execution report")
+        execution = candidates[0]
+    check(execution)
+    return execution, json.loads(Path(execution["path"]).read_text())
+
+
 def run(repo, output):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
@@ -27,6 +40,8 @@ def run(repo, output):
         check(method["admission"])
         checked.append(method["admission"])
         admission = json.loads(Path(method["admission"]["path"]).read_text())
+        execution_record, execution = execution_binding(admission)
+        checked.append(execution_record)
         for metric in ("GO", "EC"):
             candidates = [r for r in admission["metric_files"]
                           if r["path"].endswith(f"/results/{metric}/{metric}.json")]
@@ -39,6 +54,9 @@ def run(repo, output):
             if len(paths) != 1:
                 raise ValueError("Ambiguous raw scored-pair file")
             raw = record(paths[0])
+            historical = [r for r in execution["outputs"] if r["path"] == raw["path"]]
+            if len(historical) != 1 or historical[0] != raw:
+                raise ValueError("Raw table differs from historical execution output pin")
             checked.append(raw)
             inputs[method["key"], metric] = raw
     rows, summaries = [], []
@@ -53,6 +71,7 @@ def run(repo, output):
                 raise ValueError("Raw count/mean differs from admitted endpoint")
             scores[key] = values
             summaries.append(dict(metric=metric, method=key, raw=inputs[key, metric],
+                historical_execution_output_bound=True,
                 assessed_pairs=len(values), rounded_mean=mean, admitted_mean=method["scores"][metric]))
         for left, right in combinations(methods, 2):
             rows.append(dict(metric=metric, left=left["key"], right=right["key"],

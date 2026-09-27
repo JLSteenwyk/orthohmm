@@ -1,5 +1,17 @@
 # Publication Progress
 
+## GO/EC Transitive Raw Binding Verified (2026-09-27)
+
+Previous turn identified the absence of direct raw pins. Following the
+admissions' pinned execution reports recovered historical output hashes for
+all 16 GO/EC raw tables. The batch runner now requires that chain. Its new
+panel verifies 51 record entries and reproduces all 56 comparison objects
+exactly. All 37 focused tests pass, including same-count/mean pair-identity
+tampering and the checked-record execution route. The [result](QFO_SCORED_PAIR_TRANSITIVE_BINDING_20260927.md)
+supersedes the limited provenance conclusion without rewriting the earlier
+direct-list audit. Updated manuscript scope; no scores, raw inputs or native
+executions changed. General provenance, uncertainty and timing remain open.
+
 ## GO/EC Raw Admission Binding Qualified (2026-09-27)
 
 Previous turn mapped selected Numba notices. Revisited the all-method GO/EC
