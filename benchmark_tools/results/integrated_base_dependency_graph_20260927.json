@@ -1,0 +1,767 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-c",
+    "import json,platform,sys;from pathlib import Path;from conda.models.match_spec import MatchSpec;from conda.models.records import PackageRecord;from benchmark_tools.prepare_ob_candidate_neighborhood import record,check;inp=Path(\"benchmark_tools/results/integrated_base_runtime_packages_20260927.json\");input_record=record(inp);roots=sorted({o[\"package\"][\"name\"] for r in json.loads(inp.read_text())[\"files\"] for o in r[\"owners\"] if o[\"provider\"]==\"conda\"});records={}\nfor p in sorted(Path(\"/home/bizon/anaconda3/conda-meta\").glob(\"*.json\")):\n d=json.loads(p.read_text());assert d[\"name\"] not in records;records[d[\"name\"]]=(p,d,PackageRecord.from_objects(d))\nqueue=list(roots);seen=set();edges=[];virtual=[];missing=[];mismatch=[]\nwhile queue:\n name=queue.pop()\n if name in seen:continue\n seen.add(name)\n for dep in records[name][1].get(\"depends\",[]):\n  spec=MatchSpec(dep);target=spec.name;edge=dict(source=name,specification=dep,target=target)\n  if target.startswith(\"__\"):\n   edge[\"observed_version\"]=platform.libc_ver()[1] if target==\"__glibc\" else None;edge[\"matches\"]=spec.match(dict(name=target,version=edge[\"observed_version\"],build=\"0\",build_number=0)) if edge[\"observed_version\"] else None;virtual.append(edge);continue\n  if target not in records:missing.append(edge);continue\n  edge[\"matches\"]=spec.match(records[target][2]);edges.append(edge)\n  if not edge[\"matches\"]:mismatch.append(edge)\n  queue.append(target)\npackages=[];constraints=[]\nfor name in sorted(seen):\n p,d,r=records[name];packages.append(dict(metadata=record(p),package={k:d.get(k) for k in (\"name\",\"version\",\"build\",\"subdir\",\"fn\",\"url\",\"sha256\",\"md5\",\"license\",\"depends\",\"constrains\")}))\n for c in d.get(\"constrains\",[]):\n  spec=MatchSpec(c);constraints.append(dict(source=name,specification=c,target=spec.name,selected=spec.name in seen,matches=spec.match(records[spec.name][2]) if spec.name in seen else None))\nfor p in packages:check(p[\"metadata\"])\ncheck(input_record);result=dict(status=\"local_base_dependency_graph_incomplete\",input=input_record,command=sys.orig_argv,roots=roots,packages=packages,edges=edges,virtual_requirements=virtual,missing_conda_records=missing,dependency_mismatches=mismatch,conditional_constraints=constraints,matchspec_source=record(sys.modules[\"conda.models.match_spec\"].__file__),publication_ready=False,installation_performed=False,limitations=[\"Local Conda metadata graph, not solver-verified installable or complete acquisition lock\", \"Python pip dependency has no matching local Conda ownership record\", \"Separately pinned pip wheel in existing workflow is not automatically a Conda package record\", \"Virtual glibc observation only; does not archive or recreate operating system\", \"No runtime, scientific setting or running job was changed\"]);Path(\"benchmark_tools/results/integrated_base_dependency_graph_20260927.json\").open(\"x\").write(json.dumps(result,indent=2,sort_keys=True)+\"\\n\");print(\"packages\",len(packages),\"edges\",len(edges),\"missing\",missing,\"mismatches\",mismatch,\"constraints\",constraints,\"virtual\",virtual)"
+  ],
+  "conditional_constraints": [
+    {
+      "matches": null,
+      "selected": false,
+      "source": "_openmp_mutex",
+      "specification": "openmp_impl 9999",
+      "target": "openmp_impl"
+    },
+    {
+      "matches": null,
+      "selected": false,
+      "source": "ld_impl_linux-64",
+      "specification": "binutils_impl_linux-64 2.38",
+      "target": "binutils_impl_linux-64"
+    },
+    {
+      "matches": true,
+      "selected": true,
+      "source": "libgcc-ng",
+      "specification": "_libgcc_mutex 0.1 main",
+      "target": "_libgcc_mutex"
+    },
+    {
+      "matches": true,
+      "selected": true,
+      "source": "libgcc-ng",
+      "specification": "_openmp_mutex",
+      "target": "_openmp_mutex"
+    },
+    {
+      "matches": true,
+      "selected": true,
+      "source": "libgcc-ng",
+      "specification": "libgomp 11.2.0 h1234567_1",
+      "target": "libgomp"
+    }
+  ],
+  "dependency_mismatches": [],
+  "edges": [
+    {
+      "matches": true,
+      "source": "zlib",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "libgcc-ng",
+      "specification": "_libgcc_mutex 0.1 main",
+      "target": "_libgcc_mutex"
+    },
+    {
+      "matches": true,
+      "source": "libgcc-ng",
+      "specification": "_openmp_mutex",
+      "target": "_openmp_mutex"
+    },
+    {
+      "matches": true,
+      "source": "libgcc-ng",
+      "specification": "_libgcc_mutex * main",
+      "target": "_libgcc_mutex"
+    },
+    {
+      "matches": true,
+      "source": "_openmp_mutex",
+      "specification": "_libgcc_mutex 0.1 main",
+      "target": "_libgcc_mutex"
+    },
+    {
+      "matches": true,
+      "source": "_openmp_mutex",
+      "specification": "libgomp >=7.5.0",
+      "target": "libgomp"
+    },
+    {
+      "matches": true,
+      "source": "libgomp",
+      "specification": "_libgcc_mutex 0.1 main",
+      "target": "_libgcc_mutex"
+    },
+    {
+      "matches": true,
+      "source": "xz",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "bzip2 >=1.0.8,<2.0a0",
+      "target": "bzip2"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "ld_impl_linux-64 >=2.35.1",
+      "target": "ld_impl_linux-64"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "libffi >=3.4,<3.5",
+      "target": "libffi"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "libffi >=3.4,<4.0a0",
+      "target": "libffi"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "libuuid >=1.41.5,<2.0a0",
+      "target": "libuuid"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "ncurses >=6.4,<7.0a0",
+      "target": "ncurses"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "openssl >=3.0.10,<4.0a0",
+      "target": "openssl"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "readline >=8.0,<9.0a0",
+      "target": "readline"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "sqlite >=3.41.2,<4.0a0",
+      "target": "sqlite"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "tk >=8.6.12,<8.7.0a0",
+      "target": "tk"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "tzdata",
+      "target": "tzdata"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "xz >=5.4.2,<6.0a0",
+      "target": "xz"
+    },
+    {
+      "matches": true,
+      "source": "python",
+      "specification": "zlib >=1.2.13,<1.3.0a0",
+      "target": "zlib"
+    },
+    {
+      "matches": true,
+      "source": "tk",
+      "specification": "libgcc-ng >=7.5.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "tk",
+      "specification": "zlib >=1.2.12,<1.3.0a0",
+      "target": "zlib"
+    },
+    {
+      "matches": true,
+      "source": "sqlite",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "sqlite",
+      "specification": "ncurses >=6.4,<7.0a0",
+      "target": "ncurses"
+    },
+    {
+      "matches": true,
+      "source": "sqlite",
+      "specification": "readline >=8.0,<9.0a0",
+      "target": "readline"
+    },
+    {
+      "matches": true,
+      "source": "sqlite",
+      "specification": "zlib >=1.2.13,<1.3.0a0",
+      "target": "zlib"
+    },
+    {
+      "matches": true,
+      "source": "sqlite",
+      "specification": "zlib >=1.2.13,<2.0a0",
+      "target": "zlib"
+    },
+    {
+      "matches": true,
+      "source": "readline",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "readline",
+      "specification": "ncurses >=6.3,<7.0a0",
+      "target": "ncurses"
+    },
+    {
+      "matches": true,
+      "source": "ncurses",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "openssl",
+      "specification": "ca-certificates",
+      "target": "ca-certificates"
+    },
+    {
+      "matches": true,
+      "source": "openssl",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "libuuid",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "libffi",
+      "specification": "libgcc-ng >=11.2.0",
+      "target": "libgcc-ng"
+    },
+    {
+      "matches": true,
+      "source": "libffi",
+      "specification": "libstdcxx-ng >=11.2.0",
+      "target": "libstdcxx-ng"
+    },
+    {
+      "matches": true,
+      "source": "bzip2",
+      "specification": "libgcc-ng >=7.3.0",
+      "target": "libgcc-ng"
+    }
+  ],
+  "input": {
+    "bytes": 62490,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_base_runtime_packages_20260927.json",
+    "sha256": "ef6eacc7c877df9ae1e32fdb986732e6d0659b2a4b9203c549e918481a8b899f"
+  },
+  "installation_performed": false,
+  "limitations": [
+    "Local Conda metadata graph, not solver-verified installable or complete acquisition lock",
+    "Python pip dependency has no matching local Conda ownership record",
+    "Separately pinned pip wheel in existing workflow is not automatically a Conda package record",
+    "Virtual glibc observation only; does not archive or recreate operating system",
+    "No runtime, scientific setting or running job was changed"
+  ],
+  "matchspec_source": {
+    "bytes": 40957,
+    "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/conda/models/match_spec.py",
+    "sha256": "b6e83a5ca7e0e9efc504307f8e2a853f50f934773b66203595090514054d683f"
+  },
+  "missing_conda_records": [
+    {
+      "source": "python",
+      "specification": "pip",
+      "target": "pip"
+    }
+  ],
+  "packages": [
+    {
+      "metadata": {
+        "bytes": 1083,
+        "path": "/home/bizon/anaconda3/conda-meta/_libgcc_mutex-0.1-main.json",
+        "sha256": "07f6841be508095f7a693e238e17670f761a9faa31db49dcd73e439a15bd9245"
+      },
+      "package": {
+        "build": "main",
+        "constrains": [],
+        "depends": [],
+        "fn": "_libgcc_mutex-0.1-main.conda",
+        "license": null,
+        "md5": "c3473ff8bdb3d124ed5ff11ec380d6f9",
+        "name": "_libgcc_mutex",
+        "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda",
+        "version": "0.1"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1228,
+        "path": "/home/bizon/anaconda3/conda-meta/_openmp_mutex-5.1-1_gnu.json",
+        "sha256": "fe53cd64dfac04910771f0744b6903b095563c712f60077802d775c3e715cb43"
+      },
+      "package": {
+        "build": "1_gnu",
+        "constrains": [
+          "openmp_impl 9999"
+        ],
+        "depends": [
+          "_libgcc_mutex 0.1 main",
+          "libgomp >=7.5.0"
+        ],
+        "fn": "_openmp_mutex-5.1-1_gnu.conda",
+        "license": "BSD-3-Clause",
+        "md5": "71d281e9c2192cb3fa425655a8defb85",
+        "name": "_openmp_mutex",
+        "sha256": "576011048d23f2e03372263493c5529f802286ff53e8426df99a5b11cc2572f3",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda",
+        "version": "5.1"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1684,
+        "path": "/home/bizon/anaconda3/conda-meta/bzip2-1.0.8-h7b6447c_0.json",
+        "sha256": "7fbbb8e31aab0bd4edbeede4d94c6e44aa170f38da94a2a6a5a1e0bb432a1f70"
+      },
+      "package": {
+        "build": "h7b6447c_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=7.3.0"
+        ],
+        "fn": "bzip2-1.0.8-h7b6447c_0.conda",
+        "license": "bzip2",
+        "md5": "9303f4af7c004e069bae22bde8d800ee",
+        "name": "bzip2",
+        "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h7b6447c_0.conda",
+        "version": "1.0.8"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1582,
+        "path": "/home/bizon/anaconda3/conda-meta/ca-certificates-2025.2.25-h06a4308_0.json",
+        "sha256": "bfcf3ea742bfc0042ec6b06c3a398fd9aaadb2374fa6cfb47d5bb1de215431d7"
+      },
+      "package": {
+        "build": "h06a4308_0",
+        "constrains": [],
+        "depends": [],
+        "fn": "ca-certificates-2025.2.25-h06a4308_0.conda",
+        "license": "MPL-2.0",
+        "md5": "495015d24da8ad929e3ae2d18571016d",
+        "name": "ca-certificates",
+        "sha256": "a30302efb91584dd31e63e540c735bfe776e1832f163eadceae47f692ab7d4f3",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2025.2.25-h06a4308_0.conda",
+        "version": "2025.2.25"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1383,
+        "path": "/home/bizon/anaconda3/conda-meta/ld_impl_linux-64-2.38-h1181459_1.json",
+        "sha256": "d8e20e6bbee7551b863d3bb95f92cbfb21dd24765343c373bc5a099f3e7ac4f2"
+      },
+      "package": {
+        "build": "h1181459_1",
+        "constrains": [
+          "binutils_impl_linux-64 2.38"
+        ],
+        "depends": [],
+        "fn": "ld_impl_linux-64-2.38-h1181459_1.conda",
+        "license": "GPL-3.0-only",
+        "md5": "68eedfd9c06f2b0e6888d8db345b7f5b",
+        "name": "ld_impl_linux-64",
+        "sha256": "0c7a6f340f4a9e15cc99b3c7e11f07c7670a9b881161739edd77753e5530fe31",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.38-h1181459_1.conda",
+        "version": "2.38"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 5884,
+        "path": "/home/bizon/anaconda3/conda-meta/libffi-3.4.4-h6a678d5_0.json",
+        "sha256": "457c8c46b6293c38a81da3f842774ecfe3cf8ee257925885acd9c74d1a3da091"
+      },
+      "package": {
+        "build": "h6a678d5_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0",
+          "libstdcxx-ng >=11.2.0"
+        ],
+        "fn": "libffi-3.4.4-h6a678d5_0.conda",
+        "license": "MIT",
+        "md5": "06e288f9250abef59b9a367d151fc339",
+        "name": "libffi",
+        "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_0.conda",
+        "version": "3.4.4"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 2074,
+        "path": "/home/bizon/anaconda3/conda-meta/libgcc-ng-11.2.0-h1234567_1.json",
+        "sha256": "6b04ef667b6087bb48ee7c58bfa934f8087f207c67448f51cf9a11e0b853702f"
+      },
+      "package": {
+        "build": "h1234567_1",
+        "constrains": [
+          "_libgcc_mutex 0.1 main",
+          "_openmp_mutex",
+          "libgomp 11.2.0 h1234567_1"
+        ],
+        "depends": [
+          "_libgcc_mutex 0.1 main",
+          "_openmp_mutex",
+          "_libgcc_mutex * main",
+          "__glibc >=2.17"
+        ],
+        "fn": "libgcc-ng-11.2.0-h1234567_1.conda",
+        "license": "GPL-3.0-only WITH GCC-exception-3.1",
+        "md5": "a87728dabf3151fb9cfa990bd2eb0464",
+        "name": "libgcc-ng",
+        "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda",
+        "version": "11.2.0"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1311,
+        "path": "/home/bizon/anaconda3/conda-meta/libgomp-11.2.0-h1234567_1.json",
+        "sha256": "84e4ae4e142d13e33ed5d5f99a1608cd9538393e3dfb8ca6c109603f26146514"
+      },
+      "package": {
+        "build": "h1234567_1",
+        "constrains": [],
+        "depends": [
+          "_libgcc_mutex 0.1 main"
+        ],
+        "fn": "libgomp-11.2.0-h1234567_1.conda",
+        "license": "GPL-3.0-only WITH GCC-exception-3.1",
+        "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+        "name": "libgomp",
+        "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda",
+        "version": "11.2.0"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 2236,
+        "path": "/home/bizon/anaconda3/conda-meta/libstdcxx-ng-13.2.0-hc0a3c3a_7.json",
+        "sha256": "32bbbd93ab902c6a342c8796ccc3ca877982c2a5e8228ffa041c760bbb5ff151"
+      },
+      "package": {
+        "build": "hc0a3c3a_7",
+        "constrains": [],
+        "depends": [],
+        "fn": "libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "license": "GPL-3.0-only WITH GCC-exception-3.1",
+        "md5": "53ebd4c833fa01cb2c6353e99f905406",
+        "name": "libstdcxx-ng",
+        "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f",
+        "subdir": "linux-64",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "version": "13.2.0"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1969,
+        "path": "/home/bizon/anaconda3/conda-meta/libuuid-1.41.5-h5eee18b_0.json",
+        "sha256": "94623248e360bb775e693b7365f6e53aeea9b8e31039576cacd9be2670d9ebb9"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0"
+        ],
+        "fn": "libuuid-1.41.5-h5eee18b_0.conda",
+        "license": "BSD-3-Clause",
+        "md5": "4a6a2354414c9080327274aa514e5299",
+        "name": "libuuid",
+        "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda",
+        "version": "1.41.5"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 199984,
+        "path": "/home/bizon/anaconda3/conda-meta/ncurses-6.4-h6a678d5_0.json",
+        "sha256": "352ecd740a77d0161c4256bded85f5968260f8896fb1309dd7760a94f335382e"
+      },
+      "package": {
+        "build": "h6a678d5_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0"
+        ],
+        "fn": "ncurses-6.4-h6a678d5_0.conda",
+        "license": "MIT AND X11",
+        "md5": "5558eec6e2191741a92f832ea826251c",
+        "name": "ncurses",
+        "sha256": "a3150cb7655d3781b2ff2d8a7f1eea6103dbbd8835adc7429f7377e4886f6129",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.4-h6a678d5_0.conda",
+        "version": "6.4"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 55997,
+        "path": "/home/bizon/anaconda3/conda-meta/openssl-3.0.16-h5eee18b_0.json",
+        "sha256": "5a62ace651dac984a89a5494c0b324388f323c5786945a6defa56afa7a43d664"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "constrains": [],
+        "depends": [
+          "ca-certificates",
+          "libgcc-ng >=11.2.0"
+        ],
+        "fn": "openssl-3.0.16-h5eee18b_0.conda",
+        "license": "Apache-2.0",
+        "md5": "5875526739afa058cfa84da1fa7a2ef4",
+        "name": "openssl",
+        "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.0.16-h5eee18b_0.conda",
+        "version": "3.0.16"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 803398,
+        "path": "/home/bizon/anaconda3/conda-meta/python-3.10.13-h955ad1f_0.json",
+        "sha256": "e67f337edc018edd83cc346be10defa350cfd9cbf6e1a3b0e47d82685991f76a"
+      },
+      "package": {
+        "build": "h955ad1f_0",
+        "constrains": [],
+        "depends": [
+          "bzip2 >=1.0.8,<2.0a0",
+          "ld_impl_linux-64 >=2.35.1",
+          "libffi >=3.4,<3.5",
+          "libffi >=3.4,<4.0a0",
+          "libgcc-ng >=11.2.0",
+          "libuuid >=1.41.5,<2.0a0",
+          "ncurses >=6.4,<7.0a0",
+          "openssl >=3.0.10,<4.0a0",
+          "readline >=8.0,<9.0a0",
+          "sqlite >=3.41.2,<4.0a0",
+          "tk >=8.6.12,<8.7.0a0",
+          "tzdata",
+          "xz >=5.4.2,<6.0a0",
+          "zlib >=1.2.13,<1.3.0a0",
+          "pip"
+        ],
+        "fn": "python-3.10.13-h955ad1f_0.conda",
+        "license": "PSF-2.0",
+        "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+        "name": "python",
+        "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.13-h955ad1f_0.conda",
+        "version": "3.10.13"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 3275,
+        "path": "/home/bizon/anaconda3/conda-meta/readline-8.2-h5eee18b_0.json",
+        "sha256": "f8fb88f57962fe13f4424f39b78a85aa727453a9f47c15ee80f0032277ec9922"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0",
+          "ncurses >=6.3,<7.0a0"
+        ],
+        "fn": "readline-8.2-h5eee18b_0.conda",
+        "license": "GPL-3.0-only",
+        "md5": "be42180685cce6e6b0329201d9f48efb",
+        "name": "readline",
+        "sha256": "3bf83c138bf0843b2fdacc5fe6b0956813b11107540d0233c148b97682e894fb",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/readline-8.2-h5eee18b_0.conda",
+        "version": "8.2"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 3976,
+        "path": "/home/bizon/anaconda3/conda-meta/sqlite-3.41.2-h5eee18b_0.json",
+        "sha256": "628ef272bd381724cd1b15562e0bd65097acfe989da07d4af2d4b7c4557141be"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0",
+          "ncurses >=6.4,<7.0a0",
+          "readline >=8.0,<9.0a0",
+          "zlib >=1.2.13,<1.3.0a0",
+          "zlib >=1.2.13,<2.0a0"
+        ],
+        "fn": "sqlite-3.41.2-h5eee18b_0.conda",
+        "license": "blessing",
+        "md5": "c7086c9ceb6cfe1c4c729a774a2d88a5",
+        "name": "sqlite",
+        "sha256": "b74eff1c483cb5e308ac499e5f1a29cfe70aa6e4a502470c650708106da5453a",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.41.2-h5eee18b_0.conda",
+        "version": "3.41.2"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 22458,
+        "path": "/home/bizon/anaconda3/conda-meta/tk-8.6.12-h1ccaba5_0.json",
+        "sha256": "e7ba8f026274929ffcf3ba40f147a93804c0ea3299416d2cc851637094c8f732"
+      },
+      "package": {
+        "build": "h1ccaba5_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=7.5.0",
+          "zlib >=1.2.12,<1.3.0a0"
+        ],
+        "fn": "tk-8.6.12-h1ccaba5_0.conda",
+        "license": "TCL",
+        "md5": "fa10ff4aa631fa4aa090a6234d7770b9",
+        "name": "tk",
+        "sha256": "566579b236dff05c97b56857a808e192f2b7d420dad728b3d7e95fb553a3ce02",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.12-h1ccaba5_0.conda",
+        "version": "8.6.12"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 211286,
+        "path": "/home/bizon/anaconda3/conda-meta/tzdata-2023c-h04d1e81_0.json",
+        "sha256": "0ac9d62f078ad208bcd99e0a20a2435ca35372746c547ac7630586d1a146e849"
+      },
+      "package": {
+        "build": "h04d1e81_0",
+        "constrains": [],
+        "depends": [],
+        "fn": "tzdata-2023c-h04d1e81_0.conda",
+        "license": "CC-PDDC OR BSD-3-Clause",
+        "md5": "29db02adf8808f7c64642cead3e28acd",
+        "name": "tzdata",
+        "sha256": "aa653896749686eb15c28c719a57df597bced46f983b1fdbcc9db3e2db9cc795",
+        "subdir": "noarch",
+        "url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2023c-h04d1e81_0.conda",
+        "version": "2023c"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 67687,
+        "path": "/home/bizon/anaconda3/conda-meta/xz-5.6.4-h5eee18b_1.json",
+        "sha256": "65df806d93a629904eac994f001476fd885ff5f7d8444d81c6840ef813b88e51"
+      },
+      "package": {
+        "build": "h5eee18b_1",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0"
+        ],
+        "fn": "xz-5.6.4-h5eee18b_1.conda",
+        "license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+        "md5": "3581505fa450962d631bd82b8616350e",
+        "name": "xz",
+        "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/xz-5.6.4-h5eee18b_1.conda",
+        "version": "5.6.4"
+      }
+    },
+    {
+      "metadata": {
+        "bytes": 1951,
+        "path": "/home/bizon/anaconda3/conda-meta/zlib-1.2.13-h5eee18b_0.json",
+        "sha256": "450d5fcfd62fe57fb2e4487d9bd55734e1b4e17670966f988d7ec292d619d111"
+      },
+      "package": {
+        "build": "h5eee18b_0",
+        "constrains": [],
+        "depends": [
+          "libgcc-ng >=11.2.0"
+        ],
+        "fn": "zlib-1.2.13-h5eee18b_0.conda",
+        "license": "Zlib",
+        "md5": "333e31fbfbb5057c92fa845ad6adef93",
+        "name": "zlib",
+        "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794",
+        "subdir": "linux-64",
+        "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_0.conda",
+        "version": "1.2.13"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "roots": [
+    "bzip2",
+    "libffi",
+    "libgcc-ng",
+    "libgomp",
+    "libstdcxx-ng",
+    "libuuid",
+    "openssl",
+    "python",
+    "xz",
+    "zlib"
+  ],
+  "status": "local_base_dependency_graph_incomplete",
+  "virtual_requirements": [
+    {
+      "matches": true,
+      "observed_version": "2.39",
+      "source": "libgcc-ng",
+      "specification": "__glibc >=2.17",
+      "target": "__glibc"
+    }
+  ]
+}

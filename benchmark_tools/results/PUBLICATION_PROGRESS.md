@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Base Dependency Closure Checked (2026-09-27)
+
+Previous turn verified five selected library files against exact archives.
+Reconfirmed job 22337 RUNNING, then expanded the ten observed Conda provider
+records: 19 packages, 38 satisfied dependency edges, three satisfied active
+conditional constraints and a satisfied observed glibc requirement. The
+[graph remains incomplete](INTEGRATED_BASE_DEPENDENCY_GRAPH_20260927.md):
+Python declares pip without a local Conda ownership record. Base pip 26.0.1
+is present but distinct from the workflow's separately pinned installer.
+No installation or inference change was made. An explicit validated
+bootstrap is needed before full runtime reconstruction can be claimed;
+full-job admission and broader publication gates remain unfinished.
+
 ## Five Base Archive Gaps Resolved (2026-09-27)
 
 Previous turn attributed observed base-runtime files while leaving five
