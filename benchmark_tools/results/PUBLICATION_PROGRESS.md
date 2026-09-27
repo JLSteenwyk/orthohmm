@@ -1,5 +1,26 @@
 # Publication Progress
 
+## FastOMA OrthoBench Input, Tree and Task Evidence Verified (2026-09-26)
+
+The preceding turn verified Proteinortho symbol behavior. This turn reread
+the goal and audited FastOMA's retained OrthoBench workflow. All 251,378
+staged protein IDs/sequences match the frozen inventory across 12 species;
+the checked tree preserves supplied-tree topology. The published final table
+is byte-identical to the scored successful collection task, with 18,972 groups
+and 130,010 assigned genes. Root HOGs remain a separate diagnostic.
+
+The [complete readback](OB_FASTOMA_PROVENANCE_20260926.md) preserves 90
+successful and ten exit-137 task records, rather than describing a failure-free
+run. Workflow-reported duration/CPU values remain descriptive; historical
+binary/database identity and peak RSS are not established. Twenty-two focused
+tests pass; no native inference, scores or defaults changed.
+
+Main job 22179 was revalidated RUNNING at 2:35:33. A later sstat query returned
+the invalid AveCPU value `213503982334-14:25:51` and blank MaxRSS; neither is
+admitted as resource evidence. This accounting defect does not imply the job
+has stopped. Full-run readback, remaining provenance, controlled timing,
+uncertainty/generalization and release requirements remain active; DGX deferred.
+
 ## Proteinortho Invalid-Symbol Behavior Verified Without Benchmark Reruns (2026-09-26)
 
 The preceding turn identified and preserved Proteinortho's staged-input
