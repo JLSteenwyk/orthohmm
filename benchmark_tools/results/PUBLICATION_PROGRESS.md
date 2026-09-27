@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Working Manuscript Preview Refreshed (2026-09-26)
+
+The preceding continuation was a verified wait on live job 22324. This turn
+reread the objective, confirmed the same native job RUNNING and audit 22325
+dependency-PENDING, and rendered the current manuscript without changing any
+pinned Python sources. The [version-20 review](MANUSCRIPT_RENDER_REVIEW_20260926_v20.md)
+now includes the installed-reproduction discrepancy and bounded ordering/
+dependency diagnostics, plus QfO OrthoFinder provenance and timing caveats.
+
+Eight renderer tests pass. All 240 local occurrences resolve to 226 tracked
+assets. All 43 PDF pages pass the one-point bounds check; updated pages 21,
+41 and 42 were visually inspected without observed overlap or clipping.
+The draft remains an editorial work in progress, not a publication-ready
+archive. No new canonical phylogeny result is included. At elapsed 21:16,
+22324 was still RUNNING and 22325 pending. Next inspect those same handles;
+do not rerun or alter their frozen sources. Broader scientific requirements
+and DGX deferral remain unchanged.
+
 ## Automatic Post-Run Audit Queued: 22325 (2026-09-26)
 
 The preceding turn completed QfO OrthoFinder provenance consolidation. This
