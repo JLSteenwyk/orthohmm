@@ -7,6 +7,32 @@ below recompute statistics or audit retained local artifacts; they do not
 submit scheduler jobs. Linked native batch recipes have separate execution
 requirements and must not be confused with these audit commands.
 
+## Execution Status
+
+These are distinct executed paths, not interchangeable evidence:
+
+| Path | Verified scope | Does not establish |
+| --- | --- | --- |
+| [Full native recovery, jobs 22326/22327](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md) | Fresh search/trees; all OrthoBench groups and 70 family scores reproduced | Independent accuracy or controlled timing |
+| [Restored scoring archive](results/OB_SCORING_ARCHIVE_20260927.md) | Full OrthoBench scoring outside the checkout, using supplied raw inputs and reader | Fresh acquisition, installation or inference |
+| [Integrated fixture](results/INTEGRATED_WORKFLOW_20260927.md) | Eight stages on 16 genes, with fresh inference/reader environments | Full-data validation |
+| [Reconstructed-base fixture](results/RECONSTRUCTED_BASE_FIXTURE_20260927.md) | Same fixture using a separately acquired base Python; no original Python/repository prefix in its execution trace | Cross-host restoration, OS isolation or complete security/rights clearance |
+| [Full integrated job 22337](results/INTEGRATED_FULL_OB_PROTOCOL_20260927.md) | Submitted after protocol freeze; running at this update | Any completed or independently admitted result |
+
+For a new execution, acquire and verify the selected inputs and local assets
+first, then follow the integrated controller's documented command with fresh
+output paths. Reference files remain separate from inference FASTA inputs.
+The reconstructed-base receipt records a specific 19-package Conda selection
+plus a hash-pinned pip wheel overlay; it is not a solver-complete Conda lock
+or a recommendation to clone the development environment. Do not substitute
+an unvalidated dependency update into a frozen scientific run.
+
+Job 22337's admission command is deliberately bound to its exact job and
+plan. It must not be used to approve a different execution by changing the
+job identifier or treating the fixture's success as dataset-scale evidence.
+Consult current scheduler state before calling it; the protocol's historical
+RUNNING observation does not establish current liveness or completion.
+
 ## Method And Results
 
 - [Completed QfO ordering comparison](results/QFO_CANONICAL_RESULT_22333.md)
@@ -49,12 +75,36 @@ requirements and must not be confused with these audit commands.
   The [exact integrated-wheel notice texts](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md)
   have been collected and verified separately for release review, not redistribution clearance.
 
-- [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
-  records 10,729 passes and ten opt-in skips at revision `9914060`.
+- [Latest full unit regression](results/PUBLICATION_TEST_REFRESH_20260927_v2.md)
+  records 10,819 passes and ten opt-in skips at revision `75d42e7`.
+  The earlier 10,729-pass run remains historical evidence at `9914060`.
   The [separate installed-native follow-up](results/PUBLICATION_NATIVE_TEST_REFRESH_20260927.md)
-  passes exactly those ten skipped tests with unchanged source. Preserve
-  both records and the 22 frozen-source syntax warnings; this is not evidence
-  of controlled performance or independent biological accuracy.
+  passed the earlier run's ten skipped tests; it is not automatically a
+  native-suite pass at every subsequent revision. The later
+  [ELF inventory](results/INTEGRATED_WHEEL_ELF_20260927.md) has 41 focused
+  passing tests and postdates the latest full suite. Preserve these scopes
+  and the 22 frozen-source warnings; tests do not establish biological
+  accuracy or controlled performance.
+
+- [Separate base-runtime reconstruction](results/RECONSTRUCTED_BASE_FIXTURE_20260927.md)
+  supplies fresh Python for installation and execution of the integrated
+  fixture. Its 6,229 audited bootstrap/inference/reader wheel payloads match.
+  The [Conda payload audit](results/RECONSTRUCTED_CONDA_PAYLOADS_20260927.md)
+  covers 6,664 declared entries; [archive-based replay](results/RECONSTRUCTED_PREFIX_REPLAY_20260927.md)
+  reproduces all 195 prefix-rewritten files. The one Python bytecode-cache
+  serialization difference remains recorded with matching compiled code
+  fields, not silently recategorized as archive-byte equality. These checks
+  do not replace OS provenance or validate unobserved runtime paths.
+
+- [Observed search libraries](results/INTEGRATED_SEARCH_LIBRARIES_20260927.md)
+  and [base package attribution](results/INTEGRATED_BASE_RUNTIME_PACKAGES_20260927.md)
+  distinguish wheel bytes from base Python/system providers. The static ELF
+  inventory lists declared dependencies, not runtime resolution; the live
+  snapshot covers two search-stage processes, not every later stage. Both
+  [wheel notices](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md) and
+  [base-package notices](results/RECONSTRUCTED_BASE_NOTICES_20260927.md) have
+  verified local exports. Component/source obligations and redistribution
+  clearance remain open, including the base mutex package's missing notice.
 
 - [Canonical assessment source archive](results/QFO_CANONICAL_SOURCE_ARCHIVE_20260927.md)
   preserves all 762 distinct repository-contained Python files pinned by the
@@ -78,8 +128,9 @@ requirements and must not be confused with these audit commands.
   reproduces all 59,770 root groups and all 70 family-score records from raw
   FASTA in the new recovery installation. Native 22326 and independent audit
   22327 completed successfully. This is same-host reproducibility, not new
-  accuracy evidence or controlled comparative timing. Manuscript review v24
-  includes this completion and the later QfO ordering result.
+  accuracy evidence or controlled comparative timing. Manuscript review v25
+  includes this completion, later QfO ordering results and bounded
+  installation/scoring evidence; subsequent base-runtime checks are linked here.
 
 - [Recovery advisory range review](results/RECOVERY_ADVISORY_REVIEW_20260927.md)
   matches the live recovery package inventory to its install report and checks

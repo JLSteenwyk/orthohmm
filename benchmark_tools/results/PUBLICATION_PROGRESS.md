@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Reproduction Guide Consolidated (2026-09-27)
+
+Previous turn was a verified wait; reconfirmed job 22337 RUNNING. Updated
+the [reproduction guide](../PUBLICATION_REPRODUCTION.md) with distinct
+execution scopes, reconstructed-base and payload/rewrite evidence, observed
+versus declared library dependencies, notice exports and revision-specific
+test coverage. The guide no longer labels the older unit count as current.
+Full-job admission remains pending; no runtime, score, scientific default or
+historical receipt changed. The table explicitly separates executed fixtures,
+full scoring restoration and the still-running integrated full-data run.
+
 ## Reconstructed Base Notices Exported (2026-09-27)
 
 Previous turn was a verified wait on job 22337; reconfirmed RUNNING. Collected
