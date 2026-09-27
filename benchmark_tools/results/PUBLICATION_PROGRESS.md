@@ -1,5 +1,16 @@
 # Publication Progress
 
+## All-Method GO/EC Pair Panel Completed (2026-09-27)
+
+Previous turn added the three-method diagnostic. Added and executed a
+manifest-bound batch runner for all eight corrected methods: 56 comparisons,
+16 validated count/mean endpoints, and 43 checked source/input record entries.
+No shared pair has a differing six-decimal score in any comparison. The
+[panel](QFO_SCORED_PAIR_PANEL_20260927.md) reports native scored-pair counts and
+preserves endpoint-composition and uncertainty limitations. All 35 focused
+tests pass. No benchmark score, default, native run or inference claim changed;
+appropriate independent units and paired confidence intervals remain unresolved.
+
 ## Corrected GO/EC Pair Overlap Audited (2026-09-27)
 
 Previous turn completed the targeted PDF review. Returned to unresolved
