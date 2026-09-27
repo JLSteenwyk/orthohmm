@@ -1,0 +1,255 @@
+{
+  "absent_literal_prefixes": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a",
+    "/home/bizon/anaconda3/lib/python3.10/site-packages"
+  ],
+  "audit_helper": {
+    "bytes": 5776,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovery_install.py",
+    "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+  },
+  "base_python": "/home/bizon/anaconda3/bin/python",
+  "copied_lock": {
+    "bytes": 532,
+    "path": "/tmp/orthohmm-reader-runtime-20260927/requirements.txt",
+    "sha256": "f8c95af3f5b30d4786be9cbaff0e49fe5beb11f10351c9d7f8fa46a8918cdd22"
+  },
+  "install_report": {
+    "bytes": 99394,
+    "path": "/tmp/orthohmm-reader-runtime-20260927/install_report.json",
+    "sha256": "186a902042cc2d446672ef4e31ba6444f6d4059ba84a5c32ca856927a0dfba09"
+  },
+  "installed_distributions": [
+    {
+      "name": "biopython",
+      "version": "1.86"
+    },
+    {
+      "name": "DendroPy",
+      "version": "5.1.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.2.6"
+    },
+    {
+      "name": "pip",
+      "version": "26.2.1"
+    },
+    {
+      "name": "setuptools",
+      "version": "83.0.0"
+    }
+  ],
+  "installer_python": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_baseline_patched_install/venv/bin/python",
+  "limitations": [
+    "Reader-only environment, not an inference dependency change",
+    "DendroPy changes from 5.0.8 to 5.1.0; tested fixture scientific fields equal, no broad equivalence claim",
+    "Base interpreter and OS libraries shared; no cross-host result",
+    "Wheel audit excludes generated RECORD/bytecode and relocated non-site payload",
+    "Literal trace-prefix absence is not universal access proof",
+    "Empty satellite merge fixture; no inference/scoring rerun or deposited archive"
+  ],
+  "lock": {
+    "bytes": 532,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_reader_requirements_20260927.txt",
+    "sha256": "f8c95af3f5b30d4786be9cbaff0e49fe5beb11f10351c9d7f8fa46a8918cdd22"
+  },
+  "payload_after": {
+    "bytes": 546638,
+    "path": "/tmp/orthohmm-reader-runtime-20260927/payload_after.json",
+    "sha256": "f2fee73eee4b13f7073272c5aae3b91587d9c35a7c3eb7e78105e6a84b6c7c7a"
+  },
+  "payload_before": {
+    "bytes": 546638,
+    "path": "/tmp/orthohmm-reader-runtime-20260927/payload_before.json",
+    "sha256": "f2fee73eee4b13f7073272c5aae3b91587d9c35a7c3eb7e78105e6a84b6c7c7a"
+  },
+  "payload_files_checked": 2700,
+  "pip_check_exit_code": 0,
+  "publication_ready": false,
+  "readback_exit_code": 0,
+  "reader_export_manifest": {
+    "bytes": 5750,
+    "path": "/tmp/orthohmm-independent-readers-20260927/manifest.json",
+    "sha256": "c2a77c7a2635b9193f4321f96db65028a4d5158facd8e52bb4285fe68804f334"
+  },
+  "reader_python": "/tmp/orthohmm-reader-runtime-20260927/venv/bin/python",
+  "referenced_file_occurrences_checked": 136,
+  "reports": [
+    {
+      "changed_provenance_fields": [
+        "dendropy_version"
+      ],
+      "equal_fields": [
+        "checked_records",
+        "families",
+        "genes",
+        "limitations",
+        "ortholog_pairs",
+        "pair_confidence_counts",
+        "parsed_trees",
+        "reader",
+        "reconciled_families",
+        "reconciliation_semantics_recomputed",
+        "root_groups",
+        "scientific_scores_admitted",
+        "species",
+        "status"
+      ],
+      "fresh": {
+        "bytes": 4114,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/structure.json",
+        "sha256": "34b69473e9c5e25cc10ef2268d893d49cb0e007427862fa5a9b6e64cea14d99e"
+      },
+      "name": "structure",
+      "original": {
+        "bytes": 4114,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/structure.json",
+        "sha256": "bc1debe587f827bd861ad195e89b82ba921582e155b21aa4b9137c0a104f3ab1"
+      }
+    },
+    {
+      "changed_provenance_fields": [
+        "checked_records"
+      ],
+      "equal_fields": [
+        "biopython_version",
+        "gene_alignments",
+        "limitations",
+        "reader",
+        "reconciliation_semantics_recomputed",
+        "scientific_scores_admitted",
+        "species_alignments",
+        "status",
+        "supermatrix_columns"
+      ],
+      "fresh": {
+        "bytes": 4478,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/sequences.json",
+        "sha256": "77253160d2c4bca29c3ed7d86ec9504d0333b08c26914a5c5ece50d941ab3604"
+      },
+      "name": "sequences",
+      "original": {
+        "bytes": 4482,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/sequences.json",
+        "sha256": "90f57f2834769763ec94feac04677d1dec9ba051e65f2842f1b2f9c2ced152b9"
+      }
+    },
+    {
+      "changed_provenance_fields": [
+        "checked_records",
+        "dendropy_version"
+      ],
+      "equal_fields": [
+        "limitations",
+        "membership_totals",
+        "scientific_scores_admitted",
+        "sources",
+        "status",
+        "totals"
+      ],
+      "fresh": {
+        "bytes": 4951,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/events.json",
+        "sha256": "188c45ab6e48d46f77337f84a89d239892a8e32d6474af0ff107e6843febe397"
+      },
+      "name": "events",
+      "original": {
+        "bytes": 4955,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/events.json",
+        "sha256": "23c8bc88ab86fb65578bce7ff2ec124cd98fcb795bc53655cf5d5ae7adec7296"
+      }
+    },
+    {
+      "changed_provenance_fields": [
+        "checked_records"
+      ],
+      "equal_fields": [
+        "hierarchy_semantics",
+        "limitations",
+        "reader",
+        "scientific_scores_admitted",
+        "status",
+        "totals"
+      ],
+      "fresh": {
+        "bytes": 2771,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/hierarchy.json",
+        "sha256": "bfd126f11eb55b428aad96c2ee7fc4ae57b5423b0c7e524e0d9bbd48fe9149a5"
+      },
+      "name": "hierarchy",
+      "original": {
+        "bytes": 2775,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/hierarchy.json",
+        "sha256": "498e07e75c3843c245e1e2091a0dd8e063a653727749ceae742fbd932724b096"
+      }
+    },
+    {
+      "changed_provenance_fields": [
+        "reports"
+      ],
+      "equal_fields": [
+        "accuracy_evaluated",
+        "complete",
+        "constraints",
+        "limitations",
+        "publication_ready",
+        "source",
+        "started",
+        "status",
+        "summary"
+      ],
+      "fresh": {
+        "bytes": 2477,
+        "path": "/tmp/orthohmm-reader-runtime-20260927/readback/result.json",
+        "sha256": "5da190978ff7d5916bcd3d0c6a17814a19264bcc89478d5e2b5bc4ca97ca732f"
+      },
+      "name": "result",
+      "original": {
+        "bytes": 2493,
+        "path": "/tmp/orthohmm-independent-readback-nosite-20260927/result.json",
+        "sha256": "f11ab5a909221628798d0e5d33a20178dee3a928fb653dcdd38bccf62d3295a1"
+      }
+    }
+  ],
+  "startup_probe_failure": {
+    "cause": "Explicit old site-packages inserted before standard library loads obsolete pathlib backport",
+    "module": "pathlib",
+    "preserved_as_terminal_observation": true,
+    "type": "ImportError"
+  },
+  "status": "fresh_offline_reader_runtime_fixture_verified",
+  "trace": {
+    "bytes": 592426,
+    "path": "/tmp/orthohmm-reader-runtime-20260927/readers.strace",
+    "sha256": "c00e44d163ae4177565cf8fcc4a23851145a894c7813192e3841405b254bfff3"
+  },
+  "wheels": [
+    {
+      "bytes": 3205260,
+      "path": "/tmp/orthohmm-reader-runtime-20260927/wheels/biopython-1.86-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "8d4530060aadc6af060a9a049da91a582738837e187fcea80486c71eca74ae59"
+    },
+    {
+      "bytes": 505450,
+      "path": "/tmp/orthohmm-reader-runtime-20260927/wheels/dendropy-5.1.0-py3-none-any.whl",
+      "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+    },
+    {
+      "bytes": 16801050,
+      "path": "/tmp/orthohmm-reader-runtime-20260927/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    {
+      "bytes": 1816632,
+      "path": "/tmp/orthohmm-reader-runtime-20260927/wheels/pip-26.2.1-py3-none-any.whl",
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+    },
+    {
+      "bytes": 1008090,
+      "path": "/tmp/orthohmm-reader-runtime-20260927/wheels/setuptools-83.0.0-py3-none-any.whl",
+      "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+    }
+  ]
+}

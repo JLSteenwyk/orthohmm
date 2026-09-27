@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Reader Dependencies Installed In Fresh Offline Environment (2026-09-27)
+
+Previous turn exported independent readers but shared the main site's Python
+dependencies. Identified their three imported scientific packages, then
+installed five hash-locked distributions (including pip/setuptools) into a
+fresh `/tmp` venv using copied local wheels. Offline install and pip check
+passed. All four readers pass with unchanged scientific fields; DendroPy
+version change is explicitly retained. Audited 2,700 wheel payload files
+before/after and 136 report-reference occurrences. File trace excludes both
+original mount and main site-packages prefixes. Preserved the earlier
+dependency-discovery ImportError caused by an old pathlib backport; no shared
+installation changed. See [reader runtime result](FRESH_READER_RUNTIME_20260927.md).
+This closes shared site-packages use for this fixture, not base-Python/OS,
+full-data relocation, inference version equivalence, archival or scientific
+publication gates. No DGX or benchmark rerun.
+
 ## Independent Readers Executed Outside Checkout (2026-09-27)
 
 Previous turn closed the ten opt-in native test skips. Addressed the fresh
