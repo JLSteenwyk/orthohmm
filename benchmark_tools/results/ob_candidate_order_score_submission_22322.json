@@ -1,0 +1,25 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--cpus-per-task=2",
+    "--mem=32G",
+    "--time=00:30:00",
+    "--no-requeue",
+    "--job-name=ohm-candidate-factorial-v2",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_v2_20260926",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_v2_20260926/slurm-%j.log",
+    "--wrap",
+    "env -i PATH=/usr/bin:/bin HOME=/home/bizon LANG=C.UTF-8 MKL_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONHASHSEED=0 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_dependency_replay_v2_20260926/leiden011_venv/bin/python -I /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_ob_candidate_order_scores.py --run /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_v2_20260926/plan.json --plan-sha256 cc3bdcef846c68b5d6a2e524a976d68325cfd17e184fdb2934eac618011a9ae8"
+  ],
+  "commit": "f8500cf63d026bbbacdcf91093e9add4933e7707",
+  "job_id": "22322",
+  "native_results_admitted": false,
+  "plan": {
+    "bytes": 28014,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_v2_20260926/plan.json",
+    "sha256": "cc3bdcef846c68b5d6a2e524a976d68325cfd17e184fdb2934eac618011a9ae8"
+  },
+  "predecessor_failed_job": 22321
+}

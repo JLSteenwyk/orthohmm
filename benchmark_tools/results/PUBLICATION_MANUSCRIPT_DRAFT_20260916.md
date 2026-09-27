@@ -2209,9 +2209,14 @@ The [residual trace](OB_CANDIDATE_RESIDUAL_TRACE_20260926.md) finds all four
 retained pre-candidate partitions byte-identical to historical outputs in the
 0.11.0 arm. The remaining discrepancy first appears during candidate expansion:
 8,427 of 8,440 merge events are shared, with 13 distinct events per side.
-Shared-event support/margin differences are of order 1e-14. A causal test of
-score values versus hit ordering remains necessary before attributing this
-residual to numerical ordering or changing tie-breaking behavior.
+Shared-event support/margin differences are of order 1e-14. A subsequent
+[fixed-seed score/order factorial](OB_CANDIDATE_ORDER_SCORE_RESULT_22322.md)
+reproduced the entire 93-gene residual by changing hit order alone: historical
+order matched historical candidates, while fresh order matched the 0.11.0
+fresh replay, regardless of which observed score values were used. A self-hit
+control had no effect. This establishes order sensitivity at candidate
+formation in this case, but does not isolate individual numerical operations,
+attribute the final F1 difference, or validate a revised deterministic policy.
 [Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
 [graph](INSTALLED_OB_GRAPH_PROBE_20260926.md),

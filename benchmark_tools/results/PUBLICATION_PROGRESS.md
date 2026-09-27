@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Candidate Hit Order Explains the Residual (2026-09-26)
+
+The preceding turn preserved job 22321's import failure and fixture-tested a
+corrected driver. This turn reread the objective, checked all v2 plan records
+and submitted the distinct plan as job 22322. It was verified RUNNING at 0:18
+and then COMPLETED/0:0 at 1:14. No failed directory was resumed. The external
+reader validates all five full-data candidate outputs and reproduces all ten
+contrasts; 70 focused tests pass.
+
+The [result](OB_CANDIDATE_ORDER_SCORE_RESULT_22322.md) tests the residual
+mechanism: historical order exactly matches historical candidates and fresh
+order matches the 0.11.0 fresh replay under either score vector. The self-hit
+control agrees. Thus hit order alone reproduces the 93-gene candidate residual
+in this fixed-seed/runtime experiment. It does not establish final-F1 causality
+or validate an algorithm change. Historical scores/defaults and the original
+startup failure remain unchanged. Manuscript source and claims are updated.
+
+Next build a small order-sensitivity regression fixture and evaluate an
+explicitly versioned deterministic policy while preserving the frozen baseline.
+Any scientific change needs renewed end-to-end validation. No native job from
+this factorial remains running. Broader publication requirements, including
+controlled timing and outstanding uncertainty/provenance, remain active; DGX
+is deferred.
+
 ## Candidate Factorial Startup Failure Preserved; Fixture Correction Tested (2026-09-26)
 
 Prepared protocol/code were committed and pushed as d0efe55 before job 22321.

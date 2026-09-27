@@ -70,6 +70,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 | The retained Leiden distribution changes downstream candidate formation | [Two-arm replay readback](OB_DEPENDENCY_REPLAY_RESULT_22320.md) | Supported for this fixed checkpoint/source/seed contrast: identical initial graphs lead to 30,788 genes in changed candidate groups. The 0.12.0 arm exactly reproduces fresh installed candidates; the 0.11.0 arm still differs from historical candidates for 93 genes. No final-F1 attribution or general determinism claim |
 
+| Hit order explains the remaining 93-gene candidate discrepancy after the dependency control | [Fixed-seed score/order factorial](OB_CANDIDATE_ORDER_SCORE_RESULT_22322.md) | Supported for this intervention: historical/fresh order exactly reproduces the respective retained candidate partitions under either score vector; self-hit removal has no effect. Not an isolated arithmetic-operation explanation, final-F1 attribution or validation of a changed algorithm |
+
 ## Completion Requirements
 
 The [completed lineage-native diagnostic](LINEAGE_NATIVE_RESULT_21995.md)
