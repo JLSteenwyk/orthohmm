@@ -1,5 +1,18 @@
 # Publication Progress
 
+## QfO Downstream Dependencies Traced (2026-09-27)
+
+The previous turn validated the candidate-order difference. The installed
+phylogeny selector now confirms unchanged ordered 26-marker inputs and no
+renumbering of the 351,737 shared candidate families. Two singleton/family
+assignments swap; five constraints genuinely differ as multisets. The
+[trace and downstream protocol](QFO_ORDER_DEPENDENCY_TRACE_20260927.md)
+freeze fresh retained-order phylogeny followed by canonical phylogeny with
+validated raw-tree reuse and freshly inferred species trees. Thirty-four
+focused tests pass. No downstream native run is submitted yet; next prepare
+and validate the execution plan and small-fixture workflow before submission.
+No scores/defaults changed. Other publication gates remain open; DGX deferred.
+
 ## Paired QfO Ordering Difference Confirmed (2026-09-27)
 
 The previous turn froze and launched job 22328. It completed 0:0 in 3:08;
