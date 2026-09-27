@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Fresh QfO Phylogeny Arm Prepared (2026-09-27)
+
+The preceding turn traced dependencies and froze the downstream comparison.
+The [fresh-arm launcher and plan](QFO_FRESH_PHYLOGENY_PREPARATION_20260927.md)
+now bind candidate/input/runtime/tool identities. Forty-two focused tests pass;
+the small isolated fixture passes all four readers with fresh trees and no
+checkpoint reuse. Full native execution is not yet submitted at this milestone.
+Next commit/push, submit once on bizon and implement independent full readback
+before allowing canonical raw-tree reuse. No scores/defaults changed; DGX stays
+deferred and the remaining publication requirements are not declared complete.
+
 ## QfO Downstream Dependencies Traced (2026-09-27)
 
 The previous turn validated the candidate-order difference. The installed
