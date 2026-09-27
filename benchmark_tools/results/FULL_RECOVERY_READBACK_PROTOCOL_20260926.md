@@ -38,3 +38,14 @@ The planned scheduler readback uses two CPUs, 64 GiB and a four-hour limit,
 with an `afterok:22326` dependency and no requeue. It never launches or retries
 native inference. A readback failure is retained for diagnosis; it does not
 authorize a native rerun. Tests and queued readback are not full-data results.
+
+## Queued Execution
+
+After readback commit `548576c` was pushed, submitted
+[job 22327](full_recovery_readback_submission_22327.json). Its readback plan
+SHA256 is `cb90ce1254056bc60153b31dd1bdf506e4d695c2fd761175272f716f83cff78d`.
+The bootstrap verifies this plan, the new readback source, native plan and
+interpreter version before invocation, and checks the new source again after
+completion. The original native plan independently pins existing harness
+sources. Initial scheduler inspection confirms the audit PENDING on its native
+dependency while native job 22326 remains RUNNING. This is not score admission.

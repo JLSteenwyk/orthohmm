@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Full Recovery Audit Queued: 22327 (2026-09-27)
+
+Committed and pushed the new readback gate as `548576c`, then submitted
+[audit job 22327](full_recovery_readback_submission_22327.json) with
+`afterok:22326`, two CPUs, 64 GiB, a four-hour limit and no requeue. Its separate
+readback plan pins the new source and interpreter version. Scheduler checks
+confirm 22326 RUNNING (HMM search) and 22327 PENDING (Dependency). All 3,882
+native-plan-pinned records remain unchanged. No new benchmark score has been
+admitted. Next poll these specific jobs and inspect terminal receipts before
+interpreting results; do not restart native inference on a readback failure.
+The full goal remains active; DGX remains deferred.
+
 ## Full Recovery Readback Gate Prepared (2026-09-26)
 
 The preceding continuation made progress by launching job 22326. This

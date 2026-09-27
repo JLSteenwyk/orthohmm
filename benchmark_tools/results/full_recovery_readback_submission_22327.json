@@ -1,0 +1,31 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--cpus-per-task=2",
+    "--mem=64G",
+    "--time=04:00:00",
+    "--no-requeue",
+    "--dependency=afterok:22326",
+    "--job-name=ohm-full-audit",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback-slurm-%j.log",
+    "--wrap",
+    "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONHASHSEED=0 /home/bizon/anaconda3/bin/python -I -c 'import hashlib,json,sys;from pathlib import Path;p=Path('\"'\"'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback_plan.json'\"'\"');raw=p.read_bytes();assert hashlib.sha256(raw).hexdigest()=='\"'\"'cb90ce1254056bc60153b31dd1bdf506e4d695c2fd761175272f716f83cff78d'\"'\"';a=json.loads(raw);assert sys.version==a[\"python_version\"];sys.path.insert(0,a[\"repo\"]);from benchmark_tools.prepare_ob_candidate_neighborhood import check;[check(i) for i in a[\"sources\"]+[a[\"native_plan\"]]];from benchmark_tools.readback_full_recovery_orthobench import readback;readback(Path(a[\"repo\"]),Path(a[\"directory\"]),a[\"job\"],Path(a[\"output\"]));[check(i) for i in a[\"sources\"]]'"
+  ],
+  "commit": "548576c7b239b667ce2e5ccda6411170fc629586",
+  "dependency": "afterok:22326",
+  "job_id": "22327",
+  "native_results_admitted": false,
+  "plan": {
+    "bytes": 1057,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_recovery_orthobench_20260926/readback_plan.json",
+    "sha256": "cb90ce1254056bc60153b31dd1bdf506e4d695c2fd761175272f716f83cff78d"
+  },
+  "source": {
+    "bytes": 8759,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_full_recovery_orthobench.py",
+    "sha256": "deb1513738f02f5ff4cff3b3456775b772bcfe4ec79921b11248da9be1884f94"
+  }
+}
