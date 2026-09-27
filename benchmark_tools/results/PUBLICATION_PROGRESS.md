@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Obsolete Pending Workflow Branches Retired (2026-09-27)
+
+The preceding status-only turn made no scientific progress. Re-read the goal
+and inspected live scheduler dependencies: all 18 pending entries belonged to
+the superseded original OrthoMCL branch or failed-prerequisite CPM/BLAST
+branches. Cancelled only those pending entries, downstream first, preserving
+all logs, outputs, frozen executors and failed attempts. Accounting/controller
+checks confirm every cancellation at zero runtime; the account queue is empty.
+The [retirement record](PENDING_WORKFLOW_RETIREMENT_20260927.md) distinguishes
+the completed recovered OrthoMCL admission from unresolved high-CPM failures.
+No inference rerun, score change, DGX access or unrelated job action occurred.
+An empty queue is not a dedicated-host timing qualification. Statistical,
+TreeFam-source, controlled timing and release requirements remain open.
+
 ## GO/EC Transitive Raw Binding Verified (2026-09-27)
 
 Previous turn identified the absence of direct raw pins. Following the
