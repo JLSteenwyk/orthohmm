@@ -1,5 +1,8 @@
 # OrthoHMM: HMM-Centered Orthogroup Inference And Phylogenetic Refinement
 
+A [condensed scientific main text](PUBLICATION_MAIN_TEXT_20260927.md) provides
+the current narrative; this extended draft retains detailed audit history.
+
 Working manuscript, updated 25 September 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. The

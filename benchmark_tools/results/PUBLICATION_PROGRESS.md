@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Condensed Scientific Main Text Drafted (2026-09-27)
+
+Previous turn retired obsolete pending jobs. A fresh read-only alert snapshot
+found 12 open alerts, all on historical CPU-wheel and initial reader locks;
+no historical lock was rewritten or alert dismissed. The local `gh` command
+is not GitHub CLI, so the existing credential-safe snapshot helper was used.
+Added a [condensed main text](PUBLICATION_MAIN_TEXT_20260927.md) separating the
+scientific narrative from the extended audit manuscript. Checked numerical
+claims against retained corrected QfO, SwissTrees, YGOB and matched-graph
+reports. Negative results, output semantics, development exposure and missing
+uncertainty/timing remain explicit. Pandoc parses the 1,141-word draft with
+empty stderr; all 12 local evidence links resolve to tracked files. The
+extended manuscript links to it without deleting historical narrative.
+This is a working editorial draft, not a
+replacement protocol, completed bibliography, final render or submission-ready
+package. Scientific and release gates remain open.
+
 ## Obsolete Pending Workflow Branches Retired (2026-09-27)
 
 The preceding status-only turn made no scientific progress. Re-read the goal
