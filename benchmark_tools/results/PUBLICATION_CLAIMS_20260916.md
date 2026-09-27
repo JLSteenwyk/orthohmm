@@ -72,6 +72,8 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 | Hit order explains the remaining 93-gene candidate discrepancy after the dependency control | [Fixed-seed score/order factorial](OB_CANDIDATE_ORDER_SCORE_RESULT_22322.md) | Supported for this intervention: historical/fresh order exactly reproduces the respective retained candidate partitions under either score vector; self-hit removal has no effect. Not an isolated arithmetic-operation explanation, final-F1 attribution or validation of a changed algorithm |
 
+| Experimental canonical hit ordering resolves the tested candidate-order discrepancy | [Canonical candidate control](OB_CANONICAL_CANDIDATE_RESULT_22323.md) | Supported for all five fixed-seed arms: independently reconstructed input hashes and byte-identical historical candidate output. Production unchanged; semantic constraint equivalence, downstream F1 and cross-runtime determinism remain unestablished |
+
 ## Completion Requirements
 
 The [completed lineage-native diagnostic](LINEAGE_NATIVE_RESULT_21995.md)

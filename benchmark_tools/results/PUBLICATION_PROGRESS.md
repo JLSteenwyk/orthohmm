@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Canonical Full-Data Inputs and Outputs Independently Validated (2026-09-26)
+
+The preceding turn submitted job 22323. This continuation reread the objective,
+verified RUNNING at 0:53, then terminal COMPLETED/0:0 at 1:35. The new reader
+independently reconstructs canonical inputs using integer-key sorting, checks
+all five candidate partitions and seed/merge traces, and reproduces all ten
+contrasts. Seventy-four focused tests pass.
+
+The [result](OB_CANONICAL_CANDIDATE_RESULT_22323.md) finds all five candidate
+files byte-identical to the historical 54,445-family output. Score-vector
+hashes remain distinct. The experiment resolves the tested order discrepancy,
+not general determinism or final-F1 reproduction. Manuscript source and claims
+are updated; no production default, dependency pin or historical score changed.
+
+Next verify the semantic constraints consumed by reconciliation before a
+bounded downstream validation under an explicitly identified experimental
+configuration. No native job from this experiment remains running. The full
+publication objective, including outstanding provenance, uncertainty and
+controlled resource evidence, remains unfinished. DGX stays deferred.
+
 ## Canonical Candidate Experiment Submitted as Job 22323 (2026-09-26)
 
 Preparation and protocol were committed and pushed as 9725f05. The distinct

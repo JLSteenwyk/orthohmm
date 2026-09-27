@@ -2216,7 +2216,15 @@ order matched historical candidates, while fresh order matched the 0.11.0
 fresh replay, regardless of which observed score values were used. A self-hit
 control had no effect. This establishes order sensitivity at candidate
 formation in this case, but does not isolate individual numerical operations,
-attribute the final F1 difference, or validate a revised deterministic policy.
+attribute the final F1 difference, or by itself validate a revised deterministic
+policy. An experimental canonical directed-pair input policy was subsequently
+tested across all five fixed-seed score/order/self-hit arms. Independent
+integer-key reconstruction reproduced its input hashes, and all five candidate
+files were byte-identical to the historical 54,445-family output. Historical
+and fresh score vectors remained distinct. This bounded ordering control does
+not establish semantic constraint equivalence, final phylogenetic/F1
+reproduction, or cross-runtime determinism; production defaults remain unchanged.
+[Canonical candidate control](OB_CANONICAL_CANDIDATE_RESULT_22323.md).
 [Private distribution control](OB_LEIDEN_OVERLAY_PROBE_20260926.md).
 [Search](INSTALLED_OB_SEARCH_COMPARISON_20260926.md),
 [graph](INSTALLED_OB_GRAPH_PROBE_20260926.md),
