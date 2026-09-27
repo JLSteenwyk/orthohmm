@@ -1,0 +1,88 @@
+{
+  "evidence": [
+    {
+      "bytes": 50668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/started.json",
+      "sha256": "3c72037d8c6c2389a5db3823b84003be2d7cefe81958a72291fe8196956f7d01"
+    },
+    {
+      "bytes": 668,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/native_complete.json",
+      "sha256": "5aac6ef09d0d52f323981138fa2439eb7460c2af30e9f43e2a6c3ca791396c94"
+    },
+    {
+      "bytes": 5261,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/replay.json",
+      "sha256": "cd7b16a32d5dbebb264dc7c3e9fea529a406728396f3f02f2381b0d5cf29220b"
+    }
+  ],
+  "genes": 16,
+  "input_inventory": [
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S1.fa",
+      "sha256": "f648f8d56b6e3d351d2da7b5a5d002d75faf978d8c3b2dc5554bd205afe71d86"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S2.fa",
+      "sha256": "c7f3968bd8e6cd6135387fee635f4089138575490422db92c8a899fcfd5a81c1"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S3.fa",
+      "sha256": "a68cb8f4bc8fe5a641f6c9309d587ef27fde0ecdad053fdd1ef3bc00333b55c9"
+    },
+    {
+      "bytes": 862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_frozen_phylogeny_smoke_20260926/input/S4.fa",
+      "sha256": "01b757c656c07b2987a329f0f3fee6ccf1a1bd7c5a2113bc838b3df2ffa6d92b"
+    }
+  ],
+  "outputs": {
+    "manifest": {
+      "bytes": 2854,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "d43fa599004a276edcda773cc08e144bc19e273cf391ae54c6b950bdea378141"
+    },
+    "root_hogs": {
+      "bytes": 332,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+    },
+    "summary": {
+      "bytes": 510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/inference/orthohmm_phylogeny/reconciliation_summary.json",
+      "sha256": "bae3e45b3a0747d367e2d47383b8be98aa6dd2e75b9b29b7e4055da3164c3a8c"
+    }
+  },
+  "plan": {
+    "bytes": 176752,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/plan.json",
+    "sha256": "03e0e517fe7158e85df5be2b60a7324d08c60d16911f546fd8e18abde7477213"
+  },
+  "scientific_scores_admitted": false,
+  "source": {
+    "bytes": 6661,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_canonical_ob_phylogeny.py",
+    "sha256": "c80e59dc7212adc4987afe1bd567e35cb7c4a0df9685b58912cc286e7b6fbaf6"
+  },
+  "species": 4,
+  "status": "native_artifacts_bound_pending_scientific_readback",
+  "summary": {
+    "bypassed_families": 2,
+    "candidate_families": 3,
+    "checkpoint_hits": 0,
+    "duplications": 4,
+    "ortholog_pairs": 36,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/canonical_ob_phylogeny_smoke_20260926/inference/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 3,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 2,
+    "uncertain_events": 0
+  }
+}

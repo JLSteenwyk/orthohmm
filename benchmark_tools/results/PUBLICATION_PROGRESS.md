@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Admission Checks Prepared While 22324 Runs (2026-09-26)
+
+The previous turn made progress by validating, committing and submitting the
+fresh phylogeny experiment. This continuation reread the goal and confirmed
+22324 RUNNING in scheduler accounting. It adds an independent artifact-binding
+gate, validates it on the retained fixture, and tests rejection of consistently
+rehashed checkpoint/rule changes as well as ordinary provenance mutations.
+112 focused tests pass. See the
+[admission instructions](CANONICAL_OB_PHYLOGENY_ADMISSION_20260926.md).
+
+At elapsed 3:17, job 22324 remained RUNNING with 32 CPUs; reconciled gene-tree
+files are being produced. No terminal output or accuracy score is admitted.
+No live pinned source, runtime, plan or input was changed. Next poll the same
+job, admit its provenance after success, then run the four independent readers
+and historical/fresh score comparison. Publication gaps and DGX deferral remain.
+
 ## Fresh Canonical Phylogeny Running: 22324 (2026-09-26)
 
 Protocol/launcher commit `c0e0541` was pushed before submission. Job `22324`
