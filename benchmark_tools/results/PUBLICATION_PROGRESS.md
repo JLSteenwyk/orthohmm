@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Tiny Weight Differences Do Not Change Installed Initial Clustering (2026-09-26)
+
+The preceding turn completed graph score/order controls. This turn reread
+the goal and executed three predeclared initial-Leiden calls in the same
+isolated installed runtime: historical weights, fresh weights, historical
+repeat. Seed 4, CPM 0.1, gene IDs and edge order stay fixed. All exit 0 and
+produce byte-identical 58,827-group partitions covering all 251,378 genes.
+The [result](INSTALLED_OB_CLUSTERING_PROBE_20260926.md) retains complete
+execution records and runtime/native extension identities; 74 tests pass.
+
+Observed roundoff does not change initial clustering in this configuration.
+This is not full historical-runtime reproduction or an explanation of the
+final score decrease. Next isolate runtime differences and, as needed,
+later multipass/profile/refinement/candidate effects using the retained graph.
+No automatic retries or full inference reruns occurred; historical accuracy
+tables remain unchanged. Broader publication requirements remain active,
+including dedicated timing; DGX stays deferred.
+
 ## Initial Graph Topology Preserved Across Score/Order Controls (2026-09-26)
 
 The preceding turn compared all retained search hits and found matching pair
