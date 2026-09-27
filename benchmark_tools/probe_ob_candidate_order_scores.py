@@ -82,7 +82,6 @@ def run(plan_path, sha):
     from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
     from benchmark_tools.probe_installed_ob_clustering import write_json
     from benchmark_tools.replay_high_sensitivity import load_replay_input
-    from benchmark_tools.audit_ob_dependency_replay import candidate_readback
     from benchmark_tools.compare_installed_ob_search import partition
     from benchmark_tools.audit_installed_orthobench import compare_partitions
     from orthohmm.orthohmm import _expand_phylogeny_candidates
@@ -127,10 +126,11 @@ def run(plan_path, sha):
             tick = time.monotonic()
             details = _expand_phylogeny_candidates(str(target), names, species, arrays[label], profile="satellite_v2")
             details.pop("_membership_constraints", None)
-            evidence = candidate_readback(root, dict(candidates=details), plan["seed"], universe)
             pred = record(work / "phylogeny_candidate_superfamilies.txt")
             groups[label] = partition(Path(pred["path"]), universe)
-            row = dict(label=label, prediction=pred, candidate_summary=details, readback=evidence,
+            row = dict(label=label, prediction=pred, candidate_summary=details,
+                       output_records=[record(p) for p in sorted(work.iterdir())],
+                       independent_candidate_readback=False,
                        wall_seconds_descriptive=time.monotonic()-tick)
             write_json(root / "result.json", row)
             rows.append(row)
@@ -142,12 +142,61 @@ def run(plan_path, sha):
             plan=record(plan_path), source=record(__file__), rows=rows, comparisons=comparisons,
             genes=len(names), nonself_hits=len(q), removed_self_hits=self_hits,
             accuracy_evaluated=False, phylogeny_run=False, wall_seconds_descriptive=time.monotonic()-started,
-            limitations=["One execution per arm in a fixed runtime; no general determinism or performance ranking.",
+            limitations=["Independent candidate seed/merge readback remains required outside the isolated inference runtime.",
+                         "One execution per arm in a fixed runtime; no general determinism or performance ranking.",
                          "Candidate-only diagnostic; not a final-phylogeny score comparison."]))
     except BaseException as error:
         write_json(output / "failure.json", dict(error_type=type(error).__name__, error=str(error),
                    wall_seconds=time.monotonic()-started, retry=False))
         raise
+
+
+def smoke(repo, directory):
+    """Exercise the isolated driver with generated four-gene data, not OB."""
+    import pickle
+    import subprocess
+    import numpy as np
+    sys.path.insert(0, str(repo))
+    from orthohmm.accuracy import write_accuracy_checkpoint
+    from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
+    from benchmark_tools.probe_installed_ob_clustering import write_json
+    if directory.exists():
+        raise FileExistsError(directory)
+    parent = repo / "benchmarks/work/ob_candidate_order_scores_20260926/plan.json"
+    if record(parent)["sha256"] != "d53ec873a11e6bfff40f3cb8c83985fd67336e1535c98d765951349c3235e2ee":
+        raise ValueError("Changed original plan")
+    plan = json.loads(parent.read_text())
+    for item in plan["runtime"]["sources"] + plan["runtime"]["native"]:
+        check(item)
+    directory.mkdir(parents=True)
+    names, species = list("abcd"), np.array([0,1,2,3], dtype=np.int32)
+    q = np.array([0,1,0,2,1,2], dtype=np.int32)
+    t = np.array([1,0,2,0,2,1], dtype=np.int32)
+    scores = np.array([3.,3.,2.,2.,1.,1.])
+    cache = directory / "synthetic.pkl"
+    with cache.open("wb") as stream:
+        pickle.dump(dict(all_gene_ids=names, gene_to_species=dict(zip(names, map(str,species))),
+                         all_hits={(names[a],names[b]):float(s) for a,b,s in zip(q,t,scores)}), stream)
+    checkpoint = write_accuracy_checkpoint(str(directory), names, species,
+        np.r_[q[::-1],0].astype(np.int32), np.r_[t[::-1],0].astype(np.int32), np.r_[scores[::-1]+1e-15,5.])
+    seed = directory / "seed.txt"
+    seed.write_text("a b\nc\nd\n")
+    plan.update(output=str(directory), seed=record(seed), cache=record(cache), checkpoint=str(checkpoint),
+                source=record(__file__), fixture=True)
+    plan["checked_records"] = [*plan["runtime"]["sources"], *plan["runtime"]["native"],
+                               record(seed), record(cache), record(__file__),
+                               *[record(p) for p in sorted(checkpoint.iterdir())]]
+    path = directory / "plan.json"
+    write_json(path, plan)
+    command = [plan["runtime"]["executable"], "-I", str(Path(__file__).resolve()),
+               "--run", str(path), "--plan-sha256", record(path)["sha256"]]
+    env = dict(PATH="/usr/bin:/bin", HOME=os.environ["HOME"], LANG="C.UTF-8", **plan["env"])
+    with (directory / "native.log").open("x") as log:
+        result = subprocess.run(command, cwd=directory, env=env, stdout=log, stderr=subprocess.STDOUT, timeout=120)
+    write_json(directory / "smoke_execution.json", dict(command=command, returncode=result.returncode,
+               plan=record(path), log=record(directory / "native.log"), fixture_genes=4))
+    if result.returncode:
+        raise RuntimeError("Isolated fixture failed; see retained log")
 
 
 if __name__ == "__main__":
@@ -156,8 +205,11 @@ if __name__ == "__main__":
     p.add_argument("--prepare", type=Path)
     p.add_argument("--run", type=Path)
     p.add_argument("--plan-sha256")
+    p.add_argument("--smoke", type=Path)
     a = p.parse_args()
-    if a.prepare:
+    if a.smoke:
+        smoke(a.repo.resolve(), a.smoke.resolve())
+    elif a.prepare:
         prepare(a.repo.resolve(), a.prepare.resolve())
     elif a.run:
         run(a.run.resolve(), a.plan_sha256)

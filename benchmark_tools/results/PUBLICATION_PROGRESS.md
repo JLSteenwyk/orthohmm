@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Candidate Factorial Startup Failure Preserved; Fixture Correction Tested (2026-09-26)
+
+Prepared protocol/code were committed and pushed as d0efe55 before job 22321.
+The scheduler confirms FAILED/1:0 after one second: an auditor import required
+Biopython absent from the private scientific runtime. Failure occurred before
+hit loading or candidate inference; no arm result exists and no retry was made.
+The [failure receipt and correction](OB_CANDIDATE_ORDER_FAILURE_22321.md)
+preserve the original submission, log, plan and matching submitted-driver copy.
+
+The corrected driver leaves strict candidate auditing to the external audit
+environment. A four-gene fixture passes all five isolated arms and all five
+external readbacks; 56 focused tests pass. Scientific packages/defaults are
+unchanged. A separately hashed v2 full-data plan is prepared but unsubmitted.
+Next review and explicitly submit that corrected plan as a distinct bounded
+experiment, then independently validate it. There is no running native job
+from this diagnostic and no full-data factorial result to interpret. Broader
+publication requirements remain active; DGX stays deferred.
+
 ## Candidate Score/Order Factorial Prepared (2026-09-26)
 
 The preceding turn localized the residual to candidate expansion. This turn

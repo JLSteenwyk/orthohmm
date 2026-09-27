@@ -1,5 +1,10 @@
 # Candidate Score/Order Control
 
+Execution update: the original plan's job 22321 failed at an audit-helper
+import before candidate inference. The [failure and correction](OB_CANDIDATE_ORDER_FAILURE_22321.md)
+retain that attempt and document a fixture-tested, unsubmitted revised plan.
+Do not resume or silently substitute the original plan.
+
 This post-hoc mechanistic diagnostic follows the
 [residual trace](OB_CANDIDATE_RESIDUAL_TRACE_20260926.md). It is not an accuracy
 optimization, new benchmark endpoint or timing comparison.

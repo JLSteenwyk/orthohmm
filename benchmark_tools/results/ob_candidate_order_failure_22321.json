@@ -1,0 +1,59 @@
+{
+  "correction": "Keep strict candidate auditing outside isolated inference runtime",
+  "failure": "ModuleNotFoundError: No module named Bio",
+  "fixture_receipts": [
+    {
+      "bytes": 24547,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_smoke_20260926/plan.json",
+      "sha256": "af1722e1a1fb2ca667289b6eb9859a469d15dfaa554a18329a70a653c55f5b14"
+    },
+    {
+      "bytes": 1068,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_smoke_20260926/smoke_execution.json",
+      "sha256": "40b05548e70896d6765ac14770bcb023c25076676cadf85f9d1f93823c23be92"
+    },
+    {
+      "bytes": 21042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_smoke_20260926/report.json",
+      "sha256": "c3708dd36fd037e6e5f570750e2c7d5f253d14e1851dee5f0953cc7291596b49"
+    },
+    {
+      "bytes": 9554,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_smoke_20260926/independent_readback.json",
+      "sha256": "a90c5fd65ce8b73f99726ca87b4e2d7838dba61853821ecb2ee0f7ed518628ab"
+    }
+  ],
+  "focused_tests_passed": 56,
+  "job_id": 22321,
+  "log": {
+    "bytes": 1070,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_20260926/slurm-22321.log",
+    "sha256": "d75d1fc5058faf554515c93fa42d1cdeb156fbed1d30689da04e3a18c5b766e8"
+  },
+  "native_results_admitted": false,
+  "original_plan": {
+    "bytes": 28009,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_20260926/plan.json",
+    "sha256": "d53ec873a11e6bfff40f3cb8c83985fd67336e1535c98d765951349c3235e2ee"
+  },
+  "retried": false,
+  "revised_plan": {
+    "bytes": 28014,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_v2_20260926/plan.json",
+    "sha256": "cc3bdcef846c68b5d6a2e524a976d68325cfd17e184fdb2934eac618011a9ae8"
+  },
+  "revised_plan_submitted": false,
+  "scheduler": "22321|FAILED|1:0|00:00:01\n22321.batch|FAILED|1:0|00:00:01\n",
+  "started_receipt_present": false,
+  "status": "failed_before_candidate_inference_then_fixture_corrected",
+  "submission": {
+    "bytes": 1445,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_20260926/submission.json",
+    "sha256": "e7b180ed4a07681f844bf5c970d29787437027d2607c24f9db6632c6eb87d55b"
+  },
+  "submitted_driver_copy": {
+    "bytes": 9099,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ob_candidate_order_scores_20260926/submitted_driver.py",
+    "sha256": "a85b1a01171002327393817c8dffc73832448522151763f4318573f34df2707e"
+  }
+}
