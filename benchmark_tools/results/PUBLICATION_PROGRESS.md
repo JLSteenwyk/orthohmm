@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Eight-Method OrthoBench Register Supplemented (2026-09-27)
+
+Previous turn completed the historical OrthoHMM audit. Added optional,
+hash-bound incorporation into the existing register assembler, preserving its
+original invocation and September 26 artifacts. The fresh September 27
+register includes actual historical commands/input evidence/resources, keeps
+cached replay seconds separate from unknown full inference time, and retains
+memory-accounting caveats. Twenty-four focused tests pass. Real export
+rechecked audit dependencies; independent old/new comparison confirms all
+eight scores/predictions and all six non-OrthoHMM rows unchanged. See
+[new register notes](OB_PROVENANCE_REGISTER_20260927.md). Remaining unknowns
+are not filled from fresh reproductions, conversion durations or zeroes.
+Cross-dataset provenance, dedicated timings and other publication gates remain
+open; no required native job was launched and DGX remains deferred.
+
 ## Historical OrthoHMM OrthoBench Provenance Audited (2026-09-27)
 
 Previous turn progressed the manuscript review. Returned to the full goal's

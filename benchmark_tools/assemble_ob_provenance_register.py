@@ -83,7 +83,38 @@ def details(key, reports):
     return row
 
 
-def assemble(repo, output):
+def supplement_orthohmm(rows, audit):
+    if (audit["status"] != "retained_orthohmm_ob_provenance_audited"
+            or audit["controlled_comparative_resources"] is not False
+            or audit["complete_transitive_provenance"] is not False):
+        raise ValueError("Unexpected historical audit scope")
+    selected = {r["key"]: r for r in rows if r["key"].startswith("orthohmm_")}
+    names = {"orthohmm_high_sensitivity": "high_sensitivity",
+             "orthohmm_phylogeny_satellite_v2": "phylogeny"}
+    if len(selected) != 2 or set(selected) != set(names):
+        raise ValueError("Expected both historical OrthoHMM rows")
+    for key, name in names.items():
+        if selected[key]["prediction"] != audit[name]["prediction"]:
+            raise ValueError("Historical prediction binding differs")
+    high, phylo = audit["high_sensitivity"], audit["phylogeny"]
+    selected["orthohmm_high_sensitivity"].update(command=high["command"],
+        input_note="Cached-hit identity verified; historical FASTA bytes not proven",
+        inference_wall_seconds=None, replay_wall_seconds=high["wall_s"],
+        timing_basis="Cached-hit downstream replay only; initial search excluded",
+        resources={"peak_process_rss_gib": high["peak_process_rss_gib"],
+                   "scope": high["scope"], "timings": high["timings"]},
+        historical_audit=high,
+        limitations=["Replay time is not full inference time", "Historical FASTA checksums unavailable"])
+    selected["orthohmm_phylogeny_satellite_v2"].update(command=phylo["command"],
+        input_sequences_equal=True, input_note="All 12 historical input hashes match retained FASTAs",
+        inference_wall_seconds=phylo["resources"]["wall_s"], resources=phylo["resources"],
+        timing_basis="Historical full inference, shared host; scoring excluded",
+        historical_audit=phylo,
+        limitations=["Retained metrics are not immutable execution attestation",
+                     "Sampled summed RSS is not unique physical memory; external runtime audit incomplete"])
+
+
+def assemble(repo, output, include_orthohmm_audit=False):
     if output.exists():
         raise FileExistsError(output)
     reports, records = {}, []
@@ -109,6 +140,16 @@ def assemble(repo, output):
     july = next(r for r in reports["orthomcl"]["runs"] if r["run"] == "Jul_25")
     if selected["prediction"] != july["input_records"][0]:
         raise ValueError("OrthoMCL row would mix run identities")
+    if include_orthohmm_audit:
+        audit_path = repo / "benchmark_tools/results/ob_orthohmm_retained_provenance_20260927.json"
+        item = record(audit_path)
+        if item["sha256"] != "39f492ddfb05166c805e3c420dd98fcbef5dcffb31a8a367b1f3ee17774c759b":
+            raise ValueError("Changed historical OrthoHMM audit")
+        audit = json.loads(audit_path.read_text())
+        records.extend([item, *audit["checked_records"]])
+        for checked in records:
+            check(checked)
+        supplement_orthohmm(rows, audit)
     for item in records:
         check(item)
     output.mkdir(parents=True)
@@ -131,6 +172,11 @@ def assemble(repo, output):
         "Prediction hashes, native coverage, explicit singleton padding, available commands/settings and resource semantics are in register.json.",
         "Proteinortho and July OrthoMCL inputs fail exact identity. Equal scores do not bound the effect of their preprocessing.",
         "No score replacement, missing-time imputation or complete-publication-provenance claim is made."])
+    if include_orthohmm_audit:
+        high = next(r for r in rows if r["key"] == "orthohmm_high_sensitivity")
+        lines.extend(["", f"OrthoHMM high-sensitivity cached-hit replay: {high['replay_wall_seconds']:.6f} s; "
+                      "excluded from the full-inference column because initial search was not timed here.",
+                      "OrthoHMM phylogeny timing is the historical run, not the fresh installed reproduction."])
     (output / "register.md").write_text("\n".join(lines)+"\n")
     return result
 
@@ -139,5 +185,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--repo",type=Path,required=True)
     p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--include-orthohmm-audit", action="store_true")
     a = p.parse_args()
-    assemble(a.repo.resolve(),a.output.resolve())
+    assemble(a.repo.resolve(),a.output.resolve(),a.include_orthohmm_audit)

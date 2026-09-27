@@ -1,6 +1,6 @@
 import pytest
 
-from benchmark_tools.assemble_ob_provenance_register import workflow_duration,details
+from benchmark_tools.assemble_ob_provenance_register import workflow_duration,details,supplement_orthohmm
 
 
 def test_repeated_consistent_duration():
@@ -40,3 +40,41 @@ def test_unknown_is_not_zero_or_proxy():
 def test_unknown_method_rejected():
     with pytest.raises(ValueError):
         details("another_tool",{})
+
+
+def supplement_fixture():
+    rows = [dict(key="orthohmm_high_sensitivity", prediction={"sha256": "high"}),
+            dict(key="orthohmm_phylogeny_satellite_v2", prediction={"sha256": "phylo"})]
+    audit = dict(status="retained_orthohmm_ob_provenance_audited", controlled_comparative_resources=False,
+        complete_transitive_provenance=False,
+        high_sensitivity=dict(prediction=rows[0]["prediction"], command=["replay"], wall_s=319,
+                              peak_process_rss_gib=5.56, timings={}, scope="replay"),
+        phylogeny=dict(prediction=rows[1]["prediction"], command=["full"], resources={"wall_s":3274}))
+    return rows, audit
+
+
+def test_supplement_preserves_distinct_timing_scopes():
+    rows, audit = supplement_fixture()
+    supplement_orthohmm(rows, audit)
+    assert rows[0]["inference_wall_seconds"] is None
+    assert rows[0]["replay_wall_seconds"] == 319
+    assert rows[1]["inference_wall_seconds"] == 3274
+    assert rows[0]["command"] == ["replay"]
+    assert rows[1]["command"] == ["full"]
+
+
+@pytest.mark.parametrize("change", ["prediction", "missing", "status", "controlled", "complete"])
+def test_supplement_rejects_wrong_binding_or_claim(change):
+    rows, audit = supplement_fixture()
+    if change == "prediction":
+        rows[0]["prediction"] = {"sha256": "other"}
+    elif change == "missing":
+        rows.pop()
+    elif change == "status":
+        audit["status"] = "pending"
+    elif change == "controlled":
+        audit["controlled_comparative_resources"] = True
+    else:
+        audit["complete_transitive_provenance"] = True
+    with pytest.raises(ValueError):
+        supplement_orthohmm(rows, audit)
