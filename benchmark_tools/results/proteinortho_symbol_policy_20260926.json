@@ -1,0 +1,256 @@
+{
+  "all_expectations_passed": true,
+  "benchmark_inference_rerun": false,
+  "cells": [
+    {
+      "case": "clean",
+      "command": [
+        "/usr/local/bin/singularity",
+        "exec",
+        "--cleanenv",
+        "--containall",
+        "--bind",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/clean:/work",
+        "--pwd",
+        "/work",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+        "proteinortho",
+        "-step=1",
+        "-cpus=1",
+        "-project=fixture",
+        "/work/a.fa",
+        "/work/b.fa"
+      ],
+      "expectation_passed": true,
+      "inputs": [
+        {
+          "bytes": 84,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/clean/a.fa",
+          "sha256": "9a8a9401766c653c21214b9010d6a4bcfb26eb1e98dd66a08390cd0485912303"
+        },
+        {
+          "bytes": 84,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/clean/b.fa",
+          "sha256": "76836b716cd0e76d474f28a5aee865694412dfd2bc807c9ea6734c59ecfb3e4a"
+        }
+      ],
+      "inputs_unchanged": true,
+      "log": {
+        "bytes": 872,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/clean/native.log",
+        "sha256": "c37bf376120ccad00fc0481d09995c19e036b9db373ed0a6160df903953b4ae1"
+      },
+      "returncode": 0
+    },
+    {
+      "case": "internal_asterisk",
+      "command": [
+        "/usr/local/bin/singularity",
+        "exec",
+        "--cleanenv",
+        "--containall",
+        "--bind",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/internal_asterisk:/work",
+        "--pwd",
+        "/work",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+        "proteinortho",
+        "-step=1",
+        "-cpus=1",
+        "-project=fixture",
+        "/work/a.fa",
+        "/work/b.fa"
+      ],
+      "expectation_passed": true,
+      "inputs": [
+        {
+          "bytes": 85,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/internal_asterisk/a.fa",
+          "sha256": "ed35f6720561e1277d6c778c86d004e10f3542d090ef608d160f37c7f354ba64"
+        },
+        {
+          "bytes": 84,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/internal_asterisk/b.fa",
+          "sha256": "76836b716cd0e76d474f28a5aee865694412dfd2bc807c9ea6734c59ecfb3e4a"
+        }
+      ],
+      "inputs_unchanged": true,
+      "log": {
+        "bytes": 1766,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/internal_asterisk/native.log",
+        "sha256": "fbc2263a9cf82c5c4d7f1000a9d144fe007f68d6a09f9b35cd01f1b1d449c546"
+      },
+      "returncode": 1
+    },
+    {
+      "case": "terminal_asterisk",
+      "command": [
+        "/usr/local/bin/singularity",
+        "exec",
+        "--cleanenv",
+        "--containall",
+        "--bind",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/terminal_asterisk:/work",
+        "--pwd",
+        "/work",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+        "proteinortho",
+        "-step=1",
+        "-cpus=1",
+        "-project=fixture",
+        "/work/a.fa",
+        "/work/b.fa"
+      ],
+      "expectation_passed": true,
+      "inputs": [
+        {
+          "bytes": 85,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/terminal_asterisk/a.fa",
+          "sha256": "f7a121667f15ca600df82e9bb6bde5be9a2f0d41de3c1d2c70d0d46aeae63cf9"
+        },
+        {
+          "bytes": 84,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/terminal_asterisk/b.fa",
+          "sha256": "76836b716cd0e76d474f28a5aee865694412dfd2bc807c9ea6734c59ecfb3e4a"
+        }
+      ],
+      "inputs_unchanged": true,
+      "log": {
+        "bytes": 1766,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/terminal_asterisk/native.log",
+        "sha256": "e1ad73567e22bbcf64881571491d74a9c40f9c72f87c3e4d83d9347afc17b4f8"
+      },
+      "returncode": 1
+    }
+  ],
+  "checked_records": [
+    {
+      "bytes": 78083160,
+      "path": "/usr/local/bin/singularity",
+      "sha256": "873e089dd4ffaf78540b2d46458f750ff5c5bcc04156e7c6f68c1f473570a628"
+    },
+    {
+      "bytes": 131035136,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+      "sha256": "990be9d066a02302fd49520abfa28d63bfdb5ad0c4792a99ac75fc6152cbe561"
+    },
+    {
+      "bytes": 5164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_proteinortho_symbols.py",
+      "sha256": "9589d998be9ddf834e75dfa5c99f0d62099c092f32e08f4da4f5fb30fae73d15"
+    },
+    {
+      "bytes": 271647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926/proteinortho.source.pl",
+      "sha256": "b948dcb6d94059580cd16da0426bc3c1b533ffb88d86560bdfe591ef9abb8ec9"
+    }
+  ],
+  "environment": {
+    "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/proteinortho_symbol_policy_20260926",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "LOGNAME": "bizon",
+    "PATH": "/usr/local/bin:/usr/bin:/bin",
+    "USER": "bizon"
+  },
+  "historical_cause_proven": false,
+  "limitations": [
+    "Indexing-only synthetic fixtures; no pair search, clustering or benchmark accuracy measured.",
+    "Pinned current runtime behavior does not establish historical preprocessing actions or binary identity.",
+    "No input normalization or matched-input promotion applied to retained benchmark results."
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 5164,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_proteinortho_symbols.py",
+    "sha256": "9589d998be9ddf834e75dfa5c99f0d62099c092f32e08f4da4f5fb30fae73d15"
+  },
+  "source_command": [
+    "/usr/local/bin/singularity",
+    "exec",
+    "--cleanenv",
+    "--containall",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+    "cat",
+    "/usr/local/bin/proteinortho"
+  ],
+  "source_excerpts": [
+    {
+      "line": 767,
+      "text": "our $aminoAlphabet=\"XOUBZACDEFGHIKLMNPQRSTVWYxoubzacdefghiklmnpqrstvwy\";"
+    },
+    {
+      "line": 5080,
+      "text": ""
+    },
+    {
+      "line": 5081,
+      "text": "    }else{"
+    },
+    {
+      "line": 5082,
+      "text": "      if(!$force && $checkfasta && exists($allowedAlphabet->{$blastmode})){ #test if the current gene is valid or not (for blastalgorithms that require either amino or nucleotide sequences only)"
+    },
+    {
+      "line": 5083,
+      "text": "        if($allowedAlphabet->{$blastmode} eq \"a\" && $curLine =~ /[^$aminoAlphabet]/){"
+    },
+    {
+      "line": 5084,
+      "text": "          $cur_gene_is_valid=0;"
+    },
+    {
+      "line": 5085,
+      "text": "        }elsif($allowedAlphabet->{$blastmode} eq \"n\" && $curLine =~ /[^$nucleotideAlphabet]/){"
+    },
+    {
+      "line": 5086,
+      "text": "          $cur_gene_is_valid=0;"
+    },
+    {
+      "line": 5087,
+      "text": "        }"
+    },
+    {
+      "line": 5088,
+      "text": "      }"
+    },
+    {
+      "line": 5089,
+      "text": "      if(exists($allowedAlphabet->{$blastmode}) && $allowedAlphabet->{$blastmode} eq \"a\" && $curLine=~/[^$aminoAlphabet]/){"
+    },
+    {
+      "line": 5090,
+      "text": "        $cur_gene_is_valid= -1;"
+    },
+    {
+      "line": 5091,
+      "text": "        if($LENFILE_isopen){"
+    },
+    {
+      "line": 5092,
+      "text": "          close($LENFILE);"
+    },
+    {
+      "line": 5093,
+      "text": "          unlink(\"$file.len\");"
+    },
+    {
+      "line": 5094,
+      "text": "        }"
+    },
+    {
+      "line": 5095,
+      "text": "        &Error(\"Invalid symbol in file '$file' and line '$curLine', please sanitze with\\nsed -i -E '/^>/! s/[^$aminoAlphabet]//g; /^\\$/d' $file;\\n -> You can also apply this to all input files !\");"
+    },
+    {
+      "line": 5096,
+      "text": "      }"
+    },
+    {
+      "line": 5097,
+      "text": "      if($blastmode eq \"autoblast\" || !$force && $checkfasta && exists($allowedAlphabet->{$blastmode})){ "
+    }
+  ],
+  "status": "proteinortho_symbol_policy_fixture"
+}

@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Proteinortho Invalid-Symbol Behavior Verified Without Benchmark Reruns (2026-09-26)
+
+The preceding turn identified and preserved Proteinortho's staged-input
+differences. This turn reread the goal, checked the pinned 6.3.6 source and
+ran three isolated indexing fixtures. Clean amino-acid input succeeds;
+internal and terminal `*` inputs both exit 1 with the expected invalid-symbol
+error and sanitization suggestion. All input files remain unchanged.
+[Source identity, commands, outcomes and limits](PROTEINORTHO_SYMBOL_POLICY_20260926.md).
+
+This distinguishes a tool preprocessing constraint from silent native deletion,
+but does not establish the historical actor/command or accuracy effect. The
+byte-identity failure remains; no predictions, scores or benchmark inputs were
+changed. All 11 focused tests pass after correcting a fixture-length assertion
+before execution. No native retries or benchmark inference reruns occurred.
+
+Job 22179 was revalidated RUNNING at 2:34:06. Full-run scientific readback is
+still pending. Remaining provenance, controlled timing, uncertainty/generalization
+and release requirements remain active; DGX stays deferred.
+
 ## Native Comparator Conversion Verified; Proteinortho Input Difference Found (2026-09-26)
 
 The preceding turn verified OrthoFinder evidence. This turn reread the goal and
