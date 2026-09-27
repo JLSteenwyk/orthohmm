@@ -2258,6 +2258,41 @@ not a fresh full-pipeline or controlled comparative timing measurement.
 [weight control](INSTALLED_OB_CLUSTERING_PROBE_20260926.md), and
 [runtime contrast](OB_CLUSTERING_RUNTIME_PROBE_20260926.md).
 
+A subsequent [fresh recovery installation](PUBLICATION_RECOVERY_INSTALL_20260926.md)
+uses a complete 11-wheel hash lock, including a provider-digest-verified Leiden
+0.11 wheel whose 15 payload files match the validated private distribution.
+An independent audit checks 3,052 installed package files against wheel bytes
+and 33 scientific sources against the frozen Git revision. Explicit exclusions
+cover installer-generated metadata/bytecode and relocated non-site payload;
+this is not exhaustive filesystem or security attestation. Standard and
+high-sensitivity fixtures each produce four groups covering 38 genes. A
+[fresh inferred-phylogeny fixture](PUBLICATION_RECOVERY_PHYLOGENY_20260926.md)
+also passes all four scientific readers in this environment, with 16 genes,
+three root groups and 36 ortholog pairs, without tree checkpoint reuse.
+
+An [explicit experimental entrypoint](PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md)
+then executes the complete pipeline from raw FASTA in this installation. It
+applies canonical directed-pair ordering only at the candidate expansion
+boundary, leaving score values, upstream inference and installed scientific
+sources unchanged. A 16-gene fixture reorders 96 candidate-input hits and
+recovers three root groups and 36 pairs with all four scientific readbacks
+passing. Its satellite merge trace is empty; this establishes the execution
+path, not validation of full-data merge behavior. Initial output-directory
+and empty-constraint audit failures are retained and documented. Package audits
+remain identical after execution. Neither fixture transfers the earlier full
+OrthoBench score to the newly installed environment.
+
+A [prespecified full OrthoBench run](FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
+was therefore launched from the 12 proteomes, using this entrypoint and no
+search or phylogeny checkpoint reuse. It pins inputs, installed payload,
+scientific sources, external tools, settings and historical references. The
+[dependent readback workflow](FULL_RECOVERY_READBACK_PROTOCOL_20260926.md)
+requires successful terminal scheduler state and exact execution provenance,
+then independently validates scientific outputs and recomputes the complete
+historical/current score objects. At this review snapshot, native inference
+was still running and no score from the new run was admitted. Its shared-host
+resource records will remain descriptive, not controlled comparative timing.
+
 Historical installation manifests retain their original tool versions and
 must not be interpreted as secure installation recommendations. The original
 CPU-wheel lock pins pip and setuptools versions affected by 11 retained

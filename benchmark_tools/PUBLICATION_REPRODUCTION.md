@@ -57,7 +57,7 @@ requirements and must not be confused with these audit commands.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260926_v20.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v21.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
   Version 20 includes installed-runtime discrepancies and QfO provenance.

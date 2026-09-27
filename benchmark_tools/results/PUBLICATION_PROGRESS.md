@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Recovery Evidence Integrated Into Review 21 (2026-09-27)
+
+The preceding continuation added and queued independent readback. This turn
+reread the objective and verified native job 22326 RUNNING and audit 22327
+PENDING on its dependency. While native search runs, updated the manuscript
+and claim checklist with the completed partial-stage recovery and fresh
+installation/fixture evidence, keeping full-run success explicitly unproven.
+The [version-21 review](MANUSCRIPT_RENDER_REVIEW_20260927_v21.md) includes
+HTML/PDF, 246 checked local occurrences across 232 tracked targets, zero bounds
+violations across 44 pages and visual review of pages 42-44. Eight renderer
+tests pass. No native/audit-pinned Python source changed. Next monitor 22326
+and 22327 and review their terminal evidence; broader goal requirements remain
+open, and DGX remains deferred.
+
 ## Full Recovery Audit Queued: 22327 (2026-09-27)
 
 Committed and pushed the new readback gate as `548576c`, then submitted

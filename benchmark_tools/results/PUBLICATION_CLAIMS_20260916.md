@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 26 September 2026. This is a completion audit, not a replacement
+Status updated 27 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -8,6 +8,10 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| A fresh phylogeny replay recovers the historical OrthoBench partition and scores | [Canonical full-data phylogeny result](CANONICAL_OB_PHYLOGENY_RESULT_22324.md) | Supported for the tested same-host replay: all 59,770 root groups and all 70 family scores match, using fresh trees and validated reused search. Not a fresh full-pipeline run, independent accuracy confirmation or cross-platform determinism |
+| The recovery environment can be installed from a complete wheel hash lock | [Fresh installation audit](PUBLICATION_RECOVERY_INSTALL_20260926.md), [fresh inferred-phylogeny fixture](PUBLICATION_RECOVERY_PHYLOGENY_20260926.md) | Supported on this host: 11 wheels, 3,052 byte-checked installed files and 33 frozen scientific sources; standard/high-sensitivity and phylogeny fixtures pass. External tools, cross-platform behavior and full-dataset reproduction remain separate |
+| The explicit canonical wrapper executes the entire pipeline | [Raw-FASTA full-pipeline fixture](PUBLICATION_FULL_PIPELINE_FIXTURE_20260926.md) | Supported on a 16-gene fixture: search through inferred reconciliation, 96 hits reordered, three root groups and 36 pairs, four independent readbacks. No satellite merges occurred, so this is not full-data merge validation or biological accuracy evidence |
+| The new recovery installation reproduces full OrthoBench end to end | [Frozen full-run protocol](FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md), [post-run readback gate](FULL_RECOVERY_READBACK_PROTOCOL_20260926.md) | Not yet established. Native job 22326 and dependent audit 22327 were launched after protocol/source commits; submission, running state and tests do not admit scores or prove completion |
 | The QfO OrthoFinder sequence-only row is an independently timed inference run | [QfO native/conversion provenance](QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md) | Contradicted: both rows derive from one 3.1.5 full run. Native phylogenetic pairs and pre-phylogeny MCL cliques are separate output levels. Conversion times are not sequence-only inference times; full-run shared-host resources do not establish controlled efficiency |
 | The matched-search HMM advantage appears primarily after initial clustering, while final refinement reduces mean F1 | [Complete-panel stage trace](MATCHED_GRAPH_STAGE_TRACE_RESULT_20260926.md) | Supported descriptively: initial F1 83.9344%/80.6939%, final 83.6097%/80.5180% (HMM/DIAMOND). Post-hoc, development-exposed stage localization, not causal isolation or an additional confirmatory test; negative refinement results retained |
 | Matched-search accuracy evidence also demonstrates controlled computational efficiency | [Stage-level resources](MATCHED_STAGE_RESOURCES_20260926.md) | Not supported. Native time logs are consolidated, but shared-host observations, broad DIAMOND search before filtering, process-RSS semantics and unmeasured export/scoring exclude controlled or complete end-to-end efficiency claims |
