@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Three-Way Native Comparison Validated On Fixture (2026-09-27)
+
+Previous turn added canonical admission/launcher. While native 22329 remains
+RUNNING and 22330 waits on dependency, added the
+[three-way comparison](QFO_THREE_WAY_COMPARISON_FIXTURE_20260927.md) without
+editing queued source files. Historical/fresh/reused small fixtures agree on
+all three root groups, 36 native pairs/confidences and species-tree topology
+and bytes. Thirty-one focused tests pass. Full contrasts report root-family
+and pair-family differences, not aggregate counts alone. Full QfO validation
+and canonical execution remain pending; existing scores and publication
+limitations are unchanged. Next inspect terminal job states and reports before
+preparing any canonical plan; no native retry is authorized by this result.
+
 ## Canonical QfO Launcher And Admission Gate Added (2026-09-27)
 
 Previous turn validated the filtered-cache fixture. Added the full
