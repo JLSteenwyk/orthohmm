@@ -35,6 +35,12 @@ RUNNING observation does not establish current liveness or completion.
 
 ## Method And Results
 
+- [Corrected GO/EC scored-pair panel](results/QFO_SCORED_PAIR_PANEL_20260927.md)
+  provides the executable eight-method batch command and all 56 pairwise
+  comparisons. Shared pairs have identical serialized scores; original means
+  retain each method's own eligible-pair set and denominator. This is not a
+  family-aware confidence interval or a replacement benchmark endpoint.
+
 - [Completed QfO ordering comparison](results/QFO_CANONICAL_RESULT_22333.md)
   distinguishes exact fresh retained-order reproduction from changed canonical
   predictions: 110 pairs lost, 85 gained and seven shared-pair annotation

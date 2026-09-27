@@ -476,6 +476,19 @@ one SEM. These native quantities are not interchangeable and neither supplies
 family-aware paired method uncertainty. Every audited GO/EC result reuses
 proteins across scored pairs. [GO/EC audit](QFO_GO_EC_ARITHMETIC_AUDIT_20260917.md).
 
+A subsequent [corrected all-method pair audit](QFO_SCORED_PAIR_PANEL_20260927.md)
+compared all 28 method pairs separately for GO and EC. Across all 56
+comparisons, shared protein pairs had identical retained six-decimal scores.
+All 16 raw counts and rounded means matched the admitted endpoints within
+serialization tolerance. Assessed counts nevertheless differed markedly:
+phylogenetic OrthoHMM scored 84,211 GO and 117,460 EC pairs, versus 163,557
+and 175,361 for full OrthoFinder. Thus mean differences at this retained
+precision reflect which eligible pairs are predicted and their denominators,
+not different functional scores for shared pairs. Restricting comparison to
+the intersection would change the endpoint and erase these differences.
+This is descriptive arithmetic, not causal attribution, proof of identical
+unavailable full-precision scores or a solution to family-aware uncertainty.
+
 The independently admitted recovered replay is reported separately from
 these historical method rows. Its profile branch had SwissTrees F1
 differences of-0.003706 before and-0.003716 after sequence-based refinement

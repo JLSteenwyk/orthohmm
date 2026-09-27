@@ -1,5 +1,17 @@
 # Publication Progress
 
+## GO/EC Interpretation Added To Manuscript (2026-09-27)
+
+Previous turn completed the eight-method scored-pair panel. Added its bounded
+finding to the manuscript, claim checklist and reproduction guide: all 56
+comparisons have identical serialized scores on shared pairs, while native
+eligible-pair sets and denominators differ. Intersection-only comparisons do
+not retain the benchmark endpoint. No causal, superiority or paired-interval
+claim was added. Pandoc parsing has empty stderr; all 263 local references
+resolve to 249 tracked targets. The v26 HTML/PDF predate this source addition
+and remain historical snapshots; no new render or visual review is claimed.
+Scientific uncertainty, controlled timing and release requirements stay open.
+
 ## All-Method GO/EC Pair Panel Completed (2026-09-27)
 
 Previous turn added the three-method diagnostic. Added and executed a
