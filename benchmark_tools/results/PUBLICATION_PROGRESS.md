@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Reproduction Guide And Remaining Gates Reconciled (2026-09-27)
+
+Previous turn progressed fresh reader dependencies. Revisited all seven
+original work packages and the retained uncertainty, data-rights and YGOB
+protocol boundaries. Corrected the reproduction guide's stale statements
+that QfO ordering was untested and that v22 was the current review; linked
+completed score admission, v24, current unit/native tests, source preservation,
+reader isolation and the updated eight-method provenance register. Added
+explicit gates for dedicated timing, unresolved sampling/dependence uncertainty,
+bounded generalization, combined executable packaging and selected-file rights.
+Requested user authorization to contact QfO maintainers for the missing original
+TreeFam files; no contact has been sent. The alternative dedicated-host request
+remains unanswered and DGX remains deferred. Next local work is integration of
+the tested acquisition/install/inference/readback/scoring components, not another
+claim that fixture checks alone establish full publication readiness.
+
 ## Reader Dependencies Installed In Fresh Offline Environment (2026-09-27)
 
 Previous turn exported independent readers but shared the main site's Python

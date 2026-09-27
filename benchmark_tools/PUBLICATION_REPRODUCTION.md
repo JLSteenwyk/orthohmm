@@ -9,10 +9,32 @@ requirements and must not be confused with these audit commands.
 
 ## Method And Results
 
-- [Corrected QfO ordering compatibility](results/QFO_CANDIDATE_ORDER_COMPATIBILITY_20260927.md)
-  shows that canonical ordering changes the retained candidate input order.
-  Candidate/group/score effects remain untested; historical QfO scores cannot
-  be transferred to the new entrypoint from OrthoBench or small fixtures.
+- [Completed QfO ordering comparison](results/QFO_CANONICAL_RESULT_22333.md)
+  distinguishes exact fresh retained-order reproduction from changed canonical
+  predictions: 110 pairs lost, 85 gained and seven shared-pair annotation
+  changes, with identical species trees. The [independently admitted scoring](results/QFO_CANONICAL_ASSESSMENT_RESULT_22336.md)
+  finds five unchanged endpoint scores and a small, sampling-confounded FAS
+  difference. Both evaluated rows are preserved; no default was selected by
+  scores and no accuracy result was transferred from another dataset.
+
+- [Fresh reader-only environment](results/FRESH_READER_RUNTIME_20260927.md)
+  runs the [exported independent validators](results/RELOCATED_INDEPENDENT_READERS_20260927.md)
+  outside the checkout using five locally installed, hash-locked packages.
+  All four fixture readers pass, with 2,700 package files checked before/after.
+  This is separate from the inference runtime; base Python/OS remain shared.
+
+- [Current unit regression](results/PUBLICATION_TEST_REFRESH_20260927.md)
+  records 10,729 passes and ten opt-in skips at revision `9914060`.
+  The [separate installed-native follow-up](results/PUBLICATION_NATIVE_TEST_REFRESH_20260927.md)
+  passes exactly those ten skipped tests with unchanged source. Preserve
+  both records and the 22 frozen-source syntax warnings; this is not evidence
+  of controlled performance or independent biological accuracy.
+
+- [Canonical assessment source archive](results/QFO_CANONICAL_SOURCE_ARCHIVE_20260927.md)
+  preserves all 762 distinct repository-contained Python files pinned by the
+  completed scoring plan. Later source edits must not be silently accepted
+  by historical validators. The archive is local and source-only, not a
+  complete scoring runtime or deposited release.
 
 - [Fresh relocated runtime](results/FRESH_RELOCATED_RUNTIME_20260927.md)
   validates a new offline-installed environment and relocated MAFFT/FastTree
@@ -30,8 +52,8 @@ requirements and must not be confused with these audit commands.
   reproduces all 59,770 root groups and all 70 family-score records from raw
   FASTA in the new recovery installation. Native 22326 and independent audit
   22327 completed successfully. This is same-host reproducibility, not new
-  accuracy evidence or controlled comparative timing. Manuscript review v22
-  includes this completion; v21 remains the earlier snapshot.
+  accuracy evidence or controlled comparative timing. Manuscript review v24
+  includes this completion and the later QfO ordering result.
 
 - [Recovery advisory range review](results/RECOVERY_ADVISORY_REVIEW_20260927.md)
   matches the live recovery package inventory to its install report and checks
@@ -91,12 +113,12 @@ requirements and must not be confused with these audit commands.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v22.md)
+- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v24.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
-  Version 22 includes the completed full-input OrthoBench recovery; version 21
-  predates that completion, and version 20 predates the canonical phylogeny
-  recovery. None adds native VGNC confidence intervals or controlled timing.
+  Version 24 includes completed QfO downstream reproduction and score admission;
+  version 23 predates those completions. Earlier snapshots remain retained.
+  None adds native VGNC confidence intervals or controlled timing.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
@@ -506,11 +528,15 @@ and validating its data/tool restoration without relying on workstation paths.
 Do not change the frozen scientific baseline or silently promote the ordering
 policy while doing that integration.
 
-The [OrthoBench provenance register](results/OB_PROVENANCE_REGISTER_20260926.md)
+The [updated OrthoBench provenance register](results/OB_PROVENANCE_REGISTER_20260927.md)
 and [QfO OrthoFinder consolidation](results/QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md)
 distinguish available historical inference, conversion and scoring evidence.
 The QfO sequence-only row is a full-run checkpoint diagnostic, not a separately
-timed sequence-only inference. Other cross-dataset provenance remains incomplete.
+timed sequence-only inference. The OrthoHMM high-sensitivity cached replay
+is 319.467197 seconds, not a full inference measurement; the historical
+phylogenetic full run is 3274.102675 seconds, not the fresh installed recovery.
+These scopes and memory accounting differ. Other cross-dataset provenance
+remains incomplete.
 
 The [rights register](results/PUBLICATION_DATA_RIGHTS_20260918.md) separates
 project code, reference datasets, upstream software and binaries. Local
@@ -519,9 +545,32 @@ to redistribute. Original TreeFam trees and mapping remain
 [unrecovered](results/TREEFAM_SOURCE_RETRIEVAL_20260918.md); the pooled reference
 does not supply original family identities for uncertainty estimation.
 
-Pending comparator and robustness analyses, controlled resource evidence,
-remaining uncertainty limitations, final manuscript preparation and
-file-level archive review remain open. No public archive DOI, external
+### Remaining Publication Gates
+
+- Controlled timing: the 27 replacement scaling runs remain unexecuted.
+  DGX work is deferred by the user; no alternative dedicated host has been
+  supplied. Do not substitute shared-host timings or restart DGX work.
+- Uncertainty: native VGNC, GO/EC, FAS and the secondary summary lack admitted
+  paired intervals. The [rare-event screen](results/SPARSE_DYADIC_F1_RESULT_20260926.md)
+  rejects blanket promotion of the tested Wald approach. More implementation
+  alone cannot justify its sampling/dependence assumptions. Original TreeFam
+  source families/mapping remain an external acquisition gap; no inferred
+  connected-component family labels may be substituted.
+- Generalization: the frozen YGOB transfer supports a bounded novel-taxon
+  evaluation, not family-disjoint or universal generalization. No outcome-driven
+  method changes are authorized by that evidence; such changes require a new
+  independent confirmation.
+- Executable packaging: inference, reader and statistical components have
+  bounded relocation checks, but their combined acquisition/install/run/score
+  workflow and full-data restoration are not yet a complete portable release.
+  A final bundle must specify which historical source versions each command
+  consumes and preserve both failures and successful executions.
+- Distribution: OrthoBench/YGOB remain acquisition-only. Final selected-file
+  notices, binary/container dependencies, dataset exclusions and source
+  obligations need review; local archives are not redistribution clearance.
+
+These are open requirements, not claims that the study is ready except for
+typesetting. No public archive DOI, external
 submission or completed publication release is asserted. The
 [progress ledger](results/PUBLICATION_PROGRESS.md) records dated actions;
 use live scheduler state, not historical ledger prose, to decide whether
