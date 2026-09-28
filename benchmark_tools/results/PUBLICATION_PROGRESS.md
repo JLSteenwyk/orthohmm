@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Cited Main Draft Visually Reviewed (2026-09-28)
+
+Previous turn made progress by submitting the public Broccoli archive retrieval.
+Scheduler accounting confirms job 22357 remains RUNNING; no restart was made.
+While it downloads, rendered the previously unreviewed cited main-draft HTML
+to a five-page PDF. All five source identities in the v3 render receipt still
+match current files. Inspected all five rasterized pages: headings, body and
+bibliography are readable, with no visible clipping or overlap. Programmatic
+word-bound checks found zero violations using a one-point page tolerance.
+
+The [cited PDF](publication_main_review_20260927_v3.pdf) and
+[layout receipt](publication_main_layout_20260928_v3.json) retain provenance
+and the inspection scope. A bibliography entry spans pages 4-5; final journal
+pagination remains pending. This completes visual review of this main-draft
+version only, not scientific claim validation, link checking or review of the
+extended manuscript. No scientific text, result or inference setting changed.
+Archive contents and checksum remain pending, as do controlled timing,
+unresolved uncertainty/generalization and release requirements. Goal active.
+
 ## Broccoli Public Archive Retrieval Resumed (2026-09-28)
 
 Previous turn made progress with extended collector-retention diagnostics.

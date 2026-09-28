@@ -1,0 +1,92 @@
+{
+  "bounds_tolerance_points": 1,
+  "bounds_violations": [],
+  "chrome_version": "Google Chrome 134.0.6998.35",
+  "html": {
+    "bytes": 22763,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260927_v3.html",
+    "sha256": "9779ef6559508b7a023478559ce7ed22f6890b24273752e1c676c12414508d0e"
+  },
+  "limitations": [
+    "Bibliography entry spans pages 4-5; journal-specific pagination remains pending.",
+    "This layout inspection does not verify scientific claims, all link destinations, or the extended manuscript.",
+    "No scientific manuscript text changed and publication requirements remain incomplete."
+  ],
+  "page_count": 5,
+  "pdf": {
+    "bytes": 103124,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260927_v3.pdf",
+    "sha256": "cffb6269654cf78784651bef2d29aa792bd5d77d8ccf580857b85ad558331dfd"
+  },
+  "publication_ready": false,
+  "render_command": "google-chrome --headless --no-sandbox --disable-gpu --no-pdf-header-footer --print-to-pdf=/tmp/orthohmm-main-cited-v3.pdf file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260927_v3.html",
+  "render_receipt": {
+    "bytes": 8499,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260927_v3.json",
+    "sha256": "26a7a783eafa89e9365ab0278785ad14123695447853c606369f7b38133aaf1a"
+  },
+  "rendered_pages": [
+    {
+      "bytes": 293565,
+      "path": "/tmp/orthohmm-main-cited-v3-1.png",
+      "sha256": "905f2354cb64a0148122a2d9334f5d0ecffc87616a1f5b2c4037e59c43617c67"
+    },
+    {
+      "bytes": 324869,
+      "path": "/tmp/orthohmm-main-cited-v3-2.png",
+      "sha256": "27e5e70acad85223cd9a0ad244d95149ae02ee255bcb9dcefc7de475b434fcf2"
+    },
+    {
+      "bytes": 326525,
+      "path": "/tmp/orthohmm-main-cited-v3-3.png",
+      "sha256": "e86f764b41d5bd6f012e2520b941b077bdf18eac1914ae06bffc64f10a3b0a5b"
+    },
+    {
+      "bytes": 379091,
+      "path": "/tmp/orthohmm-main-cited-v3-4.png",
+      "sha256": "d2e01c62d386465802502518858c22e721f920cb19ea9457a6773228aed7f84d"
+    },
+    {
+      "bytes": 126851,
+      "path": "/tmp/orthohmm-main-cited-v3-5.png",
+      "sha256": "6059a5f74ffb0dfe1c6b1dd30df8ac3587d17f9a157448139698d712b00d3f72"
+    }
+  ],
+  "source_identities_checked": [
+    {
+      "bytes": 10484,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "sha256": "6e330807f1c9b6999a8989557c74265cf95bdef6f8ebdfc69a5fb8f70ce6f63e"
+    },
+    {
+      "bytes": 199114624,
+      "path": "/usr/bin/pandoc",
+      "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+    },
+    {
+      "bytes": 5986,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_manuscript_review.py",
+      "sha256": "b8493afac836ddb7d3c74b25a3711eae34230cc02076cfe2bd72c45aa6335f9a"
+    },
+    {
+      "bytes": 200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/manuscript_review_print.html",
+      "sha256": "64d9754f1843288705c6e8ffa9662c299a0f3e263cf541886a3b3829252707f8"
+    },
+    {
+      "bytes": 48872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v5.csl.json",
+      "sha256": "bc2669a4c291a86473c88db22cc575b46eca55b6ec6b049c9c2cf860cb372aef"
+    }
+  ],
+  "status": "cited_main_draft_layout_reviewed",
+  "text_characters": [
+    2969,
+    3242,
+    3376,
+    3338,
+    1053
+  ],
+  "visual_review_complete": true,
+  "visual_scope": "All five cited main-draft pages; body, headings and bibliography readable, no visible clipping or overlap"
+}
