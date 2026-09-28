@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Public Archive Retrieval Underway (2026-09-28)
+
+Previous turn resolved native input order in a temporary preparation candidate.
+This turn revisited the uninspected public OrthoFinder2 supplement lead.
+Zenodo's linked 1,957,180,078-byte archive is reachable; published and response
+MD5 agree. A foreground partial transfer was explicitly stopped and its
+89,489,408 bytes resumed under Slurm job 22344 (one CPU, 2 GiB, two hours,
+no requeue). Latest scheduler check confirms RUNNING; do not launch another
+transfer without checking this handle. The scheduled script verifies checksum
+and indexes names without extraction or execution. Four tests passed.
+See the [retrieval record](TREEFAM_SOURCE_RETRIEVAL_20260918.md) for provenance,
+limitations and work-directory location. No original TreeFam artifacts are
+claimed recovered while the transfer/inventory remains incomplete.
+
+Inspected the frozen OrthoFinder command while preparing the timing migration:
+it uses `-f` with no explicit `-o`, and the old preparation helper expects
+copies inside each output run directory. A tmpfs input substitution must not
+silently relocate native intermediates/results there. Resolve explicit output
+placement and shared storage/memory policy before production execution. No
+scientific timing or algorithm change occurred. The archive job is our own
+background work and must also be terminal before a controlled timing window.
+The broader goal remains active, with statistical and release gates open.
+
 ## Native Input Enumeration Investigated (2026-09-28)
 
 Previous turn validated local runtime and live thread controls. Called the

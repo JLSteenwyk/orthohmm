@@ -189,6 +189,30 @@ match the SHA-256 values above. No newly recovered original TreeFam input
 has been admitted for analysis. The [Sanger archive page](https://www.sanger.ac.uk/tool/treefam/)
 explicitly states that the resource is no longer available at Sanger.
 
+### OrthoFinder2 Supplement Retrieval Started (2026-09-28)
+
+Revisited the remaining public [Zenodo record 1481147](https://zenodo.org/records/1481147).
+Its linked `OrthoFinder2_Zenodo.tar.gz` is available over verified HTTPS;
+the server reports 1,957,180,078 bytes and MD5
+`5907cdf22b211f2c4e6bead42eb17878`, matching the record's published checksum.
+This establishes an available archive, not the presence of original TreeFam
+trees or `treefam2reference.txt`.
+
+The initial foreground transfer was deliberately stopped (exit 143) after
+89,489,408 bytes to move this approximately 35-minute download to tracked
+Slurm job **22344**, one CPU, 2 GiB RAM, two hours, no requeue. The scheduled
+transfer explicitly resumes those bytes using HTTP range support; no second
+concurrent transfer was launched. Its live state was verified as RUNNING.
+The local directory is `benchmarks/work/treefam_orthofinder2_public_20260928`.
+No automatic retry is configured. Inspect the same job before any resume.
+
+`inspect_orthofinder2_archive.py` will verify exact size and published MD5,
+record SHA256 and inventory tar member names without extracting or executing
+anything. Candidate names remain leads; nested archives and original-release
+identity still require inspection. Four unit tests passed (0.14 seconds),
+including checksum/size rejection and non-extraction of symlink entries.
+Originals are not yet recovered. No maintainer was contacted or DGX accessed.
+
 ### Release-7 API Archive Inspected (2026-09-27)
 
 Downloaded the [TreeSoft release-7 Perl API archive](https://downloads.sourceforge.net/project/treesoft/TreeFam-Perl-API/7v1/Treefam-7v1.tar.gz)
