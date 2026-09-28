@@ -1,0 +1,231 @@
+{
+  "artifacts": {
+    "artifacts": [],
+    "total_count": 0
+  },
+  "build_script_matches": [
+    {
+      "git_source": {
+        "bytes": 1789,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/build_igraph.sh",
+        "sha256": "ff12eb6196c77d8091fddab62d86a2edc6d4f541cca24b52371ec1fbf37b7602"
+      },
+      "member": "leidenalg-0.11.0/scripts/build_igraph.sh",
+      "sha256": "ff12eb6196c77d8091fddab62d86a2edc6d4f541cca24b52371ec1fbf37b7602"
+    },
+    {
+      "git_source": {
+        "bytes": 1609,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/build_libleidenalg.sh",
+        "sha256": "a10416fc1db286d2204cd73dca0090dc6ebef566641358376dc0d66b050c6227"
+      },
+      "member": "leidenalg-0.11.0/scripts/build_libleidenalg.sh",
+      "sha256": "a10416fc1db286d2204cd73dca0090dc6ebef566641358376dc0d66b050c6227"
+    }
+  ],
+  "jobs": [
+    {
+      "completed_at": "2025-10-31T16:13:02Z",
+      "conclusion": "success",
+      "id": 54203750591,
+      "name": "Build wheels on Windows (x64)",
+      "started_at": "2025-10-31T16:07:24Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:13:51Z",
+      "conclusion": "success",
+      "id": 54203750598,
+      "name": "Build wheels on Windows (Win32)",
+      "started_at": "2025-10-31T16:07:17Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:09:47Z",
+      "conclusion": "success",
+      "id": 54203750609,
+      "name": "Build wheels on macOS (arm64)",
+      "started_at": "2025-10-31T16:07:27Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T17:14:04Z",
+      "conclusion": "success",
+      "id": 54203750637,
+      "name": "Build wheels on Linux (aarch64)",
+      "started_at": "2025-10-31T16:07:19Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:54:39Z",
+      "conclusion": "success",
+      "id": 54203750641,
+      "name": "Build wheels on Linux (i686)",
+      "started_at": "2025-10-31T16:07:19Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:07:29Z",
+      "conclusion": "success",
+      "id": 54203750643,
+      "name": "Build sdist",
+      "started_at": "2025-10-31T16:07:14Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:16:26Z",
+      "conclusion": "success",
+      "id": 54203750662,
+      "name": "Build wheels on Linux (x86_64)",
+      "started_at": "2025-10-31T16:07:19Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T16:12:34Z",
+      "conclusion": "success",
+      "id": 54203750724,
+      "name": "Build wheels on macOS (x86_64)",
+      "started_at": "2025-10-31T16:07:21Z",
+      "status": "completed"
+    },
+    {
+      "completed_at": "2025-10-31T17:14:51Z",
+      "conclusion": "success",
+      "id": 54209685947,
+      "name": "upload_pypi",
+      "started_at": "2025-10-31T17:14:13Z",
+      "status": "completed"
+    }
+  ],
+  "limitations": [
+    "No provenance was returned for either exact wheel by the PyPI Integrity API at observation time.",
+    "Current GitHub metadata identifies a successful release workflow, not an artifact digest chain to retained PyPI wheels.",
+    "No retained release artifacts were listed; absence now does not establish whether historical artifacts existed.",
+    "Build scripts were read and compared, never executed. No installed library or scientific setting changed."
+  ],
+  "prior_source_receipt": {
+    "bytes": 683714,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/graph_source_candidates_20260928.json",
+    "sha256": "5d0a95877eab1bf68f9ee96a917ff154a8f508af60092b643e50eb673c6ee7ad"
+  },
+  "publication_ready": false,
+  "release_run": {
+    "conclusion": "success",
+    "created_at": "2025-10-31T16:07:09Z",
+    "event": "push",
+    "head_branch": "0.11.0",
+    "head_sha": "c836ef9cd72374490e016c5841098d6eb911a700",
+    "html_url": "https://github.com/vtraag/leidenalg/actions/runs/18978271528",
+    "id": 18978271528,
+    "path": ".github/workflows/build.yml",
+    "status": "completed",
+    "updated_at": "2025-10-31T17:14:52Z"
+  },
+  "responses": [
+    {
+      "body": {
+        "bytes": 341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/leiden_tag.json",
+        "sha256": "a3d16525dc1002c1aee4b7a78ca009cde81d5b55abf3d8f3c0cb35c5151943fb"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/vtraag/leidenalg/git/ref/tags/0.11.0"
+    },
+    {
+      "body": {
+        "bytes": 339,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/core_tag.json",
+        "sha256": "cf2e05cf03b01495e287630a715622201fe29831eeda6a6b1777276c0cfba4b8"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/vtraag/libleidenalg/git/ref/tags/0.12.0"
+    },
+    {
+      "body": {
+        "bytes": 72403,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/release_runs.json",
+        "sha256": "4a0cb7994699772e8c22de21e6ead7dbe5d9445ad2369382a63a7175f75f3e75"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/vtraag/leidenalg/actions/runs?head_sha=c836ef9cd72374490e016c5841098d6eb911a700&per_page=20"
+    },
+    {
+      "body": {
+        "bytes": 32,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/release_artifacts.json",
+        "sha256": "244563f989470892c537c9a4622920af0d228ee4528f7d00c64a06d6cd95856c"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/vtraag/leidenalg/actions/runs/18978271528/artifacts"
+    },
+    {
+      "body": {
+        "bytes": 8302,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/release_jobs.json",
+        "sha256": "c5a1ba2579367b0ec668b2d3b598f46d8d243d0b81898153675df0eee8053396"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/vtraag/leidenalg/actions/runs/18978271528/jobs?per_page=100"
+    },
+    {
+      "body": {
+        "bytes": 9222,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/build.yml",
+        "sha256": "1dce05abc6c602779ac2526d1eb2674641bcd25234653fb4866e76b6553c0c00"
+      },
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/vtraag/leidenalg/c836ef9cd72374490e016c5841098d6eb911a700/.github/workflows/build.yml"
+    },
+    {
+      "body": {
+        "bytes": 1789,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/build_igraph.sh",
+        "sha256": "ff12eb6196c77d8091fddab62d86a2edc6d4f541cca24b52371ec1fbf37b7602"
+      },
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/vtraag/leidenalg/c836ef9cd72374490e016c5841098d6eb911a700/scripts/build_igraph.sh"
+    },
+    {
+      "body": {
+        "bytes": 1609,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/build_libleidenalg.sh",
+        "sha256": "a10416fc1db286d2204cd73dca0090dc6ebef566641358376dc0d66b050c6227"
+      },
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/vtraag/leidenalg/c836ef9cd72374490e016c5841098d6eb911a700/scripts/build_libleidenalg.sh"
+    },
+    {
+      "body": {
+        "bytes": 90,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/igraph_integrity.json",
+        "sha256": "1920176b0ae5538be496ee7d021b22ed5d4d138f16c10cf1b3ac3094898b096f"
+      },
+      "status": 404,
+      "url": "https://pypi.org/integrity/igraph/1.0.0/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl/provenance"
+    },
+    {
+      "body": {
+        "bytes": 116,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/graph_upstream_build_evidence_20260928/leidenalg_integrity.json",
+        "sha256": "a55ebcce6c840d6b761178b8ba1a46417b6d210b16547228ec1cc18473706a76"
+      },
+      "status": 404,
+      "url": "https://pypi.org/integrity/leidenalg/0.11.0/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl/provenance"
+    }
+  ],
+  "retained_wheels": [
+    {
+      "bytes": 5683134,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+      "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    {
+      "bytes": 2738084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    }
+  ],
+  "retrieved_utc": "2026-09-28T20:45:26.072589+00:00",
+  "status": "upstream_build_metadata_observed_not_attested",
+  "wheel_source_identity_established": false
+}

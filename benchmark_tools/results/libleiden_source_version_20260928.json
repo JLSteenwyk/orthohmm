@@ -1,0 +1,354 @@
+{
+  "cmake_executed": false,
+  "commit": "7ce12032cd61a38caebc52881ce1f1a1be4f0d28",
+  "files": [
+    {
+      "bytes": 136,
+      "git_blob": "ebfd28039ee1eac881eeb7f4132637563d672e9a",
+      "mode": "100644",
+      "path": ".gitattributes",
+      "sha256": "f838e7bef4c6dc412fc1d8c7671bca35300e92cdb41aff5bb3bd7a4d187bf7c8"
+    },
+    {
+      "bytes": 118,
+      "git_blob": "5ace4600a1f26e6892982f3e2f069ebfab108d87",
+      "mode": "100644",
+      "path": ".github/dependabot.yml",
+      "sha256": "883b95e3be554fbadd92b315e4a8c6ea6ca688b64924e22dd61222b07f683507"
+    },
+    {
+      "bytes": 3280,
+      "git_blob": "1c118416e77c300fc44fa6f96985717d546dae0b",
+      "mode": "100644",
+      "path": ".github/workflows/build.yml",
+      "sha256": "5edf7d8c9823da891f6ca846e569fc20ae72ed115de75fa4c6af6c8ec164a6fd"
+    },
+    {
+      "bytes": 15,
+      "git_blob": "491248200620392b6520875d4ca43352f8c34005",
+      "mode": "100644",
+      "path": ".gitignore",
+      "sha256": "82c47c2b26c92a42ff4bdfd9fb547a695be8f633fdd95eb147096467471ffc4f"
+    },
+    {
+      "bytes": 2673,
+      "git_blob": "cc1953bc589d56ffec5116cdbfd7d4a855725cba",
+      "mode": "100644",
+      "path": "CHANGELOG",
+      "sha256": "ff1cf23f0a9fd9f0b4be972d864b0df6df987822480f86cca99a57088f212852"
+    },
+    {
+      "bytes": 1862,
+      "git_blob": "22ed5b56a3e692166e6374d022e6c6195acc481b",
+      "mode": "100644",
+      "path": "CMakeLists.txt",
+      "sha256": "0b6c924427847d275d675470fa24985ea57ce27dcf2d3116a83cc1d0d43ce1a6"
+    },
+    {
+      "bytes": 2661,
+      "git_blob": "93fa457fbb1e51de2944cbf889163ff318feff96",
+      "mode": "100644",
+      "path": "CMakePresets.json",
+      "sha256": "f761b7cb663692e0585254a4234b121fa7b2911a2167df16b269ca9c40483171"
+    },
+    {
+      "bytes": 1750,
+      "git_blob": "15af86d9fa63aed94f80c94fc5d403e3523d0819",
+      "mode": "100644",
+      "path": "CONTRIBUTING.md",
+      "sha256": "f6149030e5a944495977d21dc15db7acb029f046c489547a41ad8f58738f9a03"
+    },
+    {
+      "bytes": 35141,
+      "git_blob": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+      "mode": "100644",
+      "path": "LICENSE",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+    },
+    {
+      "bytes": 7725,
+      "git_blob": "c52854df63ce07213e928be087faf14d894682cb",
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "0c9f4cd0a36090bfc19b13f95c1ee6a58e87cd9c3def6c21f644cc451844d95a"
+    },
+    {
+      "bytes": 194,
+      "git_blob": "cbdbd5fdf475cbb3eaa4a070e9b68c278cffed7e",
+      "mode": "100644",
+      "path": "etc/arith_apple_m1.h",
+      "sha256": "ae02661a4e78d50f80893dac1f24a7becfc22ba911aec257cbf8bc8500f2d6f0"
+    },
+    {
+      "bytes": 4904,
+      "git_blob": "2ebfd40d20f7794dcc37a595589fa6383a232e38",
+      "mode": "100644",
+      "path": "etc/cmake/GetGitRevisionDescription.cmake",
+      "sha256": "b18de36f5667cd3fc8a81c366e8b270d92a8539d543ca32fe98511fdfb98c7ed"
+    },
+    {
+      "bytes": 1283,
+      "git_blob": "6d8b708efe56a66852752a7a30ec5c16b51cdc9e",
+      "mode": "100644",
+      "path": "etc/cmake/GetGitRevisionDescription.cmake.in",
+      "sha256": "dd5ba62f00697a384f41f2ac3c4dbf012134a77c7e696d90f482d5aa859e9f86"
+    },
+    {
+      "bytes": 1265,
+      "git_blob": "ee31d0968e6820fdfbdadac5d888e2f65169472a",
+      "mode": "100644",
+      "path": "etc/cmake/cpack_install_script.cmake",
+      "sha256": "1bf511ffd37194cdf4f6ff65fe42cf6e2fc8c2afe3579f24ec1aefdc8f4fb930"
+    },
+    {
+      "bytes": 315,
+      "git_blob": "de6fa39c1aac48fa939a210c10fb5591c4203916",
+      "mode": "100644",
+      "path": "etc/cmake/create_version_file.cmake",
+      "sha256": "ec76e5da1c1540e0a16761495d22e479c8951eb6027d7a767c03dfed4cb8fdf3"
+    },
+    {
+      "bytes": 1474,
+      "git_blob": "017311e460fd425c70e9b3c442f684025602066a",
+      "mode": "100644",
+      "path": "etc/cmake/packaging.cmake",
+      "sha256": "7ea327e10c9a341fd397ea1fccce232f563ce01f3751b8ee08fc27b380d7494c"
+    },
+    {
+      "bytes": 2433,
+      "git_blob": "cbfb23c194f074d5fd8fe687c0a0e5cb202b096d",
+      "mode": "100644",
+      "path": "etc/cmake/version.cmake",
+      "sha256": "cf7a293ec84679de27334bea05248b7cc5e72c1dfc58cc449f1d1ae45a56b92a"
+    },
+    {
+      "bytes": 310,
+      "git_blob": "87887a5ecfec5ec6f86d5a0a6f61b8b8c883ba51",
+      "mode": "100644",
+      "path": "example/CMakeLists.txt",
+      "sha256": "b0759130d7073cbeb8deaf85c6b486de0a848885dd5d33bc0983fed7200d47ab"
+    },
+    {
+      "bytes": 550,
+      "git_blob": "244368c8e400bec83e35d9df63c918e11e12aabe",
+      "mode": "100644",
+      "path": "example/example.cpp",
+      "sha256": "01ea1d8672a590d38695acb917ad26527e347e72a21d1c40804eaacba1c23d52"
+    },
+    {
+      "bytes": 480,
+      "git_blob": "15218216f8ce5386f979eeaf3af1dc21f1f5917a",
+      "mode": "100644",
+      "path": "include/CMakeLists.txt",
+      "sha256": "fcde22b95da2d4c297c2a6c28e15db75aa331bedbc50f3bca2f3a9cbd299da5d"
+    },
+    {
+      "bytes": 863,
+      "git_blob": "c0214ff2b1a496ab5adc2c025beb7e2f3e9aecc5",
+      "mode": "100644",
+      "path": "include/CPMVertexPartition.h",
+      "sha256": "46d5d94f1bc20a6bf2e8dde75ff67eddebae91feb52b504bd8596401986069c6"
+    },
+    {
+      "bytes": 6786,
+      "git_blob": "8e7e72bd189ef681a08cc5aefeed6fba0c6455ee",
+      "mode": "100644",
+      "path": "include/GraphHelper.h",
+      "sha256": "fb1d2985daa37dfc2aaf7ea175f536de8d5ed23bd82ac8693cc8031351661de9"
+    },
+    {
+      "bytes": 768,
+      "git_blob": "4142b020e4c4aab9728738f0b73aaadd33e147a1",
+      "mode": "100644",
+      "path": "include/LinearResolutionParameterVertexPartition.h",
+      "sha256": "21bb4c8ee84f2d052bf11d854b4bdd3db6100df17cd8e0c696682a50905af6a9"
+    },
+    {
+      "bytes": 691,
+      "git_blob": "665297d89473ef6e02d3a88dbc2731cafa1d53fb",
+      "mode": "100644",
+      "path": "include/ModularityVertexPartition.h",
+      "sha256": "5cb5e0a9be673735f2e02103895a1697eedf070a087e01fe87bf5ffdf34de8ee"
+    },
+    {
+      "bytes": 7220,
+      "git_blob": "45f8f1edfe55a0c09f3a056a192547d01bd02a36",
+      "mode": "100644",
+      "path": "include/MutableVertexPartition.h",
+      "sha256": "1620072ef73080e81740147bf7372ab45a41e237d648478d184f28eec93e86c2"
+    },
+    {
+      "bytes": 8049,
+      "git_blob": "4ddc377d685cdd2ae7cfd7e449e3d735be898b88",
+      "mode": "100644",
+      "path": "include/Optimiser.h",
+      "sha256": "a96a1a5c2bb670f75783fbfea87a8dd249670bbbd6ae5570ea1eea752d6a6f6e"
+    },
+    {
+      "bytes": 1009,
+      "git_blob": "9cb2cc3b5ff2ee0ac6e0f77ec81e6a810e83ce43",
+      "mode": "100644",
+      "path": "include/RBConfigurationVertexPartition.h",
+      "sha256": "a63bd4739bd4858c8b477af98a844b1510b823a6e03ba6330d630aaddf741e7f"
+    },
+    {
+      "bytes": 889,
+      "git_blob": "ae6482f16d5cb52226ad345d4374c4a6fa1d67c4",
+      "mode": "100644",
+      "path": "include/RBERVertexPartition.h",
+      "sha256": "5472267e41a1768b32bcd2d8cca50bfacab77959267aefea01b06aa4fc0dd1a6"
+    },
+    {
+      "bytes": 1057,
+      "git_blob": "2ccd0c3163a2ca7d82258ccc735459c2af61b8c2",
+      "mode": "100644",
+      "path": "include/ResolutionParameterVertexPartition.h",
+      "sha256": "7abe80e6604e4331147a27f9c2cda15e0ef714b57e8e44fb285ce2921294203b"
+    },
+    {
+      "bytes": 701,
+      "git_blob": "1ed0bb9a3682b1fe7ea807af74d4c09aee50215e",
+      "mode": "100644",
+      "path": "include/SignificanceVertexPartition.h",
+      "sha256": "1eefe103562df9c5cf053dd2407089bc7e84c910deed2fab4d359ece98852195"
+    },
+    {
+      "bytes": 800,
+      "git_blob": "2f7c29f51fe58d2dbc1da3e2d520874c334946e1",
+      "mode": "100644",
+      "path": "include/SurpriseVertexPartition.h",
+      "sha256": "36132d7f8b280a5e594036e8e44d805a8284edfab26bb0b2b6ca558d5a37693f"
+    },
+    {
+      "bytes": 751,
+      "git_blob": "5897cdd6d49facd30babbd24997cd74bdd29896c",
+      "mode": "100644",
+      "path": "libleidenalgConfig.cmake.in",
+      "sha256": "b3b928ddd690642f47a1c6001aab582c97561763c9ca170dd24723a4d71c6fca"
+    },
+    {
+      "bytes": 1377,
+      "git_blob": "4608cdee2fd87b305f0c8a37e226aa93275e69d5",
+      "mode": "100644",
+      "path": "src/CMakeLists.txt",
+      "sha256": "e58544f495884652990aa5c96cff6db0ce8871c4ac511d22be724dad50e1a795"
+    },
+    {
+      "bytes": 5148,
+      "git_blob": "41f5837ae85c38142b6fce05f91d308583f0f84d",
+      "mode": "100644",
+      "path": "src/CPMVertexPartition.cpp",
+      "sha256": "6c4e08bc2bc0252d4ee103165d9309cdcdc7804acecdaadd25c4d8772a38d04b"
+    },
+    {
+      "bytes": 23812,
+      "git_blob": "d4e05a706bd62b461bb61b1bb6c2d80db1e56ed4",
+      "mode": "100644",
+      "path": "src/GraphHelper.cpp",
+      "sha256": "6ccc1519d0e41db4f0e086f79ade63efe371d27b490460ffd458d2f3f09fafff"
+    },
+    {
+      "bytes": 971,
+      "git_blob": "12d5925cf0640ace62a5adc666878e9b2749cbad",
+      "mode": "100644",
+      "path": "src/LinearResolutionParameterVertexPartition.cpp",
+      "sha256": "64ac4a3aa3f31d9c1bcc33a5758d0e0a7205719415e79500936ae0f2d64bfbeb"
+    },
+    {
+      "bytes": 5393,
+      "git_blob": "d88bdf18fdc9ed8325427d75a911fb7ca3ba869f",
+      "mode": "100644",
+      "path": "src/ModularityVertexPartition.cpp",
+      "sha256": "19d9c6204cc004cc007c9a0e8d826005f364e2be44652eafda18e42ba26f486d"
+    },
+    {
+      "bytes": 33795,
+      "git_blob": "8e2c083e70db28b4c39c91efbf1bf8c070a70263",
+      "mode": "100644",
+      "path": "src/MutableVertexPartition.cpp",
+      "sha256": "af5cb8f68dfa1fc70f64c323adf4ca6fd37401fdbbb9aa058fe2e6c28225b5d9"
+    },
+    {
+      "bytes": 57989,
+      "git_blob": "9a1eb42657b7a5c09e441308114fa9af9f5ce2a8",
+      "mode": "100644",
+      "path": "src/Optimiser.cpp",
+      "sha256": "a97d4a1938311be373e9de45a2e5044dbff644f63a44353586be4223a2c1a467"
+    },
+    {
+      "bytes": 5960,
+      "git_blob": "a8986b048f91af9d51b6dfc4f8d94388fd01609d",
+      "mode": "100644",
+      "path": "src/RBConfigurationVertexPartition.cpp",
+      "sha256": "ab9ac6125828b359eabd5586f8a575c307dff65126719fa7eface663a998c458"
+    },
+    {
+      "bytes": 5208,
+      "git_blob": "ae179ea778f0d4b60cb810c5aef3ce1a09c1de5f",
+      "mode": "100644",
+      "path": "src/RBERVertexPartition.cpp",
+      "sha256": "1a912c39f3a423c2e331b12c6bbed2281ff455bc09799a0dbe8172a1c7ce9e6a"
+    },
+    {
+      "bytes": 985,
+      "git_blob": "56bb1e5069f820b52682ccd75b6a91e9465a2d74",
+      "mode": "100644",
+      "path": "src/ResolutionParameterVertexPartition.cpp",
+      "sha256": "b31efd808c0abf243fc0ddaa37ebcffe5020e309bbc80fcdf160a289588d6e85"
+    },
+    {
+      "bytes": 5800,
+      "git_blob": "681c303d4dc6b30bc3beb0ae78df960fc160bca3",
+      "mode": "100644",
+      "path": "src/SignificanceVertexPartition.cpp",
+      "sha256": "7636255167878ce3fa2c2658cff00b2c7d1a436f71f596b55906fc879962823a"
+    },
+    {
+      "bytes": 4478,
+      "git_blob": "90a9ab8616ac6d6f549219af3f9f4a5f27874087",
+      "mode": "100644",
+      "path": "src/SurpriseVertexPartition.cpp",
+      "sha256": "a83d3084c9de768d23cb32629b1439feb6a75bdc89636a6184cfd42f28204451"
+    },
+    {
+      "bytes": 602,
+      "git_blob": "546099d8a05464d6b18daa6b3ea6512cfe7dcc4c",
+      "mode": "100644",
+      "path": "vcpkg.json",
+      "sha256": "cada437bf5e6be2da94d75f0fe5099b2170f6a088b365df821a60b0108c3e3c4"
+    }
+  ],
+  "git_describe": "0.11.1-13-g7ce1203",
+  "git_describe_with_tags": "0.12.0",
+  "git_version": "git version 2.43.0",
+  "inferred_package_version_base": "0.11.1",
+  "inspected_utc": "2026-09-28T20:44:25.060949+00:00",
+  "limitations": [
+    "Read-only Git/source analysis, not a historical wheel-build attestation.",
+    "The derived version prefix is an interpretation of the inspected source, not executed CMake output.",
+    "Current tag metadata may differ from historical build metadata; refs and object identities are retained.",
+    "No runtime or scientific setting was changed; this does not explain the separate SIGSEGV."
+  ],
+  "native_code_built": false,
+  "origin": "https://github.com/vtraag/libleidenalg.git",
+  "publication_ready": false,
+  "repository": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_source_0_12_0_20260928",
+  "selected_sources": {
+    ".gitattributes": "* text=auto\nvcpkg.json export-subst\n.gitignore export-ignore\n.gitattributes export-ignore\n.github/ export-ignore\nexample/ export-ignore\n",
+    "CMakeLists.txt": "cmake_minimum_required (VERSION 3.23)\n\n# Add etc/cmake to CMake's search path so we can put our private stuff there\nlist(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/etc/cmake)\n\ninclude(version)\n\nproject(libleidenalg VERSION ${PACKAGE_VERSION_BASE})\n\ninclude(GNUInstallDirs)\ninclude(CMakePackageConfigHelpers)\ninclude(packaging)\n\nfind_package(igraph 1 CONFIG REQUIRED)\n\n# Set C++ standard version\nset(CMAKE_CXX_STANDARD 11)\nset(CMAKE_CXX_STANDARD_REQUIRED True)\n\n# Set default symbol visibility to hidden\nset(CMAKE_C_VISIBILITY_PRESET hidden)\nset(CMAKE_CXX_VISIBILITY_PRESET hidden)\n\n# Expose the BUILD_SHARED_LIBS option in the ccmake UI\noption(BUILD_SHARED_LIBS \"Build shared libraries\" ON)\n\nadd_subdirectory(src)\nadd_subdirectory(include)\n\nconfigure_package_config_file(\n  \"${PROJECT_SOURCE_DIR}/libleidenalgConfig.cmake.in\"\n  \"${PROJECT_BINARY_DIR}/libleidenalgConfig.cmake\"\n  INSTALL_DESTINATION \"${CMAKE_INSTALL_LIBDIR}/cmake/libleidenalg\"\n  PATH_VARS CMAKE_INSTALL_INCLUDEDIR CMAKE_INSTALL_LIBDIR\n)\nwrite_basic_package_version_file(\n  \"${CMAKE_CURRENT_BINARY_DIR}/libleidenalgConfigVersion.cmake\"\n  COMPATIBILITY SameMinorVersion)\ninstall(\n  FILES \"${CMAKE_CURRENT_BINARY_DIR}/libleidenalgConfig.cmake\"\n        \"${CMAKE_CURRENT_BINARY_DIR}/libleidenalgConfigVersion.cmake\"\n  DESTINATION \"${CMAKE_INSTALL_LIBDIR}/cmake/libleidenalg\"\n  COMPONENT dev\n)\n\nexport(\n  TARGETS libleidenalg\n  FILE \"${PROJECT_BINARY_DIR}/libleidenalgTargets.cmake\")\nexport(PACKAGE libleidenalg)\n\n install(\n  TARGETS libleidenalg\n  EXPORT libleidenalgTargets\n  LIBRARY DESTINATION \"${CMAKE_INSTALL_LIBDIR}\" COMPONENT shlib\n  FILE_SET headers\n  DESTINATION \"${CMAKE_INSTALL_INCLUDEDIR}/libleidenalg\" COMPONENT dev\n)\ninstall(\n  EXPORT libleidenalgTargets\n  FILE libleidenalgTargets.cmake\n  NAMESPACE libleidenalg::\n  DESTINATION \"${CMAKE_INSTALL_LIBDIR}/cmake/libleidenalg\"\n  )\n",
+    "LICENSE": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring to freedom, not\nprice.  Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nthem if you wish), that you receive source code or can get it if you\nwant it, that you can change the software or use pieces of it in new\nfree programs, and that you know you can do these things.\n\n  To protect your rights, we need to prevent others from denying you\nthese rights or asking you to surrender the rights.  Therefore, you have\ncertain responsibilities if you distribute copies of the software, or if\nyou modify it: responsibilities to respect the freedom of others.\n\n  For example, if you distribute copies of such a program, whether\ngratis or for a fee, you must pass on to the recipients the same\nfreedoms that you received.  You must make sure that they, too, receive\nor can get the source code.  And you must show them these terms so they\nknow their rights.\n\n  Developers that use the GNU GPL protect your rights with two steps:\n(1) assert copyright on the software, and (2) offer you this License\ngiving you legal permission to copy, distribute and/or modify it.\n\n  For the developers' and authors' protection, the GPL clearly explains\nthat there is no warranty for this free software.  For both users' and\nauthors' sake, the GPL requires that modified versions be marked as\nchanged, so that their problems will not be attributed erroneously to\nauthors of previous versions.\n\n  Some devices are designed to deny users access to install or run\nmodified versions of the software inside them, although the manufacturer\ncan do so.  This is fundamentally incompatible with the aim of\nprotecting users' freedom to change the software.  The systematic\npattern of such abuse occurs in the area of products for individuals to\nuse, which is precisely where it is most unacceptable.  Therefore, we\nhave designed this version of the GPL to prohibit the practice for those\nproducts.  If such problems arise substantially in other domains, we\nstand ready to extend this provision to those domains in future versions\nof the GPL, as needed to protect the freedom of users.\n\n  Finally, every program is threatened constantly by software patents.\nStates should not allow patents to restrict development and use of\nsoftware on general-purpose computers, but in those that do, we wish to\navoid the special danger that patents applied to a free program could\nmake it effectively proprietary.  To prevent this, the GPL assures that\npatents cannot be used to render the program non-free.\n\n  The precise terms and conditions for copying, distribution and\nmodification follow.\n\n                       TERMS AND CONDITIONS\n\n  0. Definitions.\n\n  \"This License\" refers to version 3 of the GNU General Public License.\n\n  \"Copyright\" also means copyright-like laws that apply to other kinds of\nworks, such as semiconductor masks.\n\n  \"The Program\" refers to any copyrightable work licensed under this\nLicense.  Each licensee is addressed as \"you\".  \"Licensees\" and\n\"recipients\" may be individuals or organizations.\n\n  To \"modify\" a work means to copy from or adapt all or part of the work\nin a fashion requiring copyright permission, other than the making of an\nexact copy.  The resulting work is called a \"modified version\" of the\nearlier work or a work \"based on\" the earlier work.\n\n  A \"covered work\" means either the unmodified Program or a work based\non the Program.\n\n  To \"propagate\" a work means to do anything with it that, without\npermission, would make you directly or secondarily liable for\ninfringement under applicable copyright law, except executing it on a\ncomputer or modifying a private copy.  Propagation includes copying,\ndistribution (with or without modification), making available to the\npublic, and in some countries other activities as well.\n\n  To \"convey\" a work means any kind of propagation that enables other\nparties to make or receive copies.  Mere interaction with a user through\na computer network, with no transfer of a copy, is not conveying.\n\n  An interactive user interface displays \"Appropriate Legal Notices\"\nto the extent that it includes a convenient and prominently visible\nfeature that (1) displays an appropriate copyright notice, and (2)\ntells the user that there is no warranty for the work (except to the\nextent that warranties are provided), that licensees may convey the\nwork under this License, and how to view a copy of this License.  If\nthe interface presents a list of user commands or options, such as a\nmenu, a prominent item in the list meets this criterion.\n\n  1. Source Code.\n\n  The \"source code\" for a work means the preferred form of the work\nfor making modifications to it.  \"Object code\" means any non-source\nform of a work.\n\n  A \"Standard Interface\" means an interface that either is an official\nstandard defined by a recognized standards body, or, in the case of\ninterfaces specified for a particular programming language, one that\nis widely used among developers working in that language.\n\n  The \"System Libraries\" of an executable work include anything, other\nthan the work as a whole, that (a) is included in the normal form of\npackaging a Major Component, but which is not part of that Major\nComponent, and (b) serves only to enable use of the work with that\nMajor Component, or to implement a Standard Interface for which an\nimplementation is available to the public in source code form.  A\n\"Major Component\", in this context, means a major essential component\n(kernel, window system, and so on) of the specific operating system\n(if any) on which the executable work runs, or a compiler used to\nproduce the work, or an object code interpreter used to run it.\n\n  The \"Corresponding Source\" for a work in object code form means all\nthe source code needed to generate, install, and (for an executable\nwork) run the object code and to modify the work, including scripts to\ncontrol those activities.  However, it does not include the work's\nSystem Libraries, or general-purpose tools or generally available free\nprograms which are used unmodified in performing those activities but\nwhich are not part of the work.  For example, Corresponding Source\nincludes interface definition files associated with source files for\nthe work, and the source code for shared libraries and dynamically\nlinked subprograms that the work is specifically designed to require,\nsuch as by intimate data communication or control flow between those\nsubprograms and other parts of the work.\n\n  The Corresponding Source need not include anything that users\ncan regenerate automatically from other parts of the Corresponding\nSource.\n\n  The Corresponding Source for a work in source code form is that\nsame work.\n\n  2. Basic Permissions.\n\n  All rights granted under this License are granted for the term of\ncopyright on the Program, and are irrevocable provided the stated\nconditions are met.  This License explicitly affirms your unlimited\npermission to run the unmodified Program.  The output from running a\ncovered work is covered by this License only if the output, given its\ncontent, constitutes a covered work.  This License acknowledges your\nrights of fair use or other equivalent, as provided by copyright law.\n\n  You may make, run and propagate covered works that you do not\nconvey, without conditions so long as your license otherwise remains\nin force.  You may convey covered works to others for the sole purpose\nof having them make modifications exclusively for you, or provide you\nwith facilities for running those works, provided that you comply with\nthe terms of this License in conveying all material for which you do\nnot control copyright.  Those thus making or running the covered works\nfor you must do so exclusively on your behalf, under your direction\nand control, on terms that prohibit them from making any copies of\nyour copyrighted material outside their relationship with you.\n\n  Conveying under any other circumstances is permitted solely under\nthe conditions stated below.  Sublicensing is not allowed; section 10\nmakes it unnecessary.\n\n  3. Protecting Users' Legal Rights From Anti-Circumvention Law.\n\n  No covered work shall be deemed part of an effective technological\nmeasure under any applicable law fulfilling obligations under article\n11 of the WIPO copyright treaty adopted on 20 December 1996, or\nsimilar laws prohibiting or restricting circumvention of such\nmeasures.\n\n  When you convey a covered work, you waive any legal power to forbid\ncircumvention of technological measures to the extent such circumvention\nis effected by exercising rights under this License with respect to\nthe covered work, and you disclaim any intention to limit operation or\nmodification of the work as a means of enforcing, against the work's\nusers, your or third parties' legal rights to forbid circumvention of\ntechnological measures.\n\n  4. Conveying Verbatim Copies.\n\n  You may convey verbatim copies of the Program's source code as you\nreceive it, in any medium, provided that you conspicuously and\nappropriately publish on each copy an appropriate copyright notice;\nkeep intact all notices stating that this License and any\nnon-permissive terms added in accord with section 7 apply to the code;\nkeep intact all notices of the absence of any warranty; and give all\nrecipients a copy of this License along with the Program.\n\n  You may charge any price or no price for each copy that you convey,\nand you may offer support or warranty protection for a fee.\n\n  5. Conveying Modified Source Versions.\n\n  You may convey a work based on the Program, or the modifications to\nproduce it from the Program, in the form of source code under the\nterms of section 4, provided that you also meet all of these conditions:\n\n    a) The work must carry prominent notices stating that you modified\n    it, and giving a relevant date.\n\n    b) The work must carry prominent notices stating that it is\n    released under this License and any conditions added under section\n    7.  This requirement modifies the requirement in section 4 to\n    \"keep intact all notices\".\n\n    c) You must license the entire work, as a whole, under this\n    License to anyone who comes into possession of a copy.  This\n    License will therefore apply, along with any applicable section 7\n    additional terms, to the whole of the work, and all its parts,\n    regardless of how they are packaged.  This License gives no\n    permission to license the work in any other way, but it does not\n    invalidate such permission if you have separately received it.\n\n    d) If the work has interactive user interfaces, each must display\n    Appropriate Legal Notices; however, if the Program has interactive\n    interfaces that do not display Appropriate Legal Notices, your\n    work need not make them do so.\n\n  A compilation of a covered work with other separate and independent\nworks, which are not by their nature extensions of the covered work,\nand which are not combined with it such as to form a larger program,\nin or on a volume of a storage or distribution medium, is called an\n\"aggregate\" if the compilation and its resulting copyright are not\nused to limit the access or legal rights of the compilation's users\nbeyond what the individual works permit.  Inclusion of a covered work\nin an aggregate does not cause this License to apply to the other\nparts of the aggregate.\n\n  6. Conveying Non-Source Forms.\n\n  You may convey a covered work in object code form under the terms\nof sections 4 and 5, provided that you also convey the\nmachine-readable Corresponding Source under the terms of this License,\nin one of these ways:\n\n    a) Convey the object code in, or embodied in, a physical product\n    (including a physical distribution medium), accompanied by the\n    Corresponding Source fixed on a durable physical medium\n    customarily used for software interchange.\n\n    b) Convey the object code in, or embodied in, a physical product\n    (including a physical distribution medium), accompanied by a\n    written offer, valid for at least three years and valid for as\n    long as you offer spare parts or customer support for that product\n    model, to give anyone who possesses the object code either (1) a\n    copy of the Corresponding Source for all the software in the\n    product that is covered by this License, on a durable physical\n    medium customarily used for software interchange, for a price no\n    more than your reasonable cost of physically performing this\n    conveying of source, or (2) access to copy the\n    Corresponding Source from a network server at no charge.\n\n    c) Convey individual copies of the object code with a copy of the\n    written offer to provide the Corresponding Source.  This\n    alternative is allowed only occasionally and noncommercially, and\n    only if you received the object code with such an offer, in accord\n    with subsection 6b.\n\n    d) Convey the object code by offering access from a designated\n    place (gratis or for a charge), and offer equivalent access to the\n    Corresponding Source in the same way through the same place at no\n    further charge.  You need not require recipients to copy the\n    Corresponding Source along with the object code.  If the place to\n    copy the object code is a network server, the Corresponding Source\n    may be on a different server (operated by you or a third party)\n    that supports equivalent copying facilities, provided you maintain\n    clear directions next to the object code saying where to find the\n    Corresponding Source.  Regardless of what server hosts the\n    Corresponding Source, you remain obligated to ensure that it is\n    available for as long as needed to satisfy these requirements.\n\n    e) Convey the object code using peer-to-peer transmission, provided\n    you inform other peers where the object code and Corresponding\n    Source of the work are being offered to the general public at no\n    charge under subsection 6d.\n\n  A separable portion of the object code, whose source code is excluded\nfrom the Corresponding Source as a System Library, need not be\nincluded in conveying the object code work.\n\n  A \"User Product\" is either (1) a \"consumer product\", which means any\ntangible personal property which is normally used for personal, family,\nor household purposes, or (2) anything designed or sold for incorporation\ninto a dwelling.  In determining whether a product is a consumer product,\ndoubtful cases shall be resolved in favor of coverage.  For a particular\nproduct received by a particular user, \"normally used\" refers to a\ntypical or common use of that class of product, regardless of the status\nof the particular user or of the way in which the particular user\nactually uses, or expects or is expected to use, the product.  A product\nis a consumer product regardless of whether the product has substantial\ncommercial, industrial or non-consumer uses, unless such uses represent\nthe only significant mode of use of the product.\n\n  \"Installation Information\" for a User Product means any methods,\nprocedures, authorization keys, or other information required to install\nand execute modified versions of a covered work in that User Product from\na modified version of its Corresponding Source.  The information must\nsuffice to ensure that the continued functioning of the modified object\ncode is in no case prevented or interfered with solely because\nmodification has been made.\n\n  If you convey an object code work under this section in, or with, or\nspecifically for use in, a User Product, and the conveying occurs as\npart of a transaction in which the right of possession and use of the\nUser Product is transferred to the recipient in perpetuity or for a\nfixed term (regardless of how the transaction is characterized), the\nCorresponding Source conveyed under this section must be accompanied\nby the Installation Information.  But this requirement does not apply\nif neither you nor any third party retains the ability to install\nmodified object code on the User Product (for example, the work has\nbeen installed in ROM).\n\n  The requirement to provide Installation Information does not include a\nrequirement to continue to provide support service, warranty, or updates\nfor a work that has been modified or installed by the recipient, or for\nthe User Product in which it has been modified or installed.  Access to a\nnetwork may be denied when the modification itself materially and\nadversely affects the operation of the network or violates the rules and\nprotocols for communication across the network.\n\n  Corresponding Source conveyed, and Installation Information provided,\nin accord with this section must be in a format that is publicly\ndocumented (and with an implementation available to the public in\nsource code form), and must require no special password or key for\nunpacking, reading or copying.\n\n  7. Additional Terms.\n\n  \"Additional permissions\" are terms that supplement the terms of this\nLicense by making exceptions from one or more of its conditions.\nAdditional permissions that are applicable to the entire Program shall\nbe treated as though they were included in this License, to the extent\nthat they are valid under applicable law.  If additional permissions\napply only to part of the Program, that part may be used separately\nunder those permissions, but the entire Program remains governed by\nthis License without regard to the additional permissions.\n\n  When you convey a copy of a covered work, you may at your option\nremove any additional permissions from that copy, or from any part of\nit.  (Additional permissions may be written to require their own\nremoval in certain cases when you modify the work.)  You may place\nadditional permissions on material, added by you to a covered work,\nfor which you have or can give appropriate copyright permission.\n\n  Notwithstanding any other provision of this License, for material you\nadd to a covered work, you may (if authorized by the copyright holders of\nthat material) supplement the terms of this License with terms:\n\n    a) Disclaiming warranty or limiting liability differently from the\n    terms of sections 15 and 16 of this License; or\n\n    b) Requiring preservation of specified reasonable legal notices or\n    author attributions in that material or in the Appropriate Legal\n    Notices displayed by works containing it; or\n\n    c) Prohibiting misrepresentation of the origin of that material, or\n    requiring that modified versions of such material be marked in\n    reasonable ways as different from the original version; or\n\n    d) Limiting the use for publicity purposes of names of licensors or\n    authors of the material; or\n\n    e) Declining to grant rights under trademark law for use of some\n    trade names, trademarks, or service marks; or\n\n    f) Requiring indemnification of licensors and authors of that\n    material by anyone who conveys the material (or modified versions of\n    it) with contractual assumptions of liability to the recipient, for\n    any liability that these contractual assumptions directly impose on\n    those licensors and authors.\n\n  All other non-permissive additional terms are considered \"further\nrestrictions\" within the meaning of section 10.  If the Program as you\nreceived it, or any part of it, contains a notice stating that it is\ngoverned by this License along with a term that is a further\nrestriction, you may remove that term.  If a license document contains\na further restriction but permits relicensing or conveying under this\nLicense, you may add to a covered work material governed by the terms\nof that license document, provided that the further restriction does\nnot survive such relicensing or conveying.\n\n  If you add terms to a covered work in accord with this section, you\nmust place, in the relevant source files, a statement of the\nadditional terms that apply to those files, or a notice indicating\nwhere to find the applicable terms.\n\n  Additional terms, permissive or non-permissive, may be stated in the\nform of a separately written license, or stated as exceptions;\nthe above requirements apply either way.\n\n  8. Termination.\n\n  You may not propagate or modify a covered work except as expressly\nprovided under this License.  Any attempt otherwise to propagate or\nmodify it is void, and will automatically terminate your rights under\nthis License (including any patent licenses granted under the third\nparagraph of section 11).\n\n  However, if you cease all violation of this License, then your\nlicense from a particular copyright holder is reinstated (a)\nprovisionally, unless and until the copyright holder explicitly and\nfinally terminates your license, and (b) permanently, if the copyright\nholder fails to notify you of the violation by some reasonable means\nprior to 60 days after the cessation.\n\n  Moreover, your license from a particular copyright holder is\nreinstated permanently if the copyright holder notifies you of the\nviolation by some reasonable means, this is the first time you have\nreceived notice of violation of this License (for any work) from that\ncopyright holder, and you cure the violation prior to 30 days after\nyour receipt of the notice.\n\n  Termination of your rights under this section does not terminate the\nlicenses of parties who have received copies or rights from you under\nthis License.  If your rights have been terminated and not permanently\nreinstated, you do not qualify to receive new licenses for the same\nmaterial under section 10.\n\n  9. Acceptance Not Required for Having Copies.\n\n  You are not required to accept this License in order to receive or\nrun a copy of the Program.  Ancillary propagation of a covered work\noccurring solely as a consequence of using peer-to-peer transmission\nto receive a copy likewise does not require acceptance.  However,\nnothing other than this License grants you permission to propagate or\nmodify any covered work.  These actions infringe copyright if you do\nnot accept this License.  Therefore, by modifying or propagating a\ncovered work, you indicate your acceptance of this License to do so.\n\n  10. Automatic Licensing of Downstream Recipients.\n\n  Each time you convey a covered work, the recipient automatically\nreceives a license from the original licensors, to run, modify and\npropagate that work, subject to this License.  You are not responsible\nfor enforcing compliance by third parties with this License.\n\n  An \"entity transaction\" is a transaction transferring control of an\norganization, or substantially all assets of one, or subdividing an\norganization, or merging organizations.  If propagation of a covered\nwork results from an entity transaction, each party to that\ntransaction who receives a copy of the work also receives whatever\nlicenses to the work the party's predecessor in interest had or could\ngive under the previous paragraph, plus a right to possession of the\nCorresponding Source of the work from the predecessor in interest, if\nthe predecessor has it or can get it with reasonable efforts.\n\n  You may not impose any further restrictions on the exercise of the\nrights granted or affirmed under this License.  For example, you may\nnot impose a license fee, royalty, or other charge for exercise of\nrights granted under this License, and you may not initiate litigation\n(including a cross-claim or counterclaim in a lawsuit) alleging that\nany patent claim is infringed by making, using, selling, offering for\nsale, or importing the Program or any portion of it.\n\n  11. Patents.\n\n  A \"contributor\" is a copyright holder who authorizes use under this\nLicense of the Program or a work on which the Program is based.  The\nwork thus licensed is called the contributor's \"contributor version\".\n\n  A contributor's \"essential patent claims\" are all patent claims\nowned or controlled by the contributor, whether already acquired or\nhereafter acquired, that would be infringed by some manner, permitted\nby this License, of making, using, or selling its contributor version,\nbut do not include claims that would be infringed only as a\nconsequence of further modification of the contributor version.  For\npurposes of this definition, \"control\" includes the right to grant\npatent sublicenses in a manner consistent with the requirements of\nthis License.\n\n  Each contributor grants you a non-exclusive, worldwide, royalty-free\npatent license under the contributor's essential patent claims, to\nmake, use, sell, offer for sale, import and otherwise run, modify and\npropagate the contents of its contributor version.\n\n  In the following three paragraphs, a \"patent license\" is any express\nagreement or commitment, however denominated, not to enforce a patent\n(such as an express permission to practice a patent or covenant not to\nsue for patent infringement).  To \"grant\" such a patent license to a\nparty means to make such an agreement or commitment not to enforce a\npatent against the party.\n\n  If you convey a covered work, knowingly relying on a patent license,\nand the Corresponding Source of the work is not available for anyone\nto copy, free of charge and under the terms of this License, through a\npublicly available network server or other readily accessible means,\nthen you must either (1) cause the Corresponding Source to be so\navailable, or (2) arrange to deprive yourself of the benefit of the\npatent license for this particular work, or (3) arrange, in a manner\nconsistent with the requirements of this License, to extend the patent\nlicense to downstream recipients.  \"Knowingly relying\" means you have\nactual knowledge that, but for the patent license, your conveying the\ncovered work in a country, or your recipient's use of the covered work\nin a country, would infringe one or more identifiable patents in that\ncountry that you have reason to believe are valid.\n\n  If, pursuant to or in connection with a single transaction or\narrangement, you convey, or propagate by procuring conveyance of, a\ncovered work, and grant a patent license to some of the parties\nreceiving the covered work authorizing them to use, propagate, modify\nor convey a specific copy of the covered work, then the patent license\nyou grant is automatically extended to all recipients of the covered\nwork and works based on it.\n\n  A patent license is \"discriminatory\" if it does not include within\nthe scope of its coverage, prohibits the exercise of, or is\nconditioned on the non-exercise of one or more of the rights that are\nspecifically granted under this License.  You may not convey a covered\nwork if you are a party to an arrangement with a third party that is\nin the business of distributing software, under which you make payment\nto the third party based on the extent of your activity of conveying\nthe work, and under which the third party grants, to any of the\nparties who would receive the covered work from you, a discriminatory\npatent license (a) in connection with copies of the covered work\nconveyed by you (or copies made from those copies), or (b) primarily\nfor and in connection with specific products or compilations that\ncontain the covered work, unless you entered into that arrangement,\nor that patent license was granted, prior to 28 March 2007.\n\n  Nothing in this License shall be construed as excluding or limiting\nany implied license or other defenses to infringement that may\notherwise be available to you under applicable patent law.\n\n  12. No Surrender of Others' Freedom.\n\n  If conditions are imposed on you (whether by court order, agreement or\notherwise) that contradict the conditions of this License, they do not\nexcuse you from the conditions of this License.  If you cannot convey a\ncovered work so as to satisfy simultaneously your obligations under this\nLicense and any other pertinent obligations, then as a consequence you may\nnot convey it at all.  For example, if you agree to terms that obligate you\nto collect a royalty for further conveying from those to whom you convey\nthe Program, the only way you could satisfy both those terms and this\nLicense would be to refrain entirely from conveying the Program.\n\n  13. Use with the GNU Affero General Public License.\n\n  Notwithstanding any other provision of this License, you have\npermission to link or combine any covered work with a work licensed\nunder version 3 of the GNU Affero General Public License into a single\ncombined work, and to convey the resulting work.  The terms of this\nLicense will continue to apply to the part which is the covered work,\nbut the special requirements of the GNU Affero General Public License,\nsection 13, concerning interaction through a network will apply to the\ncombination as such.\n\n  14. Revised Versions of this License.\n\n  The Free Software Foundation may publish revised and/or new versions of\nthe GNU General Public License from time to time.  Such new versions will\nbe similar in spirit to the present version, but may differ in detail to\naddress new problems or concerns.\n\n  Each version is given a distinguishing version number.  If the\nProgram specifies that a certain numbered version of the GNU General\nPublic License \"or any later version\" applies to it, you have the\noption of following the terms and conditions either of that numbered\nversion or of any later version published by the Free Software\nFoundation.  If the Program does not specify a version number of the\nGNU General Public License, you may choose any version ever published\nby the Free Software Foundation.\n\n  If the Program specifies that a proxy can decide which future\nversions of the GNU General Public License can be used, that proxy's\npublic statement of acceptance of a version permanently authorizes you\nto choose that version for the Program.\n\n  Later license versions may give you additional or different\npermissions.  However, no additional obligations are imposed on any\nauthor or copyright holder as a result of your choosing to follow a\nlater version.\n\n  15. Disclaimer of Warranty.\n\n  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY\nAPPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT\nHOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY\nOF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,\nTHE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\nPURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM\nIS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF\nALL NECESSARY SERVICING, REPAIR OR CORRECTION.\n\n  16. Limitation of Liability.\n\n  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\nWILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS\nTHE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY\nGENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE\nUSE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF\nDATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGES.\n\n  17. Interpretation of Sections 15 and 16.\n\n  If the disclaimer of warranty and limitation of liability provided\nabove cannot be given local legal effect according to their terms,\nreviewing courts shall apply local law that most closely approximates\nan absolute waiver of all civil liability in connection with the\nProgram, unless a warranty or assumption of liability accompanies a\ncopy of the Program in return for a fee.\n\n                     END OF TERMS AND CONDITIONS\n\n            How to Apply These Terms to Your New Programs\n\n  If you develop a new program, and you want it to be of the greatest\npossible use to the public, the best way to achieve this is to make it\nfree software which everyone can redistribute and change under these terms.\n\n  To do so, attach the following notices to the program.  It is safest\nto attach them to the start of each source file to most effectively\nstate the exclusion of warranty; and each file should have at least\nthe \"copyright\" line and a pointer to where the full notice is found.\n\n    {one line to give the program's name and a brief idea of what it does.}\n    Copyright (C) {year}  {name of author}\n\n    This program is free software: you can redistribute it and/or modify\n    it under the terms of the GNU General Public License as published by\n    the Free Software Foundation, either version 3 of the License, or\n    (at your option) any later version.\n\n    This program is distributed in the hope that it will be useful,\n    but WITHOUT ANY WARRANTY; without even the implied warranty of\n    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n    GNU General Public License for more details.\n\n    You should have received a copy of the GNU General Public License\n    along with this program.  If not, see <http://www.gnu.org/licenses/>.\n\nAlso add information on how to contact you by electronic and paper mail.\n\n  If the program does terminal interaction, make it output a short\nnotice like this when it starts in an interactive mode:\n\n    {project}  Copyright (C) {year}  {fullname}\n    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.\n    This is free software, and you are welcome to redistribute it\n    under certain conditions; type `show c' for details.\n\nThe hypothetical commands `show w' and `show c' should show the appropriate\nparts of the General Public License.  Of course, your program's commands\nmight be different; for a GUI interface, you would use an \"about box\".\n\n  You should also get your employer (if you work as a programmer) or school,\nif any, to sign a \"copyright disclaimer\" for the program, if necessary.\nFor more information on this, and how to apply and follow the GNU GPL, see\n<http://www.gnu.org/licenses/>.\n\n  The GNU General Public License does not permit incorporating your program\ninto proprietary programs.  If your program is a subroutine library, you\nmay consider it more useful to permit linking proprietary applications with\nthe library.  If this is what you want to do, use the GNU Lesser General\nPublic License instead of this License.  But first, please read\n<http://www.gnu.org/philosophy/why-not-lgpl.html>.\n",
+    "etc/cmake/GetGitRevisionDescription.cmake": "# - Returns a version string from Git\n#\n# These functions force a re-configure on each git commit so that you can\n# trust the values of the variables in your build system.\n#\n#  get_git_head_revision(<refspecvar> <hashvar> [<additional arguments to git describe> ...])\n#\n# Returns the refspec and sha hash of the current head revision\n#\n#  git_describe(<var> [<additional arguments to git describe> ...])\n#\n# Returns the results of git describe on the source tree, and adjusting\n# the output so that it tests false if an error occurs.\n#\n#  git_get_exact_tag(<var> [<additional arguments to git describe> ...])\n#\n# Returns the results of git describe --exact-match on the source tree,\n# and adjusting the output so that it tests false if there was no exact\n# matching tag.\n#\n#  git_local_changes(<var>)\n#\n# Returns either \"CLEAN\" or \"DIRTY\" with respect to uncommitted changes.\n# Uses the return code of \"git diff-index --quiet HEAD --\".\n# Does not regard untracked files.\n#\n# Requires CMake 2.6 or newer (uses the 'function' command)\n#\n# Original Author:\n# 2009-2010 Ryan Pavlik <rpavlik@iastate.edu> <abiryan@ryand.net>\n# http://academic.cleardefinition.com\n# Iowa State University HCI Graduate Program/VRAC\n#\n# Copyright Iowa State University 2009-2010.\n# Distributed under the Boost Software License, Version 1.0.\n# (See accompanying file LICENSE_1_0.txt or copy at\n# http://www.boost.org/LICENSE_1_0.txt)\n\nif(__get_git_revision_description)\n\treturn()\nendif()\nset(__get_git_revision_description YES)\n\n# We must run the following at \"include\" time, not at function call time,\n# to find the path to this module rather than the path to a calling list file\nget_filename_component(_gitdescmoddir ${CMAKE_CURRENT_LIST_FILE} PATH)\n\nfunction(get_git_head_revision _refspecvar _hashvar)\n\tset(GIT_PARENT_DIR \"${CMAKE_CURRENT_SOURCE_DIR}\")\n\tset(GIT_DIR \"${GIT_PARENT_DIR}/.git\")\n\twhile(NOT EXISTS \"${GIT_DIR}\")\t# .git dir not found, search parent directories\n\t\tset(GIT_PREVIOUS_PARENT \"${GIT_PARENT_DIR}\")\n\t\tget_filename_component(GIT_PARENT_DIR ${GIT_PARENT_DIR} PATH)\n\t\tif(GIT_PARENT_DIR STREQUAL GIT_PREVIOUS_PARENT)\n\t\t\t# We have reached the root directory, we are not in git\n\t\t\tset(${_refspecvar} \"GITDIR-NOTFOUND\" PARENT_SCOPE)\n\t\t\tset(${_hashvar} \"GITDIR-NOTFOUND\" PARENT_SCOPE)\n\t\t\treturn()\n\t\tendif()\n\t\tset(GIT_DIR \"${GIT_PARENT_DIR}/.git\")\n\tendwhile()\n\t# check if this is a submodule\n\tif(NOT IS_DIRECTORY ${GIT_DIR})\n\t\tfile(READ ${GIT_DIR} submodule)\n\t\tstring(REGEX REPLACE \"gitdir: (.*)\\n$\" \"\\\\1\" GIT_DIR_RELATIVE ${submodule})\n\t\tget_filename_component(SUBMODULE_DIR ${GIT_DIR} PATH)\n\t\tget_filename_component(GIT_DIR ${SUBMODULE_DIR}/${GIT_DIR_RELATIVE} ABSOLUTE)\n\tendif()\n\tset(GIT_DATA \"${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/git-data\")\n\tif(NOT EXISTS \"${GIT_DATA}\")\n\t\tfile(MAKE_DIRECTORY \"${GIT_DATA}\")\n\tendif()\n\n\tif(NOT EXISTS \"${GIT_DIR}/HEAD\")\n\t\treturn()\n\tendif()\n\tset(HEAD_FILE \"${GIT_DATA}/HEAD\")\n\tconfigure_file(\"${GIT_DIR}/HEAD\" \"${HEAD_FILE}\" COPYONLY)\n\n\tconfigure_file(\"${_gitdescmoddir}/GetGitRevisionDescription.cmake.in\"\n\t\t\"${GIT_DATA}/grabRef.cmake\"\n\t\t@ONLY)\n\tinclude(\"${GIT_DATA}/grabRef.cmake\")\n\n\tset(${_refspecvar} \"${HEAD_REF}\" PARENT_SCOPE)\n\tset(${_hashvar} \"${HEAD_HASH}\" PARENT_SCOPE)\nendfunction()\n\nfunction(git_describe _var)\n\tif(NOT GIT_FOUND)\n\t\tfind_package(Git QUIET)\n\tendif()\n\tget_git_head_revision(refspec hash)\n\tif(NOT GIT_FOUND)\n\t\tset(${_var} \"GIT-NOTFOUND\" PARENT_SCOPE)\n\t\treturn()\n\tendif()\n\tif(NOT hash)\n\t\tset(${_var} \"HEAD-HASH-NOTFOUND\" PARENT_SCOPE)\n\t\treturn()\n\tendif()\n\n\t# TODO sanitize\n\t#if((${ARGN}\" MATCHES \"&&\") OR\n\t#\t(ARGN MATCHES \"||\") OR\n\t#\t(ARGN MATCHES \"\\\\;\"))\n\t#\tmessage(\"Please report the following error to the project!\")\n\t#\tmessage(FATAL_ERROR \"Looks like someone's doing something nefarious with git_describe! Passed arguments ${ARGN}\")\n\t#endif()\n\n\texecute_process(COMMAND\n\t\t\"${GIT_EXECUTABLE}\"\n\t\tdescribe\n\t\t${hash}\n\t\t${ARGN}\n\t\tWORKING_DIRECTORY\n\t\t\"${CMAKE_CURRENT_SOURCE_DIR}\"\n\t\tRESULT_VARIABLE\n\t\tres\n\t\tOUTPUT_VARIABLE\n\t\tout\n\t\tERROR_QUIET\n\t\tOUTPUT_STRIP_TRAILING_WHITESPACE)\n\tif(NOT res EQUAL 0)\n\t\tset(out \"${out}-${res}-NOTFOUND\")\n\tendif()\n\n\tset(${_var} \"${out}\" PARENT_SCOPE)\nendfunction()\n\nfunction(git_get_exact_tag _var)\n\tgit_describe(out --exact-match ${ARGN})\n\tset(${_var} \"${out}\" PARENT_SCOPE)\nendfunction()\n\nfunction(git_local_changes _var)\n\tif(NOT GIT_FOUND)\n\t\tfind_package(Git QUIET)\n\tendif()\n\tget_git_head_revision(refspec hash)\n\tif(NOT GIT_FOUND)\n\t\tset(${_var} \"GIT-NOTFOUND\" PARENT_SCOPE)\n\t\treturn()\n\tendif()\n\tif(NOT hash)\n\t\tset(${_var} \"HEAD-HASH-NOTFOUND\" PARENT_SCOPE)\n\t\treturn()\n\tendif()\n\n\texecute_process(COMMAND\n\t\t\"${GIT_EXECUTABLE}\"\n\t\tdiff-index --quiet HEAD --\n\t\tWORKING_DIRECTORY\n\t\t\"${CMAKE_CURRENT_SOURCE_DIR}\"\n\t\tRESULT_VARIABLE\n\t\tres\n\t\tOUTPUT_VARIABLE\n\t\tout\n\t\tERROR_QUIET\n\t\tOUTPUT_STRIP_TRAILING_WHITESPACE)\n\tif(res EQUAL 0)\n\t\tset(${_var} \"CLEAN\" PARENT_SCOPE)\n\telse()\n\t\tset(${_var} \"DIRTY\" PARENT_SCOPE)\n\tendif()\nendfunction()\n",
+    "etc/cmake/version.cmake": "include(GetGitRevisionDescription)\n\n# At this point, libleidenalg is either the main CMake project or a subproject of\n# another project. CMAKE_SOURCE_DIR would point to the root of the main\n# project if we are a subproject so we cannot use that; we need to use\n# CMAKE_CURRENT_SOURCE_DIR to get the directory containing the CMakeLists.txt\n# file that version.cmake was included from, which is the top-level\n# CMakeLists.txt file of libleidenalg itself\n\nset(VERSION_FILE \"${CMAKE_CURRENT_SOURCE_DIR}/VERSION\")\nset(NEXT_VERSION_FILE \"${CMAKE_CURRENT_SOURCE_DIR}/NEXT_VERSION\")\n\nif(EXISTS \"${VERSION_FILE}\")\n  file(READ \"${VERSION_FILE}\" PACKAGE_VERSION)\n  string(STRIP \"${PACKAGE_VERSION}\" PACKAGE_VERSION)\n  message(STATUS \"Version number: ${PACKAGE_VERSION}\")\nelse()\n  find_package(Git QUIET)\n  if(Git_FOUND)\n    git_describe(PACKAGE_VERSION)\n  else()\n    set(PACKAGE_VERSION \"NOTFOUND\")\n  endif()\n\n  if(PACKAGE_VERSION)\n    if(EXISTS \"${NEXT_VERSION_FILE}\")\n      file(READ \"${NEXT_VERSION_FILE}\" PACKAGE_VERSION)\n      string(STRIP \"${PACKAGE_VERSION}\" PACKAGE_VERSION)\n      get_git_head_revision(GIT_REFSPEC GIT_COMMIT_HASH)\n      string(SUBSTRING \"${GIT_COMMIT_HASH}\" 0 8 GIT_COMMIT_HASH_SHORT)\n      string(APPEND PACKAGE_VERSION \"-dev+${GIT_COMMIT_HASH_SHORT}\")\n    endif()\n    message(STATUS \"Version number from Git: ${PACKAGE_VERSION}\")\n  elseif(EXISTS \"${NEXT_VERSION_FILE}\")\n    file(READ \"${NEXT_VERSION_FILE}\" PACKAGE_VERSION)\n    string(STRIP \"${PACKAGE_VERSION}\" PACKAGE_VERSION)\n    string(APPEND PACKAGE_VERSION \"-dev\")\n    message(STATUS \"Version number: ${PACKAGE_VERSION}\")\n  else()\n    # Read version from vcpkg.json\n    file(READ ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg.json VCPKG_JSON)\n    string(JSON PACKAGE_VERSION GET ${VCPKG_JSON} \"version\")\n    message(STATUS \"Version number from vcpkg.json: ${PACKAGE_VERSION}\")\n  endif()\nendif()\n\nstring(REGEX MATCH \"^[^-]+\" PACKAGE_VERSION_BASE \"${PACKAGE_VERSION}\")\nstring(\n  REGEX REPLACE \"^([0-9]+)\\\\.([0-9]+)\\\\.([0-9+])\" \"\\\\1;\\\\2;\\\\3\"\n  PACKAGE_VERSION_PARTS \"${PACKAGE_VERSION_BASE}\"\n)\nlist(GET PACKAGE_VERSION_PARTS 0 PACKAGE_VERSION_MAJOR)\nlist(GET PACKAGE_VERSION_PARTS 1 PACKAGE_VERSION_MINOR)\nlist(GET PACKAGE_VERSION_PARTS 2 PACKAGE_VERSION_PATCH)\n\nif(PACKAGE_VERSION MATCHES \"^[^-]+-\")\n  string(\n    REGEX REPLACE \"^[^-]+-([^+]*)\" \"\\\\1\" PACKAGE_VERSION_PRERELEASE \"${PACKAGE_VERSION}\"\n  )\nelse()\n  set(PACKAGE_VERSION_PRERELEASE \"cmake-experimental\")\nendif()\n\n",
+    "src/CMakeLists.txt": "add_library(libleidenalg\n  GraphHelper.cpp\n  Optimiser.cpp\n  MutableVertexPartition.cpp\n\n  ModularityVertexPartition.cpp\n  SignificanceVertexPartition.cpp\n  SurpriseVertexPartition.cpp\n\n  ResolutionParameterVertexPartition.cpp  \n  LinearResolutionParameterVertexPartition.cpp\n  CPMVertexPartition.cpp\n  RBConfigurationVertexPartition.cpp\n  RBERVertexPartition.cpp\n\n)\n\nset_target_properties(libleidenalg PROPERTIES VERSION ${PROJECT_VERSION})\nset_target_properties(libleidenalg PROPERTIES SOVERSION 1)\n\n# Generate export header include file\ninclude(GenerateExportHeader)\ngenerate_export_header(libleidenalg\n  STATIC_DEFINE LEIDENALG_STATIC\n  EXPORT_FILE_NAME ${PROJECT_BINARY_DIR}/include/libleidenalg_export.h\n)\n\n# Make sure we install the export header\ntarget_sources(libleidenalg\n  PUBLIC\n  FILE_SET headers\n  TYPE HEADERS\n  BASE_DIRS \n    ${PROJECT_BINARY_DIR}/include/\n  FILES\n    ${PROJECT_BINARY_DIR}/include/libleidenalg_export.h\n)\n\n# Make sure we can find include files\ntarget_include_directories(\n  libleidenalg\n  PUBLIC\n  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>\n  $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>\n)\n\nif (NOT BUILD_SHARED_LIBS)\n  target_compile_definitions(libleidenalg PRIVATE LEIDENALG_STATIC)\nelse()\n  target_compile_definitions(libleidenalg PRIVATE libleidenalg_EXPORTS)\nendif()\n\ntarget_link_libraries (libleidenalg PUBLIC igraph::igraph)\n",
+    "vcpkg.json": "{\n  \"name\": \"libleidenalg\",\n  \"version\": \"$Format:%(describe)$\",\n  \"maintainers\": \"V.A. Traag <v.a.traag@cwts.leidenuniv.nl>\",\n  \"description\": \"Leiden is a general algorithm for methods of community detection in large networks.\",\n  \"homepage\": \"https://github.com/vtraag/libleidenalg\",\n  \"license\": \"GPL-3.0-or-later\",\n  \"builtin-baseline\": \"253704407ae68efa37bf8f5b59b3e06dd40d3d3f\",\n  \"dependencies\": [\n    {\n      \"name\": \"igraph\",\n      \"version>=\": \"1.0\"\n    },\n    {\n      \"name\": \"vcpkg-cmake\",\n      \"host\": true\n    },\n    {\n      \"name\": \"vcpkg-cmake-config\",\n      \"host\": true\n    }\n  ]\n}\n"
+  },
+  "source": {
+    "bytes": 5627,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_libleiden_version.py",
+    "sha256": "5918c24fd041a1813c57f8908f5f1fcc3a354a23683dbc0852e7b43563864d14"
+  },
+  "status": "source_git_version_mechanism_observed",
+  "tag_inventory": "refs/tags/0.10.0 tag 0925ba4bb988381c606eae95133a5e90a4d065d7 cde86918dc69efa0a8b06b36e2fa0ad9442f68c9\nrefs/tags/0.11.0 tag 9ba574e27d164afd2356f3447f66acea713e75b4 0e278e175f06a77cd9f2e43d10bc05f1542fe941\nrefs/tags/0.11.1 tag 7e8222356b2ffc44c06e363e735d5a41b352f9ec 47da2e8863bdf5865d494b586858a896c5e8c725\nrefs/tags/0.12.0 commit 7ce12032cd61a38caebc52881ce1f1a1be4f0d28 \nrefs/tags/0.5 tag d1cc251710099b3744f196e32e51d593380e9e3d 1fe657c17189941da4ce83e7eeadb0d0c61ca06a\nrefs/tags/0.5.1 tag 48b44be2930abee43bbf58698684825933bc999f 9e9f80a77588474e54580874aff8c0562c3ca9ec\nrefs/tags/0.5.2 tag 6a8ef4fb53f17108c01f3e5211950629bad351ad 79ab87c4193930b21fe78bc22b409658d56829d6\nrefs/tags/0.6.0 commit 768b7f9b93b436f1381c82d5036220856d47b929 \nrefs/tags/0.6.1 commit 8b4e4f4d3f2bf61d3f01a396404a0db4a9154e48 \nrefs/tags/0.6.1.dev0 commit 5d1a3d7c238aff4d863c5eba561dd5e4cf6aba96 \nrefs/tags/0.6.1.dev1 commit 8b4e4f4d3f2bf61d3f01a396404a0db4a9154e48 \nrefs/tags/0.7.0 commit a73ef801b3d68cf1f940840da251f66a16e0cf54 \nrefs/tags/0.7.0.alpha0 commit f1b6eaa8170f6922abbe22febff35c7b6f3730d3 \nrefs/tags/0.7.0.alpha1 commit b5f84f3e8a22dfc163b08c3849b9ebba3c11386f \nrefs/tags/0.7.0.alpha2 commit 55025993ac99fd3f1aa95ffe3dc38f38ca3f17f1 \nrefs/tags/0.7.0.alpha3 commit 705a0ad7b46b39258004e2253dc03324251abfcc \nrefs/tags/0.7.0.alpha4 commit d71cd58b4b4b6eb5b91f4dae45a47f738d7b93b2 \nrefs/tags/0.7.0.alpha5 commit 7d8dc2cee83fab5dc6189104770f820d1207d189 \nrefs/tags/0.7.0.alpha6 commit 82affa6b3e6f77fdfc50c9e0e306bc2dcabbbe3c \nrefs/tags/0.7.0.alpha7 commit 8691fb7aa0ee89c17eef22850ca10ef3dc60ea70 \nrefs/tags/0.7.0.alpha8 commit 8422107acf68b86b5190129e5e0bdac55815a15b \nrefs/tags/0.7.0.post1 commit a96472a8f234e12eb44499a2dd3ae57988422110 \nrefs/tags/0.8.0 commit 3e63c722bcb4488b3e7a23827af0cc46b115ca9d \nrefs/tags/0.8.0.alpha0 commit ef6a076a71d9c0397d84ff97036f6b47aa4f3e71 \nrefs/tags/0.8.0.alpha1 commit eb4f00fd18f664fae912b562e266306c75d770c9 \nrefs/tags/0.8.0.alpha2 commit 78367b6e5ff32bd7850fb0dc00305f5e564ff7b7 \nrefs/tags/0.8.0.alpha3 commit a872da359d9c8edaa2accf2c6fd3efaaa3819907 \nrefs/tags/0.8.0.alpha4 commit fb8ddaae95a34b092dedc642046f614ad6670402 \nrefs/tags/0.8.0.alpha5 commit 8d6733c17a4fb414de98bad7f79052b9f2d1156a \nrefs/tags/0.8.1 commit fd7bc2185f0ee9c53037eec0bb655821415c44d7 \nrefs/tags/0.8.10 commit 91fbe8ced00f7e0905578583d8b748388dc84b1b \nrefs/tags/0.8.2 commit 41d83568e083ee1eeebb8bdb4f9a00096c3cb19b \nrefs/tags/0.8.3 commit d175dda944ac78d564c2c26c584a4af264c93307 \nrefs/tags/0.8.4 commit 0658758481d40e553113d3b4b0e52b8a098bc022 \nrefs/tags/0.8.5 commit ec5366c84a56144c4499f7675053c95a38335957 \nrefs/tags/0.8.6 commit 350879b46684168bdb0cf08155cad4b737a8d679 \nrefs/tags/0.8.7 commit 8491dbdfb5bc9ff755ba79774651ccfdb576ceef \nrefs/tags/0.8.8 commit 17c0c3b8aa8fef27d482b05abe7e32f780ab3c9a \nrefs/tags/0.8.9 commit f22536ce535656db61b8c46a1a580519550ed734 \nrefs/tags/0.9.0 commit 46cea683b145cadfd67145a0c262955fea218974 \nrefs/tags/v0.5.3 commit 9ab79e0c14300cf4ebea157303fa0881e755a9b2 \nrefs/tags/v0.9.0 commit 46f05485e257d38005658d65cb608f6683f17dba \n",
+  "tree": "39b3bf92e831558a5d23ad2672370cf533aae31c",
+  "wheel_source_identity_established": false
+}

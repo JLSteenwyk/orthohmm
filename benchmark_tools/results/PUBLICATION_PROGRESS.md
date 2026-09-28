@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Leiden Version-Label Mechanism And Source History (2026-09-28)
+
+Previous turn completed the YGOB figure and main-text integration, pushed as
+9453e7c3. Continued the release provenance work. The retained wheel's 0.11.1
+library filename is consistent with the 0.12.0 source candidate's version
+logic: plain Git describe ignores its lightweight release tag, finds the old
+annotated tag, and returns 0.11.1-13-g7ce1203. Including lightweight tags gives
+0.12.0. The inspected CMake source takes the pre-hyphen version prefix.
+See the [source/version evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md).
+
+Added a tested read-only Git-object audit covering 45 source files. Preserved
+the source candidate, a Git-export archive and a history bundle locally;
+fresh offline bundle replay reproduced both labels. Queried public PyPI and
+GitHub records without contacting anyone. All nine jobs in the identified
+release workflow succeeded, and both immutable-commit build scripts match
+the retained sdist. No release artifacts are currently listed and neither
+exact wheel has PyPI Integrity API provenance available at this observation.
+
+63 focused tests pass. This is a reproducible explanation of the apparent
+version-label discrepancy, not a historical source-to-wheel attestation,
+redistribution clearance or explanation of the high-CPM crash. No native code
+was built, no scientific dependency was changed, and no timing or inference
+job was launched. Source-to-binary and transitive release requirements remain
+open, alongside the broader scientific and timing requirements. Goal active.
+
 ## YGOB Trade-Off Figure And Main-Text Integration (2026-09-28)
 
 Previous turn made progress with the tested local executor and current host

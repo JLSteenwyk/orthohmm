@@ -1,0 +1,69 @@
+{
+  "artifacts": [
+    {
+      "bytes": 51070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/libleidenalg-0.12.0-git-export.tar.gz",
+      "sha256": "efc05d115e492f02a7e7ecdd9b74cc92ab149d0eb1f4126667a97d776cea99d1"
+    },
+    {
+      "bytes": 2856754,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle",
+      "sha256": "046d13fae6cf2621a7540200c061654f893f06867a91902c6788eb7ef66aab4f"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_source_0_12_0_20260928",
+        "bundle",
+        "create",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle",
+        "refs/tags/0.12.0",
+        "refs/tags/0.11.1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_source_0_12_0_20260928",
+        "bundle",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle"
+      ],
+      "returncode": 0,
+      "stderr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle is okay\n",
+      "stdout": "The bundle contains these 2 refs:\n7ce12032cd61a38caebc52881ce1f1a1be4f0d28 refs/tags/0.12.0\n7e8222356b2ffc44c06e363e735d5a41b352f9ec refs/tags/0.11.1\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n"
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_source_0_12_0_20260928",
+        "archive",
+        "--format=tar.gz",
+        "--prefix=libleidenalg-0.12.0/",
+        "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/libleidenalg-0.12.0-git-export.tar.gz",
+        "7ce12032cd61a38caebc52881ce1f1a1be4f0d28"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "commit": "7ce12032cd61a38caebc52881ce1f1a1be4f0d28",
+  "git_export_vcpkg_version": "0.11.1-13-g7ce1203",
+  "limitations": [
+    "Git archive applies committed export-subst attributes; exported vcpkg.json is not byte-identical to its source blob.",
+    "Source/history candidate preservation is not historical wheel correspondence or redistribution clearance."
+  ],
+  "status": "source_history_and_git_export_preserved_not_built"
+}

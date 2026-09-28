@@ -79,3 +79,12 @@ python -B -m benchmark_tools.acquire_wheel_sources \
 ```
 
 Scientific settings, scores, frozen runtimes and the timing panel are unchanged.
+
+## Follow-Up: Version-Label Mechanism
+
+The [subsequent source/history audit](LIBLEIDEN_SOURCE_VERSION_20260928.md)
+reproduces how libleidenalg's lightweight 0.12.0 tag yields a 0.11.1 version
+prefix under the inspected build logic. This makes the library filename
+consistent with the selected source candidate without establishing actual
+wheel correspondence. It also preserves upstream release-workflow metadata
+and an offline-replayable source/history bundle; no runtime was replaced.

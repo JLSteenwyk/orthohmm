@@ -1,0 +1,85 @@
+{
+  "bundle": {
+    "bytes": 2856754,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle",
+    "sha256": "046d13fae6cf2621a7540200c061654f893f06867a91902c6788eb7ef66aab4f"
+  },
+  "commands": [
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928",
+        "init"
+      ],
+      "returncode": 0,
+      "stderr": "hint: Using 'master' as the name for the initial branch. This default branch name\nhint: is subject to change. To configure the initial branch name to use in all\nhint: of your new repositories, which will suppress this warning, call:\nhint: \nhint: \tgit config --global init.defaultBranch <name>\nhint: \nhint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\nhint: 'development'. The just-created branch can be renamed via this command:\nhint: \nhint: \tgit branch -m <name>\n",
+      "stdout": "Initialized empty Git repository in /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928/.git/\n"
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928",
+        "fetch",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle",
+        "refs/tags/0.12.0:refs/tags/0.12.0",
+        "refs/tags/0.11.1:refs/tags/0.11.1"
+      ],
+      "returncode": 0,
+      "stderr": "From /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleidenalg_preserved_source_20260928/release-history.bundle\n * [new tag]         0.12.0     -> 0.12.0\n * [new tag]         0.11.1     -> 0.11.1\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928",
+        "fsck",
+        "--full",
+        "--no-reflogs"
+      ],
+      "returncode": 0,
+      "stderr": "notice: HEAD points to an unborn branch (master)\n",
+      "stdout": ""
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928",
+        "describe",
+        "7ce12032cd61a38caebc52881ce1f1a1be4f0d28"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "0.11.1-13-g7ce1203\n"
+    },
+    {
+      "command": [
+        "git",
+        "--no-replace-objects",
+        "-C",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/libleiden_bundle_replay_20260928",
+        "describe",
+        "--tags",
+        "--exact-match",
+        "7ce12032cd61a38caebc52881ce1f1a1be4f0d28"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "0.12.0\n"
+    }
+  ],
+  "limitations": [
+    "Reconstructs source Git history/version labels only; not compiler output or wheel correspondence."
+  ],
+  "native_code_built": false,
+  "network_used": false,
+  "status": "offline_bundle_reproduces_git_version_labels",
+  "wheel_source_identity_established": false
+}
