@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Controller And Review History Bound To Panel Guard (2026-09-28)
+
+Previous turn validated local controller records on a sleep-only allocation.
+Added a history reader that binds hash-pinned plan, session, controller and
+review records before calling the sequential panel guard. Controller queries
+must target the session's job and exit successfully; recorded resource policy
+is checked by the Threadripper validator. Completed jobs with nonzero scheduler
+exit status are rejected as contradictory. Session indices must be contiguous.
+
+All four review categories carry the same plan hash, run index and job ID,
+plus nonempty pinned supporting evidence. Changed evidence or a review copied
+from another identity is rejected. Missing review remains a wait-for-review
+state, not permission to proceed. The reader performs no submission, mutation
+of runtime state or timing admission.
+
+Seventy-one focused tests passed in 0.47 seconds across the history reader,
+controller validator and panel guard. Tests include rehashed wrong-identity
+reviews, supporting-file drift, failed/wrong-job controller queries and
+contradictory scheduler outcomes. These are synthetic composition tests, not
+a production run or proof of the scientific validity of review decisions.
+The reader explicitly leaves source authenticity, observation freshness,
+native-outcome audits, frozen caller arguments and fresh quiet-host eligibility
+to the production executor. Those remaining connections must be completed
+before launch. No scientific default or frozen benchmark result changed; the
+full publication goal remains active and incomplete.
+
 ## Local Controller Allocation Validation (2026-09-28)
 
 Previous turn implemented the sequential panel guard. Added a local controller
