@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Broccoli Archive Inspected: Original Reference Still Missing (2026-09-28)
+
+Previous turn completed the cited main-draft layout review. This turn polled
+the same live retrieval job until accounting confirmed job 22357 COMPLETED,
+0:0, in 5m02s. The 719,576,680-byte archive matches its published MD5 and has
+SHA256 `af1477ce664c2b6678e6a6215635421beb76125b70ddb90b14dce76781d5fc48`.
+No duplicate download or automatic retry was launched.
+
+Inspected 52 outer ZIP entries, all five nested QfO result tarballs (62 entries
+each), and all five fungal-proteome ZIP name inventories. Across 625 outer
+and nested names, none identifies an NHX file or `treefam2reference` mapping.
+Read both actual READMEs and scanned all five compressed TreeFam pair exports:
+each has 91,278 four-column rows and only the pooled dataset label `TreeFamA`.
+They supply correctness labels, not original-family identities. See the
+[search receipt](broccoli_treefam_search_22357.json) for checksums and counts.
+
+This is a bounded negative result for this archive. Protein payloads and
+uploaded predictions were not exhaustively searched for embedded source data;
+the search does not establish that originals are unavailable elsewhere.
+Historical QfO 2018 scores were not added to the current QfO 2020 comparison.
+No archive paths were extracted, downloaded code executed, maintainer contacted
+or DGX accessed. Raw downloads stay local. TreeFam family-level uncertainty
+remains unresolved, and the full publication goal remains active.
+
 ## Cited Main Draft Visually Reviewed (2026-09-28)
 
 Previous turn made progress by submitting the public Broccoli archive retrieval.

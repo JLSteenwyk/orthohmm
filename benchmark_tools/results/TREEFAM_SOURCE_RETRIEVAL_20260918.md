@@ -297,6 +297,24 @@ without extraction or execution. Job state was verified RUNNING. See
 [submission evidence](broccoli_treefam_submission_22357.json). Content
 inspection and checksum validation remain pending; no originals are admitted.
 
+### Broccoli Supplement Inspection Completed (2026-09-28)
+
+Job 22357 completed 0:0 in 5m02s. The archive has the expected size and MD5;
+SHA256 is `af1477ce664c2b6678e6a6215635421beb76125b70ddb90b14dce76781d5fc48`.
+The two READMEs describe uploaded predictions, benchmark outputs and fungal
+proteomes. Inspected the 52 outer entries, five QfO tarballs (62 entries each)
+and five proteome ZIP inventories (67/19/11/131/35 entries). No NHX or
+`treefam2reference` filename occurs in these 625 member names.
+
+Each of the five TreeFam raw benchmark exports contains 91,278 four-column
+rows: pooled dataset name, two protein identifiers and a correctness label.
+Every dataset label is `TreeFamA`; none supplies original-family identities.
+See [the completed inspection receipt](broccoli_treefam_search_22357.json).
+No original trees or mapping were recovered. This bounded search did not scan
+all protein/prediction payloads for embedded reference material and does not
+prove global unavailability. No QfO 2018 score was substituted for the retained
+QfO 2020 evaluation, and no contact was made.
+
 ### Historical Contact Draft (Not Authorized)
 
 The earlier proposed next step was to request the QfO 2020/2020.2 reference-generation source bundle from the QfO

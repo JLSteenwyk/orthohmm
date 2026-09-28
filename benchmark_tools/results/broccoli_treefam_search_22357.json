@@ -1,0 +1,164 @@
+{
+  "archive": {
+    "bytes": 719576680,
+    "md5": "fd77f9ef7a5b82a87143b603902901d4",
+    "member_count": 52,
+    "sha256": "af1477ce664c2b6678e6a6215635421beb76125b70ddb90b14dce76781d5fc48",
+    "url": "https://zenodo.org/api/records/3710751/files/data_Zenodo.zip/content"
+  },
+  "evidence": [
+    {
+      "bytes": 4311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/zenodo_record.json",
+      "sha256": "67ffa81d84401d6f53d585547d41ce31ce51228e3e6e7dcfaae461ce315b0d2e"
+    },
+    {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/scheduled_download_started.json",
+      "sha256": "ce38df02b087791b562f10072fdba7c24e2da7d554441e444116e3b4a1f37676"
+    },
+    {
+      "bytes": 92,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/scheduled_download_finished.json",
+      "sha256": "cf0fa526e300e7179d7f350c6f3bd033f3f7619db0630dd220471ea1de5cb0b8"
+    },
+    {
+      "bytes": 11501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/inventory.json",
+      "sha256": "4ca8b1c03839432e0010cab3439e04e746c6d58d4c8ca58d366ffe8298ff682c"
+    },
+    {
+      "bytes": 43544,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/nested_qfo_inventory.json",
+      "sha256": "80f12fa271c1addeecae97209e5cfa838d9c31e89562974b29e8afcb8d92f922"
+    },
+    {
+      "bytes": 27276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/content_review.json",
+      "sha256": "c21adeca3cefde1bd69883ceeb216c35b97a500923dca00e0603afdd21f0a072"
+    }
+  ],
+  "job_id": 22357,
+  "limitations": [
+    "Bounded negative search of this archive, not proof the originals are unavailable elsewhere.",
+    "Five QfO 2018 exports pool all 91278 labeled pairs under TreeFamA; no family identities recovered.",
+    "These historical external results are not added to the current QfO 2020 method comparison.",
+    "Protein payloads and uploaded prediction text were not exhaustively searched for embedded reference data.",
+    "No maintainer contact, DGX access, downloaded-code execution or reference substitution."
+  ],
+  "original_name_hits": [],
+  "originals_recovered": false,
+  "proteome_nested_member_counts": [
+    67,
+    19,
+    11,
+    131,
+    35
+  ],
+  "qfo_nested_member_counts": [
+    62,
+    62,
+    62,
+    62,
+    62
+  ],
+  "scheduler": "JobID|State|ExitCode|Elapsed\n22357|COMPLETED|0:0|00:05:02\n22357.batch|COMPLETED|0:0|00:05:02\n",
+  "status": "public_archive_inspected_originals_not_recovered",
+  "treefam_exports": [
+    {
+      "archive": "data_Zenodo/quest_for_orthologs_2018/QfO_2018__Broccoli_v1.1__ratio_ortho_0.7.tar.gz",
+      "compressed_sha256": "e5fda8f26b8d903966bfdc9288aab572e0d55eb06c64ca39e22e476cb72b7956",
+      "correctness_counts": {
+        "FN": 16804,
+        "FP": 1502,
+        "TN": 40549,
+        "TP": 32423
+      },
+      "dataset_labels": [
+        "TreeFamA"
+      ],
+      "decompressed_sha256": "d28a0ea23ea202a4983331a39ef1ef1148e82fb37482983f8b05499d33d39eb6",
+      "header": [
+        "# Dataset<tab>Protein ID 1<tab>Protein ID 2<tab>Correctness (TP:True positive, FP: False positive, TN: True Negative. FN: False Negative)"
+      ],
+      "member": "data/TreeFam-A/RefPhylo-TreeFam-A_Broc.-ratio=0.7_735ec8a35d1b_raw.txt.gz",
+      "rows": 91278
+    },
+    {
+      "archive": "data_Zenodo/quest_for_orthologs_2018/QfO_2018__Broccoli_v1.1__ratio_ortho_0.3.tar.gz",
+      "compressed_sha256": "c40c4f1a7f1552b07e6b5d744517256f554ae2197ce3c38449428b488d34cb2c",
+      "correctness_counts": {
+        "FN": 13925,
+        "FP": 2559,
+        "TN": 39492,
+        "TP": 35302
+      },
+      "dataset_labels": [
+        "TreeFamA"
+      ],
+      "decompressed_sha256": "9ba1d22db4ce0c6fa32112a949ce964453096ee8f33dfeaf2ffbafcda570c006",
+      "header": [
+        "# Dataset<tab>Protein ID 1<tab>Protein ID 2<tab>Correctness (TP:True positive, FP: False positive, TN: True Negative. FN: False Negative)"
+      ],
+      "member": "data/TreeFam-A/RefPhylo-TreeFam-A_Broc.-ratio=0.3_03c16f2ba00e_raw.txt.gz",
+      "rows": 91278
+    },
+    {
+      "archive": "data_Zenodo/quest_for_orthologs_2018/QfO_2018__Broccoli_v1.1__ratio_ortho_0.6.tar.gz",
+      "compressed_sha256": "18f491c95d9a29f2695c1948cadf8415873eb38bac97f3e63d5baa363f1c5572",
+      "correctness_counts": {
+        "FN": 15888,
+        "FP": 1713,
+        "TN": 40338,
+        "TP": 33339
+      },
+      "dataset_labels": [
+        "TreeFamA"
+      ],
+      "decompressed_sha256": "9cc30f12153036678f4e4b79d604305b9385889d6bc775abea613c02986ca96d",
+      "header": [
+        "# Dataset<tab>Protein ID 1<tab>Protein ID 2<tab>Correctness (TP:True positive, FP: False positive, TN: True Negative. FN: False Negative)"
+      ],
+      "member": "data/TreeFam-A/RefPhylo-TreeFam-A_Broc.-ratio=0.6_b17afab9c50e_raw.txt.gz",
+      "rows": 91278
+    },
+    {
+      "archive": "data_Zenodo/quest_for_orthologs_2018/QfO_2018__Broccoli_v1.1__default.tar.gz",
+      "compressed_sha256": "e87465f8da944547bbda66ad35d27678005decfecb93110c3200cd88500d4b05",
+      "correctness_counts": {
+        "FN": 15165,
+        "FP": 1849,
+        "TN": 40202,
+        "TP": 34062
+      },
+      "dataset_labels": [
+        "TreeFamA"
+      ],
+      "decompressed_sha256": "6f7036974021cb00b80015e907a47a59f5729bdff25d249a522c3c2c39969b57",
+      "header": [
+        "# Dataset<tab>Protein ID 1<tab>Protein ID 2<tab>Correctness (TP:True positive, FP: False positive, TN: True Negative. FN: False Negative)"
+      ],
+      "member": "data/TreeFam-A/RefPhylo-TreeFam-A_Broccoli-1.1_8c4ea263e43d_raw.txt.gz",
+      "rows": 91278
+    },
+    {
+      "archive": "data_Zenodo/quest_for_orthologs_2018/QfO_2018__Broccoli_v1.1__ratio_ortho_0.4.tar.gz",
+      "compressed_sha256": "2a50ed0273306b278f0e47702b1c9c2bd727450d03ac55226d8b8d7d410c58fe",
+      "correctness_counts": {
+        "FN": 14504,
+        "FP": 2140,
+        "TN": 39911,
+        "TP": 34723
+      },
+      "dataset_labels": [
+        "TreeFamA"
+      ],
+      "decompressed_sha256": "2cc9f06a659d01e030e56da8dbae52e1a9f4d07d88b0ab236b1bcbc69edc7b1b",
+      "header": [
+        "# Dataset<tab>Protein ID 1<tab>Protein ID 2<tab>Correctness (TP:True positive, FP: False positive, TN: True Negative. FN: False Negative)"
+      ],
+      "member": "data/TreeFam-A/RefPhylo-TreeFam-A_Broc.-ratio=0.4_672fab41a3cd_raw.txt.gz",
+      "rows": 91278
+    }
+  ]
+}
