@@ -1,0 +1,110 @@
+{
+  "benchmark_scores_changed": false,
+  "boundary_cases": [
+    {
+      "configured_limit": 1000000000000000,
+      "injected_paths": 999999999999999,
+      "rejected": false
+    },
+    {
+      "configured_limit": 1000000000000000,
+      "injected_paths": 1000000000000000,
+      "rejected": false
+    },
+    {
+      "configured_limit": 1000000000000000,
+      "injected_paths": 1000000000000001,
+      "rejected": true
+    },
+    {
+      "configured_limit": 1,
+      "injected_paths": 1000000000000001,
+      "rejected": false
+    }
+  ],
+  "control_json": {
+    "P1_P2": [
+      "0.2",
+      "0.8"
+    ],
+    "P3_P4": [
+      "NA",
+      "0.8"
+    ],
+    "P5_P6": [
+      "0.2",
+      "NA"
+    ]
+  },
+  "control_retained": [
+    {
+      "pair": [
+        "P1",
+        "P2"
+      ],
+      "value": 0.5
+    }
+  ],
+  "greedyfas_version": "1.18.7",
+  "historical_omissions_attributed": false,
+  "limitations": [
+    "Boundary cases mock graph preparation; separate synthetic architecture cases use native graph construction.",
+    "Synthetic architecture checks do not calculate any real protein's feature-path count.",
+    "Confirms a native mechanism, not the identities or causes of the historical missing scores.",
+    "No historical RNG state, sampled missing.txt or temporary FAS JSON is reconstructed."
+  ],
+  "rejected_pair_json": {
+    "P1_P2": [
+      "NA",
+      "NA"
+    ]
+  },
+  "rejected_pair_loader_entries": 0,
+  "sources": [
+    {
+      "bytes": 6474,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_fas_omission.py",
+      "sha256": "b954c71e056c945e930a2ea3773ae6a7f2e51d678dc92bb25364bd0f8781e739"
+    },
+    {
+      "bytes": 9930,
+      "path": "/benchmark/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    {
+      "bytes": 53457,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/greedyFAS.py",
+      "sha256": "f82a78d2787d30f106a58c760cae49d28f28d55956ad188b0b259ec8b9f0f7e8"
+    },
+    {
+      "bytes": 19322,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasOutput.py",
+      "sha256": "a2ad7a42f16a32943eb4773f0e3cde526f8c0b0e1e07d331ee187ce94f4dff4f"
+    },
+    {
+      "bytes": 20095,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/calcFAS.py",
+      "sha256": "40a920fcce24d76e7441f5f9368aa6232d779815956742c725ca16a169980c2b"
+    },
+    {
+      "bytes": 21457,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/calcFASmulti.py",
+      "sha256": "7f9621c0dc6737c8b928c0cf35575101decc4af1cf039e4f3c044e80ce460b75"
+    }
+  ],
+  "status": "native_fas_path_limit_omission_mechanism_verified",
+  "unmocked_synthetic_architectures": [
+    {
+      "alternatives_per_region": 2,
+      "native_path_count": 562949953421312,
+      "regions": 49,
+      "rejected": false
+    },
+    {
+      "alternatives_per_region": 2,
+      "native_path_count": 1125899906842624,
+      "regions": 50,
+      "rejected": true
+    }
+  ]
+}

@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Verify A Native FAS Omission Mechanism (2026-09-28)
+
+Previous turn made progress by pushing the attrition audit as `31546d83`.
+Reread the full goal and followed the omission path inside the exact retained
+FAS container. A [controlled native probe](QFO_FAS_OMISSION_MECHANISM_20260928.md)
+verifies that exceeding `10**15` feature paths yields NA values which QfO
+discards. Four injected boundary cases and two unmocked synthetic annotation
+architectures exercise the cutoff; native pair output, JSON serialization and
+numeric/mixed-NA loader controls behave as expected. The complete probe JSON
+reproduces on a second container execution with image/environment pins checked.
+
+This verifies a possible mechanism, not historical attribution of the 1,252
+missing OrthoMCL FAS scores. No real protein path counts, original sampled
+pair identities or intermediate results were recovered. No settings, scores
+or benchmark references changed. Family-aware uncertainty, controlled timing
+and release completion remain open. No DGX access or unrelated-job action
+occurred; the publication goal remains active.
+
 ## Bound FAS Requested-Sample Attrition (2026-09-28)
 
 Previous turn made progress by pushing manuscript integration as `5b63a8c7`.

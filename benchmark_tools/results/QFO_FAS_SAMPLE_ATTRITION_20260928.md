@@ -68,3 +68,7 @@ python -B -m pytest -q tests/unit/test_audit_fas_sample_attrition.py \
 
 No inference was rerun, no native benchmark score or reference changed, and
 no confidence interval is admitted.
+
+A subsequent [native-container probe](QFO_FAS_OMISSION_MECHANISM_20260928.md)
+confirms a feature-path-limit-to-NA-to-omission mechanism with synthetic
+controls. It does not attribute the historical missing pairs to that mechanism.

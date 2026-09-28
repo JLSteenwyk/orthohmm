@@ -1,0 +1,46 @@
+{
+  "command": [
+    "/usr/local/bin/singularity",
+    "exec",
+    "--cleanenv",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img",
+    "python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_fas_omission.py",
+    "--output",
+    "/tmp/native_fas_omission_recheck_20260928.json"
+  ],
+  "environment": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "executable": {
+    "bytes": 78083160,
+    "path": "/usr/local/bin/singularity",
+    "sha256": "873e089dd4ffaf78540b2d46458f750ff5c5bcc04156e7c6f68c1f473570a628"
+  },
+  "exit_code": 0,
+  "full_json_reproduced": true,
+  "image": {
+    "bytes": 76308480,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img",
+    "sha256": "62b8f97bca23b67d451384f94108a5510d5fafc1bc398f95ab93532d324563fe"
+  },
+  "limitations": [
+    "Native source mechanism probe with mocked boundary cases and unmocked synthetic feature graphs, not historical missing-pair attribution.",
+    "The container and environment pins are checked here; this is not a comprehensive runtime security review."
+  ],
+  "probe": {
+    "bytes": 3037,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_fas_omission_probe_20260928.json",
+    "sha256": "89c57e032bc45999ec7de1a95acf264fe00991c9b05f6716c3573b7964155c69"
+  },
+  "recheck": {
+    "bytes": 3037,
+    "path": "/tmp/native_fas_omission_recheck_20260928.json",
+    "sha256": "89c57e032bc45999ec7de1a95acf264fe00991c9b05f6716c3573b7964155c69"
+  },
+  "status": "pinned_container_native_probe_reproduced",
+  "stderr": "",
+  "stdout": ""
+}
