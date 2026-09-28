@@ -20,6 +20,7 @@ from benchmark_tools.measure_native_root_context import read_point as read_root_
 from benchmark_tools.probe_host_counters import snapshot
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.command_host_monitor import HostMonitor
+from benchmark_tools.observe_threadripper_process_identity import enriched_snapshot
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 from benchmark_tools.observe_thread_affinity import observe
@@ -112,7 +113,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             scope = scoped_path(ready["cgroup"], job_id)
             # Exclude all of this job, including its observer and sibling steps.
             job_scope = next(parent for parent in scope.parents if parent.name == f"job_{job_id}")
-            host = HostMonitor(host_log, str(job_scope))
+            host = HostMonitor(host_log, str(job_scope), sample_fn=enriched_snapshot)
             host.observe()
             next_host = time.monotonic() + host_interval_s
             job_memory_before = read_job_memory(job_scope)

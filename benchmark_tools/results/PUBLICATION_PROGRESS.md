@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Typed Process Stream And Interval Review (2026-09-28)
+
+Previous turn completed and pushed the quantitative biological manuscript
+milestone as d4d1d147. Returned to the actual timing collector: it previously
+recorded untyped process snapshots, which could not support the reviewed v2
+kernel-thread identity policy throughout a run. The local collector now records
+typed samples at its existing initial/periodic/final observation points.
+
+Added a streaming reviewer that recomputes every adjacent interval, preserves
+missing-record failures, enforces native bracketing and caller-supplied CPU and
+sample-period bounds. 204 focused tests pass, including serialization through
+the actual HostMonitor and middle-only contamination controls. See the
+[contract and remaining work](THREADRIPPER_PROCESS_STREAM_20260928.md).
+
+No real policy or new numerical limits were approved. Final admission wiring,
+other whole-run environmental checks, native and full-scale observer validation,
+and a quiet window remain required. Changed observer source needs a new frozen
+recipe; old fixtures cannot validate its overhead. No production benchmark or
+DGX action occurred. The full publication goal remains active.
+
 ## Quantitative WGD Results In Main Text (2026-09-28)
 
 After confirming the goal already specifies Threadripper-only timing, resumed

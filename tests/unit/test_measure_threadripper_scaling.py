@@ -59,8 +59,10 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
     monkeypatch.setattr(collector.subprocess, "Popen", lambda *a, **k: Process())
     monkeypatch.setattr(collector, "wait_file", lambda *a: dict(pid=1,
         cgroup="0::/slurm/job_42/step_0/user/task_0\n", placement={}))
-    monkeypatch.setattr(collector, "HostMonitor", lambda *a: SimpleNamespace(
-        observe=lambda: None, summary=lambda *a: {}))
+    def host_monitor(*args, sample_fn):
+        assert sample_fn is collector.enriched_snapshot
+        return SimpleNamespace(observe=lambda: None, summary=lambda *a: {})
+    monkeypatch.setattr(collector, "HostMonitor", host_monitor)
     monkeypatch.setattr(collector, "read_job_memory", lambda *a: {})
     clock = collector.time.monotonic
     offset = [0.]
