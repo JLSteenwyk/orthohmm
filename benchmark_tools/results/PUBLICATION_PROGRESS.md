@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Live Thread Controls and Local Runtime Verified (2026-09-28)
+
+Previous turn completed the sleep collector/replay diagnostic. Added a bounded
+multithreaded control and seven tests; 45 local collector/affinity/control tests
+passed in 0.53 seconds. Slurm job 22343 completed 0:0 in 25 seconds, with two
+sequential native steps. Both controls launched a parent and child, each with
+two additional sleeping threads. In the positive violation control, only one
+child thread deliberately widened its mask to CPUs 0 and 96, within the
+reserved cpuset; both process leaders retained CPUs 0-31. The full collector
+and replay identified the exact violating TID in eight complete simultaneous
+observations. The clean control also yielded eight complete matching points.
+All raw points, native identities, replays and source hashes are pinned in the
+[receipt](threadripper_thread_controls_20260928.json). No unrelated task changed.
+
+The retained local environment passed `verify_environment` and executable
+resolution against the frozen native-method manifest (SHA256 bf677728...eb2f,
+matching `METHOD_SHA`). This checks the frozen core revision, recorded source,
+native-runtime, adapter and OrthoFinder distribution hashes, both package
+inventories, and the profile-construction smoke test. It does not establish
+full inference/output equivalence, input enumeration or observer overhead.
+No dependencies or scientific settings were changed.
+
+Host monitoring still detected 67.75 and 69.28 outside-job CPU-core equivalents
+in the two controls. They are engineering evidence, not controlled timing.
+Next: native enumeration and executor/provenance integration, bounded native
+pipeline validation and overhead assessment, plus quiet-window coordination.
+The 27 scientific runs remain unrun; broader uncertainty, TreeFam originals
+and publication release requirements remain open. No DGX access occurred.
+
 ## Threadripper Collector and Replay Tested (2026-09-28)
 
 Previous turn added affinity evidence. Integrated it into a separate local

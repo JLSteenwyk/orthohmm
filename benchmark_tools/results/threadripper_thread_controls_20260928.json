@@ -1,0 +1,699 @@
+{
+  "controls": {
+    "controls": [
+      {
+        "complete_matching_points": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "expected_masks": {
+          "1209482": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209483": [
+            0
+          ],
+          "1209484": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209485": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209486": [
+            0
+          ],
+          "1209487": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ]
+        },
+        "expected_violating_tids": [],
+        "mode": "clean",
+        "scientific_timings_admitted": false
+      },
+      {
+        "complete_matching_points": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "expected_masks": {
+          "1209637": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209638": [
+            0
+          ],
+          "1209639": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209640": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          "1209641": [
+            0,
+            96
+          ],
+          "1209642": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ]
+        },
+        "expected_violating_tids": [
+          1209641
+        ],
+        "mode": "widen",
+        "scientific_timings_admitted": false
+      }
+    ],
+    "job_id": 22343,
+    "limitations": [
+      "Sleeping threads, not a compute-heavy native engine or overhead assessment.",
+      "Deliberate widening changes only the control child thread, within its reserved cpuset."
+    ],
+    "scientific_timings_admitted": false,
+    "sources": [
+      {
+        "bytes": 5937,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_threads.py",
+        "sha256": "3efc5c559a68738fd0a9a1608456765e1fc76ac565810516e6ccac87480f631e"
+      }
+    ],
+    "status": "thread_affinity_controls_observed"
+  },
+  "diagnostics": {
+    "clean": {
+      "affinity_statuses": [
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity",
+        "observed_within_affinity"
+      ],
+      "host_process_replay": {
+        "command_bracketed_by_samples": true,
+        "command_launch_started_monotonic_s": 258909.481929648,
+        "command_wait_finished_monotonic_s": 258917.722483202,
+        "controlled_workload_verified": false,
+        "interval_counts": {
+          "competing_cpu_observed": 1
+        },
+        "maximum_between_snapshot_gap_s": 9.051381981000304,
+        "maximum_observed_foreign_average_cores": 67.7543125777606,
+        "observation_errors": 0,
+        "observer_pid": 1209460,
+        "status": "competing_cpu_observed",
+        "successful_snapshots": 2,
+        "threshold_average_cores": 0.25
+      },
+      "native_outcome": "exited_zero",
+      "native_wall_s": 8.240553554
+    },
+    "widen": {
+      "affinity_statuses": [
+        "observed_within_affinity",
+        "violation",
+        "violation",
+        "violation",
+        "violation",
+        "violation",
+        "violation",
+        "violation",
+        "violation",
+        "observed_within_affinity"
+      ],
+      "host_process_replay": {
+        "command_bracketed_by_samples": true,
+        "command_launch_started_monotonic_s": 258921.680608059,
+        "command_wait_finished_monotonic_s": 258929.92048805,
+        "controlled_workload_verified": false,
+        "interval_counts": {
+          "competing_cpu_observed": 1
+        },
+        "maximum_between_snapshot_gap_s": 9.049222508008825,
+        "maximum_observed_foreign_average_cores": 69.27525331888978,
+        "observation_errors": 0,
+        "observer_pid": 1209460,
+        "status": "competing_cpu_observed",
+        "successful_snapshots": 2,
+        "threshold_average_cores": 0.25
+      },
+      "native_outcome": "exited_zero",
+      "native_wall_s": 8.239879991
+    }
+  },
+  "publication_ready": false,
+  "raw_evidence": [
+    {
+      "bytes": 273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/command.json",
+      "sha256": "ba6901ed3f62713f845e90aff3772c78b00178a67fafe06bda69395b0d33cacf"
+    },
+    {
+      "bytes": 43317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/done.json",
+      "sha256": "3fd5f53b7c5f441380039cf43455618866b186d28d12579d6379ea27dc96d60e"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 1266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/host_process_summary.json",
+      "sha256": "b6ad4082fbe0185ac4b2829f3e79f1f7c6cf24cfc6397837e454b480c94a2d76"
+    },
+    {
+      "bytes": 986485,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/host_processes.jsonl",
+      "sha256": "ca290b6eb8adbb45180f191205bb3a007fbf86ab3c78ee6fef91478c4aca741c"
+    },
+    {
+      "bytes": 1943260,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/lineage_report.json",
+      "sha256": "9f043cf8d39bd756a14c4d360035c77795e33bcce35b59d52aabd8f02f793756"
+    },
+    {
+      "bytes": 773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/native.log",
+      "sha256": "4f82f9ee5687076d6c508416c2b37d78d3e0560dd66bc6c6032aef8bb4068af1"
+    },
+    {
+      "bytes": 179072,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000000.json",
+      "sha256": "50d908428e78952b94bfa9b7bda561533bc2ec269cbe1c3c889619894f395250"
+    },
+    {
+      "bytes": 182345,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000001.json",
+      "sha256": "749eb95aff1229e5a4cd3ef97b82ed0c0a003d30a0717fa7f8cdadf725b4dccb"
+    },
+    {
+      "bytes": 182348,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000002.json",
+      "sha256": "702447f436d667a5b922c8d9e1f1b4f793f24bd7532b642f02e8e60efeec9a79"
+    },
+    {
+      "bytes": 182370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000003.json",
+      "sha256": "9d1829797c73656c12d42a7c061b508dd4000d4873864af0a4d53fed1c281e0f"
+    },
+    {
+      "bytes": 182388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000004.json",
+      "sha256": "d94ad35ff953537073c8d0c1b12431597b156732611dad2adae0e2c1dfeb6f53"
+    },
+    {
+      "bytes": 182388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000005.json",
+      "sha256": "8843f795ab5f472aab844cf73299e705bd954c5a064bf5e05084d259585b941d"
+    },
+    {
+      "bytes": 182388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000006.json",
+      "sha256": "9de351004e1b385d1f08bb6dbcae202d83cec9e6877d5ca7121e7406c6bafdca"
+    },
+    {
+      "bytes": 182388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000007.json",
+      "sha256": "e26ead47190cfc51bb57952d16e175c02b48d9e295c21f5c0349d3335c4737b8"
+    },
+    {
+      "bytes": 182370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000008.json",
+      "sha256": "1ed9872dd64133f3e2734636718ee9aa811ec629f8ed6b4bad74039578cf2d87"
+    },
+    {
+      "bytes": 179100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/point_000009.json",
+      "sha256": "9ce50f9d0f908759d1a73c9e8aa0139b79296a611391ccd033c403f03c15f096"
+    },
+    {
+      "bytes": 4596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/ready.json",
+      "sha256": "ddabec9ed1bee47fb877412717d33687c564c8d3f0b8a28fa4d5037bbb3644f6"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/release.json",
+      "sha256": "97aa4094cf40964d4b06c69bc00faa9fcdf489fbc23874e89b1fe2ef1fead868"
+    },
+    {
+      "bytes": 1279873,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/root_context_report.json",
+      "sha256": "d82caeb5d24b73ac7d547d4bd60bce3c7b80338256f828b42c13692672d51635"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/step.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean/step_memory.json",
+      "sha256": "d1c1106bd9835f7350c3547a7331d185c347a1eb857850bafdd8cfc646fa7821"
+    },
+    {
+      "bytes": 3296835,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/clean_replay.json",
+      "sha256": "7c92e5dfa8fe2fdd1028e0e24747f422d25bf721a5df2f4667652d2c057f487a"
+    },
+    {
+      "bytes": 5119,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/controls.json",
+      "sha256": "ddf1f3a08cfbd98e4eecc675109a648a647e9e6d4f18ea43e9fa96a352858f39"
+    },
+    {
+      "bytes": 273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/command.json",
+      "sha256": "dc943f6ff2015b739d6c55fafd576d1452eb00cb39e4b061b904d470c6a924e4"
+    },
+    {
+      "bytes": 43318,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/done.json",
+      "sha256": "a4586e38f892dbc698a41eead64bb8632a60ce9d6d87504c0fecfbdb2e7629e5"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 1266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/host_process_summary.json",
+      "sha256": "3b26820285a259a6e9a0060280ba0d7f69067d14c4f9d2eae0c70d0564eb0acc"
+    },
+    {
+      "bytes": 987995,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/host_processes.jsonl",
+      "sha256": "102cd763e08b2a1cb930218f51b42e1a23f28cf5f511abe6d4420a3beb383373"
+    },
+    {
+      "bytes": 1944099,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/lineage_report.json",
+      "sha256": "19f136919b727a465a4c42ea6319ca7124b9e792cf029ff7e10efba7e9c7697b"
+    },
+    {
+      "bytes": 777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/native.log",
+      "sha256": "40fc0f58017256f71208e5226c7211d43bccd95550887188c5f8712c5f3d4339"
+    },
+    {
+      "bytes": 179108,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000000.json",
+      "sha256": "4de41418c6e986acd5a587ba167533736fa5f03ec369559b9f31ad7bc29592db"
+    },
+    {
+      "bytes": 182421,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000001.json",
+      "sha256": "9b88166e281e1be28db06bc0040cb339748c253e7625d2a6a268c3550f97ca17"
+    },
+    {
+      "bytes": 182443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000002.json",
+      "sha256": "e122001fc2c61af4b8083b80ff6dfeaa23dc78e298259969fab340275bb94cb4"
+    },
+    {
+      "bytes": 182443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000003.json",
+      "sha256": "6ecfab53d6a4e96254ad833d9052f0b8786ddb4d01ad7a184cad3ee04138b558"
+    },
+    {
+      "bytes": 182461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000004.json",
+      "sha256": "8dcddf2b5a57fc8111b8e75d2b20fcd3dd0c7ab5a1d144d985aa575f92990e9b"
+    },
+    {
+      "bytes": 182461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000005.json",
+      "sha256": "a12df1edd8bdc8e3aeb2f5127a309794ec4d8c63eee87b7f59b3d58eb798a916"
+    },
+    {
+      "bytes": 182461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000006.json",
+      "sha256": "c2c6bc55569fab06c55a65d1dbdbf86b7aee7ddc81063351000bf354da65e577"
+    },
+    {
+      "bytes": 182461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000007.json",
+      "sha256": "a13dfccffb3b28003e4f2972b6d1297455b53786cb2c128d8a0ba1a45bbdc215"
+    },
+    {
+      "bytes": 182479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000008.json",
+      "sha256": "66ae5dd0394881d17ce6cde878fa4743ce51236e384279e1983c59d49a996400"
+    },
+    {
+      "bytes": 179168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/point_000009.json",
+      "sha256": "6398cd2f2f1485ce18fcb698333ed867274ac04054770f6b9d65f48a35312693"
+    },
+    {
+      "bytes": 4596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/ready.json",
+      "sha256": "efc62be6d80a9c582e9223f84c5db8661d8308f0d31405b757e3f244d26ff9d3"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/release.json",
+      "sha256": "97aa4094cf40964d4b06c69bc00faa9fcdf489fbc23874e89b1fe2ef1fead868"
+    },
+    {
+      "bytes": 1281127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/root_context_report.json",
+      "sha256": "9beb447c925c1f1fd6ca4a281fe5423f4230927ac019dde5b60131bd579f6722"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/step.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen/step_memory.json",
+      "sha256": "5d5a2fc4fad62b530c43074455eca8c7d72b6603c49dca1532b2a229cf60aedd"
+    },
+    {
+      "bytes": 3298817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_thread_controls_20260928/widen_replay.json",
+      "sha256": "d2f9bd022bbfcad307adee114e67bcc7ce01e775f61ffb97ebdd219755946dc3"
+    },
+    {
+      "bytes": 768,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_check_20260928.json",
+      "sha256": "7ffb10871cf2d58697796d188a3ed5e4b658e882e7d6c757822ef6fd9ed4b78f"
+    }
+  ],
+  "runtime_check": {
+    "baseline": {
+      "bytes": 488540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_variable_native_methods_20260916.json",
+      "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+    },
+    "finished_epoch": 1790611275.0682926,
+    "resolved_executables": {
+      "FastTree": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+      "diamond": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64/diamond",
+      "mafft": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft"
+    },
+    "scientific_timings_admitted": false,
+    "started_epoch": 1790611273.6035454,
+    "status": "retained_local_environment_verified"
+  },
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 5937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_threads.py",
+      "sha256": "3efc5c559a68738fd0a9a1608456765e1fc76ac565810516e6ccac87480f631e"
+    },
+    {
+      "bytes": 9337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+      "sha256": "41411fe93467195fd159b8bb4289136621766e6603a644c8ebfe3cb7f87edb60"
+    },
+    {
+      "bytes": 11229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_threadripper_scaling.py",
+      "sha256": "390f77474159580ed20d01afdbc54aae25b3ae3572cbee67623865f8fc4733b7"
+    },
+    {
+      "bytes": 4309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+      "sha256": "9bb13b2fa23d48e73c528445009116ab64214d5a4585357eb9125215479e578a"
+    },
+    {
+      "bytes": 12030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_methods.py",
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    {
+      "bytes": 4014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_profile_runtime.py",
+      "sha256": "94f6dc4b3fe18e6a7ac7e9a95d4cdf67f98c6d9c5697cf08683e002c200f42d8"
+    }
+  ]
+}
