@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Bound FAS Requested-Sample Attrition (2026-09-28)
+
+Previous turn made progress by pushing manuscript integration as `5b63a8c7`.
+Read the objective again and investigated the FAS missing-score mechanism.
+The new [attrition audit](QFO_FAS_SAMPLE_ATTRITION_20260928.md) binds native
+tasks to byte-identical historically pinned raw outputs and reconciles both
+logged strata with ordered raw scores. Recovered OrthoMCL lacks 1,252/9,000
+requested new FAS values; other methods lack 1 to 49. This is not a BLAST
+failure count or proof of a particular FAS failure cause.
+
+Assuming omitted scores lie in [0,1], OrthoMCL's intended-sample mean lies in
+[0.724872, 0.736975]. All-method bounds and their full-precision inputs are
+retained. They are conditional missing-score sensitivity bounds, not paired
+confidence intervals or corrected population estimates. Sampling uncertainty,
+family dependence and missing-score identities remain unresolved. The initial
+task search correctly refused ambiguous shared result copies; command and
+participant checks now exclude downstream tasks. No benchmark score, frozen
+method or reference was changed. Controlled timing and release work remain
+open; no DGX access or unrelated-job action occurred.
+All 49 focused tests pass, and a second full audit reproduces both the JSON
+and generated table exactly. The publication goal remains active.
+
 ## Integrate Recovered Tree Scope Into Manuscript (2026-09-28)
 
 The preceding prompt-confirmation turn was no progress on publication work;
