@@ -1,0 +1,95 @@
+{
+  "capacity_scenario": {
+    "assumption": "85800-second timeout, one observation per second, plus two boundary observations; constant fixture-sized snapshots only",
+    "filesystem_available_bytes": 11947667578880,
+    "points_per_run": 85802,
+    "raw_bytes_27_runs": 416159091252,
+    "raw_bytes_per_run": 15413299676
+  },
+  "evidence": {
+    "disk": {
+      "bytes": 1368,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_retention_10000_disk_20260928/result.json",
+      "sha256": "41b3d161e5ed639840433bc2263024367f621bab15b9f81e36bf9200c9f271d0"
+    },
+    "list": {
+      "bytes": 1376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_retention_10000_list_20260928/result.json",
+      "sha256": "251107b35c59573c01915eab921630340e87ace308e9b434fab4aa49ad10d3bb"
+    }
+  },
+  "limitations": [
+    "Repeated retained snapshot, not live collector or native workload.",
+    "No production-size process/thread scaling, page-cache, total-job-memory or post-run-report validation.",
+    "Storage scenario excludes native outputs, reports and host logs; production observations may be larger.",
+    "Timings are shared-host diagnostic wall times, not speedup evidence.",
+    "Both probe processes exited zero; no production timing identity was launched."
+  ],
+  "raw_files": {
+    "bytes_each": 179638,
+    "count": 10000,
+    "total_bytes": 1796380000
+  },
+  "results": {
+    "disk": {
+      "count": 10000,
+      "limitations": [
+        "Repeated decoding of one retained snapshot, not live collection.",
+        "tracemalloc measures Python allocations, not process RSS, page cache or total job memory.",
+        "Disk mode writes every raw point; list mode measures the old retained history, not its additional writes.",
+        "No claim about native slowdown, full-day peak memory, thread-count scaling or post-run interval reports."
+      ],
+      "mode": "disk",
+      "raw": {
+        "bytes": 179638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v3_20260928/run_02/measurement/point_000001.json",
+        "sha256": "26fbdb3cf83d441bfb69631522f0849dd791e3eb34729159d71ecf433cda99f4"
+      },
+      "scientific_timings_admitted": false,
+      "sequence_source": {
+        "bytes": 1475,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/disk_observation_sequence.py",
+        "sha256": "2c12c6622d96feeb007f5ee11de57bec427ef3e6515d29ae4b05460bb224bcce"
+      },
+      "source": {
+        "bytes": 2269,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_observation_retention.py",
+        "sha256": "64d2c788449d7581979db4e7c8554a15059f112deb54229fd5f82da1721005d0"
+      },
+      "traced_current_bytes": 679351,
+      "traced_peak_bytes": 1556483,
+      "wall_s": 34.40996785496827
+    },
+    "list": {
+      "count": 10000,
+      "limitations": [
+        "Repeated decoding of one retained snapshot, not live collection.",
+        "tracemalloc measures Python allocations, not process RSS, page cache or total job memory.",
+        "Disk mode writes every raw point; list mode measures the old retained history, not its additional writes.",
+        "No claim about native slowdown, full-day peak memory, thread-count scaling or post-run interval reports."
+      ],
+      "mode": "list",
+      "raw": {
+        "bytes": 179638,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v3_20260928/run_02/measurement/point_000001.json",
+        "sha256": "26fbdb3cf83d441bfb69631522f0849dd791e3eb34729159d71ecf433cda99f4"
+      },
+      "scientific_timings_admitted": false,
+      "sequence_source": {
+        "bytes": 1475,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/disk_observation_sequence.py",
+        "sha256": "2c12c6622d96feeb007f5ee11de57bec427ef3e6515d29ae4b05460bb224bcce"
+      },
+      "source": {
+        "bytes": 2269,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_observation_retention.py",
+        "sha256": "64d2c788449d7581979db4e7c8554a15059f112deb54229fd5f82da1721005d0"
+      },
+      "traced_current_bytes": 1965361593,
+      "traced_peak_bytes": 1965364161,
+      "wall_s": 12.151727477961686
+    }
+  },
+  "scientific_timings_admitted": false,
+  "status": "extended_raw_observation_retention_diagnostic"
+}

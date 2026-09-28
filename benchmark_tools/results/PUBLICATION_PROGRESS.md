@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Extended Observation Retention Diagnostic (2026-09-28)
+
+Previous turn made progress by committing and pushing native runtime-check
+integration. This turn exercised the existing, unchanged retention probe at
+10,000 observations in both disk-backed and in-memory modes, ten times the
+previous diagnostic count. Both processes exited zero and retained endpoint
+checks passed. See the [result receipt](threadripper_retention_10000_20260928.json).
+
+Peak traced Python allocations were 1,556,483 bytes for disk-backed retention
+and 1,965,364,161 bytes for in-memory retention. Disk-backed current allocations
+were 679,351 bytes, so the results do not demonstrate an exactly constant
+allocation footprint. These are repeated decodings of one real retained
+snapshot, not 10,000 live observations or native performance measurements.
+
+The disk probe created 10,000 files totaling 1,796,380,000 bytes. At this fixed
+snapshot size, 85,802 observations per timeout-length run would require
+15,413,299,676 bytes, or 416,159,091,252 bytes across 27 runs. Available persistent
+storage at the check was 11,947,667,578,880 bytes. This scenario excludes native
+outputs, final reports and host logs, and is not a worst-case capacity bound:
+production process/thread inventories can be larger than this fixture.
+
+No scientific source, runtime binding or timing protocol changed. No production
+timing identity ran. Actual long-running collection overhead, production-sized
+process inventories, page-cache and job-memory accounting, final-report memory,
+guarded execution and a verified quiet window remain open. The broader
+publication requirements remain incomplete; the goal is active.
+
 ## Runtime Checks Integrated Around Native Inference (2026-09-28)
 
 The last user-facing turn confirmed the already-amended Threadripper goal;
