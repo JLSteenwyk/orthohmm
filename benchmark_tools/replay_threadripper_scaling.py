@@ -88,7 +88,40 @@ def point_inventory(directory):
     return paths
 
 
-def replay(directory, job_id, expected_command):
+def validate_job_memory(before, after, scope, done, native_memory):
+    for row in (before, after):
+        if row["scope"] != str(scope) or row["errors"]:
+            raise ValueError("Wrong or incomplete job memory scope")
+        if (any(type(row[k]) is not int for k in ("started_ns", "finished_ns"))
+                or not 0 < row["started_ns"] <= row["finished_ns"]):
+            raise ValueError("Invalid job memory read window")
+        raw = row["raw"]
+        for field in ("memory.current", "memory.peak", "memory.max"):
+            text = raw[field].strip()
+            if not text.isascii() or not text.isdecimal():
+                raise ValueError("Invalid job memory gauge")
+        swap = raw["memory.swap.max"].strip()
+        if swap != "max" and (not swap.isascii() or not swap.isdecimal()):
+            raise ValueError("Invalid swap limit")
+        if int(raw["memory.current"]) > int(raw["memory.peak"]) or int(raw["memory.max"]) != 128*1024**3:
+            raise ValueError("Job memory gauge or RAM limit differs")
+        if "shmem" not in counters(raw["memory.stat"]):
+            raise ValueError("Missing job shared-memory accounting")
+        if not {"low", "high", "max", "oom", "oom_kill"} <= counters(raw["memory.events"]).keys():
+            raise ValueError("Missing job memory event counters")
+    if not before["finished_ns"] < done["started_ns"] < done["finished_ns"] < native_memory["finished_ns"] < after["started_ns"]:
+        raise ValueError("Job memory does not bracket native execution and final memory read")
+    if int(after["raw"]["memory.peak"]) < int(before["raw"]["memory.peak"]):
+        raise ValueError("Job peak decreased or was reset")
+    old, new = (counters(row["raw"]["memory.events"]) for row in (before, after))
+    if old.keys() != new.keys() or any(new[key] < value for key, value in old.items()):
+        raise ValueError("Job memory event counters decreased or changed")
+    return dict(peak_bytes_since_job_creation=int(after["raw"]["memory.peak"]),
+                scope=str(scope), before=before, after=after,
+                includes_preparation_and_observer=True, scientific_timings_admitted=False)
+
+
+def replay(directory, job_id, expected_command, *, require_job_memory=True):
     directory = Path(directory).absolute()
     if type(job_id) is not int or job_id <= 0:
         raise ValueError("Require positive expected job identity")
@@ -105,6 +138,8 @@ def replay(directory, job_id, expected_command):
         raise ValueError("Direct evidence symlinks are not supported")
     evidence = [record(p) for p in [*files, *point_files]]
     measured, command, done, memory, context, go, release, ready = [json.loads(p.read_text()) for p in files]
+    if type(require_job_memory) is not bool:
+        raise ValueError("Require explicit boolean job-memory policy")
     if not same(go, {"go": True}) or not same(release, {"release": True}):
         raise ValueError("Native handoff/release gates differ")
     if not same(command, dict(command=expected_command, cpus=32, timeout_s=TIMEOUT, interval_s=1.)):
@@ -154,6 +189,18 @@ def replay(directory, job_id, expected_command):
     events = counters(memory["raw"]["memory.events"])
     if not {"low", "high", "max", "oom", "oom_kill"} <= events.keys():
         raise ValueError("Incomplete memory event counters")
+    job_memory = None
+    job_paths = [directory / f"job_memory_{name}.json" for name in ("before", "after")]
+    if require_job_memory or "job_memory" in measured or any(p.exists() or p.is_symlink() for p in job_paths):
+        if measured.get("schema") != "threadripper_scaling_v2" or any(p.is_symlink() or not p.is_file() for p in job_paths):
+            raise ValueError("Require v2 collector and complete job memory evidence")
+        evidence.extend(record(p) for p in job_paths)
+        before, after = [json.loads(p.read_text()) for p in job_paths]
+        if not same(measured.get("job_memory"), dict(before=before, after=after)):
+            raise ValueError("Embedded job memory differs")
+        scope = scoped_path(points[0]["native_membership"], job_id)
+        job_scope = next(p for p in scope.parents if p.name == f"job_{job_id}")
+        job_memory = validate_job_memory(before, after, job_scope, done, memory)
     reproduced = dict(status="native_root_context_measured", job_id=job_id, native_wall_s=wall,
         context=evaluate(points, job_id), lineage_report=lineage_identity(directory),
         scientific_timings_admitted=False, environmental_validity_established=False)
@@ -166,6 +213,7 @@ def replay(directory, job_id, expected_command):
     return dict(status="threadripper_scaling_measurement_replayed", native_outcome=outcome,
         native_exit_code=done["exit_code"], native_wall_s=wall, measured=measured, memory=memory,
         host_process_replay=host_replay, affinity_observation_statuses=affinity,
+        job_memory=job_memory, job_memory_required=require_job_memory,
         memory_events=events, screening=screening, context=reproduced["context"],
         original_flagged_intervals=screening["original_screening"]["original_threshold_screen"]["flagged_intervals"],
         narrow_flagged_intervals=screening["narrow_flagged_intervals"], evidence=evidence,

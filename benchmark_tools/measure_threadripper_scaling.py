@@ -28,6 +28,18 @@ from benchmark_tools.probe_threadripper_allocation import inspect, validate as v
 TIMEOUT = 85800
 
 
+def read_job_memory(scope):
+    result = step_memory({"native_cpu_scope": str(scope)})
+    directory = Path("/sys/fs/cgroup") / str(scope).lstrip("/")
+    for name in ("memory.max", "memory.swap.max", "memory.stat"):
+        try:
+            result["raw"][name] = (directory / name).read_text()
+        except OSError as error:
+            result["errors"].append(dict(field=name, type=type(error).__name__, errno=error.errno))
+    result["finished_ns"] = time.monotonic_ns()
+    return result
+
+
 def read_point(pid, membership, job_id, failure_path):
     point = read_root_point(pid, membership, job_id, failure_path)
     scope = Path("/sys/fs/cgroup") / str(scoped_path(membership, job_id)).lstrip("/")
@@ -99,6 +111,8 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             host = HostMonitor(host_log, str(job_scope))
             host.observe()
             next_host = time.monotonic() + host_interval_s
+            job_memory_before = read_job_memory(job_scope)
+            save(directory / "job_memory_before.json", job_memory_before)
             # Inventory the host before starting the one-second point cadence.
             points = [read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
             save(directory / "point_000000.json", points[0])
@@ -125,17 +139,23 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             save(directory / "host_process_summary.json", host_summary)
             memory = step_memory(interval_point(points[-1], job_id))
             save(directory / "step_memory.json", memory)
+            job_memory_after = read_job_memory(job_scope)
+            save(directory / "job_memory_after.json", job_memory_after)
             save(directory / "release.json", {"release": True})
             if process.wait(timeout=45) != 0:
                 raise RuntimeError("Native step wrapper failed")
             measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
+                schema="threadripper_scaling_v2",
                 native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
                 job_id=job_id, launched=launched, placement=ready["placement"], points=points, step_memory=memory,
                 host_process_observation=host_summary,
+                job_memory=dict(before=job_memory_before, after=job_memory_after),
                 screening=evaluate_lineage(points, done, job_id), scientific_timings_admitted=False,
                 controlled_workload_verified=False, publication_ready=False,
                 limitations=["Threadripper collector, not controlled comparative timing admission.",
                     "Thread affinity is periodically observed, not a hard CPU quota or continuous guarantee.",
+                    "Job peak is since cgroup creation through the post-native read, including preparation and observer; not process RSS.",
+                    "Native-step and job peaks overlap and must not be added or baseline-subtracted.",
                     "All CPU flags and non-atomic read windows retained; no overhead subtraction.",
                     "Periodic process CPU observations miss short-lived work and do not establish quiet GPU/device-I/O activity.",
                     "Point retention and final evaluation consume observer resources; long-run overhead remains unvalidated."])

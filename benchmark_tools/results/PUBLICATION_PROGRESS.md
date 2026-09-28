@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Job-Level Memory Integrated (2026-09-28)
+
+Previous turn demonstrated preparation-owned tmpfs charging. The local collector
+now writes job-level before/after memory records, including current/peak usage,
+RAM/swap limits, memory.stat and events. New reports use schema
+`threadripper_scaling_v2`; native-step evidence remains separate. Job peak is
+since cgroup creation through the post-native observation, including preparation
+and observer, not just inference RSS or postprocessing memory after that read.
+
+Replay requires matching raw/embedded job records by default and checks scope,
+128-GiB limit, timing brackets, nondecreasing peaks/events and required shared
+memory counters. It reports the raw job peak without adding native peaks or
+subtracting the baseline. Explicit `require_job_memory=False` supports old
+diagnostics without inventing missing job evidence. Independently replayed
+22342 under that legacy policy, and verified default rejection of its missing
+v2 evidence. 38 focused tests passed in 0.43 seconds.
+
+Archive job 22344 is still RUNNING and owns CPU 0. Scheduled bounded live
+collector controls as **22346**, currently PENDING on `afterany:22344`, so the
+frozen 0-31 affinity set is available after that job ends. The wrapper pins
+collector/replay/control source hashes and refuses drift; no automatic retry.
+See the [submission receipt](threadripper_job_memory_control_submission_22346.json).
+This is engineering validation, not one of the 27 scientific timing identities.
+Do not claim live v2 validation until the job and raw replay finish successfully.
+Executor/full-pipeline/overhead and quiet-window gates remain open, as do wider
+scientific uncertainty, source recovery and release requirements.
+
 ## Tmpfs Charge Ownership Verified (2026-09-28)
 
 Previous turn verified OrthoFinder's explicit output placement. Added a bounded
