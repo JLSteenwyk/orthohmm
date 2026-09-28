@@ -1,0 +1,68 @@
+{
+  "alternative_coverage_losses": 4,
+  "alternative_homolog_recoveries": 0,
+  "citations": 16,
+  "claims": {
+    "bytes": 82814,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md",
+    "sha256": "bfa264d812bd0ee3362661ae61f894e66d7365fb1ca5bfe2069a28425534d4bb"
+  },
+  "diagnostic": {
+    "bytes": 88031,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/wgd_fixed_tree_rules_20260928.json",
+    "sha256": "c7e1615d0135d8b15771d6747c090a6edfb2017e0b99b16d7499d5931bd1a556"
+  },
+  "full_diagnostic_json_reproduced": true,
+  "limitations": [
+    "Post hoc fixed-input mechanism diagnostic, not independent validation or topology truth.",
+    "Earlier exports remain historical; linked progress ledger is recorded as of rendering.",
+    "No controlled timing or archival release is established."
+  ],
+  "local_link_occurrences": 17,
+  "manuscript": {
+    "bytes": 13581,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+    "sha256": "ab845676ef56601fc315772c723a1bdeefabe4f186c8961767754a25e056c5eb"
+  },
+  "pages": [
+    {
+      "out_of_bounds_words": [],
+      "page": 1,
+      "words": 374
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 2,
+      "words": 407
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 3,
+      "words": 533
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 4,
+      "words": 411
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 5,
+      "words": 397
+    }
+  ],
+  "pdf": {
+    "bytes": 109658,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v8.pdf",
+    "sha256": "82725b04dcfa142922d5d9ca2d238ea8b0fb6300b3e007b33d56d8c39a974749"
+  },
+  "publication_ready": false,
+  "render_receipt": {
+    "bytes": 10675,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260928_v8.json",
+    "sha256": "e4754dc32bfd71e220cfb210980ddf75f6ed8d868986dbc6eb4b1922eed7734d"
+  },
+  "status": "root_rule_main_text_rechecked_and_rendered",
+  "unique_local_targets": 16,
+  "visual_review": "All five rasterized pages inspected; no clipping or incoherent overlap observed."
+}

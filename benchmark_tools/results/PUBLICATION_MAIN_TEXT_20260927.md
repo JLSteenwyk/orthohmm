@@ -164,9 +164,20 @@ generalization. Supported separation does not establish
 cross-species copy-specific orthology. In the
 [six prespecified case traces](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), five
 focal homologs left their anchor groups during root-lineage reconstruction,
-before satellite constraints. They remained in other output groups. This
-localizes these losses without identifying whether tree topology or the
-lineage rule was responsible; no example was replaced to improve the result.
+before satellite constraints. They remained in other output groups; no example
+was replaced to improve the result.
+
+A subsequent [fixed-tree diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md)
+evaluated all four existing root-duplication rules on the same seven candidate
+families and six examples, with its protocol frozen before alternative outcomes
+were examined. The supported-children and confidence rules reproduced the
+species-overlap baseline partitions exactly. The mapped-event rule reduced
+homolog coverage in four of five reference-eligible examples, without improving
+supported separation. None recovered the five focal homologs into either anchor
+group. Native pair predictions and confidence annotations remained unchanged.
+This post hoc intervention rejects these three alternatives as a repair on the
+fixed inputs, not as methods in general. It neither establishes topology error
+nor identifies ancestral-copy truth, and no defaults were changed.
 
 ## Discussion And Limitations
 
@@ -191,7 +202,7 @@ overlap with development data.
 Recovered OrthoMCL results retain sequence-specific BLAST failures. Failed
 high-CPM experiments remain unavailable, not zero-scoring or successful runs.
 Shared-host runs and the historical DGX panel are descriptive resource records;
-the replacement dedicated timing panel has not run. No controlled speedup is
+the replacement controlled Threadripper timing panel has not run. No controlled speedup is
 claimed. Versioned archival release, complete dependency/data redistribution
 review, journal formatting and final visual review remain open.
 

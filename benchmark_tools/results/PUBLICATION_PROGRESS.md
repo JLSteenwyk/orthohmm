@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Integrate Root-Rule Evidence Into Manuscript (2026-09-28)
+
+Previous turn committed and pushed the completed fixed-tree diagnostic as
+`55676f8a`, constituting scientific progress. The main text and current claim
+checklist now report its negative result without inferring topology error or
+promoting a different rule. The main text explicitly names the replacement
+Threadripper timing panel. No scientific configuration or benchmark score changed.
+
+The new v8 review export supersedes v7 for this manuscript text; earlier exports
+remain historical. Controlled timing, unresolved QfO uncertainty and release
+requirements remain unfinished. No new inference, unrelated-job action or DGX
+access occurred. The full publication goal remains active.
+
 ## Fixed-Tree Root-Rule Diagnostic (2026-09-28)
 
 Resumed the unfinished mechanism analysis after confirming the Threadripper-only
