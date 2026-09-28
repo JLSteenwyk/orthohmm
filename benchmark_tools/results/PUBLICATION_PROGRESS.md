@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Isolated High-CPM Readback Diagnostic Prepared (2026-09-28)
+
+The intervening prompt-confirmation turn added no scientific evidence. Reread
+the objective and retained crash diagnostics before continuing. GDB 22159 did
+not reproduce the crash; Memcheck 22164 and the existing no-site startup
+control already locate startup reports outside refinement. Do not repeat
+either experiment. The prior read-only integrity audit also already checked
+the retained Memcheck output, so that is not missing work.
+
+Prepared a single [isolated reader control](QFO_CPM_READBACK_CONTROL_PROTOCOL_20260928.md)
+to remove refinement and scientific imports while preserving the frozen
+reader function and partition bytes. Ten focused tests pass, including a real
+no-site child, malformed membership and changed input rejection. Commit/push
+this protocol before one bounded local diagnostic. No inference, optimizer,
+accuracy evaluation or revised admission is authorized by this control.
+
 ## YGOB Overlap-Stratified Error Analysis (2026-09-28)
 
 Previous turn completed reporting-fixture audits and refreshed the cited main
