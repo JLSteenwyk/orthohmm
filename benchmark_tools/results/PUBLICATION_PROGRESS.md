@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Quiet-Window Coordination Requested (2026-09-28)
+
+Previous turn completed full regression and explicit native dependency
+recovery. A fresh read-only host observation after all regression processes
+terminated found 73.874 observed competing CPU-core equivalents despite an
+empty Slurm queue. Persistent IQ-TREE, HyPhy and Python analyses run in user
+services and interactive scopes. The [recheck receipt](threadripper_quiet_window_recheck_20260928.json)
+pins raw snapshots and groups observed use by process name and scope.
+
+Retained two sampling errors and five unmatched process identities; this
+short sample neither observes every transient process nor certifies quiet
+I/O or future conditions. Only the observation process was excluded. No
+unrelated process or service was signalled, modified or stopped.
+
+Asked the user for a window when those analyses finish and new work will not
+start, as required by the prospective timing policy. No production timing
+identity launched. Runtime checks and a scheduler allocation alone cannot
+resolve this host-contention gate. The guarded production executor and
+remaining scientific/release work can still progress independently; the full
+goal remains active rather than complete or globally blocked.
+
 ## Full Discovery And Native Dependency Recovery (2026-09-28)
 
 Previous turn completed the Broccoli public archive audit. Ran full pytest

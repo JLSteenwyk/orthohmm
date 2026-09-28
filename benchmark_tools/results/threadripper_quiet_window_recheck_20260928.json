@@ -1,0 +1,49 @@
+{
+  "by_process_name": {
+    "R": 0.9989779102834703,
+    "bali-phy": 15.97876056362888,
+    "claude": 0.09908778658506169,
+    "codex": 0.2858635659880097,
+    "gainLoss": 7.990694073817436,
+    "hyphy": 2.999762556792614,
+    "ipmi-sensors": 0.09424537510436275,
+    "iqtree3": 35.94823728194377,
+    "plymouthd": 0.03734355233105445,
+    "python": 9.350216319696061,
+    "sshd": 0.01137328991175273,
+    "tmux: server": 0.03410609243115088
+  },
+  "by_scope": {
+    "/system.slice/docker-36f55fd9b359753401a8bb023b5036b74f02b09cb11e155834a0c04164ebd00f.scope": 0.9989779102834703,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-baliphy-independent-chains-20260927.service": 15.999873867841748,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-fastml-optimizer-refinement-20260928-v3.service": 8.00206315864892,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-full-polynomial-ml-20260927.service": 7.997334320165503,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-hybrid-excluded-guides-20260927.service": 3.9953269992562204,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-local-mg94-unconstrained-multistarts-20260927.service": 3.0078833090946175,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service": 7.9874324943956,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-matched-simulation-cache-replay-20260928.service": 0.9988331149242645,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service": 15.965820562790961,
+    "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-recovery-20260925-structure-retrieval.service": 0.2842109043655282,
+    "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-4c4f130f-480e-45d0-9841-1f26dd9dba69.scope": 7.999657225500985,
+    "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-a4c3e9d8-e83f-4221-afc8-e5cc2ca4b5a1.scope": 0.14617583995364247
+  },
+  "coordination_requested": true,
+  "limitations": [
+    "Only observer PID excluded; sentinel scope excludes no real job.",
+    "Read-only five-second sample, not quiet-window certification or a timing result.",
+    "Short-lived processes and non-CPU interference may be missed."
+  ],
+  "observed_average_cores": 73.87413822206211,
+  "production_runs_launched": 0,
+  "raw": {
+    "bytes": 1512189,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_preflight_after_regression_20260928.json",
+    "sha256": "7152cd7179b460afb53735ec9f5644608a6efa031ebd5cededd0ae8c2630ac57"
+  },
+  "sampling_errors": 2,
+  "scheduler": "             JOBID,        NAME,   STATE,      TIME,  CPUS\n",
+  "scientific_timings_admitted": false,
+  "status": "quiet_window_not_established",
+  "unmatched_process_count": 5,
+  "unrelated_processes_signalled": false
+}
