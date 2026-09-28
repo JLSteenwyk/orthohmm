@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Current Claim Checklist Reconciled (2026-09-28)
+
+The preceding user-facing turn only confirmed the saved Threadripper goal;
+it was no progress on the scientific requirements. Reread the full objective
+and the current retained result documents. Updated the
+[claim-to-evidence checklist](PUBLICATION_CLAIMS_20260916.md) with a seven-part
+requirement index and six explicit claim boundaries covering YGOB strata,
+corrected FAS sampling, local timing fixtures/executor, the isolated high-CPM
+reader, Leiden version labels and environment-specific security findings.
+
+The index distinguishes the original goal's separate-clade transfer evidence
+from the stronger, unestablished family-disjoint claim. It marks older job
+statuses as historical observations, dates the retained host-load estimate,
+and identifies the unfinished timing workflow rather than treating component
+tests as production readiness. No raw result, scientific configuration,
+confidence interval or benchmark admission changed. Pandoc parsed the full
+checklist: all 275 link occurrences resolve to 216 unique local files, all
+present and tracked. Scoped whitespace checks pass. These checks establish
+document structure and link availability, not validity of the linked science.
+No inference/timing job or DGX access was started; the full goal is incomplete.
+
 ## Leiden Version-Label Mechanism And Source History (2026-09-28)
 
 Previous turn completed the YGOB figure and main-text integration, pushed as

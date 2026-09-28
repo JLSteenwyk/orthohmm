@@ -1,13 +1,44 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 27 September 2026. This is a completion audit, not a replacement
+Status updated 28 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
+
+## Current Requirement Status
+
+This index consolidates retained evidence; it is not a fresh audit of every raw
+artifact. The detailed chronology below preserves historical observations,
+including jobs described as running at the time. Those descriptions do not
+establish live work now. The current execution plan uses the local Threadripper;
+DGX permissions and services are not prerequisites. No production Threadripper
+timing result has been admitted.
+
+| Goal requirement | Evidence available | Remaining boundary or work |
+| --- | --- | --- |
+| 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
+| 2. Independent generalization | [Frozen YGOB novel-taxon evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md), [overlap diagnostic](YGOB_OVERLAP_STRATA_RESULT_20260928.md) | The separate-clade evaluation supplies bounded transfer evidence under the original goal; family-disjoint validation is not established. The later overlap analysis is descriptive, not a second independent confirmation. No test-informed tuning |
+| 3. HMM and phylogeny contributions | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [corrected QfO factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md), [matched-recall diagnostic](MATCHED_GRAPH_RESULT_20260926.md) | Preserve endpoint-specific negative/neutral findings and limited causal scope. Shared-host resources do not establish controlled efficiency |
+| 4. Uncertainty and errors | [OrthoBench paired intervals](ORTHOBENCH_UNCERTAINTY_20260916.md), [corrected SwissTrees comparisons](qfo_recovered_swiss_uncertainty_22178.json), [FAS audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md), [VGNC method review](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) | Appropriate uncertainty remains unresolved for other QfO challenges and the secondary mean. Original TreeFam trees/mapping remain missing despite [public archive inspections](TREEFAM_SOURCE_RETRIEVAL_20260918.md). Do not substitute pair-IID intervals or inferred family labels |
+| 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [local executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md) | High-CPM QfO admission remains failed. The 27-run timing panel still needs full-scale observer/resource validation, environmental policy/review worker, source freeze, integrated handoff and a verified quiet window. Do not count fixture runs as production repeats |
+| 6. Biological usefulness | [Prespecified WGD case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md) | Report supported paralog separation together with coverage losses; the five focal losses precede satellite constraints. Neither this case trace nor YGOB strata establishes general superiority |
+| 7. Reproducible publication package | [Latest main-draft figure/export review](YGOB_OVERLAP_FIGURE_20260928.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Same-host reproduction is not cross-host restoration or complete release clearance. Final manuscript reconciliation, compiled/transitive dependency and data-rights review, versioned release and archival deposition remain unfinished |
+
+The next timing action is to complete and validate the live environmental
+review and full-scale accounting workflow, not to launch the 27 identities
+from fixture success. The latest retained host observation in the executor
+contract found about 104 competing CPU-core equivalents; it is dated evidence,
+not a current host poll. Isolation must be checked afresh before release.
 
 ## Claim Boundaries
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| Higher screen-negative YGOB F1 establishes better remote-ortholog recovery | [Stratum result](YGOB_OVERLAP_STRATA_RESULT_20260928.md), [all-method figure](YGOB_OVERLAP_FIGURE_20260928.md) | Unsupported: satellite_v2 minus full OrthoFinder is +12.916292 F1 points but -23.929262 recall points. Screen-negative contains 2,893 singleton pillars among 3,298 and does not prove absence of homology. Original cross-stratum false-positive penalties remain included; no subgroup CI, causal or independent-confirmation claim |
+| Corrected FAS sample arithmetic validates paired uncertainty | [Eight-method corrected sample audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md) | Unsupported: all eight native means/SEMs reproduce, but samples reuse proteins and scored fractions span 0.0067%-58.4605%. Inclusion probabilities and random states remain unestablished. Different fractions alone do not demonstrate bias |
+| The Threadripper executor and native fixtures establish controlled timing | [Executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md), [terminal fixture outcomes](THREADRIPPER_REPORTING_OUTCOMES_20260928.md) | Not established: jobs 22367-22369 reproduce 16-gene outputs on a busy host. Reported job peak ends at the reporting read, not complete teardown. The executor has component tests, not a completed production readiness review or integrated environmental handoff; no production identity was submitted by these changes |
+| The isolated partition readback repairs high-CPM admission | [Single control 22370](QFO_CPM_READBACK_CONTROL_RESULT_22370.md) | Contradicted: parsing all 984,137 genes with active GC succeeds outside the preceding refinement heap state, but the original failure is unresolved. Admission 22155 remains failed and high-CPM accuracy remains missing; no retry-until-success or replacement endpoint |
+| The Leiden library filename proves that the wheel used the wrong source release | [Source/version and public build evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Not established: the 0.12.0 lightweight tag is ignored by plain Git describe, yielding the 0.11.1 base used in source version logic. This explains consistency with the filename, not exact source-to-wheel identity, a built artifact, redistribution clearance or the SIGSEGV cause |
+| All frozen scientific environments are patched because the reader is patched | [Environment-specific advisory comparison](RELEASE_SECURITY_SCOPE_20260928.md) | Unsupported: the retained OrthoHMM and OrthoFinder interpreters each match six reviewed advisory ranges; reader/recovery match none of that bounded set. Version matches do not prove exploitable inference paths, and zero matches do not establish comprehensive security. Frozen runtimes were not upgraded |
 | Corrected GO/EC mean differences arise from different scores on shared protein pairs | [All-method scored-pair panel](QFO_SCORED_PAIR_PANEL_20260927.md) | Contradicted at retained six-decimal precision: no shared score differs in any of 56 comparisons. Pair-set membership and original denominators explain the arithmetic differences. Intersection-only means change the endpoint; no causal effect, biological superiority or dependency-aware interval is established |
 | Fresh installation, inference and scoring are integrated at full OrthoBench scale | [Fixture execution](INTEGRATED_WORKFLOW_20260927.md), [full-data protocol](INTEGRATED_FULL_OB_PROTOCOL_20260927.md), [independently admitted result](INTEGRATED_FULL_OB_RESULT_22337.md) | Job 22337 completed all eight stages; independent readers and score recomputation confirmed all 59,770 groups and 70 family score records. Same-host reproduction using the original base Python, not independent biological validation, controlled timing or cross-host restoration |
 | The full OrthoBench scoring component can be restored outside the checkout | [Archive restoration](OB_SCORING_ARCHIVE_20260927.md) | Supported on the same host: the complete 70-family score file is byte-identical using separately supplied pinned raw inputs and a patched reader. Not fresh acquisition, native inference, cross-host portability or public deposition |
