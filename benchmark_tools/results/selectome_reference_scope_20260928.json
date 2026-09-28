@@ -1,0 +1,104 @@
+{
+  "benchmark_admitted": false,
+  "incident_proteins": 11130,
+  "incident_proteins_outside": 5334,
+  "included_species": [
+    "BOVIN",
+    "CANLF",
+    "CHICK",
+    "DANRE",
+    "GORGO",
+    "HUMAN",
+    "LEPOC",
+    "MONDO",
+    "MOUSE",
+    "ORYLA",
+    "PANTR",
+    "RATNO",
+    "XENTR"
+  ],
+  "inputs": [
+    {
+      "bytes": 8319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_treefam_counts_20260917.json",
+      "sha256": "5e8cb4b3dae556dddef69122b54f3eecba787c9cc71f79773eafc1868b89465b"
+    },
+    {
+      "bytes": 6585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/selectome_tf7ab_inventory_20260928.json",
+      "sha256": "b12acf66e5abe087b4266cc8bad66c7e6423b4d90df50bae3ae07f95af47d943"
+    },
+    {
+      "bytes": 40019520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/mapping.json.gz",
+      "sha256": "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+    },
+    {
+      "bytes": 18579,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/lineage_tree.phyloxml",
+      "sha256": "8c24ccb70f9dc5b88dceb7fc3105f904a91f294b05a7183397b3d7f6497743ce"
+    },
+    {
+      "bytes": 398558,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/checked_v2_0/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-checked-v2-0_eba6e1dd9766_raw.txt.gz",
+      "sha256": "686d644fc081f77eb33f05cdc5db5b7369169d11c25f8f910026f11569751291"
+    }
+  ],
+  "limitations": [
+    "Uses retained QfO mapping only for existing reference IDs, not Selectome gene mapping.",
+    "Outside-clade count is a necessary coverage exclusion, not an accuracy effect or reconstruction.",
+    "Inside-clade membership does not establish gene, family or event coverage.",
+    "The retained lineage title names QfO 2018; used as taxonomy metadata with observed reference-species coverage checked."
+  ],
+  "lineage_title": "SwissTree speciestree for QfO 2018 dataset",
+  "original_mapping_recovered": false,
+  "proteins_by_species": {
+    "ARATH": 1241,
+    "BOVIN": 11,
+    "CAEEL": 1106,
+    "CANLF": 16,
+    "CHICK": 822,
+    "CIOIN": 706,
+    "DANRE": 535,
+    "DROME": 1184,
+    "HUMAN": 1998,
+    "MOUSE": 1749,
+    "PANTR": 10,
+    "RATNO": 17,
+    "SCHPO": 502,
+    "XENTR": 638,
+    "YEAST": 595
+  },
+  "reference_members_without_relations_not_analyzed": 10,
+  "reference_species_names": {
+    "ARATH": "Arabidopsis thaliana",
+    "BOVIN": "Bos taurus",
+    "CAEEL": "Caenorhabditis elegans",
+    "CANLF": "Canis lupus familiaris",
+    "CHICK": "Gallus gallus",
+    "CIOIN": "Ciona intestinalis",
+    "DANRE": "Danio rerio",
+    "DROME": "Drosophila melanogaster",
+    "HUMAN": "Homo sapiens",
+    "MOUSE": "Mus musculus",
+    "PANTR": "Pan troglodytes",
+    "RATNO": "Rattus norvegicus",
+    "SCHPO": "Schizosaccharomyces pombe (strain 972 / ATCC 24843)",
+    "XENTR": "Xenopus tropicalis",
+    "YEAST": "Saccharomyces cerevisiae (strain ATCC 204508 / S288c)"
+  },
+  "relations": {
+    "at_least_one_outside": 55933,
+    "at_least_one_outside_ortholog": 35868,
+    "at_least_one_outside_paralog": 20065,
+    "both_inside": 23387,
+    "both_inside_ortholog": 7674,
+    "both_inside_paralog": 15713
+  },
+  "source": {
+    "bytes": 4915,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_selectome_reference_scope.py",
+    "sha256": "273ce0f8621123e17227d49decec38eadd4ebc146215341d8ef246cb42753ca4"
+  },
+  "status": "reference_taxonomic_scope_checked"
+}

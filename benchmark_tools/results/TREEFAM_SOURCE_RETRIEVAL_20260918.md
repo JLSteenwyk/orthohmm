@@ -2,6 +2,12 @@
 
 ## Outcome
 
+The [reference-scope audit](TREEFAM_RECOVERED_SCOPE_20260928.md) establishes that
+55,933 of 79,320 retained relations (70.52%) have at least one endpoint outside
+Euteleostomi. The recovered vertebrate subtrees alone cannot reconstruct the
+complete reference, even if their mapping were resolved. No substitution or
+family-level uncertainty estimate has been made.
+
 The [larger TF7AB archive follow-up](TREEFAM_SELECTOME_AB_RECOVERY_20260928.md)
 also recovers 1,287,270 historical gene records and 9,850 derived vertebrate
 subtrees. Only 85 of 1,211 shared subtree keys have identical NHX strings;

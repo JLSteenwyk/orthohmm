@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Quantify Recovered Tree Coverage Gap (2026-09-28)
+
+Previous turn pushed shared-tree content verification as `d53a60e8`. A new
+taxonomic-scope audit, without Selectome gene mapping, finds 5,334 of 11,130
+incident QfO reference proteins outside Euteleostomi. They occur in 55,933 of
+79,320 retained relations (70.52%). The recovered vertebrate subtrees therefore
+cannot reconstruct the whole reference even if their mapping were resolved.
+See the [scope result](TREEFAM_RECOVERED_SCOPE_20260928.md).
+
+All 17 focused tests pass. The remaining 23,387 inside-clade relations are only
+potentially covered, not mapped or reconstructed. Ten nonincident reference
+members remain explicitly outside this analysis. No reference substitution,
+benchmark score, family assignment or uncertainty estimate changed. Original
+mapping and full-tree coverage remain open. No timing launch, unrelated-job
+action or DGX access occurred; the full publication goal remains active.
+
 ## Resolve Shared Selectome Tree Differences (2026-09-28)
 
 Previous turn pushed the TF7AB inventory as `9e1391c8`, recovering historical
