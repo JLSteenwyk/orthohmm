@@ -151,6 +151,10 @@ Original TreeFam-A family mappings remain unavailable. VGNC dependence and
 rare-error diagnostics do not justify the candidate confidence-interval
 procedure. Valid paired uncertainty for GO/EC, FAS and the secondary mean is
 also unfinished. These gaps must remain visible alongside point estimates.
+The [corrected FAS sample audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md)
+reproduces all eight means, but scored fractions range from 0.0067% to 58.46%
+of reported eligible pairs and every sample reuses proteins across pairs.
+Native pair-level standard errors do not resolve this comparison uncertainty.
 The completed simulations and tree perturbations do not cover arbitrary
 evolutionary conditions, and novel-taxon YGOB testing retains homolog-family
 overlap with development data.

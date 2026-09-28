@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Corrected Eight-Method FAS Samples Audited (2026-09-28)
+
+Following the complete regression milestone, returned to scientific uncertainty.
+The existing FAS sample audit described historical runs, not the corrected v7
+comparison used in the manuscript. Added a corrected-manifest adapter that
+checks admitted aggregate counts/means, participant identity and original
+execution-output hashes, then reproduces the saved means and native SEMs.
+Thirty focused tests pass, including changed raw data, missing historical
+pins, wrong participants, changed endpoints and comparator admission schemas.
+An initial identity-check invocation stopped before outputs because comparator
+participant IDs live in admission records; the adapter and regression test
+now cover that schema explicitly. No native benchmark was rerun.
+
+The [audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md) and
+[table](QFO_CORRECTED_FAS_SAMPLE_TABLE_20260928.md) distinguish these corrected
+samples from the historical audit. Sample fractions range from 0.0067% to
+58.4605%; all eight samples reuse proteins across scored pairs. This does not
+establish bias from sampling fraction alone, reconstruct selection probabilities,
+or justify pair-IID uncertainty for method differences. No endpoint or score
+was changed, and no new confidence interval is admitted. The short manuscript
+now states this limitation with a direct audit link. Its previous rendered
+PDF remains a historical snapshot predating this addition.
+
+Controlled timing, its integrated executor, independent validation, remaining
+uncertainty and release requirements remain open. The full goal stays active.
+
 ## Complete Regression And Native Opt-In Coverage (2026-09-28)
 
 The previous continuation completed the two remaining native fixture audits.
