@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Native Input Enumeration Investigated (2026-09-28)
+
+Previous turn validated local runtime and live thread controls. Called the
+hash-verified frozen `fetch_fasta_files` implementation on all existing local
+scaling inputs: membership and bytes passed, but all three native orders
+differed from the retained protocol. The method uses unsorted filesystem
+globbing; sorted manifest listings are not a substitute for this check.
+
+Added a fresh-copy materializer that verifies both local and retained ordered
+hashes before copying, calls the actual frozen enumerator after copying, and
+retains mismatch outcomes without authorizing inference. Fifteen materializer
+and enumerator tests passed in 0.43 seconds. Prospective input preparation
+trials, not scientific retries, found:
+
+- Existing local directories: all three orders mismatched.
+- Fresh ext4 copies created in retained order: all three mismatched.
+- Temporary tmpfs copies created in reverse order: all three mismatched.
+- Temporary tmpfs copies created in retained order: all three matched.
+
+An independent second enumeration and byte check reproduced the successful
+snapshot exactly. The [trial receipt](threadripper_input_order_trials_20260928.json)
+retains every outcome and manifest hash. The successful candidate is
+`/dev/shm/orthohmm_threadripper_inputs_forward_20260928`; it is temporary,
+not a durable archival dataset or execution authorization. Frozen scientific
+code, parameters, bytes and historical input directories were not changed.
+
+Before production, explicitly fix the same input-storage policy for all tools,
+account for preparation-owned tmpfs pages separately from native cgroup peak
+memory, and validate OrthoFinder's fresh copies/output location. Do not silently
+mix disk-backed and memory-backed timing inputs. Enumeration still needs
+before/after checks for each run. Executor/provenance and overhead validation,
+quiet-window coordination and the wider publication requirements remain open.
+No inference, DGX access or unrelated process changes occurred this turn.
+
 ## Live Thread Controls and Local Runtime Verified (2026-09-28)
 
 Previous turn completed the sleep collector/replay diagnostic. Added a bounded
