@@ -13,6 +13,21 @@ from benchmark_tools.slurm_resource_snapshot import counters
 from benchmark_tools.verify_lineage_native_provenance import same
 from benchmark_tools.replay_host_process_observation import replay as replay_host
 from benchmark_tools.slurm_resource_snapshot import scoped_path
+from benchmark_tools.disk_observation_sequence import DiskObservations
+
+
+def observations(directory, measured, point_files):
+    if measured.get("schema") == "threadripper_scaling_v3":
+        points = DiskObservations(directory, len(point_files))
+        if ([points.path(i) for i in range(len(points))] != point_files
+                or "points" in measured
+                or not same(points.records(), measured.get("point_records"))):
+            raise ValueError("Raw point identities differ from v3 report")
+        return points
+    points = [json.loads(p.read_text()) for p in point_files]
+    if not same(points, measured["points"]):
+        raise ValueError("Raw points differ from report")
+    return points
 
 
 def replay_affinity(point, job):
@@ -155,9 +170,7 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
             or ready["placement"]["slurm"]["SLURM_JOB_ID"] != str(job_id)):
         raise ValueError("Frozen affinity or placement job differs")
     outcome, wall = native_outcome(measured, done)
-    points = [json.loads(p.read_text()) for p in point_files]
-    if not same(points, measured["points"]):
-        raise ValueError("Raw points differ from report")
+    points = observations(directory, measured, point_files)
     affinity = [replay_affinity(p, job_id) for p in points]
     for left, right in zip(points, points[1:]):
         if left["thread_affinity"]["finished_ns"] >= right["host"][0]["started_monotonic_ns"]:
@@ -192,8 +205,8 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
     job_memory = None
     job_paths = [directory / f"job_memory_{name}.json" for name in ("before", "after")]
     if require_job_memory or "job_memory" in measured or any(p.exists() or p.is_symlink() for p in job_paths):
-        if measured.get("schema") != "threadripper_scaling_v2" or any(p.is_symlink() or not p.is_file() for p in job_paths):
-            raise ValueError("Require v2 collector and complete job memory evidence")
+        if measured.get("schema") not in {"threadripper_scaling_v2", "threadripper_scaling_v3"} or any(p.is_symlink() or not p.is_file() for p in job_paths):
+            raise ValueError("Require v2/v3 collector and complete job memory evidence")
         evidence.extend(record(p) for p in job_paths)
         before, after = [json.loads(p.read_text()) for p in job_paths]
         if not same(measured.get("job_memory"), dict(before=before, after=after)):
@@ -222,4 +235,5 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
         limitations=["Replay preserves successful, failed and timed-out native outcomes, not output validity.",
             "Separate authorization, scheduler/session, worker/recipe identity and environment audits remain mandatory.",
             "Raw observation windows and flags retained; no attribution, exclusion or overhead subtraction.",
-            "Full raw points are loaded for replay; memory use and long-run execution still require assessment."])
+            "V3 raw points are loaded lazily; derived interval reports still grow with observation count.",
+            "Historical v1/v2 embedded raw points are retained; long-run resource use still requires assessment."])

@@ -24,6 +24,7 @@ from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 from benchmark_tools.observe_thread_affinity import observe
 from benchmark_tools.probe_threadripper_allocation import inspect, validate as validate_allocation
+from benchmark_tools.disk_observation_sequence import DiskObservations
 
 TIMEOUT = 85800
 
@@ -114,8 +115,8 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             job_memory_before = read_job_memory(job_scope)
             save(directory / "job_memory_before.json", job_memory_before)
             # Inventory the host before starting the one-second point cadence.
-            points = [read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json")]
-            save(directory / "point_000000.json", points[0])
+            points = DiskObservations(directory)
+            points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
             index = 0
@@ -126,7 +127,6 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final observation")
                 points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
-                save(directory / f"point_{index:06d}.json", points[-1])
                 if completed or time.monotonic() >= next_host:
                     host.observe()
                     next_host = time.monotonic() + host_interval_s
@@ -145,9 +145,9 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             if process.wait(timeout=45) != 0:
                 raise RuntimeError("Native step wrapper failed")
             measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
-                schema="threadripper_scaling_v2",
+                schema="threadripper_scaling_v3",
                 native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
-                job_id=job_id, launched=launched, placement=ready["placement"], points=points, step_memory=memory,
+                job_id=job_id, launched=launched, placement=ready["placement"], point_records=points.records(), step_memory=memory,
                 host_process_observation=host_summary,
                 job_memory=dict(before=job_memory_before, after=job_memory_after),
                 screening=evaluate_lineage(points, done, job_id), scientific_timings_admitted=False,
@@ -158,7 +158,8 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                     "Native-step and job peaks overlap and must not be added or baseline-subtracted.",
                     "All CPU flags and non-atomic read windows retained; no overhead subtraction.",
                     "Periodic process CPU observations miss short-lived work and do not establish quiet GPU/device-I/O activity.",
-                    "Point retention and final evaluation consume observer resources; long-run overhead remains unvalidated."])
+                    "Decoded raw history is disk-backed; final interval reports still scale with observation count after inference.",
+                    "Raw observation writes and collection still consume resources; long-run overhead remains unvalidated."])
             save(directory / "lineage_report.json", measured)
             context = dict(status="native_root_context_measured", job_id=job_id,
                 native_wall_s=measured["native_wall_s"], context=evaluate(points, job_id),

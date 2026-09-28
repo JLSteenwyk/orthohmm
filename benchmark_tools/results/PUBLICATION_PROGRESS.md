@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Bound Live Observation Retention (2026-09-28)
+
+Previous turn made progress through native fixture validation and baseline
+amendment. Inspected collector scaling next: v2 retained every decoded raw
+snapshot during inference and embedded them again in its final report. The
+Threadripper-only v3 collector now writes the same numbered raw files and uses
+lazy disk-backed views, with point hashes in the report instead of a second
+embedded copy. Sampling cadence, worker placement, native commands, memory
+reads, host monitoring and interval evaluators are unchanged. Historical
+DGX collectors and retained v1/v2 artifacts were not edited.
+
+44 focused tests passed in 0.70 seconds, covering lazy slicing/order, refusal
+to overwrite observations, content/order tampering, old embedded-report
+verification and bounded retained Python history. On all three previous
+job-22350 controls, unchanged lineage/root evaluators produced exactly the
+same reports from lazy observations, and historical replay still passed.
+
+Fresh native fixture job 22351 completed 0:0 in 50 seconds. All three native
+methods passed output checks, and v3 collection independently replayed with
+job-memory records and sampled affinities retained. The
+[receipt](threadripper_disk_collector_22351.json) pins these results. Competing
+work remained 71.73-73.52 CPU-core equivalents; no scientific timing was admitted.
+
+A separate diagnostic decoded one real snapshot 1,000 times. The old list
+retained 196,532,444 traced Python bytes; disk-backed retention used 112,715
+bytes (379,004-byte traced peak). These are Python allocations, not RSS or
+job memory, and not a measured full-day run. Raw writes, filesystem cache,
+live observation overhead and thread-count scaling remain costs. Final
+interval reports and point manifests still grow after native inference;
+this change does not claim constant-memory end-to-end processing.
+
+All jobs and local diagnostic processes are terminal. Next freeze the full
+local execution/runtime recipe and validate remaining long-run overhead and
+temporary-write behavior before production submission. The quiet-window
+requirement, all 27 timing identities and the broader scientific completion
+criteria remain unchanged. Publication readiness remains unproven.
+
 ## Native Threadripper Fixture Completed (2026-09-28)
 
 The previous response only confirmed the goal prompt and made no experimental
