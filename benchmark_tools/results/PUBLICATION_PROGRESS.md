@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Broad Local Runtime Snapshot Verified (2026-09-28)
+
+Previous turn made progress through isolated JIT-cache implementation and
+native controls. Completed a broad local runtime inventory using the existing
+snapshot tool without changing scientific code or executing another inference.
+The main snapshot covers Conda bin/lib, system bin/x86 libraries and loader
+configuration, the full OrthoFinder/MAFFT/FastTree/DIAMOND installations, the
+frozen scientific source tree and current benchmark helper files. It contains
+144,015 entries; the initial pass took 65.00 seconds and a separate complete
+verification pass matched exactly.
+
+Reviewed 102 external symlinks. Regular-file targets are already hashed; the
+one external directory, Conda terminfo, now has its own verified inventory.
+Supplementary inventories cover 14 historical adapters and the remaining
+baseline benchmark helper. Combined: 146,924 entries, 30,073,384,185 regular
+file bytes. All 191 baseline source/distribution/entrypoint records match their
+snapshot bytes and hashes. One existing dangling Qt configuration link is
+recorded, not repaired or omitted; it is unrelated to the six observed tool
+resolutions. Each supplementary snapshot independently verified.
+
+Ran the existing OrthoFinder resolution inspector in the frozen execution cwd
+with loader overrides unset. Its subprocess environment resolves bundled
+DIAMOND, FastTree, FAMSA, FastME and MCL; MAFFT resolves to the separate frozen
+installation. All six child executable hashes are covered. The
+[runtime binding](threadripper_runtime_binding_20260928.json) pins the four
+manifests, verification receipts, plan, baseline and resolution report.
+Large raw inventories remain local in
+`benchmarks/work/threadripper_runtime_inventory_20260928`; they are not added
+to Git. The binding's `runtime_specs` can be passed to the existing manifest
+checker, but must be reverified before and after each eventual native run.
+
+This is a broad identity snapshot, not a complete dynamic dependency trace or
+hermetic image. Included unused programs are not evidence of benchmark use.
+Excluded caches still require the separate isolated-cache policies. Current
+helper files are individually pinned; an execution recipe still needs to
+control module resolution and future helper additions. Temporary-write paths,
+remaining overhead, complete environmental policy and guarded quiet-window
+submission remain open. No production timing ran. All inventory processes
+are terminal; the full publication goal remains incomplete.
+
 ## Isolate Native JIT Caches (2026-09-28)
 
 Previous turn made progress by bounding retained raw observations. Inspection

@@ -140,6 +140,14 @@ Report incomplete repeats as incomplete, never as complete three-run summaries.
 
 ## Current State And Next Execution Gates
 
+The [local runtime binding](threadripper_runtime_binding_20260928.json) pins
+four independently verified tree inventories with 146,924 entries. They cover
+all 191 baseline file records and the six tools resolved in OrthoFinder's
+subprocess environment. Recheck these manifests before and after native work;
+their existence is not execution authorization. The broad snapshot does not
+replace dynamic dependency/temp-write review, module-resolution controls or
+quiet-host validation. Its large local raw manifests are not committed to Git.
+
 The three-method native installation fixture completed in job 22350 after
 two retained preflight failures. The local
 [baseline amendment](threadripper_native_baseline_20260928.json) corrects only
