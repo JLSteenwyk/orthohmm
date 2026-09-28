@@ -1,0 +1,99 @@
+{
+  "archive": {
+    "bytes": 1957180078,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/OrthoFinder2_Zenodo.tar.gz",
+    "sha256": "44d0b6825abead63ef9d7f9b956abe1d6c9cb7e90cc23e212d1ad818f54f35e4"
+  },
+  "candidate_names": [
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/README",
+      "size": 2456
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/README~",
+      "size": 2497
+    }
+  ],
+  "evidence": [
+    {
+      "bytes": 97767872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/inventory.json",
+      "sha256": "ef93670383f471bd3122e49c38e48c68b7b62f76336ff7f329020e243abdf056"
+    },
+    {
+      "bytes": 2590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/readme_inspection.json",
+      "sha256": "9d9b08a18a997c0505b119900c527277e7315a42b96b50032898753381dfd910"
+    },
+    {
+      "bytes": 247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/scheduled_download_started.json",
+      "sha256": "5e370e9037086d4a5cba24b129e11f945e43a12136f587f3bd506dfe4a870356"
+    },
+    {
+      "bytes": 93,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/scheduled_download_finished.json",
+      "sha256": "716ddfcd8a2d9a4c68e1cbfaf0ce0edd2e761e6c6beff5ac27537618a435b74f"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_orthofinder2_public_20260928/slurm_22344.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "exit_code": "0:0",
+  "interpretation": "README identifies QfO proteomes and submitted predictions; no original TreeFam release-7 tree/mapping artifacts identified by inventory or README.",
+  "job_id": 22344,
+  "limitations": [
+    "Member names and README are not exhaustive semantic inspection of every prediction or tree file.",
+    "Derived OrthoFinder and simulation trees must not substitute for original QfO TreeFam reference families."
+  ],
+  "member_count": 548923,
+  "originals_recovered": false,
+  "public_record": "https://zenodo.org/records/1481147",
+  "published_md5": "5907cdf22b211f2c4e6bead42eb17878",
+  "qfo_results": [
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/orthomcl_qfo_blast_no_coorthologues.qfo.txt",
+      "size": 106100457
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/orthomcl_qfo_blast.txt",
+      "size": 165912828
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/orthomcl_qfo_diamond.txt",
+      "size": 91236123
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/OrthoFinder_qfo_diamond.txt",
+      "size": 158143180
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/OrthoFinder_qfo_blast.txt",
+      "size": 185264101
+    },
+    {
+      "kind": "file",
+      "name": "OrthoFinder2_Zenodo/Quest_for_Orthologs/Results/OrthoFinder_qfo_blast_msa.txt",
+      "size": 181980919
+    }
+  ],
+  "state": "COMPLETED",
+  "top_level_counts": {
+    "OrthoFinder2_Zenodo": 1,
+    "OrthoFinder2_Zenodo/Chordata_Analysis": 106807,
+    "OrthoFinder2_Zenodo/Fungi_Datasets": 265,
+    "OrthoFinder2_Zenodo/Gene_Duplication_Tests": 441773,
+    "OrthoFinder2_Zenodo/Quest_for_Orthologs": 75,
+    "OrthoFinder2_Zenodo/README": 1,
+    "OrthoFinder2_Zenodo/README~": 1
+  }
+}

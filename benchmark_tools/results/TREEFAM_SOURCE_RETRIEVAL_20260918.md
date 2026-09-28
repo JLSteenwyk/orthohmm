@@ -189,6 +189,29 @@ match the SHA-256 values above. No newly recovered original TreeFam input
 has been admitted for analysis. The [Sanger archive page](https://www.sanger.ac.uk/tool/treefam/)
 explicitly states that the resource is no longer available at Sanger.
 
+### OrthoFinder2 Supplement Inspected (2026-09-28)
+
+Job 22344 completed 0:0 in 23m43s. All 1,957,180,078 bytes were retrieved;
+MD5 matches the public record and independent SHA256 reproduction gives
+`44d0b6825abead63ef9d7f9b956abe1d6c9cb7e90cc23e212d1ad818f54f35e4`.
+The tar inventory contains 548,923 members. No member name matched TreeFam,
+`treefam2reference`, `.nhx` or reference; only README and its backup matched
+the candidate-name filter. No nested tar/zip/tgz filenames were identified.
+
+Read the exact 2,456-byte README through the archive API without extracting
+paths or executing archive contents. It describes QfO proteomes and uploaded
+OrthoFinder/OrthoMCL prediction files, plus fungal/chordate analyses and gene
+duplication simulations. The six QfO result filenames agree with that
+description. This does not identify the original TreeFam-A release-7 trees
+or QfO mapping. Do not repurpose inferred/simulated trees as reference family
+units. This is a bounded negative finding from filenames and documentation,
+not a claim that every tree or prediction file was semantically inspected.
+
+The [retrieval receipt](orthofinder2_treefam_search_22344.json) records the
+archive identity, inventory/README hashes, relevant paths and limitations.
+The large archive and full inventory remain local; no raw dataset was added
+to Git. The original-family uncertainty limitation remains unresolved.
+
 ### OrthoFinder2 Supplement Retrieval Started (2026-09-28)
 
 Revisited the remaining public [Zenodo record 1481147](https://zenodo.org/records/1481147).

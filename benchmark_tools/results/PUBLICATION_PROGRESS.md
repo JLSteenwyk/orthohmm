@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Archive and Collector Controls Completed (2026-09-28)
+
+Previous turn added exact native mapping checks. Followed the existing live
+handles without restarting either job. Archive job 22344 completed 0:0 in
+23m43s; exact size/published MD5 and independently reproduced SHA256 match.
+Indexed 548,923 members and read its README. QfO contents are proteomes and
+submitted method predictions; no original TreeFam tree/mapping artifacts
+were identified. The [receipt](orthofinder2_treefam_search_22344.json) records
+the bounded negative finding; original-family labels remain unavailable.
+
+Dependency-released collector job 22346 completed 0:0 in 25 seconds. Both
+v2 raw replays reproduced exactly in a separate process; each clean/widened
+control had eight complete matching thread observations. Clean job/native
+step peaks were 54,964,224/32,362,496 bytes; widened-control peaks were
+78,721,024/32,829,440 bytes. The second job peak includes earlier control
+and observer history because these are two controls in one job, unlike the
+one-job-per-run production plan. These are distinct scopes, not additive
+inference-memory estimates. The [control receipt](threadripper_job_memory_controls_22346.json)
+pins raw evidence and independently reproduced outcomes.
+
+Outside-job usage remained 47.09 and 47.49 CPU-core equivalents. Therefore
+these completed controls establish neither host isolation nor scientific
+timing admission. Reviewed the existing `run_checked` composition for the
+next executor integration; no executor or inference was launched this turn.
+Native/overhead checks, quiet-window coordination, remaining uncertainty and
+publication-release requirements remain open. No DGX access or contacts.
+
 ## Native Output Numbering Checks Added (2026-09-28)
 
 Previous turn validated common input preparation. Added a Threadripper output
