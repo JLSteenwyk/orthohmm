@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Preparation and Collector Composition Added (2026-09-28)
+
+Previous turn completed and independently replayed the archive/control jobs.
+Connected local preparation and collection using the existing `run_checked`
+wrapper, preserving its before/after verification and failure records. The
+new library checks native cwd, scientific environment overrides, actual PATH
+resolution and loader overrides; checks supplied runtime pins and the frozen
+baseline; verifies original inputs and prepared copies/enumeration; and invokes
+the collector with fixed 32-worker/128-GiB/85800-second settings. Preparation
+and identity checks remain outside the native timer.
+
+31 focused composition/preparation/output and historical-wrapper tests passed
+in 0.51 seconds. Tests exercise preflight suppression of native launch,
+preparation/collector errors, retained post-run provenance failure, native
+nonzero exits and timeouts with no retry. This is orchestration coverage using
+stubbed native work, not a live inference or complete executor admission.
+
+There is no execution CLI or scheduler submission: callers must still bind
+the plan/baseline/runtime/collector to a frozen recipe and enforce allocation,
+environmental eligibility and independent replay/output checks. Next supply
+that recipe and run a bounded end-to-end native validation before overhead
+assessment and the controlled panel. Latest Slurm queue is empty, which does
+not establish a quiet host; last measured non-Slurm competition remains a
+timing limitation. No scientific defaults or prior evidence were changed.
+
 ## Archive and Collector Controls Completed (2026-09-28)
 
 Previous turn added exact native mapping checks. Followed the existing live
