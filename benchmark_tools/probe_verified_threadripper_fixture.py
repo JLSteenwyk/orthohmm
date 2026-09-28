@@ -15,8 +15,9 @@ from benchmark_tools.measure_threadripper_scaling import measure
 from benchmark_tools.validate_threadripper_outputs import validate
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from benchmark_tools.probe_dgx_step_separation import save
+from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
 
-LOOKUP_SHA = "07eecb538551c72b742e89cdec3691bd95c33d4caa3bad09e7c9f549baaaac09"
+LOOKUP_SHA = "f075036eef07acc4b1d542bea3565ce2d165650e8c8361fc78745ea1ef451d78"
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
 METHODS = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full")
 
@@ -36,9 +37,11 @@ def main():
     for name in ("input", "output", "tmpfs"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--method", choices=METHODS, default=METHODS[0])
+    parser.add_argument("--scheduler-command", required=True)
     args = parser.parse_args()
+    allocation_cwd = str(Path.cwd())
     results = Path(__file__).resolve().parent / "results"
-    lookup_path = results / "threadripper_python_lookup_20260928.json"
+    lookup_path = results / "threadripper_python_lookup_v2_20260928.json"
     lookup = read_frozen(lookup_path, LOOKUP_SHA)
     baseline = read_frozen(Path(lookup["baseline"]["path"]), lookup["baseline"]["sha256"])
     binding = read_frozen(Path(lookup["binding"]["path"]), lookup["binding"]["sha256"])
@@ -55,9 +58,13 @@ def main():
     save(args.output / "started.json", dict(source=record(__file__),
         checker_source=record(Path(__file__).with_name("check_threadripper_runtime.py")),
         lookup=record(lookup_path), plan=record(plan_path), method=args.method,
+        scheduler_command=args.scheduler_command, allocation_cwd=allocation_cwd,
+        release_budget_required=True,
         scientific_timings_admitted=False))
+    job = int(os.environ["SLURM_JOB_ID"])
+    guard = ReleaseBudgetGuard(job, command=args.scheduler_command, cwd=allocation_cwd)
     wrapped = measure_run(run, baseline, binding["runtime_specs"], measure,
-                          int(os.environ["SLURM_JOB_ID"]), runtime_checker=checker)
+                          job, runtime_checker=checker, release_guard=guard)
     result = dict(wrapper=wrapped, scientific_timings_admitted=False,
                   limitations=["One 16-gene fixture, not a production timing identity or executor authorization.",
                                "Full tree and declared-lookup checks do not establish quiet-host eligibility."])

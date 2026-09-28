@@ -1,0 +1,99 @@
+{
+  "binding": {
+    "bytes": 35064,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_runtime_binding_v3_20260928.json",
+    "sha256": "af01c438009e21d425d94b20841c95c0d1b8f9db99bad238bdb7173f015c35fd"
+  },
+  "driver": {
+    "bytes": 4331,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_verified_threadripper_fixture.py",
+    "sha256": "ca8cd7f6ca7469e4945e858876edd5ca0b2a6581c8bc01f7d29a68224f96ca66"
+  },
+  "jobs": [
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-guarded-high",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-guarded-high-%j.log",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_high_20260928 --tmpfs /dev/shm/orthohmm_guarded_high_20260928 --method orthohmm_high_sensitivity --scheduler-command '(null)'"
+      ],
+      "job_id": 22363,
+      "method": "orthohmm_high_sensitivity",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_high_20260928",
+      "stderr": "",
+      "stdout": "22363\n",
+      "tmpfs": "/dev/shm/orthohmm_guarded_high_20260928"
+    },
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-guarded-phylo",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-guarded-phylo-%j.log",
+        "--dependency=afterok:22363",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_phylo_20260928 --tmpfs /dev/shm/orthohmm_guarded_phylo_20260928 --method orthohmm_satellite_v2 --scheduler-command '(null)'"
+      ],
+      "job_id": 22364,
+      "method": "orthohmm_satellite_v2",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_phylo_20260928",
+      "stderr": "",
+      "stdout": "22364\n",
+      "tmpfs": "/dev/shm/orthohmm_guarded_phylo_20260928"
+    },
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-guarded-of",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-guarded-of-%j.log",
+        "--dependency=afterok:22364",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_of_20260928 --tmpfs /dev/shm/orthohmm_guarded_of_20260928 --method orthofinder_full --scheduler-command '(null)'"
+      ],
+      "job_id": 22365,
+      "method": "orthofinder_full",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_of_20260928",
+      "stderr": "",
+      "stdout": "22365\n",
+      "tmpfs": "/dev/shm/orthohmm_guarded_of_20260928"
+    }
+  ],
+  "limitations": [
+    "Sequential 16-gene installation fixtures, not production timing identities.",
+    "Afterok dependencies prevent the next diagnostic after a failed predecessor; no automatic retries.",
+    "Results, independent replay and host competition remain to be reviewed."
+  ],
+  "lookup": {
+    "bytes": 5023,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_python_lookup_v2_20260928.json",
+    "sha256": "f075036eef07acc4b1d542bea3565ce2d165650e8c8361fc78745ea1ef451d78"
+  },
+  "scientific_timings_admitted": false
+}

@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Runtime Rebound And Guarded Fixtures Submitted (2026-09-28)
+
+The previous continuation added the fresh release-budget check. Re-inventoried
+all six previously bound runtime trees instead of accepting their current
+contents without comparison. Exactly two existing records changed:
+measure_threadripper_run.py and measure_threadripper_scaling.py. No entries
+were added or removed in those trees; the other five inventories are exactly
+equal. All 191 frozen baseline paths remain identical. Added six explicit
+orchestration-helper records, retaining the old binding as historical.
+See the [prospective v3 binding](threadripper_runtime_binding_v3_20260928.json).
+
+Ran the declared OrthoHMM and OrthoFinder import-chain probes twice using that
+binding. Both repeated signatures match each other and their previously
+accepted native signatures. The [lookup receipt](threadripper_python_lookup_v2_20260928.json)
+pins both reports and the prior comparison. This preserves the scientific
+runtime identity; it is not proof of full-workload coverage or authorization.
+
+Updated the fixture driver to pin the new receipt, require an explicit
+scheduler-command identity and always pass the release-budget guard. Driver
+source remains separately pinned in each started record. Seventy-eight
+focused tests passed in 0.76 seconds. Submitted fresh 16-gene fixtures:
+22363 high sensitivity, 22364 satellite_v2 and 22365 full OrthoFinder, with
+afterok dependencies and no automatic retries. All request the amended
+26-hour scheduler envelope but retain the small diagnostic inputs. See the
+[submission receipt](threadripper_guarded_submissions_20260928.json).
+
+22363 was authoritatively observed RUNNING; 22364/22365 are dependency-pending.
+Inspect these exact handles before any further action. Full before/after
+tree checks, native output validation, release-guard evidence and independent
+replay remain pending for these runs. No production timing identity was
+launched. Quiet-host coordination, production orchestration and all remaining
+scientific/release requirements remain open; the full goal stays active.
+
 ## Fresh Allocation Budget Check Connected To Release Gate (2026-09-28)
 
 The previous turn amended the prospective allocation envelope. Implemented a
