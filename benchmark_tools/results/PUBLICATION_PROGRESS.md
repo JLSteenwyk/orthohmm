@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Threadripper Migration Resumed (2026-09-28)
+
+The prior turn was blocked by sandbox startup failure. Commands now execute;
+re-read the updated goal and made no DGX access. Inspected Linux and full Slurm
+hardware records: 96 physical cores/192 threads, one NUMA node and about 1 TiB
+RAM. The truncated sinfo memory field was corrected using scontrol's full
+1030000-MB value. A ten-second-requested CPU observation measured 69.6107
+outside CPU-core equivalents despite an empty scheduler queue. No unrelated
+process was touched; a quiet-window coordination question was sent.
+
+Verified all 12 retained input hashes and all 27 method/size/repeat identities
+against the existing local and DGX plans. Added the prospective
+[Threadripper amendment](THREADRIPPER_TIMING_AMENDMENT_20260928.md): 32 distinct
+physical-core placements/128 GiB, sequential exclusive allocations, explicit
+contamination/failure handling and separate historical timing reporting.
+The current host is not eligible for controlled timing. Runtime, enumeration,
+allocation and collector validation remain next; no inference was launched.
+Scientific uncertainty, original TreeFam sources and release work remain open.
+
 ## DGX Access Resumed; Public-Only Source Search (2026-09-27)
 
 The user renewed DGX use and prohibited maintainer contact in favor of internet
