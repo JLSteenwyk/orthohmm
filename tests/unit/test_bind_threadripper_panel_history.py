@@ -48,6 +48,29 @@ def test_missing_review_waits(tmp_path):
     assert run(tmp_path, plan, session)["progress"]["status"] == "terminal_attempt_requires_review"
 
 
+@pytest.mark.parametrize("actual,expected,accepted", [
+    ("1-02:00:00", "1-02:00:00", True),
+    ("1-00:00:00", "1-02:00:00", False),
+    ("1-02:00:00", "1-00:00:00", False)])
+def test_frozen_scheduler_envelope_is_propagated(tmp_path, actual, expected, accepted):
+    plan, session = setup(tmp_path)
+    path = tmp_path / "controller.json"
+    controller = json.loads(path.read_text())
+    controller["stdout"] = controller["stdout"].replace("1-00:00:00", actual)
+    session["controller"] = put(path, controller)
+    ref = put(tmp_path / "session.json", session)
+    def invoke():
+        return bind(plan, [ref], command="/recipe/run.sh", cwd="/recipe", time_limit=expected)
+    if accepted:
+        result = invoke()
+        assert result["progress"]["index"] == 1
+        assert result["controller_policy"]["time_limit"] == expected
+        assert not result["scientific_execution_authorized"]
+    else:
+        with pytest.raises(ValueError, match="allocation"):
+            invoke()
+
+
 @pytest.mark.parametrize("field,value", [("job_id", 43), ("index", 1),
     ("category", "wrong"), ("plan_sha256", "wrong"), ("evidence", [])])
 def test_rehashed_wrong_review_rejected(tmp_path, field, value):

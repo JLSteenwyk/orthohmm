@@ -10,7 +10,7 @@ from benchmark_tools.verify_threadripper_controller import validate
 REVIEWS = {"runtime", "environment", "resources", "outputs_or_failure"}
 
 
-def bind(plan_ref, session_refs, *, command, cwd):
+def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00"):
     """Read immutable history only; caller must freeze arguments and audit evidence."""
     evidence = []
 
@@ -42,7 +42,7 @@ def bind(plan_ref, session_refs, *, command, cwd):
                 or type(controller.get("returncode")) is not int or controller["returncode"] != 0):
             raise ValueError("Controller observation failed or queried another job")
         allocation = validate(controller["stdout"], job, session["phase"],
-                              command=command, cwd=cwd)
+                              command=command, cwd=cwd, time_limit=time_limit)
         outcome = session.get("native_outcome")
         if outcome is not None:
             native = read(session["native_audit"])
@@ -80,8 +80,9 @@ def bind(plan_ref, session_refs, *, command, cwd):
     for ref in evidence:
         check(ref)
     return dict(status="threadripper_panel_history_bound", progress=progress,
+        controller_policy=dict(command=command, cwd=cwd, time_limit=time_limit),
         attempts=attempts, evidence=evidence, source=record(__file__),
         scientific_execution_authorized=False, scientific_timings_admitted=False,
         limitations=["Hashes and identities bind recorded claims; they do not independently validate review conclusions.",
-                     "Caller must freeze plan/session references and command/cwd, authenticate observations and audit native outcomes.",
+                     "Caller must freeze plan/session references and command/cwd/time limit, authenticate observations and audit native outcomes.",
                      "Fresh live-job observations and quiet-host preflight remain mandatory before any submission."])

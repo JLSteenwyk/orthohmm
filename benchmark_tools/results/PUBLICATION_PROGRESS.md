@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Prospective Scheduler Envelope Amended (2026-09-28)
+
+Addressed the report-size probe's scheduling risk with a prospective 26-hour
+allocation envelope, preserving the 85,800-second native timeout and the
+byte-pinned 27-run command plan. The allowance is one hour before native
+launch plus 70 minutes afterward. These are engineering reserves, not proven
+upper bounds. The production runner must check fresh remaining time before
+launch and retain a pre-native failure if the required reserve is unavailable;
+it must not shorten inference, retry silently or advance past unreviewed failure.
+
+The history binder now accepts and records an explicit caller-frozen time
+limit and passes it through to controller validation. Its historical 24-hour
+default remains unchanged. Tests reject either old/new limit when the other
+is expected. Seventy-seven focused tests passed in 0.53 seconds.
+
+Scheduler-only job 22361 requested the same exclusive local 64-slot task and
+128 GiB policy with a 26-hour limit, but executed only /usr/bin/sleep 30.
+Running and terminal controller records both validated; the job completed
+0:0 in 30 seconds. The partition reports no maximum-time restriction. See the
+[amendment and evidence](threadripper_scheduler_envelope_20260928.json).
+All 27 production output/input locations remain absent. No native inference,
+scientific timing, DGX operation or unrelated workload change occurred.
+
+This validates scheduler acceptance, not 26-hour endurance or sufficient
+overhead under every workload. The amendment still needs enforcement in the
+integrated production executor, together with quiet-host preflight and all
+existing provenance/resource checks. Remaining scientific/publication work
+is unchanged; the full goal stays active and incomplete.
+
 ## Full-Day Report Storage Probe And Allocation Risk (2026-09-28)
 
 Following the corrected FAS audit, tested retained timing-report structures
