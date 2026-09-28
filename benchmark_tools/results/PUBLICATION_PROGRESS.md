@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Readable Local Service Inventory And Active Workloads (2026-09-28)
+
+Previous turn connected and pushed the owned preflight responder lifecycle
+as 008997d2. Gathered actual local configuration evidence for the outstanding
+ordinary-service policy instead of assuming the old DGX permission issue
+applies here. Added a bounded read-only Threadripper collector reusing the
+existing fingerprint parser without invoking DGX collection or SSH.
+See the [service/context review](THREADRIPPER_SERVICE_INVENTORY_20260928.md).
+
+Three service observations agree: 115 system units and 81 user units, 206
+file observations across 201 resolved files, zero collection errors and no
+pending daemon reload. All final file sizes/hashes and three raw artifacts
+were checked again. Unit contents, command lines and environment values are
+not retained; external configuration and transient scopes remain outside
+this inventory's scope. 29 focused collector/parser tests pass.
+
+A fresh typed process capture measured 92.5710 competing core equivalents,
+zero sampling errors and three unmatched processes despite an empty Slurm
+queue. The top BAli-Phy, matched-interval and IQ-TREE guide service groups
+account for about 47.97 cores. 41 user services are running, including 32 with
+fungal-analysis names. No service was approved as ordinary background and no
+unrelated process was changed. This establishes readable local unit evidence
+and the concrete workload conflict, not a quiet window or complete policy.
+
+Real policy review/freeze, native handoff, whole-run policy application,
+full-scale accounting and controlled timing remain unfinished. No benchmark
+job was launched and no DGX was accessed. Full publication goal active.
+
 ## Executor Owns Preflight Responder Lifecycle (2026-09-28)
 
 Previous turn implemented and pushed the standalone responder as 5c473a7c.
