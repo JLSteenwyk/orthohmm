@@ -80,10 +80,11 @@ rejected. No ordinary host service is approved by that test.
 
 ## Remaining Production Work
 
-The worker is not automatically started by the executor or submission script.
-The final orchestration must launch it in the same allocation, retain its log
-and terminal status, and clean up only its own waiting worker if preparation
-fails. Validate the complete native handoff and its latency under the frozen
+The initial standalone implementation did not start automatically. The later
+[owned-child lifecycle integration](THREADRIPPER_WORKER_LIFECYCLE_20260928.md)
+now starts it from the executor in the same allocation, retains its log and
+terminal status, and cleans up only that child if preparation fails. Validate
+the complete native handoff and its latency under the frozen
 recipe before submitting any production identity. Existing bounded observer
 captures alone do not prove it can always finish inside 20 seconds.
 

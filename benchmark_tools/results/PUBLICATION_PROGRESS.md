@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Executor Owns Preflight Responder Lifecycle (2026-09-28)
+
+Previous turn implemented and pushed the standalone responder as 5c473a7c.
+Connected it to the single-identity executor through an owned-child lifecycle:
+one launch before preparation, file response or early-exit failure, successful
+join before the final budget check, and retained log/PID/exit/cleanup records.
+The policy reference is rechecked at release and after measurement. Cleanup
+targets only the owned child, never unrelated jobs/services, and no retry or
+next submission is authorized. See the
+[lifecycle contract](THREADRIPPER_WORKER_LIFECYCLE_20260928.md).
+
+173 focused tests pass. Real synthetic subprocess controls cover success,
+nonzero/no-response exits, response and join timeouts, spawn failure, parent
+interruption, and a termination-resistant child that was killed and reaped.
+Driver composition verifies join precedes budget checking and that failure
+prevents that callback. All test children are terminal; no benchmark inference
+or scheduler job was launched. Component tests do not establish native Slurm
+integration, preflight deadline sufficiency or whole-run environmental validity.
+
+Real service/configuration policy, numerical limits, integrated native handoff,
+whole-run policy application, full-scale resource accounting, source freeze
+and a verified quiet window remain unfinished. No new host poll, scientific
+setting/result change, unrelated-process signal or DGX access occurred.
+The full publication goal remains active and incomplete.
+
 ## Environmental Handoff Responder Implemented (2026-09-28)
 
 Previous turn added typed kernel identity and fresh host evidence, pushed as

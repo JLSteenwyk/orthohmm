@@ -12,6 +12,7 @@ from benchmark_tools.bind_threadripper_panel_history import bind
 from benchmark_tools.check_threadripper_runtime import RuntimeChecker
 from benchmark_tools.measure_threadripper_run import measure_run
 from benchmark_tools.measure_threadripper_scaling import measure
+from benchmark_tools.manage_threadripper_environment_worker import EnvironmentWorker
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.run_simulation_methods import read_frozen, execution_environment
@@ -159,6 +160,10 @@ def execute(request_path, request_sha):
             or cache.exists() or cache.is_symlink() or os.environ.get("PYTHONHASHSEED") != "0"):
         raise ValueError("Require local matched allocation, repository cwd and disabled bytecode writes")
     run, lookup, history, sources = select(request, root, job)
+    readiness = read(request["readiness_review"])
+    policy_ref = readiness["environment_policy"]
+    review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
+                            host="bizon", plan_sha256=PLAN_SHA))
     baseline = read(lookup["baseline"])
     binding = read(lookup["binding"])
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{run['index']:02d}"
@@ -178,10 +183,15 @@ def execute(request_path, request_sha):
         checker = RuntimeChecker(root / "benchmark_tools/results/threadripper_python_lookup_v3_20260928.json",
             LOOKUP_SHA, session / "lookup_checks")
         budget = ReleaseBudgetGuard(job, command=request["scheduler_command"], cwd=str(root))
-        evidence = [request["recipe"], request["readiness_review"], *sources, *history["evidence"]]
-        guard = EnvironmentalReleaseGuard(request, request_ref, budget, evidence=evidence)
-        result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], measure, job,
-                                        runtime_checker=checker, release_guard=guard)
+        evidence = [request["recipe"], request["readiness_review"], policy_ref, *sources, *history["evidence"]]
+        with EnvironmentWorker(session, request_ref, policy_ref, root) as worker:
+            def finished_worker_budget(directory):
+                worker.finish()
+                return budget(directory)
+            guard = EnvironmentalReleaseGuard(request, request_ref, finished_worker_budget,
+                evidence=evidence, waiter=worker.wait_response)
+            result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], measure, job,
+                                            runtime_checker=checker, release_guard=guard)
         for item in [request_ref, *evidence]:
             check(item)
         result["status"] = "measurement_returned_pending_independent_review"
@@ -189,6 +199,9 @@ def execute(request_path, request_sha):
         result.update(status="executor_failed", error_type=type(error).__name__, error=str(error))
         raise
     finally:
+        lifecycle = session / "environment_worker_lifecycle.json"
+        if lifecycle.is_file():
+            result["environment_worker"] = record(lifecycle)
         save(session / "result.json", result)
         os.chdir(root)
     return result

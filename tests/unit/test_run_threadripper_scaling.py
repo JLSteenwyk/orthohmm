@@ -36,10 +36,13 @@ def setup(tmp_path, monkeypatch):
     recipe = put(tmp_path / "recipe.json", dict(schema="threadripper_executor_recipe_v1", root=str(tmp_path),
         sources=[driver.record(p) for p in sorted(tools.iterdir()) if p.is_file()]))
     support = put(tmp_path / "support.json", {"synthetic_test_only": True})
+    policy = put(tmp_path / "environment_policy.json", dict(schema="threadripper_environment_policy_v1",
+        decision="reviewed", host="bizon", plan_sha256=plan["sha256"],
+        review_reference="synthetic test only", evidence=[support]))
     ready = put(tmp_path / "ready.json", dict(schema="threadripper_readiness_review_v1", decision="passed",
         plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], recipe_sha256=recipe["sha256"],
         full_scale_observer_validated=True, environment_policy_frozen=True,
-        review_reference="synthetic test, not real readiness", evidence=[support]))
+        review_reference="synthetic test, not real readiness", evidence=[support], environment_policy=policy))
     preflight = put(tmp_path / "preflight.json", dict(schema="threadripper_environment_preflight_v1",
         decision="passed", job_id=42, index=0, plan_sha256=plan["sha256"], recipe_sha256=recipe["sha256"],
         readiness_review_sha256=ready["sha256"], whole_run_observer_ready=True,
@@ -232,7 +235,8 @@ temporary.rename(target)
 
 
 @pytest.mark.parametrize("raises", [False, True])
-def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises):
+@pytest.mark.parametrize("worker_fails", [False, True])
+def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails):
     root, request, runs = setup
     ref = put(root / "request.json", request)
     monkeypatch.setattr(driver, "__file__", str(root / "benchmark_tools/run_threadripper_scaling.py"))
@@ -249,15 +253,33 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     monkeypatch.setattr(driver, "execution_environment", lambda baseline: ({}, None))
     monkeypatch.setattr(driver, "RuntimeChecker", lambda *args: "checker")
     calls = []
+    worker_events = []
+    class Worker:
+        def __init__(self, session, *args): self.session = session
+        def __enter__(self):
+            worker_events.append("started")
+            return self
+        def finish(self):
+            worker_events.append("joined")
+            if worker_fails: raise RuntimeError("synthetic worker failure")
+        def wait_response(self, path, seconds): raise AssertionError("Synthetic measurement does not request preflight")
+        def __exit__(self, kind, error, traceback):
+            worker_events.append("cleaned")
+            put(self.session / "environment_worker_lifecycle.json", dict(synthetic_test_only=True))
+    monkeypatch.setattr(driver, "EnvironmentWorker", Worker)
+    monkeypatch.setattr(driver, "ReleaseBudgetGuard", lambda *args, **kwargs:
+                        lambda directory: worker_events.append("budget"))
     def measured(run, baseline, specs, collector, job, **kwargs):
         calls.append(run)
         assert run == runs[0] and job == 42 and kwargs["runtime_checker"] == "checker"
         assert isinstance(kwargs["release_guard"], driver.EnvironmentalReleaseGuard)
+        assert worker_events == ["started"]
         if raises:
             raise RuntimeError("synthetic infrastructure failure")
+        kwargs["release_guard"].budget(root)
         return {"status": "command_exited_zero"}
     monkeypatch.setattr(driver, "measure_run", measured)
-    if raises:
+    if raises or worker_fails:
         with pytest.raises(RuntimeError, match="synthetic"):
             driver.execute(Path(ref["path"]), ref["sha256"])
     else:
@@ -268,3 +290,6 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     with pytest.raises(FileExistsError):
         driver.execute(Path(ref["path"]), ref["sha256"])
     assert len(calls) == 1
+    expected = ["started"] + ([] if raises else ["joined"] + ([] if worker_fails else ["budget"])) + ["cleaned"]
+    assert worker_events == expected
+    assert saved["environment_worker"]["path"].endswith("environment_worker_lifecycle.json")

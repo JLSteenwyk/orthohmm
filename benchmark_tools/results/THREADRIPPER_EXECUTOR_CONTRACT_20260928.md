@@ -52,7 +52,9 @@ has unit and retained-fixture negative checks; it does not establish a reviewed
 service inventory or complete the live worker and handoff. The later
 [standalone responder implementation](THREADRIPPER_ENVIRONMENT_WORKER_20260928.md)
 has component and file-handoff tests, but still needs a reviewed real policy,
-orchestration, complete native integration and deadline validation.
+[native integration and deadline validation](THREADRIPPER_WORKER_LIFECYCLE_20260928.md).
+The executor now owns the responder's launch, successful join before budget
+checking, log retention and cleanup; this does not supply a real reviewed policy.
 
 The preflight must identify this job, index, recipe and readiness review,
 include supporting file records and a review reference, and report the
