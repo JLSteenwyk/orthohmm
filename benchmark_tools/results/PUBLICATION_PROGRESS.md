@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Common Per-Run Preparation Validated (2026-09-28)
+
+Previous turn generated the local command plan. Implemented common fresh
+tmpfs input preparation for both OrthoHMM modes and full OrthoFinder, with
+persistent output paths, source/copy hash checks, actual frozen enumeration,
+post-preparation rechecks and retained partial failures. Rejects unexpected
+files/symlinks, duplicate names, stale run directories and incorrect native
+input/output arguments. OrthoHMM output directories are created before timing;
+OrthoFinder's explicit output directory remains absent for its native creator.
+24 preparation/command/materializer tests passed (0.55 seconds).
+
+Engineering job 22347 completed 0:0 in two seconds using one CPU/2 GiB. It
+prepared the real four-proteome data separately for all three methods in
+diagnostic directories, then repeated byte/enumeration checks. No native
+inference was invoked, and none of the production identities were consumed.
+The [receipt](threadripper_preparation_controls_22347.json) retains source and
+output manifests. The API returns preparation time/bytes separately and can
+be reused for before/after inference checks; it does not itself authorize
+execution or establish full runtime/environment/output validity.
+
+Archive job 22344 remains RUNNING, last observed at 1,464,737,792 bytes.
+Collector v2 job 22346 remains queued behind it; pinned sources were not
+modified. Next integrate preparation with the guarded executor and output
+validation, inspect live collector/archive results when terminal, and finish
+native/overhead/environment checks before scientific timing. Wider uncertainty,
+independent-validation limitations and release work remain open.
+
 ## Threadripper Command Plan Derived (2026-09-28)
 
 Previous turn integrated job memory accounting and queued its live controls.

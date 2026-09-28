@@ -1,0 +1,342 @@
+{
+  "controls": [
+    {
+      "directory": "benchmarks/work/threadripper_preparation_controls_20260928/run_00",
+      "evidence": {
+        "bytes": 4220,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_preparation_controls_20260928/run_00/preparation.json",
+        "sha256": "cadc7889c2755940490d5bbd451698bbadfec1da31a09211680e31ee79556dd7"
+      },
+      "preparation": {
+        "expected_native_basename_order": [
+          "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+          "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "Gallus_gallus.GRCg6a.pep.all.fa"
+        ],
+        "finished_ns": 260516661268088,
+        "inference_started": false,
+        "input_bytes": 38446736,
+        "input_snapshot": {
+          "datasets": [
+            {
+              "input_directory": "/dev/shm/orthohmm_preparation_controls_20260928/run_00/input",
+              "inputs_in_native_order": [
+                {
+                  "bytes": 8784620,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_00/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                  "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+                },
+                {
+                  "bytes": 12000073,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_00/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                  "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+                },
+                {
+                  "bytes": 7778910,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_00/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                  "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+                },
+                {
+                  "bytes": 9883133,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_00/input/Gallus_gallus.GRCg6a.pep.all.fa",
+                  "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+                }
+              ],
+              "native_order": [
+                "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                "Gallus_gallus.GRCg6a.pep.all.fa"
+              ],
+              "proteomes": 4
+            }
+          ],
+          "interpreter": {
+            "bytes": 17157264,
+            "path": "/home/bizon/anaconda3/bin/python3.10",
+            "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+          },
+          "limitations": [
+            "Actual frozen OrthoHMM enumerator, not a sorted metadata listing.",
+            "Must recheck immediately before every run and after inference.",
+            "OrthoFinder separately sorts accepted basenames; its fresh copies need independent validation."
+          ],
+          "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+          "scientific_execution_authorized": false,
+          "source": {
+            "bytes": 2977,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          "status": "orthohmm_native_enumeration_captured"
+        },
+        "limitations": [
+          "Must run inside the allocation's preparation context for intended memory charging.",
+          "Caller must recheck before/after inference and validate actual OrthoFinder SpeciesIDs.",
+          "No runtime, allocation, quiet-host or native-output admission performed here."
+        ],
+        "original_inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          }
+        ],
+        "scientific_execution_authorized": false,
+        "started_ns": 260516426903184,
+        "status": "threadripper_inputs_prepared"
+      }
+    },
+    {
+      "directory": "benchmarks/work/threadripper_preparation_controls_20260928/run_01",
+      "evidence": {
+        "bytes": 4220,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_preparation_controls_20260928/run_01/preparation.json",
+        "sha256": "34332d21a17e669cf5de02b1e47c43e97cbdf8f57923eaa87873beb2996b63c7"
+      },
+      "preparation": {
+        "expected_native_basename_order": [
+          "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+          "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "Gallus_gallus.GRCg6a.pep.all.fa"
+        ],
+        "finished_ns": 260517004711395,
+        "inference_started": false,
+        "input_bytes": 38446736,
+        "input_snapshot": {
+          "datasets": [
+            {
+              "input_directory": "/dev/shm/orthohmm_preparation_controls_20260928/run_01/input",
+              "inputs_in_native_order": [
+                {
+                  "bytes": 8784620,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_01/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                  "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+                },
+                {
+                  "bytes": 12000073,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_01/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                  "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+                },
+                {
+                  "bytes": 7778910,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_01/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                  "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+                },
+                {
+                  "bytes": 9883133,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_01/input/Gallus_gallus.GRCg6a.pep.all.fa",
+                  "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+                }
+              ],
+              "native_order": [
+                "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                "Gallus_gallus.GRCg6a.pep.all.fa"
+              ],
+              "proteomes": 4
+            }
+          ],
+          "interpreter": {
+            "bytes": 17157264,
+            "path": "/home/bizon/anaconda3/bin/python3.10",
+            "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+          },
+          "limitations": [
+            "Actual frozen OrthoHMM enumerator, not a sorted metadata listing.",
+            "Must recheck immediately before every run and after inference.",
+            "OrthoFinder separately sorts accepted basenames; its fresh copies need independent validation."
+          ],
+          "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+          "scientific_execution_authorized": false,
+          "source": {
+            "bytes": 2977,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          "status": "orthohmm_native_enumeration_captured"
+        },
+        "limitations": [
+          "Must run inside the allocation's preparation context for intended memory charging.",
+          "Caller must recheck before/after inference and validate actual OrthoFinder SpeciesIDs.",
+          "No runtime, allocation, quiet-host or native-output admission performed here."
+        ],
+        "original_inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          }
+        ],
+        "scientific_execution_authorized": false,
+        "started_ns": 260516770133457,
+        "status": "threadripper_inputs_prepared"
+      }
+    },
+    {
+      "directory": "benchmarks/work/threadripper_preparation_controls_20260928/run_02",
+      "evidence": {
+        "bytes": 4220,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_preparation_controls_20260928/run_02/preparation.json",
+        "sha256": "3925ea89a37aa5527b023b350c1e86cdf3364725f336073185164f92116d8ca2"
+      },
+      "preparation": {
+        "expected_native_basename_order": [
+          "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+          "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+          "Gallus_gallus.GRCg6a.pep.all.fa",
+          "Rattus_norvegicus.Rnor_6.0.pep.all.fa"
+        ],
+        "finished_ns": 260517350603124,
+        "inference_started": false,
+        "input_bytes": 38446736,
+        "input_snapshot": {
+          "datasets": [
+            {
+              "input_directory": "/dev/shm/orthohmm_preparation_controls_20260928/run_02/input",
+              "inputs_in_native_order": [
+                {
+                  "bytes": 8784620,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_02/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                  "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+                },
+                {
+                  "bytes": 12000073,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_02/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                  "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+                },
+                {
+                  "bytes": 7778910,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_02/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                  "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+                },
+                {
+                  "bytes": 9883133,
+                  "path": "/dev/shm/orthohmm_preparation_controls_20260928/run_02/input/Gallus_gallus.GRCg6a.pep.all.fa",
+                  "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+                }
+              ],
+              "native_order": [
+                "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+                "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+                "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+                "Gallus_gallus.GRCg6a.pep.all.fa"
+              ],
+              "proteomes": 4
+            }
+          ],
+          "interpreter": {
+            "bytes": 17157264,
+            "path": "/home/bizon/anaconda3/bin/python3.10",
+            "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+          },
+          "limitations": [
+            "Actual frozen OrthoHMM enumerator, not a sorted metadata listing.",
+            "Must recheck immediately before every run and after inference.",
+            "OrthoFinder separately sorts accepted basenames; its fresh copies need independent validation."
+          ],
+          "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+          "scientific_execution_authorized": false,
+          "source": {
+            "bytes": 2977,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          "status": "orthohmm_native_enumeration_captured"
+        },
+        "limitations": [
+          "Must run inside the allocation's preparation context for intended memory charging.",
+          "Caller must recheck before/after inference and validate actual OrthoFinder SpeciesIDs.",
+          "No runtime, allocation, quiet-host or native-output admission performed here."
+        ],
+        "original_inputs": [
+          {
+            "bytes": 8784620,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+            "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+          },
+          {
+            "bytes": 12000073,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+            "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+          },
+          {
+            "bytes": 7778910,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+            "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+          },
+          {
+            "bytes": 9883133,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+            "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+          }
+        ],
+        "scientific_execution_authorized": false,
+        "started_ns": 260517115915148,
+        "status": "threadripper_inputs_prepared"
+      }
+    }
+  ],
+  "exit_code": "0:0",
+  "job_id": 22347,
+  "limitations": [
+    "Preparation-only copies of the four-proteome dataset; no inference or output validation.",
+    "Controls use diagnostic paths, not production run identities."
+  ],
+  "resources": {
+    "cpus": 1,
+    "memory_gib": 2
+  },
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 5588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_threadripper_run.py",
+      "sha256": "85e06961dd4ad38b09b5968520aa203e4c1746ed4af8e41289706a11501df582"
+    },
+    {
+      "bytes": 5464,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_threadripper_commands.py",
+      "sha256": "a0ccd8f9b0bee8f6b01a943058cedb6cff711451f77d9194199fc09d3d612bed"
+    },
+    {
+      "bytes": 3883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "sha256": "730609276dbaba4671cce8e3caea6bb2dc535a263110febf08a3f4d0afd7d9c8"
+    }
+  ],
+  "state": "COMPLETED"
+}
