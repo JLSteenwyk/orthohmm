@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Thread-Level Affinity Observation (2026-09-28)
+
+Re-read the amended goal; the preceding prompt-confirmation turn added no
+scientific evidence. Added a read-only observer of every enumerated cgroup
+thread, including descendant cgroups. It retains out-of-policy CPU masks,
+identity/membership races, inventory changes and inaccessible threads rather
+than declaring those samples compliant. Narrower per-thread masks are allowed.
+Nine new tests plus nine placement tests pass (18 total, 0.23 seconds).
+
+Local Slurm diagnostic 22340 completed 0:0, with one observed Python thread
+on CPU IDs 0-31 and no observation errors. Its [raw receipt](threadripper_affinity_probe_22340.json)
+is a single self-observation, not a descendant workload stress test, full-run
+placement guarantee or scientific timing. It used the previously tested
+64-slot reservation, explicit 0xffffffff binding and 128-GiB RAM request.
+No inference, DGX access or unrelated workload modification occurred.
+
+Next: integrate this observer into the local long-run collector and replay,
+test live multithreaded descendants and deliberate affinity widening, validate
+the x86 native runtime/enumeration and arrange a verified quiet window before
+the 27 runs. Historical DGX collectors remain unchanged. Empty Slurm queue
+observed this turn is not evidence of host isolation. The broader uncertainty,
+source-recovery and publication requirements remain unfinished.
+
 ## Threadripper Placement Tested (2026-09-28)
 
 Previous turn froze the local timing amendment and checked inputs. Added a
