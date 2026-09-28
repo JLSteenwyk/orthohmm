@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Bundled Native Library Provenance (2026-09-28)
+
+Previous turn pushed the native-churn correction as 607f39ee. Rechecked actual
+host workload: Slurm was empty, but a fresh typed capture measured 92.5922
+competing cores with thirteen sampling errors and three unmatched processes.
+No production timing was started or unrelated job changed.
+
+Advanced release attribution instead. Debug links in the exact retained igraph
+wheel identified specific AlmaLinux libxml2, xz-libs and libgomp builds. Retrieved
+three binary RPM candidates; all fifteen selected section pairs, including code
+and build IDs, match. A second extraction reproduced thirty section hashes and
+two notice texts. See the [provenance account](IGRAPH_BUNDLED_RPM_PROVENANCE_20260928.md).
+
+Whole binaries differ. RPM signature verification, full source correspondence,
+libgomp notices and broader release review remain open. Six specific candidate
+source-RPM URLs returned 404, without establishing global unavailability. No
+package was installed or executed, frozen runtime changed, or DGX accessed.
+This is new component evidence, not release clearance or publication readiness.
+
 ## Correct Native Churn Classification (2026-09-28)
 
 Previous turn pushed pressure review as 7ac1ba6e. Applicability review found

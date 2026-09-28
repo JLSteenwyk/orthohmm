@@ -1,0 +1,65 @@
+{
+  "limitations": [
+    "No benchmark Slurm allocation was active; diagnostic excludes the capture process only.",
+    "Sampling errors and unmatched processes remain unresolved; rate is an observed sum, not complete host demand.",
+    "No unrelated service was modified."
+  ],
+  "observed_foreign_average_cores": 92.59216357191448,
+  "production_started": false,
+  "sampling_error_count": 13,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 1972916,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_timing_recheck_after_stream_20260928.json",
+    "sha256": "d91f351ce082f80287e92be731f87867345ee49d05c31affdad155ce97f97ac4"
+  },
+  "status": "shared_host_still_busy",
+  "top_cgroups": [
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-baliphy-independent-chains-20260927.service",
+      15.997258706336549
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-selected-matched-intervals-20260928.service",
+      15.994111896636035
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+      15.882589490068934
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-fastml-optimizer-refinement-20260928-v3.service",
+      8.001620531149193
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-full-polynomial-ml-20260927.service",
+      8.000789032056176
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+      7.986895492933108
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-4c4f130f-480e-45d0-9841-1f26dd9dba69.scope",
+      7.51844704574533
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-hybrid-excluded-guides-20260927.service",
+      3.9980957968451407
+    ]
+  ],
+  "unmatched_foreign_processes": [
+    {
+      "created": 1790633167.4,
+      "pid": 2325309
+    },
+    {
+      "created": 1790633167.42,
+      "pid": 2325310
+    },
+    {
+      "created": 1790633176.62,
+      "pid": 2325392
+    }
+  ]
+}

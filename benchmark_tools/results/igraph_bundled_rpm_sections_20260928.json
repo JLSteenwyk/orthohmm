@@ -1,0 +1,280 @@
+{
+  "inventory": {
+    "bytes": 38019,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_inference_notices_20260927.json",
+    "sha256": "ad688c76086757457fb6c24e8f7d5b8681a16a95ab64a09476324760cfc96aae"
+  },
+  "limitations": [
+    "Downloaded from AlmaLinux HTTPS; RPM signatures not verified against an independently pinned trust root.",
+    "Selected ELF sections and debug links can match despite different whole-object bytes; not a complete build attestation.",
+    "No package installed, code loaded, native library executed or benchmark environment changed.",
+    "Native source RPMs and complete source-to-binary chain remain outstanding."
+  ],
+  "packages": [
+    {
+      "download": {
+        "file": {
+          "bytes": 713304,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libxml2-2.9.7-21.el8_10.3.x86_64.rpm",
+          "sha256": "cd2fc223ea42e10e5b9a25eb5e4647d0e72c799ace1305fb3cc8ae776879f130"
+        },
+        "url": "https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/Packages/libxml2-2.9.7-21.el8_10.3.x86_64.rpm"
+      },
+      "metadata": "libxml2\n2.9.7\n21.el8_10.3\nlibxml2-2.9.7-21.el8_10.3.src.rpm\nMIT\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libxml2-2.9.7-21.el8_10.3.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID ced7258b: NOKEY\n",
+      "notice_candidates": [
+        {
+          "file": {
+            "bytes": 1289,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libxml2-2.9.7-21.el8_10.3.x86_64.rpm.Copyright",
+            "sha256": "c5c63674f8a83c4d2e385d96d1c670a03cb871ba2927755467017317878574bd"
+          },
+          "member": "./usr/share/licenses/libxml2/Copyright"
+        }
+      ],
+      "rpm_member": "./usr/lib64/libxml2.so.2.9.7",
+      "rpm_member_sha256": "39f609e792be85ca439cd7c7ce5fad4b83ae6d1fbe55a9de1a4cbb1ffb33ac5e",
+      "sections": {
+        ".eh_frame": {
+          "identical": true,
+          "rpm": {
+            "bytes": 142860,
+            "sha256": "2015a940d090036658d76ae14475a1d9f412299a6365bf0a3a4501a322b7f0fc"
+          },
+          "wheel": {
+            "bytes": 142860,
+            "sha256": "2015a940d090036658d76ae14475a1d9f412299a6365bf0a3a4501a322b7f0fc"
+          }
+        },
+        ".gnu_debuglink": {
+          "identical": true,
+          "rpm": {
+            "bytes": 52,
+            "sha256": "94ee4ef143e02b0f8659c2af237bfd0afc8f3c15d26248ee91586c23ecda2c46"
+          },
+          "wheel": {
+            "bytes": 52,
+            "sha256": "94ee4ef143e02b0f8659c2af237bfd0afc8f3c15d26248ee91586c23ecda2c46"
+          }
+        },
+        ".note.gnu.build-id": {
+          "identical": true,
+          "rpm": {
+            "bytes": 36,
+            "sha256": "5ba6e14016f999603d59458d85f566c7e6dd7d74c2d101f20a75caad438e61b6"
+          },
+          "wheel": {
+            "bytes": 36,
+            "sha256": "5ba6e14016f999603d59458d85f566c7e6dd7d74c2d101f20a75caad438e61b6"
+          }
+        },
+        ".rodata": {
+          "identical": true,
+          "rpm": {
+            "bytes": 132912,
+            "sha256": "79f0db234b9f5457a2d6377890f768ddfab998ad334cb15a2c4558162a8d5370"
+          },
+          "wheel": {
+            "bytes": 132912,
+            "sha256": "79f0db234b9f5457a2d6377890f768ddfab998ad334cb15a2c4558162a8d5370"
+          }
+        },
+        ".text": {
+          "identical": true,
+          "rpm": {
+            "bytes": 937054,
+            "sha256": "7a3604a2e6416e429c97d1a4f454dcae144eda547fad7789aad09ab3500f075a"
+          },
+          "wheel": {
+            "bytes": 937054,
+            "sha256": "7a3604a2e6416e429c97d1a4f454dcae144eda547fad7789aad09ab3500f075a"
+          }
+        }
+      },
+      "wheel_member": "igraph.libs/libxml2-39f609e7.so.2.9.7",
+      "wheel_member_sha256": "41f94ee221730289d7b67f385478d5b1a31491ce50f3d3db171aff8ef36a8c3d"
+    },
+    {
+      "download": {
+        "file": {
+          "bytes": 95020,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/xz-libs-5.2.4-4.el8_6.x86_64.rpm",
+          "sha256": "eab633cd7e81de007792509bfbea6cbd48dec90e4c0f18a4c1c337cb9c06ee51"
+        },
+        "url": "https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/Packages/xz-libs-5.2.4-4.el8_6.x86_64.rpm"
+      },
+      "metadata": "xz-libs\n5.2.4\n4.el8_6\nxz-5.2.4-4.el8_6.src.rpm\nPublic Domain\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/xz-libs-5.2.4-4.el8_6.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID c21ad6ea: NOKEY\n",
+      "notice_candidates": [
+        {
+          "file": {
+            "bytes": 2775,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/xz-libs-5.2.4-4.el8_6.x86_64.rpm.COPYING",
+            "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+          },
+          "member": "./usr/share/doc/xz/COPYING"
+        }
+      ],
+      "rpm_member": "./usr/lib64/liblzma.so.5.2.4",
+      "rpm_member_sha256": "51a76f52979f141c5a7075252a3225348f0359ac92f309b57b3f892365b74745",
+      "sections": {
+        ".eh_frame": {
+          "identical": true,
+          "rpm": {
+            "bytes": 14432,
+            "sha256": "4d7637c2280fc40f9138f4636b5642ae1330a52a612a92c02e53a857ef4524a9"
+          },
+          "wheel": {
+            "bytes": 14432,
+            "sha256": "4d7637c2280fc40f9138f4636b5642ae1330a52a612a92c02e53a857ef4524a9"
+          }
+        },
+        ".gnu_debuglink": {
+          "identical": true,
+          "rpm": {
+            "bytes": 48,
+            "sha256": "0fcc6347c8c1ac1e4e727bb48f75301e32ea25c7293d9852946a20898a9fde03"
+          },
+          "wheel": {
+            "bytes": 48,
+            "sha256": "0fcc6347c8c1ac1e4e727bb48f75301e32ea25c7293d9852946a20898a9fde03"
+          }
+        },
+        ".note.gnu.build-id": {
+          "identical": true,
+          "rpm": {
+            "bytes": 36,
+            "sha256": "18f841076cb158f8226e30f2b90d5b0907a9c5e7a21d4ad97b580293491ce341"
+          },
+          "wheel": {
+            "bytes": 36,
+            "sha256": "18f841076cb158f8226e30f2b90d5b0907a9c5e7a21d4ad97b580293491ce341"
+          }
+        },
+        ".rodata": {
+          "identical": true,
+          "rpm": {
+            "bytes": 26464,
+            "sha256": "62a49fe109cfb0739230707e8b15d4208b3f0a0f345985c1076ca69e11dfb15b"
+          },
+          "wheel": {
+            "bytes": 26464,
+            "sha256": "62a49fe109cfb0739230707e8b15d4208b3f0a0f345985c1076ca69e11dfb15b"
+          }
+        },
+        ".text": {
+          "identical": true,
+          "rpm": {
+            "bytes": 94022,
+            "sha256": "e66a0c3fc6e9549e86cb4379a0d9fdaa8fb6950313d06d5ffaf5f8bac7e5fff1"
+          },
+          "wheel": {
+            "bytes": 94022,
+            "sha256": "e66a0c3fc6e9549e86cb4379a0d9fdaa8fb6950313d06d5ffaf5f8bac7e5fff1"
+          }
+        }
+      },
+      "wheel_member": "igraph.libs/liblzma-51a76f52.so.5.2.4",
+      "wheel_member_sha256": "dc40ee343b9cfea15aa967eb27c4e36c91f694f9ed547845772232cf12f256e9"
+    },
+    {
+      "download": {
+        "file": {
+          "bytes": 212868,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libgomp-8.5.0-28.el8_10.alma.1.x86_64.rpm",
+          "sha256": "fba0574d69f6a946696c031e834312f428fe585a4a7842906fc4353ca317b6f0"
+        },
+        "url": "https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os/Packages/libgomp-8.5.0-28.el8_10.alma.1.x86_64.rpm"
+      },
+      "metadata": "libgomp\n8.5.0\n28.el8_10.alma.1\ngcc-8.5.0-28.el8_10.alma.1.src.rpm\nGPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libgomp-8.5.0-28.el8_10.alma.1.x86_64.rpm: Header V4 RSA/SHA256 Signature, key ID ced7258b: NOKEY\n",
+      "notice_candidates": [],
+      "rpm_member": "./usr/lib64/libgomp.so.1.0.0",
+      "rpm_member_sha256": "e985bcbb6b444c2c472de70c331ab101e6de860affa3a20d1d1aecd06d9242e8",
+      "sections": {
+        ".eh_frame": {
+          "identical": true,
+          "rpm": {
+            "bytes": 24448,
+            "sha256": "845811c860423f978c36e140a047a27026f31c32c9a5e98fed8ed96d408dc4fb"
+          },
+          "wheel": {
+            "bytes": 24448,
+            "sha256": "845811c860423f978c36e140a047a27026f31c32c9a5e98fed8ed96d408dc4fb"
+          }
+        },
+        ".gnu_debuglink": {
+          "identical": true,
+          "rpm": {
+            "bytes": 60,
+            "sha256": "c1b3f1934bf68213dd9e0027689160370ef0a39c915df5e2c71aa49f86cd2c22"
+          },
+          "wheel": {
+            "bytes": 60,
+            "sha256": "c1b3f1934bf68213dd9e0027689160370ef0a39c915df5e2c71aa49f86cd2c22"
+          }
+        },
+        ".note.gnu.build-id": {
+          "identical": true,
+          "rpm": {
+            "bytes": 36,
+            "sha256": "10dacfd24d206ecab5db55dc6f687eeccaaedcea2ff0b941e5853ff9ebb343d1"
+          },
+          "wheel": {
+            "bytes": 36,
+            "sha256": "10dacfd24d206ecab5db55dc6f687eeccaaedcea2ff0b941e5853ff9ebb343d1"
+          }
+        },
+        ".rodata": {
+          "identical": true,
+          "rpm": {
+            "bytes": 9144,
+            "sha256": "8bc6672f51fb076cf6bbe206c9e4d13fcca90b844c75837db02490cfa90ea65f"
+          },
+          "wheel": {
+            "bytes": 9144,
+            "sha256": "8bc6672f51fb076cf6bbe206c9e4d13fcca90b844c75837db02490cfa90ea65f"
+          }
+        },
+        ".text": {
+          "identical": true,
+          "rpm": {
+            "bytes": 147714,
+            "sha256": "0fdfa2dc24f4f9b288387fca22742aefaad5994bca10ecc1cf7920e0b5c6f53a"
+          },
+          "wheel": {
+            "bytes": 147714,
+            "sha256": "0fdfa2dc24f4f9b288387fca22742aefaad5994bca10ecc1cf7920e0b5c6f53a"
+          }
+        }
+      },
+      "wheel_member": "igraph.libs/libgomp-e985bcbb.so.1.0.0",
+      "wheel_member_sha256": "a43904e4fa297301d4640dc1bb3c8a3480b406f99e498eba9b1914b68aab604a"
+    }
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "status": "bundled_library_rpm_section_comparison",
+  "tools": [
+    {
+      "bytes": 23400,
+      "path": "/usr/bin/rpm",
+      "sha256": "732ba564c92a0033ac79a1d1da22aee095c684216bc0416d9166ccc56a8cbb83"
+    },
+    {
+      "bytes": 881608,
+      "path": "/home/bizon/anaconda3/bin/bsdtar",
+      "sha256": "4787e7e8635fb79df541b90f89170fd94168136849d88e604070c48ff8356a10"
+    },
+    {
+      "bytes": 166536,
+      "path": "/usr/bin/x86_64-linux-gnu-objcopy",
+      "sha256": "5dc8fbfabcd338efd14bf29f7e13c5d558bd029725f21632c56bfd53e1330100"
+    }
+  ],
+  "wheel": {
+    "bytes": 5683134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+    "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+  }
+}

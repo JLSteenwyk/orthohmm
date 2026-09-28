@@ -1,0 +1,58 @@
+{
+  "commit": "b16f27618674dd1913007a52855b76075802cbf9",
+  "limitations": [
+    "Build instructions are source context, not proof that this exact wheel was built by this job.",
+    "Six source URL 404s establish only these failed candidate locations, not global source unavailability."
+  ],
+  "public_sources": [
+    {
+      "file": {
+        "bytes": 657,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/tag.json",
+        "sha256": "c4fe11f36baaab715bf9ee3fcaab8fb5805a5b2595dfd1171b53014d1dae1727"
+      },
+      "url": "https://api.github.com/repos/igraph/python-igraph/git/tags/7b34c6409dc697616d441f5b200797afa04b14c5"
+    },
+    {
+      "file": {
+        "bytes": 12540,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/build.yml",
+        "sha256": "1f989c36663892a00e26d13e8628df7998b6e15b6c8e6d9335faf6814c64236e"
+      },
+      "url": "https://raw.githubusercontent.com/igraph/python-igraph/b16f27618674dd1913007a52855b76075802cbf9/.github/workflows/build.yml"
+    }
+  ],
+  "source_attempt_record": {
+    "bytes": 848,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/source_downloads.json",
+    "sha256": "4eb0316099f87a48bfc5438fec29a42b83b1413e13fe7ab3cf542395149fca30"
+  },
+  "source_rpm_attempts": [
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/BaseOS/Source/Packages/libxml2-2.9.7-21.el8_10.3.src.rpm"
+    },
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/AppStream/Source/Packages/libxml2-2.9.7-21.el8_10.3.src.rpm"
+    },
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/BaseOS/Source/Packages/xz-5.2.4-4.el8_6.src.rpm"
+    },
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/AppStream/Source/Packages/xz-5.2.4-4.el8_6.src.rpm"
+    },
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/BaseOS/Source/Packages/gcc-8.5.0-28.el8_10.alma.1.src.rpm"
+    },
+    {
+      "http_status": 404,
+      "url": "https://repo.almalinux.org/almalinux/8/AppStream/Source/Packages/gcc-8.5.0-28.el8_10.alma.1.src.rpm"
+    }
+  ],
+  "status": "igraph_upstream_build_context",
+  "tag": "1.0.0"
+}
