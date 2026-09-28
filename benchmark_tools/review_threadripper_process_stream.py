@@ -6,8 +6,12 @@ reviewed policy and native interval to the actual run and verify their provenanc
 
 from collections import Counter
 import json
+from pathlib import Path
 
 from benchmark_tools.review_threadripper_process_policy import number, review
+from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+from benchmark_tools.probe_dgx_step_separation import save
+from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 
 def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
@@ -92,3 +96,64 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
             "This checks process identities and CPU only, not executable or configuration drift, PSI or device contention.",
             "All intervals are checked, including bracketing intervals outside native execution.",
             "No production timing admission, automatic retry or next-run authorization."])
+
+
+def audit(directory, policy_ref, preflight_ref, *, job_id, index):
+    """Bind a completed collector stream to its reviewed policy and native clock."""
+    directory = Path(directory).resolve()
+    output = directory / "process_stream_review.json"
+    if output.exists() or output.is_symlink():
+        raise FileExistsError(output)
+    references = [policy_ref, preflight_ref]
+
+    def read(ref):
+        path = Path(ref["path"])
+        if not path.is_absolute() or path.is_symlink() or path.resolve() != path:
+            raise ValueError("Require direct absolute evidence path")
+        check(ref)
+        value = json.loads(path.read_text())
+        check(ref)
+        return value
+
+    policy = read(policy_ref)
+    preflight = read(preflight_ref)
+    if (policy.get("schema") != "threadripper_environment_policy_v1"
+            or policy.get("decision") != "reviewed" or policy.get("host") != "bizon"
+            or preflight.get("schema") != "threadripper_environment_preflight_v1"
+            or preflight.get("decision") != "passed"
+            or type(job_id) is not int or job_id <= 0 or type(index) is not int or index < 0
+            or type(preflight.get("job_id")) is not int or preflight["job_id"] != job_id
+            or type(preflight.get("index")) is not int or preflight["index"] != index
+            or preflight.get("environment_policy") != policy_ref
+            or not policy.get("plan_sha256") or preflight.get("plan_sha256") != policy["plan_sha256"]):
+        raise ValueError("Policy and preflight do not identify the same reviewed attempt")
+    process_ref = policy["process_policy"]
+    process_policy = read(process_ref)
+    references.extend([process_ref, *policy["evidence"], *preflight["evidence"]])
+    refs = {name: record(directory / name) for name in
+            ("ready.json", "done.json", "host_processes.jsonl")}
+    references.extend(refs.values())
+    for ref in references:
+        check(ref)
+    ready = read(refs["ready.json"])
+    done = read(refs["done.json"])
+    for key in ("started_ns", "finished_ns"):
+        if type(done.get(key)) is not int or done[key] <= 0:
+            raise ValueError("Require integer native monotonic timestamps")
+    scope = scoped_path(ready["cgroup"], job_id)
+    job_scope = next(p for p in scope.parents if p.name == f"job_{job_id}")
+    with Path(refs["host_processes.jsonl"]["path"]).open() as handle:
+        first = json.loads(handle.readline())
+        observer = first["observer_pid"]
+        handle.seek(0)
+        result = evaluate(handle, process_policy, boot_id=preflight["boot_id"],
+            job_scope=str(job_scope), observer_pid=observer,
+            launch=done["started_ns"] / 1e9, end=done["finished_ns"] / 1e9,
+            maximum_foreign_average_cores=policy["maximum_foreign_average_cores"],
+            maximum_sample_period_s=policy["maximum_sample_period_s"])
+    for ref in references:
+        check(ref)
+    result.update(job_id=job_id, index=index, evidence=references,
+                  source=record(Path(__file__).resolve()))
+    save(output, result)
+    return record(output), result

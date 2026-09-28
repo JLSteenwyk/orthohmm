@@ -38,6 +38,7 @@ def setup(tmp_path, monkeypatch):
     support = put(tmp_path / "support.json", {"synthetic_test_only": True})
     policy = put(tmp_path / "environment_policy.json", dict(schema="threadripper_environment_policy_v1",
         decision="reviewed", host="bizon", plan_sha256=plan["sha256"],
+        maximum_foreign_average_cores=.1, maximum_sample_period_s=35.,
         review_reference="synthetic test only", evidence=[support]))
     ready = put(tmp_path / "ready.json", dict(schema="threadripper_readiness_review_v1", decision="passed",
         plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], recipe_sha256=recipe["sha256"],
@@ -236,7 +237,8 @@ temporary.rename(target)
 
 @pytest.mark.parametrize("raises", [False, True])
 @pytest.mark.parametrize("worker_fails", [False, True])
-def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails):
+@pytest.mark.parametrize("stream_fails", [False, True])
+def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails):
     root, request, runs = setup
     ref = put(root / "request.json", request)
     monkeypatch.setattr(driver, "__file__", str(root / "benchmark_tools/run_threadripper_scaling.py"))
@@ -277,10 +279,21 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
         if raises:
             raise RuntimeError("synthetic infrastructure failure")
         kwargs["release_guard"].budget(root)
+        put(Path(request["environment_preflight_path"]), dict(synthetic_test_only=True))
         return {"status": "command_exited_zero"}
     monkeypatch.setattr(driver, "measure_run", measured)
+    def audit_stream(directory, policy_ref, preflight_ref, **kwargs):
+        assert directory == runs[0]["measurement_directory"]
+        assert kwargs == dict(job_id=42, index=0)
+        assert worker_events[-1] == "cleaned"
+        worker_events.append("stream_review")
+        return put(root / "stream_review.json", {}), dict(sampled_process_policy_satisfied=not stream_fails)
+    monkeypatch.setattr(driver, "audit_process_stream", audit_stream)
     if raises or worker_fails:
         with pytest.raises(RuntimeError, match="synthetic"):
+            driver.execute(Path(ref["path"]), ref["sha256"])
+    elif stream_fails:
+        with pytest.raises(ValueError, match="sampled process policy"):
             driver.execute(Path(ref["path"]), ref["sha256"])
     else:
         result = driver.execute(Path(ref["path"]), ref["sha256"])
@@ -291,5 +304,8 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
         driver.execute(Path(ref["path"]), ref["sha256"])
     assert len(calls) == 1
     expected = ["started"] + ([] if raises else ["joined"] + ([] if worker_fails else ["budget"])) + ["cleaned"]
+    if not raises and not worker_fails:
+        expected.append("stream_review")
+        assert saved["process_stream_review"]["path"].endswith("stream_review.json")
     assert worker_events == expected
     assert saved["environment_worker"]["path"].endswith("environment_worker_lifecycle.json")

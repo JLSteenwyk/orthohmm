@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Bind Process Review Into Execution (2026-09-28)
+
+Previous turn pushed typed collection and streaming interval checks as
+1ccd5737. Connected the check to the executor's post-measurement path with
+checksummed policy, preflight, native clocks and raw process evidence. The
+executor requires explicit prospective CPU and sampling-period limits before
+attempt creation. A negative verdict is retained and fails the attempt,
+without retry, next-job authorization or timing admission. See the
+[bound review contract](THREADRIPPER_BOUND_STREAM_REVIEW_20260928.md).
+
+217 focused tests pass, including file mutation, wrong-attempt evidence and
+negative-verdict retention. Component and file-backed tests do not replace
+native validation. Real bounds/review, remaining whole-run environmental checks,
+updated recipe freeze, native/full-scale validation and quiet-window timing
+remain open. No production benchmark, unrelated service change or DGX access.
+The previous turn and this turn are implementation progress, not verified waits.
+
 ## Typed Process Stream And Interval Review (2026-09-28)
 
 Previous turn completed and pushed the quantitative biological manuscript

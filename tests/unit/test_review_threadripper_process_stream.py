@@ -6,6 +6,7 @@ import pytest
 
 from benchmark_tools.review_threadripper_process_stream import evaluate
 from benchmark_tools.command_host_monitor import HostMonitor
+from benchmark_tools import review_threadripper_process_stream as stream
 
 
 def fixture():
@@ -139,3 +140,77 @@ def test_constant_memory_single_pass_iterator():
         maximum_sample_period_s=3.)
     assert result["sampled_process_policy_satisfied"]
     assert result["intervals"] == 999
+
+
+def bound_fixture(tmp_path):
+    def put(name, data):
+        p = tmp_path / name
+        p.write_text(json.dumps(data))
+        return stream.record(p)
+    policy, rows = fixture()
+    for row in rows:
+        row["snapshot"]["processes"][1]["cgroup"] = "/slurm/job_42/step_0/user/task_0"
+    process_ref = put("process_policy.json", policy)
+    support = put("support.json", {"synthetic": True})
+    environment = put("policy.json", dict(schema="threadripper_environment_policy_v1",
+        decision="reviewed", host="bizon", plan_sha256="synthetic-plan",
+        process_policy=process_ref, evidence=[support], maximum_foreign_average_cores=.1,
+        maximum_sample_period_s=3.))
+    preflight = put("preflight.json", dict(schema="threadripper_environment_preflight_v1",
+        decision="passed", job_id=42, index=0, environment_policy=environment,
+        plan_sha256="synthetic-plan", boot_id="test-boot", evidence=[support]))
+    put("ready.json", dict(cgroup="0::/slurm/job_42/step_0/user/task_0\n"))
+    put("done.json", dict(started_ns=11_000_000_000, finished_ns=13_000_000_000))
+    (tmp_path / "host_processes.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+    return environment, preflight
+
+
+def test_bound_audit_keeps_evidence_and_refuses_overwrite(tmp_path):
+    refs = bound_fixture(tmp_path)
+    ref, result = stream.audit(tmp_path, *refs, job_id=42, index=0)
+    stream.check(ref)
+    assert result["sampled_process_policy_satisfied"]
+    assert result["job_id"] == 42 and not result["scientific_timings_admitted"]
+    for item in result["evidence"]:
+        stream.check(item)
+    with pytest.raises(FileExistsError):
+        stream.audit(tmp_path, *refs, job_id=42, index=0)
+
+
+@pytest.mark.parametrize("change", ["policy", "preflight", "process", "support", "wrong_job", "wrong_index"])
+def test_bound_audit_rejects_changed_or_wrong_attempt(tmp_path, change):
+    refs = bound_fixture(tmp_path)
+    kwargs = dict(job_id=42, index=0)
+    if change == "wrong_job": kwargs["job_id"] = 43
+    elif change == "wrong_index": kwargs["index"] = 1
+    else:
+        path = tmp_path / {"policy": "policy.json", "preflight": "preflight.json",
+                           "process": "process_policy.json", "support": "support.json"}[change]
+        path.write_text(path.read_text() + " ")
+    with pytest.raises((ValueError, RuntimeError)):
+        stream.audit(tmp_path, *refs, **kwargs)
+    assert not (tmp_path / "process_stream_review.json").exists()
+
+
+def test_bound_audit_retains_negative_verdict(tmp_path):
+    refs = bound_fixture(tmp_path)
+    path = tmp_path / "host_processes.jsonl"
+    rows = path.read_text().splitlines()
+    path.write_text(rows[0] + "\n" + rows[-1] + "\n")
+    ref, result = stream.audit(tmp_path, *refs, job_id=42, index=0)
+    assert not result["sampled_process_policy_satisfied"]
+    assert (tmp_path / "process_stream_review.json").exists()
+
+
+def test_changed_stream_during_review_rejected(tmp_path, monkeypatch):
+    refs = bound_fixture(tmp_path)
+    real = stream.evaluate
+    def changed(*args, **kwargs):
+        result = real(*args, **kwargs)
+        with (tmp_path / "host_processes.jsonl").open("a") as f:
+            f.write("{}\n")
+        return result
+    monkeypatch.setattr(stream, "evaluate", changed)
+    with pytest.raises((ValueError, RuntimeError)):
+        stream.audit(tmp_path, *refs, job_id=42, index=0)
+    assert not (tmp_path / "process_stream_review.json").exists()

@@ -18,6 +18,8 @@ from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.run_simulation_methods import read_frozen, execution_environment
 from benchmark_tools.threadripper_panel_progress import position
 from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
+from benchmark_tools.review_threadripper_process_stream import audit as audit_process_stream
+from benchmark_tools.review_threadripper_process_policy import number
 
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
 LOOKUP_SHA = "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
@@ -162,8 +164,10 @@ def execute(request_path, request_sha):
     run, lookup, history, sources = select(request, root, job)
     readiness = read(request["readiness_review"])
     policy_ref = readiness["environment_policy"]
-    review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
-                            host="bizon", plan_sha256=PLAN_SHA))
+    policy = review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
+                                    host="bizon", plan_sha256=PLAN_SHA))
+    number(policy["maximum_foreign_average_cores"])
+    number(policy["maximum_sample_period_s"], positive=True)
     baseline = read(lookup["baseline"])
     binding = read(lookup["binding"])
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{run['index']:02d}"
@@ -192,6 +196,11 @@ def execute(request_path, request_sha):
                 evidence=evidence, waiter=worker.wait_response)
             result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], measure, job,
                                             runtime_checker=checker, release_guard=guard)
+        stream_ref, stream_review = audit_process_stream(run["measurement_directory"], policy_ref,
+            record(request["environment_preflight_path"]), job_id=job, index=run["index"])
+        result["process_stream_review"] = stream_ref
+        if not stream_review["sampled_process_policy_satisfied"]:
+            raise ValueError("Whole-run sampled process policy was not satisfied")
         for item in [request_ref, *evidence]:
             check(item)
         result["status"] = "measurement_returned_pending_independent_review"
