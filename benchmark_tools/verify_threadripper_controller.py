@@ -1,6 +1,11 @@
 """Validate recorded local allocation policy, not freshness or timing eligibility."""
 
 import re
+import math
+import subprocess
+import time
+
+from benchmark_tools.probe_dgx_step_separation import save
 
 from benchmark_tools.capture_job_scheduler import terminal_record
 
@@ -40,3 +45,55 @@ def validate(raw, job, phase, *, command, cwd, time_limit="1-00:00:00"):
         limitations=["Recorded controller fields only; caller must verify freshness and submission provenance.",
                      "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
                      "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."])
+
+
+def remaining_budget(raw, job, *, command, cwd, query_elapsed_s):
+    allocation = validate(raw, job, "running", command=command, cwd=cwd,
+                          time_limit="1-02:00:00")
+    if (type(query_elapsed_s) not in (int, float) or not math.isfinite(query_elapsed_s)
+            or not 0 <= query_elapsed_s <= 5):
+        raise ValueError("Scheduler observation exceeded freshness allowance")
+    match = re.fullmatch(r"(?:(\d+)-)?(\d{2}):([0-5]\d):([0-5]\d)",
+                         allocation["fields"].get("RunTime", ""))
+    if match is None or int(match[2]) > 23:
+        raise ValueError("Invalid scheduler elapsed time")
+    elapsed = int(match[1] or 0)*86400 + int(match[2])*3600 + int(match[3])*60 + int(match[4])
+    # Allow for integer-second reporting, query latency and release scheduling.
+    margin = 1 + math.ceil(query_elapsed_s) + 30
+    available = 93600 - elapsed - margin
+    if available < 85800 + 4200:
+        raise ValueError("Insufficient allocation time for native timeout and reporting reserve")
+    return dict(status="threadripper_release_budget_checked", allocation=allocation,
+        scheduler_elapsed_s=elapsed, conservative_available_s=available,
+        query_elapsed_s=query_elapsed_s, rounding_query_release_margin_s=margin,
+        native_timeout_s=85800, post_native_reserve_s=4200,
+        scientific_execution_authorized=False, scientific_timings_admitted=False)
+
+
+class ReleaseBudgetGuard:
+    """Fresh local query at the release gate; recipe and quiet-host checks are separate."""
+
+    def __init__(self, job, *, command, cwd, runner=subprocess.run, clock=time.monotonic):
+        self.job, self.command, self.cwd = job, command, cwd
+        self.runner, self.clock = runner, clock
+
+    def __call__(self, directory):
+        argv = ["scontrol", "show", "job", str(self.job), "--oneliner"]
+        observation = dict(command=argv, status="release_budget_check_failed")
+        started = self.clock()
+        try:
+            result = self.runner(argv, capture_output=True, text=True, timeout=5)
+            elapsed = self.clock() - started
+            observation.update(returncode=result.returncode, stdout=result.stdout,
+                               stderr=result.stderr, query_elapsed_s=elapsed)
+            if result.returncode != 0:
+                raise ValueError("Scheduler query failed")
+            budget = remaining_budget(result.stdout, self.job, command=self.command,
+                                      cwd=self.cwd, query_elapsed_s=elapsed)
+            observation.update(status="release_budget_check_passed", budget=budget)
+        except Exception as error:
+            observation.update(error_type=type(error).__name__, error=str(error))
+            save(directory / "release_budget.json", observation)
+            raise
+        save(directory / "release_budget.json", observation)
+        return budget

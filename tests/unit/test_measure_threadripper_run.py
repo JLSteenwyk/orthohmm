@@ -6,7 +6,7 @@ import pytest
 from benchmark_tools import measure_threadripper_run as module
 
 
-@pytest.mark.parametrize("failure", [None, "before", "prepare", "native", "after", "nonzero", "timeout"])
+@pytest.mark.parametrize("failure", [None, "before", "prepare", "native", "after", "nonzero", "timeout", "release"])
 def test_composed_boundary_and_failure_retention(tmp_path, monkeypatch, failure):
     root, target = tmp_path / "run", tmp_path / "inputs"
     run = dict(measurement_directory=str(root / "measurement"), native_argv=["/native"],
@@ -35,7 +35,12 @@ def test_composed_boundary_and_failure_retention(tmp_path, monkeypatch, failure)
         return {"inference_started": False}
     monkeypatch.setattr(module, "prepare", prepare)
     monkeypatch.setattr(module, "check_prepared", lambda *args: events.append("input_check"))
+    def release_guard(directory):
+        events.append("release")
+        raise ValueError("insufficient remaining time")
     def collector(command, directory, job, cpus, memory, timeout, cadence, **kwargs):
+        if "release_guard" in kwargs:
+            kwargs["release_guard"](directory)
         events.append("native")
         assert command == ["/native"] and job == 1
         assert (cpus, memory, timeout, cadence) == (32, 128*1024**3, 85800, 1.)
@@ -48,7 +53,8 @@ def test_composed_boundary_and_failure_retention(tmp_path, monkeypatch, failure)
             return dict(status="command_failed", native=dict(exit_code=124 if failure == "timeout" else 7,
                                                              timed_out=failure == "timeout"))
         return {"status": "command_exited_zero"}
-    result = module.measure_run(run, {}, [("manifest", "hash")], collector, 1, runtime_checker=checker)
+    result = module.measure_run(run, {}, [("manifest", "hash")], collector, 1, runtime_checker=checker,
+                               release_guard=release_guard if failure == "release" else None)
     assert json.loads((root / "verification.json").read_text()) == result
     assert result["scientific_results_admitted"] is False
     if failure is None:
@@ -67,6 +73,8 @@ def test_composed_boundary_and_failure_retention(tmp_path, monkeypatch, failure)
             assert "prepare" not in events and "native" not in events
         else:
             assert "after" in events
+        if failure == "release":
+            assert "release" in events and "native" not in events
 
 
 def test_cwd_rejected_before_environment_lookup(tmp_path):

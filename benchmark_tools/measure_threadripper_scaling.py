@@ -88,8 +88,10 @@ def worker(directory):
 
 
 def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_s,
-            monitor_host=True, host_interval_s=30.):
+            monitor_host=True, host_interval_s=30., *, release_guard=None):
     validate(command, cpus, timeout_s, interval_s)
+    if release_guard is not None and not callable(release_guard):
+        raise ValueError("Release guard must be callable")
     if (type(memory_bytes) is not int or memory_bytes != 128*1024**3
             or monitor_host is not True or type(host_interval_s) not in (int, float) or host_interval_s != 30.):
         raise ValueError("Require fixed memory and observer settings")
@@ -116,7 +118,13 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             save(directory / "job_memory_before.json", job_memory_before)
             # Inventory the host before starting the one-second point cadence.
             points = DiskObservations(directory)
+            if release_guard is not None:
+                release_guard(directory)
+                checked_at = time.monotonic()
             points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
+            if release_guard is not None and time.monotonic() - checked_at > 1:
+                save(directory / "release_freshness_failed.json", dict(status="release_guard_stale"))
+                raise ValueError("Release guard stale after initial observation")
             save(directory / "go.json", {"go": True})
             start = time.monotonic()
             index = 0

@@ -37,7 +37,8 @@ def assert_environment(run, baseline):
         raise ValueError("System preload configuration needs separate review")
 
 
-def measure_run(run, baseline, runtime_specs, collector, job_id, runtime_checker=check_manifests):
+def measure_run(run, baseline, runtime_specs, collector, job_id, runtime_checker=check_manifests,
+                *, release_guard=None):
     if type(job_id) is not int or job_id <= 0 or not runtime_specs or not callable(collector):
         raise ValueError("Require explicit job identity, runtime pins and collector")
     root, target = paths(run)
@@ -70,8 +71,9 @@ def measure_run(run, baseline, runtime_specs, collector, job_id, runtime_checker
         cache = root / "native_numba_cache"
         with fresh_tmp(root / "native_tmp"), fresh_cache(cache):
             try:
+                extra = {} if release_guard is None else {"release_guard": release_guard}
                 return collector(run["native_argv"], directory, job_id, 32, 128*1024**3,
-                                 85800, 1., monitor_host=True, host_interval_s=30.)
+                                 85800, 1., monitor_host=True, host_interval_s=30., **extra)
             finally:
                 save(root / "numba_cache.json", dict(directory=str(cache), initially_empty=True,
                     files=[record(p) for p in sorted(cache.rglob("*")) if p.is_file()],

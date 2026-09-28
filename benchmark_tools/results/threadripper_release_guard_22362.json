@@ -1,0 +1,142 @@
+{
+  "budget": {
+    "allocation": {
+      "fields": {
+        "Account": "(null)",
+        "AccrueTime": "2026-09-28T15:07:06",
+        "AllocNode:Sid": "bizon-link:2143599",
+        "AllocTRES": "cpu=192,mem=128G,node=1,billing=192",
+        "BatchFlag": "1",
+        "BatchHost": "bizon",
+        "CPUs/Task": "64",
+        "Command": "(null)",
+        "Contiguous": "0",
+        "CoreSpec": "*",
+        "Deadline": "N/A",
+        "DelayBoot": "00:00:00",
+        "Dependency": "(null)",
+        "EligibleTime": "2026-09-28T15:07:06",
+        "EndTime": "2026-09-29T17:07:06",
+        "ExcNodeList": "(null)",
+        "ExitCode": "0:0",
+        "Features": "(null)",
+        "GroupId": "bizon(1000)",
+        "JobId": "22362",
+        "JobName": "oh-release-guard",
+        "JobState": "RUNNING",
+        "LastSchedEval": "2026-09-28T15:07:06",
+        "Licenses": "(null)",
+        "MCS_label": "N/A",
+        "MinCPUsNode": "64",
+        "MinMemoryNode": "128G",
+        "MinTmpDiskNode": "0",
+        "Network": "(null)",
+        "Nice": "0",
+        "NodeList": "bizon",
+        "NtasksPerN:B:S:C": "0:0:*:*",
+        "NumCPUs": "192",
+        "NumNodes": "1",
+        "NumTasks": "1",
+        "OverSubscribe": "NO",
+        "Partition": "gpu",
+        "Priority": "1",
+        "QOS": "normal",
+        "Reason": "None",
+        "Reboot": "0",
+        "ReqB:S:C:T": "0:0:*:*",
+        "ReqNodeList": "bizon",
+        "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+        "Requeue": "0",
+        "Restarts": "0",
+        "RunTime": "00:00:01",
+        "Scheduler": "Main",
+        "SecsPreSuspend": "0",
+        "Socks/Node": "*",
+        "StartTime": "2026-09-28T15:07:06",
+        "StdErr": "/tmp/orthohmm-release-guard-22362.log",
+        "StdIn": "/dev/null",
+        "StdOut": "/tmp/orthohmm-release-guard-22362.log",
+        "SubmitTime": "2026-09-28T15:07:06",
+        "SuspendTime": "None",
+        "TimeLimit": "1-02:00:00",
+        "TimeMin": "N/A",
+        "TresPerTask": "cpu=64",
+        "UserId": "bizon(1000)",
+        "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+      },
+      "job_id": 22362,
+      "limitations": [
+        "Recorded controller fields only; caller must verify freshness and submission provenance.",
+        "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+        "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+      ],
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "RUNNING",
+      "scheduler_terminal_verified": false,
+      "scientific_execution_authorized": false,
+      "scientific_timings_admitted": false,
+      "status": "threadripper_controller_record_verified"
+    },
+    "conservative_available_s": 93567,
+    "native_timeout_s": 85800,
+    "post_native_reserve_s": 4200,
+    "query_elapsed_s": 0.007232249015942216,
+    "rounding_query_release_margin_s": 32,
+    "scheduler_elapsed_s": 1,
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "status": "threadripper_release_budget_checked"
+  },
+  "job_id": 22362,
+  "limitations": [
+    "Real scheduler query only; no native inference or complete production executor validation.",
+    "Collector integration and denial cleanup covered by mocked lifecycle tests, not a new native fixture.",
+    "Release guard remains optional for historical diagnostics; the production recipe must require it.",
+    "Changed measurement adapters require a new prospective runtime binding and native fixture validation before production; old binding remains historical.",
+    "Thirty-second scheduling margin is a conservative allowance, not a hard bound on OS scheduling delays.",
+    "Quiet-host eligibility, full production orchestration and other publication requirements remain unresolved."
+  ],
+  "query": {
+    "bytes": 4585,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_release_guard_probe_20260928/release_budget.json",
+    "sha256": "eec4fdd6cdcfc17c50b702e4fa3d5117ad5b9325435574e5df647da89a6067c8"
+  },
+  "scheduler": {
+    "command": [
+      "sacct",
+      "-j",
+      "22362",
+      "--format=JobID,State,ExitCode,Elapsed",
+      "-P"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobID|State|ExitCode|Elapsed\n22362|COMPLETED|0:0|00:00:02\n22362.batch|COMPLETED|0:0|00:00:02\n"
+  },
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 5537,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_threadripper_controller.py",
+      "sha256": "97b8cffd01d47b355f3a1bc28bb68f06320d11053fb66e774950f24c88e9a64f"
+    },
+    {
+      "bytes": 11153,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+      "sha256": "5830bfccc9dccd1363f5aea0cfb80b22f06717b62ade4df685f2a2598837a5b6"
+    },
+    {
+      "bytes": 4318,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_run.py",
+      "sha256": "d9db77a16441125db0733bc782c7551eabb59cbf51c441c79a4de3daf9267123"
+    }
+  ],
+  "status": "release_budget_query_verified",
+  "submission": {
+    "bytes": 1157,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_release_guard_submission_20260928.json",
+    "sha256": "06d28d25a3dc1e5dac30a896c425d5f820f58616446a7e7f0bfd03196e1f4f8f"
+  },
+  "test_result": "117 passed in 0.84s"
+}

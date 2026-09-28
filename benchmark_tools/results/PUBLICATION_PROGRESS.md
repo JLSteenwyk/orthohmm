@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Fresh Allocation Budget Check Connected To Release Gate (2026-09-28)
+
+The previous turn amended the prospective allocation envelope. Implemented a
+fresh controller query checking the exact 26-hour allocation, running state,
+elapsed time and remaining budget for the unchanged 85,800-second native
+timeout plus 4,200-second reporting reserve. Query failure, malformed elapsed
+time, observations taking over five seconds and insufficient budget fail
+closed with retained query/error evidence. Budget arithmetic also reserves
+one second for reported-time rounding, rounded-up query latency and a
+30-second release/scheduling allowance; this is not a hard scheduling bound.
+
+The preparation wrapper passes an optional release guard to the collector.
+The collector calls it before the first observation so scheduler latency does
+not stretch the one-second cadence, and rejects a handoff taking over one
+second after that check. Denial leaves an abort gate and releases the waiting
+worker without running the native command. The guard stays optional for
+historical diagnostics; the new production recipe must require it explicitly.
+
+117 focused tests passed in 0.84 seconds, including boundary budgets, query
+failures, stale observations, native release ordering, abort/cleanup and
+wrapper failure retention. An initial mock process incorrectly remained live
+after wait; corrected its lifecycle. Scheduler-only job 22362 exercised the
+real query successfully and completed 0:0 in two seconds. Independent replay
+of the saved query reproduced 93,567 conservative available seconds. See the
+[receipt](threadripper_release_guard_22362.json). No native inference ran.
+
+The collector and measurement adapter changed, so the old runtime binding
+must remain historical: a new prospective binding and native fixture check
+are required before production. The scheduler probe does not substitute for
+that validation. Integrated orchestration, quiet-host eligibility and the
+remaining scientific/release requirements remain open. The full goal remains
+active; no production timing identity was launched or admitted.
+
 ## Prospective Scheduler Envelope Amended (2026-09-28)
 
 Addressed the report-size probe's scheduling risk with a prospective 26-hour
