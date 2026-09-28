@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Tmpfs Charge Ownership Verified (2026-09-28)
+
+Previous turn verified OrthoFinder's explicit output placement. Added a bounded
+64-MiB memory-accounting probe; eight focused tests passed in 0.13 seconds.
+Slurm job 22345 requested two CPUs/2 GiB for an engineering control and
+completed 0:0 in two seconds. The batch preparation process wrote a fresh
+tmpfs payload; a separate native step read all bytes in 1-MiB chunks and
+verified its SHA256. The prepared job's memory.stat shmem increased exactly
+67,108,864 bytes, while the native step's post-read shmem was zero. Both
+scopes' raw memory gauges, limits, events and read windows are retained in
+the [receipt](threadripper_tmpfs_charge_22345.json), with independent arithmetic
+re-evaluation. The probe removed only its own temporary payload after reading.
+
+This confirms why native-step peak alone would omit preparation-owned input
+pages. It does not establish full-pipeline peak memory, hard CPU enforcement
+or observer overhead. Implement job-level memory observations alongside native
+step measurements in the collector/executor; report their different scopes
+without adding independent peaks or subtracting this control's memory.
+The production 32-worker/128-GiB policy is unchanged by this small diagnostic.
+
+Archive job 22344 remains RUNNING, with 660,721,664 of 1,957,180,078 bytes
+observed. No duplicate transfer or original-source recovery claim was made.
+Quiet-window, executor/full native validation, remaining uncertainty and
+publication-release work remain open. No DGX access or unrelated work changed.
+
 ## OrthoFinder Output Storage Checked (2026-09-28)
 
 Previous turn launched the public-archive download; job 22344 was verified
