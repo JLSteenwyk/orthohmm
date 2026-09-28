@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Threadripper Command Plan Derived (2026-09-28)
+
+Previous turn integrated job memory accounting and queued its live controls.
+Derived a separate [27-run local command plan](threadripper_scaling_commands_20260928.json)
+from the hash-pinned original local commands and retained native input order.
+The plan preserves run identities/order, input identities, executable paths,
+working directory and scientific flags. Every run receives a unique tmpfs
+input directory and persistent output/measurement directory; full OrthoFinder
+adds only explicit `-o` placement. Its sorted native input order remains
+distinct from OrthoHMM's retained unsorted enumeration. No `-op` is introduced.
+
+Seven tests passed (0.26 seconds), including all-27 scientific-token and
+executable equality, input membership/hash checks and rejection of storage or
+run-order drift. Generation did not create input/output roots, submit native
+jobs or authorize inference. The older preparation helper is intentionally
+not used: it only copies OrthoFinder inputs and assumes disk-local placement.
+Next implement common fresh per-run preparation and before/after enumeration,
+then executor validation with runtime/source/input and environmental gates.
+
+Archive job 22344 remains RUNNING, last observed at 1,163,427,840 bytes of
+1,957,180,078. Job 22346 remains PENDING on that dependency. Their source
+guards are unchanged. No duplicate jobs, DGX access or unrelated changes.
+The full scientific timing panel, quiet-window coordination, overhead/native
+validation and broader publication requirements remain incomplete.
+
 ## Job-Level Memory Integrated (2026-09-28)
 
 Previous turn demonstrated preparation-owned tmpfs charging. The local collector
