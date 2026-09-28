@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Typed Kernel Identity For Environmental Review (2026-09-28)
+
+Previous turn made implementation progress with the exact process-policy
+check, pushed as 93e1f0ff. Investigated its flagged identity changes: all
+154 changes across the three retained fixtures are name-only. Inspected
+primary Linux sources and added a read-only Kthread observer with PID,
+creation-time and cgroup checks. V2 policy permits display-name changes only
+for explicitly reviewed kernel identities with affirmative type evidence
+in both snapshots. Unknown processes and all CPU use remain visible; no
+blanket kernel exemption or environmental approval was added. See the
+[evidence and contract](THREADRIPPER_KERNEL_IDENTITY_20260928.md).
+
+114 focused tests pass. One fresh three-second-gap host capture found 45
+name changes with direct kernel-type evidence in both observations, about
+93.11 competing CPU-core equivalents, six unmatched processes and four
+retained disappearance errors. Total capture wall time was about 9.54 seconds,
+not a proven handoff latency bound. The queue was empty but the host was not
+quiet. No process was signalled, no missing observation was retried away,
+and historical observations were not retroactively assigned kernel types.
+
+The live review worker, executable/service provenance, full-scale observer
+and resource validation, final recipe freeze and a verified quiet window
+remain unfinished. No scientific setting, score or pinned collector changed;
+no production timing or DGX work was started. Full publication goal active.
+
 ## Background Process Policy Comparison (2026-09-28)
 
 Previous turn updated and pushed the current claim checklist as c8a91f51,

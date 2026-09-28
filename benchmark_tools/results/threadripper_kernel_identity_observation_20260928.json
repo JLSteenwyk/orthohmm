@@ -1,0 +1,525 @@
+{
+  "background_processes_approved": false,
+  "foreign_average_cores": 93.1088601749894,
+  "historical_name_diagnostics": [
+    {
+      "changes": {
+        "name": 47
+      },
+      "input": {
+        "bytes": 973252,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "3b1648b3fe656da900d5b840bd45e33ddb0cd3975d41dde6ef9a66f9205fcfc0"
+      },
+      "job_id": 22367,
+      "kernel_type_observed_historically": false
+    },
+    {
+      "changes": {
+        "name": 57
+      },
+      "input": {
+        "bytes": 976731,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "1bd07e46dd8f64307f78ad983750bf02fb96de7923a3ae22a0f4ffe6942a2057"
+      },
+      "job_id": 22368,
+      "kernel_type_observed_historically": false
+    },
+    {
+      "changes": {
+        "name": 50
+      },
+      "input": {
+        "bytes": 976712,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "e435035ee76f846257ca9e860d9323db989f10515a9940e9487b2338b1b86b09"
+      },
+      "job_id": 22369,
+      "kernel_type_observed_historically": false
+    }
+  ],
+  "host": "bizon",
+  "kernel_release": "6.8.0-55-generic",
+  "limitations": [
+    "Historical snapshots lack Kthread fields; present identity evidence does not retroactively type old observations.",
+    "Current capture has incomplete process observations and substantial competing work; it is not a preflight pass.",
+    "No native job scope is excluded from the diagnostic; only the capturing observer PID is excluded.",
+    "Typed policy v2 permits name changes only for explicitly reviewed same-identity kernel entries; it does not approve processes automatically."
+  ],
+  "primary_source_urls": [
+    "https://raw.githubusercontent.com/torvalds/linux/v6.8/fs/proc/array.c",
+    "https://raw.githubusercontent.com/torvalds/linux/v6.8/kernel/workqueue.c",
+    "https://cdn.kernel.org/doc/html/latest/filesystems/proc.html"
+  ],
+  "raw": {
+    "bytes": 1979128,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_typed_process_observation_20260928.json",
+    "sha256": "6a69a01ac4e9101ee0e015dbe791f8b0e436c701a6a73fd61af1fd6dfd71f583"
+  },
+  "schema": "threadripper_kernel_identity_observation_v1",
+  "scientific_timings_admitted": false,
+  "snapshots": [
+    {
+      "duration_s": 3.2008780110045336,
+      "errors": [
+        {
+          "pid": 2270508,
+          "type": "NoSuchProcess"
+        },
+        {
+          "pid": 2270598,
+          "type": "NoSuchProcess"
+        },
+        {
+          "pid": 2270510,
+          "stage": "kernel_identity",
+          "type": "NoSuchProcess"
+        }
+      ],
+      "kernel_processes": 1745,
+      "missing_type": 1,
+      "process_count": 2034,
+      "user_processes": 288
+    },
+    {
+      "duration_s": 3.2822087320382707,
+      "errors": [
+        {
+          "pid": 2270679,
+          "stage": "kernel_identity",
+          "type": "NoSuchProcess"
+        }
+      ],
+      "kernel_processes": 1746,
+      "missing_type": 1,
+      "process_count": 2038,
+      "user_processes": 291
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 4521,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_threadripper_process_identity.py",
+      "sha256": "29c4a74595016c8eae1d0ac827c6f04af17791ba7a60cce9146a4144e04ca676"
+    },
+    {
+      "bytes": 8976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_policy.py",
+      "sha256": "0f54771eb8404a7fec08c07441af27881e9ed4f77e39a09ad2da5eff2996a84a"
+    },
+    {
+      "bytes": 6556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    }
+  ],
+  "unmatched_foreign_count": 6,
+  "verified_kernel_name_changes": [
+    {
+      "after": "kworker/13:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/13:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790352322.27,
+      "pid": 97
+    },
+    {
+      "after": "kworker/101:1-events",
+      "after_kernel": 1,
+      "before": "kworker/101:1-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790352323.65,
+      "pid": 1310
+    },
+    {
+      "after": "kworker/102:1-events",
+      "after_kernel": 1,
+      "before": "kworker/102:1-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790352323.65,
+      "pid": 1311
+    },
+    {
+      "after": "kworker/100:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/100:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790534763.54,
+      "pid": 350934
+    },
+    {
+      "after": "kworker/159:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/159:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790571896.85,
+      "pid": 839306
+    },
+    {
+      "after": "kworker/20:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/20:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790572978.33,
+      "pid": 853342
+    },
+    {
+      "after": "kworker/36:0-events",
+      "after_kernel": 1,
+      "before": "kworker/36:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790595495.74,
+      "pid": 1057458
+    },
+    {
+      "after": "kworker/134:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/134:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790608688.94,
+      "pid": 1174409
+    },
+    {
+      "after": "kworker/157:1-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/157:1-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790610984.83,
+      "pid": 1206201
+    },
+    {
+      "after": "kworker/158:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/158:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790611257.82,
+      "pid": 1209939
+    },
+    {
+      "after": "kworker/173:1-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/173:1-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790611759.95,
+      "pid": 1222008
+    },
+    {
+      "after": "kworker/1:0-events",
+      "after_kernel": 1,
+      "before": "kworker/1:0-events_freezable",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790612328.3,
+      "pid": 1243578
+    },
+    {
+      "after": "kworker/161:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/161:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790612712.62,
+      "pid": 1255772
+    },
+    {
+      "after": "kworker/11:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/11:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790613670.43,
+      "pid": 1272345
+    },
+    {
+      "after": "kworker/28:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/28:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790614915.74,
+      "pid": 1323672
+    },
+    {
+      "after": "kworker/58:0-events",
+      "after_kernel": 1,
+      "before": "kworker/58:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790615221.07,
+      "pid": 1340427
+    },
+    {
+      "after": "kworker/30:0-events",
+      "after_kernel": 1,
+      "before": "kworker/30:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790616684.07,
+      "pid": 1781886
+    },
+    {
+      "after": "kworker/0:1-events",
+      "after_kernel": 1,
+      "before": "kworker/0:1-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790618117.41,
+      "pid": 1806601
+    },
+    {
+      "after": "kworker/35:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/35:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790618743.29,
+      "pid": 1904743
+    },
+    {
+      "after": "kworker/37:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/37:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790618912.26,
+      "pid": 1989528
+    },
+    {
+      "after": "kworker/73:0-events",
+      "after_kernel": 1,
+      "before": "kworker/73:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790620554.71,
+      "pid": 2113278
+    },
+    {
+      "after": "kworker/143:0-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/143:0-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790621454.13,
+      "pid": 2129197
+    },
+    {
+      "after": "kworker/151:1-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/151:1-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790621919.22,
+      "pid": 2135535
+    },
+    {
+      "after": "kworker/129:0-events",
+      "after_kernel": 1,
+      "before": "kworker/129:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790622487.56,
+      "pid": 2144323
+    },
+    {
+      "after": "kworker/83:2-events",
+      "after_kernel": 1,
+      "before": "kworker/83:2-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790622801.56,
+      "pid": 2148729
+    },
+    {
+      "after": "kworker/u389:1-flush-259:6",
+      "after_kernel": 1,
+      "before": "kworker/u389:1-writeback",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790623868.67,
+      "pid": 2174496
+    },
+    {
+      "after": "kworker/2:1-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/2:1-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790626967.47,
+      "pid": 2230902
+    },
+    {
+      "after": "kworker/u386:3-events_unbound",
+      "after_kernel": 1,
+      "before": "kworker/u386:3-events_power_efficient",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790627191.59,
+      "pid": 2235275
+    },
+    {
+      "after": "kworker/u388:2-flush-259:1",
+      "after_kernel": 1,
+      "before": "kworker/u388:2-flush-259:6",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628141.09,
+      "pid": 2250037
+    },
+    {
+      "after": "kworker/77:2-cgroup_destroy",
+      "after_kernel": 1,
+      "before": "kworker/77:2-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628253.64,
+      "pid": 2251559
+    },
+    {
+      "after": "kworker/79:4-events",
+      "after_kernel": 1,
+      "before": "kworker/79:4-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628313.12,
+      "pid": 2252391
+    },
+    {
+      "after": "kworker/138:5-events",
+      "after_kernel": 1,
+      "before": "kworker/138:5-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628315.82,
+      "pid": 2252423
+    },
+    {
+      "after": "kworker/142:1-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/142:1-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628317.47,
+      "pid": 2252438
+    },
+    {
+      "after": "kworker/25:3-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/25:3-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628322.72,
+      "pid": 2252569
+    },
+    {
+      "after": "kworker/113:4-cgroup_destroy",
+      "after_kernel": 1,
+      "before": "kworker/113:4-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628326.72,
+      "pid": 2252645
+    },
+    {
+      "after": "kworker/80:0-events",
+      "after_kernel": 1,
+      "before": "kworker/80:0-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628622.65,
+      "pid": 2256602
+    },
+    {
+      "after": "kworker/u393:8-writeback",
+      "after_kernel": 1,
+      "before": "kworker/u393:8-events_unbound",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628712.32,
+      "pid": 2257740
+    },
+    {
+      "after": "kworker/120:2-events",
+      "after_kernel": 1,
+      "before": "kworker/120:2-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628718.54,
+      "pid": 2257753
+    },
+    {
+      "after": "kworker/71:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/71:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628727.39,
+      "pid": 2258253
+    },
+    {
+      "after": "kworker/74:2-events",
+      "after_kernel": 1,
+      "before": "kworker/74:2-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628742.03,
+      "pid": 2258732
+    },
+    {
+      "after": "kworker/u388:3-events_unbound",
+      "after_kernel": 1,
+      "before": "kworker/u388:3-flush-259:6",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628780.57,
+      "pid": 2259339
+    },
+    {
+      "after": "kworker/u394:4-events_unbound",
+      "after_kernel": 1,
+      "before": "kworker/u394:4-writeback",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790628891.05,
+      "pid": 2260642
+    },
+    {
+      "after": "kworker/u386:1-events_unbound",
+      "after_kernel": 1,
+      "before": "kworker/u386:1-flush-259:1",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790629326.88,
+      "pid": 2266077
+    },
+    {
+      "after": "kworker/31:2-events",
+      "after_kernel": 1,
+      "before": "kworker/31:2-mm_percpu_wq",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790629624.97,
+      "pid": 2269782
+    },
+    {
+      "after": "kworker/170:2-mm_percpu_wq",
+      "after_kernel": 1,
+      "before": "kworker/170:2-events",
+      "before_kernel": 1,
+      "cgroup": "/",
+      "created": 1790512215.29,
+      "pid": 2671218
+    }
+  ]
+}

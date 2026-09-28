@@ -58,13 +58,30 @@ def inventory(sample):
     return indexed
 
 
+def kernel_type(row, sample, boot):
+    if (sample.get("schema") != "threadripper_typed_process_snapshot_v1"
+            or sample.get("boot_id") != boot or "kernel_identity_error" in row):
+        raise ValueError("Require same-boot typed process observations")
+    proof = row.get("kernel_identity", {})
+    if (type(proof.get("pid")) is not int or proof["pid"] != row["pid"]
+            or type(proof.get("tgid")) is not int or proof["tgid"] != row["pid"]
+            or type(proof.get("kthread")) is not int or proof["kthread"] not in (0, 1)):
+        raise ValueError("Missing or inconsistent kernel identity evidence")
+    start = number(proof["started_monotonic_s"])
+    finish = number(proof["finished_monotonic_s"])
+    if not row["observed_monotonic_s"] <= start <= finish <= sample["finished_monotonic_s"]:
+        raise ValueError("Kernel identity observation outside snapshot bounds")
+    return proof["kthread"]
+
+
 def review(policy, before, after, *, boot_id, job_scope, observer_pid):
     """Classify two snapshots against same-boot, exact-identity policy entries.
 
     The caller must separately verify policy/evidence hashes and the review's
     factual basis. The observer must be inside the job, not exempted by PID.
     """
-    if (policy.get("schema") != "threadripper_process_policy_v1"
+    typed = policy.get("schema") == "threadripper_process_policy_v2"
+    if (policy.get("schema") not in {"threadripper_process_policy_v1", "threadripper_process_policy_v2"}
             or not isinstance(boot_id, str) or not boot_id.strip()
             or policy.get("boot_id") != boot_id
             or not isinstance(policy.get("review_reference"), str)
@@ -77,16 +94,31 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
         raise ValueError("Invalid observer PID")
     if not isinstance(policy.get("ordinary_processes"), list):
         raise ValueError("Require an explicit ordinary-process list")
-    allowed = {}
+    allowed, kernel_pids = {}, set()
     for row in policy["ordinary_processes"]:
         key = identity(row)
         if key[0] in allowed or PurePosixPath(key[2]).is_relative_to(scope):
             raise ValueError("Duplicate or in-job background policy entry")
-        if (row.get("classification") != "ordinary_background"
+        classification = row.get("classification")
+        classes = {"ordinary_background", "reviewed_kernel_thread"} if typed else {"ordinary_background"}
+        if (classification not in classes
                 or not isinstance(row.get("reason"), str) or not row["reason"].strip()):
             raise ValueError("Require explicit ordinary-background classification and reason")
         allowed[key[0]] = key
+        if classification == "reviewed_kernel_thread":
+            kernel_pids.add(key[0])
     a, b = inventory(before), inventory(after)
+    types = {}
+    if typed:
+        for label, sample, rows in (("before", before, a), ("after", after, b)):
+            for pid, row in rows.items():
+                types[label, pid] = kernel_type(row, sample, boot_id)
+    def matches(label, pid, row):
+        key = identity(row)
+        expected = allowed.get(pid)
+        if typed and pid in allowed and types[label, pid] != int(pid in kernel_pids):
+            return False
+        return key[:3] == expected[:3] if pid in kernel_pids else key == expected
     if before["finished_monotonic_s"] >= after["started_monotonic_s"]:
         raise ValueError("Require distinct ordered snapshots")
     for rows in (a, b):
@@ -100,21 +132,26 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
     for label, rows in (("before", a), ("after", b)):
         for pid, row in sorted(rows.items()):
             key = identity(row)
-            if not group(row["cgroup"]).is_relative_to(scope) and allowed.get(pid) != key:
+            if not group(row["cgroup"]).is_relative_to(scope) and not matches(label, pid, row):
                 unreviewed.append(dict(snapshot=label, pid=pid, created=key[1],
                                        cgroup=key[2], name=key[3]))
         missing.extend(dict(snapshot=label, pid=pid) for pid in sorted(allowed)
-                       if pid not in rows or identity(rows[pid]) != allowed[pid])
+                       if pid not in rows or not matches(label, pid, rows[pid]))
+    kernel_name_changes = []
     for pid in sorted(set(a) & set(b)):
         # Do not ignore a process migrating into the job between observations.
-        if identity(a[pid]) != identity(b[pid]):
+        name_only_kernel = (pid in kernel_pids and matches("before", pid, a[pid])
+                            and matches("after", pid, b[pid]))
+        if identity(a[pid]) != identity(b[pid]) and not name_only_kernel:
             changed.append(dict(pid=pid, reason="identity_or_membership_changed"))
-        elif any(b[pid][k] < a[pid][k] for k in ("user_s", "system_s")):
+        if name_only_kernel and a[pid]["name"] != b[pid]["name"]:
+            kernel_name_changes.append(dict(pid=pid, before=a[pid]["name"], after=b[pid]["name"]))
+        if any(b[pid][k] < a[pid][k] for k in ("user_s", "system_s")):
             changed.append(dict(pid=pid, reason="cpu_counter_decreased"))
     diagnostic = analyze(before, after, str(scope), observer_pid)
     unresolved = bool(unreviewed or changed or missing or diagnostic["sampling_error_count"]
                       or diagnostic["unmatched_foreign_processes"] or diagnostic["uncertain_processes"])
-    return dict(schema="threadripper_process_policy_review_v1",
+    result = dict(schema="threadripper_process_policy_review_v2" if typed else "threadripper_process_policy_review_v1",
         status="unresolved_process_inventory" if unresolved else "reviewed_process_inventory_observed",
         process_policy_matched=not unresolved, controlled_workload_verified=False,
         scientific_timings_admitted=False, boot_id=boot_id, job_scope=str(scope),
@@ -125,3 +162,7 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
                      "Two snapshots can miss short-lived work and do not establish quiet I/O or memory bandwidth.",
                      "Policy matching does not authorize native release or replace whole-run observation.",
                      "The CPU diagnostic threshold is not a timing admission rule."])
+    if typed:
+        result["reviewed_kernel_name_changes"] = kernel_name_changes
+        result["limitations"].append("Verified kernel type permits reviewed name changes only; CPU and other checks remain.")
+    return result

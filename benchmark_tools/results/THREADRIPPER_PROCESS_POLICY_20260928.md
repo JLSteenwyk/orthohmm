@@ -1,5 +1,11 @@
 # Process-Inventory Policy Check
 
+The original v1 contract below remains historical. The subsequent
+[typed v2 extension](THREADRIPPER_KERNEL_IDENTITY_20260928.md) permits only
+explicitly reviewed, observed-kernel display-name changes while retaining
+CPU and identity checks. It does not approve an environmental policy or
+complete the live preflight worker.
+
 `benchmark_tools/review_threadripper_process_policy.py` supplies a pure,
 read-only comparison for the unfinished live environmental review worker.
 It does not create an approved background inventory, publish a preflight,
