@@ -118,6 +118,19 @@ Report incomplete repeats as incomplete, never as complete three-run summaries.
 
 ## Current State And Next Execution Gates
 
+The three-method native installation fixture completed in job 22350 after
+two retained preflight failures. The local
+[baseline amendment](threadripper_native_baseline_20260928.json) corrects only
+cwd-dependent OrthoFinder package metadata: historical inventory included
+repository-local `orthohmm.egg-info`; actual frozen execution cwd does not.
+No installed package or scientific source was changed. Launchers must explicitly
+unset inherited `LD_LIBRARY_PATH`, `LD_PRELOAD` and `LD_AUDIT`; runtime checks
+still reject loader overrides rather than silently accepting them. The
+[fixture receipt](threadripper_native_fixture_22350.json) records successful
+native output checks and independent resource replay, but no timing admission.
+Its whole-host samples measured 72.71-73.67 competing CPU-core equivalents.
+Full transitive runtime checks and production execution gates remain open.
+
 A read-only observation on 28 September found an empty Slurm queue but about
 69.6107 CPU-core equivalents of persistent outside work. IQ-TREE, BAli-Phy,
 HyPhy and Python analyses are active under user services and interactive

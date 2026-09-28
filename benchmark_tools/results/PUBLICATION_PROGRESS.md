@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Native Threadripper Fixture Completed (2026-09-28)
+
+The previous response only confirmed the goal prompt and made no experimental
+progress. Resumed by inspecting current sources and executing the composed
+preparation, native collection and output validation on the existing 16-gene,
+four-species installation fixture. No production timing identity was launched.
+
+Job 22348 failed before inference on inherited CUDA `LD_LIBRARY_PATH`.
+Job 22349 explicitly unset loader overrides, then failed before inference on
+the historical OrthoFinder package inventory. Investigation located the extra
+`orthohmm==0.5.0` metadata in the repository's local `orthohmm.egg-info`, exposed
+by the inventory command's cwd, not in the OrthoFinder environment. The new
+local baseline amendment accepts exactly that metadata removal and rejects
+all other package/interpreter differences. It preserves every scientific
+source, executable record, configuration and the historical manifest.
+
+Job 22350 used the amended baseline and completed 0:0 in 50 seconds. Both
+OrthoHMM modes and full OrthoFinder 3.1.5 exited zero; original/prepared input
+checks, before/after runtime checks, complete output partitions, phylogenetic
+pair outputs and native OrthoFinder species/sequence numbering passed.
+All three raw collector records independently replayed. All sampled thread
+affinities were within the frozen mask. See the
+[receipt](threadripper_native_fixture_22350.json) for pinned evidence and both
+retained preflight failures. Thirteen focused tests passed in 0.40 seconds.
+
+These are diagnostic results, not comparative timings or biological validation.
+Observed competing work was 72.71-73.67 CPU-core equivalents. The three controls
+share one job, so later job-memory peaks include earlier controls. Retained
+native outputs are persistent and tmpfs inputs stayed unchanged, but transient
+write locations were not traced. Full transitive runtime freezing, long-run
+collector overhead/memory assessment, guarded production submission and a
+verified quiet window remain required. All three jobs are terminal; none of
+the 27 scientific timing runs has started. The goal remains incomplete.
+
 ## Preparation and Collector Composition Added (2026-09-28)
 
 Previous turn completed and independently replayed the archive/control jobs.
