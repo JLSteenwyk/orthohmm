@@ -281,6 +281,22 @@ The Broccoli Zenodo landing page returned HTTP 429; no rate-limit bypass was
 attempted. No original source file was downloaded, admitted or substituted,
 and no email, issue or support request was sent.
 
+### Broccoli Supplement Available Again (2026-09-28)
+
+The ordinary public [record](https://zenodo.org/records/3710751) and
+[metadata API](https://zenodo.org/api/records/3710751) now respond successfully;
+no rate-limit bypass was used. The metadata identifies `data_Zenodo.zip`,
+719,576,680 bytes, MD5 `fd77f9ef7a5b82a87143b603902901d4`, and describes QfO
+2018 results among its contents. This does not prove the presence of the
+original TreeFam trees or the mapping used by the retained QfO 2020 reference.
+
+After an initial 120-second transfer timed out with 202,557,640 bytes retained,
+tracked local job 22357 explicitly resumed the partial file. Its workflow
+checks complete size and MD5, computes SHA256 and inventories ZIP members
+without extraction or execution. Job state was verified RUNNING. See
+[submission evidence](broccoli_treefam_submission_22357.json). Content
+inspection and checksum validation remain pending; no originals are admitted.
+
 ### Historical Contact Draft (Not Authorized)
 
 The earlier proposed next step was to request the QfO 2020/2020.2 reference-generation source bundle from the QfO

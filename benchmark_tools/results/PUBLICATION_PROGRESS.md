@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Broccoli Public Archive Retrieval Resumed (2026-09-28)
+
+Previous turn made progress with extended collector-retention diagnostics.
+Returned to the independent TreeFam source gap. The previously rate-limited
+Broccoli Zenodo record is now accessible through ordinary public HTTPS.
+Metadata lists a 719,576,680-byte ZIP with published MD5
+`fd77f9ef7a5b82a87143b603902901d4`, described as including QfO 2018 results.
+This is an archive lead, not evidence that original trees or mapping are inside.
+
+The bounded initial download exited 28 after 120 seconds, retaining
+202,557,640 bytes. Only after confirming termination, submitted local job
+22357 to explicitly resume those bytes, verify checksum and inventory ZIP
+names without extraction or execution. Scheduler inspection confirmed RUNNING.
+One CPU, 2 GiB, two-hour limit, no requeue or automatic download retry.
+See the [submission receipt](broccoli_treefam_submission_22357.json).
+
+Ten archive-inspection tests passed in 0.23 seconds, covering size/checksum
+rejection, symlinks, oversized partial files and non-extraction. Download,
+checksum and archive-content outcomes remain pending. Reinspect this job
+before restarting anything. No original reference recovered, uncertainty
+estimate changed, maintainer contacted or DGX accessed. The full goal remains
+active; this retrieval does not remove the controlled-timing or scientific gaps.
+
 ## Extended Observation Retention Diagnostic (2026-09-28)
 
 Previous turn made progress by committing and pushing native runtime-check

@@ -1,0 +1,30 @@
+{
+  "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928",
+  "initial_attempt": {
+    "exit_code": 28,
+    "retained_bytes": 202557640,
+    "timeout_s": 120
+  },
+  "job_id": 22357,
+  "limitations": [
+    "Archive contents not yet inspected; checksum verification pending.",
+    "QfO 2018 result archive is a lead, not proof of original release-7 or QfO 2020 mapping identity.",
+    "No maintainer contact and no DGX access."
+  ],
+  "metadata": {
+    "bytes": 4311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_broccoli_public_20260928/zenodo_record.json",
+    "sha256": "67ffa81d84401d6f53d585547d41ce31ce51228e3e6e7dcfaae461ce315b0d2e"
+  },
+  "originals_recovered": false,
+  "resume": "Explicit HTTP-range resume after confirmed initial process termination; no automatic retry",
+  "scheduler": "             JOBID,        NAME,   STATE,      TIME,  CPUS\n             22357,treefam-broc, RUNNING,      0:17,     1\n",
+  "source": {
+    "bytes": 3284,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_broccoli_archive.py",
+    "sha256": "53bb9b5538efb3903d25f60e870aa92ca60204d99b3344c3631b0abbb9dc60d8"
+  },
+  "status": "public_archive_retrieval_submitted",
+  "tests": "10 passed in 0.23 seconds",
+  "url": "https://zenodo.org/records/3710751"
+}
