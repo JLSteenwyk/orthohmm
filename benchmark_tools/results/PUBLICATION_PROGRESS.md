@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Native File Access and Private Scratch (2026-09-28)
+
+Previous turn completed broad runtime identity snapshots. Added a traced
+fixture wrapper and bounded strace summarizer to test actual file access.
+Job 22354 completed all three methods (0:0, 62 seconds), but exposed 66
+write-capable MAFFT file paths in inherited shared scratch outside its run.
+The prospective policy and composition helper now set TMPDIR/TMP/TEMP to a
+fresh persistent per-run directory and restore caller settings on exit.
+Job 22355 completed the corrected three-method fixture (0:0, 64 seconds).
+Native outputs validated and all six traced resource records independently
+replayed. These strace-instrumented runs are never comparative timing data.
+
+Twenty focused tests passed in 0.56 seconds. The final parser handles
+interleaved unfinished/resumed calls, device annotations and pipe descriptors;
+all six traces have zero unparsed or unfinished records. Earlier parser
+summaries are retained. Corrected runs have zero successful write-capable opens
+outside their run directories except /dev/null and multiprocessing semaphore/
+shared-memory objects. Successful mutations are retained as raw arguments;
+relative mutation paths are not fully resolved, so this is not an exhaustive
+filesystem-write audit. See the
+[trace receipt](threadripper_file_access_controls_20260928.json).
+
+Tracing also found previously uncovered dependencies: Python's user-site
+packages, OrthoFinder's system-base Python library, locale/font data and a few
+configuration files. Added verified inventories without changing installed
+packages. Refreshed the main inventory after the helper edit: its only changed
+old record is measure_threadripper_run.py and its only additions are the three
+new helpers. Main inventory plus verification took 103.55 seconds. All 191
+baseline file records still match. The
+[v2 runtime binding](threadripper_runtime_binding_v2_20260928.json) supersedes
+the old main-manifest binding and covers 176,704 entries / 30,491,706,785 regular
+file bytes. Large raw files remain local.
+
+Remaining uncovered successful opens resolve to directory scans of the frozen
+checkout and two unrelated editable-project source roots, not observed source
+file reads from those projects. Do not recursively inventory unrelated work
+or claim isolation: module-search policy remains unresolved. The expanded
+system-package snapshot also records unused external directory links without
+traversing them. Current snapshots are not retroactive proof of dependency
+bytes during an earlier trace. Further workload coverage, overhead validation,
+environment/lookup controls and quiet-window submission gates remain required.
+All jobs and local analysis processes are terminal; no production timing ran.
+
 ## Broad Local Runtime Snapshot Verified (2026-09-28)
 
 Previous turn made progress through isolated JIT-cache implementation and

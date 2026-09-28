@@ -14,6 +14,7 @@ from benchmark_tools.prepare_threadripper_run import paths, prepare, check_prepa
 from benchmark_tools.run_simulation_methods import verify_environment
 from benchmark_tools.prepare_ob_candidate_neighborhood import check
 from benchmark_tools.isolated_numba_cache import fresh_cache
+from benchmark_tools.isolated_native_tmp import fresh_tmp
 from benchmark_tools.snapshot_orthohmm_input_order import record
 from benchmark_tools.probe_dgx_step_separation import save
 
@@ -67,13 +68,14 @@ def measure_run(run, baseline, runtime_specs, collector, job_id, runtime_checker
         check_prepared(run, baseline)
         assert_environment(run, baseline)
         cache = root / "native_numba_cache"
-        with fresh_cache(cache):
+        with fresh_tmp(root / "native_tmp"), fresh_cache(cache):
             try:
                 return collector(run["native_argv"], directory, job_id, 32, 128*1024**3,
                                  85800, 1., monitor_host=True, host_interval_s=30.)
             finally:
                 save(root / "numba_cache.json", dict(directory=str(cache), initially_empty=True,
                     files=[record(p) for p in sorted(cache.rglob("*")) if p.is_file()],
+                    native_tmp=str(root / "native_tmp"),
                     policy="fresh_native_cache_compilation_inside_native_timer",
                     limitations=["Cache file inventory is after inference; not a trace of every cache lookup.",
                                  "Verification probes use different fresh caches; historical caches are untouched."]))

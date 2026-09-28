@@ -40,6 +40,7 @@ def test_composed_boundary_and_failure_retention(tmp_path, monkeypatch, failure)
         assert command == ["/native"] and job == 1
         assert (cpus, memory, timeout, cadence) == (32, 128*1024**3, 85800, 1.)
         assert os.environ["NUMBA_CACHE_DIR"] == str(root / "native_numba_cache")
+        assert all(os.environ[key] == str(root / "native_tmp") for key in ("TMPDIR", "TMP", "TEMP"))
         assert not list((root / "native_numba_cache").iterdir())
         if failure == "native":
             raise RuntimeError("collector failed")

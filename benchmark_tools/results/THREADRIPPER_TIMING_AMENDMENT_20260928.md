@@ -91,6 +91,15 @@ unchanged. Validate this policy on the bounded fixture before production.
 
 ### Input Storage Clarification (2026-09-28)
 
+Use a fresh persistent `native_tmp` directory within each run and set `TMPDIR`,
+`TMP` and `TEMP` to it for the native process tree. The first file-access trace
+found MAFFT inheriting a shared scratch location; private scratch is now a
+prospective requirement before production. Restore caller settings afterward;
+retain partial scratch output on failure. POSIX semaphores and multiprocessing
+shared-memory objects may still use `/dev/shm`: these are OS coordination
+resources, not prepared FASTA copies or scientific output placement. Account
+for them through the same job/native memory scopes, not file-size subtraction.
+
 Before any scientific timing result, adopt one common preparation policy:
 fresh per-run FASTA copies on local `/dev/shm` tmpfs for all three methods,
 with results, search databases, native intermediate files and collector
@@ -140,13 +149,16 @@ Report incomplete repeats as incomplete, never as complete three-run summaries.
 
 ## Current State And Next Execution Gates
 
-The [local runtime binding](threadripper_runtime_binding_20260928.json) pins
-four independently verified tree inventories with 146,924 entries. They cover
+The [v2 local runtime binding](threadripper_runtime_binding_v2_20260928.json) pins
+six independently verified tree inventories with 176,704 entries. They cover
 all 191 baseline file records and the six tools resolved in OrthoFinder's
 subprocess environment. Recheck these manifests before and after native work;
 their existence is not execution authorization. The broad snapshot does not
 replace dynamic dependency/temp-write review, module-resolution controls or
 quiet-host validation. Its large local raw manifests are not committed to Git.
+The original binding is superseded after the native scratch helper change.
+Trace job 22355 validates bounded private-scratch behavior, but does not prove
+full-workload write confinement or isolation from editable-package search roots.
 
 The three-method native installation fixture completed in job 22350 after
 two retained preflight failures. The local
