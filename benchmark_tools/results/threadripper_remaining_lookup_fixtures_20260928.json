@@ -1,0 +1,35 @@
+{
+  "jobs": [
+    {
+      "job_id": 22359,
+      "method": "orthohmm_satellite_v2",
+      "output": "benchmarks/work/threadripper_lookup_phylo_20260928"
+    },
+    {
+      "dependency": "afterok:22359",
+      "job_id": 22360,
+      "method": "orthofinder_full",
+      "output": "benchmarks/work/threadripper_lookup_of_20260928"
+    }
+  ],
+  "limitations": [
+    "16-gene diagnostic runs, not production panel identities.",
+    "Completion, native output validation and independent measurement replay remain pending.",
+    "No automatic retry; inspect the same jobs before any resume.",
+    "No quiet-host or publication-readiness claim."
+  ],
+  "scheduler": "             JOBID,        NAME,   STATE,      TIME,  CPUS,              NODELIST(REASON)\n             22360,of-lookup-fu, PENDING,      0:00,    64,                  (Dependency)\n             22359,oh-lookup-ph, RUNNING,      0:58,   192,                         bizon\n",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 3909,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_verified_threadripper_fixture.py",
+    "sha256": "2143bd20a408806ed89d8a55a57ca49e191e4c1a4fe5cdf848a9d4b9d5ec26ff"
+  },
+  "status": "remaining_native_lookup_fixtures_submitted",
+  "test_result": "12 passed in 0.33 seconds",
+  "tests": {
+    "bytes": 735,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_probe_verified_threadripper_fixture.py",
+    "sha256": "b2782019eafa1ac77699768b1ecbaa28ae8ceb870a00b5e8cfc1c7fe1e1d6321"
+  }
+}

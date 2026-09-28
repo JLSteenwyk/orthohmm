@@ -18,12 +18,24 @@ from benchmark_tools.probe_dgx_step_separation import save
 
 LOOKUP_SHA = "07eecb538551c72b742e89cdec3691bd95c33d4caa3bad09e7c9f549baaaac09"
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
+METHODS = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full")
+
+
+def select_fixture(plan, method):
+    if method not in METHODS:
+        raise ValueError("Unknown diagnostic method")
+    rows = plan["runs"][:3]
+    if ([r["native_method"] for r in rows] != list(METHODS)
+            or [r["index"] for r in rows] != [0, 1, 2]):
+        raise ValueError("First frozen method block differs")
+    return rows[METHODS.index(method)]
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("input", "output", "tmpfs"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--method", choices=METHODS, default=METHODS[0])
     args = parser.parse_args()
     results = Path(__file__).resolve().parent / "results"
     lookup_path = results / "threadripper_python_lookup_20260928.json"
@@ -38,13 +50,12 @@ def main():
     os.environ.update(env)
     os.chdir(baseline["core_root"])
     checker = RuntimeChecker(lookup_path, LOOKUP_SHA, args.output / "lookup_checks")
-    run = fixture_run(plan["runs"][0], args.input, args.output / "run_00", args.tmpfs)
-    if run["native_method"] != "orthohmm_high_sensitivity":
-        raise ValueError("Unexpected first frozen method")
+    run = fixture_run(select_fixture(plan, args.method), args.input, args.output / "run_00", args.tmpfs)
     save(args.output / "command.json", run)
     save(args.output / "started.json", dict(source=record(__file__),
         checker_source=record(Path(__file__).with_name("check_threadripper_runtime.py")),
-        lookup=record(lookup_path), plan=record(plan_path), scientific_timings_admitted=False))
+        lookup=record(lookup_path), plan=record(plan_path), method=args.method,
+        scientific_timings_admitted=False))
     wrapped = measure_run(run, baseline, binding["runtime_specs"], measure,
                           int(os.environ["SLURM_JOB_ID"]), runtime_checker=checker)
     result = dict(wrapper=wrapped, scientific_timings_admitted=False,

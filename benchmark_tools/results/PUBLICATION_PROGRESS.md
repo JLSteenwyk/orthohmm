@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Remaining Full-Lookup Native Fixtures Submitted (2026-09-28)
+
+Previous turn independently audited the high-sensitivity fixture and connected
+native audit records to panel history. Extended the verified fixture driver to
+select any of the first three frozen method entries, retaining their flags and
+recording the selected method. The default remains high sensitivity; reordered
+method blocks and unknown methods are rejected. Twelve focused tests passed
+in 0.33 seconds.
+
+Submitted local job 22359 for satellite_v2 and job 22360 for full OrthoFinder,
+with the latter depending on successful completion of 22359. Both use fresh
+persistent outputs and tmpfs inputs, 64 task slots, 128 GiB and a 30-minute
+diagnostic limit, exclusive allocation and no requeue. Loader overrides are
+explicitly unset. This extends the full before/after tree-plus-lookup check to
+the two inference paths not yet exercised with that combined checker.
+See the [submission receipt](threadripper_remaining_lookup_fixtures_20260928.json).
+
+The first job was verified RUNNING; the second is dependency-controlled.
+Inspect these same job IDs before any continuation or retry. Native completion,
+output validation and independent raw replay remain pending. These are 16-gene
+installation fixtures, not production identities or controlled timing results.
+No scientific flag, native input content, frozen baseline or unrelated workload
+changed. Production orchestration, quiet-window coordination and remaining
+scientific/publication requirements remain open; the goal stays active.
+
 ## Native Outcome Audit Connected To History (2026-09-28)
 
 Previous turn bound controller/review provenance into the panel guard. Added
