@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Full Discovery And Native Dependency Recovery (2026-09-28)
+
+Previous turn completed the Broccoli public archive audit. Ran full pytest
+discovery at `afae8416a2d1a0535368fe6a200b3f5b1e58d1ff`, including integration
+and top-level tests rather than only `tests/unit`. Outcome: 11,271 passed,
+four failed, ten skipped, 22 warnings in 444.50 seconds; exit 1. All four
+failures occurred in native MCL subprocess calls, before output comparisons.
+The inherited PATH selects the OrthoMCL-specific MCL 2.0, which is incompatible
+with these integration invocations. This requirement was already documented
+in `tests/README.md`; the initial command omitted the explicit override.
+
+After the original test process terminated, reran exactly the four failed
+forward/reverse long-name/simple fixtures using `ORTHOHMM_TEST_MCL` set to
+the installed OrthoFinder-bundled MCL 14-137. All four passed in 73.68 seconds,
+exit 0, without changing source or expected outputs. The JUnit test identities
+match the original failure set exactly. The built-in CLI integration check
+passed in the first run. Both JUnit records are retained and pinned in the
+[combined receipt](publication_full_regression_20260928.json), with executable
+hashes, version strings, exact commands and skip names/reasons.
+
+This is not a single all-green full-suite invocation. The ten opt-in native
+cases remain skipped in this run; their earlier explicitly enabled tests are
+separate evidence. The 22 warnings concern invalid escape sequences in frozen
+source and were not suppressed. Tracked `orthohmm`, unit/integration tests and
+benchmark Python source status is clean afterward. No global PATH, benchmark
+runtime, scientific setting or expected membership changed; unrelated sample
+changes remain untouched. All test processes are terminal. Controlled timing,
+scientific uncertainty/generalization and publication-release gaps remain open.
+
 ## Broccoli Archive Inspected: Original Reference Still Missing (2026-09-28)
 
 Previous turn completed the cited main-draft layout review. This turn polled

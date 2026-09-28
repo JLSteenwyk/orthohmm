@@ -1,0 +1,147 @@
+{
+  "full": {
+    "failures": [
+      {
+        "classname": "tests.integration.test_long_names",
+        "message": "subprocess.CalledProcessError: Command 'mcl /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_long_names_all_outputs_Fa0/output/orthohmm_working_res/orthohmm_edges.txt -te 8 --abc -I 1.5 -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_long_names_all_outputs_Fa0/output/orthohmm_working_res/orthohmm_edges_clustered.txt' returned non-zero exit status 1.",
+        "name": "test_long_names_all_outputs[False]"
+      },
+      {
+        "classname": "tests.integration.test_long_names",
+        "message": "subprocess.CalledProcessError: Command 'mcl /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_long_names_all_outputs_Tr0/output/orthohmm_working_res/orthohmm_edges.txt -te 8 --abc -I 1.5 -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_long_names_all_outputs_Tr0/output/orthohmm_working_res/orthohmm_edges_clustered.txt' returned non-zero exit status 1.",
+        "name": "test_long_names_all_outputs[True]"
+      },
+      {
+        "classname": "tests.integration.test_simple_case",
+        "message": "subprocess.CalledProcessError: Command 'mcl /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_simple_case_all_outputs_F0/output/orthohmm_working_res/orthohmm_edges.txt -te 8 --abc -I 1.5 -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_simple_case_all_outputs_F0/output/orthohmm_working_res/orthohmm_edges_clustered.txt' returned non-zero exit status 1.",
+        "name": "test_simple_case_all_outputs[False]"
+      },
+      {
+        "classname": "tests.integration.test_simple_case",
+        "message": "subprocess.CalledProcessError: Command 'mcl /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_simple_case_all_outputs_T0/output/orthohmm_working_res/orthohmm_edges.txt -te 8 --abc -I 1.5 -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-5216/test_simple_case_all_outputs_T0/output/orthohmm_working_res/orthohmm_edges_clustered.txt' returned non-zero exit status 1.",
+        "name": "test_simple_case_all_outputs[True]"
+      }
+    ],
+    "junit": {
+      "bytes": 1537009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_regression_20260928/full.xml",
+      "sha256": "be9339832eddddfb492f2240328970165414a6a98c0a40f3f6bb158f5e659eaa"
+    },
+    "passed": 11271,
+    "skips": [
+      {
+        "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+        "name": "test_independent_complete_recheck",
+        "reason": "Installed native runtime"
+      },
+      {
+        "classname": "tests.unit.test_audit_orthomcl_database",
+        "name": "test_installed_formatdb_normalization_is_detected",
+        "reason": "Opt-in installed legacy database round trip"
+      },
+      {
+        "classname": "tests.unit.test_describe_legacy_residue_deletions",
+        "name": "test_native_query_and_database_delete_o",
+        "reason": "Opt-in installed native query and database parser probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_bpo_indexes",
+        "name": "test_installed_native_bpo_parity[False]",
+        "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_bpo_indexes",
+        "name": "test_installed_native_bpo_parity[True]",
+        "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_perl_launcher",
+        "name": "test_installed_perl_probe_has_no_relative_lookup",
+        "reason": "Opt-in native Perl probe"
+      },
+      {
+        "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+        "name": "test_installed_checkpoint",
+        "reason": "Opt-in installed frozen OrthoMCL runtime"
+      },
+      {
+        "classname": "tests.unit.test_run_qfo_corrected_blast",
+        "name": "test_installed_legacy_engine_smoke[False]",
+        "reason": "Opt-in installed legacy engine smoke"
+      },
+      {
+        "classname": "tests.unit.test_run_qfo_corrected_blast",
+        "name": "test_installed_legacy_engine_smoke[True]",
+        "reason": "Opt-in installed legacy engine smoke"
+      },
+      {
+        "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+        "name": "test_installed_staged_native_inference",
+        "reason": "Installed dedicated Python and native fixture required"
+      }
+    ],
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "4",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "10",
+        "tests": "11285",
+        "time": "444.007",
+        "timestamp": "2026-09-28T13:58:14.595903-04:00"
+      }
+    ]
+  },
+  "full_command": "/home/bizon/anaconda3/bin/python -m pytest -q --junitxml=/tmp/orthohmm-full-regression-20260928.xml",
+  "full_exit_code": 1,
+  "limitations": [
+    "Full discovery initially failed four native MCL calls under legacy MCL 2.0; failures retained.",
+    "Only those four cases were rerun with MCL 14-137; not a single all-green full-suite invocation.",
+    "Ten opt-in installed-native cases remain skipped in this run; earlier explicit runs are separate evidence.",
+    "No global PATH, scientific source, frozen runtime, expected membership or unrelated sample change was made.",
+    "Shared-host regression elapsed times are not native timing benchmarks."
+  ],
+  "publication_ready": false,
+  "recovery": {
+    "failures": [],
+    "junit": {
+      "bytes": 698,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_regression_20260928/native_mcl14.xml",
+      "sha256": "f02d307e8e21862abb0f3b399b59e8b1cbc5fd20e3714a2dde20474c8512dc67"
+    },
+    "passed": 4,
+    "skips": [],
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "0",
+        "tests": "4",
+        "time": "73.661",
+        "timestamp": "2026-09-28T14:05:51.884622-04:00"
+      }
+    ]
+  },
+  "recovery_command": "env ORTHOHMM_TEST_MCL=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl /home/bizon/anaconda3/bin/python -m pytest -q tests/integration/test_long_names.py tests/integration/test_simple_case.py --junitxml=/tmp/orthohmm-native-mcl14-regression-20260928.xml",
+  "recovery_exit_code": 0,
+  "recovery_matches_exact_failed_test_set": true,
+  "revision": "afae8416a2d1a0535368fe6a200b3f5b1e58d1ff",
+  "scoped_source_status": "",
+  "tools": {
+    "compatible_mcl": {
+      "bytes": 284104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+      "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03",
+      "version": "mcl 14-137"
+    },
+    "legacy_mcl": {
+      "bytes": 452856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin/mcl",
+      "sha256": "ff32e8535e4913b3fc2646d1497c6c4ebd480ad404ad9e302f99faddee2d1db1",
+      "version": "mcl 2.0"
+    }
+  }
+}
