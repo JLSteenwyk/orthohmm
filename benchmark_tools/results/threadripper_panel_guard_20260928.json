@@ -1,0 +1,37 @@
+{
+  "existing_production_directories": [],
+  "limitations": [
+    "Empty local production paths checked; no scheduler job or native run created.",
+    "State-machine unit validation only; production controller and independently bound reviews remain required."
+  ],
+  "plan": {
+    "bytes": 203151,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_scaling_commands_20260928.json",
+    "sha256": "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
+  },
+  "result": {
+    "automatic_retry": false,
+    "existing_job_id": null,
+    "index": 0,
+    "limitations": [
+      "Recorded state consistency only, not live scheduler or evidence verification.",
+      "Next identity still requires pinned recipe, allocation and fresh quiet-host preflight.",
+      "All attempts reviewed does not imply all native runs succeeded or publication readiness."
+    ],
+    "reviewed_attempts": [],
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "status": "next_identity_requires_preflight"
+  },
+  "source": {
+    "bytes": 4146,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py",
+    "sha256": "db0fd6998d618852b59422f6396472d6df535f751d4d7bbbd1bcd6bf10b0b9cc"
+  },
+  "test_result": "30 passed in 0.21 seconds",
+  "tests": {
+    "bytes": 3510,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_threadripper_panel_progress.py",
+    "sha256": "92372ac90bd05911a2ada29248dece83e927f6a94f3f76300cab7f99eeab51e5"
+  }
+}

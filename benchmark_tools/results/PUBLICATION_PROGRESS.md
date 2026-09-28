@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Sequential Panel State Guard (2026-09-28)
+
+Previous turn recorded current host contention and requested quiet-window
+coordination. Added a side-effect-free panel-position guard for the frozen
+27-run order. It rejects skipped/repeated indices, duplicate job IDs, unknown
+scheduler states and later attempts following unreviewed predecessors. Live
+scheduler jobs remain wait states, even if a native exit is already recorded.
+Terminal attempts require explicit runtime, environment, resource and
+output-or-failure review. Adverse or unresolved reviews stop continuation.
+
+Reviewed native nonzero exits/timeouts remain retained outcomes and can advance
+only after a cleanly completed executor job and passed reviews. Scheduler-level
+failure remains a separate resolution gate. The eventual executor must distinguish
+its own successful measurement completion from native success; this library does
+not yet implement that executor or verify scheduler observations/review evidence.
+It never authorizes launches or admits timings, including after all 27 attempts.
+
+Thirty tests passed in 0.21 seconds. Applied the guard to the actual hash-pinned
+plan and verified none of its production run directories exists: next identity
+is index 0, requiring preflight. The [guard receipt](threadripper_panel_guard_20260928.json)
+pins sources, tests and plan. No production run, native input, scientific default
+or runtime manifest changed. Integration with the pinned production executor,
+independent review evidence and quiet-host gate remains necessary; the full
+scientific and publication scope remains incomplete and active.
+
 ## Quiet-Window Coordination Requested (2026-09-28)
 
 Previous turn completed full regression and explicit native dependency
