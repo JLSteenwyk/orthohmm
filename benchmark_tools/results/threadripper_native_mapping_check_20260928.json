@@ -1,0 +1,45 @@
+{
+  "full_pipeline_validated": false,
+  "input_records": [
+    {
+      "bytes": 54,
+      "path": "/dev/shm/orthohmm_of_storage_probe_20260928/species_a.fa",
+      "sha256": "c393d89b03a485bfa0f44086730b5249d7f1302682e516205e748cacea187b70"
+    },
+    {
+      "bytes": 54,
+      "path": "/dev/shm/orthohmm_of_storage_probe_20260928/species_b.fa",
+      "sha256": "c393d89b03a485bfa0f44086730b5249d7f1302682e516205e748cacea187b70"
+    }
+  ],
+  "limitations": [
+    "Rechecks only SpeciesIDs/SequenceIDs from the prior preparation-only synthetic fixture.",
+    "Fixture identifiers repeat across species; this is not a valid inference/accuracy benchmark and full-universe admission is not claimed."
+  ],
+  "result": {
+    "checked_files": [
+      {
+        "bytes": 32,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthofinder_storage_probe_20260928/results/Results_Sep28/WorkingDirectory/SpeciesIDs.txt",
+        "sha256": "063cd19753ffe74f32a46677784342b5c96c99b0dc28fe7ac95f1a3546215ec0"
+      },
+      {
+        "bytes": 30,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthofinder_storage_probe_20260928/results/Results_Sep28/WorkingDirectory/SequenceIDs.txt",
+        "sha256": "0f4f22ca112b8c6e2f7e7c5cb03a09736002bc4087b74b7e804f92e7ad7b7ce1"
+      }
+    ],
+    "native_order": [
+      "species_a.fa",
+      "species_b.fa"
+    ],
+    "sequences": 2,
+    "species": 2
+  },
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 2759,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_threadripper_outputs.py",
+    "sha256": "e56ee18ef362a979fa0877156d82c9057c9e3e4ca8530d6049ba4a0292b10ab8"
+  }
+}

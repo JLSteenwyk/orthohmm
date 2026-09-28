@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Output Numbering Checks Added (2026-09-28)
+
+Previous turn validated common input preparation. Added a Threadripper output
+adapter around the retained native-output validator. It rechecks prepared
+input bytes/enumeration and, for OrthoFinder, independently compares written
+SpeciesIDs and SequenceIDs to the expected sorted species and within-FASTA
+sequence order. Rejects swapped mappings, missing/extra/duplicate IDs and
+indirect mapping files. Historical scaling validation code is unchanged.
+41 mapping/native-output/preparation tests passed in 0.48 seconds.
+
+Applied the mapping check to the actual prior OrthoFinder preparation-only
+fixture: two species and two numbered sequences matched. The
+[receipt](threadripper_native_mapping_check_20260928.json) pins files and source.
+This is not a full-pipeline admission: the tiny placement fixture repeats
+protein identifiers across species and was never an accuracy benchmark.
+The full validator still requires a unique complete input universe, correct
+commands, successful native completion and valid output structures.
+
+Archive job 22344 remains RUNNING at 1,761,918,976 of 1,957,180,078 bytes;
+job 22346 remains PENDING on its dependency. No new transfer or inference was
+launched. Next connect preparation, collector/replay and this adapter in the
+guarded executor, inspect both live jobs once terminal, and finish native,
+overhead and quiet-window checks. The full publication goal remains incomplete.
+
 ## Common Per-Run Preparation Validated (2026-09-28)
 
 Previous turn generated the local command plan. Implemented common fresh
