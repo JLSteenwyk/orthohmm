@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Reporting Runtime Rebound And Native Fixtures Submitted (2026-09-28)
+
+Previous turn made progress with collector v4 and verified diagnostic 22366,
+committed and pushed as 3aa2393c. Re-inventoried all seven existing runtime
+manifests: exactly the intended collector/replay files changed, with no entry
+additions/removals. Every native baseline record is unchanged. Explicitly
+added the reporting helper for 176,711 total records. Two fresh native import
+probes match each other and the prior OrthoHMM/OrthoFinder signatures. The
+[runtime update](THREADRIPPER_REPORTING_RUNTIME_20260928.md) retains evidence.
+
+85 focused tests passed; the 12 driver/runtime tests passed again after the
+fixture pin update. Submitted the same 16-gene fixtures sequentially as jobs
+22367 (high), 22368 (satellite_v2) and 22369 (OrthoFinder full), with afterok
+dependencies and no retries. The latest authoritative queue check shows
+22367 RUNNING and both successors PENDING on dependencies. No production
+identity was launched. Next continuation must poll these handles, not restart;
+then independently replay the new reporting-stage evidence and validate
+canonical output parity against 22363-22365. Quiet-window eligibility and
+remaining scientific, timing and publication requirements are still open.
+
 ## Reporting-Stage Memory And Duration Added (2026-09-28)
 
 Previous turn made concrete release-source progress and pushed a7479d92.

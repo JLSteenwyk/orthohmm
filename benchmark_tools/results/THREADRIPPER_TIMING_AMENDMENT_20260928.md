@@ -154,8 +154,10 @@ Report incomplete repeats as incomplete, never as complete three-run summaries.
 
 Latest accounting update: the [v4 reporting-stage collector](THREADRIPPER_REPORT_FINALIZATION_20260928.md)
 passed a short live diagnostic and independent replay. Its source changes
-require a fresh reviewed runtime binding and checked native fixtures; older
-binding/fixture records below remain historical, not authorization for v4.
+now have a [reviewed v4 runtime binding](THREADRIPPER_REPORTING_RUNTIME_20260928.md)
+and repeated import checks; checked native fixtures 22367-22369 are submitted
+and still require post-run review. Older binding/fixture records below remain
+historical, not authorization for v4.
 
 The [v2 local runtime binding](threadripper_runtime_binding_v2_20260928.json) pins
 six independently verified tree inventories with 176,704 entries. They cover

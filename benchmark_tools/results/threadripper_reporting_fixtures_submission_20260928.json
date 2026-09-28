@@ -1,0 +1,96 @@
+{
+  "binding": {
+    "bytes": 33824,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_runtime_binding_v4_20260928.json",
+    "sha256": "c6e9225f43604adea6b29adbf5c1f51d3e72ff2f99583f44e42da1939c4cffd6"
+  },
+  "driver": {
+    "bytes": 4331,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_verified_threadripper_fixture.py",
+    "sha256": "5300c12c1e0d1ff99171a6e1d6564d0e3774905f90d5aaca175bd1df5f117470"
+  },
+  "jobs": [
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-reporting-high",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-reporting-high-%j.log",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928 --tmpfs /dev/shm/orthohmm_reporting_high_20260928 --method orthohmm_high_sensitivity --scheduler-command '(null)'"
+      ],
+      "job_id": 22367,
+      "method": "orthohmm_high_sensitivity",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928",
+      "stderr": "",
+      "stdout": "22367\n",
+      "tmpfs": "/dev/shm/orthohmm_reporting_high_20260928"
+    },
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-reporting-phylo",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-reporting-phylo-%j.log",
+        "--dependency=afterok:22367",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928 --tmpfs /dev/shm/orthohmm_reporting_phylo_20260928 --method orthohmm_satellite_v2 --scheduler-command '(null)'"
+      ],
+      "job_id": 22368,
+      "method": "orthohmm_satellite_v2",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928",
+      "stderr": "",
+      "stdout": "22368\n",
+      "tmpfs": "/dev/shm/orthohmm_reporting_phylo_20260928"
+    },
+    {
+      "command": [
+        "sbatch",
+        "--parsable",
+        "--job-name=oh-reporting-of",
+        "--partition=gpu",
+        "--nodelist=bizon",
+        "--nodes=1",
+        "--ntasks=1",
+        "--cpus-per-task=64",
+        "--mem=128G",
+        "--exclusive",
+        "--time=1-02:00:00",
+        "--no-requeue",
+        "--output=/tmp/orthohmm-reporting-of-%j.log",
+        "--dependency=afterok:22368",
+        "--wrap=env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT /home/bizon/anaconda3/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928 --tmpfs /dev/shm/orthohmm_reporting_of_20260928 --method orthofinder_full --scheduler-command '(null)'"
+      ],
+      "job_id": 22369,
+      "method": "orthofinder_full",
+      "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928",
+      "stderr": "",
+      "stdout": "22369\n",
+      "tmpfs": "/dev/shm/orthohmm_reporting_of_20260928"
+    }
+  ],
+  "lookup": {
+    "bytes": 5046,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_python_lookup_v3_20260928.json",
+    "sha256": "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
+  },
+  "production_identities_launched": 0,
+  "scientific_timings_admitted": false,
+  "status": "reporting_native_fixtures_submitted"
+}

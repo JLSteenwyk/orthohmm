@@ -17,7 +17,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
 
-LOOKUP_SHA = "f075036eef07acc4b1d542bea3565ce2d165650e8c8361fc78745ea1ef451d78"
+LOOKUP_SHA = "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
 METHODS = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full")
 
@@ -41,7 +41,7 @@ def main():
     args = parser.parse_args()
     allocation_cwd = str(Path.cwd())
     results = Path(__file__).resolve().parent / "results"
-    lookup_path = results / "threadripper_python_lookup_v2_20260928.json"
+    lookup_path = results / "threadripper_python_lookup_v3_20260928.json"
     lookup = read_frozen(lookup_path, LOOKUP_SHA)
     baseline = read_frozen(Path(lookup["baseline"]["path"]), lookup["baseline"]["sha256"])
     binding = read_frozen(Path(lookup["binding"]["path"]), lookup["binding"]["sha256"])
