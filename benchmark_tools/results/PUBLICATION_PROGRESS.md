@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Local Controller Allocation Validation (2026-09-28)
+
+Previous turn implemented the sequential panel guard. Added a local controller
+record validator using the existing terminal-record parser, with Threadripper
+resource and execution-path checks. Scheduler-only job 22358 ran `sleep 30`
+under a two-minute diagnostic allocation and completed 0:0 in 31 seconds.
+Retained running and terminal `scontrol` records both pass the validator.
+
+The exclusive-node controller record reserves all 192 logical CPU slots while
+`CPUs/Task` remains 64. The validator checks these separately; neither is the
+32-CPU native affinity, which retains its separate live placement check.
+It also checks node, partition, memory, exclusivity, requeue/restart counts,
+command, cwd, time limit, single-job identity and scheduler exit syntax.
+Terminal failure statuses remain failure evidence, not timing admission.
+See the [controller probe receipt](threadripper_controller_probe_22358.json).
+
+Fifty-six focused tests pass in 0.31 seconds, including altered resources,
+duplicate records, array/heterogeneous identities, nonterminal observations
+and preserved terminal failures. The helper verifies recorded fields only:
+freshness, submitted arguments, pinned production script, effective limits,
+native outputs and environmental eligibility still require independent checks.
+The diagnostic `(null)` wrap command and two-minute limit cannot stand in for
+the production script and 24-hour allocation. Wiring this evidence into the
+panel guard remains next; no production timing ran or unrelated job was stopped.
+The full publication goal remains active and incomplete.
+
 ## Sequential Panel State Guard (2026-09-28)
 
 Previous turn recorded current host contention and requested quiet-window
