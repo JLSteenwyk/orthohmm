@@ -67,6 +67,28 @@ runs. Resolve background-workload eligibility independently of method outcomes.
 
 ## Measurement And Failure Handling
 
+### JIT Cache Policy (2026-09-28)
+
+Before production timing, use a fresh per-run `NUMBA_CACHE_DIR` beneath the
+persistent run directory for every method. Create it empty outside inference;
+include any native JIT compilation and cache writes inside inference time.
+Use different fresh directories for before/after verification probes so they
+cannot populate the native cache. Retain resulting cache-file inventories;
+do not remove or reuse historical shared caches. This is cold JIT-cache
+execution on prepared, hash-warmed FASTA inputs, not cold filesystem caching.
+Full runtime checks still require isolated Python bytecode lookup separately.
+Restrict `NUMBA_CACHE_LOCATOR_CLASSES` to `UserProvidedCacheLocator`, supported
+by the installed runtime, so an unusable explicit directory cannot fall back
+to a historical source-tree or user-wide cache.
+
+This closes a prospective gap found before any production timing: the frozen
+source has `@njit(cache=True)` and the shared source directory already contains
+`.nbi`/`.nbc` files. Python's bytecode controls do not define Numba cache state.
+See [Numba's environment reference](https://numba.readthedocs.io/en/stable/reference/envvars.html#numba-cache-dir).
+Earlier fixtures remain valid integration controls, not cold-JIT timing evidence.
+The native collector, CPU settings, scientific algorithms and run order are
+unchanged. Validate this policy on the bounded fixture before production.
+
 ### Input Storage Clarification (2026-09-28)
 
 Before any scientific timing result, adopt one common preparation policy:

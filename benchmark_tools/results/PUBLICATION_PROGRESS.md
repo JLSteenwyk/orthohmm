@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Isolate Native JIT Caches (2026-09-28)
+
+Previous turn made progress by bounding retained raw observations. Inspection
+for the runtime freeze then found a separate timing gap: the frozen search
+code has persistent `@njit(cache=True)` functions and existing `.nbi`/`.nbc`
+files under the shared source tree. Python bytecode isolation does not isolate
+Numba's compiled-code cache. No production timing has run, so the prospective
+amendment now specifies fresh per-run native JIT caches, with compilation
+inside native inference time. Verification probes use separate fresh caches.
+
+The composition helper now enforces this separation and preserves cache-file
+inventories even on collector failure. A context manager restores both caller
+environment variables after success or error. The installed Numba supports
+`NUMBA_CACHE_LOCATOR_CLASSES=UserProvidedCacheLocator`; using only this locator
+prevents fallback to old source-tree/user-wide caches. An actual subprocess
+import with `/dev/null/unusable` failed with `no locator available`, as intended.
+No historical cache was removed. Seventeen focused tests passed in 0.41 seconds.
+
+Job 22352 tested fresh directories with default locators (0:0, 51 seconds).
+Job 22353 tested the final restricted locator policy (0:0, 48 seconds). All
+three methods in each fixture passed native output validation and independent
+collector replay. Both OrthoHMM modes wrote six native cache files each;
+OrthoFinder wrote none. OrthoHMM group/root-HOG/pair files matched the previous
+fixture byte-for-byte. OrthoFinder's MCL command header contains its distinct
+output path, so its checkpoint was not byte-identical; the existing parsers
+verified the same three partitions and 36 native pairs. The initial bytewise
+comparison failure is disclosed in the
+[receipt](threadripper_numba_cache_controls_20260928.json).
+
+These controls establish bounded integration behavior, not general prediction
+equivalence, cold-filesystem timing or controlled performance. Competing work
+remained 71.71-73.12 CPU-core equivalents. All jobs/processes are terminal.
+Full transitive runtime inventory, remaining temporary-write/overhead checks,
+production execution gating and a quiet window are still required. The 27
+publication timing identities are untouched and publication readiness is
+unproven. Runtime inspection found a 78-GiB base Conda installation; freeze
+explicit runtime trees/dependencies, not unrelated environments/package caches.
+
 ## Bound Live Observation Retention (2026-09-28)
 
 Previous turn made progress through native fixture validation and baseline

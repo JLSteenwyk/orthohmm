@@ -1,0 +1,14 @@
+{
+  "cache_dir": "/dev/null/unusable",
+  "command": "from orthohmm.search import prefilter",
+  "exit_code": 1,
+  "locator_classes": "UserProvidedCacheLocator",
+  "numba_source": {
+    "bytes": 26855,
+    "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/numba/core/caching.py",
+    "sha256": "026f46d8681711ff7d4ff981c54207536630e38cb6d8fb86b84f4191674635c6"
+  },
+  "scientific_inference_executed": false,
+  "status": "unusable_explicit_cache_fails_without_shared_fallback",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/prefilter.py\", line 84, in <module>\n    def _remap_flat(src, mapping, n):\n  File \"/home/bizon/anaconda3/lib/python3.10/site-packages/numba/core/decorators.py\", line 227, in wrapper\n    disp.enable_caching()\n  File \"/home/bizon/anaconda3/lib/python3.10/site-packages/numba/core/dispatcher.py\", line 811, in enable_caching\n    self._cache = FunctionCache(self.py_func)\n  File \"/home/bizon/anaconda3/lib/python3.10/site-packages/numba/core/caching.py\", line 687, in __init__\n    self._impl = self._impl_class(py_func)\n  File \"/home/bizon/anaconda3/lib/python3.10/site-packages/numba/core/caching.py\", line 423, in __init__\n    raise RuntimeError(\"cannot cache function %r: no locator available \"\nRuntimeError: cannot cache function '_remap_flat': no locator available for file '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/prefilter.py'\n"
+}

@@ -1,0 +1,234 @@
+{
+  "invalid_cache_probe": {
+    "bytes": 1642,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_numba_invalid_cache_20260928.json",
+    "sha256": "2c36f4dd8bf681fdbd10ae4bd4fe7402e11f2e63d2b0063dada311d66ddd518a"
+  },
+  "limitations": [
+    "Job 22352 used a fresh explicit directory with default locator fallback; job 22353 additionally restricted locators to UserProvidedCacheLocator.",
+    "Current source pins describe the final restricted implementation used in job 22353.",
+    "Initial receipt generation rejected bytewise OrthoFinder checkpoint comparison; parser-based comparison then verified identical partitions and native pairs.",
+    "Cache inventories and unchanged fixture predictions do not prove universal dataset behavior.",
+    "Cold JIT execution is not cold filesystem caching; verification/input hashing still warms files.",
+    "Shared-host diagnostic timings are not admitted to the publication panel."
+  ],
+  "publication_ready": false,
+  "runs": [
+    {
+      "cache": {
+        "bytes": 2656,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/run_00/numba_cache.json",
+        "sha256": "f8250eb4f41cc2339128191a593d86a26e8b967861b43547ac00fee0d3f637f1"
+      },
+      "cache_files": 6,
+      "foreign_average_cores": 72.7469015619119,
+      "job_id": 22352,
+      "method": "orthohmm_high_sensitivity",
+      "output_comparison": {
+        "exact_primary_output_hashes": {
+          "orthohmm_orthogroups.txt": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+        }
+      },
+      "prior_result": {
+        "bytes": 118261,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_00.json",
+        "sha256": "83e4a7e72ea1da9ce7c3e6ca4495a36263fa38b6be90cb7d78dd0422f53ab00f"
+      },
+      "replay": {
+        "bytes": 1440870,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/replay_00.json",
+        "sha256": "ec33ffe680746571fa68c0c9f50f241ff88b34b979b80451b0fd01d21d719b46"
+      },
+      "result": {
+        "bytes": 124405,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/result_00.json",
+        "sha256": "4eed27ab04371d09b0e633f30995a220d62fe036031c1e85782956fb19e5816f"
+      }
+    },
+    {
+      "cache": {
+        "bytes": 2656,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/run_01/numba_cache.json",
+        "sha256": "4836a76f7c5e69bd4dc5f6ce0fa0a8c0c10106d5900d9ae1b2358669df3809e4"
+      },
+      "cache_files": 6,
+      "foreign_average_cores": 72.78189600433981,
+      "job_id": 22352,
+      "method": "orthohmm_satellite_v2",
+      "output_comparison": {
+        "exact_primary_output_hashes": {
+          "orthohmm_orthogroups.txt": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3",
+          "orthohmm_pairwise_orthologs.tsv": "dd903cfd473a5307dc29b52a59539688c4d18e5f0c4cf6aa0448393e11f807dd",
+          "orthohmm_root_hogs.tsv": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+        }
+      },
+      "prior_result": {
+        "bytes": 124801,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_01.json",
+        "sha256": "fc74a5fa962a770b14c7b8c501a1777a227654e32fa20ff008efeeaee3bc6b07"
+      },
+      "replay": {
+        "bytes": 1581652,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/replay_01.json",
+        "sha256": "f78a839bfd1f96464d43b8a46f0cf3bfde28c5606dc0568dac05ed77d2635671"
+      },
+      "result": {
+        "bytes": 130815,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/result_01.json",
+        "sha256": "bf0876ab4e5984619fb3a0c4ed5bda6b30d9022bef5dce61628d96b447ba5ec7"
+      }
+    },
+    {
+      "cache": {
+        "bytes": 465,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/run_02/numba_cache.json",
+        "sha256": "cbdeaf03266da3a2fe66874064797247cdc7ad933f03d67b5706ddf053fd9804"
+      },
+      "cache_files": 0,
+      "foreign_average_cores": 71.93387933922666,
+      "job_id": 22352,
+      "method": "orthofinder_full",
+      "output_comparison": {
+        "byte_identity": false,
+        "canonical_partition_equal": true,
+        "groups": 3,
+        "native_pairs_equal": true,
+        "pairs": 36,
+        "reason": "MCL command header contains distinct output-directory paths."
+      },
+      "prior_result": {
+        "bytes": 135472,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_02.json",
+        "sha256": "8c54ca498b458856c5519660d8ddf8829047739fdda1b1f5e3f60ad472b3460d"
+      },
+      "replay": {
+        "bytes": 1444291,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/replay_02.json",
+        "sha256": "c01f6175c0d0aeec82f8fae9ceab9cb71b69187d057c0003963d4a20cc163e00"
+      },
+      "result": {
+        "bytes": 130154,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v5_20260928/result_02.json",
+        "sha256": "706cd82ddad0586414fa4f8052f19730eb5e12da1e201209222df271275988aa"
+      }
+    },
+    {
+      "cache": {
+        "bytes": 2656,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/run_00/numba_cache.json",
+        "sha256": "ceb93779dae14f22255802c1d42d9e50dc3092148badbce567d3a42a07058dd8"
+      },
+      "cache_files": 6,
+      "foreign_average_cores": 73.11926479769971,
+      "job_id": 22353,
+      "method": "orthohmm_high_sensitivity",
+      "output_comparison": {
+        "exact_primary_output_hashes": {
+          "orthohmm_orthogroups.txt": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+        }
+      },
+      "prior_result": {
+        "bytes": 118261,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_00.json",
+        "sha256": "83e4a7e72ea1da9ce7c3e6ca4495a36263fa38b6be90cb7d78dd0422f53ab00f"
+      },
+      "replay": {
+        "bytes": 1311630,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/replay_00.json",
+        "sha256": "1ed79d8a3fea5662b0d2f2587ad21f142fe7a84eeb93e7f02f590650c66ef219"
+      },
+      "result": {
+        "bytes": 118717,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/result_00.json",
+        "sha256": "b52eaa9e64c3ec3f21d8b9fda26457d3b0ae318f831eaa73b992af339b0f6420"
+      }
+    },
+    {
+      "cache": {
+        "bytes": 2656,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/run_01/numba_cache.json",
+        "sha256": "4cc3a0b508c849342bd51c40a53a508992fe0f0f8ed2d216850b7014f74defdf"
+      },
+      "cache_files": 6,
+      "foreign_average_cores": 72.7670918234255,
+      "job_id": 22353,
+      "method": "orthohmm_satellite_v2",
+      "output_comparison": {
+        "exact_primary_output_hashes": {
+          "orthohmm_orthogroups.txt": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3",
+          "orthohmm_pairwise_orthologs.tsv": "dd903cfd473a5307dc29b52a59539688c4d18e5f0c4cf6aa0448393e11f807dd",
+          "orthohmm_root_hogs.tsv": "fbe3f59bed47055b17879fe92b3789ecf87d054ce6337e4a98a3c379402ac06d"
+        }
+      },
+      "prior_result": {
+        "bytes": 124801,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_01.json",
+        "sha256": "fc74a5fa962a770b14c7b8c501a1777a227654e32fa20ff008efeeaee3bc6b07"
+      },
+      "replay": {
+        "bytes": 1455016,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/replay_01.json",
+        "sha256": "82522dcccd01d46a3f65b3f81b786823be0531860c4d4d187027c108f60b0ecf"
+      },
+      "result": {
+        "bytes": 125086,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/result_01.json",
+        "sha256": "f491764880b4abd2931e1f84e9d9e6140875ccf91196420d94bd01695cce1864"
+      }
+    },
+    {
+      "cache": {
+        "bytes": 465,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/run_02/numba_cache.json",
+        "sha256": "67aee96b877ba20301b375e6ce57739da862021bdf6659fb70c8001d224a5d01"
+      },
+      "cache_files": 0,
+      "foreign_average_cores": 71.7052231375358,
+      "job_id": 22353,
+      "method": "orthofinder_full",
+      "output_comparison": {
+        "byte_identity": false,
+        "canonical_partition_equal": true,
+        "groups": 3,
+        "native_pairs_equal": true,
+        "pairs": 36,
+        "reason": "MCL command header contains distinct output-directory paths."
+      },
+      "prior_result": {
+        "bytes": 135472,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v4_20260928/result_02.json",
+        "sha256": "8c54ca498b458856c5519660d8ddf8829047739fdda1b1f5e3f60ad472b3460d"
+      },
+      "replay": {
+        "bytes": 1456695,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/replay_02.json",
+        "sha256": "8b876240fad61a56b6e10e090d5ef27e353ed79f4a00665dbae7b417ba7fc884"
+      },
+      "result": {
+        "bytes": 130214,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_native_fixture_v6_20260928/result_02.json",
+        "sha256": "3187ba242a25b7b211347194ab9cdbae4153a10c07b61110bd87eb7be28836eb"
+      }
+    }
+  ],
+  "scheduler": "JobID|State|ExitCode|Elapsed\n22352|COMPLETED|0:0|00:00:51\n22352.batch|COMPLETED|0:0|00:00:51\n22352.0|COMPLETED|0:0|00:00:12\n22352.1|COMPLETED|0:0|00:00:13\n22352.2|COMPLETED|0:0|00:00:12\n22353|COMPLETED|0:0|00:00:48\n22353.batch|COMPLETED|0:0|00:00:48\n22353.0|COMPLETED|0:0|00:00:11\n22353.1|COMPLETED|0:0|00:00:12\n22353.2|COMPLETED|0:0|00:00:12\n",
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/isolated_numba_cache.py",
+      "sha256": "2a606360727779e307e74783f2cce5dd75a6d9a7f4b0ab673304888c3c21f80d"
+    },
+    {
+      "bytes": 4033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_run.py",
+      "sha256": "c7ad635098d369c7262d5a74b88095897c8ba663487b0ee9ab1560138cb4652d"
+    },
+    {
+      "bytes": 5688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_native_fixture.py",
+      "sha256": "051974df3c59d7876f1f3af081e0743abc6b04cc2b754dbcb97bdc2d7d677c72"
+    }
+  ],
+  "status": "fresh_numba_caches_validated_on_native_fixture"
+}
