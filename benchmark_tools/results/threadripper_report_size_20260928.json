@@ -1,0 +1,160 @@
+{
+  "allocation_risk": {
+    "native_timeout_s": 85800,
+    "remaining_envelope_s": 600,
+    "scheduler_limit_s": 86400,
+    "status": "preparation_and_runtime_checks_need_additional_validated_scheduler_envelope",
+    "synthetic_report_construction_and_serialization_s": 548.2941836660029
+  },
+  "capacity_scenario": {
+    "filesystem_available_bytes": 11924263944192,
+    "raw_plus_report_bytes_27_runs": 727232747130,
+    "raw_plus_report_bytes_per_run": 26934546190,
+    "report_bytes_per_run": 11521246514
+  },
+  "evidence": [
+    {
+      "bytes": 2383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_1000_20260928/result.json",
+      "sha256": "22d8e601dd97db5b56b85bf132b053f3d3e4b5046a696043a0ed2bfcc625524b"
+    },
+    {
+      "bytes": 2389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/result.json",
+      "sha256": "e88629ef9ff920af56ce4b5d507c9aff250b2b850298332300b2295683b4579f"
+    },
+    {
+      "bytes": 2494,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/live_memory_1.json",
+      "sha256": "d6f04603a208d9f1c876d4d24d8b74a33ad10f640ea4dbe7d51b6acf65e19ba2"
+    },
+    {
+      "bytes": 2498,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/live_memory_2.json",
+      "sha256": "b8c21fd675eca234048ae3630eab1b24facbc2a2a74ea1764442f76852f2ab8c"
+    },
+    {
+      "bytes": 1911,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/fresh_process_rss_control.json",
+      "sha256": "d52c4fbdbd6dab6160029d2aeda35ae1278395e3a6bb7328d2ddfc4f29bcc6f7"
+    }
+  ],
+  "limitations": [
+    "Repeated fixture report shapes are not valid chronological observations or a full evaluator/collector run.",
+    "deepcopy can share immutable strings and numbers; RSS is not an upper bound for unique live interval reports.",
+    "Small control ru_maxrss includes an inherited 2050032 KiB floor; a fresh-process control demonstrates this and large-run proc observations corroborate growth above it.",
+    "No page-cache/cgroup memory, live observer slowdown, evaluator temporaries or larger process inventories measured.",
+    "Combined storage uses two different retained fixture shapes and excludes native outputs, host logs and other artifacts; not a worst-case bound.",
+    "Shared-host diagnostic elapsed times are not speedup evidence; production allocation policy has not been changed."
+  ],
+  "publication_ready": false,
+  "raw_retention": {
+    "bytes": 4586,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_retention_10000_20260928.json",
+    "sha256": "c57629c5cb2617b9a727f3019eb7b57b6e0a7aa21880b2edab5712669a909703"
+  },
+  "results": [
+    {
+      "constructed_max_rss_kib": 2050032,
+      "construction_s": 2.5388799810316414,
+      "final_max_rss_kib": 2050032,
+      "inputs": [
+        {
+          "bytes": 112045,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/measurement/lineage_report.json",
+          "sha256": "3db3ec095937a6a43ed0a33bbb486e6201e581468a008c91a25321f2e51d037a"
+        },
+        {
+          "bytes": 1407278,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/measurement/root_context_report.json",
+          "sha256": "1c50290e2ad3177991474b7ffcc3fa432c14027c05677e9b7251d623dd160b43"
+        }
+      ],
+      "limitations": [
+        "Linux process high-water RSS, not cgroup memory or page cache.",
+        "Repeated fixture report rows; no chronological observations or valid timing replay.",
+        "Measures retained report construction and serialization, not evaluator temporaries, live sampling or native slowdown.",
+        "Full-day slot count is not a bound on reports with larger process/step inventories."
+      ],
+      "observation_slots": 1000,
+      "outputs": [
+        {
+          "bytes": 5209450,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_1000_20260928/synthetic_lineage.json",
+          "sha256": "3a7db111b65b16467919e0893a4a5774b41feacac7dc705c98a07de74cd6b1dd"
+        },
+        {
+          "bytes": 129105157,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_1000_20260928/synthetic_context.json",
+          "sha256": "66143c1ee82b488e32ebe3be740abd9b14b4d0a20dbe4ca2163fa7f0cf163529"
+        }
+      ],
+      "publication_ready": false,
+      "scientific_timings_admitted": false,
+      "serialization_and_hashing_s": 3.9789976609754376,
+      "source": {
+        "bytes": 3845,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_report_size.py",
+        "sha256": "f55e9a0e54c7033c751679cbf1f15401bbb10760517615b80159979897abae45"
+      },
+      "status": "synthetic_report_storage_measured",
+      "writer_source": {
+        "bytes": 6706,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+        "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+      }
+    },
+    {
+      "constructed_max_rss_kib": 5492736,
+      "construction_s": 202.4052457510261,
+      "final_max_rss_kib": 5494272,
+      "inputs": [
+        {
+          "bytes": 112045,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/measurement/lineage_report.json",
+          "sha256": "3db3ec095937a6a43ed0a33bbb486e6201e581468a008c91a25321f2e51d037a"
+        },
+        {
+          "bytes": 1407278,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/measurement/root_context_report.json",
+          "sha256": "1c50290e2ad3177991474b7ffcc3fa432c14027c05677e9b7251d623dd160b43"
+        }
+      ],
+      "limitations": [
+        "Linux process high-water RSS, not cgroup memory or page cache.",
+        "Repeated fixture report rows; no chronological observations or valid timing replay.",
+        "Measures retained report construction and serialization, not evaluator temporaries, live sampling or native slowdown.",
+        "Full-day slot count is not a bound on reports with larger process/step inventories."
+      ],
+      "observation_slots": 85802,
+      "outputs": [
+        {
+          "bytes": 442684950,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/synthetic_lineage.json",
+          "sha256": "8ed345c3945ca5707b67a3b4aa62a21601d2c6fca07c9a32c84b90ab1eb183a8"
+        },
+        {
+          "bytes": 11078561564,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_report_size_85802_20260928/synthetic_context.json",
+          "sha256": "879ff71db368291d314a37246f6659e954c2876fb56da05368d470f285887f50"
+        }
+      ],
+      "publication_ready": false,
+      "scientific_timings_admitted": false,
+      "serialization_and_hashing_s": 345.88893791497685,
+      "source": {
+        "bytes": 3845,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_report_size.py",
+        "sha256": "f55e9a0e54c7033c751679cbf1f15401bbb10760517615b80159979897abae45"
+      },
+      "status": "synthetic_report_storage_measured",
+      "writer_source": {
+        "bytes": 6706,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+        "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+      }
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "status": "synthetic_full_day_report_size_measured"
+}

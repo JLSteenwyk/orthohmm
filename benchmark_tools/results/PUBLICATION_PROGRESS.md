@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Full-Day Report Storage Probe And Allocation Risk (2026-09-28)
+
+Following the corrected FAS audit, tested retained timing-report structures
+at 1,000 and 85,802 observation slots. These are explicitly synthetic copies
+of fixture 22356 report entries, not a full-day native run or valid replay.
+All four duration-dependent interval lists, point references and all-slot
+flag lists are expanded; mutable rows are independent copies. Nine focused
+tests passed. Both probe processes completed with exit zero.
+
+At 85,802 slots, report construction took 202.41 seconds and serialization
+plus hashing took 345.89 seconds. The lineage and root-context files contain
+442,684,950 and 11,078,561,564 bytes, respectively. Final process high-water
+RSS was 5,494,272 KiB, corroborated by a live /proc observation. The smaller
+control's ru_maxrss includes an inherited 2,050,032 KiB floor: a fresh-process
+control demonstrates this, so it is not reported as the small workload's own
+memory use. See the [receipt](threadripper_report_size_20260928.json).
+
+Combining these report bytes with the earlier constant-fixture raw-snapshot
+scenario yields 727,232,747,130 bytes for 27 runs, excluding native outputs,
+host logs and other artifacts. This combines two retained fixture shapes,
+not a worst-case storage bound. Deep copies can share immutable values; RSS
+is not an upper bound on newly computed reports. Evaluator temporaries, live
+sampling overhead, cgroup memory and production-size inventories remain
+unvalidated. Large synthetic files stay local and are not committed.
+
+The result exposes a production scheduling risk: the 85,800-second native
+timeout leaves only 600 seconds in the current 24-hour scheduler envelope.
+This synthetic reporting phase alone consumed about 548 seconds, before
+accounting for preparation and before/after runtime checks. A prospective,
+validated scheduler-envelope amendment is required before freezing the
+production executor; do not shorten the native timeout or silently alter
+scientific settings to fit. No production allocation policy was changed or
+run launched. Quiet-window coordination and all remaining scientific/release
+requirements remain open; the full goal stays active.
+
 ## Corrected Eight-Method FAS Samples Audited (2026-09-28)
 
 Following the complete regression milestone, returned to scientific uncertainty.
