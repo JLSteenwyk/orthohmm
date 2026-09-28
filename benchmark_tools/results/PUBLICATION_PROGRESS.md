@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Remaining Full-Lookup Fixtures Independently Verified (2026-09-28)
+
+Resumed from the unchanged full publication goal. The previous conversational
+turn only confirmed its existing Threadripper amendment; this continuation
+checked the actual pending jobs instead of restarting them. Jobs 22359 and
+22360 both completed with scheduler exit 0:0, each in 2m26s. The full runtime
+tree and declared Python lookup checks passed before and after both native
+inferences. Independently replayed their raw measurement records and validated
+their outputs against their retained commands and frozen local baseline.
+
+Satellite_v2 covered all 16 fixture genes in three orthogroups and three root
+HOGs, with 36 native pair rows. Full OrthoFinder covered the same 16 genes in
+three checkpoint groups, with 36 native pair rows; its native ID mapping was
+also validated. See the [outcome receipt](threadripper_remaining_lookup_outcomes_20260928.json).
+Together with 22356, all three planned methods now have successful small
+fixtures using the combined before/after runtime checker and independent
+native-outcome audit. No inference was rerun during this audit.
+
+These remain installation checks, not accuracy or scaling evidence. Whole-host
+replay observed maximum foreign interval averages of 73.74 and 72.72 CPU cores,
+respectively. Neither result is admitted as controlled timing. No production
+timing identity was launched, no unrelated workload was stopped, and no DGX
+operation was performed. Production orchestration, long-run measurement
+validation, quiet-window coordination and the remaining scientific/release
+requirements remain open. The full goal remains active and incomplete.
+
 ## Remaining Full-Lookup Native Fixtures Submitted (2026-09-28)
 
 Previous turn independently audited the high-sensitivity fixture and connected

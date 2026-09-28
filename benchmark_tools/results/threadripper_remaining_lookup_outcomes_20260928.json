@@ -1,0 +1,135 @@
+{
+  "limitations": [
+    "Sixteen-gene installation fixtures, not accuracy or scaling benchmarks.",
+    "Substantial competing host CPU work observed; no controlled timings admitted.",
+    "Production orchestration, long-run measurement validation and quiet-window coordination remain open."
+  ],
+  "production_runs_started": 0,
+  "runs": [
+    {
+      "audit_status": "native_success_outputs_verified",
+      "host_process_replay": {
+        "command_bracketed_by_samples": true,
+        "command_launch_started_monotonic_s": 267503.893624241,
+        "command_wait_finished_monotonic_s": 267513.177225953,
+        "controlled_workload_verified": false,
+        "interval_counts": {
+          "competing_cpu_observed": 1
+        },
+        "maximum_between_snapshot_gap_s": 10.053521925990935,
+        "maximum_observed_foreign_average_cores": 73.74381291536501,
+        "observation_errors": 0,
+        "observer_pid": 2002631,
+        "status": "competing_cpu_observed",
+        "successful_snapshots": 2,
+        "threshold_average_cores": 0.25
+      },
+      "independent_audit": {
+        "bytes": 1741617,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_phylo_20260928/independent_outcome_audit.json",
+        "sha256": "9a85056c7605cc4a15e51f2f3ade41a4e181ca250cb780346f016e945bebda30"
+      },
+      "job_id": 22359,
+      "native_outcome": "exited_zero",
+      "native_outputs": {
+        "accuracy_evaluated": false,
+        "evidence_relocation": {},
+        "input_genes": 16,
+        "native_pair_rows": 36,
+        "orthogroups": 3,
+        "resource_measurements_admitted": false,
+        "root_hogs": 3,
+        "status": "native_scaling_outputs_checked"
+      },
+      "result": {
+        "bytes": 138386,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_phylo_20260928/result.json",
+        "sha256": "6a22221031f3b86fe46c9e6053b8e179b5bbbf6bd75ee5789f9d91ea26f81417"
+      },
+      "run": {
+        "bytes": 5958,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_phylo_20260928/command.json",
+        "sha256": "79084253f592698caa4be7abd277158a5ae923b2ddf59b68fa99473358b2e8a1"
+      },
+      "runtime_checks": {
+        "after": "runtime_and_lookup_checked",
+        "before": "runtime_and_lookup_checked"
+      },
+      "started": {
+        "bytes": 1098,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_phylo_20260928/started.json",
+        "sha256": "88609ab69db5dd405b42ee9b62eeb192d65a67a36bddb3d12d56368ab564bc88"
+      },
+      "wrapper_status": "command_exited_zero"
+    },
+    {
+      "audit_status": "native_success_outputs_verified",
+      "host_process_replay": {
+        "command_bracketed_by_samples": true,
+        "command_launch_started_monotonic_s": 267649.215124969,
+        "command_wait_finished_monotonic_s": 267659.461707857,
+        "controlled_workload_verified": false,
+        "interval_counts": {
+          "competing_cpu_observed": 1
+        },
+        "maximum_between_snapshot_gap_s": 11.048943036003038,
+        "maximum_observed_foreign_average_cores": 72.71663290392675,
+        "observation_errors": 0,
+        "observer_pid": 2005134,
+        "status": "competing_cpu_observed",
+        "successful_snapshots": 2,
+        "threshold_average_cores": 0.25
+      },
+      "independent_audit": {
+        "bytes": 1909761,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_of_20260928/independent_outcome_audit.json",
+        "sha256": "5680d6767d237aa4923a8f8f5bc7513260041568e44fba478b0e50dffaa61fd6"
+      },
+      "job_id": 22360,
+      "native_outcome": "exited_zero",
+      "native_outputs": {
+        "accuracy_evaluated": false,
+        "checkpoint_groups": 3,
+        "evidence_relocation": {},
+        "input_genes": 16,
+        "native_pair_rows": 36,
+        "resource_measurements_admitted": false,
+        "status": "native_scaling_outputs_checked"
+      },
+      "result": {
+        "bytes": 148972,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_of_20260928/result.json",
+        "sha256": "64375afde04cd50c995cee495983aadde1919bd539cabcee78b0438352a59f81"
+      },
+      "run": {
+        "bytes": 3320,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_of_20260928/command.json",
+        "sha256": "625026ec86cd1b4ad43488e673d837fc6f97c14a1ca129649a78df84df70aa88"
+      },
+      "runtime_checks": {
+        "after": "runtime_and_lookup_checked",
+        "before": "runtime_and_lookup_checked"
+      },
+      "started": {
+        "bytes": 1093,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_of_20260928/started.json",
+        "sha256": "dbf7e3894f8df4ca39be0b80bf9189cb0c6c87033ccdf2b62327af4c29462a43"
+      },
+      "wrapper_status": "command_exited_zero"
+    }
+  ],
+  "scheduler": {
+    "command": [
+      "sacct",
+      "-j",
+      "22359,22360",
+      "--format=JobID,JobName,State,ExitCode,Elapsed",
+      "-P"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobID|JobName|State|ExitCode|Elapsed\n22359|oh-lookup-phylo|COMPLETED|0:0|00:02:26\n22359.batch|batch|COMPLETED|0:0|00:02:26\n22359.0|python|COMPLETED|0:0|00:00:12\n22360|of-lookup-full|COMPLETED|0:0|00:02:26\n22360.batch|batch|COMPLETED|0:0|00:02:26\n22360.0|python|COMPLETED|0:0|00:00:14\n"
+  },
+  "scientific_timings_admitted": false,
+  "status": "both_remaining_native_fixtures_independently_verified"
+}
