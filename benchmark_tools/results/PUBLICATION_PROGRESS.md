@@ -1,5 +1,31 @@
 # Publication Progress
 
+## YGOB Trade-Off Figure And Main-Text Integration (2026-09-28)
+
+Previous turn made progress with the tested local executor and current host
+competition evidence, pushed as 379f4282. Continued publication reporting
+while production timing remains ineligible. Added a source-pinned plotter,
+PDF/PNG/SVG figure, machine-readable plotted values and a detailed caption
+for the already verified descriptive overlap analysis. All four methods,
+both strata, original allocated false positives and all 24 F1/precision/recall
+values remain visible. No new inference, tuning, subset scoring or confidence
+interval was introduced. See the [figure review](YGOB_OVERLAP_FIGURE_20260928.md).
+
+The plotter independently checks ratios using exact-rational count arithmetic;
+46 plotting/aggregation/scoring tests pass. An initial TSV line-count test
+failed on a correctly quoted multiline label and was corrected to parse TSV
+records. Both PNG and rasterized PDF were inspected, all 24 figure labels
+were verified in PDF text, and word-bound checks passed.
+
+Updated the main scientific text with both directions of the stratum-specific
+trade-off and the large singleton-composition difference, explicitly without
+independent-family or causal claims. New v5 HTML/PDF exports preserve earlier
+versions. All five main-text pages were visually reviewed: no clipping or
+incoherent overlap; 16 citations and 14 local-link occurrences resolve, with
+no Pandoc warnings. Journal formatting, independent-family evidence, remaining
+uncertainty, controlled timing and release requirements remain open. No new
+scheduler job was launched. The full goal remains active and incomplete.
+
 ## Single-Identity Local Executor Added (2026-09-28)
 
 Previous turn made progress with the isolated QfO readback control, pushed

@@ -1,0 +1,31 @@
+stratum	method	label	color	marker	metric	score_percent	defined	fn	fp	tp	reference_groups	reference_genes	truth_pairs	zero_truth_pair_pillars
+screen_positive	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	f1	93.3736472935691	True	51605	23248.5	527390	6952	77287	578995	2017
+screen_positive	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	precision	95.77790147256322	True	51605	23248.5	527390	6952	77287	578995	2017
+screen_positive	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	recall	91.0871423760136	True	51605	23248.5	527390	6952	77287	578995	2017
+screen_positive	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	f1	82.96568856767117	True	24773	202810.0	554222	6952	77287	578995	2017
+screen_positive	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	precision	73.2098511027275	True	24773	202810.0	554222	6952	77287	578995	2017
+screen_positive	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	recall	95.72137928652234	True	24773	202810.0	554222	6952	77287	578995	2017
+screen_positive	orthofinder_full	OrthoFinder full	#D55E00	^	f1	95.00827871012056	True	14652	44649.0	564343	6952	77287	578995	2017
+screen_positive	orthofinder_full	OrthoFinder full	#D55E00	^	precision	92.66837659608008	True	14652	44649.0	564343	6952	77287	578995	2017
+screen_positive	orthofinder_full	OrthoFinder full	#D55E00	^	recall	97.46940819868911	True	14652	44649.0	564343	6952	77287	578995	2017
+screen_positive	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	f1	88.62561172178224	True	7855	138747.5	571140	6952	77287	578995	2017
+screen_positive	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	precision	80.45500167280026	True	7855	138747.5	571140	6952	77287	578995	2017
+screen_positive	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	recall	98.64333888893685	True	7855	138747.5	571140	6952	77287	578995	2017
+screen_negative	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	f1	57.93279795437293	True	7220	8573.5	10875	3298	6104	18095	2893
+screen_negative	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	precision	55.91690875903026	True	7220	8573.5	10875	3298	6104	18095	2893
+screen_negative	orthohmm_satellite_v2	OrthoHMM satellite_v2	#009E73	s	recall	60.09947499309202	True	7220	8573.5	10875	3298	6104	18095	2893
+screen_negative	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	f1	50.83635630794034	True	8005	11511.0	10090	3298	6104	18095	2893
+screen_negative	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	precision	46.71080042590621	True	8005	11511.0	10090	3298	6104	18095	2893
+screen_negative	orthohmm_high_sensitivity	OrthoHMM high sensitivity	#0072B2	o	recall	55.761260016579165	True	8005	11511.0	10090	3298	6104	18095	2893
+screen_negative	orthofinder_full	OrthoFinder full	#D55E00	^	f1	45.01650555859843	True	2890	34253.0	15205	3298	6104	18095	2893
+screen_negative	orthofinder_full	OrthoFinder full	#D55E00	^	precision	30.743256904848558	True	2890	34253.0	15205	3298	6104	18095	2893
+screen_negative	orthofinder_full	OrthoFinder full	#D55E00	^	recall	84.02873722022657	True	2890	34253.0	15205	3298	6104	18095	2893
+screen_negative	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	f1	37.5309064047228	True	2726	48436.5	15369	3298	6104	18095	2893
+screen_negative	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	precision	24.087265204410276	True	2726	48436.5	15369	3298	6104	18095	2893
+screen_negative	orthofinder_sequence_only	"OrthoFinder checkpoint
+(diagnostic)"	#E69F00	v	recall	84.93506493506493	True	2726	48436.5	15369	3298	6104	18095	2893

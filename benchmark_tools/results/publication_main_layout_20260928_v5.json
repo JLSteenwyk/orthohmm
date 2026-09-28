@@ -1,0 +1,141 @@
+{
+  "citations": 16,
+  "documents": [
+    {
+      "pages": [
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "out_of_bounds_words": [],
+          "page": 1,
+          "words": 374
+        },
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "out_of_bounds_words": [],
+          "page": 2,
+          "words": 407
+        },
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "out_of_bounds_words": [],
+          "page": 3,
+          "words": 466
+        },
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "out_of_bounds_words": [],
+          "page": 4,
+          "words": 399
+        },
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            612.0,
+            792.0
+          ],
+          "out_of_bounds_words": [],
+          "page": 5,
+          "words": 219
+        }
+      ],
+      "pdf": {
+        "bytes": 105709,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v5.pdf",
+        "sha256": "ee30b3b6a46fe7fe5ef7877b98927fa73deb26f3b2ea8b85986a6171bb6e7d3a"
+      },
+      "visual_review": "All pages inspected as raster images; no clipping or incoherent overlap observed."
+    },
+    {
+      "pages": [
+        {
+          "bounds": [
+            0.0,
+            0.0,
+            1080.0,
+            604.7999877929688
+          ],
+          "out_of_bounds_words": [],
+          "page": 1,
+          "words": 171
+        }
+      ],
+      "pdf": {
+        "bytes": 32182,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ygob_overlap_20260928/ygob_overlap_strata.pdf",
+        "sha256": "446a33dc00f198859a236c9c55b37493f60a3a3281eddd9cdac8c1a839ba2df3"
+      },
+      "visual_review": "All pages inspected as raster images; no clipping or incoherent overlap observed."
+    }
+  ],
+  "figure_manifest": {
+    "bytes": 1834,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ygob_overlap_20260928/manifest.json",
+    "sha256": "ac20c8c0fbae416b7f861c72c3e7a572f036a27b65edc5fb5b9793d0c903d6fb"
+  },
+  "figure_numeric_labels": {
+    "24.09": 1,
+    "30.74": 1,
+    "37.53": 1,
+    "45.02": 1,
+    "46.71": 1,
+    "50.84": 1,
+    "55.76": 1,
+    "55.92": 1,
+    "57.93": 1,
+    "60.10": 1,
+    "73.21": 1,
+    "80.46": 1,
+    "82.97": 1,
+    "84.03": 1,
+    "84.94": 1,
+    "88.63": 1,
+    "91.09": 1,
+    "92.67": 1,
+    "93.37": 1,
+    "95.01": 1,
+    "95.72": 1,
+    "95.78": 1,
+    "97.47": 1,
+    "98.64": 1
+  },
+  "figure_numeric_labels_checked": 24,
+  "limitations": [
+    "Layout and plotted arithmetic checks do not independently validate raw predictions or scientific claims.",
+    "Kuzmin bibliography entry continues across pages 4-5; final journal formatting remains open.",
+    "Linked progress ledger is mutable; render receipt records its state at render, not an archival snapshot bundle."
+  ],
+  "local_link_occurrences": 14,
+  "publication_ready": false,
+  "render_receipt": {
+    "bytes": 9409,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260928_v5.json",
+    "sha256": "c5349b7bdb85f66b737b6ebf86b749997c9b6cfc8f53d8f58dbd4e403cd63137"
+  },
+  "status": "ygob_overlap_figure_and_main_review_checked",
+  "tests": {
+    "passed": 46,
+    "scope": "plotter, overlap aggregation, YGOB group scoring"
+  },
+  "unique_local_targets": 13
+}

@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement
 
-Condensed scientific draft, 27 September 2026. Not submission-ready. The
+Condensed scientific draft, updated 28 September 2026. Not submission-ready. The
 [extended manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) retains detailed
 methods, historical analyses, citations and audit records. This main text
 does not supersede frozen protocols or historical result manifests.
@@ -128,6 +128,17 @@ and lower recall. The evaluation projects predictions onto the reference
 universe and assumes exchangeable pillars; it does not establish unrestricted
 generalization or resolved pairwise orthology.
 [YGOB results](YGOB_FROZEN_RESULTS_20260916.md).
+
+A descriptive partition by the frozen overlap screen retained all original
+false-positive allocations. In screen-negative pillars, phylogenetic OrthoHMM
+versus full OrthoFinder had F1 of 57.93% versus 45.02%, precision of 55.92%
+versus 30.74%, and recall of 60.10% versus 84.03%. In screen-positive pillars,
+their F1 values were 93.37% versus 95.01%. The negative stratum contained
+2,893 singleton pillars out of 3,298, compared with 2,017 out of 6,952 in the
+positive stratum. This composition difference and the screen's inability to
+exclude remote homology prevent independent-family or causal interpretations.
+The [all-method stratum figure](figures_ygob_overlap_20260928/ygob_overlap_strata.pdf)
+is descriptive, with no new uncertainty estimate or method tuning.
 
 The prespecified whole-genome-duplicate application used experimental evidence
 from Kuzmin and colleagues [@kuzmin2020] and assessed paralog separation
