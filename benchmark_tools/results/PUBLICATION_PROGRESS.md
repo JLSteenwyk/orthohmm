@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Single-Identity Local Executor Added (2026-09-28)
+
+Previous turn made progress with the isolated QfO readback control, pushed
+through f64cdcfc. Returned to the missing production execution path rather
+than repeating negative crash diagnostics. Added a one-run local executor
+joining the frozen plan/lookup, source recipe, reviewed history, preparation,
+runtime checks, collector and 26-hour budget guard. It neither submits nor
+retries work and requires separately justified readiness/environment reviews.
+See the [contract and limitations](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md).
+
+Environmental review occurs only after preparation at the parked-worker
+handoff: a fresh external observation must answer the release request within
+20 seconds. Existing reviews, changed evidence, wrong jobs, stale timestamps
+and incomplete prerequisites fail closed. No real passing authorization was
+generated. The external policy/review worker, full-scale observer validation,
+recipe freeze and integrated native handoff validation remain unfinished.
+
+141 focused tests pass, including a real subprocess/file handshake using
+synthetic review data; shell syntax passes. The native measurement itself is
+mocked in composition tests, not claimed as integrated validation. Fresh
+read-only five-second host evidence shows 104.01 competing core equivalents
+with an empty Slurm queue. No unrelated job/service was changed, and no
+production timing identity was launched. No sessions remain live from this
+work. The full publication goal remains active and incomplete.
+
 ## Isolated Readback Completed Without Reproducing Crash (2026-09-28)
 
 After committing/pushing e4e84af5, submitted one local one-CPU/8-GiB control
