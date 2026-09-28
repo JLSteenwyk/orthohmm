@@ -1,0 +1,366 @@
+{
+  "confidence_intervals_computed": false,
+  "helpers": [
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 5557,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_overlap_screen.py",
+      "sha256": "f5f1fcc129197382f2ea7bef55058d412c8416abe5dd5fba5767822e408cd284"
+    }
+  ],
+  "independent_confirmation": false,
+  "inputs": [
+    {
+      "bytes": 7978,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_frozen_results_20260916.json",
+      "sha256": "3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef"
+    },
+    {
+      "bytes": 164899,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_homology_screen_20260916.json",
+      "sha256": "c142f6ecba369c8192eea131de0827eafabd498399ad25c80b7136b33d34a74f"
+    },
+    {
+      "bytes": 3013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_overlap_admission_20260916.json",
+      "sha256": "d2a8aa5d2901c15e50a162aae8c53c54df261753d5a4c3999e89e641477f7054"
+    },
+    {
+      "bytes": 7945362,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_frozen_evaluation_v1/results.json",
+      "sha256": "5104e000d0c3bb8687103646be8011fbc97f8b05f7eb0a925bbfdd1e76200e83"
+    }
+  ],
+  "limitations": [
+    "Secondary descriptive partition of existing evaluated data, not independent-family confirmation.",
+    "No-hit screen status does not establish absence of remote homology or shared annotation ancestry.",
+    "Original allocated cross-pillar false positives are retained; these are not subset-rescored predictions.",
+    "Undefined ratios follow the frozen zero convention and are explicitly flagged.",
+    "No causal attribution, significance, new method tuning or general superiority claim."
+  ],
+  "overlap_reverified": {
+    "accuracy_evaluated": false,
+    "limitations": [
+      "A qualifying hit is a homology-overlap screen, not proof of orthology or reference-label reuse.",
+      "No qualifying hit does not establish absence of remote homology or independence.",
+      "Only the best qualifying hit is retained; dataset counts are not exhaustive per-dataset overlap counts.",
+      "No method accuracy results or outcome-based family selection are used by this screen.",
+      "The source/resource audit is not a syscall trace or exhaustive annotation-ancestry audit.",
+      "Raw database redistribution permissions remain unresolved.",
+      "This rechecks retained inputs/hits, not a fresh search or historical proof of intermediate database bytes."
+    ],
+    "matching_pillars": 6952,
+    "matching_proteins": 71714,
+    "permitted_interpretation": "Frozen novel-taxon curated-group transfer; NOT family-disjoint validation.",
+    "query_proteins": 83404,
+    "reference_pillars": 10250,
+    "reference_resource_audit": {
+      "bytes": 6172,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/YGOB_REFERENCE_RESOURCE_AUDIT_20260916.md",
+      "sha256": "4c0a39d58c1504f2628bb5476c8b1b78cb13a5dd413e40a37283996b5e4087aa"
+    },
+    "reviewed_sources": [
+      {
+        "bytes": 25077,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile_expansion.py",
+        "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+      },
+      {
+        "bytes": 41369,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+        "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+      },
+      {
+        "bytes": 5438,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/run/config.json",
+        "sha256": "10a10a93262c9676865f03ba05b2b77d48285c312dca435d2458939894a474b3"
+      },
+      {
+        "bytes": 8763,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/run/run_commands.py",
+        "sha256": "10aeb00c3affb31175a337478957807b79b153b9b91597b29e4dccb782d8d387"
+      }
+    ],
+    "scheduler": {
+      "Elapsed": "00:05:23",
+      "ExitCode": "0:0",
+      "JobIDRaw": "20918",
+      "State": "COMPLETED"
+    },
+    "schema_version": 1,
+    "screen": {
+      "bytes": 164899,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_homology_screen_20260916.json",
+      "sha256": "c142f6ecba369c8192eea131de0827eafabd498399ad25c80b7136b33d34a74f"
+    },
+    "status": "overlap_evidence_verified",
+    "verifier": {
+      "bytes": 5557,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_overlap_screen.py",
+      "sha256": "f5f1fcc129197382f2ea7bef55058d412c8416abe5dd5fba5767822e408cd284"
+    }
+  },
+  "protocol": {
+    "bytes": 3933,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/YGOB_OVERLAP_STRATA_PROTOCOL_20260928.md",
+    "sha256": "4a9eebee3f6caadfc5e709b4ec71abc04a5fc52cab54d4777dcbc10b3a38d25b"
+  },
+  "protocol_commit": "e51ffc54",
+  "publication_ready": false,
+  "source": {
+    "bytes": 7986,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_ygob_overlap_strata.py",
+    "sha256": "c3882aedcc34c30f91f6b019e7cff8337aa2ed39a56c9a3b5c429c0615c1a108"
+  },
+  "status": "ygob_overlap_strata_descriptive",
+  "strata": {
+    "screen_negative": {
+      "orthofinder_full": {
+        "counts": {
+          "fn": 2890,
+          "fp": 34253.0,
+          "tp": 15205
+        },
+        "covered_reference_genes": 6104,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "exact_reference_groups": 1237,
+        "metrics": {
+          "f1": 0.45016505558598435,
+          "precision": 0.3074325690484856,
+          "recall": 0.8402873722022658
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 6104,
+        "reference_groups": 3298,
+        "represented_reference_groups": 3298,
+        "truth_pairs": 18095,
+        "zero_truth_pair_pillars": 2893
+      },
+      "orthofinder_sequence_only": {
+        "counts": {
+          "fn": 2726,
+          "fp": 48436.5,
+          "tp": 15369
+        },
+        "covered_reference_genes": 6104,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": -7.485599153875633,
+          "precision": -6.655991700438283,
+          "recall": 0.9063277148383508
+        },
+        "exact_reference_groups": 1222,
+        "metrics": {
+          "f1": 0.375309064047228,
+          "precision": 0.24087265204410277,
+          "recall": 0.8493506493506493
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 6104,
+        "reference_groups": 3298,
+        "represented_reference_groups": 3298,
+        "truth_pairs": 18095,
+        "zero_truth_pair_pillars": 2893
+      },
+      "orthohmm_high_sensitivity": {
+        "counts": {
+          "fn": 8005,
+          "fp": 11511.0,
+          "tp": 10090
+        },
+        "covered_reference_genes": 6104,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": 5.819850749341909,
+          "precision": 15.967543521057648,
+          "recall": -28.267477203647417
+        },
+        "exact_reference_groups": 1457,
+        "metrics": {
+          "f1": 0.5083635630794034,
+          "precision": 0.46710800425906207,
+          "recall": 0.5576126001657916
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 6104,
+        "reference_groups": 3298,
+        "represented_reference_groups": 3298,
+        "truth_pairs": 18095,
+        "zero_truth_pair_pillars": 2893
+      },
+      "orthohmm_satellite_v2": {
+        "counts": {
+          "fn": 7220,
+          "fp": 8573.5,
+          "tp": 10875
+        },
+        "covered_reference_genes": 6104,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": 12.916292395774493,
+          "precision": 25.1736518541817,
+          "recall": -23.92926222713456
+        },
+        "exact_reference_groups": 1447,
+        "metrics": {
+          "f1": 0.5793279795437293,
+          "precision": 0.5591690875903026,
+          "recall": 0.6009947499309202
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 6104,
+        "reference_groups": 3298,
+        "represented_reference_groups": 3298,
+        "truth_pairs": 18095,
+        "zero_truth_pair_pillars": 2893
+      }
+    },
+    "screen_positive": {
+      "orthofinder_full": {
+        "counts": {
+          "fn": 14652,
+          "fp": 44649.0,
+          "tp": 564343
+        },
+        "covered_reference_genes": 77287,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": 0.0,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "exact_reference_groups": 3911,
+        "metrics": {
+          "f1": 0.9500827871012056,
+          "precision": 0.9266837659608008,
+          "recall": 0.9746940819868911
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 77287,
+        "reference_groups": 6952,
+        "represented_reference_groups": 6952,
+        "truth_pairs": 578995,
+        "zero_truth_pair_pillars": 2017
+      },
+      "orthofinder_sequence_only": {
+        "counts": {
+          "fn": 7855,
+          "fp": 138747.5,
+          "tp": 571140
+        },
+        "covered_reference_genes": 77287,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": -6.382666988338325,
+          "precision": -12.213374923279819,
+          "recall": 1.1739306902477487
+        },
+        "exact_reference_groups": 3755,
+        "metrics": {
+          "f1": 0.8862561172178224,
+          "precision": 0.8045500167280026,
+          "recall": 0.9864333888893686
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 77287,
+        "reference_groups": 6952,
+        "represented_reference_groups": 6952,
+        "truth_pairs": 578995,
+        "zero_truth_pair_pillars": 2017
+      },
+      "orthohmm_high_sensitivity": {
+        "counts": {
+          "fn": 24773,
+          "fp": 202810.0,
+          "tp": 554222
+        },
+        "covered_reference_genes": 77287,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": -12.042590142449406,
+          "precision": -19.458525493352585,
+          "recall": -1.748028912166777
+        },
+        "exact_reference_groups": 3199,
+        "metrics": {
+          "f1": 0.8296568856767116,
+          "precision": 0.732098511027275,
+          "recall": 0.9572137928652233
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 77287,
+        "reference_groups": 6952,
+        "represented_reference_groups": 6952,
+        "truth_pairs": 578995,
+        "zero_truth_pair_pillars": 2017
+      },
+      "orthohmm_satellite_v2": {
+        "counts": {
+          "fn": 51605,
+          "fp": 23248.5,
+          "tp": 527390
+        },
+        "covered_reference_genes": 77287,
+        "defined": {
+          "f1": true,
+          "precision": true,
+          "recall": true
+        },
+        "difference_vs_orthofinder_percentage_points": {
+          "f1": -1.6346314165514575,
+          "precision": 3.1095248764831385,
+          "recall": -6.382265822675503
+        },
+        "exact_reference_groups": 3613,
+        "metrics": {
+          "f1": 0.9337364729356911,
+          "precision": 0.9577790147256322,
+          "recall": 0.9108714237601361
+        },
+        "reference_gene_coverage": 1.0,
+        "reference_genes": 77287,
+        "reference_groups": 6952,
+        "represented_reference_groups": 6952,
+        "truth_pairs": 578995,
+        "zero_truth_pair_pillars": 2017
+      }
+    }
+  }
+}

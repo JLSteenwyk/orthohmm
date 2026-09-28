@@ -1,5 +1,31 @@
 # Publication Progress
 
+## YGOB Overlap-Stratified Error Analysis (2026-09-28)
+
+Previous turn completed reporting-fixture audits and refreshed the cited main
+export, committed/pushed as 4bb5b0eb. Returned to scientific interpretation:
+the historical no-hit screen cannot certify independent families. Committed
+and pushed e51ffc54 to freeze a descriptive two-stratum analysis before
+computing new subgroup scores, retaining all four frozen methods and original
+cross-pillar false-positive allocations. No new confirmation claim or method
+tuning was authorized. See the [result](YGOB_OVERLAP_STRATA_RESULT_20260928.md).
+
+The original overlap admission reproduced after fresh file/hit/source checks;
+all full sufficient statistics and partitioned totals match the admitted
+scores. 33 focused tests pass and all 24 subgroup metrics match independent
+exact-rational arithmetic. In the screen-negative stratum, phylogenetic
+OrthoHMM F1 is 57.932798% versus 45.016506% for full OrthoFinder, but recall is
+60.099475% versus 84.028737%. In screen-positive pillars, their F1 values are
+93.373647% and 95.008279%. Negative results and both trade-offs are retained.
+
+Screen-negative pillars are predominantly singleton (2,893/3,298); the screen
+positive set has 2,017/6,952 singletons. This compositional difference and
+retained cross-stratum penalties prevent causal or remote-ortholog recovery
+claims. No CI was manufactured, no original prediction was filtered or rerun,
+and no historical primary result changed. Independent-family evidence,
+remaining uncertainty, production timing and release work remain unfinished.
+No new scheduler job was launched; the goal remains active.
+
 ## Reporting Native Fixtures Verified And Main Export Refreshed (2026-09-28)
 
 Continued from the exact live handles submitted in f07eeb44. Jobs 22367,

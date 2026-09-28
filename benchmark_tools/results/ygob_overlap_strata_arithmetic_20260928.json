@@ -1,0 +1,217 @@
+{
+  "checks": [
+    {
+      "defined": true,
+      "denominator": 98229,
+      "method": "orthohmm_satellite_v2",
+      "metric": "f1",
+      "numerator": 91720,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 1101277,
+      "method": "orthohmm_satellite_v2",
+      "metric": "precision",
+      "numerator": 1054780,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 115799,
+      "method": "orthohmm_satellite_v2",
+      "metric": "recall",
+      "numerator": 105478,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 1336027,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "f1",
+      "numerator": 1108444,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 378516,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "precision",
+      "numerator": 277111,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 578995,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "recall",
+      "numerator": 554222,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 1187987,
+      "method": "orthofinder_full",
+      "metric": "f1",
+      "numerator": 1128686,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 608992,
+      "method": "orthofinder_full",
+      "metric": "precision",
+      "numerator": 564343,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 578995,
+      "method": "orthofinder_full",
+      "metric": "recall",
+      "numerator": 564343,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 171851,
+      "method": "orthofinder_sequence_only",
+      "metric": "f1",
+      "numerator": 152304,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 14945,
+      "method": "orthofinder_sequence_only",
+      "metric": "precision",
+      "numerator": 12024,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 115799,
+      "method": "orthofinder_sequence_only",
+      "metric": "recall",
+      "numerator": 114228,
+      "stratum": "screen_positive"
+    },
+    {
+      "defined": true,
+      "denominator": 25029,
+      "method": "orthohmm_satellite_v2",
+      "metric": "f1",
+      "numerator": 14500,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 38897,
+      "method": "orthohmm_satellite_v2",
+      "metric": "precision",
+      "numerator": 21750,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 3619,
+      "method": "orthohmm_satellite_v2",
+      "metric": "recall",
+      "numerator": 2175,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 9924,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "f1",
+      "numerator": 5045,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 21601,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "precision",
+      "numerator": 10090,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 3619,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "recall",
+      "numerator": 2018,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 67553,
+      "method": "orthofinder_full",
+      "metric": "f1",
+      "numerator": 30410,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 49458,
+      "method": "orthofinder_full",
+      "metric": "precision",
+      "numerator": 15205,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 3619,
+      "method": "orthofinder_full",
+      "metric": "recall",
+      "numerator": 3041,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 163801,
+      "method": "orthofinder_sequence_only",
+      "metric": "f1",
+      "numerator": 61476,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 42537,
+      "method": "orthofinder_sequence_only",
+      "metric": "precision",
+      "numerator": 10246,
+      "stratum": "screen_negative"
+    },
+    {
+      "defined": true,
+      "denominator": 385,
+      "method": "orthofinder_sequence_only",
+      "metric": "recall",
+      "numerator": 327,
+      "stratum": "screen_negative"
+    }
+  ],
+  "input": {
+    "bytes": 13042,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ygob_overlap_strata_20260928.json",
+    "sha256": "464d5d72a6d16c27b68d2a1204ee81bb118e99430b9b8a4d75c5c24942895b8c"
+  },
+  "limitations": [
+    "Independent arithmetic from reported sufficient counts, not an independent reconstruction of native predictions.",
+    "This verifies fractions and table formatting, not statistical independence or causal interpretation."
+  ],
+  "publication_ready": false,
+  "source_of_labels": {
+    "bytes": 5399,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_ygob_validation.py",
+    "sha256": "cba8ca3a7d8b46fe704945e6af844c015e33749cdaa77823ba0c84469b73a2a5"
+  },
+  "status": "all_24_metrics_match_exact_rational_counts",
+  "table": {
+    "bytes": 1749,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/YGOB_OVERLAP_STRATA_TABLE_20260928.md",
+    "sha256": "1b9c47cd7b6391c7fe505932cbe9ca1fbd2cd37dd7cf761aa3df20d4c86799c5"
+  }
+}
