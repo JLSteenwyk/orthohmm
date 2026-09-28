@@ -1,5 +1,10 @@
 # TreeFam-7 A+B Archive Inspection
 
+Follow-up: the [shared-tree structural comparison](TREEFAM_SHARED_TREE_CONTENT_20260928.md)
+finds that all measured fields except internal node labels agree across the
+1,211 shared records. The unresolved difference described in this original
+inventory is therefore narrowed; original QfO input suitability remains open.
+
 Downloaded the [TF7AB SQL archive](https://selectome.org/ftp/MySQL/selectome_04-TF7AB__mysql5.0.sql.zip)
 listed by the [Selectome public archive](https://selectome.org/ftp/MySQL/).
 Its 59,845,652 bytes match the published SHA256

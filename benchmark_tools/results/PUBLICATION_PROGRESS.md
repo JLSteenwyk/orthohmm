@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Resolve Shared Selectome Tree Differences (2026-09-28)
+
+Previous turn pushed the TF7AB inventory as `9e1391c8`, recovering historical
+identifiers and additional subtrees. Compared all 1,211 shared subtree keys:
+case-sensitive leaves, rooted topology, exact branch lengths and all parsed
+annotations agree. The 1,126 non-identical strings differ in internal node
+labels under the measured signatures. All 18 focused tests pass; a second
+complete comparison reproduces the JSON. See the
+[content comparison](TREEFAM_SHARED_TREE_CONTENT_20260928.md).
+
+This removes one archive-consistency uncertainty, not the original mapping or
+full-tree-coverage gap. No QfO family assignments, reference replacement, score
+changes or new uncertainty estimates follow. No timing launch, unrelated-job
+action or DGX access occurred. The complete publication goal remains active.
+
 ## Inspect Larger TreeFam-7 A+B Archive (2026-09-28)
 
 Previous turn pushed TF7A recovery as `e16c6208`. Downloaded the larger public
