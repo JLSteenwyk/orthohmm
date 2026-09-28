@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Threadripper Collector and Replay Tested (2026-09-28)
+
+Previous turn added affinity evidence. Integrated it into a separate local
+collector/replay without changing historical DGX code. Preserved failed
+sleep diagnostic 22341: startup host inventory caused an irregular first
+interval. Moved that inventory before the cadence, without relaxing checks.
+Diagnostic 22342 completed 0:0; replay reproduced all 37 points and retained
+three bracketing host samples. 126 focused new and historical tests passed.
+The [diagnostic record](THREADRIPPER_COLLECTOR_DIAGNOSTICS_20260928.md) pins
+both attempts, their raw evidence and source identities.
+
+The monitor observed up to 70.7704 competing CPU-core equivalents. Therefore
+no controlled inference timing is admitted; the 27 runs remain unrun. No
+DGX access or unrelated job changes occurred. Next are multithreaded and
+deliberate-affinity-widening controls, native runtime/enumeration, overhead
+and executor validation, and quiet-window coordination. The full publication
+goal remains active and incomplete.
+
 ## Thread-Level Affinity Observation (2026-09-28)
 
 Re-read the amended goal; the preceding prompt-confirmation turn added no
