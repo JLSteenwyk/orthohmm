@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Reporting-Stage Memory And Duration Added (2026-09-28)
+
+Previous turn made concrete release-source progress and pushed a7479d92.
+Returned to timing integration and fixed the missing post-report job-memory
+observation. The v4 collector separately records report construction/write
+duration and cumulative job memory through the later read, including failure
+receipts. Replay validates this evidence without changing native time or
+historical v1/v2/v3 measurements. See the
+[reporting-stage review](THREADRIPPER_REPORT_FINALIZATION_20260928.md).
+
+73 focused tests pass. Retained documentation of two initial combined-test
+failures and a diagnostic reproduction: Python's global intern-table resize
+was charged to the disk-observation memory test. The test now measures the
+same workload/bounds in a fresh isolated interpreter. Slurm diagnostic 22366
+completed 0:0; independent raw replay and terminal allocation checks passed.
+Reporting took 0.077414250 seconds after a one-second sleep; both job-peak
+reads were 38,035,456 bytes. Observed foreign CPU remained 72.54 cores, so
+this is not controlled timing evidence. No production run or retry occurred.
+
+The old runtime binding intentionally no longer accepts the changed collector;
+rebinding and checked native fixtures are required next, along with production
+orchestration and whole-job/final validation accounting. The diagnostic is
+terminal; unrelated jobs and the DGX were untouched. Scientific and publication
+requirements remain incomplete; the goal remains active.
+
 ## Exact Graph Dependency Source Candidates Acquired (2026-09-28)
 
 The preceding user-facing turn confirmed the Threadripper goal wording but

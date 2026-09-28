@@ -97,5 +97,9 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
         if denied == "stale":
             assert (directory / "release_freshness_failed.json").exists()
     else:
-        invoke()
+        result = invoke()
+        assert result["schema"] == "threadripper_scaling_v4"
+        receipt = json.loads((directory / "report_finalization.json").read_text())
+        assert receipt["status"] == "reporting_completed"
+        assert receipt["job_id"] == 42
         assert events == ["guard", "native", "cleanup"]

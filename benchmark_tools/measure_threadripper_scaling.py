@@ -25,6 +25,7 @@ from benchmark_tools.slurm_resource_snapshot import scoped_path
 from benchmark_tools.observe_thread_affinity import observe
 from benchmark_tools.probe_threadripper_allocation import inspect, validate as validate_allocation
 from benchmark_tools.disk_observation_sequence import DiskObservations
+from benchmark_tools.report_finalization import observe as observe_reporting
 
 TIMEOUT = 85800
 
@@ -152,28 +153,29 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             save(directory / "release.json", {"release": True})
             if process.wait(timeout=45) != 0:
                 raise RuntimeError("Native step wrapper failed")
-            measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
-                schema="threadripper_scaling_v3",
-                native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
-                job_id=job_id, launched=launched, placement=ready["placement"], point_records=points.records(), step_memory=memory,
-                host_process_observation=host_summary,
-                job_memory=dict(before=job_memory_before, after=job_memory_after),
-                screening=evaluate_lineage(points, done, job_id), scientific_timings_admitted=False,
-                controlled_workload_verified=False, publication_ready=False,
-                limitations=["Threadripper collector, not controlled comparative timing admission.",
-                    "Thread affinity is periodically observed, not a hard CPU quota or continuous guarantee.",
-                    "Job peak is since cgroup creation through the post-native read, including preparation and observer; not process RSS.",
-                    "Native-step and job peaks overlap and must not be added or baseline-subtracted.",
-                    "All CPU flags and non-atomic read windows retained; no overhead subtraction.",
-                    "Periodic process CPU observations miss short-lived work and do not establish quiet GPU/device-I/O activity.",
-                    "Decoded raw history is disk-backed; final interval reports still scale with observation count after inference.",
-                    "Raw observation writes and collection still consume resources; long-run overhead remains unvalidated."])
-            save(directory / "lineage_report.json", measured)
-            context = dict(status="native_root_context_measured", job_id=job_id,
-                native_wall_s=measured["native_wall_s"], context=evaluate(points, job_id),
-                lineage_report=lineage_identity(directory), scientific_timings_admitted=False,
-                environmental_validity_established=False)
-            save(directory / "root_context_report.json", context)
+            with observe_reporting(directory, job_id, job_scope, read_job_memory):
+                measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
+                    schema="threadripper_scaling_v4",
+                    native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
+                    job_id=job_id, launched=launched, placement=ready["placement"], point_records=points.records(), step_memory=memory,
+                    host_process_observation=host_summary,
+                    job_memory=dict(before=job_memory_before, after=job_memory_after),
+                    screening=evaluate_lineage(points, done, job_id), scientific_timings_admitted=False,
+                    controlled_workload_verified=False, publication_ready=False,
+                    limitations=["Threadripper collector, not controlled comparative timing admission.",
+                        "Thread affinity is periodically observed, not a hard CPU quota or continuous guarantee.",
+                        "Embedded job peak ends at the post-native read; the separate finalization receipt extends through reporting.",
+                        "Native-step and job peaks overlap and must not be added or baseline-subtracted.",
+                        "All CPU flags and non-atomic read windows retained; no overhead subtraction.",
+                        "Periodic process CPU observations miss short-lived work and do not establish quiet GPU/device-I/O activity.",
+                        "Decoded raw history is disk-backed; final interval reports still scale with observation count after inference.",
+                        "Raw observation writes and collection still consume resources; long-run overhead remains unvalidated."])
+                save(directory / "lineage_report.json", measured)
+                context = dict(status="native_root_context_measured", job_id=job_id,
+                    native_wall_s=measured["native_wall_s"], context=evaluate(points, job_id),
+                    lineage_report=lineage_identity(directory), scientific_timings_admitted=False,
+                    environmental_validity_established=False)
+                save(directory / "root_context_report.json", context)
             return measured
         finally:
             # A failed initial observation must not release an unobserved native command.

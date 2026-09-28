@@ -21,8 +21,11 @@ the retained order; filename-set equality alone does not establish this.
 ## Allocation And Placement
 
 Use node `bizon`, partition `gpu` with no GPU request, one sequential exclusive
-node allocation per run, 32 native worker CPUs and 128 GiB memory, a 24-hour
-Slurm limit and 23h50m native timeout. Disable automatic requeue and retries.
+node allocation per run, 32 native worker CPUs and 128 GiB memory, a 26-hour
+Slurm limit and 23h50m native timeout. The prospective
+[scheduler-envelope amendment](threadripper_scheduler_envelope_20260928.json)
+supersedes the original 24-hour limit without changing native timeout.
+Disable automatic requeue and retries.
 Do not modify global Slurm settings. Verify actual job allocation and enforced
 cgroup limits before any inference, not merely requested submission flags.
 
@@ -148,6 +151,11 @@ No replacement of an unfavorable observation is authorized by this amendment.
 Report incomplete repeats as incomplete, never as complete three-run summaries.
 
 ## Current State And Next Execution Gates
+
+Latest accounting update: the [v4 reporting-stage collector](THREADRIPPER_REPORT_FINALIZATION_20260928.md)
+passed a short live diagnostic and independent replay. Its source changes
+require a fresh reviewed runtime binding and checked native fixtures; older
+binding/fixture records below remain historical, not authorization for v4.
 
 The [v2 local runtime binding](threadripper_runtime_binding_v2_20260928.json) pins
 six independently verified tree inventories with 176,704 entries. They cover

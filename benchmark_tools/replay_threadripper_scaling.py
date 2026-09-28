@@ -14,10 +14,11 @@ from benchmark_tools.verify_lineage_native_provenance import same
 from benchmark_tools.replay_host_process_observation import replay as replay_host
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 from benchmark_tools.disk_observation_sequence import DiskObservations
+from benchmark_tools.report_finalization import validate as validate_finalization
 
 
 def observations(directory, measured, point_files):
-    if measured.get("schema") == "threadripper_scaling_v3":
+    if measured.get("schema") in {"threadripper_scaling_v3", "threadripper_scaling_v4"}:
         points = DiskObservations(directory, len(point_files))
         if ([points.path(i) for i in range(len(points))] != point_files
                 or "points" in measured
@@ -205,8 +206,8 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
     job_memory = None
     job_paths = [directory / f"job_memory_{name}.json" for name in ("before", "after")]
     if require_job_memory or "job_memory" in measured or any(p.exists() or p.is_symlink() for p in job_paths):
-        if measured.get("schema") not in {"threadripper_scaling_v2", "threadripper_scaling_v3"} or any(p.is_symlink() or not p.is_file() for p in job_paths):
-            raise ValueError("Require v2/v3 collector and complete job memory evidence")
+        if measured.get("schema") not in {"threadripper_scaling_v2", "threadripper_scaling_v3", "threadripper_scaling_v4"} or any(p.is_symlink() or not p.is_file() for p in job_paths):
+            raise ValueError("Require v2/v3/v4 collector and complete job memory evidence")
         evidence.extend(record(p) for p in job_paths)
         before, after = [json.loads(p.read_text()) for p in job_paths]
         if not same(measured.get("job_memory"), dict(before=before, after=after)):
@@ -214,6 +215,19 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
         scope = scoped_path(points[0]["native_membership"], job_id)
         job_scope = next(p for p in scope.parents if p.name == f"job_{job_id}")
         job_memory = validate_job_memory(before, after, job_scope, done, memory)
+    finalization = None
+    if measured.get("schema") == "threadripper_scaling_v4":
+        path = directory / "report_finalization.json"
+        if path.is_symlink() or not path.is_file() or job_memory is None:
+            raise ValueError("Missing direct reporting-stage evidence")
+        evidence.append(record(path))
+        finalization = json.loads(path.read_text())
+        final_memory = validate_finalization(finalization, job_id, after)
+        validate_job_memory(before, final_memory, job_scope, done, memory)
+        old, new = (counters(row["raw"]["memory.events"]) for row in (after, final_memory))
+        if (int(final_memory["raw"]["memory.peak"]) < int(after["raw"]["memory.peak"])
+                or old.keys() != new.keys() or any(new[k] < v for k, v in old.items())):
+            raise ValueError("Reporting-stage memory peak or events decreased")
     reproduced = dict(status="native_root_context_measured", job_id=job_id, native_wall_s=wall,
         context=evaluate(points, job_id), lineage_report=lineage_identity(directory),
         scientific_timings_admitted=False, environmental_validity_established=False)
@@ -227,6 +241,7 @@ def replay(directory, job_id, expected_command, *, require_job_memory=True):
         native_exit_code=done["exit_code"], native_wall_s=wall, measured=measured, memory=memory,
         host_process_replay=host_replay, affinity_observation_statuses=affinity,
         job_memory=job_memory, job_memory_required=require_job_memory,
+        report_finalization=finalization,
         memory_events=events, screening=screening, context=reproduced["context"],
         original_flagged_intervals=screening["original_screening"]["original_threshold_screen"]["flagged_intervals"],
         narrow_flagged_intervals=screening["narrow_flagged_intervals"], evidence=evidence,

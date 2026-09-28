@@ -1,5 +1,7 @@
 import json
-import tracemalloc
+from pathlib import Path
+import subprocess
+import sys
 
 import pytest
 
@@ -25,12 +27,13 @@ def test_lazy_sequence_preserves_order_and_slices(tmp_path):
     assert list(points) == values
 
 
-def test_v3_records_bind_content_and_order(tmp_path):
+@pytest.mark.parametrize("schema", ["threadripper_scaling_v3", "threadripper_scaling_v4"])
+def test_v3_records_bind_content_and_order(tmp_path, schema):
     points = DiskObservations(tmp_path)
     points.append(dict(value=1))
     points.append(dict(value=2))
     paths = [points.path(i) for i in range(2)]
-    report = dict(schema="threadripper_scaling_v3", point_records=points.records())
+    report = dict(schema=schema, point_records=points.records())
     assert list(observations(tmp_path, report, paths)) == list(points)
     with pytest.raises(ValueError):
         observations(tmp_path, report, paths[::-1])
@@ -50,18 +53,28 @@ def test_legacy_embedded_points_still_verified(tmp_path):
 
 
 def test_live_history_does_not_retain_payloads(tmp_path):
-    points = DiskObservations(tmp_path)
-    tracemalloc.start()
-    try:
-        for i in range(200):
-            points.append(dict(index=i, payload="x" * 100_000))
-        current, peak = tracemalloc.get_traced_memory()
-    finally:
-        tracemalloc.stop()
-    assert len(points) == 200
-    assert current < 1_000_000
-    assert peak < 2_000_000
-    assert points[-1]["index"] == 199
+    # Keep unrelated pytest allocations and global intern-table resizing out of the budget.
+    script = """
+import json, sys, tracemalloc
+from pathlib import Path
+sys.path.insert(0, sys.argv[1])
+from benchmark_tools.disk_observation_sequence import DiskObservations
+points = DiskObservations(Path(sys.argv[2]))
+tracemalloc.start()
+for i in range(200):
+    points.append(dict(index=i, payload="x" * 100_000))
+current, peak = tracemalloc.get_traced_memory()
+tracemalloc.stop()
+print(json.dumps(dict(current=current, peak=peak, count=len(points), last=points[-1]["index"])))
+"""
+    result = subprocess.run([sys.executable, "-I", "-B", "-c", script,
+                             str(Path(__file__).resolve().parents[2]), str(tmp_path)],
+                            capture_output=True, text=True, check=True, timeout=30)
+    values = json.loads(result.stdout)
+    assert values["count"] == 200
+    assert values["current"] < 1_000_000
+    assert values["peak"] < 2_000_000
+    assert values["last"] == 199
 
 
 def test_reject_symlink(tmp_path):
