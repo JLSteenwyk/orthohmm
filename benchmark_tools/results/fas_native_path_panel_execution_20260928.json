@@ -1,0 +1,44 @@
+{
+  "controlled_timing": false,
+  "environment": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "image": {
+    "bytes": 76308480,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img",
+    "sha256": "62b8f97bca23b67d451384f94108a5510d5fafc1bc398f95ab93532d324563fe"
+  },
+  "limitations": [
+    "Image pin checked during and after the diagnostic, not a whole-run executable-drift audit.",
+    "Native path calculation plus independent record-coverage review, not independent algorithm validation or historical omission attribution."
+  ],
+  "native_command": [
+    "singularity",
+    "exec",
+    "--cleanenv",
+    "qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img",
+    "python",
+    "benchmark_tools/run_native_fas_path_panel.py",
+    "--environment",
+    "benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "--directory",
+    "benchmarks/work/fas_native_path_panel_20260928",
+    "--output",
+    "benchmark_tools/results/fas_native_path_panel_20260928.json"
+  ],
+  "native_exit_code": 0,
+  "panel": {
+    "bytes": 125864,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_native_path_panel_20260928.json",
+    "sha256": "28ca7eeeedadf181953ad7655da4f8e2a338ccea8ceead36b5798580a86c8f97"
+  },
+  "review": {
+    "bytes": 1051,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_native_path_panel_review_20260928.json",
+    "sha256": "96ac9eeefab75393ab88e4eef339fbd745c1b84b88429565c51edfe27aea2ccb"
+  },
+  "review_exit_code": 0,
+  "status": "completed_panel_container_pin_rechecked"
+}

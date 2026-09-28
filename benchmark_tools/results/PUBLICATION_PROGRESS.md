@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Count Native FAS Paths Across All Retained Annotations (2026-09-28)
+
+Previous turn made progress by pushing the native omission probe as `f287a0ac`.
+Reread the objective, then completed a two-worker diagnostic on all 78 pinned
+FAS annotation files using the native argument parser, option builder and
+graph routines. Of 984,137 unique protein identifiers, 1,143 exceed the
+`10**15` path limit, across 34 annotation files. A separate completeness
+review checks all identifiers, counts, flags and summaries and finds no
+cross-file duplicate identifiers. See the
+[complete path panel](FAS_NATIVE_ANNOTATION_PATH_PANEL_20260928.md).
+
+Both native execution and review terminated successfully. All 35 focused
+tests pass. The initial yeast pilot's 6,049 records and zero exclusions also
+recur in the full panel. The retained container matches its frozen image pin;
+all native per-protein outputs remain local, with hashes in the committed
+summary. No raw annotations were added to Git.
+
+These are protein-level complexity flags, not 1,143 missing sampled pairs or
+attribution of OrthoMCL's 1,252 omissions. Linking predictions, precomputed
+membership and historical sampling remains separate work. This diagnostic is
+not controlled timing; no score, default or reference changed. No DGX access
+or unrelated-job action occurred. The publication goal remains active, with
+controlled timing, remaining uncertainty and release work still incomplete.
+
 ## Verify A Native FAS Omission Mechanism (2026-09-28)
 
 Previous turn made progress by pushing the attrition audit as `31546d83`.

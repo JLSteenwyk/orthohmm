@@ -1,0 +1,26 @@
+{
+  "historical_omissions_attributed": false,
+  "identifiers_in_multiple_annotation_files": 0,
+  "limitations": [
+    "Verifies complete identifier coverage and summary arithmetic, not an independent graph algorithm.",
+    "Counts are not historical sampled-pair omissions or evidence of comparison bias."
+  ],
+  "panel": {
+    "bytes": 125864,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_native_path_panel_20260928.json",
+    "sha256": "28ca7eeeedadf181953ad7655da4f8e2a338ccea8ceead36b5798580a86c8f97"
+  },
+  "source": {
+    "bytes": 4140,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_fas_path_panel.py",
+    "sha256": "ca3e1905323271fb160813830c95e196b4ed1857a0f4500bd745c967427c3a55"
+  },
+  "status": "native_path_panel_record_completeness_verified",
+  "summary": {
+    "annotation_files": 78,
+    "protein_records": 984137,
+    "rejected_records": 1143
+  },
+  "unique_protein_identifiers": 984137,
+  "unique_rejected_identifiers": 1143
+}
