@@ -1,0 +1,44 @@
+{
+  "admissions": [
+    {
+      "bytes": 12545,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_high_admission_20260917.json",
+      "sha256": "10b5d3feb7cd5d208856dc59f0fa71c614afb7d4e75025218ccca912fd2ad1b4"
+    },
+    {
+      "bytes": 15751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_satellite_admission_20260917.json",
+      "sha256": "7c95f62911ffc906a54e5d9f2857883ed05920deec2d9508b459e15be70db258"
+    },
+    {
+      "bytes": 23106,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_orthofinder_admission_v2_20260917.json",
+      "sha256": "b2b7769e41310f17a9d21d3cedf593a47fa517ee39195ec4ff00f4d27722df5f"
+    },
+    {
+      "bytes": 34214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_sonic_admission_20260917.json",
+      "sha256": "a1bf34304dd816024dabe009f14093f4bbc9aa733869bc5bc9652a2888e55432"
+    }
+  ],
+  "auditor": {
+    "bytes": 10875,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_wgd_results.py",
+    "sha256": "3b8a28bb9b300f12b7882ea21fe568201ba6bffcd8853ecbd6f14054aec75a6d"
+  },
+  "contrasts": 12,
+  "limitations": [
+    "Native format readers and identity checks are shared with the report pipeline.",
+    "Separate arithmetic and direct resampling do not validate biological reference truth.",
+    "Direct resampling check is restricted to this frozen one-pair-per-pillar population."
+  ],
+  "methods": 5,
+  "pairs_per_method": 240,
+  "prespecified_examples": 6,
+  "report": {
+    "bytes": 2252621,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_results_20260917.json",
+    "sha256": "17bd35ddb863b08d586044a70878dd55a61506d2cd1e3e5bee8119f27525078f"
+  },
+  "status": "native_membership_and_interval_audit_passed"
+}

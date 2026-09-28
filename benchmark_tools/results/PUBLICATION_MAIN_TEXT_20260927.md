@@ -141,14 +141,32 @@ The [all-method stratum figure](figures_ygob_overlap_20260928/ygob_overlap_strat
 is descriptive, with no new uncertainty estimate or method tuning.
 
 The prespecified whole-genome-duplicate application used experimental evidence
-from Kuzmin and colleagues [@kuzmin2020] and assessed paralog separation
-together with retention of reference homologs. Phylogenetic OrthoHMM's greater
-separation than high sensitivity did not remove its homolog-recovery losses.
-Full OrthoFinder remained an important negative comparison. Raw separation
-alone is insufficient because splitting off anchors can increase separation
-without useful ortholog recovery. The complete application, controls and
-subsequent traces remain in the extended manuscript rather than selecting
-only favorable examples.
+from Kuzmin and colleagues [@kuzmin2020]. All 240 experimental pairs were
+retained, with 239 input-eligible and 231 shared-reference-pillar pairs.
+On this development-exposed application, phylogenetic OrthoHMM separated
+238 of 239 input-eligible pairs, versus 58 for high sensitivity and 236 for
+full OrthoFinder. Among the 231 reference-eligible pairs, however, only 193
+OrthoHMM separations retained at least one non-S. cerevisiae reference homolog
+with each anchor, versus 56 for high sensitivity and 227 for full OrthoFinder.
+Mean per-pair homolog coverage was 82.338%, 99.149% and 98.413%, respectively.
+Coverage counts reference homologs in the union of the anchor groups and can
+be high even when the anchors are merged; it is not orthology recall.
+The [complete five-method comparison](BIOLOGICAL_WGD_RESULTS_20260917.md)
+also retains SonicParanoid and the diagnostic OrthoFinder MCL checkpoint.
+
+Phylogenetic OrthoHMM minus full OrthoFinder had a supported-separation
+difference of -14.719 percentage points, with adjusted interval
+[-21.645, -8.225], and a coverage difference of -16.075 points
+[-19.755, -12.496]. These exploratory percentile intervals use 20,000 paired
+pillar resamples and a 12-endpoint adjustment. Each eligible pair occupies
+a distinct pillar; these conditional estimates do not establish independent
+generalization. Supported separation does not establish
+cross-species copy-specific orthology. In the
+[six prespecified case traces](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), five
+focal homologs left their anchor groups during root-lineage reconstruction,
+before satellite constraints. They remained in other output groups. This
+localizes these losses without identifying whether tree topology or the
+lineage rule was responsible; no example was replaced to improve the result.
 
 ## Discussion And Limitations
 

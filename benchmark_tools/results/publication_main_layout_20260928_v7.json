@@ -1,0 +1,168 @@
+{
+  "case_trace_byte_identical": true,
+  "case_trace_recheck": {
+    "bytes": 111899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_case_trace_recheck_20260928.json",
+    "sha256": "5b346d99d1ac063fdf169ecf76fde69390d876073e9c27d43968469936ac07cc"
+  },
+  "citations": 16,
+  "counts_recomputed": {
+    "orthofinder_full": {
+      "coverage_fraction": "62/63",
+      "coverage_percent": 98.41269841269842,
+      "separated": 236,
+      "supported": 227
+    },
+    "orthofinder_mcl_checkpoint": {
+      "coverage_fraction": "382/385",
+      "coverage_percent": 99.22077922077922,
+      "separated": 190,
+      "supported": 184
+    },
+    "orthohmm_high_sensitivity": {
+      "coverage_fraction": "6871/6930",
+      "coverage_percent": 99.14862914862915,
+      "separated": 58,
+      "supported": 56
+    },
+    "orthohmm_satellite_v2": {
+      "coverage_fraction": "317/385",
+      "coverage_percent": 82.33766233766234,
+      "separated": 238,
+      "supported": 193
+    },
+    "sonicparanoid": {
+      "coverage_fraction": "1369/1386",
+      "coverage_percent": 98.77344877344878,
+      "separated": 229,
+      "supported": 223
+    }
+  },
+  "limitations": [
+    "Earlier exports remain historical.",
+    "Reproduction is not independent biological truth or generalization.",
+    "Progress ledger is recorded as of rendering; this is not an archival bundle.",
+    "Journal formatting remains open; v6 was an intermediate export before clarification of distinct-pillar resampling."
+  ],
+  "local_link_occurrences": 16,
+  "manuscript": {
+    "bytes": 12824,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+    "sha256": "7411c9c6f385b755f3018878f7e7ccadedb50d93efeafa5ba0e2be1db59216d3"
+  },
+  "native_recheck": {
+    "bytes": 2029,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_main_text_recheck_20260928.json",
+    "sha256": "1b8159c30f8ef0073223900164bdc847d089bcf578dd649dacf652336701175e"
+  },
+  "numeric_labels_checked": [
+    "238",
+    "239",
+    "58",
+    "236",
+    "231",
+    "193",
+    "56",
+    "227",
+    "82.338%",
+    "99.149%",
+    "98.413%",
+    "-14.719",
+    "-21.645",
+    "-8.225",
+    "-16.075",
+    "-19.755",
+    "-12.496"
+  ],
+  "original_case_trace": {
+    "bytes": 111899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_case_trace_20260917.json",
+    "sha256": "5b346d99d1ac063fdf169ecf76fde69390d876073e9c27d43968469936ac07cc"
+  },
+  "pages": [
+    {
+      "bounds": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "out_of_bounds_words": [],
+      "page": 1,
+      "words": 374
+    },
+    {
+      "bounds": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "out_of_bounds_words": [],
+      "page": 2,
+      "words": 407
+    },
+    {
+      "bounds": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "out_of_bounds_words": [],
+      "page": 3,
+      "words": 482
+    },
+    {
+      "bounds": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "out_of_bounds_words": [],
+      "page": 4,
+      "words": 401
+    },
+    {
+      "bounds": [
+        0.0,
+        0.0,
+        612.0,
+        792.0
+      ],
+      "out_of_bounds_words": [],
+      "page": 5,
+      "words": 365
+    }
+  ],
+  "pdf": {
+    "bytes": 108278,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v7.pdf",
+    "sha256": "d384215c1c2015a22ce5c90a649f0f316bcd7f1c49f21c94f389b3a5b3ad5ced"
+  },
+  "publication_ready": false,
+  "render_receipt": {
+    "bytes": 10246,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260928_v7.json",
+    "sha256": "f7277578c79c09d422790041a9fb0568312e3475e69d118d624ab9fcab17f9d4"
+  },
+  "source": {
+    "bytes": 2252621,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_results_20260917.json",
+    "sha256": "17bd35ddb863b08d586044a70878dd55a61506d2cd1e3e5bee8119f27525078f"
+  },
+  "status": "wgd_main_text_rechecked_and_rendered",
+  "tests": {
+    "passed": 51,
+    "scope": "WGD audit, case trace, scorer, bootstrap, manuscript renderer"
+  },
+  "unique_local_targets": 15,
+  "untracked_targets": [],
+  "verification_note": "Resume audit reproduced the existing receipt exactly; all 51 focused tests reran successfully. Counts_recomputed records the prior exact-fraction check, with source bytes revalidated here.",
+  "visual_review": "All five rasterized pages inspected; no clipping or incoherent overlap observed.",
+  "warnings": {
+    "parse": "",
+    "render": ""
+  }
+}

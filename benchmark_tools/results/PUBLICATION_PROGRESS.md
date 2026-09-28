@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Quantitative WGD Results In Main Text (2026-09-28)
+
+After confirming the goal already specifies Threadripper-only timing, resumed
+the pending manuscript integration. The prompt-confirmation turn changed no
+scientific state; this turn completes and verifies the reporting milestone.
+The main text now includes duplicate-pair separation, homolog-supported
+separation, coverage and adjusted contrasts, including full OrthoFinder's
+advantages. See the [integration review](WGD_MAIN_TEXT_INTEGRATION_20260928.md).
+
+Fresh native audit reproduces all five methods, 240 pair records, six examples
+and twelve contrasts; the resume-time audit matches the retained receipt.
+All 51 focused tests pass. The corrected v7 review export has five inspected
+pages, 16 citations and 15 unique tracked local targets. Numeric labels and
+page bounds pass. This reproduces existing evidence rather than adding an
+independent validation set or changing inference. Controlled timing and other
+publication requirements remain unfinished. No DGX access or benchmark launch.
+
 ## Readable Local Service Inventory And Active Workloads (2026-09-28)
 
 Previous turn connected and pushed the owned preflight responder lifecycle
