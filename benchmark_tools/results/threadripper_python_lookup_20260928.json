@@ -1,0 +1,106 @@
+{
+  "baseline": {
+    "bytes": 489545,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+    "sha256": "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041"
+  },
+  "binding": {
+    "bytes": 41612,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_runtime_binding_v2_20260928.json",
+    "sha256": "9a465e1dba4ab0ca63c453cf7b847b001022e800619ff8aba500e5cf7b98a059"
+  },
+  "interpreters": {
+    "orthofinder": {
+      "comparison": {
+        "limitations": [
+          "Declared import-chain and startup lookup match, not continuous import enforcement."
+        ],
+        "scientific_execution_authorized": false,
+        "status": "native_python_lookup_matches"
+      },
+      "coverage": {
+        "all_covered": true,
+        "changed": [],
+        "missing": []
+      },
+      "editable_finder_modules": 0,
+      "ipc_mappings": 3,
+      "modules": 1563,
+      "reports": [
+        {
+          "bytes": 1341054,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_python_lookup_v2_20260928/orthofinder.json",
+          "sha256": "95486b4a2e343c4e8d742e46dfb9e69b4124f62c818ae079df540d6228da3ad2"
+        },
+        {
+          "bytes": 1341054,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_python_lookup_v3_20260928/orthofinder.json",
+          "sha256": "0673ab252ae8dce115ef05b066a74a56446a6f96279e6f1a56d1af25f58bba48"
+        }
+      ],
+      "scientific_origin": {
+        "checked_modules": 46,
+        "package": "orthofinder",
+        "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder"
+      },
+      "search_entries": 7,
+      "unique_source_and_mapped_files": 1531
+    },
+    "orthohmm": {
+      "comparison": {
+        "limitations": [
+          "Declared import-chain and startup lookup match, not continuous import enforcement."
+        ],
+        "scientific_execution_authorized": false,
+        "status": "native_python_lookup_matches"
+      },
+      "coverage": {
+        "all_covered": true,
+        "changed": [],
+        "missing": []
+      },
+      "editable_finder_modules": 6,
+      "ipc_mappings": 0,
+      "modules": 919,
+      "reports": [
+        {
+          "bytes": 738379,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_python_lookup_v2_20260928/orthohmm.json",
+          "sha256": "588be16701dfb750a1e755cdf2bc4ed5e68b3433f1cbeca1d5f6929d802881e6"
+        },
+        {
+          "bytes": 738379,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_python_lookup_v3_20260928/orthohmm.json",
+          "sha256": "0146f80ed16950f40ab6c0cb366ca5ad84c96284b934a87ea50ae1ff9f2485f8"
+        }
+      ],
+      "scientific_origin": {
+        "checked_modules": 22,
+        "package": "orthohmm",
+        "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm"
+      },
+      "search_entries": 13,
+      "unique_source_and_mapped_files": 953
+    }
+  },
+  "limitations": [
+    "Initial OrthoFinder probe rejected a deleted non-executable semaphore mapping; retained as a failed inspection, not a native inference failure.",
+    "Repeat signatures exclude per-probe Python cache prefix and random non-executable IPC mapping names; runtime cache policy must separately enforce fresh paths.",
+    "Only declared import chains exercised; no continuous sandbox or exhaustive native branch coverage.",
+    "Existing editable hooks and nonrecursive directory memberships are recorded, not removed or modified.",
+    "Comparison helper is available but has not yet been wired into a production timing executor."
+  ],
+  "prior_failed_probe": {
+    "bytes": 644,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_python_lookup_20260928/orthofinder_process.json",
+    "sha256": "036115ec3edabae9d9a4ba6e58da375c16ccb3e86fb6b227326d86efb51e35c2"
+  },
+  "publication_ready": false,
+  "scientific_execution_authorized": false,
+  "source": {
+    "bytes": 8468,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_native_python_lookup.py",
+    "sha256": "ae358a5a057f7a08a0da2d952a4f9d8baff94a389d361f3428549905906047cf"
+  },
+  "status": "native_lookup_repeated_identity_match"
+}

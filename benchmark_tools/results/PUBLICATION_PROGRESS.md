@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native Python Lookup Identity Inspected (2026-09-28)
+
+Previous turn made progress through file-access tracing, private scratch and
+expanded runtime snapshots. Added a bounded lookup inspector using each actual
+interpreter, frozen cwd/environment and separate fresh caches. It records
+sys.path, top-level directory membership, import hooks, editable mappings,
+loaded module sources and mapped libraries after declared scientific imports.
+It checks hashes against the existing snapshots and requires OrthoHMM and
+OrthoFinder modules to originate in their intended scientific source roots,
+not merely somewhere in the broad inventory.
+
+The initial OrthoFinder probe rejected a deleted semaphore mapping; its process
+receipt is retained. The corrected probe records non-executable semaphore/
+shared-memory mappings separately while still rejecting missing ordinary or
+executable mappings. Two subsequent independent inspections matched exactly
+under the comparison helper: OrthoHMM loaded 919 modules / 953 unique observed
+source or mapped files, and OrthoFinder loaded 1,563 modules / 1,531 unique
+files. All observed file hashes are covered and unchanged. The scientific-root
+checks cover 22 OrthoHMM and 46 OrthoFinder modules. See the
+[lookup receipt](threadripper_python_lookup_20260928.json).
+
+Nine focused tests passed in 0.13 seconds, including wrong scientific source
+roots, missing/changed files, path membership, import hooks, editable mappings
+and module/library identity drift. Repeat comparison excludes random IPC names
+and per-probe Python cache prefixes; freshness remains a separate execution
+requirement. Existing editable finders are recorded, not removed or rewritten.
+Unrelated search roots were inspected only for top-level names, not recursive
+project content. No packages or scientific defaults changed.
+
+This supplies a repeatable lookup comparison, not continuous import isolation
+or coverage of every native branch. It still needs integration into the frozen
+production execution recipe alongside runtime and resource checks. All probe
+processes are terminal; no scientific timing ran. Remaining overhead/workload
+validation, guarded execution and a quiet window are still open. Publication
+readiness remains unproven.
+
 ## Native File Access and Private Scratch (2026-09-28)
 
 Previous turn completed broad runtime identity snapshots. Added a traced
