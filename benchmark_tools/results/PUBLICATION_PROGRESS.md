@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Package Recovered Source Notices (2026-09-28)
+
+Previous turn pushed signed source acquisition as a012569d. Added an executable
+exporter for the four selected component notices, reading from verified nested
+archives rather than trusting loose copies. The 42,535-byte text supplement
+exports and verifies after relocation with a separately pinned index digest;
+headers, binaries, source archives and datasets are excluded. See the
+[supplement review](IGRAPH_SOURCE_NOTICE_SUPPLEMENT_20260928.md).
+
+43 focused notice tests pass, including offline relocation without original
+synthetic inputs and rejection of changed, missing, duplicate, extra or indirect
+content. The existing wheel notice bundle is untouched. This completes the
+source-text packaging step, not full component coverage, build reproduction or
+redistribution clearance. No benchmark, environment change, unrelated-job action
+or DGX access occurred. The complete publication goal remains active.
+
 ## Signed Source Packages And libgomp Notices (2026-09-28)
 
 Previous turn pushed bundled-library section attribution as 5e718ff0. Located
