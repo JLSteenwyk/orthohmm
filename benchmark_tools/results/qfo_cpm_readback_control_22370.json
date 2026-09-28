@@ -1,0 +1,224 @@
+{
+  "accuracy_admitted": false,
+  "attempts": 1,
+  "checked_records": [
+    {
+      "bytes": 7032,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_cpm_readback_control.py",
+      "sha256": "b4aa0938128145abe38a1bd7197c173d3849b6dd6803a70dc7b43a7e75e25c86"
+    },
+    {
+      "bytes": 2272,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_allocator_failure_22158.json",
+      "sha256": "6261e52aa55b2d4f114d63c6387b79e818aa56199a1a2e6f90c2a883aef0cd8f"
+    },
+    {
+      "bytes": 299427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1/status.json",
+      "sha256": "e773d6ffd9934fd28abcd55be3d68eb879cbcfc03fcc129a8bf4f9c028f5ec30"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/home/bizon/anaconda3/bin/python3.10",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/orthogroups_profiles.txt",
+      "sha256": "6ad67311d9caea560cec0ff429a1185e0babb1c9aaa883486b9980ee72ee260a"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_refinement_allocator_diagnostic_v1/refinement_repeat.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    },
+    {
+      "bytes": 2765,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_20260928/config.json",
+      "sha256": "b4cfe4a562303cbb1e89deda61e1d0fccfb40c4f11a53413e48b3165d28cc639"
+    },
+    {
+      "bytes": 1627,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_20260928/child.json",
+      "sha256": "6e187b5c0bdaaf419dd02a22a394699a0ee12548dedf1ed3a870634fa75c34a1"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_20260928/child.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "child": {
+    "accuracy_admitted": false,
+    "gc_after": [
+      {
+        "collected": 102,
+        "collections": 941,
+        "uncollectable": 0
+      },
+      {
+        "collected": 20,
+        "collections": 85,
+        "uncollectable": 0
+      },
+      {
+        "collected": 0,
+        "collections": 7,
+        "uncollectable": 0
+      }
+    ],
+    "gc_before": [
+      {
+        "collected": 102,
+        "collections": 25,
+        "uncollectable": 0
+      },
+      {
+        "collected": 20,
+        "collections": 2,
+        "uncollectable": 0
+      },
+      {
+        "collected": 0,
+        "collections": 0,
+        "uncollectable": 0
+      }
+    ],
+    "gc_enabled": true,
+    "gc_threshold": [
+      700,
+      10,
+      10
+    ],
+    "genes": 984137,
+    "groups": 390845,
+    "loaded_modules": [
+      "__main__",
+      "_abc",
+      "_ast",
+      "_blake2",
+      "_bz2",
+      "_codecs",
+      "_collections",
+      "_collections_abc",
+      "_compression",
+      "_frozen_importlib",
+      "_frozen_importlib_external",
+      "_functools",
+      "_hashlib",
+      "_imp",
+      "_io",
+      "_json",
+      "_locale",
+      "_lzma",
+      "_operator",
+      "_posixsubprocess",
+      "_signal",
+      "_sre",
+      "_stat",
+      "_thread",
+      "_warnings",
+      "_weakref",
+      "_weakrefset",
+      "abc",
+      "argparse",
+      "ast",
+      "builtins",
+      "bz2",
+      "codecs",
+      "collections",
+      "collections.abc",
+      "contextlib",
+      "copyreg",
+      "encodings",
+      "encodings.aliases",
+      "encodings.utf_8",
+      "enum",
+      "errno",
+      "faulthandler",
+      "fcntl",
+      "fnmatch",
+      "functools",
+      "gc",
+      "genericpath",
+      "gettext",
+      "hashlib",
+      "io",
+      "itertools",
+      "json",
+      "json.decoder",
+      "json.encoder",
+      "json.scanner",
+      "keyword",
+      "locale",
+      "lzma",
+      "marshal",
+      "math",
+      "ntpath",
+      "operator",
+      "os",
+      "os.path",
+      "pathlib",
+      "posix",
+      "posixpath",
+      "re",
+      "reprlib",
+      "select",
+      "selectors",
+      "shutil",
+      "signal",
+      "sre_compile",
+      "sre_constants",
+      "sre_parse",
+      "stat",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "types",
+      "urllib",
+      "urllib.parse",
+      "warnings",
+      "zipimport",
+      "zlib"
+    ],
+    "scientific_modules": [],
+    "status": "isolated_readback_completed_not_admitted"
+  },
+  "controller": "JobId=22370 JobName=qfo_isolated_readback\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=COMPLETED Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:07 TimeLimit=00:10:00 TimeMin=N/A\n   SubmitTime=2026-09-28T16:16:08 EligibleTime=2026-09-28T16:16:08\n   AccrueTime=2026-09-28T16:16:08\n   StartTime=2026-09-28T16:16:08 EndTime=2026-09-28T16:16:15 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-28T16:16:08 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2225184\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=8G,node=1,billing=1\n   AllocTRES=cpu=1,mem=8G,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=(null)\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_22370.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_22370.log\n   TresPerTask=cpu=1\n   \n\n",
+  "executor_commit": "e4e84af595a414b9bc60154f59a7491675882cde",
+  "gc_collections_during_readback": [
+    916,
+    83,
+    7
+  ],
+  "job_id": "22370",
+  "limitations": [
+    "One isolated readback; no refinement, optimizer or scientific imports.",
+    "Successful garbage collections do not establish identical heap state or runtime-library equivalence.",
+    "No SIGSEGV reproduced, no root cause established, failed admission 22155 unchanged."
+  ],
+  "protocol": {
+    "bytes": 1915,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_READBACK_CONTROL_PROTOCOL_20260928.md",
+    "sha256": "d912575e9a6dc7f3593690e6d3e6edc04057f40406b0febf11e2f29b4ed88f1b"
+  },
+  "publication_ready": false,
+  "report": {
+    "bytes": 6389,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_isolated_readback_20260928/report.json",
+    "sha256": "7171973a8c5fa9c95d21cb9bddd26394d65c63e473013b58885e8a32ab99afd5"
+  },
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS\n22370|COMPLETED|0:0|00:00:07|1|8G|\n22370.batch|COMPLETED|0:0|00:00:07|1||\n",
+  "status": "isolated_readback_terminal_audited_not_admitted"
+}

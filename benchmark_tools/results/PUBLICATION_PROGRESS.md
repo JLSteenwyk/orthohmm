@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Isolated Readback Completed Without Reproducing Crash (2026-09-28)
+
+After committing/pushing e4e84af5, submitted one local one-CPU/8-GiB control
+as 22370. Observed that exact handle RUNNING, then COMPLETED 0:0 in seven
+seconds. No restart or retry. The unchanged extracted reader validated all
+984,137 genes in 390,845 groups with scientific imports omitted; GC remained
+enabled and performed 916/83/7 collections across generations 0/1/2.
+Eleven source/input/config/output references rehash correctly; runner bytes
+match the prelaunch commit. See the [result](QFO_CPM_READBACK_CONTROL_RESULT_22370.md).
+
+This negative reproduction narrows the useful next diagnostic toward preceding
+process state, not more isolated readback retries. It does not identify a
+cause, fix a runtime, clear admission 22155 or release high-CPM scoring. No
+scientific method/default, primary score or timing plan changed. All work
+launched here is terminal; production scaling has not begun. Ten focused
+tests passed before launch; the expanded reader/startup/artifact selection
+passed all 20 tests afterward. Broad publication requirements remain unfinished.
+
 ## Isolated High-CPM Readback Diagnostic Prepared (2026-09-28)
 
 The intervening prompt-confirmation turn added no scientific evidence. Reread
