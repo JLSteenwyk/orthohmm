@@ -1,0 +1,273 @@
+{
+  "boundary_checks": {
+    "after": {
+      "limitations": [
+        "Caller must bind run/baseline/collector and enforce resource and quiet-host eligibility.",
+        "Identity checks are outside native timing; neither continuous import enforcement nor admission."
+      ],
+      "lookup": {
+        "orthofinder": {
+          "limitations": [
+            "Declared import-chain and startup lookup match, not continuous import enforcement."
+          ],
+          "report": {
+            "bytes": 1341079,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/check_02/orthofinder.json",
+            "sha256": "2e5a908314bb31e81171c6276baba08159f9ad5edc03dba84da104a4c66be649"
+          },
+          "scientific_execution_authorized": false,
+          "status": "native_python_lookup_matches"
+        },
+        "orthohmm": {
+          "limitations": [
+            "Declared import-chain and startup lookup match, not continuous import enforcement."
+          ],
+          "report": {
+            "bytes": 738404,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/check_02/orthohmm.json",
+            "sha256": "2ef52037b1753503470ed564059550c5a620cd87b4c02a9613de8015873ecc2f"
+          },
+          "scientific_execution_authorized": false,
+          "status": "native_python_lookup_matches"
+        }
+      },
+      "runtime": [
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/runtime_v2.json",
+          "records": 144018,
+          "scientific_execution_authorized": false,
+          "sha256": "6ae29cae1e01b4db4e79e2e7df1aad831ece85fb7303a7c1434e6aaf56521f22",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/terminfo.json",
+          "records": 2894,
+          "scientific_execution_authorized": false,
+          "sha256": "dc477e4071cd2057f70c940170e55b63b092593efb89bb492242ebae74ea848e",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/adapters.json",
+          "records": 14,
+          "scientific_execution_authorized": false,
+          "sha256": "92442152d77ab4f095dc9b5c095f7dcd17a6d442bffce7818f062d78d22494c8",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/baseline_extra.json",
+          "records": 1,
+          "scientific_execution_authorized": false,
+          "sha256": "b7bf9458d7eab2de4d158ccb4a746f472c8599b6924b55e1296227971bc7dd7b",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/traced_dependencies.json",
+          "records": 29772,
+          "scientific_execution_authorized": false,
+          "sha256": "d9557ad45f9a4ff81f333641924e97fa011f5dee5c39343ad46fe305db640067",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/traced_configuration.json",
+          "records": 5,
+          "scientific_execution_authorized": false,
+          "sha256": "2cf7142b043b6c2635170090342b9aae45dc0234e8e0cbb953a0ef3de9d7fe3c",
+          "status": "runtime_tree_identity_matches"
+        }
+      ],
+      "scientific_execution_authorized": false,
+      "status": "runtime_and_lookup_checked"
+    },
+    "before": {
+      "limitations": [
+        "Caller must bind run/baseline/collector and enforce resource and quiet-host eligibility.",
+        "Identity checks are outside native timing; neither continuous import enforcement nor admission."
+      ],
+      "lookup": {
+        "orthofinder": {
+          "limitations": [
+            "Declared import-chain and startup lookup match, not continuous import enforcement."
+          ],
+          "report": {
+            "bytes": 1341079,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/check_01/orthofinder.json",
+            "sha256": "3dc3052d7918f7f10bb4f9bf90ed6308f1197e564ca71ccfe55b8e12dcb0a7e4"
+          },
+          "scientific_execution_authorized": false,
+          "status": "native_python_lookup_matches"
+        },
+        "orthohmm": {
+          "limitations": [
+            "Declared import-chain and startup lookup match, not continuous import enforcement."
+          ],
+          "report": {
+            "bytes": 738404,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/check_01/orthohmm.json",
+            "sha256": "f7ddaa7f8b12cfa720864a84ee9b81071c58f044f0e8c0ada0ae2857d4931a1c"
+          },
+          "scientific_execution_authorized": false,
+          "status": "native_python_lookup_matches"
+        }
+      },
+      "runtime": [
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/runtime_v2.json",
+          "records": 144018,
+          "scientific_execution_authorized": false,
+          "sha256": "6ae29cae1e01b4db4e79e2e7df1aad831ece85fb7303a7c1434e6aaf56521f22",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/terminfo.json",
+          "records": 2894,
+          "scientific_execution_authorized": false,
+          "sha256": "dc477e4071cd2057f70c940170e55b63b092593efb89bb492242ebae74ea848e",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/adapters.json",
+          "records": 14,
+          "scientific_execution_authorized": false,
+          "sha256": "92442152d77ab4f095dc9b5c095f7dcd17a6d442bffce7818f062d78d22494c8",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/baseline_extra.json",
+          "records": 1,
+          "scientific_execution_authorized": false,
+          "sha256": "b7bf9458d7eab2de4d158ccb4a746f472c8599b6924b55e1296227971bc7dd7b",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/traced_dependencies.json",
+          "records": 29772,
+          "scientific_execution_authorized": false,
+          "sha256": "d9557ad45f9a4ff81f333641924e97fa011f5dee5c39343ad46fe305db640067",
+          "status": "runtime_tree_identity_matches"
+        },
+        {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_runtime_inventory_20260928/traced_configuration.json",
+          "records": 5,
+          "scientific_execution_authorized": false,
+          "sha256": "2cf7142b043b6c2635170090342b9aae45dc0234e8e0cbb953a0ef3de9d7fe3c",
+          "status": "runtime_tree_identity_matches"
+        }
+      ],
+      "scientific_execution_authorized": false,
+      "status": "runtime_and_lookup_checked"
+    }
+  },
+  "evidence": [
+    {
+      "bytes": 1061,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/started.json",
+      "sha256": "0aca4cfd026a82ff4b556d346f6cadfdc4773b1a7e4463c47756b134599b21fe"
+    },
+    {
+      "bytes": 4981,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/command.json",
+      "sha256": "57fec949b5aadc14e588c0a9ce956d377215bc6a2c64626f47a3b9cdc594c38e"
+    },
+    {
+      "bytes": 137784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/result.json",
+      "sha256": "9d04cf068354ce5e31e78a93d46c922697825fbd34123b364f5ea5aa21623429"
+    },
+    {
+      "bytes": 1590065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/independent_replay.json",
+      "sha256": "1363f6ebcfed0e299330de6d8efa4fdb8f52d7f51304276d4d16dc65ae58cb32"
+    },
+    {
+      "bytes": 3669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/checked_01.json",
+      "sha256": "097ba55084b1758e6f7d49f3a8e89fa6064db298d4fbc363dcdb0922d91ab77a"
+    },
+    {
+      "bytes": 3669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/lookup_checks/checked_02.json",
+      "sha256": "1b15a23f0af38b449e7de1f565d0096eefdc49a851f726c6478b180d8b90ace2"
+    }
+  ],
+  "host_process_replay": {
+    "command_bracketed_by_samples": true,
+    "command_launch_started_monotonic_s": 264749.74821967,
+    "command_wait_finished_monotonic_s": 264759.341462945,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "competing_cpu_observed": 1
+    },
+    "maximum_between_snapshot_gap_s": 10.058534529001918,
+    "maximum_observed_foreign_average_cores": 78.7326896588567,
+    "observation_errors": 0,
+    "observer_pid": 1787436,
+    "status": "competing_cpu_observed",
+    "successful_snapshots": 2,
+    "threshold_average_cores": 0.25
+  },
+  "job_id": 22356,
+  "limitations": [
+    "One 16-gene high-sensitivity fixture; not the 27-run production panel.",
+    "Both interpreters were inspected at both boundaries, but only OrthoHMM high-sensitivity inference ran in this job.",
+    "Observed competing CPU use prevents controlled-timing admission.",
+    "Production recipe binding, long-run overhead validation and a verified quiet window remain outstanding."
+  ],
+  "outputs": {
+    "accuracy_evaluated": false,
+    "checked_files": [
+      {
+        "bytes": 4612,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/orthohmm_high_sensitivity.json",
+        "sha256": "81cefa4f0f8e35bc3aed8207538f38aa3f3dff84058228640210086a3c836230"
+      },
+      {
+        "bytes": 231,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/run_00/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+      }
+    ],
+    "evidence_relocation": {},
+    "input_genes": 16,
+    "limitations": [
+      "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+      "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+      "OrthoFinder validation expands native relation rows outside the inference timer."
+    ],
+    "orthogroups": 3,
+    "resource_measurements_admitted": false,
+    "source": {
+      "bytes": 8784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+      "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+    },
+    "status": "native_scaling_outputs_checked"
+  },
+  "publication_ready": false,
+  "replay_status": "threadripper_scaling_measurement_replayed",
+  "scheduler_accounting": "JobID|State|ExitCode|Elapsed\n22356|COMPLETED|0:0|00:02:29\n22356.batch|COMPLETED|0:0|00:02:29\n22356.0|COMPLETED|0:0|00:00:13\n",
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 4252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/check_threadripper_runtime.py",
+      "sha256": "edecf78f9e6904b621f30db920e2d8986b9dd1b627c8c874290186c20d5263a2"
+    },
+    {
+      "bytes": 3458,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_verified_threadripper_fixture.py",
+      "sha256": "5be291341280413db7e45a2ffe8017e08b5d19405994c3ec1fb4b1964e7f0a39"
+    },
+    {
+      "bytes": 4200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_check_threadripper_runtime.py",
+      "sha256": "2ed8ce74a3269975b181c3e83fcaf2cc68d5d90bd322d658115cdc87b30ce201"
+    }
+  ],
+  "status": "native_fixture_runtime_and_lookup_validated",
+  "tests": {
+    "command": "python -m pytest -q tests/unit/test_check_threadripper_runtime.py tests/unit/test_inspect_native_python_lookup.py tests/unit/test_measure_threadripper_run.py",
+    "passed": 25,
+    "wall_s": 0.35
+  },
+  "wrapper_status": "command_exited_zero"
+}

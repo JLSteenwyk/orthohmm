@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Runtime Checks Integrated Around Native Inference (2026-09-28)
+
+The last user-facing turn confirmed the already-amended Threadripper goal;
+it made no new experimental progress. Resumption verified the unfinished
+integration job from scheduler accounting and independently replayed its
+raw measurement before recording this milestone.
+
+Added a runtime checker composing all six pinned filesystem manifests with
+the repeated native Python lookup baseline. The fixture driver uses this
+checker before and after native inference, retaining separate lookup evidence.
+Job 22356 completed 0:0 in 2m29s. Both boundary checks passed for both
+interpreters; the one high-sensitivity inference produced three groups covering
+all 16 fixture genes. Independent resource replay also passed. See the
+[integration receipt](threadripper_runtime_integration_22356.json).
+
+The 25 focused tests pass, including lookup drift that blocks native launch
+and post-run drift that rejects verification while preserving measurements.
+No scientific algorithm, default, frozen input or production run order changed.
+The new checker and driver are separately source-pinned in fixture evidence;
+they still need binding into the production execution recipe.
+
+This is not a controlled timing result: replay identifies 78.73 competing
+average CPU cores in the sampled interval. No unrelated workload was stopped.
+All fixture processes are terminal. The 27 production identities remain
+unexecuted; guarded production execution, long-run overhead validation and
+a verified quiet window remain necessary. Scientific uncertainty, remaining
+generalization limitations and final publication packaging are also unfinished.
+
 ## Native Python Lookup Identity Inspected (2026-09-28)
 
 Previous turn made progress through file-access tracing, private scratch and
