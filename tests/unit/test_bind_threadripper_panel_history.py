@@ -25,6 +25,8 @@ def setup(tmp_path):
     session = dict(schema="threadripper_panel_session_v1", index=0, job_id=42,
         plan_sha256=plan["sha256"], controller=controller, reviews=reviews,
         phase="terminal", native_outcome="exited_zero")
+    session["native_audit"] = put(tmp_path / "native_audit.json", dict(job_id=42,
+        native_outcome="exited_zero", status="native_success_outputs_verified"))
     return plan, session
 
 
@@ -76,4 +78,16 @@ def test_controller_contradiction_rejected(tmp_path, field, value):
     data[field] = value
     session["controller"] = put(path, data)
     with pytest.raises(ValueError):
+        run(tmp_path, plan, session)
+
+
+@pytest.mark.parametrize("field,value", [("job_id", 43), ("native_outcome", "timed_out"),
+                                       ("status", "unverified")])
+def test_wrong_native_audit_rejected(tmp_path, field, value):
+    plan, session = setup(tmp_path)
+    path = tmp_path / "native_audit.json"
+    data = json.loads(path.read_text())
+    data[field] = value
+    session["native_audit"] = put(path, data)
+    with pytest.raises(ValueError, match="Native audit"):
         run(tmp_path, plan, session)

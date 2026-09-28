@@ -1,0 +1,25 @@
+{
+  "audit": {
+    "bytes": 1758153,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_lookup_integration_20260928/independent_outcome_audit.json",
+    "sha256": "d6be7331597463e002143fa2d59a30859203986e35f08bc72075a43f23e95c64"
+  },
+  "input_genes": 16,
+  "job_id": 22356,
+  "limitations": [
+    "Independent rereading of retained 16-gene high-sensitivity fixture, not new inference.",
+    "Neither a production identity nor a controlled timing result.",
+    "Other review categories and production orchestration remain required."
+  ],
+  "native_outcome": "exited_zero",
+  "orthogroups": 3,
+  "replay_status": "threadripper_scaling_measurement_replayed",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 2522,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_threadripper_native_outcome.py",
+    "sha256": "4d2df2c0ae194624a87e9cee2d9bc649464f041454cbf90137720bebc883358b"
+  },
+  "status": "native_success_outputs_verified",
+  "tests": "81 passed in 0.68 seconds"
+}

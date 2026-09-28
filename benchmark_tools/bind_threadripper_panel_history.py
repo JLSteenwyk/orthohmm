@@ -43,6 +43,15 @@ def bind(plan_ref, session_refs, *, command, cwd):
             raise ValueError("Controller observation failed or queried another job")
         allocation = validate(controller["stdout"], job, session["phase"],
                               command=command, cwd=cwd)
+        outcome = session.get("native_outcome")
+        if outcome is not None:
+            native = read(session["native_audit"])
+            expected_status = ("native_success_outputs_verified" if outcome == "exited_zero"
+                               else "native_failure_requires_review")
+            if (type(native.get("job_id")) is not int or native["job_id"] != job
+                    or native.get("native_outcome") != outcome
+                    or native.get("status") != expected_status):
+                raise ValueError("Native audit job or outcome differs from session")
         reviews = session.get("reviews")
         decisions = None
         if reviews is not None:
@@ -64,7 +73,7 @@ def bind(plan_ref, session_refs, *, command, cwd):
                 decisions[category] = review["decision"]
         attempts.append(dict(index=index, job_id=job,
             scheduler_state=allocation["scheduler_state"], review=decisions,
-            native_outcome=session.get("native_outcome")))
+            native_outcome=outcome))
         if allocation["scheduler_state"] == "COMPLETED" and allocation["scheduler_exit_code"] != "0:0":
             raise ValueError("Completed scheduler record has contradictory exit status")
     progress = position(plan["runs"], attempts)

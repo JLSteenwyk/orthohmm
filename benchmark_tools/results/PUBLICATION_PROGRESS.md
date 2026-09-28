@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Outcome Audit Connected To History (2026-09-28)
+
+Previous turn bound controller/review provenance into the panel guard. Added
+an independent native-outcome auditor that checks the expected command, replays
+raw measurement evidence and validates successful outputs. Nonzero exits and
+timeouts retain their logs and replay but require failure review; they are not
+silently retried or required to produce successful outputs. Evidence is hashed
+before reading and checked again after validation.
+
+The panel history now requires a pinned native audit for every claimed native
+outcome and rejects mismatched job IDs, outcomes or audit status. This binds
+the audit claim; the future production executor must still invoke the auditor
+with the frozen run/baseline and validate all other review categories.
+
+Eighty-one focused tests passed in 0.68 seconds. Independently audited retained
+fixture job 22356: raw replay passed and output validation confirmed three groups
+covering 16 input genes. No inference was rerun. See the
+[outcome receipt](threadripper_outcome_audit_22356.json). The fixture remains
+ineligible for controlled timing because its original host competition remains
+part of the evidence. This does not establish a production run, scientific
+accuracy or complete runtime/host review. Executor integration and quiet-window
+coordination, alongside remaining scientific/release work, remain outstanding.
+The full goal is active and incomplete.
+
 ## Controller And Review History Bound To Panel Guard (2026-09-28)
 
 Previous turn validated local controller records on a sleep-only allocation.
