@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Fixed-Tree Root-Rule Diagnostic (2026-09-28)
+
+Resumed the unfinished mechanism analysis after confirming the Threadripper-only
+goal instructions. The intervening prompt-confirmation turn was no progress on
+the scientific goal; this turn completes a new four-arm diagnostic. Protocol
+`28a1fc17` preceded alternative evaluation. Baseline reproduction passed for
+seven families and all six cases; pair evidence is unchanged across rules.
+Two alternatives give identical partitions, while `mapped_event` reduces coverage
+in four eligible examples. None recovers the five traced homologs. See the
+[complete result](WGD_FIXED_TREE_RULE_RESULTS_20260928.md).
+
+53 focused tests pass, and a fresh replay matches all retained JSON fields after
+serialization. Scoped whitespace checks exclude unrelated generated sample files.
+
+This is negative mechanism evidence, not independent validation, a topology
+error diagnosis or a new default. No production timing or DGX work occurred.
+Controlled timing, unresolved reference/uncertainty limitations and release
+requirements remain open; the full publication goal is active.
+
 ## Package Recovered Source Notices (2026-09-28)
 
 Previous turn pushed signed source acquisition as a012569d. Added an executable

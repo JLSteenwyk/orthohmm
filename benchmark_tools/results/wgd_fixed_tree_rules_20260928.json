@@ -1,0 +1,3155 @@
+{
+  "all_pair_evidence_unchanged": true,
+  "arms": [
+    {
+      "cases": [
+        {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "Family0003871:0",
+            "Family0003871:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0000912:1",
+            "Family0000912:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823:0",
+            "Family0004616:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0001097:0",
+            "Family0001097:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 7,
+          "unmapped_members": null
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0002367:1",
+            "Family0002367:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            1,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003151:4",
+            "Family0003151:2"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 3,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.5,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 5,
+          "unmapped_members": []
+        }
+      ],
+      "families": {
+        "Family0000912": {
+          "constraints": [
+            {
+              "event_index": 250,
+              "source_genes": [
+                "Skud_5.249",
+                "Smik_5.275",
+                "Suva_5.250",
+                "YER129W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_12.164",
+                "Skud_4.383",
+                "Smik_12.155",
+                "Smik_4.367",
+                "Suva_10.180",
+                "Suva_2.283",
+                "YDR122W",
+                "YLR096W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ]
+        },
+        "Family0001097": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ]
+        },
+        "Family0002367": {
+          "constraints": [
+            {
+              "event_index": 61,
+              "source_genes": [
+                "Skud_4.622",
+                "Smik_4.619",
+                "Suva_2.525",
+                "YDR352W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_15.61",
+                "Skud_2.274",
+                "Smik_15.64",
+                "Smik_2.286",
+                "Suva_15.74",
+                "Suva_4.396",
+                "YBR147W",
+                "YOL092W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ]
+        },
+        "Family0003151": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ]
+        },
+        "Family0003823": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ]
+        },
+        "Family0003871": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ]
+        },
+        "Family0004616": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ]
+        }
+      },
+      "focal_homologs": [
+        {
+          "gene": "Suva_7.66",
+          "group": "Family0003871:2",
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_4.396",
+          "group": "Family0002367:3",
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Skud_3.16",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Smik_3.28",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_3.165",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        }
+      ],
+      "rule": "species_overlap"
+    },
+    {
+      "cases": [
+        {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "Family0003871:0",
+            "Family0003871:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0000912:1",
+            "Family0000912:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823:0",
+            "Family0004616:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0001097:0",
+            "Family0001097:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 7,
+          "unmapped_members": null
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0002367:1",
+            "Family0002367:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            1,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003151:4",
+            "Family0003151:2"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 3,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.5,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 5,
+          "unmapped_members": []
+        }
+      ],
+      "families": {
+        "Family0000912": {
+          "constraints": [
+            {
+              "event_index": 250,
+              "source_genes": [
+                "Skud_5.249",
+                "Smik_5.275",
+                "Suva_5.250",
+                "YER129W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_12.164",
+                "Skud_4.383",
+                "Smik_12.155",
+                "Smik_4.367",
+                "Suva_10.180",
+                "Suva_2.283",
+                "YDR122W",
+                "YLR096W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ]
+        },
+        "Family0001097": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ]
+        },
+        "Family0002367": {
+          "constraints": [
+            {
+              "event_index": 61,
+              "source_genes": [
+                "Skud_4.622",
+                "Smik_4.619",
+                "Suva_2.525",
+                "YDR352W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_15.61",
+                "Skud_2.274",
+                "Smik_15.64",
+                "Smik_2.286",
+                "Suva_15.74",
+                "Suva_4.396",
+                "YBR147W",
+                "YOL092W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ]
+        },
+        "Family0003151": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ]
+        },
+        "Family0003823": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ]
+        },
+        "Family0003871": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ]
+        },
+        "Family0004616": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ]
+        }
+      },
+      "focal_homologs": [
+        {
+          "gene": "Suva_7.66",
+          "group": "Family0003871:2",
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_4.396",
+          "group": "Family0002367:3",
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Skud_3.16",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Smik_3.28",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_3.165",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        }
+      ],
+      "rule": "supported_children"
+    },
+    {
+      "cases": [
+        {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "Family0003871:0",
+            "Family0003871:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0000912:1",
+            "Family0000912:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823:0",
+            "Family0004616:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0001097:0",
+            "Family0001097:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 7,
+          "unmapped_members": null
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            4
+          ],
+          "anchor_groups": [
+            "Family0002367:1",
+            "Family0002367:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            1,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003151:4",
+            "Family0003151:2"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 3,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.5,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 5,
+          "unmapped_members": []
+        }
+      ],
+      "families": {
+        "Family0000912": {
+          "constraints": [
+            {
+              "event_index": 250,
+              "source_genes": [
+                "Skud_5.249",
+                "Smik_5.275",
+                "Suva_5.250",
+                "YER129W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_12.164",
+                "Skud_4.383",
+                "Smik_12.155",
+                "Smik_4.367",
+                "Suva_10.180",
+                "Suva_2.283",
+                "YDR122W",
+                "YLR096W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "Suva_10.180",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ]
+        },
+        "Family0001097": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Smik_15.365",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ]
+        },
+        "Family0002367": {
+          "constraints": [
+            {
+              "event_index": 61,
+              "source_genes": [
+                "Skud_4.622",
+                "Smik_4.619",
+                "Suva_2.525",
+                "YDR352W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_15.61",
+                "Skud_2.274",
+                "Smik_15.64",
+                "Smik_2.286",
+                "Suva_15.74",
+                "Suva_4.396",
+                "YBR147W",
+                "YOL092W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "Suva_15.74",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "Suva_2.525",
+              "YDR352W"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ]
+        },
+        "Family0003151": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "Suva_2.212",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796",
+              "Smik_4.802",
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "YCL048W"
+            ]
+          ]
+        },
+        "Family0003823": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ]
+        },
+        "Family0003871": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "Suva_5.253",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ]
+        },
+        "Family0004616": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ]
+        }
+      },
+      "focal_homologs": [
+        {
+          "gene": "Suva_7.66",
+          "group": "Family0003871:2",
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_4.396",
+          "group": "Family0002367:3",
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Skud_3.16",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Smik_3.28",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_3.165",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        }
+      ],
+      "rule": "confidence"
+    },
+    {
+      "cases": [
+        {
+          "anchor_group_sizes": [
+            3,
+            3
+          ],
+          "anchor_groups": [
+            "Family0003871:0",
+            "Family0003871:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.246",
+            "Skud_7.75",
+            "Smik_5.278",
+            "Smik_7.75",
+            "Suva_5.253",
+            "Suva_7.66",
+            "YER132C",
+            "YGL197W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 4,
+          "digenic_counts_by_orf": {
+            "YER132C": 1,
+            "YGL197W": 8
+          },
+          "example_rank_sha256": "0a2bb0377b342913390c5004945729b70880909d5b2d8a10bada3c438839b147",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PMD1",
+            "MDS3"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.6666666666666666,
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "pillar_native_group_count": 4,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar02115",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 10,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 30,
+          "trigenic_fraction": 0.7692307692307693,
+          "unassigned_pillar_members": [],
+          "union_size": 6,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            3
+          ],
+          "anchor_groups": [
+            "Family0000912:1",
+            "Family0000912:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_12.164",
+            "Skud_4.383",
+            "Smik_12.155",
+            "Smik_4.367",
+            "Suva_10.180",
+            "Suva_2.283",
+            "YDR122W",
+            "YLR096W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 5,
+          "digenic_counts_by_orf": {
+            "YDR122W": 10,
+            "YLR096W": 3
+          },
+          "example_rank_sha256": "0c2e0887f32764456e6eabbe02bbd7304a7ae8ef76a736b483558e7dc55edf47",
+          "experimental_class": "High",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "KIN1",
+            "KIN2"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.8333333333333334,
+          "orf_pair": [
+            "YDR122W",
+            "YLR096W"
+          ],
+          "pillar_native_group_count": 3,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar12456",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 39,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 17,
+          "trigenic_fraction": 0.5666666666666667,
+          "unassigned_pillar_members": [],
+          "union_size": 7,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            4,
+            4
+          ],
+          "anchor_groups": [
+            "Family0003823:0",
+            "Family0004616:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_5.173",
+            "Skud_9.119",
+            "Smik_5.189",
+            "Smik_9.140",
+            "Suva_5.167",
+            "Suva_9.149",
+            "YER059W",
+            "YIL050W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 6,
+          "digenic_counts_by_orf": {
+            "YER059W": 44,
+            "YIL050W": 1
+          },
+          "example_rank_sha256": "02a0f2fb96f2b9dae979063b0ed3c893270258fc49bb2c77630001d5bf1fe74e",
+          "experimental_class": "Low",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "PCL6",
+            "PCL7"
+          ],
+          "homolog_support_by_anchor": [
+            3,
+            3
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 1.0,
+          "orf_pair": [
+            "YER059W",
+            "YIL050W"
+          ],
+          "pillar_native_group_count": 2,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar01825",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 58,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 20,
+          "trigenic_fraction": 0.3076923076923077,
+          "unassigned_pillar_members": [],
+          "union_size": 8,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            3
+          ],
+          "anchor_groups": [
+            "Family0001097:0",
+            "Family0001097:1"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {},
+          "available_pillar_members": [],
+          "coverage_denominator": null,
+          "coverage_numerator": null,
+          "digenic_counts_by_orf": {
+            "YLR284C": 1,
+            "YOR180C": 11
+          },
+          "example_rank_sha256": "039034548ff57fa8b564b27a11c12ff20ad3a7e98e0d43868af468762c8c39d9",
+          "experimental_class": "Low",
+          "foreign_pillar_members": null,
+          "gene_names": [
+            "ECI1",
+            "DCI1"
+          ],
+          "homolog_support_by_anchor": null,
+          "input_reasons": [],
+          "mean_non_scer_coverage": null,
+          "orf_pair": [
+            "YLR284C",
+            "YOR180C"
+          ],
+          "pillar_native_group_count": null,
+          "reference_eligible": false,
+          "reference_pillar": null,
+          "reference_reasons": [
+            {
+              "lines": [
+                7877,
+                1095
+              ],
+              "reason": "anchors_in_different_pillars"
+            }
+          ],
+          "separation_rate": 1,
+          "source_row": 162,
+          "split_eligible": true,
+          "supported_separation_rate": null,
+          "trigenic_count": 0,
+          "trigenic_fraction": 0,
+          "unassigned_pillar_members": null,
+          "union_size": 6,
+          "unmapped_members": null
+        },
+        {
+          "anchor_group_sizes": [
+            3,
+            3
+          ],
+          "anchor_groups": [
+            "Family0002367:1",
+            "Family0002367:0"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_15.61",
+            "Skud_2.274",
+            "Smik_15.64",
+            "Smik_2.286",
+            "Suva_15.74",
+            "Suva_4.396",
+            "YBR147W",
+            "YOL092W"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 4,
+          "digenic_counts_by_orf": {
+            "YBR147W": 2,
+            "YOL092W": 4
+          },
+          "example_rank_sha256": "033028eecad777890ba67b8cd2305dfdcf9d4690d85dbe360e7fbb102d1de47f",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "RTC2",
+            "YPQ1"
+          ],
+          "homolog_support_by_anchor": [
+            2,
+            2
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.6666666666666666,
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "pillar_native_group_count": 4,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar06765",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 215,
+          "split_eligible": true,
+          "supported_separation_rate": 1,
+          "trigenic_count": 1,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 6,
+          "unmapped_members": []
+        },
+        {
+          "anchor_group_sizes": [
+            1,
+            2
+          ],
+          "anchor_groups": [
+            "Family0003151:7",
+            "Family0003151:6"
+          ],
+          "assignment_state": "separated",
+          "available_members_by_species": {
+            "Scerevisiae": 2,
+            "Skudriavzevii": 2,
+            "Smikatae": 2,
+            "Suvarum": 2
+          },
+          "available_pillar_members": [
+            "Skud_3.16",
+            "Skud_4.796",
+            "Smik_3.28",
+            "Smik_4.802",
+            "Suva_2.702",
+            "Suva_3.165",
+            "YCL048W",
+            "YDR522C"
+          ],
+          "coverage_denominator": 6,
+          "coverage_numerator": 1,
+          "digenic_counts_by_orf": {
+            "YCL048W": 3,
+            "YDR522C": 0
+          },
+          "example_rank_sha256": "042210b89b2ffc7ae7b48467436d264246fe0c17c534ae35c58039fd58bddb71",
+          "experimental_class": "Sparse",
+          "foreign_pillar_members": [],
+          "gene_names": [
+            "SPS22",
+            "SPS2"
+          ],
+          "homolog_support_by_anchor": [
+            0,
+            1
+          ],
+          "input_reasons": [],
+          "mean_non_scer_coverage": 0.16666666666666666,
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "pillar_native_group_count": 5,
+          "reference_eligible": true,
+          "reference_pillar": "Pillar10431",
+          "reference_reasons": [],
+          "separation_rate": 1,
+          "source_row": 221,
+          "split_eligible": true,
+          "supported_separation_rate": 0,
+          "trigenic_count": 0,
+          "trigenic_fraction": null,
+          "unassigned_pillar_members": [],
+          "union_size": 3,
+          "unmapped_members": []
+        }
+      ],
+      "families": {
+        "Family0000912": {
+          "constraints": [
+            {
+              "event_index": 250,
+              "source_genes": [
+                "Skud_5.249",
+                "Smik_5.275",
+                "Suva_5.250",
+                "YER129W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_12.164",
+                "Skud_4.383",
+                "Smik_12.155",
+                "Smik_4.367",
+                "Suva_10.180",
+                "Suva_2.283",
+                "YDR122W",
+                "YLR096W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_10.180"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.164",
+              "Smik_12.155",
+              "YLR096W"
+            ],
+            [
+              "Skud_4.383",
+              "Smik_4.367",
+              "Suva_2.283",
+              "YDR122W"
+            ],
+            [
+              "Skud_5.249",
+              "Smik_5.275",
+              "YER129W"
+            ],
+            [
+              "Suva_10.180"
+            ],
+            [
+              "Suva_5.250"
+            ]
+          ]
+        },
+        "Family0001097": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Smik_15.365"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_12.365",
+              "Smik_12.361",
+              "YLR284C"
+            ],
+            [
+              "Skud_15.347",
+              "Suva_8.236",
+              "YOR180C"
+            ],
+            [
+              "Smik_15.365"
+            ],
+            [
+              "Suva_10.379"
+            ]
+          ]
+        },
+        "Family0002367": {
+          "constraints": [
+            {
+              "event_index": 61,
+              "source_genes": [
+                "Skud_4.622",
+                "Smik_4.619",
+                "Suva_2.525",
+                "YDR352W"
+              ],
+              "supported": false,
+              "supporting_pair": null,
+              "target_genes": [
+                "Skud_15.61",
+                "Skud_2.274",
+                "Smik_15.64",
+                "Smik_2.286",
+                "Suva_15.74",
+                "Suva_4.396",
+                "YBR147W",
+                "YOL092W"
+              ]
+            }
+          ],
+          "final_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "YDR352W"
+            ],
+            [
+              "Suva_15.74"
+            ],
+            [
+              "Suva_2.525"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_15.61",
+              "Smik_15.64",
+              "YOL092W"
+            ],
+            [
+              "Skud_2.274",
+              "Smik_2.286",
+              "YBR147W"
+            ],
+            [
+              "Skud_4.622",
+              "Smik_4.619",
+              "YDR352W"
+            ],
+            [
+              "Suva_15.74"
+            ],
+            [
+              "Suva_2.525"
+            ],
+            [
+              "Suva_4.396"
+            ]
+          ]
+        },
+        "Family0003151": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "Smik_4.802"
+            ],
+            [
+              "Suva_2.212"
+            ],
+            [
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "YCL048W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_3.16",
+              "Smik_3.28",
+              "Suva_3.165"
+            ],
+            [
+              "Skud_4.307",
+              "Smik_4.291",
+              "YDR055W"
+            ],
+            [
+              "Skud_4.796"
+            ],
+            [
+              "Smik_2.210",
+              "Suva_4.317",
+              "YBR078W"
+            ],
+            [
+              "Smik_4.802"
+            ],
+            [
+              "Suva_2.212"
+            ],
+            [
+              "Suva_2.702",
+              "YDR522C"
+            ],
+            [
+              "YCL048W"
+            ]
+          ]
+        },
+        "Family0003823": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.173",
+              "Smik_5.189",
+              "Suva_5.167",
+              "YER059W"
+            ]
+          ]
+        },
+        "Family0003871": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_5.253"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_5.246",
+              "Smik_5.278",
+              "YER132C"
+            ],
+            [
+              "Skud_7.75",
+              "Smik_7.75",
+              "YGL197W"
+            ],
+            [
+              "Suva_5.253"
+            ],
+            [
+              "Suva_7.66"
+            ]
+          ]
+        },
+        "Family0004616": {
+          "constraints": [],
+          "final_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ],
+          "preconstraint_groups": [
+            [
+              "Skud_9.119",
+              "Smik_9.140",
+              "Suva_9.149",
+              "YIL050W"
+            ]
+          ]
+        }
+      },
+      "focal_homologs": [
+        {
+          "gene": "Suva_7.66",
+          "group": "Family0003871:3",
+          "orf_pair": [
+            "YER132C",
+            "YGL197W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_4.396",
+          "group": "Family0002367:5",
+          "orf_pair": [
+            "YBR147W",
+            "YOL092W"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Skud_3.16",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Smik_3.28",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        },
+        {
+          "gene": "Suva_3.165",
+          "group": "Family0003151:0",
+          "orf_pair": [
+            "YCL048W",
+            "YDR522C"
+          ],
+          "with_anchor": []
+        }
+      ],
+      "rule": "mapped_event"
+    }
+  ],
+  "defaults_changed": false,
+  "dendropy_version": "5.0.8",
+  "independent_validation": false,
+  "inputs": [
+    {
+      "bytes": 2687,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/WGD_FIXED_TREE_RULE_PROTOCOL_20260928.md",
+      "sha256": "1659a135e2584c1b1b947447c5517d69ea52dcee1d804f8d9bd30b1569a27764"
+    },
+    {
+      "bytes": 111899,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_case_trace_20260917.json",
+      "sha256": "5b346d99d1ac063fdf169ecf76fde69390d876073e9c27d43968469936ac07cc"
+    },
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 7515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "c1748e2772e7a625c717a196fb47e557d0ec2827dda81fa2e0c59514bae6314d"
+    },
+    {
+      "bytes": 250257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "d4c249c6b422ab427617cddbc4ef7977c54bbe91bfe46243b0dee1c7f9b986c6"
+    },
+    {
+      "bytes": 250257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "d4c249c6b422ab427617cddbc4ef7977c54bbe91bfe46243b0dee1c7f9b986c6"
+    },
+    {
+      "bytes": 476631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "b6faf211fba5d822fdfc41a8bbafb7330ecc1a5656456d6df24654b9bd970a83"
+    },
+    {
+      "bytes": 145,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "6e21c84cd1e35d41737496ae641b944d5ba367d000adee9d974a0180db482101"
+    },
+    {
+      "bytes": 1996009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/orthohmm_reconciliation_nodes.tsv",
+      "sha256": "0c1eaaa29217221ff1c68f92dfb224acea794c426f974330452f09f9c1fd4cce"
+    },
+    {
+      "bytes": 414879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "614c81133429109f2f4d4b005d3fdacdfe33a9ed482e389830b210d5f0545901"
+    },
+    {
+      "bytes": 769,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0000912.json",
+      "sha256": "510768834578053ee2a61d5425d386c01ee205152812730091ebb36e4ff2793b"
+    },
+    {
+      "bytes": 438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.raw.nwk",
+      "sha256": "f099993a2c7b20bce32473eb92a96670230c1091818f2ec89f3f460f9d9fdf3a"
+    },
+    {
+      "bytes": 479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.rooted.nwk",
+      "sha256": "195b5864840ee73915e2501138013406b1e689f7113eeacf5785272bee25dc7c"
+    },
+    {
+      "bytes": 588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0000912.reconciled.nwk",
+      "sha256": "7e45030843eb49f6240d8fd895739f1981fe9abf9788788fb965f7971a9acd65"
+    },
+    {
+      "bytes": 702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0001097.json",
+      "sha256": "2d6d0bee32c699fe6b32e0489e0b089fab7b7c1a83333245fb2c3c2921f403ac"
+    },
+    {
+      "bytes": 274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.raw.nwk",
+      "sha256": "49fb05887149898c071d85ed8c65397ecb89665866ba7e6b511e0f477f7071d2"
+    },
+    {
+      "bytes": 312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.rooted.nwk",
+      "sha256": "d72ff8cc0f3db6c87c6f6bb49fbabb5219ddf81a74506155ce204bf936506682"
+    },
+    {
+      "bytes": 385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0001097.reconciled.nwk",
+      "sha256": "54ce2de997b3e2b2336d7c84db12d3c3fc436c0ec5929959b5c51b7863400f47"
+    },
+    {
+      "bytes": 766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0002367.json",
+      "sha256": "4cc7c458217c0a3a7d4a9c05dde0631527048c61275b4d115f249a7bafa114f4"
+    },
+    {
+      "bytes": 438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.raw.nwk",
+      "sha256": "7569c327e8e0b2d51b6bf577e3c6c5a7bd972d5bafb37bdd5449d4f827b8668c"
+    },
+    {
+      "bytes": 472,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.rooted.nwk",
+      "sha256": "c2b5947d74f652d7e0e22bf1ecc46043fd8fb2838ce49f308e328f3a837d87f2"
+    },
+    {
+      "bytes": 581,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0002367.reconciled.nwk",
+      "sha256": "b78bdb92b0f66035a0c30514a0b5a135ff91203c263472339665995a8ea291a1"
+    },
+    {
+      "bytes": 815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0003151.json",
+      "sha256": "d38d4c6c99f112b563441414596689c46b919632334f367362a067a7df3f071c"
+    },
+    {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.raw.nwk",
+      "sha256": "bd40ce45c93475b967e504f6e7447f1c286b58f1bb64ab982b5dbb2bff9b741e"
+    },
+    {
+      "bytes": 602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.rooted.nwk",
+      "sha256": "6a0270466a321fcf9875c76f912db82b7438c72f5476a9826c966be609d3c707"
+    },
+    {
+      "bytes": 738,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003151.reconciled.nwk",
+      "sha256": "d51cec860f38e05cd02142e2077a879523341194752ef323bbe1fd1a921ff09c"
+    },
+    {
+      "bytes": 694,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/checkpoints/Family0003871.json",
+      "sha256": "4634f26cd507d5cb39b4f07488ea44f52a20d315991ee3657e2bdc0c78be20c1"
+    },
+    {
+      "bytes": 274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.raw.nwk",
+      "sha256": "3b44f54fdb6a7ff7eb593b77ffd5a373580dcc6d3ab8f8a9bc99cc4ce8c7c46d"
+    },
+    {
+      "bytes": 306,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.rooted.nwk",
+      "sha256": "92f7ca6f7c6e6fe4165f8af73b3370a2a3ccb7ea97225c4336ea8f1f34d43217"
+    },
+    {
+      "bytes": 379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/biological_wgd_application_v1/satellite_v2/output/orthohmm_phylogeny/gene_trees/Family0003871.reconciled.nwk",
+      "sha256": "158e4ae34889a5ef3a42c973283de955a9e3c3441685aa9977d4b9ace6ce9782"
+    },
+    {
+      "bytes": 2029,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_rescore_audit_20260917.json",
+      "sha256": "1b8159c30f8ef0073223900164bdc847d089bcf578dd649dacf652336701175e"
+    },
+    {
+      "bytes": 2252621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_results_20260917.json",
+      "sha256": "17bd35ddb863b08d586044a70878dd55a61506d2cd1e3e5bee8119f27525078f"
+    },
+    {
+      "bytes": 399212,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_inputs_20260917.json",
+      "sha256": "fe32a36d3e310c1589e48c1860410bcba277929422fcf6a39e0856d79b902042"
+    },
+    {
+      "bytes": 579938,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/biological_wgd_application_v1/reference_groups.json",
+      "sha256": "080c5a2710beaa6aeb91301d34e4d3804c6e91f4b42537fd917bb6da8a18dbef"
+    }
+  ],
+  "limitations": [
+    "Post hoc selected-case mechanism diagnostic, not population accuracy or a tuning recommendation.",
+    "Tree topology, rooting, candidate membership, pair rules and constraints held fixed.",
+    "Rule effects conditional on these inputs do not prove ancestral-copy truth or correct topology.",
+    "No new uncertainty interval or global method ranking."
+  ],
+  "pair_evidence_sha256": "50340063fa554ab9bf9216e1a3b401bf8073d81a6150fed27bb74f912d8ba56e",
+  "protocol": {
+    "bytes": 2687,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/WGD_FIXED_TREE_RULE_PROTOCOL_20260928.md",
+    "sha256": "1659a135e2584c1b1b947447c5517d69ea52dcee1d804f8d9bd30b1569a27764"
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 7670,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_wgd_fixed_tree_rules.py",
+    "sha256": "2f3fcb2fee56d5a2c09e216e584897295929b37375d5adcd3f645f474c38fd0b"
+  },
+  "status": "fixed_tree_rule_diagnostic_complete",
+  "trace": {
+    "bytes": 111899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/biological_wgd_case_trace_20260917.json",
+    "sha256": "5b346d99d1ac063fdf169ecf76fde69390d876073e9c27d43968469936ac07cc"
+  }
+}
