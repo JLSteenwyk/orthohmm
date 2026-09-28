@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Signed Source Packages And libgomp Notices (2026-09-28)
+
+Previous turn pushed bundled-library section attribution as 5e718ff0. Located
+all three named source RPMs in the version-specific AlmaLinux vault. Downloaded
+and inventoried 105 regular members, including 95 patch files; second extraction
+reproduced every payload. Recovered eleven selected notice/header files,
+including libgomp's referenced GPL and runtime-exception texts. The libxml2/XZ
+notice texts match their binary-package counterparts byte-for-byte.
+
+All six source/binary package signatures and digests verify in a temporary RPM
+database using official keys with checked primary fingerprints. System keys and
+frozen environments are unchanged. See the
+[source-package review](IGRAPH_BUNDLED_SOURCE_PACKAGES_20260928.md).
+These results resolve named source retrieval, signature and missing-text gaps,
+not full build correspondence, transitive license coverage or release clearance.
+No production timing, unrelated-service action or DGX access occurred. The full
+publication goal remains active; this is verified provenance progress.
+
 ## Bundled Native Library Provenance (2026-09-28)
 
 Previous turn pushed the native-churn correction as 607f39ee. Rechecked actual

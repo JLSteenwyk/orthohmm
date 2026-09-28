@@ -1,0 +1,1039 @@
+{
+  "limitations": [
+    "Source package identities match binary SOURCERPM metadata; compilation and source-to-binary reproduction were not performed.",
+    "Only explicitly selected source notices and one libgomp header were exported; this is not complete transitive license coverage.",
+    "Distribution patches remain retained and hashed, not applied or evaluated for correctness.",
+    "Raw source RPMs, nested archives, patches and notice exports stay local, not committed to the source repository."
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "selected_source_material": [
+    {
+      "archive": {
+        "bytes": 5467389,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7.tar.gz",
+        "sha256": "f63c5e7d30362ed28b38bfa1ac6313f9a80230720b7fb6c80575eeab3ff5900c"
+      },
+      "requested": [
+        "Copyright"
+      ],
+      "selected_members": [
+        {
+          "file": {
+            "bytes": 1289,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7.tar.gz.notices/Copyright",
+            "sha256": "c5c63674f8a83c4d2e385d96d1c670a03cb871ba2927755467017317878574bd"
+          },
+          "member": "libxml2-2.9.7/Copyright"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "bytes": 1053868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/xz-5.2.4.tar.xz",
+        "sha256": "9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b"
+      },
+      "requested": [
+        "COPYING",
+        "COPYING.GPLv2",
+        "COPYING.GPLv3",
+        "COPYING.LGPLv2.1"
+      ],
+      "selected_members": [
+        {
+          "file": {
+            "bytes": 26530,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4.tar.xz.notices/COPYING.LGPLv2.1",
+            "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+          },
+          "member": "xz-5.2.4/COPYING.LGPLv2.1"
+        },
+        {
+          "file": {
+            "bytes": 35147,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4.tar.xz.notices/COPYING.GPLv3",
+            "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+          },
+          "member": "xz-5.2.4/COPYING.GPLv3"
+        },
+        {
+          "file": {
+            "bytes": 18092,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4.tar.xz.notices/COPYING.GPLv2",
+            "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+          },
+          "member": "xz-5.2.4/COPYING.GPLv2"
+        },
+        {
+          "file": {
+            "bytes": 2775,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4.tar.xz.notices/COPYING",
+            "sha256": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+          },
+          "member": "xz-5.2.4/COPYING"
+        }
+      ]
+    },
+    {
+      "archive": {
+        "bytes": 57977652,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc-8.5.0-20210514.tar.xz",
+        "sha256": "09718a9a8b3b55c13dc4e0de6f353ca6bfe9a23fcae5d7ba3991ffc055b10245"
+      },
+      "requested": [
+        "COPYING",
+        "COPYING.LIB",
+        "COPYING.RUNTIME",
+        "COPYING3",
+        "COPYING3.LIB",
+        "libgomp/libgomp.h"
+      ],
+      "selected_members": [
+        {
+          "file": {
+            "bytes": 18002,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/COPYING",
+            "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+          },
+          "member": "gcc-8.5.0-20210514/COPYING"
+        },
+        {
+          "file": {
+            "bytes": 26527,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/COPYING.LIB",
+            "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+          },
+          "member": "gcc-8.5.0-20210514/COPYING.LIB"
+        },
+        {
+          "file": {
+            "bytes": 3324,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/COPYING.RUNTIME",
+            "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+          },
+          "member": "gcc-8.5.0-20210514/COPYING.RUNTIME"
+        },
+        {
+          "file": {
+            "bytes": 35147,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/COPYING3",
+            "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+          },
+          "member": "gcc-8.5.0-20210514/COPYING3"
+        },
+        {
+          "file": {
+            "bytes": 7639,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/COPYING3.LIB",
+            "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+          },
+          "member": "gcc-8.5.0-20210514/COPYING3.LIB"
+        },
+        {
+          "file": {
+            "bytes": 37215,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-20210514.tar.xz.notices/libgomp__libgomp.h",
+            "sha256": "0fbd6fcdfa137bc1a49721b42d8b2177c618195781bea18f3030c2317ad70414"
+          },
+          "member": "gcc-8.5.0-20210514/libgomp/libgomp.h"
+        }
+      ]
+    }
+  ],
+  "signature_receipt": {
+    "bytes": 6525,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/igraph_bundled_rpm_signatures_20260928.json",
+    "sha256": "63036aa56d2bdbbfc93f49ab3e11a62f6e7995919d35d2331cb78872fc1d6094"
+  },
+  "source_archive_inventory": {
+    "bytes": 45102,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/member_inventory.json",
+    "sha256": "2384a98f3ced15c68ab02a7ee867c55d931893a95962bd24ea93b12b52f50be0"
+  },
+  "source_packages": [
+    {
+      "download": {
+        "file": {
+          "bytes": 5492177,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm",
+          "sha256": "b2875afcf1574425f3e70b33dfc265cbe018144e99d0a1b94b633772151a614c"
+        },
+        "url": "https://vault.almalinux.org/8.10/BaseOS/Source/Packages/libxml2-2.9.7-21.el8_10.3.src.rpm"
+      },
+      "members": [
+        {
+          "file": {
+            "bytes": 1119,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.11.0-fix-CVE-2023-39615.patch",
+            "sha256": "66f61fea7cde88569970e31c6ea8e53d770db66ba3cd77f4687ccce416820700"
+          },
+          "member": "libxml2-2.11.0-fix-CVE-2023-39615.patch"
+        },
+        {
+          "file": {
+            "bytes": 1004,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.12.5-CVE-2025-32415.patch",
+            "sha256": "1c597fdd7c4a0cf386c68b442b146a20dd0542c0ef94610270f951a7683b44e1"
+          },
+          "member": "libxml2-2.12.5-CVE-2025-32415.patch"
+        },
+        {
+          "file": {
+            "bytes": 1537,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.0-do-not-check-crc.patch",
+            "sha256": "5a53d640ebce5a96e35fbdf5f644c37642dfa3345a1dc4fc355728897c19b7e7"
+          },
+          "member": "libxml2-2.9.0-do-not-check-crc.patch"
+        },
+        {
+          "file": {
+            "bytes": 899,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2022-49043.patch",
+            "sha256": "df68505708ddc2dbeff7b1ebeb6835eb47259c26ca920264db9e26327ab9b183"
+          },
+          "member": "libxml2-2.9.13-CVE-2022-49043.patch"
+        },
+        {
+          "file": {
+            "bytes": 2894,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2023-28484.2.patch",
+            "sha256": "a82b8fa37de1ee4f1e59b16728b4daa91fa3adbc1c62f7fd390b3de1f544150d"
+          },
+          "member": "libxml2-2.9.13-CVE-2023-28484.2.patch"
+        },
+        {
+          "file": {
+            "bytes": 2730,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2023-28484.patch",
+            "sha256": "cf683619ee24ee3f8e04848764f4b9ffa7fefc7c72cff8d54abfe10f152a94b7"
+          },
+          "member": "libxml2-2.9.13-CVE-2023-28484.patch"
+        },
+        {
+          "file": {
+            "bytes": 1273,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2024-56171.patch",
+            "sha256": "5fb5bed3c40fee5ecb60dbf96fd6c5071f08a54487f534540c54bc9cb6d5b16e"
+          },
+          "member": "libxml2-2.9.13-CVE-2024-56171.patch"
+        },
+        {
+          "file": {
+            "bytes": 1806,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2025-24928.patch",
+            "sha256": "e3585a9e59f3146a53a1091fd00378e81676a824feab037cd8d71807cea73c73"
+          },
+          "member": "libxml2-2.9.13-CVE-2025-24928.patch"
+        },
+        {
+          "file": {
+            "bytes": 2525,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2025-32414.patch",
+            "sha256": "281f3a1997a613f70216d404e0b8f42a0c5bd696f28d365deb72ffb3b9ec64fc"
+          },
+          "member": "libxml2-2.9.13-CVE-2025-32414.patch"
+        },
+        {
+          "file": {
+            "bytes": 6612,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2025-49794.patch",
+            "sha256": "3f8c7024bbeef35ed87dbfdc9cc1a901e5a0c9e4da2510791bc57ff50d82a61c"
+          },
+          "member": "libxml2-2.9.13-CVE-2025-49794.patch"
+        },
+        {
+          "file": {
+            "bytes": 1431,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.13-CVE-2025-6021.patch",
+            "sha256": "8812f3f9914659959fbf941de5b98ed958245e98c8ee7c26f39e9233b4420050"
+          },
+          "member": "libxml2-2.9.13-CVE-2025-6021.patch"
+        },
+        {
+          "file": {
+            "bytes": 431,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.4-remove-pyverify_fd.patch",
+            "sha256": "c9cebff010bd99c5453847e87b9fa8fdd7f744f415bf680b3650877789460ca9"
+          },
+          "member": "libxml2-2.9.4-remove-pyverify_fd.patch"
+        },
+        {
+          "file": {
+            "bytes": 2809,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2016-3709.patch",
+            "sha256": "f4b41c242d4ad4124c9fc7ad8865a35501a5ed2ddc02758c406abe7e7c30ca6d"
+          },
+          "member": "libxml2-2.9.7-CVE-2016-3709.patch"
+        },
+        {
+          "file": {
+            "bytes": 1013,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2019-20388.patch",
+            "sha256": "c5b016b79e87714cb31286077bda390774d7ab15a697eef825ab5c49b1a30120"
+          },
+          "member": "libxml2-2.9.7-CVE-2019-20388.patch"
+        },
+        {
+          "file": {
+            "bytes": 1052,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2020-24977.patch",
+            "sha256": "701048e726e2f3f7f2a71a7054030fc154b5edace72e23c5934ecd9ee09ad811"
+          },
+          "member": "libxml2-2.9.7-CVE-2020-24977.patch"
+        },
+        {
+          "file": {
+            "bytes": 994,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2020-7595.patch",
+            "sha256": "c6105ff40d7b1b140fcd821b5d64ab8c7b596708071c26964727e7352b07ac7e"
+          },
+          "member": "libxml2-2.9.7-CVE-2020-7595.patch"
+        },
+        {
+          "file": {
+            "bytes": 1071,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2021-3516.patch",
+            "sha256": "fbb72aef195d4ff50fae59f776f967cc1327b8dcbde5c74103276a0ea05b3bb7"
+          },
+          "member": "libxml2-2.9.7-CVE-2021-3516.patch"
+        },
+        {
+          "file": {
+            "bytes": 1501,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2021-3517.patch",
+            "sha256": "4db6e995d46f5ab29c4169dab5dbbe367ebd01dee66ef1750abe5cf0c8364d42"
+          },
+          "member": "libxml2-2.9.7-CVE-2021-3517.patch"
+        },
+        {
+          "file": {
+            "bytes": 7400,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2021-3518.patch",
+            "sha256": "bc4160a1b023a235d7dc116884248f0cc1400f4be03ba7a73d96c39b4cf68693"
+          },
+          "member": "libxml2-2.9.7-CVE-2021-3518.patch"
+        },
+        {
+          "file": {
+            "bytes": 1520,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2021-3537.patch",
+            "sha256": "8a047f3d44a86eeade61f907d7c9f45d732aa35fd1523b36a05ee429e4174019"
+          },
+          "member": "libxml2-2.9.7-CVE-2021-3537.patch"
+        },
+        {
+          "file": {
+            "bytes": 2117,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2021-3541.patch",
+            "sha256": "a274b9cc56cee3fc264b91cd9fe0dff7f124eff8c4d81e70f96ad7e6283e86b2"
+          },
+          "member": "libxml2-2.9.7-CVE-2021-3541.patch"
+        },
+        {
+          "file": {
+            "bytes": 6100,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2022-23308.patch",
+            "sha256": "dc5f24fab58c11f70e73e18e9cf1d8e958ca1ebcbdbef76ab98709ad9ee5dc3c"
+          },
+          "member": "libxml2-2.9.7-CVE-2022-23308.patch"
+        },
+        {
+          "file": {
+            "bytes": 10848,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2022-29824.patch",
+            "sha256": "85c5ac72365b2e3319a5a8a34cb448904ce864f52f35d3b31ceed48e5eabe2e0"
+          },
+          "member": "libxml2-2.9.7-CVE-2022-29824.patch"
+        },
+        {
+          "file": {
+            "bytes": 21439,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2022-40303.patch",
+            "sha256": "f1fcfa9b3eec298b7daf04cf34d44f440251f4abea29e6a32a4f68a54461af97"
+          },
+          "member": "libxml2-2.9.7-CVE-2022-40303.patch"
+        },
+        {
+          "file": {
+            "bytes": 4008,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2022-40304.patch",
+            "sha256": "9cc4596920d1b890a6446d6d47061559328c01600e03677d69bafe617ad9ab08"
+          },
+          "member": "libxml2-2.9.7-CVE-2022-40304.patch"
+        },
+        {
+          "file": {
+            "bytes": 1175,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2023-29469.patch",
+            "sha256": "599ae2ed2eefdc79917e33b025093981084fd77447ff21024aff4e427103db35"
+          },
+          "member": "libxml2-2.9.7-CVE-2023-29469.patch"
+        },
+        {
+          "file": {
+            "bytes": 846,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2024-25062.patch",
+            "sha256": "fb6384bb7db082ca2d0983c57654551c2e06f574c31955779d8134316c3cf259"
+          },
+          "member": "libxml2-2.9.7-CVE-2024-25062.patch"
+        },
+        {
+          "file": {
+            "bytes": 29324,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7-CVE-2025-7425.patch",
+            "sha256": "f767892ef1b34316b46f40a7f6711c088136605230995636e0dc21569eecf9ef"
+          },
+          "member": "libxml2-2.9.7-CVE-2025-7425.patch"
+        },
+        {
+          "file": {
+            "bytes": 5467389,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-2.9.7.tar.gz",
+            "sha256": "f63c5e7d30362ed28b38bfa1ac6313f9a80230720b7fb6c80575eeab3ff5900c"
+          },
+          "member": "libxml2-2.9.7.tar.gz"
+        },
+        {
+          "file": {
+            "bytes": 7008,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-CVE-2016-9597.patch",
+            "sha256": "97c71f626ddca661f8acfdc1c313cba3606fb7b936b73fc3f269991944fb2e16"
+          },
+          "member": "libxml2-CVE-2016-9597.patch"
+        },
+        {
+          "file": {
+            "bytes": 1829,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-CVE-2018-14404.patch",
+            "sha256": "92facc8077b04118160aee467eac5b611e841fb830c93e2da57cb6f7f9724ab6"
+          },
+          "member": "libxml2-CVE-2018-14404.patch"
+        },
+        {
+          "file": {
+            "bytes": 1643,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-CVE-2018-9251.patch",
+            "sha256": "391e5284ed25205457db007f69dee0cbd14ca40c5c7acd901b14b3b6ac2655ac"
+          },
+          "member": "libxml2-CVE-2018-9251.patch"
+        },
+        {
+          "file": {
+            "bytes": 910,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-CVE-2019-19956.patch",
+            "sha256": "f2db07f3543da797c6e1e7de63dd34a79ccf48005906e9bf8b414e05f38d0c7a"
+          },
+          "member": "libxml2-CVE-2019-19956.patch"
+        },
+        {
+          "file": {
+            "bytes": 1655,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-clamp-output-bytes-overflow.patch",
+            "sha256": "f8a8da26f5e34c006d0e45dba5de24e7a8c5d621f79015967eabbb326ec8cfd9"
+          },
+          "member": "libxml2-clamp-output-bytes-overflow.patch"
+        },
+        {
+          "file": {
+            "bytes": 490,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-multilib.patch",
+            "sha256": "55c37a185eb8ab7d69928733a246cd6c146b493df61bd6e59932a7a3d8975169"
+          },
+          "member": "libxml2-multilib.patch"
+        },
+        {
+          "file": {
+            "bytes": 1259,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2-python3-unicode-errors.patch",
+            "sha256": "37eb81a8ec6929eed1514e891bff2dd05b450bcf0c712153880c485b7366c17c"
+          },
+          "member": "libxml2-python3-unicode-errors.patch"
+        },
+        {
+          "file": {
+            "bytes": 24383,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm.members/libxml2.spec",
+            "sha256": "9ac414f64aa91fae7c3610d215cbf95b8f44963fd69ddd0a6549bbcbfc19ea31"
+          },
+          "member": "libxml2.spec"
+        }
+      ],
+      "metadata": "libxml2\n2.9.7\n21.el8_10.3\nx86_64\nMIT\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm: Header V4 RSA/SHA256 Signature, key ID ced7258b: NOKEY\n"
+    },
+    {
+      "download": {
+        "file": {
+          "bytes": 1075981,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm",
+          "sha256": "40f58591ffb8f0658671e6ea0b89960694afebd11b78b650e8c73a4657f2d6ad"
+        },
+        "url": "https://vault.almalinux.org/8.10/BaseOS/Source/Packages/xz-5.2.4-4.el8_6.src.rpm"
+      },
+      "members": [
+        {
+          "file": {
+            "bytes": 162,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/colorxzgrep.csh",
+            "sha256": "67e78cc79449a9eacb0be5bfe833f443508bc5602ce81af1847f20f0be1de25a"
+          },
+          "member": "colorxzgrep.csh"
+        },
+        {
+          "file": {
+            "bytes": 183,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/colorxzgrep.sh",
+            "sha256": "0446ca350ab8205a36deeab4c39413a87ea8b61588fe8385658c1083aad8fa3f"
+          },
+          "member": "colorxzgrep.sh"
+        },
+        {
+          "file": {
+            "bytes": 3488,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/xz-5.2.4-cve-2022-1271.patch",
+            "sha256": "98c6cb1042284fe704ec30083f3fc87364ce9ed2ea51f62bbb0ee9d3448717ec"
+          },
+          "member": "xz-5.2.4-cve-2022-1271.patch"
+        },
+        {
+          "file": {
+            "bytes": 1053868,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/xz-5.2.4.tar.xz",
+            "sha256": "9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b"
+          },
+          "member": "xz-5.2.4.tar.xz"
+        },
+        {
+          "file": {
+            "bytes": 12224,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm.members/xz.spec",
+            "sha256": "7e20f0a57c99b04a7a252be8b09d970c3633a30757222942a788f5ed9c883e86"
+          },
+          "member": "xz.spec"
+        }
+      ],
+      "metadata": "xz\n5.2.4\n4.el8_6\ni686\nGPLv2+ and Public Domain\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm: Header V4 RSA/SHA256 Signature, key ID c21ad6ea: NOKEY\n"
+    },
+    {
+      "download": {
+        "file": {
+          "bytes": 65715094,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm",
+          "sha256": "c94dbbd2cd6d5d01a5a6822ea18f8ce34942c25a80e17b4682d547d5e652dbd0"
+        },
+        "url": "https://vault.almalinux.org/8.10/BaseOS/Source/Packages/gcc-8.5.0-28.el8_10.alma.1.src.rpm"
+      },
+      "members": [
+        {
+          "file": {
+            "bytes": 57977652,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc-8.5.0-20210514.tar.xz",
+            "sha256": "09718a9a8b3b55c13dc4e0de6f353ca6bfe9a23fcae5d7ba3991ffc055b10245"
+          },
+          "member": "gcc-8.5.0-20210514.tar.xz"
+        },
+        {
+          "file": {
+            "bytes": 134235,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc.spec",
+            "sha256": "38ac48c80d6ecf0715594bd92503679c0e006139ca0361bd58b4c14805e5690b"
+          },
+          "member": "gcc.spec"
+        },
+        {
+          "file": {
+            "bytes": 1883,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-RHEL-32886.patch",
+            "sha256": "3440afe45bbb384c2854bdad102629001c27ae526b1e0ea765e4a77be844dd25"
+          },
+          "member": "gcc8-RHEL-32886.patch"
+        },
+        {
+          "file": {
+            "bytes": 59891,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-Wbidi-chars.patch",
+            "sha256": "5f989a394cd421d25842164db561feb88db22dd95b781ae9986fad06e2e8b0f8"
+          },
+          "member": "gcc8-Wbidi-chars.patch"
+        },
+        {
+          "file": {
+            "bytes": 1031,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-Wno-format-security.patch",
+            "sha256": "aa6dfe613e8b14ab3737bbf50417fdfc5a3c81a1f57a727484809c915dd15dd4"
+          },
+          "member": "gcc8-Wno-format-security.patch"
+        },
+        {
+          "file": {
+            "bytes": 6340,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-aarch64-mtune-neoverse-512tvb.patch",
+            "sha256": "e69fc71994b7adb5787e2610dbee3299638b47efbe52f432cab5f8602bd3ed8c"
+          },
+          "member": "gcc8-aarch64-mtune-neoverse-512tvb.patch"
+        },
+        {
+          "file": {
+            "bytes": 4124,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-foffload-default.patch",
+            "sha256": "2bfdd24d4771f68480cd66e7944f41d8f4a9509dd0d26d6963727de8e909bdb7"
+          },
+          "member": "gcc8-foffload-default.patch"
+        },
+        {
+          "file": {
+            "bytes": 4894,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-hack.patch",
+            "sha256": "fdb0fdf99c44f3e611ff8f8edd7ee039093ed5b6db67082152c5ad47c05cd995"
+          },
+          "member": "gcc8-hack.patch"
+        },
+        {
+          "file": {
+            "bytes": 10127,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-harden-1.patch",
+            "sha256": "0b0d18ae996e6bfe853c6d69cbb291e9f45b8528bfb3da0465935bf55fe955fe"
+          },
+          "member": "gcc8-harden-1.patch"
+        },
+        {
+          "file": {
+            "bytes": 6207,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-harden-2.patch",
+            "sha256": "9cbb0da3bb5b5a38454dc9141ccaaa443885a4712568506cd424f622871be0da"
+          },
+          "member": "gcc8-harden-2.patch"
+        },
+        {
+          "file": {
+            "bytes": 4006,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-harden-3.patch",
+            "sha256": "c2d68c00f57809128c6b58f8cf2f800b55a3bcfa902b2dedf79e5ee22aa91cc5"
+          },
+          "member": "gcc8-harden-3.patch"
+        },
+        {
+          "file": {
+            "bytes": 2276,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-harden-4.patch",
+            "sha256": "5675bdc97ffd3672760d2ac90df84c7cc116718d76858eafe627402cca5d34ec"
+          },
+          "member": "gcc8-harden-4.patch"
+        },
+        {
+          "file": {
+            "bytes": 376,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-i386-libgomp.patch",
+            "sha256": "bff2e7b7d0b419f9b396347090f06a11f87ca215849ab5858d21165a38cb21b1"
+          },
+          "member": "gcc8-i386-libgomp.patch"
+        },
+        {
+          "file": {
+            "bytes": 36379,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-isl-dl.patch",
+            "sha256": "2e62adfed8380151ea6af13cc276017df7be8e6149d7ec1970ae3e0d6ee44966"
+          },
+          "member": "gcc8-isl-dl.patch"
+        },
+        {
+          "file": {
+            "bytes": 659,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libgcc-hardened.patch",
+            "sha256": "bea6407c9d00b51db647d48db5955c3b8e945c8dfc6bb5cb8bfe5a079a99b000"
+          },
+          "member": "gcc8-libgcc-hardened.patch"
+        },
+        {
+          "file": {
+            "bytes": 14862,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libgfortran-default-values.patch",
+            "sha256": "5b8d90ee86286efb6f13022197faa757f4c6190833b58294a078d9a5573e5a0d"
+          },
+          "member": "gcc8-libgfortran-default-values.patch"
+        },
+        {
+          "file": {
+            "bytes": 311166,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libgomp-20190503.patch",
+            "sha256": "75cd578060e6ccb8a16335b5896b628199e470e81e8ee8c682ac09b572290190"
+          },
+          "member": "gcc8-libgomp-20190503.patch"
+        },
+        {
+          "file": {
+            "bytes": 503,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libgomp-omp_h-multilib.patch",
+            "sha256": "58837a6070cbaab4a5453843d4ce12f595948129c04c78af272aefce7c15573d"
+          },
+          "member": "gcc8-libgomp-omp_h-multilib.patch"
+        },
+        {
+          "file": {
+            "bytes": 2055,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libgomp-testsuite.patch",
+            "sha256": "065bd741bcfc6720292c164106e4d1a8a47344e10de0e9b135c89d12248d8608"
+          },
+          "member": "gcc8-libgomp-testsuite.patch"
+        },
+        {
+          "file": {
+            "bytes": 1233,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-docs.patch",
+            "sha256": "e014fc3234f78ba94860ff192917774c6bc2d1f6c391af44baf8cbad62f0bbd5"
+          },
+          "member": "gcc8-libstdc++-docs.patch"
+        },
+        {
+          "file": {
+            "bytes": 2482,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-make_shared.patch",
+            "sha256": "15c7e5bd0fce1a2580f46ba081a02c073540b347cc8dced4cc90a82038a2f39c"
+          },
+          "member": "gcc8-libstdc++-make_shared.patch"
+        },
+        {
+          "file": {
+            "bytes": 1311,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-prettyprinter-update-15-tests-48362.patch",
+            "sha256": "70e1b744953205ffa651666476b0caa98759b0390f79694624c2baae0f903a59"
+          },
+          "member": "gcc8-libstdc++-prettyprinter-update-15-tests-48362.patch"
+        },
+        {
+          "file": {
+            "bytes": 1187,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-prettyprinter-update-15-tests-cxx11.patch",
+            "sha256": "159ad09fd14b7fc5bae77834dca9528941a199b5190ae81be248f62e2c598513"
+          },
+          "member": "gcc8-libstdc++-prettyprinter-update-15-tests-cxx11.patch"
+        },
+        {
+          "file": {
+            "bytes": 1814,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-prettyprinter-update-15-tests-cxx17.patch",
+            "sha256": "e0b40022f6f78512be2bedb4412f38159792c595f97b6d6e44efe3f7af393bff"
+          },
+          "member": "gcc8-libstdc++-prettyprinter-update-15-tests-cxx17.patch"
+        },
+        {
+          "file": {
+            "bytes": 22163,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-prettyprinter-update-15-tests.patch",
+            "sha256": "6f3a99790b4347f5f9e6a36fa9331b2a6882eebcb15e3bcd1d3871e2c9152a76"
+          },
+          "member": "gcc8-libstdc++-prettyprinter-update-15-tests.patch"
+        },
+        {
+          "file": {
+            "bytes": 163384,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libstdc++-prettyprinter-update-15.patch",
+            "sha256": "0c53b2fee21e10816c1c241929b78280b0319b14d35a0a2dd143bcf637742016"
+          },
+          "member": "gcc8-libstdc++-prettyprinter-update-15.patch"
+        },
+        {
+          "file": {
+            "bytes": 1192,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-libtool-no-rpath.patch",
+            "sha256": "502d2f4a0a38687b8529a70a25e53544cfb4856860d65fa86ce356af939dc6f9"
+          },
+          "member": "gcc8-libtool-no-rpath.patch"
+        },
+        {
+          "file": {
+            "bytes": 586,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-mcet.patch",
+            "sha256": "61ffbff52e69b640dccfd91df8cc18703873dee7408409c02c517afacef59fcc"
+          },
+          "member": "gcc8-mcet.patch"
+        },
+        {
+          "file": {
+            "bytes": 2188,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-no-add-needed.patch",
+            "sha256": "e49539bd8d6349adb242555fd378dc236d9de66064be268e57498ce7e8ccd229"
+          },
+          "member": "gcc8-no-add-needed.patch"
+        },
+        {
+          "file": {
+            "bytes": 31210,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pch-tweaks.patch",
+            "sha256": "3ae93c2cf988ea91fc758f8a56e3ed903f2db2b3a9c79a9012c0f795acf6d34a"
+          },
+          "member": "gcc8-pch-tweaks.patch"
+        },
+        {
+          "file": {
+            "bytes": 2721,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr100508.patch",
+            "sha256": "6769e2ceec54092cc9f052061cffa1b2eb48ddf74c5312d1c096e61d65911ea0"
+          },
+          "member": "gcc8-pr100508.patch"
+        },
+        {
+          "file": {
+            "bytes": 4580,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr100797.patch",
+            "sha256": "e3f23a06e3c8818232dd455e1e346717b45b11d4881d2492b34f06132898ed13"
+          },
+          "member": "gcc8-pr100797.patch"
+        },
+        {
+          "file": {
+            "bytes": 2840,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr105502.patch",
+            "sha256": "ddd062f138ecc2871a76a7ad2f367e8462d4f4a10bb424d740de20a2cbac3686"
+          },
+          "member": "gcc8-pr105502.patch"
+        },
+        {
+          "file": {
+            "bytes": 1769,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr111039.patch",
+            "sha256": "fb30c89c8ef9506212fe01e59d3c56103d9a1b0eee35f9b6804046eb008e33d4"
+          },
+          "member": "gcc8-pr111039.patch"
+        },
+        {
+          "file": {
+            "bytes": 2035,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr111070.patch",
+            "sha256": "a3b9af4dbb951231a07f4bfbbaaef247bc90a0c98fdc9226af37a0ebdbe690b8"
+          },
+          "member": "gcc8-pr111070.patch"
+        },
+        {
+          "file": {
+            "bytes": 2287,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr118976.patch",
+            "sha256": "20022f1b7373ef8e9fd586900074e2be677c84c9b85d48ce1cd92cca797b4811"
+          },
+          "member": "gcc8-pr118976.patch"
+        },
+        {
+          "file": {
+            "bytes": 1789,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr87723.patch",
+            "sha256": "e90e5e324c720ec4dca034e7f117a1d73ffeea078bf00c758b98c68e15ae9bb9"
+          },
+          "member": "gcc8-pr87723.patch"
+        },
+        {
+          "file": {
+            "bytes": 11104,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr96796.patch",
+            "sha256": "ed2997c7557620e701bf305d0d9abc4e6668101ead38ec0d184e183e8f962e29"
+          },
+          "member": "gcc8-pr96796.patch"
+        },
+        {
+          "file": {
+            "bytes": 2202,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr99074.patch",
+            "sha256": "a9c989fad0287b7753847798a5ef2966669fc7ed6202352b565b192cf3c27a07"
+          },
+          "member": "gcc8-pr99074.patch"
+        },
+        {
+          "file": {
+            "bytes": 1541,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-pr99536.patch",
+            "sha256": "9d847836165bc3ca42bb2bf077669f2fd5ed379d907f13b1809317fe67c8db7d"
+          },
+          "member": "gcc8-pr99536.patch"
+        },
+        {
+          "file": {
+            "bytes": 199097,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-remove-old-demangle.patch",
+            "sha256": "8da69d64255cb907188451806b809c62d3c19b914409237baf7b8a7a3f4f309a"
+          },
+          "member": "gcc8-remove-old-demangle.patch"
+        },
+        {
+          "file": {
+            "bytes": 15985,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1512529-aarch64.patch",
+            "sha256": "b7b6cd3eb040b4b7c3bc73293d52a792f642408fa9974e1274927eaebe2efbdf"
+          },
+          "member": "gcc8-rh1512529-aarch64.patch"
+        },
+        {
+          "file": {
+            "bytes": 1238,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1574936.patch",
+            "sha256": "5e821a57e469d1d555514f43a418d19737bd185abfbea1818f6dd30d3880cbe4"
+          },
+          "member": "gcc8-rh1574936.patch"
+        },
+        {
+          "file": {
+            "bytes": 14107,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1668903-1.patch",
+            "sha256": "701f9aed3f1f97b8bcf0f7d3ca9a8333b735cf4a6dd32be4fb1c78ff49855fd6"
+          },
+          "member": "gcc8-rh1668903-1.patch"
+        },
+        {
+          "file": {
+            "bytes": 2381,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1668903-2.patch",
+            "sha256": "82673efc31b4f38c14b9ee5f6c6dd09bc2bd3e019aacf4ea40cc44f9ad122e83"
+          },
+          "member": "gcc8-rh1668903-2.patch"
+        },
+        {
+          "file": {
+            "bytes": 3856,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1668903-3.patch",
+            "sha256": "ab0cb28a841835825e8c576226d1e029c63abf9e191654e21291dec9a5fe529c"
+          },
+          "member": "gcc8-rh1668903-3.patch"
+        },
+        {
+          "file": {
+            "bytes": 2969,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1670535.patch",
+            "sha256": "ade4568ebc18437ed9706fb40a3cfe7431bff08abd41dad0c83cd96237835cb2"
+          },
+          "member": "gcc8-rh1670535.patch"
+        },
+        {
+          "file": {
+            "bytes": 2489,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1960701.patch",
+            "sha256": "b8ee78caa3c050c3af6a541f9e97e427de935f34a4c7d8440e764b4721575fe3"
+          },
+          "member": "gcc8-rh1960701.patch"
+        },
+        {
+          "file": {
+            "bytes": 2232,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh1981822.patch",
+            "sha256": "4742d033b089d27ba5d99713fd0708cd785336421c0ceb8df3ae761c5d69407b"
+          },
+          "member": "gcc8-rh1981822.patch"
+        },
+        {
+          "file": {
+            "bytes": 15533,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh2001788.patch",
+            "sha256": "044feb5f61daf42fa9a8a980f78620f25b473fa6db0b85277c60b421d6c619be"
+          },
+          "member": "gcc8-rh2001788.patch"
+        },
+        {
+          "file": {
+            "bytes": 3512,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh2028609.patch",
+            "sha256": "cd2b7c4c909e86445dc362798a64504ce26973ed7656acbf26201e2205a93ba1"
+          },
+          "member": "gcc8-rh2028609.patch"
+        },
+        {
+          "file": {
+            "bytes": 3341,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh2117838.patch",
+            "sha256": "9e746c650260f1e94321fd0be57a49b3b377225ad5666e672e3646e4e07b3c50"
+          },
+          "member": "gcc8-rh2117838.patch"
+        },
+        {
+          "file": {
+            "bytes": 3363,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh2137448.patch",
+            "sha256": "912cb6e65f38ef974f9f373a508b0ded1e478c3813414e4c5c2596b4ab463b52"
+          },
+          "member": "gcc8-rh2137448.patch"
+        },
+        {
+          "file": {
+            "bytes": 1997,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-rh2213753.patch",
+            "sha256": "180dff446ae1664bf4a1c2b0e68cf3286c863aa1ed393241abf694794768fbb7"
+          },
+          "member": "gcc8-rh2213753.patch"
+        },
+        {
+          "file": {
+            "bytes": 3101,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-s390x-regarg-1.patch",
+            "sha256": "9a6d6aca5cda9f00d49937d61a0ef97b9e9b30418625fe583a123c1a296cf790"
+          },
+          "member": "gcc8-s390x-regarg-1.patch"
+        },
+        {
+          "file": {
+            "bytes": 3948,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-s390x-regarg-2.patch",
+            "sha256": "c4dde785b9ac63884d21ca462cc9511dcc05e6da1432215b73728bf11aac7424"
+          },
+          "member": "gcc8-s390x-regarg-2.patch"
+        },
+        {
+          "file": {
+            "bytes": 18302,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-s390x-regarg-3.patch",
+            "sha256": "197c59480fdca30927d8229b57bc04c8d4e9794b193670874543ebbbaed125d7"
+          },
+          "member": "gcc8-s390x-regarg-3.patch"
+        },
+        {
+          "file": {
+            "bytes": 1913,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/gcc8-sparc-config-detection.patch",
+            "sha256": "f70a2e4525c2e58d0f8dcacd995d5fbdcfb51d18776fcc19741779b4840d331c"
+          },
+          "member": "gcc8-sparc-config-detection.patch"
+        },
+        {
+          "file": {
+            "bytes": 6918480,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/nvptx-newlib-aadc8eb0ec43b7cd0dd2dfb484bae63c8b05ef24.tar.xz",
+            "sha256": "aa2b782a2df1b021117437a4940e9b45528310d450eaaca4c1f8df3dc7ec977d"
+          },
+          "member": "nvptx-newlib-aadc8eb0ec43b7cd0dd2dfb484bae63c8b05ef24.tar.xz"
+        },
+        {
+          "file": {
+            "bytes": 330,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/nvptx-tools-build.patch",
+            "sha256": "aa323df6bebd060fcac98a7d6387ec469bb48ee39546d1b458a06db776e606c8"
+          },
+          "member": "nvptx-tools-build.patch"
+        },
+        {
+          "file": {
+            "bytes": 519308,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/nvptx-tools-c28050f60193b3b95a18866a96f03334e874e78f.tar.xz",
+            "sha256": "f5c09b9fe820f5825c6cbb06871a32b29cd6600003edf301130f859408c62389"
+          },
+          "member": "nvptx-tools-c28050f60193b3b95a18866a96f03334e874e78f.tar.xz"
+        },
+        {
+          "file": {
+            "bytes": 844,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/nvptx-tools-glibc.patch",
+            "sha256": "c683b3818f12182042276552dd40694e38454c862d294ed3563c8a99510bb9a8"
+          },
+          "member": "nvptx-tools-glibc.patch"
+        },
+        {
+          "file": {
+            "bytes": 28602,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm.members/nvptx-tools-no-ptxas.patch",
+            "sha256": "047a24d5ecf11ababe137b9d73779f9ac5726c7a7b27d4ed7fe11b5061bddbc0"
+          },
+          "member": "nvptx-tools-no-ptxas.patch"
+        }
+      ],
+      "metadata": "gcc\n8.5.0\n28.el8_10.alma.1\nx86_64\nGPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD\n",
+      "metadata_stderr": "warning: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm: Header V4 RSA/SHA256 Signature, key ID ced7258b: NOKEY\n"
+    }
+  ],
+  "status": "distribution_source_packages_acquired_and_inventoried"
+}

@@ -1,5 +1,10 @@
 # Bundled igraph Libraries: Distribution Evidence
 
+Follow-up: [signed source packages recovered](IGRAPH_BUNDLED_SOURCE_PACKAGES_20260928.md)
+resolves the source-location and package-signature gaps recorded below and
+recovers libgomp's referenced license texts. The following account preserves
+the initial inspection's scope; full build correspondence remains unproven.
+
 Inspected the exact retained igraph 1.0.0 x86-64 wheel without importing it,
 executing its libraries or modifying any benchmark environment. Its ELF debug
 links identify more specific distribution builds than the shared-library names.

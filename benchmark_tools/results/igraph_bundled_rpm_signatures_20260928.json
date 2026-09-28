@@ -1,0 +1,96 @@
+{
+  "import_stderr": "",
+  "key": {
+    "bytes": 5150,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/RPM-GPG-KEY-AlmaLinux",
+    "sha256": "2cbe597b108cefbf571d8d430d238d0a7a6575eebf6c80649be5e10c323e7023"
+  },
+  "key_inspection_stderr": "gpg: keybox '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/tmpfj0a9e4n/gnupg/pubring.kbx' created\ngpg: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/tmpfj0a9e4n/gnupg/trustdb.gpg: trustdb created\n",
+  "key_inspection_stdout": "pub:e:4096:1:488FCF7C3ABB34F8:1610451214:1705059214::-:::c::::::23::0:\nfpr:::::::::5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8:\nuid:e::::1610451214::53A3867E7CDFA56523148BF531EB8CE8DBBAFA3F::AlmaLinux <packager@almalinux.org>::::::::::0:\nsub:e:3072:1:51D6647EC21AD6EA:1610451398:1705059214:::::s::::::23:\nfpr:::::::::E53CF5EF91CEB0AD1812ECB851D6647EC21AD6EA:\npub:-:4096:1:2AE81E8ACED7258B:1696928879:::-:::scSC::::::23::0:\nfpr:::::::::BC5EDDCADF502C077F1582882AE81E8ACED7258B:\nuid:-::::1696928879::1C9B4A64DC309AB00C0978768A9B823FC0B9BCC0::AlmaLinux OS 8 <packager@almalinux.org>::::::::::0:\n",
+  "limitations": [
+    "Keys acquired over official HTTPS and fingerprints compared to published AlmaLinux documentation/source; no offline trust ceremony.",
+    "Isolated temporary RPM database only; no system key import, package installation or package script execution.",
+    "Signature verification is distribution-artifact authentication, not source-to-wheel build reproduction or security clearance."
+  ],
+  "packages": [
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 5492177,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm",
+        "sha256": "b2875afcf1574425f3e70b33dfc265cbe018144e99d0a1b94b633772151a614c"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/libxml2-2.9.7-21.el8_10.3.src.rpm:\n    Header V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    MD5 digest: OK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 1075981,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm",
+        "sha256": "40f58591ffb8f0658671e6ea0b89960694afebd11b78b650e8c73a4657f2d6ad"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/xz-5.2.4-4.el8_6.src.rpm:\n    Header V4 RSA/SHA256 Signature, key ID c21ad6ea: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID c21ad6ea: OK\n    MD5 digest: OK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 65715094,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm",
+        "sha256": "c94dbbd2cd6d5d01a5a6822ea18f8ce34942c25a80e17b4682d547d5e652dbd0"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_sources_20260928/gcc-8.5.0-28.el8_10.alma.1.src.rpm:\n    Header V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    MD5 digest: OK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 713304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libxml2-2.9.7-21.el8_10.3.x86_64.rpm",
+        "sha256": "cd2fc223ea42e10e5b9a25eb5e4647d0e72c799ace1305fb3cc8ae776879f130"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libxml2-2.9.7-21.el8_10.3.x86_64.rpm:\n    Header V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    MD5 digest: OK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 95020,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/xz-libs-5.2.4-4.el8_6.x86_64.rpm",
+        "sha256": "eab633cd7e81de007792509bfbea6cbd48dec90e4c0f18a4c1c337cb9c06ee51"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/xz-libs-5.2.4-4.el8_6.x86_64.rpm:\n    Header V4 RSA/SHA256 Signature, key ID c21ad6ea: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID c21ad6ea: OK\n    MD5 digest: OK\n"
+    },
+    {
+      "exit_code": 0,
+      "file": {
+        "bytes": 212868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libgomp-8.5.0-28.el8_10.alma.1.x86_64.rpm",
+        "sha256": "fba0574d69f6a946696c031e834312f428fe585a4a7842906fc4353ca317b6f0"
+      },
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/igraph_bundled_rpms_20260928/libgomp-8.5.0-28.el8_10.alma.1.x86_64.rpm:\n    Header V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    Header SHA256 digest: OK\n    Header SHA1 digest: OK\n    Payload SHA256 digest: OK\n    V4 RSA/SHA256 Signature, key ID ced7258b: OK\n    MD5 digest: OK\n"
+    }
+  ],
+  "primary_fingerprints": [
+    "5E9B8F5617B5066CE92057C3488FCF7C3ABB34F8",
+    "BC5EDDCADF502C077F1582882AE81E8ACED7258B"
+  ],
+  "redistribution_clearance": false,
+  "status": "isolated_rpm_signature_check",
+  "system_keyring_modified": false,
+  "tools": [
+    {
+      "bytes": 23400,
+      "path": "/usr/bin/rpm",
+      "sha256": "732ba564c92a0033ac79a1d1da22aee095c684216bc0416d9166ccc56a8cbb83"
+    },
+    {
+      "bytes": 1147800,
+      "path": "/usr/bin/gpg",
+      "sha256": "7b98a0628743c31fb4b3fec9cd71b672454145713d39359da575520c4ee8b03a"
+    }
+  ]
+}
