@@ -1,0 +1,737 @@
+{
+  "production_authorized": false,
+  "purpose": "Retained native fixture observations with an intentionally empty ordinary-process policy; not live preflight or approved policy",
+  "results": [
+    {
+      "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+      "changed_processes": [
+        {
+          "pid": 97,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 913,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1250,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1290,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 131070,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 872232,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 987266,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1015273,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1123911,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1175646,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1206392,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1226817,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1228648,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1242954,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1243578,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1247389,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1253319,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1254312,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1255094,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1255762,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1308737,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1338700,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1344281,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1345570,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1346309,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1347740,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1366521,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1390324,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1781886,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1783337,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1792272,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1899701,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2005114,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2017702,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2053647,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2112676,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2113278,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2134759,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2141506,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2144017,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2168232,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2170566,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2177852,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2183433,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2183555,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2189418,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2582322,
+          "reason": "identity_or_membership_changed"
+        }
+      ],
+      "distinct_unreviewed_pids": 1960,
+      "foreign_average_cores": 71.3577183636383,
+      "foreign_cpu_diagnostic_reproduced": true,
+      "inputs": [
+        {
+          "bytes": 973252,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/host_processes.jsonl",
+          "sha256": "3b1648b3fe656da900d5b840bd45e33ddb0cd3975d41dde6ef9a66f9205fcfc0"
+        },
+        {
+          "bytes": 1266,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/host_process_summary.json",
+          "sha256": "862f86faeae28c58a82a286b81c64ffea92e6754c297f6ab90f71108471fb84b"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/ready.json",
+          "sha256": "cd1baca1d3ae3f709fba9dac3f7c98c6173c2fc2a6118859ece2dfcc51e242bd"
+        },
+        {
+          "bytes": 179489,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000000.json",
+          "sha256": "764160a4049f57d8556e93b079d7fb32fb458df0561e5d026567b042e0037eb0"
+        }
+      ],
+      "job_id": 22367,
+      "job_scope": "/system.slice/slurmstepd.scope/job_22367",
+      "status": "unresolved_process_inventory",
+      "unreviewed_snapshot_entries": 3908
+    },
+    {
+      "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+      "changed_processes": [
+        {
+          "pid": 97,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1310,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1311,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1390,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 831603,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 853342,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 857055,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 866332,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1085297,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1123911,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1128103,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1142106,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1174213,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1208815,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1213009,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1215365,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1226817,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1227929,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1228648,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1230695,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1232063,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1233460,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1242954,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1252572,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1253071,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1253319,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1260383,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1323672,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1338700,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1342233,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1345878,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1366521,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1781406,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1782456,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1785926,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1792280,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1796924,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1800025,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1806228,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1806601,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1899701,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1900254,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1901171,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1993250,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2001721,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2017702,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2112676,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2118173,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2128490,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2141506,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2177037,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2182470,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2183555,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2189200,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2194661,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2582322,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2776554,
+          "reason": "identity_or_membership_changed"
+        }
+      ],
+      "distinct_unreviewed_pids": 1962,
+      "foreign_average_cores": 74.56989564375738,
+      "foreign_cpu_diagnostic_reproduced": true,
+      "inputs": [
+        {
+          "bytes": 976731,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/host_processes.jsonl",
+          "sha256": "1bd07e46dd8f64307f78ad983750bf02fb96de7923a3ae22a0f4ffe6942a2057"
+        },
+        {
+          "bytes": 1268,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/host_process_summary.json",
+          "sha256": "e799b5ec6254666d656683aef886ac254191194cb4de68b4063007c788e8ed6b"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/ready.json",
+          "sha256": "08f6c2df54bb9cdb2906258ede037bd7d8f2d00090d2e39af6e3384fb5752d51"
+        },
+        {
+          "bytes": 179612,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000000.json",
+          "sha256": "0b48d938f1801f3530e587237d7b9e3194f9d2eed909efd6e5d80473c20dfb91"
+        }
+      ],
+      "job_id": 22368,
+      "job_scope": "/system.slice/slurmstepd.scope/job_22368",
+      "status": "unresolved_process_inventory",
+      "unreviewed_snapshot_entries": 3919
+    },
+    {
+      "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+      "changed_processes": [
+        {
+          "pid": 97,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 913,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1348,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1399,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 350934,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 853342,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 866332,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 872232,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 987266,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1062058,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1085297,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1175646,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1208819,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1219417,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1226817,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1227914,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1227917,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1230695,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1231372,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1242954,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1253319,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1255763,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1257143,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1265651,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1272345,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1323672,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1337194,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1347740,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1353865,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1781191,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1796669,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1800594,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1900254,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1901171,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1904924,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 1993250,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2118173,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2119118,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2128490,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2131804,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2141506,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2144017,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2177852,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2178979,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2182470,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2192307,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2194920,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2195000,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2198903,
+          "reason": "identity_or_membership_changed"
+        },
+        {
+          "pid": 2776554,
+          "reason": "identity_or_membership_changed"
+        }
+      ],
+      "distinct_unreviewed_pids": 1962,
+      "foreign_average_cores": 74.65868533281198,
+      "foreign_cpu_diagnostic_reproduced": true,
+      "inputs": [
+        {
+          "bytes": 976712,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/host_processes.jsonl",
+          "sha256": "e435035ee76f846257ca9e860d9323db989f10515a9940e9487b2338b1b86b09"
+        },
+        {
+          "bytes": 1267,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/host_process_summary.json",
+          "sha256": "abf3a5d66dc7c89b87db2f467942c434de63b88c0bfa74b235af720e2a47b1dd"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/ready.json",
+          "sha256": "0fc99c67f340a8a2afca70fe8e15dace5551d9bb1a60682a5e81e66830119cc7"
+        },
+        {
+          "bytes": 179553,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000000.json",
+          "sha256": "ee4531ef3abcdd014d982b971e1e65a427985d52ebb8c26d45257e613f097519"
+        }
+      ],
+      "job_id": 22369,
+      "job_scope": "/system.slice/slurmstepd.scope/job_22369",
+      "status": "unresolved_process_inventory",
+      "unreviewed_snapshot_entries": 3917
+    }
+  ],
+  "schema": "threadripper_process_policy_negative_replay_v1",
+  "sources": [
+    {
+      "bytes": 6530,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_policy.py",
+      "sha256": "90e4b01976e1ba18fcccbb0fb2e78373a7b7c5cd9e97cf399d944deaca40a5ac"
+    },
+    {
+      "bytes": 6556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    }
+  ]
+}

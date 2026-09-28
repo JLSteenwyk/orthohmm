@@ -46,7 +46,10 @@ native worker. The release guard writes `environment_review_requested.json`
 in the measurement directory. A separate review worker must inspect fresh
 host/scheduler evidence under the already frozen policy, then atomically
 publish the requested session's `environment_preflight.json` within 20 seconds.
-This worker is not implemented or approved by this change.
+This worker is not implemented or approved by this change. A subsequent
+[process-policy comparison component](THREADRIPPER_PROCESS_POLICY_20260928.md)
+has unit and retained-fixture negative checks; it does not establish a reviewed
+service inventory or complete the live worker and handoff.
 
 The preflight must identify this job, index, recipe and readiness review,
 include supporting file records and a review reference, and report the

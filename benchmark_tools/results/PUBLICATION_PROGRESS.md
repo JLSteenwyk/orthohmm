@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Background Process Policy Comparison (2026-09-28)
+
+Previous turn updated and pushed the current claim checklist as c8a91f51,
+which was reporting progress. Returned to the unfinished environmental
+review path. Added a read-only process-policy comparison that requires
+explicit same-boot, exact-identity ordinary-background entries rather than
+using the CPU diagnostic threshold as an admission rule. Unknown idle work,
+identity/name/cgroup changes, missing observations and counter regressions
+cannot produce a matching inventory. Even a match explicitly does not certify
+a quiet host or authorize timing. See the
+[contract and limitations](THREADRIPPER_PROCESS_POLICY_20260928.md).
+
+85 focused policy/observer/executor tests pass. Negative replay of both raw
+snapshots from each of jobs 22367-22369 used intentionally empty background
+policies; all three correctly remain unresolved, and all original CPU
+diagnostics reproduce exactly. Twelve input records and two source records
+were rehashed. This also exposes name/identity changes requiring explicit
+review, not blanket exceptions. No background service was approved from
+these observations, and no current host or whole-run eligibility claim follows.
+
+The live worker, service/executable evidence, complete environmental policy,
+full-scale accounting validation and native handoff remain unfinished.
+No native/runtime pin, scientific result, executor release decision or unrelated
+process was changed. No new job or DGX access; full publication goal active.
+
 ## Current Claim Checklist Reconciled (2026-09-28)
 
 The preceding user-facing turn only confirmed the saved Threadripper goal;
