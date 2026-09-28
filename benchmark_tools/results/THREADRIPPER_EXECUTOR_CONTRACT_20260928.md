@@ -46,10 +46,13 @@ native worker. The release guard writes `environment_review_requested.json`
 in the measurement directory. A separate review worker must inspect fresh
 host/scheduler evidence under the already frozen policy, then atomically
 publish the requested session's `environment_preflight.json` within 20 seconds.
-This worker is not implemented or approved by this change. A subsequent
+This worker was not implemented or approved by the original executor change. A subsequent
 [process-policy comparison component](THREADRIPPER_PROCESS_POLICY_20260928.md)
 has unit and retained-fixture negative checks; it does not establish a reviewed
-service inventory or complete the live worker and handoff.
+service inventory or complete the live worker and handoff. The later
+[standalone responder implementation](THREADRIPPER_ENVIRONMENT_WORKER_20260928.md)
+has component and file-handoff tests, but still needs a reviewed real policy,
+orchestration, complete native integration and deadline validation.
 
 The preflight must identify this job, index, recipe and readiness review,
 include supporting file records and a review reference, and report the
@@ -84,7 +87,7 @@ Slurm queue, including IQ-TREE, Python, BAli-Phy and gainLoss work. No unrelated
 process was signalled. A quiet window is not established.
 
 Before production: finish full-scale observer/resource validation, freeze and
-review the ordinary-service policy, implement/test its live review worker,
+review the ordinary-service policy, integrate/validate its live review worker,
 freeze this executor's recipe, and validate the complete handoff with the
 native collector. Do not manufacture passing review files to bypass these
 requirements. After every actual run, independently audit terminal scheduler

@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Environmental Handoff Responder Implemented (2026-09-28)
+
+Previous turn added typed kernel identity and fresh host evidence, pushed as
+c41d6430. Implemented the standalone live environmental responder: it binds
+the request, frozen policy, readiness and helper recipe; checks the collector
+and parked native identity; gathers fresh typed process/host evidence; checks
+approved loaded main executables and configuration-file hashes; and publishes
+a deadline-checked atomic pass/failure with retained evidence. It never writes
+native release, submits/retries jobs or admits timings. No real background
+policy or numerical limit was selected. See the
+[worker contract](THREADRIPPER_ENVIRONMENT_WORKER_20260928.md).
+
+161 focused tests pass, including the real file handoff to the existing guard,
+synthetic failure/timeout/interruption cases, collector readiness controls,
+and a read-only loaded-interpreter hash test. The integration uses synthetic
+host/allocation/policy evidence, not a native Slurm experiment. Main-image
+hashes do not attest interpreted code or all runtime libraries; policy review
+and configuration-inventory completeness remain independent requirements.
+
+Automatic same-allocation worker lifecycle, native handoff/deadline validation,
+real service policy, whole-run policy application, full-scale accounting and
+the verified quiet window remain unfinished. No current host poll, timing job,
+scientific result change or DGX access occurred. The full goal remains active.
+
 ## Typed Kernel Identity For Environmental Review (2026-09-28)
 
 Previous turn made implementation progress with the exact process-policy
