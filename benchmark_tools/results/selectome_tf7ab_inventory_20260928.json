@@ -1,0 +1,231 @@
+{
+  "archive_crc_passed": true,
+  "benchmark_admitted": false,
+  "dendropy_version": "5.0.8",
+  "earlier_tree_comparison": {
+    "earlier": 1211,
+    "identical_nhx": 85,
+    "missing_keys": 0,
+    "shared_keys": 1211
+  },
+  "family_count": 8355,
+  "gene_count": 1287270,
+  "gene_schema": [
+    "CREATE TABLE `genes` (",
+    "  `IDX` int(11) NOT NULL default '0' COMMENT 'Gene index',",
+    "  `ID` varchar(30) NOT NULL default '' COMMENT 'Unique sequence ID',",
+    "  `TID` varchar(30) NOT NULL default '' COMMENT 'Transcript ID',",
+    "  `TVER` tinyint(3) unsigned NOT NULL default '0' COMMENT 'Version of TID',",
+    "  `GID` varchar(30) NOT NULL default '' COMMENT 'Gene ID',",
+    "  `GVER` tinyint(3) unsigned NOT NULL default '0' COMMENT 'Version of GID',",
+    "  `SYMBOL` varchar(30) NOT NULL default '' COMMENT 'gene symbol',",
+    "  `DISP_ID` varchar(45) NOT NULL default '' COMMENT 'display name (obsolete)',",
+    "  `TAX_ID` int(10) unsigned NOT NULL default '0' COMMENT 'Taxonomy ID',",
+    "  `DESC` text NOT NULL COMMENT 'Description',",
+    "  PRIMARY KEY  (`IDX`),",
+    "  UNIQUE KEY `ID` (`ID`),",
+    "  KEY `GID` (`GID`,`GVER`),",
+    "  KEY `TID` (`TID`,`TVER`),",
+    "  KEY `TAX_ID` (`TAX_ID`),",
+    "  FULLTEXT KEY `DESC` (`DESC`,`SYMBOL`,`TID`,`GID`)",
+    ") ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='gene list';"
+  ],
+  "genes_by_taxonomy": {
+    "3702": 28952,
+    "4530": 39578,
+    "4896": 5080,
+    "4932": 6698,
+    "6183": 13228,
+    "6238": 19528,
+    "6239": 27258,
+    "6279": 7851,
+    "6412": 14659,
+    "6669": 6588,
+    "7091": 14623,
+    "7159": 16789,
+    "7165": 13133,
+    "7217": 16976,
+    "7220": 14410,
+    "7222": 13391,
+    "7227": 20815,
+    "7230": 14085,
+    "7234": 16053,
+    "7238": 16408,
+    "7240": 13614,
+    "7244": 13777,
+    "7245": 15205,
+    "7260": 14790,
+    "7668": 8051,
+    "7719": 19858,
+    "7739": 32291,
+    "7955": 31743,
+    "8090": 24661,
+    "8364": 27711,
+    "9031": 22195,
+    "9258": 26836,
+    "9361": 15539,
+    "9365": 14592,
+    "9371": 16562,
+    "9544": 36384,
+    "9598": 34142,
+    "9600": 23409,
+    "9606": 45962,
+    "9615": 25559,
+    "9685": 15048,
+    "9785": 15717,
+    "9796": 22290,
+    "9913": 26255,
+    "9978": 15993,
+    "9986": 15438,
+    "10090": 39667,
+    "10116": 32948,
+    "10141": 14219,
+    "10228": 7180,
+    "13616": 32557,
+    "30608": 16319,
+    "30611": 15448,
+    "31033": 18586,
+    "31234": 25948,
+    "37347": 15462,
+    "42254": 13192,
+    "43179": 14830,
+    "44689": 8019,
+    "45351": 9952,
+    "51511": 20143,
+    "59463": 16232,
+    "69293": 27577,
+    "73382": 18862,
+    "81824": 4883,
+    "99883": 23118,
+    "225164": 12403
+  },
+  "inputs": [
+    {
+      "bytes": 59845652,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_selectome_search_20260928/selectome_04-TF7AB__mysql5.0.sql.zip",
+      "sha256": "d936fa7fd1bbaa96904d787c705f54f2aeab4ad936f3ab4cd9ace41f0595d6e0"
+    },
+    {
+      "bytes": 836,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_selectome_search_20260928/SHA256.sum",
+      "sha256": "1d4c65b30489d7f810a6bd24b6bf5701b1d2589b682abc0eef3ffd4815f39b26"
+    },
+    {
+      "bytes": 564877,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/selectome_tf7a_inventory_20260928.json",
+      "sha256": "793c70feb7b47ca377e931c182b684b5339d5b34d8d9b657b14dee48d93ef97a"
+    }
+  ],
+  "leaf_occurrences": 168719,
+  "leaf_occurrences_by_species": {
+    "BOVIN": 13391,
+    "BRARE": 12853,
+    "CANFA": 12904,
+    "CAVPO": 26,
+    "CHICK": 10110,
+    "DASNO": 48,
+    "ECHTE": 39,
+    "ERIEU": 36,
+    "GASAC": 13144,
+    "HORSE": 9,
+    "HUMAN": 13976,
+    "LOXAF": 42,
+    "MACMU": 13960,
+    "MICMU": 56,
+    "MONDO": 12646,
+    "MOUSE": 14236,
+    "MYOLU": 40,
+    "OCHPR": 8,
+    "ORNAN": 2,
+    "ORYLA": 3,
+    "OTOGA": 44,
+    "PANTR": 13234,
+    "PONPY": 71,
+    "RABIT": 39,
+    "RAT": 14044,
+    "SORAR": 21,
+    "SPETR": 44,
+    "TETNG": 12573,
+    "TUPGB": 41,
+    "XENTR": 11079
+  },
+  "limitations": [
+    "Derived Selectome subtrees, not authenticated complete QfO input trees.",
+    "Gene identifiers and descriptions are not the original QfO mapping; no benchmark pairs assigned to families.",
+    "No SQL executed; exact NHX comparison is conditional on matching family/taxon/subtree-number keys."
+  ],
+  "mapping_filename_present": false,
+  "news": [
+    [
+      "Selectome 1 online: based on TreeFam-A 4",
+      "2008-06-29 22:00:00"
+    ],
+    [
+      "Pipeline for Selectome 2 from TreeFam-A 6 is running",
+      "2008-07-02 22:00:00"
+    ],
+    [
+      "Now, trees and alignments are downloadable",
+      "2008-09-09 22:00:00"
+    ],
+    [
+      "Add pipeline description in 'Methods' link",
+      "2008-09-16 22:00:00"
+    ],
+    [
+      "A list of terms can be used for queries in advanced search",
+      "2008-09-28 22:00:00"
+    ],
+    [
+      "Pipeline for TreeFam-B 6 is running",
+      "2008-10-14 22:00:00"
+    ],
+    [
+      "New version based on TreeFam-A 6",
+      "2008-10-19 22:00:00"
+    ],
+    [
+      "Sub-family centered view for results now. Minor fixes and improvements.",
+      "2009-04-21 08:28:03"
+    ],
+    [
+      "NEW version based on TreeFam-A 7",
+      "2009-05-18 10:18:50"
+    ],
+    [
+      "Full Selectome release, based on TreeFam7 A &amp; B",
+      "2010-08-18 09:19:21"
+    ]
+  ],
+  "original_qfo_inputs_recovered": false,
+  "parser_helper": {
+    "bytes": 5195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_selectome_tf7a.py",
+    "sha256": "8fdf0af7535e916286429f67b39a140f5c3dcff28e0a7d0f9029f5ecd83c8795"
+  },
+  "source": {
+    "bytes": 6279,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_selectome_tf7ab.py",
+    "sha256": "ccfc03bc664fb5789266c3d7b276fa4b0c5479c17ee632898ead5c09ef49399a"
+  },
+  "sql_member_sha256": "c85aa1dd0d820deffc6d55d1abbc8972ba2dac78f495d4a132aa09e17862fbe9",
+  "sqlglot_version": "30.20.0",
+  "status": "selectome_tf7ab_inventory_complete",
+  "subtree_count": 9850,
+  "subtree_taxa": {
+    "Euteleostomi": 9850
+  },
+  "tables": [
+    "genes",
+    "selectome_branches",
+    "selectome_codeml",
+    "selectome_gblocks",
+    "selectome_news",
+    "selectome_positions",
+    "selectome_subtrees",
+    "selectome_summary",
+    "selectome_warning"
+  ],
+  "tree_inventory_sha256": "e7a179728e66e9a345f6ee4b5a32135f503d2b7e763a64889440067aac74682b",
+  "trees_with_exact_duplicate_leaf_labels": 0
+}

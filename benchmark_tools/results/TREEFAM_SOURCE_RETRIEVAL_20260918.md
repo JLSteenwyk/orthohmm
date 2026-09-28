@@ -2,6 +2,11 @@
 
 ## Outcome
 
+The [larger TF7AB archive follow-up](TREEFAM_SELECTOME_AB_RECOVERY_20260928.md)
+also recovers 1,287,270 historical gene records and 9,850 derived vertebrate
+subtrees. Only 85 of 1,211 shared subtree keys have identical NHX strings;
+interchangeability and the original QfO mapping remain unestablished.
+
 September 28 update: [Selectome archive inspection](TREEFAM_SELECTOME_RECOVERY_20260928.md)
 recovered 1,211 TreeFam-A 7-derived vertebrate subtrees from 1,063 families,
 with a matching published archive checksum. These are not authenticated complete

@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Inspect Larger TreeFam-7 A+B Archive (2026-09-28)
+
+Previous turn pushed TF7A recovery as `e16c6208`. Downloaded the larger public
+TF7AB archive and verified its published checksum and ZIP integrity. The full
+streamed parse completed: 1,287,270 unique-ID gene records across 67 taxonomy
+IDs and 9,850 Euteleostomi subtrees from 8,355 families. Biopython independently
+agrees with the DendroPy tree/family/leaf totals and whole-SQL digest; all 13
+archive/parser tests pass. See the [result and limits](TREEFAM_SELECTOME_AB_RECOVERY_20260928.md).
+
+All 1,211 earlier subtree keys occur, but only 85 NHX strings are identical.
+Annotation versus topology differences remain unclassified. No original QfO
+mapping was recovered or reference replaced. This advances historical-source
+recovery, not family-level uncertainty admission. No timing launch, contact,
+unrelated-job action or DGX access occurred. The full publication goal is active.
+
 ## Recover Public TreeFam-7-Derived Subtrees (2026-09-28)
 
 Previous turn pushed configuration-review hardening as `e4731809`. A fresh public
