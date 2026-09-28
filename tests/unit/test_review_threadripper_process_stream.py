@@ -164,9 +164,11 @@ def bound_fixture(tmp_path):
         row["snapshot"]["processes"][1]["cgroup"] = "/slurm/job_42/step_0/user/task_0"
     process_ref = put("process_policy.json", policy)
     support = put("support.json", {"synthetic": True})
+    configuration = put("service_configuration.json", {"synthetic_service": "fixed"})
     environment = put("policy.json", dict(schema="threadripper_environment_policy_v1",
         decision="reviewed", host="bizon", plan_sha256="synthetic-plan",
-        process_policy=process_ref, evidence=[support], maximum_foreign_average_cores=.1,
+        process_policy=process_ref, evidence=[support], configuration_files=[configuration],
+        maximum_foreign_average_cores=.1,
         maximum_pressure_sample_period_s=3., maximum_pressure_percent=dict(cpu=10., memory=10., io=10.),
         maximum_sample_period_s=3.))
     preflight = put("preflight.json", dict(schema="threadripper_environment_preflight_v1",
@@ -196,10 +198,50 @@ def test_bound_audit_keeps_evidence_and_refuses_overwrite(tmp_path):
     assert result["sampled_process_policy_satisfied"]
     assert result["sampled_environment_policy_satisfied"]
     assert result["job_id"] == 42 and not result["scientific_timings_admitted"]
+    assert result["configuration_endpoint_hashes_verified"]
+    assert stream.record(tmp_path / "service_configuration.json") in result["evidence"]
     for item in result["evidence"]:
         stream.check(item)
     with pytest.raises(FileExistsError):
         stream.audit(tmp_path, *refs, job_id=42, index=0)
+
+
+@pytest.mark.parametrize("inventory", [None, [], "not-a-list"])
+def test_bound_audit_requires_declared_configuration_inventory(tmp_path, inventory):
+    policy_ref, preflight_ref = bound_fixture(tmp_path)
+    policy_path = tmp_path / "policy.json"
+    policy = json.loads(policy_path.read_text())
+    if inventory is None:
+        del policy["configuration_files"]
+    else:
+        policy["configuration_files"] = inventory
+    policy_path.write_text(json.dumps(policy))
+    policy_ref = stream.record(policy_path)
+    preflight_path = tmp_path / "preflight.json"
+    preflight = json.loads(preflight_path.read_text())
+    preflight["environment_policy"] = policy_ref
+    preflight_path.write_text(json.dumps(preflight))
+    with pytest.raises(ValueError, match="configuration"):
+        stream.audit(tmp_path, policy_ref, stream.record(preflight_path), job_id=42, index=0)
+    assert not (tmp_path / "process_stream_review.json").exists()
+
+
+@pytest.mark.parametrize("during_review", [False, True])
+def test_configuration_change_rejected_without_incidental_preflight_reference(tmp_path, monkeypatch, during_review):
+    refs = bound_fixture(tmp_path)
+    configuration = tmp_path / "service_configuration.json"
+    real = stream.evaluate
+    def change(*args, **kwargs):
+        result = real(*args, **kwargs)
+        configuration.write_text("changed")
+        return result
+    if during_review:
+        monkeypatch.setattr(stream, "evaluate", change)
+    else:
+        configuration.write_text("changed")
+    with pytest.raises(ValueError, match="identity changed"):
+        stream.audit(tmp_path, *refs, job_id=42, index=0)
+    assert not (tmp_path / "process_stream_review.json").exists()
 
 
 @pytest.mark.parametrize("change", ["policy", "preflight", "process", "support", "wrong_job", "wrong_index"])

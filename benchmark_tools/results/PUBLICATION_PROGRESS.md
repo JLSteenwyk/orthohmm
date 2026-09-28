@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Explicit Post-Run Configuration Evidence (2026-09-28)
+
+Previous turn pushed manuscript integration as `0bf0b235`, a reporting milestone.
+A fresh Threadripper sample found 92.4384 competing cores despite an empty Slurm
+queue, with six sampling errors and seven unmatched processes. No production
+timing or unrelated-job action occurred.
+
+Hardened the post-run review contract to require and directly recheck the
+policy's declared configuration files instead of relying on incidental preflight
+evidence propagation. Six selected tests failed first; all 168 focused tests pass
+after the change. See the [scope and host evidence](THREADRIPPER_CONFIGURATION_ENDPOINTS_20260928.md).
+Endpoint hashes do not establish whole-run stability or complete configuration
+coverage. Execution-source freeze, native/full-scale validation, environmental
+review and quiet-window production timing remain open. The full goal is active.
+
 ## Integrate Root-Rule Evidence Into Manuscript (2026-09-28)
 
 Previous turn committed and pushed the completed fixed-tree diagnostic as

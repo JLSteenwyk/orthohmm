@@ -130,7 +130,10 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
         raise ValueError("Policy and preflight do not identify the same reviewed attempt")
     process_ref = policy["process_policy"]
     process_policy = read(process_ref)
-    references.extend([process_ref, *policy["evidence"], *preflight["evidence"]])
+    configuration = policy.get("configuration_files")
+    if not isinstance(configuration, list) or not configuration:
+        raise ValueError("Require reviewed configuration file inventory")
+    references.extend([process_ref, *configuration, *policy["evidence"], *preflight["evidence"]])
     refs = {name: record(directory / name) for name in
             ("ready.json", "done.json", "host_processes.jsonl")}
     references.extend(refs.values())
@@ -171,6 +174,9 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
         and pressure["sampled_pressure_policy_satisfied"])
     for ref in references:
         check(ref)
+    result["configuration_endpoint_hashes_verified"] = True
+    result["limitations"].append(
+        "Configuration bytes are checked before and after post-run review; transient changes during native execution may be missed.")
     result.update(job_id=job_id, index=index, evidence=references,
                   source=record(Path(__file__).resolve()))
     save(output, result)

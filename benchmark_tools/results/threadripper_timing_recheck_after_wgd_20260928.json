@@ -1,0 +1,81 @@
+{
+  "limitations": [
+    "No benchmark allocation active; excludes capture process only.",
+    "Persistent-process rates do not measure all demand; errors and unmatched processes retained.",
+    "No unrelated job or service modified."
+  ],
+  "observed_foreign_average_cores": 92.43837342225946,
+  "production_started": false,
+  "sampling_error_count": 6,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 1978257,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_timing_recheck_after_wgd_20260928.json",
+    "sha256": "6e6f7affa68b7b82fe8cbadb25ec623505c7380f37a079334a8b6f904cb2fa29"
+  },
+  "status": "competing_cpu_observed",
+  "top_cgroups": [
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-baliphy-independent-chains-20260927.service",
+      16.004468707331355
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-selected-matched-intervals-20260928.service",
+      15.995339629255593
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+      15.97574101000481
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-fastml-optimizer-refinement-20260928-v3.service",
+      7.998554412875331
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+      7.993445794205019
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-full-polynomial-ml-20260927.service",
+      7.9928560041517835
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-4c4f130f-480e-45d0-9841-1f26dd9dba69.scope",
+      7.258091871587261
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-hybrid-excluded-guides-20260927.service",
+      3.9850094301445558
+    ]
+  ],
+  "unmatched_foreign_processes": [
+    {
+      "created": 1790635101.46,
+      "pid": 2369692
+    },
+    {
+      "created": 1790635101.47,
+      "pid": 2369693
+    },
+    {
+      "created": 1790635103.35,
+      "pid": 2369697
+    },
+    {
+      "created": 1790635103.35,
+      "pid": 2369699
+    },
+    {
+      "created": 1790635103.35,
+      "pid": 2369700
+    },
+    {
+      "created": 1790635106.67,
+      "pid": 2369876
+    },
+    {
+      "created": 1790635107.51,
+      "pid": 2370027
+    }
+  ]
+}
