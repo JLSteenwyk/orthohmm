@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Threadripper Placement Tested (2026-09-28)
+
+Previous turn froze the local timing amendment and checked inputs. Added a
+bounded sleep/child-process allocation probe and nine passing unit tests.
+Job 22338 failed before Python launch because a 32-CPU step allowed SMT sibling
+pairs on 16 physical cores. The explicit 64-slot diagnostic 22339 completed
+0:0 and verified inherited native affinity to IDs 0-31 on 32 physical cores
+and a 128-GiB effective RAM cap. The [record](THREADRIPPER_ALLOCATION_PROBE_20260928.md)
+preserves both outcomes and distinguishes node/step reservation from affinity.
+CPU quota and swap remain unlimited; this is not hard 32-CPU enforcement or
+full-run descendant validation. No inference or collector test occurred and
+no background workload was changed. Quiet-window coordination, runtime,
+enumeration and local collector/executor work remain next.
+
 ## Threadripper Migration Resumed (2026-09-28)
 
 The prior turn was blocked by sandbox startup failure. Commands now execute;

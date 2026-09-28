@@ -1,0 +1,511 @@
+{
+  "child": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "ancestors": [
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0/user/task_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0/user"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice"
+      }
+    ],
+    "cgroup": "0::/system.slice/slurmstepd.scope/job_22339/step_0/user/task_0\n",
+    "host": "bizon",
+    "pid": 1195400,
+    "slurm": {
+      "SLURM_CPUS_PER_TASK": "64",
+      "SLURM_JOB_ID": "22339",
+      "SLURM_MEM_PER_NODE": "131072"
+    },
+    "topology": [
+      {
+        "core": 0,
+        "cpu": 0,
+        "package": 0
+      },
+      {
+        "core": 1,
+        "cpu": 1,
+        "package": 0
+      },
+      {
+        "core": 2,
+        "cpu": 2,
+        "package": 0
+      },
+      {
+        "core": 3,
+        "cpu": 3,
+        "package": 0
+      },
+      {
+        "core": 4,
+        "cpu": 4,
+        "package": 0
+      },
+      {
+        "core": 5,
+        "cpu": 5,
+        "package": 0
+      },
+      {
+        "core": 6,
+        "cpu": 6,
+        "package": 0
+      },
+      {
+        "core": 7,
+        "cpu": 7,
+        "package": 0
+      },
+      {
+        "core": 8,
+        "cpu": 8,
+        "package": 0
+      },
+      {
+        "core": 9,
+        "cpu": 9,
+        "package": 0
+      },
+      {
+        "core": 10,
+        "cpu": 10,
+        "package": 0
+      },
+      {
+        "core": 11,
+        "cpu": 11,
+        "package": 0
+      },
+      {
+        "core": 12,
+        "cpu": 12,
+        "package": 0
+      },
+      {
+        "core": 13,
+        "cpu": 13,
+        "package": 0
+      },
+      {
+        "core": 14,
+        "cpu": 14,
+        "package": 0
+      },
+      {
+        "core": 15,
+        "cpu": 15,
+        "package": 0
+      },
+      {
+        "core": 16,
+        "cpu": 16,
+        "package": 0
+      },
+      {
+        "core": 17,
+        "cpu": 17,
+        "package": 0
+      },
+      {
+        "core": 18,
+        "cpu": 18,
+        "package": 0
+      },
+      {
+        "core": 19,
+        "cpu": 19,
+        "package": 0
+      },
+      {
+        "core": 20,
+        "cpu": 20,
+        "package": 0
+      },
+      {
+        "core": 21,
+        "cpu": 21,
+        "package": 0
+      },
+      {
+        "core": 22,
+        "cpu": 22,
+        "package": 0
+      },
+      {
+        "core": 23,
+        "cpu": 23,
+        "package": 0
+      },
+      {
+        "core": 24,
+        "cpu": 24,
+        "package": 0
+      },
+      {
+        "core": 25,
+        "cpu": 25,
+        "package": 0
+      },
+      {
+        "core": 26,
+        "cpu": 26,
+        "package": 0
+      },
+      {
+        "core": 27,
+        "cpu": 27,
+        "package": 0
+      },
+      {
+        "core": 28,
+        "cpu": 28,
+        "package": 0
+      },
+      {
+        "core": 29,
+        "cpu": 29,
+        "package": 0
+      },
+      {
+        "core": 30,
+        "cpu": 30,
+        "package": 0
+      },
+      {
+        "core": 31,
+        "cpu": 31,
+        "package": 0
+      }
+    ]
+  },
+  "limitations": [
+    "No native inference or collector tested.",
+    "CPU quota, swap and all raw ancestor limits are recorded separately.",
+    "No quiet-host or full-run placement guarantee."
+  ],
+  "native_affinity_cpus": 32,
+  "parent": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "ancestors": [
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0/user/task_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0/user"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339/step_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22339"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice"
+      }
+    ],
+    "cgroup": "0::/system.slice/slurmstepd.scope/job_22339/step_0/user/task_0\n",
+    "host": "bizon",
+    "pid": 1195395,
+    "slurm": {
+      "SLURM_CPUS_PER_TASK": "64",
+      "SLURM_JOB_ID": "22339",
+      "SLURM_MEM_PER_NODE": "131072"
+    },
+    "topology": [
+      {
+        "core": 0,
+        "cpu": 0,
+        "package": 0
+      },
+      {
+        "core": 1,
+        "cpu": 1,
+        "package": 0
+      },
+      {
+        "core": 2,
+        "cpu": 2,
+        "package": 0
+      },
+      {
+        "core": 3,
+        "cpu": 3,
+        "package": 0
+      },
+      {
+        "core": 4,
+        "cpu": 4,
+        "package": 0
+      },
+      {
+        "core": 5,
+        "cpu": 5,
+        "package": 0
+      },
+      {
+        "core": 6,
+        "cpu": 6,
+        "package": 0
+      },
+      {
+        "core": 7,
+        "cpu": 7,
+        "package": 0
+      },
+      {
+        "core": 8,
+        "cpu": 8,
+        "package": 0
+      },
+      {
+        "core": 9,
+        "cpu": 9,
+        "package": 0
+      },
+      {
+        "core": 10,
+        "cpu": 10,
+        "package": 0
+      },
+      {
+        "core": 11,
+        "cpu": 11,
+        "package": 0
+      },
+      {
+        "core": 12,
+        "cpu": 12,
+        "package": 0
+      },
+      {
+        "core": 13,
+        "cpu": 13,
+        "package": 0
+      },
+      {
+        "core": 14,
+        "cpu": 14,
+        "package": 0
+      },
+      {
+        "core": 15,
+        "cpu": 15,
+        "package": 0
+      },
+      {
+        "core": 16,
+        "cpu": 16,
+        "package": 0
+      },
+      {
+        "core": 17,
+        "cpu": 17,
+        "package": 0
+      },
+      {
+        "core": 18,
+        "cpu": 18,
+        "package": 0
+      },
+      {
+        "core": 19,
+        "cpu": 19,
+        "package": 0
+      },
+      {
+        "core": 20,
+        "cpu": 20,
+        "package": 0
+      },
+      {
+        "core": 21,
+        "cpu": 21,
+        "package": 0
+      },
+      {
+        "core": 22,
+        "cpu": 22,
+        "package": 0
+      },
+      {
+        "core": 23,
+        "cpu": 23,
+        "package": 0
+      },
+      {
+        "core": 24,
+        "cpu": 24,
+        "package": 0
+      },
+      {
+        "core": 25,
+        "cpu": 25,
+        "package": 0
+      },
+      {
+        "core": 26,
+        "cpu": 26,
+        "package": 0
+      },
+      {
+        "core": 27,
+        "cpu": 27,
+        "package": 0
+      },
+      {
+        "core": 28,
+        "cpu": 28,
+        "package": 0
+      },
+      {
+        "core": 29,
+        "cpu": 29,
+        "package": 0
+      },
+      {
+        "core": 30,
+        "cpu": 30,
+        "package": 0
+      },
+      {
+        "core": 31,
+        "cpu": 31,
+        "package": 0
+      }
+    ]
+  },
+  "reserved_step_cpus": 64,
+  "scientific_timings_admitted": false,
+  "status": "placement_and_ram_cap_verified"
+}
