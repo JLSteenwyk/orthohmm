@@ -1,4 +1,5 @@
 import json
+from copy import deepcopy
 from types import SimpleNamespace
 
 import pytest
@@ -49,6 +50,48 @@ def test_verified_reviewed_kernel_rename_keeps_cpu_visible():
     assert result["reviewed_kernel_name_changes"] == [dict(pid=10, before="worker-old", after="worker-new")]
     assert result["cpu_diagnostic"]["sum_observed_foreign_average_cores"] == 1.5
     assert not result["controlled_workload_verified"] and not result["scientific_timings_admitted"]
+
+
+@pytest.mark.parametrize("change", ["exec", "replacement", "step", "birth", "exit"])
+def test_native_job_churn_is_not_foreign_work(change):
+    policy, before, after = fixture()
+    for sample in [before, after]:
+        row = deepcopy(sample["processes"][1])
+        row.update(pid=30, name="native-child", user_s=5.)
+        row["kernel_identity"].update(pid=30, tgid=30)
+        sample["processes"].append(row)
+    row = after["processes"][-1]
+    if change == "exec": row["name"] = "FastTree"
+    elif change == "replacement": row.update(created=9., name="mcl", user_s=0.)
+    elif change == "step": row["cgroup"] = "/job/other-step"
+    elif change == "birth": before["processes"].pop()
+    else: after["processes"].pop()
+    result = run(policy, before, after)
+    assert result["process_policy_matched"]
+    assert result["cpu_diagnostic"]["sum_observed_foreign_average_cores"] == 0.
+    if change in {"exec", "replacement", "step"}:
+        assert result["observed_in_job_identity_changes"][0]["pid"] == 30
+    assert not result["scientific_timings_admitted"]
+
+
+@pytest.mark.parametrize("change", ["leaves_job", "counter", "error", "observer", "backwards_creation"])
+def test_native_scope_rule_does_not_waive_uncertain_or_external_changes(change):
+    policy, before, after = fixture()
+    for sample in [before, after]:
+        row = deepcopy(sample["processes"][1])
+        row.update(pid=30, name="native", user_s=5.)
+        row["kernel_identity"].update(pid=30, tgid=30)
+        sample["processes"].append(row)
+    if change == "leaves_job": after["processes"][-1]["cgroup"] = "/other"
+    elif change == "counter": after["processes"][-1]["user_s"] = 0.
+    elif change == "error": after["errors"].append(dict(pid=30, type="NoSuchProcess"))
+    elif change == "backwards_creation": after["processes"][-1]["created"] = 1.
+    else:
+        after["processes"][1]["name"] = "different-observer"
+        with pytest.raises(ValueError, match="Observer identity changed"):
+            run(policy, before, after)
+        return
+    assert not run(policy, before, after)["process_policy_matched"]
 
 
 @pytest.mark.parametrize("change", ["spoofed_name", "reused_pid", "migration", "counter", "unapproved",

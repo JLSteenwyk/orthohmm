@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Correct Native Churn Classification (2026-09-28)
+
+Previous turn pushed pressure review as 7ac1ba6e. Applicability review found
+that the typed process policy incorrectly treated native exec, PID replacement
+and internal step changes as unresolved foreign work. Added tests reproduced
+three failures before the fix. The v2 policy now records transitions observed
+wholly inside the job without classifying them as competition. Observer identity,
+outside migration, missing evidence and unexplained counter decreases remain
+strict; historical v1 behavior is unchanged. See the
+[regression account](THREADRIPPER_NATIVE_CHURN_20260928.md).
+
+273 focused tests pass, including stream-level native exec versus foreign
+migration. This is component validation, not native/full-scale proof or admission
+of old measurements. No policy threshold was selected, benchmark launched,
+unrelated process changed or DGX accessed. Remaining environmental evidence,
+source freeze, native/full-scale validation and quiet-window timing stay open.
+The publication goal remains active.
+
 ## Whole-Run Pressure Checks In Executor (2026-09-28)
 
 Previous turn pushed bound process review as cdab6a9b. Added interval-by-interval

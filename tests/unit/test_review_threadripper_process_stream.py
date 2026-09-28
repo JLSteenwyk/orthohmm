@@ -63,6 +63,18 @@ def test_real_monitor_serialization_composes_with_stream_reviewer():
     assert result["sampled_process_policy_satisfied"]
 
 
+def test_stream_accepts_native_exec_but_retains_foreign_migration_failure():
+    policy, rows = fixture()
+    for row in rows:
+        child = deepcopy(row["snapshot"]["processes"][1])
+        child.update(pid=30, name="python" if row["index"] == 0 else "FastTree")
+        child["kernel_identity"].update(pid=30, tgid=30)
+        row["snapshot"]["processes"].append(child)
+    assert run(policy, rows)["sampled_process_policy_satisfied"]
+    rows[1]["snapshot"]["processes"][-1]["cgroup"] = "/outside"
+    assert not run(policy, rows)["sampled_process_policy_satisfied"]
+
+
 @pytest.mark.parametrize("change", ["idle_unknown", "cpu", "name", "boot", "type",
     "error", "index", "observer", "counter", "gap", "missing", "duplicate",
     "observation_error", "untyped", "malformed", "overlap"])

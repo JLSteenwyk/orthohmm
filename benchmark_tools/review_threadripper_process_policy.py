@@ -138,15 +138,26 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
         missing.extend(dict(snapshot=label, pid=pid) for pid in sorted(allowed)
                        if pid not in rows or not matches(label, pid, rows[pid]))
     kernel_name_changes = []
+    in_job_changes = []
     for pid in sorted(set(a) & set(b)):
         # Do not ignore a process migrating into the job between observations.
         name_only_kernel = (pid in kernel_pids and matches("before", pid, a[pid])
                             and matches("after", pid, b[pid]))
-        if identity(a[pid]) != identity(b[pid]) and not name_only_kernel:
+        within_job = (typed and pid != observer_pid
+                      and group(a[pid]["cgroup"]).is_relative_to(scope)
+                      and group(b[pid]["cgroup"]).is_relative_to(scope))
+        changed_identity = identity(a[pid]) != identity(b[pid])
+        if within_job and changed_identity:
+            in_job_changes.append(dict(pid=pid, before=list(identity(a[pid])),
+                                       after=list(identity(b[pid]))))
+        if changed_identity and not name_only_kernel and not within_job:
             changed.append(dict(pid=pid, reason="identity_or_membership_changed"))
+        if within_job and b[pid]["created"] < a[pid]["created"]:
+            changed.append(dict(pid=pid, reason="process_creation_time_decreased"))
         if name_only_kernel and a[pid]["name"] != b[pid]["name"]:
             kernel_name_changes.append(dict(pid=pid, before=a[pid]["name"], after=b[pid]["name"]))
-        if any(b[pid][k] < a[pid][k] for k in ("user_s", "system_s")):
+        replaced_within_job = within_job and b[pid]["created"] > a[pid]["created"]
+        if not replaced_within_job and any(b[pid][k] < a[pid][k] for k in ("user_s", "system_s")):
             changed.append(dict(pid=pid, reason="cpu_counter_decreased"))
     diagnostic = analyze(before, after, str(scope), observer_pid)
     unresolved = bool(unreviewed or changed or missing or diagnostic["sampling_error_count"]
@@ -163,6 +174,8 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
                      "Policy matching does not authorize native release or replace whole-run observation.",
                      "The CPU diagnostic threshold is not a timing admission rule."])
     if typed:
+        result["observed_in_job_identity_changes"] = in_job_changes
         result["reviewed_kernel_name_changes"] = kernel_name_changes
         result["limitations"].append("Verified kernel type permits reviewed name changes only; CPU and other checks remain.")
+        result["limitations"].append("Non-observer transitions observed wholly inside the job are retained, not foreign competition; movement between samples remains unobserved.")
     return result
