@@ -1,0 +1,103 @@
+{
+  "bounds_tolerance_points": 1,
+  "bounds_violations": [],
+  "chrome_version": "Google Chrome 134.0.6998.35",
+  "citation_count": 16,
+  "fas_sampling_limitation_present": true,
+  "html": {
+    "bytes": 23081,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v4.html",
+    "sha256": "ff48d09601241d36fa44e777e4da7e27a6ada1d79fac34ef6a7c9efc05864348"
+  },
+  "limitations": [
+    "FastOMA bibliography entry spans pages 4-5; journal-specific pagination remains pending.",
+    "Layout review does not revalidate scientific claims, external links or the extended manuscript.",
+    "Linked mutable audit files are identified at HTML-render time; this is not a self-contained archival bundle.",
+    "No scientific source text changed; publication requirements remain incomplete."
+  ],
+  "page_count": 5,
+  "pdf": {
+    "bytes": 104197,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v4.pdf",
+    "sha256": "4a026cfc6f2c4c156047387bd35b3b4b153131bc4cc31d1979a824417957b496"
+  },
+  "publication_ready": false,
+  "render_command": [
+    "google-chrome",
+    "--headless",
+    "--no-sandbox",
+    "--disable-gpu",
+    "--no-pdf-header-footer",
+    "--print-to-pdf=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v4.pdf",
+    "file:///mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v4.html"
+  ],
+  "render_receipt": {
+    "bytes": 8937,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260928_v4.json",
+    "sha256": "bbf49ab2256d00a5a39e390bc3bb131d75a44e5d292a75ea212c8de7eed4e6fe"
+  },
+  "rendered_pages": [
+    {
+      "bytes": 273688,
+      "path": "/tmp/orthohmm-main-reporting-v4-1.png",
+      "sha256": "16a0cd167a2e0f7029726d180f284eb5dd5fee8e43ab1f9688be2072d44a5f86"
+    },
+    {
+      "bytes": 294295,
+      "path": "/tmp/orthohmm-main-reporting-v4-2.png",
+      "sha256": "e8654622eff19211824cfa72ed0172d3b467fa3837343ca71f6cf061760d6e31"
+    },
+    {
+      "bytes": 289943,
+      "path": "/tmp/orthohmm-main-reporting-v4-3.png",
+      "sha256": "7d568ac835d78dc7d28ecdc1f4733ca284e28c0ba2a61c5873ec82dfa16aa3da"
+    },
+    {
+      "bytes": 344465,
+      "path": "/tmp/orthohmm-main-reporting-v4-4.png",
+      "sha256": "ea539131dc80eb69ead416d052714e5d198f053b29a16560bb6c879ed6e04228"
+    },
+    {
+      "bytes": 144263,
+      "path": "/tmp/orthohmm-main-reporting-v4-5.png",
+      "sha256": "994b5876c91b3ab9f194930763b51c1df5d8117a1d9550e22c79c5b98f415cc2"
+    }
+  ],
+  "source_identities_checked": [
+    {
+      "bytes": 10791,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "sha256": "32195e574bb90e259f804e673a043cbd24a5106afaeff51274f9e6e8bf6bb055"
+    },
+    {
+      "bytes": 199114624,
+      "path": "/usr/bin/pandoc",
+      "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+    },
+    {
+      "bytes": 5986,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_manuscript_review.py",
+      "sha256": "b8493afac836ddb7d3c74b25a3711eae34230cc02076cfe2bd72c45aa6335f9a"
+    },
+    {
+      "bytes": 200,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/manuscript_review_print.html",
+      "sha256": "64d9754f1843288705c6e8ffa9662c299a0f3e263cf541886a3b3829252707f8"
+    },
+    {
+      "bytes": 48872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20260920_v5.csl.json",
+      "sha256": "bc2669a4c291a86473c88db22cc575b46eca55b6ec6b049c9c2cf860cb372aef"
+    }
+  ],
+  "status": "cited_main_draft_layout_reviewed",
+  "text_characters": [
+    2969,
+    3242,
+    3311,
+    3384,
+    1332
+  ],
+  "visual_review_complete": true,
+  "visual_scope": "All five pages viewed; text, headings and bibliography readable with no visible clipping or overlap."
+}

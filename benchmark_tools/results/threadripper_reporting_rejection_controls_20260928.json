@@ -1,0 +1,62 @@
+{
+  "basis": {
+    "bytes": 2095,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/report_finalization.json",
+    "sha256": "a27341b271dbe3d10d2f43e9af673bf5f7a33f120bd818d110639946b39c3045"
+  },
+  "cases": [
+    {
+      "case": "failed_status",
+      "error": "Incomplete or mismatched report finalization",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "wrong_job",
+      "error": "Incomplete or mismatched report finalization",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "wrong_scope",
+      "error": "Incomplete or mismatched report finalization",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "wrong_duration",
+      "error": "Invalid report finalization timing",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "early_memory_read",
+      "error": "Invalid report finalization timing",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "decreased_peak",
+      "error": "Job memory gauge or RAM limit differs",
+      "error_type": "ValueError",
+      "rejected": true
+    },
+    {
+      "case": "missing_memory_fields",
+      "error": "'memory.stat'",
+      "error_type": "KeyError",
+      "rejected": true
+    }
+  ],
+  "limitations": [
+    "In-memory JSON-read perturbations against completed fixture 22367; raw files unchanged.",
+    "Seven bounded corruptions, not exhaustive adversarial validation or production authorization."
+  ],
+  "replayer": {
+    "bytes": 16356,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_threadripper_scaling.py",
+    "sha256": "3c87abc91bfe8e074082fc0526a5b36ce47b8754b2a41fd7e099092578ff7f89"
+  },
+  "scientific_timings_admitted": false,
+  "status": "reporting_receipt_corruption_rejected"
+}

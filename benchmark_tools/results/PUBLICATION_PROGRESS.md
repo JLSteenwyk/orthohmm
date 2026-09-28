@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Reporting Native Fixtures Verified And Main Export Refreshed (2026-09-28)
+
+Continued from the exact live handles submitted in f07eeb44. Jobs 22367,
+22368 and 22369 completed 0:0 sequentially; none was restarted or retried.
+Terminal controller validation, both runtime/lookup checks, release-budget
+reproduction, independent v4 resource replay and native output validation
+passed for all three. Canonical partitions and available root-HOG/pair
+outputs match 22363-22365 exactly. See the
+[outcome review](THREADRIPPER_REPORTING_OUTCOMES_20260928.md).
+
+Post-report job peaks were 726,667,264 / 726,663,168 / 360,677,376 bytes and
+equal the post-native peaks in these small fixtures. Reporting took about
+0.258 / 0.289 / 0.258 seconds. Foreign interval-average CPU maxima were
+71.36 / 74.57 / 74.66 cores: no controlled timing admission. Seven in-memory
+reporting-record corruptions were rejected without changing raw evidence.
+49 focused renderer/reporting/runtime/driver/audit tests passed.
+
+Regenerated the cited main draft from unchanged current scientific text,
+bringing the existing FAS sampling limitation into the HTML/PDF. All five
+pages were visually reviewed and word bounds checked; 16 bibliography
+entries resolve, with no pandoc warnings or untracked local targets. The
+v3 export remains historical. This review does not establish submission
+readiness or replace the still-open scientific analyses.
+
+All jobs in this diagnostic chain are now terminal. Production orchestration,
+quiet-window coordination, full-scale overhead and complete-job resource
+accounting remain next, alongside independent validation, uncertainty and
+release work. No production identity, unrelated workload or DGX service
+was changed. The full goal remains active and incomplete.
+
 ## Reporting Runtime Rebound And Native Fixtures Submitted (2026-09-28)
 
 Previous turn made progress with collector v4 and verified diagnostic 22366,

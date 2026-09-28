@@ -34,6 +34,10 @@ the pin change; all 12 driver/runtime tests passed again afterward.
 
 ## Submitted Checks
 
+Update: all three jobs subsequently completed and passed independent review;
+see the [outcome record](THREADRIPPER_REPORTING_OUTCOMES_20260928.md). The
+submission-time observations below are retained as history.
+
 The [submission record](threadripper_reporting_fixtures_submission_20260928.json)
 retains the exact commands, driver hash, binding and lookup references:
 
