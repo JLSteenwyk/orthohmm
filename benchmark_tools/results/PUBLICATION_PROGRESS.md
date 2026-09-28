@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Exact Graph Dependency Source Candidates Acquired (2026-09-28)
+
+The preceding user-facing turn confirmed the Threadripper goal wording but
+added no new implementation or evidence. Resumed with an available release
+task rather than repeating that status. Acquired igraph 1.0.0 and leidenalg
+0.11.0 source archives from public PyPI metadata, binding the exact retained
+wheel hashes and source hashes/sizes to the same published release. Both
+root package identities match. Inspected 2,962 regular files without archive
+extraction, installation or build execution; retained raw archives and metadata
+locally and committed the per-member acquisition manifest. See the
+[source review](GRAPH_SOURCE_CANDIDATES_20260928.md).
+
+The igraph source includes C core 1.0.0 and additional third-party notice
+candidates; Leiden's wrapper source instead downloads external libraries.
+Its source recipe/library SONAME relationship still needs build provenance,
+and igraph's bundled libxml2/liblzma/libgomp sources remain unaccounted for.
+Acquiring same-release source is not corresponding-source or license clearance.
+72 focused tests pass. No scientific runtime, result, unrelated job or DGX
+service changed; no timing run was launched. Controlled timing and production
+orchestration, independent validation, uncertainty, and release requirements
+remain unfinished. The full goal remains active.
+
 ## Release And Benchmark Security Scopes Separated (2026-09-28)
 
 After completing all guarded native fixtures, reviewed the recurring push

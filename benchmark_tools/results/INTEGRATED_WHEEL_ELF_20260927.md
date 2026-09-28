@@ -43,6 +43,10 @@ The notice lists are retained alongside objects, but are not a completed
 component-to-license mapping. Inspect loaded components and their source/
 notice obligations before making runtime portability or redistribution claims.
 
+The subsequent [graph source acquisition](GRAPH_SOURCE_CANDIDATES_20260928.md)
+retrieves hash-verified igraph/leidenalg source candidates and identifies
+external library provenance still missing; it does not close this clearance gap.
+
 Forty-one focused ELF/notice tests pass, including content-based detection,
 temporary-file cleanup, changed-wheel rejection, unsafe/duplicate/nonregular
 members, malformed tags, inspector diagnostics and unresolved candidates.
