@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Recover Public TreeFam-7-Derived Subtrees (2026-09-28)
+
+Previous turn pushed configuration-review hardening as `e4731809`. A fresh public
+archive investigation found Selectome's TF7A dump, beyond the earlier paper-only
+check. Downloaded and verified its published checksum; safely parsed 1,211 NHX
+subtrees from 1,063 families, all labeled Euteleostomi. Seven parser tests pass;
+a second full parse reproduces the inventory. See the
+[recovery and limitations](TREEFAM_SELECTOME_RECOVERY_20260928.md).
+
+This is new source material, not recovery of the complete QfO source collection
+or mapping. No reference substitution, family assignment, score change or
+uncertainty claim follows. No contact, timing launch or DGX access occurred.
+The full goal remains active; original mapping and suitability validation remain
+open alongside the other publication requirements.
+
 ## Explicit Post-Run Configuration Evidence (2026-09-28)
 
 Previous turn pushed manuscript integration as `0bf0b235`, a reporting milestone.

@@ -2,6 +2,12 @@
 
 ## Outcome
 
+September 28 update: [Selectome archive inspection](TREEFAM_SELECTOME_RECOVERY_20260928.md)
+recovered 1,211 TreeFam-A 7-derived vertebrate subtrees from 1,063 families,
+with a matching published archive checksum. These are not authenticated complete
+QfO input trees; the original mapping remains missing. The earlier Selectome
+paper-only check below did not cover this later archive.
+
 The requested original TreeFam-A release-7 NHX collection and
 `treefam2reference.txt` have **not been retrieved**. Public reference material
 was downloaded and checked, but it is not a substitute for those source
