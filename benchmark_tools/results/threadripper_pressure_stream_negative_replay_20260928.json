@@ -1,0 +1,319 @@
+{
+  "limitations": [
+    "Zero-percent thresholds deliberately exercise rejection on historical shared-host runs; not prospective limits or timing admission.",
+    "Thirty-second period bound is a negative-control fixture setting, not a production policy.",
+    "PSI includes native work and does not identify foreign interference."
+  ],
+  "limits_are_not_production_policy": true,
+  "runs": [
+    {
+      "evidence": [
+        {
+          "bytes": 179489,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000000.json",
+          "sha256": "764160a4049f57d8556e93b079d7fb32fb458df0561e5d026567b042e0037eb0"
+        },
+        {
+          "bytes": 180866,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000001.json",
+          "sha256": "8779e086443e9e08d147dec5c480cb7c825446733f35914d8f455ef3fd66f31a"
+        },
+        {
+          "bytes": 188423,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000002.json",
+          "sha256": "a2f6877efcc63617c49f73de9cb58e0dc69ef62780ebf082211d1829b6399022"
+        },
+        {
+          "bytes": 188426,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000003.json",
+          "sha256": "3566f4491f6a563cbe372a129d5be42bad545d32da35833af10f971d90fd08b1"
+        },
+        {
+          "bytes": 204914,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000004.json",
+          "sha256": "0ac47c675375812cf21a5bf5819fc05c7fb6219e902f73e4d40c903ff73ddeee"
+        },
+        {
+          "bytes": 180869,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000005.json",
+          "sha256": "b14c40881cafbd0663d6fd8f20268ca971e5025e7e68f3aad66e2fb5cea4449e"
+        },
+        {
+          "bytes": 184991,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000006.json",
+          "sha256": "c9e6393cb2a3113e8028c734bb380570b3b1eadf82d661c8f6a49840d7e26c54"
+        },
+        {
+          "bytes": 184325,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000007.json",
+          "sha256": "0c09ed1f19c556310f1f7679927206b4803c40ef426df65308a2f05e6f691528"
+        },
+        {
+          "bytes": 181579,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000008.json",
+          "sha256": "ae75f462411f88c4bceb271803c3dc942d0592364bac86fb3710690f47878a77"
+        },
+        {
+          "bytes": 179518,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/point_000009.json",
+          "sha256": "85bd2adb3d5d7673250fe01a609e5942ed94700687714793ac675fc91f5830df"
+        },
+        {
+          "bytes": 43518,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/done.json",
+          "sha256": "e18d71701059a4dfbfc7c207ff4329e9ec2a40dcca4d335995503e961eec32cf"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/measurement/ready.json",
+          "sha256": "cd1baca1d3ae3f709fba9dac3f7c98c6173c2fc2a6118859ece2dfcc51e242bd"
+        }
+      ],
+      "job_id": 22367,
+      "method": "high",
+      "review": {
+        "bounds": {
+          "maximum_period_s": 30.0,
+          "some_percent": {
+            "cpu": 0.0,
+            "io": 0.0,
+            "memory": 0.0
+          }
+        },
+        "controlled_workload_verified": false,
+        "failures": {
+          "cpu_pressure_bound_exceeded": 9,
+          "io_pressure_bound_exceeded": 3
+        },
+        "intervals": 9,
+        "limitations": [
+          "System PSI includes native and foreign work; a failed bound does not identify its cause.",
+          "Non-atomic reads and delayed accounting make midpoint percentages approximate; values are not clipped.",
+          "CPU full is undefined at system scope and is not interpreted.",
+          "Checks do not establish absence of cache, memory-bandwidth or device interference."
+        ],
+        "maximum_observed_period_s": 1.020772055,
+        "maximum_observed_some_percent": {
+          "cpu": 20.706926576616397,
+          "io": 0.0181144262112909,
+          "memory": 0.0
+        },
+        "native_interval_bracketed": true,
+        "points": 10,
+        "sampled_pressure_policy_satisfied": false,
+        "schema": "threadripper_pressure_stream_review_v1",
+        "scientific_timings_admitted": false
+      }
+    },
+    {
+      "evidence": [
+        {
+          "bytes": 179612,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000000.json",
+          "sha256": "0b48d938f1801f3530e587237d7b9e3194f9d2eed909efd6e5d80473c20dfb91"
+        },
+        {
+          "bytes": 180988,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000001.json",
+          "sha256": "867032ce7d1dcd09ade4ba35fb4e19acc60512457da76412c457535b39252fbb"
+        },
+        {
+          "bytes": 188549,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000002.json",
+          "sha256": "d75c340f5f4e75a4fcb9e560e6581b1734f09bfde0140de8abe9e7e60d7b8e24"
+        },
+        {
+          "bytes": 205039,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000003.json",
+          "sha256": "9eedfb91aa41bc48bb5bd7d9c6353b739e4a9efade4ec190dd26079180b42bb1"
+        },
+        {
+          "bytes": 180997,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000004.json",
+          "sha256": "bec6e6adc3f47d2d73fd30b3ae620b6f7d8366ca9a9a686cd31ed1d5e31684ea"
+        },
+        {
+          "bytes": 180997,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000005.json",
+          "sha256": "289554d5e22050a29abdce14e26efc409aa9d550b876a0418e2d710344108043"
+        },
+        {
+          "bytes": 185126,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000006.json",
+          "sha256": "bd50f97b70e2c0ae6ba88cc6f19bb66890babc32f448e5ef22991527bea4b338"
+        },
+        {
+          "bytes": 181694,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000007.json",
+          "sha256": "937dc4e43f5da74da1fcf292bd541286437bd7375f1601ba86f66825e8658ce4"
+        },
+        {
+          "bytes": 207821,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000008.json",
+          "sha256": "fa1dee1a4d7d53b53c526107484177541ab03ff22086050c57231a703710a128"
+        },
+        {
+          "bytes": 202304,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000009.json",
+          "sha256": "96312d0858c8d44c8ec00c7a8aa61768ed03e47b0f913087ea9e3971196e293c"
+        },
+        {
+          "bytes": 179651,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/point_000010.json",
+          "sha256": "9f24fb821fc9183dccce6d582dcfead4458337eaf3b1f3255fbb400b2b4d578c"
+        },
+        {
+          "bytes": 43519,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/done.json",
+          "sha256": "01f9339723259c9cc0eee333d2e48b8662360510bbeecb5623ee6d718160e5ae"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_phylo_20260928/run_00/measurement/ready.json",
+          "sha256": "08f6c2df54bb9cdb2906258ede037bd7d8f2d00090d2e39af6e3384fb5752d51"
+        }
+      ],
+      "job_id": 22368,
+      "method": "phylo",
+      "review": {
+        "bounds": {
+          "maximum_period_s": 30.0,
+          "some_percent": {
+            "cpu": 0.0,
+            "io": 0.0,
+            "memory": 0.0
+          }
+        },
+        "controlled_workload_verified": false,
+        "failures": {
+          "cpu_pressure_bound_exceeded": 10,
+          "io_pressure_bound_exceeded": 10
+        },
+        "intervals": 10,
+        "limitations": [
+          "System PSI includes native and foreign work; a failed bound does not identify its cause.",
+          "Non-atomic reads and delayed accounting make midpoint percentages approximate; values are not clipped.",
+          "CPU full is undefined at system scope and is not interpreted.",
+          "Checks do not establish absence of cache, memory-bandwidth or device interference."
+        ],
+        "maximum_observed_period_s": 1.027305912,
+        "maximum_observed_some_percent": {
+          "cpu": 6.223017945755977,
+          "io": 0.02006223601529927,
+          "memory": 0.0
+        },
+        "native_interval_bracketed": true,
+        "points": 11,
+        "sampled_pressure_policy_satisfied": false,
+        "schema": "threadripper_pressure_stream_review_v1",
+        "scientific_timings_admitted": false
+      }
+    },
+    {
+      "evidence": [
+        {
+          "bytes": 179553,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000000.json",
+          "sha256": "ee4531ef3abcdd014d982b971e1e65a427985d52ebb8c26d45257e613f097519"
+        },
+        {
+          "bytes": 180243,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000001.json",
+          "sha256": "63bb395adf917ca2941b5e713f058f2d9c90cb3bfc61417137d342dcf338f9d3"
+        },
+        {
+          "bytes": 180247,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000002.json",
+          "sha256": "3c74100f1e40cac1a2247ebdbc81dc7b6416fce93705f01541634ba4288c99c6"
+        },
+        {
+          "bytes": 180247,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000003.json",
+          "sha256": "6430cf33d512e339cf811fb637b9b00ad348d3c1ccf857f9cefdcb5ac1bfe6ed"
+        },
+        {
+          "bytes": 180265,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000004.json",
+          "sha256": "18742911e01ea2de1d9e0aa97b7a615fe7e163c3c56d2d8c8d96e29f8a68be84"
+        },
+        {
+          "bytes": 180265,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000005.json",
+          "sha256": "20adc1855f2be546c423ea7168dba57214682c34fcca8bcac320996eaa210783"
+        },
+        {
+          "bytes": 182329,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000006.json",
+          "sha256": "83bca5a64a6f56974b4cbc87f030ccdc9d1cc3f89f585bc40c09cdf5bd262a24"
+        },
+        {
+          "bytes": 191366,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000007.json",
+          "sha256": "2131589e63c03a3a3408912ddc7956d0cb19f0de2a8cf9a00dab44b6d055a439"
+        },
+        {
+          "bytes": 181649,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000008.json",
+          "sha256": "115cf7b311713b49b81dec9009c86f88f90e1a50ea31ac72d73fc8960ec620fc"
+        },
+        {
+          "bytes": 179588,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/point_000009.json",
+          "sha256": "e48b4907a2a163448515cc7103c830824d6fe3f17f1c53bfdbf6937f17b5bc52"
+        },
+        {
+          "bytes": 43521,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/done.json",
+          "sha256": "135681bb93cbe628d8efd77826cb2f0c52f4dd14aac34b309bba6ed7ea4dd516"
+        },
+        {
+          "bytes": 4596,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_of_20260928/run_00/measurement/ready.json",
+          "sha256": "0fc99c67f340a8a2afca70fe8e15dace5551d9bb1a60682a5e81e66830119cc7"
+        }
+      ],
+      "job_id": 22369,
+      "method": "of",
+      "review": {
+        "bounds": {
+          "maximum_period_s": 30.0,
+          "some_percent": {
+            "cpu": 0.0,
+            "io": 0.0,
+            "memory": 0.0
+          }
+        },
+        "controlled_workload_verified": false,
+        "failures": {
+          "cpu_pressure_bound_exceeded": 9,
+          "io_pressure_bound_exceeded": 9
+        },
+        "intervals": 9,
+        "limitations": [
+          "System PSI includes native and foreign work; a failed bound does not identify its cause.",
+          "Non-atomic reads and delayed accounting make midpoint percentages approximate; values are not clipped.",
+          "CPU full is undefined at system scope and is not interpreted.",
+          "Checks do not establish absence of cache, memory-bandwidth or device interference."
+        ],
+        "maximum_observed_period_s": 1.021489664,
+        "maximum_observed_some_percent": {
+          "cpu": 0.3451730506985846,
+          "io": 0.020527240212260777,
+          "memory": 0.0
+        },
+        "native_interval_bracketed": true,
+        "points": 10,
+        "sampled_pressure_policy_satisfied": false,
+        "schema": "threadripper_pressure_stream_review_v1",
+        "scientific_timings_admitted": false
+      }
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4277,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_pressure_stream.py",
+    "sha256": "5beaae428ca1639d33c239bdbdf19bfbbf773932ff95898bd997a572a46e7c17"
+  },
+  "status": "historical_negative_control_only"
+}

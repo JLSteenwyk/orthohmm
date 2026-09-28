@@ -168,6 +168,10 @@ def execute(request_path, request_sha):
                                     host="bizon", plan_sha256=PLAN_SHA))
     number(policy["maximum_foreign_average_cores"])
     number(policy["maximum_sample_period_s"], positive=True)
+    number(policy["maximum_pressure_sample_period_s"], positive=True)
+    limits = policy["maximum_pressure_percent"]
+    if set(limits) != {"cpu", "memory", "io"} or any(number(v) > 100 for v in limits.values()):
+        raise ValueError("Require prospective CPU, memory and I/O pressure bounds")
     baseline = read(lookup["baseline"])
     binding = read(lookup["binding"])
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{run['index']:02d}"
@@ -199,8 +203,8 @@ def execute(request_path, request_sha):
         stream_ref, stream_review = audit_process_stream(run["measurement_directory"], policy_ref,
             record(request["environment_preflight_path"]), job_id=job, index=run["index"])
         result["process_stream_review"] = stream_ref
-        if not stream_review["sampled_process_policy_satisfied"]:
-            raise ValueError("Whole-run sampled process policy was not satisfied")
+        if not stream_review["sampled_environment_policy_satisfied"]:
+            raise ValueError("Whole-run sampled environment policy was not satisfied")
         for item in [request_ref, *evidence]:
             check(item)
         result["status"] = "measurement_returned_pending_independent_review"

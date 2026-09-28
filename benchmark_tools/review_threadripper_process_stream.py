@@ -12,6 +12,7 @@ from benchmark_tools.review_threadripper_process_policy import number, review
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.slurm_resource_snapshot import scoped_path
+from benchmark_tools.review_threadripper_pressure_stream import evaluate as evaluate_pressure
 
 
 def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
@@ -151,6 +152,23 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
             launch=done["started_ns"] / 1e9, end=done["finished_ns"] / 1e9,
             maximum_foreign_average_cores=policy["maximum_foreign_average_cores"],
             maximum_sample_period_s=policy["maximum_sample_period_s"])
+    point_paths = sorted(directory.glob("point_*.json"))
+    if point_paths != [directory / f"point_{i:06d}.json" for i in range(len(point_paths))]:
+        raise ValueError("Require contiguous numbered pressure observation files")
+    def points():
+        for path in point_paths:
+            ref = record(path)
+            references.append(ref)
+            yield read(ref)
+    pressure = evaluate_pressure(points(), boot_id=preflight["boot_id"], job_scope=str(job_scope),
+        launch_ns=done["started_ns"], end_ns=done["finished_ns"],
+        limits=policy["maximum_pressure_percent"],
+        maximum_period_s=policy["maximum_pressure_sample_period_s"])
+    if sorted(directory.glob("point_*.json")) != point_paths:
+        raise ValueError("Pressure observation inventory changed during review")
+    result["pressure_review"] = pressure
+    result["sampled_environment_policy_satisfied"] = bool(result["sampled_process_policy_satisfied"]
+        and pressure["sampled_pressure_policy_satisfied"])
     for ref in references:
         check(ref)
     result.update(job_id=job_id, index=index, evidence=references,

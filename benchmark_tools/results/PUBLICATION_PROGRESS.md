@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Whole-Run Pressure Checks In Executor (2026-09-28)
+
+Previous turn pushed bound process review as cdab6a9b. Added interval-by-interval
+CPU, memory and I/O PSI evaluation over the retained host brackets and connected
+it to the bound audit and executor. Explicit pressure/rate-period limits are
+required prospectively. Both process and pressure verdicts must pass; neither
+constitutes scientific timing admission. See the
+[pressure review contract](THREADRIPPER_PRESSURE_STREAM_20260928.md).
+
+262 focused tests pass. A checksum-verified historical negative replay of all
+three native fixtures rejects deliberately zero-percent PSI limits, exercising
+the new evaluator on real retained logs without treating those limits as policy.
+No new inference, service change or DGX access occurred. Full-scale post-native
+audit overhead remains unvalidated; manifests grow with observation count.
+Executable/configuration stability, real policy freeze, native/full-scale
+validation and quiet-window production runs remain open. Full goal active.
+
 ## Bind Process Review Into Execution (2026-09-28)
 
 Previous turn pushed typed collection and streaming interval checks as

@@ -39,6 +39,7 @@ def setup(tmp_path, monkeypatch):
     policy = put(tmp_path / "environment_policy.json", dict(schema="threadripper_environment_policy_v1",
         decision="reviewed", host="bizon", plan_sha256=plan["sha256"],
         maximum_foreign_average_cores=.1, maximum_sample_period_s=35.,
+        maximum_pressure_sample_period_s=3., maximum_pressure_percent=dict(cpu=10., io=10., memory=10.),
         review_reference="synthetic test only", evidence=[support]))
     ready = put(tmp_path / "ready.json", dict(schema="threadripper_readiness_review_v1", decision="passed",
         plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], recipe_sha256=recipe["sha256"],
@@ -287,13 +288,13 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
         assert kwargs == dict(job_id=42, index=0)
         assert worker_events[-1] == "cleaned"
         worker_events.append("stream_review")
-        return put(root / "stream_review.json", {}), dict(sampled_process_policy_satisfied=not stream_fails)
+        return put(root / "stream_review.json", {}), dict(sampled_environment_policy_satisfied=not stream_fails)
     monkeypatch.setattr(driver, "audit_process_stream", audit_stream)
     if raises or worker_fails:
         with pytest.raises(RuntimeError, match="synthetic"):
             driver.execute(Path(ref["path"]), ref["sha256"])
     elif stream_fails:
-        with pytest.raises(ValueError, match="sampled process policy"):
+        with pytest.raises(ValueError, match="sampled environment policy"):
             driver.execute(Path(ref["path"]), ref["sha256"])
     else:
         result = driver.execute(Path(ref["path"]), ref["sha256"])

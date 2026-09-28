@@ -155,6 +155,7 @@ def bound_fixture(tmp_path):
     environment = put("policy.json", dict(schema="threadripper_environment_policy_v1",
         decision="reviewed", host="bizon", plan_sha256="synthetic-plan",
         process_policy=process_ref, evidence=[support], maximum_foreign_average_cores=.1,
+        maximum_pressure_sample_period_s=3., maximum_pressure_percent=dict(cpu=10., memory=10., io=10.),
         maximum_sample_period_s=3.))
     preflight = put("preflight.json", dict(schema="threadripper_environment_preflight_v1",
         decision="passed", job_id=42, index=0, environment_policy=environment,
@@ -162,6 +163,17 @@ def bound_fixture(tmp_path):
     put("ready.json", dict(cgroup="0::/slurm/job_42/step_0/user/task_0\n"))
     put("done.json", dict(started_ns=11_000_000_000, finished_ns=13_000_000_000))
     (tmp_path / "host_processes.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
+    for i, t in enumerate([10, 12, 14]):
+        host = []
+        for offset in [0, .2]:
+            host.append(dict(started_monotonic_ns=int((t + offset) * 1e9),
+                finished_monotonic_ns=int((t + offset + .1) * 1e9), errors=[],
+                raw=dict(boot_id="test-boot", online_cpus="0-31",
+                         cgroup_membership="0::/slurm/job_42/step_0\n"),
+                optional={"host_" + r + "_pressure":
+                    "some avg10=0 avg60=0 avg300=0 total=0\nfull avg10=0 avg60=0 avg300=0 total=0\n"
+                    for r in ["cpu", "memory", "io"]}))
+        put(f"point_{i:06d}.json", dict(host=host))
     return environment, preflight
 
 
@@ -170,6 +182,7 @@ def test_bound_audit_keeps_evidence_and_refuses_overwrite(tmp_path):
     ref, result = stream.audit(tmp_path, *refs, job_id=42, index=0)
     stream.check(ref)
     assert result["sampled_process_policy_satisfied"]
+    assert result["sampled_environment_policy_satisfied"]
     assert result["job_id"] == 42 and not result["scientific_timings_admitted"]
     for item in result["evidence"]:
         stream.check(item)
@@ -214,3 +227,15 @@ def test_changed_stream_during_review_rejected(tmp_path, monkeypatch):
     with pytest.raises((ValueError, RuntimeError)):
         stream.audit(tmp_path, *refs, job_id=42, index=0)
     assert not (tmp_path / "process_stream_review.json").exists()
+
+
+def test_pressure_failure_fails_combined_review_with_clean_processes(tmp_path):
+    refs = bound_fixture(tmp_path)
+    path = tmp_path / "point_000001.json"
+    point = json.loads(path.read_text())
+    point["host"][0]["errors"].append(dict(field="host_io_pressure", type="OSError"))
+    path.write_text(json.dumps(point))
+    _, result = stream.audit(tmp_path, *refs, job_id=42, index=0)
+    assert result["sampled_process_policy_satisfied"]
+    assert not result["sampled_environment_policy_satisfied"]
+    assert not result["pressure_review"]["sampled_pressure_policy_satisfied"]
