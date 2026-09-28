@@ -1,5 +1,10 @@
 # Reader Dependency Security Upgrade
 
+The [September 28 environment-scope review](RELEASE_SECURITY_SCOPE_20260928.md)
+rechecks the live reader metadata and distinguishes this patched installation
+from the benchmark interpreters, which still match reported advisory ranges.
+The reader result is not security clearance for those separate environments.
+
 The repository's September 27 advisory snapshot increased from 11 to 12 open
 alerts after the reader lock was added. The new alert is CVE-2025-68463 /
 GHSA-x3vf-39hj-gxr4, concerning untrusted XML processed by Bio.Entrez. The

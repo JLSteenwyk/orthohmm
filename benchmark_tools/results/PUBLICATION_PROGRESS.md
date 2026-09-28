@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Release And Benchmark Security Scopes Separated (2026-09-28)
+
+After completing all guarded native fixtures, reviewed the recurring push
+warnings against a fresh authenticated read-only repository alert snapshot.
+Twelve alerts remain, all on the two historical requirement files; no alerts
+were dismissed and no historical artifact was edited. Used the existing REST
+collector after confirming that the installed gh command is not GitHub CLI.
+
+The [environment-scope review](RELEASE_SECURITY_SCOPE_20260928.md) adds live
+metadata comparisons for both configured benchmark interpreters and the
+patched reader. Each benchmark interpreter matches six reported advisory
+ranges. The patched reader and recovery installation have zero matches among
+installed packages; recovery lacks Biopython and OrthoFinder lacks setuptools,
+which are reported as absent rather than patched. The reader metadata matches
+its previous validated inventory and recovery matches its installation report.
+Five existing advisory tests pass. Primary advisory pages were checked; no
+reachability, exploitability or platform-impact claim is made from versions.
+
+Documented that patched reader/recovery evidence does not clear the benchmark
+environments or authorize shipping their historical locks for new installs.
+Frozen runtimes were left unchanged to preserve scientific provenance; any
+remediation requires a separate environment and equivalence validation.
+This is bounded release-security evidence, not comprehensive security or
+publication clearance. Production timing, orchestration, independent scientific
+validation, uncertainty and remaining release requirements remain open.
+
 ## All Guarded Native Fixtures Verified With Output Parity (2026-09-28)
 
 Continued from the live handles submitted in the preceding turn; no restart
