@@ -17,6 +17,23 @@ ORTHOHMM_TEST_PHMMER=/absolute/path/to/phmmer \
 make test.integration
 ```
 
+For a complete default-discovery regression run, use the same explicit
+dependency selection and retain a machine-readable report:
+
+```sh
+ORTHOHMM_TEST_MCL=/absolute/path/to/compatible/mcl \
+python -m pytest -q --junitxml=/absolute/path/to/regression.xml
+```
+
+Ten installed-runtime OrthoMCL checks are opt-in through
+`ORTHOHMM_LEGACY_BLAST_SMOKE=1`. They require the retained native installations
+and, for staged inference, the dedicated Python environment under
+`benchmarks/work/orthomcl_python_env_20260918`. They use temporary fixtures,
+not the full benchmark datasets. Enable them only where those prerequisites
+are available; report skips and separately executed native checks explicitly.
+The compatible MCL selected for OrthoHMM integration tests does not replace
+the legacy MCL used by the frozen OrthoMCL benchmark workflow.
+
 The simple and long-name fixtures run with both forward and reversed input
 creation orders. Checks cover complete reference group memberships, every
 species count, every output FASTA sequence, single-copy occupancy, exact

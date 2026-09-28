@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Complete Regression And Native Opt-In Coverage (2026-09-28)
+
+The previous continuation completed the two remaining native fixture audits.
+Reviewed the production history/measurement composition: it still requires an
+integrated executor and quiet-window eligibility before any production launch.
+Closed a separate release-validation gap by running full pytest discovery at
+96393c735ca7ad3f6c637152df538ab70e97e59f with the documented compatible MCL
+explicitly selected, leaving the global PATH and frozen methods unchanged.
+
+The complete invocation exited zero: 11,361 passed, ten skipped and 22 warnings
+in 433.98 seconds. The warnings are the existing invalid escape sequences in
+frozen parser/writer source archives. Then enabled the installed-runtime
+OrthoMCL opt-in switch and ran exactly the skipped test identities: all ten
+passed in 21.16 seconds, exit zero. JUnit identity comparison confirmed exact
+coverage of the skipped set, with no remaining skips in the second invocation.
+This is one successful default-discovery run plus a separate native run, not
+a claim that opt-in tests ran within the first invocation. See the
+[machine-readable receipt](publication_complete_regression_20260928.json).
+
+Updated tests/README.md with explicit full-suite dependency selection and the
+native opt-in prerequisites. The earlier failed legacy-MCL invocation and its
+four-test recovery remain preserved in their original receipt. Source and
+test-code paths remained clean; unrelated dirty sample outputs were untouched.
+These shared-host regression times are not comparative runtime measurements.
+No production timing identity was started, and no DGX or unrelated service was
+accessed. Production orchestration, controlled timing, independent scientific
+validation, uncertainty and release requirements remain open; the goal is active.
+
 ## Remaining Full-Lookup Fixtures Independently Verified (2026-09-28)
 
 Resumed from the unchanged full publication goal. The previous conversational

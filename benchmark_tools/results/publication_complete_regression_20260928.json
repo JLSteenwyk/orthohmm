@@ -1,0 +1,147 @@
+{
+  "compatible_mcl": {
+    "bytes": 284104,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+    "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03",
+    "version": "mcl 14-137"
+  },
+  "full": {
+    "failures": [],
+    "junit": {
+      "bytes": 1526533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_complete_regression_20260928/full.xml",
+      "sha256": "3bf7cdf7e86475bb5eae83f023d03ac0072e5ff1a8812671bf1bac51cf8c7bef"
+    },
+    "passed": 11361,
+    "skips": [
+      {
+        "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+        "name": "test_independent_complete_recheck",
+        "reason": "Installed native runtime"
+      },
+      {
+        "classname": "tests.unit.test_audit_orthomcl_database",
+        "name": "test_installed_formatdb_normalization_is_detected",
+        "reason": "Opt-in installed legacy database round trip"
+      },
+      {
+        "classname": "tests.unit.test_describe_legacy_residue_deletions",
+        "name": "test_native_query_and_database_delete_o",
+        "reason": "Opt-in installed native query and database parser probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_bpo_indexes",
+        "name": "test_installed_native_bpo_parity[False]",
+        "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_bpo_indexes",
+        "name": "test_installed_native_bpo_parity[True]",
+        "reason": "Opt-in installed OrthoMCL/BioPerl parity probe"
+      },
+      {
+        "classname": "tests.unit.test_orthomcl_perl_launcher",
+        "name": "test_installed_perl_probe_has_no_relative_lookup",
+        "reason": "Opt-in native Perl probe"
+      },
+      {
+        "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+        "name": "test_installed_checkpoint",
+        "reason": "Opt-in installed frozen OrthoMCL runtime"
+      },
+      {
+        "classname": "tests.unit.test_run_qfo_corrected_blast",
+        "name": "test_installed_legacy_engine_smoke[False]",
+        "reason": "Opt-in installed legacy engine smoke"
+      },
+      {
+        "classname": "tests.unit.test_run_qfo_corrected_blast",
+        "name": "test_installed_legacy_engine_smoke[True]",
+        "reason": "Opt-in installed legacy engine smoke"
+      },
+      {
+        "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+        "name": "test_installed_staged_native_inference",
+        "reason": "Installed dedicated Python and native fixture required"
+      }
+    ],
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "10",
+        "tests": "11371",
+        "time": "433.514",
+        "timestamp": "2026-09-28T14:30:25.081216-04:00"
+      }
+    ]
+  },
+  "full_command": [
+    "env",
+    "ORTHOHMM_TEST_MCL=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+    "/home/bizon/anaconda3/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "--junitxml=/tmp/orthohmm-complete-mcl14-20260928.xml"
+  ],
+  "full_exit_code": 0,
+  "limitations": [
+    "Default full suite and exact skipped native set ran in two separate invocations.",
+    "Existing frozen-source escape-sequence warnings remain; no frozen source was changed.",
+    "Tests do not establish benchmark accuracy, independent generalization, controlled timings or publication readiness.",
+    "Unrelated sample changes were preserved; source/test directories were clean except testing documentation."
+  ],
+  "native_command": [
+    "env",
+    "ORTHOHMM_LEGACY_BLAST_SMOKE=1",
+    "/home/bizon/anaconda3/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/unit/test_admit_qfo_corrected_bpo.py::test_independent_complete_recheck",
+    "tests/unit/test_audit_orthomcl_database.py::test_installed_formatdb_normalization_is_detected",
+    "tests/unit/test_describe_legacy_residue_deletions.py::test_native_query_and_database_delete_o",
+    "tests/unit/test_orthomcl_bpo_indexes.py::test_installed_native_bpo_parity",
+    "tests/unit/test_orthomcl_perl_launcher.py::test_installed_perl_probe_has_no_relative_lookup",
+    "tests/unit/test_prepare_orthomcl_bpo_checkpoint.py::test_installed_checkpoint",
+    "tests/unit/test_run_qfo_corrected_blast.py::test_installed_legacy_engine_smoke",
+    "tests/unit/test_stage_orthomcl_native_inputs.py::test_installed_staged_native_inference",
+    "--junitxml=/tmp/orthohmm-native-optin-20260928.xml"
+  ],
+  "native_exit_code": 0,
+  "native_matches_exact_skipped_set": true,
+  "native_optin": {
+    "failures": [],
+    "junit": {
+      "bytes": 1499,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_complete_regression_20260928/native.xml",
+      "sha256": "940b3c33e0030819475ee6c59d4f24a7fcf48a27b9f4b101bdf89f04a57badfc"
+    },
+    "passed": 10,
+    "skips": [],
+    "suites": [
+      {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "0",
+        "tests": "10",
+        "time": "21.150",
+        "timestamp": "2026-09-28T14:37:57.559469-04:00"
+      }
+    ]
+  },
+  "previous_receipt": {
+    "bytes": 7411,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_full_regression_20260928.json",
+    "sha256": "d88c597acffe2f5555e064c0a19071a279baeb92a35408be61ff5ea3553796dc"
+  },
+  "publication_ready": false,
+  "revision": "96393c735ca7ad3f6c637152df538ab70e97e59f"
+}
