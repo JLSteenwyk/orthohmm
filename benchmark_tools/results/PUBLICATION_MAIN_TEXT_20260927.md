@@ -187,7 +187,15 @@ bounded support in matched-recall simulations; additional profile refinement
 has not demonstrated a general benefit. Neither simulation evidence nor an
 OrthoBench point advantage establishes superiority over full OrthoFinder.
 
-Original TreeFam-A family mappings remain unavailable. VGNC dependence and
+Original TreeFam-A family mappings and complete source trees remain unavailable.
+Public archive recovery yielded historical Selectome subtrees, but all are
+restricted to Euteleostomi. A [taxonomic coverage audit](TREEFAM_RECOVERED_SCOPE_20260928.md)
+found that 55,933 of 79,320 retained reference relations (70.52%) have at least
+one endpoint outside that clade. Those relations cannot be reconstructed from
+these subtrees under a species-consistent mapping; the other 23,387 relations
+are only potentially in scope, not demonstrated reconstructions. This is a
+coverage exclusion, not an accuracy effect or a basis for family-level intervals.
+VGNC dependence and
 rare-error diagnostics do not justify the candidate confidence-interval
 procedure. Valid paired uncertainty for GO/EC, FAS and the secondary mean is
 also unfinished. These gaps must remain visible alongside point estimates.

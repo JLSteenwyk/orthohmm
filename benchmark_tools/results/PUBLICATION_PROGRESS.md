@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Integrate Recovered Tree Scope Into Manuscript (2026-09-28)
+
+The preceding prompt-confirmation turn was no progress on publication work;
+the requested Threadripper-only amendment was already present. Resumed by
+reading the objective and checking current HEAD `d4cec0a8`. Recomputed the
+complete taxonomic-scope audit from retained inputs and obtained exact JSON
+agreement, including provenance. All 30 scope/count-reader/manuscript-renderer
+tests pass.
+
+Updated the main manuscript, extended Methods account and claim checklist to
+distinguish recovered historical subtrees from missing complete source trees.
+The necessary exclusion is 55,933/79,320 relations (70.52%); the remaining
+23,387 are only potentially in scope. The extended account records the lineage
+metadata's QfO 2018 title, its taxonomic use, unmapped Selectome identifiers and
+ten nonincident reference proteins. No accuracy effect or independent family
+labels are inferred. Main-text review export v9 follows this integration;
+its render receipt records the linked ledger at this revision.
+
+Scientific scores/defaults and raw references are unchanged. Controlled
+Threadripper timing, other unresolved QfO uncertainty and release clearance
+remain open. No production timing, unrelated-job action or DGX access occurred.
+The full publication goal remains active.
+
 ## Quantify Recovered Tree Coverage Gap (2026-09-28)
 
 Previous turn pushed shared-tree content verification as `d53a60e8`. A new

@@ -1626,6 +1626,28 @@ per pooled category. Appropriate family-level uncertainty remains unresolved
 until original source-family mappings are recovered and validated. No
 independent-pair bootstrap or degenerate single-case interval is substituted.
 
+Public archive recovery subsequently located historical Selectome exports
+derived from TreeFam release 7: 1,211 TreeFam-A subtrees and a later 9,850-subtree
+TreeFam-A+B collection. Both contain only Euteleostomi subtrees, not complete
+source trees. The [taxonomic scope audit](TREEFAM_RECOVERED_SCOPE_20260928.md)
+uses the existing QfO mapping for retained reference identifiers and the
+Euteleostomi clade in retained phyloXML lineage metadata. Although that file is
+in the 2020 resource directory, its title names QfO 2018; it is used as taxonomy
+metadata, not a new 2020 species-tree inference. All observed reference species
+have metadata. No Selectome gene identifiers are mapped in this analysis.
+
+Of 11,130 incident reference proteins, 5,334 are outside Euteleostomi. At least
+one outside-clade endpoint occurs in 55,933 of 79,320 relations (70.52%):
+35,868 ortholog and 20,065 paralog relations. Relations with two outside
+endpoints are counted once. Thus the recovered subtrees cannot reconstruct
+the entire reference even if their identifier mapping were resolved. The
+23,387 relations with both endpoints inside the clade are merely potentially
+in scope; their gene, family and event coverage has not been established.
+Ten reference proteins without relations remain outside this incident-protein
+analysis. These counts bound taxonomic coverage, not prediction accuracy or
+the effect of excluding taxa. Neither original-family labels nor confidence
+intervals were inferred, and no benchmark reference or score was changed.
+
 ### Prespecified Whole-Genome-Duplicate Application
 
 Experimental duplicate-pair evidence comes from
