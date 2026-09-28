@@ -67,6 +67,38 @@ runs. Resolve background-workload eligibility independently of method outcomes.
 
 ## Measurement And Failure Handling
 
+### Input Storage Clarification (2026-09-28)
+
+Before any scientific timing result, adopt one common preparation policy:
+fresh per-run FASTA copies on local `/dev/shm` tmpfs for all three methods,
+with results, search databases, native intermediate files and collector
+artifacts on the existing project ext4 volume. Create and hash the input
+copies outside the inference timer, in the scheduled job's preparation
+context, not in an unrelated long-lived process. Do not use the exploratory
+tmpfs copies directly as production inputs or share a mutable input directory
+between runs. Verify actual native enumeration before and after every run;
+creation order alone is not sufficient. Preparation time and copied bytes
+are separately reported. This is a prepared-input measurement, not cold-disk
+end-to-end performance; do not evict system caches.
+
+Use explicit OrthoFinder `-o <persistent-run-directory>/orthofinder_full`
+alongside the fresh tmpfs `-f` input. This changes output placement only;
+retain all frozen scientific flags, including full phylogenetic inference.
+Do not use `-op` in production: it is solely the preparation-only diagnostic
+used to verify initial path behavior. That control passed on 28 September
+and left its two synthetic input files unchanged. Its
+[receipt](orthofinder_storage_probe_20260928.json) pins native outputs and
+commands. Full-run temporary-file placement remains a validation gate.
+
+The job-level 128-GiB cap must include preparation and native work. Record
+job and native-step memory scopes separately. Pre-existing tmpfs pages may
+remain charged to their creator rather than the reader, so native-step peak
+alone is not the complete memory footprint. Report input bytes and job peak
+alongside native-step peak, without claiming their peaks are additive or
+subtracting prepared input memory. This policy requires an accounting probe
+and executor integration before production; the earlier sleep controls do
+not verify tmpfs charge ownership. Inputs are temporary, not archival data.
+
 Record input preparation, copying/hashing, inference, output validation,
 conversion and scoring as separate stages. Native timing spans CLI launch
 through exit, including database construction, descendants and output writing.

@@ -1,5 +1,27 @@
 # Publication Progress
 
+## OrthoFinder Output Storage Checked (2026-09-28)
+
+Previous turn launched the public-archive download; job 22344 was verified
+RUNNING again, with 354,037,760 bytes observed during this turn. No duplicate
+transfer was started and no TreeFam originals are yet claimed recovered.
+
+Inspected the installed OrthoFinder 3.1.5 help and frozen output-handler
+source, then executed a bounded preparation-only `-op` control with two
+synthetic tmpfs FASTAs and explicit ext4 `-o`. Exit zero, unchanged input
+inventory, sorted native species mapping and generated FASTAs in the disk
+WorkingDirectory all verified. Five focused tests passed (0.22 seconds).
+The [receipt](orthofinder_storage_probe_20260928.json) pins commands and files.
+This is not a full pipeline or scientific timing run.
+
+The prospective timing amendment now specifies fresh per-run tmpfs inputs
+for all methods, disk-backed generated outputs, preparation outside timing,
+and both job/native-step memory scopes with explicit tmpfs-charge caveats.
+Do not silently omit prep-owned input memory or sum nonconcurrent peaks.
+Executor integration, charge-accounting and full native validation, overhead
+assessment, and a quiet window remain required. No scientific settings,
+historical data, DGX state or unrelated workloads were changed.
+
 ## Public Archive Retrieval Underway (2026-09-28)
 
 Previous turn resolved native input order in a temporary preparation candidate.
