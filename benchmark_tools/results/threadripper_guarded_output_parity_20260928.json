@@ -1,0 +1,86 @@
+{
+  "limitations": [
+    "Canonical groups and native pair sets for sixteen input genes; no genome-scale equivalence claim.",
+    "Fingerprinting ignores group labels, ordering and pair orientation; native-format validation is retained separately.",
+    "Identical outputs do not prove identical computational work or biological accuracy."
+  ],
+  "methods": [
+    {
+      "equal": true,
+      "evidence": {
+        "bytes": 8520,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_high_20260928/prior_output_parity.json",
+        "sha256": "019ae406cc0db81d5dbc34fd6e277534b5bbef304c2cfb137455f8d63a52bfc8"
+      },
+      "identity": {
+        "input_species_mapping": "55b7cebfbb0daa634bf4dc0a5f55a8d8c5905345bb16a2deb2ba1ac75d0c7d30",
+        "orthogroups": {
+          "genes": 16,
+          "groups": 3,
+          "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+        }
+      },
+      "method": "high"
+    },
+    {
+      "equal": true,
+      "evidence": {
+        "bytes": 10416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_phylo_20260928/prior_output_parity.json",
+        "sha256": "f4d5d23c7d5c2eb8f6838afa5f592c94d35e06f9a23bebae29f7f85334109394"
+      },
+      "identity": {
+        "input_species_mapping": "55b7cebfbb0daa634bf4dc0a5f55a8d8c5905345bb16a2deb2ba1ac75d0c7d30",
+        "native_pairs": {
+          "pairs": 36,
+          "sha256": "0a25ec80c0a24f65f4edea3a4418db4aa0fbda40ac4fe31cc82c825cbc48dbb4"
+        },
+        "orthogroups": {
+          "genes": 16,
+          "groups": 3,
+          "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+        },
+        "root_hogs": {
+          "genes": 16,
+          "groups": 3,
+          "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+        }
+      },
+      "method": "phylo"
+    },
+    {
+      "equal": true,
+      "evidence": {
+        "bytes": 17445,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_guarded_of_20260928/prior_output_parity.json",
+        "sha256": "6f2383577a90580bb14e3bf4efb7e23c936aa9d2eef8d8e0e42b56bf5b19aad2"
+      },
+      "identity": {
+        "checkpoint_groups": {
+          "genes": 16,
+          "groups": 3,
+          "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+        },
+        "input_species_mapping": "55b7cebfbb0daa634bf4dc0a5f55a8d8c5905345bb16a2deb2ba1ac75d0c7d30",
+        "native_pairs": {
+          "pairs": 36,
+          "sha256": "0a25ec80c0a24f65f4edea3a4418db4aa0fbda40ac4fe31cc82c825cbc48dbb4"
+        }
+      },
+      "method": "of"
+    }
+  ],
+  "outcomes": {
+    "bytes": 33243,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_guarded_outcomes_20260928.json",
+    "sha256": "7dd11dd24556af620bc2f53d4ed950307a69bee91bcd03f1c081b53c691cdde7"
+  },
+  "publication_ready": false,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4511,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fingerprint_native_overhead_outputs.py",
+    "sha256": "516e40465493a367a1f1004141a70422f98a87abaa4828b2a3baf2d8ceb5f0f5"
+  },
+  "status": "all_three_fixture_outputs_match_prior"
+}

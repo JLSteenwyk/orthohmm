@@ -1,5 +1,35 @@
 # Publication Progress
 
+## All Guarded Native Fixtures Verified With Output Parity (2026-09-28)
+
+Continued from the live handles submitted in the preceding turn; no restart
+or retry occurred. Jobs 22363, 22364 and 22365 completed 0:0 sequentially.
+For each, the full before/after runtime-tree and native-lookup checks passed,
+the actual release-budget query passed, and independent recomputation from
+its retained controller text reproduced the budget decision. Terminal
+controller policy validated the 26-hour envelope. Independent raw measurement
+replay and native output validation also passed. See the
+[three-method outcome receipt](threadripper_guarded_outcomes_20260928.json).
+
+Compared canonical outputs with the earlier validated fixtures 22356, 22359
+and 22360. Input-species mappings and group memberships match exactly for
+all three methods. Satellite_v2 root HOGs and native ortholog pairs, and full
+OrthoFinder native ortholog pairs, also match exactly. Each fixture covers
+16 genes in three groups; the two phylogenetic outputs each contain 36
+canonical native pairs. The [parity receipt](threadripper_guarded_output_parity_20260928.json)
+pins the prior/current files and independent fingerprint evidence. This is
+small-fixture behavior preservation, not genome-scale equivalence or proof
+of biological correctness.
+
+Observed maximum foreign interval-average CPU use was 72.17, 72.41 and 71.61
+cores, respectively. These fixtures are not admitted as controlled timings.
+All three diagnostic jobs are now terminal; no pending retry or native run
+from this chain remains. No production timing identity was launched and no
+unrelated workload or DGX service was touched. Integrated production
+orchestration, quiet-window eligibility, full-scale observer validation and
+remaining scientific/release requirements remain open; the full goal stays
+active and incomplete.
+
 ## Runtime Rebound And Guarded Fixtures Submitted (2026-09-28)
 
 The previous continuation added the fresh release-budget check. Re-inventoried
