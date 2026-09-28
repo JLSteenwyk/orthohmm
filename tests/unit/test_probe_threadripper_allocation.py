@@ -15,6 +15,15 @@ def test_valid():
     validate(sample(), sample())
 
 
+def test_explicit_sibling_reservation():
+    parent, child = sample(), sample()
+    for row in (parent, child):
+        row["slurm"]["SLURM_CPUS_PER_TASK"] = "64"
+    with pytest.raises(ValueError):
+        validate(parent, child)
+    validate(parent, child, 64)
+
+
 @pytest.mark.parametrize("change", ["siblings", "ram", "unlimited", "cores", "host", "child", "request"])
 def test_rejects_wrong_allocation(change):
     parent, child = sample(), sample()

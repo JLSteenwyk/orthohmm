@@ -38,14 +38,16 @@ def inspect():
                        ("SLURM_JOB_ID", "SLURM_CPUS_PER_TASK", "SLURM_MEM_PER_NODE")})
 
 
-def validate(parent, child):
+def validate(parent, child, step_cpus=32):
+    if type(step_cpus) is not int or step_cpus not in (32, 64):
+        raise ValueError("Require explicit tested step reservation")
     for sample in (parent, child):
         if (sample["host"] != "bizon" or len(sample["affinity"]) != 32
                 or len(set(sample["affinity"])) != 32
                 or sorted(t["cpu"] for t in sample["topology"]) != sample["affinity"]
                 or len({(t["package"], t["core"]) for t in sample["topology"]}) != 32):
             raise ValueError("Require 32 distinct physical-core placements on bizon")
-        if (sample["slurm"]["SLURM_CPUS_PER_TASK"] != "32"
+        if (sample["slurm"]["SLURM_CPUS_PER_TASK"] != str(step_cpus)
                 or sample["slurm"]["SLURM_MEM_PER_NODE"] != "131072"):
             raise ValueError("Requested allocation differs")
         caps = [int(row["memory.max"]) for row in sample["ancestors"]
@@ -61,6 +63,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", action="store_true")
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--step-cpus", type=int, choices=(32, 64), default=32)
     args = parser.parse_args()
     if args.snapshot:
         print(json.dumps(inspect()))
@@ -71,12 +74,13 @@ def main():
     time.sleep(2)
     child = json.loads(subprocess.check_output(
         [sys.executable, str(Path(__file__).resolve()), "--snapshot"], text=True, timeout=30))
-    report = dict(parent=parent, child=child, scientific_timings_admitted=False,
+    report = dict(parent=parent, child=child, reserved_step_cpus=args.step_cpus,
+                  native_affinity_cpus=32, scientific_timings_admitted=False,
                   limitations=["No native inference or collector tested.",
                                "CPU quota, swap and all raw ancestor limits are recorded separately.",
                                "No quiet-host or full-run placement guarantee."])
     try:
-        validate(parent, child)
+        validate(parent, child, args.step_cpus)
         report["status"] = "placement_and_ram_cap_verified"
     except ValueError as error:
         report.update(status="allocation_probe_failed", error=str(error))
