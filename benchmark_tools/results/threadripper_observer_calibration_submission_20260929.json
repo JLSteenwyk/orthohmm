@@ -1,0 +1,28 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_20260929.sh",
+    "--protocol",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_protocol_20260929.json",
+    "--protocol-sha256",
+    "ebe0aabcaf32111a6035aacd7a15d03a3197f47fca9a9f722ee0ad5be5c8fb7e"
+  ],
+  "committed_protocol_revision": "643592161bcd6b2684d8409d1b30d8357e838bb9",
+  "dependency": "afterany:22377",
+  "job_id": 22378,
+  "production_timing": false,
+  "protocol": {
+    "bytes": 200242,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_protocol_20260929.json",
+    "sha256": "ebe0aabcaf32111a6035aacd7a15d03a3197f47fca9a9f722ee0ad5be5c8fb7e"
+  },
+  "returncode": 0,
+  "script": {
+    "bytes": 861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_20260929.sh",
+    "sha256": "53e5526b33903eb64805161a973d25a4c7c11970e89d16c9f2d8788d6451636b"
+  },
+  "stderr": "",
+  "stdout": "22378\n"
+}

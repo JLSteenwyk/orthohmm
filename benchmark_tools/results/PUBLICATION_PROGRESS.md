@@ -21,6 +21,14 @@ job 22377 becoming terminal. No production timing runs have been launched.
 The full publication goal remains active: timing isolation/overhead/handoff,
 unresolved uncertainty, completed archive admission and release gates remain.
 
+Submission update: protocol commit `64359216` was pushed before submitting
+[diagnostic job 22378](threadripper_observer_calibration_submission_20260929.json).
+Live scheduler inspection confirms `PENDING (Dependency)`,
+`afterany:22377(unfulfilled)`, no requeue, 64 CPUs/task and 128 GiB requested.
+Job 22377 remains `RUNNING` at 1:04:58; no inference restart. After 22378 becomes
+terminal, inspect accounting/logs and execute the protocol's independent audit.
+Do not refresh its 822 frozen source pins during the pending/running attempt.
+
 ## Adopt And Replay Prospective Timing Resource Endpoints (2026-09-29)
 
 Previous turn was a verified wait on job 22377; it remains running. Reread goal
