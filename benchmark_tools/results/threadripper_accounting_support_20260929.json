@@ -1,0 +1,65 @@
+{
+  "binary_strings": {
+    "cpu.stat": 5,
+    "memory.current": 4,
+    "memory.peak": 0
+  },
+  "cgroup_config": {
+    "record": {
+      "bytes": 85,
+      "path": "/etc/slurm/cgroup.conf",
+      "sha256": "a202bc1eb2cb36dc98e4110c711d1bbff0fadcf4b99ebfe34e2114435e18df8e"
+    },
+    "text": "CgroupPlugin=cgroup/v2\nConstrainCores=yes\nConstrainDevices=yes\nConstrainRAMSpace=yes\n"
+  },
+  "configuration": {
+    "AccountingStorageType": "accounting_storage/slurmdbd",
+    "CgroupPlugin": "cgroup/v2",
+    "JobAcctGatherFrequency": "30",
+    "JobAcctGatherType": "(null)",
+    "PluginDir": "/usr/lib/slurm",
+    "ProctrackType": "proctrack/linuxproc",
+    "TaskPlugin": "task/cgroup,task/affinity"
+  },
+  "installed_manual": {
+    "bytes": 280770,
+    "path": "/usr/share/man/man5/slurm.conf.5",
+    "sha256": "1607270158a715f63189ec4c9328f47c4897cc1babc0ad41bd553110257446f5"
+  },
+  "load_observation": {
+    "bytes": 1481978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_resumption_load_20260929.json",
+    "sha256": "6d35b997ca70655fca3bf134229b9a74790cbf06a19a09aaf4f3790dc904d6d3"
+  },
+  "observed_utc": "2026-09-29T03:48:59Z",
+  "plugins": [
+    {
+      "bytes": 360888,
+      "path": "/usr/lib/slurm/jobacct_gather_cgroup.so",
+      "sha256": "48fe1b27c94e5303d985d1a6e88d1af15307d4efbf4ecc5d1af60e5b05fe4904"
+    },
+    {
+      "bytes": 336688,
+      "path": "/usr/lib/slurm/jobacct_gather_linux.so",
+      "sha256": "faa297a95bac505da2b9065f731c8908546d156f270c518a17b9d51177a678f0"
+    },
+    {
+      "bytes": 496096,
+      "path": "/usr/lib/slurm/cgroup_v2.so",
+      "sha256": "f62deb3eb676278dcf3bb4542ffe4f4a127d53afd2e3a460f2b048e1f63c950e"
+    }
+  ],
+  "production_timing_admitted": false,
+  "slurm_version": "slurm 24.05.2",
+  "system_modified": false,
+  "upstream_source": {
+    "memory_current_occurrences": 5,
+    "memory_peak_occurrences": 0,
+    "record": {
+      "bytes": 67645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_accounting_support_20260929/cgroup_v2.c",
+      "sha256": "abd0a9fe2b00bebc732c9cfa1acac545d0061e7e547b0d092cecc2833de6528e"
+    },
+    "url": "https://raw.githubusercontent.com/SchedMD/slurm/slurm-24-05-2-1/src/plugins/cgroup/v2/cgroup_v2.c"
+  }
+}

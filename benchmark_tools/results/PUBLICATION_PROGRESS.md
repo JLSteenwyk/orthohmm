@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Recheck Timing Feasibility And Installed Accounting (2026-09-29 UTC)
+
+Previous turn progressed corrected VGNC sensitivity (`89328f26`). Reread goal
+and current ledger. Fresh read-only process observation finds 99.42 persistent
+foreign core equivalents despite an empty Slurm queue; asked for quiet-window
+coordination. No unrelated work was stopped. Accounting remains disabled.
+
+New version-specific finding: installed Slurm 24.05.2 has accounting plugins,
+but its upstream cgroup task reader uses memory.current, not memory.peak;
+local binary strings are consistent with this. Simply enabling the plugin
+must not be presumed to close the terminal whole-job peak gap.
+[Evidence and next actions](THREADRIPPER_ACCOUNTING_SUPPORT_20260929.md).
+No scheduler modifications, new native jobs or timing admissions. Goal active;
+pending accounting approval and quiet-window coordination remain unresolved.
+
 ## Complete Corrected VGNC Single-Block Sensitivity (2026-09-28)
 
 Previous turn progressed complete OrthoBench figures (`cf392ff3`). Reread goal,
