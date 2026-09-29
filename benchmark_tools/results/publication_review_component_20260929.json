@@ -1,0 +1,80 @@
+{
+  "archive": {
+    "bytes": 2031512,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260929/orthohmm-main-review-e2e96746-workflow-73ddcdbb.tar.gz",
+    "sha256": "9a29bfb4cc9095c3063bb9dd7ab6e5790b1824225671327c872e3f7fa4ed318b"
+  },
+  "controlled_timing": false,
+  "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260929/component",
+  "index": {
+    "bytes": 16130,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260929/component/REVIEW_INDEX.json",
+    "sha256": "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+  },
+  "ledger_revision": "fdfe7fb70c583a6ad4ea5c4ae06dd2663d31b07f",
+  "limitations": [
+    "Direct main-text review links only; linked-document transitive assets are not included.",
+    "PDF annotations may retain workstation-specific links; HTML relative links are the navigation entrypoint.",
+    "Historical render/print/PDF receipts are preserved, not new visual review.",
+    "Local archive only; no public release or DOI; no inference or scoring executed."
+  ],
+  "original_verification": {
+    "direct_targets": 23,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260929_v3.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260929_v3/document.pdf"
+    },
+    "files": 43,
+    "inference_reproduced": false,
+    "local_html_occurrences": 24,
+    "manifest": {
+      "bytes": 16130,
+      "sha256": "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+    },
+    "page_count": 6,
+    "payload_bytes": 3581452,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "relocated_verification": {
+    "direct_targets": 23,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260929_v3.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260929_v3/document.pdf"
+    },
+    "files": 43,
+    "inference_reproduced": false,
+    "local_html_occurrences": 24,
+    "manifest": {
+      "bytes": 16130,
+      "sha256": "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+    },
+    "page_count": 6,
+    "payload_bytes": 3581452,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "relocation": {
+    "bytecode_disabled": true,
+    "git_required": false,
+    "interpreter": "/usr/bin/python3",
+    "isolated": true,
+    "path": "/no-git",
+    "temporary_extraction_removed": true
+  },
+  "review_revision": "e2e96746b21d552ea46b9ce63634519f9bae1f82",
+  "status": "publication_direct_review_archived_and_relocated",
+  "tests": {
+    "command": "/home/bizon/anaconda3/bin/python -B -m pytest -q tests/unit/test_bundle_publication_review.py tests/unit/test_render_manuscript_review.py tests/unit/test_print_manuscript_review.py tests/unit/test_review_manuscript_pdf.py",
+    "passed": 61
+  },
+  "workflow_revision": "73ddcdbb87a844ae7d5077f213005275fbda31fe"
+}

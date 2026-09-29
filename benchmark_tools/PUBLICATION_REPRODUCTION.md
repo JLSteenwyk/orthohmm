@@ -27,6 +27,14 @@ offline verification after relocation. This supplies source, not excluded
 data, plans, figures, dependency binaries or an installed executable study.
 The [component guide](PUBLICATION_SOURCE_COMPONENT.md) explains the boundaries.
 
+The [main-text review component](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20260929.md)
+separately packages the exact main Markdown/HTML/PDF, bibliography, all 23
+direct local targets and retained render/print/PDF receipts. Its 43-file archive
+passed fresh-extraction verification with isolated Python and no Git on PATH.
+Use its relative HTML entrypoint for direct navigation; linked-document
+transitive assets and raw inputs remain excluded. This is a review archive,
+not inference reproduction, complete rights clearance or a public release.
+
 | Path | Verified scope | Does not establish |
 | --- | --- | --- |
 | [Full native recovery, jobs 22326/22327](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md) | Fresh search/trees; all OrthoBench groups and 70 family scores reproduced | Independent accuracy or controlled timing |
@@ -98,7 +106,8 @@ scientific validation is pending. Check the scheduler and newest
 Its installation audit is live evidence, not proof of terminal completion.
 
 A [deferred completion audit](results/PUBLICATION_COMPLETION_AUDITS_PROTOCOL_20260929.md)
-is prepared to run both independent audits after jobs 22377 and 22378 become
+was [submitted as job 22379](results/publication_completion_audits_submission_20260929.json)
+to run both independent audits after jobs 22377 and 22378 become
 terminal. Check its submission and live scheduler state before using the manual
 command below; do not run duplicate audits in parallel or overwrite outputs.
 Once the deferred job finishes, inspect its result instead of executing again.

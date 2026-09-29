@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Archive And Relocate The Retained Main-Text Review (2026-09-29)
+
+Previous conversational turn only checked the saved goal prompt; this turn
+revalidated all three specific job handles and saved/pushed the successful
+deferred-audit submission receipt. Continued a release deliverable without
+modifying any of the 823 frozen audit sources, all of which still match.
+
+Added a stdlib-only committed-blob exporter and offline verifier for the main
+review. [Actual export and fresh extraction](PUBLICATION_REVIEW_COMPONENT_RESULT_20260929.md)
+verify 43 payload files, 3,581,452 bytes and all 23 direct local targets
+(24 HTML occurrences). The six-page PDF, bibliography, page images and stage
+receipts remain exact. The render-time ledger uses its real historical parent
+commit rather than the changed current ledger. HTML relative links provide
+portable direct navigation; preserved PDF annotations may retain old paths.
+
+61 focused tests pass, including isolated readback after deleting a synthetic
+source checkout and rejecting payload/link/provenance inconsistencies. The
+2,031,512-byte archive was freshly extracted and independently verified with
+`/usr/bin/python3 -I -B` and no Git on PATH; results equal the original.
+Source/guide/test milestone `73ddcdbb` is pushed. No native inference, scoring,
+plotting, rendering or visual review was repeated. Linked-document transitive
+assets/raw data are excluded; this is local review packaging, not full
+release/readiness or rights clearance. Guide now records the actual audit
+submission rather than merely preparation.
+
+Latest live poll: 22377 RUNNING at 2:06:35; 22378 and 22379 dependency-pending.
+Do not duplicate their inference/diagnostic/audit attempts. The publication
+goal remains active: terminal archive admission, timing policy/isolation/
+handoff/overhead, QfO uncertainty and full release gates remain unresolved.
+
 ## Confirm Deferred Audit Submission (2026-09-29)
 
 The preceding conversational turn checked the goal prompt but did not advance

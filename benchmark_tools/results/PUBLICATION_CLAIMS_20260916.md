@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [main-text review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260929.md)
+now verifies after fresh extraction without the checkout: 43 files and all
+23 direct HTML targets. This adds a relocatable review component to the
+source/figure components, not transitive study evidence, inference, rights
+clearance or a public release. Its render-time ledger is intentionally a
+historical snapshot, not current job status.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
