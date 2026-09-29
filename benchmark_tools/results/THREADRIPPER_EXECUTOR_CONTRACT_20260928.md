@@ -75,6 +75,12 @@ diagnostic threshold has not been converted into an eligibility threshold.
 
 ## Validation And Remaining Work
 
+Collector v5 adds an [anchor-only native completion boundary](THREADRIPPER_NATIVE_COMPLETION_20260928.md).
+Parent exit is no longer sufficient when retained cgroup thread evidence
+contains a live descendant or an observation gap. Raw/embedded receipts are
+recomputed during replay. One owned clean/live-descendant diagnostic passed;
+this is not full native integration or final whole-job accounting.
+
 The later [terminal-accounting observation](THREADRIPPER_TERMINAL_ACCOUNTING_20260928.md)
 confirms that the fixture jobs' Slurm records cannot supply missing final
 whole-job usage: all nine allocation/step rows have blank peak memory and

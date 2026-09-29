@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Reject Incomplete Native Process Trees (2026-09-28)
+
+Previous turn progressed portable statistics (`fb9d6bc1`). Reread the goal
+and inspected timing boundaries. Found that parent wait alone did not require
+descendant exit. Collector v5 now checks anchor-only initial/final cgroup
+thread inventories and identity before accepting final inference measurement;
+replay verifies the retained receipt. Historical records remain unchanged.
+
+Owned diagnostic 22372 (1 CPU, 128 MiB) COMPLETED 0:0: clean exit accepted,
+live child in a new session rejected, only that owned child terminated through
+pidfd. No retry or production identity consumed. Executed source and raw result
+retained; diagnostic failure-path signalling subsequently hardened without
+rerun. 146 focused tests pass. [Evidence and scope](THREADRIPPER_NATIVE_COMPLETION_20260928.md).
+This closes a native-boundary gap, not terminal whole-job accounting or quiet
+host validation. Remaining timing, uncertainty and release work keeps goal active.
+
 ## Make Complete OrthoBench Statistics Portable (2026-09-28)
 
 Previous turn progressed verification (`c7f138d3`). Reread the goal and release

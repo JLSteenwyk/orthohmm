@@ -40,7 +40,7 @@ def test_missing_user_scope_rejected(monkeypatch):
         collector.read_point(11, "0::/slurm/job_2/step_0/task_0\n", 2, None)
 
 
-@pytest.mark.parametrize("denied", [None, "budget", "stale"])
+@pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant"])
 def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, denied):
     directory = tmp_path / "measurement"
     events = []
@@ -67,10 +67,17 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
     clock = collector.time.monotonic
     offset = [0.]
     monkeypatch.setattr(collector.time, "monotonic", lambda: clock() + offset[0])
+    point_count = [0]
     def read_point(*args):
         if denied == "stale":
             offset[0] += 2.
-        return {"fixture": True}
+        start = 0 if point_count[0] == 0 else 3
+        point_count[0] += 1
+        return {"fixture": True, "thread_affinity": dict(status="observed_within_affinity",
+            errors=[], violating_tids=[], initial_tids=[1],
+            final_tids=[1, 2] if denied == "descendant" and start else [1],
+            threads=[dict(tid=1, start_ticks=10)], scope="/slurm/job_42/step_0/user",
+            started_ns=start, finished_ns=start)}
     monkeypatch.setattr(collector, "read_point", read_point)
     monkeypatch.setattr(collector, "interval_point", lambda *a: {})
     monkeypatch.setattr(collector, "step_memory", lambda *a: {})
@@ -90,7 +97,7 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
     def invoke():
         return collector.measure(["/native"], directory, 42, 32, 128*1024**3,
                                  85800, 1., release_guard=guard)
-    if denied:
+    if denied in {"budget", "stale"}:
         with pytest.raises(ValueError, match="insufficient|stale"):
             invoke()
         assert json.loads((directory / "go.json").read_text()) == {"abort": True}
@@ -98,9 +105,18 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
         assert events == ["guard", "cleanup"]
         if denied == "stale":
             assert (directory / "release_freshness_failed.json").exists()
+    elif denied == "descendant":
+        with pytest.raises(ValueError, match="completion unverified"):
+            invoke()
+        receipt = json.loads((directory / "native_completion.json").read_text())
+        assert receipt["errors"] and receipt["status"] == "native_completion_unverified"
+        assert not (directory / "lineage_report.json").exists()
+        assert json.loads((directory / "release.json").read_text()) == {"release": True}
+        assert events == ["guard", "native", "cleanup"]
     else:
         result = invoke()
-        assert result["schema"] == "threadripper_scaling_v4"
+        assert result["schema"] == "threadripper_scaling_v5"
+        assert result["native_completion"]["status"] == "anchor_only_at_boundaries"
         receipt = json.loads((directory / "report_finalization.json").read_text())
         assert receipt["status"] == "reporting_completed"
         assert receipt["job_id"] == 42

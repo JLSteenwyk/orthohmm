@@ -27,6 +27,7 @@ from benchmark_tools.observe_thread_affinity import observe
 from benchmark_tools.probe_threadripper_allocation import inspect, validate as validate_allocation
 from benchmark_tools.disk_observation_sequence import DiskObservations
 from benchmark_tools.report_finalization import observe as observe_reporting
+from benchmark_tools.native_completion import completion_evidence
 
 TIMEOUT = 85800
 
@@ -145,6 +146,11 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 if time.monotonic() - start > TIMEOUT + 30:
                     raise TimeoutError("Native command exceeded timeout and cleanup allowance")
             done = json.loads((directory / "done.json").read_text())
+            completion = completion_evidence(points[0]["thread_affinity"], points[-1]["thread_affinity"],
+                                             ready["pid"], done["finished_ns"])
+            save(directory / "native_completion.json", completion)
+            if completion["errors"]:
+                raise ValueError("Native subtree completion unverified; retain failed attempt")
             host_summary = host.summary(done["started_ns"] / 1e9, done["finished_ns"] / 1e9)
             save(directory / "host_process_summary.json", host_summary)
             memory = step_memory(interval_point(points[-1], job_id))
@@ -156,8 +162,9 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 raise RuntimeError("Native step wrapper failed")
             with observe_reporting(directory, job_id, job_scope, read_job_memory):
                 measured = dict(status="command_exited_zero" if done["exit_code"] == 0 else "command_failed",
-                    schema="threadripper_scaling_v4",
+                    schema="threadripper_scaling_v5",
                     native=done, native_wall_s=(done["finished_ns"]-done["started_ns"])/1e9,
+                    native_completion=completion,
                     job_id=job_id, launched=launched, placement=ready["placement"], point_records=points.records(), step_memory=memory,
                     host_process_observation=host_summary,
                     job_memory=dict(before=job_memory_before, after=job_memory_after),

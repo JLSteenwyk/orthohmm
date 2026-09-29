@@ -27,7 +27,7 @@ def test_lazy_sequence_preserves_order_and_slices(tmp_path):
     assert list(points) == values
 
 
-@pytest.mark.parametrize("schema", ["threadripper_scaling_v3", "threadripper_scaling_v4"])
+@pytest.mark.parametrize("schema", ["threadripper_scaling_v3", "threadripper_scaling_v4", "threadripper_scaling_v5"])
 def test_v3_records_bind_content_and_order(tmp_path, schema):
     points = DiskObservations(tmp_path)
     points.append(dict(value=1))

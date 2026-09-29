@@ -1,0 +1,207 @@
+{
+  "child_identity": [
+    2570620,
+    29458633
+  ],
+  "child_membership": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+  "child_pid": 2570620,
+  "child_started_new_session": true,
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-c",
+    "import subprocess; p=subprocess.Popen(['/bin/sleep','20'], start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); print(p.pid, flush=True)"
+  ],
+  "complete_job_accounting_verified": false,
+  "descendant": {
+    "after": {
+      "allowed_cpus": [
+        0
+      ],
+      "errors": [],
+      "final_tids": [
+        2570614,
+        2570620
+      ],
+      "finished_ns": 294586351360322,
+      "full_run_affinity_verified": false,
+      "initial_tids": [
+        2570614,
+        2570620
+      ],
+      "limitations": [
+        "Non-atomic periodic evidence misses short-lived threads and between-sample changes.",
+        "Affinity is not a CPU quota; this observation does not establish host isolation."
+      ],
+      "scope": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22372/step_batch/user",
+      "started_ns": 294586350066955,
+      "status": "observed_within_affinity",
+      "threads": [
+        {
+          "affinity": [
+            0
+          ],
+          "cgroup": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+          "outside_cpus": [],
+          "start_ticks": 29458617,
+          "tid": 2570614
+        },
+        {
+          "affinity": [
+            0
+          ],
+          "cgroup": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+          "outside_cpus": [],
+          "start_ticks": 29458633,
+          "tid": 2570620
+        }
+      ],
+      "violating_tids": []
+    },
+    "anchor_pid": 2570614,
+    "before": {
+      "allowed_cpus": [
+        0
+      ],
+      "errors": [],
+      "final_tids": [
+        2570614
+      ],
+      "finished_ns": 294586290256515,
+      "full_run_affinity_verified": false,
+      "initial_tids": [
+        2570614
+      ],
+      "limitations": [
+        "Non-atomic periodic evidence misses short-lived threads and between-sample changes.",
+        "Affinity is not a CPU quota; this observation does not establish host isolation."
+      ],
+      "scope": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22372/step_batch/user",
+      "started_ns": 294586289285668,
+      "status": "observed_within_affinity",
+      "threads": [
+        {
+          "affinity": [
+            0
+          ],
+          "cgroup": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+          "outside_cpus": [],
+          "start_ticks": 29458617,
+          "tid": 2570614
+        }
+      ],
+      "violating_tids": []
+    },
+    "command_finished_ns": 294586349203783,
+    "errors": [
+      "after: native user subtree is not anchor-only",
+      "after: missing unique anchor identity"
+    ],
+    "limitations": [
+      "Non-atomic boundary observations, not continuous containment or whole-job teardown accounting.",
+      "Does not exclude work migrated outside the observed subtree or prove descendants were reaped."
+    ],
+    "schema": "native_completion_v1",
+    "scientific_timings_admitted": false,
+    "status": "native_completion_unverified"
+  },
+  "host": "bizon",
+  "job_id": 22372,
+  "membership": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+  "negative_control_passed": true,
+  "normal": {
+    "after": {
+      "allowed_cpus": [
+        0
+      ],
+      "errors": [],
+      "final_tids": [
+        2570614
+      ],
+      "finished_ns": 294586293427857,
+      "full_run_affinity_verified": false,
+      "initial_tids": [
+        2570614
+      ],
+      "limitations": [
+        "Non-atomic periodic evidence misses short-lived threads and between-sample changes.",
+        "Affinity is not a CPU quota; this observation does not establish host isolation."
+      ],
+      "scope": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22372/step_batch/user",
+      "started_ns": 294586292579016,
+      "status": "observed_within_affinity",
+      "threads": [
+        {
+          "affinity": [
+            0
+          ],
+          "cgroup": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+          "outside_cpus": [],
+          "start_ticks": 29458617,
+          "tid": 2570614
+        }
+      ],
+      "violating_tids": []
+    },
+    "anchor_pid": 2570614,
+    "before": {
+      "allowed_cpus": [
+        0
+      ],
+      "errors": [],
+      "final_tids": [
+        2570614
+      ],
+      "finished_ns": 294586290256515,
+      "full_run_affinity_verified": false,
+      "initial_tids": [
+        2570614
+      ],
+      "limitations": [
+        "Non-atomic periodic evidence misses short-lived threads and between-sample changes.",
+        "Affinity is not a CPU quota; this observation does not establish host isolation."
+      ],
+      "scope": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22372/step_batch/user",
+      "started_ns": 294586289285668,
+      "status": "observed_within_affinity",
+      "threads": [
+        {
+          "affinity": [
+            0
+          ],
+          "cgroup": "0::/system.slice/slurmstepd.scope/job_22372/step_batch/user/task_0\n",
+          "outside_cpus": [],
+          "start_ticks": 29458617,
+          "tid": 2570614
+        }
+      ],
+      "violating_tids": []
+    },
+    "command_finished_ns": 294586292257217,
+    "errors": [],
+    "limitations": [
+      "Non-atomic boundary observations, not continuous containment or whole-job teardown accounting.",
+      "Does not exclude work migrated outside the observed subtree or prove descendants were reaped."
+    ],
+    "schema": "native_completion_v1",
+    "scientific_timings_admitted": false,
+    "status": "anchor_only_at_boundaries"
+  },
+  "parent_exit_code": 0,
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_completion.py",
+      "sha256": "6a9446a25a6847a8a3ee7580f23814844f366a1b9f3150d17f1acd8953bab240"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_completion.py",
+      "sha256": "1b93b92cd7dc4615cc7b9aa71c8344a3df85250a1f63af009b6bae6207410d58"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+      "sha256": "9bb13b2fa23d48e73c528445009116ab64214d5a4585357eb9125215479e578a"
+    }
+  ]
+}
