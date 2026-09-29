@@ -1,0 +1,31 @@
+{
+  "exact_wheel_build_attestation": false,
+  "files": [
+    {
+      "blob_sha": "586ace69166661c0a16592908d5a7098d0559c47",
+      "file": {
+        "bytes": 1079,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_4.sh",
+        "sha256": "b11d26c3549f34347b1d592b560d44b4181af9d060c0b12f54bd1f83289a4a9d"
+      },
+      "member": "buildscripts/manylinux/build_llvmlite.sh",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/buildscripts/manylinux/build_llvmlite.sh"
+    },
+    {
+      "blob_sha": "6a04983032f90cf33bdb58ab12b0588daa643395",
+      "file": {
+        "bytes": 1563,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_5.patch",
+        "sha256": "2088b0ae6253e18882d743b2e089687954490659ac8eda258867fe58df0143da"
+      },
+      "member": "conda-recipes/llvm22-aarch64-windows-target-detection.patch",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/conda-recipes/llvm22-aarch64-windows-target-detection.patch"
+    }
+  ],
+  "parent": {
+    "bytes": 3181,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/llvmlite_release_build_20260929.json",
+    "sha256": "dce1c3bf09c37827137c6c3547cc7bb34a0961b15e091ecea8a95c1b8dbe2e46"
+  },
+  "prior_finalize_error": "FileExistsError: existing parent receipt preserved; downloaded files verified and recorded separately"
+}

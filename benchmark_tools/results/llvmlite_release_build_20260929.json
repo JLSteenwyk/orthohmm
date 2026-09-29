@@ -1,0 +1,65 @@
+{
+  "commit": "b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4",
+  "exact_wheel_build_attestation": false,
+  "files": [
+    {
+      "blob_sha": "386fa81b89f6f528d2569b7009ba709e4e5e0ac1",
+      "file": {
+        "bytes": 9453,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_0.yml",
+        "sha256": "141d987dd3dcce232c22a060e0034dfc12c32996c565fe0730be6bfb3b8abb7e"
+      },
+      "member": ".github/workflows/llvmlite_linux-64_wheel_builder.yml",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/.github/workflows/llvmlite_linux-64_wheel_builder.yml"
+    },
+    {
+      "blob_sha": "c5c4e781038a40042510de5a18eaf7e3baeaaee8",
+      "file": {
+        "bytes": 637,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_1.sh",
+        "sha256": "d55080c63777c3f9f2d9596eac2cc1ada2d1236cf2966fd574c1d8c736642227"
+      },
+      "member": "buildscripts/manylinux/build_llvmdev.sh",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/buildscripts/manylinux/build_llvmdev.sh"
+    },
+    {
+      "blob_sha": "372f10be49ca4c9a4e1af7e4e225c4e94733575d",
+      "file": {
+        "bytes": 3460,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_2.yaml",
+        "sha256": "94cb6f08a8b657a2d87be0397a372dd20f21e988f52b1007e1b0f069d964529e"
+      },
+      "member": "conda-recipes/llvmdev_for_wheel/meta.yaml",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/conda-recipes/llvmdev_for_wheel/meta.yaml"
+    },
+    {
+      "blob_sha": "2329fd8dc52054969be2755c5bcdd069b94f0c8f",
+      "file": {
+        "bytes": 4485,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/source_3.sh",
+        "sha256": "ad876fcf53a2ce5ade849e487510d364b29bc95a7bac96f9d4ca44be3d74d436"
+      },
+      "member": "conda-recipes/llvmdev_for_wheel/build.sh",
+      "url": "https://raw.githubusercontent.com/numba/llvmlite/b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4/conda-recipes/llvmdev_for_wheel/build.sh"
+    }
+  ],
+  "metadata": [
+    {
+      "bytes": 333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/ref.json",
+      "sha256": "7b52acc95ff5baa36f3dfe1a0be74ba23683d86faf4f57c0d318a4ef11b9b3c5"
+    },
+    {
+      "bytes": 660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/tag.json",
+      "sha256": "ac5eab1f2490b318bc63bfcd6e1995458219edda0e9d73e0c02a897b33635058"
+    },
+    {
+      "bytes": 55288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_release_build_20260929/tree.json",
+      "sha256": "b5d8c355bab053aa8450a40baba5c8098e10792cc8c9ebb5267d660b279d6a41"
+    }
+  ],
+  "publication_ready": false,
+  "tag": "v0.49.0"
+}

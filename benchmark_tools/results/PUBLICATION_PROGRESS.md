@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Trace llvmlite Release Build Sources (2026-09-29)
+
+Previous turn observed retained binary configuration (`aa41e53f`). Reread
+goal and inspected the official release tag and immutable build sources.
+[Six-file source trace](LLVMLITE_RELEASE_BUILD_20260929.md) binds the tag to
+commit b5a0ba74ae0601806c0ac3964d746f6be5f6d7b4 and verifies downloaded
+files against their Git tree blob hashes. The recipe identifies an exact
+LLVM 22.1.0 source archive hash and patch; the build script has additional
+source transformations. No LLVM archive download or build yet.
+
+The wheel builder permits supplied artifacts or channel resolution by major
+version, so release-tag source does not prove which LLVM bytes built the
+retained wheel. Exact wheel/run/artifact correspondence remains unresolved.
+A refused parent-receipt overwrite was preserved; already-downloaded extra
+files were independently reverified and recorded in a fresh supplement.
+No runtime, scientific setting or benchmark changed. Goal active; no claim
+of completed source closure or release clearance.
+
 ## Inspect Retained llvmlite Binary Build Fields (2026-09-29)
 
 Previous turn acquired exact-wheel-bound wrapper source candidates (`53e382e6`).
