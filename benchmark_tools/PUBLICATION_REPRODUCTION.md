@@ -771,7 +771,11 @@ does not supply original family identities for uncertainty estimation.
   selects inference wall time, bracketed native CPU and native-step peak memory;
   preparation/reporting scopes remain separate and terminal whole-job counters
   remain unavailable. The endpoint decision is resolved under the goal's
-  authorization for autonomous engineering. Complete resource containment,
+  authorization for autonomous engineering. The prospective
+  [32-worker accounting calibration](results/THREADRIPPER_OBSERVER_CALIBRATION_PROTOCOL_20260929.md)
+  tests independent worker CPU witnesses, known allocations and sampled thread
+  identities; it does not certify causal observer slowdown or host isolation.
+  Complete resource containment,
   full-scale overhead and environmental validation and
   establish a verified quiet window before launch. Do not substitute
   uncontrolled shared-host timings or restart DGX work.

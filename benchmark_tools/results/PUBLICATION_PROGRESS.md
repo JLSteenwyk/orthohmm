@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Prepare Bounded Full-Worker Accounting Calibration (2026-09-29)
+
+Previous conversational turn only confirmed the saved goal prompt; no analysis
+advanced. Reread the goal and latest ledger and confirmed job 22377 remains
+running. Completed the previously untracked worker diagnostic, adding one global
+readiness deadline, process/thread start-tick witnesses, prompt stopped-thread
+cleanup and private-interpreter/protocol validation before launch.
+
+Added an independent raw-replay audit and a
+[prospective protocol](THREADRIPPER_OBSERVER_CALIBRATION_PROTOCOL_20260929.md)
+for 32 processes with four threads each and known retained allocations. It
+separates CPU/memory lower-bound and cadence checks from continuous containment,
+causal slowdown and host isolation. All 60 focused tests pass, including a real
+small workload and failed-startup owned-child cleanup. No scientific inference
+settings, existing endpoint helpers or unrelated work changed.
+
+The protocol is committed before a single diagnostic submission depending on
+job 22377 becoming terminal. No production timing runs have been launched.
+The full publication goal remains active: timing isolation/overhead/handoff,
+unresolved uncertainty, completed archive admission and release gates remain.
+
 ## Adopt And Replay Prospective Timing Resource Endpoints (2026-09-29)
 
 Previous turn was a verified wait on job 22377; it remains running. Reread goal
