@@ -1,0 +1,182 @@
+{
+  "base_prefix": "/tmp/orthohmm-base-reconstruction-20260927/python-runtime",
+  "base_python": {
+    "bytes": 17157264,
+    "path": "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python3.10",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "candidate": {
+    "bytes": 18134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_patched_runtime_20260928.json",
+    "sha256": "1c86acf94e94b3da2725ac448c57ffe27759dfa38b530911f99bbf63c40354fe"
+  },
+  "checkout_distribution": "0.5.0",
+  "import_report": {
+    "bytes": 63810,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/imports.log",
+    "sha256": "6f1ff69a8f18d7892348eb1e30d9db99679cea62228682d3f949a10b0201fb03"
+  },
+  "interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "limitations": [
+    "Declared controller imports only, not branch-complete execution or ELF closure.",
+    "Controller reader dependencies are separate from native inference packages.",
+    "Runtime binding and collector fixture validation remain required."
+  ],
+  "lock": {
+    "bytes": 564,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/requirements.txt",
+    "sha256": "83283b8f3163d7e7d73f2e85bd709412fe47251f6c8d0c77a0a88e449a29c0a9"
+  },
+  "reader_lock": {
+    "bytes": 540,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_reader_requirements_20260927_v2.txt",
+    "sha256": "53df1cabd91c2fb18179951ebc95166ae49ba843f4015e0f417468d2a8265063"
+  },
+  "scientific_execution_authorized": false,
+  "selected": {
+    "DendroPy": "5.1.0",
+    "biopython": "1.87",
+    "numpy": "2.2.6",
+    "pip": "26.2.1",
+    "psutil": "7.2.2",
+    "setuptools": "83.0.0"
+  },
+  "source": {
+    "bytes": 6229,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_timing_controller.py",
+    "sha256": "6c52282676d0a127005e53920df2960d9d0053b1a16b1c4523fe1354958df738"
+  },
+  "stages": [
+    {
+      "command": [
+        "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "venv",
+        "--without-pip",
+        "--copies",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "name": "venv"
+    },
+    {
+      "command": [
+        "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "--python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--only-binary=:all:",
+        "--require-hashes",
+        "--find-links",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels",
+        "-r",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/requirements.txt"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 1725,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/install.log",
+        "sha256": "6f60f566767b44db91172629b97000612483537df1e6fa0bc9316452791fe998"
+      },
+      "name": "install"
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 30,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/dependencies.log",
+        "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+      },
+      "name": "dependencies"
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,json,importlib,importlib.metadata as m; sys.path.insert(0,sys.argv[1]); [importlib.import_module(n) for n in json.loads(sys.argv[2])]; print(json.dumps(dict(base_prefix=sys.base_prefix,packages={d.metadata['Name']:d.version for d in m.distributions()},modules={n:v.__file__ for n,v in sys.modules.items() if getattr(v,'__file__',None)})))",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "[\"benchmark_tools.run_threadripper_scaling\", \"benchmark_tools.probe_verified_threadripper_fixture\", \"benchmark_tools.validate_threadripper_outputs\", \"benchmark_tools.replay_threadripper_scaling\"]"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 63810,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/imports.log",
+        "sha256": "6f1ff69a8f18d7892348eb1e30d9db99679cea62228682d3f949a10b0201fb03"
+      },
+      "name": "imports"
+    }
+  ],
+  "status": "private_controller_installed_imports_passed",
+  "wheels": [
+    {
+      "bytes": 3216226,
+      "name": "biopython",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/biopython-1.87-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f",
+      "version": "1.87"
+    },
+    {
+      "bytes": 505450,
+      "name": "DendroPy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/dendropy-5.1.0-py3-none-any.whl",
+      "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2",
+      "version": "5.1.0"
+    },
+    {
+      "bytes": 16801050,
+      "name": "numpy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915",
+      "version": "2.2.6"
+    },
+    {
+      "bytes": 1816632,
+      "name": "pip",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/pip-26.2.1-py3-none-any.whl",
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e",
+      "version": "26.2.1"
+    },
+    {
+      "bytes": 155560,
+      "name": "psutil",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "076a2d2f923fd4821644f5ba89f059523da90dc9014e85f8e45a5774ca5bc6f9",
+      "version": "7.2.2"
+    },
+    {
+      "bytes": 1008090,
+      "name": "setuptools",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/wheels/setuptools-83.0.0-py3-none-any.whl",
+      "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3",
+      "version": "83.0.0"
+    }
+  ]
+}

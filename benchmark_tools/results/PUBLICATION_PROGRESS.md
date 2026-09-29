@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Install Private Timing Controller And Snapshot Private Trees (2026-09-28)
+
+Previous turn progressed the deployment amendment (`e294fdb7`). Reread goal
+and ledger. Existing reader import probe identified missing psutil. Created
+a separate six-package controller offline from hash-verified existing wheels;
+left reader and inference environments unchanged. Dependency check and declared
+executor/fixture/validator/replay imports pass without shared Conda module paths.
+[Controller installation and scope](THREADRIPPER_PRIVATE_CONTROLLER_20260928.md).
+
+Inventoried 18,751 entries in both private venvs and reconstructed base; immediate
+full-tree recheck matches, no external symlinks in this scope. Eleven tests pass.
+Next: remaining OS/native/helper inventory scopes and repeated lookup binding,
+then collector v5 native validation. No inference/timing or DGX work launched.
+Goal remains active; private tree identity alone is not timing admission.
+
 ## Prepare Private Timing Deployment Amendment (2026-09-28)
 
 Previous turn progressed native prediction parity (`d7083c4e`). Reread goal;
