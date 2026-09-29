@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Prepare Independent Restored Archive Scientific Comparison (2026-09-29)
+
+Previous turn added the pinned execution verifier. Reread goal and ledger,
+confirmed job 22377 remains running, and added `admit_restored_archive_ob.py`.
+After successful execution verification it repeats installed-package auditing,
+runs independent scientific readers, recomputes both full RefOG score objects,
+compares label-invariant partitions and four native TSVs against admitted 22376.
+It retains differences and reports reproduction equality separately from
+successful execution validation. Existing scientific/job validators are unchanged.
+
+All 54 focused admission/execution tests pass. Actual baseline verification
+passes for the externally pinned 22376 receipt and its evidence, collecting
+52,512 readback file bindings (not a fresh audit of all those payloads).
+The current job has no terminal scientific admission yet. Once it completes,
+run `python -m benchmark_tools.admit_restored_archive_ob` with the retained
+directory and a fresh `independent_admission` output. Do not resubmit inference.
+No controlled timing or publication-readiness claim; full goal remains active.
+
 ## Prepare Job-Specific Restored Archive Completion Verification (2026-09-29)
 
 Previous turn completed the live package audit. Reread goal and ledger and
