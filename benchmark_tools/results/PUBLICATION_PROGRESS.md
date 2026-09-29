@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Plot Complete OrthoBench Strata; Recheck Timing Host (2026-09-28)
+
+Previous turn made progress with the pushed all-method export `ed5a38ec`.
+Reread the goal and examined remaining timing execution requirements. A new
+read-only host observation found 110.891792 competing CPU-core equivalents,
+zero sampling errors and an empty Slurm queue. The largest observed process
+was IQ-TREE in the fungal PMSF recovery service (~15.56 cores); additional
+IQ-TREE and Python workloads remain active. No process was signalled and no
+timing job launched. Full native handoff/resource validation, reviewed policy,
+source freeze and a quiet window remain required; DGX work remains excluded.
+Raw observation: `benchmarks/work/threadripper_after_ob_strata_20260928.json`,
+1,494,197 bytes, SHA-256
+`9c113417a422d1741548332a5a36b12125e0ee79fc0c6ff2f7c8c890e100362b`.
+This brief sample is workload evidence, not whole-run isolation certification.
+
+Advanced publication figures while timing is unavailable: the
+[complete OrthoBench strata figure](OB_COMPLETE_STRATA_FIGURE_20260928.md)
+retains all eight methods, fourteen bins and three metrics (288 finite
+values, 48 NA cells). PNG inspected; rendering tests check cell values and
+text bounds. No new intervals or defaults. Main manuscript/portable bundle
+integration remains next; the publication goal remains active.
+
 ## Complete All-Method OrthoBench Descriptive Strata (2026-09-28)
 
 After protocol commit `0a28a042` was pushed, exported all 112 rows for the
