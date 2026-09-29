@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Submit Reconstructed-Base Full OrthoBench Job 22376 (2026-09-29)
+
+Protocol commit `83f0ebea` was pushed before submission. Slurm accepted one
+32-CPU/128-GiB shared-host correctness run and reports it RUNNING; fresh venv
+installation has started. [Submission evidence](reconstructed_full_ob_submission_22376.json).
+Scheduler default initially set Requeue=1; explicitly set Requeue=0 on this
+owned job only and verified the change, with Restarts=0. No unrelated job,
+service or global scheduler configuration changed.
+
+No completion or scientific admission is claimed. Resume by polling job
+22376 and its retained run root, never by resubmitting the same attempt.
+After terminal success, implement/check the separately plan-bound independent
+admission and compare every full-data output specified in the protocol.
+Failure remains a retained failed attempt, not an automatic retry. This run
+does not enter the 27-run controlled timing panel. Goal active.
+
 ## Prepare Full-Data Reconstructed-Base Reproduction (2026-09-29)
 
 Previous turn rechecked contention (`b76cfb04`). Reread goal and inspected

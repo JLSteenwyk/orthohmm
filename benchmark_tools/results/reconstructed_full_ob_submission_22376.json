@@ -1,0 +1,18 @@
+{
+  "job_id": 22376,
+  "protocol_commit": "83f0ebea",
+  "plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_reconstructed_full_ob_20260929/plan.json",
+    "bytes": 1474498,
+    "sha256": "cea0dd8efa459a01c57ca0450798005c5de3aeef15a6fda19c181acd35918bee"
+  },
+  "script": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/reconstructed_full_ob_20260929.sh",
+    "bytes": 581,
+    "sha256": "4a221b5ef6d725e9492e7021e8df58af06532eaa9a156c616e63b944ef581aa7"
+  },
+  "scheduler": "JobId=22376 JobName=orthohmm_reconstructed_full_ob\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:41 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-09-29T00:38:59 EligibleTime=2026-09-29T00:38:59\n   AccrueTime=2026-09-29T00:38:59\n   StartTime=2026-09-29T00:38:59 EndTime=2026-09-30T00:38:59 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-29T00:38:59 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2717850\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/reconstructed_full_ob_20260929.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_reconstructed_full_ob_20260929/slurm-22376.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_reconstructed_full_ob_20260929/slurm-22376.log\n   TresPerTask=cpu=32\n   \n\n",
+  "requeue_update": "scontrol update JobId=22376 Requeue=0; exit 0; only this owned job changed",
+  "scientific_timings_admitted": false,
+  "publication_ready": false
+}
