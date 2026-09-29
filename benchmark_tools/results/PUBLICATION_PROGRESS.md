@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Make Complete OrthoBench Statistics Portable (2026-09-28)
+
+Previous turn progressed verification (`c7f138d3`). Reread the goal and release
+guide; the complete uncertainty checker still required historical local paths.
+Added a checked export of 560 family sufficient-statistic rows and standalone
+checksum-bound replay mode with no project imports. Retained local raw-input
+verification remains separate. Copied both files outside the checkout and ran
+the copied checker under Python -I -B from /tmp: all 21 contrasts and seven
+family-outcome triples match, maximum error 2.14e-14 percentage points.
+The local mode also passes; 54 focused tests pass, including standalone replay.
+[Artifact, command and boundaries](OB_COMPLETE_PORTABLE_STATISTICS_20260928.md).
+
+Corrected the reproduction guide's stale dedicated-host requirement to the
+approved Threadripper/quiet-window plan. No native benchmark or timing job
+started, no scientific results changed, no public deposition or whole-study
+restoration claimed. Controlled timing, remaining QfO uncertainty and full
+release requirements remain incomplete; goal active.
+
 ## Complete OrthoBench Family-Outcome Verification (2026-09-28)
 
 Previous turn only confirmed the goal prompt (no progress). Reread the goal

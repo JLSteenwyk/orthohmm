@@ -2,12 +2,19 @@
 
 import argparse
 from fractions import Fraction
+import hashlib
 import json
 from pathlib import Path
+import sys
 
 import numpy as np
 
-from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+def file_record(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return dict(path=str(path.resolve()), bytes=path.stat().st_size, sha256=digest.hexdigest())
 
 
 def numerical_error(calculated, retained):
@@ -63,6 +70,8 @@ def ratios(counts):
 
 
 def verify(base, output):
+    from benchmark_tools.prepare_ob_candidate_neighborhood import check
+
     if output.exists():
         raise FileExistsError(output)
     source = base / "ob_complete_uncertainty_20260928.json"
@@ -73,6 +82,55 @@ def verify(base, output):
     other = json.loads((base / "retained_ob_comparator_readback_20260926.json").read_text())
     scores = dict(main["scores"])
     scores.update({r["key"]: r["score"] for r in other["rows"]})
+    return verify_data(report, scores, output, [file_record(source), file_record(Path(__file__))],
+                       "local_raw_input_records_checked")
+
+
+def export_portable(base, output):
+    from benchmark_tools.bootstrap_ob_complete import load_scores
+    from benchmark_tools.prepare_ob_candidate_neighborhood import check
+
+    if output.exists():
+        raise FileExistsError(output)
+    scores, refs = load_scores(base)
+    source = base / "ob_complete_uncertainty_20260928.json"
+    report = json.loads(source.read_text())
+    for ref in report["checked_records"]:
+        check(ref)
+    columns = ("refog", "genes", "true_positive", "false_positive", "false_negative")
+    compact = {method: {"refog_records": [{key: row[key] for key in columns}
+               for row in score["refog_records"]]} for method, score in scores.items()}
+    report_keys = ("baseline", "families", "replicates", "seed", "alpha", "rng",
+                   "numpy_version", "point_estimates_percent", "comparisons", "multiplicity", "limitations")
+    payload = dict(schema="orthohmm_ob_complete_statistics_v1", scores=compact,
+        report={key: report[key] for key in report_keys},
+        provenance=[dict(name=Path(ref["path"]).name, bytes=ref["bytes"], sha256=ref["sha256"])
+                    for ref in [file_record(source), *refs[:2]]],
+        limitations="Derived family sufficient statistics only. No sequences, gene memberships or raw-input verification on replay; not an inference package or independent biological confirmation.")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("x") as handle:
+        json.dump(payload, handle, indent=2, sort_keys=True, allow_nan=False)
+        handle.write("\n")
+    return file_record(output)
+
+
+def verify_portable(source, expected_sha256, output):
+    if output.exists():
+        raise FileExistsError(output)
+    data = source.read_bytes()
+    if hashlib.sha256(data).hexdigest() != expected_sha256:
+        raise ValueError("Portable input checksum differs")
+    payload = json.loads(data)
+    if payload["schema"] != "orthohmm_ob_complete_statistics_v1":
+        raise ValueError("Unknown portable schema")
+    return verify_data(payload["report"], payload["scores"], output,
+        [dict(path=str(source.resolve()), bytes=len(data), sha256=expected_sha256), file_record(Path(__file__))],
+        "portable_derived_counts_only_no_raw_input_verification")
+
+
+def verify_data(report, scores, output, sources, verification_scope):
+    if output.exists():
+        raise FileExistsError(output)
     names = sorted(report["families"])
     baseline = "orthofinder_3_1_5_full"
     metrics = {"f_score", "precision", "recall"}
@@ -126,7 +184,8 @@ def verify(base, output):
         raise ValueError("Incomplete endpoint inventory")
     result = dict(status="complete_ob_intervals_independently_reproduced", endpoints=21,
         maximum_absolute_error_percentage_points=maximum_error,
-        sources=[record(source.resolve()), record(Path(__file__).resolve())],
+        sources=sources, verification_scope=verification_scope,
+        runtime=dict(python=sys.version, numpy=np.__version__),
         rows=rows, family_outcomes=family_checks, publication_ready=False,
         limitations="Alternative count accumulation and rational points; same NumPy RNG/quantile implementation. Not statistical coverage validation.")
     output.mkdir(parents=True)
@@ -149,8 +208,19 @@ def verify(base, output):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--base", required=True, type=Path)
+    inputs = parser.add_mutually_exclusive_group(required=True)
+    inputs.add_argument("--base", type=Path)
+    inputs.add_argument("--export-from", type=Path)
+    inputs.add_argument("--portable", type=Path)
+    parser.add_argument("--sha256")
     parser.add_argument("--output", required=True, type=Path)
     args = parser.parse_args()
-    result = verify(args.base, args.output)
-    print(json.dumps({k: result[k] for k in ("endpoints", "maximum_absolute_error_percentage_points")}))
+    if bool(args.portable) != bool(args.sha256):
+        parser.error("--sha256 is required only with --portable")
+    if args.export_from:
+        result = export_portable(args.export_from, args.output)
+        print(json.dumps(result))
+    else:
+        result = (verify_portable(args.portable, args.sha256, args.output) if args.portable
+                  else verify(args.base, args.output))
+        print(json.dumps({k: result[k] for k in ("endpoints", "maximum_absolute_error_percentage_points")}))

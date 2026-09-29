@@ -1,10 +1,17 @@
 from fractions import Fraction
+import hashlib
+import json
+from pathlib import Path
+import shutil
+import subprocess
+import sys
 
 import pytest
 
 from benchmark_tools.bootstrap_ob_complete import run
 from benchmark_tools.check_ob_complete_uncertainty import (
     check_family_outcomes, family_outcomes, numerical_error, ratios,
+    verify_portable,
 )
 
 
@@ -74,3 +81,47 @@ def test_family_inventory_and_counts_rejected(records):
 def test_wrong_family_outcome_rejected(value):
     with pytest.raises(ValueError, match="outcome"):
         check_family_outcomes({"family_f1_wins": 1}, {"family_f1_wins": value})
+
+
+def test_portable_checksum_failure_precedes_parsing(tmp_path):
+    source = tmp_path / "data.json"
+    source.write_text("invalid json")
+    with pytest.raises(ValueError, match="checksum"):
+        verify_portable(source, "0" * 64, tmp_path / "result")
+    assert not (tmp_path / "result").exists()
+
+
+def test_portable_unknown_schema(tmp_path):
+    source = tmp_path / "data.json"
+    source.write_text('{"schema": "unknown"}')
+    with pytest.raises(ValueError, match="schema"):
+        verify_portable(source, hashlib.sha256(source.read_bytes()).hexdigest(), tmp_path / "result")
+
+
+def test_portable_no_overwrite(tmp_path):
+    with pytest.raises(FileExistsError):
+        verify_portable(tmp_path / "missing", "0" * 64, tmp_path)
+
+
+def test_standalone_complete_panel(tmp_path):
+    root = Path(__file__).resolve().parents[2]
+    script = tmp_path / "check.py"
+    source = tmp_path / "counts.json"
+    shutil.copyfile(root / "benchmark_tools/check_ob_complete_uncertainty.py", script)
+    shutil.copyfile(root / "benchmark_tools/results/ob_complete_portable_statistics_20260928.json", source)
+    payload = json.loads(source.read_text())
+    assert len(payload["scores"]) == 8
+    for score in payload["scores"].values():
+        assert len(score["refog_records"]) == 70
+        assert all(set(row) == {"refog", "genes", "true_positive", "false_positive", "false_negative"}
+                   for row in score["refog_records"])
+    assert "/mnt/" not in source.read_text() and "/home/" not in source.read_text()
+    run = subprocess.run([sys.executable, "-I", "-B", str(script), "--portable", str(source),
+                          "--sha256", hashlib.sha256(source.read_bytes()).hexdigest(),
+                          "--output", str(tmp_path / "result")], cwd=tmp_path,
+                         text=True, capture_output=True, timeout=120)
+    assert run.returncode == 0, run.stderr
+    result = json.loads((tmp_path / "result/crosscheck.json").read_text())
+    assert result["endpoints"] == 21 and len(result["family_outcomes"]) == 7
+    assert result["maximum_absolute_error_percentage_points"] < 1e-10
+    assert result["verification_scope"] == "portable_derived_counts_only_no_raw_input_verification"
