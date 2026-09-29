@@ -1,5 +1,10 @@
 # VGNC Uncertainty: Replacement Method Review
 
+The [corrected all-method deletion diagnostic](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md)
+finds no single reference-block deletion reverses any comparator's F1 deficit
+against full OrthoFinder. This fixed-table sensitivity result supplies neither
+a sampling law nor confidence intervals; the requirements below remain open.
+
 The subsequent [corrected eight-method component audit](CORRECTED_VGNC_COMPONENTS_20260928.md)
 describes all individual, paired-union and all-method-union cross-block graphs.
 Largest components range from four blocks for the phylogenetic

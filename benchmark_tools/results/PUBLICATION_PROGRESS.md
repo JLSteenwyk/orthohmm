@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Complete Corrected VGNC Single-Block Sensitivity (2026-09-28)
+
+Previous turn progressed complete OrthoBench figures (`cf392ff3`). Reread goal,
+VGNC uncertainty review and historical deletion code. Committed/pushed the
+corrected-panel protocol and tested runner as `3d49a44c` before execution.
+All eight methods and 16,844 blocks yield 134,752 deletions; every comparator
+retains a negative F1 difference versus full OrthoFinder in every deletion.
+Phylogenetic OrthoHMM difference ranges from -8.7353 to -8.6729 percentage points.
+[Result and limits](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md).
+
+Seventeen focused tests pass. Independent cell accumulation and rational ratios
+reproduce all deletion rows and seven contrast ranges/sign counts within
+5.56e-17. This is fixed-table sensitivity, not CI coverage or population
+robustness. No native inference/scoring reruns, timing admissions or service
+changes. Goal active; unresolved VGNC inference and other publication gates
+remain explicit.
+
 ## Plot All 21 OrthoBench Contrasts (2026-09-28)
 
 Previous turn progressed retained stream rejection checks (`99060afe`). Reread

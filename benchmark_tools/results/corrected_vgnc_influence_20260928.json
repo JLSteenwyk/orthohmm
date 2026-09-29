@@ -1,0 +1,1173 @@
+{
+  "baseline": "orthofinder_3_1_5_full",
+  "checked_records": [
+    {
+      "bytes": 26291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_vgnc_blocks_20260926.json",
+      "sha256": "01a51a62a536bcf759f2a0ef83c56196a92022b0bb8290448eacbfefa47d6005"
+    },
+    {
+      "bytes": 396556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/reference_blocks.tsv",
+      "sha256": "4f9f196d61b0547e1c4f166d0528e96129cd6d882a7ef7eee245c24dc9155dc2"
+    },
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 8914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/map_corrected_vgnc_blocks.py",
+      "sha256": "230576e25f982dcf7bbe86d9c1481bd4200627cdab870940d3cce0ef0ac17316"
+    },
+    {
+      "bytes": 7060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_vgnc_mapping.py",
+      "sha256": "6c11df1bce76bcecde91632af10c147b50326186064289686ebea72fa2d6486a"
+    },
+    {
+      "bytes": 6285,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_vgnc_family_dependencies.py",
+      "sha256": "29dd44df91e484ebb982f88ee609ab0502ef686d6f7dc7c21f57c4fb9db9e481"
+    },
+    {
+      "bytes": 6077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_vgnc_block_influence.py",
+      "sha256": "875bf9487787ba5bc2dee9efa5b95ad165862432447ad09ff5a2bd6954dc9bed"
+    },
+    {
+      "bytes": 280266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21782.json",
+      "sha256": "8ba2d51aa48bdfde6580b832f1bfedb0c14ef7cc19c897c238337bb3e96e4e83"
+    },
+    {
+      "bytes": 685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/VGNC/VGNC.json",
+      "sha256": "c7567aef5ca06b6feee2d405e27dff037926fa2b98c2217db8335bff251ff52c"
+    },
+    {
+      "bytes": 566071,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/VGNC/VGNC_ohmm-qfo-corrected-factorial-p1-c0-r0_raw.txt.gz",
+      "sha256": "0a9e30bf35897c57b720b587c18841ab4c7036acc85ff1a3a84f26cb82520490"
+    },
+    {
+      "bytes": 248974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+      "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+    },
+    {
+      "bytes": 688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/VGNC/VGNC.json",
+      "sha256": "86d5cf7b1f9735726b1e5827c73c881be47cb0d639b5cbaedd12b7670a566563"
+    },
+    {
+      "bytes": 339549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/VGNC/VGNC_ohmm-qfo-corrected-factorial-p1-c1-r1_raw.txt.gz",
+      "sha256": "edab2add6615876bfbf7f23c04e0087c52975f6dd67df4937af96609e37c453d"
+    },
+    {
+      "bytes": 152067213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_full_assessment_admission_20260918.json",
+      "sha256": "f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c"
+    },
+    {
+      "bytes": 682,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/VGNC/VGNC.json",
+      "sha256": "0889eec43f1886239052f17b2999a39af64aae3c1feb5246047f592f01c2502c"
+    },
+    {
+      "bytes": 344531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/VGNC/VGNC_qfo-corrected-orthofinder-full_raw.txt.gz",
+      "sha256": "211436440e0faa371dc243ca8b3fb5a4144a1943cdd04655a235105dc3bdd88b"
+    },
+    {
+      "bytes": 152068416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_sequence_only_assessment_admission_20260918.json",
+      "sha256": "ecd8721dc2e8f2399ccf86fd7d89f917447325ee4e812bae29bfaf3b2bbe851e"
+    },
+    {
+      "bytes": 692,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/VGNC/VGNC.json",
+      "sha256": "19277bbaf0ab53663dd6b9912a60ecf351220f1b3e185ea4cacc64e326782db9"
+    },
+    {
+      "bytes": 4324269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/VGNC/VGNC_qfo-corrected-orthofinder-sequence-only_raw.txt.gz",
+      "sha256": "df5228cdb83ae72bb2fd2965c44c90b8fccf721e5bc5485a6a73f5ff29cef45c"
+    },
+    {
+      "bytes": 5641618,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+      "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+    },
+    {
+      "bytes": 669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/VGNC/VGNC.json",
+      "sha256": "7c10d63b64ce41ba1435b4935d7de5abd38fefda6fc3f1a79975f3468ab58913"
+    },
+    {
+      "bytes": 344337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/VGNC/VGNC_qfo-corrected-sonic_raw.txt.gz",
+      "sha256": "b25c1b9d47dec9b4bd41fdcf5ada637ba4cbd0c01ac8c85567c3e4b2cb5bf163"
+    },
+    {
+      "bytes": 300518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+      "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+    },
+    {
+      "bytes": 676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/VGNC/VGNC.json",
+      "sha256": "d99228e9e625792f1c371007e4d21d5f6be12ff4f5a17c83a4c42ffeafec30b2"
+    },
+    {
+      "bytes": 346447,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/VGNC/VGNC_qfo-corrected-proteinortho_raw.txt.gz",
+      "sha256": "ac830f0680ad9d5b6e8f334dad4fc718b850800a181d2655361d5f40107a27e7"
+    },
+    {
+      "bytes": 31667841,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_fastoma_assessment_admission_20260918.json",
+      "sha256": "e40d1c4aaf89fafc3ea7fed8c198a4cf22e7ffe07a0eb522cf1730f36dada694"
+    },
+    {
+      "bytes": 672,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/VGNC/VGNC.json",
+      "sha256": "b2d808886297da23e313670025190e740f89ef0259993ca51d55a6fdc1a3cd5b"
+    },
+    {
+      "bytes": 342372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/VGNC/VGNC_qfo-corrected-fastoma_raw.txt.gz",
+      "sha256": "c26fba3a1c64228a8ac0374309cc682383e8e3f93322cfc8c88bbcb3b950430a"
+    },
+    {
+      "bytes": 695510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_score_admission_22176.json",
+      "sha256": "86448fbd694941a6814177d1bd4565467e52554c47d34bb3d65a642687f9dd93"
+    },
+    {
+      "bytes": 684,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/VGNC/VGNC.json",
+      "sha256": "0c70ab441d0b882809120a4f2323d9256eb2d6567bc6c89eb6fdbbbe9479ca58"
+    },
+    {
+      "bytes": 627644,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/VGNC/VGNC_qfo-corrected-orthomcl-recovered_raw.txt.gz",
+      "sha256": "f032af13850019e170d79de00b1d8558c27325b1ee331cf1425df53793686082"
+    },
+    {
+      "bytes": 460211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthohmm_high_sensitivity.tsv",
+      "sha256": "153319e13ae30fa3a3197bf7e8574a084a5419c4365aef78fefff9cbbeff64e8"
+    },
+    {
+      "bytes": 315951,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthohmm_phylogeny_satellite_v2.tsv",
+      "sha256": "1b590443fe6cb619ad286c36c80a7f98b84810135cf1c7e1b7800859f36bd2fe"
+    },
+    {
+      "bytes": 316515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthofinder_3_1_5_full.tsv",
+      "sha256": "01c2a2741bb8bba62fa1faf06897acf7dbf43d4b5a49d4d1ae4ba7cb5e2a3c33"
+    },
+    {
+      "bytes": 2816482,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthofinder_3_1_5_sequence_only.tsv",
+      "sha256": "462b1433e5d027109063034c90723fdea94c55e0f7a7764e2c6a77a6f61d46bd"
+    },
+    {
+      "bytes": 316893,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/sonicparanoid_2_0_9.tsv",
+      "sha256": "699b48f28bf178d561a1c8e9b76d1f8369a37a47ff4bc3fbe3c077b1be96d7a9"
+    },
+    {
+      "bytes": 318976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/proteinortho_6_3_6.tsv",
+      "sha256": "6d0c0cf336c58bf595decc99608bd48749acf1399388e5b7574545bb47c9f6d9"
+    },
+    {
+      "bytes": 316480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/fastoma_0_3_5.tsv",
+      "sha256": "9483664c96023c64418f1a8607d7596f76c370d1f1270d01fe734c10c6d63abc"
+    },
+    {
+      "bytes": 560727,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthomcl_1_4.tsv",
+      "sha256": "76ce70e3c673337f6c5f465fda1ee91a6f7ce31f40bc832e1b18bb29056ae20e"
+    },
+    {
+      "bytes": 5902,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_corrected_vgnc_influence.py",
+      "sha256": "031812b346d8ad741089c4b21c4c1701960b0fc7803ecb27becff028fa9497dd"
+    },
+    {
+      "bytes": 6602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_corrected_vgnc_components.py",
+      "sha256": "0d65dbe43060a391defb8942f2cf38e3acbfc721a089dc1509359c1125fa45bc"
+    },
+    {
+      "bytes": 6077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_vgnc_block_influence.py",
+      "sha256": "875bf9487787ba5bc2dee9efa5b95ad165862432447ad09ff5a2bd6954dc9bed"
+    }
+  ],
+  "comparisons": {
+    "fastoma_0_3_5": {
+      "full_difference": -0.038450192532506366,
+      "maximum_block": "LRRC23",
+      "maximum_deleted_difference": -0.03826043589500849,
+      "minimum_block": "KRT33A",
+      "minimum_deleted_difference": -0.03870379635643595,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "full_difference": -0.8457914840383046,
+      "maximum_block": "CAMK2D",
+      "maximum_deleted_difference": -0.8455898340794373,
+      "minimum_block": "KRT31",
+      "minimum_deleted_difference": -0.8463430842823967,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "orthohmm_high_sensitivity": {
+      "full_difference": -0.3226131796173304,
+      "maximum_block": "HSPA4",
+      "maximum_deleted_difference": -0.32234388408619474,
+      "minimum_block": "KRT31",
+      "minimum_deleted_difference": -0.3231674785297717,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "orthohmm_phylogeny_satellite_v2": {
+      "full_difference": -0.08685623394463671,
+      "maximum_block": "ABCG2",
+      "maximum_deleted_difference": -0.08672926175740836,
+      "minimum_block": "KRT31",
+      "minimum_deleted_difference": -0.08735306654085717,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "orthomcl_1_4": {
+      "full_difference": -0.3465197968423269,
+      "maximum_block": "ZNF112",
+      "maximum_deleted_difference": -0.3440404522300554,
+      "minimum_block": "KRT31",
+      "minimum_deleted_difference": -0.3469100308514651,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "proteinortho_6_3_6": {
+      "full_difference": -0.03365008535951508,
+      "maximum_block": "H2AC6",
+      "maximum_deleted_difference": -0.03273652483259282,
+      "minimum_block": "KRT34",
+      "minimum_deleted_difference": -0.03419297410273625,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    },
+    "sonicparanoid_2_0_9": {
+      "full_difference": -0.005751994335805977,
+      "maximum_block": "COL4A3",
+      "maximum_deleted_difference": -0.005624448279882177,
+      "minimum_block": "KRT34",
+      "minimum_deleted_difference": -0.005876919804873815,
+      "negative": 16844,
+      "positive": 0,
+      "zero": 0
+    }
+  },
+  "limitations": [
+    "Exploratory fixed-table deletion sensitivity after previous score inspection, not a confidence interval.",
+    "Deletes each block and incident scored pairs once; does not rerun native eligibility, inference or scoring.",
+    "Separate deletions share rows and are dependent; sign stability does not establish joint-deletion or population robustness.",
+    "Original observed counts and scores remain unchanged; no method or endpoint selection."
+  ],
+  "methods": {
+    "fastoma_0_3_5": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 2192,
+        "FP": 92,
+        "TP": 21742
+      },
+      "full_metrics": {
+        "f1": 0.9500961370389792,
+        "precision": 0.9957863882018869,
+        "recall": 0.9084148073869809
+      },
+      "label": "FastOMA 0.3.5 final orthologous groups",
+      "largest_absolute_changes": [
+        {
+          "block": "KRT31",
+          "f1_change": 0.0004231589050461837,
+          "removed": {
+            "FN": 0,
+            "FP": 21,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT33A",
+          "f1_change": 0.00036731171932791185,
+          "removed": {
+            "FN": 3,
+            "FP": 15,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT33B",
+          "f1_change": 0.00036731171932791185,
+          "removed": {
+            "FN": 3,
+            "FP": 15,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT34",
+          "f1_change": 0.00036731171932791185,
+          "removed": {
+            "FN": 3,
+            "FP": 15,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H4-16",
+          "f1_change": 0.0002470023586690351,
+          "removed": {
+            "FN": 12,
+            "FP": 0,
+            "TP": 1
+          }
+        },
+        {
+          "block": "LRRC23",
+          "f1_change": 0.000186867397306556,
+          "removed": {
+            "FN": 6,
+            "FP": 3,
+            "TP": 0
+          }
+        },
+        {
+          "block": "KRT83",
+          "f1_change": 0.00018252103117699647,
+          "removed": {
+            "FN": 1,
+            "FP": 8,
+            "TP": 2
+          }
+        },
+        {
+          "block": "KRT81",
+          "f1_change": 0.00015957830831281328,
+          "removed": {
+            "FN": 0,
+            "FP": 8,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT86",
+          "f1_change": 0.00015957830831281328,
+          "removed": {
+            "FN": 0,
+            "FP": 8,
+            "TP": 3
+          }
+        },
+        {
+          "block": "PLAC8",
+          "f1_change": 0.00015087909357880402,
+          "removed": {
+            "FN": 8,
+            "FP": 0,
+            "TP": 7
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0004231589050461837,
+      "minimum_f1_change": -1.3087821390311838e-05
+    },
+    "orthofinder_3_1_5_full": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 415,
+        "FP": 130,
+        "TP": 23519
+      },
+      "full_metrics": {
+        "f1": 0.9885463295714856,
+        "precision": 0.9945029388134805,
+        "recall": 0.9826606501211665
+      },
+      "label": "OrthoFinder 3.1.5 full",
+      "largest_absolute_changes": [
+        {
+          "block": "KRT31",
+          "f1_change": 0.0006209155432574942,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT33A",
+          "f1_change": 0.0006209155432574942,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT33B",
+          "f1_change": 0.0006209155432574942,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT34",
+          "f1_change": 0.0006209155432574942,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "H4-16",
+          "f1_change": 0.0002488942087074397,
+          "removed": {
+            "FN": 12,
+            "FP": 0,
+            "TP": 1
+          }
+        },
+        {
+          "block": "KRT83",
+          "f1_change": 0.00018606479471161563,
+          "removed": {
+            "FN": 1,
+            "FP": 8,
+            "TP": 2
+          }
+        },
+        {
+          "block": "KRT81",
+          "f1_change": 0.00016480583182332254,
+          "removed": {
+            "FN": 0,
+            "FP": 8,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT86",
+          "f1_change": 0.00016480583182332254,
+          "removed": {
+            "FN": 0,
+            "FP": 8,
+            "TP": 3
+          }
+        },
+        {
+          "block": "PLAC8",
+          "f1_change": 0.00016290698788024027,
+          "removed": {
+            "FN": 8,
+            "FP": 0,
+            "TP": 7
+          }
+        },
+        {
+          "block": "KRT38",
+          "f1_change": 0.0001232380222164764,
+          "removed": {
+            "FN": 0,
+            "FP": 6,
+            "TP": 3
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0006209155432574942,
+      "minimum_f1_change": -2.8892401913171994e-06
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 111,
+        "FP": 286004,
+        "TP": 23823
+      },
+      "full_metrics": {
+        "f1": 0.14275484553318094,
+        "precision": 0.07689129740145306,
+        "recall": 0.9953622461769868
+      },
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint",
+      "largest_absolute_changes": [
+        {
+          "block": "CAMK2D",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "DAPK2",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "DCX",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "NEK11",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "PAK1",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "PAK2",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "PAK3",
+          "f1_change": 0.00019876071867597211,
+          "removed": {
+            "FN": 0,
+            "FP": 536,
+            "TP": 6
+          }
+        },
+        {
+          "block": "ZNF461",
+          "f1_change": 0.00019659586284892505,
+          "removed": {
+            "FN": 2,
+            "FP": 469,
+            "TP": 1
+          }
+        },
+        {
+          "block": "ZNF584",
+          "f1_change": 0.00019659586284892505,
+          "removed": {
+            "FN": 2,
+            "FP": 469,
+            "TP": 1
+          }
+        },
+        {
+          "block": "ZNF112",
+          "f1_change": 0.0001931722783101164,
+          "removed": {
+            "FN": 0,
+            "FP": 487,
+            "TP": 3
+          }
+        }
+      ],
+      "maximum_f1_change": 0.00019876071867597211,
+      "minimum_f1_change": -6.421930651198671e-05
+    },
+    "orthohmm_high_sensitivity": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 3961,
+        "FP": 16078,
+        "TP": 19973
+      },
+      "full_metrics": {
+        "f1": 0.6659331499541552,
+        "precision": 0.5540206929072703,
+        "recall": 0.83450321718058
+      },
+      "label": "OrthoHMM high sensitivity",
+      "largest_absolute_changes": [
+        {
+          "block": "HSPA4",
+          "f1_change": 0.000266406290944321,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPA4L",
+          "f1_change": 0.000266406290944321,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPH1",
+          "f1_change": 0.000266406290944321,
+          "removed": {
+            "FN": 0,
+            "FP": 30,
+            "TP": 6
+          }
+        },
+        {
+          "block": "SYT6",
+          "f1_change": 0.00022210727923088758,
+          "removed": {
+            "FN": 3,
+            "FP": 17,
+            "TP": 0
+          }
+        },
+        {
+          "block": "HSPB2",
+          "f1_change": 0.0002219537207576172,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "HSPB8",
+          "f1_change": 0.0002219537207576172,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "TBX18",
+          "f1_change": 0.0002219537207576172,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "NLRP11",
+          "f1_change": 0.00021097225454014268,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP13",
+          "f1_change": 0.00021097225454014268,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        },
+        {
+          "block": "NLRP14",
+          "f1_change": 0.00021097225454014268,
+          "removed": {
+            "FN": 0,
+            "FP": 20,
+            "TP": 1
+          }
+        }
+      ],
+      "maximum_f1_change": 0.000266406290944321,
+      "minimum_f1_change": -0.000100442089923658
+    },
+    "orthohmm_phylogeny_satellite_v2": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 4274,
+        "FP": 13,
+        "TP": 19660
+      },
+      "full_metrics": {
+        "f1": 0.9016900956268489,
+        "precision": 0.9993391958521832,
+        "recall": 0.8214255870310019
+      },
+      "label": "OrthoHMM phylogeny satellite_v2",
+      "largest_absolute_changes": [
+        {
+          "block": "H4-16",
+          "f1_change": 0.00024370108363214182,
+          "removed": {
+            "FN": 12,
+            "FP": 0,
+            "TP": 1
+          }
+        },
+        {
+          "block": "PLAC8",
+          "f1_change": 0.0001339263990774997,
+          "removed": {
+            "FN": 8,
+            "FP": 0,
+            "TP": 7
+          }
+        },
+        {
+          "block": "ABCG2",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "ACADS",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "ACSL6",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "CAMK2D",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "CD151",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "CDK3",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "CLDN7",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "COL27A1",
+          "f1_change": 0.0001240829470370297,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        }
+      ],
+      "maximum_f1_change": 0.00024370108363214182,
+      "minimum_f1_change": -2.706087515713662e-05
+    },
+    "orthomcl_1_4": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 414,
+        "FP": 25814,
+        "TP": 23520
+      },
+      "full_metrics": {
+        "f1": 0.6420265327291587,
+        "precision": 0.47675031418494346,
+        "recall": 0.9827024316871397
+      },
+      "label": "OrthoMCL 1.4",
+      "largest_absolute_changes": [
+        {
+          "block": "ZNF112",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF132",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF283",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF473",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF555",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF606",
+          "f1_change": 0.0024779001743588935,
+          "removed": {
+            "FN": 0,
+            "FP": 285,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZFP28",
+          "f1_change": 0.00231897038749318,
+          "removed": {
+            "FN": 0,
+            "FP": 267,
+            "TP": 3
+          }
+        },
+        {
+          "block": "ZNF605",
+          "f1_change": 0.00231897038749318,
+          "removed": {
+            "FN": 0,
+            "FP": 267,
+            "TP": 3
+          }
+        },
+        {
+          "block": "RBAK",
+          "f1_change": 0.0023031523522762942,
+          "removed": {
+            "FN": 0,
+            "FP": 263,
+            "TP": 1
+          }
+        },
+        {
+          "block": "ZFP62",
+          "f1_change": 0.0023031523522762942,
+          "removed": {
+            "FN": 0,
+            "FP": 263,
+            "TP": 1
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0024779001743588935,
+      "minimum_f1_change": -5.8639314284847366e-05
+    },
+    "proteinortho_6_3_6": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 1662,
+        "FP": 442,
+        "TP": 22272
+      },
+      "full_metrics": {
+        "f1": 0.9548962442119705,
+        "precision": 0.980540635731267,
+        "recall": 0.9305590373527199
+      },
+      "label": "ProteinOrtho 6.3.6",
+      "largest_absolute_changes": [
+        {
+          "block": "H2AC6",
+          "f1_change": 0.0009106712867309463,
+          "removed": {
+            "FN": 0,
+            "FP": 45,
+            "TP": 6
+          }
+        },
+        {
+          "block": "H2AW",
+          "f1_change": 0.0008901568869306153,
+          "removed": {
+            "FN": 0,
+            "FP": 44,
+            "TP": 6
+          }
+        },
+        {
+          "block": "H2BU1",
+          "f1_change": 0.0008491307290090511,
+          "removed": {
+            "FN": 0,
+            "FP": 42,
+            "TP": 6
+          }
+        },
+        {
+          "block": "H2BC11",
+          "f1_change": 0.000793303671212997,
+          "removed": {
+            "FN": 0,
+            "FP": 39,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2BC12",
+          "f1_change": 0.000793303671212997,
+          "removed": {
+            "FN": 0,
+            "FP": 39,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2BC3",
+          "f1_change": 0.000793303671212997,
+          "removed": {
+            "FN": 0,
+            "FP": 39,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2BC5",
+          "f1_change": 0.000793303671212997,
+          "removed": {
+            "FN": 0,
+            "FP": 39,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2AC12",
+          "f1_change": 0.000629275515132588,
+          "removed": {
+            "FN": 0,
+            "FP": 31,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2AC1",
+          "f1_change": 0.0006087759545102545,
+          "removed": {
+            "FN": 3,
+            "FP": 27,
+            "TP": 3
+          }
+        },
+        {
+          "block": "H2BC14",
+          "f1_change": 0.0005716008264267103,
+          "removed": {
+            "FN": 2,
+            "FP": 26,
+            "TP": 1
+          }
+        }
+      ],
+      "maximum_f1_change": 0.0009106712867309463,
+      "minimum_f1_change": -1.16057352572696e-05
+    },
+    "sonicparanoid_2_0_9": {
+      "blocks": 16844,
+      "counts": {
+        "FN": 686,
+        "FP": 128,
+        "TP": 23248
+      },
+      "full_metrics": {
+        "f1": 0.9827943352356796,
+        "precision": 0.9945242984257358,
+        "recall": 0.9713378457424584
+      },
+      "label": "SonicParanoid 2.0.9",
+      "largest_absolute_changes": [
+        {
+          "block": "KRT31",
+          "f1_change": 0.000536177541440086,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT33B",
+          "f1_change": 0.000536177541440086,
+          "removed": {
+            "FN": 0,
+            "FP": 26,
+            "TP": 6
+          }
+        },
+        {
+          "block": "KRT33A",
+          "f1_change": 0.0005174945407538933,
+          "removed": {
+            "FN": 3,
+            "FP": 22,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT34",
+          "f1_change": 0.0004959900741896561,
+          "removed": {
+            "FN": 2,
+            "FP": 22,
+            "TP": 4
+          }
+        },
+        {
+          "block": "H4-16",
+          "f1_change": 0.0002701297409574144,
+          "removed": {
+            "FN": 13,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "PLAC8",
+          "f1_change": 0.00016117144677685324,
+          "removed": {
+            "FN": 8,
+            "FP": 0,
+            "TP": 7
+          }
+        },
+        {
+          "block": "COL4A3",
+          "f1_change": 0.00012465681573248233,
+          "removed": {
+            "FN": 6,
+            "FP": 0,
+            "TP": 0
+          }
+        },
+        {
+          "block": "KRT38",
+          "f1_change": 0.00012249000005970512,
+          "removed": {
+            "FN": 0,
+            "FP": 6,
+            "TP": 3
+          }
+        },
+        {
+          "block": "OR2AG1",
+          "f1_change": 0.00012249000005970512,
+          "removed": {
+            "FN": 0,
+            "FP": 6,
+            "TP": 3
+          }
+        },
+        {
+          "block": "KRT37",
+          "f1_change": 0.00012032263457328884,
+          "removed": {
+            "FN": 0,
+            "FP": 6,
+            "TP": 6
+          }
+        }
+      ],
+      "maximum_f1_change": 0.000536177541440086,
+      "minimum_f1_change": -4.365258090666124e-06
+    }
+  },
+  "publication_ready": false,
+  "rows": 134752,
+  "status": "corrected_vgnc_single_block_sensitivity_described",
+  "table": {
+    "bytes": 582916,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_influence_20260928/all_block_deletions.tsv.gz",
+    "sha256": "2258f1253520a182a962a86d967ede91f7ab771183d127f551f95baacb9fa1ef"
+  },
+  "uncertainty_admitted": false
+}
