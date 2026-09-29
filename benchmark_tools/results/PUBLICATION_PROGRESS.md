@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Verify Exact Wheel Publishing Attestation (2026-09-29)
+
+Previous turn traced release recipes (`6a186140`). Reread goal and queried
+PyPI's official integrity endpoint for the retained llvmlite wheel. A bundle
+was available; its subject filename/SHA256 matches exactly. Installed the
+documented verifier into a new temporary venv, then cryptographically verified
+the local wheel and saved bundle against the expected numba/llvmlite identity.
+Exit 0, OK. [Evidence and limits](LLVMLITE_PUBLISH_ATTESTATION_20260929.md).
+
+Decoded certificate fields identify successful publishing run 31511294686,
+attempt 1, commit 5d881fd159581b97cd8221029ed3b1e50203e32e. Public run
+metadata and its immutable workflow were retrieved. That workflow publishes
+artifacts from other runs; it is not LLVM compilation evidence. The verified
+publish attestation has a null predicate, so exact build inputs remain open.
+This closes wheel-to-publisher provenance, not source-to-binary correspondence
+or release clearance. All scientific environments remain unchanged. Goal active.
+
 ## Trace llvmlite Release Build Sources (2026-09-29)
 
 Previous turn observed retained binary configuration (`aa41e53f`). Reread

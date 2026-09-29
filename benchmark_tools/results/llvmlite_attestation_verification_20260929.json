@@ -1,0 +1,186 @@
+{
+  "command": [
+    "/tmp/orthohmm-attestation-20260929/bin/python",
+    "-I",
+    "-B",
+    "-m",
+    "pypi_attestations",
+    "verify",
+    "pypi",
+    "--repository",
+    "https://github.com/numba/llvmlite",
+    "--provenance-file",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_attestation_verify_20260929/provenance.json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+  ],
+  "provenance": {
+    "bytes": 10899,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/llvmlite_attestation_verify_20260929/provenance.json",
+    "sha256": "af4f7235087ab2f67293e519d443f953b025af54abefd1384a475a0676c83846"
+  },
+  "publication_ready": false,
+  "query": {
+    "bytes": 11786,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/llvmlite_pypi_provenance_query_20260929.json",
+    "sha256": "889d93ceb24898a80f46266cd2092703cca7fa3a5a6c10701684ab1333931638"
+  },
+  "returncode": 0,
+  "source_build_correspondence_established": false,
+  "stderr": "OK: llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl\n",
+  "stdout": "",
+  "verifier_packages": [
+    [
+      "PyJWT",
+      "2.15.1"
+    ],
+    [
+      "Pygments",
+      "2.21.0"
+    ],
+    [
+      "annotated-types",
+      "0.8.0"
+    ],
+    [
+      "certifi",
+      "2026.7.22"
+    ],
+    [
+      "cffi",
+      "2.1.1"
+    ],
+    [
+      "charset-normalizer",
+      "3.5.1"
+    ],
+    [
+      "cryptography",
+      "50.0.1"
+    ],
+    [
+      "dnspython",
+      "2.8.0"
+    ],
+    [
+      "email-validator",
+      "2.3.0"
+    ],
+    [
+      "id",
+      "1.6.1"
+    ],
+    [
+      "idna",
+      "3.20"
+    ],
+    [
+      "importlib-resources",
+      "5.13.0"
+    ],
+    [
+      "markdown-it-py",
+      "4.2.0"
+    ],
+    [
+      "mdurl",
+      "0.1.2"
+    ],
+    [
+      "packaging",
+      "26.3"
+    ],
+    [
+      "pip",
+      "23.0.1"
+    ],
+    [
+      "platformdirs",
+      "4.12.1"
+    ],
+    [
+      "pyOpenSSL",
+      "26.4.0"
+    ],
+    [
+      "pyasn1",
+      "0.6.4"
+    ],
+    [
+      "pycparser",
+      "3.0"
+    ],
+    [
+      "pydantic",
+      "2.13.5"
+    ],
+    [
+      "pydantic_core",
+      "2.46.5"
+    ],
+    [
+      "pypi-attestations",
+      "0.0.30"
+    ],
+    [
+      "requests",
+      "2.34.2"
+    ],
+    [
+      "rfc3161-client",
+      "1.0.9"
+    ],
+    [
+      "rfc3986",
+      "2.0.0"
+    ],
+    [
+      "rfc8785",
+      "0.1.4"
+    ],
+    [
+      "rich",
+      "15.0.0"
+    ],
+    [
+      "securesystemslib",
+      "1.5.1"
+    ],
+    [
+      "setuptools",
+      "65.5.0"
+    ],
+    [
+      "sigstore",
+      "4.5.0"
+    ],
+    [
+      "sigstore-models",
+      "0.0.6"
+    ],
+    [
+      "sigstore-rekor-types",
+      "0.0.18"
+    ],
+    [
+      "tuf",
+      "7.0.1"
+    ],
+    [
+      "typing-inspection",
+      "0.4.4"
+    ],
+    [
+      "typing_extensions",
+      "4.16.0"
+    ],
+    [
+      "urllib3",
+      "2.8.0"
+    ]
+  ],
+  "wheel": {
+    "bytes": 59890659,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_integrated_full_ob_20260927/assets/wheels/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+    "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+  }
+}

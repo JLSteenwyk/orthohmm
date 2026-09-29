@@ -1,0 +1,31 @@
+{
+  "decoded": {
+    "certificate_extensions": {
+      "1.3.6.1.4.1.57264.1.13": "5d881fd159581b97cd8221029ed3b1e50203e32e",
+      "1.3.6.1.4.1.57264.1.21": "https://github.com/numba/llvmlite/actions/runs/31511294686/attempts/1"
+    },
+    "statement": {
+      "_type": "https://in-toto.io/Statement/v1",
+      "predicate": null,
+      "predicateType": "https://docs.pypi.org/attestations/publish/v1",
+      "subject": [
+        {
+          "digest": {
+            "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+          },
+          "name": "llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+        }
+      ]
+    }
+  },
+  "query": {
+    "bytes": 11786,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/llvmlite_pypi_provenance_query_20260929.json",
+    "sha256": "889d93ceb24898a80f46266cd2092703cca7fa3a5a6c10701684ab1333931638"
+  },
+  "signature_verification_receipt": {
+    "bytes": 3465,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/llvmlite_attestation_verification_20260929.json",
+    "sha256": "7103fe177dcb93e3676a82171aeff98640004b698c97ff1e16b31a87393bcc6a"
+  }
+}
