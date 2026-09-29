@@ -1,0 +1,553 @@
+{
+  "observed_utc": "2026-09-29T04:31:46.701964+00:00",
+  "run": {
+    "id": 36521885396,
+    "status": "completed",
+    "conclusion": "failure",
+    "head_sha": "81283f0b37d4edeb024f70c61e54e4b531ffaec4",
+    "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396"
+  },
+  "jobs": [
+    {
+      "id": 109256348157,
+      "name": "docs",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348157",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:07Z",
+          "completed_at": "2026-09-29T04:30:18Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:18Z",
+          "completed_at": "2026-09-29T04:30:25Z"
+        },
+        {
+          "name": "Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:25Z",
+          "completed_at": "2026-09-29T04:30:27Z"
+        },
+        {
+          "name": "Build docs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:27Z",
+          "completed_at": "2026-09-29T04:30:34Z"
+        },
+        {
+          "name": "Deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:34Z",
+          "completed_at": "2026-09-29T04:30:39Z"
+        },
+        {
+          "name": "Post Install uv",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-29T04:30:39Z",
+          "completed_at": "2026-09-29T04:30:40Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-09-29T04:30:40Z",
+          "completed_at": "2026-09-29T04:30:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-09-29T04:30:40Z",
+          "completed_at": "2026-09-29T04:30:41Z"
+        }
+      ]
+    },
+    {
+      "id": 109256348324,
+      "name": "test-full",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348324",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:05Z",
+          "completed_at": "2026-09-29T04:30:07Z"
+        },
+        {
+          "name": "Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:07Z",
+          "completed_at": "2026-09-29T04:30:16Z"
+        },
+        {
+          "name": "Setup Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:16Z",
+          "completed_at": "2026-09-29T04:30:16Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:16Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Install HMMER",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Install MCL",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Generate coverage report",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Upload unit test coverage to Codecov",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Upload integration test coverage to Codecov",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Post Setup Python",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-09-29T04:30:26Z",
+          "completed_at": "2026-09-29T04:30:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-09-29T04:30:27Z",
+          "completed_at": "2026-09-29T04:30:27Z"
+        }
+      ]
+    },
+    {
+      "id": 109256348336,
+      "name": "test-fast (3.11)",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348336",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:06Z",
+          "completed_at": "2026-09-29T04:30:07Z"
+        },
+        {
+          "name": "Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:07Z",
+          "completed_at": "2026-09-29T04:30:16Z"
+        },
+        {
+          "name": "Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:16Z",
+          "completed_at": "2026-09-29T04:30:16Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:16Z",
+          "completed_at": "2026-09-29T04:30:38Z"
+        },
+        {
+          "name": "Install HMMER",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:38Z",
+          "completed_at": "2026-09-29T04:30:41Z"
+        },
+        {
+          "name": "Install MCL",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "number": 6,
+          "started_at": "2026-09-29T04:30:41Z",
+          "completed_at": "2026-09-29T04:31:25Z"
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-09-29T04:31:25Z",
+          "completed_at": "2026-09-29T04:31:25Z"
+        },
+        {
+          "name": "Post Set up Python 3.11",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-29T04:31:25Z",
+          "completed_at": "2026-09-29T04:31:25Z"
+        },
+        {
+          "name": "Post Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-29T04:31:25Z",
+          "completed_at": "2026-09-29T04:31:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-29T04:31:26Z",
+          "completed_at": "2026-09-29T04:31:27Z"
+        }
+      ]
+    },
+    {
+      "id": 109256348393,
+      "name": "test-fast (3.10)",
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348393",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:02Z",
+          "completed_at": "2026-09-29T04:30:03Z"
+        },
+        {
+          "name": "Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:03Z",
+          "completed_at": "2026-09-29T04:30:10Z"
+        },
+        {
+          "name": "Set up Python 3.10",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:10Z",
+          "completed_at": "2026-09-29T04:30:24Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:24Z",
+          "completed_at": "2026-09-29T04:30:36Z"
+        },
+        {
+          "name": "Install HMMER",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:36Z",
+          "completed_at": "2026-09-29T04:30:38Z"
+        },
+        {
+          "name": "Install MCL",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-29T04:30:38Z",
+          "completed_at": "2026-09-29T04:31:09Z"
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-09-29T04:31:09Z",
+          "completed_at": "2026-09-29T04:31:21Z"
+        },
+        {
+          "name": "Post Set up Python 3.10",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-29T04:31:21Z",
+          "completed_at": "2026-09-29T04:31:21Z"
+        },
+        {
+          "name": "Post Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-29T04:31:21Z",
+          "completed_at": "2026-09-29T04:31:22Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-29T04:31:22Z",
+          "completed_at": "2026-09-29T04:31:22Z"
+        }
+      ]
+    },
+    {
+      "id": 109256348417,
+      "name": "test-fast (3.13)",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348417",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:36Z",
+          "completed_at": "2026-09-29T04:30:37Z"
+        },
+        {
+          "name": "Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:37Z",
+          "completed_at": "2026-09-29T04:30:44Z"
+        },
+        {
+          "name": "Set up Python 3.13",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:44Z",
+          "completed_at": "2026-09-29T04:30:44Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:44Z",
+          "completed_at": "2026-09-29T04:30:57Z"
+        },
+        {
+          "name": "Install HMMER",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:57Z",
+          "completed_at": "2026-09-29T04:30:58Z"
+        },
+        {
+          "name": "Install MCL",
+          "status": "completed",
+          "conclusion": "cancelled",
+          "number": 6,
+          "started_at": "2026-09-29T04:30:58Z",
+          "completed_at": "2026-09-29T04:31:27Z"
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-09-29T04:31:27Z",
+          "completed_at": "2026-09-29T04:31:27Z"
+        },
+        {
+          "name": "Post Set up Python 3.13",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-29T04:31:27Z",
+          "completed_at": "2026-09-29T04:31:27Z"
+        },
+        {
+          "name": "Post Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-29T04:31:27Z",
+          "completed_at": "2026-09-29T04:31:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-29T04:31:27Z",
+          "completed_at": "2026-09-29T04:31:28Z"
+        }
+      ]
+    },
+    {
+      "id": 109256348418,
+      "name": "test-fast (3.12)",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36521885396/job/109256348418",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-29T04:30:05Z",
+          "completed_at": "2026-09-29T04:30:06Z"
+        },
+        {
+          "name": "Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-29T04:30:06Z",
+          "completed_at": "2026-09-29T04:30:18Z"
+        },
+        {
+          "name": "Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-29T04:30:18Z",
+          "completed_at": "2026-09-29T04:30:19Z"
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-29T04:30:19Z",
+          "completed_at": "2026-09-29T04:30:34Z"
+        },
+        {
+          "name": "Install HMMER",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-29T04:30:34Z",
+          "completed_at": "2026-09-29T04:30:37Z"
+        },
+        {
+          "name": "Install MCL",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-29T04:30:37Z",
+          "completed_at": "2026-09-29T04:31:08Z"
+        },
+        {
+          "name": "Run tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-09-29T04:31:08Z",
+          "completed_at": "2026-09-29T04:31:22Z"
+        },
+        {
+          "name": "Post Set up Python 3.12",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-29T04:31:22Z",
+          "completed_at": "2026-09-29T04:31:22Z"
+        },
+        {
+          "name": "Post Run actions/checkout@master",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-29T04:31:22Z",
+          "completed_at": "2026-09-29T04:31:23Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-29T04:31:23Z",
+          "completed_at": "2026-09-29T04:31:24Z"
+        }
+      ]
+    }
+  ],
+  "inspected_log": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_109256348324_20260929.log",
+    "bytes": 24133,
+    "sha256": "f182c2044d6c2a893dabdb01a4b4ea8e928a8c28e12b6706e6a5c80a972fcf37"
+  },
+  "failure_scope": "test-full dependency install: DNS resolution of files.pythonhosted.org failed fetching Cython metadata before test dependencies or tests",
+  "publication_ready": false
+}

@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Inspect Actual Remote CI Outcome (2026-09-29)
+
+Previous turn progressed explicit CI parser dependencies (`81283f0b`). Reread
+goal and inspected GitHub run 36521885396 until terminal. Docs succeeded;
+test jobs failed/cancelled. The test-full log identifies DNS failure fetching
+existing Cython metadata before new test dependencies or tests could execute.
+[Run, retained API evidence and exact scope](CI_REMOTE_RESULT_20260929.md).
+
+This replaces an unknown remote status with a diagnosed installation-stage
+failure, not passing CI. No speculative package change, manual retry or
+scientific rerun. Local full-suite and parser results remain separate evidence.
+The remote workflow is terminal. Publication goal remains active; remaining
+timing, scientific and release requirements are not satisfied by CI inspection.
+
 ## Make SQL Archive Test Dependency Explicit In CI (2026-09-29)
 
 Previous turn progressed full regression and separate parser follow-up
