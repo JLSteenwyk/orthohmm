@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Confirm Deferred Audit Submission (2026-09-29)
+
+The preceding conversational turn checked the goal prompt but did not advance
+analysis. Revalidated live handles rather than resubmitting: 22377 is RUNNING
+at 1:57:24, 22378 is dependency-pending, and deferred audit 22379 is also
+dependency-pending. The retained [submission receipt](publication_completion_audits_submission_20260929.json)
+confirms successful submission after protocol commit `fc1dc972`, independently
+confirmed on the authorized remote. `scontrol` confirms both `afterany`
+dependencies, no requeue, four CPUs/task, 32 GiB and six hours on `bizon`.
+No parent inference or audit was restarted. Inspect 22379's retained outcomes
+after completion instead of invoking the reserved manual audit commands.
+
 ## Prepare Deferred Independent Completion Audits (2026-09-29)
 
 Previous turn progressed effective service evidence, with unresolved policy

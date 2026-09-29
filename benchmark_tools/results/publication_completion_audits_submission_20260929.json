@@ -1,0 +1,28 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_completion_audits_20260929.sh",
+    "--protocol",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_completion_audits_protocol_20260929.json",
+    "--protocol-sha256",
+    "8dd65820a2d9ca1a40dd8166391f0c8f3240358e0e76ac951657bc775c7c589e"
+  ],
+  "committed_protocol_revision": "fc1dc972636f63b8e2fbad63f8ccf3785504d35b",
+  "dependency": "afterany:22377:22378",
+  "job_id": 22379,
+  "production_timing": false,
+  "protocol": {
+    "bytes": 201503,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_completion_audits_protocol_20260929.json",
+    "sha256": "8dd65820a2d9ca1a40dd8166391f0c8f3240358e0e76ac951657bc775c7c589e"
+  },
+  "returncode": 0,
+  "script": {
+    "bytes": 692,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_completion_audits_20260929.sh",
+    "sha256": "1b72376955e53b8e36422dc10a37fa2e68ff31fae0b89f0bf13a5ffedf6377e8"
+  },
+  "stderr": "",
+  "stdout": "22379\n"
+}
