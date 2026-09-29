@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Test External Final-Counter Capture Once (2026-09-28)
+
+Previous turn established missing terminal scheduler usage (`40609f15`).
+Reread the goal and tested a concrete alternative: one owned 1-CPU/256-MiB
+Slurm diagnostic, job 22371, with an external read-only observer. Both job
+and batch step COMPLETED 0:0; queue query empty. Six scope tests pass.
+Across 1,463 samples, no error-free empty-cgroup state was captured. All four
+held descriptors returned ENODEV at removal. Last readable peak 42,979,328
+bytes and CPU 254,269 usec are pre-removal observations, not complete-job
+accounting. [Result and implications](THREADRIPPER_TERMINAL_CGROUP_PROBE_20260928.md).
+
+Raw observations compressed and round-tripped; sources/submission/logs bound.
+No retry, counter resets, unrelated signals, service changes, DGX access or
+production timing identities. This polling mechanism is not admitted for
+production. Validated final accounting, environmental handoff/overhead,
+quiet window, remaining uncertainty and release work still remain; goal active.
+
 ## Verify Terminal Timing Accounting Availability (2026-09-28)
 
 Previous turn progressed TreeFam source search (`fcc42772`). Reread the goal

@@ -1,5 +1,10 @@
 # Terminal Scheduler Accounting Gap
 
+The subsequent [single-job descriptor probe](THREADRIPPER_TERMINAL_CGROUP_PROBE_20260928.md)
+did not capture an error-free empty-cgroup state before removal. Held read-only
+descriptors became unreadable (`ENODEV`); polling is not a validated replacement
+for terminal accounting. The negative result is retained without retry.
+
 Fresh read-only `sacct` queries confirm jobs 22367-22369 and their batch/native
 steps all COMPLETED 0:0. Allocation durations are 145, 146 and 146 seconds;
 native-step durations are 12 seconds each. These are coarse scheduler elapsed

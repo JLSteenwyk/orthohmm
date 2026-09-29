@@ -1,0 +1,80 @@
+{
+  "complete_job_accounting_verified": false,
+  "compressed_observations": {
+    "bytes": 23416,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_terminal_cgroup_observations_20260928.json.gz",
+    "sha256": "ea96537ab4655497995228ca6439c3ffd791e58bcba92650e7efec441950e613"
+  },
+  "first_memory_peak_bytes": 9371648,
+  "job_id": 22371,
+  "last_observation": {
+    "errors": {
+      "cgroup.events": {
+        "errno": 19,
+        "message": "[Errno 19] No such device"
+      },
+      "cpu.stat": {
+        "errno": 19,
+        "message": "[Errno 19] No such device"
+      },
+      "memory.current": {
+        "errno": 19,
+        "message": "[Errno 19] No such device"
+      },
+      "memory.peak": {
+        "errno": 19,
+        "message": "[Errno 19] No such device"
+      }
+    },
+    "finished_ns": 293214250654956,
+    "raw": {},
+    "scope_stat_error": {
+      "errno": 2,
+      "message": "[Errno 2] No such file or directory: '/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22371'"
+    },
+    "started_ns": 293214250454552
+  },
+  "last_readable_cpu_stat": "usage_usec 254269\nuser_usec 80401\nsystem_usec 173868\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+  "last_readable_memory_peak_bytes": 42979328,
+  "limitations": [
+    "One small diagnostic; reads are non-atomic and a removed cgroup may make descriptors unreadable.",
+    "An empty observation alone does not establish final counter stability or production readiness."
+  ],
+  "observations": 1463,
+  "observed_empty_rows": 0,
+  "records": [
+    {
+      "bytes": 729,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_terminal_cgroup_probe_20260928/submission.json",
+      "sha256": "242dd40db5ec9becad5895bd954d065a65e75e3e1328eb4c711e31ee7cbe01b8"
+    },
+    {
+      "bytes": 119,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_terminal_cgroup_probe_20260928/worker.json",
+      "sha256": "6fd9ede200de2ad38bae900fc36a38a78a66cb824393725001ab5368982a6fa4"
+    },
+    {
+      "bytes": 696126,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_terminal_cgroup_probe_20260928/observations.json",
+      "sha256": "d0a1fad5e3866d26d1a6a8c69544b831ddab884850b58276f618aa562b757726"
+    },
+    {
+      "bytes": 1190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_terminal_cgroup_probe_20260928/result.json",
+      "sha256": "54815122dec45e4c15daf2548b846547970be55e8397f88737707e59609f31d5"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_terminal_cgroup_probe_20260928/slurm.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_terminal_cgroup.py",
+      "sha256": "c6f3af0ba60294a3ef6dfa3e95ed7fa3a0de2e0de8479154fe33297dcecce354"
+    }
+  ],
+  "scheduler_stderr": "",
+  "scheduler_stdout": "22371|COMPLETED|0:0\n22371.batch|COMPLETED|0:0\n",
+  "scientific_timings_admitted": false
+}
