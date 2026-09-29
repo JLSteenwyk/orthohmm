@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Check Remaining Public TreeFam Search Lead (2026-09-29)
+
+Previous turn progressed the rendered manuscript (`e2e96746`). Reread the
+goal and retained source-search history before public web searches. The exact
+mapping-name and release-7 queries did not recover originals. Repeated leads
+were recognized rather than downloaded again. The previously unchecked GREAT
+documentation describes single-species paralog annotations, not an original
+cross-species tree/mapping archive. [Bounded finding](TREEFAM_SOURCE_RETRIEVAL_20260918.md)
+records the primary-source link and limits; no complete GREAT archive search
+or global-unavailability claim is made.
+
+No original reference file, family-level uncertainty result or scientific
+change resulted. Do not repeatedly rerun these same queries without a concrete
+new lead. Maintain the original-source limitation and pursue other outstanding
+publication requirements. No contact, DGX access, scheduler change or benchmark
+rerun occurred. Full goal remains active and completion is not established.
+
 ## Refresh Main Review After Full Reconstruction Result (2026-09-29)
 
 Previous turn made progress by acquiring the recipe-bound LLVM source

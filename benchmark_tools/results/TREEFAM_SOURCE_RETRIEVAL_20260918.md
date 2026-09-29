@@ -2,6 +2,29 @@
 
 ## Outcome
 
+### September 29 Public Search And GREAT Lead
+
+Exact mapping-name and release-7/archive searches still did not identify a
+downloadable original mapping or full original tree collection. Many results
+repeat the already inspected Gerstein, InterMine, Selectome and QfO leads;
+those archives were not downloaded again.
+
+The previously unchecked [GREAT TreeFam documentation](https://great-help.atlassian.net/wiki/spaces/GREAT/pages/655406/TreeFam)
+(page dated August 11, 2014) describes its ontology as individual-species
+human or mouse families consisting of paralogs. It dates its human/mouse data
+acquisition to October 2011-February 2012 and zebrafish acquisition to January
+2011. This page does not provide the required original NHX collection or
+`treefam2reference.txt`, nor does it authenticate the QfO 2020 mapping.
+Species-specific family annotations cannot simply replace cross-species
+event-labelled trees. This is a documentation-level finding, not an inspection
+of every GREAT data download or proof that no historical source copy exists.
+
+No additional original artifact was acquired or admitted, no mapping was
+inferred, and no person was contacted. Avoid repeating these same exact-name
+queries or redownloading previously inspected archives without a new concrete
+lead. Original-family TreeFam uncertainty remains unavailable; the retained
+pooled scores and explicit limitation remain unchanged.
+
 The [reference-scope audit](TREEFAM_RECOVERED_SCOPE_20260928.md) establishes that
 55,933 of 79,320 retained relations (70.52%) have at least one endpoint outside
 Euteleostomi. The recovered vertebrate subtrees alone cannot reconstruct the
