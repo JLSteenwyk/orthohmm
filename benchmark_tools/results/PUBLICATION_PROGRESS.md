@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Admit Full Reconstructed-Base Reproduction (2026-09-29)
+
+Previous goal turns were verified waits on live job 22376, with search and
+clustering progress, not additional submissions. Reread goal and polled the
+same handle. Scheduler now confirms job and batch COMPLETED 0:0, 02:53:26,
+32 CPUs/128 GiB on bizon. Ran the prepared independent admission once to
+completion, retaining its package, execution and four-reader artifacts.
+
+[Result and scope](RECONSTRUCTED_FULL_OB_RESULT_22376.md): all 59,770 root
+groups match job 22337 label-independently; complete scores for all 70 RefOGs
+are identical (F1 74.10607351873405%). All four native pair/confidence/event/
+hierarchy comparison files are byte-identical. No historical result replaced,
+scientific parameter changed or native checkpoint reused. Full successful
+execution of the new admission checker is now verified, not merely unit-tested.
+
+This closes the reconstructed-base full-dataset execution gap. It does not
+complete controlled timing, biological generalization, QfO uncertainty or
+release-rights requirements. No running handle remains for this attempt;
+do not resubmit it or rerun its completed diagnostics without a new reason.
+Next return to the remaining publication gates, including timing isolation
+and final resource accounting; do not infer those from shared-host elapsed
+time or maximum process RSS. Goal remains active.
+
 ## Validate The Live Full-Data Installation (2026-09-29)
 
 Previous goal turn implemented the independent scientific admission
