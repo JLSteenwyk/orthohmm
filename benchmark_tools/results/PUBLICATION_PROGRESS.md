@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Complete All-Method OrthoBench Descriptive Strata (2026-09-28)
+
+After protocol commit `0a28a042` was pushed, exported all 112 rows for the
+fourteen unchanged bins and eight retained methods. All 42 original rows
+reproduce; 16 empty-bin rows remain missing. Independent rational arithmetic
+agrees for all counts and metrics; TSV parity and 185 source-file identities
+were verified. See [results and reproduction](OB_COMPLETE_STRATA_RESULT_20260928.md)
+and the [full table](ob_complete_strata_20260928/TABLE.md). No intervals or
+defaults changed, and no native jobs were launched. Controlled timing,
+remaining uncertainty requirements and release preparation remain unfinished.
+
 ## Freeze All-Method OrthoBench Strata Extension (2026-09-28)
 
 The preceding user-facing turn confirmed the already-amended Threadripper
