@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Expand Candidate Release Advisory Coverage (2026-09-28)
+
+Previous turn made progress by committing and pushing manuscript review v10
+as `ea31b769`. Reread the full goal and inspected the release security scope.
+The earlier check covered only retained GitHub advisory ranges. Added a
+release-specific PyPI auditor with strict exact-pin parsing, response identity
+checks, artifact-hash comparison, retained advisory records and explicit
+unresolved network outcomes. Frozen environments were not changed.
+
+The [candidate-release check](RELEASE_PYPI_ADVISORIES_20260928.md) covers all
+16 lock entries (12 distinct releases). Eleven public releases return no
+known advisories and all their locked hashes match public artifacts. The
+local OrthoHMM 0.5.0 endpoint returns 404 and remains unresolved, not clean.
+Exact successful responses are retained in a small compressed bundle.
+All 18 report file records rechecked and 38 focused tests passed. One earlier
+test invocation collected no tests because it named a nonexistent file;
+the corrected complete invocation passed.
+
+This does not close native-library/OS/bootstrap review, full-dataset dependency
+equivalence, scientific uncertainty or controlled timing. No production timing,
+DGX access or unrelated workload/service modification occurred. Historical
+locks, benchmark scores and GitHub alerts remain unchanged; the goal is active.
+
 ## Integrate FAS Follow-Up Into The Publication Draft (2026-09-28)
 
 Previous turn made progress by pushing the lookup/exposure audit as `363fc98f`.

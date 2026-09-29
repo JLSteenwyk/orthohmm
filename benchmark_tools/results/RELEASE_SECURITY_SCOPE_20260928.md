@@ -1,5 +1,11 @@
 # Release Security Scope
 
+The subsequent [release-specific PyPI check](RELEASE_PYPI_ADVISORIES_20260928.md)
+queries every pin in the candidate recovery and reader locks: 11 distinct
+public releases return no known advisories and matching artifact hashes;
+the local OrthoHMM 0.5.0 release remains unresolved by PyPI (HTTP 404).
+This broadens package-advisory coverage, not native-library or OS clearance.
+
 The [fresh repository snapshot](dependency_alerts_release_review_20260928.json)
 contains 12 open alerts, all on two historical requirement files. No alert
 was dismissed and neither historical lock was edited. This snapshot is a
