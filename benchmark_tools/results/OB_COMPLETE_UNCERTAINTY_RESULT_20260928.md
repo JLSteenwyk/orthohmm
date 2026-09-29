@@ -7,7 +7,7 @@ are contrasted with full OrthoFinder 3.1.5 for F1, precision and recall.
 Bonferroni percentile intervals cover 21 planned endpoints, with approximately
 119 draws per adjusted tail. They are approximate, conditional intervals.
 
-[Complete 21-endpoint table](ob_complete_uncertainty_check_20260928_v2/TABLE.md)
+[Complete 21-endpoint and family-outcome table](ob_complete_uncertainty_check_20260928_v3/TABLE.md)
 and [full result](ob_complete_uncertainty_20260928.json) retain every estimate,
 nominal/adjusted interval and descriptive per-family F1 win/tie/loss count.
 
@@ -37,6 +37,19 @@ RNG and quantile implementations remain shared NumPy code. The v2 check also
 explicitly verifies reported point differences; the first check is retained
 locally. This is arithmetic agreement, not validated interval coverage.
 Twenty-four focused tests pass. Native inference/scoring were not rerun.
+
+The [v3 verification](ob_complete_uncertainty_check_20260928_v3/crosscheck.json)
+additionally reproduces all seven family F1 win/tie/loss triples directly from
+rational TP/FP/FN counts, preserving the primary analysis's 1e-10
+percentage-point tie tolerance. Phylogenetic OrthoHMM has 23 wins, 10 ties and
+37 losses; high sensitivity has 20, 11 and 39. These descriptive counts do not
+replace the weighted benchmark statistic or imply independent family trials.
+All points and intervals remain unchanged. The verifier now rejects nonfinite
+values and interval shape mismatches before numerical comparisons, and checks
+exact baseline, method, metric and family inventories. Previously NaN could
+evade the greater-than-tolerance check; no such value was found in the retained
+result. Twenty-three checker/runner tests pass, including malformed-value and
+family-count regression cases. The v2 artifact remains historical and intact.
 
 Family exchangeability is an assumption, not established biological independence.
 Shared histories, shared genes and errors spanning families may violate it.

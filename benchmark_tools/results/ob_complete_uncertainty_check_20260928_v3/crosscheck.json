@@ -1,0 +1,331 @@
+{
+  "endpoints": 21,
+  "family_outcomes": {
+    "fastoma_0_3_5": {
+      "family_f1_losses": 59,
+      "family_f1_ties": 5,
+      "family_f1_wins": 6
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "family_f1_losses": 10,
+      "family_f1_ties": 60,
+      "family_f1_wins": 0
+    },
+    "orthohmm_high_sensitivity": {
+      "family_f1_losses": 39,
+      "family_f1_ties": 11,
+      "family_f1_wins": 20
+    },
+    "orthohmm_phylogeny_satellite_v2": {
+      "family_f1_losses": 37,
+      "family_f1_ties": 10,
+      "family_f1_wins": 23
+    },
+    "orthomcl_1_4": {
+      "family_f1_losses": 42,
+      "family_f1_ties": 13,
+      "family_f1_wins": 15
+    },
+    "proteinortho_6_3_6": {
+      "family_f1_losses": 55,
+      "family_f1_ties": 8,
+      "family_f1_wins": 7
+    },
+    "sonicparanoid_2_0_9": {
+      "family_f1_losses": 32,
+      "family_f1_ties": 19,
+      "family_f1_wins": 19
+    }
+  },
+  "limitations": "Alternative count accumulation and rational points; same NumPy RNG/quantile implementation. Not statistical coverage validation.",
+  "maximum_absolute_error_percentage_points": 2.1316282072803006e-14,
+  "publication_ready": false,
+  "rows": [
+    {
+      "bonferroni_percentile_ci": [
+        -54.98853443999819,
+        -25.917524185480357
+      ],
+      "difference_percentage_points": -41.82953783182653,
+      "method": "fastoma_0_3_5",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -50.522879787000406,
+        -32.07861598715404
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        10.201877903820789,
+        41.76035675643575
+      ],
+      "difference_percentage_points": 27.566373196942337,
+      "method": "fastoma_0_3_5",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        16.283782706037627,
+        36.861769552571296
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -73.63463835753146,
+        -48.38337134061983
+      ],
+      "difference_percentage_points": -62.39841300979138,
+      "method": "fastoma_0_3_5",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -70.00208212721674,
+        -53.66687482490354
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -26.656609334257137,
+        -1.8587836254795707
+      ],
+      "difference_percentage_points": -14.03051682039699,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -21.99809027598241,
+        -5.4926176370013575
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -37.53664767099331,
+        -3.1537638379604505
+      ],
+      "difference_percentage_points": -20.358940253466834,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        -30.871165127729512,
+        -8.773108794944214
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        0.0,
+        5.545907181627142
+      ],
+      "difference_percentage_points": 1.1332504372264225,
+      "method": "orthofinder_3_1_5_sequence_only",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        0.0,
+        3.5660213644298477
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -11.044995833998588,
+        6.745593853288459
+      ],
+      "difference_percentage_points": -2.3774823492692434,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -8.101899711384414,
+        3.4532178568022673
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -0.8952356828900229,
+        24.22172378204625
+      ],
+      "difference_percentage_points": 12.88444095618307,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        4.336023623271888,
+        20.2752977569114
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -32.10278490086316,
+        -3.8449743555998817
+      ],
+      "difference_percentage_points": -17.4520980949475,
+      "method": "orthohmm_high_sensitivity",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -26.888573697900636,
+        -8.224147107529319
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -7.28057874560009,
+        12.165501706653641
+      ],
+      "difference_percentage_points": 1.369593514512374,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -4.481735179787202,
+        8.050733857886547
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        1.1752742787173824,
+        30.63417762708368
+      ],
+      "difference_percentage_points": 15.70535080574075,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        5.994391795657832,
+        25.18577003739603
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -26.946572966022593,
+        -0.6091867318861452
+      ],
+      "difference_percentage_points": -13.151240322849176,
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -21.994922976825947,
+        -4.625008431363682
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -32.75399126196739,
+        -1.0404577801513053
+      ],
+      "difference_percentage_points": -17.671137712070944,
+      "method": "orthomcl_1_4",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -27.572993692587275,
+        -6.98039268107503
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -34.018809060996134,
+        25.710605933688754
+      ],
+      "difference_percentage_points": -6.98704766335247,
+      "method": "orthomcl_1_4",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        -24.705995760984298,
+        15.07570678598951
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -43.93761268489415,
+        -14.780974566578049
+      ],
+      "difference_percentage_points": -29.34351245028636,
+      "method": "orthomcl_1_4",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -38.935788034775854,
+        -19.467790829743308
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -39.68781783519316,
+        -12.857164223997001
+      ],
+      "difference_percentage_points": -27.679133330080333,
+      "method": "proteinortho_6_3_6",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -35.61029873723441,
+        -18.554718988958093
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        13.703993544968343,
+        44.843155948770566
+      ],
+      "difference_percentage_points": 30.991104738673215,
+      "method": "proteinortho_6_3_6",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        19.850734878067975,
+        40.16175809105691
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -62.477242491119,
+        -38.2950481257428
+      ],
+      "difference_percentage_points": -51.567787724956105,
+      "method": "proteinortho_6_3_6",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -59.06517104409745,
+        -43.053512740656245
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -52.28598706763407,
+        5.450546336130398
+      ],
+      "difference_percentage_points": -25.978870883791302,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "f_score",
+      "paired_percentile_ci": [
+        -45.10118551250049,
+        -0.02811561165804719
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -60.590843721045665,
+        25.35784400150305
+      ],
+      "difference_percentage_points": -29.529923427893728,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "precision",
+      "paired_percentile_ci": [
+        -51.551186666797086,
+        15.826229576971064
+      ]
+    },
+    {
+      "bonferroni_percentile_ci": [
+        -32.65280186604416,
+        -2.245826304490609
+      ],
+      "difference_percentage_points": -15.98376756103356,
+      "method": "sonicparanoid_2_0_9",
+      "metric": "recall",
+      "paired_percentile_ci": [
+        -26.680891881229904,
+        -5.93512304106114
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 53139,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_uncertainty_20260928.json",
+      "sha256": "f472916ccafa2392b7ca27f39448195b7c3e6b9464772e0ca6775092908f6b75"
+    },
+    {
+      "bytes": 8488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/check_ob_complete_uncertainty.py",
+      "sha256": "a3170c7e42398c0751a32ae8831b041deb3078b26edb4470af0e3767b6ea3128"
+    }
+  ],
+  "status": "complete_ob_intervals_independently_reproduced"
+}

@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Complete OrthoBench Family-Outcome Verification (2026-09-28)
+
+Previous turn only confirmed the goal prompt (no progress). Reread the goal
+and current records: archive acquisition and prefix replay are already complete;
+the terminal cgroup polling approach remains rejected. No duplicate download,
+diagnostic retry or production timing run was started.
+
+Strengthened the existing OrthoBench uncertainty checker to independently
+reproduce all seven descriptive family F1 win/tie/loss triples using rational
+counts. Also closed a NaN acceptance gap in tolerance comparisons and added
+shape and exact panel/metric/baseline checks. Twenty-three focused tests pass.
+Executed the revised checker on retained inputs: all 21 contrasts and seven
+triples agree, with maximum numerical error 2.14e-14 percentage points.
+[Updated result and full table](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+No score, interval, scientific default or claim changed. This does not validate
+family independence or interval coverage. Controlled timing, remaining QfO
+uncertainty and release requirements remain open; goal active.
+
 ## Test External Final-Counter Capture Once (2026-09-28)
 
 Previous turn established missing terminal scheduler usage (`40609f15`).
