@@ -1,0 +1,101 @@
+{
+  "controlled_timing": false,
+  "environments": {
+    "inference": {
+      "inventory": {
+        "package": [
+          {
+            "name": "dendropy",
+            "version": "5.1.0"
+          },
+          {
+            "name": "igraph",
+            "version": "1.0.0"
+          },
+          {
+            "name": "leidenalg",
+            "version": "0.11.0"
+          },
+          {
+            "name": "llvmlite",
+            "version": "0.49.0"
+          },
+          {
+            "name": "numba",
+            "version": "0.67.0"
+          },
+          {
+            "name": "numpy",
+            "version": "2.2.6"
+          },
+          {
+            "name": "orthohmm",
+            "version": "0.5.0"
+          },
+          {
+            "name": "pip",
+            "version": "26.2.1"
+          },
+          {
+            "name": "python-igraph",
+            "version": "1.0.0"
+          },
+          {
+            "name": "setuptools",
+            "version": "83.0.0"
+          },
+          {
+            "name": "texttable",
+            "version": "1.7.0"
+          }
+        ]
+      },
+      "package_count": 11
+    },
+    "reader": {
+      "inventory": {
+        "package": [
+          {
+            "name": "biopython",
+            "version": "1.87"
+          },
+          {
+            "name": "dendropy",
+            "version": "5.1.0"
+          },
+          {
+            "name": "numpy",
+            "version": "2.2.6"
+          },
+          {
+            "name": "pip",
+            "version": "26.2.1"
+          },
+          {
+            "name": "setuptools",
+            "version": "83.0.0"
+          }
+        ]
+      },
+      "package_count": 5
+    }
+  },
+  "job_id": 22377,
+  "limitations": [
+    "Observed installed wheel payloads while native inference was running; repeat at final admission.",
+    "No final scientific outputs or scores verified."
+  ],
+  "live_audit": {
+    "bytes": 1223565,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/live_package_audit.json",
+    "sha256": "bb01906921092b052edfe081959e957ed28455b56b58a10a979bf1c5b05fed26"
+  },
+  "plan": {
+    "bytes": 1461299,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/plan.json",
+    "sha256": "e80067f7a5947bc357831e0d65c7d766d09899f004cfc6a31d1274a8dfe15448"
+  },
+  "publication_ready": false,
+  "scheduler_observation": "JobId=22377 JobName=orthohmm_restored_archive_ob\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:01:38 TimeLimit=1-00:00:00 TimeMin=N/A\n   SubmitTime=2026-09-29T15:25:38 EligibleTime=2026-09-29T15:25:38\n   AccrueTime=2026-09-29T15:25:38\n   StartTime=2026-09-29T15:25:38 EndTime=2026-09-30T15:25:38 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-29T15:25:38 Scheduler=Backfill\n   Partition=gpu AllocNode:Sid=bizon-link:444194\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/restored_archive_ob_20260929.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/slurm-22377.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/slurm-22377.log\n   TresPerTask=cpu=32\n   \n\n",
+  "terminal_admission": false
+}

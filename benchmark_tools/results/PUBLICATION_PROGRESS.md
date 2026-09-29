@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Verify Restored-Archive Installed Packages While Inference Runs (2026-09-29)
+
+Previous turn made progress by preparing and submitting job 22377. Reread goal
+and ledger, and confirmed this exact job is running on bizon; no restart or
+duplicate submission. Its native log reports the frozen high-sensitivity HMM
+search, 12 FASTAs and 32 CPUs, currently in all-to-all comparison.
+
+Revalidated the pinned run plan, then audited both fresh installations using
+the existing wheel/inventory audit: all 11 inference and five reader packages
+pass. [Live installation evidence](restored_archive_live_install_22377.json)
+binds the detailed local payload receipt and scheduler observation. This does
+not admit unfinished scientific results. Repeat package verification during
+terminal admission; compare against 22376 as prescribed. Existing job-specific
+admission validators remain unchanged. Goal and job remain active.
+
 ## Submit Restored Archive Full OrthoBench Execution (2026-09-29)
 
 The preceding user-facing turn confirmed the already-updated host prompt but
