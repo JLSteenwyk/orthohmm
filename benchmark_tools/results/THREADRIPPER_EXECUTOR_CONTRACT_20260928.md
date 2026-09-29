@@ -75,6 +75,12 @@ diagnostic threshold has not been converted into an eligibility threshold.
 
 ## Validation And Remaining Work
 
+The attempted v5 runtime refresh was [rejected for shared dependency drift](THREADRIPPER_DEPENDENCY_DRIFT_20260928.md):
+pyparsing changed from 3.2.1 to 3.1.1, affecting files in the retained OrthoHMM
+import trace. No new runtime binding or native fixture was admitted. Isolate
+and validate the intended timing runtime without reverting shared packages
+before proceeding; historical lookup receipts do not establish current identity.
+
 Collector v5 adds an [anchor-only native completion boundary](THREADRIPPER_NATIVE_COMPLETION_20260928.md).
 Parent exit is no longer sufficient when retained cgroup thread evidence
 contains a live descendant or an observation gap. Raw/embedded receipts are

@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Detect Shared Timing Dependency Drift Before Native Validation (2026-09-28)
+
+Previous turn progressed collector v5 (`4e7600a3`). Reread the goal and began
+its native-fixture prerequisites. Fresh runtime reinventory rejected changed
+entry membership before any accepted binding, lookup refresh or job submission.
+Read-only follow-up found 549 added and six removed entries, including shared
+pyparsing 3.2.1 replaced by 3.1.1. All ten files in the historical OrthoHMM
+pyparsing import trace have changed hashes. No effect on predictions inferred.
+[Evidence and next action](THREADRIPPER_DEPENDENCY_DRIFT_20260928.md).
+
+Added explicit rebinding/drift inspection tools and tests; future inventory
+rejections retain observed files before raising. 23 focused tests pass.
+No dependency restoration or shared-environment mutation, no retry to obtain
+passing timing evidence, no native fixture/production run. A private timing
+runtime and validated deployment amendment are now required before the v5
+native check. Timing, remaining uncertainty and release work keep goal active.
+
 ## Reject Incomplete Native Process Trees (2026-09-28)
 
 Previous turn progressed portable statistics (`fb9d6bc1`). Reread the goal
