@@ -460,6 +460,10 @@ git clone --no-checkout https://github.com/davidemms/Open_Orthobench.git /tmp/or
 git -C /tmp/orthobench-source-new checkout --detach 872d6f30592ab5ff837224db16a514b3f2bb916a
 python benchmark_tools/verify_orthobench_acquisition.py \
   --checkout /tmp/orthobench-source-new --output /tmp/orthobench-acquisition-new.json
+python -I -S -B benchmark_tools/rebind_orthobench_data.py \
+  --manifest benchmark_tools/results/integrated_orthobench_data_20260927.json \
+  --sha256 fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061 \
+  --acquisition /tmp/orthobench-source-new --output /tmp/orthobench-rebound-new
 ```
 
 [Executed reacquisition evidence](results/orthobench_source_reacquisition_20260923.json)
@@ -468,6 +472,16 @@ reference groups and 11 low-certainty files also match the retained
 scientific input manifests. The scorer and README are checked but not
 executed. Raw files and upstream code remain outside the publication bundle;
 these commands do not resolve redistribution rights or rerun inference.
+
+The [September 29 public acquisition-to-manifest chain](results/orthobench_public_input_chain_20260929.json)
+also passed on a fresh public clone. Exported verifier/rebinder scripts and
+their pinned manifests ran outside the checkout with isolated, stdlib-only
+Python. All 95 upstream files verified, and all 93 ordered benchmark inputs
+match both the acquisition receipt and the frozen integrated manifest. The
+existing controller accepts the rebound `data.json`; use its newly recorded
+SHA-256 as `--data-sha256`. This advances full-data preparation, not a fresh
+native inference result or cross-host/runtime restoration. The earlier
+reacquisition evidence remains historical and has not been overwritten.
 
 YGOB inputs can be acquired directly from the provider without including raw
 data in the publication bundle. From the repository root, use fresh paths:

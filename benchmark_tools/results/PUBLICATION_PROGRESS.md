@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Recover And Finish Public OrthoBench Input Preparation (2026-09-29)
+
+The preceding three continuations made no progress because sandbox startup
+failed; the goal was marked blocked. On this resumption execution works again.
+Reread the goal and current ledger, confirmed the old verifier was not running,
+and found its complete acquisition receipt. Checked all 95 retained payload
+identities and the frozen checkout revision without restarting the download
+or the original verification process.
+
+Ran the exported stdlib-only rebinder from `/tmp` against that fresh public
+clone. All 93 inputs retain their frozen order and bytes. The existing integrated
+controller validates the new manifest, and an independent join confirms it
+agrees with the upstream acquisition receipt. [Combined evidence](orthobench_public_input_chain_20260929.json)
+preserves the interruption and recovery boundary. Updated the reproduction
+guide to connect public acquisition directly to the tested manifest command.
+No native inference, timing measurement, runtime change or data redistribution
+occurred. Goal work resumed; timing-scope response, quiet window and remaining
+publication requirements are still outstanding.
+
 ## Make Full OrthoBench Input Rebinding Executable (2026-09-29)
 
 Previous turn completed the LLVM notice supplement (`30b876af`). Reread the
