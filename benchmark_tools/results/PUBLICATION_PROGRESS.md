@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Freeze All-Method OrthoBench Strata Extension (2026-09-28)
+
+The preceding user-facing turn confirmed the already-amended Threadripper
+goal; it made no new analysis progress. Revalidated the pending OrthoBench
+extension and resumed that available work. The exporter, protocol and tests
+retain the fourteen frozen bins and all eight methods, with no new intervals
+or tuning. Forty-eight focused tests pass. Commit and push this protocol
+before joining the five additional methods to strata. Export all 112 rows,
+reproduce the original 42 rows and independently verify weighted arithmetic.
+No DGX work or production timing was launched. Publication readiness remains
+unproven; timing, uncertainty and release requirements remain open.
+
 ## Describe Corrected VGNC Joint Dependency Graphs (2026-09-28)
 
 Previous turn made progress by pushing exact fixed-release Three Kingdoms
