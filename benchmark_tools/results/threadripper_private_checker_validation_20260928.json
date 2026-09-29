@@ -1,0 +1,31 @@
+{
+  "binding": {
+    "bytes": 36564,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/binding.json",
+    "sha256": "dc97791ad8626b2462b7a23c769a50ef9d69cbeb182f112cbb2833c0794aea78"
+  },
+  "changes": {
+    "bytes": 1450,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/helper_changes.json",
+    "sha256": "88e4af736f6793e8dc5b2edeef24ce4edc3182d56f871755b5f4c5657e82fda4"
+  },
+  "checks": [
+    {
+      "bytes": 2219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/checker_validation/checked_01.json",
+      "sha256": "0f9aad1b9b68c47002b48bd7978b8245806c385ab436c7c670314ea6728fb52c"
+    },
+    {
+      "bytes": 2219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/checker_validation/checked_02.json",
+      "sha256": "61f3eaf095131dbf2da30c34a1aa7efa6c624ac931a1470a4414dd0dfa1f4b31"
+    }
+  ],
+  "lookup": {
+    "bytes": 3017,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/lookup.json",
+    "sha256": "5996f36dad39c7a7e38c38f134cbe5e13796c4a23dae0444a77a473f12cfdb54"
+  },
+  "scientific_execution_authorized": false,
+  "status": "private_controller_checker_passed_twice"
+}

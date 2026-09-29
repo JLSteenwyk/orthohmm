@@ -39,7 +39,12 @@ class RuntimeChecker:
             raise ValueError("Lookup inspector source differs from validated version")
         runtime = self.tree_checker(specifications)
         directory = self.output / f"check_{self.count:02d}"
-        command = [baseline["tool_entrypoints"]["orthohmm_python"]["absolute_path"], "-B", str(source),
+        controller = binding.get("controller_python")
+        if controller is not None:
+            check(controller)
+        interpreter = (controller["path"] if controller is not None
+                       else baseline["tool_entrypoints"]["orthohmm_python"]["absolute_path"])
+        command = [interpreter, "-B", str(source),
             "--baseline", baseline_row["path"], "--baseline-sha256", baseline_row["sha256"],
             "--binding", binding_row["path"], "--binding-sha256", binding_row["sha256"],
             "--output", str(directory)]
@@ -59,6 +64,8 @@ class RuntimeChecker:
             observed = read_frozen(Path(observed_row["path"]), observed_row["sha256"])
             comparisons[name] = dict(compare_lookup(prior, observed), report=observed_row)
         check(receipt["source"])
+        if controller is not None:
+            check(controller)
         read_frozen(self.receipt_path, self.receipt_sha256)
         read_frozen(Path(binding_row["path"]), binding_row["sha256"])
         read_frozen(Path(baseline_row["path"]), baseline_row["sha256"])

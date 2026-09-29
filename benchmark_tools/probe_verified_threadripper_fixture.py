@@ -38,21 +38,31 @@ def main():
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--method", choices=METHODS, default=METHODS[0])
     parser.add_argument("--scheduler-command", required=True)
+    parser.add_argument("--lookup", type=Path)
+    parser.add_argument("--lookup-sha256")
+    parser.add_argument("--plan", type=Path)
+    parser.add_argument("--plan-sha256")
     args = parser.parse_args()
+    if any((args.lookup, args.lookup_sha256, args.plan, args.plan_sha256)) and not all(
+            (args.lookup, args.lookup_sha256, args.plan, args.plan_sha256)):
+        parser.error("Provide all four deployment lookup/plan arguments together")
     allocation_cwd = str(Path.cwd())
     results = Path(__file__).resolve().parent / "results"
-    lookup_path = results / "threadripper_python_lookup_v3_20260928.json"
-    lookup = read_frozen(lookup_path, LOOKUP_SHA)
+    lookup_path = args.lookup or results / "threadripper_python_lookup_v3_20260928.json"
+    lookup_sha = args.lookup_sha256 or LOOKUP_SHA
+    lookup = read_frozen(lookup_path, lookup_sha)
     baseline = read_frozen(Path(lookup["baseline"]["path"]), lookup["baseline"]["sha256"])
     binding = read_frozen(Path(lookup["binding"]["path"]), lookup["binding"]["sha256"])
-    plan_path = results / "threadripper_scaling_commands_20260928.json"
-    plan = read_frozen(plan_path, PLAN_SHA)
+    plan_path = args.plan or results / "threadripper_scaling_commands_20260928.json"
+    plan = read_frozen(plan_path, args.plan_sha256 or PLAN_SHA)
+    if record(plan_path) != binding["command_plan"]:
+        raise ValueError("Fixture plan differs from runtime binding")
     args.output.mkdir(parents=True, exist_ok=False)
     env, _ = execution_environment(baseline)
     env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONPYCACHEPREFIX=str(args.output / "python_cache"))
     os.environ.update(env)
     os.chdir(baseline["core_root"])
-    checker = RuntimeChecker(lookup_path, LOOKUP_SHA, args.output / "lookup_checks")
+    checker = RuntimeChecker(lookup_path, lookup_sha, args.output / "lookup_checks")
     run = fixture_run(select_fixture(plan, args.method), args.input, args.output / "run_00", args.tmpfs)
     save(args.output / "command.json", run)
     save(args.output / "started.json", dict(source=record(__file__),

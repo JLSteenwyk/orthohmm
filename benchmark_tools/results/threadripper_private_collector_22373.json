@@ -1,0 +1,42 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22373",
+      "--parsable2",
+      "--format=JobID,State,ExitCode,ElapsedRaw"
+    ],
+    "stdout": "JobID|State|ExitCode|ElapsedRaw\n22373|COMPLETED|0:0|111\n22373.batch|COMPLETED|0:0|111\n22373.0|COMPLETED|0:0|21\n"
+  },
+  "job_id": 22373,
+  "native_completion_status": "anchor_only_at_boundaries",
+  "parity": [
+    {
+      "current": {
+        "bytes": 231,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/run_00/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+      },
+      "identical": true,
+      "prior": {
+        "bytes": 231,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_high_20260928/run_00/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "2e492335c12fa09727d601c97033b0429b0f8cc6408cba75f6feb557021ca5e3"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "replay": {
+    "bytes": 2014281,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/measurement_replay.json",
+    "sha256": "51d4288a120dac3e413c890295762131b6452c3a72a53804745ef0b36974bbd8"
+  },
+  "result": {
+    "bytes": 157442,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/result.json",
+    "sha256": "23a1b72c283704797ff5f948cb7cd9c30376508d00e6aee5d1ea9dcb08a2fbd5"
+  },
+  "scientific_timings_admitted": false,
+  "status": "private_controller_v5_high_fixture_replayed"
+}

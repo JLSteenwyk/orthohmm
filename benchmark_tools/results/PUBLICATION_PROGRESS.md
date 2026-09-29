@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Integrate Private Controller And Execute Collector V5 Fixture (2026-09-28)
+
+Previous turn progressed private binding (`b0299e6e`). Reread goal. Updated
+RuntimeChecker to select and verify the private controller; fixture driver now
+accepts a complete pinned deployment and checks plan/binding agreement. Fresh
+inventory comparison finds only these two helper changes; private trees remain
+unchanged. Two real composed runtime checks pass. Twenty-two focused tests pass.
+[Integration evidence](THREADRIPPER_PRIVATE_COLLECTOR_20260928.md).
+
+Job 22373 high-sensitivity fixture completed 0:0 across allocation/batch/step.
+Collector v5, preparation, before/after runtime and output validation pass;
+three groups/16 genes match historical prediction bytes. Independent raw replay
+passes including anchor-only native completion boundaries. No timing admission
+on the loaded host and no production identity launched. Next: satellite_v2 and
+full OrthoFinder collector fixtures, then remaining accounting/quiet-host gates.
+No DGX work or unrelated-job interruption. Publication goal remains active.
+
 ## Bind Private Runtime And Repeat Native Lookup (2026-09-28)
 
 Previous turn progressed private controller installation (`c0f3a074`). Reread

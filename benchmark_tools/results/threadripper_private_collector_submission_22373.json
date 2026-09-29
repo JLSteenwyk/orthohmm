@@ -1,0 +1,22 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--nodelist=bizon",
+    "--cpus-per-task=64",
+    "--mem=128G",
+    "--exclusive",
+    "--time=26:00:00",
+    "--no-requeue",
+    "--job-name=oh-private-fixture",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/collector_high_%j.log",
+    "--wrap",
+    "env -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python -B -m benchmark_tools.probe_verified_threadripper_fixture --input /tmp/orthohmm-integrated-workflow-20260927-v2/input --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928 --tmpfs /dev/shm/orthohmm_private_collector_high_20260928 --method orthohmm_high_sensitivity --scheduler-command '(null)' --lookup /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_v2_20260928/lookup.json --lookup-sha256 5996f36dad39c7a7e38c38f134cbe5e13796c4a23dae0444a77a473f12cfdb54 --plan /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_deployment_20260928/plan.json --plan-sha256 a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+  ],
+  "exit_code": 0,
+  "production_timing": false,
+  "stderr": "",
+  "stdout": "22373\n"
+}
