@@ -1,0 +1,176 @@
+{
+  "accounting_collection_configured": false,
+  "commands": [
+    {
+      "command": [
+        "sacct",
+        "-j",
+        "22367,22368,22369",
+        "--parsable2",
+        "--units=K",
+        "--format=JobIDRaw,State,ExitCode,ElapsedRaw,AllocCPUS,TotalCPU,MaxRSS,MaxVMSize,Start,End"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-09-29T01:28:59.317608+00:00",
+      "stderr": "",
+      "stdout": "JobIDRaw|State|ExitCode|ElapsedRaw|AllocCPUS|TotalCPU|MaxRSS|MaxVMSize|Start|End\n22367|COMPLETED|0:0|145|192|00:00:00|||2026-09-28T15:49:00|2026-09-28T15:51:25\n22367.batch|COMPLETED|0:0|145|192|00:00:00|||2026-09-28T15:49:00|2026-09-28T15:51:25\n22367.0|COMPLETED|0:0|12|64|00:00:00|||2026-09-28T15:50:08|2026-09-28T15:50:20\n22368|COMPLETED|0:0|146|192|00:00:00|||2026-09-28T15:51:25|2026-09-28T15:53:51\n22368.batch|COMPLETED|0:0|146|192|00:00:00|||2026-09-28T15:51:25|2026-09-28T15:53:51\n22368.0|COMPLETED|0:0|12|64|00:00:00|||2026-09-28T15:52:32|2026-09-28T15:52:44\n22369|COMPLETED|0:0|146|192|00:00:00|||2026-09-28T15:53:51|2026-09-28T15:56:17\n22369.batch|COMPLETED|0:0|146|192|00:00:00|||2026-09-28T15:53:51|2026-09-28T15:56:17\n22369.0|COMPLETED|0:0|12|64|00:00:00|||2026-09-28T15:54:58|2026-09-28T15:55:10\n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "config"
+      ],
+      "returncode": 0,
+      "started_utc": "2026-09-29T01:28:59.332367+00:00",
+      "stderr": "",
+      "stdout": "Configuration data as of 2026-09-28T21:28:59\nAccountingStorageBackupHost = (null)\nAccountingStorageEnforce = none\nAccountingStorageHost   = localhost\nAccountingStorageExternalHost = (null)\nAccountingStorageParameters = (null)\nAccountingStoragePort   = 6819\nAccountingStorageTRES   = cpu,mem,energy,node,billing,fs/disk,vmem,pages\nAccountingStorageType   = accounting_storage/slurmdbd\nAccountingStorageUser   = N/A\nAccountingStoreFlags    = (null)\nAcctGatherEnergyType    = (null)\nAcctGatherFilesystemType = (null)\nAcctGatherInterconnectType = (null)\nAcctGatherNodeFreq      = 0 sec\nAcctGatherProfileType   = (null)\nAllowSpecResourcesUsage = No\nAuthAltTypes            = (null)\nAuthAltParameters       = (null)\nAuthInfo                = (null)\nAuthType                = auth/munge\nBatchStartTimeout       = 10 sec\nBcastExclude            = /lib,/usr/lib,/lib64,/usr/lib64\nBcastParameters         = (null)\nBOOT_TIME               = 2026-09-25T12:05:47\nBurstBufferType         = (null)\nCliFilterPlugins        = (null)\nClusterName             = cluster\nCommunicationParameters = (null)\nCompleteWait            = 0 sec\nCpuFreqDef              = Unknown\nCpuFreqGovernors        = OnDemand,Performance,UserSpace\nCredType                = cred/munge\nDebugFlags              = (null)\nDefMemPerNode           = UNLIMITED\nDependencyParameters    = (null)\nDisableRootJobs         = No\nEioTimeout              = 60\nEnforcePartLimits       = NO\nEpilogMsgTime           = 2000 usec\nFairShareDampeningFactor = 1\nFederationParameters    = (null)\nFirstJobId              = 1\nGetEnvTimeout           = 2 sec\nGresTypes               = gpu\nGpuFreqDef              = (null)\nGroupUpdateForce        = 1\nGroupUpdateTime         = 600 sec\nHASH_VAL                = Match\nHashPlugin              = hash/k12\nHealthCheckInterval     = 0 sec\nHealthCheckNodeState    = ANY\nHealthCheckProgram      = (null)\nInactiveLimit           = 0 sec\nInteractiveStepOptions  = --interactive --preserve-env --pty $SHELL\nJobAcctGatherFrequency  = 30\nJobAcctGatherType       = (null)\nJobAcctGatherParams     = (null)\nJobCompHost             = localhost\nJobCompLoc              = (null)\nJobCompParams           = (null)\nJobCompPort             = 0\nJobCompType             = (null)\nJobCompUser             = root\nJobContainerType        = (null)\nJobDefaults             = (null)\nJobFileAppend           = 0\nJobRequeue              = 1\nJobSubmitPlugins        = (null)\nKillOnBadExit           = 0\nKillWait                = 30 sec\nLaunchParameters        = (null)\nLicenses                = (null)\nLogTimeFormat           = iso8601_ms\nMailDomain              = (null)\nMailProg                = /bin/mail\nMaxArraySize            = 10000\nMaxBatchRequeue         = 5\nMaxDBDMsgs              = 20008\nMaxJobCount             = 10000\nMaxJobId                = 67043328\nMaxMemPerNode           = UNLIMITED\nMaxNodeCount            = 2\nMaxStepCount            = 40000\nMaxTasksPerNode         = 512\nMCSPlugin               = (null)\nMCSParameters           = (null)\nMessageTimeout          = 10 sec\nMinJobAge               = 300 sec\nMpiDefault              = (null)\nMpiParams               = (null)\nNEXT_JOB_ID             = 22371\nNodeFeaturesPlugins     = (null)\nOverTimeLimit           = 0 min\nPluginDir               = /usr/lib/slurm\nPlugStackConfig         = (null)\nPreemptMode             = OFF\nPreemptParameters       = (null)\nPreemptType             = (null)\nPreemptExemptTime       = 00:00:00\nPrEpParameters          = (null)\nPrEpPlugins             = prep/script\nPriorityParameters      = (null)\nPrioritySiteFactorParameters = (null)\nPrioritySiteFactorPlugin = (null)\nPriorityDecayHalfLife   = 7-00:00:00\nPriorityCalcPeriod      = 00:05:00\nPriorityFavorSmall      = No\nPriorityFlags           = \nPriorityMaxAge          = 7-00:00:00\nPriorityUsageResetPeriod = NONE\nPriorityType            = priority/multifactor\nPriorityWeightAge       = 0\nPriorityWeightAssoc     = 0\nPriorityWeightFairShare = 0\nPriorityWeightJobSize   = 0\nPriorityWeightPartition = 0\nPriorityWeightQOS       = 0\nPriorityWeightTRES      = (null)\nPrivateData             = none\nProctrackType           = proctrack/linuxproc\nPrologEpilogTimeout     = 65534\nPrologFlags             = (null)\nPropagatePrioProcess    = 0\nPropagateResourceLimits = ALL\nPropagateResourceLimitsExcept = (null)\nRebootProgram           = (null)\nReconfigFlags           = (null)\nRequeueExit             = (null)\nRequeueExitHold         = (null)\nResumeFailProgram       = (null)\nResumeProgram           = (null)\nResumeRate              = 300 nodes/min\nResumeTimeout           = 60 sec\nResvEpilog              = (null)\nResvOverRun             = 0 min\nResvProlog              = (null)\nReturnToService         = 2\nSchedulerParameters     = (null)\nSchedulerTimeSlice      = 30 sec\nSchedulerType           = sched/backfill\nScronParameters         = (null)\nSelectType              = select/cons_tres\nSelectTypeParameters    = CR_CORE_MEMORY\nSlurmUser               = slurm(967)\nSlurmctldAddr           = (null)\nSlurmctldDebug          = info\nSlurmctldHost[0]        = bizon(10.10.10.1)\nSlurmctldLogFile        = (null)\nSlurmctldPort           = 6817\nSlurmctldSyslogDebug    = (null)\nSlurmctldPrimaryOffProg = (null)\nSlurmctldPrimaryOnProg  = (null)\nSlurmctldTimeout        = 120 sec\nSlurmctldParameters     = (null)\nSlurmdDebug             = info\nSlurmdLogFile           = (null)\nSlurmdParameters        = (null)\nSlurmdPidFile           = /var/run/slurmd.pid\nSlurmdPort              = 6818\nSlurmdSpoolDir          = /var/spool/slurm/slurmd\nSlurmdSyslogDebug       = (null)\nSlurmdTimeout           = 600 sec\nSlurmdUser              = root(0)\nSlurmSchedLogFile       = (null)\nSlurmSchedLogLevel      = 0\nSlurmctldPidFile        = /var/run/slurmctld.pid\nSLURM_CONF              = /etc/slurm/slurm.conf\nSLURM_VERSION           = 24.05.2\nSrunEpilog              = (null)\nSrunPortRange           = 0-0\nSrunProlog              = (null)\nStateSaveLocation       = /var/spool/slurm\nSuspendExcNodes         = (null)\nSuspendExcParts         = (null)\nSuspendExcStates        = (null)\nSuspendProgram          = (null)\nSuspendRate             = 60 nodes/min\nSuspendTime             = INFINITE\nSuspendTimeout          = 30 sec\nSwitchParameters        = (null)\nSwitchType              = (null)\nTaskEpilog              = (null)\nTaskPlugin              = task/cgroup,task/affinity\nTaskPluginParam         = (null type)\nTaskProlog              = (null)\nTCPTimeout              = 2 sec\nTLSParameters           = (null)\nTLSType                 = tls/none\nTmpFS                   = /tmp\nTopologyParam           = (null)\nTopologyPlugin          = topology/default\nTrackWCKey              = No\nTreeWidth               = 16\nUsePam                  = No\nUnkillableStepProgram   = (null)\nUnkillableStepTimeout   = 60 sec\nVSizeFactor             = 0 percent\nWaitTime                = 0 sec\nX11Parameters           = (null)\n\nCgroup Support Configuration:\nAllowedRAMSpace         = 100.0%\nAllowedSwapSpace        = 0.0%\nCgroupMountpoint        = /sys/fs/cgroup\nCgroupPlugin            = cgroup/v2\nConstrainCores          = yes\nConstrainDevices        = yes\nConstrainRAMSpace       = yes\nConstrainSwapSpace      = no\nEnableControllers       = no\nIgnoreSystemd           = no\nIgnoreSystemdOnFailure  = no\nMaxRAMPercent           = 100.0%\nMaxSwapPercent          = 100.0%\nMemorySwappiness        = (null)\nMinRAMSpace             = 30MB\nSystemdTimeout          = 1000 ms\n\nSlurmctld(primary) at bizon is UP\n"
+    }
+  ],
+  "complete_job_resource_accounting_verified": false,
+  "jobacct_gather_type": "(null)",
+  "limitations": [
+    "Current controller configuration is not proof of historical job-time configuration.",
+    "Nonempty fields and an enabled collector do not establish accounting correctness or full-job scope.",
+    "Step RSS maxima must not be summed or substituted for a simultaneous whole-job cgroup peak.",
+    "Terminal state and elapsed time do not turn unavailable usage into measured zero."
+  ],
+  "missing_memory_rows": 9,
+  "publication_ready": false,
+  "rows": [
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "145",
+      "End": "2026-09-28T15:51:25",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22367",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:49:00",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "145",
+      "End": "2026-09-28T15:51:25",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22367.batch",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:49:00",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "64",
+      "ElapsedRaw": "12",
+      "End": "2026-09-28T15:50:20",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22367.0",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:50:08",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "146",
+      "End": "2026-09-28T15:53:51",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22368",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:51:25",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "146",
+      "End": "2026-09-28T15:53:51",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22368.batch",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:51:25",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "64",
+      "ElapsedRaw": "12",
+      "End": "2026-09-28T15:52:44",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22368.0",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:52:32",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "146",
+      "End": "2026-09-28T15:56:17",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22369",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:53:51",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "192",
+      "ElapsedRaw": "146",
+      "End": "2026-09-28T15:56:17",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22369.batch",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:53:51",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    },
+    {
+      "AllocCPUS": "64",
+      "ElapsedRaw": "12",
+      "End": "2026-09-28T15:55:10",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22369.0",
+      "MaxRSS": "",
+      "MaxVMSize": "",
+      "Start": "2026-09-28T15:54:58",
+      "State": "COMPLETED",
+      "TotalCPU": "00:00:00",
+      "cpu_usage_available": false,
+      "memory_usage_available": false
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 3870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_terminal_accounting.py",
+    "sha256": "42a122366ad80d52e097aceb58557e7a7272a2fbb5295a26ba2f422bdf3b720b"
+  },
+  "status": "terminal_accounting_observation",
+  "unavailable_cpu_rows": 9
+}

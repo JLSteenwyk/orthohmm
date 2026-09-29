@@ -75,6 +75,13 @@ diagnostic threshold has not been converted into an eligibility threshold.
 
 ## Validation And Remaining Work
 
+The later [terminal-accounting observation](THREADRIPPER_TERMINAL_ACCOUNTING_20260928.md)
+confirms that the fixture jobs' Slurm records cannot supply missing final
+whole-job usage: all nine allocation/step rows have blank peak memory and
+zero CPU fields, with no current JobAcctGatherType configured. Preserve those
+as unavailable, not zero resource consumption. In-job peak reads still end
+at their recorded observation; external final accounting remains unvalidated.
+
 141 focused tests pass across the executor, history binder, panel state
 machine, controller guard and local measurement wrapper. Tests include source
 drift, wrong jobs/indices, incomplete readiness, stale/wrong-boot reviews,

@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Verify Terminal Timing Accounting Availability (2026-09-28)
+
+Previous turn progressed TreeFam source search (`fcc42772`). Reread the goal
+and inspected the remaining final resource-accounting gap. Fresh sacct records
+for terminal fixture jobs 22367-22369 contain nine rows, all COMPLETED 0:0,
+but blank MaxRSS and zero TotalCPU. Current controller has no JobAcctGatherType.
+Added a read-only inspector and nine passing tests; retained commands and raw
+records. [Decision and next requirement](THREADRIPPER_TERMINAL_ACCOUNTING_20260928.md).
+
+These records cannot close the gap between the existing reporting-time job
+peak and final teardown. External final counters or validated collection still
+need implementation/validation; never replace them with missing-data zeros.
+No service change, job submission, production admission or DGX access. Goal
+remains active with controlled timing, uncertainty and release work unfinished.
+
 ## Search Public QfO Forks For TreeFam Originals (2026-09-28)
 
 Previous turn progressed manuscript claims (`67d4f6e1`). Reread the goal and
