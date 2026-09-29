@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Prepare Scientific Admission For Reconstructed Full OrthoBench (2026-09-29)
+
+Previous goal turn progressed job-bound execution verification (`3682fbb7`).
+Reread goal and verified live scheduler state; job 22376 was still RUNNING
+at 11:42 in the latest poll. No resubmission or timing-panel launch.
+
+Added `benchmark_tools.admit_reconstructed_full_ob` on top of that execution
+gate. It verifies inference/reader wheel inventories and installed payloads,
+replays all four scientific readers in the installed reader environment,
+recomputes both complete 70-family score objects, and compares the full root
+partition label-independently against admitted job 22337, not job 22326.
+Pair, pair-confidence, reconciliation-node and hierarchy files are compared
+byte-for-byte, bound to retained independent-reader checksums on both sides.
+Differences are retained in the result, not interpreted automatically as a
+scientific failure or a reason to retry. Successful execution admission does
+not itself mean reproduction equality. Historical artifacts remain unchanged.
+
+Validation: 46 focused tests pass, covering live-job refusal, altered bindings,
+missing/changed native outputs, retained current-output differences, all-four-
+reader coverage, conflicting pins, and plan-derived old asset/new run paths.
+The real admitted baseline checksum and reader chain were inspected; its four
+native files pass self-comparison. This is checker validation, not validation
+of the still-running new experiment. Full successful end-to-end execution of
+the new admission awaits terminal outputs.
+
+After terminal success, from the repository use:
+
+```sh
+python -m benchmark_tools.admit_reconstructed_full_ob \
+  --directory benchmarks/work/publication_reconstructed_full_ob_20260929 \
+  --output benchmarks/work/publication_reconstructed_full_ob_20260929/independent_admission
+```
+
+Inspect existing output first; the command refuses overwrite. Preserve failed
+admission evidence and diagnose it rather than deleting it or restarting the
+native run. Review comparison outcomes before writing manuscript claims.
+Publication, timing, scientific-uncertainty and release-rights gates remain
+open. Goal active.
+
 ## Prepare Separate Execution Verification For Job 22376 (2026-09-29)
 
 Previous user-facing turn only confirmed the goal wording (no new analysis).
