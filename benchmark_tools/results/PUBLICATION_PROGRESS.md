@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Verify Patched Native Prediction Parity (2026-09-28)
+
+Previous turn progressed the patched installation (`d874c697`). Reread goal and
+ledger. Ran both OrthoHMM timing configurations with the patched interpreter
+on the retained four-species/16-gene fixture. Both reproduce three groups;
+phylogenetics reproduces 36 pairs. All four compared prediction files match
+retained historical bytes. Forty frozen core files rechecked around execution.
+[Commands, parity and limitations](THREADRIPPER_PATCHED_PREDICTIONS_20260928.md).
+
+Retained two preparation failures and their executed drivers: a rejected
+non-tmpfs input path before launch, then missing output directory causing CLI
+zero exit without inference/metrics. Corrected preparation led to one complete
+inference per configuration, with no result-selected repeat. Nineteen focused
+tests pass. No production timing, OrthoFinder rerun or DGX access. Next:
+new deployment binding and collector v5 native integration, then remaining
+timing admission requirements. Publication goal remains active.
+
 ## Install Separate Patched Timing Candidate (2026-09-28)
 
 Previous turn progressed the advisory audit (`b25fcdd3`). Reread the goal and

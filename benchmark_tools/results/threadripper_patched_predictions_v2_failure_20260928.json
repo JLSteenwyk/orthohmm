@@ -1,0 +1,33 @@
+{
+  "candidate": {
+    "bytes": 18134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_patched_runtime_20260928.json",
+    "sha256": "1c86acf94e94b3da2725ac448c57ffe27759dfa38b530911f99bbf63c40354fe"
+  },
+  "error": "[Errno 2] No such file or directory: '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_predictions_v2_20260928/run_00/orthohmm_high_sensitivity.json'",
+  "error_type": "FileNotFoundError",
+  "genome_scale_equivalence": false,
+  "interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "plan": {
+    "bytes": 203151,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_scaling_commands_20260928.json",
+    "sha256": "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
+  },
+  "resolved": {
+    "FastTree": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+    "diamond": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64/diamond",
+    "mafft": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft"
+  },
+  "runs": [],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 5829,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_patched_timing_predictions.py",
+    "sha256": "cf38d26509edf86f3ef0d221b146acea7f49489e2f2b4414562036281c46ea8a"
+  },
+  "status": "failed"
+}
