@@ -208,11 +208,12 @@ RUNNING observation does not establish current liveness or completion.
   Version 2 adds pinned five-comparator OrthoBench readback/upstream evidence
   without changing the score TSV or claiming historical native provenance.
 
-- [Refreshed manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260927_v24.md)
+- [Refreshed extended manuscript review](results/MANUSCRIPT_RENDER_REVIEW_20260928_v27.md)
   provides dated HTML/PDF and a checked local-asset inventory. It remains
   a working preview, not a standalone archive or completed journal layout.
-  Version 24 includes completed QfO downstream reproduction and score admission;
-  version 23 predates those completions. Earlier snapshots remain retained.
+  Version 27 adds the complete descriptive OrthoBench figure and refreshes
+  the intervening source text; selected new pages were visually inspected,
+  not the complete document. Earlier snapshots remain retained.
   None adds native VGNC confidence intervals or controlled timing.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.

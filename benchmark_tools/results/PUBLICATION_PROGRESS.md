@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Refresh Extended Manuscript Preview v27 (2026-09-28)
+
+Previous turn made progress integrating the descriptive OrthoBench figure
+and verifying its relocated evidence bundle (`953b6d58`). Reread the goal;
+rendered current extended manuscript HTML and a 47-page PDF. HTML inventories
+273 local references and 259 tracked targets, with no missing/untracked
+targets or Pandoc stderr. Chrome exited zero. Rechecked 265 HTML/source/asset
+records after printing; every PDF page passes text/image bounds checks.
+Visually inspected pages 19-20 containing the insertion. No clipping or
+overlap seen; the dense heatmap needs its standalone figure for cell-level
+reading. Added a reusable layout checker and tests: sixteen focused tests
+pass. [Review and limitations](MANUSCRIPT_RENDER_REVIEW_20260928_v27.md).
+
+This is a selected-page review, not full-document visual certification or
+journal layout. The concise main-text preview remains unchanged. No timing,
+native inference or new accuracy calculation was launched. Remaining timing,
+uncertainty and release requirements keep the publication goal active.
+
 ## Verify Relocated OrthoBench Figure Bundle (2026-09-28)
 
 Built the direct-evidence bundle from pushed commit `72af07f8`, copied it
