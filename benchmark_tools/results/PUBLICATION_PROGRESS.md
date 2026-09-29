@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Submit Restored Archive Full OrthoBench Execution (2026-09-29)
+
+The preceding user-facing turn confirmed the already-updated host prompt but
+made no new scientific progress. Reread goal and ledger, verified remote main
+contains the archive milestone, and checked the empty scheduler queue. Prepared
+the distinct archive-to-results reproduction test rather than repeating an old
+attempt. [Prospective protocol](RESTORED_ARCHIVE_EXECUTION_PROTOCOL_20260929.md)
+was committed before submission. All 6,515 dependency records verify and all
+19 integrated controller/launcher tests pass. The first preparation check
+incorrectly tried rebinding an archive-excluded historical receipt; it failed
+before creating a plan or run. The corrected mapping retains historical evidence
+pins and relocates only the five archived roots plus newly acquired data.
+
+[Job 22377 submission](restored_archive_ob_submission_20260929.json) requests
+32 CPUs and 128 GiB on bizon for one fresh full-data attempt. Scientific settings
+and base-runtime payloads are unchanged; asset/input/output locations differ.
+No timing-panel run, DGX operation, service change or interference with unrelated
+jobs occurred. Installation, native inference and independent admission remain
+pending. Poll this specific job and retained execution files; do not resubmit.
+Goal remains active, including controlled timing and other publication limits.
+
 ## Restore Integrated Execution Assets From A Local Archive (2026-09-29)
 
 Previous turn completed fresh public input acquisition/rebinding (`a592a29b`).

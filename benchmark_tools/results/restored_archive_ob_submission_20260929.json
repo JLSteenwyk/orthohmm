@@ -1,0 +1,24 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/slurm-%j.log",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/restored_archive_ob_20260929.sh"
+  ],
+  "controlled_timing": false,
+  "job_id": "22377",
+  "plan": {
+    "bytes": 1461299,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/plan.json",
+    "sha256": "e80067f7a5947bc357831e0d65c7d766d09899f004cfc6a31d1274a8dfe15448"
+  },
+  "script": {
+    "bytes": 577,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/restored_archive_ob_20260929.sh",
+    "sha256": "2864dcc644174efd609b199e9a3051eb1c6beaac447ebe98664ea89a7c433ca9"
+  },
+  "status": "submitted_pending_execution_and_admission",
+  "stderr": "",
+  "stdout": "22377\n"
+}
