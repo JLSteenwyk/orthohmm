@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Prepare Separate Execution Verification For Job 22376 (2026-09-29)
+
+Previous user-facing turn only confirmed the goal wording (no new analysis).
+Revalidated the actual scheduler: 22376 remains RUNNING, at 7:25 in the last
+poll, with native all-to-all HMM search underway. No restart or new submission.
+
+Added `benchmark_tools.verify_reconstructed_full_ob_execution`, separately
+bound to this job and its frozen plan. It checks terminal scheduler success
+including reported steps, resources, submission/execution bindings, eight
+stages, frozen controller, private input copies and before/after plan pins.
+Original job 22337 admission code and running-job assets are unchanged.
+The new checker resolves original input paths from the plan rather than
+assuming they live in the fresh run directory. Its result explicitly remains
+pending scientific admission and cannot qualify controlled timing.
+
+Validation: 32 focused new/existing unit tests passed. A read-only invocation
+against real job 22376 rejected its RUNNING state as expected, without creating
+an admission artifact. Successful full execution-path validation must await
+terminal output; unit checks are not scientific admission. Next implement the
+remaining separate package inventory/payload audit, four-reader replay,
+70-family rescore, label-invariant root comparison and native pair/event/
+hierarchy comparison against admitted job 22337. Preserve differences and any
+failure. Goal active; no production timing panel launched.
+
 ## Submit Reconstructed-Base Full OrthoBench Job 22376 (2026-09-29)
 
 Protocol commit `83f0ebea` was pushed before submission. Slurm accepted one
