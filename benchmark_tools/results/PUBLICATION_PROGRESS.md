@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Make Independent VGNC Sensitivity Check Executable (2026-09-29)
+
+Previous turn progressed manuscript reconciliation (`d5e55309`). Reread goal.
+Promoted the one-off independent VGNC arithmetic check into a standard-library
+CLI, without importing primary incident-counting/scoring helpers. Twenty
+focused tests pass. Actual system-Python replay verifies all 134,752 rows,
+full ratios/counts and seven paired contrasts, including saved per-row F1
+changes; maximum error 1.12e-16. Source/input hashes rechecked around replay.
+[Command and bounded scope](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md#executable-independent-check).
+
+No changed scores, new uncertainty claims, native reruns, timing admission or
+host changes. This closes an executable-verification gap, not statistical
+validity or complete archive restoration. Goal remains active.
+
 ## Reconcile Manuscript With Completed Sensitivity And Figure Work (2026-09-29 UTC)
 
 Previous turn progressed relocated figure reproduction (`e337b4fb`). Reread

@@ -51,3 +51,25 @@ python -B -m benchmark_tools.diagnose_corrected_vgnc_influence \
 
 Use a fresh output directory and the retained local inputs. No native inference
 or scoring run was repeated. Controlled timing and publication gates stay open.
+
+## Executable Independent Check
+
+The initial independent calculation is now available as a standard-library
+command, separate from the primary incident-counting and scoring helpers:
+
+```sh
+python3 -B -m benchmark_tools.check_corrected_vgnc_influence \
+  --mapping benchmark_tools/results/corrected_vgnc_blocks_20260926.json \
+  --report benchmark_tools/results/corrected_vgnc_influence_20260928.json \
+  --output /tmp/corrected-vgnc-rational-check-new.json
+```
+
+The [system-Python replay](corrected_vgnc_executable_replay_20260929.json)
+checks all 134,752 deletion rows, full method counts/ratios, all seven paired
+ranges/sign counts and the values at reported extremal blocks. It additionally
+checks each saved F1 change against exact rational subtraction; the expanded
+check has maximum error 1.12e-16 in 0-to-1 units. Twenty focused checker/runner
+tests pass, including nonfinite values and malformed counts/cells. It does not
+validate the top-ten influence ordering, stochastic assumptions, raw prediction
+generation or independent cross-host restoration. Local sparse tables remain
+required. Original results and the first independent receipt are unchanged.
