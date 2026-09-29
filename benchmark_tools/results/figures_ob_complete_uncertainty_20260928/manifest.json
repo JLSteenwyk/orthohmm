@@ -1,0 +1,48 @@
+{
+  "endpoints": 21,
+  "inputs": [
+    {
+      "bytes": 53139,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_uncertainty_20260928.json",
+      "sha256": "f472916ccafa2392b7ca27f39448195b7c3e6b9464772e0ca6775092908f6b75"
+    },
+    {
+      "bytes": 6556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_ob_complete_uncertainty.py",
+      "sha256": "21380e5f98547b3ddabde8505a1135bb2e10fc77c618dcef50125deb7e16c745"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    }
+  ],
+  "matplotlib_version": "3.10.8",
+  "new_statistics": false,
+  "outputs": [
+    {
+      "bytes": 3204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_complete_uncertainty_20260928/endpoints.tsv",
+      "sha256": "a5c67f2d74e61c3030e4fe2731c9e5422d7505687c578463e2baa63254399c72"
+    },
+    {
+      "bytes": 25300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf",
+      "sha256": "58d7fce23f2773fd43f25ae233b541d98668ee8ea68c24056f6381b1c140b778"
+    },
+    {
+      "bytes": 141919,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.png",
+      "sha256": "f7a4cc956fcc8308e016d7a3eade574b54bdd82875b43c3170194a82ef7892ea"
+    },
+    {
+      "bytes": 100064,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.svg",
+      "sha256": "114a155001dd8c40e91716c943273c99bd11322c34f4b17918bf21abc37a3a4d"
+    }
+  ],
+  "publication_ready": false,
+  "status": "complete_ob_uncertainty_plotted",
+  "units": "percentage_points",
+  "visual_review_complete": false
+}

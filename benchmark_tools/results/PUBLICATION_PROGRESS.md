@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Plot All 21 OrthoBench Contrasts (2026-09-28)
+
+Previous turn progressed retained stream rejection checks (`99060afe`). Reread
+goal and current evidence. Existing complete OrthoBench strata figure lacks
+paired intervals; added a separate three-panel forest plot of all seven
+methods versus full OrthoFinder across F1, precision and recall. No inference,
+resampling or endpoint changes. Ten plotter tests pass; all 105 exported
+numbers exactly match the retained result, PDF bounds pass, PNG and PDF raster
+visually inspected. [Figure and reproduction](OB_COMPLETE_UNCERTAINTY_FIGURE_20260928.md).
+
+The figure retains the precision-recall trade-off and absence of established
+OrthoHMM F1 superiority. No timing admission or service changes. Goal active;
+remaining scientific, timing and release requirements are unchanged.
+
 ## Validate Existing Process Stream Checker On Private Fixtures (2026-09-28)
 
 Previous turn progressed checked manuscript printing (`c151ecd0`). Reread goal

@@ -11,6 +11,10 @@ Bonferroni percentile intervals cover 21 planned endpoints, with approximately
 and [full result](ob_complete_uncertainty_20260928.json) retain every estimate,
 nominal/adjusted interval and descriptive per-family F1 win/tie/loss count.
 
+The [complete three-panel figure](figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf)
+shows all 21 differences in a fixed method order, with nominal and adjusted
+intervals. [Figure validation and reproduction](OB_COMPLETE_UNCERTAINTY_FIGURE_20260928.md).
+
 | Method | F1 difference vs full OF (pp) | Adjusted interval |
 |---|---:|---|
 | OrthoHMM high sensitivity | -2.377 | [-11.045, 6.746] |
