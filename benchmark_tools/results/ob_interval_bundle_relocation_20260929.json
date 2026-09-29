@@ -1,0 +1,48 @@
+{
+  "bundle_manifest": {
+    "bytes": 6532,
+    "path": "/tmp/orthohmm-ob-interval-relocation-20260929/bundle/bundle.json",
+    "sha256": "e50e8704e9c868b12539df818ef1e47c89578ef65d4bde6be5c91fa94ed2dadf"
+  },
+  "exact_byte_parity": {
+    "endpoints.tsv": true,
+    "ob_complete_uncertainty.png": true
+  },
+  "limitations": [
+    "Same-host relocated plotting using existing Python dependencies, not cross-host native inference or hermetic dependency restoration.",
+    "PDF/SVG metadata may vary; byte equality checked for PNG and endpoints only.",
+    "Direct figure inputs only; transitive raw-data reproduction and data rights are not established."
+  ],
+  "publication_ready": false,
+  "regenerated_manifest": {
+    "bytes": 1860,
+    "path": "/tmp/orthohmm-ob-interval-relocation-20260929/regenerated/manifest.json",
+    "sha256": "769c4d1580d4d8f69d873756662497634bc87133ebb69bbc66251e0b9ccaaa10"
+  },
+  "render": {
+    "command": [
+      "/home/bizon/anaconda3/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "import sys,json; from pathlib import Path; sys.path.insert(0,sys.argv[1]); import benchmark_tools.plot_ob_complete_uncertainty as plot; import benchmark_tools.prepare_ob_candidate_neighborhood as helper; import matplotlib; root=Path(sys.argv[1]); assert Path(plot.__file__).is_relative_to(root) and Path(helper.__file__).is_relative_to(root); result=plot.run(root / \"benchmark_tools/results/ob_complete_uncertainty_20260928.json\", \"f472916ccafa2392b7ca27f39448195b7c3e6b9464772e0ca6775092908f6b75\", Path(sys.argv[2])); print(json.dumps(dict(python=sys.version,matplotlib=matplotlib.__version__,plot_source=plot.__file__,helper_source=helper.__file__,endpoints=result[\"endpoints\"])))",
+      "/tmp/orthohmm-ob-interval-relocation-20260929/bundle",
+      "/tmp/orthohmm-ob-interval-relocation-20260929/regenerated"
+    ],
+    "stderr": "",
+    "stdout": "{\"python\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"matplotlib\": \"3.10.8\", \"plot_source\": \"/tmp/orthohmm-ob-interval-relocation-20260929/bundle/benchmark_tools/plot_ob_complete_uncertainty.py\", \"helper_source\": \"/tmp/orthohmm-ob-interval-relocation-20260929/bundle/benchmark_tools/prepare_ob_candidate_neighborhood.py\", \"endpoints\": 21}\n"
+  },
+  "status": "relocated_figure_regenerated",
+  "verify": {
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "-B",
+      "/tmp/orthohmm-ob-interval-relocation-20260929/bundle/benchmark_tools/bundle_publication_figures.py",
+      "verify",
+      "/tmp/orthohmm-ob-interval-relocation-20260929/bundle"
+    ],
+    "stderr": "",
+    "stdout": "{\n  \"bundle_manifest\": {\n    \"bytes\": 6532,\n    \"sha256\": \"e50e8704e9c868b12539df818ef1e47c89578ef65d4bde6be5c91fa94ed2dadf\"\n  },\n  \"bytes\": 357535,\n  \"files\": 11,\n  \"outputs\": 4,\n  \"panels\": 1,\n  \"publication_ready\": false,\n  \"status\": \"relocated_direct_figure_evidence_verified\"\n}\n"
+  }
+}

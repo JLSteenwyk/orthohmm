@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Regenerate OrthoBench Interval Figure From Relocated Bundle (2026-09-29 UTC)
+
+Previous turn progressed version-specific accounting evidence (`33ec95be`).
+Reread goal and ledger. Added explicit complete-interval audit scope; 40 focused
+tests pass. Committed/pushed audit as `18b9f991`, exported its 11-file direct
+evidence bundle, verified a relocated copy with isolated system Python, then
+actually plotted from copied sources/data under isolated scientific Python.
+PNG and all 21 endpoint rows match retained bytes exactly. Versioned local
+archive contains 12 regular members, all independently reopened and matched.
+[Reproduction and limits](OB_INTERVAL_BUNDLE_20260929.md).
+
+This advances figure packaging, not cross-host inference, scientific validity
+or full release readiness. No timing jobs or host changes. Goal active;
+accounting/quiet-window coordination and remaining publication requirements
+remain open.
+
 ## Recheck Timing Feasibility And Installed Accounting (2026-09-29 UTC)
 
 Previous turn progressed corrected VGNC sensitivity (`89328f26`). Reread goal
