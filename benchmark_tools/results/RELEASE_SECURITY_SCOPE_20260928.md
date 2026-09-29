@@ -1,5 +1,11 @@
 # Release Security Scope
 
+The later [private timing review](PRIVATE_TIMING_SECURITY_REVIEW_20260928.md)
+supersedes the repository-wide alert count below: its snapshot has 26 open
+alerts. The new private candidate matches 14 unique advisory ranges, including
+13 Pillow advisories absent from the older snapshot. Earlier environment
+comparisons below remain historical, bounded checks, not current clearance.
+
 The subsequent [release-specific PyPI check](RELEASE_PYPI_ADVISORIES_20260928.md)
 queries every pin in the candidate recovery and reader locks: 11 distinct
 public releases return no known advisories and matching artifact hashes;

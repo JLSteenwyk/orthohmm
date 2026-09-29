@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Audit Private Timing Candidate Security (2026-09-28)
+
+Previous turn progressed the saved goal's Threadripper-only resume instructions.
+Reread the goal and current ledger; HEAD remains the packaging alignment milestone.
+Audited the retained 26-alert snapshot against the live private candidate:
+all 30 selected versions match, but Pillow 12.2.0 and setuptools 81.0.0 match
+14 unique advisories (15 manifest-alert occurrences). The 14 newly added alert
+numbers comprise 13 Pillow advisories and one duplicate setuptools occurrence.
+[Evidence and prospective deployment revision](PRIVATE_TIMING_SECURITY_REVIEW_20260928.md).
+
+Added a reproducible audit using the existing advisory evaluator; 13 focused
+tests pass. Preserved historical locks and all installed environments. Next:
+stage a separate patched candidate, verify native outputs and integrate the
+timing collector, without silently upgrading the frozen runtime. Slurm queue
+empty at inspection is not quiet-host evidence. No production timing launched,
+no DGX access. Timing, uncertainty and release requirements keep the goal active.
+
 ## Align Private Packaging To Historical Source Bytes (2026-09-28)
 
 Previous turn progressed private installation (`0bbe11cc`). Reread the goal;
