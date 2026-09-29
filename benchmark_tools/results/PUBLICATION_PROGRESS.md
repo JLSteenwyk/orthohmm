@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Verify Saved FAS Strata Against The Precomputed Lookup (2026-09-28)
+
+Previous turn made progress by pushing the complete annotation-path panel as
+`30a0338a`. Reread the full objective. The new
+[saved-score exposure audit](FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md)
+intersects all eight samples with native complexity flags, then streams all
+59,962,787 frozen precomputed entries. It verifies 3,023,018 unique saved
+precomputed pairs and values and 70,528 unique new pairs absent from the valid
+lookup. Native last-valid canonical overwrite semantics are reproduced;
+2,762,101 relevant opposite-order overwrites are retained, not mistaken for
+ambiguous data. An initial strict duplicate guard was corrected after source
+inspection, with explicit tests. All 46 focused tests pass; the full audit
+completed successfully with input hashes rechecked.
+
+Every method has zero flagged endpoints in saved new-score pairs, while all
+have flagged endpoints in precomputed pairs (4,122 pairs for OrthoMCL).
+This is consistent with the native cutoff, not attribution of the historical
+omissions or a bias estimate. Scores, defaults and reference inputs remain
+unchanged. A generated all-method table and machine-readable evidence are
+retained; no raw dataset was committed.
+
+A [fresh Threadripper snapshot](threadripper_recheck_after_fas_exposure_20260928.json)
+observed 103.44 CPU-core equivalents, one sampling error and one unmatched
+process, despite an empty Slurm queue. This includes the single-process FAS
+lookup diagnostic; substantial unrelated workloads remain. No timing run,
+job/service intervention or DGX access occurred. Controlled timing, remaining
+uncertainty and release work remain open; the publication goal stays active.
+
 ## Count Native FAS Paths Across All Retained Annotations (2026-09-28)
 
 Previous turn made progress by pushing the native omission probe as `f287a0ac`.

@@ -1,0 +1,53 @@
+{
+  "limitations": [
+    "No active benchmark allocation; excludes only this capture process.",
+    "Includes the active one-process FAS lookup diagnostic along with unrelated work.",
+    "Persistent CPU observations are not a complete workload or whole-run isolation audit.",
+    "No process or service was stopped or modified."
+  ],
+  "observed_foreign_average_cores": 103.44317378587844,
+  "production_started": false,
+  "sampling_error_count": 1,
+  "slurm_queue": "",
+  "source": {
+    "bytes": 1029741,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_recheck_after_fas_exposure_20260928.json",
+    "sha256": "8361432fd0b38f7d3acc3fa6304dd65db1cadf7875e77b9544f052362533397b"
+  },
+  "status": "competing_cpu_observed",
+  "top_cgroups": [
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-baliphy-independent-chains-20260927.service",
+      16.005062107305026
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-selected-matched-intervals-20260928.service",
+      15.98424895453124
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+      15.848536157690344
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-full-polynomial-ml-20260927.service",
+      7.994670780460735
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-fastml-optimizer-refinement-20260928-v3.service",
+      7.992813655539218
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+      7.9855854785271845
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-4c4f130f-480e-45d0-9841-1f26dd9dba69.scope",
+      7.606588993287278
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-domain-coordinates-20260928.service",
+      3.9858883793194524
+    ]
+  ],
+  "unmatched_processes": 1
+}
