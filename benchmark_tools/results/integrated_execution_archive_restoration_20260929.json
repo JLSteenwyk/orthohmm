@@ -1,0 +1,778 @@
+{
+  "archive": {
+    "bytes": 131604480,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/integrated_execution_assets_20260929.tar",
+    "sha256": "07f16dedfa68c683feb3246b33485015d424098dbca07d67d6700b578994f441"
+  },
+  "controller": {
+    "bytes": 13821,
+    "path": "/tmp/orthohmm-restored-execution-assets-20260929-v2/workflow.py",
+    "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+  },
+  "controller_assets_and_data_checks_passed": true,
+  "data_manifest": {
+    "bytes": 19486,
+    "path": "/tmp/orthohmm-public-input-toolkit-20260929/rebound/data.json",
+    "sha256": "0d1956b08985316e90ad53418992e7a28a6acb0deddda9fcfe00faefd06da245"
+  },
+  "environment_locks_match": true,
+  "inference_rerun": false,
+  "inventory_source": {
+    "bytes": 24261,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/integrated_execution_archive_inventory_20260929.json",
+    "sha256": "52e54801858ccb94482ebfebcc01655aae243041c8cca011659bbc2fdc988763"
+  },
+  "limitations": [
+    "Local-only archive of selected execution assets, not a cleared public distribution.",
+    "Raw benchmark data, base Python, installer and OS libraries are excluded.",
+    "Restored asset preflight is not a fresh installed native execution or complete archive-to-results validation.",
+    "Historical embedded absolute paths remain provenance; no filesystem access trace was collected.",
+    "Historical FastTree mode 0777 preserved for exact restoration, not recommended deployment permissions."
+  ],
+  "member_inventory": {
+    "assets": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/FastTree": {
+      "bytes": 1496928,
+      "kind": "file",
+      "mode": 511,
+      "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+    },
+    "assets/benchmark_tools": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/benchmark_tools/__pycache__": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/benchmark_tools/__pycache__/candidate_hit_order_policy.cpython-310.pyc": {
+      "bytes": 5508,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "84fd571d0f9ebc9bed5cc001ccd5d914bb3631fa89a58c142c1ae452a70e36f3"
+    },
+    "assets/benchmark_tools/__pycache__/probe_ob_canonical_candidates.cpython-310.pyc": {
+      "bytes": 5967,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "d373452691da8507012a59d42d2399513e5f545222c647cd0fa88986b6769bdb"
+    },
+    "assets/benchmark_tools/candidate_hit_order_policy.py": {
+      "bytes": 4201,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "cc70b884e40fe73a3c25ef9ae60a2133508127323a11382a8c610e0d192ec811"
+    },
+    "assets/benchmark_tools/probe_ob_canonical_candidates.py": {
+      "bytes": 5724,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "c6f55261ce34e17681f793afce5bfeebcbc615c6df585e4bce4f62628e48060e"
+    },
+    "assets/benchmark_tools/results": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/benchmark_tools/results/publication_recovery_requirements_20260926.txt": {
+      "bytes": 1286,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "813751262c9405155cc2f1974a2c32187b352f88307e2332e0cec9df35708ae3"
+    },
+    "assets/benchmark_tools/run_publication_pipeline.py": {
+      "bytes": 6504,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "acab3b802b90ea2c4bc4ebc679f5f64431b1672ad85ca38f7ced212965edec87"
+    },
+    "assets/copied_assets.json": {
+      "bytes": 35929,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "8f8be7f1609d549da79a4ec4231e937a08833a7b8acc415d03e66b16274d5067"
+    },
+    "assets/mafft": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/mafft/bin": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "assets/mafft/bin/einsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/fftns": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/fftnsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/ginsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/linsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft": {
+      "bytes": 109902,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "6595bc4c73f2e22899a11b969eb2ca8fb1ca441a7db67292e96b75af673ae22f"
+    },
+    "assets/mafft/bin/mafft-distance": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "../libexec/mafft/mafft-distance"
+    },
+    "assets/mafft/bin/mafft-einsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-fftns": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-fftnsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-ginsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-homologs.rb": {
+      "bytes": 11660,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "022fe65ab90c5b0228190012a64b00041457fca71b43ba47f3382390c03d5a1d"
+    },
+    "assets/mafft/bin/mafft-linsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-nwns": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-nwnsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-profile": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "../libexec/mafft/mafft-profile"
+    },
+    "assets/mafft/bin/mafft-qinsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/mafft-sparsecore.rb": {
+      "bytes": 7897,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "f4a6365486bd5fd1deca0fe4be943ad55812cb8a85b67fc8676517df7112d204"
+    },
+    "assets/mafft/bin/mafft-xinsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/nwns": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/bin/nwnsi": {
+      "kind": "symlink",
+      "mode": 511,
+      "target": "mafft"
+    },
+    "assets/mafft/libexec": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/mafft/libexec/mafft": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "assets/mafft/libexec/mafft/addsingle": {
+      "bytes": 715016,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "f1dc4d582a6dd5bc0ae2ee4d864bfb3feb1236db19dd174f2ea1997a5745e84f"
+    },
+    "assets/mafft/libexec/mafft/contrafoldwrap": {
+      "bytes": 370952,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "9c5c4b0ac2a9b7a9621d33fcd89738bd79b02df8636daea39ba46b751e1cc02f"
+    },
+    "assets/mafft/libexec/mafft/countlen": {
+      "bytes": 108920,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "38827b4193765e75ee254930b4ba443bcd050200df973891a1771979ad30e41e"
+    },
+    "assets/mafft/libexec/mafft/disttbfast": {
+      "bytes": 731400,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "91ad64cfbd13cefc90f6f2aa47a0f25979a4a35775be4fcefe4b586b66ada52c"
+    },
+    "assets/mafft/libexec/mafft/dndblast": {
+      "bytes": 387336,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "f774cd87f0e5f492c1296761515de43cd63f7fa2b5172578ac7e1fa3a3723a12"
+    },
+    "assets/mafft/libexec/mafft/dndfast7": {
+      "bytes": 383240,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "63786abcec720442f8845d761c70ae8689f7c113f51f65070bd38c5678628071"
+    },
+    "assets/mafft/libexec/mafft/dndpre": {
+      "bytes": 370952,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "4e8a89c1e725fa9d463c94f636993118fb79290af2e5dc5509a2bb962b413121"
+    },
+    "assets/mafft/libexec/mafft/dvtditr": {
+      "bytes": 731400,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "5ea9386614ae82f2915e0f4be3f98ff4c3e3739c10dc938cc5c9b7a8c265cc2f"
+    },
+    "assets/mafft/libexec/mafft/f2cl": {
+      "bytes": 182536,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "1cf39f5063fbd478e34bf470aa4b6db491ec4bf607137c43e9ee5383b1fa51c5"
+    },
+    "assets/mafft/libexec/mafft/filter": {
+      "bytes": 297336,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "56f72b8ff9a3878fa00e283425218b5a76716cc42e07689dd611dab66e82b80b"
+    },
+    "assets/mafft/libexec/mafft/getlag": {
+      "bytes": 649480,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "a788bc8e0eb6a35f0693e98da690533ec57cfc353f2b7f809c30c9fada4f62b8"
+    },
+    "assets/mafft/libexec/mafft/hex2maffttext": {
+      "bytes": 14472,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "069e138d9dad49ac6be2ca98dcc5aad22aed5de54542f217c6c08d10c5f8468f"
+    },
+    "assets/mafft/libexec/mafft/mafft-distance": {
+      "bytes": 383240,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+    },
+    "assets/mafft/libexec/mafft/mafft-profile": {
+      "bytes": 645384,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+    },
+    "assets/mafft/libexec/mafft/mafftash_premafft.pl": {
+      "bytes": 10475,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+    },
+    "assets/mafft/libexec/mafft/maffttext2hex": {
+      "bytes": 14472,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "d50a29efa51a002700d4013229b34cc70b6659aef8a24e1b6b39eab121450067"
+    },
+    "assets/mafft/libexec/mafft/makedirectionlist": {
+      "bytes": 682264,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "b8a9458b09087f668f48fbdba20494d896bc98c33a215fa2590f03b826d5d440"
+    },
+    "assets/mafft/libexec/mafft/mccaskillwrap": {
+      "bytes": 370952,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "a4095c4b9da4d82818dea66e3018953e24e8862844dc9640a83efff3dd72e1f2"
+    },
+    "assets/mafft/libexec/mafft/multi2hat3s": {
+      "bytes": 395528,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "d77137be47c0100006fb9b72484189e8b1da3c1ad2a7c7338a8608e784811a28"
+    },
+    "assets/mafft/libexec/mafft/nodepair": {
+      "bytes": 739592,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "987e5d65c7668d98052adcf94262dc8d4c8c8a5fc7d5ff46acf9addde7c0e935"
+    },
+    "assets/mafft/libexec/mafft/pairash": {
+      "bytes": 669960,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "73184ab0a93deca54524f0e600e4f4cddfb085f34bad4c7045563b9ab78cafea"
+    },
+    "assets/mafft/libexec/mafft/pairlocalalign": {
+      "bytes": 706824,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "268ad1d72740d73d2298731f3769c37ed12fc76924ca0974e5de9a28f2ee852d"
+    },
+    "assets/mafft/libexec/mafft/regtable2seq": {
+      "bytes": 297336,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "7e5800124365538d9b0bab80df4a086f169a59850a45fba9a1fa65b146a703f9"
+    },
+    "assets/mafft/libexec/mafft/replaceu": {
+      "bytes": 297336,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "5638e6fd7278e3a80563659eb53f90e986eb5b8ea468c28676cd8074d2631383"
+    },
+    "assets/mafft/libexec/mafft/restoreu": {
+      "bytes": 297336,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "80c587171f2cc6c93cae3018f0ae1fc97c01032d4ecaddbf75d962d2886704e1"
+    },
+    "assets/mafft/libexec/mafft/score": {
+      "bytes": 366856,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "92e392b2e0684e579d9534b11cdaa8b8eb3a2d69fb6b3afa9ad9ed53a8e5db9b"
+    },
+    "assets/mafft/libexec/mafft/seekquencer_premafft.pl": {
+      "bytes": 15541,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+    },
+    "assets/mafft/libexec/mafft/seq2regtable": {
+      "bytes": 108920,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "3f268e55b08c30ed77d7f7ea2584c5f774058b2fe45234ef02c9317728bc52d4"
+    },
+    "assets/mafft/libexec/mafft/setcore": {
+      "bytes": 645384,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "2e749598ca68caa44eb5d5c600fe1da2f5bfe2b91b995401a140c7d8d137a046"
+    },
+    "assets/mafft/libexec/mafft/setdirection": {
+      "bytes": 297344,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "a86ffca59d331c198407f63adfc2815e8584f7d3064d552b8832b723b108dd04"
+    },
+    "assets/mafft/libexec/mafft/sextet5": {
+      "bytes": 383240,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "34dde941f162ad2abc0489997b86120d83c0bc15eb09c5d01004616e9393a819"
+    },
+    "assets/mafft/libexec/mafft/splittbfast": {
+      "bytes": 674056,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "c36661cfab0336ce26b10adbbc21e27ecf32373a2747ca1f3dd2cd7a711d3737"
+    },
+    "assets/mafft/libexec/mafft/tbfast": {
+      "bytes": 784648,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "f5f77a3ba787e06b663f7b63d363131c59ae1f1cea752a0b1af311bbcbb443b5"
+    },
+    "assets/mafft/libexec/mafft/version": {
+      "bytes": 14472,
+      "kind": "file",
+      "mode": 493,
+      "sha256": "d454117bae91fa575f6092cc381753953784c190e1bbb11de40f1241070e4953"
+    },
+    "assets/mafft/share": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/mafft/share/man": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/mafft/share/man/man1": {
+      "kind": "directory",
+      "mode": 493
+    },
+    "assets/mafft/share/man/man1/mafft-homologs.1": {
+      "bytes": 4550,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "af8149827654a2db14de0f4104a58681548af261b48fa1c74870aa08c870a847"
+    },
+    "assets/mafft/share/man/man1/mafft.1": {
+      "bytes": 14771,
+      "kind": "file",
+      "mode": 420,
+      "sha256": "319b30bf9cd7a1cd1e64848950b84196268c8208faf5fc90d0e9d5ffe9fa6875"
+    },
+    "assets/manifest.json": {
+      "bytes": 1297,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "e35fdc6fbbc565e1939ab66048f6c053db11e5d87f49849a28bd8859e8e52426"
+    },
+    "assets/wheels": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "assets/wheels/dendropy-5.1.0-py3-none-any.whl": {
+      "bytes": 505450,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+    },
+    "assets/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl": {
+      "bytes": 5683134,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+    },
+    "assets/wheels/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 2738084,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+    },
+    "assets/wheels/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl": {
+      "bytes": 59890659,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+    },
+    "assets/wheels/numba-0.67.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl": {
+      "bytes": 3821881,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+    },
+    "assets/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 16801050,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    "assets/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl": {
+      "bytes": 144444,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    },
+    "assets/wheels/pip-26.2.1-py3-none-any.whl": {
+      "bytes": 1816632,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+    },
+    "assets/wheels/python_igraph-1.0.0-py3-none-any.whl": {
+      "bytes": 9157,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380"
+    },
+    "assets/wheels/setuptools-83.0.0-py3-none-any.whl": {
+      "bytes": 1008090,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+    },
+    "assets/wheels/texttable-1.7.0-py2.py3-none-any.whl": {
+      "bytes": 10768,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917"
+    },
+    "reader_requirements.txt": {
+      "bytes": 540,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "53df1cabd91c2fb18179951ebc95166ae49ba843f4015e0f417468d2a8265063"
+    },
+    "reader_wheels": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "reader_wheels/biopython-1.87-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": {
+      "bytes": 3216226,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "1e951f4862ffc1dccc28e1c25245059fa653d86028a88f5dfe1b7875875f3a4f"
+    },
+    "reader_wheels/dendropy-5.1.0-py3-none-any.whl": {
+      "bytes": 505450,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+    },
+    "reader_wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": {
+      "bytes": 16801050,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+    },
+    "reader_wheels/pip-26.2.1-py3-none-any.whl": {
+      "bytes": 1816632,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+    },
+    "reader_wheels/setuptools-83.0.0-py3-none-any.whl": {
+      "bytes": 1008090,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+    },
+    "readers": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "readers/benchmark_tools": {
+      "kind": "directory",
+      "mode": 509
+    },
+    "readers/benchmark_tools/audit_accuracy_checkpoint.py": {
+      "bytes": 4044,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    "readers/benchmark_tools/audit_historical_profile_ablation.py": {
+      "bytes": 10140,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    "readers/benchmark_tools/audit_installed_orthobench.py": {
+      "bytes": 9525,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "728d7b9767768cdbd9cd31665fbb44e5e2d2655752e34d5bd0514cf9fc024ee5"
+    },
+    "readers/benchmark_tools/audit_phylogeny_events.py": {
+      "bytes": 8605,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "7190ec019f98100a241b6fa52640147e97e08eaa6c4d124bf659ca2e143ebabe"
+    },
+    "readers/benchmark_tools/audit_phylogeny_hierarchy.py": {
+      "bytes": 5516,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "0569763fcbbd3485a21b87727b2eb3fc11b01a4028421e2af6ccaa724ff998aa"
+    },
+    "readers/benchmark_tools/audit_phylogeny_sequences.py": {
+      "bytes": 7315,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "5345d10e14c16f04e8de2eea1055bbf6351989f8ab3535bbb606599d92aaa6d8"
+    },
+    "readers/benchmark_tools/audit_phylogeny_structure.py": {
+      "bytes": 8196,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "321770cd145a0a766e7d9816beca42f01be3d24482f02d01dbb178e9e98920aa"
+    },
+    "readers/benchmark_tools/audit_publication_pipeline.py": {
+      "bytes": 4082,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "f68766d98d831e52696d70691c00f23f8342d3ddca0730d81444f8e2ca849e38"
+    },
+    "readers/benchmark_tools/benchmark_production.py": {
+      "bytes": 7954,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc"
+    },
+    "readers/benchmark_tools/build_publication_runtime.py": {
+      "bytes": 5270,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "34af7d2933a7bfd5b46b2b3af3fcf9f21bd597f533a6d9a23a332e4415286ade"
+    },
+    "readers/benchmark_tools/candidate_hit_order_policy.py": {
+      "bytes": 4201,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "cc70b884e40fe73a3c25ef9ae60a2133508127323a11382a8c610e0d192ec811"
+    },
+    "readers/benchmark_tools/compare_installed_ob_search.py": {
+      "bytes": 8570,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "baeae4ec82966f2b7c1440ba70bdc0814e44081cebb88d4314bddadb82d02c24"
+    },
+    "readers/benchmark_tools/derive_phylogeny_events.py": {
+      "bytes": 5824,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "ea27a18ec49fd9a5b01d556587bc68d05aad49db5e454d8b18735dbf6ba2f14c"
+    },
+    "readers/benchmark_tools/orthobench_stage_diagnostics.py": {
+      "bytes": 13747,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"
+    },
+    "readers/benchmark_tools/prepare_ob_candidate_neighborhood.py": {
+      "bytes": 7448,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    "readers/benchmark_tools/prepare_orthobench_factorial.py": {
+      "bytes": 10824,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "8363f1f5720424ed2aa79ad073eac3b09d726be0f8c63157293dfb20683f8bdd"
+    },
+    "readers/benchmark_tools/probe_installed_ob_clustering.py": {
+      "bytes": 7602,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "f1f7abc653e57cf8e8b3c1c87aada90ee138da836edcbef8797f6a66358c830e"
+    },
+    "readers/benchmark_tools/probe_installed_ob_graph.py": {
+      "bytes": 8153,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "4f5fce7b57ab1177d5606b0d3f081d85c6b1b27bf32aa0cc41de7852ac05c5fb"
+    },
+    "readers/benchmark_tools/probe_ob_candidate_order_scores.py": {
+      "bytes": 12101,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "e23aa1e8de1ae368624a1efd036924bb42d1d634092922e7eab782cddbc02ff9"
+    },
+    "readers/benchmark_tools/probe_ob_canonical_candidates.py": {
+      "bytes": 5724,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "c6f55261ce34e17681f793afce5bfeebcbc615c6df585e4bce4f62628e48060e"
+    },
+    "readers/benchmark_tools/replay_high_sensitivity.py": {
+      "bytes": 16533,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "1e220981be64cc75ba772968b9d53fbaea9638da4fff9c48071fec48d33bd6eb"
+    },
+    "readers/benchmark_tools/replay_phylogeny.py": {
+      "bytes": 11445,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+    },
+    "readers/benchmark_tools/run_installed_orthobench.py": {
+      "bytes": 8001,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "f855bd27ec0ba7e7106394992d9a5ea008867099af262e3816f63eb6da341792"
+    },
+    "readers/benchmark_tools/run_publication_pipeline.py": {
+      "bytes": 6504,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "acab3b802b90ea2c4bc4ebc679f5f64431b1672ad85ca38f7ced212965edec87"
+    },
+    "readers/benchmark_tools/run_simulation_generation.py": {
+      "bytes": 7039,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "464e5c7b6f0d0430eadeba19ca151e5b1a2b8dc046ba372e99cce48a127158a2"
+    },
+    "readers/benchmark_tools/run_simulation_methods.py": {
+      "bytes": 12030,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    "readers/benchmark_tools/score_orthobench_partition.py": {
+      "bytes": 6229,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "0e24c302a9d12ce8c82a4111ff0321c87303469b3c866c317dc2629ad66f9746"
+    },
+    "readers/benchmark_tools/trace_ob_initial_edges.py": {
+      "bytes": 8728,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "4c5a49d7dde6b274a91edbbc210e42cb61ec2efd8a7dd466693f0ea8612c9b2a"
+    },
+    "readers/benchmark_tools/validate_profile_runtime.py": {
+      "bytes": 4014,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "94f6dc4b3fe18e6a7ac7e9a95d4cdf67f98c6d9c5697cf08683e002c200f42d8"
+    },
+    "readers/benchmark_tools/verify_simulation_histories.py": {
+      "bytes": 4464,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "7a50ac5cb159f4f674b8acd5c40a316b11ac798e7e7fd3a539430ccc223166f1"
+    },
+    "readers/benchmark_tools/verify_ygob_validation.py": {
+      "bytes": 9370,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "a1d4d6e092e37a134a6307aee8527d654f132aab0a35c4bf93204aa0b1e4e7a6"
+    },
+    "readers/manifest.json": {
+      "bytes": 5750,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "c2a77c7a2635b9193f4321f96db65028a4d5158facd8e52bb4285fe68804f334"
+    },
+    "workflow.py": {
+      "bytes": 13821,
+      "kind": "file",
+      "mode": 436,
+      "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+    }
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "regular_files": 98,
+  "restored_root": "/tmp/orthohmm-restored-execution-assets-20260929-v2",
+  "status": "local_integrated_execution_archive_restored_and_preflight_checked",
+  "symlinks": 18
+}

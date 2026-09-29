@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Restore Integrated Execution Assets From A Local Archive (2026-09-29)
+
+Previous turn completed fresh public input acquisition/rebinding (`a592a29b`).
+Reread goal and ledger. Validated job 22337's pins with its controller's checker;
+an initial attempt using a different checker rejected symlink path spelling,
+not changed bytes. Archived only selected execution assets and verified all
+131 tar members before restoration. Raw data and run outputs are excluded.
+
+The first restore failed exact-mode checking because umask changed FastTree
+0777 to 0775. Retained that failure and used explicit permission preservation
+in a separate directory. [Successful restoration](INTEGRATED_ASSET_ARCHIVE_20260929.md)
+checks all 98 files, 18 links and directory modes. Isolated Python loaded the
+restored controller and validated assets/readers, both locks and the freshly
+acquired full-data manifest. No native executable, installation, benchmark or
+timing run was launched. Restored-archive execution remains next; this local
+artifact is not cleared for public redistribution. Goal remains active.
+
 ## Recover And Finish Public OrthoBench Input Preparation (2026-09-29)
 
 The preceding three continuations made no progress because sandbox startup
