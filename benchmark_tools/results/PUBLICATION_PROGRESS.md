@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Complete The Single Refinement/GC Diagnostic (2026-09-28)
+
+The protocol and runner were committed and pushed as `7fa613a6` before the
+single launch. The [result](QFO_CPM_REFINEMENT_GC_RESULT_20260928.md) is exit zero:
+all 12 markers, three forced generation-2 collections and original-reader
+readback completed. The partition matches the retained 984,137-gene,
+390,845-group result byte-for-byte. Independent post-run checks rehashed
+273 record entries covering 259 paths. Both process handles are terminal.
+
+This advances boundary isolation through refinement and writing, but deliberate
+GC/logging instrumentation changes heap history. It is neither a crash
+reproduction nor a demonstrated repair. Failed admission 22155, missing high-CPM
+accuracy and the original multiplicity handling remain unchanged. No automatic
+retry, optimizer run, controlled timing or production GC change occurred.
+The full publication goal remains active.
+
 ## Prepare One Refinement/GC Boundary Diagnostic (2026-09-28)
 
 Previous turn made progress by pushing the derived TreeFam archive inspection
