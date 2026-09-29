@@ -1,5 +1,9 @@
 # Private Controller Integrated With Collector V5
 
+The subsequent [three-path fixture report](THREADRIPPER_PRIVATE_COLLECTOR_PANEL_20260928.md)
+records successful satellite_v2 and full OrthoFinder collector checks. The
+remaining-scope statements below describe the earlier high-sensitivity milestone.
+
 `RuntimeChecker` now uses a binding's hash-verified `controller_python` when
 provided, checking that executable before and after inspection. Historical
 bindings without that field keep the original interpreter behavior. The fixture

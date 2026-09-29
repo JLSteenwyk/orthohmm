@@ -1,0 +1,48 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22374",
+      "--parsable2",
+      "--format=JobID,State,ExitCode,ElapsedRaw"
+    ],
+    "stdout": "JobID|State|ExitCode|ElapsedRaw\n22374|COMPLETED|0:0|119\n22374.batch|COMPLETED|0:0|119\n22374.0|COMPLETED|0:0|24\n"
+  },
+  "audit": {
+    "bytes": 2840497,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/independent_outcome_audit.json",
+    "sha256": "b5a9c5d2723e880ad74553080b9235b38b4608e17520d4833da5ecbe63348868"
+  },
+  "identity": {
+    "input_species_mapping": "55b7cebfbb0daa634bf4dc0a5f55a8d8c5905345bb16a2deb2ba1ac75d0c7d30",
+    "native_pairs": {
+      "pairs": 36,
+      "sha256": "0a25ec80c0a24f65f4edea3a4418db4aa0fbda40ac4fe31cc82c825cbc48dbb4"
+    },
+    "orthogroups": {
+      "genes": 16,
+      "groups": 3,
+      "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+    },
+    "root_hogs": {
+      "genes": 16,
+      "groups": 3,
+      "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+    }
+  },
+  "job_id": 22374,
+  "native_completion": "anchor_only_at_boundaries",
+  "parity": {
+    "bytes": 5245,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/prior_output_parity.json",
+    "sha256": "a23d54058c7483c2e314e619c2a8aabe39dfa6aaf981cf546769e378a485f205"
+  },
+  "result": {
+    "bytes": 181303,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/result.json",
+    "sha256": "54ecf47933fac5ce1901171bdb535accf52b04c9aa533381cf64d63df67fa199"
+  },
+  "scientific_timings_admitted": false,
+  "status": "native_success_outputs_verified"
+}

@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Complete Three-Path Private Collector Fixture Panel (2026-09-28)
+
+Previous turn progressed collector integration (`1303663a`). Reread goal and
+ledger, confirmed empty Slurm queue, then submitted satellite_v2 job 22374 and
+full OrthoFinder job 22375 with afterok dependency. Both terminal COMPLETED 0:0
+for allocation/batch/native step. Both before/after runtime checks and native
+output validation pass. Independent raw replay and retained canonical prediction
+comparisons pass: three groups/16 genes and 36 native pairs for each; OrthoHMM
+also reproduces three root groups. [Panel evidence](THREADRIPPER_PRIVATE_COLLECTOR_PANEL_20260928.md).
+
+All three private-controller collector-v5 native paths now have a successful
+small fixture. Forty-one focused tests pass. No native retries, source changes,
+production timing identities, DGX access or unrelated-workload interruption.
+Queue empty after terminal checks. Next: outstanding production accounting and
+environmental admission, including quiet-host eligibility; other publication
+requirements remain open. Goal active, diagnostic times not admitted.
+
 ## Integrate Private Controller And Execute Collector V5 Fixture (2026-09-28)
 
 Previous turn progressed private binding (`b0299e6e`). Reread goal. Updated

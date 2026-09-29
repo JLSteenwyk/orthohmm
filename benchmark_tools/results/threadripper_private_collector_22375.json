@@ -1,0 +1,43 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22375",
+      "--parsable2",
+      "--format=JobID,State,ExitCode,ElapsedRaw"
+    ],
+    "stdout": "JobID|State|ExitCode|ElapsedRaw\n22375|COMPLETED|0:0|118\n22375.batch|COMPLETED|0:0|118\n22375.0|COMPLETED|0:0|21\n"
+  },
+  "audit": {
+    "bytes": 2383758,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/independent_outcome_audit.json",
+    "sha256": "681cd3cb8680128e03b52903ab7d5b124049b9f825e1b2fee7b4cd798fb95f3e"
+  },
+  "identity": {
+    "checkpoint_groups": {
+      "genes": 16,
+      "groups": 3,
+      "sha256": "0391611090914b4744cc74a61660e5e16feae3ec4d27d6c2c7857c06a7cffaa1"
+    },
+    "input_species_mapping": "55b7cebfbb0daa634bf4dc0a5f55a8d8c5905345bb16a2deb2ba1ac75d0c7d30",
+    "native_pairs": {
+      "pairs": 36,
+      "sha256": "0a25ec80c0a24f65f4edea3a4418db4aa0fbda40ac4fe31cc82c825cbc48dbb4"
+    }
+  },
+  "job_id": 22375,
+  "native_completion": "anchor_only_at_boundaries",
+  "parity": {
+    "bytes": 8876,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/prior_output_parity.json",
+    "sha256": "ad6fe92fbffd961a3d2855ca44b841e0c6ad60f7e81f95ea61f25ecd03d4e242"
+  },
+  "result": {
+    "bytes": 169008,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/result.json",
+    "sha256": "85503aeddef61e8ee6fa30d98904989fec4930362e4fc9ed5abdcc003d6992c1"
+  },
+  "scientific_timings_admitted": false,
+  "status": "native_success_outputs_verified"
+}
