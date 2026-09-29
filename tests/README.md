@@ -1,5 +1,19 @@
 # Tests
 
+After installing OrthoHMM and its dependencies in a development environment,
+install the test-only dependencies with:
+
+```sh
+python -m pip install -r tests/requirements.txt
+```
+
+This includes the pinned SQL parser used to inspect historical TreeFam and
+Selectome archives without executing their SQL. Without `sqlglot`, two unit
+modules are skipped during collection, hiding 13 test cases from the run.
+Both CI test jobs install this file and check that the parser imports before
+running tests. These are test dependencies, not application runtime
+requirements or a complete lock for the publication benchmark environments.
+
 Run unit tests with`make test.unit` and native integration tests with
 `make test.integration`. Pytest discovery is limited to`tests/` so retained
 benchmark worktrees are not collected. Integration outputs and copied input

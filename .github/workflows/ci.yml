@@ -18,8 +18,8 @@ jobs:
         # make orthohmm CLI available for tests 
         make install
         # install deps for tests
-        pip install pytest
-        pip install pytest-cov
+        pip install -r tests/requirements.txt
+        python -c "import sqlglot"
     - name: Install HMMER
       run: |
         brew install hmmer
@@ -53,8 +53,8 @@ jobs:
         # make orthohmm CLI available for tests 
         make install
         # install test dependencies
-        pip install pytest
-        pip install pytest-cov
+        pip install -r tests/requirements.txt
+        python -c "import sqlglot"
     - name: Install HMMER
       run: |
         brew install hmmer

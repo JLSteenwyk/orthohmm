@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Make SQL Archive Test Dependency Explicit In CI (2026-09-29)
+
+Previous turn progressed full regression and separate parser follow-up
+(`2ef496cc`). Reread goal and current evidence. The new full-run receipt
+exposed two module-collection skips when sqlglot is absent. Both CI test jobs
+previously installed only pytest and pytest-cov as explicit test dependencies.
+Added `tests/requirements.txt` with those packages and the already validated
+sqlglot 30.20.0 pin; both jobs now install it and fail early on parser import
+failure. Local setup and the 13-case collection gap are documented in
+`tests/README.md`. Application dependencies and historical locks unchanged.
+
+Structured YAML/requirements parsing confirms both install/import paths and
+the exact pin. Thirteen parser tests pass with the retained package, whose
+metadata requires Python >=3.9. This verifies local configuration and tests,
+not remote CI execution or a complete fresh dependency installation. No
+shared package installation, native benchmark or host change. Full regression
+at cc3df68a remains historical evidence; production sources did not change.
+Goal active; timing and remaining scientific/release requirements stay open.
+
 ## Refresh Full Unit Regression After Accumulated Changes (2026-09-29)
 
 Previous turn progressed scoped native CPU reporting (`cc3df68a`). Reread
