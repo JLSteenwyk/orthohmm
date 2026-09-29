@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Review Latest Main Manuscript PDF (2026-09-29)
+
+Previous turn progressed exact base-package payload attribution (`5d234877`).
+Reread goal and current evidence. Reviewed the high-CPM crash, native-stack,
+GC-boundary and isolated-reader evidence; no new causal hypothesis or
+justified rerun emerged. Original failure and missing endpoint remain intact.
+
+Completed the outstanding PDF export of the latest main manuscript. Fresh
+HTML/direct-source checks and checked printing pass; all six pages have no
+page-bounds violations and were visually inspected without clipping or
+overlap. [PDF, executed commands and review scope](MAIN_REVIEW_REFRESH_20260929.md).
+The FastOMA citation spans pages 5-6, and figures remain linked rather than
+embedded. This is draft review, not journal-ready packaging or claim validation.
+
+Slurm queue inspection found no jobs. No benchmark or timing run launched,
+no host configuration changed, and no scientific source/default was edited.
+Timing, high-CPM failure, remaining uncertainty and release work remain open.
+Goal active.
+
 ## Narrow Missing Base Mutex Declaration To Metadata (2026-09-29)
 
 Previous turn confirmed the goal prompt without advancing authoritative
