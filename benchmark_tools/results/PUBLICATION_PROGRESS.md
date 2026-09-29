@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Prevent Printing After Invalid Manuscript Render (2026-09-28)
+
+Previous turn progressed the reviewed manuscript export (`ccc7ab1f`) but exposed
+an overwrite hazard. Reread goal and current evidence. Added a checked printer
+requiring a valid HTML receipt, unchanged direct sources and a fresh exclusive
+attempt directory; failures retain a report. Twenty-five focused tests pass.
+Actual Chrome printing produced six pages with exact extracted-text parity to
+the reviewed v11 PDF; an occupied-attempt retry was refused before launch.
+[Validation and limits](CHECKED_MANUSCRIPT_PRINT_20260928.md).
+
+No scientific reruns, timing admission, scheduler changes or DGX access.
+This improves reproducible publication export, not scientific evidence.
+Goal remains active; unresolved accounting/isolation, QfO uncertainty and
+release requirements are unchanged.
+
 ## Refresh Condensed Manuscript Review (2026-09-28)
 
 Previous turn progressed the authoritative goal prompt: local Threadripper,
