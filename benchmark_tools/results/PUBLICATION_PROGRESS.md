@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Acquire Wheel-Bound Numba And llvmlite Sources (2026-09-29)
+
+Previous turn integrated full reproduction into manuscripts (`5b5ed9a5`).
+Reread goal and reviewed retained native/notice coverage instead of repeating
+timing fixtures. The graph source supplements already exist; Numba/LLVM
+source provenance remained an explicit release gap. Used the existing tested
+source downloader for retained Numba 0.67.0 and llvmlite 0.49.0 wheels.
+
+[Acquisition result](JIT_SOURCE_CANDIDATES_20260929.md): both official release
+wheel/source hashes and package identities verify; 969 and 101 regular source
+files, respectively. All 31 downloader tests pass, and source, input, wheel,
+metadata and archive records were independently rechecked. No installation,
+build, native rerun or frozen-runtime modification occurred.
+
+The llvmlite source expects external LLVM and permits version/linkage overrides;
+its supported major is not proof of the wheel's actual LLVM revision. Exact
+external source/build correspondence, static-component coverage and release
+clearance remain unresolved. This completes a concrete source-acquisition
+step, not publication readiness. Timing coordination remains pending. Goal active.
+
 ## Integrate Reconstructed Full-Run Evidence Into Manuscripts (2026-09-29)
 
 Previous turn rechecked the unavailable timing window (`1091e595`). Reread
