@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Capture Effective Local Service And Declared-File Evidence (2026-09-29)
+
+Previous turn progressed release packaging with an actual verified source
+archive. Reread the goal and confirmed 22377 running and 22378 dependency-pending.
+Reviewed remaining timing prerequisites: older service fingerprints omit launch
+and external-file context. Added a new read-only structured D-Bus collector,
+without changing any of the 822 frozen calibration sources.
+
+The [executed capture and independent file reread](THREADRIPPER_EFFECTIVE_SERVICES_20260929.md)
+cover 360 loaded service/timer names and recheck 531 distinct stable file pins,
+all matching. Arguments are represented only by digest/count/length; environment
+values, full replies, stderr and file contents are not serialized. No ordinary
+process classification or timing eligibility is created. The 27 bare-command
+references, 14 unverified file references and one pending reload remain gaps.
+
+The first scope parser failed before properties; the second rejected valid bare
+commands and observed a service-state change. Both captures are retained. The
+final corrected capture has no missing selected-property parses; both final
+name/state inventories agree. No failed observation was overwritten or made
+complete by assertion. Source and exact partial-capture snapshot are bound.
+
+41 focused tests pass, including privacy canaries, structured reply validation,
+bare commands without guessed resolution, file failures, state changes and
+cooperative deadlines. New source is committed at `f9c5d85d`. The existing
+production/scientific source and runtimes are unchanged. No service/scheduler
+change or DGX action. Live poll: 22377 RUNNING at 1:31:29; 22378 PENDING. Full
+publication goal remains active; policy review, quiet timing, terminal archive
+admission, uncertainty and release gates are still open.
+
 ## Package Scientific And Benchmark Workflow Source Together (2026-09-29)
 
 Previous turn made concrete progress: tested, committed and submitted bounded

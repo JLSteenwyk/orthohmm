@@ -782,6 +782,9 @@ does not supply original family identities for uncertainty estimation.
   [32-worker accounting calibration](results/THREADRIPPER_OBSERVER_CALIBRATION_PROTOCOL_20260929.md)
   tests independent worker CPU witnesses, known allocations and sampled thread
   identities; it does not certify causal observer slowdown or host isolation.
+  [Effective service launch/file evidence](results/THREADRIPPER_EFFECTIVE_SERVICES_20260929.md)
+  supplements the unit-file inventory without approving background processes;
+  bare executables, file gaps and a pending reload remain explicit.
   Complete resource containment,
   full-scale overhead and environmental validation and
   establish a verified quiet window before launch. Do not substitute

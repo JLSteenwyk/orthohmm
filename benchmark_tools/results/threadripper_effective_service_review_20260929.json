@@ -1,0 +1,2225 @@
+{
+  "all_stable_file_rechecks_match": true,
+  "boot_unchanged": true,
+  "calibration_frozen_sources_unchanged": 822,
+  "earlier_partial_capture_source_snapshot": {
+    "bytes": 11520,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_effective_service_inventory_20260929_v2_source.py",
+    "sha256": "1e2e8a77087fa85936d866f701533b357c3c7f6fffff08d4082cd11825aa2749"
+  },
+  "file_rechecks": [
+    {
+      "matches": true,
+      "path": "/bin/bash"
+    },
+    {
+      "matches": true,
+      "path": "/bin/chgrp"
+    },
+    {
+      "matches": true,
+      "path": "/bin/chmod"
+    },
+    {
+      "matches": true,
+      "path": "/bin/cp"
+    },
+    {
+      "matches": true,
+      "path": "/bin/journalctl"
+    },
+    {
+      "matches": true,
+      "path": "/bin/kill"
+    },
+    {
+      "matches": true,
+      "path": "/bin/mkdir"
+    },
+    {
+      "matches": true,
+      "path": "/bin/mount"
+    },
+    {
+      "matches": true,
+      "path": "/bin/sh"
+    },
+    {
+      "matches": true,
+      "path": "/bin/true"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/anacron"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/cron"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/kerneloops"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/libvirt-guests"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/libvirtd"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/locale"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/munge"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/networkd-dispatcher"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/rpcbind"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/ssh"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/tailscaled"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/virtlockd"
+    },
+    {
+      "matches": true,
+      "path": "/etc/default/virtlogd"
+    },
+    {
+      "matches": true,
+      "path": "/etc/environment"
+    },
+    {
+      "matches": true,
+      "path": "/etc/init.d/openipmi"
+    },
+    {
+      "matches": true,
+      "path": "/etc/init.d/pulseaudio-enable-autospawn"
+    },
+    {
+      "matches": true,
+      "path": "/etc/init.d/rng-tools-debian"
+    },
+    {
+      "matches": true,
+      "path": "/etc/mysql/debian-start"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/bizon-api.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/bizon-camera.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/bizon-static-camera.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/bizon-update.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/bizon-update.timer"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/gpu-cpu-monitor.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/slurmctld.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/slurmd.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/slurmdbd.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/snap.lxd.activate.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/snap.lxd.daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/systemd/system/snap.lxd.user-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/update-motd.d/50-motd-news"
+    },
+    {
+      "matches": true,
+      "path": "/etc/xdg/systemd/user/snap.firmware-updater.firmware-notifier.service"
+    },
+    {
+      "matches": true,
+      "path": "/etc/xdg/systemd/user/snap.firmware-updater.firmware-notifier.timer"
+    },
+    {
+      "matches": true,
+      "path": "/home/bizon/anaconda3/bin/python"
+    },
+    {
+      "matches": true,
+      "path": "/lib/apparmor/apparmor.systemd"
+    },
+    {
+      "matches": true,
+      "path": "/lib/console-setup/console-setup.sh"
+    },
+    {
+      "matches": true,
+      "path": "/lib/console-setup/keyboard-setup.sh"
+    },
+    {
+      "matches": true,
+      "path": "/opt/bizon-api-server/auto_update.sh"
+    },
+    {
+      "matches": true,
+      "path": "/run/systemd/generator.late/openipmi.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/systemd/generator.late/pulseaudio-enable-autospawn.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/systemd/generator.late/rng-tools-debian.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/systemd/generator/nfs-server.service.d/order-with-mounts.conf"
+    },
+    {
+      "matches": true,
+      "path": "/run/systemd/system/netplan-ovs-cleanup.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-ancestral-domain-multistarts-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-ancestral-fastml-indels-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-background-alignment-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-background-domain-alignment-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-background-domain-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-baliphy-candidate-length-diagnostics-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-baliphy-independent-chains-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-baliphy-independent-diagnostics-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-completed-coupling-reviewed-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-conditional-indel-fit-audit-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-duplication-alignment-order-summaries-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-duplication-alignment-readback-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-duplication-domain-alignment-readback-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-duplication-reference-alignment-readback-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-accounting-check-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-alignments-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-diagnostic-completion-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-geometry-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-geometry-readback-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-rmsd-diagnostic-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-expanded-duplication-short-check-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-extant-geometry-fixtures-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-fastml-optimizer-refinement-20260928-v2.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-flagged-polynomial-input-readback-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-full-anchored-states-20260928-v2.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-full-categorical-diagnostics-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-full-fastml-refinement-audit-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-full-polynomial-ml-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-full-polynomial-ml-output-audit-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-grouped-ortholog-identities-mafft-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-grouped-ortholog-identities-profile-20260926.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-historian-build-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-hybrid-excluded-guide-audits-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-hybrid-excluded-guides-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-local-mg94-branch-profiles-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-mafft-marker-audit-resumed-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-mafft-marker-trees-resumed-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-marker-alignment-topology-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-marker-topology-resumed-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-matched-refinement-integration-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-matched-refinement-readback-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-matched-whole-protein-record-readback-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-neocallimastix-guide-audit-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-neocallimastix-guides-20260927-v2.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-neocallimastix-guides-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-pmsf-fourth-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-pmsf-fourth-readback-20260928-v2.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-pmsf-memory-recovery-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-polynomial-ml-comparisons-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-primary-alignment-geometry-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-primary-geometry-serialized-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-primary-order-sensitivity-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-crossed-pmsf.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-geometry-rank-readback.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-geometry-tree-benchmark.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-geometry.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-site-coupling.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-structure-retrieval.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-recovery-20260925-tree-path-readback.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-reference-geometry-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-selected-domain-coverage-projection-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-selected-domain-coverage-readback-20260927.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-ml-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-ml-comparison-readback-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-ml-comparisons-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-ml-output-audit-20260929.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-model-design-readback-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-protein-model-designs-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/run/user/1000/systemd/transient/fungal-whole-proteome-family-coverage-20260928.service"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/agetty"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/auditd"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/augenrules"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/e2scrub_all"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/fstrim"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/ldconfig"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/modprobe"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/rpcbind"
+    },
+    {
+      "matches": true,
+      "path": "/sbin/setvtrgb"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/busctl"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/chattr"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/cloud-init"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/containerd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/dbus-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/dbus-send"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/dirmngr"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/dockerd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/finalrd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/fwupdmgr"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/gnome-keyring-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/gpg-agent"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/gpgconf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/gpu-manager"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/grub-editenv"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/install"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/kmod"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/mandb"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/networkd-dispatcher"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/nm-online"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/node"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/pipewire"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/pipewire-pulse"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/plymouth"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/python3"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/savelog"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/sbkeysync"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/sensors"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/session-migration"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/snap"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/speech-dispatcher"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/systemd-repart"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/systemd-tty-ask-password-agent"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/ubuntu-report"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/whoopsie"
+    },
+    {
+      "matches": true,
+      "path": "/usr/bin/wireplumber"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/apt/apt-helper"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/apt/apt.systemd.daily"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/cockpit/cockpit-certificate-ensure"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/cockpit/cockpit-tls"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/cockpit/cockpit-ws"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/gnupg/keyboxd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/libvirt/libvirt-guests.sh"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/openssh/agent-launch"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/polkit-1/polkitd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/rsyslog/reload-apparmor-profile"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snap-bootstrap"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snap-failure"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snap-repair"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snapd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snapd-apparmor"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/snapd/snapd.core-fixup.sh"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system-generators/systemd-fstab-generator"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ModemManager.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/NetworkManager-wait-online.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/NetworkManager.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/accounts-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/alsa-restore.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/alsa-state.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/anacron.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/anacron.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apparmor.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apport-autoreport.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apport-autoreport.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apport.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apt-daily-upgrade.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apt-daily-upgrade.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apt-daily.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/apt-daily.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/auditd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/auth-rpcgss-module.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/avahi-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/blk-availability.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/bluetooth.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/bolt.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cloud-config.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cloud-final.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cloud-init-hotplugd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cloud-init-local.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cloud-init.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cockpit-motd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cockpit-wsinstance-http.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cockpit.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/colord.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/console-setup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/containerd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cron.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cups-browsed.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/cups.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/dbus.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/dm-event.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/dmesg.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/docker.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/dpkg-db-backup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/dpkg-db-backup.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/e2scrub_all.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/e2scrub_all.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/e2scrub_reap.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/emergency.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/finalrd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fsidd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fstrim.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fstrim.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fwupd-refresh.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fwupd-refresh.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/fwupd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/gdm.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/getty-static.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/getty@.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/gnome-remote-desktop.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/gpu-manager.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/grub-common.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/grub-initrd-fallback.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/initrd-cleanup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/initrd-parse-etc.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/initrd-switch-root.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/initrd-udevadm-cleanup-db.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/kerneloops.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/keyboard-setup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/kmod-static-nodes.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ldconfig.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/libvirt-guests.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/libvirtd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/lm-sensors.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/logrotate.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/logrotate.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/lvm2-lvmpolld.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/lvm2-monitor.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/man-db.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/man-db.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/mariadb.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/modprobe@.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/motd-news.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/motd-news.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/munge.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/networkd-dispatcher.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfs-blkmap.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfs-idmapd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfs-mountd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfs-server.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfs-utils.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nfsdcld.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nvmefc-boot-connections.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/nvmf-autoconnect.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/openvpn.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/plymouth-quit-wait.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/plymouth-quit.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/plymouth-read-write.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/plymouth-start.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/plymouth-switch-root.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/polkit.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/power-profiles-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/qemu-kvm.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rc-local.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rc-local.service.d/debian.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rescue.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rpc-gssd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rpc-statd-notify.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rpc-statd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rpc-svcgssd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rpcbind.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rsyslog.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/rtkit-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/secureboot-db.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/setvtrgb.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.apparmor.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.autoimport.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.core-fixup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.failure.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.recovery-chooser-trigger.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.seeded.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.snap-repair.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.snap-repair.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/snapd.system-shutdown.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ssh.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ssl-cert.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/switcheroo-control.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-ask-password-console.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-ask-password-plymouth.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-ask-password-wall.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-battery-check.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-binfmt.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-bsod.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-firstboot.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-fsck-root.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-fsck@.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-fsckd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-hibernate-resume.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-hibernate.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-hwdb-update.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-hybrid-sleep.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-initctl.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-journal-catalog-update.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-journal-flush.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-journald.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-journald.service.d/nice.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-logind.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-logind.service.d/dbus.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-machine-id-commit.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-machined.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-modules-load.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-networkd-wait-online.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-networkd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-oomd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-pcrmachine.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-pcrphase-initrd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-pcrphase-sysinit.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-pcrphase.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-pstore.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-quotacheck.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-random-seed.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-remount-fs.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-repart.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-resolved.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-rfkill.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-soft-reboot.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-suspend-then-hibernate.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-suspend.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-sysctl.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-sysext.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-sysusers.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-timesyncd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tmpfiles-clean.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tmpfiles-clean.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tmpfiles-setup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tpm2-setup-early.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-tpm2-setup.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-udev-settle.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-udev-trigger.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-udevd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-udevd.service.d/syscall-architecture.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-update-done.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-update-utmp-runlevel.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-update-utmp.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/systemd-user-sessions.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/tailscaled.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/thermald.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/tpm-udev.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ua-reboot-cmds.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ua-timer.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ua-timer.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ubuntu-advantage.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/udisks2.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/ufw.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/unattended-upgrades.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/update-notifier-download.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/update-notifier-download.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/update-notifier-motd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/update-notifier-motd.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/upower.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/user-runtime-dir@.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/user@.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/user@.service.d/10-login-barrier.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/user@.service.d/10-oomd-user-service-defaults.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/user@.service.d/timeout.conf"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/uuidd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/virtlockd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/virtlogd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/whoopsie.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/system/wpa_supplicant.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-battery-check"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-binfmt"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-bsod"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-fsck"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-fsckd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-hibernate-resume"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-initctl"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-journald"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-logind"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-machined"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-modules-load"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-networkd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-networkd-wait-online"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-oomd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-pcrextend"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-pstore"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-quotacheck"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-random-seed"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-remount-fs"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-resolved"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-rfkill"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-sleep"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-sulogin-shell"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-sysctl"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-timesyncd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-tpm2-setup"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-udevd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-update-done"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-update-utmp"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-user-runtime-dir"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/systemd-user-sessions"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/at-spi-dbus-bus.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/dbus.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/dirmngr.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/filter-chain.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/gcr-ssh-agent.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/gnome-initial-setup-copy-worker.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/gnome-keyring-daemon.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/gpg-agent.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/keyboxd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/launchpadlib-cache-clean.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/launchpadlib-cache-clean.timer"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/pipewire-pulse.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/pipewire.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/pk-debconf-helper.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/session-migration.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/snapd.session-agent.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/speech-dispatcher.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/ssh-agent.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/ubuntu-report.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/update-notifier-crash.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/update-notifier-release.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/wireplumber.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xdg-desktop-portal-gtk.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xdg-desktop-portal-rewrite-launchers.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xdg-desktop-portal.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xdg-document-portal.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xdg-permission-store.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/systemd/user/xfce4-notifyd.service"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/ubuntu-release-upgrader/check-new-release-gtk"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/ubuntu-release-upgrader/release-upgrade-motd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/ufw/ufw-init"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/update-notifier/package-data-downloader"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/update-notifier/update-notifier-crash"
+    },
+    {
+      "matches": true,
+      "path": "/usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/accounts-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/at-spi-bus-launcher"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/bluetooth/bluetoothd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/boltd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/colord"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/dpkg/dpkg-db-backup"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/fwupd/fwupd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/gcr-ssh-agent"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/gnome-initial-setup-copy-worker"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/gnome-remote-desktop-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/pk-debconf-helper"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/power-profiles-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/rtkit-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/switcheroo-control"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/udisks2/udisksd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/upowerd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/xdg-desktop-portal"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/xdg-desktop-portal-gtk"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/xdg-desktop-portal-rewrite-launchers"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/xdg-document-portal"
+    },
+    {
+      "matches": true,
+      "path": "/usr/libexec/xdg-permission-store"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/ModemManager"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/NetworkManager"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/alsactl"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/anacron"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/avahi-daemon"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/blkdeactivate"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/blkmapd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/cron"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/cups-browsed"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/cupsd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/dmeventd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/exportfs"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/fsidd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/gdm3"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/kerneloops"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/libvirtd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/logrotate"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/lvm"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/lvmpolld"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/make-ssl-cert"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/mariadbd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/munged"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/netplan"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/nfsdcld"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/nvme"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/plymouthd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.gssd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.idmapd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.mountd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.nfsd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.statd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rpc.svcgssd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/rsyslogd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/slurmctld"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/slurmd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/slurmdbd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/sm-notify"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/sshd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/tailscaled"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/thermald"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/uuidd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/virtlockd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/virtlogd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/sbin/wpa_supplicant"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/apport/apport"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/apport/whoopsie-upload-all"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/cockpit/motd/update-motd"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/gdm/generate-config"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/qemu/init/qemu-kvm-init"
+    },
+    {
+      "matches": true,
+      "path": "/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+    }
+  ],
+  "initial_parser_failure_retained": true,
+  "inputs": [
+    {
+      "bytes": 1942,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_effective_service_inventory_20260929.json",
+      "sha256": "ee2405d96208f519178ef1193b5c02e8a1b9f9f5fcb49c8d263aa512105c7df3"
+    },
+    {
+      "bytes": 1033483,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_effective_service_inventory_20260929_v2.json",
+      "sha256": "7e4f316c685382cc19f0511757132ba72e194b63761a797a40d6aa375aeb3ff4"
+    },
+    {
+      "bytes": 1070240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_effective_service_inventory_20260929_v3.json",
+      "sha256": "6a02296c3bb38e2ba28b05269b9d88968e2195a65cc977c60c8576065edd0ebc"
+    }
+  ],
+  "interface_documentation": "https://raw.githubusercontent.com/systemd/systemd/v255/man/org.freedesktop.systemd1.xml",
+  "latest_capture": {
+    "bytes": 1070240,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_effective_service_inventory_20260929_v3.json",
+    "sha256": "6a02296c3bb38e2ba28b05269b9d88968e2195a65cc977c60c8576065edd0ebc"
+  },
+  "limitations": [
+    "Configuration/launch/file evidence only; no ordinary-background classifications or timing eligibility.",
+    "Environment values and literal command arguments are not serialized; argv digests/counts retained.",
+    "Bare commands are not resolved using the observer PATH; absent and nonregular files stay unverified.",
+    "Interpreted scripts, loaded executable images/libraries, timer scheduling and transient scopes require separate review.",
+    "Snapshots and rechecks are sequential; no continuous configuration or host-isolation guarantee.",
+    "Earlier failed and partial captures remain separate evidence, not overwritten successful observations."
+  ],
+  "policy_approved": false,
+  "publication_ready": false,
+  "scientific_timings_admitted": false,
+  "scopes": [
+    {
+      "file_roles": {
+        "declared_environment_file": 27,
+        "declared_executable": 226,
+        "unit_dropin": 11,
+        "unit_fragment": 228
+      },
+      "gap_counts": {
+        "bare_executable_resolution_unverified": 26,
+        "declared_file_unverified": 11
+      },
+      "inventory_changes": [],
+      "property_parse_gaps": [],
+      "scope": "system",
+      "unit_rows_with_review_gaps": 33,
+      "unit_types": {
+        "service": 239,
+        "timer": 17
+      },
+      "units": 256
+    },
+    {
+      "file_roles": {
+        "declared_environment_file": 1,
+        "declared_executable": 101,
+        "unit_fragment": 102
+      },
+      "gap_counts": {
+        "bare_executable_resolution_unverified": 1,
+        "declared_file_unverified": 3,
+        "pending_daemon_reload": 1
+      },
+      "inventory_changes": [],
+      "property_parse_gaps": [],
+      "scope": "user",
+      "unit_rows_with_review_gaps": 4,
+      "unit_types": {
+        "service": 102,
+        "timer": 2
+      },
+      "units": 104
+    }
+  ],
+  "source": {
+    "bytes": 12191,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_threadripper_service_launches.py",
+    "sha256": "066275e96d1ccfc54c782d64fdad06313dff0fbaff7126ecc36165b3e94aae50"
+  },
+  "source_revision": "f9c5d85d48dc580439fc4996ea07e9e1a7d33d5d",
+  "status": "effective_service_evidence_captured_pending_policy_review",
+  "systemd_version": "systemd 255 (255.4-1ubuntu8.6)\n+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified",
+  "tests_passed": 41,
+  "unique_stable_files_rechecked": 531
+}
