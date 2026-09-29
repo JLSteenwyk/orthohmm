@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Verify Resolved LLVM Package And Embedded Recipe (2026-09-29)
+
+Previous conversational turn checked the saved goal but made no analysis
+progress. Reread the goal, inspected the latest ledger, and confirmed download
+session 12397 finished successfully rather than restarting it. The exact
+llvmdev 22.1.0 manylinux_1 package matches its published size and SHA-256.
+[Embedded recipe audit](LLVMDEV_PACKAGE_RECIPE_20260929.md) records 12 info
+members and the package's rendered source, template and build metadata.
+
+The actual rendered recipe lists no patches, unlike the earlier release-tag
+candidate. Its Linux build script does match that tag byte-for-byte and still
+performs two source edits. This changes the source-reproduction recipe; no
+installation, build, scientific change or benchmark rerun was performed.
+Archive inspection and metadata consistency checks passed. The source archive
+and full notice inventory remain next; historical package-byte correspondence
+is not proved by a name/version/build log. Controlled timing and the broader
+publication requirements remain open. Goal active; Threadripper only.
+
 ## Identify The Producing Wheel Run And Resolved LLVM Package (2026-09-29)
 
 Previous turn verified the publishing attestation (`6ef69756`). Reread goal
