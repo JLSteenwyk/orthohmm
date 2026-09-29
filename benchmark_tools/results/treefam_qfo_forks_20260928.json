@@ -1,0 +1,243 @@
+{
+  "auditor": {
+    "bytes": 3409,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_qfo_public_forks.py",
+    "sha256": "ba2a5e8840f075d59344b828ab2f9d0d868035fe800f83c776987ae9d71c1da8"
+  },
+  "candidate_readback": {
+    "content": {
+      "_id": "QfO:TreeFam-A_agg",
+      "challenge_ids": [
+        "TreeFam-A"
+      ],
+      "datalink": {
+        "inline_data": {
+          "challenge_participants": [],
+          "visualization": {
+            "type": "2D-plot",
+            "x_axis": "TPR",
+            "y_axis": "PPV"
+          }
+        }
+      },
+      "type": "aggregation"
+    },
+    "files": [
+      {
+        "bytes": 707,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/candidate_blob_response.json",
+        "sha256": "d6515db7bdc58632fbf02344d93dbef398a67cb1c6402cb8d73ba8a3f0e645eb"
+      },
+      {
+        "bytes": 284,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/TreeFam-A.json",
+        "sha256": "42bdfa2f53ac7c8921a41ec0f91936f7431097dcc54322b2eaef987d4799e595"
+      }
+    ],
+    "git_blob_sha1_verified": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+    "url": "https://api.github.com/repos/inab/benchmark-webservice-refdataset-fetch-issue/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+  },
+  "forks": [
+    {
+      "candidates": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/inab/benchmark-webservice-refdataset-fetch-issue/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "default_branch": "master",
+      "entries": 136,
+      "repository": "inab/benchmark-webservice-refdataset-fetch-issue",
+      "status": "inventory_inspected",
+      "tree_sha": "aa1cdf14c442ad69d4a01557ba753fd82fb9be1a"
+    },
+    {
+      "candidates": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/orthordf/benchmark-webservice/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "default_branch": "chiba",
+      "entries": 132,
+      "repository": "orthordf/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "be1d01cddcdc1d641a69e768bbfe4d6413eee9f3"
+    },
+    {
+      "candidates": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/TianYuan-Liu/benchmark-webservice/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "default_branch": "master",
+      "entries": 126,
+      "repository": "TianYuan-Liu/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "2228e5db016da25e6eacb7bcb9d194bb45c5c0b7"
+    },
+    {
+      "candidates": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/delehef/benchmark-webservice/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "default_branch": "master",
+      "entries": 129,
+      "repository": "delehef/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "34ffbf79dd8cb4366a836760577f1c6032ecba30"
+    },
+    {
+      "candidates": [
+        {
+          "mode": "100644",
+          "path": "reference_data/data/TreeFam-A.json",
+          "sha": "27849bc6a3e36d5403f70d53dfff5cd70ecf1257",
+          "size": 284,
+          "type": "blob",
+          "url": "https://api.github.com/repos/jmfernandez/benchmark-webservice/git/blobs/27849bc6a3e36d5403f70d53dfff5cd70ecf1257"
+        }
+      ],
+      "default_branch": "master",
+      "entries": 126,
+      "repository": "jmfernandez/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "2228e5db016da25e6eacb7bcb9d194bb45c5c0b7"
+    },
+    {
+      "candidates": [],
+      "default_branch": "master",
+      "entries": 194,
+      "repository": "lauportell/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "8c0a0ef1bb17261aa14e347fa69f7d24c615145c"
+    },
+    {
+      "candidates": [],
+      "default_branch": "master",
+      "entries": 194,
+      "repository": "javi-gv94/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "8c0a0ef1bb17261aa14e347fa69f7d24c615145c"
+    },
+    {
+      "candidates": [],
+      "default_branch": "master",
+      "entries": 192,
+      "repository": "F4llis/benchmark-webservice",
+      "status": "inventory_inspected",
+      "tree_sha": "aed1c4da2f1681a1167145946f4121750a24dc02"
+    }
+  ],
+  "limitations": [
+    "Default-branch inventories only; not full fork history, other branches or deleted/private objects.",
+    "Filename leads are not validation of contents or equivalence to the retained QfO reference.",
+    "No contact, authenticated access, code execution or benchmark changes."
+  ],
+  "original_inputs_admitted": false,
+  "pagination_complete": true,
+  "publication_ready": false,
+  "requests": [
+    {
+      "bytes": 46863,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/forks.json",
+      "final_url": "https://api.github.com/repos/qfo/benchmark-webservice/forks?per_page=100",
+      "sha256": "f026c2a440b98f956dfad3506084f7b2fb3930211d6440d2888b738ad1145763",
+      "started_utc": "2026-09-29T01:25:20.668618+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/qfo/benchmark-webservice/forks?per_page=100"
+    },
+    {
+      "bytes": 36315,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_00.json",
+      "final_url": "https://api.github.com/repos/inab/benchmark-webservice-refdataset-fetch-issue/git/trees/master?recursive=1",
+      "sha256": "9a91e473a7ed5db40e1fe8f68c00ab562682559990396eb9da348845b17cebad",
+      "started_utc": "2026-09-29T01:25:21.309169+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/inab/benchmark-webservice-refdataset-fetch-issue/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 32756,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_01.json",
+      "final_url": "https://api.github.com/repos/orthordf/benchmark-webservice/git/trees/chiba?recursive=1",
+      "sha256": "e44aca1c10ef13a3208cc44361c0842e735a58340d247e89d5dcf8f5846481a0",
+      "started_utc": "2026-09-29T01:25:21.654216+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/orthordf/benchmark-webservice/git/trees/chiba?recursive=1"
+    },
+    {
+      "bytes": 31873,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_02.json",
+      "final_url": "https://api.github.com/repos/TianYuan-Liu/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "e46ba06f9b460303858a455a13f4cd66cf0897104257f294185456c96ce6b35e",
+      "started_utc": "2026-09-29T01:25:21.968095+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/TianYuan-Liu/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 31922,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_03.json",
+      "final_url": "https://api.github.com/repos/delehef/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "b92c732c67217b50ec972d92710845999378404718295dcc5026d692379d57ef",
+      "started_utc": "2026-09-29T01:25:22.288051+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/delehef/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 31746,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_04.json",
+      "final_url": "https://api.github.com/repos/jmfernandez/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "69d03e64187e8e4d78ebc8c7ae22ff1fcffb8892be150377a1a6894d74540ffc",
+      "started_utc": "2026-09-29T01:25:22.610982+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/jmfernandez/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 48535,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_05.json",
+      "final_url": "https://api.github.com/repos/lauportell/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "779b8c0f50d2ad7970dd5788e8a8963a80cd834ed44414d62d4af0a934b787b7",
+      "started_utc": "2026-09-29T01:25:22.945031+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/lauportell/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 48340,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_06.json",
+      "final_url": "https://api.github.com/repos/javi-gv94/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "b49eb5f3890470a5fdeabc935438fd453321c1e087ee93da846cff834a6655aa",
+      "started_utc": "2026-09-29T01:25:23.300862+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/javi-gv94/benchmark-webservice/git/trees/master?recursive=1"
+    },
+    {
+      "bytes": 47456,
+      "file": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_qfo_forks_20260928/tree_07.json",
+      "final_url": "https://api.github.com/repos/F4llis/benchmark-webservice/git/trees/master?recursive=1",
+      "sha256": "85b35c50ecd6cd50680147c16f960a6571b7d51aa29fc7c89ebca4e1c8b9ed49",
+      "started_utc": "2026-09-29T01:25:23.676937+00:00",
+      "status": 200,
+      "url": "https://api.github.com/repos/F4llis/benchmark-webservice/git/trees/master?recursive=1"
+    }
+  ],
+  "status": "public_fork_default_branch_search"
+}

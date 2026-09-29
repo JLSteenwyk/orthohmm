@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Search Public QfO Forks For TreeFam Originals (2026-09-28)
+
+Previous turn progressed manuscript claims (`67d4f6e1`). Reread the goal and
+returned to original TreeFam recovery, using public internet sources only.
+Existing upstream-history/supplement inspections were already negative;
+searched eight public fork default-branch inventories instead. All complete,
+none contain a matching original collection or mapping filename. Five share
+one 284-byte visualization metadata blob, downloaded and Git-hash verified;
+it contains no trees or mappings. Retained eleven raw response/content strings
+in a compressed bundle with source hashes rechecked. Four tests pass.
+See [retrieval evidence and limitations](TREEFAM_QFO_PUBLIC_FORKS_20260928.md).
+
+No original inputs recovered or substitute labels admitted. This narrow search
+does not exhaust other branches/history or arbitrarily named data. No contact,
+credentials, benchmark changes or DGX work. Missing TreeFam sources, remaining
+uncertainty, controlled timing and release requirements remain open.
+
 ## Reconcile Manuscript With Complete OrthoBench Intervals (2026-09-28)
 
 Previous turn completed all 21 paired contrasts (`af5dc9a7`). Reread the
