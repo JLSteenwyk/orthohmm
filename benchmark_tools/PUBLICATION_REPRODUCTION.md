@@ -126,7 +126,10 @@ RUNNING observation does not establish current liveness or completion.
   [wheel notices](results/INTEGRATED_DEPENDENCY_NOTICES_20260927.md) and
   [base-package notices](results/RECONSTRUCTED_BASE_NOTICES_20260927.md) have
   verified local exports. Component/source obligations and redistribution
-  clearance remain open, including the base mutex package's missing notice.
+  clearance remain open. The base mutex package's missing declaration is
+  now scoped to a [metadata-only archive](results/BASE_MUTEX_PAYLOAD_20260929.md):
+  its exact payload and installed-file lists are empty. This finding is not
+  redistribution clearance for the archive or the actual GCC runtime.
 
 - [Canonical assessment source archive](results/QFO_CANONICAL_SOURCE_ARCHIVE_20260927.md)
   preserves all 762 distinct repository-contained Python files pinned by the

@@ -25,7 +25,12 @@ executed collection command.
 
 `_libgcc_mutex` has no candidate notice and no recorded license declaration;
 this gap is retained rather than assigned a guessed license. The other 18
-archives contain one or more candidates. Provider declarations span several
+archives contain one or more candidates. A subsequent
+[exact payload inspection](BASE_MUTEX_PAYLOAD_20260929.md) establishes that
+this mutex archive has no payload members or installed-file entries; the
+remaining declaration gap concerns its metadata/recipe artifact, not an
+unidentified runtime library. This does not assign redistribution permission.
+Provider declarations span several
 license families and GCC runtime exceptions; their presence alone does not
 resolve component attribution, corresponding-source obligations, compatibility
 or the terms governing distribution of these particular package artifacts.

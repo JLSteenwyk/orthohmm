@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Narrow Missing Base Mutex Declaration To Metadata (2026-09-29)
+
+Previous turn confirmed the goal prompt without advancing authoritative
+analysis state (no progress). Reread goal and current ledger. Inspected the
+exact retained `_libgcc_mutex` archive: ten metadata members, zero payload
+members, empty installed-file manifests, no license declaration. Preserved
+member hashes and an executable replay in the
+[payload report](BASE_MUTEX_PAYLOAD_20260929.md). Updated reproduction and
+notice summaries to distinguish missing metadata terms from executable
+attribution; did not infer permission or change the frozen runtime.
+
+Slurm queue was empty at inspection; this is not evidence of host isolation.
+No jobs launched, scheduler/service changes, timing admission or benchmark
+reruns. Remaining timing, scientific and release requirements remain open.
+Goal remains active.
+
 ## Make Independent VGNC Sensitivity Check Executable (2026-09-29)
 
 Previous turn progressed manuscript reconciliation (`d5e55309`). Reread goal.

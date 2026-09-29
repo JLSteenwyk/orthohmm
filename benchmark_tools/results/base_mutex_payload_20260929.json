@@ -1,0 +1,88 @@
+{
+  "about_summary": "Mutex for libgcc and libgcc-ng",
+  "archive": {
+    "bytes": 3473,
+    "path": "/tmp/orthohmm-base-reconstruction-20260927/archives/_libgcc_mutex-0.1-main.conda",
+    "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051"
+  },
+  "files_manifest_bytes": 0,
+  "index": {
+    "arch": "x86_64",
+    "build": "main",
+    "build_number": 0,
+    "depends": [],
+    "name": "_libgcc_mutex",
+    "platform": "linux",
+    "subdir": "linux-64",
+    "timestamp": 1562011674792,
+    "version": "0.1"
+  },
+  "license_declared": false,
+  "paths": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "payload_member_count": 0,
+  "scope": "Exact archive content audit; no license assignment or redistribution clearance",
+  "streams": {
+    "info-_libgcc_mutex-0.1-main.tar.zst": [
+      {
+        "bytes": 39,
+        "name": "info/paths.json",
+        "sha256": "a0731dccf9e110a03d184ba01467cabe068391cdab188c49a1e7515a17827183"
+      },
+      {
+        "bytes": 41,
+        "name": "info/hash_input.json",
+        "sha256": "bd099604ce0b3a2a5e15766d407c086c96999eb55672ed372e7aa958e5a52c9d"
+      },
+      {
+        "bytes": 203,
+        "name": "info/index.json",
+        "sha256": "ef27d063f5d0b4c3b22c889e14ab751598a94ae38d2644f222879ed825e2746a"
+      },
+      {
+        "bytes": 2863,
+        "name": "info/about.json",
+        "sha256": "c68294bbed7a2787ccc1b95b56afbe029b2efe4ccc07ba4bda6849af203394d8"
+      },
+      {
+        "bytes": 0,
+        "name": "info/git",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "name": "info/files",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 289,
+        "name": "info/recipe/meta.yaml.template",
+        "sha256": "d1e750b6ed95b07398bcc4c49b885acce817bff775b5e81efba0023bca6f94a6"
+      },
+      {
+        "bytes": 563,
+        "name": "info/recipe/recipe_log.txt",
+        "sha256": "e382ad33e6ac5e03d7bf4223e3e862c1fa630a9a4f1bd84f730cf347bece2859"
+      },
+      {
+        "bytes": 456,
+        "name": "info/recipe/meta.yaml",
+        "sha256": "84e293b5a768f47f0a98818de211fb1d5acea84196096a2198ecf758c3b03b49"
+      },
+      {
+        "bytes": 2029,
+        "name": "info/recipe/conda_build_config.yaml",
+        "sha256": "c5029ee785530dfd004f0c942181584b607e09827d0625d722ae8f0abb4b503f"
+      }
+    ],
+    "pkg-_libgcc_mutex-0.1-main.tar.zst": []
+  },
+  "zip_members": [
+    "metadata.json",
+    "info-_libgcc_mutex-0.1-main.tar.zst",
+    "pkg-_libgcc_mutex-0.1-main.tar.zst"
+  ],
+  "zstandard_version": "0.19.0"
+}
