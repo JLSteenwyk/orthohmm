@@ -25,6 +25,15 @@ CORRECTED_CURRENT_PANELS = (*CORRECTED_PANELS, "corrected_swiss_strata_figure_21
                             "corrected_swiss_comparison_figure_21987")
 CORRECTED_FASTOMA_PANELS = ("corrected_swiss_comparison_figure_20260923",)
 CORRECTED_COMPLETE_PANELS = ("corrected_swiss_comparison_figure_20260926",)
+OB_COMPLETE_PANELS = ("ob_complete_strata_figure_20260928",)
+
+
+def validate_ob_complete(data):
+    from benchmark_tools.plot_ob_complete_strata import SOURCE_SHA, matrices
+    if (data.get("displayed_finite_values") != 288 or data.get("missing_values") != 48
+            or data.get("new_intervals") is not False or data["source"]["sha256"] != SOURCE_SHA):
+        raise ValueError("Require complete descriptive OrthoBench panel")
+    matrices(json.loads(Path(data["source"]["path"]).read_text()))
 
 
 def validate_corrected_panel(panel, data):
@@ -115,17 +124,20 @@ def inspect_manifest(path, repo, tracked):
 
 
 def audit(repo, scope="historical"):
-    if scope not in {"historical", "corrected-factorial", "corrected-current", "corrected-fastoma", "corrected-complete"}:
+    if scope not in {"historical", "corrected-factorial", "corrected-current", "corrected-fastoma", "corrected-complete", "ob-complete-strata"}:
         raise ValueError("Unknown retained figure scope")
     tracked = set(subprocess.check_output(["git", "ls-files", "-z"], cwd=repo, text=True).split("\0"))
     panels = []
     selected = {"historical": PANELS, "corrected-factorial": CORRECTED_PANELS,
                 "corrected-current": CORRECTED_CURRENT_PANELS,
                 "corrected-fastoma": CORRECTED_FASTOMA_PANELS,
-                "corrected-complete": CORRECTED_COMPLETE_PANELS}[scope]
+                "corrected-complete": CORRECTED_COMPLETE_PANELS,
+                "ob-complete-strata": OB_COMPLETE_PANELS}[scope]
     for panel in selected:
         path = repo / "benchmark_tools/results" / panel / "manifest.json"
-        if scope != "historical":
+        if scope == "ob-complete-strata":
+            validate_ob_complete(json.loads(path.read_text()))
+        elif scope != "historical":
             validate_corrected_panel(panel, json.loads(path.read_text()))
         panels.append({"panel": panel, **inspect_manifest(path, repo, tracked)})
     return {"status": "retained_figure_bytes_verified" if all(p["status"] == "all_recorded_bytes_match" for p in panels)
@@ -140,17 +152,17 @@ def audit(repo, scope="historical"):
                 "Manifest source inputs are checked, but their transitive raw-data dependencies are not traversed.",
                 "Fixed-length simulation panel remains a failure diagnostic, not an admitted OrthoFinder accuracy comparison.",
                 ("The QfO factorial figure uses original-release SwissTrees results, not corrected-input reruns."
-                 if scope == "historical" else "Explicit corrected-release supplement only; historical panels are not included or recertified."),
+                 if scope == "historical" else "Explicit supplement only; historical panels are not included or recertified."),
                 "The DGX resource figure is descriptive; its inclusion does not admit controlled timing comparisons.",
                 ("Corrected-QfO factorial figures are not certified by this historical inventory."
-                 if scope == "historical" else "Direct corrected figure evidence only; not the complete publication archive.")]}
+                 if scope == "historical" else "Direct figure evidence only; not the complete publication archive.")]}
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--scope", choices=("historical", "corrected-factorial", "corrected-current", "corrected-fastoma", "corrected-complete"), default="historical")
+    parser.add_argument("--scope", choices=("historical", "corrected-factorial", "corrected-current", "corrected-fastoma", "corrected-complete", "ob-complete-strata"), default="historical")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)

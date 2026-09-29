@@ -1,0 +1,111 @@
+{
+  "limitations": [
+    "Explicit retained panels only; historical and defective-runtime figures are not silently promoted.",
+    "Byte identity is not scientific, numerical, rendering or statistical validation.",
+    "Tracked membership does not establish clean committed bytes, licensing or portable execution.",
+    "Manifest source inputs are checked, but their transitive raw-data dependencies are not traversed.",
+    "Fixed-length simulation panel remains a failure diagnostic, not an admitted OrthoFinder accuracy comparison.",
+    "Explicit supplement only; historical panels are not included or recertified.",
+    "The DGX resource figure is descriptive; its inclusion does not admit controlled timing comparisons.",
+    "Direct figure evidence only; not the complete publication archive."
+  ],
+  "panels": [
+    {
+      "files": [
+        {
+          "actual": {
+            "bytes": 41981,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.pdf",
+            "sha256": "e8141adb34b6a8a4ffa14fde666e5194d084e161489943377228d6315e873a95"
+          },
+          "expected": {
+            "bytes": 41981,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.pdf",
+            "sha256": "e8141adb34b6a8a4ffa14fde666e5194d084e161489943377228d6315e873a95"
+          },
+          "repository_relative_path": "benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.pdf",
+          "status": "matches",
+          "tracked_in_main_repository": true
+        },
+        {
+          "actual": {
+            "bytes": 500727,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.png",
+            "sha256": "2126f3002884ab907b7801a3bf597108d915852de3b860c3e228d1135a68a7da"
+          },
+          "expected": {
+            "bytes": 500727,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.png",
+            "sha256": "2126f3002884ab907b7801a3bf597108d915852de3b860c3e228d1135a68a7da"
+          },
+          "repository_relative_path": "benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.png",
+          "status": "matches",
+          "tracked_in_main_repository": true
+        },
+        {
+          "actual": {
+            "bytes": 289543,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.svg",
+            "sha256": "5d5b4cab3febb9b69e5e8fd92b03599f7d228ddabaecd2af1a2bff5e71b16925"
+          },
+          "expected": {
+            "bytes": 289543,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.svg",
+            "sha256": "5d5b4cab3febb9b69e5e8fd92b03599f7d228ddabaecd2af1a2bff5e71b16925"
+          },
+          "repository_relative_path": "benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.svg",
+          "status": "matches",
+          "tracked_in_main_repository": true
+        },
+        {
+          "actual": {
+            "bytes": 5615,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_ob_complete_strata.py",
+            "sha256": "672fce4d89b33637d34a305d1a15b24dd2b027dcf4a23ab149f72d31c4beb93a"
+          },
+          "expected": {
+            "bytes": 5615,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_ob_complete_strata.py",
+            "sha256": "672fce4d89b33637d34a305d1a15b24dd2b027dcf4a23ab149f72d31c4beb93a"
+          },
+          "repository_relative_path": "benchmark_tools/plot_ob_complete_strata.py",
+          "status": "matches",
+          "tracked_in_main_repository": true
+        },
+        {
+          "actual": {
+            "bytes": 159022,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_20260928/report.json",
+            "sha256": "1850a897bef81e7a5a2829dc6770388b4936d767b4e41f1e704ee8ffc4093811"
+          },
+          "expected": {
+            "bytes": 159022,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_20260928/report.json",
+            "sha256": "1850a897bef81e7a5a2829dc6770388b4936d767b4e41f1e704ee8ffc4093811"
+          },
+          "repository_relative_path": "benchmark_tools/results/ob_complete_strata_20260928/report.json",
+          "status": "matches",
+          "tracked_in_main_repository": true
+        }
+      ],
+      "manifest": {
+        "bytes": 1437,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/manifest.json",
+        "sha256": "dc26e95c94a7284f190da3943c42439821b0964a07f864f300540cb1437d24e2"
+      },
+      "output_count": 3,
+      "panel": "ob_complete_strata_figure_20260928",
+      "status": "all_recorded_bytes_match"
+    }
+  ],
+  "publication_ready": false,
+  "scope": "ob-complete-strata",
+  "source": {
+    "bytes": 10205,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_publication_figures.py",
+    "sha256": "2a61fa0c7eddd7f13a9b6a97f949b70465bb4fbb95fca70043280e72f331e4b3"
+  },
+  "status": "retained_figure_bytes_verified",
+  "total_output_records": 3,
+  "untracked_dependencies": []
+}

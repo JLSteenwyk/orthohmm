@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Integrate OrthoBench Figure And Prepare Portable Evidence (2026-09-28)
+
+Previous turn made progress with figure commit `4707ee93`. Added the complete
+descriptive OrthoBench figure and bounded caption to the extended manuscript,
+and linked its scores/figure from the reproduction guide. The existing
+complete-panel bundle covers SwissTrees only; added an explicit
+`ob-complete-strata` audit scope without changing historical inventories.
+Sixty-seven focused audit/bundle tests pass. The new retained-byte audit
+passes. Commit this evidence before building a committed-source export and
+testing it outside the checkout. This is direct figure evidence, not raw
+inference, a standalone executable analysis or publication readiness. Existing
+rendered manuscript previews predate this source-text addition.
+
 ## Plot Complete OrthoBench Strata; Recheck Timing Host (2026-09-28)
 
 Previous turn made progress with the pushed all-method export `ed5a38ec`.

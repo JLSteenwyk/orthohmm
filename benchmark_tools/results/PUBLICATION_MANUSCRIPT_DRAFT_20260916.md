@@ -952,6 +952,26 @@ overlap, and differences between their effect estimates are not interaction
 tests. Scores and points are checked against full-reference sufficient statistics;
 the figure does not add new inference runs or independent biological evidence.
 
+The descriptive extension retains these same fourteen bins for all eight
+methods, using the full-reference family counts and unchanged scoring
+conventions. Its 112 method/bin rows reproduce all 42 original rows; two
+empty bins remain missing for every method. Independent rational arithmetic
+verified the weighted counts and scores. The added five comparators do not
+inherit the original three-method confidence intervals or 84-endpoint
+adjustment. These development-exposed results do not establish independent
+confirmation or justify tuning on subgroup outcomes.
+
+![All eight methods across frozen OrthoBench strata: weighted F1, precision and recall.](ob_complete_strata_figure_20260928/ob_complete_strata.png)
+
+Supplementary figure: all fourteen bins and eight methods in a fixed order,
+with a common 0-100 percent scale. The display retains 288 finite scores and
+48 NA cells across three metrics. Family counts are shown; bins overlap
+across dimensions. Gray NA cells represent empty bins, not zero accuracy.
+The concentrated-composition bin contains one family. No new intervals,
+significance tests or causal mechanism claims are added.
+[Complete score table and verification](OB_COMPLETE_STRATA_RESULT_20260928.md);
+[figure provenance and reproduction](OB_COMPLETE_STRATA_FIGURE_20260928.md).
+
 ### Retained Checkpoints Localize Membership Changes
 
 All70 OrthoBench families were traced across six retained checkpoints, with
