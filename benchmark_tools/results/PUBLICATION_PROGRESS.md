@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Package Verified LLVM Source Notices For Relocation (2026-09-29)
+
+Previous turn separated the pending timing-scope decision from current host
+contention (`35b9475b`). Reread goal and ledger. No user response assumed and
+no timing rule, scheduler setting or workload changed. Found that acquired
+LLVM notices were retained only in an inspection receipt, not an executable
+relocatable notice package.
+
+Extended the existing source-notice exporter with an explicit LLVM mode and
+unchanged legacy selection. It verifies recipe/archive bindings and reads
+the three selected texts directly from the source archive before writing a
+scoped index. [Export and offline relocation](LLVM_NOTICE_SUPPLEMENT_20260929.md)
+both pass on the actual files. All 57 focused notice tests pass, including
+original-input removal, corruption, unsafe members and incomplete exports.
+The supplement contains 46,987 notice bytes, not code or binaries. Per-file
+third-party attribution and source-to-binary correspondence remain open;
+neither legal clearance nor publication readiness is claimed. Goal active.
+
 ## Separate Inference Resource Scope From Job Teardown (2026-09-29)
 
 Previous turn corrected the reproduction guide (`701bf6b0`). Reread goal
