@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Prepare Deferred Independent Completion Audits (2026-09-29)
+
+Previous turn progressed effective service evidence, with unresolved policy
+gaps retained. Reread goal and ledger and confirmed 22377 still running and
+22378 dependency-pending. Prepared a single deferred audit job using the already
+tested scientific/calibration validators; no inference or completed audit is
+repeated. The [prospective protocol](PUBLICATION_COMPLETION_AUDITS_PROTOCOL_20260929.md)
+binds both commands, interpreter, submission script and 823 source files.
+All 822 earlier calibration sources remain unchanged.
+
+74 focused tests pass. The runner retains each subprocess log/exit/timeout,
+requires semantic acceptance and successful parent accounting rather than exit
+alone, and attempts both stages if one fails. A zero-exit scientific mismatch
+is retained as a failed reproduction check; no historical score is replaced.
+Timeout cleanup reaps only owned audit subprocesses. Shell syntax passes.
+
+The protocol is committed before submission with dependency on both parent
+jobs becoming terminal. No real audit outcome, controlled timing or publication
+completion is asserted. Do not call the manual audit commands while this
+deferred attempt is pending/running; inspect its retained outcomes afterward.
+The full goal remains active, with policy/isolation/overhead, uncertainty and
+release requirements still open.
+
 ## Capture Effective Local Service And Declared-File Evidence (2026-09-29)
 
 Previous turn progressed release packaging with an actual verified source

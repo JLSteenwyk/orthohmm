@@ -97,8 +97,13 @@ scientific validation is pending. Check the scheduler and newest
 [progress entries](results/PUBLICATION_PROGRESS.md); do not resubmit this job.
 Its installation audit is live evidence, not proof of terminal completion.
 
-After successful scheduler completion, run the following from the repository
-root with a trusted audit interpreter and a nonexistent audit output directory:
+A [deferred completion audit](results/PUBLICATION_COMPLETION_AUDITS_PROTOCOL_20260929.md)
+is prepared to run both independent audits after jobs 22377 and 22378 become
+terminal. Check its submission and live scheduler state before using the manual
+command below; do not run duplicate audits in parallel or overwrite outputs.
+Once the deferred job finishes, inspect its result instead of executing again.
+The following remains the manual command reference, requiring a trusted audit
+interpreter and a nonexistent audit output directory:
 
 ```sh
 python -m benchmark_tools.admit_restored_archive_ob \
