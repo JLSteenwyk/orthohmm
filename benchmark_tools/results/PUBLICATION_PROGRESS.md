@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Refresh Main Review After Full Reconstruction Result (2026-09-29)
+
+Previous turn made progress by acquiring the recipe-bound LLVM source
+(`fdfe7fb7`). Reread the goal and ledger. Inspected native-completion and
+collector code against retained accounting findings: existing native CPU and
+peak scopes do not establish terminal whole-job accounting. No collector,
+scheduler or service change, repeated fixture, or timing launch was made.
+
+The last main PDF predated the completed reconstructed-base OrthoBench
+paragraph. [Fresh HTML/PDF and six-page visual review](MAIN_RECONSTRUCTION_REVIEW_20260929.md)
+now include it. All 16 citation IDs and 23 tracked targets checked; PDF bounds
+checks passed, the new paragraph appears on page 2, and all six rendered pages
+were inspected without clipping or overlap. No manuscript prose or scientific
+result changed. Controlled timing, independent-family validation, unresolved
+uncertainty and release requirements remain open; this is not publication
+readiness. Goal active, Threadripper only.
+
 ## Acquire Recipe-Bound LLVM Source And Notice Texts (2026-09-29)
 
 Previous turn made progress with resolved-package verification (`3aae3645`).
