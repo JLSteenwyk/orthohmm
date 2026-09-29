@@ -1,0 +1,128 @@
+{
+  "observed_utc": "2026-09-29T04:34:22.769901+00:00",
+  "raw": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_load_20260929_0435.json",
+    "bytes": 1932067,
+    "sha256": "0887d2f2ad31640c6fe9b1e9ce4614022a1100f34d0d0b2ba4d6d0ead7b4ee3c"
+  },
+  "summary": {
+    "status": "competing_cpu_observed",
+    "controlled_workload_verified": false,
+    "scope": "/system.slice/slurmstepd.scope",
+    "threshold_average_cores": 0.25,
+    "sum_observed_foreign_average_cores": 101.96177693855677,
+    "persistent_foreign_processes": [
+      {
+        "pid": 2472548,
+        "created": 1790640416.57,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-pmsf-memory-recovery-20260928.service",
+        "cpu_s": 131.4500000000221,
+        "span_s": 8.331515625002794,
+        "average_cores": 15.777441454414607
+      },
+      {
+        "pid": 1162494,
+        "created": 1790607375.49,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+        "cpu_s": 66.47999999996276,
+        "span_s": 8.32699893397512,
+        "average_cores": 7.983668609433425
+      },
+      {
+        "pid": 2473441,
+        "created": 1790640475.4,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-0627ad9c-c122-4329-8323-12ec68f8e95b.scope",
+        "cpu_s": 61.44000000000233,
+        "span_s": 8.331533882999793,
+        "average_cores": 7.374392382340127
+      },
+      {
+        "pid": 2683462,
+        "created": 1790512421.87,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-hybrid-excluded-guides-20260927.service",
+        "cpu_s": 33.07000000006519,
+        "span_s": 8.334185136016458,
+        "average_cores": 3.9679944062140025
+      },
+      {
+        "pid": 2627183,
+        "created": 1790651250.68,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+        "cpu_s": 16.66000000000109,
+        "span_s": 8.333951411012094,
+        "average_cores": 1.9990517316896455
+      },
+      {
+        "pid": 2624537,
+        "created": 1790651054.98,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+        "cpu_s": 16.65000000000036,
+        "span_s": 8.333975317014847,
+        "average_cores": 1.9978460898495003
+      },
+      {
+        "pid": 2667859,
+        "created": 1790653509.78,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+        "cpu_s": 16.64999999999971,
+        "span_s": 8.335015689954162,
+        "average_cores": 1.9975967195919313
+      },
+      {
+        "pid": 2607592,
+        "created": 1790649854.76,
+        "name": "iqtree3",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+        "cpu_s": 16.62999999999949,
+        "span_s": 8.333941797027364,
+        "average_cores": 1.9954543006205359
+      },
+      {
+        "pid": 2380498,
+        "created": 1790635758.45,
+        "name": "python",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-54595aa2-a9c8-4fd5-9f8f-3d75602df294.scope",
+        "cpu_s": 8.349999999998147,
+        "span_s": 8.331561024999246,
+        "average_cores": 1.0022131476854785
+      },
+      {
+        "pid": 2652515,
+        "created": 1790652430.64,
+        "name": "python",
+        "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-whole-protein-model-design-readback-20260928-v2.service",
+        "cpu_s": 8.340000000000146,
+        "span_s": 8.333383827994112,
+        "average_cores": 1.0007939358299816
+      }
+    ],
+    "unmatched_foreign_processes": [
+      {
+        "pid": 2712945,
+        "created": 1790656341.84
+      },
+      {
+        "pid": 2713615,
+        "created": 1790656395.82
+      }
+    ],
+    "uncertain_processes": [],
+    "sampling_error_count": 4
+  },
+  "displayed_processes": "ten largest persistent foreign CPU consumers only",
+  "slurm_queue": "empty in adjacent read-only squeue query",
+  "production_runs_launched": 0,
+  "publication_ready": false,
+  "limitations": [
+    "Five-second requested sampling interval, not whole-run isolation",
+    "Four process sampling errors retained",
+    "No CPU or memory correction or stopping unrelated work"
+  ]
+}

@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Recheck Whether The Timing Window Has Opened (2026-09-29)
+
+Previous turn progressed remote-CI failure diagnosis (`0dc732bf`). Reread
+goal and took one fresh, read-only five-second process observation to decide
+whether controlled timing can proceed. It cannot: 101.96 persistent competing
+CPU-core equivalents were observed despite an empty Slurm queue. Four
+sampling errors remain explicit. Largest workloads include IQ-TREE under
+fungal PMSF recovery, guide-tree and marker-tree services/scopes.
+[Bounded observation and raw checksum](threadripper_load_recheck_20260929.json).
+
+No unrelated process was stopped, service changed, new fixture repeated or
+scientific timing launched. Pending quiet-window coordination and unresolved
+complete accounting still prevent the 27-run panel. Recent unit, parser and
+PDF work does not resolve those prerequisites; another cosmetic report or
+repeat fixture should not be substituted for them. Remaining scientific
+uncertainty, high-CPM crash and release boundaries stay explicit. Goal active;
+this observation does not establish completion or host isolation.
+
 ## Inspect Actual Remote CI Outcome (2026-09-29)
 
 Previous turn progressed explicit CI parser dependencies (`81283f0b`). Reread
