@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Separate Inference Resource Scope From Job Teardown (2026-09-29)
+
+Previous turn corrected the reproduction guide (`701bf6b0`). Reread goal
+and retained collector/accounting evidence. The goal's phase-separated resource
+comparison need not be confused with terminal whole-job teardown accounting.
+[Pending scope proposal](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md)
+defines a possible native-inference endpoint, its differing CPU/memory scopes,
+and remaining validation. Asked the user which scope to require; no response
+or production amendment is assumed. Existing guards remain unchanged.
+
+A fresh read-only two-snapshot observation found 104.586267 competing CPU-core
+equivalents despite an empty Slurm queue, with three sampling errors and eight
+unmatched identities retained. This confirms current contention, not isolation.
+No unrelated process or service was changed. Quiet-window coordination remains
+necessary under either resource scope. No native benchmark, fixture repeat,
+scientific change or DGX action occurred. The full goal remains active.
+
 ## Reconcile Reproduction Guide With Completed Full Runs (2026-09-29)
 
 Previous turn documented a bounded negative TreeFam lead (`61bc8d82`),
