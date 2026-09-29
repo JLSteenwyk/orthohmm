@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Prepare Job-Specific Restored Archive Completion Verification (2026-09-29)
+
+Previous turn completed the live package audit. Reread goal and ledger and
+confirmed job 22377 remains running. Added a separate execution verifier tied
+to job 22377 and its exact plan digest; earlier job validators are unchanged.
+It requires successful job and batch accounting, correct resource allocation,
+submission/start/command bindings, all eight stage receipts, unchanged inputs
+and dependencies, and consistent terminal logs. Scientific admission remains
+explicitly separate. The CLI refuses an existing output and writes nothing
+until execution checks pass.
+
+All 69 focused new and existing workflow tests pass. Calling the verifier
+against the actual running job correctly rejects terminal admission without
+creating an output. This is an expected negative check, not a failed benchmark.
+After scheduler completion, run `python -m benchmark_tools.verify_restored_archive_execution`
+with the retained run directory and a fresh output path, then perform the
+protocol's independent package/readback/partition/native-output comparisons.
+No expensive run restarted, no scientific settings changed, goal active.
+
 ## Verify Restored-Archive Installed Packages While Inference Runs (2026-09-29)
 
 Previous turn made progress by preparing and submitting job 22377. Reread goal
