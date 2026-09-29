@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Reacquire Fixed Three Kingdoms Sources (2026-09-28)
+
+Previous turn made progress by pushing the bounded refinement/GC result as
+`98948e25`. Reread the goal and current data-rights/reproduction records.
+The retained Three Kingdoms audit lacked independent provider-byte checks.
+Added a bounded checksum/reacquisition auditor and first verified all eleven
+fixed Ensembl files against their release-specific CHECKSUMS entries. Because
+BSD checksums are weak, a second pass downloaded the actual compressed files
+once each over HTTPS into a separate directory. Every fresh file matches the
+retained size and SHA256; no benchmark input was overwritten.
+
+The [result and commands](THREE_KINGDOMS_PROVIDER_REACQUISITION_20260928.md)
+retain source metadata and explicit scope. Thirty-one focused tests pass.
+Xenopus's moving UniProt URL remains unattempted and unresolved, not a match.
+No inference, BUSCO rerun, accuracy scoring, controlled timing or redistribution
+occurred. Exact source reproduction does not settle data rights or per-tool
+historical consumption. Scientific uncertainty, timing and release gates remain
+open; the full publication goal is active.
+
 ## Complete The Single Refinement/GC Diagnostic (2026-09-28)
 
 The protocol and runner were committed and pushed as `7fa613a6` before the

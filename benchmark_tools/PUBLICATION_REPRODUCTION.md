@@ -155,6 +155,11 @@ RUNNING observation does not establish current liveness or completion.
   and the genome map against staged inputs. It does not establish immutable
   historical consumption, complete BLAST/BPO provenance or genome-wide accuracy.
 
+- [Three Kingdoms fixed-release reacquisition](results/THREE_KINGDOMS_PROVIDER_REACQUISITION_20260928.md)
+  freshly downloads all eleven fixed Ensembl sources and verifies exact size
+  and SHA256 equality to retained compressed inputs. The moving Xenopus URL
+  remains unresolved; this is not redistribution clearance or per-tool provenance.
+
 - [Full OrthoBench recovery protocol](results/FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
   freezes the 251,378-gene end-to-end run through the new explicit entrypoint.
   Job 22326 was submitted after protocol commit; its completed evidence is

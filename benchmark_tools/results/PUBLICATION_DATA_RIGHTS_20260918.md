@@ -77,6 +77,12 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [Three Kingdoms fixed-release reacquisition](THREE_KINGDOMS_PROVIDER_REACQUISITION_20260928.md)
+now verifies exact size/SHA256 equality for fresh HTTPS copies of all eleven
+fixed Ensembl sources, as well as matching their provider checksum entries.
+The moving Xenopus source is still unresolved. Source equality does not grant
+redistribution rights; these inputs remain acquisition-only for new packaging.
+
 The [exact frozen-overlay artifact inventory](FROZEN_OVERLAY_ARTIFACT_INVENTORY_20260926.md)
 now binds the current 11-wheel installed runtime to notice metadata. Its ten
 third-party wheels match the older inventory byte-for-byte, while the separately
