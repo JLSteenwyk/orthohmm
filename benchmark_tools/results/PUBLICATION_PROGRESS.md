@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Inspect Retained llvmlite Binary Build Fields (2026-09-29)
+
+Previous turn acquired exact-wheel-bound wrapper source candidates (`53e382e6`).
+Reread goal and inspected the installed configuration API before probing the
+already trusted inference runtime. [Binary build observation](LLVMLITE_BINARY_BUILD_20260929.md)
+reports LLVM 22.1.0, static LLVM, dynamic libstdc++, wheel format, assertions
+on and no SVML. Binary and two wrapper files match their exact wheel members
+before/after; wheel hashes also recheck. Probe exited 0 with empty stderr.
+
+This narrows the external-source search beyond the CMake default major while
+preserving uncertainty about actual source revision, patches and toolchain.
+Source `ffi/config.cpp` confirms these configuration fields are compiled-in
+properties, not a complete build attestation. No package was installed or
+changed and no benchmark was rerun. Exact LLVM source/build correspondence,
+release clearance, scientific uncertainty and controlled timing remain open.
+Goal active; waiting for host coordination is not publication completion.
+
 ## Acquire Wheel-Bound Numba And llvmlite Sources (2026-09-29)
 
 Previous turn integrated full reproduction into manuscripts (`5b5ed9a5`).
