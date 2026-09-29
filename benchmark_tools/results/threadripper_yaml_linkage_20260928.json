@@ -1,0 +1,107 @@
+{
+  "comparison": {
+    "bytes": 473275,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_import_comparison_v2_20260928.json",
+    "sha256": "5baf8d3dc2d8c78decfa9d36742dcf8bbb98ced94ef8cb8a0f20dfdb223856cb"
+  },
+  "initial_probe_failure": {
+    "correction": "Append explicit site-packages after standard-library paths; retain -I -S -B and exact extension path check",
+    "exception": "ImportError: cannot import name Sequence from collections",
+    "reason": "Prepending site-packages shadowed standard-library pathlib with obsolete backport"
+  },
+  "limitations": [
+    "Runtime versions and dynamic dependencies do not establish parser or inference equivalence.",
+    "No binary replacement, shared environment change, or timing admission."
+  ],
+  "readelf": {
+    "bytes": 789280,
+    "path": "/usr/bin/x86_64-linux-gnu-readelf",
+    "sha256": "6d54602a1ee13f1214973086bd60efe2dae4363f8f5ab7516eaaf3e259dca90e"
+  },
+  "results": {
+    "current": {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "-c",
+        "import sys,json; sys.path.append(sys.argv[1]); import yaml,yaml._yaml; from pathlib import Path; print(json.dumps(dict(version=yaml.__version__,libyaml_version=yaml._yaml.get_version_string(),extension=yaml._yaml.__file__,yaml_maps=sorted({line.split(maxsplit=5)[5] for line in Path('/proc/self/maps').read_text().splitlines() if 'libyaml' in line and len(line.split(maxsplit=5))==6}))))",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages"
+      ],
+      "dynamic_command": [
+        "/usr/bin/readelf",
+        "-d",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so"
+      ],
+      "dynamic_stderr": "",
+      "dynamic_stdout": "\nDynamic section at offset 0x54d48 contains 25 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libpthread.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x7000\n 0x000000000000000d (FINI)               0x4cbc8\n 0x0000000000000019 (INIT_ARRAY)         0x55d30\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x55d38\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x260\n 0x0000000000000005 (STRTAB)             0x1678\n 0x0000000000000006 (SYMTAB)             0x430\n 0x000000000000000a (STRSZ)              3724 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x56000\n 0x0000000000000002 (PLTRELSZ)           3600 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x5558\n 0x0000000000000007 (RELA)               0x26c0\n 0x0000000000000008 (RELASZ)             11928 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x2690\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x2504\n 0x000000006ffffff9 (RELACOUNT)          468\n 0x0000000000000000 (NULL)               0x0\n",
+      "extension": {
+        "bytes": 2226000,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "ffd895ac049ab508104855e529e09edae2b64f22b093d9ddeb50acffe7ea0073"
+      },
+      "mapped_yaml_libraries": [],
+      "observed": {
+        "extension": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so",
+        "libyaml_version": "0.2.5",
+        "version": "6.0.1",
+        "yaml_maps": []
+      },
+      "python": {
+        "bytes": 17157264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+      },
+      "stderr": "",
+      "stdout": "{\"version\": \"6.0.1\", \"libyaml_version\": \"0.2.5\", \"extension\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so\", \"yaml_maps\": []}\n"
+    },
+    "prior": {
+      "command": [
+        "/home/bizon/anaconda3/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "-c",
+        "import sys,json; sys.path.append(sys.argv[1]); import yaml,yaml._yaml; from pathlib import Path; print(json.dumps(dict(version=yaml.__version__,libyaml_version=yaml._yaml.get_version_string(),extension=yaml._yaml.__file__,yaml_maps=sorted({line.split(maxsplit=5)[5] for line in Path('/proc/self/maps').read_text().splitlines() if 'libyaml' in line and len(line.split(maxsplit=5))==6}))))",
+        "/home/bizon/anaconda3/lib/python3.10/site-packages"
+      ],
+      "dynamic_command": [
+        "/usr/bin/readelf",
+        "-d",
+        "/home/bizon/anaconda3/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so"
+      ],
+      "dynamic_stderr": "",
+      "dynamic_stdout": "\nDynamic section at offset 0x31978 contains 22 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libyaml-0.so.2]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000f (RPATH)              Library rpath: [$ORIGIN/../../..]\n 0x000000000000000c (INIT)               0x7000\n 0x000000000000000d (FINI)               0x2d6e4\n 0x0000000000000004 (HASH)               0x200\n 0x000000006ffffef5 (GNU_HASH)           0x908\n 0x0000000000000005 (STRTAB)             0x1820\n 0x0000000000000006 (SYMTAB)             0x950\n 0x000000000000000a (STRSZ)              3397 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x32b18\n 0x0000000000000007 (RELA)               0x26e8\n 0x0000000000000008 (RELASZ)             14880 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x0000000000000018 (BIND_NOW)           \n 0x000000006ffffffb (FLAGS_1)            Flags: NOW\n 0x000000006ffffffe (VERNEED)            0x26a8\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x2566\n 0x000000006ffffff9 (RELACOUNT)          466\n 0x0000000000000000 (NULL)               0x0\n",
+      "extension": {
+        "bytes": 260024,
+        "path": "/home/bizon/anaconda3/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so",
+        "sha256": "29843872d047327b826cc6f595f0790558beda83c2dda94c0fbf49051c1040c6"
+      },
+      "mapped_yaml_libraries": [
+        {
+          "bytes": 125072,
+          "path": "/home/bizon/anaconda3/lib/libyaml-0.so.2.0.9",
+          "sha256": "ea079a6864ca10a6f8ea7d2d312c71121f5c966dc8e334f713a3bc8eb242ee49"
+        }
+      ],
+      "observed": {
+        "extension": "/home/bizon/anaconda3/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so",
+        "libyaml_version": "0.2.5",
+        "version": "6.0.1",
+        "yaml_maps": [
+          "/home/bizon/anaconda3/lib/libyaml-0.so.2.0.9"
+        ]
+      },
+      "python": {
+        "bytes": 17157264,
+        "path": "/home/bizon/anaconda3/bin/python3.10",
+        "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+      },
+      "stderr": "",
+      "stdout": "{\"version\": \"6.0.1\", \"libyaml_version\": \"0.2.5\", \"extension\": \"/home/bizon/anaconda3/lib/python3.10/site-packages/yaml/_yaml.cpython-310-x86_64-linux-gnu.so\", \"yaml_maps\": [\"/home/bizon/anaconda3/lib/libyaml-0.so.2.0.9\"]}\n"
+    }
+  },
+  "scientific_execution_authorized": false,
+  "status": "yaml_linkage_diagnostic"
+}

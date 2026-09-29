@@ -1,5 +1,11 @@
 # Private Timing Runtime Candidate
 
+Update: the [packaging alignment](THREADRIPPER_PACKAGING_ALIGNMENT_20260928.md)
+subsequently replaced only private packaging 26.0 with hash-proven historical
+26.1 payloads. The comparison is now 709/710 identical files. The original
+installation/lock below is historical; use the linked v2 lock for that revision.
+The PyYAML build difference and native timing integration remain open.
+
 Created a separate candidate at
 `benchmarks/work/threadripper_private_runtime_20260928/venv`, using the already
 reconstructed CPython 3.10.13 at

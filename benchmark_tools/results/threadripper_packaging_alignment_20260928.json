@@ -1,0 +1,359 @@
+{
+  "baseline": {
+    "bytes": 489545,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+    "sha256": "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041"
+  },
+  "checked_payload": [
+    {
+      "bytes": 494,
+      "member": "packaging/__init__.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/__init__.py",
+      "sha256": "55d3d36c7e6074ee650d47de8c44e624db57c42a4a4ab15bd79278c4cca37bcc"
+    },
+    {
+      "bytes": 3211,
+      "member": "packaging/_elffile.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/_elffile.py",
+      "sha256": "fac2a4a6d62acd8c36fb1dd007225ae66078adf3d6bb5a719191d1c755801426"
+    },
+    {
+      "bytes": 9559,
+      "member": "packaging/_manylinux.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/_manylinux.py",
+      "sha256": "1dfea707470eadac84b3debea77a085c08069c5aaebf6d033b997ea36fd79efd"
+    },
+    {
+      "bytes": 2707,
+      "member": "packaging/_musllinux.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/_musllinux.py",
+      "sha256": "67ab308c7dcc03b5d2dea5e798c37b40f86a3f77e7a18234790d7c7bdf878001"
+    },
+    {
+      "bytes": 10518,
+      "member": "packaging/_parser.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/_parser.py",
+      "sha256": "53f0da8ec131d95a02fc5e3a7d2555de10ca3425a841890f91ab0eddd95dd228"
+    },
+    {
+      "bytes": 5391,
+      "member": "packaging/_tokenizer.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/_tokenizer.py",
+      "sha256": "b455365abf996497406e45cb109a3ba9440325a2247dfb7d0ea6a27e210d0fb0"
+    },
+    {
+      "bytes": 10218,
+      "member": "packaging/dependency_groups.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/dependency_groups.py",
+      "sha256": "5d92005452bdb871b84421a9ae6267dd522751631eb3185afe4cad26e30ef5e6"
+    },
+    {
+      "bytes": 10917,
+      "member": "packaging/direct_url.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/direct_url.py",
+      "sha256": "78a99b0e23cfd6c2d5e0c8ff902499aaa927ac8c953bd4abec9a45f0a0a3a785"
+    },
+    {
+      "bytes": 2680,
+      "member": "packaging/errors.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/errors.py",
+      "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b"
+    },
+    {
+      "bytes": 15258,
+      "member": "packaging/markers.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/markers.py",
+      "sha256": "f03e1e5e7ecc3df8c2387a0cd111e4816ba692890e458db5a5788afd70d79cbd"
+    },
+    {
+      "bytes": 38691,
+      "member": "packaging/metadata.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/metadata.py",
+      "sha256": "acad7d7d086b04dbf79c836ababa6ea3e42c09942e5a799211a4781e9fbbe89b"
+    },
+    {
+      "bytes": 0,
+      "member": "packaging/py.typed",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 33890,
+      "member": "packaging/pylock.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/pylock.py",
+      "sha256": "1bfd609dc4e60db44b6358e8e150c8f54c3e6f9204ae1fd0f55fc16d5253983f"
+    },
+    {
+      "bytes": 2984,
+      "member": "packaging/requirements.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/requirements.py",
+      "sha256": "b6dc9e0ac2c3d7d8681c250286a8b130a9287031aa5a65f1cc6656b3b2215120"
+    },
+    {
+      "bytes": 65328,
+      "member": "packaging/specifiers.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/specifiers.py",
+      "sha256": "bebf6dee70b9543a9aa5d3aa6cc6b6b43c4970713f7a5ab9ac1b40877611c0a7"
+    },
+    {
+      "bytes": 32421,
+      "member": "packaging/tags.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/tags.py",
+      "sha256": "9f07ec0aa5b1941de167c93113dc5ac8bca40e72cb6d8840b0d6ce084361e863"
+    },
+    {
+      "bytes": 9848,
+      "member": "packaging/utils.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/utils.py",
+      "sha256": "33bf8930a89cdac3f562d57ff1a5bb795181fb1dc00ee282892aec55e09dd94a"
+    },
+    {
+      "bytes": 35427,
+      "member": "packaging/version.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/version.py",
+      "sha256": "e177d74d2921f748d05b270d269c094f8741b39f5149556f24f79bdf4b355675"
+    },
+    {
+      "bytes": 7293,
+      "member": "packaging/licenses/__init__.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/licenses/__init__.py",
+      "sha256": "fc9c745d1883ff9f296a5b169f22eb2ee879f59a4608f20f5cb29d668f4e26f4"
+    },
+    {
+      "bytes": 51122,
+      "member": "packaging/licenses/_spdx.py",
+      "prior_path": "/home/bizon/anaconda3/lib/python3.10/site-packages/packaging/licenses/_spdx.py",
+      "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+    }
+  ],
+  "historical": {
+    "bytes": 39977444,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_reporting_runtime_20260928/0.json",
+    "sha256": "00ec1d6b9b082c61c98a1627ad2979593fb95b33955797b2e5b93d882c502acd"
+  },
+  "import_report": {
+    "bytes": 167076,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/imports.log",
+    "sha256": "a7a7008c6fbe0b5d7839120596c2ee46034052d2d2182c8f7943dd410e8611f9"
+  },
+  "installed": [
+    {
+      "bytes": 494,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/__init__.py",
+      "sha256": "55d3d36c7e6074ee650d47de8c44e624db57c42a4a4ab15bd79278c4cca37bcc"
+    },
+    {
+      "bytes": 3211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/_elffile.py",
+      "sha256": "fac2a4a6d62acd8c36fb1dd007225ae66078adf3d6bb5a719191d1c755801426"
+    },
+    {
+      "bytes": 9559,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/_manylinux.py",
+      "sha256": "1dfea707470eadac84b3debea77a085c08069c5aaebf6d033b997ea36fd79efd"
+    },
+    {
+      "bytes": 2707,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/_musllinux.py",
+      "sha256": "67ab308c7dcc03b5d2dea5e798c37b40f86a3f77e7a18234790d7c7bdf878001"
+    },
+    {
+      "bytes": 10518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/_parser.py",
+      "sha256": "53f0da8ec131d95a02fc5e3a7d2555de10ca3425a841890f91ab0eddd95dd228"
+    },
+    {
+      "bytes": 5391,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/_tokenizer.py",
+      "sha256": "b455365abf996497406e45cb109a3ba9440325a2247dfb7d0ea6a27e210d0fb0"
+    },
+    {
+      "bytes": 10218,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/dependency_groups.py",
+      "sha256": "5d92005452bdb871b84421a9ae6267dd522751631eb3185afe4cad26e30ef5e6"
+    },
+    {
+      "bytes": 10917,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/direct_url.py",
+      "sha256": "78a99b0e23cfd6c2d5e0c8ff902499aaa927ac8c953bd4abec9a45f0a0a3a785"
+    },
+    {
+      "bytes": 2680,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/errors.py",
+      "sha256": "ea17c461701ff2ffc817ae7e94569d24e30889e04fdb120ab721178c6d67188b"
+    },
+    {
+      "bytes": 15258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/markers.py",
+      "sha256": "f03e1e5e7ecc3df8c2387a0cd111e4816ba692890e458db5a5788afd70d79cbd"
+    },
+    {
+      "bytes": 38691,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/metadata.py",
+      "sha256": "acad7d7d086b04dbf79c836ababa6ea3e42c09942e5a799211a4781e9fbbe89b"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 33890,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/pylock.py",
+      "sha256": "1bfd609dc4e60db44b6358e8e150c8f54c3e6f9204ae1fd0f55fc16d5253983f"
+    },
+    {
+      "bytes": 2984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/requirements.py",
+      "sha256": "b6dc9e0ac2c3d7d8681c250286a8b130a9287031aa5a65f1cc6656b3b2215120"
+    },
+    {
+      "bytes": 65328,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/specifiers.py",
+      "sha256": "bebf6dee70b9543a9aa5d3aa6cc6b6b43c4970713f7a5ab9ac1b40877611c0a7"
+    },
+    {
+      "bytes": 32421,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/tags.py",
+      "sha256": "9f07ec0aa5b1941de167c93113dc5ac8bca40e72cb6d8840b0d6ce084361e863"
+    },
+    {
+      "bytes": 9848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/utils.py",
+      "sha256": "33bf8930a89cdac3f562d57ff1a5bb795181fb1dc00ee282892aec55e09dd94a"
+    },
+    {
+      "bytes": 35427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/version.py",
+      "sha256": "e177d74d2921f748d05b270d269c094f8741b39f5149556f24f79bdf4b355675"
+    },
+    {
+      "bytes": 7293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/licenses/__init__.py",
+      "sha256": "fc9c745d1883ff9f296a5b169f22eb2ee879f59a4608f20f5cb29d668f4e26f4"
+    },
+    {
+      "bytes": 51122,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/lib/python3.10/site-packages/packaging/licenses/_spdx.py",
+      "sha256": "596ec35e2ca0ebcba9fd8343ff0a51625af548786257815f24b41f7e08613314"
+    }
+  ],
+  "limitations": [
+    "Only the private candidate changed; previous installation and comparison receipts remain historical.",
+    "Historical module bytes, not stale distribution metadata, establish packaging 26.1 selection.",
+    "PyYAML build difference and native integration remain unvalidated; no timing admission."
+  ],
+  "lock": {
+    "bytes": 95,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/packaging.txt",
+    "sha256": "862c2795f9f8abbdd60c1450f3857c6baecf188d5dc94a21de4595318e89ed78"
+  },
+  "previous": {
+    "bytes": 17866,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/result.json",
+    "sha256": "39b12b146572dbeedf87f362b1aa51fdaca92aa07d26b1d98e4c55330985bd70"
+  },
+  "scientific_execution_authorized": false,
+  "selected": {
+    "Cython": "3.1.8",
+    "DendroPy": "5.0.8",
+    "PyYAML": "6.0.1",
+    "colorama": "0.4.6",
+    "contourpy": "1.3.2",
+    "coverage": "7.13.4",
+    "cycler": "0.12.1",
+    "defusedxml": "0.7.1",
+    "fonttools": "4.61.1",
+    "igraph": "1.0.0",
+    "kiwisolver": "1.4.9",
+    "leidenalg": "0.11.0",
+    "llvmlite": "0.47.0",
+    "matplotlib": "3.10.8",
+    "narwhals": "2.18.1",
+    "numba": "0.65.0",
+    "numpy": "2.2.6",
+    "packaging": "26.1",
+    "pillow": "12.2.0",
+    "pip": "26.2.1",
+    "plotly": "6.6.0",
+    "psutil": "7.2.2",
+    "pyparsing": "3.2.1",
+    "python-dateutil": "2.8.2",
+    "python-igraph": "1.0.0",
+    "scipy": "1.15.3",
+    "setuptools": "81.0.0",
+    "six": "1.16.0",
+    "texttable": "1.7.0",
+    "wcwidth": "0.2.5"
+  },
+  "source": {
+    "bytes": 5767,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/align_private_packaging.py",
+    "sha256": "9c514b9afc40ebbd1b1abbf7c57672e6dfb6162efc073b821cc6b9da91e95051"
+  },
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--only-binary=:all:",
+        "--require-hashes",
+        "--find-links",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928",
+        "-r",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/packaging.txt"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 698,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/install.log",
+        "sha256": "340a5f99fbc947e117aacf59a4a57c14ef98dcbc047ca5a1e73f40f8a10d80a0"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 30,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/dependencies.log",
+        "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,json,importlib.metadata as m; sys.path.insert(0,sys.argv[1]); import orthohmm.orthohmm,orthohmm.search.engine,igraph,leidenalg,dendropy; print(json.dumps(dict(executable=sys.executable,base_prefix=sys.base_prefix,path=sys.path,packages={d.metadata['Name']:d.version for d in m.distributions()},modules={n:getattr(v,'__file__',None) for n,v in sorted(sys.modules.items()) if getattr(v,'__file__',None)}),sort_keys=True))",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 167076,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/execution/imports.log",
+        "sha256": "a7a7008c6fbe0b5d7839120596c2ee46034052d2d2182c8f7943dd410e8611f9"
+      }
+    }
+  ],
+  "status": "private_packaging_historical_payload_aligned",
+  "wheel": {
+    "bytes": 95831,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_packaging_alignment_20260928/packaging-26.1-py3-none-any.whl",
+    "sha256": "5d9c0669c6285e491e0ced2eee587eaf67b670d94a19e94e3984a481aba6802f"
+  }
+}

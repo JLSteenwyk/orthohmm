@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Align Private Packaging To Historical Source Bytes (2026-09-28)
+
+Previous turn progressed private installation (`0bbe11cc`). Reread the goal;
+verified all 20 packaging 26.1 wheel payload files against the pinned historical
+runtime before changing only the private candidate. Offline hash-required
+installation and pip check pass; all 30 selected distribution versions agree.
+New comparison rechecks 40 core files and matches 709/710 historical imports.
+[Alignment, v2 lock and YAML investigation](THREADRIPPER_PACKAGING_ALIGNMENT_20260928.md).
+
+Remaining YAML difference is explicit: both builds report PyYAML 6.0.1/libyaml
+0.2.5, but the historical extension dynamically loads a shared-prefix libyaml,
+whereas the wheel maps no separate libyaml. No equivalence inferred. Retained
+an initial diagnostic path-order failure and its standard-library-first fix.
+20 focused tests pass. No shared environment mutation or native/timing run;
+private deployment amendment and integration remain required. Goal active.
+
 ## Stage A Private Timing Runtime Candidate (2026-09-28)
 
 Previous turn progressed drift diagnosis (`02e514fa`). Reread the goal and
