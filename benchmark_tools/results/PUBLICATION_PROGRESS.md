@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Inspect Another Release-7 Archive Lead (2026-09-28)
+
+Previous turn made progress by pushing the candidate-package advisory audit
+as `d87fbfe5`. Reread the objective and inspected the timing executor and
+worker requirements. A [fresh host capture](threadripper_handoff_recheck_20260928.json)
+observes 108.329 competing CPU-core equivalents, three vanished-process
+sampling errors and two unmatched processes despite an empty Slurm queue.
+Major workloads include BAli-Phy, matched intervals, Neocallimastix guides
+and PMSF recovery. No production timing was launched or unrelated job stopped.
+Quiet-window coordination and the previously documented execution gates remain.
+
+Public searching found the Gerstein lab's historical TreeFam release-7-derived
+archive. Downloaded five tables and its directory listing. The
+[inspection](TREEFAM_GERSTEIN_ARCHIVE_20260928.md) establishes that the file
+labeled worm repeats all 19,789 fly records, despite a different header.
+Parsed family counts also differ from the accompanying resource page by one.
+Three parser/integrity tests pass; source hashes were checked before and after.
+Downloads used the public HTTP archive after HTTPS certificate validation
+failed; validation was not disabled, and source authenticity is not established.
+
+This is a new inspected lead, not recovered original trees or QfO mapping.
+No derived family labels, scores or uncertainty estimates were substituted.
+No maintainer contact or DGX action occurred. The publication goal remains
+active with controlled timing, uncertainty and release requirements incomplete.
+
 ## Expand Candidate Release Advisory Coverage (2026-09-28)
 
 Previous turn made progress by committing and pushing manuscript review v10

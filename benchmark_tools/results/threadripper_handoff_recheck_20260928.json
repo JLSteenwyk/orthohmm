@@ -1,0 +1,53 @@
+{
+  "limitations": [
+    "No active benchmark allocation; excludes only the capture process.",
+    "Persistent CPU observations do not establish whole-run isolation.",
+    "Three processes disappeared during sampling; these are not zero-load evidence.",
+    "No unrelated process or service was modified."
+  ],
+  "observed_foreign_average_cores": 108.32863965834551,
+  "production_started": false,
+  "sampling_error_count": 3,
+  "slurm_queue": "",
+  "source": {
+    "bytes": 1524906,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_handoff_recheck_20260928.json",
+    "sha256": "a05ed9c0a8277edb562f0d6ee6d71a63954923416aa69e6c2c665d51fa007ad8"
+  },
+  "status": "competing_cpu_observed",
+  "top_cgroups": [
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-baliphy-independent-chains-20260927.service",
+      16.002816572417697
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-selected-matched-intervals-20260928.service",
+      15.999541827746288
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+      15.53921680269462
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-pmsf-memory-recovery-20260928.service",
+      15.181390282475693
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-fastml-optimizer-refinement-20260928-v3.service",
+      7.999574625808882
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-full-polynomial-ml-20260927.service",
+      7.991716292037492
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-mafft-marker-trees-resumed-20260928.service",
+      7.987266063707172
+    ],
+    [
+      "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-domain-coordinates-20260928.service",
+      3.988728204721265
+    ]
+  ],
+  "unmatched_processes": 2
+}

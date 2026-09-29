@@ -1,0 +1,75 @@
+{
+  "download": {
+    "bytes": 5469,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/download.json",
+    "sha256": "1d8d74ca016fa06fe5fe89bd9599cd9b861f2cf99436554581b6339b5d0fed7c"
+  },
+  "fly_and_worm_data_rows_identical": true,
+  "fly_and_worm_id_intersection": 19789,
+  "gene_table_rows": {
+    "fly": 19789,
+    "human": 46810,
+    "worm": 19789
+  },
+  "inputs": [
+    {
+      "bytes": 4806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/index.html",
+      "sha256": "4ebcd3529021125eae2a628c46a5c6eced9e3d73f14966b9799063d8d845bce3"
+    },
+    {
+      "bytes": 389120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/tf.human_fly_worm.fam_genes.raw",
+      "sha256": "85dad651f30a20dbae30c41e0e6e28e455bb0c725edcb2bb78fe9ae331edb933"
+    },
+    {
+      "bytes": 51806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/tf.human_fly_worm.fam_genes.all",
+      "sha256": "8572e321cb46ee6cb3f21559af951ba3265464237b405b986387ee01fa902e2b"
+    },
+    {
+      "bytes": 3300887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/tf.human.genes.raw",
+      "sha256": "60510f0cd7a23413b62e13e2c0d4241ddcd355da4962eba7e5789879bd8aad42"
+    },
+    {
+      "bytes": 1039420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/tf.fly.genes.raw",
+      "sha256": "b4400243057dc241cbddaac6dbaf0e77013dd701cb3146aaf25ef825da65d59f"
+    },
+    {
+      "bytes": 1039421,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_gerstein_20260928/tf.worm.genes.raw",
+      "sha256": "c74f750808becbfae89236881bcd6323ce5ebdace94c75ccfc1285d64a835ad1"
+    }
+  ],
+  "limitations": [
+    "Derived archive labels do not establish the species or original family membership.",
+    "HTTP download hashes provide byte identity, not authenticated source provenance.",
+    "No topology, duplication events or QfO mapping was reconstructed."
+  ],
+  "memberships": {
+    "all": {
+      "duplicate_ids_within_families": 0,
+      "families": 934,
+      "ids_absent_from_downloaded_gene_tables": 52,
+      "membership_records": 2807,
+      "unique_ids": 2807
+    },
+    "raw": {
+      "duplicate_ids_within_families": 0,
+      "families": 8435,
+      "ids_absent_from_downloaded_gene_tables": 53,
+      "membership_records": 17833,
+      "unique_ids": 17833
+    }
+  },
+  "original_trees_recovered": false,
+  "qfo_mapping_recovered": false,
+  "scientific_use_admitted": false,
+  "source": {
+    "bytes": 3317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_gerstein_treefam.py",
+    "sha256": "ba4a5413ab9ed5182fa8a548a1589243d844278085af676ddd2d5946a2606176"
+  }
+}
