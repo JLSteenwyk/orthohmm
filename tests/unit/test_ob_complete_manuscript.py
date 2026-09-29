@@ -24,3 +24,25 @@ def test_current_manuscript_intervals_match_complete_result():
     assert "Those narrower historical intervals must not be substituted" in extended
     assert "100,000 paired RefOG" in main
     assert "family exchangeability" in main
+
+
+def test_vgnc_sensitivity_is_not_presented_as_confidence_interval():
+    result = json.loads((BASE / "corrected_vgnc_influence_20260928.json").read_text())
+    contrast = result["comparisons"]["orthohmm_phylogeny_satellite_v2"]
+    interval = f'[{100 * contrast["minimum_deleted_difference"]:.4f}, {100 * contrast["maximum_deleted_difference"]:.4f}]'
+    for name in ("PUBLICATION_MAIN_TEXT_20260927.md", "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+                 "PUBLICATION_CLAIMS_20260916.md"):
+        text = (BASE / name).read_text()
+        assert interval in text
+        assert "CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md" in text
+        assert "not confidence intervals" in text.lower()
+    assert result["rows"] == 8 * 16844
+    assert all(c["negative"] == 16844 and c["positive"] == c["zero"] == 0
+               for c in result["comparisons"].values())
+
+
+def test_complete_interval_figure_is_linked_in_both_manuscripts():
+    target = "figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf"
+    assert (BASE / target).is_file()
+    for name in ("PUBLICATION_MAIN_TEXT_20260927.md", "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md"):
+        assert target in (BASE / name).read_text()

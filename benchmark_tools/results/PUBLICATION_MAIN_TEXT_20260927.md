@@ -79,6 +79,9 @@ The precision difference was +15.705 [1.175, 30.634] and recall difference
 F1 superiority. The complete panel uses 100,000 paired RefOG draws and
 remains conditional on family exchangeability and development exposure.
 [All 21 contrasts](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+The [complete interval figure](figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf)
+shows F1, precision and recall on the same difference scale without ranking
+methods by their observed effects.
 A fresh installed full run reproduced all 59,770 OrthoHMM groups
 exactly; this establishes reproducibility, not independent accuracy or a
 controlled runtime comparison.
@@ -91,6 +94,15 @@ versus 0.469548), EC similarity (0.965650 versus 0.936130) and FAS (0.762993
 versus 0.691422). These endpoints differ in reference scope and eligibility;
 they do not form a single accuracy ranking.
 [All eight methods](qfo_corrected_comparison_20260926_v7/scores.md).
+
+An exploratory [VGNC deletion diagnostic](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md)
+removed each of 16,844 reference blocks and its incident scored pairs in turn,
+across all eight methods. Every comparator retained a negative F1 difference
+against full OrthoFinder for every deletion. For phylogenetic OrthoHMM the
+range was [-8.7353, -8.6729] percentage points. These are sensitivity ranges,
+not confidence intervals: dependent deletions change the fixed scored table,
+and single-block sign stability does not establish population or joint-deletion
+robustness. Native inference and eligibility were not rerun.
 
 For corrected SwissTrees, phylogenetic-minus-full-OrthoFinder F1 was -1.4900
 percentage points, with a multiplicity-adjusted interval of [-8.7078, 7.2090].

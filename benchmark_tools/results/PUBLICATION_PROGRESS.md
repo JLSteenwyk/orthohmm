@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Reconcile Manuscript With Completed Sensitivity And Figure Work (2026-09-29 UTC)
+
+Previous turn progressed relocated figure reproduction (`e337b4fb`). Reread
+goal. Updated condensed and extended manuscript sources with the complete
+OrthoBench interval figure and corrected eight-method VGNC deletion result.
+Claim checklist distinguishes fixed-table single-block stability from confidence
+intervals and relocated plotting from cross-host inference. No new scientific
+claims beyond the retained calculations.
+
+Twenty-two focused manuscript/render/influence tests pass, including exact
+rounding checks against the saved VGNC range and all seven negative contrasts.
+Fresh condensed HTML [render receipt](publication_main_render_20260929_v1.json)
+has 16 citations, 23 local link occurrences, 22 unique tracked targets and no
+Pandoc warnings. [HTML review](publication_main_review_20260929_v1.html).
+No new PDF layout review is claimed; previous PDF versions are historical.
+The linked mutable ledger changes after rendering, as documented previously.
+No benchmarks, timing admissions or host changes. Goal remains active.
+
 ## Regenerate OrthoBench Interval Figure From Relocated Bundle (2026-09-29 UTC)
 
 Previous turn progressed version-specific accounting evidence (`33ec95be`).

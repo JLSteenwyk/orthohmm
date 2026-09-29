@@ -376,6 +376,11 @@ These are development-exposed comparisons, not selection-adjusted confirmation.
 Approximate percentile intervals assume exchangeable families; shared genes,
 histories and cross-family prediction errors can violate that assumption.
 [Complete results and independent arithmetic check](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+The [complete interval figure](figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf)
+retains all 21 endpoints, nominal and adjusted intervals, and a fixed method
+order. Its [relocated reproduction](OB_INTERVAL_BUNDLE_20260929.md) reproduces
+PNG and plotted-value bytes; this is plotting portability on the same host,
+not independent statistical validation or native inference reproduction.
 
 The original three-method analysis remains available with its separate
 20,000 draws, seed 20260916 and six-endpoint correction. Its satellite_v2
@@ -2244,6 +2249,20 @@ explicit; they do not establish method superiority. Most reference blocks
 (14,075) contain just one asserted pair. Supplemental raw-table hashes and
 selected reference mappings were checked, but this is not a requery of every
 prediction edge or full database-content verification.
+
+The [corrected deletion sensitivity analysis](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md)
+extends the historical diagnostic to all eight methods and all 16,844 blocks.
+Its protocol and runner were committed before the corrected calculation.
+All 134,752 deletions retain incident-cell counting: a within-block cell is
+removed once, and a cross-block cell is removed when either endpoint is the
+deleted block. Precision, recall and F1 are recomputed from remaining counts.
+All seven method-minus-full-OrthoFinder F1 differences remain negative for
+every matched deletion. Phylogenetic OrthoHMM's range is [-8.7353, -8.6729]
+percentage points, compared with its full-table difference of -8.6856 points.
+An independent rational-arithmetic check reproduces every deletion and all
+seven paired ranges/sign counts. These are not confidence intervals: deletions
+are dependent, alter the scored table and do not requery native eligibility.
+No inference about joint deletions, population sampling or new datasets follows.
 
 A [prespecified family-pair variance screen](DYADIC_F1_VARIANCE_RESULT_20260926.md)
 completed 8,000 synthetic replicates. Candidate paired-F1 Wald coverage was
