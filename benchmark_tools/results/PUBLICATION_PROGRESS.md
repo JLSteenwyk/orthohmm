@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Identify The Producing Wheel Run And Resolved LLVM Package (2026-09-29)
+
+Previous turn verified the publishing attestation (`6ef69756`). Reread goal
+and checked upload artifacts/jobs. Artifact listing is empty, but retained
+logs identify producing Linux wheel run 31462634019 and its successful
+CPython 3.10 artifact download. Retrieved run/job metadata and the specific
+build log, preserving their hashes. [Trace and boundary](LLVMLITE_PRODUCING_BUILD_20260929.md).
+
+Actual channel resolution was llvmdev 22.1.0 manylinux_1, not the manylinux_0
+recipe inspected at the release tag. This changes the next acquisition target:
+inspect that exact package's metadata/recipe rather than assume the wrapper
+tag identifies its patches. Recorded container/artifact digests remain scoped
+to their respective objects; artifact ZIP identity is not wheel identity.
+No build artifact is currently available for byte comparison. No credential
+or signed redirect URL retained, no runtime changed. Goal active; source
+correspondence, publication and timing requirements remain incomplete.
+
 ## Verify Exact Wheel Publishing Attestation (2026-09-29)
 
 Previous turn traced release recipes (`6a186140`). Reread goal and queried
