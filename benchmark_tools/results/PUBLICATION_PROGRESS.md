@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Prepare One Refinement/GC Boundary Diagnostic (2026-09-28)
+
+Previous turn made progress by pushing the derived TreeFam archive inspection
+as `0531a2af`. Reread the goal and the retained high-CPM crash/control results.
+The import and checkpoint/setup controls stop before refinement, while isolated
+readback succeeds. Added a [bounded stage protocol](QFO_CPM_REFINEMENT_GC_PROTOCOL_20260928.md)
+and runner for one explicit generation-2 collection before refinement, after
+refinement and after writing, followed by the original readback. Numerical
+settings and frozen scientific functions are unchanged; logging and forced
+collection intentionally change allocation history.
+
+Thirty focused tests pass, including seven new tests for stage order, retained
+objects, collection markers, one-attempt success/signal/timeout/malformed
+outcomes, protocol mismatch and no overwrite. Commit and push precede launch.
+This is diagnostic only: no high-CPM score admission, optimizer/search rerun,
+controlled timing, unrelated-process modification or DGX use is authorized.
+The original failed admission remains failed regardless of this outcome.
+
 ## Inspect Another Release-7 Archive Lead (2026-09-28)
 
 Previous turn made progress by pushing the candidate-package advisory audit
