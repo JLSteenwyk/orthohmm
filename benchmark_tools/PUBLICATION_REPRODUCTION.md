@@ -1,5 +1,10 @@
 # Publication Reproduction Guide
 
+The [eight-method OrthoBench uncertainty extension](results/OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md)
+reports all 21 paired contrasts under a frozen exploratory protocol. It
+preserves historical intervals separately and does not establish independent
+confirmation or validate the family-exchangeability assumption.
+
 The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_20260928.md)
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.

@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Complete Eight-Method OrthoBench Paired Comparison (2026-09-28)
+
+After pushing protocol `6d25b18f`, ran 100,000 paired RefOG draws and all 21
+prespecified contrasts. An alternative per-family accumulation reproduced
+points and intervals within 2.14e-14 percentage points; v2 additionally checks
+reported differences. Twenty-four focused tests pass. Phylogenetic OrthoHMM
+F1 differs by +1.370 points versus full OrthoFinder, adjusted interval
+[-7.281, 12.166]; no F1 superiority established. Its precision advantage and
+recall deficit remain under the broader correction. All methods/endpoints
+are retained in the [result](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+
+This is exploratory, development-exposed and conditional on exchangeable
+families. Historical three-method intervals remain unchanged. No new native
+run, scoring convention, default or timing admission. QfO uncertainty,
+controlled timing and release preparation remain unfinished; goal active.
+
 ## Freeze Complete OrthoBench Uncertainty Extension (2026-09-28)
 
 Previous turn made progress with wheel dependency checks (`c208bd39`). Reread
