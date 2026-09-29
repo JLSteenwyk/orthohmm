@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Audit Candidate Wheel Dependency Declarations (2026-09-28)
+
+Previous turn progressed manuscript rendering (`0fe4cbf1`). Reread the goal
+and returned to release reproducibility. Hash-bound top-level wheel metadata
+checks cover the eleven-package recovery and five-package reader locks.
+All ten and two active requirements respectively satisfy the locked versions;
+Python constraints pass on CPython 3.10.13. Inactive markers remain explicit
+(81 and 50). Rechecked 20 record entries; 31 focused tests pass. Initial pip
+reads stopped on vendored metadata; corrected top-level selection and added
+a regression fixture, with no environment change.
+See [results and limits](RELEASE_WHEEL_DEPENDENCIES_20260928.md).
+
+This is not native/OS or vendored dependency closure, security clearance or
+restoration proof. No installation or scientific/timing run. Timing, remaining
+uncertainty and release requirements keep the publication goal active.
+
 ## Refresh Extended Manuscript Preview v27 (2026-09-28)
 
 Previous turn made progress integrating the descriptive OrthoBench figure

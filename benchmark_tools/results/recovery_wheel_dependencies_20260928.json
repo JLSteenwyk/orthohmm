@@ -1,0 +1,987 @@
+{
+  "declared_runtime_dependencies_satisfied": true,
+  "dependency_rows": [
+    {
+      "active": true,
+      "locked_version": "83.0.0",
+      "package": "dendropy",
+      "requirement": "setuptools",
+      "status": "satisfied",
+      "target": "setuptools"
+    },
+    {
+      "active": true,
+      "locked_version": "1.7.0",
+      "package": "igraph",
+      "requirement": "texttable>=1.6.2",
+      "status": "satisfied",
+      "target": "texttable"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"cairo\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "matplotlib>=3.6.0; platform_python_implementation != \"PyPy\" and extra == \"matplotlib\"",
+      "status": "inactive_marker",
+      "target": "matplotlib"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "plotly>=5.3.0; extra == \"plotly\"",
+      "status": "inactive_marker",
+      "target": "plotly"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"plotting\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "networkx>=2.5; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "networkx"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest>=7.0.1; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest-timeout>=2.1.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-timeout"
+    },
+    {
+      "active": false,
+      "locked_version": "2.2.6",
+      "package": "igraph",
+      "requirement": "numpy>=1.19.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "numpy"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pandas>=1.1.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pandas"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "scipy>=1.5.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "scipy"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "matplotlib>=3.6.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "matplotlib"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "plotly>=5.3.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "plotly"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "Pillow>=9; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pillow"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"test-win-arm64\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "networkx>=2.5; extra == \"test-win-arm64\"",
+      "status": "inactive_marker",
+      "target": "networkx"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest>=7.0.1; extra == \"test-win-arm64\"",
+      "status": "inactive_marker",
+      "target": "pytest"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest-timeout>=2.1.0; extra == \"test-win-arm64\"",
+      "status": "inactive_marker",
+      "target": "pytest-timeout"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"test-musl\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "networkx>=2.5; extra == \"test-musl\"",
+      "status": "inactive_marker",
+      "target": "networkx"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest>=7.0.1; extra == \"test-musl\"",
+      "status": "inactive_marker",
+      "target": "pytest"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pytest-timeout>=2.1.0; extra == \"test-musl\"",
+      "status": "inactive_marker",
+      "target": "pytest-timeout"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "Sphinx>=7.0.0; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "sphinx-rtd-theme>=1.3.0; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-rtd-theme"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "sphinx-gallery>=0.14.0; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-gallery"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "igraph",
+      "requirement": "pydoctor>=23.4.0; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "pydoctor"
+    },
+    {
+      "active": true,
+      "locked_version": "1.0.0",
+      "package": "leidenalg",
+      "requirement": "igraph<2.0,>=1.0.0",
+      "status": "satisfied",
+      "target": "igraph"
+    },
+    {
+      "active": true,
+      "locked_version": "0.49.0",
+      "package": "numba",
+      "requirement": "llvmlite<0.50,>=0.49.0dev0",
+      "status": "satisfied",
+      "target": "llvmlite"
+    },
+    {
+      "active": true,
+      "locked_version": "2.2.6",
+      "package": "numba",
+      "requirement": "numpy<2.6,>=1.22",
+      "status": "satisfied",
+      "target": "numpy"
+    },
+    {
+      "active": true,
+      "locked_version": "2.2.6",
+      "package": "orthohmm",
+      "requirement": "numpy>=1.23",
+      "status": "satisfied",
+      "target": "numpy"
+    },
+    {
+      "active": true,
+      "locked_version": "0.67.0",
+      "package": "orthohmm",
+      "requirement": "numba>=0.58",
+      "status": "satisfied",
+      "target": "numba"
+    },
+    {
+      "active": true,
+      "locked_version": "1.0.0",
+      "package": "orthohmm",
+      "requirement": "python-igraph",
+      "status": "satisfied",
+      "target": "python-igraph"
+    },
+    {
+      "active": true,
+      "locked_version": "0.11.0",
+      "package": "orthohmm",
+      "requirement": "leidenalg",
+      "status": "satisfied",
+      "target": "leidenalg"
+    },
+    {
+      "active": false,
+      "locked_version": "5.1.0",
+      "package": "orthohmm",
+      "requirement": "dendropy>=5.0; extra == \"phylogeny\"",
+      "status": "inactive_marker",
+      "target": "dendropy"
+    },
+    {
+      "active": true,
+      "locked_version": "1.0.0",
+      "package": "python-igraph",
+      "requirement": "igraph==1.0.0",
+      "status": "satisfied",
+      "target": "igraph"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "python-igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"cairo\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "python-igraph",
+      "requirement": "matplotlib>=3.3.0; platform_python_implementation != \"PyPy\" and extra == \"matplotlib\"",
+      "status": "inactive_marker",
+      "target": "matplotlib"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "python-igraph",
+      "requirement": "plotly>=5.3.0; extra == \"plotly\"",
+      "status": "inactive_marker",
+      "target": "plotly"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "python-igraph",
+      "requirement": "cairocffi>=1.2.0; extra == \"plotting\"",
+      "status": "inactive_marker",
+      "target": "cairocffi"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest!=8.1.*,>=6; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "virtualenv>=13.0.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "virtualenv"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "wheel>=0.44.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "wheel"
+    },
+    {
+      "active": false,
+      "locked_version": "26.2.1",
+      "package": "setuptools",
+      "requirement": "pip>=19.1; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pip"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "packaging>=24.2; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "packaging"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.envs>=2.2; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "jaraco-envs"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-xdist>=3; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-xdist"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.path>=3.7.2; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "jaraco-path"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "build[virtualenv]>=1.0.3; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "build"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "filelock>=3.4.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "filelock"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "ini2toml[lite]>=0.14; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "ini2toml"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "tomli-w>=1.0.0; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "tomli-w"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-timeout; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-timeout"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-perf; sys_platform != \"cygwin\" and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-perf"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.develop>=7.21; (python_version >= \"3.9\" and sys_platform != \"cygwin\") and extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "jaraco-develop"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-home>=0.5; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-home"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-subprocess; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pytest-subprocess"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pyproject-hooks!=1.1; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "pyproject-hooks"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.test>=5.5; extra == \"test\"",
+      "status": "inactive_marker",
+      "target": "jaraco-test"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx>=3.5; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.packaging>=9.3; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "jaraco-packaging"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "rst.linker>=1.9; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "rst-linker"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "furo; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "furo"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx-lint; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-lint"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.tidelift>=1.4; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "jaraco-tidelift"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pygments-github-lexers==0.0.5; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "pygments-github-lexers"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx-favicon; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-favicon"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx-inline-tabs; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-inline-tabs"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx-reredirects; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-reredirects"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinxcontrib-towncrier; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinxcontrib-towncrier"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "sphinx-notfound-page<2,>=1; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "sphinx-notfound-page"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pyproject-hooks!=1.1; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "pyproject-hooks"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "towncrier<24.7; extra == \"doc\"",
+      "status": "inactive_marker",
+      "target": "towncrier"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "packaging>=24.2; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "packaging"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "more_itertools>=8.8; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "more-itertools"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.text>=3.7; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "jaraco-text"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "importlib_metadata>=6; python_version < \"3.10\" and extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "importlib-metadata"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "tomli>=2.0.1; python_version < \"3.11\" and extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "tomli"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "wheel>=0.43.0; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "wheel"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.functools>=4; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "jaraco-functools"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "more_itertools; extra == \"core\"",
+      "status": "inactive_marker",
+      "target": "more-itertools"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-checkdocs>=2.14; extra == \"check\"",
+      "status": "inactive_marker",
+      "target": "pytest-checkdocs"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-ruff>=0.2.1; sys_platform != \"cygwin\" and extra == \"check\"",
+      "status": "inactive_marker",
+      "target": "pytest-ruff"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "ruff>=0.13.0; sys_platform != \"cygwin\" and extra == \"check\"",
+      "status": "inactive_marker",
+      "target": "ruff"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-cov; extra == \"cover\"",
+      "status": "inactive_marker",
+      "target": "pytest-cov"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-enabler>=3.4; extra == \"enabler\"",
+      "status": "inactive_marker",
+      "target": "pytest-enabler"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "pytest-mypy>=1.0.1; platform_python_implementation != \"PyPy\" and extra == \"type\"",
+      "status": "inactive_marker",
+      "target": "pytest-mypy"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "mypy==1.18.*; extra == \"type\"",
+      "status": "inactive_marker",
+      "target": "mypy"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "importlib_metadata>=7.0.2; python_version < \"3.10\" and extra == \"type\"",
+      "status": "inactive_marker",
+      "target": "importlib-metadata"
+    },
+    {
+      "active": false,
+      "locked_version": null,
+      "package": "setuptools",
+      "requirement": "jaraco.develop>=7.21; sys_platform != \"cygwin\" and extra == \"type\"",
+      "status": "inactive_marker",
+      "target": "jaraco-develop"
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.10.13",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_python_implementation": "CPython",
+    "platform_release": "6.8.0-55-generic",
+    "platform_system": "Linux",
+    "platform_version": "#57-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 23:42:21 UTC 2025",
+    "python_full_version": "3.10.13",
+    "python_version": "3.10",
+    "sys_platform": "linux"
+  },
+  "failures": [],
+  "limitations": [
+    "Only declared wheel runtime dependencies with no optional extras on the recorded interpreter.",
+    "Active URL or extra-bearing requirements are unresolved, never silently ignored.",
+    "No installation, imports, wheel-tag/native-library compatibility, OS closure or vulnerability assessment.",
+    "Missing or incorrect upstream dependency declarations cannot be detected here."
+  ],
+  "lock": {
+    "bytes": 1286,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_recovery_requirements_20260926.txt",
+    "sha256": "813751262c9405155cc2f1974a2c32187b352f88307e2332e0cec9df35708ae3"
+  },
+  "packages": [
+    {
+      "name": "dendropy",
+      "requires_dist": [
+        "setuptools"
+      ],
+      "requires_python": ">=3.7",
+      "version": "5.1.0",
+      "wheel": {
+        "bytes": 505450,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/dendropy-5.1.0-py3-none-any.whl",
+        "sha256": "4861d27875cb4bfa0e5a18f64f6b14191d29661a2c92e9a70d6510dd27565dc2"
+      }
+    },
+    {
+      "name": "igraph",
+      "requires_dist": [
+        "texttable>=1.6.2",
+        "cairocffi>=1.2.0; extra == \"cairo\"",
+        "matplotlib>=3.6.0; platform_python_implementation != \"PyPy\" and extra == \"matplotlib\"",
+        "plotly>=5.3.0; extra == \"plotly\"",
+        "cairocffi>=1.2.0; extra == \"plotting\"",
+        "cairocffi>=1.2.0; extra == \"test\"",
+        "networkx>=2.5; extra == \"test\"",
+        "pytest>=7.0.1; extra == \"test\"",
+        "pytest-timeout>=2.1.0; extra == \"test\"",
+        "numpy>=1.19.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+        "pandas>=1.1.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+        "scipy>=1.5.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+        "matplotlib>=3.6.0; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+        "plotly>=5.3.0; extra == \"test\"",
+        "Pillow>=9; platform_python_implementation != \"PyPy\" and extra == \"test\"",
+        "cairocffi>=1.2.0; extra == \"test-win-arm64\"",
+        "networkx>=2.5; extra == \"test-win-arm64\"",
+        "pytest>=7.0.1; extra == \"test-win-arm64\"",
+        "pytest-timeout>=2.1.0; extra == \"test-win-arm64\"",
+        "cairocffi>=1.2.0; extra == \"test-musl\"",
+        "networkx>=2.5; extra == \"test-musl\"",
+        "pytest>=7.0.1; extra == \"test-musl\"",
+        "pytest-timeout>=2.1.0; extra == \"test-musl\"",
+        "Sphinx>=7.0.0; extra == \"doc\"",
+        "sphinx-rtd-theme>=1.3.0; extra == \"doc\"",
+        "sphinx-gallery>=0.14.0; extra == \"doc\"",
+        "pydoctor>=23.4.0; extra == \"doc\""
+      ],
+      "requires_python": ">=3.9",
+      "version": "1.0.0",
+      "wheel": {
+        "bytes": 5683134,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+        "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522"
+      }
+    },
+    {
+      "name": "leidenalg",
+      "requires_dist": [
+        "igraph<2.0,>=1.0.0"
+      ],
+      "requires_python": ">=3.7",
+      "version": "0.11.0",
+      "wheel": {
+        "bytes": 2738084,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17"
+      }
+    },
+    {
+      "name": "llvmlite",
+      "requires_dist": [],
+      "requires_python": ">=3.10",
+      "version": "0.49.0",
+      "wheel": {
+        "bytes": 59890659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/llvmlite-0.49.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "854941c2267fd4fc5b2ce02b8af8ecdffa79fb7784591d3a89370322039ea09f"
+      }
+    },
+    {
+      "name": "numba",
+      "requires_dist": [
+        "llvmlite<0.50,>=0.49.0dev0",
+        "numpy<2.6,>=1.22"
+      ],
+      "requires_python": ">=3.10",
+      "version": "0.67.0",
+      "wheel": {
+        "bytes": 3821881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/numba-0.67.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "sha256": "d6c8e9ba3f9602471e8c6f563ffcce8db8046741f0bafb782a052e41dc6b6861"
+      }
+    },
+    {
+      "name": "numpy",
+      "requires_dist": [],
+      "requires_python": ">=3.10",
+      "version": "2.2.6",
+      "wheel": {
+        "bytes": 16801050,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915"
+      }
+    },
+    {
+      "name": "orthohmm",
+      "requires_dist": [
+        "numpy>=1.23",
+        "numba>=0.58",
+        "python-igraph",
+        "leidenalg",
+        "dendropy>=5.0; extra == \"phylogeny\""
+      ],
+      "requires_python": ">=3.10",
+      "version": "0.5.0",
+      "wheel": {
+        "bytes": 144444,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+        "sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+      }
+    },
+    {
+      "name": "pip",
+      "requires_dist": [],
+      "requires_python": ">=3.10",
+      "version": "26.2.1",
+      "wheel": {
+        "bytes": 1816632,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      }
+    },
+    {
+      "name": "python-igraph",
+      "requires_dist": [
+        "igraph==1.0.0",
+        "cairocffi>=1.2.0; extra == \"cairo\"",
+        "matplotlib>=3.3.0; platform_python_implementation != \"PyPy\" and extra == \"matplotlib\"",
+        "plotly>=5.3.0; extra == \"plotly\"",
+        "cairocffi>=1.2.0; extra == \"plotting\""
+      ],
+      "requires_python": ">=3.6",
+      "version": "1.0.0",
+      "wheel": {
+        "bytes": 9157,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/python_igraph-1.0.0-py3-none-any.whl",
+        "sha256": "b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380"
+      }
+    },
+    {
+      "name": "setuptools",
+      "requires_dist": [
+        "pytest!=8.1.*,>=6; extra == \"test\"",
+        "virtualenv>=13.0.0; extra == \"test\"",
+        "wheel>=0.44.0; extra == \"test\"",
+        "pip>=19.1; extra == \"test\"",
+        "packaging>=24.2; extra == \"test\"",
+        "jaraco.envs>=2.2; extra == \"test\"",
+        "pytest-xdist>=3; extra == \"test\"",
+        "jaraco.path>=3.7.2; extra == \"test\"",
+        "build[virtualenv]>=1.0.3; extra == \"test\"",
+        "filelock>=3.4.0; extra == \"test\"",
+        "ini2toml[lite]>=0.14; extra == \"test\"",
+        "tomli-w>=1.0.0; extra == \"test\"",
+        "pytest-timeout; extra == \"test\"",
+        "pytest-perf; sys_platform != \"cygwin\" and extra == \"test\"",
+        "jaraco.develop>=7.21; (python_version >= \"3.9\" and sys_platform != \"cygwin\") and extra == \"test\"",
+        "pytest-home>=0.5; extra == \"test\"",
+        "pytest-subprocess; extra == \"test\"",
+        "pyproject-hooks!=1.1; extra == \"test\"",
+        "jaraco.test>=5.5; extra == \"test\"",
+        "sphinx>=3.5; extra == \"doc\"",
+        "jaraco.packaging>=9.3; extra == \"doc\"",
+        "rst.linker>=1.9; extra == \"doc\"",
+        "furo; extra == \"doc\"",
+        "sphinx-lint; extra == \"doc\"",
+        "jaraco.tidelift>=1.4; extra == \"doc\"",
+        "pygments-github-lexers==0.0.5; extra == \"doc\"",
+        "sphinx-favicon; extra == \"doc\"",
+        "sphinx-inline-tabs; extra == \"doc\"",
+        "sphinx-reredirects; extra == \"doc\"",
+        "sphinxcontrib-towncrier; extra == \"doc\"",
+        "sphinx-notfound-page<2,>=1; extra == \"doc\"",
+        "pyproject-hooks!=1.1; extra == \"doc\"",
+        "towncrier<24.7; extra == \"doc\"",
+        "packaging>=24.2; extra == \"core\"",
+        "more_itertools>=8.8; extra == \"core\"",
+        "jaraco.text>=3.7; extra == \"core\"",
+        "importlib_metadata>=6; python_version < \"3.10\" and extra == \"core\"",
+        "tomli>=2.0.1; python_version < \"3.11\" and extra == \"core\"",
+        "wheel>=0.43.0; extra == \"core\"",
+        "jaraco.functools>=4; extra == \"core\"",
+        "more_itertools; extra == \"core\"",
+        "pytest-checkdocs>=2.14; extra == \"check\"",
+        "pytest-ruff>=0.2.1; sys_platform != \"cygwin\" and extra == \"check\"",
+        "ruff>=0.13.0; sys_platform != \"cygwin\" and extra == \"check\"",
+        "pytest-cov; extra == \"cover\"",
+        "pytest-enabler>=3.4; extra == \"enabler\"",
+        "pytest-mypy>=1.0.1; platform_python_implementation != \"PyPy\" and extra == \"type\"",
+        "mypy==1.18.*; extra == \"type\"",
+        "importlib_metadata>=7.0.2; python_version < \"3.10\" and extra == \"type\"",
+        "jaraco.develop>=7.21; sys_platform != \"cygwin\" and extra == \"type\""
+      ],
+      "requires_python": ">=3.10",
+      "version": "83.0.0",
+      "wheel": {
+        "bytes": 1008090,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/setuptools-83.0.0-py3-none-any.whl",
+        "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+      }
+    },
+    {
+      "name": "texttable",
+      "requires_dist": [],
+      "requires_python": null,
+      "version": "1.7.0",
+      "wheel": {
+        "bytes": 10768,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_recovery_install_20260926/wheels/texttable-1.7.0-py2.py3-none-any.whl",
+        "sha256": "72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917"
+      }
+    }
+  ],
+  "publication_ready": false,
+  "python": "3.10.13",
+  "source": {
+    "bytes": 5341,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_wheel_dependencies.py",
+    "sha256": "24f9f4e55bad8b11a0d10a1b93bd5b8f720cfcc8bd67bec527a7fb1f15a8d08a"
+  },
+  "status": "declared_wheel_dependency_audit"
+}

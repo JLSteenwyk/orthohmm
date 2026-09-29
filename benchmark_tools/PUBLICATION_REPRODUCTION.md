@@ -1,5 +1,9 @@
 # Publication Reproduction Guide
 
+The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_20260928.md)
+checks declared runtime dependencies against both hash-pinned wheel sets on
+the recorded interpreter. It does not establish native/OS closure or security.
+
 Status: 27 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
