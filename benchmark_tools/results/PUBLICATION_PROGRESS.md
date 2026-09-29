@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Prepare Full-Data Reconstructed-Base Reproduction (2026-09-29)
+
+Previous turn rechecked contention (`b76cfb04`). Reread goal and inspected
+full integrated and private-runtime receipts. Identified a concrete remaining
+reproduction path: full OrthoBench has not run with the separately reconstructed
+base Python, although its integrated fixture passed. The timing runtime uses
+different scientific versions and cannot be silently substituted for the
+validated recovery lock.
+
+Prepared and validated a fresh full-data plan preserving all scientific
+settings and changing only controller/base/installer Python and output path.
+All 6,515 pinned file checks pass, including 6,298 base file payloads.
+[Presubmission protocol](RECONSTRUCTED_FULL_OB_PROTOCOL_20260929.md).
+This is one shared-host correctness attempt, not a timing repeat. Separate
+independent admission is required. No historical artifacts or runtime changed.
+At this preparation milestone no job has yet been submitted. Goal active.
+
 ## Recheck Whether The Timing Window Has Opened (2026-09-29)
 
 Previous turn progressed remote-CI failure diagnosis (`0dc732bf`). Reread
