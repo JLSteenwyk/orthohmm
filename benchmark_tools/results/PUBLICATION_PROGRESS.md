@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Prepare Private Timing Deployment Amendment (2026-09-28)
+
+Previous turn progressed native prediction parity (`d7083c4e`). Reread goal;
+prepared new baseline and 27-command plan using the patched interpreter for
+18 OrthoHMM identities only. Scientific settings, inputs, rotated order,
+resources and all nine OrthoFinder commands remain unchanged. Six tests pass.
+[Prospective amendment](THREADRIPPER_PRIVATE_DEPLOYMENT_20260928.md).
+
+The existing environment verifier passes from the frozen native cwd with its
+baseline environment. Retained the first wrong-cwd inventory rejection, which
+exposed checkout-local OrthoHMM metadata, and documented an initial overly
+strict method-order check rejected before output creation. No installed package
+changes or inference/timing launch. Next: private/controller runtime inventories,
+repeated lookup binding and collector v5 native integration. Goal remains active.
+
 ## Verify Patched Native Prediction Parity (2026-09-28)
 
 Previous turn progressed the patched installation (`d874c697`). Reread goal and
