@@ -1,5 +1,17 @@
 # Publication Progress
 
+## Freeze Complete OrthoBench Uncertainty Extension (2026-09-28)
+
+Previous turn made progress with wheel dependency checks (`c208bd39`). Reread
+the goal and returned to primary benchmark uncertainty. The existing overall
+paired comparison covers only three methods; freeze an exploratory eight-method
+extension before running it. All seven alternatives versus full OrthoFinder,
+three metrics, 21 adjusted endpoints, 100,000 paired RefOG draws, seed 20260928.
+Historical intervals remain unchanged. Family exchangeability and development
+exposure remain limitations, not resolved by numerical verification. Commit
+and push the protocol and runner before execution; then independently check
+all endpoints. No timing or native inference requested by this extension.
+
 ## Audit Candidate Wheel Dependency Declarations (2026-09-28)
 
 Previous turn progressed manuscript rendering (`0fe4cbf1`). Reread the goal
