@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Bind Private Runtime And Repeat Native Lookup (2026-09-28)
+
+Previous turn progressed private controller installation (`c0f3a074`). Reread
+goal and verified HEAD. Combined private trees with fresh retained OS/native
+roots and current helper files: 57,882 entries, 190 frozen baseline paths
+matched, private inventory unchanged. Six retired shared/user roots are explicit.
+[Binding and limits](THREADRIPPER_PRIVATE_BINDING_20260928.md).
+
+Two native lookup probes through the private controller pass with identical
+signatures and complete observed-file coverage: OrthoHMM 913 modules, OrthoFinder
+1,563. Seventeen focused tests pass. Next: teach RuntimeChecker to use the
+recorded controller interpreter, bind that helper change, check controller
+coverage and run collector v5 native fixtures with new pins. External symlink
+and branch-coverage limits retained. No production timing or DGX work; goal active.
+
 ## Install Private Timing Controller And Snapshot Private Trees (2026-09-28)
 
 Previous turn progressed the deployment amendment (`e294fdb7`). Reread goal
