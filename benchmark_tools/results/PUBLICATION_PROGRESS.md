@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Stage A Private Timing Runtime Candidate (2026-09-28)
+
+Previous turn progressed drift diagnosis (`02e514fa`). Reread the goal and
+used the previously reconstructed private Python to install a separate venv,
+without touching shared packages. Downloaded 30 binary wheels, generated an
+exact hash lock, installed offline, passed pip check and exercised declared
+native imports. All selected package labels match the timing baseline except
+the explicitly selected pip installer; the recovery environment's different
+Numba/DendroPy versions were not reused.
+
+Import comparison rechecks 40 core files and finds 707/710 imported scientific
+or site-package files byte-identical, including all ten historical pyparsing
+files. Six unrelated editable startup finders are omitted. The remaining
+differences reveal historical packaging module 26.1 versus metadata label
+26.0, plus a different PyYAML extension build. Candidate remains unapproved
+pending resolution/validation; no benchmark or timing job started.
+25 focused tests pass. [Installation, comparison and limits](THREADRIPPER_PRIVATE_RUNTIME_20260928.md).
+The goal remains active with runtime integration, controlled timing, remaining
+uncertainty and release work unfinished.
+
 ## Detect Shared Timing Dependency Drift Before Native Validation (2026-09-28)
 
 Previous turn progressed collector v5 (`4e7600a3`). Reread the goal and began

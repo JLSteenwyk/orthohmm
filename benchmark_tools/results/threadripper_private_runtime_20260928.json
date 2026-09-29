@@ -1,0 +1,384 @@
+{
+  "base_prefix": "/tmp/orthohmm-base-reconstruction-20260927/python-runtime",
+  "baseline": {
+    "bytes": 489545,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+    "sha256": "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041"
+  },
+  "import_report": {
+    "bytes": 167399,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/imports.log",
+    "sha256": "78dd844b3eb2fe6f333f3426b43fbc90021bb4078528669cd9746059ac632083"
+  },
+  "limitations": [
+    "Preserves selected scientific versions, not every package or binary in the historical shared environment.",
+    "Unrelated editable startup hooks omitted; pip installer is 26.2.1. No scientific inference or timing run.",
+    "Import-path check is not a file-access sandbox, native-library audit or complete branch coverage."
+  ],
+  "lock": {
+    "bytes": 2854,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/requirements.txt",
+    "sha256": "356b6653b43d2fbdc2f440f2ebb2c8c33b25fd4ec95d889772673b61b4a74626"
+  },
+  "scientific_execution_authorized": false,
+  "selected": {
+    "Cython": "3.1.8",
+    "DendroPy": "5.0.8",
+    "PyYAML": "6.0.1",
+    "colorama": "0.4.6",
+    "contourpy": "1.3.2",
+    "coverage": "7.13.4",
+    "cycler": "0.12.1",
+    "defusedxml": "0.7.1",
+    "fonttools": "4.61.1",
+    "igraph": "1.0.0",
+    "kiwisolver": "1.4.9",
+    "leidenalg": "0.11.0",
+    "llvmlite": "0.47.0",
+    "matplotlib": "3.10.8",
+    "narwhals": "2.18.1",
+    "numba": "0.65.0",
+    "numpy": "2.2.6",
+    "packaging": "26.0",
+    "pillow": "12.2.0",
+    "pip": "26.2.1",
+    "plotly": "6.6.0",
+    "psutil": "7.2.2",
+    "pyparsing": "3.2.1",
+    "python-dateutil": "2.8.2",
+    "python-igraph": "1.0.0",
+    "scipy": "1.15.3",
+    "setuptools": "81.0.0",
+    "six": "1.16.0",
+    "texttable": "1.7.0",
+    "wcwidth": "0.2.5"
+  },
+  "shared_python_prefix_observed": false,
+  "source": {
+    "bytes": 7632,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_private_timing_environment.py",
+    "sha256": "ac929afd38a9370bc9cebe896498b60a93ff073d169a8853f0ac374b348d0c5b"
+  },
+  "stages": [
+    {
+      "command": [
+        "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "download",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--no-deps",
+        "--only-binary=:all:",
+        "--dest",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels",
+        "--requirement",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/versions.txt"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 14805,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/download.log",
+        "sha256": "509ce1209e5c3f2dc0f174a3a762773d5e7bdfd2ccc43220e9f46d363de2270f"
+      },
+      "wall_s": 48.74950651702238
+    },
+    {
+      "command": [
+        "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "venv",
+        "--without-pip",
+        "--copies",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "wall_s": 0.16552243003388867
+    },
+    {
+      "command": [
+        "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "--isolated",
+        "--python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "--only-binary=:all:",
+        "--require-hashes",
+        "--find-links",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels",
+        "-r",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/requirements.txt"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 7715,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/install.log",
+        "sha256": "6736c3398215cf5095435ca7978e50c232ebb7ceac04de9616b71f06a6e9d8cf"
+      },
+      "wall_s": 24.22417810600018
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 30,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/dependencies.log",
+        "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+      },
+      "wall_s": 0.6174218330415897
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/venv/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import sys,json,importlib.metadata as m; sys.path.insert(0,sys.argv[1]); import orthohmm.orthohmm,orthohmm.search.engine,igraph,leidenalg,dendropy; print(json.dumps(dict(executable=sys.executable,base_prefix=sys.base_prefix,path=sys.path,packages={d.metadata['Name']:d.version for d in m.distributions()},modules={n:getattr(v,'__file__',None) for n,v in sorted(sys.modules.items()) if getattr(v,'__file__',None)}),sort_keys=True))",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2"
+      ],
+      "exit_code": 0,
+      "log": {
+        "bytes": 167399,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/imports.log",
+        "sha256": "78dd844b3eb2fe6f333f3426b43fbc90021bb4078528669cd9746059ac632083"
+      },
+      "wall_s": 2.5795712209655903
+    }
+  ],
+  "status": "private_timing_environment_candidate_installed",
+  "wheels": [
+    {
+      "bytes": 465072,
+      "name": "DendroPy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/DendroPy-5.0.8-py3-none-any.whl",
+      "sha256": "6fa3fe71c67cf71d262cf33f12395735de9cd439852d0bd2d229c19df89a2992",
+      "version": "5.0.8"
+    },
+    {
+      "bytes": 705525,
+      "name": "PyYAML",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/PyYAML-6.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "ba336e390cd8e4d1739f42dfe9bb83a3cc2e80f567d8805e11b46f4a943f5515",
+      "version": "6.0.1"
+    },
+    {
+      "bytes": 25335,
+      "name": "colorama",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/colorama-0.4.6-py2.py3-none-any.whl",
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "version": "0.4.6"
+    },
+    {
+      "bytes": 325027,
+      "name": "contourpy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "ad687a04bc802cbe8b9c399c07162a3c35e227e2daccf1668eb1f278cb698631",
+      "version": "1.3.2"
+    },
+    {
+      "bytes": 248229,
+      "name": "coverage",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/coverage-7.13.4-cp310-cp310-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+      "sha256": "8041b6c5bfdc03257666e9881d33b1abc88daccaf73f7b6340fb7946655cd10f",
+      "version": "7.13.4"
+    },
+    {
+      "bytes": 8321,
+      "name": "cycler",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/cycler-0.12.1-py3-none-any.whl",
+      "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30",
+      "version": "0.12.1"
+    },
+    {
+      "bytes": 3424403,
+      "name": "Cython",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/cython-3.1.8-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "6221417b160e9172aae69b0fd397e02528a6076e1fec642a181aa11c64e32cc9",
+      "version": "3.1.8"
+    },
+    {
+      "bytes": 25604,
+      "name": "defusedxml",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/defusedxml-0.7.1-py2.py3-none-any.whl",
+      "sha256": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61",
+      "version": "0.7.1"
+    },
+    {
+      "bytes": 4859076,
+      "name": "fonttools",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/fonttools-4.61.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "a76d4cb80f41ba94a6691264be76435e5f72f2cb3cab0b092a6212855f71c2f6",
+      "version": "4.61.1"
+    },
+    {
+      "bytes": 5683134,
+      "name": "igraph",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/igraph-1.0.0-cp39-abi3-manylinux_2_28_x86_64.whl",
+      "sha256": "2d04c2c76f686fb1f554ee35dfd3085f5e73b7965ba6b4cf06d53e66b1955522",
+      "version": "1.0.0"
+    },
+    {
+      "bytes": 1628458,
+      "name": "kiwisolver",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/kiwisolver-1.4.9-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl",
+      "sha256": "b78efa4c6e804ecdf727e580dbb9cba85624d2e1c6b5cb059c66290063bd99a9",
+      "version": "1.4.9"
+    },
+    {
+      "bytes": 2738084,
+      "name": "leidenalg",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/leidenalg-0.11.0-cp38-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "571a0934f831a69442d82889d319bdba93de924bd9e09b720cd8cbe6fdc08c17",
+      "version": "0.11.0"
+    },
+    {
+      "bytes": 56275179,
+      "name": "llvmlite",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/llvmlite-0.47.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "f9d118bc1dd7623e0e65ca9ac485ec6dd543c3b77bc9928ddc45ebd34e1e30a7",
+      "version": "0.47.0"
+    },
+    {
+      "bytes": 8700452,
+      "name": "matplotlib",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/matplotlib-3.10.8-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "ee40c27c795bda6a5292e9cff9890189d32f7e3a0bf04e0e3c9430c4a00c37df",
+      "version": "3.10.8"
+    },
+    {
+      "bytes": 444952,
+      "name": "narwhals",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/narwhals-2.18.1-py3-none-any.whl",
+      "sha256": "a0a8bb80205323851338888ba3a12b4f65d352362c8a94be591244faf36504ad",
+      "version": "2.18.1"
+    },
+    {
+      "bytes": 3739444,
+      "name": "numba",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/numba-0.65.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "4c894c94afa5ffd627c7e3b693df10cb0d905bd5eb06de3dfc31775140cf4f89",
+      "version": "0.65.0"
+    },
+    {
+      "bytes": 16801050,
+      "name": "numpy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "fc7b73d02efb0e18c000e9ad8b83480dfcd5dfd11065997ed4c6747470ae8915",
+      "version": "2.2.6"
+    },
+    {
+      "bytes": 74366,
+      "name": "packaging",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/packaging-26.0-py3-none-any.whl",
+      "sha256": "b36f1fef9334a5588b4166f8bcd26a14e521f2b55e6b9de3aaa80d3ff7a37529",
+      "version": "26.0"
+    },
+    {
+      "bytes": 7070220,
+      "name": "pillow",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/pillow-12.2.0-cp310-cp310-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "88d387ff40b3ff7c274947ed3125dedf5262ec6919d83946753b5f3d7c67ea4c",
+      "version": "12.2.0"
+    },
+    {
+      "bytes": 1816632,
+      "name": "pip",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/pip-26.2.1-py3-none-any.whl",
+      "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e",
+      "version": "26.2.1"
+    },
+    {
+      "bytes": 9910315,
+      "name": "plotly",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/plotly-6.6.0-py3-none-any.whl",
+      "sha256": "8d6daf0f87412e0c0bfe72e809d615217ab57cc715899a1e5145135a7800d1d0",
+      "version": "6.6.0"
+    },
+    {
+      "bytes": 155560,
+      "name": "psutil",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "076a2d2f923fd4821644f5ba89f059523da90dc9014e85f8e45a5774ca5bc6f9",
+      "version": "7.2.2"
+    },
+    {
+      "bytes": 107716,
+      "name": "pyparsing",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/pyparsing-3.2.1-py3-none-any.whl",
+      "sha256": "506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1",
+      "version": "3.2.1"
+    },
+    {
+      "bytes": 247702,
+      "name": "python-dateutil",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/python_dateutil-2.8.2-py2.py3-none-any.whl",
+      "sha256": "961d03dc3453ebbc59dbdea9e4e11c5651520a876d0f4db161e8674aae935da9",
+      "version": "2.8.2"
+    },
+    {
+      "bytes": 9157,
+      "name": "python-igraph",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/python_igraph-1.0.0-py3-none-any.whl",
+      "sha256": "b0bb8d91cce2a1e0550fe45f9ec925bcd04152dfb5be3fa822b9f5f36eb3f380",
+      "version": "1.0.0"
+    },
+    {
+      "bytes": 37662964,
+      "name": "scipy",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "9e2abc762b0811e09a0d3258abee2d98e0c703eee49464ce0069590846f31d40",
+      "version": "1.15.3"
+    },
+    {
+      "bytes": 1062021,
+      "name": "setuptools",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/setuptools-81.0.0-py3-none-any.whl",
+      "sha256": "fdd925d5c5d9f62e4b74b30d6dd7828ce236fd6ed998a08d81de62ce5a6310d6",
+      "version": "81.0.0"
+    },
+    {
+      "bytes": 11053,
+      "name": "six",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/six-1.16.0-py2.py3-none-any.whl",
+      "sha256": "8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254",
+      "version": "1.16.0"
+    },
+    {
+      "bytes": 10768,
+      "name": "texttable",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/texttable-1.7.0-py2.py3-none-any.whl",
+      "sha256": "72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917",
+      "version": "1.7.0"
+    },
+    {
+      "bytes": 30763,
+      "name": "wcwidth",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_runtime_20260928/wheels/wcwidth-0.2.5-py2.py3-none-any.whl",
+      "sha256": "beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784",
+      "version": "0.2.5"
+    }
+  ]
+}

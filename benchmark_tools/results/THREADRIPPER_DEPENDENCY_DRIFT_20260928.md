@@ -37,6 +37,11 @@ binding remains unissued; existing binding and lookup pins remain historical.
 
 ## Next Action
 
+The [first private candidate](THREADRIPPER_PRIVATE_RUNTIME_20260928.md) now
+installs successfully and restores the ten historical pyparsing import hashes.
+It remains unapproved: packaging source/metadata disagree in the retained
+baseline, and the PyYAML native extension differs. No shared package was reverted.
+
 Prepare a private timing runtime with the intended dependency versions and
 explicit import paths, using the existing reconstruction work where suitable.
 Do not uninstall or downgrade unrelated users' packages in the shared prefix.
