@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Refresh Full Unit Regression After Accumulated Changes (2026-09-29)
+
+Previous turn progressed scoped native CPU reporting (`cc3df68a`). Reread
+goal and reproduction evidence. Since the last complete unit run, 183
+source/test files changed. Ran the entire suite once at the current revision:
+11,885 passed, 12 skipped, 22 warnings, exit zero. Ten skips are opt-in native
+checks; two are collection skips for missing sqlglot. The latter two modules
+passed all 13 tests in a separate run with the retained parser dependency.
+[Commands, scope and receipt](PUBLICATION_TEST_REFRESH_20260929.md).
+
+No source fix, package installation, native benchmark retry or host change.
+Tracked source status remained clean before and after. Updated the guide
+without replacing historical receipts or claiming native integration,
+scientific validity, archive restoration or timing admission. Goal active;
+publication requirements remain incomplete.
+
 ## Recover Explicit Native CPU Scopes From Retained Fixtures (2026-09-29)
 
 Previous turn progressed latest manuscript PDF review (`359d1030`). Reread

@@ -1,0 +1,144 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "-m",
+    "pytest",
+    "tests/unit",
+    "-q",
+    "--junitxml=benchmarks/work/publication_unit_refresh_20260929/junit.xml"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 467.094783543027,
+  "revision": "cc3df68a1a946e0a4b3b1bc00b15a079472a2f96",
+  "status": "current_unit_suite_passed_with_separate_parser_followup",
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "pytest_version": "9.0.2",
+  "passed": 11885,
+  "junit_suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "12",
+    "tests": "11897",
+    "time": "455.604",
+    "timestamp": "2026-09-29T00:17:35.689772-04:00",
+    "hostname": "bizon"
+  },
+  "junit": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_unit_refresh_20260929/junit.xml",
+    "bytes": 1598716,
+    "sha256": "88b9a28f136255452363fc235cc68e7c723b3ace277492a6b2bab90ea9a5c24f"
+  },
+  "log": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_unit_refresh_20260929/pytest.log",
+    "bytes": 13784,
+    "sha256": "43526bc170369d59ffbeaa0cd1c040546127134315b3c2fe0559d6e1fa68112b"
+  },
+  "skipped": [
+    {
+      "classname": "",
+      "name": "tests.unit.test_inspect_selectome_tf7a",
+      "reason": "collection skipped",
+      "detail": "('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_inspect_selectome_tf7a.py', 3, \"Skipped: could not import 'sqlglot': No module named 'sqlglot'\")"
+    },
+    {
+      "classname": "",
+      "name": "tests.unit.test_inspect_selectome_tf7ab",
+      "reason": "collection skipped",
+      "detail": "('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_inspect_selectome_tf7ab.py', 7, \"Skipped: could not import 'sqlglot': No module named 'sqlglot'\")"
+    },
+    {
+      "classname": "tests.unit.test_admit_qfo_corrected_bpo",
+      "name": "test_independent_complete_recheck",
+      "reason": "Installed native runtime",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_admit_qfo_corrected_bpo.py:102: Installed native runtime"
+    },
+    {
+      "classname": "tests.unit.test_audit_orthomcl_database",
+      "name": "test_installed_formatdb_normalization_is_detected",
+      "reason": "Opt-in installed legacy database round trip",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_audit_orthomcl_database.py:119: Opt-in installed legacy database round trip"
+    },
+    {
+      "classname": "tests.unit.test_describe_legacy_residue_deletions",
+      "name": "test_native_query_and_database_delete_o",
+      "reason": "Opt-in installed native query and database parser probe",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_describe_legacy_residue_deletions.py:83: Opt-in installed native query and database parser probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[False]",
+      "reason": "Opt-in installed OrthoMCL/BioPerl parity probe",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_orthomcl_bpo_indexes.py:51: Opt-in installed OrthoMCL/BioPerl parity probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_bpo_indexes",
+      "name": "test_installed_native_bpo_parity[True]",
+      "reason": "Opt-in installed OrthoMCL/BioPerl parity probe",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_orthomcl_bpo_indexes.py:51: Opt-in installed OrthoMCL/BioPerl parity probe"
+    },
+    {
+      "classname": "tests.unit.test_orthomcl_perl_launcher",
+      "name": "test_installed_perl_probe_has_no_relative_lookup",
+      "reason": "Opt-in native Perl probe",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_orthomcl_perl_launcher.py:54: Opt-in native Perl probe"
+    },
+    {
+      "classname": "tests.unit.test_prepare_orthomcl_bpo_checkpoint",
+      "name": "test_installed_checkpoint",
+      "reason": "Opt-in installed frozen OrthoMCL runtime",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_prepare_orthomcl_bpo_checkpoint.py:102: Opt-in installed frozen OrthoMCL runtime"
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[False]",
+      "reason": "Opt-in installed legacy engine smoke",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_qfo_corrected_blast.py:106: Opt-in installed legacy engine smoke"
+    },
+    {
+      "classname": "tests.unit.test_run_qfo_corrected_blast",
+      "name": "test_installed_legacy_engine_smoke[True]",
+      "reason": "Opt-in installed legacy engine smoke",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_qfo_corrected_blast.py:106: Opt-in installed legacy engine smoke"
+    },
+    {
+      "classname": "tests.unit.test_stage_orthomcl_native_inputs",
+      "name": "test_installed_staged_native_inference",
+      "reason": "Installed dedicated Python and native fixture required",
+      "detail": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_stage_orthomcl_native_inputs.py:91: Installed dedicated Python and native fixture required"
+    }
+  ],
+  "parser_followup": {
+    "suite": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "13",
+      "time": "0.350",
+      "timestamp": "2026-09-29T00:26:19.994264-04:00",
+      "hostname": "bizon"
+    },
+    "junit": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_unit_refresh_20260929/selectome.xml",
+      "bytes": 2137,
+      "sha256": "e97089a59cf683a7a22b5dbb8772f12a3f66f479ee14dc643373f0e430bf32f1"
+    },
+    "pythonpath": "benchmarks/work/treefam_selectome_search_20260928/parser_lib",
+    "sqlglot_version": "30.20.0",
+    "initializer": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_selectome_search_20260928/parser_lib/sqlglot/__init__.py",
+      "bytes": 5873,
+      "sha256": "62475c676c9112c31d8ecca3ef7763565153a2ba6fe01897dcef6e782fe89cb3"
+    },
+    "exit_code": 0
+  },
+  "warnings": 22,
+  "scoped_source_status_before_and_after": "clean for tests/unit, benchmark_tools/*.py and orthohmm",
+  "publication_ready": false,
+  "limitations": [
+    "Full unit suite and separate parser followup, not one combined full-suite environment",
+    "Ten opt-in native tests remain skipped",
+    "No biological accuracy, timing admission or complete archive restoration established"
+  ]
+}
