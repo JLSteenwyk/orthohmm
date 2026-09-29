@@ -75,6 +75,16 @@ diagnostic threshold has not been converted into an eligibility threshold.
 
 ## Validation And Remaining Work
 
+Current status: the [private deployment](THREADRIPPER_PRIVATE_DEPLOYMENT_20260928.md)
+and [three native collector-v5 fixtures](THREADRIPPER_PRIVATE_COLLECTOR_PANEL_20260928.md)
+resolve the earlier shared-interpreter drift and small-fixture integration
+issues described below. Their runtime checks, output comparisons and raw
+replays pass. They do not validate the executor's environmental worker/handoff
+or establish production readiness. The [scoped memory report](THREADRIPPER_FIXTURE_MEMORY_SCOPES_20260928.md)
+separates native-step/reporting-window peaks from unavailable final whole-job
+usage. The following drift and first-probe paragraphs are historical context,
+not statements that no newer runtime binding or fixture exists.
+
 The attempted v5 runtime refresh was [rejected for shared dependency drift](THREADRIPPER_DEPENDENCY_DRIFT_20260928.md):
 pyparsing changed from 3.2.1 to 3.1.1, affecting files in the retained OrthoHMM
 import trace. No new runtime binding or native fixture was admitted. Isolate

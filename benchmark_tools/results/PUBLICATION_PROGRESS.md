@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Make Diagnostic Resource Scopes Explicit (2026-09-28)
+
+Previous turn progressed the complete collector fixture panel (`72b409c2`).
+Reread goal and resource-accounting requirements. Added a checked summary of
+native-step, pre/post-native job and through-reporting peaks for jobs 22373-22375.
+Final whole-job peak remains null, not silently inferred from identical reads
+or absent scheduler fields. Nine tests pass; retained replay evidence rehashed.
+[Scope report](THREADRIPPER_FIXTURE_MEMORY_SCOPES_20260928.md).
+
+Updated the executor contract to distinguish now-resolved private-runtime and
+small-fixture integration issues from still-open production requirements.
+Requested approval asynchronously before any potential non-disruptive Slurm
+accounting configuration work. No scheduler changes, jobs, DGX access or new
+timing claims. Continue other publication tasks if approval/quiet-window work
+cannot proceed. Goal remains active; final accounting and environment gates open.
+
 ## Complete Three-Path Private Collector Fixture Panel (2026-09-28)
 
 Previous turn progressed collector integration (`1303663a`). Reread goal and
