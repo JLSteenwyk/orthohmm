@@ -63,3 +63,17 @@ def test_reconstructed_full_run_claim_has_exact_matching_evidence():
         text = (BASE / name).read_text()
         assert "RECONSTRUCTED_FULL_OB_RESULT_22376.md" in text
         assert "59,770" in text
+
+
+def test_reproduction_guide_distinguishes_completed_runs_from_open_release_work():
+    text = (BASE.parent / "PUBLICATION_REPRODUCTION.md").read_text()
+    section = text.split("### Tested Canonical OrthoBench Recovery", 1)[1]
+    assert "INTEGRATED_FULL_OB_RESULT_22337.md" in section
+    assert "RECONSTRUCTED_FULL_OB_RESULT_22376.md" in section
+    assert "have not yet been validated" not in section
+    assert "Remaining\nintegration work includes packaging" not in section
+    gates = text.split("### Remaining Publication Gates", 1)[1]
+    assert "locally supplied assets" in gates
+    assert "cross-host execution" in gates
+    assert "27 replacement scaling runs remain unexecuted" in gates
+    assert "MAIN_RECONSTRUCTION_REVIEW_20260929.md" in text

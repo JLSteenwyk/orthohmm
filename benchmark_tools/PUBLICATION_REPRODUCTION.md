@@ -9,7 +9,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 27 September 2026, incomplete working package. This guide routes
+Status: 29 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -244,6 +244,10 @@ RUNNING observation does not establish current liveness or completion.
   the intervening source text; selected new pages were visually inspected,
   not the complete document. Earlier snapshots remain retained.
   None adds native VGNC confidence intervals or controlled timing.
+- [Main manuscript review with reconstructed-base result](results/MAIN_RECONSTRUCTION_REVIEW_20260929.md)
+  includes the completed full-data reproduction on page 2. All six pages
+  were visually inspected, and citation, local-target and page-bound checks
+  passed. This is a dated review copy, not a submission-ready release.
 - [Corrected six-endpoint comparison figure](results/CORRECTED_QFO_ENDPOINT_FIGURE_20260926.md)
   retains all eight methods and distinguishes FAS eligible counts from sample sizes.
 - [Complete-panel figure evidence bundle](results/PUBLICATION_COMPLETE_FIGURE_BUNDLE_20260926.md)
@@ -623,10 +627,14 @@ that lock for the recovery environment. See the
 The [verified recovery wheel](results/LEIDEN_RECOVERY_WHEEL_20260926.md)
 now supplies a provider-digest-checked artifact whose 15 payload files match
 that private distribution exactly. Its single-component hash lock is not a
-complete environment. A [fresh 11-wheel recovery installation](results/PUBLICATION_RECOVERY_INSTALL_20260926.md)
-now passes source/package byte checks and standard/high-sensitivity fixtures,
-using a separate complete Python lock. Full native phylogeny and benchmark
-reproduction in that new installation have not yet been validated.
+complete environment. The historical [11-wheel recovery installation](results/PUBLICATION_RECOVERY_INSTALL_20260926.md)
+passed source/package byte checks and standard/high-sensitivity fixtures,
+using a separate complete Python lock. Subsequent
+[full integrated job 22337](results/INTEGRATED_FULL_OB_RESULT_22337.md) and
+[reconstructed-base job 22376](results/RECONSTRUCTED_FULL_OB_RESULT_22376.md)
+validated full native phylogeny and all 70 OrthoBench score records in fresh
+environments. These later executions close the fixture-only validation gap;
+they do not retroactively expand the scope of the earlier installation test.
 The canonical-order policy remains benchmark-only, not an enabled production
 default. Do not present this as a new accuracy-tuned method or transfer the
 recovery result to QfO or another platform without validation.
@@ -659,13 +667,14 @@ is not a relocated native reproduction. The original `readback` directory must
 not be overwritten. All audit stages must succeed before claiming a reproduced
 score; a partial receipt or process exit alone is insufficient.
 
-Fresh search/candidate artifacts were reused, so the 1,555.40-second replay is
-phylogeny-stage timing only. Shared-host resources are descriptive. Remaining
-integration work includes packaging the exact dependency distribution, exposing
-a tested full-pipeline reproduction entrypoint with explicit ordering policy,
-and validating its data/tool restoration without relying on workstation paths.
-Do not change the frozen scientific baseline or silently promote the ordering
-policy while doing that integration.
+Fresh search/candidate artifacts were reused in job 22324, so its
+1,555.40-second replay is phylogeny-stage timing only. Shared-host resources
+are descriptive. The later integrated controller and fresh-environment
+executions listed under Execution Status supply a tested full-pipeline path
+and exact wheel inventories; those are no longer pending fixture-only work.
+Complete data/tool acquisition and archive restoration without workstation
+paths, cross-host validation and distribution review remain open. Preserve
+the frozen scientific baseline and the benchmark-only ordering policy.
 
 The [updated OrthoBench provenance register](results/OB_PROVENANCE_REGISTER_20260927.md)
 and [QfO OrthoFinder consolidation](results/QFO_ORTHOFINDER_PROVENANCE_CONSOLIDATED_20260926.md)
@@ -701,9 +710,11 @@ does not supply original family identities for uncertainty estimation.
   evaluation, not family-disjoint or universal generalization. No outcome-driven
   method changes are authorized by that evidence; such changes require a new
   independent confirmation.
-- Executable packaging: inference, reader and statistical components have
-  bounded relocation checks, but their combined acquisition/install/run/score
-  workflow and full-data restoration are not yet a complete portable release.
+- Executable packaging: the combined installation/inference/readback/scoring
+  workflow has passed full OrthoBench validation with both original and
+  reconstructed base Python, using locally supplied assets. End-to-end public
+  acquisition and complete archive restoration, cross-host execution and
+  all-method coverage are not yet a complete portable release.
   A final bundle must specify which historical source versions each command
   consumes and preserve both failures and successful executions.
 - Distribution: OrthoBench/YGOB remain acquisition-only. Final selected-file

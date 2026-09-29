@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Reconcile Reproduction Guide With Completed Full Runs (2026-09-29)
+
+Previous turn documented a bounded negative TreeFam lead (`61bc8d82`),
+without recovering originals. Reread goal and ledger; no repeated search.
+Inspection found stale statements in the reproduction guide's canonical
+recovery section: it still called full native validation and a tested
+integrated entrypoint pending despite its own Execution Status section.
+
+Checked both full-run result records and corrected the guide to distinguish
+historical fixture tests from later jobs 22337 and 22376. Full same-host
+fresh-environment validation is completed; public acquisition, archive
+restoration, cross-host execution, all-method coverage and distribution review
+remain unproved. Added the latest reviewed main manuscript link. No scientific
+claim, endpoint, runtime or job changed, and no old evidence was overwritten.
+
+Added a documentation regression test alongside the existing receipt-backed
+full-run assertion. All 18 manuscript/renderer tests passed in 2.28 seconds.
+Pandoc AST inspection resolves all 133 guide-local link occurrences to 123
+existing targets; this checks paths, not transitive provenance or scientific
+truth. Scoped whitespace check passed. Goal remains active; controlled timing
+and other publication requirements are not complete.
+
 ## Check Remaining Public TreeFam Search Lead (2026-09-29)
 
 Previous turn progressed the rendered manuscript (`e2e96746`). Reread the
