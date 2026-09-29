@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Validate Existing Process Stream Checker On Private Fixtures (2026-09-28)
+
+Previous turn progressed checked manuscript printing (`c151ecd0`). Reread goal
+and timing contract. Initial exploration missed the existing whole-stream checker;
+a duplicate replacement was restored before commit, preserving the original
+implementation, pressure integration and tests. Replayed all three private
+collector fixtures through the existing checker under a deliberately empty
+negative-control policy. All reject; none is reclassified as controlled.
+[Evidence and scope](THREADRIPPER_PRIVATE_STREAM_REPLAY_20260928.md).
+
+No native reruns or host changes. This verifies existing rejection behavior,
+not a reviewed production policy or final accounting. Goal remains active.
+
 ## Prevent Printing After Invalid Manuscript Render (2026-09-28)
 
 Previous turn progressed the reviewed manuscript export (`ccc7ab1f`) but exposed

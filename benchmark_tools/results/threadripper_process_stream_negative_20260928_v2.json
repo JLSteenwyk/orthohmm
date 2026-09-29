@@ -1,0 +1,170 @@
+{
+  "cases": [
+    {
+      "job_id": 22373,
+      "policy": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "ordinary_processes": [],
+        "review_reference": "Deliberately empty negative control; not a reviewed host policy",
+        "schema": "threadripper_process_policy_v2"
+      },
+      "result": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "bounds": {
+          "maximum_foreign_average_cores": 0.0,
+          "maximum_sample_period_s": 1.0
+        },
+        "command_bracketed_by_samples": true,
+        "controlled_workload_verified": false,
+        "end": 298854.707594214,
+        "failures": {
+          "foreign_cpu_bound_exceeded": 1,
+          "process_policy_mismatch": 1,
+          "sample_period_bound_exceeded": 2
+        },
+        "intervals": 1,
+        "job_scope": "/system.slice/slurmstepd.scope/job_22373",
+        "launch": 298841.899777492,
+        "limitations": [
+          "Input and policy provenance must be independently bound to the run.",
+          "Periodic snapshots miss short-lived work and cannot certify exclusivity.",
+          "This checks process identities and CPU only, not executable or configuration drift, PSI or device contention.",
+          "All intervals are checked, including bracketing intervals outside native execution.",
+          "No production timing admission, automatic retry or next-run authorization."
+        ],
+        "maximum_observed_foreign_average_cores": 101.62984741265093,
+        "maximum_observed_sample_period_s": 16.343027241004165,
+        "observer_pid": 2625233,
+        "policy_matched_intervals": 0,
+        "records": 2,
+        "sampled_process_policy_satisfied": false,
+        "schema": "threadripper_process_stream_review_v1",
+        "scientific_timings_admitted": false,
+        "status": "unresolved_process_stream"
+      },
+      "source": {
+        "bytes": 1580349,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "170621852774ecf8c517e25c696b657ea2e743561f56d6ca35bdda0978fb7ed6"
+      },
+      "summary_source": {
+        "bytes": 1268,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/run_00/measurement/host_process_summary.json",
+        "sha256": "77da2b22c0e82c856f0b6c16bc36f5512f928a433fe7aacd1183b219d18518ef"
+      }
+    },
+    {
+      "job_id": 22374,
+      "policy": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "ordinary_processes": [],
+        "review_reference": "Deliberately empty negative control; not a reviewed host policy",
+        "schema": "threadripper_process_policy_v2"
+      },
+      "result": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "bounds": {
+          "maximum_foreign_average_cores": 0.0,
+          "maximum_sample_period_s": 1.0
+        },
+        "command_bracketed_by_samples": true,
+        "controlled_workload_verified": false,
+        "end": 299122.635675311,
+        "failures": {
+          "foreign_cpu_bound_exceeded": 1,
+          "process_policy_mismatch": 1,
+          "sample_period_bound_exceeded": 2
+        },
+        "intervals": 1,
+        "job_scope": "/system.slice/slurmstepd.scope/job_22374",
+        "launch": 299106.311549385,
+        "limitations": [
+          "Input and policy provenance must be independently bound to the run.",
+          "Periodic snapshots miss short-lived work and cannot certify exclusivity.",
+          "This checks process identities and CPU only, not executable or configuration drift, PSI or device contention.",
+          "All intervals are checked, including bracketing intervals outside native execution.",
+          "No production timing admission, automatic retry or next-run authorization."
+        ],
+        "maximum_observed_foreign_average_cores": 101.38148549436318,
+        "maximum_observed_sample_period_s": 20.417424536019098,
+        "observer_pid": 2628416,
+        "policy_matched_intervals": 0,
+        "records": 2,
+        "sampled_process_policy_satisfied": false,
+        "schema": "threadripper_process_stream_review_v1",
+        "scientific_timings_admitted": false,
+        "status": "unresolved_process_stream"
+      },
+      "source": {
+        "bytes": 1578305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "643ec591e2f2210dc1e6b4cf5863b6c90da5efed5f4dd6478ae0ea4363b22f4c"
+      },
+      "summary_source": {
+        "bytes": 1269,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/run_00/measurement/host_process_summary.json",
+        "sha256": "50a3ede5df557d472f8dac5d9b884bcc1e588134a585aef8bf8c58e14a0db9e4"
+      }
+    },
+    {
+      "job_id": 22375,
+      "policy": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "ordinary_processes": [],
+        "review_reference": "Deliberately empty negative control; not a reviewed host policy",
+        "schema": "threadripper_process_policy_v2"
+      },
+      "result": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7",
+        "bounds": {
+          "maximum_foreign_average_cores": 0.0,
+          "maximum_sample_period_s": 1.0
+        },
+        "command_bracketed_by_samples": true,
+        "controlled_workload_verified": false,
+        "end": 299240.360298232,
+        "failures": {
+          "foreign_cpu_bound_exceeded": 1,
+          "process_policy_mismatch": 1,
+          "sample_period_bound_exceeded": 2
+        },
+        "intervals": 1,
+        "job_scope": "/system.slice/slurmstepd.scope/job_22375",
+        "launch": 299226.651458695,
+        "limitations": [
+          "Input and policy provenance must be independently bound to the run.",
+          "Periodic snapshots miss short-lived work and cannot certify exclusivity.",
+          "This checks process identities and CPU only, not executable or configuration drift, PSI or device contention.",
+          "All intervals are checked, including bracketing intervals outside native execution.",
+          "No production timing admission, automatic retry or next-run authorization."
+        ],
+        "maximum_observed_foreign_average_cores": 101.37276072520552,
+        "maximum_observed_sample_period_s": 17.378986894036643,
+        "observer_pid": 2630826,
+        "policy_matched_intervals": 0,
+        "records": 2,
+        "sampled_process_policy_satisfied": false,
+        "schema": "threadripper_process_stream_review_v1",
+        "scientific_timings_admitted": false,
+        "status": "unresolved_process_stream"
+      },
+      "source": {
+        "bytes": 1576316,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/run_00/measurement/host_processes.jsonl",
+        "sha256": "9f826a82d4edab5bb217a9fcc5ec3c8b444ef7d5be7e0ead9a3787a768e8acfd"
+      },
+      "summary_source": {
+        "bytes": 1268,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/run_00/measurement/host_process_summary.json",
+        "sha256": "b1e2c7d0251d50bf21d5142fafe9dc1b3863a9cab46585242f1563d68af0621b"
+      }
+    }
+  ],
+  "production_policy": false,
+  "source": {
+    "bytes": 10013,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_stream.py",
+    "sha256": "33adc5046582da01b1ff9149c136a65b9c6d7f9baa820854c976a042060c4f19"
+  },
+  "status": "negative_controls_reject_all_three_retained_fixtures"
+}
