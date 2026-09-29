@@ -1,5 +1,10 @@
 # Release Security Scope
 
+The [separate patched timing candidate](THREADRIPPER_PATCHED_RUNTIME_20260928.md)
+now has zero matches against a newer 40-alert snapshot. These 40 include the
+same advisories on both historical private locks; this does not clear old
+environments or establish comprehensive security or timing admission.
+
 The later [private timing review](PRIVATE_TIMING_SECURITY_REVIEW_20260928.md)
 supersedes the repository-wide alert count below: its snapshot has 26 open
 alerts. The new private candidate matches 14 unique advisory ranges, including

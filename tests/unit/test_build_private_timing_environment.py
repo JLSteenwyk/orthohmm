@@ -28,6 +28,16 @@ def test_missing_baseline_version_rejected():
         selected_versions({"environments": {"orthohmm": {"packages": {}}}})
 
 
+def test_patched_deployment_only_changes_declared_packages():
+    packages = {name: "1" for name in PACKAGES}
+    baseline = {"environments": {"orthohmm": {"packages": packages}}}
+    original = selected_versions(baseline)
+    patched = selected_versions(baseline, patched_deployment=True)
+    assert {k: v for k, v in patched.items() if original[k] != v} == {
+        "packaging": "26.1", "pillow": "12.3.0", "setuptools": "83.0.0"}
+    assert all(v == "1" for v in packages.values())
+
+
 def test_lock_binds_actual_wheel(tmp_path):
     path = tmp_path / "example.whl"
     wheel(path)

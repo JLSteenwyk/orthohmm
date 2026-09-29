@@ -29,13 +29,16 @@ def write(path, data):
         handle.write("\n")
 
 
-def selected_versions(baseline):
+def selected_versions(baseline, patched_deployment=False):
     packages = baseline["environments"]["orthohmm"]["packages"]
     selected = {name: packages[name] for name in PACKAGES}
     if any(not isinstance(v, str) or not v or any(c.isspace() for c in v) for v in selected.values()):
         raise ValueError("Malformed frozen version")
     # Installer only, outside the frozen scientific package selection.
     selected["pip"] = "26.2.1"
+    if patched_deployment:
+        # Explicit deployment amendment; historical selections remain available.
+        selected.update(packaging="26.1", pillow="12.3.0", setuptools="83.0.0")
     return selected
 
 
@@ -69,14 +72,17 @@ def hash_lock(wheels, selected):
     return "\n".join(lines) + "\n", records
 
 
-def build(baseline_path, expected_sha, output):
+def build(baseline_path, expected_sha, output, patched_deployment=False):
     if output.exists():
         raise FileExistsError(output)
     raw = baseline_path.read_bytes()
     if hashlib.sha256(raw).hexdigest() != expected_sha:
         raise ValueError("Baseline checksum differs")
     baseline = json.loads(raw)
-    selected = selected_versions(baseline)
+    selected = selected_versions(baseline, patched_deployment)
+    original = selected_versions(baseline)
+    changes = {k: dict(previous=original[k], selected=v)
+               for k, v in selected.items() if original[k] != v}
     output.mkdir(parents=True)
     wheels = output / "wheels"
     wheels.mkdir()
@@ -101,7 +107,7 @@ def build(baseline_path, expected_sha, output):
             raise RuntimeError(f"{label} failed; retain the attempt")
     pip = [sys.executable, "-I", "-B", "-m", "pip", "--isolated"]
     write(output / "started.json", dict(baseline=record(baseline_path), source=record(Path(__file__)),
-          base_python=record(Path(sys.executable)), selected=selected,
+          base_python=record(Path(sys.executable)), selected=selected, deployment_changes=changes,
           scientific_execution_authorized=False))
     execute("download", [*pip, "download", "--index-url", "https://pypi.org/simple", "--no-deps",
         "--only-binary=:all:", "--dest", str(wheels), "--requirement", str(requirements)])
@@ -131,10 +137,11 @@ def build(baseline_path, expected_sha, output):
         if record(Path(row["path"]))["sha256"] != row["sha256"]:
             raise ValueError("Wheel changed during installation")
     result = dict(status="private_timing_environment_candidate_installed", selected=selected,
+        deployment_changes=changes,
         baseline=record(baseline_path), source=record(Path(__file__)), lock=record(lock), wheels=wheel_records,
         stages=stages, import_report=record(output / "imports.log"), base_prefix=observed["base_prefix"],
         shared_python_prefix_observed=False, scientific_execution_authorized=False,
-        limitations=["Preserves selected scientific versions, not every package or binary in the historical shared environment.",
+        limitations=["Explicit deployment_changes supersede historical metadata; scientific package versions otherwise preserved.",
                      "Unrelated editable startup hooks omitted; pip installer is 26.2.1. No scientific inference or timing run.",
                      "Import-path check is not a file-access sandbox, native-library audit or complete branch coverage."])
     write(output / "result.json", result)
@@ -146,6 +153,8 @@ if __name__ == "__main__":
     parser.add_argument("--baseline", type=Path, required=True)
     parser.add_argument("--sha256", required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--patched-deployment", action="store_true",
+                        help="Apply the documented packaging alignment and Pillow/setuptools security revision")
     args = parser.parse_args()
-    result = build(args.baseline.resolve(), args.sha256, args.output.resolve())
+    result = build(args.baseline.resolve(), args.sha256, args.output.resolve(), args.patched_deployment)
     print(json.dumps(dict(status=result["status"], packages=len(result["selected"]))))

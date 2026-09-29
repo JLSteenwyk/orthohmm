@@ -1,8 +1,9 @@
 import copy
+import json
 
 import pytest
 
-from benchmark_tools.audit_private_timing_advisories import compare
+from benchmark_tools.audit_private_timing_advisories import audit, compare
 
 
 def snapshot():
@@ -31,6 +32,23 @@ def test_fixed_and_absent_are_distinct():
 def test_inventory_drift_rejected():
     with pytest.raises(ValueError, match="inventory"):
         compare({"pillow": "12.2.0"}, [], snapshot(), snapshot())
+
+
+@pytest.mark.parametrize("status", ["private_packaging_historical_payload_aligned",
+                                   "private_timing_environment_candidate_installed"])
+def test_installed_receipt_audit(tmp_path, monkeypatch, status):
+    python = tmp_path / "python"
+    python.write_bytes(b"test interpreter identity")
+    candidate = tmp_path / "candidate.json"
+    candidate.write_text(json.dumps(dict(status=status, selected={"pillow": "12.3.0"})))
+    alerts = tmp_path / "alerts.json"
+    alerts.write_text(json.dumps(snapshot()))
+    monkeypatch.setattr("benchmark_tools.audit_private_timing_advisories.subprocess.check_output",
+                        lambda *a, **kw: '[{"name": "Pillow", "version": "12.3.0"}]')
+    result = audit(python, candidate, alerts, alerts)
+    assert result["affected_unique_advisories"] == 0
+    assert result["scientific_execution_authorized"] is False
+    assert result["comprehensive_security_clearance"] is False
 
 
 @pytest.mark.parametrize("change", ["empty", "duplicate", "closed", "repository", "ecosystem"])

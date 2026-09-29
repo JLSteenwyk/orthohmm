@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Install Separate Patched Timing Candidate (2026-09-28)
+
+Previous turn progressed the advisory audit (`b25fcdd3`). Reread the goal and
+ledger. Built a separate private environment with the explicit deployment
+revision: Pillow 12.3.0, setuptools 83.0.0, and the previously verified packaging
+26.1 alignment. Preserved both historical environments. All five installation
+stages pass; live metadata matches all 30 pins. Fresh 40-alert snapshot includes
+the v2 lock duplicates; candidate has zero matching retained advisory ranges,
+not comprehensive security clearance.
+[Installation and evidence](THREADRIPPER_PATCHED_RUNTIME_20260928.md).
+
+Rechecked 40 frozen source files; 704/710 imported historical files are identical.
+Five Pillow imports and the known YAML extension differ. Thirty focused tests
+pass. Next: native fixture parity and collector integration with a prospective
+deployment amendment, followed by remaining timing admission checks. No native
+benchmark or production timing launched; no DGX access. Goal remains active.
+
 ## Audit Private Timing Candidate Security (2026-09-28)
 
 Previous turn progressed the saved goal's Threadripper-only resume instructions.

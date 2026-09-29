@@ -39,8 +39,9 @@ def compare(selected, observed, snapshot, previous):
 def audit(python, candidate, snapshot, previous):
     watched = [record(p) for p in (python, candidate, snapshot, previous)]
     receipt = json.loads(candidate.read_text())
-    if receipt["status"] != "private_packaging_historical_payload_aligned":
-        raise ValueError("Require the aligned private candidate receipt")
+    if receipt["status"] not in ("private_packaging_historical_payload_aligned",
+                                  "private_timing_environment_candidate_installed"):
+        raise ValueError("Require an installed private candidate receipt")
     code = ("import json,importlib.metadata as m;"
             "print(json.dumps([dict(name=d.metadata['Name'],version=d.version) for d in m.distributions()]))")
     command = [str(python), "-I", "-B", "-c", code]
