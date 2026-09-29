@@ -1,0 +1,273 @@
+{
+  "production_runs_launched": 0,
+  "rows": [
+    {
+      "final_whole_job_peak_bytes": null,
+      "job_id": 22373,
+      "limitations": [
+        "Native step includes its launcher; not pure algorithm RSS.",
+        "Job peaks include preparation and observation only through their read boundaries.",
+        "Overlapping peaks must not be added or subtracted.",
+        "Final whole-job peak is not established by these receipts."
+      ],
+      "measurements": {
+        "job_after_native": {
+          "bytes": 698740736,
+          "read_finished_ns": 298858588422742,
+          "read_started_ns": 298858588059410,
+          "scope": "/system.slice/slurmstepd.scope/job_22373"
+        },
+        "job_before_native": {
+          "bytes": 254279680,
+          "read_finished_ns": 298841812250976,
+          "read_started_ns": 298841811770375,
+          "scope": "/system.slice/slurmstepd.scope/job_22373"
+        },
+        "job_through_reporting": {
+          "bytes": 698740736,
+          "read_finished_ns": 298859272379290,
+          "read_started_ns": 298859271961064,
+          "scope": "/system.slice/slurmstepd.scope/job_22373"
+        },
+        "native_step": {
+          "bytes": 618377216,
+          "read_finished_ns": 298858587813315,
+          "read_started_ns": 298858587629226,
+          "scope": "/system.slice/slurmstepd.scope/job_22373/step_0"
+        }
+      },
+      "native_command_source": {
+        "bytes": 43698,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/run_00/measurement/done.json",
+        "sha256": "4313a4bf3d28f4ed57cc9d09b62c07466a3b235228f18c06ebf7c3d347a4f079"
+      },
+      "native_cpu": {
+        "after": {
+          "system_usec": 2634076,
+          "usage_usec": 40168172,
+          "user_usec": 37534095
+        },
+        "before": {
+          "system_usec": 42374,
+          "usage_usec": 442912,
+          "user_usec": 400537
+        },
+        "command_wall_seconds": 12.807816722,
+        "cpu_seconds": 39.72526,
+        "delta_usec": {
+          "system_usec": 2591702,
+          "usage_usec": 39725260,
+          "user_usec": 37133558
+        },
+        "final_whole_job_cpu_seconds": null,
+        "limitations": [
+          "CPU differences include wrapper work within the read bracket.",
+          "Not terminal whole-job CPU, pure algorithm CPU or controlled timing.",
+          "Completion observations do not prove continuous containment."
+        ],
+        "read_window_ns": [
+          298841897900828,
+          298841899662147,
+          298841899777492,
+          298854707594214,
+          298854707597188,
+          298854709321651
+        ],
+        "scientific_timings_admitted": false,
+        "scope": "/system.slice/slurmstepd.scope/job_22373/step_0/user/task_0"
+      },
+      "replay_source": {
+        "bytes": 2014281,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_high_20260928/measurement_replay.json",
+        "sha256": "51d4288a120dac3e413c890295762131b6452c3a72a53804745ef0b36974bbd8"
+      },
+      "scientific_timings_admitted": false,
+      "source": {
+        "bytes": 1763,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_collector_22373.json",
+        "sha256": "3f20fd4c6d151a467f754d71a379f310556b6882363a8da52973770d34f87b40"
+      }
+    },
+    {
+      "final_whole_job_peak_bytes": null,
+      "job_id": 22374,
+      "limitations": [
+        "Native step includes its launcher; not pure algorithm RSS.",
+        "Job peaks include preparation and observation only through their read boundaries.",
+        "Overlapping peaks must not be added or subtracted.",
+        "Final whole-job peak is not established by these receipts."
+      ],
+      "measurements": {
+        "job_after_native": {
+          "bytes": 697860096,
+          "read_finished_ns": 299126669970036,
+          "read_started_ns": 299126669356114,
+          "scope": "/system.slice/slurmstepd.scope/job_22374"
+        },
+        "job_before_native": {
+          "bytes": 254349312,
+          "read_finished_ns": 299106226027986,
+          "read_started_ns": 299106225448636,
+          "scope": "/system.slice/slurmstepd.scope/job_22374"
+        },
+        "job_through_reporting": {
+          "bytes": 697860096,
+          "read_finished_ns": 299127362247049,
+          "read_started_ns": 299127361575530,
+          "scope": "/system.slice/slurmstepd.scope/job_22374"
+        },
+        "native_step": {
+          "bytes": 617283584,
+          "read_finished_ns": 299126669164763,
+          "read_started_ns": 299126668892219,
+          "scope": "/system.slice/slurmstepd.scope/job_22374/step_0"
+        }
+      },
+      "native_command_source": {
+        "bytes": 43701,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/run_00/measurement/done.json",
+        "sha256": "f64380a197794d1c52e4d71fb7c3f32ce6f6bf7b28c69978275c292a03c925f6"
+      },
+      "native_cpu": {
+        "after": {
+          "system_usec": 3654868,
+          "usage_usec": 45404482,
+          "user_usec": 41749614
+        },
+        "before": {
+          "system_usec": 53310,
+          "usage_usec": 546178,
+          "user_usec": 492868
+        },
+        "command_wall_seconds": 16.324125926,
+        "cpu_seconds": 44.858304,
+        "delta_usec": {
+          "system_usec": 3601558,
+          "usage_usec": 44858304,
+          "user_usec": 41256746
+        },
+        "final_whole_job_cpu_seconds": null,
+        "limitations": [
+          "CPU differences include wrapper work within the read bracket.",
+          "Not terminal whole-job CPU, pure algorithm CPU or controlled timing.",
+          "Completion observations do not prove continuous containment."
+        ],
+        "read_window_ns": [
+          299106309623100,
+          299106311407450,
+          299106311549385,
+          299122635675311,
+          299122635680229,
+          299122637838035
+        ],
+        "scientific_timings_admitted": false,
+        "scope": "/system.slice/slurmstepd.scope/job_22374/step_0/user/task_0"
+      },
+      "replay_source": {
+        "bytes": 2840497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_phylo_20260928/independent_outcome_audit.json",
+        "sha256": "b5a9c5d2723e880ad74553080b9235b38b4608e17520d4833da5ecbe63348868"
+      },
+      "scientific_timings_admitted": false,
+      "source": {
+        "bytes": 1836,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_collector_22374.json",
+        "sha256": "9a6529af9ea3758eaf6222c8f1e9bfb2e2a973060cec60ab348dfd3ccbfa4f3b"
+      }
+    },
+    {
+      "final_whole_job_peak_bytes": null,
+      "job_id": 22375,
+      "limitations": [
+        "Native step includes its launcher; not pure algorithm RSS.",
+        "Job peaks include preparation and observation only through their read boundaries.",
+        "Overlapping peaks must not be added or subtracted.",
+        "Final whole-job peak is not established by these receipts."
+      ],
+      "measurements": {
+        "job_after_native": {
+          "bytes": 357433344,
+          "read_finished_ns": 299243973771465,
+          "read_started_ns": 299243973435455,
+          "scope": "/system.slice/slurmstepd.scope/job_22375"
+        },
+        "job_before_native": {
+          "bytes": 253775872,
+          "read_finished_ns": 299226580208150,
+          "read_started_ns": 299226579495277,
+          "scope": "/system.slice/slurmstepd.scope/job_22375"
+        },
+        "job_through_reporting": {
+          "bytes": 357433344,
+          "read_finished_ns": 299244680668957,
+          "read_started_ns": 299244679797113,
+          "scope": "/system.slice/slurmstepd.scope/job_22375"
+        },
+        "native_step": {
+          "bytes": 276701184,
+          "read_finished_ns": 299243973263664,
+          "read_started_ns": 299243973081537,
+          "scope": "/system.slice/slurmstepd.scope/job_22375/step_0"
+        }
+      },
+      "native_command_source": {
+        "bytes": 43700,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/run_00/measurement/done.json",
+        "sha256": "6ce1793882637365594d7d60a6e934455bf48fc630d0fdc0fe498678ef47e3fc"
+      },
+      "native_cpu": {
+        "after": {
+          "system_usec": 9875852,
+          "usage_usec": 22449875,
+          "user_usec": 12574023
+        },
+        "before": {
+          "system_usec": 48400,
+          "usage_usec": 413425,
+          "user_usec": 365024
+        },
+        "command_wall_seconds": 13.708839537,
+        "cpu_seconds": 22.03645,
+        "delta_usec": {
+          "system_usec": 9827452,
+          "usage_usec": 22036450,
+          "user_usec": 12208999
+        },
+        "final_whole_job_cpu_seconds": null,
+        "limitations": [
+          "CPU differences include wrapper work within the read bracket.",
+          "Not terminal whole-job CPU, pure algorithm CPU or controlled timing.",
+          "Completion observations do not prove continuous containment."
+        ],
+        "read_window_ns": [
+          299226648833337,
+          299226651216647,
+          299226651458695,
+          299240360298232,
+          299240360301216,
+          299240362034549
+        ],
+        "scientific_timings_admitted": false,
+        "scope": "/system.slice/slurmstepd.scope/job_22375/step_0/user/task_0"
+      },
+      "replay_source": {
+        "bytes": 2383758,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_collector_of_20260928/independent_outcome_audit.json",
+        "sha256": "681cd3cb8680128e03b52903ab7d5b124049b9f825e1b2fee7b4cd798fb95f3e"
+      },
+      "scientific_timings_admitted": false,
+      "source": {
+        "bytes": 1686,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_collector_22375.json",
+        "sha256": "6aa7019c61518fcab8ae1aed34b1381ffad3b2a2fac69cf02469b2d2831f042b"
+      }
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 6886,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_fixture_memory_scopes.py",
+    "sha256": "09d5c49043eb26cbd16bed1643cb55fc897b6f4ad6cf7d64634f75dcf1ec5094"
+  },
+  "status": "diagnostic_memory_scopes_summarized"
+}

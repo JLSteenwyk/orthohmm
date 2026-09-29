@@ -6,6 +6,51 @@ from pathlib import Path
 
 from benchmark_tools.build_private_timing_environment import record, write
 from benchmark_tools.prepare_ob_candidate_neighborhood import check
+from benchmark_tools.slurm_resource_snapshot import counters, scoped_path
+
+
+def native_cpu(done, job_id, completion):
+    """Report raw counter differences, including the wrapper's bracket work."""
+    before, after = done["snapshots"]
+    times = [before["started_monotonic_ns"], before["finished_monotonic_ns"],
+             done["started_ns"], done["finished_ns"],
+             after["started_monotonic_ns"], after["finished_monotonic_ns"]]
+    if (any(type(t) is not int or t <= 0 for t in times)
+            or not times[0] <= times[1] < times[2] < times[3] < times[4] <= times[5]):
+        raise ValueError("CPU reads must bracket command execution")
+    if completion["status"] != "anchor_only_at_boundaries" or completion["errors"]:
+        raise ValueError("Unverified native completion")
+    if completion["command_finished_ns"] != done["finished_ns"]:
+        raise ValueError("Completion and command disagree")
+    for key in ("boot_id", "online_cpus", "cgroup_membership"):
+        if not before["raw"][key] or before["raw"][key] != after["raw"][key]:
+            raise ValueError("CPU scope or host changed")
+    scope = scoped_path(before["raw"]["cgroup_membership"], job_id)
+    user_path = Path(completion["before"]["scope"])
+    user_scope = Path("/") / user_path.relative_to("/sys/fs/cgroup")
+    if (not scope.is_relative_to(user_scope)
+            or completion["after"]["scope"] != str(user_path)):
+        raise ValueError("CPU scope is outside native completion subtree")
+    values = []
+    fields = ("usage_usec", "user_usec", "system_usec")
+    for sample in (before, after):
+        if sample["errors"]:
+            raise ValueError("Incomplete native CPU observation")
+        parsed = counters(sample["optional"]["cgroup_cpu.stat"])
+        if not set(fields) <= parsed.keys():
+            raise ValueError("Missing native CPU fields")
+        values.append({key: parsed[key] for key in fields})
+    delta = {key: values[1][key] - values[0][key] for key in fields}
+    if any(value < 0 for value in delta.values()):
+        raise ValueError("Native CPU counter decreased")
+    return dict(scope=str(scope), before=values[0], after=values[1], delta_usec=delta,
+                cpu_seconds=delta["usage_usec"] / 1e6,
+                command_wall_seconds=(times[3] - times[2]) / 1e9,
+                read_window_ns=times, final_whole_job_cpu_seconds=None,
+                scientific_timings_admitted=False,
+                limitations=["CPU differences include wrapper work within the read bracket.",
+                             "Not terminal whole-job CPU, pure algorithm CPU or controlled timing.",
+                             "Completion observations do not prove continuous containment."])
 
 
 def peak(observation):
@@ -55,6 +100,14 @@ def run(repo, output):
         for evidence in replayed["evidence"]:
             check(evidence)
         row = summarize(replayed)
+        done_refs = [item for item in replayed["evidence"] if Path(item["path"]).name == "done.json"]
+        if len(done_refs) != 1:
+            raise ValueError("Require one retained native command receipt")
+        done = json.loads(Path(done_refs[0]["path"]).read_text())
+        row["native_cpu"] = native_cpu(done, job_id, replayed["native_completion"])
+        row["native_command_source"] = done_refs[0]
+        for evidence in replayed["evidence"]:
+            check(evidence)
         row.update(job_id=job_id, source=record(path), replay_source=ref)
         rows.append(row)
     result = dict(status="diagnostic_memory_scopes_summarized", rows=rows, source=record(Path(__file__)),

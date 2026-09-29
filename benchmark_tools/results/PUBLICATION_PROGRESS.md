@@ -1,5 +1,21 @@
 # Publication Progress
 
+## Recover Explicit Native CPU Scopes From Retained Fixtures (2026-09-29)
+
+Previous turn progressed latest manuscript PDF review (`359d1030`). Reread
+goal and inspected accounting/collector evidence. Native CPU counters exist
+independently of missing terminal Slurm usage. Extended the existing memory
+summary to expose usage/user/system differences with exact scopes and read
+windows. [Evidence, limitations and commands](THREADRIPPER_NATIVE_CPU_SCOPES_20260929.md).
+
+Eighteen focused tests and all three retained-fixture replays pass; independent
+raw-string arithmetic agrees for all nine CPU differences. Initial replay
+found an absolute-versus-membership path mismatch in the new helper, corrected
+before successful replay. No native execution repeated. Whole-job CPU and
+final peak remain unavailable, and no timing gate was relaxed or production
+run admitted. This recovers reporting evidence, not controlled performance.
+Goal remains active; host services and unrelated workloads untouched.
+
 ## Review Latest Main Manuscript PDF (2026-09-29)
 
 Previous turn progressed exact base-package payload attribution (`5d234877`).
