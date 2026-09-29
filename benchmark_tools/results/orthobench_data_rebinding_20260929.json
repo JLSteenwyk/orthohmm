@@ -1,0 +1,35 @@
+{
+  "acquisition_root": "/tmp/orthohmm-data-rebind-20260929",
+  "controller_source": {
+    "bytes": 13821,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py",
+    "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+  },
+  "controller_validator_passed": true,
+  "execution_scope": "Copied full-data inputs; isolated stdlib-only helper outside checkout; not fresh download or native inference",
+  "files": 93,
+  "inference_rerun": false,
+  "limitations": [
+    "Verifies frozen file bytes and order, not acquisition history or data rights.",
+    "Upstream revision is retained metadata, not a fresh Git repository audit.",
+    "Caller supplies the manifest digest independently and retains the new digest."
+  ],
+  "manifest": {
+    "bytes": 19300,
+    "path": "/tmp/orthohmm-data-rebind-20260929/output/data.json",
+    "sha256": "7bad4c42775483617d2f346aed3517009ca9f7f6171cc02c021ac3866b4d3648"
+  },
+  "order_and_nonpath_fields_equal": true,
+  "original_manifest": {
+    "bytes": 26275,
+    "path": "/tmp/orthohmm-data-rebind-20260929/original.json",
+    "sha256": "fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061"
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 4270,
+    "path": "/tmp/orthohmm-data-rebind-20260929/rebind.py",
+    "sha256": "4535d54f329be68a1333b378c2157203ed7c94619a065c173451e7108365bf04"
+  },
+  "status": "orthobench_data_paths_rebound"
+}

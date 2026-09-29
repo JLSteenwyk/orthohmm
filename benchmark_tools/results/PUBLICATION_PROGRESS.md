@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Make Full OrthoBench Input Rebinding Executable (2026-09-29)
+
+Previous turn completed the LLVM notice supplement (`30b876af`). Reread the
+goal and current ledger. The integrated controller accepted relocated data,
+but its guide required manual manifest regeneration. Added a standalone,
+stdlib-only rebinder that verifies an externally pinned manifest, preserves
+the frozen role/order/content identities, and writes fresh local paths only
+after all 93 acquired inputs verify. Original workstation paths are not read.
+
+Ten unit tests passed, including missing/corrupt inputs, wrong roles, mixed
+roots, duplicate names, traversal, symlink escape and existing-output refusal.
+Executed the exported helper with isolated Python from `/tmp` on a copied
+full-data tree. [Actual result](orthobench_data_rebinding_20260929.json)
+records controller validation and independent ordered basename/size/hash
+comparison. Updated the reproduction guide with the pinned command. This
+closes manual data-path rebinding, not internet acquisition, archive restoration
+or native cross-host validation. No inference, scientific default, scheduler
+or runtime changed. Full goal and timing-scope decision remain open.
+
 ## Package Verified LLVM Source Notices For Relocation (2026-09-29)
 
 Previous turn separated the pending timing-scope decision from current host

@@ -48,6 +48,26 @@ plus a hash-pinned pip wheel overlay; it is not a solver-complete Conda lock
 or a recommendation to clone the development environment. Do not substitute
 an unvalidated dependency update into a frozen scientific run.
 
+To bind the frozen full OrthoBench input list to a separately acquired local
+tree, without needing the original workstation paths:
+
+```sh
+python -I -S -B /export/rebind_orthobench_data.py \
+  --manifest /export/integrated_orthobench_data_20260927.json \
+  --sha256 fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061 \
+  --acquisition /local/orthobench-checkout --output /fresh/rebound-data
+```
+
+The acquisition root must contain `BENCHMARKS/Input`, `BENCHMARKS/RefOGs`
+and its `low_certainty_assignments` subdirectory. The stdlib-only helper
+preserves file order and all nonpath fields, checks all 93 input identities,
+and rejects missing/changed data, duplicate basenames and escaping paths.
+Pass the resulting `data.json` and its new digest from `rebind.json` to the
+integrated controller. [Full-data relocation check](results/orthobench_data_rebinding_20260929.json)
+passed outside the checkout and the existing controller accepted the result.
+This check copied already acquired data; it does not establish fresh internet
+acquisition, cross-host execution, data rights or new inference results.
+
 Job 22337's admission command is deliberately bound to its exact job and
 plan. It must not be used to approve a different execution by changing the
 job identifier or treating the fixture's success as dataset-scale evidence.
