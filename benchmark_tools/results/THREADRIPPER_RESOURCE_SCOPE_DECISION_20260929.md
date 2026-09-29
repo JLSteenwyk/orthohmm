@@ -1,22 +1,28 @@
 # Timing Resource Scope Decision
 
-Status: proposed, awaiting user response. Not a production amendment, execution
-permit or waiver of any existing admission check. The 27 identities, scientific
-settings, inputs, ordering and repeats remain unchanged.
+Status: endpoint choice adopted prospectively under the goal's authorization
+for autonomous engineering and phase-separated resource measurement. This
+supersedes the earlier optional question; no user reply or approval is inferred.
+The [machine-readable amendment](threadripper_resource_endpoints_20260929.json)
+freezes the primary scopes and exact derivation sources before any production
+measurement directory exists. It grants no execution permit or readiness pass.
+The 27 identities, scientific settings, inputs, ordering and repeats remain unchanged.
 
-## Decision Needed
+## Adopted Endpoints
 
 The goal asks for matched hardware, actual CPU use and consistent peak-memory
 accounting, with preparation, inference, conversion and scoring separated.
 The implementation additionally pursued terminal whole-job accounting,
 including controller/reporting teardown. These are different endpoints.
 
-Recommendation: prospectively designate native-inference measurements as the
+Prospectively designate native-inference measurements as the
 primary resource endpoints, with their exact instrumentation scopes disclosed.
 Retain preparation/reporting measurements separately and final whole-job values
 as unavailable. This could avoid requiring scheduler changes solely to obtain
 teardown counters. It must not relabel partial job counters as complete job use.
-An asynchronous question requests this scope decision; no response is assumed.
+The earlier optional scope question is resolved by this engineering decision.
+Terminal whole-job teardown counters are supplementary unavailable fields;
+their absence alone does not prevent measuring the selected phase endpoints.
 
 | Quantity | Existing evidence | Required qualification |
 | --- | --- | --- |
@@ -34,12 +40,23 @@ small-workload operation, not full-scale overhead or production eligibility.
 See [CPU scope evidence](THREADRIPPER_NATIVE_CPU_SCOPES_20260929.md) and
 [native fixture integration](THREADRIPPER_PRIVATE_COLLECTOR_PANEL_20260928.md).
 
-If this proposal is selected, write and freeze a prospective resource-endpoint
-amendment before any production outcome is inspected. Bind it to the collector,
-replayer, runtime and readiness review; test missing/decreasing counters,
-scope mismatches, incomplete descendants and nonzero exits. Reuse validated
-fixture evidence where its bindings remain unchanged. Do not manufacture a
-positive readiness receipt or silently weaken existing guards.
+The amendment is now frozen. `benchmark_tools.derive_threadripper_resources`
+checks its externally supplied digest and source identities, replays all raw
+measurement evidence and derives the three endpoints. Its output preserves
+CPU/memory scope details and failed native outcomes, and cannot grant timing
+admission. [Actual retained-fixture replay](threadripper_resource_endpoint_fixture_replay_20260929.json)
+uses the three existing measurements; no fixture or inference was rerun.
+Bind this amendment into the final collector/runtime/readiness review before
+production. Existing execution guards remain intact. Continuous containment,
+full-scale overhead and the environmental handoff still require validation.
+
+```sh
+python -B -m benchmark_tools.derive_threadripper_resources \
+  --directory /local/measurement --job JOB_ID \
+  --protocol benchmark_tools/results/threadripper_resource_endpoints_20260929.json \
+  --protocol-sha256 dba9602c365184f7e802425b9116b8021175b225d1f2266c44077da924bcfcdc \
+  --output /fresh/scoped-resources.json
+```
 
 ## Independent Isolation Blocker
 
@@ -52,6 +69,6 @@ processes are IQ-TREE instances. No command lines, environments or signals
 were collected or sent. The sentinel exclusion scope was absent in both
 snapshots, so only the observer PID was excluded from CPU totals.
 
-Either scope decision still requires workload coordination, a reviewed service
+Production still requires workload coordination, a reviewed service
 policy, whole-run monitoring, full-scale observer validation and the tested
 environmental handoff. No timing job or DGX operation was started.

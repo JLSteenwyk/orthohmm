@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Adopt And Replay Prospective Timing Resource Endpoints (2026-09-29)
+
+Previous turn was a verified wait on job 22377; it remains running. Reread goal
+and reviewed remaining timing work. The goal authorizes autonomous engineering
+and phase-separated resource measurements, so resolved the earlier optional
+scope question prospectively rather than treating silence as approval. The
+[amendment](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md) selects inference
+wall time, native-task CPU bracket counters and native-step lifetime peak memory.
+Final whole-job teardown counters remain explicitly unavailable. This choice
+does not change scientific settings, existing execution guards or isolation
+requirements. Confirmed all 27 production measurement directories are absent
+before freezing the protocol and its source identities.
+
+Added `derive_threadripper_resources.py`: checks the external protocol digest,
+helper hashes and complete raw replay, derives scoped endpoints and retains
+failed outcomes without granting timing admission. All 27 focused tests pass.
+[Actual replay of three retained fixtures](threadripper_resource_endpoint_fixture_replay_20260929.json)
+reproduces existing wall/CPU/peak values; no fixture or inference was rerun.
+Updated the guide. Remaining timing work is full-scale observer/containment
+validation, environmental policy/handoff, source freeze and a quiet window.
+No production timing job, scheduler/service change or DGX operation occurred.
+
 ## Connect Archive Execution To The Reproduction Guide (2026-09-29)
 
 Previous turn was a verified wait; job 22377 remains running. Reread goal and

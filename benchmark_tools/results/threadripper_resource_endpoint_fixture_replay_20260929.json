@@ -1,0 +1,73 @@
+{
+  "production_runs_launched": 0,
+  "protocol": {
+    "bytes": 5347,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_resource_endpoints_20260929.json",
+    "sha256": "dba9602c365184f7e802425b9116b8021175b225d1f2266c44077da924bcfcdc"
+  },
+  "publication_ready": false,
+  "rows": [
+    {
+      "controlled_timing_admitted": false,
+      "derived": {
+        "bytes": 11687,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_resource_endpoints_20260929/job_22373.json",
+        "sha256": "cc99d096e6d75ee1bbc369f2fe32ebf02ba1a5a1fdba053429190ef50f1809b6"
+      },
+      "job_id": 22373,
+      "primary": {
+        "cpu_seconds": 39.72526,
+        "peak_memory_bytes": 618377216,
+        "wall_seconds": 12.807816722
+      },
+      "primary_scopes": {
+        "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+        "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+        "wall_seconds": "native_command_monotonic_interval"
+      }
+    },
+    {
+      "controlled_timing_admitted": false,
+      "derived": {
+        "bytes": 12898,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_resource_endpoints_20260929/job_22374.json",
+        "sha256": "0f61ab4870841ba2afe8f4cd7e3a711cbc92679d43b9b6f6f25e5f61637c169c"
+      },
+      "job_id": 22374,
+      "primary": {
+        "cpu_seconds": 44.858304,
+        "peak_memory_bytes": 617283584,
+        "wall_seconds": 16.324125926
+      },
+      "primary_scopes": {
+        "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+        "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+        "wall_seconds": "native_command_monotonic_interval"
+      }
+    },
+    {
+      "controlled_timing_admitted": false,
+      "derived": {
+        "bytes": 11923,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_resource_endpoints_20260929/job_22375.json",
+        "sha256": "5a5995eb7d1de71611f5fb0a0e4e86903cda72508d571330773ee8c2d7c50929"
+      },
+      "job_id": 22375,
+      "primary": {
+        "cpu_seconds": 22.03645,
+        "peak_memory_bytes": 276701184,
+        "wall_seconds": 13.708839537
+      },
+      "primary_scopes": {
+        "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+        "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+        "wall_seconds": "native_command_monotonic_interval"
+      }
+    }
+  ],
+  "source": {
+    "bytes": 4000,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/derive_threadripper_resources.py",
+    "sha256": "cae4720d11655dd45e2f0a2c8c2ca73005e67870eae91301c5c7587193cae062"
+  }
+}
