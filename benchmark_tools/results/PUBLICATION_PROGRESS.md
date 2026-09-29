@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Recheck Timing Eligibility After Reproduction (2026-09-29)
+
+Previous turn completed and independently admitted job 22376 (`ad82b502`).
+Reread goal and inspected current scheduler and process state rather than
+assuming its completion freed the host. Queue is empty, but a fresh five-second
+requested observation measured 108.293407 persistent foreign CPU-core
+equivalents. Five sampling errors and six unmatched process identities remain
+explicit; this bounded observation cannot prove whole-run isolation.
+
+Top consumers include IQ-TREE in fungal PMSF recovery (15.53 cores), two
+neocallimastix guide processes (7.96 and 7.80), a tmux scope (7.29), and
+hybrid-excluded guides (3.97). These are outside Slurm. No command lines or
+environments collected, signals sent, or services changed. Retained raw
+observation: `benchmarks/work/threadripper_post22376_load_20260929.json`,
+1,486,735 bytes, SHA256
+`74cee8d32dd67b93fac4a3485240ad6c4ecc14ba5d5130b7b9f54bffce5a3237`.
+
+Requested quiet-window coordination asynchronously. Rechecked the retained
+accounting-support and three-native-path collector reports: terminal whole-job
+resource accounting is still unresolved, so workload availability alone would
+not authorize launching the panel. No production timing identity launched.
+Do not repeat completed native fixtures or infer controlled times from the
+full reproduction. Goal active; scientific uncertainty and release limitations
+also remain open.
+
 ## Admit Full Reconstructed-Base Reproduction (2026-09-29)
 
 Previous goal turns were verified waits on live job 22376, with search and
