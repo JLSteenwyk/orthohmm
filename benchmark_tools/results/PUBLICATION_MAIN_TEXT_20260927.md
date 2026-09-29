@@ -72,7 +72,14 @@ treated as independent observations to obtain narrower intervals.
 ### Accuracy Depends On The Endpoint
 
 Phylogenetic OrthoHMM achieved 74.1061% OrthoBench F1 versus 72.7365% for full
-OrthoFinder. A fresh installed full run reproduced all 59,770 OrthoHMM groups
+OrthoFinder. In the exploratory eight-method comparison, the F1 difference
+was +1.370 percentage points (21-endpoint adjusted interval [-7.281, 12.166]).
+The precision difference was +15.705 [1.175, 30.634] and recall difference
+-13.151 [-26.947, -0.609]. This is a precision-recall tradeoff, not established
+F1 superiority. The complete panel uses 100,000 paired RefOG draws and
+remains conditional on family exchangeability and development exposure.
+[All 21 contrasts](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+A fresh installed full run reproduced all 59,770 OrthoHMM groups
 exactly; this establishes reproducibility, not independent accuracy or a
 controlled runtime comparison.
 [Full-run verification](INTEGRATED_FULL_OB_RESULT_22337.md).

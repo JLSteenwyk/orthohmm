@@ -362,13 +362,26 @@ OrthoHMM satellite_v2 achieved weighted F1 74.106074%, compared with
 72.736480% for full OrthoFinder and 70.358998% for high sensitivity.
 Satellite_v2 precision was 81.770454% and recall 67.755336%; full
 OrthoFinder precision was 66.065103% and recall 80.906577%.
-The satellite_v2 F1 difference was +1.370 percentage points, with nominal
-95% interval [-4.504, 7.917] and adjusted interval [-6.290, 10.627].
-These intervals do not establish an F1 advantage. Its precision difference
-was +15.705 points and recall difference -13.151 points; corresponding
-adjusted intervals excluded zero in opposite directions. These are
-development-exposed comparisons, not selection-adjusted confirmation.
-[Uncertainty results](ORTHOBENCH_UNCERTAINTY_20260916.md).
+The exploratory eight-method extension uses 100,000 paired RefOG resamples
+(PCG64 seed 20260928), recomputes weighted counts and scores in each draw,
+and adjusts across all 21 contrasts: seven alternatives versus full OrthoFinder
+for F1, precision and recall. The satellite_v2 F1 difference was +1.370
+percentage points, with nominal 95% interval [-4.482, 8.051] and adjusted
+interval [-7.281, 12.166]. These intervals do not establish an F1 advantage.
+Its precision difference was +15.705 points [1.175, 30.634] and recall
+difference -13.151 [-26.947, -0.609] after adjustment. High-sensitivity
+precision was +12.884 [-0.895, 24.222], no longer excluding zero under the
+broader correction. Its recall deficit remains: -17.452 [-32.103, -3.845].
+These are development-exposed comparisons, not selection-adjusted confirmation.
+Approximate percentile intervals assume exchangeable families; shared genes,
+histories and cross-family prediction errors can violate that assumption.
+[Complete results and independent arithmetic check](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+
+The original three-method analysis remains available with its separate
+20,000 draws, seed 20260916 and six-endpoint correction. Its satellite_v2
+F1 intervals were [-4.504, 7.917] nominal and [-6.290, 10.627] adjusted.
+Those narrower historical intervals must not be substituted into the complete
+21-endpoint comparison. [Historical uncertainty results](ORTHOBENCH_UNCERTAINTY_20260916.md).
 
 Across individual RefOGs, satellite_v2 had 23 F1 wins, 10 ties, and 37
 losses relative to full OrthoFinder. High sensitivity had 20 wins, 11 ties,

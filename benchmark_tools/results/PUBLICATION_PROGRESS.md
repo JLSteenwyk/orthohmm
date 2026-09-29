@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Reconcile Manuscript With Complete OrthoBench Intervals (2026-09-28)
+
+Previous turn completed all 21 paired contrasts (`af5dc9a7`). Reread the
+goal and updated concise/extended manuscript sources plus the claim checklist
+to report the complete-panel adjustment. The extended draft explicitly keeps
+the historical six-endpoint intervals separate. High-sensitivity precision
+no longer excludes zero under the broader correction; phylogenetic-mode F1
+superiority remains unsupported while its precision-recall tradeoff remains.
+Added tests binding reported intervals to the machine-readable result.
+Existing PDF/HTML previews predate this source revision; no automatic claims
+of rendering, new biological confirmation or publication readiness. Timing,
+remaining QfO uncertainty and release preparation remain unfinished.
+
 ## Complete Eight-Method OrthoBench Paired Comparison (2026-09-28)
 
 After pushing protocol `6d25b18f`, ran 100,000 paired RefOG draws and all 21
