@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Package Scientific And Benchmark Workflow Source Together (2026-09-29)
+
+Previous turn made concrete progress: tested, committed and submitted bounded
+accounting calibration 22378. Reread the goal and confirmed 22377 remains
+running and 22378 remains dependency-pending. Continued a release component
+without changing any of the 822 frozen calibration sources; all still verify.
+
+Added a new stdlib-only committed-Git source exporter/offline verifier and
+source-component guide. The [actual archive and relocation](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md)
+contain 43 scientific files at `7f3a9e4` and 1,664 workflow/test/license/guide
+files at `88a37934`: 1,707 files, 9,207,865 payload bytes. All 1,693 Python
+files compile without imports/execution. The 2,341,862-byte archive verifies
+after fresh extraction with isolated Python and no Git on PATH.
+
+35 focused tests pass, including dirty-checkout exclusion, separate revisions,
+external-index tampering detection, invalid/missing/extra/symlink payloads and
+offline verification after removing a synthetic source checkout. The existing
+22 frozen-source warnings remain; source is unchanged. Updated reproduction
+and current claim indexes, labeling their older audit as historical rather
+than allowing obsolete DGX/missing-comparator prose to imply current state.
+Structured Pandoc parsing checks all 436 local file-link targets across the
+updated guides/result/claim index; this does not validate anchors or URLs.
+
+This packages the previously omitted benchmark/test source, not an installed
+runtime, datasets, plans, figures, full redistribution clearance, public release
+or DOI. Full goal remains active. Last live poll: 22377 RUNNING at 1:13:47,
+22378 PENDING (Dependency). Preserve both attempts and audit them when terminal.
+
 ## Prepare Bounded Full-Worker Accounting Calibration (2026-09-29)
 
 Previous conversational turn only confirmed the saved goal prompt; no analysis

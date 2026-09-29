@@ -1,0 +1,89 @@
+{
+  "archive": {
+    "bytes": 2341862,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_source_components_20260929/orthohmm-0.5.0-scientific-7f3a9e4-workflows-88a37934.tar.gz",
+    "sha256": "683067d6eb0cdb1ebd79ee089992556139b3b0e7c6767c6070c044ead38d1929"
+  },
+  "archive_command": [
+    "tar",
+    "--sort=name",
+    "--mtime=@0",
+    "--owner=0",
+    "--group=0",
+    "--numeric-owner",
+    "--format=ustar",
+    "-czf",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_source_components_20260929/orthohmm-0.5.0-scientific-7f3a9e4-workflows-88a37934.tar.gz",
+    "-C",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_source_components_20260929/component",
+    "."
+  ],
+  "limitations": [
+    "Source-only component; not installed native reproduction, complete release clearance or public deposition.",
+    "Temporary relocation was verified and removed; retained archive and component contain the actual payloads."
+  ],
+  "offline_verification": {
+    "components": {
+      "scientific": 43,
+      "workflow": 1664
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1707,
+    "manifest": {
+      "bytes": 689511,
+      "sha256": "f15c343cfb52442d77d1c58ba7292addbe3f190377b7ffe9bdbbd555b122d0b8"
+    },
+    "payload_bytes": 9207865,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1693,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "88a379345988f84d1b54b404fadc0c06eca7f418"
+  },
+  "offline_verification_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-components-20260929-4qitnu1p/workflow/benchmark_tools/bundle_publication_source.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-components-20260929-4qitnu1p",
+    "--manifest-sha256",
+    "f15c343cfb52442d77d1c58ba7292addbe3f190377b7ffe9bdbbd555b122d0b8"
+  ],
+  "production_timing": false,
+  "publication_ready": false,
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source": {
+    "bytes": 8568,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_source.py",
+    "sha256": "065b0354d27838ba016689cd24ffbb1f8e759b123ddbaa3dc8e76bccde0bb3e2"
+  },
+  "source_index": {
+    "bytes": 689511,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_source_components_20260929/component/SOURCE_INDEX.json",
+    "sha256": "f15c343cfb52442d77d1c58ba7292addbe3f190377b7ffe9bdbbd555b122d0b8"
+  },
+  "status": "source_components_archived_and_relocated",
+  "tests_passed": 35,
+  "verification": {
+    "components": {
+      "scientific": 43,
+      "workflow": 1664
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1707,
+    "manifest": {
+      "bytes": 689511,
+      "sha256": "f15c343cfb52442d77d1c58ba7292addbe3f190377b7ffe9bdbbd555b122d0b8"
+    },
+    "payload_bytes": 9207865,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1693,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "88a379345988f84d1b54b404fadc0c06eca7f418"
+  },
+  "workflow_revision": "88a379345988f84d1b54b404fadc0c06eca7f418"
+}

@@ -20,6 +20,13 @@ requirements and must not be confused with these audit commands.
 
 These are distinct executed paths, not interchangeable evidence:
 
+The [combined scientific/workflow source component](results/PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md)
+now includes 43 frozen scientific files and 1,664 workflow/test/license/guide
+files from separate committed revisions. Its actual archive passed isolated
+offline verification after relocation. This supplies source, not excluded
+data, plans, figures, dependency binaries or an installed executable study.
+The [component guide](PUBLICATION_SOURCE_COMPONENT.md) explains the boundaries.
+
 | Path | Verified scope | Does not establish |
 | --- | --- | --- |
 | [Full native recovery, jobs 22326/22327](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md) | Fresh search/trees; all OrthoBench groups and 70 family scores reproduced | Independent accuracy or controlled timing |
