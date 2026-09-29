@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Test Full-Partition Equality Beyond RefOG Scores (2026-09-29)
+
+Previous turn was a verified wait on job 22377. Reread goal and confirmed it
+remains running. Reviewed the new admission checks rather than repeating
+inference. Tightened reproduction equality to require the exact four native
+output names, not merely four entries. Added real-scorer regression tests:
+splitting an unscored group leaves RefOG score objects identical but must fail
+full reproduction equality; reordering unchanged groups must pass. All 57
+focused admission/execution tests pass. These test scientific acceptance logic,
+not unfinished job outputs. No benchmark or frozen inference settings changed.
+
 ## Prepare Independent Restored Archive Scientific Comparison (2026-09-29)
 
 Previous turn added the pinned execution verifier. Reread goal and ledger,

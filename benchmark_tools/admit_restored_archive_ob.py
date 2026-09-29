@@ -6,7 +6,7 @@ import subprocess
 
 from benchmark_tools.admit_integrated_full_ob import read
 from benchmark_tools.admit_reconstructed_full_ob import (
-    native_comparison, package_audit, report_pins,
+    native_comparison, package_audit, report_pins, NATIVE_FILES,
 )
 from benchmark_tools.audit_installed_orthobench import read_root_hogs
 from benchmark_tools.readback_canonical_ob_phylogeny import comparison, SCORER_SHA
@@ -20,7 +20,7 @@ BASELINE_SHA = "81c4de02279aa08500c9275a611cf180a48f64c3891234848a1c6a0f81da0fc0
 
 
 def reproduction_equal(compared, native):
-    if len(native) != 4:
+    if set(native) != set(NATIVE_FILES):
         raise ValueError("Require all four native comparisons")
     return (compared["partitions"]["label_invariant_equal"] and compared["score_objects_equal"]
             and all(r["byte_equal"] for r in native.values()))
