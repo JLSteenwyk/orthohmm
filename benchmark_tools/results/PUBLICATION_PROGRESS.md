@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Acquire Recipe-Bound LLVM Source And Notice Texts (2026-09-29)
+
+Previous turn made progress with resolved-package verification (`3aae3645`).
+Reread goal and ledger, confirmed the source archive was not already retained,
+then downloaded the recipe-named LLVM 22.1.0 source. Its SHA-256 matches the
+embedded recipe. [Source and notice inspection](LLVM_SOURCE_NOTICES_20260929.md)
+retains 39 notice candidates and two relevant source files after a bounded,
+non-extracting scan of 184,760 archive members. Identity and structural checks
+passed; download and scanner both exited successfully.
+
+The actual LLVM license text contains Apache 2.0 with LLVM exceptions and
+legacy NCSA terms, beyond the package metadata's short label. Filename-based
+notices do not exhaust per-file terms or establish binary component attribution.
+No build, installation or scientific change made. Slurm was empty, which does
+not establish isolation from non-Slurm work; no controlled timing launched.
+Full publication readiness, resource evidence and release clearance remain
+unproven. Source acquisition is now complete for this recipe; do not redownload
+or repeat this scan without a concrete reason. Goal remains active.
+
 ## Verify Resolved LLVM Package And Embedded Recipe (2026-09-29)
 
 Previous conversational turn checked the saved goal but made no analysis
