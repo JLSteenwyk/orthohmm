@@ -2551,6 +2551,20 @@ reconstruction, not cross-host restoration, complete runtime closure or
 full-dataset scientific validation. They do not apply retroactively to job
 22337, which used the earlier base interpreter.
 
+Subsequently, a [prespecified full-data attempt](RECONSTRUCTED_FULL_OB_PROTOCOL_20260929.md)
+used the reconstructed base for the controller, venv creation and offline
+installation, preserving all scientific settings and supplied assets.
+[Job 22376 and separate independent verification](RECONSTRUCTED_FULL_OB_RESULT_22376.md)
+completed successfully. All eight stages ran without checkpoint reuse;
+package inventory/payload checks and four independent scientific readers
+passed. All 59,770 root groups and complete scores for all 70 reference
+families matched job 22337. Native pair, pair-confidence, reconciliation-node
+and hierarchical-group TSVs were byte-identical. This closes the fixture-only
+gap for the reconstructed-base execution path on this host, not cross-host
+restoration, complete OS closure or redistribution clearance. Existing input,
+reader and native-tool assets remained locally supplied. Its shared-host
+elapsed time does not enter the controlled comparative timing panel.
+
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
 In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB

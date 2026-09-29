@@ -86,6 +86,12 @@ A fresh installed full run reproduced all 59,770 OrthoHMM groups
 exactly; this establishes reproducibility, not independent accuracy or a
 controlled runtime comparison.
 [Full-run verification](INTEGRATED_FULL_OB_RESULT_22337.md).
+A second full run using a separately reconstructed base Python and fresh
+inference/reader environments also reproduced all groups and all 70 family
+score records. Native pair, confidence, reconciliation-event and hierarchy
+files were byte-identical to the earlier run. This extends same-host
+environment reproduction, not biological validation or complete archive
+restoration. [Reconstructed-base verification](RECONSTRUCTED_FULL_OB_RESULT_22376.md).
 
 On corrected QfO, phylogenetic OrthoHMM versus full OrthoFinder scored 0.901690
 versus 0.988546 on VGNC, 0.833513 versus 0.848413 on SwissTrees, and 0.614864

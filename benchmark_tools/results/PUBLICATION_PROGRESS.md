@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Integrate Reconstructed Full-Run Evidence Into Manuscripts (2026-09-29)
+
+Previous turn rechecked the unavailable timing window (`1091e595`). Reread
+goal and continued a remaining publication deliverable without submitting
+new computation. Main and extended manuscripts plus the claim checklist now
+include independently admitted job 22376, separating its full-data result
+from earlier fixture-only reconstructed-base evidence and original-base
+job 22337. Accuracy, timing, OS/archive and redistribution limitations remain.
+
+Added a receipt-backed manuscript regression check for all 59,770 identical
+groups, all 70 family score objects, four byte-identical native outputs and
+false controlled-timing/publication-ready flags. Seventeen focused manuscript
+and renderer tests pass. Pandoc AST local-link checks pass for main text
+(24 occurrences/23 targets), extended text (279/265) and claims (287/227).
+No scientific result or method changed. Existing dated HTML/PDF reviews are
+historical snapshots and were not silently replaced; this milestone validates
+the updated source text, not a newly rendered PDF. Goal active.
+
 ## Recheck Timing Eligibility After Reproduction (2026-09-29)
 
 Previous turn completed and independently admitted job 22376 (`ad82b502`).

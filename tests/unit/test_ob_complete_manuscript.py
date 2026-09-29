@@ -46,3 +46,20 @@ def test_complete_interval_figure_is_linked_in_both_manuscripts():
     assert (BASE / target).is_file()
     for name in ("PUBLICATION_MAIN_TEXT_20260927.md", "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md"):
         assert target in (BASE / name).read_text()
+
+
+def test_reconstructed_full_run_claim_has_exact_matching_evidence():
+    result = json.loads((BASE / "reconstructed_full_ob_result_22376.json").read_text())
+    assert result["job_id"] == 22376
+    assert result["comparison"]["partitions"]["label_invariant_equal"] is True
+    assert result["comparison"]["partitions"]["identical_groups"] == 59770
+    assert result["comparison"]["score_objects_equal"] is True
+    assert result["scores"]["current"]["refogs"] == 70
+    assert len(result["native_outputs"]) == 4
+    assert all(row["byte_equal"] for row in result["native_outputs"].values())
+    assert result["controlled_timing"] is result["publication_ready"] is False
+    for name in ("PUBLICATION_MAIN_TEXT_20260927.md", "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+                 "PUBLICATION_CLAIMS_20260916.md"):
+        text = (BASE / name).read_text()
+        assert "RECONSTRUCTED_FULL_OB_RESULT_22376.md" in text
+        assert "59,770" in text
