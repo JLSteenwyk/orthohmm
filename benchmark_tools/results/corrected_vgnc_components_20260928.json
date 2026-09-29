@@ -1,0 +1,4023 @@
+{
+  "all_method_union": {
+    "component_size_histogram": {
+      "1": 4187,
+      "2": 1119,
+      "3": 482,
+      "4": 242,
+      "5": 124,
+      "6": 88,
+      "7": 49,
+      "8": 51,
+      "9": 28,
+      "10": 33,
+      "11": 27,
+      "12": 22,
+      "13": 15,
+      "14": 13,
+      "15": 14,
+      "16": 13,
+      "17": 14,
+      "18": 11,
+      "19": 8,
+      "20": 8,
+      "21": 3,
+      "22": 4,
+      "23": 2,
+      "24": 2,
+      "25": 10,
+      "26": 1,
+      "27": 2,
+      "28": 1,
+      "29": 3,
+      "30": 1,
+      "31": 3,
+      "32": 4,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 2,
+      "38": 2,
+      "39": 1,
+      "40": 1,
+      "42": 1,
+      "43": 3,
+      "44": 2,
+      "45": 1,
+      "49": 1,
+      "51": 1,
+      "53": 1,
+      "56": 1,
+      "58": 1,
+      "60": 1,
+      "67": 1,
+      "85": 1,
+      "92": 1,
+      "103": 1,
+      "137": 1,
+      "142": 1,
+      "211": 1,
+      "312": 1,
+      "370": 1
+    },
+    "connected_components": 6615,
+    "distinct_cross_block_links": 136107,
+    "isolated_blocks": 4187,
+    "largest_component_blocks": 370,
+    "largest_component_reference_pairs": 470,
+    "largest_components": [
+      {
+        "blocks": 370,
+        "first_label": "AEBP2",
+        "proteins": 789,
+        "reference_pairs": 470
+      },
+      {
+        "blocks": 312,
+        "first_label": "OR10A3",
+        "proteins": 823,
+        "reference_pairs": 760
+      },
+      {
+        "blocks": 211,
+        "first_label": "AKT1",
+        "proteins": 467,
+        "reference_pairs": 308
+      },
+      {
+        "blocks": 142,
+        "first_label": "AATK",
+        "proteins": 308,
+        "reference_pairs": 195
+      },
+      {
+        "blocks": 137,
+        "first_label": "ALX1",
+        "proteins": 299,
+        "reference_pairs": 191
+      },
+      {
+        "blocks": 103,
+        "first_label": "AMPH",
+        "proteins": 231,
+        "reference_pairs": 154
+      },
+      {
+        "blocks": 92,
+        "first_label": "ALYREF",
+        "proteins": 220,
+        "reference_pairs": 172
+      },
+      {
+        "blocks": 85,
+        "first_label": "ACR",
+        "proteins": 185,
+        "reference_pairs": 117
+      },
+      {
+        "blocks": 67,
+        "first_label": "BTBD1",
+        "proteins": 145,
+        "reference_pairs": 91
+      },
+      {
+        "blocks": 60,
+        "first_label": "DES",
+        "proteins": 148,
+        "reference_pairs": 123
+      }
+    ],
+    "linked_blocks": 12657,
+    "linked_reference_pairs": 17987,
+    "reference_blocks": 16844,
+    "total_reference_pairs": 23934
+  },
+  "checked_records": [
+    {
+      "bytes": 26291,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_vgnc_blocks_20260926.json",
+      "sha256": "01a51a62a536bcf759f2a0ef83c56196a92022b0bb8290448eacbfefa47d6005"
+    },
+    {
+      "bytes": 396556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/reference_blocks.tsv",
+      "sha256": "4f9f196d61b0547e1c4f166d0528e96129cd6d882a7ef7eee245c24dc9155dc2"
+    },
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 8914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/map_corrected_vgnc_blocks.py",
+      "sha256": "230576e25f982dcf7bbe86d9c1481bd4200627cdab870940d3cce0ef0ac17316"
+    },
+    {
+      "bytes": 7060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_vgnc_mapping.py",
+      "sha256": "6c11df1bce76bcecde91632af10c147b50326186064289686ebea72fa2d6486a"
+    },
+    {
+      "bytes": 6285,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_vgnc_family_dependencies.py",
+      "sha256": "29dd44df91e484ebb982f88ee609ab0502ef686d6f7dc7c21f57c4fb9db9e481"
+    },
+    {
+      "bytes": 6077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_vgnc_block_influence.py",
+      "sha256": "875bf9487787ba5bc2dee9efa5b95ad165862432447ad09ff5a2bd6954dc9bed"
+    },
+    {
+      "bytes": 280266,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21782.json",
+      "sha256": "8ba2d51aa48bdfde6580b832f1bfedb0c14ef7cc19c897c238337bb3e96e4e83"
+    },
+    {
+      "bytes": 685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/VGNC/VGNC.json",
+      "sha256": "c7567aef5ca06b6feee2d405e27dff037926fa2b98c2217db8335bff251ff52c"
+    },
+    {
+      "bytes": 566071,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_4/results/VGNC/VGNC_ohmm-qfo-corrected-factorial-p1-c0-r0_raw.txt.gz",
+      "sha256": "0a9e30bf35897c57b720b587c18841ab4c7036acc85ff1a3a84f26cb82520490"
+    },
+    {
+      "bytes": 248974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_score_admission_21788.json",
+      "sha256": "49b7d837b2ba2928b0676c9974e2ec16db5211f1086c366c7bc11805a2ee751f"
+    },
+    {
+      "bytes": 688,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/VGNC/VGNC.json",
+      "sha256": "86d5cf7b1f9735726b1e5827c73c881be47cb0d639b5cbaedd12b7670a566563"
+    },
+    {
+      "bytes": 339549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_7/results/VGNC/VGNC_ohmm-qfo-corrected-factorial-p1-c1-r1_raw.txt.gz",
+      "sha256": "edab2add6615876bfbf7f23c04e0087c52975f6dd67df4937af96609e37c453d"
+    },
+    {
+      "bytes": 152067213,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_full_assessment_admission_20260918.json",
+      "sha256": "f0c7064413622db6ebe02965d8781b5c6862b5246ad10cdd6b907b3c1815a46c"
+    },
+    {
+      "bytes": 682,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/VGNC/VGNC.json",
+      "sha256": "0889eec43f1886239052f17b2999a39af64aae3c1feb5246047f592f01c2502c"
+    },
+    {
+      "bytes": 344531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_full/results/VGNC/VGNC_qfo-corrected-orthofinder-full_raw.txt.gz",
+      "sha256": "211436440e0faa371dc243ca8b3fb5a4144a1943cdd04655a235105dc3bdd88b"
+    },
+    {
+      "bytes": 152068416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_orthofinder_sequence_only_assessment_admission_20260918.json",
+      "sha256": "ecd8721dc2e8f2399ccf86fd7d89f917447325ee4e812bae29bfaf3b2bbe851e"
+    },
+    {
+      "bytes": 692,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/VGNC/VGNC.json",
+      "sha256": "19277bbaf0ab53663dd6b9912a60ecf351220f1b3e185ea4cacc64e326782db9"
+    },
+    {
+      "bytes": 4324269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthofinder_sequence_only/results/VGNC/VGNC_qfo-corrected-orthofinder-sequence-only_raw.txt.gz",
+      "sha256": "df5228cdb83ae72bb2fd2965c44c90b8fccf721e5bc5485a6a73f5ff29cef45c"
+    },
+    {
+      "bytes": 5641618,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_sonic_assessment_20260918.json",
+      "sha256": "7c17b242b591c78cfeb5366399556178c9ab5b3b3c4c85bdf322f200c732bf3e"
+    },
+    {
+      "bytes": 669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/VGNC/VGNC.json",
+      "sha256": "7c10d63b64ce41ba1435b4935d7de5abd38fefda6fc3f1a79975f3468ab58913"
+    },
+    {
+      "bytes": 344337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_sonic/results/VGNC/VGNC_qfo-corrected-sonic_raw.txt.gz",
+      "sha256": "b25c1b9d47dec9b4bd41fdcf5ada637ba4cbd0c01ac8c85567c3e4b2cb5bf163"
+    },
+    {
+      "bytes": 300518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_proteinortho_assessment_20260918.json",
+      "sha256": "00acc10285b955cf0b33c8b3d95044e4f797ab77ba6ae4e768b62615e61f1552"
+    },
+    {
+      "bytes": 676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/VGNC/VGNC.json",
+      "sha256": "d99228e9e625792f1c371007e4d21d5f6be12ff4f5a17c83a4c42ffeafec30b2"
+    },
+    {
+      "bytes": 346447,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_proteinortho/results/VGNC/VGNC_qfo-corrected-proteinortho_raw.txt.gz",
+      "sha256": "ac830f0680ad9d5b6e8f334dad4fc718b850800a181d2655361d5f40107a27e7"
+    },
+    {
+      "bytes": 31667841,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_fastoma_assessment_admission_20260918.json",
+      "sha256": "e40d1c4aaf89fafc3ea7fed8c198a4cf22e7ffe07a0eb522cf1730f36dada694"
+    },
+    {
+      "bytes": 672,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/VGNC/VGNC.json",
+      "sha256": "b2d808886297da23e313670025190e740f89ef0259993ca51d55a6fdc1a3cd5b"
+    },
+    {
+      "bytes": 342372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_fastoma/results/VGNC/VGNC_qfo-corrected-fastoma_raw.txt.gz",
+      "sha256": "c26fba3a1c64228a8ac0374309cc682383e8e3f93322cfc8c88bbcb3b950430a"
+    },
+    {
+      "bytes": 695510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_score_admission_22176.json",
+      "sha256": "86448fbd694941a6814177d1bd4565467e52554c47d34bb3d65a642687f9dd93"
+    },
+    {
+      "bytes": 684,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/VGNC/VGNC.json",
+      "sha256": "0c70ab441d0b882809120a4f2323d9256eb2d6567bc6c89eb6fdbbbe9479ca58"
+    },
+    {
+      "bytes": 627644,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_orthomcl_recovered/results/VGNC/VGNC_qfo-corrected-orthomcl-recovered_raw.txt.gz",
+      "sha256": "f032af13850019e170d79de00b1d8558c27325b1ee331cf1425df53793686082"
+    },
+    {
+      "bytes": 460211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthohmm_high_sensitivity.tsv",
+      "sha256": "153319e13ae30fa3a3197bf7e8574a084a5419c4365aef78fefff9cbbeff64e8"
+    },
+    {
+      "bytes": 315951,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthohmm_phylogeny_satellite_v2.tsv",
+      "sha256": "1b590443fe6cb619ad286c36c80a7f98b84810135cf1c7e1b7800859f36bd2fe"
+    },
+    {
+      "bytes": 316515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthofinder_3_1_5_full.tsv",
+      "sha256": "01c2a2741bb8bba62fa1faf06897acf7dbf43d4b5a49d4d1ae4ba7cb5e2a3c33"
+    },
+    {
+      "bytes": 2816482,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthofinder_3_1_5_sequence_only.tsv",
+      "sha256": "462b1433e5d027109063034c90723fdea94c55e0f7a7764e2c6a77a6f61d46bd"
+    },
+    {
+      "bytes": 316893,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/sonicparanoid_2_0_9.tsv",
+      "sha256": "699b48f28bf178d561a1c8e9b76d1f8369a37a47ff4bc3fbe3c077b1be96d7a9"
+    },
+    {
+      "bytes": 318976,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/proteinortho_6_3_6.tsv",
+      "sha256": "6d0c0cf336c58bf595decc99608bd48749acf1399388e5b7574545bb47c9f6d9"
+    },
+    {
+      "bytes": 316480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/fastoma_0_3_5.tsv",
+      "sha256": "9483664c96023c64418f1a8607d7596f76c370d1f1270d01fe734c10c6d63abc"
+    },
+    {
+      "bytes": 560727,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/corrected_vgnc_blocks_20260926/orthomcl_1_4.tsv",
+      "sha256": "76ce70e3c673337f6c5f465fda1ee91a6f7ce31f40bc832e1b18bb29056ae20e"
+    }
+  ],
+  "igraph_version": "1.0.0",
+  "limitations": [
+    "Components use observed method-specific false-positive links, not prespecified independent sampling units.",
+    "Shared evolutionary history and dependence without scored links are not modeled.",
+    "Unioning methods preserves shared scored links but does not establish a joint sampling law.",
+    "No bootstrap, confidence interval, new scoring or changed native category is produced."
+  ],
+  "methods": [
+    {
+      "counts": {
+        "FN": 3961,
+        "FP": 16078,
+        "TP": 19973
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9605,
+          "2": 1661,
+          "3": 617,
+          "4": 243,
+          "5": 91,
+          "6": 52,
+          "7": 18,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "15": 1
+        },
+        "connected_components": 12309,
+        "distinct_cross_block_links": 7726,
+        "isolated_blocks": 9605,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "ITGA2B",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "KLF13",
+            "proteins": 21,
+            "reference_pairs": 15
+          }
+        ],
+        "linked_blocks": 7239,
+        "linked_reference_pairs": 9981,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM high sensitivity"
+    },
+    {
+      "counts": {
+        "FN": 4274,
+        "FP": 13,
+        "TP": 19660
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16828,
+          "2": 8
+        },
+        "connected_components": 16836,
+        "distinct_cross_block_links": 8,
+        "isolated_blocks": 16828,
+        "largest_component_blocks": 2,
+        "largest_component_reference_pairs": 2,
+        "largest_components": [
+          {
+            "blocks": 2,
+            "first_label": "OR10AG64",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR11H4",
+            "proteins": 6,
+            "reference_pairs": 6
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR1L4",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR1P1",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR2AG1",
+            "proteins": 7,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR2J1",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR2L3",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR2T29",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 1,
+            "first_label": "A1CF",
+            "proteins": 2,
+            "reference_pairs": 1
+          },
+          {
+            "blocks": 1,
+            "first_label": "A2M",
+            "proteins": 3,
+            "reference_pairs": 3
+          }
+        ],
+        "linked_blocks": 16,
+        "linked_reference_pairs": 35,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM phylogeny satellite_v2"
+    },
+    {
+      "counts": {
+        "FN": 415,
+        "FP": 130,
+        "TP": 23519
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16785,
+          "2": 20,
+          "3": 5,
+          "4": 1
+        },
+        "connected_components": 16811,
+        "distinct_cross_block_links": 38,
+        "isolated_blocks": 16785,
+        "largest_component_blocks": 4,
+        "largest_component_reference_pairs": 24,
+        "largest_components": [
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "H2BC3",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 2,
+            "first_label": "APOC2",
+            "proteins": 7,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 2,
+            "first_label": "DUSP18",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 2,
+            "first_label": "H2AC12",
+            "proteins": 6,
+            "reference_pairs": 6
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR13C3",
+            "proteins": 6,
+            "reference_pairs": 7
+          }
+        ],
+        "linked_blocks": 59,
+        "linked_reference_pairs": 164,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full"
+    },
+    {
+      "counts": {
+        "FN": 111,
+        "FP": 286004,
+        "TP": 23823
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4369,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 126,
+          "6": 89,
+          "7": 49,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 2,
+          "56": 1,
+          "59": 3,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "134": 1,
+          "137": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6804,
+        "distinct_cross_block_links": 133852,
+        "isolated_blocks": 4369,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          },
+          {
+            "blocks": 59,
+            "first_label": "AEBP2",
+            "proteins": 133,
+            "reference_pairs": 91
+          }
+        ],
+        "linked_blocks": 12475,
+        "linked_reference_pairs": 17711,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence-only checkpoint"
+    },
+    {
+      "counts": {
+        "FN": 686,
+        "FP": 128,
+        "TP": 23248
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16747,
+          "2": 38,
+          "3": 4,
+          "4": 1,
+          "5": 1
+        },
+        "connected_components": 16791,
+        "distinct_cross_block_links": 58,
+        "isolated_blocks": 16747,
+        "largest_component_blocks": 5,
+        "largest_component_reference_pairs": 9,
+        "largest_components": [
+          {
+            "blocks": 5,
+            "first_label": "OR2G6",
+            "proteins": 12,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "ACTR1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "TPM1",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 2,
+            "first_label": "ACSM2A",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "ALDH3B2",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "AMELX",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "AP2A1",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 97,
+        "linked_reference_pairs": 208,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9"
+    },
+    {
+      "counts": {
+        "FN": 1662,
+        "FP": 442,
+        "TP": 22272
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16695,
+          "2": 48,
+          "3": 8,
+          "5": 1,
+          "11": 1,
+          "13": 1
+        },
+        "connected_components": 16754,
+        "distinct_cross_block_links": 168,
+        "isolated_blocks": 16695,
+        "largest_component_blocks": 13,
+        "largest_component_reference_pairs": 31,
+        "largest_components": [
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 5,
+            "first_label": "ACTA1",
+            "proteins": 10,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 3,
+            "first_label": "H3-3A",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT31",
+            "proteins": 12,
+            "reference_pairs": 18
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR4N2",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 3,
+            "first_label": "SLC25A4",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "TUBA1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          }
+        ],
+        "linked_blocks": 149,
+        "linked_reference_pairs": 340,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6"
+    },
+    {
+      "counts": {
+        "FN": 2192,
+        "FP": 92,
+        "TP": 21742
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16790,
+          "2": 16,
+          "3": 6,
+          "4": 1
+        },
+        "connected_components": 16813,
+        "distinct_cross_block_links": 36,
+        "isolated_blocks": 16790,
+        "largest_component_blocks": 4,
+        "largest_component_reference_pairs": 24,
+        "largest_components": [
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "DNAJA1",
+            "proteins": 11,
+            "reference_pairs": 15
+          },
+          {
+            "blocks": 3,
+            "first_label": "HMGB1",
+            "proteins": 10,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD18A",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD39",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "CLCNKA",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 54,
+        "linked_reference_pairs": 161,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 final orthologous groups"
+    },
+    {
+      "counts": {
+        "FN": 414,
+        "FP": 25814,
+        "TP": 23520
+      },
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12884,
+          "2": 1111,
+          "3": 269,
+          "4": 102,
+          "5": 21,
+          "6": 14,
+          "7": 8,
+          "8": 3,
+          "9": 2,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14423,
+        "distinct_cross_block_links": 12612,
+        "isolated_blocks": 12884,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3960,
+        "linked_reference_pairs": 5500,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4"
+    }
+  ],
+  "pairwise_unions": [
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9605,
+          "2": 1661,
+          "3": 617,
+          "4": 243,
+          "5": 91,
+          "6": 52,
+          "7": 18,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "15": 1
+        },
+        "connected_components": 12309,
+        "distinct_cross_block_links": 7726,
+        "isolated_blocks": 9605,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "ITGA2B",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "KLF13",
+            "proteins": 21,
+            "reference_pairs": 15
+          }
+        ],
+        "linked_blocks": 7239,
+        "linked_reference_pairs": 9981,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "orthohmm_phylogeny_satellite_v2"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9562,
+          "2": 1673,
+          "3": 622,
+          "4": 244,
+          "5": 91,
+          "6": 52,
+          "7": 18,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "15": 1
+        },
+        "connected_components": 12284,
+        "distinct_cross_block_links": 7756,
+        "isolated_blocks": 9562,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "ITGA2B",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "KLF13",
+            "proteins": 21,
+            "reference_pairs": 15
+          }
+        ],
+        "linked_blocks": 7282,
+        "linked_reference_pairs": 10102,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "orthofinder_3_1_5_full"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4209,
+          "2": 1122,
+          "3": 481,
+          "4": 243,
+          "5": 126,
+          "6": 89,
+          "7": 48,
+          "8": 51,
+          "9": 30,
+          "10": 33,
+          "11": 26,
+          "12": 22,
+          "13": 14,
+          "14": 12,
+          "15": 14,
+          "16": 14,
+          "17": 14,
+          "18": 11,
+          "19": 8,
+          "20": 8,
+          "21": 3,
+          "22": 4,
+          "23": 2,
+          "24": 2,
+          "25": 10,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 3,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 2,
+          "34": 1,
+          "35": 1,
+          "36": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 1,
+          "43": 4,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "51": 1,
+          "53": 1,
+          "55": 1,
+          "56": 1,
+          "58": 1,
+          "60": 2,
+          "67": 1,
+          "85": 1,
+          "92": 1,
+          "104": 1,
+          "136": 1,
+          "137": 1,
+          "142": 1,
+          "210": 1,
+          "359": 1
+        },
+        "connected_components": 6645,
+        "distinct_cross_block_links": 134208,
+        "isolated_blocks": 4209,
+        "largest_component_blocks": 359,
+        "largest_component_reference_pairs": 457,
+        "largest_components": [
+          {
+            "blocks": 359,
+            "first_label": "AEBP2",
+            "proteins": 766,
+            "reference_pairs": 457
+          },
+          {
+            "blocks": 210,
+            "first_label": "AKT1",
+            "proteins": 465,
+            "reference_pairs": 307
+          },
+          {
+            "blocks": 142,
+            "first_label": "AATK",
+            "proteins": 308,
+            "reference_pairs": 195
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 136,
+            "first_label": "OR10A3",
+            "proteins": 364,
+            "reference_pairs": 343
+          },
+          {
+            "blocks": 104,
+            "first_label": "OR1A1",
+            "proteins": 267,
+            "reference_pairs": 238
+          },
+          {
+            "blocks": 92,
+            "first_label": "ALYREF",
+            "proteins": 220,
+            "reference_pairs": 172
+          },
+          {
+            "blocks": 85,
+            "first_label": "ACR",
+            "proteins": 185,
+            "reference_pairs": 117
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "AMPH",
+            "proteins": 140,
+            "reference_pairs": 101
+          }
+        ],
+        "linked_blocks": 12635,
+        "linked_reference_pairs": 17944,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "orthofinder_3_1_5_sequence_only"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9548,
+          "2": 1676,
+          "3": 619,
+          "4": 244,
+          "5": 93,
+          "6": 52,
+          "7": 19,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "15": 1
+        },
+        "connected_components": 12273,
+        "distinct_cross_block_links": 7767,
+        "isolated_blocks": 9548,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "ITGA2B",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "KLF13",
+            "proteins": 21,
+            "reference_pairs": 15
+          }
+        ],
+        "linked_blocks": 7296,
+        "linked_reference_pairs": 10118,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "sonicparanoid_2_0_9"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9506,
+          "2": 1684,
+          "3": 625,
+          "4": 243,
+          "5": 92,
+          "6": 52,
+          "7": 18,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 2,
+          "12": 1,
+          "13": 1,
+          "15": 1
+        },
+        "connected_components": 12244,
+        "distinct_cross_block_links": 7869,
+        "isolated_blocks": 9506,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          }
+        ],
+        "linked_blocks": 7338,
+        "linked_reference_pairs": 10240,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "proteinortho_6_3_6"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 9568,
+          "2": 1668,
+          "3": 622,
+          "4": 245,
+          "5": 91,
+          "6": 52,
+          "7": 18,
+          "8": 9,
+          "9": 9,
+          "10": 1,
+          "11": 1,
+          "12": 1,
+          "15": 1
+        },
+        "connected_components": 12286,
+        "distinct_cross_block_links": 7754,
+        "isolated_blocks": 9568,
+        "largest_component_blocks": 15,
+        "largest_component_reference_pairs": 23,
+        "largest_components": [
+          {
+            "blocks": 15,
+            "first_label": "DOC2A",
+            "proteins": 34,
+            "reference_pairs": 23
+          },
+          {
+            "blocks": 12,
+            "first_label": "OR10T2",
+            "proteins": 33,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 11,
+            "first_label": "NLRP11",
+            "proteins": 23,
+            "reference_pairs": 13
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ADAMTS10",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "BTN1A1",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "CEACAM1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "CXCL1",
+            "proteins": 18,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 9,
+            "first_label": "ITGA2B",
+            "proteins": 19,
+            "reference_pairs": 11
+          },
+          {
+            "blocks": 9,
+            "first_label": "KLF13",
+            "proteins": 21,
+            "reference_pairs": 15
+          }
+        ],
+        "linked_blocks": 7276,
+        "linked_reference_pairs": 10104,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 8523,
+          "2": 1785,
+          "3": 673,
+          "4": 286,
+          "5": 101,
+          "6": 59,
+          "7": 28,
+          "8": 10,
+          "9": 13,
+          "10": 3,
+          "11": 2,
+          "12": 3,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "17": 1,
+          "18": 1,
+          "143": 1
+        },
+        "connected_components": 11494,
+        "distinct_cross_block_links": 18147,
+        "isolated_blocks": 8523,
+        "largest_component_blocks": 143,
+        "largest_component_reference_pairs": 161,
+        "largest_components": [
+          {
+            "blocks": 143,
+            "first_label": "RBAK",
+            "proteins": 295,
+            "reference_pairs": 161
+          },
+          {
+            "blocks": 18,
+            "first_label": "ADAMTS1",
+            "proteins": 39,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 17,
+            "first_label": "DOC2A",
+            "proteins": 38,
+            "reference_pairs": 25
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "ATP10A",
+            "proteins": 31,
+            "reference_pairs": 27
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          }
+        ],
+        "linked_blocks": 8321,
+        "linked_reference_pairs": 11663,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_high_sensitivity",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16779,
+          "2": 23,
+          "3": 5,
+          "4": 1
+        },
+        "connected_components": 16808,
+        "distinct_cross_block_links": 41,
+        "isolated_blocks": 16779,
+        "largest_component_blocks": 4,
+        "largest_component_reference_pairs": 24,
+        "largest_components": [
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "H2BC3",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 2,
+            "first_label": "APOC2",
+            "proteins": 7,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 2,
+            "first_label": "DUSP18",
+            "proteins": 5,
+            "reference_pairs": 4
+          },
+          {
+            "blocks": 2,
+            "first_label": "H2AC12",
+            "proteins": 6,
+            "reference_pairs": 6
+          },
+          {
+            "blocks": 2,
+            "first_label": "OR10AG64",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 65,
+        "linked_reference_pairs": 176,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "orthofinder_3_1_5_full"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4369,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 126,
+          "6": 89,
+          "7": 49,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 2,
+          "56": 1,
+          "59": 3,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "134": 1,
+          "137": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6804,
+        "distinct_cross_block_links": 133852,
+        "isolated_blocks": 4369,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          },
+          {
+            "blocks": 59,
+            "first_label": "AEBP2",
+            "proteins": 133,
+            "reference_pairs": 91
+          }
+        ],
+        "linked_blocks": 12475,
+        "linked_reference_pairs": 17711,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "orthofinder_3_1_5_sequence_only"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16738,
+          "2": 41,
+          "3": 5,
+          "4": 1,
+          "5": 1
+        },
+        "connected_components": 16786,
+        "distinct_cross_block_links": 63,
+        "isolated_blocks": 16738,
+        "largest_component_blocks": 5,
+        "largest_component_reference_pairs": 9,
+        "largest_components": [
+          {
+            "blocks": 5,
+            "first_label": "OR2G6",
+            "proteins": 12,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "ACTR1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR10J3",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "TPM1",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 2,
+            "first_label": "ACSM2A",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "ALDH3B2",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "AMELX",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 106,
+        "linked_reference_pairs": 225,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "sonicparanoid_2_0_9"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16689,
+          "2": 51,
+          "3": 8,
+          "5": 1,
+          "11": 1,
+          "13": 1
+        },
+        "connected_components": 16751,
+        "distinct_cross_block_links": 171,
+        "isolated_blocks": 16689,
+        "largest_component_blocks": 13,
+        "largest_component_reference_pairs": 31,
+        "largest_components": [
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 5,
+            "first_label": "ACTA1",
+            "proteins": 10,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 3,
+            "first_label": "H3-3A",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT31",
+            "proteins": 12,
+            "reference_pairs": 18
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR4N2",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 3,
+            "first_label": "SLC25A4",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "TUBA1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          }
+        ],
+        "linked_blocks": 155,
+        "linked_reference_pairs": 352,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "proteinortho_6_3_6"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16782,
+          "2": 20,
+          "3": 6,
+          "4": 1
+        },
+        "connected_components": 16809,
+        "distinct_cross_block_links": 40,
+        "isolated_blocks": 16782,
+        "largest_component_blocks": 4,
+        "largest_component_reference_pairs": 24,
+        "largest_components": [
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "DNAJA1",
+            "proteins": 11,
+            "reference_pairs": 15
+          },
+          {
+            "blocks": 3,
+            "first_label": "HMGB1",
+            "proteins": 10,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD18A",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD39",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "CLCNKA",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 62,
+        "linked_reference_pairs": 177,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12880,
+          "2": 1113,
+          "3": 269,
+          "4": 102,
+          "5": 21,
+          "6": 14,
+          "7": 8,
+          "8": 3,
+          "9": 2,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14421,
+        "distinct_cross_block_links": 12614,
+        "isolated_blocks": 12880,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3964,
+        "linked_reference_pairs": 5510,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthohmm_phylogeny_satellite_v2",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4369,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 126,
+          "6": 89,
+          "7": 49,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 2,
+          "56": 1,
+          "59": 3,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "134": 1,
+          "137": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6804,
+        "distinct_cross_block_links": 133852,
+        "isolated_blocks": 4369,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          },
+          {
+            "blocks": 59,
+            "first_label": "AEBP2",
+            "proteins": 133,
+            "reference_pairs": 91
+          }
+        ],
+        "linked_blocks": 12475,
+        "linked_reference_pairs": 17711,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_full",
+        "orthofinder_3_1_5_sequence_only"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16725,
+          "2": 43,
+          "3": 8,
+          "4": 1,
+          "5": 1
+        },
+        "connected_components": 16778,
+        "distinct_cross_block_links": 72,
+        "isolated_blocks": 16725,
+        "largest_component_blocks": 5,
+        "largest_component_reference_pairs": 9,
+        "largest_components": [
+          {
+            "blocks": 5,
+            "first_label": "OR2G6",
+            "proteins": 12,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "ACTR1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "H2BC3",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR10J3",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR4N2",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "TPM1",
+            "proteins": 6,
+            "reference_pairs": 3
+          }
+        ],
+        "linked_blocks": 119,
+        "linked_reference_pairs": 267,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_full",
+        "sonicparanoid_2_0_9"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16678,
+          "2": 53,
+          "3": 9,
+          "4": 1,
+          "5": 1,
+          "11": 1,
+          "13": 1
+        },
+        "connected_components": 16744,
+        "distinct_cross_block_links": 182,
+        "isolated_blocks": 16678,
+        "largest_component_blocks": 13,
+        "largest_component_reference_pairs": 31,
+        "largest_components": [
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 5,
+            "first_label": "ACTA1",
+            "proteins": 10,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "H3-3A",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR4N2",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          }
+        ],
+        "linked_blocks": 166,
+        "linked_reference_pairs": 385,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_full",
+        "proteinortho_6_3_6"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16769,
+          "2": 25,
+          "3": 7,
+          "4": 1
+        },
+        "connected_components": 16802,
+        "distinct_cross_block_links": 47,
+        "isolated_blocks": 16769,
+        "largest_component_blocks": 4,
+        "largest_component_reference_pairs": 24,
+        "largest_components": [
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "DNAJA1",
+            "proteins": 11,
+            "reference_pairs": 15
+          },
+          {
+            "blocks": 3,
+            "first_label": "H2BC3",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "HMGB1",
+            "proteins": 10,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR8U1",
+            "proteins": 7,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD18A",
+            "proteins": 4,
+            "reference_pairs": 2
+          },
+          {
+            "blocks": 2,
+            "first_label": "ANKRD39",
+            "proteins": 4,
+            "reference_pairs": 2
+          }
+        ],
+        "linked_blocks": 75,
+        "linked_reference_pairs": 211,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_full",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12875,
+          "2": 1114,
+          "3": 270,
+          "4": 102,
+          "5": 21,
+          "6": 14,
+          "7": 8,
+          "8": 3,
+          "9": 2,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14418,
+        "distinct_cross_block_links": 12617,
+        "isolated_blocks": 12875,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3969,
+        "linked_reference_pairs": 5523,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_full",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4368,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 126,
+          "6": 89,
+          "7": 49,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 12,
+          "17": 12,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 1,
+          "56": 1,
+          "59": 2,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "86": 1,
+          "91": 1,
+          "134": 1,
+          "137": 1,
+          "160": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6800,
+        "distinct_cross_block_links": 133856,
+        "isolated_blocks": 4368,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 160,
+            "first_label": "OR10AI1",
+            "proteins": 416,
+            "reference_pairs": 375
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 86,
+            "first_label": "OR10AB2",
+            "proteins": 230,
+            "reference_pairs": 217
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          }
+        ],
+        "linked_blocks": 12476,
+        "linked_reference_pairs": 17712,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_sequence_only",
+        "sonicparanoid_2_0_9"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4369,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 126,
+          "6": 89,
+          "7": 49,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 2,
+          "56": 1,
+          "59": 3,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "134": 1,
+          "137": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6804,
+        "distinct_cross_block_links": 133852,
+        "isolated_blocks": 4369,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          },
+          {
+            "blocks": 59,
+            "first_label": "AEBP2",
+            "proteins": 133,
+            "reference_pairs": 91
+          }
+        ],
+        "linked_blocks": 12475,
+        "linked_reference_pairs": 17711,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_sequence_only",
+        "proteinortho_6_3_6"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4367,
+          "2": 1116,
+          "3": 488,
+          "4": 233,
+          "5": 124,
+          "6": 89,
+          "7": 50,
+          "8": 53,
+          "9": 33,
+          "10": 33,
+          "11": 26,
+          "12": 26,
+          "13": 11,
+          "14": 13,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 12,
+          "19": 9,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 2,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 2,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "51": 1,
+          "52": 2,
+          "56": 1,
+          "59": 2,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "102": 1,
+          "134": 1,
+          "137": 1,
+          "185": 1,
+          "229": 1
+        },
+        "connected_components": 6800,
+        "distinct_cross_block_links": 133858,
+        "isolated_blocks": 4367,
+        "largest_component_blocks": 229,
+        "largest_component_reference_pairs": 267,
+        "largest_components": [
+          {
+            "blocks": 229,
+            "first_label": "RBAK",
+            "proteins": 477,
+            "reference_pairs": 267
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 134,
+            "first_label": "AATK",
+            "proteins": 286,
+            "reference_pairs": 173
+          },
+          {
+            "blocks": 102,
+            "first_label": "AMPH",
+            "proteins": 228,
+            "reference_pairs": 151
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          }
+        ],
+        "linked_blocks": 12477,
+        "linked_reference_pairs": 17723,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_sequence_only",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 4345,
+          "2": 1113,
+          "3": 487,
+          "4": 232,
+          "5": 126,
+          "6": 88,
+          "7": 49,
+          "8": 52,
+          "9": 29,
+          "10": 34,
+          "11": 28,
+          "12": 27,
+          "13": 12,
+          "14": 14,
+          "15": 13,
+          "16": 13,
+          "17": 13,
+          "18": 11,
+          "19": 10,
+          "20": 7,
+          "21": 3,
+          "22": 6,
+          "23": 1,
+          "24": 3,
+          "25": 8,
+          "26": 1,
+          "27": 2,
+          "28": 1,
+          "29": 4,
+          "30": 1,
+          "31": 3,
+          "32": 4,
+          "33": 1,
+          "34": 1,
+          "36": 2,
+          "37": 2,
+          "38": 1,
+          "39": 1,
+          "40": 1,
+          "42": 2,
+          "43": 3,
+          "44": 2,
+          "45": 1,
+          "49": 1,
+          "50": 1,
+          "52": 2,
+          "56": 1,
+          "59": 3,
+          "60": 1,
+          "67": 1,
+          "83": 1,
+          "91": 1,
+          "101": 1,
+          "135": 1,
+          "137": 1,
+          "185": 1,
+          "294": 1
+        },
+        "connected_components": 6774,
+        "distinct_cross_block_links": 135757,
+        "isolated_blocks": 4345,
+        "largest_component_blocks": 294,
+        "largest_component_reference_pairs": 358,
+        "largest_components": [
+          {
+            "blocks": 294,
+            "first_label": "EPM2AIP1",
+            "proteins": 620,
+            "reference_pairs": 358
+          },
+          {
+            "blocks": 185,
+            "first_label": "AKT1",
+            "proteins": 411,
+            "reference_pairs": 274
+          },
+          {
+            "blocks": 137,
+            "first_label": "ALX1",
+            "proteins": 299,
+            "reference_pairs": 191
+          },
+          {
+            "blocks": 135,
+            "first_label": "AATK",
+            "proteins": 288,
+            "reference_pairs": 174
+          },
+          {
+            "blocks": 101,
+            "first_label": "OR1A1",
+            "proteins": 258,
+            "reference_pairs": 228
+          },
+          {
+            "blocks": 91,
+            "first_label": "ALYREF",
+            "proteins": 217,
+            "reference_pairs": 169
+          },
+          {
+            "blocks": 83,
+            "first_label": "ACR",
+            "proteins": 181,
+            "reference_pairs": 115
+          },
+          {
+            "blocks": 67,
+            "first_label": "BTBD1",
+            "proteins": 145,
+            "reference_pairs": 91
+          },
+          {
+            "blocks": 60,
+            "first_label": "DES",
+            "proteins": 148,
+            "reference_pairs": 123
+          },
+          {
+            "blocks": 59,
+            "first_label": "AEBP2",
+            "proteins": 133,
+            "reference_pairs": 91
+          }
+        ],
+        "linked_blocks": 12499,
+        "linked_reference_pairs": 17748,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "orthofinder_3_1_5_sequence_only",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16643,
+          "2": 65,
+          "3": 11,
+          "4": 1,
+          "5": 2,
+          "11": 1,
+          "13": 1
+        },
+        "connected_components": 16724,
+        "distinct_cross_block_links": 202,
+        "isolated_blocks": 16643,
+        "largest_component_blocks": 13,
+        "largest_component_reference_pairs": 31,
+        "largest_components": [
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 5,
+            "first_label": "ACTA1",
+            "proteins": 10,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 5,
+            "first_label": "OR2G6",
+            "proteins": 12,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "ACTR1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "H3-3A",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR10J3",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          }
+        ],
+        "linked_blocks": 201,
+        "linked_reference_pairs": 421,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "sonicparanoid_2_0_9",
+        "proteinortho_6_3_6"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16722,
+          "2": 43,
+          "3": 9,
+          "4": 1,
+          "5": 1
+        },
+        "connected_components": 16776,
+        "distinct_cross_block_links": 74,
+        "isolated_blocks": 16722,
+        "largest_component_blocks": 5,
+        "largest_component_reference_pairs": 9,
+        "largest_components": [
+          {
+            "blocks": 5,
+            "first_label": "OR2G6",
+            "proteins": 12,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "ACTR1A",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "DNAJA1",
+            "proteins": 11,
+            "reference_pairs": 15
+          },
+          {
+            "blocks": 3,
+            "first_label": "HMGB1",
+            "proteins": 10,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR10J3",
+            "proteins": 6,
+            "reference_pairs": 3
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR4N2",
+            "proteins": 9,
+            "reference_pairs": 10
+          }
+        ],
+        "linked_blocks": 122,
+        "linked_reference_pairs": 280,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "sonicparanoid_2_0_9",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12862,
+          "2": 1113,
+          "3": 272,
+          "4": 100,
+          "5": 24,
+          "6": 14,
+          "7": 7,
+          "8": 3,
+          "9": 3,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14407,
+        "distinct_cross_block_links": 12628,
+        "isolated_blocks": 12862,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3982,
+        "linked_reference_pairs": 5540,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "sonicparanoid_2_0_9",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 16672,
+          "2": 53,
+          "3": 11,
+          "4": 1,
+          "5": 1,
+          "11": 1,
+          "13": 1
+        },
+        "connected_components": 16740,
+        "distinct_cross_block_links": 186,
+        "isolated_blocks": 16672,
+        "largest_component_blocks": 13,
+        "largest_component_reference_pairs": 31,
+        "largest_components": [
+          {
+            "blocks": 13,
+            "first_label": "H2BC10",
+            "proteins": 35,
+            "reference_pairs": 31
+          },
+          {
+            "blocks": 11,
+            "first_label": "H2AC1",
+            "proteins": 40,
+            "reference_pairs": 46
+          },
+          {
+            "blocks": 5,
+            "first_label": "ACTA1",
+            "proteins": 10,
+            "reference_pairs": 5
+          },
+          {
+            "blocks": 4,
+            "first_label": "KRT31",
+            "proteins": 16,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 3,
+            "first_label": "DNAJA1",
+            "proteins": 11,
+            "reference_pairs": 15
+          },
+          {
+            "blocks": 3,
+            "first_label": "H3-3A",
+            "proteins": 8,
+            "reference_pairs": 7
+          },
+          {
+            "blocks": 3,
+            "first_label": "HMGB1",
+            "proteins": 10,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT37",
+            "proteins": 9,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 3,
+            "first_label": "KRT81",
+            "proteins": 9,
+            "reference_pairs": 9
+          },
+          {
+            "blocks": 3,
+            "first_label": "OR2F1",
+            "proteins": 8,
+            "reference_pairs": 7
+          }
+        ],
+        "linked_blocks": 172,
+        "linked_reference_pairs": 411,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "proteinortho_6_3_6",
+        "fastoma_0_3_5"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12869,
+          "2": 1114,
+          "3": 272,
+          "4": 102,
+          "5": 21,
+          "6": 14,
+          "7": 8,
+          "8": 3,
+          "9": 2,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14414,
+        "distinct_cross_block_links": 12622,
+        "isolated_blocks": 12869,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3975,
+        "linked_reference_pairs": 5536,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "proteinortho_6_3_6",
+        "orthomcl_1_4"
+      ]
+    },
+    {
+      "dependency_graph": {
+        "component_size_histogram": {
+          "1": 12875,
+          "2": 1113,
+          "3": 268,
+          "4": 104,
+          "5": 21,
+          "6": 14,
+          "7": 8,
+          "8": 3,
+          "9": 2,
+          "10": 2,
+          "12": 1,
+          "13": 1,
+          "14": 3,
+          "15": 1,
+          "134": 1
+        },
+        "connected_components": 14417,
+        "distinct_cross_block_links": 12620,
+        "isolated_blocks": 12875,
+        "largest_component_blocks": 134,
+        "largest_component_reference_pairs": 150,
+        "largest_components": [
+          {
+            "blocks": 134,
+            "first_label": "RBAK",
+            "proteins": 276,
+            "reference_pairs": 150
+          },
+          {
+            "blocks": 15,
+            "first_label": "H2BC1",
+            "proteins": 39,
+            "reference_pairs": 33
+          },
+          {
+            "blocks": 14,
+            "first_label": "DNAH1",
+            "proteins": 31,
+            "reference_pairs": 20
+          },
+          {
+            "blocks": 14,
+            "first_label": "EPHA1",
+            "proteins": 29,
+            "reference_pairs": 16
+          },
+          {
+            "blocks": 14,
+            "first_label": "MYH1",
+            "proteins": 33,
+            "reference_pairs": 24
+          },
+          {
+            "blocks": 13,
+            "first_label": "H2AC1",
+            "proteins": 46,
+            "reference_pairs": 52
+          },
+          {
+            "blocks": 12,
+            "first_label": "CDH10",
+            "proteins": 25,
+            "reference_pairs": 14
+          },
+          {
+            "blocks": 10,
+            "first_label": "ABCC1",
+            "proteins": 20,
+            "reference_pairs": 10
+          },
+          {
+            "blocks": 10,
+            "first_label": "SCN10A",
+            "proteins": 21,
+            "reference_pairs": 12
+          },
+          {
+            "blocks": 9,
+            "first_label": "ATP11A",
+            "proteins": 22,
+            "reference_pairs": 17
+          }
+        ],
+        "linked_blocks": 3969,
+        "linked_reference_pairs": 5528,
+        "reference_blocks": 16844,
+        "total_reference_pairs": 23934
+      },
+      "methods": [
+        "fastoma_0_3_5",
+        "orthomcl_1_4"
+      ]
+    }
+  ],
+  "publication_ready": false,
+  "source": {
+    "bytes": 6602,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_corrected_vgnc_components.py",
+    "sha256": "0d65dbe43060a391defb8942f2cf38e3acbfc721a089dc1509359c1125fa45bc"
+  },
+  "status": "corrected_vgnc_component_structure_described",
+  "uncertainty_admitted": false
+}

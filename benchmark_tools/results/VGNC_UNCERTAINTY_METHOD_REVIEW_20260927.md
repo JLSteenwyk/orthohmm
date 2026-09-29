@@ -1,5 +1,12 @@
 # VGNC Uncertainty: Replacement Method Review
 
+The subsequent [corrected eight-method component audit](CORRECTED_VGNC_COMPONENTS_20260928.md)
+describes all individual, paired-union and all-method-union cross-block graphs.
+Largest components range from four blocks for the phylogenetic
+OrthoHMM/full-OrthoFinder union to 370 for the all-method union. This
+method-dependent grouping is not an independently justified sampling law;
+the statistical requirements below remain unresolved.
+
 Primary-source review on 27 September 2026. This is a methodological decision
 record, not a completed estimator, statistical proof or native confidence interval.
 

@@ -1,0 +1,21 @@
+{
+  "graphs_checked": 37,
+  "input_record_entries_rechecked": 40,
+  "limitations": [
+    "Checks graph summaries, not biological independence or confidence-interval coverage.",
+    "Shares the previously validated count tables; no prediction-database rescore."
+  ],
+  "method": "Independent standard-library adjacency sets and breadth-first traversal of pinned sparse TSV tables",
+  "result": {
+    "bytes": 103527,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_vgnc_components_20260928.json",
+    "sha256": "3de93eedfdff77bc5dbb3b06d45fc1e6abcc26280022a653f0844a21acdefa89"
+  },
+  "source_mapping": {
+    "bytes": 26291,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_vgnc_blocks_20260926.json",
+    "sha256": "01a51a62a536bcf759f2a0ef83c56196a92022b0bb8290448eacbfefa47d6005"
+  },
+  "status": "component_graphs_crosschecked",
+  "uncertainty_admitted": false
+}

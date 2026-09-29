@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Describe Corrected VGNC Joint Dependency Graphs (2026-09-28)
+
+Previous turn made progress by pushing exact fixed-release Three Kingdoms
+source reacquisition as `cf12af26`. Reread the goal and returned to primary
+QfO uncertainty. Existing dependency components covered historical OrthoHMM
+stages, while the corrected eight-method sparse count tables were available.
+Added an aggregate-bound graph audit of all eight individual methods, all 28
+pairwise unions and the all-method union, preserving every count and reference
+block. Twenty-seven focused tests pass. A separate standard-library traversal
+reproduced graph summaries for all 37 graphs and rechecked 40 input records.
+
+The [result](CORRECTED_VGNC_COMPONENTS_20260928.md) finds a largest component
+of four reference blocks for phylogenetic OrthoHMM versus full OrthoFinder,
+but 370 blocks in the all-method union. The latter has 136,107 cross-block
+links and 6,615 components. These groupings depend on the observed methods;
+they cannot be promoted to independent biological sampling units merely
+because the graph is disconnected. Rare-error and shared-clade coverage
+failures remain unresolved. No interval, score, scientific default or native
+inference changed. The cross-check process is terminal, no production timing
+or DGX work occurred, and the full publication goal remains active.
+
 ## Reacquire Fixed Three Kingdoms Sources (2026-09-28)
 
 Previous turn made progress by pushing the bounded refinement/GC result as
