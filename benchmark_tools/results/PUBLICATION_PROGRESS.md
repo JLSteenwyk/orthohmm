@@ -1,5 +1,20 @@
 # Publication Progress
 
+## Refresh Condensed Manuscript Review (2026-09-28)
+
+Previous turn progressed the authoritative goal prompt: local Threadripper,
+no DGX prerequisite, reuse validated work. Reread that prompt and current ledger.
+Created fresh v11 HTML/PDF and inspected all six pages, including the complete
+21-endpoint OrthoBench comparison. Zero page-bound violations; 17 focused tests
+pass. [Review and provenance exception](MAIN_REVIEW_REFRESH_20260928.md)
+documents the accidental regeneration of an older untracked v6 PDF; v11 is the
+new reviewed artifact. No scientific source edits or benchmark reruns.
+
+Queue empty on inspection, not proof of host isolation. Pending approval for
+potential scheduler-accounting changes remains ungranted; no services modified.
+Goal active: production timing admission, outstanding QfO uncertainty and release
+requirements remain open. Continue from retained receipts, not new diagnostics.
+
 ## Make Diagnostic Resource Scopes Explicit (2026-09-28)
 
 Previous turn progressed the complete collector fixture panel (`72b409c2`).
