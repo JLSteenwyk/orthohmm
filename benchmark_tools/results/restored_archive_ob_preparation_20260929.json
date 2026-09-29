@@ -1,0 +1,62 @@
+{
+  "amendment": {
+    "independent_admission_required": true,
+    "preparation_failure": "First preflight attempted to rebind historical asset_relocation.json, which is provenance excluded from archive; no plan or run created. Rebind restricted to five archived roots; historical evidence pins retained.",
+    "previous_plan": {
+      "bytes": 1474498,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_reconstructed_full_ob_20260929/plan.json",
+      "sha256": "cea0dd8efa459a01c57ca0450798005c5de3aeef15a6fda19c181acd35918bee"
+    },
+    "protocol": {
+      "bytes": 2143,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/RESTORED_ARCHIVE_EXECUTION_PROTOCOL_20260929.md",
+      "sha256": "afbbf600211d4e08b022424130097417c3841050f7726f4b64aa8d06e688f6e2"
+    },
+    "public_acquisition": {
+      "bytes": 28261,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_public_input_chain_20260929.json",
+      "sha256": "59bdedeea2e60ee81bd39b7124a5cc49ed54d77b3929d73eadc2831ae6a4cdbb"
+    },
+    "restoration": {
+      "bytes": 25725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/integrated_execution_archive_restoration_20260929.json",
+      "sha256": "468816c88dd5e161dbf4421a5fc95581f4f62239631ec9d0767898eb648800b7"
+    }
+  },
+  "checked_records": 6515,
+  "command": [
+    "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+    "-I",
+    "-S",
+    "-B",
+    "/tmp/orthohmm-restored-execution-assets-20260929-v2/workflow.py",
+    "--assets",
+    "/tmp/orthohmm-restored-execution-assets-20260929-v2/assets",
+    "--readers",
+    "/tmp/orthohmm-restored-execution-assets-20260929-v2/readers",
+    "--reader-wheels",
+    "/tmp/orthohmm-restored-execution-assets-20260929-v2/reader_wheels",
+    "--reader-lock",
+    "/tmp/orthohmm-restored-execution-assets-20260929-v2/reader_requirements.txt",
+    "--data",
+    "/tmp/orthohmm-public-input-toolkit-20260929/rebound/data.json",
+    "--data-sha256",
+    "0d1956b08985316e90ad53418992e7a28a6acb0deddda9fcfe00faefd06da245",
+    "--base-python",
+    "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+    "--installer-python",
+    "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/run",
+    "--cpu",
+    "32",
+    "--timeout",
+    "79200"
+  ],
+  "controlled_timing": false,
+  "plan": {
+    "bytes": 1461299,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/plan.json",
+    "sha256": "e80067f7a5947bc357831e0d65c7d766d09899f004cfc6a31d1274a8dfe15448"
+  }
+}
