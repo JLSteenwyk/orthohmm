@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-ob-figure-_s2ljorf/bundle/benchmark_tools/bundle_publication_figures.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-ob-figure-_s2ljorf/bundle"
+  ],
+  "cwd": "/tmp",
+  "returncode": 0,
+  "stdout": "{\n  \"bundle_manifest\": {\n    \"bytes\": 5251,\n    \"sha256\": \"133ead009869f6a56121f4eca03ac8d6d1f5e39e658cad08cb7b322d6f120e31\"\n  },\n  \"bytes\": 1014348,\n  \"files\": 9,\n  \"outputs\": 3,\n  \"panels\": 1,\n  \"publication_ready\": false,\n  \"status\": \"relocated_direct_figure_evidence_verified\"\n}\n",
+  "stderr": ""
+}

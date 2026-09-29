@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Verify Relocated OrthoBench Figure Bundle (2026-09-28)
+
+Built the direct-evidence bundle from pushed commit `72af07f8`, copied it
+outside the checkout and ran its bundled verifier with system Python `-I -B`
+from `/tmp`. Terminal exit zero; nine files, 1,014,348 bytes, one panel and
+three outputs verified. Build and relocation manifest SHA-256 agree:
+`133ead009869f6a56121f4eca03ac8d6d1f5e39e658cad08cb7b322d6f120e31`.
+See [scope, receipt and reproduction](OB_COMPLETE_FIGURE_BUNDLE_20260928.md).
+Sixty-seven focused tests passed before export. No native or timing runs
+were started; no new uncertainty claims. Extended manuscript source is
+updated, but existing rendered previews predate the insertion. Timing,
+remaining scientific uncertainty and release requirements remain incomplete.
+
 ## Integrate OrthoBench Figure And Prepare Portable Evidence (2026-09-28)
 
 Previous turn made progress with figure commit `4707ee93`. Added the complete

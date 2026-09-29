@@ -223,6 +223,9 @@ RUNNING observation does not establish current liveness or completion.
   verification. The [three-metric figure](results/OB_COMPLETE_STRATA_FIGURE_20260928.md)
   retains all empty bins and adds no confidence intervals. This is separate
   from the SwissTrees bundle and the original three-method uncertainty panel.
+  Its [direct-evidence bundle](results/OB_COMPLETE_FIGURE_BUNDLE_20260928.md)
+  was verified outside the checkout with isolated standard-library Python;
+  this does not provide standalone plotting or native inference.
 - [Complete-panel relocated arithmetic check](results/SWISS_COMPLETE_PORTABLE_REPRODUCTION_20260926.md)
   reproduces all 24 endpoints from a three-file committed export using
   isolated Python; a file-access trace checks that original checkout paths
