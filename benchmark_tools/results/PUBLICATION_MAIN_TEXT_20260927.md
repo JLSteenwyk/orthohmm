@@ -203,6 +203,14 @@ The [corrected FAS sample audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md)
 reproduces all eight means, but scored fractions range from 0.0067% to 58.46%
 of reported eligible pairs and every sample reuses proteins across pairs.
 Native pair-level standard errors do not resolve this comparison uncertainty.
+The [requested-score audit](QFO_FAS_SAMPLE_ATTRITION_20260928.md) found 1-49
+missing new scores per method except OrthoMCL, which lacked 1,252 of 9,000.
+Assuming omitted scores lie in [0,1], its intended-sample mean is bounded by
+0.724872-0.736975; this is not a confidence interval. A
+[native-complexity audit](FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md) found no
+above-limit protein in saved new-score pairs, but found them in precomputed
+pairs. This agrees with the demonstrated cutoff mechanism without identifying
+historical omitted pairs or establishing comparison bias.
 The completed simulations and tree perturbations do not cover arbitrary
 evolutionary conditions, and novel-taxon YGOB testing retains homolog-family
 overlap with development data.

@@ -470,6 +470,46 @@ dependence-aware uncertainty for method contrasts. The audit validates
 saved-sample arithmetic, not sampling representativeness or underlying
 feature-score correctness. [FAS sample audit](QFO_FAS_SAMPLE_AUDIT_20260917.md).
 
+For the later corrected v7 comparison, the
+[requested-score attrition audit](QFO_FAS_SAMPLE_ATTRITION_20260928.md)
+reconciled all eight saved samples with their native logged strata. Every
+method requested 9,000 new scores. Shortfalls were 7 for high-sensitivity
+OrthoHMM, 27 for satellite_v2, 25 for full OrthoFinder, 36 for its sequence-only
+checkpoint, 6 for SonicParanoid, 1 for ProteinOrtho, 49 for FastOMA and 1,252
+for recovered OrthoMCL. All requested precomputed scores were retained.
+These FAS shortfalls are distinct from sequence-specific OrthoMCL BLAST failures.
+
+If S is the sum of n saved scores and d requested values are omitted, assuming
+each omitted value lies in [0,1] bounds the intended-sample mean by
+[S/(n+d), (S+d)/(n+d)]. OrthoMCL's bounds are 0.724872-0.736975, compared with
+its saved mean of 0.733752. These deterministic completion bounds condition
+on the intended sample; they do not cover unsampled eligible pairs, identify
+a corrected population mean or substitute for confidence intervals. Completing
+only the omitted sampled values cannot reverse either OrthoHMM-versus-full-
+OrthoFinder FAS sample-mean ordering, but does not establish an advantage
+beyond those samples.
+
+A [controlled probe](QFO_FAS_OMISSION_MECHANISM_20260928.md) inside the retained
+greedyFAS 1.18.7 container verified that proteins exceeding the configured
+`10**15` feature-path limit produce NA values, which the QfO loader omits.
+Native graph calculations on [all 78 retained annotation files](FAS_NATIVE_ANNOTATION_PATH_PANEL_20260928.md)
+identified 1,143 above-limit proteins among 984,137 unique identifiers. The
+[saved-sample exposure audit](FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md)
+found no above-limit endpoint in saved newly calculated pairs for any method.
+All methods nevertheless retained such endpoints in precomputed pairs,
+including 4,122 pairs for OrthoMCL. Precomputed values are not invalidated by
+the current new-scoring cutoff.
+
+Streaming all 59,962,787 frozen lookup entries independently confirmed
+membership and values for 3,023,018 unique saved precomputed pairs and absence
+of valid precomputed values for 70,528 unique saved new-score pairs. Native
+last-valid canonical overwrite semantics were reproduced. This verifies
+selected saved-score provenance, not every unused score or FAS algorithm
+correctness. The architecture flags and absence among saved new pairs are
+consistent with an omission mechanism, but neither identify the historically
+omitted sample nor attribute all shortfalls to that mechanism. Eligible-pair
+exposure, selection bias and family-aware comparison uncertainty remain open.
+
 For GO and EC, all 24 historical-comparator/recovered-stage raw counts,
 means and native uncertainty values were consistent with the retained
 scorers within six-decimal raw serialization bounds. Inspection and execution

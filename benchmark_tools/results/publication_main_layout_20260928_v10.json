@@ -1,0 +1,62 @@
+{
+  "citations": 16,
+  "fact_binding": {
+    "bytes": 2445,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_manuscript_binding_20260928.json",
+    "sha256": "d602c4f6b024f3142a204d49987d9bdb25f479dc8c2d62d33fa56bb1baa96f56"
+  },
+  "focused_tests_passed": 59,
+  "limitations": [
+    "Conditional completion bounds are not confidence intervals.",
+    "Historical omitted pair identities and comparison uncertainty remain unresolved.",
+    "This review does not establish controlled timing, release readiness or data rights."
+  ],
+  "local_link_occurrences": 20,
+  "pages": [
+    {
+      "out_of_bounds_words": [],
+      "page": 1,
+      "words": 374
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 2,
+      "words": 407
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 3,
+      "words": 533
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 4,
+      "words": 471
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 5,
+      "words": 413
+    },
+    {
+      "out_of_bounds_words": [],
+      "page": 6,
+      "words": 72
+    }
+  ],
+  "pdf": {
+    "bytes": 114031,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_review_20260928_v10.pdf",
+    "sha256": "690de17a49c56f8db52d881275a6b5b5f1fe3e159db9b1412913655913444a72"
+  },
+  "publication_ready": false,
+  "render_receipt": {
+    "bytes": 11948,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260928_v10.json",
+    "sha256": "22a7f19ad9c41ec322cd8a71ea9dfe7333948dd5acdffcaf60976af5c8e00939"
+  },
+  "status": "fas_followup_main_text_verified_and_rendered",
+  "unique_local_targets": 19,
+  "verified_file_records": 31,
+  "visual_review": "All six rasterized pages inspected; no clipping or incoherent overlap observed. Final page contains the remaining bibliography entries."
+}

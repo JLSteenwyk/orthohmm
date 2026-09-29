@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Integrate FAS Follow-Up Into The Publication Draft (2026-09-28)
+
+Previous turn made progress by pushing the lookup/exposure audit as `363fc98f`.
+Reread the objective and checked current manuscript and claim-list contents.
+The main text now reports requested-score shortfalls and conditional completion
+bounds, with links to the saved-score complexity audit. The extended text
+records all eight shortfalls, the native omission mechanism, the complete
+annotation inventory and the independent frozen-lookup verification. New
+claim-list entries distinguish supported saved-score verification from
+unproven historical omission attribution.
+
+The [fact-binding receipt](fas_manuscript_binding_20260928.json) checks the
+reported numbers against the three retained audits and rehashes the exposure
+audit's inputs. No graph computation or 59.96-million-entry lookup pass was
+repeated. All 59 focused tests pass. Main-text review v10 follows this update;
+its render receipt records the linked ledger at this revision.
+
+No benchmark score, scientific default or reference changed. Missing historical
+sample identities, appropriate comparative uncertainty, controlled Threadripper
+timing and release requirements remain open. No production timing, DGX access
+or unrelated-job action occurred; the full publication goal remains active.
+
 ## Verify Saved FAS Strata Against The Precomputed Lookup (2026-09-28)
 
 Previous turn made progress by pushing the complete annotation-path panel as

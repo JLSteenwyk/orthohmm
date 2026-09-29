@@ -1,0 +1,66 @@
+{
+  "exposure_input_hashes_rechecked": true,
+  "inputs": [
+    {
+      "bytes": 23197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_sample_attrition_20260928.json",
+      "sha256": "1f6ddfd5aadf9f5be8147164b23904d2e5db1ffee69a6fc18b654a54f3f25d36"
+    },
+    {
+      "bytes": 1051,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_native_path_panel_review_20260928.json",
+      "sha256": "96ac9eeefab75393ab88e4eef339fbd745c1b84b88429565c51edfe27aea2ccb"
+    },
+    {
+      "bytes": 65798,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fas_saved_complexity_exposure_20260928.json",
+      "sha256": "89591df8514d9e9659546a31836bcb2a1a501b9528610009fba83f21a086ffa0"
+    }
+  ],
+  "lookup_check": {
+    "entries_scanned": 59962787,
+    "relevant_canonical_overwrites": 2762101,
+    "unique_saved_new_pairs": 70528,
+    "unique_saved_precomputed_pairs": 3023018
+  },
+  "lookup_rescanned": false,
+  "manuscripts": [
+    {
+      "bytes": 14745,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "sha256": "62347ea65f42b9b1b8824ee627b34e3865fd68722be93d7015e033bcbec7316f"
+    },
+    {
+      "bytes": 170117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+      "sha256": "5bd18189308dc4325a2af9d0d491d22e60b85d3c73563e3ebc18169007c106be"
+    },
+    {
+      "bytes": 84227,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md",
+      "sha256": "37cdeaa63086f2bc9c98d23798af485898454069b32771086eb25b8350497c1e"
+    }
+  ],
+  "new_native_runs": false,
+  "orthomcl_intended_sample_bounds": [
+    "0.724872",
+    "0.736975"
+  ],
+  "panel_summary": {
+    "annotation_files": 78,
+    "protein_records": 984137,
+    "rejected_records": 1143
+  },
+  "publication_ready": false,
+  "shortfalls": {
+    "fastoma_0_3_5": 49,
+    "orthofinder_3_1_5_full": 25,
+    "orthofinder_3_1_5_sequence_only": 36,
+    "orthohmm_high_sensitivity": 7,
+    "orthohmm_phylogeny_satellite_v2": 27,
+    "orthomcl_1_4": 1252,
+    "proteinortho_6_3_6": 1,
+    "sonicparanoid_2_0_9": 6
+  },
+  "status": "fas_manuscript_facts_bound_to_retained_audits"
+}
