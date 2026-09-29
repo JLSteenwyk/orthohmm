@@ -27,6 +27,18 @@ These are distinct executed paths, not interchangeable evidence:
 | [Integrated fixture](results/INTEGRATED_WORKFLOW_20260927.md) | Eight stages on 16 genes, with fresh inference/reader environments | Full-data validation |
 | [Reconstructed-base fixture](results/RECONSTRUCTED_BASE_FIXTURE_20260927.md) | Same fixture using a separately acquired base Python; no original Python/repository prefix in its execution trace | Cross-host restoration, OS isolation or complete security/rights clearance |
 | [Full integrated job 22337](results/INTEGRATED_FULL_OB_RESULT_22337.md) | Eight stages completed; separate admission reproduced all groups and 70 family scores | Controlled timing, independent accuracy or cross-host restoration |
+| [Reconstructed-base full job 22376](results/RECONSTRUCTED_FULL_OB_PROTOCOL_20260929.md) | Submitted under a frozen protocol; live installation check passes for 11 inference and five reader packages | Native completion, scientific admission or reproduction equality are not yet established |
+
+The reconstructed-base full attempt has separate execution and scientific
+checkers, `benchmark_tools.verify_reconstructed_full_ob_execution` and
+`benchmark_tools.admit_reconstructed_full_ob`. They are bound to job 22376
+and its exact plan; do not substitute another job ID. See the newest entries
+in the [progress ledger](results/PUBLICATION_PROGRESS.md) and query the
+scheduler for current state. Its installation-only payload audit does not
+replace terminal admission. The comparison baseline is admitted job 22337;
+root groups are compared without labels and native pair/event/hierarchy
+files are compared byte-for-byte, retaining any differences. No outcome of
+this shared-host correctness run qualifies as controlled timing.
 
 For a new execution, acquire and verify the selected inputs and local assets
 first, then follow the integrated controller's documented command with fresh

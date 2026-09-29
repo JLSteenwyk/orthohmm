@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Validate The Live Full-Data Installation (2026-09-29)
+
+Previous goal turn implemented the independent scientific admission
+(`f512c736`). Reread goal and verified job 22376 RUNNING at 13:31. Both fresh
+venvs had completed installation before native inference started, so invoked
+the new package auditor read-only against those actual environments while
+native HMM search continues. This is not another installation fixture or
+native rerun, and no shared or private installed package was changed.
+
+Both lock/inventory and archive-payload checks pass: 11 inference packages,
+3,052 matching payload files, 14 explicitly excluded archive members; five
+reader packages, 2,702 matching payload files, six exclusions. Exclusions
+include installer-generated metadata and relocated non-site payloads. This
+does not prove complete OS closure or successful scientific execution.
+Full independent admission will repeat these checks after terminal success.
+
+Retained detail is
+`benchmarks/work/publication_reconstructed_full_ob_20260929/live_package_audit.json`
+(1,223,307 bytes; SHA256
+`071ba692aabacc342a110d023d3bfe48598ecc2085b592836952de64e28014d7`).
+It explicitly labels itself live-installation-only, not execution or
+scientific admission. The reproduction guide now routes this new full-data
+attempt separately from the completed original-base and fixture evidence.
+No final score, controlled timing or publication-completion claim. Goal active.
+
 ## Prepare Scientific Admission For Reconstructed Full OrthoBench (2026-09-29)
 
 Previous goal turn progressed job-bound execution verification (`3682fbb7`).
