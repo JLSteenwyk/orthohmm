@@ -74,6 +74,42 @@ job identifier or treating the fixture's success as dataset-scale evidence.
 Consult current scheduler state before calling it; the protocol's historical
 RUNNING observation does not establish current liveness or completion.
 
+### Restored Archive Execution
+
+The [local asset archive](results/INTEGRATED_ASSET_ARCHIVE_20260929.md)
+has passed restoration and content/link/mode checks. It contains execution
+assets and readers, not raw data, base Python, installer or OS libraries.
+The [public-input acquisition chain](results/orthobench_public_input_chain_20260929.json)
+separately verifies a fresh upstream checkout and binds its 93 inputs to the
+frozen full-data manifest. Neither component alone demonstrates inference.
+
+[Job 22377](results/restored_archive_ob_submission_20260929.json) joins those
+components under a [prospective protocol](results/RESTORED_ARCHIVE_EXECUTION_PROTOCOL_20260929.md),
+using the reconstructed base/installer and a fresh output directory. Terminal
+scientific validation is pending. Check the scheduler and newest
+[progress entries](results/PUBLICATION_PROGRESS.md); do not resubmit this job.
+Its installation audit is live evidence, not proof of terminal completion.
+
+After successful scheduler completion, run the following from the repository
+root with a trusted audit interpreter and a nonexistent audit output directory:
+
+```sh
+python -m benchmark_tools.admit_restored_archive_ob \
+  --directory benchmarks/work/publication_restored_archive_ob_20260929 \
+  --output benchmarks/work/publication_restored_archive_ob_20260929/independent_admission
+```
+
+This command first verifies job 22377, its pinned plan and all eight stages;
+it does not run inference. It repeats installed-package checks, executes the
+independent scientific readers, and recomputes all 70 RefOG score records.
+The comparison baseline is admitted job 22376. Full root partitions are
+compared without labels, including unscored genes, and four native TSVs are
+compared byte-for-byte. Inspect `reproduction_equal` as well as audit status:
+successful execution validation does not imply equal scientific outputs.
+Failures and mismatches must be retained, not retried automatically or hidden.
+These job-specific validators are not portable approval tools for other jobs.
+This remains local reproduction, not controlled timing or a public release.
+
 ## Method And Results
 
 - [Corrected GO/EC scored-pair panel](results/QFO_SCORED_PAIR_PANEL_20260927.md)

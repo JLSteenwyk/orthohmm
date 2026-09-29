@@ -1,5 +1,16 @@
 # Publication Progress
 
+## Connect Archive Execution To The Reproduction Guide (2026-09-29)
+
+Previous turn was a verified wait; job 22377 remains running. Reread goal and
+reviewed the guide's acquisition-to-execution path. Added links connecting the
+verified local archive and fresh public-input acquisition to the prospective
+22377 protocol, plus the exact post-completion audit command. The text marks
+terminal validation pending, explains full-partition/native-file comparison,
+distinguishes audit success from reproduction equality and forbids duplicate
+submission or automatic retry. Sixteen focused guide/admission tests pass;
+all local guide link targets exist. No scientific outcome or timing claim added.
+
 ## Test Full-Partition Equality Beyond RefOG Scores (2026-09-29)
 
 Previous turn was a verified wait on job 22377. Reread goal and confirmed it
