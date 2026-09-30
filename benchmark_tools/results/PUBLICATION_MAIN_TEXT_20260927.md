@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement
 
-Condensed scientific draft, updated 28 September 2026. Not submission-ready. The
+Condensed scientific draft, updated 30 September 2026. Not submission-ready. The
 [extended manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) retains detailed
 methods, historical analyses, citations and audit records. This main text
 does not supersede frozen protocols or historical result manifests.
@@ -92,6 +92,12 @@ score records. Native pair, confidence, reconciliation-event and hierarchy
 files were byte-identical to the earlier run. This extends same-host
 environment reproduction, not biological validation or complete archive
 restoration. [Reconstructed-base verification](RECONSTRUCTED_FULL_OB_RESULT_22376.md).
+A third full run used restored local execution assets and separately acquired
+upstream inputs. Its independent scientific admission reproduced all 59,770
+groups, all 70 family score records and four native TSVs exactly, without
+reusing phylogenetic checkpoints. This validates local archive-to-results
+reproduction, not cross-host/OS restoration, independent accuracy or controlled
+timing. [Restored-archive verification](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md).
 
 On corrected QfO, phylogenetic OrthoHMM versus full OrthoFinder scored 0.901690
 versus 0.988546 on VGNC, 0.833513 versus 0.848413 on SwissTrees, and 0.614864
@@ -125,6 +131,14 @@ pair sets and their denominators. Restricting evaluation to intersections
 would change the endpoint rather than resolve uncertainty. Historical raw
 hashes were verified for all 16 input tables.
 [Scored-pair audit](QFO_SCORED_PAIR_TRANSITIVE_BINDING_20260927.md).
+The [complete pair-composition figure](figures_qfo_scored_pair_decomposition_20260930/qfo_pair_decomposition.pdf)
+displays the shared-denominator and exclusive-pair terms for all seven
+comparators against full OrthoFinder. Phylogenetic OrthoHMM's shared pairs
+account for 90.12% of its GO scored set but 46.40% of OrthoFinder's, and
+86.59% versus 58.00% for EC. The original rounded-mean differences, +2.080130
+and +2.952029 score points, are the sums of much larger opposing terms.
+These fractions describe eligible scored pairs, not proteome-wide coverage;
+the decomposition is arithmetic, not causal attribution or paired uncertainty.
 
 ### Component Evidence Is Bounded
 
@@ -257,6 +271,9 @@ Historical locks are retained as provenance; patched replacement environments
 must be distinguished from the binaries used for original scores. The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
 requirements. No submission-ready release or archival DOI is claimed.
+The retained 28 September main-text HTML/PDF and review archive are historical
+versions, not rendered copies of this revised Markdown. Final manuscript
+rendering and review remain to be reconciled after the outstanding analyses.
 
 ## References
 

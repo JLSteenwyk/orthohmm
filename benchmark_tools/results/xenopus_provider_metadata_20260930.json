@@ -1,0 +1,129 @@
+{
+  "benchmark_input_replaced": false,
+  "fresh_proteome_downloaded": false,
+  "historical_release_assigned": false,
+  "limitations": [
+    "Gzip MTIME is not proof of release or download date.",
+    "Current Content-Length is metadata only; no fresh raw-sequence comparison was made.",
+    "Archive listing is not proof that every possible public mirror lacks the historical proteome.",
+    "No 140 GB knowledgebase archive was downloaded; no biological sequence or benchmark score changed."
+  ],
+  "queries": [
+    {
+      "body": {
+        "bytes": 2320,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/xenopus_provider_metadata_20260930/archive_index.body",
+        "sha256": "30f6cc903f4f6695304393d60c39f3d1da7f5db77ab16349c9c040b65c475ca2"
+      },
+      "final_url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2025_04/knowledgebase/",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Connection": "close",
+        "Content-Length": "2320",
+        "Content-Type": "text/html;charset=UTF-8",
+        "Date": "Wed, 30 Sep 2026 14:37:02 GMT",
+        "Server": "Apache/2.4.68 (Ubuntu) OpenSSL/3.0.13",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Vary": "Accept-Encoding"
+      },
+      "method": "GET",
+      "name": "archive_index",
+      "retrieved_at": "2026-09-30T14:37:01.704801+00:00",
+      "status": 200,
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2025_04/knowledgebase/"
+    },
+    {
+      "body": {
+        "bytes": 3602,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/xenopus_provider_metadata_20260930/archive_readme.body",
+        "sha256": "16b80609da382521c37ed3ed7adf14dfc4f61c7efddbad401453cd137b0f380f"
+      },
+      "final_url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/README",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Connection": "close",
+        "Content-Length": "3602",
+        "Date": "Wed, 30 Sep 2026 14:37:02 GMT",
+        "ETag": "\"e12-5bf5fac862374\"",
+        "Last-Modified": "Wed, 07 Apr 2021 10:48:40 GMT",
+        "Server": "Apache/2.4.68 (Ubuntu) OpenSSL/3.0.13",
+        "Strict-Transport-Security": "max-age=31536000"
+      },
+      "method": "GET",
+      "name": "archive_readme",
+      "retrieved_at": "2026-09-30T14:37:02.074846+00:00",
+      "status": 200,
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/README"
+    },
+    {
+      "error_type": "HTTPError",
+      "headers": {
+        "Connection": "close",
+        "Content-Type": "text/html; charset=iso-8859-1",
+        "Date": "Wed, 30 Sep 2026 14:37:02 GMT",
+        "Server": "Apache/2.4.68 (Ubuntu) OpenSSL/3.0.13"
+      },
+      "method": "HEAD",
+      "name": "individual_archive_file",
+      "retrieved_at": "2026-09-30T14:37:02.427526+00:00",
+      "status": 404,
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/previous_releases/release-2025_04/knowledgebase/reference_proteomes/Eukaryota/UP000186698/UP000186698_8355.fasta.gz"
+    },
+    {
+      "body": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/xenopus_provider_metadata_20260930/current_file_metadata.body",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "final_url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000186698/UP000186698_8355.fasta.gz",
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Connection": "close",
+        "Content-Length": "14105984",
+        "Content-Type": "application/x-gzip",
+        "Date": "Wed, 30 Sep 2026 14:37:03 GMT",
+        "ETag": "\"d73d80-65a97eba0a800\"",
+        "Last-Modified": "Thu, 03 Sep 2026 18:00:00 GMT",
+        "Server": "Apache/2.4.68 (Ubuntu) OpenSSL/3.0.13",
+        "Strict-Transport-Security": "max-age=31536000"
+      },
+      "method": "HEAD",
+      "name": "current_file_metadata",
+      "retrieved_at": "2026-09-30T14:37:02.779063+00:00",
+      "status": 200,
+      "url": "https://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/reference_proteomes/Eukaryota/UP000186698/UP000186698_8355.fasta.gz"
+    }
+  ],
+  "redistribution_cleared": false,
+  "retained_files": {
+    "busco_table": {
+      "bytes": 61348,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/Xeno/run_eukaryota_odb10/full_table.tsv",
+      "sha256": "9bc7ca16e698ea6437d41c8c4c2b34a8569f7afd4937294839911da40dd44667"
+    },
+    "compressed": {
+      "bytes": 14143121,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/proteomes/Xeno.fa.gz",
+      "sha256": "152dca85b613a162a4266efd7e3f2d7cade6b71abdee56dc3ebd6a08eca9b561"
+    },
+    "raw": {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input.raw/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    },
+    "staged": {
+      "bytes": 25382533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input/Xeno.fasta",
+      "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+    }
+  },
+  "retained_gzip_mtime_utc": "2025-11-25T19:31:36+00:00",
+  "retained_source_audit": {
+    "bytes": 26195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_sources_20260918.json",
+    "sha256": "a79bf83e1ea28a9790e4597ea50a44d6409f4f36404a35e660d56a0b754fc1f3"
+  },
+  "status": "bounded_xenopus_provider_metadata_followup"
+}

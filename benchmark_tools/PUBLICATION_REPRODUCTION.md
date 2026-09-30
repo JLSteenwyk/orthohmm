@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
+exports 14 comparisons against full OrthoFinder from the retained 56-comparison
+panel, with exact integer-sum validation and native denominators preserved.
+Its table/PNG/PDF/SVG are generated without new native scoring or uncertainty.
+The revised main Markdown includes this figure and completed archive inference;
+older main-text render/review components remain explicitly historical versions.
+
 These are distinct executed paths, not interchangeable evidence:
 
 The [combined scientific/workflow source component](results/PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md)

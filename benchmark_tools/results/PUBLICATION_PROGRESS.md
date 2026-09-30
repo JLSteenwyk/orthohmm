@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Export GO/EC Composition And Reconcile Main Evidence (2026-09-30)
+
+The previous conversational turn updated the saved goal prompt for local
+Threadripper resumption; it did not launch work. Fresh scheduler readback
+confirms 22377-22380 terminal and no current Slurm jobs. Preserved/pushed the
+actual 22380 calibration receipts as `648217ea`, correcting the current
+requirement table without changing any original failed outcome or limit.
+
+Added a [GO/EC composition exporter](QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
+using the already admitted 56-comparison panel. All 56 inventories and integer
+score-sum identities are validated; 14 baseline contrasts are exported.
+54 direct input/source record entries match before/after export. All 14 TSV
+component sums independently read back correctly. The PNG was visually
+inspected: both panels, fixed method labels, signed terms, net diamonds and
+boundary notes are readable and non-overlapping. 43 focused tests pass.
+No inference, native scoring, new resampling or diagnostic rerun occurred.
+
+The main Markdown now incorporates successful restored-assets full inference
+22377 and the complete GO/EC figure. Its 28 September render/archive remain
+historical, not current renderings. GO/EC advantages at serialized precision
+are eligible-pair composition differences; no confidence interval, causal
+attribution or proteome-wide coverage claim follows.
+
+A [bounded Xenopus public-provider follow-up](XENOPUS_PROVIDER_METADATA_20260930.md)
+retains archive listing/README, individual historical URL 404 and current-file
+HEAD metadata. Current compressed size differs; gzip MTIME does not assign
+a release. Four retained file pins remain identical. No large archive or
+replacement proteome was downloaded. Do not repeat this exact negative lead
+without changed evidence. No DGX access or unrelated workload interruption.
+
+Remaining timing gates are causal overhead, prospective ordinary-process/
+service contamination policy, full environmental handoff, final source
+readiness and a quiet window. QfO comparison uncertainty, source/rights
+limitations, final current rendering and public versioned release/deposition
+remain unresolved. Full publication goal remains active; no production timing
+or publication readiness is claimed.
+
 ## Pass Fresh Accounting And Cadence Calibration (2026-09-30)
 
 Prospective source/protocol commit `cc028714` was pushed before submitting
