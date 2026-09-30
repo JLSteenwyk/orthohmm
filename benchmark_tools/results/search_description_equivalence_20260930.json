@@ -1,0 +1,66 @@
+{
+  "calibration_established": false,
+  "changed_scope": "comments and docstrings only; documentation metadata intentionally changed",
+  "comparison": "ast.dump(include_attributes=False) after removing only leading module/class/function docstring statements; comments and source locations are not AST nodes",
+  "files": [
+    {
+      "after_bytes": 5409,
+      "after_sha256": "271490863df46ff67c6f7d2bf9dcb490dd43315ac3d250636b3adf98150b953a",
+      "before_bytes": 6143,
+      "before_sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "1802aa91fa9e8177a45f14d57f828551c3b8d6b4babb2841e011d8f1892406d4",
+      "path": "orthohmm/search/profile.py"
+    },
+    {
+      "after_bytes": 17879,
+      "after_sha256": "86177fd72b60b9bada8f3101c489e3b45bbcaf1096003845caea1c0b6b53bc88",
+      "before_bytes": 17693,
+      "before_sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "2b81b945aad0a9715774d4941057a3463be7d137c157e6596c19e923093c9695",
+      "path": "orthohmm/search/viterbi.py"
+    },
+    {
+      "after_bytes": 21266,
+      "after_sha256": "38fe7ffb769a009d4a68ca6b1dce2026efe2ba8785ded63eed3f98695efc70ef",
+      "before_bytes": 21133,
+      "before_sha256": "15991c4ac28abc805cb99c694af6b09953ce430038e6f4f2f56faef43d110c2b",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "7eeae3583f0bf333dd7f2e36e935a6889cf78c8392ba40b2180279a14ea84059",
+      "path": "orthohmm/search/engine.py"
+    },
+    {
+      "after_bytes": 2211,
+      "after_sha256": "3730b937654e97138521a301e9b28fbf4f446ac3952414b6c2834eb718d25397",
+      "before_bytes": 1865,
+      "before_sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "06bb096f69a2fb6e5ebea800fb7705ca88a1a0bc5b45c61c88cbc394722ce02c",
+      "path": "orthohmm/search/evalue.py"
+    },
+    {
+      "after_bytes": 28063,
+      "after_sha256": "e5aaa051973b5cdb763b7eddec2c4a87c900d22db11037898b243d53e12fc6f9",
+      "before_bytes": 27982,
+      "before_sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "995d8284c819905b526a5ec0ad2da91607cd39172f2f664b52b924d81d937d4a",
+      "path": "orthohmm/search/matrices.py"
+    },
+    {
+      "after_bytes": 6838,
+      "after_sha256": "ede0eacf73a211fcd485fff833f453b98dfea541a3952438696dbae412997aad",
+      "before_bytes": 6728,
+      "before_sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468",
+      "executable_ast_equal": true,
+      "executable_ast_sha256": "4e4e5cf2d748b50cd2bd7b7d4e1ad58b4ac9fca45e477a7f5a16af67cdb43cba",
+      "path": "orthohmm/search/msa_profile.py"
+    }
+  ],
+  "native_backend_equivalence_established": false,
+  "numerical_algorithm_changed": false,
+  "parent_revision": "4fbae61713149ff589fc0b0bb05af814c2b9ee2a",
+  "publication_ready": false,
+  "scientific_admission_repaired": false
+}

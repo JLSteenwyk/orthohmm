@@ -22,16 +22,16 @@ from .msa_center_star import center_star_msa
 @dataclass
 class MSAProfile:
     """MSA-derived position-specific profile."""
-    length: int                      # number of match states (non-gap-majority columns)
+    length: int                      # number of retained match columns
     match_emissions: np.ndarray      # (L, 20) int8 log-odds emission scores
-    insert_emissions: np.ndarray     # (20,) int8 background scores
-    transitions: np.ndarray          # (7,) int32
+    insert_emissions: np.ndarray     # (20,) int8, uniform -1
+    transitions: np.ndarray          # (7,) int32, uniform across positions
     consensus: np.ndarray            # uint8 consensus sequence for prefilter use
     member_ids: List[str] = field(default_factory=list)  # source genes
 
 
 def encode_alignment(aligned_seqs: List[str]) -> np.ndarray:
-    """Encode aligned sequences as int8 array with 20=gap.
+    """Encode aligned sequences as int8 array with 20=gap/unknown.
 
     Returns (n_seqs, alignment_length) int8.
     """
@@ -62,11 +62,12 @@ def compute_pssm(
 
     Parameters
     ----------
-    encoded_msa : (n_seqs, L) int8, values 0-19 for amino acids, 20 for gap
+    encoded_msa : (n_seqs, L) int8, values 0-19 for amino acids, 20 for gap/unknown
     sub_matrix : (20, 20) int8 substitution matrix (for pseudocounts)
     bg_freqs : (20,) float64 background frequencies
     pseudocount_weight : BLOSUM pseudocount weight
-    gap_fraction_threshold : drop columns with more gaps than this
+    gap_fraction_threshold : retain only columns with gap/unknown fraction
+        strictly below this value (equal fractions are dropped)
 
     Returns
     -------
@@ -129,7 +130,7 @@ def compute_pssm(
             if pseudo_prob.sum() == 0:
                 pseudo_prob = bg_freqs.copy()
 
-            # Combine with pseudocount weight (alpha=n, beta=pseudocount_weight)
+            # Combine non-gap counts with pseudocount weight alpha.
             # p(b) = (n*emp_prob(b) + alpha*pseudo_prob(b)) / (n + alpha)
             alpha = pseudocount_weight
             probs = (n_aa * emp_prob + alpha * pseudo_prob) / (n_aa + alpha)
@@ -143,7 +144,7 @@ def compute_pssm(
             else:
                 pssm[match_idx, b] = -10
 
-        # Consensus = most frequent non-gap AA
+        # Consensus = maximum pseudocount-adjusted probability, not raw count.
         consensus[match_idx] = int(np.argmax(probs))
         match_idx += 1
 

@@ -1,15 +1,15 @@
 """Single-sequence profile HMM construction.
 
-Builds a Plan7-style profile HMM from a single query sequence and
-a substitution matrix, equivalent to what phmmer does internally.
+Builds an integer scoring profile for local match/insert/delete Viterbi
+alignment. This is not an exact implementation of Plan7 or phmmer scoring.
 
 For position i with amino acid a_i:
   - Match emission scores = substitution_matrix[a_i, :]
-  - Insert emission scores = background-derived scores (position-independent)
-  - Transition probabilities use standard HMMER defaults
+  - Insert emission scores = uniform -1 (position-independent)
+  - Transition costs = uniform additive integer penalties
 
-The substitution matrix scores ARE the log-odds PSSM entries, so we
-keep them as integers for efficient Viterbi computation.
+The supplied substitution matrix rows are used directly as integer match
+scores. The background-frequency argument does not alter these emissions.
 """
 
 from dataclasses import dataclass
@@ -21,29 +21,14 @@ from .matrices import ALPHABET_SIZE
 
 
 # ──────────────────────────────────────────────────────────────────────
-# Default HMM transition parameters (in scaled integer log-odds)
-#
-# HMMER3 phmmer defaults (approximate):
-#   p(M->M) = 1 - 2*p_open  ≈ 0.96
-#   p(M->I) = p_open         ≈ 0.02
-#   p(M->D) = p_open         ≈ 0.02
-#   p(I->M) = 1 - p_extend   ≈ 0.6
-#   p(I->I) = p_extend        ≈ 0.4
-#   p(D->M) = 1 - p_extend   ≈ 0.6
-#   p(D->D) = p_extend        ≈ 0.4
-#
-# Converted to integer log-odds (scaled by ~3 to stay in int8 range):
-#   log(0.96) * 3 ≈ -0.12  → 0   (near zero penalty for M->M)
-#   log(0.02) * 3 ≈ -11.7  → -12 (large penalty for opening gap)
-#   log(0.6)  * 3 ≈ -1.53  → -2  (small penalty for closing gap)
-#   log(0.4)  * 3 ≈ -2.75  → -3  (moderate penalty for extending gap)
-#
-# We use a simpler integer scaling that captures the relative costs.
-# The exact values don't matter much because OrthoHMM normalizes
-# scores by gene length and corrects by phylogenetic distance.
+# Default additive costs in MM, MI, MD, IM, II, DM, DD order:
+# [0, -12, -12, -1, -3, -1, -3]. These are not normalized probabilities.
+# Insertions also pay the emission cost of -1 per residue; deletions do not.
+# Raw scores determine the E-value gate before downstream normalization,
+# so changing these penalties changes search decisions.
 # ──────────────────────────────────────────────────────────────────────
 
-# Transition indices in the (L, 7) transitions array
+# Transition indices in the position-independent (7,) transitions array
 T_MM = 0  # Match -> Match
 T_MI = 1  # Match -> Insert
 T_MD = 2  # Match -> Delete
@@ -55,7 +40,7 @@ T_DD = 6  # Delete -> Delete
 
 @dataclass
 class ProfileHMM:
-    """Lightweight Plan7 profile for one query sequence."""
+    """Integer match/insert/delete scoring profile for one query sequence."""
     length: int                    # L (number of match states)
     match_emissions: np.ndarray    # (L, 20) int8
     insert_emissions: np.ndarray   # (20,) int8
@@ -70,14 +55,15 @@ def build_profile(
     gap_open: int = -12,
     gap_extend: int = -3,
 ) -> ProfileHMM:
-    """Build a single-sequence Plan7 profile HMM.
+    """Build a single-sequence match/insert/delete scoring profile.
 
     Parameters
     ----------
     query_seq : uint8 array of length query_len
     query_len : int
     sub_matrix : (20, 20) int8 substitution matrix
-    bg_freqs : (20,) float64 background frequencies
+    bg_freqs : (20,) float64 background frequencies, retained for API compatibility
+        but not used to construct single-sequence emissions
     gap_open : int, transition penalty for M->I and M->D
     gap_extend : int, transition penalty for I->I and D->D
 
@@ -95,16 +81,12 @@ def build_profile(
             # Unknown residue: use zero scores (no information)
             match_emissions[i, :] = 0
 
-    # Insert emissions: derived from background frequencies
-    # Convert to integer scores roughly comparable to substitution matrix
-    # log2(1/20) ≈ -4.3, so uniform background ≈ -4 per residue
-    # We use a simple approximation: all insert emissions = -1
-    # (mild penalty, since inserts should be possible but not favored)
+    # Uniform insert penalty, independent of bg_freqs.
     insert_emissions = np.full(ALPHABET_SIZE, -1, dtype=np.int8)
 
     # Transitions: uniform across all positions
-    # gap_close = roughly -log(1-p_extend), should be small
-    gap_close = max(gap_extend + 1, -1)  # slightly less penalty than extend
+    # The default gap_extend=-3 gives gap_close=-1.
+    gap_close = max(gap_extend + 1, -1)
 
     transitions = np.array([
         0,           # T_MM: no penalty for match-match

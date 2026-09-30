@@ -1,10 +1,14 @@
 """E-value estimation from Viterbi scores.
 
-Uses Karlin-Altschul statistics: E = K * m * n * exp(-lambda * S)
+Uses a Karlin-Altschul-style approximation: E = K * m * n * exp(-lambda * S).
+Static matrix-specific constants are not empirically calibrated here for the
+actual banded recurrence and its gap costs. The result is not an orthology
+assignment probability or a demonstrated HMMER-equivalent significance value.
 
-The E-value is only used as a coarse pre-filter (threshold 0.0001)
-in OrthoHMM's downstream pipeline. The actual edge weights use
-length-normalized, phylogenetically-corrected bit scores.
+The default search gate is strict E < 0.0001, using the raw integer score
+before initial length normalization. Initial stored search scores are
+S / sqrt(query_length * target_length), not calibrated HMMER bit scores;
+downstream graph transformations are separate. Nonpositive S returns 1e10.
 """
 
 import numpy as np

@@ -379,14 +379,14 @@ def get_background_freqs(matrix_name: str) -> np.ndarray:
 
 # ──────────────────────────────────────────────────────────────────────
 # Karlin-Altschul parameters for E-value estimation
-# Pre-computed (lambda, K) for standard gap penalties.
-# Sources: NCBI BLAST source (blast_stat.c), HMMER user guide.
-# These are approximate values suitable for the coarse E-value
-# filter (threshold 0.0001) used by OrthoHMM.
+# Static (lambda, K) constants used by the approximate E-value filter.
+# Historical gap annotations below are not the scorer's actual defaults
+# (-12 open, -3 extend, -1 close, plus -1 per inserted residue). This table
+# does not establish empirical calibration for that banded score distribution.
 # ──────────────────────────────────────────────────────────────────────
 
 KA_PARAMS = {
-    # (lambda, K) for gapped alignment with standard gap penalties
+    # (lambda, K), with historical gap annotations retained below
     "BLOSUM45": (0.2291, 0.0924),   # gap_open=15, gap_extend=2
     "BLOSUM50": (0.2318, 0.112),    # gap_open=13, gap_extend=2
     "BLOSUM62": (0.3176, 0.134),    # gap_open=11, gap_extend=1
@@ -402,5 +402,5 @@ KA_PARAMS = {
 
 
 def get_ka_params(matrix_name: str) -> tuple:
-    """Return (lambda, K) Karlin-Altschul parameters for a matrix."""
+    """Return static (lambda, K) constants for approximate E-value filtering."""
     return KA_PARAMS[matrix_name]

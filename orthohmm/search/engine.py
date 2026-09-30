@@ -1,7 +1,9 @@
 """Search engine orchestrator.
 
 Ties together pre-filtering, profile construction, Viterbi scoring,
-and E-value estimation into a complete phmmer replacement.
+and approximate E-value filtering into the built-in sequence-search engine.
+Replacing the phmmer subprocess does not imply identical scoring, calibrated
+significance or sensitivity to phmmer.
 """
 
 import itertools

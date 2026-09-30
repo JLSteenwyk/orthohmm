@@ -1,7 +1,8 @@
 """3-state banded Viterbi scoring for profile HMM search.
 
-Implements the Plan7 HMM Viterbi algorithm with Match, Insert, and
-Delete states. Uses banding and row-toggling for efficiency.
+Implements local maximum-path scoring with Match, Insert, and Delete states.
+Uses banding and row-toggling for efficiency; exact Plan7/HMMER equivalence
+and equal sensitivity to full-matrix alignment are not established.
 
 Two implementations:
   1. Numba JIT (always available, fallback)
@@ -10,6 +11,7 @@ Two implementations:
 The Viterbi recurrence for profile position i, target position j:
 
   V_M(i,j) = emit_M(i, target[j]) + max(
+      0,
       V_M(i-1, j-1) + t_MM,
       V_I(i-1, j-1) + t_IM,
       V_D(i-1, j-1) + t_DM
@@ -24,7 +26,8 @@ The Viterbi recurrence for profile position i, target position j:
   )
 
 This is a local alignment variant: V_M can start from 0 at any position,
-and the maximum V_M over all (i,j) is the Viterbi score.
+and the score is max(0, maximum V_M over all visited positions). This is
+not a Forward sum over paths or an orthology posterior probability.
 """
 
 import ctypes

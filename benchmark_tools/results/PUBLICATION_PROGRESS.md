@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Current Search Descriptions Matched To Numerical Methods (2026-09-30)
+
+The preceding goal turn answered the user's timing clarification but changed
+no authoritative state: classified as no progress, not a verified wait.
+Reread the objective, newest ledger and retained diagnostic evidence before
+taking a new safe action. Scheduler accounting confirms 22377, 22380 and 22383
+still terminal COMPLETED 0:0; no completed workflow was restarted. GDB 22159
+already did not reproduce the high-CPM crash, so another identical debugger
+attempt is not justified. Failed admission 22155 remains failed.
+
+Corrected misleading descriptions in six current search modules, including
+phmmer/Plan7 equivalence, HMMER transition defaults, background-derived insert
+emissions, closing cost, calibration/bit-score wording, local recurrence and
+MSA consensus/cutoff semantics. No executable statement, matrix/penalty,
+configuration, score or frozen method was changed. The
+[result](SEARCH_DESCRIPTION_CORRECTION_20260930.md) and
+[receipt](search_description_equivalence_20260930.json) retain six parent/current
+source hashes and identical executable ASTs after removing docstrings. All
+130 focused current-code tests pass; diff whitespace validation passes.
+Doc metadata/source positions intentionally change; this is not complete
+runtime equivalence, significance calibration, native safety or admission.
+
+This closes a source-description inconsistency with the existing frozen Methods
+specification. That unchanged readback and previous manuscript review/archive
+are reused, not regenerated. Historical source pins remain authoritative for
+their own runs; final timing/release recipes must bind actual stabilized bytes.
+Unrelated dirty sample outputs remain untouched. No native inference, scoring,
+expensive diagnostic, package upgrade or source acquisition occurred.
+
+Timing remains deferred on the Threadripper without renewed contention probing,
+coordination questions, DGX access or unrelated process/service actions.
+Controlled environmental/overhead/handoff/source gates, high-CPM admission,
+remaining QfO uncertainty/original TreeFam sources, rights and final release
+remain incomplete. Source-description corrections are not publication
+readiness; the full goal remains active.
+
 ## Current Main Text Rendered, Reviewed And Archived (2026-09-30)
 
 Previous goal turn made progress by completing/pushing the 34 new public context
