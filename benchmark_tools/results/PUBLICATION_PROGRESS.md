@@ -1,5 +1,37 @@
 # Publication Progress
 
+## FAS Audit Timed Out; Six Partial Checks Preserved (2026-09-30)
+
+Previous turn made progress by pushing the exact scoring specification,
+source readback/tests and conversation checkpoint. Reread the full objective
+and current ledger, confirmed original 22382 live and followed that same
+attempt with a fresh bounded terminal recorder; no analysis restart occurred.
+
+The job is now authoritatively **TIMEOUT**, reason TimeLimit, controller exit
+0:15, zero restarts, original 90-minute allocation. Six partial row outputs
+report native-count and saved-lookup agreement; FastOMA and OrthoMCL have no
+completed row and the complete report is absent. The
+[failure result](QFO_FAS_POPULATION_TIMEOUT_22382.md) and
+[receipt](qfo_fas_population_terminal_22382.json) retain raw terminal evidence
+and all partial outcomes. This does not invalidate the existing native scores,
+but it fails completion of the new full-population audit. No selected-method
+table, final stability/uncertainty admission, extension or retry was produced.
+
+Independent post-timeout readback checks six database hashes, aggregate
+counts/bound arithmetic, original submitted Git objects and recorder pins.
+The large joins and lookup scoring were not repeated. Twelve small raw
+artifacts are preserved for inspection. Allocation and batch exit records
+differ and are retained literally; null accounting prevents interpreting
+zero CPU/blank peak memory as resource measurements.
+
+Pushed the claim-checklist scope correction as `5b1d15bc`: current Markdown
+includes the numerical Methods specification, but the earlier rendered review
+is a historical snapshot. No score/default changed. Any later recount
+completion needs a separately justified prospective amendment and retained
+failure evidence, not an automatic retry. Other publication work can continue;
+timing stays deferred, no quiet question or contention probe was repeated,
+and the full goal remains active rather than paused or complete.
+
 ## Conversation Checkpoint: No Quiet Window Needed Now (2026-09-30)
 
 Answered the latest user clarification: no immediate quiet-window reservation

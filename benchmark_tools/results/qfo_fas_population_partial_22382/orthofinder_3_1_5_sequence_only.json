@@ -1,0 +1,28 @@
+{
+  "method": "orthofinder_3_1_5_sequence_only",
+  "database": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/qc_om/34/afe634032d81f95c39a070d0f66211/orthologs.db",
+    "bytes": 11008348160,
+    "sha256": "2b3361b11f83035111a0f1cb6671d80db6185c876d4b7aaf8c86ffd9748afe3d"
+  },
+  "database_historically_hash_bound": false,
+  "native_logged_counts": {
+    "precomputed": 29303161,
+    "missing": 133974278,
+    "unannotated": 0
+  },
+  "native_counts_match": true,
+  "saved_lookup_strata_and_values_match": true,
+  "distinct_query_pairs": 222204921,
+  "skipped_alias_pairs": 58927482,
+  "precomputed": 29303161,
+  "missing": 133974278,
+  "unannotated": 0,
+  "eligible_pairs": 163277439,
+  "precomputed_score_sum": 20259580.53931,
+  "precomputed_mean": 0.6913786720589632,
+  "hypothetical_full_mean_bounds": [
+    0.12408070988490946,
+    0.9446121857613776
+  ]
+}

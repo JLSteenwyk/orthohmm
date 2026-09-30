@@ -1,0 +1,28 @@
+{
+  "method": "orthohmm_phylogeny_satellite_v2",
+  "database": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/qcf7/5a/af0a8a5ba56c91e45e52dc53436dd1/orthologs.db",
+    "bytes": 418156544,
+    "sha256": "4701b390278a1dbd9e190a1d3b215fd10e8b5eda252799fa6984bf38918a7ed0"
+  },
+  "database_historically_hash_bound": false,
+  "native_logged_counts": {
+    "precomputed": 5653739,
+    "missing": 305821,
+    "unannotated": 0
+  },
+  "native_counts_match": true,
+  "saved_lookup_strata_and_values_match": true,
+  "distinct_query_pairs": 8041229,
+  "skipped_alias_pairs": 2081669,
+  "precomputed": 5653739,
+  "missing": 305821,
+  "unannotated": 0,
+  "eligible_pairs": 5959560,
+  "precomputed_score_sum": 4374113.07961,
+  "precomputed_mean": 0.773667316374173,
+  "hypothetical_full_mean_bounds": [
+    0.7339657759314446,
+    0.785281812685836
+  ]
+}

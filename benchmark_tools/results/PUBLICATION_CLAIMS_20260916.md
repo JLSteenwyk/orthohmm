@@ -56,6 +56,13 @@ not a current host poll. Isolation must be checked afresh before release.
 
 ## Claim Boundaries
 
+The later [full FAS population recount attempt](QFO_FAS_POPULATION_TIMEOUT_22382.md)
+timed out at its unchanged allocation limit after six partial row checks.
+FastOMA/OrthoMCL completed rows and the final report are absent. Retained
+partial counts, newly checked database hashes and hypothetical bounds do not
+establish the planned eight-method panel, final input-stability pass, native
+score replacement or QfO uncertainty. No automatic retry was submitted.
+
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
 | The built-in frozen search is statistically equivalent to HMMER/phmmer and its E values provide calibrated assignment confidence | [Exact scoring specification and readback](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md) | Not established: the implemented local integer maximum-path recurrence, uniform transition costs and static significance constants do not demonstrate that equivalence. The matrix-table gap-cost comment differs from scorer costs. This is an approximate filter, not a posterior or guaranteed false-positive rate; no retrospective score/default change follows |
