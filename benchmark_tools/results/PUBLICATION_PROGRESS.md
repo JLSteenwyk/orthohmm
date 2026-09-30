@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Reconcile Public-Facing Release And Benchmark Instructions (2026-09-30)
+
+The user cannot currently identify a quiet Threadripper window; confirmed
+that timing can wait while other work proceeds. No new contention probe,
+scientific rerun, service change or DGX operation was needed this turn.
+Existing terminal calibrations and archive reproduction remain retained.
+
+Reconciled README and three Sphinx pages with current evidence. The former
+experimental scaling table is no longer presented as production scaling;
+removed generic optimal-clustering advice; production timing is accurately
+deferred on the local host. Links now target corrected eight-method QfO
+version 7, the current main draft and the reproduction guide rather than
+historical QfO scores. No historical result or scientific default changed.
+
+Fresh primary PyPI metadata reports latest release 0.2.0, no declared extras.
+Its official source archive matches the metadata checksum; archive reads
+confirm no high-sensitivity/phylogeny flags and a required MCL check. Source
+installation examples now distinguish unreleased checkout features from the
+published release. No package was installed or uploaded.
+The [reconciliation record](PUBLICATION_DOCUMENTATION_RECONCILIATION_20260930.md)
+retains exact scope and validation. All seven documentation pages build under
+Sphinx 8.1.3 with warnings treated as errors; scoped diff whitespace checks pass.
+
+This is repository documentation, not website deployment, a public package
+release, independent validation or controlled timing. Comparable resource
+evidence, unresolved QfO uncertainty/rights and final release/deposition remain
+open; the full goal stays active. Do not repeatedly request a quiet window
+without a new need or treat user uncertainty as approval to disrupt work.
+
 ## Review And Relocate The Revised Main Draft (2026-09-30)
 
 The previous goal turn made progress: it pushed the actual calibration receipts

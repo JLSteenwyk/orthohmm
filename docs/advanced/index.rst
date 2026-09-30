@@ -187,11 +187,11 @@ Selects which clustering algorithm groups RBNH edges into orthogroups.
 Two choices:
 
 * ``leiden`` *(default)*: Leiden community detection with the Constant Potts Model.
-  Pure Python via ``igraph`` and ``leidenalg``; no external binary
-  required. ``cpm_resolution=0.1`` is the default fixed setting for the
-  highest-priority OrthoBench and QfO benchmarks. Pair with
-  ``--cpm_resolution auto`` for distant cross-kingdom data; auto yields
-  F=90.7% on Three Kingdoms.
+  Via ``igraph`` and ``leidenalg`` with native library code; no external
+  clustering executable required. ``cpm_resolution=0.1`` is the development
+  default, selected using development-exposed benchmarks, not an established
+  optimum for arbitrary datasets. ``--cpm_resolution auto`` is an alternative
+  adaptive setting, not a guarantee of cross-kingdom accuracy.
 * ``mcl``: Markov Cluster algorithm with inflation=1.5, via the external
   ``mcl`` binary. Available as a conservative robustness option.
 
@@ -211,8 +211,8 @@ CPM Resolution
 --------------
 Resolution parameter for Leiden CPM clustering. Lower values produce
 larger, more permissive orthogroups; higher values produce smaller,
-stricter ones. The default is ``0.1``, which gave the best F-score on
-the OrthoBench reference.
+stricter ones. The development default is ``0.1``. Dataset-specific tuning
+must be distinguished from independent validation.
 
 .. code-block:: shell
 

@@ -19,22 +19,24 @@ Performance
 -----------
 
 As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
-search engine that replaces the ``phmmer`` subprocess. It scales to
-100 bacterial proteomes (~352K total proteins) on a single 32-core node:
+search engine that replaces the ``phmmer`` subprocess. A historical production
+CLI measurement used five bacterial proteomes (15,932 proteins) and a
+32-CPU budget:
 
-============  ============  ==========  =============
-proteomes     wall time     peak RAM    orthogroups
-============  ============  ==========  =============
-5             13 s          0.29 GB     1,196
-20            4 min         0.44 GB     8,680
-60            28 min        1.65 GB     19,029
-100           77 min        4.67 GB     27,328
-============  ============  ==========  =============
+============  ============  =====================  ====================
+proteomes     wall time     peak process-tree RSS  orthogroups
+============  ============  =====================  ====================
+5             7.0 s         1.36 GiB               12,995
+============  ============  =====================  ====================
 
-These are historical bacterial scaling measurements (RefSeq, 32 threads),
-not the dedicated-machine matched-resource publication panel. They do not
-establish comparative speed or memory advantages. See :ref:`performance`
-for current benchmark scope and limitations.
+Groups include singletons. The former 20-100 proteome table used a separate
+experimental driver and is not production-CLI scaling evidence. The
+`historical optimization report <https://github.com/JLSteenwyk/orthohmm/blob/main/PERFORMANCE_OPTIMIZATION.md>`_
+retains commands, checksums and rejected experiments. This local measurement
+does not establish comparative speed or memory advantages. The planned
+matched-resource panel on the local Threadripper is deferred until isolation
+and measurement gates are satisfied. See :ref:`performance` for current
+benchmark scope and limitations.
 The legacy ``phmmer`` path is still available via
 ``--search_mode phmmer`` but is no longer the default.
 
@@ -42,11 +44,23 @@ The legacy ``phmmer`` path is still available via
 
 Quick Start
 -----------
+
+This documentation describes the development checkout. As checked on
+30 September 2026, the latest `PyPI release <https://pypi.org/project/orthohmm/>`_
+is 0.2.0 and requires MCL. Installing from PyPI does not provide this checkout's
+high-sensitivity or phylogeny pipeline. Use an isolated source installation
+for development features; use the
+`publication reproduction guide <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/PUBLICATION_REPRODUCTION.md>`_
+for exact
+benchmark reproduction rather than an unpinned checkout. The pip commands
+below install the published release.
+
 1\. Install external dependencies
 
-The default OrthoHMM pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external binary. |mclLink|_ is optional
-and only required if you opt into ``--clustering mcl``.
+The development pipeline uses the built-in search engine and Leiden
+CPM clustering, so it has no required external bioinformatics binary.
+|mclLink|_ is required for published v0.2.0; in the development checkout it is
+only required if you opt into ``--clustering mcl``.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
 ``--search_mode phmmer`` pipeline.
@@ -82,9 +96,10 @@ Below are more detailed instructions, including alternative installation methods
 
 1\. Install external dependencies
 
-The default OrthoHMM pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external binary. |mclLink|_ is optional
-and only required if you opt into ``--clustering mcl``.
+The development pipeline uses the built-in search engine and Leiden
+CPM clustering, so it has no required external bioinformatics binary.
+|mclLink|_ is required for published v0.2.0; in the development checkout it is
+only required if you opt into ``--clustering mcl``.
 
 |hmmerLink|_ is optional and only required if you opt into the legacy
 ``--search_mode phmmer`` pipeline.

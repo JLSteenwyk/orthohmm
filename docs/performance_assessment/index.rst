@@ -28,8 +28,10 @@ Current evidence
   paralog separation with phylogenetic OrthoHMM relative to high sensitivity,
   alongside lower homolog coverage. Full OrthoFinder and SonicParanoid perform
   better on supported separation and coverage in this application.
-* Matched-resource timing runs are underway on a dedicated machine. Historical
-  resource measurements should not be pooled with this new timing panel.
+* The planned matched-resource panel will use the local Threadripper, not the
+  DGX. Production timing is deferred pending isolation and measurement gates;
+  other publication work continues. Historical resource measurements should
+  not be pooled with the new panel or described as controlled comparisons.
 
 OrthoBench and QfO were inspected during development. Their scores are not
 independent confirmation of settings selected using those datasets. The
@@ -48,8 +50,10 @@ the output and scoring protocol specified for each benchmark.
 Reports and reproducibility
 ---------------------------
 
-The `eight-method comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_COMPARISON_ORTHOMCL_COMPLETE_20260916.md>`_
-contains the consolidated observed scores. The
+The `corrected eight-method QfO comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md>`_
+contains current observed endpoints and prediction semantics. The
+`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md>`_
+links OrthoBench, uncertainty and transfer evidence. The
 `claim-to-evidence checklist <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md>`_
 links uncertainty, ablations, simulations, transfer evaluation and the
 biological application. The

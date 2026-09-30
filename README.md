@@ -44,6 +44,18 @@ If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortho
 
 ---
 
+**Release Scope**
+
+This checkout documents development features. As checked on 30 September 2026,
+the latest [PyPI release](https://pypi.org/project/orthohmm/) is 0.2.0;
+`pip install orthohmm` does not install this checkout's high-sensitivity or
+phylogeny pipeline. That published release requires MCL. The development
+checkout uses Leiden by default and offers optional phylogenetic inference.
+Use an isolated source installation for the development examples below.
+For exact benchmark reproduction, use the frozen revision and dependencies
+in the [publication reproduction guide](benchmark_tools/PUBLICATION_REPRODUCTION.md),
+not an unpinned installation from `main` or PyPI.
+
 **Performance**
 
 As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
@@ -59,13 +71,15 @@ came from a separate experimental driver and was removed pending a production
 harness rerun. See `PERFORMANCE_OPTIMIZATION.md` for commands, checksums,
 stage timings, and rejected experiments. The legacy `phmmer` path is still available via
 `--search_mode phmmer` but is no longer the default.
+This historical local measurement is not a matched-resource comparison with
+other tools. The planned comparative timing panel on the local Threadripper
+is deferred until isolation and measurement gates are satisfied.
 
 **Clustering step.** OrthoHMM uses **Leiden CPM with resolution=0.1** as
-the default clustering algorithm. This setting is the best local choice for
-the highest-priority accuracy benchmarks: it outperforms MCL@1.5 on
-OrthoBench and is the recommended fixed setting for QfO-style mixed inputs.
-MCL@1.5 remains available as a conservative robustness option for very
-distant cross-kingdom datasets, where fixed Leiden CPM can fragment heavily.
+the development default. This setting was selected using development-exposed
+benchmarks; it is not established as optimal for arbitrary datasets.
+MCL@1.5 remains available as an alternative. Dataset divergence, grouping
+granularity and configuration affect the accuracy/coverage trade-off.
 
 Power users can opt into MCL via `--clustering mcl --inflation_value 1.5`,
 or use adaptive Leiden via `--clustering leiden --cpm_resolution auto`.
@@ -103,12 +117,17 @@ multi-copy families against a validated rooted species tree. This mode is
 opt-in; `--phylogeny off` remains the default and does not load tree libraries
 or require external phylogenetic programs.
 
-Install the optional parser dependency and provide MAFFT, FastTree, and a
+From the development checkout, install the optional parser dependency in an
+isolated environment and provide MAFFT, FastTree, and a
 rooted Newick tree whose leaf names match input proteome filenames without
 their FASTA extensions:
 
 ```shell
-pip install 'orthohmm[phylogeny]'
+git clone https://github.com/JLSteenwyk/orthohmm.git
+cd orthohmm
+python -m venv venv
+source venv/bin/activate
+pip install '.[phylogeny]'
 orthohmm proteomes/ --accuracy_profile high_sensitivity \
   --phylogeny reconcile --species_tree_mode supplied \
   --species_tree species_tree.nwk --aligner mafft --tree_builder FastTree
@@ -166,6 +185,20 @@ over internal edges and avoids placing the root on a single long terminal
 branch when no explicit outgroup is available. The backward-compatible default
 remains `midpoint` while this policy is under evaluation.
 
+**Benchmark Evidence**
+
+The [corrected eight-method QfO table](benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md)
+reports individual endpoints and prediction semantics. The
+[main scientific draft](benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md)
+links OrthoBench uncertainty, ablations, transfer evaluation and limitations.
+QfO and OrthoBench are development-exposed, not independent confirmation.
+Three Kingdoms evaluates the BUSCO reference subset, not proteome-wide
+orthology. GO/EC similarity and FAS are not F1; the six-metric mean is a
+project-defined secondary summary. These results do not establish overall
+superiority to full OrthoFinder or matched efficiency. The new publication
+release and archival deposition are not complete; see the
+[progress ledger](benchmark_tools/results/PUBLICATION_PROGRESS.md).
+
 ---
 
 <br />
@@ -178,9 +211,10 @@ This documentation covers downloading and installing OrthoHMM. Details about eac
 
 1\. Install external dependencies
 
-OrthoHMM's default pipeline does not require external bioinformatics
+This development checkout's default pipeline does not require external bioinformatics
 binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
-is optional and only required if you opt into `--clustering mcl`. Install it
+is required for the published 0.2.0 release; in this checkout it is
+only required if you opt into `--clustering mcl`. Install it
 via your package manager (`apt install mcl`, `brew install mcl`,
 `conda install -c bioconda mcl`) or from source.
 
@@ -201,13 +235,16 @@ orthohmm <path_to_directory_of_FASTA_files>
 
 **Installation**
 
+The pip commands below install the published release, not development features.
+
 **If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via [email](https://jlsteenwyk.com/contact.html) or [Bluesky](https://bsky.app/profile/jlsteenwyk.bsky.social) to get help.**
 
 1\. Install external dependencies
 
-OrthoHMM's default pipeline does not require external bioinformatics
+This development checkout's default pipeline does not require external bioinformatics
 binaries. [MCL](https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions)
-is optional and only required if you opt into `--clustering mcl`. Install it
+is required for the published 0.2.0 release; in this checkout it is
+only required if you opt into `--clustering mcl`. Install it
 via your package manager (`apt install mcl`, `brew install mcl`,
 `conda install -c bioconda mcl`) or from source.
 
