@@ -1,0 +1,89 @@
+{
+  "accounting": "JobID|State|ExitCode|Elapsed\n22380|COMPLETED|0:0|00:00:44\n22380.batch|COMPLETED|0:0|00:00:44\n22380.0|COMPLETED|0:0|00:00:41\n",
+  "causal_slowdown_validated": false,
+  "checks": {
+    "all_worker_threads_sampled": true,
+    "cpu_contains_worker_witness": true,
+    "cpu_excess_bounded": true,
+    "native_exited_zero": true,
+    "peak_contains_allocations": true,
+    "point_cost_within_cadence": true,
+    "sample_gap_within_limit": true
+  },
+  "complete_interior_samples": 30,
+  "environment_handoff_validated": false,
+  "evidence_pins_rechecked": 50,
+  "expected_threads": 160,
+  "failed_predecessor": 22378,
+  "host_observation": {
+    "command_bracketed_by_samples": true,
+    "command_launch_started_monotonic_s": 425029.242895836,
+    "command_wait_finished_monotonic_s": 425060.904507433,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "competing_cpu_observed": 2
+    },
+    "limitations": [
+      "Snapshots miss short-lived processes and non-CPU contention.",
+      "Per-process CPU intervals are not simultaneous; no exclusivity or quiet-host certification.",
+      "Sampling overhead is included in measured resources; raw process inventory is local evidence."
+    ],
+    "maximum_between_snapshot_gap_s": 30.043678825022653,
+    "maximum_observed_foreign_average_cores": 79.28038080142301,
+    "observation_errors": 0,
+    "observer_pid": 2490178,
+    "observer_source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    },
+    "source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/command_host_monitor.py",
+      "sha256": "3ef0f82132bad825509f8fade0e11c1b17d12be11d578327a7c593cbe3db30c9"
+    },
+    "status": "competing_cpu_observed",
+    "successful_snapshots": 3,
+    "threshold_average_cores": 0.25
+  },
+  "independent_audit": {
+    "bytes": 17197,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_observer_calibration_async_20260930/independent_audit.json",
+    "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+  },
+  "interpretation": [
+    "Original 22378 failure is preserved, not replaced.",
+    "Sampled cadence/descendant/accounting checks pass at the unchanged thresholds.",
+    "Host-process errors and competing work remain; this is not timing admission.",
+    "Native CPU and peak retain wrappers/launcher and are not overhead-subtracted."
+  ],
+  "job_id": 22380,
+  "maximum_interior_gap_seconds": 1.0007585030398332,
+  "maximum_point_cost_seconds": 0.094280583,
+  "native_cpu_excess_seconds": 7.18787900000018,
+  "primary": {
+    "cpu_seconds": 860.448829,
+    "peak_memory_bytes": 2414571520,
+    "wall_seconds": 31.661611597
+  },
+  "production_timing": false,
+  "protocol": {
+    "bytes": 202251,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_async_protocol_20260930.json",
+    "sha256": "7ed6720e659586f54c6f180aa69ecd08c51ec087c14593f03bef153e9a3a6b5d"
+  },
+  "publication_ready": false,
+  "quiet_window_established": false,
+  "retained_audit": {
+    "bytes": 17197,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_async_calibration_audit_22380.json",
+    "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+  },
+  "source_pin_count": 827,
+  "source_revision": "cc028714d3593fd42a9bd7a482f7dda24437f2ae",
+  "status": "async_calibration_terminal_and_independently_checked",
+  "submission": {
+    "bytes": 998,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_async_submission_20260930.json",
+    "sha256": "87ace5c88604f53d4347a1ae8e7b2391d794058f6599a90ecc4bd86a5eb57821"
+  },
+  "witnessed_worker_cpu_seconds": 853.2609499999999
+}

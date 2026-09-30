@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 29 September 2026. This is a completion audit, not a replacement
+Status updated 30 September 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -20,20 +20,29 @@ source/figure components, not transitive study evidence, inference, rights
 clearance or a public release. Its render-time ledger is intentionally a
 historical snapshot, not current job status.
 
+The [restored-assets full OrthoBench run 22377](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md)
+now has successful terminal independent scientific reproduction. The original
+observer diagnostic 22378 and combined audit 22379 failed and are retained.
+After a diagnosed scheduling correction, [new diagnostic 22380](THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md)
+passes the unchanged sampled cadence/identity/accounting checks. This is not
+causal overhead, environmental handoff or timing admission; substantial
+competing host CPU remains directly observed. Earlier pending/running descriptions
+below are historical. No production timing run has been admitted.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
 | 2. Independent generalization | [Frozen YGOB novel-taxon evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md), [overlap diagnostic](YGOB_OVERLAP_STRATA_RESULT_20260928.md) | The separate-clade evaluation supplies bounded transfer evidence under the original goal; family-disjoint validation is not established. The later overlap analysis is descriptive, not a second independent confirmation. No test-informed tuning |
 | 3. HMM and phylogeny contributions | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [corrected QfO factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md), [matched-recall diagnostic](MATCHED_GRAPH_RESULT_20260926.md) | Preserve endpoint-specific negative/neutral findings and limited causal scope. Shared-host resources do not establish controlled efficiency |
 | 4. Uncertainty and errors | [OrthoBench paired intervals](ORTHOBENCH_UNCERTAINTY_20260916.md), [corrected SwissTrees comparisons](qfo_recovered_swiss_uncertainty_22178.json), [FAS audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md), [VGNC method review](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) | Appropriate uncertainty remains unresolved for other QfO challenges and the secondary mean. Original TreeFam trees/mapping remain missing despite [public archive inspections](TREEFAM_SOURCE_RETRIEVAL_20260918.md). Do not substitute pair-IID intervals or inferred family labels |
-| 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [local executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md), [adopted resource endpoints](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md), [pending 32-worker calibration](THREADRIPPER_OBSERVER_CALIBRATION_PROTOCOL_20260929.md) | High-CPM QfO admission remains failed. The 27-run timing panel still needs full-scale observer/resource validation, environmental policy/review worker, final source freeze, integrated handoff and a verified quiet window. Calibration 22378 is diagnostic, not a production repeat or causal slowdown test |
+| 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [local executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md), [adopted resource endpoints](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md), [passed 32-worker calibration](THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md) | High-CPM QfO admission remains failed. The 27-run timing panel still needs causal observer-overhead evaluation, prospective environmental policy, final source readiness, integrated handoff and a verified quiet window. Calibration 22380 validates sampled cadence/identity/accounting, not a production repeat, continuous containment or causal slowdown |
 | 6. Biological usefulness | [Prespecified WGD case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), [fixed-tree four-rule diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md) | All three alternative root rules fail to recover the five focal losses on fixed inputs; mapped-event reduces coverage in four eligible cases. No general rule ranking, topology-error diagnosis or superiority claim follows |
-| 7. Reproducible publication package | [Latest main-draft figure/export review](YGOB_OVERLAP_FIGURE_20260928.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [reconstructed-base full result](RECONSTRUCTED_FULL_OB_RESULT_22376.md), [combined source component](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Source archive integrity and same-host reproduction are not a complete executable release or cross-host restoration. Archive-to-results job 22377 awaits terminal admission. Final manuscript reconciliation, compiled/transitive dependency and data-rights review, public versioned release and archival deposition remain unfinished |
+| 7. Reproducible publication package | [Latest main-draft figure/export review](YGOB_OVERLAP_FIGURE_20260928.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [reconstructed-base full result](RECONSTRUCTED_FULL_OB_RESULT_22376.md), [admitted archive-to-results reproduction](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md), [combined source component](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Source archive integrity and same-host reproduction are not a complete executable release or cross-host restoration. Final manuscript reconciliation, compiled/transitive dependency and data-rights review, public versioned release and archival deposition remain unfinished |
 
 The next timing action is to complete and validate the live environmental
 review and full-scale accounting workflow, not to launch the 27 identities
 from fixture success. The latest retained host observation in the executor
-contract found about 104 competing CPU-core equivalents; it is dated evidence,
+calibration found about 79.28 competing CPU-core equivalents; it is dated evidence,
 not a current host poll. Isolation must be checked afresh before release.
 
 ## Claim Boundaries

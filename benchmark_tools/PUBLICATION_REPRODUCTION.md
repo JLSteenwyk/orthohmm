@@ -141,6 +141,14 @@ Failures and mismatches must be retained, not retried automatically or hidden.
 These job-specific validators are not portable approval tools for other jobs.
 This remains local reproduction, not controlled timing or a public release.
 
+The new [asynchronous-host diagnostic 22380](results/THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md)
+is now independently checked: allocation/batch/native all completed and all
+seven original sampled descendant/cadence/accounting checks passed. Original
+22378 and 22379 failures remain. This diagnostic reports substantial competing
+host CPU; it does not admit controlled timing, causal observer overhead or the
+complete environmental handoff. Do not launch the 27 production identities
+from diagnostic success alone.
+
 ## Method And Results
 
 - [Corrected GO/EC scored-pair panel](results/QFO_SCORED_PAIR_PANEL_20260927.md)

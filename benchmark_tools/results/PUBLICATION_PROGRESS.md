@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Pass Fresh Accounting And Cadence Calibration (2026-09-30)
+
+Prospective source/protocol commit `cc028714` was pushed before submitting
+[new diagnostic 22380](threadripper_observer_calibration_async_submission_20260930.json)
+once. Allocation, batch and native step are all COMPLETED 0:0; allocation
+44 seconds. Invoked its independent raw-replay audit once after terminal state,
+to a fresh output, and saved the result rather than rerunning any earlier audit.
+
+The [actual calibration](THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md)
+passes all seven original checks: all 160 witnessed identities in 30 complete
+interior points; max interior gap 1.000759 seconds; max point cost 0.094281
+seconds; native CPU bracket 860.448829 seconds contains 853.260950 worker CPU,
+excess 7.187879; native peak 2,414,571,520 bytes contains the known 2 GiB
+allocation. Freshly checked all 50 direct audit evidence pins; all match.
+The old 22378 reporting failure and 22379 overall audit failure remain retained.
+
+This resolves the tested blocking-host-scan cadence defect and sampled
+descendant/accounting diagnostic. The same native settings, limits and resource
+scopes remain. It does not validate causal slowdown or continuous containment.
+Host samples bracket native execution but find about 79.28 competing core
+equivalents; exclusive Slurm did not establish quietness. No unrelated work,
+service/scheduler policy or DGX state was changed. No production panel run.
+
+Local sandbox failure is resolved and all four jobs are terminal. Remaining
+timing work is causal observer overhead, ordinary-process/service policy with
+prospective contamination bounds, real environmental handoff, final source
+readiness and a quiet window. Full QfO uncertainty, final manuscript/release
+reconciliation and rights/deposition requirements remain open. Full goal active.
+
 ## Admit Archive Reproduction And Diagnose Failed Calibration (2026-09-30)
 
 The preceding turns were blocked by the local command sandbox, not confirmed
