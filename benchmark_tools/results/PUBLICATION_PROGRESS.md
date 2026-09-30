@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Original Runner Reproduced High-CPM Refinement In New Runtime (2026-09-30)
+
+Committed/pushed successful preparation/readback at `23ee2ed2`, then executed
+the one distinct original-runner attempt in the new helper-complete private venv.
+The native CLI completed 0, no timeout, with unchanged source/settings and fresh
+post-write `set(names)`. No forced GC, debugger, optimizer, search or scoring.
+All 984,137 genes occur exactly once in 390,845 groups; zero selected directed
+refinement hits, original metadata identical except destination, output bytes
+exactly match retained refinement. Native stdout/stderr are empty.
+
+The [actual result](QFO_CPM_HELPER_REFINEMENT_RESULT_20260930.md) and
+[independent receipt](qfo_cpm_helper_refinement_readback_20260930.json)
+retain the full local report/output identities. Isolated stdlib readback checks
+9,036 bound evidence records, four logs, six Git bindings, command/preparation/
+probe identities, child metadata and complete gene membership using a separate
+gene-index/bytearray reader. Controller interval 90.30 seconds is shared-host
+descriptive history, not controlled comparative or end-to-end timing.
+
+One success in this separately reconstructed environment does not identify the
+cause or prove repair/safety. Original 22155/22158 and missing-Biopython failure
+remain unchanged; no retry-until-success or historical admission rewrite.
+All seed/accuracy/publication flags stay false. Next is a separate prospective
+recovery-admission contract binding original optimizer/checkpoint evidence and
+this explicitly named new-runtime refinement, not another native rerun or
+silent relaxation of historical runtime gates. Candidate/phylogeny/conversion/
+score dependencies remain held. The claim checklist links the bounded result.
+
+The previous and this turn made concrete progress; no verified live wait is
+needed now and no new native diagnostic remains running. Timing stays deferred
+without new host-contention probes/questions, DGX access or unrelated job/service
+action. Remaining controlled timing, QfO uncertainty/original TreeFam inputs,
+rights and final release requirements remain open. Full goal active.
+
 ## Helper-Complete Installation And Import Closure Passed (2026-09-30)
 
 Committed/pushed preparation/controller/tests/protocol at `f7d58fa9`, then

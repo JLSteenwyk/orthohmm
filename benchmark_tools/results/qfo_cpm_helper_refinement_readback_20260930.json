@@ -1,0 +1,149 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records_canonical_json_sha256": "3942e98bf236875954aa819f821818e50215de8550333ae7f582446c3cd5f70c",
+  "checked_records_reverified": 9036,
+  "child_report": {
+    "bytes": 2985,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/refinement_repeat.json",
+    "sha256": "139cd24ac5f416cd088f67da82d4e01014463dbbf339f70777b9fb29a18965f9"
+  },
+  "child_returncode": 0,
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/bin/python",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/run_cpm_checkpoint_recovery.py",
+    "--root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930",
+    "--mode",
+    "repeat-refinement"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1",
+  "environment_overrides": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONFAULTHANDLER": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONMALLOC": "debug",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1"
+  },
+  "gene_names": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_parameter_cpm_replay_v3/cpm_high/clustering/cluster_3_profile_expanded/payload/gene_names.txt",
+    "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+  },
+  "genes": 984137,
+  "groups": 390845,
+  "helper_environment": {
+    "bytes": 3142531,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/result.json",
+    "sha256": "e9415d210810f1cf490fd23ac4bc263f2c82737a70b8bd6c88b9e9b15e7ab106"
+  },
+  "limitations": [
+    "One successful unchanged-runner observation in a separately reconstructed helper-complete environment, not a repair or causal explanation.",
+    "Independent membership uses gene-to-index lookup plus a bytearray, without importing frozen/controller/scientific readers.",
+    "Original admission 22155 remains failed and the earlier missing-Biopython attempt remains preserved.",
+    "No optimizer, scoring, new accuracy, downstream admission or controlled timing performed.",
+    "Full input inventory remains in the hash-bound local controller report."
+  ],
+  "logs": [
+    {
+      "bytes": 462,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/runtime.stdout",
+      "sha256": "b29cb215b90fabc85e48896029a4c4e0d1f7b260bcd187089dcb34ebda5e697c"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/runtime.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "memberships": 984137,
+  "native_metadata_equal_except_output_path": true,
+  "native_partition_bytes_equal": true,
+  "native_reference": {
+    "bytes": 2995,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/refinement.json",
+    "sha256": "12c0f5066768b829504b1266069b69975acff9961c416a0df2b77e9699ef818a"
+  },
+  "partition": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/refinement_repeat.txt",
+    "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+  },
+  "publication_ready": false,
+  "refinement_attempts": 1,
+  "report": {
+    "bytes": 2378247,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_refinement_20260930/report.json",
+    "sha256": "196daa9e9f0bb3787b9a8a7ef7ef5827bdc74f73b1e2ab7ab760131989cd84cf"
+  },
+  "runtime_probe": {
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/bin/python",
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "numpy": "2.2.6",
+    "numpy_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/lib/python3.10/site-packages/numpy/__init__.py",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "seed_admitted": false,
+  "selected_directed_refinement_hits": 0,
+  "source_git_bindings": [
+    {
+      "bytes": 14211,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_private_runtime.py",
+      "sha256": "087718e795317dc021805d8f789aaf08592b490a5067f67b9768efb15d7c16b7"
+    },
+    {
+      "bytes": 10853,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_cpm_helper_environment.py",
+      "sha256": "60afe605b400527936497a407df6797425d1dbcaed4774b4e931fb653f3935ca"
+    },
+    {
+      "bytes": 4839,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_HELPER_ENVIRONMENT_PROTOCOL_20260930.md",
+      "sha256": "5ade9d46e0444720bd321abe96b2509983c2bea52a92ffe4a48b4c6cb5910da3"
+    },
+    {
+      "bytes": 6236,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_prepare_cpm_helper_environment.py",
+      "sha256": "55ca6b1028755f9d9fa8a27a0eeba0490af1e87910f466f3afc936e86aa3f367"
+    },
+    {
+      "bytes": 7964,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_partition_parser.py",
+      "sha256": "f92e7208de3f0da8b022a732d80f0853cec40ef5679ce1c09c08103f2c6be93e"
+    },
+    {
+      "bytes": 5251,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_failed_recovery_refinement.py",
+      "sha256": "e983ba406c5e1e09181bd8a6123db6908e8f7c6b85a06b40b1ca95e72b363661"
+    }
+  ],
+  "source_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+  "status": "helper_runtime_refinement_completed_independently_read_back_not_admitted",
+  "timed_out": false
+}
