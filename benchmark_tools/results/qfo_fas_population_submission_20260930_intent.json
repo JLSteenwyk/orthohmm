@@ -1,0 +1,35 @@
+{
+  "schema": "qfo_fas_population_single_attempt_v1",
+  "source_commit": "0591bcbe993130ad214ca21af34400b7ba6a5694",
+  "utc": "2026-09-30T17:59:46.669375+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--nodes=1",
+    "--ntasks=1",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_fas_population_%j.log",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_20260930.sh"
+  ],
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "sources": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_fas_population.py",
+      "bytes": 12111,
+      "sha256": "169775ed7cb63c9086104ea9f8d98c2ca3738181d0c6863237bee3acf3968c6a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_FAS_POPULATION_PROTOCOL_20260930.md",
+      "bytes": 5581,
+      "sha256": "46fb1b9a2ffee43c9e4ce4337947f8ce9e0e0fe62713762f514e99897dec1776"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_20260930.sh",
+      "bytes": 412,
+      "sha256": "6868fb20bf5fab423fbda25d2738865dad9944bdfd05f0cbb22d9f65d0776082"
+    }
+  ],
+  "automatic_retry": false,
+  "inference_rerun": false,
+  "scientific_timings_admitted": false
+}

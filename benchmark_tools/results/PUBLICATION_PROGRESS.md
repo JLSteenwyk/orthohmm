@@ -1,5 +1,31 @@
 # Publication Progress
 
+## FAS Population Recount Submitted; Complete Table Guard Added (2026-09-30)
+
+Pushed prospective helper/tests/protocol/script at `0591bcbe` before the single
+submission. Retained
+[intent](qfo_fas_population_submission_20260930_intent.json) and
+[response](qfo_fas_population_submission_20260930.json) bind source commit,
+source hashes and exact allocation command. Job **22382** is confirmed RUNNING
+on bizon with one CPU, 16 GiB, 90-minute limit, no requeue/restarts. Its log has
+passed 20 million lookup entries. This is current live state at this entry,
+not a completed recount, native inference or timing comparison.
+
+Added a complete-report table generator with 17 new tests. Together with the
+recount and related sample/attrition/lookup tests, **90 focused tests pass**.
+The generator checks all eight identities/order, native/sample success, count
+conservation, eligible counts against the frozen comparison, exact stored bound
+arithmetic and explicit false uncertainty/score-change/readiness flags. It
+rejects partial/selected rows, fabricated historical database identity or
+confidence-interval admission. No new scientific result is available yet.
+
+Continue polling only 22382 and preserve its terminal outcome. On completion,
+perform independent count/bound/source readback before rendering/publishing a
+table. Do not change running-source bindings, retry a discrepancy, infer host
+quietness, or label these hypothetical population bounds as native FAS or
+biological confidence intervals. Timing remains deferred and the full goal
+remains active.
+
 ## Prepare Complete Retained FAS Population Recount (2026-09-30)
 
 Previous turn made progress by inspecting three previously unchecked public
