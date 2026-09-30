@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Prepare A Native Collector Slowdown Control (2026-09-30)
+
+The previous turn made progress by pushing validated documentation corrections
+at `e718ace3`. Reread the full goal and latest ledger; current `squeue` is empty,
+which does not establish isolation. Timing remains deferred under the user's
+latest direction. No completed calibration, native inference, host contention
+probe, scheduler submission, DGX operation or unrelated-process action repeated.
+
+Reviewed public TreeFam retrieval history before searching specific table/mirror
+and method-supplement leads. Search results did not establish a new original
+download; did not repeat the inspected archives or infer family labels.
+The complete original TreeFam-A trees and mapping remain unavailable.
+
+Implemented a local prospective overhead-plan builder and tests. It derives
+27 pairs/54 fresh engineering tasks from the retained local 27-identity command
+plan, preserving scientific settings/input metadata and reversing only run
+paths. First two repeats counterbalance arm order; the third is prospectively
+seeded. No production identity/order, default or outcome changed. The planned
+contrast is periodic native-point collection versus a boundary control; common
+whole-host monitoring remains in both arms and its cost is not isolated.
+
+The [actual preparation record](THREADRIPPER_NATIVE_OVERHEAD_PREPARATION_20260930.md)
+and pinned generated plan retain exact sources and limitations. 54 focused tests
+pass. Independent recursive full-object readback matches every planned arm to
+its parent; all nine direct pins match and all future run/input roots are absent.
+No passing review or execution permit was created. Incomplete/failed outcomes
+must remain, with no partial-cell median, selective retry or timing correction.
+
+Next timing engineering work: implement and validate the boundary-only native
+control and independent pair audit, then complete the environmental handoff,
+source/runtime recipe and quiet-window gates. The plan is not empirical
+slowdown evidence, total observer-cost validation or readiness. Other QfO
+uncertainty/rights, complete release and controlled resources remain unresolved;
+full publication goal active.
+
 ## Reconcile Public-Facing Release And Benchmark Instructions (2026-09-30)
 
 The user cannot currently identify a quiet Threadripper window; confirmed
