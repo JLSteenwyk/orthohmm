@@ -1,0 +1,1327 @@
+{
+  "attempt_history": {
+    "bytes": 538,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_attempts_unrun_20260930.json",
+    "sha256": "021055e75df52a4fa8918b0a665a8b1a94619ee1b52e65229e4e07c379ed6343"
+  },
+  "comparison": {
+    "cells": [
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthofinder_3_1_5_full",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          2,
+          10,
+          18
+        ],
+        "proteomes": 4
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthofinder_3_1_5_full",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          4,
+          12,
+          23
+        ],
+        "proteomes": 8
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthofinder_3_1_5_full",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          6,
+          17,
+          25
+        ],
+        "proteomes": 12
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_high_sensitivity",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          0,
+          11,
+          19
+        ],
+        "proteomes": 4
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_high_sensitivity",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          5,
+          13,
+          21
+        ],
+        "proteomes": 8
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_high_sensitivity",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          7,
+          15,
+          26
+        ],
+        "proteomes": 12
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_satellite_v2",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          1,
+          9,
+          20
+        ],
+        "proteomes": 4
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_satellite_v2",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          3,
+          14,
+          22
+        ],
+        "proteomes": 8
+      },
+      {
+        "consistent_pairs": 0,
+        "median_signed_ratio": null,
+        "method": "orthohmm_satellite_v2",
+        "numerical_median_budget_passed": null,
+        "pair_indices": [
+          8,
+          16,
+          24
+        ],
+        "proteomes": 12
+      }
+    ],
+    "complete_panel_numerical_budget_passed": null,
+    "engineering_budget_passed": null,
+    "limitations": [
+      "Raw/output consistency and elapsed arithmetic do not replace full runtime/source/environment review.",
+      "Only complete three-pair medians; no selective exclusion, retries or overhead subtraction.",
+      "Signed ratios retain negative values; engineering thresholds are not confidence intervals.",
+      "Common host-monitor cost is not isolated; no causal slowdown, timing admission or execution approval."
+    ],
+    "pairs": [
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 0,
+        "proteomes": 4,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          0,
+          1
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 1,
+        "proteomes": 4,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          2,
+          3
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 2,
+        "proteomes": 4,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          4,
+          5
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 3,
+        "proteomes": 8,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          6,
+          7
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 4,
+        "proteomes": 8,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          8,
+          9
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 5,
+        "proteomes": 8,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          10,
+          11
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 6,
+        "proteomes": 12,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          12,
+          13
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 7,
+        "proteomes": 12,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          14,
+          15
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 8,
+        "proteomes": 12,
+        "repeat": 0,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          16,
+          17
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 9,
+        "proteomes": 4,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          18,
+          19
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 10,
+        "proteomes": 4,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          20,
+          21
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 11,
+        "proteomes": 4,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          22,
+          23
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 12,
+        "proteomes": 8,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          24,
+          25
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 13,
+        "proteomes": 8,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          26,
+          27
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 14,
+        "proteomes": 8,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          28,
+          29
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 15,
+        "proteomes": 12,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          30,
+          31
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 16,
+        "proteomes": 12,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          32,
+          33
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 17,
+        "proteomes": 12,
+        "repeat": 1,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          34,
+          35
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 18,
+        "proteomes": 4,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          36,
+          37
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 19,
+        "proteomes": 4,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          38,
+          39
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 20,
+        "proteomes": 4,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          40,
+          41
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 21,
+        "proteomes": 8,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          42,
+          43
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 22,
+        "proteomes": 8,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          44,
+          45
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "boundary",
+          "periodic"
+        ],
+        "pair": 23,
+        "proteomes": 8,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          46,
+          47
+        ]
+      },
+      {
+        "method": "orthohmm_satellite_v2",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 24,
+        "proteomes": 12,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          48,
+          49
+        ]
+      },
+      {
+        "method": "orthofinder_3_1_5_full",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 25,
+        "proteomes": 12,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          50,
+          51
+        ]
+      },
+      {
+        "method": "orthohmm_high_sensitivity",
+        "numerical_pair_budget_passed": null,
+        "order": [
+          "periodic",
+          "boundary"
+        ],
+        "pair": 26,
+        "proteomes": 12,
+        "repeat": 2,
+        "signed_ratio": null,
+        "status": "incomplete_or_invalid_pair",
+        "statuses": [
+          "unrun",
+          "unrun"
+        ],
+        "task_indices": [
+          52,
+          53
+        ]
+      }
+    ],
+    "panel_issues": [],
+    "publication_ready": false,
+    "raw_output_panel_complete": false,
+    "runtime_environment_admission_complete": false,
+    "scientific_timings_admitted": false,
+    "status": "native_point_incremental_elapsed_arithmetic"
+  },
+  "evidence": [
+    {
+      "bytes": 447512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_plan_20260930.json",
+      "sha256": "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182"
+    },
+    {
+      "bytes": 538,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_attempts_unrun_20260930.json",
+      "sha256": "021055e75df52a4fa8918b0a665a8b1a94619ee1b52e65229e4e07c379ed6343"
+    },
+    {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 4761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/THREADRIPPER_NATIVE_OVERHEAD_PROTOCOL_20260930.md",
+      "sha256": "a132652a641dc451ea7aac5ce2c4d62a2b9bd5e003e5f0dd1aa047d276440727"
+    },
+    {
+      "bytes": 9788,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_threadripper_overhead.py",
+      "sha256": "a35309850fb29b3f56d62dc1d541365cd5d0ca1794614fd56befa9f39c7ff347"
+    },
+    {
+      "bytes": 4925,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_scaling_inputs.py",
+      "sha256": "db8b826efdc24de7116dc4b41353e221f4949634d8b37a803f65f66a12ec38b4"
+    },
+    {
+      "bytes": 5588,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_threadripper_run.py",
+      "sha256": "85e06961dd4ad38b09b5968520aa203e4c1746ed4af8e41289706a11501df582"
+    },
+    {
+      "bytes": 4756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_scaling_run.py",
+      "sha256": "75c347d34f1a259a7039af1065b70aef6100175e08d36ed1441a86dd5f9214d1"
+    },
+    {
+      "bytes": 12030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_methods.py",
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    {
+      "bytes": 3883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "sha256": "730609276dbaba4671cce8e3caea6bb2dc535a263110febf08a3f4d0afd7d9c8"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    }
+  ],
+  "external_bindings": {
+    "launcher": null,
+    "scheduler_command": null,
+    "scheduler_cwd": null
+  },
+  "limitations": [
+    "Raw/output consistency and elapsed arithmetic do not replace full runtime/source/environment review.",
+    "Only complete three-pair medians; no selective exclusion, retries or overhead subtraction.",
+    "Signed ratios retain negative values; engineering thresholds are not confidence intervals.",
+    "Common host-monitor cost is not isolated; no causal slowdown, timing admission or execution approval."
+  ],
+  "plan": {
+    "bytes": 447512,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_plan_20260930.json",
+    "sha256": "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182"
+  },
+  "publication_ready": false,
+  "runs": [
+    {
+      "arm": "boundary",
+      "index": 0,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 0,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 1,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 0,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 2,
+      "method": "orthohmm_satellite_v2",
+      "pair": 1,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 3,
+      "method": "orthohmm_satellite_v2",
+      "pair": 1,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 4,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 2,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 5,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 2,
+      "proteomes": 4,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 6,
+      "method": "orthohmm_satellite_v2",
+      "pair": 3,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 7,
+      "method": "orthohmm_satellite_v2",
+      "pair": 3,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 8,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 4,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 9,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 4,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 10,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 5,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 11,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 5,
+      "proteomes": 8,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 12,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 6,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 13,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 6,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 14,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 7,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 15,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 7,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 16,
+      "method": "orthohmm_satellite_v2",
+      "pair": 8,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 17,
+      "method": "orthohmm_satellite_v2",
+      "pair": 8,
+      "proteomes": 12,
+      "repeat": 0,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 18,
+      "method": "orthohmm_satellite_v2",
+      "pair": 9,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 19,
+      "method": "orthohmm_satellite_v2",
+      "pair": 9,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 20,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 10,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 21,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 10,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 22,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 11,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 23,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 11,
+      "proteomes": 4,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 24,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 12,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 25,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 12,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 26,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 13,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 27,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 13,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 28,
+      "method": "orthohmm_satellite_v2",
+      "pair": 14,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 29,
+      "method": "orthohmm_satellite_v2",
+      "pair": 14,
+      "proteomes": 8,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 30,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 15,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 31,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 15,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 32,
+      "method": "orthohmm_satellite_v2",
+      "pair": 16,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 33,
+      "method": "orthohmm_satellite_v2",
+      "pair": 16,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 34,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 17,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 35,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 17,
+      "proteomes": 12,
+      "repeat": 1,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 36,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 18,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 37,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 18,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 38,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 19,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 39,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 19,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 40,
+      "method": "orthohmm_satellite_v2",
+      "pair": 20,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 41,
+      "method": "orthohmm_satellite_v2",
+      "pair": 20,
+      "proteomes": 4,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 42,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 21,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 43,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 21,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 44,
+      "method": "orthohmm_satellite_v2",
+      "pair": 22,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 45,
+      "method": "orthohmm_satellite_v2",
+      "pair": 22,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 46,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 23,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 47,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 23,
+      "proteomes": 8,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 48,
+      "method": "orthohmm_satellite_v2",
+      "pair": 24,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 49,
+      "method": "orthohmm_satellite_v2",
+      "pair": 24,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 50,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 25,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 51,
+      "method": "orthofinder_3_1_5_full",
+      "pair": 25,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "periodic",
+      "index": 52,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 26,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    },
+    {
+      "arm": "boundary",
+      "index": 53,
+      "method": "orthohmm_high_sensitivity",
+      "pair": 26,
+      "proteomes": 12,
+      "repeat": 2,
+      "scientific_timings_admitted": false,
+      "status": "unrun"
+    }
+  ],
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 19004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_threadripper_overhead.py",
+      "sha256": "1bfc572f2bac41853b4e2707911e5dcd6f6063efc573425bb98f750c3f390154"
+    }
+  ],
+  "status": "threadripper_overhead_raw_output_audit_pending_full_admission"
+}

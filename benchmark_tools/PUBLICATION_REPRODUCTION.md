@@ -175,6 +175,15 @@ whole-host monitoring stays in both arms and its cost is not isolated by this
 contrast. Do not replace these gates with the earlier
 fixed-duration accounting calibration.
 
+The [paired raw/output audit component](results/THREADRIPPER_PAIRED_NATIVE_AUDIT_20260930.md)
+now checks both collector arms, native formats/input universe and canonical
+same-method outputs, preserving failed/nonterminal/unrun states. Its
+[actual unrun inventory](results/THREADRIPPER_PAIRED_UNRUN_RESULT_20260930.md)
+retains all 54 engineering identities with no ratios or medians. Complete
+numerical arithmetic is not full engineering approval: runtime/environment,
+terminal native-step and execution bindings remain separate required gates.
+This audit does not launch work or replace a quiet-window review.
+
 ## Method And Results
 
 - [Corrected GO/EC scored-pair panel](results/QFO_SCORED_PAIR_PANEL_20260927.md)

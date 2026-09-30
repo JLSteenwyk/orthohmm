@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Audit The Actual Unrun Paired Plan (2026-09-30)
+
+Pushed source/test/component milestone `6abdb4dc`, then ran the new audit
+against the unchanged retained plan. The
+[actual inventory result](THREADRIPPER_PAIRED_UNRUN_RESULT_20260930.md)
+has all 54 tasks unrun, 27 pairs and nine cells. Native run/input paths were
+absent at initial/final checks, all ratios and medians are null, and both
+complete numerical and full engineering-budget decisions are null.
+All 12 direct evidence/source pins match. No fake runtime/baseline, launch,
+scheduler, environment or passing review binding was created.
+
+239 focused tests passed before the actual audit, including 53 new cases.
+An independent stdlib readback confirms all row/pair/cell counts and null
+decisions. No empirical paired inference or timing result follows from
+an empty inventory. Original plan/source pins and all previous native results
+are preserved. No completed diagnostic, native scientific run, host-load probe,
+DGX operation, unrelated-process action or quiet-window question repeated.
+
+This advances the raw/output component of the complete independent pair audit;
+it does not close full runtime/environment/execution or terminal native-step
+admission. Remaining work is their prospective integration and actual reviewed
+engineering workloads, followed by controlled production timing in a quiet
+local window. Common-monitor cost, QfO uncertainty/rights, independent-validation
+limits and final release remain open. The full publication goal stays active.
+
 ## Add Paired Raw Receipt And Native Output Checks (2026-09-30)
 
 The previous goal turn made progress by validating native fixture 22381 and
