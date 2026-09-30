@@ -63,6 +63,9 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
         assert sample_fn is collector.enriched_snapshot
         return SimpleNamespace(observe=lambda: None, summary=lambda *a: {})
     monkeypatch.setattr(collector, "HostMonitor", host_monitor)
+    monkeypatch.setattr(collector, "PeriodicHostObserver", lambda host, period:
+                        SimpleNamespace(start=lambda: None, close=lambda: None,
+                                        finish=lambda *args: host.summary(*args)))
     monkeypatch.setattr(collector, "read_job_memory", lambda *a: {})
     clock = collector.time.monotonic
     offset = [0.]

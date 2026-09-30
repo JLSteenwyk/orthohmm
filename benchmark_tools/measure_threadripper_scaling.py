@@ -20,6 +20,7 @@ from benchmark_tools.measure_native_root_context import read_point as read_root_
 from benchmark_tools.probe_host_counters import snapshot
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.command_host_monitor import HostMonitor
+from benchmark_tools.periodic_host_observer import PeriodicHostObserver
 from benchmark_tools.observe_threadripper_process_identity import enriched_snapshot
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 
@@ -109,6 +110,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 sys.executable, "-B", str(Path(__file__).resolve()), "--worker", str(directory)]
     with (directory / "step.log").open("x") as log, (directory / "host_processes.jsonl").open("x") as host_log:
         process = subprocess.Popen(launched, stdout=log, stderr=subprocess.STDOUT)
+        periodic_host = None
         try:
             ready = wait_file(directory / "ready.json")
             scope = scoped_path(ready["cgroup"], job_id)
@@ -116,7 +118,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             job_scope = next(parent for parent in scope.parents if parent.name == f"job_{job_id}")
             host = HostMonitor(host_log, str(job_scope), sample_fn=enriched_snapshot)
             host.observe()
-            next_host = time.monotonic() + host_interval_s
+            periodic_host = PeriodicHostObserver(host, host_interval_s)
             job_memory_before = read_job_memory(job_scope)
             save(directory / "job_memory_before.json", job_memory_before)
             # Inventory the host before starting the one-second point cadence.
@@ -125,6 +127,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 release_guard(directory)
                 checked_at = time.monotonic()
             points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
+            periodic_host.start()
             if release_guard is not None and time.monotonic() - checked_at > 1:
                 save(directory / "release_freshness_failed.json", dict(status="release_guard_stale"))
                 raise ValueError("Release guard stale after initial observation")
@@ -138,9 +141,6 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 if process.poll() is not None:
                     raise RuntimeError("Worker exited before final observation")
                 points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
-                if completed or time.monotonic() >= next_host:
-                    host.observe()
-                    next_host = time.monotonic() + host_interval_s
                 if completed:
                     break
                 if time.monotonic() - start > TIMEOUT + 30:
@@ -151,7 +151,7 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             save(directory / "native_completion.json", completion)
             if completion["errors"]:
                 raise ValueError("Native subtree completion unverified; retain failed attempt")
-            host_summary = host.summary(done["started_ns"] / 1e9, done["finished_ns"] / 1e9)
+            host_summary = periodic_host.finish(done["started_ns"] / 1e9, done["finished_ns"] / 1e9)
             save(directory / "host_process_summary.json", host_summary)
             memory = step_memory(interval_point(points[-1], job_id))
             save(directory / "step_memory.json", memory)
@@ -186,13 +186,17 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 save(directory / "root_context_report.json", context)
             return measured
         finally:
-            # A failed initial observation must not release an unobserved native command.
-            if not (directory / "go.json").exists():
-                save(directory / "go.json", {"abort": True})
-            if not (directory / "release.json").exists():
-                save(directory / "release.json", {"release": True})
-            if process.poll() is None:
-                process.wait(timeout=TIMEOUT + 90)
+            try:
+                if periodic_host is not None:
+                    periodic_host.close()
+            finally:
+                # A failed initial observation must not release an unobserved native command.
+                if not (directory / "go.json").exists():
+                    save(directory / "go.json", {"abort": True})
+                if not (directory / "release.json").exists():
+                    save(directory / "release.json", {"release": True})
+                if process.poll() is None:
+                    process.wait(timeout=TIMEOUT + 90)
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 29 September 2026, incomplete working package. This guide routes
+Status: 30 September 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -43,6 +43,7 @@ not inference reproduction, complete rights clearance or a public release.
 | [Reconstructed-base fixture](results/RECONSTRUCTED_BASE_FIXTURE_20260927.md) | Same fixture using a separately acquired base Python; no original Python/repository prefix in its execution trace | Cross-host restoration, OS isolation or complete security/rights clearance |
 | [Full integrated job 22337](results/INTEGRATED_FULL_OB_RESULT_22337.md) | Eight stages completed; separate admission reproduced all groups and 70 family scores | Controlled timing, independent accuracy or cross-host restoration |
 | [Reconstructed-base full job 22376](results/RECONSTRUCTED_FULL_OB_RESULT_22376.md) | Eight stages completed; independent admission reproduced all groups, 70 family scores and native pair/event/hierarchy files | Controlled timing, new biological validation or complete archive/OS restoration |
+| [Restored-assets full job 22377](results/RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md) | Restored local asset archive plus separately acquired inputs; all eight stages and independent scientific reproduction completed | Controlled timing, cross-host/OS restoration, independent accuracy or public archival deposition |
 
 The reconstructed-base full attempt has separate execution and scientific
 checkers, `benchmark_tools.verify_reconstructed_full_ob_execution` and
@@ -101,14 +102,23 @@ frozen full-data manifest. Neither component alone demonstrates inference.
 [Job 22377](results/restored_archive_ob_submission_20260929.json) joins those
 components under a [prospective protocol](results/RESTORED_ARCHIVE_EXECUTION_PROTOCOL_20260929.md),
 using the reconstructed base/installer and a fresh output directory. Terminal
-scientific validation is pending. Check the scheduler and newest
+scientific validation [passed](results/RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md),
+reproducing all groups, all family scores and four native TSVs exactly. Check the scheduler and newest
 [progress entries](results/PUBLICATION_PROGRESS.md); do not resubmit this job.
-Its installation audit is live evidence, not proof of terminal completion.
+Its original installation-only audit is historical evidence, now supplemented
+by terminal independent admission.
 
 A [deferred completion audit](results/PUBLICATION_COMPLETION_AUDITS_PROTOCOL_20260929.md)
 was [submitted as job 22379](results/publication_completion_audits_submission_20260929.json)
-to run both independent audits after jobs 22377 and 22378 become
-terminal. Check its submission and live scheduler state before using the manual
+to run both independent audits after jobs 22377 and 22378 became
+terminal. Its [result](results/publication_completion_audits_result_22379.json)
+retains a successful scientific stage and failed calibration stage. The overall
+audit job failed; this neither invalidates the scientific result nor admits
+the failed calibration. A [raw cadence diagnosis and prospective fix](results/THREADRIPPER_CALIBRATION_FAILURE_22378.md)
+lead to a separately frozen [new diagnostic](results/THREADRIPPER_ASYNC_CALIBRATION_PROTOCOL_20260930.md),
+not a retry of the old output. Historical source pins require their recorded
+revision or retained source copies, not the updated collector. Check current
+state before using the manual
 command below; do not run duplicate audits in parallel or overwrite outputs.
 Once the deferred job finishes, inspect its result instead of executing again.
 The following remains the manual command reference, requiring a trusted audit

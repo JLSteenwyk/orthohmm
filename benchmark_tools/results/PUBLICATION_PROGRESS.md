@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Admit Archive Reproduction And Diagnose Failed Calibration (2026-09-30)
+
+The preceding turns were blocked by the local command sandbox, not confirmed
+job failure. Local execution is restored. Reread the goal and current ledger;
+`sacct` confirms 22377 COMPLETED 0:0 in 2:58:20, 22378 FAILED 1:0 (native step
+COMPLETED 0:0) and 22379 FAILED 1:0. No inference or completed audit was restarted.
+
+The [22377 scientific stage](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md) passed
+independently: all 59,770 partitions, all 70 family scores and four native TSVs
+reproduce exactly against 22376, F1 74.10607351873405%. Saved its original
+result and the deferred job's overall failed result separately. Fresh readback
+checks three direct evidence pins, not every transitive installed/input file.
+
+The [22378 raw diagnosis](THREADRIPPER_CALIBRATION_FAILURE_22378.md) finds one
+3.6453-second final interval gap while a 3.5077-second periodic host scan blocks
+the collector. This overlaps native execution and violates the unchanged
+cadence limit. The missing lineage report causes the deferred calibration
+audit to fail. Both failures, raw points, process races and logs remain retained.
+Before editing, checked/copied all 823 historical deferred-protocol sources.
+
+Implemented one owned serialized observation thread in the local collector;
+initial/final bracketing and failure retention remain, while periodic host scans
+no longer occupy the native point loop. Startup precedes release; final summary
+follows a bounded join and post-command scan. 173 focused tests pass, including
+real blocked-scan concurrency, timeout, exceptions, startup failure, no catch-up
+bursts, collector gates, raw replay, lifecycle and scientific admission.
+
+A [new prospective diagnostic](THREADRIPPER_ASYNC_CALIBRATION_PROTOCOL_20260930.md)
+pins 827 current sources and unchanged workload/limits before one submission.
+The resource amendment changes only source bindings, not endpoints or planned
+identities. Historical DGX/scientific sources and unrelated work remain unchanged.
+No production timing, quiet-host approval or publication completion is claimed.
+
 ## Archive And Relocate The Retained Main-Text Review (2026-09-29)
 
 Previous conversational turn only checked the saved goal prompt; this turn

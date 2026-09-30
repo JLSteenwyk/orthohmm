@@ -1,0 +1,81 @@
+{
+  "accounting": {
+    "bytes": 466,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_completion_audits_20260929/parent_accounting.json",
+    "sha256": "5f3168b6d04420646a46ca5e914c5e502e62973156f4126cdd91012f1538a9b4"
+  },
+  "job_id": "22379",
+  "production_timing": false,
+  "protocol": {
+    "bytes": 201503,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_completion_audits_protocol_20260929.json",
+    "sha256": "8dd65820a2d9ca1a40dd8166391f0c8f3240358e0e76ac951657bc775c7c589e"
+  },
+  "publication_ready": false,
+  "source": {
+    "bytes": 6903,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_publication_completion_audits.py",
+    "sha256": "f006c9130faed1381d3e4f03e98861ebebd230f525786d593bd24ec27fe53c8b"
+  },
+  "stages": [
+    {
+      "command": [
+        "/home/bizon/anaconda3/bin/python",
+        "-B",
+        "-m",
+        "benchmark_tools.admit_restored_archive_ob",
+        "--directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/independent_admission"
+      ],
+      "log": {
+        "bytes": 50,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_completion_audits_20260929/restored_orthobench.log",
+        "sha256": "1391f5ce3edf51c745254bd1648715d4d49c78753c152b4731d1c605528a4527"
+      },
+      "name": "restored_orthobench",
+      "parent_scheduler_success": true,
+      "passed": true,
+      "reported_status": "restored_archive_orthobench_independently_audited",
+      "reproduction_equal": true,
+      "result": {
+        "bytes": 39853,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/independent_admission/result.json",
+        "sha256": "43e882d1795996c567b6348d33d547052b708910a61a8bd5cf7da0ce059ba4da"
+      },
+      "returncode": 0,
+      "semantic_check_passed": true,
+      "timed_out": false
+    },
+    {
+      "command": [
+        "/home/bizon/anaconda3/bin/python",
+        "-B",
+        "-m",
+        "benchmark_tools.audit_threadripper_observer",
+        "--directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_observer_calibration_20260929",
+        "--protocol",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_protocol_20260929.json",
+        "--protocol-sha256",
+        "ebe0aabcaf32111a6035aacd7a15d03a3197f47fca9a9f722ee0ad5be5c8fb7e",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_observer_calibration_20260929/independent_audit.json"
+      ],
+      "log": {
+        "bytes": 1884,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_completion_audits_20260929/observer_calibration.log",
+        "sha256": "8999828b034851a00d13bc0c41eeb44a04d829599b917ae3dce46c954e98f7d7"
+      },
+      "name": "observer_calibration",
+      "parent_scheduler_success": false,
+      "passed": false,
+      "result": null,
+      "returncode": 1,
+      "semantic_check_passed": false,
+      "timed_out": false
+    }
+  ],
+  "status": "completion_audits_failed"
+}
