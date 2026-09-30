@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Complete Lookup And First Two Recounts; New Historical Container Targets (2026-09-30)
+
+Previous turn made progress by implementing/pushing the FAS recount and table
+guard and submitting a real analysis as 22382. Reread the full goal/current
+ledger and confirmed that same job RUNNING; no restart or inference occurred.
+Started a bounded controller recorder for that one live job, retaining its
+eventual terminal state rather than inferring success from output existence.
+
+The full lookup pass now retains 59,962,787 entries, zero invalid-value entries,
+46,325,666 valid canonical pairs and 13,637,121 canonical overwrites. The first
+two method recounts match native logs and saved precomputed values/classifications
+exactly: high sensitivity has 9,032,719 eligible pairs and satellite_v2 has
+5,959,560. High sensitivity also has 3,101,557 alias pairs skipped by the native
+query/scorer pipeline. These are partial stable row outputs, not a complete
+eight-method report or population/sampling-uncertainty admission. Do not render
+a selected-method table or change running source/budget to obtain a pass.
+
+While the retained databases continue, examined three new public TreeFam
+container targets with the unchanged tested helper. The
+[historical context result](TREEFAM_QFO_DEVELOPER_CONTAINERS_20260930.md)
+checks 2020.2.1/silvia/test-sina, not the previous three release-tag layers.
+All ten acquired registry records, three blob descriptors and 214 tar headers
+independently match; no original NHX/mapping filename candidate appears.
+No image was executed, member extracted, original label inferred or person
+contacted. Six of 40 listed tags are now inspected, not every image/layer.
+
+Continue following 22382 to its authoritative terminal state and inspect all
+retained outcomes. Keep any failure/timeout and incomplete panel; no automatic
+retry or selected subset. The controlled timing window remains deferred on the
+Threadripper, and original TreeFam inputs, QfO uncertainty, runtime/environment
+admission and final publication release remain open. The full goal stays active.
+
 ## FAS Population Recount Submitted; Complete Table Guard Added (2026-09-30)
 
 Pushed prospective helper/tests/protocol/script at `0591bcbe` before the single

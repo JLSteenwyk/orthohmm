@@ -4,6 +4,14 @@
 
 ### September 30 Public Container Lead
 
+The [historical developer-tag follow-up](TREEFAM_QFO_DEVELOPER_CONTAINERS_20260930.md)
+adds `2020.2.1`, `silvia` and `test-sina`: three previously uninspected
+copied-context layers, 256,434 compressed bytes and 214 complete tar entries.
+All descriptors/inventories independently verify; none contains an NHX or
+mapping-file candidate. Across both checks, six of 40 listed tags were covered.
+The remaining 34 tags and other layers/namespaces are not certified absent.
+No original artifact or family-level uncertainty is enabled by these findings.
+
 The [selected QfO container inspection](TREEFAM_QFO_CONTAINER_INSPECTION_20260930.md)
 checked the copied project-context layers of Darwin tags `2020.1`, `2020.2`
 and `2022.1`. All three compressed layers match their published manifest size
