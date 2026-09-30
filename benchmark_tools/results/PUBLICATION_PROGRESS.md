@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Prepare One Native Boundary Integration Fixture (2026-09-30)
+
+The previous turn made progress by pushing the component milestone at
+`8ba6dbc4`. Reread the full goal/latest ledger; current `squeue` is empty.
+Do not infer host isolation or ask again for an unavailable quiet window.
+
+Added a bounded `/usr/bin/true` integration driver and prospective
+[fixture protocol](THREADRIPPER_BOUNDARY_FIXTURE_PROTOCOL_20260930.md), not an
+OrthoHMM/OrthoFinder workload, slowdown experiment or production scaling run.
+One local allocation is planned with no retry/requeue and a five-minute limit;
+the native collector settings remain frozen. No environmental guard or quiet
+review is fabricated. Complete helper inventory, interpreter invocation/binary,
+native binary, script, policy and retained controller provenance are pinned.
+
+226 focused tests pass, including 31 new driver tests, synthetic raw composition
+and retained failures with no retry. Bash syntax and the actual private-runtime
+module import/help check pass. Fixed a test-only recursive copy and preserved
+interpreter invocation aliases while hashing bytes before native submission.
+The generated manifest binds 832 helpers and has SHA256
+`ff84d9c583701f329ce9bdd10f67d301662a3525bd011c24a6c3989dcf3b5de6`.
+No historical plan, periodic collector, scientific default or score changed.
+
+This entry precedes submission; there is no actual native result yet. After the
+prospective source milestone is committed/pushed, submit once, retain the job
+ID and all outcomes, poll that job and perform fresh terminal/raw readback.
+Never promote an in-job component audit to terminal provenance or controlled
+timing. Environmental handoff, full paired workload audit, overhead/resource
+evidence, the quiet window and other publication requirements remain open.
+No DGX/service operation or interruption of unrelated work is authorized.
+
 ## Implement The Boundary Control And Raw Checker (2026-09-30)
 
 The previous turn pushed the pinned overhead plan at `5e7e4a79`. Continued with
