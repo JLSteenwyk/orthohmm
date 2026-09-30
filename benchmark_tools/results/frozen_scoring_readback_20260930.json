@@ -1,0 +1,69 @@
+{
+  "biological_validation": false,
+  "calibration_established": false,
+  "fixtures": {
+    "ACDE_E_with_1000_target_residues": 0.2623001450991833,
+    "ACDE_normalized_score": 6.0,
+    "ACDE_self_raw_score": 24,
+    "MSA_pseudocount_formula_matches": true,
+    "half_gap_column_mask": [
+      true,
+      false
+    ],
+    "nonpositive_E": 10000000000.0,
+    "transitions": [
+      0,
+      -12,
+      -12,
+      -1,
+      -3,
+      -1,
+      -3
+    ],
+    "unknown_query_emissions_zero": true
+  },
+  "frozen_method_changed": false,
+  "native_backend_validation": false,
+  "numpy_version": "2.2.6",
+  "publication_ready": false,
+  "revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "selected_python_definitions_without_jit": true,
+  "source": {
+    "orthohmm/accuracy.py": {
+      "bytes": 14046,
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    "orthohmm/orthohmm.py": {
+      "bytes": 30663,
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    "orthohmm/search/engine.py": {
+      "bytes": 21146,
+      "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+    },
+    "orthohmm/search/evalue.py": {
+      "bytes": 1865,
+      "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+    },
+    "orthohmm/search/matrices.py": {
+      "bytes": 27982,
+      "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+    },
+    "orthohmm/search/msa_profile.py": {
+      "bytes": 6728,
+      "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+    },
+    "orthohmm/search/profile.py": {
+      "bytes": 6143,
+      "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+    },
+    "orthohmm/search/profile_expansion.py": {
+      "bytes": 25077,
+      "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+    },
+    "orthohmm/search/viterbi.py": {
+      "bytes": 17693,
+      "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+    }
+  }
+}

@@ -54,6 +54,16 @@ constraint-guided membership decisions. Root HOGs and inferred ortholog pairs
 are separate output levels. This schematic describes the intended frozen
 workflow, not evidence of execution correctness or an HMM accuracy advantage.
 
+The [exact frozen search specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+defines integer match/insert/delete local Viterbi recurrences, uniform transition
+costs, banding, the approximate static-parameter E-value filter, one-time initial
+length normalization, MSA pseudocount emissions and strict profile acceptance.
+It distinguishes learned match emissions from fixed transitions and raw profile
+scores from initial length-normalized graph evidence. The implementation does
+not establish HMMER/phmmer equivalence or calibrated assignment confidence;
+the matrix-table gap-cost comment differs from the actual scorer costs.
+This documentation amendment changes no frozen method, scores or defaults.
+
 Comparators comprise OrthoFinder 3.1.5 full and its sequence-only MCL
 checkpoint, OrthoMCL 1.4, SonicParanoid 2.0.9, ProteinOrtho 6.3.6, and
 FastOMA 0.3.5. The checkpoint is a distinct output level, not another

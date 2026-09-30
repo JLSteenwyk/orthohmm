@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Exact Frozen Scoring Methods Added; Timing Still Deferred (2026-09-30)
+
+The user's quiet-window answer requires no immediate host reservation. Timing
+is needed only for controlled resource comparisons, not the current read-only
+scoring audit or manuscript work. Keep it deferred; do not repeat the question,
+probe unrelated contention, stop other work or return to the DGX.
+
+Added the [frozen numerical scoring specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+and linked it from both scientific drafts. It records local integer Viterbi
+recurrences, exact transition/emission costs, banding, approximate significance
+constants, initial normalization, MSA pseudocount construction and strict
+profile acceptance. It explicitly separates the implementation from exact
+HMMER/phmmer equivalence or assignment-probability claims and documents the
+gap-cost mismatch between the static significance table's comment and scorer.
+No algorithm, setting, historical score or scientific freeze was changed.
+
+The [small readback](frozen_scoring_readback_20260930.json) hashes nine files
+from the actual frozen Git objects and confirms tiny reference-Python fixtures;
+three focused tests pass. JIT decorators are stripped for those selected
+definitions. This is not native backend or biological/calibration admission.
+Existing review archives remain valid historical snapshots, not exports of
+the newly amended main text.
+
+The original 22382 FAS population job remains RUNNING, without restart or
+budget/source changes. Three methods have matched the native counts; the
+sequence-only database has passed 130 million DISTINCT query rows. Its final
+eligible count is not yet known from this pass. The single-job terminal
+recorder remains active; preserve any incomplete/failing outcome rather than
+rendering a selected-method table. The publication goal remains active.
+
 ## Complete Lookup And First Two Recounts; New Historical Container Targets (2026-09-30)
 
 Previous turn made progress by implementing/pushing the FAS recount and table

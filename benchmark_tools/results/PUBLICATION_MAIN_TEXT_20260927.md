@@ -37,6 +37,17 @@ The [method diagram](figures_publication_method_20260916/publication_method.pdf)
 distinguishes initial search, profile refinement, candidate expansion and
 phylogenetic inference.
 
+Initial search uses banded local maximum-path scoring with match, insert and
+delete states, integer BLOSUM62 emissions and fixed transition costs.
+Raw scores receive an approximate significance filter before geometric-mean
+length normalization. MSA-derived profiles learn match emissions, while
+retaining uniform transition costs; strict expansion requires both a member-score
+threshold and an initial sequence-supported anchor. This is not demonstrated
+HMMER/phmmer equivalence or calibrated assignment confidence. The
+[numerical specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+records the recurrence, constants, profile construction and acceptance rules
+at the full frozen source revision. No scoring/default change accompanies it.
+
 Comparators were OrthoFinder 3.1.5 [@orthofinder2026; @orthofinder2026correction],
 SonicParanoid 2.0.9 [@sonicparanoid2024], ProteinOrtho 6.3.6 [@proteinortho2023],
 FastOMA 0.3.5 [@fastoma2025] and OrthoMCL 1.4 [@orthomcl2003]. These method
