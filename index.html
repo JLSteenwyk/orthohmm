@@ -87,43 +87,33 @@
 <section id="performance">
 <h1>Performance<a class="headerlink" href="#performance" title="Link to this heading"></a></h1>
 <p>As of v0.2.0, OrthoHMM ships a built-in profile HMM + k-mer prefilter
-search engine that replaces the <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> subprocess. It scales to
-100 bacterial proteomes (~352K total proteins) on a single 32-core node:</p>
+search engine that replaces the <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> subprocess. A historical production
+CLI measurement used five bacterial proteomes (15,932 proteins) and a
+32-CPU budget:</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>proteomes</p></th>
 <th class="head"><p>wall time</p></th>
-<th class="head"><p>peak RAM</p></th>
+<th class="head"><p>peak process-tree RSS</p></th>
 <th class="head"><p>orthogroups</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>5</p></td>
-<td><p>13 s</p></td>
-<td><p>0.29 GB</p></td>
-<td><p>1,196</p></td>
-</tr>
-<tr class="row-odd"><td><p>20</p></td>
-<td><p>4 min</p></td>
-<td><p>0.44 GB</p></td>
-<td><p>8,680</p></td>
-</tr>
-<tr class="row-even"><td><p>60</p></td>
-<td><p>28 min</p></td>
-<td><p>1.65 GB</p></td>
-<td><p>19,029</p></td>
-</tr>
-<tr class="row-odd"><td><p>100</p></td>
-<td><p>77 min</p></td>
-<td><p>4.67 GB</p></td>
-<td><p>27,328</p></td>
+<td><p>7.0 s</p></td>
+<td><p>1.36 GiB</p></td>
+<td><p>12,995</p></td>
 </tr>
 </tbody>
 </table>
-<p>These are historical bacterial scaling measurements (RefSeq, 32 threads),
-not the dedicated-machine matched-resource publication panel. They do not
-establish comparative speed or memory advantages. See <a class="reference internal" href="performance_assessment/index.html#performance"><span class="std std-ref">Performance Assessment</span></a>
-for current benchmark scope and limitations.
+<p>Groups include singletons. The former 20-100 proteome table used a separate
+experimental driver and is not production-CLI scaling evidence. The
+<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/PERFORMANCE_OPTIMIZATION.md">historical optimization report</a>
+retains commands, checksums and rejected experiments. This local measurement
+does not establish comparative speed or memory advantages. The planned
+matched-resource panel on the local Threadripper is deferred until isolation
+and measurement gates are satisfied. See <a class="reference internal" href="performance_assessment/index.html#performance"><span class="std std-ref">Performance Assessment</span></a> for current
+benchmark scope and limitations.
 The legacy <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> path is still available via
 <code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> but is no longer the default.</p>
 <div class="line-block">
@@ -132,10 +122,20 @@ The legacy <code class="docutils literal notranslate"><span class="pre">phmmer</
 </section>
 <section id="quick-start">
 <h1>Quick Start<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h1>
+<p>This documentation describes the development checkout. As checked on
+30 September 2026, the latest <a class="reference external" href="https://pypi.org/project/orthohmm/">PyPI release</a>
+is 0.2.0 and requires MCL. Installing from PyPI does not provide this checkout’s
+high-sensitivity or phylogeny pipeline. Use an isolated source installation
+for development features; use the
+<a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/PUBLICATION_REPRODUCTION.md">publication reproduction guide</a>
+for exact
+benchmark reproduction rather than an unpinned checkout. The pip commands
+below install the published release.</p>
 <p>1. Install external dependencies</p>
-<p>The default OrthoHMM pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external binary. <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is optional
-and only required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
+<p>The development pipeline uses the built-in search engine and Leiden
+CPM clustering, so it has no required external bioinformatics binary.
+<a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is required for published v0.2.0; in the development checkout it is
+only required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
 <p><a class="reference external" href="http://hmmer.org/download.html">HMMER</a> is optional and only required if you opt into the legacy
 <code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline.</p>
 <div class="line-block">
@@ -155,9 +155,10 @@ orthohmm<span class="w"> </span>&lt;path_to_directory_of_FASTA_files&gt;
 <p><strong>1) Installation</strong></p>
 <p><strong>If you are having trouble installing OrthoHMM, please contact the lead developer, Jacob L. Steenwyk, via |contactSteenwyk|_ or |blueskySteenwyk|_ to get help.</strong></p>
 <p>1. Install external dependencies</p>
-<p>The default OrthoHMM pipeline uses the built-in search engine and Leiden
-CPM clustering, so it has no required external binary. <a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is optional
-and only required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
+<p>The development pipeline uses the built-in search engine and Leiden
+CPM clustering, so it has no required external bioinformatics binary.
+<a class="reference external" href="https://github.com/micans/mcl?tab=readme-ov-file#installation-and-mcl-versions">mcl</a> is required for published v0.2.0; in the development checkout it is
+only required if you opt into <code class="docutils literal notranslate"><span class="pre">--clustering</span> <span class="pre">mcl</span></code>.</p>
 <p><a class="reference external" href="http://hmmer.org/download.html">HMMER</a> is optional and only required if you opt into the legacy
 <code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> pipeline.</p>
 <p>2a. Install OrthoHMM from pip</p>
