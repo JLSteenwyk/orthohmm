@@ -1,5 +1,36 @@
 # Publication Progress
 
+## New Public TreeFam Context Targets Prepared (2026-09-30)
+
+Previous goal turn made progress: complete FAS audit/readback/table and manuscript
+updates were committed/pushed as `8fcadc13`. Reread the full objective/current
+ledger and verified 22383 terminal COMPLETED 0:0 through accounting. It is not
+live; no FAS lookup/join/inference or completed calibration was restarted.
+Reviewed remaining timing contracts: real policy, whole-run/environmental
+handoff, overhead and final source readiness still gate execution. No readiness
+approval, host contention probe, quiet-window question or unrelated job action
+was created; timing remains deferred on the Threadripper, with no DGX access.
+
+The source search has a safe next action: 34 uninspected names in the retained
+40-tag public Darwin listing. Added descriptor-verified cache reuse and explicit
+tag selection to the bounded inspection helper so shared old layers need not
+be downloaded again. Eighteen focused tests pass, including mocked registry
+flows and positive NHX detection, rate-limit stop without retry, corruption,
+unsafe tag/path and timeout controls. No archive is extracted or container run.
+
+The [prospective plan](TREEFAM_REMAINING_CONTEXT_PLAN_20260930.md) fixes all new
+targets, excludes the six already examined and preserves 32 MB/context and
+96 MB new-download limits. Commit/push these changes before one actual inspection,
+then independently verify acquired records/descriptors/full inventories.
+Missing/oversized/unrecognized contexts and rate limits remain unresolved,
+not negative source evidence. This modifies only the search helper, not native
+scientific code, scores or timing identities. Historical source pins remain
+historical; final timing recipes must bind actual stabilized source later.
+
+Original full TreeFam sources, appropriate other-QfO uncertainty, high-CPM
+admission, controlled timing and final release remain open. The goal is active,
+not publication-ready, complete or blocked.
+
 ## Complete Eight-Method FAS Audit And Manuscript Integration (2026-09-30)
 
 Previous goal work made progress by implementing/pushing the prospective
