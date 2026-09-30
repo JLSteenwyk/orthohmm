@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Conversation Checkpoint: No Quiet Window Needed Now (2026-09-30)
+
+Answered the latest user clarification: no immediate quiet-window reservation
+is needed. Controlled timing remains deferred; accuracy, reference and
+reproducibility work can continue. No further host coordination question,
+DGX access, contention measurement or interruption of unrelated work occurred.
+
+The numerical Methods specification/readback/tests are committed and pushed
+as `320a9f9f`. All scientific settings and retained scores are unchanged.
+At this checkpoint, `squeue` confirms original job **22382 RUNNING**, elapsed
+1:10:32, and its log has passed 185 million sequence-only DISTINCT query rows.
+The complete eight-method population report is still pending; no selected
+table or final population admission has been published.
+
+Ended only our own interactive scheduler recorder, PID 2688255, with SIGINT
+so this conversation need not wait for the audit's remaining allocation.
+Its exec session exits 130 with KeyboardInterrupt; partial poll files remain
+under `benchmarks/work/qfo_fas_population_terminal_22382`, without a completed
+capture receipt. This is an observer interruption, not the FAS job's exit or
+a scientific failure/success. The Slurm analysis remains running with its
+original source, one CPU/16 GiB/90-minute budget and no restart/requeue.
+
+On continuation, inspect that same job's authoritative terminal state and
+retained report/partials promptly, using a fresh observer directory if still
+live. Do not restart the analysis or relabel the interrupted recorder as
+complete. Preserve any timeout/discrepancy and perform full-panel readback
+before rendering. The publication goal remains active, not paused or complete.
+
 ## Exact Frozen Scoring Methods Added; Timing Still Deferred (2026-09-30)
 
 The user's quiet-window answer requires no immediate host reservation. Timing
