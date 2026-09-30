@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Explicit Recovery Admission Amendment Implemented (2026-09-30)
+
+Previous turn made progress: offline helper environment and one unchanged-runner
+reproduction were committed/pushed through `560a9503`; the refined partition and
+all 984,137 genes/390,845 groups matched retained output. Reread full objective,
+newest ledger, original recovery/admission and existing candidate handoff code.
+Current accounting confirms 22154 COMPLETED, 22155/22158 FAILED and 22377/22380/
+22383 COMPLETED, all with their recorded exits. No native job is restarted.
+
+The [new prospective admission amendment](QFO_CPM_HELPER_RECOVERY_ADMISSION_PROTOCOL_20260930.md)
+names the new runtime for independent refinement only, while retaining the
+original optimizer runtime and seed bytes. Its read-only gate reuses exact
+hash-bound original plain-data contracts without importing native dependencies,
+checks current success/failure identities and all transitive evidence, independently
+streams every graph edge/weight/constructor byte, validates completed native
+observations and all four partitions plus new repeated output. It writes a new
+unscored admission, never changes the old validator or marks 22155 successful.
+
+All 142 focused new/old admission, handoff and runtime-controller tests pass.
+Fixtures compare the new stdlib graph fingerprints to the existing NumPy reader
+and reject malformed arrays, invalid graph values, changed/partial native
+observations, wrong settings/commands/contracts and incomplete gene membership.
+Commit/push this code/tests/protocol before one actual bounded read-only audit.
+Seed admission is not downstream release or accuracy, and candidate runtime
+must stay matched to the other parameter arms under a separate explicit handoff.
+
+No scientific source/default/score/endpoint or timing identity changes. Controlled
+timing remains deferred without new contention probes/questions, DGX access or
+unrelated job/service actions. Original failures and missing original statistics
+remain preserved; QfO uncertainty/original TreeFam inputs, rights and final release
+also remain unfinished. Full objective stays active.
+
 ## Original Runner Reproduced High-CPM Refinement In New Runtime (2026-09-30)
 
 Committed/pushed successful preparation/readback at `23ee2ed2`, then executed
