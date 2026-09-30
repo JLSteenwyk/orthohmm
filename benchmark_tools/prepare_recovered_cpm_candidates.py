@@ -14,15 +14,24 @@ from benchmark_tools.recovered_cpm_seed_evidence import evidence
 BUILD_SHA = "b6f3325e2e6c33eecbf74256e2bd88d339015188e47c9296fedea1155029b978"
 
 
-def prepare(root):
+def prepare(root, *, recovery_readback=None, readback_sha=None, protocol_sha=None):
+    selection = (recovery_readback, readback_sha, protocol_sha)
+    amended = any(value is not None for value in selection)
+    if amended and any(value is None for value in selection):
+        raise ValueError("Require readback, readback SHA and candidate protocol SHA together")
     from benchmark_tools.prepare_qfo_candidate_neighborhood import require_environment
     require_environment(os.environ)
     if os.environ.get("SLURM_MEM_PER_NODE") != "65536":
         raise ValueError("Require 64-GiB recovery candidate allocation")
-    output = root / "benchmarks/results/qfo_cpm_recovered_candidates_v1"
+    output = root / ("benchmarks/results/qfo_cpm_helper_recovered_candidates_v1" if amended
+                     else "benchmarks/results/qfo_cpm_recovered_candidates_v1")
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
-    admitted = evidence(root)
+    if amended:
+        from benchmark_tools.helper_recovered_cpm_seed_evidence import evidence as amended_evidence
+        admitted = amended_evidence(root, *selection)
+    else:
+        admitted = evidence(root)
     launcher = root / "benchmarks/work/publication_qfo_replay_native_v1"
     from benchmark_tools.prepare_qfo_cpm_candidates import build, BASELINE_SHA
     from benchmark_tools.checked_replay_payload_worker import corrected_evidence
@@ -74,6 +83,7 @@ def prepare(root):
         runtime_before=runtime, numeric_checkpoint=numeric, job_id=os.environ["SLURM_JOB_ID"],
         executor_commit=subprocess.check_output(["git", "-C", str(Path(__file__).resolve().parent.parent),
                                                 "rev-parse", "HEAD"], text=True).strip(),
+        seed_handoff="explicit_helper_runtime_seed_amendment" if amended else "historical_admission_22155",
         accuracy_evaluated=False, publication_ready=False)
     save_status(output / "manifest.json", report)
     try:
@@ -87,7 +97,7 @@ def prepare(root):
         for item in [*records, *report["candidate_arm"]["output_files"]]:
             check(item)
         report.update(status="recovered_cpm_candidates_prepared_pending_admission", limitations=[
-            "Candidate logic and thresholds unchanged; seed is independently admitted checkpoint recovery.",
+            "Candidate logic, thresholds and runtime unchanged; only admitted checkpoint seed differs.",
             "Independent candidate admission and downstream phylogeny/scoring remain required.",
             "Shared-host incremental construction is not controlled end-to-end timing."])
     except BaseException as error:
@@ -101,5 +111,12 @@ def prepare(root):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
+    parser.add_argument("--helper-recovery-readback", type=Path)
+    parser.add_argument("--helper-recovery-readback-sha256")
+    parser.add_argument("--helper-candidate-protocol-sha256")
     args = parser.parse_args()
-    prepare(args.root.resolve())
+    selected = (args.helper_recovery_readback, args.helper_recovery_readback_sha256,
+                args.helper_candidate_protocol_sha256)
+    if any(value is not None for value in selected) and any(value is None for value in selected):
+        parser.error("all three helper-recovery options are required together")
+    prepare(args.root.resolve(), recovery_readback=selected[0], readback_sha=selected[1], protocol_sha=selected[2])

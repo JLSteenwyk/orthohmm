@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Explicit Recovered-Seed Candidate Handoff Implemented (2026-09-30)
+
+The previous turn made progress: the recovered seed and independent graph/
+membership admission were committed/pushed through `787e7b9a`. Reread the full
+objective and inspected original/new admission receipts and candidate controls.
+Current accounting confirms 22154 COMPLETED, 22081_1/22155 FAILED and 22156
+CANCELLED by 1000 with zero allocated CPUs and zero runtime. No old job restarts.
+
+The [prospective candidate amendment](QFO_CPM_HELPER_CANDIDATE_PROTOCOL_20260930.md)
+and separate stdlib evidence gate bind the new admission/readback bytes, five
+Git source bindings, full transitive records, memberships and live historical
+success/failure states. All three explicit CLI options are required together;
+the default original gate is unchanged byte-for-byte. The explicit path writes
+a distinct fresh output root. Candidate builder/settings/numeric hits/frozen
+scientific sources and historical runtime must match other arms before/after;
+the helper-complete environment is not silently substituted for candidate work.
+
+All 220 script-inclusive focused tests pass. Fixtures cover normal/explicit
+orchestration, partial selection, changed
+evidence, graph/coverage lineage, runtime/input changes and failure retention.
+The committed script requests one new 2-CPU/64-GiB/4-hour local job, no GPU or
+requeue, original Python and one-thread native libraries. Commit/push before
+one fresh candidate attempt. Construction
+success would remain pending independent candidate admission, not accuracy.
+
+No new search/optimizer/refinement, endpoint/default/timing change or label-based
+tuning. Preserve missing original statistics and all historical failures. Shared
+host construction is not controlled timing; no new contention probe/question or
+DGX action. Remaining candidate/downstream accuracy, controlled resources, QfO
+uncertainty/original TreeFam, rights and final release requirements remain open.
+Full goal remains active; this turn is progress, not a blocked audit.
+
 ## Amended Recovered High-CPM Seed Admitted, Still Unscored (2026-09-30)
 
 Committed/pushed the fixed read-only gate, 142 passing tests and prospective

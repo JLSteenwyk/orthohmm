@@ -10,7 +10,8 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 @pytest.mark.parametrize("problem", [None, "runtime_before", "runtime_after", "numeric_after",
                                     "build", "changed_input", "wrong_import", "short_universe"])
-def test_candidate_orchestration(tmp_path, monkeypatch, problem):
+@pytest.mark.parametrize("amended", [False, True])
+def test_candidate_orchestration(tmp_path, monkeypatch, problem, amended):
     from benchmark_tools import prepare_qfo_cpm_candidates as builder
     from benchmark_tools import checked_replay_payload_worker as corrected
     from benchmark_tools import cpm_replay_context as context
@@ -33,7 +34,20 @@ def test_candidate_orchestration(tmp_path, monkeypatch, problem):
     file("benchmarks/results/qfo_corrected_factorial_v1/manifest.json")
     file("benchmark_tools/results/publication_native_runtime_20260916.json")
     admission = dict(seed_partition=seed, checked_records=[seed])
-    monkeypatch.setattr(module, "evidence", lambda root: admission)
+    options = {}
+    if amended:
+        from benchmark_tools import helper_recovered_cpm_seed_evidence as handoff
+        def forbidden(root):
+            raise AssertionError("Explicit amendment cannot use historical gate")
+        monkeypatch.setattr(module, "evidence", forbidden)
+        readback = tmp_path / "readback.json"
+        def selected(root, path, digest, protocol):
+            assert (root, path, digest, protocol) == (tmp_path, readback, "fixed-readback", "fixed-protocol")
+            return admission
+        monkeypatch.setattr(handoff, "evidence", selected)
+        options = dict(recovery_readback=readback, readback_sha="fixed-readback", protocol_sha="fixed-protocol")
+    else:
+        monkeypatch.setattr(module, "evidence", lambda root: admission)
     plan = dict(runtime={"fixed": True}, checkpoint_manifest=checkpoint)
     monkeypatch.setattr(corrected, "corrected_evidence", lambda *a: (plan, plan_record, None, None))
     monkeypatch.setattr(context, "evidence", lambda *a: {"checked_records": []})
@@ -75,10 +89,11 @@ def test_candidate_orchestration(tmp_path, monkeypatch, problem):
             Path(seed["path"]).write_text("changed")
         return dict(candidate_arm={"output_files": [record(output)]}, content_audit={"fixture": True})
     monkeypatch.setattr(builder, "build", build)
-    manifest = tmp_path / "benchmarks/results/qfo_cpm_recovered_candidates_v1/manifest.json"
+    output = "qfo_cpm_helper_recovered_candidates_v1" if amended else "qfo_cpm_recovered_candidates_v1"
+    manifest = tmp_path / "benchmarks/results" / output / "manifest.json"
     if problem:
         with pytest.raises(ValueError):
-            module.prepare(tmp_path)
+            module.prepare(tmp_path, **options)
         if problem in ("runtime_before", "wrong_import", "short_universe"):
             assert not manifest.exists()
             assert not build_calls
@@ -88,11 +103,22 @@ def test_candidate_orchestration(tmp_path, monkeypatch, problem):
             assert report["accuracy_evaluated"] is False
             assert report["publication_ready"] is False
     else:
-        report = module.prepare(tmp_path)
+        report = module.prepare(tmp_path, **options)
         assert json.loads(manifest.read_text()) == report
         assert report["status"] == "recovered_cpm_candidates_prepared_pending_admission"
         assert report["recovery_admission"] == admission
         assert report["accuracy_evaluated"] is False
         assert report["publication_ready"] is False
+        assert report["seed_handoff"] == ("explicit_helper_runtime_seed_amendment" if amended else "historical_admission_22155")
         with pytest.raises(FileExistsError):
-            module.prepare(tmp_path)
+            module.prepare(tmp_path, **options)
+
+
+@pytest.mark.parametrize("mask", range(1, 7))
+def test_partial_amendment_rejected_before_environment_or_output(tmp_path, monkeypatch, mask):
+    monkeypatch.delenv("SLURM_JOB_ID", raising=False)
+    fields = ("recovery_readback", "readback_sha", "protocol_sha")
+    options = {field: "fixture" for index, field in enumerate(fields) if mask & (1 << index)}
+    with pytest.raises(ValueError, match="together"):
+        module.prepare(tmp_path, **options)
+    assert not (tmp_path / "benchmarks").exists()
