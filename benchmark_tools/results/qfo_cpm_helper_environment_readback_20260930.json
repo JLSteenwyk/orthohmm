@@ -1,0 +1,235 @@
+{
+  "accuracy_evaluated": false,
+  "base_python": {
+    "bytes": 17157264,
+    "path": "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python3.10",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "checked_records_reverified": 8797,
+  "gc_enabled": true,
+  "gc_thresholds": [
+    700,
+    10,
+    10
+  ],
+  "import_report": {
+    "bytes": 99778,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/imports.stdout",
+    "sha256": "b4cabe2c4d9547c3508db856ca836eb1556e153512a68563fabc21e5ff4e83ae"
+  },
+  "initial_readback_failure": {
+    "cause": "Independent readback excluded all RECORD suffixes, omitting twelve nested vendored payload records; installer audit correctly excludes only top-level generated RECORD.",
+    "changed_scientific_inputs": false,
+    "corrected_readback_rule": "Exclude RECORD only for two-part .dist-info/RECORD paths; compare nested records to wheel bytes.",
+    "environment_modified": false,
+    "error": "AssertionError at wheel inventory equality",
+    "returncode": 1
+  },
+  "installed_wheel_payload_files_compared": 3710,
+  "interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "limitations": [
+    "Observed worker imports and matched wheel site payloads only; optional branches and ELF/OS closure not established.",
+    "Generated RECORD/bytecode and relocated non-site wheel data excluded, as retained audit states.",
+    "Full preparation inventory remains in the hash-bound local result, not this compact receipt.",
+    "No refinement, optimizer, scoring or controlled resource comparison executed."
+  ],
+  "lock": {
+    "bytes": 1141,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/requirements.txt",
+    "sha256": "722665ee9df87693ea51b68fa8534e38b4f10169e6b48530e22ebc4128a389f5"
+  },
+  "logs": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3159,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/install.stdout",
+      "sha256": "c2d6dfbef39717299c376361b0318f7b8ab43eabb2284223f5f475cadf8c409e"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/install.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 30,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/dependencies.stdout",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/dependencies.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 99778,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/imports.stdout",
+      "sha256": "b4cabe2c4d9547c3508db856ca836eb1556e153512a68563fabc21e5ff4e83ae"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/imports.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "observed_module_files_bound": 584,
+  "preparation": {
+    "bytes": 3142531,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/result.json",
+    "sha256": "e9415d210810f1cf490fd23ac4bc263f2c82737a70b8bd6c88b9e9b15e7ab106"
+  },
+  "publication_ready": false,
+  "refinement_attempts": 0,
+  "seed_admitted": false,
+  "selected_packages": {
+    "biopython": "1.87",
+    "dendropy": "5.1.0",
+    "igraph": "1.0.0",
+    "leidenalg": "0.11.0",
+    "llvmlite": "0.49.0",
+    "numba": "0.67.0",
+    "numpy": "2.2.6",
+    "orthohmm": "0.5.0",
+    "pip": "26.2.1",
+    "python-igraph": "1.0.0",
+    "setuptools": "83.0.0",
+    "texttable": "1.7.0"
+  },
+  "source_git_bindings": [
+    {
+      "bytes": 10853,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_cpm_helper_environment.py",
+      "sha256": "60afe605b400527936497a407df6797425d1dbcaed4774b4e931fb653f3935ca"
+    },
+    {
+      "bytes": 14211,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_private_runtime.py",
+      "sha256": "087718e795317dc021805d8f789aaf08592b490a5067f67b9768efb15d7c16b7"
+    },
+    {
+      "bytes": 6236,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_prepare_cpm_helper_environment.py",
+      "sha256": "55ca6b1028755f9d9fa8a27a0eeba0490af1e87910f466f3afc936e86aa3f367"
+    },
+    {
+      "bytes": 4839,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_HELPER_ENVIRONMENT_PROTOCOL_20260930.md",
+      "sha256": "5ade9d46e0444720bd321abe96b2509983c2bea52a92ffe4a48b4c6cb5910da3"
+    },
+    {
+      "bytes": 5776,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovery_install.py",
+      "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+    },
+    {
+      "bytes": 8330,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_private_timing_environment.py",
+      "sha256": "48bf49e2ccdffd3cee9f0fd9079148de688335cfb951b35cf0968c56c938a13a"
+    },
+    {
+      "bytes": 7964,
+      "git_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_partition_parser.py",
+      "sha256": "f92e7208de3f0da8b022a732d80f0853cec40ef5679ce1c09c08103f2c6be93e"
+    }
+  ],
+  "source_revision": "f7d58fa94d78e931efb770507d8856b17ec0980e",
+  "status": "helper_environment_preparation_independently_read_back",
+  "vendored_records_compared": [
+    {
+      "bytes": 1072,
+      "member": "setuptools/_vendor/autocommand-2.2.2.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "2bee6072cbcec6390c57107c8dfcb0422918a98ecdb5a2cc362187f13d42e96f"
+    },
+    {
+      "bytes": 1056,
+      "member": "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "0f69db719b54220d6a4adff8bfb04ac98affea3dc8b54054a1a787a17567f4d1"
+    },
+    {
+      "bytes": 1868,
+      "member": "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "52a6b8ee0de15cf7fd99625f43b97cd2e3942ac86f16054ea90de48e66f29355"
+    },
+    {
+      "bytes": 1157,
+      "member": "setuptools/_vendor/jaraco.text-4.0.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "63b936c308d0fcbe1390e824567cc007536c32a849adb02278e95f1d4c736c31"
+    },
+    {
+      "bytes": 777,
+      "member": "setuptools/_vendor/jaraco_context-6.1.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "4599d876ceb42b7eef03aa39e235c4ebeab6aea2409dbe634496852393d1f837"
+    },
+    {
+      "bytes": 882,
+      "member": "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "baafd2d6d94c1bde453e4c805ac05511dc53986e0a63b02f674ef0f788bec146"
+    },
+    {
+      "bytes": 1095,
+      "member": "setuptools/_vendor/more_itertools-10.8.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "9ed1b134c0aa83722f36e99f3918aa9610ce3a0a514d793bbb74a368d441a01d"
+    },
+    {
+      "bytes": 2113,
+      "member": "setuptools/_vendor/packaging-26.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "f50503333aae9517807d2fb4d81fc27cb60aa644666f50176812626d6224ce5d"
+    },
+    {
+      "bytes": 1218,
+      "member": "setuptools/_vendor/platformdirs-4.4.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "3d0d2f1cc018593c4d8baa2395baf0b1c1c645bbd8c18cd064f49cb4e4c95ea0"
+    },
+    {
+      "bytes": 822,
+      "member": "setuptools/_vendor/tomli-2.4.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "225430ce95640e8d4fcdb93cdae2fc38d685aec016d0e293d5fb99a695886fed"
+    },
+    {
+      "bytes": 1734,
+      "member": "setuptools/_vendor/wheel-0.46.3.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "b0297c3ada17b8727e15ddd6d1e38c8a90a997f779fcf978996f6fec62ecb702"
+    },
+    {
+      "bytes": 1078,
+      "member": "setuptools/_vendor/zipp-3.23.0.dist-info/RECORD",
+      "package": "setuptools",
+      "sha256": "3bfab660a24704f84228e4bb1ce1f0e3fa9ff80e5c806352a626b2f460ead836"
+    }
+  ],
+  "venv_config": {
+    "bytes": 124,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/pyvenv.cfg",
+    "sha256": "3491a0965a1ca9f94d3cf0fc66e0550387946144ef108bad0a1286e7d571b779"
+  }
+}

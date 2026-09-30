@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Helper-Complete Installation And Import Closure Passed (2026-09-30)
+
+Committed/pushed preparation/controller/tests/protocol at `f7d58fa9`, then
+performed one offline installation into a new venv. All four stages completed
+with zero exits, no timeout: copied interpreter, twelve retained wheels,
+`pip check`, actual frozen worker imports. No existing environment was changed.
+The [result](QFO_CPM_HELPER_ENVIRONMENT_RESULT_20260930.md) and
+[independent receipt](qfo_cpm_helper_environment_readback_20260930.json)
+bind all 8,797 evidence records, eight logs, seven Git bindings, twelve-package
+inventory, 584 observed imported files and 3,710 installed wheel payload files.
+The probe observes only declared roots, enabled default GC and no system site.
+
+Retained a failed first independent check: its overbroad suffix-only RECORD
+exclusion skipped twelve nested vendored payload files, unlike the correct
+installer audit. Corrected only that independent rule; all nested records now
+compare exactly and are retained in the receipt. No native stage, installation
+or scientific input was repeated/changed. The 79 focused tests are reused.
+
+Commit/push this preparation before the one distinct original-runner control.
+No refinement/scoring has yet occurred in this environment, and import success
+does not repair 22155 or prove output/safety. Existing failures stay preserved;
+seed/accuracy/publication admission remain false. Timing stays deferred without
+new host probes/questions, DGX access or unrelated process/service actions.
+Full objective and remaining scientific/timing/release requirements stay active.
+
 ## Helper-Complete Private Arm Prepared For Installation (2026-09-30)
 
 Previous turn made progress: one private-runtime import failure was retained,
