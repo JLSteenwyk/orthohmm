@@ -1,0 +1,112 @@
+{
+  "status": "revised_review_archived_and_fresh_extraction_verified",
+  "utc": "2026-09-30T21:19:47.234417+00:00",
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/orthohmm-main-review-20260930-e23faf23.tar.gz",
+    "bytes": 2257011,
+    "sha256": "c84ba6bffcf317ef6912c15d743fd68b06a247f26144e0a6663f524c570a927c"
+  },
+  "index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/component/REVIEW_INDEX.json",
+    "bytes": 18187,
+    "sha256": "fda371438141ffc0d85c271e48457a3439375c904ac919451efaaa5df2b13c5e"
+  },
+  "original_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/component",
+    "--manifest-sha256",
+    "fda371438141ffc0d85c271e48457a3439375c904ac919451efaaa5df2b13c5e"
+  ],
+  "original_verification": {
+    "direct_targets": 28,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260930_v2.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260930_v2/document.pdf"
+    },
+    "files": 48,
+    "inference_reproduced": false,
+    "local_html_occurrences": 29,
+    "manifest": {
+      "bytes": 18187,
+      "sha256": "fda371438141ffc0d85c271e48457a3439375c904ac919451efaaa5df2b13c5e"
+    },
+    "page_count": 6,
+    "payload_bytes": 3892072,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "relocated_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/fresh-review-u78q14xt/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930_v2/fresh-review-u78q14xt/component",
+    "--manifest-sha256",
+    "fda371438141ffc0d85c271e48457a3439375c904ac919451efaaa5df2b13c5e"
+  ],
+  "fresh_extraction_verification": {
+    "direct_targets": 28,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260930_v2.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260930_v2/document.pdf"
+    },
+    "files": 48,
+    "inference_reproduced": false,
+    "local_html_occurrences": 29,
+    "manifest": {
+      "bytes": 18187,
+      "sha256": "fda371438141ffc0d85c271e48457a3439375c904ac919451efaaa5df2b13c5e"
+    },
+    "page_count": 6,
+    "payload_bytes": 3892072,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "relocation_equal": true,
+  "environment": {
+    "PATH": "/no-git",
+    "LC_ALL": "C",
+    "HOME": "/nonexistent"
+  },
+  "isolated_interpreter": {
+    "path": "/usr/bin/python3.12",
+    "bytes": 8019136,
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "review_revision": "e23faf23e63f40a0e060cf29cb1cca546da39234",
+  "workflow_revision": "e23faf23e63f40a0e060cf29cb1cca546da39234",
+  "render_time_ledger_revision": "706786b12039ac1c66ef23d3104f88190ec86a51",
+  "visual_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_visual_review_20260930_v2.json",
+    "bytes": 4213,
+    "sha256": "eace8ac762a35baa76eafbfc6d069f78a3a571e549feef0548da6f5b562c86f5"
+  },
+  "retained_selector_failure": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_selector_failure_20260930_v2.json",
+    "bytes": 1591,
+    "sha256": "8a03b07cf299456ee6be2d00cc894536160ace8b7b1bfc78d15fd7444f946a3a"
+  },
+  "safe_tar_members": 59,
+  "temporary_extraction_removed": true,
+  "public_deposition_executed": false,
+  "publication_ready": false,
+  "transitive_evidence_included": false,
+  "limitations": [
+    "Verification needs no checkout, Git, Pandoc, browser or scientific packages.",
+    "Only direct main-text assets are bundled; linked-document transitive evidence and raw datasets are excluded.",
+    "Separate manual visual-review and failed-selector receipts are retained in Git, not included in the direct-asset payload.",
+    "Archive integrity is not scientific validation, cross-host inference, redistribution clearance or public release.",
+    "Controlled timing and appropriate comparison uncertainty for several QfO endpoints remain unfinished."
+  ]
+}

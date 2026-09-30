@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Current Main Text Rendered, Reviewed And Archived (2026-09-30)
+
+Previous goal turn made progress by completing/pushing the 34 new public context
+inspections, independent readback and manuscript limitations as `706786b1`.
+Reread the full objective/current ledger. Accounting confirms archive reproduction
+22377, calibration 22380 and FAS completion 22383 terminal COMPLETED 0:0; none
+was restarted. Their retained outcomes remain separate from timing admission.
+
+The older review predates the scoring Methods specification and completed
+FAS/source-search prose. Rendered those actual new inputs once into v2 HTML
+and a six-page PDF, with 16 citation IDs, 28 direct targets and 29 occurrences,
+all tracked. Preserved a failed selector check: "scoring specification" was
+not literal source text. A separately retained corrected check uses "numerical
+specification" without changing or reprinting the manuscript/HTML/PDF. All
+four required selectors appear. All six page images were inspected; no clipping
+or overlapping text is observed and the PDF bounds check has zero violations.
+Figures remain linked, not embedded or newly visually revalidated.
+
+Committed review artifacts and both manual/failed-check receipts at `e23faf23`.
+The [current review result](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md)
+and [archive receipt](publication_review_component_20260930_v2.json) bind
+48 committed payload files (3,892,072 bytes), all direct targets, source revisions
+and the render-time ledger from `706786b1`. Older archives remain intact.
+Fresh safe extraction followed by `/usr/bin/python3 -I -B` verification with
+PATH `/no-git` yields exactly the original result; no checkout, Git, Pandoc,
+browser or scientific package is needed. Temporary extraction is removed.
+The claim checklist now links this current snapshot rather than the old review.
+
+This is a local main-text/direct-asset component, not transitive study evidence,
+an all-method executable release, cross-host inference, redistribution clearance
+or public deposition. Separate manual-review and failed-selector receipts are
+in Git, not this direct-asset payload. Exporter/runtime code is unchanged; no
+completed workflow test, scientific inference/score/plot/source search or native
+calibration was repeated simply on resumption.
+
+Controlled timing remains deferred with no fresh contention probe, quiet-window
+question, unrelated process/service action or DGX access. Scientific code/defaults,
+scores and 27 timing identities are unchanged. Remaining environmental/overhead/
+handoff/source readiness, other QfO uncertainty, original TreeFam sources,
+high-CPM admission, rights and final release remain open. Goal stays active;
+render/archive success is not publication readiness or completion.
+
 ## Remaining 34 QfO Context Inspections Completed (2026-09-30)
 
 Committed/pushed the search helper, 18 passing tests and fixed prospective plan
