@@ -1,0 +1,299 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22381",
+      "--format=JobID,State,ExitCode,Elapsed,AllocCPUS,ReqMem,NodeList",
+      "-P"
+    ],
+    "returncode": 0,
+    "rows": [
+      {
+        "AllocCPUS": "192",
+        "Elapsed": "00:00:09",
+        "ExitCode": "0:0",
+        "JobID": "22381",
+        "NodeList": "bizon",
+        "ReqMem": "128G",
+        "State": "COMPLETED"
+      },
+      {
+        "AllocCPUS": "192",
+        "Elapsed": "00:00:09",
+        "ExitCode": "0:0",
+        "JobID": "22381.batch",
+        "NodeList": "bizon",
+        "ReqMem": "",
+        "State": "COMPLETED"
+      },
+      {
+        "AllocCPUS": "64",
+        "Elapsed": "00:00:08",
+        "ExitCode": "0:0",
+        "JobID": "22381.0",
+        "NodeList": "bizon",
+        "ReqMem": "",
+        "State": "COMPLETED"
+      }
+    ],
+    "stderr": "",
+    "stdout": "JobID|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22381|COMPLETED|0:0|00:00:09|192|128G|bizon\n22381.batch|COMPLETED|0:0|00:00:09|192||bizon\n22381.0|COMPLETED|0:0|00:00:08|64||bizon\n"
+  },
+  "causal_slowdown_validated": false,
+  "controlled_workload_verified": false,
+  "environment_handoff_validated": false,
+  "evidence": [
+    {
+      "bytes": 1340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_submission_20260930.json",
+      "sha256": "64b5f41690af85e54b785e72222d5dc27a3c3ffc879800b806f9b0dd34521f85"
+    },
+    {
+      "bytes": 8645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_audit_22381.json",
+      "sha256": "edfb335e18fe4dc44ea0491170cd836bb96f5ca462ea2cbea5b2a5e316d76bd6"
+    },
+    {
+      "bytes": 8645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/component_audit.json",
+      "sha256": "edfb335e18fe4dc44ea0491170cd836bb96f5ca462ea2cbea5b2a5e316d76bd6"
+    },
+    {
+      "bytes": 633,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/terminal_capture/capture.json",
+      "sha256": "2c0dc7d4f3fcf70f3ea44468a9f871d90666c1ee6c7fbbe6429d5dbddd86e357"
+    },
+    {
+      "bytes": 1505,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/terminal_capture/scheduler_22381.txt",
+      "sha256": "6fee122dd1d897821f98199957cdf6a2dd27bf04ba8fbb6d1e8d2eedf1490fda"
+    },
+    {
+      "bytes": 965,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/started.json",
+      "sha256": "4f5825aacddbbb385fd432e75a2ffa6d9dcd9eeed90bf4cbfd519a68ece4b5d9"
+    },
+    {
+      "bytes": 319451,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/boundary_report.json",
+      "sha256": "3f32ce4e89ed8f681a9e65b75cef8c71f29866495bb329727ce5c1006399316d"
+    },
+    {
+      "bytes": 100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/command.json",
+      "sha256": "44e3a8e16e31657ff61b79018a8195d6b8e9d6ebcab03682cfb050eb45bf0daa"
+    },
+    {
+      "bytes": 44025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/done.json",
+      "sha256": "2b6aa438c107fed6a8c8ab7e341ed93262b417d5ce80528fac36e6d0ba5fd187"
+    },
+    {
+      "bytes": 316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/step_memory.json",
+      "sha256": "cb44c1b2663776467c19a8facdbd15edbf7ac93717dba9f61dcd4b2353b4aa9f"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/release.json",
+      "sha256": "97aa4094cf40964d4b06c69bc00faa9fcdf489fbc23874e89b1fe2ef1fead868"
+    },
+    {
+      "bytes": 4596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/ready.json",
+      "sha256": "dd9bde5c8d2188dfb3b8c199b7139e43320f2bc04a1757a58e0298eab627264a"
+    },
+    {
+      "bytes": 3650,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/native_completion.json",
+      "sha256": "1a9e3f492cd0bbe88a18f8f63c65f297fecbb173983d38b13b92f99848261003"
+    },
+    {
+      "bytes": 1367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/job_memory_before.json",
+      "sha256": "bab33dcf4ebfbcbbe906201d73a114bc3925fd8d848efd2dec085f734ce5ed98"
+    },
+    {
+      "bytes": 1369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/job_memory_after.json",
+      "sha256": "a5f5d5d4cb79548da5d6040edb559463e037a2e62aad78e3e8d203fec335e2de"
+    },
+    {
+      "bytes": 1621596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/host_processes.jsonl",
+      "sha256": "56301b7acb557cf389c2365c860850a4b1f0d840870c648a0e9ba4c588f2e768"
+    },
+    {
+      "bytes": 1267,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/host_process_summary.json",
+      "sha256": "9c8c5f2b40b3d89bae35b86c57d1e0a44ffdb89af85f4239200b49e77fbab1bc"
+    },
+    {
+      "bytes": 2085,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/report_finalization.json",
+      "sha256": "5324da3140aa59f8b9fd4ff8e8a2d839e38757e16e4ea0b26e1a7fa209a5b337"
+    },
+    {
+      "bytes": 182201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/point_000000.json",
+      "sha256": "5ac7cb480c379251701798f5cb19cedea392c5203ba1ea0b0471aba884b307f6"
+    },
+    {
+      "bytes": 182201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930/measurement/point_000001.json",
+      "sha256": "2947c8dfd48af14b1e79a35427ba49d85a8028ffb95fee74dd1ca912d4117a1b"
+    }
+  ],
+  "evidence_pins_rechecked": 21,
+  "host_process_observation": {
+    "command_bracketed_by_samples": true,
+    "command_launch_started_monotonic_s": 433810.056205267,
+    "command_wait_finished_monotonic_s": 433810.058822822,
+    "controlled_workload_verified": false,
+    "interval_counts": {
+      "competing_cpu_observed": 1
+    },
+    "limitations": [
+      "Snapshots miss short-lived processes and non-CPU contention.",
+      "Per-process CPU intervals are not simultaneous; no exclusivity or quiet-host certification.",
+      "Sampling overhead is included in measured resources; raw process inventory is local evidence."
+    ],
+    "maximum_between_snapshot_gap_s": 1.078458709991537,
+    "maximum_observed_foreign_average_cores": 90.58217851303327,
+    "observation_errors": 0,
+    "observer_pid": 2625751,
+    "observer_source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    },
+    "source": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/command_host_monitor.py",
+      "sha256": "3ef0f82132bad825509f8fade0e11c1b17d12be11d578327a7c593cbe3db30c9"
+    },
+    "status": "competing_cpu_observed",
+    "successful_snapshots": 2,
+    "threshold_average_cores": 0.25
+  },
+  "in_job_audit_identical": true,
+  "independent_audit": {
+    "bytes": 8645,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_audit_22381.json",
+    "sha256": "edfb335e18fe4dc44ea0491170cd836bb96f5ca462ea2cbea5b2a5e316d76bd6"
+  },
+  "job_id": 22381,
+  "limitations": [
+    "Only /usr/bin/true integration; not OrthoHMM/OrthoFinder inference or slowdown validation.",
+    "Synthetic tests are complemented by native receipts; terminal scheduler provenance remains separate.",
+    "No environmental release guard or prospective contamination review is tested.",
+    "Five-minute diagnostic allocation does not validate the full native timeout or reporting reserve.",
+    "CPU bracket includes wrapper work; step lifetime peak includes launcher; no subtraction or addition.",
+    "Interpreter/helper pins and retained controller provenance are not complete loaded-runtime closure.",
+    "Two boundary points do not prove continuous affinity, containment, isolation or total monitor cost."
+  ],
+  "native_cpu_bracket_s": 0.004793,
+  "native_exit_code": 0,
+  "native_outputs_validated": false,
+  "native_points": 2,
+  "native_step_peak_bytes": 12595200,
+  "native_timed_out": false,
+  "native_wall_s": 0.002617555,
+  "protocol": {
+    "bytes": 202777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_protocol_20260930.json",
+    "sha256": "ff84d9c583701f329ce9bdd10f67d301662a3525bd011c24a6c3989dcf3b5de6"
+  },
+  "publication_ready": false,
+  "quiet_window_established": false,
+  "raw_process_error_counts": [
+    1,
+    0
+  ],
+  "scheduler": {
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "2026-09-30T12:35:26",
+      "AllocNode:Sid": "bizon-link:2625734",
+      "AllocTRES": "cpu=192,mem=128G,node=1,billing=192",
+      "BatchFlag": "1",
+      "BatchHost": "bizon",
+      "CPUs/Task": "64",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_20260930.sh",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "2026-09-30T12:35:26",
+      "EndTime": "2026-09-30T12:35:35",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "22381",
+      "JobName": "oh-boundary-fixture",
+      "JobState": "COMPLETED",
+      "LastSchedEval": "2026-09-30T12:35:26",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "bizon",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "192",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "NO",
+      "Partition": "gpu",
+      "Priority": "1",
+      "QOS": "normal",
+      "Reason": "None",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:09",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "2026-09-30T12:35:26",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930_22381.log",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930_22381.log",
+      "SubmitTime": "2026-09-30T12:35:26",
+      "SuspendTime": "None",
+      "TimeLimit": "00:05:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=64",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "job_id": 22381,
+    "limitations": [
+      "Recorded controller fields only; caller must verify freshness and submission provenance.",
+      "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+      "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+    ],
+    "scheduler_exit_code": "0:0",
+    "scheduler_state": "COMPLETED",
+    "scheduler_terminal_verified": true,
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "status": "threadripper_controller_record_verified"
+  },
+  "scheduler_raw": "JobId=22381 JobName=oh-boundary-fixture UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=COMPLETED Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:09 TimeLimit=00:05:00 TimeMin=N/A SubmitTime=2026-09-30T12:35:26 EligibleTime=2026-09-30T12:35:26 AccrueTime=2026-09-30T12:35:26 StartTime=2026-09-30T12:35:26 EndTime=2026-09-30T12:35:35 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-30T12:35:26 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2625734 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=192 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=192,mem=128G,node=1,billing=192 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_20260930.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930_22381.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_fixture_20260930_22381.log TresPerTask=cpu=64 \n",
+  "scientific_timings_admitted": false,
+  "source_pin_count": 832,
+  "source_revision": "8da47d44be98f0bdbda495e1360572ef672e8fb1",
+  "status": "native_boundary_fixture_terminal_and_raw_replayed"
+}

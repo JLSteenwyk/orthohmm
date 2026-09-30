@@ -1,0 +1,23 @@
+{
+  "command": [
+    "git",
+    "cat-file",
+    "--batch"
+  ],
+  "helper_count": 832,
+  "job_id": 22381,
+  "limitations": [
+    "Exact committed source/recipe bytes, not loaded dependency or executable runtime closure."
+  ],
+  "protocol": {
+    "bytes": 202777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_protocol_20260930.json",
+    "sha256": "ff84d9c583701f329ce9bdd10f67d301662a3525bd011c24a6c3989dcf3b5de6"
+  },
+  "publication_ready": false,
+  "recipe_count": 3,
+  "scientific_timings_admitted": false,
+  "source_revision": "8da47d44be98f0bdbda495e1360572ef672e8fb1",
+  "status": "committed_boundary_fixture_sources_match_prospective_pins",
+  "verified_blobs": 835
+}

@@ -167,9 +167,12 @@ method/size/repeat identities. This is separate from the 27 production runs,
 not a slowdown result or execution permit. The
 [boundary collector and raw checker](results/THREADRIPPER_BOUNDARY_COMPONENT_20260930.md)
 now pass component tests, including synthetic collector-to-checker composition.
-Native integration, independent pair audit, complete environmental handoff and
-quiet window remain required. Common whole-host monitoring stays in both arms
-and its cost is not isolated by this contrast. Do not replace these gates with the earlier
+[Native boundary fixture 22381](results/THREADRIPPER_BOUNDARY_FIXTURE_RESULT_22381.md)
+also passed fresh raw and terminal readback for the pinned `/usr/bin/true`
+command. Independent pair audit, complete environmental handoff and a quiet
+window remain required; no paired engineering workload has run. Common
+whole-host monitoring stays in both arms and its cost is not isolated by this
+contrast. Do not replace these gates with the earlier
 fixed-duration accounting calibration.
 
 ## Method And Results

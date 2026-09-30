@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Native Boundary Integration Passed (2026-09-30)
+
+Committed and pushed prospective source/recipe `8da47d44` before submitting
+one bounded `/usr/bin/true` fixture. Job 22381 is authoritatively terminal:
+allocation/batch/native step COMPLETED 0:0, no restart/requeue. Nine-second
+allocation, eight-second native step. No completed scientific analysis or
+periodic calibration repeated, and no unrelated job/service was interrupted.
+
+The [actual result](THREADRIPPER_BOUNDARY_FIXTURE_RESULT_22381.md) retains
+submission intent/response, prospective bindings, fresh raw audit, terminal
+controller/accounting and independent committed-blob readback. The post-terminal
+raw audit exactly matches the in-job audit. All 21 direct evidence pins match;
+all 832 current helper pins match; all 835 prospective helper/recipe Git blobs
+match their pinned bytes/checksums. The native collector retains exactly two
+points, zero command exit and no timeout. All admission flags remain false.
+
+This closes the specified tiny native integration check, not full-method
+overhead or environmental handoff. The common host observer still reports
+competing work (90.5822 process-interval core equivalents) and raw read errors
+of one/zero across its two samples. Timing remains deferred under user direction;
+no further contention probe or quiet-window coordination request was made.
+The earlier 22380 and all failed original receipts remain intact.
+
+226 focused tests and the actual private-runtime import passed before submission.
+Next is complete independent pair auditing and prospective stable execution/
+environmental recipes, not replaying this successful fixture. The 54 engineering
+tasks and 27 production timing identities remain unstarted. Causal slowdown,
+common-monitor cost, a quiet local window, controlled resource evidence,
+unresolved QfO uncertainty/rights and final release/deposition remain open.
+The full publication goal stays active; no DGX access is required or authorized.
+
 ## Prepare One Native Boundary Integration Fixture (2026-09-30)
 
 The previous turn made progress by pushing the component milestone at

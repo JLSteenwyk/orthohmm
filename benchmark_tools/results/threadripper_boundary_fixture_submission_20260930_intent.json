@@ -1,0 +1,27 @@
+{
+  "automatic_retry": false,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_20260930.sh",
+    "--protocol",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_protocol_20260930.json",
+    "--protocol-sha256",
+    "ff84d9c583701f329ce9bdd10f67d301662a3525bd011c24a6c3989dcf3b5de6"
+  ],
+  "created_utc": "2026-09-30T16:35:26.214082+00:00",
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "production_timing": false,
+  "protocol": {
+    "bytes": 202777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_protocol_20260930.json",
+    "sha256": "ff84d9c583701f329ce9bdd10f67d301662a3525bd011c24a6c3989dcf3b5de6"
+  },
+  "script": {
+    "bytes": 809,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_boundary_fixture_20260930.sh",
+    "sha256": "17cc61c886b41a30b05030e74d57bfe42df765b103e772e01d906d02c41ffda7"
+  },
+  "source_revision": "8da47d44be98f0bdbda495e1360572ef672e8fb1",
+  "status": "submission_intent"
+}
