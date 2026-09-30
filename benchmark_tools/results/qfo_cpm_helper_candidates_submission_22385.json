@@ -1,0 +1,79 @@
+{
+  "accuracy_evaluated": false,
+  "candidate_admitted": false,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/results/qfo_cpm_helper_candidates_20260930.sh",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930",
+    "1a6dd9ef97a9b636842b1dbf579b9b8e30e90e47"
+  ],
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930",
+  "executor_commit": "1a6dd9ef97a9b636842b1dbf579b9b8e30e90e47",
+  "job_id": "22385",
+  "limitations": [
+    "This submission record is not completion, admission or accuracy.",
+    "One new attempt after deterministic import-order correction, not automatic retry of unchanged code.",
+    "Failure 22384 and original failed 22155/cancelled 22156 remain preserved.",
+    "Shared-host construction is not controlled comparative timing."
+  ],
+  "previous_failed_attempt": {
+    "bytes": 4786,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_helper_candidates_failure_22384.json",
+    "sha256": "4ef263a9b34308c2b4c0f73ff410f650342e4348b89a74bd52bf634ae239ea70"
+  },
+  "publication_ready": false,
+  "requested_resources": {
+    "cpus": 2,
+    "gpu": false,
+    "memory_gib": 64,
+    "node": "bizon",
+    "requeue": false,
+    "time_limit": "04:00:00"
+  },
+  "scheduler": "JobId=22385 JobName=qfo_cpm_helper_candidates\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:45 TimeLimit=04:00:00 TimeMin=N/A\n   SubmitTime=2026-09-30T19:34:09 EligibleTime=2026-09-30T19:34:09\n   AccrueTime=2026-09-30T19:34:09\n   StartTime=2026-09-30T19:34:09 EndTime=2026-09-30T23:34:09 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-30T19:34:09 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:3076756\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=2,mem=64G,node=1,billing=2\n   AllocTRES=cpu=2,mem=64G,node=1,billing=2\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/results/qfo_cpm_helper_candidates_20260930.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_22385.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_22385.log\n   TresPerTask=cpu=2\n   \n\n",
+  "seed_handoff": "explicit_helper_runtime_seed_amendment",
+  "seed_readback": {
+    "bytes": 5464,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_helper_recovery_admission_readback_20260930.json",
+    "sha256": "5fb31ea6cee69501d5ad1826789e9a178f230bb909012537e123d18d21d65850"
+  },
+  "source_records": [
+    {
+      "bytes": 1355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/results/qfo_cpm_helper_candidates_20260930.sh",
+      "sha256": "f633fdcda2df641c60d9e44ee9b879bc591aa0af9851615da541e67b2b74f537"
+    },
+    {
+      "bytes": 7385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/prepare_recovered_cpm_candidates.py",
+      "sha256": "194680edee971dcf0b811e0191a04cac82717b5eb9ce444f42b34cfda0d4949a"
+    },
+    {
+      "bytes": 7953,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/helper_recovered_cpm_seed_evidence.py",
+      "sha256": "01164124f97d06dc5752499c7616b05a94b6a0964c756e8cf6a09e84705c00c0"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/prepare_qfo_cpm_candidates.py",
+      "sha256": "b6f3325e2e6c33eecbf74256e2bd88d339015188e47c9296fedea1155029b978"
+    },
+    {
+      "bytes": 4097,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/recovered_cpm_seed_evidence.py",
+      "sha256": "7e47f010ffd6340f17074e66e0f29836d48f16db543c94d8f20b88279b6b1046"
+    },
+    {
+      "bytes": 4251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/results/QFO_CPM_HELPER_CANDIDATE_PROTOCOL_20260930.md",
+      "sha256": "f07242533466ac094bb2151117b1289169a05b6ecface05e4ff9655216ef8780"
+    },
+    {
+      "bytes": 3271,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_import_fixed_executor_20260930/benchmark_tools/results/QFO_CPM_HELPER_CANDIDATE_IMPORT_CORRECTION_20260930.md",
+      "sha256": "98c4dea5082a1e4db1e46fc2b13be02777506c86cf785f085e0ed1569170e4ef"
+    }
+  ],
+  "status": "source_corrected_explicit_helper_seed_candidate_job_submitted"
+}

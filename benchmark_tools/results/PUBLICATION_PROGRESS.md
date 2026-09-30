@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Corrected Candidate Construction Is Running As 22385 (2026-09-30)
+
+Committed/pushed preserved failure 22384, deterministic import-order correction,
+prospective justification and 222 passing focused tests at `1a6dd9ef`. Created
+a new clean detached executor at that revision and submitted exactly one new
+source-corrected attempt: 22385. Its [submission receipt](qfo_cpm_helper_candidates_submission_22385.json)
+binds the new source/script/protocol/correction identities and prior failure.
+No automatic retry, old dependency release or scientific settings change.
+
+Latest specific accounting: 22385 RUNNING at 1 minute 49 seconds, 2 CPUs/64 GiB
+on bizon. The fresh manifest in
+`benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/manifest.json`
+is `recovered_candidates_preparing`, job 22385, explicit amended seed handoff.
+Its preflight runtime exactly equals the corrected plan and both baseline
+runtime records. Numeric checkpoint: 984,137 genes, 78 species, 90,687,327 hits;
+seed SHA256 `f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811`.
+10,672 input records were checked before construction. Accuracy/publication
+flags remain false; no completion or candidate admission is inferred from a
+preparing manifest. Needed exec sessions are terminal; the scheduler job is live.
+
+Next recheck this exact job handle, not submit another. Preserve any failure;
+if completed, validate final status, input/runtime rechecks, candidate content
+and merge reconstruction under a separate hash-bound candidate admission.
+Reconstruct seed evidence using the verified candidate executor's gate when
+comparing its full report: gate `__file__` identities intentionally name that
+executor, not an arbitrary later admission checkout. Phylogeny/conversion/
+scoring require explicit recovery-aware downstream gates, not original failed
+22155/22082_1 contracts silently relaxed. Keep the prespecified parameter panel.
+
+Previous/current turns made concrete progress. 22384, 22155/22158 and original
+scientific failure remain failed; 22156 remains cancelled. No new search or
+optimizer/refinement, label-based tuning, default/endpoint/timing identity change.
+Construction is shared-host descriptive history, not controlled timing. Timing,
+QfO uncertainty/original TreeFam inputs, rights and final release requirements
+remain open; no new contention question/probe, DGX access or service action.
+The full objective remains active and incomplete.
+
 ## First Explicit Candidate Attempt Failed Before Construction (2026-09-30)
 
 Committed/pushed the explicit handoff, protocol, script and 220 tests at
