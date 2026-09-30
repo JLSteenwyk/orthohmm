@@ -1,0 +1,97 @@
+{
+  "archive": {
+    "bytes": 2134463,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930/orthohmm-main-review-20260930-4b7c3551.tar.gz",
+    "sha256": "e08112c571cec6ab54fea6a896fa11a8f3e32b020fe35d13b9f17929eb8ab902"
+  },
+  "environment": {
+    "PATH": "/no-git"
+  },
+  "fresh_extraction_verification": {
+    "direct_targets": 25,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260930_v1.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260930_v1/document.pdf"
+    },
+    "files": 45,
+    "inference_reproduced": false,
+    "local_html_occurrences": 26,
+    "manifest": {
+      "bytes": 17136,
+      "sha256": "64a9530090d4b016ef9d692d2ad96b80734a1c21885e6f8e78b7bdc245220ffd"
+    },
+    "page_count": 6,
+    "payload_bytes": 3722238,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "index": {
+    "bytes": 17136,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930/component/REVIEW_INDEX.json",
+    "sha256": "64a9530090d4b016ef9d692d2ad96b80734a1c21885e6f8e78b7bdc245220ffd"
+  },
+  "isolated_interpreter": {
+    "bytes": 8019136,
+    "path": "/usr/bin/python3.12",
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "limitations": [
+    "Fresh verification needs no checkout, Git, Pandoc, browser or scientific packages.",
+    "Only direct main-text assets are bundled; linked-document transitive evidence and raw datasets are excluded.",
+    "Archive integrity is not scientific validation, cross-host inference, redistribution clearance or public release.",
+    "The manuscript remains incomplete on controlled timing and several QfO uncertainty endpoints."
+  ],
+  "original_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260930/component",
+    "--manifest-sha256",
+    "64a9530090d4b016ef9d692d2ad96b80734a1c21885e6f8e78b7bdc245220ffd"
+  ],
+  "original_verification": {
+    "direct_targets": 25,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260930_v1.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260930_v1/document.pdf"
+    },
+    "files": 45,
+    "inference_reproduced": false,
+    "local_html_occurrences": 26,
+    "manifest": {
+      "bytes": 17136,
+      "sha256": "64a9530090d4b016ef9d692d2ad96b80734a1c21885e6f8e78b7bdc245220ffd"
+    },
+    "page_count": 6,
+    "payload_bytes": 3722238,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "public_deposition_executed": false,
+  "publication_ready": false,
+  "relocated_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-review-20260930-ezxfwr5p/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-review-20260930-ezxfwr5p/component",
+    "--manifest-sha256",
+    "64a9530090d4b016ef9d692d2ad96b80734a1c21885e6f8e78b7bdc245220ffd"
+  ],
+  "relocation_equal": true,
+  "render_time_ledger_revision": "52b93750b0596a1702763a6b6fb356b1953bc571",
+  "review_revision": "4b7c35519a19d3f23ec26d8570899b7203e5392e",
+  "status": "revised_review_archived_and_fresh_extraction_verified",
+  "temporary_extraction_removed": true,
+  "transitive_evidence_included": false,
+  "workflow_revision": "4b7c35519a19d3f23ec26d8570899b7203e5392e"
+}

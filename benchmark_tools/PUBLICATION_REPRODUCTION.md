@@ -24,6 +24,8 @@ panel, with exact integer-sum validation and native denominators preserved.
 Its table/PNG/PDF/SVG are generated without new native scoring or uncertainty.
 The revised main Markdown includes this figure and completed archive inference;
 older main-text render/review components remain explicitly historical versions.
+The [30 September rendered review](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20260930.md)
+now incorporates those additions; it is a working draft, not submission readiness.
 
 These are distinct executed paths, not interchangeable evidence:
 
@@ -34,10 +36,13 @@ offline verification after relocation. This supplies source, not excluded
 data, plans, figures, dependency binaries or an installed executable study.
 The [component guide](PUBLICATION_SOURCE_COMPONENT.md) explains the boundaries.
 
-The [main-text review component](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20260929.md)
-separately packages the exact main Markdown/HTML/PDF, bibliography, all 23
-direct local targets and retained render/print/PDF receipts. Its 43-file archive
-passed fresh-extraction verification with isolated Python and no Git on PATH.
+The [revised main-text review component](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20260930.md)
+separately packages the updated main Markdown/HTML/six-page PDF, bibliography,
+all 25 direct local targets and retained render/print/PDF receipts. All six
+PDF pages were inspected. Its 45-file archive passed fresh-extraction
+verification with isolated Python and no Git on PATH. The earlier
+[43-file review](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20260929.md)
+remains retained; the updated verifier also accepts its historical v1 index.
 Use its relative HTML entrypoint for direct navigation; linked-document
 transitive assets and raw inputs remain excluded. This is a review archive,
 not inference reproduction, complete rights clearance or a public release.

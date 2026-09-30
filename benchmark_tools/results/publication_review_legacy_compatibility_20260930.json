@@ -1,0 +1,56 @@
+{
+  "archive_extraction_repeated": false,
+  "command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260929/component",
+    "--manifest-sha256",
+    "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+  ],
+  "environment": {
+    "PATH": "/no-git"
+  },
+  "equal_to_original": true,
+  "historical_receipt": {
+    "bytes": 3504,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_review_component_20260929.json",
+    "sha256": "685719ffd63708719e08fd1ced45a1bedbd9b77f2eea160632761065d061a753"
+  },
+  "index": {
+    "bytes": 16130,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20260929/component/REVIEW_INDEX.json",
+    "sha256": "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+  },
+  "inference_repeated": false,
+  "publication_ready": false,
+  "source": {
+    "bytes": 15293,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_review.py",
+    "sha256": "f102f5f70e2c11d78e3ddfa0e0778c21372eebc4c889bb6347154ae341b31de2"
+  },
+  "status": "historical_v1_component_compatible_with_current_verifier",
+  "verification": {
+    "direct_targets": 23,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20260929_v3.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20260929_v3/document.pdf"
+    },
+    "files": 43,
+    "inference_reproduced": false,
+    "local_html_occurrences": 24,
+    "manifest": {
+      "bytes": 16130,
+      "sha256": "d6cc0e930c61ec9b97a8124284a9974ec9176e626474f78941b18dc1a346c7f5"
+    },
+    "page_count": 6,
+    "payload_bytes": 3581452,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  }
+}

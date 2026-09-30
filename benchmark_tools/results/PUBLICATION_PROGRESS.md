@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Review And Relocate The Revised Main Draft (2026-09-30)
+
+The previous goal turn made progress: it pushed the actual calibration receipts
+and complete GO/EC composition export. This turn reread the saved goal and
+current ledger. A [fresh read-only preflight](threadripper_preflight_20260930.json)
+found 80.99 competing CPU-core equivalents despite an empty Slurm queue,
+including IQ-TREE and Python work. One process-read error remains retained.
+No job/service was stopped and no timing or overhead experiment was launched.
+Requested quiet-window coordination; do not treat this dated sample as a
+whole-run certificate or silently change the frozen isolation policy.
+
+Rendered and printed the revised main text, retaining all stage receipts.
+The [current six-page review](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930.md)
+includes restored-assets inference 22377 and the GO/EC decomposition. All six
+pages were inspected; no clipping/overlap or bounds violation was found.
+All 16 citation IDs resolve in the selected bibliography and all 25 direct
+local targets exist. These are main-text/asset checks, not scientific validation
+of every linked item. Figures are linked, not embedded in the text PDF.
+
+Extended the committed-blob exporter with explicit render/print/PDF stage paths,
+a schema-v2 stage mapping and selected-chain checks. Historical default/schema
+v1 remain supported. 74 focused tests pass, including isolated no-Git readback
+after removal of a synthetic repository. Source/review milestone `4b7c3551`
+was pushed before the actual export. The real retained old v1 component also
+verifies with the new verifier, exactly matching its original result.
+
+The [actual new archive](publication_review_component_20260930.json) contains
+45 files, 3,722,238 payload bytes and all 25 direct targets (26 HTML occurrences).
+Fresh temporary extraction verified under isolated system Python with no Git
+on PATH; the complete result matches the original. Archive 2,134,463 bytes,
+SHA256 `e08112c571cec6ab54fea6a896fa11a8f3e32b020fe35d13b9f17929eb8ab902`.
+The render-time ledger is its real `52b93750` snapshot, not this later entry.
+The older 43-file archive and its receipts are unchanged. No native inference,
+scoring, plotting or completed calibration was repeated.
+
+This advances a current relocatable review, not a complete executable study,
+dependency/data-rights clearance, public release/deposition or controlled timing.
+Causal observer overhead, prospective environment policy, full native handoff,
+final execution source readiness and a quiet window remain. Several QfO paired
+uncertainty endpoints, source/rights limitations and final submission package
+also remain unresolved. Full publication goal active.
+
 ## Export GO/EC Composition And Reconcile Main Evidence (2026-09-30)
 
 The previous conversational turn updated the saved goal prompt for local
