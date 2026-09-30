@@ -1,5 +1,30 @@
 # Publication Progress
 
+## External Phylogeny Notice Export Prepared (2026-09-30)
+
+Previous turn made progress: six source-description corrections, executable-AST
+equivalence and 130 passing tests were committed/pushed as `57578905`.
+Reread the objective/current ledger and existing notice/acquisition/build records.
+Accounting confirms 22377, 22380 and 22383 still terminal COMPLETED 0:0;
+no native run, completed diagnostic or host-contention probe was repeated.
+
+MAFFT/FastTree sources were already acquired, but no relocatable notice-only
+selection existed for them. Added a receipt-pinned exporter for four exact
+texts: MAFFT core/extension notices, FastTree LICENSE and its separate leading
+source comment with byte interval. The existing source-notice verifier accepts
+this explicit scope without changing old payload/index bytes. It now rejects
+nonregular index/payload/extra entries before reads, including FIFOs.
+All 91 focused notice tests pass, including offline verification after deleting
+synthetic originals, corruption, unsafe members, changing evidence and symlinks.
+
+The [fixed export plan](PHYLOGENY_NOTICE_EXPORT_PLAN_20260930.md) binds retained
+receipts/artifacts and limits. Commit/push this validated milestone, then export
+once and independently verify a fresh copy. Notice packaging is not clearance,
+complete compiled/transitive attribution, corresponding-source fulfillment,
+or scientific/release admission. The existing acquisition/build receipts and
+frozen inference settings remain unchanged. Controlled timing stays deferred
+on the Threadripper, with no DGX use or unrelated process/service change.
+
 ## Current Search Descriptions Matched To Numerical Methods (2026-09-30)
 
 The preceding goal turn answered the user's timing clarification but changed

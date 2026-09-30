@@ -18,14 +18,22 @@ SELECTION = {
 }
 LLVM_SELECTION = {f"llvm-project-22.1.0.src/{component}/LICENSE.TXT":
                   f"{component}/LICENSE.TXT" for component in ("llvm", "lld", "compiler-rt")}
+PHYLOGENY_SELECTION = {
+    "mafft-7.525-with-extensions/license": "mafft/license",
+    "mafft-7.525-with-extensions/license.extensions": "mafft/license.extensions",
+    "FastTree/LICENSE": "fasttree/LICENSE",
+    "FastTree/FastTree.c:leading-comment": "fasttree/source-header.txt",
+}
 SCOPES = {"selected_bundled_source_notices": SELECTION,
-          "selected_llvm_source_notices": LLVM_SELECTION}
+          "selected_llvm_source_notices": LLVM_SELECTION,
+          "selected_external_phylogeny_notices": PHYLOGENY_SELECTION}
 
 
 def verify(directory, index_sha256):
     directory = Path(directory)
     index = directory / "SOURCE_NOTICE_INDEX.json"
-    if directory.is_symlink() or index.is_symlink() or record(index)["sha256"] != index_sha256:
+    if (directory.is_symlink() or not directory.is_dir() or index.is_symlink()
+            or not index.is_file() or record(index)["sha256"] != index_sha256):
         raise ValueError("Source notice index identity differs")
     data = json.loads(index.read_text())
     if (data.get("scope") not in SCOPES
@@ -39,13 +47,15 @@ def verify(directory, index_sha256):
             raise ValueError("Unexpected or duplicate source notice")
         seen.add(member)
         path = directory / relative
-        if any(p.is_symlink() for p in (path, path.parent)):
+        if not path.is_file() or any(p.is_symlink() for p in (path, path.parent)):
             raise ValueError("Indirect notice path")
         actual = record(path)
         if any(actual[k] != row[k] for k in ("bytes", "sha256")):
             raise ValueError("Source notice payload differs")
-    actual = {str(p.relative_to(directory)) for p in directory.rglob("*")
-              if p.is_file() or p.is_symlink()}
+    entries = list(directory.rglob("*"))
+    if any(not (p.is_file() or p.is_dir() or p.is_symlink()) for p in entries):
+        raise ValueError("Nonregular source notice export entry")
+    actual = {str(p.relative_to(directory)) for p in entries if p.is_file() or p.is_symlink()}
     if seen != set(selection) or actual != set(selection.values()) | {index.name}:
         raise ValueError("Incomplete or extra notice export")
     return dict(status="source_notice_supplement_verified", files=len(seen), index=record(index),
