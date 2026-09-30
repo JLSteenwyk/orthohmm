@@ -1,0 +1,135 @@
+{
+  "accuracy_evaluated": false,
+  "admission": {
+    "bytes": 2598575,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_recovery_admission_20260930/status.json",
+    "sha256": "35febb4c1810892988beb79bc8e6ac2c6a2e1ffbf1b111492ad1649f39e04997"
+  },
+  "checked_records_reverified": 9806,
+  "constructor_bytes_sha256": "93b36aad4916b85195c4dcc7dccb37d944cb911f7b051cf989ad1479729fded4",
+  "coverage": [
+    {
+      "genes": 984137,
+      "groups": 316603,
+      "label": "multipass"
+    },
+    {
+      "genes": 984137,
+      "groups": 393142,
+      "label": "multipass_refined"
+    },
+    {
+      "genes": 984137,
+      "groups": 314274,
+      "label": "strict_profiles"
+    },
+    {
+      "genes": 984137,
+      "groups": 390845,
+      "label": "strict_profiles_refined"
+    }
+  ],
+  "downstream_admitted": false,
+  "historical_failed_admission": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:01:47",
+    "ExitCode": "1:0",
+    "JobID": "22155",
+    "JobIDRaw": "22155",
+    "NodeList": "bizon",
+    "ReqMem": "64G",
+    "State": "FAILED"
+  },
+  "independent_graph_reader": "private NumPy mmap/column_stack/sort, no admission/controller/frozen helper imports",
+  "limitations": [
+    "Recovered seed admission with an explicit independent-refinement runtime amendment, not repaired historical failure.",
+    "The independent reader recomputes graph hashes through NumPy rather than the admission stdlib implementation.",
+    "Complete local checked-record inventory remains hash-bound in the retained admission report.",
+    "No candidate job, phylogeny, pair conversion, score or controlled timing performed."
+  ],
+  "native_attempts": 0,
+  "numpy_extension": {
+    "bytes": 10449209,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+    "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+  },
+  "numpy_module": {
+    "bytes": 22147,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_environment_20260930/venv/lib/python3.10/site-packages/numpy/__init__.py",
+    "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+  },
+  "numpy_version": "2.2.6",
+  "original_failure": {
+    "AllocCPUS": "32",
+    "Elapsed": "00:48:46",
+    "ExitCode": "1:0",
+    "JobID": "22081_1",
+    "JobIDRaw": "22081",
+    "NodeList": "bizon",
+    "ReqMem": "192G",
+    "State": "FAILED"
+  },
+  "publication_ready": false,
+  "saved_graph": {
+    "directed": false,
+    "edges": 25501180,
+    "ordered_endpoints_sha256": "f182b9e9b23f9158e1c36525bf546b58a4a0cf1f67928d3b829ab822833a0382",
+    "ordered_weights_sha256": "6c978e4b078c167c33eb9c69fbedef4e239475e2d93c517a296a964806bcb042",
+    "vertices": 984137
+  },
+  "scheduler": {
+    "AllocCPUS": "1",
+    "Elapsed": "00:11:38",
+    "ExitCode": "0:0",
+    "JobID": "22154",
+    "JobIDRaw": "22154",
+    "NodeList": "bizon",
+    "ReqMem": "64G",
+    "State": "COMPLETED"
+  },
+  "seed_admitted": true,
+  "seed_partition": {
+    "bytes": 23875927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/orthogroups_profiles_refined.txt",
+    "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+  },
+  "source_git_bindings": [
+    {
+      "bytes": 22486,
+      "git_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_helper_cpm_recovery.py",
+      "sha256": "6d01dec48b972f7c090ca2c72b08e90da315c5cde3aa9d6b56b92d00ed9485d4"
+    },
+    {
+      "bytes": 10364,
+      "git_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_admit_helper_cpm_recovery.py",
+      "sha256": "16589f4e069ea718da5a38bd905924d6592ed810f6d9e3a403c6805496597fdf"
+    },
+    {
+      "bytes": 6371,
+      "git_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_HELPER_RECOVERY_ADMISSION_PROTOCOL_20260930.md",
+      "sha256": "1b171292b7735e0935a83ed6b6502dc82a3fa75272fb2567358bc2b65e071571"
+    },
+    {
+      "bytes": 7964,
+      "git_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_partition_parser.py",
+      "sha256": "f92e7208de3f0da8b022a732d80f0853cec40ef5679ce1c09c08103f2c6be93e"
+    },
+    {
+      "bytes": 14211,
+      "git_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_private_runtime.py",
+      "sha256": "087718e795317dc021805d8f789aaf08592b490a5067f67b9768efb15d7c16b7"
+    }
+  ],
+  "source_revision": "c2a0137fa197449e7bc17e061bb54488012163b0",
+  "started": {
+    "bytes": 2593270,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_recovery_admission_20260930/started.json",
+    "sha256": "dbdbc1199b969c854465d8524787315b6cec2f1fe1dbd55045770f8d510480e2"
+  },
+  "status": "helper_runtime_recovered_seed_admission_independently_read_back_unscored"
+}

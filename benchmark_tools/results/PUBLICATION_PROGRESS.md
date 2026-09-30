@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Amended Recovered High-CPM Seed Admitted, Still Unscored (2026-09-30)
+
+Committed/pushed the fixed read-only gate, 142 passing tests and prospective
+amendment as `c2a0137f`, then completed one actual audit with zero native attempts.
+The [result](QFO_CPM_HELPER_RECOVERY_ADMISSION_RESULT_20260930.md) and
+[independent receipt](qfo_cpm_helper_recovery_admission_readback_20260930.json)
+bind 9,806 evidence records, current scheduler identities, original contracts/
+executor, completed native optimizer/constructor evidence and all partitions.
+The new stdlib reader independently streams every saved edge/weight; all
+canonical endpoint, raw constructor and weight hashes match native observations.
+
+The recovered seed is admitted under an explicit new-runtime independent-
+refinement amendment, not a rewrite of original admission 22155. Every stage
+contains all 984,137 genes once, with 316,603/393,142/314,274/390,845 groups.
+Independent private NumPy mmap/column-stack/sort readback reproduces all full
+graph fingerprints, checks memberships with a different set-based reader,
+five Git bindings and every bound file before/after. Original optimizer runtime
+and refined seed bytes are unchanged; original profile/timing statistics remain
+missing. All accuracy/downstream/publication flags remain false.
+
+22154 remains COMPLETED and 22081_1/22155 remain FAILED. A specific accounting
+check confirms old candidate 22156 CANCELLED; it was not resurrected. Original
+handoff still requires successful 22155 and therefore correctly rejects this
+new admission by default. Next implement an explicit hash-bound alternative
+handoff/entrypoint while keeping candidate logic/settings/runtime matched to
+the other parameter arms. Candidate construction/admission, phylogeny, pair
+conversion and scoring remain held. The claim checklist and extended draft
+now distinguish admitted recovered seed from missing high-CPM accuracy.
+
+The previous and current turns made concrete progress; no new native diagnostic
+or needed exec session remains running. Timing stays deferred without renewed
+contention probes/questions, DGX access or unrelated job/service actions. No
+default, endpoint, score or timing identity changed. Remaining timing, QfO
+uncertainty/original TreeFam inputs, rights and final release requirements remain
+unfinished. Earlier review/source archives remain historical snapshots, not
+silently refreshed to include this result. Full objective remains active.
+
 ## Explicit Recovery Admission Amendment Implemented (2026-09-30)
 
 Previous turn made progress: offline helper environment and one unchanged-runner
