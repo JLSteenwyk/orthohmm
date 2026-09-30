@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Add Paired Raw Receipt And Native Output Checks (2026-09-30)
+
+The previous goal turn made progress by validating native fixture 22381 and
+pushing its actual result at `3131dbc0`. Reread the full goal/latest ledger;
+current `squeue` is empty, not a quiet-host certificate. No scientific inference,
+completed fixture, host-load probe or DGX/service action was repeated.
+
+Implemented the [paired raw/output component](THREADRIPPER_PAIRED_NATIVE_AUDIT_20260930.md).
+It validates all 54 task identities against their parent, ordered one-attempt
+history, terminal controller bindings, actual raw collector arm/command, native
+formats/universe/mapping and canonical same-method outputs. It retains failures,
+nonterminal records and unrun tasks; stops progression after invalidity or output
+mismatch; checks native chronology/boot and stable evidence. No invocation can
+authorize execution or certify full runtime/environment provenance.
+
+239 focused tests pass, including 53 new tests. Budget arithmetic uses exact
+integer-clock fractions with unchanged <=0.10 pair and <=0.05 complete-cell
+median limits. Negative ratios remain; incomplete cells have no median, and
+no complete engineering passing decision is issued by this partial audit layer.
+Native raw composition is tested with synthetic fixtures, not new inference.
+
+After committing this component, audit the actual retained unrun plan without
+launching any task or fabricating a baseline/launch/environment review. Full
+runtime/environment/source and terminal native-step admission, complete
+engineering workloads, the quiet local window and controlled production timing
+remain. Other uncertainty/rights/release requirements are still open. The full
+publication goal remains active and no unrelated workload is interrupted.
+
 ## Native Boundary Integration Passed (2026-09-30)
 
 Committed and pushed prospective source/recipe `8da47d44` before submitting
