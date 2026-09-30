@@ -1,0 +1,103 @@
+{
+  "files": [
+    {
+      "byte_range": [
+        0,
+        1859
+      ],
+      "bytes": 1859,
+      "member": "FastTree/FastTree.c:leading-comment",
+      "relative_path": "fasttree/source-header.txt",
+      "sha256": "95190bf8bc6e2b77fe24a9e2fdd240d932c6c868551fb2fafe9b7e6eed1789a2",
+      "source_artifact": {
+        "bytes": 395674,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree.c",
+        "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c"
+      }
+    },
+    {
+      "bytes": 35149,
+      "member": "FastTree/LICENSE",
+      "relative_path": "fasttree/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "source_artifact": {
+        "bytes": 35149,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE"
+      }
+    },
+    {
+      "bytes": 1763,
+      "member": "mafft-7.525-with-extensions/license",
+      "relative_path": "mafft/license",
+      "sha256": "5b88dda69a361f21c241a3938c8b454d327c87137499acd963ffa13ad7f9426d",
+      "source_artifact": {
+        "bytes": 758305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/mafft-7.525-with-extensions-src.tgz",
+        "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+      }
+    },
+    {
+      "bytes": 4894,
+      "member": "mafft-7.525-with-extensions/license.extensions",
+      "relative_path": "mafft/license.extensions",
+      "sha256": "f861b725447e72813ea3e0fd26193f2d78110590131a241d9ac9e4100e45d8cb",
+      "source_artifact": {
+        "bytes": 758305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/mafft-7.525-with-extensions-src.tgz",
+        "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "bytes": 151319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_mafft_build_20260926.json",
+      "sha256": "4c4e92a29c1dc4b27e4b47f4010e9ea9648c17beb02b5a00995a59535394ac76"
+    },
+    {
+      "bytes": 4743,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_fasttree_acquisition_20260926.json",
+      "sha256": "c553af49b95153434c6c09e4bf4dd6bf215d472a593c6f13103394785570ec68"
+    },
+    {
+      "bytes": 758305,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/mafft-7.525-with-extensions-src.tgz",
+      "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+    },
+    {
+      "bytes": 35149,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE"
+    },
+    {
+      "bytes": 395674,
+      "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree.c",
+      "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431",
+      "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c"
+    }
+  ],
+  "limitations": [
+    "Four selected exact texts, not complete component attribution or legal clearance.",
+    "Extension notice is contextual; optional RNA engines were not built or verified here.",
+    "FastTree source-header declaration and separate license file are preserved without reinterpretation.",
+    "No source code, binary, source archive or dataset payload exported; no inference repeated.",
+    "Build/acquisition receipt bytes are pinned; native fixtures and signed provenance are not rerun.",
+    "Verify relocated output using the externally retained index digest, not source paths."
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "scope": "selected_external_phylogeny_notices",
+  "source": {
+    "bytes": 7102,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_phylogeny_notices.py",
+    "sha256": "d42e799d5ee9d10401f63191dba129c3b1f3d9be59eac13fc5df76deb6d477fe"
+  }
+}

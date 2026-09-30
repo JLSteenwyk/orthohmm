@@ -1,0 +1,50 @@
+{
+  "files_checked": 4,
+  "independent_algorithm": "stdlib tar member bytes and line-based leading-comment boundary; no exporter imports; both fresh outputs compared",
+  "index_bytes": 5489,
+  "index_sha256": "ee32a6494607d83caf184ada6a2e197dfbeded05e139887ad7049035c8bdd1a9",
+  "inputs_checked": 5,
+  "native_build_repeated": false,
+  "payload_bytes": 43665,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "scientific_inference_repeated": false,
+  "source_header_byte_range": [
+    0,
+    1859
+  ],
+  "source_revision": "f707e0417b1af8f7064e2fa4811910a99a25b4bd",
+  "sources": [
+    {
+      "bytes": 7102,
+      "path": "benchmark_tools/export_phylogeny_notices.py",
+      "sha256": "d42e799d5ee9d10401f63191dba129c3b1f3d9be59eac13fc5df76deb6d477fe"
+    },
+    {
+      "bytes": 10571,
+      "path": "benchmark_tools/export_bundled_source_notices.py",
+      "sha256": "2a14e85a30375c309c9f91db718ee0bf687b392849fc0bd75b2a819fe5d564b2"
+    },
+    {
+      "bytes": 4663,
+      "path": "benchmark_tools/acquire_publication_fasttree.py",
+      "sha256": "ef752f1191fb35b915748c0f4168a215b2676336a0ee1ad94d3c07ad1a3b55cf"
+    },
+    {
+      "bytes": 6887,
+      "path": "benchmark_tools/build_publication_mafft.py",
+      "sha256": "cb71d07b169dad17684adfd2e0b5915b2cb411ab2f3349beffa76e2f26142ef3"
+    },
+    {
+      "bytes": 7448,
+      "path": "benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6504,
+      "path": "benchmark_tools/run_publication_pipeline.py",
+      "sha256": "acab3b802b90ea2c4bc4ebc679f5f64431b1672ad85ca38f7ced212965edec87"
+    }
+  ],
+  "status": "external_phylogeny_notice_independent_readback_passed"
+}

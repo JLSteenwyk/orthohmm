@@ -1,5 +1,35 @@
 # Publication Progress
 
+## External Phylogeny Notices Exported And Independently Checked (2026-09-30)
+
+Committed/pushed the tested workflow and fixed plan as `f707e041`, then ran one
+notice-only export from retained pinned receipts/artifacts. No reacquisition,
+compiler/tool execution, scientific rerun, package upgrade or service change.
+Four selected notices total 43,665 bytes; the identical 5,489-byte index verifies
+in a fresh copied root. Verification reads only copied files under a literal
+original-artifact read guard, not an OS sandbox. Synthetic relocation tests
+also remove original inputs. Original sources/installs and earlier exports remain
+unchanged; raw notice texts stay local rather than being newly committed.
+
+The [actual result](PHYLOGENY_NOTICE_EXPORT_RESULT_20260930.md), export/fresh-copy
+receipts and byte-identical index are retained. Independent isolated stdlib
+readback checks five input identities, six helper Git bindings and both outputs
+against original archive/file bytes. A separate line-based boundary calculation
+confirms FastTree's exact 1,859-byte leading comment. Source declaration and
+separate LICENSE remain distinct. All 91 focused notice tests passed before
+execution; diff validation and new link/receipt/source checks pass afterward.
+No unchanged scientific test, completed inference or expensive diagnostic is
+repeated on resumption. Rights and claim indexes link the new bounded result.
+
+This closes selected external-tool notice packaging, not compatibility,
+corresponding-source fulfillment, complete compiled/OS/transitive attribution
+or legal clearance. Existing review/source archives retain historical bytes;
+they are not silently regenerated or represented as this new export. Final
+recipes must bind actual source bytes. Timing remains deferred with no renewed
+contention probe/quiet-window question, DGX access or unrelated process action.
+Remaining timing gates, high-CPM admission, TreeFam/other-QfO uncertainty,
+rights/final versioned release/public deposition remain open. Full goal active.
+
 ## External Phylogeny Notice Export Prepared (2026-09-30)
 
 Previous turn made progress: six source-description corrections, executable-AST

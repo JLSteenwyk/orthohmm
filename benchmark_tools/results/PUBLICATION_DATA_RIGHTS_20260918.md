@@ -113,6 +113,16 @@ Both are retained locally. This closes that source/notice identification gap,
 not a complete source-build, transitive dependency or redistribution audit.
 No upstream source/binary files were newly committed.
 
+The [external phylogeny notice export](PHYLOGENY_NOTICE_EXPORT_RESULT_20260930.md)
+now packages four selected exact texts into a local relocatable supplement.
+Its 43,665-byte payload and identical index verify after copying; independent
+readback confirms original archive/file bytes, the exact FastTree header interval
+and committed helper identities. FastTree's source declaration and separate
+license file are preserved separately. The MAFFT extension notice is contextual,
+not evidence that optional RNA engines were built. No binary/source-code
+payload was exported, and corresponding-source, compatibility, compiled/OS
+attribution and redistribution clearance remain unresolved.
+
 The September 23 [YGOB reacquisition receipt](ygob_source_reacquisition_20260923.json)
 and [executable instructions](../PUBLICATION_REPRODUCTION.md#native-execution-and-timing)
 now support source-acquisition-only packaging for its three frozen inputs.
