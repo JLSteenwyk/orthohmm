@@ -1,0 +1,101 @@
+{
+  "status": "revised_main_text_visually_reviewed",
+  "render": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260930_v2.json",
+    "bytes": 16041,
+    "sha256": "888575ae18bd38bbbfaf9f65622802bf70a41822405e21aa9ea1974aa9533654"
+  },
+  "printed": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_print_20260930_v2/print.json",
+    "bytes": 10960,
+    "sha256": "6eb16efa369883e49b4dbe344bf59dfd288ab43997cd7104c9ba01aec000674d"
+  },
+  "pdf_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/report.json",
+    "bytes": 12031,
+    "sha256": "5a63e3b849a9ae200b75b6a19ca64774f647308285cd50bf4868633e423402f2"
+  },
+  "main_and_render_time_ledger_revision": "706786b12039ac1c66ef23d3104f88190ec86a51",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "images": [
+    {
+      "bytes": 192515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_001.png",
+      "sha256": "0d4af7cbac4b152762b4c42681b77a383898c788abb5e406f16b092096d02e5b"
+    },
+    {
+      "bytes": 263322,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_002.png",
+      "sha256": "d8ce7b4cad5aa78ea8941e63efa09dfdfa3f089f4a192629ee1270e7da03b857"
+    },
+    {
+      "bytes": 242511,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_003.png",
+      "sha256": "86f1602f18179b2ec4a669de4c1e1704f2dea30d5fa1f8c251616cf4b6339594"
+    },
+    {
+      "bytes": 257620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_004.png",
+      "sha256": "daa4c4439a176fcfc9cebc6a853352f7ea0f945fffd84ca4541dd29860f00af3"
+    },
+    {
+      "bytes": 240337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_005.png",
+      "sha256": "75c5b2eb2420c690522347e796b8e074ef411457b6eb0fdff9b487c04e4b4f72"
+    },
+    {
+      "bytes": 308476,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20260930_v2b/page_006.png",
+      "sha256": "e301a9b53b3147facfc1d21ce50ba28590ab8772689853b5d18b5a541fab0a74"
+    }
+  ],
+  "bounds_violations": [],
+  "local_occurrences": 29,
+  "unique_targets": 28,
+  "citation_ids": [
+    "busco2021",
+    "cpm2011",
+    "diamond2021",
+    "fastoma2025",
+    "kuzmin2020",
+    "leiden2019",
+    "orthobench2020",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "qfo2016",
+    "qfo2020",
+    "sonicparanoid2024",
+    "ygob2005"
+  ],
+  "retained_selector_failure": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_selector_failure_20260930_v2.json",
+    "bytes": 1591,
+    "sha256": "8a03b07cf299456ee6be2d00cc894536160ace8b7b1bfc78d15fd7444f946a3a"
+  },
+  "visual_checks": [
+    "All six pages inspected",
+    "Exact scoring Methods and new FAS/TreeFam limitations present",
+    "Body text, headings and bibliography readable",
+    "No observed clipping or overlapping text"
+  ],
+  "linked_asset_visual_review_repeated": false,
+  "linked_figures_embedded": false,
+  "scientific_scores_recomputed": false,
+  "publication_ready": false,
+  "limitations": [
+    "Manual review covers main-text pages, not validation of linked figures or scientific claims.",
+    "Render-time ledger is the recorded historical revision, not later status updates.",
+    "The failed selector check is retained; correction uses the literal source phrase without reprinting or changing scientific text.",
+    "Browser/profile and complete tool runtime closure are not archived by this review."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "manuscript_pdf_selector_failure_v1",
+  "status": "failed_required_text_selector",
+  "utc": "2026-09-30T21:14:55.332624+00:00",
+  "pdf": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_print_20260930_v2/document.pdf",
+    "bytes": 124470,
+    "sha256": "427ddd55bfa91e039565a1841d5d7163fa319b69cb7c22547ab85fe3757e610d"
+  },
+  "render": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20260930_v2.json",
+    "bytes": 16041,
+    "sha256": "888575ae18bd38bbbfaf9f65622802bf70a41822405e21aa9ea1974aa9533654"
+  },
+  "review_source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_manuscript_pdf.py",
+    "bytes": 3453,
+    "sha256": "7903282cb3d6b0413e19c1dd9a73633e2b1e49e466b6406cebead070c183458b"
+  },
+  "selectors": [
+    "OrthoHMM",
+    "eligible-population audit",
+    "40 listed tag names",
+    "scoring specification"
+  ],
+  "observed_matches": {
+    "OrthoHMM": [
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "eligible-population audit": [
+      5
+    ],
+    "40 listed tag names": [
+      4
+    ],
+    "scoring specification": []
+  },
+  "missing_selectors": [
+    "scoring specification"
+  ],
+  "review_output_produced": false,
+  "source_literal": "numerical specification",
+  "correction": "Use exact manuscript wording in a separately retained review attempt; do not change HTML/PDF/manuscript",
+  "scientific_scores_changed": false,
+  "publication_ready": false
+}
