@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Timing Deferred; New Public Container Lead Checked (2026-09-30)
+
+The user cannot identify a quiet local window and asks whether it is needed
+now. Confirmed it is needed only for defensible controlled resource comparisons,
+not for continuing accuracy/reference/reproducibility work. Timing remains
+deferred on the Threadripper; no dedicated replacement host or DGX is required.
+Do not repeat quiet-window questions or interrupt unrelated analyses. Current
+`squeue` is empty, which is not a host-isolation certificate. No new scientific
+inference, completed native diagnostic or contention probe was run.
+
+Checked a genuinely new TreeFam source hypothesis: original inputs accidentally
+included in QfO public container build contexts. The
+[actual bounded inspection](TREEFAM_QFO_CONTAINER_INSPECTION_20260930.md)
+retains registry metadata, descriptor verification and full inventories for
+Darwin tags 2020.1/2020.2/2022.1. Their three copied-context layers contain
+245,321 compressed bytes and 211 tar entries, with no original NHX/mapping
+filename candidates or TreeFam-named files. No containers were executed or
+members extracted; no original reference substituted and no one contacted.
+The remaining tags/layers/registries are not certified absent.
+
+Four focused helper tests pass. Independent readback verifies all 11 downloaded
+registry evidence files, selected blob descriptor hashes/sizes and all three
+complete inventory counts. An initial readback suffix-filter typo failed before
+receipt creation; corrected readback passed without reacquisition. The portable
+receipt is pinned in the inspection note; raw blobs stay local and uncommitted.
+All historical timing/source receipts and scientific scores remain unchanged.
+
+Original full TreeFam trees and mapping, appropriate QfO uncertainty, runtime/
+environment admission, empirical observer overhead, controlled timing and final
+publication release remain open. The full publication goal remains active;
+timing unavailability does not stop meaningful non-timing work or justify a
+publication-readiness declaration.
+
 ## Audit The Actual Unrun Paired Plan (2026-09-30)
 
 Pushed source/test/component milestone `6abdb4dc`, then ran the new audit

@@ -2,6 +2,22 @@
 
 ## Outcome
 
+### September 30 Public Container Lead
+
+The [selected QfO container inspection](TREEFAM_QFO_CONTAINER_INSPECTION_20260930.md)
+checked the copied project-context layers of Darwin tags `2020.1`, `2020.2`
+and `2022.1`. All three compressed layers match their published manifest size
+and SHA256: 245,321 downloaded bytes and 211 inventoried tar entries total.
+No TreeFam-named file, NHX file or `treefam2reference.txt` appears in these
+selected layers. Their reference-generator source is not the missing input.
+
+The portable receipt retains full inventories and raw public registry metadata.
+No container was executed, no archive member extracted, no original family
+labels inferred and no person contacted. Other layers, the remaining 37 listed
+tags, other image namespaces and deleted images were not exhaustively searched.
+This finding does not establish global unavailability or resolve TreeFam
+family-level uncertainty. Do not repeat these three layers without a new lead.
+
 ### September 29 Public Search And GREAT Lead
 
 Exact mapping-name and release-7/archive searches still did not identify a

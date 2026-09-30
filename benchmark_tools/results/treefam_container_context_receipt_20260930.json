@@ -1,0 +1,3594 @@
+{
+  "schema": "qfo-selected-darwin-context-inspection-v1",
+  "readback_utc": "2026-09-30T17:34:13.427153+00:00",
+  "executed_source": {
+    "path": "benchmark_tools/inspect_qfo_darwin_images.py",
+    "bytes": 8000,
+    "digest": "sha256:10e733cee7db9c21a28226cb9cee5b387c888e3e1d84eb292ee5bcd768d239a8"
+  },
+  "report": {
+    "repository": "qfobenchmark/darwin",
+    "selected_tags": [
+      "2020.1",
+      "2020.2",
+      "2022.1"
+    ],
+    "listed_tag_count": 40,
+    "tag_list_complete": true,
+    "downloaded_unique_context_bytes": 245321,
+    "results": [
+      {
+        "tag": "2020.1",
+        "layers": [
+          {
+            "index": 7,
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 71609,
+            "digest": "sha256:f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90",
+            "created_by": "/bin/sh -c #(nop) COPY dir:b9f3e896e5cf7f7ebc030a29bb9b9f6d7978a06fe4748b902aaf4d323e8bba36 in /benchmark ",
+            "member_count": 64,
+            "original_filename_candidates": [],
+            "treefam_named_members": []
+          }
+        ],
+        "tag_manifest_digest": "sha256:4ba5644caa0436f9c7a725e8600a055bd1305018ddfaadb8243cf9e67b19cd5f",
+        "image_manifest_digest": "sha256:4ba5644caa0436f9c7a725e8600a055bd1305018ddfaadb8243cf9e67b19cd5f",
+        "total_image_layers": 8,
+        "status": "selected_context_layers_inspected"
+      },
+      {
+        "tag": "2020.2",
+        "layers": [
+          {
+            "index": 5,
+            "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+            "size": 87520,
+            "digest": "sha256:e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7",
+            "created_by": "COPY . /benchmark # buildkit",
+            "member_count": 72,
+            "original_filename_candidates": [],
+            "treefam_named_members": []
+          }
+        ],
+        "tag_manifest_digest": "sha256:6f9c5db4cac1076407379024a2405b7b12efe896051fc7ea60dfb03d5fc843f1",
+        "image_manifest_digest": "sha256:6f9c5db4cac1076407379024a2405b7b12efe896051fc7ea60dfb03d5fc843f1",
+        "total_image_layers": 6,
+        "status": "selected_context_layers_inspected"
+      },
+      {
+        "tag": "2022.1",
+        "layers": [
+          {
+            "index": 5,
+            "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+            "digest": "sha256:5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e",
+            "size": 86192,
+            "created_by": "COPY . /benchmark # buildkit",
+            "member_count": 75,
+            "original_filename_candidates": [],
+            "treefam_named_members": []
+          }
+        ],
+        "tag_manifest_digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f",
+        "image_manifest_digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+        "total_image_layers": 6,
+        "status": "selected_context_layers_inspected"
+      }
+    ],
+    "evidence": [
+      {
+        "file": "tags.json",
+        "url": "https://hub.docker.com/v2/repositories/qfobenchmark/darwin/tags?page_size=100",
+        "bytes": 40718,
+        "digest": "sha256:69e1950a3a4497dbb7d7e3f7255d3234162a376cd1338a4635f2cdf48140485b",
+        "http_status": 200
+      },
+      {
+        "file": "2020.1.manifest.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/manifests/2020.1",
+        "bytes": 1989,
+        "digest": "sha256:4ba5644caa0436f9c7a725e8600a055bd1305018ddfaadb8243cf9e67b19cd5f",
+        "http_status": 200
+      },
+      {
+        "file": "2020.1.config.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:708edf61bf2f7c25a6ee50b61d5ebc4245bc5cecef1f0cf84d897b415e1d4906",
+        "bytes": 5162,
+        "digest": "sha256:708edf61bf2f7c25a6ee50b61d5ebc4245bc5cecef1f0cf84d897b415e1d4906",
+        "http_status": 200
+      },
+      {
+        "file": "f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90.tar.gz",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90",
+        "bytes": 71609,
+        "digest": "sha256:f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90",
+        "http_status": 200
+      },
+      {
+        "file": "2020.2.manifest.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/manifests/2020.2",
+        "bytes": 1575,
+        "digest": "sha256:6f9c5db4cac1076407379024a2405b7b12efe896051fc7ea60dfb03d5fc843f1",
+        "http_status": 200
+      },
+      {
+        "file": "2020.2.config.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:5eb1925052f495edf4d1b72a56d29f0ba60aaaede9d7960c4ed151f1526ab942",
+        "bytes": 2533,
+        "digest": "sha256:5eb1925052f495edf4d1b72a56d29f0ba60aaaede9d7960c4ed151f1526ab942",
+        "http_status": 200
+      },
+      {
+        "file": "e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7.tar.gz",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7",
+        "bytes": 87520,
+        "digest": "sha256:e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7",
+        "http_status": 200
+      },
+      {
+        "file": "2022.1.manifest.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/manifests/2022.1",
+        "bytes": 856,
+        "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f",
+        "http_status": 200
+      },
+      {
+        "file": "2022.1.amd64.manifest.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/manifests/sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+        "bytes": 1432,
+        "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+        "http_status": 200
+      },
+      {
+        "file": "2022.1.config.json",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:3ded30f81b4a326a41b3d6343e334913aa560c4349a4d6f9cbae059b98ba7dc8",
+        "bytes": 3881,
+        "digest": "sha256:3ded30f81b4a326a41b3d6343e334913aa560c4349a4d6f9cbae059b98ba7dc8",
+        "http_status": 200
+      },
+      {
+        "file": "5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e.tar.gz",
+        "url": "https://registry-1.docker.io/v2/qfobenchmark/darwin/blobs/sha256:5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e",
+        "bytes": 86192,
+        "digest": "sha256:5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e",
+        "http_status": 200
+      }
+    ],
+    "containers_executed": false,
+    "archive_members_extracted": false,
+    "scope": "Selected build-context layers only; not all layers, tags, or registries"
+  },
+  "raw_registry_json": {
+    "tags.json": {
+      "count": 40,
+      "next": null,
+      "previous": null,
+      "results": [
+        {
+          "creator": 4606103,
+          "id": 140745932,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078591,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:10.188336799Z",
+              "last_pushed": "2024-01-24T08:57:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11955,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:12.431084319Z",
+              "last_pushed": "2024-01-24T08:57:08Z"
+            }
+          ],
+          "last_updated": "2024-01-24T08:57:11.64218Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "latest",
+          "repository": 11721881,
+          "full_size": 54078591,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T16:01:12.431084319Z",
+          "tag_last_pushed": "2024-01-24T08:57:11.64218Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f"
+        },
+        {
+          "creator": 4606103,
+          "id": 870864165,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:48534e1f11a0925b1aacbc57b89033cb6095ca1a073af750aad8baa0b4054b6c",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54094658,
+              "status": "active",
+              "last_pulled": "2026-09-30T01:41:23.308031081Z",
+              "last_pushed": "2025-03-26T08:57:50.274528062Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:ebe9312ac5818b44cf6369d85803d0ec56b47ca3c5c02524b4b12711da2f6d61",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-29T00:47:25.723914232Z",
+              "last_pushed": "2025-03-26T08:57:50.990784151Z"
+            }
+          ],
+          "last_updated": "2025-03-26T08:57:53.137227Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-c0854a9",
+          "repository": 11721881,
+          "full_size": 54094658,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T01:41:23.308031081Z",
+          "tag_last_pushed": "2025-03-26T08:57:53.137227Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:c58ac73b81b1a0da299f7c165986be9d1ff2aaf08cacf59f54a0853f3cc19db7"
+        },
+        {
+          "creator": 4606103,
+          "id": 585697939,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:48534e1f11a0925b1aacbc57b89033cb6095ca1a073af750aad8baa0b4054b6c",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54094658,
+              "status": "active",
+              "last_pulled": "2026-09-30T01:41:23.308031081Z",
+              "last_pushed": "2025-03-26T08:57:50.274528062Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:ebe9312ac5818b44cf6369d85803d0ec56b47ca3c5c02524b4b12711da2f6d61",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-29T00:47:25.723914232Z",
+              "last_pushed": "2025-03-26T08:57:50.990784151Z"
+            }
+          ],
+          "last_updated": "2025-03-26T08:57:51.559165Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "master",
+          "repository": 11721881,
+          "full_size": 54094658,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T01:41:23.308031081Z",
+          "tag_last_pushed": "2025-03-26T08:57:51.559165Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:c58ac73b81b1a0da299f7c165986be9d1ff2aaf08cacf59f54a0853f3cc19db7"
+        },
+        {
+          "creator": 4606103,
+          "id": 870863244,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:caf985d3457d3f5e50235ee5894540dcc14ec9b808b931717dc9b36479fcbfac",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54094584,
+              "status": "active",
+              "last_pulled": "2026-09-30T01:41:16.100373167Z",
+              "last_pushed": "2025-03-26T08:56:20.574528889Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:95c1c71e6434bfaa5b2542c009e1de994f2878af320d4ac835d9fad49aa40988",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.227759558Z",
+              "last_pushed": "2025-03-26T08:56:21.20376942Z"
+            }
+          ],
+          "last_updated": "2025-03-26T08:56:22.649711Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-2a1fb8e",
+          "repository": 11721881,
+          "full_size": 54094584,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T01:41:16.100373167Z",
+          "tag_last_pushed": "2025-03-26T08:56:22.649711Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:8063b0c17afdd05202765cba1975ba978bfca27836f207f780f10560e170a1c7"
+        },
+        {
+          "creator": 4606103,
+          "id": 870859762,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:0bb9c7f11c6f50fb74f0a329975b02fab047378f76af06baafd9bb8f4ce72a0d",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54094750,
+              "status": "active",
+              "last_pulled": "2026-09-30T01:41:01.328449065Z",
+              "last_pushed": "2025-03-26T08:50:44.908980159Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:740c38a5f08d36cc551621159d84c51071353d4b1396d9cf091480b5e601f4cb",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11458,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.070739126Z",
+              "last_pushed": "2025-03-26T08:50:45.525541134Z"
+            }
+          ],
+          "last_updated": "2025-03-26T08:50:46.975453Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-1ab240e",
+          "repository": 11721881,
+          "full_size": 54094750,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T01:41:01.328449065Z",
+          "tag_last_pushed": "2025-03-26T08:50:46.975453Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:a5b146b7c3b275ea8df487264ac0cf00bc9e066b06dfcbe467673f5679790f25"
+        },
+        {
+          "creator": 4606103,
+          "id": 585697970,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078591,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:10.188336799Z",
+              "last_pushed": "2024-01-24T08:57:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11955,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:12.431084319Z",
+              "last_pushed": "2024-01-24T08:57:08Z"
+            }
+          ],
+          "last_updated": "2024-01-24T08:57:11.281474Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-35e5bc8",
+          "repository": 11721881,
+          "full_size": 54078591,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T16:01:12.431084319Z",
+          "tag_last_pushed": "2024-01-24T08:57:11.281474Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f"
+        },
+        {
+          "creator": 4606103,
+          "id": 360313561,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078591,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:10.188336799Z",
+              "last_pushed": "2024-01-24T08:57:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11955,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:12.431084319Z",
+              "last_pushed": "2024-01-24T08:57:08Z"
+            }
+          ],
+          "last_updated": "2024-01-24T08:57:10.714844Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022",
+          "repository": 11721881,
+          "full_size": 54078591,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T16:01:12.431084319Z",
+          "tag_last_pushed": "2024-01-24T08:57:10.714844Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f"
+        },
+        {
+          "creator": 4606103,
+          "id": 590158423,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078591,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:10.188336799Z",
+              "last_pushed": "2024-01-24T08:57:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11955,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:12.431084319Z",
+              "last_pushed": "2024-01-24T08:57:08Z"
+            }
+          ],
+          "last_updated": "2024-01-24T08:57:10.703315Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.1",
+          "repository": 11721881,
+          "full_size": 54078591,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T16:01:12.431084319Z",
+          "tag_last_pushed": "2024-01-24T08:57:10.703315Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f"
+        },
+        {
+          "creator": 4606103,
+          "id": 590158407,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078591,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:10.188336799Z",
+              "last_pushed": "2024-01-24T08:57:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11955,
+              "status": "active",
+              "last_pulled": "2026-09-30T16:01:12.431084319Z",
+              "last_pushed": "2024-01-24T08:57:08Z"
+            }
+          ],
+          "last_updated": "2024-01-24T08:57:07.693042Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.1.0",
+          "repository": 11721881,
+          "full_size": 54078591,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-30T16:01:12.431084319Z",
+          "tag_last_pushed": "2024-01-24T08:57:07.693042Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:db4ba6b86914f92caa571850ce0f1cf9357d803965d773f2d32509f43c45189f"
+        },
+        {
+          "creator": 4606103,
+          "id": 585698793,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:dfb6a06b1efbf511abb8cfa8f24bc530b58d44cbe992581537c66ecd366114bf",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077881,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.050688145Z",
+              "last_pushed": "2024-01-16T14:21:59Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:741957422475738f611bdac4f1606f9a8d913917435482acd8c4f769f93fdd93",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11475,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.025147331Z",
+              "last_pushed": "2024-01-16T14:22:00Z"
+            }
+          ],
+          "last_updated": "2024-01-16T14:22:00.160208Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "elixir",
+          "repository": 11721881,
+          "full_size": 54077881,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.050688145Z",
+          "tag_last_pushed": "2024-01-16T14:22:00.160208Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:3a84ad3e2f22bfe3f40258131910c3242104a4dbcc86c3291b9be3489c70c85b"
+        },
+        {
+          "creator": 4606103,
+          "id": 585549198,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:19b55588805134548ef11a4ddb3224250bfd3a3b35e1d34d255bc965d541de86",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077971,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.035231335Z",
+              "last_pushed": "2024-01-16T09:51:16Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:787d5d0101da8d6e111b85c9b5ac73c625dbed7898ab923ecb38d47575da3780",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.028861246Z",
+              "last_pushed": "2024-01-16T09:51:16Z"
+            }
+          ],
+          "last_updated": "2024-01-16T09:51:16.870248Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-d248f82",
+          "repository": 11721881,
+          "full_size": 54077971,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.035231335Z",
+          "tag_last_pushed": "2024-01-16T09:51:16.870248Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:9bac21b5c1696567176bb9ad081d18eee82c84a6b9391683446b1e7cfc508f94"
+        },
+        {
+          "creator": 4606103,
+          "id": 554212221,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:19b55588805134548ef11a4ddb3224250bfd3a3b35e1d34d255bc965d541de86",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077971,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.035231335Z",
+              "last_pushed": "2024-01-16T09:51:16Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:787d5d0101da8d6e111b85c9b5ac73c625dbed7898ab923ecb38d47575da3780",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.028861246Z",
+              "last_pushed": "2024-01-16T09:51:16Z"
+            }
+          ],
+          "last_updated": "2024-01-16T09:51:15.997783Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "FAS",
+          "repository": 11721881,
+          "full_size": 54077971,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.035231335Z",
+          "tag_last_pushed": "2024-01-16T09:51:15.997783Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:9bac21b5c1696567176bb9ad081d18eee82c84a6b9391683446b1e7cfc508f94"
+        },
+        {
+          "creator": 4606103,
+          "id": 585507436,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:1d58eb1a075fd9aed040d602385398d5f74b0302d34dc4cc3597c69e2da09252",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077813,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.304881683Z",
+              "last_pushed": "2024-01-16T08:22:30Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:d0b05253d76c2d2a0286bfe3d738b5a78bbfe172df2a91b47da4074cbcb6174b",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11469,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.277100229Z",
+              "last_pushed": "2024-01-16T08:22:31Z"
+            }
+          ],
+          "last_updated": "2024-01-16T08:22:31.380214Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-a0d3c40",
+          "repository": 11721881,
+          "full_size": 54077813,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.304881683Z",
+          "tag_last_pushed": "2024-01-16T08:22:31.380214Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:be8da7c456b40d7508a7e4558c359cf22f24a1ef67e07ebfb118acc0f7d1dca0"
+        },
+        {
+          "creator": 4606103,
+          "id": 585504102,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:144e24994eb23ef1385b6473370e10c612a857fd9d6547a21e29b44dfb43df74",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54078240,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.105078166Z",
+              "last_pushed": "2024-01-16T08:15:19Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:dd505c7a0ebbdfb00cf0e74ac7e7a2c9182f4ce869367db9b5bcc4922981086e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.110144333Z",
+              "last_pushed": "2024-01-16T08:15:19Z"
+            }
+          ],
+          "last_updated": "2024-01-16T08:15:20.238829Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-db7915d",
+          "repository": 11721881,
+          "full_size": 54078240,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.110144333Z",
+          "tag_last_pushed": "2024-01-16T08:15:20.238829Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:5636135d86848d9b35652f149a611d69d14fc01516c3f68b20a632c12e4f5019"
+        },
+        {
+          "creator": 4606103,
+          "id": 577898050,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:17cbb4e05fdc99d6d17f8b5626f4ecdf7a4b21bae39ec4c8db27d5e3f1471a30",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077722,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.590006914Z",
+              "last_pushed": "2024-01-03T13:43:31Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:a62078b6b9260fbd3c466ec0c1ec29e0c46667da7f19f810a7be6f7912e4c86c",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.583134694Z",
+              "last_pushed": "2024-01-03T13:43:32Z"
+            }
+          ],
+          "last_updated": "2024-01-03T13:43:32.986742Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-4295c1f",
+          "repository": 11721881,
+          "full_size": 54077722,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.590006914Z",
+          "tag_last_pushed": "2024-01-03T13:43:32.986742Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:2d134300fc7051b1731e72fdeb4106bf3c334d99fed7c065976aba562b00738e"
+        },
+        {
+          "creator": 4606103,
+          "id": 572955084,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:99e8844f1739ed81fcaff02ccab7233490ee91047716780da14804911663073f",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077261,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.087696077Z",
+              "last_pushed": "2023-12-22T07:42:58Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:c591bbb66c8864642e4a1a2f12fe948131ad55e5f3976a1cb68bfc143c326ee7",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.092971194Z",
+              "last_pushed": "2023-12-22T07:42:58Z"
+            }
+          ],
+          "last_updated": "2023-12-22T07:42:59.419547Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-586d0b0",
+          "repository": 11721881,
+          "full_size": 54077261,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.092971194Z",
+          "tag_last_pushed": "2023-12-22T07:42:59.419547Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:1ba43f40772f60fa969c234a367ae5619f050a267ea9cea01e76bf94ec0985ff"
+        },
+        {
+          "creator": 4606103,
+          "id": 572360550,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:3c6f9f3b9a4b0023f29b5bd510230b315de8c9fdbf580e4edd41e379ca16e1ee",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54076929,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.330246264Z",
+              "last_pushed": "2023-12-21T09:08:21Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:206c84b5e3959d05e015de0e991b8aea8652fd96af87cb72ccf77d1e626aa4ee",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.351920214Z",
+              "last_pushed": "2023-12-21T09:08:21Z"
+            }
+          ],
+          "last_updated": "2023-12-21T09:08:21.364083Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-34e6670",
+          "repository": 11721881,
+          "full_size": 54076929,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.351920214Z",
+          "tag_last_pushed": "2023-12-21T09:08:21.364083Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:e1806a19fad104a1fa669ba680b8be9d34d2ad8f5eabf9ab008840c6eeeefb6c"
+        },
+        {
+          "creator": 4606103,
+          "id": 572326520,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:7206b798c834ffc7e9da2cdbe61dacf38cf2322d9b4a281768d5d77fc23659c7",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54076968,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.13576583Z",
+              "last_pushed": "2023-12-21T07:51:48Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:8b1bded34939680cd377afc31b4e9d9884e409f91ef44cfc9c1a5db3f39a6c36",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.215308081Z",
+              "last_pushed": "2023-12-21T07:51:48Z"
+            }
+          ],
+          "last_updated": "2023-12-21T07:51:49.549417Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-ff07412",
+          "repository": 11721881,
+          "full_size": 54076968,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.215308081Z",
+          "tag_last_pushed": "2023-12-21T07:51:49.549417Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:64c094e1a7ca1d718b8f86af77242a64a5f5e2340f1c871b9f57378deb422418"
+        },
+        {
+          "creator": 4606103,
+          "id": 571619183,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:84e42155d2999dcead871f9b560374168f9bf9507e54fabe9d0552d7818361ae",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54077203,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.081424392Z",
+              "last_pushed": "2023-12-20T07:45:05Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6f61175fed387bf2b9ec2f0791f98c8ebcd84d76638f04d19202a07ec1658b49",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.077663466Z",
+              "last_pushed": "2023-12-20T07:45:05Z"
+            }
+          ],
+          "last_updated": "2023-12-20T07:45:06.001609Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-aa4c513",
+          "repository": 11721881,
+          "full_size": 54077203,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.081424392Z",
+          "tag_last_pushed": "2023-12-20T07:45:06.001609Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:4917ba164c7ebdbaa3a1a72768700ecfc1c48a05b1701af4f9a28148d7d1aa97"
+        },
+        {
+          "creator": 4606103,
+          "id": 570872738,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:52f107ebfa3902bdd8791ee5f7d1481e1df041dd0a20999a3c27b241e6c910b7",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54074508,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.942957037Z",
+              "last_pushed": "2023-12-19T08:58:17Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:1263fa37d70048a22a0a7cef9940c8d242eee73bff71aa0ebf1fb117712b7f51",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.929637105Z",
+              "last_pushed": "2023-12-19T08:58:17Z"
+            }
+          ],
+          "last_updated": "2023-12-19T08:58:18.498493Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-94ddee6",
+          "repository": 11721881,
+          "full_size": 54074508,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.942957037Z",
+          "tag_last_pushed": "2023-12-19T08:58:18.498493Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:11feb408e716b5f4e4236f62946e6162a9d745213ac1e835c15d4cec658e272f"
+        },
+        {
+          "creator": 4606103,
+          "id": 554212224,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:7c6f2c019002c0b32bd186ee760c6aa11e1e4203c4ab88763c9a6b7a7e2d81f6",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54071307,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.729493914Z",
+              "last_pushed": "2023-11-23T14:13:04Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:8c5d0fb3f4c18c86dbe38f93945fec264df23e6897ad4f659c2cf22aae00109c",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11470,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.707035761Z",
+              "last_pushed": "2023-11-23T14:13:04Z"
+            }
+          ],
+          "last_updated": "2023-11-23T14:13:06.177428Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-fb2c2ed",
+          "repository": 11721881,
+          "full_size": 54071307,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.729493914Z",
+          "tag_last_pushed": "2023-11-23T14:13:06.177428Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:9aaea3c38e83ff134dc7fb6a83fe5f1544bae62b15ef2171148b16977cac9f1e"
+        },
+        {
+          "creator": 4606103,
+          "id": 449805360,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:3fd1aa21b824d7a043414b3c1d1a4ab08d768104f6c8bbc107e2985ef5e412fa",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54064486,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.649008868Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:41ab9e75cfb6e9d4543136915cdab38bf463300f97c818f69a1d7d226862fe56",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 12029,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.648647588Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            }
+          ],
+          "last_updated": "2023-06-02T07:03:10.347941Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-d8b9356",
+          "repository": 11721881,
+          "full_size": 54064486,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.649008868Z",
+          "tag_last_pushed": "2023-06-02T07:03:10.347941Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:85d87bf7cae07c5b5e5b794218af917eb0d762e941e102c69783de11746cee83"
+        },
+        {
+          "creator": 4606103,
+          "id": 360313559,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:3fd1aa21b824d7a043414b3c1d1a4ab08d768104f6c8bbc107e2985ef5e412fa",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54064486,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.649008868Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:41ab9e75cfb6e9d4543136915cdab38bf463300f97c818f69a1d7d226862fe56",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 12029,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.648647588Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            }
+          ],
+          "last_updated": "2023-06-02T07:03:08.446815Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.0",
+          "repository": 11721881,
+          "full_size": 54064486,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.649008868Z",
+          "tag_last_pushed": "2023-06-02T07:03:08.446815Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:85d87bf7cae07c5b5e5b794218af917eb0d762e941e102c69783de11746cee83"
+        },
+        {
+          "creator": 4606103,
+          "id": 448981192,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:3fd1aa21b824d7a043414b3c1d1a4ab08d768104f6c8bbc107e2985ef5e412fa",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54064486,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.649008868Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:41ab9e75cfb6e9d4543136915cdab38bf463300f97c818f69a1d7d226862fe56",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 12029,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:08.648647588Z",
+              "last_pushed": "2023-06-02T07:03:07Z"
+            }
+          ],
+          "last_updated": "2023-06-02T07:03:06.891255Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.0.3",
+          "repository": 11721881,
+          "full_size": 54064486,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:08.649008868Z",
+          "tag_last_pushed": "2023-06-02T07:03:06.891255Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:85d87bf7cae07c5b5e5b794218af917eb0d762e941e102c69783de11746cee83"
+        },
+        {
+          "creator": 4606103,
+          "id": 448981208,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:ea4e7f47921d1c626c1f137f9e4bab7b013b4c12dc977370d17f6a1e2b7b31b3",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 54064524,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.225315233Z",
+              "last_pushed": "2023-06-01T07:30:33Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:519edc8e752399e732f0779737831a5a506078e398ec18f3539a582ccc6962b3",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 12029,
+              "status": "active",
+              "last_pulled": "2026-09-11T13:01:09.23589637Z",
+              "last_pushed": "2023-06-01T07:30:33Z"
+            }
+          ],
+          "last_updated": "2023-06-01T07:30:37.160102Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-e537491",
+          "repository": 11721881,
+          "full_size": 54064524,
+          "v2": true,
+          "tag_status": "active",
+          "tag_last_pulled": "2026-09-11T13:01:09.23589637Z",
+          "tag_last_pushed": "2023-06-01T07:30:37.160102Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:961eeecf17949d158dca2e49ec46190c34b8ce24effaa9bc577a5746f790aafe"
+        },
+        {
+          "creator": 4606103,
+          "id": 439439566,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:32aec9b187fa76ddc54b0f9101268c55bc1bb0d6f532bc6bdbbeaedc255c3b91",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 93459893,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:45.678159134Z",
+              "last_pushed": "2023-05-15T15:46:40Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:1184ecd2884d993cf59f083cf3e210ec181d02b25ccd6ed388600dc83afdeb45",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11565,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:45.710977569Z",
+              "last_pushed": "2023-05-15T15:46:40Z"
+            }
+          ],
+          "last_updated": "2023-05-15T15:46:42.819817Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-e2071e3",
+          "repository": 11721881,
+          "full_size": 93459893,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:45.710977569Z",
+          "tag_last_pushed": "2023-05-15T15:46:42.819817Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:6707120f1cc0407c0ac3e3eff476dc7ff50abaa04dd0dd51c6200769b61ef6eb"
+        },
+        {
+          "creator": 4606103,
+          "id": 439439547,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:32aec9b187fa76ddc54b0f9101268c55bc1bb0d6f532bc6bdbbeaedc255c3b91",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 93459893,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:45.678159134Z",
+              "last_pushed": "2023-05-15T15:46:40Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:1184ecd2884d993cf59f083cf3e210ec181d02b25ccd6ed388600dc83afdeb45",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11565,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:45.710977569Z",
+              "last_pushed": "2023-05-15T15:46:40Z"
+            }
+          ],
+          "last_updated": "2023-05-15T15:46:40.130622Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.0.2",
+          "repository": 11721881,
+          "full_size": 93459893,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:45.710977569Z",
+          "tag_last_pushed": "2023-05-15T15:46:40.130622Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:6707120f1cc0407c0ac3e3eff476dc7ff50abaa04dd0dd51c6200769b61ef6eb"
+        },
+        {
+          "creator": 4606103,
+          "id": 411270150,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:9b5dbc0bb04def6506045d763c1f161e907dd12487e52259c4fa2088d5dc496b",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 125035827,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:39.186388922Z",
+              "last_pushed": "2023-04-03T09:32:14Z"
+            }
+          ],
+          "last_updated": "2023-04-03T09:32:13.928113Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "silvia-dev",
+          "repository": 11721881,
+          "full_size": 125035827,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:39.186388922Z",
+          "tag_last_pushed": "2023-04-03T09:32:13.928113Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image",
+          "digest": "sha256:9b5dbc0bb04def6506045d763c1f161e907dd12487e52259c4fa2088d5dc496b"
+        },
+        {
+          "creator": 4606103,
+          "id": 371415503,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:78e08b58e755926232de1cdb43fb68e5f8d80a439f97c11da4a79d6ad5aa1446",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 95281359,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:39.585277805Z",
+              "last_pushed": "2023-01-20T15:45:43Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:385dc601fe38074ea19b517b5f2fa4a7d429f78c7b8356b9d4138cf1cc12ff6e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11603,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:39.815247796Z",
+              "last_pushed": "2023-01-20T15:45:44Z"
+            }
+          ],
+          "last_updated": "2023-01-20T15:45:46.350795Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-63f91ea",
+          "repository": 11721881,
+          "full_size": 95281359,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:39.815247796Z",
+          "tag_last_pushed": "2023-01-20T15:45:46.350795Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:7af4e0125979a7790cf6479d6e34d1d8a578c5df224fe3e4360fa69a2f3f2a7f"
+        },
+        {
+          "creator": 4606103,
+          "id": 371415489,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:78e08b58e755926232de1cdb43fb68e5f8d80a439f97c11da4a79d6ad5aa1446",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 95281359,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:39.585277805Z",
+              "last_pushed": "2023-01-20T15:45:43Z"
+            },
+            {
+              "architecture": "unknown",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:385dc601fe38074ea19b517b5f2fa4a7d429f78c7b8356b9d4138cf1cc12ff6e",
+              "os": "unknown",
+              "os_features": "",
+              "os_version": null,
+              "size": 11603,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:39.815247796Z",
+              "last_pushed": "2023-01-20T15:45:44Z"
+            }
+          ],
+          "last_updated": "2023-01-20T15:45:43.47301Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.0.1",
+          "repository": 11721881,
+          "full_size": 95281359,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:39.815247796Z",
+          "tag_last_pushed": "2023-01-20T15:45:43.47301Z",
+          "media_type": "application/vnd.oci.image.index.v1+json",
+          "content_type": "image",
+          "digest": "sha256:7af4e0125979a7790cf6479d6e34d1d8a578c5df224fe3e4360fa69a2f3f2a7f"
+        },
+        {
+          "creator": 4606103,
+          "id": 360302657,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:72ee54f8e6ec565336336a08589e9847633ba96b872be6bff0916a02a9bdb660",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 94890586,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:26.034435415Z",
+              "last_pushed": "2023-01-03T09:52:13Z"
+            }
+          ],
+          "last_updated": "2023-01-03T09:52:14.018151Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "sha-06ebc17",
+          "repository": 11721881,
+          "full_size": 94890586,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:26.034435415Z",
+          "tag_last_pushed": "2023-01-03T09:52:14.018151Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image",
+          "digest": "sha256:72ee54f8e6ec565336336a08589e9847633ba96b872be6bff0916a02a9bdb660"
+        },
+        {
+          "creator": 4606103,
+          "id": 360313553,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:72ee54f8e6ec565336336a08589e9847633ba96b872be6bff0916a02a9bdb660",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 94890586,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:26.034435415Z",
+              "last_pushed": "2023-01-03T09:52:13Z"
+            }
+          ],
+          "last_updated": "2023-01-03T09:52:12.271208Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2022.0.0",
+          "repository": 11721881,
+          "full_size": 94890586,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:26.034435415Z",
+          "tag_last_pushed": "2023-01-03T09:52:12.271208Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image",
+          "digest": "sha256:72ee54f8e6ec565336336a08589e9847633ba96b872be6bff0916a02a9bdb660"
+        },
+        {
+          "creator": 4606103,
+          "id": 299793697,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:f44fea4fcb894849c4640ba043bc98e481bc869225a429f846c71947fc4ed3ed",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 125013682,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:36.709809016Z",
+              "last_pushed": "2022-09-29T07:24:37Z"
+            }
+          ],
+          "last_updated": "2022-09-29T07:24:36.302986Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "test-sina",
+          "repository": 11721881,
+          "full_size": 125013682,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:36.709809016Z",
+          "tag_last_pushed": "2022-09-29T07:24:36.302986Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image",
+          "digest": "sha256:f44fea4fcb894849c4640ba043bc98e481bc869225a429f846c71947fc4ed3ed"
+        },
+        {
+          "creator": 4606103,
+          "id": 297834518,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:a8e3b8e79ecdaedd546718c634f0533f3622a5e881e794c7f9b3e7804bc83146",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 125028984,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:29.172253449Z",
+              "last_pushed": "2022-09-26T15:11:14Z"
+            }
+          ],
+          "last_updated": "2022-09-26T15:11:13.99935Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "silvia",
+          "repository": 11721881,
+          "full_size": 125028984,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:29.172253449Z",
+          "tag_last_pushed": "2022-09-26T15:11:13.99935Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image",
+          "digest": "sha256:a8e3b8e79ecdaedd546718c634f0533f3622a5e881e794c7f9b3e7804bc83146"
+        },
+        {
+          "creator": 4606103,
+          "id": 185791018,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:8ddedcc7264230348315d815b92f86ad2499a73deb271d434d2666a41e04b59b",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 125012423,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:42.616317619Z",
+              "last_pushed": "2022-01-07T13:20:11Z"
+            }
+          ],
+          "last_updated": "2022-01-07T13:20:18.507502Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.2.1",
+          "repository": 11721881,
+          "full_size": 125012423,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:42.616317619Z",
+          "tag_last_pushed": "2022-01-07T13:20:18.507502Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        },
+        {
+          "creator": 4606103,
+          "id": 182059823,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:6f9c5db4cac1076407379024a2405b7b12efe896051fc7ea60dfb03d5fc843f1",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 125020405,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:46.371674553Z",
+              "last_pushed": "2021-12-12T11:23:10Z"
+            }
+          ],
+          "last_updated": "2021-12-12T11:23:16.843378Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.2",
+          "repository": 11721881,
+          "full_size": 125020405,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:46.371674553Z",
+          "tag_last_pushed": "2021-12-12T11:23:16.843378Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        },
+        {
+          "creator": 4606103,
+          "id": 150075296,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:4811497c66f5aeb2e064b9b7d5e8e0466183542ff1ba10e9b66eccf203f16f73",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 123790932,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:52.903755256Z",
+              "last_pushed": "2021-05-17T21:40:40Z"
+            }
+          ],
+          "last_updated": "2021-05-17T21:40:39.974121Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.1.3",
+          "repository": 11721881,
+          "full_size": 123790932,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:52.903755256Z",
+          "tag_last_pushed": "2021-05-17T21:40:39.974121Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        },
+        {
+          "creator": 4606103,
+          "id": 143127728,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:63850ddb452f2ee061410b7e6e2477a5dc0eaac081d4b52a1ea99b38ae6a846e",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 123790489,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:37.156671409Z",
+              "last_pushed": "2021-03-26T10:37:19Z"
+            }
+          ],
+          "last_updated": "2021-03-26T10:37:18.281542Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.1.2",
+          "repository": 11721881,
+          "full_size": 123790489,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:37.156671409Z",
+          "tag_last_pushed": "2021-03-26T10:37:18.281542Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        },
+        {
+          "creator": 4606103,
+          "id": 141993770,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:d3d4382f938274d8248a3ba9c0280a1f9392a3a99adb1ddafa7985addb0329cb",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 123789409,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:57.570818226Z",
+              "last_pushed": "2021-03-18T08:21:31Z"
+            }
+          ],
+          "last_updated": "2021-03-26T10:37:03.572441Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.1.1",
+          "repository": 11721881,
+          "full_size": 123789409,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:57.570818226Z",
+          "tag_last_pushed": "2021-03-26T10:37:03.572441Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        },
+        {
+          "creator": 4606103,
+          "id": 140745927,
+          "images": [
+            {
+              "architecture": "amd64",
+              "features": "",
+              "variant": null,
+              "digest": "sha256:4ba5644caa0436f9c7a725e8600a055bd1305018ddfaadb8243cf9e67b19cd5f",
+              "os": "linux",
+              "os_features": "",
+              "os_version": null,
+              "size": 123789362,
+              "status": "inactive",
+              "last_pulled": "2026-08-27T23:00:30.289527026Z",
+              "last_pushed": "2021-03-10T08:23:26Z"
+            }
+          ],
+          "last_updated": "2021-03-26T10:36:59.543498Z",
+          "last_updater": 4606103,
+          "last_updater_username": "alpae",
+          "name": "2020.1",
+          "repository": 11721881,
+          "full_size": 123789362,
+          "v2": true,
+          "tag_status": "inactive",
+          "tag_last_pulled": "2026-08-27T23:00:30.289527026Z",
+          "tag_last_pushed": "2021-03-26T10:36:59.543498Z",
+          "media_type": "application/vnd.docker.container.image.v1+json",
+          "content_type": "image"
+        }
+      ]
+    },
+    "2020.1.manifest.json": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "size": 5162,
+        "digest": "sha256:708edf61bf2f7c25a6ee50b61d5ebc4245bc5cecef1f0cf84d897b415e1d4906"
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 28558714,
+          "digest": "sha256:6a5697faee43339ef8e33e3839060252392ad99325a48f7c9d7e93c22db4d4cf"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 847,
+          "digest": "sha256:ba13d3bc422b493440f97a8f148d245e1999cb616cb05876edc3ef29e79852f2"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 162,
+          "digest": "sha256:a254829d9e55168306fd80a49e02eb015551facee9c444d9dce3b26d19238b82"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 91524488,
+          "digest": "sha256:973caceebaa338950086a069aa92fdfbcd6301ed3e0cf7a0be22799754721226"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 3633233,
+          "digest": "sha256:5560de5b5c9de82324e07031e7fef5306b4906bdff32b555697c1f14bc2aa164"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 177,
+          "digest": "sha256:a5a5b15b66935f14bafb1658767e785bc7c5e6af0e43d69ffd153df6cf9e4b60"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 132,
+          "digest": "sha256:6ab3a9c0e309ddb247b06dcf5539c2bb516c3dda19a319ebb82e2713e105cb76"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 71609,
+          "digest": "sha256:f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90"
+        }
+      ]
+    },
+    "2020.1.config.json": {
+      "architecture": "amd64",
+      "config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark"
+        ],
+        "Cmd": [
+          "/bin/bash"
+        ],
+        "ArgsEscaped": true,
+        "Image": "sha256:e5591cb927dd8dff4230f91c48b8b9454d5539ce0dd45519bd4c2e4d40c8e1b5",
+        "Volumes": null,
+        "WorkingDir": "/benchmark",
+        "Entrypoint": null,
+        "OnBuild": null,
+        "Labels": null
+      },
+      "container_config": {
+        "Hostname": "",
+        "Domainname": "",
+        "User": "",
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "AttachStderr": false,
+        "Tty": false,
+        "OpenStdin": false,
+        "StdinOnce": false,
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark"
+        ],
+        "Cmd": [
+          "/bin/sh",
+          "-c",
+          "#(nop) COPY dir:b9f3e896e5cf7f7ebc030a29bb9b9f6d7978a06fe4748b902aaf4d323e8bba36 in /benchmark "
+        ],
+        "ArgsEscaped": true,
+        "Image": "sha256:e5591cb927dd8dff4230f91c48b8b9454d5539ce0dd45519bd4c2e4d40c8e1b5",
+        "Volumes": null,
+        "WorkingDir": "/benchmark",
+        "Entrypoint": null,
+        "OnBuild": null,
+        "Labels": null
+      },
+      "created": "2021-03-10T08:19:23.099829Z",
+      "docker_version": "20.10.2",
+      "history": [
+        {
+          "created": "2020-10-23T17:32:33.883592185Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:435d9776fdd3a1834f344fb82e459dbbb67cd50c71ab5e29b719273888d5bb7c in / "
+        },
+        {
+          "created": "2020-10-23T17:32:34.71810844Z",
+          "created_by": "/bin/sh -c set -xe \t\t&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d \t&& echo 'exit 101' >> /usr/sbin/policy-rc.d \t&& chmod +x /usr/sbin/policy-rc.d \t\t&& dpkg-divert --local --rename --add /sbin/initctl \t&& cp -a /usr/sbin/policy-rc.d /sbin/initctl \t&& sed -i 's/^exit.*/exit 0/' /sbin/initctl \t\t&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup \t\t&& echo 'DPkg::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' > /etc/apt/apt.conf.d/docker-clean \t&& echo 'APT::Update::Post-Invoke { \"rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true\"; };' >> /etc/apt/apt.conf.d/docker-clean \t&& echo 'Dir::Cache::pkgcache \"\"; Dir::Cache::srcpkgcache \"\";' >> /etc/apt/apt.conf.d/docker-clean \t\t&& echo 'Acquire::Languages \"none\";' > /etc/apt/apt.conf.d/docker-no-languages \t\t&& echo 'Acquire::GzipIndexes \"true\"; Acquire::CompressionTypes::Order:: \"gz\";' > /etc/apt/apt.conf.d/docker-gzip-indexes \t\t&& echo 'Apt::AutoRemove::SuggestsImportant \"false\";' > /etc/apt/apt.conf.d/docker-autoremove-suggests"
+        },
+        {
+          "created": "2020-10-23T17:32:35.470778446Z",
+          "created_by": "/bin/sh -c [ -z \"$(apt-get indextargets)\" ]",
+          "empty_layer": true
+        },
+        {
+          "created": "2020-10-23T17:32:36.258836592Z",
+          "created_by": "/bin/sh -c mkdir -p /run/systemd && echo 'docker' > /run/systemd/container"
+        },
+        {
+          "created": "2020-10-23T17:32:36.438324921Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2020-11-03T14:45:44.3412196Z",
+          "created_by": "/bin/sh -c apt-get update && apt-get install -y curl mafft"
+        },
+        {
+          "created": "2020-11-03T14:45:51.0719079Z",
+          "created_by": "/bin/sh -c mkdir /darwin && cd /darwin &&     curl -SL -O http://biorecipes.com/darwin/darwin.linux64 &&     curl -SL http://biorecipes.com/darwin/darwin-lib.tgz | tar -xz  &&     chmod +x darwin.linux64 &&     sed -i -e \"s/\\(datadirname\\s*:=\\s*\\)'[^']*'[:;]/\\1'\\/refset':/\" lib/darwinit"
+        },
+        {
+          "created": "2020-11-03T14:45:51.9578908Z",
+          "created_by": "/bin/sh -c echo \"#!/bin/bash\\nulimit -s unlimited\\n/darwin/darwin.linux64 -l /darwin/lib $*\\n\" > /darwin/darwin &&     chmod +x /darwin/darwin"
+        },
+        {
+          "created": "2020-11-03T14:45:52.1517698Z",
+          "created_by": "/bin/sh -c #(nop)  ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "empty_layer": true
+        },
+        {
+          "created": "2020-11-03T14:45:52.5305965Z",
+          "created_by": "/bin/sh -c #(nop)  ENV DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark",
+          "empty_layer": true
+        },
+        {
+          "created": "2020-11-03T14:45:52.8548255Z",
+          "created_by": "/bin/sh -c #(nop) WORKDIR /benchmark"
+        },
+        {
+          "created": "2021-03-10T08:19:23.099829Z",
+          "created_by": "/bin/sh -c #(nop) COPY dir:b9f3e896e5cf7f7ebc030a29bb9b9f6d7978a06fe4748b902aaf4d323e8bba36 in /benchmark "
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:47dde53750b4a8ed24acebe52cf31ad131e73a9611048fc2f92c9b6274ab4bf3",
+          "sha256:0c2689e3f9206b1c4adfb16a1976d25bd270755e734588409b31ef29e3e756d6",
+          "sha256:cc9d18e90faad04bc3893cfaa50b7846ee75f48f5b8377a213fa52af2189095c",
+          "sha256:6b8ca1170600d5f17b309cac52120534e3576fcb1c0175ac66d99d5e0ec379ed",
+          "sha256:af0ce5bf1ad7da4b4fa4c40a2a2e262ae2edf5c5cb9d97f97ae1f4c9d1cf0eb8",
+          "sha256:5ed6c0be160c3c49f1b822b9169cf27ba0fb6dadc873652bc4b24e02a9d04543",
+          "sha256:2f64c665077260083723ad58133b536c225025a95f4372038e114671d7d2d5b5",
+          "sha256:a7091cba32e00398abeb19f17fa94f7c5d4a6b5435f93cb902ac0f8c533025fa"
+        ]
+      }
+    },
+    "2020.2.manifest.json": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "size": 2533,
+        "digest": "sha256:5eb1925052f495edf4d1b72a56d29f0ba60aaaede9d7960c4ed151f1526ab942"
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 28567101,
+          "digest": "sha256:7b1a6ab2e44dbac178598dabe7cff59bd67233dba0b27e4fbd1f9d4b3c877a54"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 92732244,
+          "digest": "sha256:ae65805836f9b5b577bc8b0d0eced5cd7eeced7fdc4edc69bbaefc24abbfe8a9"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 3633232,
+          "digest": "sha256:bec4d81bcb802155563ca21fc4c575c1340cb7a1dd30847f65be3f5e83f89426"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 176,
+          "digest": "sha256:b4f993da0b0d59e023833aa9f2d17511d21539b28b9022f3fd46baefb851db0e"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 132,
+          "digest": "sha256:ba26518c82b332cc9392f3028770972495bf6bd73bd96da9c9149cdea969ea35"
+        },
+        {
+          "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+          "size": 87520,
+          "digest": "sha256:e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7"
+        }
+      ]
+    },
+    "2020.2.config.json": {
+      "architecture": "amd64",
+      "config": {
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark"
+        ],
+        "Cmd": [
+          "bash"
+        ],
+        "WorkingDir": "/benchmark",
+        "OnBuild": null
+      },
+      "created": "2021-12-12T11:19:49.9343021Z",
+      "history": [
+        {
+          "created": "2021-10-16T00:37:47.226745473Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:5d68d27cc15a80653c93d3a0b262a28112d47a46326ff5fc2dfbf7fa3b9a0ce8 in / "
+        },
+        {
+          "created": "2021-10-16T00:37:47.578710012Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2021-10-26T08:46:18.8092104Z",
+          "created_by": "RUN /bin/sh -c apt-get update && apt-get install -y curl mafft # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2021-10-26T08:46:23.819317Z",
+          "created_by": "RUN /bin/sh -c mkdir /darwin && cd /darwin &&     curl -SL -O http://biorecipes.com/darwin/darwin.linux64 &&     curl -SL http://biorecipes.com/darwin/darwin-lib.tgz | tar -xz  &&     chmod +x darwin.linux64 &&     sed -i -e \"s/\\(datadirname\\s*:=\\s*\\)'[^']*'[:;]/\\1'\\/refset':/\" lib/darwinit # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2021-10-26T08:46:24.1670599Z",
+          "created_by": "RUN /bin/sh -c echo \"#!/bin/bash\\nulimit -s unlimited\\n/darwin/darwin.linux64 -l /darwin/lib $*\\n\" > /darwin/darwin &&     chmod +x /darwin/darwin # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2021-10-26T08:46:24.2183402Z",
+          "created_by": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2021-10-26T08:46:24.2183402Z",
+          "created_by": "ENV DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2021-10-26T08:46:24.2183402Z",
+          "created_by": "WORKDIR /benchmark",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2021-12-12T11:19:49.9343021Z",
+          "created_by": "COPY . /benchmark # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:9f54eef412758095c8079ac465d494a2872e02e90bf1fb5f12a1641c0d1bb78b",
+          "sha256:8e0302b6b4550aa2076e12317a62fc3f32af67de8ce7156cdce3ff5ed9da59e5",
+          "sha256:c6d6aa0082e0c40509c89bb2e0d4fab71322924654055dc27787c4794d131da6",
+          "sha256:0ff5511894b389ca605fe88678613e62123936b7aa9fc4f4695abcf8c11999b9",
+          "sha256:036f6fb932d99d2c460cca0e8255b4213dd74cce18b2344985b4edfa40b11522",
+          "sha256:2f060073bb5fdf3b1d108cf5a35337e688f9d200f3c875b10245a336207707cf"
+        ]
+      }
+    },
+    "2022.1.manifest.json": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.index.v1+json",
+      "manifests": [
+        {
+          "mediaType": "application/vnd.oci.image.manifest.v1+json",
+          "digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+          "size": 1432,
+          "platform": {
+            "architecture": "amd64",
+            "os": "linux"
+          }
+        },
+        {
+          "mediaType": "application/vnd.oci.image.manifest.v1+json",
+          "digest": "sha256:6dad12c3b35745489947975d286e989acf6902f7ebc161d6cf9392ce4fae014e",
+          "size": 567,
+          "annotations": {
+            "vnd.docker.reference.digest": "sha256:b8a6535f96de459f07ddb5113265c85d11fc7323577f3d86059dd529283c6068",
+            "vnd.docker.reference.type": "attestation-manifest"
+          },
+          "platform": {
+            "architecture": "unknown",
+            "os": "unknown"
+          }
+        }
+      ]
+    },
+    "2022.1.amd64.manifest.json": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.oci.image.manifest.v1+json",
+      "config": {
+        "mediaType": "application/vnd.oci.image.config.v1+json",
+        "digest": "sha256:3ded30f81b4a326a41b3d6343e334913aa560c4349a4d6f9cbae059b98ba7dc8",
+        "size": 3881
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:527f5363b98e562da03d2e0bbf86fd7c34f487bffd9b27a3cf0a9afea2f0ee1f",
+          "size": 27512774
+        },
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:889b333659d0834e10e016d7137cb5a5e49f7d39d9365cd1d67f6a0ac4b0e225",
+          "size": 22846200
+        },
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:876c355206c31a32ab70fa07fe682c134a0da96b31837ccaadf53f6864dd4f6e",
+          "size": 3633151
+        },
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:f516f355a9ca1f58f90f2f5137dfe79f5422cb68ca6967e0b643e389d6bbaef3",
+          "size": 175
+        },
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:6ab0f2b60f0ad207c70d2af841b5c1262f2393b88ddf54af8f0e48b02b5d3fc3",
+          "size": 99
+        },
+        {
+          "mediaType": "application/vnd.oci.image.layer.v1.tar+gzip",
+          "digest": "sha256:5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e",
+          "size": 86192
+        }
+      ]
+    },
+    "2022.1.config.json": {
+      "architecture": "amd64",
+      "config": {
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark"
+        ],
+        "Cmd": [
+          "/bin/bash"
+        ],
+        "WorkingDir": "/benchmark",
+        "Labels": {
+          "org.opencontainers.image.created": "2024-01-24T08:54:57.661Z",
+          "org.opencontainers.image.description": "This repository contains the codebase that runs the webservice to benchmark orthology predictions on a common reference proteome dataset.",
+          "org.opencontainers.image.licenses": "NOASSERTION",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.revision": "35e5bc8248183f506f2b88385d5f9a56d5b60589",
+          "org.opencontainers.image.source": "https://github.com/qfo/benchmark-webservice",
+          "org.opencontainers.image.title": "benchmark-webservice",
+          "org.opencontainers.image.url": "https://github.com/qfo/benchmark-webservice",
+          "org.opencontainers.image.version": "2022.1.0"
+        },
+        "OnBuild": null
+      },
+      "created": "2024-01-24T08:57:04.692087413Z",
+      "history": [
+        {
+          "created": "2023-12-13T10:27:43.956028683Z",
+          "created_by": "/bin/sh -c #(nop)  ARG RELEASE",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-12-13T10:27:44.019734751Z",
+          "created_by": "/bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-12-13T10:27:44.068648223Z",
+          "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.ref.name=ubuntu",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-12-13T10:27:44.112893577Z",
+          "created_by": "/bin/sh -c #(nop)  LABEL org.opencontainers.image.version=20.04",
+          "empty_layer": true
+        },
+        {
+          "created": "2023-12-13T10:27:45.59526847Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:5696198fbfd4074852bdee76ffd84da75da8de76727cef4f0cdd265f7bee6b76 in / "
+        },
+        {
+          "created": "2023-12-13T10:27:45.793268447Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/bash\"]",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-01-24T08:56:10.696357796Z",
+          "created_by": "RUN /bin/sh -c apt-get -qq update     && apt-get install -y --no-install-recommends        ca-certificates        curl        mafft     && rm -rf /var/lib/apt/lists/* # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-01-24T08:56:14.211242604Z",
+          "created_by": "RUN /bin/sh -c mkdir /darwin && cd /darwin &&     curl -SL -O https://biorecipes.com/darwin/darwin.linux64 &&     curl -SL https://biorecipes.com/darwin/darwin-lib.tgz | tar -xz  &&     chmod +x darwin.linux64 &&     sed -i -e \"s/\\(datadirname\\s*:=\\s*\\)'[^']*'[:;]/\\1'\\/refset':/\" lib/darwinit # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-01-24T08:56:14.281264865Z",
+          "created_by": "RUN /bin/sh -c echo \"#!/bin/bash\\nulimit -s unlimited\\n/darwin/darwin.linux64 -l /darwin/lib $*\\n\" > /darwin/darwin &&     chmod +x /darwin/darwin # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-01-24T08:56:14.290465061Z",
+          "created_by": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/darwin",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-01-24T08:56:14.290465061Z",
+          "created_by": "ENV DARWIN_ORTHOLOG_BENCHMARK_REPO_PATH=/benchmark",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-01-24T08:56:14.290465061Z",
+          "created_by": "WORKDIR /benchmark",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-01-24T08:57:04.692087413Z",
+          "created_by": "COPY . /benchmark # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:3a03f09d212915b240e9d216069aba5652ed4765c7e4b098c65e71860d47b8e1",
+          "sha256:17315d2382131e286fdc08edc2f721c585d6e1f9087551a534ff92017672bdc0",
+          "sha256:dc15c384867eb554089fc70012e2ff6b6dd87969a936924b42cd2467cf9b51c6",
+          "sha256:16f7e7aee4dbcd11ea479d7f080324145eb3cefda8d3294864202dece99dd9bc",
+          "sha256:c82e8fc7d0b32e5687b1efc2899f934c88ccc64c5d25ec16416562416d9947dd",
+          "sha256:447164303e0ddb970a024f5c08f1d7cdfd1f6a761137eef6929309906d797b43"
+        ]
+      }
+    }
+  },
+  "inventories": {
+    "5c85b93254a20a22b3bca09182505fd365fbcd389680da3ed27d549b09b53e4e.inventory.json": {
+      "bytes": 9199,
+      "digest": "sha256:a1811307e094f569747f7cf20d47d444ac860637d5c35146ff9abace7eea4aa0",
+      "inventory": {
+        "member_count": 75,
+        "members": [
+          {
+            "name": "benchmark",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.dockerignore",
+            "bytes": 118,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.github",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.github/dependabot.yml",
+            "bytes": 162,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.github/workflows",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.github/workflows/docker-image.yml",
+            "bytes": 4791,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.gitignore",
+            "bytes": 24,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_darwin",
+            "bytes": 792,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_fas",
+            "bytes": 850,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_python",
+            "bytes": 605,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.drw",
+            "bytes": 6902,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.sh",
+            "bytes": 2406,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.drw",
+            "bytes": 8501,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.sh",
+            "bytes": 3447,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/HomologyTest.drw",
+            "bytes": 6377,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/Benchmarking_minimal_datasets_schema.json",
+            "bytes": 5735,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/JSON_templates.py",
+            "bytes": 4039,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/__init__.py",
+            "bytes": 143,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/LICENSE",
+            "bytes": 17510,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/README.rst",
+            "bytes": 2383,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.drw",
+            "bytes": 7629,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.sh",
+            "bytes": 2442,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest-fixedsize.drw",
+            "bytes": 11921,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.drw",
+            "bytes": 12259,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.sh",
+            "bytes": 3682,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/TreeTest.drw",
+            "bytes": 9220,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/build_dockers.sh",
+            "bytes": 389,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/conf",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/conf/curnagl.config",
+            "bytes": 273,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/consensus.py",
+            "bytes": 2422,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/fas_benchmark.py",
+            "bytes": 9930,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/fetch_reference_data.py",
+            "bytes": 2736,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/AddReconciledTree.drw",
+            "bytes": 15312,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/Converter.py",
+            "bytes": 5431,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateIDMapAndSeqDb.drw",
+            "bytes": 3208,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateSpeciesInfo.drw",
+            "bytes": 1147,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/NewDataset.sh",
+            "bytes": 2177,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateECdata.sh",
+            "bytes": 1407,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGOdata.sh",
+            "bytes": 313,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGeneralSTDTest.drw",
+            "bytes": 5295,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateHomologyTest.sh",
+            "bytes": 4338,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateLineageTree.drw",
+            "bytes": 2188,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/convert_ec.pl",
+            "bytes": 1590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_json_mapping.py",
+            "bytes": 2094,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_speciestree_samples.py",
+            "bytes": 4171,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_vgnc_asserted_orthologs.py",
+            "bytes": 2231,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/helpers.py",
+            "bytes": 1938,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/DisplayFunctions",
+            "bytes": 1471,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/EntryNav",
+            "bytes": 4126,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/GenerateTemplate",
+            "bytes": 2590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Index",
+            "bytes": 2824,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/JsonTemplates",
+            "bytes": 1273,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/LockFileOperations",
+            "bytes": 1691,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Logging",
+            "bytes": 940,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Parsing",
+            "bytes": 1010,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ProjectKeyData",
+            "bytes": 5148,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/RecTree",
+            "bytes": 254,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ResultHandler",
+            "bytes": 27411,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/TestProperties",
+            "bytes": 1645,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/XRefs",
+            "bytes": 1013,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/darwinit",
+            "bytes": 4634,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/hash",
+            "bytes": 87,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/main.nf",
+            "bytes": 14659,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/manage_assessment_data.py",
+            "bytes": 21336,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/map_relations.py",
+            "bytes": 13951,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/merge_data_model_files.py",
+            "bytes": 3281,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/nextflow.config",
+            "bytes": 2827,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/output",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/requirements.txt",
+            "bytes": 53,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/swissprot_benchmark.py",
+            "bytes": 14809,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/validate.py",
+            "bytes": 8782,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/vgnc_benchmark.py",
+            "bytes": 6907,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "original_filename_candidates": [],
+        "treefam_named_members": []
+      }
+    },
+    "e06796ef1dbe665e85768e9dadc39f81f4e44e79d3205a8d9a436fea680e23d7.inventory.json": {
+      "bytes": 8908,
+      "digest": "sha256:e872e546f4291d17bc03af6155a9f58fba90ab0537077f8ef5218aaf6e18d745",
+      "inventory": {
+        "member_count": 72,
+        "members": [
+          {
+            "name": "benchmark",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.dockerignore",
+            "bytes": 118,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.dockerignore.orig",
+            "bytes": 176,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.gitignore",
+            "bytes": 24,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_darwin",
+            "bytes": 677,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_python",
+            "bytes": 488,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.drw",
+            "bytes": 6902,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.sh",
+            "bytes": 2406,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.drw",
+            "bytes": 8501,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.sh",
+            "bytes": 3447,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/HomologyTest.drw",
+            "bytes": 6377,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/Benchmarking_minimal_datasets_schema.json",
+            "bytes": 5735,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/JSON_templates.py",
+            "bytes": 4039,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/__init__.py",
+            "bytes": 143,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/LICENSE",
+            "bytes": 17510,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/README.rst",
+            "bytes": 2180,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.drw",
+            "bytes": 7629,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.sh",
+            "bytes": 2442,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest-fixedsize.drw",
+            "bytes": 11570,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.drw",
+            "bytes": 12259,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.sh",
+            "bytes": 3682,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/TreeTest.drw",
+            "bytes": 9220,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/__pycache__",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/__pycache__/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/__pycache__/manage_assessment_data.cpython-37.pyc",
+            "bytes": 13162,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/build_dockers.sh",
+            "bytes": 307,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/fetch_reference_data.py",
+            "bytes": 2087,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/AddReconciledTree.drw",
+            "bytes": 15304,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/Converter.py",
+            "bytes": 5313,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateIDMapAndSeqDb.drw",
+            "bytes": 3196,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateSpeciesInfo.drw",
+            "bytes": 1158,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/NewDataset.sh",
+            "bytes": 1736,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateECdata.sh",
+            "bytes": 1401,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGOdata.sh",
+            "bytes": 192,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGeneralSTDTest.drw",
+            "bytes": 5295,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateHomologyTest.sh",
+            "bytes": 4338,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateLineageTree.drw",
+            "bytes": 2188,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/convert_ec.pl",
+            "bytes": 1590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_json_mapping.py",
+            "bytes": 2041,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_speciestree_samples.py",
+            "bytes": 4106,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_vgnc_asserted_orthologs.py",
+            "bytes": 2231,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/helpers.py",
+            "bytes": 1938,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/DisplayFunctions",
+            "bytes": 1471,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/EntryNav",
+            "bytes": 4123,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/GenerateTemplate",
+            "bytes": 2590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Index",
+            "bytes": 2824,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/JsonTemplates",
+            "bytes": 1273,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/LockFileOperations",
+            "bytes": 1691,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Logging",
+            "bytes": 940,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Parsing",
+            "bytes": 1010,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ProjectKeyData",
+            "bytes": 5148,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/RecTree",
+            "bytes": 254,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ResultHandler",
+            "bytes": 27411,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/TestProperties",
+            "bytes": 1645,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/XRefs",
+            "bytes": 1013,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/darwinit",
+            "bytes": 4634,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/hash",
+            "bytes": 87,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/main.nf",
+            "bytes": 10710,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/manage_assessment_data.py",
+            "bytes": 21292,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/map_relations.py",
+            "bytes": 13950,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/merge_data_model_files.py",
+            "bytes": 3280,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/nextflow.config",
+            "bytes": 2529,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/requirements.txt",
+            "bytes": 53,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/swissprot_benchmark.py",
+            "bytes": 14809,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/validate.py",
+            "bytes": 8782,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/vgnc_benchmark.py",
+            "bytes": 7020,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "original_filename_candidates": [],
+        "treefam_named_members": []
+      }
+    },
+    "f7196818ceab1ab6a0da9c182b1a4ffb1540a200563cf596a955e1eb73c90a90.inventory.json": {
+      "bytes": 7897,
+      "digest": "sha256:f462c6d6db87438f064cf04ff4dfec356f1e666ab6ef75780c863829dc4de3db",
+      "inventory": {
+        "member_count": 64,
+        "members": [
+          {
+            "name": "benchmark",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.dockerignore",
+            "bytes": 101,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/.gitignore",
+            "bytes": 24,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_darwin",
+            "bytes": 677,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/Dockerfile_qfo_python",
+            "bytes": 475,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.drw",
+            "bytes": 6902,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/EcTest.sh",
+            "bytes": 2406,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.drw",
+            "bytes": 8501,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/GoTest.sh",
+            "bytes": 3447,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/HomologyTest.drw",
+            "bytes": 6377,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/Benchmarking_minimal_datasets_schema.json",
+            "bytes": 5735,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/JSON_templates.py",
+            "bytes": 4039,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/JSON_templates/__init__.py",
+            "bytes": 143,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/LICENSE",
+            "bytes": 17510,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/README.rst",
+            "bytes": 2180,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.drw",
+            "bytes": 7629,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/RefPhyloTest.sh",
+            "bytes": 2442,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest-fixedsize.drw",
+            "bytes": 11570,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.drw",
+            "bytes": 12259,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/SpeciesTreeDiscordanceTest.sh",
+            "bytes": 3682,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/TreeTest.drw",
+            "bytes": 9220,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/build_dockers.sh",
+            "bytes": 282,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/fetch_reference_data.py",
+            "bytes": 2028,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/AddReconciledTree.drw",
+            "bytes": 15304,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/Converter.py",
+            "bytes": 5313,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateIDMapAndSeqDb.drw",
+            "bytes": 3196,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/GenerateSpeciesInfo.drw",
+            "bytes": 1158,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/NewDataset.sh",
+            "bytes": 1635,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateECdata.sh",
+            "bytes": 1401,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGOdata.sh",
+            "bytes": 192,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateGeneralSTDTest.drw",
+            "bytes": 5295,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateHomologyTest.sh",
+            "bytes": 4338,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/UpdateLineageTree.drw",
+            "bytes": 2188,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/convert_ec.pl",
+            "bytes": 1590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_json_mapping.py",
+            "bytes": 2041,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/generateData/generate_speciestree_samples.py",
+            "bytes": 4106,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib",
+            "bytes": 0,
+            "type": "5",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/.wh..wh..opq",
+            "bytes": 0,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/DisplayFunctions",
+            "bytes": 1471,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/EntryNav",
+            "bytes": 4123,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/GenerateTemplate",
+            "bytes": 2590,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Index",
+            "bytes": 2824,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/JsonTemplates",
+            "bytes": 1273,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/LockFileOperations",
+            "bytes": 1691,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Logging",
+            "bytes": 940,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/Parsing",
+            "bytes": 1010,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ProjectKeyData",
+            "bytes": 5148,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/RecTree",
+            "bytes": 254,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/ResultHandler",
+            "bytes": 27411,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/TestProperties",
+            "bytes": 1645,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/XRefs",
+            "bytes": 1013,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/darwinit",
+            "bytes": 4634,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/lib/hash",
+            "bytes": 87,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/main.nf",
+            "bytes": 8916,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/manage_assessment_data.py",
+            "bytes": 20936,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/map_relations.py",
+            "bytes": 11721,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/merge_data_model_files.py",
+            "bytes": 3280,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/nextflow.config",
+            "bytes": 2412,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/requirements.txt",
+            "bytes": 53,
+            "type": "0",
+            "linkname": ""
+          },
+          {
+            "name": "benchmark/validate.py",
+            "bytes": 8638,
+            "type": "0",
+            "linkname": ""
+          }
+        ],
+        "original_filename_candidates": [],
+        "treefam_named_members": []
+      }
+    }
+  },
+  "independent_readback": {
+    "registry_evidence_files": 11,
+    "inventories": 3,
+    "checks": "File size/SHA256 and selected descriptor/count consistency; no image execution"
+  }
+}
