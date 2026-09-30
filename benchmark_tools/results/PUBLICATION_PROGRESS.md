@@ -1,5 +1,34 @@
 # Publication Progress
 
+## FAS Completion Submitted As 22383 (2026-09-30)
+
+Committed/pushed the separately justified continuation at `bd9863bb` before
+submission. The [intent](qfo_fas_population_completion_submission_20260930_intent.json)
+and [response](qfo_fas_population_completion_submission_20260930.json) bind
+source, protocol/script, prior receipt and exact allocation command. The new
+job **22383** is confirmed RUNNING on bizon with one CPU, 16 GiB, three-hour
+limit and no requeue/restarts. Its log is initially empty; output existence
+alone is not used as a live/success signal. No completed new population result
+or table is available yet.
+
+121 focused tests and the actual boundary preflight pass. The preflight's Git
+checks concern the original producer and frozen inputs; new helper/test bytes
+are recorded there and subsequently committed before launch. It intentionally
+stops before lookup streaming or database joins and does not admit results.
+Original 22382 remains TIMEOUT. The six fixed checksum-bound rows are reused,
+not rerun; only the two missing joins are fresh. All eight current sample,
+input/source/database/stability checks and typed reuse provenance still gate
+the final report.
+
+Continue following **22383**, not the terminal 22382, without changing checked
+source, extending the allocation, submitting duplicates or repeating completed
+joins. Preserve a failure or discrepancy rather than choosing methods or scores.
+On terminal success, independently read back all eight identities, arithmetic,
+reuse bindings and raw scheduler outcome before rendering/publishing the table.
+The native scientific scores, OrthoHMM code/defaults and timing identities are
+unchanged. Controlled timing stays deferred; no host coordination, contention
+probe, unrelated process/service action or DGX access occurred. Goal stays active.
+
 ## Prepare Justified FAS Completion With Reuse (2026-09-30)
 
 Previous turn made progress by retaining the authoritative timeout and six
