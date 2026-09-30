@@ -1,5 +1,34 @@
 # Publication Progress
 
+## One Private-Runtime High-CPM Control Prepared (2026-09-30)
+
+User does not currently know a quiet Threadripper window; none is required now.
+Controlled timing remains deferred without new contention probes or repeated
+coordination questions. No DGX use or unrelated process/service action.
+Reread the objective/current ledger and retained controls. Accounting confirms
+22377, 22380 and 22383 still COMPLETED 0:0; none is rerun.
+
+The successful forced-GC wrapper retained its gene-universe set early and changed
+collection timing, so it cannot validate the original failure path. The
+[new fixed protocol](QFO_CPM_PRIVATE_RUNTIME_PROTOCOL_20260930.md) instead
+uses the unchanged original refinement-only CLI in the existing reconstructed
+private environment independently validated on full OrthoBench 22377.
+This is a distinct bounded runtime arm, not another debugger or forced-GC run.
+No optimizer, search, score/default change, package upgrade or automatic retry.
+
+The controller binds retained prerequisite/base/package/source/data identities,
+rejects changed evidence and escaped aliases, preserves expected hashes when
+canonicalizing interpreter aliases, and validates exact native output/metadata.
+It confines itself and native children to one CPU; children have 64-GiB address
+space, 300 CPU seconds and 360 wall seconds. All 38 focused controller and
+related diagnostic tests pass. Commit/push this preparation before attempting
+one actual child. Success cannot prove repair or causal runtime attribution;
+failed admission 22155 and all downstream gates remain unchanged.
+
+Timing isolation/overhead/handoff/final-source gates, recovered high-CPM admission,
+remaining QfO uncertainty/original TreeFam inputs, rights and final release
+remain open. Quiet timing access is not blocking this correctness work.
+
 ## External Phylogeny Notices Exported And Independently Checked (2026-09-30)
 
 Committed/pushed the tested workflow and fixed plan as `f707e041`, then ran one
