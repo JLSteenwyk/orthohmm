@@ -17,6 +17,7 @@ NATIVE = "benchmarks/results/qfo_cpm_checkpoint_recovery_v1"
 RUNNER = "benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/run_cpm_checkpoint_recovery.py"
 RUNNER_SHA = "a277ab01e7fbcbfaa15f7a63a092c78183baaabbbcc25cd23640f6a750eabbe2"
 PROTOCOL = "benchmark_tools/results/QFO_CPM_PRIVATE_RUNTIME_PROTOCOL_20260930.md"
+HELPER_PROTOCOL = "benchmark_tools/results/QFO_CPM_HELPER_ENVIRONMENT_PROTOCOL_20260930.md"
 PINS = {
     "benchmark_tools/results/restored_archive_full_ob_result_22377.json":
         "43e882d1795996c567b6348d33d547052b708910a61a8bd5cf7da0ce059ba4da",
@@ -114,13 +115,30 @@ def unique_records(records):
     return list(indexed.values())
 
 
-def _run(root, output, protocol_sha):
+def prepared_runtime(path, expected_sha):
+    identity = record(path)
+    if identity["sha256"] != expected_sha:
+        raise ValueError("Changed helper environment receipt")
+    prepared = json.loads(path.read_bytes())
+    if (prepared["status"] != "helper_complete_private_environment_prepared"
+            or prepared["refinement_attempts"] != 0
+            or any(prepared[key] is not False for key in
+                   ("seed_admitted", "accuracy_evaluated", "publication_ready"))):
+        raise ValueError("Helper environment not independently prepared")
+    prefix = Path(prepared["prefix"])
+    if prepared["interpreter"] != record(prefix / "bin/python"):
+        raise ValueError("Changed prepared interpreter")
+    check([*prepared["checked_records"], prepared["import_report"], prepared["base_python"]])
+    return prepared, identity
+
+
+def _run(root, output, protocol_sha, prepared_path=None, prepared_sha=None):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     pins = [record(root / name) for name in PINS]
     if [row["sha256"] for row in pins] != list(PINS.values()):
         raise ValueError("Changed prerequisite evidence")
-    protocol = record(root / PROTOCOL)
+    protocol = record(root / (HELPER_PROTOCOL if prepared_path is not None else PROTOCOL))
     if protocol["sha256"] != protocol_sha:
         raise ValueError("Unreviewed private-runtime protocol")
     restored = json.loads((root / next(iter(PINS))).read_bytes())
@@ -131,18 +149,27 @@ def _run(root, output, protocol_sha):
     package_audit = json.loads((root / RESTORED / "independent_admission/package_audits.json").read_bytes())
     prior = json.loads((root / "benchmark_tools/results/qfo_cpm_refinement_gc_20260928.json").read_bytes())
     reference = json.loads((root / NATIVE / "refinement.json").read_bytes())
-    prefix = root / RESTORED / "run/inference"
+    prepared, prepared_identity = (prepared_runtime(prepared_path, prepared_sha)
+                                  if prepared_path is not None else (None, None))
+    prefix = Path(prepared["prefix"]) if prepared else root / RESTORED / "run/inference"
     python = prefix / "bin/python"
-    base = python.resolve().parent.parent
+    restored_python = root / RESTORED / "run/inference/bin/python"
+    base = restored_python.resolve().parent.parent
     base_records = bound_base_records(plan, base)
-    if not base_records or not any(row["path"] == str(python.resolve()) for row in base_records):
+    if not base_records or not any(row["path"] == str(restored_python.resolve()) for row in base_records):
         raise ValueError("Private interpreter is not bound to restored base")
+    if prepared and (Path(prepared["base_prefix"]).resolve() != base
+                     or prepared["base_python"] != record(restored_python)):
+        raise ValueError("Prepared helper base differs from restored base")
     records = [*pins, protocol, record(__file__),
                record(root / "benchmark_tools/probe_cpm_partition_parser.py"),
                record(root / "benchmark_tools/audit_failed_recovery_refinement.py"),
                *prior["checked_records"],
-               *reference["modules"], *base_records,
-               *package_records(package_audit["inference"], prefix / "lib/python3.10/site-packages")]
+               *reference["modules"], *base_records]
+    if prepared:
+        records.extend([prepared_identity, *prepared["checked_records"], prepared["import_report"]])
+    else:
+        records.extend(package_records(package_audit["inference"], prefix / "lib/python3.10/site-packages"))
     runner = record(root / RUNNER)
     if runner["sha256"] != RUNNER_SHA:
         raise ValueError("Changed frozen refinement runner")
@@ -165,6 +192,8 @@ def _run(root, output, protocol_sha):
             "No forced GC, debugger, optimizer, scoring, automatic retry or dependency release.",
             "Private package/base pins omit generated metadata/bytecode and relocated non-site wheel data.",
             "Original failed admission and all historical runtime/source records remain unchanged."])
+    if prepared:
+        report["helper_environment"] = prepared_identity
     started = time.monotonic()
     try:
         probe_code = ("import gc,json,sys,numpy;print(json.dumps(dict(version=sys.version,"
@@ -206,12 +235,14 @@ def _run(root, output, protocol_sha):
     return report
 
 
-def run(root, output, protocol_sha):
+def run(root, output, protocol_sha, prepared_path=None, prepared_sha=None):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     os.sched_setaffinity(0, {min(os.sched_getaffinity(0))})
     try:
-        return _run(root, output, protocol_sha)
+        if (prepared_path is None) != (prepared_sha is None):
+            raise ValueError("Require both helper receipt and its SHA256")
+        return _run(root, output, protocol_sha, prepared_path, prepared_sha)
     except BaseException as error:
         output.mkdir(parents=True, exist_ok=True)
         if not (output / "report.json").exists():
@@ -228,5 +259,8 @@ if __name__ == "__main__":
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--protocol-sha256", required=True)
+    parser.add_argument("--prepared-environment", type=Path)
+    parser.add_argument("--prepared-sha256")
     args = parser.parse_args()
-    run(args.root.resolve(), args.output.absolute(), args.protocol_sha256)
+    run(args.root.resolve(), args.output.absolute(), args.protocol_sha256,
+        args.prepared_environment, args.prepared_sha256)

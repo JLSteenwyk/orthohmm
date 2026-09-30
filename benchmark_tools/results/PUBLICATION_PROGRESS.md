@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Helper-Complete Private Arm Prepared For Installation (2026-09-30)
+
+Previous turn made progress: one private-runtime import failure was retained,
+independently checked and pushed as `d5bd5eec`. Reread objective/newest ledger
+and historical worker's actual import chain. Accounting confirms completed
+22377, 22380 and 22383 unchanged; no expensive successful analysis was repeated.
+
+The missing Biopython is already present as a retained hash-pinned reader wheel.
+The [prospective new arm](QFO_CPM_HELPER_ENVIRONMENT_PROTOCOL_20260930.md)
+combines only that wheel with the exact eleven retained restored inference
+wheels in a new offline venv. No mutation of either existing environment or
+package resolution/acquisition. The preparation gates include actual complete
+worker imports, their observed roots/files, exact package inventory, `pip check`,
+wheel/installed-payload equality, copied interpreter and retained base records.
+The diagnostic controller accepts an explicitly hash-bound successful preparation
+receipt while preserving the older arm's default behavior and historical evidence.
+
+All 79 focused preparation/controller/related diagnostic/package tests pass.
+Commit/push code/tests/protocol before one actual preparation. If preparation
+passes, independently read back and commit its receipt before the one distinct
+refinement attempt. Keep all failures and forbid automatic retries. Success
+cannot identify corruption cause or repair 22155; scientific admission remains
+a separate gate. No default, endpoint, score or timing identity changes.
+
+Timing stays deferred without new contention probes, coordination questions,
+DGX access or unrelated job/service action. Controlled timing, recovered high-CPM
+admission, remaining QfO uncertainty/original TreeFam inputs, rights and final
+release requirements remain unfinished. Full goal stays active.
+
 ## Private-Runtime Control Failed Before Refinement (2026-09-30)
 
 Committed/pushed the fixed protocol/controller/tests as `d9b31d24`, then made
