@@ -107,6 +107,86 @@ def test_repeat_output_refused(prepared):
         build(prepared)
 
 
+def custom_stages(prepared):
+    repo, _, newer, output = prepared
+    stages = {key: f"benchmark_tools/results/new_{key}.json" for key in ("render", "print", "review")}
+    render = json.loads((repo / bundle.RENDER).read_text())
+    save_json(repo / stages["render"], render)
+    replacement = dict(path="/historical/worktree/" + stages["render"],
+                       **bundle.identity((repo / stages["render"]).read_bytes()))
+    for role, old in (("print", bundle.PRINT), ("review", bundle.REVIEW)):
+        data = json.loads((repo / old).read_text())
+        data["checked_records"] = [replacement if row["path"].endswith("/" + bundle.RENDER) else row
+                                   for row in data["checked_records"]]
+        save_json(repo / stages[role], data)
+    subprocess.run(["git", "-C", str(repo), "add", *stages.values()], check=True)
+    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "new selected stages"], check=True)
+    latest = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
+    return repo, latest, prepared[1], newer, output, stages
+
+
+def test_explicit_stages_and_offline_v2(prepared, tmp_path):
+    repo, latest, ledger, workflow, output, stages = custom_stages(prepared)
+    result = bundle.build(repo, latest, ledger, workflow, output, stages=stages)
+    index = json.loads((output / "REVIEW_INDEX.json").read_text())
+    assert index["schema"] == "publication_direct_review_v2"
+    assert index["stages"] == stages
+    assert not (output / bundle.RENDER).exists()
+    assert (output / stages["render"]).exists()
+    shutil.rmtree(repo)
+    completed = subprocess.run([sys.executable, "-I", "-B", str(output / bundle.RUNNER),
+        "verify", str(output), "--manifest-sha256", result["manifest"]["sha256"]],
+        capture_output=True, text=True, check=True, env={"PATH": "/no-git"})
+    assert json.loads(completed.stdout) == result
+
+
+@pytest.mark.parametrize("stages", [
+    {}, {"render": "a.json"},
+    dict(render="../a.json", print="b.json", review="c.json"),
+    dict(render="a.json", print="a.json", review="c.json"),
+    dict(render="a.html", print="b.json", review="c.json"),
+    dict(render="REVIEW_INDEX.json", print="b.json", review="c.json"),
+    dict(render="a.json", print="b.json", review="c.json", extra="d.json")])
+def test_bad_stage_paths_fail_before_export(prepared, stages):
+    repo, older, newer, output = prepared
+    with pytest.raises(ValueError):
+        bundle.build(repo, newer, older, newer, output, stages=stages)
+    assert not output.exists()
+
+
+@pytest.mark.parametrize("kind", ["missing", "null", "different", "legacy_override"])
+def test_stage_manifest_tampering(prepared, kind):
+    repo, latest, ledger, workflow, output, stages = custom_stages(prepared)
+    bundle.build(repo, latest, ledger, workflow, output, stages=stages)
+    path = output / "REVIEW_INDEX.json"
+    index = json.loads(path.read_text())
+    if kind == "missing":
+        del index["stages"]
+    elif kind == "null":
+        index["stages"] = None
+    elif kind == "different":
+        index["stages"]["render"] = "wrong.json"
+    else:
+        index["schema"] = "publication_direct_review_v1"
+    save_json(path, index)
+    with pytest.raises(ValueError):
+        bundle.verify(output, bundle.identity(path.read_bytes())["sha256"])
+
+
+def test_selected_render_chain_must_be_checked(prepared):
+    repo, latest, ledger, workflow, output, stages = custom_stages(prepared)
+    path = repo / stages["print"]
+    data = json.loads(path.read_text())
+    data["checked_records"] = [row for row in data["checked_records"]
+                               if not row["path"].endswith("/" + stages["render"])]
+    save_json(path, data)
+    subprocess.run(["git", "-C", str(repo), "add", stages["print"]], check=True)
+    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "unbound print"], check=True)
+    latest = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
+    with pytest.raises(ValueError, match="Selected render/print/review chain"):
+        bundle.build(repo, latest, ledger, workflow, output, stages=stages)
+
+
 @pytest.mark.parametrize("kind", ["changed", "missing", "extra", "symlink", "parent_symlink", "mode"])
 def test_payload_changes_rejected(prepared, tmp_path, kind):
     output, result = build(prepared)

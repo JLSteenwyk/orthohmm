@@ -1,0 +1,92 @@
+{
+  "foreign_average_cores": 80.99266718649275,
+  "limitations": [
+    "Three-second non-atomic process observation, not whole-run monitoring or a future load forecast.",
+    "Positive unrelated scientific CPU was observed; an empty scheduler queue does not establish quietness."
+  ],
+  "persistent_foreign_processes": [
+    {
+      "average_cores": 15.993941824338345,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-pmsf-memory-recovery-20260928.service",
+      "cpu_s": 66.60999999986961,
+      "created": 1790640416.57,
+      "name": "iqtree3",
+      "pid": 2472548,
+      "span_s": 4.164701905974653
+    },
+    {
+      "average_cores": 8.00046414023962,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/tmux-spawn-0627ad9c-c122-4329-8323-12ec68f8e95b.scope",
+      "cpu_s": 33.32000000006519,
+      "created": 1790640475.4,
+      "name": "iqtree3",
+      "pid": 2473441,
+      "span_s": 4.164758371014614
+    },
+    {
+      "average_cores": 7.869012498543809,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-neocallimastix-guides-20260927-v2.service",
+      "cpu_s": 32.779999999911524,
+      "created": 1790688363.67,
+      "name": "iqtree3",
+      "pid": 87154,
+      "span_s": 4.165706943022087
+    },
+    {
+      "average_cores": 3.999130852372566,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-hybrid-excluded-guides-20260927.service",
+      "cpu_s": 16.670000000032815,
+      "created": 1790512421.87,
+      "name": "iqtree3",
+      "pid": 2683462,
+      "span_s": 4.168405739997979
+    },
+    {
+      "average_cores": 1.3607564303193675,
+      "cgroup": "/system.slice/docker-ba65da67e5b9e3d1c543e6716268914796a8add79fe1ceefc915d2e6974d346b.scope",
+      "cpu_s": 5.67,
+      "created": 1790779459.41,
+      "name": "python",
+      "pid": 2524239,
+      "span_s": 4.166800078004599
+    },
+    {
+      "average_cores": 1.0034313096998773,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-whole-protein-ml-20260929.service",
+      "cpu_s": 4.179999999998245,
+      "created": 1790709687.57,
+      "name": "python",
+      "pid": 436697,
+      "span_s": 4.165706172003411
+    },
+    {
+      "average_cores": 1.0010658085979711,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-whole-protein-ml-20260929.service",
+      "cpu_s": 4.170000000001778,
+      "created": 1790709687.56,
+      "name": "python",
+      "pid": 436686,
+      "span_s": 4.165560310008004
+    },
+    {
+      "average_cores": 1.0010607902686848,
+      "cgroup": "/user.slice/user-1000.slice/user@1000.service/app.slice/fungal-whole-protein-ml-20260929.service",
+      "cpu_s": 4.169999999998254,
+      "created": 1790709687.55,
+      "name": "python",
+      "pid": 436683,
+      "span_s": 4.165581192006357
+    }
+  ],
+  "production_run_launched": false,
+  "quiet_window_established": false,
+  "raw": {
+    "bytes": 1533114,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_goal_preflight_20260930.json",
+    "sha256": "738edfec26a37070c890d1b5b1b0b34efb52dafb83014d32f6ff373c22361146"
+  },
+  "sampling_errors": 1,
+  "signals_sent": false,
+  "status": "competing_cpu_observed",
+  "timestamp_utc": "2026-09-30T14:44:57.852372+00:00"
+}

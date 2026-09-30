@@ -6,7 +6,7 @@ receipts with page images. It reads committed Git blobs, not current worktree
 files, and preserves their relative paths. The independently pinned index
 permits offline verification using only the Python standard library.
 
-The review revision is `e2e96746b21d552ea46b9ce63634519f9bae1f82`. The ledger
+The default historical review revision is `e2e96746b21d552ea46b9ce63634519f9bae1f82`. The ledger
 snapshot used during rendering is its parent,
 `fdfe7fb70c583a6ad4ea5c4ae06dd2663d31b07f`; the later ledger must not replace
 it just because it has more current status. Both revisions are checked against
@@ -18,6 +18,27 @@ python -B benchmark_tools/bundle_publication_review.py build \
   --repo . --workflow-revision COMMITTED_WORKFLOW_REVISION \
   --output /absolute/fresh/main-text-review
 ```
+
+For a newer committed review, explicitly select all three repository-relative
+stage receipts. Do not rename or overwrite old receipts. The ledger revision
+must supply the exact snapshot pinned during rendering, which may precede
+the commit that added the new review artifacts:
+
+```sh
+python -B benchmark_tools/bundle_publication_review.py build \
+  --repo . --review-revision NEW_REVIEW_COMMIT \
+  --ledger-revision ACTUAL_RENDER_TIME_LEDGER_COMMIT \
+  --workflow-revision COMMITTED_WORKFLOW_REVISION \
+  --render-receipt benchmark_tools/results/publication_main_render_20260930_v1.json \
+  --print-receipt benchmark_tools/results/publication_main_print_20260930_v1/print.json \
+  --review-receipt benchmark_tools/results/publication_main_pdf_review_20260930_v1/report.json \
+  --output /absolute/fresh/new-main-text-review
+```
+
+Explicit selection produces a `publication_direct_review_v2` index containing
+the stage-path mapping and verifies the selected render/print/PDF chain.
+The default historical export remains schema v1; both formats are supported
+by the current offline verifier. Neither selects files from a dirty worktree.
 
 The result reports the index SHA-256 and relative HTML/Markdown/PDF entrypoints.
 After relocation, supply that external digest, rather than trusting a digest

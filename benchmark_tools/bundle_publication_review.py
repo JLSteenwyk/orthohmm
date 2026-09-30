@@ -35,6 +35,18 @@ def relative(name):
     return name
 
 
+def stage_paths(stages=None):
+    if stages is None:
+        return dict(render=RENDER, print=PRINT, review=REVIEW)
+    if not isinstance(stages, dict) or set(stages) != {"render", "print", "review"}:
+        raise ValueError("Require exactly render/print/review stage paths")
+    paths = [relative(stages[key]) for key in ("render", "print", "review")]
+    if (len(set(paths)) != 3 or any(not path.endswith(".json") for path in paths)
+            or set(paths) & {MAIN, LEDGER, RUNNER, GUIDE, "LICENSE.md", "REVIEW_INDEX.json"}):
+        raise ValueError("Stage paths must be distinct JSON receipts, not support files")
+    return dict(zip(("render", "print", "review"), paths))
+
+
 def pin(row):
     if (type(row["bytes"]) is not int or row["bytes"] < 0
             or not isinstance(row["sha256"], str)
@@ -127,11 +139,19 @@ def verify(directory, manifest_sha):
     if index.is_symlink() or identity(index.read_bytes())["sha256"] != manifest_sha:
         raise ValueError("Review index differs from external digest")
     manifest = json.loads(index.read_bytes())
-    if (manifest["schema"] != "publication_direct_review_v1"
+    if (manifest["schema"] not in {"publication_direct_review_v1", "publication_direct_review_v2"}
             or manifest["publication_ready"] is not False
             or manifest["redistribution_clearance"] is not False
             or manifest["transitive_evidence_included"] is not False):
         raise ValueError("Review component scope differs")
+    if manifest["schema"] == "publication_direct_review_v2":
+        if not isinstance(manifest.get("stages"), dict):
+            raise ValueError("Missing explicit stage paths")
+        stages = stage_paths(manifest["stages"])
+    else:
+        if "stages" in manifest:
+            raise ValueError("Historical schema cannot override stage paths")
+        stages = stage_paths()
     payloads = {}
     for row in manifest["files"]:
         name = relative(row["path"])
@@ -149,10 +169,10 @@ def verify(directory, manifest_sha):
     actual = {p.relative_to(directory).as_posix() for p in directory.rglob("*") if p.is_file() or p.is_symlink()}
     if actual != set(payloads) | {"REVIEW_INDEX.json"}:
         raise ValueError("Extra or missing review payloads")
-    support = {RUNNER, GUIDE, "LICENSE.md", RENDER, PRINT, REVIEW}
+    support = {RUNNER, GUIDE, "LICENSE.md", *stages.values()}
     if not support <= payloads.keys():
         raise ValueError("Missing review support files")
-    render, printed, reviewed = [json.loads(payloads[name]) for name in (RENDER, PRINT, REVIEW)]
+    render, printed, reviewed = [json.loads(payloads[stages[key]]) for key in ("render", "print", "review")]
     _, expected, external, targets = evidence(render, printed, reviewed)
     if set(payloads) != set(expected) | support:
         raise ValueError("Unexpected or missing historical review inventory")
@@ -161,6 +181,14 @@ def verify(directory, manifest_sha):
     for name, row in expected.items():
         if identity(payloads[name]) != row:
             raise ValueError("Historical review identity differs")
+    if manifest["schema"] == "publication_direct_review_v2":
+        render_name = stages["render"]
+        if (render_name not in expected or identity(payloads[render_name]) != expected[render_name]
+                or not all(any(mapped(row, historical_root(render)) == render_name
+                               and pin(row) == identity(payloads[render_name]) for row in stage["checked_records"])
+                           for stage in (printed, reviewed))
+                or not any(row == printed["pdf"] for row in reviewed["checked_records"])):
+            raise ValueError("Selected render/print/review chain differs")
     html_name = mapped(render["html"], historical_root(render))
     links = direct_links(payloads[html_name], html_name)
     if set(links) != set(targets):
@@ -189,16 +217,18 @@ def committed(repo, revision, name):
     return content, int(mode, 8) & 0o777, blob
 
 
-def build(repo, review_revision, ledger_revision, workflow_revision, output):
+def build(repo, review_revision, ledger_revision, workflow_revision, output, *, stages=None):
     repo, output = Path(repo).resolve(), Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     revisions = [subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", r + "^{commit}"], text=True).strip()
                  for r in (review_revision, ledger_revision, workflow_revision)]
     review_revision, ledger_revision, workflow_revision = revisions
-    render, printed, reviewed = [json.loads(committed(repo, review_revision, name)[0]) for name in (RENDER, PRINT, REVIEW)]
+    selected = stage_paths(stages)
+    render, printed, reviewed = [json.loads(committed(repo, review_revision, selected[key])[0])
+                                for key in ("render", "print", "review")]
     root, expected, external, _ = evidence(render, printed, reviewed)
-    support = {RUNNER, GUIDE, "LICENSE.md", RENDER, PRINT, REVIEW}
+    support = {RUNNER, GUIDE, "LICENSE.md", *selected.values()}
     payloads, rows = {}, []
     for name in sorted(set(expected) | support):
         revision = workflow_revision if name in {RUNNER, GUIDE, "LICENSE.md"} else ledger_revision if name == LEDGER else review_revision
@@ -207,7 +237,7 @@ def build(repo, review_revision, ledger_revision, workflow_revision, output):
             raise ValueError("Committed review bytes differ from historical receipt: " + name)
         payloads[name] = content
         rows.append(dict(path=name, mode=mode, git_revision=revision, git_blob=blob, **identity(content)))
-    manifest = dict(schema="publication_direct_review_v1", files=rows,
+    manifest = dict(schema="publication_direct_review_v2" if stages is not None else "publication_direct_review_v1", files=rows,
         entrypoints=dict(html=mapped(render["html"], root), markdown=MAIN, pdf=mapped(printed["pdf"], root)),
         external_provenance_not_included=external, publication_ready=False,
         redistribution_clearance=False, transitive_evidence_included=False,
@@ -216,6 +246,8 @@ def build(repo, review_revision, ledger_revision, workflow_revision, output):
             "The preserved PDF may contain workstation-specific link annotations; use the relative HTML links.",
             "External URLs, fragment anchors, scientific correctness and rights are not certified.",
             "No inference, scoring, plotting, rendering, installation or public release is performed."])
+    if stages is not None:
+        manifest["stages"] = selected
     output.mkdir(parents=True, exist_ok=False)
     for row in rows:
         path = output / row["path"]
@@ -238,9 +270,19 @@ if __name__ == "__main__":
     builder.add_argument("--ledger-revision", default=LEDGER_REVISION)
     builder.add_argument("--workflow-revision", required=True)
     builder.add_argument("--output", type=Path, required=True)
+    for role in ("render", "print", "review"):
+        builder.add_argument("--" + role + "-receipt", help="Committed repository-relative JSON path; supply all three")
     verifier = commands.add_parser("verify")
     verifier.add_argument("directory", type=Path)
     verifier.add_argument("--manifest-sha256", required=True)
     args = parser.parse_args()
-    result = build(args.repo, args.review_revision, args.ledger_revision, args.workflow_revision, args.output) if args.command == "build" else verify(args.directory, args.manifest_sha256)
+    if args.command == "build":
+        stages = {role: getattr(args, role + "_receipt") for role in ("render", "print", "review")}
+        if all(value is None for value in stages.values()):
+            stages = None
+        elif any(value is None for value in stages.values()):
+            parser.error("Explicit stage selection requires all three receipts")
+        result = build(args.repo, args.review_revision, args.ledger_revision, args.workflow_revision, args.output, stages=stages)
+    else:
+        result = verify(args.directory, args.manifest_sha256)
     print(json.dumps(result, indent=2, sort_keys=True))
