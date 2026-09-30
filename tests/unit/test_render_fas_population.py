@@ -65,3 +65,51 @@ def test_rejects_inconsistent_arithmetic_or_provenance(field, value):
     report["methods"][0][field] = value
     with pytest.raises(ValueError):
         validate(report, manifest)
+
+
+def continued_fixture():
+    report, manifest = fixture()
+    report["status"] = "retained_fas_eligible_populations_completed_with_reuse"
+    report["reuse"] = dict(original_job_id=22382, original_state="TIMEOUT",
+        original_final_stability_pass_completed=False,
+        historical_parser_hash_identity_established=False,
+        completion_input_stability_pass_completed=True,
+        fresh_database_recounts=2, reused_database_recounts=6)
+    for index, row in enumerate(report["methods"]):
+        row["reused_prior_recount"] = index < 6
+    return report, manifest
+
+
+def test_continuation_displays_reuse_and_retains_all_eight():
+    report, manifest = continued_fixture()
+    text = render(report, manifest)
+    assert "timed-out attempt 22382" in text
+    assert "FastOMA and OrthoMCL are freshly recounted" in text
+    assert text.count("| Method ") == 9
+
+
+@pytest.mark.parametrize("field,value", [("original_state", "COMPLETED"),
+    ("original_final_stability_pass_completed", True),
+    ("historical_parser_hash_identity_established", True),
+    ("completion_input_stability_pass_completed", False),
+    ("fresh_database_recounts", 2.0), ("reused_database_recounts", 5)])
+def test_continuation_cannot_hide_original_failure_or_missing_stability(field, value):
+    report, manifest = continued_fixture()
+    report["reuse"][field] = value
+    with pytest.raises(ValueError):
+        validate(report, manifest)
+
+
+@pytest.mark.parametrize("value", [False, 1, None])
+def test_continuation_requires_explicit_typed_reuse_markers(value):
+    report, manifest = continued_fixture()
+    report["methods"][0]["reused_prior_recount"] = value
+    with pytest.raises(ValueError):
+        validate(report, manifest)
+
+
+def test_continuation_cannot_masquerade_as_original_fresh_pass():
+    report, manifest = continued_fixture()
+    report["status"] = "retained_fas_eligible_populations_recounted"
+    with pytest.raises(ValueError, match="fresh original"):
+        validate(report, manifest)

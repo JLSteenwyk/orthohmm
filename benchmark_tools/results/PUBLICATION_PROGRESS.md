@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Prepare Justified FAS Completion With Reuse (2026-09-30)
+
+Previous turn made progress by retaining the authoritative timeout and six
+partial recounts, independently checking database hashes/arithmetic and pushing
+`74297963`. Reread the full objective/current ledger and revalidated 22382 as
+terminal TIMEOUT through accounting. The job is not live and was not restarted.
+
+Added a [prospective completion amendment](QFO_FAS_COMPLETION_AMENDMENT_20260930.md)
+to finish the original eight-method question without repeating six expensive
+joins. The fixed receipt/prefix, unchanged database bytes and original producer
+and input Git bindings gate reuse. Only FastOMA/OrthoMCL are newly scanned;
+the lookup must be rebuilt because the original in-memory index was not saved.
+Fresh sample checks, all eight identities and current before/after stability
+remain mandatory. The original failed allocation, omitted original final
+stability pass and unknown historical parser-file identity stay explicit.
+
+121 focused tests pass, including new reuse/order/scope, sample-ID, source-proof
+metadata and WAL/journal controls. The [actual boundary preflight](fas_population_completion_preflight_20260930.json)
+validates current prior/source/input/annotation/command/database/package bindings
+through the lookup entrypoint, then intentionally stops before streaming or
+joining. It is not a scientific result or execution-readiness admission.
+The renderer rejects selected panels and continuation masquerading as a fresh
+original pass. No code, source or scientific default of OrthoHMM was changed.
+
+After committing/pushing, submit one separately documented completion attempt
+with one CPU/16 GiB/180-minute limit, no automatic retry/requeue or host-isolation
+claim. Preserve any failure and do not select passing methods. Controlled timing
+remains deferred, with no new quiet-window question, contention probe, unrelated
+job signal or DGX access. The full publication goal remains active.
+
 ## FAS Audit Timed Out; Six Partial Checks Preserved (2026-09-30)
 
 Previous turn made progress by pushing the exact scoring specification,

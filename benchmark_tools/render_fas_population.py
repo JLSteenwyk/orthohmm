@@ -9,9 +9,32 @@ from benchmark_tools.map_corrected_vgnc_blocks import MANIFEST, MANIFEST_SHA
 from benchmark_tools.prepare_ob_candidate_neighborhood import record, check
 
 
+def validate_row(row, method):
+    if (row["method"] != method["key"] or row["native_counts_match"] is not True
+            or row["saved_lookup_strata_and_values_match"] is not True
+            or row["database_historically_hash_bound"] is not False):
+        raise ValueError("Invalid recount/sample or historical database claim")
+    fields = ("distinct_query_pairs", "skipped_alias_pairs", "precomputed", "missing", "unannotated", "eligible_pairs")
+    if any(type(row[k]) is not int or row[k] < 0 for k in fields):
+        raise ValueError("Population counts must be nonnegative integers")
+    p, m, n, s = row["precomputed"], row["missing"], row["eligible_pairs"], row["precomputed_score_sum"]
+    if (n <= 0 or n != p + m or n != method["details"]["FAS"]["assessed_relations"]
+            or row["distinct_query_pairs"] != n + row["unannotated"] + row["skipped_alias_pairs"]
+            or type(s) not in (int, float) or not math.isfinite(s) or not 0 <= s <= p):
+        raise ValueError("Counts or score sum inconsistent")
+    if any(row["native_logged_counts"][k] != row[k] for k in ("precomputed", "missing", "unannotated")):
+        raise ValueError("Native count equality is not reproduced")
+    expected = [s / n, (s + m) / n]
+    observed = row["hypothetical_full_mean_bounds"]
+    if len(observed) != 2 or any(a != b for a, b in zip(observed, expected)):
+        raise ValueError("Completion-bound arithmetic differs")
+
+
 def validate(report, manifest):
     methods, rows = manifest["methods"], report["methods"]
-    if (report.get("status") != "retained_fas_eligible_populations_recounted"
+    continued = report.get("status") == "retained_fas_eligible_populations_completed_with_reuse"
+    if (report.get("status") not in {"retained_fas_eligible_populations_recounted",
+                                     "retained_fas_eligible_populations_completed_with_reuse"}
             or report.get("uncertainty_admitted") is not False
             or report.get("benchmark_scores_changed") is not False
             or report.get("publication_ready") is not False
@@ -20,24 +43,23 @@ def validate(report, manifest):
             or [r["method"] for r in rows] != [m["key"] for m in methods]):
         raise ValueError("Require the complete unchanged eight-method recount")
     for row, method in zip(rows, methods):
-        if (row["native_counts_match"] is not True
-                or row["saved_lookup_strata_and_values_match"] is not True
-                or row["database_historically_hash_bound"] is not False):
-            raise ValueError("Invalid recount/sample or historical database claim")
-        fields = ("distinct_query_pairs", "skipped_alias_pairs", "precomputed", "missing", "unannotated", "eligible_pairs")
-        if any(type(row[k]) is not int or row[k] < 0 for k in fields):
-            raise ValueError("Population counts must be nonnegative integers")
-        p, m, n, s = row["precomputed"], row["missing"], row["eligible_pairs"], row["precomputed_score_sum"]
-        if (n <= 0 or n != p + m or n != method["details"]["FAS"]["assessed_relations"]
-                or row["distinct_query_pairs"] != n + row["unannotated"] + row["skipped_alias_pairs"]
-                or not isinstance(s, (int, float)) or not math.isfinite(s) or not 0 <= s <= p):
-            raise ValueError("Counts or score sum inconsistent")
-        if any(row["native_logged_counts"][k] != row[k] for k in ("precomputed", "missing", "unannotated")):
-            raise ValueError("Native count equality is not reproduced")
-        expected = [s / n, (s + m) / n]
-        observed = row["hypothetical_full_mean_bounds"]
-        if len(observed) != 2 or any(a != b for a, b in zip(observed, expected)):
-            raise ValueError("Completion-bound arithmetic differs")
+        validate_row(row, method)
+    if not continued and ("reuse" in report or any("reused_prior_recount" in r for r in rows)):
+        raise ValueError("Continuation cannot be labeled as a fresh original pass")
+    if continued:
+        reuse = report["reuse"]
+        if (type(reuse.get("original_job_id")) is not int or reuse.get("original_job_id") != 22382
+                or reuse.get("original_state") != "TIMEOUT"
+                or reuse.get("original_final_stability_pass_completed") is not False
+                or reuse.get("historical_parser_hash_identity_established") is not False
+                or reuse.get("completion_input_stability_pass_completed") is not True
+                or type(reuse.get("fresh_database_recounts")) is not int
+                or type(reuse.get("reused_database_recounts")) is not int
+                or reuse.get("fresh_database_recounts") != 2
+                or reuse.get("reused_database_recounts") != 6
+                or any(type(r.get("reused_prior_recount")) is not bool for r in rows)
+                or [r.get("reused_prior_recount") for r in rows] != [True] * 6 + [False] * 2):
+            raise ValueError("Invalid continuation provenance or stability scope")
     return rows
 
 
@@ -50,6 +72,11 @@ def render(report, manifest):
         "new retained identities, not independent historical checksum bindings.", "",
         "| Method | Eligible pairs | Precomputed | Uncomputed | Precomputed mean | Hypothetical full-mean bound |",
         "| --- | ---: | ---: | ---: | ---: | ---: |"]
+    if report["status"] == "retained_fas_eligible_populations_completed_with_reuse":
+        lines[2:2] = ["Six unchanged recount rows are reused from timed-out attempt 22382;",
+                      "FastOMA and OrthoMCL are freshly recounted. The timeout remains retained.",
+                      "The continuation checks current input stability, not the original parser's",
+                      "historical file identity or a missing original final stability pass.", ""]
     for row in rows:
         mean = row["precomputed_score_sum"] / row["precomputed"] if row["precomputed"] else None
         label = next(m["label"] for m in manifest["methods"] if m["key"] == row["method"])

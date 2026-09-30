@@ -1,0 +1,60 @@
+{
+  "actual_six_row_schemas_and_command_database_bytes_checked": true,
+  "annotation_and_current_package_input_bindings_checked": true,
+  "checked_files": [
+    {
+      "bytes": 11437,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/complete_fas_population.py",
+      "sha256": "41e29c8a22e8017c52a64fa5bce336290a0cc94a62e0b0b603d5b287345e1bbf"
+    },
+    {
+      "bytes": 12111,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_fas_population.py",
+      "sha256": "169775ed7cb63c9086104ea9f8d98c2ca3738181d0c6863237bee3acf3968c6a"
+    },
+    {
+      "bytes": 6527,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_fas_population.py",
+      "sha256": "b092998ea4c9cde784a58f7ef2cbcaaa9fa983c41811ab22281f54e12edc7e98"
+    },
+    {
+      "bytes": 4245,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_complete_fas_population.py",
+      "sha256": "88a4c75b5f8e59e6e84fa730bec703d6ef2389d20ac2bdf460d23f9e61f3f149"
+    },
+    {
+      "bytes": 4778,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_render_fas_population.py",
+      "sha256": "804287cc465d78f1609d757aae317539d213d8969b62aabddfba944982b501f8"
+    },
+    {
+      "bytes": 4313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_FAS_COMPLETION_AMENDMENT_20260930.md",
+      "sha256": "7a8ecbbb5eb253abb6f227c2eef731eda8bd1606ed57f76566f42b4351cff67e"
+    },
+    {
+      "bytes": 426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_completion_20260930.sh",
+      "sha256": "ff3a92b31724ea147ea30af0b7d1c0a3df674106001b4df27020867060013f84"
+    },
+    {
+      "bytes": 23372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_terminal_22382.json",
+      "sha256": "7734520254562f63dbbf4fed81a2f750fd43530e5d03cd22e85888b467989461"
+    }
+  ],
+  "complete_lookup_stream_executed": false,
+  "control": "Original lookup_index replaced in-process with an intentional ReachedLookup exception; no source file was modified.",
+  "database_joins_executed": false,
+  "execution_readiness_admitted": false,
+  "focused_tests_passed": 121,
+  "output_directory": "benchmarks/work/qfo_fas_completion_preflight_20260930",
+  "output_directory_empty_at_stop": true,
+  "prior_receipt_sha256": "7734520254562f63dbbf4fed81a2f750fd43530e5d03cd22e85888b467989461",
+  "publication_ready": false,
+  "recorded_utc": "2026-09-30T20:11:34.533552+00:00",
+  "schema": "fas_completion_boundary_preflight_v1",
+  "scientific_result_admitted": false,
+  "source_and_input_git_bindings_checked": true,
+  "status": "actual_input_bindings_reached_lookup_boundary"
+}
