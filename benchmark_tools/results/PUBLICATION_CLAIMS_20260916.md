@@ -56,12 +56,14 @@ not a current host poll. Isolation must be checked afresh before release.
 
 ## Claim Boundaries
 
-The later [full FAS population recount attempt](QFO_FAS_POPULATION_TIMEOUT_22382.md)
-timed out at its unchanged allocation limit after six partial row checks.
-FastOMA/OrthoMCL completed rows and the final report are absent. Retained
-partial counts, newly checked database hashes and hypothetical bounds do not
-establish the planned eight-method panel, final input-stability pass, native
-score replacement or QfO uncertainty. No automatic retry was submitted.
+The [original FAS population attempt](QFO_FAS_POPULATION_TIMEOUT_22382.md)
+timed out after six partial rows. The separately justified
+[completion 22383](QFO_FAS_POPULATION_COMPLETED_22383.md) now supplies the full
+eight-method panel, retaining that failure and reusing exactly six unchanged
+recounts. Current input stability and independent aggregate/reuse readback
+pass. They do not repair the missing original final stability pass, establish
+historical parser-file identity, replace native FAS scores or admit QfO
+uncertainty. No automatic inference retry or selected-method table was used.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
@@ -72,6 +74,7 @@ score replacement or QfO uncertainty. No automatic retry was submitted.
 | Changing the root-duplication rule repairs the five traced WGD homolog losses | [Four-rule fixed-tree diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md) | Contradicted for the three tested alternatives on these retained inputs: supported-children and confidence give identical partitions; mapped-event further reduces coverage in four eligible cases. All pair predictions and confidence annotations are unchanged. This does not establish topology error or justify a new default |
 | Higher screen-negative YGOB F1 establishes better remote-ortholog recovery | [Stratum result](YGOB_OVERLAP_STRATA_RESULT_20260928.md), [all-method figure](YGOB_OVERLAP_FIGURE_20260928.md) | Unsupported: satellite_v2 minus full OrthoFinder is +12.916292 F1 points but -23.929262 recall points. Screen-negative contains 2,893 singleton pillars among 3,298 and does not prove absence of homology. Original cross-stratum false-positive penalties remain included; no subgroup CI, causal or independent-confirmation claim |
 | Corrected FAS sample arithmetic validates paired uncertainty | [Eight-method corrected sample audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md) | Unsupported: all eight native means/SEMs reproduce, but samples reuse proteins and scored fractions span 0.0067%-58.4605%. Inclusion probabilities and random states remain unestablished. Different fractions alone do not demonstrate bias |
+| Full eligible-population coverage establishes an OrthoHMM FAS advantage over full OrthoFinder | [Complete eight-method audit and independent readback](QFO_FAS_POPULATION_COMPLETED_22383.md) | Not established: all native counts agree and current input/reuse checks pass, but satellite_v2's conditional full-mean bounds 0.733966-0.785282 overlap full OrthoFinder's 0.605946-0.774511. These conservative bounds omit new-sample values, are not confidence intervals or native scores, and do not validate sampling, historical parser identity or overall orthology accuracy |
 | Saved FAS precomputed/new assignments and precomputed values are independently checked | [Frozen-lookup exposure audit](FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md) | Supported for the saved samples: 59,962,787 entries streamed; 3,023,018 unique saved precomputed pairs and their values verified, and 70,528 unique saved new pairs absent from the valid lookup. Native canonical overwrite order is reproduced. Not validation of unused scores, sampling representativeness or paired uncertainty |
 | Native complexity exclusions explain all historical FAS omissions | [Native mechanism probe](QFO_FAS_OMISSION_MECHANISM_20260928.md), [complete annotation panel](FAS_NATIVE_ANNOTATION_PATH_PANEL_20260928.md), [completion bounds](QFO_FAS_SAMPLE_ATTRITION_20260928.md) | Not established: 1,143 proteins exceed the cutoff and none appears in saved new-score pairs, but omitted sample identities remain unknown. OrthoMCL lacks 1,252/9,000 requested new scores; its conditional completion bounds are 0.724872-0.736975, not confidence intervals, population estimates or proof of bias. Precomputed values are not invalidated |
 | The Threadripper executor and native fixtures establish controlled timing | [Executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md), [terminal fixture outcomes](THREADRIPPER_REPORTING_OUTCOMES_20260928.md) | Not established: jobs 22367-22369 reproduce 16-gene outputs on a busy host. Reported job peak ends at the reporting read, not complete teardown. The executor has component tests, not a completed production readiness review or integrated environmental handoff; no production identity was submitted by these changes |

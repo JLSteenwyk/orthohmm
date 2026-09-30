@@ -1,0 +1,23 @@
+{
+  "elapsed_s": 265.8298003359814,
+  "jobs": [
+    22383
+  ],
+  "max_seconds": 600.0,
+  "missing": [],
+  "observation_errors": 0,
+  "observation_limit_reached": false,
+  "polls": 54,
+  "retained": {
+    "22383": {
+      "path": "scheduler_22383.txt",
+      "sha256": "35df29a339ad50a8842cb5a756b542c68735f1809dabeefc8c8bf0e05d7ca47b"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "sources": {
+    "capture_array_scheduler.py": "c692cb0fc28084558fb4e4f2d21282a94a6a93ceb32255660bbb3e8d8d279c64",
+    "capture_job_scheduler.py": "95f13a7488bfdcab18416243c61be74717a3b82d86eec6d87f8b6a02faab0315"
+  },
+  "status": "complete"
+}

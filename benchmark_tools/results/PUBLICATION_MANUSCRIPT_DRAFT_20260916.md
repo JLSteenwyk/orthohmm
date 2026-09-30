@@ -535,8 +535,29 @@ last-valid canonical overwrite semantics were reproduced. This verifies
 selected saved-score provenance, not every unused score or FAS algorithm
 correctness. The architecture flags and absence among saved new pairs are
 consistent with an omission mechanism, but neither identify the historically
-omitted sample nor attribute all shortfalls to that mechanism. Eligible-pair
-exposure, selection bias and family-aware comparison uncertainty remain open.
+omitted sample nor attribute all shortfalls to that mechanism. Full eligible-pair
+exposure to the complexity cutoff, selection bias and family-aware comparison
+uncertainty remain open.
+
+The [completed eight-method eligible-population audit](QFO_FAS_POPULATION_COMPLETED_22383.md)
+retains the original timeout, reuses six unchanged recounts and newly scans
+FastOMA/OrthoMCL. All native logged populations and saved-sample lookup checks
+match. Pairs absent from the valid precomputed lookup comprise 23.58% of
+high-sensitivity OrthoHMM's eligible set, 5.13% of satellite_v2, 16.86% of full
+OrthoFinder and 82.05% of the sequence-only checkpoint. Let S be the sum of
+all valid precomputed scores over P eligible pairs and M be the number of
+eligible pairs without a lookup score. Assuming hypothetical missing values
+in [0,1] gives conservative population outer bounds [S/(P+M), (S+M)/(P+M)].
+Some lookup-missing pairs were newly scored in native samples; these values
+are not used to tighten the bounds. This calculation is separate from the
+earlier intended-sample attrition bounds and from native FAS estimation.
+Satellite_v2's range is 0.733966-0.785282, versus 0.605946-0.774511 for full
+OrthoFinder; overlap prevents establishing a full-eligible-set advantage by
+these bounds. Independent aggregate arithmetic and exact reuse/source/input
+bindings pass, but no large joins or lookup scores are independently repeated.
+The [complete table](qfo_fas_population_completed_22383/scores.md) preserves
+all eight methods without changing the native scores or admitting confidence
+intervals, sampling representativeness or overall accuracy rankings.
 
 For GO and EC, all 24 historical-comparator/recovered-stage raw counts,
 means and native uncertainty values were consistent with the retained

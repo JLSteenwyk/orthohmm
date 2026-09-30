@@ -1,0 +1,139 @@
+{
+  "schema": "qfo_fas_completion_independent_readback_v1",
+  "status": "eight_method_aggregate_and_reuse_readback_passed",
+  "job_id": 22383,
+  "report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_completed_22383/report.json",
+    "bytes": 98178,
+    "sha256": "05f1ab3f7f0ffed8ddcffe2a6bfd4ce26ef46b974dbb946cb60883857803eeaf"
+  },
+  "controller": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_completed_22383/scheduler_22383.txt",
+    "bytes": 1477,
+    "sha256": "35df29a339ad50a8842cb5a756b542c68735f1809dabeefc8c8bf0e05d7ca47b"
+  },
+  "submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_completion_submission_20260930.json",
+    "bytes": 2851,
+    "sha256": "68f10cf88816f235573a74c972e88394f61bad6d358add3baff4aa9b184f7718"
+  },
+  "readback_source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_fas_completion.py",
+    "bytes": 10742,
+    "sha256": "1064ad3ea45a2c6a9d5f0ee07d5f71fbd45b94f9327aea1d968217cce99bf14e"
+  },
+  "checked_report_records": 337,
+  "submitted_git_sources_checked": 7,
+  "methods": [
+    {
+      "method": "orthohmm_high_sensitivity",
+      "eligible_pairs": 9032719,
+      "precomputed": 6902660,
+      "missing": 2130059,
+      "missing_fraction": 0.23581592652223543,
+      "precomputed_mean": 0.7905982663263148,
+      "hypothetical_full_mean_bounds": [
+        0.6041626036457018,
+        0.8399785301679373
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "eligible_pairs": 5959560,
+      "precomputed": 5653739,
+      "missing": 305821,
+      "missing_fraction": 0.05131603675439127,
+      "precomputed_mean": 0.773667316374173,
+      "hypothetical_full_mean_bounds": [
+        0.7339657759314446,
+        0.785281812685836
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "orthofinder_3_1_5_full",
+      "eligible_pairs": 14215382,
+      "precomputed": 11819171,
+      "missing": 2396211,
+      "missing_fraction": 0.16856465763635475,
+      "precomputed_mean": 0.728795273607176,
+      "hypothetical_full_mean_bounds": [
+        0.6059461478245889,
+        0.7745108054609436
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "orthofinder_3_1_5_sequence_only",
+      "eligible_pairs": 163277439,
+      "precomputed": 29303161,
+      "missing": 133974278,
+      "missing_fraction": 0.8205314758764681,
+      "precomputed_mean": 0.6913786720589632,
+      "hypothetical_full_mean_bounds": [
+        0.12408070988490946,
+        0.9446121857613776
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "sonicparanoid_2_0_9",
+      "eligible_pairs": 15248739,
+      "precomputed": 12675597,
+      "missing": 2573142,
+      "missing_fraction": 0.16874457619085748,
+      "precomputed_mean": 0.7392568865584793,
+      "hypothetical_full_mean_bounds": [
+        0.6145112965399959,
+        0.7832558727308534
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "proteinortho_6_3_6",
+      "eligible_pairs": 4695385,
+      "precomputed": 4679990,
+      "missing": 15395,
+      "missing_fraction": 0.0032787513696959886,
+      "precomputed_mean": 0.8138832491308742,
+      "hypothetical_full_mean_bounds": [
+        0.8112147283130138,
+        0.8144934796827097
+      ],
+      "reused_prior_recount": true
+    },
+    {
+      "method": "fastoma_0_3_5",
+      "eligible_pairs": 15008180,
+      "precomputed": 7616298,
+      "missing": 7391882,
+      "missing_fraction": 0.4925235438274328,
+      "precomputed_mean": 0.775903865659537,
+      "hypothetical_full_mean_bounds": [
+        0.3937529440754975,
+        0.8862764879029302
+      ],
+      "reused_prior_recount": false
+    },
+    {
+      "method": "orthomcl_1_4",
+      "eligible_pairs": 14378089,
+      "precomputed": 13127208,
+      "missing": 1250881,
+      "missing_fraction": 0.0869991137208846,
+      "precomputed_mean": 0.7422821028588105,
+      "hypothetical_full_mean_bounds": [
+        0.6777042177792195,
+        0.764703331500104
+      ],
+      "reused_prior_recount": false
+    }
+  ],
+  "joins_repeated": false,
+  "lookup_rescored": false,
+  "historical_parser_identity_established": false,
+  "uncertainty_admitted": false,
+  "benchmark_scores_changed": false,
+  "publication_ready": false
+}

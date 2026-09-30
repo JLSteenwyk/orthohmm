@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Complete Eight-Method FAS Audit And Manuscript Integration (2026-09-30)
+
+Previous goal work made progress by implementing/pushing the prospective
+continuation and submitting 22383; the intervening user clarification required
+no immediate quiet window. This turn reread the full objective/current ledger
+and verified that same allocation live before following it to authoritative
+**COMPLETED 0:0**, elapsed 24:23, one CPU/16 GiB and no restart/requeue.
+Controller and allocation/batch accounting agree. Null CPU/peak accounting
+remains unavailable, not a zero-use or controlled resource result.
+
+All eight rows now match native eligible/precomputed/missing/unannotated counts
+and producer saved-sample lookup checks. Six original checksum-bound recounts
+are reused and only FastOMA/OrthoMCL are fresh. Original 22382 remains TIMEOUT;
+its missing final pass and unestablished historical parser-file identity are
+not repaired or hidden. No native inference, six completed joins, scientific
+default or benchmark score was rerun/changed.
+
+Added an independent standard-library readback: 22 tests pass; actual readback
+checks 337 retained evidence identities, seven submitted Git source bindings,
+all eight method/count/command identities, exact reused payloads and rational
+mean/bound arithmetic. The large joins and lookup scoring are not repeated.
+Thirteen small raw outputs/controller/log artifacts are retained byte-for-byte.
+The [result](QFO_FAS_POPULATION_COMPLETED_22383.md),
+[complete generated table](qfo_fas_population_completed_22383/scores.md) and
+[readback](qfo_fas_population_completion_readback_22383.json) are linked from
+the main/extended drafts and claim checklist. Existing rendered review/archive
+remains a historical snapshot, not an export of this new prose.
+
+Lookup-missing fractions are 5.13% for satellite_v2, 16.86% for full OrthoFinder
+and 82.05% for its sequence-only checkpoint. The conservative full-mean bounds
+overlap for OrthoHMM versus full OrthoFinder; no population advantage, paired
+confidence interval or overall accuracy ranking is admitted. Some lookup-missing
+pairs were newly scored in native samples, not used to tighten these bounds.
+Full complexity-cutoff exposure and sampling uncertainty remain separate.
+
+Controlled Threadripper timing stays deferred without a new quiet-window
+question, contention probe, unrelated job/service action or DGX access. Original
+TreeFam recovery, other QfO uncertainty, high-CPM admission and final release
+remain unresolved. Source inspection found no confirmed cause/fix for the
+historical high-CPM crash; no completed diagnostic was repeated. The full goal
+remains active, not complete or blocked.
+
 ## FAS Completion Submitted As 22383 (2026-09-30)
 
 Committed/pushed the separately justified continuation at `bd9863bb` before

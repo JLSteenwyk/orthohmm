@@ -261,6 +261,16 @@ Assuming omitted scores lie in [0,1], its intended-sample mean is bounded by
 above-limit protein in saved new-score pairs, but found them in precomputed
 pairs. This agrees with the demonstrated cutoff mechanism without identifying
 historical omitted pairs or establishing comparison bias.
+The [completed eligible-population audit](QFO_FAS_POPULATION_COMPLETED_22383.md)
+matches all eight methods' native logged counts, reusing six fixed recounts
+and freshly scanning two. Pairs absent from the precomputed lookup constitute
+5.13% of satellite_v2's eligible set, 16.86% of full OrthoFinder's and 82.05%
+of its sequence-only checkpoint's. Assuming their scores lie in [0,1] gives
+conservative full-mean bounds of 0.733966-0.785282 for satellite_v2 and
+0.605946-0.774511 for full OrthoFinder. These overlapping bounds neither
+establish a full-eligible-set advantage nor replace native sample scores or
+confidence intervals. Some lookup-missing pairs were newly scored in native
+samples; those values are not used to tighten these bounds.
 The completed simulations and tree perturbations do not cover arbitrary
 evolutionary conditions, and novel-taxon YGOB testing retains homolog-family
 overlap with development data.
