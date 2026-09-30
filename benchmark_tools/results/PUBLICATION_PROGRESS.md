@@ -1,5 +1,35 @@
 # Publication Progress
 
+## First Explicit Candidate Attempt Failed Before Construction (2026-09-30)
+
+Committed/pushed the explicit handoff, protocol, script and 220 tests at
+`3ac5e523`, then submitted exactly one fresh local job 22384. Accounting and log
+confirm terminal FAILED 1:0 after 20 seconds, no output root and no candidate
+builder invocation (the pinned driver raises before it). Retained separate
+[submission](qfo_cpm_helper_candidates_submission_22384.json) and
+[failure](qfo_cpm_helper_candidates_failure_22384.json) receipts, including
+all source/script identities, log/time and import-order diagnostic. No accuracy.
+
+A bounded fresh-process diagnostic reproduces a specific orchestration issue:
+importing the existing JSON status helper transitively loads the executor's
+scientific package before the frozen launcher selection. The import-origin
+guard correctly rejects that cache. Move only this helper import after verified
+frozen scientific selection; do not weaken the guard, clear/reload modules or
+change science. All 222 focused tests pass in the final 13.48-second run,
+including two isolated real-import regressions.
+
+The [prospective correction](QFO_CPM_HELPER_CANDIDATE_IMPORT_CORRECTION_20260930.md)
+preserves 22384 and justifies one new source-corrected attempt after commit/push,
+not retrying unchanged code. Same 2-CPU/64-GiB/4-hour local allocation, original
+historical runtime, seed/readback, builder, settings, numeric hits and separate
+output root. New executor/submission must bind the correction document and
+committed revision. Candidate admission/phylogeny/pairs/scoring remain gated.
+
+This is concrete engineering/evidence progress, not a blocked turn. Historical
+native failures and missing statistics unchanged. No new scientific execution,
+default/endpoint change, controlled timing or DGX/service work; timing and other
+full publication requirements remain open. Goal stays active.
+
 ## Explicit Recovered-Seed Candidate Handoff Implemented (2026-09-30)
 
 The previous turn made progress: the recovered seed and independent graph/

@@ -1,0 +1,78 @@
+{
+  "accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22384|22384|FAILED|1:0|00:00:20|2|64G|bizon\n",
+  "accuracy_evaluated": false,
+  "candidate_admitted": false,
+  "candidate_creation_attempts": 0,
+  "checked_records": [
+    {
+      "bytes": 1355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/results/qfo_cpm_helper_candidates_20260930.sh",
+      "sha256": "f633fdcda2df641c60d9e44ee9b879bc591aa0af9851615da541e67b2b74f537"
+    },
+    {
+      "bytes": 7377,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/prepare_recovered_cpm_candidates.py",
+      "sha256": "ee84732f20fc62ac405c310919238511d275f1fd200fab7005fd95a0ccb50537"
+    },
+    {
+      "bytes": 7953,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/helper_recovered_cpm_seed_evidence.py",
+      "sha256": "01164124f97d06dc5752499c7616b05a94b6a0964c756e8cf6a09e84705c00c0"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/prepare_qfo_cpm_candidates.py",
+      "sha256": "b6f3325e2e6c33eecbf74256e2bd88d339015188e47c9296fedea1155029b978"
+    },
+    {
+      "bytes": 4097,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/recovered_cpm_seed_evidence.py",
+      "sha256": "7e47f010ffd6340f17074e66e0f29836d48f16db543c94d8f20b88279b6b1046"
+    },
+    {
+      "bytes": 4251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/benchmark_tools/results/QFO_CPM_HELPER_CANDIDATE_PROTOCOL_20260930.md",
+      "sha256": "f07242533466ac094bb2151117b1289169a05b6ecface05e4ff9655216ef8780"
+    },
+    {
+      "bytes": 5464,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_helper_recovery_admission_readback_20260930.json",
+      "sha256": "5fb31ea6cee69501d5ad1826789e9a178f230bb909012537e123d18d21d65850"
+    }
+  ],
+  "diagnostic_accuracy": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/orthohmm/accuracy.py",
+  "diagnostic_engine": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_executor_20260930/orthohmm/orthohmm.py",
+  "diagnostic_first_scientific_import": "benchmark_tools.run_blast_recovery_batch",
+  "expected_scientific_parent": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/orthohmm",
+  "import_order_diagnostic": {
+    "bytes": 1717,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_22384_import_order.json",
+    "sha256": "922e488a1e0af6f77ae60acebcebf4d921fe6b71ae1b3db9dbab28d357113a68"
+  },
+  "job_id": "22384",
+  "limitations": [
+    "Scheduler and log confirm terminal preflight failure before output creation; zero build calls follows pinned driver control flow.",
+    "Fresh-process diagnostic reproduces transitive status-helper import caching; it is not a historical worker module snapshot.",
+    "19.17-second GNU time interval is failed shared-host preflight, not comparative scientific runtime.",
+    "No automatic retry or scientific search, optimizer, refinement, phylogeny or scoring occurred."
+  ],
+  "log": {
+    "bytes": 675,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_22384.log",
+    "sha256": "af33ed8dc6c1a8c14c10568af3435ea500c050dd5c4a0757aaa2177397e3a4f1"
+  },
+  "output_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1",
+  "output_root_exists": false,
+  "publication_ready": false,
+  "status": "candidate_preflight_failed_wrong_scientific_import",
+  "submission": {
+    "bytes": 5098,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_helper_candidates_submission_22384.json",
+    "sha256": "bc9e5f919b2c68ad75a6246a365d8b19868a1c589462e3662a352d8b6a438d93"
+  },
+  "time": {
+    "bytes": 1406,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidates_22384.time.txt",
+    "sha256": "7ac01cc822db1d6191342ba5b02f08cca1dd0951d4eec987b1a6a8101a42af3f"
+  }
+}

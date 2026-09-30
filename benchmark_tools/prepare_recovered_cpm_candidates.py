@@ -38,7 +38,6 @@ def prepare(root, *, recovery_readback=None, readback_sha=None, protocol_sha=Non
     from benchmark_tools.cpm_replay_context import evidence as context_evidence, REPLAY_SHA
     from benchmark_tools.verify_qfo_replay_launcher import verify
     from benchmark_tools.run_simulation_methods import read_frozen
-    from benchmark_tools.run_blast_recovery_batch import save_status
 
     builder = record(Path(__file__).with_name("prepare_qfo_cpm_candidates.py"))
     if builder["sha256"] != BUILD_SHA:
@@ -61,7 +60,8 @@ def prepare(root, *, recovery_readback=None, readback_sha=None, protocol_sha=Non
         sys.path.remove(str(launcher))
     if any(Path(module.__file__).resolve().parent != launcher / "orthohmm" for module in (engine, accuracy)):
         raise ValueError("Wrong frozen candidate scientific import")
-    # The numeric auditor imports accuracy, so pin the scientific package first.
+    # Both the status helper and numeric auditor import scientific modules transitively.
+    from benchmark_tools.run_blast_recovery_batch import save_status
     from benchmark_tools.audit_accuracy_checkpoint import audit
     from benchmark_tools.audit_candidate_arm import audit as audit_arm
     checkpoint_record = plan["checkpoint_manifest"]
