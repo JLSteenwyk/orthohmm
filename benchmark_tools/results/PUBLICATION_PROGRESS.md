@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Prepare Complete Retained FAS Population Recount (2026-09-30)
+
+Previous turn made progress by inspecting three previously unchecked public
+QfO copied-context layers and pushing `7adf23b9`. Reread the full goal/current
+ledger; `squeue` is empty, not evidence of host isolation. Timing remains
+deferred. No native inference, completed diagnostic, contention probe, DGX
+operation or quiet-window question repeated.
+
+Identified a scientific audit gap distinct from the existing saved-score,
+sample-attrition and saved-lookup passes: full FAS eligible strata have not
+been independently recounted from retained databases. Added the
+[prospective full-population protocol](QFO_FAS_POPULATION_PROTOCOL_20260930.md),
+compact streaming lookup/query helper and one bounded local analysis script.
+All eight methods and the native DISTINCT accession query are retained.
+Hypothetical full-population completion bounds are conditional on [0,1]
+uncomputed scores; they are not confidence intervals or replacement endpoints.
+
+73 focused tests pass, including 26 new tests and native-loader/query fixtures.
+Current retained database hashes will be new identities, not retroactive
+historical database pins. Lookup/parser/annotation and saved-score evidence
+will be checked before/after; failures must remain and stop the single attempt.
+This entry precedes launch and contains no actual population result. After
+committing/pushing, run once with one CPU/16 GiB/90 minutes, preserve terminal
+accounting and perform independent result readback. No controlled timing or
+interruption of unrelated work is required for this read-only analysis.
+
 ## Timing Deferred; New Public Container Lead Checked (2026-09-30)
 
 The user cannot identify a quiet local window and asks whether it is needed
