@@ -1,0 +1,111 @@
+{
+  "accuracy_evaluated": false,
+  "checked_records_canonical_json_sha256": "3cb266900ee852b3cf34a16efc0c1defa0952926406b8262e09ef424d087c20c",
+  "checked_records_reverified": 8332,
+  "child_returncode": 1,
+  "limitations": [
+    "Import failure before refinement, not reproduction or exclusion of the GC crash.",
+    "No retry, package installation, prior-result replacement or downstream admission.",
+    "Full checked record inventory remains in the retained local report, bound by digest.",
+    "Shared-host elapsed values are not controlled performance evidence."
+  ],
+  "logs": [
+    {
+      "bytes": 490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_private_runtime_20260930/runtime.stdout",
+      "sha256": "c8342adef2b8919fe224da847fdafcd496d3ca66cc3526f244464be884fd8912"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_private_runtime_20260930/stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_private_runtime_20260930/runtime.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_private_runtime_20260930/stderr",
+      "sha256": "b5e6dd15848f3de037fc4bc9c0d81732e830da168266c5817ccdf5cc6feb15ec"
+    }
+  ],
+  "output_created": false,
+  "package_audit": {
+    "bytes": 1165017,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/independent_admission/package_audits.json",
+    "sha256": "639cf9ea0a42f997374e040687c642733c641a057d9bea4688ab725e825af4e0"
+  },
+  "private_packages": [
+    "DendroPy",
+    "igraph",
+    "leidenalg",
+    "llvmlite",
+    "numba",
+    "numpy",
+    "orthohmm",
+    "pip",
+    "python-igraph",
+    "setuptools",
+    "texttable"
+  ],
+  "probe_stdout_text": "{\"version\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"executable\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/run/inference/bin/python\", \"numpy\": \"2.2.6\", \"numpy_path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/run/inference/lib/python3.10/site-packages/numpy/__init__.py\", \"gc_enabled\": true, \"gc_thresholds\": [700, 10, 10]}\n",
+  "publication_ready": false,
+  "refinement_cli_attempts": 1,
+  "refinement_reached": false,
+  "report": {
+    "bytes": 2199770,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_private_runtime_20260930/report.json",
+    "sha256": "77e5b69b34bfc54fae8f99a8daf1c255d5490e06748786b6aa88e2c1dab0c0e4"
+  },
+  "runtime_probe": {
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/run/inference/bin/python",
+    "gc_enabled": true,
+    "gc_thresholds": [
+      700,
+      10,
+      10
+    ],
+    "numpy": "2.2.6",
+    "numpy_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_restored_archive_ob_20260929/run/inference/lib/python3.10/site-packages/numpy/__init__.py",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "seed_admitted": false,
+  "source_git_bindings": [
+    {
+      "bytes": 12089,
+      "git_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_private_runtime.py",
+      "sha256": "ed4a52129c24078b386ce40a847b6dd7198657de29f2a717d3e7d132f0983f60"
+    },
+    {
+      "bytes": 5897,
+      "git_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_probe_cpm_private_runtime.py",
+      "sha256": "cdb7add7cd43dfd07864077bfb795a26991b8f0df64f68652dec67755a899d5c"
+    },
+    {
+      "bytes": 4161,
+      "git_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_CPM_PRIVATE_RUNTIME_PROTOCOL_20260930.md",
+      "sha256": "e62909f20f96008ffb71dd20c798baf5e831195757c93fada1108bc63c25aa8e"
+    },
+    {
+      "bytes": 7964,
+      "git_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cpm_partition_parser.py",
+      "sha256": "f92e7208de3f0da8b022a732d80f0853cec40ef5679ce1c09c08103f2c6be93e"
+    },
+    {
+      "bytes": 5251,
+      "git_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_failed_recovery_refinement.py",
+      "sha256": "e983ba406c5e1e09181bd8a6123db6908e8f7c6b85a06b40b1ca95e72b363661"
+    }
+  ],
+  "source_revision": "d9b31d242bed3fa5e3dfafc471b82ccc4f8513ef",
+  "status": "private_runtime_import_failure_independently_read_back",
+  "stderr_text": "Traceback (most recent call last):\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/run_cpm_checkpoint_recovery.py\", line 238, in <module>\n    refinement_worker(root, args.output.absolute(), args.mode == \"repeat-refinement\")\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/cpm_checkpoint_recovery_v1_20260923/benchmark_tools/run_cpm_checkpoint_recovery.py\", line 19, in refinement_worker\n    from benchmark_tools.audit_historical_profile_ablation import read_partition\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/audit_historical_profile_ablation.py\", line 9, in <module>\n    from Bio import SeqIO\nModuleNotFoundError: No module named 'Bio'\n",
+  "stdout_text": ""
+}

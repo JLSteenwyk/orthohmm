@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Private-Runtime Control Failed Before Refinement (2026-09-30)
+
+Committed/pushed the fixed protocol/controller/tests as `d9b31d24`, then made
+one bounded direct shared-host attempt. Its preliminary process confirmed
+private Python 3.10.13/NumPy 2.2.6 with enabled default GC. The unchanged native
+CLI then exited 1 at `from Bio import SeqIO`: the validated OrthoBench inference
+environment lacks Biopython used by this historical benchmark helper.
+No checkpoint load, refinement, partition write or final readback was reached.
+No timeout, retry, installation or environment/source alteration followed.
+
+The [result](QFO_CPM_PRIVATE_RUNTIME_RESULT_20260930.md) and
+[independent receipt](qfo_cpm_private_runtime_readback_20260930.json)
+retain the failure, exact small raw log texts and full local report identity.
+Isolated stdlib readback independently rechecks all 8,332 bound evidence records,
+four logs, five Git source/protocol/test bindings, missing package/inventory,
+probe values and absent scientific outputs. This is not reproduction or
+exclusion of the historical GC crash. Full-OB inference validation does not
+establish this separate helper's import closure. The 38 focused preparation
+tests are reused, not relabeled as scientific execution success.
+
+Do not rerun this attempt unchanged. A future distinct runtime arm needs a
+separate pinned helper-complete environment/protocol, not modification of the
+admitted OB environment or global-package fallback. Original failed admission
+22155, missing high-CPM scores and downstream gates remain unchanged.
+Timing is still deferred; user need not identify a quiet window now. No new
+contention probe, coordination question, DGX access or unrelated job/service
+action occurred. Remaining controlled timing, QfO uncertainty/original TreeFam
+sources, rights and final release requirements remain open. Full goal active.
+
 ## One Private-Runtime High-CPM Control Prepared (2026-09-30)
 
 User does not currently know a quiet Threadripper window; none is required now.
