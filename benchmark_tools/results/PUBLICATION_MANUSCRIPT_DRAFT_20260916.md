@@ -1735,6 +1735,17 @@ per pooled category. Appropriate family-level uncertainty remains unresolved
 until original source-family mappings are recovered and validated. No
 independent-pair bootstrap or degenerate single-case interval is substituted.
 
+The [completed public QfO context search](TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md)
+now covers all 40 listed Darwin tag names at retained digests, representing
+29 distinct recognized copied-context layers. The last 34 previously uninspected
+tags all completed; independent descriptor/metadata/header readback finds no
+original NHX/mapping filename candidate. Earlier layers were reused by hash
+where shared, not downloaded again. This is bounded filename/header evidence,
+not inspection of every other layer, platform, registry or archive-embedded
+content, and does not establish global source unavailability. No container was
+executed, member extracted, person contacted or family label inferred. The
+original complete trees/mapping remain unrecovered.
+
 Public archive recovery subsequently located historical Selectome exports
 derived from TreeFam release 7: 1,211 TreeFam-A subtrees and a later 9,850-subtree
 TreeFam-A+B collection. Both contain only Euteleostomi subtrees, not complete

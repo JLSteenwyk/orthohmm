@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Remaining 34 QfO Context Inspections Completed (2026-09-30)
+
+Committed/pushed the search helper, 18 passing tests and fixed prospective plan
+as `ed3993f2` before one actual public acquisition. All 34 previously unchecked
+tags complete with recognized context layers, without rate limit, timeout or
+unresolved fetch. Verified/cache-reused one previous layer and downloaded
+1,930,792 new compressed context bytes; no prior tag was queried again.
+
+The [result](TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md) and
+[portable receipt](treefam_remaining_context_receipt_20260930.json) retain
+raw public metadata and all unique inventories. Independent readback checks
+120 acquired evidence files, tag/image/config descriptors, complete history/
+context index lists, all 24 unique context blobs and 1,756 name/size/type/link
+header records. Source bytes match the committed plan/Git object and all
+identities recheck after parsing. No original NHX/mapping filename candidate
+appears. No container runs, extraction, contacts or inferred labels occurred.
+
+Together with the six retained earlier inspections, all 40 names in the current
+listing now have evidence at their recorded digests: 29 distinct copied contexts,
+2,106 unique inventory entries and 2,432,547 total compressed downloaded bytes.
+The earlier six outcomes are reused as historical evidence, not freshly fetched
+or re-admitted. This does not cover every current mutable alias, other layer,
+platform, registry or differently named/archive-embedded contents. Original
+complete TreeFam trees/mapping remain missing, not proven globally unavailable.
+The main/extended drafts and claim checklist now state this bounded search result.
+Portable raw text independently reproduces all 97 retained JSON record digests.
+A Pandoc-AST link check confirms 1,208 existing local targets across the result
+and four updated documents. This is link integrity, not transitive scientific
+reproduction or a fresh rendered/visual review.
+
+No scientific inference, completed FAS/count/lookup/calibration, score/default
+or timing identity was rerun/changed. Timing remains deferred without a new
+contention probe, coordination question, unrelated process/service action or
+DGX use. Real timing environmental/overhead/handoff/source gates, other QfO
+uncertainty, high-CPM admission and final release remain open. Do not repeat
+these contexts absent a new concrete lead. Existing rendered reviews remain
+historical snapshots of earlier prose. The full goal remains active.
+
 ## New Public TreeFam Context Targets Prepared (2026-09-30)
 
 Previous goal turn made progress: complete FAS audit/readback/table and manuscript

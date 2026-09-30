@@ -238,6 +238,11 @@ has not demonstrated a general benefit. Neither simulation evidence nor an
 OrthoBench point advantage establishes superiority over full OrthoFinder.
 
 Original TreeFam-A family mappings and complete source trees remain unavailable.
+Public QfO container searches now cover recognized benchmark build contexts
+for [all 40 listed tag names](TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md)
+at retained digests, without finding original NHX/mapping filename candidates.
+Other layers and archive-embedded or differently named contents remain outside
+that search; no family labels are inferred from its negative result.
 Public archive recovery yielded historical Selectome subtrees, but all are
 restricted to Euteleostomi. A [taxonomic coverage audit](TREEFAM_RECOVERED_SCOPE_20260928.md)
 found that 55,933 of 79,320 retained reference relations (70.52%) have at least
