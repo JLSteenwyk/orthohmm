@@ -22,6 +22,13 @@ source/figure components, not transitive study evidence, inference, rights
 clearance or a public release. Its render-time ledger is intentionally a
 historical snapshot, not current job status.
 
+The later [frozen numerical scoring specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+is linked from both current Markdown drafts but is not included automatically
+in that rendered/archive snapshot. Its nine frozen-source hashes and tiny
+reference-Python fixtures establish a bounded numerical readback, not native
+backend validation or calibration. Reconcile the final review export after
+outstanding analyses rather than treating the earlier PDF as current prose.
+
 The [restored-assets full OrthoBench run 22377](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md)
 now has successful terminal independent scientific reproduction. The original
 observer diagnostic 22378 and combined audit 22379 failed and are retained.
@@ -51,6 +58,7 @@ not a current host poll. Isolation must be checked afresh before release.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| The built-in frozen search is statistically equivalent to HMMER/phmmer and its E values provide calibrated assignment confidence | [Exact scoring specification and readback](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md) | Not established: the implemented local integer maximum-path recurrence, uniform transition costs and static significance constants do not demonstrate that equivalence. The matrix-table gap-cost comment differs from scorer costs. This is an approximate filter, not a posterior or guaranteed false-positive rate; no retrospective score/default change follows |
 | One reference block can reverse a corrected VGNC comparator's F1 deficit against full OrthoFinder | [Complete deletion sensitivity](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md) | Contradicted within the fixed scored-table diagnostic: all seven contrasts stay negative for every one of 16,844 deletions. Phylogenetic OrthoHMM range [-8.7353, -8.6729] percentage points. Not confidence intervals, joint-deletion robustness or population inference |
 | The complete OrthoBench interval figure can be regenerated from relocated direct evidence | [Bundle reproduction](OB_INTERVAL_BUNDLE_20260929.md) | Supported on this host: copied plotter/helper/result regenerate PNG and endpoint TSV bytes exactly under isolated Python. Not hermetic dependency restoration, cross-host inference or full archival release |
 | The eight-method OrthoBench comparison establishes phylogenetic OrthoHMM F1 superiority | [Complete paired comparison](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md) | Unsupported: +1.370 percentage points, 21-endpoint adjusted interval [-7.281, 12.166]. Precision advantage and recall deficit remain; high-sensitivity precision no longer excludes zero under this broader correction. Conditional exchangeable-family bootstrap does not remove dependence or development exposure. Preserve historical six-endpoint intervals separately |
