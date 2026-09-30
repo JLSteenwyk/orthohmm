@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Implement The Boundary Control And Raw Checker (2026-09-30)
+
+The previous turn pushed the pinned overhead plan at `5e7e4a79`. Continued with
+the boundary-only collector and raw checker; the existing periodic collector,
+checker, historical plan and frozen scientific method remain unchanged.
+The latest user cannot identify a quiet window; confirmed it is not needed now.
+No further coordination request, host-contention probe, scheduler submission,
+DGX action, native inference or unrelated-process interruption was performed.
+Current `squeue` is empty, not evidence of host isolation.
+
+The [component record](THREADRIPPER_BOUNDARY_COMPONENT_20260930.md) distinguishes
+implementation from native integration and empirical overhead. The control
+uses the unchanged worker/native clock/release gate and common host observer,
+with exactly two native points. The raw checker reconstructs summaries and
+checks command/resource/status bindings, points, memory and reporting windows,
+host arithmetic and stable evidence. Nonzero native outcomes remain failures;
+all admission flags remain false. Shared arithmetic helpers are not independent
+resource estimation, complete runtime provenance or environmental approval.
+
+195 focused tests pass, including 66 new tests and three synthetic
+collector-to-checker composition cases. Initial fixture-only failures were
+corrected without relaxing checks. No actual native boundary attempt has yet
+been made; no original source pin or historical receipt was rewritten.
+
+Next is a prospective source-bound native boundary integration check and
+complete independent pair auditing. Do not launch the planned 54 engineering
+tasks or 27 production runs from component success. Environmental handoff,
+stable execution recipe, a quiet local window, comparable resource evidence,
+unresolved QfO uncertainty/rights and final release/deposition remain open.
+The full publication goal remains active; timing can wait while other work
+proceeds, without stopping unrelated analyses or switching hosts.
+
 ## Prepare A Native Collector Slowdown Control (2026-09-30)
 
 The previous turn made progress by pushing validated documentation corrections

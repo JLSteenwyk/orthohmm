@@ -164,10 +164,12 @@ from diagnostic success alone.
 The [native point-collector control preparation](results/THREADRIPPER_NATIVE_OVERHEAD_PREPARATION_20260930.md)
 now supplies a tested, pinned 27-pair/54-task engineering plan using all frozen
 method/size/repeat identities. This is separate from the 27 production runs,
-not a slowdown result or execution permit. The boundary-only implementation,
-independent pair audit, complete environmental handoff and quiet window remain
-required. Common whole-host monitoring stays in both arms and its cost is not
-isolated by this contrast. Do not replace these gates with the earlier
+not a slowdown result or execution permit. The
+[boundary collector and raw checker](results/THREADRIPPER_BOUNDARY_COMPONENT_20260930.md)
+now pass component tests, including synthetic collector-to-checker composition.
+Native integration, independent pair audit, complete environmental handoff and
+quiet window remain required. Common whole-host monitoring stays in both arms
+and its cost is not isolated by this contrast. Do not replace these gates with the earlier
 fixed-duration accounting calibration.
 
 ## Method And Results
