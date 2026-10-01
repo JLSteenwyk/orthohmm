@@ -1126,8 +1126,13 @@ a separately reconstructed helper-complete runtime with default GC, reproducing
 all retained output bytes. A distinct read-only admission explicitly names this
 new independent-refinement runtime and verifies the original optimizer/checkpoint
 evidence and complete graph/memberships; it admits the recovered seed only.
-Historical failures remain failed, and candidate/phylogeny/conversion/scoring
-handoffs remain unadmitted. This is not a cause or memory-safety diagnosis.
+Historical failures remain failed. After preserving an import-order preflight
+failure, source-corrected candidate construction completed using the unchanged
+historical runtime/settings. Independent validation confirmed all 984,137 genes,
+390,845 seed families, 346,866 candidate families and 43,979 reconstructed merges.
+This admits candidate content only; phylogeny/conversion/scoring handoffs remain
+unadmitted. Neither recovered-seed nor candidate admission is a cause or
+memory-safety diagnosis.
 No missing result was imputed. The full QfO
 parameter panel therefore remains incomplete. These findings do not justify changing
 frozen defaults and are development-exposed SwissTrees evidence, not a joint
@@ -1137,6 +1142,7 @@ uncertainty analysis of all QfO metrics or independent confirmation.
 [High-CPM validation failure evidence](QFO_ALLOCATOR_DIAGNOSTIC_RESULT_22158.md).
 [One-shot GDB diagnostic](QFO_CPM_BACKTRACE_RESULT_22159.md).
 [Explicit new-runtime recovered-seed admission](QFO_CPM_HELPER_RECOVERY_ADMISSION_RESULT_20260930.md).
+[Independent recovered-candidate admission](QFO_CPM_HELPER_CANDIDATE_ADMISSION_RESULT_22386.md).
 [Post-hoc VATB stage trace](QFO_VATB_PARTITION_TRACE_20260923.md).
 
 ## Limitations And Unfinished Analyses

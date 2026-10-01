@@ -1,0 +1,63 @@
+{
+  "accuracy_evaluated": false,
+  "candidate_admitted": false,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/benchmark_tools/results/qfo_cpm_helper_candidate_admission_20260930.sh",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001",
+    "c3f1968b913a83ba47e7fb021347bdd83e2f78fc"
+  ],
+  "construction_completion": {
+    "bytes": 10556,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_cpm_helper_candidates_completion_22385.json",
+    "sha256": "875e6cbc0497fb7c5d0bc74e7809fa73099e9d55cd958706f94fff25efa720e1"
+  },
+  "construction_manifest": {
+    "bytes": 8588785,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/manifest.json",
+    "sha256": "2e62321bf7a6d410f8ddafff783aaea979f1fec753fd6415b2b439ee7e2f54e6"
+  },
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001",
+  "executor_commit": "c3f1968b913a83ba47e7fb021347bdd83e2f78fc",
+  "job_id": "22386",
+  "limitations": [
+    "Submission record, not completed independent admission or accuracy.",
+    "No new candidate construction or scientific search/optimizer/refinement.",
+    "Shared-host audit is not controlled comparative timing."
+  ],
+  "output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_20260930/status.json",
+  "publication_ready": false,
+  "requested_resources": {
+    "cpus": 2,
+    "gpu": false,
+    "memory_gib": 64,
+    "node": "bizon",
+    "requeue": false,
+    "time_limit": "01:00:00"
+  },
+  "scheduler": "JobId=22386 JobName=qfo_cpm_helper_candidate_admission\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:01:03 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-10-01T11:29:35 EligibleTime=2026-10-01T11:29:35\n   AccrueTime=2026-10-01T11:29:35\n   StartTime=2026-10-01T11:29:35 EndTime=2026-10-01T12:29:35 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-01T11:29:35 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:3562766\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=2,mem=64G,node=1,billing=2\n   AllocTRES=cpu=2,mem=64G,node=1,billing=2\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=2 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/benchmark_tools/results/qfo_cpm_helper_candidate_admission_20260930.sh\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_22386.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_22386.log\n   TresPerTask=cpu=2\n   \n\n",
+  "source_records": [
+    {
+      "bytes": 1349,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/benchmark_tools/results/qfo_cpm_helper_candidate_admission_20260930.sh",
+      "sha256": "87b3c36827cda090281a31b0d375c9970dc18ff8a6b642e85e941881bd752dc7"
+    },
+    {
+      "bytes": 13543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/benchmark_tools/admit_helper_cpm_candidates.py",
+      "sha256": "cc9745c1f1cb8ddf4c595c6cc85b1cd7fec8fce1d68e8c1bd6e4cd657f68786f"
+    },
+    {
+      "bytes": 3865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/benchmark_tools/results/QFO_CPM_HELPER_CANDIDATE_ADMISSION_PROTOCOL_20260930.md",
+      "sha256": "96f3cd4baaea3cfaf4fb949d2f683888bac41b8b2e7696c37cc85f747cdd5955"
+    },
+    {
+      "bytes": 17862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_executor_20261001/tests/unit/test_admit_helper_cpm_candidates.py",
+      "sha256": "15396f82b5bd9d6d90b682fb210dd81c0acd9bda1eb7acd87da4a041e4031c6f"
+    }
+  ],
+  "status": "independent_recovered_candidate_admission_submitted"
+}

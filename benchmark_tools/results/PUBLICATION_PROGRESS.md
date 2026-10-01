@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Independent Recovered Candidate Admission Completed (2026-10-01)
+
+Previous resumed turn made concrete progress: restored execution, authoritative
+file/receipt/accounting checks, 285 passing tests and pending workflow committed/
+pushed at `c3f1968b`, followed by one fresh read-only job 22386. Current accounting
+confirms COMPLETED 0:0, 2 CPUs/64 GiB, 1:14 on bizon. No construction is rerun.
+The [result](QFO_CPM_HELPER_CANDIDATE_ADMISSION_RESULT_22386.md),
+[submission](qfo_cpm_helper_candidate_admission_submission_22386.json) and
+[independent readback](qfo_cpm_helper_candidate_admission_readback_20261001.json)
+retain all actual source/script/protocol/job/input/output identities.
+
+The 3,299,915-byte final report SHA256 is
+`55c696a037d13b48d47dc752fcb6b69b5b8bba6a7b990acfb08b0d8fbf6e07c0`:
+`cpm_helper_recovered_candidates_admitted_unscored`, candidate_admitted true.
+11,513 unique evidence records; 984,137 genes, 390,845 seeds, 346,866 candidates,
+43,979 reconstructed merges. Both complete content/merge validators pass;
+parameters/numeric checkpoint/runtime/seed evidence and current completion
+states are rechecked before final admission. All accuracy/downstream/publication
+flags remain false. Historical failures and original missing statistics persist.
+
+Independent isolated stdlib readback checks all bound files before/after, four
+Git source bindings and actual completed jobs. A different Counter-based reader
+confirms every gene occurs once in both partitions; trace identity/count and
+admission completion are bound, not claimed as a third merge reconstruction.
+The 8,789-byte receipt SHA256 is
+`8a5e832febbccf7d4d55a5d2b16e4454a54f83fc3c5570d9c16dfed6b7f12e3a`.
+No needed exec session or new audit job remains live. GNU time 73.43 seconds/
+1,678,780-KiB peak RSS is shared-host read-only validation history, not timing.
+
+Next implement/validate the explicit inferred-phylogeny handoff with these fixed
+candidate bytes, original full-pipeline environment and scientific parameters.
+Do not weaken historical failed 22155/22082_1 gates or infer high-CPM accuracy
+from candidate admission. Native-output validation, conversion/scoring and
+prespecified parameter-panel integration remain necessary. Claims/draft now
+distinguish admitted candidates from pending phylogeny/accuracy. Commit/push
+this actual milestone. Full goal remains active and incomplete: controlled
+timing, QfO uncertainty/original TreeFam, rights and release requirements remain
+open. No contention probe/question, DGX or unrelated job/service action.
+
 ## Local Execution Restored; Pending Candidate Admission Revalidated (2026-10-01)
 
 The preceding continuations made no scientific progress: command startup failed
