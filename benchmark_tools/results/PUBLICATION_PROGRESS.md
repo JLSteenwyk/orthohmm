@@ -1,5 +1,75 @@
 # Publication Progress
 
+## Local Execution Restored; Pending Candidate Admission Revalidated (2026-10-01)
+
+The preceding continuations made no scientific progress: command startup failed
+with `bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`, preventing
+the objective read, local inspection, commit/push and admission launch. The goal
+was marked blocked after the required repeated audit, then resumed; no analysis
+was restarted or restriction bypassed. Current execution works, full objective
+was reread, and fresh accounting confirms 22385 still COMPLETED 0:0. Its retained
+admission output directory does not exist: no interrupted admission is retried.
+
+Inspected the pending gate/protocol/script and current selected worktree state;
+preserve unrelated changes. All 285 focused tests pass again in 12.55 seconds.
+The [completion receipt](qfo_cpm_helper_candidates_completion_22385.json) exists
+as a complete 10,556-byte JSON, SHA256
+`875e6cbc0497fb7c5d0bc74e7809fa73099e9d55cd958706f94fff25efa720e1`.
+Nine direct manifest/submission/source/log/time/output identities were rechecked
+now; its earlier full-input readback is retained, not claimed as newly rerun.
+984,137 genes/390,845 seeds/346,866 candidates/43,979 merges remain unscored and
+pending independent admission. The former helper session handle is absent, but
+its actual finished receipt is present; do not regenerate/overwrite it.
+
+Commit/push the pending read-only gate, tests, prospective protocol, launch script
+and completion receipt before one new 2-CPU/64-GiB/1-hour admission attempt in a
+fresh detached executor. Keep the already fixed September-30 paths/checksums;
+do not churn scientific identities merely because execution resumed October 1.
+Actual audit must independently reconstruct all merges, memberships and complete
+provenance/runtime checks before permitting the explicit phylogeny handoff.
+No new candidate build/search/optimizer/refinement, parameter/default/endpoint
+or timing change. Timing remains deferred; no DGX, contention question/probe or
+unrelated job/service action. Full goal is active and incomplete.
+
+## Recovered Candidate Construction Completed; Admission Implemented (2026-09-30)
+
+Previous turn made progress through `aa5b4e5a`: explicit handoff/source fix and
+one live source-corrected job. Reread the full objective and newest ledger; exact
+job 22385 is now COMPLETED 0:0, 2 CPUs/64 GiB on bizon, scheduler 5:11. Its
+8,588,785-byte final manifest SHA256 is
+`2e62321bf7a6d410f8ddafff783aaea979f1fec753fd6415b2b439ee7e2f54e6`:
+`recovered_cpm_candidates_prepared_pending_admission`, runtime before/after equal,
+original settings/seed preserved. Construction's content audit records 984,137
+genes, 390,845 seeds, 346,866 candidates and 43,979 merges. No accuracy evaluated.
+Candidate partition SHA256 `def5d6f8d77b043745845774cabf2832757ed61951b87aace0ef102a0950613c`.
+
+The [prospective read-only admission](QFO_CPM_HELPER_CANDIDATE_ADMISSION_PROTOCOL_20260930.md)
+was prepared while 22385 was running, before any new accuracy evaluation. Its
+new gate checks actual completion, fixed submission/clean executor/source,
+exact fresh seed evidence from that executor, full provenance, unchanged
+candidate parameters/numeric checkpoint/runtime and independent full membership/
+sidecar/content/merge reconstruction. Frozen package selection precedes any
+transitive scientific helpers. Final state and inputs/runtime are rechecked;
+success remains unscored with all downstream/publication flags false.
+
+All 285 script-inclusive focused tests pass (14.89 seconds), including related
+CPM builder/seed-admission coverage. Fixtures reject
+active/failed parents, altered identities/settings/data/runtime, incomplete
+membership/content/reconstruction and conflicting provenance; CLI imports no
+scientific package before a valid gate. Commit/push and final script-inclusive
+tests precede one new read-only 2-CPU/64-GiB/1-hour local admission attempt.
+Retain any failure; no candidate construction retry or new scientific optimizer.
+
+GNU time records 310.09-second total and 241.96-second incremental construction,
+with 10,938,956-KiB reported peak RSS: descriptive shared-host construction only,
+not comparable full-pipeline resource evidence or the controlled timing panel.
+Failure 22384 and all original failures/cancellations remain unchanged. Next
+validate candidates independently, then implement the explicit recovery-aware
+phylogeny/pair/scoring handoff. Original failed gates are not silently relaxed.
+No default/endpoint/parameter-panel/timing identity change. No renewed contention
+question/probe, DGX or unrelated job/service work. Full goal remains active;
+remaining timing, uncertainty/TreeFam, rights and release requirements stay open.
+
 ## Corrected Candidate Construction Is Running As 22385 (2026-09-30)
 
 Committed/pushed preserved failure 22384, deterministic import-order correction,
