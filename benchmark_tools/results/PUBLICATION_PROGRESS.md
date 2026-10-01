@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Timing Deferred; Existing Conversion 22392 Running (2026-10-01)
+
+The user does not know when unrelated analyses will finish and asks whether
+a quiet window is needed now. It is not required for current accuracy and
+publication work. Defer controlled timing on the local Threadripper; no DGX,
+replacement host, contention polling/question or unrelated job/service action.
+A verified quiet window remains a requirement before controlled timing, not
+a prerequisite for continuing all other work. Do not label shared-host
+allocation durations as controlled resource evidence or drop that requirement.
+
+After pushed 903ea2d7 and successful independent native admission/readback,
+the already-frozen conversion was submitted once as **22392** at 19:45:52
+UTC. The [actual submission receipt](qfo_private_cpm_pair_conversion_submission_22392.json)
+binds clean b502bc69 executor, exact command, four source files, native
+admission report and actual 22391 submission. Standalone 2 CPUs/64 GiB/4
+hours on bizon, no GPU/dependency/requeue/retry. At 19:50:47 UTC its parent
+and batch were RUNNING, elapsed 4:55. No resubmission, completed conversion,
+reference score or accuracy advantage is claimed. Historical failures retained.
+
+Next use the same 22392 handle; only after actual successful lossless conversion
+review outputs and run the frozen assessment with separate score admission.
+Seven-arm/18-endpoint integration, QfO uncertainty/TreeFam, controlled resources,
+rights and release remain unfinished. Full goal remains active/incomplete.
+
 ## Native 22390 Completed; Admission 22391 Running; Assessment Prepared (2026-10-01)
 
 Previous turn made progress at pushed b502bc69: tested prospective lossless
