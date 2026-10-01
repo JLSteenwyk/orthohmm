@@ -13,21 +13,21 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
-The [revised main-text review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930.md)
-now verifies after fresh extraction without the checkout: 45 files and all
-25 direct HTML targets. Its six PDF pages were visually inspected. The older
-43-file archive remains unchanged and compatible with the updated verifier.
-This adds a current relocatable review component to the
-source/figure components, not transitive study evidence, inference, rights
-clearance or a public release. Its render-time ledger is intentionally a
-historical snapshot, not current job status.
+The [30 September main-text review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md)
+verifies after fresh extraction without the checkout: 48 files and all
+28 direct HTML targets. Its six PDF pages were visually inspected. Earlier
+43/45-file archives remain unchanged. The scoring specification is included
+in that v2 snapshot, but later QfO findings are not automatically added.
+Its render-time ledger is a historical snapshot, not current job status.
 
-The later [frozen numerical scoring specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
-is linked from both current Markdown drafts but is not included automatically
-in that rendered/archive snapshot. Its nine frozen-source hashes and tiny
-reference-Python fixtures establish a bounded numerical readback, not native
-backend validation or calibration. Reconcile the final review export after
-outstanding analyses rather than treating the earlier PDF as current prose.
+The [1 October reconciled main-text review](PUBLICATION_MAIN_REVIEW_20261001.md)
+now has seven visually inspected PDF pages, all 16 citation IDs and 34 direct
+local targets. It includes complete parameter findings, the FAS mixture
+diagnostic and numerical-component restoration. It is a dated review copy,
+not a newly verified review archive, transitive study evidence, rights
+clearance or a public release. The [frozen scoring specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+still supplies only nine source hashes and tiny reference-Python fixtures;
+neither rendering nor those fixtures establish native calibration.
 
 The [restored-assets full OrthoBench run 22377](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md)
 now has successful terminal independent scientific reproduction. The original
@@ -42,8 +42,8 @@ The [complete QfO parameter panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.m
 now has independently admitted recovered high-CPM scores, all 18 numerically
 reproduced SwissTrees endpoints and a checked seven-arm table/figure. All
 adjusted intervals include zero; no default is promoted. Historical failures
-remain failed. This new result/prose is not included automatically in the
-earlier rendered review archive; final manuscript/figure/archive reconciliation
+remain failed. This result is included in the fresh main-text review but not
+automatically in earlier archives; final manuscript/figure/archive reconciliation
 remains required. Timing remains deferred, not replaced by shared-host durations.
 
 The later [QfO parameter numerical component](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
@@ -51,6 +51,12 @@ also passed actual fresh archive extraction, copied byte verification and all
 18 numerical endpoints under an original-path guard. This closes the
 checkout-only numerical-restoration gap for that component, not native/raw-data
 reproduction, cross-host/hermetic runtime closure, rights review or public release.
+
+The [complete local regression](PUBLICATION_FULL_REGRESSION_20261001.md)
+passed 13,660 cases without skips at c022ee78, including parser and native
+fixtures; 31 later focused prose/render checks passed separately. This is
+current local test evidence at those recorded snapshots, not remote CI or
+proof of scientific accuracy, complete dependency closure or release clearance.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
@@ -60,7 +66,7 @@ reproduction, cross-host/hermetic runtime closure, rights review or public relea
 | 4. Uncertainty and errors | [OrthoBench paired intervals](ORTHOBENCH_UNCERTAINTY_20260916.md), [corrected SwissTrees comparisons](qfo_recovered_swiss_uncertainty_22178.json), [FAS audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md), [VGNC method review](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) | Appropriate uncertainty remains unresolved for other QfO challenges and the secondary mean. Original TreeFam trees/mapping remain missing despite [public archive inspections](TREEFAM_SOURCE_RETRIEVAL_20260918.md). Do not substitute pair-IID intervals or inferred family labels |
 | 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [OrthoBench parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [complete QfO parameter panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md), [recovered high-CPM score admission](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md), [local executor contract](THREADRIPPER_EXECUTOR_CONTRACT_20260928.md), [adopted resource endpoints](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md), [passed 32-worker calibration](THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md) | Original high-CPM admission remains failed; separate private recovery now admits inference/conversion/scoring and completes the prespecified SwissTrees panel. Broader robustness and other-QfO uncertainty remain limited. The deferred 27-run timing panel still needs causal observer-overhead evaluation, prospective environmental policy, final source readiness, integrated handoff and a verified quiet window. Calibration 22380 is not production timing, continuous containment or causal slowdown |
 | 6. Biological usefulness | [Prespecified WGD case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), [fixed-tree four-rule diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md) | All three alternative root rules fail to recover the five focal losses on fixed inputs; mapped-event reduces coverage in four eligible cases. No general rule ranking, topology-error diagnosis or superiority claim follows |
-| 7. Reproducible publication package | [Current main-text rendering/review/archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [reconstructed-base full result](RECONSTRUCTED_FULL_OB_RESULT_22376.md), [admitted archive-to-results reproduction](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md), [combined source component](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Current six-page review includes the scoring specification and completed FAS/source-search additions; 48 direct-asset files verify after fresh extraction. This and same-host inference reproduction are not a complete executable release or cross-host restoration. Main draft is reviewed, not submission-ready. Final reconciliation after outstanding analyses, compiled/transitive dependency and data-rights review, public versioned release and archival deposition remain unfinished |
+| 7. Reproducible publication package | [Reconciled seven-page main-text review](PUBLICATION_MAIN_REVIEW_20261001.md), [historical 48-file review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md), [complete local regression](PUBLICATION_FULL_REGRESSION_20261001.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [reconstructed-base full result](RECONSTRUCTED_FULL_OB_RESULT_22376.md), [admitted archive-to-results reproduction](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md), [combined source component](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | Current seven-page review includes complete parameter/FAS/numerical-restoration findings but has no new review archive; the older 48-file archive remains historical. These and same-host inference reproduction are not a complete executable release or cross-host restoration. Main draft is reviewed, not submission-ready. Final reconciliation after outstanding analyses, compiled/transitive dependency and data-rights review, public versioned release and archival deposition remain unfinished |
 
 The next timing action is to complete and validate the live environmental
 review and full-scale accounting workflow, not to launch the 27 identities

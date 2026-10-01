@@ -29,6 +29,9 @@ native/raw-data restoration, a new statistical engine or rights clearance.
 The [complete local regression](results/PUBLICATION_FULL_REGRESSION_20261001.md)
 passed 13,660 cases without skips at its recorded revision, including parser
 and native fixtures; it is not controlled timing or remote CI evidence.
+The [reconciled main-text review](results/PUBLICATION_MAIN_REVIEW_20261001.md)
+renders these current findings in seven visually inspected PDF pages. It
+has a dated input snapshot and is not a new complete study archive.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

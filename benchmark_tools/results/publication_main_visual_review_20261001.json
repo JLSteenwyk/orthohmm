@@ -1,0 +1,103 @@
+{
+  "status": "reconciled_main_text_visually_reviewed",
+  "render": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_render_20261001.json",
+    "bytes": 18787,
+    "sha256": "439bbd52c221dcffb35b2912af2738b21c5a80ae6c0b72a7bce4d3ad12e83a8a"
+  },
+  "printed": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_print_20261001/print.json",
+    "bytes": 12546,
+    "sha256": "cc97ff427fcb9ef66ccbc960e695bd87dd01018a48d71cb0209a6b29f2cd3a7a"
+  },
+  "pdf_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/report.json",
+    "bytes": 13990,
+    "sha256": "4168bf48eee711202c8d3fa36f1f25e15d01d55b4ccbad439a0d03617105cd2f"
+  },
+  "manuscript_and_render_time_ledger_revision": "b74494376002dc87094aeb5ad733c9b0ea45cdd4",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "images": [
+    {
+      "bytes": 192463,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_001.png",
+      "sha256": "311204197936c94151737fb4bac861de409ae6dda942eef9f37b49a8285df56e"
+    },
+    {
+      "bytes": 260106,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_002.png",
+      "sha256": "8551224c9a6d453fca1b694afe207eeff7b8661c48076c1ece0c72d7cfe1435b"
+    },
+    {
+      "bytes": 251827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_003.png",
+      "sha256": "46d6dd476974a55f04b861d3e82c6f699d7e8c2c820b88353f240ef589aec932"
+    },
+    {
+      "bytes": 255723,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_004.png",
+      "sha256": "29eb6c4ecd09f8d688051e2a8dc62e625621523886ce6b70faa29ff3909afc34"
+    },
+    {
+      "bytes": 267312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_005.png",
+      "sha256": "cea60139bb09505ce60c45aad27d535601e940e172a18a2e7f96b286c690fb8e"
+    },
+    {
+      "bytes": 233273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_006.png",
+      "sha256": "2a540f03ee2366708d091e1db069d6176cc1f10870637a585cb0dc51168d5d5f"
+    },
+    {
+      "bytes": 232635,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_pdf_review_20261001/page_007.png",
+      "sha256": "a0632d414a64885d7dd3f764ce76cf99e816b6e2e393fb3f9092ff5e331b7207"
+    }
+  ],
+  "bounds_violations": [],
+  "local_occurrences": 35,
+  "unique_targets": 34,
+  "citation_ids": [
+    "busco2021",
+    "cpm2011",
+    "diamond2021",
+    "fastoma2025",
+    "kuzmin2020",
+    "leiden2019",
+    "orthobench2020",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "qfo2016",
+    "qfo2020",
+    "sonicparanoid2024",
+    "ygob2005"
+  ],
+  "visual_checks": [
+    "All seven pages inspected",
+    "Complete parameter findings and preserved historical failures present",
+    "FAS diagnostic and numerical-restoration boundaries present",
+    "Body text, headings and bibliography readable",
+    "No observed clipping or overlapping text"
+  ],
+  "linked_asset_visual_review_repeated": false,
+  "linked_figures_embedded": false,
+  "scientific_scores_recomputed": false,
+  "controlled_timing": false,
+  "publication_ready": false,
+  "limitations": [
+    "Manual inspection covers this main-text PDF, not transitive evidence or scientific claim validation.",
+    "Render-time ledger is the recorded committed snapshot; later progress updates are not those input bytes.",
+    "No new review archive, runtime restoration, public release or rights clearance is implied."
+  ]
+}

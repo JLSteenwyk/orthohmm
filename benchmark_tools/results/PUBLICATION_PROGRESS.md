@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Reconciled Seven-Page Main Review Inspected (2026-10-01)
+
+Committed/pushed reconciled main text, guide and tests at b7449437 before
+fresh rendering. Citation-rendered HTML has 16 known citation IDs, 35 local
+occurrences and 34 existing tracked targets. Checked printing produced seven
+PDF pages, 134,445 bytes, SHA256
+2330f990029a71542d1a47446d82c566264f8184e5d2b2eb21b5df74471f68be.
+All seven pages were inspected: readable text/headings/bibliography, no observed
+clipping or overlap, zero PDF bounds violations. Updated parameter result is
+on page 4, FAS diagnostic/limitations on pages 5-6 and numerical restoration
+scope on page 6. Linked figures are not embedded or newly visually reviewed.
+
+The [review result and manual receipt](PUBLICATION_MAIN_REVIEW_20261001.md)
+bind actual render/print/check/images and the exact b7449437 main/ledger
+snapshot. Current status updates do not replace those historical input bytes.
+Older reviews/archives remain intact; no new review archive is implied.
+Guide and current claim index now distinguish this seven-page review from the
+older 48-file archive and the complete local test snapshot. Scientific scores,
+defaults, failed history and completed analyses remain unchanged.
+
+No new inference/scoring/bootstrap/archive restoration/calibration or public
+source search. Full tests passed 13,660 cases at c022ee78; 31 subsequent focused
+prose/citation/render tests passed separately. Timing remains deferred, with
+no quiet-window question/poll, DGX or unrelated job/service/package action.
+Other QfO uncertainty, original TreeFam sources, resource execution gates,
+transitive rights/dependency review and final versioned release/deposition
+remain open. Commit/push checked review artifacts and current index now.
+After updating the current index/guide, the same 31 focused cases pass again
+in 2.74 seconds. This is a repeated validation, not 31 additional unique cases.
+Fresh main_review.xml SHA256
+334add6184b38058dbfb14907c0143d15bba64af0f9a58c566e1ebca79a2b514.
+All review artifact bytes agree; exactly the later-edited ledger target was
+verified against its committed b7449437 render snapshot. Scientific/helper/
+test tracked status remains clean. No live child remains from this work.
+
 ## Condensed QfO Main Text Reconciled (2026-10-01)
 
 Committed/pushed actual full-regression evidence at 61db013c before editing
