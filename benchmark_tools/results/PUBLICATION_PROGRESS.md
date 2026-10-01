@@ -1,5 +1,41 @@
 # Publication Progress
 
+## FAS Stratum Weights Explained While Native Inference Continues (2026-10-01)
+
+The previous user-triggered turn was a verified wait: exact native job 22390
+was confirmed RUNNING at 35:02. Re-read the full objective and newest ledger;
+current check remains RUNNING at 41:16, 32 CPUs/192 GiB, bizon, with no new
+error in its retained Slurm log. Do not restart/resubmit or inspect incomplete
+outputs for admission. The user does not need a quiet timing window now;
+controlled timing remains deferred while accuracy/publication work continues.
+
+Added a standard-library [FAS stratum-weight audit and result](QFO_FAS_STRATUM_WEIGHT_RESULT_20261001.md)
+using only two pinned, small retained eight-method reports. It reproduces
+native means and separates exact-rational rounding from omission-induced
+mixture weights, holding observed stratum means fixed. No lookup/database/
+annotation/inference/scoring repeat. All eight identities and earlier native
+scores remain fixed. Original population-parser/stability caveats and native
+container-source evidence are separate; neither is silently upgraded.
+
+OrthoMCL's precomputed weight rises from 91.300061% intended to 92.418564%
+saved; total weight-only effect +0.001318947 FAS units, versus +0.000085894
+for full OrthoFinder. These are diagnostic numerical differences, not known
+population bias, corrected scores, paired confidence intervals or superiority.
+Omitted values can also change within-stratum means. Earlier conditional
+completion/population bounds and dependence limitations remain unchanged.
+
+All 115 focused tests pass in 1.44 seconds. Separate isolated stdlib Decimal
+readback, without producer import, verifies all eight rows/four current pins;
+maximum component discrepancy 1.2271e-16 and native endpoints unchanged.
+Updated the manuscript and claim checklist; commit/push this tested milestone.
+
+Next poll exact 22390; after actual success submit the already prepared
+read-only native admission once from its clean executor. Lossless conversion,
+reference-score admission and frozen seven-arm/18-endpoint integration remain
+required. Full goal active/incomplete: recovered native accuracy/parameter
+analysis, QfO uncertainty/TreeFam, controlled resources, rights and release.
+No contention question/probe, DGX, shared package mutation or unrelated work.
+
 ## Recovered Private Native Admission Prepared While 22390 Runs (2026-10-01)
 
 Previous turn made progress at pushed 733353f3: admitted private deployment/

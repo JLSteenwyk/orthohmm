@@ -517,6 +517,19 @@ only the omitted sampled values cannot reverse either OrthoHMM-versus-full-
 OrthoFinder FAS sample-mean ordering, but does not establish an advantage
 beyond those samples.
 
+A separate [stratum-weight decomposition](QFO_FAS_STRATUM_WEIGHT_RESULT_20261001.md)
+reproduces all eight native means without rescoring. The intended mixture is
+approximately proportional to eligible precomputed/new populations, but
+omitting only newly calculated values changes its realized weights. OrthoMCL's
+precomputed share rises from 91.300061% intended to 92.418564% saved. Holding
+the observed stratum means fixed, rounding and attrition together change its
+mean by +0.001318947 relative to a population-weighted mixture of those same
+observed means; the corresponding full-OrthoFinder change is +0.000085894.
+This is a numerical diagnostic, not a population estimate or correction of
+the benchmark. Omitted values may also change the new-score stratum mean;
+historical selection and protein/family dependence remain unresolved. Native
+scores, earlier completion bounds and the lack of paired FAS intervals remain.
+
 A [controlled probe](QFO_FAS_OMISSION_MECHANISM_20260928.md) inside the retained
 greedyFAS 1.18.7 container verified that proteins exceeding the configured
 `10**15` feature-path limit produce NA values, which the QfO loader omits.
