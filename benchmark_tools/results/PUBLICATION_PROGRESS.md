@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Private Admission 22388 Preserved; Exact Path Correction Tested (2026-10-01)
+
+Committed/pushed independent admission source/protocol/script/tests at c931c141,
+created a clean detached executor and submitted exactly one read-only job 22388.
+The [submission](qfo_private_phylogeny_admission_submission_22388.json) preserves
+the real command, four source bindings and initial RUNNING observation. Actual
+parent/batch accounting is now FAILED 1:0 in 51 seconds, 2 CPUs/64 GiB on bizon.
+No admission report was created, no native control/recovered inference reran.
+
+The [failure receipt](qfo_private_phylogeny_admission_failed_22388.json) binds
+traceback, frozen failing source, actual completion, retained pre/post/status and
+both protocol copies. One targeted read-only reconstruction found the sole
+preflight mismatch: protocol.path. The unchanged native controller records the
+main repository protocol; admission incorrectly expected its detached-executor
+copy. Bytes/SHA256 match; all other preflight fields, input identities and
+execution flags agree. This is an admission implementation error, not a private
+runtime or scientific-output mismatch. Original failed executor/log unchanged.
+
+Correct only the expected main-repository protocol path, retaining exact hash/
+complete-record equality and submitted executor-copy binding. Add an explicit
+wrong-path regression; final 227 focused tests pass in 11.71 seconds. Extend the
+admission protocol to document the correction and require exactly one explicit
+new read-only attempt from a clean corrected executor, fresh v2 report target.
+No native retry, changed acceptance criteria or automatic retry is authorized.
+Commit/push correction and failure/submission evidence before that attempt.
+
+Successful native control 22387 is retained, still pending admission/readback.
+Recovered high-CPM candidates remain admitted/unscored, no phylogeny handoff yet.
+Timing deferred; quiet window not needed now. Other publication work continues;
+full goal active/incomplete. No DGX, unrelated job/service change, renewed
+contention question, shared package mutation or repeated completed inference.
+
 ## Private QfO Control Completed; Independent Admission Prepared (2026-10-01)
 
 Actual 22387 parent and batch step are COMPLETED 0:0, 32 CPUs/192 GiB,

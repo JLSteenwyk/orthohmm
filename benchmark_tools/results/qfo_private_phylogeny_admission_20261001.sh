@@ -19,4 +19,4 @@ cd "$ROOT"
 exec /home/bizon/anaconda3/bin/python -B "$EXECUTOR/benchmark_tools/admit_qfo_private_phylogeny_control.py" \
   --root "$ROOT" --protocol-sha256 "$PROTOCOL_SHA" \
   --submission-sha256 5eeafb0d9c478c06c5e110fb0b6a8638bd1d958e3ad278808b824cfb4028d9e3 \
-  --output "$ROOT/benchmarks/work/qfo_private_phylogeny_control_admission_20261001.json"
+  --output "$ROOT/benchmarks/work/qfo_private_phylogeny_control_admission_v2_20261001.json"

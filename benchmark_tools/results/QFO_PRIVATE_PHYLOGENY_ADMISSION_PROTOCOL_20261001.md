@@ -80,3 +80,22 @@ for a separate fixed recovered-candidate handoff, not a completed CPM benchmark,
 score superiority or controlled scaling. An independent compact receipt readback
 will check actual completed admission/source/report identities before launch.
 Keep original shared-runtime rejection and all failed historical gates unchanged.
+
+## Corrective Read-Only Attempt
+
+Admission 22388 failed 1:0 in 51 seconds before native validation or report
+creation. Its original clean executor at c931c141, submission and traceback
+remain retained. A targeted read-only diagnosis found that the sole preflight
+difference is the control protocol record's path: the control actually reads
+the main repository's pinned protocol, not the detached executor's byte-identical
+copy. Both retain the original reviewed SHA256; all other preflight fields,
+input identities and execution flags agree. This is a validator path error,
+not a scientific output or private-runtime mismatch.
+
+Correct the expected protocol path to the exact main-repository location used
+by the unchanged control driver. Keep the exact SHA256, full record equality,
+executor-copy submission binding and all other acceptance gates. Add a test
+that rejects a byte-identical protocol record at the incorrect executor path.
+Commit/push the correction and use a new clean admission executor for exactly
+one explicitly documented read-only attempt with a fresh v2 report path.
+No native retry, changed scientific criteria or automatic admission retry.

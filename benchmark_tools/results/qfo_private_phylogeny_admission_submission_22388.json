@@ -1,0 +1,48 @@
+{
+  "status": "private_qfo_phylogeny_readonly_admission_submitted",
+  "job_id": "22388",
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001",
+  "executor_commit": "c931c141eead5c79709ffcb9b3a82bba8b3cb35e",
+  "observed_utc": "2026-10-01T17:30:44.264231+00:00",
+  "submission_argv": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001/benchmark_tools/results/qfo_private_phylogeny_admission_20261001.sh",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001",
+    "c931c141eead5c79709ffcb9b3a82bba8b3cb35e",
+    "19d4f5bf123dc4b85dacf05835742a680e2e37494770fa4eacb64db32fbd793c"
+  ],
+  "executor_clean": true,
+  "source_records": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001/benchmark_tools/admit_qfo_private_phylogeny_control.py",
+      "bytes": 15195,
+      "sha256": "b7a618986bc072703c90b37102546b90e17274b05c49cded6dc2101b31ab3e7a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001/benchmark_tools/results/QFO_PRIVATE_PHYLOGENY_ADMISSION_PROTOCOL_20261001.md",
+      "bytes": 4912,
+      "sha256": "19d4f5bf123dc4b85dacf05835742a680e2e37494770fa4eacb64db32fbd793c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001/benchmark_tools/results/qfo_private_phylogeny_admission_20261001.sh",
+      "bytes": 1179,
+      "sha256": "c22291a3426139b3b7e3b2543d3c8823d48020f161416dfbf5bab873c9a2ba1e"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_admission_executor_20261001/tests/unit/test_admit_qfo_private_phylogeny_control.py",
+      "bytes": 14536,
+      "sha256": "f8a61248fd8196b30d7812a1e76d8c5bc93061f53f9683c6f19eaeb8330dd4a5"
+    }
+  ],
+  "parent_submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_phylogeny_control_submission_22387.json",
+    "bytes": 5871,
+    "sha256": "5eeafb0d9c478c06c5e110fb0b6a8638bd1d958e3ad278808b824cfb4028d9e3"
+  },
+  "accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22388|22388|RUNNING|0:0|00:00:32|2|64G|bizon\n22388.batch|22388.batch|RUNNING|0:0|00:00:32|2||bizon\n",
+  "native_inference": false,
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false
+}

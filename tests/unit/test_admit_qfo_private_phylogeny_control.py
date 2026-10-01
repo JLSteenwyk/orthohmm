@@ -112,16 +112,20 @@ def admission_fixture(root, monkeypatch, problem):
         source.write_bytes((Path(module.__file__).parent / name).read_bytes())
         helpers.append(record(source))
     helpers.sort(key=lambda p: p["path"])
-    control_protocol = executor / "benchmark_tools/results/QFO_PRIVATE_PHYLOGENY_CONTROL_PROTOCOL_20261001.md"
+    control_relative = "benchmark_tools/results/QFO_PRIVATE_PHYLOGENY_CONTROL_PROTOCOL_20261001.md"
+    control_protocol = root / control_relative
     control_protocol.parent.mkdir(parents=True)
     control_protocol.write_text("control protocol")
+    executor_protocol = executor / control_relative
+    executor_protocol.parent.mkdir(parents=True)
+    executor_protocol.write_bytes(control_protocol.read_bytes())
     monkeypatch.setattr(module, "CONTROL_PROTOCOL_SHA", record(control_protocol)["sha256"])
     protocol = root / module.PROTOCOL
     protocol.parent.mkdir(parents=True, exist_ok=True)
     protocol.write_text("admission protocol")
     source = record(executor / "benchmark_tools/run_qfo_private_phylogeny_control.py")
     submission = {"job_id": module.JOB, "status": "private_full_qfo_phylogeny_control_submitted",
-        "executor_commit": module.COMMIT, "executor": str(executor), "source_records": [*helpers, record(control_protocol)],
+        "executor_commit": module.COMMIT, "executor": str(executor), "source_records": [*helpers, record(executor_protocol)],
         "accuracy_evaluated": False, "recovered_cpm_inference_authorized": False, "controlled_timing": False,
         "publication_ready": False, "deployment": record(protocol), "original_native_admission": record(protocol),
         "preserved_shared_rejection": record(protocol)}
@@ -170,6 +174,8 @@ def admission_fixture(root, monkeypatch, problem):
         "executed_argv": argv, "launcher_equivalence": equivalence, "resolved_tools": {}, "cwd": str(launcher), "job_id": module.JOB,
         "scope": "Entire frozen QfO p1_c1_r1 private deployment parity; validated checkpoint reuse; unscored incremental shared-host control"}
     _, inputs, post, status = identity_fixture()
+    if problem == "protocol_path":
+        preflight["protocol"] = record(executor_protocol)
     status.update(provenance=preflight, verified_inputs=inputs)
     comparisons = compare_outputs(old, new)
     post["native_comparison"] = comparisons
@@ -208,7 +214,7 @@ def admission_fixture(root, monkeypatch, problem):
     return submission_pin["sha256"], record(protocol)["sha256"], calls
 
 
-@pytest.mark.parametrize("problem", [None, "revision", "execution", "lookup", "lookup_request", "parity", "comparison_report", "no_pairs", "runtime_changed"])
+@pytest.mark.parametrize("problem", [None, "revision", "execution", "protocol_path", "lookup", "lookup_request", "parity", "comparison_report", "no_pairs", "runtime_changed"])
 def test_end_to_end_readonly_gate(tmp_path, monkeypatch, problem):
     submission_sha, protocol_sha, calls = admission_fixture(tmp_path, monkeypatch, problem)
     destination = tmp_path / "admission.json"

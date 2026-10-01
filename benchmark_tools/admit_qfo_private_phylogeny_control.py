@@ -136,7 +136,7 @@ def admit(root, submission_sha, protocol_sha, destination):
     from benchmark_tools.run_qfo_private_phylogeny_control import compare_outputs
 
     _, resolved = execution_environment(verified["environment"])
-    control_protocol = record(executor / "benchmark_tools/results/QFO_PRIVATE_PHYLOGENY_CONTROL_PROTOCOL_20261001.md")
+    control_protocol = record(root / "benchmark_tools/results/QFO_PRIVATE_PHYLOGENY_CONTROL_PROTOCOL_20261001.md")
     if control_protocol["sha256"] != CONTROL_PROTOCOL_SHA:
         raise ValueError("Private control protocol changed")
     expected = {"source": source, "helpers": helpers, "protocol": control_protocol, "verified": verified,
