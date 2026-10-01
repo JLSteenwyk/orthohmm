@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Full Default Discovery Without Skips (2026-10-01)
+
+Re-read the full objective and latest checkpoint; jobs 22393/22394/22395
+remain terminal COMPLETED 0:0. The preceding quiet-window reply did not
+advance authoritative project state; took the next available release check,
+not another coordination question or contention poll. Full pytest discovery
+at c022ee78 passed **13,660 tests**, zero failures/errors/skips, 22 warnings
+in 614.43 seconds. All five integration, 232 top-level, 13 SQL-parser and
+ten opt-in installed OrthoMCL fixture cases were included in this invocation.
+
+Used retained parser 30.20.0, explicit compatible MCL/phmmer and scoped
+one-thread numerical overrides; no installation or shared environment change.
+The [actual receipt and scope](PUBLICATION_FULL_REGRESSION_20261001.md)
+pin the command, versions, JUnit/log and inventories. All 2,891 inventoried
+source/test/fixture files, executable bytes and 1,140 pre-existing modified
+sample files were unchanged afterward. Child/controller are terminal; frozen
+invalid-escape warnings remain visible. This supersedes earlier split or
+skipping test evidence for this source snapshot, not scientific results or CI.
+
+Next reconcile the condensed main text, which still calls recovered high-CPM
+unavailable, with the completed seven-arm parameter panel, FAS diagnostic and
+numerical restoration. Do not convert historical failures to successes.
+Controlled timing stays deferred; full scientific/release requirements remain
+open. Commit/push measured regression evidence before those prose changes.
+
 ## Actual QfO Parameter Archive Restoration Passed (2026-10-01)
 
 Committed/pushed prepared source/tests/protocol at **aa7cad914aae8b3e032c62aa66e1a58b331684ca**

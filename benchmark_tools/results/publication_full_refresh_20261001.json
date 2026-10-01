@@ -1,0 +1,179 @@
+{
+  "argv": [
+    "/home/bizon/anaconda3/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "--junitxml=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_refresh_20261001_c022ee78/full.xml"
+  ],
+  "controlled_timing": false,
+  "controller_elapsed_seconds": 622.271343601984,
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "environment_overrides": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "ORTHOHMM_LEGACY_BLAST_SMOKE": "1",
+    "ORTHOHMM_TEST_MCL": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+    "ORTHOHMM_TEST_PHMMER": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src/phmmer",
+    "PYTHONPATH": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_selectome_search_20260928/parser_lib"
+  },
+  "existing_dirty_sample_count": 1140,
+  "existing_dirty_sample_inventory": {
+    "bytes": 358137,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_refresh_20261001_c022ee78/existing_dirty_samples_before.json",
+    "sha256": "46706584fab3f529dd0dc00642256e1dbf733230c0da77b58b4921d23e0eab4f"
+  },
+  "existing_dirty_samples_unchanged": true,
+  "exit_code": 0,
+  "failures": [],
+  "finished_utc": "2026-10-01T23:08:17.903693+00:00",
+  "junit": {
+    "bytes": 1860867,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_refresh_20261001_c022ee78/full.xml",
+    "sha256": "78c36d828796f0726de9d618a5bd1e7eb13d71e370a0ce7e4bd0f93d04fadc70"
+  },
+  "limitations": [
+    "Shared-host elapsed times are regression durations, not controlled tool timings.",
+    "Passing local tests does not establish remote CI, rights clearance or publication readiness.",
+    "Source inventory binds current tracked scientific/test/helper bytes; this is not a hermetic complete dependency lock."
+  ],
+  "package_versions": {
+    "biopython": "1.86",
+    "igraph": "1.0.0",
+    "leidenalg": "0.11.0",
+    "numpy": "2.2.6",
+    "pytest": "9.0.2",
+    "scipy": "1.15.3"
+  },
+  "passed": 13660,
+  "pid": 1071821,
+  "publication_ready": false,
+  "pytest_log": {
+    "bytes": 15692,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_refresh_20261001_c022ee78/pytest.log",
+    "sha256": "5e0b970f8201e08ff03035967b313bd6276350b7bbe62ef20da6097000214ebf"
+  },
+  "python_executable": {
+    "bytes": 17157264,
+    "path": "/home/bizon/anaconda3/bin/python",
+    "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+  },
+  "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "revision": "c022ee78b100593f1e789b6842b3953186cbc5f7",
+  "revision_after": "c022ee78b100593f1e789b6842b3953186cbc5f7",
+  "scoped_status_after": "",
+  "scoped_status_before": "",
+  "skips": [],
+  "source_inventory": {
+    "bytes": 830762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_full_refresh_20261001_c022ee78/source_before.json",
+    "sha256": "e5a627e81b0b21e3352426b15ce74d9eff1ecbe0729f48ef828cf084127bc524"
+  },
+  "source_inventory_count": 2891,
+  "source_inventory_unchanged": true,
+  "sqlglot_module": {
+    "bytes": 5873,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/treefam_selectome_search_20260928/parser_lib/sqlglot/__init__.py",
+    "sha256": "62475c676c9112c31d8ecca3ef7763565153a2ba6fe01897dcef6e782fe89cb3"
+  },
+  "sqlglot_version": "30.20.0",
+  "started_utc": "2026-10-01T22:57:55.632373+00:00",
+  "suites": [
+    {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "13660",
+      "time": "613.871",
+      "timestamp": "2026-10-01T18:57:56.243764-04:00"
+    }
+  ],
+  "tools_after": {
+    "blastall": {
+      "bytes": 4591820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastall",
+      "sha256": "34b91fedd2e7858a3478e83758e3f5339c09f96f543d9338488ea4b84628fb75"
+    },
+    "dedicated_python": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/bin/python",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    "fastacmd": {
+      "bytes": 3991083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+      "sha256": "2f3e1ab0a54b2d9472fa4ffcb9ac4943b69705766870e729766466422b9cfd3e"
+    },
+    "formatdb": {
+      "bytes": 3997540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/formatdb",
+      "sha256": "169b006ef95a8ef9cdd3d516b2de570ff0cea7de55a99974a8e1f443dd90c204"
+    },
+    "legacy_mcl": {
+      "bytes": 452856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin/mcl",
+      "sha256": "ff32e8535e4913b3fc2646d1497c6c4ebd480ad404ad9e302f99faddee2d1db1"
+    },
+    "legacy_perl": {
+      "bytes": 2212152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+      "sha256": "0831f05140647686cd2260eea4fc59b5aa68f4e8a2d4ec28d1b865dbc3aeffef"
+    },
+    "mcl": {
+      "bytes": 284104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+      "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+    },
+    "phmmer": {
+      "bytes": 1151488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src/phmmer",
+      "sha256": "90de06fbee03705bfbda89b1d5857d337eeb9073d6be431340023b90f8ea515e"
+    }
+  },
+  "tools_before": {
+    "blastall": {
+      "bytes": 4591820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/blastall",
+      "sha256": "34b91fedd2e7858a3478e83758e3f5339c09f96f543d9338488ea4b84628fb75"
+    },
+    "dedicated_python": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthomcl_python_env_20260918/bin/python",
+      "sha256": "ddd8126d3a409c6ad46c718225d853214d0c9dba3657123514172951fa79058b"
+    },
+    "fastacmd": {
+      "bytes": 3991083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/fastacmd",
+      "sha256": "2f3e1ab0a54b2d9472fa4ffcb9ac4943b69705766870e729766466422b9cfd3e"
+    },
+    "formatdb": {
+      "bytes": 3997540,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/blast-2.2.13/bin/formatdb",
+      "sha256": "169b006ef95a8ef9cdd3d516b2de570ff0cea7de55a99974a8e1f443dd90c204"
+    },
+    "legacy_mcl": {
+      "bytes": 452856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin/mcl",
+      "sha256": "ff32e8535e4913b3fc2646d1497c6c4ebd480ad404ad9e302f99faddee2d1db1"
+    },
+    "legacy_perl": {
+      "bytes": 2212152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+      "sha256": "0831f05140647686cd2260eea4fc59b5aa68f4e8a2d4ec28d1b865dbc3aeffef"
+    },
+    "mcl": {
+      "bytes": 284104,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/bin/mcl",
+      "sha256": "3a8790a79e3709393255c1c2337318b16db07efdfaf50f5b24cb4a2f9d2a6b03"
+    },
+    "phmmer": {
+      "bytes": 1151488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src/phmmer",
+      "sha256": "90de06fbee03705bfbda89b1d5857d337eeb9073d6be431340023b90f8ea515e"
+    }
+  },
+  "tools_unchanged": true
+}
