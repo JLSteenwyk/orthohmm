@@ -1,5 +1,54 @@
 # Publication Progress
 
+## Recovered Seven-Arm Parameter Integration Prepared (2026-10-01)
+
+Previous goal turn made progress at pushed 37913504: lossless conversion
+readback, tested independent score gate and actual six-challenge assessment
+22393 submission. Re-read full objective/latest ledger and poll the same handle:
+initial RUNNING at 3:01; latest parent/batch RUNNING at 19:02, 8 CPUs/64 GiB,
+bizon. The execution scoring log confirms all six native benchmark tasks were
+submitted. No incomplete score was inspected, native accuracy admitted or
+assessment restarted. A targeted own-job PID check confirmed child processes;
+live sstat CPU accounting was malformed, so no CPU-use/timing claim follows.
+
+Prepared a separate [seven-arm parameter integration path](QFO_PRIVATE_CPM_PARAMETER_INTEGRATION_PROTOCOL_20261001.md).
+Historical count/admission/statistics code and inputs remain unchanged. Require
+the other six admitted rows exactly equal the pinned retained partial inventory;
+only high-CPM can gain recovered private admission, or remain unavailable with
+reason/no imputed evidence. Require its actual terminal 2-CPU/64-GiB validator
+job before reading the report, actual clean 2e99680c submission and four Git
+source bindings. Pin private score-admitter/source/protocol, native-pair
+conversion, false timing/publication flags, independently checked evidence and
+recovered arm reconstructed from the bound candidate admission.
+
+Reuse original per-arm legacy validators for the other six arms, original raw
+execution binding/count assembly and unchanged numerical bootstrap. Check all
+nested file identities with conflict detection and reconstruct exact 18-family
+reference truth/membership/orientation/counts/native priors and macro statistics.
+Keep 100,000 shared PCG64 draws, seed 20260925, linear quantiles, all six
+contrasts and full 18-endpoint multiplicity. Recheck private validator completion
+and all evidence at close. Retain failures, partial/null availability and false
+scientific/uncertainty claims on failure; no repair, auto-retry or old gate change.
+
+Initial 53 tests pass in 3.54 seconds. Added actual recovered-arm reconstruction,
+invalid-job/no-query, active-admission/no-read and changed-completion gates.
+Intermediate 318 focused tests pass. Final broader count/bootstrap/reproduction/
+private-score/conversion/native-metric set: **419 pass in 22.44 seconds**.
+Bash syntax and scoped whitespace checks pass. Fixture raw counts feed the real
+100,000-draw kernel and unchanged independent reproducer, covering all 18
+endpoints for a complete panel and 15 when high-CPM is unavailable. Admission
+predicates are tested separately; fixture orchestration does not establish real
+scientific admission or intervals. No new real-data parameter run submitted.
+
+Commit/push source/tests/protocol/script now. Next use same 22393 handle; only
+after actual assessment success review its report/submission hashes and submit
+the already-prepared independent score gate once. After successful score
+admission freeze a new seven-arm inventory, run this integration once, reproduce
+all actual numerical endpoints, export table/figure and update manuscript/claims.
+Goal active/incomplete: recovered scores/robustness, QfO uncertainty/TreeFam,
+controlled resources, rights and release remain. Timing deferred; no contention
+polling/question, DGX, unrelated job/service or shared-package/default change.
+
 ## Frozen Six-Challenge Assessment 22393 Submitted (2026-10-01)
 
 Committed/pushed score-admission source/tests/protocol/script and actual
