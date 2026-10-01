@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Recovered Private Native-Pair Conversion Prepared (2026-10-01)
+
+Previous goal turn made progress at pushed 5edfc888: complete retained FAS
+mixture-weight audit, manuscript/claims update and 115 passing tests. Re-read
+the full objective/latest ledger and polled exact native 22390. Latest parent/
+batch accounting remains RUNNING at 1:01:49, 32 CPUs/192 GiB, bizon; no new
+error in its retained Slurm log. No resubmission, native completion or accuracy
+is inferred. Timing remains deferred, with no contention probe/question.
+
+Added separate [lossless recovered-private pair conversion](QFO_PRIVATE_CPM_PAIR_PROTOCOL_20261001.md),
+leaving original failed seed/shared-runtime/native/CPM conversion gates intact.
+Require the actual successful standalone native-admission parent/steps,
+reviewed report/submission hashes, exact submitted clean d3c4c5c3 executor/
+source/protocol/script/test bindings and original 22390 submission. Reconstruct
+verified recovered candidate/private-baseline cell; fresh separate-process
+native admission must equal the retained report. No inference is repeated.
+
+Reuse unchanged full corrected gene-ownership, native-pair writer and mapping/
+filter helpers. Require injective accessions, canonical unique sorted native
+pairs with correct species, all counts equal the admitted positive count and
+zero mapping loss. Filtered/unfiltered bytes must agree; recheck complete
+evidence/runtime/terminal admission before final names. Preserve preflight,
+logs/counts/partials/failed report; refuse existing/symlink output or retry.
+Keep fixed cpm_high/index1/participant/native-pair semantics and all accuracy/
+scoring/controlled-timing/publication flags false. No RootHOG clique substitute.
+
+Initial conversion/unchanged-helper tests: 126 passed in 1.28 seconds. One
+broader invocation selected a nonexistent environment-test filename and ran
+no tests; corrected to discovered paths: 351 passed. Final broader original/
+private native-validation/runtime/conversion checks: 428 pass in 5.64 seconds.
+Bash syntax passes. Tests cover active-job/no-read ordering, invalid resources/
+source/provenance/claims, fresh-admission mismatch/failure, metadata/species/
+ordering/normalization/mapping/count failures, changed final evidence/runtime/
+accounting, exact successful pair bytes and no overwrite. No live native
+admission or conversion has been submitted or completed by these fixtures.
+
+Prepared clean detached native-admission worktree at
+benchmarks/work/qfo_private_cpm_native_admission_executor_20261001, exact
+`d3c4c5c3525fcbeea97fa6b6d52cce05a0d5de29`. Status empty; source/protocol/
+script/test SHA256 pins agree with the already frozen native-admission route.
+This is source readiness only, not output admission. Commit/push conversion
+source/tests/protocol/script and ledger before any actual conversion attempt.
+
+Next poll same 22390. After actual success, submit the prepared independent
+native admission once; preserve its actual submission with the schema specified
+in the conversion protocol. Only after its success review report/submission
+hashes and submit one clean-executor 2-CPU/64-GiB/4-hour conversion. Separate
+reference assessment/score admission and frozen seven-arm/18-endpoint analysis
+remain required. Full goal active/incomplete: recovered accuracy/parameter
+integration, QfO uncertainty/TreeFam, controlled resources, rights and release.
+No DGX, shared package mutation, unrelated job/service or scientific defaults.
+
 ## FAS Stratum Weights Explained While Native Inference Continues (2026-10-01)
 
 The previous user-triggered turn was a verified wait: exact native job 22390
