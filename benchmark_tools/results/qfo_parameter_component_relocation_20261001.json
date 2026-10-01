@@ -1,0 +1,128 @@
+{
+  "status": "qfo_parameter_component_fresh_restoration_passed",
+  "source_commit": "aa7cad914aae8b3e032c62aa66e1a58b331684ca",
+  "extraction": {
+    "status": "qfo_parameter_archive_freshly_extracted",
+    "archive": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91.tar.gz",
+      "bytes": 8727873,
+      "sha256": "b5d63fb625357052af22f0a8f3ac18273c647c346c60cdc20cdabb9380ffcb2a"
+    },
+    "directory": "/tmp/orthohmm-qfo-parameter-restoration-20261001/component",
+    "members": 25,
+    "only_regular_canonical_members": true,
+    "archive_unmodified_after_extraction": true,
+    "publication_ready": false
+  },
+  "extraction_argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-c",
+    "import hashlib,json,pathlib,tarfile,sys\narchive,sha,target=sys.argv[1:]\narchive=pathlib.Path(archive); target=pathlib.Path(target)\nraw=archive.read_bytes()\nassert hashlib.sha256(raw).hexdigest()==sha\nassert target.resolve()==target and not target.exists() and not target.is_symlink()\nwith tarfile.open(archive,\"r:gz\") as handle:\n members=handle.getmembers()\n assert len(members)==25 and len({m.name for m in members})==25\n for member in members:\n  p=pathlib.PurePosixPath(member.name)\n  assert member.isfile() and not p.is_absolute() and \"..\" not in p.parts and str(p)==member.name\n target.mkdir()\n component=target/\"component\"; component.mkdir()\n handle.extractall(component,filter=\"data\")\nassert hashlib.sha256(archive.read_bytes()).hexdigest()==sha\nprint(json.dumps({\"status\":\"qfo_parameter_archive_freshly_extracted\",\"archive\":{\"path\":str(archive),\"bytes\":len(raw),\"sha256\":sha},\"directory\":str(component),\"members\":25,\"only_regular_canonical_members\":True,\"archive_unmodified_after_extraction\":True,\"publication_ready\":False},indent=2))\n",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91.tar.gz",
+    "b5d63fb625357052af22f0a8f3ac18273c647c346c60cdc20cdabb9380ffcb2a",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001"
+  ],
+  "restored_byte_verification": {
+    "bytes": 46871091,
+    "files": 24,
+    "manifest": {
+      "bytes": 8765,
+      "sha256": "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+    },
+    "native_inference": false,
+    "numerical_reproduction_executed": false,
+    "publication_ready": false,
+    "status": "qfo_parameter_numerical_component_verified"
+  },
+  "restored_verification_argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001/component/benchmark_tools/bundle_qfo_parameter_component.py",
+    "verify",
+    "--directory",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001/component",
+    "--manifest-sha256",
+    "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+  ],
+  "numerical_reproduction": {
+    "record": {
+      "path": "/tmp/orthohmm-qfo-parameter-restoration-20261001/numerical_reproduction.json",
+      "bytes": 1186,
+      "sha256": "7e6dbc0cdcf40b700ad6bd2b62b0644af22224ff0412427c56ece79fdb4251bf"
+    },
+    "report": {
+      "absolute_tolerance": 1e-12,
+      "component": {
+        "bytes": 46871091,
+        "files": 24,
+        "manifest": {
+          "bytes": 8765,
+          "sha256": "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+        },
+        "native_inference": false,
+        "numerical_reproduction_executed": false,
+        "publication_ready": false,
+        "status": "qfo_parameter_numerical_component_verified"
+      },
+      "endpoints": 18,
+      "entry_point": "unchanged verify function and ARMS/METRICS constants selected with AST",
+      "limitations": [
+        "Same numerical implementation, generator and quantiles; not an independent statistical engine.",
+        "Historical absolute paths are provenance only and are not dereferenced.",
+        "No raw predictions/reference recount, native inference, controlled timing or rights clearance."
+      ],
+      "native_inference": false,
+      "numpy_version": "2.2.6",
+      "publication_ready": false,
+      "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+      "scientific_inputs_readmitted": false,
+      "status": "qfo_parameter_component_numerically_reproduced",
+      "verifier": {
+        "bytes": 8256,
+        "sha256": "6b337c936bf1cf6896fea06de6e1924092c1dc6e5b3871ad621edbdc2138ddf8"
+      }
+    }
+  },
+  "original_path_guard": {
+    "blocked_canary_events": [
+      {
+        "event": "open",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/LICENSE.md",
+        "phase": "canary"
+      }
+    ],
+    "canary_rejected": true,
+    "copied_driver": "/tmp/orthohmm-qfo-parameter-restoration-20261001/component/benchmark_tools/bundle_qfo_parameter_component.py",
+    "cwd": "/tmp",
+    "limitations": [
+      "Python audit-event observation and denied canary, not OS-level containment or hermetic dependency restoration."
+    ],
+    "loaded_project_modules": [],
+    "observed_file_events": 206,
+    "original_checkout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "original_path_events_after_canary": 0,
+    "output": "/tmp/orthohmm-qfo-parameter-restoration-20261001/numerical_reproduction.json",
+    "publication_ready": false,
+    "python_isolated": 1,
+    "status": "qfo_parameter_original_path_guard_passed"
+  },
+  "guarded_reproduction_argv": [
+    "/home/bizon/anaconda3/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import sys,os,runpy,json\ndriver,directory,sha,output,forbidden=sys.argv[1:]\nforbidden=os.path.realpath(forbidden)\nphase={\"name\":\"canary\"}\nblocked=[]\nobserved={\"file_events\":0}\ndef guard(event,args):\n if event in {\"open\",\"os.listdir\",\"os.scandir\"} and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  observed[\"file_events\"]+=1\n  path=os.path.realpath(os.fsdecode(args[0]))\n  if path==forbidden or path.startswith(forbidden+os.sep):\n   blocked.append({\"phase\":phase[\"name\"],\"event\":event,\"path\":path})\n   raise PermissionError(\"Original checkout path forbidden by relocation probe\")\nsys.addaudithook(guard)\ntry:\n open(forbidden+\"/LICENSE.md\",\"rb\")\n raise AssertionError(\"Canary unexpectedly permitted\")\nexcept PermissionError:\n pass\nassert len(blocked)==1\nphase[\"name\"]=\"reproduction\"\nsys.argv=[driver,\"reproduce\",\"--directory\",directory,\"--manifest-sha256\",sha,\"--output\",output]\nrunpy.run_path(driver,run_name=\"__main__\")\nmodules=sorted(name for name in sys.modules if name==\"benchmark_tools\" or name.startswith(\"benchmark_tools.\") or name==\"orthohmm\" or name.startswith(\"orthohmm.\"))\nassert not modules\nassert all(item[\"phase\"]==\"canary\" for item in blocked)\nprint(\"QFO_COMPONENT_PROBE_JSON=\"+json.dumps({\"status\":\"qfo_parameter_original_path_guard_passed\",\"original_checkout\":forbidden,\"copied_driver\":driver,\"cwd\":os.getcwd(),\"python_isolated\":sys.flags.isolated,\"canary_rejected\":True,\"blocked_canary_events\":blocked,\"original_path_events_after_canary\":0,\"observed_file_events\":observed[\"file_events\"],\"loaded_project_modules\":modules,\"output\":output,\"publication_ready\":False,\"limitations\":[\"Python audit-event observation and denied canary, not OS-level containment or hermetic dependency restoration.\"]},sort_keys=True))\n",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001/component/benchmark_tools/bundle_qfo_parameter_component.py",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001/component",
+    "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b",
+    "/tmp/orthohmm-qfo-parameter-restoration-20261001/numerical_reproduction.json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+  ],
+  "cwd": "/tmp",
+  "native_inference": false,
+  "controlled_timing": false,
+  "publication_ready": false
+}

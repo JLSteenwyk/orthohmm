@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Actual QfO Parameter Archive Restoration Passed (2026-10-01)
+
+Committed/pushed prepared source/tests/protocol at **aa7cad914aae8b3e032c62aa66e1a58b331684ca**
+before actual export. The source-bound builder produced 24 payload files,
+46,871,091 bytes plus manifest, preserving the full 10-MB analysis and 35-MB
+export provenance records and all six original output bytes. Manifest SHA256
+c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b.
+Deterministic archive: 8,727,873 bytes, 25 regular members, SHA256
+b5d63fb625357052af22f0a8f3ac18273c647c346c60cdc20cdabb9380ffcb2a.
+Every archive member was reopened and byte-compared before fresh extraction.
+
+Extracted once into a fresh /tmp destination, rechecking archive bytes and
+canonical/regular/unique members. Copied stdlib verification passed outside
+the checkout. Copied driver under Python -I -B/NumPy 2.2.6 reproduced all
+18 endpoints to 1e-12 from unchanged arithmetic source. Python-event guard
+rejected its original-checkout license canary; 206 observed events, zero
+original-path events afterward and zero project-module imports. This is not
+OS containment. Committed-receipt candidate matches the actual generated
+1,186-byte numerical receipt exactly, SHA256
+7e6dbc0cdcf40b700ad6bd2b62b0644af22224ff0412427c56ece79fdb4251bf.
+See [actual result, commands and limitations](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+and machine-readable build/archive/extraction/guard/numerical receipts.
+
+Updated main Markdown draft and current claim checklist with this bounded
+restoration evidence. Older rendered review remains historical. No inference,
+native scoring, reference recount, new statistical implementation or parameter
+choice was rerun; prior findings and failures remain unchanged. Archive stays
+local and is not redistribution-cleared or publicly deposited. Full transitive
+data/compiled runtime, other QfO uncertainty, controlled resources and final
+publication package remain incomplete. Timing deferred; no DGX, contention
+question/probe, unrelated job/service or shared-package/default changes.
+Commit/push compact receipts/prose now, not the large local archive/payloads.
+Current citation/OrthoBench-prose/render checks: **27 pass in 2.65 seconds**,
+in addition to the 72 component/reproducer/existing-bundle tests. Compact
+build/archive/extraction/guard/numerical receipt bindings agree, actual numerical
+receipt bytes match and scoped whitespace checks pass. No complete-publication
+or controlled-resource requirement is declared achieved by this milestone.
+
 ## Offline QfO Parameter Component Prepared (2026-10-01)
 
 Previous continuation made scientific progress at pushed d83e088f: recovered

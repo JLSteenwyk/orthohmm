@@ -2682,6 +2682,16 @@ All eight cell estimates and all 42 paired endpoints reproduced exactly under
 isolated Python with the frozen 100,000 draws and seed. This does not repeat
 native inference, official scoring or raw-source admission.
 
+A [completed QfO parameter numerical archive](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+preserves the exact seven-arm report, large provenance manifests, original
+sources and all six table/figure files. All 25 regular archive members were
+byte-checked, and a fresh extraction outside the checkout passed copied
+standard-library verification and all 18 numerical endpoints. A Python audit
+guard rejected a canary checkout read, then observed no original-path events
+during reproduction or project-module imports. This used the existing NumPy
+version on the same host; it is not OS containment, hermetic installation,
+native inference/reference recount, rights clearance or a public release.
+
 A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
 exports the SwissTrees comparator analysis from a fixed commit and reruns it in
 a fresh hash-pinned Python environment. Its numerical results and Markdown

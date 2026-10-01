@@ -46,6 +46,12 @@ remain failed. This new result/prose is not included automatically in the
 earlier rendered review archive; final manuscript/figure/archive reconciliation
 remains required. Timing remains deferred, not replaced by shared-host durations.
 
+The later [QfO parameter numerical component](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+also passed actual fresh archive extraction, copied byte verification and all
+18 numerical endpoints under an original-path guard. This closes the
+checkout-only numerical-restoration gap for that component, not native/raw-data
+reproduction, cross-host/hermetic runtime closure, rights review or public release.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
@@ -75,6 +81,7 @@ uncertainty. No automatic inference retry or selected-method table was used.
 
 | Proposed statement | Evidence | Assessment |
 | --- | --- | --- |
+| The completed QfO parameter arithmetic reproduces from a fresh archive without reading the original checkout | [Actual numerical-component restoration](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md) | Supported on this host: 25 regular members byte-checked, 24 payload files restored, all 18 endpoints reproduced using unchanged source. A Python-event guard rejected its canary and observed no later original-path events or project-module imports. Not OS containment, a new statistical implementation, raw-reference/native-inference reproduction, cross-host restoration or release clearance |
 | The built-in frozen search is statistically equivalent to HMMER/phmmer and its E values provide calibrated assignment confidence | [Exact scoring specification and readback](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md) | Not established: the implemented local integer maximum-path recurrence, uniform transition costs and static significance constants do not demonstrate that equivalence. The matrix-table gap-cost comment differs from scorer costs. This is an approximate filter, not a posterior or guaranteed false-positive rate; no retrospective score/default change follows |
 | One reference block can reverse a corrected VGNC comparator's F1 deficit against full OrthoFinder | [Complete deletion sensitivity](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md) | Contradicted within the fixed scored-table diagnostic: all seven contrasts stay negative for every one of 16,844 deletions. Phylogenetic OrthoHMM range [-8.7353, -8.6729] percentage points. Not confidence intervals, joint-deletion robustness or population inference |
 | The complete OrthoBench interval figure can be regenerated from relocated direct evidence | [Bundle reproduction](OB_INTERVAL_BUNDLE_20260929.md) | Supported on this host: copied plotter/helper/result regenerate PNG and endpoint TSV bytes exactly under isolated Python. Not hermetic dependency restoration, cross-host inference or full archival release |

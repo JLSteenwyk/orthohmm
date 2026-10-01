@@ -1,0 +1,36 @@
+{
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91.tar.gz",
+    "bytes": 8727873,
+    "sha256": "b5d63fb625357052af22f0a8f3ac18273c647c346c60cdc20cdabb9380ffcb2a"
+  },
+  "component": {
+    "bytes": 46871091,
+    "files": 24,
+    "manifest": {
+      "bytes": 8765,
+      "sha256": "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+    },
+    "native_inference": false,
+    "numerical_reproduction_executed": false,
+    "publication_ready": false,
+    "status": "qfo_parameter_numerical_component_verified"
+  },
+  "members": 25,
+  "publication_ready": false,
+  "status": "qfo_parameter_component_archive_verified",
+  "command_argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91/benchmark_tools/bundle_qfo_parameter_component.py",
+    "archive",
+    "--directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91",
+    "--manifest-sha256",
+    "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91.tar.gz"
+  ],
+  "cwd": "/tmp"
+}

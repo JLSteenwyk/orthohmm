@@ -1,0 +1,32 @@
+{
+  "absolute_tolerance": 1e-12,
+  "component": {
+    "bytes": 46871091,
+    "files": 24,
+    "manifest": {
+      "bytes": 8765,
+      "sha256": "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+    },
+    "native_inference": false,
+    "numerical_reproduction_executed": false,
+    "publication_ready": false,
+    "status": "qfo_parameter_numerical_component_verified"
+  },
+  "endpoints": 18,
+  "entry_point": "unchanged verify function and ARMS/METRICS constants selected with AST",
+  "limitations": [
+    "Same numerical implementation, generator and quantiles; not an independent statistical engine.",
+    "Historical absolute paths are provenance only and are not dereferenced.",
+    "No raw predictions/reference recount, native inference, controlled timing or rights clearance."
+  ],
+  "native_inference": false,
+  "numpy_version": "2.2.6",
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "scientific_inputs_readmitted": false,
+  "status": "qfo_parameter_component_numerically_reproduced",
+  "verifier": {
+    "bytes": 8256,
+    "sha256": "6b337c936bf1cf6896fea06de6e1924092c1dc6e5b3871ad621edbdc2138ddf8"
+  }
+}

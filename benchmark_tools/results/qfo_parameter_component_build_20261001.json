@@ -1,0 +1,32 @@
+{
+  "status": "qfo_parameter_component_exported",
+  "source_commit": "aa7cad914aae8b3e032c62aa66e1a58b331684ca",
+  "directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91",
+  "command_argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_qfo_parameter_component.py",
+    "build",
+    "--repo",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--revision",
+    "aa7cad914aae8b3e032c62aa66e1a58b331684ca",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_parameter_numerical_component_aa7cad91"
+  ],
+  "cwd": "/tmp",
+  "verification": {
+    "bytes": 46871091,
+    "files": 24,
+    "manifest": {
+      "bytes": 8765,
+      "sha256": "c392d991d739a54432b576b8bf0ea5347b048126171e71156bd11b055256cd5b"
+    },
+    "native_inference": false,
+    "numerical_reproduction_executed": false,
+    "publication_ready": false,
+    "status": "qfo_parameter_numerical_component_verified"
+  },
+  "publication_ready": false
+}
