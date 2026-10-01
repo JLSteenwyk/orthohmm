@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Explicit Recovered Phylogeny Handoff; Live Runtime Gate Rejection (2026-10-01)
+
+The preceding user clarification turn made no scientific progress; it confirmed
+that a quiet timing window is not needed now. Revalidated the full objective,
+newest ledger and completed 22385/22386 accounting. Timing stays deferred and
+other publication work continues without another quiet-window question/probe.
+
+Implemented a separate `run_helper_cpm_phylogeny.py` entry point and
+[prospective protocol](QFO_CPM_HELPER_PHYLOGENY_PROTOCOL_20261001.md).
+It pins the admitted report/readback/clean executor, complete input identities,
+current admission completion, exact recovered seed/candidate/constraints and
+unchanged baseline. A fresh separate-process admission from the same frozen
+c3 executor must agree exactly before native inference. The native command
+preserves inferred species-tree mode, full scientific parameters and validated
+raw-tree checkpoint reuse. Fresh standalone 32-CPU/192-GiB/24-hour local attempt
+only; failures preserved, no retry/dependency resurrection or score claim.
+
+Initial focused run: 198 tests passed in 3.26 seconds; added a regression for
+the actual strict runtime rejection; final run passes 199 tests in 3.39 seconds.
+Bash syntax passes. The machine-readable preflight receipt pins the final sources.
+Live unscheduled source/input preflight then passed recovered-candidate checks
+but failed the unchanged baseline `verify_environment` package-inventory gate.
+[Failure and read-only diagnosis](QFO_CPM_HELPER_PHYLOGENY_PREFLIGHT_20261001.md)
+retain the actual error: same Python text, 607 expected/611 current packages,
+four additions and pyparsing 3.2.1 -> 3.1.1 in shared Anaconda. This matches the
+September-28 drift already audited; no broad scan was repeated. No new output
+directory, candidate-admission child, native inference or Slurm job was created.
+
+Commit/push validated handoff/protocol/tests and this preserved rejection.
+Next integrate a separate explicit full-phylogeny private deployment amendment
+using existing private runtime/parity evidence subject to its scope/bindings,
+not shared package mutation, an inventory exception or silent helper-runtime
+substitution. Original full-baseline/failed gates remain unchanged. Candidates
+remain admitted and unscored; native admission/conversion/scoring and seven-arm
+analysis stay necessary. Full goal active/incomplete; timing, QfO uncertainty/
+original TreeFam, rights and release requirements remain open. No DGX or
+unrelated job/service action; no needed exec session remains live at close.
+
 ## Independent Recovered Candidate Admission Completed (2026-10-01)
 
 Previous resumed turn made concrete progress: restored execution, authoritative
