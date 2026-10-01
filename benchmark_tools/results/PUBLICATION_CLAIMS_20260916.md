@@ -57,6 +57,11 @@ passed 13,660 cases without skips at c022ee78, including parser and native
 fixtures; 31 later focused prose/render checks passed separately. This is
 current local test evidence at those recorded snapshots, not remote CI or
 proof of scientific accuracy, complete dependency closure or release clearance.
+The [subsequent CI collection preparation](CI_COLLECTION_READINESS_20261001.md)
+addresses observed missing-library/import errors in failed remote run 36940075541.
+Fresh private dependency installation/check, 13,681-case collection and 67
+focused tests pass. Make targets now include top-level cases. Neither collection
+nor focused execution is a new all-suite pass or evidence of remote CI success.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

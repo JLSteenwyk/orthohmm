@@ -1,5 +1,10 @@
+import os
+import runpy
+from types import SimpleNamespace
+
 import pytest
 
+from benchmark_tools import observe_thread_affinity as module
 from benchmark_tools.observe_thread_affinity import observe
 
 
@@ -61,10 +66,38 @@ def test_empty_inventory_is_not_compliance(tmp_path):
     root, scope, proc = fixture(tmp_path)
     for path in scope.rglob("cgroup.threads"):
         path.write_text("")
-    assert observe(scope, [0], cgroup_root=root, proc_root=proc)["status"] == "incomplete"
+    assert observe(scope, [0], cgroup_root=root, proc_root=proc,
+                   get_affinity=lambda tid: pytest.fail("Empty inventory sampled"))["status"] == "incomplete"
 
 
 def test_reject_whole_host(tmp_path):
     root, _, _ = fixture(tmp_path)
     with pytest.raises(ValueError, match="whole-host"):
-        observe(root, [0], cgroup_root=root)
+        observe(root, [0], cgroup_root=root, get_affinity=lambda tid: {0})
+
+
+def test_missing_affinity_api_is_importable_but_fails_before_observation(tmp_path, monkeypatch):
+    monkeypatch.delattr(os, "sched_getaffinity", raising=False)
+    namespace = runpy.run_path(module.__file__)
+    with pytest.raises(NotImplementedError, match="requires os.sched_getaffinity"):
+        namespace["observe"](tmp_path / "absent", [0])
+
+
+def test_default_affinity_reader_is_selected_at_call_time(tmp_path, monkeypatch):
+    root, scope, proc = fixture(tmp_path)
+    seen = []
+    def affinity(tid):
+        seen.append(tid)
+        return {0}
+    monkeypatch.setattr(module, "os", SimpleNamespace(walk=os.walk, sched_getaffinity=affinity))
+    row = observe(scope, [0], cgroup_root=root, proc_root=proc)
+    assert row["status"] == "observed_within_affinity"
+    assert seen == [11, 12]
+
+
+def test_injected_reader_works_without_platform_affinity_api(tmp_path, monkeypatch):
+    root, scope, proc = fixture(tmp_path)
+    monkeypatch.setattr(module, "os", SimpleNamespace(walk=os.walk))
+    row = observe(scope, [0], cgroup_root=root, proc_root=proc, get_affinity=lambda tid: {0})
+    assert row["status"] == "observed_within_affinity"
+    assert row["full_run_affinity_verified"] is False

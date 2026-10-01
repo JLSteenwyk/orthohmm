@@ -32,6 +32,11 @@ and native fixtures; it is not controlled timing or remote CI evidence.
 The [reconciled main-text review](results/PUBLICATION_MAIN_REVIEW_20261001.md)
 renders these current findings in seven visually inspected PDF pages. It
 has a dated input snapshot and is not a new complete study archive.
+The later [CI collection preparation](results/CI_COLLECTION_READINESS_20261001.md)
+declares missing test libraries, preserves unsupported-affinity failure, and
+includes top-level tests in Make targets. All 13,681 cases collect in a fresh
+private dependency environment and 67 focused cases pass. This is not a new
+full regression or passing remote CI; historical runtime locks remain unchanged.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

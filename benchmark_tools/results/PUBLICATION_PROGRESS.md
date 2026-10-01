@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Clean CI Dependency Collection Prepared (2026-10-01)
+
+Previous turn progressed full local regression and reconciled seven-page
+main review, pushed through 55e207e3. Re-read objective/latest ledger; did not
+repeat completed scientific analyses or seek a timing window. Inspect latest
+branch CI run 36940075541: terminal failure, docs success, test-full/Python
+3.13 reach collection rather than the earlier DNS failure. Download both
+logs once through the authenticated API, following redirects without forwarding
+authorization; no token or signed URL is retained. Full job has 420 collection
+errors: missing test libraries and import-time Linux affinity API access.
+
+Declare ten observed test-only dependency versions; both CI jobs verify imports
+and matrix jobs no longer cancel siblings on first failure. Include top-level
+tests in unit/fast/coverage Make targets, closing their 232-case omission.
+Defer affinity API selection until observation is called; unavailable APIs
+raise explicitly before scope reads, never fabricate evidence. Add three
+affinity and 14 dependency/discovery cases. No scientific/default/root dependency
+or frozen historical executor/runtime change. Native capability skip is explicit.
+
+53 original-environment observer/calibration cases pass. A fresh private Python
+3.12 dependency install/check passes; all **13,681 cases collect without errors**
+and **67 focused cases pass in 2.75 seconds**, no skips/failures/errors. New
+transitive/application versions are test-only context, not benchmark replacement.
+Collection retains current checkout/native source-library assets; not installed
+package restoration, full fresh execution, remote CI or accuracy admission.
+Preserve initial nonexistent-test-selector exit 4/no cases in the receipt.
+Structured YAML/Make checks and whitespace pass. All own command sessions terminal.
+
+[Current scope and measured pins](CI_COLLECTION_READINESS_20261001.md).
+Commit/push this prepared/tested correction, then observe its actual new CI
+handle; do not retry old runs or declare remote success from local results.
+Timing remains deferred, with no contention poll/question, DGX, shared-package
+upgrade or unrelated job/service action. Full scientific/release goal stays open.
+
 ## Reconciled Seven-Page Main Review Inspected (2026-10-01)
 
 Committed/pushed reconciled main text, guide and tests at b7449437 before

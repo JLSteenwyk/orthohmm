@@ -13,6 +13,21 @@ modules are skipped during collection, hiding 13 test cases from the run.
 Both CI test jobs install this file and check that the parser imports before
 running tests. These are test dependencies, not application runtime
 requirements or a complete lock for the publication benchmark environments.
+The file also pins libraries used by workflow, biology, plotting, PDF and
+packaging tests. Their versions match the recorded 1 October local regression;
+they are not substituted into historical scientific environments. A clean
+test environment needs these packages even when optional application features
+or publication workflows are not being executed.
+
+Actual affinity/cgroup observations require Linux facilities. Importing the
+observer and testing it with injected readers does not require those facilities;
+requesting native observation without the affinity API fails explicitly.
+Native calibration fixtures report capability skips on unsupported platforms.
+
+Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
+well as `tests/unit`; integration remains a separate target. Fast tests exclude
+the `slow` marker, not the top-level regression cases. CI keeps every Python
+matrix job's outcome rather than cancelling siblings after the first failure.
 
 Run unit tests with`make test.unit` and native integration tests with
 `make test.integration`. Pytest discovery is limited to`tests/` so retained

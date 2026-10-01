@@ -30,7 +30,7 @@ def test_bad_worker_index_rejected(tmp_path, index):
 
 
 def test_real_small_workload_and_refused_retry(tmp_path):
-    if not set(range(32)) <= os.sched_getaffinity(0):
+    if not hasattr(os, "sched_getaffinity") or not set(range(32)) <= os.sched_getaffinity(0):
         pytest.skip("This diagnostic requires CPUs 0-31")
     path = tmp_path / "witnesses"
     command = ["taskset", "-c", "0-31", sys.executable, "-B", str(Path(workload.__file__).resolve()),

@@ -2,3 +2,15 @@ pytest
 pytest-cov
 # Parser used by the retained TreeFam/Selectome archive inspection tests.
 sqlglot==30.20.0
+# Libraries used by the workflow, plotting, biological and packaging tests.
+# Pins match the recorded local regression; this is not a benchmark runtime lock.
+biopython==1.86
+psutil==7.2.2
+dendropy==5.0.8
+ijson==3.5.0
+openpyxl==3.1.5
+matplotlib==3.10.8
+pillow==12.2.0
+PyMuPDF==1.27.2.3
+scipy==1.15.3
+setuptools==81.0.0

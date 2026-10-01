@@ -33,7 +33,7 @@ def inventory(scope):
 
 
 def observe(scope, allowed_cpus, *, cgroup_root=Path("/sys/fs/cgroup"),
-            proc_root=Path("/proc"), get_affinity=os.sched_getaffinity):
+            proc_root=Path("/proc"), get_affinity=None):
     """Sample every enumerated thread, including threads in descendant cgroups.
 
     A subset affinity is valid (workers may pin themselves). Races, inaccessible
@@ -43,6 +43,10 @@ def observe(scope, allowed_cpus, *, cgroup_root=Path("/sys/fs/cgroup"),
     if (not allowed or any(type(v) is not int or v < 0 for v in allowed)
             or len(set(allowed)) != len(allowed)):
         raise ValueError("Require distinct nonnegative CPU IDs")
+    if get_affinity is None:
+        get_affinity = getattr(os, "sched_getaffinity", None)
+        if get_affinity is None:
+            raise NotImplementedError("CPU affinity observation requires os.sched_getaffinity")
     cgroup_root = Path(cgroup_root).resolve(strict=True)
     scope = Path(scope).resolve(strict=True)
     relative = scope.relative_to(cgroup_root)

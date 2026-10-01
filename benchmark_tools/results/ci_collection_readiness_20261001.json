@@ -1,0 +1,303 @@
+{
+  "api_artifacts": [
+    {
+      "artifact": {
+        "bytes": 12209,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_55e207e3_20261001/run.json",
+        "sha256": "82f9b3199670e19b47b8925a797b93465a622d69ec24380f15537db9726a407a"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/JLSteenwyk/orthohmm/actions/runs/36940075541"
+    },
+    {
+      "artifact": {
+        "bytes": 14831,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_55e207e3_20261001/jobs.json",
+        "sha256": "70bcd12ffa9dfe1016694ba25c923dbc455f4a3b784b7cecbbe4a9175f62ca39"
+      },
+      "status": 200,
+      "url": "https://api.github.com/repos/JLSteenwyk/orthohmm/actions/runs/36940075541/jobs?per_page=100"
+    }
+  ],
+  "controlled_timing": false,
+  "focused": {
+    "junit": {
+      "bytes": 9426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/focused.xml",
+      "sha256": "82beba648f65dc7e63dbde86b2410af7aec81db806f4ef147b0863ebd803faad"
+    },
+    "suite": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "67",
+      "time": "2.713",
+      "timestamp": "2026-10-01T19:32:27.315386-04:00"
+    }
+  },
+  "fresh_collection_report": {
+    "bytes": 2681,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/collection_result.json",
+    "sha256": "617fbd7205acbcde6e883afa01e1fdb645513fde72688e4de79179841a9ab8aa"
+  },
+  "fresh_dependency_collection": {
+    "argv": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/venv/bin/python",
+      "-m",
+      "pytest",
+      "--collect-only",
+      "-q"
+    ],
+    "controlled_timing": false,
+    "elapsed_seconds": 16.9943087650463,
+    "environment_overrides": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "exit_code": 0,
+    "finished_utc": "2026-10-01T23:32:45.329523+00:00",
+    "log": {
+      "bytes": 1316758,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/collection.log",
+      "sha256": "c0061604b42e455c9700b519d88b8532c01d670e32e7240e254a469aa4bdbd92"
+    },
+    "package_versions": {
+      "Cython": "3.0.4",
+      "DendroPy": "5.0.8",
+      "PyMuPDF": "1.27.2.3",
+      "Pygments": "2.21.0",
+      "biopython": "1.86",
+      "contourpy": "1.4.0",
+      "coverage": "7.16.2",
+      "cycler": "0.12.1",
+      "et_xmlfile": "2.0.0",
+      "fonttools": "4.66.1",
+      "igraph": "1.0.0",
+      "ijson": "3.5.0",
+      "iniconfig": "2.3.0",
+      "kiwisolver": "1.5.1",
+      "leidenalg": "0.12.0",
+      "llvmlite": "0.50.0",
+      "matplotlib": "3.10.8",
+      "numba": "0.68.0",
+      "numpy": "2.4.6",
+      "openpyxl": "3.1.5",
+      "orthohmm": "0.5.0",
+      "packaging": "26.3",
+      "pillow": "12.2.0",
+      "pip": "24.0",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pyparsing": "3.3.3",
+      "pytest": "9.1.1",
+      "pytest-cov": "7.1.0",
+      "python-dateutil": "2.9.0.post0",
+      "python-igraph": "1.0.0",
+      "scipy": "1.15.3",
+      "setuptools": "81.0.0",
+      "six": "1.17.0",
+      "sqlglot": "30.20.0",
+      "texttable": "1.7.0"
+    },
+    "publication_ready": false,
+    "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+    "scope": "clean dependency environment, current checkout and existing native source libraries; collection only",
+    "started_utc": "2026-10-01T23:32:28.335244+00:00",
+    "tail": [
+      "  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/venv/lib/python3.12/site-packages/_pytest/python.py:124: PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.",
+      "  Test: tests/unit/test_probe_verified_threadripper_fixture.py::test_selects_frozen_method_without_changes, argvalues type: enumerate",
+      "  Please convert to a list or tuple.",
+      "  See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators",
+      "    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)",
+      "",
+      "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+      "13681 tests collected in 14.89s"
+    ]
+  },
+  "fresh_install_log": {
+    "bytes": 17929805,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/install.log",
+    "sha256": "acadaba4662aaafda6ae03550267868d8ce5f0a7808b521fa8d509aad9284c6b"
+  },
+  "inspected_logs": [
+    {
+      "collection_causes": {
+        "AttributeError: module 'os' has no attribute 'sched_getaffinity'": 2,
+        "ModuleNotFoundError: No module named 'Bio'": 315,
+        "ModuleNotFoundError: No module named 'PIL'": 1,
+        "ModuleNotFoundError: No module named 'dendropy'": 24,
+        "ModuleNotFoundError: No module named 'fitz'": 2,
+        "ModuleNotFoundError: No module named 'ijson'": 3,
+        "ModuleNotFoundError: No module named 'matplotlib'": 28,
+        "ModuleNotFoundError: No module named 'openpyxl'": 1,
+        "ModuleNotFoundError: No module named 'psutil'": 43,
+        "ModuleNotFoundError: No module named 'scipy'": 1
+      },
+      "collection_summaries": [
+        "collected 6152 items / 420 errors / 1 skipped",
+        "!!!!!!!!!!!!!!!!!! Interrupted: 420 errors during collection !!!!!!!!!!!!!!!!!!!"
+      ],
+      "job": "test-full",
+      "log": {
+        "api_url": "https://api.github.com/repos/JLSteenwyk/orthohmm/actions/jobs/110629268650/logs",
+        "bytes": 819087,
+        "job_id": 110629268650,
+        "name": "test-full",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_55e207e3_20261001/110629268650.log",
+        "sha256": "ce2adf733362c1e6584740a679a853f3f5b6c166363531ce5bd74fb82a37ce90"
+      }
+    },
+    {
+      "collection_causes": {
+        "AttributeError: module 'os' has no attribute 'sched_getaffinity'": 2,
+        "ModuleNotFoundError: No module named 'Bio'": 315,
+        "ModuleNotFoundError: No module named 'PIL'": 1,
+        "ModuleNotFoundError: No module named 'dendropy'": 24,
+        "ModuleNotFoundError: No module named 'fitz'": 2,
+        "ModuleNotFoundError: No module named 'ijson'": 3,
+        "ModuleNotFoundError: No module named 'matplotlib'": 28,
+        "ModuleNotFoundError: No module named 'openpyxl'": 1,
+        "ModuleNotFoundError: No module named 'psutil'": 43,
+        "ModuleNotFoundError: No module named 'scipy'": 1,
+        "ModuleNotFoundError: No module named 'setuptools'": 1
+      },
+      "collection_summaries": [
+        "collected 6132 items / 421 errors / 1 skipped",
+        "!!!!!!!!!!!!!!!!!! Interrupted: 421 errors during collection !!!!!!!!!!!!!!!!!!!"
+      ],
+      "job": "test-fast (3.13)",
+      "log": {
+        "api_url": "https://api.github.com/repos/JLSteenwyk/orthohmm/actions/jobs/110629268800/logs",
+        "bytes": 819181,
+        "job_id": 110629268800,
+        "name": "test-fast (3.13)",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_55e207e3_20261001/110629268800.log",
+        "sha256": "802731f5dbea111792827442a84b155a33be33f07765d2750630ea1392409794"
+      }
+    }
+  ],
+  "limitations": [
+    "Fresh dependency environment collection and 67 focused tests, not a new full regression or clean installed-package/native-runtime reproduction.",
+    "Remote outcome at the prepared revision is not yet observed; prior 55e207e3 run remains failed.",
+    "Unsupported native platform capabilities are not replaced by fabricated affinity observations.",
+    "Frozen/historical scientific executors, runtime locks and observations retain their actual old source bindings."
+  ],
+  "observation": {
+    "bytes": 17738,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_55e207e3_20261001/observation.json",
+    "sha256": "93b7e6650d9ca794bf86c6b5a698fa39ece15dc1731ea4b0e75617302186094a"
+  },
+  "operator_selector_failure": {
+    "corrected_existing_module_run": {
+      "passed": 53,
+      "seconds": 1.89
+    },
+    "exit_code": 4,
+    "missing_argument": "tests/unit/test_audit_threadripper_observer.py",
+    "tests_ran": 0
+  },
+  "publication_ready": false,
+  "remote_jobs": [
+    {
+      "conclusion": "failure",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629268650",
+      "id": 110629268650,
+      "name": "test-full",
+      "status": "completed"
+    },
+    {
+      "conclusion": "failure",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629268800",
+      "id": 110629268800,
+      "name": "test-fast (3.13)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629268935",
+      "id": 110629268935,
+      "name": "test-fast (3.12)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629268970",
+      "id": 110629268970,
+      "name": "docs",
+      "status": "completed"
+    },
+    {
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629269055",
+      "id": 110629269055,
+      "name": "test-fast (3.10)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "cancelled",
+      "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541/job/110629269117",
+      "id": 110629269117,
+      "name": "test-fast (3.11)",
+      "status": "completed"
+    }
+  ],
+  "remote_run": {
+    "conclusion": "failure",
+    "created_at": "2026-10-01T23:18:21Z",
+    "head_sha": "55e207e33551475b70cb69d172d8b788429e0577",
+    "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36940075541",
+    "id": 36940075541,
+    "name": "CI",
+    "path": ".github/workflows/ci.yml",
+    "status": "completed",
+    "updated_at": "2026-10-01T23:20:47Z"
+  },
+  "scientific_code_or_defaults_changed": false,
+  "shared_packages_changed": false,
+  "sources": [
+    {
+      "bytes": 3687,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/.github/workflows/ci.yml",
+      "sha256": "c8378426afcf3187e34c33426fa457cca1b933685264a3cd8f0d18d33a0550fa"
+    },
+    {
+      "bytes": 1222,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/Makefile",
+      "sha256": "8a27e9d1f85faee3c026e522a3f2cf3a51e039885929b8a67a42f6754db47b4c"
+    },
+    {
+      "bytes": 427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/requirements.txt",
+      "sha256": "b374d832cbb229609749d2e4b3b192881b1ea2f7002f991d53518d983dd5bf34"
+    },
+    {
+      "bytes": 4050,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/README.md",
+      "sha256": "2e216ec27993e2176483d3e87357c21b52a7fe7e503983d956e38fbc6142562d"
+    },
+    {
+      "bytes": 4513,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+      "sha256": "d0116f8bea2b625df0c66128e0a259c2262f57c7cc8ffbbecf2a19a362989775"
+    },
+    {
+      "bytes": 4148,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_observe_thread_affinity.py",
+      "sha256": "cf1e568dd0a1653dcc63c992aba5a587c0fa5549e788bc3ac7772168e3696914"
+    },
+    {
+      "bytes": 8673,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_calibrate_threadripper_observer.py",
+      "sha256": "b1e98f3d52222d05a19f72df2e4105462599b9f7d2832d419392da3e6bc5e619"
+    },
+    {
+      "bytes": 1444,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_declared_test_dependencies.py",
+      "sha256": "820667b95c8db41a8924bdb243f1fee75236053f87b36c3b082ded9ec8b27f5d"
+    }
+  ],
+  "status": "ci_collection_dependencies_and_import_guard_locally_validated"
+}
