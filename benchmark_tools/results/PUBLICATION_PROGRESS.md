@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Corrected Private Read-Only Admission Running As 22389 (2026-10-01)
+
+Committed/pushed the exact protocol-path correction, amended explicit-attempt
+protocol, 227 passing tests and preserved 22388 failure/submission at
+`9f0fcb68b849aa8af6180c73c9ba82d3e4f4b8b1`. Created a separate clean detached
+corrected executor and submitted exactly one standalone read-only admission:
+22389, 2 CPUs/64 GiB/4 hours, bizon, no dependency/requeue/GPU/native retry.
+The [submission](qfo_private_phylogeny_admission_submission_22389.json) binds
+real command, executor revision/clean state, four source/test/protocol/script
+records, original control submission and retained failed admission.
+
+Latest actual accounting: RUNNING at 1:23, parent and batch step. No traceback
+or result has yet been observed. Do not infer admission from an empty log or
+resubmit because the goal resumes. Poll this exact handle next; retain any
+failure. On successful completion inspect the fresh v2 report and separately
+read back completion/report/source/Git/file identities before allowing a
+private recovered high-CPM command handoff. Native control 22387 remains
+completed/parity-passed pending this admission; candidates admitted/unscored.
+
+Latest user clarification: no known quiet window, asking whether needed now.
+It is not needed now; defer controlled timing and continue other publication
+work. No dedicated host/DGX, contention question/probe, shared package mutation
+or unrelated job/service action. All needed terminal exec sessions complete;
+only this scheduled read-only job is live. Commit/push actual submission
+milestone. Full goal active/incomplete; CPM phylogeny/scoring/seven-arm
+integration, controlled timing, uncertainty/TreeFam, rights and release remain.
+
 ## Private Admission 22388 Preserved; Exact Path Correction Tested (2026-10-01)
 
 Committed/pushed independent admission source/protocol/script/tests at c931c141,
