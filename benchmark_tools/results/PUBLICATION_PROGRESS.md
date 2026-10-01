@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Frozen Six-Challenge Assessment 22393 Submitted (2026-10-01)
+
+Committed/pushed score-admission source/tests/protocol/script and actual
+conversion readback at **2e99680c590810e2bd853f8428a7301cbba1e2c1**. The
+903ea2d7 detached assessment executor is clean; four source SHA256/byte pins
+match and all three execution/work/results namespaces are fresh/direct.
+Submitted exactly one frozen standalone assessment **22393**, 20:14:48 UTC,
+bizon, 8 CPUs/64 GiB/24 hours, no GPU/array/dependency/requeue/retry. At
+20:14:58 UTC parent/batch were RUNNING, elapsed 10 seconds. The
+[actual submission receipt](qfo_private_cpm_assessment_submission_22393.json)
+binds exact argv, clean revision/four sources and reviewed actual 22392
+conversion report/submission. No current reference score is admitted or shown.
+
+Prepared a detached score-admission executor at
+benchmarks/work/qfo_private_cpm_score_admission_executor_20261001, revision
+2e99680c590810e2bd853f8428a7301cbba1e2c1; clean status verified. The unchanged
+new gate accepts the actual 22393 receipt and all four submitted Git bindings
+without reading scoring outputs. This is future validator source readiness,
+not a submitted validator, observed assessment success or accuracy claim.
+Latest 22393 parent/batch remain RUNNING at 2:07; no error in its Slurm log.
+Next poll the same 22393 handle, preserve any failure; only after actual
+success review report/receipt hashes and submit independent score admission
+once. Original historical gates/attempts and seven-arm/18-endpoint plan stay
+fixed. Goal active/incomplete; timing remains deferred, no contention polling/
+question, DGX or unrelated job/service/shared-package action.
+
 ## Conversion 22392 Passed; Independent Score Admission Prepared (2026-10-01)
 
 Previous user-triggered turn made progress at pushed 518b5b3c: actual conversion
