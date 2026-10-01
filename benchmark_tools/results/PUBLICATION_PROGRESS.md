@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Seven-Arm Score/Uncertainty Export Prepared (2026-10-01)
+
+Previous goal turn made progress at pushed ca3de288: tested/frozen recovered
+parameter integration and clean da587eed executor. Re-read full objective/
+latest ledger; exact assessment 22393 initially RUNNING at 22:11 and latest
+parent/batch RUNNING at 34:34, 8 CPUs/64 GiB, bizon. No restart, incomplete
+score inspection or scoring/uncertainty admission. Timing remains deferred.
+
+Added a [seven-arm QfO parameter exporter/figure](../plot_qfo_parameter_neighborhood.py).
+Require admitted frozen scientific controls, checked raw-family points and
+an unchanged-source numerical-reproduction receipt bound to the exact input.
+Reuse retained numerical evidence; no new bootstrap. Validate every planned
+contrast, nested finite intervals, effect arithmetic, family direction counts,
+availability/nulls, estimated/reproduced endpoint counts and completeness.
+Support both original audited partial and recovered-private integration without
+changing historical validators or accepting a private arm into another route.
+
+Export native six-endpoint scores/secondary mean using unchanged native
+arithmetic/legacy admission checks, with separate private admission/candidate
+context validation for recovered high-CPM. Require native SwissTrees to agree
+with reconstructed family F1, inventory/availability identity and all source/
+input/admission bindings before and after. Plot all seven configurations and
+six contrast positions, including explicit NA/Not estimable; never draw missing
+arms at zero, select a favorable subset or reduce 18-endpoint multiplicity.
+Save PNG/PDF/SVG, native-score TSV/Markdown and all 18 interval rows with null
+missing values. Keep GO/EC/FAS distinct from F1, mean secondary, unseeded FAS,
+development exposure, lack of other-endpoint uncertainty/equivalence/superiority/
+controlled timing and false publication readiness explicit.
+
+Initial 30 tests pass. Added native table inventory/availability/arithmetic/
+private-route consistency cases. Final count/bootstrap/reproduction/native-
+metric/OrthoBench-plot/export tests: **228 pass in 26.71 seconds**; whitespace
+checks pass. Figures exercise complete, missing-high, unavailable-control and
+control-only fixture panels. Fixture admission predicates are separate from
+real-data validation; no current high-CPM score is inferred from tests.
+
+Commit/push validated plotting/export source now, then render the retained
+partial result using its existing pinned 15-endpoint reproduction. This first
+real figure will explicitly retain unavailable high-CPM and establish no new
+accuracy result. After successful 22393/independent score admission/parameter
+analysis/reproduction, export the completed panel into a fresh namespace.
+Goal active/incomplete; no DGX, contention polling/question, shared-package,
+unrelated job/service or scientific-default change.
+
 ## Parameter Executor Frozen; Assessment Still Running (2026-10-01)
 
 Committed/pushed parameter integration at
