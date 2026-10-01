@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Private QfO Deployment Admission And Readback Passed (2026-10-01)
+
+Previous turn made progress at pushed d3b6bc7c: corrected source tests and actual
+22389 submission. Revalidated the full objective, newest ledger and exact job.
+22389 is now COMPLETED 0:0 in 4:04, 2 CPUs/64 GiB, parent/batch successful.
+No native retry occurred. The [result](QFO_PRIVATE_PHYLOGENY_ADMISSION_RESULT_22389.md)
+binds final 359,638-byte report SHA256
+`6865539281f9cb8c89c04b8ca16e2277056b4cc2b3293c330a12a3115879af97`:
+private_qfo_phylogeny_deployment_admitted_unscored, recovered inference authority
+true, all accuracy/scoring/controlled-timing/publication flags false.
+
+Complete native inventory/group/pair/inferred-tree/metadata validation passes,
+with all six independently compared exports byte-identical to the retained
+baseline. 984,137 genes/78 species, 366,068 root HOGs, 5,959,560 native pairs;
+24,264 raw-tree checkpoint hits, zero remapped, species-tree checkpoint reused.
+Scope is incremental deployment parity, not fresh all-tree/search equivalence.
+
+Implemented isolated stdlib readback, actual completed parent/step and report/
+submission/source/Git checks, all six comparisons and two passes over all 1,198
+bound records. The [compact receipt](qfo_private_phylogeny_admission_readback_20261001.json)
+SHA256 is `713718ada456ad731df02b18f3c22219d8a76a1d7c2c45365d63f7df4ead18fc`.
+Initial Python-3.10 compatibility test failed the new hashlib.file_digest call
+(60 passed); isolated 3.12 readback passed. Replaced that call with streaming
+SHA256 and re-executed readback to bind final source; 61 focused tests pass.
+This is identity/completion readback, not a third native correctness validation.
+
+Commit/push result/readback source/tests/receipt. Next create and test the
+separate private recovered high-CPM handoff, preserving original shared-runtime
+rejection and all failed gates. Candidate construction/refinement/search and
+earlier private fixtures/archive reproduction are not repeated. No accuracy
+claim or change to seven-arm/18-endpoint multiplicity. Timing remains deferred;
+no quiet-window probe/question, DGX, shared package mutation or unrelated work.
+Full goal active/incomplete: missing CPM native inference/admission/scoring,
+parameter integration, controlled timing, uncertainty/TreeFam, rights and release.
+
 ## Corrected Private Read-Only Admission Running As 22389 (2026-10-01)
 
 Committed/pushed the exact protocol-path correction, amended explicit-attempt
