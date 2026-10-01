@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Parameter Executor Frozen; Assessment Still Running (2026-10-01)
+
+Committed/pushed parameter integration at
+**da587eed272520106b709f5e462b0c3eadcc1114**. Prepared clean detached executor
+benchmarks/work/qfo_private_cpm_parameter_executor_20261001 at that revision;
+status empty. Frozen runner SHA256
+`608ac7512993280190350d15c77aab56b26770e885dcae0bba62c88354d0a6ca`,
+integration protocol
+`a853a53d02fc7b50750f64bc4feddf05bd8246b1803f3e400ce8a11b00725cf8`,
+batch script
+`a09ec6851dabdda35e55a3f6075986ac4768087a7463769403609d778b0207d4`,
+runner tests
+`93de1aa381e436fb856c94dba7a39ae6ebda01182e80afebf4d891f333ba0097`.
+This is source readiness only, not a submitted analysis, score admission or
+real interval. Same assessment 22393 remains RUNNING, parent/batch, at 20:33.
+Do not resubmit or consume partial scores. Next actual assessment completion,
+independent score gate, fresh seven-arm inventory, frozen analysis and numerical
+reproduction. Full goal remains active/incomplete; timing deferred.
+
 ## Recovered Seven-Arm Parameter Integration Prepared (2026-10-01)
 
 Previous goal turn made progress at pushed 37913504: lossless conversion
