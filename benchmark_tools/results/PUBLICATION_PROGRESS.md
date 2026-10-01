@@ -1,5 +1,58 @@
 # Publication Progress
 
+## Conversion 22392 Passed; Independent Score Admission Prepared (2026-10-01)
+
+Previous user-triggered turn made progress at pushed 518b5b3c: actual conversion
+submission recorded and timing deferred. Re-read full objective/latest ledger;
+polled same 22392, first RUNNING at 7:16, then parent/batch COMPLETED 0:0,
+2 CPUs/64 GiB, bizon, allocation elapsed 9:35. No resubmission or inference
+repeat. Actual conversion report is 7,266,077 bytes, SHA256
+`3571c2a0e39688278db9c23921d90a206e34ac60eefcab95572b8904091d55d5`.
+All 5,913,166 native pairs written/retained with zero mapping loss. Each final
+file is 91,008,704 bytes, SHA256
+`488475e7d89e736c8e98d92b51d39f47cff5d8c7c9ab590161a273e935d7b607`.
+Fresh native admission is byte-identical to the retained 22391 report. All
+accuracy/scoring/controlled-timing/publication flags remain false.
+
+Isolated stdlib [conversion readback](qfo_private_cpm_pair_conversion_readback_22392.json)
+checks report/submission pins, nine small record occurrences, clean converter
+revision/four Git blobs, preflight fields/checked-prefix equality, native report
+byte equality and count sidecar. Streams both complete pair files, verifies
+row format, exact row count/hash/bytes, and rechecks completed conversion/
+admission parents/all reported steps. This is identity/count readback, not
+another normalization/gene-ownership/native-tree validation or complete runtime
+inventory. The frozen assessment revalidates full evidence before/after scoring.
+
+Prepared [independent recovered-private score admission](QFO_PRIVATE_CPM_SCORE_ADMISSION_PROTOCOL_20261001.md)
+before any new reference score. Require standalone successful 8-CPU/64-GiB
+assessment/all steps before data reads; reviewed actual execution/submission
+hashes, exact clean 903ea2d7 executor and four submitted Git bindings. Reuse
+unchanged converted/native/private-context verification and frozen scorer.
+Reconstruct preflight/command/namespaces/environment/full input-prefix and
+helper suffix, with required helpers/no duplicates/foreign paths/Git equality/
+equal reused bytes. Verify complete stable outputs, all 15 fresh successful
+tasks, native six-challenge metric/reference/aggregation arithmetic and inventory
+membership. Recheck context/completion/submission/source/files at close.
+Failures retained with false claims; no old gate relaxation, repair or retry.
+
+Initial tests: 55 failed/22 passed because long pytest temporary paths exceeded
+the existing Darwin command limit. Fixed fixture paths using private temporary
+directories under /tmp; production command/limit unchanged. Then 77 pass.
+Added further job-identity/no-scheduler-query, strict exit-code type, source/
+protocol/log/reference and reused-helper checks. Final 326 focused tests pass
+in 7.06 seconds, including original trace/native-metric/assessment validators;
+Bash syntax and scoped whitespace checks pass. These fixtures are not real
+score admission or independent biological evidence.
+
+Prepared detached assessment worktree at
+benchmarks/work/qfo_private_cpm_assessment_executor_20261001, exact
+903ea2d71a3b478b5198dd68dbbc088b84df4578. Commit/push validated score gate and
+actual conversion readback now; then check clean source/fresh namespaces and
+submit the fixed assessment once with actual report/submission hashes. Only
+after assessment success admit scores and integrate seven-arm/18-endpoint
+analysis. Goal active/incomplete; timing deferred, no DGX/contention polling/
+question/unrelated job/service/shared-package or scientific-default change.
+
 ## Timing Deferred; Existing Conversion 22392 Running (2026-10-01)
 
 The user does not know when unrelated analyses will finish and asks whether

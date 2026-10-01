@@ -1,0 +1,51 @@
+{
+  "status": "conversion_identity_and_row_count_readback_passed_unscored",
+  "reader": "/usr/bin/python3 -I -B; inline standard-library checks, no benchmark producer imports",
+  "job_id": "22392",
+  "conversion_report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_private_pairs_v1/cpm_high/results.json",
+    "bytes": 7266077,
+    "sha256": "3571c2a0e39688278db9c23921d90a206e34ac60eefcab95572b8904091d55d5"
+  },
+  "conversion_submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_pair_conversion_submission_22392.json",
+    "bytes": 3366,
+    "sha256": "b6d6c4806d1cb6fc9c0f0c00ea948b6af2775e5cf6dbb3e2c56513abe163097d"
+  },
+  "checked_small_record_occurrences": 9,
+  "source_git_blobs": 4,
+  "executor_commit": "b502bc6965d37916224c87595a46ef8ab5c9c4d1",
+  "executor_clean": true,
+  "preflight_fields_and_checked_prefix_equal": true,
+  "native_admission_recheck_byte_equal": true,
+  "conversion_count_sidecar_equal": true,
+  "written_pairs": 5913166,
+  "total_pairs": 5913166,
+  "retained_pairs": 5913166,
+  "removed_mapping_pairs": 0,
+  "pair_files": {
+    "pairs": {
+      "bytes": 91008704,
+      "sha256": "488475e7d89e736c8e98d92b51d39f47cff5d8c7c9ab590161a273e935d7b607",
+      "rows": 5913166
+    },
+    "filtered_pairs": {
+      "bytes": 91008704,
+      "sha256": "488475e7d89e736c8e98d92b51d39f47cff5d8c7c9ab590161a273e935d7b607",
+      "rows": 5913166
+    }
+  },
+  "accounting": {
+    "22391": "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n22391|22391|COMPLETED|0:0|00:05:56|bizon|2|64G\n22391.batch|22391.batch|COMPLETED|0:0|00:05:56|bizon|2|\n",
+    "22392": "JobID|JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n22392|22392|COMPLETED|0:0|00:09:35|bizon|2|64G\n22392.batch|22392.batch|COMPLETED|0:0|00:09:35|bizon|2|\n"
+  },
+  "report_unchanged_at_close": true,
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false,
+  "limitations": [
+    "Identity/count/line-format readback only; does not independently repeat normalization, gene ownership or native tree/event validation.",
+    "Does not repeat the complete native/private-runtime bound-file inventory; the frozen assessment verifies that evidence before and after scoring.",
+    "Successful conversion is not a reference accuracy result, independent biological validation or controlled timing evidence."
+  ]
+}
