@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Private Recovered High-CPM Handoff Prepared And Verified (2026-10-01)
+
+Committed/pushed completed 22389 admission, isolated readback/source/tests and
+result at 376bf6c4. Implemented a separate private native entry point, leaving
+the original shared-runtime driver/rejection and failed gates unchanged. It
+checks exact private admission/readback/source/Git/completion and bound files,
+then reuses unchanged recovered-candidate and private-baseline verifiers.
+
+Native command uses unchanged variant/source-equivalence helpers, admitted
+candidate/constraint bytes and original validated checkpoint. Only private
+native interpreter selection is added to the existing frozen launcher route;
+retain both planned/executed cell/argv. All scientific settings remain fixed.
+Fresh bytecode/JIT policy, actual replay import-chain lookup, fresh separate-
+process candidate admission and complete before/after source/input/private
+runtime checks. Native failure, mismatch or interruption is preserved without
+retry; success remains unscored/pending separate native validation.
+
+The [prospective protocol](QFO_PRIVATE_CPM_PHYLOGENY_PROTOCOL_20261001.md)
+and script specify exactly one standalone 32-CPU/192-GiB/24-hour bizon attempt,
+fresh qfo_cpm_private_phylogeny_v1/cpm_high output, no GPU/dependency/requeue.
+Historical verification controller remains explicit; no all-private controller
+claim. No native inference or reference accuracy observed during preparation.
+
+Initial new test collection failed unqualified cross-test imports; corrected
+to this repository's tests.unit package. Then 206 focused tests passed. Added
+script coverage and broadened original/native-validator checks: final 286 tests
+pass in 12.72 seconds. No production gate was weakened for a fixture failure.
+The [live read-only source preflight](qfo_private_cpm_phylogeny_preflight_20261001.json)
+passes exact admissions/baseline/private runtime and full command reconstruction;
+12,802 returned evidence records including duplicates, plus nested validators'
+own complete checks. It binds final driver/test/protocol/script source records.
+
+Commit/push this tested route before creating a clean executor and submitting
+one fresh native attempt. Do not repeat completed optimizer/search/refinement/
+candidate construction or baseline control. Timing deferred, no quiet-window
+probe/question, DGX, unrelated work or shared package mutation. Full goal active/
+incomplete: recovered native admission/conversion/scoring/seven-arm integration,
+controlled resources, QfO uncertainty/TreeFam, rights and release remain open.
+
 ## Private QfO Deployment Admission And Readback Passed (2026-10-01)
 
 Previous turn made progress at pushed d3b6bc7c: corrected source tests and actual

@@ -1,0 +1,150 @@
+{
+  "status": "private_recovered_cpm_source_and_command_preflight_passed",
+  "private_admission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_phylogeny_control_admission_v2_20261001.json",
+    "bytes": 359638,
+    "sha256": "6865539281f9cb8c89c04b8ca16e2277056b4cc2b3293c330a12a3115879af97"
+  },
+  "private_readback": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_phylogeny_admission_readback_20261001.json",
+    "bytes": 8613,
+    "sha256": "713718ada456ad731df02b18f3c22219d8a76a1d7c2c45365d63f7df4ead18fc"
+  },
+  "candidate_admission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_cpm_helper_candidate_admission_20260930/status.json",
+    "bytes": 3299915,
+    "sha256": "55c696a037d13b48d47dc752fcb6b69b5b8bba6a7b990acfb08b0d8fbf6e07c0"
+  },
+  "arm": {
+    "label": "cpm_high",
+    "partition": {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "def5d6f8d77b043745845774cabf2832757ed61951b87aace0ef102a0950613c"
+    },
+    "constraints": {
+      "bytes": 81301408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "894881980ba25c3526197fdb77464fa602f859d8f48f8cecd11486e8877b9d0b"
+    },
+    "seed_partition": {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_checkpoint_recovery_v1/orthogroups_profiles_refined.txt",
+      "sha256": "f4c6f1973bc9636828baf1e6d9be3f416a18fc8ada5302fb502c082495fc1811"
+    }
+  },
+  "checked_records": 12802,
+  "executed_argv": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_phylogeny.py",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+    "--candidate-clusters",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_private_phylogeny_v1/cpm_high/output",
+    "--json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_private_phylogeny_v1/cpm_high/metrics.json",
+    "--cpu",
+    "32",
+    "--species-tree-mode",
+    "infer",
+    "--aligner",
+    "mafft",
+    "--tree-builder",
+    "FastTree",
+    "--root-rule",
+    "species_overlap",
+    "--pair-rule",
+    "positive_paralogy",
+    "--species-tree-rooting",
+    "min_variance",
+    "--membership-constraints",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "--checkpoint-source",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p1_c1_r1"
+  ],
+  "planned_argv": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_candidates_v1/benchmark_tools/replay_phylogeny.py",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_inputs_20260918",
+    "--candidate-clusters",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_private_phylogeny_v1/cpm_high/output",
+    "--json",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_private_phylogeny_v1/cpm_high/metrics.json",
+    "--cpu",
+    "32",
+    "--species-tree-mode",
+    "infer",
+    "--aligner",
+    "mafft",
+    "--tree-builder",
+    "FastTree",
+    "--root-rule",
+    "species_overlap",
+    "--pair-rule",
+    "positive_paralogy",
+    "--species-tree-rooting",
+    "min_variance",
+    "--membership-constraints",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_cpm_helper_recovered_candidates_v1/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "--checkpoint-source",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/cells/p1_c1_r1"
+  ],
+  "source_equivalence": [
+    {
+      "prepared": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_candidates_v1/benchmark_tools/replay_phylogeny.py",
+        "bytes": 11445,
+        "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+      },
+      "executed": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/replay_phylogeny.py",
+        "bytes": 11445,
+        "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+      }
+    },
+    {
+      "prepared": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_corrected_candidates_v1/benchmark_tools/orthobench_stage_diagnostics.py",
+        "bytes": 13747,
+        "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"
+      },
+      "executed": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_qfo_replay_native_v1/benchmark_tools/orthobench_stage_diagnostics.py",
+        "bytes": 13747,
+        "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"
+      }
+    }
+  ],
+  "native_inference": false,
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false,
+  "source_records": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_private_helper_cpm_phylogeny.py",
+      "bytes": 11853,
+      "sha256": "ea4e6c2e8ab74d4bcc9ecc2f09d625e32ed2f8b32005e8be90812eacfe3192fe"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_private_helper_cpm_phylogeny.py",
+      "bytes": 13637,
+      "sha256": "e03aeb135b730e1af9c2a1f685d7f6783f6db5efa42d0ee647132562f2851e3d"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_PRIVATE_CPM_PHYLOGENY_PROTOCOL_20261001.md",
+      "bytes": 4858,
+      "sha256": "d35db243dfed5f5724cfd0610e87c1642c8b9d7eee36d6ef6715ccbbcdf82aa4"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_phylogeny_20261001.sh",
+      "bytes": 973,
+      "sha256": "ff810612f61fb2d095e1ab4cbdf0c301de9b96ab52a88711783f6fc82719c099"
+    }
+  ],
+  "checked_records_count_includes_duplicates": true
+}
