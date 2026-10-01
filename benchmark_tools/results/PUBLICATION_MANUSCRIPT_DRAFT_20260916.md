@@ -1143,11 +1143,20 @@ Historical failures remain failed. After preserving an import-order preflight
 failure, source-corrected candidate construction completed using the unchanged
 historical runtime/settings. Independent validation confirmed all 984,137 genes,
 390,845 seed families, 346,866 candidate families and 43,979 reconstructed merges.
-This admits candidate content only; phylogeny/conversion/scoring handoffs remain
-unadmitted. Neither recovered-seed nor candidate admission is a cause or
-memory-safety diagnosis.
-No missing result was imputed. The full QfO
-parameter panel therefore remains incomplete. These findings do not justify changing
+That gate admitted candidate content only. Subsequent distinct private-runtime
+inference, native-pair conversion and six-challenge assessment passed independent
+validation. A content-equivalent private control was validated before recovered
+inference. The recovered high-CPM arm had SwissTrees F1 83.253016%, a difference
+of -0.098306 percentage points from control (adjusted interval
+[-1.050447, 0.747525]); one family improved, fifteen tied and two worsened.
+Precision/recall differences were -0.056721/-0.120676 points, with adjusted
+intervals [-0.264550, 0.007904] and [-1.501235, 1.107420]. Neither recovery nor
+candidate/score admission diagnoses the historical crash or proves memory safety.
+No missing result was imputed. The prespecified seven-arm SwissTrees parameter
+panel is now complete: all 18 numerical endpoints were independently reproduced
+within 1e-12 using unchanged controls, and all adjusted intervals include zero.
+The other six point estimates and five contrasts exactly match the retained
+partial analysis. These findings do not justify changing
 frozen defaults and are development-exposed SwissTrees evidence, not a joint
 uncertainty analysis of all QfO metrics or independent confirmation.
 [Threshold results, provenance and reproduction](QFO_THRESHOLD_UNCERTAINTY_20260923.md).
@@ -1156,6 +1165,8 @@ uncertainty analysis of all QfO metrics or independent confirmation.
 [One-shot GDB diagnostic](QFO_CPM_BACKTRACE_RESULT_22159.md).
 [Explicit new-runtime recovered-seed admission](QFO_CPM_HELPER_RECOVERY_ADMISSION_RESULT_20260930.md).
 [Independent recovered-candidate admission](QFO_CPM_HELPER_CANDIDATE_ADMISSION_RESULT_22386.md).
+[Recovered high-CPM score admission](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md).
+[Complete seven-arm uncertainty, table and figure](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md).
 [Post-hoc VATB stage trace](QFO_VATB_PARTITION_TRACE_20260923.md).
 
 ## Limitations And Unfinished Analyses
@@ -1746,8 +1757,8 @@ show bounded sensitivity, not arbitrary-error robustness. Completed annotation,
 identity, fragment and duplication strata are descriptive; they do not establish
 calibrated evolutionary divergence or causal error mechanisms. The biological
 application trace localizes the focal losses but does not prove topology
-correctness. More realistic evolutionary conditions, completion of the QfO
-parameter panel, appropriate uncertainty for the other QfO endpoints and
+correctness. More realistic evolutionary conditions, broader parameter/transfer
+robustness, appropriate uncertainty for the other QfO endpoints and
 controlled resource scaling remain required.
 
 ### TreeFam-A Pooled Count Audit

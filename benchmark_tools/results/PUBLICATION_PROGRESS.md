@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Complete QfO Parameter Panel Reproduced And Exported (2026-10-01)
+
+Committed/pushed score admission, tested source-lineage amendment and failure
+history at **37f4d423**. Rechecked clean da587eed executor, all four source/Git
+bindings, fresh output and unchanged six prior rows. Submitted standalone
+analysis **22395** once, 22:08:21 UTC, 2 CPUs/64 GiB/no requeue, using reviewed
+inventory SHA256 972f3f94dd1485dc6d21603da551396a8caf954d7cca34fcc0aa6f1765719804.
+Parent/batch COMPLETED 0:0, elapsed 1:04. The exact actual submission is retained.
+
+Actual analysis status corrected_qfo_parameter_uncertainty_audited, complete
+seven-arm panel, six contrasts/18 endpoints, scientific/uncertainty flags true;
+controlled timing/publication readiness false. Exact 10,638,421-byte result SHA256
+6fff1d7560c10983d8a3a2df1debf4074e1c69a88d962f4018a5de769ce9a14c.
+Unchanged independent reproducer passed all 18 endpoints to 1e-12, using the
+same NumPy generator/quantiles. The six prior points/five contrasts match the
+retained partial report exactly. All 18 adjusted intervals include zero.
+High-CPM F1 difference -0.098306 pp [-1.050447, 0.747525], wins/ties/losses
+1/15/2; no default promotion, equivalence or superiority claim follows.
+See [complete results and provenance](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md).
+
+The historical partial export succeeded in fresh v2 with explicit binding;
+5,130 unique effective records, 15 estimated/18 planned endpoints and missing
+high arm retained. Original failed attempt and declarations remain unchanged.
+Complete export succeeded through strict default checking without historical
+binding; 18,527 unique effective records, seven native rows/all 18 intervals.
+Both PNGs were visually inspected: legible tables/labels, no overlaps, explicit
+missing arm in historical panel and complete values in new panel. All six
+output identities match each manifest. Complete table/interval values equal
+manifest values; six prior native-score rows are unchanged. Full large manifests
+remain local; compact readback receipts bind exact manifest/output bytes.
+
+Updated main Markdown manuscript and current claim checklist with completed
+panel, effect/intervals and preserved failure/runtime/uncertainty limitations.
+The older rendered review/archive is explicitly historical; final reconciliation
+remains open. Citation/current OrthoBench-prose/render tests: **27 pass in
+2.65 seconds**. Artifact-link/summary-predicate and scoped whitespace checks
+pass. Commit/push compact receipts, numerical results, tables, figures
+and prose now, excluding large full manifests and unrelated sample outputs.
+An unrestricted staged whitespace check flags generated TSV terminal tabs for
+empty fields and Matplotlib SVG path spacing. Preserve those exact generated
+bytes and their admitted hashes; source/prose/JSON checks are scoped separately.
+All own scientific jobs 22393/22394/22395 are terminal. Full goal remains
+active/incomplete: other QfO uncertainty/TreeFam limitations, controlled resource
+panel, remaining rights/transitive release and final publication package.
+Timing deferred; no DGX, contention question/probe or unrelated job/service change.
+
 ## Recovered High-CPM Score Gate Passed (2026-10-01)
 
 Independent gate 22394 parent/batch COMPLETED, exit 0:0, 2 CPUs/64 GiB,

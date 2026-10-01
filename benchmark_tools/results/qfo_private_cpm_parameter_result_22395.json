@@ -1,0 +1,413 @@
+{
+  "status": "qfo_private_cpm_parameter_result_summary",
+  "input": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_uncertainty_20261001.json",
+    "bytes": 10638421,
+    "sha256": "6fff1d7560c10983d8a3a2df1debf4074e1c69a88d962f4018a5de769ce9a14c"
+  },
+  "source": {
+    "bytes": 14811,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/benchmark_tools/run_private_cpm_parameter_uncertainty.py",
+    "sha256": "608ac7512993280190350d15c77aab56b26770e885dcae0bba62c88354d0a6ca"
+  },
+  "protocol": {
+    "bytes": 5544,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md",
+    "sha256": "7b66c2f29b0098f26a68cb9f230bd6260e04089db9d40c98f4ce0b9af1924044"
+  },
+  "execution_protocol": {
+    "bytes": 4685,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/QFO_PRIVATE_CPM_PARAMETER_INTEGRATION_PROTOCOL_20261001.md",
+    "sha256": "a853a53d02fc7b50750f64bc4feddf05bd8246b1803f3e400ce8a11b00725cf8"
+  },
+  "admission_inventory": {
+    "bytes": 2945,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_uncertainty_private_inventory_20261001.json",
+    "sha256": "972f3f94dd1485dc6d21603da551396a8caf954d7cca34fcc0aa6f1765719804"
+  },
+  "submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_parameter_uncertainty_submission_22395.json",
+    "bytes": 3640,
+    "sha256": "8f3974ca009f346530d62aaf6bc278bd6eb3d1660ec687ee8ee46958f61f96cf"
+  },
+  "reproduction": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_parameter_reproduction_20261001.json",
+    "bytes": 1005,
+    "sha256": "f3c9e3c24f8467583bfab6a4f74efa545d6ddbbd888c7e01b8deafff8bd417f1"
+  },
+  "replicates": 100000,
+  "seed": 20260925,
+  "multiplicity_endpoints": 18,
+  "complete_panel": true,
+  "estimated_contrasts": 6,
+  "endpoint_count": 18,
+  "families": [
+    "APP",
+    "ASTER",
+    "BAMBI",
+    "BAR",
+    "CASP",
+    "CITE",
+    "Clusterin",
+    "GH14",
+    "HOX",
+    "MAPT",
+    "NOX",
+    "POP",
+    "PSEN",
+    "RPS",
+    "SERC",
+    "SUMF",
+    "TRFE",
+    "VATB"
+  ],
+  "point_estimates": {
+    "control": {
+      "F1": 0.8335132180095781,
+      "PPV": 0.9551767493219016,
+      "TPR": 0.7393412564640668
+    },
+    "cpm_high": {
+      "F1": 0.8325301600179256,
+      "PPV": 0.9546095378318614,
+      "TPR": 0.7381344971022686
+    },
+    "cpm_low": {
+      "F1": 0.7910137327653498,
+      "PPV": 0.9277105475816187,
+      "TPR": 0.689427571710095
+    },
+    "margin_high": {
+      "F1": 0.8356475277693847,
+      "PPV": 0.9560286841839962,
+      "TPR": 0.742192217390629
+    },
+    "margin_low": {
+      "F1": 0.8283907207307009,
+      "PPV": 0.9556889636639032,
+      "TPR": 0.7310186718562417
+    },
+    "norm_high": {
+      "F1": 0.8335132180095781,
+      "PPV": 0.9551767493219016,
+      "TPR": 0.7393412564640668
+    },
+    "norm_low": {
+      "F1": 0.8335132180095781,
+      "PPV": 0.9551767493219016,
+      "TPR": 0.7393412564640668
+    }
+  },
+  "comparisons": [
+    {
+      "candidate": "cpm_low",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.2193948360278099,
+            0.00788717724656239
+          ],
+          "difference": -0.04249948524422831,
+          "family_losses": 2,
+          "family_ties": 13,
+          "family_wins": 3,
+          "paired_percentile_ci": [
+            -0.13341127523970947,
+            0.004599549848807554
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.1372466408620392,
+            0.00451222493875413
+          ],
+          "difference": -0.027466201740282803,
+          "family_losses": 3,
+          "family_ties": 13,
+          "family_wins": 2,
+          "paired_percentile_ci": [
+            -0.08360488967501178,
+            0.002341177341177225
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.2530531122701305,
+            0.012659605682861508
+          ],
+          "difference": -0.04991368475397173,
+          "family_losses": 2,
+          "family_ties": 14,
+          "family_wins": 2,
+          "paired_percentile_ci": [
+            -0.15567644921672974,
+            0.007752318541098258
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "cpm_high",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.010504469677860659,
+            0.007475253948726901
+          ],
+          "difference": -0.0009830579916525473,
+          "family_losses": 2,
+          "family_ties": 15,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.006917180791427985,
+            0.004716686278488997
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.002645502645502673,
+            0.00007903763772310057
+          ],
+          "difference": -0.0005672114900401315,
+          "family_losses": 2,
+          "family_ties": 15,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.0016832829186115283,
+            0.00003951881886155029
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.015012345679012329,
+            0.011074197120708784
+          ],
+          "difference": -0.0012067593617981487,
+          "family_losses": 2,
+          "family_ties": 15,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.010148148148148017,
+            0.007416758951642621
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "norm_low",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "norm_high",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            0,
+            0
+          ],
+          "difference": 0,
+          "family_losses": 0,
+          "family_ties": 18,
+          "family_wins": 0,
+          "paired_percentile_ci": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "margin_low",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.04117303925018491,
+            0.013522789821368848
+          ],
+          "difference": -0.005122497278877258,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.026042842084522122,
+            0.009357795483423009
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.004432624113475336,
+            0.0069936958234831925
+          ],
+          "difference": 0.00051221434200166,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.0033244680851063357,
+            0.004861111111111094
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.058073828388919724,
+            0.016460905349794386
+          ],
+          "difference": -0.00832258460782509,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.03731343283582089,
+            0.012345679012345623
+          ]
+        }
+      }
+    },
+    {
+      "candidate": "margin_high",
+      "reference": "control",
+      "status": "estimated",
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.009284770528660963,
+            0.019570554693458354
+          ],
+          "difference": 0.002134309759806552,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.006092147982224491,
+            0.012652239728827463
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.00007809933157754134,
+            0.004337773642051235
+          ],
+          "difference": 0.0008519348620946721,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.00005857449868307274,
+            0.002614379084967311
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.013287514318442217,
+            0.027542318951253808
+          ],
+          "difference": 0.0028509609265622293,
+          "family_losses": 1,
+          "family_ties": 16,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.00996563573883158,
+            0.01851851851851849
+          ]
+        }
+      }
+    }
+  ],
+  "other_six_points_and_five_contrasts_exactly_preserved": true,
+  "all_adjusted_intervals_include_zero": true,
+  "publication_ready": false,
+  "controlled_timing": false,
+  "limitations": [
+    "Development-exposed conditional sensitivity analysis, not independent or selection-adjusted confirmation.",
+    "Only 18 families; shared history and merged predictions can violate exchangeability.",
+    "Adjustment retains all 18 planned endpoints regardless of missing variants.",
+    "Missing arms are not zeros; unavailable control prevents every paired contrast.",
+    "No TreeFam family intervals or uncertainty on other endpoints or the secondary mean.",
+    "Intervals containing zero do not establish equivalence or general robustness.",
+    "Recovered high-CPM score admission has separate private-runtime provenance; other six admitted arms are unchanged.",
+    "Raw SwissTrees families are reconstructed against the same reference anchor; no inference/scoring is rerun.",
+    "Shared-host recovery is not controlled timing; QfO is development-exposed.",
+    "Independent numerical reproduction, figure/table export and other publication requirements remain separate."
+  ]
+}

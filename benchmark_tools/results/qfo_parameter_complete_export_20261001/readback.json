@@ -1,0 +1,70 @@
+{
+  "status": "qfo_parameter_export_output_readback",
+  "manifest": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/manifest.json",
+    "bytes": 35696908,
+    "sha256": "33c6a699ebd692e6259d4cc8a1f79174d3c3f45e91a1ea25d7dafad64bb0ca46"
+  },
+  "source": {
+    "bytes": 18564,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_qfo_parameter_neighborhood.py",
+    "sha256": "70e8ddd6758af0d07d091e5880550d65ab8f74a847aa5ec8b611fcf6bd07560b"
+  },
+  "input": {
+    "bytes": 10638421,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_uncertainty_20261001.json",
+    "sha256": "6fff1d7560c10983d8a3a2df1debf4074e1c69a88d962f4018a5de769ce9a14c"
+  },
+  "reproduction": {
+    "bytes": 1005,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_parameter_reproduction_20261001.json",
+    "sha256": "f3c9e3c24f8467583bfab6a4f74efa545d6ddbbd888c7e01b8deafff8bd417f1"
+  },
+  "outputs": [
+    {
+      "bytes": 1018,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/scores.tsv",
+      "sha256": "3f2d7d527b6f8f6e7fc5ae5738803710605406f13947f099eb4e72ae99f581a6"
+    },
+    {
+      "bytes": 1408,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/scores.md",
+      "sha256": "39596fa3b0a551ac9f2a58dcfd0f6e434da4913bf387256c2ed67bdcb312a138"
+    },
+    {
+      "bytes": 2160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/intervals.tsv",
+      "sha256": "04cd868d1c13b23a71965c4c4130e709f3e60da9ce5be432edb78118e781ecc6"
+    },
+    {
+      "bytes": 237392,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.png",
+      "sha256": "e4a297f034f126dfb4f2b33b861f49d8d64d1ed1906c630699d9adc0e779387c"
+    },
+    {
+      "bytes": 34477,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf",
+      "sha256": "b395ec4285f59b69c55888d5db73008e93a44deb9f5614b75bf6e3807d23c563"
+    },
+    {
+      "bytes": 150142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.svg",
+      "sha256": "6532c0ddd43a7168c71fe0c20eb22bd23d7512fc7d064828cd1c6ed960405c8e"
+    }
+  ],
+  "historical_exporter_binding": null,
+  "declared_records": 110530,
+  "effective_records": 18527,
+  "planned_endpoints": 18,
+  "estimated_endpoints": 18,
+  "complete_panel": true,
+  "table_rows": 7,
+  "interval_rows": 18,
+  "native_table_and_interval_values_equal_manifest": true,
+  "other_six_native_rows_exactly_preserved": true,
+  "publication_ready": false,
+  "limitations": [
+    "Checks saved export files and manifest/output identity, not a third complete input or raw-scoring audit.",
+    "Large full manifest retained locally; committed compact receipt binds its exact bytes."
+  ]
+}

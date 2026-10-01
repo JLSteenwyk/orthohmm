@@ -1,0 +1,62 @@
+{
+  "status": "private_recovered_qfo_parameter_uncertainty_submitted",
+  "job_id": "22395",
+  "submission_observed_utc": "2026-10-01 22:08:21 UTC",
+  "accounting_observed_utc": "2026-10-01 22:08:57 UTC",
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001",
+  "executor_commit": "da587eed272520106b709f5e462b0c3eadcc1114",
+  "executor_clean": true,
+  "source_records": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/benchmark_tools/run_private_cpm_parameter_uncertainty.py",
+      "bytes": 14811,
+      "sha256": "608ac7512993280190350d15c77aab56b26770e885dcae0bba62c88354d0a6ca"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/benchmark_tools/results/QFO_PRIVATE_CPM_PARAMETER_INTEGRATION_PROTOCOL_20261001.md",
+      "bytes": 4685,
+      "sha256": "a853a53d02fc7b50750f64bc4feddf05bd8246b1803f3e400ce8a11b00725cf8"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/benchmark_tools/results/qfo_private_cpm_parameter_uncertainty_20261001.sh",
+      "bytes": 1381,
+      "sha256": "a09ec6851dabdda35e55a3f6075986ac4768087a7463769403609d778b0207d4"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/tests/unit/test_run_private_cpm_parameter_uncertainty.py",
+      "bytes": 19161,
+      "sha256": "93de1aa381e436fb856c94dba7a39ae6ebda01182e80afebf4d891f333ba0097"
+    }
+  ],
+  "admission_inventory": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_uncertainty_private_inventory_20261001.json",
+    "bytes": 2945,
+    "sha256": "972f3f94dd1485dc6d21603da551396a8caf954d7cca34fcc0aa6f1765719804"
+  },
+  "private_score_admission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_score_admission_20261001.json",
+    "bytes": 18564324,
+    "sha256": "946e6c3bd710c3ccf3eea17c5b85359b7e4751b6efeb37fc8a40d4bc32ab0b28"
+  },
+  "parent_submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_score_admission_submission_22394.json",
+    "bytes": 3275,
+    "sha256": "60f3a9a6adc22709a3a58240f6fa18e0975ca1889911dd2880442682cca1ac81"
+  },
+  "submission_argv": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001/benchmark_tools/results/qfo_private_cpm_parameter_uncertainty_20261001.sh",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_parameter_executor_20261001",
+    "da587eed272520106b709f5e462b0c3eadcc1114",
+    "a853a53d02fc7b50750f64bc4feddf05bd8246b1803f3e400ce8a11b00725cf8",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_uncertainty_private_inventory_20261001.json",
+    "972f3f94dd1485dc6d21603da551396a8caf954d7cca34fcc0aa6f1765719804"
+  ],
+  "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22395|RUNNING|0:0|00:00:36|2|64G|bizon\n22395.batch|RUNNING|0:0|00:00:36|2||bizon\n",
+  "native_inference": false,
+  "accuracy_evaluated": false,
+  "uncertainty_admitted": false,
+  "controlled_timing": false,
+  "publication_ready": false
+}
