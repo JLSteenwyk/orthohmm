@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Recovered Private High-CPM Native Inference Running As 22390 (2026-10-01)
+
+Committed/pushed tested driver/protocol/script/live source preflight and 286
+passing tests at `8952ebed34921f873eac83ce63319ee3d7d8dbf7`. Created a separate
+clean detached executor and submitted exactly one standalone local native job:
+22390, 32 CPUs/192 GiB/24 hours, no GPU/dependency/requeue/retry. The
+[submission receipt](qfo_private_cpm_phylogeny_submission_22390.json) binds
+actual command, revision/clean executor, four source/test/protocol/script records,
+passed source preflight, completed private admission/readback and candidate
+admission. No completed search/refinement/construction/control was rerun.
+
+Latest actual parent/batch accounting: RUNNING at 2:12 on bizon. Actual new
+preflight names job 22390, source SHA256
+`ea4e6c2e8ab74d4bcc9ecc2f09d625e32ed2f8b32005e8be90812eacfe3192fe`,
+the explicit seed/private-native handoffs and pinned private executed interpreter.
+Actual replay lookup passed: six orthohmm modules within the frozen QfO launcher,
+236 observed imported/mapped/runtime records, continuous enforcement false.
+Fresh separate-process candidate admission succeeded and was required to agree
+exactly: 984,137 genes, 390,845 seeds, 346,866 candidates, 43,979 merges.
+
+Actual execution/status.json now reports native method candidate_cpm_high
+running, return code null. No postflight/completion/native output admission or
+reference score exists yet. This is the missing recovered high-CPM arm, not
+another baseline control or a controlled timing run. Do not infer accuracy
+from completed candidate/private deployment validation.
+
+Poll this exact 22390 handle next; never resubmit because an observation expires
+or the goal resumes. Preserve any failure. On successful completion validate
+actual full pre/post runtime/source/input checks, checkpoint use/new inference,
+native output/group/pair/inferred-tree integrity and complete output inventory;
+then lossless pair conversion/score admission and the frozen seven-arm/18-
+endpoint analysis. Do not change endpoints, multiplicity or scientific defaults.
+
+All needed terminal exec sessions complete; scheduled native job remains live.
+Commit/push this actual running milestone. Full goal active/incomplete: recovered
+native admission/accuracy/parameter analysis, controlled timing, uncertainty/
+TreeFam, rights and release. Quiet window not needed now; timing remains deferred.
+No DGX, contention probe/question, shared package mutation or unrelated work.
+
 ## Private Recovered High-CPM Handoff Prepared And Verified (2026-10-01)
 
 Committed/pushed completed 22389 admission, isolated readback/source/tests and
