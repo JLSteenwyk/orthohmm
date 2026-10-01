@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Private QfO Control Completed; Independent Admission Prepared (2026-10-01)
+
+Actual 22387 parent and batch step are COMPLETED 0:0, 32 CPUs/192 GiB,
+10:28 on bizon. Final execution reports process_succeeded/exit 0, no failed
+methods and 145,649 output records. Final postflight reports all six native
+exports byte-equal to the admitted p1_c1_r1 baseline, pending admission;
+accuracy, recovered inference authorization, publication and controlled-timing
+flags remain false. No native retry or recovered-arm inference occurred.
+
+Actual checkpoint accounting: 351,739 candidates; 24,264 reconciled families,
+327,475 bypassed; 24,264 raw-tree hits, zero remapped hits; species-tree
+checkpoint reused with 26 selected families. Retained 366,068 root HOGs and
+5,959,560 native pairs. This is incremental deployment parity, not fresh
+all-tree/search equivalence or a new accuracy/timing result.
+
+Implemented the separate read-only completion/provenance/runtime/native
+admission required by the original protocol. Reconstruct complete command,
+preflight/helper/source identities; recheck full native inventory, imported/
+mapped runtime files, full partition/parameters/tree metadata and canonical
+native pairs; independently compare all six exports and reverify baseline/
+runtime/completion before writing a fresh report. Original gates unchanged.
+The [admission protocol](QFO_PRIVATE_PHYLOGENY_ADMISSION_PROTOCOL_20261001.md)
+pins one 2-CPU/64-GiB/4-hour local admission, followed by independent readback.
+
+Initial focused run found five failures in the synthetic fixture's omitted
+launcher equivalence records (221 passed); fixed the fixture without weakening
+production validation. Final 226 focused tests pass in 12.01 seconds. Commit/
+push source, tests, protocol/script and this ledger before actual submission.
+No admission result or missing high-CPM accuracy is inferred from parent success.
+
+The latest user says they do not know a quiet window; it is not needed now.
+Defer controlled timing and continue other publication work, without another
+contention/quiet-window probe or stopping unrelated analyses. Local bizon only;
+no DGX, service change, shared package mutation or repeated completed inference.
+Full goal active/incomplete: independent control admission/readback, recovered
+CPM phylogeny/scoring and seven-arm integration, timing, uncertainty/TreeFam,
+rights and release remain open.
+
 ## Private Full-QfO Control Running As 22387 (2026-10-01)
 
 Committed/pushed the prospective private-environment route, full baseline
