@@ -19,7 +19,8 @@ from benchmark_tools.bootstrap_qfo_parameter_neighborhood import ARMS, validated
 from benchmark_tools.bootstrap_qfo_swiss_stages import aggregate
 from benchmark_tools.export_qfo_threshold_endpoints import ENDPOINTS, scores
 from benchmark_tools.plot_ob_parameter_neighborhood import LABELS
-from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+from benchmark_tools.prepare_ob_candidate_neighborhood import record
+from benchmark_tools.qfo_parameter_source_lineage import check_records
 from benchmark_tools.run_simulation_methods import read_frozen
 
 METRICS = ("F1", "PPV", "TPR")
@@ -228,7 +229,7 @@ def write_tables(output, report, rows):
     return interval_rows
 
 
-def export(path, sha, reproduction_path, reproduction_sha, output):
+def export(path, sha, reproduction_path, reproduction_sha, output, historical_exporter_binding=False):
     if not output.is_absolute() or output.resolve() != output:
         raise ValueError("Require direct absolute parameter figure destination")
     if output.exists() or output.is_symlink():
@@ -242,11 +243,12 @@ def export(path, sha, reproduction_path, reproduction_sha, output):
         report["source"], *report["helpers"], *report["checked_inputs"],
         *[record(module.__file__) for name, module in sorted(sys.modules.items())
           if name.startswith("benchmark_tools.") and getattr(module, "__file__", None)]]
-    for ref in checked:
-        check(ref)
+    root = Path(__file__).resolve().parents[1]
+    effective, lineage = check_records(checked, root, historical_exporter_binding)
     rows = native_rows(report, checked)
-    for ref in checked:
-        check(ref)
+    effective, next_lineage = check_records(checked, root, historical_exporter_binding)
+    if next_lineage != lineage:
+        raise ValueError("Historical source lineage changed during native table validation")
     figure = plot(report, reproduction)
     output.mkdir(parents=True, exist_ok=False)
     try:
@@ -255,13 +257,15 @@ def export(path, sha, reproduction_path, reproduction_sha, output):
             figure.savefig(output / ("qfo_parameter_neighborhood." + extension), dpi=180)
     finally:
         plt.close(figure)
-    for ref in checked:
-        check(ref)
+    final_effective, final_lineage = check_records(checked, root, historical_exporter_binding)
+    if final_effective != effective or final_lineage != lineage:
+        raise ValueError("Evidence/source lineage changed during export")
     outputs = [record(output / name) for name in ("scores.tsv", "scores.md", "intervals.tsv",
         "qfo_parameter_neighborhood.png", "qfo_parameter_neighborhood.pdf", "qfo_parameter_neighborhood.svg")]
     result = dict(status="qfo_parameter_results_exported", source=record(__file__), input=input_pin,
         reproduction=record(reproduction_path), rows=rows, intervals=interval_rows, outputs=outputs,
-        checked_records=checked, planned_endpoints=18, estimated_endpoints=report["estimated_contrasts"] * 3,
+        declared_records=checked, checked_records=effective, historical_exporter_binding=lineage,
+        planned_endpoints=18, estimated_endpoints=report["estimated_contrasts"] * 3,
         complete_panel=report["complete_panel"], matplotlib=matplotlib.__version__, publication_ready=False,
         limitations=["Visualization/export of admitted results, not a new inference, score or uncertainty admission.",
             "Reuse of a hash-bound numerical reproduction; no bootstrap rerun.",
@@ -279,5 +283,8 @@ if __name__ == "__main__":
         parser.add_argument("--" + name, required=True, type=Path)
     for name in ("sha256", "reproduction-sha256"):
         parser.add_argument("--" + name, required=True)
+    parser.add_argument("--historical-exporter-binding", action="store_true",
+        help="Explicitly bind the known old comparator-report exporter to retained historical bytes and Git")
     args = parser.parse_args()
-    export(args.results.resolve(), args.sha256, args.reproduction.resolve(), args.reproduction_sha256, args.output)
+    export(args.results.resolve(), args.sha256, args.reproduction.resolve(), args.reproduction_sha256,
+        args.output, args.historical_exporter_binding)

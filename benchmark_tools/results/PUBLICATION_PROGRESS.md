@@ -1,5 +1,65 @@
 # Publication Progress
 
+## Recovered High-CPM Score Gate Passed (2026-10-01)
+
+Independent gate 22394 parent/batch COMPLETED, exit 0:0, 2 CPUs/64 GiB,
+bizon, 4:40. The actual report admits cpm_high/index 1 accuracy, checks
+40,057 recorded evidence entries and all 15 freshly completed native tasks;
+controlled timing/publication readiness stay false. See
+[actual scores and provenance](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md).
+SwissTrees F1 0.832530162686, secondary mean 0.762961193472. This is not
+independent biological confirmation or a parameter superiority claim.
+
+Created a fresh seven-arm inventory preserving the other six admission rows
+exactly and binding the new actual report, completed validator job and actual
+submission. Next verify the clean da587eed analysis executor and submit once
+with reviewed inventory/protocol hashes. Keep frozen statistics/multiplicity;
+independently reproduce before interpretation/export/manuscript integration.
+
+Broader lineage/export/count/bootstrap/reproducer/native-metric/OrthoBench-
+plot/private-integration tests: **242 pass in 23.99 seconds**; scoped whitespace
+checks pass. Commit/push source, failure history, amendments, actual score
+receipt/result and fresh inventory before actual amended rendering/analysis.
+Goal active/incomplete; timing deferred and no unrelated work changed.
+
+## Command Access Restored; Score Gate 22394 Submitted (2026-10-01)
+
+Three preceding continuations were blocked by sandbox failure before process
+launch. Attempted documentation edits failed; no code changes or job restarts
+occurred. On resumption command access works; re-read the full objective and
+latest ledger. Assessment 22393 parent/batch COMPLETED, exit 0:0, bizon,
+8 CPUs/64 GiB, elapsed 42:55. Execution status is
+`process_succeeded_pending_independent_admission`, not score admission.
+
+Reviewed actual execution-report SHA256
+`8cf5bcee795c68357cbf116e0fbec1c3a7fe242229b2e1c2caec08aec163891c`
+(18,474,378 bytes), and actual assessment submission SHA256
+`efe0ae51d0de9d6f63dd798f2af7eb3c7450081284b4329973fd3c8cf4d65f70`
+(3,237 bytes). Rechecked clean detached score-gate executor at 2e99680c,
+all four actual source identities against frozen Git blobs, known validator/
+protocol SHA256 and fresh output. Submitted standalone score gate **22394**
+once at 21:59:29 UTC, 2 CPUs/64 GiB/4 hours/no requeue. The
+[actual submission receipt](qfo_private_cpm_score_admission_submission_22394.json)
+retains exact argv and first RUNNING observation at 12 seconds. Latest
+parent/batch RUNNING at 4:26. No new reference score has been admitted.
+
+Preserved the [failed partial-panel export](QFO_PARAMETER_PARTIAL_EXPORT_FAILURE_20261001.md).
+Exactly one root reporting-helper pin is stale; its original bytes match the
+historical Git blob. Added an opt-in, narrowly specified
+[historical-source binding](QFO_PARAMETER_EXPORT_SOURCE_LINEAGE_20261001.md),
+retaining declared versus effective records and both Git/source identities.
+Default checking stays strict. Unknown originals, changed historical/current
+files or Git blobs, symlinks, changed scientific data/helpers and conflicts
+fail. No scientific sources or old reports were changed. Initial lineage/
+export tests: **49 pass in 10.45 seconds**. Broader tests and actual amended
+export remain next. The six retained score admissions contain no root exporter
+pin, so the new seven-arm integration is not blocked by this historical pin.
+
+Goal active/incomplete: actual score admission, complete parameter uncertainty/
+independent reproduction, manuscript integration, controlled resources, remaining
+uncertainty/rights/release. Timing deferred; no DGX, contention question/probe,
+unrelated job/service or shared-package/default changes.
+
 ## Seven-Arm Score/Uncertainty Export Prepared (2026-10-01)
 
 Previous goal turn made progress at pushed ca3de288: tested/frozen recovered
