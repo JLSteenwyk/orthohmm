@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Offline QfO Parameter Component Prepared (2026-10-01)
+
+Previous continuation made scientific progress at pushed d83e088f: recovered
+high-CPM scoring, full seven-arm uncertainty, all 18 numerical endpoints and
+checked table/figure/prose. Re-read full objective/latest ledger and recheck
+22393/22394/22395: all parent/batch COMPLETED 0:0. No analysis restart, DGX,
+contention poll or controlled-timing launch. Timing remains deferred.
+
+Added a [standalone numerical-component exporter/verifier](../bundle_qfo_parameter_component.py)
+and [pre-execution protocol](QFO_PARAMETER_NUMERICAL_COMPONENT_PROTOCOL_20261001.md).
+Bind committed summary/readback to exact retained full report/manifests and
+all six output files, protocols/plan and relevant source bytes. Preserve old
+absolute paths; offline verification never dereferences them. Require reviewed
+component-manifest SHA256, complete direct file inventory, byte/provenance/
+scope/control/availability bindings and exact numerical version. Builder source
+must match the selected Git revision. Existing/indirect destinations, unknown
+members, changes, symlinks, traversal and promotion fail.
+
+Numerical restoration loads only the unchanged reproducer's existing pure
+verify function/constants through AST, without project-harness imports or a
+new arithmetic implementation. Retain 18-endpoint design/tolerance/version;
+recheck component at close and preserve failed receipts. Deterministic archive
+creation reopens every regular member and checks bytes. Unit tests include
+actual isolated numerical subprocess after fixture checkout relocation,
+fresh archive extraction, original numerical corruption cases, metadata/source
+binding and changed-version rejection. Fixture media/protocols are not real
+scientific evidence. Initial 23 tests pass; broader component/reproducer/existing
+figure-bundle suite: **72 pass in 23.83 seconds**. Scoped whitespace passes.
+
+Commit/push prepared source/tests/protocol before actual build/archive. Next
+fresh outside-checkout extraction, copied stdlib verification and original-path
+guarded isolated numerical execution. Reuse admitted inference and figures;
+do not run native prediction/reference scoring again. This is a local numerical
+archive component, not hermetic runtime restoration, transitive raw-data archive,
+rights clearance, public deposition or completed publication readiness.
+
 ## Complete QfO Parameter Panel Reproduced And Exported (2026-10-01)
 
 Committed/pushed score admission, tested source-lineage amendment and failure
