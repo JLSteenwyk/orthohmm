@@ -1,0 +1,51 @@
+{
+  "status": "private_recovered_native_admission_stdlib_readback_passed",
+  "admission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_20261001.json",
+    "bytes": 3714242,
+    "sha256": "0cbffbabe16921f7ad2010405915b1a9f13009c4a217088e48b3892d0c3d0ade"
+  },
+  "submission_sha256": "0bbb87ecb78175f36dbc66f53fed63cef415952b0af060760adf6285c6ab31d1",
+  "record_bindings_checked": 13449,
+  "git_source_bindings_checked": 4,
+  "native_pair_count": 5913166,
+  "cache_use": {
+    "bypassed_families": 322048,
+    "candidate_families": 346866,
+    "checkpoint_hits": 15067,
+    "reconciled_families": 24818,
+    "remapped_checkpoint_hits": 15065,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 23
+  },
+  "scheduler": {
+    "22390": {
+      "JobID": "22390",
+      "JobIDRaw": "22390",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "01:20:50",
+      "AllocCPUS": "32",
+      "ReqMem": "192G",
+      "NodeList": "bizon"
+    },
+    "22391": {
+      "JobID": "22391",
+      "JobIDRaw": "22391",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:05:56",
+      "AllocCPUS": "2",
+      "ReqMem": "64G",
+      "NodeList": "bizon"
+    }
+  },
+  "reader": "/usr/bin/python3 -I -B, independent standard-library inline readback without producer imports",
+  "limitations": [
+    "Verifies actual completed parent/step states, exact report/submission identity, four submitted Git blobs and all unique current bound-file identities.",
+    "Does not repeat native group/pair/tree correctness validation or independently reconstruct gene-tree events.",
+    "Does not repeat reference scoring, compute accuracy or establish controlled timing."
+  ],
+  "accuracy_evaluated": false,
+  "publication_ready": false
+}

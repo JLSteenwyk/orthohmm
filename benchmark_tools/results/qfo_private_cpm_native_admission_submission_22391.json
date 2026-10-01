@@ -1,0 +1,51 @@
+{
+  "status": "private_recovered_qfo_high_cpm_native_admission_submitted",
+  "job_id": "22391",
+  "submission_observed_utc": "2026-10-01 19:25:43 UTC",
+  "executor": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001",
+  "executor_commit": "d3c4c5c3525fcbeea97fa6b6d52cce05a0d5de29",
+  "executor_clean": true,
+  "submission_argv": [
+    "sbatch",
+    "--parsable",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001/benchmark_tools/results/qfo_private_cpm_native_admission_20261001.sh",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001",
+    "d3c4c5c3525fcbeea97fa6b6d52cce05a0d5de29",
+    "2e6db7249a8dddebe02674c955e7654457325eb756c7aeaf77d387b4e1c74542"
+  ],
+  "source_records": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001/benchmark_tools/admit_private_helper_cpm_phylogeny.py",
+      "bytes": 15003,
+      "sha256": "a21036cf1b916b65053c9363d19ed86bcc596a89fe2239a72da0ad5a56ea2666"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001/benchmark_tools/results/QFO_PRIVATE_CPM_NATIVE_ADMISSION_PROTOCOL_20261001.md",
+      "bytes": 5105,
+      "sha256": "2e6db7249a8dddebe02674c955e7654457325eb756c7aeaf77d387b4e1c74542"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001/benchmark_tools/results/qfo_private_cpm_native_admission_20261001.sh",
+      "bytes": 1174,
+      "sha256": "40994d55595b2b64460a74121d2d907c60df28dcd3bd19422d9b94aa726fe97a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_private_cpm_native_admission_executor_20261001/tests/unit/test_admit_private_helper_cpm_phylogeny.py",
+      "bytes": 17283,
+      "sha256": "0a0c101fe357f7b7038280220c56cb5f75413c1c783e6b3f06e1ca0f8fe28acf"
+    }
+  ],
+  "parent_submission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_private_cpm_phylogeny_submission_22390.json",
+    "bytes": 3773,
+    "sha256": "3d3dde8a7f29d78a640655e6ac84abc44d9e2f89311327133b82ffe0fb5a70cd"
+  },
+  "native_accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22390|22390|COMPLETED|0:0|01:20:50|32|192G|bizon\n22390.batch|22390.batch|COMPLETED|0:0|01:20:50|32||bizon\n",
+  "accounting": "JobID|JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList\n22391|22391|RUNNING|0:0|00:00:41|2|64G|bizon\n22391.batch|22391.batch|RUNNING|0:0|00:00:41|2||bizon\n",
+  "native_completion_observed": true,
+  "native_outputs_validated": false,
+  "native_inference": false,
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false
+}

@@ -1,5 +1,78 @@
 # Publication Progress
 
+## Native 22390 Completed; Admission 22391 Running; Assessment Prepared (2026-10-01)
+
+Previous turn made progress at pushed b502bc69: tested prospective lossless
+conversion and clean native-admission worktree. Re-read full objective/latest
+ledger and polled the same 22390 handle. It is now COMPLETED 0:0, parent/batch,
+bizon, 32 CPUs/192 GiB, allocation elapsed 1:20:50. This is incremental
+shared-host allocation duration, not controlled timing or pure inference wall
+time. No restart, completed search/refinement/construction/control rerun or
+accuracy inference occurred. Full output admission remains independent.
+
+Prepared [recovered-private QfO assessment](QFO_PRIVATE_CPM_ASSESSMENT_PROTOCOL_20261001.md)
+before inspecting accuracy. Require terminal converted/native admissions,
+reviewed actual report/submission hashes, clean b502bc69 converter/source and
+its actual submitted source/protocol/script/test bindings. Verify conversion
+preflight/checked-prefix provenance, exact pair paths/bytes/counts/mapping,
+original/fresh native report equality, recovered candidate/private-baseline
+context and exact recheck command. Original historical failed gates unchanged.
+
+Use unchanged frozen 2020 QfO command/environment and all six challenges. No
+endpoint selection, score reweighting, seed/default/multiplicity change or
+Nextflow resume. Fresh namespaces are checked before expensive verification.
+Pin all scoring/reference/runtime/helper/input evidence before and after,
+revalidate completed conversion/private context at close and retain complete
+outputs/logs. Failures/partial-output capture errors retained without retry.
+Process success alone leaves accuracy/publication/controlled-timing false;
+separate independent 15-task/native-metric/output/provenance admission required.
+
+Initial 119 assessment/original-command tests pass; broadened converter,
+original assessment admission/trace/native-metric/environment checks: final
+278 pass in 5.23 seconds. Bash syntax passes. Tests cover actual unchanged
+conversion helpers on fixtures, active-job/no-read ordering, changed contexts/
+counts/preflights/submissions, direct fresh namespaces, resource/controller
+gates, all six endpoint command construction and retained execution failures.
+No real assessment or new reference score is claimed from these fixtures.
+
+After observing actual native completion, submitted exactly one already-frozen
+read-only native admission: **22391**, clean d3c4c5c3 executor, standalone
+2 CPUs/64 GiB/4 hours, no GPU/dependency/requeue/retry. The
+[actual submission receipt](qfo_private_cpm_native_admission_submission_22391.json)
+binds exact command, four source records, original 22390 submission, actual
+terminal native accounting and first running admission observation. Its SHA256
+is `0bbb87ecb78175f36dbc66f53fed63cef415952b0af060760adf6285c6ab31d1`.
+The unchanged converter independently accepts all six current submission/source
+records; this does not admit native outputs. Admission was verified RUNNING at
+5:02, then parent/batch **COMPLETED 0:0 in 5:56**, 2 CPUs/64 GiB, bizon.
+No native retry occurred. Actual 3,714,242-byte admission report SHA256
+`0cbffbabe16921f7ad2010405915b1a9f13009c4a217088e48b3892d0c3d0ade`
+is private_recovered_cpm_native_pairs_verified_unscored, with 5,913,166 pairs
+and all accuracy/scoring/controlled-timing/publication flags false. Complete
+native group/pair/inferred-tree/inventory validators passed. Cache accounting:
+346,866 candidates, 24,818 reconciled/322,048 bypassed; 15,067 raw-tree hits,
+15,065 remapped; 9,751 reconciled families without a checkpoint hit; species
+tree not reused, 23 selected families. Native integrity is not tree/event truth.
+
+Separate isolated stdlib [readback](qfo_private_cpm_native_admission_readback_22391.json),
+without producer imports, checks both completed parents/all reported steps,
+exact report/submission/source/revision, four submitted Git blobs and all
+13,449 unique current bound-file identities; report unchanged at close.
+This is identity/completion readback, not a third native correctness validation,
+accuracy result or controlled timing. Original failed gates remain preserved.
+
+Created clean detached conversion executor at
+benchmarks/work/qfo_private_cpm_pair_conversion_executor_20261001, exact
+b502bc6965d37916224c87595a46ef8ab5c9c4d1; empty status. No conversion submitted
+while native admission was active. Commit/push assessment/source/tests/protocol/
+script and actual admission/submission/readback now; then submit the already
+prepared lossless conversion once with reviewed report/submission hashes.
+Only after successful conversion launch the fixed assessment and admit scores;
+frozen seven-arm/18-endpoint analysis remains required. Full goal active/
+incomplete: recovered accuracy/parameter analysis, QfO uncertainty/TreeFam,
+controlled resources, rights and release. Timing deferred; no quiet-window
+probe/question, DGX, shared package mutation or unrelated job/service action.
+
 ## Recovered Private Native-Pair Conversion Prepared (2026-10-01)
 
 Previous goal turn made progress at pushed 5edfc888: complete retained FAS
