@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Private Full-QfO Control Running As 22387 (2026-10-01)
+
+Committed/pushed the prospective private-environment route, full baseline
+control, protocol/script, 173 passing tests and preparation ledger at
+`bf3cc9e0a1f754492280f74d39c763cab49c4006`. Created a clean detached executor
+there and submitted exactly one new standalone local job: 22387. The
+[submission receipt](qfo_private_phylogeny_control_submission_22387.json)
+binds actual command, clean executor, five source/test/protocol/script records,
+private deployment, original native admission and preserved shared rejection.
+No old failed dependency was released, no retry or scientific tuning occurred.
+
+Latest authoritative accounting: RUNNING at 2:05, 32 CPUs/192 GiB on bizon.
+Actual `qfo_private_phylogeny_control_v1/preflight.json` names job 22387,
+the pinned private native interpreter and frozen QfO replay launcher. Actual
+lookup check passed: six orthohmm modules resolve within that launcher and
+236 imported/mapped/runtime files are recorded, with no observed retired
+shared/user runtime paths. This is an exercised-chain check, not continuous
+access enforcement. Native execution status and method are both running;
+no return code/postflight/native comparison exists yet. No completion, native
+parity or recovered high-CPM inference authorization is inferred.
+
+Poll this exact scheduler handle next; never resubmit because an observation
+times out or the goal resumes. Retain any failure/mismatch. On actual completion,
+validate final pre/post runtime/input/source checks, all six native comparisons,
+actual checkpoint reuse and a separate independent completion/readback admission
+before admitting this deployment for the recovered high-CPM arm. The control
+uses the admitted baseline candidate/constraint bytes; it is not that missing
+arm and does not produce a new accuracy result or controlled timing evidence.
+
+All needed terminal exec sessions are complete; this Slurm job is live.
+Commit/push this real submission milestone. Full goal remains active/incomplete:
+CPM phylogeny/scoring and seven-arm integration, controlled timing, QfO
+uncertainty/original TreeFam, rights and release remain open. No DGX, renewed
+contention/quiet-window question, shared package mutation or unrelated job/service
+action. Completed search/optimizer/refinement/candidate construction and earlier
+private timing fixtures/archive reproduction were not repeated.
+
 ## Private Full-QfO Phylogeny Control Prepared (2026-10-01)
 
 Previous turn made progress at pushed `f9ed1065`: separate recovered-candidate
