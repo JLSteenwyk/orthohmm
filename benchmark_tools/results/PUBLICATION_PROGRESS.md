@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Recovered Private Native Admission Prepared While 22390 Runs (2026-10-01)
+
+Previous turn made progress at pushed 733353f3: admitted private deployment/
+readback, tested explicit recovered high-CPM handoff and actual native 22390
+submission. Revalidated the objective, newest ledger and this exact handle.
+Latest parent/batch accounting: RUNNING at 23:35, 32 CPUs/192 GiB, bizon.
+No new traceback observed. No native completion, output admission or reference
+accuracy is inferred; no resubmission or completed inference rerun occurred.
+
+Prepared separate independent native admission, its
+[prospective protocol](QFO_PRIVATE_CPM_NATIVE_ADMISSION_PROTOCOL_20261001.md)
+and read-only launch script before inspecting completed outputs/accuracy.
+Exact completed native parent/resources/steps required before data reads.
+Pin real submission/clean producer executor/source/protocol/full helpers; load
+fresh source/input/private-runtime verification from the pinned native producer.
+Reconstruct complete planned/executed preflight and fresh candidate admission
+using the historical controller, then independently verify actual private lookup.
+
+Reuse unchanged full native output inventory, metadata/group/partition and
+canonical native-pair validators. Adapt the complete recovered seed/candidate/
+constraint arm, not the original MCL arm, without changing scientific settings.
+Record actual checkpoint use with fixed 346,866 candidates; no favorable cache,
+baseline parity or accuracy outcome is required. All 984,137 genes/78 species
+must be retained. Complete before/after evidence/runtime/inventory checks;
+write only a fresh direct absolute report on success, no overwrite/symlink.
+Keep native integrity separate from reference accuracy and independent tree/
+event correctness. Original shared-runtime and failed historical gates unchanged.
+
+Initial 189 focused tests passed in 2.25 seconds; added script coverage and
+broadened retained private-control/readback checks: 251 passed. Added ambiguous
+step rejection and final bound-file recheck after fresh runtime verification;
+final 252 tests pass in 2.70 seconds. Tests include active-parent/no-read ordering,
+malformed provenance/postflight/lookup/cache rejection, exact recovered-arm
+adaptation and no report on rejection. No acceptance rule was changed after
+observing a new accuracy score. Commit/push the tested workflow now.
+
+Do not launch admission while 22390 is active. Poll the same native job next;
+after actual success submit one clean-executor 2-CPU/64-GiB/4-hour read-only
+admission, preserving every failure. Subsequent lossless conversion, reference
+score admission and frozen seven-arm/18-endpoint analysis remain required.
+Full goal active/incomplete: native admission/accuracy, parameter integration,
+controlled resources, QfO uncertainty/TreeFam, rights and release. Timing remains
+deferred; no quiet-window probe/question, DGX, shared package mutation or
+unrelated job/service action. All needed terminal exec sessions are complete.
+
 ## Recovered Private High-CPM Native Inference Running As 22390 (2026-10-01)
 
 Committed/pushed tested driver/protocol/script/live source preflight and 286
