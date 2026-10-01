@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Private Full-QfO Phylogeny Control Prepared (2026-10-01)
+
+Previous turn made progress at pushed `f9ed1065`: separate recovered-candidate
+handoff, 199 tests and preserved live shared-runtime rejection without inference.
+Revalidated the full objective, current HEAD and completed 22385/22386 jobs.
+Use local bizon only; timing remains deferred and unrelated work untouched.
+
+Implemented a separate explicit private-deployment baseline verifier and full
+QfO p1_c1_r1 control driver. Original full-baseline/shared inventory verifier
+and failed handoff gates remain unchanged. The private path checks the exact
+original native/candidate admissions, output/process provenance and launcher
+source equivalence, then the existing pinned private deployment. Only its
+documented interpreter/package inventory and cwd-derived OrthoFinder metadata
+differ; all remaining manifest/native/scientific settings must match exactly.
+
+Live private environment verification passed: all 18,751 private tree entries
+match the retained snapshot; installation/fixture/lookup evidence records and
+the existing strict package/tool/core verifier pass from frozen core cwd. The
+subsequent complete QfO baseline preflight also passed, p1_c1_r1, 86 direct/
+transitive evidence records returned; existing admission routines checked their
+own full nested inventories. These are unscheduled read-only preflights, not
+native inference, new accuracy, controlled timing or broad host reinventory.
+
+All 173 focused driver/deployment/original-gate tests pass in 3.04 seconds.
+The [prospective control protocol](QFO_PRIVATE_PHYLOGENY_CONTROL_PROTOCOL_20261001.md)
+requires one fresh 32-CPU/192-GiB/24-hour local control, original candidate bytes
+and full scientific settings, pinned private native interpreter, inferred species
+tree and validated original checkpoint reuse. Fresh bytecode/JIT cache policy;
+actual frozen QfO import-chain observation and before/after runtime/input/source
+checks. Require full root-HOG partition, all four native exports and rooted
+species tree byte identity against the admitted baseline. Preserve every failure
+or mismatch without retry/tuning; this is incremental deployment parity only.
+
+Commit/push tested source/protocol/script before submitting one new clean
+detached-executor control. Success remains pending separate completion/native
+readback admission and does not authorize recovered high-CPM inference, scoring
+or timing. Reuse earlier private fixtures/archive evidence, do not rerun them.
+Candidates remain admitted/unscored; no search/optimizer/refinement/construction
+is repeated. Full goal active/incomplete: missing CPM phylogeny/accuracy and
+seven-arm integration, controlled timing, QfO uncertainty/original TreeFam,
+rights and release remain open. No DGX, contention probe/question or service change.
+
 ## Explicit Recovered Phylogeny Handoff; Live Runtime Gate Rejection (2026-10-01)
 
 The preceding user clarification turn made no scientific progress; it confirmed
