@@ -9,7 +9,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 30 September 2026, incomplete working package. This guide routes
+Status: 1 October 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -17,6 +17,18 @@ submit scheduler jobs. Linked native batch recipes have separate execution
 requirements and must not be confused with these audit commands.
 
 ## Execution Status
+
+The [complete QfO parameter panel](results/QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
+now includes all seven arms and 18 reproduced SwissTrees endpoints, with
+separate admission for the recovered high-CPM inference/conversion/scoring.
+Historical failures remain failed; all adjusted intervals include zero and
+no default is promoted. The [numerical archive restoration](results/QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+was executed outside the checkout with copied byte verification and unchanged
+arithmetic. Its original-path guard is Python-event evidence, not OS containment,
+native/raw-data restoration, a new statistical engine or rights clearance.
+The [complete local regression](results/PUBLICATION_FULL_REGRESSION_20261001.md)
+passed 13,660 cases without skips at its recorded revision, including parser
+and native fixtures; it is not controlled timing or remote CI evidence.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

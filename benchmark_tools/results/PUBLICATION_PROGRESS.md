@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Condensed QfO Main Text Reconciled (2026-10-01)
+
+Committed/pushed actual full-regression evidence at 61db013c before editing
+prose. Updated condensed main text and reproduction guide from admitted
+retained results: complete seven-arm/18-endpoint neighborhood, separate private
+high-CPM recovery, negative adjusted findings, eight-method FAS mixture
+diagnostic and fresh numerical-component restoration. Historical failures
+remain failed. No new score, threshold, inference, benchmark or source search.
+
+Four new prose checks bind displayed values and scope to compact actual
+parameter/FAS/restoration reports. Combined current-main/OrthoBench-prose/
+citation/render checks: **31 pass in 2.82 seconds**. JUnit is locally retained
+under publication_full_refresh_20261001_c022ee78/main_text.xml, SHA256
+995936ba7afe64dd4cf06f59369f36a362f9d0131d1a5a8439eaa2b042f9546f.
+Scoped whitespace passes. This is separate from the 13,660-case full run at
+c022ee78, not a claim that the newly added tests were in that prior snapshot.
+
+Commit/push reconciled sources before fresh dated HTML/PDF rendering and
+manual inspection. Earlier reviews remain historical; a review refresh is
+not a complete executable release. Controlled timing stays deferred without
+contention questions/polls, DGX access or unrelated job/service changes.
+Other QfO uncertainty, timing gates, rights and final release remain open.
+
 ## Full Default Discovery Without Skips (2026-10-01)
 
 Re-read the full objective and latest checkpoint; jobs 22393/22394/22395

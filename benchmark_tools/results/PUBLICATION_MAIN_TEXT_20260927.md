@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement
 
-Condensed scientific draft, updated 30 September 2026. Not submission-ready. The
+Condensed scientific draft, updated 1 October 2026. Not submission-ready. The
 [extended manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) retains detailed
 methods, historical analyses, citations and audit records. This main text
 does not supersede frozen protocols or historical result manifests.
@@ -77,6 +77,16 @@ adjustments, negative findings and unavailable contrasts. Curated families
 are not automatically independent: shared evolutionary history and predictions
 joining families can violate exchangeability. Dependent protein pairs are not
 treated as independent observations to obtain narrower intervals.
+
+The prespecified QfO parameter neighborhood retained seven arms: the frozen
+control and six one-at-a-time changes. CPM resolutions were 0.08/0.12 versus
+0.1, candidate minimum normalization 0.024/0.036 versus 0.03, and minimum
+margin 1.2/1.8 versus 1.5. SwissTrees F1 was recomputed from macro precision
+and recall in each of 100,000 shared family-bootstrap draws, not averaged
+across family F1 values. The seed was 20260925; Bonferroni adjustment retained
+all 18 planned endpoints across six contrasts and three metrics. This is
+development-exposed local sensitivity, not independent method selection.
+[Frozen parameter protocol](QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md).
 
 ## Results
 
@@ -168,6 +178,25 @@ phylogeny were off. This is a development-exposed fixed-graph comparison,
 not a comparison against OrthoFinder or a matched-effort result. Score
 rankings and hit identities differ, so the design does not isolate a causal
 mechanism. [Matched-recall control](MATCHED_GRAPH_RESULT_20260926.md).
+
+### Local Parameter Sensitivity Did Not Establish Improvement
+
+The [complete seven-arm panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
+includes separately admitted private-runtime high-CPM recovery. Its SwissTrees
+F1 was 83.253016% versus 83.351322% for the frozen control, a difference of
+-0.098306 percentage points with adjusted interval [-1.050447, 0.747525].
+All 18 adjusted intervals include zero; no statistically supported parameter
+improvement is established. Identical observed normalization-arm statistics
+do not imply identical whole-proteome predictions or equivalence on unseen
+families. No defaults were changed. The [all-arm figure](qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf)
+retains every contrast and the full adjustment denominator.
+
+Historical SIGSEGV, allocator and admission failures remain failed. Recovery
+followed a validated content-equivalent private control and has
+[separate inference, conversion and score evidence](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md);
+it neither repairs those earlier attempts nor proves their cause or memory
+safety. This panel is not an OrthoFinder superiority test or a controlled
+runtime comparison.
 
 ### Transfer And Biological Recovery Reveal Trade-Offs
 
@@ -276,12 +305,21 @@ conservative full-mean bounds of 0.733966-0.785282 for satellite_v2 and
 establish a full-eligible-set advantage nor replace native sample scores or
 confidence intervals. Some lookup-missing pairs were newly scored in native
 samples; those values are not used to tighten these bounds.
+An [eight-method stratum-weight decomposition](QFO_FAS_STRATUM_WEIGHT_RESULT_20261001.md)
+separates count rounding from omission-induced changes in the saved mixture.
+Holding the observed stratum means fixed, native-minus-reweighted-saved-strata
+differences are +0.001318947 FAS units for OrthoMCL and +0.000030716 for
+phylogenetic OrthoHMM. These are numerical diagnostics, not corrected benchmark
+scores or estimates of population bias. Omissions can also change the stratum
+means; the unknown omitted pair identities, unseeded selection and dependence
+remain unresolved. No FAS confidence interval or new method ranking follows.
 The completed simulations and tree perturbations do not cover arbitrary
 evolutionary conditions, and novel-taxon YGOB testing retains homolog-family
 overlap with development data.
 
-Recovered OrthoMCL results retain sequence-specific BLAST failures. Failed
-high-CPM experiments remain unavailable, not zero-scoring or successful runs.
+Recovered OrthoMCL results retain sequence-specific BLAST failures. The
+separately recovered high-CPM result does not replace failed historical runs;
+no missing score was imputed and no failure was recategorized as a success.
 Shared-host runs and the historical DGX panel are descriptive resource records;
 the replacement controlled Threadripper timing panel has not run. No controlled speedup is
 claimed. Versioned archival release, complete dependency/data redistribution
@@ -295,11 +333,21 @@ figures. Installed inference and independent readback have been validated on
 full OrthoBench, but that is not proof of all-method cross-host portability.
 Historical locks are retained as provenance; patched replacement environments
 must be distinguished from the binaries used for original scores. The
+[QfO parameter numerical component](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+passed fresh local archive extraction, copied byte verification and reproduction
+of all 18 endpoints within 1e-12 using unchanged arithmetic. A Python-event
+guard rejected its original-checkout canary and observed no later original-path
+events or project-module imports. This is not OS containment, a new independent
+statistical implementation, raw-reference recount, native inference restoration,
+cross-host validation or redistribution clearance.
+The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
 requirements. No submission-ready release or archival DOI is claimed.
-The retained 28 September main-text HTML/PDF and review archive are historical
-versions, not rendered copies of this revised Markdown. Final manuscript
-rendering and review remain to be reconciled after the outstanding analyses.
+Dated main-text HTML/PDF and review archives preserve the exact inputs of
+their own snapshots; older versions are not rendered copies of revised
+Markdown. A refreshed review is not a complete executable study release.
+Final manuscript/figure/archive reconciliation after outstanding analyses
+remains required.
 
 ## References
 
