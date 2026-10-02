@@ -36,6 +36,31 @@ route and original pins/script. That compatibility preserves retained history,
 not present shared-runtime validity. Private requests must be explicit; neither
 route automatically discovers or upgrades an interpreter or dependency.
 
+## Explicit Current Lookup
+
+The [executed current-source refresh](results/THREADRIPPER_RUNTIME_REFRESH_20261002.md)
+preserves the frozen baseline/controller/plan and private-tree manifest, while
+refreshing changed helper identities. All 57,958 records match before/after
+the native declared-import probe, and both native lookups match their retained
+reports. All 327 latest focused tests pass, including eight explicit-lookup
+executor compositions added after startup. This is startup evidence, not readiness.
+
+An explicitly private request may supply optional `runtime_lookup`, a direct
+absolute file record with exactly `path`, positive integer `bytes` and lowercase
+64-digit `sha256`. Its digest must equal `lookup_sha256` in both request and
+readiness review. Shared/implicit routes reject it. The old default is untouched.
+This avoids embedding a refreshed lookup hash into source inventoried by that
+lookup. No runtime discovery, fallback or implicit readiness approval is added.
+
+The [new local-host lookup receipt](results/threadripper_private_lookup_explicit_20261002.json)
+has 6,176 bytes and SHA256
+`3c244a46786cb0efdf58b15db99b30eb0f166b554e0511d8f07afd20fcc79417`.
+Bind its actual direct local path in `runtime_lookup`; it refers to retained
+Threadripper work artifacts, not a portable runtime distribution. Do not
+calculate replacement hashes from untrusted manifests or reuse old readiness.
+All other request fields, full current-source recipe, history, real policy,
+observer validation and environmental handoff remain required.
+
 ## Preserved Gates
 
 Private execution now requires `threadripper_environment_policy_v2` with
@@ -70,7 +95,8 @@ native environmental handoff, final current-source/runtime validation and
 quiet window are still required. A retained lookup pin is not proof that its
 historical transitive runtime files still match after later helper changes.
 
-This route has synthetic composition/negative checks and Bash syntax validation,
-not a new native/private-controller integration run. The original submission
-script, scientific package, manifests and diagnostic receipts are unchanged.
+This route has synthetic composition/negative checks, Bash syntax validation
+and the bounded actual private-controller inventory/native-import check above,
+not full executor/environmental integration. The original submission script,
+scientific package, historical manifests and diagnostic receipts are unchanged.
 See the [milestone evidence](results/THREADRIPPER_PRIVATE_EXECUTOR_20261002.md).

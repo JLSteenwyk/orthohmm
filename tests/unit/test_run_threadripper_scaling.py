@@ -472,9 +472,11 @@ temporary.rename(target)
 @pytest.mark.parametrize("raises", [False, True])
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
-@pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True)])
+@pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True), ("explicit", True)])
 def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private, native_v2):
-    if private:
+    if private == "explicit":
+        setup = explicit_lookup_setup(setup, monkeypatch)
+    elif private:
         setup = private_setup(setup, monkeypatch)
     root, request, runs = setup
     if native_v2:

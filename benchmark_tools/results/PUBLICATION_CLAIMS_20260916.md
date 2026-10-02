@@ -13,6 +13,16 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [current private startup verification](THREADRIPPER_RUNTIME_REFRESH_20261002.md)
+preserves the scientific baseline/plan/controller/private trees, verifies 57,958
+runtime records before/after startup and compares fresh native declared imports
+to unchanged historical lookups. All 319 pre-startup cases pass; a later
+test-only amendment passes 327 including eight explicit executor compositions.
+The executed executor source remains unchanged. An explicit
+request pin avoids a self-referential helper-manifest hash; the old default stays
+historical. This is current startup evidence at b9e07048, not full executor/
+environmental integration, observer-overhead validation, isolation or timing.
+
 The [remote glibc/assembly regression readback](CI_GLIBC_CONFIRMATION_20261002.md)
 records all eight jobs successful at source 9c81953d. Downloaded Python 3.11
 coverage receipts have 14,883 passes and 119 skips, no errors/failures, exact

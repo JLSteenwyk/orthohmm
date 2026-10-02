@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Current Private Runtime Lookup Verified (2026-10-02)
+
+Previous turn progressed at pushed `0eadf3fd`, confirming remote regression.
+Read the original goal/current ledger and inspect actual timing bindings.
+The historical helper manifest has stale executor/environment-worker hashes,
+while the inspector is unchanged. A hardcoded refreshed lookup hash in the
+inventoried executor creates another stale source hash. Add optional externally
+pinned lookup to the existing explicit private request; preserve shared/default
+pins, frozen plan/baseline/controller, private trees and historical artifacts.
+
+Validate request/readiness agreement, direct file identity, completed lookup
+status and unchanged scientific deployment fields/private manifest suffix.
+Retain all policy/history/environment/runtime/release/no-retry gates. Initial
+157-case panel passes; strengthen scientific bindings, 164-case panel passes;
+final eight-module panel passes 319 in 8.94s, zero failures/errors/skips. Commit
+source b9e07048 before actually rebuilding the private binding with existing API.
+
+Actual private-controller binding succeeds: only Python helper records change
+(76 added, 21 changed, none removed), no non-helper differences. Private tree
+manifest and scientific baseline/plan/controller/coverage/retired roots match.
+Full runtime identities pass before/after one fresh declared-import probe per
+native interpreter: 39,207 OS/helper plus 18,751 private records, 57,958 total.
+OrthoHMM's 913 and OrthoFinder's 1,563 modules match their retained native lookup
+exactly. Reuse those old reports as the comparison baseline, not two fresh
+observations. Scientific/native libraries import; inference/scoring do not run.
+
+Export completed lookup byte-identically and initially record 19 file identities,
+test receipt and full helper deltas. Add eight explicit-lookup executor
+compositions for success/failure, checker path/digest, cleanup and no retry.
+Latest panel passes 327 in 9.24s, no failures/errors/skips. Only test bytes change;
+retain the 319-case source/JUnit and preceding readback, distinguish historical
+test identity via Git and update current 20-file readback. Executed executor
+source remains byte-identical; do not repeat binding or startup checks.
+Retain exploratory metadata TypeError without
+claiming it changed artifacts. See [actual verification and boundaries](THREADRIPPER_RUNTIME_REFRESH_20261002.md).
+Update current guides/claims and commit/push focused changes only. No current
+passing readiness, actual allocation/session/environment handoff, overhead or
+quiet-host proof is supplied. All owned handles terminal. No calibration,
+inference, contention poll, quiet-window question, DGX, unrelated process/service
+change, shared upgrade, dated archive rebuild or manuscript rerender occurs.
+27 production/54 engineering identities stay unstarted. Publication goal active.
+
 ## Remote Glibc And Assembly Regression Confirmed (2026-10-02)
 
 Previous turn progressed at pushed `823339c9`, preparing validated citation

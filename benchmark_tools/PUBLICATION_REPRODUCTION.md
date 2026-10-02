@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [current private-runtime binding and native lookup](results/THREADRIPPER_RUNTIME_REFRESH_20261002.md)
+fix the stale source-pin gap through an explicit reviewed-request lookup option.
+All 327 latest focused cases pass; 57,958 runtime records match before/after startup
+and both native declared-import lookups match historical evidence. Scientific
+baseline/plan/controller/private trees and old receipts stay unchanged. No
+readiness, actual environmental handoff, observer slowdown or timing is admitted.
+
 The [remote glibc/assembly regression confirmation](results/CI_GLIBC_CONFIRMATION_20261002.md)
 records all eight CI jobs successful at exact source 9c81953d. The downloaded
 coverage receipts contain 14,883 passes and 119 skips with no errors/failures;
