@@ -225,3 +225,24 @@ def test_input_mutation_stops_before_next_stage(arguments, monkeypatch):
         module.run(arguments)
     assert len(calls) == 1
     assert not (arguments.output / "complete.json").exists()
+
+
+@pytest.mark.parametrize("escape", [False, True])
+def test_installed_python_alias_must_stay_inside_prefix(arguments, monkeypatch, escape):
+    mock_execution(arguments, monkeypatch)
+    original = module.stage
+    def replace_alias(output, name, *args):
+        result = original(output, name, *args)
+        if name == "runtime_snapshot":
+            python = output / "python-runtime/bin/python"
+            target = output / "outside-python" if escape else python.with_name("python3.10")
+            python.rename(target)
+            python.symlink_to(target if escape else target.name)
+        return result
+    monkeypatch.setattr(module, "stage", replace_alias)
+    if escape:
+        with pytest.raises(ValueError, match="escapes the new prefix"):
+            module.run(arguments)
+        assert not (arguments.output / "complete.json").exists()
+    else:
+        assert module.run(arguments)["status"] == "historical_publication_base_installed"

@@ -104,7 +104,9 @@ def validate_snapshot(value, prefix):
             or not site.is_relative_to(prefix) or site.resolve() != site
             or value["distributions"] != [dict(name="pip", version="26.2.1")]):
         raise ValueError("Installed Python/pip runtime differs from retained base")
-    regular(prefix / "bin/python")
+    executable = prefix / "bin/python"
+    if not executable.is_file() or not executable.resolve(strict=True).is_relative_to(prefix):
+        raise ValueError("Installed interpreter escapes the new prefix")
     check(value["python"])
     return site
 
