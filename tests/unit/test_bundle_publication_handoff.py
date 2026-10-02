@@ -33,7 +33,8 @@ def candidate(tmp_path):
                 f"    content = (Path(directory) / {index_name!r}).read_bytes()\n"
                 "    if hashlib.sha256(content).hexdigest() != digest:\n"
                 "        raise ValueError('Component digest differs')\n"
-                "    return dict(publication_ready=False, page_count=9, fixture_interface=True)\n")
+                "    return dict(publication_ready=False, page_count=9, fixture_interface=True,\n"
+                "                manifest=dict(bytes=len(content), sha256=digest))\n")
         verifier.write_text(code)
         verifier.chmod(0o644)
         child = dict(profile="native-preparation" if role == "source" else None,
@@ -43,7 +44,8 @@ def candidate(tmp_path):
         index.chmod(0o644)
         components[role] = dict(index=role + "/" + index_name,
             sha256=module.identity(index.read_bytes())["sha256"],
-            verified=dict(publication_ready=False, page_count=9, fixture_interface=True))
+            verified=dict(publication_ready=False, page_count=9, fixture_interface=True,
+                          manifest=module.identity(index.read_bytes())))
     files = [dict(path=p.relative_to(directory).as_posix(), mode=0o644, **module.identity(p.read_bytes()))
              for p in sorted(directory.rglob("*")) if p.is_file()]
     index = dict(schema="publication_handoff_candidate_v1", files=files, components=components,
@@ -70,6 +72,8 @@ def test_candidate_components_and_scope(candidate):
     assert result["publication_ready"] is False
     assert result["native_inference_reproduced"] is False
     assert result["numerical_replay_executed"] is False
+    assert module.verify(directory, digest) == result
+    assert not list(directory.rglob("__pycache__"))
 
 
 def test_relocated_cli_without_original_directory_or_git(candidate, tmp_path):
@@ -150,6 +154,35 @@ def test_existing_build_output_refused(candidate):
     directory, _ = candidate
     with pytest.raises(FileExistsError):
         module.build(directory, "HEAD", directory)
+
+
+def test_build_normalizes_generated_indexes(candidate, tmp_path, monkeypatch):
+    from benchmark_tools import bundle_publication_review as review
+    from benchmark_tools import bundle_publication_source as source
+    directory, _ = candidate
+    repository = Path(module.__file__).resolve().parent.parent
+    output = tmp_path / "assembled"
+    monkeypatch.setattr(module.subprocess, "check_output", lambda *args, **kwargs: "a" * 40)
+
+    def committed(repo, revision, git_path):
+        assert Path(repo) == repository and revision == "a" * 40
+        return (repository / git_path).read_bytes(), 0o644, "b" * 40
+
+    def component(role, destination):
+        shutil.copytree(directory / role, destination)
+        index = destination / module.COMPONENTS[role][0]
+        index.chmod(0o664)
+        verifier = module.load(destination / module.COMPONENTS[role][1], "fixture_" + role)
+        return verifier.verify(destination, module.identity(index.read_bytes())["sha256"])
+
+    monkeypatch.setattr(review, "committed", committed)
+    monkeypatch.setattr(source, "build", lambda repo, revision, destination, profile: component("source", destination))
+    monkeypatch.setattr(review, "build", lambda repo, revision, ledger, workflow, destination, **kwargs: component("manuscript", destination))
+    result = module.build(repository, "HEAD", output)
+    assert result["status"] == "publication_handoff_candidate_verified"
+    for role, (index_name, _) in module.COMPONENTS.items():
+        assert (output / role / index_name).stat().st_mode & 0o777 == 0o644
+    assert (output / "HANDOFF_INDEX.json").stat().st_mode & 0o777 == 0o644
 
 
 @pytest.mark.parametrize("value", ["nan", "inf", "-1", "2"])

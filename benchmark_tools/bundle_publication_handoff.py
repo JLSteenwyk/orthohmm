@@ -55,7 +55,8 @@ def relative(name):
 def load(path, name):
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
+    # Do not add bytecode caches to the immutable, already verified component.
+    exec(compile(Path(path).read_bytes(), str(path), "exec"), module.__dict__)
     return module
 
 
@@ -160,6 +161,9 @@ def build(repo, revision, output):
         results = dict(source=source.build(repo, commit, output / "source", "native-preparation"),
             manuscript=review.build(repo, REVIEW_REVISION, LEDGER_REVISION, commit,
                                     output / "manuscript", stages=STAGES))
+        # Component builders inherit the host umask for their generated indexes.
+        for role, (index_name, _) in COMPONENTS.items():
+            (output / role / index_name).chmod(0o644)
         for name, (content, mode) in extras.items():
             target = output / name
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -187,6 +191,7 @@ def build(repo, revision, output):
         with (output / "HANDOFF_INDEX.json").open("x") as stream:
             json.dump(index, stream, indent=2, sort_keys=True, allow_nan=False)
             stream.write("\n")
+        (output / "HANDOFF_INDEX.json").chmod(0o644)
         return verify(output, identity((output / "HANDOFF_INDEX.json").read_bytes())["sha256"])
     except Exception as error:
         with (output / "FAILED_BUILD.json").open("x") as stream:
