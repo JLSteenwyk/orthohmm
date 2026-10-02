@@ -18,6 +18,19 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [explicit runtime assembly and integrated fixture](results/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md)
+connects the independently acquired/rebuilt wheels, prepared tools and frozen
+31-module readers without old runtime asset trees. A relocated 102-file,
+18-link bundle completes all ten executor stages; 5,754 installed wheel payload
+files match and all 883 base-site files remain unchanged. Five native outputs
+reproduce exactly. All 283 focused tests pass. Preserve the outer driver's
+wrong root-group/reconciled-family assertion and the initial test-only failure;
+readback corrects the assertion without rerunning inference. No full-data
+benchmark/default changes or controlled timing are introduced. See
+[assembly/explicit executor commands](PUBLICATION_SOURCE_COMPONENT.md#explicit-runtime-asset-assembly).
+Timing remains deferred; the user's quiet-window availability is unknown
+and not needed for this integration work. No DGX or unrelated job actions.
+
 The [installation-independent private tool preparation](results/PUBLICATION_PHYLOGENY_PREPARATION_20261002.md)
 now builds MAFFT core and stages FastTree from retained public artifacts,
 without original tool installations or scientific fixture inputs. All 34

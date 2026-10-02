@@ -443,6 +443,79 @@ See [executed private preparation and independent validation](results/PUBLICATIO
 Runtime assembly, full scientific admission, OS/toolchain/rights closure and
 controlled timing remain separate requirements.
 
+## Explicit Runtime Asset Assembly
+
+New workflow revisions add `assemble_publication_runtime_assets.py`.
+Use a verified `native-build`/`native-wheels` component, the preceding
+prepared tools and externally retained `complete.json` digest, both frozen
+wheel sets and the exact project wheel. The project wheel can be reconstructed
+from frozen source using the preceding recipe; the old wheel is not required.
+The assembler does not install, compile, acquire or infer anything.
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/assemble_publication_runtime_assets.py build \
+  --component /relocated/source-component --manifest-sha256 RETAINED_INDEX_SHA256 \
+  --prepared-tools /absolute/fresh/prepared-phylogeny \
+  --prepared-tools-sha256 RETAINED_PREPARATION_COMPLETE_SHA256 \
+  --wheels /absolute/acquired/wheels \
+  --project-wheel /absolute/reconstructed/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl \
+  --output /absolute/fresh/runtime-assembly
+```
+
+The fresh canonical output must lie outside input roots. It contains attempt
+receipts plus immutable `bundle/`: 11 inference wheels, five reader wheels,
+both historical locks, three frozen inference harness modules, MAFFT/FastTree
+and notices, and the exact 31-module independent reader export. Duplicate wheel
+files in the two roles are intentional. The reader manifest reproduces its
+historical `c2a77c7a...` identity; neither reader nor inference science is
+upgraded. The prepared MAFFT launcher has a fresh default prefix, so this new
+format is explicit and does not overwrite historical asset manifests.
+
+Record `bundle/ASSEMBLY_INDEX.json` SHA-256 outside the bundle before
+relocation. The verifier rejects changed bytes/modes/inventory or escaping
+links and independently checks frozen wheel/helper/harness/reader identities:
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/assemble_publication_runtime_assets.py \
+  verify /relocated/runtime-bundle --manifest-sha256 RETAINED_ASSEMBLY_SHA256
+```
+
+Select the new executor lane explicitly. Use the separately reconstructed
+private CPython3.10.13 base with only pip26.2.1, its externally retained
+interpreter digest and the same interpreter for installation. Do not use the
+invalidated first project-build base or a shared Python environment.
+
+```bash
+python3 -I -B /relocated/source-component/workflow/benchmark_tools/run_integrated_publication_workflow.py \
+  --assets /relocated/runtime-bundle/assets --readers /relocated/runtime-bundle/readers \
+  --reader-wheels /relocated/runtime-bundle/reader_wheels \
+  --reader-lock /relocated/runtime-bundle/reader_requirements.txt \
+  --assembly-manifest-sha256 RETAINED_ASSEMBLY_SHA256 \
+  --base-python /absolute/private-base/bin/python \
+  --installer-python /absolute/private-base/bin/python \
+  --base-python-sha256 RETAINED_BASE_INTERPRETER_SHA256 \
+  --data /absolute/rebound/data.json --data-sha256 RETAINED_DATA_SHA256 \
+  --output /absolute/fresh/integrated-run --cpu 2 --timeout 600
+```
+
+The example CPU/timeout values are for the installation fixture, not full
+OrthoBench or approved production timing. Data must satisfy the existing
+fixture/full-data contract. Output must be canonical and outside the private
+base/bundle; also keep it outside immutable source/input trees. The new lane
+checks base-site/runtime/distribution snapshots before/after six offline
+installation stages, native inference and separate-reader scoring. It supplies
+the relocated `MAFFT_BINARIES` and disables base bytecode writes.
+Linux x86-64/AVX2 and recorded historical assets remain prerequisites.
+
+See [actual relocated assembly and integration](results/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md):
+102 payload files/18 links, all ten executor stages successful, 5,754 installed
+payloads verified, unchanged 883-file base site and five identical fixture
+outputs. The outer driver's mistaken family-count assertion is retained and
+corrected by readback only. No full benchmark is rerun. Legacy executor
+behavior remains selected when the assembly flag is absent; old admissions
+are not transferred automatically. Installed-payload auditing, OS/security/
+rights closure, public delivery and controlled timing remain separate.
+
 ## Executable Study Boundary
 
 The workflow reproduction guide is included for context, but links to omitted

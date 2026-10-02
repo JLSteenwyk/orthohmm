@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Assembled Runtime and Separate-Reader Fixture Executed (2026-10-02)
+
+Previous goal turn progressed at pushed `5d3d607b`, preparing the
+independently acquired MAFFT/FastTree tools. Read the goal/current receipts;
+reuse completed scientific/resource admissions. User does not know a quiet
+window and asks whether it is needed now: no, it is required only before
+controlled comparative timing. Continue other work without renewed questions,
+contention polls, DGX access or unrelated process/service changes.
+
+Add explicit externally anchored runtime assembly; keep old asset manifests
+and legacy executor behavior unchanged. Bind source/component, source-rebuilt
+exact project wheel, remaining public wheels, externally pinned prepared tools,
+both locks, three frozen harness modules and exact 31-reader closure.
+Normalize export file modes while preserving its historical manifest identity.
+New executor flag selects assembly validation, pins a private pip-only base,
+uses separate offline inference/reader venvs, and checks full base-site snapshot
+before/after without writing base bytecode. Frozen science/defaults unchanged.
+
+Initial six-module panel has 272 pass/one test-only wrong exception expectation;
+preserve JUnit, correct only expectation, get 273 pass. Add private-base/run
+guards and tests, including changed-base rejection and unchanged legacy
+commands; final panel passes 283 in 29.77s, zero failures/errors/skips.
+Commit source `7bedb195` before actual copied execution.
+
+Actually export/verify the 1,846-file native-build source component outside
+checkout. Assemble retained public/reconstructed assets without download,
+recompilation or old tool/reader input trees; relocate/verify the immutable
+102-file/18-link bundle. Reproduce the frozen fixture inputs from the copied
+seeded factory, then complete all ten executor stages once, including native
+inferred phylogeny and independent four-reader/raw-score checks. Both offline
+installations pass pip checks; all 5,754 site wheel payload files match. All
+883 supplied base-site files remain unchanged.
+
+The outer driver then fails its incorrect expectation of three reconciled
+families. Retain failure/source; the completed executor is successful and
+matches the historical fixture's three root groups, one reconciled family
+and two bypassed families. Correct by a separate readback, not another native
+execution. Validate 16 genes, 36 pairs, four duplication/three speciation
+events, all three reference groups and five byte-identical native outputs.
+Source/assembly verify unchanged; independent receipt validation checks 160
+retained identities plus external command anchors and all stage/count bindings.
+All owned execution/test/readback handles have finished terminal.
+
+See [execution/failures/scope](PUBLICATION_RUNTIME_ASSEMBLY_20261002.md) and
+two machine receipts. Update guides and commit/push focused evidence. Local
+assembly/fixture execution now has an explicit route; this is not new full-data
+admission, biological confirmation, controlled timing, public delivery or
+general portability. No remote CI result/count is inferred for this source.
+Compiler/OS/security/rights closure, QfO family uncertainty, independent
+validation limitations, comparable resources, unified final handoff/manuscript/
+release/archive/DOI and overall publication readiness remain open. Goal active.
+
 ## Private Native Tools Prepared without Historical Installations (2026-10-02)
 
 Previous goal turn progressed at pushed `5d049544`, acquiring exact
