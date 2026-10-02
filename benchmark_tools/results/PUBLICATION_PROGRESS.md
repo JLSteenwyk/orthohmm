@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Owned Process Group Timeout Race (2026-10-02)
+
+Previous implementation milestone 11d is progress: retained paths/source guard
+give 85 local and copied-tree passes. Revalidate objective, current HEAD/ledger
+and live automatic CI handles after the timing reply. Timing stays deferred;
+no scheduling question, contention poll, DGX or unrelated process/service action.
+
+Inspect actual source-11d Python 3.11 fast log: 13,746 pass, 30 fail, zero
+errors, 110 skip, 30 warnings, 386.22s. All previous 85 retained-record cases
+pass. Measurement's 21 cases pass here, but WGD still fails on timeout KILL
+with EPERM; source-2d also has a measurement probe/cleanup EPERM failure.
+At 05:17:27 UTC all five source-11d tests are terminal failures; wheel/docs
+succeed. Only this new fast log is inspected; no sibling success inference.
+
+Apple's public kernel source supports a zombie-only group race, not proof of
+the exact CI kernel/process state. Add a shared bounded POSIX cleanup helper:
+on permission error reap the leader and require a fresh absent-group probe
+before accepting cleanup. Otherwise propagate failure. Preserve TERM/grace/
+KILL for live descendants; do not equate leader exit with group exit or scan
+other processes. Both wrappers record the new helper's source identity.
+
+**55 local cases pass in 8.24s**, including 18 new cases and the native child
+that ignores TERM. Both standalone help commands succeed. With only the two
+historical functions evaluated in memory, the same final 14 synthetic error
+cases give six pass/eight fail. Keep earlier 11-case pre-fix and 51-case
+post-fix reports too; panels overlap. Pins, evidence and scope are recorded
+in [timeout cleanup evidence](CI_OWNED_GROUP_TIMEOUT_20261002.md).
+
+Commit/push and observe the new automatic CI without restarting older handles.
+Changed wrappers/helper require prospective reviewed source inventories; no
+historical plan/receipt is repinned or native accuracy/timing rerun. Frozen
+scientific source/settings/counts/metrics and the current review archive are
+unchanged. Snapshot/raw-data/Linux-capability failures, independent executable
+release, uncertainty, source/data rights, controlled resources and deposition
+remain open. The original publication goal stays active, not complete.
+
 ## Retained Test Bindings And Standalone Source Guard (2026-10-02)
 
 Previous goal turn is progress at pushed 2d0be496: 183 ordered cases pass

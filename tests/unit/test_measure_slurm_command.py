@@ -1,5 +1,6 @@
 import json
 import os
+import signal
 import subprocess
 import sys
 import time
@@ -56,6 +57,7 @@ def test_real_command_exit_and_retained_logs(tmp_path, code, expected, synthetic
     assert all(row["started_monotonic_s"] <= row["finished_monotonic_s"] for row in rows)
     assert result["command_wall_s"] == end - start
     assert result["clock_domain"]["boot_id"] == synthetic_linux_boot_id
+    assert result["cleanup_source"] == measurement.source_record(measurement.owned_process_group.__file__)
 
 
 def test_timeout_stops_owned_command(tmp_path):
@@ -131,6 +133,106 @@ def test_timeout_cleanup_reaches_child_that_ignores_term():
     finally:
         stop_owned_group(process, grace=.05)
         process.stdout.close()
+
+
+@pytest.mark.parametrize("stage", [signal.SIGTERM, 0, signal.SIGKILL])
+@pytest.mark.parametrize("outcome", ["gone", "denied", "leader_alive", "group_alive"])
+def test_cleanup_permission_error_requires_reaped_leader_and_absent_group(monkeypatch, stage, outcome):
+    calls = []
+    injected = []
+    clock = [0.]
+    failure = PermissionError("owned group permission denied")
+
+    class Command:
+        pid = 999999
+        polls = 0
+        waits = 0
+
+        def poll(self):
+            self.polls += 1
+            return None if outcome == "leader_alive" else -signal.SIGTERM
+
+        def wait(self):
+            self.waits += 1
+            return -signal.SIGTERM
+
+    def killpg(pid, signum):
+        assert pid == command.pid
+        calls.append(signum)
+        if not injected and signum == stage:
+            injected.append(signum)
+            raise failure
+        if command.polls:
+            if outcome == "gone":
+                raise ProcessLookupError("reaped group disappeared")
+            if outcome == "group_alive":
+                return
+            raise failure
+
+    def monotonic():
+        clock[0] += .01
+        return clock[0]
+
+    command = Command()
+    monkeypatch.setattr(measurement.os, "killpg", killpg)
+    monkeypatch.setattr(measurement.time, "monotonic", monotonic)
+    monkeypatch.setattr(measurement.time, "sleep", lambda _: None)
+    grace = .05 if stage == 0 else 0.
+    if outcome == "gone":
+        assert stop_owned_group(command, grace) == -signal.SIGTERM
+        assert command.polls == command.waits == 1
+        assert calls[-2:] == [stage, 0]
+    else:
+        with pytest.raises(PermissionError, match="owned group permission denied"):
+            stop_owned_group(command, grace)
+        assert command.waits == 0
+        assert calls[-1] == (stage if outcome == "leader_alive" else 0)
+
+
+@pytest.mark.parametrize("stage", [signal.SIGTERM, 0, signal.SIGKILL])
+def test_cleanup_missing_group_reaps_leader(monkeypatch, stage):
+    class Command:
+        pid = 999999
+
+        def poll(self):
+            return None
+
+        def wait(self):
+            return -signal.SIGTERM
+
+    def killpg(pid, signum):
+        assert pid == Command.pid
+        if signum == stage:
+            raise ProcessLookupError("gone")
+
+    clock = iter([0., .01, .02])
+    monkeypatch.setattr(measurement.os, "killpg", killpg)
+    monkeypatch.setattr(measurement.time, "monotonic", lambda: next(clock))
+    assert stop_owned_group(Command(), .05 if stage == 0 else 0.) == -signal.SIGTERM
+
+
+def test_cleanup_keeps_signalling_group_after_leader_exit(monkeypatch):
+    signals = []
+
+    class Command:
+        pid = 999999
+
+        def poll(self):
+            return -signal.SIGTERM
+
+        def wait(self):
+            return -signal.SIGTERM
+
+    def killpg(pid, signum):
+        assert pid == Command.pid
+        signals.append(signum)
+
+    clock = iter([0., .01, .1])
+    monkeypatch.setattr(measurement.os, "killpg", killpg)
+    monkeypatch.setattr(measurement.time, "monotonic", lambda: next(clock))
+    monkeypatch.setattr(measurement.time, "sleep", lambda _: None)
+    assert stop_owned_group(Command(), .05) == -signal.SIGTERM
+    assert signals == [signal.SIGTERM, 0, signal.SIGKILL]
 
 
 @pytest.mark.parametrize("interval,expected", [(30., 2), (1., 5)])

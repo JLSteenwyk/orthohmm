@@ -7,7 +7,6 @@ import math
 import os
 from pathlib import Path
 import platform
-import signal
 import subprocess
 import sys
 import time
@@ -18,6 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import slurm_resource_snapshot
 from monitor_slurm_resources import source_record, summarize
 from command_host_monitor import HostMonitor
+import owned_process_group
+from owned_process_group import stop_owned_group
 
 
 def check_allocation(sample, pid, cpu_count, memory_bytes):
@@ -28,27 +29,6 @@ def check_allocation(sample, pid, cpu_count, memory_bytes):
     limits = [int(item["memory_max"]) for item in sample["ancestor_limits"] if item["memory_max"] != "max"]
     if not limits or min(limits) != memory_bytes:
         raise ValueError("Inherited task/job memory cap differs from requested allocation")
-
-
-def stop_owned_group(process, grace=5.):
-    # Only the new session created by this wrapper is targeted, never the Slurm job.
-    try:
-        os.killpg(process.pid, signal.SIGTERM)
-    except ProcessLookupError:
-        return process.wait()
-    deadline = time.monotonic() + grace
-    while time.monotonic() < deadline:
-        process.poll()
-        try:
-            os.killpg(process.pid, 0)
-        except ProcessLookupError:
-            return process.wait()
-        time.sleep(.02)
-    try:
-        os.killpg(process.pid, signal.SIGKILL)
-    except ProcessLookupError:
-        pass
-    return process.wait()
 
 
 def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interval_s=1., snapshot_fn=None,
@@ -71,6 +51,7 @@ def measure(command, output, job_id, cpu_count, memory_bytes, timeout_s, interva
                                "clock": "time.monotonic", "unit": "seconds"},
               "requested_cpus": cpu_count, "requested_memory_bytes": memory_bytes, "timeout_s": timeout_s,
               "interval_s": interval_s, "source": source_record(__file__),
+              "cleanup_source": source_record(owned_process_group.__file__),
               "host_interval_s": host_interval_s if monitor_host else None,
               "snapshot_source": source_record(slurm_resource_snapshot.__file__), "accuracy_evaluated": False,
               "controlled_workload_verified": False, "limitations": [

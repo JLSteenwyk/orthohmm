@@ -7,7 +7,6 @@ import os
 from pathlib import Path
 import platform
 import shutil
-import signal
 import subprocess
 import sys
 import time
@@ -15,6 +14,7 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from benchmark_tools.snapshot_runtime_trees import verify
 from benchmark_tools.snapshot_orthohmm_input_order import record, snapshot
+from benchmark_tools import owned_process_group
 
 METHODS = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full", "sonicparanoid")
 DIRECTORIES = ("high_sensitivity", "satellite_v2", "orthofinder", "sonicparanoid")
@@ -91,19 +91,10 @@ def execute(argv, cwd, log, timeout):
             proc.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             timed_out = True
-            # Only this command's new process group is terminated.
-            try:
-                os.killpg(proc.pid, signal.SIGTERM)
-            except ProcessLookupError:
-                pass
-            time.sleep(1)
-            try:
-                os.killpg(proc.pid, signal.SIGKILL)
-            except ProcessLookupError:
-                pass
-            proc.wait()
+            owned_process_group.stop_owned_group(proc, grace=1.)
     return {"exit_code": proc.returncode, "timed_out": timed_out,
-            "elapsed_monotonic_s": time.monotonic() - started}
+            "elapsed_monotonic_s": time.monotonic() - started,
+            "cleanup_source": record(owned_process_group.__file__)}
 
 
 def run(spec, index, check_only=False):

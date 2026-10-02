@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "purpose": "owned POSIX subprocess cleanup regression evidence, not scientific timing",
+  "baseline_commit": "11d50ed0ccb54618c4ecb4cd8663b0b26d835b86",
+  "local_final": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_measure_slurm_command.py", "tests/unit/test_run_wgd_application.py", "tests/unit/test_audit_slurm_measurement.py", "--junitxml=benchmarks/work/owned_group_timeout_final_20261002.xml"],
+    "passed": 55,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "stdout_duration_s": 8.24,
+    "module_cases": {"measurement": 37, "wgd_application": 8, "measurement_replay": 10},
+    "new_cases": 18
+  },
+  "historical_final_case_comparison": {
+    "mechanism": "pytest_configure plugin evaluates git-show committed modules in memory and replaces only measurement.stop_owned_group and application.execute; no file replacement",
+    "base_commit": "11d50ed0ccb54618c4ecb4cd8663b0b26d835b86",
+    "historical_modules": ["benchmark_tools/measure_slurm_command.py", "benchmark_tools/run_wgd_application.py"],
+    "test_selectors": ["tests/unit/test_measure_slurm_command.py::test_cleanup_permission_error_requires_reaped_leader_and_absent_group", "tests/unit/test_run_wgd_application.py::test_timeout_permission_error_is_not_silently_ignored"],
+    "passed": 6,
+    "failed": 8,
+    "errors": 0,
+    "skipped": 0,
+    "stdout_duration_s": 0.31,
+    "absent_group_failures": 4,
+    "confirmation_probe_expectation_failures": 4,
+    "native_execution": false
+  },
+  "retained_reports": [
+    {
+      "path": "benchmarks/work/owned_group_timeout_before_20261002.xml",
+      "bytes": 16559,
+      "sha256": "a48c1410a4acbbe21d7f28d1e2e5a9d502d7dfcce3b821e47a0ad5be0e2bd7d6",
+      "tests": 11, "failures": 6, "errors": 0, "skipped": 0,
+      "junit_duration_s": 0.335,
+      "scope": "initial permission fixture before final branch additions"
+    },
+    {
+      "path": "benchmarks/work/owned_group_timeout_after_20261002.xml",
+      "bytes": 7270,
+      "sha256": "67fe1620d3dde07ee213d0204d028bd259aed9f97b4dcd109c9d8346623650ff",
+      "tests": 51, "failures": 0, "errors": 0, "skipped": 0,
+      "junit_duration_s": 8.104,
+      "scope": "first complete local panel before final branch additions"
+    },
+    {
+      "path": "benchmarks/work/owned_group_timeout_final_20261002.xml",
+      "bytes": 7935,
+      "sha256": "f1f9670af171409b8dfda5dc837c8e09feb4327c7a41bf4dc013c79fde22a7be",
+      "tests": 55, "failures": 0, "errors": 0, "skipped": 0,
+      "junit_duration_s": 8.212,
+      "scope": "final complete local panel"
+    },
+    {
+      "path": "benchmarks/work/owned_group_timeout_historical_final_cases_20261002.xml",
+      "bytes": 22735,
+      "sha256": "b62fd45d9fa684925a7e01ad6f3bc107f8d0c1fce68297fbd78b20442fb7e467",
+      "tests": 14, "failures": 8, "errors": 0, "skipped": 0,
+      "junit_duration_s": 0.282,
+      "scope": "historical functions with final synthetic permission cases"
+    }
+  ],
+  "source_records": [
+    {"path": "benchmark_tools/owned_process_group.py", "bytes": 1078, "sha256": "5c83636da0d88b5c83325f747943b2021d0df078aa7ef90899956fa8dc7f1ae3"},
+    {"path": "benchmark_tools/measure_slurm_command.py", "bytes": 9234, "sha256": "d7713fbdb57a7d3420e10e0c25eca1d87e20d807aae8d6027f1b07adb716b8d2"},
+    {"path": "benchmark_tools/run_wgd_application.py", "bytes": 8067, "sha256": "904518639ddffeb109054afb540a2ddeabae9be65eef6d9058ed2e1f3f6c1989"},
+    {"path": "tests/unit/test_measure_slurm_command.py", "bytes": 11394, "sha256": "1277db813f0f65a6efa14ac4e8203612365c2f65b5f79ee9ccd4666ebb3cc563"},
+    {"path": "tests/unit/test_run_wgd_application.py", "bytes": 3747, "sha256": "3577a4dd1aade8f4b9da76401f219afbb0748d271444484e8c2e8b2f250a072f"}
+  ],
+  "remote_ci": {
+    "source_commit": "11d50ed0ccb54618c4ecb4cd8663b0b26d835b86",
+    "run_id": 36967204264,
+    "inspected_job_id": 110713427210,
+    "inspected_scope": "macOS Python 3.11 test-fast only",
+    "downloaded_at_utc": "2026-10-02T05:15:43.573878+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_11d50ed0_20261002/110713427210.log", "bytes": 2178813, "sha256": "877d3632089b1dd7fba5831e872f1066ff1614300ecb85aa4e124faf361994c0"},
+    "passed": 13746, "failed": 30, "errors": 0, "skipped": 110, "warnings": 30,
+    "stdout_duration_s": 386.22,
+    "previous_retained_record_scope_passed": 85,
+    "measurement_scope": {"passed": 21, "failed": 0},
+    "wgd_scope": {"passed": 5, "failed": 1, "failure": "PermissionError at group SIGKILL in test_timeout_is_failure"},
+    "jobs_observed_at_utc": "2026-10-02T05:17:27.109450+00:00",
+    "five_test_jobs": "terminal failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "manual_restart_or_resubmission": false,
+    "new_cleanup_ci_verified": false
+  },
+  "prior_failure_log": {
+    "source_commit": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+    "job_id": 110708790224,
+    "path": "benchmarks/work/ci_remote_2d0be496_20261002/110708790224.log",
+    "bytes": 2203993,
+    "sha256": "848dc678cc8231637c64a3d387d40c396be5d3d6f0269d535acd5aaa5c61420f",
+    "scope": "measurement signal-zero permission failure after TERM and WGD KILL permission failure"
+  },
+  "cli_help_exit_zero": ["python -B benchmark_tools/measure_slurm_command.py --help", "python -B benchmark_tools/run_wgd_application.py --help"],
+  "prospective_execution_requirement": "Include the changed wrappers and new helper in a reviewed source/runtime inventory before execution; never repin historical receipts.",
+  "limitations": [
+    "Overlapping local panels are not additive or macOS/full-suite verification.",
+    "Kernel source supports the race explanation but exact CI process state was not observed.",
+    "Persistent permission errors fail closed even for an inconclusive zombie-only group.",
+    "No claim for descendants that escape the process group or complete resource accounting.",
+    "No scientific inference/scoring/bootstrap/rendering, host contention poll, DGX access or unrelated workload/service action.",
+    "Frozen scientific settings/results, historical plans/receipts and current review archive remain unchanged.",
+    "Controlled timing is deferred; source/rights, uncertainty, executable release and public deposition remain open."
+  ],
+  "publication_ready": false
+}

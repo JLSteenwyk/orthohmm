@@ -43,6 +43,12 @@ strengthens the standalone OrthoBench source-identity guard. All 85 local cases
 also pass in a copied tree with original-checkout reads blocked. This does not
 provide a complete portable native workflow or close remaining release gates.
 
+The [owned-group timeout follow-up](results/CI_OWNED_GROUP_TIMEOUT_20261002.md)
+shares bounded subprocess cleanup between two wrappers and requires proof that
+a group is absent before accepting a permission-error race. All 55 local cases
+pass; new macOS confirmation is open. Prospective inventories must pin the new
+helper, while historical receipts and scientific results remain unchanged.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their
