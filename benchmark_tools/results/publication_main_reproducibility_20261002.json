@@ -1,0 +1,240 @@
+{
+  "controlled_timing_executed": false,
+  "data_rights_cleared": false,
+  "date": "2026-10-02",
+  "dgx_accessed": false,
+  "generated_utc": "2026-10-02T11:32:19.550757+00:00",
+  "historical_reviews_or_archives_changed": false,
+  "inference_scoring_or_bootstrap_rerun": false,
+  "local_host_contention_probe_executed": false,
+  "local_tests": {
+    "all_panels_overlap": true,
+    "failed_attempt": "Raw-HTML phrase assertion failed on Pandoc line wrapping. Corrected actual-text parsing/whitespace only; artifact and source identity gates unchanged.",
+    "final_passes": 55,
+    "final_pytest_seconds": 3.44,
+    "initial_passes": 54,
+    "new_artifact_cases": 1,
+    "new_prose_cases": 3,
+    "receipts": {
+      "benchmarks/work/main_reproducibility_prose_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 54
+        },
+        "junit_seconds": 3.416,
+        "record": {
+          "bytes": 7460,
+          "path": "benchmarks/work/main_reproducibility_prose_20261002.xml",
+          "sha256": "b32dca1daf6c9c44fee64b5f728da879ae3e6c0ac613fb7bb1bdb71a469b6146"
+        }
+      },
+      "benchmarks/work/main_reproducibility_review_final_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "tests": 55
+        },
+        "junit_seconds": 3.5,
+        "record": {
+          "bytes": 10452,
+          "path": "benchmarks/work/main_reproducibility_review_final_20261002.xml",
+          "sha256": "8866cabe6440fca96a573238075862ecb0a7e73a2f071afdae9aa1a3bcc8929c"
+        }
+      },
+      "benchmarks/work/main_reproducibility_review_pass_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 55
+        },
+        "junit_seconds": 3.423,
+        "record": {
+          "bytes": 7610,
+          "path": "benchmarks/work/main_reproducibility_review_pass_20261002.xml",
+          "sha256": "f3b47e89ca534edfa2e621b317716b9000b740a3995ffe638703ca74c4456d2d"
+        }
+      }
+    }
+  },
+  "pins": [
+    {
+      "bytes": 24125,
+      "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "sha256": "f9e8bb2620cc1679d1ac65ea1841c3dbb80db26844ab722c89a5f5874da392bc"
+    },
+    {
+      "bytes": 182951,
+      "path": "benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+      "sha256": "0d38fb1a17fc22efd13dd491de989e417a9b5bfffda0801ce1b30c3dd88cf552"
+    },
+    {
+      "bytes": 6811,
+      "path": "tests/unit/test_current_qfo_main_text.py",
+      "sha256": "ee8de1453ff5933b309d1d80af9ca5d4c2609c5937f1a08f7959cd619b1a7814"
+    },
+    {
+      "bytes": 7883,
+      "path": "tests/unit/test_manuscript_review_artifacts.py",
+      "sha256": "9bfdbb343c35234c590dd22d75bfb0453c9a5dc402d93620ec08edffc85094eb"
+    },
+    {
+      "bytes": 4256,
+      "path": "benchmark_tools/results/swiss_descriptive_component_20261002.json",
+      "sha256": "982057a2c559c823b28bdc85f93c026d20022a000348ae7da8ba947ce7005c52"
+    },
+    {
+      "bytes": 10706,
+      "path": "benchmark_tools/results/swiss_raw_archive_restoration_20261002.json",
+      "sha256": "e6d64385e85478d8c2fa947b87ec7732db41a31ddb77c57cce3f922974808acd"
+    },
+    {
+      "bytes": 4876,
+      "path": "benchmark_tools/results/publication_main_visual_review_20261002.json",
+      "sha256": "e46b54875ac87ca01b61d046cf515eeb184b40379f0c4a6b6817127b76373720"
+    },
+    {
+      "bytes": 282686,
+      "path": "benchmarks/work/ci_remote_d750c45e_20261002/110815549031.log",
+      "sha256": "02f2dfc2dd9c45fb8a0e12128f10e7f213c4b3256ff3deffab7088569345f00d"
+    },
+    {
+      "bytes": 19651,
+      "path": "benchmark_tools/results/publication_main_render_20261002.json",
+      "sha256": "292ba54206037e9bb905f2ec58630d23ca0d785a2336f7ae7abcd691f0b224ee"
+    },
+    {
+      "bytes": 36818,
+      "path": "benchmark_tools/results/publication_main_review_20261002.html",
+      "sha256": "5dded6ebfa4f6d32f94e65d06a85b03f773f52cdb1db1b77be0d5e48de40439a"
+    },
+    {
+      "bytes": 13063,
+      "path": "benchmark_tools/results/publication_main_print_20261002/print.json",
+      "sha256": "fa2666275fc998399c6072679477cd2f5e98b3f9e66febdc558cc551ef678447"
+    },
+    {
+      "bytes": 136943,
+      "path": "benchmark_tools/results/publication_main_print_20261002/document.pdf",
+      "sha256": "def7f73d172bc95e8a085e9e0c8a0cac307d1590dc0deca55ecc13012d2b7bf6"
+    },
+    {
+      "bytes": 14558,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/report.json",
+      "sha256": "b48d2256bf9a80247939109ce8f4613aad51351387dc6239bbccddc07209cf8e"
+    },
+    {
+      "bytes": 192412,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_001.png",
+      "sha256": "bc38731d8c24cbb3d7b8bb021448ed93f949880608b6afc83cc727d9a7068360"
+    },
+    {
+      "bytes": 260106,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_002.png",
+      "sha256": "8551224c9a6d453fca1b694afe207eeff7b8661c48076c1ece0c72d7cfe1435b"
+    },
+    {
+      "bytes": 251827,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_003.png",
+      "sha256": "46d6dd476974a55f04b861d3e82c6f699d7e8c2c820b88353f240ef589aec932"
+    },
+    {
+      "bytes": 255723,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_004.png",
+      "sha256": "29eb6c4ecd09f8d688051e2a8dc62e625621523886ce6b70faa29ff3909afc34"
+    },
+    {
+      "bytes": 267312,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_005.png",
+      "sha256": "cea60139bb09505ce60c45aad27d535601e940e172a18a2e7f96b286c690fb8e"
+    },
+    {
+      "bytes": 221866,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_006.png",
+      "sha256": "f12bfc9e2c0308d9deea071d880b81c2082e5ed5c5aa258dce27f589a8801ac9"
+    },
+    {
+      "bytes": 308476,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002/page_007.png",
+      "sha256": "e301a9b53b3147facfc1d21ce50ba28590ab8772689853b5d18b5a541fab0a74"
+    }
+  ],
+  "preceding_pushed_commit": "d750c45eae62942c6135ad747fde1cee40062c63",
+  "preceding_remote": {
+    "cpu_wheel": "success",
+    "docs": "success",
+    "four_fast_jobs": "failure",
+    "full_ci_success": false,
+    "full_job": "in_progress",
+    "inspected_313": {
+      "archive_helper_cases_passed": 33,
+      "contains_new_manuscript_cases": false,
+      "default_raw_export_failures": 4,
+      "download_utc": "2026-10-02T11:28:05.411270+00:00",
+      "failures": 4,
+      "job": 110815549031,
+      "log": {
+        "bytes": 282686,
+        "path": "benchmarks/work/ci_remote_d750c45e_20261002/110815549031.log",
+        "sha256": "02f2dfc2dd9c45fb8a0e12128f10e7f213c4b3256ff3deffab7088569345f00d"
+      },
+      "passes": 14070,
+      "seconds": 444.68,
+      "skipped": 119,
+      "source_sha": "d750c45eae62942c6135ad747fde1cee40062c63",
+      "warnings": 30
+    },
+    "linux_native_diagnostics": "success",
+    "observed_utc": "2026-10-02T11:27:26.174247+00:00",
+    "restart_performed": false,
+    "run": 37000088231,
+    "sibling_counts_inferred": false
+  },
+  "private_inputs_uploaded": false,
+  "public_release_or_archival_deposition_executed": false,
+  "publication_ready": false,
+  "raw_restoration_or_calibration_rerun": false,
+  "remaining": [
+    "Appropriate other-QfO uncertainty",
+    "Controlled matched-resource Threadripper evidence; timing deferred",
+    "Transitive/dependency and data rights review",
+    "Complete executable versioned release and deposition",
+    "Final manuscript/figure/archive reconciliation after remaining analyses"
+  ],
+  "render_time_source_commit": "cb5bda8083c24d4915bab5dd78de6d9b982195be",
+  "review": {
+    "all_pages_inspected": true,
+    "bounds_violations": 0,
+    "citation_ids": 16,
+    "direct_input_pins_rechecked_before_visual_receipt": true,
+    "later_ledger_entries_substituted": false,
+    "linked_figures_newly_revalidated": false,
+    "local_link_occurrences": 37,
+    "manual_receipt": {
+      "bytes": 4876,
+      "path": "benchmark_tools/results/publication_main_visual_review_20261002.json",
+      "sha256": "e46b54875ac87ca01b61d046cf515eeb184b40379f0c4a6b6817127b76373720"
+    },
+    "new_component_paragraph_page": 6,
+    "new_review_archive_built": false,
+    "pages": 7,
+    "pdf": {
+      "bytes": 136943,
+      "path": "benchmark_tools/results/publication_main_print_20261002/document.pdf",
+      "sha256": "def7f73d172bc95e8a085e9e0c8a0cac307d1590dc0deca55ecc13012d2b7bf6"
+    },
+    "repository_inputs_verified_against_render_time_commit": true,
+    "unique_local_targets": 36,
+    "untracked_targets": [],
+    "validation_attempts": [
+      "First post-review validation aborted before receipt creation when the record-label formatter required /usr/bin/pandoc to be repository-relative. Corrected only display-label handling for external tools; every size/hash and committed-source gate remains intact. No HTML/PDF rerender or overwrite."
+    ]
+  },
+  "scientific_code_settings_or_scores_changed": false,
+  "source_changes": "Main and extended reproduction/availability prose only, plus three receipt consistency tests and one closed-artifact test; no scientific changes",
+  "status": "main_manuscript_reproducibility_reconciled_and_reviewed",
+  "unrelated_jobs_or_services_modified": false
+}

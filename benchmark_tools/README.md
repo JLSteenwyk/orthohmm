@@ -7,7 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
-The [seven-page manuscript review archive](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
+The [latest seven-page main review](results/PUBLICATION_MAIN_REVIEW_20261002.md)
+includes completed descriptive-table and private raw-input restoration evidence,
+with explicit native/rights/release boundaries. All pages were inspected and
+55 focused checks pass. It is not submission-ready or a new review archive.
+
+The [earlier seven-page manuscript review archive](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
 now verifies after fresh extraction outside the checkout: 55 payload files and
 34 direct local targets. It preserves the committed review and its render-time
 ledger, not current CI status. Transitive evidence, complete native workflows,

@@ -29,9 +29,14 @@ native/raw-data restoration, a new statistical engine or rights clearance.
 The [complete local regression](results/PUBLICATION_FULL_REGRESSION_20261001.md)
 passed 13,660 cases without skips at its recorded revision, including parser
 and native fixtures; it is not controlled timing or remote CI evidence.
-The [reconciled main-text review](results/PUBLICATION_MAIN_REVIEW_20261001.md)
-renders these current findings in seven visually inspected PDF pages. It
+The [1 October main-text review](results/PUBLICATION_MAIN_REVIEW_20261001.md)
+renders its recorded findings in seven visually inspected PDF pages. It
 has a dated input snapshot and is not a new complete study archive.
+The [2 October main-text review](results/PUBLICATION_MAIN_REVIEW_20261002.md)
+adds the completed descriptive-table and private raw-input restoration evidence,
+again with seven inspected pages and explicit native/rights/release limits.
+All 55 focused checks pass; earlier PDFs/archives remain exact historical
+snapshots and are not automatically repackaged with this newer text.
 The later [CI collection preparation](results/CI_COLLECTION_READINESS_20261001.md)
 declares missing test libraries, preserves unsupported-affinity failure, and
 includes top-level tests in Make targets. All 13,681 cases collect in a fresh

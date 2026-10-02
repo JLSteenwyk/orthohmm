@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Reviewed Manuscript Reproducibility Integration (2026-10-02)
+
+Complete the source checkpoint below without rerunning science or raw archives.
+Commit main/extended text, three prose checks and render-time ledger as
+cb5bda8083c24d4915bab5dd78de6d9b982195be. Render new citation-resolved HTML,
+print a fresh seven-page PDF and check all page bounds: zero violations,
+16 resolved citation IDs, 37 local occurrences/36 tracked existing targets.
+Inspect all seven pages; new reproduction text is on page 6. Body/headings/
+references are readable, with no observed clipping or overlap. Figures remain
+linked, not embedded or newly visually revalidated. Recheck every direct input
+and its committed cb5bda80 bytes before recording manual review. Preserve that
+exact render-time ledger snapshot rather than substituting later entries.
+
+Add one closed-artifact regression to the earlier 54-case panel. First final
+attempt: 54 pass/one fail in 3.52s because Pandoc wraps visible HTML text.
+Retain the failure; parse actual text with HTMLParser and normalize whitespace
+without relaxing any identity gate or rerendering. Final overlapping **55 cases
+pass in 3.44s**, zero errors/failures/skips. First receipt-validation attempt
+also aborts on external Pandoc display-path formatting; correct only that label
+handling, preserve the failure description and recheck all pins/source gates.
+[New review and receipts](PUBLICATION_MAIN_REVIEW_20261002.md) are not a complete
+release or proof of science/citation/figure correctness. Earlier HTML/PDF and
+the 55-file review archive remain unchanged; no new review archive is built.
+
+Observe preceding d750c45e run 37000088231 at 11:27:26 UTC: docs/Linux/wheel
+succeed, four macOS fast jobs fail and full remains live. Actual 3.13 job
+110815549031 log, downloaded once at 11:28:05 UTC, verifies checkout source:
+14,070 passes/four failures/119 skips/30 warnings/444.68s. All 33 new archive
+cases pass. Four default raw exports still lack original inputs/options.
+No restart, sibling counts, new-manuscript remote proof or full CI success
+inferred. Commit/push the source and reviewed-artifact milestones; observe
+new automatic CI separately.
+
+No scientific code/settings/counts/scores, raw manifest/archive or completed
+inference/scoring/bootstrap/calibration changes. Timing remains deferred
+without questions/polls, DGX or unrelated job/service actions. Other-QfO
+uncertainty, controlled resources, data/transitive rights, full executable
+versioned release, deposition and final manuscript/figure/archive reconciliation
+stay open. The original publication objective remains active and incomplete.
+
 ## Main Manuscript Reproducibility Source Update (2026-10-02)
 
 Previous turn progressed at pushed d750c45e with private archive-to-regression

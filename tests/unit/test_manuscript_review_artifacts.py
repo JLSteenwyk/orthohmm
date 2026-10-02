@@ -11,6 +11,36 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
+def test_october_2_main_review_retains_closed_artifact_identities():
+    review = json.loads((ROOT / "publication_main_visual_review_20261002.json").read_text())
+    repo = ROOT.parents[1]
+    items = [review[k] for k in ("render", "html", "print", "pdf", "bounds_review")]
+    items.extend(review["reviewed_pages"])
+    assert len(items) == 12 and len(review["reviewed_pages"]) == 7
+    for item in items:
+        actual = record(repo / item["path"])
+        assert (actual["bytes"], actual["sha256"]) == (item["bytes"], item["sha256"])
+    assert review["render_time_source_commit"] == "cb5bda8083c24d4915bab5dd78de6d9b982195be"
+    assert review["page_count"] == 7 and review["bounds_violations"] == 0
+    assert review["local_link_occurrences"] == 37 and review["unique_local_targets"] == 36
+    assert len(review["citation_ids"]) == 16 and review["untracked_targets"] == []
+    assert review["all_seven_pages_inspected"] is True
+    assert review["linked_figures_newly_visually_revalidated"] is False
+    assert review["new_review_archive_built"] is review["publication_ready"] is False
+    html = (ROOT / "publication_main_review_20261002.html").read_text()
+    parts = []
+    class Text(HTMLParser):
+        def handle_data(self, data):
+            parts.append(data)
+    Text().feed(html)
+    visible = " ".join(" ".join(parts).split())
+    assert "updated 2 October 2026" in visible and "Not submission-ready" in visible
+    for link in ("SWISS_DESCRIPTIVE_COMPONENT_20261002.md", "SWISS_RAW_ARCHIVE_RESTORATION_20261002.md"):
+        assert link in html and (ROOT / link).is_file()
+    # Living sources can evolve; this assertion binds only the dated closed render.
+    assert "private archives remain unuploaded" in visible
+
+
 def test_v10_opening_retains_linked_bibliography_history():
     html = ROOT / "PUBLICATION_MANUSCRIPT_REVIEW_20260925_v10.html"
     text = html.read_text()
