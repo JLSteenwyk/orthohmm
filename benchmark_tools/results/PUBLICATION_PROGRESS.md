@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Actual Linux Native CI Confirmation (2026-10-02)
+
+After pushing f38f9db3, actual automatic run 36980829967 has Linux diagnostic
+job 110754732721 live at 07:52:12 UTC. Wait on that specific handle without
+restarting. At 07:53:04 UTC it is terminal success. Inspect its actual log:
+**76 passes in 17.16s**, zero errors/failures/skips; all eight constructor and
+twelve repeat-worker cases present and the no-skips JUnit gate succeeds.
+JUnit artifact 11214589431 uploads successfully. [Source/workflow/log pins
+and exact scope](linux_native_ci_confirmation_20261002.json) retain confirmation
+separately from the failed first Linux job and earlier local receipts.
+
+This is actual Ubuntu/Python 3.12 diagnostic execution, not the complete
+frozen runtime, every Python version, full pipeline or sibling/full-suite
+success. No historical receipt is repinned. The preceding macOS fixture
+confirmation and negative scientific findings remain their own evidence.
+Commit/push this documentation checkpoint; continue the original goal.
+Other CI/raw portability failures, uncertainty, rights, controlled resources,
+full executable release and public deposition remain open. Timing stays
+deferred and all scientific settings/scores remain unchanged.
+
 ## Follow-Up: Native Constructor Test Launcher Staging (2026-10-02)
 
 After pushing b7ed, branch-list API observations initially omit the new run.
