@@ -18,6 +18,16 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [public inference/reader wheel acquisition](results/PUBLICATION_WHEEL_ACQUISITION_20261002.md)
+prepares both exact historical wheel sets using ten fresh public downloads,
+plus separately supplied project and pip artifacts. The copied `native-wheels`
+source profile includes the exact inventory and both locks; all twelve ZIP
+metadata identities and 33 scientific project-source members check. No
+installation/native execution is repeated. The same report retains a diagnosed
+test-only CI checkout-path failure and its 371-case local fix validation;
+corrected remote CI is not yet asserted successful. Full runtime, tool/source
+delivery, rights, timing and publication requirements remain open.
+
 The [public historical-base acquisition controller](results/PUBLICATION_BASE_ACQUISITION_20261002.md)
 downloads all 19 frozen archives and the exact pip bootstrap wheel from public
 HTTPS providers. Its copied-source execution actually obtains 52,911,339

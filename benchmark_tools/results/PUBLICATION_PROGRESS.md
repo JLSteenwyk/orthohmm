@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Public Scientific Wheel Sets Acquired and CI Failure Diagnosed (2026-10-02)
+
+Previous turn progressed at pushed `709b1de6`, acquiring the exact historical
+base archives/pip wheel and passing installer preflight. Read goal, actual
+worktree, latest receipts and remaining native dependencies. Timing stays
+deferred without renewed questions, contention polls, DGX work or unrelated
+job/service actions. Preserve dirty sample outputs and reuse completed full
+scientific/native/collector admissions. Do not rerun benchmarks for packaging.
+
+Identify the next actual acquisition gap: inference/reader wheel sets still
+depend on local wheelhouses. Add controller using the exact admitted inventory
+and two unchanged locks, acquiring ten public third-party wheels, explicitly
+requiring the unpublished project wheel and already acquired pip artifact.
+Use the existing bounded safe provider downloader, exact platform filenames,
+size/SHA checks, fresh canonical destination, historical acknowledgement,
+prepared role copies and failure retention/no retry. No dependency solving,
+new version selection, downloaded-code execution or installation. Add explicit
+seven-document `native-wheels` source profile and executable guide while
+preserving existing profiles. Initial 215 tests and final 260-case acquisition/
+source/installer panel pass. Commit `e15170f3` before actual execution.
+
+Export/copy all 1,833 payloads outside checkout, independently anchor its index
+and verify without Git. Actually acquire ten wheels (93,684,499 bytes) in 20
+provider requests. Add two authenticated supplied artifacts: total 12 union
+wheels/95,645,575 bytes, copied into 11 inference and five reader wheels with
+exact historical locks. Independently read all 12 ZIP metadata identities and
+match all 33 supplied project scientific source members against exported Git
+blobs. Final whole-source verification passes; current verifier also accepts
+the preceding 1,828-file native-preparation component and original digest.
+All six actual stages return zero, source unchanged, no new native execution.
+
+The exact preceding CI run 37034614556 now finishes failed. Inspect all five
+failed test-job logs once: each has one identical checkout-path assertion
+IndexError, 14,460 passes/119 skips/four deselections; integration not reached.
+Docs/wheel/Linux-diagnostic status successful. The test incorrectly splits a
+retained absolute controller path by current checkout root. Correct only this
+test with structured retained-root paths and an actual relocated-copy case.
+Commit `12f8fdc1`; expanded 371-case panel passes in 22.84s, zero failures/
+errors/skips. Retain all five failed logs and a bound diagnosis/fix receipt;
+do not claim the corrected remote matrix has already passed.
+
+See [acquisition, exact artifacts, CI recovery and remaining scope](PUBLICATION_WHEEL_ACQUISITION_20261002.md)
+and both machine receipts. This closes public third-party wheel acquisition,
+not unpublished project-wheel/public runtime delivery, bootstrap/native/OS
+closure, rights, other-QfO uncertainty, controlled resource evidence, final
+manuscript/public release/archive/DOI or full publication readiness. Commit/push
+the focused validated milestones; leave the original goal active.
+
 ## Public Historical Base Acquisition Executed (2026-10-02)
 
 Previous goal turn progressed at pushed `bac2ae47`, assembling, freshly

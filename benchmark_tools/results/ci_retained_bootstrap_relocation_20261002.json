@@ -1,0 +1,125 @@
+{
+  "cause": "Assertion split retained absolute controller path by the current checkout, which is absent on macOS CI.",
+  "failed_jobs": [
+    {
+      "duration_s": 495.33,
+      "failure_node": "tests/unit/test_run_threadripper_scaling.py::test_private_pin_constants_match_retained_artifacts_and_bootstrap",
+      "integration_not_reached": true,
+      "log": {
+        "bytes": 278432,
+        "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+        "job_id": 110929606897,
+        "path": "benchmarks/work/ci_709b1de6_failure_20261002/public-fast-3.10.log",
+        "sha256": "776539e9592e29225adec8855d90bf7e74fe9426518a14df5bd0a7a199792b4e"
+      },
+      "unit": {
+        "deselected": 4,
+        "failed": 1,
+        "passed": 14460,
+        "skipped": 119
+      }
+    },
+    {
+      "duration_s": 618.85,
+      "failure_node": "tests/unit/test_run_threadripper_scaling.py::test_private_pin_constants_match_retained_artifacts_and_bootstrap",
+      "integration_not_reached": true,
+      "log": {
+        "bytes": 279626,
+        "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+        "job_id": 110929606614,
+        "name": "public-coverage",
+        "path": "benchmarks/work/ci_709b1de6_failure_20261002/public-coverage.log",
+        "sha256": "04aee747408b8867f6d9936ef3d82ce11d7e4db9abdce132b3833298ae5fb9b8"
+      },
+      "unit": {
+        "deselected": 4,
+        "failed": 1,
+        "passed": 14460,
+        "skipped": 119
+      }
+    },
+    {
+      "duration_s": 482.62,
+      "failure_node": "tests/unit/test_run_threadripper_scaling.py::test_private_pin_constants_match_retained_artifacts_and_bootstrap",
+      "integration_not_reached": true,
+      "log": {
+        "bytes": 274633,
+        "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+        "job_id": 110929606721,
+        "name": "public-fast-3.13",
+        "path": "benchmarks/work/ci_709b1de6_failure_20261002/public-fast-3.13.log",
+        "sha256": "380c733201478192a3b2001453214564f52fba632313f84950c196541a86fc04"
+      },
+      "unit": {
+        "deselected": 4,
+        "failed": 1,
+        "passed": 14460,
+        "skipped": 119
+      }
+    },
+    {
+      "duration_s": 518.66,
+      "failure_node": "tests/unit/test_run_threadripper_scaling.py::test_private_pin_constants_match_retained_artifacts_and_bootstrap",
+      "integration_not_reached": true,
+      "log": {
+        "bytes": 275123,
+        "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+        "job_id": 110929606757,
+        "name": "public-fast-3.12",
+        "path": "benchmarks/work/ci_709b1de6_failure_20261002/public-fast-3.12.log",
+        "sha256": "6e34b2979f12cba0092e1594be678461673af3e151d65c6b47f2a01893522acc"
+      },
+      "unit": {
+        "deselected": 4,
+        "failed": 1,
+        "passed": 14460,
+        "skipped": 119
+      }
+    },
+    {
+      "duration_s": 339.88,
+      "failure_node": "tests/unit/test_run_threadripper_scaling.py::test_private_pin_constants_match_retained_artifacts_and_bootstrap",
+      "integration_not_reached": true,
+      "log": {
+        "bytes": 274448,
+        "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+        "job_id": 110929607075,
+        "name": "public-fast-3.11",
+        "path": "benchmarks/work/ci_709b1de6_failure_20261002/public-fast-3.11.log",
+        "sha256": "e1afff048c9c316036a4915c274d0f8047d68407ad74cdb07079231bade4b82e"
+      },
+      "unit": {
+        "deselected": 4,
+        "failed": 1,
+        "passed": 14460,
+        "skipped": 119
+      }
+    }
+  ],
+  "fix": "Derive interpreter suffix with pathlib from the retained source-root evidence; assert exact ROOT/PYTHON shell assignments and add a relocated-checkout case.",
+  "fix_revision": "12f8fdc1af408682ce6db3dfc634928867d69fc1",
+  "local_tests": {
+    "bytes": 53689,
+    "counts": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 371
+    },
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_wheel_and_ci_validated_tests_20261002.xml",
+    "sha256": "cab0871a3b25a7a71861ffab119735fe60232a28611b173691a3768b455d0cd0"
+  },
+  "observed_at": "2026-10-02T16:54:47.104810+00:00",
+  "publication_ready": false,
+  "remote_fixed_source_ci_complete": false,
+  "run": {
+    "conclusion": "failure",
+    "head_sha": "709b1de698f99dc1afef35fa5fac4604060ea188",
+    "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/37034614556",
+    "id": 37034614556,
+    "status": "completed"
+  },
+  "scientific_settings_changed": false,
+  "status": "historical_ci_relocation_failure_diagnosed_and_local_fix_tested",
+  "timing_script_or_pins_changed": false
+}
