@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Public Phylogeny Artifacts Acquired without Installed Tools (2026-10-02)
+
+Previous goal turn progressed at pushed `e6dd6244`, completing exact
+project-wheel recovery and its evidence. Read the goal, current source and
+retained admissions. Timing remains deferred: no quiet-window questions,
+host-contention polling, DGX access, service changes or unrelated job actions.
+All owned acquisition/test process handles below finish terminal successfully.
+
+The remaining native-tool boundary includes an acquisition prerequisite:
+the old FastTree acquisition requires its installed binary and the MAFFT
+build requires historical installation/source comparisons. Do not rerun those
+completed scientific fixtures or silently treat copied tools as public delivery.
+Add a stdlib controller for the fixed seven public source/binary/notice
+artifacts, retaining exact versions and existing byte pins. Reuse the bounded
+downloader with an explicit per-call tool-provider policy; base/wheel defaults
+and redirect handlers remain unchanged. No solver, compilation, permission
+to execute, native inference or tool installation is introduced.
+
+All 259 four-module acquisition/base/wheel/source tests pass in 26.12s, with
+zero failures/errors/skips. Tests include fresh/canonical/acknowledged output,
+unsafe URLs/redirects, size/hash/header bounds, changed inputs/payloads,
+executable permissions, later-download failure retention and no retry.
+Commit source `c94f3a96` before actual copied execution.
+
+Export/copy the 1,842-file native-build component outside checkout and anchor
+its source index externally. Verify before/after with isolated Python and an
+empty PATH. Copied acquisition actually downloads all seven artifacts once,
+2,753,786 bytes, without original tool/install/source paths. All four outer
+stages succeed; source unchanged. Independently compare downloaded bytes to
+previous MAFFT/FastTree identity receipts, used only after acquisition. Every
+artifact matches; all remain mode 0644, including FastTree. No extraction or
+downloaded-code execution occurs.
+
+See [execution, pins and remaining scope](PUBLICATION_PHYLOGENY_ACQUISITION_20261002.md)
+and [machine receipt](publication_phylogeny_acquisition_20261002.json).
+Update reader commands/evidence, commit and push focused milestones. This
+removes installed-tool prerequisites for acquisition only. A portable MAFFT
+build/staging route without historical-installation inputs and assembled
+executor/native runtime remain next handoff work. Full scientific/collector
+admissions are reused, not re-run or transferred automatically to new tools.
+Compiler/OS/security/rights closure, remaining QfO uncertainty, independent
+validation limits, comparable resource evidence and final manuscript/release/
+archive/DOI remain open; do not declare the full goal complete.
+
 ## Historical Project Wheel Rebuilt from Frozen Source (2026-10-02)
 
 Previous goal turn progressed at pushed `14054cd1`, establishing private

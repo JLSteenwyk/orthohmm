@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [copied-source public phylogeny acquisition](results/PUBLICATION_PHYLOGENY_ACQUISITION_20261002.md)
+obtains seven pinned MAFFT/FastTree source/binary/notice artifacts without any
+installed-tool prerequisite. All 2,753,786 bytes match retained identities;
+259 focused tests pass. Execution outside the checkout, with an empty PATH,
+does not extract, compile or run downloaded code. This closes the acquisition
+prerequisite, not MAFFT private compilation, complete native runtime assembly,
+tool/OS/rights review or publication readiness. See the
+[reader command](PUBLICATION_SOURCE_COMPONENT.md#frozen-phylogeny-artifact-acquisition).
+
 The [frozen-source project build and exact reconstruction](results/PUBLICATION_PROJECT_BUILD_20261002.md)
 produce the admitted project wheel without needing the old wheel as a build
 input. All 42 payload members, including three newly compiled kernels, match;

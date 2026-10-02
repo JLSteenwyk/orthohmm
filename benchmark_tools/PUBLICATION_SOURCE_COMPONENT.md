@@ -353,6 +353,44 @@ not an installed/compatible/security-cleared runtime, scientific source audit,
 declared dependency resolution or inference admission. Installation, tool and
 reader-source assets, bootstrap/OS and rights obligations remain separate.
 
+## Frozen Phylogeny Artifact Acquisition
+
+Any newly exported source profile includes the following stdlib acquisition
+helper and its local imports. Verify the source component's externally
+retained index before execution. No installed MAFFT/FastTree executable,
+old tool prefix, compiler, scientific Python dependency or supplied archive
+is required for acquisition:
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/acquire_publication_phylogeny_tools.py \
+  --output /absolute/fresh/phylogeny-artifacts \
+  --acknowledge-historical-runtime
+```
+
+The fresh canonical output must be outside the source component. The fixed
+inventory is seven artifacts/2,753,786 bytes: the official MAFFT 7.525
+with-extensions source archive and six FastTree 2.2.0 files from revision
+`29c5e62fbcd93230ee325f9c6a17b81f00e3c72a`, including its retained
+binary, source, license and documentation. All exact filenames, sizes and
+SHA-256 values derive from the previous source/tool evidence, not new version
+selection. No raw artifact is committed or newly uploaded.
+
+Only credential-free, query-free HTTPS URLs/redirects on `mafft.cbrc.jp`
+and `raw.githubusercontent.com` are admitted. This tool policy does not
+expand the existing base/wheel downloader's default provider set. Response
+encoding/declared sizes and bounded streamed bytes are checked; mismatching
+partials and failures remain without retry. The timeout bounds each socket
+operation, not the entire acquisition. All downloaded files are mode 0644,
+including the FastTree binary; none are extracted, compiled or executed.
+`complete.json` binds input source modules and all downloaded identities.
+
+The MAFFT archive still needs a private core build, launcher/helper setup,
+and runtime validation. Optional RNA engines and full tool/OS dependencies
+are not supplied. The FastTree binary matches retained bytes, not a proven
+source-reproducible binary. Source/notices are preserved without claiming
+redistribution/security clearance or complete native-study reproduction.
+See [actual copied-source acquisition and scope](results/PUBLICATION_PHYLOGENY_ACQUISITION_20261002.md).
+
 ## Executable Study Boundary
 
 The workflow reproduction guide is included for context, but links to omitted

@@ -1,0 +1,485 @@
+{
+  "acquisition": {
+    "artifact_bytes": 2753786,
+    "artifact_files": 7,
+    "attempts": 1,
+    "compilation_performed": false,
+    "controlled_timing": false,
+    "downloads": [
+      {
+        "file": {
+          "bytes": 758305,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/mafft/mafft-7.525-with-extensions-src.tgz",
+          "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+        },
+        "final_url": "https://mafft.cbrc.jp/alignment/software/mafft-7.525-with-extensions-src.tgz",
+        "md5": "c5d30801c5ec15415513f0b6850d4bb4",
+        "relative": "mafft/mafft-7.525-with-extensions-src.tgz",
+        "requested_url": "https://mafft.cbrc.jp/alignment/software/mafft-7.525-with-extensions-src.tgz",
+        "role": "mafft_source"
+      },
+      {
+        "file": {
+          "bytes": 1496928,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree",
+          "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree",
+        "md5": "6862b3f8521feb2a80a2a10836a28fba",
+        "relative": "fasttree/FastTree",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree",
+        "role": "fasttree_binary"
+      },
+      {
+        "file": {
+          "bytes": 395674,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree.c",
+          "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+        "md5": "349f6349851726367b631593d3f4e3b7",
+        "relative": "fasttree/FastTree.c",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+        "role": "fasttree_source_notice"
+      },
+      {
+        "file": {
+          "bytes": 35149,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+        "md5": "1ebbd3e34237af26da5dc08a4e440464",
+        "relative": "fasttree/LICENSE",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+        "role": "fasttree_source_notice"
+      },
+      {
+        "file": {
+          "bytes": 662,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/README.md",
+          "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md",
+        "md5": "2be7fe5259327e546555b3a7059e4895",
+        "relative": "fasttree/README.md",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md",
+        "role": "fasttree_source_notice"
+      },
+      {
+        "file": {
+          "bytes": 17271,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/ChangeLog.txt",
+          "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt",
+        "md5": "38d89de48af8efaa2f68d4151a82a358",
+        "relative": "fasttree/ChangeLog.txt",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt",
+        "role": "fasttree_source_notice"
+      },
+      {
+        "file": {
+          "bytes": 49797,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/index.html",
+          "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326"
+        },
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html",
+        "md5": "b353ae34484b2a5ecec4b95626e86e49",
+        "relative": "fasttree/index.html",
+        "requested_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html",
+        "role": "fasttree_source_notice"
+      }
+    ],
+    "extraction_performed": false,
+    "fasttree_revision": "29c5e62fbcd93230ee325f9c6a17b81f00e3c72a",
+    "fasttree_version": "2.2.0",
+    "finished_utc": "2026-10-02T18:32:57.612707+00:00",
+    "historical_runtime": true,
+    "inputs": [
+      {
+        "bytes": 8606,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/acquire_publication_base.py",
+        "sha256": "58dab072ee040e8a9c600e6b67a63399ac83bc40a6108bcad65e7d2e638620aa"
+      },
+      {
+        "bytes": 4663,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/acquire_publication_fasttree.py",
+        "sha256": "ef752f1191fb35b915748c0f4168a215b2676336a0ee1ad94d3c07ad1a3b55cf"
+      },
+      {
+        "bytes": 6721,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/acquire_publication_phylogeny_tools.py",
+        "sha256": "2819edb7e29fd4bae983d32b84d81d7a3392c917bd6b64ced351bc91715cb57b"
+      },
+      {
+        "bytes": 6468,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/audit_frozen_overlay_install.py",
+        "sha256": "f89c1589fa7420ff1f87fb4aeebc2348808bd11e657d4a2ef5b92f2f25d0e0aa"
+      },
+      {
+        "bytes": 4453,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/audit_leiden_recovery_wheel.py",
+        "sha256": "df67bd8780ba92473bf06f7659d711ef3041c5c4ad8fc793a4a4c273adfa78c2"
+      },
+      {
+        "bytes": 5776,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/audit_recovery_install.py",
+        "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+      },
+      {
+        "bytes": 6887,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/build_publication_mafft.py",
+        "sha256": "cb71d07b169dad17684adfd2e0b5915b2cb411ab2f3349beffa76e2f26142ef3"
+      },
+      {
+        "bytes": 11837,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/install_publication_base.py",
+        "sha256": "6a086980060b8e1e3cd3a459f533855afa80e70532dfd8c039bccc32119c4fcf"
+      },
+      {
+        "bytes": 3065,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/prepare_frozen_build_overlay.py",
+        "sha256": "71fded355c2606c572e3b8afcc95595d7b91433e751d9f18662ef9e9129c82bf"
+      },
+      {
+        "bytes": 7448,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+        "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+      },
+      {
+        "bytes": 13821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/run_integrated_publication_workflow.py",
+        "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+      },
+      {
+        "bytes": 5327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/stage_base_archives.py",
+        "sha256": "59e0b39d194ee8ca6e3fbe10804ac5d7bb2ebb1bd4c574a9961909cb33572b93"
+      },
+      {
+        "bytes": 4327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/verify_frozen_source_archive.py",
+        "sha256": "566c57642dbbf921f80f3d3550fe16a544fc182a2be80715aa492fd43da49c06"
+      }
+    ],
+    "installation_performed": false,
+    "installed_tools_required": false,
+    "limitations": [
+      "Exact acquisition, not a complete installed native-tool runtime.",
+      "MAFFT still requires compilation, launcher prefix/helper configuration and tool validation.",
+      "The FastTree binary matches retained bytes; it is not a source-reproducibility claim.",
+      "HTTPS plus retained hashes is not a signed maintainer attestation or security audit.",
+      "Compiler, OS libraries, optional extension engines and selected-artifact rights remain open.",
+      "No scientific/default/lock change, benchmark rerun, timing admission or public binary upload.",
+      "Socket-operation timeout is not a whole-acquisition deadline."
+    ],
+    "mafft_version": "7.525",
+    "native_code_executed": false,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "retry": false,
+    "scientific_inference_executed": false,
+    "security_clearance": false,
+    "status": "frozen_phylogeny_artifacts_acquired"
+  },
+  "completion": {
+    "bytes": 10151,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/complete.json",
+    "sha256": "8f4b84bfe95c9fc5614db34c0c32ccbafdb5316fb6662d3fa5e6e219a76cf137"
+  },
+  "controlled_timing": false,
+  "finished": "2026-10-02T18:33:00.832845+00:00",
+  "harness": {
+    "bytes": 7020,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_phylogeny_acquisition_20261002.py",
+    "sha256": "8d31398355ba830c8b5c418cbea910cc581f7f5c7bd5b6b43e83a0f888941e0d"
+  },
+  "historical_admission": false,
+  "historical_comparisons": [
+    {
+      "acquired": {
+        "bytes": 758305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/mafft/mafft-7.525-with-extensions-src.tgz",
+        "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 758305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/mafft-7.525-with-extensions-src.tgz",
+        "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+      },
+      "mode": 420,
+      "relative": "mafft/mafft-7.525-with-extensions-src.tgz"
+    },
+    {
+      "acquired": {
+        "bytes": 1496928,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree",
+        "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 1496928,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree",
+        "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree"
+      },
+      "mode": 420,
+      "relative": "fasttree/FastTree"
+    },
+    {
+      "acquired": {
+        "bytes": 395674,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree.c",
+        "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 395674,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/FastTree.c",
+        "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/FastTree.c"
+      },
+      "mode": 420,
+      "relative": "fasttree/FastTree.c"
+    },
+    {
+      "acquired": {
+        "bytes": 35149,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 35149,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/LICENSE"
+      },
+      "mode": 420,
+      "relative": "fasttree/LICENSE"
+    },
+    {
+      "acquired": {
+        "bytes": 662,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/README.md",
+        "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 662,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/README.md",
+        "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/README.md"
+      },
+      "mode": 420,
+      "relative": "fasttree/README.md"
+    },
+    {
+      "acquired": {
+        "bytes": 17271,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/ChangeLog.txt",
+        "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 17271,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/ChangeLog.txt",
+        "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/ChangeLog.txt"
+      },
+      "mode": 420,
+      "relative": "fasttree/ChangeLog.txt"
+    },
+    {
+      "acquired": {
+        "bytes": 49797,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/index.html",
+        "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326"
+      },
+      "byte_identity_equal": true,
+      "historical": {
+        "bytes": 49797,
+        "final_url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html",
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_fasttree_source_20260926/acquired/index.html",
+        "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326",
+        "url": "https://raw.githubusercontent.com/morgannprice/fasttree/29c5e62fbcd93230ee325f9c6a17b81f00e3c72a/index.html"
+      },
+      "mode": 420,
+      "relative": "fasttree/index.html"
+    }
+  ],
+  "historical_receipts": [
+    {
+      "bytes": 151319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_mafft_build_20260926.json",
+      "sha256": "4c4e92a29c1dc4b27e4b47f4010e9ea9648c17beb02b5a00995a59535394ac76"
+    },
+    {
+      "bytes": 4743,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_fasttree_acquisition_20260926.json",
+      "sha256": "c553af49b95153434c6c09e4bf4dd6bf215d472a593c6f13103394785570ec68"
+    }
+  ],
+  "limitations": [
+    "Exact public acquisition, not compilation or a complete installed native runtime.",
+    "No original tools required by copied execution; historical receipts used only for post-acquisition comparison.",
+    "No native/scientific rerun, new resource evidence, security/rights closure or public binary delivery."
+  ],
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1",
+  "scientific_inference_executed": false,
+  "security_clearance": false,
+  "source": {
+    "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+    "components": {
+      "build": 1,
+      "scientific": 43,
+      "workflow": 1798
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1842,
+    "manifest": {
+      "bytes": 745425,
+      "sha256": "a65df12c5a0adfec4bbf5dc5b4e7b5dfa6913bb576fbc144d6ff40b161437682"
+    },
+    "payload_bytes": 10982316,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1821,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "c94f3a96f096a5c8ae7b388b6373dc2ffb1f6c9c"
+  },
+  "source_index": {
+    "bytes": 745425,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/SOURCE_INDEX.json",
+    "sha256": "a65df12c5a0adfec4bbf5dc5b4e7b5dfa6913bb576fbc144d6ff40b161437682"
+  },
+  "source_unchanged": true,
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_source.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "c94f3a96f096a5c8ae7b388b6373dc2ffb1f6c9c",
+        "--profile",
+        "native-build",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/exported"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1",
+      "name": "export",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/export.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/export.stdout",
+        "sha256": "eab8c5fc27b8a47564b073350cf71b36de5d61dce2416d777f13e12450db2919"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source",
+        "--manifest-sha256",
+        "a65df12c5a0adfec4bbf5dc5b4e7b5dfa6913bb576fbc144d6ff40b161437682"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1",
+      "name": "copied_verify_before",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied_verify_before.stdout",
+        "sha256": "eab8c5fc27b8a47564b073350cf71b36de5d61dce2416d777f13e12450db2919"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/acquire_publication_phylogeny_tools.py",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts",
+        "--acknowledge-historical-runtime"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1",
+      "name": "public_acquisition",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/public_acquisition.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 298,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/public_acquisition.stdout",
+        "sha256": "176d3b443b69bc7c6b38ac1f28f08a78978cb9550216ee12bee407e39a017da2"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied-source",
+        "--manifest-sha256",
+        "a65df12c5a0adfec4bbf5dc5b4e7b5dfa6913bb576fbc144d6ff40b161437682"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1",
+      "name": "copied_verify_after",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/copied_verify_after.stdout",
+        "sha256": "eab8c5fc27b8a47564b073350cf71b36de5d61dce2416d777f13e12450db2919"
+      }
+    }
+  ],
+  "started": "2026-10-02T18:32:42.647901+00:00",
+  "status": "copied_source_public_phylogeny_acquisition_complete",
+  "tests": {
+    "bytes": 38977,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_phylogeny_artifact_tests_20261002.xml",
+    "sha256": "dcf87a894d79a33c1ab982ecd103bbb918053de2c1b1e717615c5cd528a7ad15"
+  },
+  "workflow_revision": "c94f3a96f096a5c8ae7b388b6373dc2ffb1f6c9c"
+}
