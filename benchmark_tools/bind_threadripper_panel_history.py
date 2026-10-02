@@ -4,14 +4,18 @@ import json
 from pathlib import Path
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
-from benchmark_tools.threadripper_panel_progress import position
+from benchmark_tools.threadripper_panel_progress import overhead_position, position
 from benchmark_tools.verify_threadripper_controller import validate
 
 REVIEWS = {"runtime", "environment", "resources", "outputs_or_failure"}
 
 
-def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00"):
+def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overhead=False):
     """Read immutable history only; caller must freeze arguments and audit evidence."""
+    if type(overhead) is not bool:
+        raise ValueError("Require explicit panel kind")
+    session_schema = "threadripper_overhead_session_v1" if overhead else "threadripper_panel_session_v1"
+    review_schema = "threadripper_overhead_review_v1" if overhead else "threadripper_panel_review_v1"
     evidence = []
 
     def read(ref):
@@ -25,17 +29,22 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00"):
         return data
 
     plan = read(plan_ref)
-    if not isinstance(session_refs, list):
+    if not isinstance(session_refs, list) or len(session_refs) > len(plan["runs"]):
         raise ValueError("Require ordered session references")
     attempts = []
     for index, ref in enumerate(session_refs):
         session = read(ref)
         job = session.get("job_id")
-        if (session.get("schema") != "threadripper_panel_session_v1"
+        if (session.get("schema") != session_schema
                 or type(session.get("index")) is not int or session["index"] != index
                 or type(job) is not int or job <= 0
                 or session.get("plan_sha256") != plan_ref["sha256"]):
             raise ValueError("Session plan, index or job identity differs")
+        if overhead:
+            task = plan["runs"][index]
+            if any(type(session.get(k)) is not type(task[k]) or session[k] != task[k]
+                   for k in ("pair", "arm")):
+                raise ValueError("Engineering session pair or arm differs")
         controller = read(session["controller"])
         expected_command = ["scontrol", "show", "job", str(job), "--oneliner"]
         if (controller.get("command") != expected_command
@@ -60,8 +69,10 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00"):
             decisions = {}
             for category in sorted(REVIEWS):
                 review = read(reviews[category])
-                expected = dict(schema="threadripper_panel_review_v1", index=index,
+                expected = dict(schema=review_schema, index=index,
                     job_id=job, plan_sha256=plan_ref["sha256"], category=category)
+                if overhead:
+                    expected.update(pair=task["pair"], arm=task["arm"])
                 if any(type(review.get(k)) is not type(v) or review[k] != v
                        for k, v in expected.items()):
                     raise ValueError("Review belongs to another run, job, plan or category")
@@ -76,7 +87,7 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00"):
             native_outcome=outcome))
         if allocation["scheduler_state"] == "COMPLETED" and allocation["scheduler_exit_code"] != "0:0":
             raise ValueError("Completed scheduler record has contradictory exit status")
-    progress = position(plan["runs"], attempts)
+    progress = (overhead_position if overhead else position)(plan["runs"], attempts)
     for ref in evidence:
         check(ref)
     return dict(status="threadripper_panel_history_bound", progress=progress,

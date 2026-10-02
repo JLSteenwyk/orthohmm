@@ -3,7 +3,8 @@ from copy import deepcopy
 import pytest
 
 from benchmark_tools.prepare_scaling_inputs import planned_runs
-from benchmark_tools.threadripper_panel_progress import position
+from benchmark_tools.threadripper_panel_progress import overhead_position, position
+from benchmark_tools.prepare_threadripper_overhead import arm_order
 
 
 def attempt(index=0, outcome="exited_zero"):
@@ -90,3 +91,36 @@ def test_frozen_order_and_types_required():
     rows = planned_runs()[::-1]
     with pytest.raises(ValueError, match="frozen"):
         position(rows, [])
+
+
+def overhead_tasks():
+    tasks = []
+    for row in planned_runs():
+        for arm in arm_order(row["method"], row["proteomes"], row["repeat"]):
+            tasks.append(dict(row, index=len(tasks), pair=row["index"], arm=arm))
+    return tasks
+
+
+def test_overhead_has_54_separate_identities_and_no_admission():
+    tasks = overhead_tasks()
+    assert overhead_position(tasks, [])['index'] == 0
+    result = overhead_position(tasks, [attempt(i) for i in range(54)])
+    assert result['status'] == 'all_attempts_reviewed'
+    assert not result['scientific_timings_admitted']
+    with pytest.raises(ValueError): position(tasks, [])
+    with pytest.raises((KeyError, ValueError)): overhead_position(planned_runs(), [])
+
+
+@pytest.mark.parametrize('outcome', ['exited_nonzero', 'timed_out'])
+def test_overhead_stops_even_after_passed_failure_reviews(outcome):
+    failed = attempt(outcome=outcome)
+    assert overhead_position(overhead_tasks(), [failed])['status'] == 'native_failure_prevents_continuation'
+    with pytest.raises(ValueError, match='predecessor'):
+        overhead_position(overhead_tasks(), [failed, attempt(1)])
+
+
+@pytest.mark.parametrize('field,value', [('pair', True), ('arm', 'other'), ('index', False)])
+def test_overhead_identity_drift_rejected(field, value):
+    tasks = overhead_tasks()
+    tasks[0][field] = value
+    with pytest.raises(ValueError, match='frozen'): overhead_position(tasks, [])

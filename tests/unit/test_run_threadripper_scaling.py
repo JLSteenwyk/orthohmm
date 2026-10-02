@@ -10,6 +10,8 @@ import pytest
 
 from benchmark_tools import run_threadripper_scaling as driver
 from benchmark_tools.prepare_scaling_inputs import planned_runs
+from benchmark_tools.prepare_threadripper_overhead import build
+from tests.unit.test_verify_threadripper_controller import RAW
 
 
 def put(path, data):
@@ -152,6 +154,170 @@ def explicit_lookup_setup(setup, monkeypatch):
     ready["lookup_sha256"] = ref["sha256"]
     request["readiness_review"] = put(ready_path, ready)
     return root, request, runs
+
+
+def overhead_setup(setup, monkeypatch):
+    root, request, _ = explicit_lookup_setup(setup, monkeypatch)
+    parent_path = root / "benchmark_tools/results/threadripper_private_commands_20260928.json"
+    real_parent = Path(__file__).resolve().parents[2] / "benchmark_tools/results/threadripper_private_commands_20260928.json"
+    parent = json.loads(real_parent.read_text())
+    for row in parent["runs"]:
+        row["cwd"] = str(root)
+    parent_ref = put(parent_path, parent)
+    monkeypatch.setattr(driver, "PRIVATE_PLAN_SHA", parent_ref["sha256"])
+    binding_path = root / "binding.json"
+    binding = json.loads(binding_path.read_text())
+    binding["command_plan"] = parent_ref
+    binding_ref = put(binding_path, binding)
+    for lookup_path in (root / "benchmark_tools/results/threadripper_private_lookup_v2_20260928.json",
+                        Path(request["runtime_lookup"]["path"])):
+        lookup = json.loads(lookup_path.read_text())
+        lookup["binding"] = binding_ref
+        ref = put(lookup_path, lookup)
+        if lookup_path == Path(request["runtime_lookup"]["path"]):
+            request.update(runtime_lookup=ref, lookup_sha256=ref["sha256"])
+        else:
+            monkeypatch.setattr(driver, "PRIVATE_LOOKUP_SHA", ref["sha256"])
+    plan = build(parent, root / "engineering", Path("/dev/shm") / ("engineering-" + root.name))
+    plan.update(sources=[parent_ref, driver.record(root / "support.json")], helpers=[])
+    plan_ref = put(root / "overhead_plan.json", plan)
+    request.update(overhead_plan=plan_ref, plan_sha256=plan_ref["sha256"],
+        environment_preflight_path=str(root / "engineering/sessions/run_00/environment_preflight.json"))
+    policy_path = root / "environment_policy.json"
+    policy = json.loads(policy_path.read_text())
+    policy["plan_sha256"] = plan_ref["sha256"]
+    policy_ref = put(policy_path, policy)
+    ready_path = root / "ready.json"
+    ready = json.loads(ready_path.read_text())
+    ready.update(schema="threadripper_overhead_readiness_review_v1", plan_sha256=plan_ref["sha256"],
+        lookup_sha256=request["lookup_sha256"], environment_policy=policy_ref,
+        boundary_control_validated=True, incremental_overhead_measurement_pending=True)
+    request["readiness_review"] = put(ready_path, ready)
+    return root, request, [task["run"] for task in plan["runs"]]
+
+
+def overhead_prior(root, request, index):
+    plan = json.loads(Path(request["overhead_plan"]["path"]).read_text())
+    history = []
+    for task in plan["runs"][:index]:
+        n, job = task["index"], 1000 + task["index"]
+        directory = root / f"synthetic_history_{n:02d}"
+        raw = RAW.replace("JobId=42", f"JobId={job}").replace("RUNNING", "COMPLETED")
+        raw = raw.replace("Command=/recipe/run.sh", "Command=" + request["scheduler_command"])
+        raw = raw.replace("WorkDir=/recipe", "WorkDir=" + str(root)).replace("1-00:00:00", driver.TIME_LIMIT)
+        controller = put(directory / "controller.json", dict(
+            command=["scontrol", "show", "job", str(job), "--oneliner"], returncode=0, stdout=raw))
+        reviews = {k: put(directory / (k + ".json"), dict(schema="threadripper_overhead_review_v1",
+            index=n, pair=task["pair"], arm=task["arm"], job_id=job,
+            plan_sha256=request["plan_sha256"], category=k, decision="passed",
+            evidence=[driver.record(root / "support.json")]))
+            for k in ("runtime", "environment", "resources", "outputs_or_failure")}
+        native = put(directory / "native.json", dict(job_id=job, native_outcome="exited_zero",
+            status="native_success_outputs_verified"))
+        history.append(put(directory / "session.json", dict(schema="threadripper_overhead_session_v1",
+            index=n, pair=task["pair"], arm=task["arm"], job_id=job,
+            plan_sha256=request["plan_sha256"], controller=controller, reviews=reviews,
+            native_audit=native, native_outcome="exited_zero", phase="terminal")))
+    request.update(index=index, history=history,
+        environment_preflight_path=str(root / f"engineering/sessions/run_{index:02d}/environment_preflight.json"))
+
+
+@pytest.mark.parametrize("index", [1, 26, 27, 53])
+def test_overhead_later_identity_uses_its_arm_and_reviewed_prefix(setup, monkeypatch, index):
+    root, request, runs = overhead_setup(setup, monkeypatch)
+    overhead_prior(root, request, index)
+    run, _, history, _ = driver.select(request, root, 42)
+    assert run == runs[index] and history['progress']['index'] == index
+    assert history['engineering_task']['pair'] == index // 2
+    assert len(history['attempts']) == index
+    assert not (root / 'engineering').exists()
+
+
+@pytest.mark.parametrize('fault', ['session_schema', 'session_pair', 'review_schema', 'review_arm', 'native_failure', 'missing_review'])
+def test_overhead_history_never_borrows_production_or_skips_failure(setup, monkeypatch, fault):
+    root, request, _ = overhead_setup(setup, monkeypatch)
+    overhead_prior(root, request, 1)
+    session_path = Path(request['history'][0]['path'])
+    session = json.loads(session_path.read_text())
+    if fault == 'session_schema': session['schema'] = 'threadripper_panel_session_v1'
+    elif fault == 'session_pair': session['pair'] = True
+    elif fault == 'missing_review': session['reviews'] = None
+    elif fault == 'native_failure':
+        session['native_outcome'] = 'exited_nonzero'
+        session['native_audit'] = put(Path(session['native_audit']['path']), dict(job_id=1000,
+            native_outcome='exited_nonzero', status='native_failure_requires_review'))
+    else:
+        path = Path(session['reviews']['runtime']['path'])
+        review = json.loads(path.read_text())
+        if fault == 'review_schema': review['schema'] = 'threadripper_panel_review_v1'
+        else: review['arm'] = 'periodic' if review['arm'] == 'boundary' else 'boundary'
+        session['reviews']['runtime'] = put(path, review)
+    request['history'][0] = put(session_path, session)
+    with pytest.raises(ValueError): driver.select(request, root, 42)
+    assert not (root / 'engineering').exists()
+
+
+def test_overhead_selection_preserves_native_work_and_separate_identity(setup, monkeypatch):
+    root, request, runs = overhead_setup(setup, monkeypatch)
+    run, _, history, evidence = driver.select(request, root, 42)
+    assert run == runs[0]
+    assert history["engineering_task"]["pair"] == 0
+    assert history["engineering_task"]["arm"] in {"boundary", "periodic"}
+    assert request["overhead_plan"] in evidence
+    assert not (root / "engineering").exists()
+    gate, directory, calls = guard((root, request, runs))
+    preflight_path = root / "preflight.json"
+    preflight = json.loads(preflight_path.read_text())
+    preflight.update(plan_sha256=request["plan_sha256"], readiness_review_sha256=request["readiness_review"]["sha256"])
+    put(preflight_path, preflight)
+    assert gate(directory) == {"budget": "checked"} and calls == [directory]
+
+
+def test_retained_overhead_plan_matches_private_parent_without_native_work():
+    results = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    parent_path = results / "threadripper_private_commands_20260928.json"
+    plan_path = results / "threadripper_native_overhead_plan_20260930.json"
+    parent = driver.read_frozen(parent_path, driver.PRIVATE_PLAN_SHA)
+    plan = driver.read_frozen(plan_path, "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182")
+    driver.overhead_design(plan, parent)
+    assert plan['sources'][0]['sha256'] == driver.PRIVATE_PLAN_SHA
+    assert plan['runs'][0]['arm'] == 'boundary' and plan['runs'][1]['arm'] == 'periodic'
+    assert driver.overhead_position(plan['runs'], [])['index'] == 0
+
+
+@pytest.mark.parametrize("fault", ["shared", "no_lookup", "size", "hash", "symlink", "missing_task",
+    "arm", "command", "parent", "production_ready", "boundary_unvalidated", "already_measured", "bool_index", "index_54"])
+def test_overhead_selection_rejects_mixed_or_drifted_work(setup, monkeypatch, fault):
+    root, request, _ = overhead_setup(setup, monkeypatch)
+    if fault == "shared": request["deployment"] = "shared_v3_20260928"
+    elif fault == "no_lookup": request.pop("runtime_lookup")
+    elif fault == "size": request["overhead_plan"]["bytes"] += 1
+    elif fault == "hash": request["overhead_plan"]["sha256"] = "0" * 64
+    elif fault == "symlink":
+        link = root / "plan-link.json"
+        link.symlink_to(request["overhead_plan"]["path"])
+        request["overhead_plan"]["path"] = str(link)
+    elif fault in {"bool_index", "index_54"}:
+        request["index"] = False if fault == "bool_index" else 54
+    elif fault in {"production_ready", "boundary_unvalidated", "already_measured"}:
+        path = root / "ready.json"
+        ready = json.loads(path.read_text())
+        if fault == "production_ready": ready["schema"] = "threadripper_readiness_review_v1"
+        elif fault == "boundary_unvalidated": ready["boundary_control_validated"] = False
+        else: ready["incremental_overhead_measurement_pending"] = False
+        request["readiness_review"] = put(path, ready)
+    else:
+        path = Path(request["overhead_plan"]["path"])
+        plan = json.loads(path.read_text())
+        if fault == "missing_task": plan["runs"].pop()
+        elif fault == "arm": plan["runs"][0]["arm"] = "periodic" if plan["runs"][0]["arm"] == "boundary" else "boundary"
+        elif fault == "command": plan["runs"][0]["run"]["native_argv"].append("--different")
+        else: plan["sources"][0] = driver.record(root / "support.json")
+        request["overhead_plan"] = put(path, plan)
+        request["plan_sha256"] = request["overhead_plan"]["sha256"]
+    with pytest.raises((ValueError, KeyError)):
+        driver.select(request, root, 42)
+    assert not (root / "engineering").exists()
 
 
 def test_explicit_runtime_lookup_preserves_plan_controller_and_old_pin(setup, monkeypatch):
@@ -472,13 +638,17 @@ temporary.rename(target)
 @pytest.mark.parametrize("raises", [False, True])
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
-@pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True), ("explicit", True)])
+@pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True), ("explicit", True), ("overhead", True), ("overhead_second", True)])
 def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private, native_v2):
-    if private == "explicit":
+    if private in {"overhead", "overhead_second"}:
+        setup = overhead_setup(setup, monkeypatch)
+        if private == "overhead_second": overhead_prior(setup[0], setup[1], 1)
+    elif private == "explicit":
         setup = explicit_lookup_setup(setup, monkeypatch)
     elif private:
         setup = private_setup(setup, monkeypatch)
     root, request, runs = setup
+    active = runs[request["index"]]
     if native_v2:
         policy_path = root / "environment_policy.json"
         policy = json.loads(policy_path.read_bytes())
@@ -522,10 +692,15 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
                         lambda directory: worker_events.append("budget"))
     def measured(run, baseline, specs, collector, job, **kwargs):
         calls.append(run)
-        assert run == runs[0] and job == 42 and kwargs["runtime_checker"] == "checker"
+        assert run == active and job == 42 and kwargs["runtime_checker"] == "checker"
         selected = driver.deployment(request)
         assert runtime_bindings[0][:2] == (root / "benchmark_tools/results" / selected["lookup"], selected["lookup_sha"])
         assert isinstance(kwargs["release_guard"], driver.EnvironmentalReleaseGuard)
+        if private in {"overhead", "overhead_second"}:
+            task = json.loads(Path(request["overhead_plan"]["path"]).read_text())["runs"][request["index"]]
+            assert collector is (driver.measure_boundary if task["arm"] == "boundary" else driver.measure)
+        else:
+            assert collector is driver.measure
         assert worker_events == ["started"]
         if raises:
             raise RuntimeError("synthetic infrastructure failure")
@@ -534,8 +709,8 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
         return {"status": "command_exited_zero"}
     monkeypatch.setattr(driver, "measure_run", measured)
     def audit_stream(directory, policy_ref, preflight_ref, **kwargs):
-        assert directory == runs[0]["measurement_directory"]
-        assert kwargs == dict(job_id=42, index=0)
+        assert directory == active["measurement_directory"]
+        assert kwargs == dict(job_id=42, index=request["index"])
         assert worker_events[-1] == "cleaned"
         worker_events.append("stream_review")
         return put(root / "stream_review.json", {}), dict(sampled_environment_policy_satisfied=not stream_fails)
@@ -549,7 +724,9 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     else:
         result = driver.execute(Path(ref["path"]), ref["sha256"])
         assert result["status"] == "measurement_returned_pending_independent_review"
-    saved = json.loads((root / "runs/sessions/run_00/result.json").read_text())
+    saved = json.loads(Path(request["environment_preflight_path"]).with_name("result.json").read_text())
+    if private in {"overhead", "overhead_second"}:
+        assert saved["purpose"] == "native_overhead" and not saved["production_identity"]
     assert not saved["scientific_timings_admitted"] and not saved["next_submission_authorized"]
     with pytest.raises(FileExistsError):
         driver.execute(Path(ref["path"]), ref["sha256"])

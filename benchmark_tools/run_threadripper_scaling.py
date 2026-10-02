@@ -12,11 +12,13 @@ from benchmark_tools.bind_threadripper_panel_history import bind
 from benchmark_tools.check_threadripper_runtime import RuntimeChecker
 from benchmark_tools.measure_threadripper_run import measure_run
 from benchmark_tools.measure_threadripper_scaling import measure
+from benchmark_tools.measure_threadripper_boundary import measure as measure_boundary
+from benchmark_tools.audit_threadripper_overhead import design as overhead_design
 from benchmark_tools.manage_threadripper_environment_worker import EnvironmentWorker
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.run_simulation_methods import read_frozen, execution_environment
-from benchmark_tools.threadripper_panel_progress import position
+from benchmark_tools.threadripper_panel_progress import overhead_position, position
 from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
 from benchmark_tools.review_threadripper_process_stream import audit as audit_process_stream
 from benchmark_tools.review_threadripper_process_policy import number
@@ -32,6 +34,8 @@ TIME_LIMIT = "1-02:00:00"
 def deployment(request):
     """Select an explicit retained deployment, without changing historical pins."""
     name = request.get("deployment", "shared_v3_20260928")
+    if "overhead_plan" in request and (name != "private_v2_20260928" or "runtime_lookup" not in request):
+        raise ValueError("Engineering overhead requires explicit private runtime lookup")
     if "runtime_lookup" in request and name != "private_v2_20260928":
         raise ValueError("Explicit runtime lookup requires the retained private deployment")
     if name == "shared_v3_20260928":
@@ -56,6 +60,19 @@ def deployment(request):
             if not path.is_absolute() or path.resolve() != path or path.is_symlink():
                 raise ValueError("Require a direct absolute runtime lookup path")
             selected.update(lookup=ref["path"], lookup_sha=ref["sha256"])
+        if "overhead_plan" in request:
+            ref = request["overhead_plan"]
+            if (not isinstance(ref, dict) or set(ref) != {"path", "bytes", "sha256"}
+                    or not isinstance(ref["path"], str)
+                    or type(ref["bytes"]) is not int or ref["bytes"] <= 0
+                    or not isinstance(ref["sha256"], str) or len(ref["sha256"]) != 64
+                    or any(c not in "0123456789abcdef" for c in ref["sha256"])):
+                raise ValueError("Require an externally pinned engineering plan")
+            path = Path(ref["path"])
+            if not path.is_absolute() or path.resolve() != path or path.is_symlink():
+                raise ValueError("Require a direct absolute engineering plan path")
+            selected.update(parent_plan=selected["plan"], parent_plan_sha=selected["plan_sha"],
+                            plan=ref["path"], plan_sha=ref["sha256"], purpose="native_overhead")
         return selected
     raise ValueError("Unknown retained Threadripper deployment")
 
@@ -88,11 +105,12 @@ def review(ref, expected):
 
 def select(request, root, job):
     selected = deployment(request)
+    overhead = "overhead_plan" in request
     expect(request, dict(schema="threadripper_execution_request_v1", job_id=job,
                          execution_authorized=True, plan_sha256=selected["plan_sha"],
                          lookup_sha256=selected["lookup_sha"]))
     index = request.get("index")
-    if type(index) is not int or not 0 <= index < 27:
+    if type(index) is not int or not 0 <= index < (54 if overhead else 27):
         raise ValueError("Invalid panel index")
     if (request["allocation_cwd"] != str(root)
             or request["scheduler_command"] != str(root / "benchmark_tools" / selected["script"])):
@@ -108,7 +126,22 @@ def select(request, root, job):
     results = root / "benchmark_tools/results"
     plan_path = results / selected["plan"]
     plan = read_frozen(plan_path, selected["plan_sha"])
-    position(plan["runs"], [])
+    plan_evidence = []
+    if overhead:
+        if read(request["overhead_plan"]) != plan:
+            raise ValueError("Engineering plan reference differs")
+        parent_path = results / selected["parent_plan"]
+        parent = read_frozen(parent_path, selected["parent_plan_sha"])
+        overhead_design(plan, parent)
+        parent_ref = record(parent_path)
+        if not plan.get("sources") or plan["sources"][0] != parent_ref:
+            raise ValueError("Engineering plan must bind the frozen private parent")
+        plan_evidence = [request["overhead_plan"], parent_ref, *plan["sources"], *plan["helpers"]]
+        for ref in plan_evidence:
+            check(ref)
+        overhead_position(plan["runs"], [])
+    else:
+        position(plan["runs"], [])
     lookup_path = results / selected["lookup"]
     lookup = read_frozen(lookup_path, selected["lookup_sha"])
     lookup_evidence = []
@@ -134,20 +167,29 @@ def select(request, root, job):
             raise ValueError("Explicit runtime lookup must preserve private runtime manifests")
         lookup_evidence = [request["runtime_lookup"], record(retained_path),
                            retained["binding"], explicit["binding"], explicit["baseline"]]
+    extra = dict(overhead=True) if overhead else {}
     history = bind(record(plan_path), request["history"], command=request["scheduler_command"],
-                   cwd=str(root), time_limit=TIME_LIMIT)
+                   cwd=str(root), time_limit=TIME_LIMIT, **extra)
     if (history["progress"]["status"] != "next_identity_requires_preflight"
             or history["progress"]["index"] != index):
         raise ValueError("Panel is live, unresolved, complete or at another identity")
-    ready = review(request["readiness_review"], dict(schema="threadripper_readiness_review_v1",
+    ready_fields = dict(schema="threadripper_overhead_readiness_review_v1" if overhead else "threadripper_readiness_review_v1",
         decision="passed", plan_sha256=selected["plan_sha"], lookup_sha256=selected["lookup_sha"],
         recipe_sha256=request["recipe"]["sha256"], full_scale_observer_validated=True,
-        environment_policy_frozen=True))
-    run = plan["runs"][index]
+        environment_policy_frozen=True)
+    if overhead:
+        ready_fields.update(boundary_control_validated=True, incremental_overhead_measurement_pending=True)
+    ready = review(request["readiness_review"], ready_fields)
+    if overhead:
+        task = plan["runs"][index]
+        history["engineering_task"] = {k: task[k] for k in ("index", "pair", "arm", "method", "proteomes", "repeat")}
+        run = task["run"]
+    else:
+        run = plan["runs"][index]
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{index:02d}"
     if request["environment_preflight_path"] != str(session / "environment_preflight.json"):
         raise ValueError("Require run-specific environmental review location")
-    return run, lookup, history, [*sources, *ready["evidence"], *lookup_evidence]
+    return run, lookup, history, [*sources, *ready["evidence"], *lookup_evidence, *plan_evidence]
 
 
 class EnvironmentalReleaseGuard:
@@ -251,6 +293,9 @@ def execute(request_path, request_sha):
                   limitations=["External reviews are bound, not independently certified by this executor.",
                                "Terminal scheduler, runtime, environment, resource and native-output audits remain required.",
                                "A returned measurement never authorizes the next identity."])
+    task = history.get("engineering_task")
+    if task:
+        result.update(purpose="native_overhead", engineering_task=task, production_identity=False)
     save(session / "started.json", result)
     try:
         env, _ = execution_environment(baseline)
@@ -267,7 +312,8 @@ def execute(request_path, request_sha):
                 return budget(directory)
             guard = EnvironmentalReleaseGuard(request, request_ref, finished_worker_budget,
                 evidence=evidence, waiter=worker.wait_response)
-            result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], measure, job,
+            collector = measure_boundary if task and task["arm"] == "boundary" else measure
+            result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], collector, job,
                                             runtime_checker=checker, release_guard=guard)
         stream_ref, stream_review = audit_process_stream(run["measurement_directory"], policy_ref,
             record(request["environment_preflight_path"]), job_id=job, index=run["index"])

@@ -14,11 +14,27 @@ def position(runs, attempts):
     The caller must independently validate scheduler observations and review
     evidence. This function checks their state-machine consistency only.
     """
-    identities = [{k: r[k] for k in ("index", "repeat", "proteomes", "method")} for r in runs]
     expected = planned_runs()
+    return _position(runs, attempts, expected)
+
+
+def overhead_position(tasks, attempts):
+    """Keep the 54 engineering identities separate and stop on native failure."""
+    from benchmark_tools.prepare_threadripper_overhead import arm_order
+
+    expected = []
+    for run in planned_runs():
+        for arm in arm_order(run["method"], run["proteomes"], run["repeat"]):
+            expected.append(dict(index=len(expected), pair=run["index"], arm=arm,
+                method=run["method"], proteomes=run["proteomes"], repeat=run["repeat"]))
+    return _position(tasks, attempts, expected, stop_on_native_failure=True)
+
+
+def _position(runs, attempts, expected, *, stop_on_native_failure=False):
+    identities = [{k: r[k] for k in expected[0]} for r in runs]
     if identities != expected or any(
             type(r[k]) is not type(e[k]) for r, e in zip(identities, expected) for k in e):
-        raise ValueError("Require frozen 27-run identities and order")
+        raise ValueError("Require frozen panel identities and order")
     if not isinstance(attempts, list) or len(attempts) > len(runs):
         raise ValueError("Require one-attempt panel prefix")
     jobs = set()
@@ -56,6 +72,8 @@ def position(runs, attempts):
                 status = "post_run_review_prevents_continuation"
             elif outcome is None:
                 raise ValueError("Reviewed attempt lacks native outcome")
+            elif stop_on_native_failure and outcome != "exited_zero":
+                status = "native_failure_prevents_continuation"
             else:
                 reviewed.append(dict(index=index, job_id=job, native_outcome=outcome))
         if status:
