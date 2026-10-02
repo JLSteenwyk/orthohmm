@@ -16,16 +16,28 @@ from benchmark_tools.run_simulation_tree_mode_control import METHOD_SHA
 INPUT_SHA = "1957b050d33dd89e933ff33f96500a4fbaa6b2155d85d067d7d7d956c3d139af"
 
 
-def native_orthohmm(config):
+def native_orthohmm(config, *, resolve_paths=True):
+    if type(resolve_paths) is not bool:
+        raise ValueError("Require a boolean path-resolution mode")
+
+    def command_path(value):
+        path = Path(value)
+        if resolve_paths:
+            return str(path.resolve())
+        if not path.is_absolute() or ".." in path.parts:
+            raise ValueError("Remote command paths must be absolute without parent traversal")
+        return str(path)
+
     args = parse_args(config["argv"][2:])
-    argv = [config["argv"][0], "-m", "orthohmm", str(args.input_directory.resolve()),
-            "-o", str(args.output_directory.resolve()), "-c", str(args.cpu)]
+    python = config["argv"][0] if resolve_paths else command_path(config["argv"][0])
+    argv = [python, "-m", "orthohmm", command_path(args.input_directory),
+            "-o", command_path(args.output_directory), "-c", str(args.cpu)]
     fields = (("--threads_per_worker", "threads_per_worker"), ("-x", "matrix"), ("-e", "evalue"),
               ("--clustering", "clustering"), ("--cpm_resolution", "cpm_resolution"),
               ("--refinement_profile", "refinement_profile"), ("--accuracy_profile", "accuracy_profile"))
     for flag, field in fields:
         argv += [flag, str(getattr(args, field))]
-    argv += ["--metrics_json", str(args.result_json.resolve())]
+    argv += ["--metrics_json", command_path(args.result_json)]
     if not args.full_output:
         argv += ["--stop", "infer"]
     if args.phylogeny == "reconcile":
@@ -33,13 +45,15 @@ def native_orthohmm(config):
                       "phylogeny_root_rule", "phylogeny_pair_rule", "species_tree_rooting"):
             argv += ["--" + field, str(getattr(args, field))]
         if args.species_tree is not None:
-            argv += ["--species_tree", str(args.species_tree.resolve())]
+            argv += ["--species_tree", command_path(args.species_tree)]
     return argv
 
 
-def configurations(inputs, baseline, output, cpu_count=32):
+def configurations(inputs, baseline, output, cpu_count=32, *, resolve_orthohmm_paths=True):
     if type(cpu_count) is not int or cpu_count < 1:
         raise ValueError("Require a positive integer CPU allocation")
+    if type(resolve_orthohmm_paths) is not bool:
+        raise ValueError("Require a boolean path-resolution mode")
     if inputs["planned_runs"] != planned_runs() or [d["proteomes"] for d in inputs["datasets"]] != [4, 8, 12]:
         raise ValueError("Changed complete scaling inventory or run order")
     datasets = {d["proteomes"]: d for d in inputs["datasets"]}
@@ -58,7 +72,8 @@ def configurations(inputs, baseline, output, cpu_count=32):
             if config["argv"].count(flag) != 1:
                 raise ValueError("Ambiguous thread option")
             config["argv"][config["argv"].index(flag) + 1] = str(cpu_count)
-        native = config["argv"] if method == "orthofinder_full" else native_orthohmm(config)
+        native = config["argv"] if method == "orthofinder_full" else native_orthohmm(
+            config, resolve_paths=resolve_orthohmm_paths)
         runs.append({**row, "native_method": method, "dataset": dataset, "configuration": config,
                      "native_argv": native, "cwd": str(core), "measurement_directory": str(directory / "measurement"),
                      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation"})

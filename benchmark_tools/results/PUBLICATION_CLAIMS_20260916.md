@@ -308,6 +308,15 @@ same-size/truncated/missing and wrong identity mutations remain rejected.
 This is bounded replay portability, not complete CI, controlled timing,
 new scientific validation, rights clearance or publication readiness.
 
+The [offline remote-path follow-up](REMOTE_NATIVE_PATHS_20261002.md)
+retains strict scientific-command comparison and default local resolution,
+while removing preparation-host symlink influence from remote construction.
+The complete 15-field/27-run body is unchanged; 120 local and guarded copied
+cases pass. The actual preceding Python 3.13 log confirms all 69 metadata
+cases but has ten other failures. This is preparation/replay evidence, not
+new scientific results, new-patch remote proof, complete CI or execution
+authorization. Prospective helper identities need a new freeze.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 
+from benchmark_tools import prepare_dgx_scaling_plan as module
 from benchmark_tools.prepare_dgx_scaling_plan import plan, remap, ROOT
 
 
@@ -63,3 +64,29 @@ def test_metadata_listing_order_is_not_native_enumeration(manifests):
     manifests[0]["datasets"][0]["inputs"].reverse()
     result = plan(*manifests)
     assert any("enumeration" in gate for gate in result["remaining_gates"])
+
+
+def test_entire_remote_plan_body_matches_retained_commands(manifests):
+    path = Path(__file__).resolve().parents[2] / "benchmark_tools/results/dgx_scaling_commands_20260917.json"
+    retained = json.loads(path.read_text())
+    actual = plan(*manifests)
+    assert set(retained) == set(actual) | {"baseline", "helper_sources", "inputs", "original_commands", "source"}
+    assert actual == {key: retained[key] for key in actual}
+
+
+def test_local_symlink_cannot_rewrite_remote_command_paths(manifests, tmp_path, monkeypatch):
+    physical = tmp_path / "physical"
+    physical.mkdir()
+    remote = tmp_path / "remote"
+    remote.symlink_to(physical, target_is_directory=True)
+    monkeypatch.setattr(module, "ROOT", remote)
+    result = plan(*manifests)
+    assert len(result["runs"]) == 27
+    assert result["execution_authorized"] is False
+    for row in result["runs"]:
+        assert row["native_argv"][0].startswith(str(remote) + "/")
+        assert not any(str(physical) in arg for arg in row["native_argv"])
+        if row["environment_role"] == "orthohmm":
+            argv = row["native_argv"]
+            assert argv[argv.index("-o") + 1].startswith(str(remote) + "/")
+            assert argv[argv.index("--metrics_json") + 1].startswith(str(remote) + "/")

@@ -86,6 +86,14 @@ cases also pass in a checkout-blocked copied tree. The preceding actual Python
 3.13 log confirms the frontier correction, but has 14 other failures and does
 not contain this new test-only fix. Full CI and release remain unfinished.
 
+The [offline remote-path correction](results/REMOTE_NATIVE_PATHS_20261002.md)
+preserves target paths without preparation-host symlink resolution, keeping
+default local harness behavior and strict command equality. All 120 local
+cases also pass in an original-checkout-blocked copied tree; the entire
+15-field/27-run plan matches retained payloads. The preceding actual Python
+3.13 log confirms all 69 metadata cases, but has ten other failures. New-patch
+remote confirmation, source-inventory handoff and complete release remain open.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

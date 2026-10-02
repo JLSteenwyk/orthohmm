@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
@@ -10,9 +11,15 @@ from benchmark_tools.prepare_simulation_methods import commands
 
 
 @pytest.mark.parametrize("method", ["orthohmm_high_sensitivity", "orthohmm_satellite_v2"])
-def test_native_command_matches_actual_harness_translation(tmp_path, monkeypatch, method):
+@pytest.mark.parametrize("symlinked_inputs", [False, True])
+def test_native_command_matches_actual_harness_translation(tmp_path, monkeypatch, method, symlinked_inputs):
     inputs = tmp_path / "inputs"
-    inputs.mkdir()
+    if symlinked_inputs:
+        physical = tmp_path / "physical_inputs"
+        physical.mkdir()
+        inputs.symlink_to(physical, target_is_directory=True)
+    else:
+        inputs.mkdir()
     core = tmp_path / "core"
     config = commands({"input": str(inputs)}, tmp_path / "outputs", core,
                       sys.executable, tmp_path / "orthofinder")[method]
@@ -100,3 +107,56 @@ def test_invalid_cpu_count_rejected(tmp_path, cpus):
     inputs, baseline = fixtures(tmp_path)
     with pytest.raises(ValueError, match="CPU allocation"):
         configurations(inputs, baseline, tmp_path / "runs", cpu_count=cpus)
+
+
+@pytest.mark.parametrize("method, supplied_tree", [
+    ("orthohmm_high_sensitivity", False),
+    ("orthohmm_satellite_v2", False),
+    ("orthohmm_satellite_v2", True),
+])
+def test_remote_native_paths_preserve_lexical_target(tmp_path, method, supplied_tree):
+    physical = tmp_path / "physical"
+    physical.mkdir()
+    remote = tmp_path / "remote"
+    remote.symlink_to(physical, target_is_directory=True)
+    config = commands({"input": str(remote / "inputs")}, remote / "outputs", remote / "core",
+                      remote / "python", remote / "orthofinder")[method]
+    if supplied_tree:
+        config["argv"] += ["--species-tree", str(remote / "species.nwk")]
+        config["argv"][config["argv"].index("--species-tree-mode") + 1] = "supplied"
+    local = native_orthohmm(config)
+    target = native_orthohmm(config, resolve_paths=False)
+    assert local[0] == target[0] == str(remote / "python")
+    indices = [3, target.index("-o") + 1, target.index("--metrics_json") + 1]
+    if supplied_tree:
+        indices.append(target.index("--species_tree") + 1)
+    for index in indices:
+        assert Path(target[index]).is_relative_to(remote)
+        assert local[index] == str(physical / Path(target[index]).relative_to(remote))
+        local[index] = target[index]
+    assert local == target
+    assert not (physical / "outputs").exists()
+
+
+@pytest.mark.parametrize("field", ["python", "input", "output", "metrics", "species_tree"])
+@pytest.mark.parametrize("path", ["relative/path", "/remote/../path"])
+def test_remote_native_paths_reject_ambiguity(tmp_path, field, path):
+    config = commands({"input": str(tmp_path / "inputs")}, tmp_path / "outputs", tmp_path / "core",
+                      tmp_path / "python", tmp_path / "orthofinder")["orthohmm_satellite_v2"]
+    if field == "species_tree":
+        config["argv"] += ["--species-tree", path]
+    else:
+        config["argv"][{"python": 0, "input": 2, "output": 3, "metrics": 4}[field]] = path
+    with pytest.raises(ValueError, match="absolute without parent traversal"):
+        native_orthohmm(config, resolve_paths=False)
+
+
+@pytest.mark.parametrize("mode", [None, 0, 1, "False"])
+def test_invalid_path_resolution_mode_rejected(tmp_path, mode):
+    inputs, baseline = fixtures(tmp_path)
+    config = commands({"input": str(tmp_path / "inputs")}, tmp_path / "outputs", tmp_path / "core",
+                      tmp_path / "python", tmp_path / "orthofinder")["orthohmm_high_sensitivity"]
+    with pytest.raises(ValueError, match="boolean path-resolution"):
+        native_orthohmm(config, resolve_paths=mode)
+    with pytest.raises(ValueError, match="boolean path-resolution"):
+        configurations(inputs, baseline, tmp_path / "runs", resolve_orthohmm_paths=mode)

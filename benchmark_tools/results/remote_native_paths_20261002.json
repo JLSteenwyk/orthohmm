@@ -1,0 +1,189 @@
+{
+  "base_commit": "dabcbb2e444526a9879d6b31f2dfc99b271de475",
+  "copied_after": {
+    "bytes": 11960087,
+    "canary_blocked": true,
+    "errors": 0,
+    "failed": 0,
+    "files": 1829,
+    "passed": 120,
+    "project_origins": 81,
+    "scope": "Python audit events, not OS containment or cross-host/native science",
+    "seconds": 2.05,
+    "skipped": 0,
+    "subprocesses_forbidden": true,
+    "subsequent_original_events": 0,
+    "temporary_copy_removed": true
+  },
+  "historical_records_repinned": false,
+  "implementation": {
+    "configurations_keyword": "resolve_orthohmm_paths",
+    "default": true,
+    "local_default_resolution_unchanged": true,
+    "mode_type": "bool only",
+    "native_orthohmm_keyword": "resolve_paths",
+    "offline_remote_plan_mode": false,
+    "relative_or_parent_traversal_rejected_in_remote_mode": true
+  },
+  "intermediate_after": {
+    "failed": 0,
+    "overlaps_complete_panel": true,
+    "passed": 108,
+    "seconds": 1.38
+  },
+  "limitations": [
+    "Actual prior macOS command error is inspected, but its differing path tokens are not exposed; local symlink is a verified mechanism, not that exact host trace.",
+    "New path-construction patch has no remote CI confirmation yet.",
+    "Frozen execution recipes must adopt new helper bytes prospectively; historical source receipts remain unchanged.",
+    "No DGX access, host contention poll, service action, timing execution or biological rerun.",
+    "Lineage replay still needs historical scheduler-path/source staging without bypassing frozen-source guards.",
+    "Raw/provenance/platform failures, other-QfO uncertainty, rights, controlled resource evidence, complete release and public deposition remain open."
+  ],
+  "local_after": {
+    "errors": 0,
+    "failed": 0,
+    "new_cases": 21,
+    "passed": 120,
+    "seconds": 1.8,
+    "skipped": 0
+  },
+  "preceding_ci": {
+    "all_69_preceding_metadata_panel_cases_pass": true,
+    "cpu_wheel": "success",
+    "docs": "success",
+    "errors": 0,
+    "failed": 10,
+    "full_job_result": "failure",
+    "head_sha": "dabcbb2e444526a9879d6b31f2dfc99b271de475",
+    "inspected_log_download_utc": "2026-10-02T08:50:29.375406+00:00",
+    "linux_native": "success",
+    "new_remote_path_fix_not_in_source": true,
+    "observed_utc": "2026-10-02T08:49:18.529942+00:00",
+    "passed": 13912,
+    "python310_311_312": "in_progress",
+    "python313_job": 110768311686,
+    "python313_result": "failure",
+    "run": 36985130604,
+    "seconds": 405.24,
+    "skipped": 118,
+    "warnings": 30
+  },
+  "previous_sources": [
+    {
+      "bytes": 6742,
+      "path": "benchmark_tools/prepare_scaling_commands.py",
+      "sha256": "1b8b82402067c4a18eb37a82b29eb63e6813e6a085276eaa0001c42afcaa6389"
+    },
+    {
+      "bytes": 8431,
+      "path": "benchmark_tools/prepare_dgx_scaling_plan.py",
+      "sha256": "6602bce56a1cb44e118b61e1bcdf94211c76643f31dcf74b95543038d6a84441"
+    }
+  ],
+  "production_constructor_code_changed": true,
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "real_symlink_before": {
+    "error": "Scientific command differs beyond declared paths/CPU flags",
+    "failed": 1,
+    "not_an_actual_macos_filesystem_trace": true,
+    "passed": 0,
+    "seconds": 0.34
+  },
+  "records": [
+    {
+      "bytes": 7441,
+      "path": "benchmark_tools/prepare_scaling_commands.py",
+      "sha256": "187f30e25c8c98da27b100c7c9720fe3b0e77fb70ea8f875a36c25e41401d276"
+    },
+    {
+      "bytes": 8542,
+      "path": "benchmark_tools/prepare_dgx_scaling_plan.py",
+      "sha256": "2487217fd3c3eb8667783e62f09ccbf5b3477811163b24bb2b4b57e716878f2c"
+    },
+    {
+      "bytes": 7954,
+      "path": "benchmark_tools/benchmark_production.py",
+      "sha256": "47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc"
+    },
+    {
+      "bytes": 12607,
+      "path": "benchmark_tools/prepare_simulation_methods.py",
+      "sha256": "ab3ecbdd1a35fd3e3c08774c48d7f633ed2e2a2fafcfc49b48f658d6ed11db63"
+    },
+    {
+      "bytes": 7944,
+      "path": "tests/unit/test_prepare_scaling_commands.py",
+      "sha256": "3f3c51ad3a6243f8d5a49b73d9e3d11694a737516710f9be7f8b16f15bb260b6"
+    },
+    {
+      "bytes": 4098,
+      "path": "tests/unit/test_prepare_dgx_scaling_plan.py",
+      "sha256": "d02175878174c180358a2052490fb81b5c9d262eeee6b0a9c8cecf9cc4f9d8af"
+    },
+    {
+      "bytes": 10644,
+      "path": "benchmark_tools/results/dgx_scaling_inputs_20260917.json",
+      "sha256": "fa95fa60494c12d55f3bc277629c842ddbd2646a691c973882059708714e815e"
+    },
+    {
+      "bytes": 151859,
+      "path": "benchmark_tools/results/publication_scaling_commands_20260917.json",
+      "sha256": "25345e7a5d49e7474b09188498dc4760b298512266cd21510fba56ad6401e53d"
+    },
+    {
+      "bytes": 488540,
+      "path": "benchmark_tools/results/publication_variable_native_methods_20260916.json",
+      "sha256": "bf677728cf9312edd9755d9ac1ceefbce3abb8c3848d43413631dc00ca00eb2f"
+    },
+    {
+      "bytes": 142809,
+      "path": "benchmark_tools/results/dgx_scaling_commands_20260917.json",
+      "sha256": "7096348236f8372ef7f6ad12a3e829eae3dfee812b17c3b0bdd582480538ff1b"
+    },
+    {
+      "bytes": 5540,
+      "path": "benchmarks/work/remote_native_paths_before_20261002.xml",
+      "sha256": "c139fcd1602d5618d9979c2c8831fdfa9be91ed05aaee7b1c68ca32efd6bf82b"
+    },
+    {
+      "bytes": 14122,
+      "path": "benchmarks/work/remote_native_paths_after_20261002.xml",
+      "sha256": "158c195d8b5f1922a489ad97e107c6bb3bfe055c5903929c0ce5f00501bdf88d"
+    },
+    {
+      "bytes": 15752,
+      "path": "benchmarks/work/remote_native_paths_complete_20261002.xml",
+      "sha256": "9e4f4af712005ae5d25df7f3823a25324d56ca49a580f0bd8aeca60e645d94a9"
+    },
+    {
+      "bytes": 345567,
+      "path": "benchmarks/work/remote_native_paths_copied_20261002.json",
+      "sha256": "279a8780ae12ef2ae29c4dd6484d5da1e7fa93d43bac8415d745672514b4e307"
+    },
+    {
+      "bytes": 307384,
+      "path": "benchmarks/work/ci_remote_dabcbb2e_20261002/110768311686.log",
+      "sha256": "0b4702add083dea63413d364549e255c7fe62ff2ab79517ac00af23fe06879ec"
+    }
+  ],
+  "retained_plan_body": {
+    "canonical_json": "sort_keys=True,separators=(comma,colon), UTF-8, no newline",
+    "canonical_json_sha256": "e0596b06b1648bc1c0fc09e085340174745dc56755e718bf3486956d1cdb183e",
+    "exact_match": true,
+    "fields": 15,
+    "retained_only_fields": [
+      "baseline",
+      "helper_sources",
+      "inputs",
+      "original_commands",
+      "source"
+    ],
+    "runs": 27
+  },
+  "schema": 1,
+  "scientific_code_changed": false,
+  "scientific_commands_or_settings_changed": false,
+  "scientific_timings_admitted": false,
+  "status": "remote_command_path_construction_verified_locally"
+}

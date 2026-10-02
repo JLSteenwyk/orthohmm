@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Offline Remote Native Command Paths (2026-10-02)
+
+Previous turn is progress at pushed dabcbb2e: explicit test metadata bindings
+and actual copied execution, preserving historical/source/scientific bytes.
+Read the full objective/latest ledger/HEAD and observe run 36985130604.
+At 08:38:50 UTC full/3.10/3.12/3.13/wheel are live, 3.11 queued and Linux
+diagnostics/docs succeed. No restart. Timing remains deferred with no host
+contention poll/question, DGX access or unrelated process/service action.
+
+Inspect remaining command and lineage failures. Offline remote construction
+resolves target paths through the preparation filesystem; a real temporary
+symlink reproduces the strict command mismatch before correction. Add an
+explicit lexical path mode to the native/configuration builders and select
+it only in the remote planner. Preserve default local resolution and exact
+scientific-command validation; reject non-boolean modes and relative/parent-
+traversing remote interpreter/input/output/metrics/tree paths. No scientific
+implementation, settings, scores, input bytes or retained commands change.
+
+Add 21 cases. Entire returned plan matches all 15 fields/27 runs of retained
+payloads, including resource settings and order. **120 local cases pass in
+1.80s**, zero errors/failures/skips; intermediate 108-case pass overlaps.
+**All 120 cases pass in a fresh copied child in 2.05s**, with 1,829 staged
+files/11,960,087 bytes, 81 staged project origins, blocked original canary,
+zero later original open events and child subprocesses forbidden. Temporary
+staging removed. Python-event evidence is not OS containment, cross-host
+native science or controlled timing. [Evidence and pins](REMOTE_NATIVE_PATHS_20261002.md)
+retain the real failure, complete checks and source/input/report identities.
+
+At 08:49:18 UTC preceding Python 3.13/full jobs fail; 3.10/3.11/3.12 remain
+live and Linux diagnostics/wheel/docs succeed. Inspect actual Python 3.13
+log once: 13,912 passes/10 failures/118 skips/zero errors/30 warnings/405.24s.
+All 69 preceding metadata-panel cases pass, not all 128 local cases remotely
+or full CI. The original macOS command failure exposes no differing path
+tokens; local symlink evidence is a verified mechanism, not that exact host
+trace. New path correction is not in this preceding source.
+
+Two preparation helpers change: prospective inventories need new source
+pins after stabilization, not historical receipt repinning or stale readiness
+reuse. Lineage replay still needs historical scheduler-path/source staging;
+retain its frozen-source guard rather than accept current helper bytes.
+Commit/push this milestone and observe automatic CI. Remaining raw/platform/
+provenance failures, other-QfO uncertainty, rights, controlled resources,
+full executable release and public deposition remain open. No new biology,
+bootstrap, scoring, source search, timing or old archive regeneration occurs.
+Original publication goal stays active and incomplete.
+
 ## Retained Overhead Replay Metadata Relocation (2026-10-02)
 
 Previous reply only clarifies timing availability and is no progress; re-read

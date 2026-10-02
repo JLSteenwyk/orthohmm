@@ -579,6 +579,15 @@ zero; this is not OS containment or complete native restoration. Its preceding
 actual Python 3.13 log confirms the earlier frontier correction, with 14 other
 failures. New-patch remote confirmation and complete CI remain outstanding.
 
+The [offline remote-path construction correction](results/REMOTE_NATIVE_PATHS_20261002.md)
+adds an explicit lexical mode only for the remote planner; default local
+harness path resolution remains unchanged. All 120 local/copied cases pass,
+including complete retained-plan equality and ambiguity/mode rejection.
+Prospective inventories must pin the two changed preparation helpers; old
+receipts are not repinned. Actual source-dabcbb2e Python 3.13 confirms all
+69 preceding metadata cases, with ten other failures and no proof of this
+new correction, full CI, native restoration or timing admission.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

@@ -43,7 +43,8 @@ def plan(inputs, original, baseline):
     target = {"core_root": str(core), "tool_entrypoints": {
         "orthohmm_python": {"absolute_path": str(python)},
         "orthofinder": {"absolute_path": str(orthofinder)}}}
-    runs = configurations(inputs, target, output, cpu_count=20)
+    # These are target-host paths, not paths to resolve on the preparation host.
+    runs = configurations(inputs, target, output, cpu_count=20, resolve_orthohmm_paths=False)
     old_runs = original["runs"]
     if len(old_runs) != 27:
         raise ValueError("Changed frozen run count")
