@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Changed Timing Helpers Bound And Startup Checked (2026-10-02)
+
+Previous turn progressed at pushed be389707 by adding the conditional panel
+reviewer. Read the original goal/current ledger and preserve timing deferral.
+The user does not know the quiet window; it is not needed now. No renewed
+scheduling question, host-contention query or disruption of unrelated work.
+
+Refresh the concrete stale helper inventory with the unchanged builder in a
+new directory, comparing against the latest explicit binding. Five Python
+helpers change and one is added; no removed/non-helper drift. Scientific
+baseline/controller/plan/private trees and all old receipts stay unchanged.
+The inventory driver uses the existing test environment; actual native imports
+and controller helper startup use the frozen private controller.
+
+Full pre/post native-startup checks pass for 39,208 OS/helper and 18,751 private
+records, 57,959 total. One fresh probe per native interpreter matches retained
+lookup signatures: OrthoHMM 913 modules, OrthoFinder 1,563. A separate controller
+probe imports execution/environment/lifecycle/raw/combined-review helpers:
+412 file-backed modules, 83 project origins, 426 observed files all covered.
+Pure production/engineering deployment resolution passes with the new lookup.
+No real request selection, readiness, environment handoff or observation worker.
+
+Independent stdlib readback verifies 33 compact evidence pins, rehashes and
+checks coverage for 2,718 observed files, compares exact signatures, verifies
+changed-helper bytes against source be389707 and checks unchanged plan/history.
+Preserve initial readback failure from incorrectly demanding empty native
+stderr; successful OrthoFinder startup emits two SyntaxWarnings. Correct only
+the reader and retain stderr; no raw artifact or probe is changed/rerun.
+No source implementation or tests change; do not rerun the retained panels.
+See [evidence, pins and limitations](THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md).
+
+Update current guides/claims, then commit/push only scoped records. All owned
+probe/readback handles terminal. No inference, calibration, timing, scheduler
+allocation/submission, DGX, shared upgrade, service/unrelated-job change,
+dated archive rebuild or PDF render. Real policy/readiness/handoff, launch-time
+runtime checks, verified isolation, 54 engineering and 27 production outcomes
+remain outstanding. Original publication goal active, not complete.
+
 ## Conditional Engineering Panel Review Implemented (2026-10-02)
 
 Previous turn progressed at pushed 1ef8a14d by correcting boundary PSI review.

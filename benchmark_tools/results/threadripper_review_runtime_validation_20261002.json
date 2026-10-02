@@ -1,0 +1,343 @@
+{
+  "controller": {
+    "engineering_deployment_selection_passed": true,
+    "explicit_deployment_selection_passed": true,
+    "mapped_files": 62,
+    "modules": 412,
+    "observed_files": 426,
+    "project_modules": 83,
+    "requested": [
+      "benchmark_tools.run_threadripper_scaling",
+      "benchmark_tools.threadripper_environment_worker",
+      "benchmark_tools.manage_threadripper_environment_worker",
+      "benchmark_tools.audit_threadripper_overhead",
+      "benchmark_tools.review_threadripper_process_stream",
+      "benchmark_tools.review_threadripper_pressure_stream",
+      "benchmark_tools.review_threadripper_overhead"
+    ]
+  },
+  "controller_report": {
+    "bytes": 127954,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_review_startup_20261002/report.json",
+    "sha256": "0457cec566fc7c3bb1de1679c9812fe93d68b889b3e9cb69e93c9d078d1eb099"
+  },
+  "evidence": [
+    {
+      "bytes": 6584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_review_20261002.json",
+      "sha256": "be7084d73bd90dedcdec210bbc3f9575eb9e3d9461c5f882d7b958c0c3b670de"
+    },
+    {
+      "bytes": 6584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup.json",
+      "sha256": "be7084d73bd90dedcdec210bbc3f9575eb9e3d9461c5f882d7b958c0c3b670de"
+    },
+    {
+      "bytes": 36572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/binding.json",
+      "sha256": "cee920ac3fd5f38f38026e35f6bc4b6a89950aead18ebbce7d0827bf125da709"
+    },
+    {
+      "bytes": 6176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_explicit_20261002.json",
+      "sha256": "3c244a46786cb0efdf58b15db99b30eb0f166b554e0511d8f07afd20fcc79417"
+    },
+    {
+      "bytes": 36576,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/binding.json",
+      "sha256": "03f33e302c104fd4e37fda199c0221e324b358ee74cfcb7ab5d80c591b4b12d3"
+    },
+    {
+      "bytes": 470750,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_deployment_20260928/baseline.json",
+      "sha256": "b39e5f26518191ad53e7a796690f083a0bd5ede2081cbfbcb7b00a86947acdc3"
+    },
+    {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_deployment_20260928/plan.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    {
+      "bytes": 9752057,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/native_os_helpers.json",
+      "sha256": "1f2c281014556c326969d3e8abc45eda850e6ac787f7d9ea4fdc4f7f49055a10"
+    },
+    {
+      "bytes": 6173195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/private_trees.json",
+      "sha256": "a6b90ec2fdbdca0d3138c6960850632225abaabfc41edc316eb53ec149fe8231"
+    },
+    {
+      "bytes": 9751659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/native_os_helpers.json",
+      "sha256": "f5eb2fde7534baacab29f3270bc4f5cd5538d4d2004973d109afd8d8ec3e2cc2"
+    },
+    {
+      "bytes": 1394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/helper_delta.json",
+      "sha256": "fcde5abffbc1c1f8e4cf43c105b19c4963e69218bc8766f3e629b17b2c7338f0"
+    },
+    {
+      "bytes": 9053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_overhead.py",
+      "sha256": "6d2b1a298cecc7bf29aa485422dfb404b48af3202bab11cc48a2be3c71cab289"
+    },
+    {
+      "bytes": 5653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_threadripper_panel_history.py",
+      "sha256": "dad1408e30f6d7a63702587fc342c90690ebec5b01d866edd7a1461122afb169"
+    },
+    {
+      "bytes": 6717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_pressure_stream.py",
+      "sha256": "5ac0a27ae5f0f281853309d0b8dcc38db2ee4d4fc574ded94211d7ac61858495"
+    },
+    {
+      "bytes": 12110,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_stream.py",
+      "sha256": "036c08ec3b2aa4969410fb0d83fdb3d00c3bd4ef2844a230820237199ba36540"
+    },
+    {
+      "bytes": 20328,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "sha256": "dcb5806ff0b6ff112ec0abae173da1878bdc0136a77f735c31341da3fac4492b"
+    },
+    {
+      "bytes": 4943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py",
+      "sha256": "fb4d137bb33ab92ecd68a32120c4ff49baa560558053828f2a9b8bcb679706b1"
+    },
+    {
+      "bytes": 1258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_process.json",
+      "sha256": "d7028d454281ae9e753d1a5541ad66243e0a6e052fc014e8079d07e54501e8a0"
+    },
+    {
+      "bytes": 6286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_review_runtime_driver_20261002.py",
+      "sha256": "3d7437493e9a059bfb47c6d7722e82d4d6ab2b79fa4d58d5284b05d4832bc588"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_process.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 8468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_native_python_lookup.py",
+      "sha256": "ae358a5a057f7a08a0da2d952a4f9d8baff94a389d361f3428549905906047cf"
+    },
+    {
+      "bytes": 1341077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/lookup_current/orthofinder.json",
+      "sha256": "63d5082805af10fc929a12fa0baac30e0261d81a570cd70e44d466f345fee8f5"
+    },
+    {
+      "bytes": 1341075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_current/orthofinder.json",
+      "sha256": "fe35ff7f87a12d402ad2b91df9ca72b017886424267df2ccaea3d85156ffe2f2"
+    },
+    {
+      "bytes": 276032,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_current/orthofinder_process.json",
+      "sha256": "83e92ff8c6dab7d9fa777e3a326aff93951e2028a23558d64fb114048e1aaac5"
+    },
+    {
+      "bytes": 958450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/lookup_current/orthohmm.json",
+      "sha256": "09a0f106a5cdd910a89ef948309813943f6ced14f9bd9e8e15107e3f03274577"
+    },
+    {
+      "bytes": 958448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_current/orthohmm.json",
+      "sha256": "cd5346f4945e29939605c7b536aae880710de839478cb794b45b72354adafa93"
+    },
+    {
+      "bytes": 196543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/lookup_current/orthohmm_process.json",
+      "sha256": "cb78c7a9d9fcd3b44dcce2c05de883559a5bd2c5c6a5ea9c1ba86381dc25f4d1"
+    },
+    {
+      "bytes": 127954,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_review_startup_20261002/report.json",
+      "sha256": "0457cec566fc7c3bb1de1679c9812fe93d68b889b3e9cb69e93c9d078d1eb099"
+    },
+    {
+      "bytes": 505873,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_review_startup_20261002/process.json",
+      "sha256": "a932e5c4dfcc502d734b26653abe9d98c2a40778723006379b253ddffaea99e7"
+    },
+    {
+      "bytes": 5988,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_review_controller_driver_20261002.py",
+      "sha256": "1919e15e746040396b81e68e21b38cb83ae453775b7478a011445c9af6f8b834"
+    },
+    {
+      "bytes": 447512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_plan_20260930.json",
+      "sha256": "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182"
+    },
+    {
+      "bytes": 538,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_attempts_unrun_20260930.json",
+      "sha256": "021055e75df52a4fa8918b0a665a8b1a94619ee1b52e65229e4e07c379ed6343"
+    }
+  ],
+  "git_verified_sources": [
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 9053,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_overhead.py",
+        "sha256": "6d2b1a298cecc7bf29aa485422dfb404b48af3202bab11cc48a2be3c71cab289"
+      },
+      "relative_path": "benchmark_tools/review_threadripper_overhead.py"
+    },
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 5653,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_threadripper_panel_history.py",
+        "sha256": "dad1408e30f6d7a63702587fc342c90690ebec5b01d866edd7a1461122afb169"
+      },
+      "relative_path": "benchmark_tools/bind_threadripper_panel_history.py"
+    },
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 6717,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_pressure_stream.py",
+        "sha256": "5ac0a27ae5f0f281853309d0b8dcc38db2ee4d4fc574ded94211d7ac61858495"
+      },
+      "relative_path": "benchmark_tools/review_threadripper_pressure_stream.py"
+    },
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 12110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_stream.py",
+        "sha256": "036c08ec3b2aa4969410fb0d83fdb3d00c3bd4ef2844a230820237199ba36540"
+      },
+      "relative_path": "benchmark_tools/review_threadripper_process_stream.py"
+    },
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 20328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+        "sha256": "dcb5806ff0b6ff112ec0abae173da1878bdc0136a77f735c31341da3fac4492b"
+      },
+      "relative_path": "benchmark_tools/run_threadripper_scaling.py"
+    },
+    {
+      "commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+      "current": {
+        "bytes": 4943,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py",
+        "sha256": "fb4d137bb33ab92ecd68a32120c4ff49baa560558053828f2a9b8bcb679706b1"
+      },
+      "relative_path": "benchmark_tools/threadripper_panel_progress.py"
+    }
+  ],
+  "helper_changes": {
+    "added": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_overhead.py"
+    ],
+    "changed": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_threadripper_panel_history.py",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_pressure_stream.py",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_stream.py",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py"
+    ],
+    "removed": []
+  },
+  "independently_rehashed_observed_files": 2718,
+  "initial_readback_failure": "Assertion requiring empty native stderr failed before receipt creation: successful OrthoFinder startup emits two retained SyntaxWarnings. Corrected readback retains stderr without changing or rerunning probes.",
+  "inventory_driver_python": {
+    "bytes": 8019136,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "limitations": [
+    "Inventory driver used the existing test environment; actual native probes and controller helper probe used the frozen private controller.",
+    "Independent stdlib readback rehashes evidence and observed files, not a third full-tree scan.",
+    "Declared import coverage and pure deployment resolution are not executor/environmental handoff or all workload branches.",
+    "No new unit tests or inference, calibration, host contention polling, scheduler jobs or resource measurements.",
+    "Real environmental policy/readiness/isolation and all engineering/production timing outcomes remain outstanding."
+  ],
+  "lookup": {
+    "bytes": 6584,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_review_20261002.json",
+    "sha256": "be7084d73bd90dedcdec210bbc3f9575eb9e3d9461c5f882d7b958c0c3b670de"
+  },
+  "manifest_record_counts": [
+    39208,
+    18751
+  ],
+  "native": {
+    "orthofinder": {
+      "files": 1531,
+      "modules": 1563,
+      "retained_identity_match": true,
+      "stderr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/tools/tree.py:371: SyntaxWarning: invalid escape sequence '\\-'\n  \"\"\"\n/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/tools/newick.py:341: SyntaxWarning: invalid escape sequence '\\s'\n  MATCH = '%s\\s*%s\\s*(%s)?' % (FIRST_MATCH, SECOND_MATCH, _NHX_RE)\n"
+    },
+    "orthohmm": {
+      "files": 946,
+      "modules": 913,
+      "retained_identity_match": true,
+      "stderr": ""
+    }
+  },
+  "publication_ready": false,
+  "readback_source": {
+    "bytes": 9968,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_review_runtime_readback_20261002.py",
+    "sha256": "f02a82afd522d03519e5931e8d1bf77b00bf637224015d92235a77f2e8a92ae8"
+  },
+  "runtime_checks": {
+    "after": [
+      {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/native_os_helpers.json",
+        "records": 39208,
+        "scientific_execution_authorized": false,
+        "sha256": "1f2c281014556c326969d3e8abc45eda850e6ac787f7d9ea4fdc4f7f49055a10",
+        "status": "runtime_tree_identity_matches"
+      },
+      {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/private_trees.json",
+        "records": 18751,
+        "scientific_execution_authorized": false,
+        "sha256": "a6b90ec2fdbdca0d3138c6960850632225abaabfc41edc316eb53ec149fe8231",
+        "status": "runtime_tree_identity_matches"
+      }
+    ],
+    "after_wall_s": 55.784750182996504,
+    "before": [
+      {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/native_os_helpers.json",
+        "records": 39208,
+        "scientific_execution_authorized": false,
+        "sha256": "1f2c281014556c326969d3e8abc45eda850e6ac787f7d9ea4fdc4f7f49055a10",
+        "status": "runtime_tree_identity_matches"
+      },
+      {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/private_trees.json",
+        "records": 18751,
+        "scientific_execution_authorized": false,
+        "sha256": "a6b90ec2fdbdca0d3138c6960850632225abaabfc41edc316eb53ec149fe8231",
+        "status": "runtime_tree_identity_matches"
+      }
+    ],
+    "before_wall_s": 56.13040070398711
+  },
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "source_commit": "be389707dd711bed20d1725786ae44ecada6df3a",
+  "status": "review_helpers_runtime_startup_verified"
+}

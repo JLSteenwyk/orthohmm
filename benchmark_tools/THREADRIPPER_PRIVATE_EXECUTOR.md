@@ -38,12 +38,14 @@ route automatically discovers or upgrades an interpreter or dependency.
 
 ## Explicit Current Lookup
 
-The [executed current-source refresh](results/THREADRIPPER_RUNTIME_REFRESH_20261002.md)
-preserves the frozen baseline/controller/plan and private-tree manifest, while
-refreshing changed helper identities. All 57,958 records match before/after
-the native declared-import probe, and both native lookups match their retained
-reports. All 327 latest focused tests pass, including eight explicit-lookup
-executor compositions added after startup. This is startup evidence, not readiness.
+The [latest review-helper refresh](results/THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
+preserves the frozen baseline/controller/plan/private manifest while binding
+the five changed and one new Python helpers. All 57,959 records match
+before/after native startup, and both native lookups match retained reports.
+Actual controller startup covers all 426 observed files and 83 project-module
+origins, including the new review combiner. This is startup evidence, not readiness.
+The [earlier refresh](results/THREADRIPPER_RUNTIME_REFRESH_20261002.md) and its
+327-case test receipt remain historical evidence, not repeated tests.
 
 An explicitly private request may supply optional `runtime_lookup`, a direct
 absolute file record with exactly `path`, positive integer `bytes` and lowercase
@@ -52,19 +54,19 @@ readiness review. Shared/implicit routes reject it. The old default is untouched
 This avoids embedding a refreshed lookup hash into source inventoried by that
 lookup. No runtime discovery, fallback or implicit readiness approval is added.
 
-The [new local-host lookup receipt](results/threadripper_private_lookup_explicit_20261002.json)
-has 6,176 bytes and SHA256
-`3c244a46786cb0efdf58b15db99b30eb0f166b554e0511d8f07afd20fcc79417`.
+The [latest local-host lookup receipt](results/threadripper_private_lookup_review_20261002.json)
+has 6,584 bytes and SHA256
+`be7084d73bd90dedcdec210bbc3f9575eb9e3d9461c5f882d7b958c0c3b670de`.
 Bind its actual direct local path in `runtime_lookup`; it refers to retained
 Threadripper work artifacts, not a portable runtime distribution. Do not
 calculate replacement hashes from untrusted manifests or reuse old readiness.
 All other request fields, full current-source recipe, history, real policy,
 observer validation and environmental handoff remain required.
 
-The [actual controller-startup check](results/THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
-also imports the current executor/environment/lifecycle/auditor modules:
-410 file-backed modules, 81 project modules and 424 observed files all match
-pinned identities. Pure explicit-deployment resolution passes. This is not
+The [latest actual controller-startup check](results/THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
+also imports the current process/pressure and panel reviewers:
+412 file-backed modules, 83 project modules and 426 observed files all match
+pinned identities. Pure production/engineering deployment resolution passes. This is not
 executor selection, real environmental handoff or complete workload/file-I/O
 closure; no scheduler job or measurement function executes.
 
@@ -114,14 +116,15 @@ now selects either collector for the separate 54-task engineering panel.
 It requires an explicit private lookup and `overhead_plan`, engineering
 readiness/history schemas and the same environmental safeguards. Failure
 stops continuation; no engineering result becomes a production identity.
-These helper bytes are not covered by the earlier startup inventory.
-Bind the final runtime/source before launch, not a new scientific command
-plan or repeated calibration. Actual overhead/environmental execution is pending.
+These helper bytes are covered by the latest review-helper inventory/startup
+receipt above, not by the earlier inventory. Recheck the bound runtime/source
+at launch without changing the scientific plan or repeating calibration.
+Actual overhead/environmental execution is pending.
 
 The passed 22380 calibration remains accounting/cadence evidence, not causal
 slowdown. The separate 54-task native observer-control panel and 27 production
 identities remain unadmitted. A real reviewed process/service policy, complete
-native environmental handoff, final current-source/runtime validation and
+native environmental handoff, launch-time current-source/runtime validation and
 quiet window are still required. A retained lookup pin is not proof that its
 historical transitive runtime files still match after later helper changes.
 

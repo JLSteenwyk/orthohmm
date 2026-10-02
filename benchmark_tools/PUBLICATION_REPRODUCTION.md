@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [latest helper/runtime refresh](results/THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
+binds five changed and one added timing helpers without changing the frozen
+scientific runtime/plan. All 57,959 records match before/after native startup;
+both native lookups match retained observations. Actual controller startup
+covers 426 files and resolves production/engineering deployments correctly.
+Independent readback verifies 33 compact pins and 2,718 observed-file identities,
+retaining OrthoFinder startup warnings. No new tests, inference or timing runs.
+Actual policy/readiness/handoff, quiet-host proof and timing outcomes remain missing.
+
 The [conditional engineering-panel review](results/THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
 combines fresh raw replay with every attempt's recorded runtime/environment/
 resource/output reviews. All 137 focused tests pass. The actual unrun CLI
@@ -35,9 +44,9 @@ integration, not actual native handoff, quiet-host proof or engineering timing.
 The [private native-observer control wiring](results/THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
 adds the missing route for the retained 54-task overhead plan, engineering-only
 identities/reviews, both collectors and unchanged environmental safeguards.
-All 559 focused cases pass; no native timing task launches. Earlier startup
-inventories do not attest changed helper bytes. Final runtime binding, real
-environment handoff, all prescribed outcomes and a quiet window remain required.
+All 559 focused cases pass; no native timing task launches. Changed helper
+bytes now have the separate latest startup binding above. Launch-time runtime
+checks, real environment handoff, prescribed outcomes and a quiet window remain required.
 The separate 27 production identities and scientific settings stay unchanged.
 
 The [actual private-controller startup](results/THREADRIPPER_CONTROLLER_STARTUP_20261002.md)

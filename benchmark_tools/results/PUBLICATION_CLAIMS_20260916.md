@@ -13,6 +13,15 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [latest review-helper runtime refresh](THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
+resolves the stale-helper startup binding at source be389707. Only five changed
+and one new Python helpers differ; scientific runtime/plan/controller stay frozen.
+All 57,959 records match before/after native startup, both native lookups match
+retained signatures, and actual controller startup covers all 426 observed files.
+Independent readback verifies 33 compact pins and 2,718 observed-file identities;
+OrthoFinder startup warnings remain recorded. This is not native/environmental
+handoff, continuous enforcement, quiet-host proof, overhead or timing admission.
+
 The [conditional engineering review combiner](THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
 now binds the four post-run review categories to independent raw replay and
 the same attempt/controller identities. All 137 focused cases pass; an actual
@@ -33,8 +42,8 @@ implements the retained 54-task route through both collectors and the existing
 environmental safeguards. All 559 focused cases pass, including engineering
 history/readiness separation and failure stopping. This is synthetic/component
 validation, not actual native handoff, slowdown or controlled resource evidence.
-The three changed execution helpers require a final current runtime binding;
-prior startup inventories remain historical, not new execution approval.
+Changed execution/review helpers now have the latest startup binding above;
+prior inventories remain historical. Neither receipt is execution approval.
 
 The [actual private-controller startup](THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
 adds controller rather than native-interpreter evidence: all 424 observed files
