@@ -335,6 +335,13 @@ new inventory fix is not yet remotely confirmed. Derived metadata replay is
 not raw biological validation or publication closure. No quiet window is
 needed now; controlled timing remains deferred without disrupting other work.
 
+The [SwissTrees raw-source relocation workflow](SWISS_RAW_SOURCE_RELOCATION_20261002.md)
+adds actual identity-gated export from complete copied raw panels, retaining
+all 11/1,774 source occurrences. Both descriptive tables are byte-identical
+to retained outputs; 187 focused tests pass. This is more than derived-only
+arithmetic replay, but does not rerun native feature/annotation admission,
+establish raw-data rights, provision remote CI or complete the release.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

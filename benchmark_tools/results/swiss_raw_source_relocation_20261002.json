@@ -1,0 +1,220 @@
+{
+  "controlled_timing_run": false,
+  "copied_export": {
+    "canary_blocked": true,
+    "child_subprocesses_forbidden": true,
+    "late_three_unit_cases_added_after_copy": true,
+    "later_original_open_events": 0,
+    "os_containment_claim": false,
+    "production_sources_match_current": true,
+    "project_origins": 22,
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "raw_directories": {
+      "duplication": {
+        "bytes": 4571,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_raw_sources_duplication_20261002/bindings.json",
+        "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58",
+        "unique_bytes": 93699174,
+        "unique_files": 11
+      },
+      "fragment": {
+        "bytes": 704165,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/swiss_raw_sources_fragment_20261002/bindings.json",
+        "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1",
+        "unique_bytes": 606744832,
+        "unique_files": 1773
+      }
+    },
+    "staged_files": 1823,
+    "staged_source_bytes": 12231453,
+    "summaries": {
+      "duplication": {
+        "all_rows_exact": true,
+        "checked_inputs": 18,
+        "outputs": [
+          {
+            "bytes": 6285,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/duplication/scores.tsv",
+            "sha256": "02ecd273ee93c8ef42bfdb6d629376052890ab3f3a3b0dc871e649a6430276d5"
+          },
+          {
+            "bytes": 3366,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/duplication/scores.md",
+            "sha256": "c243887d57128f36317eb797fd40d5e4ed2604afdea26f295b969f579692b6e6"
+          },
+          {
+            "bytes": 30557,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/duplication/manifest.json",
+            "sha256": "00b767d154b6722c98e8bfa6f7326d2c75c70c14761fa82803484ea4102cae40"
+          }
+        ],
+        "raw_source_occurrences": 11,
+        "rows": 32,
+        "tsv_and_markdown_byte_equal": true
+      },
+      "fragment": {
+        "all_rows_exact": true,
+        "checked_inputs": 1781,
+        "outputs": [
+          {
+            "bytes": 11986,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/fragment/scores.tsv",
+            "sha256": "0ddd62f5d9f6f7d9ef21ec4ed2df3b688ca8c21cdc3c5a609e73ff296691a921"
+          },
+          {
+            "bytes": 5668,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/fragment/scores.md",
+            "sha256": "2e2b21992a1d1fbcba19509e9867dd1340690e22f5a4d40795756a201f95d561"
+          },
+          {
+            "bytes": 1327057,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-swiss-raw-relocation-srpiycri/outputs/fragment/manifest.json",
+            "sha256": "ad1050a0c3e5ad9a924c265470d21a60f3e31edc78483bfbdc4e0d1f05c24aa1"
+          }
+        ],
+        "raw_source_occurrences": 1774,
+        "rows": 56,
+        "tsv_and_markdown_byte_equal": true
+      }
+    },
+    "temporary_staging_removed": true
+  },
+  "date": "2026-10-02",
+  "historical_manifests_changed": false,
+  "native_extraction_rerun": false,
+  "parent_commit": "ee2a7af0c3aaf17cfa114eb45557f593bb7575af",
+  "preceding_remote": {
+    "all_five_macos_test_jobs": "failure",
+    "contains_raw_relocation_patch": false,
+    "errors": 0,
+    "failed": 5,
+    "inventory_fixture_cases_passed": 44,
+    "job": 110791892621,
+    "linux_diagnostics_wheel_docs": "success",
+    "log_download_utc": "2026-10-02T10:08:50.869582+00:00",
+    "passed": 13964,
+    "python": "3.13",
+    "run": 36992558116,
+    "seconds": 482.34,
+    "skipped": 118,
+    "warnings": 30
+  },
+  "publication_ready": false,
+  "raw_biological_admission_rerun": false,
+  "records": [
+    {
+      "bytes": 5998,
+      "path": "benchmark_tools/relocate_swiss_raw_sources.py",
+      "sha256": "5bf4f1e4d2c11fb62b1ba34a95d28d89e8919b15c9c773ad5ca205199fc42d95"
+    },
+    {
+      "bytes": 6449,
+      "path": "benchmark_tools/export_swiss_duplication_strata.py",
+      "sha256": "6fc33a92ced1dd79a592b0f75903b6a2733d4e7033d409578947eaf4b149e36a"
+    },
+    {
+      "bytes": 6285,
+      "path": "benchmark_tools/export_swiss_fragment_strata.py",
+      "sha256": "b182190ecfdf3eeb887951fbe5b81c588e362809beef05769ff1876aea83b3be"
+    },
+    {
+      "bytes": 8643,
+      "path": "tests/unit/test_relocate_swiss_raw_sources.py",
+      "sha256": "d5f03c533ba6fddf317640da1e2ffb0851eac0a9310adfc32d2d1a082531ca7b"
+    },
+    {
+      "bytes": 7474,
+      "path": "benchmark_tools/results/SWISS_RAW_SOURCE_RELOCATION_20261002.md",
+      "sha256": "cb6e0a4b185cd92423132aadd242ddfab6035a3e6add69ec137ca55fa3cfa095"
+    },
+    {
+      "bytes": 594127,
+      "path": "benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json",
+      "sha256": "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34"
+    },
+    {
+      "bytes": 9056,
+      "path": "benchmark_tools/results/swiss_duplication_features_v2_20260923.json",
+      "sha256": "97b0c4755d6a9df258d5c3f60fc0d5d25f1e5c09c42216c754a245a67d1942ec"
+    },
+    {
+      "bytes": 971419,
+      "path": "benchmark_tools/results/swiss_historical_fragment_admission_22117.json",
+      "sha256": "a480f32666bb96de3395213c7cad024c170318ca110c389f15e4756f8052adf8"
+    },
+    {
+      "bytes": 6085,
+      "path": "benchmark_tools/export_swiss_descriptive_strata.py",
+      "sha256": "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
+    },
+    {
+      "bytes": 8580,
+      "path": "benchmark_tools/extract_swiss_duplication_features.py",
+      "sha256": "96355e41e5733dbf049e113e348bd6819cc215448e936b7d0e99070908d4b73e"
+    },
+    {
+      "bytes": 9746,
+      "path": "benchmark_tools/verify_swiss_historical_fragments.py",
+      "sha256": "b316148f54992552a187ee9aeea8d5dbae41abf05665a650ced62f0d1f386a50"
+    },
+    {
+      "bytes": 4571,
+      "path": "benchmarks/work/swiss_raw_sources_duplication_20261002/bindings.json",
+      "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58"
+    },
+    {
+      "bytes": 704165,
+      "path": "benchmarks/work/swiss_raw_sources_fragment_20261002/bindings.json",
+      "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1"
+    },
+    {
+      "bytes": 6100,
+      "path": "benchmarks/work/swiss_raw_relocation_unit_20261002.xml",
+      "sha256": "b19545d08b093143d28e37b4beac663f932135fa199c50d5765ef46aa0871b9f"
+    },
+    {
+      "bytes": 9081,
+      "path": "benchmarks/work/swiss_raw_relocation_exports_20261002.xml",
+      "sha256": "51e1de6fa387930a4bfff4176e5a54d4e1030a7df86e10537dfa18c0a577c8bb"
+    },
+    {
+      "bytes": 27729,
+      "path": "benchmarks/work/swiss_raw_relocation_complete_20261002.xml",
+      "sha256": "ef4e3e87b75c4f725b39aaed3330c8c3b9511675a491e99f0f55ab9691c9613a"
+    },
+    {
+      "bytes": 342833,
+      "path": "benchmarks/work/swiss_raw_relocation_guarded_20261002.json",
+      "sha256": "48b7e23c3a66d423f88c13717daf48e91a7bdee9810d76de48a0cd61585ca9a8"
+    },
+    {
+      "bytes": 284546,
+      "path": "benchmarks/work/ci_remote_ee2a7af0_20261002/110791892621.log",
+      "sha256": "c2c1f9d5b02aa28889a5b031dbe4c6990138e33629b251d39713176d58598682"
+    }
+  ],
+  "redistribution_authorized": false,
+  "retained_scores_changed": false,
+  "schema_version": 1,
+  "scientific_settings_changed": false,
+  "status": "raw_identity_gated_relocated_swiss_exports_verified",
+  "tests": {
+    "complete": {
+      "errors": 0,
+      "failed": 0,
+      "passed": 187,
+      "relocation_cases": 43,
+      "seconds": 8.67,
+      "skipped": 0
+    },
+    "initial_exports": {
+      "passed": 62,
+      "seconds": 4.11
+    },
+    "initial_relocation": {
+      "passed": 40,
+      "seconds": 0.4
+    },
+    "panels_overlap": true
+  }
+}

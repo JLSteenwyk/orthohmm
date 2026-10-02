@@ -10,6 +10,7 @@ from benchmark_tools.export_swiss_descriptive_strata import build, COUNTS_SHA, M
 from benchmark_tools.extract_swiss_duplication_features import bins
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
+from benchmark_tools.relocate_swiss_raw_sources import restore_inputs
 
 FEATURE_SHA = "97b0c4755d6a9df258d5c3f60fc0d5d25f1e5c09c42216c754a245a67d1942ec"
 HELPER_SHA = "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
@@ -47,7 +48,8 @@ def build_rows(counts, features):
     return rows
 
 
-def export(counts, features_path, output, *, counts_sha=COUNTS_SHA):
+def export(counts, features_path, output, *, counts_sha=COUNTS_SHA,
+           source_bindings=None, source_bindings_sha=None):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     features = read_frozen(features_path, FEATURE_SHA)
@@ -55,8 +57,11 @@ def export(counts, features_path, output, *, counts_sha=COUNTS_SHA):
                ("export_swiss_descriptive_strata.py", "extract_swiss_duplication_features.py")]
     if [r["sha256"] for r in helpers] != [HELPER_SHA, FEATURE_HELPER_SHA]:
         raise ValueError("Changed feature or statistic implementation")
-    inputs = [record(counts), record(features_path), record(__file__), *helpers,
-              *features["checked_inputs"]]
+    raw_inputs, relocation = restore_inputs(features["checked_inputs"], record(features_path),
+                                            source_bindings, source_bindings_sha)
+    inputs = [record(counts), record(features_path), record(__file__), *helpers, *raw_inputs]
+    if relocation is not None:
+        inputs += [relocation["binding"], relocation["helper"]]
     for item in inputs:
         check(item)
     rows = build_rows(read_frozen(counts, counts_sha), features)
@@ -87,6 +92,8 @@ def export(counts, features_path, output, *, counts_sha=COUNTS_SHA):
     manifest = dict(status="descriptive_swiss_duplication_strata_exported", inputs=inputs,
         rows=rows, outputs=[record(p) for p in sorted(output.iterdir())],
         new_inferential_claims=False, publication_ready=False)
+    if relocation is not None:
+        manifest["source_relocation"] = relocation
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True, allow_nan=False) + "\n")
     return manifest
 
@@ -96,5 +103,8 @@ if __name__ == "__main__":
     for name in ("counts", "features", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--counts-sha256", default=COUNTS_SHA)
+    parser.add_argument("--source-bindings", type=Path)
+    parser.add_argument("--source-bindings-sha256")
     args = parser.parse_args()
-    export(args.counts.resolve(), args.features.resolve(), args.output.absolute(), counts_sha=args.counts_sha256)
+    export(args.counts.resolve(), args.features.resolve(), args.output.absolute(), counts_sha=args.counts_sha256,
+           source_bindings=args.source_bindings, source_bindings_sha=args.source_bindings_sha256)

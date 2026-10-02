@@ -1,5 +1,56 @@
 # Publication Progress
 
+## Explicit Raw SwissTrees Source Relocation (2026-10-02)
+
+Previous turn progressed at pushed ee2a7af0 with the pinned inventory test
+fix. Read the objective/ledger/HEAD and observe actual CI run 36992558116:
+full/3.10/3.11/3.12 and Linux/wheel/docs live, 3.13 queued. Do not restart.
+Timing remains deferred with no questions/polls, DGX or unrelated job/service
+actions. Work on the actual raw-source reproduction gap, not a green-CI skip.
+
+Add streaming, explicit content-addressed raw staging and independently pinned
+relative-path bindings. Preserve exact original source manifests and every
+ordered record occurrence. Opt-in exporter arguments relocate only these
+records; default source paths/gates and all statistical/native feature guards
+stay intact. Validate every restored file and binding/helper before and after
+export. Reject partial binding arguments, repinned/omitted/extra/reordered
+records, unsafe paths/symlinks, mutation and redistribution claims. Retain
+failed partial staging attempts; do not overwrite or silently retry.
+
+Both original panels pass all retained raw identity checks and are copied
+privately: duplication 11 content files/93,699,174 bytes; fragment 1,773
+files/606,744,832 bytes, preserving its 1,774-record list including duplicate.
+An isolated copied Python child executes both production exporters, reproducing
+all 32/56 rows and byte-identical TSV/Markdown. All 18/1,781 input checks are
+retained. Original Python canary blocked, later original opens zero, all 22
+module origins staged, no child processes; copied temporary tree removed.
+Raw source directories remain ignored/local, with rights explicitly uncleared.
+No native image execution or fresh biological annotation admission occurs.
+
+Initial 40-case/62-case panels pass and overlap the final **187 passes in
+8.67s**, zero failures/errors/skips. Add three late mutation/symlink cases
+after the actual copied export; its production source bytes stay unchanged.
+[Workflow and identities](SWISS_RAW_SOURCE_RELOCATION_20261002.md) distinguish
+actual raw-file identity-gated table export from derived-only arithmetic,
+OS containment, native reconstruction and full release. Scientific engine,
+settings/counts/scores and historical archives remain unchanged. Two exporter
+source identities change; include the added helper in prospective inventories,
+without repinning old receipts or asserting execution readiness.
+
+Later observation of the same preceding run: docs/Linux/wheel succeed,
+3.10/3.11 fail, full/3.12/3.13 still live. New raw workflow is not in that
+source; no sibling counts/full CI/new-patch remote proof inferred. Default
+raw tests still require their files; no skip/mocking/automatic CI provisioning
+is introduced. Commit/push the validated milestone and observe new CI.
+Later same-run terminal observation: all five macOS jobs fail, docs/Linux/wheel
+succeed. Actual Python 3.13 log downloaded once at 10:08:50 UTC verifies source
+ee2a7af0 and reports 13,964 passes/five failures/118 skips/zero errors/30 warnings
+in 482.34s. All 44 inventory/fixture cases pass, confirming the previous fix;
+four default raw exports and the platform host probe still fail. Do not infer
+new relocation proof or sibling counts. Preserve the actual log identity.
+Timing, other-QfO uncertainty, public data provisioning/rights, full release
+and deposition remain unresolved. The original goal stays active/incomplete.
+
 ## Corrected Inventory Metadata Replay (2026-10-02)
 
 The user is unsure when the Threadripper will be quiet. No quiet window is

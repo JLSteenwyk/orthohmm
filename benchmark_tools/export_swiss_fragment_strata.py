@@ -9,6 +9,7 @@ from benchmark_tools.export_swiss_descriptive_strata import build, COUNTS_SHA, M
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.run_simulation_methods import read_frozen
 from benchmark_tools.verify_swiss_historical_fragments import family_bins
+from benchmark_tools.relocate_swiss_raw_sources import restore_inputs
 
 HELPER_SHA = "5c91edf93b0ab0d563a06a7c90826a8a9c144994bff3dffed755930762a1d121"
 VERIFIER_SHA = "b316148f54992552a187ee9aeea8d5dbae41abf05665a650ced62f0d1f386a50"
@@ -40,7 +41,8 @@ def build_rows(counts, admission):
     return rows
 
 
-def export(counts, admission, admission_sha, output, *, counts_sha=COUNTS_SHA):
+def export(counts, admission, admission_sha, output, *, counts_sha=COUNTS_SHA,
+           source_bindings=None, source_bindings_sha=None):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     helpers = [record(Path(__file__).with_name(name)) for name in
@@ -48,7 +50,11 @@ def export(counts, admission, admission_sha, output, *, counts_sha=COUNTS_SHA):
     if [r["sha256"] for r in helpers] != [HELPER_SHA, VERIFIER_SHA]:
         raise ValueError("Changed statistic or annotation-bin implementation")
     features = read_frozen(admission, admission_sha)
-    inputs = [record(counts), record(admission), record(__file__), *helpers, *features["records"]]
+    raw_inputs, relocation = restore_inputs(features["records"], record(admission),
+                                            source_bindings, source_bindings_sha)
+    inputs = [record(counts), record(admission), record(__file__), *helpers, *raw_inputs]
+    if relocation is not None:
+        inputs += [relocation["binding"], relocation["helper"]]
     for item in inputs:
         check(item)
     rows = build_rows(read_frozen(counts, counts_sha), features)
@@ -80,6 +86,8 @@ def export(counts, admission, admission_sha, output, *, counts_sha=COUNTS_SHA):
         annotation_coverage=dict(matched=features["matched"], missing=features["missing"]),
         outputs=[record(p) for p in sorted(output.iterdir())],
         new_inferential_claims=False, publication_ready=False)
+    if relocation is not None:
+        result["source_relocation"] = relocation
     (output / "manifest.json").write_text(json.dumps(result, indent=2, sort_keys=True, allow_nan=False) + "\n")
     return result
 
@@ -90,5 +98,8 @@ if __name__ == "__main__":
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--admission-sha", required=True)
     parser.add_argument("--counts-sha256", default=COUNTS_SHA)
+    parser.add_argument("--source-bindings", type=Path)
+    parser.add_argument("--source-bindings-sha256")
     args = parser.parse_args()
-    export(args.counts.resolve(), args.admission.resolve(), args.admission_sha, args.output.absolute(), counts_sha=args.counts_sha256)
+    export(args.counts.resolve(), args.admission.resolve(), args.admission_sha, args.output.absolute(), counts_sha=args.counts_sha256,
+           source_bindings=args.source_bindings, source_bindings_sha=args.source_bindings_sha256)

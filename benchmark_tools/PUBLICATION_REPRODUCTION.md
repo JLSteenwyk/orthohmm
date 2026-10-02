@@ -606,6 +606,15 @@ and does not contain this correction. Four raw exporter failures still need
 external inputs/native provenance, not fake admission or derived substitutes.
 Timing stays deferred; a quiet window is not needed for ongoing work.
 
+The [SwissTrees raw-source relocation workflow](results/SWISS_RAW_SOURCE_RELOCATION_20261002.md)
+gives source-host staging and restored-export commands with independently pinned
+relative-path bindings. Complete source lists/hashes/sizes remain authoritative,
+including duplicates; there is no default fallback or historical repinning.
+All 187 focused cases pass and actual fresh copied exports match both retained
+tables byte-for-byte while checking all raw file identities. Native extraction,
+data rights, public provisioning and full CI remain outside that evidence.
+Prospective inventories need the two new exporter identities and added helper.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

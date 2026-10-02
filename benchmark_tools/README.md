@@ -109,6 +109,12 @@ copy. Actual preceding Python 3.13 confirms all 21 frozen-lineage replay cases,
 with six other failures. Raw exporter dependencies and full CI remain open;
 no scientific scores change and no quiet window is required now.
 
+The [explicit SwissTrees raw-source relocation workflow](results/SWISS_RAW_SOURCE_RELOCATION_20261002.md)
+preserves every historical identity and raw check at new paths. All 187 focused
+tests pass; both exporters produce byte-identical TSV/Markdown in a guarded
+copied tree with the complete raw panels. This opt-in workflow does not rerun
+native annotation extraction, provision CI data or authorize redistribution.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with
