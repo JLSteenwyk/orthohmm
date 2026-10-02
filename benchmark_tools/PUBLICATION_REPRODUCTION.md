@@ -18,6 +18,12 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [actual private-controller startup](results/THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
+imports current execution/environment helpers and accounts for all 424 observed
+files against pinned inventories, with correct origins for 81 project modules.
+Pure explicit lookup resolution passes. This is startup coverage, not actual
+executor/environmental handoff, all-file-I/O closure, readiness or timing.
+
 The [current private-runtime binding and native lookup](results/THREADRIPPER_RUNTIME_REFRESH_20261002.md)
 fix the stale source-pin gap through an explicit reviewed-request lookup option.
 All 327 latest focused cases pass; 57,958 runtime records match before/after startup

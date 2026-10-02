@@ -1,0 +1,87 @@
+{
+  "coverage": {
+    "all_covered": true,
+    "ambiguous": [],
+    "changed": [],
+    "missing": []
+  },
+  "evidence": [
+    {
+      "bytes": 126628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_startup_20261002/report.json",
+      "sha256": "efa22c377b47c74216d2c797a8c79436af5dd15d307967f00689c258732d1074"
+    },
+    {
+      "bytes": 504202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_startup_20261002/process.json",
+      "sha256": "291a72b9bad6622f0670f9b39e87b337812608af51656bdc6c52a69f5723cce8"
+    },
+    {
+      "bytes": 5088,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_startup_20261002/run.py",
+      "sha256": "b4843d6cd8f2dbba900ff1304d5d1452d89fec3613427f134ce6e0f4e0c35554"
+    },
+    {
+      "bytes": 8468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inspect_native_python_lookup.py",
+      "sha256": "ae358a5a057f7a08a0da2d952a4f9d8baff94a389d361f3428549905906047cf"
+    },
+    {
+      "bytes": 6176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_explicit_20261002.json",
+      "sha256": "3c244a46786cb0efdf58b15db99b30eb0f166b554e0511d8f07afd20fcc79417"
+    },
+    {
+      "bytes": 36576,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/binding.json",
+      "sha256": "03f33e302c104fd4e37fda199c0221e324b358ee74cfcb7ab5d80c591b4b12d3"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    {
+      "bytes": 9751659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_explicit_20261002/native_os_helpers.json",
+      "sha256": "f5eb2fde7534baacab29f3270bc4f5cd5538d4d2004973d109afd8d8ec3e2cc2"
+    },
+    {
+      "bytes": 6173195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/private_trees.json",
+      "sha256": "a6b90ec2fdbdca0d3138c6960850632225abaabfc41edc316eb53ec149fe8231"
+    }
+  ],
+  "explicit_deployment_resolution_passed": true,
+  "failures": [
+    "First JavaScript tool-wrapper input had a syntax error; no nested tool or startup probe executed."
+  ],
+  "limitations": [
+    "One actual controller startup and pure deployment resolution, not executor selection/readiness or environment handoff.",
+    "Independent stdlib raw-output/count/multimap/hash readback, not independent Python-loader semantics.",
+    "Observed imported/mapped files only; no complete runtime-tree revalidation or all-file-I/O observation.",
+    "No scientific inference, scheduler allocation, host contention sampling or quiet-window certification."
+  ],
+  "mapped_files": 62,
+  "modules": 410,
+  "no_bytecode_cache_created": true,
+  "observed_files": 424,
+  "parent_import_probe": "threadripper_private_lookup_explicit_20261002.json",
+  "probe_exit_code": 0,
+  "project_modules": 81,
+  "publication_ready": false,
+  "raw_report": {
+    "bytes": 126628,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_controller_startup_20261002/report.json",
+    "sha256": "efa22c377b47c74216d2c797a8c79436af5dd15d307967f00689c258732d1074"
+  },
+  "requested": [
+    "benchmark_tools.run_threadripper_scaling",
+    "benchmark_tools.threadripper_environment_worker",
+    "benchmark_tools.manage_threadripper_environment_worker",
+    "benchmark_tools.audit_threadripper_overhead"
+  ],
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "status": "private_controller_startup_files_and_origins_verified"
+}

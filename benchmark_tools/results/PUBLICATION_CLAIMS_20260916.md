@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [actual private-controller startup](THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
+adds controller rather than native-interpreter evidence: all 424 observed files
+match pinned identities, all 81 project-module origins are current, and pure
+explicit-deployment resolution passes. Independent raw-output/count/hash readback
+succeeds. This is not a real executor/environmental handoff or all-file-I/O/
+workload closure; the dated full-tree check is reused, not repeated.
+
 The [current private startup verification](THREADRIPPER_RUNTIME_REFRESH_20261002.md)
 preserves the scientific baseline/plan/controller/private trees, verifies 57,958
 runtime records before/after startup and compares fresh native declared imports

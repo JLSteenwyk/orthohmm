@@ -61,6 +61,13 @@ calculate replacement hashes from untrusted manifests or reuse old readiness.
 All other request fields, full current-source recipe, history, real policy,
 observer validation and environmental handoff remain required.
 
+The [actual controller-startup check](results/THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
+also imports the current executor/environment/lifecycle/auditor modules:
+410 file-backed modules, 81 project modules and 424 observed files all match
+pinned identities. Pure explicit-deployment resolution passes. This is not
+executor selection, real environmental handoff or complete workload/file-I/O
+closure; no scheduler job or measurement function executes.
+
 ## Preserved Gates
 
 Private execution now requires `threadripper_environment_policy_v2` with

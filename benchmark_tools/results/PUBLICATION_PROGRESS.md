@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Private Controller Startup Observed (2026-10-02)
+
+Previous turn progressed at pushed a4f0b43b, resolving runtime lookup/source
+pin circularity and verifying native interpreter startup. Read the original
+goal/current ledger; preserve its actual full-tree/native evidence. Inspect
+the remaining controller import boundary rather than repeat calibration,
+inference or full 57,958-record verification.
+
+Execute one standalone probe under the unchanged private controller: current
+executor, environment worker, lifecycle manager and overhead auditor import.
+410 file-backed modules, 81 current project modules, 424 unique observed files
+and 62 mappings all match pinned inventory coverage. Child exit zero/stderr
+empty, pure explicit-deployment path/digest/plan resolution passes and no
+bytecode cache appears. Only own-process mappings are read; no host observer
+or measurement function, scheduler allocation or executor path executes.
+
+Separate stdlib readback reconstructs raw counts/origins/file set, rehashes all
+424 files and rejects ambiguous expected file identities. Nine evidence files
+are pinned in the compact receipt. Preserve the initial JavaScript wrapper
+syntax failure before nested tools; it created no earlier process/artifact.
+See [actual observation and boundaries](THREADRIPPER_CONTROLLER_STARTUP_20261002.md).
+
+Update current guides/claim index and commit/push focused metadata/docs only.
+No implementation or scientific/default/input change, test rerun, shared
+upgrade, quiet-window question, contention poll, DGX/service/unrelated-job
+action, archive rebuild or main-PDF rerender occurs. All owned handles terminal.
+Controller startup is now observed, not complete file-I/O/workload closure,
+actual environmental handoff, observer-overhead validation, readiness or
+controlled resources. Original publication goal remains active.
+
 ## Current Private Runtime Lookup Verified (2026-10-02)
 
 Previous turn progressed at pushed `0eadf3fd`, confirming remote regression.
