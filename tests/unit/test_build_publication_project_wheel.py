@@ -66,7 +66,9 @@ def execution(args, monkeypatch, fail=None, wheel_fault=None):
         calls.append((name, command, env, timeout))
         if name == fail: raise RuntimeError("Injected build stage failure")
         value = {}
-        if name == "base_runtime": value = dict(version="3.10.13", implementation="CPython", machine="x86_64")
+        if name in {"base_runtime", "base_unchanged"}:
+            value = dict(version="3.10.13", implementation="CPython", machine="x86_64", files=[],
+                         distributions=[["pip", "26.2.1"]])
         elif name == "build_environment":
             site = output / "venv/lib/python3.10/site-packages"
             site.mkdir(parents=True)
@@ -93,7 +95,7 @@ def test_mocked_offline_build_and_source_parity(inputs, monkeypatch):
     result = module.run(inputs)
     assert result["status"] == "frozen_source_cpu_wheel_candidate_built"
     assert len(result["inspection"]["scientific_members"]) == 33 and len(result["inspection"]["kernels"]) == 3
-    assert len(calls) == 8
+    assert len(calls) == 9 and result["base_unchanged"] is True
     env = calls[0][2]
     assert env["PATH"] == "/usr/bin:/bin" and env["ORTHOHMM_CPU_TARGET"] == "baseline"
     assert env["HOME"] == str(inputs.output / "home") and env["TMPDIR"] == str(inputs.output / "tmp")
@@ -101,14 +103,15 @@ def test_mocked_offline_build_and_source_parity(inputs, monkeypatch):
     assert (inputs.output / "source/setup.py").read_text() == "BUILD = 'synthetic'\n"
     assert (inputs.component / "scientific/setup.py").read_text() == "pass\n"
     install = next(c[1] for c in calls if c[0] == "install_build_dependencies")
-    assert all(f in install for f in ("--no-index", "--no-deps", "--require-hashes", "--only-binary=:all:"))
+    assert all(f in install for f in ("--no-index", "--no-deps", "--require-hashes", "--only-binary=:all:", "--ignore-installed"))
+    assert install[install.index("--prefix") + 1] == str(inputs.output / "venv")
     build = next(c[1] for c in calls if c[0] == "build_wheel")
     assert all(f in build for f in ("--no-index", "--no-deps", "--no-build-isolation", "--no-cache-dir"))
     assert all(result[k] is False for k in ("historical_wheel_reproduced", "historical_admission", "retry",
         "scientific_inference_executed", "controlled_timing", "publication_ready", "security_clearance", "redistribution_clearance"))
 
 
-@pytest.mark.parametrize("fault", ["ack", "timeout", "existing", "inside_component", "host", "profile", "python_hash", "python_execute", "wheel_hash", "wheel_symlink", "cuda", "compiler"])
+@pytest.mark.parametrize("fault", ["ack", "timeout", "existing", "inside_component", "inside_base", "host", "profile", "python_hash", "python_execute", "wheel_hash", "wheel_symlink", "cuda", "compiler"])
 def test_preflight_precedes_output_and_execution(inputs, monkeypatch, tmp_path, fault):
     args = inputs
     calls = execution(args, monkeypatch)
@@ -116,6 +119,12 @@ def test_preflight_precedes_output_and_execution(inputs, monkeypatch, tmp_path, 
     elif fault == "timeout": args.timeout = True
     elif fault == "existing": args.output.mkdir()
     elif fault == "inside_component": args.output = args.component / "build-output"
+    elif fault == "inside_base":
+        prefix = tmp_path / "base"
+        (prefix / "bin").mkdir(parents=True)
+        python = prefix / "bin/python"
+        python.write_bytes(args.base_python.read_bytes()); python.chmod(0o755)
+        args.base_python = python; args.output = prefix / "build-output"
     elif fault == "host": monkeypatch.setattr(module.platform, "machine", lambda: "aarch64")
     elif fault == "profile":
         p = args.component / "SOURCE_INDEX.json"
@@ -133,12 +142,17 @@ def test_preflight_precedes_output_and_execution(inputs, monkeypatch, tmp_path, 
 
 
 @pytest.mark.parametrize("name", ["base_runtime", "compiler_version", "create_build_environment", "install_build_dependencies",
-    "build_dependency_check", "build_environment", "build_wheel", "native_load"])
+    "build_dependency_check", "build_environment", "build_wheel", "native_load", "base_unchanged"])
 def test_stage_failure_retained_without_retry(inputs, monkeypatch, name):
     calls = execution(inputs, monkeypatch, name)
     with pytest.raises(RuntimeError): module.run(inputs)
     assert calls[-1][0] == name and len(calls) == len({c[0] for c in calls})
     assert not (inputs.output / "complete.json").exists()
+
+
+def test_all_stdlib_probes_compile():
+    for name in ("RUNTIME_PROBE", "BUILD_PROBE", "KERNEL_PROBE"):
+        compile(getattr(module, name), name, "exec")
     assert json.loads((inputs.output / "failed.json").read_bytes())["retry"] is False
 
 
@@ -149,7 +163,7 @@ def test_rebuilt_wheel_rejects_fallback_or_changed_sources(inputs, monkeypatch, 
     assert calls[-1][0] == "build_wheel" and not (inputs.output / "complete.json").exists()
 
 
-@pytest.mark.parametrize("fault", ["runtime", "dependencies", "site", "native_status", "native_symbols", "changed_kernel"])
+@pytest.mark.parametrize("fault", ["runtime", "base_dependencies", "base_changed", "dependencies", "site", "native_status", "native_symbols", "changed_kernel"])
 def test_installed_and_native_validation_guards(inputs, monkeypatch, fault):
     execution(inputs, monkeypatch)
     original = module.stage
@@ -158,6 +172,8 @@ def test_installed_and_native_validation_guards(inputs, monkeypatch, fault):
         path = output / (name + ".log")
         value = json.loads(path.read_bytes())
         if name == "base_runtime" and fault == "runtime": value["version"] = "0.0.0"
+        if name == "base_runtime" and fault == "base_dependencies": value["distributions"].append(["setuptools", "83.0.0"])
+        if name == "base_unchanged" and fault == "base_changed": value["files"].append(dict(path="new", bytes=1, sha256="a"*64))
         if name == "build_environment":
             if fault == "dependencies": value["distributions"].append(["unknown", "1"])
             elif fault == "site": value["site"] = str(output.parent)

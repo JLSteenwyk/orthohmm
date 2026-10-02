@@ -30,8 +30,20 @@ KERNELS = {
     "kmer_prefilter.so": ["prefilter_set_num_threads", "batch_prefilter_c"],
     "pair_align.so": ["pair_align_set_num_threads", "batch_pair_align_c"],
 }
-RUNTIME_PROBE = ("import json,platform,sys; print(json.dumps(dict(version=platform.python_version(),"
-    "implementation=platform.python_implementation(),machine=platform.machine(),prefix=sys.prefix)))")
+RUNTIME_PROBE = """import hashlib,json,platform,sys,sysconfig
+from pathlib import Path
+from importlib import metadata
+site=Path(sysconfig.get_paths()['purelib'])
+files=[]
+for path in sorted(site.rglob('*')):
+    if path.is_symlink(): raise ValueError('Symlinked base-site payload')
+    if path.is_file():
+        data=path.read_bytes()
+        files.append(dict(path=path.relative_to(site).as_posix(),bytes=len(data),sha256=hashlib.sha256(data).hexdigest()))
+print(json.dumps(dict(version=platform.python_version(),implementation=platform.python_implementation(),
+    machine=platform.machine(),prefix=sys.prefix,site=str(site),files=files,
+    distributions=sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[str(site)])))))
+"""
 BUILD_PROBE = ("import json,sysconfig; from importlib import metadata; "
     "site=sysconfig.get_paths()['purelib']; print(json.dumps(dict(site=site,distributions="
     "sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[site])))))")
@@ -69,6 +81,8 @@ def preflight(args):
     if index.get("profile") != "native-build" or verified.get("build_revision") != source.BUILD_REVISION:
         raise ValueError("Require the explicit native-build source profile")
     python = args.base_python.absolute()
+    if python.parent.name == "bin" and output.is_relative_to(python.parent.parent):
+        raise ValueError("Build output must be outside the supplied base prefix")
     if not python.is_file() or not os.access(python, os.X_OK) or record(python)["sha256"] != args.base_python_sha256:
         raise ValueError("Supplied base interpreter identity differs")
     wheels = [args.pip_wheel.absolute(), args.setuptools_wheel.absolute()]
@@ -164,11 +178,12 @@ def run(args):
         bootstrap = ("import sys,runpy;sys.path.insert(0," + repr(str(output / "build_wheels" / wheels[0].name))
                      + ");runpy.run_module('pip',run_name='__main__')")
         commands = [
-            ("base_runtime", [str(python), "-I", "-S", "-B", "-c", RUNTIME_PROBE]),
+            ("base_runtime", [str(python), "-I", "-B", "-c", RUNTIME_PROBE]),
             ("compiler_version", [str(compiler), "--version"]),
             ("create_build_environment", [str(python), "-I", "-B", "-m", "venv", "--without-pip", str(venv)]),
             ("install_build_dependencies", [installed_python, "-I", "-S", "-B", "-c", bootstrap,
-                "--isolated", "--disable-pip-version-check", "install", "--no-index", "--no-deps",
+                "--isolated", "--disable-pip-version-check", "install", "--prefix", str(venv),
+                "--ignore-installed", "--no-index", "--no-deps",
                 "--require-hashes", "--only-binary=:all:", "--no-cache-dir", "--find-links",
                 str(output / "build_wheels"), "--report", str(output / "build_install.json"), "-r", str(requirements)]),
             ("build_dependency_check", [installed_python, "-I", "-B", "-m", "pip", "check"]),
@@ -183,7 +198,8 @@ def run(args):
             outcomes.append(stage(output, name, command, environment, args.timeout))
             if name == "base_runtime":
                 runtime = json.loads((output / "base_runtime.log").read_bytes())
-                if any(runtime[k] != v for k, v in dict(version="3.10.13", implementation="CPython", machine="x86_64").items()):
+                if (any(runtime[k] != v for k, v in dict(version="3.10.13", implementation="CPython", machine="x86_64").items())
+                        or runtime["distributions"] != [["pip", "26.2.1"]]):
                     raise ValueError("Supplied base runtime is not the frozen Python version/platform")
         build_runtime = json.loads((output / "build_environment.log").read_bytes())
         site = Path(build_runtime["site"])
@@ -206,6 +222,10 @@ def run(args):
         if (loaded["status"] != "baseline_cpu_kernels_load_verified" or loaded["kernels"] !=
                 [dict(kernel=name, symbols=symbols) for name, symbols in sorted(KERNELS.items())]):
             raise ValueError("Incomplete native load check")
+        outcomes.append(stage(output, "base_unchanged", [str(python), "-I", "-B", "-c", RUNTIME_PROBE],
+            environment, args.timeout))
+        if json.loads((output / "base_unchanged.log").read_bytes()) != runtime:
+            raise ValueError("Supplied base runtime/site payload changed during build")
         for ref in watched + staged + [built_wheel] + inspected["kernels"]:
             check(ref)
         if source.verify(component, args.manifest_sha256) != verified or shutil.which("gcc", path="/usr/bin:/bin") is None:
@@ -214,6 +234,7 @@ def run(args):
             raise ValueError("System compiler alias changed")
         result = dict(status="frozen_source_cpu_wheel_candidate_built", source=verified, inputs=watched,
             staged_inputs=staged, outcomes=outcomes, wheel=record(wheel), environment=environment,
+            base_unchanged=True, base_site_payload_files=len(runtime["files"]),
             build_runtime=build_runtime, build_payloads=payloads, inspection=inspected, native_load=loaded,
             attempts=1, retry=False, historical_wheel_reproduced=(built_wheel["bytes"] == 144444 and
                 built_wheel["sha256"] == "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"),
