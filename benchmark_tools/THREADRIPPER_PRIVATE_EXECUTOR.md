@@ -95,6 +95,13 @@ attempt ledger; it is not silently retried.
 
 ## Remaining Work
 
+The [conditional panel-review workflow](results/THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
+now combines native replay with all four recorded engineering review categories.
+It distinguishes complete reviewed numerical pass/failure from missing evidence
+and never authorizes production or independently certifies review conclusions.
+All 137 focused cases pass. The actual CLI preserves all 54 tasks as unrun
+with a null budget; no real passing review or timing result is created.
+
 The [boundary post-run correction](results/THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
 passes the validated task arm to environmental review. Boundary-only PSI now
 has an explicit two-point diagnostic scope; it is not required to satisfy

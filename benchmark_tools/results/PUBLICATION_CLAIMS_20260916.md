@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [conditional engineering review combiner](THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
+now binds the four post-run review categories to independent raw replay and
+the same attempt/controller identities. All 137 focused cases pass; an actual
+unrun CLI confirms all 54 tasks still missing and the budget null. Complete
+positive tests are fabricated/test-double cases. Review conclusions are not
+independently certified here; no actual overhead or timing claim is established.
+
 The [boundary post-run integration fix](THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
 corrects the periodic-cadence assumption for the explicit two-point native
 control. All 643 focused tests pass, plus three persisted offline synthetic

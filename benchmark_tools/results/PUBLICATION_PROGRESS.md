@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Conditional Engineering Panel Review Implemented (2026-10-02)
+
+Previous turn progressed at pushed 1ef8a14d by correcting boundary PSI review.
+Read the original goal/current ledger; preserve timing deferral and inspect
+the outstanding review-combination gap. The raw auditor deliberately leaves
+engineering admission null. Add a separate reader that recomputes raw replay
+and binds the four existing post-run engineering review categories.
+
+Require the frozen private parent, exact plan/attempt/session prefix and
+scheduler stdout, pair/arm/job identities, nonblank review references, and
+native audit/output/wall agreement. Preserve all 54 raw outcomes. Only a
+complete successful, output-consistent and reviewed panel gets a conditional
+numerical pass/failure; missing or ineligible evidence stays null. External
+runtime/environment conclusions are bound, not independently certified.
+No new execution gate, scheduler automation, retry, production identity or timing admission.
+
+Initial new-module panel passes 18. Make real unrun tests portable using copied
+and checked evidence; final four-module panel passes 137 in 24.16 seconds,
+zero failures/errors/skips. Complete positive/negative tests replace the raw
+auditor with test doubles and fabricated reviews, not actual timing runs.
+Commit source e617c406 before executing the actual unrun CLI under test Python.
+It preserves all 54 unrun tasks, 27 pairs/nine cells and null budget. The new
+empty review inventory is explicitly not approval; old plan/history unchanged.
+
+Separate stdlib readback verifies 14 pinned files, task/missing-decision counts,
+flags, process/JUnit and exact committed source bytes. Preserve an initial
+one-line readback SyntaxError before execution; no report creation or rerun.
+See [contract, executed checks and boundaries](THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md).
+Update guides/claims and commit/push scoped metadata. All owned handles terminal.
+No host-contention poll, quiet-window question, DGX, unrelated-work/service
+change, shared upgrade, archive/PDF rebuild, allocation or native/timing launch.
+Final runtime binding must include the new helper. Real policy/readiness/
+environmental handoff, quiet-host proof, all 54 engineering outcomes and
+separate 27 production runs remain missing. Original publication goal active.
+
 ## Boundary Environmental Review Integration Fixed (2026-10-02)
 
 Previous turn progressed at pushed a6ae485f by wiring the engineering executor.

@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [conditional engineering-panel review](results/THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
+combines fresh raw replay with every attempt's recorded runtime/environment/
+resource/output reviews. All 137 focused tests pass. The actual unrun CLI
+retains 54 missing outcomes and no budget decision; complete positive unit
+cases use test doubles, not real timing. Review conclusions remain externally
+validated, and no controlled-resource or production admission follows.
+
 The [boundary environmental-review correction](results/THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
 fixes periodic PSI cadence being incorrectly applied to the two-point control.
 The explicit boundary scope keeps point integrity and whole-run process checks;

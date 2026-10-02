@@ -1,0 +1,78 @@
+{
+  "actual_cli": {
+    "budget_decision": null,
+    "cells": 9,
+    "current_source_bytes_equal_git_commit": true,
+    "driver": {
+      "bytes": 2703,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_panel_review_20261002/run.py",
+      "sha256": "26c6971ff36799a3811bfd02231f0d416f7e13880b14af4ae3fc98b9e79e2f70"
+    },
+    "empty_review_history": {
+      "bytes": 740,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_reviews_unrun_20261002.json",
+      "sha256": "c1ec23a111f4aeb3932b862bb5948d61e7b679ba445033286c1875bf91be9ed8"
+    },
+    "output": {
+      "bytes": 58255,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_panel_review_20261002/panel_review.json",
+      "sha256": "a87485e5a35db5be05e1215ea5ad608b4944fb1d6a0dcb46ba2b985582543b22"
+    },
+    "pairs": 27,
+    "process": {
+      "bytes": 1576,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_panel_review_20261002/process.json",
+      "sha256": "62e1e39b48aaaef4ebdf4b3ededd81f59f6c1c26d1089b51d74880517b16225f"
+    },
+    "returncode": 0,
+    "status": "engineering_panel_incomplete_or_ineligible",
+    "unique_evidence_files_verified": 14,
+    "unrun_tasks": 54
+  },
+  "limitations": [
+    "Complete pass/fail unit cases replace the raw auditor with a synthetic test double and use fabricated external review records; they are not real measurements.",
+    "Actual CLI reads only the retained unrun design/history; no real passing review or budget result exists.",
+    "New helper binds all four external review categories and recomputes raw replay, but does not independently certify runtime/environment review conclusions.",
+    "No scheduler submission, allocation, host observer, environment worker, inference or timing run launches.",
+    "Real source/runtime/environment handoff, quiet-window evidence, all 54 engineering outcomes and 27 production runs remain outstanding."
+  ],
+  "publication_ready": false,
+  "readback": {
+    "initial_failure": "An earlier one-line readback command had a SyntaxError before execution; no output file or reviewer replay occurred.",
+    "method": "Separate stdlib JSON/JUnit/pin/count/flag readback; no reviewer or native rerun.",
+    "private_runtime_inventory_repeated": false,
+    "source": {
+      "bytes": 4719,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_panel_review_20261002/readback.py",
+      "sha256": "957a599a3cd487ac401c4eeddbf51f6ebed52ae8468bf4d9b60b01b8ab7c77f2"
+    }
+  },
+  "regression": {
+    "errors": 0,
+    "failed": 0,
+    "junit": {
+      "bytes": 20489,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_review_final_tests_20261002.xml",
+      "sha256": "9ae91770f692b4b786b1f0e0c4e43b46504224d54f889e175484869b9def6788"
+    },
+    "passed": 137,
+    "skipped": 0,
+    "testsuite_time_s": 23.954
+  },
+  "schema": "threadripper_overhead_panel_review_validation_v1",
+  "scientific_timings_admitted": false,
+  "source_commit": "e617c4061b1d8d833b8292d1cac84b5b17b5163d",
+  "source_files": [
+    {
+      "bytes": 9053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_overhead.py",
+      "sha256": "6d2b1a298cecc7bf29aa485422dfb404b48af3202bab11cc48a2be3c71cab289"
+    },
+    {
+      "bytes": 12315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_review_threadripper_overhead.py",
+      "sha256": "22ac817a5a21782f1837064f1a97057b30b75ed6a564444e22b8349a442cde6a"
+    }
+  ],
+  "status": "conditional_review_workflow_and_actual_unrun_cli_validated"
+}
