@@ -68,6 +68,12 @@ but all five test jobs fail. Canonical temporary paths and synthetic boot
 fixtures are corrected; 225 focused local cases pass, without production-gate
 changes. Remote confirmation and broader native/path/provenance repairs remain
 open. This does not supersede the historical full local regression snapshot.
+The [strict replay-environment follow-up](CI_REPLAY_ENVIRONMENT_20261001.md)
+pins test NumPy to the retained 2.2.6 metadata and supplies copied, hash-checked
+evidence to the overhead-audit fixture. Comparators and production code remain
+unchanged. A fresh private environment passes 422 focused cases and collects
+13,692 cases; source-797af71a CI is still live at its recorded snapshot.
+These checks do not establish all-suite, remote or installed-runtime success.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

@@ -1,0 +1,297 @@
+{
+  "schema": "ci_replay_environment_result_v1",
+  "status": "focused_local_pass_remote_pending",
+  "base_revision": "797af71afe9dc88fcb0f833aefa77655a07d73d8",
+  "changes": {
+    "copied_fixture_evidence": 8,
+    "numpy_test_pin": "2.2.6",
+    "strict_comparisons_unchanged": true,
+    "new_cases": 7
+  },
+  "local": {
+    "focused": {
+      "artifact": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/focused.xml",
+        "bytes": 60642,
+        "sha256": "6a49901d45d145dc339e888120bbe8230f66bca7cfb5ab10e5797e25fa3bcd22"
+      },
+      "tests": 422,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_summary": "422 passed in 28.00s",
+    "collection": {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/venv/bin/python",
+        "-m",
+        "pytest",
+        "--collect-only",
+        "-q"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 8.701477914000861,
+      "log": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/collection.log",
+        "bytes": 1317673,
+        "sha256": "593c40001371536d3a601ebfcea7ed6939a99f8c3cedb7feca739d08d6fcf13a"
+      },
+      "tail": [
+        "tests/unit/test_zombi_truth.py::test_inconsistent_simulator_outputs_rejected[G/Genomes/B_GENOME.tsv-\\t3\\n-\\t9\\n]",
+        "tests/unit/test_zombi_truth.py::test_fully_lost_family_requires_independent_empty_truth",
+        "tests/unit/test_zombi_truth.py::test_single_survivor_is_retained_without_pairs",
+        "",
+        "=============================== warnings summary ===============================",
+        "benchmarks/work/ci_numpy_pinned_20261001/venv/lib/python3.12/site-packages/_pytest/python.py:124",
+        "  /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/venv/lib/python3.12/site-packages/_pytest/python.py:124: PytestRemovedIn10Warning: Passing a non-Collection iterable to parametrize is deprecated.",
+        "  Test: tests/unit/test_probe_verified_threadripper_fixture.py::test_selects_frozen_method_without_changes, argvalues type: enumerate",
+        "  Please convert to a list or tuple.",
+        "  See https://docs.pytest.org/en/stable/deprecations.html#parametrize-iterators",
+        "    metafunc.parametrize(*marker.args, **marker.kwargs, _param_mark=marker)",
+        "",
+        "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+        "13692 tests collected in 6.21s"
+      ],
+      "packages": {
+        "numpy": "2.2.6",
+        "numba": "0.68.0",
+        "leidenalg": "0.12.0",
+        "pytest": "9.1.1",
+        "sqlglot": "30.20.0",
+        "scipy": "1.15.3"
+      }
+    },
+    "collection_receipt": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/collection_result.json",
+      "bytes": 1923,
+      "sha256": "9d25e4802bf69a052894ee66919d6d28eae7dfc5ce857412d272669120f29a99"
+    },
+    "installation": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/install.log",
+      "bytes": 17929916,
+      "sha256": "a54d2f73be254f99e3f9f895ea8bc335f5b89c739ad05f6eb7ff51123bdae39d"
+    },
+    "pip_check": {
+      "exit_code": 0,
+      "stdout": "No broken requirements found.\n"
+    },
+    "environment": {
+      "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+      "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/venv",
+      "base_prefix": "/usr",
+      "packages": {
+        "setuptools": "81.0.0",
+        "pytest-cov": "7.1.0",
+        "pluggy": "1.6.0",
+        "DendroPy": "5.0.8",
+        "pip": "24.0",
+        "fonttools": "4.66.1",
+        "ijson": "3.5.0",
+        "python-dateutil": "2.9.0.post0",
+        "llvmlite": "0.50.0",
+        "iniconfig": "2.3.0",
+        "kiwisolver": "1.5.1",
+        "six": "1.17.0",
+        "contourpy": "1.4.0",
+        "igraph": "1.0.0",
+        "pytest": "9.1.1",
+        "texttable": "1.7.0",
+        "cycler": "0.12.1",
+        "PyMuPDF": "1.27.2.3",
+        "scipy": "1.15.3",
+        "Pygments": "2.21.0",
+        "leidenalg": "0.12.0",
+        "numba": "0.68.0",
+        "pyparsing": "3.3.3",
+        "et_xmlfile": "2.0.0",
+        "biopython": "1.86",
+        "psutil": "7.2.2",
+        "numpy": "2.2.6",
+        "coverage": "7.16.2",
+        "pillow": "12.2.0",
+        "matplotlib": "3.10.8",
+        "sqlglot": "30.20.0",
+        "python-igraph": "1.0.0",
+        "packaging": "26.3",
+        "openpyxl": "3.1.5",
+        "Cython": "3.0.4"
+      }
+    },
+    "context": "Current checkout on Linux with retained native libraries; not installed-package or native/raw-data restoration."
+  },
+  "diagnostic": {
+    "artifact": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/numpy_replay_diagnostic.json",
+      "bytes": 316,
+      "sha256": "547a226c327e936cccfd64f7e52a3ac6af6106f2e6800adfafbe5e01c362b1f8"
+    },
+    "result": {
+      "numpy_version": "2.4.6",
+      "differences": {
+        "factorial": [
+          "numpy_version"
+        ],
+        "sequence": [
+          "numpy_version"
+        ],
+        "matched_graph_contrasts_equal": true,
+        "matched_graph_bootstrap": [
+          "numpy_version"
+        ]
+      },
+      "native_scoring_rerun": false,
+      "defaults_changed": false
+    },
+    "context": "Bounded frozen-count replay to identify the exact failing fields; no new inference/scoring or statistical interpretation."
+  },
+  "earlier_overhead_focused": {
+    "artifact": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/overhead_evidence_rebinding.xml",
+      "bytes": 19833,
+      "sha256": "f8dac9f875bad7163bb92d031038ce4a942c4162bf045c96e08666f6b28c1621"
+    },
+    "tests": 135,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_records": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/requirements.txt",
+      "bytes": 520,
+      "sha256": "a0dda47e04703e02aca2916fef5a54e732f3cf2db34f72901573d4f6d3a769f3"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_declared_test_dependencies.py",
+      "bytes": 2242,
+      "sha256": "86f4b0b2719a9411b0cf38ac475f93bffff5bdfdaddb57dd3bcbc7136952b0d5"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_audit_threadripper_overhead.py",
+      "bytes": 16295,
+      "sha256": "73057f6ae752f836add16e1f1d2c6a06adb89f4a5ee70464add875fa45b7e9f7"
+    }
+  ],
+  "production_sources_unchanged": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_threadripper_overhead.py",
+      "bytes": 19004,
+      "sha256": "1bfc572f2bac41853b4e2707911e5dcd6f6063efc573425bb98f750c3f390154"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_corrected_factorial.py",
+      "bytes": 7930,
+      "sha256": "1350c85556912ed854429cc1e1fb22c7da7d335a99d4e806805f7d3834b501c6"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/reproduce_qfo_sequence.py",
+      "bytes": 7105,
+      "sha256": "27c169aa3a6538a0aa5dc624434dd2dfd37c0cd539fe53ccbf8b5c6662463bfe"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_matched_graph.py",
+      "bytes": 4098,
+      "sha256": "357804258e2d38795c6adcf06c97ec19411deaf7aaf14e92207d1699048f2cb7"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_matched_graph.py",
+      "bytes": 8862,
+      "sha256": "e71337aae1769d58a507347bd12afd6ffbfa007350a776a4593d856ae315985c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "bytes": 9202,
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_sequence.py",
+      "bytes": 5878,
+      "sha256": "d329964729862ff0d203b9d91542a5472121543d82f66d091d75ca0dd4e34202"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/requirements.txt",
+      "bytes": 57,
+      "sha256": "e4085d7affc668777fb39f750d27ef7e94d7bc32d21cfc60f0a0fe96c499f943"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/setup.py",
+      "bytes": 8734,
+      "sha256": "88120e9d722557337d466a5026c4b238d5a21c9cc213bf35c27d4b480b347193"
+    }
+  ],
+  "remote_checkpoint": {
+    "observed_utc": "2026-10-02T00:10:51.745163+00:00",
+    "run_id": 36943913826,
+    "head_sha": "797af71afe9dc88fcb0f833aefa77655a07d73d8",
+    "status": "queued",
+    "conclusion": null,
+    "url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36943913826"
+  },
+  "remote_jobs": [
+    {
+      "id": 110641481062,
+      "name": "docs",
+      "status": "queued",
+      "conclusion": null
+    },
+    {
+      "id": 110641481158,
+      "name": "test-fast (3.13)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 110641481236,
+      "name": "test-fast (3.12)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 110641481261,
+      "name": "test-fast (3.11)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 110641481274,
+      "name": "test-fast (3.10)",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 110641481281,
+      "name": "test-full",
+      "status": "in_progress",
+      "conclusion": null
+    }
+  ],
+  "remote_checkpoint_artifacts": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_797af71a_20261001/run_latest.json",
+      "bytes": 13552,
+      "sha256": "2cd94099c56d3ef480d6f7bdcf5cba3d0a188ab09817c8a9c7c52bd22e10fa85"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_797af71a_20261001/jobs_latest.json",
+      "bytes": 17578,
+      "sha256": "36084f363668ce6cdf963ae2a9483a8bd07dc398ffbcba73048d6972636d4914"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_797af71a_20261001/observation_latest.json",
+      "bytes": 7138,
+      "sha256": "136f98d0709089aa78480b1221cb6a9959d2aa80936cae13be1cbf14023b65de"
+    }
+  ],
+  "scientific_defaults_changed": false,
+  "controlled_timing": false,
+  "remote_success": false,
+  "publication_ready": false,
+  "limitations": [
+    "Focused local pass and collection are not full test execution.",
+    "The source-797af71a CI handle remains live at its recorded snapshot; continue it, do not resubmit.",
+    "Prepared overhead/NumPy corrections need their own post-push remote confirmation.",
+    "Other native/OS/workstation paths and external-asset failures remain open.",
+    "Seven new cases are included in 422, not added a second time.",
+    "Earlier 135-case overhead validation overlaps the current 422-case panel."
+  ]
+}

@@ -43,6 +43,12 @@ terminal outcomes and logs are pinned separately. Focused canonical-path and
 synthetic-boot fixture corrections pass 225 local cases; native/path/provenance
 failures and remote confirmation remain open. Production gates and scientific
 settings are unchanged, and controlled timing stays deferred.
+The [strict replay-environment correction](results/CI_REPLAY_ENVIRONMENT_20261001.md)
+diagnoses version-metadata mismatches without loosening scientific comparisons.
+Test NumPy is pinned to 2.2.6; the overhead-audit fixture checks exact copied
+evidence rather than workstation paths. A fresh private environment passes
+422 focused cases and collects 13,692 cases. This is not full execution or
+clean installed-package restoration; actual remote outcomes remain outstanding.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

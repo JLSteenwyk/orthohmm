@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Strict Replay Environment And Copied Audit Fixtures (2026-10-01)
+
+Previous turn is progress: pushed fixture corrections and actual terminal CI
+evidence at 797af71a. Re-read the full objective/ledger. Its actual CI handle
+36943913826 remains live at the recorded 00:10:51 UTC snapshot: five test jobs
+execute after successful installs, docs queued. Retain that handle; do not
+restart or reclassify it. Timing remains deferred, no contention polls/questions.
+
+Trace seventeen earlier overhead-audit failures to historical absolute protocol
+paths in a unit fixture. Copy all eight exact pinned protocol/helper files from
+the checkout to the temporary fixture; require original byte counts/hashes
+before and after copying. Three new cases prove local evidence checks and
+changed-copy rejection. Production auditor and historical plan remain unchanged.
+135 overhead/plan/boundary-replay cases pass in the preceding private environment.
+
+Trace failures in three replay workflows with a bounded frozen-count diagnostic:
+NumPy 2.4.6 reproduces all checked scientific fields exactly; only recorded
+NumPy version metadata differs. Pin 2.2.6 for tests instead of weakening strict
+equality, rewriting provenance or changing numerical engines. Add four
+dependency/report-linked cases. Application requirements remain unchanged.
+
+Fresh separate private Python 3.12 environment installs/checks successfully.
+**422 focused cases pass in 28.00 seconds**, zero failures/errors/skips, including
+the exact replay and copied evidence checks. The preceding 135 cases overlap;
+seven new cases are included, not separately added. Full discovery collects
+**13,692 cases without errors** in 6.21 seconds; deprecation warnings retained.
+This is checkout/retained-native-library validation, not full fresh execution,
+installed-package restoration or remote CI success. Nine production/application
+files remain byte-equal to HEAD. Scoped whitespace passes.
+
+[Actual diagnosis, scopes and measured pins](CI_REPLAY_ENVIRONMENT_20261001.md).
+Commit/push the tested milestone and capture its new CI source/run handle.
+Continue observing 36943913826 rather than resubmitting it. Native/OS/external
+paths, other replay errors and broader release requirements remain open.
+No science/default/score change, DGX, shared-package modification, unrelated
+job/service action or controlled timing. All own command sessions are terminal.
+
 ## Actual CI Execution And Focused Fixture Corrections (2026-10-01)
 
 User does not know a quiet window and asks whether one is needed now. It is

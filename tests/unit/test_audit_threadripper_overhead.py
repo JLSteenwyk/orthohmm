@@ -162,10 +162,27 @@ def test_boundary_task_composes_actual_raw_replay_and_existing_cpu_reader(archiv
 def panel(tmp_path, plan):
     actual = Path(module.__file__).parent / "results/threadripper_native_overhead_plan_20260930.json"
     retained = json.loads(actual.read_text())
+    checkout = Path(module.__file__).resolve().parents[1]
+    historical_root = Path(retained["sources"][0]["path"]).parents[2]
+
+    def copied_pin(pin):
+        relative = Path(pin["path"]).relative_to(historical_root)
+        source = checkout / relative
+        current = module.record(source)
+        assert {k: current[k] for k in ("bytes", "sha256")} == {
+            k: pin[k] for k in ("bytes", "sha256")}
+        target = tmp_path / "evidence" / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(source.read_bytes())
+        copied = module.record(target)
+        assert {k: copied[k] for k in ("bytes", "sha256")} == {
+            k: pin[k] for k in ("bytes", "sha256")}
+        return copied
+
     source = tmp_path / "parent.json"
     source.write_text(json.dumps(parent()))
-    plan["sources"] = [module.record(source), *retained["sources"][1:]]
-    plan["helpers"] = retained["helpers"]
+    plan["sources"] = [module.record(source), *[copied_pin(pin) for pin in retained["sources"][1:]]]
+    plan["helpers"] = [copied_pin(pin) for pin in retained["helpers"]]
     plan_path = tmp_path / "plan.json"
     plan_path.write_text(json.dumps(plan))
     history_path = tmp_path / "attempts.json"
@@ -190,6 +207,37 @@ def test_real_plan_complete_unrun_inventory(panel):
     assert all(c["median_signed_ratio"] is None for c in result["comparison"]["cells"])
     unbound = module.audit(panel[0], module.record(panel[0])["sha256"], panel[1], None, None, None, None)
     assert unbound["external_bindings"] == dict(launcher=None, scheduler_command=None, scheduler_cwd=None)
+
+
+def test_audit_reads_copied_pins_not_workstation_paths(panel, monkeypatch):
+    plan = json.loads(panel[0].read_text())
+    evidence_root = panel[0].parent / "evidence"
+    references = [*plan["sources"][1:], *plan["helpers"]]
+    assert len(references) == 8
+    assert all(Path(pin["path"]).is_relative_to(evidence_root) for pin in references)
+    original_check = module.check
+    checked = []
+
+    def check_local(pin):
+        assert Path(pin["path"]).is_relative_to(panel[0].parent)
+        checked.append(pin)
+        return original_check(pin)
+
+    monkeypatch.setattr(module, "check", check_local)
+    result = audit(panel)
+    assert all(pin in checked for pin in references)
+    assert all(row["status"] == "unrun" for row in result["runs"])
+    assert result["comparison"]["engineering_budget_passed"] is None
+    assert result["scientific_timings_admitted"] is False
+
+
+@pytest.mark.parametrize("kind", ["protocol", "helper"])
+def test_changed_copied_evidence_is_not_admitted(panel, kind):
+    plan = json.loads(panel[0].read_text())
+    pin = plan["sources"][1] if kind == "protocol" else plan["helpers"][0]
+    Path(pin["path"]).write_text("Changed copied evidence.\n")
+    with pytest.raises(ValueError):
+        audit(panel)
 
 
 @pytest.mark.parametrize("state,expected", [("FAILED", "scheduler_failed"),

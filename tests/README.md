@@ -18,6 +18,10 @@ packaging tests. Their versions match the recorded 1 October local regression;
 they are not substituted into historical scientific environments. A clean
 test environment needs these packages even when optional application features
 or publication workflows are not being executed.
+NumPy is pinned to 2.2.6 because retained factorial, sequence-control and
+matched-graph numerical replay compares the engine version as well as the
+statistics. This preserves exact provenance comparisons; it does not loosen
+their equality checks or change the application's broader runtime requirement.
 
 Actual affinity/cgroup observations require Linux facilities. Importing the
 observer and testing it with injected readers does not require those facilities;
