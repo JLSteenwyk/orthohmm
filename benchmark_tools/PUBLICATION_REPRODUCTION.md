@@ -18,6 +18,21 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [standalone YGOB arithmetic workflow](results/YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+now reproduces all four methods' 12 point metrics and all six paired-interval
+endpoints from identifier-free observations. Its local archive passes actual
+fresh extraction and reproduction without checkout/host-counter reads after
+guard canaries. This checks retained-count arithmetic, not native/raw-reference
+admission, independent families, controlled resources or a complete release.
+The [direct execution guide](YGOB_ARITHMETIC_REPLAY.md) specifies the exact
+inputs, pinned numerical environment and limitations.
+
+Preceding source `a485ba00` public CI now has all eight jobs successful. The
+actual Python 3.10 log/artifact verifies the four declared raw-source exclusions,
+14,167 unit passes/119 execution-time skips and five integration passes.
+This confirms that scoped profile, not the private raw/native gate or later
+YGOB code; historical pending/failure descriptions below retain their dates.
+
 The [explicit public/raw test boundary](results/PUBLIC_TEST_PROFILE_20261002.md)
 keeps the default complete test targets while naming public CI's four raw-input
 exclusions and retaining collection/JUnit evidence. The strict collection audit

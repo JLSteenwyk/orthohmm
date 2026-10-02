@@ -7,6 +7,13 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [standalone YGOB arithmetic replay](results/YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+now checks all four methods' point metrics and six paired interval endpoints
+from identifier-free retained counts after fresh local archive extraction.
+Scores stay frozen; this is not native re-admission or independent-family
+validation. Preceding public CI at `a485ba00` has all eight jobs successful,
+with its four raw-source exclusions and remaining execution-time skips explicit.
+
 The [public and raw-data test profiles](results/PUBLIC_TEST_PROFILE_20261002.md)
 separate four explicitly declared SwissTrees raw-source cases from public CI,
 without changing the default full suite or exporter assertions. The collection

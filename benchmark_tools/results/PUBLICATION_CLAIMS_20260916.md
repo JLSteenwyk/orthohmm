@@ -13,6 +13,16 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [YGOB retained-count replay](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+closes its workstation-only sufficient-statistic replay gap: all 12 point
+metrics and six nominal/adjusted endpoints reproduce after fresh local
+archive extraction. Raw IDs/memberships are excluded. This does not establish
+pillar exchangeability, family independence, native admission, complete runtime
+or release closure. Preceding `a485ba00` CI has all eight public jobs successful;
+the inspected Python 3.10 receipt retains four raw exclusions and 119 execution
+skips. Full private/native regression and newer-code remote confirmation remain
+separate requirements.
+
 The [public test profile](PUBLIC_TEST_PROFILE_20261002.md) now explicitly
 declares four raw-source exclusions, while the unchanged default test selection
 and scientific exporter assertions remain complete. Its collection audit rejects

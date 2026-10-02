@@ -395,6 +395,12 @@ retain all 180,000 synthetic score evaluations and their source/runtime pins.
 Its public numerical readback checks all 90 tail endpoints without loading
 the native kernel; this is not a complete inference runtime archive.
 
+The [standalone YGOB arithmetic replay](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+uses identifier-free retained counts to reproduce all 12 point metrics and
+six nominal/adjusted interval endpoints after local archive restoration.
+This is not native re-admission, proof of pillar exchangeability or independent
+family validation; original transfer scores and overlap limitations remain.
+
 The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
 requirements. No submission-ready release or archival DOI is claimed.

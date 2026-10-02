@@ -1,5 +1,62 @@
 # Publication Progress
 
+## Standalone YGOB Transfer Arithmetic Reproduction (2026-10-02)
+
+Previous turn progressed at pushed a485ba00 with explicit public/raw CI profiles.
+Read objective/HEAD/latest ledger and observe exact run 37010497782, initially
+live. Advance the transfer-analysis replay gap while it runs; no timing polls,
+questions, DGX access or unrelated job/service actions. At 13:23:44 UTC all
+eight public jobs are successful. Download Python 3.10 job 110848802270 and its
+three-file artifact 11227624363 once at 13:19:52 UTC. Actual source log,
+collection JSON and JUnit agree: 14,295 collected/14,291 public-selected/four
+raw exclusions, no collection skips/errors. Unit execution has 14,167 passes/
+119 skips/four deselections; all 25 new profile cases pass. Separate integration
+execution has five passes, no errors/failures/skips. Do not infer sibling counts
+or full private/native success; this run does not include the new YGOB helper.
+
+Identify the YGOB full pillar statistics as workstation-only even though its
+summary is public. Export all four methods' 205,000 integer cells and 10,250
+shared sizes into a 77,438-byte identifier-free gzip; retain the ordered source
+signature only as a hash. Exact full-result/summary identities and all common
+metadata/point/coverage values agree. First exporter attempt fails before output
+with `KeyError: full_results`; fix the exact one-field schema relationship, not
+the scientific data. No gene IDs, pillar names, sequences or memberships enter
+the compact observation; no native inference/admission/raw scoring is repeated.
+
+New standalone NumPy-2.2.6 verifier uses integer half-count arithmetic, original
+20,000 shared PCG64 multinomial draws/seed 20260917, micro ratios and six-endpoint
+adjustment. First local replay matches all 12 point metrics, six effects and
+24 interval bounds within 1e-12; preserve its earlier helper source identity.
+Add strict snapshot-field rejection, then test the final source after actual
+seven-member local archive extraction into `/tmp`. A fresh private `-I -B`
+child checks six payloads/index before and after, rejects three checkout/proc/sys
+canaries and observes zero forbidden opens afterward. All point metrics and
+intervals reproduce; child exits zero. Logs/report/archive stay retained and
+temporary extraction is removed. Python-event checks are not OS containment;
+NumPy/runtime loads precede the guard and same-host replay is not portability.
+
+Archive 89,006 bytes, SHA256
+`794aa02ee7f91868eb2bc8492e92683d3c52afd9464d23eda66dbabdb24751f5`;
+external index 1,589 bytes, SHA256
+`242947e66b5e48d0c74533d0bd4b4cc7b5ac457ed8f2d5c6a591dfc16af6f1de`.
+Initial three-module test panel has 50 passes in 1.59s. Add main/extended
+availability links and two prose checks; final four-module panel has **62 passes
+in 1.75s**, zero errors/failures/skips. JUnit 9,046 bytes, SHA256
+`77c167cdc79bb4e05a1ffa135cbbb3b70b78ba82a9cac1aaee752da1d6ad94f6`.
+Thirty-four new cases include complete point-count checks, toy explicit paired
+resampling/batch invariance, interval-field rejection, immutable identity/scopes,
+wrong-digest failure retention and no-overwrite. Full-size bootstrap is not
+repeated in every synthetic CI case. Panels overlap, not additive.
+
+See [replay and evidence](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md). Update
+reproduction/claims indexes and commit/push the validated milestone; observe
+new CI independently at its source. All scientific settings/scores, original
+YGOB results, historical renders/archives and unrelated sample outputs remain
+unchanged. This closes retained-count replay, not family independence, raw/native
+admission, rights or complete executable release/deposition. No fresh manuscript
+render or public numerical-archive upload occurs. Controlled timing, other-QfO
+uncertainty and final package reconciliation remain open. The goal stays active.
+
 ## Explicit Public and Raw Benchmark Test Boundary (2026-10-02)
 
 Previous scientific milestone progressed at pushed 61082b22; the intervening

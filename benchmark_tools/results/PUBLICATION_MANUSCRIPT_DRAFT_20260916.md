@@ -2456,6 +2456,12 @@ agreement or selectively passing simulation cases.
 
 ## Data And Code Availability
 
+The [standalone YGOB arithmetic replay](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+uses identifier-free retained counts to reproduce all 12 point metrics and
+six nominal/adjusted interval endpoints after local archive restoration.
+This is not native re-admission, proof of pillar exchangeability or independent
+family validation; original transfer scores and overlap limitations remain.
+
 A separate [frozen-source installation](PUBLICATION_FROZEN_OVERLAY_INSTALL_20260926.md)
 uses scientific revision `7f3a9e4` with a versioned setup-only packaging overlay.
 All 33 shipped scientific source files match their frozen Git blobs; the new

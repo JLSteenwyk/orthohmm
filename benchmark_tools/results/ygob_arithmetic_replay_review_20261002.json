@@ -1,0 +1,290 @@
+{
+  "actual_full_replay_executions": 2,
+  "archive_publicly_deposited": false,
+  "audit_helper": {
+    "bytes": 7477,
+    "path": "benchmarks/work/verify_ygob_replay_bundle_20261002.py",
+    "sha256": "919d64e1da97b7e064358e22f5dc4c5bc72076f1228d4db388fa9f756c54d6f9"
+  },
+  "child_logs": [
+    {
+      "bytes": 1793,
+      "path": "benchmarks/work/ygob_replay_bundle_20261002/stdout.log",
+      "sha256": "0443ed5866d62c4a9009a7f54253e7019b2a471c335a183f576047c85f7955b2"
+    },
+    {
+      "bytes": 0,
+      "path": "benchmarks/work/ygob_replay_bundle_20261002/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "controlled_timing": false,
+  "copied_replay": {
+    "bytes": 1677,
+    "path": "benchmarks/work/ygob_replay_bundle_20261002/replay.json",
+    "sha256": "2c1a73572736549aaca5392a8df92913f48ddf4b0237f28f037a91f6320b2296"
+  },
+  "final_cases": 62,
+  "final_new_cases": 34,
+  "final_restoration": {
+    "bytes": 2694,
+    "path": "benchmarks/work/ygob_replay_bundle_20261002/restoration.json",
+    "sha256": "0f28a8c989181cd171534624d9e629bd0fa2f9f6c87ef11172c6ee01d41cf4a8"
+  },
+  "first_replay": {
+    "bytes": 1677,
+    "path": "benchmarks/work/ygob_arithmetic_replay_20261002.json",
+    "sha256": "7cbac9e0daddb87adef2764aabd2dd49ef66b2e7698e65d4c2f4fc665d14adb5"
+  },
+  "first_replay_source": {
+    "bytes": 15781,
+    "sha256": "66738d2be622724e68b638cfba72e9a220c80e3f4ef71e47f311795924734ae5"
+  },
+  "full_replay_not_repeated_in_each_unit_case": true,
+  "interval_bounds": 24,
+  "interval_endpoints": 6,
+  "limitations": [
+    "Python-event guarding, not OS containment; private NumPy/runtime loads precede guard installation.",
+    "Same host/runtime, no cross-platform or hermetic-runtime claim.",
+    "Local numerical archive, not public deposition or complete executable study.",
+    "Replays retained sufficient statistics, not raw reference/prediction or native admission.",
+    "Uses independent integer count arithmetic, but the same NumPy PCG64 and quantiles, not a new statistical engine.",
+    "Pillar exchangeability and half-allocation of cross-pillar errors remain assumptions.",
+    "Novel-taxon transfer retains homolog overlap; no family-disjoint or unrestricted generalization claim.",
+    "Projection-group metadata is checked internally, not reconstructed from omitted memberships.",
+    "No controlled resources, complete release, redistribution clearance or archival deposition."
+  ],
+  "native_inference_repeated": false,
+  "numpy_version": "2.2.6",
+  "observations": {
+    "bytes": 77438,
+    "path": "benchmark_tools/results/ygob_sufficient_counts_20261002.json.gz",
+    "sha256": "62885bb85eb357d97e55d053134d262e1ebb1e2b088a37df96986f98f8620d66"
+  },
+  "original_full_result": {
+    "bytes": 7945362,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/ygob_frozen_evaluation_v1/results.json",
+    "sha256": "5104e000d0c3bb8687103646be8011fbc97f8b05f7eb0a925bbfdd1e76200e83"
+  },
+  "original_projection_failure": {
+    "correction": "Require exact summary/full schema relationship; all shared metadata remains checked",
+    "error": "KeyError: full_results",
+    "exit_code": 1,
+    "output_created": false
+  },
+  "panels_overlap": true,
+  "pillar_sizes": 10250,
+  "point_metrics": 12,
+  "primary_f1": {
+    "bonferroni_ci": [
+      -0.6225284696490123,
+      0.4452219781344026
+    ],
+    "difference_percentage_points": -0.08486993596729109,
+    "paired_95_percent_ci": [
+      -0.4875033553428415,
+      0.3126760367058221
+    ]
+  },
+  "prior_ci": {
+    "all_eight_jobs_success_at": "2026-10-02T13:23:44.336053+00:00",
+    "artifact_id": 11227624363,
+    "collected": 14295,
+    "downloaded_at": "2026-10-02T13:19:52.708570+00:00",
+    "files": [
+      {
+        "bytes": 276031,
+        "path": "benchmarks/work/ci_remote_a485ba00_20261002/110848802270.log",
+        "sha256": "50c5cab69615f306d38d26c69fb467c8e967e79a3c41242f28984638fbf4ba0a"
+      },
+      {
+        "bytes": 493526,
+        "path": "benchmarks/work/ci_remote_a485ba00_20261002/public-fast-3.10.zip",
+        "sha256": "a7b8af3d118b1e88632ac62591c334f30e89a8d19c5cc3bb05ac527980f9b840"
+      },
+      {
+        "bytes": 2891600,
+        "path": "benchmarks/work/ci_remote_a485ba00_20261002/public-test-selection.json",
+        "sha256": "e967f396d31bd4d5534569c309412957c9939989b20156adc6c4fa521e2680fb"
+      },
+      {
+        "bytes": 1985122,
+        "path": "benchmarks/work/ci_remote_a485ba00_20261002/public-unit.xml",
+        "sha256": "23e18d689392f0999f3d9afbe86d8160bcd74859d1ffdc8c62c7cdb1e4bd92ba"
+      },
+      {
+        "bytes": 874,
+        "path": "benchmarks/work/ci_remote_a485ba00_20261002/public-integration.xml",
+        "sha256": "d1d22ce9e6b2d6099f4ffd12743d7784630300468b7dfa68ddda4095f835349b"
+      }
+    ],
+    "inspected_job": 110848802270,
+    "integration_passed": 5,
+    "new_ygob_code_confirmed": false,
+    "raw_cases_excluded": 4,
+    "run_id": 37010497782,
+    "selected": 14291,
+    "sibling_counts_inferred": false,
+    "source_commit": "a485ba0012aeed440fc6ade80cbde9ea9fbaf070",
+    "unit_execution_skips": 119,
+    "unit_passed": 14167
+  },
+  "projection_all_205000_cells_and_order_checked": true,
+  "publication_ready": false,
+  "pytest_times_s": [
+    1.59,
+    1.75
+  ],
+  "raw_gene_or_pillar_identifiers_included": false,
+  "raw_scoring_repeated": false,
+  "recorded_utc": "2026-10-02T13:29:16.198712+00:00",
+  "replicates": 20000,
+  "restoration": {
+    "archive": {
+      "bytes": 89006,
+      "sha256": "794aa02ee7f91868eb2bc8492e92683d3c52afd9464d23eda66dbabdb24751f5"
+    },
+    "archive_path": "benchmarks/work/ygob_replay_bundle_20261002/orthohmm-ygob-arithmetic-20261002-v1.tar.gz",
+    "audit_script": {
+      "bytes": 7477,
+      "sha256": "919d64e1da97b7e064358e22f5dc4c5bc72076f1228d4db388fa9f756c54d6f9"
+    },
+    "checks": {
+      "forbidden_opens_after_canaries": 0,
+      "guard_canaries": 3,
+      "index_verified_before_after": true,
+      "payload_files": 6
+    },
+    "child_exit_code": 0,
+    "index": {
+      "bytes": 1589,
+      "sha256": "242947e66b5e48d0c74533d0bd4b4cc7b5ac457ed8f2d5c6a591dfc16af6f1de"
+    },
+    "limitations": [
+      "Python-event guarding, not OS containment; private NumPy/runtime loads precede guard installation.",
+      "Same host/runtime, no cross-platform or hermetic-runtime claim.",
+      "Local numerical archive, not public deposition or complete executable study."
+    ],
+    "native_inference_repeated": false,
+    "observed_utc": "2026-10-02T13:22:28.125634+00:00",
+    "publication_ready": false,
+    "raw_memberships_included": false,
+    "reproduction": {
+      "bytes": 1677,
+      "sha256": "2c1a73572736549aaca5392a8df92913f48ddf4b0237f28f037a91f6320b2296"
+    },
+    "restored_directory": "/tmp/orthohmm-ygob-replay-rt9ri64n",
+    "sources": [
+      {
+        "bytes": 1078,
+        "path": "LICENSE.md",
+        "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e",
+        "source": "LICENSE.md"
+      },
+      {
+        "bytes": 5240,
+        "path": "README.md",
+        "sha256": "8e568442f082a1dd9f3508c369eacf180fe0c1afe774b29dc47d32f2d8f3a5c0",
+        "source": "benchmark_tools/YGOB_ARITHMETIC_REPLAY.md"
+      },
+      {
+        "bytes": 16031,
+        "path": "reproduce_ygob_validation.py",
+        "sha256": "d20ab936ed74f031f61dedfaf8cdd69135ef401f1186116d0a97b5ed90a33d16",
+        "source": "benchmark_tools/reproduce_ygob_validation.py"
+      },
+      {
+        "bytes": 13,
+        "path": "requirements.txt",
+        "sha256": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+        "source": "benchmark_tools/results/ygob_replay_requirements_20261002.txt"
+      },
+      {
+        "bytes": 7978,
+        "path": "ygob_frozen_results_20260916.json",
+        "sha256": "3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef",
+        "source": "benchmark_tools/results/ygob_frozen_results_20260916.json"
+      },
+      {
+        "bytes": 77438,
+        "path": "ygob_sufficient_counts_20261002.json.gz",
+        "sha256": "62885bb85eb357d97e55d053134d262e1ebb1e2b088a37df96986f98f8620d66",
+        "source": "benchmark_tools/results/ygob_sufficient_counts_20261002.json.gz"
+      }
+    ],
+    "status": "standalone_ygob_replay_archive_restored"
+  },
+  "schema": "ygob-arithmetic-replay-review-v1",
+  "scientific_scores_changed": false,
+  "scope": "Identifier-free retained sufficient-statistic arithmetic; original frozen transfer endpoint unchanged",
+  "seed": 20260917,
+  "sources": [
+    {
+      "bytes": 16031,
+      "path": "benchmark_tools/reproduce_ygob_validation.py",
+      "sha256": "d20ab936ed74f031f61dedfaf8cdd69135ef401f1186116d0a97b5ed90a33d16"
+    },
+    {
+      "bytes": 8305,
+      "path": "tests/unit/test_reproduce_ygob_validation.py",
+      "sha256": "51fd1cb4343995884380807b274ff0f245506d91f7f5888a1d064e1373091103"
+    },
+    {
+      "bytes": 5240,
+      "path": "benchmark_tools/YGOB_ARITHMETIC_REPLAY.md",
+      "sha256": "8e568442f082a1dd9f3508c369eacf180fe0c1afe774b29dc47d32f2d8f3a5c0"
+    },
+    {
+      "bytes": 13,
+      "path": "benchmark_tools/results/ygob_replay_requirements_20261002.txt",
+      "sha256": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8"
+    }
+  ],
+  "tests": [
+    {
+      "artifact": {
+        "bytes": 7223,
+        "path": "benchmarks/work/ygob_replay_tests_20261002.xml",
+        "sha256": "a30195197b7cffff8e97fbea5b952ca578caa755e1a06d2f0999c9f97457bb47"
+      },
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "bizon",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "50",
+          "time": "1.530",
+          "timestamp": "2026-10-02T09:16:37.685977-04:00"
+        }
+      ]
+    },
+    {
+      "artifact": {
+        "bytes": 9046,
+        "path": "benchmarks/work/ygob_replay_final_tests_20261002.xml",
+        "sha256": "77c167cdc79bb4e05a1ffa135cbbb3b70b78ba82a9cac1aaee752da1d6ad94f6"
+      },
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "bizon",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "62",
+          "time": "1.717",
+          "timestamp": "2026-10-02T09:26:28.592136-04:00"
+        }
+      ]
+    }
+  ],
+  "tolerance": 1e-12,
+  "unchanged_summary": {
+    "bytes": 7978,
+    "path": "benchmark_tools/results/ygob_frozen_results_20260916.json",
+    "sha256": "3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef"
+  },
+  "workflow_base_commit": "a485ba0012aeed440fc6ade80cbde9ea9fbaf070"
+}
