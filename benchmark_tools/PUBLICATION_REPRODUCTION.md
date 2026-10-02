@@ -75,6 +75,13 @@ F1/bootstrap metadata are equal and the guard remains unchanged. Test-only
 security pins now avoid fifteen retained alert ranges; 511 focused cases pass
 in a new private environment. Whole-suite, portable numerical admission and
 actual repository-alert closure remain separate open requirements.
+The [explicit portable matched-graph policy](results/PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md)
+now offers opt-in independent count-level rendering under the existing 1e-12
+contract, recording all differences. Default exact/metadata checks remain;
+no fallback or historical score rewrite. 101 focused cases pass, including
+actual temporary CLI exports. Remote confirmation is pending. Separately,
+all fifteen test-manifest alerts are API-confirmed fixed; forty historical-lock
+alerts remain, not comprehensive security clearance.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

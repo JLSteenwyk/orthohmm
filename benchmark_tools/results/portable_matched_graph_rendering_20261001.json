@@ -1,0 +1,125 @@
+{
+  "base_commit": "9b3bd5fbd9494053610cf911e2fd982a88822b66",
+  "controlled_timing_executed": false,
+  "existing_ci": {
+    "all_five_test_jobs": "in_progress",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "observed_utc": "2026-10-02T01:34:36.663528+00:00",
+    "run_id": 36950764034
+  },
+  "existing_ci_terminal_followup": {
+    "run_id": 36950764034,
+    "observed_utc": "2026-10-02T01:40:22.015553+00:00",
+    "status": "completed",
+    "conclusion": "failure",
+    "updated_at": "2026-10-02T01:37:44Z",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "all_five_test_jobs": "failure",
+    "job_logs_inspected_in_this_turn": false
+  },
+  "junit": {
+    "bytes": 15186,
+    "path": "benchmarks/work/release_alert_refresh_20261001/portable_plot_tests_final.xml",
+    "sha256": "a4b1a9ae209d6426d5d913ffcdae45d42280a01f2daa8a8271fcb6e77bdaaed6"
+  },
+  "limitations": [
+    "New portable renderer has not yet executed on remote macOS; recorded one-ULP replay is a synthetic admission fixture with real independent count checks.",
+    "No historical figure/result overwritten and no claim of bitwise cross-platform equality.",
+    "Count reproduction does not revalidate native inference, simulation truth or biological generalization.",
+    "Five seed blocks, development exposure and limited interval-tail resolution remain limitations.",
+    "Remaining historical alerts, broader CI, timing, uncertainty/source/rights, runtime closure and release remain open."
+  ],
+  "observed_remote_difference": {
+    "bytes": 1868,
+    "path": "benchmark_tools/results/ci_exact_replay_difference_20261001.json",
+    "sha256": "7d353b3f6f2c3e4591ad09e8e88410b23171648950888860290535920cc65e76"
+  },
+  "policy": {
+    "absolute_tolerance": 1e-12,
+    "all_24_metric_contrasts_reproduced": true,
+    "all_8_adjusted_f1_intervals_reproduced": true,
+    "automatic_fallback": false,
+    "default": "exact",
+    "differences_recorded_in_manifest": true,
+    "exact_metadata_required": true,
+    "finite_float_only_allowance": true,
+    "numerical_overrides_allowed": false,
+    "optional": "count-level",
+    "relative_tolerance": 0,
+    "tolerance_source": "unchanged September 26 independent count reproducer"
+  },
+  "prior_ci": {
+    "conclusion": "failure",
+    "run_id": 36949483608,
+    "status": "completed",
+    "updated_at": "2026-10-02T01:24:32Z"
+  },
+  "publication_ready": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "security_closure": {
+    "bytes": 3999,
+    "path": "benchmark_tools/results/test_dependency_alert_closure_20261001.json",
+    "sha256": "6dfc1369be7cf91d6bd855bdee0d72f3656c6fce547a4394d2313b0d865be796"
+  },
+  "sources": [
+    {
+      "bytes": 7048,
+      "path": "benchmark_tools/plot_matched_graph.py",
+      "sha256": "05c9d00d34e83344b6edc38119773fb531fb1c90a8f799dff6a9b567b60a292f"
+    },
+    {
+      "bytes": 9012,
+      "path": "tests/unit/test_plot_matched_graph.py",
+      "sha256": "3bc350f264a45163f6b45bae6a33ea2817ad85e33d0b948284c293703f5f6a4e"
+    }
+  ],
+  "status": "explicit_portable_count_level_rendering_locally_validated",
+  "tests": {
+    "cases": 101,
+    "errors": 0,
+    "exact_one_ulp_rejection_preserved": true,
+    "failures": 0,
+    "input_mutation_rejected": true,
+    "junit_suite_duration_s": 7.686,
+    "modules": [
+      "tests.unit.test_declared_test_dependencies",
+      "tests.unit.test_plot_matched_graph",
+      "tests.unit.test_reproduce_matched_graph_statistics",
+      "tests.unit.test_score_matched_graph"
+    ],
+    "new_cases_included": 49,
+    "pytest_duration_s": 7.72,
+    "real_cli_export_test_passed": true,
+    "skipped": 0
+  },
+  "unchanged_inputs": [
+    {
+      "bytes": 8862,
+      "path": "benchmark_tools/score_matched_graph.py",
+      "sha256": "e71337aae1769d58a507347bd12afd6ffbfa007350a776a4593d856ae315985c"
+    },
+    {
+      "bytes": 4913,
+      "path": "benchmark_tools/reproduce_matched_graph_statistics.py",
+      "sha256": "7f28eed73bbdcbb6db280eb47d4bbfc1e9e21e68cf5c81173129934b16b716f4"
+    },
+    {
+      "bytes": 109960,
+      "path": "benchmark_tools/results/matched_graph_scores_20260926/results.json",
+      "sha256": "d31dbc0f4e3f02dfb534c8b59b559db00260227f23f2640b4fed13d5aee8ec89"
+    },
+    {
+      "bytes": 57,
+      "path": "requirements.txt",
+      "sha256": "e4085d7affc668777fb39f750d27ef7e94d7bc32d21cfc60f0a0fe96c499f943"
+    },
+    {
+      "bytes": 514,
+      "path": "tests/requirements.txt",
+      "sha256": "70e26810b02f82bf9b22f7c2f01187bd69ebb84479a2582c33cec282397c7fea"
+    }
+  ]
+}

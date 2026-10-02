@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Explicit Portable Rendering And Confirmed Test-Alert Closure (2026-10-01)
+
+Previous turn is progress at pushed 9b3bd5fb. Re-read objective/ledger and
+inspect actual handles: 36949483608 is terminal failure; source-9b run
+36950764034 has Linux wheel/docs success and five live test jobs at the
+recorded 01:34:36 UTC checkpoint. Do not restart or infer remaining outcomes.
+Later 01:40:22 UTC check: source-9b CI is terminal failure; all five test jobs
+failed, Linux wheel/docs succeeded. No new sibling log inspected or cause inferred.
+
+Reconcile the observed one-ULP render difference with the pre-existing
+26 September count-reproduction contract. Default exact mode still rejects
+one-ULP/metadata changes. New explicit count-level mode has no fallback or
+user tolerance: unchanged count reproducer must pass all 24 contrasts/eight
+adjusted F1 intervals; only finite floating contrast drift within its existing
+absolute 1e-12 is admissible. Metadata, structure and discrete differences
+still reject. Manifest records policy/tolerances/differences/count evidence.
+Render retained values without overwriting historical reports or figures.
+Fresh export refuses reused destinations and withholds success on input drift.
+
+**101 focused cases pass in 7.72 seconds**, no failures/errors/skips, including
+49 new cases, actual temporary CLI PNG/PDF/SVG export and all 24 effect/eight
+adjusted-interval corruption checks. Earlier 93-case snapshot is superseded,
+not additive. Current-runtime strict fixture and explicitly portable retained
+fixture are separate; new remote macOS execution remains pending.
+
+Read-only post-push API proves all fifteen current test-manifest alerts are
+fixed, none dismissed. Forty historical-lock alerts remain open; no old-lock
+edit or comprehensive security claim. All local commands terminate.
+
+[Policy, executed evidence and remaining boundaries](PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md).
+Commit/push, then observe actual new CI without manual retries. No scientific
+default/score/engine changes, native benchmark reruns, timing launch/poll/
+question, DGX, shared-package or unrelated job/service work. Goal stays active;
+broader CI, uncertainty/source/rights, controlled resources and release remain
+open. Portable count validation is not raw/native or biological confirmation.
+
 ## Test Security And Observed One-ULP Replay Difference (2026-10-01)
 
 Previous turn is progress at pushed 1b15b57d. Re-read objective and ledger;

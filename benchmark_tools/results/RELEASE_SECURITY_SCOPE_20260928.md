@@ -6,6 +6,10 @@ current test pins and forty on historical locks. New test pins avoid the
 selected fifteen ranges; 511 focused cases pass in a fresh private environment.
 This does not close repository alerts, clear old locks or establish native/OS,
 whole-runtime or comprehensive security. Earlier snapshots below are historical.
+The subsequent [post-push state check](test_dependency_alert_closure_20261001.json)
+does confirm all fifteen current test-manifest alerts are fixed and none
+dismissed. Forty historical-lock alerts remain open. This supplies actual
+repository-state closure for that scope, not general-purpose runtime clearance.
 
 The [separate patched timing candidate](THREADRIPPER_PATCHED_RUNTIME_20260928.md)
 now has zero matches against a newer 40-alert snapshot. These 40 include the

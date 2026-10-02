@@ -46,6 +46,12 @@ The two test jobs fetch full Git history because frozen-source archive tests
 read an actual historical scientific commit, not HEAD. Matched-graph rendering
 still requires exact replay and now reports differing JSON paths/values on
 rejection; one-ULP and engine-metadata changes are not silently tolerated.
+An explicit `count-level` rendering policy reuses the pre-existing independent
+1e-12 count-reproduction contract and records all accepted differences; it
+does not replace the default strict guard or relax metadata. The retained
+plot test chooses that portable mode; strict behavior has a separate
+current-runtime fixture and one-ULP rejection tests. See the
+[policy and evidence](../benchmark_tools/results/PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md).
 
 A separate Linux CPU-wheel job builds committed package sources in a clean
 directory, installs into a fresh private venv and runs the existing isolated

@@ -100,6 +100,13 @@ change or isolated kernel cause. The exact guard and historical score remain
 unchanged. Three test-only security pins avoid fifteen retained advisory ranges;
 511 focused private-environment cases pass. No full matrix, benchmark-runtime,
 comprehensive security or release clearance follows.
+The [explicit portable rendering follow-up](PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md)
+preserves default exact rejection and offers opt-in independent count checking
+under the pre-existing 1e-12 contract, with manifest evidence and no fallback.
+101 focused cases pass; remote execution and broader CI remain unconfirmed.
+All fifteen current test alerts are now API-confirmed fixed, none dismissed;
+forty historical-lock alerts remain. No scientific score/default or release
+claim changes.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

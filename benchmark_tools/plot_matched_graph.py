@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
+from benchmark_tools.reproduce_matched_graph_statistics import reproduce
 from benchmark_tools.score_matched_graph import CONDITIONS, summarize
 
 
@@ -36,13 +37,36 @@ def _replay_differences(reported, recomputed, path=()):
     return []
 
 
-def plot(result):
+def validate_replay(result, replay_policy="exact"):
+    if replay_policy not in ("exact", "count-level"):
+        raise ValueError("Unknown replay policy")
     recomputed = summarize(result["records"])
-    if recomputed["contrasts"] != result["contrasts"] or recomputed["bootstrap"] != result["bootstrap"]:
-        differences = _replay_differences(
-            {key: result[key] for key in ("contrasts", "bootstrap")},
-            {key: recomputed[key] for key in ("contrasts", "bootstrap")})
+    differences = _replay_differences(
+        {key: result[key] for key in ("contrasts", "bootstrap")},
+        {key: recomputed[key] for key in ("contrasts", "bootstrap")})
+    count_validation = reproduce(result) if replay_policy == "count-level" else None
+    tolerance = count_validation["absolute_tolerance"] if count_validation else 0
+    rejected = differences
+    if count_validation:
+        rejected = [row for row in differences if not (
+            row["path"][0] == "contrasts"
+            and type(row["reported"]) is float and type(row["recomputed"]) is float
+            and np.isfinite(row["reported"]) and np.isfinite(row["recomputed"])
+            and abs(row["reported"] - row["recomputed"]) <= tolerance)]
+    if rejected:
         raise ValueError("Reported effects differ from paired score records: " + json.dumps(differences, sort_keys=True))
+    return dict(policy=replay_policy, absolute_tolerance=tolerance, relative_tolerance=0,
+                exact_differences=differences, count_validation=count_validation,
+                scorer=record(Path(summarize.__code__.co_filename)),
+                compared_sections=["contrasts", "bootstrap"])
+
+
+def plot(result, *, replay_policy="exact"):
+    validate_replay(result, replay_policy)
+    return _draw(result)
+
+
+def _draw(result):
     fig, (left, right) = plt.subplots(1, 2, figsize=(12, 6.8), gridspec_kw={"width_ratios": [1.05, 1]})
     fig.subplots_adjust(left=.20, right=.97, bottom=.23, top=.79, wspace=.20)
     labels = [*CONDITIONS, "overall"]
@@ -81,19 +105,28 @@ def plot(result):
     return fig
 
 
-def run(path, output):
+def run(path, output, *, replay_policy="exact"):
+    if output.exists():
+        raise FileExistsError(output)
+    identity = record(path)
     result = json.loads(path.read_text())
-    figure = plot(result)
-    output.mkdir(parents=True, exist_ok=False)
+    validation = validate_replay(result, replay_policy)
+    figure = _draw(result)
     files = []
-    for extension in ("png", "pdf", "svg"):
-        destination = output / ("matched_graph." + extension)
-        figure.savefig(destination, dpi=180)
-        files.append(record(destination))
-    plt.close(figure)
+    try:
+        output.mkdir(parents=True, exist_ok=False)
+        for extension in ("png", "pdf", "svg"):
+            destination = output / ("matched_graph." + extension)
+            figure.savefig(destination, dpi=180)
+            files.append(record(destination))
+    finally:
+        plt.close(figure)
+    if record(path) != identity:
+        raise ValueError("Input changed during rendering")
     with (output / "manifest.json").open("x") as stream:
-        json.dump(dict(source=record(__file__), input=record(path), outputs=files,
-                       recomputed_from_paired_score_records=True, visual_review_complete=False), stream, indent=2, sort_keys=True)
+        json.dump(dict(source=record(__file__), input=identity, outputs=files,
+                       recomputed_from_paired_score_records=True, replay_validation=validation,
+                       visual_review_complete=False), stream, indent=2, sort_keys=True)
         stream.write("\n")
 
 
@@ -101,5 +134,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--replay-policy", choices=("exact", "count-level"), default="exact")
     args = parser.parse_args()
-    run(args.results.resolve(), args.output.absolute())
+    run(args.results.resolve(), args.output.absolute(), replay_policy=args.replay_policy)
