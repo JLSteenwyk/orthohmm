@@ -59,7 +59,7 @@ def fixture_manifest(tmp_path):
 
 @pytest.mark.parametrize("mode,change_base,change_host", [
     ("run", False, False), ("run", True, False), ("run", False, True),
-    ("preflight", False, False), ("reject_host", False, False)])
+    ("preflight", False, False), ("preflight_changed_data", False, False), ("reject_host", False, False)])
 def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_path, monkeypatch, mode, change_base, change_host):
     from types import SimpleNamespace
     from benchmark_tools import run_integrated_publication_workflow as module
@@ -86,7 +86,7 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
         reader_lock=locks["reader"], base_python=base, installer_python=base,
         base_python_sha256=record(base)["sha256"], assembly_manifest_sha256="assembly-anchor",
         abi_inventory=abi, abi_inventory_sha256=record(abi)["sha256"],
-        preflight_only=mode == "preflight",
+        preflight_only=mode.startswith("preflight"),
         data=data, data_sha256=record(data)["sha256"], output=tmp_path / "run", cpu=2, timeout=10)
     validations, commands = [], []
     monkeypatch.setattr(module, "validate_assets", lambda *values: validations.append(values))
@@ -95,6 +95,9 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
         host_checks.append(values)
         if mode == "reject_host":
             raise ValueError("Host glibc is below declared floor")
+        if mode == "preflight_changed_data" and len(host_checks) == 2:
+            first = json.loads(data.read_text())["fasta"][0]["path"]
+            Path(first).write_text("changed during asset checks")
         return dict(inventory=record(abi), source=record(module.__file__), loaders=[],
                     glibc_floor_check_passed=True, full_host_compatibility_verified=False,
                     controller_glibc="glibc 2.39" if not change_host or len(host_checks) == 1 else "glibc 2.40")
@@ -114,6 +117,11 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
     monkeypatch.setattr(module, "stage", fake_stage)
     if mode == "reject_host":
         with pytest.raises(ValueError, match="below declared floor"):
+            module.run(args)
+        assert commands == [] and not args.output.exists()
+        return
+    if mode == "preflight_changed_data":
+        with pytest.raises(ValueError, match="Changed pinned"):
             module.run(args)
         assert commands == [] and not args.output.exists()
         return

@@ -255,6 +255,7 @@ def run(args):
             check(row)
         if validate_assembly_host(args) != host_preflight:
             raise ValueError("Assembly glibc preflight changed during preflight-only checks")
+        validate_data(data)
         result = dict(status="integrated_assembled_preflight_complete", dataset=data["dataset"],
             inputs=watched, host_preflight=host_preflight, source=record(__file__),
             installation_executed=False, private_base_runtime_probe_executed=False,
