@@ -58,16 +58,19 @@ def verify(directory):
     return manifest
 
 
-def export(repo, output):
+def write_export(payloads, revision, output):
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
-    revision = subprocess.check_output(["git", "rev-parse", REVISION + "^{commit}"], cwd=repo, text=True).strip()
-    payloads = closure(lambda name: subprocess.check_output(["git", "show", revision + ":" + name], cwd=repo))
+    for name in payloads:
+        relative = Path(name)
+        if relative.is_absolute() or ".." in relative.parts or relative.as_posix() != name:
+            raise ValueError("Invalid export path")
     output.mkdir(parents=True)
     for name, payload in payloads.items():
         path = output / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(payload)
+        path.chmod(0o644)
     manifest = dict(revision=revision, entrypoint=ENTRYPOINT,
         files={name: identity(payload) for name, payload in payloads.items()},
         publication_ready=False, scope="Static benchmark_tools import closure; reader entrypoint only",
@@ -76,7 +79,16 @@ def export(repo, output):
             "Manifest hashes detect changes, not authenticity; pin the manifest independently",
             "No native execution, independent biological accuracy or runtime relocation implied"])
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n")
+    (output / "manifest.json").chmod(0o644)
     return verify(output)
+
+
+def export(repo, output):
+    if output.exists() or output.is_symlink():
+        raise FileExistsError(output)
+    revision = subprocess.check_output(["git", "rev-parse", REVISION + "^{commit}"], cwd=repo, text=True).strip()
+    payloads = closure(lambda name: subprocess.check_output(["git", "show", revision + ":" + name], cwd=repo))
+    return write_export(payloads, revision, output)
 
 
 if __name__ == "__main__":

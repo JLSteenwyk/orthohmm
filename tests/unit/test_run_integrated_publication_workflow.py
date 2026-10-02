@@ -6,7 +6,45 @@ import sys
 
 import pytest
 
-from benchmark_tools.run_integrated_publication_workflow import install_commands, record, relocate_assets, stage, validate_assets, validate_data
+from benchmark_tools.run_integrated_publication_workflow import assembly_base, install_commands, record, relocate_assets, stage, validate_assets, validate_base_probe, validate_data
+
+
+def test_private_base_anchor_and_output_scope(tmp_path):
+    from types import SimpleNamespace
+    base = tmp_path / "base/bin/python"
+    base.parent.mkdir(parents=True)
+    base.write_bytes(b"pinned interpreter fixture")
+    base.chmod(0o755)
+    args = SimpleNamespace(base_python=base, installer_python=base, base_python_sha256=record(base)["sha256"],
+                           assets=tmp_path / "bundle/assets")
+    assert assembly_base(args, tmp_path / "output") == record(base)
+    with pytest.raises(ValueError):
+        assembly_base(args, tmp_path / "base/output")
+    with pytest.raises(ValueError):
+        assembly_base(args, tmp_path / "bundle/output")
+    args.base_python_sha256 = "0" * 64
+    with pytest.raises(ValueError):
+        assembly_base(args, tmp_path / "output")
+
+
+@pytest.mark.parametrize("defect", [None, "version", "distributions", "prefix", "site", "machine"])
+def test_assembly_base_probe_pins_private_runtime(tmp_path, defect):
+    base = tmp_path / "base/bin/python"
+    value = dict(version="3.10.13", implementation="CPython", machine="x86_64", prefix=str(base.parent.parent),
+                 site=str(base.parent.parent / "lib/python3.10/site-packages"), distributions=[["pip", "26.2.1"]])
+    if defect == "version":
+        value["version"] = "3.10.14"
+    elif defect == "distributions":
+        value["distributions"].append(["setuptools", "83.0.0"])
+    elif defect in {"prefix", "site"}:
+        value[defect] = str(tmp_path / "unrelated")
+    elif defect == "machine":
+        value["machine"] = "aarch64"
+    if defect is None:
+        validate_base_probe(value, base)
+    else:
+        with pytest.raises(ValueError):
+            validate_base_probe(value, base)
 
 
 def fixture_manifest(tmp_path):
@@ -17,6 +55,63 @@ def fixture_manifest(tmp_path):
     return dict(dataset="installation_fixture", genes=16,
                 fasta=[item(f"S{i}.fa") for i in range(4)],
                 references=[item(f"R{i}.txt") for i in range(3)], uncertain=[])
+
+
+@pytest.mark.parametrize("change_base", [False, True])
+def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_path, monkeypatch, change_base):
+    from types import SimpleNamespace
+    from benchmark_tools import run_integrated_publication_workflow as module
+    bundle = tmp_path / "bundle"
+    assets = bundle / "assets"
+    locks = {"inference": assets / "benchmark_tools/results/publication_recovery_requirements_20260926.txt",
+             "reader": bundle / "reader_requirements.txt"}
+    for name, path in locks.items():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(name)
+        monkeypatch.setitem(module.LOCKS, name, record(path)["sha256"])
+    for path in (assets / "wheels", assets / "mafft", bundle / "reader_wheels", bundle / "readers"):
+        path.mkdir(parents=True)
+    (assets / "FastTree").write_text("fake tool")
+    base = tmp_path / "base/bin/python"
+    base.parent.mkdir(parents=True)
+    base.write_text("fake interpreter")
+    base.chmod(0o755)
+    data = tmp_path / "manifest.json"
+    data.write_text(json.dumps(fixture_manifest(tmp_path)))
+    args = SimpleNamespace(assets=assets, readers=bundle / "readers", reader_wheels=bundle / "reader_wheels",
+        reader_lock=locks["reader"], base_python=base, installer_python=base,
+        base_python_sha256=record(base)["sha256"], assembly_manifest_sha256="assembly-anchor",
+        data=data, data_sha256=record(data)["sha256"], output=tmp_path / "run", cpu=2, timeout=10)
+    validations, commands = [], []
+    monkeypatch.setattr(module, "validate_assets", lambda *values: validations.append(values))
+    def fake_stage(directory, name, command, environment, timeout):
+        commands.append((name, command))
+        if name.startswith("base_"):
+            value = dict(version="3.10.13", implementation="CPython", machine="x86_64",
+                prefix=str(base.parent.parent), site=str(base.parent.parent / "lib/python3.10/site-packages"),
+                distributions=[["pip", "26.2.1"]], files=[dict(path="pip.py", sha256="original")])
+            if change_base and name == "base_after":
+                value["files"][0]["sha256"] = "changed"
+            (directory / (name + ".log")).write_text(json.dumps(value))
+        elif name == "readback_score":
+            (directory / "score.json").write_text("{}")
+        return dict(returncode=0, name=name)
+    monkeypatch.setattr(module, "stage", fake_stage)
+    if change_base:
+        with pytest.raises(ValueError, match="site changed"):
+            module.run(args)
+        assert not (args.output / "complete.json").exists()
+        assert json.loads((args.output / "failure.json").read_text())["retry"] is False
+    else:
+        result = module.run(args)
+        assert result["base_unchanged"] is True and result["base_site_payload_files"] == 1
+        assert len(validations) == 2
+    assert len(commands) == 10
+    assert commands[0][0] == "base_before" and commands[-1][0] == "base_after"
+    assert all(command[1] == "-B" for name, command in commands if "install" in name)
+    assert "-B" not in install_commands(base, base, assets / "wheels", locks["inference"], tmp_path / "legacy")[0]
+    with pytest.raises(FileExistsError):
+        module.run(args)
 
 
 def test_fixture_scope(tmp_path):

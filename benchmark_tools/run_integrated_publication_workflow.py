@@ -42,7 +42,12 @@ def save(path, value):
         stream.write("\n")
 
 
-def validate_assets(assets, readers):
+def validate_assets(assets, readers, assembly_manifest_sha256=None):
+    if assembly_manifest_sha256 is not None:
+        if not __package__:
+            sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+        from benchmark_tools.assemble_publication_runtime_assets import validate_for_executor
+        return validate_for_executor(assets, readers, assembly_manifest_sha256)
     path = assets / "copied_assets.json"
     if record(path)["sha256"] != "8f8be7f1609d549da79a4ec4231e937a08833a7b8acc415d03e66b16274d5067":
         raise ValueError("Changed validated native-asset manifest")
@@ -175,6 +180,27 @@ def score_worker(readers, directory):
         summary=scientific["summary"], biological_validation=False, publication_ready=False))
 
 
+def assembly_base(args, output):
+    base = args.base_python.absolute()
+    if (not base.is_file() or not os.access(base, os.X_OK)
+            or record(base)["sha256"] != getattr(args, "base_python_sha256", None)
+            or args.installer_python.absolute() != base or base.parent.name != "bin"
+            or output.resolve() != output or output.is_relative_to(base.parent.parent)
+            or output.is_relative_to(args.assets.resolve().parent)):
+        raise ValueError("Assembly requires an externally pinned private base/installer and external canonical output")
+    return record(base)
+
+
+def validate_base_probe(value, base):
+    prefix = base.absolute().parent.parent
+    site = Path(value["site"])
+    if (value["version"] != "3.10.13" or value["implementation"] != "CPython"
+            or value["machine"] != "x86_64" or value["prefix"] != str(prefix)
+            or site.resolve() != site or not site.is_relative_to(prefix)
+            or value["distributions"] != [["pip", "26.2.1"]]):
+        raise ValueError("Assembly base runtime/site/distributions differ")
+
+
 def run(args):
     output = args.output.absolute()
     if output.exists() or output.is_symlink():
@@ -186,12 +212,20 @@ def run(args):
         raise ValueError("Data manifest checksum mismatch")
     data = json.loads(args.data.read_text())
     validate_data(data)
-    validate_assets(args.assets, args.readers)
+    assembly_digest = getattr(args, "assembly_manifest_sha256", None)
+    validate_assets(args.assets, args.readers, assembly_digest)
+    if assembly_digest is not None and (
+            args.reader_wheels.resolve() != args.assets.resolve().parent / "reader_wheels"
+            or args.reader_lock.resolve() != args.assets.resolve().parent / "reader_requirements.txt"):
+        raise ValueError("Reader wheels/lock must belong to the externally anchored assembly")
+    base_record = assembly_base(args, output) if assembly_digest is not None else None
     locks = dict(inference=args.assets / "benchmark_tools/results/publication_recovery_requirements_20260926.txt",
                  reader=args.reader_lock)
     if any(record(p)["sha256"] != LOCKS[n] for n, p in locks.items()):
         raise ValueError("Changed environment lock")
     watched = [data_record, record(__file__), *[record(p) for p in locks.values()]]
+    if base_record is not None:
+        watched.append(base_record)
     for root in (args.assets / "wheels", args.assets / "mafft", args.assets / "benchmark_tools",
                  args.reader_wheels, args.readers):
         watched.extend(record(p) for p in sorted(root.rglob("*")) if p.is_file())
@@ -217,8 +251,17 @@ def run(args):
         dataset=data["dataset"], attempts=1, native_checkpoint_reuse=False, publication_ready=False))
     outcomes = []
     try:
+        before_base = None
+        if assembly_digest is not None:
+            from benchmark_tools.build_publication_project_wheel import RUNTIME_PROBE
+            probe = [str(args.base_python), "-I", "-B", "-c", RUNTIME_PROBE]
+            outcomes.append(stage(output, "base_before", probe, environment, 120))
+            before_base = json.loads((output / "base_before.log").read_bytes())
+            validate_base_probe(before_base, args.base_python)
         for name, wheels in (("inference", args.assets / "wheels"), ("reader", args.reader_wheels)):
             commands = install_commands(args.base_python, args.installer_python, wheels, locks[name], output / name)
+            if assembly_digest is not None:
+                commands = [[command[0], "-B", *command[1:]] for command in commands]
             for index, command in enumerate(commands):
                 outcomes.append(stage(output, f"{name}_install_{index}", command, environment, 600))
         native_environment = dict(environment, MAFFT_BINARIES=str(args.assets / "mafft/libexec/mafft"))
@@ -230,9 +273,15 @@ def run(args):
         command = [str(output / "reader/bin/python"), "-I", "-B", str(Path(__file__).absolute()),
                    "--score-worker", str(args.readers), "--output", str(output)]
         outcomes.append(stage(output, "readback_score", command, environment, args.timeout))
+        if assembly_digest is not None:
+            outcomes.append(stage(output, "base_after", probe, environment, 120))
+            after_base = json.loads((output / "base_after.log").read_bytes())
+            validate_base_probe(after_base, args.base_python)
+            if before_base != after_base:
+                raise ValueError("Supplied private base site changed during assembled execution")
         for row in watched:
             check(row)
-        validate_assets(args.assets, args.readers)
+        validate_assets(args.assets, args.readers, assembly_digest)
     except BaseException as error:
         save(output / "failure.json", dict(type=type(error).__name__, error=str(error), outcomes=outcomes, retry=False))
         raise
@@ -242,6 +291,12 @@ def run(args):
         limitations=["Local supplied assets and a trusted installer are prerequisites; acquisition is not automated.",
             "Installation uses pinned wheels but this controller does not independently audit all installed payload bytes.",
             "Same-host workflow integration, not new biological validation or controlled comparative timing."])
+    if assembly_digest is not None:
+        result.update(assembly_manifest_sha256=assembly_digest, base_unchanged=True,
+                      base_site_payload_files=len(before_base["files"]),
+                      limitations=result["limitations"] + [
+                          "New explicitly anchored assembly; historical asset manifests/admissions remain untouched.",
+                          "Private base-site snapshot checked, not every base/OS path or transitive dependency."])
     save(output / "complete.json", result)
     return result
 
@@ -252,6 +307,8 @@ if __name__ == "__main__":
     for name in ("assets", "readers", "reader-wheels", "reader-lock", "data", "base-python", "installer-python"):
         parser.add_argument("--" + name, type=lambda p: Path(p).absolute())
     parser.add_argument("--data-sha256")
+    parser.add_argument("--assembly-manifest-sha256")
+    parser.add_argument("--base-python-sha256")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cpu", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=86400)
