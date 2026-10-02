@@ -18,6 +18,16 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [offline base controller and integrated fixture](results/OFFLINE_BASE_CONTROLLER_20261002.md)
+replace manual historical-runtime installation/bootstrap commands with an
+explicit native-preparation source profile. A copied controller actually
+installs the 19 retained packages and pip, then the new base completes all
+eight stages of the existing 16-gene fixture in fresh scientific/reader venvs.
+Five native TSVs and score objects reproduce; 6,229 wheel payload files match.
+All 171 focused tests pass. This is historical same-host reproduction, not a
+patched general-purpose runtime, full-data rerun, complete dependency/rights
+closure, controlled timing or a public study release.
+
 The [OrthoBench acquisition-support source profile](results/SOURCE_ORTHOBENCH_INPUT_SUPPORT_20261002.md)
 packages the three exact manifest dependencies previously omitted from source
 exports. Its copied verifier/rebinder execute after fresh local archive

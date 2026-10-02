@@ -1,5 +1,56 @@
 # Publication Progress
 
+## Offline Base Automation And Scientific Integration Executed (2026-10-02)
+
+Previous turn progressed at pushed `f8f7b437`, packaging and executing the
+OrthoBench acquisition-support export. Read goal/current worktree/ledger.
+Exact CI run 37023123493 has docs successful, six other jobs live and coverage
+queued when inspected; no job restart or inferred test counts. Keep timing
+deferred without contention polls, quiet-window questions, unrelated actions
+or DGX work. Do not rerun the admitted full benchmark or prior timing collector.
+
+Inspect retained native/runtime reconstruction evidence. Find another actual
+execution gap: archive staging is scripted, but Conda installation and pip
+bootstrap still depend on manually assembled commands. Add stdlib controller
+with complete preflight, explicit historical acknowledgement, fresh canonical
+prefix, externally pinned trusted installer, private caches/config, offline
+explicit copied packages, hash-required pip, positive inventory/runtime/payload
+checks, logged stages and failure retention/no retry. Add native-preparation
+source profile with exactly four pinned support documents and required helpers;
+preserve prior two selections and frozen scientific source/settings.
+
+Initial 59 and expanded 164/169 checks pass. Inspect actual historical Conda
+Python alias before native launch; initial source checkpoint `67468220` would
+reject the legitimate internal symlink. Correct to require its resolved target
+inside the new prefix, without accepting escaping aliases. Final six-module
+171-case panel passes in 13.83s, zero errors/failures/skips; panels overlap.
+Commit final source `f4b858c9` before export. No failed native installation.
+
+Actually export/copy all 1,824 payloads outside the checkout and verify the
+external index before execution. Copied offline controller completes four
+stages using retained archives/wheel and supplied original Conda bootstrap:
+19 exact installed triples, CPython 3.10.13/Linux x86-64, exactly pip 26.2.1,
+successful pip check and 475 matching pip payloads. Original supplied inputs
+and source export remain unchanged after execution; no network acquisition.
+
+Engineering reason for new bounded native fixture: test the newly automated
+base-to-scientific-workflow composition, not repeat a benchmark/collector.
+The new base then completes the existing 16-gene eight-stage fixture at one
+requested native CPU, in two fresh scientific/reader environments. Three
+groups, 36 pairs, score objects and summary reproduce; all five native TSVs
+are byte-identical. 5,754 additional wheel payloads match, totaling 6,229 across
+three new environments. Checkpoint reuse zero, satellite merges not exercised.
+First one-off receipt builder expects `stages`, not actual `outcomes`, and
+fails after successful native execution. Inspect actual schema/filenames and
+correct readback only. Preserve logs/correction; no native/scoring restart.
+
+See [controller, actual execution and remaining scope](OFFLINE_BASE_CONTROLLER_20261002.md)
+and two bound machine receipts. No new biological/benchmark score, controlled
+resource panel, syscall sandbox, cross-host restoration or complete bootstrap/
+runtime/rights clearance. Final release assembly, manuscript/archive closure,
+other-QfO uncertainty, public deposition and timing/environment/quiet-window
+requirements remain open. Commit/push focused milestones and leave goal active.
+
 ## OrthoBench Source Acquisition Support Packaged (2026-10-02)
 
 Previous goal work progressed at pushed `eadd7597`; the intervening reply only
