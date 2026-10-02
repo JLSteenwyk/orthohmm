@@ -32,16 +32,31 @@ TIME_LIMIT = "1-02:00:00"
 def deployment(request):
     """Select an explicit retained deployment, without changing historical pins."""
     name = request.get("deployment", "shared_v3_20260928")
+    if "runtime_lookup" in request and name != "private_v2_20260928":
+        raise ValueError("Explicit runtime lookup requires the retained private deployment")
     if name == "shared_v3_20260928":
         return dict(name=name, plan_sha=PLAN_SHA, lookup_sha=LOOKUP_SHA,
                     plan="threadripper_scaling_commands_20260928.json",
                     lookup="threadripper_python_lookup_v3_20260928.json",
                     script="run_threadripper_scaling.sh")
     if name == "private_v2_20260928":
-        return dict(name=name, plan_sha=PRIVATE_PLAN_SHA, lookup_sha=PRIVATE_LOOKUP_SHA,
+        selected = dict(name=name, plan_sha=PRIVATE_PLAN_SHA, lookup_sha=PRIVATE_LOOKUP_SHA,
                     plan="threadripper_private_commands_20260928.json",
                     lookup="threadripper_private_lookup_v2_20260928.json",
                     script="run_threadripper_private_scaling.sh")
+        if "runtime_lookup" in request:
+            ref = request["runtime_lookup"]
+            if (not isinstance(ref, dict) or set(ref) != {"path", "bytes", "sha256"}
+                    or not isinstance(ref["path"], str)
+                    or type(ref["bytes"]) is not int or ref["bytes"] <= 0
+                    or not isinstance(ref["sha256"], str) or len(ref["sha256"]) != 64
+                    or any(c not in "0123456789abcdef" for c in ref["sha256"])):
+                raise ValueError("Require an externally pinned runtime lookup file")
+            path = Path(ref["path"])
+            if not path.is_absolute() or path.resolve() != path or path.is_symlink():
+                raise ValueError("Require a direct absolute runtime lookup path")
+            selected.update(lookup=ref["path"], lookup_sha=ref["sha256"])
+        return selected
     raise ValueError("Unknown retained Threadripper deployment")
 
 
@@ -96,6 +111,29 @@ def select(request, root, job):
     position(plan["runs"], [])
     lookup_path = results / selected["lookup"]
     lookup = read_frozen(lookup_path, selected["lookup_sha"])
+    lookup_evidence = []
+    if "runtime_lookup" in request:
+        explicit = read(request["runtime_lookup"])
+        expect(explicit, dict(status="native_lookup_repeated_identity_match",
+                              scientific_execution_authorized=False))
+        retained_path = results / "threadripper_private_lookup_v2_20260928.json"
+        retained = read_frozen(retained_path, PRIVATE_LOOKUP_SHA)
+        if explicit != lookup or explicit.get("baseline") != retained["baseline"]:
+            raise ValueError("Explicit runtime lookup must preserve the frozen private baseline")
+        binding = read(explicit["binding"])
+        retained_binding = read(retained["binding"])
+        if binding.get("controller_python") != retained_binding["controller_python"]:
+            raise ValueError("Explicit runtime lookup must preserve the private controller")
+        if any(binding.get(key) != retained_binding[key]
+               for key in ("baseline", "command_plan", "baseline_paths", "retired_roots")):
+            raise ValueError("Explicit runtime lookup must preserve scientific deployment bindings")
+        specs = binding.get("runtime_specs")
+        retained_specs = retained_binding["runtime_specs"]
+        if (not isinstance(specs, list) or len(specs) != len(retained_specs)
+                or specs[1:] != retained_specs[1:]):
+            raise ValueError("Explicit runtime lookup must preserve private runtime manifests")
+        lookup_evidence = [request["runtime_lookup"], record(retained_path),
+                           retained["binding"], explicit["binding"], explicit["baseline"]]
     history = bind(record(plan_path), request["history"], command=request["scheduler_command"],
                    cwd=str(root), time_limit=TIME_LIMIT)
     if (history["progress"]["status"] != "next_identity_requires_preflight"
@@ -109,7 +147,7 @@ def select(request, root, job):
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{index:02d}"
     if request["environment_preflight_path"] != str(session / "environment_preflight.json"):
         raise ValueError("Require run-specific environmental review location")
-    return run, lookup, history, [*sources, *ready["evidence"]]
+    return run, lookup, history, [*sources, *ready["evidence"], *lookup_evidence]
 
 
 class EnvironmentalReleaseGuard:

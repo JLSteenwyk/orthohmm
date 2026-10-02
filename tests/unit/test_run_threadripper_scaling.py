@@ -82,7 +82,8 @@ def private_setup(setup, monkeypatch):
     monkeypatch.setattr(driver.sys, "executable", str(controller_path))
     controller = driver.record(controller_path)
     binding = put(root / "binding.json", dict(runtime_specs=[["fixture", "digest"]],
-        controller_python=controller))
+        controller_python=controller, baseline=driver.record(root / "baseline.json"),
+        command_plan=plan, baseline_paths=[], retired_roots=[]))
     lookup = put(results / "threadripper_private_lookup_v2_20260928.json", dict(
         baseline=driver.record(root / "baseline.json"), binding=binding))
     monkeypatch.setattr(driver, "PRIVATE_PLAN_SHA", plan["sha256"])
@@ -136,6 +137,89 @@ def test_private_request_never_mixes_shared_bindings(setup, monkeypatch, fault):
 def test_unknown_deployment_refused(name):
     with pytest.raises(ValueError, match="Unknown retained"):
         driver.deployment(dict(deployment=name))
+
+
+def explicit_lookup_setup(setup, monkeypatch):
+    root, request, runs = private_setup(setup, monkeypatch)
+    retained_path = root / "benchmark_tools/results/threadripper_private_lookup_v2_20260928.json"
+    retained = json.loads(retained_path.read_text())
+    refreshed = dict(retained, status="native_lookup_repeated_identity_match",
+                     scientific_execution_authorized=False, refresh="synthetic only")
+    ref = put(root / "refreshed/lookup.json", refreshed)
+    request.update(runtime_lookup=ref, lookup_sha256=ref["sha256"])
+    ready_path = root / "ready.json"
+    ready = json.loads(ready_path.read_text())
+    ready["lookup_sha256"] = ref["sha256"]
+    request["readiness_review"] = put(ready_path, ready)
+    return root, request, runs
+
+
+def test_explicit_runtime_lookup_preserves_plan_controller_and_old_pin(setup, monkeypatch):
+    root, request, runs = explicit_lookup_setup(setup, monkeypatch)
+    retained_path = root / "benchmark_tools/results/threadripper_private_lookup_v2_20260928.json"
+    retained = driver.record(retained_path)
+    selected = driver.deployment(request)
+    assert selected["lookup"] == request["runtime_lookup"]["path"]
+    assert selected["lookup_sha"] == request["runtime_lookup"]["sha256"]
+    assert selected["plan_sha"] == driver.PRIVATE_PLAN_SHA
+    run, lookup, _, evidence = driver.select(request, root, 42)
+    assert run == runs[0] and lookup["baseline"] == driver.record(root / "baseline.json")
+    assert request["runtime_lookup"] in evidence and retained in evidence
+    assert driver.record(retained_path) == retained
+    assert not (root / "runs").exists()
+
+
+@pytest.mark.parametrize("fault", ["null", "extra", "relative", "symlink", "size", "digest",
+                                  "uppercase", "wrong_bytes", "wrong_hash", "baseline", "controller", "readiness",
+                                  "lookup_status", "lookup_permission", "binding_baseline", "command_plan",
+                                  "baseline_paths", "retired_roots", "private_manifest"])
+def test_explicit_runtime_lookup_rejects_invalid_or_mixed_bindings(setup, monkeypatch, fault):
+    root, request, _ = explicit_lookup_setup(setup, monkeypatch)
+    ref = request["runtime_lookup"]
+    if fault == "null": request["runtime_lookup"] = None
+    elif fault == "extra": ref["discovered"] = True
+    elif fault == "relative": ref["path"] = "refreshed/lookup.json"
+    elif fault == "symlink":
+        link = root / "lookup-link.json"
+        link.symlink_to(ref["path"])
+        ref["path"] = str(link)
+    elif fault == "size": ref["bytes"] = True
+    elif fault == "digest": ref["sha256"] = "invalid"
+    elif fault == "uppercase": ref["sha256"] = "A" * 64
+    elif fault == "wrong_bytes": ref["bytes"] += 1
+    elif fault == "wrong_hash": ref["sha256"] = "0" * 64
+    elif fault == "readiness":
+        ready = json.loads((root / "ready.json").read_text())
+        ready["lookup_sha256"] = driver.PRIVATE_LOOKUP_SHA
+        request["readiness_review"] = put(root / "ready.json", ready)
+    else:
+        data = json.loads(Path(ref["path"]).read_text())
+        if fault == "baseline": data["baseline"] = put(root / "other-baseline.json", {})
+        elif fault == "lookup_status": data["status"] = "native_lookup_inspected"
+        elif fault == "lookup_permission": data["scientific_execution_authorized"] = True
+        else:
+            binding = json.loads((root / "binding.json").read_text())
+            if fault == "controller":
+                binding["controller_python"] = dict(binding["controller_python"], path=str(root / "other-python"))
+            elif fault == "binding_baseline": binding["baseline"] = put(root / "other-baseline.json", {})
+            elif fault == "command_plan": binding["command_plan"] = dict(binding["command_plan"], sha256="0" * 64)
+            elif fault == "private_manifest": binding["runtime_specs"].append(["other-private", "digest"])
+            else: binding[fault] = ["changed"]
+            data["binding"] = put(root / "other-binding.json", binding)
+        request["runtime_lookup"] = put(Path(ref["path"]), data)
+        request["lookup_sha256"] = request["runtime_lookup"]["sha256"]
+    with pytest.raises((ValueError, KeyError)):
+        driver.select(request, root, 42)
+    assert not (root / "runs").exists()
+
+
+@pytest.mark.parametrize("deployment", [None, "shared_v3_20260928", "unknown"])
+def test_explicit_lookup_cannot_change_shared_or_unknown_deployment(deployment, tmp_path):
+    request = dict(runtime_lookup=put(tmp_path / "lookup.json", {}))
+    if deployment is not None:
+        request["deployment"] = deployment
+    with pytest.raises(ValueError, match="retained private"):
+        driver.deployment(request)
 
 
 def test_private_submission_bootstrap_does_not_fall_back_to_shared(setup, monkeypatch):
