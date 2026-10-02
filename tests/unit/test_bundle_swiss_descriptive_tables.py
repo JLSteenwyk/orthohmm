@@ -135,7 +135,7 @@ def test_wrong_scope_rejected_even_with_rehashed_index(component, key, value):
 
 
 @pytest.mark.parametrize("fault", ["traversal", "symlink", "duplicate", "executable", "oversized", "missing"])
-def test_unsafe_or_incomplete_archive_rejected_before_arithmetic(tmp_path, fault):
+def test_unsafe_or_incomplete_archive_rejected_before_arithmetic(tmp_path, monkeypatch, fault):
     archive = (tmp_path / "bad.tar.gz").resolve()
     info = tarfile.TarInfo("../escape" if fault == "traversal" else "README.md")
     info.mode, info.size = 0o644, 1
@@ -146,10 +146,33 @@ def test_unsafe_or_incomplete_archive_rejected_before_arithmetic(tmp_path, fault
     elif fault == "oversized":
         info.size = bundle.MAX_BYTES + 1
     with tarfile.open(archive, "w:gz") as handle:
-        handle.addfile(info, None if fault == "oversized" else io.BytesIO(b"x"))
+        handle.addfile(info, io.BytesIO(b"x" * info.size))
         if fault == "duplicate":
             handle.addfile(info, io.BytesIO(b"x"))
     output = (tmp_path / "result.json").resolve()
-    with pytest.raises(ValueError):
+    monkeypatch.setattr(bundle, "reproduce", lambda *a, **k: pytest.fail("Unexpected arithmetic execution"))
+    expected = ("Unsafe component member path" if fault == "traversal" else
+                "Incomplete archive inventory" if fault == "missing" else
+                "Unexpected, duplicate or oversized archive member")
+    assert archive.exists() and archive.stat().st_size < bundle.MAX_BYTES
+    with pytest.raises(ValueError, match=expected):
         bundle.restore_and_reproduce(archive, "0"*64, output)
     assert not output.exists() and not (tmp_path / "escape").exists()
+
+
+@pytest.mark.parametrize("sizes,expected", [
+    ([bundle.MAX_BYTES], "Incomplete archive inventory"),
+    ([bundle.MAX_BYTES // 2 + 1] * 2, "Unexpected, duplicate or oversized archive member")])
+def test_declared_archive_budget_boundary_and_cumulative_sum(tmp_path, monkeypatch, sizes, expected):
+    archive = (tmp_path / "budget.tar.gz").resolve()
+    with tarfile.open(archive, "w:gz") as handle:
+        for name, size in zip(("README.md", "LICENSE.md"), sizes):
+            info = tarfile.TarInfo(name)
+            info.mode, info.size = 0o644, size
+            handle.addfile(info, io.BytesIO(b"x" * size))
+    assert archive.stat().st_size < bundle.MAX_BYTES
+    monkeypatch.setattr(bundle, "reproduce", lambda *a, **k: pytest.fail("Unexpected arithmetic execution"))
+    output = (tmp_path / "result.json").resolve()
+    with pytest.raises(ValueError, match=expected):
+        bundle.restore_and_reproduce(archive, "0" * 64, output)
+    assert not output.exists()

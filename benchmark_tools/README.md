@@ -55,6 +55,13 @@ polling window still requires fresh absent-group proof; live or denied groups
 remain failures. All 135 focused local cases pass. New macOS confirmation and
 prospective helper source pins remain required; scientific results are unchanged.
 
+The [Python 3.13 fixture follow-up](results/PY313_FIXTURE_COMPATIBILITY_20261002.md)
+fixes valid oversized-tar construction and iterable frame-key comparisons in
+tests only, preserving consumer guards and exact allocation assertions.
+All 241 focused local cases pass; new-patch Python 3.13 execution is pending.
+The preceding actual macOS Python 3.13 log confirms all 135 cleanup/FAS/provider
+cases, but retains 37 failures and does not establish complete CI or release.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

@@ -9,7 +9,8 @@ from orthohmm.accuracy import build_rbnh_edges
 
 
 @pytest.mark.parametrize("seed", range(8))
-def test_bounds_contain_actual_named_allocations(seed):
+@pytest.mark.parametrize("key_style", ["native_keys", "list_keys"])
+def test_bounds_contain_actual_named_allocations(seed, key_style):
     rng = np.random.default_rng(seed)
     genes, hits = 23, 200
     species = (np.arange(genes) % 5).astype(np.int32)
@@ -21,9 +22,13 @@ def test_bounds_contain_actual_named_allocations(seed):
     snapshots = []
 
     def trace(frame, event, arg):
-        if (event == "line" and frame.f_code is build_rbnh_edges.__code__
-                and not snapshots and fields <= frame.f_locals.keys()):
-            snapshots.append({k: frame.f_locals[k].nbytes for k in fields})
+        if event == "line" and frame.f_code is build_rbnh_edges.__code__ and not snapshots:
+            local_values = frame.f_locals
+            local_keys = local_values.keys()
+            if key_style == "list_keys":
+                local_keys = list(local_keys)
+            if fields.issubset(local_keys):
+                snapshots.append({k: local_values[k].nbytes for k in fields})
         return trace
 
     previous = sys.gettrace()

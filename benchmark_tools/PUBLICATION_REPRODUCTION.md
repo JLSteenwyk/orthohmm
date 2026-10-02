@@ -547,6 +547,12 @@ prospective execution inventories must pin its new bytes. Historical plans,
 timing/scientific results and source receipts must not be silently repinned.
 All 135 focused local checks pass, not new production timing or macOS proof.
 
+The subsequent [Python 3.13 fixture audit](results/PY313_FIXTURE_COMPATIBILITY_20261002.md)
+records actual macOS confirmation of those 135 cases, with 37 other failures.
+It fixes two test-only assumptions and gives 241 local passes, preserving
+archive budget and allocation assertions. New-patch remote confirmation remains
+open; no production source, scientific receipt or historical archive is changed.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

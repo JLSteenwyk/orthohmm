@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "3485f7f0a461571c010bc0a46437afc8b8c190ae",
+  "purpose": "test-only valid tar production and mapping-key iterable compatibility",
+  "test_sources": [
+    {"path": "tests/unit/test_estimate_rbnh_array_payload.py", "bytes": 3967, "sha256": "2ae6a00879c962379c207a87341bccad5b02b39bf31ef38fa53af36abd0a5503"},
+    {"path": "tests/unit/test_bundle_swiss_descriptive_tables.py", "bytes": 8534, "sha256": "dca798f2a4e455e4bc3f2cd74c00a198ee2c1b3febc04463345264b5365fc0b5"}
+  ],
+  "unchanged_production_sources": [
+    {"path": "benchmark_tools/bundle_swiss_descriptive_tables.py", "bytes": 11892, "sha256": "16e98be70e1eda855b74e91ac392cc38a1770db08289e52c0ec2f6d0251057d9"},
+    {"path": "benchmark_tools/estimate_rbnh_array_payload.py", "bytes": 5086, "sha256": "3513c7560f7392f6e75982b358b53cf4be3b16e34f5f6b1bcb8507ca1a8f1d91"},
+    {"path": "benchmark_tools/owned_process_group.py", "bytes": 1406, "sha256": "76dd867b1dff8b15fa5e8ec7d5d876a2ac49a0910ca8c3a04677f9ab697692ba"}
+  ],
+  "local_python": "3.10.13",
+  "local_python_313_execution": false,
+  "local_environment_upgraded": false,
+  "before_memory_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_estimate_rbnh_array_payload.py", "--tb=short", "--junitxml=benchmarks/work/py313_memory_fixture_before_20261002.xml"],
+    "passed": 20, "failed": 8, "errors": 0, "skipped": 0,
+    "failure_scope": "all eight forced-list key cases; set <= list TypeError",
+    "stdout_duration_s": 0.41, "junit_duration_s": 0.388,
+    "report": {"path": "benchmarks/work/py313_memory_fixture_before_20261002.xml", "bytes": 9597, "sha256": "82bc4e4bf4cd63095ba2995f4043fdc8d7b6a5e63def35adec622762777de8fa"}
+  },
+  "intermediate_tests": {
+    "passed": 57, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 3.24, "junit_duration_s": 3.224,
+    "report": {"path": "benchmarks/work/py313_fixture_after_20261002.xml", "bytes": 8476, "sha256": "0c81bf30cb814208b0d17350cf8591635cb623712151cde28b359a2700cb8564"}
+  },
+  "final_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_estimate_rbnh_array_payload.py", "tests/unit/test_bundle_swiss_descriptive_tables.py", "tests/unit/test_check_swiss_descriptive_tables.py", "tests/unit/test_owned_process_group.py", "tests/unit/test_measure_slurm_command.py", "tests/unit/test_run_wgd_application.py", "tests/unit/test_audit_slurm_measurement.py", "tests/unit/test_audit_fas_population.py", "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "--junitxml=benchmarks/work/py313_fixture_complete_20261002.xml"],
+    "passed": 241, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 13.35, "junit_duration_s": 13.325,
+    "scope_counts": {"memory": 28, "bundler": 29, "checker": 49, "helper": 15, "measurement": 37, "wgd": 8, "measurement_audit": 10, "fas": 33, "provider": 32},
+    "report": {"path": "benchmarks/work/py313_fixture_complete_20261002.xml", "bytes": 37672, "sha256": "58de67f4a4d91cb6e6c13bccc199966ccc39d1738d1de46ed53e6637ca6b8eb0"}
+  },
+  "archive_budget_bytes_unchanged": 4194304,
+  "archive_budget_new_cases": ["single member at exact budget reaches incomplete inventory", "two individually valid members exceed cumulative budget by two bytes"],
+  "arithmetic_forbidden_in_negative_archive_cases": true,
+  "allocation_seeds": 8,
+  "allocation_key_styles": ["native_keys", "list_keys"],
+  "total_peak_ram_or_graph_feasibility_admitted": false,
+  "original_failure_ci": {
+    "source_commit": "0557c87766639b67f91e28be84adee5bd70b9137",
+    "run_id": 36975890708, "job_id": 110739516230,
+    "scope": "macOS Python 3.13 test-fast only",
+    "log": {"path": "benchmarks/work/ci_remote_0557c877_20261002/110739516230.log", "bytes": 2326706, "sha256": "2f401221f27c8ded5c7c7c7eb777385bf3bc45932365ada9d8de27de1040e78d"},
+    "tar_failure": "ValueError: fileobj not provided for non zero-size regular file",
+    "allocation_failure": "TypeError: '<=' not supported between instances of 'set' and 'list'"
+  },
+  "preceding_ci": {
+    "source_commit": "3485f7f0a461571c010bc0a46437afc8b8c190ae",
+    "run_id": 36977059602, "job_id": 110743060380,
+    "observed_at_utc": "2026-10-02T07:22:38.673001+00:00",
+    "terminal_failed_test_job_ids": [110743060318, 110743060380, 110743060434, 110743060435, 110743060455],
+    "docs": "success", "cpu_wheel": "success",
+    "inspected_scope": "macOS Python 3.13 test-fast only",
+    "downloaded_at_utc": "2026-10-02T07:23:14.421295+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_3485f7f0_20261002/110743060380.log", "bytes": 2326380, "sha256": "f9c86847d3ca1dc823423169e2ff684331f2315675468d6e806edd9238a88357"},
+    "previous_helper_measurement_wgd_audit_fas_provider_passes": 135,
+    "overall": {"passed": 13871, "failed": 37, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 485.96},
+    "same_tar_and_eight_allocation_failures": true,
+    "this_patch_in_that_ci": false,
+    "sibling_or_full_suite_success_inferred": false,
+    "manual_restart_or_resubmission": false
+  },
+  "production_sources_changed_relative_to_baseline": false,
+  "scientific_settings_or_scores_changed": false,
+  "historical_archives_or_receipts_repinned": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}

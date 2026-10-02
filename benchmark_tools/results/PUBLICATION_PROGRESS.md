@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Python 3.13 Test Fixture Compatibility (2026-10-02)
+
+Previous turn is progress at pushed 3485: bounded owned-leader exit waitability,
+135 local passes and preceding native FAS/provider macOS confirmation. Read
+the full objective/current ledger/HEAD. The newest user reply does not supply
+a quiet window; none is needed now. Keep timing deferred, without another
+scheduling question, contention poll, DGX or unrelated workload/service action.
+
+Investigate two concrete failures in the retained source-055 Python 3.13 log.
+An oversized tar fixture fails in the producer before reaching the consumer;
+eight allocation traces assume a set-like frame-key collection. Official
+tarfile documentation records the changed producer requirement; the actual
+trace, rather than PEP 667 alone, establishes the list-key TypeError.
+
+Change only two tests. Give regular tar members their complete actual bodies,
+retain all six consumer fault checks, require specific errors and forbid
+arithmetic. Add exact-budget and cumulative-budget real-body cases without
+relaxing the 4-MiB guard. Use iterable subset testing for allocation snapshots
+and run the same eight seeds with native and explicitly list-form keys.
+Exact named-array bounds, input bytes and trace restoration remain required.
+Preserve the expanded pre-fix result: 20 pass/eight list-key failures.
+
+**241 local cases pass in 13.35s**, zero failures/errors/skips: 28 memory,
+29 bundler, 49 checker and the prior 135 cleanup/FAS/provider cases. The
+intermediate 57-case pass overlaps. Local Python is 3.10.13; no Python 3.13
+interpreter is installed or upgraded. Simulation is not new-version execution.
+[Evidence and pins](PY313_FIXTURE_COMPATIBILITY_20261002.md) retain the failed
+before report, successful reports, unchanged source identities and exact logs.
+
+At 07:22:38 UTC actual preceding run 36977059602 is terminal: five test
+failures, wheel/docs successes. Inspect only source-3485 macOS Python 3.13
+fast log: all prior 135 cleanup/FAS/provider cases pass, including the native
+TERM-ignoring descendant test. Overall: 13,871 pass, 37 fail, zero errors,
+110 skip, 30 warnings, 485.96s. The same nine fixture failures remain; this
+new patch is not in that source. No exact kernel or sibling/full success claim
+and no restart/resubmission follows.
+
+Commit/push this focused test-only milestone and observe automatic CI.
+New-patch remote confirmation and other workstation/raw/platform failures
+remain open. Production implementation/bundler/checker/estimator/helper,
+scientific settings/scores and historical archives/receipts are unchanged
+relative to source-3485. No inference/bootstrap/scoring/annotation/source
+search or archive regeneration occurs. Other-QfO uncertainty, rights,
+controlled resources, full executable release and public deposition still
+require work. The original publication goal remains active and incomplete.
+
 ## Owned Leader Exit-Status Waitability (2026-10-02)
 
 Previous goal turn is progress at pushed 0557: exact native FAS source with

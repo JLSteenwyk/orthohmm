@@ -267,6 +267,15 @@ comparisons; 37 other failures remain. This confirms that test-source scope,
 not full FAS execution, all-version support, the new helper or complete CI.
 Its oversized-tar fixture construction failure remains open for follow-up.
 
+The [Python 3.13 fixture follow-up](PY313_FIXTURE_COMPATIBILITY_20261002.md)
+constructs valid oversized bodies and checks iterable frame keys in tests only.
+All 241 local cases pass, including strengthened consumer budget negatives and
+eight native allocation seeds exercised with two key forms. Actual new-patch
+Python 3.13 execution remains unconfirmed. The preceding source-3485 macOS
+3.13 fast log confirms all 135 helper/measurement/WGD/audit/FAS/provider cases,
+with 37 other failures. This is bounded portability evidence, not total peak
+RAM, complete CI/release, improved accuracy or new resource/scientific results.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
