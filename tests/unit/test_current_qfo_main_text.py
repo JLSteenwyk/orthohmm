@@ -1,3 +1,4 @@
+import gzip
 import json
 from pathlib import Path
 
@@ -7,6 +8,40 @@ BASE = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 def text():
     return " ".join((BASE / "PUBLICATION_MAIN_TEXT_20260927.md").read_text().split())
+
+
+def test_null_diagnostic_prose_matches_retained_counts_and_design():
+    report = json.loads(gzip.decompress((BASE / "frozen_null_score_observations_20261002.json.gz").read_bytes()))
+    main = text()
+    assert report["independent_pairs"] == 90000 and report["tail_endpoints"] == 90
+    cells = {(s["regime"], s["length"]): s["bands"]["64"][-1] for s in report["summaries"]}
+    assert [cells["blosum_background", length]["hits"] for length in (50, 150, 400)] == [0, 1, 0]
+    for length in (50, 150, 400):
+        assert f'{100 * cells["half_glutamine", length]["fraction"]:.2f}%' in main or cells["half_glutamine", length]["fraction"] == 1
+    low, high = cells["half_glutamine", 50]["bonferroni_clopper_pearson"]
+    assert f"[{100 * low:.4f}%, {100 * high:.4f}%]" in main
+    assert "90,000 independent pairs, not 180,000 independent observations" in main
+    assert "Five fixed cutoffs yielded 90 tail endpoints" in main
+    assert "0/1/0 of 10,000" in main and "89.83%, 100% and 100%" in main
+    assert "180 sparse reference-Python scores, not all native scores" in main
+
+
+def test_null_diagnostic_interpretation_stays_bounded_in_both_manuscripts():
+    main = text()
+    extended = " ".join((BASE / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text().split())
+    for document in (main, extended):
+        assert "not real-data orthology false-positive rates" in document or "does not measure real-data orthology false-positive rates" in document
+        assert "do not" in document and "rare-tail calibration" in document
+        assert "not a measured real-proteome prevalence" in document or "not a measured proteome prevalence" in document
+        assert "No coefficients, thresholds or defaults were fitted or promoted" in document or "No new constants, bands, thresholds or defaults are fitted or promoted" in document
+        assert "not all native scores" in document or "not all-native-score equivalence" in document
+    assert "not a predicted ortholog or an observed pipeline false positive" in main
+    assert "No prefilter or biological inference ran" in main
+    assert "not reference-family or orthology uncertainty" in main
+    for name in ("FROZEN_NULL_SCORE_PROTOCOL_20261002.md", "FROZEN_NULL_SCORE_RESULT_20261002.md",
+                 "figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+                 "frozen_null_score_observations_20261002.json.gz"):
+        assert name in main and (BASE / name).is_file()
 
 
 def test_parameter_prose_matches_complete_admitted_summary():

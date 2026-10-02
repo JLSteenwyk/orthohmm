@@ -3,7 +3,7 @@
 A [condensed scientific main text](PUBLICATION_MAIN_TEXT_20260927.md) provides
 the current narrative; this extended draft retains detailed audit history.
 
-Working manuscript, updated 25 September 2026. Not submission-ready. Sections below
+Working manuscript, updated 2 October 2026. Not submission-ready. Sections below
 distinguish completed development-exposed analyses from prospective work.
 Internal evidence links are supplied for audit. The
 [selected bibliography](publication_bibliography_20260920_v5.csl.json) contains
@@ -63,6 +63,25 @@ scores from initial length-normalized graph evidence. The implementation does
 not establish HMMER/phmmer equivalence or calibrated assignment confidence;
 the matrix-table gap-cost comment differs from the actual scorer costs.
 This documentation amendment changes no frozen method, scores or defaults.
+
+The [synthetic null-score protocol](FROZEN_NULL_SCORE_PROTOCOL_20261002.md)
+was committed as `186bd5e47ecaa9361a86064c33d7a57c70ce1ce3` before study scoring.
+For each of three lengths (50, 150, 400) and three independent-residue
+compositions (normalized BLOSUM background, uniform, and half background plus
+half glutamine), ten PCG64 seed streams supplied 1,000 independent query-target
+pairs. Seeds used `SeedSequence([20261002, seed, regime_index, length])` with
+query draws preceding target draws. Each pair had its own one-target database;
+full and width-64 scalar C scores are dependent observations of the same pair.
+The design contains 90,000 independent pairs and 180,000 evaluations, not
+180,000 independent units. Five fixed approximate E cutoffs (1, 0.1, 0.01,
+0.001, 0.0001) define all 90 endpoints. Exact binomial intervals are adjusted
+over that complete denominator. The model-tail reference uses `1-exp(-E)` at
+the smallest passing integer score, not a posterior orthology probability.
+No prefilter, learned-profile search, biological grouping, parameter fitting
+or benchmark scoring is performed. Source, native kernel, module origins and
+scientific runtime packages are pinned; the [result](FROZEN_NULL_SCORE_RESULT_20261002.md)
+preserves their full records. This is a supplementary diagnostic, not calibrated
+significance or evolutionary simulation.
 
 Comparators comprise OrthoFinder 3.1.5 full and its sequence-only MCL
 checkpoint, OrthoMCL 1.4, SonicParanoid 2.0.9, ProteinOrtho 6.3.6, and
@@ -365,6 +384,48 @@ Small seed counts and bootstrap-tail resolution limit interval calibration.
 [complete results](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
 
 ## Results
+
+### Synthetic Null Tails Expose A Significance Limitation
+
+For the frozen width-64 `E < 1e-4` gate, ordinary-background hits were 0/1/0
+of 10,000 pairs at lengths 50/150/400; uniform-residue hits were 1/5/3.
+Full-matrix hits were 0/2/0 and 1/7/12, respectively. Half-background-plus-half-
+glutamine sampling passed 8,983/10,000 pairs at length 50 and all 10,000 at
+each longer length in both bands. The adjusted exact intervals for these
+glutamine fractions are [88.7484%, 90.8453%] and [99.9181%, 100%] for both
+longer lengths. Total glutamine probability exceeds 0.5 because the remaining
+background mass also contains glutamine. This strong synthetic regime is not
+a measured proteome prevalence or validated evolutionary generator.
+
+![All prespecified synthetic null-score tails, including adjusted intervals and zero-hit upper limits.](figures_frozen_null_scores_20261002_v2/frozen_null_scores.png)
+
+Figure: all 90 planned endpoints for nine composition/length cells, with
+10,000 independently drawn pairs per cell. Full/width-64 glyphs are slightly
+offset horizontally; exact cutoffs are retained in the plotted TSV. Whiskers
+are 90-endpoint Bonferroni-adjusted exact binomial intervals. Downward triangles
+show upper bounds for zero hits, not positive observed fractions. The dashed
+Poisson-model reference is a diagnostic hypothesis for the fixed formula,
+not proof of its applicability to the recurrence. The short-sequence fallback
+produces identical band scores at length 50. The [complete result](FROZEN_NULL_SCORE_RESULT_20261002.md)
+and [figure values](figures_frozen_null_scores_20261002_v2/plotted_values.tsv)
+retain all cutoffs and paired band losses, not selected favorable outcomes.
+
+The independent audit regenerated all 180 sequence digests and recomputed all
+90 counts/intervals and paired score changes. Reference Python matched the
+first pair of every seed cell in both bands: 180 sparse score checks, not
+all-native-score equivalence. Interval recomputation used beta quantiles
+instead of the producer's binomial-result API, still within SciPy. The first
+audit attempt failed before reading results because of its import path; only
+that path was corrected, and no native experiment was repeated. Retained
+scores and public readback tests preserve numerical reproduction without
+depending on the local one-off audit files.
+
+This establishes a conditional limitation of the approximate significance
+formula, not real-data orthology false-positive rates, a causal explanation of
+benchmark differences or superiority over OrthoFinder. Zero-hit adjusted
+upper bounds are approximately 0.00081853, above the production cutoff;
+ordinary-background samples therefore do not certify rare-tail calibration.
+No new constants, bands, thresholds or defaults are fitted or promoted.
 
 ### OrthoBench Shows A Precision-Recall Tradeoff
 
@@ -1170,6 +1231,14 @@ uncertainty analysis of all QfO metrics or independent confirmation.
 [Post-hoc VATB stage trace](QFO_VATB_PARTITION_TRACE_20260923.md).
 
 ## Limitations And Unfinished Analyses
+
+The frozen significance filter remains approximate. The prespecified
+synthetic null experiment demonstrates composition-dependent tails under
+forced scoring, not real-data orthology error rates or calibrated profile
+assignment confidence. Extrapolation to arbitrary composition, database size,
+profile construction or band settings is unsupported; independent calibration
+and validation would be required before making such a statistical claim.
+Scientific defaults and all biological benchmark scores remain unchanged.
 
 ### SwissTrees Input Coverage
 

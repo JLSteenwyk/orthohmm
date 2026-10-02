@@ -1,0 +1,58 @@
+{
+  "benchmark_scores_or_defaults_changed": false,
+  "calibration_established": false,
+  "checked_inputs": [
+    {
+      "bytes": 172690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/frozen_null_score_observations_20261002.json.gz",
+      "sha256": "590db81716bc0af78acb66558fe0d0bb91356f99be90d229f1aa9bcdc3dc8c16"
+    },
+    {
+      "bytes": 3223,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/frozen_null_score_receipt_20261002.json",
+      "sha256": "7e059f8486f4801be7b2e5ed670464d0ac936111f45a76fe58a4458ec5b03ab9"
+    },
+    {
+      "bytes": 11730,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_frozen_null_scores.py",
+      "sha256": "15f8e333ec8c67fd4c5f56abe0848c465f6a1889d622c1730108934b772ed13a"
+    },
+    {
+      "bytes": 10656,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_frozen_null_scores.py",
+      "sha256": "16fdf54469936c35629419585a285ffbb5522673ce6c0cae0942755a343d4fe7"
+    }
+  ],
+  "endpoints": 90,
+  "figure_visually_reviewed": false,
+  "independent_pairs": 90000,
+  "limitations": [
+    "Exact binomial intervals describe this synthetic generator, not orthology uncertainty.",
+    "Zero-count glyphs are upper confidence limits, not positive observed fractions.",
+    "Band glyphs are horizontally offset; exact cutoffs and all endpoints remain in the TSV.",
+    "Export is not visual inspection, real-data false-positive measurement or calibration."
+  ],
+  "native_evaluations": 180000,
+  "native_scoring_rerun": false,
+  "outputs": [
+    {
+      "bytes": 30735,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+      "sha256": "1ddd5fde7fd2855ad7f79e7f230a1c660e9b0fbe0a431e6bbb270eddf8131b01"
+    },
+    {
+      "bytes": 239595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.png",
+      "sha256": "066f6d528dd460617bde302b970aa6b075ba2bacdcbee90c1f6581df9acbf382"
+    },
+    {
+      "bytes": 9772,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/plotted_values.tsv",
+      "sha256": "bae8cbe12fe746430f85fe7514a500bf585827d07654ecbe44739495cafd2533"
+    }
+  ],
+  "publication_ready": false,
+  "revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source_score_counts_recomputed": true,
+  "status": "frozen_null_score_figure_exported"
+}

@@ -1,0 +1,103 @@
+{
+  "all_90_endpoints_present": true,
+  "all_nine_panels_inspected": true,
+  "benchmark_scores_or_defaults_changed": false,
+  "calibration_established": false,
+  "checked_inputs": [
+    {
+      "bytes": 172690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/frozen_null_score_observations_20261002.json.gz",
+      "sha256": "590db81716bc0af78acb66558fe0d0bb91356f99be90d229f1aa9bcdc3dc8c16"
+    },
+    {
+      "bytes": 3223,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/frozen_null_score_receipt_20261002.json",
+      "sha256": "7e059f8486f4801be7b2e5ed670464d0ac936111f45a76fe58a4458ec5b03ab9"
+    },
+    {
+      "bytes": 11730,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_frozen_null_scores.py",
+      "sha256": "15f8e333ec8c67fd4c5f56abe0848c465f6a1889d622c1730108934b772ed13a"
+    },
+    {
+      "bytes": 10656,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_frozen_null_scores.py",
+      "sha256": "16fdf54469936c35629419585a285ffbb5522673ce6c0cae0942755a343d4fe7"
+    }
+  ],
+  "figure_png_and_pdf_bitmap_inspected": true,
+  "initial_visual_review": {
+    "artifacts": [
+      {
+        "bytes": 30719,
+        "path": "benchmark_tools/results/figures_frozen_null_scores_20261002/frozen_null_scores.pdf",
+        "sha256": "976b35f5dc05f4cb8e088a699914bc32aa183caeec78ff062013d55756f727a4"
+      },
+      {
+        "bytes": 239863,
+        "path": "benchmark_tools/results/figures_frozen_null_scores_20261002/frozen_null_scores.png",
+        "sha256": "bb88aaeba5e124d43486dd93ad40ae534cd3c18492dd81ac356b935d890e4e03"
+      },
+      {
+        "bytes": 2688,
+        "path": "benchmark_tools/results/figures_frozen_null_scores_20261002/manifest.json",
+        "sha256": "f245a35ba5e57ac262fa271a4a4f9196bb0e32f1581dd3838ed096c8c73fd721"
+      },
+      {
+        "bytes": 9772,
+        "path": "benchmark_tools/results/figures_frozen_null_scores_20261002/plotted_values.tsv",
+        "sha256": "bae8cbe12fe746430f85fe7514a500bf585827d07654ecbe44739495cafd2533"
+      }
+    ],
+    "first_and_final_plotted_values_byte_identical": true,
+    "reason": "Length labels too close to near-one tail glyphs in glutamine panels; move labels to lower-right clear space only.",
+    "status": "presentation_revision_required"
+  },
+  "limitations": [
+    "Manual plotting review does not establish biological accuracy, empirical calibration or citation/rights clearance.",
+    "Existing manuscript renders and archives remain historical snapshots until a separately dated review is created."
+  ],
+  "matplotlib_version": "3.10.8",
+  "native_scoring_rerun": false,
+  "observed_clipping_or_overlap": false,
+  "pdf_bitmap": {
+    "bytes": 102903,
+    "path": "benchmarks/work/frozen_null_score_figure_pdf_20261002.png",
+    "sha256": "5c1036889901b6ebd77853eac354c0622089c1f09294847876753c9c20e3b33a"
+  },
+  "pdf_bounds_violations": 0,
+  "pdf_pages": 1,
+  "publication_ready": false,
+  "reviewed_outputs": [
+    {
+      "bytes": 30735,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+      "sha256": "1ddd5fde7fd2855ad7f79e7f230a1c660e9b0fbe0a431e6bbb270eddf8131b01"
+    },
+    {
+      "bytes": 239595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.png",
+      "sha256": "066f6d528dd460617bde302b970aa6b075ba2bacdcbee90c1f6581df9acbf382"
+    },
+    {
+      "bytes": 9772,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/plotted_values.tsv",
+      "sha256": "bae8cbe12fe746430f85fe7514a500bf585827d07654ecbe44739495cafd2533"
+    }
+  ],
+  "status": "frozen_null_score_figure_visually_reviewed",
+  "tests": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 93,
+    "receipt": {
+      "bytes": 13014,
+      "path": "benchmarks/work/frozen_null_score_manuscript_tests_20261002.xml",
+      "sha256": "3043530f91849b83c0fc5af5859f796ce80fdb8d92a3e148e2d2a837949146f2"
+    },
+    "seconds": 8.0,
+    "skipped": 0
+  },
+  "utc": "2026-10-02T12:14:32.257417+00:00",
+  "zero_glyphs_explained": true
+}

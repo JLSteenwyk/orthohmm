@@ -21,7 +21,8 @@ contribution in a fixed graph procedure, not full-pipeline superiority.
 Independent-family generalization, uncertainty for several QfO endpoints and
 controlled comparative timing remain unresolved. The evidence supports a
 bounded contribution and an explicit precision-recall trade-off, not universal
-accuracy or efficiency claims.
+accuracy or efficiency claims. Synthetic null scoring revealed
+composition-dependent behavior of the approximate significance filter.
 
 ## Methods
 
@@ -47,6 +48,15 @@ HMMER/phmmer equivalence or calibrated assignment confidence. The
 [numerical specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
 records the recurrence, constants, profile construction and acceptance rules
 at the full frozen source revision. No scoring/default change accompanies it.
+
+A [prespecified null-score protocol](FROZEN_NULL_SCORE_PROTOCOL_20261002.md)
+examined that significance filter without fitting parameters. Three residue
+compositions and lengths 50/150/400 each used ten seeds and 1,000 independently
+drawn query-target pairs per seed. Each pair had a one-target database and was
+scored with full and width-64 bands: 90,000 independent pairs, not 180,000
+independent observations. Five fixed cutoffs yielded 90 tail endpoints with
+Bonferroni-adjusted exact binomial intervals. These intervals describe the
+synthetic generator, not reference-family or orthology uncertainty.
 
 Comparators were OrthoFinder 3.1.5 [@orthofinder2026; @orthofinder2026correction],
 SonicParanoid 2.0.9 [@sonicparanoid2024], ProteinOrtho 6.3.6 [@proteinortho2023],
@@ -179,6 +189,22 @@ not a comparison against OrthoFinder or a matched-effort result. Score
 rankings and hit identities differ, so the design does not isolate a causal
 mechanism. [Matched-recall control](MATCHED_GRAPH_RESULT_20260926.md).
 
+### Synthetic Null Tails Depend On Composition
+
+At the frozen `E < 1e-4` cutoff, width-64 scoring passed 0/1/0 of 10,000
+ordinary-background pairs at lengths 50/150/400. These sparse counts do not
+establish rare-tail calibration. Half-background-plus-half-glutamine sampling
+passed 89.83%, 100% and 100%; its adjusted intervals were [88.7484%, 90.8453%]
+and [99.9181%, 100%] for each longer length. All
+[90 endpoints and their figure](figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf)
+are retained. A hit here is only a forced pair passing the approximate
+significance gate, not a predicted ortholog or an observed pipeline false
+positive. No prefilter or biological inference ran. The strong synthetic
+composition is not a measured real-proteome prevalence. The
+[audit](FROZEN_NULL_SCORE_RESULT_20261002.md) reproduces all endpoint counts and
+180 sparse reference-Python scores, not all native scores. No coefficients,
+thresholds or defaults were fitted or promoted.
+
 ### Local Parameter Sensitivity Did Not Establish Improvement
 
 The [complete seven-arm panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
@@ -265,6 +291,12 @@ component effects and explicit accuracy trade-offs. Initial HMM search has
 bounded support in matched-recall simulations; additional profile refinement
 has not demonstrated a general benefit. Neither simulation evidence nor an
 OrthoBench point advantage establishes superiority over full OrthoFinder.
+
+The approximate significance formula is not universally calibrated under
+the tested synthetic conditions. The null experiment does not measure real-data
+orthology false-positive rates or causally explain any benchmark difference;
+independent calibration would be needed before claiming statistical significance
+for arbitrary compositions, search spaces, profiles or band settings.
 
 Original TreeFam-A family mappings and complete source trees remain unavailable.
 Public QfO container searches now cover recognized benchmark build contexts
@@ -357,6 +389,11 @@ guards are not OS containment. Native annotation extraction/admission was not
 rerun, and private archives remain unuploaded with redistribution uncleared.
 Neither component establishes complete executable study restoration or
 all-method cross-host portability.
+
+The [null-score observations](frozen_null_score_observations_20261002.json.gz)
+retain all 180,000 synthetic score evaluations and their source/runtime pins.
+Its public numerical readback checks all 90 tail endpoints without loading
+the native kernel; this is not a complete inference runtime archive.
 
 The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet

@@ -99,7 +99,8 @@ retained-result checks without loading the native kernel:
 python -m pytest tests/unit/test_frozen_null_score_result.py tests/unit/test_probe_frozen_null_scores.py tests/unit/test_verify_frozen_scoring.py
 ```
 
-This new supplement is not yet integrated into the dated manuscript render or
-older review archives. Controlled resource measurements remain deferred; raw
+The [figure and current manuscript sources](FROZEN_NULL_SCORE_FIGURE_20261002.md)
+now include this supplement; the separately dated main-text render remains
+pending and older review archives stay historical. Controlled resource measurements remain deferred; raw
 data rights, other-QfO uncertainty, final reconciliation and a complete versioned
 executable release remain open.

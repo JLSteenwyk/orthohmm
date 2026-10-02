@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Synthetic Null Score Figure And Manuscript Source (2026-10-02)
+
+Previous turn progressed at pushed 6ff1a614, with completed native null panel
+and audit, all retained observations and 38 passing checks. Read objective,
+HEAD and newest ledger; preserve 1,140 unrelated tracked sample outputs and
+all historical evidence. Observe exact CI run 37004398808 at 12:03:58 UTC:
+docs/Linux succeed, six jobs remain live. At 12:12:39 UTC wheel also succeeds,
+3.12 fails and the other four macOS jobs remain live. No restart, inferred
+counts or terminal conclusion from an observation timeout.
+
+Build a new supplementary figure from saved scores only. External compressed/
+receipt hashes and decoded-result identity are required; recount all 90 tails,
+intervals and paired-band losses without rerunning native scoring. Preserve
+all nine composition/length cells and all five cutoffs. Zero-hit triangles
+show interval upper bounds, not positive observed fractions; band glyphs are
+slightly offset and exact coordinates remain in the TSV. The first export has
+length labels too close to near-one glutamine points. Retain it, move only
+those labels into clear lower-right space and export v2. Both TSVs are exactly
+byte-identical. Inspect final PNG and bitmap of its one-page PDF: no observed
+clipping/overlap, zero PDF block-bound violations. See the
+[figure and review](FROZEN_NULL_SCORE_FIGURE_20261002.md).
+
+Integrate the frozen protocol, actual outcome and interpretation into main/
+extended manuscript sources. Strong glutamine tails reveal a conditional
+significance-formula limitation, not real orthology error rates or a causal
+benchmark explanation. Sparse background tails cannot establish rare-tail
+calibration. No coefficients/thresholds/bands/defaults are fit or promoted.
+Add two retained-result/prose checks and 12 plot/export checks, including
+changed-score/hash/scope rejection and label/marker nonoverlap. The combined
+**93-case panel passes in 8.00s**, zero errors/failures/skips; the earlier
+50-case panel passed before visual review exposed its presentation issue.
+
+Commit this source/figure/ledger checkpoint before generating a new dated
+main HTML/PDF so its exact render-time source identity is retained. Rendering
+and final review remain pending here; old PDFs/archives are not overwritten.
+No native scoring/inference/bootstrap/archive/collector experiment is repeated.
+Timing stays deferred without questions/polls, DGX or unrelated job/service
+actions. Other-QfO uncertainty, controlled resources, rights, complete release/
+deposition and final reconciliation remain open; the original goal stays active.
+
 ## Frozen Null Score Execution And Audit (2026-10-02)
 
 Commit protocol/producer at 186bd5e47ecaa9361a86064c33d7a57c70ce1ce3 before
