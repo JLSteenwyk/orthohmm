@@ -41,8 +41,8 @@ def network_opener():
     return build_opener(ProviderRedirect())
 
 
-def download(opener, url, target, limit, timeout, expected=None):
-    provider_url(url)
+def download(opener, url, target, limit, timeout, expected=None, *, hosts=PROVIDERS):
+    provider_url(url, hosts)
     if target.exists() or target.is_symlink() or target.with_name(target.name + ".partial").exists():
         raise FileExistsError(target)
     partial = target.with_name(target.name + ".partial")
@@ -50,7 +50,7 @@ def download(opener, url, target, limit, timeout, expected=None):
                                    "Accept-Encoding": "identity"})
     size = 0
     with opener.open(request, timeout=timeout) as response, partial.open("xb") as stream:
-        final_url = provider_url(response.geturl())
+        final_url = provider_url(response.geturl(), hosts)
         if response.headers.get("Content-Encoding", "identity") != "identity":
             raise ValueError("Unexpected encoded provider response")
         declared = response.headers.get("Content-Length")
