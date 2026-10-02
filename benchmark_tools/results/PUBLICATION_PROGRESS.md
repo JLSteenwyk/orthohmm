@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Private Native-Observer Control Route Implemented (2026-10-02)
+
+Previous goal turn was a status-only reply (no progress); revalidate the
+remaining executor gap and take a safe implementation action while timing
+stays deferred. The production executor only selected 27 runs; add an explicit
+private `overhead_plan` route for the existing 54-task engineering plan.
+Preserve the fixed private scientific parent, all paired commands/settings,
+resource/order/budget rules and shared/default behavior.
+
+Bind complete task design and externally pinned plan/runtime evidence.
+Use separate engineering readiness/session/review schemas with pair/arm
+identities. Extend sequential history checks without allowing skipped/retried
+tasks; native failure/timeout blocks engineering continuation. Route each arm
+through its existing collector and the same preparation/runtime/environment/
+budget/whole-host/cleanup/stream guards. Mark started/final receipts as
+engineering, never production or timing admission.
+
+Focused panels pass 182 and 206 cases; wider panel passes 558, then final
+12-module panel passes 559 in 39.85 seconds with zero failures/errors/skips.
+Retain both wider JUnit files. Tests cover both arms, later indices 26/27/53,
+drift/mixed reviews, failed predecessors, cleanup and no session retry.
+Environment observations remain injected fixtures. Directly check the retained
+plan's actual private parent; no need to regenerate it or create run storage.
+Source is committed at c59d9514; see the
+[contract, evidence and outstanding work](THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md).
+
+No inference, scheduler allocation/submission, host-contention poll, quiet-window
+question, DGX, unrelated job/service change, shared upgrade or archive/PDF rebuild.
+The three changed helpers are not attested by prior startup inventories.
+Final source/runtime binding, actual environmental handoff, quiet-host evidence,
+all 54 engineering outcomes and separate 27 production runs remain required.
+The original publication goal stays active; all owned test handles are terminal.
+
 ## Private Controller Startup Observed (2026-10-02)
 
 Previous turn progressed at pushed a4f0b43b, resolving runtime lookup/source

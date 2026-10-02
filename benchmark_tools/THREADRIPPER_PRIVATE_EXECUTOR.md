@@ -95,6 +95,15 @@ attempt ledger; it is not silently retried.
 
 ## Remaining Work
 
+The [native-observer control route](results/THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
+now selects either collector for the separate 54-task engineering panel.
+It requires an explicit private lookup and `overhead_plan`, engineering
+readiness/history schemas and the same environmental safeguards. Failure
+stops continuation; no engineering result becomes a production identity.
+These helper bytes are not covered by the earlier startup inventory.
+Bind the final runtime/source before launch, not a new scientific command
+plan or repeated calibration. Actual overhead/environmental execution is pending.
+
 The passed 22380 calibration remains accounting/cadence evidence, not causal
 slowdown. The separate 54-task native observer-control panel and 27 production
 identities remain unadmitted. A real reviewed process/service policy, complete

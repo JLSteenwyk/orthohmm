@@ -1,0 +1,117 @@
+{
+  "limitations": [
+    "Component tests and raw JUnit readback, not live scheduler/native/environment integration.",
+    "No actual 54-task engineering or 27-run production timing result.",
+    "Previous runtime/controller startup inventories do not attest the three changed execution helpers.",
+    "Final runtime binding, real policy/readiness and environmental handoff, quiet window and full pair admission remain required."
+  ],
+  "observations": {
+    "both_collector_arms_composed_in_synthetic_executor": true,
+    "current_source_bytes_equal_git_commit": true,
+    "engineering_native_failure_stops_continuation": true,
+    "environment_worker_observations": "injected_test_fixtures",
+    "final_junit_independently_read_back": true,
+    "later_task_indices_tested": [
+      26,
+      27,
+      53
+    ],
+    "measurement_functions_in_executor_compositions": "replaced_with_test_doubles",
+    "production_reviews_cannot_be_borrowed": true
+  },
+  "publication_ready": false,
+  "regression": {
+    "errors": 0,
+    "failed": 0,
+    "junit": {
+      "bytes": 85519,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_executor_final_tests_20261002.xml",
+      "sha256": "3bd84c899096b97995e2057c88a1265a400bc54420925ec22695e30cb25ebcaa"
+    },
+    "modules": {
+      "tests.unit.test_audit_threadripper_overhead": 56,
+      "tests.unit.test_bind_threadripper_panel_history": 21,
+      "tests.unit.test_check_threadripper_runtime": 10,
+      "tests.unit.test_manage_threadripper_environment_worker": 10,
+      "tests.unit.test_measure_threadripper_boundary": 26,
+      "tests.unit.test_prepare_threadripper_overhead": 39,
+      "tests.unit.test_replay_threadripper_boundary": 40,
+      "tests.unit.test_review_threadripper_process_stream": 51,
+      "tests.unit.test_run_threadripper_scaling": 150,
+      "tests.unit.test_threadripper_environment_worker": 77,
+      "tests.unit.test_threadripper_panel_progress": 36,
+      "tests.unit.test_verify_threadripper_controller": 43
+    },
+    "passed": 559,
+    "previous_wider_junit": {
+      "bytes": 85363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_overhead_executor_tests_20261002.xml",
+      "sha256": "4cfaa4512e7360ba98a3b80b89a8d467d74323237fa915b3b0226a9623e27345"
+    },
+    "previous_wider_passed": 558,
+    "skipped": 0,
+    "testsuite_time_s": 39.691
+  },
+  "retained_design": {
+    "artifacts_rebuilt": false,
+    "first_arms": [
+      "boundary",
+      "periodic"
+    ],
+    "parent": {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    "plan": {
+      "bytes": 447512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_plan_20260930.json",
+      "sha256": "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182"
+    },
+    "production_identities": 27,
+    "protocol": {
+      "bytes": 4761,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/THREADRIPPER_NATIVE_OVERHEAD_PROTOCOL_20260930.md",
+      "sha256": "a132652a641dc451ea7aac5ce2c4d62a2b9bd5e003e5f0dd1aa047d276440727"
+    },
+    "source_helper_pins_verified": 9,
+    "tasks": 54
+  },
+  "schema": "threadripper_overhead_executor_validation_v1",
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "source_commit": "c59d95147cff59549b9c7f37881092e6ed5ee12a",
+  "source_files": [
+    {
+      "bytes": 20241,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "sha256": "963901b405b8f3589503e254167630e67e522fa226609131fa625a637552037d"
+    },
+    {
+      "bytes": 4943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py",
+      "sha256": "fb4d137bb33ab92ecd68a32120c4ff49baa560558053828f2a9b8bcb679706b1"
+    },
+    {
+      "bytes": 5653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_threadripper_panel_history.py",
+      "sha256": "dad1408e30f6d7a63702587fc342c90690ebec5b01d866edd7a1461122afb169"
+    },
+    {
+      "bytes": 39893,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_threadripper_scaling.py",
+      "sha256": "88c13cc856416ca0da4699531ce3739d872022b1c0cdd9908851482605813469"
+    },
+    {
+      "bytes": 5015,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_threadripper_panel_progress.py",
+      "sha256": "272543a53befb3af29a29621ef52d1701d3a599b1714dead1e360dfa63420f15"
+    },
+    {
+      "bytes": 14389,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_threadripper_environment_worker.py",
+      "sha256": "27393f4f5088fbe5b7ec2b6dd4822bcb3ef0bd3dc1125b734fd91f3be6d0ab82"
+    }
+  ],
+  "status": "focused_engineering_route_regression_passed"
+}

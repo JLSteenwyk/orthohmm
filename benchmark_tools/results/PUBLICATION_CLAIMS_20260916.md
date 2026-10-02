@@ -13,6 +13,14 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [private native-observer control wiring](THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
+implements the retained 54-task route through both collectors and the existing
+environmental safeguards. All 559 focused cases pass, including engineering
+history/readiness separation and failure stopping. This is synthetic/component
+validation, not actual native handoff, slowdown or controlled resource evidence.
+The three changed execution helpers require a final current runtime binding;
+prior startup inventories remain historical, not new execution approval.
+
 The [actual private-controller startup](THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
 adds controller rather than native-interpreter evidence: all 424 observed files
 match pinned identities, all 81 project-module origins are current, and pure

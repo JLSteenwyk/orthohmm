@@ -18,6 +18,14 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [private native-observer control wiring](results/THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
+adds the missing route for the retained 54-task overhead plan, engineering-only
+identities/reviews, both collectors and unchanged environmental safeguards.
+All 559 focused cases pass; no native timing task launches. Earlier startup
+inventories do not attest changed helper bytes. Final runtime binding, real
+environment handoff, all prescribed outcomes and a quiet window remain required.
+The separate 27 production identities and scientific settings stay unchanged.
+
 The [actual private-controller startup](results/THREADRIPPER_CONTROLLER_STARTUP_20261002.md)
 imports current execution/environment helpers and accounts for all 424 observed
 files against pinned inventories, with correct origins for 81 project modules.
