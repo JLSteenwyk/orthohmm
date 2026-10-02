@@ -57,8 +57,10 @@ def fixture_manifest(tmp_path):
                 references=[item(f"R{i}.txt") for i in range(3)], uncertain=[])
 
 
-@pytest.mark.parametrize("change_base", [False, True])
-def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_path, monkeypatch, change_base):
+@pytest.mark.parametrize("mode,change_base,change_host", [
+    ("run", False, False), ("run", True, False), ("run", False, True),
+    ("preflight", False, False), ("reject_host", False, False)])
+def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_path, monkeypatch, mode, change_base, change_host):
     from types import SimpleNamespace
     from benchmark_tools import run_integrated_publication_workflow as module
     bundle = tmp_path / "bundle"
@@ -78,12 +80,25 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
     base.chmod(0o755)
     data = tmp_path / "manifest.json"
     data.write_text(json.dumps(fixture_manifest(tmp_path)))
+    abi = tmp_path / "abi.json"
+    abi.write_text("synthetic ABI fixture")
     args = SimpleNamespace(assets=assets, readers=bundle / "readers", reader_wheels=bundle / "reader_wheels",
         reader_lock=locks["reader"], base_python=base, installer_python=base,
         base_python_sha256=record(base)["sha256"], assembly_manifest_sha256="assembly-anchor",
+        abi_inventory=abi, abi_inventory_sha256=record(abi)["sha256"],
+        preflight_only=mode == "preflight",
         data=data, data_sha256=record(data)["sha256"], output=tmp_path / "run", cpu=2, timeout=10)
     validations, commands = [], []
     monkeypatch.setattr(module, "validate_assets", lambda *values: validations.append(values))
+    host_checks = []
+    def fake_host(values):
+        host_checks.append(values)
+        if mode == "reject_host":
+            raise ValueError("Host glibc is below declared floor")
+        return dict(inventory=record(abi), source=record(module.__file__), loaders=[],
+                    glibc_floor_check_passed=True, full_host_compatibility_verified=False,
+                    controller_glibc="glibc 2.39" if not change_host or len(host_checks) == 1 else "glibc 2.40")
+    monkeypatch.setattr(module, "validate_assembly_host", fake_host)
     def fake_stage(directory, name, command, environment, timeout):
         commands.append((name, command))
         if name.startswith("base_"):
@@ -97,14 +112,32 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
             (directory / "score.json").write_text("{}")
         return dict(returncode=0, name=name)
     monkeypatch.setattr(module, "stage", fake_stage)
-    if change_base:
-        with pytest.raises(ValueError, match="site changed"):
+    if mode == "reject_host":
+        with pytest.raises(ValueError, match="below declared floor"):
+            module.run(args)
+        assert commands == [] and not args.output.exists()
+        return
+    if mode == "preflight":
+        result = module.run(args)
+        assert result["status"] == "integrated_assembled_preflight_complete"
+        assert len(host_checks) == 2 and commands == []
+        assert not (args.output / "complete.json").exists()
+        assert not (args.output / "inference").exists()
+        assert (args.output / "preflight.json").exists()
+        assert all(result[key] is False for key in ("installation_executed", "scientific_inference_executed",
+            "private_base_runtime_probe_executed", "reviewed_native_code_executed", "inference_execution_permitted",
+            "full_host_compatibility_verified", "controlled_timing", "publication_ready"))
+        return
+    if change_base or change_host:
+        with pytest.raises(ValueError, match="site changed" if change_base else "preflight changed"):
             module.run(args)
         assert not (args.output / "complete.json").exists()
         assert json.loads((args.output / "failure.json").read_text())["retry"] is False
     else:
         result = module.run(args)
         assert result["base_unchanged"] is True and result["base_site_payload_files"] == 1
+        assert result["glibc_preflight"] == record(args.output / "glibc_preflight.json")
+        assert len(host_checks) == 2
         assert len(validations) == 2
     assert len(commands) == 10
     assert commands[0][0] == "base_before" and commands[-1][0] == "base_after"
@@ -112,6 +145,23 @@ def test_assembled_execution_checks_base_without_changing_legacy_commands(tmp_pa
     assert "-B" not in install_commands(base, base, assets / "wheels", locks["inference"], tmp_path / "legacy")[0]
     with pytest.raises(FileExistsError):
         module.run(args)
+
+
+@pytest.mark.parametrize("assembly,inventory,digest", [("anchor", None, None), ("anchor", "file", None),
+    ("anchor", None, "digest"), (None, "file", "digest")])
+def test_invalid_abi_arguments_fail_before_output_and_install(tmp_path, monkeypatch, assembly, inventory, digest):
+    from types import SimpleNamespace
+    from benchmark_tools import run_integrated_publication_workflow as module
+    data = tmp_path / "data.json"
+    data.write_text(json.dumps(fixture_manifest(tmp_path)))
+    args = SimpleNamespace(output=tmp_path / "run", cpu=2, timeout=10, data=data,
+        data_sha256=record(data)["sha256"], assembly_manifest_sha256=assembly,
+        abi_inventory=inventory, abi_inventory_sha256=digest)
+    monkeypatch.setattr(module, "validate_assets", lambda *a: pytest.fail("must reject before asset work"))
+    monkeypatch.setattr(module, "stage", lambda *a: pytest.fail("must reject before installation"))
+    with pytest.raises(ValueError, match="ABI inventory"):
+        module.run(args)
+    assert not args.output.exists()
 
 
 def test_fixture_scope(tmp_path):

@@ -191,6 +191,14 @@ def assembly_base(args, output):
     return record(base)
 
 
+def validate_assembly_host(args):
+    if not __package__:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from benchmark_tools.check_publication_glibc_floor import check_host
+    return check_host(args.assets.absolute().parent, args.abi_inventory,
+                      args.abi_inventory_sha256, args.assembly_manifest_sha256)
+
+
 def validate_base_probe(value, base):
     prefix = base.absolute().parent.parent
     site = Path(value["site"])
@@ -213,12 +221,21 @@ def run(args):
     data = json.loads(args.data.read_text())
     validate_data(data)
     assembly_digest = getattr(args, "assembly_manifest_sha256", None)
+    preflight_only = getattr(args, "preflight_only", False)
+    abi_arguments = (getattr(args, "abi_inventory", None), getattr(args, "abi_inventory_sha256", None))
+    if assembly_digest is not None and not all(abi_arguments):
+        raise ValueError("Assembled execution requires externally anchored ABI inventory and glibc preflight")
+    if assembly_digest is None and any(abi_arguments):
+        raise ValueError("ABI inventory arguments require explicit assembled execution")
+    if preflight_only and assembly_digest is None:
+        raise ValueError("Preflight-only mode requires explicit assembled execution")
     validate_assets(args.assets, args.readers, assembly_digest)
     if assembly_digest is not None and (
             args.reader_wheels.resolve() != args.assets.resolve().parent / "reader_wheels"
             or args.reader_lock.resolve() != args.assets.resolve().parent / "reader_requirements.txt"):
         raise ValueError("Reader wheels/lock must belong to the externally anchored assembly")
     base_record = assembly_base(args, output) if assembly_digest is not None else None
+    host_preflight = validate_assembly_host(args) if assembly_digest is not None else None
     locks = dict(inference=args.assets / "benchmark_tools/results/publication_recovery_requirements_20260926.txt",
                  reader=args.reader_lock)
     if any(record(p)["sha256"] != LOCKS[n] for n, p in locks.items()):
@@ -226,10 +243,30 @@ def run(args):
     watched = [data_record, record(__file__), *[record(p) for p in locks.values()]]
     if base_record is not None:
         watched.append(base_record)
+    if host_preflight is not None:
+        watched.extend([host_preflight["inventory"], host_preflight["source"],
+                        *[item["identity"] for item in host_preflight["loaders"]]])
     for root in (args.assets / "wheels", args.assets / "mafft", args.assets / "benchmark_tools",
                  args.reader_wheels, args.readers):
         watched.extend(record(p) for p in sorted(root.rglob("*")) if p.is_file())
     watched.append(record(args.assets / "FastTree"))
+    if preflight_only:
+        for row in watched:
+            check(row)
+        if validate_assembly_host(args) != host_preflight:
+            raise ValueError("Assembly glibc preflight changed during preflight-only checks")
+        result = dict(status="integrated_assembled_preflight_complete", dataset=data["dataset"],
+            inputs=watched, host_preflight=host_preflight, source=record(__file__),
+            installation_executed=False, private_base_runtime_probe_executed=False,
+            scientific_inference_executed=False, reviewed_native_code_executed=False,
+            inference_execution_permitted=False, full_host_compatibility_verified=False,
+            controlled_timing=False, publication_ready=False,
+            limitations=["Pinned input/asset/base-file and glibc floor checks only; no native stage is launched.",
+                "Private-base package/runtime probing and installed-payload/scientific admission remain separate.",
+                "Not CPU/loader/library/OS/security closure, resource readiness or timing authorization."])
+        output.mkdir(parents=True)
+        save(output / "preflight.json", result)
+        return result
     output.mkdir(parents=True)
     (output / "home").mkdir()
     (output / "input").mkdir()
@@ -249,6 +286,8 @@ def run(args):
                        OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1", PYTHONHASHSEED="0")
     save(output / "started.json", dict(source=record(__file__), inputs=watched, cpu=args.cpu,
         dataset=data["dataset"], attempts=1, native_checkpoint_reuse=False, publication_ready=False))
+    if host_preflight is not None:
+        save(output / "glibc_preflight.json", host_preflight)
     outcomes = []
     try:
         before_base = None
@@ -282,6 +321,8 @@ def run(args):
         for row in watched:
             check(row)
         validate_assets(args.assets, args.readers, assembly_digest)
+        if host_preflight is not None and validate_assembly_host(args) != host_preflight:
+            raise ValueError("Assembly glibc preflight changed during execution")
     except BaseException as error:
         save(output / "failure.json", dict(type=type(error).__name__, error=str(error), outcomes=outcomes, retry=False))
         raise
@@ -293,6 +334,7 @@ def run(args):
             "Same-host workflow integration, not new biological validation or controlled comparative timing."])
     if assembly_digest is not None:
         result.update(assembly_manifest_sha256=assembly_digest, base_unchanged=True,
+                      glibc_preflight=record(output / "glibc_preflight.json"),
                       base_site_payload_files=len(before_base["files"]),
                       limitations=result["limitations"] + [
                           "New explicitly anchored assembly; historical asset manifests/admissions remain untouched.",
@@ -309,6 +351,9 @@ if __name__ == "__main__":
     parser.add_argument("--data-sha256")
     parser.add_argument("--assembly-manifest-sha256")
     parser.add_argument("--base-python-sha256")
+    parser.add_argument("--abi-inventory", type=lambda p: Path(p).absolute())
+    parser.add_argument("--abi-inventory-sha256")
+    parser.add_argument("--preflight-only", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--cpu", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=86400)
