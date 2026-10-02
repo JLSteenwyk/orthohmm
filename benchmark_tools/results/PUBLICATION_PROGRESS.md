@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Unified Handoff Extracted And Numerical Scripts Executed (2026-10-02)
+
+Previous turn progressed at pushed `526bd04a`, executing offline base automation
+and the new-base scientific fixture. Read goal/worktree/newest receipts. Its
+exact CI run 37027835950 has successful wheel/Linux jobs, five live macOS jobs
+and docs queued when inspected; no inferred counts or full matrix claim.
+Timing remains deferred without renewed coordination questions, host contention
+polls, unrelated job/service actions or DGX work. Reuse prior native/full-data
+admissions and collector receipts rather than repeating expensive diagnostics.
+
+Inspect handoff boundaries and find a reader-facing assembly gap: manuscript,
+source/native preparation, comparison table and arithmetic still have separate
+entrypoints. Add a stdlib committed-component coordinator, exact extra-input
+pins, whole-inventory/external-anchor verification and scope-preserving root
+guide. Freeze the already inspected nine-page review and its own ledger;
+do not rerender historical science using a newer workflow revision.
+Initial 167 coordinator/source/review tests pass. Commit `9dce4c7f` before
+building actual components. Real build rejects two generated component indexes
+with mode 0664 inherited from host umask. Preserve failure/tree/logs; no native
+or arithmetic run started. Normalize only generated index permissions. Added
+build regression exposes implicit verifier bytecode-cache writes without `-B`;
+preserve failed panel and load anchored source without caches. Final 168 tests
+pass in 15.34s, zero failures/errors/skips. Commit correction `a15f1e9e`.
+
+Actually assemble 1,912 payloads and independently anchor the root index/local
+archive; validate all 1,913 regular archive members before fresh extraction
+outside checkout. Copied isolated verification passes without Git. Verify
+43 scientific/1,783 workflow files, 69 direct main-review payloads/nine pages,
+and all 72 comparison values/secondary means. Execute extracted YGOB and both
+simulation count replays with pinned private Python/NumPy, outputs external
+and numerical-library threads one. All six real stages return zero. Reproduce
+12 YGOB point metrics/six endpoints/24 bounds and 168 simulation mean cells,
+42 effects/112 bounds, retaining fixed-panel unavailable contrasts/failures.
+Final copied verification passes; archive/source unchanged. No raw/native,
+tree stress-test, expensive benchmark, new endpoint or controlled timing run.
+
+See [handoff execution, archive identities and limitations](PUBLICATION_HANDOFF_CANDIDATE_20261002.md)
+and its machine receipt. This closes a combined source/manuscript/count handoff
+gap, not a complete native runtime, rights clearance, cross-host/system-sandbox
+test, public archive/release/DOI, submission or universal accuracy claim.
+Controlled timing, native/runtime/rights closure, remaining QfO uncertainty
+and final manuscript/deposition requirements remain open. Commit/push focused
+milestones; leave original publication goal active and unrelated changes intact.
+
 ## Offline Base Automation And Scientific Integration Executed (2026-10-02)
 
 Previous turn progressed at pushed `f8f7b437`, packaging and executing the

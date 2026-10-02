@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [unified handoff candidate](results/PUBLICATION_HANDOFF_CANDIDATE_20261002.md)
+now connects the dated nine-page main review, frozen scientific source, newer
+native-preparation workflow, eight-tool table and two standalone count replays.
+All 1,913 local archive members validate before fresh extraction outside the
+checkout; copied verification and both numerical scripts execute successfully.
+The final 168-test panel passes. See the [build/reader guide](PUBLICATION_HANDOFF.md).
+This is a local source/count candidate, not raw/native-runtime delivery, cleared
+public release, new accuracy evidence or controlled timing.
+
 The [offline base controller and integrated fixture](results/OFFLINE_BASE_CONTROLLER_20261002.md)
 replace manual historical-runtime installation/bootstrap commands with an
 explicit native-preparation source profile. A copied controller actually

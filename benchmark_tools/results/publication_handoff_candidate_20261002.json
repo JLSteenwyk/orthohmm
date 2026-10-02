@@ -1,0 +1,500 @@
+{
+  "archive": {
+    "bytes": 23644160,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/handoff.tar",
+    "sha256": "8e54b11d27db47daa3a79f1a61ab43d77e8ab907586136168e145c9ffe34dc13"
+  },
+  "archive_and_component_unchanged": true,
+  "archive_files_validated": 1913,
+  "controlled_timing": false,
+  "copied_verification": {
+    "comparison": {
+      "methods": 8,
+      "numeric_cells": 72,
+      "raw_scoring_repeated": false,
+      "secondary_mean_official": false
+    },
+    "components": {
+      "manuscript": {
+        "direct_targets": 46,
+        "entrypoints": {
+          "html": "benchmark_tools/results/publication_main_review_20261002_v3.html",
+          "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+          "pdf": "benchmark_tools/results/publication_main_print_20261002_v3/document.pdf"
+        },
+        "files": 69,
+        "inference_reproduced": false,
+        "local_html_occurrences": 48,
+        "manifest": {
+          "bytes": 25583,
+          "sha256": "0c9652ac10476a003c7c181c2fa2b0ad50c1b122f9e867922b0fee31c81d2c88"
+        },
+        "page_count": 9,
+        "payload_bytes": 5197565,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "status": "publication_direct_review_verified",
+        "transitive_evidence_included": false
+      },
+      "source": {
+        "components": {
+          "scientific": 43,
+          "workflow": 1783
+        },
+        "executable_benchmark_reproduced": false,
+        "files": 1826,
+        "manifest": {
+          "bytes": 738368,
+          "sha256": "df827be2e93520c138488f3915ee1f4c6df439d414588626ba7402c0236eb263"
+        },
+        "payload_bytes": 10641654,
+        "publication_ready": false,
+        "python_files_syntax_checked": 1808,
+        "redistribution_clearance": false,
+        "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+        "status": "publication_source_components_verified",
+        "workflow_revision": "a15f1e9e90a0ce2888f5bdb2e1aa01433a052201"
+      }
+    },
+    "files": 1912,
+    "manifest": {
+      "bytes": 419053,
+      "sha256": "66401f041adf0d78b88a3e915b8abbd2d899666a8cbe371f70213e5e25fae73a"
+    },
+    "native_inference_reproduced": false,
+    "numerical_replay_executed": false,
+    "payload_bytes": 19787818,
+    "public_release_uploaded": false,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_handoff_candidate_verified"
+  },
+  "extracted": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+  "finished": "2026-10-02T16:12:37.590731+00:00",
+  "harness": {
+    "bytes": 9246,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_handoff_20261002.py",
+    "sha256": "45bc8b216c80472a3d62f7973594c113c6889a7aed95ee257129dc83e0ab3f5f"
+  },
+  "index": {
+    "bytes": 419053,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/assembled/HANDOFF_INDEX.json",
+    "sha256": "66401f041adf0d78b88a3e915b8abbd2d899666a8cbe371f70213e5e25fae73a"
+  },
+  "isolated_environment": {
+    "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo",
+    "LANG": "C.UTF-8",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/no-git-here",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "limitations": [
+    "Same-host local extraction, not a cross-host or syscall-sandbox test.",
+    "Arithmetic replays use the existing supplied private compiled Python/NumPy, not bundled runtime closure.",
+    "Replays recompute retained counts, not native prediction, raw references or biological independence.",
+    "No controlled resource evidence, cleared public distribution, archive upload, DOI or full submission readiness."
+  ],
+  "native_inference_repeated": false,
+  "numerical_replay_executed": true,
+  "original_build": {
+    "comparison": {
+      "methods": 8,
+      "numeric_cells": 72,
+      "raw_scoring_repeated": false,
+      "secondary_mean_official": false
+    },
+    "components": {
+      "manuscript": {
+        "direct_targets": 46,
+        "entrypoints": {
+          "html": "benchmark_tools/results/publication_main_review_20261002_v3.html",
+          "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+          "pdf": "benchmark_tools/results/publication_main_print_20261002_v3/document.pdf"
+        },
+        "files": 69,
+        "inference_reproduced": false,
+        "local_html_occurrences": 48,
+        "manifest": {
+          "bytes": 25583,
+          "sha256": "0c9652ac10476a003c7c181c2fa2b0ad50c1b122f9e867922b0fee31c81d2c88"
+        },
+        "page_count": 9,
+        "payload_bytes": 5197565,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "status": "publication_direct_review_verified",
+        "transitive_evidence_included": false
+      },
+      "source": {
+        "components": {
+          "scientific": 43,
+          "workflow": 1783
+        },
+        "executable_benchmark_reproduced": false,
+        "files": 1826,
+        "manifest": {
+          "bytes": 738368,
+          "sha256": "df827be2e93520c138488f3915ee1f4c6df439d414588626ba7402c0236eb263"
+        },
+        "payload_bytes": 10641654,
+        "publication_ready": false,
+        "python_files_syntax_checked": 1808,
+        "redistribution_clearance": false,
+        "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+        "status": "publication_source_components_verified",
+        "workflow_revision": "a15f1e9e90a0ce2888f5bdb2e1aa01433a052201"
+      }
+    },
+    "files": 1912,
+    "manifest": {
+      "bytes": 419053,
+      "sha256": "66401f041adf0d78b88a3e915b8abbd2d899666a8cbe371f70213e5e25fae73a"
+    },
+    "native_inference_reproduced": false,
+    "numerical_replay_executed": false,
+    "payload_bytes": 19787818,
+    "public_release_uploaded": false,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_handoff_candidate_verified"
+  },
+  "public_release_uploaded": false,
+  "publication_ready": false,
+  "raw_scoring_repeated": false,
+  "redistribution_clearance": false,
+  "retained_failed_attempt": {
+    "build": {
+      "bytes": 88,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-f8jn_yka/assembled/FAILED_BUILD.json",
+      "sha256": "86bcef6810bf2195cbaad0854f1b9038294f1c0cf73710d7391cc77b97237617"
+    },
+    "native_or_arithmetic_started": false,
+    "reason": "Generated component indexes inherit group-write umask, rejected by outer mode inventory.",
+    "receipt": {
+      "bytes": 2802,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-f8jn_yka/FAILED.json",
+      "sha256": "7593e6faf200202a1743beb83b57aef34749f1acae8aac77816895c9432706f8"
+    },
+    "stderr": {
+      "bytes": 988,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-f8jn_yka/build.stderr",
+      "sha256": "0f82c9c00a66f63a1f11f20eaf979e7a0b00022ddeea82a85f96558b1166fd27"
+    },
+    "workflow_revision": "9dce4c7fc483e174aafb0b396cc7752436983512"
+  },
+  "retained_failed_regression_panel": {
+    "bytes": 30283,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_validated_tests_20261002.xml",
+    "sha256": "578bf19b4b25e294f0f57310155c380d920756bd9408f12efd2268a250c2d72d"
+  },
+  "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo",
+  "runtime": {
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "numpy": "2.2.6",
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv",
+    "python": "3.12.3"
+  },
+  "simulation": {
+    "file": {
+      "bytes": 2204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/simulation-replay.json",
+      "sha256": "b535906566a2f865a3631cbc22fa88f2c0bbff280395a306ce76dddabe9a68c9"
+    },
+    "result": {
+      "absolute_tolerance": 1e-12,
+      "failed_scores_imputed": false,
+      "historical_evidence_paths_accessed": false,
+      "inputs": [
+        {
+          "bytes": 795597,
+          "sha256": "305dcb1dde0c0f57d8b390b0f00cc6148d95103a7efb98bd9f6dce37b96e64a8"
+        },
+        {
+          "bytes": 2217675,
+          "sha256": "cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f"
+        }
+      ],
+      "limitations": [
+        "Retained-count arithmetic only, not native output, truth history or generation re-admission.",
+        "Independent rational per-seed metrics and explicit seed sums; same NumPy PCG64/linear quantiles, not a new statistical engine.",
+        "Complete-case contrasts remain conditional on success; ten planned seeds limit interval resolution.",
+        "Fixed-length unavailable contrasts remain unavailable, not zero or tool wins.",
+        "No controlled resources, arbitrary-dataset validation, complete release or rights clearance."
+      ],
+      "native_inference_repeated": false,
+      "numpy_version": "2.2.6",
+      "panels": [
+        {
+          "estimated_contrasts": 0,
+          "failed_records": 146,
+          "inapplicable_records": 0,
+          "insufficient_seed_contrasts": 0,
+          "interval_bound_values": 0,
+          "method_mean_cells": 84,
+          "outcome_records": 280,
+          "paired_metric_effects": 0,
+          "panel": "fixed_length_v1",
+          "planned_contrasts": 14,
+          "scored_records": 134,
+          "unavailable_contrasts": 14
+        },
+        {
+          "estimated_contrasts": 14,
+          "failed_records": 13,
+          "inapplicable_records": 0,
+          "insufficient_seed_contrasts": 0,
+          "interval_bound_values": 112,
+          "method_mean_cells": 84,
+          "outcome_records": 280,
+          "paired_metric_effects": 42,
+          "panel": "variable_length_v2",
+          "planned_contrasts": 14,
+          "scored_records": 267,
+          "unavailable_contrasts": 0
+        }
+      ],
+      "panels_pooled": false,
+      "publication_ready": false,
+      "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+      "raw_scoring_repeated": false,
+      "replicates_per_estimated_contrast": 20000,
+      "source": {
+        "bytes": 14573,
+        "sha256": "f475cb322346a23ae2afeb19a898a9a79fd786645e5db24ce7b3d07221b014b6"
+      },
+      "status": "frozen_simulation_panels_arithmetically_reproduced"
+    }
+  },
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_handoff.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "a15f1e9e90a0ce2888f5bdb2e1aa01433a052201",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/assembled"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "finished": "2026-10-02T16:12:13.210046+00:00",
+      "name": "build",
+      "returncode": 0,
+      "started": "2026-10-02T16:11:59.105511+00:00",
+      "stderr": {
+        "bytes": 312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/build.stderr",
+        "sha256": "3a7494c3ccf7c1b910c297288386cbca72971437450333ffd98a60960c7b5592"
+      },
+      "stdout": {
+        "bytes": 2031,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/build.stdout",
+        "sha256": "c9354e3b0c66b1d0cb19172a9fe3eb9b3992ac1377fc294c66536f59529bf45e"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/bundle_publication_handoff.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+        "--manifest-sha256",
+        "66401f041adf0d78b88a3e915b8abbd2d899666a8cbe371f70213e5e25fae73a"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+      "finished": "2026-10-02T16:12:17.832178+00:00",
+      "name": "copied_verify_before",
+      "returncode": 0,
+      "started": "2026-10-02T16:12:14.108885+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/copied_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 2031,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/copied_verify_before.stdout",
+        "sha256": "c9354e3b0c66b1d0cb19172a9fe3eb9b3992ac1377fc294c66536f59529bf45e"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import json,platform,sys,numpy; print(json.dumps(dict(python=platform.python_version(),numpy=numpy.__version__,executable=sys.executable,prefix=sys.prefix)))"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo",
+      "finished": "2026-10-02T16:12:17.947464+00:00",
+      "name": "runtime",
+      "returncode": 0,
+      "started": "2026-10-02T16:12:17.832681+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/runtime.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/runtime.stdout",
+        "sha256": "8d74baeef213c03058eedcaab7b80a12a30f001c73e206c6b40dd317df50bc0e"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/reproduce_ygob_validation.py",
+        "reproduce",
+        "--snapshot",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/ygob_sufficient_counts_20261002.json.gz",
+        "--snapshot-sha256",
+        "62885bb85eb357d97e55d053134d262e1ebb1e2b088a37df96986f98f8620d66",
+        "--summary",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/ygob_frozen_results_20260916.json",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/ygob-replay.json"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+      "finished": "2026-10-02T16:12:33.257294+00:00",
+      "name": "ygob_arithmetic",
+      "returncode": 0,
+      "started": "2026-10-02T16:12:17.947920+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/ygob_arithmetic.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 1677,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/ygob_arithmetic.stdout",
+        "sha256": "2c1a73572736549aaca5392a8df92913f48ddf4b0237f28f037a91f6320b2296"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/reproduce_simulation_panels.py",
+        "--results",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/simulation_fixed_native_results_20260916.json",
+        "--results",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/arithmetic/simulation_variable_native_results_20260916.json",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/simulation-replay.json"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+      "finished": "2026-10-02T16:12:33.723273+00:00",
+      "name": "simulation_arithmetic",
+      "returncode": 0,
+      "started": "2026-10-02T16:12:33.257698+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/simulation_arithmetic.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 2204,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/simulation_arithmetic.stdout",
+        "sha256": "b535906566a2f865a3631cbc22fa88f2c0bbff280395a306ce76dddabe9a68c9"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted/bundle_publication_handoff.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+        "--manifest-sha256",
+        "66401f041adf0d78b88a3e915b8abbd2d899666a8cbe371f70213e5e25fae73a"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/extracted",
+      "finished": "2026-10-02T16:12:37.549101+00:00",
+      "name": "copied_verify_after",
+      "returncode": 0,
+      "started": "2026-10-02T16:12:33.723789+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/copied_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 2031,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/copied_verify_after.stdout",
+        "sha256": "c9354e3b0c66b1d0cb19172a9fe3eb9b3992ac1377fc294c66536f59529bf45e"
+      }
+    }
+  ],
+  "started": "2026-10-02T16:11:59.104906+00:00",
+  "status": "publication_handoff_candidate_extracted_and_replayed",
+  "tests": {
+    "bytes": 23740,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_validated_tests_20261002_v2.xml",
+    "sha256": "e69cb5204cd51d129baa879845ac89fd7f8e209c3237e3ec47395d6b900b25f8"
+  },
+  "workflow_revision": "a15f1e9e90a0ce2888f5bdb2e1aa01433a052201",
+  "ygob": {
+    "file": {
+      "bytes": 1677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-publication-handoff-20261002-3nah4lzo/ygob-replay.json",
+      "sha256": "2c1a73572736549aaca5392a8df92913f48ddf4b0237f28f037a91f6320b2296"
+    },
+    "result": {
+      "absolute_tolerance": 1e-12,
+      "batch_size": 128,
+      "decoded": {
+        "bytes": 590099,
+        "sha256": "2b931b0d11dba223f5f4ee3617eb88ae9a019f1fecb71809472d2ea812d6b89a"
+      },
+      "historical_evidence_paths_accessed": false,
+      "interval_endpoints_checked": 6,
+      "limitations": [
+        "Replays retained sufficient statistics, not raw reference/prediction or native admission.",
+        "Uses independent integer count arithmetic, but the same NumPy PCG64 and quantiles, not a new statistical engine.",
+        "Pillar exchangeability and half-allocation of cross-pillar errors remain assumptions.",
+        "Novel-taxon transfer retains homolog overlap; no family-disjoint or unrestricted generalization claim.",
+        "Projection-group metadata is checked internally, not reconstructed from omitted memberships.",
+        "No controlled resources, complete release, redistribution clearance or archival deposition."
+      ],
+      "methods_checked": 4,
+      "native_inference_repeated": false,
+      "nominal_and_adjusted_bounds_checked": 24,
+      "numpy_version": "2.2.6",
+      "pillars_checked": 10250,
+      "point_metrics_checked": 12,
+      "publication_ready": false,
+      "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+      "raw_scoring_repeated": false,
+      "replicates": 20000,
+      "seed": 20260917,
+      "snapshot": {
+        "bytes": 77438,
+        "sha256": "62885bb85eb357d97e55d053134d262e1ebb1e2b088a37df96986f98f8620d66"
+      },
+      "source": {
+        "bytes": 16031,
+        "sha256": "d20ab936ed74f031f61dedfaf8cdd69135ef401f1186116d0a97b5ed90a33d16"
+      },
+      "status": "frozen_ygob_arithmetic_reproduced",
+      "summary": {
+        "bytes": 7978,
+        "sha256": "3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef"
+      }
+    }
+  }
+}
