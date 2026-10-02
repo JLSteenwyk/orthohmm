@@ -11,6 +11,22 @@ import pytest
 from benchmark_tools import assess_three_kingdoms_matched_sonic as module
 
 
+def synthetic_reference_groups():
+    # Match only the admission dimensions, never BUSCO identities or families.
+    sizes = [29] + [7] * 10 + [6] * 4 + [4] * 2 + [8] * 238
+    return [[f"synthetic_family_{family}_gene_{gene}" for gene in range(size)]
+            for family, size in enumerate(sizes)]
+
+
+def test_synthetic_reference_dimensions_and_distinct_identities():
+    groups = synthetic_reference_groups()
+    genes = [gene for group in groups for gene in group]
+    assert len(groups) == 255
+    assert len(genes) == len(set(genes)) == 2035
+    assert sum(len(group) * (len(group) - 1) // 2 for group in groups) == 7352
+    assert all(gene.startswith("synthetic_family_") for gene in genes)
+
+
 @pytest.fixture
 def case():
     plan = {"output_root": "/run", "native_argv": ["sonic", "-t", "32"],
@@ -64,18 +80,32 @@ def test_existing_destination_preserved(tmp_path):
         module.assess(tmp_path, tmp_path)
 
 
-@pytest.fixture
-def integrated(tmp_path, monkeypatch):
-    """Real conversion/scoring on synthetic predictions; only host gates mocked."""
+@pytest.fixture(params=["synthetic_dimensions", "retained_busco_reference"])
+def integrated(tmp_path, monkeypatch, request):
+    """Real scoring on synthetic and, when available, pinned retained references."""
     repo = tmp_path / "repo"
     source = Path(__file__).resolve().parents[2]
     for name in ("benchmark_tools/normalize_three_kingdoms_orthogroups.py",
-                 "three_kingdoms/score_against_busco.py",
-                 "three_kingdoms/busco/reference_orthogroups.txt"):
+                 "three_kingdoms/score_against_busco.py"):
         target = repo / name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(source / name, target)
     reference = repo / "three_kingdoms/busco/reference_orthogroups.txt"
+    reference.parent.mkdir(parents=True)
+    if request.param == "retained_busco_reference":
+        retained = source / "three_kingdoms/busco/reference_orthogroups.txt"
+        if not retained.is_file():
+            pytest.skip("Retained BUSCO data unavailable; synthetic integration is separate")
+        historical = json.loads((source / "benchmark_tools/results/"
+            "three_kingdoms_sonic_matched_commands_20260918.json").read_text())
+        pins = [item for item in historical["checked_records"]
+                if item["path"].endswith("/three_kingdoms/busco/reference_orthogroups.txt")]
+        assert len(pins) == 1
+        module.check({**pins[0], "path": str(retained)})
+        shutil.copyfile(retained, reference)
+    else:
+        reference.write_text("".join(" ".join(group) + "\n"
+                                    for group in synthetic_reference_groups()))
     groups = [line.split() for line in reference.read_text().splitlines() if line.strip()]
     members = [[], []]
     rows = ["group_id\tgroup_size\tsp_in_grp\tseed_ortholog_cnt\ta.fasta\tb.fasta"]
@@ -155,6 +185,8 @@ def test_real_conversion_scoring_and_independent_audit(integrated):
     assert result["status"] == "matched_three_kingdoms_sonic_score_verified"
     assert result["accuracy_admitted"] is True
     assert result["counts"]["true_positive_gene_pairs"] == 7352
+    assert result["counts"]["false_positive_gene_pairs"] == 0
+    assert result["counts"]["false_negative_gene_pairs"] == 0
     assert result["counts"]["f_score"] == 1.0
     assert result["native_validation"]["grouped_genes"] == 2035
     assert json.loads((destination / "report.json").read_text()) == result
@@ -179,7 +211,41 @@ def test_valid_but_imperfect_predictions_are_admitted(integrated):
     result = module.assess(repo, destination)
     assert result["accuracy_admitted"] is True
     assert 0 < result["counts"]["f_score"] < 1
-    assert result["counts"]["false_negative_gene_pairs"] > 0
+    lost_pairs = int(fields[1])
+    assert result["counts"]["false_negative_gene_pairs"] == lost_pairs
+    assert result["counts"]["true_positive_gene_pairs"] == 7352 - lost_pairs
+    assert result["counts"]["false_positive_gene_pairs"] == 0
+    assert result["counts"]["f_score"] == pytest.approx(2 * (7352 - lost_pairs) / (14704 - lost_pairs))
+
+
+def test_changed_reference_rejected_before_assessment(integrated):
+    repo, destination, _ = integrated
+    reference = repo / "three_kingdoms/busco/reference_orthogroups.txt"
+    reference.write_text(reference.read_text() + "\n")
+    with pytest.raises(ValueError, match="Frozen input/source identity changed"):
+        module.assess(repo, destination)
+    assert not destination.exists()
+
+
+def test_repinned_reference_universe_change_still_rejected(integrated, monkeypatch):
+    repo, destination, _ = integrated
+    reference = repo / "three_kingdoms/busco/reference_orthogroups.txt"
+    reference.write_text("\n".join(reference.read_text().splitlines()[1:]) + "\n")
+    path = repo / "benchmark_tools/results/three_kingdoms_sonic_matched_commands_20260918.json"
+    plan = json.loads(path.read_text())
+    plan["checked_records"] = [module.record(reference) if item["path"] == str(reference)
+                               else item for item in plan["checked_records"]]
+    path.write_text(json.dumps(plan))
+    monkeypatch.setattr(module, "PLAN_SHA", module.record(path)["sha256"])
+    execution_path = repo / "native/execution.json"
+    execution = json.loads(execution_path.read_text())
+    execution["plan"] = module.record(path)
+    execution_path.write_text(json.dumps(execution))
+    with pytest.raises(ValueError, match="Reference universe changed"):
+        module.assess(repo, destination)
+    report = json.loads((destination / "report.json").read_text())
+    assert report["status"] == "assessment_failed" and report["accuracy_admitted"] is False
+    assert (destination / "score.txt").is_file()
 
 
 @pytest.mark.parametrize("stage", ["conversion", "scoring"])

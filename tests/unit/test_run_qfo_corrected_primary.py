@@ -2,6 +2,7 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
 
 import pytest
 
@@ -20,7 +21,7 @@ def execution(tmp_path, monkeypatch):
         directory = root / method
         plan["methods"][method] = {
             "output": str(directory), "cwd": str(tmp_path),
-            "native_argv": ["/bin/true"],
+            "native_argv": [sys.executable, "-c", "raise SystemExit(0)"],
             "copy_inputs_from": str(source), "copy_inputs_to": str(directory / "input"),
         }
     manifest = tmp_path / "plan.json"
@@ -61,7 +62,7 @@ def test_success_requires_separate_admission(execution, index, bind_test_gnu_tim
 def test_failed_native_command_is_recorded(execution, bind_test_gnu_time):
     bind_test_gnu_time(runner)
     plan, manifest, _, calls = execution
-    plan["methods"][runner.METHODS[0]]["native_argv"] = ["/bin/false"]
+    plan["methods"][runner.METHODS[0]]["native_argv"] = [sys.executable, "-c", "raise SystemExit(1)"]
     manifest.write_text(json.dumps(plan))
     with pytest.raises(RuntimeError, match="Native process failed"):
         runner.run(manifest, runner.record(manifest)["sha256"], 0)

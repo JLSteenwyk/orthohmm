@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import sys
 
 import pytest
 
@@ -23,7 +24,7 @@ def execution(tmp_path, monkeypatch):
     fasta.write_text(">gene\nACDE\n")
     root = tmp_path / "output"
     plan = {"output_root": str(root), "input_directory": str(source), "cwd": str(root / "input"),
-            "native_argv": ["/bin/true"], "input_fastas": [runner.record(fasta)],
+            "native_argv": [sys.executable, "-c", "raise SystemExit(0)"], "input_fastas": [runner.record(fasta)],
             "observed_environment": {"PATH": "/usr/bin:/bin"}}
     plan_path = tmp_path / "plan.json"
     plan_path.write_text(json.dumps(plan))
@@ -55,7 +56,7 @@ def test_success_is_not_accuracy_admission(execution, bind_test_gnu_time):
 def test_failed_native_command_is_preserved(execution, bind_test_gnu_time):
     bind_test_gnu_time(runner)
     plan, path, runtime, digest = execution
-    plan["native_argv"] = ["/bin/false"]
+    plan["native_argv"] = [sys.executable, "-c", "raise SystemExit(1)"]
     with pytest.raises(RuntimeError, match="Native process failed"):
         runner.run(path, runtime, digest)
     report = json.loads((Path(plan["output_root"]) / "execution.json").read_text())

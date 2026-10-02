@@ -1,0 +1,372 @@
+{
+  "status": "local_synthetic_and_pinned_reference_integration_passed_remote_confirmation_pending",
+  "base_commit": "d94d4346181dcc6e0598ef37700ac9b0809f34b9",
+  "controlled_timing": false,
+  "scientific_rerun": false,
+  "case_count": 58,
+  "added_cases": 9,
+  "synthetic_reference": {
+    "kind": "synthetic_dimensions_not_BUSCO",
+    "orthogroups": 255,
+    "genes": 2035,
+    "pairs": 7352,
+    "group_size_histogram": {
+      "4": 2,
+      "6": 4,
+      "7": 10,
+      "8": 238,
+      "29": 1
+    },
+    "bytes": 56112,
+    "sha256": "2960dd768d4d7df32cbff5326ed4ef5224cd181db9bc1a93210c36fef3c84398"
+  },
+  "retained_reference": {
+    "actual_local_file": {
+      "path": "three_kingdoms/busco/reference_orthogroups.txt",
+      "bytes": 30699,
+      "sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+    },
+    "expected_historical_record": {
+      "bytes": 30699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/busco/reference_orthogroups.txt",
+      "sha256": "a5f3447056ecfa305442caff0d898d524eed350f13587d3247d3e1ba4c19757d"
+    },
+    "manifest": {
+      "path": "benchmark_tools/results/three_kingdoms_sonic_matched_commands_20260918.json",
+      "bytes": 12936,
+      "sha256": "5c3ce4608b54e8e550f0ea855754879211b842f0175b2e8e864cf4b5c2998283"
+    },
+    "validated_before_copy": true,
+    "skip_only_when_missing_no_fallback_on_changed_bytes": true
+  },
+  "validation": [
+    {
+      "path": "benchmarks/work/ci_three_kingdoms_reference_fixtures_20261002_v3.xml",
+      "bytes": 8582,
+      "sha256": "053b04fb5a8cdfd1f72d5ab835ea344c5a73938cc5189a80ecf15e4057911f6c",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "58",
+          "time": "1.847",
+          "timestamp": "2026-10-01T23:49:49.998533-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    },
+    {
+      "path": "benchmarks/work/ci_three_kingdoms_reference_absence_20261002_v2.xml",
+      "bytes": 10442,
+      "sha256": "8af8f9ea94772437ee5ebee7a771ef47897be030b1b9339f3ee62316e3c04009",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "6",
+          "tests": "58",
+          "time": "1.343",
+          "timestamp": "2026-10-01T23:50:30.112996-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    }
+  ],
+  "earlier_validation": [
+    {
+      "path": "benchmarks/work/ci_three_kingdoms_reference_fixtures_20261002.xml",
+      "bytes": 14656,
+      "sha256": "2648c82242505093841cf21cba7e3916dc8436eeed779c2273f55be377abb987",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "2",
+          "skipped": "0",
+          "tests": "58",
+          "time": "2.047",
+          "timestamp": "2026-10-01T23:47:31.076262-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    },
+    {
+      "path": "benchmarks/work/ci_three_kingdoms_reference_fixtures_20261002_v2.xml",
+      "bytes": 8582,
+      "sha256": "7fb34128b7d1c034ad089f1af297c2787524644155abfceabd18eb9c658768d3",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "58",
+          "time": "1.936",
+          "timestamp": "2026-10-01T23:48:24.058871-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    },
+    {
+      "path": "benchmarks/work/ci_three_kingdoms_reference_absence_20261002.xml",
+      "bytes": 10442,
+      "sha256": "b38ae5e30330bb548ef7e196dca05472c18bb934a31f30e849c0518f84007621",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "6",
+          "tests": "58",
+          "time": "1.345",
+          "timestamp": "2026-10-01T23:48:25.239104-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    }
+  ],
+  "earlier_failure_reason": "Two new assertions expected a different exception string; production correctly rejected changed bytes. Corrected only the test regex. Final reports supersede earlier focused panels, not additive.",
+  "source_pin": {
+    "path": "tests/unit/test_assess_three_kingdoms_matched_sonic.py",
+    "bytes": 13525,
+    "sha256": "4c32e7880192435f6fca0b7f0c8e4cc071a548abfc2ab446c155d081d0eb5a05"
+  },
+  "unchanged_production_pins": [
+    {
+      "path": "benchmark_tools/assess_three_kingdoms_matched_sonic.py",
+      "bytes": 8154,
+      "sha256": "ac0e758cbeca6ec1db1dffbde17de69f8108cf8a1f18b1e5e40d6d74846cc64d"
+    },
+    {
+      "path": "benchmark_tools/normalize_three_kingdoms_orthogroups.py",
+      "bytes": 6739,
+      "sha256": "baf46e5cca5e938269c5cafcd7cd18466c776e3ce175f88cf513df11729cce1d"
+    },
+    {
+      "path": "three_kingdoms/score_against_busco.py",
+      "bytes": 4943,
+      "sha256": "842e199e184ba631dc902b3410eb7b81c4f8dd15aa0868f2311a47faeaf5e37d"
+    },
+    {
+      "path": "benchmark_tools/audit_three_kingdoms_pair_counts.py",
+      "bytes": 5449,
+      "sha256": "c6828d82039c9e5af511f904c4b789d60d0969ac68167ad15cd196c117ba9fae"
+    },
+    {
+      "path": "benchmark_tools/validate_sonicparanoid_groups.py",
+      "bytes": 5480,
+      "sha256": "3f9ede66a4b11df6ac698ba99898560cc35d44d8ed91add836c9d65aab3cd19e"
+    },
+    {
+      "path": "benchmark_tools/summarize_three_kingdoms_parity.py",
+      "bytes": 16697,
+      "sha256": "75227b0e204e2e789985abbf66f5c4e367df80d577b38b252daa55c6ad4b47b5"
+    }
+  ],
+  "retained_remote_log": {
+    "path": "benchmarks/work/ci_remote_42e48844_20261002/110690397294.log",
+    "bytes": 2307609,
+    "sha256": "0e97479e48aabe1b03e9a7962401f77049544c0ad072cf78bd739070814bf69e",
+    "source_commit": "42e48844c7b010371db1ecbd767ea249ee622ea3",
+    "job": 110690397294,
+    "observed_errors": "Four integrated assessment fixtures cannot copy missing retained BUSCO reference."
+  },
+  "ci_observation": {
+    "run": 36961396920,
+    "source_commit": "d94d4346181dcc6e0598ef37700ac9b0809f34b9",
+    "observed_utc": "2026-10-02T03:49:06.676454+00:00",
+    "test_jobs_in_progress": 5,
+    "cpu_wheel": "success",
+    "docs": "queued",
+    "python_3_11_fast_job": 110695664735,
+    "native_utilities_setup_api_reported": "success",
+    "native_test_outcomes_not_yet_inspected": true
+  },
+  "limitations": [
+    "Two declared fixture branches; synthetic truth does not replace retained BUSCO truth or method accuracy.",
+    "The simulated missing-data panel is local, not actual macOS execution; six retained-data skips remain explicit.",
+    "Conversion/scoring subprocesses are real; inference, scheduler identity and runtime gates are synthetic fixtures.",
+    "No production reference/source/default/score or admission rule changes; no scientific benchmark or controlled resources.",
+    "Remaining QfO uncertainty, raw-data/rights, comparable timing and executable release requirements remain open."
+  ],
+  "portable_qfo_smokes": {
+    "change": "Only fixture native argv uses sys.executable -c with explicit SystemExit(0/1), replacing /bin/true and /bin/false. Production commands are unchanged.",
+    "test_source_pins": [
+      {
+        "path": "tests/unit/test_run_qfo_corrected_primary.py",
+        "bytes": 4966,
+        "sha256": "c1f002a611863b3c4b73214256e6c7f69d1f1526b7c80589b2b934607cc1aad9"
+      },
+      {
+        "path": "tests/unit/test_run_qfo_corrected_proteinortho.py",
+        "bytes": 3861,
+        "sha256": "212c4e55d0d671f8a0ee8fcfe2fd58ddccc2843de6e890b34e9443a32b03d0d0"
+      },
+      {
+        "path": "tests/unit/test_run_qfo_corrected_sonic.py",
+        "bytes": 5160,
+        "sha256": "00f3ec4a5e3d7ba4e2ae1bf6f87bab4bf220d42cd2b1f8d54132cf26e05efed3"
+      }
+    ],
+    "unchanged_runner_pins": [
+      {
+        "path": "benchmark_tools/run_qfo_corrected_primary.py",
+        "bytes": 7581,
+        "sha256": "4a340a2acbad6efd261931edbaedaa768242ba3084d2bda91198f98e01576c85"
+      },
+      {
+        "path": "benchmark_tools/run_qfo_corrected_proteinortho.py",
+        "bytes": 8415,
+        "sha256": "0ca80666d13b4dee98f1ca33047d76113631539e4a1a00f1c050ad398f4c8604"
+      },
+      {
+        "path": "benchmark_tools/run_qfo_corrected_sonic.py",
+        "bytes": 7956,
+        "sha256": "ced23d408cb07ad3744d6062e39f5272392fb943b8816cf174311961b16a0ea5"
+      }
+    ]
+  },
+  "combined_validation": [
+    {
+      "path": "benchmarks/work/ci_scientific_smoke_fixtures_20261002.xml",
+      "bytes": 21344,
+      "sha256": "1253fdfa3fb0ccbeb4008279e2f80115c3a8080c9ac06ec2d9bdc6301960d18b",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "158",
+          "time": "5.090",
+          "timestamp": "2026-10-01T23:56:06.350603-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_gnu_time_runtime": 24,
+        "tests.unit.test_gnu_time_companion": 9,
+        "tests.unit.test_run_qfo_corrected_primary": 13,
+        "tests.unit.test_run_qfo_corrected_proteinortho": 7,
+        "tests.unit.test_run_qfo_corrected_sonic": 15,
+        "tests.unit.test_run_search_sensitivity_cell": 9,
+        "tests.unit.test_run_sequence_search_control": 2,
+        "tests.unit.test_run_simulation_generation": 4,
+        "tests.unit.test_run_simulation_methods": 8,
+        "tests.unit.test_audit_manuscript_citations": 9,
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    },
+    {
+      "path": "benchmarks/work/ci_scientific_smoke_fixtures_absence_20261002.xml",
+      "bytes": 23204,
+      "sha256": "c4c234bce3ee3bef24446d7456ef0c32c161afbbe2485a1d58a079cf000fdfd8",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "6",
+          "tests": "158",
+          "time": "4.667",
+          "timestamp": "2026-10-01T23:56:47.891309-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_gnu_time_runtime": 24,
+        "tests.unit.test_gnu_time_companion": 9,
+        "tests.unit.test_run_qfo_corrected_primary": 13,
+        "tests.unit.test_run_qfo_corrected_proteinortho": 7,
+        "tests.unit.test_run_qfo_corrected_sonic": 15,
+        "tests.unit.test_run_search_sensitivity_cell": 9,
+        "tests.unit.test_run_sequence_search_control": 2,
+        "tests.unit.test_run_simulation_generation": 4,
+        "tests.unit.test_run_simulation_methods": 8,
+        "tests.unit.test_audit_manuscript_citations": 9,
+        "tests.unit.test_assess_three_kingdoms_matched_sonic": 34,
+        "tests.unit.test_audit_three_kingdoms_pair_counts": 15,
+        "tests.unit.test_normalize_three_kingdoms_orthogroups": 5,
+        "tests.unit.test_three_kingdoms_scoring": 4
+      }
+    }
+  ],
+  "new_remote_log": {
+    "path": "benchmarks/work/ci_remote_d94d4346_20261002/110695664741.log",
+    "bytes": 2295319,
+    "sha256": "7e36a46f15759e143c0b476b599b164f3e88be1047c9b6ffa69782f5aa386d39",
+    "source_commit": "d94d4346181dcc6e0598ef37700ac9b0809f34b9",
+    "run": 36961396920,
+    "job": 110695664741,
+    "python": "3.10",
+    "download_utc": "2026-10-02T03:54:04.260589+00:00",
+    "actual_versions": {
+      "GNU_Time": "1.10",
+      "Pandoc": "3.11"
+    },
+    "overall": {
+      "passed": 13701,
+      "failed": 55,
+      "errors": 4,
+      "skipped": 105,
+      "warnings": 30,
+      "seconds": 463.8
+    },
+    "prior_utilities_scope": {
+      "cases": 100,
+      "passed": 93,
+      "failed": 7,
+      "skipped": 0,
+      "errors": 0
+    },
+    "remaining_targeted_failure": "Seven QfO fixture commands using /bin/true or /bin/false return native exit 127; native.log contents not inspected, so exact child launch cause is unverified.",
+    "retained_busco_fixture_errors": 4,
+    "new_changes_not_in_this_log": true
+  },
+  "later_ci_observation": {
+    "observed_utc": "2026-10-02T03:56:49.049153+00:00",
+    "run": 36961396920,
+    "terminal_fast_test_failures": 4,
+    "full_test_job": 110695664534,
+    "full_test_status": "in_progress",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "other_logs_not_inspected": true
+  }
+}

@@ -1,6 +1,7 @@
 import copy
 import json
 from pathlib import Path
+import sys
 
 import pytest
 
@@ -39,7 +40,8 @@ def execution(tmp_path, monkeypatch):
     source = tmp_path / "source.fasta"
     source.write_text(">gene\nACDE\n")
     root = tmp_path / "output"
-    plan = {"output_root": str(root), "native_argv": ["/bin/true"], "input_fastas": [runner.record(source)]}
+    plan = {"output_root": str(root), "native_argv": [sys.executable, "-c", "raise SystemExit(0)"],
+            "input_fastas": [runner.record(source)]}
     manifest = tmp_path / "plan.json"
     manifest.write_text(json.dumps(plan))
     monkeypatch.setenv("SLURM_CPUS_PER_TASK", "32")
@@ -75,7 +77,7 @@ def test_check_only_leaves_output_absent(execution):
 def test_failure_recorded(execution, bind_test_gnu_time):
     bind_test_gnu_time(runner)
     plan, manifest, _ = execution
-    plan["native_argv"] = ["/bin/false"]
+    plan["native_argv"] = [sys.executable, "-c", "raise SystemExit(1)"]
     with pytest.raises(RuntimeError, match="Native process failed"):
         runner.run(manifest)
     status = json.loads((Path(plan["output_root"]) / "execution.json").read_text())

@@ -1,6 +1,6 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 1 October 2026. This is a completion audit, not a replacement
+Status updated 2 October 2026. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
 
@@ -154,8 +154,26 @@ Python 3.11 fast CI: 51 pass/eight skips within the prior 59-case fixture scope,
 errors overall. All five test jobs fail; wheel/docs succeed. Explicit GNU Time
 and Pandoc preparation now passes 100 local checks; deliberate BSD-style probe
 failure gives 76 pass/24 native skips in the same scope. Actual new macOS utility
-outcomes remain unverified. Historical production commands/provenance, scientific
+outcomes are subsequently bounded by the fixture follow-up below, not full-suite
+success. Historical production commands/provenance, scientific
 settings and admission rules remain unchanged; no controlled timing follows.
+The [Three Kingdoms assessment fixture follow-up](CI_THREE_KINGDOMS_REFERENCE_FIXTURES_20261002.md)
+adds explicitly synthetic dimension-matched integration while retaining original
+reference tests with pinned byte/hash checks. All 58 local cases pass; deliberate
+retained-data absence gives 52 pass/six labeled retained-data skips in the same
+scope. Both reference branches locally exercise real conversion/scoring and
+exact independent pair counts; inference and host gates remain synthetic.
+Changed bytes and repinned changed universes are rejected by unchanged guards.
+These are test observations, not new method accuracy, BUSCO replacement,
+data-rights clearance, real reference restoration or controlled resource evidence.
+The newly inspected source-d94 macOS Python 3.10 fast log confirms GNU Time
+1.10 and Pandoc 3.11, with 93 passes/seven failures in the prior 100-case utility
+scope. Seven QfO fixture commands return exit 127; use only explicit Python
+exit 0/1 test commands now. The combined local scope gives 158 passes, or 152
+passes/six retained-data skips with data deliberately absent. Production
+commands remain unchanged and remote confirmation of these new fixtures remains
+open. Source-d94's four fast jobs fail; full CI stays live and wheel/docs succeed
+at 03:56:49 UTC. Other job causes and complete regression success are unproven.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

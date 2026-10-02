@@ -13,6 +13,13 @@ fixtures. It adds explicit GNU Time/Pandoc test setup with 100 passing local
 checks, not production timing, full remote CI success or release clearance.
 Frozen scientific commands and resource admission remain unchanged.
 
+The [Three Kingdoms assessment fixtures](results/CI_THREE_KINGDOMS_REFERENCE_FIXTURES_20261002.md)
+exercise real conversion/scoring with separate synthetic and pinned BUSCO
+reference branches. Missing biological data skips only its labeled branch;
+synthetic tests do not replace production accuracy or clear data rights.
+It also removes fixed true/false paths from three QfO smoke fixtures. All 158
+combined local cases pass; new remote confirmation remains open.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their

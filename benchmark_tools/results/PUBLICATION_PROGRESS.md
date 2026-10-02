@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Portable And Pinned Three Kingdoms Assessment Fixtures (2026-10-02)
+
+Previous goal turn is progress at pushed d94d4346: explicit utility setup and
+100 passing local checks. Reread the objective/ledger and verify actual CI.
+At 03:49:06 UTC the same source-d94 run has five live test jobs, wheel success
+and queued docs. Python 3.11 fast API reports successful native-utility setup,
+but no new native test log/version/outcome is inspected. Do not restart, infer
+sibling outcomes or treat setup success as full regression confirmation.
+
+Later inspect actual source-d94 Python 3.10 fast log: 13,701 pass, 55 fail,
+four errors, 105 skip, 30 warnings, 463.80s. GNU Time 1.10 and Pandoc 3.11
+are logged. Within the prior 100-case utility scope, 93 pass and seven fail
+without skips/errors; those seven QfO fixtures return exit 127 for true/false
+commands. Exact child launch cause remains unverified without their native logs.
+Make only fixture commands use the current Python with explicit exit 0/1;
+production argv and GNU Time binding remain unchanged. At 03:56:49 UTC all
+four fast jobs fail, full CI stays live, wheel/docs succeed. No sibling log or
+new full-suite/scientific success inference follows.
+
+The already retained source-42e log shows four assessment fixture errors because
+the original BUSCO reference is not in a fresh checkout. Add an explicitly
+synthetic dimension-matched branch, while retaining the original reference
+branch with manifest bytes/hash validation before copying. Missing retained
+data skips only that branch; changed data fails without synthetic fallback.
+Both branches keep real conversion/scoring/independent counting, synthetic host
+gates, exact perfect/imperfect counts and corrupt-output rejection. New guards
+reject changed bytes before assessment and a repinned changed universe after
+scoring. All production sources, universe guard, raw reference and scores stay
+unchanged; synthetic fixture admissions are not biological benchmark evidence.
+
+**58 focused Linux cases pass in 1.87 seconds**, zero failures/errors/skips,
+nine additional cases included. Deliberate retained-data absence: **52 pass and
+six explicitly labeled retained-data skips in 1.36 seconds**, same scope not
+additive or macOS. All six synthetic integration cases still execute. Initial
+two wrong-exception-string assertions failed despite correct production rejection;
+corrected only test expectations and retain that failed report. Exact pair/F1
+strengthening supersedes earlier passes; five reports, reference/plan/source
+pins and six unchanged production modules are recorded in
+[evidence and limitations](CI_THREE_KINGDOMS_REFERENCE_FIXTURES_20261002.md).
+
+Combined validation of both fixture fixes: **158 pass in 5.12 seconds**, zero
+failures/errors/skips. Combined retained-data absence: **152 pass/six explicit
+retained-data skips in 4.69 seconds**, zero failures/errors. Includes the prior
+58-case scope, not additive. New remote log, three additional test/unchanged
+runner pins and both combined JUnit files are retained in the same receipt.
+
+Commit/push and observe automatic CI. New macOS utility/fixture outcomes,
+remaining path/raw-data/Linux utility failures and final release work remain
+open. All owned commands terminate. No scientific/native benchmark, data
+redistribution, default/score/admission change, shared upgrade, host poll/question,
+DGX or unrelated workload/service action occurs. Timing stays deferred and the
+full goal remains active with uncertainty, source/rights, comparable-resource
+and executable versioned release/archive requirements intact.
+
 ## Explicit Native Utilities And Remote Fixture Confirmation (2026-10-02)
 
 Previous response to the quiet-window question is no progress, not an analysis
