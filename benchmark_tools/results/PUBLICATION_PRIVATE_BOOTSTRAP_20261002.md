@@ -6,6 +6,13 @@ unchanged historical base. This removes the requirement to use the shared
 Anaconda installation for this step. It is not a new scientific result,
 controlled timing measurement, complete runtime closure or publication release.
 
+Subsequent state: the first [project-source build](PUBLICATION_PROJECT_BUILD_20261002.md)
+later adds setuptools to this agent-owned disposable base through an incorrect
+bootstrap target. Its previous pip-only inventory is historical, not current
+admission. Preserve the altered prefix/failure; that build's corrected attempt
+uses a fresh reconstructed base and verifies its site remains unchanged.
+The private Miniforge bootstrap itself is not altered.
+
 ## Source and Tests
 
 Checkpoint `5016a6511e69fee092f235f4df47c247f4e88a5d` adds the stdlib bootstrap

@@ -12,6 +12,9 @@ complete executable study, an installed package, a public release or a DOI.
 - `workflow/`: all committed top-level `benchmark_tools/*.py`, all committed
   `tests/unit/*.py`, the project license and the two publication source and
   reproduction guides from the separately selected workflow revision.
+- Optional `build/`: only the pinned setup overlay from
+  `6fd6df19daba83ec6467b917988f99e27a95be14`, with `native-build`. The original
+  scientific `setup.py` remains separately preserved.
 - `SOURCE_INDEX.json`: exact Git revision/path/blob, SHA-256, byte count and
   mode for every exported file. Its digest must be retained outside the bundle
   before transfer; internal consistency alone is not authenticity.
@@ -35,6 +38,14 @@ the wheel and base acquisition helpers in addition to native preparation.
 Earlier profile selections and their historical verification remain unchanged.
 This seven-document exception carries metadata/locks, not wheel payloads,
 native predictions or raw sequence/reference content.
+
+The `native-build` profile keeps those seven documents and adds the separately
+revisioned setup-only overlay. Its SHA-256 is
+`88120e9d722557337d466a5026c4b238d5a21c9cc213bf35c27d4b480b347193`.
+New workflow revisions include the offline project builder and metadata-only
+historical ZIP reconstruction helper. Earlier profile selections/verification
+remain unchanged; neither an overlay nor a rebuilt artifact changes the frozen
+scientific version, historical locks or admitted benchmark executor.
 
 Dataset/reference files, test samples, native predictions, scoring outputs,
 result receipts/plans, figures, manuscript assets, third-party source archives,
@@ -236,16 +247,83 @@ prefix-transformed payload, and shared OS libraries remain outside scope.
 This step does not install the scientific environments, infer orthology,
 admit timing, or complete the full study release.
 
+## Frozen-Source CPU Wheel Build
+
+Export `--profile native-build` and verify its external source-index digest.
+Use a separately provisioned, unchanged historical CPython 3.10.13 Linux x86-64
+base with exactly pip 26.2.1, recording its interpreter digest externally.
+The preceding private-bootstrap/base commands provide one route. Outputs must
+be fresh and outside both the immutable source component and the supplied base.
+System GCC is required in `/usr/bin:/bin`; that PATH must not expose `nvcc`.
+Its executable/version is recorded, not supplied or fully dependency-closed.
+
+The build needs only two supplied public artifacts, not an existing OrthoHMM
+wheel. Pip is available through the base-acquisition helper. Obtain the exact
+[setuptools 83.0.0 wheel](https://files.pythonhosted.org/packages/5d/40/e1e72872c6354b306daef1703549e8e83b4d43cfea356311bf722a043752/setuptools-83.0.0-py3-none-any.whl)
+separately: 1,008,090 bytes, SHA-256
+`29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3`.
+The controller requires both exact filenames/sizes/hashes before installation:
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/build_publication_project_wheel.py \
+  --component /relocated/source-component --manifest-sha256 RETAINED_INDEX_SHA256 \
+  --base-python /absolute/base-preparation/python-runtime/bin/python \
+  --base-python-sha256 RETAINED_BASE_INTERPRETER_SHA256 \
+  --pip-wheel /absolute/base-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl \
+  --setuptools-wheel /absolute/acquired/setuptools-83.0.0-py3-none-any.whl \
+  --output /absolute/fresh/project-build --acknowledge-historical-runtime
+```
+
+The controller copies scientific sources, replaces only staged `setup.py`, and
+creates a private build venv without inherited site packages. Hash-required
+installation explicitly targets that venv's prefix and ignores existing
+installations; it does not rely on Python3.10 `-S` preserving a venv prefix.
+It checks the two installed distributions and their wheel payloads, then builds
+offline without dependency resolution/build isolation/cache, with baseline CPU
+flags and fixed `SOURCE_DATE_EPOCH`.
+
+Success requires exactly one platform wheel, all 33 frozen scientific members,
+all three ELF kernels, expected distribution/tag metadata and actual kernel
+loading/exported symbols, including a non-AVX2 baseline witness. Base site-package
+metadata and every site file's size/hash must remain identical before/after;
+source/staged inputs and the compiler alias are also checked. All nine stages
+and their logs are retained. Failures preserve artifacts and `failed.json`
+without retry or success. This is not a syscall sandbox or full base/OS audit.
+
+A new wheel is not silently accepted by historical locks. The metadata-only
+reconstruction helper can restore the original ZIP wrapper only when all 42
+payload members already match their historical identities:
+
+```bash
+/absolute/fresh/project-build/venv/bin/python -I -S -B \
+  /relocated/source-component/workflow/benchmark_tools/reconstruct_publication_project_wheel.py \
+  --candidate /absolute/fresh/project-build/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl \
+  --output /absolute/fresh/reconstructed-project-wheel
+```
+
+It embeds names, hashes, sizes, order, timestamps and attributes, not payloads.
+It neither needs the old wheel nor recompiles, installs or loads project kernels.
+Success requires the exact 144,444-byte historical archive SHA-256
+`cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d`.
+Compression/compiler differences fail closed with retained attempts; another
+compiler's different binaries are not substituted. Use the prescribed
+Python/zlib/toolchain rather than assuming universal byte reproduction.
+The reconstructed artifact can serve the historical acquisition controller's
+supplied project-wheel input. This is an artifact-recovery route, not a public
+PyPI release, complete runtime/rights closure or independent new accuracy result.
+See [actual build, failures and reconstruction](results/PUBLICATION_PROJECT_BUILD_20261002.md).
+
 ## Historical Inference and Reader Wheel Acquisition
 
 Export `--profile native-wheels` instead of `native-preparation` and verify
 its externally anchored index before using the following acquisition workflow.
-Supply the exact unpublished OrthoHMM setup-overlay wheel from the retained
-private execution archive, 144,444 bytes, SHA-256
+Supply the exact unpublished OrthoHMM setup-overlay wheel from the preceding
+source-build/reconstruction route or the retained private execution archive,
+144,444 bytes, SHA-256
 `cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d`.
 The matching pip wheel can come from the preceding public base acquisition.
 Do not treat OrthoHMM 0.5.0 as an available PyPI release or silently replace it
-with another local build. Without that exact supplied wheel, this workflow
+with an arbitrary local build. Without that exact supplied wheel, this workflow
 does not produce the complete historical inference environment.
 
 ```bash

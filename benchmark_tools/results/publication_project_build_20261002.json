@@ -1,0 +1,1410 @@
+{
+  "build": {
+    "attempts": 1,
+    "base_site_payload_files": 883,
+    "base_unchanged": true,
+    "build_payloads": [
+      {
+        "matched_files": 475,
+        "wheel": {
+          "bytes": 1816632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/pip-26.2.1-py3-none-any.whl",
+          "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+        }
+      },
+      {
+        "matched_files": 440,
+        "wheel": {
+          "bytes": 1008090,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/setuptools-83.0.0-py3-none-any.whl",
+          "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+        }
+      }
+    ],
+    "build_runtime": {
+      "distributions": [
+        [
+          "pip",
+          "26.2.1"
+        ],
+        [
+          "setuptools",
+          "83.0.0"
+        ]
+      ],
+      "site": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/lib/python3.10/site-packages"
+    },
+    "controlled_timing": false,
+    "environment": {
+      "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/home",
+      "LANG": "C.UTF-8",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "ORTHOHMM_CPU_TARGET": "baseline",
+      "PATH": "/usr/bin:/bin",
+      "PIP_CONFIG_FILE": "/dev/null",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONNOUSERSITE": "1",
+      "SOURCE_DATE_EPOCH": "1789568686",
+      "TMPDIR": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/tmp"
+    },
+    "historical_admission": false,
+    "historical_wheel_reproduced": false,
+    "inputs": [
+      {
+        "bytes": 17157264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+        "sha256": "85d2c5c2473387ab60060f615545ff34acdf3a4bd45aa6536b3c9c8898567c47"
+      },
+      {
+        "bytes": 1023032,
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+      },
+      {
+        "bytes": 1816632,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      },
+      {
+        "bytes": 1008090,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/setuptools-83.0.0-py3-none-any.whl",
+        "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+      },
+      {
+        "bytes": 16303,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/build_publication_project_wheel.py",
+        "sha256": "5b74155fd9f4f0b88900d92896558f3569b90f18e233eb138996e9b10e10f1b9"
+      },
+      {
+        "bytes": 15388,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "sha256": "b199863d32a2370d8ce0b20dfbeb2e082d3486a0fc89a0dafd1b568b2bb0cc32"
+      },
+      {
+        "bytes": 13821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/run_integrated_publication_workflow.py",
+        "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+      },
+      {
+        "bytes": 6468,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/audit_frozen_overlay_install.py",
+        "sha256": "f89c1589fa7420ff1f87fb4aeebc2348808bd11e657d4a2ef5b92f2f25d0e0aa"
+      },
+      {
+        "bytes": 5776,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/audit_recovery_install.py",
+        "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+      },
+      {
+        "bytes": 743732,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/SOURCE_INDEX.json",
+        "sha256": "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+      }
+    ],
+    "inspection": {
+      "kernels": [
+        {
+          "bytes": 21008,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/kernels/hmm_viterbi.so",
+          "sha256": "eeb4985e6f35689497a9c6187db56f8094c2cb9d92af18b77c027af0dfbea1d2"
+        },
+        {
+          "bytes": 20632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/kernels/kmer_prefilter.so",
+          "sha256": "4bef1865bccee6c4a5df6237880cf22b272cd567a1dc2d918815a28c86c7ce5c"
+        },
+        {
+          "bytes": 20784,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/kernels/pair_align.so",
+          "sha256": "1a1036e00730d9548d49819cdd852dc6aca74ace53c27ca2c903720904bc1d02"
+        }
+      ],
+      "scientific_members": [
+        {
+          "bytes": 0,
+          "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "path": "orthohmm/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 127,
+          "git_blob": "a518b7a3a975fffdf89e61685052dbe5863d9ae8",
+          "path": "orthohmm/__main__.py",
+          "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+        },
+        {
+          "bytes": 14046,
+          "git_blob": "aaafe576745777b239b9711b42b3ed5343f0ba38",
+          "path": "orthohmm/accuracy.py",
+          "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+        },
+        {
+          "bytes": 7908,
+          "git_blob": "6c8dabb3684d7306bbbc7bd70851fde009f86713",
+          "path": "orthohmm/args_processing.py",
+          "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+        },
+        {
+          "bytes": 10166,
+          "git_blob": "345da5463a4a6a6eca658f216bf71291d7947aed",
+          "path": "orthohmm/externals.py",
+          "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+        },
+        {
+          "bytes": 2977,
+          "git_blob": "12f08cd7240f1456284c8c09394b89716366e47e",
+          "path": "orthohmm/files.py",
+          "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+        },
+        {
+          "bytes": 32293,
+          "git_blob": "490b8ee0b5e55bb49f98fb94f2755b69971e6a0a",
+          "path": "orthohmm/helpers.py",
+          "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+        },
+        {
+          "bytes": 1411,
+          "git_blob": "54b73333397799aed1dcc4f95838716707d18a87",
+          "path": "orthohmm/leiden_worker.py",
+          "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+        },
+        {
+          "bytes": 6812,
+          "git_blob": "a15e6d010b77c202260aa98918261be1b1c2eba3",
+          "path": "orthohmm/metrics.py",
+          "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+        },
+        {
+          "bytes": 30663,
+          "git_blob": "5510d510a9daea3c844eefdc704a989c7990747a",
+          "path": "orthohmm/orthohmm.py",
+          "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+        },
+        {
+          "bytes": 15939,
+          "git_blob": "bcc70dfc1482f05d79c99d9b5331d7535ef9c2dc",
+          "path": "orthohmm/parser.py",
+          "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+        },
+        {
+          "bytes": 29732,
+          "git_blob": "c5f0c5e75ed28a06f7f4883ce924cf6dcd5cee3d",
+          "path": "orthohmm/phylogeny.py",
+          "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+        },
+        {
+          "bytes": 41369,
+          "git_blob": "bfaa06e27582113ed8f43292ea0fe13dab373eb1",
+          "path": "orthohmm/phylogeny_pipeline.py",
+          "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+        },
+        {
+          "bytes": 61183,
+          "git_blob": "64ec838e0cf8744d479a6698d5014d242003de23",
+          "path": "orthohmm/refinement.py",
+          "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+        },
+        {
+          "bytes": 0,
+          "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "path": "orthohmm/search/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 46012,
+          "git_blob": "80dcd5631ca0a2d39f8c32426a677284ad60dd17",
+          "path": "orthohmm/search/csrc/hmm_viterbi.c",
+          "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+        },
+        {
+          "bytes": 13696,
+          "git_blob": "e3e41280fe87a82e319b8d3d5c919f2cb06396cd",
+          "path": "orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+          "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+        },
+        {
+          "bytes": 10657,
+          "git_blob": "739bdb36aef5d9abaa5164504385892c811e661e",
+          "path": "orthohmm/search/csrc/kmer_prefilter.c",
+          "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+        },
+        {
+          "bytes": 9098,
+          "git_blob": "5a5135ab465ddf7d908f9bcfdd643a782eea16f5",
+          "path": "orthohmm/search/csrc/pair_align.c",
+          "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+        },
+        {
+          "bytes": 21146,
+          "git_blob": "34c2a1dc26373e0e8902c5aeb774a1c4ed1d9f29",
+          "path": "orthohmm/search/engine.py",
+          "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+        },
+        {
+          "bytes": 1865,
+          "git_blob": "3cdf7d782961c88b6dccb41e24739d03611eeec0",
+          "path": "orthohmm/search/evalue.py",
+          "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+        },
+        {
+          "bytes": 27982,
+          "git_blob": "d23dedac000f6ed0cfb5152678d21c544d3bda75",
+          "path": "orthohmm/search/matrices.py",
+          "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+        },
+        {
+          "bytes": 9180,
+          "git_blob": "977dd4309a36fe321b354bfb60a1be9199db0f23",
+          "path": "orthohmm/search/msa_center_star.py",
+          "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+        },
+        {
+          "bytes": 6728,
+          "git_blob": "2cf05da8999ff38ad76dd5a0473ae588ed41a302",
+          "path": "orthohmm/search/msa_profile.py",
+          "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+        },
+        {
+          "bytes": 22855,
+          "git_blob": "71be22f4c7726fca93dbeb920bf1bd258f5e9685",
+          "path": "orthohmm/search/prefilter.py",
+          "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+        },
+        {
+          "bytes": 6143,
+          "git_blob": "6c73cd322712b667b15a397cecc5c3e2b429bd37",
+          "path": "orthohmm/search/profile.py",
+          "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+        },
+        {
+          "bytes": 25077,
+          "git_blob": "32a7fb8fe960ab891a433e623cc416b0b661c823",
+          "path": "orthohmm/search/profile_expansion.py",
+          "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+        },
+        {
+          "bytes": 4509,
+          "git_blob": "4cbfa028979167bab37f3f35ace50b8c2c475e08",
+          "path": "orthohmm/search/sequences.py",
+          "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+        },
+        {
+          "bytes": 5324,
+          "git_blob": "019ae65253721a19f7a652081bd8fd180db7bfb9",
+          "path": "orthohmm/search/species_prune.py",
+          "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+        },
+        {
+          "bytes": 17693,
+          "git_blob": "57d7e5f2d9a484cec5032a244fe5e6b60272eae8",
+          "path": "orthohmm/search/viterbi.py",
+          "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+        },
+        {
+          "bytes": 4420,
+          "git_blob": "1ccbd84271353accb5fcad5566fce6e3e2b597aa",
+          "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+          "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+        },
+        {
+          "bytes": 22,
+          "git_blob": "3d187266f146fb216a04537da37dc5df0811acc4",
+          "path": "orthohmm/version.py",
+          "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+        },
+        {
+          "bytes": 2949,
+          "git_blob": "9e7ec695441c1e2448b96807873cf97b3f4512e0",
+          "path": "orthohmm/writer.py",
+          "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+        }
+      ]
+    },
+    "limitations": [
+      "A new baseline CPU wheel, not a replacement in historical locks or scientific admissions.",
+      "Frozen source parity and three-library load/ABI checks, not full numerical or inference equivalence.",
+      "Supplied system GCC entrypoint is pinned, not its compiler/OS/library/source-rights closure.",
+      "Same-host private offline build, not cross-host restoration or syscall sandbox."
+    ],
+    "native_load": {
+      "kernels": [
+        {
+          "kernel": "hmm_viterbi.so",
+          "symbols": [
+            "hmm_set_num_threads",
+            "hmm_have_avx2",
+            "batch_hmm_viterbi_c"
+          ]
+        },
+        {
+          "kernel": "kmer_prefilter.so",
+          "symbols": [
+            "prefilter_set_num_threads",
+            "batch_prefilter_c"
+          ]
+        },
+        {
+          "kernel": "pair_align.so",
+          "symbols": [
+            "pair_align_set_num_threads",
+            "batch_pair_align_c"
+          ]
+        }
+      ],
+      "status": "baseline_cpu_kernels_load_verified"
+    },
+    "outcomes": [
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import hashlib,json,platform,sys,sysconfig\nfrom pathlib import Path\nfrom importlib import metadata\nsite=Path(sysconfig.get_paths()['purelib'])\nfiles=[]\nfor path in sorted(site.rglob('*')):\n    if path.is_symlink(): raise ValueError('Symlinked base-site payload')\n    if path.is_file():\n        data=path.read_bytes()\n        files.append(dict(path=path.relative_to(site).as_posix(),bytes=len(data),sha256=hashlib.sha256(data).hexdigest()))\nprint(json.dumps(dict(version=platform.python_version(),implementation=platform.python_implementation(),\n    machine=platform.machine(),prefix=sys.prefix,site=str(site),files=files,\n    distributions=sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[str(site)])))))\n"
+        ],
+        "log": {
+          "bytes": 134466,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/base_runtime.log",
+          "sha256": "40e51750182ab9140e96400352914ea2486dec12b3e758419cd83e398f911702"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "--version"
+        ],
+        "log": {
+          "bytes": 264,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/compiler_version.log",
+          "sha256": "3fe5a5280ea5e228b69ed7f59fcec4ed6146228a5120306d37c656307725c2a0"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "venv",
+          "--without-pip",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv"
+        ],
+        "log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/create_build_environment.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/bin/python",
+          "-I",
+          "-S",
+          "-B",
+          "-c",
+          "import sys,runpy;sys.path.insert(0,'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_wheels/pip-26.2.1-py3-none-any.whl');runpy.run_module('pip',run_name='__main__')",
+          "--isolated",
+          "--disable-pip-version-check",
+          "install",
+          "--prefix",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv",
+          "--ignore-installed",
+          "--no-index",
+          "--no-deps",
+          "--require-hashes",
+          "--only-binary=:all:",
+          "--no-cache-dir",
+          "--find-links",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_wheels",
+          "--report",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_install.json",
+          "-r",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_requirements.txt"
+        ],
+        "log": {
+          "bytes": 714,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/install_build_dependencies.log",
+          "sha256": "ccd13ed1d95de38fc9ac2a6df18d5749c5f7483b44a411593f67366e0017b64b"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "log": {
+          "bytes": 30,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_dependency_check.log",
+          "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import json,sysconfig; from importlib import metadata; site=sysconfig.get_paths()['purelib']; print(json.dumps(dict(site=site,distributions=sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[site])))))"
+        ],
+        "log": {
+          "bytes": 238,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_environment.log",
+          "sha256": "1b2b7c57a6c8fbe63485e0775490acebfb54ef5294b7f178f88ecc753f395063"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/bin/python",
+          "-I",
+          "-B",
+          "-m",
+          "pip",
+          "--isolated",
+          "--disable-pip-version-check",
+          "wheel",
+          "--no-index",
+          "--no-deps",
+          "--no-build-isolation",
+          "--no-cache-dir",
+          "--wheel-dir",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/wheels",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source"
+        ],
+        "log": {
+          "bytes": 763,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_wheel.log",
+          "sha256": "1c842d572bf591566659ea324e41a69e0a9428dd81e812710c5b62a24e1a32d3"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/venv/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import ctypes,json,sys\nfrom pathlib import Path\nnames=json.loads(sys.argv[2])\nresults=[]\nfor name,symbols in sorted(names.items()):\n    lib=ctypes.CDLL(str(Path(sys.argv[1])/name))\n    for symbol in symbols:\n        getattr(lib,symbol)\n    setter=getattr(lib,symbols[0]); setter.argtypes=[ctypes.c_int32]; setter.restype=None; setter(1)\n    if name=='hmm_viterbi.so':\n        lib.hmm_have_avx2.argtypes=[]; lib.hmm_have_avx2.restype=ctypes.c_int32\n        if lib.hmm_have_avx2()!=0: raise ValueError('Expected baseline, not AVX2 build')\n    results.append(dict(kernel=name,symbols=symbols))\nprint(json.dumps(dict(status='baseline_cpu_kernels_load_verified',kernels=results)))\n",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/kernels",
+          "{\"hmm_viterbi.so\": [\"hmm_set_num_threads\", \"hmm_have_avx2\", \"batch_hmm_viterbi_c\"], \"kmer_prefilter.so\": [\"prefilter_set_num_threads\", \"batch_prefilter_c\"], \"pair_align.so\": [\"pair_align_set_num_threads\", \"batch_pair_align_c\"]}"
+        ],
+        "log": {
+          "bytes": 358,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/native_load.log",
+          "sha256": "cb7d9b1205026fc9d5eb0e5c4bb796fa55c3473d1fd105ec9df3b81bf100be50"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+          "-I",
+          "-B",
+          "-c",
+          "import hashlib,json,platform,sys,sysconfig\nfrom pathlib import Path\nfrom importlib import metadata\nsite=Path(sysconfig.get_paths()['purelib'])\nfiles=[]\nfor path in sorted(site.rglob('*')):\n    if path.is_symlink(): raise ValueError('Symlinked base-site payload')\n    if path.is_file():\n        data=path.read_bytes()\n        files.append(dict(path=path.relative_to(site).as_posix(),bytes=len(data),sha256=hashlib.sha256(data).hexdigest()))\nprint(json.dumps(dict(version=platform.python_version(),implementation=platform.python_implementation(),\n    machine=platform.machine(),prefix=sys.prefix,site=str(site),files=files,\n    distributions=sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[str(site)])))))\n"
+        ],
+        "log": {
+          "bytes": 134466,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/base_unchanged.log",
+          "sha256": "40e51750182ab9140e96400352914ea2486dec12b3e758419cd83e398f911702"
+        },
+        "returncode": 0
+      }
+    ],
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "retry": false,
+    "scientific_inference_executed": false,
+    "security_clearance": false,
+    "source": {
+      "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+      "components": {
+        "build": 1,
+        "scientific": 43,
+        "workflow": 1794
+      },
+      "executable_benchmark_reproduced": false,
+      "files": 1838,
+      "manifest": {
+        "bytes": 743732,
+        "sha256": "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+      },
+      "payload_bytes": 10942341,
+      "publication_ready": false,
+      "python_files_syntax_checked": 1817,
+      "redistribution_clearance": false,
+      "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+      "status": "publication_source_components_verified",
+      "workflow_revision": "d52e7d9328c62b7b7f8fcadd4cfa89cb7984fc4a"
+    },
+    "staged_inputs": [
+      {
+        "bytes": 1078,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/LICENSE.md",
+        "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+      },
+      {
+        "bytes": 11107,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/README.md",
+        "sha256": "e0bca1e5f507282321d81484f34fb458f87d36629a23f3df771fb0939be8b4b8"
+      },
+      {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 127,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/__main__.py",
+        "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+      },
+      {
+        "bytes": 14046,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/accuracy.py",
+        "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+      },
+      {
+        "bytes": 7908,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/args_processing.py",
+        "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+      },
+      {
+        "bytes": 10166,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/externals.py",
+        "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+      },
+      {
+        "bytes": 2977,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/files.py",
+        "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+      },
+      {
+        "bytes": 32293,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/helpers.py",
+        "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+      },
+      {
+        "bytes": 1411,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/leiden_worker.py",
+        "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+      },
+      {
+        "bytes": 6812,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/metrics.py",
+        "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+      },
+      {
+        "bytes": 30663,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/orthohmm.py",
+        "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+      },
+      {
+        "bytes": 15939,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/parser.py",
+        "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+      },
+      {
+        "bytes": 29732,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/phylogeny.py",
+        "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+      },
+      {
+        "bytes": 41369,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/phylogeny_pipeline.py",
+        "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+      },
+      {
+        "bytes": 61183,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/refinement.py",
+        "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+      },
+      {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 1800,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/README.md",
+        "sha256": "2faa6f273dcfc3ffa5be98bda74f27aca5056adbf61a590bb22afd31752bed71"
+      },
+      {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 7759,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/csrc/hmm_forward.c",
+        "sha256": "f29e0ce42978e43ca2b3a8576e327e536a1ec8537757feff01d756d96045c026"
+      },
+      {
+        "bytes": 15413,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/csrc/hmm_viterbi_striped.c",
+        "sha256": "261c1a298663b9c9c46050c9b5a521e8be9cc5997e07b06204e08f4a45a19917"
+      },
+      {
+        "bytes": 7506,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/csrc/kmer_merge.c",
+        "sha256": "8dce3c7e882c0ec68195b6dacc96c31d246bfa38c2515a473cd03542a8f28c2a"
+      },
+      {
+        "bytes": 8599,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/_experimental/viterbi_cuda_numba.py",
+        "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+      },
+      {
+        "bytes": 46012,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/csrc/hmm_viterbi.c",
+        "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+      },
+      {
+        "bytes": 13696,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+        "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+      },
+      {
+        "bytes": 10657,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/csrc/kmer_prefilter.c",
+        "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+      },
+      {
+        "bytes": 9098,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/csrc/pair_align.c",
+        "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+      },
+      {
+        "bytes": 21146,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/engine.py",
+        "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+      },
+      {
+        "bytes": 1865,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/evalue.py",
+        "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+      },
+      {
+        "bytes": 27982,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/matrices.py",
+        "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+      },
+      {
+        "bytes": 9180,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/msa_center_star.py",
+        "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+      },
+      {
+        "bytes": 6728,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/msa_profile.py",
+        "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+      },
+      {
+        "bytes": 22855,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/prefilter.py",
+        "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+      },
+      {
+        "bytes": 6143,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/profile.py",
+        "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+      },
+      {
+        "bytes": 25077,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/profile_expansion.py",
+        "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+      },
+      {
+        "bytes": 4509,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/sequences.py",
+        "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+      },
+      {
+        "bytes": 5324,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/species_prune.py",
+        "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+      },
+      {
+        "bytes": 17693,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/viterbi.py",
+        "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+      },
+      {
+        "bytes": 4420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/search/viterbi_cuda_ctypes.py",
+        "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+      },
+      {
+        "bytes": 22,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/version.py",
+        "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+      },
+      {
+        "bytes": 2949,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/orthohmm/writer.py",
+        "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+      },
+      {
+        "bytes": 57,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/requirements.txt",
+        "sha256": "e4085d7affc668777fb39f750d27ef7e94d7bc32d21cfc60f0a0fe96c499f943"
+      },
+      {
+        "bytes": 8734,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/source/setup.py",
+        "sha256": "88120e9d722557337d466a5026c4b238d5a21c9cc213bf35c27d4b480b347193"
+      },
+      {
+        "bytes": 1816632,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      },
+      {
+        "bytes": 1008090,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_wheels/setuptools-83.0.0-py3-none-any.whl",
+        "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+      },
+      {
+        "bytes": 189,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/build_requirements.txt",
+        "sha256": "390810db1c81a90601cff98aecade5bf03d37c512918f1e96ac56c2d4f48122c"
+      }
+    ],
+    "status": "frozen_source_cpu_wheel_candidate_built",
+    "wheel": {
+      "bytes": 144444,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+      "sha256": "2b4dfa20491ac3dcbad0d738d1632cf7a2add9330e7e6376f8a40441262d2d43"
+    }
+  },
+  "build_receipt": {
+    "bytes": 39304,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build/complete.json",
+    "sha256": "8d049a7a848e66756de1767177b7ba0fac6115e01ac4b2fd34467b2f00871130"
+  },
+  "controlled_timing": false,
+  "finished": "2026-10-02T18:00:32.940957+00:00",
+  "fresh_base": {
+    "complete": {
+      "bytes": 108691,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/complete.json",
+      "sha256": "37e7b1f71203fbc0476cdb53c7e897311937dca2ce8ed9043c8d7caa759d36ce"
+    },
+    "packages": 19,
+    "pip_payload_files": 475,
+    "runtime": {
+      "distributions": [
+        {
+          "name": "pip",
+          "version": "26.2.1"
+        }
+      ],
+      "implementation": "CPython",
+      "machine": "x86_64",
+      "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime",
+      "python": {
+        "bytes": 17157264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+        "sha256": "85d2c5c2473387ab60060f615545ff34acdf3a4bd45aa6536b3c9c8898567c47"
+      },
+      "site": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/lib/python3.10/site-packages",
+      "version": "3.10.13"
+    }
+  },
+  "harness": {
+    "bytes": 11069,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_project_build_20261002.py",
+    "sha256": "a6bb288a1ad9e8ba0d9235833c944b62d7daff89377fb9a2e6c67441d69e2c7c"
+  },
+  "historical_admission": false,
+  "historical_comparison": {
+    "byte_identical_wheel": false,
+    "identical_payload_members": 42,
+    "members": [
+      {
+        "candidate_sha256": "25ae0849520f91a134bb74067e0b0115c4a9e0985a54e0ae5cfb4e1ac4717f37",
+        "historical_sha256": "25ae0849520f91a134bb74067e0b0115c4a9e0985a54e0ae5cfb4e1ac4717f37",
+        "member": "orthohmm-0.5.0.dist-info/METADATA",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "96c253d79cf6581caaab051b38c7f54ac2a2c00f2fa5ce03894b98d2a4b884bf",
+        "historical_sha256": "96c253d79cf6581caaab051b38c7f54ac2a2c00f2fa5ce03894b98d2a4b884bf",
+        "member": "orthohmm-0.5.0.dist-info/RECORD",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "2a82caad1e573e5d036e9be26a7b0fdd6e63bf3d0faf62a4005331c0752301bc",
+        "historical_sha256": "2a82caad1e573e5d036e9be26a7b0fdd6e63bf3d0faf62a4005331c0752301bc",
+        "member": "orthohmm-0.5.0.dist-info/WHEEL",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "fc529f6e2c11e3a70a98adc08bb56089a9590905865f0b4af7ab67f3d3fe4f6c",
+        "historical_sha256": "fc529f6e2c11e3a70a98adc08bb56089a9590905865f0b4af7ab67f3d3fe4f6c",
+        "member": "orthohmm-0.5.0.dist-info/entry_points.txt",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e",
+        "historical_sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e",
+        "member": "orthohmm-0.5.0.dist-info/licenses/LICENSE.md",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "1f55bee29a4dfa2cb6a86ef39d8e491d30df6df5297e147f811dce7fef3b6556",
+        "historical_sha256": "1f55bee29a4dfa2cb6a86ef39d8e491d30df6df5297e147f811dce7fef3b6556",
+        "member": "orthohmm-0.5.0.dist-info/top_level.txt",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "member": "orthohmm/__init__.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a",
+        "historical_sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a",
+        "member": "orthohmm/__main__.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6",
+        "historical_sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6",
+        "member": "orthohmm/accuracy.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54",
+        "historical_sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54",
+        "member": "orthohmm/args_processing.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115",
+        "historical_sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115",
+        "member": "orthohmm/externals.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1",
+        "historical_sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1",
+        "member": "orthohmm/files.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149",
+        "historical_sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149",
+        "member": "orthohmm/helpers.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41",
+        "historical_sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41",
+        "member": "orthohmm/leiden_worker.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a",
+        "historical_sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a",
+        "member": "orthohmm/metrics.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+        "historical_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+        "member": "orthohmm/orthohmm.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5",
+        "historical_sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5",
+        "member": "orthohmm/parser.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf",
+        "historical_sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf",
+        "member": "orthohmm/phylogeny.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f",
+        "historical_sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f",
+        "member": "orthohmm/phylogeny_pipeline.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d",
+        "historical_sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d",
+        "member": "orthohmm/refinement.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "historical_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "member": "orthohmm/search/__init__.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c",
+        "historical_sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c",
+        "member": "orthohmm/search/csrc/hmm_viterbi.c",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "eeb4985e6f35689497a9c6187db56f8094c2cb9d92af18b77c027af0dfbea1d2",
+        "historical_sha256": "eeb4985e6f35689497a9c6187db56f8094c2cb9d92af18b77c027af0dfbea1d2",
+        "member": "orthohmm/search/csrc/hmm_viterbi.so",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2",
+        "historical_sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2",
+        "member": "orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01",
+        "historical_sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01",
+        "member": "orthohmm/search/csrc/kmer_prefilter.c",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "4bef1865bccee6c4a5df6237880cf22b272cd567a1dc2d918815a28c86c7ce5c",
+        "historical_sha256": "4bef1865bccee6c4a5df6237880cf22b272cd567a1dc2d918815a28c86c7ce5c",
+        "member": "orthohmm/search/csrc/kmer_prefilter.so",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a",
+        "historical_sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a",
+        "member": "orthohmm/search/csrc/pair_align.c",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "1a1036e00730d9548d49819cdd852dc6aca74ace53c27ca2c903720904bc1d02",
+        "historical_sha256": "1a1036e00730d9548d49819cdd852dc6aca74ace53c27ca2c903720904bc1d02",
+        "member": "orthohmm/search/csrc/pair_align.so",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74",
+        "historical_sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74",
+        "member": "orthohmm/search/engine.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841",
+        "historical_sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841",
+        "member": "orthohmm/search/evalue.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb",
+        "historical_sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb",
+        "member": "orthohmm/search/matrices.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab",
+        "historical_sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab",
+        "member": "orthohmm/search/msa_center_star.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468",
+        "historical_sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468",
+        "member": "orthohmm/search/msa_profile.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06",
+        "historical_sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06",
+        "member": "orthohmm/search/prefilter.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e",
+        "historical_sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e",
+        "member": "orthohmm/search/profile.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a",
+        "historical_sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a",
+        "member": "orthohmm/search/profile_expansion.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980",
+        "historical_sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980",
+        "member": "orthohmm/search/sequences.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e",
+        "historical_sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e",
+        "member": "orthohmm/search/species_prune.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba",
+        "historical_sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba",
+        "member": "orthohmm/search/viterbi.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20",
+        "historical_sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20",
+        "member": "orthohmm/search/viterbi_cuda_ctypes.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34",
+        "historical_sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34",
+        "member": "orthohmm/version.py",
+        "same_payload": true
+      },
+      {
+        "candidate_sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe",
+        "historical_sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe",
+        "member": "orthohmm/writer.py",
+        "same_payload": true
+      }
+    ],
+    "union_members": 42,
+    "wheel": {
+      "bytes": 144444,
+      "path": "/tmp/orthohmm-integrated-assets-20260927/wheels/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl",
+      "sha256": "cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d"
+    }
+  },
+  "invalidated_previous_base": {
+    "distributions": [
+      [
+        "pip",
+        "26.2.1"
+      ],
+      [
+        "setuptools",
+        "83.0.0"
+      ]
+    ],
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-bootstrap-corrected-20261002-sup1gebq/base/python-runtime",
+    "site_payload_files": 1645,
+    "snapshot": {
+      "bytes": 253984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/invalidated_private_base_snapshot.stdout",
+      "sha256": "ff993fc3d15eb35d4dc7c8d853372bf10e8fbcc8617dedb37a5f8b496957455d"
+    }
+  },
+  "limitations": [
+    "A new baseline CPU artifact; historical locks, native admissions and predictions are not changed.",
+    "Same-host source/compiled-payload comparison, not cross-host or complete compiler/OS/runtime/rights closure.",
+    "Native load/ABI witnesses are not numerical scoring or full inference tests."
+  ],
+  "previous_private_base_currently_invalid_for_pip_only_admission": true,
+  "publication_ready": false,
+  "recovery_reason": "Explicit venv target and base-payload guard after Python3.10 -S bootstrap wrote into disposable supplied base.",
+  "redistribution_clearance": false,
+  "retained_failed_attempt": [
+    {
+      "bytes": 6665,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-20261002-n72_c_uf/FAILED.json",
+      "sha256": "a96093a4cb44ee7dbc095b6616cb8af70814f0317942eec92714c492955df4d5"
+    },
+    {
+      "bytes": 3632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-20261002-n72_c_uf/project-build/failed.json",
+      "sha256": "5945470a3b485f56a9c2d45accc18febf1a073c24001b7d00a04e70090c20ca6"
+    }
+  ],
+  "retained_failed_test": {
+    "bytes": 39096,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_project_build_corrected_tests_20261002.xml",
+    "sha256": "4098d60330de1856dd33a315510e15d0c5c9256ff90527aa35871bd032248ec5"
+  },
+  "reused_inputs": [
+    {
+      "bytes": 75610,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_private_bootstrap_20261002.json",
+      "sha256": "4e881c067b5c19630fed8592d04cc8a62cb65bf21bddebe3fa9b5fe821900970"
+    },
+    {
+      "bytes": 51337,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_wheel_acquisition_20261002.json",
+      "sha256": "35c58580b8b74fe7a7636d38ec024c461607ed8f211169ab34d587fb2660b4bd"
+    },
+    {
+      "bytes": 47225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_base_acquisition_20261002.json",
+      "sha256": "c6c912a7f085c2d12e7154d922079874a5e6e92a30b045b9bf4a638dbf0461ac"
+    }
+  ],
+  "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+  "scientific_inference_repeated": false,
+  "security_clearance": false,
+  "source": {
+    "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+    "components": {
+      "build": 1,
+      "scientific": 43,
+      "workflow": 1794
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1838,
+    "manifest": {
+      "bytes": 743732,
+      "sha256": "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+    },
+    "payload_bytes": 10942341,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1817,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "d52e7d9328c62b7b7f8fcadd4cfa89cb7984fc4a"
+  },
+  "source_index": {
+    "bytes": 743732,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/SOURCE_INDEX.json",
+    "sha256": "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+  },
+  "source_unchanged": true,
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_source.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "d52e7d9328c62b7b7f8fcadd4cfa89cb7984fc4a",
+        "--profile",
+        "native-build",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/exported"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "finished": "2026-10-02T18:00:04.941290+00:00",
+      "name": "export",
+      "returncode": 0,
+      "started": "2026-10-02T17:59:56.255156+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/export.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/export.stdout",
+        "sha256": "b2819be803bf14a542f9041442046fe6220c3bfabaad614058a3a21ea7119670"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source",
+        "--manifest-sha256",
+        "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:08.331858+00:00",
+      "name": "copied_verify_before",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:05.158637+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied_verify_before.stdout",
+        "sha256": "b2819be803bf14a542f9041442046fe6220c3bfabaad614058a3a21ea7119670"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "-c",
+        "import sys,json; sys.path.insert(0,'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow');from benchmark_tools.build_publication_project_wheel import RUNTIME_PROBE;print(json.dumps(dict(code=RUNTIME_PROBE)))"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:08.448167+00:00",
+      "name": "invalidated_private_base_probe",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:08.333454+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/invalidated_private_base_probe.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 766,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/invalidated_private_base_probe.stdout",
+        "sha256": "d849fdfbbc7d7d6cd31f70cb92e65bffd74979b5e07b20f6e41dd9dea6c92ae7"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-bootstrap-corrected-20261002-sup1gebq/base/python-runtime/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import hashlib,json,platform,sys,sysconfig\nfrom pathlib import Path\nfrom importlib import metadata\nsite=Path(sysconfig.get_paths()['purelib'])\nfiles=[]\nfor path in sorted(site.rglob('*')):\n    if path.is_symlink(): raise ValueError('Symlinked base-site payload')\n    if path.is_file():\n        data=path.read_bytes()\n        files.append(dict(path=path.relative_to(site).as_posix(),bytes=len(data),sha256=hashlib.sha256(data).hexdigest()))\nprint(json.dumps(dict(version=platform.python_version(),implementation=platform.python_implementation(),\n    machine=platform.machine(),prefix=sys.prefix,site=str(site),files=files,\n    distributions=sorted((d.metadata['Name'].lower(),d.version) for d in metadata.distributions(path=[str(site)])))))\n"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:08.663591+00:00",
+      "name": "invalidated_private_base_snapshot",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:08.448502+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/invalidated_private_base_snapshot.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 253984,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/invalidated_private_base_snapshot.stdout",
+        "sha256": "ff993fc3d15eb35d4dc7c8d853372bf10e8fbcc8617dedb37a5f8b496957455d"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/install_publication_base.py",
+        "install",
+        "--receipt",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json",
+        "--cache",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives",
+        "--conda",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-bootstrap-corrected-20261002-sup1gebq/private-bootstrap/prefix/bin/conda",
+        "--conda-sha256",
+        "e0567dad4bcf85ac129422956f1faa41fc31b5648620d26805606397e337457b",
+        "--pip-wheel",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/pip-26.2.1-py3-none-any.whl",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base",
+        "--acknowledge-historical-runtime"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:18.107718+00:00",
+      "name": "fresh_private_base",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:08.666307+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh_private_base.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 333,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh_private_base.stdout",
+        "sha256": "5516eaf3c73a786e313c0f654d6a829ec5d7117dd64b83244c69a2f108eae7d3"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/build_publication_project_wheel.py",
+        "--component",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source",
+        "--manifest-sha256",
+        "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7",
+        "--base-python",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+        "--base-python-sha256",
+        "85d2c5c2473387ab60060f615545ff34acdf3a4bd45aa6536b3c9c8898567c47",
+        "--pip-wheel",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/pip-26.2.1-py3-none-any.whl",
+        "--setuptools-wheel",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-wheels-20261002-yaqejskg/wheel-artifacts/wheels/setuptools-83.0.0-py3-none-any.whl",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/project-build",
+        "--acknowledge-historical-runtime"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:29.806168+00:00",
+      "name": "source_project_build",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:18.108900+00:00",
+      "stderr": {
+        "bytes": 312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/source_project_build.stderr",
+        "sha256": "3a7494c3ccf7c1b910c297288386cbca72971437450333ffd98a60960c7b5592"
+      },
+      "stdout": {
+        "bytes": 337,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/source_project_build.stdout",
+        "sha256": "bc0e12eed7da87fab1e4726173105400cfa45536a2469b8424e522c9fa57ac8f"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied-source",
+        "--manifest-sha256",
+        "7e76abf0d388d64cfdcf9f95ede994a4cd68d8dcf15294ad2ab02ffde2689ac7"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k",
+      "finished": "2026-10-02T18:00:32.938242+00:00",
+      "name": "copied_verify_after",
+      "returncode": 0,
+      "started": "2026-10-02T18:00:29.815462+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/copied_verify_after.stdout",
+        "sha256": "b2819be803bf14a542f9041442046fe6220c3bfabaad614058a3a21ea7119670"
+      }
+    }
+  ],
+  "started": "2026-10-02T17:59:56.254608+00:00",
+  "status": "copied_frozen_source_project_wheel_build_verified",
+  "tests": {
+    "bytes": 38526,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_project_build_validated_tests_20261002.xml",
+    "sha256": "80dcec25fa46e5ec0948b72b1a67fd78bc8b82e64acc5cedfefae4ba2e051632"
+  },
+  "workflow_revision": "d52e7d9328c62b7b7f8fcadd4cfa89cb7984fc4a"
+}

@@ -18,6 +18,16 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [frozen-source project build and exact reconstruction](results/PUBLICATION_PROJECT_BUILD_20261002.md)
+produce the admitted project wheel without needing the old wheel as a build
+input. All 42 payload members, including three newly compiled kernels, match;
+metadata-only wrapper recovery restores its exact historical archive hash.
+All 271 focused tests pass, and historical locks remain unchanged. A failed
+bootstrap altered an agent-owned disposable base; that prefix is explicitly
+invalidated, the failure is preserved, and the corrected fresh base remains
+unchanged. Compiler/OS/rights closure and full publication requirements remain
+open. See [reader commands](PUBLICATION_SOURCE_COMPONENT.md#frozen-source-cpu-wheel-build).
+
 The [private Miniforge bootstrap](results/PUBLICATION_PRIVATE_BOOTSTRAP_20261002.md)
 has been acquired from the fixed official release, installed in a private
 prefix and used to reconstruct the exact 19-package historical base plus pip.
@@ -46,7 +56,8 @@ HTTPS providers. Its copied-source execution actually obtains 52,911,339
 artifact bytes and passes the existing offline installer's preflight, without
 installing anything or altering a shared environment. All 214 focused tests
 pass. See the [native-preparation source commands](PUBLICATION_SOURCE_COMPONENT.md#offline-historical-base-installation).
-Conda bootstrap, scientific wheel/tool sets and OS/runtime/rights closure
+The subsequent source-build route reconstructs the exact project artifact;
+Conda bootstrap, external tool sets and OS/runtime/rights closure
 remain separately required; this is not a complete native-study release.
 
 The [unified handoff candidate](results/PUBLICATION_HANDOFF_CANDIDATE_20261002.md)

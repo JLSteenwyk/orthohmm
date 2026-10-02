@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Historical Project Wheel Rebuilt from Frozen Source (2026-10-02)
+
+Previous goal turn progressed at pushed `14054cd1`, establishing private
+Miniforge/base reconstruction. Read goal/current worktree/receipts. Timing
+remains deferred without renewed quiet-window questions, contention polls,
+DGX or unrelated process/service changes; reuse completed scientific/native
+and collector admissions.
+
+Identify the project-artifact gap: source exports omit the setup-only overlay,
+while historical wheel acquisition requires a local unpublished project wheel.
+Add explicit native-build profile with separate pinned overlay, preserving all
+previous profile behavior and frozen scientific source. Add offline private
+CPU-wheel builder with exact public build dependencies, source/tag/kernel
+guards and actual native loading. Initial 255 focused tests pass; commit
+`01249971` before copied execution.
+
+The first actual build stops before compilation: Python3.10 -S loses venv
+prefix detection and pip adds setuptools into the agent-owned disposable
+supplied base. Retain failed build/altered prefix and invalidate its old
+pip-only admission; shared environments and native science are untouched.
+Correct explicit venv target/ignore-installed and base-site before/after
+identity guards at `fb519b61`. A misplaced test fixture assertion yields
+259 pass/one fail; preserve JUnit, fix only that assertion at `d52e7d93`.
+Final 260-case panel passes in 28.56s.
+
+Actually copy/export corrected source, independently anchor/verify without
+Git, record altered old-base state, and provision a justified fresh private
+19-package base using retained public artifacts/private Miniforge. Nine
+builder stages pass: exactly pip26.2.1/setuptools83.0.0, 915 matching build
+wheel payload files, all 33 scientific source members, three loaded baseline
+kernels. All 883 fresh-base site files remain unchanged. All 42 candidate
+wheel payload members, including compiled kernels, match the admitted wheel.
+Only the wrapper differs; candidate is not silently substituted in old locks.
+
+Add metadata-only reconstruction at `1363fcc0`, retaining no raw/compiled
+payload. Six-module panel passes 271 in 29.88s, zero failures/errors/skips.
+Fresh copied 1,840-file source component verifies; helper reconstructs the
+exact 144,444-byte historical wheel once under pinned Python/zlib. Existing
+acquisition pin checks accept it unchanged. No original wheel is an execution
+input, no recompile/network/installation/inference during reconstruction.
+The previous 1,838-file native-build component still verifies unchanged.
+
+See [actual build/reconstruction, failures, pins and remaining scope](PUBLICATION_PROJECT_BUILD_20261002.md)
+and machine receipts. Exact preceding CI37041128334 for `14054cd1` now
+finishes successfully, all eight jobs; no inferred counts/new-source CI claim.
+Update reader guides, preserve earlier private-base evidence as historical
+with explicit invalidation, commit/push focused milestones. This closes the
+local original-project-wheel prerequisite on the recorded toolchain, not
+compiler/native/OS/security/rights closure, executor/public runtime delivery,
+remaining QfO uncertainty, comparable resources, final manuscript/release/
+archive/DOI or publication readiness. Leave the original goal active.
+
 ## Private Public-Provider Bootstrap and Frozen Base Executed (2026-10-02)
 
 Previous turn progressed at pushed `27c0b138`, acquiring exact scientific
