@@ -1,0 +1,935 @@
+{
+  "acquisition": {
+    "artifact_bytes": 52911339,
+    "attempts": 1,
+    "base_packages": 19,
+    "downloads": [
+      {
+        "file": {
+          "bytes": 3473,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/_libgcc_mutex-0.1-main.conda",
+          "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda",
+        "md5": "c3473ff8bdb3d124ed5ff11ec380d6f9",
+        "package": {
+          "build": "main",
+          "constrains": [],
+          "depends": [],
+          "fn": "_libgcc_mutex-0.1-main.conda",
+          "license": null,
+          "md5": "c3473ff8bdb3d124ed5ff11ec380d6f9",
+          "name": "_libgcc_mutex",
+          "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda",
+          "version": "0.1"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 21315,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/_openmp_mutex-5.1-1_gnu.conda",
+          "sha256": "576011048d23f2e03372263493c5529f802286ff53e8426df99a5b11cc2572f3"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda",
+        "md5": "71d281e9c2192cb3fa425655a8defb85",
+        "package": {
+          "build": "1_gnu",
+          "constrains": [
+            "openmp_impl 9999"
+          ],
+          "depends": [
+            "_libgcc_mutex 0.1 main",
+            "libgomp >=7.5.0"
+          ],
+          "fn": "_openmp_mutex-5.1-1_gnu.conda",
+          "license": "BSD-3-Clause",
+          "md5": "71d281e9c2192cb3fa425655a8defb85",
+          "name": "_openmp_mutex",
+          "sha256": "576011048d23f2e03372263493c5529f802286ff53e8426df99a5b11cc2572f3",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda",
+          "version": "5.1"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 80125,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/bzip2-1.0.8-h7b6447c_0.conda",
+          "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h7b6447c_0.conda",
+        "md5": "9303f4af7c004e069bae22bde8d800ee",
+        "package": {
+          "build": "h7b6447c_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=7.3.0"
+          ],
+          "fn": "bzip2-1.0.8-h7b6447c_0.conda",
+          "license": "bzip2",
+          "md5": "9303f4af7c004e069bae22bde8d800ee",
+          "name": "bzip2",
+          "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h7b6447c_0.conda",
+          "version": "1.0.8"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/bzip2-1.0.8-h7b6447c_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 132323,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ca-certificates-2025.2.25-h06a4308_0.conda",
+          "sha256": "a30302efb91584dd31e63e540c735bfe776e1832f163eadceae47f692ab7d4f3"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2025.2.25-h06a4308_0.conda",
+        "md5": "495015d24da8ad929e3ae2d18571016d",
+        "package": {
+          "build": "h06a4308_0",
+          "constrains": [],
+          "depends": [],
+          "fn": "ca-certificates-2025.2.25-h06a4308_0.conda",
+          "license": "MPL-2.0",
+          "md5": "495015d24da8ad929e3ae2d18571016d",
+          "name": "ca-certificates",
+          "sha256": "a30302efb91584dd31e63e540c735bfe776e1832f163eadceae47f692ab7d4f3",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2025.2.25-h06a4308_0.conda",
+          "version": "2025.2.25"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2025.2.25-h06a4308_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 669201,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ld_impl_linux-64-2.38-h1181459_1.conda",
+          "sha256": "0c7a6f340f4a9e15cc99b3c7e11f07c7670a9b881161739edd77753e5530fe31"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.38-h1181459_1.conda",
+        "md5": "68eedfd9c06f2b0e6888d8db345b7f5b",
+        "package": {
+          "build": "h1181459_1",
+          "constrains": [
+            "binutils_impl_linux-64 2.38"
+          ],
+          "depends": [],
+          "fn": "ld_impl_linux-64-2.38-h1181459_1.conda",
+          "license": "GPL-3.0-only",
+          "md5": "68eedfd9c06f2b0e6888d8db345b7f5b",
+          "name": "ld_impl_linux-64",
+          "sha256": "0c7a6f340f4a9e15cc99b3c7e11f07c7670a9b881161739edd77753e5530fe31",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.38-h1181459_1.conda",
+          "version": "2.38"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.38-h1181459_1.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 145364,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libffi-3.4.4-h6a678d5_0.conda",
+          "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_0.conda",
+        "md5": "06e288f9250abef59b9a367d151fc339",
+        "package": {
+          "build": "h6a678d5_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0",
+            "libstdcxx-ng >=11.2.0"
+          ],
+          "fn": "libffi-3.4.4-h6a678d5_0.conda",
+          "license": "MIT",
+          "md5": "06e288f9250abef59b9a367d151fc339",
+          "name": "libffi",
+          "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_0.conda",
+          "version": "3.4.4"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/libffi-3.4.4-h6a678d5_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 5602184,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libgcc-ng-11.2.0-h1234567_1.conda",
+          "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda",
+        "md5": "a87728dabf3151fb9cfa990bd2eb0464",
+        "package": {
+          "build": "h1234567_1",
+          "constrains": [
+            "_libgcc_mutex 0.1 main",
+            "_openmp_mutex",
+            "libgomp 11.2.0 h1234567_1"
+          ],
+          "depends": [
+            "_libgcc_mutex 0.1 main",
+            "_openmp_mutex",
+            "_libgcc_mutex * main",
+            "__glibc >=2.17"
+          ],
+          "fn": "libgcc-ng-11.2.0-h1234567_1.conda",
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "md5": "a87728dabf3151fb9cfa990bd2eb0464",
+          "name": "libgcc-ng",
+          "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda",
+          "version": "11.2.0"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-11.2.0-h1234567_1.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 485145,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libgomp-11.2.0-h1234567_1.conda",
+          "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda",
+        "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+        "package": {
+          "build": "h1234567_1",
+          "constrains": [],
+          "depends": [
+            "_libgcc_mutex 0.1 main"
+          ],
+          "fn": "libgomp-11.2.0-h1234567_1.conda",
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "md5": "b372c0eea9b60732fdae4b817a63c8cd",
+          "name": "libgomp",
+          "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda",
+          "version": "11.2.0"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/libgomp-11.2.0-h1234567_1.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 3837704,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+          "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f"
+        },
+        "final_url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "md5": "53ebd4c833fa01cb2c6353e99f905406",
+        "package": {
+          "build": "hc0a3c3a_7",
+          "constrains": [],
+          "depends": [],
+          "fn": "libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+          "license": "GPL-3.0-only WITH GCC-exception-3.1",
+          "md5": "53ebd4c833fa01cb2c6353e99f905406",
+          "name": "libstdcxx-ng",
+          "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+          "version": "13.2.0"
+        },
+        "requested_url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 28110,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libuuid-1.41.5-h5eee18b_0.conda",
+          "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda",
+        "md5": "4a6a2354414c9080327274aa514e5299",
+        "package": {
+          "build": "h5eee18b_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0"
+          ],
+          "fn": "libuuid-1.41.5-h5eee18b_0.conda",
+          "license": "BSD-3-Clause",
+          "md5": "4a6a2354414c9080327274aa514e5299",
+          "name": "libuuid",
+          "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda",
+          "version": "1.41.5"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/libuuid-1.41.5-h5eee18b_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 935878,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ncurses-6.4-h6a678d5_0.conda",
+          "sha256": "a3150cb7655d3781b2ff2d8a7f1eea6103dbbd8835adc7429f7377e4886f6129"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.4-h6a678d5_0.conda",
+        "md5": "5558eec6e2191741a92f832ea826251c",
+        "package": {
+          "build": "h6a678d5_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0"
+          ],
+          "fn": "ncurses-6.4-h6a678d5_0.conda",
+          "license": "MIT AND X11",
+          "md5": "5558eec6e2191741a92f832ea826251c",
+          "name": "ncurses",
+          "sha256": "a3150cb7655d3781b2ff2d8a7f1eea6103dbbd8835adc7429f7377e4886f6129",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.4-h6a678d5_0.conda",
+          "version": "6.4"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.4-h6a678d5_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 5493205,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/openssl-3.0.16-h5eee18b_0.conda",
+          "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.0.16-h5eee18b_0.conda",
+        "md5": "5875526739afa058cfa84da1fa7a2ef4",
+        "package": {
+          "build": "h5eee18b_0",
+          "constrains": [],
+          "depends": [
+            "ca-certificates",
+            "libgcc-ng >=11.2.0"
+          ],
+          "fn": "openssl-3.0.16-h5eee18b_0.conda",
+          "license": "Apache-2.0",
+          "md5": "5875526739afa058cfa84da1fa7a2ef4",
+          "name": "openssl",
+          "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.0.16-h5eee18b_0.conda",
+          "version": "3.0.16"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.0.16-h5eee18b_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 28088174,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/python-3.10.13-h955ad1f_0.conda",
+          "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.13-h955ad1f_0.conda",
+        "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+        "package": {
+          "build": "h955ad1f_0",
+          "constrains": [],
+          "depends": [
+            "bzip2 >=1.0.8,<2.0a0",
+            "ld_impl_linux-64 >=2.35.1",
+            "libffi >=3.4,<3.5",
+            "libffi >=3.4,<4.0a0",
+            "libgcc-ng >=11.2.0",
+            "libuuid >=1.41.5,<2.0a0",
+            "ncurses >=6.4,<7.0a0",
+            "openssl >=3.0.10,<4.0a0",
+            "readline >=8.0,<9.0a0",
+            "sqlite >=3.41.2,<4.0a0",
+            "tk >=8.6.12,<8.7.0a0",
+            "tzdata",
+            "xz >=5.4.2,<6.0a0",
+            "zlib >=1.2.13,<1.3.0a0",
+            "pip"
+          ],
+          "fn": "python-3.10.13-h955ad1f_0.conda",
+          "license": "PSF-2.0",
+          "md5": "5ff5fe4b4dd716f6f91b33b79a7e4a9e",
+          "name": "python",
+          "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.13-h955ad1f_0.conda",
+          "version": "3.10.13"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/python-3.10.13-h955ad1f_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 365188,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/readline-8.2-h5eee18b_0.conda",
+          "sha256": "3bf83c138bf0843b2fdacc5fe6b0956813b11107540d0233c148b97682e894fb"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/readline-8.2-h5eee18b_0.conda",
+        "md5": "be42180685cce6e6b0329201d9f48efb",
+        "package": {
+          "build": "h5eee18b_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0",
+            "ncurses >=6.3,<7.0a0"
+          ],
+          "fn": "readline-8.2-h5eee18b_0.conda",
+          "license": "GPL-3.0-only",
+          "md5": "be42180685cce6e6b0329201d9f48efb",
+          "name": "readline",
+          "sha256": "3bf83c138bf0843b2fdacc5fe6b0956813b11107540d0233c148b97682e894fb",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/readline-8.2-h5eee18b_0.conda",
+          "version": "8.2"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/readline-8.2-h5eee18b_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 1229749,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/sqlite-3.41.2-h5eee18b_0.conda",
+          "sha256": "b74eff1c483cb5e308ac499e5f1a29cfe70aa6e4a502470c650708106da5453a"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.41.2-h5eee18b_0.conda",
+        "md5": "c7086c9ceb6cfe1c4c729a774a2d88a5",
+        "package": {
+          "build": "h5eee18b_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0",
+            "ncurses >=6.4,<7.0a0",
+            "readline >=8.0,<9.0a0",
+            "zlib >=1.2.13,<1.3.0a0",
+            "zlib >=1.2.13,<2.0a0"
+          ],
+          "fn": "sqlite-3.41.2-h5eee18b_0.conda",
+          "license": "blessing",
+          "md5": "c7086c9ceb6cfe1c4c729a774a2d88a5",
+          "name": "sqlite",
+          "sha256": "b74eff1c483cb5e308ac499e5f1a29cfe70aa6e4a502470c650708106da5453a",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.41.2-h5eee18b_0.conda",
+          "version": "3.41.2"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/sqlite-3.41.2-h5eee18b_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 3173079,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/tk-8.6.12-h1ccaba5_0.conda",
+          "sha256": "566579b236dff05c97b56857a808e192f2b7d420dad728b3d7e95fb553a3ce02"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.12-h1ccaba5_0.conda",
+        "md5": "fa10ff4aa631fa4aa090a6234d7770b9",
+        "package": {
+          "build": "h1ccaba5_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=7.5.0",
+            "zlib >=1.2.12,<1.3.0a0"
+          ],
+          "fn": "tk-8.6.12-h1ccaba5_0.conda",
+          "license": "TCL",
+          "md5": "fa10ff4aa631fa4aa090a6234d7770b9",
+          "name": "tk",
+          "sha256": "566579b236dff05c97b56857a808e192f2b7d420dad728b3d7e95fb553a3ce02",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.12-h1ccaba5_0.conda",
+          "version": "8.6.12"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/tk-8.6.12-h1ccaba5_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 118328,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/tzdata-2023c-h04d1e81_0.conda",
+          "sha256": "aa653896749686eb15c28c719a57df597bced46f983b1fdbcc9db3e2db9cc795"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2023c-h04d1e81_0.conda",
+        "md5": "29db02adf8808f7c64642cead3e28acd",
+        "package": {
+          "build": "h04d1e81_0",
+          "constrains": [],
+          "depends": [],
+          "fn": "tzdata-2023c-h04d1e81_0.conda",
+          "license": "CC-PDDC OR BSD-3-Clause",
+          "md5": "29db02adf8808f7c64642cead3e28acd",
+          "name": "tzdata",
+          "sha256": "aa653896749686eb15c28c719a57df597bced46f983b1fdbcc9db3e2db9cc795",
+          "subdir": "noarch",
+          "url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2023c-h04d1e81_0.conda",
+          "version": "2023c"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/noarch/tzdata-2023c-h04d1e81_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 580311,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/xz-5.6.4-h5eee18b_1.conda",
+          "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/xz-5.6.4-h5eee18b_1.conda",
+        "md5": "3581505fa450962d631bd82b8616350e",
+        "package": {
+          "build": "h5eee18b_1",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0"
+          ],
+          "fn": "xz-5.6.4-h5eee18b_1.conda",
+          "license": "LGPL-2.1-or-later and GPL-2.0-or-later and 0BSD",
+          "md5": "3581505fa450962d631bd82b8616350e",
+          "name": "xz",
+          "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/xz-5.6.4-h5eee18b_1.conda",
+          "version": "5.6.4"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/xz-5.6.4-h5eee18b_1.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 105851,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/zlib-1.2.13-h5eee18b_0.conda",
+          "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794"
+        },
+        "final_url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_0.conda",
+        "md5": "333e31fbfbb5057c92fa845ad6adef93",
+        "package": {
+          "build": "h5eee18b_0",
+          "constrains": [],
+          "depends": [
+            "libgcc-ng >=11.2.0"
+          ],
+          "fn": "zlib-1.2.13-h5eee18b_0.conda",
+          "license": "Zlib",
+          "md5": "333e31fbfbb5057c92fa845ad6adef93",
+          "name": "zlib",
+          "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794",
+          "subdir": "linux-64",
+          "url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_0.conda",
+          "version": "1.2.13"
+        },
+        "requested_url": "https://repo.anaconda.com/pkgs/main/linux-64/zlib-1.2.13-h5eee18b_0.conda",
+        "role": "base_archive"
+      },
+      {
+        "file": {
+          "bytes": 6683,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/pip-release.json",
+          "sha256": "4f5abeb5acacd5eaaad5e6982f5721dee3592795e59fc5a4067fcca92eed70e1"
+        },
+        "final_url": "https://pypi.org/pypi/pip/26.2.1/json",
+        "md5": "a99017fea17f76b97be9dfd4db9005d8",
+        "requested_url": "https://pypi.org/pypi/pip/26.2.1/json",
+        "role": "pip_release_metadata"
+      },
+      {
+        "file": {
+          "bytes": 1816632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl",
+          "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+        },
+        "final_url": "https://files.pythonhosted.org/packages/f3/6e/1736e5b4ae2b778ef2f81c47d797de9f891d4d8acb047a24ca37a60294dd/pip-26.2.1-py3-none-any.whl",
+        "md5": "6133db710b3b63a6ddf05d40ca708ab5",
+        "requested_url": "https://files.pythonhosted.org/packages/f3/6e/1736e5b4ae2b778ef2f81c47d797de9f891d4d8acb047a24ca37a60294dd/pip-26.2.1-py3-none-any.whl",
+        "role": "pip_wheel"
+      }
+    ],
+    "historical_runtime": true,
+    "inputs": [
+      {
+        "bytes": 35782,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json",
+        "sha256": "7af55a78192eea22cf978ff331c1c5556965e17862b565793321b14857479f59"
+      },
+      {
+        "bytes": 8572,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/acquire_publication_base.py",
+        "sha256": "87412d5483f4cc28cc1ddce5953f169349648cb993fd58d5becaf79149ec100b"
+      },
+      {
+        "bytes": 5327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/stage_base_archives.py",
+        "sha256": "59e0b39d194ee8ca6e3fbe10804ac5d7bb2ebb1bd4c574a9961909cb33572b93"
+      }
+    ],
+    "installation_performed": false,
+    "limitations": [
+      "Exact historical artifact acquisition, not a patched installation recommendation.",
+      "HTTPS and retained hashes, not provider signatures or complete supply-chain authentication.",
+      "Conda bootstrap, scientific wheel/tool sets, raw data and OS runtime remain separately supplied.",
+      "No solving, installation, native inference, controlled timing or distribution clearance."
+    ],
+    "native_inference_executed": false,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "retry": false,
+    "security_clearance": false,
+    "status": "historical_base_artifacts_acquired"
+  },
+  "acquisition_receipt": {
+    "bytes": 25906,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/complete.json",
+    "sha256": "fbdeb529cec2844967985aaf8d473bc93e6c65c5a28afcd88837b9ba871db9e4"
+  },
+  "controlled_timing": false,
+  "copied_verification": {
+    "components": {
+      "scientific": 43,
+      "workflow": 1785
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1828,
+    "manifest": {
+      "bytes": 739167,
+      "sha256": "8961e13262b4548cd24d7b5d9191fe6dda509edffcb28901cbe82dc838777d26"
+    },
+    "payload_bytes": 10661522,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1810,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "254ab20bcf0306d109df725d83ec414c81917bd7"
+  },
+  "finished": "2026-10-02T16:27:23.310806+00:00",
+  "harness": {
+    "bytes": 6651,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_base_acquisition_20261002.py",
+    "sha256": "ccafbabc710bdb0c1498ad4ce18a02e6271819031739caebd37d4c8bedc56f7a"
+  },
+  "installation_performed": false,
+  "limitations": [
+    "Real fresh public downloads from copied source; no base/scientific installation or native inference.",
+    "Same-host source relocation, not cross-host or syscall-sandbox validation.",
+    "Historical byte identity, not patched runtime, provider signature verification, license clearance or native/OS closure."
+  ],
+  "native_inference_repeated": false,
+  "offline_preflight": {
+    "installation_performed": false,
+    "packages": 19,
+    "status": "offline_input_preflight_passed",
+    "watched": [
+      {
+        "bytes": 35782,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json",
+        "sha256": "7af55a78192eea22cf978ff331c1c5556965e17862b565793321b14857479f59"
+      },
+      {
+        "bytes": 522,
+        "path": "/home/bizon/anaconda3/bin/conda",
+        "sha256": "799af5fef8b3b0cc365ffacf24975524055bf6b1be1203cb7121724f780c9208"
+      },
+      {
+        "bytes": 1816632,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      },
+      {
+        "bytes": 11800,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/install_publication_base.py",
+        "sha256": "dd7f223c6f5e34cd30090f27eb76196045c45cba1b6f2c2795d26cf31c79babc"
+      },
+      {
+        "bytes": 5327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/stage_base_archives.py",
+        "sha256": "59e0b39d194ee8ca6e3fbe10804ac5d7bb2ebb1bd4c574a9961909cb33572b93"
+      },
+      {
+        "bytes": 13821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/run_integrated_publication_workflow.py",
+        "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+      },
+      {
+        "bytes": 5776,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/audit_recovery_install.py",
+        "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+      },
+      {
+        "bytes": 3473,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/_libgcc_mutex-0.1-main.conda",
+        "sha256": "476626712f60e5ef0fe04c354727152b1ee5285d57ccd3575c7be930122bd051"
+      },
+      {
+        "bytes": 21315,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/_openmp_mutex-5.1-1_gnu.conda",
+        "sha256": "576011048d23f2e03372263493c5529f802286ff53e8426df99a5b11cc2572f3"
+      },
+      {
+        "bytes": 80125,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/bzip2-1.0.8-h7b6447c_0.conda",
+        "sha256": "d3fa503351a53692866182a3819fb28d105e32c25d177bf6a9444c4153215e0d"
+      },
+      {
+        "bytes": 132323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ca-certificates-2025.2.25-h06a4308_0.conda",
+        "sha256": "a30302efb91584dd31e63e540c735bfe776e1832f163eadceae47f692ab7d4f3"
+      },
+      {
+        "bytes": 669201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ld_impl_linux-64-2.38-h1181459_1.conda",
+        "sha256": "0c7a6f340f4a9e15cc99b3c7e11f07c7670a9b881161739edd77753e5530fe31"
+      },
+      {
+        "bytes": 145364,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libffi-3.4.4-h6a678d5_0.conda",
+        "sha256": "2ac2a8507a48fdf8ba71ab38b0843ca373782a4a0c6367775498843c24bbc08c"
+      },
+      {
+        "bytes": 5602184,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libgcc-ng-11.2.0-h1234567_1.conda",
+        "sha256": "cdcce11f1c6ca57ba686ab92f3a5c122efe1e0630e00c6ad275624ce79008aa7"
+      },
+      {
+        "bytes": 485145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libgomp-11.2.0-h1234567_1.conda",
+        "sha256": "a1c6e599df45e116af81c36ec4c9efb1793fa3a0b854dd90dd6c8813cd476e90"
+      },
+      {
+        "bytes": 3837704,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libstdcxx-ng-13.2.0-hc0a3c3a_7.conda",
+        "sha256": "35f1e08be0a84810c9075f5bd008495ac94e6c5fe306dfe4b34546f11fed850f"
+      },
+      {
+        "bytes": 28110,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/libuuid-1.41.5-h5eee18b_0.conda",
+        "sha256": "2a401aafabac51b7736cfe12d2ab205d29052640ea8183253c9d0a8e7ed0d49a"
+      },
+      {
+        "bytes": 935878,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/ncurses-6.4-h6a678d5_0.conda",
+        "sha256": "a3150cb7655d3781b2ff2d8a7f1eea6103dbbd8835adc7429f7377e4886f6129"
+      },
+      {
+        "bytes": 5493205,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/openssl-3.0.16-h5eee18b_0.conda",
+        "sha256": "b1767edf49fe9a2fff321cb42386041d0c7d8ff88acf5e20b4a02d3ccd0a1b97"
+      },
+      {
+        "bytes": 28088174,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/python-3.10.13-h955ad1f_0.conda",
+        "sha256": "84538ab01d12fd10112dbd3a5b81b923c6db8ceba4e7303e6f59a543d5eb92de"
+      },
+      {
+        "bytes": 365188,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/readline-8.2-h5eee18b_0.conda",
+        "sha256": "3bf83c138bf0843b2fdacc5fe6b0956813b11107540d0233c148b97682e894fb"
+      },
+      {
+        "bytes": 1229749,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/sqlite-3.41.2-h5eee18b_0.conda",
+        "sha256": "b74eff1c483cb5e308ac499e5f1a29cfe70aa6e4a502470c650708106da5453a"
+      },
+      {
+        "bytes": 3173079,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/tk-8.6.12-h1ccaba5_0.conda",
+        "sha256": "566579b236dff05c97b56857a808e192f2b7d420dad728b3d7e95fb553a3ce02"
+      },
+      {
+        "bytes": 118328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/tzdata-2023c-h04d1e81_0.conda",
+        "sha256": "aa653896749686eb15c28c719a57df597bced46f983b1fdbcc9db3e2db9cc795"
+      },
+      {
+        "bytes": 580311,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/xz-5.6.4-h5eee18b_1.conda",
+        "sha256": "a9445543c2b1a1a96c052ac4535cfceb413cdbb0454a0710f9a4c98e7d5d0b1c"
+      },
+      {
+        "bytes": 105851,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives/zlib-1.2.13-h5eee18b_0.conda",
+        "sha256": "4b69b6752e384459b1fc47dfc078598d5b687b3ccffe21591676b640481fb794"
+      }
+    ]
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq",
+  "security_clearance": false,
+  "source": {
+    "components": {
+      "scientific": 43,
+      "workflow": 1785
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1828,
+    "manifest": {
+      "bytes": 739167,
+      "sha256": "8961e13262b4548cd24d7b5d9191fe6dda509edffcb28901cbe82dc838777d26"
+    },
+    "payload_bytes": 10661522,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1810,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "254ab20bcf0306d109df725d83ec414c81917bd7"
+  },
+  "source_index": {
+    "bytes": 739167,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/SOURCE_INDEX.json",
+    "sha256": "8961e13262b4548cd24d7b5d9191fe6dda509edffcb28901cbe82dc838777d26"
+  },
+  "source_unchanged": true,
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_source.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "254ab20bcf0306d109df725d83ec414c81917bd7",
+        "--profile",
+        "native-preparation",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/exported"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "finished": "2026-10-02T16:27:07.991508+00:00",
+      "name": "export",
+      "returncode": 0,
+      "started": "2026-10-02T16:26:58.698465+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/export.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/export.stdout",
+        "sha256": "72da84b26cdbfa5e2ce6ac36ec66456ab7f72c9c0ba86288d4b08ed5cfa0c44e"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source",
+        "--manifest-sha256",
+        "8961e13262b4548cd24d7b5d9191fe6dda509edffcb28901cbe82dc838777d26"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq",
+      "finished": "2026-10-02T16:27:11.377184+00:00",
+      "name": "copied_verify_before",
+      "returncode": 0,
+      "started": "2026-10-02T16:27:08.202598+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied_verify_before.stdout",
+        "sha256": "72da84b26cdbfa5e2ce6ac36ec66456ab7f72c9c0ba86288d4b08ed5cfa0c44e"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/acquire_publication_base.py",
+        "--receipt",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts",
+        "--acknowledge-historical-runtime"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq",
+      "finished": "2026-10-02T16:27:19.667880+00:00",
+      "name": "public_acquisition",
+      "returncode": 0,
+      "started": "2026-10-02T16:27:11.377608+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public_acquisition.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 25906,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public_acquisition.stdout",
+        "sha256": "fbdeb529cec2844967985aaf8d473bc93e6c65c5a28afcd88837b9ba871db9e4"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "-c",
+        "import json,sys; from pathlib import Path; from types import SimpleNamespace; sys.path.insert(0,'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow'); from benchmark_tools import install_publication_base as module; args=SimpleNamespace(output=Path('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/unused-install-output'),timeout=60,acknowledge_historical_runtime=True,receipt=Path('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json'),cache=Path('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/archives'),conda=Path('/home/bizon/anaconda3/bin/conda'),conda_sha256='799af5fef8b3b0cc365ffacf24975524055bf6b1be1203cb7121724f780c9208',pip_wheel=Path('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/public-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl')); output,packages,watched=module.preflight(args); assert not output.exists(); print(json.dumps(dict(status='offline_input_preflight_passed',packages=len(packages),installation_performed=False,watched=watched)))"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq",
+      "finished": "2026-10-02T16:27:20.083956+00:00",
+      "name": "offline_input_preflight",
+      "returncode": 0,
+      "started": "2026-10-02T16:27:19.668442+00:00",
+      "stderr": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/offline_input_preflight.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 7132,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/offline_input_preflight.stdout",
+        "sha256": "8b360bff648ecf69ce6f843cf97b643e07e53d95c88209f011aba2e0dcca4bed"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied-source",
+        "--manifest-sha256",
+        "8961e13262b4548cd24d7b5d9191fe6dda509edffcb28901cbe82dc838777d26"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq",
+      "finished": "2026-10-02T16:27:23.308902+00:00",
+      "name": "copied_verify_after",
+      "returncode": 0,
+      "started": "2026-10-02T16:27:20.084382+00:00",
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 578,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-base-acquisition-20261002-o4my8hlq/copied_verify_after.stdout",
+        "sha256": "72da84b26cdbfa5e2ce6ac36ec66456ab7f72c9c0ba86288d4b08ed5cfa0c44e"
+      }
+    }
+  ],
+  "started": "2026-10-02T16:26:58.698125+00:00",
+  "status": "publication_base_public_acquisition_verified",
+  "tests": {
+    "bytes": 29876,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/base_acquisition_validated_tests_20261002.xml",
+    "sha256": "17c909dc39158016c0334e55b274c4b3275849a1cd04f4bbb9f42f6144c564df"
+  },
+  "workflow_revision": "254ab20bcf0306d109df725d83ec414c81917bd7"
+}

@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [public historical-base acquisition controller](results/PUBLICATION_BASE_ACQUISITION_20261002.md)
+downloads all 19 frozen archives and the exact pip bootstrap wheel from public
+HTTPS providers. Its copied-source execution actually obtains 52,911,339
+artifact bytes and passes the existing offline installer's preflight, without
+installing anything or altering a shared environment. All 214 focused tests
+pass. See the [native-preparation source commands](PUBLICATION_SOURCE_COMPONENT.md#offline-historical-base-installation).
+Conda bootstrap, scientific wheel/tool sets and OS/runtime/rights closure
+remain separately required; this is not a complete native-study release.
+
 The [unified handoff candidate](results/PUBLICATION_HANDOFF_CANDIDATE_20261002.md)
 now connects the dated nine-page main review, frozen scientific source, newer
 native-preparation workflow, eight-tool table and two standalone count replays.

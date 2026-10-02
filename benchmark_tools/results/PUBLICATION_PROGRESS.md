@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Public Historical Base Acquisition Executed (2026-10-02)
+
+Previous goal turn progressed at pushed `bac2ae47`, assembling, freshly
+extracting and numerically replaying the unified source/manuscript/count
+handoff. Read goal, authoritative worktree and latest receipts. Its exact
+CI run 37032772866 has successful wheel/Linux jobs, five live macOS jobs
+and docs queued when inspected; do not infer counts or full-matrix success.
+Timing remains deferred without renewed questions, contention polls, DGX work
+or unrelated process/service actions. Preserve dirty sample outputs and reuse
+completed scientific/native/collector admissions rather than restarting them.
+
+Inspect the native preparation requirements and identify a real remaining
+acquisition gap: the offline installer accepts exact supplied archives, but
+the reader still needs manual downloads. Add stdlib public-artifact controller
+using the exact reconstruction receipt and release-specific pip metadata, with
+allowlisted HTTPS/redirects, byte caps, size/SHA/MD5 checks, fresh canonical
+destinations, historical acknowledgement and failure/partial preservation
+without retry or installation. Update source guide with executable acquisition
+and installer-handoff commands; retain historical profile behavior and inputs.
+Initial 92 tests pass; expanded acquisition/installer/stager/source/handoff
+panel passes 214 in 14.22s, zero failures/errors/skips. Commit `254ab20b` before
+the actual copied-source public-provider run.
+
+Actually export/copy 1,828 payloads outside the checkout and independently
+anchor the source index. Isolated copied verification passes without Git.
+Download all 19 archives and the exact pip wheel, 52,911,339 artifact bytes,
+with one metadata request: 21 actual requests to the four allowed providers.
+All frozen sizes/hashes match. The copied existing installer preflight accepts
+all newly acquired inputs plus the supplied original trusted Conda entrypoint;
+it creates no installation output. Final whole-component verification passes,
+source unchanged. All five real stages return zero, no failed acquisition,
+global environment change, actual installation, inference, scoring or timing.
+
+See [acquisition, source identities and remaining scope](PUBLICATION_BASE_ACQUISITION_20261002.md)
+and its machine receipt. This closes manual base-artifact acquisition, not
+Conda bootstrap/dependency closure, scientific-wheel/tool distribution, rights,
+OS/cross-host restoration, other-QfO uncertainty, controlled resource evidence,
+final manuscript/public release/archive/DOI or full publication readiness.
+Commit/push the focused validated milestone; leave the original goal active.
+
 ## Unified Handoff Extracted And Numerical Scripts Executed (2026-10-02)
 
 Previous turn progressed at pushed `526bd04a`, executing offline base automation
