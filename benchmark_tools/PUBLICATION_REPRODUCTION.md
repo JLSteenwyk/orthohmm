@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [remote glibc/assembly regression confirmation](results/CI_GLIBC_CONFIRMATION_20261002.md)
+records all eight CI jobs successful at exact source 9c81953d. The downloaded
+coverage receipts contain 14,883 passes and 119 skips with no errors/failures;
+all 15,002 selected IDs reconcile and all 131 recent focused cases pass.
+Four declared raw-data exclusions remain. This is remote regression evidence,
+not current full private-data validation or controlled-resource admission.
+
 The [repository citation metadata](results/REPOSITORY_CITATION_20261002.md)
 passes CFF 1.2.0 validation and reviewed preprint-field checks. It names the
 original preprint, not a new software archive or benchmarking manuscript.

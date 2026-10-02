@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Remote Glibc And Assembly Regression Confirmed (2026-10-02)
+
+Previous turn progressed at pushed `823339c9`, preparing validated citation
+metadata. Read the original goal/current ledger and inspect remaining actual
+requirements. Retain timing deferral without new quiet-window questions,
+contention polling, DGX access or unrelated process/service changes.
+
+Read the adopted 29 September resource amendment: primary native wall/CPU/
+step-peak endpoints do not require unavailable supplementary teardown counters.
+Do not invent scheduler reconfiguration as a prerequisite. Real observer
+slowdown, environment handoff, current-source/runtime readiness and isolation
+remain unresolved; neither 27 production nor 54 engineering runs launches.
+
+Query authoritative remote CI. Prior 9c0254a3/ad16fea7 runs are successful;
+9c81953d run 37064634051 is initially live, then terminal successful with all
+eight jobs complete. Citation-source 823339c9 is initially queued; do not
+infer its completion. The installed gh command is a different program and
+rejects workflow-list arguments; use the public GitHub API/app instead.
+
+Download just 9c81953d's public-coverage artifact and match its published ZIP
+digest. Parse original JSON/XML without extraction or test reruns: 14,883
+passes, 119 execution skips, no errors/failures. Exactly four raw cases are
+deselected; all 15,002 selected nodes reconcile to unique executed cases.
+All 131 cases in five new guard/ABI/assembly modules pass without skips, and
+the ten corresponding current source/test files match executed Git bytes.
+Retain the first audit mapping failure: 13 parameter labels contain :: and
+must stay literal. Fix the readback only; source tests/receipts stay unchanged.
+
+See [exact evidence and limitations](CI_GLIBC_CONFIRMATION_20261002.md).
+Commit/push the compact receipt and focused documentation only. No scientific
+setting/default/score change, inference, new timing observation, archive rebuild
+or manuscript rerender occurs. All owned handles are terminal. Remote public
+regression is now established at this snapshot, not full raw/private regression,
+controlled resources or publication readiness. Original goal remains active.
+
 ## Repository Citation Metadata Prepared (2026-10-02)
 
 Previous turn progressed at pushed `9c81953d` with executed glibc preflight.

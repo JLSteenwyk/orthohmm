@@ -13,6 +13,17 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [remote glibc/assembly regression readback](CI_GLIBC_CONFIRMATION_20261002.md)
+records all eight jobs successful at source 9c81953d. Downloaded Python 3.11
+coverage receipts have 14,883 passes and 119 skips, no errors/failures, exact
+selection-to-execution accounting and all 131 recent focused cases passing.
+Four raw-source exclusions persist. This is bounded remote regression, not
+full private-data execution, current scientific admission or controlled timing.
+The [adopted resource scopes](THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md)
+already make final whole-job teardown counters supplementary/unavailable;
+their absence alone does not prevent the primary native-inference endpoints.
+Observer-overhead, environmental handoff, readiness and isolation still matter.
+
 The [assembled glibc preflight](PUBLICATION_GLIBC_PREFLIGHT_20261002.md)
 requires a matching external ABI-inventory anchor before installation. The
 real preflight-only route passes on controller glibc 2.39 versus floor 2.34;

@@ -1,0 +1,250 @@
+{
+  "all_selected_nodes_accounted_for": true,
+  "artifact": {
+    "id": 11252359194,
+    "name": "public-coverage",
+    "path": "benchmarks/work/ci_glibc_confirmation_20261002/public-coverage-37064634051.zip",
+    "sha256": "a6200452af5de8cfa64ee635299fef6ccc2d8a59c0511a2e8a916de765b77672",
+    "size_bytes": 516576
+  },
+  "combined_counts": {
+    "passed": 14883,
+    "skipped": 119
+  },
+  "execution": [
+    {
+      "cases": 14997,
+      "counts": {
+        "passed": 14878,
+        "skipped": 119
+      },
+      "member": "public-unit.xml",
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "sjc20-bb714-6c562127-7b6b-4a91-bd1d-276f03b8360a-F60D3C62F056.local",
+          "name": "pytest",
+          "skipped": "119",
+          "tests": "14997",
+          "time": "592.330",
+          "timestamp": "2026-10-02T21:07:39.847767+00:00"
+        }
+      ]
+    },
+    {
+      "cases": 5,
+      "counts": {
+        "passed": 5
+      },
+      "member": "public-integration.xml",
+      "suites": [
+        {
+          "errors": "0",
+          "failures": "0",
+          "hostname": "sjc20-bb714-6c562127-7b6b-4a91-bd1d-276f03b8360a-F60D3C62F056.local",
+          "name": "pytest",
+          "skipped": "0",
+          "tests": "5",
+          "time": "202.898",
+          "timestamp": "2026-10-02T21:17:35.756687+00:00"
+        }
+      ]
+    }
+  ],
+  "focused_current_source_identity": [
+    {
+      "path": "tests/unit/test_check_publication_glibc_floor.py",
+      "sha256": "4dedf7c275e5c859b42a8d44bf7d51616d87c49babf733a56b3d18cf13a92870",
+      "size_bytes": 6430
+    },
+    {
+      "path": "benchmark_tools/check_publication_glibc_floor.py",
+      "sha256": "2122f6bce040cd063fcc2c8f259cb90884d1abecdc1d38c4e3d07d606f10c2ed",
+      "size_bytes": 6034
+    },
+    {
+      "path": "tests/unit/test_run_integrated_publication_workflow.py",
+      "sha256": "c0370d66d5e1845cc4e47857d85f71d854922b5892349c2c861a10ff57abe87e",
+      "size_bytes": 13677
+    },
+    {
+      "path": "benchmark_tools/run_integrated_publication_workflow.py",
+      "sha256": "d6ee9d729c0b8c1bd03766b11539d9e2d39121c454bb450c26f722c00ff0ffe6",
+      "size_bytes": 20661
+    },
+    {
+      "path": "tests/unit/test_inventory_publication_native_abi.py",
+      "sha256": "5872261a75012d46627f75f9052b993dd7feb4afa5bfe63a22f76b816563f022",
+      "size_bytes": 3424
+    },
+    {
+      "path": "benchmark_tools/inventory_publication_native_abi.py",
+      "sha256": "a61868108ab0966790817b9cc9bc1eff24214291ae5ca49a6a96df24f55672f1",
+      "size_bytes": 4426
+    },
+    {
+      "path": "tests/unit/test_inventory_wheel_elf.py",
+      "sha256": "266357836e6d2b7bae52e2e49dc397ed63329222fd50750f90cb233986985c8b",
+      "size_bytes": 7580
+    },
+    {
+      "path": "benchmark_tools/inventory_wheel_elf.py",
+      "sha256": "7993e9fc5d0e63cd1e4661f4fbcbce3d7b6e23813ef577e658949b3db3720f76",
+      "size_bytes": 10485
+    },
+    {
+      "path": "tests/unit/test_assemble_publication_runtime_assets.py",
+      "sha256": "ee4ce96ca8fa8d7cbb13aad4d76ed51a078daad50e46ebef19d23a3caffd7452",
+      "size_bytes": 12312
+    },
+    {
+      "path": "benchmark_tools/assemble_publication_runtime_assets.py",
+      "sha256": "4f12b1e2af854f700c26f9d6c240bdb68a9af2988ccac591ca2044f84fde149d",
+      "size_bytes": 21386
+    }
+  ],
+  "focused_modules": {
+    "test_assemble_publication_runtime_assets": {
+      "passed": 29
+    },
+    "test_check_publication_glibc_floor": {
+      "passed": 35
+    },
+    "test_inventory_publication_native_abi": {
+      "passed": 4
+    },
+    "test_inventory_wheel_elf": {
+      "passed": 32
+    },
+    "test_run_integrated_publication_workflow": {
+      "passed": 31
+    }
+  },
+  "jobs": [
+    {
+      "conclusion": "success",
+      "id": 111029248264,
+      "name": "cpu-wheel",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248493,
+      "name": "public-coverage (includes slow; excludes four raw-source cases)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248545,
+      "name": "public-fast (3.11)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248573,
+      "name": "docs",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248588,
+      "name": "public-fast (3.12)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248592,
+      "name": "linux-native-diagnostics",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248669,
+      "name": "public-fast (3.13)",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "id": 111029248717,
+      "name": "public-fast (3.10)",
+      "status": "completed"
+    }
+  ],
+  "limitations": [
+    "Public profile excludes four raw-source cases and retains 119 execution skips.",
+    "Counts verified only for this downloaded coverage artifact, not sibling jobs.",
+    "Focused macOS cases use mocks/fixtures, not actual private Linux preflight or scientific admission.",
+    "Current-source byte comparison covers these five module/test pairs only.",
+    "Workflow status is an observation snapshot; no restart or inference rerun performed."
+  ],
+  "members": [
+    {
+      "name": "public-test-selection.json",
+      "sha256": "46e5f72a88137c7e8e565c080e2b47d643baba8975b114704c866e1177f630d7",
+      "size_bytes": 3052345
+    },
+    {
+      "name": "public-unit.xml",
+      "sha256": "59cf6b5b11adce04330557d57e63bc71db861273aa2dbecc07e6b06c8ea4c024",
+      "size_bytes": 2091074
+    },
+    {
+      "name": "public-integration.xml",
+      "sha256": "6fedfccfe5676b24ac4719ea676805c5764f44cdcdad89f87bccae6d309001f2",
+      "size_bytes": 874
+    }
+  ],
+  "observed_at": "2026-10-02T21:25:40.621799+00:00",
+  "prior_attempt": {
+    "cause": "Splitting parameter labels at :: misidentified 13 node IDs; raw receipts unchanged.",
+    "status": "mapping_assertion_failed_before_output"
+  },
+  "publication_ready": false,
+  "readback_source": {
+    "path": "benchmarks/work/ci_glibc_confirmation_20261002/readback.py",
+    "sha256": "a08aba8ef05c5a588fcd9a1d03ffedb5eda723b10815e5f137dbfb47ca4b477b",
+    "size_bytes": 6559
+  },
+  "run": {
+    "conclusion": "success",
+    "head_sha": "9c81953db35edb780f8546cf81a9133d8df4d129",
+    "html_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/37064634051",
+    "id": 37064634051,
+    "status": "completed"
+  },
+  "run_observation": {
+    "path": "benchmarks/work/ci_glibc_confirmation_20261002/run-and-jobs-observation.json",
+    "sha256": "2914b71de54567ca0005f36ab3ef17f28eb70999e66386c8d14a3954d5a19d8a",
+    "size_bytes": 53181
+  },
+  "scientific_timings_admitted": false,
+  "selection": {
+    "collected_count": 15006,
+    "collection_errors": [],
+    "collection_skips": [],
+    "complete_raw_benchmark_gate": false,
+    "declared_private_nodes": [
+      "tests/test_export_swiss_duplication_strata.py::test_export_and_no_overwrite",
+      "tests/test_export_swiss_duplication_strata.py::test_independent_rational_reproduction_of_export",
+      "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[duplication]",
+      "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[fragment]"
+    ],
+    "deselected_count": 4,
+    "deselected_nodes": [
+      "tests/test_export_swiss_duplication_strata.py::test_export_and_no_overwrite",
+      "tests/test_export_swiss_duplication_strata.py::test_independent_rational_reproduction_of_export",
+      "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[duplication]",
+      "tests/unit/test_swiss_strata_count_selection.py::test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash[fragment]"
+    ],
+    "passed": true,
+    "problems": [],
+    "profile": "public (not raw_benchmark); collection only, no slow filtering",
+    "pytest_version": "9.1.1",
+    "python": "3.11.9",
+    "schema": "orthohmm-public-test-profile-v1",
+    "selected_count": 15002,
+    "tests_executed": false
+  },
+  "status": "remote_public_coverage_execution_read_back"
+}
