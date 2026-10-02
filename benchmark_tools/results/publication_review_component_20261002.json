@@ -1,0 +1,176 @@
+{
+  "status": "seven_page_review_archived_and_guarded_fresh_extraction_verified",
+  "utc": "2026-10-02T04:26:26.115085+00:00",
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20261002/orthohmm-main-review-20261002-c98b11fb.tar.gz",
+    "bytes": 2526021,
+    "sha256": "23bcb9aa8920e1df642692d7d919f183aa4098fe1c4e22194856fd61722c20d4"
+  },
+  "index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20261002/component/REVIEW_INDEX.json",
+    "bytes": 20617,
+    "sha256": "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+  },
+  "original_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20261002/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_review_component_20261002/component",
+    "--manifest-sha256",
+    "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+  ],
+  "original_verification": {
+    "direct_targets": 34,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20261001.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20261001/document.pdf"
+    },
+    "files": 55,
+    "inference_reproduced": false,
+    "local_html_occurrences": 35,
+    "manifest": {
+      "bytes": 20617,
+      "sha256": "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+    },
+    "page_count": 7,
+    "payload_bytes": 4262679,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "relocated_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "/tmp/orthohmm-current-review-r3nlvfpw/component/benchmark_tools/bundle_publication_review.py",
+    "verify",
+    "/tmp/orthohmm-current-review-r3nlvfpw/component",
+    "--manifest-sha256",
+    "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+  ],
+  "fresh_extraction_verification": {
+    "direct_targets": 34,
+    "entrypoints": {
+      "html": "benchmark_tools/results/publication_main_review_20261001.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+      "pdf": "benchmark_tools/results/publication_main_print_20261001/document.pdf"
+    },
+    "files": 55,
+    "inference_reproduced": false,
+    "local_html_occurrences": 35,
+    "manifest": {
+      "bytes": 20617,
+      "sha256": "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+    },
+    "page_count": 7,
+    "payload_bytes": 4262679,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "relocation_equal": true,
+  "audit_guard": {
+    "canary_rejected": true,
+    "original_path_events_after_canary": 0,
+    "subprocesses_allowed": false
+  },
+  "audit_guard_source_sha256": "633d811876b0e3583ae249ba5f87e5f83768950cba5714195af3b87d99ff066c",
+  "safe_tar_members": 67,
+  "safe_tar_payload_bytes": 4283296,
+  "temporary_extraction_removed": true,
+  "environment": {
+    "PATH": "/no-git",
+    "LC_ALL": "C",
+    "HOME": "/nonexistent"
+  },
+  "isolated_interpreter": {
+    "path": "/usr/bin/python3.12",
+    "bytes": 8019136,
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "review_revision": "55e207e33551475b70cb69d172d8b788429e0577",
+  "workflow_revision": "c98b11fb02843cdd6fd19af2a52ffb2e2661ee3a",
+  "render_time_ledger_revision": "b74494376002dc87094aeb5ad733c9b0ea45cdd4",
+  "visual_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_visual_review_20261001.json",
+    "bytes": 4183,
+    "sha256": "0c8730de23c9205ead9aace321d236cbba71a5f15b368f28dfff1e098646f4c7"
+  },
+  "public_deposition_executed": false,
+  "publication_ready": false,
+  "transitive_evidence_included": false,
+  "limitations": [
+    "Direct review payload only, not native inference, raw data or a complete executable study archive.",
+    "Python-event audit is not OS containment or cross-host verification.",
+    "Separate manual visual receipt stays in Git, not direct payload; image/render/PDF pins match its committed snapshot.",
+    "PDF may retain workstation-specific links; use relative HTML for navigation.",
+    "Archive verification does not clear scientific claims, third-party rights or publication readiness."
+  ],
+  "build_command": [
+    "python",
+    "-B",
+    "benchmark_tools/bundle_publication_review.py",
+    "build",
+    "--repo",
+    ".",
+    "--review-revision",
+    "55e207e33551475b70cb69d172d8b788429e0577",
+    "--ledger-revision",
+    "b74494376002dc87094aeb5ad733c9b0ea45cdd4",
+    "--workflow-revision",
+    "c98b11fb02843cdd6fd19af2a52ffb2e2661ee3a",
+    "--render-receipt",
+    "benchmark_tools/results/publication_main_render_20261001.json",
+    "--print-receipt",
+    "benchmark_tools/results/publication_main_print_20261001/print.json",
+    "--review-receipt",
+    "benchmark_tools/results/publication_main_pdf_review_20261001/report.json",
+    "--output",
+    "benchmarks/work/publication_review_component_20261002/component"
+  ],
+  "audit_guard_python_source": "\nimport json,os,runpy,sys\nfrom pathlib import Path\nblocked=Path(sys.argv[1]).resolve()\nrunner=Path(sys.argv[2]).resolve()\nbundle=Path(sys.argv[3]).resolve()\ndigest=sys.argv[4]\ncount=0\ndef audit(event,args):\n global count\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  value=Path(os.fsdecode(args[0])).resolve()\n  if value==blocked or value.is_relative_to(blocked):\n   count+=1\n   raise PermissionError('original checkout access rejected')\n if event=='subprocess.Popen':\n  raise PermissionError('subprocess execution rejected')\nsys.addaudithook(audit)\ntry:\n sys.audit('open',str(blocked/'benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md'),'r',0)\nexcept PermissionError:\n canary=count==1\nelse:\n raise RuntimeError('audit canary not rejected')\nif not canary: raise RuntimeError('audit canary count differs')\ncount=0\nsys.argv=[str(runner),'verify',str(bundle),'--manifest-sha256',digest]\nrunpy.run_path(str(runner),run_name='__main__')\nprint(json.dumps(dict(canary_rejected=canary,original_path_events_after_canary=count,subprocesses_allowed=False)))\n",
+  "audit_guard_invocation": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-c",
+    "<audit_guard_python_source>",
+    "<original_checkout>",
+    "<copied_bundle>/benchmark_tools/bundle_publication_review.py",
+    "<copied_bundle>",
+    "d2b696bdeb9d70f13e1d5b7ff6e52808c0267f5f2f28b4e56049b654e2d5557a"
+  ],
+  "tar_validation": {
+    "prefix": "component",
+    "canonical_unique_paths": true,
+    "regular_files_or_directories_only": true,
+    "symlinks_and_special_files_rejected": true,
+    "special_mode_bits_rejected": true,
+    "max_members": 200,
+    "max_bytes": 20000000,
+    "extraction_filter": "data"
+  },
+  "ci_observation": {
+    "observed_utc": "2026-10-02T04:27:17.943646+00:00",
+    "run_id": 36964297930,
+    "source_commit": "c98b11fb02843cdd6fd19af2a52ffb2e2661ee3a",
+    "live_test_jobs": [
+      110704563407,
+      110704563445,
+      110704563453,
+      110704563471,
+      110704563587
+    ],
+    "successful_jobs": [
+      110704563306,
+      110704563428
+    ],
+    "new_test_log_inspected": false,
+    "manual_restart": false
+  }
+}

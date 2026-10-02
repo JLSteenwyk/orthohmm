@@ -7,6 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [seven-page manuscript review archive](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
+now verifies after fresh extraction outside the checkout: 55 payload files and
+34 direct local targets. It preserves the committed review and its render-time
+ledger, not current CI status. Transitive evidence, complete native workflows,
+raw-data rights and public release remain outside this review-only component.
+
 The [native CI utility follow-up](results/CI_NATIVE_UTILITIES_20261002.md)
 records bounded macOS confirmation of fresh CPU kernels and cgroup/tmpfs test
 fixtures. It adds explicit GNU Time/Pandoc test setup with 100 passing local

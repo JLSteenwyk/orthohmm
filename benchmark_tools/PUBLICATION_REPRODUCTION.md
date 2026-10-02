@@ -112,6 +112,15 @@ Use its relative HTML entrypoint for direct navigation; linked-document
 transitive assets and raw inputs remain excluded. This is a review archive,
 not inference reproduction, complete rights clearance or a public release.
 
+The [seven-page review archive](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
+now packages the later committed main-text review, including complete QfO
+parameter/FAS/numerical-restoration findings. Its 55 payload files and 34 direct
+local targets verify after fresh extraction outside the checkout under isolated
+standard-library Python. An audit guard rejects original-checkout reads and
+subprocesses during a second verification. The render-time ledger stays historical;
+this direct-asset archive does not include transitive evidence/raw inputs or
+close complete executable-release, rights or controlled-timing requirements.
+
 | Path | Verified scope | Does not establish |
 | --- | --- | --- |
 | [Full native recovery, jobs 22326/22327](results/FULL_RECOVERY_ORTHOBENCH_RESULT_22326.md) | Fresh search/trees; all OrthoBench groups and 70 family scores reproduced | Independent accuracy or controlled timing |

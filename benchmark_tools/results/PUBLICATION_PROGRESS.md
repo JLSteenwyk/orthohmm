@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Seven Page Review Archive Restored Outside Checkout (2026-10-02)
+
+Previous goal turn is progress at pushed c98b11fb: 94 ordered local cases
+pass without environment deltas. Read the objective/current ledger and observe
+the actual automatic source-c98 CI handle. At 04:27:17 UTC all five test jobs
+are live; CPU-wheel/docs succeed. No new test log or full-suite outcome is
+inspected, and no existing run is restarted. Timing stays deferred without
+host contention polls, coordination questions or DGX/workload/service actions.
+
+Close a separately identified packaging gap: the already reviewed seven-page
+main text did not have a new direct-asset archive. Use unchanged committed
+exporter c98, reviewed artifacts 55e207e3 and exact render-time ledger b7449437,
+not current dirty files or later ledger prose. No rendering, visual inspection,
+scientific inference/scoring/plotting or completed calibration is repeated.
+
+Actual new export verifies **55 payload files, 4,262,679 bytes, 34 direct local
+targets and 35 HTML link occurrences**. All 67 tar members pass canonical/
+unique regular-file/directory, mode and size checks before data-filtered
+extraction into fresh `/tmp` outside the checkout. Isolated standard-library
+Python with no Git on PATH returns exactly the same verified result. A second
+child rejects its original-checkout-read canary and then records zero original-
+path events, with subprocess execution forbidden. Temporary extraction is
+removed. Audit is Python-level, not OS containment or cross-host inference.
+
+Archive/index/interpreter/manual-review pins and all ten stage/page visual
+bindings match. The exact guard source and build/verify argv are retained in
+[archive evidence and scope](PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md).
+Older review archives/receipts and negative findings stay unchanged; archived
+render-time job descriptions do not establish current execution state.
+
+Update reproduction/claim indexes to close only this review-copy archive gap.
+Transitive evidence/raw inputs, other-QfO uncertainty, original TreeFam sources,
+controlled resource evidence, final reconciliation, dependency/data rights,
+versioned executable release and public deposition remain open. Scientific
+settings, endpoint values, admission and the full publication goal are unchanged.
+
 ## Contained Launcher Environment And Portable Replay Fixture (2026-10-02)
 
 Timing remains deferred: no quiet window is needed for current scoring,

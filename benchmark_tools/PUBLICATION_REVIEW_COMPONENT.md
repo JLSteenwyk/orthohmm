@@ -6,6 +6,11 @@ receipts with page images. It reads committed Git blobs, not current worktree
 files, and preserves their relative paths. The independently pinned index
 permits offline verification using only the Python standard library.
 
+For the later seven-page review, use the explicit committed stage selection
+and index digest in the [2 October archive receipt](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md).
+That 55-file snapshot passes fresh-extraction verification outside the checkout;
+the historical defaults and older archives below remain unchanged.
+
 The default historical review revision is `e2e96746b21d552ea46b9ce63634519f9bae1f82`. The ledger
 snapshot used during rendering is its parent,
 `fdfe7fb70c583a6ad4ea5c4ae06dd2663d31b07f`; the later ledger must not replace

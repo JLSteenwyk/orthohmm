@@ -25,7 +25,11 @@ Main text and render-time ledger are the committed snapshot
 `b74494376002dc87094aeb5ad733c9b0ea45cdd4`. Later ledger updates are not
 substituted into those historical render inputs. The previous HTML/PDF
 and review archives remain intact. This new review has not been packaged
-as a new review archive and is not a complete executable study release.
+as a new review archive at this historical review checkpoint and is not a
+complete executable study release. The subsequent
+[2 October direct-review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
+packages this exact snapshot and verifies fresh extraction; it does not replace
+the historical render-time ledger or establish broader release completion.
 
 Before rendering, the four new QfO prose checks plus existing current-main,
 OrthoBench, citation and rendering tests passed **31 cases in 2.82 seconds**.
