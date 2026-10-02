@@ -1,0 +1,94 @@
+{
+  "base_commit": "8b48b8bf6659fff3276383031d95a4b9cc2c9df4",
+  "status": "existing_rss_capability_contract_locally_validated",
+  "remote_corrections_confirmed": false,
+  "production_modules_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "observed_remote_failure": {
+    "run_id": 36954409877,
+    "source_commit": "bec79e1d79e86902a9f91635953449fe5dfa7fe4",
+    "job_id": 110674083803,
+    "platform": "macOS",
+    "python": "3.12",
+    "log": {
+      "path": "benchmarks/work/ci_remote_bec79e1d_20261001/110674083803.log",
+      "bytes": 3162127,
+      "sha256": "b05d4ca8a8f23f0f4890e4bb5eb2c96e50d06b66b9abfc22aaee4d390a461e6a"
+    },
+    "summary": {"passed": 13458, "failed": 198, "errors": 28, "skipped": 96, "warnings": 30, "duration_s": 411.44},
+    "metrics_tests_failed_on_positive_zero_rss": [
+      "test_process_tree_rss_includes_current_process",
+      "test_pipeline_metrics_writes_stage_counts_and_metadata"
+    ],
+    "sibling_causes_inferred": false
+  },
+  "existing_ci": [
+    {
+      "run_id": 36955273317,
+      "source_commit": "9674fe932a62612597f689082405b3f5af5c4675",
+      "observed_utc": "2026-10-02T02:44:06.175061+00:00",
+      "all_five_test_jobs": "failure",
+      "cpu_wheel": "success",
+      "docs": "success",
+      "logs_inspected_here": false,
+      "includes_new_rss_tests": false
+    },
+    {
+      "run_id": 36956342884,
+      "source_commit": "8b48b8bf6659fff3276383031d95a4b9cc2c9df4",
+      "observed_utc": "2026-10-02T02:44:06.637542+00:00",
+      "test_jobs_in_progress": [110680012860, 110680012866, 110680012927, 110680012959, 110680012962],
+      "cpu_wheel": "success",
+      "docs": "success",
+      "includes_new_rss_tests": false
+    }
+  ],
+  "module_cases": {
+    "tests.unit.test_metrics": 17,
+    "tests.unit.test_audit_ob_orthohmm_retained": 10,
+    "tests.unit.test_assemble_orthobench_factorial": 27
+  },
+  "new_cases_included": 17,
+  "native_linux_validation": {
+    "cases": 54, "passed": 54, "failures": 0, "errors": 0, "skipped": 0,
+    "pytest_duration_s": 1.09, "junit_suite_duration_s": 0.994,
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/rss_capability_tests.xml",
+      "bytes": 7411,
+      "sha256": "0da0060fd6cdbfbd91c8d3f2079b9e73224889dd5930e295e9b332fa5c933a67"
+    }
+  },
+  "proc_absence_simulation": {
+    "host_platform": "Linux",
+    "stubbed_before_test_module_import": ["Path.read_text for /proc/ paths", "Path.exists for /proc/ paths"],
+    "non_proc_file_io": "unchanged",
+    "cases": 54, "passed": 53, "failures": 0, "errors": 0, "skipped": 1,
+    "pytest_duration_s": 1.06, "junit_suite_duration_s": 0.979,
+    "skipped_case": "tests.unit.test_metrics.test_process_tree_rss_includes_current_process",
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/rss_proc_absence_tests.xml",
+      "bytes": 7628,
+      "sha256": "88f577882be8530067fab0c6b0b0ee44703a543fe73840fb3d88591352358ea6"
+    }
+  },
+  "sources": [
+    {"path": "tests/unit/test_metrics.py", "bytes": 5894, "sha256": "dc8571a0f59bfd5b5c955fba4ebc2a8da4a72e667cbefe978118959393a8c850"},
+    {"path": "tests/unit/test_audit_ob_orthohmm_retained.py", "bytes": 1425, "sha256": "764db2b275bfbe1bee4b3ab535037730398f717e2a1909cdb808e1f95502e501"},
+    {"path": "tests/unit/test_assemble_orthobench_factorial.py", "bytes": 8306, "sha256": "f4169f042d35dca5f773a38ae543ee4a86c42902194a2b0da7b7f6f7552b5ffa"}
+  ],
+  "unchanged_inputs": [
+    {"path": "orthohmm/metrics.py", "bytes": 6812, "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"},
+    {"path": "benchmark_tools/audit_ob_orthohmm_retained.py", "bytes": 6297, "sha256": "28beaead2f74464d33ada06254139de9b7d042f8d2e6ec2149c2388c7f198a3b"},
+    {"path": "benchmark_tools/assemble_orthobench_factorial.py", "bytes": 11294, "sha256": "27da671b14ddd01e735fe6596d659fdcdd9b4f7c44017a5f79bb1d4872a034b2"}
+  ],
+  "limitations": [
+    "Native and simulated panels overlap; simulation is not macOS execution.",
+    "An unavailable convention with zero sentinels is rejected by both unchanged resource readers, not admitted as measured zero memory.",
+    "Availability depends on file existence, not complete or successful descendant reads; sampled sum is not an exact peak or unique physical memory.",
+    "No production collector or resource semantics changed and no controlled timing admission follows.",
+    "Broader CI, comparable resources, remaining uncertainty, source/rights and final release remain unfinished."
+  ]
+}

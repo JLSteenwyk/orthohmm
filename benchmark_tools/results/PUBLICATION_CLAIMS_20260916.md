@@ -126,6 +126,13 @@ Six direct guard cases and an explicit prospective test Bash setup now have 261
 passing local checks, not remote correction or historical scientific admission.
 Archived scripts and rejection expectations remain unchanged; release workflows
 still require an explicitly bound and verified shell.
+The [RSS capability tests](CI_RSS_CAPABILITY_TESTS_20261001.md) retain native
+positive-RSS observation on Linux and explicitly test unavailable export and
+resource-reader rejection. All 54 local cases pass; deliberate proc absence
+gives 53 pass and one native skip within that same scope, not macOS confirmation.
+Production semantics remain unchanged. These checks neither certify complete
+process sampling nor supply controlled resource evidence; remote confirmation
+and broader release requirements remain open.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

@@ -1,5 +1,34 @@
 # Publication Progress
 
+## RSS Capability Contract Without Resource Admission Changes (2026-10-01)
+
+Continue from pushed 8b48b8bf. Reread goal/ledger; the quiet window is not needed
+now and controlled timing remains deferred. Reuse inspected source-bec macOS
+Python 3.12 log: both original metrics cases fail on positive zero RSS. No new
+remote log or sibling cause inference. At 02:44:06 UTC source-9674 has five
+terminal test failures and wheel/docs success; source-8b has wheel/docs success
+and five live test jobs. Observe actual handles without restart.
+
+Test the existing contract rather than changing it: positive RSS requires native
+proc capability, but pipeline export runs with explicit unavailable sentinels.
+Add absent-proc, disabled sampling, reader/conversion/traversal and failure/exit
+evidence tests. Both unchanged OrthoBench resource readers reject unavailable
+zero RSS; no fallback or measured-memory acceptance is added.
+
+**54 focused Linux cases pass in 1.09 seconds**, zero failures/errors/skips,
+17 new cases included. Separate deliberate proc absence before module import:
+**53 pass and one native RSS skip in 1.06 seconds**, no failures/errors. Same
+54-case scope, not additive or actual macOS. Three production modules byte-equal
+to base commit; JUnit/test pins retained.
+[Evidence and sampling limitations](CI_RSS_CAPABILITY_TESTS_20261001.md).
+
+Commit/push the validated test-only milestone and observe its actual automatic
+CI. Remote Bash/RSS correction and broader release portability remain open.
+No defaults/scores/native scientific runs, DGX, host polls/questions, unrelated
+workload/services or package upgrades. All owned commands terminate. Publication
+goal remains active/incomplete: controlled resources, remaining uncertainty,
+source/rights and final release/archive still require work.
+
 ## Observed Fail Open Shell Guards And Prospective CI Runtime (2026-10-01)
 
 Previous turn is progress at pushed 9674fe93. Reread objective/ledger and inspect

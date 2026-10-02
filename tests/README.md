@@ -58,6 +58,13 @@ skips rather than mocked native results. Fake-service capture hashes its own
 temporary declared file. The [capability validation](../benchmark_tools/results/CI_AFFINITY_FIXTURES_20261001.md)
 distinguishes actual Linux execution from a deliberate API-absence simulation.
 
+Pipeline metrics export is tested with and without Linux `/proc`: absent RSS
+retains the explicit `unavailable` convention and zero sentinels, not measured
+zero memory. Only the positive native RSS observation requires `/proc`;
+synthetic readers, export and rejection cases still run. Both OrthoBench resource
+readers reject unavailable memory. See the
+[capability checks and sampling limits](../benchmark_tools/results/CI_RSS_CAPABILITY_TESTS_20261001.md).
+
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude
 the `slow` marker, not the top-level regression cases. CI keeps every Python

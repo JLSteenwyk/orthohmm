@@ -31,3 +31,9 @@ def test_reject_time_mismatch(key, value):
     data[key] = value
     with pytest.raises(ValueError):
         timing(data)
+
+
+def test_unavailable_zero_rss_is_not_admitted():
+    data = dict(metrics(), rss_measurement="unavailable", peak_process_tree_rss_bytes=0)
+    with pytest.raises(ValueError, match="memory semantics"):
+        timing(data)

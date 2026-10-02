@@ -96,6 +96,12 @@ def test_rejects_invalid_or_incommensurate_resources(key, value):
         assembler.coverage_and_resources([{"a"}], {"a": "s1"}, metrics)
 
 
+def test_unavailable_zero_rss_is_not_admitted():
+    metrics = dict(resource_metrics(), rss_measurement="unavailable", peak_process_tree_rss_bytes=0)
+    with pytest.raises(ValueError, match="memory accounting convention"):
+        assembler.coverage_and_resources([{"a"}], {"a": "s1"}, metrics)
+
+
 def test_missing_input_gene_is_not_reported_as_full_coverage():
     with pytest.raises(ValueError):
         assembler.coverage_and_resources([{"a"}], {"a": "s1", "b": "s2"})
