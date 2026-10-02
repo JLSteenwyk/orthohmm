@@ -1,0 +1,359 @@
+{
+  "base_commit": "1b15b57de176484e0ec5e6020248941053a4fb56",
+  "bootstrap_patch": "26.2.1",
+  "comparisons": [
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-h35f-9h28-mq5c",
+      "locked_versions": [
+        "83.0.0"
+      ],
+      "number": 113,
+      "package": "setuptools",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-9hw9-ch79-4vh6",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 112,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-vjc4-5qp5-m44j",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 111,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-pg7v-jwj7-p798",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 110,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-jjj6-mw9f-p565",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 109,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-6r8x-57c9-28j4",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 108,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-fj7v-r99m-22gq",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 107,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-xj96-63gp-2gmr",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 106,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-4x4j-2g7c-83w6",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 105,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-phj9-mv4w-65pm",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 104,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-45hq-cxwh-f6vc",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 103,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-5x94-69rx-g8h2",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 102,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-8v84-f9pq-wr9x",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 101,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-62p4-gmf7-7g93",
+      "locked_versions": [
+        "12.3.0"
+      ],
+      "number": 100,
+      "package": "pillow",
+      "status": "outside_reported_range"
+    },
+    {
+      "affected_locked_versions": [],
+      "ghsa_id": "GHSA-x3vf-39hj-gxr4",
+      "locked_versions": [
+        "1.87"
+      ],
+      "number": 99,
+      "package": "biopython",
+      "status": "outside_reported_range"
+    }
+  ],
+  "comprehensive_security_clearance": false,
+  "environment": "benchmarks/work/release_alert_refresh_20261001/venv",
+  "evidence": [
+    {
+      "bytes": 353842,
+      "path": "benchmarks/work/release_alert_refresh_20261001/alerts.json",
+      "sha256": "7d9bab0e4322af2c4b166fbe6a49d151d9499b16b7144ce4ff8dc3f51e4db998"
+    },
+    {
+      "bytes": 590674,
+      "path": "benchmarks/work/release_alert_refresh_20261001/install_report.json",
+      "sha256": "b8ee522c3f4ea326f778148e1e4c437a5829a3eae30e51da4ca64ebaf8c2c70c"
+    },
+    {
+      "bytes": 9288,
+      "path": "benchmarks/work/release_alert_refresh_20261001/install.log",
+      "sha256": "18bb0eccfed83e91328945ab666c55cceb3d246bcb57ef13c8b2f34add4e1377"
+    },
+    {
+      "bytes": 68823,
+      "path": "benchmarks/work/release_alert_refresh_20261001/tests.xml",
+      "sha256": "16a1eded263c723493a6c2823d13c1464aea000c62907af646ec09f40001b754"
+    },
+    {
+      "bytes": 1131,
+      "path": "benchmarks/work/release_alert_refresh_20261001/tests.log",
+      "sha256": "32a55ef28456cb1e3c566a5bec8c7f0a76dca5c73eeec97cd5c391f46bd502d9"
+    },
+    {
+      "bytes": 1483,
+      "path": "benchmarks/work/release_alert_refresh_20261001/inventory.json",
+      "sha256": "ff3dfaedb11dea01fd21b531e1c98a426c6eb7f243a537a6afff346bf36c3c36"
+    },
+    {
+      "bytes": 4914,
+      "path": "benchmarks/work/release_alert_refresh_20261001/bootstrap_patch.json",
+      "sha256": "7bee7d16f0e47ce7a505f44a6dd9e8dabf38a8c96efec149daf6a5101626bef0"
+    },
+    {
+      "bytes": 494,
+      "path": "benchmarks/work/release_alert_refresh_20261001/bootstrap_patch.log",
+      "sha256": "a75777b7f5e2e98c3d0c47b2ecfc20b5d41ebf4d6db8be85becdb05494f99fcf"
+    },
+    {
+      "bytes": 1485,
+      "path": "benchmarks/work/release_alert_refresh_20261001/inventory_patched.json",
+      "sha256": "a50768d4cd28db089040cc84160711af0a2eeac012a154b0eb54de03b0504219"
+    }
+  ],
+  "limitations": [
+    "Only the retained test-manifest alert ranges are covered, not all dependencies or exploitability.",
+    "Forty alerts on historical locks remain separate; no alert dismissal or historical-lock edits.",
+    "Fresh test bootstrap initially uses ensurepip pip 24.0; patched privately to 26.2.1 after the 511-test pass, with pip check passing again.",
+    "Focused local execution uses checkout sources and retained native libraries, not frozen inference or a clean installed-wheel proof.",
+    "Remote post-change tests and actual repository alert closure require separate observation."
+  ],
+  "publication_ready": false,
+  "python": "3.12.3",
+  "repository_alerts_closed": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "selected_installed_artifacts": [
+    {
+      "download": {
+        "archive_info": {
+          "hash": "sha256=fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249",
+          "hashes": {
+            "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249"
+          }
+        },
+        "url": "https://files.pythonhosted.org/packages/8c/3d/1e1db36cfd41f895d266b103df00ca5b3cbe965184df824dec5c08c6b803/numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+      },
+      "name": "numpy",
+      "requires_python": ">=3.10",
+      "version": "2.2.6"
+    },
+    {
+      "download": {
+        "archive_info": {
+          "hash": "sha256=65ba69ef0273e983a9036c2a228142bc34266179a5f03660fc281d332d718630",
+          "hashes": {
+            "sha256": "65ba69ef0273e983a9036c2a228142bc34266179a5f03660fc281d332d718630"
+          }
+        },
+        "url": "https://files.pythonhosted.org/packages/a9/28/7898c2061966d6d62f0bb2e53cd5e1b3bb3053d2bc431f299802faca23cc/biopython-1.87-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
+      },
+      "name": "biopython",
+      "requires_python": ">=3.10",
+      "version": "1.87"
+    },
+    {
+      "download": {
+        "archive_info": {
+          "hash": "sha256=78cb2c6865a35ab8ff8b75fd122f6033b92a62c82801110e48ddd6c936a45d91",
+          "hashes": {
+            "sha256": "78cb2c6865a35ab8ff8b75fd122f6033b92a62c82801110e48ddd6c936a45d91"
+          }
+        },
+        "url": "https://files.pythonhosted.org/packages/84/21/a35af28dcc61f37ed850a2d64c65c701321dfbf25085e469d5559360cbbf/pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+      },
+      "name": "pillow",
+      "requires_python": ">=3.10",
+      "version": "12.3.0"
+    },
+    {
+      "download": {
+        "archive_info": {
+          "hash": "sha256=29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3",
+          "hashes": {
+            "sha256": "29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3"
+          }
+        },
+        "url": "https://files.pythonhosted.org/packages/5d/40/e1e72872c6354b306daef1703549e8e83b4d43cfea356311bf722a043752/setuptools-83.0.0-py3-none-any.whl"
+      },
+      "name": "setuptools",
+      "requires_python": ">=3.10",
+      "version": "83.0.0"
+    }
+  ],
+  "shared_packages_modified": false,
+  "snapshot": {
+    "bytes": 10408,
+    "path": "benchmark_tools/results/test_dependency_advisories_20261001.json",
+    "sha256": "445d797f00319f546f416aefa271526e9b4e94cce80f4f060f73f99e8c567b50"
+  },
+  "sources": [
+    {
+      "bytes": 514,
+      "path": "tests/requirements.txt",
+      "sha256": "70e26810b02f82bf9b22f7c2f01187bd69ebb84479a2582c33cec282397c7fea"
+    },
+    {
+      "bytes": 4117,
+      "path": "tests/unit/test_declared_test_dependencies.py",
+      "sha256": "b60c88716543def2f2f7fdfa36ff95eb1cfcc78234dab133a10a7d9b0679266c"
+    },
+    {
+      "bytes": 2783,
+      "path": "benchmark_tools/audit_dependency_lock.py",
+      "sha256": "cd1638d3e0f3f40c3a58748a4c77b761a009e97af29844106b6e748bdc31713c"
+    }
+  ],
+  "status": "test_pins_outside_15_retained_advisory_ranges_with_fresh_local_validation",
+  "tests": {
+    "bootstrap_pip_during_tests": "24.0",
+    "cases": 511,
+    "errors": 0,
+    "failures": 0,
+    "junit_suite_duration_s": 71.726,
+    "modules": [
+      "tests.unit.test_declared_test_dependencies",
+      "tests.unit.test_export_publication_readers",
+      "tests.unit.test_parser.TestParser",
+      "tests.unit.test_plot_corrected_qfo_endpoints",
+      "tests.unit.test_plot_corrected_qfo_factorial",
+      "tests.unit.test_plot_corrected_swiss_comparison",
+      "tests.unit.test_plot_corrected_swiss_strata",
+      "tests.unit.test_plot_dgx_descriptive_resources",
+      "tests.unit.test_plot_forced_candidate_diagnostic",
+      "tests.unit.test_plot_matched_graph",
+      "tests.unit.test_plot_ob_complete_strata",
+      "tests.unit.test_plot_ob_complete_uncertainty",
+      "tests.unit.test_plot_ob_parameter_neighborhood",
+      "tests.unit.test_plot_ob_sequence_search",
+      "tests.unit.test_plot_ob_stratified_errors",
+      "tests.unit.test_plot_orthobench_factorial",
+      "tests.unit.test_plot_publication_accuracy",
+      "tests.unit.test_plot_publication_method",
+      "tests.unit.test_plot_qfo_factorial",
+      "tests.unit.test_plot_qfo_hit_coverage",
+      "tests.unit.test_plot_qfo_parameter_neighborhood",
+      "tests.unit.test_plot_qfo_scored_pair_decomposition",
+      "tests.unit.test_plot_qfo_sequence_search",
+      "tests.unit.test_plot_qfo_swiss_comparators",
+      "tests.unit.test_plot_simulation_evidence",
+      "tests.unit.test_plot_simulation_tree_robustness",
+      "tests.unit.test_plot_species_tree_robustness",
+      "tests.unit.test_plot_swiss_descriptive_features",
+      "tests.unit.test_plot_swiss_domain_strata",
+      "tests.unit.test_plot_wgd_application",
+      "tests.unit.test_plot_ygob_overlap_strata",
+      "tests.unit.test_plot_ygob_validation",
+      "tests.unit.test_reproduce_corrected_factorial",
+      "tests.unit.test_reproduce_corrected_swiss_comparison",
+      "tests.unit.test_reproduce_corrected_swiss_strata",
+      "tests.unit.test_reproduce_matched_graph_statistics",
+      "tests.unit.test_reproduce_orthobench_factorial",
+      "tests.unit.test_reproduce_portable_ob_score",
+      "tests.unit.test_reproduce_qfo_parameter_uncertainty",
+      "tests.unit.test_reproduce_qfo_sequence",
+      "tests.unit.test_reproduce_swiss_comparators",
+      "tests.unit.test_run_ci_cpu_wheel",
+      "tests.unit.test_score_matched_graph",
+      "tests.unit.test_setup_native_wheel",
+      "tests.unit.test_validate_reader_upgrade",
+      "tests.unit.test_verify_cpu_wheel_install",
+      "tests.unit.test_verify_frozen_source_archive"
+    ],
+    "new_cases_included": 2,
+    "pytest_duration_s": 71.77,
+    "skipped": 0,
+    "warnings": 22
+  }
+}

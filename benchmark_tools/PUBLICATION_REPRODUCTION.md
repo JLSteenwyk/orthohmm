@@ -68,6 +68,13 @@ retains one actual log, corrects the two test checkouts' missing Git history
 and adds exact mismatch values without loosening the renderer guard. Sixty
 focused local cases pass; remote confirmation and the actual replay differences
 are pending. No frozen score, inference setting or scientific claim changes.
+The [test-security and remote replay follow-up](results/TEST_DEPENDENCY_SECURITY_20261001.md)
+confirms all ten actual frozen-source archive cases pass in the inspected
+macOS log. Its renderer has one one-ULP exploratory recall-interval mismatch;
+F1/bootstrap metadata are equal and the guard remains unchanged. Test-only
+security pins now avoid fifteen retained alert ranges; 511 focused cases pass
+in a new private environment. Whole-suite, portable numerical admission and
+actual repository-alert closure remain separate open requirements.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

@@ -7,8 +7,41 @@ from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 import pytest
 
+from benchmark_tools.audit_dependency_lock import evaluate
+
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def test_current_test_pins_avoid_retained_advisory_ranges():
+    snapshot = json.loads((ROOT / "benchmark_tools/results/test_dependency_advisories_20261001.json").read_text())
+    assert snapshot["repository"] == "JLSteenwyk/orthohmm"
+    assert snapshot["scope"] == "tests/requirements.txt only"
+    alerts = snapshot["alerts"]
+    assert len(alerts) == snapshot["selected_alerts"] == 15
+    assert all(a["state"] == "open" and a["dependency"]["manifest_path"] == "tests/requirements.txt"
+               and a["dependency"]["package"]["ecosystem"] == "pip" for a in alerts)
+    assert len({a["number"] for a in alerts}) == len(alerts)
+    requirements = [Requirement(line) for line in (ROOT / "tests/requirements.txt").read_text().splitlines()
+                    if line.strip() and not line.lstrip().startswith("#")]
+    packages = []
+    for requirement in requirements:
+        if requirement.specifier:
+            pins = list(requirement.specifier)
+            assert len(pins) == 1 and pins[0].operator == "=="
+            packages.append(dict(name=requirement.name, version=pins[0].version))
+    comparisons = evaluate(dict(package=packages), alerts)
+    assert all(row["status"] == "outside_reported_range" for row in comparisons), comparisons
+
+
+def test_retained_snapshot_detects_the_previous_test_pins():
+    snapshot = json.loads((ROOT / "benchmark_tools/results/test_dependency_advisories_20261001.json").read_text())
+    previous = dict(package=[dict(name="biopython", version="1.86"),
+                             dict(name="pillow", version="12.2.0"),
+                             dict(name="setuptools", version="81.0.0")])
+    comparisons = evaluate(previous, snapshot["alerts"])
+    assert len(comparisons) == 15
+    assert all(row["status"] == "affected" for row in comparisons), comparisons
 
 
 @pytest.mark.parametrize("distribution,module", [

@@ -1,5 +1,12 @@
 # Release Security Scope
 
+The [1 October test-dependency follow-up](TEST_DEPENDENCY_SECURITY_20261001.md)
+supersedes earlier repository-wide counts with 55 open alerts: fifteen on
+current test pins and forty on historical locks. New test pins avoid the
+selected fifteen ranges; 511 focused cases pass in a fresh private environment.
+This does not close repository alerts, clear old locks or establish native/OS,
+whole-runtime or comprehensive security. Earlier snapshots below are historical.
+
 The [separate patched timing candidate](THREADRIPPER_PATCHED_RUNTIME_20260928.md)
 now has zero matches against a newer 40-alert snapshot. These 40 include the
 same advisories on both historical private locks; this does not clear old

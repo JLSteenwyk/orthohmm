@@ -1,0 +1,61 @@
+{
+  "absolute_difference": 1.1102230246251565e-16,
+  "bootstrap_metadata_differences": 0,
+  "count_reproduction_cases_passed": 7,
+  "f1_contrast_differences": 0,
+  "frozen_source_archive_cases_passed": 10,
+  "guard_differences": [
+    {
+      "path": [
+        "contrasts",
+        "uneven_taxa",
+        "recall",
+        "marginal_95_percent_ci",
+        0
+      ],
+      "recomputed": -0.7992007992008032,
+      "reported": -0.7992007992008033
+    }
+  ],
+  "head_sha": "1b15b57de176484e0ec5e6020248941053a4fb56",
+  "interpretation": "Exactly one floating-value mismatch in the checked contrasts/bootstrap sections; lower exploratory recall interval, not plotted F1. No CPU-kernel cause isolated and no admission policy changed.",
+  "job_conclusion": "failure",
+  "job_id": 110658992727,
+  "latest_run_observation_utc": "2026-10-02T01:23:23.238132+00:00",
+  "latest_run_status": "in_progress",
+  "latest_job_conclusions": {
+    "110658992411": "success",
+    "110658992553": "failure",
+    "110658992600": "success",
+    "110658992661": null,
+    "110658992687": "failure",
+    "110658992727": "failure",
+    "110658992788": "failure"
+  },
+  "log": {
+    "bytes": 3172475,
+    "path": "benchmarks/work/ci_remote_1b15b57d_20261001/110658992727.log",
+    "sha256": "46f3fe7b138a2bc8beffcc768a1feba13bc43c09e566f0cd67a5ec10212a57f7"
+  },
+  "observation_utc": "2026-10-02T01:17:38.080770+00:00",
+  "publication_ready": false,
+  "pytest": {
+    "duration_s": 421.2,
+    "errors": 38,
+    "failed": 189,
+    "passed": 13395,
+    "skipped": 96,
+    "warnings": 30
+  },
+  "python": "3.12",
+  "renderer_cases": {
+    "failed": 1,
+    "passed": 11
+  },
+  "reported_value_ulp": 1.1102230246251565e-16,
+  "run_id": 36949483608,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "status": "actual_mac_replay_difference_observed_guard_unchanged",
+  "ulps": 1
+}

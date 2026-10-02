@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Test Security And Observed One-ULP Replay Difference (2026-10-01)
+
+Previous turn is progress at pushed 1b15b57d. Re-read objective and ledger;
+inspect its actual CI handle 36949483608. Linux wheel/docs pass; Python 3.12
+terminates failure while siblings remain live at the inspected snapshot.
+Download one log: 13,395 passed, 189 failed, 38 errors, 96 skipped, 421.20s.
+All ten frozen-source archive tests pass. Renderer reports one unequal leaf:
+lower uneven-taxa recall interval differs by one ULP (1.1102230246251565e-16).
+No checked F1/bootstrap metadata differs; seven count-reproduction cases pass.
+Do not infer the kernel cause or silently alter admission/historical results.
+Portable numerical comparison remains an explicit follow-up decision.
+Later 01:23:23 UTC checkpoint: all four fast jobs are terminal failure;
+full-suite job 110658992661 remains live. Only the Python 3.12 log is inspected.
+
+Read-only security snapshot has 55 open alerts: 15 on current test requirements,
+40 on historical locks. Preserve raw-response pin and all selected ranges;
+no dismissal or historical edits. Update only test Biopython 1.87, Pillow
+12.3.0 and setuptools 83.0.0; retain NumPy 2.2.6/application requirements.
+Two new cases prove old pins match all fifteen and new pins avoid their ranges.
+
+Fresh private Python 3.12 install/check pass. **511 focused cases pass in
+71.77 seconds**, no failures/errors/skips, including two new cases and plot/
+count-reproduction/reader/packaging/archive checks. Twenty-two syntax warnings
+remain. Patch only this new environment's pip to 26.2.1 afterward; preserve
+both inventories and pass pip check again. Do not relabel the earlier tests
+or claim comprehensive security. Existing shared/frozen environments unchanged.
+
+[Evidence and remaining boundaries](TEST_DEPENDENCY_SECURITY_20261001.md).
+Commit/push this tested milestone and observe automatic CI without manual
+retries. All local commands terminate. No scientific/default/score changes,
+expensive benchmark reruns, timing launch/poll/question, DGX or unrelated
+job/service work. Goal remains active/incomplete; numerical admission,
+uncertainty/source/rights, controlled resources and public release remain open.
+
 ## Frozen History And Exact Renderer Diagnostics (2026-10-01)
 
 Previous goal turn is a timing clarification with no new execution or edits.

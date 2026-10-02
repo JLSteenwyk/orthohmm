@@ -14,14 +14,19 @@ Both CI test jobs install this file and check that the parser imports before
 running tests. These are test dependencies, not application runtime
 requirements or a complete lock for the publication benchmark environments.
 The file also pins libraries used by workflow, biology, plotting, PDF and
-packaging tests. Their versions match the recorded 1 October local regression;
-they are not substituted into historical scientific environments. A clean
+packaging tests. Biopython, Pillow and setuptools have subsequent test-only
+security updates; other pins retain the recorded local choices. They are not
+substituted into historical scientific environments. A clean
 test environment needs these packages even when optional application features
 or publication workflows are not being executed.
 NumPy is pinned to 2.2.6 because retained factorial, sequence-control and
 matched-graph numerical replay compares the engine version as well as the
 statistics. This preserves exact provenance comparisons; it does not loosen
 their equality checks or change the application's broader runtime requirement.
+The [security follow-up](../benchmark_tools/results/TEST_DEPENDENCY_SECURITY_20261001.md)
+retains fifteen test-manifest advisory ranges, regression checks against old
+and current pins, and fresh private-environment validation. Range exclusion
+does not establish complete security or clear historical benchmark locks.
 
 Actual affinity/cgroup observations require Linux facilities. Importing the
 observer and testing it with injected readers does not require those facilities;

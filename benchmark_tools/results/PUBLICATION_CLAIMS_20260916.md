@@ -93,6 +93,13 @@ objects and an unexplained exact replay rejection. Test checkouts now request
 full history and the rejection exposes exact values; admission remains strict.
 Sixty focused local cases pass. Remote outcomes and numerical cause are not
 yet established; no broad compatibility or scientific advantage is inferred.
+The [actual remote diagnostic and test-security follow-up](TEST_DEPENDENCY_SECURITY_20261001.md)
+now confirms ten frozen-source archive tests pass in one macOS log and identifies
+one one-ULP exploratory recall-interval mismatch, without a F1/bootstrap-metadata
+change or isolated kernel cause. The exact guard and historical score remain
+unchanged. Three test-only security pins avoid fifteen retained advisory ranges;
+511 focused private-environment cases pass. No full matrix, benchmark-runtime,
+comprehensive security or release clearance follows.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
