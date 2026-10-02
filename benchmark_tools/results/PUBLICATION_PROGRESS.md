@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Retained Test Bindings And Standalone Source Guard (2026-10-02)
+
+Previous goal turn is progress at pushed 2d0be496: 183 ordered cases pass
+without environment deltas. Read objective/ledger/HEAD and observe automatic
+handles. Source-deed test jobs fail with wheel/docs success. Inspect only actual
+source-2d Python 3.11 fast log: 13,734 pass, 36 fail, zero errors, 110 skip,
+30 warnings, 257.70s. Prior 183-case scope gives 182 pass/one pressure-plan
+failure, no skips/errors; 94-case subset now passes fully including malformed
+invocation, real Pandoc and baseline compilation. No broader/sibling claim.
+At 04:57:45 UTC all five source-2d tests fail; wheel/docs succeed. No restart.
+
+Five retained figure/table checks still use historical workstation paths
+despite committed counterparts. Add explicit non-autouse test record bindings
+that change only a copied path, never hashes/bytes or original manifests.
+QfO v1 temporary-work outputs use explicitly selected committed copies checked
+against original hashes. Participant/count/endpoint/pending/semantics and
+no-overwrite checks stay intact; output inventories are strengthened.
+
+Find a narrow integrity gap: standalone OrthoBench descriptive validation
+trusts a claimed source hash without checking the actual file. Two changed-byte
+tests fail before the correction even though JSON content is identical. Full
+figure audit already checks bytes separately, so earlier complete audit
+invalidation is not inferred. Compare the actual source record before parsing;
+add changed same-size/extra-byte and wrong-size guards. Table exporters and
+frozen scientific code/settings/results remain unchanged.
+
+**85 local cases pass in 1.40s**, six new cases included. Actual fresh copied
+scope outside checkout: **85 pass in 1.20s**, zero original-path events after
+rejected canary; all 114 project module origins are copied paths. The 919-file
+tree contains committed source/data plus six pinned owned overlays, not native
+dependencies or raw inference inputs, and is removed afterward. First copied
+attempt has 84 pass/one failure due to an omitted committed TSV; correct only
+staging inventory and retain its failed report. Panels overlap, not additive
+or macOS/native/OS-isolation proof. Four JUnit reports, seventeen payloads,
+source/overlay/log pins and exact guard are retained in
+[evidence and scope](CI_RETAINED_RECORD_BINDINGS_20261002.md).
+
+Commit/push and observe new CI. Remaining snapshot/raw-data/Linux capability/
+process-timeout failures and general production relocation remain open. Current
+review archive stays verified within its 55-file scope. Full executable release,
+uncertainty, source/rights, controlled resources and public deposition remain
+unfinished. No new benchmark/bootstrap/render/archive regeneration/source search,
+host poll/question, DGX or unrelated workload/service action occurs. Timing
+stays deferred and the original publication goal remains active.
+
 ## Additional Synthetic Launcher Environment Isolation (2026-10-02)
 
 Previous goal turn is progress at pushed deed4004: current seven-page direct

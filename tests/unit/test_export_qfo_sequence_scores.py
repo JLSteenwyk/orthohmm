@@ -93,7 +93,7 @@ def test_duplicate_variant_rejected(tmp_path, monkeypatch):
         module.export([source, source], tmp_path / "export")
 
 
-def test_retained_all_hit_scores_match_admitted_native_metrics():
+def test_retained_all_hit_scores_match_admitted_native_metrics(retained_record_at_path):
     from pathlib import Path
 
     base = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
@@ -108,12 +108,15 @@ def test_retained_all_hit_scores_match_admitted_native_metrics():
     assert row["secondary_mean"] == pytest.approx(.6459776807897212)
     assert pending["status"] == "not_admitted"
     assert all(value is None for value in pending["scores"].values())
-    module.check(result["source"])
+    module.check(retained_record_at_path(result["source"], module.__file__))
+    assert len(result["outputs"]) == 2
+    assert {Path(item["path"]).name for item in result["outputs"]} == {"scores.md", "scores.tsv"}
     for item in result["outputs"]:
-        module.check(item)
+        module.check(retained_record_at_path(
+            item, base / "qfo_sequence_scores_20260918_v1" / Path(item["path"]).name))
 
 
-def test_both_retained_sequence_arms_match_admitted_endpoints():
+def test_both_retained_sequence_arms_match_admitted_endpoints(retained_record_at_path):
     from pathlib import Path
 
     base = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
@@ -133,6 +136,9 @@ def test_both_retained_sequence_arms_match_admitted_endpoints():
         assert row["endpoint_details"] == admission["assessment"]["endpoints"]
     assert len(result["rows"]) == 2
     assert result["publication_ready"] is False
-    module.check(result["source"])
+    module.check(retained_record_at_path(result["source"], module.__file__))
+    assert len(result["outputs"]) == 2
+    assert {Path(item["path"]).name for item in result["outputs"]} == {"scores.md", "scores.tsv"}
     for item in result["outputs"]:
-        module.check(item)
+        module.check(retained_record_at_path(
+            item, base / "qfo_sequence_scores_20260918_v2" / Path(item["path"]).name))

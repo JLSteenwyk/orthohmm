@@ -37,6 +37,12 @@ contains six more passing-but-leaking synthetic launch cases using an explicit,
 non-autouse fixture. All 183 ordered local cases pass without environment deltas.
 The earlier replay fix is macOS-confirmed; complete CI/release remains unfinished.
 
+The [retained-record follow-up](results/CI_RETAINED_RECORD_BINDINGS_20261002.md)
+uses explicit checkout test bindings without repinning scores/manifests, and
+strengthens the standalone OrthoBench source-identity guard. All 85 local cases
+also pass in a copied tree with original-checkout reads blocked. This does not
+provide a complete portable native workflow or close remaining release gates.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their

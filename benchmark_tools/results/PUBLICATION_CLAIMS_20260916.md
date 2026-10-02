@@ -197,6 +197,15 @@ deltas. It includes the earlier 94-case panel, not additive or new macOS/full
 confirmation. A leaked PATH is a plausible mechanism, not proven remote causation
 or a diagnosed compiler-skip cause. Remaining snapshot/raw-data/Linux-capability
 and full executable-release failures stay open; scientific scores are unchanged.
+The [retained-record follow-up](CI_RETAINED_RECORD_BINDINGS_20261002.md)
+inspects actual source-2d macOS Python 3.11 fast CI: 182 passes/one historical
+pressure-plan failure in the prior 183-case scope. Malformed-invocation, Pandoc
+and baseline-compilation checks now pass; 36 failures overall remain. Explicit
+checkout bindings and a strengthened standalone OrthoBench source guard give
+85 local passes and the same 85 passes in a copied tree with original-checkout
+reads blocked. Seventeen retained payloads stay unchanged; no score/default or
+manifest repinning follows. These overlapping panels are not new macOS proof,
+native inference or a complete portable executable release.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

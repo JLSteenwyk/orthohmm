@@ -10,6 +10,14 @@ from tests.gnu_time_runtime import GnuTimeSubprocess, select_gnu_time
 
 
 @pytest.fixture
+def retained_record_at_path():
+    """Bind one retained identity to an explicit test path without repinning."""
+    def bind(item, path):
+        return {**item, "path": str(Path(path).resolve())}
+    return bind
+
+
+@pytest.fixture
 def isolated_launcher_environment():
     """Contain explicitly requested in-process standalone launcher tests."""
     original = dict(os.environ)

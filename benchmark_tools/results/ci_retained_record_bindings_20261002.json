@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "base_commit": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+  "scope": "Retained-record checkout test bindings and standalone OrthoBench descriptive-source integrity guard",
+  "scientific_settings_changed": false,
+  "scientific_scores_changed": false,
+  "controlled_timings_admitted": 0,
+  "publication_ready": false,
+  "pre_fix_source_guard": {
+    "passed": 0,
+    "failed": 2,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 0.7,
+    "reason": "Changed same-size or extra-byte source still parsed identically; standalone validator did not reject either mutation. Full figure audit already separately checked identities."
+  },
+  "local_panel": {
+    "passed": 85,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 1.4,
+    "module_cases": {
+      "tests.unit.test_retained_record_at_path": 3,
+      "tests.unit.test_audit_ob_complete_figure": 15,
+      "tests.unit.test_audit_publication_figures": 44,
+      "tests.unit.test_export_qfo_sequence_scores": 15,
+      "tests.unit.test_export_three_kingdoms_comparison": 8
+    }
+  },
+  "first_restoration": {
+    "passed": 84,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 1.35,
+    "reason": "Staging omitted committed Three Kingdoms scores.tsv. Test/code/scientific data unchanged; missing committed file added only to second staging inventory.",
+    "original_path_events_after_canary": 0,
+    "temporary_tree_removed": true
+  },
+  "successful_restoration": {
+    "base_commit": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+    "copied_bytes": 8547104,
+    "copied_files": 919,
+    "copied_inventory_sha256": "de0a0137c8b5e0cd0f589a3254f75f675d273757a480a0e9c08fb4d3f3004e90",
+    "cross_host_verification": false,
+    "guard_python_source": "\nfrom pathlib import Path\nimport hashlib,json,os,sys\nblocked=Path(sys.argv[1]).resolve()\nfresh=Path(sys.argv[2]).resolve()\ncount=0\ndef audit(event,args):\n global count\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  p=Path(os.fsdecode(args[0])).resolve()\n  if p==blocked or p.is_relative_to(blocked):\n   count+=1\n   raise PermissionError('original checkout access rejected')\nsys.addaudithook(audit)\ntry:\n sys.audit('open',str(blocked/'benchmark_tools/results/ob_complete_strata_20260928/report.json'),'r',0)\nexcept PermissionError:\n canary=count==1\nelse: raise RuntimeError('checkout read canary not rejected')\nif not canary: raise RuntimeError('canary count differs')\ncount=0\nsys.path.insert(0,str(fresh))\nos.chdir(fresh)\nimport pytest\nmods=['test_retained_record_at_path.py','test_audit_ob_complete_figure.py','test_audit_publication_figures.py','test_export_qfo_sequence_scores.py','test_export_three_kingdoms_comparison.py']\ncode=pytest.main(['-q','-c','/dev/null','-p','no:cacheprovider',*[str(fresh/'tests/unit'/m) for m in mods],'--junitxml='+str(fresh/'restored-scope.xml')])\norigins={name:str(Path(m.__file__).resolve()) for name,m in sys.modules.items() if name.split('.')[0] in {'benchmark_tools','orthohmm','tests'} and getattr(m,'__file__',None)}\nif any(not Path(p).is_relative_to(fresh) for p in origins.values()): raise RuntimeError('project module loaded outside copied tree')\nprint('RESTORED_SCOPE_OBSERVATION='+json.dumps(dict(pytest_exit=int(code),canary_rejected=canary,original_path_events_after_canary=count,project_modules_checked=len(origins),project_module_origins_within_copy=True,project_module_origins_sha256=hashlib.sha256(json.dumps(origins,sort_keys=True).encode()).hexdigest()),sort_keys=True))\nraise SystemExit(code)\n",
+    "guard_source_sha256": "319744336193c795711538b5fc21d28d34b1e79141efb42a30d6c8632eeac284",
+    "isolated_interpreter": "/home/bizon/anaconda3/bin/python",
+    "observation": {
+      "canary_rejected": true,
+      "original_path_events_after_canary": 0,
+      "project_module_origins_sha256": "c7e022fbee1dcc1eb86664a05dabb2dd0634579c27c99474e9fea625ce1d163b",
+      "project_module_origins_within_copy": true,
+      "project_modules_checked": 114,
+      "pytest_exit": 0
+    },
+    "os_containment": false,
+    "retained_payloads": [
+      {
+        "bytes": 2149,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/figures_ob_complete_uncertainty_20260928/manifest.json",
+        "sha256": "a953b44c8bb6697ea69da70043ddd98f5316f4fa49d2ead7725b869018279d0a"
+      },
+      {
+        "bytes": 159022,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/ob_complete_strata_20260928/report.json",
+        "sha256": "1850a897bef81e7a5a2829dc6770388b4936d767b4e41f1e704ee8ffc4093811"
+      },
+      {
+        "bytes": 1437,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/ob_complete_strata_figure_20260928/manifest.json",
+        "sha256": "dc26e95c94a7284f190da3943c42439821b0964a07f864f300540cb1437d24e2"
+      },
+      {
+        "bytes": 53139,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/ob_complete_uncertainty_20260928.json",
+        "sha256": "f472916ccafa2392b7ca27f39448195b7c3e6b9464772e0ca6775092908f6b75"
+      },
+      {
+        "bytes": 733334,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_all_hits_assessment_admission_21826.json",
+        "sha256": "dc29e5410a274b5e633674bdf42c6578893bbc47912adc7b23ca6893ed917cd2"
+      },
+      {
+        "bytes": 15353,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v1/manifest.json",
+        "sha256": "8bc6745738fca4b94222d2f960df51fba53281279994405fb2bf38dce5fd865d"
+      },
+      {
+        "bytes": 1109,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v1/scores.md",
+        "sha256": "7b76d52bae94970ec7e6cd1df0e136fdc044ebd193dba2ead9d924898019e6bc"
+      },
+      {
+        "bytes": 341,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v1/scores.tsv",
+        "sha256": "30adb48eee08a680f85742d263d4bf200b31c6e1ed0902e943b46ff344570cd3"
+      },
+      {
+        "bytes": 27685,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v2/manifest.json",
+        "sha256": "c576ed16c8af55f79b3687563e7fd103107daa9582e7464d987e89be3245cd9d"
+      },
+      {
+        "bytes": 1113,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v2/scores.md",
+        "sha256": "82c7c9105ef8991138f948a7e5df5d58ccc79ba05aa658fe61fe03e3f0760fac"
+      },
+      {
+        "bytes": 399,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_scores_20260918_v2/scores.tsv",
+        "sha256": "8f368f448590e26e113875b87f8bd56765ceb2fb6062d39fd210f833f7bc342b"
+      },
+      {
+        "bytes": 732951,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/qfo_sequence_top100_assessment_admission_21830.json",
+        "sha256": "439bfb1499e6c1f5e357ec27dc0fd02279d920a6a1a77f9483d008da4849c911"
+      },
+      {
+        "bytes": 170905,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/three_kingdoms_comparison_matched_20260918/comparison.json",
+        "sha256": "ba1ed664ad8ee89ba65b72e7d4d4341eed864957b0720ab1ff4fbe91a398945a"
+      },
+      {
+        "bytes": 1542,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/three_kingdoms_comparison_matched_20260918/scores.tsv",
+        "sha256": "04ae7d096c4e7983eb439ac9255318fa1ae4e591db0883d6df90bc94e6816a06"
+      },
+      {
+        "bytes": 26690,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/three_kingdoms_method_inputs_20260918.json",
+        "sha256": "5dfd585193a6a576f2685388827bd6f8e3f5bad2ffcc715aaf665247cd2345dc"
+      },
+      {
+        "bytes": 14187,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/three_kingdoms_pair_counts_audit_20260918.json",
+        "sha256": "9a0ca8e1440acba1616d261fabd96c14801aecf3244ed6ed53bfc0135ab3bf1e"
+      },
+      {
+        "bytes": 161241,
+        "origin": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+        "path": "benchmark_tools/results/three_kingdoms_sonic_matched_assessment_21796.json",
+        "sha256": "aeddd422a5c733ac40bef0c4953a6bda12ab2a751baeeae9e9c28cac472e9653"
+      }
+    ],
+    "returncode": 0,
+    "scientific_inference_reproduced": false,
+    "status": "restored_retained_record_test_scope_passed",
+    "temporary_tree_removed": true,
+    "utc": "2026-10-02T04:55:51.047781+00:00",
+    "passed": 85,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 1.2,
+    "overlay_artifact_paths": [
+      "benchmark_tools/audit_publication_figures.py",
+      "tests/conftest.py",
+      "tests/unit/test_audit_ob_complete_figure.py",
+      "tests/unit/test_export_qfo_sequence_scores.py",
+      "tests/unit/test_export_three_kingdoms_comparison.py",
+      "tests/unit/test_retained_record_at_path.py"
+    ]
+  },
+  "test_binding_policy": "Explicit requested fixture returns a new record with only path changed. It does not read, hash, repin or fall back. Actual production checkers enforce original recorded bytes/SHA at the explicitly selected checkout path.",
+  "qfo_v1_alias_policy": "Historical temporary-work scores.md/scores.tsv are explicitly bound to their committed qfo_sequence_scores_20260918_v1 copies, verified using original hashes. No original-path fallback or fabricated output.",
+  "remote_observation": {
+    "run_id": 36965675048,
+    "job_id": 110708790224,
+    "source_commit": "2d0be496c7fe8628d3b61bd7ddc08a8bbcbdf451",
+    "platform": "macOS",
+    "python": "3.11",
+    "download_utc": "2026-10-02T04:49:16.843505+00:00",
+    "overall": {
+      "passed": 13734,
+      "failed": 36,
+      "errors": 0,
+      "skipped": 110,
+      "warnings": 30,
+      "seconds": 257.7
+    },
+    "prior_183_case_scope": {
+      "passed": 182,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "prior_94_case_subset": {
+      "passed": 94,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "remaining_scope_failure": "Pressure historical-plan reproduction differs under relocated checkout; not modified this turn.",
+    "new_fix_remote_confirmed": false
+  },
+  "ci_status": {
+    "observed_utc": "2026-10-02T04:57:45.250652+00:00",
+    "run": 36965675048,
+    "jobs": [
+      {
+        "id": 110708790084,
+        "name": "docs",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 110708790224,
+        "name": "test-fast (3.11)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110708790236,
+        "name": "cpu-wheel",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 110708790254,
+        "name": "test-fast (3.10)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110708790257,
+        "name": "test-full",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110708790297,
+        "name": "test-fast (3.12)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110708790357,
+        "name": "test-fast (3.13)",
+        "status": "completed",
+        "conclusion": "failure"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "benchmark_tools/audit_publication_figures.py",
+      "bytes": 11550,
+      "sha256": "e54de5d198bf11eff0db94967aaa6e3ba776b913b13fb93e356fb890770335b3"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 2663,
+      "sha256": "c1f10a64725abbd8d4983c60cb65e359164b6488cb803afea2f55d19e03629d6"
+    },
+    {
+      "path": "tests/unit/test_retained_record_at_path.py",
+      "bytes": 1324,
+      "sha256": "06bbd18a41297857c74d11496f451c3104f501f2687a2251b699faf44bb5aae9"
+    },
+    {
+      "path": "tests/unit/test_audit_ob_complete_figure.py",
+      "bytes": 3408,
+      "sha256": "da25f2ecbe6f7449d9506ccf3e3ec7360a7e929eaf2e9b95ec448597fe91c486"
+    },
+    {
+      "path": "tests/unit/test_export_qfo_sequence_scores.py",
+      "bytes": 7029,
+      "sha256": "f198f61ac9f309f82b45b2d37bf281127c8738d0509cc5b8bf2f93dc75cdb226"
+    },
+    {
+      "path": "tests/unit/test_export_three_kingdoms_comparison.py",
+      "bytes": 2338,
+      "sha256": "7a56d295ae06b456e98095b4f5c1ad170996ba2dba60de4b683a2c3c28105003"
+    },
+    {
+      "path": "benchmark_tools/export_qfo_sequence_scores.py",
+      "bytes": 6565,
+      "sha256": "6d404ac557878629dde899f00d7b9d0c232e79ca15fdc223f5d1b8b375dbc321",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "benchmark_tools/export_three_kingdoms_comparison.py",
+      "bytes": 6565,
+      "sha256": "949362c3eb537e3fa67e556762d72d21e3c20c8d395cf33c4e48f2b21cfa649a",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "benchmarks/work/ci_retained_record_guard_before_20261002.xml",
+      "bytes": 2731,
+      "sha256": "88d486ebb13be5e7a8462270f4d32f5101acdc260a06f454a3c31d97e05a99f4",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "2",
+          "skipped": "0",
+          "tests": "2",
+          "time": "0.702",
+          "timestamp": "2026-10-02T00:46:33.718539-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_retained_record_bindings_after_20261002.xml",
+      "bytes": 11642,
+      "sha256": "b6c325f6502e490f5f16c6efe7873e315262cb34e0953bb878032f9c1576e6e2",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "85",
+          "time": "1.400",
+          "timestamp": "2026-10-02T00:48:31.697782-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_retained_record_bindings_restored_20261002.xml",
+      "bytes": 10247,
+      "sha256": "f5b236c3f9d7cc91e6dc35fe1293eb78a533a6736788006ce4a8542424e687ea",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "85",
+          "time": "1.349",
+          "timestamp": "2026-10-02T00:54:00.095631-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_retained_record_bindings_restored_20261002_v2.xml",
+      "bytes": 8107,
+      "sha256": "0a4bd328f13006687080e4301ce10cee64c9e85a03a966f6d71dd93b4d170655",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "85",
+          "time": "1.198",
+          "timestamp": "2026-10-02T00:55:49.228313-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_remote_2d0be496_20261002/110708790224.log",
+      "bytes": 2203993,
+      "sha256": "848dc678cc8231637c64a3d387d40c396be5d3d6f0269d535acd5aaa5c61420f"
+    }
+  ],
+  "unchanged_exporters": [
+    "benchmark_tools/export_qfo_sequence_scores.py",
+    "benchmark_tools/export_three_kingdoms_comparison.py"
+  ],
+  "limitations": [
+    "Local 85-case and copied 85-case panels overlap and are not additive or actual macOS confirmation of this new fix.",
+    "Isolated Python-event guard is not OS containment, cross-host restoration, dependency installation or native inference.",
+    "Original serialized manifests, counts, scores and hashes remain unchanged; only test path copies are adapted.",
+    "No new benchmark, bootstrap, figure rendering, complete archive regeneration, source search, host poll, timing run or DGX access.",
+    "Full executable release, remaining uncertainty, source/rights, controlled resources and public deposition remain unfinished."
+  ]
+}

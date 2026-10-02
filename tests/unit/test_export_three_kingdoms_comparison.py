@@ -49,11 +49,11 @@ def test_preserves_existing_output(tmp_path):
         module.export(BASE.parents[1], tmp_path)
 
 
-def test_retained_export_exact_rows_and_limits():
+def test_retained_export_exact_rows_and_limits(retained_record_at_path):
     result = json.loads((BASE / "three_kingdoms_comparison_matched_20260918/comparison.json").read_text())
     assert result["rows"] == module.assemble(*documents())
     assert result["publication_ready"] is False
     assert result["uniform_historical_input_consumption_proven"] is False
     assert any("not penalized" in value for value in result["limitations"])
     assert b"\r" not in (BASE / "three_kingdoms_comparison_matched_20260918/scores.tsv").read_bytes()
-    module.check(result["source"])
+    module.check(retained_record_at_path(result["source"], module.__file__))

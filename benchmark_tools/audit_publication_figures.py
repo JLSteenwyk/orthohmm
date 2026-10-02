@@ -48,6 +48,8 @@ def validate_ob_complete(data):
     if (data.get("displayed_finite_values") != 288 or data.get("missing_values") != 48
             or data.get("new_intervals") is not False or data["source"]["sha256"] != SOURCE_SHA):
         raise ValueError("Require complete descriptive OrthoBench panel")
+    if record(data["source"]["path"]) != data["source"]:
+        raise ValueError("Changed complete descriptive result")
     matrices(json.loads(Path(data["source"]["path"]).read_text()))
 
 
