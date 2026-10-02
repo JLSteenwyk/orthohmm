@@ -597,6 +597,15 @@ independent restoration. Actual preceding Python 3.13 confirms all 120
 command/metadata cases, but retains eight failures and cannot confirm this
 new staging patch or complete CI. No old source receipt is repinned.
 
+The [corrected inventory metadata binding](results/CORRECTED_INVENTORY_BINDINGS_20261002.md)
+relocates only four explicit in-memory test records, preserving retained
+hashes/sizes and complete descriptor assertions. All 122 local cases pass;
+44 affected cases pass in a guarded copied child. The preceding actual
+Python 3.13 log confirms all 21 lineage replay cases, but retains six failures
+and does not contain this correction. Four raw exporter failures still need
+external inputs/native provenance, not fake admission or derived substitutes.
+Timing stays deferred; a quiet window is not needed for ongoing work.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

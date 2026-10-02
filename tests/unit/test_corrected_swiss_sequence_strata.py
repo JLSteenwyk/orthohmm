@@ -1,8 +1,12 @@
+import json
 import math
+from pathlib import Path
+import shutil
 
 import pytest
 
 from benchmark_tools.prepare_corrected_swiss_sequence_strata import define_strata, descriptor_updates, CHANGED_SEQUENCES
+from benchmark_tools.prepare_ob_candidate_neighborhood import check
 
 
 def protein(entropy, length=100, canonical=None, fragment=False):
@@ -87,13 +91,22 @@ def test_unexpected_release_change_rejected(updates, fault):
         descriptor_updates(old, new)
 
 
-def test_retained_corrected_inventory_replays_without_outcomes():
-    import json
-    from pathlib import Path
-    from benchmark_tools.prepare_ob_candidate_neighborhood import check
-
+@pytest.fixture
+def retained_inventory(retained_record_at_path):
     root = Path(__file__).resolve().parents[2]
     report = json.loads((root / "benchmark_tools/results/corrected_swiss_sequence_strata_20260918.json").read_text())
+    for key, path in (
+        ("protocol", root / "benchmark_tools/results/CORRECTED_SWISS_SEQUENCE_STRATA_PROTOCOL_20260918.md"),
+        ("descriptor_update_protocol", root / "benchmark_tools/results/CORRECTED_SWISS_DESCRIPTOR_UPDATE_20260918.md"),
+        ("native_sequence_audit", root / "benchmark_tools/results/qfo_original_input_sequence_audit_20260917.json"),
+        ("helper", root / "benchmark_tools/inventory_swiss_sequences.py"),
+    ):
+        report[key] = retained_record_at_path(report[key], path)
+    return report
+
+
+def test_retained_corrected_inventory_replays_without_outcomes(retained_inventory):
+    report = retained_inventory
     assert report["prediction_statistics_evaluated"] is False
     assert report["publication_ready"] is False
     assert len(report["genes"]) == report["summary"]["matched_genes"] == 563
@@ -108,3 +121,28 @@ def test_retained_corrected_inventory_replays_without_outcomes():
     assert report["secondary_strata"]["concentrated"] == []
     for key in ("protocol", "descriptor_update_protocol", "native_sequence_audit", "helper"):
         check(report[key])
+
+
+@pytest.mark.parametrize("key", ["protocol", "descriptor_update_protocol", "native_sequence_audit", "helper"])
+@pytest.mark.parametrize("fault", ["wrong_sha", "wrong_size", "same_size", "truncated", "missing"])
+def test_retained_inventory_source_guards_survive_binding(
+        retained_inventory, retained_record_at_path, tmp_path, key, fault):
+    item = dict(retained_inventory[key])
+    path = tmp_path / Path(item["path"]).name
+    shutil.copyfile(item["path"], path)
+    if fault == "wrong_sha":
+        item["sha256"] = "0" * 64
+    elif fault == "wrong_size":
+        item["bytes"] += 1
+    elif fault == "same_size":
+        path.write_bytes(b"X" + path.read_bytes()[1:])
+        assert path.stat().st_size == item["bytes"]
+    elif fault == "truncated":
+        path.write_bytes(path.read_bytes()[:-1])
+    else:
+        path.unlink()
+    bound = retained_record_at_path(item, path)
+    assert {k: v for k, v in bound.items() if k != "path"} == {
+        k: v for k, v in item.items() if k != "path"}
+    with pytest.raises(FileNotFoundError if fault == "missing" else ValueError):
+        check(bound)

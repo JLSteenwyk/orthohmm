@@ -327,6 +327,14 @@ The preceding actual Python 3.13 log confirms all 120 command/metadata cases
 with eight other failures. New-patch remote proof, full CI and the original
 publication completion requirements remain unresolved.
 
+The [corrected inventory binding](CORRECTED_INVENTORY_BINDINGS_20261002.md)
+gives 122 focused local passes and 44 guarded copied passes without changing
+scientific results or raw-source gates. The actual preceding Python 3.13
+log confirms all 21 frozen-lineage replay cases; six failures remain and the
+new inventory fix is not yet remotely confirmed. Derived metadata replay is
+not raw biological validation or publication closure. No quiet window is
+needed now; controlled timing remains deferred without disrupting other work.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

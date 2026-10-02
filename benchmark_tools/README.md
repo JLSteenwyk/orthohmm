@@ -102,6 +102,13 @@ remain an explicit dependency, not a standalone archive. The preceding actual
 Python 3.13 log confirms all 120 command/metadata cases, with eight other
 failures. New-patch remote confirmation and complete release remain open.
 
+The [corrected inventory test binding](results/CORRECTED_INVENTORY_BINDINGS_20261002.md)
+retains source hashes and sizes while relocating four explicit test records.
+All 122 focused local cases pass; 44 affected cases pass in a checkout-blocked
+copy. Actual preceding Python 3.13 confirms all 21 frozen-lineage replay cases,
+with six other failures. Raw exporter dependencies and full CI remain open;
+no scientific scores change and no quiet window is required now.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

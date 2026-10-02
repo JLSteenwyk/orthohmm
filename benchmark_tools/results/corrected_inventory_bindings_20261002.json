@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "parent_commit": "6ea74c0d54727a7e41915b1154e75ccfe2a304f4",
+  "change_scope": "test-only metadata path bindings; original size/hash checks retained",
+  "scientific_scores_changed": false,
+  "raw_sources_revalidated": false,
+  "controlled_timing_run": false,
+  "publication_ready": false,
+  "checks": {
+    "unguarded_copied_before": {
+      "passed": 1,
+      "portability_proof": false
+    },
+    "guarded_copied_before": {
+      "failed": 1,
+      "cause": "historical protocol path original-checkout open"
+    },
+    "initial_broad_selection": {
+      "exit_code": 4,
+      "tests": 0,
+      "cause": "two nonexistent module names"
+    },
+    "local_affected": {
+      "passed": 44,
+      "seconds": 0.53
+    },
+    "local_complete": {
+      "passed": 122,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 4.81
+    },
+    "guarded_copied_after": {
+      "passed": 44,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.61,
+      "python": "3.10.13",
+      "files": 1816,
+      "bytes": 10957776,
+      "staged_module_origins": 15,
+      "later_original_python_open_events": 0,
+      "canary_blocked": true,
+      "child_subprocesses_forbidden": true,
+      "temporary_staging_removed": true,
+      "os_containment_claim": false
+    }
+  },
+  "preceding_remote": {
+    "run": 36989749872,
+    "job": 110782933929,
+    "python": "3.13",
+    "passed": 13943,
+    "failed": 6,
+    "errors": 0,
+    "skipped": 118,
+    "warnings": 30,
+    "seconds": 450.93,
+    "lineage_replay_passed": 21,
+    "contains_inventory_fix": false,
+    "all_five_macos_test_jobs": "failure",
+    "linux_diagnostics_wheel_docs": "success"
+  },
+  "raw_dependency_inventory_only": {
+    "duplication": {
+      "records": 11,
+      "bytes": 93699174,
+      "main_git_tracked": 7,
+      "external_or_non_main_tracked": 4,
+      "external_or_non_main_tracked_bytes": 93650891
+    },
+    "fragment": {
+      "records": 1774,
+      "bytes": 607096715,
+      "main_git_tracked": 3,
+      "external_or_non_main_tracked": 1771,
+      "external_or_non_main_tracked_bytes": 606389322
+    }
+  },
+  "records": [
+    {
+      "path": "tests/unit/test_corrected_swiss_sequence_strata.py",
+      "bytes": 6812,
+      "sha256": "44339a924790cecd678cb566b003cf73fa78b3bb0d33065d5d53d6c31d015d11"
+    },
+    {
+      "path": "benchmark_tools/prepare_corrected_swiss_sequence_strata.py",
+      "bytes": 9905,
+      "sha256": "41c5cf70ca40debeb19476b636ea60ce115579e8015c29ada59738368383e26a"
+    },
+    {
+      "path": "benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "bytes": 7448,
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "path": "benchmark_tools/results/corrected_swiss_sequence_strata_20260918.json",
+      "bytes": 351883,
+      "sha256": "912363276fa5456f11aeff9f398fce71aec8d377c8c8eda7b144105945e554f1"
+    },
+    {
+      "path": "benchmark_tools/results/CORRECTED_SWISS_SEQUENCE_STRATA_PROTOCOL_20260918.md",
+      "bytes": 3915,
+      "sha256": "2c87ba1df8ee39dfc325eefcdf374e713ba8fab1279a0330c3ea600ab637da54"
+    },
+    {
+      "path": "benchmark_tools/results/CORRECTED_SWISS_DESCRIPTOR_UPDATE_20260918.md",
+      "bytes": 1342,
+      "sha256": "69b20dd4b656e9c6f7dbbb84bdc228d1919389a2554d389f790c59df09d8b4cd"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_original_input_sequence_audit_20260917.json",
+      "bytes": 523059,
+      "sha256": "480a09d0c60c95274d93fb49e15ae95b45a99d0cdcd17c72bf9b3af066cc12c4"
+    },
+    {
+      "path": "benchmark_tools/inventory_swiss_sequences.py",
+      "bytes": 5853,
+      "sha256": "7f6dd0d3ada54ea2d34c091bc33a667e688518acf9405c8fbffaef7d949d5d0d"
+    },
+    {
+      "path": "benchmark_tools/results/CORRECTED_INVENTORY_BINDINGS_20261002.md",
+      "bytes": 3863,
+      "sha256": "b92d97682373bb3be02b0259325b1d98689bfecc939b3cc70c5dd7913b35207d"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_copied_before_20261002.json",
+      "bytes": 327839,
+      "sha256": "185d8a6a215f6ea5aee7e7fffa81cd2aabcacb67202cb92bef3b463de1b4a382"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_guarded_before_20261002.json",
+      "bytes": 328854,
+      "sha256": "fb41e5da5672f8f2416ab8d96f8d9b10577ac717e35ea910860b2e4a05da8ca8"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_complete_20261002.xml",
+      "bytes": 231,
+      "sha256": "68a53877f3286ea054e309a06538a066aada98a19281d0cfb783863958561915"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_after_20261002.xml",
+      "bytes": 6973,
+      "sha256": "aa5c78bb5b26ae899a91ad167df37b1feb14ed5a140ab9f2d82a4171edb8b4c2"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_verified_20261002.xml",
+      "bytes": 18470,
+      "sha256": "c6316ce26ee99e2dec3e64d6b0d69687436d3b13e5bbbfc429511d5c5110a8cd"
+    },
+    {
+      "path": "benchmarks/work/corrected_inventory_guarded_after_20261002.json",
+      "bytes": 331044,
+      "sha256": "44e3ff01f65d2b81304af4e1618f7be596b1630083efec1e2318965db28b1b84"
+    },
+    {
+      "path": "benchmarks/work/ci_remote_6ea74c0d_20261002/110782933929.log",
+      "bytes": 288986,
+      "sha256": "3809eee656e6f442a836ea3a466cd13d96ccde0990b410ec0d74dd9a3e2f0f59"
+    }
+  ]
+}

@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Corrected Inventory Metadata Replay (2026-10-02)
+
+The user is unsure when the Threadripper will be quiet. No quiet window is
+needed now: continue non-timing work; leave controlled timing deferred without
+contention questions/polls, DGX access or unrelated process/service changes.
+
+Following pushed 6ea74c0d, fix only the retained descriptor-inventory test's
+four explicit metadata paths. Preserve original SHA/size validation, complete
+descriptor/bin equality, production/source/scientific/raw bytes and scores.
+Add 20 mutation/absence negatives. Initial unguarded copied test passes via
+the original checkout; guarded pre-change copy fails. Retain both receipts.
+An initial broad command has two wrong module names and runs zero tests;
+preserve its exit-4 receipt. Corrected **122-case panel passes in 4.81s**,
+zero errors/failures/skips. All 44 affected/fixture cases pass in a guarded
+copied child in 0.61s; zero later original Python opens, 15 staged origins,
+no subprocesses, temporary staging removed. The 44-case panel overlaps the
+122; neither implies raw biological/native validation or OS containment.
+
+Actual preceding Python 3.13 job 110782933929/run 36989749872 confirms
+source 6ea74c0d: 13,943 passes/six failures/118 skips/zero errors/30 warnings
+in 450.93s. All 21 frozen-lineage replay cases now pass. All five macOS
+test jobs fail; Linux diagnostics/wheel/docs succeed. New inventory correction
+is not in that source. No handles are restarted or sibling counts inferred.
+
+Inventory remaining raw dependencies without re-admission: duplication has
+11 records including four external/non-main-tracked records/93,650,891 bytes;
+fragment has 1,774 records including 1,771 non-main-tracked/606,389,322 bytes.
+Locally present is not checkout-portable or scientifically validated anew.
+Keep all raw gates and the platform host-probe failure explicit. No live
+host probe, inference/scoring/bootstrap, archive regeneration or timing runs.
+[Evidence and identities](CORRECTED_INVENTORY_BINDINGS_20261002.md) retain
+bounded successes and failures. Commit/push this test-only milestone;
+observe new automatic CI without claiming it green. Remaining publication
+requirements and the original active goal remain incomplete.
+
 ## Frozen Source Staging For Lineage Replay (2026-10-02)
 
 Previous turn is progress at pushed 3bea410f: explicit remote path mode,
