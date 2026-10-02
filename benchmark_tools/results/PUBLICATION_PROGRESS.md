@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Main Text And Fourteen Figures Combined For Review (2026-10-02)
+
+Previous turn progressed at pushed a0ad83ab by preparing the prospective source
+recipe. Read original goal/current ledger, reuse runtime/source/calibration
+receipts and inspect remaining offline publication work. The current PDF links
+figures instead of including them; prepare a new text-and-figure review without
+rerendering source text, plotting, scoring or inference.
+
+Combine original nine-page manuscript, four new caption/guide pages and fourteen
+existing vector figure pages. Check producer PDF hashes, 25/28 figure/manifest
+Git identities and three explicit local-only source bindings. Available direct
+result hashes check; no complete transitive scientific audit. Preserve the first
+pre-assembly failed Git check rather than pretending local figures are committed.
+
+First assembly preserves all original page pixels but is unaccepted: six
+transient link-deletion xref warnings and guide A2 falsely naming a QfO mean.
+V2 corrects those, then independent link readback fails before receipt output:
+page copying changes file URI actions into remote-PDF actions. A bounded
+in-memory check verifies restoring original URIs. V3 restores all 45 actions,
+redirects only six included figures and passes the strict unchanged comparison.
+Retain all earlier sources/reports/PDFs and failed readback; no silent overwrite.
+
+Final 27-page PDF preserves exact text/geometry/pixels on all 23 original pages.
+Separate full-document readback checks 62 evidence pins, other manuscript links,
+six redirects, fourteen guide links, sixteen bookmarks and all captions.
+Guide bounds/overlap counts are zero; saved PDF needs no repair or MuPDF warning.
+Existing-output CLI refuses without byte changes. Visually inspect all 14
+figures/four guide layouts in the prototype and the corrected final guide page;
+reuse unchanged layouts and original main review through exact pixel identity.
+Separate immutable visual closure accepts this bounded review, not readiness.
+See [artifacts, pins, failures and scope](PUBLICATION_TEXT_FIGURE_REVIEW_20261002.md).
+
+Update guides/claims; commit/push only accepted PDF, assembly source/checks and
+scoped records. Rendered PNGs and prototypes stay local. A lightweight final
+check confirms all 887 timing-source pins remain unchanged; no full runtime
+inventory is repeated. No production helper/
+test edit, new source/runtime binding, scheduler/native/timing work, observation
+worker, contention poll, quiet-window question, DGX, shared upgrade, service/
+unrelated-job change or dated archive rebuild. All owned handles terminal.
+Real policy/readiness/handoff, isolation, engineering/production outcomes and
+complete scientific/release reconciliation remain missing. Goal stays active.
+
 ## Prospective Source Recipe And Real-Plan Binding Prepared (2026-10-02)
 
 Previous turn progressed at pushed 6e1b8cb7 by refreshing changed-helper

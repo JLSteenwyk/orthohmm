@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [accepted text-and-figure review](results/PUBLICATION_TEXT_FIGURE_REVIEW_20261002.md)
+combines the unchanged nine-page manuscript with a four-page guide and
+14 existing vector figures. All 23 original pages preserve exact pixels/text
+geometry; six figure links navigate internally, with original other-link actions
+preserved. Separate readback, overwrite refusal and scoped visual closure pass.
+Rejected caption/link-action prototypes are retained. No statistics or plotting
+is recomputed, and no controlled timing is added. This is a readable review PDF,
+not a complete executable release or journal-ready layout.
+
 The [prospective private source recipe](results/THREADRIPPER_SOURCE_RECIPE_20261002.md)
 pins all 887 required source files. Actual offline selection binds both real
 plans to the latest lookup and stops at missing readiness, using hypothetical
