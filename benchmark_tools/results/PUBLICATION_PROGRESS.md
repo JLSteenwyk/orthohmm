@@ -1,5 +1,41 @@
 # Publication Progress
 
+## OrthoBench Source Acquisition Support Packaged (2026-10-02)
+
+Previous goal work progressed at pushed `eadd7597`; the intervening reply only
+clarified that a quiet window is not needed immediately. Re-read the goal,
+current worktree and newest evidence. Timing stays deferred without renewed
+questions, contention polls, DGX work or unrelated process/service actions.
+Its exact CI run 37020483106 reports successful wheel, Linux diagnostic and
+docs jobs and five live macOS jobs when inspected; no logs or inferred counts.
+
+Inspect retained full archive reproduction 22377 and source export. Reuse the
+completed 59,770-group/70-family native result. Find a real reader-facing gap:
+source exports carry the acquisition verifier/rebinder but omit their three
+required manifest documents. Add explicit `orthobench-inputs` profile/schema
+v2 with fixed scientific hashes, required helpers and direct commands. Preserve
+default v1 selection/verification, raw-data exclusion and scientific revision.
+77 focused checks pass in 7.38s, zero errors/failures/skips; the preceding
+75-case panel overlaps. Commit source checkpoint `27efba28` before export.
+
+Actually export/archive all 1,821 payloads and externally anchor the index;
+validate 1,822 archive files including it and extract outside the checkout.
+Copied isolated stdlib verifier passes without Git on PATH. Both copied input
+helpers verify the retained upstream checkout's 95 files and rebind all 93
+ordered inputs, preserving hashes, basenames and nonpath fields. First harness
+attempt incorrectly stores outputs inside the immutable component; final
+inventory rejects extras. Preserve failure/logs/archive. Fresh attempt stores
+outputs externally, then verifies the unchanged component again. New verifier
+also accepts the original retained 1,707-file v1 component; its two historical
+SyntaxWarnings remain. No acquisition/download, inference or numerical rerun.
+
+See [export, execution and limitations](SOURCE_ORTHOBENCH_INPUT_SUPPORT_20261002.md)
+and its machine receipt. This closes a source acquisition-support gap, not
+full runtime/release assembly, rights, public deposition or comparable timing.
+Native wheels/base/installer/OS closure, final manuscript/archive reconciliation,
+other-QfO uncertainty and the retained timing/environment/quiet-window gates
+remain open. Commit/push this focused milestone; original goal remains active.
+
 ## Explicit Private Threadripper Executor Route (2026-10-02)
 
 Previous turn progressed at pushed `84d4e9bd` with the inspected nine-page

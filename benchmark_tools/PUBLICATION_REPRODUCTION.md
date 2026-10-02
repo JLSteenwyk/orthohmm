@@ -9,7 +9,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 1 October 2026, incomplete working package. This guide routes
+Status: 2 October 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -17,6 +17,14 @@ submit scheduler jobs. Linked native batch recipes have separate execution
 requirements and must not be confused with these audit commands.
 
 ## Execution Status
+
+The [OrthoBench acquisition-support source profile](results/SOURCE_ORTHOBENCH_INPUT_SUPPORT_20261002.md)
+packages the three exact manifest dependencies previously omitted from source
+exports. Its copied verifier/rebinder execute after fresh local archive
+extraction, verifying 95 upstream files and preparing 93 ordered inputs from
+the retained checkout. All 77 focused tests pass; historical source-only
+verification is preserved. This is not a fresh download, native-runtime bundle,
+new inference result or complete study release.
 
 The [explicit private executor route](THREADRIPPER_PRIVATE_EXECUTOR.md) closes
 the shared-only routing gap while preserving historical pins and all release
