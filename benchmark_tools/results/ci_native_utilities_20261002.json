@@ -1,0 +1,250 @@
+{
+  "status": "focused_local_native_utilities_passed_remote_confirmation_pending",
+  "base_commit": "42e48844c7b010371db1ecbd767ea249ee622ea3",
+  "controlled_timing": false,
+  "scientific_rerun": false,
+  "new_cases": 24,
+  "scope_cases": 100,
+  "native_absence_same_scope_not_additive": true,
+  "validation": [
+    {
+      "path": "benchmarks/work/ci_native_utilities_20261002.xml",
+      "bytes": 13004,
+      "sha256": "fcc4b9be471b17dfdec7ca5dc848ae0565c6ddca2cae584f7a45a260e5ee003a",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "100",
+          "time": "3.076",
+          "timestamp": "2026-10-01T23:37:15.977742-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_gnu_time_runtime": 24,
+        "tests.unit.test_gnu_time_companion": 9,
+        "tests.unit.test_run_qfo_corrected_primary": 13,
+        "tests.unit.test_run_qfo_corrected_proteinortho": 7,
+        "tests.unit.test_run_qfo_corrected_sonic": 15,
+        "tests.unit.test_run_search_sensitivity_cell": 9,
+        "tests.unit.test_run_sequence_search_control": 2,
+        "tests.unit.test_run_simulation_generation": 4,
+        "tests.unit.test_run_simulation_methods": 8,
+        "tests.unit.test_audit_manuscript_citations": 9
+      }
+    },
+    {
+      "path": "benchmarks/work/ci_native_utilities_absence_20261002.xml",
+      "bytes": 19772,
+      "sha256": "07beee0609b945a11192eb3f3de90f777a03a6c5ca17eac4e7efe7af867a8784",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "24",
+          "tests": "100",
+          "time": "2.263",
+          "timestamp": "2026-10-01T23:38:37.694230-04:00",
+          "hostname": "bizon"
+        }
+      ],
+      "module_cases": {
+        "tests.unit.test_gnu_time_runtime": 24,
+        "tests.unit.test_gnu_time_companion": 9,
+        "tests.unit.test_run_qfo_corrected_primary": 13,
+        "tests.unit.test_run_qfo_corrected_proteinortho": 7,
+        "tests.unit.test_run_qfo_corrected_sonic": 15,
+        "tests.unit.test_run_search_sensitivity_cell": 9,
+        "tests.unit.test_run_sequence_search_control": 2,
+        "tests.unit.test_run_simulation_generation": 4,
+        "tests.unit.test_run_simulation_methods": 8,
+        "tests.unit.test_audit_manuscript_citations": 9
+      }
+    }
+  ],
+  "local_utilities": {
+    "gnu_time": {
+      "file": {
+        "path": "/usr/bin/time",
+        "bytes": 27160,
+        "sha256": "3b11dec50514a8473e9f6efa7a34d584d0657538c09988f61b72d38ad4991a10"
+      },
+      "version": "time (GNU Time) UNKNOWN\nCopyright (C) 2018 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by David Keppel, David MacKenzie, and Assaf Gordon."
+    },
+    "pandoc": {
+      "file": {
+        "path": "/usr/bin/pandoc",
+        "bytes": 199114624,
+        "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+      },
+      "version": "pandoc 3.1.3\nFeatures: -server +lua\nScripting engine: Lua 5.4\nUser data directory: /home/bizon/.local/share/pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose."
+    }
+  },
+  "source_pins": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 6546,
+      "sha256": "0ef4ace997a9ab0aa7365ca67e620085b871d88436e0e217c58dacaab3ad7878"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 2159,
+      "sha256": "af9f9511ba39f18ff26ef0d29d2b54d722841aab9452201b2846fdd0f75fb1f7"
+    },
+    {
+      "path": "tests/gnu_time_runtime.py",
+      "bytes": 1970,
+      "sha256": "29fe2aab6f58fcaef5c79b9780ed94674db1c86d882420c533b899c7d0a8da8f"
+    },
+    {
+      "path": "tests/unit/test_gnu_time_runtime.py",
+      "bytes": 6205,
+      "sha256": "60e5e7171fb0f3e8a03047c883104b1bf0219d3e56f088e8921b4e2f4a26d977"
+    },
+    {
+      "path": "tests/unit/test_gnu_time_companion.py",
+      "bytes": 1457,
+      "sha256": "65f2d71cff409392656b0ae43533037c0d6f9dbc7128d210515309c16dc7306d"
+    },
+    {
+      "path": "tests/unit/test_run_qfo_corrected_primary.py",
+      "bytes": 4892,
+      "sha256": "6a8b99113702190611b2c6707fb9776136c3e10b1cfd1bacc465e119f2ddc2f0"
+    },
+    {
+      "path": "tests/unit/test_run_qfo_corrected_proteinortho.py",
+      "bytes": 3787,
+      "sha256": "7a5d9e5d3b26e5c73972d00976e7cc371f3c2cd1e6a656610f8e8ec89964de8e"
+    },
+    {
+      "path": "tests/unit/test_run_qfo_corrected_sonic.py",
+      "bytes": 5074,
+      "sha256": "2a24f1f88b97cc02a67c5127cc1ab95087a86b11c90388fd9cf50f2ecae188b5"
+    },
+    {
+      "path": "tests/unit/test_run_search_sensitivity_cell.py",
+      "bytes": 5775,
+      "sha256": "3be1bd4f9a35152da76b7286fca010c581b230161178ce1dae5f66c334e6246c"
+    },
+    {
+      "path": "tests/unit/test_run_sequence_search_control.py",
+      "bytes": 876,
+      "sha256": "6810ffe1595727836001d435e3dfcf3fb16451d679bc8f0ceed474f7ec983332"
+    },
+    {
+      "path": "tests/unit/test_run_simulation_generation.py",
+      "bytes": 2489,
+      "sha256": "60cf17ab269dd13fc51c8600b1c7eb8e227dda67519ba8dbf81693fe693444d8"
+    },
+    {
+      "path": "tests/unit/test_run_simulation_methods.py",
+      "bytes": 5934,
+      "sha256": "8047fb4b7f2de261f6ffc0df9f93e70ec29ac32f92f6a0a9ef6dd0197daaddfd"
+    }
+  ],
+  "unchanged_production_pins": [
+    {
+      "path": "benchmark_tools/gnu_time_companion.py",
+      "bytes": 2020,
+      "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+    },
+    {
+      "path": "benchmark_tools/run_qfo_corrected_primary.py",
+      "bytes": 7581,
+      "sha256": "4a340a2acbad6efd261931edbaedaa768242ba3084d2bda91198f98e01576c85"
+    },
+    {
+      "path": "benchmark_tools/run_qfo_corrected_proteinortho.py",
+      "bytes": 8415,
+      "sha256": "0ca80666d13b4dee98f1ca33047d76113631539e4a1a00f1c050ad398f4c8604"
+    },
+    {
+      "path": "benchmark_tools/run_qfo_corrected_sonic.py",
+      "bytes": 7956,
+      "sha256": "ced23d408cb07ad3744d6062e39f5272392fb943b8816cf174311961b16a0ea5"
+    },
+    {
+      "path": "benchmark_tools/run_search_sensitivity_cell.py",
+      "bytes": 7605,
+      "sha256": "a5820917b9597658828b7dd30c92852a244193b17bb85ee373a7568a1570a97a"
+    },
+    {
+      "path": "benchmark_tools/run_sequence_search_control.py",
+      "bytes": 5667,
+      "sha256": "c97f96bb3ea15b661b8d7e2e56ee040d6b6cca5f6422e90ae5ccc37310195f78"
+    },
+    {
+      "path": "benchmark_tools/run_simulation_generation.py",
+      "bytes": 7039,
+      "sha256": "464e5c7b6f0d0430eadeba19ca151e5b1a2b8dc046ba372e99cce48a127158a2"
+    },
+    {
+      "path": "benchmark_tools/run_simulation_methods.py",
+      "bytes": 12030,
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    }
+  ],
+  "remote_log": {
+    "path": "benchmarks/work/ci_remote_42e48844_20261002/110690397294.log",
+    "bytes": 2307609,
+    "sha256": "0e97479e48aabe1b03e9a7962401f77049544c0ad072cf78bd739070814bf69e",
+    "source_commit": "42e48844c7b010371db1ecbd767ea249ee622ea3",
+    "run": 36959685639,
+    "job": 110690397294,
+    "download_utc": "2026-10-02T03:33:57.435262+00:00",
+    "overall": {
+      "passed": 13665,
+      "failed": 60,
+      "errors": 4,
+      "skipped": 112,
+      "warnings": 30,
+      "seconds": 544.21
+    },
+    "cgroup_tmpfs_scope": {
+      "cases": 59,
+      "passed": 51,
+      "skipped": 8
+    },
+    "native_scope": {
+      "cases": 70,
+      "passed": 67,
+      "skipped": 3
+    },
+    "inspected_only_python_3_11_fast": true,
+    "native_versions": {
+      "gcc": "Homebrew GCC 16.2.0",
+      "test_bash": "5.3.15",
+      "system_bash": "3.2.57"
+    }
+  },
+  "workflow_validation": {
+    "parser": "PyYAML 6.0.1",
+    "one_utilities_step_per_test_job": true,
+    "existing_steps_identical": true,
+    "other_jobs_identical": true
+  },
+  "limitations": [
+    "Test-only binding changes the timing executor for requested smoke tests; historical benchmark commands and source/provenance remain unchanged.",
+    "GNU Time max process RSS is not cgroup memory or simultaneous process-tree peak.",
+    "Capability absence is simulated locally, not actual macOS execution.",
+    "Latest inspected macOS unit suite still fails; new CI utility outcomes are unverified.",
+    "No shared package installation, local workload polling, scientific defaults, scores, or admission rules changed."
+  ],
+  "remote_jobs": {
+    "observed_utc": "2026-10-02T03:39:06.104217+00:00",
+    "run": 36959685639,
+    "source_commit": "42e48844c7b010371db1ecbd767ea249ee622ea3",
+    "test_jobs_terminal_failure": 5,
+    "cpu_wheel": "success",
+    "docs": "success",
+    "sibling_logs_not_inspected": true
+  },
+  "installation_sources": [
+    "https://formulae.brew.sh/formula/gnu-time",
+    "https://pandoc.org/installing.html"
+  ]
+}

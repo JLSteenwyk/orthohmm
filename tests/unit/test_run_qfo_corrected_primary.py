@@ -39,7 +39,8 @@ def execution(tmp_path, monkeypatch):
 
 
 @pytest.mark.parametrize("index", [0, 1])
-def test_success_requires_separate_admission(execution, index):
+def test_success_requires_separate_admission(execution, index, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, digest, calls = execution
     runner.run(manifest, digest, index)
     method = runner.METHODS[index]
@@ -57,7 +58,8 @@ def test_success_requires_separate_admission(execution, index):
         runner.run(manifest, digest, index)
 
 
-def test_failed_native_command_is_recorded(execution):
+def test_failed_native_command_is_recorded(execution, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, _, calls = execution
     plan["methods"][runner.METHODS[0]]["native_argv"] = ["/bin/false"]
     manifest.write_text(json.dumps(plan))
@@ -68,7 +70,8 @@ def test_failed_native_command_is_recorded(execution):
     assert len(calls) == 2
 
 
-def test_post_run_provenance_failure_is_recorded(execution, monkeypatch):
+def test_post_run_provenance_failure_is_recorded(execution, monkeypatch, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, digest, calls = execution
     original = runner.verify
 

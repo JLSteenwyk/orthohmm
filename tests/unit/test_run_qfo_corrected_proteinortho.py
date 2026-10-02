@@ -39,7 +39,8 @@ def execution(tmp_path, monkeypatch):
     return plan, plan_path, runtime_path, runner.record(runtime_path)["sha256"]
 
 
-def test_success_is_not_accuracy_admission(execution):
+def test_success_is_not_accuracy_admission(execution, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, path, runtime, digest = execution
     runner.run(path, runtime, digest)
     report = json.loads((Path(plan["output_root"]) / "execution.json").read_text())
@@ -51,7 +52,8 @@ def test_success_is_not_accuracy_admission(execution):
         runner.run(path, runtime, digest)
 
 
-def test_failed_native_command_is_preserved(execution):
+def test_failed_native_command_is_preserved(execution, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, path, runtime, digest = execution
     plan["native_argv"] = ["/bin/false"]
     with pytest.raises(RuntimeError, match="Native process failed"):
@@ -61,7 +63,9 @@ def test_failed_native_command_is_preserved(execution):
 
 
 @pytest.mark.parametrize("stage", [1, 2, 3])
-def test_runtime_drift_at_each_gate(execution, monkeypatch, stage):
+def test_runtime_drift_at_each_gate(execution, monkeypatch, stage, request):
+    if stage == 3:
+        request.getfixturevalue("bind_test_gnu_time")(runner)
     plan, path, runtime, digest = execution
     calls = []
 

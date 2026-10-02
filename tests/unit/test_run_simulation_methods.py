@@ -8,6 +8,7 @@ import pytest
 
 from benchmark_tools.benchmark_production import file_record
 from benchmark_tools.run_simulation_methods import copy_inputs, execute, read_frozen, verify_inputs, verify_native_runtime
+from benchmark_tools import run_simulation_methods as runner
 
 
 def test_frozen_hash_gate(tmp_path):
@@ -34,7 +35,8 @@ def test_copy_checks_content_and_refuses_existing_target(tmp_path):
         copy_inputs(source, tmp_path / "copy2", [record])
 
 
-def test_failed_method_preserved_and_next_method_executed(tmp_path):
+def test_failed_method_preserved_and_next_method_executed(tmp_path, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     output = tmp_path / "success"
     dataset = {"label": "fixture", "methods": {
         "first": {"output": str(tmp_path / "failure"), "argv": [sys.executable, "-c", "raise SystemExit(7)"]},
@@ -93,7 +95,8 @@ def test_hmm_without_runtime_never_executes(tmp_path):
     assert not marker.exists()
 
 
-def test_existing_reused_output_is_not_executed_or_overwritten(tmp_path):
+def test_existing_reused_output_is_not_executed_or_overwritten(tmp_path, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     existing = tmp_path / "old"
     existing.mkdir()
     sentinel = existing / "sentinel"

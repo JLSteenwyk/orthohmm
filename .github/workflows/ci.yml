@@ -23,6 +23,12 @@ jobs:
         /bin/bash --version
     - name: Install test OpenMP compiler
       run: bash benchmark_tools/install_ci_test_compiler.sh
+    - name: Install test native utilities
+      run: |
+        brew install gnu-time pandoc
+        printf 'ORTHOHMM_TEST_GNU_TIME=%s\n' "$(brew --prefix gnu-time)/bin/gtime" >> "$GITHUB_ENV"
+        "$(brew --prefix gnu-time)/bin/gtime" --version
+        pandoc --version
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -72,6 +78,12 @@ jobs:
         /bin/bash --version
     - name: Install test OpenMP compiler
       run: bash benchmark_tools/install_ci_test_compiler.sh
+    - name: Install test native utilities
+      run: |
+        brew install gnu-time pandoc
+        printf 'ORTHOHMM_TEST_GNU_TIME=%s\n' "$(brew --prefix gnu-time)/bin/gtime" >> "$GITHUB_ENV"
+        "$(brew --prefix gnu-time)/bin/gtime" --version
+        pandoc --version
     - name: Install dependencies
       run: |
         pip install -r requirements.txt

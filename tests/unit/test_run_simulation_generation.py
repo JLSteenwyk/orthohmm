@@ -7,6 +7,7 @@ import pytest
 
 from benchmark_tools.benchmark_production import file_record
 from benchmark_tools.run_simulation_generation import child_path, execute, preflight, verify_file
+from benchmark_tools import run_simulation_generation as runner
 
 
 def test_hash_and_path_checks(tmp_path):
@@ -28,7 +29,8 @@ def test_manifest_mismatch_fails_before_external_commands(tmp_path):
         preflight(manifest, "0" * 64, tmp_path, "baseline_20261001")
 
 
-def test_stage_failure_preserves_evidence_and_stops_following_stages(tmp_path):
+def test_stage_failure_preserves_evidence_and_stops_following_stages(tmp_path, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     run = {"label": "fixture", "commands": [
         {"stage": "T", "argv": [sys.executable, "-c", "print('first')"]},
         {"stage": "G", "argv": [sys.executable, "-c", "raise SystemExit(7)"]},
@@ -47,7 +49,8 @@ def test_stage_failure_preserves_evidence_and_stops_following_stages(tmp_path):
         execute(run, os.environ.copy(), evidence)
 
 
-def test_success_records_commands_exit_status_and_no_method_inference(tmp_path):
+def test_success_records_commands_exit_status_and_no_method_inference(tmp_path, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     run = {"label": "fixture", "commands": [{"stage": "T", "argv": [sys.executable, "-c", "pass"]}]}
     result = execute(run, os.environ.copy(), tmp_path / "evidence")
     assert result["status"] == "complete"

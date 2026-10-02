@@ -5,6 +5,26 @@ import sys
 
 import pytest
 
+from tests.gnu_time_runtime import GnuTimeSubprocess, select_gnu_time
+
+
+@pytest.fixture
+def gnu_time_binary():
+    try:
+        return select_gnu_time()
+    except FileNotFoundError as error:
+        pytest.skip(str(error))
+
+
+@pytest.fixture
+def bind_test_gnu_time(gnu_time_binary, monkeypatch):
+    """Bind only an explicitly requested smoke-test module's subprocess calls."""
+    def bind(module):
+        proxy = GnuTimeSubprocess(gnu_time_binary, module.subprocess)
+        monkeypatch.setattr(module, "subprocess", proxy)
+        return proxy
+    return bind
+
 
 @pytest.fixture
 def synthetic_linux_boot_id(monkeypatch):

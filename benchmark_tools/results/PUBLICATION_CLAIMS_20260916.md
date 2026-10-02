@@ -139,15 +139,23 @@ source-8b test jobs still fail and the source-3e full-test unit result fails.
 Actual Clang/OpenMP and absent checkout-library failures motivate explicit
 test-job GNU GCC and fresh baseline libraries, not test skips or weakened guards.
 70 focused local cases pass, including fresh staged build/load/alignment.
-New macOS native execution remains unverified; unchanged kernels, scientific
-settings and controlled-resource boundaries are retained.
+The subsequent utility follow-up below now confirms the bounded native scope;
+unchanged kernels, scientific settings and controlled-resource boundaries remain.
 The [cgroup/tmpfs fixture follow-up](CI_CGROUP_TMPFS_FIXTURES_20261001.md)
 removes host dependence from synthetic worker cases while retaining actual
 tmpfs-copy checks and fail-closed missing-scope/path guards. All 59 local cases
 pass; deliberate capability absence gives 51 pass and eight native skips in the
-same scope. Compiler/build setup is API-reported successful in one live macOS
-job, but native regression and the new fixture corrections are not yet confirmed.
+same scope. The subsequent utility follow-up confirms those bounded native and
+fixture scopes in an actual macOS log, not full remote test-suite success.
 No production fallback, memory-charging proof or controlled timing follows.
+The [native utility follow-up](CI_NATIVE_UTILITIES_20261002.md) inspects source-42e
+Python 3.11 fast CI: 51 pass/eight skips within the prior 59-case fixture scope,
+67 pass/three skips within the prior 70-case native scope, but 60 failures/four
+errors overall. All five test jobs fail; wheel/docs succeed. Explicit GNU Time
+and Pandoc preparation now passes 100 local checks; deliberate BSD-style probe
+failure gives 76 pass/24 native skips in the same scope. Actual new macOS utility
+outcomes remain unverified. Historical production commands/provenance, scientific
+settings and admission rules remain unchanged; no controlled timing follows.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

@@ -54,7 +54,8 @@ def execution(tmp_path, monkeypatch):
     return plan, manifest, calls
 
 
-def test_success_does_not_admit_native_outputs(execution):
+def test_success_does_not_admit_native_outputs(execution, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, calls = execution
     result = runner.run(manifest)
     assert len(calls) == 2
@@ -71,7 +72,8 @@ def test_check_only_leaves_output_absent(execution):
     assert not Path(plan["output_root"]).exists()
 
 
-def test_failure_recorded(execution):
+def test_failure_recorded(execution, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, _ = execution
     plan["native_argv"] = ["/bin/false"]
     with pytest.raises(RuntimeError, match="Native process failed"):
@@ -80,7 +82,8 @@ def test_failure_recorded(execution):
     assert status["status"] == "failed" and status["exit_code"] == 1
 
 
-def test_postflight_change_recorded(execution, monkeypatch):
+def test_postflight_change_recorded(execution, monkeypatch, bind_test_gnu_time):
+    bind_test_gnu_time(runner)
     plan, manifest, calls = execution
     original = runner.verify
 

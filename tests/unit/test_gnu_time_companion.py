@@ -1,4 +1,3 @@
-import shutil
 import subprocess
 import sys
 
@@ -26,15 +25,9 @@ def test_reject_noise_and_missing_fields():
 
 
 @pytest.mark.parametrize("exit_code", [0, 7])
-def test_actual_gnu_time_exit_and_output(tmp_path, exit_code):
-    executable = shutil.which("time")
-    if not executable:
-        pytest.skip("External GNU time required")
-    version = subprocess.check_output([executable, "--version"], text=True)
-    if "GNU Time" not in version:
-        pytest.skip("GNU time required")
+def test_actual_gnu_time_exit_and_output(tmp_path, exit_code, gnu_time_binary):
     output = tmp_path / "accounting with spaces.tsv"
-    argv = command([sys.executable, "-c", f"raise SystemExit({exit_code})"], output, executable)
+    argv = command([sys.executable, "-c", f"raise SystemExit({exit_code})"], output, gnu_time_binary)
     run = subprocess.run(argv, capture_output=True)
     assert run.returncode == exit_code
     assert parse(output.read_text())["exit_status"] == exit_code

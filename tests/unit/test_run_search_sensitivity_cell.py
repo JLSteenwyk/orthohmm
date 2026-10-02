@@ -25,7 +25,8 @@ def test_diamond_commands_are_species_specific(tmp_path):
 
 
 @pytest.mark.parametrize("code", [0, 7])
-def test_execute_preserves_exit_logs(tmp_path, code):
+def test_execute_preserves_exit_logs(tmp_path, code, bind_test_gnu_time):
+    bind_test_gnu_time(worker)
     stages = []
     def execute():
         worker.execute([sys.executable, "-c", f"print('test'); raise SystemExit({code})"],
@@ -47,7 +48,8 @@ def test_deadline_does_not_launch(tmp_path):
     assert len(stages) == 1 and not list(tmp_path.iterdir())
 
 
-def test_timeout_records_killed_child(tmp_path):
+def test_timeout_records_killed_child(tmp_path, bind_test_gnu_time):
+    bind_test_gnu_time(worker)
     stages = []
     with pytest.raises(worker.subprocess.TimeoutExpired):
         worker.execute([sys.executable, "-c", "import time; time.sleep(10)"],

@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Explicit Native Utilities And Remote Fixture Confirmation (2026-10-02)
+
+Previous response to the quiet-window question is no progress, not an analysis
+completion or verified wait. Revalidate the active objective and current source
+42e48844; timing stays deferred without host polling/questions or DGX work.
+Inspect the actual existing CI handle, not a restarted job. At 03:39:06 UTC all
+five test jobs fail, wheel/docs succeed. Python 3.11 fast log: 13,665 pass,
+60 fail, four errors, 112 skip, 30 warnings, 544.21s. This newly confirms the
+prior 59-case cgroup/tmpfs scope (51 pass/eight skips) and 70-case native scope
+(67 pass/three skips), including scalar/Numba parity and profile expansion.
+Actual GCC 16.2.0 and fresh three-library loading are logged; the separate
+baseline compile skip cause remains unisolated. No sibling cause/full-suite
+success inference or scientific/native benchmark claim follows.
+
+BSD Time options and missing Pandoc remain explicit failures. Add one native
+utilities setup step to each macOS test definition, with absolute GNU Time
+selection and actual version logging. Requested smoke tests bind only their
+module's timing executor; global subprocess, all eight production sources and
+historical commands/provenance remain unchanged. Invalid explicit utilities
+fail closed without fallback; missing unconfigured capability skips only native
+smokes while independent guards still execute.
+
+**100 focused Linux cases pass in 3.10 seconds**, zero failures/errors/skips,
+24 new cases included. Real GNU Time exit/log/timeout and actual Pandoc parser
+checks pass. Deliberate BSD-style probe failure: **76 pass and 24 explicit
+native skips in 2.29 seconds**, zero failures/errors, same scope not additive
+or macOS. Structured YAML confirms only the two intended steps; binary/source/
+JUnit/remote pins retained in [evidence and boundaries](CI_NATIVE_UTILITIES_20261002.md).
+
+Commit/push and observe actual new CI without resubmission. New macOS utility
+outcomes, remaining path/raw-data/Linux-utility test failures and full release
+work remain open. All owned commands terminate; no package/default/score/
+admission change, shared utility installation, host contention poll/question,
+DGX or unrelated workload/service action occurs. Controlled timing remains
+deferred. Full publication goal stays active with remaining uncertainty,
+source/rights, comparable-resource and executable release/archive requirements.
+
 ## Synthetic Cgroup Scope And Native Tmpfs Capability (2026-10-01)
 
 Previous turn is progress at pushed f41db3b1. Reread objective/ledger and observe

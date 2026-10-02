@@ -7,6 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [native CI utility follow-up](results/CI_NATIVE_UTILITIES_20261002.md)
+records bounded macOS confirmation of fresh CPU kernels and cgroup/tmpfs test
+fixtures. It adds explicit GNU Time/Pandoc test setup with 100 passing local
+checks, not production timing, full remote CI success or release clearance.
+Frozen scientific commands and resource admission remain unchanged.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their
