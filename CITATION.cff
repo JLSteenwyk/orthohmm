@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: >-
+  Please cite the original OrthoHMM preprint below. For reproducible use,
+  also report the exact software revision and inference configuration.
+type: software
+title: OrthoHMM
+authors:
+  - family-names: Steenwyk
+    given-names: Jacob L.
+repository-code: https://github.com/JLSteenwyk/orthohmm
+url: https://jlsteenwyk.com/orthohmm/
+license: MIT
+preferred-citation:
+  type: unpublished
+  title: 'OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models'
+  authors:
+    - family-names: Steenwyk
+      given-names: Jacob L
+    - family-names: Buida
+      given-names: Thomas J.
+      name-suffix: III
+    - family-names: Rokas
+      given-names: Antonis
+    - family-names: King
+      given-names: Nicole
+  year: 2024
+  doi: 10.1101/2024.12.07.627370
+  url: https://doi.org/10.1101/2024.12.07.627370
+  notes: bioRxiv preprint; not a software release or the current benchmarking manuscript.

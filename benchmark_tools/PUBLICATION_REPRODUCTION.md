@@ -18,6 +18,12 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [repository citation metadata](results/REPOSITORY_CITATION_20261002.md)
+passes CFF 1.2.0 validation and reviewed preprint-field checks. It names the
+original preprint, not a new software archive or benchmarking manuscript.
+No release version/date or software DOI is assigned. Report the frozen
+revision and inference settings separately; existing release tags are unchanged.
+
 The [current assembled-workflow glibc guard](results/PUBLICATION_GLIBC_PREFLIGHT_20261002.md)
 now requires externally anchored ABI evidence before installation. Preflight-only
 execution reports controller glibc 2.39 against the 2.34 floor and checks 119

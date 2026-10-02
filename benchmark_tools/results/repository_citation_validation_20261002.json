@@ -1,0 +1,83 @@
+{
+  "checks": {
+    "cff_schema_1_2_0": true,
+    "no_unreleased_version_or_release_date": true,
+    "preferred_author_order_names_suffix_match": true,
+    "preferred_doi_and_url_match": true,
+    "preferred_title_matches_reviewed_reference": true,
+    "preferred_year_matches_reference": true,
+    "preprint_not_software_doi": true,
+    "software_author_matches_setup": true
+  },
+  "frozen_scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "historical_tag_commit": "1ea3d2fae0d47edc94dfee65153905a373393adb",
+  "historical_tag_object": "f3601953a7baa4a8861fc0267de695a5dcde22ad",
+  "inputs": [
+    {
+      "path": "CITATION.cff",
+      "sha256": "65418cf0f9d0bc644fd8f944429fc2edc48014c10359a1f71b6305352d7a82f6",
+      "size_bytes": 936
+    },
+    {
+      "path": "benchmark_tools/results/publication_references_reviewed_20260919.csl.json",
+      "sha256": "d3c73777411956d0bb540207618b2c994d88120724815e2678853a7d46d8d8ca",
+      "size_bytes": 14562
+    },
+    {
+      "path": "benchmark_tools/results/publication_orthohmm_suffix_provenance_20260919.json",
+      "sha256": "0cb3d8eff7eaa6c0d93da2688aa22bcdc706bfc350a4fe1d0cca5b5fbd8671cd",
+      "size_bytes": 2308
+    },
+    {
+      "path": "benchmarks/work/publication_citation_20261002/venv/lib/python3.12/site-packages/cffconvert/schemas/1.2.0/schema.json",
+      "sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+      "size_bytes": 63763
+    }
+  ],
+  "limitations": [
+    "Local cffconvert output ignores preferred-citation; only top-level software rendering inspected.",
+    "GitHub preferred-citation UI not observed or asserted.",
+    "Preferred citation is the original preprint, not current benchmarking manuscript or software archive.",
+    "No software version, release date, archive DOI, or new author list assigned.",
+    "No scientific rerun, timing observation, host change, or release/deposition executed."
+  ],
+  "local_converter_outputs": [
+    {
+      "path": "benchmarks/work/publication_citation_20261002/citation.bib",
+      "sha256": "66c4342b1741c31e4f0feb1a4727e8dceb6b032af64b7a3800cac4b7602662ec",
+      "size_bytes": 119
+    },
+    {
+      "path": "benchmarks/work/publication_citation_20261002/citation.apa.txt",
+      "sha256": "7555d1c8f5ea435a6d58006ab9286528cd559b90704ec85f5bc60a63d93ed939",
+      "size_bytes": 61
+    }
+  ],
+  "negative_schema_cases": {
+    "missing_title_rejected": true,
+    "unsupported_cff_type_rejected": true
+  },
+  "packages": {
+    "attrs": "26.1.0",
+    "certifi": "2026.7.22",
+    "cffconvert": "2.0.0",
+    "charset-normalizer": "3.5.2",
+    "click": "8.5.0",
+    "docopt": "0.6.2",
+    "idna": "3.20",
+    "jsonschema": "3.2.0",
+    "orthohmm": "0.5.0",
+    "pip": "24.0",
+    "pykwalify": "1.8.0",
+    "pyrsistent": "0.20.0",
+    "python-dateutil": "2.9.0.post0",
+    "requests": "2.34.2",
+    "ruamel.yaml": "0.19.1",
+    "setuptools": "84.0.0",
+    "six": "1.17.0",
+    "urllib3": "2.8.0"
+  },
+  "python": "3.12.3",
+  "status": "repository_citation_schema_and_reviewed_fields_verified",
+  "validator": "cffconvert 2.0.0 bundled CFF 1.2.0 schema via jsonschema Draft7Validator"
+}

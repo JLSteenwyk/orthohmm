@@ -41,6 +41,9 @@
 
 OrthoHMM infers gene orthology using Hidden Markov Models.<br /><br />
 If you found orthohmm useful, please cite *OrthoHMM: Improved Inference of Ortholog Groups using Hidden Markov Models*. Steenwyk et al. 2024, bioRxiv. doi: [10.1101/2024.12.07.627370](https://www.biorxiv.org/content/10.1101/2024.12.07.627370v1).
+Machine-readable metadata is available in [CITATION.cff](CITATION.cff).
+Also report the exact software revision and inference configuration; the
+preprint DOI does not identify the development checkout or its benchmark results.
 
 ---
 

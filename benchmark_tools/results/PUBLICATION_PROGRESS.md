@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Repository Citation Metadata Prepared (2026-10-02)
+
+Previous turn progressed at pushed `9c81953d` with executed glibc preflight.
+Read the original goal/current ledger and reuse completed scientific/native
+admissions. The user does not know a quiet window; it is not needed now.
+Timing remains deferred without renewed scheduling questions, contention
+polling, DGX access or disruption of unrelated work.
+
+Inspect release metadata and find no root CFF citation file. Add it using
+setup.py's software author and the already reviewed original preprint's
+ordered authors, supported III suffix, title, DOI and year. Fresh Crossref
+curl read agrees with the retained fields; direct web-tool API access fails.
+Use explicit unpublished/preprint status and omit invented software version,
+release date, archive DOI or new benchmarking-manuscript author list.
+
+Private cffconvert 2.0.0 installation leaves scientific/shared runtimes alone.
+Schema validation exits zero; eight parsed metadata checks and two negative
+schema cases pass. Local BibTeX/APA-like conversion exits zero but ignores
+preferred-citation: only top-level software rendering is inspected. GitHub's
+preferred-citation UI is not tested. Retain the bounded converter/validation
+receipt and exploratory API-inspection failure. Existing v0.5.0 resolves to
+historical 1ea3d2fa, not frozen 7f3a9e40; do not relabel either.
+
+See [validation and release boundaries](REPOSITORY_CITATION_20261002.md).
+Update README/reproduction guide and commit/push only focused citation/docs.
+No scientific/default/input change, archive rebuild, main-PDF rerender,
+timing observation, service change, public release or deposition occurs.
+All owned process handles are terminal. This supplies missing citation
+metadata, not controlled resources or publication readiness. Goal active.
+
 ## Declared Glibc Floor Enforced Before Installation (2026-10-02)
 
 Previous goal turn progressed at pushed `9c0254a3`, executing the selected
