@@ -37,6 +37,18 @@ EXTRAS = {
 }
 COMPONENTS = dict(source=("SOURCE_INDEX.json", "workflow/benchmark_tools/bundle_publication_source.py"),
                   manuscript=("REVIEW_INDEX.json", "benchmark_tools/bundle_publication_review.py"))
+NATIVE_EXTRAS = {
+    "runtime/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md": ("benchmark_tools/results/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md", None),
+    "runtime/publication_runtime_assembly_20261002.json": ("benchmark_tools/results/publication_runtime_assembly_20261002.json", "aa579ae061cf9a7a7f373902b4b1342495cefe2c5ecc1f10eb894fc7f2d45991"),
+    "runtime/publication_runtime_assembly_validation_20261002.json": ("benchmark_tools/results/publication_runtime_assembly_validation_20261002.json", "df975e27c3793cf49578d76dca38b975b98022e4d244fffa590a09f5352ec2cc"),
+}
+PROFILES = {"native-preparation", "native-build"}
+
+
+def selection(profile):
+    if profile not in PROFILES:
+        raise ValueError("Unknown handoff source profile")
+    return EXTRAS if profile == "native-preparation" else {**EXTRAS, **NATIVE_EXTRAS}
 
 
 def identity(content):
@@ -79,14 +91,50 @@ def check_table(content):
     return dict(methods=8, numeric_cells=72, raw_scoring_repeated=False, secondary_mean_official=False)
 
 
+def check_runtime_evidence(directory):
+    execution_path = directory / "runtime/publication_runtime_assembly_20261002.json"
+    validation_path = directory / "runtime/publication_runtime_assembly_validation_20261002.json"
+    execution = json.loads(execution_path.read_bytes())
+    validation = json.loads(validation_path.read_bytes())
+    if (execution["status"] != "assembled_runtime_integrated_fixture_verified"
+            or execution["scientific_revision"] != "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806"
+            or execution["workflow_revision"] != "7bedb195536faf3dcd3bc6079c82252706cde3ed"
+            or any(execution[key] is not False for key in ("controlled_timing", "publication_ready",
+                "redistribution_clearance", "security_clearance", "new_biological_validation", "full_orthobench_rerun",
+                "native_execution_repeated", "retry"))
+            or execution["base_unchanged"] is not True or execution["base_site_files"] != 883
+            or execution["installed_matched_files"] != 5754
+            or execution["installed_wheel_counts"] != {"inference": 11, "reader": 5}
+            or execution["original_failure_preserved"] is not True
+            or len(execution["executor_outcomes"]) != 10
+            or any(row["returncode"] != 0 for row in execution["executor_outcomes"])
+            or validation["status"] != "assembled_runtime_receipt_independently_verified"
+            or {key: validation["receipt"][key] for key in ("bytes", "sha256")} != identity(execution_path.read_bytes())
+            or validation["checked_file_identities"] != 160
+            or validation["source_external_command_anchor"] is not True
+            or validation["assembly_external_command_anchor"] is not True):
+        raise ValueError("Retained runtime evidence scope differs")
+    return dict(recorded_executor_stages=10, recorded_installed_payload_files=5754,
+                recorded_base_site_files=883, original_failure_preserved=True,
+                raw_path_readback_repeated=False, native_inference_repeated=False)
+
+
 def verify(directory, manifest_sha):
     directory = Path(directory).resolve(strict=True)
     index_path = directory / "HANDOFF_INDEX.json"
     if index_path.is_symlink() or identity(index_path.read_bytes())["sha256"] != manifest_sha:
         raise ValueError("Handoff index differs from external anchor")
     index = json.loads(index_path.read_bytes())
-    if (index["schema"] != "publication_handoff_candidate_v1"
-            or any(index[key] is not False for key in ("publication_ready", "redistribution_clearance", "public_release_uploaded"))
+    if index["schema"] == "publication_handoff_candidate_v1":
+        profile = "native-preparation"
+        if "source_profile" in index:
+            raise ValueError("Legacy handoff cannot select a new source profile")
+    elif index["schema"] == "publication_handoff_candidate_v2" and index.get("source_profile") == "native-build":
+        profile = "native-build"
+    else:
+        raise ValueError("Handoff schema/source profile differs")
+    extras = selection(profile)
+    if (any(index[key] is not False for key in ("publication_ready", "redistribution_clearance", "public_release_uploaded"))
             or not re.fullmatch(r"[0-9a-f]{40}", index["workflow_revision"])
             or set(index["components"]) != set(COMPONENTS)):
         raise ValueError("Handoff scope differs")
@@ -108,9 +156,9 @@ def verify(directory, manifest_sha):
     actual = {p.relative_to(directory).as_posix() for p in directory.rglob("*") if p.is_file() or p.is_symlink()}
     if actual != seen | {"HANDOFF_INDEX.json"}:
         raise ValueError("Extra/missing handoff payloads")
-    if set(index["extra_sources"]) != set(EXTRAS):
+    if set(index["extra_sources"]) != set(extras):
         raise ValueError("Handoff arithmetic/support selection differs")
-    for name, (git_path, digest) in EXTRAS.items():
+    for name, (git_path, digest) in extras.items():
         row = index["extra_sources"][name]
         if (name not in seen or row["git_path"] != git_path or row["git_revision"] != index["workflow_revision"]
                 or not re.fullmatch(r"[0-9a-f]{40}", row["git_blob"])
@@ -129,28 +177,33 @@ def verify(directory, manifest_sha):
         results[role] = result
         child = json.loads((directory / role / index_name).read_bytes())
         component_files |= {role + "/" + row["path"] for row in child["files"]} | {role + "/" + index_name}
-        if role == "source" and child.get("profile") != "native-preparation":
-            raise ValueError("Require native-preparation source profile")
-    if seen != component_files | set(EXTRAS):
+        if role == "source" and child.get("profile") != profile:
+            raise ValueError("Source profile differs from selected handoff format")
+    if seen != component_files | set(extras):
         raise ValueError("Unaccounted handoff payloads")
     if results["manuscript"]["page_count"] != 9:
         raise ValueError("Require the retained nine-page manuscript")
     table = check_table((directory / "comparison/scores.tsv").read_bytes())
-    return dict(status="publication_handoff_candidate_verified", files=len(seen), payload_bytes=total,
+    result = dict(status="publication_handoff_candidate_verified", files=len(seen), payload_bytes=total,
         manifest=identity(index_path.read_bytes()), components=results, comparison=table,
         publication_ready=False, public_release_uploaded=False, redistribution_clearance=False,
         native_inference_reproduced=False, numerical_replay_executed=False)
+    if profile == "native-build":
+        result.update(source_profile=profile, runtime_evidence_included=True, runtime_payload_delivered=False,
+                      runtime_evidence=check_runtime_evidence(directory))
+    return result
 
 
-def build(repo, revision, output):
+def build(repo, revision, output, source_profile="native-preparation"):
     repo, output = Path(repo).resolve(), Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
+    selected = selection(source_profile)
     from benchmark_tools import bundle_publication_source as source
     from benchmark_tools import bundle_publication_review as review
     commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
     extras, mappings = {}, {}
-    for name, (git_path, digest) in EXTRAS.items():
+    for name, (git_path, digest) in selected.items():
         content, mode, blob = review.committed(repo, commit, git_path)
         if digest is not None and identity(content)["sha256"] != digest:
             raise ValueError("Frozen handoff input differs")
@@ -158,7 +211,7 @@ def build(repo, revision, output):
         mappings[name] = dict(git_path=git_path, git_revision=commit, git_blob=blob)
     output.mkdir(parents=True, exist_ok=False)
     try:
-        results = dict(source=source.build(repo, commit, output / "source", "native-preparation"),
+        results = dict(source=source.build(repo, commit, output / "source", source_profile),
             manuscript=review.build(repo, REVIEW_REVISION, LEDGER_REVISION, commit,
                                     output / "manuscript", stages=STAGES))
         # Component builders inherit the host umask for their generated indexes.
@@ -188,6 +241,10 @@ def build(repo, revision, output):
                 "Raw datasets, native predictions, dependency wheels/tools, Conda bootstrap and OS runtime are excluded.",
                 "Verification does not execute arithmetic, infer orthology, establish independent accuracy or admit timing.",
                 "Historical paths in metadata are provenance, not required reads for verification or the two standalone arithmetic replays."])
+        if source_profile == "native-build":
+            index.update(schema="publication_handoff_candidate_v2", source_profile=source_profile)
+            index["limitations"].append(
+                "Native-build adds frozen setup overlay, seven acquisition/runtime support documents and pinned integration evidence; raw/native/runtime payloads remain excluded.")
         with (output / "HANDOFF_INDEX.json").open("x") as stream:
             json.dump(index, stream, indent=2, sort_keys=True, allow_nan=False)
             stream.write("\n")
@@ -206,6 +263,7 @@ if __name__ == "__main__":
     builder.add_argument("--repo", type=Path, required=True)
     builder.add_argument("--revision", required=True)
     builder.add_argument("--output", type=Path, required=True)
+    builder.add_argument("--source-profile", choices=sorted(PROFILES), default="native-preparation")
     verifier = commands.add_parser("verify")
     verifier.add_argument("directory", type=Path)
     verifier.add_argument("--manifest-sha256", required=True)
@@ -213,7 +271,7 @@ if __name__ == "__main__":
     if args.command == "build":
         import sys
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-        result = build(args.repo, args.revision, args.output)
+        result = build(args.repo, args.revision, args.output, args.source_profile)
     else:
         result = verify(args.directory, args.manifest_sha256)
     print(json.dumps(result, indent=2, sort_keys=True))

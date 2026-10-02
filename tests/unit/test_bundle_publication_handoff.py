@@ -63,6 +63,110 @@ def update_index(directory, change):
     return module.identity(path.read_bytes())["sha256"]
 
 
+@pytest.fixture
+def native_candidate(candidate):
+    directory, _ = candidate
+    repository = Path(module.__file__).resolve().parent.parent
+    for name, (git_path, _) in module.NATIVE_EXTRAS.items():
+        path = directory / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes((repository / git_path).read_bytes())
+        path.chmod(0o644)
+    source_index = directory / "source/SOURCE_INDEX.json"
+    child = json.loads(source_index.read_bytes())
+    child["profile"] = "native-build"
+    source_index.write_text(json.dumps(child))
+    def change(index):
+        index.update(schema="publication_handoff_candidate_v2", source_profile="native-build")
+        index["components"]["source"]["sha256"] = module.identity(source_index.read_bytes())["sha256"]
+        index["components"]["source"]["verified"]["manifest"] = module.identity(source_index.read_bytes())
+        for name, (git_path, _) in module.NATIVE_EXTRAS.items():
+            index["extra_sources"][name] = dict(git_path=git_path, git_revision="a" * 40, git_blob="b" * 40)
+        index["files"] = [dict(path=p.relative_to(directory).as_posix(), mode=0o644,
+            **module.identity(p.read_bytes())) for p in sorted(directory.rglob("*"))
+            if p.is_file() and p != directory / "HANDOFF_INDEX.json"]
+    return directory, update_index(directory, change)
+
+
+def test_explicit_native_build_profile_and_retained_evidence(native_candidate):
+    directory, digest = native_candidate
+    result = module.verify(directory, digest)
+    assert result["source_profile"] == "native-build"
+    assert result["runtime_evidence_included"] is True
+    assert result["runtime_payload_delivered"] is False
+    assert result["runtime_evidence"]["recorded_executor_stages"] == 10
+    assert result["runtime_evidence"]["raw_path_readback_repeated"] is False
+    assert result["native_inference_reproduced"] is False
+    assert not list(directory.rglob("__pycache__"))
+
+
+def test_native_relocated_cli_without_original_artifact_paths(native_candidate, tmp_path):
+    directory, digest = native_candidate
+    copied = tmp_path / "relocated-native"
+    shutil.copytree(directory, copied)
+    shutil.rmtree(directory)
+    result = subprocess.run([sys.executable, "-I", "-S", "-B", str(copied / "bundle_publication_handoff.py"),
+        "verify", str(copied), "--manifest-sha256", digest], cwd=tmp_path,
+        env={"PATH": "/no-git-or-artifacts"}, capture_output=True, text=True, timeout=30)
+    assert result.returncode == 0, result.stderr
+    assert json.loads(result.stdout)["runtime_evidence"]["recorded_installed_payload_files"] == 5754
+
+
+@pytest.mark.parametrize("defect", ["profile", "legacy_schema", "missing_evidence", "evidence_byte", "support_mapping",
+                                   "new_profile_on_legacy", "wrong_child_profile"])
+def test_native_profile_scope_cannot_be_relaxed(native_candidate, defect):
+    directory, _ = native_candidate
+    def change(index):
+        if defect == "profile":
+            index["source_profile"] = "source-only"
+        elif defect == "legacy_schema":
+            index["schema"] = "publication_handoff_candidate_v1"
+        elif defect == "missing_evidence":
+            name = next(iter(module.NATIVE_EXTRAS))
+            index["extra_sources"].pop(name)
+        elif defect == "support_mapping":
+            index["extra_sources"][next(iter(module.NATIVE_EXTRAS))]["git_path"] = "wrong.json"
+        elif defect == "new_profile_on_legacy":
+            index.update(schema="publication_handoff_candidate_v1", source_profile="native-preparation")
+        elif defect == "wrong_child_profile":
+            path = directory / "source/SOURCE_INDEX.json"
+            child = json.loads(path.read_bytes())
+            child["profile"] = "native-preparation"
+            path.write_text(json.dumps(child))
+            index["components"]["source"]["sha256"] = module.identity(path.read_bytes())["sha256"]
+            index["components"]["source"]["verified"]["manifest"] = module.identity(path.read_bytes())
+            for row in index["files"]:
+                if row["path"] == "source/SOURCE_INDEX.json":
+                    row.update(module.identity(path.read_bytes()))
+        else:
+            path = directory / "runtime/publication_runtime_assembly_20261002.json"
+            value = json.loads(path.read_bytes())
+            value["publication_ready"] = True
+            path.write_text(json.dumps(value))
+            for row in index["files"]:
+                if row["path"] == path.relative_to(directory).as_posix():
+                    row.update(module.identity(path.read_bytes()))
+    digest = update_index(directory, change)
+    with pytest.raises(ValueError):
+        module.verify(directory, digest)
+
+
+def test_runtime_evidence_semantics_checked_separately(native_candidate):
+    directory, _ = native_candidate
+    path = directory / "runtime/publication_runtime_assembly_20261002.json"
+    value = json.loads(path.read_bytes())
+    value["executor_outcomes"][0]["returncode"] = 1
+    path.write_text(json.dumps(value))
+    with pytest.raises(ValueError, match="runtime evidence scope"):
+        module.check_runtime_evidence(directory)
+
+
+def test_invalid_build_profile_rejected_before_output(tmp_path):
+    with pytest.raises(ValueError, match="Unknown handoff"):
+        module.build(tmp_path, "HEAD", tmp_path / "output", "source-only")
+    assert not (tmp_path / "output").exists()
+
+
 def test_candidate_components_and_scope(candidate):
     directory, digest = candidate
     result = module.verify(directory, digest)
@@ -156,10 +260,11 @@ def test_existing_build_output_refused(candidate):
         module.build(directory, "HEAD", directory)
 
 
-def test_build_normalizes_generated_indexes(candidate, tmp_path, monkeypatch):
+@pytest.mark.parametrize("profile", ["native-preparation", "native-build"])
+def test_build_normalizes_generated_indexes(request, tmp_path, monkeypatch, profile):
     from benchmark_tools import bundle_publication_review as review
     from benchmark_tools import bundle_publication_source as source
-    directory, _ = candidate
+    directory, _ = request.getfixturevalue("candidate" if profile == "native-preparation" else "native_candidate")
     repository = Path(module.__file__).resolve().parent.parent
     output = tmp_path / "assembled"
     monkeypatch.setattr(module.subprocess, "check_output", lambda *args, **kwargs: "a" * 40)
@@ -176,10 +281,20 @@ def test_build_normalizes_generated_indexes(candidate, tmp_path, monkeypatch):
         return verifier.verify(destination, module.identity(index.read_bytes())["sha256"])
 
     monkeypatch.setattr(review, "committed", committed)
-    monkeypatch.setattr(source, "build", lambda repo, revision, destination, profile: component("source", destination))
+    selected_profiles = []
+    def source_build(repo, revision, destination, selected):
+        selected_profiles.append(selected)
+        return component("source", destination)
+    monkeypatch.setattr(source, "build", source_build)
     monkeypatch.setattr(review, "build", lambda repo, revision, ledger, workflow, destination, **kwargs: component("manuscript", destination))
-    result = module.build(repository, "HEAD", output)
+    result = (module.build(repository, "HEAD", output) if profile == "native-preparation"
+              else module.build(repository, "HEAD", output, profile))
     assert result["status"] == "publication_handoff_candidate_verified"
+    assert selected_profiles == [profile]
+    if profile == "native-build":
+        assert result["runtime_evidence_included"] is True
+    else:
+        assert "runtime_evidence_included" not in result
     for role, (index_name, _) in module.COMPONENTS.items():
         assert (output / role / index_name).stat().st_mode & 0o777 == 0o644
     assert (output / "HANDOFF_INDEX.json").stat().st_mode & 0o777 == 0o644
