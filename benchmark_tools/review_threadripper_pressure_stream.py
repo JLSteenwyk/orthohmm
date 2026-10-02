@@ -18,7 +18,7 @@ def native_pressure_role(policy):
 
 
 def evaluate(points, *, boot_id, job_scope, launch_ns, end_ns, limits, maximum_period_s,
-             pressure_role="eligibility"):
+             pressure_role="eligibility", boundary_only=False):
     if (set(limits) != {"cpu", "memory", "io"}
             or any(number(v) > 100 for v in limits.values())
             or type(launch_ns) is not int or type(end_ns) is not int
@@ -26,6 +26,8 @@ def evaluate(points, *, boot_id, job_scope, launch_ns, end_ns, limits, maximum_p
         raise ValueError("Require native timestamps and explicit three-resource PSI limits")
     if not isinstance(pressure_role, str) or pressure_role not in {"eligibility", "diagnostic_only"}:
         raise ValueError("Invalid native pressure role")
+    if type(boundary_only) is not bool or boundary_only and pressure_role != "diagnostic_only":
+        raise ValueError("Boundary pressure requires an explicit diagnostic-only role")
     number(maximum_period_s, positive=True)
     scope = group(job_scope)
     failures = Counter()
@@ -68,7 +70,7 @@ def evaluate(points, *, boot_id, job_scope, launch_ns, end_ns, limits, maximum_p
                 intervals += 1
                 period = (last_start - previous["started_monotonic_ns"]) / 1e9
                 maximum_period = max(maximum_period, period)
-                if period > maximum_period_s:
+                if not boundary_only and period > maximum_period_s:
                     failures["pressure_sample_period_exceeded"] += 1
             previous = samples[-1]
         except (ValueError, TypeError, KeyError, OverflowError) as error:
@@ -79,6 +81,8 @@ def evaluate(points, *, boot_id, job_scope, launch_ns, end_ns, limits, maximum_p
         failures["native_interval_not_bracketed"] += 1
     if not intervals or intervals != count - 1:
         failures["incomplete_pressure_chain"] += 1
+    if boundary_only and count != 2:
+        failures["boundary_requires_exactly_two_points"] += 1
     result = dict(schema="threadripper_pressure_stream_review_v1",
         sampled_pressure_policy_satisfied=not failures, points=count, intervals=intervals,
         failures=dict(failures), maximum_observed_some_percent=maxima,
@@ -99,4 +103,11 @@ def evaluate(points, *, boot_id, job_scope, launch_ns, end_ns, limits, maximum_p
             diagnostic_threshold_exceedances=dict(exceedances))
         result["limitations"].append(
             "Valid native-interval PSI magnitudes are diagnostic only; they neither exclude a slow method nor certify an uncontended host.")
+    if boundary_only:
+        result.update(schema="threadripper_boundary_pressure_review_v1",
+            native_pressure_observation="boundary_only", periodic_pressure_cadence_checked=False,
+            bounds=dict(some_percent=limits, maximum_point_duration_s=maximum_period_s),
+            interval_average_some_percent=result.pop("maximum_observed_some_percent"))
+        result["limitations"].append(
+            "Exactly two native boundary points: interval-average PSI diagnostics, not periodic pressure coverage or within-run peak rates.")
     return result

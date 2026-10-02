@@ -710,7 +710,11 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     monkeypatch.setattr(driver, "measure_run", measured)
     def audit_stream(directory, policy_ref, preflight_ref, **kwargs):
         assert directory == active["measurement_directory"]
-        assert kwargs == dict(job_id=42, index=request["index"])
+        expected = dict(job_id=42, index=request["index"])
+        if private in {"overhead", "overhead_second"}:
+            task = json.loads(Path(request["overhead_plan"]["path"]).read_text())["runs"][request["index"]]
+            expected["collector_arm"] = task["arm"]
+        assert kwargs == expected
         assert worker_events[-1] == "cleaned"
         worker_events.append("stream_review")
         return put(root / "stream_review.json", {}), dict(sampled_environment_policy_satisfied=not stream_fails)

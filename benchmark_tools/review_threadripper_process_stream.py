@@ -14,6 +14,7 @@ from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 from benchmark_tools.review_threadripper_pressure_stream import evaluate as evaluate_pressure
 from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
+from benchmark_tools.verify_lineage_native_provenance import same
 
 
 def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
@@ -100,8 +101,10 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
             "No production timing admission, automatic retry or next-run authorization."])
 
 
-def audit(directory, policy_ref, preflight_ref, *, job_id, index):
+def audit(directory, policy_ref, preflight_ref, *, job_id, index, collector_arm="periodic"):
     """Bind a completed collector stream to its reviewed policy and native clock."""
+    if not isinstance(collector_arm, str) or collector_arm not in {"periodic", "boundary"}:
+        raise ValueError("Require explicit supported native collector arm")
     directory = Path(directory).resolve()
     output = directory / "process_stream_review.json"
     if output.exists() or output.is_symlink():
@@ -119,6 +122,8 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
 
     policy = read(policy_ref)
     pressure_role = native_pressure_role(policy)
+    if collector_arm == "boundary" and pressure_role != "diagnostic_only":
+        raise ValueError("Boundary environment review requires diagnostic-only native pressure")
     preflight = read(preflight_ref)
     if (policy.get("decision") != "reviewed" or policy.get("host") != "bizon"
             or preflight.get("schema") != "threadripper_environment_preflight_v1"
@@ -142,6 +147,17 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
         check(ref)
     ready = read(refs["ready.json"])
     done = read(refs["done.json"])
+    if collector_arm == "boundary":
+        boundary_ref = record(directory / "boundary_report.json")
+        boundary = read(boundary_ref)
+        if (boundary.get("schema") != "threadripper_boundary_control_v1"
+                or boundary.get("collector_arm") != "boundary"
+                or type(boundary.get("job_id")) is not int or boundary["job_id"] != job_id
+                or not same(boundary.get("native"), done)
+                or not same(boundary.get("policy"), dict(native_points=2, periodic_native_sampling=False,
+                    completion_poll_interval_s=1., common_host_interval_s=30.))):
+            raise ValueError("Boundary report does not identify the expected native collector")
+        references.append(boundary_ref)
     for key in ("started_ns", "finished_ns"):
         if type(done.get(key)) is not int or done[key] <= 0:
             raise ValueError("Require integer native monotonic timestamps")
@@ -159,15 +175,18 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
     point_paths = sorted(directory.glob("point_*.json"))
     if point_paths != [directory / f"point_{i:06d}.json" for i in range(len(point_paths))]:
         raise ValueError("Require contiguous numbered pressure observation files")
+    if collector_arm == "boundary" and len(point_paths) != 2:
+        raise ValueError("Boundary review requires exactly two native points")
     def points():
         for path in point_paths:
             ref = record(path)
             references.append(ref)
             yield read(ref)
+    extra = dict(boundary_only=True) if collector_arm == "boundary" else {}
     pressure = evaluate_pressure(points(), boot_id=preflight["boot_id"], job_scope=str(job_scope),
         launch_ns=done["started_ns"], end_ns=done["finished_ns"],
         limits=policy["maximum_pressure_percent"],
-        maximum_period_s=policy["maximum_pressure_sample_period_s"], pressure_role=pressure_role)
+        maximum_period_s=policy["maximum_pressure_sample_period_s"], pressure_role=pressure_role, **extra)
     if sorted(directory.glob("point_*.json")) != point_paths:
         raise ValueError("Pressure observation inventory changed during review")
     result["pressure_review"] = pressure
@@ -178,6 +197,9 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
     if pressure_role == "diagnostic_only":
         result.update(schema="threadripper_process_stream_review_v2", native_pressure_role=pressure_role,
                       pressure_thresholds_used_for_eligibility=False)
+    if collector_arm == "boundary":
+        result.update(schema="threadripper_boundary_environment_review_v1", collector_arm=collector_arm,
+                      native_pressure_observation="boundary_only", periodic_pressure_cadence_checked=False)
     for ref in references:
         check(ref)
     result["configuration_endpoint_hashes_verified"] = True

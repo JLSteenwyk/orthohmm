@@ -343,3 +343,118 @@ def test_native_pressure_diagnostics_do_not_hide_missing_evidence_or_outside_wor
     else:
         assert not result["sampled_environment_policy_satisfied"]
     assert not result["scientific_timings_admitted"]
+
+
+def boundary_fixture(tmp_path):
+    policy_ref, preflight_ref = bound_fixture(tmp_path)
+    policy_path = tmp_path / 'policy.json'
+    policy = json.loads(policy_path.read_text())
+    policy.update(schema='threadripper_environment_policy_v2', native_pressure_role='diagnostic_only')
+    policy_path.write_text(json.dumps(policy))
+    policy_ref = stream.record(policy_path)
+    preflight_path = tmp_path / 'preflight.json'
+    preflight = json.loads(preflight_path.read_text())
+    preflight['environment_policy'] = policy_ref
+    preflight_path.write_text(json.dumps(preflight))
+    done = dict(started_ns=11 * 10**9, finished_ns=109 * 10**9)
+    (tmp_path / 'done.json').write_text(json.dumps(done))
+    point = json.loads((tmp_path / 'point_000002.json').read_text())
+    for sample in point['host']:
+        sample['started_monotonic_ns'] += 96 * 10**9
+        sample['finished_monotonic_ns'] += 96 * 10**9
+    (tmp_path / 'point_000001.json').write_text(json.dumps(point))
+    (tmp_path / 'point_000002.json').unlink()
+    (tmp_path / 'boundary_report.json').write_text(json.dumps(dict(
+        schema='threadripper_boundary_control_v1', collector_arm='boundary', job_id=42, native=done,
+        policy=dict(native_points=2, periodic_native_sampling=False,
+                    completion_poll_interval_s=1., common_host_interval_s=30.))))
+    path = tmp_path / 'host_processes.jsonl'
+    initial = json.loads(path.read_text().splitlines()[0])
+    rows = []
+    for index in range(51):
+        row = deepcopy(initial)
+        row['index'] = index
+        snapshot = row['snapshot']
+        shift = index * 2.
+        for key in ('started_monotonic_s', 'finished_monotonic_s'):
+            snapshot[key] += shift
+        for process in snapshot['processes']:
+            process['observed_monotonic_s'] += shift
+            for key in ('started_monotonic_s', 'finished_monotonic_s'):
+                process['kernel_identity'][key] += shift
+        rows.append(row)
+    path.write_text(''.join(json.dumps(row) + '\n' for row in rows))
+    return policy_ref, stream.record(preflight_path)
+
+
+def test_long_boundary_review_has_full_process_stream_and_distinct_pressure_scope(tmp_path):
+    refs = boundary_fixture(tmp_path)
+    _, result = stream.audit(tmp_path, *refs, job_id=42, index=0, collector_arm='boundary')
+    assert result['schema'] == 'threadripper_boundary_environment_review_v1'
+    assert result['sampled_environment_policy_satisfied']
+    assert result['intervals'] == 50 and result['policy_matched_intervals'] == 50
+    assert result['pressure_review']['points'] == 2
+    assert not result['periodic_pressure_cadence_checked']
+    assert not result['scientific_timings_admitted']
+    assert stream.record(tmp_path / 'boundary_report.json') in result['evidence']
+
+
+@pytest.mark.parametrize('defect', ['process_identity', 'foreign_cpu', 'host_gap', 'pressure_read',
+    'extra_point', 'schema', 'native', 'job', 'bool_job', 'policy', 'periodic_policy', 'report_drift'])
+def test_boundary_review_does_not_hide_contamination_or_invalid_evidence(tmp_path, monkeypatch, defect):
+    policy_ref, preflight_ref = boundary_fixture(tmp_path)
+    if defect in {'process_identity', 'foreign_cpu', 'host_gap'}:
+        path = tmp_path / 'host_processes.jsonl'
+        rows = [json.loads(line) for line in path.read_text().splitlines()]
+        if defect == 'process_identity': rows[25]['snapshot']['processes'][0]['name'] = 'scientific_job'
+        elif defect == 'foreign_cpu':
+            for row in rows[25:]: row['snapshot']['processes'][0]['user_s'] = 1.
+        else:
+            rows.pop(25)
+            for index, row in enumerate(rows): row['index'] = index
+        path.write_text(''.join(json.dumps(row) + '\n' for row in rows))
+    elif defect == 'pressure_read':
+        path = tmp_path / 'point_000001.json'
+        point = json.loads(path.read_text())
+        point['host'][0]['errors'].append(dict(field='host_io_pressure', type='OSError'))
+        path.write_text(json.dumps(point))
+    elif defect == 'extra_point':
+        (tmp_path / 'point_000002.json').write_bytes((tmp_path / 'point_000001.json').read_bytes())
+    elif defect == 'periodic_policy':
+        policy_path = tmp_path / 'policy.json'
+        policy = json.loads(policy_path.read_text())
+        policy.update(schema='threadripper_environment_policy_v1')
+        policy.pop('native_pressure_role')
+        policy_path.write_text(json.dumps(policy))
+        policy_ref = stream.record(policy_path)
+    elif defect == 'report_drift':
+        original = stream.evaluate
+        def drift(*args, **kwargs):
+            result = original(*args, **kwargs)
+            (tmp_path / 'boundary_report.json').write_text('{}')
+            return result
+        monkeypatch.setattr(stream, 'evaluate', drift)
+    else:
+        path = tmp_path / 'boundary_report.json'
+        report = json.loads(path.read_text())
+        if defect == 'schema': report['schema'] = 'threadripper_scaling_v1'
+        elif defect == 'native': report['native']['finished_ns'] += 1
+        elif defect == 'job': report['job_id'] = 43
+        elif defect == 'bool_job': report['job_id'] = True
+        else: report['policy']['periodic_native_sampling'] = 0
+        path.write_text(json.dumps(report))
+    if defect in {'process_identity', 'foreign_cpu', 'host_gap', 'pressure_read'}:
+        _, result = stream.audit(tmp_path, policy_ref, preflight_ref, job_id=42, index=0, collector_arm='boundary')
+        assert not result['sampled_environment_policy_satisfied']
+    else:
+        with pytest.raises(ValueError):
+            stream.audit(tmp_path, policy_ref, preflight_ref, job_id=42, index=0, collector_arm='boundary')
+        assert not (tmp_path / 'process_stream_review.json').exists()
+
+
+@pytest.mark.parametrize('arm', [None, True, [], 'unknown'])
+def test_unknown_collector_arm_never_writes_a_review(tmp_path, arm):
+    refs = boundary_fixture(tmp_path)
+    with pytest.raises(ValueError, match='collector arm'):
+        stream.audit(tmp_path, *refs, job_id=42, index=0, collector_arm=arm)
+    assert not (tmp_path / 'process_stream_review.json').exists()

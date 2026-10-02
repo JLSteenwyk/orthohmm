@@ -124,3 +124,70 @@ def test_versioned_policy_role_is_explicit(policy, expected):
 def test_unknown_pressure_roles_rejected(role):
     with pytest.raises(ValueError):
         run(fixture(), pressure_role=role)
+
+
+def long_boundary_points():
+    points = [fixture()[0], fixture()[-1]]
+    for sample in points[-1]['host']:
+        sample['started_monotonic_ns'] += 96 * 10**9
+        sample['finished_monotonic_ns'] += 96 * 10**9
+    return points
+
+
+def test_boundary_pressure_is_not_periodic_coverage():
+    points = long_boundary_points()
+    original = deepcopy(points)
+    periodic = run(points, end_ns=109 * 10**9, pressure_role='diagnostic_only')
+    assert periodic['failures'] == {'pressure_sample_period_exceeded': 1}
+    assert not periodic['sampled_pressure_evidence_satisfied']
+    result = run(points, end_ns=109 * 10**9, pressure_role='diagnostic_only', boundary_only=True)
+    assert result['schema'] == 'threadripper_boundary_pressure_review_v1'
+    assert result['sampled_pressure_evidence_satisfied'] and result['native_interval_bracketed']
+    assert result['points'] == 2 and result['intervals'] == 1
+    assert result['maximum_observed_period_s'] == 100.
+    assert not result['periodic_pressure_cadence_checked']
+    assert result['bounds']['maximum_point_duration_s'] == 3.
+    assert 'maximum_period_s' not in result['bounds']
+    assert 'maximum_observed_some_percent' not in result
+    assert not result['scientific_timings_admitted']
+    assert points == original
+
+
+@pytest.mark.parametrize('resource', ['cpu', 'memory', 'io'])
+def test_boundary_stalls_are_retained_interval_average_diagnostics(resource):
+    points = long_boundary_points()
+    for sample in points[-1]['host']:
+        key = 'host_' + resource + '_pressure'
+        sample['optional'][key] = sample['optional'][key].replace('total=0', 'total=15000000', 1)
+    result = run(points, end_ns=109 * 10**9, pressure_role='diagnostic_only', boundary_only=True)
+    assert result['interval_average_some_percent'][resource] == pytest.approx(15.)
+    assert result['sampled_pressure_evidence_satisfied']
+    assert result['diagnostic_threshold_exceedances'][resource + '_pressure_bound_exceeded'] == 1
+    assert not result['diagnostic_thresholds_satisfied']
+
+
+@pytest.mark.parametrize('defect', ['missing', 'extra', 'read_error', 'boot', 'group', 'counter', 'duration', 'late', 'early'])
+def test_boundary_mode_keeps_evidence_integrity_and_exact_boundaries(defect):
+    points = long_boundary_points()
+    options = dict(end_ns=109 * 10**9, pressure_role='diagnostic_only', boundary_only=True)
+    if defect == 'missing': points.pop()
+    elif defect == 'extra': points.insert(1, fixture()[1])
+    elif defect == 'read_error': points[-1]['host'][0]['errors'].append(dict(field='pressure', type='OSError'))
+    elif defect == 'boot': points[-1]['host'][0]['raw']['boot_id'] = 'other'
+    elif defect == 'group': points[-1]['host'][0]['raw']['cgroup_membership'] = '0::/other\n'
+    elif defect == 'counter':
+        key = 'host_io_pressure'
+        points[0]['host'][0]['optional'][key] = points[0]['host'][0]['optional'][key].replace('total=0', 'total=1', 1)
+    elif defect == 'duration':
+        points[-1]['host'][-1]['started_monotonic_ns'] += 4 * 10**9
+        points[-1]['host'][-1]['finished_monotonic_ns'] += 4 * 10**9
+    elif defect == 'late': options['launch_ns'] = 10 * 10**9
+    else: options['end_ns'] = 111 * 10**9
+    assert not run(points, **options)['sampled_pressure_evidence_satisfied']
+
+
+@pytest.mark.parametrize('options', [dict(boundary_only=True), dict(boundary_only=1),
+                                    dict(boundary_only=None), dict(boundary_only='boundary')])
+def test_boundary_pressure_cannot_relax_eligibility_policy(options):
+    with pytest.raises(ValueError, match='Boundary pressure'):
+        run(long_boundary_points(), **options)

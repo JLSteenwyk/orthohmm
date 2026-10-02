@@ -315,8 +315,9 @@ def execute(request_path, request_sha):
             collector = measure_boundary if task and task["arm"] == "boundary" else measure
             result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], collector, job,
                                             runtime_checker=checker, release_guard=guard)
+        stream_extra = dict(collector_arm=task["arm"]) if task else {}
         stream_ref, stream_review = audit_process_stream(run["measurement_directory"], policy_ref,
-            record(request["environment_preflight_path"]), job_id=job, index=run["index"])
+            record(request["environment_preflight_path"]), job_id=job, index=run["index"], **stream_extra)
         result["process_stream_review"] = stream_ref
         if not stream_review["sampled_environment_policy_satisfied"]:
             raise ValueError("Whole-run sampled environment policy was not satisfied")
