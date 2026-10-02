@@ -86,6 +86,13 @@ at 5b030d0f now passes with its uploaded reports/archive inspected and source
 hashes checked. Both installed profiles cover the 38-protein fixture correctly.
 This closes that bounded remote installation check, not the full CI matrix,
 frozen scientific equivalence, macOS/ARM portability or public release.
+The [latest frozen-history/renderer follow-up](CI_REPLAY_DIAGNOSTICS_20261001.md)
+records that source-5b030d0f CI is terminal failure despite the successful
+Linux wheel job. The inspected macOS log confirms missing historical Git
+objects and an unexplained exact replay rejection. Test checkouts now request
+full history and the rejection exposes exact values; admission remains strict.
+Sixty focused local cases pass. Remote outcomes and numerical cause are not
+yet established; no broad compatibility or scientific advantage is inferred.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

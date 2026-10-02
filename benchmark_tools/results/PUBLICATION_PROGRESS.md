@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Frozen History And Exact Renderer Diagnostics (2026-10-01)
+
+Previous goal turn is a timing clarification with no new execution or edits.
+Re-read objective/current ledger and inspect the actual source-5b030d0f CI
+handle 36947338909: now terminal failure. Linux CPU-wheel/docs succeeded;
+all five macOS test jobs failed. Download one actual Python 3.13 log once:
+13,364 passed, 201 failed, 47 errors, 96 skipped in 622.75 seconds.
+Matched-graph exact guard still fails despite installed NumPy 2.2.6; its actual
+differing values are absent. Count-level reproduction passes under its existing
+tolerance. Do not infer a numerical or metadata-only cause or sibling outcomes.
+
+Trace frozen-source Git operations to missing scientific historical objects in
+CI's shallow checkout. Request full history in only the two test checkouts;
+retain all other workflow settings and tests. Add exact nested JSON differences
+to the renderer's rejection message without weakening its admission guard,
+changing scores/engines or rewriting historical figures. Remote diagnosis and
+confirmation remain necessary.
+
+**60 focused cases pass in 6.06 seconds**, no failures/errors/skips, including
+ten new diagnostic cases and actual frozen Git archive checks. Both one-ULP
+directions and changed NumPy metadata still reject. Twenty-two frozen-source
+syntax warnings remain. Structured workflow comparison and scoped whitespace
+pass. Earlier overlapping panels are not additive.
+
+[Evidence, exact bindings and boundaries](CI_REPLAY_DIAGNOSTICS_20261001.md).
+Commit/push the focused tested milestone, then inspect its actual new CI
+handle without manually resubmitting old runs. All local commands terminate.
+No scientific/default/score changes, expensive analysis reruns, timing launch,
+contention polls/questions, DGX, shared-package or unrelated job/service work.
+Full publication goal remains active/incomplete; timing and remaining
+uncertainty, source/rights, runtime and release requirements are not dropped.
+
 ## Independent Linux CPU-Wheel Job Passed And Artifact Inspected (2026-10-01)
 
 Committed/pushed the tested driver/job/local evidence at 5b030d0f, then observed

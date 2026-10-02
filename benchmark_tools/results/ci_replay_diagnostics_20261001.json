@@ -1,0 +1,80 @@
+{
+  "status": "local_checks_passed_remote_diagnosis_pending",
+  "base_commit": "2aa2350c8b954e2c2b2fe95b93c545315b790d00",
+  "prior_goal_turn": "no_progress_user_timing_clarification",
+  "ci_observation": {
+    "run_id": 36947338909,
+    "head_sha": "5b030d0fa1f9047da1d6ab89e0089233c5e01d83",
+    "status": "completed",
+    "conclusion": "failure",
+    "updated_at": "2026-10-02T00:57:02Z",
+    "job_conclusions": {
+      "110652329330": "success",
+      "110652329486": "failure",
+      "110652329537": "failure",
+      "110652329556": "success",
+      "110652329604": "failure",
+      "110652329626": "failure",
+      "110652329775": "failure"
+    }
+  },
+  "inspected_log": {
+    "job_id": 110652329626,
+    "path": "benchmarks/work/ci_remote_5b030d0f_20261001/110652329626.log",
+    "bytes": 3315762,
+    "sha256": "46aca937727169fa7c16dfdfe1149e008036586e0c488ec4e7821dabc2dfdfea",
+    "observation_utc": "2026-10-02T01:02:13.232886+00:00",
+    "python": "3.13.15",
+    "runner": "macos-26-arm64",
+    "numpy": "2.2.6",
+    "passed": 13364,
+    "failed": 201,
+    "errors": 47,
+    "skipped": 96,
+    "pytest_duration_s": 622.75,
+    "matched_graph_exact_guard_failed": true,
+    "matched_graph_count_reproduction_module_passed": true,
+    "actual_mismatching_values_available": false,
+    "historical_git_object_unavailable": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806"
+  },
+  "local_validation": {
+    "environment": "benchmarks/work/ci_numpy_pinned_20261001/venv",
+    "junit": {
+      "path": "benchmarks/work/ci_numpy_pinned_20261001/matched_replay_guard_20261001.xml",
+      "sha256": "0cdd82241667e3e2e4c73debd5f4230320c3d154e371470e3e9bb6ad9b988d2f",
+      "tests": 60,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suite_duration_s": 6.029,
+      "pytest_duration_s": 6.06,
+      "new_cases_included": 10,
+      "warnings": 22
+    },
+    "workflow_structured_comparison": "only_test_fast_and_test_full_checkout_fetch_depth_changed_to_zero",
+    "renderer_exact_comparison_preserved": true,
+    "one_ulp_changes_rejected": true,
+    "numpy_metadata_mismatch_rejected": true
+  },
+  "source_sha256": {
+    ".github/workflows/ci.yml": "fcf2e51889c5b5db6d85ca9e28d7d86c59e3d9de5f639080f428ea5e0da429d7",
+    "benchmark_tools/plot_matched_graph.py": "3fbd4b3d34e915fe7dc1b4c07298e83df76f88411158e510b2ed267118a86e0f",
+    "tests/unit/test_plot_matched_graph.py": "6fff18d1e35450b0ff48e1da2780947db5f887a52c31fa444a4af352a9fed98d"
+  },
+  "unchanged_scientific_inputs_sha256": {
+    "benchmark_tools/score_matched_graph.py": "e71337aae1769d58a507347bd12afd6ffbfa007350a776a4593d856ae315985c",
+    "benchmark_tools/reproduce_matched_graph_statistics.py": "7f28eed73bbdcbb6db280eb47d4bbfc1e9e21e68cf5c81173129934b16b716f4",
+    "benchmark_tools/results/matched_graph_scores_20260926/results.json": "d31dbc0f4e3f02dfb534c8b59b559db00260227f23f2640b4fed13d5aee8ec89"
+  },
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "limitations": [
+    "Remote post-change confirmation and actual exact replay differences remain pending.",
+    "Only one failed macOS job log inspected; sibling causes and counts are not inferred.",
+    "Local focused checks are not full-suite, native frozen inference, generalization or release evidence.",
+    "Exact diagnostic values do not establish the cause or justify a tolerance change.",
+    "Controlled timing, QfO uncertainty/source gaps, runtime and data-rights closure and final release remain open."
+  ]
+}

@@ -16,10 +16,33 @@ from benchmark_tools.score_matched_graph import CONDITIONS, summarize
 LABELS = ["Baseline", "Divergent", "Divergent + turnover", "Missing 20%", "Taxon-count control", "Turnover", "Uneven taxa", "Overall"]
 
 
+def _replay_differences(reported, recomputed, path=()):
+    """Explain exact JSON-value mismatches without changing replay admission."""
+    if isinstance(reported, dict) and isinstance(recomputed, dict):
+        differences = []
+        for key in sorted(reported.keys() | recomputed.keys()):
+            if key not in reported or key not in recomputed:
+                differences.append(dict(path=[*path, key],
+                    reported_present=key in reported, recomputed_present=key in recomputed,
+                    reported=reported.get(key), recomputed=recomputed.get(key)))
+            else:
+                differences.extend(_replay_differences(reported[key], recomputed[key], (*path, key)))
+        return differences
+    if isinstance(reported, list) and isinstance(recomputed, list) and len(reported) == len(recomputed):
+        return [difference for index, (a, b) in enumerate(zip(reported, recomputed))
+                for difference in _replay_differences(a, b, (*path, index))]
+    if reported != recomputed:
+        return [dict(path=list(path), reported=reported, recomputed=recomputed)]
+    return []
+
+
 def plot(result):
     recomputed = summarize(result["records"])
     if recomputed["contrasts"] != result["contrasts"] or recomputed["bootstrap"] != result["bootstrap"]:
-        raise ValueError("Reported effects differ from paired score records")
+        differences = _replay_differences(
+            {key: result[key] for key in ("contrasts", "bootstrap")},
+            {key: recomputed[key] for key in ("contrasts", "bootstrap")})
+        raise ValueError("Reported effects differ from paired score records: " + json.dumps(differences, sort_keys=True))
     fig, (left, right) = plt.subplots(1, 2, figsize=(12, 6.8), gridspec_kw={"width_ratios": [1.05, 1]})
     fig.subplots_adjust(left=.20, right=.97, bottom=.23, top=.79, wspace=.20)
     labels = [*CONDITIONS, "overall"]

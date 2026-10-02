@@ -62,7 +62,12 @@ has now completed successfully; its nine-file artifact is retained and actual
 source/report contents checked. Both installed profiles pass the same fixture
 on that independent host. This is not full frozen/scientific/phylogenetic
 restoration, all-platform compatibility, a complete runtime archive or a passing
-full CI matrix. Continue observing the existing source-5b030d0f run separately.
+full CI matrix. The source-5b030d0f run is now terminal failure; all five macOS
+test jobs failed. The [frozen-history and renderer diagnosis](results/CI_REPLAY_DIAGNOSTICS_20261001.md)
+retains one actual log, corrects the two test checkouts' missing Git history
+and adds exact mismatch values without loosening the renderer guard. Sixty
+focused local cases pass; remote confirmation and the actual replay differences
+are pending. No frozen score, inference setting or scientific claim changes.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

@@ -37,6 +37,10 @@ Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude
 the `slow` marker, not the top-level regression cases. CI keeps every Python
 matrix job's outcome rather than cancelling siblings after the first failure.
+The two test jobs fetch full Git history because frozen-source archive tests
+read an actual historical scientific commit, not HEAD. Matched-graph rendering
+still requires exact replay and now reports differing JSON paths/values on
+rejection; one-ULP and engine-metadata changes are not silently tolerated.
 
 A separate Linux CPU-wheel job builds committed package sources in a clean
 directory, installs into a fresh private venv and runs the existing isolated
@@ -45,7 +49,8 @@ high-sensitivity fixtures, not the full phylogenetic pipeline or benchmark
 accuracy. Existing macOS test jobs are retained. Result and command logs are
 uploaded even after normal failures; this is not a replacement for the full
 suite or proof of a hermetic runtime. The [execution report](../benchmark_tools/results/CI_CPU_WHEEL_INSTALLATION_20261001.md)
-distinguishes actual local installation from pending remote verification.
+distinguishes the local installation attempt. The [inspected remote result](../benchmark_tools/results/CI_REMOTE_CPU_WHEEL_RESULT_20261001.md)
+confirms the separate Linux job passed; it does not clear the macOS matrix.
 
 Run unit tests with`make test.unit` and native integration tests with
 `make test.integration`. Pytest discovery is limited to`tests/` so retained
