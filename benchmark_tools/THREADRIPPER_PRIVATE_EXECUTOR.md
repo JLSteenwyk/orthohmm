@@ -38,6 +38,16 @@ route automatically discovers or upgrades an interpreter or dependency.
 
 ## Preserved Gates
 
+Private execution now requires `threadripper_environment_policy_v2` with
+explicit `native_pressure_role: diagnostic_only`. Whole-native-interval PSI
+magnitudes are retained diagnostics, not exclusion criteria for a method's
+own stalls. Evidence integrity, strict outside-process/CPU policy and parked
+prelaunch pressure limits still gate execution. Historical shared/v1 replay
+semantics remain unchanged. See the [prospective correction and retained
+validation](results/THREADRIPPER_PRESSURE_ROLES_20261002.md). No real approved
+policy or live handoff is created; old source/runtime recipes are not new
+readiness approval after these helper changes.
+
 All 27 production identities, datasets, scientific settings, order, input
 preparation, 32-CPU native affinity, 64 scheduler slots, 128 GiB allocation,
 26-hour limit and no-requeue policy remain unchanged. The private script does

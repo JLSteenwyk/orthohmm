@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [prospective pressure-policy correction](results/THREADRIPPER_PRESSURE_ROLES_20261002.md)
+separates native-interval PSI diagnostics from environmental eligibility and
+requires explicit v2 policy for private timing. Evidence-integrity, outside-work
+and prelaunch pressure gates remain enforced. All 273 focused tests pass;
+read-only replay preserves historical pressure results and negative checks.
+This prevents a potential method-dependent exclusion rule, not outside-work
+clearance or live readiness. Timing stays deferred without new quiet-window
+questions or disruption; no real policy or production attempt is created.
+
 The [native-build handoff archive](results/PUBLICATION_NATIVE_HANDOFF_20261002.md)
 now includes the validated assembly route in the unified source/manuscript/count
 package, without adding raw data, wheels, tool binaries or a base runtime.

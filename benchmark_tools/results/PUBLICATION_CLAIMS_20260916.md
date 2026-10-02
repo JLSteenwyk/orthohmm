@@ -13,6 +13,15 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [prospective native-pressure correction](THREADRIPPER_PRESSURE_ROLES_20261002.md)
+removes a potential method-dependent exclusion rule: native-interval PSI
+magnitudes are diagnostic under explicit private-route v2 policy, while
+evidence integrity, outside-work and prelaunch gates remain required. The
+273-case panel and retained calibration replay pass their bounded checks;
+neither establishes a reviewed real environment, live private handoff, causal
+overhead, final resource accounting, quiet window or controlled timing.
+Historical v1 results remain unchanged and no native run is repeated.
+
 The [assembled native runtime fixture](PUBLICATION_RUNTIME_ASSEMBLY_20261002.md)
 now connects independently acquired/source-reconstructed wheels, prepared
 tools and the exact 31-reader closure through an explicit executor lane.

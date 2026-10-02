@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native Pressure Separated from Timing Eligibility (2026-10-02)
+
+Previous goal turn progressed at pushed `0a3250f6`, adding the validated
+native-build unified handoff. Reuse that dated package and completed scientific,
+numerical and resource admissions rather than rebuilding or restarting them.
+The user does not know a quiet window; it is not needed now. Keep comparative
+timing deferred without renewed questions, host contention polling, DGX access
+or unrelated job/service changes.
+
+Inspect remaining measurement gates and find a concrete selection risk:
+whole-native-interval PSI bounds currently exclude runs even though aggregate
+pressure cannot distinguish native stalls from competing work. Add explicit
+v2 diagnostic-only role and separate evidence/diagnostic verdicts; preserve
+legacy v1/default replay, integrity/process/foreign-CPU/configuration checks
+and parked-worker prelaunch limits. Require v2 for the private executor and
+worker before work/observation. Commit sources `45d59897` and `99ab40b7`.
+No actual reviewed policy, scientific/default/input/resource/order change,
+environmental approval or production submission is made.
+
+Initial overlapping panels pass 231 and 278; preserve a wrong test-module
+selector's exit-4/no-collection attempt. Final six-module panel passes 273
+in 8.38s, zero failures/errors/skips. Read-only replay of retained 22380
+pressure points matches the historical evaluator exactly, preserves all
+diagnostic exceedances, and rejects missing reads, boot mismatch and missing
+samples. Separate readback checks 53 unchanged identities and seven recorded
+source-snapshot bindings; two later caller changes are explicitly distinguished
+and current private-gate bytes/tests bound to `99ab40b7`. No pressure/native
+rerun or current-host observation follows. See [policy, receipts and
+limits](THREADRIPPER_PRESSURE_ROLES_20261002.md).
+
+Update reader guides and claim index, preserving frozen protocols/archives.
+Final readback rechecks receipt/JUnit/current-helper hashes and bounded flags;
+all six new report/receipt links resolve and scoped whitespace review passes.
+All owned process handles are terminal. Commit/push focused evidence without
+staging unrelated sample outputs. This corrects a prospective exclusion risk,
+not live environmental integration, full-scale causal overhead, final resource
+scope, current readiness or controlled timing. The 27 production/54 observer
+tasks remain unadmitted; original publication goal active, not complete.
+
 ## Native-Build Source Route Added to Unified Handoff (2026-10-02)
 
 Previous goal turn progressed at pushed `7d58e744`: assembled runtime
