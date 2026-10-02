@@ -13,6 +13,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 from benchmark_tools.review_threadripper_pressure_stream import evaluate as evaluate_pressure
+from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
 
 
 def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
@@ -117,9 +118,9 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
         return value
 
     policy = read(policy_ref)
+    pressure_role = native_pressure_role(policy)
     preflight = read(preflight_ref)
-    if (policy.get("schema") != "threadripper_environment_policy_v1"
-            or policy.get("decision") != "reviewed" or policy.get("host") != "bizon"
+    if (policy.get("decision") != "reviewed" or policy.get("host") != "bizon"
             or preflight.get("schema") != "threadripper_environment_preflight_v1"
             or preflight.get("decision") != "passed"
             or type(job_id) is not int or job_id <= 0 or type(index) is not int or index < 0
@@ -166,12 +167,17 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index):
     pressure = evaluate_pressure(points(), boot_id=preflight["boot_id"], job_scope=str(job_scope),
         launch_ns=done["started_ns"], end_ns=done["finished_ns"],
         limits=policy["maximum_pressure_percent"],
-        maximum_period_s=policy["maximum_pressure_sample_period_s"])
+        maximum_period_s=policy["maximum_pressure_sample_period_s"], pressure_role=pressure_role)
     if sorted(directory.glob("point_*.json")) != point_paths:
         raise ValueError("Pressure observation inventory changed during review")
     result["pressure_review"] = pressure
+    pressure_key = ("sampled_pressure_evidence_satisfied" if pressure_role == "diagnostic_only"
+                    else "sampled_pressure_policy_satisfied")
     result["sampled_environment_policy_satisfied"] = bool(result["sampled_process_policy_satisfied"]
-        and pressure["sampled_pressure_policy_satisfied"])
+        and pressure[pressure_key])
+    if pressure_role == "diagnostic_only":
+        result.update(schema="threadripper_process_stream_review_v2", native_pressure_role=pressure_role,
+                      pressure_thresholds_used_for_eligibility=False)
     for ref in references:
         check(ref)
     result["configuration_endpoint_hashes_verified"] = True

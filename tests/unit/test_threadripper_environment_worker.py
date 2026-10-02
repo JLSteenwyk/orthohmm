@@ -145,6 +145,25 @@ def test_explicit_background_cpu_bound(setup,monkeypatch):
     assert 'background CPU bound exceeded' in detail['error']
 
 
+@pytest.mark.parametrize("pressure_exceeded", [False, True])
+def test_v2_still_enforces_parked_worker_preflight_pressure(setup, pressure_exceeded):
+    setup.policy.update(schema="threadripper_environment_policy_v2", native_pressure_role="diagnostic_only")
+    setup.policy_ref.update(put(Path(setup.policy_ref["path"]), setup.policy))
+    readiness_path = Path(setup.request["readiness_review"]["path"])
+    setup.request["readiness_review"].update(put(readiness_path, dict(environment_policy=setup.policy_ref)))
+    setup.request_ref.update(put(Path(setup.request_ref["path"]), setup.request))
+    put(setup.directory / "environment_review_requested.json", setup.marker)
+    if pressure_exceeded:
+        key = "host_io_pressure"
+        setup.hosts[1]["optional"][key] = setup.hosts[1]["optional"][key].replace("total=0", "total=10000")
+    result = setup.run()
+    assert result["decision"] == ("failed" if pressure_exceeded else "passed")
+    assert result["native_pressure_role"] == "diagnostic_only"
+    assert result["preflight_pressure_limits_used"] is True
+    assert not result["scientific_timings_admitted"]
+    assert not (setup.directory / "go.json").exists()
+
+
 def test_deadline_crossed_after_evidence_serialization(setup):
     times=iter([10**12+10**9,10**12+2*10**9,10**12+3*10**9,10**12+21*10**9])
     result=setup.run(clock=lambda:next(times))

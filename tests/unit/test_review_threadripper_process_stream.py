@@ -293,3 +293,53 @@ def test_pressure_failure_fails_combined_review_with_clean_processes(tmp_path):
     assert result["sampled_process_policy_satisfied"]
     assert not result["sampled_environment_policy_satisfied"]
     assert not result["pressure_review"]["sampled_pressure_policy_satisfied"]
+
+
+@pytest.mark.parametrize("version", [1, 2])
+@pytest.mark.parametrize("defect", [None, "pressure_read", "process_identity", "cadence"])
+def test_native_pressure_diagnostics_do_not_hide_missing_evidence_or_outside_work(tmp_path, version, defect):
+    policy_ref, preflight_ref = bound_fixture(tmp_path)
+    policy_path = tmp_path / "policy.json"
+    policy = json.loads(policy_path.read_bytes())
+    if version == 2:
+        policy.update(schema="threadripper_environment_policy_v2", native_pressure_role="diagnostic_only")
+        policy_path.write_text(json.dumps(policy))
+        policy_ref = stream.record(policy_path)
+        preflight_path = tmp_path / "preflight.json"
+        preflight = json.loads(preflight_path.read_bytes())
+        preflight["environment_policy"] = policy_ref
+        preflight_path.write_text(json.dumps(preflight))
+        preflight_ref = stream.record(preflight_path)
+    for i in (1, 2):
+        path = tmp_path / f"point_{i:06d}.json"
+        point = json.loads(path.read_bytes())
+        for sample in point["host"]:
+            for resource in ("cpu", "memory", "io"):
+                key = "host_" + resource + "_pressure"
+                sample["optional"][key] = sample["optional"][key].replace("total=0", "total=300000", 1)
+        if defect == "pressure_read" and i == 1:
+            point["host"][0]["errors"].append(dict(field="host_cpu_pressure", type="OSError"))
+        path.write_text(json.dumps(point))
+    if defect == "process_identity":
+        path = tmp_path / "host_processes.jsonl"
+        rows = [json.loads(line) for line in path.read_text().splitlines()]
+        rows[1]["snapshot"]["processes"][0]["name"] = "unreviewed-scientific-process"
+        path.write_text("".join(json.dumps(row) + "\n" for row in rows))
+    elif defect == "cadence":
+        policy["maximum_pressure_sample_period_s"] = 1.
+        policy_path.write_text(json.dumps(policy))
+        policy_ref = stream.record(policy_path)
+        preflight_path = tmp_path / "preflight.json"
+        preflight = json.loads(preflight_path.read_bytes())
+        preflight["environment_policy"] = policy_ref
+        preflight_path.write_text(json.dumps(preflight))
+        preflight_ref = stream.record(preflight_path)
+    _, result = stream.audit(tmp_path, policy_ref, preflight_ref, job_id=42, index=0)
+    if version == 2 and defect is None:
+        assert result["sampled_environment_policy_satisfied"]
+        assert result["pressure_review"]["diagnostic_threshold_exceedances"]
+        assert not result["pressure_thresholds_used_for_eligibility"]
+        assert result["schema"] == "threadripper_process_stream_review_v2"
+    else:
+        assert not result["sampled_environment_policy_satisfied"]
+    assert not result["scientific_timings_admitted"]

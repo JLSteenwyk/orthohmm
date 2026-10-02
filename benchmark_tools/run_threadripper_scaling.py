@@ -20,6 +20,7 @@ from benchmark_tools.threadripper_panel_progress import position
 from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
 from benchmark_tools.review_threadripper_process_stream import audit as audit_process_stream
 from benchmark_tools.review_threadripper_process_policy import number
+from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
 
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
 LOOKUP_SHA = "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
@@ -186,8 +187,9 @@ def execute(request_path, request_sha):
     run, lookup, history, sources = select(request, root, job)
     readiness = read(request["readiness_review"])
     policy_ref = readiness["environment_policy"]
-    policy = review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
+    policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
+    native_pressure_role(policy)
     number(policy["maximum_foreign_average_cores"])
     number(policy["maximum_sample_period_s"], positive=True)
     number(policy["maximum_pressure_sample_period_s"], positive=True)

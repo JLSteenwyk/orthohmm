@@ -378,10 +378,20 @@ temporary.rename(target)
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
 @pytest.mark.parametrize("private", [False, True])
-def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private):
+@pytest.mark.parametrize("native_v2", [False, True])
+def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private, native_v2):
     if private:
         setup = private_setup(setup, monkeypatch)
     root, request, runs = setup
+    if native_v2:
+        policy_path = root / "environment_policy.json"
+        policy = json.loads(policy_path.read_bytes())
+        policy.update(schema="threadripper_environment_policy_v2", native_pressure_role="diagnostic_only")
+        policy_ref = put(policy_path, policy)
+        ready_path = root / "ready.json"
+        ready = json.loads(ready_path.read_bytes())
+        ready["environment_policy"] = policy_ref
+        request["readiness_review"] = put(ready_path, ready)
     ref = put(root / "request.json", request)
     monkeypatch.setattr(driver, "__file__", str(root / "benchmark_tools/run_threadripper_scaling.py"))
     monkeypatch.setattr(driver.sys, "dont_write_bytecode", True)

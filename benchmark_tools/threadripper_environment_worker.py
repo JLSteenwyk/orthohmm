@@ -16,6 +16,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.probe_host_counters import snapshot as host_snapshot
 from benchmark_tools.review_threadripper_process_policy import number, review as process_review
+from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
 from benchmark_tools.run_threadripper_scaling import PLAN_SHA, deployment, expect, read, review, select
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 
@@ -106,8 +107,9 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
         raise ValueError("Require the authorized local host")
     run, _, _, sources = select(request, root, job)
     scope = job_scope(os.getpid(), job)
-    policy = review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
+    policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
+    pressure_role = native_pressure_role(policy)
     ready = read(request["readiness_review"])
     if ready.get("environment_policy") != policy_ref:
         raise ValueError("Readiness does not bind this environmental policy")
@@ -155,6 +157,8 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
         whole_run_observer_ready=False, unrelated_scientific_work_present=None,
         observation_started_unix_ns=started, review_reference=policy["review_reference"],
         scientific_timings_admitted=False)
+    if pressure_role == "diagnostic_only":
+        response.update(native_pressure_role=pressure_role, preflight_pressure_limits_used=True)
     try:
         collector_refs = collector_check(directory, scope, job)
         detail["host_snapshots"] = [host_sample()]
