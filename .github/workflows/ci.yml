@@ -21,14 +21,20 @@ jobs:
         printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
         "$(brew --prefix bash)/bin/bash" --version
         /bin/bash --version
+    - name: Install test OpenMP compiler
+      run: bash benchmark_tools/install_ci_test_compiler.sh
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
         # make orthohmm CLI available for tests 
-        make install
+        ORTHOHMM_CPU_TARGET=baseline make install
         # install deps for tests
         pip install -r tests/requirements.txt
         python -c "import Bio, psutil, dendropy, ijson, openpyxl, matplotlib, PIL, fitz, scipy, setuptools, sqlglot"
+    - name: Build checkout CPU kernels
+      run: |
+        gcc --version
+        python benchmark_tools/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-ci-package"
     - name: Install HMMER
       run: |
         brew install hmmer
@@ -64,14 +70,20 @@ jobs:
         printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
         "$(brew --prefix bash)/bin/bash" --version
         /bin/bash --version
+    - name: Install test OpenMP compiler
+      run: bash benchmark_tools/install_ci_test_compiler.sh
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
         # make orthohmm CLI available for tests 
-        make install
+        ORTHOHMM_CPU_TARGET=baseline make install
         # install test dependencies
         pip install -r tests/requirements.txt
         python -c "import Bio, psutil, dendropy, ijson, openpyxl, matplotlib, PIL, fitz, scipy, setuptools, sqlglot"
+    - name: Build checkout CPU kernels
+      run: |
+        gcc --version
+        python benchmark_tools/build_ci_checkout_kernels.py --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/orthohmm-ci-package"
     - name: Install HMMER
       run: |
         brew install hmmer

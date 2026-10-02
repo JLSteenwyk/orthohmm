@@ -133,6 +133,14 @@ gives 53 pass and one native skip within that same scope, not macOS confirmation
 Production semantics remain unchanged. These checks neither certify complete
 process sampling nor supply controlled resource evidence; remote confirmation
 and broader release requirements remain open.
+The [subsequent native setup follow-up](CI_NATIVE_CHECKOUT_SETUP_20261001.md)
+confirms the scoped Bash/affinity/RSS cases in inspected macOS jobs; all five
+source-8b test jobs still fail and the source-3e full-test unit result fails.
+Actual Clang/OpenMP and absent checkout-library failures motivate explicit
+test-job GNU GCC and fresh baseline libraries, not test skips or weakened guards.
+70 focused local cases pass, including fresh staged build/load/alignment.
+New macOS native execution remains unverified; unchanged kernels, scientific
+settings and controlled-resource boundaries are retained.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

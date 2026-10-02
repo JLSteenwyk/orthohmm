@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Native Checkout Libraries And Scoped Remote Confirmation (2026-10-01)
+
+Previous turn is progress at pushed 3e126cd7. Reread objective/ledger and inspect
+actual source-8b/source-3e handles. Source-8b Python 3.11 log: 13,584 pass,
+79 fail, 20 errors, 105 skip, 30 warnings, 489.93s. Actual Homebrew Bash 5.3.15
+and system 3.2.57 logged; all six direct, 238 handoff and eight relocation cases
+pass. Affinity/boot scope: 182 pass and 21 explicit native skips within 203 cases.
+Scoped correction is confirmed, not earlier version causation or arbitrary-shell
+safety. Source-8b is terminal failure in five tests, wheel/docs success.
+
+Source-3e full-test Python 3.11 log: 13,601 pass, 78 fail, 20 errors, 106 skip,
+30 warnings, 546.98s. RSS scope confirms 53 pass and one native skip among 54
+cases, including both unavailable-memory rejections. Four fast jobs remain live
+at 02:59:58 UTC; wheel/docs succeed. No sibling causes, restarts or inferred
+full-suite/scientific/native success.
+
+Native failures require a real compiler/build amendment: eight collector errors
+show Apple gcc/Clang rejecting OpenMP; nine alignment/profile cases lack checkout
+pair_align.so. Add job-local GNU GCC selection and fresh baseline checkout build
+to only the two macOS test definitions. Reuse unchanged setup builder and fail
+on inherited/missing/extra/unloadable/nonbaseline libraries or source drift.
+Keep kernel sources, setup and all scientific/default/admission guards unchanged.
+
+**70 focused Linux cases pass in 10.13 seconds**, zero failures/errors/skips,
+19 new cases included. Actual staged committed sources build/load three libraries
+and execute native alignment in a fresh subprocess. Earlier 68 cases superseded,
+not additive. Structured YAML check confirms exactly two steps and one baseline
+install binding per test job; four setup/C inputs byte-equal to base.
+[Pinned remote/local evidence and boundaries](CI_NATIVE_CHECKOUT_SETUP_20261001.md).
+
+Commit/push, then inspect actual new automatic CI. Prospective macOS native setup
+is unverified; remaining paths/raw-data/GNU utility/runtime failures need separate
+work. No shared package upgrade, workspace library replacement, native scientific
+rerun, timing/host poll/question, DGX or unrelated workload/service action. All
+owned commands terminate; timing stays deferred. Publication goal remains active
+with comparable resources, remaining uncertainty, source/rights and final release
+requirements unfinished.
+
 ## RSS Capability Contract Without Resource Admission Changes (2026-10-01)
 
 Continue from pushed 8b48b8bf. Reread goal/ledger; the quiet window is not needed

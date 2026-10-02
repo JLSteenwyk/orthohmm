@@ -64,6 +64,13 @@ zero memory. Only the positive native RSS observation requires `/proc`;
 synthetic readers, export and rejection cases still run. Both OrthoBench resource
 readers reject unavailable memory. See the
 [capability checks and sampling limits](../benchmark_tools/results/CI_RSS_CAPABILITY_TESTS_20261001.md).
+The [subsequent inspected macOS logs](../benchmark_tools/results/CI_NATIVE_CHECKOUT_SETUP_20261001.md)
+confirm the scoped Bash/affinity/RSS corrections, not broader CI success.
+MacOS test jobs now prepare a job-local GNU GCC driver and explicitly build
+all three baseline CPU libraries for checkout imports as well as installation.
+The checkout helper rejects inherited, incomplete, unloadable or nonbaseline
+libraries before exposing them. This prospective native setup still requires
+remote verification; it does not change scientific defaults or benchmark builds.
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude

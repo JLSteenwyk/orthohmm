@@ -1,0 +1,115 @@
+{
+  "base_commit": "3e126cd7ca05c062c07cd5b910547519e9e3a18a",
+  "status": "prospective_ci_native_checkout_setup_locally_validated",
+  "new_remote_native_setup_confirmed": false,
+  "kernel_sources_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "observed_remote": [
+    {
+      "run_id": 36956342884,
+      "source_commit": "8b48b8bf6659fff3276383031d95a4b9cc2c9df4",
+      "job_id": 110680012860,
+      "platform": "macOS ARM",
+      "python": "3.11",
+      "log": {
+        "path": "benchmarks/work/ci_remote_8b48b8bf_20261001/110680012860.log",
+        "bytes": 2524955,
+        "sha256": "69c762a200127c9fbe86ef4682277c3ec6bcfe333ecf09723921328ead043268",
+        "download_observed_utc": "2026-10-02T02:48:47.525219+00:00"
+      },
+      "summary": {"passed": 13584, "failed": 79, "errors": 20, "skipped": 105, "warnings": 30, "duration_s": 489.93},
+      "recorded_bash_versions": {"Homebrew": "5.3.15(1)-release", "system": "3.2.57(1)-release"},
+      "confirmed_passing_cases": {
+        "test_bash_runtime": 6,
+        "test_corrected_candidates_batches": 16,
+        "test_corrected_factorial_pair_batches": 58,
+        "test_corrected_factorial_score_batches": 98,
+        "test_corrected_reconcile_admit_batch": 41,
+        "test_corrected_reconcile_batch": 25,
+        "test_historical_qfo_batch_fixture": 8
+      },
+      "affinity_boot_scope": {"cases": 203, "passed": 182, "skipped": 21, "failures": 0, "errors": 0},
+      "collector_load_fixture_errors": 8,
+      "alignment_profile_failures": {"test_kernels": 2, "test_profile_expansion": 5, "test_profile_species_support_holdout": 1, "test_selective_jackknife_holdout": 1},
+      "native_baseline_compilation_case_skipped": true,
+      "observed_compiler_error": "clang: error: unsupported option '-fopenmp'",
+      "terminal_run_observed_utc": "2026-10-02T02:56:54.674602+00:00",
+      "all_five_test_jobs": "failure",
+      "cpu_wheel": "success",
+      "docs": "success",
+      "sibling_causes_inferred": false
+    },
+    {
+      "run_id": 36957249412,
+      "source_commit": "3e126cd7ca05c062c07cd5b910547519e9e3a18a",
+      "job_id": 110682852675,
+      "platform": "macOS ARM",
+      "python": "3.11",
+      "log": {
+        "path": "benchmarks/work/ci_remote_3e126cd7_20261001/110682852675.log",
+        "bytes": 2536594,
+        "sha256": "0e31d4163d3938d951011e0247abaf7111b20f20f0411d3f8c56a1cd598e8b07",
+        "download_observed_utc": "2026-10-02T03:00:32.261868+00:00"
+      },
+      "summary": {"passed": 13601, "failed": 78, "errors": 20, "skipped": 106, "warnings": 30, "duration_s": 546.98},
+      "confirmed_rss_scope": {"cases": 54, "passed": 53, "skipped": 1, "failures": 0, "errors": 0},
+      "rss_module_cases": {"test_metrics": {"passed": 16, "skipped": 1}, "test_audit_ob_orthohmm_retained": {"passed": 10}, "test_assemble_orthobench_factorial": {"passed": 27}},
+      "native_rss_skip": "test_process_tree_rss_includes_current_process",
+      "observed_utc": "2026-10-02T02:59:58.467120+00:00",
+      "full_test_job": "failure",
+      "fast_jobs_in_progress": [110682852836, 110682852997, 110682853045, 110682853069],
+      "cpu_wheel": "success",
+      "docs": "success",
+      "sibling_causes_inferred": false
+    }
+  ],
+  "local_validation": {
+    "cases": 70, "passed": 70, "failures": 0, "errors": 0, "skipped": 0,
+    "new_cases": 19,
+    "pytest_duration_s": 10.13,
+    "junit_suite_duration_s": 10.097,
+    "actual_compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "actual_staged_build_and_fresh_subprocess_alignment": true,
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/ci_native_setup_tests_final.xml",
+      "bytes": 9450,
+      "sha256": "2d4f0ffa0e4c1550fa33ec077614c52a929578596442ff8855d655d149e850dd"
+    },
+    "module_cases": {
+      "tests.unit.test_ci_test_compiler": 8,
+      "tests.unit.test_ci_checkout_kernels": 11,
+      "tests.unit.test_setup_native_wheel": 20,
+      "tests.unit.test_collector_load_fixture": 8,
+      "tests.unit.test_kernels": 6,
+      "tests.unit.test_profile_expansion": 13,
+      "tests.unit.test_profile_species_support_holdout": 1,
+      "tests.unit.test_selective_jackknife_holdout": 1,
+      "tests.unit.test_msa_native_dependency": 2
+    },
+    "workflow_structured_comparison": "two added steps and one baseline install binding per macOS test job, all other jobs/settings unchanged",
+    "workflow_parser": "existing PyYAML 6.0.1, read only"
+  },
+  "sources": [
+    {"path": ".github/workflows/ci.yml", "bytes": 6000, "sha256": "00e30608ef934f5857c6e5c0fa4f6a96c90609b5a822ed6883c140de8311ddfc"},
+    {"path": "benchmark_tools/install_ci_test_compiler.sh", "bytes": 536, "sha256": "658d12930ddba53f0e0179566ef7809419bf71c09b160d2836e892766587d2cb"},
+    {"path": "benchmark_tools/build_ci_checkout_kernels.py", "bytes": 2253, "sha256": "a76eab6987ead8778046b59a6b42f8c41e04227d66342598539b9389e02287a6"},
+    {"path": "tests/unit/test_ci_test_compiler.py", "bytes": 2734, "sha256": "4df070b84e7f8f759404e610dd1d766c07f51a5e007ec247129a715880fbff8c"},
+    {"path": "tests/unit/test_ci_checkout_kernels.py", "bytes": 5595, "sha256": "d30ad9170f968d4e71121fef68f0e9b4f1f50669b2593c1482c14f5ba3a4b713"}
+  ],
+  "unchanged_inputs": [
+    {"path": "setup.py", "bytes": 8734, "sha256": "88120e9d722557337d466a5026c4b238d5a21c9cc213bf35c27d4b480b347193"},
+    {"path": "orthohmm/search/csrc/hmm_viterbi.c", "bytes": 46143, "sha256": "109bfbadd8af9b5e19a5f0d496e2b7a78503567ab4a8095fceafbb171b3d6693"},
+    {"path": "orthohmm/search/csrc/kmer_prefilter.c", "bytes": 10657, "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"},
+    {"path": "orthohmm/search/csrc/pair_align.c", "bytes": 9098, "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"}
+  ],
+  "limitations": [
+    "Scoped remote Bash/affinity/RSS confirmation does not clear broader CI or infer sibling causes.",
+    "The new prospective macOS compiler/build setup has not executed yet; local validation is Linux only.",
+    "Existing baseline compilation changes CI build policy only, not application defaults or frozen scientific settings.",
+    "Homebrew-resolved compiler and runtime are not a frozen, hermetic or cross-platform compatibility guarantee.",
+    "Temporary native fixtures do not establish biological accuracy, controlled timing, source/rights clearance or release readiness."
+  ]
+}
