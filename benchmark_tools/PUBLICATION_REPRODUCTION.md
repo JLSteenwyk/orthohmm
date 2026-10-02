@@ -49,6 +49,14 @@ Test NumPy is pinned to 2.2.6; the overhead-audit fixture checks exact copied
 evidence rather than workstation paths. A fresh private environment passes
 422 focused cases and collects 13,692 cases. This is not full execution or
 clean installed-package restoration; actual remote outcomes remain outstanding.
+The [later installed CPU-wheel workflow](results/CI_CPU_WHEEL_INSTALLATION_20261001.md)
+does perform a fresh local development-package build/install, checking wheel
+and installed bytes, dependency locations, three loadable CPU libraries and
+standard/high-sensitivity builtin/Leiden fixtures. This closes that bounded
+local installation check, not frozen scientific/full phylogenetic reproduction
+or hermetic/runtime/rights closure. The additional Linux CI gate needs its own
+remote outcome; the earlier source-3a6c2d49 CI is terminal failure and its
+matched-graph renderer remains unresolved. Existing macOS jobs are preserved.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

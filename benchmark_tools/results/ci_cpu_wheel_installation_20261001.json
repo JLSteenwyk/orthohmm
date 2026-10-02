@@ -1,0 +1,420 @@
+{
+  "schema": "ci_cpu_wheel_result_v1",
+  "status": "local_installed_runtime_verified_remote_gate_prepared",
+  "package_commit": "3a6c2d49f201698920530fc0268ce5f6fc6e5134",
+  "driver": {
+    "bytes": 6497,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_ci_cpu_wheel.py",
+    "sha256": "b130621ee01ac409cfa1a958c18ac6209daa613479936672340fc1360a9da242"
+  },
+  "wheel": {
+    "bytes": 146111,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/wheels/orthohmm-0.5.0-cp312-cp312-linux_x86_64.whl",
+    "sha256": "d00277a121f2b694d13b1ad20688825df16c8fc44f6c64d286bb23f5c5e62e4f"
+  },
+  "build_policy": {
+    "ORTHOHMM_CPU_TARGET": "baseline",
+    "PATH": "/usr/bin:/bin",
+    "inherited_shared_libraries": false
+  },
+  "staged_files": 42,
+  "installed_files": 36,
+  "runtime": {
+    "dependencies": [
+      {
+        "name": "biopython",
+        "version": "1.86"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.4.0"
+      },
+      {
+        "name": "coverage",
+        "version": "7.16.2"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "Cython",
+        "version": "3.0.4"
+      },
+      {
+        "name": "DendroPy",
+        "version": "5.0.8"
+      },
+      {
+        "name": "et_xmlfile",
+        "version": "2.0.0"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.66.1"
+      },
+      {
+        "name": "igraph",
+        "version": "1.0.0"
+      },
+      {
+        "name": "ijson",
+        "version": "3.5.0"
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.0"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "leidenalg",
+        "version": "0.12.0"
+      },
+      {
+        "name": "llvmlite",
+        "version": "0.50.0"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.10.8"
+      },
+      {
+        "name": "numba",
+        "version": "0.68.0"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "openpyxl",
+        "version": "3.1.5"
+      },
+      {
+        "name": "orthohmm",
+        "version": "0.5.0"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pillow",
+        "version": "12.2.0"
+      },
+      {
+        "name": "pip",
+        "version": "24.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.6.0"
+      },
+      {
+        "name": "psutil",
+        "version": "7.2.2"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0"
+      },
+      {
+        "name": "PyMuPDF",
+        "version": "1.27.2.3"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "pytest",
+        "version": "9.1.1"
+      },
+      {
+        "name": "pytest-cov",
+        "version": "7.1.0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "python-igraph",
+        "version": "1.0.0"
+      },
+      {
+        "name": "scipy",
+        "version": "1.15.3"
+      },
+      {
+        "name": "setuptools",
+        "version": "81.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "sqlglot",
+        "version": "30.20.0"
+      },
+      {
+        "name": "texttable",
+        "version": "1.7.0"
+      }
+    ],
+    "module": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/lib/python3.12/site-packages/orthohmm/__init__.py",
+    "native_libraries_loaded": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/lib/python3.12/site-packages/orthohmm/search/csrc/hmm_viterbi.so",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/lib/python3.12/site-packages/orthohmm/search/csrc/kmer_prefilter.so",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/lib/python3.12/site-packages/orthohmm/search/csrc/pair_align.so"
+    ],
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv",
+    "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]"
+  },
+  "runs": [
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/bin/python",
+        "-I",
+        "-m",
+        "orthohmm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/inputs",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/standard",
+        "-c",
+        "1",
+        "--search_mode",
+        "builtin",
+        "--clustering",
+        "leiden",
+        "--accuracy_profile",
+        "standard"
+      ],
+      "genes": 38,
+      "groups": 4,
+      "log": {
+        "bytes": 7821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/standard.log",
+        "sha256": "bc5931ef311d8da5d1f27376e0c1ac2060892cb42e21c21cbb20f49cab9913f4"
+      },
+      "partition": {
+        "bytes": 729,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/standard/orthohmm_orthogroups.txt",
+        "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+      },
+      "profile": "standard"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/bin/python",
+        "-I",
+        "-m",
+        "orthohmm",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/inputs",
+        "-o",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/high_sensitivity",
+        "-c",
+        "1",
+        "--search_mode",
+        "builtin",
+        "--clustering",
+        "leiden",
+        "--accuracy_profile",
+        "high_sensitivity"
+      ],
+      "genes": 38,
+      "groups": 4,
+      "log": {
+        "bytes": 4702,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/high_sensitivity.log",
+        "sha256": "c596b1050edfbba1bbf1df13fad27631115598e12cb4578eabedd4aa2ecaee2b"
+      },
+      "partition": {
+        "bytes": 729,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+      },
+      "profile": "high_sensitivity"
+    }
+  ],
+  "baseline_probe": {
+    "library": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/lib/python3.12/site-packages/orthohmm/search/csrc/hmm_viterbi.so",
+    "avx2_compiled": 0
+  },
+  "raw_artifacts": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/result.json",
+      "bytes": 70603,
+      "sha256": "dd3b037b21124ee7536c8ce388f7aafb0d509afd378b4936c4fbae6725a9f0ed"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/verification/verification.json",
+      "bytes": 36544,
+      "sha256": "9da2cd954d756863763fd0cabd66ebaf8371e0d068208c68d069cef1b3f3671c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/venv/pyvenv.cfg",
+      "bytes": 350,
+      "sha256": "a51fd4d44389f888fdc22a58efa158dbb73a5c2109f4304e0b82ea94a136066e"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/baseline_probe.json",
+      "bytes": 218,
+      "sha256": "2d829523b53efea2c9b21122ad0ab67a971ffce01028536ccf6c05c2005a8540"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/create_environment.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 11388,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/install_dependencies.log",
+      "sha256": "66fa08b8d2aa4eb1d9e1baf6b09e3d0ad04ed798a7465775bd8ff362e472b036"
+    },
+    {
+      "bytes": 687,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/build_wheel.log",
+      "sha256": "a73d4311c7feeab36338fd9e2250813df3681b9e4c78914ea7d5e8582fca8d37"
+    },
+    {
+      "bytes": 142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/install_wheel.log",
+      "sha256": "2e09a09b83b7e47463b342b8f6b5a441d71cfab0b4c39555ba0d72cff26e0308"
+    },
+    {
+      "bytes": 30,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_cpu_wheel_20261001_3a6c2d49/check_dependencies.log",
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    }
+  ],
+  "tests": {
+    "counts": {
+      "tests": 53,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "junit": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_numpy_pinned_20261001/cpu_wheel_orchestration_final.xml",
+      "bytes": 7158,
+      "sha256": "c4c715f2096743e9fd6c0c2922303930ee737859ebac8bc4ae5096f50feef3c7"
+    },
+    "summary": "53 passed in 2.05s",
+    "new_cases": 21
+  },
+  "remote_previous": {
+    "observed_utc": "2026-10-02T00:32:50.630579+00:00",
+    "run_id": 36945056722,
+    "head_sha": "3a6c2d49f201698920530fc0268ce5f6fc6e5134",
+    "status": "completed",
+    "conclusion": "failure",
+    "url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36945056722",
+    "jobs": [
+      {
+        "id": 110645150840,
+        "name": "test-full",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110645150982,
+        "name": "docs",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 110645151038,
+        "name": "test-fast (3.13)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110645151095,
+        "name": "test-fast (3.10)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110645151147,
+        "name": "test-fast (3.12)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110645151171,
+        "name": "test-fast (3.11)",
+        "status": "completed",
+        "conclusion": "failure"
+      }
+    ]
+  },
+  "remote_python313": {
+    "run_id": 36945056722,
+    "job_id": 110645151038,
+    "head_sha": "3a6c2d49f201698920530fc0268ce5f6fc6e5134",
+    "conclusion": "failure",
+    "log": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_3a6c2d49_20261001/110645151038.log",
+      "bytes": 3316342,
+      "sha256": "9a1edfa0e50f6a1d5a9c4a5493c862f3ccc59ee74501e8c9415bbc4bec90fcb2"
+    },
+    "summaries": [
+      "= 201 failed, 13343 passed, 96 skipped, 8 warnings, 47 errors in 630.97s (0:10:30) ="
+    ],
+    "focused_progress": [
+      "tests/unit/test_audit_threadripper_overhead.py ......................... [ 27%]",
+      "tests/unit/test_declared_test_dependencies.py ..................         [ 37%]",
+      "tests/unit/test_plot_matched_graph.py F.                                 [ 52%]",
+      "tests/unit/test_reproduce_corrected_factorial.py ..................      [ 72%]",
+      "tests/unit/test_reproduce_qfo_sequence.py ..................             [ 72%]"
+    ],
+    "focused_failures": [
+      "FAILED tests/unit/test_plot_matched_graph.py::test_plot_preserves_all_conditions_and_aligned_axes - ValueError: Reported effects differ from paired score records"
+    ]
+  },
+  "remote_artifact_pins": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_3a6c2d49_20261001/run_latest.json",
+      "bytes": 13562,
+      "sha256": "89845dde6434e1c6a919c6c72f5db0c9c8efdad597cbdabd8e150c7769a8496a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_3a6c2d49_20261001/jobs_latest.json",
+      "bytes": 21538,
+      "sha256": "b083f67b6a9dcd52d8db73a35a4264612d1ac0a99d510d0e58ec64e5e4628775"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_3a6c2d49_20261001/observation_latest.json",
+      "bytes": 1057,
+      "sha256": "cf34ceb17851443421a80d4cb3726e74d54b9c7eba27d9d5fcb576d76a91c788"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_3a6c2d49_20261001/python313_followup.json",
+      "bytes": 1167,
+      "sha256": "156164fd0b4e50f1aee27de562f0253f692b70a2d367286657c0e4126db925b8"
+    }
+  ],
+  "workflow": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/.github/workflows/ci.yml",
+    "bytes": 4812,
+    "sha256": "3b45d557ffbb639eb56f10c199760d493a3588ba75b486b6bf9906967051af3f"
+  },
+  "controller_test_environment": "Existing private Python 3.12 NumPy-2.2.6 environment; actual wheel installation uses a separate fresh venv.",
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false,
+  "limitations": [
+    "Current committed development package, not a frozen benchmark executor.",
+    "Fixture runs do not establish biological accuracy or controlled efficiency.",
+    "No phylogenetic pipeline, cross-architecture, hermetic runtime or rights clearance.",
+    "Dependency versions and logs are retained, not a complete transitive hash lock.",
+    "Only the Python 3.13 log was inspected; sibling failure causes are not inferred.",
+    "Matched-graph renderer still fails remotely; do not infer numerical equivalence from the earlier local diagnosis.",
+    "New separate Linux wheel job must be observed after push; existing macOS jobs are not removed."
+  ]
+}

@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Installed CPU Wheel Workflow Executed And CI Gate Prepared (2026-10-01)
+
+Previous turn is progress at pushed 3a6c2d49. Re-read objective/ledger and inspect
+actual CI handles; 36943913826 and 36945056722 are terminal failure, not live
+or restarted. Latest docs pass; all five test jobs fail. Inspect one new Python
+3.13 log once: 13,343 passed, 201 failed, 47 errors, 96 skips. Overhead/dependency/
+factorial/sequence-control modules pass; matched-graph renderer still fails.
+Do not infer its cause or sibling outcomes from the earlier local diagnosis.
+
+Add a separate Linux CPU-wheel CI gate while preserving all existing macOS jobs.
+Reuse the actual installed-wheel verifier, not a checkout-only test surrogate.
+New driver copies only exact committed package inputs to a clean build tree;
+reject dirty, indirect/unsafe/duplicate or inherited-binary inputs. Build a
+baseline CPU wheel with restricted build PATH, install in a new private venv,
+check dependencies and installed bytes, load native libraries, run both profiles,
+recheck inputs, preserve normal failure/timeout logs and refuse reused outputs.
+CI uploads result/log artifacts unconditionally after normal execution failures.
+No scientific/default/build-backend/application requirement change.
+
+Execute the actual workflow once against package commit 3a6c2d49: 42 staged
+files, fresh Python 3.12.3 venv, three loadable CPU libraries, all 36 installed
+entries byte-equal to wheel. Both builtin/Leiden profiles assign all 38 proteins
+exactly once to four groups. Baseline wheel is 146,111 bytes, SHA256
+d00277a121f2b694d13b1ad20688825df16c8fc44f6c64d286bb23f5c5e62e4f.
+Separate isolated ABI probe returns no compiled AVX2. This is not biological
+accuracy, full phylogeny, frozen benchmark substitution, ISA-wide portability,
+hermetic/transitive dependency closure, rights clearance or public release.
+
+**53 focused cases pass in 2.05 seconds**, no failures/errors/skips; 21 new
+cases are included. Earlier 45/52-case snapshots are not additional unique
+tests. Structured CI parsing and scoped whitespace pass. All actual build/
+install/verification subprocesses terminate. Shared packages and unrelated
+dirty sample files remain untouched. No controlled timing, contention poll/
+question, DGX, unrelated job/service change or scientific benchmark rerun.
+
+[Actual artifact, source bindings, tests and remaining boundaries](CI_CPU_WHEEL_INSTALLATION_20261001.md).
+Commit/push the checked driver/job/evidence, then inspect its actual new CPU-wheel
+job without resubmitting earlier runs. Broad CI failures and renderer replay
+still need individual repair. Timing, uncertainty/TreeFam sources, rights and
+final release remain open; publication goal is active, not achieved.
+
 ## Strict Replay Environment And Copied Audit Fixtures (2026-10-01)
 
 Previous turn is progress: pushed fixture corrections and actual terminal CI

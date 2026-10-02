@@ -74,6 +74,13 @@ evidence to the overhead-audit fixture. Comparators and production code remain
 unchanged. A fresh private environment passes 422 focused cases and collects
 13,692 cases; source-797af71a CI is still live at its recorded snapshot.
 These checks do not establish all-suite, remote or installed-runtime success.
+The [subsequent installed CPU-wheel gate](CI_CPU_WHEEL_INSTALLATION_20261001.md)
+now executes a fresh local build/install with exact committed source, installed
+byte checks and both native profiles; 53 focused cases pass. The new separate
+Linux CI job is prepared, not yet remotely verified. Source-3a6c2d49 CI is now
+terminal failure; strict factorial/sequence replay passes in the inspected
+Python 3.13 log, but matched-graph rendering still fails. No broad portability,
+scientific equivalence, rights or release claim follows from the wheel fixture.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

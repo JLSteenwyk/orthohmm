@@ -38,6 +38,15 @@ well as `tests/unit`; integration remains a separate target. Fast tests exclude
 the `slow` marker, not the top-level regression cases. CI keeps every Python
 matrix job's outcome rather than cancelling siblings after the first failure.
 
+A separate Linux CPU-wheel job builds committed package sources in a clean
+directory, installs into a fresh private venv and runs the existing isolated
+installed-package verifier. It exercises builtin/Leiden standard and
+high-sensitivity fixtures, not the full phylogenetic pipeline or benchmark
+accuracy. Existing macOS test jobs are retained. Result and command logs are
+uploaded even after normal failures; this is not a replacement for the full
+suite or proof of a hermetic runtime. The [execution report](../benchmark_tools/results/CI_CPU_WHEEL_INSTALLATION_20261001.md)
+distinguishes actual local installation from pending remote verification.
+
 Run unit tests with`make test.unit` and native integration tests with
 `make test.integration`. Pytest discovery is limited to`tests/` so retained
 benchmark worktrees are not collected. Integration outputs and copied input
