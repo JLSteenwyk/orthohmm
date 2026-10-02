@@ -15,6 +15,12 @@ jobs:
       uses: actions/setup-python@master
       with:
         python-version: ${{ matrix.python-version }}
+    - name: Install test Bash runtime
+      run: |
+        brew install bash
+        printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
+        "$(brew --prefix bash)/bin/bash" --version
+        /bin/bash --version
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
@@ -52,6 +58,12 @@ jobs:
       uses: actions/setup-python@master
       with:
         python-version: '3.11'
+    - name: Install test Bash runtime
+      run: |
+        brew install bash
+        printf '%s\n' "$(brew --prefix bash)/bin" >> "$GITHUB_PATH"
+        "$(brew --prefix bash)/bin/bash" --version
+        /bin/bash --version
     - name: Install dependencies
       run: |
         pip install -r requirements.txt

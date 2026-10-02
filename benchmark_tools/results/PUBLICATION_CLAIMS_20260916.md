@@ -119,6 +119,13 @@ fake-service file check still fails. New synthetic affinity and temporary-file
 corrections pass 203 local Linux cases; an API-absence simulation passes 182
 with exactly 21 native skips. Production modules remain unchanged. Neither
 panel proves remote correction, controlled timing or complete release portability.
+The [newer remote handoff log](CI_BASH_GUARD_RUNTIME_20261001.md) contradicts
+general guard portability: invalid commit/job/parity/index cases return success.
+Actual failing Bash version is unrecorded; the version hypothesis is unconfirmed.
+Six direct guard cases and an explicit prospective test Bash setup now have 261
+passing local checks, not remote correction or historical scientific admission.
+Archived scripts and rejection expectations remain unchanged; release workflows
+still require an explicitly bound and verified shell.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

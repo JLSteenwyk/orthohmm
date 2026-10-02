@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Observed Fail Open Shell Guards And Prospective CI Runtime (2026-10-01)
+
+Previous turn is progress at pushed 9674fe93. Reread objective/ledger and inspect
+actual handles. Source-bec Python 3.12 log: 13,458 passed, 198 failed, 28 errors,
+96 skipped, 30 warnings, 411.44s. Relocation-fixture eight cases and reconciliation
+admission 41 cases pass, but negative handoffs now expose zero success returns
+for invalid commit/formats/parity/task indices. Earlier local success is not
+remote correctness. Preserve rejection expectations and failures. Actual failing
+Bash version is absent: shell-version explanation is still a hypothesis.
+Source-bec is terminal failure across five tests, wheel/docs success; source-9674
+has wheel/docs success and five live tests at 02:31:43 UTC. No sibling cause
+inference or manual retry.
+
+Prioritize guard integrity over proposed RSS test correction (no RSS edits yet).
+Add six direct Bash guard tests and only two macOS test-job install/PATH/version
+steps for an explicit Homebrew Bash runtime. Archived expressions/scripts and
+all guards remain unchanged; new remote setup/outcomes still require verification.
+**261 local cases pass in 12.89 seconds**, zero failures/errors/skips, six new
+cases included, actual Bash 5.2.21. Structured YAML comparison confirms exactly
+two setup additions; all eight archived batch pins and Git bytes still match.
+[Evidence, primary runtime documentation and remaining scope](CI_BASH_GUARD_RUNTIME_20261001.md).
+
+Commit/push and observe the actual new automatic CI. This is neither retrospective
+runtime amendment nor proof of portable historical guards or full release.
+RSS unavailable semantics already reject benchmark admission; its test correction
+remains next alongside broader runtime/source/rights and uncertainty work. No
+scientific/default/score/native benchmark changes, DGX, host polls/questions,
+shared-package or unrelated workload/service actions. All own commands terminate;
+controlled timing deferred and the full publication goal remains active/incomplete.
+
 ## Synthetic Affinity Guards And Explicit Native Capability Checks (2026-10-01)
 
 Previous turn is progress at pushed bec79e1d. Reread objective/ledger and inspect

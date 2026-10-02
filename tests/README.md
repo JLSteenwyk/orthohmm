@@ -46,6 +46,12 @@ in fresh temporary copies, exercising dummy executors and synthetic scheduler
 rows with shell-special paths. Archived batches and their provenance checks
 stay unchanged. See [validation and production boundaries](../benchmark_tools/results/CI_QFO_BATCH_FIXTURES_20261001.md);
 test portability does not make historical native workflows portable.
+Batch handoff checks require a Bash runtime that stops after failed standalone
+guards under `set -e`; direct semantic tests do not skip unsupported behavior.
+The macOS test jobs prepare an explicit Homebrew Bash on PATH and log its version
+alongside the system version. The [observed failure and amendment](../benchmark_tools/results/CI_BASH_GUARD_RUNTIME_20261001.md)
+distinguish the new setup from unverified remote execution and historical runtime
+claims. Archived scripts must not be assumed safe under an arbitrary shell.
 Synthetic affinity cases install their injected APIs explicitly on unsupported
 hosts; genuine native workload/resource/library-worker cases retain capability
 skips rather than mocked native results. Fake-service capture hashes its own

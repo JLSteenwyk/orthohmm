@@ -1,0 +1,100 @@
+{
+  "base_commit": "9674fe932a62612597f689082405b3f5af5c4675",
+  "status": "direct_bash_guard_tests_locally_validated_and_ci_runtime_prepared",
+  "remote_runtime_correction_confirmed": false,
+  "failing_remote_bash_version_recorded": false,
+  "shell_version_cause": "hypothesis_not_confirmed",
+  "historical_batches_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "observed_remote": {
+    "source_commit": "bec79e1d79e86902a9f91635953449fe5dfa7fe4",
+    "run_id": 36954409877,
+    "job_id": 110674083803,
+    "python": "3.12",
+    "platform": "macOS",
+    "log": {
+      "path": "benchmarks/work/ci_remote_bec79e1d_20261001/110674083803.log",
+      "bytes": 3162127,
+      "sha256": "b05d4ca8a8f23f0f4890e4bb5eb2c96e50d06b66b9abfc22aaee4d390a461e6a",
+      "download_observed_utc": "2026-10-02T02:24:09.554659+00:00"
+    },
+    "summary": {"passed": 13458, "failed": 198, "errors": 28, "skipped": 96, "warnings": 30, "duration_s": 411.44},
+    "all_relocation_fixture_cases_passed": 8,
+    "all_reconciliation_admission_cases_passed": 41,
+    "observed_guard_failures": "Invalid commit/equality/format, job format, parity and task index cases returned zero unexpectedly",
+    "run_terminal_observed_utc": "2026-10-02T02:31:42.789435+00:00",
+    "all_five_test_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "sibling_logs_inspected": false
+  },
+  "existing_ci": {
+    "source_commit": "9674fe932a62612597f689082405b3f5af5c4675",
+    "run_id": 36955273317,
+    "observed_utc": "2026-10-02T02:31:43.221915+00:00",
+    "all_five_test_jobs": "in_progress",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "includes_new_bash_setup": false
+  },
+  "tests": {
+    "cases": 261, "failures": 0, "errors": 0, "skipped": 0,
+    "new_cases_included": 6,
+    "pytest_duration_s": 12.89,
+    "junit_suite_duration_s": 12.842,
+    "module_cases": {
+      "tests.unit.test_bash_runtime": 6,
+      "tests.unit.test_corrected_candidates_batches": 16,
+      "tests.unit.test_corrected_factorial_pair_batches": 58,
+      "tests.unit.test_corrected_factorial_score_batches": 98,
+      "tests.unit.test_corrected_reconcile_admit_batch": 41,
+      "tests.unit.test_corrected_reconcile_batch": 25,
+      "tests.unit.test_corrected_replay_batch": 9,
+      "tests.unit.test_historical_qfo_batch_fixture": 8
+    },
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/bash_guard_tests.xml",
+      "bytes": 32574,
+      "sha256": "4397530f1dba99f1c903583f8d0184a356d4d8c80a3ca253727cf119d6bd130b"
+    }
+  },
+  "local_bash": {
+    "path": "/usr/bin/bash",
+    "bytes": 1446024,
+    "sha256": "bc5945feb8bd26203ebfafea5ce1878bb2e32cb8fb50ab7ae395cfb1e1aaaef1",
+    "version": "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)"
+  },
+  "sources": [
+    {"path": ".github/workflows/ci.yml", "bytes": 5330, "sha256": "b17dbc168f88d4450c8e97827ef41b31270caef19f9f4e8f56eb334a478f59c5"},
+    {"path": "tests/unit/test_bash_runtime.py", "bytes": 1351, "sha256": "3713a2d7cca9fc379fb304640cbe9d1e7463d0352d492b3f3b6820f3379e1be7"}
+  ],
+  "historical_batch_receipt": {
+    "path": "benchmark_tools/results/ci_qfo_batch_fixtures_20261001.json",
+    "bytes": 5990,
+    "sha256": "e0ab9a0fdc7289645104682da9f337a4b3299b6a4fe0d47549a357783163703b",
+    "all_eight_batch_pins_rechecked": true,
+    "all_eight_batch_git_blobs_unchanged": true
+  },
+  "unchanged_metrics": {
+    "path": "orthohmm/metrics.py",
+    "bytes": 6812,
+    "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+  },
+  "structured_workflow_comparison": {
+    "exact_added_steps": 2,
+    "changed_jobs": ["test-fast", "test-full"],
+    "all_other_settings_unchanged": true,
+    "existing_readonly_parser": "PyYAML 6.0.1",
+    "private_test_env_yaml_available": false,
+    "packages_installed_for_audit": false
+  },
+  "limitations": [
+    "Actual failing remote Bash version is unrecorded; no isolated root-cause claim.",
+    "New Homebrew Bash setup has not executed remotely and is not a frozen scientific-runtime pin.",
+    "Historical scripts remain unchanged and their guards are not claimed portable to arbitrary Bash runtimes.",
+    "RSS test capability correction, broader CI, final executable release, controlled resources and source/rights remain open."
+  ]
+}
