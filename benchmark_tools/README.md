@@ -56,6 +56,13 @@ standard-library Python and committed derived data; 49 local tests pass,
 including an original-checkout-blocked copied child. It does not regenerate
 raw annotations/scoring, bootstrap intervals or the existing review archive.
 
+The [SwissTrees arithmetic archive](results/SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+packages that unchanged checker and committed inputs. Its actual fresh
+restoration under Python 3.12 reproduces all 208 rows and 984 cells with
+original-checkout reads blocked; 76 combined local cases pass. Prior checker
+cases are now macOS-confirmed, but the new bundler has no remote confirmation
+yet. This derived-table component is not raw admission or the full study release.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their

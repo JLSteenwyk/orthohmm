@@ -1,5 +1,43 @@
 # Publication Progress
 
+## SwissTrees Arithmetic Archive Restored And Reproduced (2026-10-02)
+
+Read the complete objective and current ledger/HEAD before continuing. The
+latest user reply does not establish a quiet window; none is needed now.
+Timing stays deferred, without another scheduling question, contention poll,
+DGX access or unrelated workload/service action. Continue reproducibility work.
+
+Actual source-548 Python 3.11 fast log confirms all 49 prior checker cases pass.
+Overall: 13,814 pass, 29 fail, zero errors, 110 skip, 30 warnings, 308.79s.
+At 06:02:16 UTC all five source-548 test jobs are terminal failures; wheel/docs
+succeed. Only that actual fast log is inspected; no sibling/full-suite success
+inference and no manual restart or resubmission follows.
+
+Commit f870 adds a narrowly scoped standard-library bundler with exact committed
+Git bytes, pinned unchanged checker and complete inventories. Actual archive:
+21 payloads/2,671,796 bytes plus index; 22 canonical regular tar members;
+375,325 compressed bytes. Do not include raw data or the large binary in Git.
+Seventeen derived payloads and all original exporters stay unchanged.
+
+**76 local tests pass in 4.30s**, including 27 new bundler cases; earlier 75 and
+49 panels overlap. Actual fresh external restoration under Python 3.12.3,
+with no Git PATH, forbidden subprocesses and original-checkout read/chdir guard,
+reproduces all 208 rows and 984 logical cells. Canary is rejected; subsequent
+original-path events are zero. Temporary copies are removed. Exact guard,
+observations, source/archive/index/test/log/report pins and commands are in
+[component evidence and boundaries](SWISS_DESCRIPTIVE_COMPONENT_20261002.md).
+This is local Python-level verification, not OS isolation or raw biological
+input admission. The nested static verification flag remains false; the outer
+replay flag correctly records executed arithmetic.
+
+Commit/push this evidence with f870 and observe the actual automatic CI handle.
+The new bundler is not yet macOS-proven. No scientific inference/bootstrap/
+annotation/scoring/render rerun, old-archive regeneration, public-source search
+or host/service action occurs. Frozen scores/settings, historical failures and
+all earlier receipts remain intact. Other-QfO uncertainty, data/source rights,
+controlled resource evidence, complete executable release and public deposition
+remain open. The original publication goal stays active and incomplete.
+
 ## All Four SwissTrees Descriptive Tables Independently Checked (2026-10-02)
 
 Previous goal turn is progress at pushed c78: bounded owned-group cleanup and

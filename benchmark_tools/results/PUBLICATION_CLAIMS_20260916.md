@@ -221,6 +221,17 @@ requirements remain intact, and their raw/workstation CI failures remain open.
 Actual source-c78 macOS Python 3.11 fast CI confirms the prior 55 timeout cases,
 but has 29 other failures. No new-checker macOS or full release claim follows.
 
+Subsequent [SwissTrees component restoration](SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+packages the unchanged checker plus derived inputs at source f870 and reproduces
+208 rows/984 cells after actual fresh out-of-checkout extraction under Python
+3.12. A rejected canary and zero subsequent original-path events support bounded
+same-host Python-level guarding, not OS containment or native/raw admission.
+All 76 combined local cases pass; the prior source-548 macOS fast log confirms
+49 checker cases but still has 29 other failures. New bundler remote confirmation,
+raw-source portability, uncertainty, rights, controlled timing and the full
+executable/public release remain open. Frozen scientific scores/settings and
+existing archives are unchanged.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

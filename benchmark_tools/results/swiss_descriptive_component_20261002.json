@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "scope": "retained_swiss_descriptive_table_arithmetic_only",
+  "source_commit": "f8702fa11bbe3e5edfcc9bfb5e3deceff65f9674",
+  "payload_files": 21,
+  "payload_bytes": 2671796,
+  "archive_members": 22,
+  "archive": {"path": "benchmarks/work/swiss_descriptive_component_20261002/orthohmm-swiss-descriptive-tables-20261002-f8702fa1.tar.gz", "bytes": 375325, "sha256": "84aa230857be91d4f0fb894f0959cd1c6a0c5695d7b65bde03805b93b9853234"},
+  "index": {"path": "benchmarks/work/swiss_descriptive_component_20261002/component/bundle.json", "bytes": 5848, "sha256": "72c3f4defa268bee73ba0868c82b30c25febb70ea1321d24f2ba6828cbe5093d"},
+  "source_records": [
+    {"path": "benchmark_tools/bundle_swiss_descriptive_tables.py", "bytes": 11892, "sha256": "16e98be70e1eda855b74e91ac392cc38a1770db08289e52c0ec2f6d0251057d9"},
+    {"path": "benchmark_tools/check_swiss_descriptive_tables.py", "bytes": 11650, "sha256": "43f61640b1e8482d2501731a6fcd547a0287878d297cf5a30acd6249f5b0469c"},
+    {"path": "tests/unit/test_bundle_swiss_descriptive_tables.py", "bytes": 7150, "sha256": "fcdefeeac4ff4f4cfe72a0e400e95075d8b9d6a9ecb3cd07fd3def4f30bb8efe"}
+  ],
+  "restoration": {
+    "guard_receipt": {"path": "benchmark_tools/results/swiss_descriptive_component_guarded_restore_20261002.json", "bytes": 5593, "sha256": "60c46963102e3b719748921054ec8c9e0b42759132a4f98479beb6aa7cc8adf3"},
+    "arithmetic_report": {"path": "benchmark_tools/results/swiss_descriptive_component_restored_arithmetic_20261002.json", "bytes": 7622, "sha256": "29c23936ecb3c547d48e7aa895177a25708386f360cc6fb4d6bb310d4a6fcccf"},
+    "interpreter": "/usr/bin/python3",
+    "python_version": "3.12.3",
+    "returncode": 0,
+    "canary_rejected": true,
+    "original_path_events_after_canary": 0,
+    "temporary_restorations_removed": true,
+    "rows": 208,
+    "logical_cells": 984,
+    "same_host": true,
+    "os_containment": false
+  },
+  "local_tests": {
+    "passed": 76, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 4.30, "junit_duration_s": 4.278,
+    "report": {"path": "benchmarks/work/swiss_table_bundle_tests_final_20261002.xml", "bytes": 11345, "sha256": "761955bd327ab230c7b687b2ddb917cb47b075714b92d28ba9b1a4bbb428b73d"},
+    "prior_overlapping_report": {"path": "benchmarks/work/swiss_table_bundle_tests_20261002.xml", "bytes": 11199, "sha256": "9b4f4b191c17c57f7b39a00e78c9548d1f25401e53fef2e2ab433d7cbf449626", "passed": 75}
+  },
+  "previous_checker_mac_ci": {
+    "source_commit": "548e02f4a90e1cad45a426dde9d8f934cc62f20f",
+    "run_id": 36970509918,
+    "inspected_job_id": 110723304074,
+    "scope": "macOS Python 3.11 test-fast only",
+    "log_downloaded_at_utc": "2026-10-02T06:05:56.934201+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_548e02f4_20261002/110723304074.log", "bytes": 2171657, "sha256": "fca329ec54aefafc8f8afdd65f41964e2ef8b1e6e76e885c7c98c49fe99070ac"},
+    "checker_cases_passed": 49,
+    "new_bundler_cases_in_this_ci": false,
+    "overall": {"passed": 13814, "failed": 29, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 308.79},
+    "jobs_observed_at_utc": "2026-10-02T06:02:16.624616+00:00",
+    "five_test_jobs": "terminal failure", "cpu_wheel": "success", "docs": "success",
+    "manual_restart_or_resubmission": false
+  },
+  "raw_source_admission": false,
+  "bootstrap_intervals_recomputed": false,
+  "native_inference_or_scoring_executed": false,
+  "final_record_validation": {
+    "artifact_pins_checked": 10,
+    "committed_payloads_checked": 21,
+    "archive_member_bytes_checked": 22,
+    "core_unchanged_since_commit": "548e02f4a90e1cad45a426dde9d8f934cc62f20f",
+    "passed": true,
+    "prior_validation_attempts": [
+      "Artifact/index/archive/report/JUnit checks passed, then an overly broad core equality assertion against 7f3a9e40 failed on pre-existing source changes. Corrected comparison uses the preceding 548 milestone; this turn makes no core edits.",
+      "Whole-worktree git diff --check reports pre-existing sample-output trailing whitespace. Owned documentation diff --check passes; unrelated outputs are untouched."
+    ]
+  },
+  "controlled_timing_executed": false,
+  "data_rights_cleared": false,
+  "public_deposition_executed": false,
+  "publication_ready": false
+}

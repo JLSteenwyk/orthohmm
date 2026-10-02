@@ -534,6 +534,14 @@ This audit does not launch work or replace a quiet-window review.
 
 ## Reproduce Statistics
 
+The [SwissTrees arithmetic component](results/SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+provides a version-pinned archive and `restore` command needing only standard
+Python. Actual fresh restoration under system Python 3.12 reproduces all four
+tables without original-checkout access. Its independently retained index digest
+and archive/source/report hashes are recorded; raw-source admission and full
+native workflows remain outside its scope. The existing review and parameter
+archives are unchanged, not regenerated to include this later component.
+
 The [four-table SwissTrees arithmetic check](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 requires only Python's standard library and seventeen committed derived
 payloads. It verifies all 208 rows/eight methods, including 984 score/difference

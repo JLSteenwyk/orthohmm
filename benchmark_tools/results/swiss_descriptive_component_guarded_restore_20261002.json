@@ -1,0 +1,56 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-I",
+    "-B",
+    "-c",
+    "\nimport json,os,runpy,sys\nfrom pathlib import Path\nblocked,runner,archive,output=[Path(v).resolve() for v in sys.argv[1:5]]\nmanifest_sha=sys.argv[5]\ncount=0\ndef audit(event,args):\n global count\n if event=='subprocess.Popen':\n  raise PermissionError('subprocess forbidden in component replay')\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  path=Path(os.fsdecode(args[0])).resolve()\n  if path==blocked or path.is_relative_to(blocked):\n   count+=1\n   raise PermissionError('original checkout access rejected')\nsys.addaudithook(audit)\ntry:\n (blocked/'benchmark_tools/check_swiss_descriptive_tables.py').read_bytes()\nexcept PermissionError:\n canary=count==1\nelse:\n raise RuntimeError('checkout read canary not rejected')\nif not canary: raise RuntimeError('canary count differs')\ncount=0\nnamespace=runpy.run_path(str(runner))\nresult=namespace['restore_and_reproduce'](archive,manifest_sha,output)\nchecker=Path(result['checker']['path'])\nprint(json.dumps(dict(canary_rejected=canary,original_path_events_after_canary=count,\n status=result['status'],rows=result['rows'],cells=result['score_and_difference_cells'],\n source_commit=result['source_commit'],component=result['component'],\n checker_digest=result['checker']['sha256'],temporary_restoration_removed=not checker.exists(),\n all_record_paths_outside_original=all(not Path(r['path']).is_relative_to(blocked) for r in result['checked_records']),\n raw_inputs_revalidated=result['raw_inputs_revalidated'],bootstrap_intervals_recomputed=result['bootstrap_intervals_recomputed'],\n numerical_reproduction_executed=result['component_numerical_reproduction_executed'],python=sys.version),sort_keys=True))\n",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/swiss-table-actual-vbc_r85z/benchmark_tools/bundle_swiss_descriptive_tables.py",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/swiss-table-actual-vbc_r85z/tables.tar.gz",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/swiss-table-actual-vbc_r85z/reproduced.json",
+    "72c3f4defa268bee73ba0868c82b30c25febb70ea1321d24f2ba6828cbe5093d"
+  ],
+  "copied_archive_sha256": "84aa230857be91d4f0fb894f0959cd1c6a0c5695d7b65bde03805b93b9853234",
+  "environment": {
+    "HOME": "/nonexistent",
+    "PATH": "/no-git"
+  },
+  "guard_source": "\nimport json,os,runpy,sys\nfrom pathlib import Path\nblocked,runner,archive,output=[Path(v).resolve() for v in sys.argv[1:5]]\nmanifest_sha=sys.argv[5]\ncount=0\ndef audit(event,args):\n global count\n if event=='subprocess.Popen':\n  raise PermissionError('subprocess forbidden in component replay')\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  path=Path(os.fsdecode(args[0])).resolve()\n  if path==blocked or path.is_relative_to(blocked):\n   count+=1\n   raise PermissionError('original checkout access rejected')\nsys.addaudithook(audit)\ntry:\n (blocked/'benchmark_tools/check_swiss_descriptive_tables.py').read_bytes()\nexcept PermissionError:\n canary=count==1\nelse:\n raise RuntimeError('checkout read canary not rejected')\nif not canary: raise RuntimeError('canary count differs')\ncount=0\nnamespace=runpy.run_path(str(runner))\nresult=namespace['restore_and_reproduce'](archive,manifest_sha,output)\nchecker=Path(result['checker']['path'])\nprint(json.dumps(dict(canary_rejected=canary,original_path_events_after_canary=count,\n status=result['status'],rows=result['rows'],cells=result['score_and_difference_cells'],\n source_commit=result['source_commit'],component=result['component'],\n checker_digest=result['checker']['sha256'],temporary_restoration_removed=not checker.exists(),\n all_record_paths_outside_original=all(not Path(r['path']).is_relative_to(blocked) for r in result['checked_records']),\n raw_inputs_revalidated=result['raw_inputs_revalidated'],bootstrap_intervals_recomputed=result['bootstrap_intervals_recomputed'],\n numerical_reproduction_executed=result['component_numerical_reproduction_executed'],python=sys.version),sort_keys=True))\n",
+  "report": {
+    "bytes": 7622,
+    "path": "benchmarks/work/swiss_descriptive_component_20261002/restored_guarded_report_20261002.json",
+    "sha256": "29c23936ecb3c547d48e7aa895177a25708386f360cc6fb4d6bb310d4a6fcccf"
+  },
+  "returncode": 0,
+  "stderr": "",
+  "stdout": {
+    "all_record_paths_outside_original": true,
+    "bootstrap_intervals_recomputed": false,
+    "canary_rejected": true,
+    "cells": 984,
+    "checker_digest": "43f61640b1e8482d2501731a6fcd547a0287878d297cf5a30acd6249f5b0469c",
+    "component": {
+      "bytes": 2671796,
+      "files": 21,
+      "manifest": {
+        "bytes": 5848,
+        "sha256": "72c3f4defa268bee73ba0868c82b30c25febb70ea1321d24f2ba6828cbe5093d"
+      },
+      "numerical_reproduction_executed": false,
+      "publication_ready": false,
+      "raw_source_admission": false,
+      "source_commit": "f8702fa11bbe3e5edfcc9bfb5e3deceff65f9674",
+      "status": "swiss_descriptive_component_verified"
+    },
+    "numerical_reproduction_executed": true,
+    "original_path_events_after_canary": 0,
+    "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+    "raw_inputs_revalidated": false,
+    "rows": 208,
+    "source_commit": "f8702fa11bbe3e5edfcc9bfb5e3deceff65f9674",
+    "status": "swiss_descriptive_table_arithmetic_verified",
+    "temporary_restoration_removed": true
+  },
+  "temporary_copy_removed_after_exit": true
+}
