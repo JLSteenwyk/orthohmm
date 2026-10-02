@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-02",
+  "base_commit": "1ce07eb9f99f8eccc0d4b908cf7d54dc91728572",
+  "scope": "Test-only launcher environment containment and portable archived replay fixture",
+  "scientific_settings_changed": false,
+  "controlled_timings_admitted": 0,
+  "publication_ready": false,
+  "local_runtime": {
+    "python": "/home/bizon/anaconda3/bin/python",
+    "python_version": "3.10.13",
+    "host": "bizon",
+    "platform": "Linux"
+  },
+  "ordered_test_modules": [
+    "tests/unit/test_dgx_frontier_native.py",
+    "tests/unit/test_corrected_replay_batch.py",
+    "tests/unit/test_qfo_sequence_assessment_admit_batch.py",
+    "tests/unit/test_render_manuscript_review.py",
+    "tests/unit/test_render_publication_bibliography.py",
+    "tests/unit/test_historical_qfo_batch_fixture.py",
+    "tests/unit/test_setup_native_wheel.py"
+  ],
+  "ordered_module_cases": [
+    17,
+    9,
+    8,
+    13,
+    19,
+    8,
+    20
+  ],
+  "pre_fix_probe": {
+    "pytest_exit": 0,
+    "after_test_environment_deltas": [
+      {
+        "test": "tests/unit/test_dgx_frontier_native.py::test_launch_preserves_frozen_native_command_and_pins_recipe[0]",
+        "changed_keys": [
+          "CONDA_PREFIX",
+          "MKL_NUM_THREADS",
+          "OMP_NUM_THREADS",
+          "OPENBLAS_NUM_THREADS",
+          "PATH",
+          "PYTHONDONTWRITEBYTECODE",
+          "PYTHONPATH",
+          "PYTHONPYCACHEPREFIX",
+          "PYTHONUNBUFFERED"
+        ],
+        "path_changed": true,
+        "path_before_sha256": "a97467bfc743d2ed244d95527d0d8c5e4cbf9bbca03e8e74f3e98541c63d9f6c",
+        "path_after_sha256": "c6b2474b2c173dcdb1280ad080baad527c8fc927395842c2927e59df409fb4c5"
+      },
+      {
+        "test": "tests/unit/test_dgx_frontier_native.py::test_launch_preserves_frozen_native_command_and_pins_recipe[1]",
+        "changed_keys": [
+          "PYTHONPYCACHEPREFIX"
+        ],
+        "path_changed": false,
+        "path_before_sha256": "c6b2474b2c173dcdb1280ad080baad527c8fc927395842c2927e59df409fb4c5",
+        "path_after_sha256": "c6b2474b2c173dcdb1280ad080baad527c8fc927395842c2927e59df409fb4c5"
+      },
+      {
+        "test": "tests/unit/test_dgx_frontier_native.py::test_launch_preserves_frozen_native_command_and_pins_recipe[2]",
+        "changed_keys": [
+          "PATH",
+          "PYTHONPYCACHEPREFIX"
+        ],
+        "path_changed": true,
+        "path_before_sha256": "c6b2474b2c173dcdb1280ad080baad527c8fc927395842c2927e59df409fb4c5",
+        "path_after_sha256": "003ebc64b8da109e1b4c151e22b8dbb1972f9077c97d9174393179e7ded68983"
+      }
+    ]
+  },
+  "initial_post_fix_probe": {
+    "pytest_exit": 1,
+    "passed": 93,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0,
+    "after_test_environment_deltas": [],
+    "failure": "Existing relocation test assumed current interpreter differs from historical interpreter; corrected test expectation only."
+  },
+  "final_post_fix_probe": {
+    "pytest_exit": 0,
+    "after_test_environment_deltas": [],
+    "passed": 94,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "console_seconds": 7.53
+  },
+  "observer_method": "Isolated child pytest plugin wraps each test protocol with tryfirst hookwrapper, compares full os.environ before/after, excludes only PYTEST_CURRENT_TEST, records key names and PATH hashes but no values. Observer does not restore environment.",
+  "unchanged_from_base": [
+    "benchmark_tools/run_dgx_frontier_native_smoke.py",
+    "benchmark_tools/results/qfo_corrected_replay_batch_20260918.sh",
+    "benchmark_tools/run_qfo_corrected_replay.py",
+    "tests/conftest.py"
+  ],
+  "remote_observation": {
+    "run_id": 36962731261,
+    "job_id": 110699743428,
+    "source_commit": "1ce07eb9f99f8eccc0d4b908cf7d54dc91728572",
+    "platform": "macOS",
+    "python": "3.10",
+    "job_conclusion": "failure",
+    "overall": {
+      "passed": 13715,
+      "failed": 48,
+      "errors": 0,
+      "skipped": 111,
+      "warnings": 30,
+      "seconds": 458.4
+    },
+    "previous_158_case_scope": {
+      "passed": 152,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 6
+    },
+    "versions": {
+      "gcc": "16.2.0",
+      "gnu_time": "1.10",
+      "pandoc": "3.11"
+    },
+    "log_download_utc": "2026-10-02T04:13:55.375622+00:00",
+    "all_jobs_observed_utc": "2026-10-02T04:20:06.070694+00:00",
+    "all_jobs_summary": "Five test jobs failed; CPU wheel and docs succeeded. Only Python 3.10 fast log inspected."
+  },
+  "limitations": [
+    "Local panels overlap; not additive or fresh macOS confirmation of this fix.",
+    "Environment leak reproduces locally; causal explanation of prior remote Bash/Pandoc/compiler failures remains an inference.",
+    "Native inference and measurement are mocked in launcher tests; no DGX access or workload timing.",
+    "Scientific scores, default parameters, historical scripts and runtime admission remain unchanged.",
+    "Full regression, release, uncertainty, source/rights and controlled resource requirements remain open. Timing deferred; no quiet-window question or contention poll."
+  ],
+  "artifacts": [
+    {
+      "path": "tests/unit/test_dgx_frontier_native.py",
+      "bytes": 8155,
+      "sha256": "5264ff71910140dae09f830725f65209278f87638cf629a3c7d3d6bb27cb4619"
+    },
+    {
+      "path": "tests/unit/test_corrected_replay_batch.py",
+      "bytes": 3274,
+      "sha256": "4c3f4978e5b4d259fb19bea8700407fef04c1f85c500e9fb451c234dce0973e0"
+    },
+    {
+      "path": "tests/unit/test_historical_qfo_batch_fixture.py",
+      "bytes": 3797,
+      "sha256": "bdda593f0710acb0db3f43c6c68bd53872692415db5e56f1103194a32112291c"
+    },
+    {
+      "path": "benchmark_tools/run_dgx_frontier_native_smoke.py",
+      "bytes": 3090,
+      "sha256": "e611da4ce5efa33afb28ef27215ea0d96e0a7828fada7193199dfdc7baa3b941"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_replay_batch_20260918.sh",
+      "bytes": 1100,
+      "sha256": "090747192044a61fda9a9aef960d042243b5819333c7b1983863047ee44db535"
+    },
+    {
+      "path": "benchmark_tools/run_qfo_corrected_replay.py",
+      "bytes": 9817,
+      "sha256": "c7fc0df9c74b02ec43bfbfcf9668bdd53ed8f88f630079831dcf6e93fe03018c"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 2159,
+      "sha256": "af9f9511ba39f18ff26ef0d29d2b54d722841aab9452201b2846fdd0f75fb1f7"
+    },
+    {
+      "path": "benchmarks/work/ci_launcher_environment_before_20261002.xml",
+      "bytes": 670,
+      "sha256": "50d82712680f5c76b47a74f013938c5404b11cb3336003ab5d5b39a22493aecd",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "3",
+          "time": "0.153",
+          "timestamp": "2026-10-02T00:08:47.602404-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_launcher_environment_after_20261002.xml",
+      "bytes": 15116,
+      "sha256": "d40835b45d6f0f1389b53432ab85c9a62f768c711337959b67f477801e000fdb",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "1",
+          "skipped": "0",
+          "tests": "94",
+          "time": "7.580",
+          "timestamp": "2026-10-02T00:10:56.000928-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_launcher_environment_after_20261002_v2.xml",
+      "bytes": 13444,
+      "sha256": "ca2d27b55604201b3f2cc5c1e6e929469cbc79eec03603a43230d127ae890712",
+      "junit_suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "94",
+          "time": "7.509",
+          "timestamp": "2026-10-02T00:12:20.067109-04:00",
+          "hostname": "bizon"
+        }
+      ]
+    },
+    {
+      "path": "benchmarks/work/ci_remote_1ce07eb9_20261002/110699743428.log",
+      "bytes": 2243612,
+      "sha256": "c065801ccb623d0e5140f19d57c0962575ccfa2133117a63f000467ddf89bd37"
+    }
+  ]
+}

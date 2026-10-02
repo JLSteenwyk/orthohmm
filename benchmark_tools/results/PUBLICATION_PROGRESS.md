@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Contained Launcher Environment And Portable Replay Fixture (2026-10-02)
+
+Timing remains deferred: no quiet window is needed for current scoring,
+manuscript and reproducibility work. Do not ask for scheduling information,
+poll contention or act on unrelated jobs/services. The Threadripper remains
+the selected timing host; no DGX work is performed.
+
+At 04:20:06 UTC, source-1ce's five test jobs fail; wheel/docs succeed. Inspect
+only the actual Python 3.10 fast log: 13,715 pass, 48 fail, zero errors,
+111 skip, 30 warnings, 458.40s. The prior 158-case utility/reference scope
+now confirms 152 pass/six retained-data skips on macOS. Earlier fixture fixes
+work within that scope; full CI and sibling failure causes remain unproven.
+
+An isolated local observer finds three passing launcher tests leak environment
+changes, including PATH. Contain the complete environment in fixture teardown
+and add normal/exceptional cleanup guards. The historical launch/measurement
+paths remain mocked and unchanged. The missing later Homebrew utilities may
+be explained by this leak, but remote causation/compiler-skip cause is not
+proved. Relocate only a temporary replay batch using the established helper,
+assert the exact root handoff, and correct an existing test's assumption that
+the selected Python differs from the historical path. No archive rewrite.
+
+**94 ordered local cases pass in 7.53s**, zero failures/errors/skips and no
+environment deltas. Actual local Pandoc and baseline compilation run after
+the launcher. Initial 93-pass/one-assertion-failure and passing-but-leaking
+pre-fix probe stay pinned; overlapping panels are not additive. See
+[evidence and limitations](CI_LAUNCHER_ENVIRONMENT_20261002.md).
+
+Commit/push and observe automatic CI. New macOS/full-suite confirmation,
+release, source/rights, uncertainty and comparable-resource requirements
+remain open. Production commands, frozen method, scores and admission rules
+stay unchanged. The complete publication goal remains active, not complete.
+
 ## Portable And Pinned Three Kingdoms Assessment Fixtures (2026-10-02)
 
 Previous goal turn is progress at pushed d94d4346: explicit utility setup and

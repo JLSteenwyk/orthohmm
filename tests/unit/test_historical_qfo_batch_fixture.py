@@ -79,5 +79,7 @@ def test_two_interpreter_calls_are_relocated(tmp_path, stage_historical_qfo_batc
     destination = stage_historical_qfo_batch(source, tmp_path / "copy.sh", tmp_path / "root",
                                             python_calls=2)
     assert destination.read_text().count(shlex.quote(sys.executable)) == 2
-    assert HISTORICAL_PYTHON not in destination.read_text()
+    expected = original.replace("ROOT=/historical/root", "ROOT=" + shlex.quote(str(tmp_path / "root")))
+    expected = expected.replace(HISTORICAL_PYTHON, shlex.quote(sys.executable))
+    assert destination.read_text() == expected
     assert source.read_text() == original

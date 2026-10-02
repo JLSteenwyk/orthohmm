@@ -20,7 +20,10 @@ def test_batch_syntax_and_resources():
 
 @pytest.mark.parametrize("problem", [None, "missing_args", "commit_format", "commit_mismatch",
                                     "dirty_executor", "missing_plan", "hash_format", "hash_mismatch"])
-def test_batch_provenance_and_handoff(tmp_path, problem):
+def test_batch_provenance_and_handoff(tmp_path, problem, stage_historical_qfo_batch):
+    root = tmp_path / "root path $literal's"
+    root.mkdir()
+    batch = stage_historical_qfo_batch(BATCH, tmp_path / "relocated batch.sh", root)
     executor = tmp_path / "executor"
     executor.mkdir()
     source = executor / "benchmark_tools/run_qfo_corrected_replay.py"
@@ -54,7 +57,7 @@ def test_batch_provenance_and_handoff(tmp_path, problem):
     elif problem == "hash_mismatch":
         digest = "0" * 64
     args = [] if problem == "missing_args" else [str(executor), commit, str(plan), digest]
-    result = subprocess.run(["bash", str(BATCH), *args], capture_output=True, text=True)
+    result = subprocess.run(["bash", str(batch), *args], capture_output=True, text=True)
     if problem is not None:
         assert result.returncode != 0
         assert not marker.exists()
@@ -62,6 +65,7 @@ def test_batch_provenance_and_handoff(tmp_path, problem):
         # Only the batch handoff is exercised; this stub does not run inference.
         assert result.returncode == 0, result.stderr
         observed = json.loads(marker.read_text())
+        assert observed["argv"][:2] == ["--root", str(root)]
         assert observed["argv"][-4:] == ["--plan", str(plan), "--plan-sha256", digest]
         assert observed["environment"] == {"PYTHONHASHSEED": "0", "OMP_NUM_THREADS": "1",
                                            "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}

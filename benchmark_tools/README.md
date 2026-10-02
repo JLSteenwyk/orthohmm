@@ -18,7 +18,13 @@ exercise real conversion/scoring with separate synthetic and pinned BUSCO
 reference branches. Missing biological data skips only its labeled branch;
 synthetic tests do not replace production accuracy or clear data rights.
 It also removes fixed true/false paths from three QfO smoke fixtures. All 158
-combined local cases pass; new remote confirmation remains open.
+combined local cases pass. The subsequent actual macOS fast log confirms 152
+passes and six retained-data skips within that scope, not full-suite success.
+
+The [launcher environment follow-up](results/CI_LAUNCHER_ENVIRONMENT_20261002.md)
+contains test-only environment leakage and relocates a temporary replay fixture.
+All 94 ordered local cases pass without environment deltas. New macOS confirmation
+of this fix remains open; historical commands and scientific results stay unchanged.
 
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not

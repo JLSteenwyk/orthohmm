@@ -92,15 +92,42 @@ def test_relocation_is_boundary_aware_and_does_not_mutate():
 
 @pytest.fixture
 def environment(monkeypatch):
-    monkeypatch.setattr(launch.os, "uname", lambda: SimpleNamespace(nodename="spark-7ff0"))
-    monkeypatch.setattr(launch.sys, "dont_write_bytecode", True)
-    for key, value in {"SLURM_CPUS_PER_TASK": "20", "SLURM_MEM_PER_NODE": "98304",
-                       "SLURM_JOB_ID": "123", "PYTHONHASHSEED": "0"}.items():
-        monkeypatch.setenv(key, value)
-    for key in ("LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
-        monkeypatch.delenv(key, raising=False)
-    monkeypatch.setattr(Path, "exists", lambda self: False)
-    monkeypatch.setattr(launch.os, "chdir", lambda path: None)
+    # The standalone launcher mutates its environment; contain in-process tests.
+    original = dict(launch.os.environ)
+    try:
+        monkeypatch.setattr(launch.os, "uname", lambda: SimpleNamespace(nodename="spark-7ff0"))
+        monkeypatch.setattr(launch.sys, "dont_write_bytecode", True)
+        for key, value in {"SLURM_CPUS_PER_TASK": "20", "SLURM_MEM_PER_NODE": "98304",
+                           "SLURM_JOB_ID": "123", "PYTHONHASHSEED": "0"}.items():
+            monkeypatch.setenv(key, value)
+        for key in ("LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
+            monkeypatch.delenv(key, raising=False)
+        monkeypatch.setattr(Path, "exists", lambda self: False)
+        monkeypatch.setattr(launch.os, "chdir", lambda path: None)
+        yield
+    finally:
+        launch.os.environ.clear()
+        launch.os.environ.update(original)
+
+
+@pytest.mark.parametrize("exceptional", [False, True])
+def test_environment_fixture_restores_added_deleted_and_changed_keys(monkeypatch, exceptional):
+    monkeypatch.setenv("ORTHOHMM_SYNTHETIC_ENV_PRESERVED", "original")
+    monkeypatch.setenv("PATH", "/synthetic/original/toolchain")
+    before = dict(launch.os.environ)
+    with pytest.MonkeyPatch.context() as patch:
+        fixture = environment.__wrapped__(patch)
+        next(fixture)
+        launch.os.environ["PATH"] = "/synthetic/launcher/toolchain"
+        launch.os.environ.pop("ORTHOHMM_SYNTHETIC_ENV_PRESERVED")
+        launch.os.environ["ORTHOHMM_SYNTHETIC_ENV_NEW"] = "temporary"
+        if exceptional:
+            with pytest.raises(RuntimeError, match="synthetic fixture failure"):
+                fixture.throw(RuntimeError("synthetic fixture failure"))
+        else:
+            fixture.close()
+        assert dict(launch.os.environ) == before
+    assert dict(launch.os.environ) == before
 
 
 @pytest.mark.parametrize("index", [0, 1, 2])

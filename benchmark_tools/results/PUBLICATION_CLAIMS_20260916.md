@@ -174,6 +174,16 @@ passes/six retained-data skips with data deliberately absent. Production
 commands remain unchanged and remote confirmation of these new fixtures remains
 open. Source-d94's four fast jobs fail; full CI stays live and wheel/docs succeed
 at 03:56:49 UTC. Other job causes and complete regression success are unproven.
+The [launcher environment follow-up](CI_LAUNCHER_ENVIRONMENT_20261002.md)
+subsequently inspects source-1ce's actual Python 3.10 fast log: 152 passes/six
+retained-data skips in the prior 158-case scope, but 48 failures overall.
+All five test jobs fail and wheel/docs succeed. A local probe independently
+finds passing launcher tests leaking environment changes. Fixture containment
+and temporary replay relocation give 94 ordered local passes with no environment
+deltas. Historical production/archive sources stay unchanged. Missing later
+macOS utilities may result from the leaked PATH; that is an inference awaiting
+new remote confirmation, not an established compiler-skip cause. Full regression,
+release and scientific/resource requirements remain open; timing stays deferred.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.
