@@ -119,7 +119,12 @@ The [Linux host-reader CI placement](results/HOST_READER_PLATFORM_COVERAGE_20261
 requires actual live execution on Linux, retaining portable parser/synthetic
 coverage elsewhere. All 110 local cases pass with the live reader deliberately
 not run; 34 copied cases pass with original and live-host reads blocked.
-New Linux CI confirmation remains pending, not controlled timing evidence.
+Actual Linux confirmation now has 111 passes, including the live reader;
+see the [raw-regression handoff follow-up](results/SWISS_RAW_PYTEST_HANDOFF_20261002.md).
+That follow-up provides explicit digest-pinned pytest options: 200 local cases
+pass and all 27 affected cases pass in a copied tree, retaining default and
+wrong-binding failures. Public CI data provisioning/rights remain unresolved;
+neither result establishes controlled timing.
 
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,

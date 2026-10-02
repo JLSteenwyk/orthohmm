@@ -1,0 +1,229 @@
+{
+  "binding_authentication": "independently retained SHA256; not a digital signature",
+  "controlled_timing_run": false,
+  "copied": {
+    "all_200_cases_run": false,
+    "os_containment_claim": false,
+    "raw_bindings": {
+      "duplication": {
+        "bytes": 4571,
+        "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58"
+      },
+      "fragment": {
+        "bytes": 704165,
+        "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1"
+      }
+    },
+    "runs": {
+      "bad_digest": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "expected_rejection": true,
+        "junit": {
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "tests": 1
+        },
+        "later_forbidden_opens": 0,
+        "mode": "bad_digest",
+        "project_origin_count": 23,
+        "pytest_status": 1,
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+      },
+      "default": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "expected_rejection": true,
+        "junit": {
+          "errors": 0,
+          "failures": 4,
+          "skipped": 0,
+          "tests": 27
+        },
+        "later_forbidden_opens": 4,
+        "mode": "default",
+        "project_origin_count": 30,
+        "pytest_status": 1,
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+      },
+      "partial": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "expected_rejection": true,
+        "junit": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 0
+        },
+        "later_forbidden_opens": 0,
+        "mode": "partial",
+        "project_origin_count": 3,
+        "pytest_status": 4,
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+      },
+      "signed": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "expected_rejection": false,
+        "junit": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 27
+        },
+        "later_forbidden_opens": 0,
+        "mode": "signed",
+        "project_origin_count": 30,
+        "pytest_status": 0,
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+      }
+    },
+    "staged_files": 1825,
+    "staged_source_data_bytes": 12937857,
+    "temporary_staging_removed": true
+  },
+  "date": "2026-10-02",
+  "local_live_host_probe_executed": false,
+  "parent_commit": "d03530ce9ac5ced063ec3ff899e81b00bf97c26c",
+  "preceding_remote": {
+    "contains_pytest_handoff_patch": false,
+    "full_313": "failure",
+    "linux": {
+      "artifact": 11221322290,
+      "errors": 0,
+      "failed": 0,
+      "host_reader_cases": 35,
+      "job": 110800898618,
+      "log_download_utc": "2026-10-02T10:27:55.604794+00:00",
+      "native_worker_cases": 20,
+      "passed": 111,
+      "real_live_reader_executed": true,
+      "seconds": 14.48,
+      "skipped": 0
+    },
+    "linux_docs_wheel": "success",
+    "macos_313": {
+      "errors": 0,
+      "failed": 4,
+      "job": 110800898662,
+      "log_download_utc": "2026-10-02T10:36:58.062658+00:00",
+      "passed": 14024,
+      "portable_reader_cases_passed": 34,
+      "real_linux_reader_skipped": 1,
+      "seconds": 401.52,
+      "skipped": 119,
+      "warnings": 30
+    },
+    "observed_utc": "2026-10-02T10:36:25.420540+00:00",
+    "other_three_test_jobs": "live_at_observation",
+    "run": 36995416202
+  },
+  "production_changed": false,
+  "public_ci_raw_inputs_provisioned": false,
+  "publication_ready": false,
+  "raw_biological_admission_rerun": false,
+  "records": [
+    {
+      "bytes": 3981,
+      "path": "tests/conftest.py",
+      "sha256": "96908ea0c86d9870dc151aa40721ac9c5dc987f5dacad3d90deef3d7517e7c28"
+    },
+    {
+      "bytes": 4272,
+      "path": "tests/test_export_swiss_duplication_strata.py",
+      "sha256": "5dc6c78de7d534187b2461b98943a43605f051a4d4d68d85cf83cf2711923c25"
+    },
+    {
+      "bytes": 1651,
+      "path": "tests/unit/test_swiss_strata_count_selection.py",
+      "sha256": "68f4ea338bd27ebdf3b66179aef12073ed940b160c587a50e676ab928c667c33"
+    },
+    {
+      "bytes": 2974,
+      "path": "tests/unit/test_swiss_raw_source_options.py",
+      "sha256": "6dada49a227e08b13677361b8738750f61e3c859499c1b5cc639e39f46587bfb"
+    },
+    {
+      "bytes": 6004,
+      "path": "benchmark_tools/results/SWISS_RAW_PYTEST_HANDOFF_20261002.md",
+      "sha256": "07468b82d2655552c633153873ccac2e2a38f61f4996e2ca312dd7515cd43c88"
+    },
+    {
+      "bytes": 6449,
+      "path": "benchmark_tools/export_swiss_duplication_strata.py",
+      "sha256": "6fc33a92ced1dd79a592b0f75903b6a2733d4e7033d409578947eaf4b149e36a"
+    },
+    {
+      "bytes": 6285,
+      "path": "benchmark_tools/export_swiss_fragment_strata.py",
+      "sha256": "b182190ecfdf3eeb887951fbe5b81c588e362809beef05769ff1876aea83b3be"
+    },
+    {
+      "bytes": 5998,
+      "path": "benchmark_tools/relocate_swiss_raw_sources.py",
+      "sha256": "5bf4f1e4d2c11fb62b1ba34a95d28d89e8919b15c9c773ad5ca205199fc42d95"
+    },
+    {
+      "bytes": 5845,
+      "path": "benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 4094,
+      "path": "benchmarks/work/swiss_raw_pytest_default_20261002.xml",
+      "sha256": "7000c6d118b30e7cfb407b06516c0fee134b98ce95ba9c976c4a21439c7042d2"
+    },
+    {
+      "bytes": 29652,
+      "path": "benchmarks/work/swiss_raw_pytest_complete_20261002.xml",
+      "sha256": "cfe50d2bef552ebc336fc5723bfe98703334e1e0cb02704c4dfc148a4f276b29"
+    },
+    {
+      "bytes": 375244,
+      "path": "benchmarks/work/swiss_raw_pytest_copied_20261002.json",
+      "sha256": "fb1658040b0099ec1cb221fd434925e954a53d720f8e62149c713d47ae65fac2"
+    },
+    {
+      "bytes": 38683,
+      "path": "benchmarks/work/ci_remote_d03530ce_20261002/110800898618.log",
+      "sha256": "6841a1ad5b309f20980b4eec3cb70b9ccce789f0958b4eb7af5946534df7c22e"
+    },
+    {
+      "bytes": 281588,
+      "path": "benchmarks/work/ci_remote_d03530ce_20261002/110800898662.log",
+      "sha256": "8b4478890b28300a4ba3a43514f112c08c696d5922ac3564b37aeef24cc9b9f0"
+    },
+    {
+      "bytes": 4571,
+      "path": "benchmarks/work/swiss_raw_sources_duplication_20261002/bindings.json",
+      "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58"
+    },
+    {
+      "bytes": 704165,
+      "path": "benchmarks/work/swiss_raw_sources_fragment_20261002/bindings.json",
+      "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1"
+    }
+  ],
+  "redistribution_authorized": false,
+  "retained_scores_changed": false,
+  "schema_version": 1,
+  "scientific_settings_changed": false,
+  "status": "explicit_retained_raw_pytest_handoff_verified",
+  "tests": {
+    "configuration_cases_added": 13,
+    "configured_complete": {
+      "errors": 0,
+      "failed": 0,
+      "passed": 200,
+      "seconds": 11.42,
+      "skipped": 0
+    },
+    "default_local": {
+      "passed": 27,
+      "seconds": 3.69
+    },
+    "panels_overlap": true
+  }
+}

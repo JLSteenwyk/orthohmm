@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Raw Regression Input Handoff And Linux Confirmation (2026-10-02)
+
+Previous turn progressed at pushed d03530ce with platform-correct host-reader
+coverage. Read objective/ledger/HEAD and observe run 36995416202: Linux/docs
+succeed, wheel queued and all five macOS tests live. Actual Linux job
+110800898618 log, downloaded once at 10:27:55 UTC, verifies source d03530ce:
+**111 passes in 14.48s**, no errors/failures/skips. Executed JUnit gate confirms
+all 35 host cases, including the real Linux reader, plus 20 native workers;
+artifact 11221322290 retains the receipt. This is not local host polling,
+Threadripper timing, full CI or proof of the next patch. No restart.
+
+Provide explicit pytest path/digest pairs for restored duplication/fragment
+inputs and a non-autouse forwarding fixture. Use it only in the four retained
+raw export cases; preserve all assertions/default argument behavior and every
+production gate. Derived-only and synthetic tests receive no raw substitutions.
+Partial pairs fail before collection; no automatic path lookup, digest repinning,
+mock, data skip or public upload is introduced. Add 13 configuration cases.
+**27 default local cases pass in 3.69s** and the overlapping configured
+**200-case panel passes in 11.42s**, zero errors/failures/skips.
+
+Four fresh copied interpreters verify actual behavior with complete retained
+raw panels. Unconfigured: 23 passes/four original-path failures, pytest exit 1,
+four blocked original opens. Signed: all 27 pass in 7.16s, zero later forbidden
+opens, all four raw regressions execute with unchanged assertions. Wrong digest:
+selected export fails at production guard, exit 1. Partial pair: usage error,
+zero tests, exit 4. Preserve all outcomes; parent expected-rejection success is
+not a successful negative pytest run. Each child blocks three canaries and
+forbids subprocesses. Positive child has 30 staged origins; 1,825 source/data
+files/12,937,857 bytes plus the existing raw directories are copied. Temporary
+staging is removed. Only 27, not all 200 cases, run in this copied panel.
+[Workflow and pins](SWISS_RAW_PYTEST_HANDOFF_20261002.md) distinguish exact raw
+identity-gated regression from native biological admission and OS containment.
+
+Later same-run observation at 10:36:25 UTC: Linux/docs/wheel succeed; 3.13/full
+fail and 3.10/3.11/3.12 remain live. Actual 3.13 log downloaded once at 10:36:58
+verifies source: 14,024 passes/four failures/119 skips/zero errors/30 warnings
+in 401.52s. All 34 reader parser/synthetic cases pass; real Linux test skips
+only on macOS and executes on Linux. Four unconfigured raw exports remain
+failures. No sibling counts/new-option remote confirmation/full CI inferred.
+
+Commit/push the validated test-layer milestone and observe automatic CI.
+Production/scientific code/settings/scores, historical raw manifests/archives
+and source-bound timing recipes remain unchanged. Private raw data stay local
+and rights uncleared; no automatic public CI provisioning. Timing remains
+deferred without contention questions/polls, DGX or unrelated process/service
+actions. Other-QfO uncertainty, controlled resources, rights, complete release
+and deposition remain open. Full publication goal remains active/incomplete.
+
 ## Platform-Correct Host Reader Coverage (2026-10-02)
 
 Previous goal turn is progress at pushed 4ccd72a6: actual relocated exports

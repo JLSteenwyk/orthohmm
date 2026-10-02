@@ -621,7 +621,13 @@ JUnit gate for all 35 reader cases. All portable reader checks stay in the
 macOS matrix. All 110 local cases pass with the live reader deselected; the
 34 affected parser/synthetic cases also pass in a copied child denying `/proc`,
 `/sys` and original-checkout reads. Actual new Linux CI proof is pending.
-No production helper or source-bound timing recipe changes.
+No production helper or source-bound timing recipe changes. The subsequent
+[raw pytest handoff](results/SWISS_RAW_PYTEST_HANDOFF_20261002.md) confirms
+111 actual Linux CI passes and supplies explicit raw panel/digest options.
+The complete configured local panel passes 200 cases; 27 affected copied
+cases also pass, while default paths, wrong digests and partial option pairs
+remain explicit failures. Those options do not provision public CI data or
+confer biological admission or redistribution rights.
 
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST

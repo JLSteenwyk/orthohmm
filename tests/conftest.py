@@ -9,6 +9,33 @@ import pytest
 from tests.gnu_time_runtime import GnuTimeSubprocess, select_gnu_time
 
 
+def pytest_addoption(parser):
+    group = parser.getgroup("retained SwissTrees raw sources")
+    for kind in ("duplication", "fragment"):
+        group.addoption(f"--swiss-{kind}-bindings", type=Path,
+                        help=f"Explicit relocated {kind} raw-input binding manifest")
+        group.addoption(f"--swiss-{kind}-bindings-sha256",
+                        help="Independently retained SHA256 of the binding manifest")
+
+
+def _swiss_source_options(config, kind):
+    if kind in ("descriptive", "identity"):
+        return {}
+    if kind not in ("duplication", "fragment"):
+        raise ValueError("Unknown SwissTrees exporter kind")
+    path = config.getoption(f"--swiss-{kind}-bindings")
+    digest = config.getoption(f"--swiss-{kind}-bindings-sha256")
+    if (path is None) != (digest is None):
+        raise pytest.UsageError(f"--swiss-{kind}-bindings and --swiss-{kind}-bindings-sha256 are required together")
+    return {} if path is None else dict(source_bindings=path, source_bindings_sha=digest)
+
+
+@pytest.fixture
+def swiss_raw_source_bindings(pytestconfig):
+    """Supply explicit exporter arguments; production retains all validation."""
+    return lambda kind: _swiss_source_options(pytestconfig, kind)
+
+
 @pytest.fixture
 def retained_record_at_path():
     """Bind one retained identity to an explicit test path without repinning."""
@@ -80,5 +107,7 @@ def stage_historical_qfo_batch():
 
 
 def pytest_configure(config):
+    for kind in ("duplication", "fragment"):
+        _swiss_source_options(config, kind)
     config.addinivalue_line("markers", "integration: mark as integration test")
     config.addinivalue_line("markers", "slow: mark as slow test")

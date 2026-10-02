@@ -50,17 +50,18 @@ def test_changed_features_rejected(problem):
         build_rows(counts, features)
 
 
-def test_export_and_no_overwrite(tmp_path):
-    report = export(COUNTS, FEATURES, tmp_path / "table")
+def test_export_and_no_overwrite(tmp_path, swiss_raw_source_bindings):
+    bindings = swiss_raw_source_bindings("duplication")
+    report = export(COUNTS, FEATURES, tmp_path / "table", **bindings)
     assert len(report["rows"]) == 32 and report["new_inferential_claims"] is False
     assert len((tmp_path / "table/scores.tsv").read_text().splitlines()) == 33
     assert "not evolutionary duplication rates" in (tmp_path / "table/scores.md").read_text()
     with pytest.raises(FileExistsError):
-        export(COUNTS, FEATURES, tmp_path / "table")
+        export(COUNTS, FEATURES, tmp_path / "table", **bindings)
 
 
-def test_independent_rational_reproduction_of_export(tmp_path):
-    export(COUNTS, FEATURES, tmp_path / "table")
+def test_independent_rational_reproduction_of_export(tmp_path, swiss_raw_source_bindings):
+    export(COUNTS, FEATURES, tmp_path / "table", **swiss_raw_source_bindings("duplication"))
     counts, features = inputs()
     groups = {"all": counts["families"], **features["primary_strata"]}
     expected = {}

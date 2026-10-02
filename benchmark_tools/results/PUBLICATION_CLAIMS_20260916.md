@@ -348,6 +348,14 @@ cases, while 110 local and 34 copied synthetic cases pass without reading the
 Threadripper's live counters. These overlapping checks do not verify a quiet
 window, a new timing gate or actual Linux CI execution for the new patch.
 
+The [raw-regression handoff](SWISS_RAW_PYTEST_HANDOFF_20261002.md) confirms
+actual Linux execution of all 111 prior diagnostic cases, including the live
+reader. It also executes all four retained raw regressions with exact copied
+inputs and opt-in digest-pinned bindings: 200 local cases/27 copied cases pass.
+Default, wrong-digest and incomplete-binding failures remain explicit. No
+new native annotation admission, uncertainty or controlled timing follows;
+public raw provisioning/rights and full CI remain incomplete.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
