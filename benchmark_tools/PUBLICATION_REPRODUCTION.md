@@ -571,6 +571,14 @@ without tolerance or timing-threshold changes. Actual system Python 3.12
 reproduces all three screens, also from a checkout-blocked copied tree.
 Freeze prospective inventories with the new helper hash; never repin old receipts.
 
+The [retained overhead metadata follow-up](results/RETAINED_OVERHEAD_METADATA_20261002.md)
+keeps complete payload equality and historical hashes while explicitly binding
+only expected test record paths. All 128 local cases and 69 fresh copied-tree
+cases pass. The original-checkout canary is blocked and later open events are
+zero; this is not OS containment or complete native restoration. Its preceding
+actual Python 3.13 log confirms the earlier frontier correction, with 14 other
+failures. New-patch remote confirmation and complete CI remain outstanding.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

@@ -299,6 +299,15 @@ pre-fix differences are confined to two descriptive fields, not screening
 decisions or new resource observations. New macOS confirmation is open;
 source-bound prospective inventories must change without repinning history.
 
+The [retained overhead metadata follow-up](RETAINED_OVERHEAD_METADATA_20261002.md)
+records actual source-0ab6f940 Python 3.13 confirmation of the preceding
+frontier correction, with 14 other failures. It fixes four checkout-bound
+test comparisons without changing production source or scientific payloads.
+All 128 local cases and 69 original-checkout-blocked copied cases pass;
+same-size/truncated/missing and wrong identity mutations remain rejected.
+This is bounded replay portability, not complete CI, controlled timing,
+new scientific validation, rights clearance or publication readiness.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

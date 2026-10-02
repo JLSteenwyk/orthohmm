@@ -32,8 +32,15 @@ def test_all_methods_have_complete_preordered_pairs(panel):
     assert panel["scientific_timings_admitted"] is False
 
 
-def test_retained_plan_reproduces_from_pinned_sources(panel):
-    assert json.loads((ROOT / "dgx_frontier_overhead_plan_20260918.json").read_text()) == panel
+def test_retained_plan_reproduces_from_pinned_sources(panel, retained_record_at_path):
+    retained = json.loads((ROOT / "dgx_frontier_overhead_plan_20260918.json").read_text())
+    for key, path in (
+        ("source", module.__file__),
+        ("original_plan", ROOT / "dgx_scaling_commands_20260917.json"),
+        ("original_execution", ROOT / "dgx_scientific_execution_20260917.json"),
+    ):
+        retained[key] = retained_record_at_path(retained[key], path)
+    assert retained == panel
 
 
 def test_commands_inputs_and_parameters_round_trip_to_original(panel):

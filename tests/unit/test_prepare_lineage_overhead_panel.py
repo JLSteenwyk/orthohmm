@@ -10,8 +10,10 @@ PARENT = BASE / "dgx_pressure_overhead_plan_v2_20260919.json"
 PROTOCOL = BASE / "LINEAGE_COLLECTOR_OVERHEAD_PROTOCOL_20260919.md"
 
 
-def test_retained_plan_reproduces_exactly():
+def test_retained_plan_reproduces_exactly(retained_record_at_path):
     retained = json.loads((BASE / "dgx_lineage_overhead_plan_20260919.json").read_text())
+    retained["source"] = retained_record_at_path(retained["source"], module.__file__)
+    retained["derived_from"] = retained_record_at_path(retained["derived_from"], PARENT)
     assert retained == module.build(PARENT, PROTOCOL)
 
 

@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Retained Overhead Replay Metadata Relocation (2026-10-02)
+
+Previous reply only clarifies timing availability and is no progress; re-read
+the full objective/current ledger/HEAD and take the next safe reproducibility
+action. Timing stays deferred: no contention polling/question, DGX, unrelated
+job/service action or new biological computation. Source-0ab6f940 run 36983078805
+has all five macOS tests live at 08:26:21 UTC; observe that handle, no restart.
+
+Four historical report comparisons stamp current source/input absolute paths.
+All four pass in the original checkout but fail in a fresh copied tree.
+Verify each targeted retained byte length/hash matches current files, then
+bind only named in-memory expected metadata paths using the existing explicit
+fixture. Keep entire scientific payloads, embedded historical paths, order,
+resource settings, flags, input hashes and production guards unchanged.
+No archive or source receipt is repinned and no production source changes.
+
+Add four mutation guards to the fixture. Initial same-size test text is one
+byte short, giving 127 passes/one failure; preserve the receipt and correct
+the fixture to change exactly one byte. **128 local cases pass in 10.65s**,
+zero errors/failures/skips. **69 cases also pass in a fresh copied child in
+1.02s**: 1,825 staged files/11,294,417 bytes, 37 staged module origins, blocked
+original-checkout canary, zero later original open events, subprocesses
+forbidden and temporary copy removed. This is Python-event guarding, not OS
+containment, cross-host/native science or a new full-suite pass.
+[Evidence and identity pins](RETAINED_OVERHEAD_METADATA_20261002.md) retain
+the original local pass, copied failures, new fixture failure and final passes.
+
+At 08:32:46 UTC the same preceding run is terminal: all five macOS test jobs
+fail; Linux diagnostics, CPU wheel and docs succeed. Download/inspect the
+actual Python 3.13 log once: 13,904 passes, 14 failures, 118 skips, zero errors,
+30 warnings/392.84s. All 22 frontier counter and 17 frontier-native cases
+pass; earlier portable exact replay failures are absent. The four metadata
+failures remain because this new fix is not in that source. No claim that
+all 172 preceding local cases pass remotely, or that CI is wholly green.
+
+Commit/push this bounded test-only milestone and observe its automatic CI.
+Scientific implementation/settings/scores and historical artifacts stay
+unchanged relative to 0ab6f940. Remaining raw/provenance/platform failures,
+other-QfO uncertainty, rights, controlled resource evidence, complete
+executable release and public deposition remain open. Goal stays active
+and incomplete; quiet timing is not needed for this work.
+
 ## Exact Frontier CPU Replay Across Tested Interpreters (2026-10-02)
 
 Previous turn is progress at pushed 6645: capable Linux CI, launcher staging

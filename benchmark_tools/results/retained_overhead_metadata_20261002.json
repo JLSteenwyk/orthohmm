@@ -1,0 +1,199 @@
+{
+  "base_commit": "0ab6f940e3a24260212e1f7d334e5d5ed6d092cc",
+  "bindings": {
+    "frontier": [
+      "source.path",
+      "original_plan.path",
+      "original_execution.path"
+    ],
+    "lineage": [
+      "source.path",
+      "derived_from.path"
+    ],
+    "pressure": [
+      "source.path",
+      "derived_from.path"
+    ],
+    "quiet_cpu": [
+      "source.path",
+      "input.path",
+      "helpers[*].path"
+    ]
+  },
+  "copied_after": {
+    "bytes": 11294417,
+    "canary_blocked": true,
+    "errors": 0,
+    "failed": 0,
+    "files": 1825,
+    "guard": "Python audit events; not OS containment or cross-host proof",
+    "passed": 69,
+    "project_origins": 37,
+    "seconds": 1.02,
+    "skipped": 0,
+    "subprocesses_forbidden": true,
+    "subsequent_original_events": 0,
+    "temporary_copy_removed": true
+  },
+  "copied_before": {
+    "failed": 4,
+    "guarded": false,
+    "passed": 0,
+    "seconds": 0.33
+  },
+  "historical_records_repinned": false,
+  "initial_after": {
+    "failed": 1,
+    "note": "New same-size fixture was one byte short; receipt retained, fixture corrected before commit.",
+    "passed": 127,
+    "seconds": 10.78
+  },
+  "limitations": [
+    "Only explicitly named in-memory expected metadata paths rebound; complete nested equality preserved.",
+    "All SHA-256 and byte lengths retained; same-size/truncated/missing and wrong digest/size mutations remain rejected.",
+    "No biological inference, new scoring, bootstrap or controlled timing occurred.",
+    "Fresh copied execution covers five affected modules, not the entire study or native runtime.",
+    "Remaining CI/raw portability, other-QfO uncertainty, rights, controlled resources, full release and deposition stay open."
+  ],
+  "local_after": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 128,
+    "seconds": 10.65,
+    "skipped": 0
+  },
+  "local_before": {
+    "failed": 0,
+    "note": "Original checkout paths coincide; not a failed control.",
+    "passed": 4
+  },
+  "preceding_ci": {
+    "all_five_macos_test_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "errors": 0,
+    "failed": 14,
+    "frontier_module_passes": 22,
+    "frontier_native_module_passes": 17,
+    "head_sha": "0ab6f940e3a24260212e1f7d334e5d5ed6d092cc",
+    "inspected_python313_job": 110761821641,
+    "linux_native": "success",
+    "log_download_utc": "2026-10-02T08:33:13.926711+00:00",
+    "new_metadata_fix_not_in_this_source": true,
+    "observed_utc": "2026-10-02T08:32:46.990848+00:00",
+    "passed": 13904,
+    "run": 36983078805,
+    "seconds": 392.84,
+    "skipped": 118,
+    "warnings": 30
+  },
+  "production_code_changed": false,
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "records": [
+    {
+      "bytes": 2968,
+      "path": "tests/unit/test_prepare_frontier_overhead_panel.py",
+      "sha256": "1932c250d4f90e35f7068cc3c446c456b5b6a47a0b8a819323b639c068793d3c"
+    },
+    {
+      "bytes": 2803,
+      "path": "tests/unit/test_prepare_lineage_overhead_panel.py",
+      "sha256": "c194ef3c06493062ff243bc6071af822989bf5ef200379235bd646d7b7d12d8a"
+    },
+    {
+      "bytes": 7669,
+      "path": "tests/unit/test_pressure_overhead_panel.py",
+      "sha256": "59a88492170f223281edc9717727f2058d287730efadbd5aa96a6bc89680cb53"
+    },
+    {
+      "bytes": 2597,
+      "path": "tests/unit/test_diagnose_dgx_quiet_cpu_fields.py",
+      "sha256": "5102786d6144dedf354084a7757c7273b3844d684f15ed12e200a8307e8cf220"
+    },
+    {
+      "bytes": 1777,
+      "path": "tests/unit/test_retained_record_at_path.py",
+      "sha256": "05b540b191844800554839ffc8f1dab240d2c81074e051cad2b7821eb1914185"
+    },
+    {
+      "bytes": 2663,
+      "path": "tests/conftest.py",
+      "sha256": "c1f10a64725abbd8d4983c60cb65e359164b6488cb803afea2f55d19e03629d6"
+    },
+    {
+      "bytes": 4689,
+      "path": "benchmark_tools/prepare_frontier_overhead_panel.py",
+      "sha256": "839cec07a967fda05e55e799805c8999baa683d7e4b1a7a1011999f2b794fba9"
+    },
+    {
+      "bytes": 2279,
+      "path": "benchmark_tools/prepare_lineage_overhead_panel.py",
+      "sha256": "6fb1324e2ad1bafeedb23ae681edd07d58b6415d06eeefabe2b15f4b82882e5a"
+    },
+    {
+      "bytes": 1856,
+      "path": "benchmark_tools/prepare_pressure_overhead_panel.py",
+      "sha256": "558830ad29de16122fdbc6e1734bc88140b2cc64042a54018796aa71bae0452d"
+    },
+    {
+      "bytes": 4298,
+      "path": "benchmark_tools/diagnose_dgx_quiet_cpu_fields.py",
+      "sha256": "d1693c8f75ced32057f9071f41ce32637ec78f1ce857b04a542c45efb1ae4b7c"
+    },
+    {
+      "bytes": 84186,
+      "path": "benchmark_tools/results/dgx_frontier_overhead_plan_20260918.json",
+      "sha256": "58e482e6f123bc82de5e98df3c93f4bf0ca3a47d2302ffcaa47290c7d1e20685"
+    },
+    {
+      "bytes": 87078,
+      "path": "benchmark_tools/results/dgx_lineage_overhead_plan_20260919.json",
+      "sha256": "90bcdb4b12655270dad2d69a3806174a4c4a63efb6e400b530e671b99938b1ed"
+    },
+    {
+      "bytes": 86062,
+      "path": "benchmark_tools/results/dgx_pressure_overhead_plan_20260919.json",
+      "sha256": "3950ccfa867c463ccfd7d8693dc331a3c85dc75ba67d9e8db89be4c1dda91c38"
+    },
+    {
+      "bytes": 70465,
+      "path": "benchmark_tools/results/dgx_quiet_cpu_fields_20260918.json",
+      "sha256": "76d748b5007a24f964d2273d2f5f7784bdc2f987c1ad537841d30325c54b031c"
+    },
+    {
+      "bytes": 792,
+      "path": "benchmarks/work/retained_metadata_before_20261002.xml",
+      "sha256": "94da7b94f8d4a786bd4304297a83190e8575f45895b5368ddabf9436ac7eeb41"
+    },
+    {
+      "bytes": 333520,
+      "path": "benchmarks/work/retained_metadata_copied_before_20261002.json",
+      "sha256": "f29f082dc791c2f07b0245c8dae6c12af3b57e27795f40d9dc8515d43cdb6fc9"
+    },
+    {
+      "bytes": 19895,
+      "path": "benchmarks/work/retained_metadata_complete_20261002.xml",
+      "sha256": "a55c702c0bc2e9790064ccd432023f7f770f46d21447b80afb0ad8fcb71739ef"
+    },
+    {
+      "bytes": 17586,
+      "path": "benchmarks/work/retained_metadata_after_20261002.xml",
+      "sha256": "5663b4e5d3aebae609692d89485ef859487f8ff89ab0f45ca89a2985aef42615"
+    },
+    {
+      "bytes": 336813,
+      "path": "benchmarks/work/retained_metadata_copied_after_20261002.json",
+      "sha256": "585f6d146f36db0c72d4ea2516da344bd41bc7b72afad1ac174a5a9360412f8e"
+    },
+    {
+      "bytes": 2092831,
+      "path": "benchmarks/work/ci_remote_0ab6f940_20261002/110761821641.log",
+      "sha256": "cf85b7f916819691cbbee6b3488024304afff035b0c4cc6b50ac0a4cc9ea4730"
+    }
+  ],
+  "schema": 1,
+  "scientific_code_changed": false,
+  "scientific_timings_admitted": false,
+  "status": "bounded_test_metadata_relocation_verified"
+}

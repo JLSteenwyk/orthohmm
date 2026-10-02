@@ -79,6 +79,13 @@ All three archived method screens match under Python 3.12, including a
 checkout-blocked copied child; 172 local tests pass. New source-bound recipes
 must be frozen prospectively. This does not admit controlled timing or full release.
 
+The [retained overhead metadata follow-up](results/RETAINED_OVERHEAD_METADATA_20261002.md)
+binds only explicit test record paths, retaining hashes, sizes and complete
+scientific payload equality. All 128 local cases pass; all 69 affected-module
+cases also pass in a checkout-blocked copied tree. The preceding actual Python
+3.13 log confirms the frontier correction, but has 14 other failures and does
+not contain this new test-only fix. Full CI and release remain unfinished.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

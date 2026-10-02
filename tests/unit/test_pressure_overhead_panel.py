@@ -43,9 +43,11 @@ def test_v2_batch_pins_transferred_recipe_and_authorization():
         assert flag + hashlib.sha256(path.read_bytes()).hexdigest() in script
 
 
-def test_plan_only_changes_observation_and_output_locations():
+def test_plan_only_changes_observation_and_output_locations(retained_record_at_path):
     original = json.loads(PARENT.read_text())
     plan = json.loads(PLAN.read_text())
+    plan['source'] = retained_record_at_path(plan['source'], prepare.__file__)
+    plan['derived_from'] = retained_record_at_path(plan['derived_from'], PARENT)
     assert prepare.build(PARENT) == plan
     assert hashlib.sha256(PLAN.read_bytes()).hexdigest() == module.PRESSURE_PLAN_SHA
     expected = relocate(original['runs'], ROOT + '/frontier_overhead_v1', ROOT + '/pressure_frontier_overhead_v1')

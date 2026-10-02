@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from benchmark_tools import diagnose_dgx_quiet_cpu_fields as module
 from benchmark_tools.diagnose_dgx_quiet_cpu_fields import diagnose, run
 
 RESULTS = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
@@ -34,9 +35,15 @@ def test_reject_changed_screen():
         diagnose(changed)
 
 
-def test_all_methods_retained_and_result_reproducible(tmp_path):
+def test_all_methods_retained_and_result_reproducible(tmp_path, retained_record_at_path):
     result = run(SOURCE, tmp_path / "result.json")
     retained = json.loads((RESULTS / "dgx_quiet_cpu_fields_20260918.json").read_text())
+    retained["input"] = retained_record_at_path(retained["input"], SOURCE)
+    retained["source"] = retained_record_at_path(retained["source"], module.__file__)
+    retained["helpers"] = [
+        retained_record_at_path(item, RESULTS.parent / Path(item["path"]).name)
+        for item in retained["helpers"]
+    ]
     assert result == retained
     assert len(result["runs"]) == 3
     assert result["scientific_timings_admitted"] is False
