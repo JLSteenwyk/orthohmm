@@ -7,6 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [current accuracy overview](results/CURRENT_ACCURACY_OVERVIEW_20261002.md)
+now matches the unchanged corrected score table and contemporary matched-input
+SonicParanoid Three Kingdoms result. It verifies all 72 table cells and 48
+corrected QfO coordinates without native rescoring; input-consumption gaps and
+metric/output distinctions remain explicit. Older figures stay historical.
+
 The [prespecified synthetic null-score diagnostic](results/FROZEN_NULL_SCORE_RESULT_20261002.md)
 retains 90,000 independent random pairs and all 90 tail endpoints. Strong
 glutamine bias frequently passes the approximate significance filter; ordinary

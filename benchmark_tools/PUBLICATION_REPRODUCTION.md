@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [current accuracy overview reconciliation](results/CURRENT_ACCURACY_OVERVIEW_20261002.md)
+replaces only a stale historical SonicParanoid Three Kingdoms point in a new
+figure. The current table was already correct and is unchanged. All 72 cells,
+24 overview values, 48 corrected QfO coordinates and existing QfO artifact
+hashes are verified from retained records. No raw scoring, native admission,
+uncertainty, timing or newly matched eight-tool run is implied.
+
 The [prespecified synthetic null-score diagnostic](results/FROZEN_NULL_SCORE_RESULT_20261002.md)
 has completed, preserving all 180,000 raw evaluations of 90,000 independent
 pairs in a compact score archive. All 90 endpoint counts/intervals and 180

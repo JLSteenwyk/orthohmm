@@ -1,5 +1,56 @@
 # Publication Progress
 
+## Current Accuracy Overview Reconciliation (2026-10-02)
+
+Previous turn progressed at pushed 5e899502 with inspected eight-page null-score
+manuscript review. Read objective/HEAD/newest ledger and observe exact CI run
+37006238922. At 12:24:47 UTC docs/Linux/wheel succeed and all five macOS jobs
+are live; at 12:32:56 three fast jobs fail, 3.11/full remain live. Download the
+terminal 3.13 job 110835074599 log once at 12:35:19 UTC. Actual source and
+14,124 passes/four failures/119 skips/30 warnings/400.21s are verified. All
+12 null-figure, nine main-prose and ten historical-artifact cases pass. At
+12:41:01 UTC all five macOS jobs fail; docs/Linux/wheel succeed. Four default
+raw exports still lack private inputs/options. No restart or inferred sibling
+counts, and no full-CI success or new-overview remote confirmation.
+
+Audit retained accuracy figures against current corrected eight-tool records.
+The older overview still uses historical SonicParanoid Three Kingdoms F1
+0.9907944085, while the unchanged current table already uses matched-input
+0.9912758997. The difference is +0.048149 percentage points, not a new method
+improvement. Other Three Kingdoms values agree within roundoff. Existing
+corrected QfO figure already matches all 48 current points and its three
+PNG/PDF/SVG hashes. Reuse it without rerendering; inspect its PNG again and
+retain the explicit limitation that close points can overlap.
+
+Add a hash-pinned overview exporter from six retained records and two frozen
+plotting helpers. Verify all 72 existing table cells, 48 QfO coordinates/output
+semantics, 24 overview values and saved BUSCO TP/FP/FN arithmetic. Preserve
+partial provenance and consumption flags, reject wrong units/counts/inventories/
+semantics/coordinates/means/digests, and never read raw prediction files or
+rerun native admission/scoring. The first new overview has a caption overlapping
+the Three Kingdoms axis label. Preserve it, move only that caption lower and
+export v2; both TSVs are byte-identical. Inspect final PNG and PDF bitmap:
+labels/legend/notes are readable, no observed clipping/overlap and zero PDF
+block-bound violations. See the [new overview and evidence](CURRENT_ACCURACY_OVERVIEW_20261002.md).
+
+Label the extended manuscript's original-input QfO paragraph explicitly as
+historical and add the current overview with input/metric limitations. Main
+text remains unchanged and already uses corrected QfO; its eight-page render
+remains its exact source snapshot. Add 18 focused exporter/plot/prose cases.
+The 50-case panel passes in 3.27s before prose reconciliation; its first expanded
+panel has 59 passes/one exact-phrase failure in 3.66s. Retain that failure,
+clarify prose without numerical/assertion changes, and run the final combined
+panel: **60 pass in 3.65s**, zero errors/failures/skips. Final XML 9,214 bytes,
+SHA-256 `ca7945fbb17deafc705b32a8e94167a6e75d87425fd2d2ebd4eefb72c0559140`.
+
+Commit/push this validated figure/source/receipt/index milestone and observe
+new CI separately. No scientific scores/defaults, current score table, completed
+native run, bootstrap, manuscript render or archive changes. All historical
+figures and unrelated sample outputs remain unchanged. Timing stays deferred
+without questions/polls, DGX or unrelated job/service actions. Other-QfO
+uncertainty, controlled resources, rights, complete executable/versioned release,
+deposition and final reconciliation remain open. The full goal stays active.
+
 ## Reviewed Synthetic Null Score Manuscript Integration (2026-10-02)
 
 Complete the source checkpoint below at committed

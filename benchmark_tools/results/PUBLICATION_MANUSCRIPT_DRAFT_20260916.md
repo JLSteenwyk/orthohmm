@@ -538,7 +538,11 @@ exclusions are harmless or causally responsible for the observed F1 deficit.
 
 ### QfO Results Vary Across Endpoints
 
-The secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for
+The following original-input historical comparison and its endpoint figure
+are not the primary corrected-release results. The
+[current corrected eight-method table](qfo_corrected_comparison_20260926_v7/scores.md)
+and corrected endpoint panel below retain the primary QfO values separately.
+On the original-input historical release, secondary QfO means were 0.782071 for full OrthoFinder, 0.748243 for
 satellite_v2, and 0.682548 for high sensitivity. Full OrthoFinder had higher
 VGNC, SwissTrees, and TreeFam-A F summaries than either OrthoHMM mode.
 Satellite_v2 had higher EC, GO, and FAS similarity summaries than full
@@ -705,6 +709,23 @@ The checkpoint's small advantage over full OrthoFinder on this restricted
 target does not establish that phylogenetic inference is generally harmful.
 Mechanistic explanations require error tracing and controlled ablations.
 [Recounted comparison with run/input labels](three_kingdoms_comparison_matched_20260918/scores.md).
+
+![Current retained OrthoBench and supplementary Three Kingdoms group recovery for all eight methods.](figures_current_accuracy_overview_20261002_v2/current_accuracy_overview.png)
+
+Figure: OrthoBench weighted precision/recall and BUSCO-reference pair F1 use
+the unchanged current score table. The new overview selects the contemporary
+matched-input SonicParanoid result, unlike the older historical overview.
+All other Three Kingdoms values are unchanged apart from floating-point
+roundoff. This is a presentation reconciliation, not new method improvement
+or native inference. It is not a newly matched eight-tool experiment. BUSCO projection
+includes within-species pairs and excludes non-reference-gene errors;
+historical input-consumption gaps remain. No cross-dataset mean, universal
+ranking or controlled efficiency follows. The OrthoFinder sequence row is a
+pre-phylogeny MCL diagnostic, and FastOMA uses supplied-tree configurations.
+[Figure audit and vector PDF](CURRENT_ACCURACY_OVERVIEW_20261002.md) and
+[current exact score table](current_benchmark_scores_20260926_v2/scores.tsv).
+QfO is not plotted in this overview; its separate corrected six-panel figure
+retains all 48 method/endpoint points with their distinct axes and relation sets.
 
 ### Historical Components Provide Preliminary Evidence
 

@@ -1,0 +1,380 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 22282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/current_benchmark_scores_20260926_v2/manifest.json",
+      "sha256": "8d56dae74721c4530ab2b86c5008b2d0ebac07878e574fd85b1ad84e4b908f07"
+    },
+    {
+      "bytes": 323315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/manifest.json",
+      "sha256": "042aa221d01554114a1b0b413ca3e2ff56dad5f8c06362c69a1bf49f2de642fc"
+    },
+    {
+      "bytes": 170905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_comparison_matched_20260918/comparison.json",
+      "sha256": "ba1ed664ad8ee89ba65b72e7d4d4341eed864957b0720ab1ff4fbe91a398945a"
+    },
+    {
+      "bytes": 48713,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_provenance_register_20260927/register.json",
+      "sha256": "21b1a736521ddfd87e3def36387258b8f509a73ea7ab58af8678bb101aca490d"
+    },
+    {
+      "bytes": 12967,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_accuracy_orthomcl_complete_20260916/manifest.json",
+      "sha256": "c9fb8d06ee37f43855b61d39963af24ff227339ff178bc45144ce951d9d89cdc"
+    },
+    {
+      "bytes": 8169,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/manifest.json",
+      "sha256": "c9e0e8e93253efb6a56aff9d2ae68db22a5c834575c974a081576d5f7fde94b0"
+    },
+    {
+      "bytes": 10357,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_publication_accuracy.py",
+      "sha256": "92322aa7f10c3c3e96af7813b1111ae60e5903b87df04345e7cc822107533380"
+    },
+    {
+      "bytes": 4838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_corrected_qfo_endpoints.py",
+      "sha256": "db12a834f814288b590cd7a0a6f6c325ae5dd6f6e16ae532bed896fbbb90783a"
+    },
+    {
+      "bytes": 11279,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_current_accuracy_overview.py",
+      "sha256": "d42c780b566b4dfb6c49b8c9bdeb5f890b31b3d6d890e9a9012845e2a64fbf5a"
+    },
+    {
+      "bytes": 196330,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.png",
+      "sha256": "8f10f8ec0d0e2b361fd2b3f40d68090faca8a1aa0caf648e8f9c08e50b9c8176"
+    },
+    {
+      "bytes": 22853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.pdf",
+      "sha256": "b75cc43adf8446ebcc41ff96c89fc29afcfd34f05da7704c79140282f23e216f"
+    },
+    {
+      "bytes": 136685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.svg",
+      "sha256": "daa4d9ece889c6b4655f65aa7c864c6b7ea21491d7f9df8d34e1c7e2b4ed61b6"
+    }
+  ],
+  "controlled_timing": false,
+  "corrected_qfo_points_verified": 48,
+  "cross_dataset_score_cells_verified": 72,
+  "existing_corrected_qfo_figure_rerendered": false,
+  "figure_visually_reviewed": false,
+  "historical_changes": [
+    {
+      "current_f1": 0.9912758996728462,
+      "current_input_status": "matched input verified",
+      "difference_pp": 0.04814912173399799,
+      "historical_f1": 0.9907944084555063,
+      "historical_input_status": "known Danio input mismatch",
+      "key": "sonicparanoid_2_0_9"
+    }
+  ],
+  "historical_input_consumption_proven": false,
+  "limitations": [
+    "Current score table is reused unchanged; no cross-dataset mean or ranking is defined.",
+    "OrthoBench is weighted group recovery; Three Kingdoms is projected BUSCO-reference pair recovery.",
+    "The contemporary matched SonicParanoid row replaces only its old diagnostic in this new overview.",
+    "Other Three Kingdoms historical input-consumption gaps remain; not a newly matched eight-tool experiment.",
+    "Corrected QfO score/coordinate and artifact verification is not raw admission, rescoring or uncertainty.",
+    "FastOMA uses supplied-tree configurations; OrthoFinder's sequence checkpoint is diagnostic."
+  ],
+  "matplotlib_version": "3.10.8",
+  "native_inference_or_scoring_rerun": false,
+  "native_predictions_or_scores_changed": false,
+  "outputs": [
+    {
+      "bytes": 23460,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_current_accuracy_overview_20261002_v2/current_accuracy_overview.pdf",
+      "sha256": "00d9e627c1c1a2ddb9f34164df30a71cebc2ff62c0be1651e88c6c719d4bfea8"
+    },
+    {
+      "bytes": 210016,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_current_accuracy_overview_20261002_v2/current_accuracy_overview.png",
+      "sha256": "3ba5ad57846ae6a21f9f973c3dbd057554d342a6634d1e2d24e4962f26ccb389"
+    },
+    {
+      "bytes": 1629,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_current_accuracy_overview_20261002_v2/plotted_values.tsv",
+      "sha256": "d831b14bd0fa98a2224cd7252a828894347593eedace72d7feeea47fe054252e"
+    }
+  ],
+  "overview_plotted_values": 24,
+  "plotted_data": [
+    {
+      "color": "#0072B2",
+      "key": "orthohmm_high_sensitivity",
+      "label": "OrthoHMM sensitive",
+      "marker": "o",
+      "orthobench": {
+        "f_score": 70.35899765495243,
+        "precision": 78.94954395226098,
+        "recall": 63.45447853618141
+      },
+      "three_kingdoms_f1": 0.8263090676883781
+    },
+    {
+      "color": "#009E73",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "label": "OrthoHMM satellite_v2",
+      "marker": "s",
+      "orthobench": {
+        "f_score": 74.10607351873405,
+        "precision": 81.77045380181866,
+        "recall": 67.75533630827974
+      },
+      "three_kingdoms_f1": 0.872133159469203
+    },
+    {
+      "color": "#D55E00",
+      "key": "orthofinder_3_1_5_full",
+      "label": "OrthoFinder 3.1.5 full",
+      "marker": "^",
+      "orthobench": {
+        "f_score": 72.73648000422168,
+        "precision": 66.06510299607791,
+        "recall": 80.90657663112891
+      },
+      "three_kingdoms_f1": 0.9885816480946485
+    },
+    {
+      "color": "#E69F00",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "label": "OrthoFinder 3.1.5 sequence",
+      "marker": "v",
+      "orthobench": {
+        "f_score": 58.705963184,
+        "precision": 45.706162743,
+        "recall": 82.039827068
+      },
+      "three_kingdoms_f1": 0.9894507588647655
+    },
+    {
+      "color": "#CC79A7",
+      "key": "sonicparanoid_2_0_9",
+      "label": "SonicParanoid 2.0.9",
+      "marker": "D",
+      "orthobench": {
+        "f_score": 46.75760912,
+        "precision": 36.535179568,
+        "recall": 64.92280907
+      },
+      "three_kingdoms_f1": 0.9912758996728462
+    },
+    {
+      "color": "#6B6B6B",
+      "key": "proteinortho_6_3_6",
+      "label": "ProteinOrtho 6.3.6",
+      "marker": "P",
+      "orthobench": {
+        "f_score": 45.057346674,
+        "precision": 97.056207735,
+        "recall": 29.338788906
+      },
+      "three_kingdoms_f1": 0.9304626127436718
+    },
+    {
+      "color": "#5647A6",
+      "key": "fastoma_0_3_5",
+      "label": "FastOMA 0.3.5 (supplied tree)",
+      "marker": "X",
+      "orthobench": {
+        "f_score": 30.906942172,
+        "precision": 93.631476193,
+        "recall": 18.508163621
+      },
+      "three_kingdoms_f1": 0.8616551830920492
+    },
+    {
+      "color": "#111111",
+      "key": "orthomcl_1_4",
+      "label": "OrthoMCL 1.4",
+      "marker": "*",
+      "orthobench": {
+        "f_score": 55.065342292,
+        "precision": 59.078055333,
+        "recall": 51.563064181
+      },
+      "three_kingdoms_f1": 0.9889293818331844
+    }
+  ],
+  "plotted_values": [
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthohmm_high_sensitivity",
+      "metric": "precision",
+      "units": "percent",
+      "value": 78.94954395226098
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthohmm_high_sensitivity",
+      "metric": "recall",
+      "units": "percent",
+      "value": 63.45447853618141
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "orthohmm_high_sensitivity",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 82.6309067688378
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "metric": "precision",
+      "units": "percent",
+      "value": 81.77045380181866
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "metric": "recall",
+      "units": "percent",
+      "value": 67.75533630827974
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 87.2133159469203
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthofinder_3_1_5_full",
+      "metric": "precision",
+      "units": "percent",
+      "value": 66.06510299607791
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthofinder_3_1_5_full",
+      "metric": "recall",
+      "units": "percent",
+      "value": 80.90657663112891
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "orthofinder_3_1_5_full",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 98.85816480946485
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "metric": "precision",
+      "units": "percent",
+      "value": 45.706162743
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "metric": "recall",
+      "units": "percent",
+      "value": 82.039827068
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "orthofinder_3_1_5_sequence_only",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 98.94507588647656
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "sonicparanoid_2_0_9",
+      "metric": "precision",
+      "units": "percent",
+      "value": 36.535179568
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "sonicparanoid_2_0_9",
+      "metric": "recall",
+      "units": "percent",
+      "value": 64.92280907
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "sonicparanoid_2_0_9",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 99.12758996728462
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "proteinortho_6_3_6",
+      "metric": "precision",
+      "units": "percent",
+      "value": 97.056207735
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "proteinortho_6_3_6",
+      "metric": "recall",
+      "units": "percent",
+      "value": 29.338788906
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "proteinortho_6_3_6",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 93.04626127436718
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "fastoma_0_3_5",
+      "metric": "precision",
+      "units": "percent",
+      "value": 93.631476193
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "fastoma_0_3_5",
+      "metric": "recall",
+      "units": "percent",
+      "value": 18.508163621
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "fastoma_0_3_5",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 86.16551830920493
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthomcl_1_4",
+      "metric": "precision",
+      "units": "percent",
+      "value": 59.078055333
+    },
+    {
+      "benchmark": "OrthoBench",
+      "key": "orthomcl_1_4",
+      "metric": "recall",
+      "units": "percent",
+      "value": 51.563064181
+    },
+    {
+      "benchmark": "ThreeKingdoms",
+      "key": "orthomcl_1_4",
+      "metric": "pair_F1",
+      "units": "percent",
+      "value": 98.89293818331844
+    }
+  ],
+  "publication_ready": false,
+  "status": "current_accuracy_overview_reconciled",
+  "uncertainty_recomputed": false
+}

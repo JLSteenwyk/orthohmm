@@ -13,6 +13,15 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [current overview reconciliation](CURRENT_ACCURACY_OVERVIEW_20261002.md)
+now aligns its Three Kingdoms SonicParanoid point with the existing contemporary
+matched-input row. All 72 current-table cells and 48 corrected QfO coordinates
+are read back, without new biological scoring. The current table stays unchanged,
+older figures stay historical and input-consumption gaps remain. This is not
+a new method improvement, matched eight-tool experiment or uncertainty result.
+The extended manuscript labels its original-input QfO paragraph explicitly
+as historical; the earlier main render remains its exact source snapshot.
+
 The [frozen synthetic null-score diagnostic](FROZEN_NULL_SCORE_RESULT_20261002.md)
 now directly examines a Methods limitation under a protocol committed before
 scoring. All 90 endpoints are preserved from 90,000 independent random pairs.
