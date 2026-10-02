@@ -18,6 +18,18 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [current assembled-workflow glibc guard](results/PUBLICATION_GLIBC_PREFLIGHT_20261002.md)
+now requires externally anchored ABI evidence before installation. Preflight-only
+execution reports controller glibc 2.39 against the 2.34 floor and checks 119
+file bindings; readback verifies 132 identities and all seven fixture inputs.
+All 131 latest focused tests pass, including CLI worker/preflight-conflict
+rejection. Actual preflights stay bound to their executed revisions; the later
+CLI-only amendment leaves the preflight body unchanged. Preserve the inherited
+CUDA-loader refusal and both
+successful preflight revisions. No base probe, installation or inference is
+executed. This enforces the known numeric floor, not complete compatibility,
+new native admission or controlled timing. Older handoffs remain dated.
+
 The [declared native ABI inventory](results/PUBLICATION_NATIVE_ABI_20261002.md)
 inspects all 60 wheel ELF objects and 33 tool binaries in the exact relocated
 assembly. Every compiled MAFFT helper requires `GLIBC_2.34`, a constraint not

@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Declared Glibc Floor Enforced Before Installation (2026-10-02)
+
+Previous goal turn progressed at pushed `9c0254a3`, executing the selected
+native ABI inventory. Read the original goal/current ledger and preserve
+completed scientific/native/resource admissions and dated handoffs. Timing
+remains deferred without new quiet-window questions, contention polling,
+DGX access, unrelated job/service changes or shared-environment upgrades.
+
+Find a concrete follow-on launch gap: the assembly's known `GLIBC_2.34`
+constraint is documentation only. Add externally anchored, assembly-matched
+numeric controller-glibc/Linux/x86-64/loader-presence preflight. Make its two
+ABI arguments mandatory for current assembled execution; retain legacy route
+behavior and refuse mixed flags. Watch inventory/helper/loader bytes, recheck
+host prerequisites post-execution, and expose only a bounded floor verdict.
+Add preflight-only mode with no base probe/install/native/scoring stages.
+Commit source `89caa096` after 127 focused tests pass.
+
+First real preflight rejects inherited CUDA LD_LIBRARY_PATH before output or
+stage creation. Retain retrospective terminal-tool transcription explicitly,
+not a claimed captured log. Remove overrides from a copied child environment
+only; actual preflight passes glibc 2.39 against 2.34 with 119 watched bindings
+on the unchanged bundle/16-gene fixture/private-base binary. No host changes.
+
+Identify a missing final raw-input recheck in the new preflight-only branch.
+Add it and changed-input rejection test; final five-module panel passes 128
+in 2.43s, zero failures/errors/skips. Commit source `c2bc6ebd` before one new
+preflight executing that concrete check. Both successful receipts and early
+refusal remain preserved; no scientific/native result is repeated/replaced.
+Separate readback verifies 132 current identities, all seven raw fixture inputs,
+logs/JUnit/flags and both recorded Git source snapshots, explicitly separating
+the older controller bytes from current source. No further host query follows.
+
+Catch a CLI mode conflict: the internal score-worker branch could silently
+ignore preflight-only/ABI arguments. Add immediate argument rejection and three
+actual subprocess tests, commit `bf915f2d`. Latest panel passes 131 in 2.40s,
+zero failures/errors/skips. Binding readback proves the only controller change
+since the executed preflight is this two-line worker conflict gate; the pure
+guard, 118 other watched files and all seven raw inputs still match. Preserve
+the earlier 132-identity readback at its original source scope. Do not repeat
+host observation/preflight merely for this CLI-only correction.
+
+Final documentation checks verify four receipt digests, all eight new
+report/evidence links and scoped whitespace. No costly diagnostic is restarted.
+
+All owned process handles are terminal. See [executed checks, receipts and
+boundaries](PUBLICATION_GLIBC_PREFLIGHT_20261002.md). Update current commands and
+claim/reproduction guides; do not rewrite the old archive, main review or
+scientific/default/input/resource/order pins. Commit/push only focused changes.
+This is actual preflight integration, not current-controller ten-stage native
+admission, full OS/library/CPU/security/rights closure, controlled resources,
+release/deposition or publication readiness. Original goal remains active.
+
 ## Native Assembly ABI Constraints Measured (2026-10-02)
 
 Previous goal turn progressed at pushed `ad16fea7`: prospective pressure

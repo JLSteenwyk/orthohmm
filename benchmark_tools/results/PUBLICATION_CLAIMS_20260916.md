@@ -13,6 +13,16 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [assembled glibc preflight](PUBLICATION_GLIBC_PREFLIGHT_20261002.md)
+requires a matching external ABI-inventory anchor before installation. The
+real preflight-only route passes on controller glibc 2.39 versus floor 2.34;
+131 latest focused tests and dated 132-identity readback pass; a later CLI-only
+amendment's binding check distinguishes current controller bytes from the
+executed preflight snapshot. The initial loader-override
+refusal is retained. No installed/private-base probe or native stage executes;
+this is not new ten-stage integration, full compatibility, quiet-host proof or
+timing approval. Current-source commands differ from the dated handoff.
+
 The [executed ABI inventory](PUBLICATION_NATIVE_ABI_20261002.md) identifies a
 concrete assembled-tool constraint: all 32 compiled MAFFT helpers require
 `GLIBC_2.34`. It checks 60 wheel and 33 tool ELF objects, with 65 focused tests

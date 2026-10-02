@@ -480,17 +480,22 @@ python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/assemble_p
   verify /relocated/runtime-bundle --manifest-sha256 RETAINED_ASSEMBLY_SHA256
 ```
 
-Select the new executor lane explicitly. Use the separately reconstructed
+Select the current executor lane explicitly from a new source revision; the
+preserved handoff predates the mandatory ABI/glibc guard. Use the separately
+reconstructed
 private CPython3.10.13 base with only pip26.2.1, its externally retained
 interpreter digest and the same interpreter for installation. Do not use the
 invalidated first project-build base or a shared Python environment.
 
 ```bash
+env -u LD_LIBRARY_PATH -u LD_PRELOAD -u LD_AUDIT \
 python3 -I -B /relocated/source-component/workflow/benchmark_tools/run_integrated_publication_workflow.py \
   --assets /relocated/runtime-bundle/assets --readers /relocated/runtime-bundle/readers \
   --reader-wheels /relocated/runtime-bundle/reader_wheels \
   --reader-lock /relocated/runtime-bundle/reader_requirements.txt \
   --assembly-manifest-sha256 RETAINED_ASSEMBLY_SHA256 \
+  --abi-inventory /absolute/evidence/publication_native_abi_20261002.json \
+  --abi-inventory-sha256 75caf90467ee756d936f34260e8f2b7faff44a19774b95c74140535921191a53 \
   --base-python /absolute/private-base/bin/python \
   --installer-python /absolute/private-base/bin/python \
   --base-python-sha256 RETAINED_BASE_INTERPRETER_SHA256 \
@@ -506,6 +511,17 @@ checks base-site/runtime/distribution snapshots before/after six offline
 installation stages, native inference and separate-reader scoring. It supplies
 the relocated `MAFFT_BINARIES` and disables base bytecode writes.
 Linux x86-64/AVX2 and recorded historical assets remain prerequisites.
+
+The ABI digest applies only to the recorded assembly/inventory; other bundles
+need their own inspection and externally retained anchors. The guard checks
+the controller's GNU libc floor, declared loader presence and source/input
+bindings, not full host compatibility. Append `--preflight-only` with a fresh
+output path to run just these checks: it creates only `preflight.json`, without
+base-runtime probing, installation, inference or scoring. Normal execution
+does not accept that report as a permit; it performs its own fresh checks.
+Preflight/ABI options cannot be combined with the internal scoring-worker mode.
+See [actual preflight execution, retained early refusal and limits](results/PUBLICATION_GLIBC_PREFLIGHT_20261002.md).
+The `env -u` changes only the launched child's environment, not the host.
 
 See [actual relocated assembly and integration](results/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md):
 102 payload files/18 links, all ten executor stages successful, 5,754 installed

@@ -1,0 +1,151 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py",
+    "--assets",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/assets",
+    "--readers",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/readers",
+    "--reader-wheels",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/reader_wheels",
+    "--reader-lock",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/reader_requirements.txt",
+    "--assembly-manifest-sha256",
+    "6a496125794dca84423a0be91ab327003e15955bda91835d5ee72f28ba2839a7",
+    "--base-python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+    "--installer-python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-source-project-build-corrected-20261002-520kbd1k/fresh-base/python-runtime/bin/python",
+    "--base-python-sha256",
+    "85d2c5c2473387ab60060f615545ff34acdf3a4bd45aa6536b3c9c8898567c47",
+    "--abi-inventory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_abi_20261002.json",
+    "--abi-inventory-sha256",
+    "75caf90467ee756d936f34260e8f2b7faff44a19774b95c74140535921191a53",
+    "--data",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/fixture_manifest.json",
+    "--data-sha256",
+    "12a0e646eaaf2ad566f47f2d05055dd65a5d90a5644cfdfe855e80af45dc9a0e",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_glibc_preflight_cleanenv_final_20261002",
+    "--cpu",
+    "2",
+    "--timeout",
+    "600",
+    "--preflight-only"
+  ],
+  "controlled_timing": false,
+  "current_host_contention_observed": false,
+  "driver": {
+    "bytes": 4013,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/execute_publication_glibc_preflight_final_20261002.py",
+    "sha256": "0d20943f4dbee0c4d9e1a67b0f0a83c2945fc6678209af8168ac357e1dcb4dd8"
+  },
+  "full_host_compatibility_verified": false,
+  "host_environment_or_services_changed": false,
+  "host_preflight": {
+    "assembly": {
+      "controlled_timing": false,
+      "files": 102,
+      "manifest": {
+        "bytes": 25738,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/ASSEMBLY_INDEX.json",
+        "sha256": "6a496125794dca84423a0be91ab327003e15955bda91835d5ee72f28ba2839a7"
+      },
+      "payload_bytes": 132139954,
+      "publication_ready": false,
+      "redistribution_clearance": false,
+      "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+      "status": "publication_runtime_assets_verified",
+      "symlinks": 18
+    },
+    "controlled_timing": false,
+    "controller_glibc": "glibc 2.39",
+    "declared_glibc_floor": "2.34",
+    "full_host_compatibility_verified": false,
+    "glibc_floor_check_passed": true,
+    "host_machine": "x86_64",
+    "host_system": "Linux",
+    "inventory": {
+      "bytes": 1227076,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_abi_20261002.json",
+      "sha256": "75caf90467ee756d936f34260e8f2b7faff44a19774b95c74140535921191a53"
+    },
+    "limitations": [
+      "Numeric GNU libc floor only, including conservatively retained weak requirements.",
+      "Controller confstr reports its libc, not every provider loaded by an asset or private base.",
+      "Loader presence is not loader resolution; non-glibc, CPU, static/dlopen, base/OS and security checks remain.",
+      "This check does not authorize production timing or repeat scientific/native inference."
+    ],
+    "loaders": [
+      {
+        "declared_path": "/lib64/ld-linux-x86-64.so.2",
+        "identity": {
+          "bytes": 236616,
+          "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+          "sha256": "6c5e1b4528b704dc7081aa45b5037bda4ea9cad78ca562b4fb6b0dbdbfc7e7e7"
+        }
+      }
+    ],
+    "publication_ready": false,
+    "reviewed_native_code_executed": false,
+    "runtime_resolution_verified": false,
+    "source": {
+      "bytes": 6034,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/check_publication_glibc_floor.py",
+      "sha256": "2122f6bce040cd063fcc2c8f259cb90884d1abecdc1d38c4e3d07d606f10c2ed"
+    },
+    "status": "assembly_glibc_floor_preflight_passed"
+  },
+  "inference_execution_permitted": false,
+  "installation_executed": false,
+  "limitations": [
+    "Only the preflight was repeated for a concrete new input-integrity check.",
+    "The earlier preflight/failure remain preserved; no native or statistical result is replaced.",
+    "Neither this nor synthetic stage tests completes the new controller's ten-stage native integration."
+  ],
+  "log": {
+    "bytes": 40,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_glibc_launch_final_20261002/preflight.log",
+    "sha256": "f1bbd399a0a03087ab06f26b5add1b51dc7169dafea99f5f63f3c286063e4c62"
+  },
+  "native_workload_repeated": false,
+  "output_members": [
+    "preflight.json"
+  ],
+  "preflight": {
+    "bytes": 38435,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_glibc_preflight_cleanenv_final_20261002/preflight.json",
+    "sha256": "6f8d72a92fc3836c4c9dfb95c6c9f473e45f9ced331252d6190093cc87222a81"
+  },
+  "previous_preflight": {
+    "bytes": 7722,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_glibc_preflight_20261002.json",
+    "sha256": "01c502f152d2a444f71b8c3bfb525d74077472dc411fe2004cc946ec15e08903"
+  },
+  "private_base_runtime_probe_executed": false,
+  "publication_ready": false,
+  "reason": "New final input recheck added; no inference or installation rerun",
+  "removed_child_environment": {
+    "LD_LIBRARY_PATH": "/usr/local/cuda/lib64:/usr/local/cuda/lib64:/usr/local/cuda/lib64:"
+  },
+  "returncode": 0,
+  "revision": "c2bc6ebdc3d5e2637a7190acc097bd34a348ecb1",
+  "runtime_resolution_verified": false,
+  "sources": [
+    {
+      "bytes": 20434,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py",
+      "sha256": "d1264a65fd56fa04bd0649f23997e5f5e1857c29a3ce79fd9328a43179173648"
+    },
+    {
+      "bytes": 6034,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/check_publication_glibc_floor.py",
+      "sha256": "2122f6bce040cd063fcc2c8f259cb90884d1abecdc1d38c4e3d07d606f10c2ed"
+    }
+  ],
+  "status": "final_input_checked_glibc_preflight_only_completed",
+  "watched_files": 119
+}

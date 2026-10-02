@@ -1,0 +1,61 @@
+{
+  "controlled_timing": false,
+  "current_host_observation_repeated": false,
+  "current_inputs_sources_loader_and_inventory_unchanged": true,
+  "current_watched_file_identities": 119,
+  "driver": {
+    "bytes": 6016,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/readback_publication_glibc_preflight_20261002.py",
+    "sha256": "1680dc4b141f9daf2c64a7221d36918b1af87fef1b4c9c962920f35b6206fcac"
+  },
+  "earlier_loader_failure_retained_as_transcription": true,
+  "earlier_watched_source_paths_since_changed": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py"
+  ],
+  "full_host_compatibility_verified": false,
+  "historical_source_bindings_verified_against_recorded_git": true,
+  "installation_executed": false,
+  "junit": {
+    "bytes": 18135,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_glibc_guard_final_tests_20261002.xml",
+    "sha256": "88f3b1b36f192fd353da2280cf6b6ae4cabab9b617f983950611ec3e72310805"
+  },
+  "limitations": [
+    "Reads retained metadata and bytes, not a new host/libc query or native execution.",
+    "The earlier controller identity refers to its recorded Git snapshot, not current mutable source bytes.",
+    "The first loader-override refusal is a retrospective tool-output transcription, not independent process accounting.",
+    "Old native integration remains dated; these new controller runs execute preflight only."
+  ],
+  "new_ten_stage_native_integration_completed": false,
+  "preflight_repeated": false,
+  "private_base_runtime_probe_executed": false,
+  "publication_ready": false,
+  "raw_input_identities": 7,
+  "receipts": [
+    {
+      "bytes": 7722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_glibc_preflight_20261002.json",
+      "sha256": "01c502f152d2a444f71b8c3bfb525d74077472dc411fe2004cc946ec15e08903"
+    },
+    {
+      "bytes": 7274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_glibc_preflight_final_20261002.json",
+      "sha256": "75bf519f0de3947d3888c546d0117c2a76fe8295af6eba8117c57039524e622d"
+    }
+  ],
+  "reviewed_native_code_executed": false,
+  "runtime_resolution_verified": false,
+  "scientific_workload_repeated": false,
+  "status": "assembled_glibc_preflight_readback_verified",
+  "tests": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "bizon",
+    "name": "pytest",
+    "skipped": "0",
+    "tests": "128",
+    "time": "2.271",
+    "timestamp": "2026-10-02T16:50:28.248669-04:00"
+  },
+  "verified_current_file_identities": 132
+}
