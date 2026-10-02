@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Follow-Up: Native Constructor Test Launcher Staging (2026-10-02)
+
+After pushing b7ed, branch-list API observations initially omit the new run.
+Inspect exact commit checks and head-SHA run lookup instead of resubmitting.
+Actual run 36980170796 exists; Linux job 110752659858 already fails with
+75 passes/one failure in 13.50s, zero skips/errors. Dependency install and
+failed JUnit retention succeed. Seven constructor and twelve repeat-worker
+cases pass; frozen-import high-CPM child exits 1 with captured stderr hidden.
+MacOS five test jobs/wheel remain live and docs succeeds at first observation.
+
+The test assumes an ignored local launcher. A tiny local missing-launcher
+reproduction returns Wrong frozen worker import and no result. Do not claim
+that its traceback directly proves the original hidden child stderr.
+Stage the same five committed package sources used by adjacent tests into
+a temporary launcher and assert the native worker module origin. Keep actual
+igraph/Leiden, library/affinity/fingerprint/import/optimizer gates unchanged.
+Expose future child stderr in the test assertion; no production fallback.
+
+**76 local cases pass in 20.05s**, including twenty native worker cases,
+zero failures/errors/skips. [Source, remote/local failure and report pins](LINUX_NATIVE_LAUNCHER_STAGING_20261002.md)
+retain the first CI failure and local reproduction. The earlier 317-case pass
+remains its own prior-source evidence; this is a focused follow-up, not new
+full-suite or scientific validation. Commit/push the staging fix separately
+without rewriting the failed milestone or restarting its handle.
+
+Production/scientific sources, workflow/gate, defaults/scores and historical
+archives/receipts stay unchanged relative to b7ed. New-runner confirmation,
+other workstation/raw/platform failures, other-QfO uncertainty, source/data
+rights, controlled resources, complete release and public deposition remain
+open. Timing stays deferred without host contention polls/questions, DGX or
+unrelated workload/service actions. The original goal stays active/incomplete.
+
 ## Native Diagnostic Coverage On A Capable CI Runner (2026-10-02)
 
 Previous goal turn is progress at pushed c7b: two test-only Python 3.13

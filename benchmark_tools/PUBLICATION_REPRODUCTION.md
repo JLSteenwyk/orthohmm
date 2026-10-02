@@ -561,6 +561,9 @@ parser tests use a synthetic record only; historical native runtime admission
 and all production diagnostic code remain unchanged.
 The same evidence records actual macOS Python 3.13 confirmation of the prior
 241-case panel, with 28 remaining failures; complete CI/release is not proven.
+The first Linux job fails one of 76 tests. Its [launcher staging follow-up](results/LINUX_NATIVE_LAUNCHER_STAGING_20261002.md)
+copies committed source for the test, preserves native checks and gives
+76 local passes. Do not label the failed original job as complete confirmation.
 
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST

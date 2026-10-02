@@ -285,6 +285,11 @@ no full-scale stability, accuracy, timing or complete release claim follows.
 Its actual preceding macOS Python 3.13 log confirms all 241 prior fixture,
 checker, cleanup, FAS and provider cases, with 28 other failures. This closes
 that prior new-version check, not the new Linux execution or full suite.
+The first actual Linux diagnostic job passes 75 cases and fails one.
+The [test launcher staging correction](LINUX_NATIVE_LAUNCHER_STAGING_20261002.md)
+retains that failure, reproduces a missing-launcher mechanism locally and
+passes all 76 cases locally. Full new-runner confirmation remains open;
+the original child's hidden stderr is not claimed as directly inspected.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

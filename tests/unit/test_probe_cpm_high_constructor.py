@@ -2,6 +2,7 @@ import copy
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 
@@ -57,7 +58,12 @@ def test_no_overwrite_or_dangling_symlink(tmp_path):
                    or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
                    reason="Linux loaded-library and affinity diagnostic; executed in Linux native CI")
 def test_fresh_native_worker_on_small_graph(tmp_path, mode):
-    root = Path(__file__).resolve().parents[2]
+    source_root = Path(__file__).resolve().parents[2]
+    root = tmp_path / "source"
+    package = root / "benchmarks/work/publication_qfo_replay_native_v1/orthohmm"
+    package.mkdir(parents=True)
+    for name in ("__init__.py", "externals.py", "helpers.py", "files.py", "leiden_worker.py"):
+        shutil.copyfile(source_root / "orthohmm" / name, package / name)
     payload = tmp_path / "payload"
     payload.mkdir()
     (payload / "gene_names.txt").write_text("a\nb\nc\nd\n")
@@ -66,9 +72,10 @@ def test_fresh_native_worker_on_small_graph(tmp_path, mode):
                          ("weights", np.array([.3, 1.2, 2.5], dtype=np.float64))):
         np.save(payload / (name + ".npy"), values)
     env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1", PYTHONNOUSERSITE="1")
-    subprocess.run([sys.executable, "-B", str(root / "benchmark_tools/probe_cpm_high_constructor.py"),
+    completed = subprocess.run([sys.executable, "-B", str(source_root / "benchmark_tools/probe_cpm_high_constructor.py"),
                     "--root", str(root), "--output", str(tmp_path), "--worker-payload", str(payload), "--mode", mode],
-                   check=True, env=env, capture_output=True, text=True, timeout=60)
+                   env=env, capture_output=True, text=True, timeout=60)
+    assert completed.returncode == 0, completed.stderr
     result = json.loads((payload / "result.json").read_text())
     require_result(result, mode)
     assert result["saved"]["vertices"] == 4
@@ -76,6 +83,8 @@ def test_fresh_native_worker_on_small_graph(tmp_path, mode):
     before = json.loads((payload / "worker_before.json").read_text())
     imported = {k.split(".")[0] for k in before["modules"]} & {"orthohmm", "leidenalg"}
     assert imported == (set() if mode == "minimal_imports" else {"orthohmm", "leidenalg"})
+    if mode == "frozen_imports":
+        assert Path(before["modules"]["orthohmm.leiden_worker"]["path"]) == package / "leiden_worker.py"
 
 
 def test_unknown_mode_rejected(tmp_path):

@@ -69,6 +69,9 @@ native worker cases. New-runner confirmation is pending; synthetic parser
 runtime binding does not establish native libc/parser replay or full release.
 The preceding actual macOS Python 3.13 fast log confirms all 241 prior
 archive/allocation/cleanup/FAS/provider cases; 28 other failures remain.
+The first Linux job has 75 passes and one ignored-launcher failure. The
+[explicit test staging follow-up](results/LINUX_NATIVE_LAUNCHER_STAGING_20261002.md)
+retains that failure and gives 76 local passes; new-runner confirmation is pending.
 
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "b7edc886681aeda7eb7dd7aa61d2289b38ea6054",
+  "purpose": "stage the native constructor test launcher from committed package files instead of an ignored workstation directory",
+  "test_source": {"path": "tests/unit/test_probe_cpm_high_constructor.py", "bytes": 4366, "sha256": "33704839ca4c593f1e961067bdbff6fd780b1ace3e3ef33d413b18f77e7cf317"},
+  "staged_package_files": ["__init__.py", "externals.py", "helpers.py", "files.py", "leiden_worker.py"],
+  "staged_worker_origin_required": true,
+  "native_worker_stub_used": false,
+  "captured_child_stderr_exposed_on_failure": true,
+  "first_linux_ci": {
+    "source_commit": "b7edc886681aeda7eb7dd7aa61d2289b38ea6054",
+    "run_id": 36980170796, "job_id": 110752659858,
+    "scope": "Ubuntu Python 3.12 linux-native-diagnostics only",
+    "python_observed": "3.12.14",
+    "terminal_conclusion": "failure",
+    "passed": 75, "failed": 1, "errors": 0, "skipped": 0, "duration_s": 13.50,
+    "failed_case": "test_fresh_native_worker_on_small_graph[frozen_imports]",
+    "child_returncode": 1,
+    "original_child_stderr_exposed": false,
+    "constructor_cases_passed": 7, "repeat_worker_cases_passed": 12,
+    "dependency_installation": "success", "failed_junit_artifact_upload": "success",
+    "downloaded_at_utc": "2026-10-02T07:46:31.515732+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_b7edc886_20261002/110752659858.log", "bytes": 48066, "sha256": "09fa087b9235de4eb83b7f33333ca7d013e6a32fe7548612f6facb9c27d14419"},
+    "manual_restart_or_resubmission": false
+  },
+  "local_missing_launcher_reproduction": {
+    "returncode": 1, "exception": "ValueError: Wrong frozen worker import",
+    "result_created": false, "temporary_inputs_removed": true,
+    "proves_exact_original_ci_child_traceback": false,
+    "log": {"path": "benchmarks/work/linux_native_missing_launcher_20261002.log", "bytes": 484, "sha256": "848103e228aeba66f99de0614baf34c72970c174649823678ec1bf2abc37a627"}
+  },
+  "local_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_probe_qfo_construction.py", "tests/unit/test_probe_qfo_direct_graph.py", "tests/unit/test_probe_cpm_high_constructor.py", "tests/unit/test_probe_cpm_partition_parser.py", "tests/unit/test_repeat_qfo_saved_graph.py", "--junitxml=benchmarks/work/linux_native_launcher_staging_20261002.xml"],
+    "passed": 76, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 20.05, "junit_duration_s": 20.033,
+    "native_worker_cases_executed": 20, "python": "3.10.13",
+    "report": {"path": "benchmarks/work/linux_native_launcher_staging_20261002.xml", "bytes": 10615, "sha256": "0b44d8a8b768fc7935ab30f6514cf9b50e67e702ce736e20707e44da46aa98ac"}
+  },
+  "new_fix_cross_host_confirmation": false,
+  "production_sources_or_ci_gate_changed": false,
+  "scientific_settings_or_scores_changed": false,
+  "historical_archives_or_receipts_repinned": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}
