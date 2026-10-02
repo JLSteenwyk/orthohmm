@@ -7,6 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [prespecified synthetic null-score diagnostic](results/FROZEN_NULL_SCORE_RESULT_20261002.md)
+retains 90,000 independent random pairs and all 90 tail endpoints. Strong
+glutamine bias frequently passes the approximate significance filter; ordinary
+background samples cannot establish rare-tail calibration. This is not real-data
+orthology accuracy, a default change or controlled timing. All scores remain frozen.
+
 The [latest seven-page main review](results/PUBLICATION_MAIN_REVIEW_20261002.md)
 includes completed descriptive-table and private raw-input restoration evidence,
 with explicit native/rights/release boundaries. All pages were inspected and

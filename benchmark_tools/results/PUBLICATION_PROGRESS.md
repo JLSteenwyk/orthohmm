@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Frozen Null Score Execution And Audit (2026-10-02)
+
+Commit protocol/producer at 186bd5e47ecaa9361a86064c33d7a57c70ce1ce3 before
+scoring. The supplementary panel then completes all nine composition/length
+cells: 90,000 independent pairs and 180,000 scalar C evaluations. Preserve all
+raw scores, 180 sequence digests and all 90 prespecified tail endpoints in a
+172,690-byte gzip that decompresses exactly to the original result. No native
+experiment is repeated, no k-mer or biological inference runs, and no parameters
+are fit or promoted. Scientific code/settings/scores remain unchanged.
+
+The [result](FROZEN_NULL_SCORE_RESULT_20261002.md) reports all nine production-cutoff
+rows. At width 64, strong synthetic glutamine bias passes at 89.83%, 100% and
+100%; ordinary-background hits are 0/1/0 out of 10,000 at lengths 50/150/400.
+This exposes a conditional significance-formula limitation, not real orthology
+error rates or causal explanations of benchmark outcomes. Zero/rare hits do
+not establish rare-tail calibration. All 90 endpoints, adjusted intervals and
+paired band changes/lost hits are retained, not selected for default optimization.
+
+The one-off independent audit first fails before result loading because its
+import path lacks the repository; retain the failure description and correct
+only that path. It then independently regenerates all 180 sequence digests,
+recomputes all 90 endpoint counts/intervals, and matches 180 reference-Python
+scores (first pair per seed cell/band). This is a sparse scoring check, not
+all-native-score equivalence. Both owned scoring/audit sessions terminate zero.
+
+Observe preceding 35059f58 CI run 37001665573: docs/Linux/wheel pass, all five
+macOS jobs fail. Actual terminal 3.13 job 110820526583 log verifies the checkout,
+14,074 passes/four failures/119 skips/30 warnings in 458.36s. All seven main-text
+and nine manuscript-artifact cases pass; the four default raw exports still
+lack original inputs/options. Log downloaded once, pinned in the new receipt;
+no restart, inferred sibling counts or full-CI success.
+
+The user's uncertainty about a quiet window does not block the present work:
+timing remains deferred, with no renewed quiet-window questions, host-contention
+polls, DGX access or unrelated process/service actions. Add public numerical
+readback tests and result indexes; keep the existing manuscript PDFs/archives
+unchanged until explicit later reconciliation. Other-QfO uncertainty, controlled
+resources, rights, complete executable release and deposition remain open. The
+original publication goal remains active and incomplete. The final combined
+producer/scoring/readback panel passes **38 cases in 1.12s**, zero errors,
+failures or skips. Preserve its XML hash in the receipt, stage only this scoped
+supplement and indexes, and commit/push the validated milestone. Observe the
+new automatic CI at its own source separately; preceding CI is not new-result
+remote confirmation.
+
 ## Frozen Null Score Protocol Checkpoint (2026-10-02)
 
 Previous turn progressed at pushed 35059f58 with inspected manuscript artifacts.

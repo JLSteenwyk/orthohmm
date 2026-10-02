@@ -13,6 +13,16 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [frozen synthetic null-score diagnostic](FROZEN_NULL_SCORE_RESULT_20261002.md)
+now directly examines a Methods limitation under a protocol committed before
+scoring. All 90 endpoints are preserved from 90,000 independent random pairs.
+Strong glutamine bias yields many filter hits; ordinary-background counts are
+too sparse to establish rare-tail calibration. The independent count/digest
+audit and 180 sparse reference-score checks are bounded evidence, not complete
+native equivalence, real-data orthology false-positive rates, causal benchmark
+explanations or a calibration fix. Defaults and scientific scores remain frozen.
+The dated manuscript review has not been rerendered to include this supplement.
+
 The [30 September main-text review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md)
 verifies after fresh extraction without the checkout: 48 files and all
 28 direct HTML targets. Its six PDF pages were visually inspected. Earlier

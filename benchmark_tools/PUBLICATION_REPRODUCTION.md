@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [prespecified synthetic null-score diagnostic](results/FROZEN_NULL_SCORE_RESULT_20261002.md)
+has completed, preserving all 180,000 raw evaluations of 90,000 independent
+pairs in a compact score archive. All 90 endpoint counts/intervals and 180
+sparse reference-Python scores are audited; the full native experiment is not
+repeated by its readback tests. Strong glutamine bias demonstrates a conditional
+limitation of the approximate significance formula, not real orthology error
+rates. No default or benchmark score changes. This supplement remains separate
+from the earlier manuscript render and executable study release.
+
 The [complete QfO parameter panel](results/QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
 now includes all seven arms and 18 reproduced SwissTrees endpoints, with
 separate admission for the recovered high-CPM inference/conversion/scoring.

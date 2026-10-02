@@ -1,0 +1,84 @@
+{
+  "all_native_scores_recomputed": false,
+  "audit": {
+    "all_endpoint_counts_and_intervals_recomputed": true,
+    "all_native_scores_recomputed": false,
+    "benchmark_scores_or_defaults_changed": false,
+    "calibration_established": false,
+    "endpoints": 90,
+    "independent_pairs": 90000,
+    "interval_absolute_tolerance": 1e-10,
+    "native_evaluations": 180000,
+    "native_kernel_rerun": false,
+    "protocol_commit": "186bd5e47ecaa9361a86064c33d7a57c70ce1ce3",
+    "publication_ready": false,
+    "reference_python_scores_rechecked": 180,
+    "reference_subset": "First pair in each of 90 seed cells, both bands; not all native scores",
+    "result_bytes": 2657291,
+    "result_sha256": "343bc75bbceb59ec80b460f2bcf4080f5c1684e10354284ecfc9604b7fdba45a",
+    "seed_cells": 90,
+    "sequence_digests_regenerated": 180,
+    "status": "frozen_null_scores_counts_and_sparse_reference_verified"
+  },
+  "audit_initial_failure": "First audit attempt failed before result loading with ModuleNotFoundError: benchmark_tools; add repository path to the one-off audit interpreter import path, then rerun only the audit, not native scoring.",
+  "benchmark_scores_or_defaults_changed": false,
+  "calibration_established": false,
+  "ci_preceding_fast_313": {
+    "failed": 4,
+    "passed": 14074,
+    "seconds": 458.36,
+    "skipped": 119,
+    "warnings": 30
+  },
+  "ci_preceding_run": 37001665573,
+  "ci_preceding_source": "35059f582f787c71474d44bcb1fd06b4ec92f989",
+  "files": [
+    {
+      "bytes": 2657291,
+      "path": "benchmarks/work/frozen_null_score_panel_20261002/result.json",
+      "sha256": "343bc75bbceb59ec80b460f2bcf4080f5c1684e10354284ecfc9604b7fdba45a"
+    },
+    {
+      "bytes": 172690,
+      "path": "benchmark_tools/results/frozen_null_score_observations_20261002.json.gz",
+      "sha256": "590db81716bc0af78acb66558fe0d0bb91356f99be90d229f1aa9bcdc3dc8c16"
+    },
+    {
+      "bytes": 817,
+      "path": "benchmarks/work/frozen_null_score_audit_20261002.json",
+      "sha256": "3ca92357e19376ea6bd47b544408b1c22439b7c156973276d66be6415bbdad2e"
+    },
+    {
+      "bytes": 7309,
+      "path": "benchmarks/work/audit_frozen_null_scores_20261002.py",
+      "sha256": "11a55f673702e2882d65f4469faf2373f9c484da347c560badcafeb31608b41c"
+    },
+    {
+      "bytes": 4207,
+      "path": "benchmarks/work/frozen_null_score_unit_20261002.xml",
+      "sha256": "17266e4a58b4f564c1ecb62a7152afa7c5efed9e4fc55adcc7447c71b300e63a"
+    },
+    {
+      "bytes": 282433,
+      "path": "benchmarks/work/ci_remote_35059f58_20261002/110820526583.log",
+      "sha256": "fe7dc435537b8cdf5efedc74be909db41d374421f0b6c909a172e5acea8eb0f5"
+    },
+    {
+      "bytes": 5687,
+      "path": "benchmarks/work/frozen_null_score_readback_20261002.xml",
+      "sha256": "afe1f90c8e5a4b3e89b73f5b5df32752228328f0587a02480cac083a66b42b96"
+    }
+  ],
+  "final_readback_tests": {
+    "errors": 0,
+    "failed": 0,
+    "native_experiment_rerun": false,
+    "passed": 38,
+    "seconds": 1.12,
+    "skipped": 0
+  },
+  "protocol_commit": "186bd5e47ecaa9361a86064c33d7a57c70ce1ce3",
+  "publication_ready": false,
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "status": "retained_prespecified_null_score_diagnostic"
+}
