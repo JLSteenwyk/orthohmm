@@ -1,0 +1,210 @@
+{
+  "schema": "ci_fixture_portability_result_v1",
+  "status": "focused_local_pass_remote_execution_failed",
+  "base_revision": "ea90d57fa3251364437fff12b34f8e7630e042f5",
+  "remote": {
+    "observed_utc": "2026-10-01T23:57:31.004004+00:00",
+    "run_id": 36941807688,
+    "head_sha": "ea90d57fa3251364437fff12b34f8e7630e042f5",
+    "status": "completed",
+    "conclusion": "failure",
+    "url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36941807688",
+    "jobs": [
+      {
+        "id": 110634806835,
+        "name": "test-fast (3.13)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110634806934,
+        "name": "test-fast (3.11)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110634806942,
+        "name": "docs",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 110634807004,
+        "name": "test-fast (3.10)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110634807049,
+        "name": "test-fast (3.12)",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 110634807093,
+        "name": "test-full",
+        "status": "completed",
+        "conclusion": "failure"
+      }
+    ],
+    "test_logs": [
+      {
+        "job_id": 110634806835,
+        "name": "test-fast (3.13)",
+        "conclusion": "failure",
+        "log": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/110634806835.log",
+          "bytes": 3994298,
+          "sha256": "ed5c55acc61354591efe3c112d884847868cc22cec7efdb5c2835500876c5731"
+        },
+        "summaries": [
+          "= 280 failed, 13193 passed, 94 skipped, 8 warnings, 109 errors in 463.50s (0:07:43) ="
+        ]
+      },
+      {
+        "job_id": 110634806934,
+        "name": "test-fast (3.11)",
+        "conclusion": "failure",
+        "log": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/110634806934.log",
+          "bytes": 3775263,
+          "sha256": "aa087cedf6f58ecf0060847b06c145b1e3a5966c5a0a7a808d58cf3331bf871a"
+        },
+        "summaries": [
+          "= 269 failed, 13204 passed, 94 skipped, 8 warnings, 109 errors in 645.00s (0:10:44) ="
+        ]
+      },
+      {
+        "job_id": 110634807004,
+        "name": "test-fast (3.10)",
+        "conclusion": "failure",
+        "log": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/110634807004.log",
+          "bytes": 3713677,
+          "sha256": "4f05cce9830d16dba0809cb9c749bf17ca22cfd40f04f460edb3fe157b46edf2"
+        },
+        "summaries": [
+          "= 265 failed, 13208 passed, 94 skipped, 8 warnings, 109 errors in 616.22s (0:10:16) ="
+        ]
+      },
+      {
+        "job_id": 110634807049,
+        "name": "test-fast (3.12)",
+        "conclusion": "failure",
+        "log": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/110634807049.log",
+          "bytes": 3918048,
+          "sha256": "ef3d4a87e3abd5384233814cfcb981ef0a2acabd8ba915af717ebb3b80572663"
+        },
+        "summaries": [
+          "= 272 failed, 13201 passed, 94 skipped, 8 warnings, 109 errors in 531.06s (0:08:51) ="
+        ]
+      },
+      {
+        "job_id": 110634807093,
+        "name": "test-full",
+        "conclusion": "failure",
+        "log": {
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/110634807093.log",
+          "bytes": 3778444,
+          "sha256": "ca19a6374a822b7e8da0d4b550f2902df84e65807fed2e38115ca786e0bb19b5"
+        },
+        "summaries": [
+          "= 269 failed, 13204 passed, 94 skipped, 8 warnings, 109 errors in 716.67s (0:11:56) ="
+        ]
+      }
+    ]
+  },
+  "remote_api_artifacts": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/run.json",
+      "bytes": 13542,
+      "sha256": "dc206ece7357f3f84f549d3bce2f2b55b8add96af48c470ed74fba793f646cde"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/jobs.json",
+      "bytes": 21538,
+      "sha256": "21071adaecbcf227922537ef1f2537978227887d0208673804747d847be42465"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_ea90d57f_20261001/terminal_observation.json",
+      "bytes": 3611,
+      "sha256": "73f3413ccc38e1e14c3ea6e4b839ac8f6da8359565bb46c40bb2bfdbe01f206e"
+    }
+  ],
+  "local": {
+    "interpreter": {
+      "path": "/usr/bin/python3.12",
+      "bytes": 8019136,
+      "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+    },
+    "junit": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_dependency_smoke_20261001/fixture_portability_final.xml",
+      "bytes": 32685,
+      "sha256": "1399117101003eec06b6a0e0924861ae67bc747a7e0cd90d14aebb1930188ab0"
+    },
+    "counts": {
+      "tests": 225,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "pytest_summary": "225 passed in 6.73s",
+    "context": "Fresh private Python 3.12 dependency environment; Linux host; current checkout and retained native libraries, not clean installed-package restoration."
+  },
+  "fixture_sources": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/conftest.py",
+      "bytes": 760,
+      "sha256": "0552e858ee636420d9eeded96f2183e09652419500ac4a4401f1ec5af4cf9d31"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_admit_private_helper_cpm_assessment.py",
+      "bytes": 21644,
+      "sha256": "466ce7c82ae677e22036050db8cf385794b5b569da207f8a970e6fedf7ff9e10"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_threadripper_scaling.py",
+      "bytes": 14594,
+      "sha256": "72d9ff6a447eda54a906f51cd110a5ca9672e7b79eb88e623a9c0744c9336984"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_threadripper_environment_worker.py",
+      "bytes": 11950,
+      "sha256": "b05c9301800cc61d7b0df4634f5ec36dbea1a6f023ee7a2d53324bcbd42b655a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_synthetic_linux_boot_fixture.py",
+      "bytes": 611,
+      "sha256": "3db76871e43924a71d9ea79bbf120fe04d1e3790b2cfadc20469a7e49e5150c5"
+    }
+  ],
+  "production_sources_unchanged": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_private_helper_cpm_assessment.py",
+      "bytes": 13750,
+      "sha256": "a0b9a01adf7bf802cda37b2767d60ab1a41136b6786d96931950617ed5196de8"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "bytes": 12728,
+      "sha256": "d48d353633776d4382a4368e38b379b21a53d11faae55afc4e05a6580f579593"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_environment_worker.py",
+      "bytes": 12673,
+      "sha256": "40b778ecd8c67e9249eb466580a769b28985848d4a59deb6b1a9d5ce10ddb2bb"
+    }
+  ],
+  "scientific_defaults_changed": false,
+  "controlled_timing": false,
+  "remote_success": false,
+  "publication_ready": false,
+  "limitations": [
+    "Prepared fixture corrections have not yet been remotely validated.",
+    "Other workstation paths, native compiler/runtime issues, Linux-only tests and numerical/provenance failures remain unresolved.",
+    "MacOS native identity tests explicitly skip; synthetic guard tests remain enabled.",
+    "Earlier 158-case local pass precedes the final native capability marker; the 225-case pass is the current source snapshot.",
+    "No original scientific analysis or controlled timing was rerun."
+  ]
+}

@@ -18,7 +18,7 @@ def put(path, data):
 
 
 @pytest.fixture
-def setup(tmp_path, monkeypatch):
+def setup(tmp_path, monkeypatch, synthetic_linux_boot_id):
     tools = tmp_path / "benchmark_tools"
     tools.mkdir()
     (tools / "run_threadripper_scaling.py").write_text("# synthetic executor\n")
@@ -50,7 +50,7 @@ def setup(tmp_path, monkeypatch):
         readiness_review_sha256=ready["sha256"], whole_run_observer_ready=True,
         unrelated_scientific_work_present=False, observation_started_unix_ns=10**12,
         observation_finished_unix_ns=10**12+10**9,
-        boot_id=Path("/proc/sys/kernel/random/boot_id").read_text().strip(),
+        boot_id=synthetic_linux_boot_id,
         review_reference="synthetic test only", evidence=[support]))
     request = dict(schema="threadripper_execution_request_v1", job_id=42, execution_authorized=True,
         plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], index=0,

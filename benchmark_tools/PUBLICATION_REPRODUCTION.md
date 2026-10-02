@@ -37,6 +37,12 @@ declares missing test libraries, preserves unsupported-affinity failure, and
 includes top-level tests in Make targets. All 13,681 cases collect in a fresh
 private dependency environment and 67 focused cases pass. This is not a new
 full regression or passing remote CI; historical runtime locks remain unchanged.
+The [subsequent actual CI execution](results/CI_FIXTURE_PORTABILITY_20261001.md)
+passes installation/collection but fails all five test jobs. Its complete
+terminal outcomes and logs are pinned separately. Focused canonical-path and
+synthetic-boot fixture corrections pass 225 local cases; native/path/provenance
+failures and remote confirmation remain open. Production gates and scientific
+settings are unchanged, and controlled timing stays deferred.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

@@ -1,4 +1,5 @@
 import copy
+from contextlib import nullcontext
 import json
 from pathlib import Path
 from types import SimpleNamespace
@@ -16,11 +17,21 @@ JOB = "25001"
 CONVERSION_JOB = "25000"
 
 
-@pytest.fixture
-def tmp_path():
+@pytest.fixture(name="tmp_path")
+def short_tmp_path():
     # Exercise the unchanged Darwin command builder within its real path limit.
     with tempfile.TemporaryDirectory(prefix="oh-qg-", dir="/tmp") as directory:
-        yield Path(directory)
+        yield Path(directory).resolve()
+
+
+def test_short_fixture_resolves_symlink_root(tmp_path, monkeypatch):
+    alias = tmp_path / "temporary_alias"
+    alias.symlink_to(tmp_path, target_is_directory=True)
+    monkeypatch.setattr(tempfile, "TemporaryDirectory", lambda **kwargs: nullcontext(str(alias)))
+    fixture = short_tmp_path.__wrapped__()
+    assert next(fixture) == tmp_path
+    with pytest.raises(StopIteration):
+        next(fixture)
 
 
 def accounting(state="COMPLETED", code="0:0", cpus="8", memory="64G", node="bizon"):

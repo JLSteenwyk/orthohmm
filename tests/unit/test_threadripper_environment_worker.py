@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+import sys
 from types import SimpleNamespace
 
 import psutil
@@ -15,8 +16,8 @@ def put(path, value):
 
 
 @pytest.fixture
-def setup(tmp_path, monkeypatch):
-    boot = Path('/proc/sys/kernel/random/boot_id').read_text().strip()
+def setup(tmp_path, monkeypatch, synthetic_linux_boot_id):
+    boot = synthetic_linux_boot_id
     support = put(tmp_path / 'support.json', {'synthetic_test_only': True})
     process_policy = dict(schema='threadripper_process_policy_v2', boot_id=boot,
         review_reference='synthetic test only', ordinary_processes=[])
@@ -149,6 +150,7 @@ def test_deadline_crossed_after_evidence_serialization(setup):
     assert result['decision']=='failed' and result['publication_deadline_expired']
 
 
+@pytest.mark.skipif(sys.platform != 'linux', reason='Requires the Linux /proc executable identity')
 def test_real_loaded_interpreter_identity():
     pid=os.getpid(); process=psutil.Process(pid)
     row=dict(pid=pid,created=process.create_time(),cgroup=worker.membership(pid),name=process.name())
@@ -158,6 +160,25 @@ def test_real_loaded_interpreter_identity():
     assert len(result)==1 and result[0]['loaded_sha256']==image['sha256']
 
 
+def test_boot_change_during_synthetic_review_is_rejected(setup, monkeypatch):
+    read_text = Path.read_text
+
+    def changed_boot(path, *args, **kwargs):
+        if path == Path('/proc/sys/kernel/random/boot_id'):
+            return 'different-boot\n'
+        return read_text(path, *args, **kwargs)
+
+    def image_check(*args):
+        monkeypatch.setattr(Path, 'read_text', changed_boot)
+        return []
+
+    assert setup.run(image_check=image_check)['decision'] == 'failed'
+    detail = json.loads((setup.root / 'environment_worker_evidence.json').read_text())
+    assert detail['error'] == 'Boot changed during environmental review'
+    assert not (setup.directory / 'go.json').exists()
+
+
+@pytest.mark.skipif(sys.platform != 'linux', reason='Requires the Linux /proc executable identity')
 def test_wrong_reviewed_image_rejected(tmp_path):
     pid=os.getpid(); process=psutil.Process(pid)
     row=dict(pid=pid,created=process.create_time(),cgroup=worker.membership(pid),name=process.name())

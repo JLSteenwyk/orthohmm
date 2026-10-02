@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Actual CI Execution And Focused Fixture Corrections (2026-10-01)
+
+User does not know a quiet window and asks whether one is needed now. It is
+not needed for this work: keep controlled timing deferred, without another
+contention poll/question or any unrelated job/service action. No DGX access.
+Re-read the active objective and retained checkpoint; source ea90d57f is pushed.
+
+CI run 36941807688 is now terminal failure: docs succeed, dependency installation
+and collection succeed, but all five test jobs fail during execution. Retain
+all five logs/API outcomes once; no credentials or signed URLs in receipts.
+The [execution report and pins](CI_FIXTURE_PORTABILITY_20261001.md) record each
+outcome (265-280 failed, 109 errors, 94 skips). Failed Make stages do not reach
+integration. Do not describe the earlier collection correction as passing CI.
+
+Resolve the short assessment fixture root, preserving production canonical-path
+rejection; add a symlink-root regression. Inject a fixed boot identity only for
+synthetic guard/worker tests, preserving other reads and real native tests.
+Add boundary and changed-boot rejection checks. Two actual Linux executable
+identity tests report explicit non-Linux skips; whole synthetic modules remain
+enabled. The three production admission/execution/worker files remain byte-equal
+to HEAD. No scientific default, score, frozen source or historical receipt changes.
+
+Fresh private Python 3.12 environment: **225 focused cases pass in 6.73 seconds**,
+zero failures/errors/skips; JUnit and fixture/source pins retained. Four new
+cases are included. Earlier 158-case pass is a preceding snapshot, not additional
+unique tests. Scoped whitespace passes. This is not full new regression,
+macOS validation, installed-package restoration or remote CI success.
+
+Commit/push the tested corrections and honest current CI report, then retain
+the actual new source/run handle rather than resubmitting old jobs. Remaining
+workstation/native/OS and numerical-provenance failures require individual
+repairs; no blanket skips or weakened evidence gates. Controlled timing,
+broader uncertainty/TreeFam sources, rights/runtime closure and versioned release
+remain open. All own command sessions are terminal.
+
 ## Clean CI Dependency Collection Prepared (2026-10-01)
 
 Previous turn progressed full local regression and reconciled seven-page

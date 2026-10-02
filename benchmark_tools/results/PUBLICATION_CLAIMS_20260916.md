@@ -62,6 +62,12 @@ addresses observed missing-library/import errors in failed remote run 3694007554
 Fresh private dependency installation/check, 13,681-case collection and 67
 focused tests pass. Make targets now include top-level cases. Neither collection
 nor focused execution is a new all-suite pass or evidence of remote CI success.
+The [actual execution and fixture follow-up](CI_FIXTURE_PORTABILITY_20261001.md)
+now retains terminal run 36941807688: docs/installation/collection succeed,
+but all five test jobs fail. Canonical temporary paths and synthetic boot
+fixtures are corrected; 225 focused local cases pass, without production-gate
+changes. Remote confirmation and broader native/path/provenance repairs remain
+open. This does not supersede the historical full local regression snapshot.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

@@ -23,6 +23,11 @@ Actual affinity/cgroup observations require Linux facilities. Importing the
 observer and testing it with injected readers does not require those facilities;
 requesting native observation without the affinity API fails explicitly.
 Native calibration fixtures report capability skips on unsupported platforms.
+Synthetic release-guard and environmental-review cases inject a fixed test-only
+boot identity rather than reading the host's Linux boot file. Other file reads
+and real native identity tests remain unchanged. Short assessment fixtures
+resolve the temporary root (including macOS's `/tmp` symlink); the production
+admission gate still rejects indirect destinations and mismatched boot identities.
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude
