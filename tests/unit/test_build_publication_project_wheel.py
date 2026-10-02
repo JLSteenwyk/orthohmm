@@ -148,12 +148,12 @@ def test_stage_failure_retained_without_retry(inputs, monkeypatch, name):
     with pytest.raises(RuntimeError): module.run(inputs)
     assert calls[-1][0] == name and len(calls) == len({c[0] for c in calls})
     assert not (inputs.output / "complete.json").exists()
+    assert json.loads((inputs.output / "failed.json").read_bytes())["retry"] is False
 
 
 def test_all_stdlib_probes_compile():
     for name in ("RUNTIME_PROBE", "BUILD_PROBE", "KERNEL_PROBE"):
         compile(getattr(module, name), name, "exec")
-    assert json.loads((inputs.output / "failed.json").read_bytes())["retry"] is False
 
 
 @pytest.mark.parametrize("fault", ["fallback", "source", "elf"])
