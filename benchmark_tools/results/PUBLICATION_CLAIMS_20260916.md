@@ -241,6 +241,18 @@ unresolved; unchanged scientific settings/scores and historical source/download
 receipts are not repinned. New auditor remote confirmation, raw-data portability,
 rights, uncertainty, controlled resources and full release remain open.
 
+The [fixed native FAS test reference](FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
+provides the exact historical/public pinned source with its upstream license,
+explicitly selected and hash-checked for two AST comparisons. All 65 combined
+local checks and the 33-case copied FAS scope pass. A rejected canary, zero
+original-path events and copied module origins bound this same-host test-source
+portability claim. No full FAS scoring, replacement raw sources, repaired
+sampling, corrected uncertainty, data-rights clearance or new remote FAS proof
+is established; production logic and historical scientific results stay intact.
+Actual source-657 Python 3.10 fast CI confirms the previous 138-case provider
+panel, not these new FAS references. Its 29 other failures include a newly
+observed owned-timeout EPERM; full timeout resolution remains unestablished.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

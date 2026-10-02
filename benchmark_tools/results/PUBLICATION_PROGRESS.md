@@ -1,5 +1,54 @@
 # Publication Progress
 
+## Exact Native FAS Source Tests Outside Checkout (2026-10-02)
+
+Previous goal turn is progress at pushed 657: native provider checksum
+portability with 138 focused passes and prior archive macOS confirmation.
+Read complete objective/HEAD/current ledger and inspect actual automatic
+handles. At 06:46:04 UTC source-00dd is terminal: five test failures,
+wheel/docs successes. At 06:46:05 source-657 has five live test jobs,
+wheel/docs successes. Do not restart/resubmit or infer remote test success.
+
+The retained source-00dd Python 3.10 fast log identifies two FAS audit tests
+reading an absent external checkout. Retain the full unchanged scorer and
+upstream LICENSE as explicit, fixed test references. Verify both against
+original Git commit c0854a96 and separately fetched pinned public Git blobs;
+verify the scorer against the checksum-checked canonical source archive.
+Preserve upstream MPL notices and separate Darwin notice; bundle no Darwin
+binary or biological data. Do not replace native code with a fabricated stub,
+skip the comparisons or introduce production source fallbacks.
+
+**65 local cases pass in 0.84s**, including 33 FAS and prior 32 provider cases.
+Seven FAS cases are new, rejecting altered/missing/symlink references and
+checking provenance. The native loader and query comparisons retain their
+original semantics. Actual fresh copied scope gives **33 passes in 0.68s**,
+zero errors/failures/skips and no external QfO checkout. Read canary is rejected;
+subsequent original-path events are zero, all 25 project module origins are
+copied, full native scorer module is not imported and subprocesses are forbidden.
+The 877-file/6,078,966-byte staging is removed after execution. These overlapping
+panels use shared dependencies and Python-level guards, not OS isolation or
+full raw/native scoring. [Evidence, exact guard and pins](FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
+retain source/license/public/Git/archive identities and copied receipts.
+
+Later inspect only actual terminal source-657 Python 3.10 fast log: all
+138 preceding cases pass, including 32 provider checks. Overall: 13,857 pass,
+29 fail, zero errors, 110 skip, 30 warnings, 505.47s. Old provider failure is
+absent, two old FAS-source failures remain and owned-command timeout newly
+fails with EPERM. Do not claim the identical total failure count disproves
+the provider fix or establishes complete timeout cleanup. At 06:50:35 UTC
+full/3.10/3.12/3.13 tests fail, 3.11 is live, wheel/docs succeed. New FAS
+reference code is not in that source. Preserve exact log pins and do not restart.
+
+Commit/push this tested source-reference milestone and observe automatic CI.
+New FAS remote confirmation remains open. Original production scorer/auditor,
+source admission, frozen settings/scores, historical receipts and archives
+remain unchanged. No biological inference, annotation, bootstrap, sampled-FAS
+rescoring, original TreeFam search or old archive regeneration occurs. Timing
+stays deferred; no host poll/question, DGX or unrelated workload/service action.
+Other-QfO uncertainty, full native workflow portability, rights, controlled
+resources, executable release and public deposition remain open. The original
+publication goal remains active and incomplete.
+
 ## Native Provider Checksum Portability (2026-10-02)
 
 Previous goal turn is progress: f870 plus 00dd are pushed, with actual guarded

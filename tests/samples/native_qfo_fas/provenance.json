@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "scope": "unchanged_native_source_reference_for_ast_comparison_tests",
+  "upstream_repository": "https://github.com/qfo/benchmark-webservice",
+  "upstream_commit": "c0854a96c1a0fd7f2a891d971af0863002fabc90",
+  "files": [
+    {"path": "fas_benchmark.py", "bytes": 9930, "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"},
+    {"path": "LICENSE", "bytes": 17510, "sha256": "1658efc25eda746f9a30c3cbe8728134eb390034092d848e996080d6f52a1f6f"}
+  ],
+  "canonical_source_archive": {
+    "sha256": "4951aa49982441e51da980a6e5c9db019137cfc34ba14748b33901a6f1ee0c51",
+    "member": "sources/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+    "source_bytes_match": true
+  },
+  "public_pinned_git_blobs_verified": true,
+  "modifications_to_upstream_files": false,
+  "license": "Mozilla Public License 2.0; full upstream LICENSE retained",
+  "biological_data_included": false,
+  "darwin_binary_included": false,
+  "full_native_benchmark_execution": false
+}

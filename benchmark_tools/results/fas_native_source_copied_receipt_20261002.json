@@ -1,0 +1,79 @@
+{
+  "argv": [
+    "/home/bizon/anaconda3/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import json,os,sys,xml.etree.ElementTree as ET\nfrom pathlib import Path\nblocked,copy=map(lambda x:Path(x).resolve(),sys.argv[1:3]); count=0\ndef audit(event,args):\n global count\n if event=='subprocess.Popen': raise PermissionError('subprocess forbidden in source reference replay')\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  p=Path(os.fsdecode(args[0])).resolve()\n  if p==blocked or p.is_relative_to(blocked):\n   count+=1; raise PermissionError('original checkout rejected')\nsys.addaudithook(audit)\ntry: (blocked/'qfo_benchmark/benchmark-webservice/fas_benchmark.py').read_bytes()\nexcept PermissionError: canary=count==1\nelse: raise RuntimeError('read canary was not rejected')\nif not canary: raise RuntimeError('canary counter differs')\ncount=0; sys.path.insert(0,str(copy)); os.chdir(copy)\nassert not (copy/'qfo_benchmark').exists()\nimport pytest\nstatus=pytest.main(['-q','tests/unit/test_audit_fas_population.py','--junitxml=report.xml'])\norigins={name:str(Path(m.__file__).resolve()) for name,m in sys.modules.items() if name.split('.')[0] in ('benchmark_tools','tests') and getattr(m,'__file__',None)}\nassert all(Path(p).is_relative_to(copy) for p in origins.values())\nassert 'fas_benchmark' not in sys.modules\nsuite=ET.parse('report.xml').getroot().find('testsuite')\nprint(json.dumps(dict(status=status,canary_rejected=canary,original_path_events_after_canary=count,project_module_origins=origins,full_native_module_imported=False,suite=suite.attrib),sort_keys=True))\n",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_"
+  ],
+  "baseline_commit": "65789fcb0aa20f3423e80240913e8b7037bc46d7",
+  "environment_amendment": {
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "removed": [
+      "PYTHONPATH",
+      "PYTHONHOME"
+    ]
+  },
+  "full_staging_receipt": {
+    "bytes": 197181,
+    "path": "benchmarks/work/fas_native_source_copied_20261002.json",
+    "sha256": "6b4b5fe371c6f6d01698373d95a4d905a4cb3d550d46f1cbaa7c919c3ef472e3"
+  },
+  "guard_source": "import json,os,sys,xml.etree.ElementTree as ET\nfrom pathlib import Path\nblocked,copy=map(lambda x:Path(x).resolve(),sys.argv[1:3]); count=0\ndef audit(event,args):\n global count\n if event=='subprocess.Popen': raise PermissionError('subprocess forbidden in source reference replay')\n if event in ('open','os.chdir') and args and isinstance(args[0],(str,bytes,os.PathLike)):\n  p=Path(os.fsdecode(args[0])).resolve()\n  if p==blocked or p.is_relative_to(blocked):\n   count+=1; raise PermissionError('original checkout rejected')\nsys.addaudithook(audit)\ntry: (blocked/'qfo_benchmark/benchmark-webservice/fas_benchmark.py').read_bytes()\nexcept PermissionError: canary=count==1\nelse: raise RuntimeError('read canary was not rejected')\nif not canary: raise RuntimeError('canary counter differs')\ncount=0; sys.path.insert(0,str(copy)); os.chdir(copy)\nassert not (copy/'qfo_benchmark').exists()\nimport pytest\nstatus=pytest.main(['-q','tests/unit/test_audit_fas_population.py','--junitxml=report.xml'])\norigins={name:str(Path(m.__file__).resolve()) for name,m in sys.modules.items() if name.split('.')[0] in ('benchmark_tools','tests') and getattr(m,'__file__',None)}\nassert all(Path(p).is_relative_to(copy) for p in origins.values())\nassert 'fas_benchmark' not in sys.modules\nsuite=ET.parse('report.xml').getroot().find('testsuite')\nprint(json.dumps(dict(status=status,canary_rejected=canary,original_path_events_after_canary=count,project_module_origins=origins,full_native_module_imported=False,suite=suite.attrib),sort_keys=True))\n",
+  "observation": {
+    "canary_rejected": true,
+    "full_native_module_imported": false,
+    "original_path_events_after_canary": 0,
+    "project_module_origins": {
+      "benchmark_tools": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/__init__.py",
+      "benchmark_tools.audit_fas_population": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_fas_population.py",
+      "benchmark_tools.audit_qfo_fas_samples": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_qfo_fas_samples.py",
+      "benchmark_tools.audit_qfo_swiss_comparators": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_qfo_swiss_comparators.py",
+      "benchmark_tools.audit_qfo_swiss_counts": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_qfo_swiss_counts.py",
+      "benchmark_tools.audit_qfo_vgnc_mapping": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_qfo_vgnc_mapping.py",
+      "benchmark_tools.audit_vgnc_family_dependencies": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/audit_vgnc_family_dependencies.py",
+      "benchmark_tools.benchmark_production": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/benchmark_production.py",
+      "benchmark_tools.build_publication_runtime": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/build_publication_runtime.py",
+      "benchmark_tools.diagnose_vgnc_block_influence": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/diagnose_vgnc_block_influence.py",
+      "benchmark_tools.map_corrected_vgnc_blocks": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/map_corrected_vgnc_blocks.py",
+      "benchmark_tools.prepare_ob_candidate_neighborhood": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "benchmark_tools.qfo_summarize_scores": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/qfo_summarize_scores.py",
+      "benchmark_tools.report_qfo_recovered_stages": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/report_qfo_recovered_stages.py",
+      "benchmark_tools.run_simulation_generation": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/run_simulation_generation.py",
+      "benchmark_tools.run_simulation_methods": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/run_simulation_methods.py",
+      "benchmark_tools.snapshot_orthohmm_input_order": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/snapshot_orthohmm_input_order.py",
+      "benchmark_tools.validate_profile_runtime": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/validate_profile_runtime.py",
+      "benchmark_tools.validate_qfo_native_assessment": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/validate_qfo_native_assessment.py",
+      "benchmark_tools.verify_simulation_histories": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/benchmark_tools/verify_simulation_histories.py",
+      "tests": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/tests/__init__.py",
+      "tests.conftest": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/tests/conftest.py",
+      "tests.gnu_time_runtime": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/tests/gnu_time_runtime.py",
+      "tests.unit": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/tests/unit/__init__.py",
+      "tests.unit.test_audit_fas_population": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/fas-source-copied-87trw5j_/tests/unit/test_audit_fas_population.py"
+    },
+    "status": 0,
+    "suite": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "33",
+      "time": "0.684",
+      "timestamp": "2026-10-02T02:45:29.308938-04:00"
+    }
+  },
+  "report": {
+    "bytes": 4508,
+    "path": "benchmarks/work/fas_native_source_copied_20261002.xml",
+    "sha256": "bf0dfa70b8d48bf833ddb52f830a8a5ed1e09388baa78ed43815f2bfe1af880e"
+  },
+  "returncode": 0,
+  "scope": "same_host_copied_ast_comparison_tests_not_native_fas_scoring",
+  "staged_bytes": 6078966,
+  "staged_files": 877,
+  "stderr": "",
+  "temporary_copy_removed": true
+}

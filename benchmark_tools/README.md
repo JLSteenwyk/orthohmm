@@ -69,6 +69,14 @@ preserves BSD checksum semantics while removing a macOS-incompatible flag.
 Malformed output and execution failures cannot become verified matches;
 138 focused local tests pass. Historical source verification is not rerun or
 repinned, and data rights, controlled timing and full release remain open.
+Subsequent actual macOS Python 3.10 fast CI confirms all 138 cases, but still
+has 29 other failures, including an owned-timeout EPERM failure.
+
+The [native FAS source reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
+retains the exact upstream scorer and license for explicit AST comparison tests.
+All 33 FAS cases pass in a copied tree with original-checkout reads blocked;
+65 combined local cases pass. No source fallback, biological data substitution,
+full FAS execution or change to historical source admission follows.
 
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not

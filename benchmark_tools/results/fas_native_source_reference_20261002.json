@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "65789fcb0aa20f3423e80240913e8b7037bc46d7",
+  "scope": "fixed_native_source_ast_comparison_test_portability",
+  "upstream_commit": "c0854a96c1a0fd7f2a891d971af0863002fabc90",
+  "files": [
+    {"path": "tests/samples/native_qfo_fas/fas_benchmark.py", "bytes": 9930, "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"},
+    {"path": "tests/samples/native_qfo_fas/LICENSE", "bytes": 17510, "sha256": "1658efc25eda746f9a30c3cbe8728134eb390034092d848e996080d6f52a1f6f"},
+    {"path": "tests/samples/native_qfo_fas/provenance.json", "bytes": 1005, "sha256": "09add3b2dc02890b4b76660cf44c5b8951057703d831e61c44e377cbb067c845"},
+    {"path": "tests/samples/native_qfo_fas/README.md", "bytes": 1295, "sha256": "f4e04aeb8eb42e6119255e9df1ff82e2f72fa70645fc04b0bae568999d02860a"},
+    {"path": "tests/unit/test_audit_fas_population.py", "bytes": 7304, "sha256": "e03c5c41f3d0c1239b91eb966fc9f1debb57f6c9e1ed2d38102e017be95a551c"}
+  ],
+  "upstream_identity": {
+    "both_files_match_retained_git_blobs": true,
+    "both_files_match_public_pinned_blobs": true,
+    "source_matches_canonical_archive_member": true,
+    "canonical_archive_sha256": "4951aa49982441e51da980a6e5c9db019137cfc34ba14748b33901a6f1ee0c51",
+    "canonical_archive_member": "sources/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+    "modified_upstream_bytes": false
+  },
+  "local_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_audit_fas_population.py", "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "--junitxml=benchmarks/work/fas_native_source_snapshot_20261002.xml"],
+    "passed": 65, "failed": 0, "errors": 0, "skipped": 0,
+    "fas_cases": 33, "provider_cases": 32, "new_fas_cases": 7,
+    "stdout_duration_s": 0.84, "junit_duration_s": 0.816,
+    "report": {"path": "benchmarks/work/fas_native_source_snapshot_20261002.xml", "bytes": 12383, "sha256": "f5db3d6e117580c7a8776ad9a64c51c60665226a873c10bf5799f239abdd3372"}
+  },
+  "copied_tests": {
+    "passed": 33, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 0.68, "junit_duration_s": 0.684,
+    "report": {"path": "benchmarks/work/fas_native_source_copied_20261002.xml", "bytes": 4508, "sha256": "bf0dfa70b8d48bf833ddb52f830a8a5ed1e09388baa78ed43815f2bfe1af880e"},
+    "compact_receipt": {"path": "benchmark_tools/results/fas_native_source_copied_receipt_20261002.json", "bytes": 8886, "sha256": "236f852dded3720b056adfadc52e8b2bd917e3bea39ff5805a4dc1fa53adf545"},
+    "full_staging_receipt": {"path": "benchmarks/work/fas_native_source_copied_20261002.json", "bytes": 197181, "sha256": "6b4b5fe371c6f6d01698373d95a4d905a4cb3d550d46f1cbaa7c919c3ef472e3"},
+    "staged_files": 877, "staged_bytes": 6078966, "project_module_origins": 25,
+    "canary_rejected": true, "original_path_events_after_canary": 0,
+    "full_native_module_imported": false, "temporary_copy_removed": true,
+    "same_host": true, "os_containment": false
+  },
+  "prior_inspected_ci": {
+    "source_commit": "00dd7ea800c0416c0e9dfb5460986093eeba3a2d",
+    "run_id": 36973483066, "job_id": 110732219922,
+    "scope": "macOS Python 3.10 fast only",
+    "log": {"path": "benchmarks/work/ci_remote_00dd7ea8_20261002/110732219922.log", "bytes": 2169211, "sha256": "f19857bcaf2131e6085ab2633450e2ac259f4edf1da8c1b24016160b3cd413f3"},
+    "fas_test_failures_due_to_missing_external_source": 2,
+    "jobs_observed_at_utc": "2026-10-02T06:46:04.379971+00:00",
+    "five_test_jobs": "terminal failure", "cpu_wheel": "success", "docs": "success"
+  },
+  "current_ci_observation": {
+    "source_commit": "65789fcb0aa20f3423e80240913e8b7037bc46d7",
+    "run_id": 36974478584,
+    "observed_at_utc": "2026-10-02T06:46:05.011375+00:00",
+    "live_test_job_ids": [110735224553, 110735224750, 110735224779, 110735224826, 110735224841],
+    "cpu_wheel": "success", "docs": "success",
+    "new_fas_reference_in_this_ci": false,
+    "manual_restart_or_resubmission": false
+  },
+  "preceding_provider_ci_inspection": {
+    "source_commit": "65789fcb0aa20f3423e80240913e8b7037bc46d7",
+    "run_id": 36974478584, "job_id": 110735224826,
+    "scope": "macOS Python 3.10 test-fast only",
+    "downloaded_at_utc": "2026-10-02T06:51:07.416944+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_65789fcb_20261002/110735224826.log", "bytes": 2174060, "sha256": "6ef06f080d783182de7c41070e0a005fbb3cec6bb37ef9eff1fc0e92dd70bacc"},
+    "previous_scope_passed": 138, "provider_cases_passed": 32,
+    "overall": {"passed": 13857, "failed": 29, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 505.47},
+    "new_fas_reference_in_this_ci": false,
+    "old_provider_failure_absent": true,
+    "new_failure": "tests/unit/test_measure_slurm_command.py::test_timeout_stops_owned_command: PermissionError EPERM",
+    "old_fas_source_failures_remain": 2,
+    "jobs_observed_at_utc": "2026-10-02T06:50:35.207146+00:00",
+    "terminal_failed_test_jobs": [110735224553, 110735224826, 110735224841, 110735224750],
+    "live_test_jobs": [110735224779], "cpu_wheel": "success", "docs": "success",
+    "manual_restart_or_resubmission": false
+  },
+  "native_fas_benchmark_rerun": false,
+  "scientific_settings_or_scores_changed": false,
+  "historical_receipts_repinned": false,
+  "upstream_whitespace_preserved": true,
+  "staged_whitespace_check": "Upstream LICENSE and source retain existing whitespace; check owned edits excluding only those two immutable files.",
+  "biological_data_or_darwin_binary_included": false,
+  "complete_qfo_runtime": false,
+  "data_rights_cleared": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}

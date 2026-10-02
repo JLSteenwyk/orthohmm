@@ -540,6 +540,13 @@ This audit does not launch work or replace a quiet-window review.
 
 ## Reproduce Statistics
 
+The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
+ships the unchanged, pinned upstream Python source and full license for AST
+comparison tests. These tests no longer need the external QfO checkout: 33
+cases pass in a copy with original-checkout reads forbidden. Production source
+admission and full raw FAS scoring still require their original dependencies;
+do not silently substitute this test snapshot into historical executions.
+
 The [SwissTrees arithmetic component](results/SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
 provides a version-pinned archive and `restore` command needing only standard
 Python. Actual fresh restoration under system Python 3.12 reproduces all four
