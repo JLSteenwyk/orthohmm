@@ -16,6 +16,12 @@ complete executable study, an installed package, a public release or a DOI.
   mode for every exported file. Its digest must be retained outside the bundle
   before transfer; internal consistency alone is not authenticity.
 
+The optional `orthobench-inputs` profile additionally exports exactly three
+frozen JSON manifests used by the existing acquisition verifier and rebinder.
+It checks their fixed scientific hashes, requires both helper scripts, and
+records schema v2 and the explicit profile in the index. Default `source-only`
+exports and historical v1 verification retain their original selection.
+
 Dataset/reference files, test samples, native predictions, scoring outputs,
 result receipts/plans, figures, manuscript assets, third-party source archives,
 dependency wheels, binaries and runtime/OS images are excluded. This avoids
@@ -23,6 +29,14 @@ newly redistributing those materials; it does not resolve every source-file
 attribution or clear an arbitrary future release. Both project license copies
 are retained. Do not interpret their presence as an override of third-party
 notices or terms.
+
+The only result-file exception in `orthobench-inputs` is the three acquisition
+support manifests. They carry filenames, hashes and historical provenance,
+not FASTA sequence content or reference-group memberships. Their inclusion
+does not authorize redistribution of separately acquired upstream data.
+The documents are unmodified historical records and also contain earlier
+plans, aggregate scores and provenance. Those fields are not a current
+result-table replacement or commands to execute on their original paths.
 
 The directories are separate intentionally. Do not merge their revision
 identities, install workflow source over the frozen scientific package, or
@@ -54,6 +68,44 @@ component mappings, file modes and exact inventory; it rejects symlinks,
 escaping/duplicate/missing/extra paths and performs syntax compilation without
 executing or importing exported Python files. Syntax success is not API,
 dependency, numerical-equivalence or native reproduction validation.
+
+## OrthoBench Input Preparation
+
+Use the optional profile to provide the verifier's and rebinder's manifest
+dependencies in the exported tree:
+
+```bash
+python -B benchmark_tools/bundle_publication_source.py build \
+  --repo . --revision WORKFLOW_COMMIT --profile orthobench-inputs \
+  --output /absolute/fresh/source-component
+```
+
+Verify its index as above before using its scripts. Then acquire the upstream
+data separately at the frozen commit. These commands require Git/network
+for acquisition and standard-library Python for verification/rebinding; use
+fresh acquisition and output paths:
+
+```bash
+git clone --no-checkout https://github.com/davidemms/Open_Orthobench.git /absolute/fresh/orthobench
+git -C /absolute/fresh/orthobench checkout --detach 872d6f30592ab5ff837224db16a514b3f2bb916a
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/verify_orthobench_acquisition.py \
+  --checkout /absolute/fresh/orthobench \
+  --results /relocated/source-component/workflow/benchmark_tools/results \
+  --output /absolute/fresh/acquisition.json
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/rebind_orthobench_data.py \
+  --manifest /relocated/source-component/workflow/benchmark_tools/results/integrated_orthobench_data_20260927.json \
+  --sha256 fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061 \
+  --acquisition /absolute/fresh/orthobench --output /absolute/fresh/rebound
+```
+
+The verifier compares 95 upstream files with their frozen Git blobs, including
+93 benchmark inputs. The rebinder preserves the ordered 12 FASTA, 70 reference
+and 11 low-certainty identities but replaces their historical paths with local
+paths. Supply `rebound/data.json` and its digest from `rebound/rebind.json` to
+the separately provisioned integrated workflow. References are scoring inputs,
+not inference inputs. No upstream scorer or native inference runs here.
+The native wheel sets, aligner/tree builder, base Python and installer still
+require separate preparation; this profile is not the complete executable study.
 
 ## Executable Study Boundary
 

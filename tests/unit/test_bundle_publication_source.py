@@ -13,8 +13,8 @@ def git(repo, *args):
     return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
 
 
-@pytest.fixture
-def exported(tmp_path, monkeypatch):
+@pytest.fixture(params=["source-only", "orthobench-inputs"])
+def exported(tmp_path, monkeypatch, request):
     repo = tmp_path / "repo"
     repo.mkdir()
     git(repo, "init", "-q")
@@ -38,13 +38,20 @@ def exported(tmp_path, monkeypatch):
         path = repo / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content)
+    if request.param == "orthobench-inputs":
+        root = Path(module.__file__).resolve().parent.parent
+        for name in [*module.SUPPORT_PINS, "benchmark_tools/verify_orthobench_acquisition.py",
+                     "benchmark_tools/rebind_orthobench_data.py"]:
+            target = repo / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes((root / name).read_bytes())
     git(repo, "add", ".")
     git(repo, "commit", "-qm", "Workflow")
     revision = git(repo, "rev-parse", "HEAD")
     # Mutable source must never enter the committed export.
     (repo / "benchmark_tools/probe.py").write_text("not valid python !")
     bundle = tmp_path / "bundle"
-    result = module.build(repo, revision, bundle)
+    result = module.build(repo, revision, bundle, request.param)
     return repo, bundle, result
 
 
@@ -61,9 +68,16 @@ def test_component_revisions_and_exclusions(exported):
     assert result["status"] == "publication_source_components_verified"
     assert (bundle / "scientific/orthohmm/version.py").read_text() == "VERSION = 'fixture'\n"
     assert (bundle / "workflow/benchmark_tools/probe.py").read_text() == "pass\n"
-    assert not (bundle / "workflow/benchmark_tools/results").exists()
+    index = json.loads((bundle / "SOURCE_INDEX.json").read_text())
+    support = index.get("profile") == "orthobench-inputs"
+    assert (bundle / "workflow/benchmark_tools/results").exists() is support
+    if support:
+        assert {p.relative_to(bundle / "workflow").as_posix()
+                for p in (bundle / "workflow/benchmark_tools/results").iterdir()} == set(module.SUPPORT_PINS)
+    else:
+        assert index["schema"] == "publication_source_components_v1"
     assert not (bundle / "workflow/tests/samples").exists()
-    assert result["components"] == dict(scientific=5, workflow=5)
+    assert result["components"] == dict(scientific=5, workflow=10 if support else 5)
     assert result["executable_benchmark_reproduced"] is False
     assert result["publication_ready"] is False
     assert result["redistribution_clearance"] is False
@@ -153,3 +167,70 @@ def test_existing_destination_refused(exported):
     repo, bundle, result = exported
     with pytest.raises(FileExistsError):
         module.build(repo, result["workflow_revision"], bundle)
+
+
+def test_unknown_profile_rejected(tmp_path):
+    with pytest.raises(ValueError, match="Unknown source profile"):
+        module.build(tmp_path, "HEAD", tmp_path / "output", "everything")
+
+
+def test_default_selection_still_excludes_present_support(exported, tmp_path):
+    repo, _, result = exported
+    bundle = tmp_path / "default-export"
+    module.build(repo, result["workflow_revision"], bundle)
+    index = json.loads((bundle / "SOURCE_INDEX.json").read_text())
+    assert index["schema"] == "publication_source_components_v1"
+    assert "profile" not in index
+    assert not (bundle / "workflow/benchmark_tools/results").exists()
+
+
+@pytest.mark.parametrize("defect", ["profile", "schema", "support_pin", "support_missing", "helper_missing"])
+def test_support_contract_rejected(exported, defect):
+    _, bundle, result = exported
+    path = bundle / "SOURCE_INDEX.json"
+    index = json.loads(path.read_text())
+    if index.get("profile") != "orthobench-inputs":
+        # v1 cannot reinterpret the legacy selection even with a new external digest.
+        digest = rewrite_index(bundle, lambda value: value.update(profile="orthobench-inputs"))
+        with pytest.raises(ValueError, match="Historical source schema"):
+            module.verify(bundle, digest)
+        return
+    if defect in {"profile", "schema"}:
+        index["profile" if defect == "profile" else "schema"] = "unreviewed"
+    else:
+        name = ("benchmark_tools/rebind_orthobench_data.py" if defect == "helper_missing"
+                else next(iter(module.SUPPORT_PINS)))
+        target = bundle / "workflow" / name
+        if defect == "support_pin":
+            target.write_text("{}\n")
+            for row in index["files"]:
+                if row["path"] == "workflow/" + name:
+                    row.update(module.identity(target.read_bytes()))
+        else:
+            target.unlink()
+            index["files"] = [row for row in index["files"] if row["path"] != "workflow/" + name]
+    path.write_text(json.dumps(index))
+    with pytest.raises(ValueError):
+        module.verify(bundle, module.identity(path.read_bytes())["sha256"])
+
+
+@pytest.mark.parametrize("defect", ["missing", "changed"])
+def test_builder_rejects_changed_support_before_output(exported, tmp_path, defect):
+    repo, bundle, result = exported
+    name = next(iter(module.SUPPORT_PINS))
+    target = repo / name
+    if target.exists() and defect == "missing":
+        git(repo, "rm", name)
+    elif defect == "changed":
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text("{}\n")
+        git(repo, "add", name)
+    else:
+        # The legacy fixture already lacks the acquisition manifests.
+        pass
+    if git(repo, "diff", "--cached", "--name-only"):
+        git(repo, "commit", "-qm", "Defective support")
+    output = tmp_path / "rejected"
+    with pytest.raises(ValueError):
+        module.build(repo, "HEAD", output, "orthobench-inputs")
+    assert not output.exists()
