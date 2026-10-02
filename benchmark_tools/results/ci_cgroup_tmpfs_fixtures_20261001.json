@@ -1,0 +1,92 @@
+{
+  "base_commit": "f41db3b17ea4e7dda95d195fb70c195f61170977",
+  "status": "synthetic_scope_and_native_tmpfs_capabilities_locally_validated",
+  "new_remote_fixture_corrections_confirmed": false,
+  "production_modules_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "observed_remote_failure": {
+    "run_id": 36957249412,
+    "source_commit": "3e126cd7ca05c062c07cd5b910547519e9e3a18a",
+    "job_id": 110682852675,
+    "platform": "macOS ARM",
+    "python": "3.11",
+    "log": {
+      "path": "benchmarks/work/ci_remote_3e126cd7_20261001/110682852675.log",
+      "bytes": 2536594,
+      "sha256": "0e31d4163d3938d951011e0247abaf7111b20f20f0411d3f8c56a1cd598e8b07"
+    },
+    "summary": {"passed": 13601, "failed": 78, "errors": 20, "skipped": 106, "warnings": 30, "duration_s": 546.98},
+    "worker_cgroup_read_failures": 9,
+    "tmpfs_preparation_fixture_errors": 8,
+    "terminal_run_observed_utc": "2026-10-02T03:07:07.512049+00:00",
+    "all_five_test_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "sibling_causes_inferred": false
+  },
+  "existing_ci": {
+    "run_id": 36958630187,
+    "source_commit": "f41db3b17ea4e7dda95d195fb70c195f61170977",
+    "all_five_test_jobs_in_progress_observed_utc": "2026-10-02T03:07:08.117712+00:00",
+    "job_step_observation": {
+      "job_id": 110687122081,
+      "observed_utc": "2026-10-02T03:12:21.991354+00:00",
+      "status": "in_progress",
+      "conclusion": null,
+      "api_reported_successful_steps": ["Install test OpenMP compiler", "Install dependencies", "Build checkout CPU kernels", "Install HMMER", "Install MCL"],
+      "run_tests": "in_progress",
+      "log_inspected": false,
+      "compiler_or_library_versions_verified_here": false,
+      "native_regression_success_inferred": false
+    },
+    "includes_new_cgroup_tmpfs_fixtures": false
+  },
+  "module_cases": {
+    "tests.unit.test_measure_scaling_root_context": 28,
+    "tests.unit.test_prepare_threadripper_run": 23,
+    "tests.unit.test_prepare_native_scaling_run": 8
+  },
+  "new_cases_included": 17,
+  "native_linux_validation": {
+    "cases": 59, "passed": 59, "failures": 0, "errors": 0, "skipped": 0,
+    "pytest_duration_s": 0.89, "junit_suite_duration_s": 0.844,
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/cgroup_tmpfs_fixture_tests.xml",
+      "bytes": 8921,
+      "sha256": "453aa42f797b0db9280b1484edb90f17147ae2a021f526f198023593a8dc7c54"
+    }
+  },
+  "cgroup_tmpfs_absence_simulation": {
+    "host_platform": "Linux",
+    "unavailable_before_module_import": ["Path.read_text for /proc/self/cgroup", "Path.is_dir for /dev/shm"],
+    "other_file_io": "unchanged",
+    "cases": 59, "passed": 51, "failures": 0, "errors": 0, "skipped": 8,
+    "pytest_duration_s": 0.93, "junit_suite_duration_s": 0.876,
+    "skipped_module": "tests.unit.test_prepare_threadripper_run",
+    "skipped_scope": "eight actual /dev/shm copy/recheck cases only",
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/cgroup_tmpfs_absence_tests.xml",
+      "bytes": 10937,
+      "sha256": "892d0d4ad6d0805b5691680591fad6da6ac4a5a879c7d4574c45fbb9b2a9d1c0"
+    }
+  },
+  "sources": [
+    {"path": "tests/unit/test_measure_scaling_root_context.py", "bytes": 10198, "sha256": "60b890867d9b27d42241b2721fe781cda67e7abce791232ab03f7fac003bf534"},
+    {"path": "tests/unit/test_prepare_threadripper_run.py", "bytes": 6689, "sha256": "ec1e444244c710c6e06514c5e3c817ceeeb97bd9de7a146177dff7c7eb8dd5ee"}
+  ],
+  "unchanged_inputs": [
+    {"path": "benchmark_tools/measure_scaling_root_context.py", "bytes": 8111, "sha256": "91b7ee52887c14a04b3b98cf63450a4d5f38b207c881b35480e6be57430faefe"},
+    {"path": "benchmark_tools/prepare_threadripper_run.py", "bytes": 5588, "sha256": "85e06961dd4ad38b09b5968520aa203e4c1746ed4af8e41289706a11501df582"},
+    {"path": "benchmark_tools/prepare_native_scaling_run.py", "bytes": 4756, "sha256": "75c347d34f1a259a7039af1065b70aef6100175e08d36ed1441a86dd5f9214d1"}
+  ],
+  "limitations": [
+    "Native and simulated panels overlap; Linux simulation is not macOS execution.",
+    "Synthetic worker evidence and pure layout acceptance do not establish actual resources, tmpfs availability or memory charging.",
+    "Absent /dev/shm causes explicit native skips, never a disk-backed replacement or production fallback.",
+    "Successful API setup steps do not verify compiler/library versions or native regression outcomes.",
+    "No controlled timing admission, dataset-wide inference, source/rights clearance or publication readiness follows."
+  ]
+}

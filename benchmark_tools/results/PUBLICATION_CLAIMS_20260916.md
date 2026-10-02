@@ -141,6 +141,13 @@ test-job GNU GCC and fresh baseline libraries, not test skips or weakened guards
 70 focused local cases pass, including fresh staged build/load/alignment.
 New macOS native execution remains unverified; unchanged kernels, scientific
 settings and controlled-resource boundaries are retained.
+The [cgroup/tmpfs fixture follow-up](CI_CGROUP_TMPFS_FIXTURES_20261001.md)
+removes host dependence from synthetic worker cases while retaining actual
+tmpfs-copy checks and fail-closed missing-scope/path guards. All 59 local cases
+pass; deliberate capability absence gives 51 pass and eight native skips in the
+same scope. Compiler/build setup is API-reported successful in one live macOS
+job, but native regression and the new fixture corrections are not yet confirmed.
+No production fallback, memory-charging proof or controlled timing follows.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

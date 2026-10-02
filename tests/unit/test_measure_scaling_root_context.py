@@ -8,6 +8,19 @@ from benchmark_tools import measure_scaling_root_context as module
 from benchmark_tools.measure_native_root_context import measure_native_run as historical
 
 
+@pytest.fixture
+def synthetic_worker_scope(monkeypatch):
+    membership = "0::/slurm/job_123/step_0/user/task_0\n"
+    read_text = Path.read_text
+    def read(path, *args, **kwargs):
+        if path == Path("/proc/self/cgroup"):
+            return membership
+        return read_text(path, *args, **kwargs)
+    monkeypatch.setattr(Path, "read_text", read)
+    monkeypatch.setattr(module, "snapshot", lambda: {"fixture": "synthetic host counters"})
+    return membership
+
+
 def test_long_settings_accepted_but_historical_boundary_unchanged():
     module.validate(["/bin/true"], 20, 85800, 1.)
     with pytest.raises(ValueError, match="frozen"):
@@ -24,17 +37,18 @@ def test_other_settings_rejected(command, cpus, timeout, interval):
 
 
 @pytest.mark.parametrize("gate", [{"abort": True}, {"go": 1}, {"go": False}, {}])
-def test_worker_abort_never_launches_native(tmp_path, monkeypatch, gate):
+def test_worker_abort_never_launches_native(tmp_path, monkeypatch, gate, synthetic_worker_scope):
     module.save(tmp_path / "command.json", dict(command=["/bin/true"], cpus=20, timeout_s=85800, interval_s=1.))
     monkeypatch.setattr(module, "wait_file", lambda path: gate)
     monkeypatch.setattr(module, "run_command", lambda *a: pytest.fail("unobserved native launch"))
     module.worker(tmp_path)
+    assert json.loads((tmp_path / "ready.json").read_text())["cgroup"] == synthetic_worker_scope
     assert (tmp_path / "aborted_before_native.json").exists()
     assert not (tmp_path / "done.json").exists()
 
 
 @pytest.mark.parametrize("code,timed_out", [(0,False), (7,False), (124,True)])
-def test_worker_retains_native_status_and_exact_long_timeout(tmp_path, monkeypatch, code, timed_out):
+def test_worker_retains_native_status_and_exact_long_timeout(tmp_path, monkeypatch, code, timed_out, synthetic_worker_scope):
     command = ["/bin/true"]
     module.save(tmp_path / "command.json", dict(command=command, cpus=20, timeout_s=85800, interval_s=1.))
     def wait(path):
@@ -156,7 +170,7 @@ def test_six_digit_point_names_sort_beyond_ten_thousand():
 
 
 @pytest.mark.parametrize("code", [0, 7])
-def test_worker_runs_real_short_subprocess_with_long_timeout_contract(tmp_path, monkeypatch, code):
+def test_worker_runs_real_short_subprocess_with_long_timeout_contract(tmp_path, monkeypatch, code, synthetic_worker_scope):
     command = [module.sys.executable, "-c", f"print('scaling worker smoke'); raise SystemExit({code})"]
     module.save(tmp_path / "command.json", dict(command=command, cpus=20, timeout_s=85800, interval_s=1.))
     monkeypatch.setattr(module, "wait_file", lambda path: {"go": True} if path.name == "go.json" else {"release": True})
@@ -165,4 +179,24 @@ def test_worker_runs_real_short_subprocess_with_long_timeout_contract(tmp_path, 
     assert done["exit_code"] == code and done["timed_out"] is False
     assert done["started_ns"] < done["finished_ns"]
     assert len(done["snapshots"]) == 2
+    assert done["snapshots"] == [{"fixture": "synthetic host counters"}] * 2
+    assert json.loads((tmp_path / "ready.json").read_text())["cgroup"] == synthetic_worker_scope
     assert "scaling worker smoke" in (tmp_path / "native.log").read_text()
+
+
+@pytest.mark.parametrize("error", [FileNotFoundError, PermissionError])
+def test_unavailable_native_cgroup_stops_before_readiness_or_launch(tmp_path, monkeypatch, error):
+    module.save(tmp_path / "command.json", dict(command=["/bin/true"], cpus=20, timeout_s=85800, interval_s=1.))
+    read_text = Path.read_text
+    def read(path, *args, **kwargs):
+        if path == Path("/proc/self/cgroup"):
+            raise error("synthetic unavailable cgroup")
+        return read_text(path, *args, **kwargs)
+    def forbidden(*args):
+        pytest.fail("Unavailable scope reached readiness gate, host observation or native launch")
+    monkeypatch.setattr(Path, "read_text", read)
+    for name in ("wait_file", "snapshot", "run_command"):
+        monkeypatch.setattr(module, name, forbidden)
+    with pytest.raises(error, match="unavailable cgroup"):
+        module.worker(tmp_path)
+    assert {path.name for path in tmp_path.iterdir()} == {"command.json"}

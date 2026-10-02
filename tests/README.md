@@ -71,6 +71,13 @@ all three baseline CPU libraries for checkout imports as well as installation.
 The checkout helper rejects inherited, incomplete, unloadable or nonbaseline
 libraries before exposing them. This prospective native setup still requires
 remote verification; it does not change scientific defaults or benchmark builds.
+Synthetic long-worker tests explicitly inject cgroup identity and resource
+snapshots; their short subprocess checks do not poll host counters. Actual
+`/dev/shm` copy cases skip when unavailable, without substituting disk storage.
+Portable path guards still test all three layouts and reject unsafe input/output
+bindings and pre-phylogeny commands. The
+[scope and tmpfs validation](../benchmark_tools/results/CI_CGROUP_TMPFS_FIXTURES_20261001.md)
+distinguishes fixture evidence from real preparation or memory charging.
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude

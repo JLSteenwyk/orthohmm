@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Synthetic Cgroup Scope And Native Tmpfs Capability (2026-10-01)
+
+Previous turn is progress at pushed f41db3b1. Reread objective/ledger and observe
+actual handles. At 03:07:07 UTC all five source-3e test jobs fail, wheel/docs
+succeed. Source-f41 has five live tests; Python 3.11 job API at 03:12:21 UTC
+reports compiler/dependency/checkout-kernel/HMMER/MCL setup success and live
+tests. No new source-f41 log or compiler/library versions inspected; do not
+infer native regression outcomes, sibling causes or restart jobs.
+
+Reuse retained source-3e full-test log: nine long-worker cases fail on actual
+cgroup reads and eight copy fixtures error without /dev/shm. Explicit synthetic
+worker fixture replaces only scope read and host snapshots; short owned commands
+still test actual exit/log/clock ordering without host-counter polling. Two new
+missing/inaccessible-cgroup checks reject before readiness/observer/native launch.
+Real tmpfs copy cases skip unsupported capability; fifteen portable layout cases
+exercise unchanged guards without preparing inputs or claiming memory charging.
+
+**59 focused Linux cases pass in 0.89 seconds**, zero failures/errors/skips,
+17 new cases included. Deliberate cgroup/tmpfs absence before module import:
+**51 pass and eight native copy skips in 0.93 seconds**, no failures/errors.
+Same scope, not additive or actual macOS. Three production modules byte-equal
+to base; source/JUnit pins retained.
+[Evidence and preparation boundaries](CI_CGROUP_TMPFS_FIXTURES_20261001.md).
+
+Commit/push and observe actual new CI. Remote native regression/fixture outcomes,
+other utility/path/data failures and broader release work remain open. No workflow,
+package, compiler, workspace library, scientific/default/score/admission change,
+host poll/question, DGX or unrelated workload/service action. All owned commands
+terminate; tiny fixtures are not controlled resources and timing stays deferred.
+Full goal remains active with remaining uncertainty, source/rights, comparable
+timing and final release/archive requirements intact.
+
 ## Native Checkout Libraries And Scoped Remote Confirmation (2026-10-01)
 
 Previous turn is progress at pushed 3e126cd7. Reread objective/ledger and inspect
