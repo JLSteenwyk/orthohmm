@@ -13,6 +13,14 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [boundary post-run integration fix](THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
+corrects the periodic-cadence assumption for the explicit two-point native
+control. All 643 focused tests pass, plus three persisted offline synthetic
+reviews and a stdlib pin/count/arithmetic readback. Continuous process checks
+remain; boundary PSI is labelled interval-average diagnostics rather than
+periodic coverage. This is not actual environment handoff, quiet-host evidence,
+observer slowdown or complete engineering/production admission.
+
 The [private native-observer control wiring](THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
 implements the retained 54-task route through both collectors and the existing
 environmental safeguards. All 559 focused cases pass, including engineering

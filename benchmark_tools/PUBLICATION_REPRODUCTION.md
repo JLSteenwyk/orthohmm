@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [boundary environmental-review correction](results/THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
+fixes periodic PSI cadence being incorrectly applied to the two-point control.
+The explicit boundary scope keeps point integrity and whole-run process checks;
+production/default periodic checks are unchanged. All 643 focused cases pass.
+Three persisted offline synthetic cases and independent readback validate the
+integration, not actual native handoff, quiet-host proof or engineering timing.
+
 The [private native-observer control wiring](results/THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
 adds the missing route for the retained 54-task overhead plan, engineering-only
 identities/reviews, both collectors and unchanged environmental safeguards.

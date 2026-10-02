@@ -1,0 +1,119 @@
+{
+  "limitations": [
+    "Offline synthetic JSON/JSONL, not native timing or an actual environmental handoff.",
+    "Stdlib readback independently checks pins, counts, clock spans and CPU arithmetic, not the full reviewer semantics.",
+    "Two-boundary PSI is interval-average diagnostics, never periodic coverage or within-run peak pressure.",
+    "Periodic/default pressure cadence, preflight limits and whole-run process safeguards remain in force.",
+    "No new full runtime/controller inventory or lookup check; older source-bound receipts are not approval for changed helpers.",
+    "Real environment/policy/readiness, quiet window, all 54 engineering outcomes/full pair admission and 27 production runs remain required."
+  ],
+  "offline_composition": {
+    "boundary_point_period_s": 100,
+    "decisions": [
+      false,
+      true,
+      false
+    ],
+    "driver": {
+      "bytes": 4185,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/probe.py",
+      "sha256": "93fc9f9e47c05f8678bdf3dbb33dac244e761ccd9556dd278b8c9b677f7d3441"
+    },
+    "independently_recomputed_foreign_cpu_maxima": [
+      0.0,
+      0.0,
+      0.5
+    ],
+    "initial_readback_failure": "Exact nominal 0.3-second assertion failed before output creation; fixture float-to-int construction yields 299999999 ns. Raw evidence is unchanged.",
+    "native_points_per_case": 2,
+    "point_duration_ns": 299999999,
+    "process_intervals_per_case": 50,
+    "readback": {
+      "bytes": 6924,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/readback.py",
+      "sha256": "5792e64cc10a0b4c4f0b1d324d35bd279662c06adc3a046e0d887d4a0bc5610e"
+    },
+    "reviews": [
+      {
+        "bytes": 6303,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/periodic_assumption/process_stream_review.json",
+        "sha256": "372d701e823a16e9cc3e03c8f1f36bfe4d3c4d5d5f2d147ba5c82ec412406724"
+      },
+      {
+        "bytes": 6876,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/boundary_review/process_stream_review.json",
+        "sha256": "9d4673202d386da07caa1f4a77f6524b362e30f438ce07b776792f4487e23c19"
+      },
+      {
+        "bytes": 6982,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/contaminated_boundary/process_stream_review.json",
+        "sha256": "cd81fcaac241fb5d5cdefeec11b7a23fad666d24bdd70dbfb9a58e42ad011330"
+      }
+    ],
+    "summary": {
+      "bytes": 13805,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_environment_20261002/summary.json",
+      "sha256": "2542ff94952379f5c0440dc6d1958ae01d351433759e5fca1fc09c5b7b42485b"
+    },
+    "synthetic_evidence": true,
+    "synthetic_native_duration_ns": 98000000000,
+    "unique_pinned_files_verified": 37
+  },
+  "publication_ready": false,
+  "regression": {
+    "errors": 0,
+    "failures": 0,
+    "junit": {
+      "bytes": 98874,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_review_final_tests_20261002.xml",
+      "sha256": "a4b5632547abbc46195c9f928037eb49f9484db75314b09e2561af1615099709"
+    },
+    "passed": 643,
+    "preceding_focused_junit": {
+      "bytes": 45119,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_boundary_review_focused_20261002.xml",
+      "sha256": "7ceae2ef46f7204b156bf6309034bd04a35356a4e0dcf1698470d5e386c4468c"
+    },
+    "preceding_focused_passed": 285,
+    "skipped": 0,
+    "testsuite_time_s": 39.809
+  },
+  "runtime_environment_admission_complete": false,
+  "schema": "threadripper_boundary_environment_validation_v1",
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "source_commit": "9643773a502413b82b566df4cd59cae5e437ec1f",
+  "source_files": [
+    {
+      "bytes": 20328,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "sha256": "dcb5806ff0b6ff112ec0abae173da1878bdc0136a77f735c31341da3fac4492b"
+    },
+    {
+      "bytes": 12110,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_process_stream.py",
+      "sha256": "036c08ec3b2aa4969410fb0d83fdb3d00c3bd4ef2844a230820237199ba36540"
+    },
+    {
+      "bytes": 6717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_threadripper_pressure_stream.py",
+      "sha256": "5ac0a27ae5f0f281853309d0b8dcc38db2ee4d4fc574ded94211d7ac61858495"
+    },
+    {
+      "bytes": 40136,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_threadripper_scaling.py",
+      "sha256": "9191d01504b8c8924b9073bb707620b594dd859474d2ab2c24f77c172b2717e2"
+    },
+    {
+      "bytes": 22574,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_review_threadripper_process_stream.py",
+      "sha256": "6fd54e3e42e9d2366b356e0220b86d99719f2cbeb368a48fc461db4bcf85f36f"
+    },
+    {
+      "bytes": 9347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_review_threadripper_pressure_stream.py",
+      "sha256": "4395808c00b29ed8ac67242237f8ecc288c6c2f8805bd555f885c21c9c106191"
+    }
+  ],
+  "status": "boundary_review_regression_and_offline_composition_passed"
+}

@@ -95,6 +95,13 @@ attempt ledger; it is not silently retried.
 
 ## Remaining Work
 
+The [boundary post-run correction](results/THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md)
+passes the validated task arm to environmental review. Boundary-only PSI now
+has an explicit two-point diagnostic scope; it is not required to satisfy
+periodic native-point cadence. Whole-run process monitoring and all default
+periodic/production behavior remain unchanged. All 643 focused cases pass;
+offline synthetic decisions are fail/pass/fail, not real host eligibility.
+
 The [native-observer control route](results/THREADRIPPER_OVERHEAD_EXECUTOR_20261002.md)
 now selects either collector for the separate 54-task engineering panel.
 It requires an explicit private lookup and `overhead_plan`, engineering

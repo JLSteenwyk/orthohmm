@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Boundary Environmental Review Integration Fixed (2026-10-02)
+
+Previous turn progressed at pushed a6ae485f by wiring the engineering executor.
+Read the original goal/current ledger, preserve timing deferral and inspect
+post-run review. Discover a concrete integration defect: both arms use periodic
+PSI cadence, so a deliberately two-point boundary run longer than the bound
+fails even under diagnostic-only pressure. Fix before real execution.
+
+Propagate the validated task arm to post-run review. Require explicit boundary
+report/job/native/policy identity, exactly two points and diagnostic-only role.
+Preserve read/boot/group/CPU/counter/window/point-duration integrity and all
+whole-run process/foreign-CPU/cadence/configuration safeguards. Boundary PSI
+has distinct pressure/environment schemas and interval-average labels, not
+periodic coverage. Default periodic/v1/v2 and production paths are unchanged;
+collectors, scientific work, prospective budgets and command plan stay frozen.
+
+Focused regression passes 285; final 13-module panel passes 643 in 40.13 seconds,
+no failures/errors/skips. Commit source 9643773a before executing a persisted
+offline synthetic reviewer composition under test Python. Same native bytes
+produce expected fail/pass/fail decisions for periodic assumption, explicit
+boundary and injected outside CPU. No actual environment worker/host observer
+or native command executes; the 98-second clock span is fabricated fixture data.
+Independent stdlib readback verifies 37 pinned files, sample/spans/flags and
+CPU arithmetic 0/0/0.5. Preserve an initial exact-duration readback assertion
+failure before receipt output; correct the fixture's 1 ns truncation expectation
+without changing or regenerating any raw evidence.
+See [scope and retained checks](THREADRIPPER_BOUNDARY_ENVIRONMENT_REVIEW_20261002.md).
+
+Update current guides/claims and commit/push scoped records. All owned test/
+probe/readback handles are terminal. No timing launch, contention poll, quiet
+window question, DGX, service/unrelated-work modification, shared upgrade,
+archive rebuild or PDF rerender. Changed helper bytes still require final
+runtime binding. Real policy/readiness/environmental handoff, isolation,
+all 54 engineering outcomes/full pair admission and 27 production runs remain
+outstanding. The original publication goal remains active.
+
 ## Private Native-Observer Control Route Implemented (2026-10-02)
 
 Previous goal turn was a status-only reply (no progress); revalidate the
