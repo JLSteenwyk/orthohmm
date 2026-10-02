@@ -28,6 +28,13 @@ modules. New workflow revisions also include the public-artifact acquisition
 helper. It does not include package archives, the pip wheel, a Conda bootstrap
 or native tools. The four result-document exceptions are explicitly pinned.
 
+The optional `native-wheels` profile adds three further fixed documents: the
+admitted 12-wheel inventory and exact inference/reader hash locks. It requires
+the wheel and base acquisition helpers in addition to native preparation.
+Earlier profile selections and their historical verification remain unchanged.
+This seven-document exception carries metadata/locks, not wheel payloads,
+native predictions or raw sequence/reference content.
+
 Dataset/reference files, test samples, native predictions, scoring outputs,
 result receipts/plans, figures, manuscript assets, third-party source archives,
 dependency wheels, binaries and runtime/OS images are excluded. This avoids
@@ -180,6 +187,45 @@ installation recommendation. Conda metadata equality does not verify every
 prefix-transformed payload, and shared OS libraries remain outside scope.
 This step does not install the scientific environments, infer orthology,
 admit timing, or complete the full study release.
+
+## Historical Inference and Reader Wheel Acquisition
+
+Export `--profile native-wheels` instead of `native-preparation` and verify
+its externally anchored index before using the following acquisition workflow.
+Supply the exact unpublished OrthoHMM setup-overlay wheel from the retained
+private execution archive, 144,444 bytes, SHA-256
+`cfdfde5ed1be29e4080dd3571f5c0fc5fc5f45b57ebe5ee9b3c7559096c3b93d`.
+The matching pip wheel can come from the preceding public base acquisition.
+Do not treat OrthoHMM 0.5.0 as an available PyPI release or silently replace it
+with another local build. Without that exact supplied wheel, this workflow
+does not produce the complete historical inference environment.
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/acquire_publication_wheels.py \
+  --inventory /relocated/source-component/workflow/benchmark_tools/results/integrated_wheel_elf_20260927.json \
+  --inference-lock /relocated/source-component/workflow/benchmark_tools/results/publication_recovery_requirements_20260926.txt \
+  --reader-lock /relocated/source-component/workflow/benchmark_tools/results/publication_reader_requirements_20260927_v2.txt \
+  --orthohmm-wheel /absolute/supplied/orthohmm-0.5.0-cp310-cp310-linux_x86_64.whl \
+  --pip-wheel /absolute/base-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl \
+  --output /absolute/fresh/native-wheels --acknowledge-historical-runtime
+```
+
+The controller reads the exact retained inventory and locks, not the historical
+wheel paths embedded in its metadata. It verifies the two supplied artifacts,
+downloads ten exact public third-party wheels using release-specific PyPI
+metadata and preserves names/platforms/sizes/hashes without solving or choosing
+latest versions. Copies prepare 11 `inference_wheels` and five `reader_wheels`
+with the unchanged locks at `inference_requirements.txt` and
+`reader_requirements.txt`; the union has 12 artifacts. The prior safe HTTPS
+and response bounds apply, with partial/failure retention and no retry.
+
+The inference set contains historical Leiden 0.11.0, not the different 0.12
+overlay lock. The reader set contains the admitted Biopython 1.87 amendment,
+not the retained 1.86 history. `complete.json` binds all supplied/downloaded
+wheel bytes, provider metadata, copies and exact locks. This prepares artifacts,
+not an installed/compatible/security-cleared runtime, scientific source audit,
+declared dependency resolution or inference admission. Installation, tool and
+reader-source assets, bootstrap/OS and rights obligations remain separate.
 
 ## Executable Study Boundary
 

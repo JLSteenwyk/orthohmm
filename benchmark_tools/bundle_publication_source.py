@@ -26,10 +26,21 @@ BASE_HELPERS = {"benchmark_tools/" + name + ".py" for name in (
     "install_publication_base", "stage_base_archives", "run_integrated_publication_workflow",
     "audit_recovery_install", "audit_frozen_overlay_install", "audit_leiden_recovery_wheel",
     "prepare_frozen_build_overlay", "verify_frozen_source_archive", "prepare_ob_candidate_neighborhood")}
-PROFILES = {"source-only", "orthobench-inputs", "native-preparation"}
+WHEEL_SUPPORT_PINS = {
+    "benchmark_tools/results/integrated_wheel_elf_20260927.json":
+        "97eaa8cca56db98b337ad161e619006ef7a91433d2c704e9dcc16ceacc5e7dab",
+    "benchmark_tools/results/publication_recovery_requirements_20260926.txt":
+        "813751262c9405155cc2f1974a2c32187b352f88307e2332e0cec9df35708ae3",
+    "benchmark_tools/results/publication_reader_requirements_20260927_v2.txt":
+        "53df1cabd91c2fb18179951ebc95166ae49ba843f4015e0f417468d2a8265063",
+}
+WHEEL_HELPERS = {"benchmark_tools/acquire_publication_wheels.py", "benchmark_tools/acquire_publication_base.py"}
+PROFILES = {"source-only", "orthobench-inputs", "native-preparation", "native-wheels"}
 
 
 def support_pins(profile):
+    if profile == "native-wheels":
+        return {**SUPPORT_PINS, **BASE_SUPPORT_PINS, **WHEEL_SUPPORT_PINS}
     if profile == "native-preparation":
         return {**SUPPORT_PINS, **BASE_SUPPORT_PINS}
     return SUPPORT_PINS if profile == "orthobench-inputs" else {}
@@ -66,11 +77,13 @@ def required(component, profile):
     if component == "scientific":
         return {"LICENSE.md", "setup.py", "orthohmm/version.py"}
     names = {"LICENSE.md", RUNNER, GUIDE}
-    if profile in {"orthobench-inputs", "native-preparation"}:
+    if profile in {"orthobench-inputs", "native-preparation", "native-wheels"}:
         names |= {*SUPPORT_PINS, "benchmark_tools/verify_orthobench_acquisition.py",
                   "benchmark_tools/rebind_orthobench_data.py"}
-    if profile == "native-preparation":
+    if profile in {"native-preparation", "native-wheels"}:
         names |= {*BASE_SUPPORT_PINS, *BASE_HELPERS}
+    if profile == "native-wheels":
+        names |= {*WHEEL_SUPPORT_PINS, *WHEEL_HELPERS}
     return names
 
 
@@ -111,7 +124,7 @@ def verify(directory, manifest_sha):
         profile = "source-only"
     elif manifest["schema"] == "publication_source_components_v2":
         profile = manifest.get("profile")
-        if profile not in {"orthobench-inputs", "native-preparation"}:
+        if profile not in PROFILES - {"source-only"}:
             raise ValueError("Unsupported acquisition-support profile")
     else:
         raise ValueError("Unknown source schema")
@@ -183,15 +196,19 @@ def build(repo, revision, output, profile="source-only"):
                         "Integrity and syntax checks do not execute imports, install dependencies or reproduce inference.",
                         "Historical absolute paths, remote hosts and unavailable assets in source are not rewritten or authorized.",
                         "Project license copies do not establish third-party attribution or complete release clearance."])
-    if profile in {"orthobench-inputs", "native-preparation"}:
+    if profile in PROFILES - {"source-only"}:
         manifest.update(schema="publication_source_components_v2", profile=profile)
         manifest["exclusions"][4] = "Result receipts/plans other than three fixed acquisition-support manifests; figures and manuscript assets"
         manifest["limitations"].append(
             "Support manifests preserve historical provenance paths; acquisition/rebinding must use separately supplied local inputs. No raw data or native runtime is included.")
-        if profile == "native-preparation":
+        if profile in {"native-preparation", "native-wheels"}:
             manifest["exclusions"][4] = "Result receipts/plans other than four fixed acquisition/runtime support documents; figures and manuscript assets"
             manifest["limitations"].append(
                 "Native-preparation additionally includes the fixed historical base reconstruction receipt and required controller helpers, not archives, wheels or Conda bootstrap.")
+        if profile == "native-wheels":
+            manifest["exclusions"][4] = "Result receipts/plans other than seven fixed acquisition/runtime/wheel-support documents; figures and manuscript assets"
+            manifest["limitations"].append(
+                "Native-wheels includes the exact admitted wheel inventory and both historical hash locks; the unpublished project wheel and pip still require separately supplied exact artifacts.")
     output.mkdir(parents=True, exist_ok=False)
     for name, (content, mode) in payloads.items():
         path = output / name

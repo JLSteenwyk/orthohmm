@@ -13,7 +13,7 @@ def git(repo, *args):
     return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
 
 
-@pytest.fixture(params=["source-only", "orthobench-inputs", "native-preparation"])
+@pytest.fixture(params=["source-only", "orthobench-inputs", "native-preparation", "native-wheels"])
 def exported(tmp_path, monkeypatch, request):
     repo = tmp_path / "repo"
     repo.mkdir()
@@ -42,8 +42,10 @@ def exported(tmp_path, monkeypatch, request):
         root = Path(module.__file__).resolve().parent.parent
         support_names = {*module.support_pins(request.param), "benchmark_tools/verify_orthobench_acquisition.py",
                          "benchmark_tools/rebind_orthobench_data.py"}
-        if request.param == "native-preparation":
+        if request.param in {"native-preparation", "native-wheels"}:
             support_names |= module.BASE_HELPERS
+        if request.param == "native-wheels":
+            support_names |= module.WHEEL_HELPERS
         for name in support_names:
             target = repo / name
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -72,7 +74,7 @@ def test_component_revisions_and_exclusions(exported):
     assert (bundle / "scientific/orthohmm/version.py").read_text() == "VERSION = 'fixture'\n"
     assert (bundle / "workflow/benchmark_tools/probe.py").read_text() == "pass\n"
     index = json.loads((bundle / "SOURCE_INDEX.json").read_text())
-    support = index.get("profile") in {"orthobench-inputs", "native-preparation"}
+    support = index.get("profile") in module.PROFILES - {"source-only"}
     assert (bundle / "workflow/benchmark_tools/results").exists() is support
     if support:
         assert {p.relative_to(bundle / "workflow").as_posix()
@@ -81,8 +83,10 @@ def test_component_revisions_and_exclusions(exported):
         assert index["schema"] == "publication_source_components_v1"
     assert not (bundle / "workflow/tests/samples").exists()
     workflow_count = 5 if not support else 10
-    if index.get("profile") == "native-preparation":
+    if index.get("profile") in {"native-preparation", "native-wheels"}:
         workflow_count += 1 + len(module.BASE_HELPERS)
+    if index.get("profile") == "native-wheels":
+        workflow_count += len(module.WHEEL_SUPPORT_PINS) + len(module.WHEEL_HELPERS - module.BASE_HELPERS)
     assert result["components"] == dict(scientific=5, workflow=workflow_count)
     assert result["executable_benchmark_reproduced"] is False
     assert result["publication_ready"] is False
@@ -195,7 +199,7 @@ def test_support_contract_rejected(exported, defect):
     _, bundle, result = exported
     path = bundle / "SOURCE_INDEX.json"
     index = json.loads(path.read_text())
-    if index.get("profile") not in {"orthobench-inputs", "native-preparation"}:
+    if index.get("profile") not in module.PROFILES - {"source-only"}:
         # v1 cannot reinterpret the legacy selection even with a new external digest.
         digest = rewrite_index(bundle, lambda value: value.update(profile="orthobench-inputs"))
         with pytest.raises(ValueError, match="Historical source schema"):
@@ -246,7 +250,7 @@ def test_native_base_manifest_pin_rejected(exported):
     _, bundle, _ = exported
     path = bundle / "SOURCE_INDEX.json"
     index = json.loads(path.read_text())
-    if index.get("profile") != "native-preparation":
+    if index.get("profile") not in {"native-preparation", "native-wheels"}:
         assert not (bundle / "workflow" / next(iter(module.BASE_SUPPORT_PINS))).exists()
         return
     name = next(iter(module.BASE_SUPPORT_PINS))
@@ -258,3 +262,21 @@ def test_native_base_manifest_pin_rejected(exported):
     path.write_text(json.dumps(index))
     with pytest.raises(ValueError, match="Frozen acquisition/runtime"):
         module.verify(bundle, module.identity(path.read_bytes())["sha256"])
+
+
+@pytest.mark.parametrize("name", sorted(module.WHEEL_SUPPORT_PINS))
+def test_native_wheel_support_pin_rejected(exported, name):
+    _, bundle, _ = exported
+    index_path = bundle / "SOURCE_INDEX.json"
+    index = json.loads(index_path.read_bytes())
+    target = bundle / "workflow" / name
+    if index.get("profile") != "native-wheels":
+        assert not target.exists()
+        return
+    target.write_text("changed\n")
+    for row in index["files"]:
+        if row["path"] == "workflow/" + name:
+            row.update(module.identity(target.read_bytes()))
+    index_path.write_text(json.dumps(index))
+    with pytest.raises(ValueError, match="Frozen acquisition/runtime"):
+        module.verify(bundle, module.identity(index_path.read_bytes())["sha256"])
