@@ -359,6 +359,8 @@ if __name__ == "__main__":
     parser.add_argument("--cpu", type=int, default=2)
     parser.add_argument("--timeout", type=int, default=86400)
     args = parser.parse_args()
+    if args.score_worker and (args.preflight_only or args.abi_inventory is not None or args.abi_inventory_sha256 is not None):
+        parser.error("Scoring-worker mode cannot accept preflight-only or ABI inventory arguments")
     if args.score_worker:
         score_worker(args.score_worker.resolve(), args.output.resolve())
     else:

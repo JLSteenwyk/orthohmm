@@ -172,6 +172,19 @@ def test_invalid_abi_arguments_fail_before_output_and_install(tmp_path, monkeypa
     assert not args.output.exists()
 
 
+@pytest.mark.parametrize("flags", [["--preflight-only"], ["--abi-inventory", "/missing/abi.json"],
+    ["--abi-inventory-sha256", "0" * 64]])
+def test_cli_worker_cannot_ignore_preflight_arguments(tmp_path, flags):
+    from benchmark_tools import run_integrated_publication_workflow as module
+    output = tmp_path / "output"
+    result = subprocess.run([sys.executable, "-I", "-B", module.__file__, "--score-worker", str(tmp_path / "missing-readers"),
+        "--output", str(output), *flags], capture_output=True, text=True, timeout=10)
+    assert result.returncode == 2
+    assert "Scoring-worker mode cannot accept" in result.stderr
+    assert "Traceback" not in result.stderr
+    assert not output.exists()
+
+
 def test_fixture_scope(tmp_path):
     validate_data(fixture_manifest(tmp_path))
 
