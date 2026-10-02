@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [standalone simulation replay](SIMULATION_ARITHMETIC_REPLAY.md) independently
+checks retained per-seed count arithmetic, outcome inventories, 168 method-mean
+cells and all variable-length paired effects/intervals without historical reads.
+Fixed-length comparisons remain unavailable; failures are not imputed and
+panels are not pooled. Native/truth/generator re-admission, tree perturbations,
+matched-recall simulations and controlled timing are outside this replay.
+
 The [standalone YGOB arithmetic workflow](results/YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
 now reproduces all four methods' 12 point metrics and all six paired-interval
 endpoints from identifier-free observations. Its local archive passes actual

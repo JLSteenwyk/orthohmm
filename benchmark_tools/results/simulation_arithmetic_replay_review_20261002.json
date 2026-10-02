@@ -1,0 +1,323 @@
+{
+  "base_commit": "afdcafb6e35278a4224b7e5e08ab8d943779a364",
+  "ci": {
+    "execution_counts_inspected": false,
+    "full_private_native_gate": false,
+    "jobs": [
+      {
+        "conclusion": "success",
+        "id": 110858636934,
+        "name": "cpu-wheel",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637155,
+        "name": "public-fast (3.13)",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637176,
+        "name": "linux-native-diagnostics",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637247,
+        "name": "public-coverage (includes slow; excludes four raw-source cases)",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637271,
+        "name": "public-fast (3.12)",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637653,
+        "name": "public-fast (3.11)",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637657,
+        "name": "docs",
+        "status": "completed"
+      },
+      {
+        "conclusion": "success",
+        "id": 110858637723,
+        "name": "public-fast (3.10)",
+        "status": "completed"
+      }
+    ],
+    "new_simulation_code_included": false,
+    "observed_utc": "2026-10-02T13:51:08.033098+00:00",
+    "run_id": 37013500430,
+    "source_commit": "afdcafb6e35278a4224b7e5e08ab8d943779a364"
+  },
+  "ci_evidence": {
+    "bytes": 1378,
+    "path": "benchmarks/work/simulation_ci_observation_20261002.json",
+    "sha256": "0d8a157feba79e2453c60db515b00aaf5df3712cd49bac2a62dae7fa323e883b"
+  },
+  "cross_host_test": false,
+  "dgx_accessed": false,
+  "final_copied_reproduction": {
+    "absolute_tolerance": 1e-12,
+    "failed_scores_imputed": false,
+    "historical_evidence_paths_accessed": false,
+    "inputs": [
+      {
+        "bytes": 795597,
+        "sha256": "305dcb1dde0c0f57d8b390b0f00cc6148d95103a7efb98bd9f6dce37b96e64a8"
+      },
+      {
+        "bytes": 2217675,
+        "sha256": "cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f"
+      }
+    ],
+    "limitations": [
+      "Retained-count arithmetic only, not native output, truth history or generation re-admission.",
+      "Independent rational per-seed metrics and explicit seed sums; same NumPy PCG64/linear quantiles, not a new statistical engine.",
+      "Complete-case contrasts remain conditional on success; ten planned seeds limit interval resolution.",
+      "Fixed-length unavailable contrasts remain unavailable, not zero or tool wins.",
+      "No controlled resources, arbitrary-dataset validation, complete release or rights clearance."
+    ],
+    "native_inference_repeated": false,
+    "numpy_version": "2.2.6",
+    "panels": [
+      {
+        "estimated_contrasts": 0,
+        "failed_records": 146,
+        "inapplicable_records": 0,
+        "insufficient_seed_contrasts": 0,
+        "interval_bound_values": 0,
+        "method_mean_cells": 84,
+        "outcome_records": 280,
+        "paired_metric_effects": 0,
+        "panel": "fixed_length_v1",
+        "planned_contrasts": 14,
+        "scored_records": 134,
+        "unavailable_contrasts": 14
+      },
+      {
+        "estimated_contrasts": 14,
+        "failed_records": 13,
+        "inapplicable_records": 0,
+        "insufficient_seed_contrasts": 0,
+        "interval_bound_values": 112,
+        "method_mean_cells": 84,
+        "outcome_records": 280,
+        "paired_metric_effects": 42,
+        "panel": "variable_length_v2",
+        "planned_contrasts": 14,
+        "scored_records": 267,
+        "unavailable_contrasts": 0
+      }
+    ],
+    "panels_pooled": false,
+    "publication_ready": false,
+    "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+    "raw_scoring_repeated": false,
+    "replicates_per_estimated_contrast": 20000,
+    "source": {
+      "bytes": 14573,
+      "sha256": "f475cb322346a23ae2afeb19a898a9a79fd786645e5db24ce7b3d07221b014b6"
+    },
+    "status": "frozen_simulation_panels_arithmetically_reproduced"
+  },
+  "host_contention_polled": false,
+  "initial_direct_replay": {
+    "bytes": 2204,
+    "path": "benchmarks/work/simulation_arithmetic_replay_20261002.json",
+    "sha256": "d37f01c28678c3334c06193325527dc9418362e47a0ab8e04812d8483584bb6f"
+  },
+  "limitations": [
+    "Arithmetic only, not original native/truth/generator admission or calibration.",
+    "Exact count ratios and explicit seed accumulation use the same NumPy RNG/linear quantiles.",
+    "Fixed unavailable contrasts stay unavailable; variable comparisons stay conditional on success.",
+    "Runtime warmed before the Python file guard; audit events are not OS containment.",
+    "Only the two admitted length panels are replayed, not tree perturbations or matched-recall evidence.",
+    "Controlled resources, full runtime, rights, final manuscript/release/deposition remain incomplete."
+  ],
+  "native_inference_repeated": false,
+  "new_archive_or_public_upload": false,
+  "new_test_cases": 42,
+  "os_containment": false,
+  "panels_pooled": false,
+  "production_test_cases": 13,
+  "publication_ready": false,
+  "raw_scoring_repeated": false,
+  "recorded_utc": "2026-10-02T13:51:08.035344+00:00",
+  "relocation_attempts": [
+    {
+      "child_exit_code": 1,
+      "files": [
+        {
+          "bytes": 773,
+          "path": "benchmarks/work/simulation_relocation_20261002/restoration.json",
+          "sha256": "1ab7084bc385b3aa2d4d0d9d69cd3c43a2e55ad8340d3291d6be8fb85bd89468"
+        },
+        {
+          "bytes": 0,
+          "path": "benchmarks/work/simulation_relocation_20261002/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 647,
+          "path": "benchmarks/work/simulation_relocation_20261002/stderr.log",
+          "sha256": "a8c6ed001b8a41b332b4cebeb31257c9fd836451e6c720d511e3a17483eef207"
+        }
+      ],
+      "finished_utc": "2026-10-02T13:47:00.324142+00:00",
+      "started_utc": "2026-10-02T13:47:00.159531+00:00",
+      "status": "relocation_failed"
+    },
+    {
+      "child_exit_code": 1,
+      "files": [
+        {
+          "bytes": 773,
+          "path": "benchmarks/work/simulation_relocation_20261002_v2/restoration.json",
+          "sha256": "850f646e9f3a71fc498768a57f88c188200fab61061ce01c99e43be0b4489ffa"
+        },
+        {
+          "bytes": 0,
+          "path": "benchmarks/work/simulation_relocation_20261002_v2/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 1668,
+          "path": "benchmarks/work/simulation_relocation_20261002_v2/stderr.log",
+          "sha256": "644100bb5e59c3b27e4cf3568f116b08821f27ab8b18d0ab890b6f932a83781f"
+        },
+        {
+          "bytes": 271,
+          "path": "benchmarks/work/simulation_relocation_20261002_v2/reproduction.json",
+          "sha256": "b7c86d05da300b5f35b4c6bcfd65654df7c129c85cc9f326e9b2de7f724fb3f5"
+        }
+      ],
+      "finished_utc": "2026-10-02T13:47:34.477977+00:00",
+      "started_utc": "2026-10-02T13:47:34.279934+00:00",
+      "status": "relocation_failed"
+    },
+    {
+      "child_exit_code": 0,
+      "files": [
+        {
+          "bytes": 3450,
+          "path": "benchmarks/work/simulation_relocation_20261002_v3/restoration.json",
+          "sha256": "0ffc632392ce8d34eaa1a6be0ab2e45591f65991c25f0421f437c8d792628c3d"
+        },
+        {
+          "bytes": 2091,
+          "path": "benchmarks/work/simulation_relocation_20261002_v3/stdout.log",
+          "sha256": "7284b56c39019cf74872390cb73241241f3d3bfce21f90edf5f47905e9ce858d"
+        },
+        {
+          "bytes": 0,
+          "path": "benchmarks/work/simulation_relocation_20261002_v3/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 2204,
+          "path": "benchmarks/work/simulation_relocation_20261002_v3/reproduction.json",
+          "sha256": "b535906566a2f865a3631cbc22fa88f2c0bbff280395a306ce76dddabe9a68c9"
+        }
+      ],
+      "finished_utc": "2026-10-02T13:47:59.539451+00:00",
+      "started_utc": "2026-10-02T13:47:59.077376+00:00",
+      "status": "copied_simulation_replay_passed"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_sources_unchanged": [
+    {
+      "bytes": 795597,
+      "path": "benchmark_tools/results/simulation_fixed_native_results_20260916.json",
+      "sha256": "305dcb1dde0c0f57d8b390b0f00cc6148d95103a7efb98bd9f6dce37b96e64a8"
+    },
+    {
+      "bytes": 2217675,
+      "path": "benchmark_tools/results/simulation_variable_native_results_20260916.json",
+      "sha256": "cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f"
+    },
+    {
+      "bytes": 8553,
+      "path": "benchmark_tools/summarize_simulation_panel.py",
+      "sha256": "57c140644f7659833368fb56e2c4fff08b71fc3fedfd6f3eacd2786e837a3456"
+    }
+  ],
+  "source_files": [
+    {
+      "bytes": 14573,
+      "path": "benchmark_tools/reproduce_simulation_panels.py",
+      "sha256": "f475cb322346a23ae2afeb19a898a9a79fd786645e5db24ce7b3d07221b014b6"
+    },
+    {
+      "bytes": 9787,
+      "path": "tests/unit/test_reproduce_simulation_panels.py",
+      "sha256": "009d43315276c56f5052a9b1e7577b50b1fac290212b28be1400004f46c8c78b"
+    },
+    {
+      "bytes": 4112,
+      "path": "benchmark_tools/SIMULATION_ARITHMETIC_REPLAY.md",
+      "sha256": "1b8d3d180820d52c5e1cf9577c76461331b6ed9b885ad38926885097286eff8f"
+    },
+    {
+      "bytes": 29835,
+      "path": "benchmark_tools/README.md",
+      "sha256": "71a198a0d47f141a4207c3f7424268981e863dc17145f75279d07fd3f5bab8f2"
+    },
+    {
+      "bytes": 77071,
+      "path": "benchmark_tools/PUBLICATION_REPRODUCTION.md",
+      "sha256": "9f6ca50305765ba91897b8b3d54df97decfd5ac6156edff5466d06d21e241937"
+    },
+    {
+      "bytes": 122619,
+      "path": "benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md",
+      "sha256": "d8d75941b5ef068890053a8302961654a93bc0ce4db6521f8f12f457eae5e68d"
+    },
+    {
+      "bytes": 4650,
+      "path": "benchmarks/work/verify_simulation_relocation_20261002.py",
+      "sha256": "6ed91b316ef5333a3545b843c76cab3e6b08b4599bdb6d533052a7e002c4c04b"
+    }
+  ],
+  "status": "simulation_retained_arithmetic_reproduced_after_relocation",
+  "test_panels": [
+    {
+      "errors": 0,
+      "evidence": {
+        "bytes": 7218,
+        "path": "benchmarks/work/simulation_replay_tests_20261002.xml",
+        "sha256": "bb3eed311620e1050d25d14541d54a0f694b4eecfdd2bed697d329c77426f673"
+      },
+      "failures": 0,
+      "junit_time_seconds": 2.061,
+      "label": "initial",
+      "skipped": 0,
+      "tests": 53
+    },
+    {
+      "errors": 0,
+      "evidence": {
+        "bytes": 7491,
+        "path": "benchmarks/work/simulation_replay_final_tests_20261002.xml",
+        "sha256": "b016155eb42f3dc0fffff032b40a97f5b2213414ee31ae3ce95ececc88fdb25a"
+      },
+      "failures": 0,
+      "junit_time_seconds": 2.476,
+      "label": "final",
+      "skipped": 0,
+      "tests": 55
+    }
+  ],
+  "test_panels_overlap": true,
+  "timing_deferred": true,
+  "unrelated_jobs_modified": false
+}

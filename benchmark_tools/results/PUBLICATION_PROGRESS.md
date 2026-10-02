@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Standalone Simulation Arithmetic Reproduction (2026-10-02)
+
+Continue from pushed `afdcafb6`; read the objective, latest ledger and source.
+The user's quiet-window reply does not require timing now. Keep timing deferred:
+no renewed coordination question, contention poll, DGX access or unrelated
+process/service action. Advance the simulation arithmetic dependency instead.
+At 13:51:08 UTC all eight jobs of exact prior-source public CI run 37013500430
+are successful; no new execution counts or full private/native success inferred.
+
+Inspect the two admitted length panels without re-running native tools. Fixed
+length has 134 complete/146 failed outcomes, no admitted OrthoFinder comparison
+and 14 unavailable contrasts. Variable length has 267 complete/13 failed
+outcomes and 14 complete-case contrasts. Do not pool panels, assign scores to
+failures or count unavailable comparisons as wins.
+
+Add a standalone verifier with independent integer/rational seed metrics and
+explicit accumulation of the original 20,000 PCG64 multinomial draws. It checks
+all 560 outcome identities, truth/universe/coverage, 168 method-mean cells,
+42 paired effects and 112 scalar nominal/adjusted bounds within 1e-12. Scientific
+reports and producer source are byte-identical to HEAD. It imports no project
+modules or historical evidence paths; same NumPy RNG/quantiles are not an
+independent statistical engine. The first direct replay retains its earlier
+source identity before strict finite/type/shape checks were added.
+
+Two copied-tree harness attempts fail on lazy runtime imports; preserve their
+logs/failed receipts. Preload the standard-library helper and NumPy random,
+preserve the private interpreter path and repeat with the same strict file
+guard. Final fresh `/tmp` child exits zero at 13:47:59 UTC with three payloads
+verified before/after, three rejected checkout/proc/sys canaries and zero
+forbidden opens afterward. Temporary copy removed, evidence retained. This is
+Python-event/same-host evidence after runtime warmup, not OS containment or
+cross-host closure; no new archive or public upload.
+
+Initial regression has 53 passes/2.08s; final has **55 passes/2.53s**, zero
+failures/errors/skips: 42 new and 13 existing producer cases, including actual
+reports, copied standalone CLI, corruptions and synthetic insufficient/no-pair
+and mean-versus-pooled checks. Panels overlap. Final JUnit 7,491 bytes, SHA256
+`b016155eb42f3dc0fffff032b40a97f5b2213414ee31ae3ce95ececc88fdb25a`.
+See [execution and limits](SIMULATION_ARITHMETIC_REPLAY_RESULT_20261002.md).
+
+Update reproduction/claims indexes, then commit/push the bounded milestone and
+observe new CI separately. No manuscript render or scientific setting/score
+changes. Preserve unrelated sample outputs and historical archives. Native
+admission, simulator/truth validation, tree-perturbation and matched-recall
+claims are not newly audited. Controlled timing, other-QfO uncertainty,
+complete runtime/rights/release/deposition and final manuscript/package
+reconciliation remain open; the publication goal stays active.
+
 ## Standalone YGOB Transfer Arithmetic Reproduction (2026-10-02)
 
 Previous turn progressed at pushed a485ba00 with explicit public/raw CI profiles.

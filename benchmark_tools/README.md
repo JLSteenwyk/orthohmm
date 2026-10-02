@@ -7,6 +7,11 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [standalone simulation arithmetic replay](SIMULATION_ARITHMETIC_REPLAY.md)
+checks both frozen length panels from their existing reports after copying
+outside the checkout. It preserves fixed-length unavailable comparisons and
+variable-length conditional contrasts; no native inference or scoring is repeated.
+
 The [standalone YGOB arithmetic replay](results/YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
 now checks all four methods' point metrics and six paired interval endpoints
 from identifier-free retained counts after fresh local archive extraction.

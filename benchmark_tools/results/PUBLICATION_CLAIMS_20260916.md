@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [two-panel simulation replay](../SIMULATION_ARITHMETIC_REPLAY.md) now checks
+retained-count arithmetic outside the checkout, preserving all terminal outcomes
+and unavailable fixed-length comparisons. Variable-length complete-case effects
+remain conditional on success. This closes an arithmetic dependency, not native
+admission, simulator/truth validation, tree-perturbation robustness, matched-recall
+claims, controlled resources or full study release.
+
 The [YGOB retained-count replay](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
 closes its workstation-only sufficient-statistic replay gap: all 12 point
 metrics and six nominal/adjusted endpoints reproduce after fresh local
