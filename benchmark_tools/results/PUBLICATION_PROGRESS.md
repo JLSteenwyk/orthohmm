@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Main-Text Evolutionary Simulation Integration Checkpoint (2026-10-02)
+
+Previous turn progressed at pushed `ecadd089` with the standalone simulation
+replay. Read goal/HEAD/latest ledger; timing stays deferred without questions,
+host polls, DGX or unrelated process/service actions. Observe exact CI run
+37016015087: docs/Linux succeed and six jobs are live at the initial check.
+Do not infer complete CI or restart those jobs.
+
+Identify a substantive manuscript omission: main text mentions completed
+simulations/tree perturbations but omits their comparative results and failed
+outcomes. Integrate existing admitted evidence, not new experiments: fixed
+70/64/0/0 completion and all 14 unavailable comparisons; variable 70/67/65/65,
+all seven negative paired point differences for each OrthoHMM mode, seven/four
+adjusted negative F1 contrasts and divergence effects -11.7433/-12.2842 points
+with five/eight paired seeds. Main Methods now identifies Zombi/Pyvolve using
+existing bibliography entries, event-based truth, simplified length panels,
+failure conditioning and separate primary/exploratory adjustment.
+
+Also integrate the supplied-tree and deterministic rooted-NNI stress tests:
+560 outcomes/537 scores/23 failures, no adjusted oracle-minus-inferred interval
+excluding zero, 12 negative F1/recall endpoints under stronger perturbation,
+400/2/18 upstream comparisons and limited tree-only causal scope. Add direct
+protocol/result links and bounded simulation-replay availability. Existing
+extended manuscript, protocols/reports/defaults and historical renders remain
+unchanged. No tree-bootstrap, native inference/scoring or timing is rerun.
+
+Five new main-text checks derive completion/contrast counts, exact rounded
+effects, adjusted endpoint classification and upstream-artifact categories
+directly from retained JSON. The four-module main/render/print/PDF panel passes
+39 cases in 3.02s without failures/errors/skips. Panels are scoped, not a new
+full-suite/scientific admission. Commit/push this source checkpoint before
+fresh rendering. At this checkpoint the earlier eight-page review remains
+historical: new text is not yet rendered or visually reviewed. Complete final
+manuscript/release/rights/runtime and controlled timing remain open; goal active.
+
 ## Standalone Simulation Arithmetic Reproduction (2026-10-02)
 
 Continue from pushed `afdcafb6`; read the objective, latest ledger and source.

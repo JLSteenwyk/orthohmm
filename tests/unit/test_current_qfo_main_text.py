@@ -159,3 +159,81 @@ def test_completed_components_do_not_claim_complete_release():
     assert "No submission-ready release or archival DOI is claimed" in main
     assert "older versions are not rendered copies of revised Markdown" in main
     assert "replacement controlled Threadripper timing panel has not run" in main
+
+
+def test_simulation_completion_and_unavailable_contrasts_remain_separate():
+    fixed = json.loads((BASE / "simulation_fixed_native_results_20260916.json").read_bytes())
+    variable = json.loads((BASE / "simulation_variable_native_results_20260916.json").read_bytes())
+    main = text()
+    for report, expected in ((fixed, [70, 64, 0, 0]), (variable, [70, 67, 65, 65])):
+        methods = ("orthohmm_high_sensitivity", "orthohmm_satellite_v2", "orthofinder_full", "orthofinder_sequence_only")
+        assert [sum(r["method"] == m and r["status"] == "complete" for r in report["records"]) for m in methods] == expected
+    contrasts = [c for b in fixed["conditions"].values() for c in b["contrasts"].values()]
+    assert len(contrasts) == 14 and all(c["status"] == "no_complete_pairs" for c in contrasts)
+    assert "70 and 64 admitted datasets out of 70" in main
+    assert "all 14 planned comparisons are unavailable, not wins for OrthoHMM" in main
+    assert "admitted 70 and 67 OrthoHMM datasets and 65 full OrthoFinder datasets" in main
+    assert "success-conditioned comparisons, not failure-adjusted population estimates" in main
+
+
+def test_simulation_paired_effects_and_adjustment_match_retained_report():
+    report = json.loads((BASE / "simulation_variable_native_results_20260916.json").read_bytes())
+    main = text()
+    assert report["bootstrap"]["replicates"] == 20000
+    assert report["bootstrap"]["f1_multiplicity_count"] == 14
+    for method, negatives in (("orthohmm_high_sensitivity", 7), ("orthohmm_satellite_v2", 4)):
+        effects = [b["contrasts"][method]["metrics"]["f1"] for b in report["conditions"].values()]
+        assert all(e["difference_percentage_points"] < 0 for e in effects)
+        assert sum(e["bonferroni_14_ci"][1] < 0 for e in effects) == negatives
+    for condition, seeds in (("divergent", 5), ("divergent_turnover", 8)):
+        contrast = report["conditions"][condition]["contrasts"]["orthohmm_satellite_v2"]
+        assert len(contrast["included_seeds"]) == seeds
+        assert f'{contrast["metrics"]["f1"]["difference_percentage_points"]:.4f}' in main
+    assert "all seven high-sensitivity contrasts and four phylogenetic contrasts" in main
+    assert "available-case means from different seed sets are not paired effects" in main
+
+
+def test_tree_outcomes_and_adjusted_endpoint_classification_match_summary():
+    report = json.loads((BASE / "simulation_tree_robustness_summary_20260917.json").read_bytes())
+    main = text()
+    assert len(report["records"]) == 560
+    assert sum(r["status"] == "complete" for r in report["records"]) == 537
+    assert sum(r["status"] == "failed" for r in report["records"]) == 23
+    assert report["bootstrap"]["replicates"] == 20000
+    assert report["bootstrap"]["seed"] == 20260918 and report["bootstrap"]["multiplicity"] == 126
+    oracle = [metric for c in report["contrasts"] if c["target"] == "generating" for metric in c["metrics"].values()]
+    assert all(m["bonferroni_126_ci"][0] <= 0 <= m["bonferroni_126_ci"][1] for m in oracle)
+    negative = [(c["method"], c["condition"], name) for c in report["contrasts"] for name, metric in c["metrics"].items()
+                if metric["bonferroni_126_ci"][1] < 0]
+    assert len(negative) == 12 and {name for _, _, name in negative} == {"f1", "recall"}
+    assert len({condition for method, condition, _ in negative if method == "orthohmm_satellite_v2"}) == 4
+    assert len({condition for method, condition, _ in negative if method == "orthofinder_full"}) == 2
+    assert "560 arm outcomes: 537 scored and 23 failed" in main
+    assert "No generating-minus-inferred adjusted interval excluded zero" in main
+    assert "four OrthoHMM conditions and two OrthoFinder conditions: 12 endpoints" in main
+    assert "no precision interval excluded zero" in main
+
+
+def test_tree_upstream_artifact_boundary_and_oracle_scope_retained():
+    audit = json.loads((BASE / "simulation_tree_artifacts_verified_20260917.json").read_bytes())
+    main = text()
+    assert [sum(c["status"] == s for c in audit["contrasts"]) for s in
+            ("retained_upstream_equivalent", "retained_upstream_different", "unavailable")] == [400, 2, 18]
+    assert "400 comparisons, differed in two and were unavailable in 18" in main
+    assert "prevent a strict tree-only causal attribution there" in main
+    assert "oracle diagnostics, not achievable end-to-end inference" in main
+    assert "not establish robustness to arbitrary trees or empirical posterior uncertainty" in main
+
+
+def test_simulation_links_and_attribution_resolve_existing_bibliography():
+    main = text()
+    entries = json.loads((BASE / "publication_bibliography_20260920_v5.csl.json").read_bytes())
+    ids = {entry["id"] for entry in entries}
+    assert {"zombi2019online", "pyvolve2015"} <= ids
+    assert "[@zombi2019online; @pyvolve2015]" in main
+    for target in ("SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md",
+                   "SIMULATION_FIXED_NATIVE_INTERPRETATION_20260916.md",
+                   "SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md",
+                   "SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md", "../SIMULATION_ARITHMETIC_REPLAY.md"):
+        assert target in main and (BASE / target).is_file()
+    assert "native admission and tree-control inference are not rerun" in main

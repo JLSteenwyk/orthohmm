@@ -23,6 +23,9 @@ controlled comparative timing remain unresolved. The evidence supports a
 bounded contribution and an explicit precision-recall trade-off, not universal
 accuracy or efficiency claims. Synthetic null scoring revealed
 composition-dependent behavior of the approximate significance filter.
+Heterogeneous-length simulations favored full OrthoFinder; supplied generating
+trees did not establish an accuracy gain, and stronger topology perturbations
+reduced F1 and recall in several conditions.
 
 ## Methods
 
@@ -97,6 +100,27 @@ across family F1 values. The seed was 20260925; Bonferroni adjustment retained
 all 18 planned endpoints across six contrasts and three metrics. This is
 development-exposed local sensitivity, not independent method selection.
 [Frozen parameter protocol](QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md).
+
+Two evolutionary simulation panels used Zombi and Pyvolve
+[@zombi2019online; @pyvolve2015], ten seeds and seven conditions each: baseline,
+divergence, duplication/loss turnover, their combination, missing proteins,
+uneven sampling and a taxon-count control. Event-derived cross-species truth
+was not replaced by ancestral-family membership. Fixed 300-residue sequences
+and heterogeneous ancestral-family lengths of 100-500 residues were analyzed
+separately; descendants retain family length, without within-family indels.
+Native admission, including finite comparator graph weights, preceded scoring.
+Within each panel, 20,000 paired successful-seed resamples recomputed mean
+seed-level metrics, with a 14-contrast adjustment for primary F1. Failures were
+not imputed; available-case means from different seed sets are not paired effects.
+[Simulation protocols and results](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).
+
+On the 70 heterogeneous-length datasets, phylogenetic OrthoHMM and full
+OrthoFinder also used supplied generating trees and deterministic rooted
+nearest-neighbor interchanges at clade distances two and four. Generating
+trees are oracle diagnostics, not achievable end-to-end inference or guaranteed
+accuracy upper bounds. All 126 F1/precision/recall endpoints were exploratory,
+with 20,000 paired-seed resamples, seed 20260918 and Bonferroni adjustment.
+[Tree-control protocol](SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md).
 
 ## Results
 
@@ -204,6 +228,34 @@ composition is not a measured real-proteome prevalence. The
 [audit](FROZEN_NULL_SCORE_RESULT_20261002.md) reproduces all endpoint counts and
 180 sparse reference-Python scores, not all native scores. No coefficients,
 thresholds or defaults were fitted or promoted.
+
+### Evolutionary Simulations Retain Failures And Tree Sensitivity
+
+In the fixed-length stress panel, high-sensitivity and phylogenetic OrthoHMM
+had 70 and 64 admitted datasets out of 70. No OrthoFinder output passed its
+native-completion/finite-graph gate; all 14 planned comparisons are unavailable,
+not wins for OrthoHMM. The heterogeneous-length panel admitted 70 and 67
+OrthoHMM datasets and 65 full OrthoFinder datasets. Full OrthoFinder had higher
+paired mean F1 than both OrthoHMM modes in all seven conditions. Adjusted F1
+intervals were below zero for all seven high-sensitivity contrasts and four
+phylogenetic contrasts. Phylogenetic-minus-full-OrthoFinder effects were
+-11.7433 points for divergence (five paired seeds) and -12.2842 for combined
+divergence/turnover (eight). These are success-conditioned comparisons, not
+failure-adjusted population estimates. Species-tree inference failures for
+OrthoHMM and nonfinite graph weights for OrthoFinder remain explicit.
+[Fixed stress results](SIMULATION_FIXED_NATIVE_INTERPRETATION_20260916.md),
+[heterogeneous-length results](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).
+
+The complete tree-control analysis retained 560 arm outcomes: 537 scored and
+23 failed. No generating-minus-inferred adjusted interval excluded zero. The
+stronger perturbation reduced F1 and recall with adjusted intervals below zero
+in four OrthoHMM conditions and two OrthoFinder conditions: 12 endpoints;
+no precision interval excluded zero. Retained upstream artifacts agreed in
+400 comparisons, differed in two and were unavailable in 18. The differing
+OrthoFinder cases prevent a strict tree-only causal attribution there. These
+deterministic perturbations and ten planned seeds do not establish robustness
+to arbitrary trees or empirical posterior uncertainty.
+[Complete tree results and figure](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
 
 ### Local Parameter Sensitivity Did Not Establish Improvement
 
@@ -400,6 +452,11 @@ uses identifier-free retained counts to reproduce all 12 point metrics and
 six nominal/adjusted interval endpoints after local archive restoration.
 This is not native re-admission, proof of pillar exchangeability or independent
 family validation; original transfer scores and overlap limitations remain.
+
+The [standalone simulation replay](../SIMULATION_ARITHMETIC_REPLAY.md) reproduces
+retained-count arithmetic for the two length panels without historical file
+reads. It preserves fixed-length unavailable comparisons and variable-length
+conditional effects; native admission and tree-control inference are not rerun.
 
 The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
