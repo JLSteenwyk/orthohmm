@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import time
@@ -145,17 +146,29 @@ def test_private_submission_bootstrap_does_not_fall_back_to_shared(setup, monkey
     assert not (root / "runs").exists()
 
 
-def test_private_pin_constants_match_retained_artifacts_and_bootstrap():
-    root = Path(__file__).resolve().parents[2]
+@pytest.mark.parametrize("relocated", [False, True])
+def test_private_pin_constants_match_retained_artifacts_and_bootstrap(tmp_path, relocated):
+    original = Path(__file__).resolve().parents[2]
     profile = driver.deployment(dict(deployment="private_v2_20260928"))
+    root = tmp_path / "relocated checkout" if relocated else original
+    if relocated:
+        for name in ("results/" + profile["plan"], "results/" + profile["lookup"],
+                     "results/threadripper_private_controller_20260928.json", profile["script"]):
+            target = root / "benchmark_tools" / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(original / "benchmark_tools" / name, target)
     results = root / "benchmark_tools/results"
     assert driver.record(results / profile["plan"])["sha256"] == profile["plan_sha"]
     assert driver.record(results / profile["lookup"])["sha256"] == profile["lookup_sha"]
-    controller = json.loads((results / "threadripper_private_controller_20260928.json").read_text())["interpreter"]
+    document = json.loads((results / "threadripper_private_controller_20260928.json").read_text())
+    controller = document["interpreter"]
     script = root / "benchmark_tools" / profile["script"]
     text = script.read_text()
     assert controller["sha256"] in text
-    assert controller["path"].split(str(root), 1)[1] in text
+    retained_root = Path(document["source"]["path"]).parents[1]
+    interpreter_suffix = Path(controller["path"]).relative_to(retained_root).as_posix()
+    assert f"ROOT={retained_root}" in text
+    assert f'PYTHON="$ROOT/{interpreter_suffix}"' in text
     assert "/home/bizon/anaconda3" not in text
     assert "ORTHOHMM_THREADRIPPER_DEPLOYMENT=private_v2_20260928" in text
     for token in ("--exclusive", "--cpus-per-task=64", "--mem=128G", "--time=1-02:00:00", "--no-requeue"):
