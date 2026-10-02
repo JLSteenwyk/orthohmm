@@ -1,0 +1,260 @@
+{
+  "schema": "ci_remote_cpu_wheel_result_v1",
+  "status": "independent_linux_host_installed_fixture_verified",
+  "source_revision": "5b030d0fa1f9047da1d6ab89e0089233c5e01d83",
+  "run_id": 36947338909,
+  "job_id": 110652329330,
+  "job_url": "https://github.com/JLSteenwyk/orthohmm/actions/runs/36947338909/job/110652329330",
+  "job_conclusion": "success",
+  "artifact_id": 11202847280,
+  "retained_artifact": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ci_remote_cpu_wheel_artifact_20261001.zip",
+    "bytes": 20518,
+    "sha256": "0e41bf38eadf1afe7a2e16d33d22745aa00ce0063a035af289e5f640ee22271e"
+  },
+  "verified_source_files": 42,
+  "verified_driver_and_verifier": true,
+  "summary": {
+    "artifact_id": 11202847280,
+    "artifact_bytes": 20518,
+    "artifact_sha256": "0e41bf38eadf1afe7a2e16d33d22745aa00ce0063a035af289e5f640ee22271e",
+    "source": "5b030d0fa1f9047da1d6ab89e0089233c5e01d83",
+    "status": "linux_cpu_wheel_installation_verified",
+    "wheel": {
+      "bytes": 146122,
+      "path": "/home/runner/work/_temp/orthohmm-cpu-wheel/wheels/orthohmm-0.5.0-cp312-cp312-linux_x86_64.whl",
+      "sha256": "ac46a766f1d07b168568c159b1159a8e12b1fd207e0653e6af86933b29efef68"
+    },
+    "runtime": {
+      "dependencies": [
+        {
+          "name": "biopython",
+          "version": "1.86"
+        },
+        {
+          "name": "contourpy",
+          "version": "1.4.0"
+        },
+        {
+          "name": "coverage",
+          "version": "7.16.2"
+        },
+        {
+          "name": "cycler",
+          "version": "0.12.1"
+        },
+        {
+          "name": "Cython",
+          "version": "3.0.4"
+        },
+        {
+          "name": "DendroPy",
+          "version": "5.0.8"
+        },
+        {
+          "name": "et_xmlfile",
+          "version": "2.0.0"
+        },
+        {
+          "name": "fonttools",
+          "version": "4.66.1"
+        },
+        {
+          "name": "igraph",
+          "version": "1.0.0"
+        },
+        {
+          "name": "ijson",
+          "version": "3.5.0"
+        },
+        {
+          "name": "iniconfig",
+          "version": "2.3.0"
+        },
+        {
+          "name": "kiwisolver",
+          "version": "1.5.1"
+        },
+        {
+          "name": "leidenalg",
+          "version": "0.12.0"
+        },
+        {
+          "name": "llvmlite",
+          "version": "0.50.0"
+        },
+        {
+          "name": "matplotlib",
+          "version": "3.10.8"
+        },
+        {
+          "name": "numba",
+          "version": "0.68.0"
+        },
+        {
+          "name": "numpy",
+          "version": "2.2.6"
+        },
+        {
+          "name": "openpyxl",
+          "version": "3.1.5"
+        },
+        {
+          "name": "orthohmm",
+          "version": "0.5.0"
+        },
+        {
+          "name": "packaging",
+          "version": "26.3"
+        },
+        {
+          "name": "pillow",
+          "version": "12.2.0"
+        },
+        {
+          "name": "pip",
+          "version": "25.0.1"
+        },
+        {
+          "name": "pluggy",
+          "version": "1.6.0"
+        },
+        {
+          "name": "psutil",
+          "version": "7.2.2"
+        },
+        {
+          "name": "Pygments",
+          "version": "2.21.0"
+        },
+        {
+          "name": "PyMuPDF",
+          "version": "1.27.2.3"
+        },
+        {
+          "name": "pyparsing",
+          "version": "3.3.3"
+        },
+        {
+          "name": "pytest",
+          "version": "9.1.1"
+        },
+        {
+          "name": "pytest-cov",
+          "version": "7.1.0"
+        },
+        {
+          "name": "python-dateutil",
+          "version": "2.9.0.post0"
+        },
+        {
+          "name": "python-igraph",
+          "version": "1.0.0"
+        },
+        {
+          "name": "scipy",
+          "version": "1.15.3"
+        },
+        {
+          "name": "setuptools",
+          "version": "81.0.0"
+        },
+        {
+          "name": "six",
+          "version": "1.17.0"
+        },
+        {
+          "name": "sqlglot",
+          "version": "30.20.0"
+        },
+        {
+          "name": "texttable",
+          "version": "1.7.0"
+        }
+      ],
+      "module": "/home/runner/work/_temp/orthohmm-cpu-wheel/venv/lib/python3.12/site-packages/orthohmm/__init__.py",
+      "native_libraries_loaded": [
+        "/home/runner/work/_temp/orthohmm-cpu-wheel/venv/lib/python3.12/site-packages/orthohmm/search/csrc/hmm_viterbi.so",
+        "/home/runner/work/_temp/orthohmm-cpu-wheel/venv/lib/python3.12/site-packages/orthohmm/search/csrc/kmer_prefilter.so",
+        "/home/runner/work/_temp/orthohmm-cpu-wheel/venv/lib/python3.12/site-packages/orthohmm/search/csrc/pair_align.so"
+      ],
+      "prefix": "/home/runner/work/_temp/orthohmm-cpu-wheel/venv",
+      "python": "3.12.14 (main, Aug 13 2026, 02:47:42) [GCC 13.3.0]"
+    },
+    "runs": [
+      {
+        "profile": "standard",
+        "genes": 38,
+        "groups": 4,
+        "partition": {
+          "bytes": 729,
+          "path": "/home/runner/work/_temp/orthohmm-cpu-wheel/verification/standard/orthohmm_orthogroups.txt",
+          "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+        }
+      },
+      {
+        "profile": "high_sensitivity",
+        "genes": 38,
+        "groups": 4,
+        "partition": {
+          "bytes": 729,
+          "path": "/home/runner/work/_temp/orthohmm-cpu-wheel/verification/high_sensitivity/orthohmm_orthogroups.txt",
+          "sha256": "1115fd8193636510bbc8cc8462d1b874e2a50db662fc0a59d3552d811ffa0885"
+        }
+      }
+    ],
+    "installed_files": 36,
+    "staged_files": 42,
+    "downloaded_files": [
+      "build_wheel.log",
+      "check_dependencies.log",
+      "create_environment.log",
+      "install_dependencies.log",
+      "install_wheel.log",
+      "result.json",
+      "verification/high_sensitivity.log",
+      "verification/standard.log",
+      "verification/verification.json"
+    ]
+  },
+  "api_pins": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_5b030d0f_20261001/cpu_wheel_job.json",
+      "bytes": 3265,
+      "sha256": "8dd09f2b7266d50b17f09e62452ead456a8adbc5f4b5ecc01836338dd89940b6"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_5b030d0f_20261001/cpu_wheel_observation.json",
+      "bytes": 1362,
+      "sha256": "21fb1916711cef7ad09decd20aeed680f83c9053749adb3a8d8f51f4d868a7ac"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_5b030d0f_20261001/artifacts.json",
+      "bytes": 893,
+      "sha256": "3eeef82cc792ece78421761c88dbac3df3b02f40571de085334b6395d77e687c"
+    }
+  ],
+  "extracted_report_pins": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_5b030d0f_20261001/cpu_wheel_artifact/result.json",
+      "bytes": 61124,
+      "sha256": "92ca0d17f741329237a9087b84c3f095989eb3673bf4ab08fabbd781c8bbd840"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/ci_remote_5b030d0f_20261001/cpu_wheel_artifact/verification/verification.json",
+      "bytes": 32163,
+      "sha256": "50933200f2d3a63b8b14fcffb2cfa45dff406447fcc9d7c397aafea37b0bac41"
+    }
+  ],
+  "accuracy_evaluated": false,
+  "controlled_timing": false,
+  "publication_ready": false,
+  "limitations": [
+    "Functional fixture on a different Linux host, not full frozen scientific or phylogenetic reproduction.",
+    "38 fixture proteins and both profiles only; no general dataset/ISA/OS equivalence.",
+    "Native wheel bytes differ from the local build; no binary identity claim.",
+    "Downloaded artifact contains reports and logs, not the built wheel or complete installation.",
+    "Existing full CI matrix remains separate and must be observed on its actual handle.",
+    "No dependency/OS closure, data rights, public release or controlled runtime claim."
+  ]
+}

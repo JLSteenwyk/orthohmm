@@ -57,6 +57,12 @@ local installation check, not frozen scientific/full phylogenetic reproduction
 or hermetic/runtime/rights closure. The additional Linux CI gate needs its own
 remote outcome; the earlier source-3a6c2d49 CI is terminal failure and its
 matched-graph renderer remains unresolved. Existing macOS jobs are preserved.
+The [remote Linux CPU-wheel job](results/CI_REMOTE_CPU_WHEEL_RESULT_20261001.md)
+has now completed successfully; its nine-file artifact is retained and actual
+source/report contents checked. Both installed profiles pass the same fixture
+on that independent host. This is not full frozen/scientific/phylogenetic
+restoration, all-platform compatibility, a complete runtime archive or a passing
+full CI matrix. Continue observing the existing source-5b030d0f run separately.
 
 The [GO/EC decomposition figure](results/QFO_SCORED_PAIR_DECOMPOSITION_FIGURE_20260930.md)
 exports 14 comparisons against full OrthoFinder from the retained 56-comparison

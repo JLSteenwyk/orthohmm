@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Independent Linux CPU-Wheel Job Passed And Artifact Inspected (2026-10-01)
+
+Committed/pushed the tested driver/job/local evidence at 5b030d0f, then observed
+its actual CI handle 36947338909. New CPU-wheel job 110652329330 completed
+successfully, including build/install, both native fixtures and artifact upload.
+Download the uploaded artifact once, validate member safety, inspect both
+result/verification reports and compare all 42 source records plus driver/
+verifier hashes with committed source. No token or signed redirect URL retained.
+
+Remote Python 3.12.14 installed package/dependencies lie within its new venv;
+all 36 package entries match the wheel and three CPU libraries load. Both
+builtin/Leiden profiles cover all 38 proteins once in four groups, with the
+same partition hashes as the local fixture. Remote wheel bytes differ from
+the local build; no binary identity or ISA-wide compatibility is claimed.
+Retain the actual nine-file, 20,518-byte report/log archive and its pins.
+
+[Executed remote result, retained archive and limitations](CI_REMOTE_CPU_WHEEL_RESULT_20261001.md).
+This is independent Linux-host functional installation evidence, not frozen
+scientific/full phylogenetic reproduction, generalization, accuracy, controlled
+efficiency, hermetic runtime/rights closure or a public release. Existing
+macOS/full CI jobs remain separate; observe run 36947338909 on its same handle.
+Prior broad failures and matched-graph rendering are not reclassified.
+
+Commit/push only the inspected evidence and current indexes with [skip ci],
+avoiding another unchanged implementation run. This does not mark checks green
+or cancel the live source-5b030d0f run. All implementation/workflow/test/package
+files remain unchanged. No scientific/default/score change, resource-window
+question/poll, DGX, shared-package modification or unrelated job/service action.
+All own commands terminate; full publication goal remains active/incomplete.
+
 ## Installed CPU Wheel Workflow Executed And CI Gate Prepared (2026-10-01)
 
 Previous turn is progress at pushed 3a6c2d49. Re-read objective/ledger and inspect

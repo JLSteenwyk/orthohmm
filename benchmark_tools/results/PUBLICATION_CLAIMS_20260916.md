@@ -81,6 +81,11 @@ Linux CI job is prepared, not yet remotely verified. Source-3a6c2d49 CI is now
 terminal failure; strict factorial/sequence replay passes in the inspected
 Python 3.13 log, but matched-graph rendering still fails. No broad portability,
 scientific equivalence, rights or release claim follows from the wheel fixture.
+The [actual independent Linux-host job](CI_REMOTE_CPU_WHEEL_RESULT_20261001.md)
+at 5b030d0f now passes with its uploaded reports/archive inspected and source
+hashes checked. Both installed profiles cover the 38-protein fixture correctly.
+This closes that bounded remote installation check, not the full CI matrix,
+frozen scientific equivalence, macOS/ARM portability or public release.
 
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |

@@ -1,5 +1,9 @@
 # Installed CPU Wheel Gate
 
+Follow-up: the [actual independent Linux-host job and inspected artifact](CI_REMOTE_CPU_WHEEL_RESULT_20261001.md)
+now pass at source 5b030d0f. Pending descriptions below are the preceding
+prepared/local snapshot, not current status or a claim that the full matrix passes.
+
 Previous turn is concrete progress: strict numerical replay environment and
 copied audit evidence pushed at `3a6c2d49`. Its [CI run 36945056722](https://github.com/JLSteenwyk/orthohmm/actions/runs/36945056722)
 is now terminal failure: docs succeed and all five test jobs fail. Python 3.13
