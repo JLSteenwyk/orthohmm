@@ -29,8 +29,8 @@ def test_resources(stage):
 @pytest.mark.parametrize("stage", STAGES)
 @pytest.mark.parametrize("index", range(8))
 @pytest.mark.parametrize("problem", [None, "missing", "wrong_commit", "dirty", "bad_index", "bad_job"])
-def test_handoff(tmp_path, stage, index, problem):
-    executor, root = tmp_path / "executor", tmp_path / "root"
+def test_handoff(tmp_path, stage, index, problem, stage_historical_qfo_batch):
+    executor, root = tmp_path / "executor path $literal's", tmp_path / "root path $literal's"
     source = executor / "benchmark_tools" / STAGES[stage][0]
     source.parent.mkdir(parents=True)
     marker = tmp_path / "called.json"
@@ -54,10 +54,9 @@ def test_handoff(tmp_path, stage, index, problem):
         commit = "0" * 40
     elif problem == "dirty":
         source.write_text(source.read_text() + "# changed\n")
-    text = (RESULTS / f"qfo_corrected_factorial_{stage}_batch_20260918.sh").read_text()
-    root_line = next(line for line in text.splitlines() if line.startswith("ROOT="))
-    batch = tmp_path / "batch.sh"
-    batch.write_text(text.replace(root_line, f"ROOT={root}"))
+    batch = stage_historical_qfo_batch(
+        RESULTS / f"qfo_corrected_factorial_{stage}_batch_20260918.sh",
+        tmp_path / "batch.sh", root)
     passed_index = "8" if problem == "bad_index" else str(index)
     job = "pending" if problem == "bad_job" else "123"
     args = [str(executor), commit, passed_index, job]

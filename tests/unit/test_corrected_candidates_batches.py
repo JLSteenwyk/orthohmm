@@ -26,9 +26,9 @@ def test_syntax_resources(stage):
 
 @pytest.mark.parametrize("stage", STAGES)
 @pytest.mark.parametrize("problem", [None, "missing_input", "wrong_commit", "bad_commit", "dirty", "bad_job", "missing_args"])
-def test_batch_handoff(tmp_path, stage, problem):
+def test_batch_handoff(tmp_path, stage, problem, stage_historical_qfo_batch):
     source_name, relative, input_flag, sha_flag, job_flag, destination = STAGES[stage]
-    executor, root = tmp_path / "executor", tmp_path / "root"
+    executor, root = tmp_path / "executor path $literal's", tmp_path / "root path $literal's"
     source = executor / "benchmark_tools" / source_name
     source.parent.mkdir(parents=True)
     marker = tmp_path / "called.json"
@@ -47,10 +47,9 @@ def test_batch_handoff(tmp_path, stage, problem):
     input_path.parent.mkdir(parents=True)
     input_path.write_text("{}\n")
     digest = hashlib.sha256(input_path.read_bytes()).hexdigest()
-    text = (RESULTS / f"qfo_corrected_candidates_{stage}_batch_20260918.sh").read_text()
-    root_line = next(line for line in text.splitlines() if line.startswith("ROOT="))
-    batch = tmp_path / "batch.sh"
-    batch.write_text(text.replace(root_line, f"ROOT={root}"))
+    batch = stage_historical_qfo_batch(
+        RESULTS / f"qfo_corrected_candidates_{stage}_batch_20260918.sh",
+        tmp_path / "batch.sh", root)
     job = "123"
     if problem == "missing_input":
         input_path.unlink()

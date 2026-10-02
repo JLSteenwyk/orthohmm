@@ -19,8 +19,8 @@ def test_resources():
 
 @pytest.mark.parametrize("index", range(4))
 @pytest.mark.parametrize("problem", [None, "missing_input", "wrong_commit", "dirty", "bad_job", "bad_index"])
-def test_handoff(tmp_path, index, problem):
-    executor, root = tmp_path / "executor", tmp_path / "root"
+def test_handoff(tmp_path, index, problem, stage_historical_qfo_batch):
+    executor, root = tmp_path / "executor path $literal's", tmp_path / "root path $literal's"
     source = executor / "benchmark_tools/run_qfo_corrected_factorial_cell.py"
     source.parent.mkdir(parents=True)
     marker = tmp_path / "called.json"
@@ -40,10 +40,7 @@ def test_handoff(tmp_path, index, problem):
     admission.parent.mkdir(parents=True)
     admission.write_text("{}\n")
     digest = hashlib.sha256(admission.read_bytes()).hexdigest()
-    text = BATCH.read_text()
-    root_line = next(line for line in text.splitlines() if line.startswith("ROOT="))
-    batch = tmp_path / "batch.sh"
-    batch.write_text(text.replace(root_line, f"ROOT={root}"))
+    batch = stage_historical_qfo_batch(BATCH, tmp_path / "batch.sh", root)
     job = "123"
     if problem == "missing_input":
         admission.unlink()

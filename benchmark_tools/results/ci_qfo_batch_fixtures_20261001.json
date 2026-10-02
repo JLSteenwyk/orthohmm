@@ -1,0 +1,150 @@
+{
+  "base_commit": "57a8391f870939be16d36b1684d546fdf1ebbe74",
+  "status": "historical_qfo_handoff_fixture_relocation_locally_validated",
+  "remote_corrections_confirmed": false,
+  "production_batches_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "prior_remote_evidence": {
+    "source_commit": "df22e79ac82cd67feb43343c84ee28f28e2f42f2",
+    "run_id": 36952199808,
+    "job_id": 110667364838,
+    "log": {
+      "path": "benchmarks/work/ci_remote_df22e79a_20261001/110667364838.log",
+      "bytes": 3031407,
+      "sha256": "c386ac9a459e03aea23a8bc183462e5013225feb6799badafdb0a655c6cb5d15"
+    },
+    "historical_python_missing_failures": {
+      "test_corrected_candidates_batches.py": 2,
+      "test_corrected_factorial_pair_batches.py": 12,
+      "test_corrected_factorial_score_batches.py": 16,
+      "test_corrected_reconcile_admit_batch.py": 4,
+      "test_corrected_reconcile_batch.py": 4
+    }
+  },
+  "existing_ci": {
+    "source_commit": "57a8391f870939be16d36b1684d546fdf1ebbe74",
+    "run_id": 36953675242,
+    "observed_utc": "2026-10-02T02:07:15.575305+00:00",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "all_five_test_jobs": "in_progress",
+    "includes_new_handoff_correction": false
+  },
+  "tests": {
+    "cases": 329,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_cases_included": 8,
+    "pytest_duration_s": 14.95,
+    "junit_suite_duration_s": 14.898,
+    "module_cases": {
+      "tests.unit.test_corrected_candidates_batches": 16,
+      "tests.unit.test_corrected_factorial_pair_batches": 58,
+      "tests.unit.test_corrected_factorial_score_batches": 98,
+      "tests.unit.test_corrected_reconcile_admit_batch": 41,
+      "tests.unit.test_corrected_reconcile_batch": 25,
+      "tests.unit.test_historical_qfo_batch_fixture": 8,
+      "tests.unit.test_measure_slurm_command": 21,
+      "tests.unit.test_audit_slurm_measurement": 10,
+      "tests.unit.test_probe_cgroup_frontier": 20,
+      "tests.unit.test_observe_threadripper_service_launches": 30,
+      "tests.unit.test_synthetic_linux_boot_fixture": 2
+    },
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/qfo_batch_clock_tests_final.xml",
+      "bytes": 41697,
+      "sha256": "3661450bb90778ba183114840a14ac7caf2adea8f87c7dba277b490416e47a18"
+    },
+    "earlier_248_case_panel_superseded_not_additive": true
+  },
+  "sources": [
+    {
+      "path": "tests/conftest.py",
+      "bytes": 1594,
+      "sha256": "715d71cf1cd88f034035a2438ea0fa21ecfae9af8497d9c275c23cc342f84bd1"
+    },
+    {
+      "path": "tests/unit/test_historical_qfo_batch_fixture.py",
+      "bytes": 3626,
+      "sha256": "fb379cee35e1dc5e089e8d1b03bb633406c0d7257e4034a24fc0da6a43907762"
+    },
+    {
+      "path": "tests/unit/test_corrected_candidates_batches.py",
+      "bytes": 3763,
+      "sha256": "b68eae4a52bcf3b1ecd7d7875e1c5cf321614cdc054eb97f13dd5e579aa3a878"
+    },
+    {
+      "path": "tests/unit/test_corrected_factorial_pair_batches.py",
+      "bytes": 3686,
+      "sha256": "028d07f6f479723080d31f156f94438e013449d5ea027d0c6184da578594445b"
+    },
+    {
+      "path": "tests/unit/test_corrected_factorial_score_batches.py",
+      "bytes": 3513,
+      "sha256": "2b9135a607dd7eeb468c1bb6d280d8618094f8a238e61e8a7c2f149e6741a3b3"
+    },
+    {
+      "path": "tests/unit/test_corrected_reconcile_admit_batch.py",
+      "bytes": 3960,
+      "sha256": "4f0dd020c227b9b1b70128c8e899b1adf9593649886a1b8d449b8001719cf204"
+    },
+    {
+      "path": "tests/unit/test_corrected_reconcile_batch.py",
+      "bytes": 3297,
+      "sha256": "12d528673e30da9ba16ddcf90f0af9fd5d3ae59d508fb3e4e5c1ffed3c0c472a"
+    }
+  ],
+  "unchanged_inputs": [
+    {
+      "path": "benchmark_tools/results/qfo_corrected_candidates_prepare_batch_20260918.sh",
+      "bytes": 1234,
+      "sha256": "73e512274bb7af1f6987fd6f5c679f29b00712ba433ec396e6dfe3eb49655162"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_candidates_admit_batch_20260918.sh",
+      "bytes": 1204,
+      "sha256": "728b8d13c3662281de6411d4654e493355d48abcdfd4978a5e11a2733ee234d4"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_group_pairs_batch_20260918.sh",
+      "bytes": 1226,
+      "sha256": "12ba438a6f084975ec7c30d5b57bc57a0f3c2f8fdeb7950718b2e435a0d21821"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_native_pairs_batch_20260918.sh",
+      "bytes": 1510,
+      "sha256": "5054fe256ce443274842e7c7d18c53a6515abe7070c0f4a6e912676253c17679"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_assessment_batch_20260918.sh",
+      "bytes": 1237,
+      "sha256": "95f16ce4db8c7aeca32a7b5d78ab7659dd7a763d5a5a0c10e289cc63d686cf02"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_score_admit_batch_20260918.sh",
+      "bytes": 1485,
+      "sha256": "3fe5eb29c8132fa31e988f7a6277e86e2f0045ab3f68c71f07242c2044a9cb5b"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_reconcile_batch_20260918.sh",
+      "bytes": 1450,
+      "sha256": "d3a02ea410a0171b3f69363f5fb0046a2323346586bda9ebf110fc1e25868912"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_corrected_factorial_admit_batch_20260918.sh",
+      "bytes": 2241,
+      "sha256": "8b6b3bc900181b1314fc0897dbdd9840e4519cee006c6f4a56575ddb8607ebe3"
+    }
+  ],
+  "unchanged_conftest_function_asts": ["synthetic_linux_boot_id", "pytest_configure"],
+  "limitations": [
+    "Only temporary test copies relocate historical runtime/root; archived production workflows remain workstation-specific.",
+    "Synthetic scheduler rows and dummy executors are not native scheduler, QfO or benchmark admission.",
+    "New handoff correction awaits remote execution; broader CI and final release portability remain open.",
+    "No quiet-window certification or controlled timing, source/rights closure or publication readiness follows."
+  ]
+}

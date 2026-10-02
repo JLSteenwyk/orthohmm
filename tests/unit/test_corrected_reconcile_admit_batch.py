@@ -2,7 +2,9 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import shlex
 import subprocess
+import sys
 
 import pytest
 
@@ -20,8 +22,8 @@ def test_resources():
 @pytest.mark.parametrize("index", range(4))
 @pytest.mark.parametrize("problem", [None, "missing", "duplicate", "failed", "running",
                                     "step_only", "bad_raw", "wrong_task", "dirty", "missing_input"])
-def test_handoff(tmp_path, index, problem):
-    executor, root = tmp_path / "executor", tmp_path / "root"
+def test_handoff(tmp_path, index, problem, stage_historical_qfo_batch):
+    executor, root = tmp_path / "executor path $literal's", tmp_path / "root path $literal's"
     source = executor / "benchmark_tools/admit_qfo_corrected_factorial_cell.py"
     source.parent.mkdir(parents=True)
     marker = tmp_path / "called.json"
@@ -63,15 +65,12 @@ def test_handoff(tmp_path, index, problem):
     bin_dir = tmp_path / "bin"
     bin_dir.mkdir()
     sacct = bin_dir / "sacct"
-    sacct.write_text("#!/home/bizon/anaconda3/bin/python\nimport sys\n"
+    sacct.write_text(f"#!/bin/sh\nexec {shlex.quote(sys.executable)} - \"$@\" <<'PY'\nimport sys\n"
                      f"assert sys.argv[1:] == ['-j', {task!r}, '--parsable2', '--format=JobID%64,JobIDRaw%64,State,ExitCode']\n"
-                     f"print({'JobID|JobIDRaw|State|ExitCode' + chr(10) + rows!r}, end='')\n")
+                     f"print({'JobID|JobIDRaw|State|ExitCode' + chr(10) + rows!r}, end='')\nPY\n")
     sacct.chmod(0o755)
     env["PATH"] = str(bin_dir) + os.pathsep + env["PATH"]
-    text = BATCH.read_text()
-    root_line = next(line for line in text.splitlines() if line.startswith("ROOT="))
-    batch = tmp_path / "batch.sh"
-    batch.write_text(text.replace(root_line, f"ROOT={root}"))
+    batch = stage_historical_qfo_batch(BATCH, tmp_path / "batch.sh", root, python_calls=2)
     result = subprocess.run(["bash", str(batch), str(executor), commit, str(index), "123", "111"],
                             env=env, capture_output=True, text=True)
     if problem:

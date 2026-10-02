@@ -22,9 +22,9 @@ def test_resources(mode, memory):
 @pytest.mark.parametrize("index", range(8))
 @pytest.mark.parametrize("problem", [None, "missing_candidate", "missing_native", "wrong_commit",
                                     "dirty", "wrong_parity", "bad_job"])
-def test_handoff(tmp_path, index, problem):
+def test_handoff(tmp_path, index, problem, stage_historical_qfo_batch):
     mode = "native" if index % 2 else "group"
-    executor, root = tmp_path / "executor", tmp_path / "root"
+    executor, root = tmp_path / "executor path $literal's", tmp_path / "root path $literal's"
     source = executor / f"benchmark_tools/prepare_qfo_corrected_{mode}_pairs.py"
     source.parent.mkdir(parents=True)
     marker = tmp_path / "called.json"
@@ -53,10 +53,9 @@ def test_handoff(tmp_path, index, problem):
         commit = "0" * 40
     elif problem == "dirty":
         source.write_text(source.read_text() + "# changed\n")
-    text = (RESULTS / f"qfo_corrected_{mode}_pairs_batch_20260918.sh").read_text()
-    root_line = next(line for line in text.splitlines() if line.startswith("ROOT="))
-    batch = tmp_path / "batch.sh"
-    batch.write_text(text.replace(root_line, f"ROOT={root}"))
+    batch = stage_historical_qfo_batch(
+        RESULTS / f"qfo_corrected_{mode}_pairs_batch_20260918.sh",
+        tmp_path / "batch.sh", root)
     passed_index = index ^ 1 if problem == "wrong_parity" else index
     job = "pending" if problem == "bad_job" else "123"
     result = subprocess.run(["bash", str(batch), str(executor), commit, str(passed_index), job],

@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Historical QfO Handoff Fixtures Relocated Without Batch Changes (2026-10-01)
+
+Previous goal turn is progress at pushed 57a8391f: explicit synthetic accounting
+clocks and bounded remote rendering confirmation. Reread objective/ledger and
+inspect actual run 36953675242; at 02:07:15 UTC CPU-wheel/docs succeed and all
+five test jobs remain live. No inferred outcomes or manual retries.
+
+Reuse retained source-df22 Python 3.11 log: 38 failures across five QfO handoff
+modules report missing workstation Python. Add an explicitly requested fixture
+that changes only root/interpreter in fresh temporary copies. Quote paths and
+fake accounting launcher; test special path characters and reject marker drift
+or reused output. Archived scripts, provenance guards, expected argv/hashes,
+task/index/parity checks and failure rejection remain unchanged.
+
+**329 focused cases pass in 14.95 seconds**, zero failures/errors/skips: all
+238 handoff cases, eight new fixture checks and 83 clock/accounting cases.
+Earlier 248-case panel superseded, not additive. All eight archived scripts
+byte-equal to preceding commit; boot-fixture/configuration ASTs unchanged.
+[Executed evidence and boundaries](CI_QFO_BATCH_FIXTURES_20261001.md).
+
+Commit/push this milestone and observe its actual automatic CI without old-run
+retries. Remote handoff confirmation is pending. Historical production scripts
+are still workstation-specific; this test fixture does not close release
+workflow portability. No scientific/default/score/native benchmark changes,
+timing/host polls/questions, DGX, shared-package or unrelated job/service actions.
+All local commands terminate. Full goal remains active: broader CI, remaining
+uncertainty/source/rights, controlled resources, final release and archive remain
+unfinished. The quiet window is not needed for this current work.
+
 ## Remote Rendering Confirmed And Synthetic Clock Corrections (2026-10-01)
 
 Continue from pushed df22e79a. User lacks quiet-window information and asks

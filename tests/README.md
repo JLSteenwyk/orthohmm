@@ -41,6 +41,11 @@ Synthetic measurement, evidence-replay, cgroup-frontier and service-reply tests
 also explicitly request that fixture. Missing boot data and reboot rejection
 remain tested; production collectors still require real Linux capabilities.
 See the [scoped validation](../benchmark_tools/results/CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md).
+Historical QfO handoff tests explicitly relocate only root/interpreter bindings
+in fresh temporary copies, exercising dummy executors and synthetic scheduler
+rows with shell-special paths. Archived batches and their provenance checks
+stay unchanged. See [validation and production boundaries](../benchmark_tools/results/CI_QFO_BATCH_FIXTURES_20261001.md);
+test portability does not make historical native workflows portable.
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude

@@ -109,6 +109,10 @@ broader CI still fails. Four synthetic accounting modules now explicitly
 inject boot identity; 83 focused local cases pass without changing production
 collectors. Those new corrections await remote execution and certify no quiet
 host, timing admission, native scientific reproduction or publication readiness.
+The [historical QfO handoff-test correction](CI_QFO_BATCH_FIXTURES_20261001.md)
+relocates only temporary root/interpreter bindings, preserving all eight archived
+batches and their guards. Its 329-case local panel passes; new remote execution
+is pending. This is test portability, not native workflow/release portability.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.
