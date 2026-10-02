@@ -189,7 +189,9 @@ def execute(request_path, request_sha):
     policy_ref = readiness["environment_policy"]
     policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
-    native_pressure_role(policy)
+    pressure_role = native_pressure_role(policy)
+    if selected["name"] == "private_v2_20260928" and pressure_role != "diagnostic_only":
+        raise ValueError("Private timing requires explicit v2 diagnostic-only native pressure policy")
     number(policy["maximum_foreign_average_cores"])
     number(policy["maximum_sample_period_s"], positive=True)
     number(policy["maximum_pressure_sample_period_s"], positive=True)

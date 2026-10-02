@@ -27,6 +27,8 @@ def setup(tmp_path, monkeypatch, synthetic_linux_boot_id, request):
         plan_sha256=selected['plan_sha'], evidence=[support], review_reference='synthetic test only',
         process_policy=process_ref, configuration_files=[support], maximum_foreign_average_cores=.1,
         maximum_pressure_percent=dict(cpu=0., io=0., memory=0.))
+    if selected["name"] == "private_v2_20260928":
+        policy.update(schema="threadripper_environment_policy_v2", native_pressure_role="diagnostic_only")
     policy_ref = put(tmp_path / 'policy.json', policy)
     readiness = put(tmp_path / 'readiness.json', dict(environment_policy=policy_ref))
     request = dict(deployment=request.param, job_id=42, index=0, recipe=support, readiness_review=readiness,
@@ -162,6 +164,19 @@ def test_v2_still_enforces_parked_worker_preflight_pressure(setup, pressure_exce
     assert result["preflight_pressure_limits_used"] is True
     assert not result["scientific_timings_admitted"]
     assert not (setup.directory / "go.json").exists()
+
+
+def test_private_worker_refuses_legacy_pressure_policy_before_observation(setup):
+    if setup.request["deployment"] != "private_v2_20260928":
+        assert setup.run()["decision"] == "passed"
+        return
+    setup.policy.update(schema="threadripper_environment_policy_v1")
+    setup.policy.pop("native_pressure_role", None)
+    setup.policy_ref.update(put(Path(setup.policy_ref["path"]), setup.policy))
+    with pytest.raises(ValueError, match="Private timing requires"):
+        setup.run()
+    assert not (setup.root / "environment_worker_evidence.json").exists()
+    assert not Path(setup.request["environment_preflight_path"]).exists()
 
 
 def test_deadline_crossed_after_evidence_serialization(setup):

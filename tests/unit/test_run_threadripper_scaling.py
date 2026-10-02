@@ -93,6 +93,7 @@ def private_setup(setup, monkeypatch):
                    scheduler_command=str(script), recipe=recipe)
     policy = json.loads((root / "environment_policy.json").read_text())
     policy["plan_sha256"] = plan["sha256"]
+    policy.update(schema="threadripper_environment_policy_v2", native_pressure_role="diagnostic_only")
     policy_ref = put(root / "environment_policy.json", policy)
     ready = json.loads((root / "ready.json").read_text())
     ready.update(plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], recipe_sha256=recipe["sha256"],
@@ -177,11 +178,21 @@ def test_private_pin_constants_match_retained_artifacts_and_bootstrap(tmp_path, 
     assert syntax.returncode == 0, syntax.stderr
 
 
-@pytest.mark.parametrize("fault", ["missing", "wrong_path", "wrong_hash"])
+@pytest.mark.parametrize("fault", ["missing", "wrong_path", "wrong_hash", "legacy_policy"])
 def test_private_controller_failure_precedes_session_or_native_work(setup, monkeypatch, fault):
     root, request, _ = private_setup(setup, monkeypatch)
     binding = json.loads((root / "binding.json").read_text())
-    if fault == "missing": binding.pop("controller_python")
+    if fault == "legacy_policy":
+        policy_path = root / "environment_policy.json"
+        policy = json.loads(policy_path.read_bytes())
+        policy.update(schema="threadripper_environment_policy_v1")
+        policy.pop("native_pressure_role")
+        policy_ref = put(policy_path, policy)
+        ready_path = root / "ready.json"
+        ready = json.loads(ready_path.read_bytes())
+        ready["environment_policy"] = policy_ref
+        request["readiness_review"] = put(ready_path, ready)
+    elif fault == "missing": binding.pop("controller_python")
     elif fault == "wrong_path": binding["controller_python"]["path"] = str(root / "other_controller")
     else: binding["controller_python"]["sha256"] = "0" * 64
     binding_ref = put(root / "binding.json", binding)
@@ -202,7 +213,7 @@ def test_private_controller_failure_precedes_session_or_native_work(setup, monke
     for key, value in dict(SLURM_JOB_ID="42", SLURM_CPUS_PER_TASK="64", SLURM_MEM_PER_NODE="131072", PYTHONHASHSEED="0").items():
         monkeypatch.setenv(key, value)
     monkeypatch.chdir(root)
-    with pytest.raises(ValueError, match="controller interpreter|Frozen input/source"):
+    with pytest.raises(ValueError, match="controller interpreter|Frozen input/source|Private timing requires"):
         driver.execute(Path(ref["path"]), ref["sha256"])
     assert not (root / "runs").exists()
 
@@ -377,8 +388,7 @@ temporary.rename(target)
 @pytest.mark.parametrize("raises", [False, True])
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
-@pytest.mark.parametrize("private", [False, True])
-@pytest.mark.parametrize("native_v2", [False, True])
+@pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True)])
 def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private, native_v2):
     if private:
         setup = private_setup(setup, monkeypatch)

@@ -110,6 +110,8 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
     policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
     pressure_role = native_pressure_role(policy)
+    if selected["name"] == "private_v2_20260928" and pressure_role != "diagnostic_only":
+        raise ValueError("Private timing requires explicit v2 diagnostic-only native pressure policy")
     ready = read(request["readiness_review"])
     if ready.get("environment_policy") != policy_ref:
         raise ValueError("Readiness does not bind this environmental policy")
