@@ -8,6 +8,8 @@ import re
 import subprocess
 
 SCIENTIFIC_REVISION = "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806"
+BUILD_REVISION = "6fd6df19daba83ec6467b917988f99e27a95be14"
+BUILD_SETUP_SHA = "88120e9d722557337d466a5026c4b238d5a21c9cc213bf35c27d4b480b347193"
 RUNNER = "benchmark_tools/bundle_publication_source.py"
 GUIDE = "benchmark_tools/PUBLICATION_SOURCE_COMPONENT.md"
 SUPPORT_PINS = {
@@ -35,11 +37,12 @@ WHEEL_SUPPORT_PINS = {
         "53df1cabd91c2fb18179951ebc95166ae49ba843f4015e0f417468d2a8265063",
 }
 WHEEL_HELPERS = {"benchmark_tools/acquire_publication_wheels.py", "benchmark_tools/acquire_publication_base.py"}
-PROFILES = {"source-only", "orthobench-inputs", "native-preparation", "native-wheels"}
+BUILD_HELPERS = {"benchmark_tools/build_publication_project_wheel.py"}
+PROFILES = {"source-only", "orthobench-inputs", "native-preparation", "native-wheels", "native-build"}
 
 
 def support_pins(profile):
-    if profile == "native-wheels":
+    if profile in {"native-wheels", "native-build"}:
         return {**SUPPORT_PINS, **BASE_SUPPORT_PINS, **WHEEL_SUPPORT_PINS}
     if profile == "native-preparation":
         return {**SUPPORT_PINS, **BASE_SUPPORT_PINS}
@@ -65,6 +68,8 @@ def selected(name, component, profile="source-only"):
         raise ValueError("Unknown source profile")
     if component == "scientific":
         return name in {"LICENSE.md", "README.md", "requirements.txt", "setup.py"} or name.startswith("orthohmm/")
+    if component == "build":
+        return profile == "native-build" and name == "setup.py"
     if component == "workflow":
         return (name in {"LICENSE.md", GUIDE, "benchmark_tools/PUBLICATION_REPRODUCTION.md"}
                 or re.fullmatch(r"benchmark_tools/[^/]+\.py", name) is not None
@@ -76,14 +81,18 @@ def selected(name, component, profile="source-only"):
 def required(component, profile):
     if component == "scientific":
         return {"LICENSE.md", "setup.py", "orthohmm/version.py"}
+    if component == "build":
+        return {"setup.py"} if profile == "native-build" else set()
     names = {"LICENSE.md", RUNNER, GUIDE}
-    if profile in {"orthobench-inputs", "native-preparation", "native-wheels"}:
+    if profile in {"orthobench-inputs", "native-preparation", "native-wheels", "native-build"}:
         names |= {*SUPPORT_PINS, "benchmark_tools/verify_orthobench_acquisition.py",
                   "benchmark_tools/rebind_orthobench_data.py"}
-    if profile in {"native-preparation", "native-wheels"}:
+    if profile in {"native-preparation", "native-wheels", "native-build"}:
         names |= {*BASE_SUPPORT_PINS, *BASE_HELPERS}
-    if profile == "native-wheels":
+    if profile in {"native-wheels", "native-build"}:
         names |= {*WHEEL_SUPPORT_PINS, *WHEEL_HELPERS}
+    if profile == "native-build":
+        names |= BUILD_HELPERS
     return names
 
 
@@ -101,6 +110,8 @@ def inventory(repo, revision, component, profile="source-only"):
         if kind != "blob" or mode not in {"100644", "100755"} or name in result:
             raise ValueError("Require distinct regular committed source blobs")
         content = subprocess.check_output(["git", "-C", str(repo), "cat-file", "blob", blob])
+        if component == "build" and identity(content)["sha256"] != BUILD_SETUP_SHA:
+            raise ValueError("Frozen setup-only build overlay differs")
         if name in support_pins(profile) and identity(content)["sha256"] != support_pins(profile)[name]:
             raise ValueError("Frozen acquisition/runtime support manifest differs")
         result[name] = (content, int(mode, 8) & 0o777, blob)
@@ -128,6 +139,8 @@ def verify(directory, manifest_sha):
             raise ValueError("Unsupported acquisition-support profile")
     else:
         raise ValueError("Unknown source schema")
+    if profile == "native-build" and manifest.get("build_revision") != BUILD_REVISION:
+        raise ValueError("Build overlay revision differs")
     if (
             manifest["scientific_revision"] != SCIENTIFIC_REVISION
             or not re.fullmatch(r"[0-9a-f]{40}", manifest["workflow_revision"])
@@ -135,10 +148,13 @@ def verify(directory, manifest_sha):
             or manifest["redistribution_clearance"] is not False):
         raise ValueError("Source component scope differs")
     seen, counts, syntax, total = set(), {"scientific": 0, "workflow": 0}, 0, 0
+    if profile == "native-build":
+        counts["build"] = 0
     for row in manifest["files"]:
         name = relative(row["path"])
         component, source = name.split("/", 1)
-        expected_revision = SCIENTIFIC_REVISION if component == "scientific" else manifest["workflow_revision"]
+        expected_revision = (SCIENTIFIC_REVISION if component == "scientific" else
+                             BUILD_REVISION if component == "build" else manifest["workflow_revision"])
         if (name in seen or not selected(source, component, profile) or row["git_path"] != source
                 or row["git_revision"] != expected_revision or row["mode"] not in (0o644, 0o755)
                 or not re.fullmatch(r"[0-9a-f]{40}", row["git_blob"])):
@@ -150,6 +166,8 @@ def verify(directory, manifest_sha):
         payload = path.read_bytes()
         if identity(payload) != {key: row[key] for key in ("bytes", "sha256")}:
             raise ValueError("Source payload identity differs")
+        if component == "build" and identity(payload)["sha256"] != BUILD_SETUP_SHA:
+            raise ValueError("Frozen setup-only build overlay differs")
         if source in support_pins(profile) and identity(payload)["sha256"] != support_pins(profile)[source]:
             raise ValueError("Frozen acquisition/runtime support manifest differs")
         if source.endswith(".py"):
@@ -165,11 +183,14 @@ def verify(directory, manifest_sha):
                       for name in required(component, profile)}
     if not required_paths <= seen or not all(counts.values()):
         raise ValueError("Missing source component support")
-    return dict(status="publication_source_components_verified", files=len(seen), components=counts,
+    result = dict(status="publication_source_components_verified", files=len(seen), components=counts,
                 payload_bytes=total, python_files_syntax_checked=syntax,
                 manifest=identity(content), scientific_revision=SCIENTIFIC_REVISION,
                 workflow_revision=manifest["workflow_revision"], executable_benchmark_reproduced=False,
                 redistribution_clearance=False, publication_ready=False)
+    if profile == "native-build":
+        result["build_revision"] = BUILD_REVISION
+    return result
 
 
 def build(repo, revision, output, profile="source-only"):
@@ -180,7 +201,10 @@ def build(repo, revision, output, profile="source-only"):
         raise FileExistsError(output)
     commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
     payloads, rows = {}, []
-    for component, source_revision in (("scientific", SCIENTIFIC_REVISION), ("workflow", commit)):
+    components = [("scientific", SCIENTIFIC_REVISION), ("workflow", commit)]
+    if profile == "native-build":
+        components.append(("build", BUILD_REVISION))
+    for component, source_revision in components:
         for source, (content, mode, blob) in sorted(inventory(repo, source_revision, component, profile).items()):
             name = component + "/" + source
             payloads[name] = (content, mode)
@@ -201,14 +225,18 @@ def build(repo, revision, output, profile="source-only"):
         manifest["exclusions"][4] = "Result receipts/plans other than three fixed acquisition-support manifests; figures and manuscript assets"
         manifest["limitations"].append(
             "Support manifests preserve historical provenance paths; acquisition/rebinding must use separately supplied local inputs. No raw data or native runtime is included.")
-        if profile in {"native-preparation", "native-wheels"}:
+        if profile in {"native-preparation", "native-wheels", "native-build"}:
             manifest["exclusions"][4] = "Result receipts/plans other than four fixed acquisition/runtime support documents; figures and manuscript assets"
             manifest["limitations"].append(
                 "Native-preparation additionally includes the fixed historical base reconstruction receipt and required controller helpers, not archives, wheels or Conda bootstrap.")
-        if profile == "native-wheels":
+        if profile in {"native-wheels", "native-build"}:
             manifest["exclusions"][4] = "Result receipts/plans other than seven fixed acquisition/runtime/wheel-support documents; figures and manuscript assets"
             manifest["limitations"].append(
                 "Native-wheels includes the exact admitted wheel inventory and both historical hash locks; the unpublished project wheel and pip still require separately supplied exact artifacts.")
+        if profile == "native-build":
+            manifest["build_revision"] = BUILD_REVISION
+            manifest["limitations"].append(
+                "Native-build additionally carries the frozen setup-only overlay separately; a rebuilt candidate wheel is not silently substituted into historical hash locks or admitted scientific executors.")
     output.mkdir(parents=True, exist_ok=False)
     for name, (content, mode) in payloads.items():
         path = output / name

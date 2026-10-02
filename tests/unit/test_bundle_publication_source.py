@@ -13,7 +13,7 @@ def git(repo, *args):
     return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
 
 
-@pytest.fixture(params=["source-only", "orthobench-inputs", "native-preparation", "native-wheels"])
+@pytest.fixture(params=["source-only", "orthobench-inputs", "native-preparation", "native-wheels", "native-build"])
 def exported(tmp_path, monkeypatch, request):
     repo = tmp_path / "repo"
     repo.mkdir()
@@ -31,6 +31,15 @@ def exported(tmp_path, monkeypatch, request):
     original = module.SCIENTIFIC_REVISION
     monkeypatch.setattr(module, "SCIENTIFIC_REVISION", scientific)
     runner = Path(module.__file__).read_text().replace(original, scientific)
+    if request.param == "native-build":
+        (repo / "setup.py").write_text("BUILD = 'fixture'\n")
+        git(repo, "add", "setup.py")
+        git(repo, "commit", "-qm", "Build overlay")
+        build_revision = git(repo, "rev-parse", "HEAD")
+        setup_sha = module.identity((repo / "setup.py").read_bytes())["sha256"]
+        runner = runner.replace(module.BUILD_REVISION, build_revision).replace(module.BUILD_SETUP_SHA, setup_sha)
+        monkeypatch.setattr(module, "BUILD_REVISION", build_revision)
+        monkeypatch.setattr(module, "BUILD_SETUP_SHA", setup_sha)
     for name, content in {module.RUNNER: runner, module.GUIDE: "Source scope", "benchmark_tools/probe.py": "pass\n",
                           "tests/unit/test_example.py": "def test_example():\n    pass\n",
                           "benchmark_tools/results/private.json": '{"omitted": true}',
@@ -42,10 +51,12 @@ def exported(tmp_path, monkeypatch, request):
         root = Path(module.__file__).resolve().parent.parent
         support_names = {*module.support_pins(request.param), "benchmark_tools/verify_orthobench_acquisition.py",
                          "benchmark_tools/rebind_orthobench_data.py"}
-        if request.param in {"native-preparation", "native-wheels"}:
+        if request.param in {"native-preparation", "native-wheels", "native-build"}:
             support_names |= module.BASE_HELPERS
-        if request.param == "native-wheels":
+        if request.param in {"native-wheels", "native-build"}:
             support_names |= module.WHEEL_HELPERS
+        if request.param == "native-build":
+            support_names |= module.BUILD_HELPERS
         for name in support_names:
             target = repo / name
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -68,6 +79,26 @@ def rewrite_index(bundle, change):
     return module.identity(path.read_bytes())["sha256"]
 
 
+@pytest.mark.parametrize("exported", ["native-build"], indirect=True)
+@pytest.mark.parametrize("fault", ["sha", "revision", "mapping", "missing"])
+def test_build_overlay_remains_separately_fixed(exported, fault):
+    _, bundle, _ = exported
+    def change(index):
+        row = next(r for r in index["files"] if r["path"] == "build/setup.py")
+        if fault == "sha":
+            content = b"OTHER = 1\n"
+            (bundle / "build/setup.py").write_bytes(content)
+            row.update(module.identity(content))
+        elif fault == "revision": index["build_revision"] = "0" * 40
+        elif fault == "mapping": row["git_revision"] = module.SCIENTIFIC_REVISION
+        else:
+            index["files"].remove(row)
+            (bundle / "build/setup.py").unlink()
+    digest = rewrite_index(bundle, change)
+    with pytest.raises(ValueError):
+        module.verify(bundle, digest)
+
+
 def test_component_revisions_and_exclusions(exported):
     repo, bundle, result = exported
     assert result["status"] == "publication_source_components_verified"
@@ -83,11 +114,17 @@ def test_component_revisions_and_exclusions(exported):
         assert index["schema"] == "publication_source_components_v1"
     assert not (bundle / "workflow/tests/samples").exists()
     workflow_count = 5 if not support else 10
-    if index.get("profile") in {"native-preparation", "native-wheels"}:
+    if index.get("profile") in {"native-preparation", "native-wheels", "native-build"}:
         workflow_count += 1 + len(module.BASE_HELPERS)
-    if index.get("profile") == "native-wheels":
+    if index.get("profile") in {"native-wheels", "native-build"}:
         workflow_count += len(module.WHEEL_SUPPORT_PINS) + len(module.WHEEL_HELPERS - module.BASE_HELPERS)
-    assert result["components"] == dict(scientific=5, workflow=workflow_count)
+    components = dict(scientific=5, workflow=workflow_count)
+    if index.get("profile") == "native-build":
+        components["build"] = 1
+        components["workflow"] += len(module.BUILD_HELPERS)
+        assert (bundle / "build/setup.py").read_text() == "BUILD = 'fixture'\n"
+        assert (bundle / "scientific/setup.py").read_text() == "pass\n"
+    assert result["components"] == components
     assert result["executable_benchmark_reproduced"] is False
     assert result["publication_ready"] is False
     assert result["redistribution_clearance"] is False
@@ -250,7 +287,7 @@ def test_native_base_manifest_pin_rejected(exported):
     _, bundle, _ = exported
     path = bundle / "SOURCE_INDEX.json"
     index = json.loads(path.read_text())
-    if index.get("profile") not in {"native-preparation", "native-wheels"}:
+    if index.get("profile") not in {"native-preparation", "native-wheels", "native-build"}:
         assert not (bundle / "workflow" / next(iter(module.BASE_SUPPORT_PINS))).exists()
         return
     name = next(iter(module.BASE_SUPPORT_PINS))
@@ -270,7 +307,7 @@ def test_native_wheel_support_pin_rejected(exported, name):
     index_path = bundle / "SOURCE_INDEX.json"
     index = json.loads(index_path.read_bytes())
     target = bundle / "workflow" / name
-    if index.get("profile") != "native-wheels":
+    if index.get("profile") not in {"native-wheels", "native-build"}:
         assert not target.exists()
         return
     target.write_text("changed\n")
