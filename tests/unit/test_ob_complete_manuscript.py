@@ -77,3 +77,38 @@ def test_reproduction_guide_distinguishes_completed_runs_from_open_release_work(
     assert "cross-host execution" in gates
     assert "27 replacement scaling runs remain unexecuted" in gates
     assert "MAIN_RECONSTRUCTION_REVIEW_20260929.md" in text
+
+
+def test_assembled_fixture_claims_are_bounded_by_executed_receipt():
+    result = json.loads((BASE / "publication_runtime_assembly_20261002.json").read_bytes())
+    assert len(result["executor_outcomes"]) == 10
+    assert all(row["returncode"] == 0 for row in result["executor_outcomes"])
+    assert result["installed_matched_files"] == 5754
+    assert result["base_site_files"] == 883 and result["base_unchanged"] is True
+    assert result["fixture"]["genes"] == 16 and result["fixture"]["pairs"] == 36
+    assert result["original_failure_preserved"] is True
+    assert result["native_execution_repeated"] is result["new_biological_validation"] is False
+    for name in ("PUBLICATION_MANUSCRIPT_DRAFT_20260916.md", "PUBLICATION_CLAIMS_20260916.md"):
+        text = (BASE / name).read_text()
+        assert "PUBLICATION_RUNTIME_ASSEMBLY_20261002.md" in text
+        assert "5,754" in text and "883" in text
+        assert "readback" in text and "controlled timing" in text
+
+
+def test_native_handoff_claims_do_not_imply_delivered_runtime_or_new_experiments():
+    result = json.loads((BASE / "publication_native_handoff_20261002.json").read_bytes())
+    assert result["source_profile"] == "native-build"
+    assert result["archive_files_validated"] == 1936
+    assert result["original_verification"]["files"] == 1935
+    assert result["original_verification"]["runtime_evidence_included"] is True
+    assert result["original_verification"]["runtime_payload_delivered"] is False
+    assert result["archive_rebuilt"] is False and result["guard_unchanged"] is True
+    assert result["native_inference_repeated"] is result["numerical_replay_repeated"] is False
+    assert result["controlled_timing"] is result["publication_ready"] is False
+    for name in ("PUBLICATION_MANUSCRIPT_DRAFT_20260916.md", "PUBLICATION_CLAIMS_20260916.md"):
+        text = (BASE / name).read_text()
+        assert "PUBLICATION_NATIVE_HANDOFF_20261002.md" in text and "1,936" in text
+        assert "TMPDIR" in text and "dated" in text
+    guide = (BASE.parent / "PUBLICATION_REPRODUCTION.md").read_text()
+    assert "PUBLICATION_NATIVE_HANDOFF_20261002.md" in guide
+    assert "not complete executable study delivery" in guide

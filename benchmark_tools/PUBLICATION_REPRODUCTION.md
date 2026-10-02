@@ -18,6 +18,20 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [native-build handoff archive](results/PUBLICATION_NATIVE_HANDOFF_20261002.md)
+now includes the validated assembly route in the unified source/manuscript/count
+package, without adding raw data, wheels, tool binaries or a base runtime.
+An explicit v2 profile preserves the default v1 contract. Actual extraction
+checks 1,936 regular archive members and both independent copied verification
+passes run with an empty PATH and original mounted paths denied. All 280 focused
+checks pass. A TMPDIR/guard placement failure is retained; its already built
+archive is reused under explicit /tmp with the guard unchanged, not rebuilt.
+Completed arithmetic/native admissions and the nine-page review are reused,
+not rerun or rendered anew. This closes the stale source-profile/reader-route
+gap, not complete executable study delivery, rights/security, controlled
+resources, independent confirmation or final archival deposition.
+See [profile and reader commands](PUBLICATION_HANDOFF.md).
+
 The [explicit runtime assembly and integrated fixture](results/PUBLICATION_RUNTIME_ASSEMBLY_20261002.md)
 connects the independently acquired/rebuilt wheels, prepared tools and frozen
 31-module readers without old runtime asset trees. A relocated 102-file,

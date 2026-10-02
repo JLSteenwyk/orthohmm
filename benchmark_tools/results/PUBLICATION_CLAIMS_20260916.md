@@ -13,6 +13,26 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [assembled native runtime fixture](PUBLICATION_RUNTIME_ASSEMBLY_20261002.md)
+now connects independently acquired/source-reconstructed wheels, prepared
+tools and the exact 31-reader closure through an explicit executor lane.
+All ten stages pass, 5,754 installed payload files match, 883 base-site files
+remain unchanged and five native fixture outputs reproduce. The wrong outer
+family-count assertion is retained and corrected by readback without repeated
+inference. All 283 focused tests pass. This is bounded same-host integration,
+not new full-data admission, biological confirmation or controlled timing.
+
+The [new native-build handoff profile](PUBLICATION_NATIVE_HANDOFF_20261002.md)
+connects those executed instructions and pinned evidence with the existing
+source/manuscript/count archive. All 1,936 members match after fresh extraction,
+and two Python-event-guarded verifications deny the checkout canary and record
+no later original-mounted-path access or external process execution. All 280
+focused checks pass; retain the initial TMPDIR placement failure and reuse its
+archive unchanged. The main review and numerical/native admissions stay dated,
+not re-executed. No raw/native/runtime payloads, complete OS/security/rights
+closure, independent confirmation, controlled resources, final manuscript
+reconciliation, public release or DOI are supplied by this source-profile update.
+
 The [private executor route](THREADRIPPER_PRIVATE_EXECUTOR_20261002.md) now
 selects the retained private plan/lookup/controller explicitly instead of
 requiring the historical shared route. The 229 focused checks are synthetic/

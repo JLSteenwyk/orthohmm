@@ -1,0 +1,447 @@
+{
+  "archive": {
+    "bytes": 22302720,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/handoff.tar",
+    "sha256": "5d9f96166517b5fbd7dfcac16fa3967be9ec165b0ecc05c915e0a2d7fe25a475"
+  },
+  "archive_and_component_unchanged": true,
+  "archive_files_validated": 1936,
+  "archive_rebuilt": false,
+  "attempts": 1,
+  "controlled_timing": false,
+  "external_anchors": {
+    "bytes": 514,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/external_anchors.json",
+    "sha256": "deb1a873d58bdbe92bc9fd7484dca08aa9c2f1fc2f42ae27b8c9721e2c2c1507"
+  },
+  "extracted": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/extracted",
+  "guard_source": {
+    "bytes": 1483,
+    "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/verify_guard.py",
+    "sha256": "19c3681b36a30dd7612f96201a736300c48550db483d3755b25446bea919ca65"
+  },
+  "guard_unchanged": true,
+  "guarded_verifications": [
+    {
+      "guard": {
+        "bytes": 793309,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_before_events.json",
+        "sha256": "0d808d1b0e33fa75291db8b25cf9fd37ba4a85d2ee027ce2042db4634217a9f1"
+      },
+      "observed_open_events": 3905,
+      "verification": {
+        "comparison": {
+          "methods": 8,
+          "numeric_cells": 72,
+          "raw_scoring_repeated": false,
+          "secondary_mean_official": false
+        },
+        "components": {
+          "manuscript": {
+            "direct_targets": 46,
+            "entrypoints": {
+              "html": "benchmark_tools/results/publication_main_review_20261002_v3.html",
+              "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+              "pdf": "benchmark_tools/results/publication_main_print_20261002_v3/document.pdf"
+            },
+            "files": 69,
+            "inference_reproduced": false,
+            "local_html_occurrences": 48,
+            "manifest": {
+              "bytes": 25583,
+              "sha256": "0d47378adf368e66154bbf59931dc626c2a784e05f3a136690ca1efdef146660"
+            },
+            "page_count": 9,
+            "payload_bytes": 5197565,
+            "publication_ready": false,
+            "redistribution_clearance": false,
+            "status": "publication_direct_review_verified",
+            "transitive_evidence_included": false
+          },
+          "source": {
+            "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+            "components": {
+              "build": 1,
+              "scientific": 43,
+              "workflow": 1802
+            },
+            "executable_benchmark_reproduced": false,
+            "files": 1846,
+            "manifest": {
+              "bytes": 747114,
+              "sha256": "b58c3abfdfe576d705e44f70cab68dd80fddc2ebe5dcd3581ff7f5bb9edf7524"
+            },
+            "payload_bytes": 11077578,
+            "publication_ready": false,
+            "python_files_syntax_checked": 1825,
+            "redistribution_clearance": false,
+            "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+            "status": "publication_source_components_verified",
+            "workflow_revision": "03ebd29034e95a38a84c5cd77c3651951f48b5d9"
+          }
+        },
+        "files": 1935,
+        "manifest": {
+          "bytes": 425259,
+          "sha256": "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f"
+        },
+        "native_inference_reproduced": false,
+        "numerical_replay_executed": false,
+        "payload_bytes": 20376452,
+        "public_release_uploaded": false,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "runtime_evidence": {
+          "native_inference_repeated": false,
+          "original_failure_preserved": true,
+          "raw_path_readback_repeated": false,
+          "recorded_base_site_files": 883,
+          "recorded_executor_stages": 10,
+          "recorded_installed_payload_files": 5754
+        },
+        "runtime_evidence_included": true,
+        "runtime_payload_delivered": false,
+        "source_profile": "native-build",
+        "status": "publication_handoff_candidate_verified"
+      }
+    },
+    {
+      "guard": {
+        "bytes": 793308,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_after_events.json",
+        "sha256": "ca44c3ee53931840fb77b2e129e6b212fd55e3f9ac8ece4814111728514f40b8"
+      },
+      "observed_open_events": 3905,
+      "verification": {
+        "comparison": {
+          "methods": 8,
+          "numeric_cells": 72,
+          "raw_scoring_repeated": false,
+          "secondary_mean_official": false
+        },
+        "components": {
+          "manuscript": {
+            "direct_targets": 46,
+            "entrypoints": {
+              "html": "benchmark_tools/results/publication_main_review_20261002_v3.html",
+              "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+              "pdf": "benchmark_tools/results/publication_main_print_20261002_v3/document.pdf"
+            },
+            "files": 69,
+            "inference_reproduced": false,
+            "local_html_occurrences": 48,
+            "manifest": {
+              "bytes": 25583,
+              "sha256": "0d47378adf368e66154bbf59931dc626c2a784e05f3a136690ca1efdef146660"
+            },
+            "page_count": 9,
+            "payload_bytes": 5197565,
+            "publication_ready": false,
+            "redistribution_clearance": false,
+            "status": "publication_direct_review_verified",
+            "transitive_evidence_included": false
+          },
+          "source": {
+            "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+            "components": {
+              "build": 1,
+              "scientific": 43,
+              "workflow": 1802
+            },
+            "executable_benchmark_reproduced": false,
+            "files": 1846,
+            "manifest": {
+              "bytes": 747114,
+              "sha256": "b58c3abfdfe576d705e44f70cab68dd80fddc2ebe5dcd3581ff7f5bb9edf7524"
+            },
+            "payload_bytes": 11077578,
+            "publication_ready": false,
+            "python_files_syntax_checked": 1825,
+            "redistribution_clearance": false,
+            "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+            "status": "publication_source_components_verified",
+            "workflow_revision": "03ebd29034e95a38a84c5cd77c3651951f48b5d9"
+          }
+        },
+        "files": 1935,
+        "manifest": {
+          "bytes": 425259,
+          "sha256": "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f"
+        },
+        "native_inference_reproduced": false,
+        "numerical_replay_executed": false,
+        "payload_bytes": 20376452,
+        "public_release_uploaded": false,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "runtime_evidence": {
+          "native_inference_repeated": false,
+          "original_failure_preserved": true,
+          "raw_path_readback_repeated": false,
+          "recorded_base_site_files": 883,
+          "recorded_executor_stages": 10,
+          "recorded_installed_payload_files": 5754
+        },
+        "runtime_evidence_included": true,
+        "runtime_payload_delivered": false,
+        "source_profile": "native-build",
+        "status": "publication_handoff_candidate_verified"
+      }
+    }
+  ],
+  "index": {
+    "bytes": 425259,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/assembled/HANDOFF_INDEX.json",
+    "sha256": "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f"
+  },
+  "junit": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "bizon",
+    "name": "pytest",
+    "skipped": "0",
+    "tests": "280",
+    "time": "31.438",
+    "timestamp": "2026-10-02T15:47:42.271840-04:00"
+  },
+  "limitations": [
+    "Source/manuscript/count archive with native integration metadata, not raw/native/runtime delivery.",
+    "Python event guard verifies observed accesses, not OS containment or cross-host portability.",
+    "The exact unchanged numerical scripts/counts and completed native admissions are reused, not rerun.",
+    "Retained main review remains dated; transitive evidence/links are not fully included or remapped.",
+    "Independent validation, QfO uncertainty, controlled resources, rights/security and final deposition remain open."
+  ],
+  "native_inference_repeated": false,
+  "numerical_replay_repeated": false,
+  "original_driver": {
+    "bytes": 8636,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_native_handoff_20261002.py",
+    "sha256": "b9ff1b8db992b328a305cc1420ad9e9703ba2df72155146113cb4970adcaa4af"
+  },
+  "original_failure_reason": "Inherited TMPDIR placed the extracted bundle under /mnt, which the unchanged event guard rejects.",
+  "original_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66",
+  "original_stages": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_handoff.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "03ebd29034e95a38a84c5cd77c3651951f48b5d9",
+        "--source-profile",
+        "native-build",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/assembled"
+      ],
+      "name": "build",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/build.stderr",
+        "sha256": "3a7494c3ccf7c1b910c297288386cbca72971437450333ffd98a60960c7b5592"
+      },
+      "stdout": {
+        "bytes": 2498,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/build.stdout",
+        "sha256": "783fe0da34668d52cf4b83780c2fc841c2cccf6ca9ebd2a78987eead7e47d0a5"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/verify_guard.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/extracted/bundle_publication_handoff.py",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/extracted",
+        "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/guarded_verify_before_events.json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/LICENSE.md"
+      ],
+      "name": "guarded_verify_before",
+      "returncode": 1,
+      "stderr": {
+        "bytes": 694,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/guarded_verify_before.stderr",
+        "sha256": "4f7b90d592d3f6437923bde9f0231dff0980810d157597ee1d9d13da72021172"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/guarded_verify_before.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "original_verification": {
+    "comparison": {
+      "methods": 8,
+      "numeric_cells": 72,
+      "raw_scoring_repeated": false,
+      "secondary_mean_official": false
+    },
+    "components": {
+      "manuscript": {
+        "direct_targets": 46,
+        "entrypoints": {
+          "html": "benchmark_tools/results/publication_main_review_20261002_v3.html",
+          "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+          "pdf": "benchmark_tools/results/publication_main_print_20261002_v3/document.pdf"
+        },
+        "files": 69,
+        "inference_reproduced": false,
+        "local_html_occurrences": 48,
+        "manifest": {
+          "bytes": 25583,
+          "sha256": "0d47378adf368e66154bbf59931dc626c2a784e05f3a136690ca1efdef146660"
+        },
+        "page_count": 9,
+        "payload_bytes": 5197565,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "status": "publication_direct_review_verified",
+        "transitive_evidence_included": false
+      },
+      "source": {
+        "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+        "components": {
+          "build": 1,
+          "scientific": 43,
+          "workflow": 1802
+        },
+        "executable_benchmark_reproduced": false,
+        "files": 1846,
+        "manifest": {
+          "bytes": 747114,
+          "sha256": "b58c3abfdfe576d705e44f70cab68dd80fddc2ebe5dcd3581ff7f5bb9edf7524"
+        },
+        "payload_bytes": 11077578,
+        "publication_ready": false,
+        "python_files_syntax_checked": 1825,
+        "redistribution_clearance": false,
+        "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+        "status": "publication_source_components_verified",
+        "workflow_revision": "03ebd29034e95a38a84c5cd77c3651951f48b5d9"
+      }
+    },
+    "files": 1935,
+    "manifest": {
+      "bytes": 425259,
+      "sha256": "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f"
+    },
+    "native_inference_reproduced": false,
+    "numerical_replay_executed": false,
+    "payload_bytes": 20376452,
+    "public_release_uploaded": false,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "runtime_evidence": {
+      "native_inference_repeated": false,
+      "original_failure_preserved": true,
+      "raw_path_readback_repeated": false,
+      "recorded_base_site_files": 883,
+      "recorded_executor_stages": 10,
+      "recorded_installed_payload_files": 5754
+    },
+    "runtime_evidence_included": true,
+    "runtime_payload_delivered": false,
+    "source_profile": "native-build",
+    "status": "publication_handoff_candidate_verified"
+  },
+  "public_release_uploaded": false,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "retained_failed_stderr": {
+    "bytes": 694,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/guarded_verify_before.stderr",
+    "sha256": "4f7b90d592d3f6437923bde9f0231dff0980810d157597ee1d9d13da72021172"
+  },
+  "retained_original_failure": {
+    "bytes": 3449,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-handoff-20261002-fwhkjt66/failed.json",
+    "sha256": "4784db5e0e336272fc81f63f5d6a6047b9d23196279cc51d6ee69e42210f5c71"
+  },
+  "retry": false,
+  "reused_arithmetic_receipt": {
+    "bytes": 22798,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_handoff_candidate_20261002.json",
+    "sha256": "77ca8d46e8e4e82dd269243637f99e812e02e4063ed95aad38b43a94a16c37ce"
+  },
+  "reused_native_receipt": {
+    "bytes": 83700,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_runtime_assembly_20261002.json",
+    "sha256": "aa579ae061cf9a7a7f373902b4b1342495cefe2c5ecc1f10eb894fc7f2d45991"
+  },
+  "root": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9",
+  "source": {
+    "bytes": 7460,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/readback_publication_native_handoff_20261002.py",
+    "sha256": "e6554da861ae2242578802facff23a0e70a236b8a59c21e91e08f47628dc7582"
+  },
+  "source_profile": "native-build",
+  "stages": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/verify_guard.py",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/extracted/bundle_publication_handoff.py",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/extracted",
+        "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_before_events.json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/LICENSE.md"
+      ],
+      "name": "guarded_verify_before",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 2498,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_before.stdout",
+        "sha256": "783fe0da34668d52cf4b83780c2fc841c2cccf6ca9ebd2a78987eead7e47d0a5"
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-I",
+        "-S",
+        "-B",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/verify_guard.py",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/extracted/bundle_publication_handoff.py",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/extracted",
+        "1bcd5fcae576ff72050e17c0fdb8bea487993e34217e5ef44ceecce60777050f",
+        "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_after_events.json",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/LICENSE.md"
+      ],
+      "name": "guarded_verify_after",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 2498,
+        "path": "/tmp/orthohmm-native-handoff-readback-20261002-ssd3w8u9/guarded_verify_after.stdout",
+        "sha256": "783fe0da34668d52cf4b83780c2fc841c2cccf6ca9ebd2a78987eead7e47d0a5"
+      }
+    }
+  ],
+  "status": "native_build_handoff_extracted_and_guarded",
+  "tests": {
+    "bytes": 41131,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_handoff_final_tests_20261002.xml",
+    "sha256": "76f976e0e0d4654f1725769f6215facae38a1653dbfcb9365904c931ab7f5cf2"
+  },
+  "workflow_revision": "03ebd29034e95a38a84c5cd77c3651951f48b5d9"
+}

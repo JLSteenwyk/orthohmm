@@ -2741,6 +2741,28 @@ restoration, complete OS closure or redistribution clearance. Existing input,
 reader and native-tool assets remained locally supplied. Its shared-host
 elapsed time does not enter the controlled comparative timing panel.
 
+The later [explicit asset assembly](PUBLICATION_RUNTIME_ASSEMBLY_20261002.md)
+connects independently acquired wheels, the exact source-reconstructed project
+wheel, prepared MAFFT/FastTree and the frozen 31-module independent-reader
+closure without old installation trees. Its explicitly selected executor
+lane completes all ten installation/native/readback stages on the 16-gene
+fixture, reproduces five native outputs and verifies 5,754 installed payload
+files with all 883 supplied base-site files unchanged. A mistaken outer
+root-group/reconciled-family count assertion is retained and corrected by
+readback only, without a second native run. This does not re-admit full-data
+results, establish independent accuracy or remove OS/security/rights limits.
+
+The [native-build source handoff](PUBLICATION_NATIVE_HANDOFF_20261002.md)
+includes those executed recipes, exact support locks and integration metadata
+alongside the dated nine-page review, eight-tool table and retained-count
+replays. Its 1,936 archive members verify after fresh extraction with original
+mounted paths denied by an observed Python-event guard. Preserve the initial
+TMPDIR placement failure; use the same archive and unchanged guard under
+explicit /tmp. No native/numerical experiment is repeated for this source
+profile update. Raw data, wheels, tool binaries and the base/OS runtime remain
+separately provisioned; this is not complete native payload delivery, syscall
+containment, a cleared public release or an archival accession.
+
 A [primary-source data-rights register](PUBLICATION_DATA_RIGHTS_20260918.md)
 distinguishes QfO deposit, UniProt, WGD, BUSCO, OrthoBench and YGOB terms.
 In particular, BUSCO software and dataset licenses differ. OrthoBench/YGOB
@@ -2829,7 +2851,7 @@ Machine-readable reports retain input, source, and output hashes where
 audited; large raw datasets and working outputs are not included in normal
 source commits. The figure bundle is generated from the comparison JSON
 and includes a provenance manifest. Absolute local paths are provenance,
-not portable download locations. A portable workflow bundle, complete
+not portable download locations. A complete executable study bundle, complete
 dependency lock, raw-output inventory, redistribution-permission review,
 versioned release, and archival deposition remain unfinished. No archive
 accession or publication DOI has been assigned by this work.
