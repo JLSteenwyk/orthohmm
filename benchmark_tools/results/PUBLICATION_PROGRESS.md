@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Main Manuscript Reproducibility Source Update (2026-10-02)
+
+Previous turn progressed at pushed d750c45e with private archive-to-regression
+verification. Read objective/current HEAD/ledger and observe exact run
+37000088231 at 11:17:32 UTC: docs/Linux succeed, wheel and four fast/full jobs
+live, 3.10 queued. At 11:22:45 UTC docs/Linux/wheel succeed and all five macOS
+tests remain live. No restart or terminal conclusion from a timeout. Timing
+remains deferred without contention questions/polls, DGX or unrelated job/service
+actions. No completed inference, scoring, bootstrap or archive is rerun.
+
+Reconcile condensed main text and extended manuscript with two completed
+reproducibility components: descriptive-table arithmetic (208 rows/984 cells,
+four tables/eight methods) and actual private raw-panel restoration (11/1,774
+ordered source occurrences; all 27 affected regressions/options execute).
+Keep numerical verification separate from raw identity-gated export, native
+biological admission, OS containment, public rights and complete release.
+Raw archives remain local/unuploaded; scientific settings/scores and every
+historical review/archive remain unchanged. Add three prose/receipt consistency
+cases; the overlapping manuscript/citation/render/print/PDF panel passes
+**54 cases in 3.44s**, zero errors/failures/skips.
+
+Commit this source/ledger snapshot before creating a new dated HTML/PDF,
+so subsequent review receipts retain an exact committed render-time identity.
+Rendering, page-bound checks, manual inspection and the final evidence summary
+are still pending at this source checkpoint; do not treat the revised Markdown
+as a rendered or publication-ready artifact. Other-QfO uncertainty, controlled
+resources, data/transitive rights, full versioned executable release and
+deposition stay open. The original goal remains active and incomplete.
+
 ## Private Raw Archive To Regression (2026-10-02)
 
 Continue from pushed 6c55d3fd; read objective/ledger/source state and retain

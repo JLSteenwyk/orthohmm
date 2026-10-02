@@ -74,3 +74,53 @@ def test_numerical_restoration_scope_matches_actual_receipt():
     assert "raw-reference recount, native inference restoration" in main
     assert "QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md" in main
     assert "Not submission-ready" in main
+
+
+def test_descriptive_restoration_prose_matches_retained_component():
+    result = json.loads((BASE / "swiss_descriptive_component_20261002.json").read_text())
+    main = text()
+    restored = result["restoration"]
+    assert restored["returncode"] == 0 and restored["python_version"] == "3.12.3"
+    assert restored["rows"] == 208 and restored["logical_cells"] == 984
+    assert restored["canary_rejected"] and restored["original_path_events_after_canary"] == 0
+    assert result["raw_source_admission"] is False
+    assert result["bootstrap_intervals_recomputed"] is False
+    assert "all 208 rows and 984 score/difference cells" in main
+    assert "not raw-source admission, new benchmark scoring or bootstrap uncertainty" in main
+    target = "SWISS_DESCRIPTIVE_COMPONENT_20261002.md"
+    assert target in main and (BASE / target).is_file()
+
+
+def test_raw_archive_prose_retains_exact_restoration_scope():
+    result = json.loads((BASE / "swiss_raw_archive_restoration_20261002.json").read_text())
+    main = text()
+    assert result["original_record_occurrences"] == dict(duplication=11, fragment=1774)
+    assert [result["archives"][kind]["members"] for kind in ("duplication", "fragment")] == [12, 1774]
+    runs = result["copied_verification"]["runs"]
+    assert runs["restore"]["python"].startswith("3.12.3")
+    assert runs["pytest"]["junit"] == dict(tests=27, errors=0, failures=0, skipped=0)
+    for run in runs.values():
+        assert run["canaries_blocked"] == 3 and run["later_forbidden_opens"] == 0
+        assert run["child_subprocesses_forbidden"] is True
+    assert "all 11 and 1,774 original record occurrences" in main
+    assert "All 27 affected regression/options cases passed" in main
+    assert "including four raw-export regressions with unchanged assertions" in main
+    assert "Independently pinned archive and binding digests" in main
+    assert "Python-event guards are not OS containment" in main
+    assert "Native annotation extraction/admission was not rerun" in main
+    assert "private archives remain unuploaded with redistribution uncleared" in main
+    assert result["native_annotation_admission_rerun"] is False
+    assert result["raw_data_committed_or_uploaded"] is False
+    assert result["redistribution_authorized"] is False
+    assert result["publication_ready"] is False
+    target = "SWISS_RAW_ARCHIVE_RESTORATION_20261002.md"
+    assert target in main and (BASE / target).is_file()
+
+
+def test_completed_components_do_not_claim_complete_release():
+    main = text()
+    assert "Neither component establishes complete executable study restoration" in main
+    assert "all-method cross-host portability" in main
+    assert "No submission-ready release or archival DOI is claimed" in main
+    assert "older versions are not rendered copies of revised Markdown" in main
+    assert "replacement controlled Threadripper timing panel has not run" in main

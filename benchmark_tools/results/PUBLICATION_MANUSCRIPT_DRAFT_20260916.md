@@ -2692,6 +2692,28 @@ during reproduction or project-module imports. This used the existing NumPy
 version on the same host; it is not OS containment, hermetic installation,
 native inference/reference recount, rights clearance or a public release.
 
+The [SwissTrees descriptive-table arithmetic component](SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+separately restores with standard-library Python 3.12 and reproduces 208 rows
+and 984 score/difference cells across four tables and all eight methods.
+It excludes the raw dependency panels and does not rerun native annotation
+admission, scoring or bootstrap intervals. Its numerical verification must
+not be interpreted as a fresh biological validation of the retained labels.
+
+The [private raw-input archive workflow](SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+adds actual restoration of the complete duplication and fragment panels,
+preserving all 11/1,774 ordered original record occurrences and their immutable
+identities. Both archives restore under standard-library system Python 3.12;
+a fresh Python 3.10 child passes all 27 affected regression/options cases,
+including all four real raw exports. Explicit independent SHA256 bindings,
+not automatic lookup or expected-hash recomputation, supply the new paths.
+The guards block original-checkout and host-counter reads and child processes,
+but do not establish OS containment. Native annotation extraction/admission,
+inference, benchmark scoring and bootstrap are not rerun. Input-only raw
+archives stay private/local and unuploaded, without new redistribution rights.
+The 233 focused local cases overlap, rather than add independent scientific
+evidence to, the 27 copied cases. Historical failed controls and archives
+remain intact; this is not the complete executable study release.
+
 A [relocated reproduction workflow](SWISS_RELOCATED_REPRODUCTION_20260917.md)
 exports the SwissTrees comparator analysis from a fixed commit and reruns it in
 a fresh hash-pinned Python environment. Its numerical results and Markdown

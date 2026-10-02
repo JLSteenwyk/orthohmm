@@ -1,6 +1,6 @@
 # OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement
 
-Condensed scientific draft, updated 1 October 2026. Not submission-ready. The
+Condensed scientific draft, updated 2 October 2026. Not submission-ready. The
 [extended manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) retains detailed
 methods, historical analyses, citations and audit records. This main text
 does not supersede frozen protocols or historical result manifests.
@@ -340,6 +340,24 @@ guard rejected its original-checkout canary and observed no later original-path
 events or project-module imports. This is not OS containment, a new independent
 statistical implementation, raw-reference recount, native inference restoration,
 cross-host validation or redistribution clearance.
+
+A separate [descriptive-table component](SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+restored under standard-library Python 3.12 and reproduced all 208 rows and
+984 score/difference cells across four SwissTrees tables and eight methods.
+This verifies arithmetic from retained sufficient statistics and annotations,
+not raw-source admission, new benchmark scoring or bootstrap uncertainty.
+An [input-only private archive workflow](SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+then restored the complete duplication and fragment dependency panels, retaining
+all 11 and 1,774 original record occurrences respectively. Independently pinned
+archive and binding digests preserve source identities at new locations.
+All 27 affected regression/options cases passed using the restored inputs,
+including four raw-export regressions with unchanged assertions. The fresh
+children blocked original-checkout reads and subprocesses; these Python-event
+guards are not OS containment. Native annotation extraction/admission was not
+rerun, and private archives remain unuploaded with redistribution uncleared.
+Neither component establishes complete executable study restoration or
+all-method cross-host portability.
+
 The
 [progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
 requirements. No submission-ready release or archival DOI is claimed.
