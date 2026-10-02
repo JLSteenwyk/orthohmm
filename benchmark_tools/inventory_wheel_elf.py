@@ -32,7 +32,88 @@ def dynamic_tags(text):
     return values
 
 
-def scan_wheel(wheel, readelf):
+def abi_requirements(text):
+    fields = ("Class", "Data", "OS/ABI", "ABI Version", "Type", "Machine", "Flags", "Number of program headers")
+    header = {}
+    for line in text.split("Program Headers:", 1)[0].splitlines():
+        key, separator, value = line.strip().partition(":")
+        if separator and key in fields:
+            if key in header or not value.strip():
+                raise ValueError("Duplicate/empty ELF header field")
+            header[key] = value.strip()
+    if set(header) != set(fields):
+        raise ValueError("Incomplete ELF ABI header")
+    if not header["Number of program headers"].isdigit():
+        raise ValueError("Unsupported program-header count")
+    if (int(header["Number of program headers"]) and "Program Headers:" not in text
+            or not int(header["Number of program headers"]) and "There are no program headers" not in text):
+        raise ValueError("Missing program-header evidence")
+    program_rows = re.findall(r"^\s*[A-Z][A-Z0-9_]*\s+0x[0-9a-fA-F]+\s+0x", text, re.M)
+    if len(program_rows) != int(header["Number of program headers"]):
+        raise ValueError("Incomplete program-header table")
+    interpreters = re.findall(r"^\s*\[Requesting program interpreter: ([^\]\n]+)\]\s*$", text, re.M)
+    segments = re.findall(r"^\s*INTERP\s+0x", text, re.M)
+    if len(interpreters) != len(segments) or len(interpreters) > 1:
+        raise ValueError("Incomplete/duplicate program interpreter")
+    requirements = []
+    active = False
+    declared = None
+    expected_names = None
+    current = None
+    for line in text.splitlines():
+        if line.startswith("Version needs section "):
+            if declared is not None:
+                raise ValueError("Duplicate version needs section")
+            match = re.fullmatch(r"Version needs section '[^']+' contains (\d+) entr(?:y|ies):", line)
+            if not match:
+                raise ValueError("Unrecognized version needs section")
+            declared = int(match[1])
+            active = True
+            continue
+        if line.startswith("Version "):
+            active = False
+        if not active or not line.strip():
+            continue
+        if re.fullmatch(r"\s*Addr: 0x[0-9a-fA-F]+\s+Offset: 0x[0-9a-fA-F]+\s+Link: \d+ \([^)]*\)\s*", line):
+            continue
+        file_match = re.fullmatch(r"\s*(?:0x)?[0-9a-fA-F]+: Version: 1\s+File: (\S+)\s+Cnt: (\d+)\s*", line)
+        if file_match:
+            if current is not None and len(current["versions"]) != expected_names:
+                raise ValueError("Incomplete version requirements")
+            current = dict(library=file_match[1], versions=[])
+            expected_names = int(file_match[2])
+            requirements.append(current)
+            continue
+        name_match = re.fullmatch(r"\s*(?:0x)?[0-9a-fA-F]+:\s+Name: (\S+)\s+Flags: (.*?)\s+Version: (\d+)\s*", line)
+        if name_match and current is not None:
+            current["versions"].append(dict(name=name_match[1], flags=name_match[2], index=int(name_match[3])))
+            continue
+        raise ValueError("Unrecognized version requirement: " + line)
+    if ((current is not None and len(current["versions"]) != expected_names)
+            or (declared is not None and len(requirements) != declared)):
+        raise ValueError("Incomplete version requirements")
+    if len({row["library"] for row in requirements}) != len(requirements):
+        raise ValueError("Duplicate required library")
+    for row in requirements:
+        if len({v["name"] for v in row["versions"]}) != len(row["versions"]):
+            raise ValueError("Duplicate required version")
+    if declared is None and not ("No version information found in this file." in text
+            or re.search(r"^Version (?:symbols|definition) section ", text, re.M)):
+        raise ValueError("Missing version-information evidence")
+    return dict(header=header, interpreter=interpreters[0] if interpreters else None,
+                version_requirements=requirements)
+
+
+def scan_abi(binary, readelf):
+    result = subprocess.run([str(readelf), "--wide", "--file-header", "--program-headers", "--version-info", str(binary)],
+                            capture_output=True, text=True, check=True,
+                            env={"LC_ALL": "C", "PATH": "/usr/bin:/bin"}, timeout=60)
+    if result.stderr:
+        raise ValueError("readelf ABI diagnostics: " + result.stderr)
+    return dict(requirements=abi_requirements(result.stdout), readelf_stdout=result.stdout)
+
+
+def scan_wheel(wheel, readelf, *, include_abi=False):
     check(wheel["wheel"])
     objects = []
     with zipfile.ZipFile(wheel["wheel"]["path"]) as archive, tempfile.TemporaryDirectory() as temp:
@@ -60,8 +141,11 @@ def scan_wheel(wheel, readelf):
                                     env={"LC_ALL": "C", "PATH": "/usr/bin:/bin"}, timeout=60)
             if result.stderr:
                 raise ValueError("readelf diagnostics: " + result.stderr)
-            objects.append(dict(member=info.filename, bytes=identity["bytes"], sha256=identity["sha256"],
-                                tags=dynamic_tags(result.stdout), readelf_stdout=result.stdout))
+            obj = dict(member=info.filename, bytes=identity["bytes"], sha256=identity["sha256"],
+                       tags=dynamic_tags(result.stdout), readelf_stdout=result.stdout)
+            if include_abi:
+                obj["abi"] = scan_abi(binary, readelf)
+            objects.append(obj)
     check(wheel["wheel"])
     return dict(name=wheel["name"], version=wheel["version"], wheel=wheel["wheel"],
                 objects=objects, notice_candidates=wheel["notice_candidates"],

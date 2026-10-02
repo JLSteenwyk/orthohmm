@@ -90,3 +90,97 @@ def test_reject_symlink(tmp_path):
     info.external_attr = (stat.S_IFLNK | 0o777) << 16
     with pytest.raises(ValueError, match="Nonregular"):
         mod.scan_wheel(wheel(tmp_path, [(info, b"target")]), Path("/usr/bin/readelf"))
+
+
+ABI_HEADER = """ELF Header:
+  Class: ELF64
+  Data: 2's complement, little endian
+  OS/ABI: UNIX - System V
+  ABI Version: 0
+  Type: DYN (Shared object file)
+  Machine: Advanced Micro Devices X86-64
+  Flags: 0x0
+  Number of program headers: 1
+
+Program Headers:
+  INTERP 0x01 0x02
+  [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+"""
+ABI_NEEDS = """
+Version symbols section '.gnu.version' contains 1 entry:
+  000: 2 (GLIBC_2.34)
+Version needs section '.gnu.version_r' contains 1 entry:
+ Addr: 0x01  Offset: 0x02  Link: 3 (.dynstr)
+ 000000: Version: 1  File: libc.so.6  Cnt: 2
+ 0x0010: Name: GLIBC_2.34  Flags: none  Version: 2
+ 0x0020: Name: GLIBC_2.2.5  Flags: WEAK  Version: 3
+"""
+
+
+def test_abi_requirements_keep_library_and_weak_flags():
+    result = mod.abi_requirements(ABI_HEADER + ABI_NEEDS)
+    assert result["interpreter"] == "/lib64/ld-linux-x86-64.so.2"
+    assert result["header"]["Machine"] == "Advanced Micro Devices X86-64"
+    assert result["version_requirements"] == [dict(library="libc.so.6", versions=[
+        dict(name="GLIBC_2.34", flags="none", index=2), dict(name="GLIBC_2.2.5", flags="WEAK", index=3)])]
+
+
+def test_static_abi_is_not_a_compatibility_pass():
+    text = ABI_HEADER.replace("1\n\nProgram Headers:\n  INTERP 0x01 0x02\n  [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]", "0\n\nThere are no program headers in this file.")
+    result = mod.abi_requirements(text + "No version information found in this file.\n")
+    assert result["interpreter"] is None
+    assert result["version_requirements"] == []
+
+
+def test_version_definitions_are_not_requirements():
+    text = ABI_HEADER + "Version definition section '.gnu.version_d' contains 1 entry:\n  Name: GLIBC_99.0\n"
+    assert mod.abi_requirements(text)["version_requirements"] == []
+
+
+@pytest.mark.parametrize("old,new", [
+    ("  Class: ELF64\n", ""),
+    ("  Class: ELF64\n", "  Class: ELF64\n  Class: ELF32\n"),
+    ("Program Headers:", ""),
+    ("Number of program headers: 1", "Number of program headers: 2"),
+    ("  [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]\n", ""),
+    ("  INTERP 0x01 0x02\n", ""),
+    ("contains 1 entry:", "contains 2 entries:"),
+    ("Cnt: 2", "Cnt: 3"),
+    ("Cnt: 2", "Cnt: 1"),
+    ("File: libc.so.6", "File: libc.so.6 unexpected"),
+    ("Name: GLIBC_2.34", "Broken: GLIBC_2.34"),
+    ("GLIBC_2.2.5", "GLIBC_2.34"),
+    ("Version: 1  File:", "Version: 2  File:"),
+])
+def test_abi_fail_closed(old, new):
+    with pytest.raises(ValueError):
+        mod.abi_requirements((ABI_HEADER + ABI_NEEDS).replace(old, new))
+
+
+def test_abi_missing_version_evidence():
+    with pytest.raises(ValueError, match="version-information"):
+        mod.abi_requirements(ABI_HEADER)
+
+
+def test_optional_abi_scan_preserves_default_contract(tmp_path, monkeypatch):
+    item = wheel(tmp_path, [("native", b"\x7fELFfake")])
+    calls = []
+    def run(command, **kwargs):
+        calls.append(command)
+        assert kwargs["env"]["LC_ALL"] == "C"
+        assert kwargs["check"] is True and kwargs["timeout"] == 60
+        output = ABI_HEADER + ABI_NEEDS if "--version-info" in command else " 0x1 (NEEDED) Shared library: [libc.so.6]\n"
+        return subprocess.CompletedProcess(command, 0, output, "")
+    monkeypatch.setattr(mod.subprocess, "run", run)
+    default = mod.scan_wheel(item, Path("/usr/bin/readelf"))
+    extended = mod.scan_wheel(item, Path("/usr/bin/readelf"), include_abi=True)
+    abi = extended["objects"][0].pop("abi")
+    assert default == extended
+    assert abi["requirements"]["version_requirements"]
+    assert len(calls) == 3
+
+
+def test_abi_diagnostics_fail(tmp_path, monkeypatch):
+    monkeypatch.setattr(mod.subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(a, 0, ABI_HEADER + ABI_NEEDS, "warning"))
+    with pytest.raises(ValueError, match="ABI diagnostics"):
+        mod.scan_abi(tmp_path / "binary", Path("/usr/bin/readelf"))
