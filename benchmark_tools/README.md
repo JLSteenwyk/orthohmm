@@ -49,6 +49,13 @@ a group is absent before accepting a permission-error race. All 55 local cases
 pass; new macOS confirmation is open. Prospective inventories must pin the new
 helper, while historical receipts and scientific results remain unchanged.
 
+The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
+verifies 208 rows across all eight methods using exact rational arithmetic,
+including 984 score/difference cells and explicit missingness. It runs with
+standard-library Python and committed derived data; 49 local tests pass,
+including an original-checkout-blocked copied child. It does not regenerate
+raw annotations/scoring, bootstrap intervals or the existing review archive.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "purpose": "independent rational verification of all four retained descriptive SwissTrees tables",
+  "baseline_commit": "c78d53a40873d397d47ffa538f1ec7db3d08e5ad",
+  "result": {"path": "benchmark_tools/results/swiss_descriptive_table_arithmetic_20261002.json", "bytes": 7909, "sha256": "0b260c7af00bb6b646631b4735db8172ca4c92453fe51668b08fca9a33ee4534"},
+  "rows": 208,
+  "methods": 8,
+  "families": 18,
+  "logical_score_and_difference_cells": 984,
+  "numeric_cells": 744,
+  "missing_cells": 240,
+  "serializations_checked_per_logical_cell": ["retained JSON rows", "retained TSV rows"],
+  "distinct_payloads": 17,
+  "payload_bytes": 2645910,
+  "source_records": [
+    {"path": "benchmark_tools/check_swiss_descriptive_tables.py", "bytes": 11650, "sha256": "43f61640b1e8482d2501731a6fcd547a0287878d297cf5a30acd6249f5b0469c"},
+    {"path": "tests/unit/test_check_swiss_descriptive_tables.py", "bytes": 11159, "sha256": "a72a82102146afce6c6ea632088350f92341cd632a5aa1bceac1307e09f73dd8"}
+  ],
+  "execution_argv": ["python", "-I", "-B", "benchmark_tools/check_swiss_descriptive_tables.py", "--results", "benchmark_tools/results", "--output", "benchmark_tools/results/swiss_descriptive_table_arithmetic_20261002.json"],
+  "final_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_check_swiss_descriptive_tables.py", "--junitxml=benchmarks/work/swiss_descriptive_arithmetic_tests_complete_20261002.xml"],
+    "passed": 49, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 1.18,
+    "junit_duration_s": 1.166,
+    "report": {"path": "benchmarks/work/swiss_descriptive_arithmetic_tests_complete_20261002.xml", "bytes": 7371, "sha256": "01dc24f624a78929315faa609ec95f3fad4689732401be1425e3831234bbd96e"}
+  },
+  "prior_overlapping_test_reports": [
+    {"path": "benchmarks/work/swiss_descriptive_arithmetic_tests_20261002.xml", "bytes": 6631, "sha256": "babedf5f37fdd5be7f307008d86723186a740d032a922b1337e6ecd65218266b", "passed": 44},
+    {"path": "benchmarks/work/swiss_descriptive_arithmetic_tests_final_20261002.xml", "bytes": 7062, "sha256": "86f9f6be7a68abdc2f6cf30f80feca99041ac9cb229fc360656a63be0328977b", "passed": 47}
+  ],
+  "guarded_copied_child_test": {
+    "case": "test_copied_child_rejects_original_checkout_reads",
+    "exact_guard_source": "GUARDED_REPLAY in the pinned new test source",
+    "isolated_interpreter_flags": ["-I", "-B"],
+    "canary_rejected": true,
+    "original_path_events_after_canary": 0,
+    "further_subprocess_execution_forbidden": true,
+    "checked_records_and_checker_within_copy": true,
+    "scope": "actual local copied-child unit test; Python audit hook, not OS containment or cross-host proof"
+  },
+  "retained_raw_boundaries": {"duplication_source_records": 11, "fragment_source_records": 1774, "fragment_record_bytes": 607096715, "raw_revalidation": false},
+  "previous_cleanup_mac_ci": {
+    "source_commit": "c78d53a40873d397d47ffa538f1ec7db3d08e5ad",
+    "run_id": 36968635224,
+    "inspected_job_id": 110717747173,
+    "scope": "macOS Python 3.11 test-fast only",
+    "downloaded_at_utc": "2026-10-02T05:38:48.239447+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_c78d53a4_20261002/110717747173.log", "bytes": 2171432, "sha256": "52abf109a09229355d00bb0a0f2c3b2bf4572c6928bc562024da789a8a416b8d"},
+    "overall": {"passed": 13765, "failed": 29, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 362.00},
+    "previous_cleanup_scope": {"measurement_passed": 37, "wgd_passed": 8, "replay_passed": 10, "failed": 0, "errors": 0, "skipped": 0},
+    "jobs_observed_at_utc": "2026-10-02T05:40:34.118015+00:00",
+    "five_test_jobs": "terminal failure", "cpu_wheel": "success", "docs": "success",
+    "new_arithmetic_checker_in_this_ci": false,
+    "manual_restart_or_resubmission": false
+  },
+  "limitations": [
+    "Exact arithmetic from admitted derived family counts and retained bin assignments, not independent raw scoring or biological validation.",
+    "Markdown bytes are pinned but not independently regenerated or visually reviewed.",
+    "Bootstrap intervals, other-QfO uncertainty, original annotation/tree/alignment evidence and source/data rights are not verified.",
+    "Original exporters and their source requirements remain unchanged; their workstation/raw-data CI failures remain open.",
+    "No timing run, contention poll, quiet-window question, DGX access or unrelated workload/service action.",
+    "Existing review archive, scientific settings/values, historical plans and receipts remain unchanged.",
+    "Full executable release, controlled resources and public deposition remain open."
+  ],
+  "publication_ready": false
+}

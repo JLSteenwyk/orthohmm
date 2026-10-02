@@ -534,6 +534,19 @@ This audit does not launch work or replace a quiet-window review.
 
 ## Reproduce Statistics
 
+The [four-table SwissTrees arithmetic check](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
+requires only Python's standard library and seventeen committed derived
+payloads. It verifies all 208 rows/eight methods, including 984 score/difference
+cells and explicit missingness, with exact rational macro precision/recall/F1.
+It checks retained JSON/TSV values, not bootstrap intervals or raw annotation,
+alignment/tree admission. The historical exporters keep their raw-source
+requirements; this separate checker does not relax them:
+
+```bash
+python -I -B benchmark_tools/check_swiss_descriptive_tables.py \
+  --results benchmark_tools/results --output /tmp/swiss-table-check.json
+```
+
 The [complete eight-method OrthoBench replay](results/OB_COMPLETE_PORTABLE_STATISTICS_20260928.md)
 works outside the checkout with one standalone checker, a 114 KB derived-count
 file, Python and NumPy. It reproduces all 21 paired contrasts and seven family

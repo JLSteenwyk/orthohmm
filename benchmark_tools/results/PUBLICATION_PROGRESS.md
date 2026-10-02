@@ -1,5 +1,47 @@
 # Publication Progress
 
+## All Four SwissTrees Descriptive Tables Independently Checked (2026-10-02)
+
+Previous goal turn is progress at pushed c78: bounded owned-group cleanup and
+55 local passing cases. Revalidate full objective/HEAD/current ledger and live
+automatic handles; no restart. Actual source-c78 Python 3.11 fast log confirms
+all 55 prior timeout cases pass, including the native TERM-ignoring descendant.
+Overall: 13,765 pass, 29 fail, zero errors, 110 skip, 30 warnings, 362.00s.
+At 05:40:34 UTC all five source-c78 tests fail; wheel/docs succeed. Only this
+fast log is inspected; no sibling/full-suite success inference follows.
+
+Investigate remaining Swiss export failures. Their historical absolute paths
+lead to raw dependencies: eleven duplication source records and 1,774 fragment
+records totaling 607,096,715 bytes. Do not replace raw admission with metadata
+trust or fixture fallbacks. Keep all four existing exporters/source pins intact.
+Instead add a separate standard-library checker for retained derived table
+arithmetic, clearly excluding raw admission, annotation regeneration and CIs.
+
+All four 2026-09-26 tables reproduce: **208 rows, eight methods, 18 families,
+984 logical score/difference cells** (744 numeric, 240 missing). Exact fractions
+reproduce family smoothed counts, harmonic macro F1, all bins and differences.
+JSON/TSV metadata, semantics, memberships, missingness and exact inventories
+check; Markdown bytes are pinned, not independently rendered. Seventeen data
+payloads total 2,645,910 bytes and remain identical to committed source c78.
+
+**49 local cases pass in 1.18s**, including malformed inputs, a mean-family-F1
+counterexample, persistent missingness, altered bytes/metadata/types and final
+postflight mutation. Actual copied-child invocation rejects its checkout-read
+canary, then returns zero original-path events with checker/payload locations
+inside the copy and further subprocesses forbidden. This is local Python-level
+guarding, not OS/native/cross-host proof. Earlier 44/47-case panels overlap.
+Result, source/test/report/log pins and instructions are in
+[arithmetic evidence and boundaries](SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md).
+
+Commit/push and observe the new automatic CI. Existing raw-source/workstation/
+Linux-capability failures remain open; this new checker is not yet macOS-proven.
+No scientific inference/bootstrap/annotation/plot/native-scoring rerun, archive
+regeneration, source search, host poll/question, DGX or unrelated job/service
+action occurs. Timing remains deferred. Frozen settings/score values and all
+historical receipts remain unchanged. Other-QfO uncertainty, source/data rights,
+controlled resources, executable release and deposition still require work;
+the original publication goal remains active and incomplete.
+
 ## Owned Process Group Timeout Race (2026-10-02)
 
 Previous implementation milestone 11d is progress: retained paths/source guard
