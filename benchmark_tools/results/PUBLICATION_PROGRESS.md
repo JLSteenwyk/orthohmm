@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Synthetic Affinity Guards And Explicit Native Capability Checks (2026-10-01)
+
+Previous turn is progress at pushed bec79e1d. Reread objective/ledger and inspect
+actual source-57/source-bec CI handles without restarts. Source-57 Python 3.11
+log confirms measurement/replay/frontier/shared-boot/render/count tests pass;
+fake-service capture still rejects unverified /bin/true. Overall 13,489 passed,
+159 failed, 28 errors, 96 skipped, 30 warnings, 462.83s. Eight modules show 49
+affinity-related failures/errors. Do not infer sibling causes. At 02:15:54 UTC
+source-57 is terminal failure with successful wheel/docs; source-bec has those
+two successes and five live test jobs at the next recorded snapshot.
+
+Make existing synthetic API patches explicit even where affinity methods are
+absent; inject launch-record masks only in fake panels. Native workload/resource/
+library-worker tests retain real implementations and explicit capability skips.
+Two new cases ensure absent affinity is not fabricated and cannot create workers.
+Fake service fixture now hashes its own temporary file, never a host executable.
+Production modules, source/allocation guards, failure retention and secret checks
+remain unchanged.
+
+**203 local Linux cases pass in 16.08 seconds**, zero failures/errors/skips.
+Separate deliberate affinity-API absence: **182 pass, 21 native cases skip in
+4.15 seconds**, no failures/errors. Same 203-case scope, not additive and not
+macOS execution. Nine production modules byte-equal to prior commit.
+[Evidence, exact skip inventory and boundaries](CI_AFFINITY_FIXTURES_20261001.md).
+
+Commit/push and observe the actual new automatic CI. Remote corrections and
+broader release portability still open. No native benchmark/default/score
+changes, DGX, host polls/questions, shared-package or unrelated job/service
+actions. Tiny owned fixtures are not controlled timing/calibration; quiet window
+remains deferred. All local commands terminate. Full goal stays active with
+remaining uncertainty/source/rights, comparable resources, release and archive
+requirements intact.
+
 ## Historical QfO Handoff Fixtures Relocated Without Batch Changes (2026-10-01)
 
 Previous goal turn is progress at pushed 57a8391f: explicit synthetic accounting

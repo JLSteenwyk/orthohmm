@@ -113,6 +113,12 @@ The [historical QfO handoff-test correction](CI_QFO_BATCH_FIXTURES_20261001.md)
 relocates only temporary root/interpreter bindings, preserving all eight archived
 batches and their guards. Its 329-case local panel passes; new remote execution
 is pending. This is test portability, not native workflow/release portability.
+The [affinity capability follow-up](CI_AFFINITY_FIXTURES_20261001.md) confirms
+measurement/replay/frontier clocks pass in the inspected macOS log while one
+fake-service file check still fails. New synthetic affinity and temporary-file
+corrections pass 203 local Linux cases; an API-absence simulation passes 182
+with exactly 21 native skips. Production modules remain unchanged. Neither
+panel proves remote correction, controlled timing or complete release portability.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

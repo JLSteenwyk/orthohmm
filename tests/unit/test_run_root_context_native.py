@@ -57,6 +57,7 @@ def test_serial_panel_stops_and_retains_unrun(tmp_path, monkeypatch, failure):
     monkeypatch.setattr(module, "ROOT", tmp_path)
     monkeypatch.setattr(module, "select", lambda *args: value)
     monkeypatch.setattr(module, "preflight", lambda *args: 123)
+    monkeypatch.setattr(module.os, "sched_getaffinity", lambda _: set(range(20)), raising=False)
     calls = []
 
     def execute(plan, task, *args):
@@ -123,7 +124,7 @@ def test_task_environment_and_cwd_are_restored(tmp_path, monkeypatch, fails):
 def test_preflight_environment_limits(tmp_path, monkeypatch):
     value = dict(launcher_python=module.sys.executable)
     monkeypatch.setattr(module.os, "uname", lambda: SimpleNamespace(nodename="spark-7ff0"))
-    monkeypatch.setattr(module.os, "sched_getaffinity", lambda pid: set(range(20)))
+    monkeypatch.setattr(module.os, "sched_getaffinity", lambda pid: set(range(20)), raising=False)
     monkeypatch.setattr(module.sys, "dont_write_bytecode", True)
     monkeypatch.setattr(module.sys, "pycache_prefix", str(tmp_path / "absent"))
     for key, val in dict(SLURM_CPUS_PER_TASK="20", SLURM_MEM_PER_NODE="98304", SLURM_JOB_ID="123",

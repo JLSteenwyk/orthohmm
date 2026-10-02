@@ -55,6 +55,7 @@ def install_panel(tmp_path, monkeypatch, failure_index=None, fault="exception"):
     monkeypatch.setattr(module, "OUTPUT_ROOT", output)
     monkeypatch.setattr(module, "select", lambda *args: value)
     monkeypatch.setattr(module, "preflight", lambda *args: 123)
+    monkeypatch.setattr(module.os, "sched_getaffinity", lambda _: set(range(20)), raising=False)
     calls = []
 
     def execute(plan, task, *args):

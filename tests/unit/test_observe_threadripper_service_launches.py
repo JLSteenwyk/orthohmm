@@ -37,14 +37,16 @@ def unit_list(name="sample.service"):
 
 
 def runner_factory(tmp_path, defect=None):
+    executable = tmp_path / "declared_executable"
+    executable.write_bytes(b"synthetic declared executable; never launched\n")
     unit = property_values(module.UNIT_FIELDS)
     unit["Id"]["data"] = "sample.service"
     path = tmp_path / "sample.service"
-    path.write_text("[Service]\nExecStart=/bin/true\n")
+    path.write_text(f"[Service]\nExecStart={executable}\n")
     unit["FragmentPath"]["data"] = str(path)
     service = property_values(module.SERVICE_FIELDS)
     service.update(launch_values())
-    service["ExecStart"]["data"] = [["/bin/true", ["true", SECRET], False, 0, 0, 0, 0, 0, 0, 0]]
+    service["ExecStart"]["data"] = [[str(executable), [str(executable), SECRET], False, 0, 0, 0, 0, 0, 0, 0]]
     service["Environment"] = dict(type="as", data=["CREDENTIAL=" + SECRET])
     if defect == "missing_file":
         unit["FragmentPath"]["data"] = str(tmp_path / "missing")

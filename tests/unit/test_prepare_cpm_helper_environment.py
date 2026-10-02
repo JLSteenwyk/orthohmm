@@ -121,7 +121,8 @@ def test_bad_prepared_receipt_rejected(tmp_path, bad):
 
 
 def test_prepared_receipt_and_hash_must_be_supplied_together(tmp_path, monkeypatch):
-    monkeypatch.setattr(control.os, "sched_setaffinity", lambda *_: None)
+    monkeypatch.setattr(control.os, "sched_getaffinity", lambda _: {0}, raising=False)
+    monkeypatch.setattr(control.os, "sched_setaffinity", lambda *_: None, raising=False)
     with pytest.raises(ValueError, match="both"):
         control.run(tmp_path, tmp_path / "output", "protocol", tmp_path / "receipt")
     assert json.loads((tmp_path / "output/report.json").read_bytes())["refinement_attempts"] == 0

@@ -77,8 +77,8 @@ def test_bad_panel_not_passed(fault):
 def test_reader_failure_releases_worker_and_restores_affinity(tmp_path, monkeypatch):
     directory = tmp_path / "trial"
     affinity = []
-    monkeypatch.setattr(module.os, "sched_getaffinity", lambda _: {1, 2})
-    monkeypatch.setattr(module.os, "sched_setaffinity", lambda _, cpus: affinity.append(set(cpus)))
+    monkeypatch.setattr(module.os, "sched_getaffinity", lambda _: {1, 2}, raising=False)
+    monkeypatch.setattr(module.os, "sched_setaffinity", lambda _, cpus: affinity.append(set(cpus)), raising=False)
     class Process:
         def __init__(self, *a, **kw):
             pass

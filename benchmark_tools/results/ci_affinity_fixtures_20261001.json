@@ -1,0 +1,124 @@
+{
+  "base_commit": "bec79e1d79e86902a9f91635953449fe5dfa7fe4",
+  "status": "synthetic_affinity_and_native_capability_tests_locally_validated",
+  "remote_corrections_confirmed": false,
+  "production_modules_modified": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false,
+  "observed_remote": {
+    "run_id": 36953675242,
+    "source_commit": "57a8391f870939be16d36b1684d546fdf1ebbe74",
+    "job_id": 110671849352,
+    "platform": "macOS",
+    "python": "3.11",
+    "log": {
+      "path": "benchmarks/work/ci_remote_57a8391f_20261001/110671849352.log",
+      "bytes": 2875179,
+      "sha256": "0d88f88fad76b908741e16042e195f094af08a460699470b039a6763eaba630d",
+      "download_observed_utc": "2026-10-02T02:12:33.456399+00:00"
+    },
+    "summary": {"passed": 13489, "failed": 159, "errors": 28, "skipped": 96, "warnings": 30, "duration_s": 462.83},
+    "confirmed_passing_module_cases": {
+      "test_measure_slurm_command": 21,
+      "test_audit_slurm_measurement": 10,
+      "test_probe_cgroup_frontier": 20,
+      "test_synthetic_linux_boot_fixture": 2,
+      "test_plot_matched_graph": 61,
+      "test_reproduce_matched_graph_statistics": 7
+    },
+    "fake_service_declared_file_still_unverified": "/bin/true",
+    "affinity_related_module_failures_errors": {
+      "test_dual_bracket_controls": 1,
+      "test_full_node_control_workload": 15,
+      "test_prepare_cpm_helper_environment": 1,
+      "test_probe_cpm_private_runtime": 3,
+      "test_repeat_qfo_saved_graph": 5,
+      "test_run_full_node_controls": 8,
+      "test_run_root_context_native": 5,
+      "test_run_root_context_overhead": 11
+    },
+    "sibling_logs_inspected": false,
+    "terminal_run_observed_utc": "2026-10-02T02:15:54.691935+00:00",
+    "all_five_test_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success"
+  },
+  "existing_ci": {
+    "run_id": 36954409877,
+    "source_commit": "bec79e1d79e86902a9f91635953449fe5dfa7fe4",
+    "observed_utc": "2026-10-02T02:15:55.226902+00:00",
+    "all_five_test_jobs": "in_progress",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "includes_new_affinity_corrections": false
+  },
+  "module_cases": {
+    "tests.unit.test_dual_bracket_controls": 18,
+    "tests.unit.test_full_node_control_workload": 22,
+    "tests.unit.test_observe_threadripper_service_launches": 30,
+    "tests.unit.test_prepare_cpm_helper_environment": 22,
+    "tests.unit.test_probe_cpm_private_runtime": 15,
+    "tests.unit.test_repeat_qfo_saved_graph": 43,
+    "tests.unit.test_run_full_node_controls": 13,
+    "tests.unit.test_run_root_context_native": 13,
+    "tests.unit.test_run_root_context_overhead": 25,
+    "tests.unit.test_synthetic_linux_boot_fixture": 2
+  },
+  "new_cases_included": 2,
+  "native_linux_validation": {
+    "cases": 203, "passed": 203, "failures": 0, "errors": 0, "skipped": 0,
+    "pytest_duration_s": 16.08, "junit_suite_duration_s": 16.048,
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/affinity_fixture_tests.xml",
+      "bytes": 27944,
+      "sha256": "4a072e3f59478badd5001f9440174c2b1613dac95b2b6476d474a97212348f0c"
+    }
+  },
+  "affinity_api_absence_simulation": {
+    "host_platform": "Linux",
+    "removed_before_test_module_import": ["os.sched_getaffinity", "os.sched_setaffinity"],
+    "cases": 203, "passed": 182, "failures": 0, "errors": 0, "skipped": 21,
+    "pytest_duration_s": 4.15, "junit_suite_duration_s": 4.115,
+    "skipped_module_cases": {
+      "tests.unit.test_repeat_qfo_saved_graph": 12,
+      "tests.unit.test_full_node_control_workload": 7,
+      "tests.unit.test_probe_cpm_private_runtime": 2
+    },
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/affinity_api_absence_tests.xml",
+      "bytes": 33362,
+      "sha256": "f14a10de018bba0d06b5de07c57eb2f0c5adb1e20feaa7f75cf609f33d910c33"
+    }
+  },
+  "sources": [
+    {"path": "tests/unit/test_dual_bracket_controls.py", "bytes": 4279, "sha256": "445151782e6ef80fbbe7a37bfadcf60b8b3dd80b2964dfbb6a417938eb60c33c"},
+    {"path": "tests/unit/test_run_root_context_native.py", "bytes": 6641, "sha256": "bdaae0e6f31f85101b1b50cf2157ae8d7f97b1ded17a4c3f06eeb8d910b7cf17"},
+    {"path": "tests/unit/test_run_root_context_overhead.py", "bytes": 8066, "sha256": "849e7fe131129c2ccb992fa31aeac5c64027493a6355f0a39c2a7dcad3bd30db"},
+    {"path": "tests/unit/test_run_full_node_controls.py", "bytes": 3824, "sha256": "9db6d634cc032cd86fbde8036aefa6a83465c3092464493df5233dfb588db28f"},
+    {"path": "tests/unit/test_repeat_qfo_saved_graph.py", "bytes": 9503, "sha256": "3a670de11e234f0bc6043b3468bbe5b4b15929def513dc2fe60eeaa29c3b09b5"},
+    {"path": "tests/unit/test_probe_cpm_private_runtime.py", "bytes": 6252, "sha256": "932cbb5602676b58a666d0557ba599b96ca8c2e04c50f365c4d4176c4cfef300"},
+    {"path": "tests/unit/test_prepare_cpm_helper_environment.py", "bytes": 6338, "sha256": "f5d7e31cecb209de49e614bcc219d2f1a9654eda5e8d84f9771c580887917a29"},
+    {"path": "tests/unit/test_full_node_control_workload.py", "bytes": 5697, "sha256": "3704720f21337fe20d0ff7b150e34acc8415a51ab5088bf72c7e26aafd62d290"},
+    {"path": "tests/unit/test_observe_threadripper_service_launches.py", "bytes": 9757, "sha256": "1a30d4240c1dcdee48243956e317a577fb7806976834a2e0576d3fc6205b97a7"}
+  ],
+  "unchanged_inputs": [
+    {"path": "benchmark_tools/run_dual_bracket_controls.py", "bytes": 7564, "sha256": "d209e6a1bae11afb264f87c6a3ab12ae4f356558e756b9e45fa348b88dba6d60"},
+    {"path": "benchmark_tools/run_root_context_native.py", "bytes": 7281, "sha256": "897e3c3118eb6fb908e671f01520f611b20b630f57e0278f9e4c99341d45ed76"},
+    {"path": "benchmark_tools/run_root_context_overhead.py", "bytes": 7164, "sha256": "46386911f9ecf1c35bcc52e6ff9454d5cb773ffb95792f7a5ff8f08b58aa4a70"},
+    {"path": "benchmark_tools/run_full_node_controls.py", "bytes": 5733, "sha256": "d8091a74d3cf5bdd632a1d0898e5add01ef9f9c928a7e83548a03c36ccecb4e1"},
+    {"path": "benchmark_tools/repeat_qfo_saved_graph.py", "bytes": 16565, "sha256": "6d80d4e92eccf3f32a62072df39050ccd4573b3bd326e32977302830cbf1f0f4"},
+    {"path": "benchmark_tools/probe_cpm_private_runtime.py", "bytes": 14211, "sha256": "087718e795317dc021805d8f789aaf08592b490a5067f67b9768efb15d7c16b7"},
+    {"path": "benchmark_tools/prepare_cpm_helper_environment.py", "bytes": 10853, "sha256": "60afe605b400527936497a407df6797425d1dbcaed4774b4e931fb653f3935ca"},
+    {"path": "benchmark_tools/full_node_control_workload.py", "bytes": 7524, "sha256": "1f3f893f47128a45f2372a6c80588894529af74c28995547ec48a0e2d04198fa"},
+    {"path": "benchmark_tools/observe_threadripper_service_launches.py", "bytes": 12191, "sha256": "066275e96d1ccfc54c782d64fdad06313dff0fbaff7126ecc36165b3e94aae50"}
+  ],
+  "limitations": [
+    "API-absence simulation is not macOS execution; native and simulated panels overlap and are not additive.",
+    "Unsupported native checks skip explicitly; synthetic API injection is requested only in the specific unit fixtures.",
+    "Production diagnostics remain Linux-specific; no fallback, native host certification or timing admission is introduced.",
+    "Tiny owned test workloads do not constitute new scientific benchmarks or calibration.",
+    "Broader CI, final release portability, controlled resources, source/rights and uncertainty gaps remain open."
+  ]
+}

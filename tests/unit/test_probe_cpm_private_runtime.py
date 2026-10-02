@@ -8,6 +8,11 @@ import pytest
 
 from benchmark_tools import probe_cpm_private_runtime as control
 
+native_linux = pytest.mark.skipif(
+    sys.platform != "linux"
+    or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
+    reason="Native Linux resource-limit and affinity child execution")
+
 
 def test_environment_matches_allocator_control_without_forced_gc(monkeypatch):
     for key in ("PYTHONHOME", "LD_PRELOAD", "LD_LIBRARY_PATH"):
@@ -104,6 +109,7 @@ def test_exact_child_metadata_and_partition_required(tmp_path):
         control.validate_result(result, dict(original, output=dict(ref, sha256="0" * 64)), path)
 
 
+@native_linux
 def test_native_child_completion_and_signal_failure_are_retained(tmp_path):
     env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
     code, timeout = control.execute([sys.executable, "-B", "-c", "print(42)"],
@@ -114,6 +120,7 @@ def test_native_child_completion_and_signal_failure_are_retained(tmp_path):
     assert (code, timeout) == (-signal.SIGTERM, False)
 
 
+@native_linux
 def test_timeout_kills_only_owned_child_process_group(tmp_path):
     code, timeout = control.execute([sys.executable, "-B", "-c", "import time;time.sleep(10)"],
         tmp_path, os.environ.copy(), tmp_path / "out", tmp_path / "err", .05)
@@ -121,7 +128,8 @@ def test_timeout_kills_only_owned_child_process_group(tmp_path):
 
 
 def test_preflight_failure_retained_without_refinement_attempt(tmp_path, monkeypatch):
-    monkeypatch.setattr(control.os, "sched_setaffinity", lambda *_: None)
+    monkeypatch.setattr(control.os, "sched_getaffinity", lambda _: {0}, raising=False)
+    monkeypatch.setattr(control.os, "sched_setaffinity", lambda *_: None, raising=False)
     def fail(*_): raise ValueError("bad prerequisite")
     monkeypatch.setattr(control, "_run", fail)
     output = tmp_path / "fresh"

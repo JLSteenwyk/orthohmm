@@ -46,6 +46,11 @@ in fresh temporary copies, exercising dummy executors and synthetic scheduler
 rows with shell-special paths. Archived batches and their provenance checks
 stay unchanged. See [validation and production boundaries](../benchmark_tools/results/CI_QFO_BATCH_FIXTURES_20261001.md);
 test portability does not make historical native workflows portable.
+Synthetic affinity cases install their injected APIs explicitly on unsupported
+hosts; genuine native workload/resource/library-worker cases retain capability
+skips rather than mocked native results. Fake-service capture hashes its own
+temporary declared file. The [capability validation](../benchmark_tools/results/CI_AFFINITY_FIXTURES_20261001.md)
+distinguishes actual Linux execution from a deliberate API-absence simulation.
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude

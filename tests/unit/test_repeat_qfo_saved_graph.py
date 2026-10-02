@@ -88,7 +88,9 @@ def test_worker_identity_guards(problem):
         check_worker(snapshot, launcher, payload, overrides)
 
 
-@pytest.mark.skipif(not Path("/proc/self/maps").exists(), reason="Linux loaded-library diagnostic")
+@pytest.mark.skipif(not Path("/proc/self/maps").exists()
+                   or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
+                   reason="Linux loaded-library and affinity diagnostic")
 @pytest.mark.parametrize("explicit_affinity", [False, True])
 @pytest.mark.parametrize("native_boundary", [False, True])
 @pytest.mark.parametrize("resolution", [.08, .1, .12])
@@ -163,16 +165,24 @@ def test_affinity_panel_rejects_insufficient_distinct_cpus():
 
 @pytest.mark.parametrize("requested", [[], [1, 1], [9], [-1]])
 def test_invalid_affinity_does_not_call_setter(monkeypatch, requested):
-    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3})
+    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3}, raising=False)
     def forbidden(*args):
         pytest.fail("Invalid CPU request reached setter")
-    monkeypatch.setattr(os, "sched_setaffinity", forbidden)
+    monkeypatch.setattr(os, "sched_setaffinity", forbidden, raising=False)
     with pytest.raises(ValueError, match="outside inherited"):
         diagnostic.set_worker_affinity(requested)
 
 
 def test_affinity_setter_verifies_actual_result(monkeypatch):
-    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3})
-    monkeypatch.setattr(os, "sched_setaffinity", lambda pid, cpus: None)
+    monkeypatch.setattr(os, "sched_getaffinity", lambda pid: {1, 3}, raising=False)
+    monkeypatch.setattr(os, "sched_setaffinity", lambda pid, cpus: None, raising=False)
     with pytest.raises(ValueError, match="Actual worker affinity"):
         diagnostic.set_worker_affinity([1])
+
+
+def test_missing_affinity_api_is_not_synthesized(monkeypatch):
+    monkeypatch.delattr(os, "sched_getaffinity", raising=False)
+    monkeypatch.delattr(os, "sched_setaffinity", raising=False)
+    with pytest.raises(AttributeError, match="sched_getaffinity"):
+        diagnostic.set_worker_affinity([1])
+    assert not hasattr(os, "sched_getaffinity") and not hasattr(os, "sched_setaffinity")

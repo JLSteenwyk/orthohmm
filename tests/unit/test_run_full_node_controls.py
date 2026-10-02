@@ -49,7 +49,7 @@ def launch_context(tmp_path, monkeypatch):
     plan = dict(launcher_python=module.sys.executable)
     monkeypatch.setattr(module, "read_pinned", lambda path, sha: plan if sha == module.PLAN_SHA else recipe)
     monkeypatch.setattr(module.platform, "node", lambda: "spark-7ff0")
-    monkeypatch.setattr(module.os, "sched_getaffinity", lambda pid: set(range(20)))
+    monkeypatch.setattr(module.os, "sched_getaffinity", lambda pid: set(range(20)), raising=False)
     monkeypatch.setattr(module.sys, "dont_write_bytecode", True)
     monkeypatch.setattr(module.sys, "pycache_prefix", str(tmp_path / "absent_cache"))
     for key, value in dict(SLURM_CPUS_PER_TASK="20", SLURM_MEM_PER_NODE="98304",

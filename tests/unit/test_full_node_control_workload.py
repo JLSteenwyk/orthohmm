@@ -1,11 +1,18 @@
 import json
 import os
+from pathlib import Path
 
 import pytest
 
 from benchmark_tools import full_node_control_workload as module
 
+native_linux = pytest.mark.skipif(
+    not Path("/proc/self/cgroup").exists()
+    or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity", "fork")),
+    reason="Native Linux cgroup, affinity and fork workload")
 
+
+@native_linux
 @pytest.mark.parametrize("mode", ["steady", "churn"])
 def test_bounded_two_worker_local_smoke(tmp_path, mode):
     cpus = sorted(os.sched_getaffinity(0))[:2]
@@ -28,6 +35,7 @@ def test_bounded_two_worker_local_smoke(tmp_path, mode):
         module.workload(tmp_path, mode, cpus, duration=.1)
 
 
+@native_linux
 def test_creation_cap_preserves_invalid_workload_evidence(tmp_path):
     cpu = min(os.sched_getaffinity(0))
     module.save(tmp_path / "workload_go.json", {"go": True})
@@ -38,6 +46,7 @@ def test_creation_cap_preserves_invalid_workload_evidence(tmp_path):
     assert result["workers"][0]["creation_cap_reached"]
 
 
+@native_linux
 def test_failed_worker_is_reaped(tmp_path):
     cpu = min(os.sched_getaffinity(0))
     module.save(tmp_path / "workload_go.json", {"go": False})
@@ -52,8 +61,9 @@ def test_failed_worker_is_reaped(tmp_path):
 
 @pytest.mark.parametrize("field,value", [("mode", "invalid"), ("cpus", []), ("cpus", [True]),
     ("duration", 0), ("duration", 21), ("duration", float("nan")), ("cap", 0), ("cap", 200001)])
-def test_invalid_resource_bounds_rejected(field, value):
-    args = dict(mode="steady", cpus=[min(os.sched_getaffinity(0))], duration=.1, cap=10)
+def test_invalid_resource_bounds_rejected(monkeypatch, field, value):
+    monkeypatch.setattr(os, "sched_getaffinity", lambda _: {0}, raising=False)
+    args = dict(mode="steady", cpus=[0], duration=.1, cap=10)
     args[field] = value
     with pytest.raises(ValueError):
         module.validate(**args)
@@ -64,6 +74,7 @@ def test_lost_parent_stops_work():
         module.work("steady", .1, 10, -1)
 
 
+@native_linux
 def test_competitor_local_smoke_restores_test_affinity(tmp_path):
     allowed = os.sched_getaffinity(0)
     cpu = min(allowed)
@@ -83,6 +94,7 @@ def test_start_signal_requires_exact_boolean(value):
         module.require_start(value)
 
 
+@native_linux
 @pytest.mark.parametrize("failure", ["fork", "readiness"])
 def test_partial_startup_reaps_owned_children(tmp_path, monkeypatch, failure):
     cpus = sorted(os.sched_getaffinity(0))[:2]
@@ -114,3 +126,13 @@ def test_partial_startup_reaps_owned_children(tmp_path, monkeypatch, failure):
         with pytest.raises(ChildProcessError):
             os.waitpid(pid, os.WNOHANG)
     assert not (tmp_path / "workload_done.json").exists()
+
+
+def test_missing_affinity_prevents_worker_creation(tmp_path, monkeypatch):
+    monkeypatch.delattr(os, "sched_getaffinity", raising=False)
+    def forbidden():
+        pytest.fail("Unsupported affinity reached native worker creation")
+    monkeypatch.setattr(os, "fork", forbidden, raising=False)
+    with pytest.raises(AttributeError, match="sched_getaffinity"):
+        module.workload(tmp_path, "steady", [0], duration=.1)
+    assert not list(tmp_path.iterdir())
