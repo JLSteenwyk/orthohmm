@@ -1,5 +1,7 @@
 import json
 from pathlib import Path
+import subprocess
+import sys
 from types import SimpleNamespace
 
 import pytest
@@ -91,8 +93,19 @@ def test_mocked_offline_composition(arguments, monkeypatch):
     assert all(flag in bootstrap for flag in ("--no-index", "--require-hashes", "--no-deps", "--only-binary=:all:"))
     assert calls[0][2]["CONDA_PKGS_DIRS"] == str(arguments.output / "cache")
     assert calls[0][2]["HOME"] == str(arguments.output / "home")
+    assert calls[0][2]["PATH"] == str(arguments.conda.absolute().parent) + ":/usr/bin:/bin"
     assert "PYTHONPATH" not in calls[0][2] and "LD_PRELOAD" not in calls[0][2]
     assert not (arguments.output / "failed.json").exists()
+
+
+def test_supplied_env_python_launcher_resolves_its_private_interpreter(arguments, monkeypatch):
+    arguments.conda.write_text("#!/usr/bin/env python\nprint('synthetic launcher resolved')\n")
+    arguments.conda_sha256 = module.record(arguments.conda)["sha256"]
+    (arguments.conda.parent / "python").symlink_to(sys.executable)
+    calls = mock_execution(arguments, monkeypatch)
+    module.run(arguments)
+    result = subprocess.run([str(arguments.conda)], env=calls[0][2], capture_output=True, text=True, timeout=10)
+    assert result.returncode == 0 and result.stdout.strip() == "synthetic launcher resolved"
 
 
 @pytest.mark.parametrize("stage", ["conda_install", "pip_bootstrap", "pip_check", "runtime_snapshot"])

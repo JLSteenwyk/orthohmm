@@ -133,7 +133,7 @@ def commands(conda, output, timeout):
 def run(args):
     output, packages, watched = preflight(args)
     output.mkdir(parents=True, exist_ok=False)
-    environment = dict(HOME=str(output / "home"), PATH="/usr/bin:/bin", LANG="C.UTF-8",
+    environment = dict(HOME=str(output / "home"), PATH=str(args.conda.absolute().parent) + ":/usr/bin:/bin", LANG="C.UTF-8",
         CONDA_NO_PLUGINS="true", CONDA_PKGS_DIRS=str(output / "cache"),
         CONDA_ENVS_PATH=str(output / "envs"), CONDARC="/dev/null", PIP_CONFIG_FILE="/dev/null",
         PYTHONDONTWRITEBYTECODE="1", PYTHONNOUSERSITE="1", PYTHONHASHSEED="0",

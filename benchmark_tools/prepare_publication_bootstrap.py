@@ -118,7 +118,7 @@ def install(args):
     for name in ("home", "cache", "envs"):
         (output / name).mkdir()
     prefix = output / "prefix"
-    environment = dict(HOME=str(output / "home"), PATH="/usr/bin:/bin", LANG="C.UTF-8",
+    environment = dict(HOME=str(output / "home"), PATH=str(prefix / "bin") + ":/usr/bin:/bin", LANG="C.UTF-8",
         CONDARC="/dev/null", CONDA_NO_PLUGINS="true", CONDA_PKGS_DIRS=str(output / "cache"),
         CONDA_ENVS_PATH=str(output / "envs"), CONDA_EXTRACT_THREADS="1", CONDA_VERIFY_THREADS="1",
         PYTHONDONTWRITEBYTECODE="1", OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1")

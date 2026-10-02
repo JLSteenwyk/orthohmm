@@ -53,6 +53,7 @@ def test_mocked_private_bootstrap_install(inputs, monkeypatch):
     assert [c[0] for c in calls] == ["install", "conda_version"]
     assert calls[0][1] == ["/bin/bash", str(args.installer), "-b", "-p", str(args.output / "prefix")]
     assert calls[0][2]["HOME"] == str(args.output / "home") and calls[0][2]["CONDARC"] == "/dev/null"
+    assert calls[0][2]["PATH"] == str(args.output / "prefix/bin") + ":/usr/bin:/bin"
     assert calls[0][2]["CONDA_EXTRACT_THREADS"] == "1"
     assert "PYTHONPATH" not in calls[0][2] and "LD_PRELOAD" not in calls[0][2]
     assert all(result[k] is False for k in ("retry", "shell_init_requested", "scientific_environment_installed",
@@ -135,5 +136,51 @@ def test_corrupt_download_retained_without_install(inputs, monkeypatch):
     with pytest.raises(ValueError): module.acquire(args)
     assert len(calls) == 1
     assert (args.output / (module.NAME + ".sha256.partial")).exists()
+    assert not (args.output / "complete.json").exists()
+    assert json.loads((args.output / "failed.json").read_bytes())["retry"] is False
+
+
+@pytest.mark.parametrize("fault", ["version", "duplicate", "missing_python", "escaped_python", "escaped_conda", "changed_installer"])
+def test_installed_bootstrap_validation_failures(inputs, monkeypatch, tmp_path, fault):
+    args, _ = inputs
+    calls = execution(args, monkeypatch)
+    original = module.stage
+    outside = tmp_path / "outside"
+    outside.write_text("Synthetic escaped entrypoint, never executed")
+    outside.chmod(0o755)
+    def stage(output, name, command, env, timeout):
+        result = original(output, name, command, env, timeout)
+        prefix = output / "prefix"
+        if name == "install":
+            if fault == "duplicate":
+                (prefix / "conda-meta/duplicate.json").write_bytes((prefix / "conda-meta/conda.json").read_bytes())
+            elif fault in {"missing_python", "escaped_python", "escaped_conda"}:
+                path = prefix / "bin" / ("conda" if fault == "escaped_conda" else "python")
+                path.unlink()
+                if fault != "missing_python": path.symlink_to(outside)
+            elif fault == "changed_installer": args.installer.write_text("Changed synthetic supplied input")
+        elif fault == "version": (output / "conda_version.log").write_text("conda 0.0.0\n")
+        return result
+    monkeypatch.setattr(module, "stage", stage)
+    with pytest.raises(ValueError): module.install(args)
+    assert len(calls) == len({c[0] for c in calls})
+    assert not (args.output / "complete.json").exists()
+    assert json.loads((args.output / "failed.json").read_bytes())["retry"] is False
+
+
+@pytest.mark.parametrize("fault", ["length", "encoding", "provider", "digest"])
+def test_response_identity_guards(inputs, monkeypatch, fault):
+    args, checksum = inputs
+    class Response(io.BytesIO):
+        def __init__(self):
+            super().__init__(checksum if fault != "digest" else b"x" * len(checksum))
+            self.headers = {"Content-Length": str(len(checksum) + (fault == "length"))}
+            if fault == "encoding": self.headers["Content-Encoding"] = "gzip"
+        def geturl(self):
+            return "https://evil.example/a" if fault == "provider" else module.URL
+    class Opener:
+        def open(self, request, timeout): return Response()
+    monkeypatch.setattr(module, "build_opener", lambda *args: Opener())
+    with pytest.raises(ValueError): module.acquire(args)
     assert not (args.output / "complete.json").exists()
     assert json.loads((args.output / "failed.json").read_bytes())["retry"] is False
