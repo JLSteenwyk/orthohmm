@@ -540,6 +540,13 @@ This audit does not launch work or replace a quiet-window review.
 
 ## Reproduce Statistics
 
+The [bounded owned-group waitability correction](results/OWNED_GROUP_WAITABILITY_20261002.md)
+keeps denied/live group cleanup fail-closed while allowing a short exit-status
+race to settle. Both wrappers already record the shared helper's source hash;
+prospective execution inventories must pin its new bytes. Historical plans,
+timing/scientific results and source receipts must not be silently repinned.
+All 135 focused local checks pass, not new production timing or macOS proof.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

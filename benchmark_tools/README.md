@@ -49,6 +49,12 @@ a group is absent before accepting a permission-error race. All 55 local cases
 pass; new macOS confirmation is open. Prospective inventories must pin the new
 helper, while historical receipts and scientific results remain unchanged.
 
+The [exit-waitability follow-up](results/OWNED_GROUP_WAITABILITY_20261002.md)
+addresses a later EPERM before the owned leader becomes waitable. A bounded
+polling window still requires fresh absent-group proof; live or denied groups
+remain failures. All 135 focused local cases pass. New macOS confirmation and
+prospective helper source pins remain required; scientific results are unchanged.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with
@@ -77,6 +83,8 @@ retains the exact upstream scorer and license for explicit AST comparison tests.
 All 33 FAS cases pass in a copied tree with original-checkout reads blocked;
 65 combined local cases pass. No source fallback, biological data substitution,
 full FAS execution or change to historical source admission follows.
+The subsequent actual macOS Python 3.13 fast log confirms all 65 FAS/provider
+cases pass, but has 37 other failures. This is not full remote-suite success.
 
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not

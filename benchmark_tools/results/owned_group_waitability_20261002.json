@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "0557c87766639b67f91e28be84adee5bd70b9137",
+  "purpose": "bounded owned-leader waitability after permission error; require fresh absent-group proof",
+  "sources": [
+    {"path": "benchmark_tools/owned_process_group.py", "bytes": 1406, "sha256": "76dd867b1dff8b15fa5e8ec7d5d876a2ac49a0910ca8c3a04677f9ab697692ba"},
+    {"path": "tests/unit/test_owned_process_group.py", "bytes": 3152, "sha256": "ec7893d9e35b521a519cd10a8983d606169c960d7a6c82db647f2926cd3f4c09"}
+  ],
+  "previous_helper_sha256": "5c83636da0d88b5c83325f747943b2021d0df078aa7ef90899956fa8dc7f1ae3",
+  "nominal_polling_deadline_s": 0.1,
+  "poll_sleep_s": 0.01,
+  "os_scheduling_deadline_guarantee": false,
+  "required_cleanup_proof": "reaped owned leader and fresh group probe raises ProcessLookupError",
+  "before_tests": {
+    "passed": 0, "failed": 15, "errors": 0, "skipped": 0,
+    "premature_permission_errors_in_success_cases": 6,
+    "denial_cases_fail_rechecking_assertions_not_unsafe_cleanup": 9,
+    "stdout_duration_s": 0.28,
+    "report": {"path": "benchmarks/work/owned_group_waitability_before_20261002.xml", "bytes": 40479, "sha256": "f7f6a2db6f36a32071db5363e75e2b04e76fd2b2701100a562d23c4efd8fa78c"}
+  },
+  "intermediate_tests": {
+    "passed": 52, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 6.12,
+    "report": {"path": "benchmarks/work/owned_group_waitability_after_20261002.xml", "bytes": 7755, "sha256": "e2615ff1764a4124e6dc52327e5e6987e4a77a691947c6c91a87032786eaa976"}
+  },
+  "final_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_owned_process_group.py", "tests/unit/test_measure_slurm_command.py", "tests/unit/test_run_wgd_application.py", "tests/unit/test_audit_slurm_measurement.py", "tests/unit/test_audit_fas_population.py", "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "--junitxml=benchmarks/work/owned_group_waitability_complete_20261002.xml"],
+    "passed": 135, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 8.86, "junit_duration_s": 8.836,
+    "scope_counts": {"new_helper": 15, "measurement": 37, "wgd": 8, "measurement_audit": 10, "fas": 33, "provider": 32},
+    "native_term_ignoring_descendant_case_passed": true,
+    "report": {"path": "benchmarks/work/owned_group_waitability_complete_20261002.xml", "bytes": 22308, "sha256": "ae8c87024dff31a0d7a9d37fe2618ba42ccbd69c7981b2858af31762178eb093"}
+  },
+  "cli_help_commands": [
+    {"argv": ["python", "-B", "-m", "benchmark_tools.measure_slurm_command", "--help"], "returncode": 0},
+    {"argv": ["python", "-B", "-m", "benchmark_tools.run_wgd_application", "--help"], "returncode": 0}
+  ],
+  "failure_ci": {
+    "source_commit": "65789fcb0aa20f3423e80240913e8b7037bc46d7",
+    "run_id": 36974478584, "job_id": 110735224826,
+    "scope": "macOS Python 3.10 test-fast only",
+    "case": "tests/unit/test_measure_slurm_command.py::test_timeout_stops_owned_command",
+    "first_signal": 0, "exception_cleanup_signal": 15,
+    "leader_returncode_in_trace": null,
+    "exception": "PermissionError EPERM",
+    "exact_ci_kernel_mechanism_proven": false,
+    "log": {"path": "benchmarks/work/ci_remote_65789fcb_20261002/110735224826.log", "bytes": 2174060, "sha256": "6ef06f080d783182de7c41070e0a005fbb3cec6bb37ef9eff1fc0e92dd70bacc"}
+  },
+  "preceding_ci_observation": {
+    "source_commit": "0557c87766639b67f91e28be84adee5bd70b9137",
+    "run_id": 36975890708,
+    "observed_at_utc": "2026-10-02T07:00:57.054166+00:00",
+    "live_test_job_ids": [110739516108, 110739516177, 110739516230, 110739516240, 110739516283],
+    "cpu_wheel": "success", "docs": "success",
+    "changed_helper_in_this_ci": false,
+    "manual_restart_or_resubmission": false
+  },
+  "preceding_fas_ci_inspection": {
+    "source_commit": "0557c87766639b67f91e28be84adee5bd70b9137",
+    "run_id": 36975890708, "job_id": 110739516230,
+    "scope": "macOS Python 3.13 test-fast only",
+    "downloaded_at_utc": "2026-10-02T07:06:32.033734+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_0557c877_20261002/110739516230.log", "bytes": 2326706, "sha256": "2f401221f27c8ded5c7c7c7eb777385bf3bc45932365ada9d8de27de1040e78d"},
+    "previous_fas_cases_passed": 33, "previous_provider_cases_passed": 32,
+    "overall": {"passed": 13856, "failed": 37, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 477.20},
+    "changed_helper_in_this_ci": false,
+    "oversized_tar_fixture_failure": "ValueError: fileobj not provided for non zero-size regular file",
+    "sibling_or_full_suite_success_inferred": false,
+    "manual_restart_or_resubmission": false
+  },
+  "wrapper_code_changed": false,
+  "prospective_helper_inventory_pin_required": true,
+  "scientific_settings_or_scores_changed": false,
+  "historical_receipts_repinned": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}

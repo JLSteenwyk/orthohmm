@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Owned Leader Exit-Status Waitability (2026-10-02)
+
+Previous goal turn is progress at pushed 0557: exact native FAS source with
+upstream notices, 65 local/33 copied passes and provider macOS confirmation.
+Read full objective/current ledger/HEAD, then observe automatic run 36975890708.
+At 07:00:57 UTC its five test jobs are live; wheel/docs succeed. No restart.
+Timing stays deferred with no host poll/question, DGX or unrelated workload action.
+
+Investigate the already-retained source-657 macOS Python 3.10 fast failure.
+Zero-signal group probe after TERM returns EPERM while leader returncode is
+still None; exception cleanup's TERM then does the same. The single-poll helper
+does not handle delayed exit waitability. Exact kernel state is not proven.
+Add fifteen synthetic delayed/near-bound TERM/probe/KILL cases first; preserve
+all fifteen failures against the old helper. Six success cases raise premature
+EPERM; nine denial cases still reject correctly but miss rechecking assertions.
+
+Change only the shared helper: after permission error, poll the owned leader
+within a nominal 0.1-second window with 0.01-second sleeps. Reaped leader plus
+fresh absent-group proof is still required. Live/present/denied groups fail;
+no process scan, unrelated signal or leader-only cleanup acceptance is added.
+Normal TERM/grace/KILL and wrapper APIs/code stay unchanged. New helper bytes
+need prospective source inventories; historical receipts remain pinned.
+
+**135 local tests pass in 8.86s**, zero errors/failures/skips: 15 new helper,
+37 measurement, eight WGD, ten audit and the prior 65 FAS/provider cases.
+Native TERM-ignoring descendant check passes; both CLI help commands succeed.
+The intermediate 52-case pass overlaps. [Evidence, failed-before reports and
+scope](OWNED_GROUP_WAITABILITY_20261002.md) pin sources/tests/JUnit/logs.
+This is bounded local behavior, not new macOS proof or exact kernel diagnosis.
+
+Then inspect only actual terminal source-055 macOS Python 3.13 fast log.
+All preceding 65 FAS/provider cases pass, including 33 exact native-source
+comparisons. Overall: 13,856 pass, 37 fail, zero errors, 110 skip, 30 warnings,
+477.20s. Retain the Python 3.13 oversized-tar fixture construction failure for
+follow-up. This new-version log cannot be compared causally to prior 3.10 totals,
+prove the changed helper or imply sibling/full success. No handle is restarted.
+
+Commit/push and observe the new automatic handle without restarting previous
+CI. New-helper remote confirmation and other workstation/raw/Linux-capability
+failures remain open. No biological inference/bootstrap/annotation/scoring,
+production timing, old archive regeneration, source search or service action
+occurs. Frozen method/scores and all prior failures/archives stay unchanged.
+Other-QfO uncertainty, rights, controlled resources, full executable release
+and public deposition still require work. The publication goal remains active
+and incomplete.
+
 ## Exact Native FAS Source Tests Outside Checkout (2026-10-02)
 
 Previous goal turn is progress at pushed 657: native provider checksum

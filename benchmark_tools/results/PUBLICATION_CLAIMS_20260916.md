@@ -253,6 +253,20 @@ Actual source-657 Python 3.10 fast CI confirms the previous 138-case provider
 panel, not these new FAS references. Its 29 other failures include a newly
 observed owned-timeout EPERM; full timeout resolution remains unestablished.
 
+The [exit-waitability follow-up](OWNED_GROUP_WAITABILITY_20261002.md)
+retains that failure and adds bounded polling of only the owned leader before
+requiring fresh absent-group proof. All 135 local cases pass, including denial
+and native TERM-ignoring descendant checks. Six intended-success cases fail
+before the change; nine other pre-fix failures are bounded-rechecking assertions,
+not unsafe-cleanup observations. Exact remote kernel causation, new macOS
+confirmation and complete native cleanup/release remain unestablished; no
+scientific/default changes or historical source/receipt repinning follows.
+The same follow-up inspects actual source-055 macOS Python 3.13 fast CI:
+all preceding 65 FAS/provider cases pass, including 33 fixed native-source
+comparisons; 37 other failures remain. This confirms that test-source scope,
+not full FAS execution, all-version support, the new helper or complete CI.
+Its oversized-tar fixture construction failure remains open for follow-up.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
