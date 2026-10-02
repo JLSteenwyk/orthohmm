@@ -391,6 +391,58 @@ source-reproducible binary. Source/notices are preserved without claiming
 redistribution/security clearance or complete native-study reproduction.
 See [actual copied-source acquisition and scope](results/PUBLICATION_PHYLOGENY_ACQUISITION_20261002.md).
 
+## Offline Private Phylogeny Tool Preparation
+
+After acquisition, the new `prepare_publication_phylogeny_tools.py`
+builds MAFFT core and stages the exact FastTree binary/source/notices without
+any historical tool installation or old fixture. It needs the verified source
+component, the preceding seven artifact files, separately supplied system
+GCC/make/linker, Linux x86-64 with AVX2 support, and an independently recorded
+compiler executable digest. The AVX2 gate is for the retained upstream
+FastTree binary, not a general OrthoHMM requirement.
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/prepare_publication_phylogeny_tools.py \
+  --component /relocated/source-component --manifest-sha256 RETAINED_INDEX_SHA256 \
+  --artifacts /absolute/fresh/phylogeny-artifacts \
+  --compiler-sha256 RETAINED_SYSTEM_GCC_SHA256 \
+  --output /absolute/fresh/prepared-phylogeny \
+  --acknowledge-historical-runtime
+```
+
+Output must be fresh, canonical, outside both source/artifact roots, and contain
+only ASCII letters/digits, slash, dot, underscore or hyphen: the upstream make
+recipes do not quote every use of PREFIX. The command verifies all seven
+artifact identities and source-index binding before creating output. It
+rejects artifact symlinks/aliases and inherited compiler/library overrides.
+
+The exact core target is `make -j2 CC=PINNED_GCC CFLAGS=-O3 PREFIX=FRESH_PREFIX install`.
+It is not a new numerical/scientific configuration. All 173 original source
+files must remain unchanged, and all 34 helper names/bytes/hashes/modes must
+match the historical build catalog. Different compiler output fails closed;
+this is not a universal toolchain-independent build claim. The generated
+launcher necessarily embeds the fresh prefix and is recorded separately.
+Two generated absolute convenience links become checked relative links;
+all installed links must stay inside the private prefix.
+
+MAFFT source/license/extension notices and all six FastTree artifacts are
+retained privately. Only the staged FastTree copy becomes executable; acquired
+inputs stay unchanged. Five bounded stages record compiler version, core
+build, MAFFT launcher/helper versions and FastTree help. Child-process groups
+have timeouts, and failures retain artifacts/logs/`failed.json` without
+retry. These version probes do not rerun or establish alignment/tree/benchmark
+equivalence. No artifact is downloaded again, and no original installation,
+shared environment or scientific default is modified.
+
+`complete.json` records absolute tool paths, their inventory, inputs
+and the explicit `MAFFT_BINARIES` helper override. If relocating the
+tool tree, override that variable to the relocated `mafft/libexec/mafft`
+directory; a launcher-only copy is insufficient. The current historical
+executor is not silently amended to accept these new paths/launcher.
+See [executed private preparation and independent validation](results/PUBLICATION_PHYLOGENY_PREPARATION_20261002.md).
+Runtime assembly, full scientific admission, OS/toolchain/rights closure and
+controlled timing remain separate requirements.
+
 ## Executable Study Boundary
 
 The workflow reproduction guide is included for context, but links to omitted

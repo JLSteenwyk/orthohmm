@@ -1,0 +1,48 @@
+{
+  "acquired_inputs_unchanged": true,
+  "build_warning_occurrences": 147,
+  "controlled_timing": false,
+  "controller_stages": 5,
+  "file_identities_verified": 343,
+  "historical_helpers": 34,
+  "inventory_regular_files": 48,
+  "inventory_symlinks": 18,
+  "launcher_comparison": {
+    "changed_lines": [
+      {
+        "current": "\tprefix=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft",
+        "historical": "\tprefix=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/libexec/mafft",
+        "line": 39
+      }
+    ],
+    "current": {
+      "bytes": 109908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft",
+      "sha256": "558056349ca625e1dcfcfa8266be63663ea3523e6529c07dc9025be1c4a1c244"
+    },
+    "historical": {
+      "bytes": 109902,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_mafft_source_20260926/build/install/bin/mafft",
+      "sha256": "6595bc4c73f2e22899a11b969eb2ca8fb1ca441a7db67292e96b75af673ae22f"
+    },
+    "historical_launcher_used_only_for_post_build_comparison": true,
+    "only_generated_default_helper_prefix_differs": true
+  },
+  "observed_utc": "2026-10-02T18:53:32.750582+00:00",
+  "outer_stages": 4,
+  "publication_ready": false,
+  "receipt": {
+    "bytes": 133716,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_phylogeny_preparation_20261002.json",
+    "sha256": "735177ca8c4f4705269628b947605ae0d4df884cf35d739585e0912f6e113036"
+  },
+  "scientific_inference_repeated": false,
+  "source_files": 173,
+  "status": "private_phylogeny_preparation_retained_evidence_validated",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 245
+  }
+}

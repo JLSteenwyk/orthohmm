@@ -1,5 +1,58 @@
 # Publication Progress
 
+## Private Native Tools Prepared without Historical Installations (2026-10-02)
+
+Previous goal turn progressed at pushed `5d049544`, acquiring exact
+MAFFT/FastTree source/binary/notices without installed-tool prerequisites.
+Read the goal, latest source/receipts and old MAFFT build contract. Reuse
+the retained seven public artifacts and scientific/collector admissions;
+no acquisition or full scientific benchmark restarts. Timing remains deferred
+without quiet-window questions, contention polls, DGX or unrelated job/service
+changes. All owned local test/build handles below finish terminal successfully.
+
+The old MAFFT build driver still requires historical installed-source
+comparisons and old scientific fixtures. Add an externally anchored copied-source
+tool-preparation controller instead: verify all seven artifact pins, explicit
+GCC digest/host prerequisites and fresh shell-safe output; unpack the fixed
+archive, build core with the unchanged -j2/-O3 recipe, require all 34 historical
+helper identities, retain source/notices, stage exact upstream FastTree and run
+only version/help probes. Generate no predictions or changed defaults/locks.
+Correct the two known generated convenience links to relative targets and
+reject links outside the private prefix. Do not modify the old driver/admissions.
+
+All 245 five-module preparation/acquisition/MAFFT/FastTree/source tests pass
+in 27.70s, zero failures/errors/skips. Cases cover hash/mode/inventory/source
+changes, unsafe paths/aliases, architecture/AVX2, compiler/source anchoring,
+each stage/version failure, inherited environment removal and no retry.
+Commit source `7e6b12fd` before actual execution.
+
+Export/copy the native-build source component outside checkout: 1,844 files,
+43 scientific/1,800 workflow/one overlay, externally anchored and verified
+before/after. Actually prepare from retained public artifacts using recorded
+GCC13.3.0: all five native build/version stages and four outer stages pass.
+All 173 original source files and seven acquired inputs remain unchanged.
+All 34 helpers (13,744,200 bytes) match historical identities; the private tool
+inventory has 48 regular files/18 in-prefix links. The fresh launcher differs
+only at line39's default helper-directory prefix. Preserve all 147 build
+warning occurrences; no warning-free/safety/portability claim.
+
+Independent readback verifies 343 retained file identities, all link/mode
+records, 245-case JUnit and the one-line launcher delta. Old launcher/identity
+receipt is used only after the build for comparison, not an input requirement.
+See [execution/pins/limits](PUBLICATION_PHYLOGENY_PREPARATION_20261002.md)
+and both machine receipts. Exact preceding CI37048822738 for `5d049544`
+is still in progress at18:50:04UTC: docs/wheel/native-diagnostic jobs succeed,
+five test jobs remain live at that observation; no final/new-source CI claim.
+
+Update executable guides, commit and push focused milestones. The next
+handoff requirement is explicit asset/runtime/executor assembly and admission
+using the independently prepared source/wheel/base/tool components; do not
+silently substitute the fresh launcher in historical manifests or rerun the
+full expensive OrthoBench reproduction merely for packaging. Compiler/OS/
+security/rights closure, QfO uncertainty, independent-validation limitations,
+comparable resource evidence, final manuscript/release/archive/DOI and overall
+publication readiness remain open. Leave the original goal active.
+
 ## Public Phylogeny Artifacts Acquired without Installed Tools (2026-10-02)
 
 Previous goal turn progressed at pushed `e6dd6244`, completing exact

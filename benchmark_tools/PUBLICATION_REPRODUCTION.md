@@ -18,6 +18,16 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [installation-independent private tool preparation](results/PUBLICATION_PHYLOGENY_PREPARATION_20261002.md)
+now builds MAFFT core and stages FastTree from retained public artifacts,
+without original tool installations or scientific fixture inputs. All 34
+MAFFT helper identities match; five native build/version stages and four
+outer copied-source stages pass. All 245 focused tests pass. Independent
+readback verifies 343 file identities and the launcher's sole changed default
+helper-prefix line. This closes private tool preparation on the recorded
+host/compiler, not full executor/runtime assembly or new scientific admission.
+See [reader commands](PUBLICATION_SOURCE_COMPONENT.md#offline-private-phylogeny-tool-preparation).
+
 The [copied-source public phylogeny acquisition](results/PUBLICATION_PHYLOGENY_ACQUISITION_20261002.md)
 obtains seven pinned MAFFT/FastTree source/binary/notice artifacts without any
 installed-tool prerequisite. All 2,753,786 bytes match retained identities;

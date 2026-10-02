@@ -1,0 +1,2560 @@
+{
+  "acquired_inputs_unchanged": true,
+  "completion": {
+    "bytes": 101744,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/complete.json",
+    "sha256": "81f0fb18cf02e96c7976a56002580e5bfc36f866a9b367dccb72b8ed9fc85fe1"
+  },
+  "controlled_timing": false,
+  "downloads_repeated": false,
+  "finished": "2026-10-02T18:50:03.990582+00:00",
+  "harness": {
+    "bytes": 7434,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/record_publication_phylogeny_preparation_20261002.py",
+    "sha256": "ccb5fad4b4b39e56ac56de33dd519f300afc411453f5ca3fb3b5b288540fa80d"
+  },
+  "historical_admission": false,
+  "historical_helper_comparisons": [
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 715016,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/addsingle",
+        "sha256": "f1dc4d582a6dd5bc0ae2ee4d864bfb3feb1236db19dd174f2ea1997a5745e84f"
+      },
+      "historical": {
+        "bytes": 715016,
+        "sha256": "f1dc4d582a6dd5bc0ae2ee4d864bfb3feb1236db19dd174f2ea1997a5745e84f"
+      },
+      "name": "addsingle"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/contrafoldwrap",
+        "sha256": "9c5c4b0ac2a9b7a9621d33fcd89738bd79b02df8636daea39ba46b751e1cc02f"
+      },
+      "historical": {
+        "bytes": 370952,
+        "sha256": "9c5c4b0ac2a9b7a9621d33fcd89738bd79b02df8636daea39ba46b751e1cc02f"
+      },
+      "name": "contrafoldwrap"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 108920,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/countlen",
+        "sha256": "38827b4193765e75ee254930b4ba443bcd050200df973891a1771979ad30e41e"
+      },
+      "historical": {
+        "bytes": 108920,
+        "sha256": "38827b4193765e75ee254930b4ba443bcd050200df973891a1771979ad30e41e"
+      },
+      "name": "countlen"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 731400,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/disttbfast",
+        "sha256": "91ad64cfbd13cefc90f6f2aa47a0f25979a4a35775be4fcefe4b586b66ada52c"
+      },
+      "historical": {
+        "bytes": 731400,
+        "sha256": "91ad64cfbd13cefc90f6f2aa47a0f25979a4a35775be4fcefe4b586b66ada52c"
+      },
+      "name": "disttbfast"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 387336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndblast",
+        "sha256": "f774cd87f0e5f492c1296761515de43cd63f7fa2b5172578ac7e1fa3a3723a12"
+      },
+      "historical": {
+        "bytes": 387336,
+        "sha256": "f774cd87f0e5f492c1296761515de43cd63f7fa2b5172578ac7e1fa3a3723a12"
+      },
+      "name": "dndblast"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndfast7",
+        "sha256": "63786abcec720442f8845d761c70ae8689f7c113f51f65070bd38c5678628071"
+      },
+      "historical": {
+        "bytes": 383240,
+        "sha256": "63786abcec720442f8845d761c70ae8689f7c113f51f65070bd38c5678628071"
+      },
+      "name": "dndfast7"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndpre",
+        "sha256": "4e8a89c1e725fa9d463c94f636993118fb79290af2e5dc5509a2bb962b413121"
+      },
+      "historical": {
+        "bytes": 370952,
+        "sha256": "4e8a89c1e725fa9d463c94f636993118fb79290af2e5dc5509a2bb962b413121"
+      },
+      "name": "dndpre"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 731400,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dvtditr",
+        "sha256": "5ea9386614ae82f2915e0f4be3f98ff4c3e3739c10dc938cc5c9b7a8c265cc2f"
+      },
+      "historical": {
+        "bytes": 731400,
+        "sha256": "5ea9386614ae82f2915e0f4be3f98ff4c3e3739c10dc938cc5c9b7a8c265cc2f"
+      },
+      "name": "dvtditr"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 182536,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/f2cl",
+        "sha256": "1cf39f5063fbd478e34bf470aa4b6db491ec4bf607137c43e9ee5383b1fa51c5"
+      },
+      "historical": {
+        "bytes": 182536,
+        "sha256": "1cf39f5063fbd478e34bf470aa4b6db491ec4bf607137c43e9ee5383b1fa51c5"
+      },
+      "name": "f2cl"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/filter",
+        "sha256": "56f72b8ff9a3878fa00e283425218b5a76716cc42e07689dd611dab66e82b80b"
+      },
+      "historical": {
+        "bytes": 297336,
+        "sha256": "56f72b8ff9a3878fa00e283425218b5a76716cc42e07689dd611dab66e82b80b"
+      },
+      "name": "filter"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 649480,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/getlag",
+        "sha256": "a788bc8e0eb6a35f0693e98da690533ec57cfc353f2b7f809c30c9fada4f62b8"
+      },
+      "historical": {
+        "bytes": 649480,
+        "sha256": "a788bc8e0eb6a35f0693e98da690533ec57cfc353f2b7f809c30c9fada4f62b8"
+      },
+      "name": "getlag"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/hex2maffttext",
+        "sha256": "069e138d9dad49ac6be2ca98dcc5aad22aed5de54542f217c6c08d10c5f8468f"
+      },
+      "historical": {
+        "bytes": 14472,
+        "sha256": "069e138d9dad49ac6be2ca98dcc5aad22aed5de54542f217c6c08d10c5f8468f"
+      },
+      "name": "hex2maffttext"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-distance",
+        "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+      },
+      "historical": {
+        "bytes": 383240,
+        "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+      },
+      "name": "mafft-distance"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 645384,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-profile",
+        "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+      },
+      "historical": {
+        "bytes": 645384,
+        "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+      },
+      "name": "mafft-profile"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 10475,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafftash_premafft.pl",
+        "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+      },
+      "historical": {
+        "bytes": 10475,
+        "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+      },
+      "name": "mafftash_premafft.pl"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/maffttext2hex",
+        "sha256": "d50a29efa51a002700d4013229b34cc70b6659aef8a24e1b6b39eab121450067"
+      },
+      "historical": {
+        "bytes": 14472,
+        "sha256": "d50a29efa51a002700d4013229b34cc70b6659aef8a24e1b6b39eab121450067"
+      },
+      "name": "maffttext2hex"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 682264,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/makedirectionlist",
+        "sha256": "b8a9458b09087f668f48fbdba20494d896bc98c33a215fa2590f03b826d5d440"
+      },
+      "historical": {
+        "bytes": 682264,
+        "sha256": "b8a9458b09087f668f48fbdba20494d896bc98c33a215fa2590f03b826d5d440"
+      },
+      "name": "makedirectionlist"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mccaskillwrap",
+        "sha256": "a4095c4b9da4d82818dea66e3018953e24e8862844dc9640a83efff3dd72e1f2"
+      },
+      "historical": {
+        "bytes": 370952,
+        "sha256": "a4095c4b9da4d82818dea66e3018953e24e8862844dc9640a83efff3dd72e1f2"
+      },
+      "name": "mccaskillwrap"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 395528,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/multi2hat3s",
+        "sha256": "d77137be47c0100006fb9b72484189e8b1da3c1ad2a7c7338a8608e784811a28"
+      },
+      "historical": {
+        "bytes": 395528,
+        "sha256": "d77137be47c0100006fb9b72484189e8b1da3c1ad2a7c7338a8608e784811a28"
+      },
+      "name": "multi2hat3s"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 739592,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/nodepair",
+        "sha256": "987e5d65c7668d98052adcf94262dc8d4c8c8a5fc7d5ff46acf9addde7c0e935"
+      },
+      "historical": {
+        "bytes": 739592,
+        "sha256": "987e5d65c7668d98052adcf94262dc8d4c8c8a5fc7d5ff46acf9addde7c0e935"
+      },
+      "name": "nodepair"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 669960,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairash",
+        "sha256": "73184ab0a93deca54524f0e600e4f4cddfb085f34bad4c7045563b9ab78cafea"
+      },
+      "historical": {
+        "bytes": 669960,
+        "sha256": "73184ab0a93deca54524f0e600e4f4cddfb085f34bad4c7045563b9ab78cafea"
+      },
+      "name": "pairash"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 706824,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairlocalalign",
+        "sha256": "268ad1d72740d73d2298731f3769c37ed12fc76924ca0974e5de9a28f2ee852d"
+      },
+      "historical": {
+        "bytes": 706824,
+        "sha256": "268ad1d72740d73d2298731f3769c37ed12fc76924ca0974e5de9a28f2ee852d"
+      },
+      "name": "pairlocalalign"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/regtable2seq",
+        "sha256": "7e5800124365538d9b0bab80df4a086f169a59850a45fba9a1fa65b146a703f9"
+      },
+      "historical": {
+        "bytes": 297336,
+        "sha256": "7e5800124365538d9b0bab80df4a086f169a59850a45fba9a1fa65b146a703f9"
+      },
+      "name": "regtable2seq"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/replaceu",
+        "sha256": "5638e6fd7278e3a80563659eb53f90e986eb5b8ea468c28676cd8074d2631383"
+      },
+      "historical": {
+        "bytes": 297336,
+        "sha256": "5638e6fd7278e3a80563659eb53f90e986eb5b8ea468c28676cd8074d2631383"
+      },
+      "name": "replaceu"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/restoreu",
+        "sha256": "80c587171f2cc6c93cae3018f0ae1fc97c01032d4ecaddbf75d962d2886704e1"
+      },
+      "historical": {
+        "bytes": 297336,
+        "sha256": "80c587171f2cc6c93cae3018f0ae1fc97c01032d4ecaddbf75d962d2886704e1"
+      },
+      "name": "restoreu"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 366856,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/score",
+        "sha256": "92e392b2e0684e579d9534b11cdaa8b8eb3a2d69fb6b3afa9ad9ed53a8e5db9b"
+      },
+      "historical": {
+        "bytes": 366856,
+        "sha256": "92e392b2e0684e579d9534b11cdaa8b8eb3a2d69fb6b3afa9ad9ed53a8e5db9b"
+      },
+      "name": "score"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 15541,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seekquencer_premafft.pl",
+        "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+      },
+      "historical": {
+        "bytes": 15541,
+        "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+      },
+      "name": "seekquencer_premafft.pl"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 108920,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seq2regtable",
+        "sha256": "3f268e55b08c30ed77d7f7ea2584c5f774058b2fe45234ef02c9317728bc52d4"
+      },
+      "historical": {
+        "bytes": 108920,
+        "sha256": "3f268e55b08c30ed77d7f7ea2584c5f774058b2fe45234ef02c9317728bc52d4"
+      },
+      "name": "seq2regtable"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 645384,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setcore",
+        "sha256": "2e749598ca68caa44eb5d5c600fe1da2f5bfe2b91b995401a140c7d8d137a046"
+      },
+      "historical": {
+        "bytes": 645384,
+        "sha256": "2e749598ca68caa44eb5d5c600fe1da2f5bfe2b91b995401a140c7d8d137a046"
+      },
+      "name": "setcore"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 297344,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setdirection",
+        "sha256": "a86ffca59d331c198407f63adfc2815e8584f7d3064d552b8832b723b108dd04"
+      },
+      "historical": {
+        "bytes": 297344,
+        "sha256": "a86ffca59d331c198407f63adfc2815e8584f7d3064d552b8832b723b108dd04"
+      },
+      "name": "setdirection"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/sextet5",
+        "sha256": "34dde941f162ad2abc0489997b86120d83c0bc15eb09c5d01004616e9393a819"
+      },
+      "historical": {
+        "bytes": 383240,
+        "sha256": "34dde941f162ad2abc0489997b86120d83c0bc15eb09c5d01004616e9393a819"
+      },
+      "name": "sextet5"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 674056,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/splittbfast",
+        "sha256": "c36661cfab0336ce26b10adbbc21e27ecf32373a2747ca1f3dd2cd7a711d3737"
+      },
+      "historical": {
+        "bytes": 674056,
+        "sha256": "c36661cfab0336ce26b10adbbc21e27ecf32373a2747ca1f3dd2cd7a711d3737"
+      },
+      "name": "splittbfast"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 784648,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/tbfast",
+        "sha256": "f5f77a3ba787e06b663f7b63d363131c59ae1f1cea752a0b1af311bbcbb443b5"
+      },
+      "historical": {
+        "bytes": 784648,
+        "sha256": "f5f77a3ba787e06b663f7b63d363131c59ae1f1cea752a0b1af311bbcbb443b5"
+      },
+      "name": "tbfast"
+    },
+    {
+      "byte_identity_equal": true,
+      "current": {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/version",
+        "sha256": "d454117bae91fa575f6092cc381753953784c190e1bbb11de40f1241070e4953"
+      },
+      "historical": {
+        "bytes": 14472,
+        "sha256": "d454117bae91fa575f6092cc381753953784c190e1bbb11de40f1241070e4953"
+      },
+      "name": "version"
+    }
+  ],
+  "historical_receipt": {
+    "bytes": 151319,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_mafft_build_20260926.json",
+    "sha256": "4c4e92a29c1dc4b27e4b47f4010e9ea9648c17beb02b5a00995a59535394ac76"
+  },
+  "limitations": [
+    "Same recorded compiler/host, not universal build portability or full toolchain closure.",
+    "Compiler/core installation and version probes only, no native scientific/collector fixture rerun.",
+    "Fresh launcher prefix, existing benchmark executors and historical native admission not silently amended.",
+    "No controlled resource result, OS/security/rights closure or public binary delivery."
+  ],
+  "preparation": {
+    "attempts": 1,
+    "controlled_timing": false,
+    "cpu": {
+      "machine": "x86_64",
+      "observed": true,
+      "required_feature": "avx2",
+      "system": "Linux"
+    },
+    "environment": {
+      "GNUMAKEFLAGS": "",
+      "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/home",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C",
+      "MAKEFLAGS": "",
+      "MFLAGS": "",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PATH": "/usr/bin:/bin",
+      "TMPDIR": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tmp"
+    },
+    "fasttree": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/FastTree",
+    "helper_files": [
+      {
+        "bytes": 715016,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/addsingle",
+        "sha256": "f1dc4d582a6dd5bc0ae2ee4d864bfb3feb1236db19dd174f2ea1997a5745e84f"
+      },
+      {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/contrafoldwrap",
+        "sha256": "9c5c4b0ac2a9b7a9621d33fcd89738bd79b02df8636daea39ba46b751e1cc02f"
+      },
+      {
+        "bytes": 108920,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/countlen",
+        "sha256": "38827b4193765e75ee254930b4ba443bcd050200df973891a1771979ad30e41e"
+      },
+      {
+        "bytes": 731400,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/disttbfast",
+        "sha256": "91ad64cfbd13cefc90f6f2aa47a0f25979a4a35775be4fcefe4b586b66ada52c"
+      },
+      {
+        "bytes": 387336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndblast",
+        "sha256": "f774cd87f0e5f492c1296761515de43cd63f7fa2b5172578ac7e1fa3a3723a12"
+      },
+      {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndfast7",
+        "sha256": "63786abcec720442f8845d761c70ae8689f7c113f51f65070bd38c5678628071"
+      },
+      {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndpre",
+        "sha256": "4e8a89c1e725fa9d463c94f636993118fb79290af2e5dc5509a2bb962b413121"
+      },
+      {
+        "bytes": 731400,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dvtditr",
+        "sha256": "5ea9386614ae82f2915e0f4be3f98ff4c3e3739c10dc938cc5c9b7a8c265cc2f"
+      },
+      {
+        "bytes": 182536,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/f2cl",
+        "sha256": "1cf39f5063fbd478e34bf470aa4b6db491ec4bf607137c43e9ee5383b1fa51c5"
+      },
+      {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/filter",
+        "sha256": "56f72b8ff9a3878fa00e283425218b5a76716cc42e07689dd611dab66e82b80b"
+      },
+      {
+        "bytes": 649480,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/getlag",
+        "sha256": "a788bc8e0eb6a35f0693e98da690533ec57cfc353f2b7f809c30c9fada4f62b8"
+      },
+      {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/hex2maffttext",
+        "sha256": "069e138d9dad49ac6be2ca98dcc5aad22aed5de54542f217c6c08d10c5f8468f"
+      },
+      {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-distance",
+        "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+      },
+      {
+        "bytes": 645384,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-profile",
+        "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+      },
+      {
+        "bytes": 10475,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafftash_premafft.pl",
+        "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+      },
+      {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/maffttext2hex",
+        "sha256": "d50a29efa51a002700d4013229b34cc70b6659aef8a24e1b6b39eab121450067"
+      },
+      {
+        "bytes": 682264,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/makedirectionlist",
+        "sha256": "b8a9458b09087f668f48fbdba20494d896bc98c33a215fa2590f03b826d5d440"
+      },
+      {
+        "bytes": 370952,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mccaskillwrap",
+        "sha256": "a4095c4b9da4d82818dea66e3018953e24e8862844dc9640a83efff3dd72e1f2"
+      },
+      {
+        "bytes": 395528,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/multi2hat3s",
+        "sha256": "d77137be47c0100006fb9b72484189e8b1da3c1ad2a7c7338a8608e784811a28"
+      },
+      {
+        "bytes": 739592,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/nodepair",
+        "sha256": "987e5d65c7668d98052adcf94262dc8d4c8c8a5fc7d5ff46acf9addde7c0e935"
+      },
+      {
+        "bytes": 669960,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairash",
+        "sha256": "73184ab0a93deca54524f0e600e4f4cddfb085f34bad4c7045563b9ab78cafea"
+      },
+      {
+        "bytes": 706824,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairlocalalign",
+        "sha256": "268ad1d72740d73d2298731f3769c37ed12fc76924ca0974e5de9a28f2ee852d"
+      },
+      {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/regtable2seq",
+        "sha256": "7e5800124365538d9b0bab80df4a086f169a59850a45fba9a1fa65b146a703f9"
+      },
+      {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/replaceu",
+        "sha256": "5638e6fd7278e3a80563659eb53f90e986eb5b8ea468c28676cd8074d2631383"
+      },
+      {
+        "bytes": 297336,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/restoreu",
+        "sha256": "80c587171f2cc6c93cae3018f0ae1fc97c01032d4ecaddbf75d962d2886704e1"
+      },
+      {
+        "bytes": 366856,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/score",
+        "sha256": "92e392b2e0684e579d9534b11cdaa8b8eb3a2d69fb6b3afa9ad9ed53a8e5db9b"
+      },
+      {
+        "bytes": 15541,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seekquencer_premafft.pl",
+        "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+      },
+      {
+        "bytes": 108920,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seq2regtable",
+        "sha256": "3f268e55b08c30ed77d7f7ea2584c5f774058b2fe45234ef02c9317728bc52d4"
+      },
+      {
+        "bytes": 645384,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setcore",
+        "sha256": "2e749598ca68caa44eb5d5c600fe1da2f5bfe2b91b995401a140c7d8d137a046"
+      },
+      {
+        "bytes": 297344,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setdirection",
+        "sha256": "a86ffca59d331c198407f63adfc2815e8584f7d3064d552b8832b723b108dd04"
+      },
+      {
+        "bytes": 383240,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/sextet5",
+        "sha256": "34dde941f162ad2abc0489997b86120d83c0bc15eb09c5d01004616e9393a819"
+      },
+      {
+        "bytes": 674056,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/splittbfast",
+        "sha256": "c36661cfab0336ce26b10adbbc21e27ecf32373a2747ca1f3dd2cd7a711d3737"
+      },
+      {
+        "bytes": 784648,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/tbfast",
+        "sha256": "f5f77a3ba787e06b663f7b63d363131c59ae1f1cea752a0b1af311bbcbb443b5"
+      },
+      {
+        "bytes": 14472,
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/version",
+        "sha256": "d454117bae91fa575f6092cc381753953784c190e1bbb11de40f1241070e4953"
+      }
+    ],
+    "helpers_historical_byte_equal": true,
+    "historical_admission": false,
+    "historical_runtime": true,
+    "inputs": [
+      {
+        "bytes": 758305,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/mafft/mafft-7.525-with-extensions-src.tgz",
+        "sha256": "2876f4adc1a2de4ed206bc40896763bf208bf1a02bda52f8bfdd91cf52d73e4a"
+      },
+      {
+        "bytes": 1496928,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree",
+        "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+      },
+      {
+        "bytes": 395674,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/FastTree.c",
+        "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+      },
+      {
+        "bytes": 35149,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      {
+        "bytes": 662,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/README.md",
+        "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b"
+      },
+      {
+        "bytes": 17271,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/ChangeLog.txt",
+        "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7"
+      },
+      {
+        "bytes": 49797,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts/fasttree/index.html",
+        "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326"
+      },
+      {
+        "bytes": 8606,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/acquire_publication_base.py",
+        "sha256": "58dab072ee040e8a9c600e6b67a63399ac83bc40a6108bcad65e7d2e638620aa"
+      },
+      {
+        "bytes": 4663,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/acquire_publication_fasttree.py",
+        "sha256": "ef752f1191fb35b915748c0f4168a215b2676336a0ee1ad94d3c07ad1a3b55cf"
+      },
+      {
+        "bytes": 6721,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/acquire_publication_phylogeny_tools.py",
+        "sha256": "2819edb7e29fd4bae983d32b84d81d7a3392c917bd6b64ced351bc91715cb57b"
+      },
+      {
+        "bytes": 6468,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/audit_frozen_overlay_install.py",
+        "sha256": "f89c1589fa7420ff1f87fb4aeebc2348808bd11e657d4a2ef5b92f2f25d0e0aa"
+      },
+      {
+        "bytes": 4453,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/audit_leiden_recovery_wheel.py",
+        "sha256": "df67bd8780ba92473bf06f7659d711ef3041c5c4ad8fc793a4a4c273adfa78c2"
+      },
+      {
+        "bytes": 5776,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/audit_recovery_install.py",
+        "sha256": "1b7086a31628976212d6b262d6a1219c53be7362bb130030c4b3e91e8b8a7017"
+      },
+      {
+        "bytes": 5589,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/build_publication_fasttree.py",
+        "sha256": "19e8bc4c60db9e21f15251be75c1dd2577800a108eb86c8e4671fdaf07fd113c"
+      },
+      {
+        "bytes": 6887,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/build_publication_mafft.py",
+        "sha256": "cb71d07b169dad17684adfd2e0b5915b2cb411ab2f3349beffa76e2f26142ef3"
+      },
+      {
+        "bytes": 15388,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "sha256": "b199863d32a2370d8ce0b20dfbeb2e082d3486a0fc89a0dafd1b568b2bb0cc32"
+      },
+      {
+        "bytes": 11837,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/install_publication_base.py",
+        "sha256": "6a086980060b8e1e3cd3a459f533855afa80e70532dfd8c039bccc32119c4fcf"
+      },
+      {
+        "bytes": 3065,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/prepare_frozen_build_overlay.py",
+        "sha256": "71fded355c2606c572e3b8afcc95595d7b91433e751d9f18662ef9e9129c82bf"
+      },
+      {
+        "bytes": 7448,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+        "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+      },
+      {
+        "bytes": 13821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/run_integrated_publication_workflow.py",
+        "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+      },
+      {
+        "bytes": 5327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/stage_base_archives.py",
+        "sha256": "59e0b39d194ee8ca6e3fbe10804ac5d7bb2ebb1bd4c574a9961909cb33572b93"
+      },
+      {
+        "bytes": 4327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/verify_frozen_source_archive.py",
+        "sha256": "566c57642dbbf921f80f3d3550fe16a544fc182a2be80715aa492fd43da49c06"
+      },
+      {
+        "bytes": 17690,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/prepare_publication_phylogeny_tools.py",
+        "sha256": "6065d3daedbdc754d40d01414949a8df3c0e4a88a20e554ecce4287bc045a38d"
+      },
+      {
+        "bytes": 15388,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "sha256": "b199863d32a2370d8ce0b20dfbeb2e082d3486a0fc89a0dafd1b568b2bb0cc32"
+      },
+      {
+        "bytes": 13821,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/run_integrated_publication_workflow.py",
+        "sha256": "f98d06780d01f2d3f6a1409fd3cccd61c91a00859a3020eec2d05740108aa651"
+      },
+      {
+        "bytes": 746269,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/SOURCE_INDEX.json",
+        "sha256": "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+      },
+      {
+        "bytes": 1023032,
+        "path": "/usr/bin/x86_64-linux-gnu-gcc-13",
+        "sha256": "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234"
+      },
+      {
+        "bytes": 259808,
+        "path": "/usr/bin/make",
+        "sha256": "d78b8f1d099fbcfb6f2f49ab87223b9b68fb3956642f92d6ec6de812e8afa965"
+      },
+      {
+        "bytes": 1359128,
+        "path": "/usr/bin/x86_64-linux-gnu-ld.bfd",
+        "sha256": "5b674ea1d7017c2929f3c52c43487478bb240ecdd7197a25cce3813a70329a5c"
+      }
+    ],
+    "inventory": [
+      {
+        "bytes": 17271,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/ChangeLog.txt",
+        "relative": "fasttree/ChangeLog.txt",
+        "sha256": "cb9388cc08330a90417571e708cdb0e2418bb59a67863bdf7772196e5b19ffe7"
+      },
+      {
+        "bytes": 1496928,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/FastTree",
+        "relative": "fasttree/FastTree",
+        "sha256": "55a9d997813aae2208bd4c2081bfa690e0ecdba2d6c491805d8689415c43e38e"
+      },
+      {
+        "bytes": 395674,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/FastTree.c",
+        "relative": "fasttree/FastTree.c",
+        "sha256": "975202a6b74c9996af871404ff043bb2152edcbda539035662514bc12d1f3431"
+      },
+      {
+        "bytes": 35149,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/LICENSE",
+        "relative": "fasttree/LICENSE",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      {
+        "bytes": 662,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/README.md",
+        "relative": "fasttree/README.md",
+        "sha256": "7575f311e6098306079988c9a4933ce21c8c7b8266f655d190b49d85dc539a7b"
+      },
+      {
+        "bytes": 49797,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/index.html",
+        "relative": "fasttree/index.html",
+        "sha256": "6b8e5747a9e959127fde76e52636e35dc09105e6817893606f2ee7f55a856326"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/einsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/fftns",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/fftnsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/ginsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/linsi",
+        "target": "mafft"
+      },
+      {
+        "bytes": 109908,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft",
+        "relative": "mafft/bin/mafft",
+        "sha256": "558056349ca625e1dcfcfa8266be63663ea3523e6529c07dc9025be1c4a1c244"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-distance",
+        "target": "../libexec/mafft/mafft-distance"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-einsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-fftns",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-fftnsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-ginsi",
+        "target": "mafft"
+      },
+      {
+        "bytes": 11666,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft-homologs.rb",
+        "relative": "mafft/bin/mafft-homologs.rb",
+        "sha256": "8998c7f385316e723395a3852683b49304e1e98ae3407134dce16e3cc17615ef"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-linsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-nwns",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-nwnsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-profile",
+        "target": "../libexec/mafft/mafft-profile"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-qinsi",
+        "target": "mafft"
+      },
+      {
+        "bytes": 7903,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft-sparsecore.rb",
+        "relative": "mafft/bin/mafft-sparsecore.rb",
+        "sha256": "677ffb2e2a64e8f4af30fda984fce77328d305ab26ca8670d857de0132e5add6"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/mafft-xinsi",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/nwns",
+        "target": "mafft"
+      },
+      {
+        "kind": "symlink",
+        "relative": "mafft/bin/nwnsi",
+        "target": "mafft"
+      },
+      {
+        "bytes": 715016,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/addsingle",
+        "relative": "mafft/libexec/mafft/addsingle",
+        "sha256": "f1dc4d582a6dd5bc0ae2ee4d864bfb3feb1236db19dd174f2ea1997a5745e84f"
+      },
+      {
+        "bytes": 370952,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/contrafoldwrap",
+        "relative": "mafft/libexec/mafft/contrafoldwrap",
+        "sha256": "9c5c4b0ac2a9b7a9621d33fcd89738bd79b02df8636daea39ba46b751e1cc02f"
+      },
+      {
+        "bytes": 108920,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/countlen",
+        "relative": "mafft/libexec/mafft/countlen",
+        "sha256": "38827b4193765e75ee254930b4ba443bcd050200df973891a1771979ad30e41e"
+      },
+      {
+        "bytes": 731400,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/disttbfast",
+        "relative": "mafft/libexec/mafft/disttbfast",
+        "sha256": "91ad64cfbd13cefc90f6f2aa47a0f25979a4a35775be4fcefe4b586b66ada52c"
+      },
+      {
+        "bytes": 387336,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndblast",
+        "relative": "mafft/libexec/mafft/dndblast",
+        "sha256": "f774cd87f0e5f492c1296761515de43cd63f7fa2b5172578ac7e1fa3a3723a12"
+      },
+      {
+        "bytes": 383240,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndfast7",
+        "relative": "mafft/libexec/mafft/dndfast7",
+        "sha256": "63786abcec720442f8845d761c70ae8689f7c113f51f65070bd38c5678628071"
+      },
+      {
+        "bytes": 370952,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dndpre",
+        "relative": "mafft/libexec/mafft/dndpre",
+        "sha256": "4e8a89c1e725fa9d463c94f636993118fb79290af2e5dc5509a2bb962b413121"
+      },
+      {
+        "bytes": 731400,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/dvtditr",
+        "relative": "mafft/libexec/mafft/dvtditr",
+        "sha256": "5ea9386614ae82f2915e0f4be3f98ff4c3e3739c10dc938cc5c9b7a8c265cc2f"
+      },
+      {
+        "bytes": 182536,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/f2cl",
+        "relative": "mafft/libexec/mafft/f2cl",
+        "sha256": "1cf39f5063fbd478e34bf470aa4b6db491ec4bf607137c43e9ee5383b1fa51c5"
+      },
+      {
+        "bytes": 297336,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/filter",
+        "relative": "mafft/libexec/mafft/filter",
+        "sha256": "56f72b8ff9a3878fa00e283425218b5a76716cc42e07689dd611dab66e82b80b"
+      },
+      {
+        "bytes": 649480,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/getlag",
+        "relative": "mafft/libexec/mafft/getlag",
+        "sha256": "a788bc8e0eb6a35f0693e98da690533ec57cfc353f2b7f809c30c9fada4f62b8"
+      },
+      {
+        "bytes": 14472,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/hex2maffttext",
+        "relative": "mafft/libexec/mafft/hex2maffttext",
+        "sha256": "069e138d9dad49ac6be2ca98dcc5aad22aed5de54542f217c6c08d10c5f8468f"
+      },
+      {
+        "bytes": 383240,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-distance",
+        "relative": "mafft/libexec/mafft/mafft-distance",
+        "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+      },
+      {
+        "bytes": 645384,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-profile",
+        "relative": "mafft/libexec/mafft/mafft-profile",
+        "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+      },
+      {
+        "bytes": 10475,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafftash_premafft.pl",
+        "relative": "mafft/libexec/mafft/mafftash_premafft.pl",
+        "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+      },
+      {
+        "bytes": 14472,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/maffttext2hex",
+        "relative": "mafft/libexec/mafft/maffttext2hex",
+        "sha256": "d50a29efa51a002700d4013229b34cc70b6659aef8a24e1b6b39eab121450067"
+      },
+      {
+        "bytes": 682264,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/makedirectionlist",
+        "relative": "mafft/libexec/mafft/makedirectionlist",
+        "sha256": "b8a9458b09087f668f48fbdba20494d896bc98c33a215fa2590f03b826d5d440"
+      },
+      {
+        "bytes": 370952,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mccaskillwrap",
+        "relative": "mafft/libexec/mafft/mccaskillwrap",
+        "sha256": "a4095c4b9da4d82818dea66e3018953e24e8862844dc9640a83efff3dd72e1f2"
+      },
+      {
+        "bytes": 395528,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/multi2hat3s",
+        "relative": "mafft/libexec/mafft/multi2hat3s",
+        "sha256": "d77137be47c0100006fb9b72484189e8b1da3c1ad2a7c7338a8608e784811a28"
+      },
+      {
+        "bytes": 739592,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/nodepair",
+        "relative": "mafft/libexec/mafft/nodepair",
+        "sha256": "987e5d65c7668d98052adcf94262dc8d4c8c8a5fc7d5ff46acf9addde7c0e935"
+      },
+      {
+        "bytes": 669960,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairash",
+        "relative": "mafft/libexec/mafft/pairash",
+        "sha256": "73184ab0a93deca54524f0e600e4f4cddfb085f34bad4c7045563b9ab78cafea"
+      },
+      {
+        "bytes": 706824,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/pairlocalalign",
+        "relative": "mafft/libexec/mafft/pairlocalalign",
+        "sha256": "268ad1d72740d73d2298731f3769c37ed12fc76924ca0974e5de9a28f2ee852d"
+      },
+      {
+        "bytes": 297336,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/regtable2seq",
+        "relative": "mafft/libexec/mafft/regtable2seq",
+        "sha256": "7e5800124365538d9b0bab80df4a086f169a59850a45fba9a1fa65b146a703f9"
+      },
+      {
+        "bytes": 297336,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/replaceu",
+        "relative": "mafft/libexec/mafft/replaceu",
+        "sha256": "5638e6fd7278e3a80563659eb53f90e986eb5b8ea468c28676cd8074d2631383"
+      },
+      {
+        "bytes": 297336,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/restoreu",
+        "relative": "mafft/libexec/mafft/restoreu",
+        "sha256": "80c587171f2cc6c93cae3018f0ae1fc97c01032d4ecaddbf75d962d2886704e1"
+      },
+      {
+        "bytes": 366856,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/score",
+        "relative": "mafft/libexec/mafft/score",
+        "sha256": "92e392b2e0684e579d9534b11cdaa8b8eb3a2d69fb6b3afa9ad9ed53a8e5db9b"
+      },
+      {
+        "bytes": 15541,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seekquencer_premafft.pl",
+        "relative": "mafft/libexec/mafft/seekquencer_premafft.pl",
+        "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+      },
+      {
+        "bytes": 108920,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/seq2regtable",
+        "relative": "mafft/libexec/mafft/seq2regtable",
+        "sha256": "3f268e55b08c30ed77d7f7ea2584c5f774058b2fe45234ef02c9317728bc52d4"
+      },
+      {
+        "bytes": 645384,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setcore",
+        "relative": "mafft/libexec/mafft/setcore",
+        "sha256": "2e749598ca68caa44eb5d5c600fe1da2f5bfe2b91b995401a140c7d8d137a046"
+      },
+      {
+        "bytes": 297344,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/setdirection",
+        "relative": "mafft/libexec/mafft/setdirection",
+        "sha256": "a86ffca59d331c198407f63adfc2815e8584f7d3064d552b8832b723b108dd04"
+      },
+      {
+        "bytes": 383240,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/sextet5",
+        "relative": "mafft/libexec/mafft/sextet5",
+        "sha256": "34dde941f162ad2abc0489997b86120d83c0bc15eb09c5d01004616e9393a819"
+      },
+      {
+        "bytes": 674056,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/splittbfast",
+        "relative": "mafft/libexec/mafft/splittbfast",
+        "sha256": "c36661cfab0336ce26b10adbbc21e27ecf32373a2747ca1f3dd2cd7a711d3737"
+      },
+      {
+        "bytes": 784648,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/tbfast",
+        "relative": "mafft/libexec/mafft/tbfast",
+        "sha256": "f5f77a3ba787e06b663f7b63d363131c59ae1f1cea752a0b1af311bbcbb443b5"
+      },
+      {
+        "bytes": 14472,
+        "kind": "file",
+        "mode": 493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/version",
+        "relative": "mafft/libexec/mafft/version",
+        "sha256": "d454117bae91fa575f6092cc381753953784c190e1bbb11de40f1241070e4953"
+      },
+      {
+        "bytes": 4550,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/share/man/man1/mafft-homologs.1",
+        "relative": "mafft/share/man/man1/mafft-homologs.1",
+        "sha256": "af8149827654a2db14de0f4104a58681548af261b48fa1c74870aa08c870a847"
+      },
+      {
+        "bytes": 14771,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/share/man/man1/mafft.1",
+        "relative": "mafft/share/man/man1/mafft.1",
+        "sha256": "319b30bf9cd7a1cd1e64848950b84196268c8208faf5fc90d0e9d5ffe9fa6875"
+      },
+      {
+        "bytes": 3741,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/README.md",
+        "relative": "notices/mafft/README.md",
+        "sha256": "4d188df5a68756fb7e90e67c6163e9ebf342ecd72d8789384cb380f869d1c6dc"
+      },
+      {
+        "bytes": 1763,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/license",
+        "relative": "notices/mafft/license",
+        "sha256": "5b88dda69a361f21c241a3938c8b454d327c87137499acd963ffa13ad7f9426d"
+      },
+      {
+        "bytes": 4894,
+        "kind": "file",
+        "mode": 420,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/license.extensions",
+        "relative": "notices/mafft/license.extensions",
+        "sha256": "f861b725447e72813ea3e0fd26193f2d78110590131a241d9ac9e4100e45d8cb"
+      }
+    ],
+    "launcher": {
+      "bytes": 109908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft",
+      "sha256": "558056349ca625e1dcfcfa8266be63663ea3523e6529c07dc9025be1c4a1c244"
+    },
+    "limitations": [
+      "Same recorded compiler/host reconstruction, not a hermetic or cross-platform build.",
+      "The generated launcher embeds its fresh private prefix and is not the historical launcher bytes.",
+      "After relocation, MAFFT_BINARIES must explicitly identify the relocated helper directory.",
+      "FastTree is the exact upstream binary, not a newly source-reproduced baseline binary.",
+      "Version probes are not numerical alignment/tree or full benchmark-equivalence validation.",
+      "Optional MAFFT extension engines are not built; source and notices remain preserved.",
+      "OS/toolchain/security/rights closure, runtime assembly and scientific/timing admission remain open.",
+      "No network acquisition, old installation, scientific fixture rerun or public binary upload."
+    ],
+    "link_changes": [
+      {
+        "payload": {
+          "bytes": 383240,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-distance",
+          "sha256": "54d1dceea0454a5cf082fcb00d427d0ea6f8abe86c82f047a1c2fa3f201216c2"
+        },
+        "previous": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-distance",
+        "relative": "bin/mafft-distance",
+        "target": "../libexec/mafft/mafft-distance"
+      },
+      {
+        "payload": {
+          "bytes": 645384,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-profile",
+          "sha256": "d3de6cde0d4dce0887dd248244c26f1b152ad2de7efe19b4346b221841bdf081"
+        },
+        "previous": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/mafft-profile",
+        "relative": "bin/mafft-profile",
+        "target": "../libexec/mafft/mafft-profile"
+      }
+    ],
+    "mafft": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft",
+    "native_code_executed": true,
+    "notices": [
+      {
+        "bytes": 1763,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/license",
+        "sha256": "5b88dda69a361f21c241a3938c8b454d327c87137499acd963ffa13ad7f9426d"
+      },
+      {
+        "bytes": 4894,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/license.extensions",
+        "sha256": "f861b725447e72813ea3e0fd26193f2d78110590131a241d9ac9e4100e45d8cb"
+      },
+      {
+        "bytes": 3741,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/notices/mafft/README.md",
+        "sha256": "4d188df5a68756fb7e90e67c6163e9ebf342ecd72d8789384cb380f869d1c6dc"
+      }
+    ],
+    "old_installation_required": false,
+    "private_tools_only": true,
+    "probe_environment": {
+      "GNUMAKEFLAGS": "",
+      "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/home",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C",
+      "MAFFT_BINARIES": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft",
+      "MAKEFLAGS": "",
+      "MFLAGS": "",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PATH": "/usr/bin:/bin",
+      "TMPDIR": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tmp"
+    },
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "retry": false,
+    "scientific_inference_executed": false,
+    "security_clearance": false,
+    "shared_environment_modified": false,
+    "source": {
+      "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+      "components": {
+        "build": 1,
+        "scientific": 43,
+        "workflow": 1800
+      },
+      "executable_benchmark_reproduced": false,
+      "files": 1844,
+      "manifest": {
+        "bytes": 746269,
+        "sha256": "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+      },
+      "payload_bytes": 11015651,
+      "publication_ready": false,
+      "python_files_syntax_checked": 1823,
+      "redistribution_clearance": false,
+      "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+      "status": "publication_source_components_verified",
+      "workflow_revision": "7e6b12fd420f15cb379f31a43a70470d1208275f"
+    },
+    "source_files": [
+      {
+        "bytes": 2075,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/MPI/Makefile",
+        "sha256": "926b163bbc9658dd7a7d754fb0b3dd6367132e813389eac505995a463e6df180"
+      },
+      {
+        "bytes": 509,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/MPI/mpiscript.tmpl",
+        "sha256": "3e15b755287a6433c2e03148793de8b21e085b126fadcb0610385e358e76099b"
+      },
+      {
+        "bytes": 11487,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/MPI/nodepair_mpi.c",
+        "sha256": "88c23c611636f5d7cab7c14032d44abec262cdeea06b973b63b24135274eb894"
+      },
+      {
+        "bytes": 409506,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/MPI/mltaln9_mpi.c",
+        "sha256": "bb2255523f9ea396c578b3a261fcd96a296e00a475cfbf5abab2940cb6618f9c"
+      },
+      {
+        "bytes": 94981,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/MPI/pairlocalalign_mpi.c",
+        "sha256": "20a358dc2f890d5064f7264aa927232a817576cc45b317b20210275c7dd7f84a"
+      },
+      {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/binaries/.gitkeep",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 9234,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/CompareToRef.cc",
+        "sha256": "b075520c8217d4e41ce3382b8fb4e9426d03491508e00f8377b3c17f4cd4a3a4"
+      },
+      {
+        "bytes": 3677,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/Defaults.h",
+        "sha256": "0c262e5d874f69e2b1654f87fbc6e7c2f5e55f1a42f03600b009a5eac21d8ceb"
+      },
+      {
+        "bytes": 2525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/Defaults.h_backup",
+        "sha256": "2af3b8f1d9c430e64d53c21da3b78103e6497b3cfd970581922cd76a0bce73d7"
+      },
+      {
+        "bytes": 459,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/EMtrainingALL.txt",
+        "sha256": "021f1507e436f196c72319dc5ba33ad2d1e0afba430c0cff42cef9f830b5988c"
+      },
+      {
+        "bytes": 7573,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/EvolutionaryTree.h",
+        "sha256": "68c43623f4a913d82ef353a816127527151b27cc4999ac8e21e4e63180102420"
+      },
+      {
+        "bytes": 2635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/FileBuffer.h",
+        "sha256": "32cd76fd93576602f58e385be392e5bae5d6c8205667b49768fb5da0bceb36dc"
+      },
+      {
+        "bytes": 35504,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/FixRef.cc",
+        "sha256": "05c93f81f08d08600006dcfe6e3b17dcb25914b2b52419bc0610b8133660fd7b"
+      },
+      {
+        "bytes": 67355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/Main.cc",
+        "sha256": "5b559b563aa98b24db517e3f903d81ce8bd38fdf7f30dbdfcb3931efd769d4f7"
+      },
+      {
+        "bytes": 1567,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/MakeGnuPlot.cc",
+        "sha256": "0b255014cd62506fe878a62a093b28e0b6e870a4c3278713bd5df827f73ed837"
+      },
+      {
+        "bytes": 2320,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/Makefile",
+        "sha256": "640268ae37918d57e25ea99ed2b35e552f9578607ca2c2a274e3536a6c9a456d"
+      },
+      {
+        "bytes": 32798,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/MultiSequence.h",
+        "sha256": "57ef385f8e1a6c49b25fa5a8b1a0b34acfd51d1d5d645293f996a1371adfa025"
+      },
+      {
+        "bytes": 44135,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/ProbabilisticModel.h",
+        "sha256": "90ce548f76a5442dcac56c4ad91b877d9c378e4932b71cceaa70465cdb506b13"
+      },
+      {
+        "bytes": 1699,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/ProjectPairwise.cc",
+        "sha256": "d50ac00905581e5cd0210ad39762a3434b2e578d660e75bf2a4af73c0228372b"
+      },
+      {
+        "bytes": 4115,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/README",
+        "sha256": "dfc8187e71f9ebeac78c6ba6e177de63344882af9fc5ddca575d4e2b1b84cbef"
+      },
+      {
+        "bytes": 1541,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/SafeVector.h",
+        "sha256": "cac674098db52eb67580c29b99ff96c4731fa73bb215f4c6dc231955dce96008"
+      },
+      {
+        "bytes": 10979,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/ScoreType.h",
+        "sha256": "34ff542b0531f88291762bb439d6e9555858d6e7336b8c35d1f3f951933a6432"
+      },
+      {
+        "bytes": 15863,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/Sequence.h",
+        "sha256": "485ba145611728625c674e790ce211b34f226f1fc528beb8a5de5b90cea074b9"
+      },
+      {
+        "bytes": 10480,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/SparseMatrix.h",
+        "sha256": "644f49c6b7fc88fd511fdcdd496a47c6ae861da07baa889a150061ac5f71897c"
+      },
+      {
+        "bytes": 313,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/mlparams0",
+        "sha256": "31ad83b0769ef59744d5cbbde759e63780ac90c2cdfebb7ef1196d44175bc4e2"
+      },
+      {
+        "bytes": 1483,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/probconsRNA/train-script",
+        "sha256": "0a308229429ad979deb646b3cf95202d8d8b2bcd397ed73ca8a823e6ef830b8a"
+      },
+      {
+        "bytes": 689,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/COPYING",
+        "sha256": "7d64576ad2e8659b9d4986ab1b281796574ab6151abb46fc04651bf4004587f0"
+      },
+      {
+        "bytes": 393,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/energy_const.h",
+        "sha256": "c6af3ec7952fc3fe2c5b20086228cf01b5a70250a6666373094c2ef3f90a510c"
+      },
+      {
+        "bytes": 2488,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/energy_par.h",
+        "sha256": "b262325f9f281728e4e3d293d48a2e1cee41837f999b6cbfff93b677bfc0b3f4"
+      },
+      {
+        "bytes": 509141,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/energy_param.cpp",
+        "sha256": "ba79e493589138d874ecff7059b39f535130eec22bf36c6a3c46a3055791564c"
+      },
+      {
+        "bytes": 3497,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/energy_param.hpp",
+        "sha256": "cddaaab74975f1af55c70ead1fe8dffc286efac369cf7f7e2e0cb0c0a3f2eeb6"
+      },
+      {
+        "bytes": 830,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/vienna/params.h",
+        "sha256": "474db5b5c158019b6e57b58c5c6940bba0b306e600d656f9099dd606290ca2d5"
+      },
+      {
+        "bytes": 4520,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/AlifoldMEA.cpp",
+        "sha256": "737cfd4f9b2f28081c7d4bdded0c37f282587bb42bfa17f473132186ed64b2c3"
+      },
+      {
+        "bytes": 1626,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/AlifoldMEA.h",
+        "sha256": "6974508b14eb830cffb6fbfad755a5908456e01b0e7b021b410f478909424bdb"
+      },
+      {
+        "bytes": 3321,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/BPPMatrix.hpp",
+        "sha256": "c9002105c667b8a054e6ae0b1aa6e6d0a8e984d7f471de8916f4b0fb12270862"
+      },
+      {
+        "bytes": 6622,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Beta.hpp",
+        "sha256": "4ca9dc841f1ba7719972d20291863878816a51e629ec290899b978a3ebfe150e"
+      },
+      {
+        "bytes": 957,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/GlobalParameters.cpp",
+        "sha256": "34da95f71b0fb195bac80fb0896dc932f5c0c1c77f0deaaa79d4f4c12661ff7a"
+      },
+      {
+        "bytes": 15537,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Globaldp.cpp",
+        "sha256": "d09e4658da7de919dd02abe3535fad1a82f3880cb6fc11c505e4772b5f0874f4"
+      },
+      {
+        "bytes": 4327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Globaldp.hpp",
+        "sha256": "eef289a6a51f4d05b49ad8dab3ef7cedbbb5ddd3837c8b2e6677b022ee8767dc"
+      },
+      {
+        "bytes": 67291,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Main.cc",
+        "sha256": "c470dc319459cfa36a9bc46c73e8738e1bb3827b5295e91a3b00bc8df99d44df"
+      },
+      {
+        "bytes": 3255,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Makefile",
+        "sha256": "b39891b7449af974e2df2c7f5b392e1e0079d60bb00ed53c74cff8fad22ea066"
+      },
+      {
+        "bytes": 20272,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/McCaskill.cpp",
+        "sha256": "63f79e55b0fb0d60af4b1f2d7244ebf2538d661b93a9bf3c8103f85ba5790839"
+      },
+      {
+        "bytes": 5857,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/McCaskill.hpp",
+        "sha256": "5c11b8368551224b0689adddfa439d2138fbe7ba8339b0c7c5fbedca0b761822"
+      },
+      {
+        "bytes": 4328,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/README",
+        "sha256": "7ee472fd41162d77d38380fb42fa18130113813f0d78b6afdacd9bc30b6988b1"
+      },
+      {
+        "bytes": 10997,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/ScoreType.hpp",
+        "sha256": "54bd05f9975fd2c6d5f0bbf8acb5a8e9078b0bf8e61176ea4adc5a78862a203a"
+      },
+      {
+        "bytes": 4077,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/StemCandidate.hpp",
+        "sha256": "709418899161451cf23f5919fbeedd3541755aa52cd7fbe4c1beef652119b703"
+      },
+      {
+        "bytes": 1788,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/Util.hpp",
+        "sha256": "731e662bc49ff7f5fffa0235568f4377975b3d3b379efbe4265b84f09b029c3b"
+      },
+      {
+        "bytes": 2433,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/config.h",
+        "sha256": "123522d3df1f80562205866359a6862aa524fd848a321f0a8da465ad66ea7135"
+      },
+      {
+        "bytes": 23915,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/nrutil.h",
+        "sha256": "b21de033e24f8edaa00f46b944bf842e358999e70c8f613fc288c93c85a1b85b"
+      },
+      {
+        "bytes": 444,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/params-weird",
+        "sha256": "f7b8787ca7177df2f3e85442681da9766b204a650478b40da817b1c20d15c707"
+      },
+      {
+        "bytes": 2759,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/postProcessings.cpp",
+        "sha256": "7d569ade43d58fa6ccedfb0399aaba0f3bf924838f16e5db4827b62b81d43c3d"
+      },
+      {
+        "bytes": 3300,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/scarna.hpp",
+        "sha256": "9c6060893ac79293716e3b1bbaeae549ee670437832ce0111ce78ef538fa9399"
+      },
+      {
+        "bytes": 20520,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/mxscarna_src/seq2scs.cpp",
+        "sha256": "41c2b0ee5b3887b140449e7c3ba961e4349245878aed3f2f5159e4f5fe87fbb1"
+      },
+      {
+        "bytes": 709,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/Makefile",
+        "sha256": "8993c93f2b976d60c3a7cdfc025b4fe23497b1dcae541c33e8cb515d588ae918"
+      },
+      {
+        "bytes": 307,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/compileoncygwin",
+        "sha256": "56ac8e4878e73a05c72ca61d2ccd37103627bae7d5d5311a801a2cf0a4ae4793"
+      },
+      {
+        "bytes": 842,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/extensions/univscript.tmpl",
+        "sha256": "1cba93870f6d084cf3951b9ef1bff24937593ab2866752a032bfbb8b477a180e"
+      },
+      {
+        "bytes": 1763,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/license",
+        "sha256": "5b88dda69a361f21c241a3938c8b454d327c87137499acd963ffa13ad7f9426d"
+      },
+      {
+        "bytes": 0,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/scripts/.gitkeep",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 16616,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample",
+        "sha256": "97d4901a8527c41a413d5b94d293e649c796d71d762f2a77bab8fb7fe2281fe3"
+      },
+      {
+        "bytes": 30112,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.dpparttree",
+        "sha256": "493f84f145d61027a8e047eadb04caa2f1ad622adcb8649502658a71ab492056"
+      },
+      {
+        "bytes": 28816,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.fftns2",
+        "sha256": "d1a37cbccc3fa01fa780f4489089a8d1d0457f56b18b37f8e1a0c6e06173b112"
+      },
+      {
+        "bytes": 28996,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.fftnsi",
+        "sha256": "ae466dd32971b6f53ccb696aac3d0db9dd59ce17772aade13e2ee2bb8b36f58d"
+      },
+      {
+        "bytes": 29896,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.gins1",
+        "sha256": "7a0fe883f604f402470c8a8b1a42a21c9ecb790389cab2d8b4474070d77e4dbe"
+      },
+      {
+        "bytes": 29572,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.ginsi",
+        "sha256": "11f81c10cfa6f4c28ebe36682848dd41e4be6db80cf82298b7cda76de2c1b3fd"
+      },
+      {
+        "bytes": 41380,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.ginsi.allowshift",
+        "sha256": "8fbb382efd5cbc39153af09f1592b65564348bf1a09880f6bdbeeaede02780f7"
+      },
+      {
+        "bytes": 28888,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.lins1",
+        "sha256": "0c078cbdf2b2a2df29399da9d520022f0b3c790a0593ba1f3cfe562d1676eeb3"
+      },
+      {
+        "bytes": 29500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.linsi",
+        "sha256": "868d23be56f2a5e9d06a5148d403bf600d037950ce7c1fe9b5a61e285769a4df"
+      },
+      {
+        "bytes": 30112,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/sample.parttree",
+        "sha256": "493f84f145d61027a8e047eadb04caa2f1ad622adcb8649502658a71ab492056"
+      },
+      {
+        "bytes": 1502,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/samplerna",
+        "sha256": "b3055d4644e9a4de583149516f33ff85af0e9130e6e1ef6fb7508b24377e2c75"
+      },
+      {
+        "bytes": 1916,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/samplerna.qinsi",
+        "sha256": "2b18dc356f6d40282771ff7ef2ce559bf2cc910c2c123f6faf480261141a9988"
+      },
+      {
+        "bytes": 1916,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/samplerna.xinsi",
+        "sha256": "ae1b3e8b82f6acdc3ec1f636c620706d29201c178fa719eb0fdfa75dfec1a337"
+      },
+      {
+        "bytes": 908,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/script",
+        "sha256": "d5c6bb5938c0926676cb8ee95dc7c0593f610179fa8048031313f41fdbedbe98"
+      },
+      {
+        "bytes": 28996,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/test/x",
+        "sha256": "ae466dd32971b6f53ccb696aac3d0db9dd59ce17772aade13e2ee2bb8b36f58d"
+      },
+      {
+        "bytes": 4894,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/license.extensions",
+        "sha256": "f861b725447e72813ea3e0fd26193f2d78110590131a241d9ac9e4100e45d8cb"
+      },
+      {
+        "bytes": 4073,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/readme.bk",
+        "sha256": "4bb402aff2a522938ee1d1fa5bd97d51021c8e6e83d37cfa0cedfd41aa8211ae"
+      },
+      {
+        "bytes": 8094,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/DNA.h",
+        "sha256": "10df11c8064c28d52acfa94335d80a326452abe9f6075c9f553be4fb2c010432"
+      },
+      {
+        "bytes": 10506,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/setcore.c",
+        "sha256": "7e7246c6cfad9d4ecaf3cc198bc5979e84830bb4609315c95cc9d6557e7538f1"
+      },
+      {
+        "bytes": 185421,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Dalignmm.c",
+        "sha256": "89124dfb7b0c5dcf48551442cc47befe89ec7e48596d3db09806d487d785c760"
+      },
+      {
+        "bytes": 4580,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/setdirection.c",
+        "sha256": "7b78d5162caa6726c83900221e3e389820476676028a029367f4f51913edd6e7"
+      },
+      {
+        "bytes": 11247,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mccaskillwrap.c",
+        "sha256": "afcf87b29905241c934474bf6a5423fee32fef2bbc94fed54a4d1cb9c5ff256d"
+      },
+      {
+        "bytes": 22018,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Falign_localhom.c",
+        "sha256": "60439fb169793454ae36788ffef70169ee4ffae79430e75a43b57bfaff99aeef"
+      },
+      {
+        "bytes": 6052,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/sextet5.c",
+        "sha256": "4dc09965f87bd81faf2db181dc4a811d8fdeff5c999e323b389798b9504e984d"
+      },
+      {
+        "bytes": 8500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/JTT.c",
+        "sha256": "7e39d1f8f6bda661055e1437fdb498ea2dd077e38ebc95f4813e762795cf16cd"
+      },
+      {
+        "bytes": 323,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/share.h",
+        "sha256": "5c16ed3122f1a667e7f6d7e478c98975410a9797a2f96e54399c39449114b6d6"
+      },
+      {
+        "bytes": 25411,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Lalign11.c",
+        "sha256": "6b16c4c4636d4ae2449d3793941ff34b740d2d7687aaf79d71f268f6a86b2a10"
+      },
+      {
+        "bytes": 83522,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/splittbfast.c",
+        "sha256": "20c2d9e7dc7a96b958b198ab5ba4a07f03b1b446f73512d6ed2616ca12b83021"
+      },
+      {
+        "bytes": 55224,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Lalignmm.c",
+        "sha256": "4fabe49f22739236553901676fdde71d4ee74d78c143f6981c0019311f876565"
+      },
+      {
+        "bytes": 14162,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/suboptalign11.c",
+        "sha256": "2edeaba0978f3097e711cf86a1ddf747bdcdf6e3159a6b88bf46185beba23e17"
+      },
+      {
+        "bytes": 13392,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/MSalign11.c",
+        "sha256": "e1513d8d1cb9a59d678ca28a66fd8141889abc229afbc4f671d69abb7ce17aff"
+      },
+      {
+        "bytes": 103950,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/MSalignmm.c",
+        "sha256": "510ac14d0d0d91a3421dd7423be8d6c5cd3543703c0e0556479b41320caf587f"
+      },
+      {
+        "bytes": 26045,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/tddis.c",
+        "sha256": "b0377bbb41c6ae58acf333b1a30dabfad11849199e90d8224f90b748de997579"
+      },
+      {
+        "bytes": 18908,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Makefile.sos",
+        "sha256": "de3d32729edf054653c1875d8ba87e2d541044213435a399a8a0b4da1f123a7e"
+      },
+      {
+        "bytes": 18704,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/treeOperation.c",
+        "sha256": "e5421ac89a5cb76f854d3c1bcbc290ecc850ca64324eb2fdda6ea4efa24fd50f"
+      },
+      {
+        "bytes": 8398,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/SAalignmm.c",
+        "sha256": "517b261f5fe5af7783f7701ac36b0c98646ecfb7cb17b21215300135971363a2"
+      },
+      {
+        "bytes": 78868,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Salignmm.c",
+        "sha256": "d50a9da026ef4082ca2ef8994a4dc9652fe2965efb64c84d2dcb64a8869eb47d"
+      },
+      {
+        "bytes": 2610,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/newick2mafft.rb",
+        "sha256": "bdb16a44c78c11c9f36dd38abf964d22fdfbabe10e1f623dd44d4634284fd7ec"
+      },
+      {
+        "bytes": 95140,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/addsingle.c",
+        "sha256": "f215143dde085fee88e17c3ecc86505e5415ebf96b62b243366d56cbe28e458c"
+      },
+      {
+        "bytes": 79,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/version.c",
+        "sha256": "fafd639e7df2b8f5ffe85c11ccd9b0e7e62dbf8dcfa8eaeb58a368a2f04f30b7"
+      },
+      {
+        "bytes": 46932,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/constants.c",
+        "sha256": "235ae04044545df99da19b9bd66aac2af8058a17b363029ea6987cfecb49f249"
+      },
+      {
+        "bytes": 256,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/blosum.h",
+        "sha256": "73f2575b7381a58785ba95d42026a4ed51dea05879e6e9ddf72e2bee9ca860fb"
+      },
+      {
+        "bytes": 4969,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/nj.c",
+        "sha256": "b80a75303ac7aa312a55625def82c1d5875b624ed812777ec3ff5478cbf9826e"
+      },
+      {
+        "bytes": 355,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/compileoncygwin",
+        "sha256": "6f454ef46bffd2d13f7f93ae5b83078c32578f75c3bfd9b8f0bd1737f95f4d10"
+      },
+      {
+        "bytes": 1171,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/compileonmsys",
+        "sha256": "1edc615f5d3b92c41a3f70091bd6ac3e574f47697b7bcb13712bfabebea83cda"
+      },
+      {
+        "bytes": 10056,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/nodepair.c",
+        "sha256": "8617abc463dcb5c56a27cfa2284139b18a8704cdecae14cc70d2c7b689983dab"
+      },
+      {
+        "bytes": 7788,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/contrafoldwrap.c",
+        "sha256": "e45735e9353d937e54e8fea57a3c283138ed0f7f19bda97b7aed1322e4e6be03"
+      },
+      {
+        "bytes": 1127,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/countlen.c",
+        "sha256": "924ff1303fd0358376e7267a717e58aadc0b3bf8cd209e075618af1d11903eb4"
+      },
+      {
+        "bytes": 30612,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/pairash.c",
+        "sha256": "83ff1a4bf3907166a6afce4835f13076a256ebfbd543067b45d76e1a779e8f54"
+      },
+      {
+        "bytes": 3452,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/defs.c",
+        "sha256": "75d85060dc924cce56569f1ce7845d4589aa1544d00178ab70d86ca69db24913"
+      },
+      {
+        "bytes": 8907,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dndblast.c",
+        "sha256": "31f0732b5b3066355893c5224c4a951b6d145972c5ab5cb8d721a1229bff576e"
+      },
+      {
+        "bytes": 5232,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dndfast4.c",
+        "sha256": "584c001c3a1f2e8f5c8620ecd7d8cd305df376d3c013c7105233851e094e65f6"
+      },
+      {
+        "bytes": 7363,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dndfast7.c",
+        "sha256": "6941cc6d83d77e9555bcab64c46478792a3ca95d61521b3961fde6ec1654c470"
+      },
+      {
+        "bytes": 11827,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dndpre.c",
+        "sha256": "f67cdce7c64de07beb0654cc883a68d0a9db6cd15bd41fa88fca6c3a3f6aa466"
+      },
+      {
+        "bytes": 944,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dndpre_score.c",
+        "sha256": "f8253d7886361e6ab1efc07b2f8cede1a8674d852394b440795e55ab412f9fa9"
+      },
+      {
+        "bytes": 271,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dp.h",
+        "sha256": "91683266f8c32c250a570f2e3f5e41ce6a393704a527019c370d517ee004b686"
+      },
+      {
+        "bytes": 31089,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dvtditr.c",
+        "sha256": "c8f74a6a43f9e52ae3d4831a4c364a9e2c3a88f0bddf9939f9848b957b87451e"
+      },
+      {
+        "bytes": 7634,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/f2cl.c",
+        "sha256": "58605615fd726b7ccc50e1d8de127320c1a2ad1414607d7d0711af0f5a9fe725"
+      },
+      {
+        "bytes": 3847,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/fft.c",
+        "sha256": "095ce06abbb3833ba38e4c0d601a674cfeff68159864cfc4aa18148e02c69620"
+      },
+      {
+        "bytes": 287,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/fft.h",
+        "sha256": "afecd07570d5e3e3045f56d6dfe8495d963c95158da4b3eba4d383868af5bf98"
+      },
+      {
+        "bytes": 221,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/pairlocalalignmain.c",
+        "sha256": "69cb65bd4663f3e75472cc1df9aee65fc82329b557912be6c7dc535d12cd6414"
+      },
+      {
+        "bytes": 16781,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/fftFunctions.c",
+        "sha256": "0119c9dbf136a300d2282b2e370cb94b2b1908d31821fa6b0dbccdae605cd642"
+      },
+      {
+        "bytes": 3710,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/filter.c",
+        "sha256": "da5ab8ea78d5d053014c3524f76deff87d4211b3910e028ee505a32043158b6c"
+      },
+      {
+        "bytes": 12842,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/genalign11.c",
+        "sha256": "7b62c8491effd0c9cb7fb1bf4020f76abcce7e172b6621b499d89e0d347b0bb5"
+      },
+      {
+        "bytes": 11133,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/getlag.c",
+        "sha256": "3dcfb654fdbe176587aad8e49e3bd7ea65db90918053857925fec24394056fb9"
+      },
+      {
+        "bytes": 50881,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/partSalignmm.c",
+        "sha256": "c6c82e48177606283204b89946873ec4e681f8bee22dffc568deb2abf04b2404"
+      },
+      {
+        "bytes": 2666,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/hex2maffttext.c",
+        "sha256": "6ffb1a2ca535c51c2da223f5ceb21c8d69c9feaf44ccea558c066ed9eb244490"
+      },
+      {
+        "bytes": 9177,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/interface.c",
+        "sha256": "ae89489cd67daee59dfc7b1a85d70676cf7c198314e4fb9c585ac413065679ae"
+      },
+      {
+        "bytes": 9327,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/iteration.c",
+        "sha256": "89992d0d73b4ab6dbfb13d26f204e39cc76897ff1c4cbd490f95985a2cec3d97"
+      },
+      {
+        "bytes": 8976,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/regionalrealignment.rb",
+        "sha256": "7ef385a452d9ee36714afaa2e82371a65847b0556e0034d38b677fffc7c33567"
+      },
+      {
+        "bytes": 8959,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft-distance.c",
+        "sha256": "5ed4884940dd9fdb5476b8d065296fb9753175047a742b7c606c3193e4ea5b64"
+      },
+      {
+        "bytes": 4823,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/regtable2seq.c",
+        "sha256": "d8f6ffbb18096591b41ce685fa53a047981b67fba45a960fa7791e24de8c9c4d"
+      },
+      {
+        "bytes": 4550,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft-homologs.1",
+        "sha256": "af8149827654a2db14de0f4104a58681548af261b48fa1c74870aa08c870a847"
+      },
+      {
+        "bytes": 2776,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/replaceu.c",
+        "sha256": "109463c6ef1a024483892f07102dce26aba8e59cb850c6c6a28b3fd3cc052173"
+      },
+      {
+        "bytes": 11540,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft-homologs.tmpl",
+        "sha256": "93b2da73ea647571be91606dcbf4f7389a691c690ec835edb519a965f0757395"
+      },
+      {
+        "bytes": 7063,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/restoreu.c",
+        "sha256": "25d3c1b92d512bf2ccebd036081e703faa1c04afd055260408a5658355e00424"
+      },
+      {
+        "bytes": 12199,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft-profile.c",
+        "sha256": "8a6a57a76eea086efa54136c7bfffbe9292b9315ff0718bd0776a6308891e86c"
+      },
+      {
+        "bytes": 14463,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/rna.c",
+        "sha256": "2a1bfe5b160d7cacb600c1a660d80bd1fb93e08c3436b72000110470b60477ee"
+      },
+      {
+        "bytes": 7777,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft-sparsecore.tmpl",
+        "sha256": "957efe2fdc47de1871d7e0909d4850bc4a51fd00ab3e0ea5d82d21b70aa44c0c"
+      },
+      {
+        "bytes": 14771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.1",
+        "sha256": "319b30bf9cd7a1cd1e64848950b84196268c8208faf5fc90d0e9d5ffe9fa6875"
+      },
+      {
+        "bytes": 939,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.bat",
+        "sha256": "705d28f1143ced805c2de187911c68a3ec409434cb6a4c07a80d95419dc27819"
+      },
+      {
+        "bytes": 10077,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/rnatest.c",
+        "sha256": "bdf0e6f6e54f0e527e490314d4899e40d379841564c27b1698c76caf933d36a2"
+      },
+      {
+        "bytes": 185,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.bat.win10",
+        "sha256": "edefb661136d45a5024a1f7b04317cdc783514878301b85990c42c624bdbf599"
+      },
+      {
+        "bytes": 198,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.h",
+        "sha256": "eea6dd1e0c7ae960a11f2c0cc8878323f5584f7ce581d5b7559772184cb2a917"
+      },
+      {
+        "bytes": 917,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.ps1",
+        "sha256": "b79dc5ffa5444d657de25a68ebbd9c586939afbb8746ab1b2b37eb973d9a90d3"
+      },
+      {
+        "bytes": 10475,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafftash_premafft.tmpl",
+        "sha256": "0594ba064e06ad0b647a9927bc73541edd85fd18c09a65c7a5c849b318b93ef9"
+      },
+      {
+        "bytes": 2342,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/score.c",
+        "sha256": "742807f1fcd2edbf441a0c4f1e86107eb48427d4f4cdfbad9d19b7db4001d101"
+      },
+      {
+        "bytes": 2133,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/maffttext2hex.c",
+        "sha256": "1b7a60c1ff07622e52df3a9c4d1dc46baa113b1b9f6468099ba1521ed1208d88"
+      },
+      {
+        "bytes": 15541,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/seekquencer_premafft.tmpl",
+        "sha256": "bfe2f4cd579c3734ac9a4979c9a1b577bef8993f5242c342019df2c490d82fd3"
+      },
+      {
+        "bytes": 28707,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/makedirectionlist.c",
+        "sha256": "4c87a394ecad261a2e80aeaf858385b399c405838f784592c5687fd375537ba9"
+      },
+      {
+        "bytes": 617,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/makemergetable.rb",
+        "sha256": "854dacbdca66cb4702394a8910249d9b374d2d93989fbeab2f273a60a91515cb"
+      },
+      {
+        "bytes": 1553,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/seq2regtable.c",
+        "sha256": "ed9eead3f04d530b4868ea55bf743644e1731dcb7ec8ae4805c770b7457d1462"
+      },
+      {
+        "bytes": 473,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mingw64mingw32dll",
+        "sha256": "b5c23ffeb8f8518dc078daa99890e1186986a8c5ba1ce154304d8ca80180c519"
+      },
+      {
+        "bytes": 711,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/miyata.h",
+        "sha256": "d2a2809dc30d11e65668eb0b0412bb1f77eca62d47d3e96566d3f5b036f00996"
+      },
+      {
+        "bytes": 4635,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/miyata5.h",
+        "sha256": "2b513859b90fd6b00ad00d68dd2f6fa9496df40a372a39580c9683d65d61486b"
+      },
+      {
+        "bytes": 10712,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mtxutl.c",
+        "sha256": "cf0fb078c03c27ba48dc11315d654d3469254b543dd8ed13691f5f8856d58c74"
+      },
+      {
+        "bytes": 1459,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mtxutl.h",
+        "sha256": "ae627a61de427c15a4aff2209a0e5df9083ea89bb064e21c4972a38af6f598d1"
+      },
+      {
+        "bytes": 8743,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/multi2hat3s.c",
+        "sha256": "e48e7fe72f0a005090fd3094ad7533148d78b95f6a9d169876356e78dd0f0948"
+      },
+      {
+        "bytes": 1304,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/univscript.tmpl",
+        "sha256": "b05d08985253c214fba350ee73b8cd6ff33e4e8343bc811122bf0c67d276e8cf"
+      },
+      {
+        "bytes": 94364,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/pairlocalalign.c",
+        "sha256": "47cee1aea9af92c4fc12b53d31b564b995338868b35906039bf6e7090866127e"
+      },
+      {
+        "bytes": 104590,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/tbfast.c",
+        "sha256": "4404e5d8019102ee8eb02d1fa7958ff1d1af914929ccfe2dc4520cecbf2f434e"
+      },
+      {
+        "bytes": 50493,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/dash_client.go",
+        "sha256": "87ab13957486aee2e7a72c597d2271d7646f31a7a6bab6127d28760c5fe2c72d"
+      },
+      {
+        "bytes": 55529,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/addfunctions.c",
+        "sha256": "3ff41280950a83733b6f2c1dfb55ecaf71875e6d1289abacdfc65547b6e0d00e"
+      },
+      {
+        "bytes": 42226,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/functions.h",
+        "sha256": "dbe6b09ca9632d8434dbec00d8312bf2f883d1c22aebdf553e9c3828ca447ca0"
+      },
+      {
+        "bytes": 42434,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Galign11.c",
+        "sha256": "adbb28bbd5e0091d327c35d386265e5a65861497e7aea7ea3eeb6043c7df3778"
+      },
+      {
+        "bytes": 94331,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Falign.c",
+        "sha256": "b5fcf2f3ead57dfd3a1394543115e8c49f961e763b82ad1bdfb2fb05077c2fbb"
+      },
+      {
+        "bytes": 20281,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/Makefile",
+        "sha256": "f71475644f956fff5626c18cb40b62b7d90261661c0a724b7dba6071ad960544"
+      },
+      {
+        "bytes": 19626,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/blosum.c",
+        "sha256": "64fa42d5524d5e1ae917ab7239e790caa4253c0109c3de08e6b67ded38610cf2"
+      },
+      {
+        "bytes": 149523,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/io.c",
+        "sha256": "72cca85348de8bff4f3cdcd3ac9ea556e37ff204e809bdf8f3a9ddfa4d8c4a5e"
+      },
+      {
+        "bytes": 388498,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mltaln9.c",
+        "sha256": "bf624a3c8acbaf5106ba432348ffcc517f0c366b149192bdc3c6872866e523c2"
+      },
+      {
+        "bytes": 109772,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mafft.tmpl",
+        "sha256": "60838e3ad5817b01785f2b0feaf5f44200c5c1b1e5eff047ed62f779885539e5"
+      },
+      {
+        "bytes": 8525,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/mltaln.h",
+        "sha256": "65f81b95494ba29f83d52f11be59a2d563a7d5dfa72b45407a8cc1c10b4728ff"
+      },
+      {
+        "bytes": 75509,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/tditeration.c",
+        "sha256": "acddef890a1538211d15440b160634dfc4cd7cca1a778d0a2387eca7b957e8e4"
+      },
+      {
+        "bytes": 138262,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core/disttbfast.c",
+        "sha256": "bb907dc23e69249e404d41d84c4e7a019df3123030e754555593e6cf2a353168"
+      },
+      {
+        "bytes": 3741,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/README.md",
+        "sha256": "4d188df5a68756fb7e90e67c6163e9ebf342ecd72d8789384cb380f869d1c6dc"
+      }
+    ],
+    "source_unchanged": true,
+    "stages": [
+      {
+        "command": [
+          "/usr/bin/x86_64-linux-gnu-gcc-13",
+          "--version"
+        ],
+        "log": {
+          "bytes": 264,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/compiler_version.log",
+          "sha256": "3fe5a5280ea5e228b69ed7f59fcec4ed6146228a5120306d37c656307725c2a0"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/usr/bin/make",
+          "-C",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/source/mafft-7.525-with-extensions/core",
+          "-j2",
+          "CC=/usr/bin/x86_64-linux-gnu-gcc-13",
+          "CFLAGS=-O3",
+          "PREFIX=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft",
+          "install"
+        ],
+        "log": {
+          "bytes": 55366,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/mafft_core_build.log",
+          "sha256": "0b0c8757f84ccc55973130526650a4dc608750d7321626d1373ec6be01ca24c9"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/bin/mafft",
+          "--version"
+        ],
+        "log": {
+          "bytes": 21,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/mafft_version.log",
+          "sha256": "528090f812606ae6ff8ad6c077f3a6a36bd90072188f7c8ab7d95131b7344a1e"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/mafft/libexec/mafft/version"
+        ],
+        "log": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/mafft_helper_version.log",
+          "sha256": "9ac59983c781e620c660da86bca0ceb47299ca41721c77bc3d647f9d23c53c24"
+        },
+        "returncode": 0
+      },
+      {
+        "command": [
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/tools/fasttree/FastTree",
+          "-help"
+        ],
+        "log": {
+          "bytes": 2227,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation/fasttree_help.log",
+          "sha256": "9083a3891e81bcd6f666e47878aec639f99ac65a63f0c9229981cf29967ee54d"
+        },
+        "returncode": 0
+      }
+    ],
+    "status": "private_frozen_phylogeny_tools_prepared"
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "reused_public_acquisition": {
+    "bytes": 25745,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_phylogeny_acquisition_20261002.json",
+    "sha256": "0e2d881ccede261b4bdd8d880742fed573fe450472c76fe1698b8796f34ffec0"
+  },
+  "root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow",
+  "scientific_inference_executed": false,
+  "security_clearance": false,
+  "source": {
+    "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+    "components": {
+      "build": 1,
+      "scientific": 43,
+      "workflow": 1800
+    },
+    "executable_benchmark_reproduced": false,
+    "files": 1844,
+    "manifest": {
+      "bytes": 746269,
+      "sha256": "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+    },
+    "payload_bytes": 11015651,
+    "publication_ready": false,
+    "python_files_syntax_checked": 1823,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_source_components_verified",
+    "workflow_revision": "7e6b12fd420f15cb379f31a43a70470d1208275f"
+  },
+  "source_index": {
+    "bytes": 746269,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/SOURCE_INDEX.json",
+    "sha256": "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+  },
+  "source_unchanged": true,
+  "stages": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_source.py",
+        "build",
+        "--repo",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "--revision",
+        "7e6b12fd420f15cb379f31a43a70470d1208275f",
+        "--profile",
+        "native-build",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/exported"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow",
+      "name": "export",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/export.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/export.stdout",
+        "sha256": "9ce7cc4de502ed20cc88ba7e5610b0da6e01fd08c67d296f4092098615afc079"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source",
+        "--manifest-sha256",
+        "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow",
+      "name": "copied_verify_before",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied_verify_before.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied_verify_before.stdout",
+        "sha256": "9ce7cc4de502ed20cc88ba7e5610b0da6e01fd08c67d296f4092098615afc079"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/prepare_publication_phylogeny_tools.py",
+        "--component",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source",
+        "--manifest-sha256",
+        "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07",
+        "--artifacts",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-public-phylogeny-20261002-05c0f2m1/tool-artifacts",
+        "--compiler-sha256",
+        "6117c52522997d2aaccb2b52b3c6bf42c0a6c5edb1d718431fed6b2fc5fec234",
+        "--output",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/tool-preparation",
+        "--acknowledge-historical-runtime"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow",
+      "name": "private_tool_preparation",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 312,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/private_tool_preparation.stderr",
+        "sha256": "3a7494c3ccf7c1b910c297288386cbca72971437450333ffd98a60960c7b5592"
+      },
+      "stdout": {
+        "bytes": 306,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/private_tool_preparation.stdout",
+        "sha256": "a04a19cd0807d7d0b6d1028a5255848d3c968f45df8a6ab99676143c04334544"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source/workflow/benchmark_tools/bundle_publication_source.py",
+        "verify",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied-source",
+        "--manifest-sha256",
+        "a9eac855a8677bc2bf35609f34c0a0bb3c11e441ac0d9cc7bc94db92abd6dd07"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow",
+      "name": "copied_verify_after",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 156,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied_verify_after.stderr",
+        "sha256": "1f31aba76b330237ff6141f007fe6be3abf4fb414ecc19fcc453e129a0d6a90f"
+      },
+      "stdout": {
+        "bytes": 658,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-private-phylogeny-20261002-_c3mgzow/copied_verify_after.stdout",
+        "sha256": "9ce7cc4de502ed20cc88ba7e5610b0da6e01fd08c67d296f4092098615afc079"
+      }
+    }
+  ],
+  "started": "2026-10-02T18:49:24.674097+00:00",
+  "status": "copied_source_private_phylogeny_preparation_complete",
+  "tests": {
+    "bytes": 37762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_phylogeny_preparation_tests_20261002.xml",
+    "sha256": "7e350d2df29f0f8f1bac697e19a4e662959f3d1b004681e9eb2c9428a4e0497d"
+  },
+  "workflow_revision": "7e6b12fd420f15cb379f31a43a70470d1208275f"
+}
