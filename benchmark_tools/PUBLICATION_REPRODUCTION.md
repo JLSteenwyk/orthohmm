@@ -18,6 +18,12 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [latest nine-page main-text review](results/PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md)
+integrates the completed length-panel comparisons and tree stress tests at
+committed source `140b6ef3`. All pages were inspected and direct inputs checked;
+it does not repeat native admission/bootstraps or close controlled timing,
+dependency/rights, final executable release or archival-deposition requirements.
+
 The [standalone simulation replay](SIMULATION_ARITHMETIC_REPLAY.md) independently
 checks retained per-seed count arithmetic, outcome inventories, 168 method-mean
 cells and all variable-length paired effects/intervals without historical reads.

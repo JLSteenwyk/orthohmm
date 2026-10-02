@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Main-Text Simulation Review Completed (2026-10-02)
+
+Source checkpoint `140b6ef3` is committed/pushed before rendering. Render the
+revised main text with the existing bibliography, preserving earlier eight-
+page and seven-page outputs. Print a fresh nine-page PDF and inspect every
+page: simulation Methods on pages 2-3, Results 4-5, replay availability 8.
+No observed clipping/overlap; bounds violations zero. All 18 citation IDs
+resolve; 48 local-link occurrences/46 existing tracked targets. Presence does
+not prove anchor validity, citation adequacy, transitive provenance or rights.
+
+All 50 direct repository inputs match size/hash and exact source-checkpoint
+Git blobs. A new closed visual-review receipt pins 14 artifacts, including
+all nine rendered page images, without rebinding historical receipts to later
+living source/ledger changes. PDF 160,993 bytes, SHA256
+`65e271daee8bd8047543d614d937d26f285a212ab8e3823eea06a5a6fce87b53`.
+Figures remain linked, not embedded; older linked figures were not newly
+visually reviewed. No new study archive/upload, native/scoring/bootstrap
+execution, runtime restoration, timing poll or DGX/unrelated job action.
+
+Two new closed-artifact/scope checks accompany the five new numerical prose
+checks. The final five-module main/prose/render/print/PDF panel has **41 passes
+in 3.19s**, no errors/failures/skips; JUnit 5,619 bytes, SHA256
+`cc57f469755458260a8809d04a2252c1f39c25408abeb22007da54422b661be6`.
+It overlaps the earlier 39-case panel, not a new full-suite or scientific
+admission. At 14:03:59 UTC prior-source `ecadd089` CI run 37016015087 has
+docs/Linux/wheel success and five live macOS jobs; no complete-CI or sibling
+execution counts inferred. New checkpoints require separate observation.
+
+See [nine-page review and boundaries](PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md).
+Update the current checklist's stale seven-page row and reproduction indexes,
+then commit/push the reviewed artifacts. Main simulation reporting is now
+reconciled with the existing extended text, but final complete manuscript/
+figure/archive/release reconciliation remains unfinished. Controlled timing,
+other-QfO uncertainty and complete runtime/data-rights/versioned release/
+deposition gates remain open. The original publication goal remains active.
+
 ## Main-Text Evolutionary Simulation Integration Checkpoint (2026-10-02)
 
 Previous turn progressed at pushed `ecadd089` with the standalone simulation

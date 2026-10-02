@@ -7,6 +7,11 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [latest nine-page main review](results/PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md)
+now includes the completed evolutionary simulations and supplied/perturbed-tree
+results, preserving negative findings and failures. All pages were inspected;
+earlier renders remain historical and no scientific scores or defaults changed.
+
 The [standalone simulation arithmetic replay](SIMULATION_ARITHMETIC_REPLAY.md)
 checks both frozen length panels from their existing reports after copying
 outside the checkout. It preserves fixed-length unavailable comparisons and
