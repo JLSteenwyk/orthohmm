@@ -98,7 +98,8 @@ def test_missing_collector_in_recipe_rejected(pinned):
 
 @pytest.mark.parametrize("index", [0, 1])
 @pytest.mark.parametrize("status", ["command_exited_zero", "command_failed"])
-def test_launch_uses_correct_collector_and_retains_failure(pinned, tmp_path, monkeypatch, index, status):
+def test_launch_uses_correct_collector_and_retains_failure(
+        pinned, tmp_path, monkeypatch, index, status, isolated_launcher_environment):
     plan, auth, row = module.select(*pinned, index)
     row = copy.deepcopy(row)
     directory = tmp_path / "run"

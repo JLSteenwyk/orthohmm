@@ -32,6 +32,11 @@ contains test-only environment leakage and relocates a temporary replay fixture.
 All 94 ordered local cases pass without environment deltas. New macOS confirmation
 of this fix remains open; historical commands and scientific results stay unchanged.
 
+The [additional launcher follow-up](results/CI_ADDITIONAL_LAUNCHER_ENVIRONMENT_20261002.md)
+contains six more passing-but-leaking synthetic launch cases using an explicit,
+non-autouse fixture. All 183 ordered local cases pass without environment deltas.
+The earlier replay fix is macOS-confirmed; complete CI/release remains unfinished.
+
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not
 launch them to resume the active corrected-release jobs or transfer their

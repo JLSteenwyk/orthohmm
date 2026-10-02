@@ -127,7 +127,8 @@ def test_cross_plan_or_unpinned_pressure_rejected(pinned, fault):
 
 
 @pytest.mark.parametrize('index', [0, 1])
-def test_launch_enables_pressure_and_retains_plan_binding(pinned, tmp_path, monkeypatch, index):
+def test_launch_enables_pressure_and_retains_plan_binding(
+        pinned, tmp_path, monkeypatch, index, isolated_launcher_environment):
     plan, auth, row = module.select(*pinned, index, module.PRESSURE_PLAN_SHA)
     directory = tmp_path / 'run'
     row['run']['measurement_directory'] = str(directory / 'measurement')

@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Additional Synthetic Launcher Environment Isolation (2026-10-02)
+
+Previous goal turn is progress at pushed deed4004: current seven-page direct
+review archive verifies outside the checkout. Read objective/ledger/HEAD and
+observe existing automatic CI handles. At 04:38:19 UTC all five source-c98
+test jobs fail; wheel/docs succeed. Source-deed still has five live tests and
+successful wheel/docs. No restart, host contention poll, quiet-window question,
+DGX/workload/service action or scientific/native benchmark occurs.
+
+Inspect source-c98 actual Python 3.11 fast log: 13,718 pass, 47 fail, zero
+errors, 111 skip, 30 warnings, 361.60s. All nine replay cases pass. Earlier
+94-case scope now gives 81 pass/12 fail/one skip: malformed-invocation and
+Pandoc failures remain; separate wheel compilation skip cause is unproven.
+Only this fast log is inspected; no sibling/full-suite success inference.
+
+Find two more modules calling environment-mutating launchers in-process.
+The six selected synthetic cases pass but each leaks environment changes;
+first includes PATH/Python/thread configuration, others pycache prefix.
+Pressure launch cases occur before the later remote failures. A leaked PATH
+is a plausible mechanism, not a remote causal proof. Keep production/plan/
+argv/admission unchanged; explicitly request a non-autouse cleanup fixture
+only in these two test functions. Four new cases cover normal/exceptional
+exit and both relative monkeypatch teardown orders with exact map equality.
+
+**183 ordered local cases pass in 8.43s**, zero errors/failures/skips and no
+after-test environment deltas. Actual local Pandoc/baseline compilation execute
+after all three launcher modules. Includes previous 94-case panel, not additive
+or new macOS/full regression. Preserve passing-but-leaking pre-fix receipt,
+two new JUnit reports, source/plan/log pins and new CI status in
+[evidence and boundaries](CI_ADDITIONAL_LAUNCHER_ENVIRONMENT_20261002.md).
+
+Commit/push and observe actual automatic CI. Next address remaining retained
+snapshot relocation, raw-data boundaries and Linux-only capability cases using
+new evidence, not scientific recalculation or relaxed admission. Current direct
+review archive stays verified within its 55-file scope. Full executable release,
+uncertainty, source/rights, comparable resources and public deposition remain
+open. Timing stays deferred and the original publication goal remains active.
+
 ## Seven Page Review Archive Restored Outside Checkout (2026-10-02)
 
 Previous goal turn is progress at pushed c98b11fb: 94 ordered local cases

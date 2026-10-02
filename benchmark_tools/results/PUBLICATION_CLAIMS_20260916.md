@@ -188,6 +188,15 @@ deltas. Historical production/archive sources stay unchanged. Missing later
 macOS utilities may result from the leaked PATH; that is an inference awaiting
 new remote confirmation, not an established compiler-skip cause. Full regression,
 release and scientific/resource requirements remain open; timing stays deferred.
+The [additional launcher follow-up](CI_ADDITIONAL_LAUNCHER_ENVIRONMENT_20261002.md)
+inspects source-c98's actual macOS Python 3.11 fast log: nine replay passes,
+but 47 failures overall. Later utility-dependent cases still fail. A separate
+local probe finds six more passing-but-leaking synthetic launch cases; explicit
+non-autouse containment yields 183 ordered local passes without environment
+deltas. It includes the earlier 94-case panel, not additive or new macOS/full
+confirmation. A leaked PATH is a plausible mechanism, not proven remote causation
+or a diagnosed compiler-skip cause. Remaining snapshot/raw-data/Linux-capability
+and full executable-release failures stay open; scientific scores are unchanged.
 All fifteen current test alerts are now API-confirmed fixed, none dismissed;
 forty historical-lock alerts remain. No scientific score/default or release
 claim changes.

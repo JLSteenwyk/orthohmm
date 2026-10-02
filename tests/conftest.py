@@ -1,4 +1,5 @@
 # global fixtures can go here
+import os
 from pathlib import Path
 import shlex
 import sys
@@ -6,6 +7,17 @@ import sys
 import pytest
 
 from tests.gnu_time_runtime import GnuTimeSubprocess, select_gnu_time
+
+
+@pytest.fixture
+def isolated_launcher_environment():
+    """Contain explicitly requested in-process standalone launcher tests."""
+    original = dict(os.environ)
+    try:
+        yield
+    finally:
+        os.environ.clear()
+        os.environ.update(original)
 
 
 @pytest.fixture
