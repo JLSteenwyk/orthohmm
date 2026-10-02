@@ -1,0 +1,211 @@
+{
+  "base_commit": "3bea410fa904f687c51abb32edf166de1b4a7a3a",
+  "before": {
+    "errors": 0,
+    "failed": 1,
+    "failure": "Local replay dependency differs from frozen source",
+    "note": "Original-checkout scheduler path coincides; unlike macOS, its source-negative case already passes.",
+    "passed": 1,
+    "seconds": 0.24,
+    "skipped": 0
+  },
+  "deployed_sources": [
+    {
+      "bytes": 6989,
+      "current_matches": false,
+      "path": "benchmark_tools/probe_cgroup_frontier.py",
+      "sha256": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635"
+    },
+    {
+      "bytes": 5435,
+      "current_matches": true,
+      "path": "benchmark_tools/probe_cgroup_lineage.py",
+      "sha256": "54753e22ed11bac0c3d9cc231bfa9c12699aceb433dd57a1df488a3c37fadf85"
+    },
+    {
+      "bytes": 9059,
+      "current_matches": true,
+      "path": "benchmark_tools/probe_dgx_cpu_hierarchy.py",
+      "sha256": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1"
+    },
+    {
+      "bytes": 6706,
+      "current_matches": true,
+      "path": "benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    },
+    {
+      "bytes": 5845,
+      "current_matches": true,
+      "path": "benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 4248,
+      "current_matches": true,
+      "path": "benchmark_tools/results/LINEAGE_READ_CROSSING_PROTOCOL_20260919.md",
+      "sha256": "a4228ba566f5ffc1cb46ec5fe957d30536abd4f3c5f40337ac84e37b782a0603"
+    },
+    {
+      "bytes": 7061,
+      "current_matches": true,
+      "path": "benchmark_tools/run_lineage_lifecycle_control.py",
+      "sha256": "9f18a1855870a120a09a47494c15042845f048ede00ad4af2ab70220128ad537"
+    },
+    {
+      "bytes": 5444,
+      "current_matches": true,
+      "path": "benchmark_tools/run_lineage_read_crossing_control.py",
+      "sha256": "896aad0b612068896c952de523435fe78d65640f0369358f23b6918799393139"
+    }
+  ],
+  "environmental_validity_established": false,
+  "frozen_control_commit": "6599c6ef381bb303de9acae7ae803a07a403ed3b",
+  "historical_records_repinned": false,
+  "intermediate": {
+    "expanded_passes": 132,
+    "expanded_seconds": 2.82,
+    "first_module_passes": 19,
+    "first_module_seconds": 1.54,
+    "overlap": true
+  },
+  "limitations": [
+    "This stages exact historical control dependencies for strict replay, not current helpers under historical source pins.",
+    "Python open/import evidence is not OS containment; shared Git objects remain an explicit original-repository dependency.",
+    "No services, burns, scheduler runs, host-contention probes, DGX access, biological scoring or timing execute.",
+    "Actual Python 3.12 reproduces three raw controls; new test patch has no remote confirmation yet.",
+    "Remaining raw/platform/provenance failures, other-QfO uncertainty, rights, controlled resources, complete release and deposition remain open."
+  ],
+  "local_after": {
+    "errors": 0,
+    "failed": 0,
+    "fresh_child_cases": 9,
+    "lineage_module_cases": 21,
+    "new_cases": 6,
+    "passed": 134,
+    "seconds": 3.04,
+    "skipped": 0
+  },
+  "negative_guards": [
+    "wrong archived source hash",
+    "wrong scheduler allocation",
+    "wrong scheduler Command",
+    "same-size protocol mutation",
+    "truncated protocol",
+    "missing protocol",
+    "same-size imported Python helper mutation",
+    "current frontier helper substitution",
+    "existing missing/raw-trial mutations"
+  ],
+  "preceding_ci": {
+    "actual_checkout_sha_verified": true,
+    "all_120_previous_panel_cases_pass": true,
+    "all_five_macos_test_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "errors": 0,
+    "failed": 8,
+    "head_sha": "3bea410fa904f687c51abb32edf166de1b4a7a3a",
+    "inspected_python313_job": 110774175750,
+    "linux_native": "success",
+    "log_download_utc": "2026-10-02T09:18:36.419662+00:00",
+    "new_lineage_fix_not_in_source": true,
+    "observed_utc": "2026-10-02T09:17:30.363001+00:00",
+    "passed": 13935,
+    "run": 36986995236,
+    "seconds": 364.21,
+    "skipped": 118,
+    "warnings": 30
+  },
+  "production_code_changed": false,
+  "publication_ready": false,
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "python312_replay": {
+    "canary_blocked": true,
+    "evidence_records": 36,
+    "later_original_python_open_events": 0,
+    "only_git_show_children": true,
+    "original_git_reads_not_observed_by_python_guard": true,
+    "shared_git_objects": true,
+    "staged_project_origins": 11,
+    "temporary_copy_removed": true,
+    "three_complete_results_exact": true,
+    "version": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]"
+  },
+  "raw_evidence_inventory": {
+    "bytes": 160395,
+    "canonical_inventory_sha256": "1d501555e1df6fda681154949eb9a6366cc8f6bfeb4d64da031c529785f55420",
+    "files": 35,
+    "serialization": "relative paths, sort_keys=True, compact separators, UTF-8, no newline"
+  },
+  "records": [
+    {
+      "bytes": 9566,
+      "path": "tests/unit/test_replay_lineage_read_crossing_control.py",
+      "sha256": "1d77f122f81410f0cc606c157f3718d345a6fb4528ed2f189c4f396d4eec7b35"
+    },
+    {
+      "bytes": 7458,
+      "path": "benchmark_tools/replay_lineage_read_crossing_control.py",
+      "sha256": "c4d38b3df2544c5702889525ab9b34097051744746ac620dfcd7ddc2cb38fdbc"
+    },
+    {
+      "bytes": 7207,
+      "path": "benchmark_tools/probe_cgroup_frontier.py",
+      "sha256": "719b90cf4147d6c48211926cda9221229d492a44437c035962194b7b67a73e75"
+    },
+    {
+      "bytes": 1573,
+      "path": "benchmark_tools/results/lineage_read_crossing_scheduler_22018.txt",
+      "sha256": "1641b5bc875091dde857d66989b79655afb0caa524070320edf8a84fd65218f5"
+    },
+    {
+      "bytes": 3693,
+      "path": "benchmarks/work/lineage_frozen_source_before_20261002.xml",
+      "sha256": "e59c5720a486a80f604a226b86fba709eb5df1407bce4fe10ad94e9845bf337a"
+    },
+    {
+      "bytes": 2850,
+      "path": "benchmarks/work/lineage_frozen_source_after_20261002.xml",
+      "sha256": "8d692f1a66a6e25fe05c420db9ea7a6377968d4f7725525d1c578210376e1460"
+    },
+    {
+      "bytes": 17355,
+      "path": "benchmarks/work/lineage_frozen_source_complete_20261002.xml",
+      "sha256": "35b0527f9c7a6f0f779a7be2517a97a52ae1e1ef9db25a08838e081c2e33ee5c"
+    },
+    {
+      "bytes": 17652,
+      "path": "benchmarks/work/lineage_frozen_source_final_20261002.xml",
+      "sha256": "7b6985009976f35ccf5bcd3329d32fd20f8d1afadbc38d2c239f6a32985d5b5d"
+    },
+    {
+      "bytes": 53844,
+      "path": "benchmarks/work/lineage_frozen_source_py312_20261002.json",
+      "sha256": "0b3461963fc8cdad25da32a8a0073eb4f97472cfa0a7c260d7f03894357b7946"
+    },
+    {
+      "bytes": 293299,
+      "path": "benchmarks/work/ci_remote_3bea410f_20261002/110774175750.log",
+      "sha256": "960a5c4676cecbdbeb308da1879e5d8f811b125d00920a230cd25bfdd4059e28"
+    }
+  ],
+  "schema": 1,
+  "scientific_code_changed": false,
+  "scientific_timings_admitted": false,
+  "staging": {
+    "child_modes": [
+      "-I",
+      "-B"
+    ],
+    "current_replay_driver_copied_unchanged": true,
+    "git_clone": "--shared --no-checkout",
+    "historical_files": 11,
+    "only_git_show_children": true,
+    "original_git_objects_required": true,
+    "production_validation_changed": false,
+    "scheduler_binding": "exact single Command line only in a temporary copy",
+    "staged_files": 12
+  },
+  "status": "historical_lineage_replay_test_staging_verified"
+}

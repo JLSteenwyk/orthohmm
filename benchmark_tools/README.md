@@ -94,6 +94,14 @@ cases also pass in an original-checkout-blocked copied tree; the entire
 3.13 log confirms all 69 metadata cases, but has ten other failures. New-patch
 remote confirmation, source-inventory handoff and complete release remain open.
 
+The [historical lineage replay follow-up](results/LINEAGE_FROZEN_REPLAY_20261002.md)
+stages exact frozen dependencies for fresh-child tests instead of accepting
+current helpers under old pins. All 134 focused cases pass; actual Python
+3.12 reproduces three complete archived controls. Shared original Git objects
+remain an explicit dependency, not a standalone archive. The preceding actual
+Python 3.13 log confirms all 120 command/metadata cases, with eight other
+failures. New-patch remote confirmation and complete release remain open.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

@@ -588,6 +588,15 @@ receipts are not repinned. Actual source-dabcbb2e Python 3.13 confirms all
 69 preceding metadata cases, with ten other failures and no proof of this
 new correction, full CI, native restoration or timing admission.
 
+The [frozen lineage replay follow-up](results/LINEAGE_FROZEN_REPLAY_20261002.md)
+uses historical source bytes in fresh isolated test children while retaining
+production source/command/allocation guards. All 134 local cases pass and
+actual Python 3.12 exactly reproduces all three controls. The fixture shares
+original Git objects; its Python read guard is not OS containment or repository-
+independent restoration. Actual preceding Python 3.13 confirms all 120
+command/metadata cases, but retains eight failures and cannot confirm this
+new staging patch or complete CI. No old source receipt is repinned.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

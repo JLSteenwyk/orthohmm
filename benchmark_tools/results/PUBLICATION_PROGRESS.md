@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Frozen Source Staging For Lineage Replay (2026-10-02)
+
+Previous turn is progress at pushed 3bea410f: explicit remote path mode,
+strict complete-plan equality and actual local/copied tests. Re-read the full
+objective/latest ledger/HEAD and observe run 36986995236. At 09:01:50 UTC all
+five macOS test jobs are live and Linux diagnostics/wheel/docs succeed.
+No restart. Timing stays deferred, with no contention questions/polls, DGX
+access or unrelated process/service actions.
+
+All eight deployed lineage source pins match historical commit 6599c6e;
+only current frontier helper bytes differ. Local pre-change selection has
+one pass/one complete-replay failure at its source guard. MacOS's scheduler
+path gate fails earlier and masks its source-negative case. Stage eleven
+historical files in a temporary shared Git clone and copy the unchanged
+current replay driver. Fresh isolated children import staged old dependencies;
+only exact temporary scheduler Command metadata is rebound. All other
+scheduler/raw/source/command/result fields and production gates remain intact.
+Shared original Git objects are an explicit dependency, not archival closure.
+
+Add six negative cases for scheduler command, protocol mutations/absence,
+same-size imported helper changes and current-helper substitution. **134
+local tests pass in 3.04s**, zero failures/errors/skips, including all 21
+lineage cases/nine fresh-child cases. Earlier 19/132-case passes overlap.
+Actual system Python 3.12.3 reproduces all three complete nested controls:
+36 evidence records (35 raw plus scheduler), 12 staged files, eleven staged
+module origins, blocked original canary, zero subsequent original Python
+open events and only git-show children. External temporary staging removed.
+Git reads shared original objects outside that Python guard; do not claim
+OS containment, original-repository independence or native scientific/timing
+restoration. [Evidence and pins](LINEAGE_FROZEN_REPLAY_20261002.md) retain failure,
+source inventory, successful tests and the actual fresh replay.
+
+At 09:17:30 UTC the same preceding run is terminal: all five macOS test jobs
+fail; Linux diagnostics/wheel/docs succeed. Inspect its actual Python 3.13
+log once, including checkout SHA: 13,935 passes/eight failures/118 skips/
+zero errors/30 warnings/364.21s. All 120 preceding command/metadata cases
+pass, but this new lineage patch is not in that source. Do not restart handles
+or infer sibling counts, full CI or new-patch remote confirmation.
+
+Commit/push this test-only source-staging milestone and observe automatic CI.
+Scientific implementation/settings/scores, production source and all archived
+raw/scheduler receipts stay unchanged relative to 3bea410f. No services,
+burns, live counter probes, biological inference/scoring, bootstrap or timing
+run occurs. Remaining raw/platform/provenance failures, other-QfO uncertainty,
+rights, controlled resource evidence, complete release and public deposition
+stay open. The original publication goal remains active and incomplete.
+
 ## Offline Remote Native Command Paths (2026-10-02)
 
 Previous turn is progress at pushed dabcbb2e: explicit test metadata bindings

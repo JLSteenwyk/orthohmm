@@ -317,6 +317,16 @@ cases but has ten other failures. This is preparation/replay evidence, not
 new scientific results, new-patch remote proof, complete CI or execution
 authorization. Prospective helper identities need a new freeze.
 
+The [frozen lineage replay follow-up](LINEAGE_FROZEN_REPLAY_20261002.md)
+preserves historical source pins and every production guard, staging old
+dependencies rather than substituting current code. All 134 local cases
+pass; actual Python 3.12 reproduces three complete raw control results.
+The source clone shares original Git objects, so neither its Python read
+guard nor that replay is a self-contained archive or timing admission.
+The preceding actual Python 3.13 log confirms all 120 command/metadata cases
+with eight other failures. New-patch remote proof, full CI and the original
+publication completion requirements remain unresolved.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
