@@ -615,6 +615,14 @@ tables byte-for-byte while checking all raw file identities. Native extraction,
 data rights, public provisioning and full CI remain outside that evidence.
 Prospective inventories need the two new exporter identities and added helper.
 
+The [host-reader platform amendment](results/HOST_READER_PLATFORM_COVERAGE_20261002.md)
+places the Linux-only live probe in Linux diagnostics with an explicit no-skip
+JUnit gate for all 35 reader cases. All portable reader checks stay in the
+macOS matrix. All 110 local cases pass with the live reader deselected; the
+34 affected parser/synthetic cases also pass in a copied child denying `/proc`,
+`/sys` and original-checkout reads. Actual new Linux CI proof is pending.
+No production helper or source-bound timing recipe changes.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

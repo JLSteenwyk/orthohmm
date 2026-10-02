@@ -1,0 +1,165 @@
+{
+  "controlled_timing_run": false,
+  "copied_guard": {
+    "blocked_canaries": 3,
+    "child_subprocesses_forbidden": true,
+    "later_forbidden_open_events": 0,
+    "loaded_project_origins": 7,
+    "os_containment_claim": false,
+    "platform_marker_expression": {
+      "darwin": true,
+      "linux": false,
+      "win32": true
+    },
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "staged_files": [
+      {
+        "bytes": 59,
+        "path": "benchmark_tools/__init__.py",
+        "sha256": "f379db82028a8af2ba14a89ec9ef6381346807470523fa1836554ba6f26a2746"
+      },
+      {
+        "bytes": 5845,
+        "path": "benchmark_tools/probe_host_counters.py",
+        "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+      },
+      {
+        "bytes": 0,
+        "path": "tests/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "path": "tests/unit/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2663,
+        "path": "tests/conftest.py",
+        "sha256": "c1f10a64725abbd8d4983c60cb65e359164b6488cb803afea2f55d19e03629d6"
+      },
+      {
+        "bytes": 1970,
+        "path": "tests/gnu_time_runtime.py",
+        "sha256": "29fe2aab6f58fcaef5c79b9780ed94674db1c86d882420c533b899c7d0a8da8f"
+      },
+      {
+        "bytes": 8502,
+        "path": "tests/unit/test_probe_host_counters.py",
+        "sha256": "734efdcda24b7849f82b6ddde25409e82e0b9a97fae4cf4a80f842d318dffa01"
+      }
+    ],
+    "temporary_staging_removed": true
+  },
+  "date": "2026-10-02",
+  "local_live_host_probe_executed": false,
+  "parent_commit": "4ccd72a6b49f063c9216b927c268eae7089c0f3f",
+  "preceding_remote": {
+    "contains_host_platform_amendment": false,
+    "docs_linux_wheel": "success",
+    "errors": 0,
+    "failed": 5,
+    "inventory_fixture_cases_passed": 44,
+    "job": 110796750061,
+    "log_download_utc": "2026-10-02T10:22:27.249789+00:00",
+    "observed_utc": "2026-10-02T10:21:56.377606+00:00",
+    "other_four_test_jobs": "live_at_observation",
+    "passed": 14007,
+    "python": "3.11",
+    "relocation_cases_passed": 43,
+    "run": 36994103659,
+    "seconds": 390.43,
+    "skipped": 118,
+    "warnings": 30
+  },
+  "production_changed": false,
+  "prospective_linux_lane": {
+    "expected_total": 111,
+    "new_patch_remote_execution_verified": false,
+    "required_constructor_workers": 8,
+    "required_host_reader_cases": 35,
+    "required_live_case": 1,
+    "required_repeat_workers": 12,
+    "skips_failures_errors_allowed": false
+  },
+  "publication_ready": false,
+  "records": [
+    {
+      "bytes": 8812,
+      "path": ".github/workflows/ci.yml",
+      "sha256": "1c0cdc0e3848da423db8f86ba13b5debfc12bb326f8d5685d5a1ee59e649fe87"
+    },
+    {
+      "bytes": 8502,
+      "path": "tests/unit/test_probe_host_counters.py",
+      "sha256": "734efdcda24b7849f82b6ddde25409e82e0b9a97fae4cf4a80f842d318dffa01"
+    },
+    {
+      "bytes": 5845,
+      "path": "benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 2663,
+      "path": "tests/conftest.py",
+      "sha256": "c1f10a64725abbd8d4983c60cb65e359164b6488cb803afea2f55d19e03629d6"
+    },
+    {
+      "bytes": 1970,
+      "path": "tests/gnu_time_runtime.py",
+      "sha256": "29fe2aab6f58fcaef5c79b9780ed94674db1c86d882420c533b899c7d0a8da8f"
+    },
+    {
+      "bytes": 4312,
+      "path": "benchmark_tools/results/HOST_READER_PLATFORM_COVERAGE_20261002.md",
+      "sha256": "613fe4ff9197b58668fab194c948aaf25c57e78216e456bd8ead1eaa63083707"
+    },
+    {
+      "bytes": 4560,
+      "path": "benchmarks/work/host_reader_synthetic_20261002.xml",
+      "sha256": "fc9cfc73dc4e3b157897607b0adf54a3983440b88b6b3eb89247dde679eb4489"
+    },
+    {
+      "bytes": 14934,
+      "path": "benchmarks/work/host_reader_linux_lane_local_20261002.xml",
+      "sha256": "a818bd9def9f3c072a2a47bcc76ae608cbab6de992c03337d9ade9e14cfa3f63"
+    },
+    {
+      "bytes": 4617,
+      "path": "benchmarks/work/host_reader_copied_synthetic_20261002.json",
+      "sha256": "df0c69954aeb412c24cfcd9f10f327710e3b481cc6ff20f949a09863c556db56"
+    },
+    {
+      "bytes": 284581,
+      "path": "benchmarks/work/ci_remote_4ccd72a6_20261002/110796750061.log",
+      "sha256": "cccb6479956e4b860482fdcd304e7910b2eb7b7490e45b72e3d74610696353c6"
+    }
+  ],
+  "schema_version": 1,
+  "scientific_scores_changed": false,
+  "status": "linux_live_reader_ci_placement_with_synthetic_coverage",
+  "tests": {
+    "copied_synthetic": {
+      "deselected": 1,
+      "errors": 0,
+      "failed": 0,
+      "passed": 34,
+      "seconds": 0.08,
+      "skipped": 0
+    },
+    "initial_synthetic": {
+      "deselected": 1,
+      "passed": 34,
+      "seconds": 0.2
+    },
+    "local_lane": {
+      "deselected": 1,
+      "errors": 0,
+      "failed": 0,
+      "passed": 110,
+      "seconds": 21.36,
+      "skipped": 0
+    },
+    "panels_overlap": true
+  }
+}

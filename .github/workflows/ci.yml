@@ -171,9 +171,9 @@ jobs:
         python-version: '3.12'
     - name: Install diagnostic dependencies
       run: python -m pip install -r requirements.txt -r tests/requirements.txt
-    - name: Execute native Linux graph and parser checks
+    - name: Execute native Linux graph, parser and host-reader checks
       run: |
-        python -m pytest -q tests/unit/test_probe_qfo_construction.py tests/unit/test_probe_qfo_direct_graph.py tests/unit/test_probe_cpm_high_constructor.py tests/unit/test_probe_cpm_partition_parser.py tests/unit/test_repeat_qfo_saved_graph.py --junitxml="$RUNNER_TEMP/linux-native-diagnostics.xml"
+        python -m pytest -q tests/unit/test_probe_qfo_construction.py tests/unit/test_probe_qfo_direct_graph.py tests/unit/test_probe_cpm_high_constructor.py tests/unit/test_probe_cpm_partition_parser.py tests/unit/test_repeat_qfo_saved_graph.py tests/unit/test_probe_host_counters.py --junitxml="$RUNNER_TEMP/linux-native-diagnostics.xml"
         python - "$RUNNER_TEMP/linux-native-diagnostics.xml" <<'PY'
         import sys
         import xml.etree.ElementTree as ET
@@ -184,8 +184,11 @@ jobs:
                         'test_fresh_native_worker_on_small_graph[')
         assert len([c for c in cases if c.attrib['name'].startswith(native_names)]) == 8
         assert len([c for c in cases if c.attrib['name'].startswith('test_instrumented_real_worker_exits_and_preserves_isolate[')]) == 12
+        host_cases = [c for c in cases if c.attrib.get('classname') == 'tests.unit.test_probe_host_counters']
+        assert len(host_cases) == 35
+        assert len([c for c in host_cases if c.attrib['name'] == 'test_live_read_only_probe_and_no_overwrite']) == 1
         assert not any(c.find(tag) is not None for c in cases for tag in ('skipped', 'failure', 'error'))
-        print('All selected checks executed; 20 native worker cases, no skipped/failed/error cases')
+        print('All selected checks executed; 20 native workers and one real Linux host reader, no skipped/failed/error cases')
         PY
     - name: Retain diagnostic test receipt
       if: always()

@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Platform-Correct Host Reader Coverage (2026-10-02)
+
+Previous goal turn is progress at pushed 4ccd72a6: actual relocated exports
+retain complete raw identity checks and byte-identical tables. Re-read the
+objective/ledger/HEAD and observe run 36994103659: docs/Linux succeed, wheel
+and four fast jobs live, full queued. Do not restart. Later docs/Linux/wheel
+succeed and all five macOS jobs remain live. No counts or full success inferred.
+Timing stays deferred without contention questions/polls, DGX or unrelated
+process/service actions.
+
+Review remaining uncertainty/release gaps and the Linux-reader macOS failure.
+Correct platform placement: only the real `/proc`/unified-cgroup integration
+case is Linux-specific; execute the complete module in the existing Linux
+CI lane. Its JUnit gate requires all 35 host cases and exactly one live case,
+plus the existing 20 native workers, with no skips/failures/errors. Expected
+lane total is 111, not proven remotely yet. Required Linux facilities fail
+closed if unavailable; no generic capability skip or raw-data test skip.
+
+Add 17 synthetic reader/interval/source-mutation cases. **110 local cases
+pass in 21.36s**, zero errors/failures/skips, with one explicitly deselected
+live case. Earlier 34-case pass overlaps. Fresh copied child passes all 34
+host parser/synthetic cases in 0.08s while blocking original checkout, `/proc`
+and `/sys` reads: three canaries blocked, zero subsequent forbidden opens,
+seven staged files/origins, no child processes, staging removed. Check actual
+decorator expression for Linux/macOS/Windows, not kernel emulation. No live
+Threadripper host-counter probe occurs. [Evidence and identities](HOST_READER_PLATFORM_COVERAGE_20261002.md)
+distinguish this coverage from Linux remote/native or controlled timing proof.
+
+Production reader, scientific code/settings/scores, raw-source gates and all
+old archives/receipts remain unchanged. Commit/push this test/workflow milestone
+and observe automatic CI; real new Linux confirmation remains pending.
+At 10:21:56 UTC the preceding 3.11 job is terminal/failure; four other tests
+remain live, docs/Linux/wheel succeed. Its actual log is downloaded once at
+10:22:27 UTC: verified source 4ccd72a6, 14,007 passes/five failures/118 skips/
+zero errors/30 warnings/390.43s. All 43 previous relocation and 44 inventory/
+fixture cases pass. Four default raw exports and the host-reader case fail;
+new platform patch is not in that source. No full 187-case remote claim.
+Raw provisioning/rights, other-QfO uncertainty, controlled resources, complete
+release and deposition stay open. Original publication goal remains active
+and incomplete; this is not a reduced definition of completion.
+
 ## Explicit Raw SwissTrees Source Relocation (2026-10-02)
 
 Previous turn progressed at pushed ee2a7af0 with the pinned inventory test

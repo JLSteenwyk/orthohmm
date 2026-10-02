@@ -115,6 +115,12 @@ tests pass; both exporters produce byte-identical TSV/Markdown in a guarded
 copied tree with the complete raw panels. This opt-in workflow does not rerun
 native annotation extraction, provision CI data or authorize redistribution.
 
+The [Linux host-reader CI placement](results/HOST_READER_PLATFORM_COVERAGE_20261002.md)
+requires actual live execution on Linux, retaining portable parser/synthetic
+coverage elsewhere. All 110 local cases pass with the live reader deliberately
+not run; 34 copied cases pass with original and live-host reads blocked.
+New Linux CI confirmation remains pending, not controlled timing evidence.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

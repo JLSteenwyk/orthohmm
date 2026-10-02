@@ -342,6 +342,12 @@ to retained outputs; 187 focused tests pass. This is more than derived-only
 arithmetic replay, but does not rerun native feature/annotation admission,
 establish raw-data rights, provision remote CI or complete the release.
 
+The [host-reader platform amendment](HOST_READER_PLATFORM_COVERAGE_20261002.md)
+retains the real Linux integration test in a lane that rejects skipped/missing
+cases, while 110 local and 34 copied synthetic cases pass without reading the
+Threadripper's live counters. These overlapping checks do not verify a quiet
+window, a new timing gate or actual Linux CI execution for the new patch.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |
