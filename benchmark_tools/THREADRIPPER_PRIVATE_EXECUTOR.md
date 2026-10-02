@@ -97,6 +97,16 @@ attempt ledger; it is not silently retried.
 
 ## Remaining Work
 
+The [prospective current-source recipe](results/THREADRIPPER_SOURCE_RECIPE_20261002.md)
+now pins all 886 Python helpers and the selected submission script, plus
+the latest explicit lookup and both unchanged plans. Independent readback
+verifies all 887 sources against Git and the Python sources against the latest
+manifest. Actual pure selection for both plans reaches and refuses the missing
+readiness file; hypothetical request fields are used only in memory.
+Use the [recipe's direct file record](results/threadripper_private_source_recipe_20261002.json)
+in a future reviewed request. This is inventory preparation, not readiness,
+successful complete selection, environmental policy or authorization.
+
 The [conditional panel-review workflow](results/THREADRIPPER_OVERHEAD_PANEL_REVIEW_20261002.md)
 now combines native replay with all four recorded engineering review categories.
 It distinguishes complete reviewed numerical pass/failure from missing evidence

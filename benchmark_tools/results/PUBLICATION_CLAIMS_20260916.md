@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [prospective source recipe and offline selection check](THREADRIPPER_SOURCE_RECIPE_20261002.md)
+now establish complete current-source membership and binding to both real plans.
+All 887 source hashes/Git identities and 886 Python-manifest identities check.
+Both actual pure selectors stop at absent readiness, with hypothetical job/
+authorization fields in memory only. No real request or passing readiness is
+created; all native paths remain absent. This is not execution approval or timing.
+
 The [latest review-helper runtime refresh](THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
 resolves the stale-helper startup binding at source be389707. Only five changed
 and one new Python helpers differ; scientific runtime/plan/controller stay frozen.

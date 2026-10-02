@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [prospective private source recipe](results/THREADRIPPER_SOURCE_RECIPE_20261002.md)
+pins all 887 required source files. Actual offline selection binds both real
+plans to the latest lookup and stops at missing readiness, using hypothetical
+job/authorization fields only in memory. Independent stdlib readback verifies
+source Git identities, Python manifest coverage and all 162 native paths still
+absent. No real request, policy, readiness, native preparation or timing is created.
+
 The [latest helper/runtime refresh](results/THREADRIPPER_REVIEW_RUNTIME_REFRESH_20261002.md)
 binds five changed and one added timing helpers without changing the frozen
 scientific runtime/plan. All 57,959 records match before/after native startup;

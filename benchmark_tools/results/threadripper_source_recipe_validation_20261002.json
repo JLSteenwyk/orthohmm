@@ -1,0 +1,85 @@
+{
+  "actual_request_saved": false,
+  "both_selectors_reached_missing_readiness": true,
+  "checked_uncreated_native_paths": 162,
+  "engineering_identities": 54,
+  "environment_policy_created": false,
+  "evidence": [
+    {
+      "bytes": 215622,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_source_recipe_20261002.json",
+      "sha256": "85b6cc5d927dc820a076ec106e662612db1dc66ee90102b67448bcb0ac88fd22"
+    },
+    {
+      "bytes": 22518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_source_recipe_20261002/selection.json",
+      "sha256": "fd201614c56e97dc7ccd332259089bda14d71e709437976f98f6504b2974a56c"
+    },
+    {
+      "bytes": 6584,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_review_20261002.json",
+      "sha256": "be7084d73bd90dedcdec210bbc3f9575eb9e3d9461c5f882d7b958c0c3b670de"
+    },
+    {
+      "bytes": 36572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/binding.json",
+      "sha256": "cee920ac3fd5f38f38026e35f6bc4b6a89950aead18ebbce7d0827bf125da709"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    {
+      "bytes": 9752057,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_review_20261002/native_os_helpers.json",
+      "sha256": "1f2c281014556c326969d3e8abc45eda850e6ac787f7d9ea4fdc4f7f49055a10"
+    },
+    {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 447512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_overhead_plan_20260930.json",
+      "sha256": "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182"
+    },
+    {
+      "bytes": 7132,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_source_recipe_driver_20261002.py",
+      "sha256": "760b234e7390ff799b69eef6e1519ef7e48ae4ca47b2fad1636de62c36f602f5"
+    }
+  ],
+  "execution_authorized": false,
+  "git_verified_source_files": 887,
+  "limitations": [
+    "Pure selection uses real retained source/plan/lookup/history bytes and hypothetical job/authorization fields only.",
+    "Both routes refuse absent readiness; no successful full selection, execution permit or environment handoff.",
+    "Source readback rehashes 887 source files, not a fresh full OS/private runtime scan.",
+    "No helper implementation, unit test, scientific configuration, inference/calibration/timing, scheduler or service change."
+  ],
+  "production_identities": 27,
+  "publication_ready": false,
+  "python_sources_covered_by_latest_manifest": 886,
+  "readback_source": {
+    "bytes": 6498,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_source_recipe_readback_20261002.py",
+    "sha256": "7140dc8422a4d16966569ad0bf5fd35352e3de8d312042239b3734046d2a07d8"
+  },
+  "readiness_review_created": false,
+  "recipe": {
+    "bytes": 215622,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_source_recipe_20261002.json",
+    "sha256": "85b6cc5d927dc820a076ec106e662612db1dc66ee90102b67448bcb0ac88fd22"
+  },
+  "scientific_timings_admitted": false,
+  "selection": {
+    "bytes": 22518,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_source_recipe_20261002/selection.json",
+    "sha256": "fd201614c56e97dc7ccd332259089bda14d71e709437976f98f6504b2974a56c"
+  },
+  "source_commit": "6e1b8cb740e9b9d59f7adb266e511342709253e2",
+  "status": "source_recipe_and_missing_readiness_refusal_verified",
+  "submission_source_pinned_separately": true
+}

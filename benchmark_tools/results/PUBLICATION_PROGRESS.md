@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Prospective Source Recipe And Real-Plan Binding Prepared (2026-10-02)
+
+Previous turn progressed at pushed 6e1b8cb7 by refreshing changed-helper
+runtime/startup evidence. Read the original goal/current ledger and reuse
+that receipt; do not repeat inventories/imports/calibration or poll contention.
+Inspect the remaining offline preparation gap: no current execution source
+recipe exists for the latest lookup and engineering route.
+
+Use the unchanged private controller to create a prospective non-authorizing
+source inventory: all 886 top-level Python helpers and selected submission
+script, latest explicit lookup and both frozen plans. No helper/test edits.
+Two actual pure-select calls with real retained evidence and hypothetical
+job/authorization fields in memory pass source/plan/lookup/history binding
+and refuse the deliberately absent readiness file. Neither request is saved
+or passed to execute; no readiness/policy conclusion is fabricated.
+
+Separate stdlib readback verifies all 887 source hashes and Git identities,
+886 Python-manifest identities, exact membership/schema/bindings, refusal
+traces and nine compact pins. All 162 native output/tmpfs-input paths for
+27 production and 54 engineering identities stay absent; no cache or passing
+readiness file appears. All checks pass on the first executed attempts.
+See [prepared artifact, pins and boundaries](THREADRIPPER_SOURCE_RECIPE_20261002.md).
+
+Update current guides/claims and commit/push only scoped evidence. All owned
+handles terminal. No new unit tests, runtime-tree scan, observation worker,
+host-contention poll, quiet-window question, scheduler allocation/submission,
+inference/calibration/timing, DGX, shared upgrade, service/unrelated-job change,
+dated archive rebuild or PDF render. Real policy/readiness/handoff, isolation
+and actual prescribed outcomes remain missing. Publication goal stays active.
+
 ## Changed Timing Helpers Bound And Startup Checked (2026-10-02)
 
 Previous turn progressed at pushed be389707 by adding the conditional panel
