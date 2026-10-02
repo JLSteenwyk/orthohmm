@@ -24,7 +24,8 @@ exports and historical v1 verification retain their original selection.
 
 The `native-preparation` profile extends that selection with the exact
 historical base reconstruction receipt and required offline installer helper
-modules. It does not include package archives, the pip wheel, a Conda bootstrap
+modules. New workflow revisions also include the public-artifact acquisition
+helper. It does not include package archives, the pip wheel, a Conda bootstrap
 or native tools. The four result-document exceptions are explicitly pinned.
 
 Dataset/reference files, test samples, native predictions, scoring outputs,
@@ -116,6 +117,29 @@ require separate preparation; this profile is not the complete executable study.
 
 Use `--profile native-preparation` with the builder to include the base
 reconstruction document and controller. After verifying the emitted index,
+the newer acquisition helper can download the 19 exact archives and pinned pip
+wheel into a fresh private directory outside the immutable component:
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/acquire_publication_base.py \
+  --receipt /relocated/source-component/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json \
+  --output /absolute/fresh/base-artifacts --acknowledge-historical-runtime
+```
+
+The helper requires the exact retained reconstruction receipt, uses only
+credential-free allowlisted HTTPS endpoints/redirects and bounds each response.
+All 19 archives must match their byte counts, SHA-256 and MD5. The release-
+specific PyPI metadata must select the one pip wheel with the frozen size/hash;
+no latest-version resolution or replacements. Verified downloads, metadata and
+source/input pins appear in `complete.json`. Failures preserve records/partial
+files and `failed.json` without success, retry or overwriting an old directory.
+There is no package installation, shared-environment change or native inference.
+Its timeout is a socket-operation bound, not a whole acquisition deadline.
+HTTPS and recorded hashes do not establish security or redistribution clearance.
+
+Pass `base-artifacts/archives` and
+`base-artifacts/bootstrap_wheels/pip-26.2.1-py3-none-any.whl` to the offline
+installer below. Alternatively, separately
 supply a directory containing the 19 exact archives listed under
 `acquisition.packages` in the exported
 `results/reconstructed_base_fixture_20260927.json`. The document retains
