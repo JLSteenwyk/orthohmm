@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Native Provider Checksum Portability (2026-10-02)
+
+Previous goal turn is progress: f870 plus 00dd are pushed, with actual guarded
+archive restoration, 208 rows/984 cells and 76 passing local cases. Read the
+complete objective/current ledger/HEAD and observe live automatic CI run
+36973483066. At 06:31:20 UTC five test jobs remain live; wheel/docs succeed.
+No observation timeout is interpreted as failure, no handle is restarted.
+Timing stays deferred without host polls, scheduling questions or DGX work.
+
+Inspect the already-retained source-548 macOS fast log for remaining failures.
+The Three Kingdoms provider test invokes unsupported `/usr/bin/sum -r`.
+Official GNU and Apple sources both specify native BSD defaults with 1,024-byte
+rounded blocks. Remove the flag in the prospective auditor, preserving native
+semantics and recording command/provider expectation/stdout. Reject malformed,
+wrong-filename, wrong-block and out-of-range output; retain nonzero execution
+evidence as unresolved, without retries. Postflight mutations still fail.
+Do not weaken the provider or moving-release admission rules.
+
+**138 local cases pass in 4.51s**, zero failures/errors/skips: 32 provider,
+15 source, 15 independent pair-count and the prior 76 checker/bundler cases.
+Sixteen provider cases are new; earlier 32-case pass overlaps. Five actual
+Linux/GNU cases give identical default and explicit BSD output across empty,
+abc and block boundaries, including filenames with spaces. Offline known
+checksum vectors, negative outputs, command failure and mutation are tested.
+[Source/test/JUnit/native/log pins and boundaries](PROVIDER_CHECKSUM_PORTABILITY_20261002.md)
+record evidence; no new macOS execution confirmation is claimed.
+
+Then inspect only the actual terminal source-00dd Python 3.10 fast log:
+13,841 pass, 29 fail, zero errors, 110 skip, 30 warnings, 320.64s. All prior
+76 checker/bundler cases pass, including 27 new bundler cases. The old provider
+flag still fails; the current auditor is not in this source. At 06:35:48 UTC
+3.10/3.11/3.13 test jobs fail, full/3.12 remain live, wheel/docs succeed.
+This is bounded previous-archive macOS confirmation, not changed-auditor or
+sibling/full-suite success. Preserve exact log pins without resubmission.
+
+Commit/push this focused prospective change and observe its automatic handle.
+Reuse historical eleven-source reacquisition without changing its auditor pin
+or redownloading; the moving source remains unresolved. No scientific settings,
+core, scores, raw inputs, old archives or unrelated outputs change. No native
+inference, bootstrap, biological scoring, timing, workload/service action or
+original TreeFam search is rerun. Other-QfO uncertainty, rights, matched resources,
+complete executable release and public deposition still require work. The
+publication goal remains active and incomplete.
+
 ## SwissTrees Arithmetic Archive Restored And Reproduced (2026-10-02)
 
 Read the complete objective and current ledger/HEAD before continuing. The

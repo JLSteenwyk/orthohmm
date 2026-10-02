@@ -91,18 +91,27 @@ def audit(source_path, source_sha, output, download_proteomes=False):
                 name = Path(urlsplit(item["source_url"]).path).name
                 if name not in entries:
                     raise ValueError("Expected source filename absent from provider inventory")
-                command = [binary["path"], "-r", ref["path"]]
+                # GNU and Apple sum default to BSD; Apple's sum has no -r flag.
+                command = [binary["path"], ref["path"]]
+                row.update(command=command, expected=entries[name])
                 result = subprocess.run(command, capture_output=True, text=True, check=True)
+                row["command_stdout"] = result.stdout
                 values = result.stdout.split(maxsplit=2)
+                if (len(values) != 3 or not all(v.isdecimal() for v in values[:2])
+                        or int(values[0]) > 65535 or values[2].strip() != ref["path"]
+                        or int(values[1]) != (ref["bytes"] + 1023) // 1024):
+                    raise ValueError("Invalid BSD checksum command output")
                 observed = dict(bsd_checksum=int(values[0]), blocks_1024=int(values[1]))
-                row.update(command=command, command_stdout=result.stdout, expected=entries[name],
-                           observed=observed, status="matched" if observed == entries[name] else "mismatch")
+                row.update(observed=observed, status="matched" if observed == entries[name] else "mismatch")
                 if download_proteomes and row["status"] == "matched":
                     row["fresh_download"] = reacquire(item["source_url"], ref, output / (item["code"] + ".fa.gz"))
                     if not row["fresh_download"]["exact_retained_bytes"]:
                         row["status"] = "fresh_download_mismatch"
-            except (HTTPError, URLError, TimeoutError, ValueError, UnicodeError) as error:
+            except (HTTPError, URLError, OSError, ValueError, UnicodeError, subprocess.CalledProcessError) as error:
                 row.update(status="unresolved", error_type=type(error).__name__, error=str(error))
+                if isinstance(error, subprocess.CalledProcessError):
+                    row.update(command_returncode=error.returncode, command_stdout=error.stdout,
+                               command_stderr=error.stderr)
         check(ref)
         rows.append(row)
     check(source_ref)

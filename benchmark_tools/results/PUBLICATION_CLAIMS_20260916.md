@@ -232,6 +232,15 @@ raw-source portability, uncertainty, rights, controlled timing and the full
 executable/public release remain open. Frozen scientific scores/settings and
 existing archives are unchanged.
 
+The [provider-checksum follow-up](PROVIDER_CHECKSUM_PORTABILITY_20261002.md)
+now inspects actual source-00dd macOS Python 3.10 fast CI: all 76 preceding
+checker/bundler cases pass, with 29 other failures overall. It removes a
+macOS-incompatible native checksum flag while preserving BSD provider semantics;
+138 focused local checks pass. Malformed output and command failure stay
+unresolved; unchanged scientific settings/scores and historical source/download
+receipts are not repinned. New auditor remote confirmation, raw-data portability,
+rights, uncertainty, controlled resources and full release remain open.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

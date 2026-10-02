@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "00dd7ea800c0416c0e9dfb5460986093eeba3a2d",
+  "purpose": "native BSD provider checksum portability and fail-closed command evidence",
+  "sources": [
+    {"path": "benchmark_tools/audit_three_kingdoms_provider_checksums.py", "bytes": 7323, "sha256": "21cfd141e5f00d0a389abff0924dc5402dc01f7d1cdd13bef5be72cf2b68d9e6"},
+    {"path": "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "bytes": 6999, "sha256": "e58d1797541045e0f2ef1ab20487c3ca99df5875357077671d0c60fa01e66e9a"}
+  ],
+  "native_checksum_binary": {"path": "/usr/bin/sum", "bytes": 35240, "sha256": "cb26f2ac681394db07cb9eaeed4ae42b0c73784f7654bdd3680671948313be49", "version": "sum (GNU coreutils) 9.4"},
+  "native_cases": {"passed": 5, "input_sizes": [0, 3, 1023, 1024, 1025], "rounded_blocks": [0, 1, 1, 1, 2], "default_and_explicit_bsd_outputs_equal_on_linux": true, "actual_mac_execution": false},
+  "tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "tests/unit/test_audit_three_kingdoms_sources.py", "tests/unit/test_audit_three_kingdoms_pair_counts.py", "tests/unit/test_check_swiss_descriptive_tables.py", "tests/unit/test_bundle_swiss_descriptive_tables.py", "--junitxml=benchmarks/work/provider_sum_portability_complete_20261002.xml"],
+    "passed": 138, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 4.51, "junit_duration_s": 4.487,
+    "scope_counts": {"provider": 32, "sources": 15, "pair_counts": 15, "swiss_checker": 49, "swiss_bundler": 27},
+    "new_provider_cases": 16,
+    "report": {"path": "benchmarks/work/provider_sum_portability_complete_20261002.xml", "bytes": 23238, "sha256": "93ad7f3dc7b4b0b0e40b61274a3d6eee185d7aca03371f79d1532de87a71a3fd"},
+    "earlier_overlapping_report": {"path": "benchmarks/work/provider_sum_portability_20261002.xml", "bytes": 8117, "sha256": "38da61c231ff60299f03dc569d457d13115c88cff6280c1048086bdd47cd7310", "passed": 32}
+  },
+  "failure_source_ci": {
+    "source_commit": "548e02f4a90e1cad45a426dde9d8f934cc62f20f",
+    "run_id": 36970509918, "inspected_job_id": 110723304074,
+    "scope": "macOS Python 3.11 test-fast only",
+    "case": "tests/unit/test_audit_three_kingdoms_provider_checksums.py::test_offline_audit_matches_and_skips_moving",
+    "exception": "CalledProcessError: /usr/bin/sum -r returned nonzero",
+    "log": {"path": "benchmarks/work/ci_remote_548e02f4_20261002/110723304074.log", "bytes": 2171657, "sha256": "fca329ec54aefafc8f8afdd65f41964e2ef8b1e6e76e885c7c98c49fe99070ac"}
+  },
+  "preceding_ci_observation": {
+    "source_commit": "00dd7ea800c0416c0e9dfb5460986093eeba3a2d",
+    "run_id": 36973483066,
+    "observed_at_utc": "2026-10-02T06:31:20.358966+00:00",
+    "jobs": [
+      {"id": 110732219535, "name": "cpu-wheel", "status": "completed", "conclusion": "success"},
+      {"id": 110732219763, "name": "test-full", "status": "in_progress", "conclusion": null},
+      {"id": 110732219855, "name": "test-fast (3.12)", "status": "in_progress", "conclusion": null},
+      {"id": 110732219862, "name": "docs", "status": "completed", "conclusion": "success"},
+      {"id": 110732219868, "name": "test-fast (3.13)", "status": "in_progress", "conclusion": null},
+      {"id": 110732219922, "name": "test-fast (3.10)", "status": "in_progress", "conclusion": null},
+      {"id": 110732219928, "name": "test-fast (3.11)", "status": "in_progress", "conclusion": null}
+    ],
+    "manual_restart_or_resubmission": false
+  },
+  "preceding_ci_inspection": {
+    "source_commit": "00dd7ea800c0416c0e9dfb5460986093eeba3a2d",
+    "run_id": 36973483066, "inspected_job_id": 110732219922,
+    "scope": "macOS Python 3.10 test-fast only",
+    "downloaded_at_utc": "2026-10-02T06:35:21.825470+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_00dd7ea8_20261002/110732219922.log", "bytes": 2169211, "sha256": "f19857bcaf2131e6085ab2633450e2ac259f4edf1da8c1b24016160b3cd413f3"},
+    "overall": {"passed": 13841, "failed": 29, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 320.64},
+    "prior_bundler_cases_passed": 27, "prior_checker_cases_passed": 49,
+    "changed_provider_auditor_in_this_ci": false,
+    "jobs_observed_at_utc": "2026-10-02T06:35:48.284159+00:00",
+    "terminal_failed_test_jobs": [110732219922, 110732219928, 110732219868],
+    "live_test_jobs": [110732219763, 110732219855],
+    "cpu_wheel": "success", "docs": "success",
+    "manual_restart_or_resubmission": false
+  },
+  "primary_semantics_sources": [
+    "https://raw.githubusercontent.com/apple-oss-distributions/file_cmds/main/cksum/cksum.c",
+    "https://raw.githubusercontent.com/apple-oss-distributions/file_cmds/main/cksum/cksum.1",
+    "https://www.gnu.org/s/coreutils/manual/html_node/sum-invocation.html"
+  ],
+  "raw_download_or_scientific_rerun": false,
+  "scientific_core_changed": false,
+  "historical_receipts_repinned": false,
+  "controlled_timing_executed": false,
+  "redistribution_cleared": false,
+  "publication_ready": false
+}

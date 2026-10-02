@@ -59,9 +59,16 @@ raw annotations/scoring, bootstrap intervals or the existing review archive.
 The [SwissTrees arithmetic archive](results/SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
 packages that unchanged checker and committed inputs. Its actual fresh
 restoration under Python 3.12 reproduces all 208 rows and 984 cells with
-original-checkout reads blocked; 76 combined local cases pass. Prior checker
-cases are now macOS-confirmed, but the new bundler has no remote confirmation
-yet. This derived-table component is not raw admission or the full study release.
+original-checkout reads blocked; 76 combined local cases pass. The subsequent
+actual macOS Python 3.10 fast log confirms all 76 checker/bundler cases pass,
+but has 29 other failures. This derived-table component is not raw admission
+or the full study release.
+
+The [provider-checksum follow-up](results/PROVIDER_CHECKSUM_PORTABILITY_20261002.md)
+preserves BSD checksum semantics while removing a macOS-incompatible flag.
+Malformed output and execution failures cannot become verified matches;
+138 focused local tests pass. Historical source verification is not rerun or
+repinned, and data rights, controlled timing and full release remain open.
 
 The FastOMA and OrthoMCL launch examples below describe historical workflows.
 They are **not** the corrected-input publication execution recipe. Do not

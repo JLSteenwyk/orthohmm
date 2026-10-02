@@ -393,6 +393,12 @@ This audit does not launch work or replace a quiet-window review.
   and SHA256 equality to retained compressed inputs. The moving Xenopus URL
   remains unresolved; this is not redistribution clearance or per-tool provenance.
 
+- [Provider-checksum portability](results/PROVIDER_CHECKSUM_PORTABILITY_20261002.md)
+  removes an unsupported macOS flag while retaining native BSD semantics.
+  Command errors stay unresolved, malformed output is rejected and postflight
+  input checks remain required. All 138 focused local cases pass; this is not a
+  new provider download, raw scoring run or new macOS execution proof.
+
 - [Full OrthoBench recovery protocol](results/FULL_RECOVERY_ORTHOBENCH_PROTOCOL_20260926.md)
   freezes the 251,378-gene end-to-end run through the new explicit entrypoint.
   Job 22326 was submitted after protocol commit; its completed evidence is
