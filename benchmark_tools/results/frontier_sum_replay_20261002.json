@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "6645b515aef7d6421d32caa6060b2ce405442349",
+  "purpose": "preserve historical left-to-right frontier CPU aggregation with strict replay equality across tested Python versions",
+  "sources": [
+    {"path": "benchmark_tools/probe_cgroup_frontier.py", "bytes": 7207, "sha256": "719b90cf4147d6c48211926cda9221229d492a44437c035962194b7b67a73e75"},
+    {"path": "tests/unit/test_probe_cgroup_frontier.py", "bytes": 8267, "sha256": "e25f7249ceae82479fabe8a58f337703a3578233d50b975c6c7ed243646f2b55"},
+    {"path": "tests/unit/test_replay_frontier_overhead_measurement.py", "bytes": 5985, "sha256": "cc1b1ce785a0fa0180a68734ebf01a29a6b071756e370c70a1951e7fe037a790"}
+  ],
+  "previous_helper_sha256": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635",
+  "unchanged_input": {"path": "benchmark_tools/results/dgx_frontier_native_smokes_21831.json", "bytes": 1983713, "sha256": "2f6d33f9dad301bbe3d51d3135ca61ee883373e556b0cc852e7c66fa631c1fca"},
+  "system_python_before": {
+    "python": "3.12.3", "methods_checked": 3, "mismatched_fields": 16,
+    "field_suffixes": ["outside_target_frontier_cpu_s", "root_minus_frontier_cpu_s"],
+    "maximum_absolute_difference_seconds": 1.7763568394002505e-15,
+    "all_other_screening_fields_equal": true,
+    "report": {"path": "benchmarks/work/frontier_sum_before_20261002.json", "bytes": 3470, "sha256": "2fabc20205c9e8da6c829b4e4e42fbb91e289769e3c6ba95304375ee3b3acabd"}
+  },
+  "local_prechange_tests": {
+    "python": "3.10.13", "passed": 59, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 10.00, "junit_duration_s": 9.979,
+    "report": {"path": "benchmarks/work/frontier_sum_before_local_20261002.xml", "bytes": 9028, "sha256": "8776c92b151c27b67d2b326ff60b3b6da97094d9169c1608f5d58f9f56c72192"}
+  },
+  "local_final_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_probe_cgroup_frontier.py", "tests/unit/test_replay_frontier_overhead_measurement.py", "tests/unit/test_measure_native_frontier_step.py", "tests/unit/test_measure_frontier_boundary_step.py", "tests/unit/test_probe_dgx_cpu_hierarchy.py", "tests/unit/test_probe_native_pressure.py", "tests/unit/test_run_dgx_frontier_overhead.py", "tests/unit/test_dgx_frontier_native.py", "--junitxml=benchmarks/work/frontier_sum_complete_20261002.xml"],
+    "python": "3.10.13", "passed": 172, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 13.70, "junit_duration_s": 13.678,
+    "scope_counts": {"frontier": 22, "replay": 37, "periodic_collector": 13, "boundary_collector": 15, "hierarchy": 18, "pressure": 12, "overhead_wrapper": 38, "native_wrapper": 17},
+    "new_regressions": 5,
+    "report": {"path": "benchmarks/work/frontier_sum_complete_20261002.xml", "bytes": 24990, "sha256": "37262cc9f93127824d40cace808b487c77289d1a04619d5d062bb1682d8ee6d5"}
+  },
+  "system_python_after": {
+    "python": "3.12.3", "methods_checked": 3, "mismatched_fields": 0,
+    "comparison": "exact complete nested screening equality",
+    "report": {"path": "benchmarks/work/frontier_sum_after_20261002.json", "bytes": 757, "sha256": "bce9c1791209ba76fab5be68ae41d73d6ec1ac4775acc2a45f2e6db0a92f82db"}
+  },
+  "fresh_copied_replay": {
+    "python": "3.12.3", "standard_library_only": true,
+    "staged_files": 15, "staged_bytes": 2079752, "project_source_origins": 14,
+    "methods_checked_exactly": 3, "guard_canary_blocked": true,
+    "original_path_events_after_canary": 0, "all_project_origins_staged": true,
+    "child_subprocesses_forbidden": true, "temporary_copy_removed": true,
+    "os_containment": false, "cross_host_restoration": false,
+    "report": {"path": "benchmarks/work/frontier_sum_copied_20261002.json", "bytes": 3355, "sha256": "35b6b69d5fad4db06376d44c5f4f426a309bb623781f2c25005cea4d94b7fd49"}
+  },
+  "failure_ci": {
+    "source_commit": "c7b3056e34283e657ad09f397030b92207f1b21a",
+    "run_id": 36978663641, "job_id": 110747986627,
+    "scope": "macOS Python 3.13 test-fast only",
+    "case": "test_retained_native_periodic_raw_evidence_replays[portable_report_fixture]",
+    "error": "CPU replay differs from retained screening",
+    "log": {"path": "benchmarks/work/ci_remote_c7b3056e_20261002/110747986627.log", "bytes": 2294473, "sha256": "c5ce3beb94e8853991fe6b7fba3c629e11d574dbb9bead7d28dee3a9de94d307"}
+  },
+  "preceding_ci_observation": {
+    "source_commit": "6645b515aef7d6421d32caa6060b2ce405442349",
+    "run_id": 36981155399, "observed_at_utc": "2026-10-02T08:09:01.116889+00:00",
+    "live_test_job_ids": [110755747202, 110755747414, 110755747489],
+    "queued_test_job_ids": [110755747429, 110755747517],
+    "linux_native_diagnostics": "success", "cpu_wheel": "success", "docs": "success",
+    "this_patch_in_that_ci": false, "manual_restart_or_resubmission": false
+  },
+  "absolute_tolerance_added": false,
+  "raw_counters_or_screening_thresholds_changed": false,
+  "historical_results_or_receipts_repinned": false,
+  "prospective_source_inventory_refresh_required": true,
+  "scientific_settings_or_scores_changed": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}

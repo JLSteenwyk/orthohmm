@@ -42,6 +42,14 @@ def save(path, value):
     path.write_text(json.dumps(value))
 
 
+@pytest.mark.parametrize("index", range(3))
+def test_all_retained_method_cpu_screens_reproduce_exactly(index):
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/dgx_frontier_native_smokes_21831.json").read_text())
+    measured = report["runs"][index]["verification"]["measurement"]
+    assert module.periodic_evaluate(measured["points"], measured["native"], measured["job_id"]) == measured["screening"]
+
+
 def test_retained_native_periodic_raw_evidence_replays(native):
     directory, measured, command = native
     result = module.replay(directory, "periodic", measured["job_id"], command)

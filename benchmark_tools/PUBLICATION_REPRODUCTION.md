@@ -565,6 +565,12 @@ The first Linux job fails one of 76 tests. Its [launcher staging follow-up](resu
 copies committed source for the test, preserves native checks and gives
 76 local passes. Do not label the failed original job as complete confirmation.
 
+The [strict historical CPU replay follow-up](results/FRONTIER_SUM_REPLAY_20261002.md)
+fixes interpreter-dependent descriptive aggregate rendering at its source,
+without tolerance or timing-threshold changes. Actual system Python 3.12
+reproduces all three screens, also from a checkout-blocked copied tree.
+Freeze prospective inventories with the new helper hash; never repin old receipts.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

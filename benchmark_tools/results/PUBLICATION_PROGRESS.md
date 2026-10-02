@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Exact Frontier CPU Replay Across Tested Interpreters (2026-10-02)
+
+Previous turn is progress at pushed 6645: capable Linux CI, launcher staging
+and actual 76-case/twenty-worker confirmation, retaining the failed first
+job. Read full objective/current ledger/HEAD and observe run 36981155399.
+At 07:57:07 UTC Linux diagnostics succeeds, wheel is live and five macOS
+tests/docs are queued. No restart. Timing stays deferred with no contention
+poll, scheduling question, DGX access or unrelated process/service action.
+
+Investigate the retained source-c7b portable CPU replay failure. Actual
+installed system Python 3.12.3 reproduces sixteen differences over three
+method screens, confined to two descriptive frontier aggregates; maximum
+absolute difference is 1.7763568394002505e-15 seconds. Everything else,
+including screening decisions, matches. Python 3.10 reproduces exactly.
+Official Python documentation confirms changed builtin float summation.
+
+Preserve historical left-to-right addition in just the two frontier
+aggregates, retaining empty-set integer zero. No tolerance or validator,
+raw counter, scope/order, threshold or admission change. Add two synthetic
+regressions and three complete exact retained-screen tests. The new helper
+needs prospective source inventories; historical receipts/private copies
+are not repinned and stale readiness bindings are not thereby authorized.
+
+**172 local tests pass in 13.70s**, zero errors/failures/skips. The preceding
+59-case pre-change local pass overlaps and is not a failed control. Actual
+Python 3.12 after change gives complete exact equality for all three screens.
+A fresh standard-library child reproduces them from 15 copied files with
+fourteen staged source origins. Canary is blocked; later original-path events
+are zero, child subprocesses forbidden, temporary copies removed. This is
+Python-event guarding, not OS containment, full raw/native or cross-host proof.
+[Evidence and pins](FRONTIER_SUM_REPLAY_20261002.md) preserve before/after,
+copied receipts, tests and the already-retained remote failure.
+
+At 08:09:01 UTC the same preceding run has full/3.10/3.12 tests live and
+3.11/3.13 queued; Linux diagnostics/wheel/docs succeed. New correction is
+not in that source. Commit/push and observe automatic CI; do not infer
+new macOS or sibling/full success or restart a handle. Scientific code,
+settings/scores, collectors, strict replay and archived input stay unchanged
+relative to 6645. No biological inference, bootstrap, scoring, source search,
+old archive regeneration or production timing occurs. Other uncertainty,
+rights, controlled resources, full release and deposition remain open.
+The original publication goal stays active and incomplete.
+
 ## Actual Linux Native CI Confirmation (2026-10-02)
 
 After pushing f38f9db3, actual automatic run 36980829967 has Linux diagnostic

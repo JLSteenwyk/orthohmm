@@ -73,6 +73,12 @@ The first Linux job has 75 passes and one ignored-launcher failure. The
 [explicit test staging follow-up](results/LINUX_NATIVE_LAUNCHER_STAGING_20261002.md)
 retains that failure and gives 76 local passes; new-runner confirmation is pending.
 
+The [frontier CPU replay correction](results/FRONTIER_SUM_REPLAY_20261002.md)
+preserves historical aggregate addition order without relaxing exact replay.
+All three archived method screens match under Python 3.12, including a
+checkout-blocked copied child; 172 local tests pass. New source-bound recipes
+must be frozen prospectively. This does not admit controlled timing or full release.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

@@ -40,6 +40,30 @@ def test_disjoint_accounting_and_negative_residual(tmp_path, synthetic_linux_boo
     assert result["scientific_timings_admitted"] is False
 
 
+def test_float_aggregation_preserves_historical_addition_order(tmp_path):
+    left, right = points(tmp_path)
+    increments = {"/system.slice/daemon": 100000, "/system.slice/slurm/job_1": 125000,
+                  "/system.slice/slurm/job_2": 200000, "/user.slice": 300000}
+    for row in right["rows"]:
+        row["raw"] = f"usage_usec {1000000 + increments[row['scope']]}\n"
+    result = module.compare(left, right)
+    assert result["outside_target_frontier_cpu_s"] == 0.6000000000000001
+    assert result["root_minus_frontier_cpu_s"] == 0.5 - 0.7250000000000001
+    assert result["scientific_timings_admitted"] is False
+
+
+def test_empty_outside_aggregate_retains_integer_zero(tmp_path):
+    left, right = points(tmp_path)
+    for point in (left, right):
+        target = point["target"]
+        point["rows"] = [r for r in point["rows"] if r["scope"] == target]
+        for key in ("inventory_before", "inventory_after"):
+            point[key]["identities"] = {target: point[key]["identities"][target]}
+    result = module.compare(left, right)
+    assert result["outside_target_frontier_cpu_s"] == 0
+    assert type(result["outside_target_frontier_cpu_s"]) is int
+
+
 @pytest.mark.parametrize("scope", ["/", "relative", "/a/../b", "/a/", "/a//b", "//a"])
 def test_scope_normalization(scope):
     with pytest.raises(ValueError):

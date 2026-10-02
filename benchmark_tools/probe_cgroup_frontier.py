@@ -117,9 +117,15 @@ def compare(left, right):
         return value / 1e6
     scopes = {a["scope"]: delta(a, b) for a, b in zip(left["rows"], right["rows"])}
     root_delta = delta(left["root"][0], right["root"][1])
+    # Preserve the historical left-to-right float addition across Python versions.
+    frontier_total, outside_total = 0, 0
+    for scope, value in scopes.items():
+        frontier_total += value
+        if scope != left["target"]:
+            outside_total += value
     return dict(scope_cpu_s=scopes, target_cpu_s=scopes[left["target"]],
-                outside_target_frontier_cpu_s=sum(v for k, v in scopes.items() if k != left["target"]),
-                root_outer_cpu_s=root_delta, root_minus_frontier_cpu_s=root_delta-sum(scopes.values()),
+                outside_target_frontier_cpu_s=outside_total,
+                root_outer_cpu_s=root_delta, root_minus_frontier_cpu_s=root_delta-frontier_total,
                 scientific_timings_admitted=False, controlled_workload_verified=False,
                 limitations=["Non-atomic counters; differences are not bounds or timing corrections.",
                     "Ancestor-direct tasks and accounting discrepancies remain in the signed root residual.",
