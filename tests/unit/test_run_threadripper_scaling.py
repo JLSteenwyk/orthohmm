@@ -69,6 +69,131 @@ def test_select_preserves_exact_run_and_has_no_side_effects(setup):
     assert len(sources) == 3
 
 
+def private_setup(setup, monkeypatch):
+    root, request, runs = setup
+    tools = root / "benchmark_tools"
+    results = tools / "results"
+    script = tools / "run_threadripper_private_scaling.sh"
+    script.write_text("# synthetic private submission\n")
+    plan = put(results / "threadripper_private_commands_20260928.json", {"runs": runs, "deployment": "synthetic private interpreter"})
+    controller_path = root / "synthetic_controller_python"
+    controller_path.write_bytes(b"synthetic controller identity; never executed\n")
+    monkeypatch.setattr(driver.sys, "executable", str(controller_path))
+    controller = driver.record(controller_path)
+    binding = put(root / "binding.json", dict(runtime_specs=[["fixture", "digest"]],
+        controller_python=controller))
+    lookup = put(results / "threadripper_private_lookup_v2_20260928.json", dict(
+        baseline=driver.record(root / "baseline.json"), binding=binding))
+    monkeypatch.setattr(driver, "PRIVATE_PLAN_SHA", plan["sha256"])
+    monkeypatch.setattr(driver, "PRIVATE_LOOKUP_SHA", lookup["sha256"])
+    recipe = put(root / "recipe.json", dict(schema="threadripper_executor_recipe_v1", root=str(root),
+        sources=[driver.record(tools / "run_threadripper_scaling.py"), driver.record(script)]))
+    request.update(deployment="private_v2_20260928", plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"],
+                   scheduler_command=str(script), recipe=recipe)
+    policy = json.loads((root / "environment_policy.json").read_text())
+    policy["plan_sha256"] = plan["sha256"]
+    policy_ref = put(root / "environment_policy.json", policy)
+    ready = json.loads((root / "ready.json").read_text())
+    ready.update(plan_sha256=plan["sha256"], lookup_sha256=lookup["sha256"], recipe_sha256=recipe["sha256"],
+                 environment_policy=policy_ref)
+    request["readiness_review"] = put(root / "ready.json", ready)
+    preflight = json.loads((root / "preflight.json").read_text())
+    preflight.update(plan_sha256=plan["sha256"], recipe_sha256=recipe["sha256"], readiness_review_sha256=request["readiness_review"]["sha256"])
+    put(root / "preflight.json", preflight)
+    monkeypatch.setenv("ORTHOHMM_THREADRIPPER_DEPLOYMENT", "private_v2_20260928")
+    return root, request, runs
+
+
+def test_explicit_private_selection_and_gate_preserve_identity(setup, monkeypatch):
+    root, request, runs = private_setup(setup, monkeypatch)
+    run, lookup, history, sources = driver.select(request, root, 42)
+    assert run == runs[0] and history["progress"]["index"] == 0
+    assert lookup["binding"] == driver.record(root / "binding.json")
+    assert not (root / "runs").exists() and len(sources) == 3
+    gate, directory, calls = guard((root, request, runs))
+    assert gate(directory) == {"budget": "checked"} and calls == [directory]
+
+
+@pytest.mark.parametrize("fault", ["old_plan", "old_lookup", "old_script", "no_deployment", "wrong_ready"])
+def test_private_request_never_mixes_shared_bindings(setup, monkeypatch, fault):
+    root, request, _ = private_setup(setup, monkeypatch)
+    if fault == "old_plan": request["plan_sha256"] = driver.PLAN_SHA
+    elif fault == "old_lookup": request["lookup_sha256"] = driver.LOOKUP_SHA
+    elif fault == "old_script": request["scheduler_command"] = str(root / "benchmark_tools/run_threadripper_scaling.sh")
+    elif fault == "no_deployment": request.pop("deployment")
+    else:
+        ready = json.loads((root / "ready.json").read_text())
+        ready["plan_sha256"] = driver.PLAN_SHA
+        request["readiness_review"] = put(root / "ready.json", ready)
+    with pytest.raises(ValueError):
+        driver.select(request, root, 42)
+    assert not (root / "runs").exists()
+
+
+@pytest.mark.parametrize("name", [None, True, "private_latest", "", []])
+def test_unknown_deployment_refused(name):
+    with pytest.raises(ValueError, match="Unknown retained"):
+        driver.deployment(dict(deployment=name))
+
+
+def test_private_submission_bootstrap_does_not_fall_back_to_shared(setup, monkeypatch):
+    root, request, _ = private_setup(setup, monkeypatch)
+    ref = put(root / "request.json", request)
+    monkeypatch.delenv("ORTHOHMM_THREADRIPPER_DEPLOYMENT")
+    with pytest.raises(ValueError, match="bootstrap"):
+        driver.execute(Path(ref["path"]), ref["sha256"])
+    assert not (root / "runs").exists()
+
+
+def test_private_pin_constants_match_retained_artifacts_and_bootstrap():
+    root = Path(__file__).resolve().parents[2]
+    profile = driver.deployment(dict(deployment="private_v2_20260928"))
+    results = root / "benchmark_tools/results"
+    assert driver.record(results / profile["plan"])["sha256"] == profile["plan_sha"]
+    assert driver.record(results / profile["lookup"])["sha256"] == profile["lookup_sha"]
+    controller = json.loads((results / "threadripper_private_controller_20260928.json").read_text())["interpreter"]
+    script = root / "benchmark_tools" / profile["script"]
+    text = script.read_text()
+    assert controller["sha256"] in text
+    assert controller["path"].split(str(root), 1)[1] in text
+    assert "/home/bizon/anaconda3" not in text
+    assert "ORTHOHMM_THREADRIPPER_DEPLOYMENT=private_v2_20260928" in text
+    for token in ("--exclusive", "--cpus-per-task=64", "--mem=128G", "--time=1-02:00:00", "--no-requeue"):
+        assert token in text
+    syntax = subprocess.run(["bash", "-n", str(script)], capture_output=True, text=True, timeout=10)
+    assert syntax.returncode == 0, syntax.stderr
+
+
+@pytest.mark.parametrize("fault", ["missing", "wrong_path", "wrong_hash"])
+def test_private_controller_failure_precedes_session_or_native_work(setup, monkeypatch, fault):
+    root, request, _ = private_setup(setup, monkeypatch)
+    binding = json.loads((root / "binding.json").read_text())
+    if fault == "missing": binding.pop("controller_python")
+    elif fault == "wrong_path": binding["controller_python"]["path"] = str(root / "other_controller")
+    else: binding["controller_python"]["sha256"] = "0" * 64
+    binding_ref = put(root / "binding.json", binding)
+    lookup_path = root / "benchmark_tools/results/threadripper_private_lookup_v2_20260928.json"
+    lookup = json.loads(lookup_path.read_text())
+    lookup["binding"] = binding_ref
+    lookup_ref = put(lookup_path, lookup)
+    request["lookup_sha256"] = lookup_ref["sha256"]
+    monkeypatch.setattr(driver, "PRIVATE_LOOKUP_SHA", lookup_ref["sha256"])
+    ready = json.loads((root / "ready.json").read_text())
+    ready["lookup_sha256"] = lookup_ref["sha256"]
+    request["readiness_review"] = put(root / "ready.json", ready)
+    ref = put(root / "request.json", request)
+    monkeypatch.setattr(driver, "__file__", str(root / "benchmark_tools/run_threadripper_scaling.py"))
+    monkeypatch.setattr(driver.sys, "dont_write_bytecode", True)
+    monkeypatch.setattr(driver.sys, "pycache_prefix", "/dev/shm/orthohmm_scaling_driver_42")
+    monkeypatch.setattr(driver.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+    for key, value in dict(SLURM_JOB_ID="42", SLURM_CPUS_PER_TASK="64", SLURM_MEM_PER_NODE="131072", PYTHONHASHSEED="0").items():
+        monkeypatch.setenv(key, value)
+    monkeypatch.chdir(root)
+    with pytest.raises(ValueError, match="controller interpreter|Frozen input/source"):
+        driver.execute(Path(ref["path"]), ref["sha256"])
+    assert not (root / "runs").exists()
+
+
 @pytest.mark.parametrize("key,value", [("job_id", 43), ("index", True), ("index", -1),
     ("index", 27), ("index", 1), ("execution_authorized", 1), ("execution_authorized", False),
     ("plan_sha256", "wrong"), ("lookup_sha256", "wrong"),
@@ -239,7 +364,10 @@ temporary.rename(target)
 @pytest.mark.parametrize("raises", [False, True])
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
-def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails):
+@pytest.mark.parametrize("private", [False, True])
+def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, raises, worker_fails, stream_fails, private):
+    if private:
+        setup = private_setup(setup, monkeypatch)
     root, request, runs = setup
     ref = put(root / "request.json", request)
     monkeypatch.setattr(driver, "__file__", str(root / "benchmark_tools/run_threadripper_scaling.py"))
@@ -254,7 +382,8 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     monkeypatch.setenv("PYTHONPYCACHEPREFIX", "/dev/shm/orthohmm_scaling_driver_42")
     monkeypatch.chdir(root)
     monkeypatch.setattr(driver, "execution_environment", lambda baseline: ({}, None))
-    monkeypatch.setattr(driver, "RuntimeChecker", lambda *args: "checker")
+    runtime_bindings = []
+    monkeypatch.setattr(driver, "RuntimeChecker", lambda *args: runtime_bindings.append(args) or "checker")
     calls = []
     worker_events = []
     class Worker:
@@ -275,6 +404,8 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     def measured(run, baseline, specs, collector, job, **kwargs):
         calls.append(run)
         assert run == runs[0] and job == 42 and kwargs["runtime_checker"] == "checker"
+        selected = driver.deployment(request)
+        assert runtime_bindings[0][:2] == (root / "benchmark_tools/results" / selected["lookup"], selected["lookup_sha"])
         assert isinstance(kwargs["release_guard"], driver.EnvironmentalReleaseGuard)
         assert worker_events == ["started"]
         if raises:

@@ -13,6 +13,12 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [private executor route](THREADRIPPER_PRIVATE_EXECUTOR_20261002.md) now
+selects the retained private plan/lookup/controller explicitly instead of
+requiring the historical shared route. The 229 focused checks are synthetic/
+component evidence only. No current full-runtime approval, readiness permit,
+environment pass, native handoff validation or controlled timing is created.
+
 The [latest nine-page main review](PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md)
 now presents the completed evolutionary simulations and tree stress tests
 explicitly, including unavailable fixed-length contrasts, negative paired

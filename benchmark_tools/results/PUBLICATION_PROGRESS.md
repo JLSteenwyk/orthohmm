@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Explicit Private Threadripper Executor Route (2026-10-02)
+
+Previous turn progressed at pushed `84d4e9bd` with the inspected nine-page
+simulation manuscript. Read goal/HEAD/latest ledger and observe its exact CI
+run 37017458701. At 14:27:25 UTC wheel/Linux succeed, five macOS jobs are live
+and docs queued. No restarted jobs, inspected/inferred sibling counts or full
+matrix success. Timing remains deferred without host polls, quiet-window
+questions, DGX access or unrelated process/service actions.
+
+Inspect the remaining executor preparation gates; retain/reuse calibration
+22380 rather than rerun it. Find an actual wiring gap: executor/submission bind
+only original shared plan/lookup/Anaconda despite the retained private plan,
+v2 lookup and controller. Add explicit `private_v2_20260928` selection, fixed
+private pins and a separately named private submission script. Bind the selected
+plan through readiness/policy/responder/release and selected lookup through
+runtime checks. Private bootstrap verifies its binary and literal bound
+entrypoint; no shared fallback. Historical no-field requests, original pins,
+submission script, scientific package/results and all 27 identities/resources
+remain unchanged. Six retained artifact files match the base Git blobs; actual
+private controller binary is a direct file and matches its existing pin.
+
+Initial 81 checks pass. First expanded panel has 91 passes/10 failures (7.15s):
+identical synthetic plan bytes and resolved-base interpreter fixtures. Second
+has 114 passes/eight failures (7.46s): strict pin comparison rejects symlinked
+synthetic controller records. Preserve both failed XMLs; use a direct, explicit
+synthetic controller identity that is never executed. Production checks are
+not loosened. Corrected 122-case panel passes in 7.04s. Add three controller
+rejections and broaden history/progress/process-stream/runtime regression.
+Final seven-module **229-case panel passes in 8.34s**, zero errors/failures/skips;
+JUnit 34,951 bytes, SHA256
+`657788efa8f3b05e4521e34677b395c2c36fdfd571e9347b5714b95b328a6a98`.
+Panels overlap. Bash syntax passes without script execution or scheduler launch.
+
+See [route evidence and remaining gates](THREADRIPPER_PRIVATE_EXECUTOR_20261002.md).
+Commit/push the validated wiring milestone and observe its own CI separately.
+No request/recipe/readiness review, current transitive-runtime validation,
+new lookup run, native handoff or timing result is generated. Historical
+bindings may still reject later source drift; do not automatically refresh
+them. Real environment review, full native private handoff, causal slowdown,
+final recipe/runtime readiness and quiet window remain required. Other-QfO
+uncertainty and full runtime/rights/release/deposition/manuscript reconciliation
+also remain open. Original publication goal stays active.
+
 ## Main-Text Simulation Review Completed (2026-10-02)
 
 Source checkpoint `140b6ef3` is committed/pushed before rendering. Render the

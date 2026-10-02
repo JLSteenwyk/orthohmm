@@ -15,20 +15,21 @@ def put(path, value):
     return worker.record(path)
 
 
-@pytest.fixture
-def setup(tmp_path, monkeypatch, synthetic_linux_boot_id):
+@pytest.fixture(params=["shared_v3_20260928", "private_v2_20260928"])
+def setup(tmp_path, monkeypatch, synthetic_linux_boot_id, request):
+    selected = worker.deployment(dict(deployment=request.param))
     boot = synthetic_linux_boot_id
     support = put(tmp_path / 'support.json', {'synthetic_test_only': True})
     process_policy = dict(schema='threadripper_process_policy_v2', boot_id=boot,
         review_reference='synthetic test only', ordinary_processes=[])
     process_ref = put(tmp_path / 'process.json', process_policy)
     policy = dict(schema='threadripper_environment_policy_v1', decision='reviewed', host='bizon',
-        plan_sha256=worker.PLAN_SHA, evidence=[support], review_reference='synthetic test only',
+        plan_sha256=selected['plan_sha'], evidence=[support], review_reference='synthetic test only',
         process_policy=process_ref, configuration_files=[support], maximum_foreign_average_cores=.1,
         maximum_pressure_percent=dict(cpu=0., io=0., memory=0.))
     policy_ref = put(tmp_path / 'policy.json', policy)
     readiness = put(tmp_path / 'readiness.json', dict(environment_policy=policy_ref))
-    request = dict(job_id=42, index=0, recipe=support, readiness_review=readiness,
+    request = dict(deployment=request.param, job_id=42, index=0, recipe=support, readiness_review=readiness,
                    environment_preflight_path=str(tmp_path / 'environment_preflight.json'))
     request_ref = put(tmp_path / 'request.json', request)
     directory = tmp_path / 'measurement'

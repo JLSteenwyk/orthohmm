@@ -16,7 +16,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.probe_host_counters import snapshot as host_snapshot
 from benchmark_tools.review_threadripper_process_policy import number, review as process_review
-from benchmark_tools.run_threadripper_scaling import PLAN_SHA, expect, read, review, select
+from benchmark_tools.run_threadripper_scaling import PLAN_SHA, deployment, expect, read, review, select
 from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 
@@ -100,13 +100,14 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
             sleep=time.sleep, waiter=wait_file, host_sample=host_snapshot):
     root = Path(root or Path(__file__).resolve().parent.parent)
     request = read(request_ref)
+    selected = deployment(request)
     job = int(os.environ["SLURM_JOB_ID"])
     if os.uname().nodename != "bizon":
         raise ValueError("Require the authorized local host")
     run, _, _, sources = select(request, root, job)
     scope = job_scope(os.getpid(), job)
     policy = review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
-                                    host="bizon", plan_sha256=PLAN_SHA))
+                                    host="bizon", plan_sha256=selected["plan_sha"]))
     ready = read(request["readiness_review"])
     if ready.get("environment_policy") != policy_ref:
         raise ValueError("Readiness does not bind this environmental policy")
@@ -149,7 +150,7 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
                       "Preflight observations cannot exclude short-lived work or certify whole-run isolation.",
                       "A preflight pass does not submit a job, release native inference or admit timing results."])
     response = dict(schema="threadripper_environment_preflight_v1", decision="failed", job_id=job,
-        index=request["index"], plan_sha256=PLAN_SHA, recipe_sha256=request["recipe"]["sha256"],
+        index=request["index"], plan_sha256=selected["plan_sha"], recipe_sha256=request["recipe"]["sha256"],
         readiness_review_sha256=request["readiness_review"]["sha256"], environment_policy=policy_ref,
         whole_run_observer_ready=False, unrelated_scientific_work_present=None,
         observation_started_unix_ns=started, review_reference=policy["review_reference"],

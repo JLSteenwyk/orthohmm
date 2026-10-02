@@ -23,7 +23,25 @@ from benchmark_tools.review_threadripper_process_policy import number
 
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
 LOOKUP_SHA = "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
+PRIVATE_PLAN_SHA = "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+PRIVATE_LOOKUP_SHA = "5996f36dad39c7a7e38c38f134cbe5e13796c4a23dae0444a77a473f12cfdb54"
 TIME_LIMIT = "1-02:00:00"
+
+
+def deployment(request):
+    """Select an explicit retained deployment, without changing historical pins."""
+    name = request.get("deployment", "shared_v3_20260928")
+    if name == "shared_v3_20260928":
+        return dict(name=name, plan_sha=PLAN_SHA, lookup_sha=LOOKUP_SHA,
+                    plan="threadripper_scaling_commands_20260928.json",
+                    lookup="threadripper_python_lookup_v3_20260928.json",
+                    script="run_threadripper_scaling.sh")
+    if name == "private_v2_20260928":
+        return dict(name=name, plan_sha=PRIVATE_PLAN_SHA, lookup_sha=PRIVATE_LOOKUP_SHA,
+                    plan="threadripper_private_commands_20260928.json",
+                    lookup="threadripper_private_lookup_v2_20260928.json",
+                    script="run_threadripper_private_scaling.sh")
+    raise ValueError("Unknown retained Threadripper deployment")
 
 
 def read(ref):
@@ -53,14 +71,15 @@ def review(ref, expected):
 
 
 def select(request, root, job):
+    selected = deployment(request)
     expect(request, dict(schema="threadripper_execution_request_v1", job_id=job,
-                         execution_authorized=True, plan_sha256=PLAN_SHA,
-                         lookup_sha256=LOOKUP_SHA))
+                         execution_authorized=True, plan_sha256=selected["plan_sha"],
+                         lookup_sha256=selected["lookup_sha"]))
     index = request.get("index")
     if type(index) is not int or not 0 <= index < 27:
         raise ValueError("Invalid panel index")
     if (request["allocation_cwd"] != str(root)
-            or request["scheduler_command"] != str(root / "benchmark_tools/run_threadripper_scaling.sh")):
+            or request["scheduler_command"] != str(root / "benchmark_tools" / selected["script"])):
         raise ValueError("Wrong local allocation entry point")
     recipe = read(request["recipe"])
     expect(recipe, dict(schema="threadripper_executor_recipe_v1", root=str(root)))
@@ -71,18 +90,18 @@ def select(request, root, job):
     for item in sources:
         check(item)
     results = root / "benchmark_tools/results"
-    plan_path = results / "threadripper_scaling_commands_20260928.json"
-    plan = read_frozen(plan_path, PLAN_SHA)
+    plan_path = results / selected["plan"]
+    plan = read_frozen(plan_path, selected["plan_sha"])
     position(plan["runs"], [])
-    lookup_path = results / "threadripper_python_lookup_v3_20260928.json"
-    lookup = read_frozen(lookup_path, LOOKUP_SHA)
+    lookup_path = results / selected["lookup"]
+    lookup = read_frozen(lookup_path, selected["lookup_sha"])
     history = bind(record(plan_path), request["history"], command=request["scheduler_command"],
                    cwd=str(root), time_limit=TIME_LIMIT)
     if (history["progress"]["status"] != "next_identity_requires_preflight"
             or history["progress"]["index"] != index):
         raise ValueError("Panel is live, unresolved, complete or at another identity")
     ready = review(request["readiness_review"], dict(schema="threadripper_readiness_review_v1",
-        decision="passed", plan_sha256=PLAN_SHA, lookup_sha256=LOOKUP_SHA,
+        decision="passed", plan_sha256=selected["plan_sha"], lookup_sha256=selected["lookup_sha"],
         recipe_sha256=request["recipe"]["sha256"], full_scale_observer_validated=True,
         environment_policy_frozen=True))
     run = plan["runs"][index]
@@ -122,7 +141,7 @@ class EnvironmentalReleaseGuard:
             self.waiter(path, seconds=20)
             ref = record(path)
             ready = review(ref, dict(schema="threadripper_environment_preflight_v1", decision="passed",
-                job_id=self.request["job_id"], index=self.request["index"], plan_sha256=PLAN_SHA,
+                job_id=self.request["job_id"], index=self.request["index"], plan_sha256=deployment(self.request)["plan_sha"],
                 recipe_sha256=self.request["recipe"]["sha256"],
                 readiness_review_sha256=self.request["readiness_review"]["sha256"],
                 whole_run_observer_ready=True, unrelated_scientific_work_present=False))
@@ -153,6 +172,9 @@ def execute(request_path, request_sha):
     if request_ref["sha256"] != request_sha:
         raise ValueError("Execution request digest differs")
     request = read(request_ref)
+    selected = deployment(request)
+    if os.environ.get("ORTHOHMM_THREADRIPPER_DEPLOYMENT", "shared_v3_20260928") != selected["name"]:
+        raise ValueError("Submission bootstrap and requested deployment differ")
     job = int(os.environ["SLURM_JOB_ID"])
     cache = Path(f"/dev/shm/orthohmm_scaling_driver_{job}")
     if (os.uname().nodename != "bizon" or Path.cwd() != root
@@ -165,7 +187,7 @@ def execute(request_path, request_sha):
     readiness = read(request["readiness_review"])
     policy_ref = readiness["environment_policy"]
     policy = review(policy_ref, dict(schema="threadripper_environment_policy_v1", decision="reviewed",
-                                    host="bizon", plan_sha256=PLAN_SHA))
+                                    host="bizon", plan_sha256=selected["plan_sha"]))
     number(policy["maximum_foreign_average_cores"])
     number(policy["maximum_sample_period_s"], positive=True)
     number(policy["maximum_pressure_sample_period_s"], positive=True)
@@ -174,10 +196,15 @@ def execute(request_path, request_sha):
         raise ValueError("Require prospective CPU, memory and I/O pressure bounds")
     baseline = read(lookup["baseline"])
     binding = read(lookup["binding"])
+    if selected["name"] == "private_v2_20260928":
+        controller = binding.get("controller_python")
+        if not isinstance(controller, dict) or os.path.abspath(sys.executable) != controller["path"]:
+            raise ValueError("Private deployment requires its bound controller interpreter")
+        check(controller)
     session = Path(run["measurement_directory"]).parent.parent / "sessions" / f"run_{run['index']:02d}"
     session.mkdir(parents=True, exist_ok=False)
     result = dict(status="executor_started", index=run["index"], job_id=job,
-                  request=request_ref, history=history, automatic_retry=False,
+                  request=request_ref, history=history, deployment=selected, automatic_retry=False,
                   scientific_timings_admitted=False, next_submission_authorized=False,
                   limitations=["External reviews are bound, not independently certified by this executor.",
                                "Terminal scheduler, runtime, environment, resource and native-output audits remain required.",
@@ -188,8 +215,8 @@ def execute(request_path, request_sha):
         env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONPYCACHEPREFIX=str(session / "python_cache"))
         os.environ.update(env)
         os.chdir(run["cwd"])
-        checker = RuntimeChecker(root / "benchmark_tools/results/threadripper_python_lookup_v3_20260928.json",
-            LOOKUP_SHA, session / "lookup_checks")
+        checker = RuntimeChecker(root / "benchmark_tools/results" / selected["lookup"],
+            selected["lookup_sha"], session / "lookup_checks")
         budget = ReleaseBudgetGuard(job, command=request["scheduler_command"], cwd=str(root))
         evidence = [request["recipe"], request["readiness_review"], policy_ref, *sources, *history["evidence"]]
         with EnvironmentWorker(session, request_ref, policy_ref, root) as worker:

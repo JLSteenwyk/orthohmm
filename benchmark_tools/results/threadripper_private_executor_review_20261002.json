@@ -1,0 +1,222 @@
+{
+  "base_commit": "84d4e9bdfc026c10b6cdb170d4467c85daaa3e34",
+  "bash_syntax_validated": true,
+  "bound_controller_binary": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "ci": {
+    "head_sha": "84d4e9bdfc026c10b6cdb170d4467c85daaa3e34",
+    "job_execution_counts_inspected": false,
+    "jobs": [
+      {
+        "conclusion": "success",
+        "id": 110871730864,
+        "name": "cpu-wheel",
+        "status": "completed"
+      },
+      {
+        "conclusion": null,
+        "id": 110871730872,
+        "name": "public-coverage (includes slow; excludes four raw-source cases)",
+        "status": "in_progress"
+      },
+      {
+        "conclusion": null,
+        "id": 110871730953,
+        "name": "public-fast (3.12)",
+        "status": "in_progress"
+      },
+      {
+        "conclusion": null,
+        "id": 110871731015,
+        "name": "docs",
+        "status": "queued"
+      },
+      {
+        "conclusion": null,
+        "id": 110871731026,
+        "name": "public-fast (3.11)",
+        "status": "in_progress"
+      },
+      {
+        "conclusion": null,
+        "id": 110871731076,
+        "name": "public-fast (3.13)",
+        "status": "in_progress"
+      },
+      {
+        "conclusion": "success",
+        "id": 110871731168,
+        "name": "linux-native-diagnostics",
+        "status": "completed"
+      },
+      {
+        "conclusion": null,
+        "id": 110871731977,
+        "name": "public-fast (3.10)",
+        "status": "in_progress"
+      }
+    ],
+    "new_private_route_included": false,
+    "observed_utc": "2026-10-02T14:27:25.507489+00:00",
+    "run_id": 37017458701
+  },
+  "controller_binary_identity_verified": true,
+  "current_transitive_runtime_validated": false,
+  "dgx_accessed": false,
+  "historical_submission_unchanged": {
+    "bytes": 652,
+    "path": "benchmark_tools/run_threadripper_scaling.sh",
+    "sha256": "9f2ba5884a0bf1cd9e1188979368c8860809eac4edd3eea5f4b66c166f15c3af"
+  },
+  "host_contention_polled": false,
+  "limitations": [
+    "Synthetic composition/negative tests, not integrated private native environmental handoff.",
+    "The first two expanded panels expose fixture identity/path errors and remain retained failures.",
+    "Final source identities apply to the final milestone, not retroactively to earlier test source snapshots.",
+    "Binary pin equality is not package/library/runtime closure or current lookup validation.",
+    "Final source/runtime readiness, reviewed environment, native slowdown and quiet window remain required.",
+    "No timing run or production permit is created; complete publication release remains unfinished."
+  ],
+  "native_controller_integration_executed": false,
+  "native_lookup_repeated": false,
+  "new_request_recipe_or_readiness_created": false,
+  "publication_ready": false,
+  "retained_artifacts_unchanged": [
+    {
+      "bytes": 203151,
+      "path": "benchmark_tools/results/threadripper_scaling_commands_20260928.json",
+      "sha256": "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
+    },
+    {
+      "bytes": 5046,
+      "path": "benchmark_tools/results/threadripper_python_lookup_v3_20260928.json",
+      "sha256": "d5f26d4c31346f6d710ca911a5220a0448a0a58e1997d708ceb821a8e2a18e34"
+    },
+    {
+      "bytes": 206643,
+      "path": "benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 3017,
+      "path": "benchmark_tools/results/threadripper_private_lookup_v2_20260928.json",
+      "sha256": "5996f36dad39c7a7e38c38f134cbe5e13796c4a23dae0444a77a473f12cfdb54"
+    },
+    {
+      "bytes": 470750,
+      "path": "benchmark_tools/results/threadripper_private_baseline_20260928.json",
+      "sha256": "b39e5f26518191ad53e7a796690f083a0bd5ede2081cbfbcb7b00a86947acdc3"
+    },
+    {
+      "bytes": 8304,
+      "path": "benchmark_tools/results/threadripper_private_controller_20260928.json",
+      "sha256": "6d4fe58b3d2f545fe847a544378b8aa956a60d358822784f861df8d7347673ba"
+    }
+  ],
+  "scheduler_job_submitted": false,
+  "schema_version": 1,
+  "scientific_settings_or_results_changed": false,
+  "scientific_timings_admitted": false,
+  "sources": [
+    {
+      "bytes": 14427,
+      "path": "benchmark_tools/run_threadripper_scaling.py",
+      "sha256": "1a6fa3ef063d56a26cf6f9a31c67979f1551582056b413d56be4765cb2729fd7"
+    },
+    {
+      "bytes": 12744,
+      "path": "benchmark_tools/threadripper_environment_worker.py",
+      "sha256": "0519584cc4b47672719959ecf698e944b15093b36c13c0bcb2d6bd9ee4707f5b"
+    },
+    {
+      "bytes": 906,
+      "path": "benchmark_tools/run_threadripper_private_scaling.sh",
+      "sha256": "82d18c55746f3450e00b041e727e1f0294077308062bd9789eb60303980d3d85"
+    },
+    {
+      "bytes": 3678,
+      "path": "benchmark_tools/THREADRIPPER_PRIVATE_EXECUTOR.md",
+      "sha256": "7f17384e6a82b01f103aa4812cf0d0c565fdef3bda5c5d32c4c51289007e5457"
+    },
+    {
+      "bytes": 22281,
+      "path": "tests/unit/test_run_threadripper_scaling.py",
+      "sha256": "4ea781865bd3cd381df570b35f85b9480287fd1208addd98d714af2b9deb47b7"
+    },
+    {
+      "bytes": 12109,
+      "path": "tests/unit/test_threadripper_environment_worker.py",
+      "sha256": "385bcc88e991ed311473638788c21af6a827e4c5963c5aa3333e459add7d9b41"
+    }
+  ],
+  "status": "private_executor_route_component_validated",
+  "test_panels_overlap": true,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "junit_time_seconds": 6.526,
+      "receipt": {
+        "bytes": 12041,
+        "path": "benchmarks/work/threadripper_deployment_initial_tests_20261002.xml",
+        "sha256": "4034973174997f4f3d9d68133a280d25f3ac1a6408d19cc6b163ac79697fccbf"
+      },
+      "skipped": 0,
+      "tests": 81
+    },
+    {
+      "errors": 0,
+      "failures": 10,
+      "junit_time_seconds": 7.102,
+      "receipt": {
+        "bytes": 75368,
+        "path": "benchmarks/work/threadripper_deployment_tests_20261002.xml",
+        "sha256": "83a048284bf68450701ae8e692286385b22b6a85f18fff865a64c7520c917825"
+      },
+      "skipped": 0,
+      "tests": 101
+    },
+    {
+      "errors": 0,
+      "failures": 8,
+      "junit_time_seconds": 7.41,
+      "receipt": {
+        "bytes": 64534,
+        "path": "benchmarks/work/threadripper_deployment_corrected_tests_20261002.xml",
+        "sha256": "d22d35a53b028ac7841e5c79aa58270ee6bacfc71364204109610e37363683d7"
+      },
+      "skipped": 0,
+      "tests": 122
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "junit_time_seconds": 6.993,
+      "receipt": {
+        "bytes": 19019,
+        "path": "benchmarks/work/threadripper_deployment_validated_tests_20261002.xml",
+        "sha256": "b31266e18c49885fe1eb826858668f751967dd1ca72df413c39a9a0f55b105ba"
+      },
+      "skipped": 0,
+      "tests": 122
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "junit_time_seconds": 8.24,
+      "receipt": {
+        "bytes": 34951,
+        "path": "benchmarks/work/threadripper_deployment_final_tests_20261002.xml",
+        "sha256": "657788efa8f3b05e4521e34677b395c2c36fdfd571e9347b5714b95b328a6a98"
+      },
+      "skipped": 0,
+      "tests": 229
+    }
+  ],
+  "timing_executed": false,
+  "unrelated_jobs_or_services_modified": false,
+  "utc": "2026-10-02T14:27:25.507539+00:00"
+}

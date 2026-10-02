@@ -7,6 +7,11 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [private Threadripper executor route](THREADRIPPER_PRIVATE_EXECUTOR.md)
+now explicitly binds the retained private plan, lookup and controller without
+falling back to shared Python. All 229 focused checks pass; no readiness permit
+or timing run was created, and controlled timing remains deferred.
+
 The [latest nine-page main review](results/PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md)
 now includes the completed evolutionary simulations and supplied/perturbed-tree
 results, preserving negative findings and failures. All pages were inspected;

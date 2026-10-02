@@ -18,6 +18,12 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [explicit private executor route](THREADRIPPER_PRIVATE_EXECUTOR.md) closes
+the shared-only routing gap while preserving historical pins and all release
+guards. It has 229 focused synthetic/component checks, not actual private
+native handoff or timing admission. Fresh source/runtime validation, reviewed
+environment, causal overhead and a quiet window remain required before launch.
+
 The [latest nine-page main-text review](results/PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md)
 integrates the completed length-panel comparisons and tree stress tests at
 committed source `140b6ef3`. All pages were inspected and direct inputs checked;
