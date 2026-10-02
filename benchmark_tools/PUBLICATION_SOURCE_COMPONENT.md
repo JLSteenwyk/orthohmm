@@ -22,6 +22,11 @@ It checks their fixed scientific hashes, requires both helper scripts, and
 records schema v2 and the explicit profile in the index. Default `source-only`
 exports and historical v1 verification retain their original selection.
 
+The `native-preparation` profile extends that selection with the exact
+historical base reconstruction receipt and required offline installer helper
+modules. It does not include package archives, the pip wheel, a Conda bootstrap
+or native tools. The four result-document exceptions are explicitly pinned.
+
 Dataset/reference files, test samples, native predictions, scoring outputs,
 result receipts/plans, figures, manuscript assets, third-party source archives,
 dependency wheels, binaries and runtime/OS images are excluded. This avoids
@@ -106,6 +111,51 @@ the separately provisioned integrated workflow. References are scoring inputs,
 not inference inputs. No upstream scorer or native inference runs here.
 The native wheel sets, aligner/tree builder, base Python and installer still
 require separate preparation; this profile is not the complete executable study.
+
+## Offline Historical Base Installation
+
+Use `--profile native-preparation` with the builder to include the base
+reconstruction document and controller. After verifying the emitted index,
+supply a directory containing the 19 exact archives listed under
+`acquisition.packages` in the exported
+`results/reconstructed_base_fixture_20260927.json`. The document retains
+their HTTPS provider URLs, SHA-256/MD5 and byte counts. Acquire those materials
+separately; the controller neither downloads nor solves for replacements.
+
+Supply the exact `pip-26.2.1-py3-none-any.whl` bootstrap artifact (1,816,632
+bytes, SHA-256
+`71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e`)
+and a separately trusted, compatible Conda executable with its externally
+recorded entrypoint digest. No Conda installation or its transitive bootstrap
+dependencies are provided or authenticated by this component.
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/install_publication_base.py install \
+  --receipt /relocated/source-component/workflow/benchmark_tools/results/reconstructed_base_fixture_20260927.json \
+  --cache /absolute/acquired-base-archives \
+  --conda /absolute/trusted-conda/bin/conda --conda-sha256 RETAINED_CONDA_ENTRYPOINT_SHA256 \
+  --pip-wheel /absolute/acquired-wheels/pip-26.2.1-py3-none-any.whl \
+  --output /absolute/fresh/base-preparation --acknowledge-historical-runtime
+```
+
+Use an output directory outside the immutable source component. Complete
+input preflight precedes creation; execution has private HOME/cache/config,
+offline copied explicit packages, a hash-required pip overlay and no retry.
+The four stages install Conda packages, bootstrap pip, run `pip check` and
+snapshot the installed Python. Success additionally requires all 19 expected
+name/version/build triples, Python 3.10.13 on x86-64, exactly pip 26.2.1 in
+site-packages, byte-checked pip payloads, unchanged supplied/staged artifacts
+and a retained `complete.json`. Failures preserve their partial directory and
+logs, do not emit success, and must not be silently resumed or overwritten.
+
+The resulting `base-preparation/python-runtime/bin/python` can serve the
+separately provisioned integrated workflow's `--base-python` and
+`--installer-python`. This is the historical reconstruction policy already
+used for the admitted full OrthoBench reproduction, not a security-cleared
+installation recommendation. Conda metadata equality does not verify every
+prefix-transformed payload, and shared OS libraries remain outside scope.
+This step does not install the scientific environments, infer orthology,
+admit timing, or complete the full study release.
 
 ## Executable Study Boundary
 

@@ -13,7 +13,7 @@ def git(repo, *args):
     return subprocess.check_output(["git", "-C", str(repo), *args], text=True).strip()
 
 
-@pytest.fixture(params=["source-only", "orthobench-inputs"])
+@pytest.fixture(params=["source-only", "orthobench-inputs", "native-preparation"])
 def exported(tmp_path, monkeypatch, request):
     repo = tmp_path / "repo"
     repo.mkdir()
@@ -38,10 +38,13 @@ def exported(tmp_path, monkeypatch, request):
         path = repo / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content)
-    if request.param == "orthobench-inputs":
+    if request.param != "source-only":
         root = Path(module.__file__).resolve().parent.parent
-        for name in [*module.SUPPORT_PINS, "benchmark_tools/verify_orthobench_acquisition.py",
-                     "benchmark_tools/rebind_orthobench_data.py"]:
+        support_names = {*module.support_pins(request.param), "benchmark_tools/verify_orthobench_acquisition.py",
+                         "benchmark_tools/rebind_orthobench_data.py"}
+        if request.param == "native-preparation":
+            support_names |= module.BASE_HELPERS
+        for name in support_names:
             target = repo / name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes((root / name).read_bytes())
@@ -69,15 +72,18 @@ def test_component_revisions_and_exclusions(exported):
     assert (bundle / "scientific/orthohmm/version.py").read_text() == "VERSION = 'fixture'\n"
     assert (bundle / "workflow/benchmark_tools/probe.py").read_text() == "pass\n"
     index = json.loads((bundle / "SOURCE_INDEX.json").read_text())
-    support = index.get("profile") == "orthobench-inputs"
+    support = index.get("profile") in {"orthobench-inputs", "native-preparation"}
     assert (bundle / "workflow/benchmark_tools/results").exists() is support
     if support:
         assert {p.relative_to(bundle / "workflow").as_posix()
-                for p in (bundle / "workflow/benchmark_tools/results").iterdir()} == set(module.SUPPORT_PINS)
+                for p in (bundle / "workflow/benchmark_tools/results").iterdir()} == set(module.support_pins(index["profile"]))
     else:
         assert index["schema"] == "publication_source_components_v1"
     assert not (bundle / "workflow/tests/samples").exists()
-    assert result["components"] == dict(scientific=5, workflow=10 if support else 5)
+    workflow_count = 5 if not support else 10
+    if index.get("profile") == "native-preparation":
+        workflow_count += 1 + len(module.BASE_HELPERS)
+    assert result["components"] == dict(scientific=5, workflow=workflow_count)
     assert result["executable_benchmark_reproduced"] is False
     assert result["publication_ready"] is False
     assert result["redistribution_clearance"] is False
@@ -189,7 +195,7 @@ def test_support_contract_rejected(exported, defect):
     _, bundle, result = exported
     path = bundle / "SOURCE_INDEX.json"
     index = json.loads(path.read_text())
-    if index.get("profile") != "orthobench-inputs":
+    if index.get("profile") not in {"orthobench-inputs", "native-preparation"}:
         # v1 cannot reinterpret the legacy selection even with a new external digest.
         digest = rewrite_index(bundle, lambda value: value.update(profile="orthobench-inputs"))
         with pytest.raises(ValueError, match="Historical source schema"):
@@ -234,3 +240,21 @@ def test_builder_rejects_changed_support_before_output(exported, tmp_path, defec
     with pytest.raises(ValueError):
         module.build(repo, "HEAD", output, "orthobench-inputs")
     assert not output.exists()
+
+
+def test_native_base_manifest_pin_rejected(exported):
+    _, bundle, _ = exported
+    path = bundle / "SOURCE_INDEX.json"
+    index = json.loads(path.read_text())
+    if index.get("profile") != "native-preparation":
+        assert not (bundle / "workflow" / next(iter(module.BASE_SUPPORT_PINS))).exists()
+        return
+    name = next(iter(module.BASE_SUPPORT_PINS))
+    target = bundle / "workflow" / name
+    target.write_text("{}\n")
+    for row in index["files"]:
+        if row["path"] == "workflow/" + name:
+            row.update(module.identity(target.read_bytes()))
+    path.write_text(json.dumps(index))
+    with pytest.raises(ValueError, match="Frozen acquisition/runtime"):
+        module.verify(bundle, module.identity(path.read_bytes())["sha256"])

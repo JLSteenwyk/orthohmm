@@ -18,7 +18,21 @@ SUPPORT_PINS = {
     "benchmark_tools/results/integrated_orthobench_data_20260927.json":
         "fcae062525eec61a11de876ae798acffc0f2fe9614466c8ce339a6c214666061",
 }
-PROFILES = {"source-only", "orthobench-inputs"}
+BASE_SUPPORT_PINS = {
+    "benchmark_tools/results/reconstructed_base_fixture_20260927.json":
+        "7af55a78192eea22cf978ff331c1c5556965e17862b565793321b14857479f59",
+}
+BASE_HELPERS = {"benchmark_tools/" + name + ".py" for name in (
+    "install_publication_base", "stage_base_archives", "run_integrated_publication_workflow",
+    "audit_recovery_install", "audit_frozen_overlay_install", "audit_leiden_recovery_wheel",
+    "prepare_frozen_build_overlay", "verify_frozen_source_archive", "prepare_ob_candidate_neighborhood")}
+PROFILES = {"source-only", "orthobench-inputs", "native-preparation"}
+
+
+def support_pins(profile):
+    if profile == "native-preparation":
+        return {**SUPPORT_PINS, **BASE_SUPPORT_PINS}
+    return SUPPORT_PINS if profile == "orthobench-inputs" else {}
 
 
 def identity(content):
@@ -44,7 +58,7 @@ def selected(name, component, profile="source-only"):
         return (name in {"LICENSE.md", GUIDE, "benchmark_tools/PUBLICATION_REPRODUCTION.md"}
                 or re.fullmatch(r"benchmark_tools/[^/]+\.py", name) is not None
                 or re.fullmatch(r"tests/unit/[^/]+\.py", name) is not None
-                or profile == "orthobench-inputs" and name in SUPPORT_PINS)
+                or name in support_pins(profile))
     raise ValueError("Unknown source component")
 
 
@@ -52,9 +66,11 @@ def required(component, profile):
     if component == "scientific":
         return {"LICENSE.md", "setup.py", "orthohmm/version.py"}
     names = {"LICENSE.md", RUNNER, GUIDE}
-    if profile == "orthobench-inputs":
+    if profile in {"orthobench-inputs", "native-preparation"}:
         names |= {*SUPPORT_PINS, "benchmark_tools/verify_orthobench_acquisition.py",
                   "benchmark_tools/rebind_orthobench_data.py"}
+    if profile == "native-preparation":
+        names |= {*BASE_SUPPORT_PINS, *BASE_HELPERS}
     return names
 
 
@@ -72,8 +88,8 @@ def inventory(repo, revision, component, profile="source-only"):
         if kind != "blob" or mode not in {"100644", "100755"} or name in result:
             raise ValueError("Require distinct regular committed source blobs")
         content = subprocess.check_output(["git", "-C", str(repo), "cat-file", "blob", blob])
-        if name in SUPPORT_PINS and identity(content)["sha256"] != SUPPORT_PINS[name]:
-            raise ValueError("Frozen OrthoBench support manifest differs")
+        if name in support_pins(profile) and identity(content)["sha256"] != support_pins(profile)[name]:
+            raise ValueError("Frozen acquisition/runtime support manifest differs")
         result[name] = (content, int(mode, 8) & 0o777, blob)
     if not required(component, profile) <= result.keys():
         raise ValueError("Source component is incomplete")
@@ -95,7 +111,7 @@ def verify(directory, manifest_sha):
         profile = "source-only"
     elif manifest["schema"] == "publication_source_components_v2":
         profile = manifest.get("profile")
-        if profile != "orthobench-inputs":
+        if profile not in {"orthobench-inputs", "native-preparation"}:
             raise ValueError("Unsupported acquisition-support profile")
     else:
         raise ValueError("Unknown source schema")
@@ -121,8 +137,8 @@ def verify(directory, manifest_sha):
         payload = path.read_bytes()
         if identity(payload) != {key: row[key] for key in ("bytes", "sha256")}:
             raise ValueError("Source payload identity differs")
-        if source in SUPPORT_PINS and identity(payload)["sha256"] != SUPPORT_PINS[source]:
-            raise ValueError("Frozen OrthoBench support manifest differs")
+        if source in support_pins(profile) and identity(payload)["sha256"] != support_pins(profile)[source]:
+            raise ValueError("Frozen acquisition/runtime support manifest differs")
         if source.endswith(".py"):
             compile(payload, name, "exec")
             syntax += 1
@@ -167,11 +183,15 @@ def build(repo, revision, output, profile="source-only"):
                         "Integrity and syntax checks do not execute imports, install dependencies or reproduce inference.",
                         "Historical absolute paths, remote hosts and unavailable assets in source are not rewritten or authorized.",
                         "Project license copies do not establish third-party attribution or complete release clearance."])
-    if profile == "orthobench-inputs":
+    if profile in {"orthobench-inputs", "native-preparation"}:
         manifest.update(schema="publication_source_components_v2", profile=profile)
         manifest["exclusions"][4] = "Result receipts/plans other than three fixed acquisition-support manifests; figures and manuscript assets"
         manifest["limitations"].append(
             "Support manifests preserve historical provenance paths; acquisition/rebinding must use separately supplied local inputs. No raw data or native runtime is included.")
+        if profile == "native-preparation":
+            manifest["exclusions"][4] = "Result receipts/plans other than four fixed acquisition/runtime support documents; figures and manuscript assets"
+            manifest["limitations"].append(
+                "Native-preparation additionally includes the fixed historical base reconstruction receipt and required controller helpers, not archives, wheels or Conda bootstrap.")
     output.mkdir(parents=True, exist_ok=False)
     for name, (content, mode) in payloads.items():
         path = output / name
