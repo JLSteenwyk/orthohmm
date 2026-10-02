@@ -12,6 +12,9 @@ from benchmark_tools import probe_qfo_direct_graph as probe
 
 @pytest.mark.parametrize("mode", probe.MODES)
 @pytest.mark.parametrize("edge_format", probe.FORMATS)
+@pytest.mark.skipif(not Path("/proc/self/maps").exists()
+                   or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
+                   reason="Linux loaded-library and affinity diagnostic; executed in Linux native CI")
 def test_fresh_worker_before_after_weights(tmp_path, mode, edge_format):
     launcher = tmp_path / "benchmarks/work/publication_qfo_replay_native_v1"
     package = launcher / "orthohmm"

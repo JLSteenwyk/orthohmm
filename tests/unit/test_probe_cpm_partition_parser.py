@@ -49,6 +49,16 @@ def test_duplicate_universe_and_ambiguous_function_refused(tmp_path):
 def prepare_run(tmp_path, monkeypatch):
     paths = fixture_files(tmp_path)
     monkeypatch.setattr(module, "PINS", {p.name: module.record(p)["sha256"] for p in paths})
+    # Runtime identity is synthetic here; both child executions are intercepted.
+    libc = tmp_path / "libc.fixture"
+    libc.write_bytes(b"synthetic runtime bytes\n")
+    libc_path = Path("/usr/lib/x86_64-linux-gnu/libc.so.6")
+    record = module.record
+    def fixture_record(path):
+        if Path(path) == libc_path:
+            return {**record(libc), "path": str(libc_path)}
+        return record(path)
+    monkeypatch.setattr(module, "record", fixture_record)
     status = tmp_path / "status.json"
     status.write_text(json.dumps(dict(scientific_child_command=[sys.executable],
         checked_records=[module.record(sys.executable), module.record("/usr/lib/x86_64-linux-gnu/libc.so.6")])))
@@ -57,6 +67,7 @@ def prepare_run(tmp_path, monkeypatch):
     protocol = tmp_path / "protocol.md"
     protocol.write_text("fixture protocol\n")
     monkeypatch.setattr(module, "PROTOCOL", protocol.name)
+    return libc
 
 
 @pytest.mark.parametrize("outcome", ["success", "signal", "timeout"])
@@ -92,5 +103,20 @@ def test_changed_inputs_prevent_launch(tmp_path, monkeypatch):
     (tmp_path / "partition.txt").write_text("changed\n")
     monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: pytest.fail("unexpected launch"))
     with pytest.raises(ValueError, match="Changed frozen"):
+        module.run(tmp_path, tmp_path / "out")
+    assert not (tmp_path / "out").exists()
+
+
+@pytest.mark.parametrize("fault", ["same_size", "truncated", "missing"])
+def test_changed_synthetic_runtime_prevents_launch(tmp_path, monkeypatch, fault):
+    libc = prepare_run(tmp_path, monkeypatch)
+    if fault == "same_size":
+        libc.write_bytes(b"x" * libc.stat().st_size)
+    elif fault == "truncated":
+        libc.write_bytes(b"x")
+    else:
+        libc.unlink()
+    monkeypatch.setattr(module.subprocess, "run", lambda *a, **k: pytest.fail("unexpected launch"))
+    with pytest.raises((ValueError, FileNotFoundError)):
         module.run(tmp_path, tmp_path / "out")
     assert not (tmp_path / "out").exists()

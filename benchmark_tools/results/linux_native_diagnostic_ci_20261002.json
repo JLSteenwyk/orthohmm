@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "c7b3056e34283e657ad09f397030b92207f1b21a",
+  "purpose": "execute Linux-only native diagnostics on Linux CI; retain platform-independent synthetic parser coverage",
+  "owned_sources": [
+    {"path": ".github/workflows/ci.yml", "bytes": 8470, "sha256": "8da992505e8fad98a55e8e2d34f670e313cc527205a6165b9b0670d9ded0ecbd"},
+    {"path": "tests/unit/test_probe_qfo_construction.py", "bytes": 3009, "sha256": "814017dc4fb0c03c55737bcc8f0d782f8d93c02d253767e666eff3795335fb34"},
+    {"path": "tests/unit/test_probe_qfo_direct_graph.py", "bytes": 3401, "sha256": "76816eaede823f5d6383f09bd27fb30277f3590531398b0d05cc79aa3d715bf0"},
+    {"path": "tests/unit/test_probe_cpm_high_constructor.py", "bytes": 3833, "sha256": "593b9b93964f4f058bdd47edf542cc214974100a301fe32f6849fcb43c4c0f1b"},
+    {"path": "tests/unit/test_probe_cpm_partition_parser.py", "bytes": 5370, "sha256": "f7f05d75d3ac1e0f39c7f23f57bfa7ad3be7b15dbd7ffb7b16d20f05ba185127"}
+  ],
+  "new_ci_job": {
+    "name": "linux-native-diagnostics", "runner": "ubuntu-latest", "python": "3.12", "timeout_minutes": 15,
+    "required_constructor_worker_cases": 8, "required_repeat_worker_cases": 12,
+    "all_selected_skips_failures_errors_rejected": true,
+    "junit_artifact_retained_always": true,
+    "cross_host_execution_confirmed": false,
+    "hermetic_dependencies_or_all_versions_proven": false
+  },
+  "native_gate": {
+    "required_capabilities": ["/proc/self/maps", "os.sched_getaffinity", "os.sched_setaffinity"],
+    "constructor_cases_gated_only_when_unavailable": 8,
+    "capability_expression_checks": 12,
+    "worker_assertions_changed": false,
+    "production_affinity_emulated": false
+  },
+  "synthetic_parser_binding": {
+    "logical_record_path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+    "physical_test_file": "temporary libc.fixture; never loaded",
+    "other_record_calls_bound": false,
+    "child_execution_intercepted": true,
+    "new_prelaunch_rejection_cases": ["same_size", "truncated", "missing"],
+    "native_parser_runtime_proven": false
+  },
+  "initial_tests": {
+    "passed": 76, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 18.43, "junit_duration_s": 18.415,
+    "scope_counts": {"construction": 3, "direct_graph": 6, "high_constructor": 11, "parser": 13, "repeat_worker": 43},
+    "native_worker_cases_executed": 20,
+    "report": {"path": "benchmarks/work/linux_native_diagnostics_20261002.xml", "bytes": 10615, "sha256": "ca2c12bf18edd8c1a6acdaa022cf1035eaf42d82fc6a3f61b2246d9e1d6f8169"}
+  },
+  "final_tests": {
+    "argv": ["python", "-m", "pytest", "-q", "tests/unit/test_probe_qfo_construction.py", "tests/unit/test_probe_qfo_direct_graph.py", "tests/unit/test_probe_cpm_high_constructor.py", "tests/unit/test_probe_cpm_partition_parser.py", "tests/unit/test_repeat_qfo_saved_graph.py", "tests/unit/test_estimate_rbnh_array_payload.py", "tests/unit/test_bundle_swiss_descriptive_tables.py", "tests/unit/test_check_swiss_descriptive_tables.py", "tests/unit/test_owned_process_group.py", "tests/unit/test_measure_slurm_command.py", "tests/unit/test_run_wgd_application.py", "tests/unit/test_audit_slurm_measurement.py", "tests/unit/test_audit_fas_population.py", "tests/unit/test_audit_three_kingdoms_provider_checksums.py", "--junitxml=benchmarks/work/linux_native_diagnostics_complete_20261002.xml"],
+    "passed": 317, "failed": 0, "errors": 0, "skipped": 0,
+    "stdout_duration_s": 33.53, "junit_duration_s": 33.510,
+    "overlapping_initial_and_previous_panels": true,
+    "local_python": "3.10.13", "native_worker_cases_executed": 20,
+    "report": {"path": "benchmarks/work/linux_native_diagnostics_complete_20261002.xml", "bytes": 48044, "sha256": "0b25f3981e72e13e52695fb94c740377b301f92bf5fefafdd734494014d2d875"}
+  },
+  "junit_gate_validation": {
+    "initial_invalid_expected_repeat_count": 24,
+    "initial_gate_rejected_actual_valid_report": true,
+    "corrected_expected_repeat_count": 12,
+    "corrected_gate_accepts_actual_report": true,
+    "negative_variants_rejected": ["missing_constructor", "missing_partition", "skipped", "failure", "error"],
+    "generated_temporary_copies_removed": true
+  },
+  "failure_ci": {
+    "source_commit": "3485f7f0a461571c010bc0a46437afc8b8c190ae",
+    "run_id": 36977059602, "job_id": 110743060380,
+    "scope": "macOS Python 3.13 test-fast only",
+    "constructor_worker_failures_at_missing_affinity_getter": 6,
+    "additional_high_constructor_child_failures_without_exposed_stderr": 2,
+    "high_constructor_calls_same_linux_worker_but_exact_traceback_unproven": true,
+    "synthetic_parser_fixture_failures_at_missing_libc": 4,
+    "log": {"path": "benchmarks/work/ci_remote_3485f7f0_20261002/110743060380.log", "bytes": 2326380, "sha256": "f9c86847d3ca1dc823423169e2ff684331f2315675468d6e806edd9238a88357"}
+  },
+  "preceding_ci_observation": {
+    "source_commit": "c7b3056e34283e657ad09f397030b92207f1b21a",
+    "run_id": 36978663641, "observed_at_utc": "2026-10-02T07:37:05.420112+00:00",
+    "live_test_job_ids": [110747986584, 110747986597, 110747986607, 110747986622, 110747986627],
+    "docs": "success", "cpu_wheel": "success",
+    "this_patch_in_that_ci": false, "manual_restart_or_resubmission": false
+  },
+  "preceding_ci_terminal_inspection": {
+    "source_commit": "c7b3056e34283e657ad09f397030b92207f1b21a",
+    "run_id": 36978663641, "job_id": 110747986627,
+    "observed_at_utc": "2026-10-02T07:40:38.504043+00:00",
+    "terminal_failed_test_job_ids": [110747986584, 110747986597, 110747986607, 110747986622, 110747986627],
+    "docs": "success", "cpu_wheel": "success",
+    "inspected_scope": "macOS Python 3.13 test-fast only",
+    "downloaded_at_utc": "2026-10-02T07:41:13.664929+00:00",
+    "log": {"path": "benchmarks/work/ci_remote_c7b3056e_20261002/110747986627.log", "bytes": 2294473, "sha256": "c5ce3beb94e8853991fe6b7fba3c629e11d574dbb9bead7d28dee3a9de94d307"},
+    "previous_archive_allocation_checker_cleanup_fas_provider_cases_passed": 241,
+    "overall": {"passed": 13890, "failed": 28, "errors": 0, "skipped": 110, "warnings": 30, "duration_s": 481.23},
+    "this_patch_in_that_ci": false,
+    "sibling_or_full_suite_success_inferred": false,
+    "manual_restart_or_resubmission": false
+  },
+  "production_or_scientific_sources_changed": false,
+  "scientific_settings_or_scores_changed": false,
+  "historical_archives_or_receipts_repinned": false,
+  "controlled_timing_executed": false,
+  "publication_ready": false
+}

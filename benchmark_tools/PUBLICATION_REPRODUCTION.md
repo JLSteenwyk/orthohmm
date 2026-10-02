@@ -553,6 +553,15 @@ It fixes two test-only assumptions and gives 241 local passes, preserving
 archive budget and allocation assertions. New-patch remote confirmation remains
 open; no production source, scientific receipt or historical archive is changed.
 
+The [Linux diagnostic CI scope](results/LINUX_NATIVE_DIAGNOSTIC_CI_20261002.md)
+executes affinity/loaded-library native checks on Ubuntu and requires all
+twenty worker cases, with no selected skips. The local 317-case panel passes.
+Unsupported-platform skips are explicit, not execution evidence. The mocked
+parser tests use a synthetic record only; historical native runtime admission
+and all production diagnostic code remain unchanged.
+The same evidence records actual macOS Python 3.13 confirmation of the prior
+241-case panel, with 28 remaining failures; complete CI/release is not proven.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

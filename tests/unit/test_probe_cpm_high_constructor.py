@@ -53,6 +53,9 @@ def test_no_overwrite_or_dangling_symlink(tmp_path):
 
 
 @pytest.mark.parametrize("mode", ["minimal_imports", "frozen_imports"])
+@pytest.mark.skipif(not Path("/proc/self/maps").exists()
+                   or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
+                   reason="Linux loaded-library and affinity diagnostic; executed in Linux native CI")
 def test_fresh_native_worker_on_small_graph(tmp_path, mode):
     root = Path(__file__).resolve().parents[2]
     payload = tmp_path / "payload"

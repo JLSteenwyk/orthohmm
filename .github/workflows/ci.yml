@@ -157,6 +157,43 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: docs/_build/html
+  linux-native-diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-python@master
+      with:
+        python-version: '3.12'
+    - name: Install diagnostic dependencies
+      run: python -m pip install -r requirements.txt -r tests/requirements.txt
+    - name: Execute native Linux graph and parser checks
+      run: |
+        python -m pytest -q tests/unit/test_probe_qfo_construction.py tests/unit/test_probe_qfo_direct_graph.py tests/unit/test_probe_cpm_high_constructor.py tests/unit/test_probe_cpm_partition_parser.py tests/unit/test_repeat_qfo_saved_graph.py --junitxml="$RUNNER_TEMP/linux-native-diagnostics.xml"
+        python - "$RUNNER_TEMP/linux-native-diagnostics.xml" <<'PY'
+        import sys
+        import xml.etree.ElementTree as ET
+        root = ET.parse(sys.argv[1]).getroot()
+        cases = list(root.iter('testcase'))
+        native_names = ('test_fresh_worker_constructs_without_optimization[',
+                        'test_fresh_worker_before_after_weights[',
+                        'test_fresh_native_worker_on_small_graph[')
+        assert len([c for c in cases if c.attrib['name'].startswith(native_names)]) == 8
+        assert len([c for c in cases if c.attrib['name'].startswith('test_instrumented_real_worker_exits_and_preserves_isolate[')]) == 12
+        assert not any(c.find(tag) is not None for c in cases for tag in ('skipped', 'failure', 'error'))
+        print('All selected checks executed; 20 native worker cases, no skipped/failed/error cases')
+        PY
+    - name: Retain diagnostic test receipt
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: linux-native-diagnostics
+        path: ${{ runner.temp }}/linux-native-diagnostics.xml
+        if-no-files-found: error
   cpu-wheel:
     runs-on: ubuntu-latest
     timeout-minutes: 30

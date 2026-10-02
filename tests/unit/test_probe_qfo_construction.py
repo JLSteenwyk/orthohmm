@@ -26,6 +26,9 @@ def test_conversion_preserves_values_and_original():
 
 
 @pytest.mark.parametrize("mode", ["original_int32", "explicit_int64"])
+@pytest.mark.skipif(not Path("/proc/self/maps").exists()
+                   or not all(hasattr(os, name) for name in ("sched_getaffinity", "sched_setaffinity")),
+                   reason="Linux loaded-library and affinity diagnostic; executed in Linux native CI")
 def test_fresh_worker_constructs_without_optimization(tmp_path, mode):
     launcher = tmp_path / "benchmarks/work/publication_qfo_replay_native_v1"
     package = launcher / "orthohmm"

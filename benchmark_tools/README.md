@@ -62,6 +62,14 @@ All 241 focused local cases pass; new-patch Python 3.13 execution is pending.
 The preceding actual macOS Python 3.13 log confirms all 135 cleanup/FAS/provider
 cases, but retains 37 failures and does not establish complete CI or release.
 
+The [Linux native diagnostic coverage](results/LINUX_NATIVE_DIAGNOSTIC_CI_20261002.md)
+adds a capable CI runner for Linux-only constructor/worker checks, with a
+fail-on-skip receipt gate. All 317 ordered local cases pass, including 20
+native worker cases. New-runner confirmation is pending; synthetic parser
+runtime binding does not establish native libc/parser replay or full release.
+The preceding actual macOS Python 3.13 fast log confirms all 241 prior
+archive/allocation/cleanup/FAS/provider cases; 28 other failures remain.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with

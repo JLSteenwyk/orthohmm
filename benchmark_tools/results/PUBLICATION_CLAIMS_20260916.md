@@ -276,6 +276,16 @@ Python 3.13 execution remains unconfirmed. The preceding source-3485 macOS
 with 37 other failures. This is bounded portability evidence, not total peak
 RAM, complete CI/release, improved accuracy or new resource/scientific results.
 
+The [Linux native diagnostic scope](LINUX_NATIVE_DIAGNOSTIC_CI_20261002.md)
+preserves Linux-only production requirements and adds capable-runner execution
+with a no-skips JUnit gate. All 317 ordered local tests pass, including twenty
+native worker cases on tiny synthetic graphs. New CI execution is pending.
+Synthetic parser identity binding is not real libc or full native parser proof;
+no full-scale stability, accuracy, timing or complete release claim follows.
+Its actual preceding macOS Python 3.13 log confirms all 241 prior fixture,
+checker, cleanup, FAS and provider cases, with 28 other failures. This closes
+that prior new-version check, not the new Linux execution or full suite.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

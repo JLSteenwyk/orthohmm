@@ -1,5 +1,61 @@
 # Publication Progress
 
+## Native Diagnostic Coverage On A Capable CI Runner (2026-10-02)
+
+Previous goal turn is progress at pushed c7b: two test-only Python 3.13
+fixture corrections with 241 local passes and retained failures. Read the
+complete objective/latest ledger/HEAD and observe actual run 36978663641.
+At 07:28:53 UTC all five test jobs and wheel are live; docs succeeds.
+Do not restart. Timing stays deferred without scheduling questions, host
+contention polls, DGX or unrelated process/service changes.
+
+Inspect the already-retained source-3485 Python 3.13 log. Six fresh graph
+workers fail at missing Linux affinity API before graph observation; two
+high-CPM children fail without exposed stderr, though code calls the same
+Linux worker. Do not claim their exact traceback is established. Their
+diagnostics also require loaded-library maps. Declare these capabilities on
+only the eight native cases, matching the existing repeat-worker pattern;
+leave pure checks cross-platform and production admission unchanged. Add
+Ubuntu/Python 3.12 CI execution of five diagnostic modules, requiring eight
+constructor and twelve repeat-worker cases and no selected skips/failures/
+errors. Retain the JUnit receipt even on failure. This is not skip-only repair.
+
+Four intercepted-child parser tests currently read real Linux libc in fixture
+setup on macOS. Bind only that record call to a hashed temporary synthetic
+file; preserve the logical path, other records and all production runtime
+validation. Three new same-size/truncated/missing negatives forbid child
+launch and output. No fake library is loaded or used in native evidence.
+
+**317 ordered local tests pass in 33.53s**, zero failures/errors/skips,
+including twenty native worker cases. The initial 76-case pass overlaps.
+The initial new CI gate incorrectly expects 24 repeat-worker cases and
+rejects the valid report. Check the actual matrix, correct to twelve before
+commit, and verify acceptance plus five missing/skipped/failed/error negative
+variants. All twelve capability-expression checks pass; workflow YAML parses.
+[Evidence, commands and identities](LINUX_NATIVE_DIAGNOSTIC_CI_20261002.md)
+record this failed first check and corrected scope without overstating counts.
+
+At 07:37:05 UTC preceding run 36978663641 still has five live test jobs,
+wheel/docs successes. The new workflow is not in that source. Do not infer
+new-patch remote confirmation, complete CI or exact native-crash resolution.
+Commit/push this coverage milestone and observe its automatic handle.
+
+Later, at 07:40:38 UTC, the same source-c7b run is terminal: five test
+failures, wheel/docs successes. Inspect only its actual macOS Python 3.13
+fast log and verify all prior 241 archive/allocation/checker/cleanup/FAS/
+provider cases pass. Overall: 13,890 pass, 28 fail, zero errors, 110 skip,
+30 warnings, 481.23s. This confirms the previous two fixture corrections,
+not current Linux coverage, siblings/full suite or overall release readiness.
+Retain its exact log pin without restarting any handle.
+
+Production diagnostic/core/scientific source, settings/scores and historical
+archives/receipts remain unchanged relative to c7b. Native tests use tiny
+synthetic graphs, not biological inference, bootstrap or raw scoring. No
+source search, archive regeneration or timing occurs. New capable-runner
+execution, other workstation/raw/platform failures, other-QfO uncertainty,
+rights, controlled resources, full executable release and public deposition
+remain open. The original publication goal remains active and incomplete.
+
 ## Python 3.13 Test Fixture Compatibility (2026-10-02)
 
 Previous turn is progress at pushed 3485: bounded owned-leader exit waitability,
