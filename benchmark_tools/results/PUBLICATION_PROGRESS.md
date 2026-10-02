@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Frozen Null Score Protocol Checkpoint (2026-10-02)
+
+Previous turn progressed at pushed 35059f58 with inspected manuscript artifacts.
+Read objective/ledger/HEAD and observe exact run 37001665573 at 11:36:46 UTC:
+docs/Linux/wheel succeed, all five macOS test jobs live. No restart or inferred
+counts. Timing stays deferred without questions/polls, DGX or unrelated job/
+service actions. Existing scientific runs, native portability diagnostics,
+calibration and archives are not repeated.
+
+Address a separate Methods limitation: the static approximate E filter lacks
+empirical calibration for its actual scoring recurrence. Freeze a supplementary
+synthetic null-score protocol before outcome inspection: three compositions,
+three lengths, ten seeds/1,000 independent query-target pairs per cell, full/
+width-64 scoring and five tail cutoffs. All 90 endpoints and exact binomial
+intervals/Bonferroni denominator are fixed. Preserve strict integer-score gates
+and distinguish E from its Poisson-model tail reference. Each pair has its own
+one-target database; two band outcomes do not double independent sample size.
+No fitting, extrapolation, default selection or benchmark-accuracy inference.
+
+Reuse the exact frozen 7f3a9e4 checkout and independently retained native kernel
+hash, with scalar C/two threads and current explicitly recorded scientific
+packages. New producer verifies Git blobs, module origins, kernel/runtime,
+source immutability and band/full decision consistency. All 25 new pure unit
+cases plus three existing scoring-readback cases pass: **28 in 0.81s**, zero
+errors/failures/skips. Commit the [protocol](FROZEN_NULL_SCORE_PROTOCOL_20261002.md),
+producer/tests and this checkpoint before scoring any study pair. Execution/
+results remain pending here; passing unit checks do not establish calibration.
+Scientific code/settings/scores and all historical evidence remain unchanged.
+Other-QfO uncertainty, controlled resources, rights, complete release/deposition
+and final manuscript reconciliation remain open; original goal stays active.
+
 ## Reviewed Manuscript Reproducibility Integration (2026-10-02)
 
 Complete the source checkpoint below without rerunning science or raw archives.
