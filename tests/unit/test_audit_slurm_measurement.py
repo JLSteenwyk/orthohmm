@@ -8,6 +8,8 @@ import pytest
 from benchmark_tools.audit_slurm_measurement import audit, source_record
 from benchmark_tools.measure_slurm_command import measure
 
+pytestmark = pytest.mark.usefixtures("synthetic_linux_boot_id")
+
 
 @pytest.fixture
 def evidence(tmp_path):
@@ -29,12 +31,14 @@ def evidence(tmp_path):
     return directory
 
 
-def test_saved_evidence_replays_without_quiet_host_claim(evidence):
+def test_saved_evidence_replays_without_quiet_host_claim(evidence, synthetic_linux_boot_id):
     result = audit(evidence, source_record(evidence / "results.json")["sha256"])
     assert result["status"] == "collector_evidence_replayed"
     assert result["benchmark_admitted"] is False
     assert result["controlled_workload_verified"] is False
     assert result["resource_observations"] == result["host_observations"] == 2
+    report = json.loads((evidence / "results.json").read_text())
+    assert report["clock_domain"]["boot_id"] == synthetic_linux_boot_id
 
 
 def test_wrong_report_hash(evidence):

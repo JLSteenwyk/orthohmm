@@ -11,6 +11,8 @@ import pytest
 from benchmark_tools.measure_slurm_command import check_allocation, measure, stop_owned_group
 from benchmark_tools import measure_slurm_command as measurement
 
+pytestmark = pytest.mark.usefixtures("synthetic_linux_boot_id")
+
 
 def snapshot(pid, job):
     return {"pid": pid, "job_id": job, "scope": "/job_123/step_batch/user/task_0",
@@ -41,7 +43,7 @@ def test_allocation_gate(problem):
 
 
 @pytest.mark.parametrize("code,expected", [(0, "command_exited_zero"), (7, "command_failed")])
-def test_real_command_exit_and_retained_logs(tmp_path, code, expected):
+def test_real_command_exit_and_retained_logs(tmp_path, code, expected, synthetic_linux_boot_id):
     result = measure([sys.executable, "-c", f"print('fixture'); raise SystemExit({code})"], tmp_path / "run", 123, 1, 1024, 5., .02, snapshot)
     assert result["status"] == expected and result["exit_code"] == code
     assert result["summary"]["observations"] >= 2
@@ -53,7 +55,7 @@ def test_real_command_exit_and_retained_logs(tmp_path, code, expected):
     assert rows[-1]["finished_monotonic_s"] <= result["wrapper_finished_monotonic_s"]
     assert all(row["started_monotonic_s"] <= row["finished_monotonic_s"] for row in rows)
     assert result["command_wall_s"] == end - start
-    assert result["clock_domain"]["boot_id"]
+    assert result["clock_domain"]["boot_id"] == synthetic_linux_boot_id
 
 
 def test_timeout_stops_owned_command(tmp_path):

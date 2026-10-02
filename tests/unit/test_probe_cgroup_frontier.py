@@ -1,8 +1,11 @@
 import copy
+from pathlib import Path
 
 import pytest
 
 from benchmark_tools import probe_cgroup_frontier as module
+
+pytestmark = pytest.mark.usefixtures("synthetic_linux_boot_id")
 
 
 def fixture(root):
@@ -25,8 +28,9 @@ def points(tmp_path):
     return left, module.snapshot(tmp_path, "/system.slice/slurm/job_1")
 
 
-def test_disjoint_accounting_and_negative_residual(tmp_path):
+def test_disjoint_accounting_and_negative_residual(tmp_path, synthetic_linux_boot_id):
     left, right = points(tmp_path)
+    assert left["boot_id"] == right["boot_id"] == synthetic_linux_boot_id
     result = module.compare(left, right)
     assert set(result["scope_cpu_s"]) == {"/system.slice/slurm/job_1", "/system.slice/slurm/job_2",
                                           "/system.slice/daemon", "/user.slice"}
@@ -143,3 +147,20 @@ def test_disappearing_counter_preserves_partial_reads(tmp_path, monkeypatch):
     assert len(evidence["root"]) == 1
     assert len(evidence["rows"]) == 2
     assert evidence["status"] == "invalid_frontier_snapshot"
+
+
+def test_missing_boot_preserves_failure_without_counter_claims(tmp_path, monkeypatch):
+    fixture(tmp_path)
+    read_text = Path.read_text
+    def missing(path, *args, **kwargs):
+        if path == Path("/proc/sys/kernel/random/boot_id"):
+            raise FileNotFoundError("synthetic missing boot counter")
+        return read_text(path, *args, **kwargs)
+    monkeypatch.setattr(Path, "read_text", missing)
+    with pytest.raises(module.FrontierSnapshotError) as caught:
+        module.snapshot(tmp_path, "/system.slice/slurm/job_1")
+    evidence = caught.value.evidence
+    assert evidence["error_type"] == "FileNotFoundError"
+    assert evidence["scientific_timings_admitted"] is False
+    assert evidence["root"] == evidence["rows"] == []
+    assert evidence["inventory_before"] is evidence["inventory_after"] is None

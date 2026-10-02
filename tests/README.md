@@ -37,6 +37,10 @@ boot identity rather than reading the host's Linux boot file. Other file reads
 and real native identity tests remain unchanged. Short assessment fixtures
 resolve the temporary root (including macOS's `/tmp` symlink); the production
 admission gate still rejects indirect destinations and mismatched boot identities.
+Synthetic measurement, evidence-replay, cgroup-frontier and service-reply tests
+also explicitly request that fixture. Missing boot data and reboot rejection
+remain tested; production collectors still require real Linux capabilities.
+See the [scoped validation](../benchmark_tools/results/CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md).
 
 Unit, fast and unit-coverage targets include top-level `tests/test_*.py` as
 well as `tests/unit`; integration remains a separate target. Fast tests exclude
@@ -52,6 +56,9 @@ does not replace the default strict guard or relax metadata. The retained
 plot test chooses that portable mode; strict behavior has a separate
 current-runtime fixture and one-ULP rejection tests. See the
 [policy and evidence](../benchmark_tools/results/PORTABLE_MATCHED_GRAPH_RENDERING_20261001.md).
+The [subsequent macOS log inspection](../benchmark_tools/results/CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md)
+confirms those 61 rendering and seven count-reproduction cases pass. The broader
+CI suite still fails; this is not native scientific or full-suite confirmation.
 
 A separate Linux CPU-wheel job builds committed package sources in a clean
 directory, installs into a fresh private venv and runs the existing isolated

@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Remote Rendering Confirmed And Synthetic Clock Corrections (2026-10-01)
+
+Continue from pushed df22e79a. User lacks quiet-window information and asks
+whether it is needed now: no. Controlled timing stays deferred while bounded
+reproducibility/publication work continues. No renewed host poll/question or
+unrelated workload/service changes; Threadripper only, no DGX.
+
+Inspect actual CI 36952199808, macOS Python 3.11 job 110667364838: all 61
+rendering, seven independent count-reproduction and 20 dependency cases pass.
+Overall 13,450 passed, 185 failed, 38 errors, 96 skipped, 30 warnings, 415.42s.
+At 01:58:42 UTC all five test jobs are terminal failure; Linux wheel/docs pass.
+Only this job log inspected; no inferred sibling causes or manual retries.
+
+Opt four synthetic accounting modules into the existing fixed boot-ID fixture;
+ordinary reads, real native identity tests and production collectors unchanged.
+Add missing-boot and reboot rejection cases. **83 focused cases pass in 2.36
+seconds**, zero failures/errors/skips, three new cases included, not additive
+with earlier panels. No new services queried or scientific workloads launched.
+
+[Evidence, source pins and boundaries](CI_SYNTHETIC_CLOCK_FIXTURES_20261001.md).
+Commit/push the tested milestone and observe its actual automatic CI handle.
+These clock corrections still need remote confirmation; remaining historical
+path/affinity/native/input failures are separate work. No scores/defaults changed,
+controlled timing admitted or publication readiness declared. All local commands
+terminate. Full goal remains active: uncertainty/source/rights, comparable
+resource evidence, runtime closure and the final release remain incomplete.
+
 ## Explicit Portable Rendering And Confirmed Test-Alert Closure (2026-10-01)
 
 Previous turn is progress at pushed 9b3bd5fb. Re-read objective/ledger and

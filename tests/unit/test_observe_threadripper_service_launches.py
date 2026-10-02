@@ -10,6 +10,8 @@ from benchmark_tools import observe_threadripper_service_launches as module
 
 SECRET = "never-retain-this-secret-value"
 
+pytestmark = pytest.mark.usefixtures("synthetic_linux_boot_id")
+
 
 @pytest.fixture(autouse=True)
 def local_host(monkeypatch):
@@ -96,10 +98,11 @@ def test_large_declared_file_not_read(tmp_path):
     assert module.file_identity(str(path))["observed_stable"] is False
 
 
-def test_capture_is_readonly_and_never_approves_or_exposes_values(tmp_path):
+def test_capture_is_readonly_and_never_approves_or_exposes_values(tmp_path, synthetic_linux_boot_id):
     runner, calls = runner_factory(tmp_path)
     result = module.collect(run=runner)
     assert result["boot_unchanged"] is True
+    assert result["boot_id"] == synthetic_linux_boot_id
     assert not result["errors"]
     assert result["policy_approved"] is False and result["scientific_timings_admitted"] is False
     assert SECRET not in json.dumps(result)
@@ -208,3 +211,32 @@ def test_malformed_unit_lists_rejected(defect):
         value["data"][0][0][7] = True
     with pytest.raises(ValueError):
         module.units(value)
+
+
+def test_reboot_between_service_reads_remains_unapproved(tmp_path, monkeypatch, synthetic_linux_boot_id):
+    runner, calls = runner_factory(tmp_path)
+    values = iter([synthetic_linux_boot_id, "00000000-0000-4000-8000-000000000043"])
+    read_text = Path.read_text
+    def changed(path, *args, **kwargs):
+        if path == Path("/proc/sys/kernel/random/boot_id"):
+            return next(values) + "\n"
+        return read_text(path, *args, **kwargs)
+    monkeypatch.setattr(Path, "read_text", changed)
+    result = module.collect(run=runner)
+    assert result["boot_id"] == synthetic_linux_boot_id
+    assert result["boot_unchanged"] is False
+    assert result["policy_approved"] is result["scientific_timings_admitted"] is False
+    assert len(calls) == 8 and SECRET not in json.dumps(result)
+
+
+def test_missing_boot_fails_before_any_service_query(tmp_path, monkeypatch):
+    runner, calls = runner_factory(tmp_path)
+    read_text = Path.read_text
+    def missing(path, *args, **kwargs):
+        if path == Path("/proc/sys/kernel/random/boot_id"):
+            raise FileNotFoundError("synthetic missing boot counter")
+        return read_text(path, *args, **kwargs)
+    monkeypatch.setattr(Path, "read_text", missing)
+    with pytest.raises(FileNotFoundError):
+        module.collect(run=runner)
+    assert not calls

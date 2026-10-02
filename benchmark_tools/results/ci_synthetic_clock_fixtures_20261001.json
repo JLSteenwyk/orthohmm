@@ -1,0 +1,124 @@
+{
+  "base_commit": "df22e79ac82cd67feb43343c84ee28f28e2f42f2",
+  "status": "synthetic_clock_fixture_corrections_locally_validated",
+  "remote_corrections_confirmed": false,
+  "controlled_timing_executed": false,
+  "scientific_defaults_changed": false,
+  "scores_changed": false,
+  "publication_ready": false,
+  "host_decision": "Threadripper only; quiet window not needed for this work; controlled timing deferred",
+  "existing_ci": {
+    "run_id": 36952199808,
+    "source_commit": "df22e79ac82cd67feb43343c84ee28f28e2f42f2",
+    "observed_utc": "2026-10-02T01:58:42.148399+00:00",
+    "all_five_test_jobs": "terminal_failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "job_log_inspected": 110667364838,
+    "job_python": "3.11",
+    "job_platform": "macOS",
+    "sibling_job_logs_inspected": false,
+    "summary": {
+      "passed": 13450,
+      "failed": 185,
+      "errors": 38,
+      "skipped": 96,
+      "warnings": 30,
+      "duration_s": 415.42
+    },
+    "module_results": {
+      "test_plot_matched_graph.py": {"passed": 61},
+      "test_reproduce_matched_graph_statistics.py": {"passed": 7},
+      "test_declared_test_dependencies.py": {"passed": 20}
+    },
+    "target_module_failures_and_errors_before_correction": {
+      "test_measure_slurm_command.py": 9,
+      "test_audit_slurm_measurement.py": 10,
+      "test_probe_cgroup_frontier.py": 10,
+      "test_observe_threadripper_service_launches.py": 7
+    },
+    "log": {
+      "path": "benchmarks/work/ci_remote_df22e79a_20261001/110667364838.log",
+      "bytes": 3031407,
+      "sha256": "c386ac9a459e03aea23a8bc183462e5013225feb6799badafdb0a655c6cb5d15",
+      "download_observation_utc": "2026-10-02T01:53:24.701651+00:00"
+    }
+  },
+  "tests": {
+    "cases": 83,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_cases_included": 3,
+    "pytest_duration_s": 2.36,
+    "junit_suite_duration_s": 2.320,
+    "modules": [
+      "tests.unit.test_measure_slurm_command",
+      "tests.unit.test_audit_slurm_measurement",
+      "tests.unit.test_probe_cgroup_frontier",
+      "tests.unit.test_observe_threadripper_service_launches",
+      "tests.unit.test_synthetic_linux_boot_fixture"
+    ],
+    "junit": {
+      "path": "benchmarks/work/release_alert_refresh_20261001/synthetic_clock_fixtures.xml",
+      "bytes": 11394,
+      "sha256": "6b303088eb4eab494df70039111957d14fa6b34fd4bf772934d729115f23968f"
+    }
+  },
+  "sources": [
+    {
+      "path": "tests/unit/test_measure_slurm_command.py",
+      "bytes": 8053,
+      "sha256": "699ea6359558cd36fe3f976d4ad50c8dd61499dcd002947d965495d0b15371dd"
+    },
+    {
+      "path": "tests/unit/test_audit_slurm_measurement.py",
+      "bytes": 3294,
+      "sha256": "25c3b393aa8ea7b7c937541b1ac51269880657150d4f267898430a4a773c452b"
+    },
+    {
+      "path": "tests/unit/test_probe_cgroup_frontier.py",
+      "bytes": 7095,
+      "sha256": "b6907c6bee2bf5145f3efd3b3560464cd1ac7977f66d31c8ad463c5ee1a520bb"
+    },
+    {
+      "path": "tests/unit/test_observe_threadripper_service_launches.py",
+      "bytes": 9611,
+      "sha256": "b22ced28f43c2f2150f390311e9a4bced8a10b6091355f0a50c2546eb59f870b"
+    }
+  ],
+  "unchanged_inputs": [
+    {
+      "path": "tests/conftest.py",
+      "bytes": 760,
+      "sha256": "0552e858ee636420d9eeded96f2183e09652419500ac4a4401f1ec5af4cf9d31"
+    },
+    {
+      "path": "benchmark_tools/measure_slurm_command.py",
+      "bytes": 9712,
+      "sha256": "aaa0bda5d4a1966ffd712c92c6517555b57da3e710efe99ab84b18baa8b9ad14"
+    },
+    {
+      "path": "benchmark_tools/audit_slurm_measurement.py",
+      "bytes": 7208,
+      "sha256": "7684fe1865616640c479356dadf18ba9faebafd476114bc6029e00c46c4bee86"
+    },
+    {
+      "path": "benchmark_tools/probe_cgroup_frontier.py",
+      "bytes": 6989,
+      "sha256": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635"
+    },
+    {
+      "path": "benchmark_tools/observe_threadripper_service_launches.py",
+      "bytes": 12191,
+      "sha256": "066275e96d1ccfc54c782d64fdad06313dff0fbaff7126ecc36165b3e94aae50"
+    }
+  ],
+  "limitations": [
+    "Local synthetic accounting validation is not native host-capability or quiet-window evidence.",
+    "Production collectors, admission gates and scientific engines remain unchanged.",
+    "Portable rendering has bounded remote test confirmation, not native inference or biological validation.",
+    "New clock-fixture corrections await their own remote execution; other CI failures remain open.",
+    "Timing, uncertainty/source/rights, runtime closure and public release remain unfinished."
+  ]
+}
