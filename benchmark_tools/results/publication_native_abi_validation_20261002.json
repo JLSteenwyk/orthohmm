@@ -1,0 +1,83 @@
+{
+  "assembly": {
+    "controlled_timing": false,
+    "files": 102,
+    "manifest": {
+      "bytes": 25738,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-runtime-assembly-20261002-rj4yp8mm/relocated_bundle/ASSEMBLY_INDEX.json",
+      "sha256": "6a496125794dca84423a0be91ab327003e15955bda91835d5ee72f28ba2839a7"
+    },
+    "payload_bytes": 132139954,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+    "status": "publication_runtime_assets_verified",
+    "symlinks": 18
+  },
+  "complete_asset_elf_membership_and_bytes_verified": true,
+  "complete_wheel_elf_membership_and_bytes_verified": true,
+  "controlled_timing": false,
+  "cross_host_compatibility_verified": false,
+  "current_host_contention_observed": false,
+  "driver": {
+    "bytes": 6071,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/readback_publication_native_abi_20261002.py",
+    "sha256": "02e97ccccf55c9bec9dd3232d36291c7334fac58b3e66284e9c73bccdc43fb54"
+  },
+  "inspector": {
+    "bytes": 789280,
+    "path": "/usr/bin/x86_64-linux-gnu-readelf",
+    "sha256": "6d54602a1ee13f1214973086bd60efe2dae4363f8f5ab7516eaaf3e259dca90e"
+  },
+  "junit": {
+    "bytes": 8913,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_native_abi_validated_tests_20261002.xml",
+    "sha256": "93d9b90158802ada8466389f02a61adc628d7c89b337004fa2b24e40e07c601c"
+  },
+  "limitations": [
+    "Readback reuses the same structured parser; it is not an independent ELF implementation.",
+    "The original scanner executes readelf itself, not code from inspected assets.",
+    "Python/Conda base, OS, instruction-set and static/dlopen/unversioned closure remain separate."
+  ],
+  "mafft_glibc_2_34_helpers": 32,
+  "native_tool_objects": 33,
+  "publication_ready": false,
+  "readelf_repeated": false,
+  "receipt": {
+    "bytes": 1227076,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_abi_20261002.json",
+    "sha256": "75caf90467ee756d936f34260e8f2b7faff44a19774b95c74140535921191a53"
+  },
+  "redistribution_clearance": false,
+  "reviewed_native_code_executed": false,
+  "revision": "48a69a833477a6824032534b25239b733a24fb63",
+  "runtime_resolution_verified": false,
+  "scientific_workload_repeated": false,
+  "security_clearance": false,
+  "sources": [
+    {
+      "bytes": 4426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_publication_native_abi.py",
+      "sha256": "a61868108ab0966790817b9cc9bc1eff24214291ae5ca49a6a96df24f55672f1"
+    },
+    {
+      "bytes": 10485,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_wheel_elf.py",
+      "sha256": "7993e9fc5d0e63cd1e4661f4fbcbce3d7b6e23813ef577e658949b3db3720f76"
+    }
+  ],
+  "status": "native_abi_inventory_readback_verified",
+  "structured_fields_reparsed_from_retained_stdout": true,
+  "test_counts": {
+    "errors": "0",
+    "failures": "0",
+    "hostname": "bizon",
+    "name": "pytest",
+    "skipped": "0",
+    "tests": "65",
+    "time": "1.665",
+    "timestamp": "2026-10-02T16:27:53.544587-04:00"
+  },
+  "unique_wheels": 12,
+  "wheel_elf_objects": 60
+}

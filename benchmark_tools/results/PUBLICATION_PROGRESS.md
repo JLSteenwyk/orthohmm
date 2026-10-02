@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native Assembly ABI Constraints Measured (2026-10-02)
+
+Previous goal turn progressed at pushed `ad16fea7`: prospective pressure
+eligibility fixed with retained replay/private-gate validation. Read the goal
+and current ledger; reuse completed science and dated archives. No new quiet
+window questions, contention polling, DGX access or unrelated process changes.
+
+Inspect independent-validation status: frozen YGOB supplies bounded clade
+transfer, not family-disjoint confirmation. Do not retune or rename that
+evidence. A separate actionable release gap remains: the ELF dependency
+inventory omits architecture/interpreter/version-needs requirements. Add an
+opt-in ABI mode without changing the default wheel scanner and a separate
+externally anchored assembly inspector; frozen inference source/settings,
+historical manifests, receipts and handoffs remain unchanged.
+
+Initial 64-case panel passes; add incomplete program-table rejection, final
+65-case wheel/ABI/assembly panel passes in 1.71s with zero failures/errors/skips.
+Commit source `48a69a83` before execution. Actually inspect the same relocated
+102-file/18-link bundle: 12 unique wheels, all 60 wheel ELF objects, all 32
+compiled MAFFT helpers and supplied FastTree. All declare x86-64; every compiled
+MAFFT helper requires `GLIBC_2.34`. Two other helper files are Perl scripts.
+FastTree has no interpreter/version needs, not proof of static/OS independence.
+
+Separate readback verifies full ELF membership/bytes, raw/structured fields,
+inspector/source/JUnit identities and the externally pinned assembly. It reuses
+the same parser, not independent ELF semantics; no readelf or native workload
+is repeated. All owned process handles finish terminal. See [executed findings,
+receipts and limits](PUBLICATION_NATIVE_ABI_20261002.md). Update reader commands,
+reproduction/claim/rights guides; preserve the correctly dated archive and
+main-text review rather than rebuilding them for new prose.
+
+Final documentation check verifies both public receipt digests and all eight
+new report/command/receipt links; scoped whitespace checks pass.
+
+Commit/push only focused source/tests/metadata/docs; unrelated samples remain
+untouched. This supplies missing declared ABI constraints, not loader resolution,
+CPU/base/OS/static/dlopen closure, security/rights, independent-family accuracy,
+controlled timing or publication readiness. The original goal remains active.
+
 ## Native Pressure Separated from Timing Eligibility (2026-10-02)
 
 Previous goal turn progressed at pushed `0a3250f6`, adding the validated

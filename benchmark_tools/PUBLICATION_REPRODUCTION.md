@@ -18,6 +18,14 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [declared native ABI inventory](results/PUBLICATION_NATIVE_ABI_20261002.md)
+inspects all 60 wheel ELF objects and 33 tool binaries in the exact relocated
+assembly. Every compiled MAFFT helper requires `GLIBC_2.34`, a constraint not
+captured by wheel tags alone. All 65 focused tests pass and byte/membership
+readback succeeds. No inspected code or scientific workload executes; readelf
+itself runs. This closes declared ABI visibility, not actual loader/OS/static
+closure, compatibility or security. See [inspection command](PUBLICATION_SOURCE_COMPONENT.md#declared-native-abi-inspection).
+
 The [prospective pressure-policy correction](results/THREADRIPPER_PRESSURE_ROLES_20261002.md)
 separates native-interval PSI diagnostics from environmental eligibility and
 requires explicit v2 policy for private timing. Evidence-integrity, outside-work

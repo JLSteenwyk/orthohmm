@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [executed ABI inventory](PUBLICATION_NATIVE_ABI_20261002.md) identifies a
+concrete assembled-tool constraint: all 32 compiled MAFFT helpers require
+`GLIBC_2.34`. It checks 60 wheel and 33 tool ELF objects, with 65 focused tests
+and byte/membership readback. Declared architecture/loader/version needs do
+not prove host resolution, CPU compatibility, base/OS/static closure, rights
+or security. No native scientific run or dated-archive rebuild follows.
+
 The [prospective native-pressure correction](THREADRIPPER_PRESSURE_ROLES_20261002.md)
 removes a potential method-dependent exclusion rule: native-interval PSI
 magnitudes are diagnostic under explicit private-route v2 policy, while

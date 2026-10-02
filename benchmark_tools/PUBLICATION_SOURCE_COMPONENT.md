@@ -516,6 +516,31 @@ behavior remains selected when the assembly flag is absent; old admissions
 are not transferred automatically. Installed-payload auditing, OS/security/
 rights closure, public delivery and controlled timing remain separate.
 
+## Declared Native ABI Inspection
+
+The current repository has a static inspector for an externally pinned runtime
+assembly. This helper postdates the validated native-build handoff; do not
+claim the older archive contains it. From the repository root, inspect a
+relocated bundle and write a fresh report outside the immutable bundle:
+
+```bash
+python -B -m benchmark_tools.inventory_publication_native_abi \
+  /absolute/relocated/runtime-bundle \
+  --manifest-sha256 6a496125794dca84423a0be91ab327003e15955bda91835d5ee72f28ba2839a7 \
+  --readelf /usr/bin/readelf --output /absolute/fresh/native-abi.json
+```
+
+The digest applies only to the recorded assembly. It is not approval for a
+different bundle. Both pre/post inventory checks must pass; readelf inspects
+ELF headers/segments/version needs without loading asset code. The [executed
+inventory and readback](results/PUBLICATION_NATIVE_ABI_20261002.md) cover 60 wheel
+ELF objects and 33 tool binaries. All 32 compiled MAFFT helpers declare
+`GLIBC_2.34`; all three project kernels require OpenMP/GOMP version names.
+These requirements supplement Linux x86-64/AVX2 prerequisites, not a complete
+compatibility certificate. FastTree's empty version-needs list does not clear
+its static dependencies. Base Python/Conda, OS, Perl helpers, instruction sets,
+unversioned/dlopen/static closure, rights and security remain separate.
+
 ## Executable Study Boundary
 
 The workflow reproduction guide is included for context, but links to omitted

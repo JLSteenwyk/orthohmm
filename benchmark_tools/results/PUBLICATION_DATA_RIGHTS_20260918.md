@@ -77,6 +77,14 @@ retained scientific evidence to resolve a packaging question.
 
 ## Remaining Actions
 
+The [declared ABI inventory](PUBLICATION_NATIVE_ABI_20261002.md) now records
+architecture, loader and version-needs constraints for all 93 wheel/tool ELF
+objects in the assembled inference/reader bundle. All 32 compiled MAFFT helpers
+require `GLIBC_2.34`; supplied FastTree has no interpreter/version-needs entries.
+These findings do not identify every statically linked component or clear
+corresponding-source, OS or redistribution requirements. No binary/source or
+notice text is newly distributed by this metadata report.
+
 The [Three Kingdoms fixed-release reacquisition](THREE_KINGDOMS_PROVIDER_REACQUISITION_20260928.md)
 now verifies exact size/SHA256 equality for fresh HTTPS copies of all eleven
 fixed Ensembl sources, as well as matching their provider checksum entries.
