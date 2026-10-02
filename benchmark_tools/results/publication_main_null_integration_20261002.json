@@ -1,0 +1,170 @@
+{
+  "benchmark_scores_or_defaults_changed": false,
+  "calibration_established": false,
+  "component_protocol_commit": "186bd5e47ecaa9361a86064c33d7a57c70ce1ce3",
+  "final_figure_artifacts": [
+    {
+      "bytes": 30735,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+      "sha256": "1ddd5fde7fd2855ad7f79e7f230a1c660e9b0fbe0a431e6bbb270eddf8131b01"
+    },
+    {
+      "bytes": 239595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.png",
+      "sha256": "066f6d528dd460617bde302b970aa6b075ba2bacdcbee90c1f6581df9acbf382"
+    },
+    {
+      "bytes": 9772,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/plotted_values.tsv",
+      "sha256": "bae8cbe12fe746430f85fe7514a500bf585827d07654ecbe44739495cafd2533"
+    }
+  ],
+  "final_tests": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 94,
+    "seconds": 8.21,
+    "skipped": 0
+  },
+  "main_page_count": 8,
+  "main_pages_inspected": 8,
+  "native_scoring_rerun": false,
+  "new_complete_archive_built": false,
+  "null_endpoints": 90,
+  "null_figure_cells": 9,
+  "pins": [
+    {
+      "bytes": 9223,
+      "path": "benchmark_tools/results/publication_main_null_visual_review_20261002.json",
+      "sha256": "b3dc0bf092e4ac6e7d2070c0813b7c0d0a3514026bdb0fd2022526e62c323681"
+    },
+    {
+      "bytes": 4400,
+      "path": "benchmark_tools/results/frozen_null_score_figure_review_20261002.json",
+      "sha256": "0a884f457742f91a629b72b46ffcc02d3db79010c13787fd355acaf4671dcc1f"
+    },
+    {
+      "bytes": 4448,
+      "path": "benchmark_tools/results/PUBLICATION_MAIN_NULL_REVIEW_20261002.md",
+      "sha256": "1dbeea021e96db6a8fa410fd67aa4172eeb18461f56ba8bc9fe4351bfe91b78e"
+    },
+    {
+      "bytes": 10006,
+      "path": "tests/unit/test_manuscript_review_artifacts.py",
+      "sha256": "f5273fd391db37aeee823a19687a6cf5b4e807eab8227f06414d4f7792f62403"
+    },
+    {
+      "bytes": 9284,
+      "path": "tests/unit/test_current_qfo_main_text.py",
+      "sha256": "10056e329dfcc7c50b15413270437f8b6854adc3895af478244a20f3a98fb0a1"
+    },
+    {
+      "bytes": 11730,
+      "path": "benchmark_tools/plot_frozen_null_scores.py",
+      "sha256": "15f8e333ec8c67fd4c5f56abe0848c465f6a1889d622c1730108934b772ed13a"
+    },
+    {
+      "bytes": 4655,
+      "path": "tests/unit/test_plot_frozen_null_scores.py",
+      "sha256": "da410e836ab04ffe95427493e822cdc3884bf28ebe61e958def70847be1f5a8a"
+    },
+    {
+      "bytes": 13165,
+      "path": "benchmarks/work/frozen_null_score_manuscript_final_20261002.xml",
+      "sha256": "3ef284b7204ef4a9a03dc47b72413e62eb31b3364c3c80c23d1e9073596452f4"
+    }
+  ],
+  "preceding_ci": {
+    "docs_linux_wheel": "success",
+    "fast_313": {
+      "failed": 4,
+      "new_null_producer_cases_passed": 25,
+      "new_retained_null_cases_passed": 10,
+      "passed": 14109,
+      "seconds": 447.27,
+      "skipped": 119,
+      "warnings": 30
+    },
+    "fast_313_log": {
+      "bytes": 282587,
+      "path": "benchmarks/work/ci_remote_6ff1a614_20261002/110829174264.log",
+      "sha256": "bbf51fa8d6026847880487b525d9c14210774bb7e24a9a2662e4d71a2178c04a"
+    },
+    "four_fast_jobs": "failure",
+    "full_job": "in_progress",
+    "observed_utc": "2026-10-02T12:15:43.626447+00:00",
+    "run": 37004398808,
+    "source": "6ff1a614a3d24ccb7a173a2602acd2c67d1305f3"
+  },
+  "publication_ready": false,
+  "review_artifacts": [
+    {
+      "bytes": 39328,
+      "path": "benchmark_tools/results/publication_main_review_20261002_v2.html",
+      "sha256": "8ec46ce3a1ecdde5b133bd7c5a23de91396f4f799ab319c7b3ab21be3bd6e271"
+    },
+    {
+      "bytes": 21451,
+      "path": "benchmark_tools/results/publication_main_render_20261002_v2.json",
+      "sha256": "45adbeab9b9630a876320f6644842dc33f42d68c63ca938b2ca3881f29302eba"
+    },
+    {
+      "bytes": 144982,
+      "path": "benchmark_tools/results/publication_main_print_20261002_v2/document.pdf",
+      "sha256": "b321159f90d77cc16faec4b92eb413af339a7c4cae79e931242c28ac81d65858"
+    },
+    {
+      "bytes": 14146,
+      "path": "benchmark_tools/results/publication_main_print_20261002_v2/print.json",
+      "sha256": "17da0c6f78b532600ed20a0a64b1f92130729fdde4f63fe8fede2f8abcebe033"
+    },
+    {
+      "bytes": 15762,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/report.json",
+      "sha256": "a425d7320f93e73a605ccd4badd2a6646fa4510eb2db43e2e5bb0cae37cf7b66"
+    },
+    {
+      "bytes": 197844,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_001.png",
+      "sha256": "d125068c0da9e0df9e5caa454e72a621e5f5d74f866397d981cea789df360fe3"
+    },
+    {
+      "bytes": 249056,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_002.png",
+      "sha256": "5f3f800dbcd4ee3979445d26e64f0a8e7cb176d4bcc4e04baac7267cb4c40ec7"
+    },
+    {
+      "bytes": 256863,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_003.png",
+      "sha256": "6642ea3a4cdc567d6b0e78d56b0e9896f78024abe797e626dc9f9af20af9bfd6"
+    },
+    {
+      "bytes": 242579,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_004.png",
+      "sha256": "fe151731216e6d1ca6d4553168d92cfc82dae1fa2022a76da55352072d1af9fe"
+    },
+    {
+      "bytes": 258317,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_005.png",
+      "sha256": "0cf4ad1a20da692e9d844dea8e7bc72a4e4aeb48c7086736d4a3d774c31a49e6"
+    },
+    {
+      "bytes": 267432,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_006.png",
+      "sha256": "5e11da348b7c66731b70422e7c7aab251ba1c8450dc7761614401cb429202844"
+    },
+    {
+      "bytes": 252235,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_007.png",
+      "sha256": "15e72fb400790d28edf15e91e0e40a02761494931e29674a6be2fcf7201e5ad4"
+    },
+    {
+      "bytes": 168261,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_008.png",
+      "sha256": "9cd7e4d2d2a1b99f873f5518933622d75aacd8c960280754b82e6d4e2bfc4a6a"
+    }
+  ],
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source_checkpoint": "6ac1ccbb4bd4fc793333ceddb700329124757a76",
+  "status": "synthetic_null_score_manuscript_integration_reviewed"
+}

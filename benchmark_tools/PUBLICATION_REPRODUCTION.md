@@ -27,6 +27,12 @@ limitation of the approximate significance formula, not real orthology error
 rates. No default or benchmark score changes. This supplement remains separate
 from the earlier manuscript render and executable study release.
 
+The later [eight-page main-text review](results/PUBLICATION_MAIN_NULL_REVIEW_20261002.md)
+now includes this supplementary protocol, outcome, limits and score availability.
+All pages and the standalone nine-panel figure were inspected; direct render
+inputs match their committed source snapshot. Older reviews remain historical,
+and this is not a complete executable study archive or public release.
+
 The [complete QfO parameter panel](results/QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
 now includes all seven arms and 18 reproduced SwissTrees endpoints, with
 separate admission for the recovered high-CPM inference/conversion/scoring.

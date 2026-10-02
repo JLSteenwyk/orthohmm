@@ -13,10 +13,12 @@ glutamine bias frequently passes the approximate significance filter; ordinary
 background samples cannot establish rare-tail calibration. This is not real-data
 orthology accuracy, a default change or controlled timing. All scores remain frozen.
 
-The [latest seven-page main review](results/PUBLICATION_MAIN_REVIEW_20261002.md)
-includes completed descriptive-table and private raw-input restoration evidence,
-with explicit native/rights/release boundaries. All pages were inspected and
-55 focused checks pass. It is not submission-ready or a new review archive.
+The [latest eight-page main review](results/PUBLICATION_MAIN_NULL_REVIEW_20261002.md)
+adds the prespecified null-score protocol, findings and significance limitation.
+All pages and the new nine-panel figure were inspected; scientific scores and
+defaults stay frozen. The [earlier seven-page review](results/PUBLICATION_MAIN_REVIEW_20261002.md)
+preserves its descriptive-table/private-input restoration snapshot. Neither
+is submission-ready or a new complete study archive.
 
 The [earlier seven-page manuscript review archive](results/PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md)
 now verifies after fresh extraction outside the checkout: 55 payload files and

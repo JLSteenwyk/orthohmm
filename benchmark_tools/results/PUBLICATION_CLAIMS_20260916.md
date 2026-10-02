@@ -21,7 +21,10 @@ too sparse to establish rare-tail calibration. The independent count/digest
 audit and 180 sparse reference-score checks are bounded evidence, not complete
 native equivalence, real-data orthology false-positive rates, causal benchmark
 explanations or a calibration fix. Defaults and scientific scores remain frozen.
-The dated manuscript review has not been rerendered to include this supplement.
+The [later eight-page main review](PUBLICATION_MAIN_NULL_REVIEW_20261002.md)
+now includes this supplement, with all pages and the new nine-panel figure
+inspected. Earlier reviews stay historical. No scientific default changes,
+calibration fix or submission-ready release follows from that integration.
 
 The [30 September main-text review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md)
 verifies after fresh extraction without the checkout: 48 files and all

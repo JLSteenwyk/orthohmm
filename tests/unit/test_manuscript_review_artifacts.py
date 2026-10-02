@@ -11,6 +11,40 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
+def test_null_score_main_review_retains_closed_artifacts_and_scope():
+    review = json.loads((ROOT / "publication_main_null_visual_review_20261002.json").read_bytes())
+    repo = ROOT.parents[1]
+    assert review["render_time_source_commit"] == "6ac1ccbb4bd4fc793333ceddb700329124757a76"
+    assert review["page_count"] == 8 and review["all_eight_pages_inspected"] is True
+    assert review["bounds_violations"] == 0 and review["observed_clipping_or_overlap"] is False
+    assert review["null_results_page"] == 4 and review["null_protocol_page"] == 2
+    assert review["local_occurrences"] == 41 and review["unique_targets"] == 40
+    assert len(review["citation_ids"]) == 16 and not review["untracked_targets"]
+    assert len(review["closed_review_artifacts"]) == 13
+    for item in review["closed_review_artifacts"]:
+        actual = record(repo / item["path"])
+        assert (actual["bytes"], actual["sha256"]) == (item["bytes"], item["sha256"])
+    for key in ("native_inference_or_scoring_rerun", "benchmark_scores_or_defaults_changed",
+                "controlled_timing_executed", "new_study_archive_built", "data_rights_cleared",
+                "public_release_or_deposition_executed", "publication_ready", "other_linked_figures_newly_revalidated"):
+        assert review[key] is False
+    assert review["new_null_figure_separately_inspected"] is True
+    html = (ROOT / "publication_main_review_20261002_v2.html").read_text()
+    parts = []
+    class Text(HTMLParser):
+        def handle_data(self, data):
+            parts.append(data)
+    Text().feed(html)
+    visible = " ".join(" ".join(parts).split())
+    assert "89.83%, 100% and 100%" in visible
+    assert "not a predicted ortholog or an observed pipeline false positive" in visible
+    assert "90,000 independent pairs, not 180,000 independent observations" in visible
+    assert "No coefficients, thresholds or defaults were fitted or promoted" in visible
+    assert "No prefilter or biological inference ran" in visible
+    assert "Not submission-ready" in visible
+    assert "figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf" in html
+
+
 def test_october_2_main_review_retains_closed_artifact_identities():
     review = json.loads((ROOT / "publication_main_visual_review_20261002.json").read_text())
     repo = ROOT.parents[1]

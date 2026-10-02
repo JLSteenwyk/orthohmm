@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Reviewed Synthetic Null Score Manuscript Integration (2026-10-02)
+
+Complete the source checkpoint below at committed
+6ac1ccbb4bd4fc793333ceddb700329124757a76. Generate a new citation-resolved
+HTML and eight-page PDF without overwriting earlier reviews. Recheck all direct
+input size/hash pins and all 44 repository direct-input Git blobs against that
+source commit before recording review. All 16 citation IDs resolve and 41 local
+occurrences have 40 existing tracked targets. Preserve the exact render-time
+main/extended/ledger identities, not later source or ledger changes.
+
+Inspect all eight page images. Protocol appears on page 2, actual null outcome
+on page 4, limits on page 5 and availability on page 7. Text/references are
+readable, with no observed clipping/overlap and zero block-bound violations.
+Figures are linked, not embedded; the new nine-panel null figure was separately
+inspected, while other linked figures were not newly revalidated. Add one
+closed-artifact regression to bind all 13 dated HTML/PDF/receipt/page-image
+artifacts without freezing mutable current manuscript/ledger bytes. The final
+**94-case panel passes in 8.21s**, zero errors/failures/skips. Its XML is
+13,165 bytes, SHA-256
+`3ef284b7204ef4a9a03dc47b72413e62eb31b3364c3c80c23d1e9073596452f4`.
+See the [new review and evidence](PUBLICATION_MAIN_NULL_REVIEW_20261002.md).
+
+Observe preceding source-6ff1a614 run 37004398808 at 12:15:43 UTC: docs/Linux/
+wheel pass, four fast macOS jobs fail and full remains live. Download actual
+terminal 3.13 job 110829174264 log once at 12:16:17 UTC; verify exact source,
+14,109 passes/four failures/119 skips/30 warnings/447.27s. All ten retained-null
+readback and 25 producer cases pass. Four default raw exports still lack
+original inputs/options. This does not remotely confirm the newer figure/main
+checks, infer sibling counts or establish a passing CI matrix. No restart.
+
+Update reproduction/claim indexes and preserve the new scoped artifact/source/
+test/CI receipts. Commit/push both validated milestones; observe new automatic
+CI separately at its own SHA. No scientific scoring/default changes or new
+native experiment. The initial visually rejected figure stays local with
+artifact pins; its final TSV is byte-identical. All historical reviews/archives
+and unrelated sample outputs remain unchanged. No new study archive is built.
+Timing stays deferred without questions/polls, DGX or unrelated job/service
+actions. Other-QfO uncertainty, controlled resources, rights, complete versioned
+executable release/deposition and final reconciliation remain open. The original
+publication goal is active and incomplete.
+
 ## Synthetic Null Score Figure And Manuscript Source (2026-10-02)
 
 Previous turn progressed at pushed 6ff1a614, with completed native null panel

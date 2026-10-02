@@ -1,0 +1,202 @@
+{
+  "all_eight_pages_inspected": true,
+  "benchmark_scores_or_defaults_changed": false,
+  "body_and_references_readable": true,
+  "bounds_violations": 0,
+  "checked_committed_direct_inputs": [
+    "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+    "benchmark_tools/render_manuscript_review.py",
+    "benchmark_tools/manuscript_review_print.html",
+    "benchmark_tools/results/publication_bibliography_20260920_v5.csl.json",
+    "benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+    "benchmark_tools/results/figures_publication_method_20260916/publication_method.pdf",
+    "benchmark_tools/results/FROZEN_HMM_SCORING_SPECIFICATION_20260930.md",
+    "benchmark_tools/results/FROZEN_NULL_SCORE_PROTOCOL_20261002.md",
+    "benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md",
+    "benchmark_tools/results/YGOB_VALIDATION_PROTOCOL_20260916.md",
+    "benchmark_tools/results/QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md",
+    "benchmark_tools/results/OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md",
+    "benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf",
+    "benchmark_tools/results/INTEGRATED_FULL_OB_RESULT_22337.md",
+    "benchmark_tools/results/RECONSTRUCTED_FULL_OB_RESULT_22376.md",
+    "benchmark_tools/results/RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md",
+    "benchmark_tools/results/CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md",
+    "benchmark_tools/results/CORRECTED_SWISS_COMPARISON_RESULT_21987.md",
+    "benchmark_tools/results/QFO_SCORED_PAIR_TRANSITIVE_BINDING_20260927.md",
+    "benchmark_tools/results/figures_qfo_scored_pair_decomposition_20260930/qfo_pair_decomposition.pdf",
+    "benchmark_tools/results/QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md",
+    "benchmark_tools/results/MATCHED_GRAPH_RESULT_20260926.md",
+    "benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+    "benchmark_tools/results/FROZEN_NULL_SCORE_RESULT_20261002.md",
+    "benchmark_tools/results/QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md",
+    "benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf",
+    "benchmark_tools/results/QFO_PRIVATE_CPM_SCORE_RESULT_22394.md",
+    "benchmark_tools/results/YGOB_FROZEN_RESULTS_20260916.md",
+    "benchmark_tools/results/figures_ygob_overlap_20260928/ygob_overlap_strata.pdf",
+    "benchmark_tools/results/BIOLOGICAL_WGD_RESULTS_20260917.md",
+    "benchmark_tools/results/BIOLOGICAL_WGD_CASE_TRACE_20260917.md",
+    "benchmark_tools/results/WGD_FIXED_TREE_RULE_RESULTS_20260928.md",
+    "benchmark_tools/results/TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md",
+    "benchmark_tools/results/TREEFAM_RECOVERED_SCOPE_20260928.md",
+    "benchmark_tools/results/QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md",
+    "benchmark_tools/results/QFO_FAS_SAMPLE_ATTRITION_20260928.md",
+    "benchmark_tools/results/FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md",
+    "benchmark_tools/results/QFO_FAS_POPULATION_COMPLETED_22383.md",
+    "benchmark_tools/results/QFO_FAS_STRATUM_WEIGHT_RESULT_20261001.md",
+    "benchmark_tools/results/QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md",
+    "benchmark_tools/results/SWISS_DESCRIPTIVE_COMPONENT_20261002.md",
+    "benchmark_tools/results/SWISS_RAW_ARCHIVE_RESTORATION_20261002.md",
+    "benchmark_tools/results/frozen_null_score_observations_20261002.json.gz",
+    "benchmark_tools/results/PUBLICATION_PROGRESS.md"
+  ],
+  "citation_ids": [
+    "busco2021",
+    "cpm2011",
+    "diamond2021",
+    "fastoma2025",
+    "kuzmin2020",
+    "leiden2019",
+    "orthobench2020",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "qfo2016",
+    "qfo2020",
+    "sonicparanoid2024",
+    "ygob2005"
+  ],
+  "closed_review_artifacts": [
+    {
+      "bytes": 39328,
+      "path": "benchmark_tools/results/publication_main_review_20261002_v2.html",
+      "sha256": "8ec46ce3a1ecdde5b133bd7c5a23de91396f4f799ab319c7b3ab21be3bd6e271"
+    },
+    {
+      "bytes": 21451,
+      "path": "benchmark_tools/results/publication_main_render_20261002_v2.json",
+      "sha256": "45adbeab9b9630a876320f6644842dc33f42d68c63ca938b2ca3881f29302eba"
+    },
+    {
+      "bytes": 144982,
+      "path": "benchmark_tools/results/publication_main_print_20261002_v2/document.pdf",
+      "sha256": "b321159f90d77cc16faec4b92eb413af339a7c4cae79e931242c28ac81d65858"
+    },
+    {
+      "bytes": 14146,
+      "path": "benchmark_tools/results/publication_main_print_20261002_v2/print.json",
+      "sha256": "17da0c6f78b532600ed20a0a64b1f92130729fdde4f63fe8fede2f8abcebe033"
+    },
+    {
+      "bytes": 15762,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/report.json",
+      "sha256": "a425d7320f93e73a605ccd4badd2a6646fa4510eb2db43e2e5bb0cae37cf7b66"
+    },
+    {
+      "bytes": 197844,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_001.png",
+      "sha256": "d125068c0da9e0df9e5caa454e72a621e5f5d74f866397d981cea789df360fe3"
+    },
+    {
+      "bytes": 249056,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_002.png",
+      "sha256": "5f3f800dbcd4ee3979445d26e64f0a8e7cb176d4bcc4e04baac7267cb4c40ec7"
+    },
+    {
+      "bytes": 256863,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_003.png",
+      "sha256": "6642ea3a4cdc567d6b0e78d56b0e9896f78024abe797e626dc9f9af20af9bfd6"
+    },
+    {
+      "bytes": 242579,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_004.png",
+      "sha256": "fe151731216e6d1ca6d4553168d92cfc82dae1fa2022a76da55352072d1af9fe"
+    },
+    {
+      "bytes": 258317,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_005.png",
+      "sha256": "0cf4ad1a20da692e9d844dea8e7bc72a4e4aeb48c7086736d4a3d774c31a49e6"
+    },
+    {
+      "bytes": 267432,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_006.png",
+      "sha256": "5e11da348b7c66731b70422e7c7aab251ba1c8450dc7761614401cb429202844"
+    },
+    {
+      "bytes": 252235,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_007.png",
+      "sha256": "15e72fb400790d28edf15e91e0e40a02761494931e29674a6be2fcf7201e5ad4"
+    },
+    {
+      "bytes": 168261,
+      "path": "benchmark_tools/results/publication_main_pdf_review_20261002_v2/page_008.png",
+      "sha256": "9cd7e4d2d2a1b99f873f5518933622d75aacd8c960280754b82e6d4e2bfc4a6a"
+    }
+  ],
+  "controlled_timing_executed": false,
+  "data_rights_cleared": false,
+  "direct_input_hashes_and_git_blobs_checked": true,
+  "extended_text": {
+    "bytes": 187633,
+    "path": "benchmark_tools/results/PUBLICATION_MANUSCRIPT_DRAFT_20260916.md",
+    "sha256": "005966222de0d10438eef593084beda09ff98587fc60daa214250eebe38f9efb"
+  },
+  "figures_linked_not_embedded": true,
+  "limitations": [
+    "Manual review and direct link/hash checks do not validate all citations, linked figures, transitive evidence or rights.",
+    "Main/extended/ledger and all direct targets belong to the recorded commit; later current files must not be substituted for that snapshot.",
+    "Prior CI is not new-figure/manuscript remote confirmation; the default raw-input failures remain unresolved.",
+    "This review is not a complete executable study archive or publication readiness."
+  ],
+  "local_occurrences": 41,
+  "main_text": {
+    "bytes": 26501,
+    "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md",
+    "sha256": "3180014b38c08074746cdec505ccec84897be0157297c8586728e2a85a3f0c57"
+  },
+  "native_inference_or_scoring_rerun": false,
+  "new_null_figure_separately_inspected": true,
+  "new_study_archive_built": false,
+  "null_availability_page": 7,
+  "null_limitations_page": 5,
+  "null_protocol_page": 2,
+  "null_results_page": 4,
+  "observed_clipping_or_overlap": false,
+  "other_linked_figures_newly_revalidated": false,
+  "page_count": 8,
+  "prior_ci": {
+    "docs_linux_wheel": "success",
+    "fast_313": {
+      "failed": 4,
+      "new_null_producer_cases_passed": 25,
+      "new_retained_null_cases_passed": 10,
+      "passed": 14109,
+      "seconds": 447.27,
+      "skipped": 119,
+      "warnings": 30
+    },
+    "fast_313_log": {
+      "bytes": 282587,
+      "path": "benchmarks/work/ci_remote_6ff1a614_20261002/110829174264.log",
+      "sha256": "bbf51fa8d6026847880487b525d9c14210774bb7e24a9a2662e4d71a2178c04a"
+    },
+    "four_fast_jobs": "failure",
+    "full_job": "in_progress",
+    "observed_utc": "2026-10-02T12:15:43.626447+00:00",
+    "run": 37004398808,
+    "source": "6ff1a614a3d24ccb7a173a2602acd2c67d1305f3"
+  },
+  "public_release_or_deposition_executed": false,
+  "publication_ready": false,
+  "render_time_progress_ledger": {
+    "bytes": 1944720,
+    "path": "benchmark_tools/results/PUBLICATION_PROGRESS.md",
+    "sha256": "bf062785c673e5fa4d33fb499eb965d32e358cd7c33a32cebd0cb2ea210ec903"
+  },
+  "render_time_source_commit": "6ac1ccbb4bd4fc793333ceddb700329124757a76",
+  "status": "main_null_score_review_visually_inspected",
+  "unique_targets": 40,
+  "untracked_targets": [],
+  "utc": "2026-10-02T12:17:49.574615+00:00"
+}
