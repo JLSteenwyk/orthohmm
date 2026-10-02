@@ -50,6 +50,7 @@ def test_changed_features_rejected(problem):
         build_rows(counts, features)
 
 
+@pytest.mark.raw_benchmark
 def test_export_and_no_overwrite(tmp_path, swiss_raw_source_bindings):
     bindings = swiss_raw_source_bindings("duplication")
     report = export(COUNTS, FEATURES, tmp_path / "table", **bindings)
@@ -60,6 +61,7 @@ def test_export_and_no_overwrite(tmp_path, swiss_raw_source_bindings):
         export(COUNTS, FEATURES, tmp_path / "table", **bindings)
 
 
+@pytest.mark.raw_benchmark
 def test_independent_rational_reproduction_of_export(tmp_path, swiss_raw_source_bindings):
     export(COUNTS, FEATURES, tmp_path / "table", **swiss_raw_source_bindings("duplication"))
     counts, features = inputs()

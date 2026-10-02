@@ -111,3 +111,4 @@ def pytest_configure(config):
         _swiss_source_options(config, kind)
     config.addinivalue_line("markers", "integration: mark as integration test")
     config.addinivalue_line("markers", "slow: mark as slow test")
+    config.addinivalue_line("markers", "raw_benchmark: requires separately supplied checksum-bound benchmark sources")

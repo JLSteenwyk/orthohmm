@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Explicit Public and Raw Benchmark Test Boundary (2026-10-02)
+
+Previous scientific milestone progressed at pushed 61082b22; the intervening
+user reply confirms a quiet window is not needed now. Continue without timing
+polls/questions or unrelated job actions. Read the objective/HEAD/newest ledger
+and observe exact CI run 37008346694. At 12:55:49 UTC docs/Linux/wheel succeed
+and all five macOS jobs are terminal failures. Preserve actual 3.13 job
+110841836576 once at 12:57:17 UTC: exact source, 14,142 passes/four failures/
+119 skips/30 warnings/386.33s. All 18 current-overview cases pass. Four raw
+exports still lack private inputs; do not infer sibling counts/full success.
+
+Make public CI's raw-input boundary explicit, without silently skipping tests
+or weakening default full-suite/exporter assertions. Mark exactly the four
+existing raw cases, audit the structured collected/selected/deselected inventory,
+name public fast/coverage jobs and retain separate collection/JUnit receipts.
+Default full Make targets forward explicitly supplied binding options and do
+not exclude raw cases. Synthetic/descriptive/configuration tests remain public.
+
+First focused shared-environment attempt has 53 passes/four dependency failures
+in 4.05s; preserve it and use the existing prepared private environment, without
+installing/upgrading shared packages. It passes the initial 57 checks and all
+14 raw exporter cases with actual restored data. Initial collection wrongly
+accepts two skipped sqlglot modules (13 omitted cases); preserve it and add
+fail-closed collection-skip accounting. Shared collection now fails with both
+modules identified. Private final collection passes: 14,295 nodes, 14,291
+selected and exactly four deselected, zero collection errors/skips. Collection
+is not test execution; signal parameter labels also vary by interpreter.
+
+Final scoped public panel has 68 passes/four deselections in 3.02s. Final combined
+five-module panel with actual raw sources has **72 passes in 8.63s**, zero errors/
+failures/skips; JUnit 11,108 bytes, SHA256
+`e90e4898e552c044af96f4ccef04eb728231cb96d97dad55c56a918a37635728`.
+Twenty-five audit/profile cases include fresh subprocess default/public/raw-only
+collection, immutable exclusion inventory, incomplete-collection rejection,
+no-overwrite, Make/workflow behavior. Panels overlap, not additive. No expensive
+inference/scoring/bootstrap or old diagnostic is rerun.
+
+See [profiles and evidence](PUBLIC_TEST_PROFILE_20261002.md). Update reproduction/
+claim indexes and commit/push the validated scoped milestone; observe new CI
+separately. All scientific scores/defaults, production exporters, historical
+archives and unrelated sample outputs remain unchanged. Public-profile success
+is not the complete raw/native gate or publication readiness. Controlled timing,
+other-QfO uncertainty, complete runtime/rights/release/deposition and final
+package reconciliation remain open. The original goal stays active.
+
 ## Current Accuracy Overview Reconciliation (2026-10-02)
 
 Previous turn progressed at pushed 5e899502 with inspected eight-page null-score

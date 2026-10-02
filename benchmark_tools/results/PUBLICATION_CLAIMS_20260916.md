@@ -13,6 +13,14 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [public test profile](PUBLIC_TEST_PROFILE_20261002.md) now explicitly
+declares four raw-source exclusions, while the unchanged default test selection
+and scientific exporter assertions remain complete. Its collection audit rejects
+additional exclusions/errors/module skips. All 72 focused checks pass with
+actual restored raw inputs; new remote execution is pending. Public-profile
+success is not the full raw/native regression gate, data-rights clearance or
+publication completion.
+
 The [current overview reconciliation](CURRENT_ACCURACY_OVERVIEW_20261002.md)
 now aligns its Three Kingdoms SonicParanoid point with the existing contemporary
 matched-input row. All 72 current-table cells and 48 corrected QfO coordinates

@@ -18,6 +18,13 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [explicit public/raw test boundary](results/PUBLIC_TEST_PROFILE_20261002.md)
+keeps the default complete test targets while naming public CI's four raw-input
+exclusions and retaining collection/JUnit evidence. The strict collection audit
+rejects missing-dependency module skips. All 72 focused cases pass with the real
+restored raw sources; this is not a new full-suite pass or public data provisioning.
+The revised remote workflow requires its own post-push outcome.
+
 The [current accuracy overview reconciliation](results/CURRENT_ACCURACY_OVERVIEW_20261002.md)
 replaces only a stale historical SonicParanoid Three Kingdoms point in a new
 figure. The current table was already correct and is unchanged. All 72 cells,

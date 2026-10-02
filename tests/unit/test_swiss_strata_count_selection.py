@@ -10,7 +10,11 @@ NEW_COUNTS = ROOT / "qfo_recovered_swiss_uncertainty_22178.json"
 NEW_SHA = "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34"
 
 
-@pytest.mark.parametrize("kind", ["descriptive", "identity", "fragment", "duplication"])
+@pytest.mark.parametrize("kind", [
+    "descriptive", "identity",
+    pytest.param("fragment", marks=pytest.mark.raw_benchmark),
+    pytest.param("duplication", marks=pytest.mark.raw_benchmark),
+])
 def test_explicit_counts_preserve_previous_rows_and_reject_wrong_hash(kind, tmp_path, swiss_raw_source_bindings):
     module = importlib.import_module(f"benchmark_tools.export_swiss_{kind}_strata")
     old = json.loads((ROOT / f"swiss_{kind}_strata_20260923/manifest.json").read_text())

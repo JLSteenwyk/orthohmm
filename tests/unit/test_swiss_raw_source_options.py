@@ -50,7 +50,8 @@ def test_both_panel_pairs_are_independent_and_markers_preserved():
     assert _swiss_source_options(selected, "duplication")["source_bindings_sha"] == "2" * 64
     assert _swiss_source_options(selected, "fragment")["source_bindings_sha"] == "3" * 64
     assert selected.markers == [("markers", "integration: mark as integration test"),
-                                ("markers", "slow: mark as slow test")]
+                                ("markers", "slow: mark as slow test"),
+                                ("markers", "raw_benchmark: requires separately supplied checksum-bound benchmark sources")]
 
 
 def test_wrong_binding_digest_is_not_replaced_by_a_computed_one():

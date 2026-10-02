@@ -2,6 +2,7 @@ name: CI
 on: push
 jobs:
   test-fast:
+    name: public-fast (${{ matrix.python-version }})
     runs-on: macos-latest
     strategy:
       fail-fast: false
@@ -54,11 +55,24 @@ jobs:
         PATH=$PATH:$HOME/local/bin
         mcl --version
         cd ..
-    - name: Run tests
+    - name: Audit declared public/private test selection
+      run: python -m benchmark_tools.audit_public_test_profile --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/public-test-selection.json"
+    - name: Run public fast tests (excludes slow and four raw-source cases)
       run: |
         PATH=$PATH:$HOME/local/bin
-        make test.fast
+        make test.public.fast TEST_RECEIPT_DIR="$RUNNER_TEMP"
+    - name: Retain public selection and execution receipts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: public-fast-${{ matrix.python-version }}
+        path: |
+          ${{ runner.temp }}/public-test-selection.json
+          ${{ runner.temp }}/public-unit.xml
+          ${{ runner.temp }}/public-integration.xml
+        if-no-files-found: warn
   test-full:
+    name: public-coverage (includes slow; excludes four raw-source cases)
     runs-on: macos-latest
     env:
       PYTHON: '3.11'
@@ -109,10 +123,22 @@ jobs:
         PATH=$PATH:$HOME/local/bin
         mcl --version
         cd ..
-    - name: Generate coverage report
+    - name: Audit declared public/private test selection
+      run: python -m benchmark_tools.audit_public_test_profile --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/public-test-selection.json"
+    - name: Generate public-profile coverage report
       run: |
         PATH=$PATH:$HOME/local/bin
-        make test.coverage
+        make test.public.coverage TEST_RECEIPT_DIR="$RUNNER_TEMP"
+    - name: Retain public selection and execution receipts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: public-coverage
+        path: |
+          ${{ runner.temp }}/public-test-selection.json
+          ${{ runner.temp }}/public-unit.xml
+          ${{ runner.temp }}/public-integration.xml
+        if-no-files-found: warn
     - name: Upload unit test coverage to Codecov
       uses: codecov/codecov-action@v1.0.7
       with:

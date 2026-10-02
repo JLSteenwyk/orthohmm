@@ -7,6 +7,12 @@ for the frozen method, corrected QfO release, admitted results, statistical
 reproduction and outstanding release gates. The manuscript is a working draft,
 not a completed publication release.
 
+The [public and raw-data test profiles](results/PUBLIC_TEST_PROFILE_20261002.md)
+separate four explicitly declared SwissTrees raw-source cases from public CI,
+without changing the default full suite or exporter assertions. The collection
+gate rejects incomplete inventories; all 72 focused cases pass with real raw
+inputs. A public-profile pass is not full raw/native reproduction or release readiness.
+
 The [current accuracy overview](results/CURRENT_ACCURACY_OVERVIEW_20261002.md)
 now matches the unchanged corrected score table and contemporary matched-input
 SonicParanoid Three Kingdoms result. It verifies all 72 table cells and 48
