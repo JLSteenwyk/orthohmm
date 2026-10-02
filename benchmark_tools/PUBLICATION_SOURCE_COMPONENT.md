@@ -25,8 +25,9 @@ exports and historical v1 verification retain their original selection.
 The `native-preparation` profile extends that selection with the exact
 historical base reconstruction receipt and required offline installer helper
 modules. New workflow revisions also include the public-artifact acquisition
-helper. It does not include package archives, the pip wheel, a Conda bootstrap
-or native tools. The four result-document exceptions are explicitly pinned.
+and private Miniforge bootstrap helpers. It does not include package archives,
+the pip wheel, a Conda bootstrap or native tools. The four result-document
+exceptions are explicitly pinned.
 
 The optional `native-wheels` profile adds three further fixed documents: the
 admitted 12-wheel inventory and exact inference/reader hash locks. It requires
@@ -120,6 +121,49 @@ not inference inputs. No upstream scorer or native inference runs here.
 The native wheel sets, aligner/tree builder, base Python and installer still
 require separate preparation; this profile is not the complete executable study.
 
+## Private Historical Conda Bootstrap
+
+New workflow revisions provide `prepare_publication_bootstrap.py`, a stdlib
+helper for Linux x86-64. Verify the exported source index before using it.
+The fixed historical official Miniforge release is 25.3.1-0, not the latest
+release or a current-security recommendation. The installer is 93,870,801
+bytes, SHA-256
+`376b160ed8130820db0ab0f3826ac1fc85923647f75c1b8231166e3d559ab768`;
+the 104-byte provider checksum sidecar is separately pinned. Acquisition
+checks both identities before any installation:
+
+```bash
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/prepare_publication_bootstrap.py acquire \
+  --output /absolute/fresh/bootstrap-artifacts --acknowledge-historical-runtime
+python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/prepare_publication_bootstrap.py install \
+  --installer /absolute/fresh/bootstrap-artifacts/Miniforge3-25.3.1-0-Linux-x86_64.sh \
+  --output /absolute/fresh/private-bootstrap --acknowledge-historical-runtime
+```
+
+Each output must be fresh, canonical and outside the immutable source component.
+The acquisition permits only fixed GitHub HTTPS URLs and release-asset redirects,
+bounds size, checks hashes and excludes temporary signed redirect queries from
+receipts. Socket timeouts are not a whole acquisition deadline. Failures retain
+partial files/records without retry or overwriting an existing attempt.
+
+Installation verifies the exact supplied artifact first, runs batch mode in a
+fresh prefix with private HOME/cache/config and does not request `conda init`.
+The private prefix's `bin` is first on PATH so an `env python` Conda launcher
+resolves its own interpreter. It then checks Conda 25.3.1, internal entrypoint
+paths and package metadata, retaining stage logs and `complete.json`. No shared
+environment, shell initialization, service or scientific configuration change
+is requested. This is downloaded installer execution after identity checks,
+not a syscall sandbox or signed-binary/security/rights clearance.
+
+Use `private-bootstrap/prefix/bin/conda` with its recorded entrypoint SHA-256
+from `private-bootstrap/complete.json` for the offline base installer below.
+That digest binds the installed entrypoint, not its interpreter or complete
+bootstrap payload closure. Do not hardcode another installation's digest.
+The [executed private-bootstrap check](results/PUBLICATION_PRIVATE_BOOTSTRAP_20261002.md)
+records actual public acquisition, isolated installation and compatibility
+with the unchanged frozen base. Full bootstrap/base/OS/rights closure and
+public distribution remain separate requirements.
+
 ## Offline Historical Base Installation
 
 Use `--profile native-preparation` with the builder to include the base
@@ -157,8 +201,11 @@ Supply the exact `pip-26.2.1-py3-none-any.whl` bootstrap artifact (1,816,632
 bytes, SHA-256
 `71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e`)
 and a separately trusted, compatible Conda executable with its externally
-recorded entrypoint digest. No Conda installation or its transitive bootstrap
-dependencies are provided or authenticated by this component.
+recorded entrypoint digest. The preceding private-bootstrap helper is one
+executed route; the offline base installer itself does not acquire Conda or
+authenticate its entire transitive stack. Set `RETAINED_CONDA_ENTRYPOINT_SHA256`
+to the `conda.sha256` value from that installation's verified `complete.json`
+and substitute `/absolute/fresh/private-bootstrap/prefix/bin/conda` below.
 
 ```bash
 python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/install_publication_base.py install \
@@ -170,7 +217,8 @@ python3 -I -S -B /relocated/source-component/workflow/benchmark_tools/install_pu
 ```
 
 Use an output directory outside the immutable source component. Complete
-input preflight precedes creation; execution has private HOME/cache/config,
+input preflight precedes creation; execution has private HOME/cache/config
+and the supplied Conda entrypoint's directory first on PATH,
 offline copied explicit packages, a hash-required pip overlay and no retry.
 The four stages install Conda packages, bootstrap pip, run `pip check` and
 snapshot the installed Python. Success additionally requires all 19 expected

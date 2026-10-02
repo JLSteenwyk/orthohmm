@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Private Public-Provider Bootstrap and Frozen Base Executed (2026-10-02)
+
+Previous turn progressed at pushed `27c0b138`, acquiring exact scientific
+wheel sets and correcting retained-path CI portability. Read the goal,
+actual worktree and latest receipts. Timing stays deferred without renewed
+quiet-window questions, contention polls, DGX work or unrelated job/service
+changes. Preserve dirty sample outputs and reuse completed native/scientific
+and collector admissions.
+
+Identify a real setup gap: offline base reconstruction still requires shared
+Anaconda Conda. Add stdlib acquisition/private installation for the fixed
+official historical Miniforge 25.3.1-0 release, with exact installer/sidecar
+identities, bounded safe redirects, fresh canonical outputs, acknowledgement,
+private HOME/config/cache, batch mode, logs and failure retention/no retry.
+Source checkpoint `5016a651`; initial 217 tests pass. Actually export/copy
+source and acquire both exact public artifacts once, 93,870,905 bytes.
+
+Retain an initial sidecar `./filename` receipt-readback failure; reuse verified
+downloads. Actual batch installation finishes, but its env-python Conda
+launcher fails under the restricted PATH. Retain the failed prefix/logs.
+Correct private PATH in bootstrap/base controllers, extend validation and
+include a real synthetic launcher regression. Commit `36d31f80`; final
+228-test panel passes in 20.33s, zero failures/errors/skips. Final expanded
+eight-module panel also passes 380 in 24.42s; overlapping, not additive.
+
+Export/copy corrected source outside checkout, 1,835 payloads, externally
+anchor its index and verify without Git. One justified fresh-prefix bootstrap
+installation succeeds, reports Conda 25.3.1 and records 88 unique package
+metadata rows. It reconstructs the unchanged 19-package historical base
+using retained public archives/pip; all four base stages pass, CPython3.10.13
+and exactly pip26.2.1, 475 matching pip payload files. Two one-off receipt
+selection/schema errors are retained and corrected by readback only; no
+successful installation or download is restarted. Final component verification
+passes, source unchanged. All five corrected stages return zero.
+
+Exact prior CI run 37037578636 for `27c0b138` is now completed successfully;
+all eight jobs successful. Record observed IDs/statuses without inferred test
+counts or claiming CI for the newer source. See [execution, pins, retained
+failures and remaining scope](PUBLICATION_PRIVATE_BOOTSTRAP_20261002.md) and
+both machine receipts. Update executable guides, commit/push focused evidence.
+This closes the shared-Conda setup dependency, not complete bootstrap/base/
+native/OS/rights closure, public runtime delivery, remaining QfO uncertainty,
+controlled timing, final manuscript/archive/release/DOI or publication readiness.
+No scientific settings or results change; leave the original goal active.
+
 ## Public Scientific Wheel Sets Acquired and CI Failure Diagnosed (2026-10-02)
 
 Previous turn progressed at pushed `709b1de6`, acquiring the exact historical

@@ -1,0 +1,53 @@
+{
+  "controlled_timing": false,
+  "execution": {
+    "bytes": 75610,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_private_bootstrap_20261002.json",
+    "sha256": "4e881c067b5c19630fed8592d04cc8a62cb65bf21bddebe3fa9b5fe821900970"
+  },
+  "execution_receipts_unchanged": true,
+  "local_test_panels": [
+    {
+      "junit": {
+        "bytes": 33473,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_bootstrap_launcher_tests_20261002.xml",
+        "sha256": "97d533fc7fbf1c3406de48441ae8a888a86b32d4f3c2452d1e687fb18c4e002e"
+      },
+      "seconds": 19.41,
+      "totals": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 228
+      }
+    },
+    {
+      "junit": {
+        "bytes": 54145,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_bootstrap_expanded_tests_20261002.xml",
+        "sha256": "0c4047e95bfc39efc36045ea5f56aebcaf9d3dde913da61580a359a55b8674f6"
+      },
+      "seconds": 23.444,
+      "totals": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 380
+      }
+    }
+  ],
+  "native_inference_repeated": false,
+  "observed_utc": "2026-10-02T17:28:56.019616+00:00",
+  "overlapping_test_panels": true,
+  "prior_revision_ci": {
+    "bytes": 1679,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ci_private_bootstrap_prior_revision_20261002.json",
+    "sha256": "2963a401b9e61928557652818b13c45c5d5b1e9e62acaade6759af6d404854c1"
+  },
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "retained_failure_records": 5,
+  "security_clearance": false,
+  "status": "private_bootstrap_receipts_and_local_tests_verified",
+  "workflow_revision": "36d31f80b2f085489afc6ca9d043f0435dbae63d"
+}

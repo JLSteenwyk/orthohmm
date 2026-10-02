@@ -18,6 +18,17 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [private Miniforge bootstrap](results/PUBLICATION_PRIVATE_BOOTSTRAP_20261002.md)
+has been acquired from the fixed official release, installed in a private
+prefix and used to reconstruct the exact 19-package historical base plus pip.
+The copied-source check passes and all 475 pip payload files match. A restricted
+PATH launcher failure is retained and corrected; successful downloads/base
+installation are not repeated for receipt readback. All 228 focused tests and
+the overlapping 380-case expanded panel pass.
+The preceding pushed revision's eight CI jobs also finish successfully; no
+remote test-count claim is inferred. This does not complete native/OS/rights
+closure, controlled timing or publication readiness.
+
 The [public inference/reader wheel acquisition](results/PUBLICATION_WHEEL_ACQUISITION_20261002.md)
 prepares both exact historical wheel sets using ten fresh public downloads,
 plus separately supplied project and pip artifacts. The copied `native-wheels`
@@ -25,8 +36,9 @@ source profile includes the exact inventory and both locks; all twelve ZIP
 metadata identities and 33 scientific project-source members check. No
 installation/native execution is repeated. The same report retains a diagnosed
 test-only CI checkout-path failure and its 371-case local fix validation;
-corrected remote CI is not yet asserted successful. Full runtime, tool/source
-delivery, rights, timing and publication requirements remain open.
+the subsequent [private-bootstrap report](results/PUBLICATION_PRIVATE_BOOTSTRAP_20261002.md)
+records that corrected revision's successful remote job status. Full runtime,
+tool/source delivery, rights, timing and publication requirements remain open.
 
 The [public historical-base acquisition controller](results/PUBLICATION_BASE_ACQUISITION_20261002.md)
 downloads all 19 frozen archives and the exact pip bootstrap wheel from public
