@@ -629,6 +629,15 @@ cases also pass, while default paths, wrong digests and partial option pairs
 remain explicit failures. Those options do not provision public CI data or
 confer biological admission or redistribution rights.
 
+The [private raw archive restoration](results/SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+gives bounded archive/restore commands and independent archive/binding digests.
+Actual system Python 3.12 restores both complete panels without original
+checkout reads; a fresh Python 3.10 child passes all 27 affected tests using
+the restored inputs. The overlapping 233-case local panel passes. Archives
+remain ignored/private, not publicly provisioned or rights-cleared. This
+input-only handoff does not rerun native annotation admission or replace the
+complete executable study release, uncertainty or controlled timing evidence.
+
 The [native FAS test reference](results/FAS_NATIVE_SOURCE_REFERENCE_20261002.md)
 ships the unchanged, pinned upstream Python source and full license for AST
 comparison tests. These tests no longer need the external QfO checkout: 33

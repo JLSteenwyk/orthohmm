@@ -356,6 +356,14 @@ Default, wrong-digest and incomplete-binding failures remain explicit. No
 new native annotation admission, uncertainty or controlled timing follows;
 public raw provisioning/rights and full CI remain incomplete.
 
+The [private raw archive restoration](SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+adds actual archive-to-regression evidence: both exact raw panels restore under
+standard-library Python 3.12, then all 27 affected tests pass using restored
+inputs with original-checkout reads blocked. All 233 focused local cases pass;
+failed transient-copy controls remain retained. This input-only/private
+component does not establish new biological admission, public provisioning,
+rights clearance, controlled efficiency or a complete executable release.
+
 | Goal requirement | Evidence available | Remaining boundary or work |
 | --- | --- | --- |
 | 1. Freeze baseline, scores and provenance | [Corrected eight-method QfO table](qfo_corrected_comparison_20260926_v7/scores.md), [OrthoBench provenance](OB_PROVENANCE_REGISTER_20260927.md), [Three Kingdoms OrthoMCL input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) | Retained scores do not remove historical input/provenance gaps or the consequences of failed OrthoMCL queries. Distinguish native ortholog pairs from group co-membership and pre-phylogeny checkpoints |

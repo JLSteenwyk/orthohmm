@@ -1,0 +1,306 @@
+{
+  "archives": {
+    "duplication": {
+      "archive": {
+        "bytes": 90734454,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-raw-archive-qo_wkkpi/duplication.tar.gz",
+        "sha256": "3feb5037538dc8f6ea24f45806f5c0c7ea38fa9d37d48f63432a4359e1a7fba7"
+      },
+      "binding": {
+        "bytes": 4571,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-raw-archive-qo_wkkpi/restored/duplication/bindings.json",
+        "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58"
+      },
+      "decompressed_bytes": 93716480,
+      "members": 12,
+      "native_annotation_admission_rerun": false,
+      "payload_bytes": 93703745,
+      "publication_ready": false,
+      "redistribution_authorized": false,
+      "status": "private_swiss_raw_inputs_restored"
+    },
+    "fragment": {
+      "archive": {
+        "bytes": 304827203,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-raw-archive-qo_wkkpi/fragment.tar.gz",
+        "sha256": "a0da76b9a2035197de15050017934ee7c4d7a0b406998cbb6d71914c49de03eb"
+      },
+      "binding": {
+        "bytes": 704165,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-raw-archive-qo_wkkpi/restored/fragment/bindings.json",
+        "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1"
+      },
+      "decompressed_bytes": 608747520,
+      "members": 1774,
+      "native_annotation_admission_rerun": false,
+      "payload_bytes": 607448997,
+      "publication_ready": false,
+      "redistribution_authorized": false,
+      "status": "private_swiss_raw_inputs_restored"
+    }
+  },
+  "binding_authentication": "independently retained SHA256; not a digital signature",
+  "bootstrap_rerun": false,
+  "controlled_timing_run": false,
+  "copied_verification": {
+    "all_233_cases_run": false,
+    "os_containment_claim": false,
+    "pytest_seconds": 6.25,
+    "runs": {
+      "pytest": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "executable": "/home/bizon/anaconda3/bin/python",
+        "junit": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 27
+        },
+        "later_forbidden_opens": 0,
+        "mode": "pytest",
+        "process_returncode": 0,
+        "project_origin_count": 30,
+        "pytest_status": 0,
+        "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+      },
+      "restore": {
+        "canaries_blocked": 3,
+        "child_subprocesses_forbidden": true,
+        "executable": "/usr/bin/python3",
+        "later_forbidden_opens": 0,
+        "mode": "restore",
+        "process_returncode": 0,
+        "project_origin_count": 4,
+        "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]"
+      }
+    },
+    "source_data_bytes": 12957371,
+    "source_data_files": 1827,
+    "temporary_staging_removed": true
+  },
+  "date": "2026-10-02",
+  "dgx_accessed": false,
+  "format": "deterministic streaming gzip/USTAR, pinned binding first, content-addressed regular files",
+  "generated_utc": "2026-10-02T11:14:56.128037+00:00",
+  "inference_or_scoring_rerun": false,
+  "limits": {
+    "actual_decompressed_bytes": 1073741824,
+    "binding_bytes": 2097152,
+    "compressed_bytes": 1073741824,
+    "logical_bytes": 1073741824,
+    "original_record_occurrences": 2000
+  },
+  "local_live_host_probe_executed": false,
+  "local_verification": {
+    "errors": 0,
+    "failed_control": "Transient during-copy mutation accepted before copied-byte hashing; preserve failing receipt and pre-guard source. Two later failures are stale expected error text, corrected without weakening guard.",
+    "failures": 0,
+    "final_cases": 233,
+    "new_archive_cases": 33,
+    "passes": 233,
+    "pytest_seconds": 12.04,
+    "receipts": {
+      "benchmarks/work/swiss_raw_archive_complete_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "tests": 233
+        },
+        "junit_seconds": 12.024
+      },
+      "benchmarks/work/swiss_raw_archive_final_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 233
+        },
+        "junit_seconds": 12.012
+      },
+      "benchmarks/work/swiss_raw_archive_transient_before_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "tests": 33
+        },
+        "junit_seconds": 0.553
+      },
+      "benchmarks/work/swiss_raw_archive_unit_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0,
+          "tests": 32
+        },
+        "junit_seconds": 0.481
+      },
+      "benchmarks/work/swiss_raw_archive_verified_20261002.xml": {
+        "counts": {
+          "errors": 0,
+          "failures": 1,
+          "skipped": 0,
+          "tests": 89
+        },
+        "junit_seconds": 1.029
+      }
+    },
+    "skipped": 0
+  },
+  "native_annotation_admission_rerun": false,
+  "original_record_occurrences": {
+    "duplication": 11,
+    "fragment": 1774
+  },
+  "parent_commit": "6c55d3fd58572ebe705154336dfacfe78f998d39",
+  "pins": [
+    {
+      "bytes": 10356,
+      "path": "benchmark_tools/archive_swiss_raw_sources.py",
+      "sha256": "c8a003143558d93c9266686be9aa9f22c54aefe7a460583f9cb8255978dbc71b"
+    },
+    {
+      "bytes": 9158,
+      "path": "tests/unit/test_archive_swiss_raw_sources.py",
+      "sha256": "3841a61bfec5bae8926025e53430fe0e4286da74937b3484973175ee5cf71aa2"
+    },
+    {
+      "bytes": 5998,
+      "path": "benchmark_tools/relocate_swiss_raw_sources.py",
+      "sha256": "5bf4f1e4d2c11fb62b1ba34a95d28d89e8919b15c9c773ad5ca205199fc42d95"
+    },
+    {
+      "bytes": 7448,
+      "path": "benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6449,
+      "path": "benchmark_tools/export_swiss_duplication_strata.py",
+      "sha256": "6fc33a92ced1dd79a592b0f75903b6a2733d4e7033d409578947eaf4b149e36a"
+    },
+    {
+      "bytes": 6285,
+      "path": "benchmark_tools/export_swiss_fragment_strata.py",
+      "sha256": "b182190ecfdf3eeb887951fbe5b81c588e362809beef05769ff1876aea83b3be"
+    },
+    {
+      "bytes": 3981,
+      "path": "tests/conftest.py",
+      "sha256": "96908ea0c86d9870dc151aa40721ac9c5dc987f5dacad3d90deef3d7517e7c28"
+    },
+    {
+      "bytes": 7022,
+      "path": "benchmarks/work/swiss_raw_archive_transfer_audit_20261002.py",
+      "sha256": "c6e72609b944ed9c1f98c26ad7c242fa8c109e7cbc3ea5c87a5ac8debc0ac1bf"
+    },
+    {
+      "bytes": 321930,
+      "path": "benchmarks/work/swiss_raw_archive_transfer_20261002.json",
+      "sha256": "0147d1c6aef2b8d41d8adf2970772f91fd685da78ceb9ea5e1d6f8324cfea499"
+    },
+    {
+      "bytes": 9921,
+      "path": "benchmarks/work/swiss_raw_archive_before_copy_hash_20261002.py",
+      "sha256": "0d867d0ae4a20e57ce1b58ba2878d608b150eb1e1be87211d354bc9062a597f2"
+    },
+    {
+      "bytes": 5031,
+      "path": "benchmarks/work/swiss_raw_archive_unit_20261002.xml",
+      "sha256": "8199288345ee769a58995474dfce0115fd20538103c6e17b870450b24994f616"
+    },
+    {
+      "bytes": 6669,
+      "path": "benchmarks/work/swiss_raw_archive_transient_before_20261002.xml",
+      "sha256": "0392fab9308cca6ada9f57a3121d66e4d8698dc87bbde730e351d6f40b48beef"
+    },
+    {
+      "bytes": 18027,
+      "path": "benchmarks/work/swiss_raw_archive_verified_20261002.xml",
+      "sha256": "f96b8c975926918c2867904c29c90dc66a1d6fdf6a943b37974f66adb087e1fa"
+    },
+    {
+      "bytes": 39237,
+      "path": "benchmarks/work/swiss_raw_archive_complete_20261002.xml",
+      "sha256": "3c37cc5834d58a8d825004fd218684cbd4b0b04f8b8992385e19db6d90fda2db"
+    },
+    {
+      "bytes": 34595,
+      "path": "benchmarks/work/swiss_raw_archive_final_20261002.xml",
+      "sha256": "59ef2eeee88b0a6fe98219189c9527d23a8e18ade6850becedb02f9521489ba5"
+    },
+    {
+      "bytes": 561,
+      "path": "benchmarks/work/swiss_raw_archive_duplication_20261002.json",
+      "sha256": "9338da571dddd879ffeaa67204f92c0c37d708d0644c2837c0f81d4edeb3374d"
+    },
+    {
+      "bytes": 562,
+      "path": "benchmarks/work/swiss_raw_archive_fragment_20261002.json",
+      "sha256": "2fb39a10167b5735d71f7d4d547586ae954a8c789d5292b554af9e95f87fac76"
+    },
+    {
+      "bytes": 282894,
+      "path": "benchmarks/work/ci_remote_6c55d3fd_20261002/110806353451.log",
+      "sha256": "66cfca5c4215646e43dfa224bd4b0e0e1ebaa174f05be7d3135d62c5c8ab27e1"
+    },
+    {
+      "bytes": 90734454,
+      "path": "benchmarks/work/swiss_raw_sources_duplication_20261002.tar.gz",
+      "sha256": "3feb5037538dc8f6ea24f45806f5c0c7ea38fa9d37d48f63432a4359e1a7fba7"
+    },
+    {
+      "bytes": 4571,
+      "path": "benchmarks/work/swiss_raw_sources_duplication_20261002/bindings.json",
+      "sha256": "2009be32157feddd2d0f6f4191bcbf5e0d33416b24e9a50e402f6aa023df8e58"
+    },
+    {
+      "bytes": 304827203,
+      "path": "benchmarks/work/swiss_raw_sources_fragment_20261002.tar.gz",
+      "sha256": "a0da76b9a2035197de15050017934ee7c4d7a0b406998cbb6d71914c49de03eb"
+    },
+    {
+      "bytes": 704165,
+      "path": "benchmarks/work/swiss_raw_sources_fragment_20261002/bindings.json",
+      "sha256": "0319644fbb580d87ab123676a7220f89f053cac89e75a5674c4295dd4d3f72f1"
+    }
+  ],
+  "preceding_remote": {
+    "actual_313": {
+      "contains_new_archive_helper": false,
+      "default_raw_export_failures": 4,
+      "download_utc": "2026-10-02T11:10:30.557501+00:00",
+      "failures": 4,
+      "job": 110806353451,
+      "new_option_cases_passed": 13,
+      "passes": 14037,
+      "seconds": 427.61,
+      "skipped": 119,
+      "source_sha": "6c55d3fd58572ebe705154336dfacfe78f998d39",
+      "warnings": 30
+    },
+    "all_five_macos_jobs": "failure",
+    "cpu_wheel": "success",
+    "docs": "success",
+    "full_ci_success": false,
+    "linux_native_diagnostics": "success",
+    "observation_utc": "2026-10-02T11:07:57.085945+00:00",
+    "restart_performed": false,
+    "run": 36997142693,
+    "sibling_counts_inferred": false
+  },
+  "publication_ready": false,
+  "raw_data_committed_or_uploaded": false,
+  "raw_manifest_or_historical_archive_changed": false,
+  "redistribution_authorized": false,
+  "remaining": [
+    "Other-QfO uncertainty",
+    "Controlled Threadripper resource evidence, deferred quiet window",
+    "Raw/transitive rights and public input provisioning",
+    "Complete versioned executable release and archival deposition"
+  ],
+  "scientific_settings_and_scores_changed": false,
+  "status": "private_raw_archive_to_regression_verified"
+}

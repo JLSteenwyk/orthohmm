@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Private Raw Archive To Regression (2026-10-02)
+
+Continue from pushed 6c55d3fd; read objective/ledger/source state and retain
+completed scientific work. User confirms no known quiet window; it is not
+needed now. Timing remains deferred without further questions/polls, DGX or
+unrelated process/service actions. Observe existing run 36997142693 at
+11:07:57 UTC: docs/Linux/wheel succeed and all five macOS jobs fail. Actual
+Python 3.13 job 110806353451 log, downloaded once at 11:10:30 UTC, verifies
+source and 14,037 passes/four failures/119 skips/30 warnings/427.61s. All 13
+new option cases pass; four default raw exports still lack original inputs.
+No restart, sibling counts or full CI success inferred.
+
+Add a standard-library streaming raw input archive/restore helper: exact
+independent archive/binding pins, complete ordered original occurrences,
+deduplicated regular content paths, copied-byte hashes, bounded compressed/
+logical/actual decompressed sizes including padding, gzip footer/CRC, canonical
+footprint, no unsafe extraction, overwrite or silent retry. All false rights/
+native-admission/publication flags remain explicit. A transient-copy test first
+fails before the new copied-byte gate, proving before/after source checks alone
+are insufficient. Retain that snapshot/failure and two later stale-error-message
+failures. Correct the expectation, not the guard: final overlapping **233 cases
+pass in 12.04s**, zero errors/failures/skips; 33 are new archive cases.
+
+Privately archive both completed raw directories without changing their
+binding digests: duplication 90,734,454 compressed bytes/12 members; fragment
+304,827,203 bytes/1,774 members. No upload/raw Git commit/rights grant. Copy
+1,827 selected source/data files (12,957,371 bytes) plus these archives to fresh
+external staging. Actual isolated system Python 3.12.3 restores both complete
+panels; actual fresh Python 3.10.13 passes all **27 affected regression/options
+cases in 6.25s**, including all four raw exporters with unchanged assertions.
+Each child blocks three canaries, has zero subsequent forbidden opens, forbids
+subprocesses and uses staged origins (four restore/30 pytest). Temporary staging
+is removed. Only 27, not all 233, run in the copied tree. These are Python-event
+guards, not OS containment; native feature extraction/admission, inference,
+scoring and bootstrap do not rerun. [Workflow and pins](SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+distinguish input-only private transfer from the full study release.
+
+Scientific engines/settings/counts/scores, exporter helpers, raw manifests and
+historical archives remain unchanged. Commit/push the helper/tests/evidence
+milestone and observe its automatic CI; new-helper remote confirmation remains
+pending. Prospective handoffs require its new source identity, without repinning
+historical receipts. Other-QfO uncertainty, controlled resource evidence,
+raw/transitive rights, complete versioned release and deposition stay open.
+The original publication goal remains active and incomplete.
+
 ## Raw Regression Input Handoff And Linux Confirmation (2026-10-02)
 
 Previous turn progressed at pushed d03530ce with platform-correct host-reader

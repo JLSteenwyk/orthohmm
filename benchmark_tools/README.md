@@ -126,6 +126,13 @@ pass and all 27 affected cases pass in a copied tree, retaining default and
 wrong-binding failures. Public CI data provisioning/rights remain unresolved;
 neither result establishes controlled timing.
 
+The [private raw archive restoration](results/SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+adds bounded, independently checksum-pinned input transfer. Both complete
+archives restore under standard-library system Python 3.12; all 27 affected
+raw regressions pass using those restored inputs with checkout reads blocked.
+All 233 focused local cases pass. Raw archives stay private/local, with no
+native annotation rerun, public upload, rights grant or full-release claim.
+
 The [SwissTrees descriptive-table checker](results/SWISS_DESCRIPTIVE_TABLE_ARITHMETIC_20261002.md)
 verifies 208 rows across all eight methods using exact rational arithmetic,
 including 984 score/difference cells and explicit missingness. It runs with
