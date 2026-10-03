@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Shared Runtime Refreshed And Real Launch Prepared (2026-10-03)
+
+Continue from pushed 98ed53f0 toward actual execution. Refresh the genuinely
+changed helper inventory using the existing builder and latest retained lookup,
+not the oldest binding. Exactly seven helper changes; no added/removed helpers,
+private drift or non-helper drift. All 57,959 records match before/after native
+startup, and native module identities remain 913/1,563. Preserve historical
+bindings. New lookup is recorded in the shared execution report.
+
+Solve actual job-ID/request-hash binding prospectively: the new shared shell
+entry point can obtain the request hash from its running scheduler record after
+the client creates the held job's real request and sets its comment. Reuse the
+existing controller parser and resource validation. A Slurm JSON query returns
+139 for unavailable serializer/json; preserve that failure and use the working
+one-line interface without shared upgrades. Shell syntax and final 77-case
+stream checks pass. Only the shell source changes after runtime refresh;
+it is pinned separately in the selected source recipe.
+
+Add a closed first-launch artifact source for real shared policy/accounting
+readiness, frozen source inventory, held-job submission, exact selection and
+release. Later identities still require actual reviewed history. Reuse 22380
+accounting calibration and resource endpoints; do not claim causal slowdown,
+native handoff success or quiet-host readiness before observing them.
+No native run has been launched at this preparation checkpoint.
+
 ## Explicit Shared-Host Execution Implemented (2026-10-03)
 
 Previous turn progressed at pushed 1ae6b3e2 by amending the actual goal.

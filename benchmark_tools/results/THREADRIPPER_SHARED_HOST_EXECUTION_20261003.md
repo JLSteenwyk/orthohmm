@@ -53,3 +53,36 @@ Preserve older source recipes, failed attempts and engineering protocols.
 The retained 54-arm observer experiment can only be interpreted as shared-host
 diagnostics if executed under this scope; it is not causal observer-cost
 certification and is not a quiet-window prerequisite for the 27-run panel.
+
+## Refreshed Runtime And Held-Job Bootstrap
+
+The fresh [lookup](threadripper_private_lookup_shared_20261003.json) preserves
+the private scientific baseline/controller/manifests. Exactly seven helper files
+change, with no added/removed helpers or non-helper drift. All 39,208 OS/helper
+and 18,751 private records match before and after native startup; declared
+imports match retained identities (OrthoHMM 913, OrthoFinder 1,563).
+The actual inventory checks took 58.8932 and 56.3012 seconds; these are audit
+costs, not inference measurements. Earlier bindings remain historical.
+
+The new script additionally accepts `scheduler-comment` as the request-hash
+argument. After a real job is submitted held, the launcher constructs its
+job-bound request and puts that request's hash in the scheduler comment before
+release. At startup the script validates the running allocation with the existing
+controller parser and requires exactly a lowercase 64-hex hash. Normal direct
+hash arguments remain supported. This avoids predicting an unassigned job ID
+or accepting an unbound future request file.
+
+The installed Slurm JSON query failed with exit 139 because `serializer/json`
+is unavailable. Preserve that client failure; use the installed one-line
+interface already supported by the controller validator, not a Slurm upgrade.
+Shell syntax passes. A final 77-case process-stream panel passes in 1.37 seconds,
+including the explicit absence of background-configuration certification.
+
+[Launch source](prepare_shared_threadripper_launch_20261003.py) prepares actual
+current-source/policy/accounting evidence and separately submits/releases only
+identity zero. It requires the pinned private controller, actual committed
+helper/script bytes, current manifest coverage and the retained seven successful
+accounting checks. It checks held-job identity/resources, pure frozen-run
+selection and the actual scheduler request hash before release. No auto-retry
+or fabricated later history is provided; subsequent identities require genuine
+post-run audit and reviewed history.
