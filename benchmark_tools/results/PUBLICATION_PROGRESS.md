@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Blocked Execution Checkpoint (2026-10-02)
+
+Latest substantive milestone is pushed 32430639, the portable presentation
+rebuild. Three subsequent goal turns are no progress, not verified waits:
+read-only completion/impasse checks find the same unavailable execution
+prerequisite and no safe substantive next action. Recording this checkpoint
+is bookkeeping, not a new scientific or engineering result. The blocked-audit
+threshold is satisfied; mark the goal blocked, never complete or paused.
+
+Read the original goal and current requirement/evidence boundaries. At this
+checkpoint HEAD remains 32430639, scoped tracked files are unchanged, both
+reviewed launch routes lack readiness, all 162 planned native input/output
+paths remain absent, and the retained overhead history has zero attempts.
+These filesystem checks are not scheduler or current host-isolation evidence.
+No owned live execution handle is being awaited. No host polling, inference,
+diagnostic rerun, DGX access or disruption of unrelated work occurs.
+
+Resume when an uncontended local Threadripper execution window can be verified.
+Reuse valid frozen source/runtime, calibration and restoration evidence; finish
+prospective environmental policy, readiness and integrated handoff, then the
+prespecified observer-overhead and 27-run production panels under their actual
+admission rules. Recheck source/runtime drift and host state at launch. Do not
+approve readiness from old receipts or fixtures or change frozen scientific
+settings. A different host, DGX permission or GPU is not required.
+
+Original TreeFam families/mapping remain unrecovered; public searches need a
+concrete new lead rather than repeated downloads or contacts. Other-QfO
+uncertainty, provenance/rights limits and final scientific/release reconciliation
+remain explicit. Completed scores, analyses, drafts and review PDFs are retained;
+the complete original publication objective is preserved and unmet.
+
 ## Review Presentation Rebuilds From Git Inputs (2026-10-02)
 
 Previous turn progressed at pushed c8ba059c with accepted combined text/figures.
