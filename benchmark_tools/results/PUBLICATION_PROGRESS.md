@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Eight-Proteome Full OrthoFinder Reviewed; High Sensitivity Released (2026-10-03)
+
+Previous continuation is a verified live-job wait, not an unmet external gate.
+Read the full goal and current worktree; poll exact **22400** until its native
+step and enclosing job are terminal. Preserve the live phase observations:
+species/gene-tree workers actively accumulate CPU; all 12,110 alignments/trees
+complete, then STRIDE/reconciliation. Native exit alone does not end wrapper
+checks. Fresh scontrol and sacct eventually report parent, batch and step
+COMPLETED 0:0. Capture the terminal controller before purge and execute the
+independent index-4 review once. All four categories pass, including frozen
+argv/inputs, pre/post runtime identity, native outputs, raw resource counter
+replay and independent whole-run process/pressure review.
+
+The [canonical-summary copy](threadripper_shared_attempt_22400.json) is
+28,880 bytes, SHA-256
+`eb3a1672f9a11f85d373aa56484ecfaa037070a7257e2f3d3aed4e0ce4646c63`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22400.md) distinguishes the 33,013
+validated pre-phylogeny checkpoint groups from 597,451 expanded native
+ortholog pairs. All 165,168 input proteins are checked; this is not a new
+accuracy score or sequence-only inference. Primary resources are
+1,139.939834238 native wall seconds, 17,734.408768 native-task CPU seconds and
+10,987,712,512 native-step lifetime peak bytes. Maximum sampled foreign demand
+is 53.6239937821 cores. Process/pressure failures are empty under the unchanged
+shared-host policy; unknown, method-dependent timing distortion remains.
+
+Only after this canonical review, bind the five-attempt prefix and release
+frozen index 5, OrthoHMM high sensitivity, eight proteomes, repeat 0, as
+**22401**. The [live snapshot](threadripper_shared_live_22401.json) checks its
+actual native worker, request, successful preflight and unchanged CPU/memory
+placement. A dated snapshot is not future live-state proof. No run is retried,
+skipped or scientifically retuned, and no unrelated workload is changed.
+
+Export [five-attempt tables](threadripper_shared_panel_snapshot_20261003_v5/panel.json)
+and [updated partial figure](threadripper_shared_resource_figure_20261003_v4/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Four observations are eligible; index 0
+remains excluded, 22 identities remain unreviewed and no three-repeat cell is
+complete. Inspect the actual PNG: five markers have headroom, no text overlaps
+and missing coverage/exclusions stay explicit. Earlier tables, reporting
+archive and main PDF retain their original dated payloads. Update active
+README/reproduction/claim links and the remaining-gate count, not historical
+receipts or pinned execution helpers.
+
+Extend retained-table replay and actual PDF/pixel/provenance checks to the
+five-attempt snapshot. The component/table/figure suite passes **77 cases in
+5.81s**. These are reporting regressions, not repeated inference/statistics.
+Generated TSV CRLF/empty fields and SVG spacing remain hash-bound bytes rather
+than targets for manual whitespace normalization.
+
+Next: poll exact **22401**, review its terminal native/runtime/environment/
+resource outcome and only then release index 6 (full OrthoFinder, 12 proteomes).
+Finish the remaining panel, final figures/manuscript/archive reconciliation
+and versioned study release. Full publication scope remains active and
+incomplete; no quiet-window, DGX or unrelated service/process action is needed.
+
 ## OrthoFinder Gene-Tree Phase Verified Live (2026-10-03)
 
 The previous goal turn makes concrete progress at pushed **bad71bf6**: index 3

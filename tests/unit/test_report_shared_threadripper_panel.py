@@ -146,9 +146,10 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-def test_retained_four_attempt_snapshot_replays_tables_without_original_evidence(tmp_path):
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5)])
+def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
-    snapshot = results / 'threadripper_shared_panel_snapshot_20261003_v4'
+    snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
     report = json.loads((snapshot / 'panel.json').read_text())
     outcome = json.loads((results / 'threadripper_shared_attempt_22399.json').read_text())
     row = report['runs'][3]
@@ -157,12 +158,20 @@ def test_retained_four_attempt_snapshot_replays_tables_without_original_evidence
     assert row['resources'] == outcome['resources'] == dict(
         wall_seconds=1999.550829241, cpu_seconds=56008.34709, peak_memory_bytes=8243466240)
     assert row['whole_run_maximum_foreign_average_cores'] == outcome['whole_run_maximum_foreign_average_cores']
-    assert report['reviewed_attempts'] == 4 and report['eligible_attempts'] == 3
+    assert report['reviewed_attempts'] == count and report['eligible_attempts'] == count - 1
     assert report['excluded_attempts'] == [0]
-    assert all(row['resources'] is None for row in report['runs'][4:])
+    assert all(row['resources'] is None for row in report['runs'][count:])
+    if count == 5:
+        orthofinder = json.loads((results / 'threadripper_shared_attempt_22400.json').read_text())
+        assert report['runs'][4]['job_id'] == orthofinder['job_id'] == 22400
+        assert report['runs'][4]['resources'] == orthofinder['resources'] == dict(
+            wall_seconds=1139.939834238, cpu_seconds=17734.408768, peak_memory_bytes=10987712512)
+        assert orthofinder['native_outputs']['input_genes'] == 165168
+        assert orthofinder['native_outputs']['checkpoint_groups'] == 33013
+        assert orthofinder['native_outputs']['native_pair_rows'] == 597451
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
-    output = tmp_path / 'four_attempt_replay'
+    output = tmp_path / 'partial_attempt_replay'
     export(output, report)
     assert all((output / name).read_bytes() == (snapshot / name).read_bytes()
                for name in ('panel.json', 'attempts.tsv', 'cells.tsv'))

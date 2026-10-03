@@ -1,0 +1,388 @@
+{
+  "execution_scope": "shared_host_matched_resources",
+  "index": 4,
+  "job_id": 22400,
+  "limitations": [
+    "Shared-host observations only; contention distortion is unknown and potentially method dependent.",
+    "Periodic observations are not continuous containment or isolation certification.",
+    "CPU includes wrapper bracket work; memory is native-step lifetime peak, not pure algorithm RSS.",
+    "All-prefix history and a fresh launch preflight remain required for the next frozen identity."
+  ],
+  "method": "orthofinder_3_1_5_full",
+  "native_outputs": {
+    "accuracy_evaluated": false,
+    "checked_files": [
+      {
+        "bytes": 1458,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Log.txt",
+        "sha256": "7e0a8629d1cb5170e64166ccfea820f98d54b2318ed49ba9b756fb03c8c9b5ec"
+      },
+      {
+        "bytes": 18913164,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/WorkingDirectory/OrthoFinder_graph.txt",
+        "sha256": "d56ee15339abe5c6f75f253a6cd34514c05db1181be99b8204937cb9709272a4"
+      },
+      {
+        "bytes": 4397813,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/WorkingDirectory/SequenceIDs.txt",
+        "sha256": "68b963a1e670e8426d1c7456afd7c4ad74f6d7d963c6ae9598cce65205fda71b"
+      },
+      {
+        "bytes": 1707694,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+        "sha256": "6fc2c70bcadca80a9d5764568e820fef2d65aa4d87724a94300eda8fe7e1aa87"
+      },
+      {
+        "bytes": 293878,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "8798e68cc4bfd762cd77cb59a0f53e2b1925a2721dd9678b6e1f12b6696fab55"
+      },
+      {
+        "bytes": 473496,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "40b738d896beade6c8529ff4530c9c23e9d87cee870d3f428b15a3282d46be47"
+      },
+      {
+        "bytes": 245294,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "257f10d86b46735b297b56c4c122d1ab25e193b67c9cf1eeea9edcc293ad702e"
+      },
+      {
+        "bytes": 343482,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "e412d5c6316f6a80ce17ca0ed18377e2bb3fa1c996d60cbb2065b73524627c8f"
+      },
+      {
+        "bytes": 365005,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "7ea8429cb6c2970d41246a0ddeaa86670109ad008aef2866d45508b84bcdf997"
+      },
+      {
+        "bytes": 397659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "d50cd8257348be8aba87962ffab992ece998206502295d6a5a5f7eb7bbeefcfa"
+      },
+      {
+        "bytes": 379013,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "dac993236cabe14b7a162b2711714eeb31cbda6872e58a661da19aa7732d449f"
+      },
+      {
+        "bytes": 293878,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "3695c0ebcec08fd27732b83474b21b97810725af0446ae0e7327a5253e6afab0"
+      },
+      {
+        "bytes": 587500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "d83d676a46534f95df677eb92c59db0a88e1c46b1128b60b18ab3251f343a939"
+      },
+      {
+        "bytes": 280519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "4a6237fc17eaad0cccc16f77e8918b2c7f636d310ea9b0e35d4cb9de0d607ae8"
+      },
+      {
+        "bytes": 431245,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "40ac89497bc1652eb1d0cd73c475b96ca171c63e32ca3c7ea8744754e0a13601"
+      },
+      {
+        "bytes": 462088,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "4261b7fd90ea1b0d22e56b22abe909d7ada8c739d8264f0ce1950f83691741c7"
+      },
+      {
+        "bytes": 501654,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "9207767d7d46cafd399addad22db08d10a6f56751c3825f2da24df404876043c"
+      },
+      {
+        "bytes": 475000,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Ciona_intestinalis.KH.pep.all/Ciona_intestinalis.KH.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "121b012497a6a58cec3c711e9424cdd7c6f17f35cb2d44b55e0862c3b057d7e4"
+      },
+      {
+        "bytes": 473496,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "52a2dfeca8e5ec2dc460982fb10afd99a306e5f2437abe194da5c866c07cd41f"
+      },
+      {
+        "bytes": 587500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "c36d26d9e631a562bfd7ec7297ef826e57cd48a7307eff962d05d4f3bc3f5dad"
+      },
+      {
+        "bytes": 493121,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "fecad0f134d7737bd409b45300fe013afe19234aa16015ccd8836ef117909bc6"
+      },
+      {
+        "bytes": 827461,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "5015ca93cba0703f0d584964f209125b0086d5bab91199cdb31a8cf3998c2748"
+      },
+      {
+        "bytes": 900234,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "f3041d99e793a08d076cc244a153b16ac6dafb7887b778a2a4c6119bef77b945"
+      },
+      {
+        "bytes": 954612,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "78251bd26efa7674d3875eb2f704b8a57485b139449faf2cdd417890ad8ef978"
+      },
+      {
+        "bytes": 930500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Danio_rerio.GRCz11.pep.all/Danio_rerio.GRCz11.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "c786cf811560a16effa6c2e46db453ba5874ce253bcc3d3a20e7ffdc0f1fcc29"
+      },
+      {
+        "bytes": 245294,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "cc9de68e395266b0632c9e9d07e91876d2dab613ff4bab92ec71ced1e66fe562"
+      },
+      {
+        "bytes": 280519,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "06d58c23ffda3f4a4c92188ee8f198fe6c2b65ee9157c45a624cac4cd0b340aa"
+      },
+      {
+        "bytes": 493121,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "19d289aedf5a0662603f1ce36668785d4701dff86c1f4c476d6bcd930b8a8124"
+      },
+      {
+        "bytes": 343543,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "041542ef4ec9ecf231f60dcb3f0d2ebfb320eac65fb081a10eb4b0366c5d8e8d"
+      },
+      {
+        "bytes": 369336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "afc6bcfab290623b4641f1c1634af5f1e02410d6ae481e6be88ef7ec3cfe458c"
+      },
+      {
+        "bytes": 404650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "95fb2237d1f0e3caba4ce98cafada2a233f405f5dec3426d753e27fbe6f3025c"
+      },
+      {
+        "bytes": 384337,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "8d0a2841a1deb5e59266a5a45edbafef39185f4b919ad24bd1ef2c07df9f7b31"
+      },
+      {
+        "bytes": 343482,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "a5600b3b6a99bc6f312a0f6260021cf1a4ee6ac5c4ee9bbde841cd52645e13b1"
+      },
+      {
+        "bytes": 431245,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "26de9a322a0635705628bef99bcd6f47929b547d5240962997bd817824cb1cf6"
+      },
+      {
+        "bytes": 827461,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "87b9795a94bc2f8ebdcad6dd07312e938685a4a2536abc16a33c07b4081356e5"
+      },
+      {
+        "bytes": 343543,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "b96de172bb512d35c66abec17364876f048eeb14d5a389b6c446a493b800fa6e"
+      },
+      {
+        "bytes": 699708,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "5ace7d73a7bcb3b9da55ceb2a81e2610b07841dbe1f4f0b812816bebfd52b656"
+      },
+      {
+        "bytes": 751433,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "1a0b82ac9cce6f6945e8d6d2aab49b059079f93e01595d26122a62fc3be0c2c3"
+      },
+      {
+        "bytes": 726060,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "6db4b2ce910757d1ec1fea6fe03f1aac1570e1ed0419b3fde87654e07967cd03"
+      },
+      {
+        "bytes": 365005,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "1dc846f984d34c2ed375d3fc97125b998b88bab4965469fc32819eafcc006e95"
+      },
+      {
+        "bytes": 462088,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "d15737c5b35ad08c64ceef7cba6bf34263d9c8e4ffb544229241acba82b1bc1c"
+      },
+      {
+        "bytes": 900234,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "1d17ed9db939dfe1c9c7cda28b18b00f8f6976526a62555d42c0e01af2f573a2"
+      },
+      {
+        "bytes": 369336,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "ae498ad149dc084a97d5ee726b7994844abcb3dd8e5ae2d15a035b7bfce6ab7a"
+      },
+      {
+        "bytes": 699708,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "c5f0b8c926e6d796dac9dfc3aa18f1b0e28c4175e004d65e1c7698649550ebc8"
+      },
+      {
+        "bytes": 865038,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "725d244be0c64a2158e9b5aa90c861979d0f560f70e8798b27fb097149a3a81e"
+      },
+      {
+        "bytes": 864313,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Monodelphis_domestica.ASM229v1.pep.all/Monodelphis_domestica.ASM229v1.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "c2b4df11bc2f9333c892785e87a3bf8beffd0167c7d9e82c7cc5eac9193e356f"
+      },
+      {
+        "bytes": 397659,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "1eaef31c4a31577cfeac15e7912ed97ad51c19dd1ace424a7b0fef02769bafbe"
+      },
+      {
+        "bytes": 501654,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "81639fc9ff58f45af494640b4a59049a0d45bbff3a937078b646db5c7bf8ac41"
+      },
+      {
+        "bytes": 954612,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "3b564c157598e7f6fa415a54de67f4f046f73852450769ab5c74216bca034644"
+      },
+      {
+        "bytes": 404650,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "14ce57ac38e9e2de36c9377d5da2d424699eea05815a0c0964bc60024fbdb0bd"
+      },
+      {
+        "bytes": 751433,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "3e99a6838880361b2711ab3e6020c12a6c80681eb610f64923876549cbeb153f"
+      },
+      {
+        "bytes": 865038,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "3c471cd30581035a8d933ed289f526de47b8893221c568dec49bf447ba3453a5"
+      },
+      {
+        "bytes": 940162,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Pan_troglodytes.Pan_tro_3.0.pep.all/Pan_troglodytes.Pan_tro_3.0.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "22545017a2c900354ac08dab0907f6c52d17251852615832296c024c4bcb3f76"
+      },
+      {
+        "bytes": 379013,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "85d65dd1077cb102424c88ccb94ccd0d13e046a37deb7517ff696a4583156a1d"
+      },
+      {
+        "bytes": 475000,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Ciona_intestinalis.KH.pep.all.tsv",
+        "sha256": "52ae70579cefd4037c952d4fa635eb8201733343e33ea1d34228e1adddb3dbd2"
+      },
+      {
+        "bytes": 930500,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Danio_rerio.GRCz11.pep.all.tsv",
+        "sha256": "3624615abd7e66b91affa41478bcddc7da95a6fd368f0c290fca3b7542ca0004"
+      },
+      {
+        "bytes": 384337,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "9a363b4bec73f36f4334d8433481562f80aa0e3935fb3c4dbc405611271d67af"
+      },
+      {
+        "bytes": 726060,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "b683ab72198ade2bd7f1ebb598c9bba578469b4c162a4f36c1c27f595a1493f1"
+      },
+      {
+        "bytes": 864313,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Monodelphis_domestica.ASM229v1.pep.all.tsv",
+        "sha256": "68cd7dc3cb04f379f8e191fbf9fa99c783425c09d8ca4ccc53d7cf7510a32b79"
+      },
+      {
+        "bytes": 940162,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Pan_troglodytes.Pan_tro_3.0.pep.all.tsv",
+        "sha256": "5957f341020d284887fd2af3ba4275983a367e4de04aed33c37d29edf9cfa862"
+      }
+    ],
+    "checkpoint_groups": 33013,
+    "evidence_relocation": {},
+    "input_genes": 165168,
+    "limitations": [
+      "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+      "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+      "OrthoFinder validation expands native relation rows outside the inference timer."
+    ],
+    "native_pair_rows": 597451,
+    "resource_measurements_admitted": false,
+    "source": {
+      "bytes": 8784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+      "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+    },
+    "status": "native_scaling_outputs_checked"
+  },
+  "next_submission_authorized": false,
+  "original_environment_failures": {
+    "pressure": {},
+    "processes": {}
+  },
+  "original_environment_protocol_passed": true,
+  "preflight_foreign_average_cores": 52.12885978461151,
+  "primary_resources_replayed": true,
+  "proteomes": 8,
+  "repeat": 0,
+  "resource_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "resources": {
+    "cpu_seconds": 17734.408768,
+    "peak_memory_bytes": 10987712512,
+    "wall_seconds": 1139.939834238
+  },
+  "reviews": {
+    "environment": {
+      "bytes": 1857,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_04/environment_review.json",
+      "sha256": "c4ca8bd2cc3bf43907ee7ee3170559ec1e53f4dc8df09efd0680d8db6ac02dd3"
+    },
+    "outputs_or_failure": {
+      "bytes": 1016,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_04/outputs_or_failure_review.json",
+      "sha256": "4a657360cb7330f1da39ff322617030d335dd397d425c3f36e55682091cf0d7d"
+    },
+    "resources": {
+      "bytes": 1565,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_04/resources_review.json",
+      "sha256": "2784cf44ae2b94fd976387ac14a600aae0b67426ab325bddb760cc68bdd69014"
+    },
+    "runtime": {
+      "bytes": 4361,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_04/runtime_review.json",
+      "sha256": "e9d273ce53162f05fd06ca2106df362f183e55fb35da828a3791ef82bcc3d352"
+    }
+  },
+  "scheduler_exit_code": "0:0",
+  "scheduler_state": "COMPLETED",
+  "scientific_timings_admitted": false,
+  "session": {
+    "bytes": 2028,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_04/session.json",
+    "sha256": "38644b840c901d7d0b57dd387b57ef317fae8260b178c5323d4132bdab74993a"
+  },
+  "shared_host_resources_reviewed": true,
+  "status": "shared_attempt_independently_reviewed",
+  "terminal_accounting": null,
+  "uncontended_timing": false,
+  "whole_run_maximum_foreign_average_cores": 53.623993782105
+}
