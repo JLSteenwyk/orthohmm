@@ -39,7 +39,13 @@ a completed resource panel or portable study archive. Resource-table collection
 and plotting use the sources below; both refuse existing output directories.
 Plotting validates the snapshot, direct retained evidence and source hashes.
 It requires local reviewed evidence, including files under ignored work paths;
-these commands do not yet constitute a portable resource archive component.
+these commands do not constitute raw-measurement or native reproduction.
+The separate [portable reporting component](results/SHARED_RESOURCE_REPORTING_COMPONENT_20261003.md)
+now restores the three-attempt snapshot and replays all table bytes and PNG
+pixels without reading original evidence paths. It retains exclusions and
+missing repeats, not full-panel or raw-accounting admission. Use the restored
+component's own reader and externally pinned manifest, not the local evidence
+collector, for this bounded reporting replay.
 
 ```sh
 python -B benchmark_tools/results/report_shared_threadripper_panel_20261003.py \

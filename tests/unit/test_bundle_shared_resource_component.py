@@ -1,6 +1,7 @@
 from copy import deepcopy
 import json
 from pathlib import Path
+import tarfile
 
 import pytest
 
@@ -114,3 +115,30 @@ def test_actual_arithmetic_and_figure_replay_is_not_native_admission(tmp_path):
     assert json.loads((output / 'replay.json').read_text()) == result
     with pytest.raises(FileExistsError): module.replay(directory, pin, output)
     with pytest.raises(FileExistsError): module.replay(directory, pin, directory / 'mutate')
+
+
+def test_retained_archive_has_exact_regular_payload_and_honest_scope():
+    results = ROOT / 'benchmark_tools/results'
+    receipt = json.loads((results / 'shared_resource_reporting_component_result_20261003.json').read_text())
+    archive = results / 'shared_resource_reporting_component_20261003_v1.tar.gz'
+    assert module.record(archive)['sha256'] == receipt['archive']['sha256']
+    assert receipt['archive']['sha256'] == 'd14fc99f9ee4580e4b3a57395420f52148b825b2cb2cf0ba7716b57a11e8f6bc'
+    with tarfile.open(archive, 'r:gz') as handle:
+        members = handle.getmembers()
+        assert {member.name for member in members} == module.EXPECTED | {'bundle.json'}
+        assert len(members) == 16 and all(member.isfile() for member in members)
+        data = {member.name: handle.extractfile(member).read() for member in members}
+    assert module.identity(data['bundle.json'])['sha256'] == receipt['manifest']['sha256']
+    manifest = json.loads(data['bundle.json'])
+    for pin in manifest['files']:
+        module.checked(data[pin['path']], pin)
+    report = json.loads(data['data/panel.json'])
+    assert report['reviewed_attempts'] == 3 and report['eligible_attempts'] == 2
+    assert report['excluded_attempts'] == [0]
+    observation = receipt['guarded_replay_observation']
+    assert observation['original_checkout_canary_denied'] is True
+    assert observation['post_canary_original_checkout_open_events'] == 0
+    assert observation['project_modules_imported'] is False
+    assert observation['os_containment_established'] is False
+    assert not receipt['native_inference_reproduced'] and not receipt['raw_measurements_revalidated']
+    assert not receipt['publication_ready']

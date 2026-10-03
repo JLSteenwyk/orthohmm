@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Resource Reporting Archive Restored And Replayed (2026-10-03)
+
+Previous turn progresses at pushed 0581953d. Read the full goal and poll exact
+22399, confirmed RUNNING. Native log completes search; bounded process queries
+confirm MAFFT/FastTree family work under its own native process, not a stalled
+log or terminal inference. Do not restart or submit index 4 while it lives.
+
+Close the identified local-only reporting gap, using the established AST-pure
+entry-point pattern rather than duplicating arithmetic or importing the entire
+execution stack. Add a self-contained component builder/verifier/replayer and
+focused tests. Preserve existing table/figure functions and scopes unchanged;
+runtime/cgroup/native evidence references are provenance only, not revalidated.
+Initial **16 tests pass in 2.73s**, including exact table/pixel replay and
+corruption, scope, inventory, missing-source and overwrite refusal.
+
+Commit/push reader at **4ac940d4**, then build the real 15-payload component from
+exact committed source and the retained three-attempt snapshot. Extract its
+315,670-byte archive to a fresh /tmp directory. Its copied reader passes
+standard-library-only verification. Under a Python open/process-event guard,
+the original-checkout canary is rejected; subsequent reporting has no original
+project opens, external process execution or project-module imports. The
+installed reporting-interpreter prefix is explicitly allowed, not independently
+provisioned; this is not OS containment or cross-host/native validation.
+
+All three table files reproduce byte-for-byte and PNG pixels match exactly
+with Matplotlib 3.10.8 / NumPy 2.2.6. Preserve original PDF/SVG and generate
+new outputs without claiming their format metadata is byte-identical.
+The [versioned archive and instructions](SHARED_RESOURCE_REPORTING_COMPONENT_20261003.md)
+and [actual result receipt](shared_resource_reporting_component_result_20261003.json)
+retain two eligible observations, excluded index 0 and all missing repeats.
+No original raw measurement, native inference, score or uncertainty is rerun.
+This is a local/Git-managed reporting component, not a complete study release
+or external archival deposition.
+
+On resumption, no prior focused pytest process remains live; the unread prior
+test output is not used as evidence. Run the combined component/table/figure
+suite to establish current verification: **73 tests pass in 4.07s**, including
+the actual retained archive's regular-file inventory, hashes and scope. Fresh
+scontrol and sacct identify 22399 COMPLETED 0:0; independent terminal review
+is now in progress. No inference is restarted or next identity released before
+that review.
+
+Next: poll exact 22399, review its terminal native/runtime/environment/resources
+and only then continue frozen index 4. Finish the full panel, final figures,
+manuscript/archival reconciliation and versioned study release. No quiet-host
+gate, DGX, unrelated process/service change or scientific retuning is introduced.
+Full publication scope remains active and incomplete.
+
 ## Ten-Page Shared-Host Main Review Accepted (2026-10-03)
 
 The same continuation reconciles active documentation at pushed fcd68b20,

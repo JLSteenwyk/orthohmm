@@ -1,0 +1,64 @@
+{
+  "archive": {
+    "bytes": 315670,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/shared_resource_reporting_component_20261003_v1.tar.gz",
+    "sha256": "d14fc99f9ee4580e4b3a57395420f52148b825b2cb2cf0ba7716b57a11e8f6bc"
+  },
+  "files": 15,
+  "manifest": {
+    "bytes": 2716,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/shared_resource_reporting_component_20261003_v1/bundle.json",
+    "sha256": "e3d73bcb05661b84306114e01cf8aa51b15d41c58025ecf9313c46cc4f0c39c4"
+  },
+  "native_inference_reproduced": false,
+  "publication_ready": false,
+  "raw_measurements_revalidated": false,
+  "replay": {
+    "bytes": 526,
+    "path": "/tmp/orthohmm-shared-resource-20261003.A0DoKp-replay/replay.json",
+    "sha256": "89a17a7a122a5cc735396a69bdbbddd659924a7fc184b339d37103eb7e7e1eed"
+  },
+  "reproduction": {
+    "bundle_manifest_sha256": "e3d73bcb05661b84306114e01cf8aa51b15d41c58025ecf9313c46cc4f0c39c4",
+    "eligible_attempts": 2,
+    "equal_png_pixels": true,
+    "exact_table_files": 3,
+    "excluded_attempts": [
+      0
+    ],
+    "matplotlib": "3.10.8",
+    "native_inference_reproduced": false,
+    "numpy": "2.2.6",
+    "publication_ready": false,
+    "raw_measurements_revalidated": false,
+    "reviewed_attempts": 3,
+    "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+    "status": "shared_resource_reporting_replayed"
+  },
+  "restored_directory": "/tmp/orthohmm-shared-resource-20261003.A0DoKp",
+  "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+  "source": {
+    "bytes": 13009,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_resource_component_20261003.py",
+    "sha256": "98d723bb70910eed22a8ab75ef4e17f0332490ada309121f607fc0ed3d5b5781"
+  },
+  "source_commit": "4ac940d425963890e0cfc1c608a7cd4517cb149b",
+  "standalone_stdlib_verification_passed": true,
+  "status": "shared_resource_reporting_archive_restored_and_replayed",
+  "guarded_replay_observation": {
+    "original_checkout_canary_denied": true,
+    "post_canary_original_checkout_open_events": 0,
+    "external_process_execution_events": 0,
+    "project_modules_imported": false,
+    "reporting_interpreter_prefix_allowed": true,
+    "os_containment_established": false
+  },
+  "guarded_replay_command": "env PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/orthohmm_shared_resource_component_mpl_20261003 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, os, runpy, sys\nroot=\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\"\nruntime=os.path.abspath(sys.prefix)\ndenied=[]\ndef hook(event,args):\n    if event in {\"subprocess.Popen\",\"os.system\"}:\n        denied.append({\"event\":event})\n        raise PermissionError(\"External process execution denied during reporting replay\")\n    if event==\"open\" and isinstance(args[0],(str,bytes,os.PathLike)):\n        path=os.path.abspath(os.fsdecode(args[0]))\n        if os.path.commonpath([path,root])==root and os.path.commonpath([path,runtime])!=runtime:\n            denied.append({\"event\":event,\"path\":path})\n            raise PermissionError(\"Original checkout evidence denied\")\nsys.addaudithook(hook)\ntry:\n    open(os.path.join(root,\"README.md\"),\"rb\")\nexcept PermissionError:\n    canary=True\nelse:\n    raise AssertionError(\"Original-path canary unexpectedly opened\")\nnamespace=runpy.run_path(\"/tmp/orthohmm-shared-resource-20261003.A0DoKp/component.py\")\nresult=namespace[\"replay\"](\"/tmp/orthohmm-shared-resource-20261003.A0DoKp\",\"e3d73bcb05661b84306114e01cf8aa51b15d41c58025ecf9313c46cc4f0c39c4\",\"/tmp/orthohmm-shared-resource-20261003.A0DoKp-replay\")\nassert len(denied)==1 and not any(name==\"benchmark_tools\" or name.startswith(\"benchmark_tools.\") or name==\"orthohmm\" or name.startswith(\"orthohmm.\") for name in sys.modules)\nresult.update(original_checkout_canary_denied=canary,post_canary_original_checkout_open_events=0,external_process_execution_events=0,project_modules_imported=False,guard_scope=\"Python open and process audit events; reporting interpreter prefix allowed; not OS containment\",reporting_python=sys.executable,reporting_prefix=runtime,component_directory=\"/tmp/orthohmm-shared-resource-20261003.A0DoKp\",replay_directory=\"/tmp/orthohmm-shared-resource-20261003.A0DoKp-replay\")\nprint(json.dumps(result,indent=2,sort_keys=True))\n'",
+  "limitations": [
+    "Portable reporting replay of three reviewed attempts, not a complete 27-attempt panel.",
+    "Original runtime/cgroup/output evidence references are preserved as provenance and not revalidated.",
+    "The installed reporting environment is reused; no standalone runtime, cross-host equivalence or OS containment is established.",
+    "Native inference and accuracy/uncertainty analyses are not repeated; no isolation or causal speedup claim.",
+    "This is a local/Git-managed component, not a public archival deposition, DOI or complete executable study release."
+  ]
+}
