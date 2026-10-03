@@ -32,7 +32,10 @@ retained/excluded cadence failure. The remaining panel is not complete.
 
 The [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md)
 and [interim resource figure](results/threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf)
-record the new scope without isolated speedup claims. Resource-table collection
+record the new scope without isolated speedup claims. The
+[ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
+preserves its render-time Git inputs and closed PDF/page identities; it is not
+a completed resource panel or portable study archive. Resource-table collection
 and plotting use the sources below; both refuse existing output directories.
 Plotting validates the snapshot, direct retained evidence and source hashes.
 It requires local reviewed evidence, including files under ignored work paths;

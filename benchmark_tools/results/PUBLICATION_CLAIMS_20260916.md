@@ -28,6 +28,11 @@ and [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md) preserve
 contention, missing repeats and endpoint scopes. The older assembled review
 does not include these additions. The remaining panel, final resource figures,
 current manuscript/PDF reconciliation and versioned release/archive remain open.
+The [ten-page shared-host main review](PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
+now renders the interim Methods/Results with all pages inspected and a closed
+source/artifact receipt. Figures remain linked, and the older assembled PDF
+is not silently updated. This closes current text review, not final-panel or
+complete publication reconciliation.
 
 ### Retained Evidence Chronology
 

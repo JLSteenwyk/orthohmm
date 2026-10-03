@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Ten-Page Shared-Host Main Review Accepted (2026-10-03)
+
+The same continuation reconciles active documentation at pushed fcd68b20,
+then renders the already committed 3 October main text without changing
+scientific settings or pinned native/measurement helpers. Native 22399 remains
+authoritatively RUNNING; the late search log is 92.19%, not completed inference.
+
+Render with the retained bibliography and print into fresh directories. All
+18 citation identifiers resolve; 54 link occurrences have 52 tracked local
+targets. Check all 56 direct repository input occurrences against exact
+fcd68b20 Git bytes. The PDF has ten pages and no page-block bounds violations.
+Inspect every page: Methods are readable on page 3 and interim resource Results
+on page 7; no clipping/overlap is observed. Resource values, unknown contention,
+the excluded first attempt and absence of complete-repeat summaries remain
+explicit. Figures are linked, not newly embedded or broadly revalidated.
+
+The [review note](PUBLICATION_MAIN_SHARED_REVIEW_20261003.md) links the PDF,
+HTML and [closed receipt](publication_main_shared_visual_review_20261003.json),
+which binds 15 review artifacts and the render-time source revision. PDF is
+173,255 bytes, SHA-256
+`3dd2a24dd72280857f1c518c04cfa5606fc697afec85900f91ac551e5cecae48`.
+Later ledger/checklist edits do not change this dated PDF or its source snapshot.
+Earlier main/assembled PDFs and archive components remain historical.
+
+Add a closed-artifact regression for all identities, page/claim scope and PDF
+resource-value readback. The four-module render/print/PDF suite passes
+**36 cases in 2.89s**, following the initial 35-case panel. No scoring, bootstrap,
+native runtime restoration, inference retry or new resource measurement is
+performed for this render. The concurrent native job is separate.
+
+Next: poll exact 22399, obtain independent terminal review and continue frozen
+index 4 only after a reviewed outcome. Complete the remaining matched-resource
+panel, final figure/manuscript/archival reconciliation and versioned release.
+This is a reviewed partial manuscript, not publication readiness, an isolated
+speed comparison, public archive/DOI or deployed documentation site. No quiet
+window, DGX or unrelated job/service action is introduced.
+
 ## Shared-Host Documentation And Completion Gates Reconciled (2026-10-03)
 
 Previous turn progresses at pushed d5ad80cd. Read the full goal and confirm
@@ -19,8 +56,8 @@ Sphinx **8.1.3** builds all seven pages with warnings treated as errors, without
 environment upgrades. All **635 local Markdown targets** checked in README,
 the reproduction guide and claim checklist exist (7 / 240 / 388 respectively).
 This checks target presence, not anchors, transitive evidence or scientific
-correctness. Scoped whitespace check passes. Rendering/printing/PDF component
-tests run separately; no native inference, calibration, scoring or scientific
+correctness. Scoped whitespace check passes. The initial rendering/printing/PDF
+component suite passes **35 cases in 2.85s**; no native inference, calibration, scoring or scientific
 configuration is repeated or changed by the documentation update.
 
 Next: render the current working manuscript to a new dated review without

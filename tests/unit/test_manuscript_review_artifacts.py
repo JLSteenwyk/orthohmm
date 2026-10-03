@@ -11,6 +11,43 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
+def test_shared_host_review_retains_closed_partial_scope_and_values():
+    import fitz
+
+    review = json.loads((ROOT / "publication_main_shared_visual_review_20261003.json").read_text())
+    repo = ROOT.parents[1]
+    assert review["render_time_source_commit"] == "fcd68b20eb0ae40ce5f48e5559bf08da30c06d8c"
+    assert review["page_count"] == 10 and review["all_ten_pages_inspected"] is True
+    assert review["bounds_violations"] == 0 and review["observed_clipping_or_overlap"] is False
+    assert review["resource_methods_page"] == 3 and review["interim_resource_results_page"] == 7
+    assert review["shared_host_attempts_reviewed"] == 3 and review["eligible_shared_host_attempts"] == 2
+    assert review["excluded_attempts"] == [0]
+    assert review["local_occurrences"] == 54 and review["unique_targets"] == 52
+    assert len(review["citation_ids"]) == 18 and not review["untracked_targets"]
+    assert len(review["render_time_repository_inputs"]) == 56
+    assert len(review["closed_review_artifacts"]) == 15
+    for pin in review["closed_review_artifacts"]:
+        actual = record(repo / pin["path"])
+        assert (actual["bytes"], actual["sha256"]) == (pin["bytes"], pin["sha256"])
+    for key in ("scientific_timings_admitted", "uncontended_timing", "publication_ready",
+        "native_inference_or_scoring_repeated_for_render", "benchmark_scores_or_defaults_changed",
+        "new_study_archive_built", "public_release_or_deposition_executed", "other_linked_figures_newly_revalidated"):
+        assert review[key] is False
+    with fitz.open(ROOT / "publication_main_print_20261003/document.pdf") as document:
+        assert len(document) == 10
+        methods = " ".join(document[2].get_text().split())
+        results = " ".join(document[6].get_text().split())
+        assert "Shared-Host Resource Measurement" in methods
+        assert "unknown and potentially method dependent" in methods
+        assert "Shared-Host Resource Panel (Interim)" in results
+        assert "797.6576 seconds" in results and "441.2890 seconds" in results
+        assert "No cell yet has three eligible repeats" in results
+        assert "not an isolated speedup or new accuracy score" in results
+    html = (ROOT / "publication_main_review_20261003.html").read_text()
+    assert "threadripper_shared_panel_snapshot_20261003_v3/panel.json" in html
+    assert "threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf" in html
+
+
 def test_null_score_main_review_retains_closed_artifacts_and_scope():
     review = json.loads((ROOT / "publication_main_null_visual_review_20261002.json").read_bytes())
     repo = ROOT.parents[1]
