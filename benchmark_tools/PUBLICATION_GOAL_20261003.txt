@@ -1,0 +1,78 @@
+ Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
+  >
+  > Work autonomously through implementation, analysis, validation, and reporting. Prioritize QfO and OrthoBench; treat Three Kingdoms as a supplementary conserved-family benchmark. Preserve an HMM-centered method and determine its defensible scientific contribution without assuming it must outperform every competitor.
+  >
+  > Resume from the current repository and the newest entries in benchmark_tools/results/PUBLICATION_PROGRESS.md. Verify current job state and retained receipts before acting; do not restart completed analyses or repeat expensive diagnostics without a concrete scientific or engineering reason. The user's host decision is final for this goal: use the local Threadripper, not the DGX. No dedicated replacement machine, DGX access, GPU availability or DGX service repair is required. Amendment authorized 2026-10-03: proceed with the planned matched-resource panel despite unrelated analyses running on the Threadripper. A quiet window is no longer a prerequisite. Label these as shared-host, matched-resource measurements, not isolated or uncontended controlled timing. Record competing workloads and disclose that contention may distort timings by an unknown, potentially method-dependent amount; do not assume the distortion is slight.
+  >
+  > On resumption, reuse the retained private-runtime, collector-fixture, and memory-scope validation receipts where their inputs and bindings remain valid. Diagnostic fixtures are not production scaling runs. Identify only the remaining execution gates, including defensible CPU and peak-memory accounting, safe capacity and correct workload attribution. Prospectively amend the execution/environmental protocol and corresponding checks to accept observed unrelated activity as annotated contention rather than automatically rejecting it or waiting for isolation. Preserve input/runtime integrity, enforceable CPU/RAM limits, measurement validity and failure handling. Do not repeat completed diagnostics merely because the goal resumed. Scheduler or service changes require explicit approval; approval to use the Threadripper is not approval to disrupt unrelated work.
+  >
+  > Resume checkpoint: consult benchmark_tools/results/RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md and benchmark_tools/results/THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md alongside the newest progress-ledger entries and the 2026-10-03 shared-host amendment. The archive reproduction and accounting/cadence calibration passed; reuse those receipts subject to their recorded bindings rather than rerunning them. Preserve the failed 22378 calibration and overall failed 22379 audit as historical evidence. Calibration is not production timing. Final readiness and environmental handoff must reflect the amended shared-host scope, without fabricating an isolation pass. Recheck current capacity and record workloads at launch. Retained observer-overhead protocols and any new controls must also reflect contention; shared-host paired differences do not isolate causal observer slowdown. Do not turn unavailable quiet-host overhead certification into a substitute quiet-window blocker. Continue the full publication work and retain comparable resource evidence with explicit contention limits.
+  >
+  > 1. Establish and freeze the publication baseline
+  >
+  > - Inspect the repository, existing experiments, scoring audit, and completed OrthoMCL outputs. Preserve unrelated working-tree changes.
+  > - Consolidate exact scores, versions, commands, input checksums, output provenance, and resource measurements for every retained method.
+  > - Incorporate the completed OrthoMCL QfO results and investigate the extent and consequences of its sequence-specific BLAST failures.
+  > - Verify that each benchmark evaluates the intended output: orthogroups, hierarchical groups, or pairwise orthologs. Explicitly distinguish native pair predictions, pre-clustering graph edges, and cluster-derived pairs; validate conversion choices against tool documentation.
+  > - Freeze a reproducible OrthoHMM configuration and define the proposed publication claims, primary endpoints, and analysis plan before additional evaluation.
+  >
+  > 2. Establish independent generalization
+  >
+  > - Inventory which datasets and families influenced development. Treat repeatedly inspected QfO and OrthoBench results as development-exposed evidence.
+  > - Select an independent curated test set or separate clade, checking overlap with development families and reference resources used by the methods.
+  > - Freeze the method and evaluation protocol before inspecting test scores. Do not tune on this test set. Any subsequent method changes require a new independent confirmation.
+  >
+  > 3. Measure the contribution of HMMs and phylogeny
+  >
+  > - Run controlled ablations of HMM refinement, candidate-family expansion, and phylogenetic reconciliation, holding other settings constant.
+  > - Include a sequence-search alternative with comparable sensitivity or computational effort where feasible.
+  > - Evaluate interactions between candidate expansion and reconciliation. Distinguish diagnostic runs using supplied trees from fully independent end-to-end inference.
+  > - Report accuracy, coverage, runtime, and memory for each configuration, retaining negative and neutral results.
+  >
+  > 4. Quantify uncertainty and explain errors
+  >
+  > - Calculate paired confidence intervals for method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations.
+  > - Recompute the actual benchmark statistic within bootstrap replicates. Report effect sizes, family-level wins and losses, and multiplicity handling where applicable.
+  > - Analyze errors by divergence, duplication history, family size, fragments, domain architecture, and composition bias using prespecified, label-independent strata.
+  > - Trace representative errors through search, candidate selection, grouping, and reconciliation. Test explanations rather than assuming the cause of a score difference.
+  > - Present individual QfO metrics, precision–recall trade-offs, and prediction coverage. Label the six-metric mean as a project-defined secondary summary.
+  >
+  > 5. Test robustness and practical efficiency
+  >
+  > - Extend simulations with a validated evolutionary simulator, multiple independent seeds, and challenging duplication/loss, divergence, missing-data, and uneven-sampling conditions.
+  > - Measure sensitivity to species-tree error and a limited, prespecified neighborhood of key parameters.
+  > - Benchmark representative dataset sizes under matched hardware limits and consistent memory accounting. Separate preprocessing, inference, conversion, and scoring.
+  > - Use repeated runs where practical, record actual CPU use and failures, and monitor concurrent workloads during timing measurements. Unrelated background activity is accepted under the 2026-10-03 amendment, with explicit limitations rather than an isolation claim.
+  > - Use the local Threadripper host (bizon) for the replacement shared-host matched-resource timing panel. The DGX is no longer required: do not access it, modify its services, or treat its dashboard-unit permissions as a prerequisite unless the user explicitly reauthorizes DGX work.
+  > - Before timing, inventory the Threadripper's physical/logical CPUs, RAM, NUMA topology, scheduler limits and both Slurm and non-Slurm workloads. Freeze feasible, identical CPU and RAM limits for every tool before examining timing outcomes; do not assume the earlier 32-CPU/128-GiB suggestion is available or reuse the DGX allocation blindly.
+  > - Preserve the planned 27 method/size/repeat identities: OrthoHMM high sensitivity, OrthoHMM satellite_v2 and full OrthoFinder 3.1.5, each on 4/8/12 proteomes with three repeats. Preserve frozen input bytes, scientific settings and run order. Record a prospective Threadripper-specific execution amendment and validate the x86 runtime and measurement workflow before starting fresh runs.
+  > - Execute the planned runs sequentially with identical enforced CPU/RAM limits and whole-run background-workload monitoring. Use scheduler allocation without displacing other jobs where feasible; do not require node-wide exclusivity or a quiet window. An empty queue or exclusive Slurm allocation alone does not establish isolation from non-Slurm processes. Do not stop, suspend, renice, re-affinitize or modify unrelated jobs/services. Record CPU demand, memory pressure and relevant I/O activity before and during each run. Launch when safe capacity and measurement prerequisites are satisfied, even if other analyses remain active.
+  > - Prespecify shared-host annotation, measurement-invalidity and failure handling before launch. Ordinary competing workloads are retained and annotated, not automatically excluded or retried until faster. Retain all attempts, failed/timed-out outcomes, actual CPU use and consistent process-tree or cgroup peak-memory measurements. Pause for genuinely unsafe capacity or invalid accounting, not for contention alone. Separate preparation, inference, conversion and scoring. Do not select fastest repeats, silently retry failures, subtract estimated background overhead or present incomplete repeats as complete summaries.
+  > - Report the new Threadripper panel separately from historical DGX/ARM and earlier shared-host measurements. Do not pool cross-host times, claim cross-host speedups or reinterpret historical runs as controlled evidence. Tables, figures, Methods and limitations must identify the new timings as potentially confounded shared-host observations. Matching resource limits does not isolate tool speed; avoid definitive efficiency rankings or causal speedup claims from these timings alone.
+  > - Preserve existing expensive runs when scientifically reusable; justify selective reruns and report any remaining comparability limitations.
+  >
+  > 6. Demonstrate biological usefulness
+  >
+  > - Choose a prespecified set of biologically informative families with evidence independent of OrthoHMM’s predictions.
+  > - Assess whether OrthoHMM improves difficult ortholog recovery or paralog separation. Include successes, failures, and comparison with full OrthoFinder and relevant competitors.
+  > - Avoid cherry-picking examples or using a competing tool’s predictions as ground truth.
+  >
+  > 7. Produce the publication package
+  >
+  > - Generate tables and publication-quality figures directly from machine-readable results.
+  > - Include a method diagram, accuracy comparisons with uncertainty, HMM/phylogeny ablations, error analyses, scaling measurements, and a biological application.
+  > - Draft Methods, Results, limitations, data/code availability, and a claim-to-evidence checklist.
+  > - Package executable workflows, pinned dependencies, seeds, dataset manifests, scoring tests, and instructions for reproducing the main results.
+  > - Prepare a versioned release and archival bundle. Document external submission or archival steps that remain unexecuted.
+  >
+  > Engineering and reporting requirements
+  >
+  > - Make focused commits and push to the existing authorized remote at validated milestones, including analysis scripts, tests, and result summaries. Do not commit unrelated changes or large raw datasets.
+  > - Test changes according to their scientific and computational impact. Preserve checkpoints and record provenance for resumed jobs.
+  > - Maintain a progress ledger with completed work, running jobs, unresolved issues, and next actions. Give concise progress updates.
+  > - Search public internet sources and archives for the original TreeFam-A release-7 trees and treefam2reference.txt used to generate the retained QfO reference. Download and validate promising original artifacts when available, preserving provenance and verifying reconstruction against the pooled reference before using family-level labels. Do not contact maintainers or anyone else, and do not substitute newer releases, derived trees or inferred family labels without establishing their suitability. If the originals remain unavailable, retain the explicit limitation.
+  > - Never fabricate missing results, hide failures, change endpoints after seeing outcomes, or claim general superiority from a custom aggregate.
+  >
+  > Completion criteria
+  > Finish when the frozen method has independent validation, interpretable ablations, appropriate uncertainty estimates, documented failure modes, comparable resource evidence within the authorized shared-host scope, and a reproducible manuscript package. Resource completion requires the planned matched-resource panel and honest contention reporting, not an uncontended host or a claim of isolated performance. All other scientific and reproducibility requirements remain intact. Every major claim must link to supporting results. If the evidence does not support a claimed advantage, narrow the claim or
+  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished.

@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Shared-Host Execution Authorized For Next Resume (2026-10-03)
+
+The user requests updating the goal to proceed despite competing analyses,
+then resuming separately. Amend the actual goal attachment and save the full
+prompt at [PUBLICATION_GOAL_20261003.txt](../PUBLICATION_GOAL_20261003.txt).
+The [prospective amendment](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md)
+supersedes the quiet-window prerequisite and the historical blocked checkpoint
+below. Accept shared-host, matched-resource observations with an unknown,
+potentially method-dependent timing distortion, not a claim of slight bias or
+uncontended controlled performance.
+
+Preserve 27 identities/order, inputs/settings, sequential execution, identical
+limits, valid CPU/peak-memory accounting and all attempts. On resumption,
+prospectively reconcile policies/guards and observer-overhead scope with the
+amendment, reuse valid receipts, finish readiness/handoff and launch when safe
+capacity permits even with ordinary background activity. Do not disturb
+unrelated work, fabricate isolation, silently retry or subtract overhead.
+
+Prompt/documentation update only: no code, ready artifact, scheduler action,
+native run, shared upgrade or DGX access. No new tests are needed for prose;
+check prompt consistency and scoped diffs. Preserve all historical protocols
+and outcomes. Goal status is not resumed by this edit; the user will resume it.
+
 ## Blocked Execution Checkpoint (2026-10-02)
 
 Latest substantive milestone is pushed 32430639, the portable presentation

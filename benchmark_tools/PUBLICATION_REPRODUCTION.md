@@ -18,6 +18,15 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+**Timing scope amended 3 October 2026:** the user authorizes proceeding on the
+shared Threadripper despite unrelated analyses. The
+[amendment](results/PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md) and
+[full goal](PUBLICATION_GOAL_20261003.txt) supersede historical quiet-window
+requirements below. Retain identical resource limits, valid accounting and
+whole-run contention records; label timings as potentially confounded shared-host
+observations. Policy/implementation/readiness must be prospectively reconciled
+on resumption; no new run or isolation pass is implied by this prompt update.
+
 The [portable presentation rebuild](results/PUBLICATION_REVIEW_REBUILD_20261002.md)
 now rebuilds the accepted review from 17 Git-managed files in a relocated
 checkout, without local manifests, raw results or predecessor receipts.

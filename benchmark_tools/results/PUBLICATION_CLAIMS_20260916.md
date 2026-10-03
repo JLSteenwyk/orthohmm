@@ -6,6 +6,14 @@ evidence that an experiment completed or a biological hypothesis is true.
 
 ## Current Requirement Status
 
+Timing scope amended 3 October 2026 under the user's
+[shared-host authorization](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md).
+A quiet window is no longer required: future matched-resource runs accept
+annotated contention with unknown distortion, without isolated-efficiency
+claims. Historical quiet-host gates below are superseded for future execution;
+actual policy/readiness and implementation reconciliation remain to be done.
+Existing outcomes and the other publication requirements are unchanged.
+
 This index consolidates retained evidence; it is not a fresh audit of every raw
 artifact. The detailed chronology below preserves historical observations,
 including jobs described as running at the time. Those descriptions do not
