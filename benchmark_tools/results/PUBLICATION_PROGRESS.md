@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Phylogenetic Run Reviewed And Resource Tables Exported (2026-10-03)
+
+The preceding prompt-only turn verifies an already saved amendment and changes
+no authoritative state; classify it as no progress, not a new blocker. Resume
+by reading the full goal and checking exact job 22397. Slurm reports COMPLETED
+0:0. Run the retained independent reviewer, not inference or calibration again.
+All four review categories pass: native wall **797.657552818s**, CPU
+**17,154.043256s**, native-step peak **3,380,301,824 bytes**. Native validity
+covers 73,266 proteins, 35,560 groups/root HOGs and 51,644 pair rows; this is not
+an additional accuracy evaluation. Process/pressure failures are empty.
+Foreign CPU demand is 53.2495 cores at preflight and at most 53.8988 cores over
+observed intervals, retained as diagnostic contention, not isolation evidence.
+The canonical review summary is 5,160 bytes, SHA-256
+`90dba22cf0f284fdb1e422d461dc4e87ef7cba8fc8166c6bf08898e69c1f4cc5`.
+
+Available host RAM is about 295 GiB before continuing. Bind the reviewed prefix
+and release frozen index 2, full OrthoFinder 3.1.5, four proteomes, repeat 0,
+as **22398**. Actual preflight and native release pass, with CPUs 0-31 and the
+unchanged 128-GiB ceiling. The native log confirms v3.1.5, recommended MSA
+phylogeny and DIAMOND search. Capture a fresh [live observation](threadripper_shared_live_22398.json):
+57.3957 foreign CPU-core equivalents, about 294 GiB available RAM, first process
+start gap 30.000393086s. No final resources are admitted for this live identity.
+
+Add [resource-table source](report_shared_threadripper_panel_20261003.py) and
+focused tests. Validate frozen identities, terminal sessions/controllers,
+review decisions, supporting hashes, independent resource scopes and actual
+contention values. Initial 25 tests pass; metadata-hardened **36 pass in 0.56s**.
+Actual collection/export succeeds. Preserve the initial working v1 export;
+the [authoritative v2 snapshot](threadripper_shared_panel_snapshot_20261003_v2/panel.json)
+uses the final source and reports two reviewed attempts, one eligible and one
+excluded. [Attempt table](threadripper_shared_panel_snapshot_20261003_v2/attempts.tsv)
+retains excluded raw values. [Cell table](threadripper_shared_panel_snapshot_20261003_v2/cells.tsv)
+keeps all aggregate values blank until three eligible repeats exist. Unreviewed
+rows are not fabricated zeros or scheduler claims. No fastest selection,
+historical-time pooling, estimated overhead correction or speed ranking.
+
+Next: poll exact 22398 and review its terminal outcome before index 3. Keep
+native sources/policies and scientific settings pinned while live. Complete
+the remaining panel, resource figures and manuscript/release reconciliation;
+this partial snapshot does not prove publication readiness. No unrelated
+job/service change, DGX work, quiet-window gate or failed-attempt retry.
+
 ## Repaired Panel Continued To Phylogenetics (2026-10-03)
 
 The preceding goal turn progresses at pushed 6add4497: actual run-0 review and
