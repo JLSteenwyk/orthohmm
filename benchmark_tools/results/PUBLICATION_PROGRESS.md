@@ -1,5 +1,42 @@
 # Publication Progress
 
+## First Attempt Reviewed And Observer Scheduling Repaired (2026-10-03)
+
+The preceding continuation progressed at pushed 0c833313 by launching job
+22396. Poll that exact job: it completes native inference but the parent fails
+its post-run environment review. Do not restart on observation expiry; fresh
+Slurm accounting corroborates the retained terminal controller and native
+step success after controller purging. No active panel job remains.
+
+Independently verify pre/post runtime checks, input/command identity, exact
+native partition and raw resource replay. Retain 73,266 proteins in 35,242
+orthogroups, native wall 369.748703027s, native CPU 9,315.218632s and native-step
+peak 3,382,607,872 bytes. Process monitoring has one start-gap violation
+(43.166799229s vs the prospective 35s limit); pressure evidence passes over
+371 points, maximum interval 1.0222614s. The original environment verdict is
+failed, not retrospectively admitted comparative timing. Preserve the initial
+stale-resource-pin audit failure, separate same-endpoint source reconciliation
+and second review; reuse the checked native audit, not inference or calibration.
+See [full outcome and repair](THREADRIPPER_SHARED_ATTEMPT_22396.md).
+
+Trace the sole gap to observer startup after the environmental release checks:
+13.2s preflight plus its first 30s sampling period. Start its thread before
+release and anchor the deadline to the initial snapshot, preserving all
+existing bounds. Exactly two top-level helpers change; no scientific source,
+input, native argv or endpoint changes. Add anchor/release-delay regressions.
+Initial seven-module run: 357 pass / 42 fail because retained production inputs
+now expose non-hermetic overhead fixtures. Isolate fixture paths without
+deleting actual inputs or weakening freshness guards. Final **399 tests pass
+in 26.31s**.
+
+Next: keep this first attempt and its failed original admission intact;
+explicitly resolve its infrastructure outcome in history without automatic
+retry, refresh source/runtime/resource bindings for the two-helper repair,
+and advance sequentially to frozen index 1 with a fresh shared-host preflight.
+The current launch artifact deliberately does not authorize later identities.
+No quiet-window requirement, unrelated job/service change, DGX work or native
+rerun is introduced. Full publication scope remains active and incomplete.
+
 ## First Shared-Host Native Run Released (2026-10-03)
 
 Resume from the actual prepared evidence at pushed 5ddd474c. The preceding

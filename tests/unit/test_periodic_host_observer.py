@@ -119,3 +119,40 @@ def test_slow_scan_skips_missed_periods_without_catchup_burst(monkeypatch):
     observer._observe()
     assert waits == [30., 30.]
     assert calls == [True]
+
+
+@pytest.mark.parametrize('anchor', [True, -1., float('nan'), float('inf'), 101., '100'])
+def test_invalid_or_future_anchor_refused_before_thread_start(monkeypatch, anchor):
+    from benchmark_tools import periodic_host_observer as module
+    monkeypatch.setattr(module.time, 'monotonic', lambda: 100.)
+    observer = PeriodicHostObserver(None)
+    with pytest.raises(ValueError, match='monotonic anchor'):
+        observer.start(anchor=anchor)
+    assert observer.thread is None and not observer.stop.is_set()
+
+
+def test_release_delay_does_not_shift_first_snapshot_deadline(monkeypatch):
+    from benchmark_tools import periodic_host_observer as module
+    clock, waits, scans = [3.2], [], []
+    monkeypatch.setattr(module.time, 'monotonic', lambda: clock[0])
+    class Thread:
+        ident = None
+        def __init__(self, **kwargs):
+            pass
+        def start(self):
+            pass
+    monkeypatch.setattr(module.threading, 'Thread', Thread)
+    observer = PeriodicHostObserver(SimpleNamespace(observe=lambda: scans.append(clock[0])), 30.)
+    observer.start(anchor=0.)
+    assert observer.deadline == 30.
+    # Initial inventory plus environmental handoff delayed native release by 13.2s.
+    clock[0] = 13.2
+    class Stop:
+        def wait(self, seconds):
+            waits.append(seconds)
+            clock[0] += seconds
+            return len(waits) == 2
+    observer.stop = Stop()
+    observer._observe()
+    assert waits == [16.8, 30.]
+    assert scans == [30.]

@@ -119,6 +119,8 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
             host = HostMonitor(host_log, str(job_scope), sample_fn=enriched_snapshot)
             host.observe()
             periodic_host = PeriodicHostObserver(host, host_interval_s)
+            # Release checks must not postpone the first scheduled host sample.
+            periodic_host.start(anchor=host.last_started)
             job_memory_before = read_job_memory(job_scope)
             save(directory / "job_memory_before.json", job_memory_before)
             # Inventory the host before starting the one-second point cadence.
@@ -127,7 +129,6 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_
                 release_guard(directory)
                 checked_at = time.monotonic()
             points.append(read_point(ready["pid"], ready["cgroup"], job_id, directory / "failed_point.json"))
-            periodic_host.start()
             if release_guard is not None and time.monotonic() - checked_at > 1:
                 save(directory / "release_freshness_failed.json", dict(status="release_guard_stale"))
                 raise ValueError("Release guard stale after initial observation")

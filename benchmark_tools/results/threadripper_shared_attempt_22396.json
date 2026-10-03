@@ -1,0 +1,110 @@
+{
+  "execution_scope": "shared_host_matched_resources",
+  "index": 0,
+  "job_id": 22396,
+  "limitations": [
+    "Shared-host observations only; contention distortion is unknown and potentially method dependent.",
+    "Periodic observations are not continuous containment or isolation certification.",
+    "CPU includes wrapper bracket work; memory is native-step lifetime peak, not pure algorithm RSS.",
+    "All-prefix history and a fresh launch preflight remain required for the next frozen identity."
+  ],
+  "method": "orthohmm_high_sensitivity",
+  "native_outputs": {
+    "accuracy_evaluated": false,
+    "checked_files": [
+      {
+        "bytes": 4726,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_00/orthohmm_high_sensitivity.json",
+        "sha256": "33893e98c7e04f135a8ee2224d7f300384a9b21dda2de9a98b2d17ae23402ed0"
+      },
+      {
+        "bytes": 1571221,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_00/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+        "sha256": "ca687fd97f9cd606412ddb489d9765f5c736fce20ba3bfd2b1aeaf3a126bd2fe"
+      }
+    ],
+    "evidence_relocation": {},
+    "input_genes": 73266,
+    "limitations": [
+      "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+      "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+      "OrthoFinder validation expands native relation rows outside the inference timer."
+    ],
+    "orthogroups": 35242,
+    "resource_measurements_admitted": false,
+    "source": {
+      "bytes": 8784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+      "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+    },
+    "status": "native_scaling_outputs_checked"
+  },
+  "next_submission_authorized": false,
+  "original_environment_failures": {
+    "pressure": {},
+    "processes": {
+      "sample_period_bound_exceeded": 1
+    }
+  },
+  "original_environment_protocol_passed": false,
+  "preflight_foreign_average_cores": 56.00247883491069,
+  "primary_resources_replayed": true,
+  "proteomes": 4,
+  "repeat": 0,
+  "resource_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "resources": {
+    "cpu_seconds": 9315.218632,
+    "peak_memory_bytes": 3382607872,
+    "wall_seconds": 369.748703027
+  },
+  "reviews": {
+    "environment": {
+      "bytes": 1858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/environment_review.json",
+      "sha256": "6c617a8b81124e55665e375a187291a8c0679c5cadd603bf2021b0987d100bbc"
+    },
+    "outputs_or_failure": {
+      "bytes": 1014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/outputs_or_failure_review.json",
+      "sha256": "0ecd0430f159de72a9542e23748b6b623f8b2c1b8f6e6925772244da6a726d91"
+    },
+    "resources": {
+      "bytes": 1573,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/resources_review.json",
+      "sha256": "eb25dab9205d91cc2d9b92aa2898bb2cdc2371db643d605e77cc496d29b1adbb"
+    },
+    "runtime": {
+      "bytes": 4333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/runtime_review.json",
+      "sha256": "ba05a8f50ef7c282a5b719bf7f44f0a4b98c661c6d20d26210f9d8e839e95637"
+    }
+  },
+  "scheduler_exit_code": "1:0",
+  "scheduler_state": "FAILED",
+  "scientific_timings_admitted": false,
+  "session": {
+    "bytes": 2082,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/session.json",
+    "sha256": "9a9571d1bbf01682ce5f653e9f30c771d6d74874c16934d302c5d3509e26c424"
+  },
+  "shared_host_resources_reviewed": false,
+  "status": "shared_attempt_reviewed_with_environment_failure",
+  "terminal_accounting": {
+    "bytes": 755,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/accounting.json",
+    "sha256": "103eca39965f1c6c8da7a18875dadb8d900c487401b7f92f776f7a7fb275d7b5"
+  },
+  "uncontended_timing": false,
+  "whole_run_maximum_foreign_average_cores": 54.14074366759688,
+  "authoritative_summary": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_00_revision_2/summary.json",
+    "bytes": 4846,
+    "sha256": "67efcdbca11795077a4c0fe3508c2b8a6011ac1d9b86630c1c1a9b54dcb1da29"
+  },
+  "executed_helper_commit": "0c833313",
+  "historical_source_identity_note": "Native review completed before the subsequent two-helper observer scheduling repair. Original source bytes are retained in Git and the run-specific recipe/runtime inventories; current helper bytes are not claimed identical."
+}

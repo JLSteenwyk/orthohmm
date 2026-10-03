@@ -61,10 +61,15 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
         cgroup="0::/slurm/job_42/step_0/user/task_0\n", placement={}))
     def host_monitor(*args, sample_fn):
         assert sample_fn is collector.enriched_snapshot
-        return SimpleNamespace(observe=lambda: None, summary=lambda *a: {})
+        return SimpleNamespace(observe=lambda: None, summary=lambda *a: {},
+                               last_started=collector.time.monotonic())
     monkeypatch.setattr(collector, "HostMonitor", host_monitor)
+    observer_started = []
+    def start_observer(*, anchor):
+        assert not (directory / "go.json").exists()
+        observer_started.append(anchor)
     monkeypatch.setattr(collector, "PeriodicHostObserver", lambda host, period:
-                        SimpleNamespace(start=lambda: None, close=lambda: None,
+                        SimpleNamespace(start=start_observer, close=lambda: None,
                                         finish=lambda *args: host.summary(*args)))
     monkeypatch.setattr(collector, "read_job_memory", lambda *a: {})
     clock = collector.time.monotonic
@@ -94,6 +99,7 @@ def test_release_gate_precedes_native_and_denial_aborts(tmp_path, monkeypatch, d
     def guard(path):
         assert path == directory and not (path / "go.json").exists()
         assert not (path / "point_000000.json").exists()
+        assert len(observer_started) == 1
         events.append("guard")
         if denied == "budget":
             raise ValueError("insufficient time")

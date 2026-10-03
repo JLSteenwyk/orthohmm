@@ -10,7 +10,7 @@ import pytest
 
 from benchmark_tools import run_threadripper_scaling as driver
 from benchmark_tools.prepare_scaling_inputs import planned_runs
-from benchmark_tools.prepare_threadripper_overhead import build
+from benchmark_tools.prepare_threadripper_overhead import build, move_path
 from tests.unit.test_verify_threadripper_controller import RAW
 
 
@@ -226,11 +226,30 @@ def test_shared_selection_never_borrows_quiet_host_approval(setup, monkeypatch, 
     assert not (root / "runs").exists()
 
 
+def hermetic_parent(parent, root):
+    for row in parent['runs']:
+        old_root = Path(row['measurement_directory']).parent
+        old_input = Path(row['prepared_input_directory'])
+        new_root = root / 'synthetic_parent_runs' / old_root.name
+        new_input = Path('/dev/shm') / ('synthetic-parent-' + root.name) / old_root.name / 'input'
+        def move(value):
+            return move_path(value, old_root, new_root, old_input, new_input)
+        row['native_argv'] = [move(value) for value in row['native_argv']]
+        config = row['configuration']
+        config['argv'] = [move(value) for value in config['argv']]
+        for key in ('output', 'metrics', 'copy_inputs_to'):
+            if key in config:
+                config[key] = move(config[key])
+        row['measurement_directory'] = str(new_root / 'measurement')
+        row['prepared_input_directory'] = str(new_input)
+
+
 def overhead_setup(setup, monkeypatch):
     root, request, _ = explicit_lookup_setup(setup, monkeypatch)
     parent_path = root / "benchmark_tools/results/threadripper_private_commands_20260928.json"
     real_parent = Path(__file__).resolve().parents[2] / "benchmark_tools/results/threadripper_private_commands_20260928.json"
     parent = json.loads(real_parent.read_text())
+    hermetic_parent(parent, root)
     for row in parent["runs"]:
         row["cwd"] = str(root)
     parent_ref = put(parent_path, parent)
@@ -343,12 +362,13 @@ def test_overhead_selection_preserves_native_work_and_separate_identity(setup, m
     assert gate(directory) == {"budget": "checked"} and calls == [directory]
 
 
-def test_retained_overhead_plan_matches_private_parent_without_native_work():
+def test_retained_overhead_plan_matches_private_parent_without_native_work(tmp_path):
     results = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
     parent_path = results / "threadripper_private_commands_20260928.json"
     plan_path = results / "threadripper_native_overhead_plan_20260930.json"
     parent = driver.read_frozen(parent_path, driver.PRIVATE_PLAN_SHA)
     plan = driver.read_frozen(plan_path, "84affc2274bf3594f679661b95b49705fa36e2577c9b12594b4643e388dd3182")
+    hermetic_parent(parent, tmp_path)
     driver.overhead_design(plan, parent)
     assert plan['sources'][0]['sha256'] == driver.PRIVATE_PLAN_SHA
     assert plan['runs'][0]['arm'] == 'boundary' and plan['runs'][1]['arm'] == 'periodic'

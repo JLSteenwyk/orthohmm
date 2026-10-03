@@ -1,0 +1,133 @@
+{
+  "authorization_basis": "The active goal authorizes autonomous engineering choices and explicitly requires phase-separated resource measurements. No user reply is inferred; this is a prospective measurement choice, not scheduler authorization or readiness.",
+  "decision": "source_binding_reconciled_without_endpoint_change",
+  "executed_preparation": {
+    "bytes": 2491,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/preparation.json",
+    "sha256": "5600bde24fd801da6e00a775d22030ecc108090389b6224820cb74056d1e5745"
+  },
+  "execution_scope": "shared_host_matched_resources",
+  "handling": [
+    "Retain every failed, timed-out and contaminated attempt.",
+    "Do not subtract overhead or overlapping peaks.",
+    "Use every planned repeat; do not select fastest results.",
+    "CPU and memory scopes differ and must be disclosed."
+  ],
+  "limitations": [
+    "The original source inventory predates asynchronous host observation; its historical bytes are unchanged.",
+    "This reconciles source pins against the actually executed recipe, not a prospective claim for new code.",
+    "Primary/secondary scopes, failure retention and unavailable endpoints are unchanged.",
+    "The original run-00 cadence failure remains failed; this binding does not admit timings or authorize continuation."
+  ],
+  "lookup": {
+    "bytes": 6566,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_shared_20261003.json",
+    "sha256": "4d769df1272da767be3cf84e3e2a44d680e5b8a525770e9bb94a9a1b5014777f"
+  },
+  "parent_protocol": {
+    "bytes": 5347,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_resource_endpoints_20260929.json",
+    "sha256": "dba9602c365184f7e802425b9116b8021175b225d1f2266c44077da924bcfcdc"
+  },
+  "plan": {
+    "bytes": 206643,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+    "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+  },
+  "planned_identities": 27,
+  "primary_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "prior_fixture_evidence": {
+    "bytes": 10709,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_fixture_resource_scopes_20260929.json",
+    "sha256": "331ef7a2fc8825dae3c6568e485f0dd77c20400736d2d1c3d414f8287ff95d80"
+  },
+  "production_execution_authorized": false,
+  "production_measurement_directories_present": 0,
+  "reconciliation_timing": "after_run_00_before_any_additional_native_submission",
+  "remaining_prerequisites": [
+    "actual per-run runtime/resource/environment/output review",
+    "fresh capacity and shared-host launch preflight"
+  ],
+  "schema": "threadripper_resource_endpoints_v1",
+  "secondary_scopes": [
+    "job_peak_before_native",
+    "job_peak_after_native",
+    "job_peak_through_reporting"
+  ],
+  "source": {
+    "bytes": 2641,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bind_shared_resource_endpoints_20261003.py",
+    "sha256": "1171447daa8c98407f36ab5ea0d98026fb40dea757f5a2cb320bbade375b67f0"
+  },
+  "sources": [
+    {
+      "bytes": 4000,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/derive_threadripper_resources.py",
+      "sha256": "cae4720d11655dd45e2f0a2c8c2ca73005e67870eae91301c5c7587193cae062"
+    },
+    {
+      "bytes": 6886,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_fixture_memory_scopes.py",
+      "sha256": "09d5c49043eb26cbd16bed1643cb55fc897b6f4ad6cf7d64634f75dcf1ec5094"
+    },
+    {
+      "bytes": 17455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_threadripper_scaling.py",
+      "sha256": "6179d1a9e24ffd7b724a6c2ac748d26e63f343a4a51a9dd7cf223b95ab98ef1a"
+    },
+    {
+      "bytes": 12153,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+      "sha256": "50922f13df9ccd8c1b4661d104f4943c2402fac851a4ff0046406cfd35f3a2d2"
+    },
+    {
+      "bytes": 7461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_interval_step.py",
+      "sha256": "0503cee2c49e1f77086232dd99076041f33ff8dc697097d01909d9315af0990e"
+    },
+    {
+      "bytes": 10019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_lineage_step.py",
+      "sha256": "a35383d4c3e69a6bdc21eab1414ba57bb81adf3aad04c4915a8be8aefbdd6de9"
+    },
+    {
+      "bytes": 4268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_root_context.py",
+      "sha256": "667ef20bfd363a213b56e273aa93ee7f6eca5d9615c12227979f66b087fdeb49"
+    },
+    {
+      "bytes": 6539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+      "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+    },
+    {
+      "bytes": 2254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_completion.py",
+      "sha256": "1b93b92cd7dc4615cc7b9aa71c8344a3df85250a1f63af009b6bae6207410d58"
+    },
+    {
+      "bytes": 2733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_finalization.py",
+      "sha256": "269dea63b97cfea631aed730ed4a2550facd752327402dbb666634b1c3cb538c"
+    },
+    {
+      "bytes": 3561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_full_job.py",
+      "sha256": "8a9c1bd07eb23d65b515770db54627b6e5b190eadc13cebd23faa734b3435822"
+    },
+    {
+      "bytes": 20661,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_integrated_publication_workflow.py",
+      "sha256": "d6ee9d729c0b8c1bd03766b11539d9e2d39121c454bb450c26f722c00ff0ffe6"
+    }
+  ],
+  "unavailable_fields": [
+    "final_whole_job_cpu_seconds",
+    "final_whole_job_peak_bytes"
+  ],
+  "whole_job_teardown_required": false
+}
