@@ -18,6 +18,14 @@ requirements and must not be confused with these audit commands.
 
 ## Execution Status
 
+The [portable presentation rebuild](results/PUBLICATION_REVIEW_REBUILD_20261002.md)
+now rebuilds the accepted review from 17 Git-managed files in a relocated
+checkout, without local manifests, raw results or predecessor receipts.
+All eight focused checks pass, including optimized Python, all 27 page/link
+comparisons, corrupted-input refusal and no-overwrite behavior. This is
+presentation replay, not scientific inference/statistics reproduction or a
+complete release; external audit/data/code links retain historical locations.
+
 The [accepted text-and-figure review](results/PUBLICATION_TEXT_FIGURE_REVIEW_20261002.md)
 combines the unchanged nine-page manuscript with a four-page guide and
 14 existing vector figures. All 23 original pages preserve exact pixels/text

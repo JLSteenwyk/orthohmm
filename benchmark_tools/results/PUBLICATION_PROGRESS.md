@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Review Presentation Rebuilds From Git Inputs (2026-10-02)
+
+Previous turn progressed at pushed c8ba059c with accepted combined text/figures.
+Read original goal/current ledger and reuse retained evidence. The quiet window
+is not needed now; timing stays deferred without scheduling questions or
+contention polls. Identify a concrete presentation-replay gap: the original
+assembly script depends on local-only producer metadata and a prototype receipt.
+
+Preserve that historical source/receipt/PDF. Add a separate presentation-only
+builder using the accepted pinned inventory and PDFs, rebasing source paths to
+the current checkout. Add the existing small fixed-length PDF, not its local
+manifest or raw simulation data. Seventeen Git-managed inputs suffice; no
+Git invocation or original absolute source read is needed during rebuilding.
+Explicit integrity/render checks remain active under optimized Python.
+
+Export exactly those staged objects into temporary relocated directories.
+Seven initial tests pass; extend optimized positive coverage and explicit
+checks, then eight pass in 10.20 seconds. Both rebuilds match all 27 accepted
+pages in pixels/text geometry/bookmarks/link semantics. Corrupted PDFs/receipt
+and existing output directories are refused under both Python modes.
+See [command, executed coverage and scope](PUBLICATION_REVIEW_REBUILD_20261002.md).
+One documentation patch fails its context check before applying any file; fix
+the context without rerunning science or altering retained evidence.
+
+Update only scoped guide/claims/progress and presentation sources. No native
+inference, plotting, statistics, scheduler, observation worker, runtime scan,
+DGX, shared upgrade, service or unrelated-job change. No timing deployment
+helper changes or new source/runtime binding. All owned handles terminal.
+External audit links still need separate files; this is not portable scientific
+execution or a full release. Real timing policy/readiness/handoff, quiet-host
+evidence, prescribed outcomes and final reconciliation remain open. Goal active.
+
 ## Main Text And Fourteen Figures Combined For Review (2026-10-02)
 
 Previous turn progressed at pushed a0ad83ab by preparing the prospective source

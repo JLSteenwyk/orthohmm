@@ -13,6 +13,13 @@ establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. No production Threadripper
 timing result has been admitted.
 
+The [portable presentation rebuild](PUBLICATION_REVIEW_REBUILD_20261002.md)
+adds checkout-independent review assembly from 17 Git-managed files. Eight
+focused cases pass, including both Python modes, all page/link comparisons,
+input-integrity refusal and overwrite protection. This closes a presentation
+dependency gap, not inference/statistics provenance, portable scientific
+execution, controlled resources or complete publication readiness.
+
 The [accepted text-and-figure review](PUBLICATION_TEXT_FIGURE_REVIEW_20261002.md)
 now puts the original main text and 14 retained figures in one 27-page PDF,
 with a guide/bookmarks and preserved link actions. Exact pixels/text geometry,

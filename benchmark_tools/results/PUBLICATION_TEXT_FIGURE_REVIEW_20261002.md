@@ -59,6 +59,12 @@ remain retained, not overwritten or promoted.
 
 ## Artifact Pins
 
+Subsequently, a [separate portable presentation rebuild](PUBLICATION_REVIEW_REBUILD_20261002.md)
+uses only committed PDFs and this accepted inventory, without local producer
+manifests or prototype receipts. The small fixed-length figure is now committed.
+The counts and local-only bindings above describe the original assembly at
+its recorded source; its script, receipts and accepted PDF are not rewritten.
+
 | Artifact | Bytes | SHA256 |
 | --- | ---: | --- |
 | PDF | 470,650 | `2d225baf0545bf95ad28ce56a3afe735cc27c1a86effc0d6a85fdc0d73d7efb1` |
