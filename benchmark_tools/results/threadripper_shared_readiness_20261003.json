@@ -1,0 +1,79 @@
+{
+  "contention_annotation_required": true,
+  "controlled_workload_verified": false,
+  "decision": "passed",
+  "environment_policy": {
+    "bytes": 3508,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_environment_policy_20261003.json",
+    "sha256": "47c928932cf7e13c211465937885fbf39877f723b20c7bf49ed1ae202e705454"
+  },
+  "environment_policy_frozen": true,
+  "evidence": [
+    {
+      "bytes": 2751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md",
+      "sha256": "9ddc063aede84ecb49558fecd10fbdb022f375ceaf50418c90247a98b4d71432"
+    },
+    {
+      "bytes": 13171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/PUBLICATION_GOAL_20261003.txt",
+      "sha256": "41f06e774ffc4495da5fe93e96aa1276638eddbec3ecaf00ca244cfb83bf2a38"
+    },
+    {
+      "bytes": 5425,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/THREADRIPPER_SHARED_HOST_EXECUTION_20261003.md",
+      "sha256": "625a9016670e29f1db519d5bfb9badcc8c15b63a8f2612fccf561b021142a959"
+    },
+    {
+      "bytes": 5347,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_resource_endpoints_20260929.json",
+      "sha256": "dba9602c365184f7e802425b9116b8021175b225d1f2266c44077da924bcfcdc"
+    },
+    {
+      "bytes": 17197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_async_calibration_audit_22380.json",
+      "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+    },
+    {
+      "bytes": 6566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_shared_20261003.json",
+      "sha256": "4d769df1272da767be3cf84e3e2a44d680e5b8a525770e9bb94a9a1b5014777f"
+    },
+    {
+      "bytes": 36572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_shared_20261003/binding.json",
+      "sha256": "9ba00707ddd14acfe2df5f1a33b91ac0c36417b9ae6aebb21d761b457a9c9a32"
+    },
+    {
+      "bytes": 11667,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/prepare_shared_threadripper_launch_20261003.py",
+      "sha256": "37bdc6135fa1f52ca81f32ccb9bea03933bac9f786eb89354a4a2c66f5508d27"
+    },
+    {
+      "bytes": 214234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_source_recipe_20261003.json",
+      "sha256": "6c457ee6d7c74a62f52e4236794dac29ad4b591b297f0e350896c2e7e69c56dc"
+    },
+    {
+      "bytes": 293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_process_policy_20261003.json",
+      "sha256": "530b7f3740c924b7a5ede7ed98365a2327130f72f2c93039fb18cb1bb089772a"
+    },
+    {
+      "bytes": 3508,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_environment_policy_20261003.json",
+      "sha256": "47c928932cf7e13c211465937885fbf39877f723b20c7bf49ed1ae202e705454"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "isolation_required": false,
+  "lookup_sha256": "4d769df1272da767be3cf84e3e2a44d680e5b8a525770e9bb94a9a1b5014777f",
+  "native_handoff_established": false,
+  "observer_accounting_validated": true,
+  "observer_causal_slowdown_established": false,
+  "plan_sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05",
+  "recipe_sha256": "6c457ee6d7c74a62f52e4236794dac29ad4b591b297f0e350896c2e7e69c56dc",
+  "review_reference": "Retained 22380 accounting/cadence checks plus current source/private-runtime binding; actual environmental release is validated by the parked-worker guard",
+  "schema": "threadripper_shared_readiness_review_v1",
+  "scientific_timings_admitted": false
+}

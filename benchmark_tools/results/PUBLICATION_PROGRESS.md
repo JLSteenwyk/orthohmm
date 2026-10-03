@@ -1,5 +1,38 @@
 # Publication Progress
 
+## First Shared-Host Native Run Released (2026-10-03)
+
+Resume from the actual prepared evidence at pushed 5ddd474c. The preceding
+goal turn verified the prompt amendment and completed its push; the new
+continuation reads the full goal and observes no existing panel job/request.
+Current available RAM is about 311 GiB; retain shared workloads rather than
+reintroducing the superseded quiet-window requirement.
+
+Submit the first frozen identity held, create its request using real job ID
+22396, verify the 64-slot/128-GiB/26-hour shared allocation and set its scheduler
+comment to the actual request digest before release. No retry or identity
+change. The actual environment worker and parked-worker guard pass, and native
+inference begins on four proteomes (73,266 proteins), OrthoHMM high sensitivity,
+repeat 0. Observed affinity is CPUs 0-31, with a 128-GiB cgroup memory ceiling.
+Preflight records 56.0025 foreign CPU-core equivalents and available memory
+326,188,068,864 / 315,652,562,944 bytes. These are launch diagnostics, not an
+estimate of causal slowdown or completed whole-run resource measurements.
+
+Preserve the prepared source recipe, process/environment policies and scoped
+readiness; their earlier historical receipts remain unchanged. Record a live
+[launch observation](threadripper_shared_launch_22396.json) using the retained
+[capture source](snapshot_shared_threadripper_launch_22396.py). At this checkpoint
+Slurm confirms job 22396 RUNNING and the native log reports all-to-all search.
+Whole-run monitoring is active. No timing is admitted and no next submission
+is authorized yet. Legacy helper wording about quietness is not a shared-mode
+eligibility requirement; explicit scope and diagnostics take precedence.
+
+Next: query this exact job and retain its terminal outcome when available;
+replay resource evidence, post-run runtime checks, process/pressure stream and
+native outputs or failure before advancing to frozen index 1. Do not resubmit
+run 0, mutate pinned helpers/policies while live or disrupt unrelated analyses.
+The full publication goal remains active, not complete.
+
 ## Shared Runtime Refreshed And Real Launch Prepared (2026-10-03)
 
 Continue from pushed 98ed53f0 toward actual execution. Refresh the genuinely
