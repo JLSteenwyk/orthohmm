@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Repaired Panel Continued To Phylogenetics (2026-10-03)
+
+The preceding goal turn progresses at pushed 6add4497: actual run-0 review and
+the anchored observer repair, not a verified wait or an unresolved quiet-host
+blocker. Current scheduler inspection confirms no prior live panel job before
+continuation. Read the full amended goal and preserve the original failed
+timing admission, raw endpoints, outputs and audit revisions.
+
+Add an explicit shared-production-only history resolution. Bind unchanged
+original session/decisions, native success, passing accounting/output reviews,
+independent cadence-only process failure, intact identity/bracketing, passing
+pressure stream and the actual post-native executor error. Preserve FAILED/1:0
+and environment failed; mark the attempt excluded from comparative timing.
+Other failures, retries, admission, overhead-mode borrowing and identity drift
+remain rejected. Seven-module regression **410 passes in 20.76s**; an actual
+retained resolution log repeats that engineering panel with **410 passes in
+20.97s**. No native inference or calibration is repeated.
+
+Refresh the latest shared runtime: exactly four helper changes, no additions,
+removals or non-helper drift. All 57,959 records match before/after native startup
+(28.8275s / 29.0323s); module identities remain 913 / 1,563. Preserve scientific
+baseline/plan/private controller/private manifest. Push ae85673e and 0d5e5cf7.
+Write new repaired recipe/resource-source binding and shared policy/readiness;
+keep the original artifacts. Resource scopes, native parameters, inputs, order
+and 35s/1.5s process/pressure cadence bounds do not change. See
+[continuation contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md) and
+[retained excluded resolution](threadripper_shared_resolution_22396.json).
+
+After a current ~298-GiB available-memory check, submit frozen index 1 held.
+Actual job **22397**, OrthoHMM satellite_v2 (phylogenetics), four proteomes,
+repeat 0, is bound to its real request digest and released. The runtime and
+environmental/native release checks pass; Slurm confirms RUNNING and the native
+log reports all-to-all HMM search. The first actual process-sampling interval
+is 30.000426278s, within the unchanged 35s bound. Preflight records 53.2495
+foreign CPU-core equivalents, accepted as contention diagnostics rather than
+quiet-host rejection. See [live snapshot](threadripper_shared_live_22397.json).
+
+Next: poll this exact job, not its filesystem markers alone. On authoritative
+termination, use the [repaired review source](review_shared_threadripper_repaired_20261003.py)
+for native/runtime/environment/resource/output review. Only a reviewed eligible
+prefix allows index 2 (full OrthoFinder 3.1.5) via the retained one-step launcher.
+Do not overwrite/retry run 0, launch parallel panel identities, change frozen
+scientific settings, touch unrelated work or fabricate isolated performance.
+No final timing is admitted for the live run; the full publication goal remains
+active and incomplete.
+
 ## First Attempt Reviewed And Observer Scheduling Repaired (2026-10-03)
 
 The preceding continuation progressed at pushed 0c833313 by launching job

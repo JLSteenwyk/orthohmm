@@ -1,0 +1,79 @@
+{
+  "contention_annotation_required": true,
+  "controlled_workload_verified": false,
+  "decision": "passed",
+  "environment_policy": {
+    "bytes": 4134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_environment_policy_repaired_20261003.json",
+    "sha256": "1a018252985791421eab4f34bd0f8772f0cc5987bcc614ba0e2a24d089c98d96"
+  },
+  "environment_policy_frozen": true,
+  "evidence": [
+    {
+      "bytes": 13171,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/PUBLICATION_GOAL_20261003.txt",
+      "sha256": "41f06e774ffc4495da5fe93e96aa1276638eddbec3ecaf00ca244cfb83bf2a38"
+    },
+    {
+      "bytes": 2751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md",
+      "sha256": "9ddc063aede84ecb49558fecd10fbdb022f375ceaf50418c90247a98b4d71432"
+    },
+    {
+      "bytes": 3030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/THREADRIPPER_SHARED_CONTINUATION_20261003.md",
+      "sha256": "ec6e941956496cb507836ebfec574d0450acc886f010d97a508e04cd4083f23a"
+    },
+    {
+      "bytes": 17197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_async_calibration_audit_22380.json",
+      "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+    },
+    {
+      "bytes": 6647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_lookup_shared_repaired_20261003.json",
+      "sha256": "7c22f7594294295ae4ce949b37e8f6ea13aee7ce0c1610e76285740116f65b02"
+    },
+    {
+      "bytes": 36590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_binding_shared_repaired_20261003/binding.json",
+      "sha256": "d0cfad41ca745313f4680a29c2f9d8ee055be84acaa6bdaf0f13fef0bf72b7cb"
+    },
+    {
+      "bytes": 6170,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_resource_endpoints_shared_repaired_20261003.json",
+      "sha256": "2819471dd79d39c766116361ced6a68e08772c42f94785d60e6085daa7e4c9c6"
+    },
+    {
+      "bytes": 214234,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_source_recipe_repaired_20261003.json",
+      "sha256": "cadbe5f895a18e270d1469106f8126fb46ff83d92d5a179de81eddbd556c9a4d"
+    },
+    {
+      "bytes": 2365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/resolved_session_00.json",
+      "sha256": "407cb4c09438cde6e40eb92472192f8bfd694d6427b7f487b8b77f87bd78545c"
+    },
+    {
+      "bytes": 16718,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/continue_shared_threadripper_panel_20261003.py",
+      "sha256": "5ac82d512df7bd6f9958a779d10dfdf18f364fb9dad2518472bbddbf2358b517"
+    },
+    {
+      "bytes": 4134,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_environment_policy_repaired_20261003.json",
+      "sha256": "1a018252985791421eab4f34bd0f8772f0cc5987bcc614ba0e2a24d089c98d96"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "isolation_required": false,
+  "lookup_sha256": "7c22f7594294295ae4ce949b37e8f6ea13aee7ce0c1610e76285740116f65b02",
+  "native_handoff_established": false,
+  "observer_accounting_validated": true,
+  "observer_causal_slowdown_established": false,
+  "plan_sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05",
+  "recipe_sha256": "cadbe5f895a18e270d1469106f8126fb46ff83d92d5a179de81eddbd556c9a4d",
+  "review_reference": "Retained accounting calibration, repaired source/runtime checks and reviewed excluded prefix; actual native handoff remains live-gated",
+  "schema": "threadripper_shared_readiness_review_v1",
+  "scientific_timings_admitted": false
+}
