@@ -10,10 +10,13 @@ from benchmark_tools.verify_threadripper_controller import validate
 REVIEWS = {"runtime", "environment", "resources", "outputs_or_failure"}
 
 
-def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overhead=False):
+def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overhead=False,
+         allocation_mode="exclusive"):
     """Read immutable history only; caller must freeze arguments and audit evidence."""
     if type(overhead) is not bool:
         raise ValueError("Require explicit panel kind")
+    if allocation_mode not in {"exclusive", "shared"}:
+        raise ValueError("Unsupported allocation mode")
     session_schema = "threadripper_overhead_session_v1" if overhead else "threadripper_panel_session_v1"
     review_schema = "threadripper_overhead_review_v1" if overhead else "threadripper_panel_review_v1"
     evidence = []
@@ -51,7 +54,7 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
                 or type(controller.get("returncode")) is not int or controller["returncode"] != 0):
             raise ValueError("Controller observation failed or queried another job")
         allocation = validate(controller["stdout"], job, session["phase"],
-                              command=command, cwd=cwd, time_limit=time_limit)
+                              command=command, cwd=cwd, time_limit=time_limit, allocation_mode=allocation_mode)
         outcome = session.get("native_outcome")
         if outcome is not None:
             native = read(session["native_audit"])
@@ -96,4 +99,4 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
         scientific_execution_authorized=False, scientific_timings_admitted=False,
         limitations=["Hashes and identities bind recorded claims; they do not independently validate review conclusions.",
                      "Caller must freeze plan/session references and command/cwd/time limit, authenticate observations and audit native outcomes.",
-                     "Fresh live-job observations and quiet-host preflight remain mandatory before any submission."])
+                     "Fresh live-job observations and the selected environmental preflight remain mandatory before native release."])

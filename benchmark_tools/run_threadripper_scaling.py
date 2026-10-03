@@ -21,7 +21,7 @@ from benchmark_tools.run_simulation_methods import read_frozen, execution_enviro
 from benchmark_tools.threadripper_panel_progress import overhead_position, position
 from benchmark_tools.verify_threadripper_controller import ReleaseBudgetGuard
 from benchmark_tools.review_threadripper_process_stream import audit as audit_process_stream
-from benchmark_tools.review_threadripper_process_policy import number
+from benchmark_tools.review_threadripper_process_policy import number, shared_environment, SHARED_SCOPE
 from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
 
 PLAN_SHA = "c384e27730e3802b39ba14a42f7f50e84da5ce6deb9de9b2c32a74a745aed296"
@@ -34,6 +34,12 @@ TIME_LIMIT = "1-02:00:00"
 def deployment(request):
     """Select an explicit retained deployment, without changing historical pins."""
     name = request.get("deployment", "shared_v3_20260928")
+    scope = request.get("execution_scope", "isolated_controlled")
+    if not isinstance(scope, str) or scope not in {"isolated_controlled", SHARED_SCOPE}:
+        raise ValueError("Unsupported execution scope")
+    shared = scope == SHARED_SCOPE
+    if shared and (name != "private_v2_20260928" or "runtime_lookup" not in request):
+        raise ValueError("Shared-host timing requires explicit private runtime lookup")
     if "overhead_plan" in request and (name != "private_v2_20260928" or "runtime_lookup" not in request):
         raise ValueError("Engineering overhead requires explicit private runtime lookup")
     if "runtime_lookup" in request and name != "private_v2_20260928":
@@ -73,6 +79,9 @@ def deployment(request):
                 raise ValueError("Require a direct absolute engineering plan path")
             selected.update(parent_plan=selected["plan"], parent_plan_sha=selected["plan_sha"],
                             plan=ref["path"], plan_sha=ref["sha256"], purpose="native_overhead")
+        if shared:
+            selected.update(script="run_threadripper_shared_scaling.sh", execution_scope=SHARED_SCOPE,
+                            allocation_mode="shared")
         return selected
     raise ValueError("Unknown retained Threadripper deployment")
 
@@ -168,6 +177,9 @@ def select(request, root, job):
         lookup_evidence = [request["runtime_lookup"], record(retained_path),
                            retained["binding"], explicit["binding"], explicit["baseline"]]
     extra = dict(overhead=True) if overhead else {}
+    shared = selected.get("execution_scope") == SHARED_SCOPE
+    if shared:
+        extra["allocation_mode"] = "shared"
     history = bind(record(plan_path), request["history"], command=request["scheduler_command"],
                    cwd=str(root), time_limit=TIME_LIMIT, **extra)
     if (history["progress"]["status"] != "next_identity_requires_preflight"
@@ -179,7 +191,14 @@ def select(request, root, job):
         environment_policy_frozen=True)
     if overhead:
         ready_fields.update(boundary_control_validated=True, incremental_overhead_measurement_pending=True)
+    if shared:
+        ready_fields.pop("full_scale_observer_validated")
+        ready_fields.update(schema="threadripper_shared_readiness_review_v1",
+            execution_scope=SHARED_SCOPE, observer_accounting_validated=True,
+            contention_annotation_required=True, isolation_required=False)
     ready = review(request["readiness_review"], ready_fields)
+    if shared and not shared_environment(read(ready["environment_policy"])):
+        raise ValueError("Shared readiness must bind a shared-host environmental policy")
     if overhead:
         task = plan["runs"][index]
         history["engineering_task"] = {k: task[k] for k in ("index", "pair", "arm", "method", "proteomes", "repeat")}
@@ -221,11 +240,17 @@ class EnvironmentalReleaseGuard:
             # The parked native worker's unchanged gate timeout is 45 seconds.
             self.waiter(path, seconds=20)
             ref = record(path)
-            ready = review(ref, dict(schema="threadripper_environment_preflight_v1", decision="passed",
+            expected = dict(schema="threadripper_environment_preflight_v1", decision="passed",
                 job_id=self.request["job_id"], index=self.request["index"], plan_sha256=deployment(self.request)["plan_sha"],
                 recipe_sha256=self.request["recipe"]["sha256"],
                 readiness_review_sha256=self.request["readiness_review"]["sha256"],
-                whole_run_observer_ready=True, unrelated_scientific_work_present=False))
+                whole_run_observer_ready=True)
+            if self.request.get("execution_scope") == SHARED_SCOPE:
+                expected.update(execution_scope=SHARED_SCOPE, background_competition_recorded=True,
+                                uncontended_timing=False, foreign_cpu_used_for_eligibility=False)
+            else:
+                expected["unrelated_scientific_work_present"] = False
+            ready = review(ref, expected)
             start, end = ready["observation_started_unix_ns"], ready["observation_finished_unix_ns"]
             now = self.clock()
             if (type(start) is not int or type(end) is not int or not 0 < requested <= start <= end <= now
@@ -270,6 +295,9 @@ def execute(request_path, request_sha):
     policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
     pressure_role = native_pressure_role(policy)
+    shared = shared_environment(policy)
+    if shared != (request.get("execution_scope") == SHARED_SCOPE):
+        raise ValueError("Request and policy execution scopes differ")
     if selected["name"] == "private_v2_20260928" and pressure_role != "diagnostic_only":
         raise ValueError("Private timing requires explicit v2 diagnostic-only native pressure policy")
     number(policy["maximum_foreign_average_cores"])
@@ -293,6 +321,9 @@ def execute(request_path, request_sha):
                   limitations=["External reviews are bound, not independently certified by this executor.",
                                "Terminal scheduler, runtime, environment, resource and native-output audits remain required.",
                                "A returned measurement never authorizes the next identity."])
+    if shared:
+        result.update(execution_scope=SHARED_SCOPE, uncontended_timing=False,
+                      contention_distortion="unknown_potentially_method_dependent")
     task = history.get("engineering_task")
     if task:
         result.update(purpose="native_overhead", engineering_task=task, production_identity=False)
@@ -304,7 +335,8 @@ def execute(request_path, request_sha):
         os.chdir(run["cwd"])
         checker = RuntimeChecker(root / "benchmark_tools/results" / selected["lookup"],
             selected["lookup_sha"], session / "lookup_checks")
-        budget = ReleaseBudgetGuard(job, command=request["scheduler_command"], cwd=str(root))
+        budget_extra = dict(allocation_mode="shared") if shared else {}
+        budget = ReleaseBudgetGuard(job, command=request["scheduler_command"], cwd=str(root), **budget_extra)
         evidence = [request["recipe"], request["readiness_review"], policy_ref, *sources, *history["evidence"]]
         with EnvironmentWorker(session, request_ref, policy_ref, root) as worker:
             def finished_worker_budget(directory):

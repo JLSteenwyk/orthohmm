@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Explicit Shared-Host Execution Implemented (2026-10-03)
+
+Previous turn progressed at pushed 1ae6b3e2 by amending the actual goal.
+Resume under that scope and reset the old quiet-window impasse audit. Read the
+amended goal/current ledger and preserve completed science. Inspect executor,
+worker, process/pressure replay, scheduler/history and native collector contracts.
+
+Add explicit shared request/readiness/environment/process mode. Competing CPU,
+outside process churn and PSI become retained diagnostics, not quiet-host
+rejections; observer attribution, memory safety, measurement continuity,
+source/runtime integrity and deadlines still apply. Add a non-exclusive 64-slot
+scheduler script and scope-aware controller/history validation. Scientific
+commands, input bytes, native 32-thread affinity and 27 identities are unchanged.
+Historical routes retain their original eligibility behavior. Do not certify
+unrelated images/services or manufacture a quiet-host pass in shared mode.
+
+Initial regression 457 passes, shared extension 491 passes, expanded ten-module
+panel 529 passes in 25.32 seconds; shell syntax passes. These exercise components
+and synthetic evidence, not actual native release or timing. See
+[implementation scope and launch requirements](THREADRIPPER_SHARED_HOST_EXECUTION_20261003.md).
+
+Changed helper bytes require a fresh current-source binding and real shared
+policy/readiness before launch; retain the old recipes. Continue directly toward
+the native handoff and preserved sequential panel. No DGX, shared-environment
+upgrade, unrelated service/job change or scientific tuning. Goal remains active.
+
 ## Shared-Host Execution Authorized For Next Resume (2026-10-03)
 
 The user requests updating the goal to proceed despite competing analyses,

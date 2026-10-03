@@ -10,11 +10,13 @@ from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.capture_job_scheduler import terminal_record
 
 
-def validate(raw, job, phase, *, command, cwd, time_limit="1-00:00:00"):
+def validate(raw, job, phase, *, command, cwd, time_limit="1-00:00:00", allocation_mode="exclusive"):
     if type(job) is not int or job <= 0 or phase not in {"running", "terminal"}:
         raise ValueError("Require positive job ID and observation phase")
     if not all(isinstance(v, str) and v for v in (command, cwd, time_limit)):
         raise ValueError("Require explicit command, cwd and time limit")
+    if allocation_mode not in {"exclusive", "shared"}:
+        raise ValueError("Unsupported allocation mode")
     lines = [line for line in raw.splitlines() if line.strip()]
     if len(lines) != 1:
         raise ValueError("Require one controller record")
@@ -24,10 +26,14 @@ def validate(raw, job, phase, *, command, cwd, time_limit="1-00:00:00"):
         raise ValueError("Duplicate scheduler field")
     # Exclusive-node allocation reserves all 192 slots, unlike the 64-slot task.
     expected = dict(JobId=str(job), Partition="gpu", NodeList="bizon",
-        NumNodes="1", NumCPUs="192", NumTasks="1", OverSubscribe="NO",
+        NumNodes="1", NumCPUs="192" if allocation_mode == "exclusive" else "64", NumTasks="1", OverSubscribe="NO",
         MinMemoryNode="128G", Requeue="0", Restarts="0", Command=command,
         WorkDir=cwd, TimeLimit=time_limit)
     expected["CPUs/Task"] = "64"
+    if allocation_mode == "shared":
+        if fields.get("OverSubscribe") not in {"NO", "OK"}:
+            raise ValueError("Unsupported shared allocation subscription field")
+        expected.pop("OverSubscribe")
     if any(fields.get(k) != v for k, v in expected.items()) or any(
             k in fields for k in ("ArrayJobId", "ArrayTaskId", "HetJobId", "HetJobOffset")):
         raise ValueError("Threadripper allocation or execution identity differs")
@@ -40,16 +46,16 @@ def validate(raw, job, phase, *, command, cwd, time_limit="1-00:00:00"):
         raise ValueError("Require terminal controller evidence")
     return dict(status="threadripper_controller_record_verified", job_id=job,
         scheduler_state=fields["JobState"], scheduler_exit_code=fields["ExitCode"],
-        scheduler_terminal_verified=phase == "terminal", fields=fields,
+        scheduler_terminal_verified=phase == "terminal", fields=fields, allocation_mode=allocation_mode,
         scientific_execution_authorized=False, scientific_timings_admitted=False,
         limitations=["Recorded controller fields only; caller must verify freshness and submission provenance.",
                      "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
                      "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."])
 
 
-def remaining_budget(raw, job, *, command, cwd, query_elapsed_s):
+def remaining_budget(raw, job, *, command, cwd, query_elapsed_s, allocation_mode="exclusive"):
     allocation = validate(raw, job, "running", command=command, cwd=cwd,
-                          time_limit="1-02:00:00")
+                          time_limit="1-02:00:00", allocation_mode=allocation_mode)
     if (type(query_elapsed_s) not in (int, float) or not math.isfinite(query_elapsed_s)
             or not 0 <= query_elapsed_s <= 5):
         raise ValueError("Scheduler observation exceeded freshness allowance")
@@ -73,9 +79,11 @@ def remaining_budget(raw, job, *, command, cwd, query_elapsed_s):
 class ReleaseBudgetGuard:
     """Fresh local query at the release gate; recipe and quiet-host checks are separate."""
 
-    def __init__(self, job, *, command, cwd, runner=subprocess.run, clock=time.monotonic):
+    def __init__(self, job, *, command, cwd, runner=subprocess.run, clock=time.monotonic,
+                 allocation_mode="exclusive"):
         self.job, self.command, self.cwd = job, command, cwd
         self.runner, self.clock = runner, clock
+        self.allocation_mode = allocation_mode
 
     def __call__(self, directory):
         argv = ["scontrol", "show", "job", str(self.job), "--oneliner"]
@@ -89,7 +97,7 @@ class ReleaseBudgetGuard:
             if result.returncode != 0:
                 raise ValueError("Scheduler query failed")
             budget = remaining_budget(result.stdout, self.job, command=self.command,
-                                      cwd=self.cwd, query_elapsed_s=elapsed)
+                                      cwd=self.cwd, query_elapsed_s=elapsed, allocation_mode=self.allocation_mode)
             observation.update(status="release_budget_check_passed", budget=budget)
         except Exception as error:
             observation.update(error_type=type(error).__name__, error=str(error))

@@ -9,6 +9,19 @@ from pathlib import PurePosixPath
 
 from benchmark_tools.observe_host_competition import analyze
 
+SHARED_SCOPE = "shared_host_matched_resources"
+
+
+def shared_environment(policy):
+    if policy.get("schema") != "threadripper_environment_policy_v3":
+        return False
+    if (policy.get("execution_scope") != SHARED_SCOPE
+            or policy.get("foreign_cpu_role") != "diagnostic_only"
+            or policy.get("native_pressure_role") != "diagnostic_only"
+            or policy.get("preflight_pressure_role") != "diagnostic_only"):
+        raise ValueError("Require explicit shared-host diagnostic contention roles")
+    return True
+
 
 def number(value, positive=False):
     if (type(value) not in (int, float) or not math.isfinite(value)
@@ -80,6 +93,9 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
     The caller must separately verify policy/evidence hashes and the review's
     factual basis. The observer must be inside the job, not exempted by PID.
     """
+    if policy.get("schema") == "threadripper_process_policy_v3":
+        return review_shared(policy, before, after, boot_id=boot_id,
+                             job_scope=job_scope, observer_pid=observer_pid)
     typed = policy.get("schema") == "threadripper_process_policy_v2"
     if (policy.get("schema") not in {"threadripper_process_policy_v1", "threadripper_process_policy_v2"}
             or not isinstance(boot_id, str) or not boot_id.strip()
@@ -179,3 +195,52 @@ def review(policy, before, after, *, boot_id, job_scope, observer_pid):
         result["limitations"].append("Verified kernel type permits reviewed name changes only; CPU and other checks remain.")
         result["limitations"].append("Non-observer transitions observed wholly inside the job are retained, not foreign competition; movement between samples remains unobserved.")
     return result
+
+
+def review_shared(policy, before, after, *, boot_id, job_scope, observer_pid):
+    """Validate observation/attribution while retaining ordinary outside churn."""
+    if (policy.get("schema") != "threadripper_process_policy_v3"
+            or policy.get("execution_scope") != SHARED_SCOPE
+            or not isinstance(boot_id, str) or not boot_id.strip()
+            or policy.get("boot_id") != boot_id
+            or not isinstance(policy.get("review_reference"), str)
+            or not policy["review_reference"].strip()):
+        raise ValueError("Require explicit same-boot shared-host process policy")
+    scope = group(job_scope)
+    if scope == PurePosixPath("/") or type(observer_pid) is not int or observer_pid <= 0:
+        raise ValueError("Require scoped job and observer identity")
+    a, b = inventory(before), inventory(after)
+    if before["finished_monotonic_s"] >= after["started_monotonic_s"]:
+        raise ValueError("Require distinct ordered snapshots")
+    for sample, rows in ((before, a), (after, b)):
+        if (sample.get("boot_id") != boot_id or observer_pid not in rows
+                or not group(rows[observer_pid]["cgroup"]).is_relative_to(scope)
+                or kernel_type(rows[observer_pid], sample, boot_id) != 0):
+            raise ValueError("Observer boot, job membership or kernel identity differs")
+    if identity(a[observer_pid]) != identity(b[observer_pid]):
+        raise ValueError("Observer identity changed")
+    failures = []
+    for pid in sorted(set(a) & set(b)):
+        first, last = a[pid], b[pid]
+        inside = [group(row["cgroup"]).is_relative_to(scope) for row in (first, last)]
+        if any(inside) and inside[0] != inside[1]:
+            failures.append(dict(pid=pid, reason="job_membership_changed"))
+        if all(inside):
+            if (last["created"] < first["created"] or
+                    last["created"] == first["created"] and
+                    any(last[k] < first[k] for k in ("user_s", "system_s"))):
+                failures.append(dict(pid=pid, reason="in_job_counter_or_identity_decreased"))
+    diagnostic = analyze(before, after, str(scope), observer_pid)
+    # Outside collection gaps/churn limit contention estimates; native accounting
+    # and the observer's identity are validated separately, never inferred quiet.
+    return dict(schema="threadripper_shared_process_review_v1",
+        status="shared_host_observation_valid" if not failures else "invalid_shared_host_observation",
+        process_policy_matched=not failures, controlled_workload_verified=False,
+        execution_scope=SHARED_SCOPE, foreign_cpu_used_for_eligibility=False,
+        scientific_timings_admitted=False, boot_id=boot_id, job_scope=str(scope),
+        review_reference=policy["review_reference"], changed_processes=failures,
+        cpu_diagnostic=diagnostic,
+        limitations=["Background activity and churn are annotated, not an isolation certificate.",
+            "Outside sampling errors and unmatched processes make CPU estimates incomplete.",
+            "Native cgroup accounting, resources and runtime integrity require separate checks.",
+            "Contention distortion is unknown and can be method-dependent."])

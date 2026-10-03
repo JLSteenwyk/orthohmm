@@ -84,6 +84,61 @@ def test_success_is_only_a_preflight_and_atomic_files(setup):
     with pytest.raises(FileExistsError): setup.run()
 
 
+def shared_worker_setup(setup):
+    setup.request.update(deployment="private_v2_20260928", runtime_lookup=setup.support,
+                         execution_scope="shared_host_matched_resources")
+    setup.process_policy.update(schema="threadripper_process_policy_v3",
+                                execution_scope="shared_host_matched_resources")
+    setup.policy["process_policy"] = put(setup.root / "process.json", setup.process_policy)
+    setup.policy.update(schema="threadripper_environment_policy_v3",
+        plan_sha256=worker.deployment(setup.request)["plan_sha"],
+        execution_scope="shared_host_matched_resources", foreign_cpu_role="diagnostic_only",
+        native_pressure_role="diagnostic_only", preflight_pressure_role="diagnostic_only",
+        minimum_available_memory_bytes=128 * 1024**3, configuration_files=[])
+    setup.policy_ref.update(put(Path(setup.policy_ref["path"]), setup.policy))
+    setup.request["readiness_review"].update(put(Path(setup.request["readiness_review"]["path"]),
+                                               dict(environment_policy=setup.policy_ref)))
+    setup.request_ref.update(put(Path(setup.request_ref["path"]), setup.request))
+    put(setup.directory / "environment_review_requested.json", setup.marker)
+    for index, sample in enumerate(setup.samples):
+        foreign = dict(sample["processes"][0], pid=10, cgroup="/other_job",
+                       name="iqtree", user_s=100. * index)
+        sample["processes"].append(foreign)
+    setup.hosts[1]["optional"]["host_io_pressure"] = setup.hosts[1]["optional"]["host_io_pressure"].replace("total=0", "total=10000")
+
+
+def test_shared_worker_accepts_competition_without_certifying_isolation(setup):
+    shared_worker_setup(setup)
+    def forbidden_image_whitelist(*args):
+        raise AssertionError("Shared mode must not certify unrelated executables")
+    result = setup.run(image_check=forbidden_image_whitelist,
+        capacity=lambda: SimpleNamespace(available=256 * 1024**3))
+    assert result["decision"] == "passed"
+    assert result["observed_foreign_average_cores"] == 50.
+    assert result["background_competition_recorded"] is True
+    assert result["uncontended_timing"] is False
+    assert result["preflight_pressure_limits_used"] is False
+    assert result["unrelated_scientific_work_present"] is None
+    assert not result["scientific_timings_admitted"]
+    assert not (setup.directory / "go.json").exists()
+
+
+@pytest.mark.parametrize("change", ["capacity", "collector", "host_error", "observer"])
+def test_shared_worker_preserves_safety_and_measurement_checks(setup, change):
+    shared_worker_setup(setup)
+    options = dict(capacity=lambda: SimpleNamespace(available=256 * 1024**3))
+    if change == "capacity": options["capacity"] = lambda: SimpleNamespace(available=64 * 1024**3)
+    elif change == "collector":
+        def failed_collector(*args): raise ValueError("invalid collector")
+        options["collector_check"] = failed_collector
+    elif change == "host_error": setup.hosts[1]["errors"].append(dict(field="host_io_pressure"))
+    else: setup.samples[1]["processes"].pop(0)
+    result = setup.run(**options)
+    assert result["decision"] == "failed"
+    assert not (setup.directory / "go.json").exists()
+    assert (setup.root / "environment_worker_evidence.json").is_file()
+
+
 @pytest.mark.parametrize('change',['unknown','sampling_error','missing_type','pressure','host_error',
     'image_error','collector_error','source_drift','expired','interrupt'])
 def test_failed_reviews_do_not_release_or_discard_evidence(setup,change):
@@ -264,3 +319,19 @@ def test_collector_readiness_identity_and_parked_state(tmp_path,monkeypatch,prob
         refs=worker.collector_ready(tmp_path,scope,42)
         assert checked==[60,50]
         for ref in refs: worker.check(ref)
+
+
+@pytest.mark.parametrize("pid,accepted", [(70, True), (50, False), (60, False)])
+def test_shared_collector_retains_outside_errors_but_not_native_observer_errors(tmp_path, monkeypatch, pid, accepted):
+    scope = "/root/job_42"
+    put(tmp_path / "ready.json", dict(pid=50, cgroup=f"0::{scope}/step_0/user/task_0\n"))
+    row = dict(index=0, interval=None, observer_pid=60,
+        snapshot=dict(errors=[dict(pid=pid, type="NoSuchProcess")], processes=[dict(pid=50), dict(pid=60)]))
+    (tmp_path / "host_processes.jsonl").write_text(json.dumps(row) + "\n")
+    monkeypatch.setattr(worker, "job_scope", lambda *args: scope)
+    monkeypatch.setattr(worker, "membership", lambda *args: scope + "/step_0/user/task_0")
+    monkeypatch.setattr(worker, "live_identity", lambda *args: None)
+    if accepted:
+        assert len(worker.collector_ready(tmp_path, scope, 42, shared_host=True)) == 2
+    else:
+        with pytest.raises(ValueError): worker.collector_ready(tmp_path, scope, 42, shared_host=True)

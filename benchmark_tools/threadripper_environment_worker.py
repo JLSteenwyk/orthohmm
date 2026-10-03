@@ -15,7 +15,7 @@ from benchmark_tools.observe_threadripper_process_identity import enriched_snaps
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save, wait_file
 from benchmark_tools.probe_host_counters import snapshot as host_snapshot
-from benchmark_tools.review_threadripper_process_policy import number, review as process_review
+from benchmark_tools.review_threadripper_process_policy import number, review as process_review, shared_environment, SHARED_SCOPE
 from benchmark_tools.review_threadripper_pressure_stream import native_pressure_role
 from benchmark_tools.run_threadripper_scaling import PLAN_SHA, deployment, expect, read, review, select
 from benchmark_tools.slurm_resource_snapshot import scoped_path
@@ -67,7 +67,7 @@ def images(policy, snapshot):
     return results
 
 
-def collector_ready(directory, scope, job):
+def collector_ready(directory, scope, job, *, shared_host=False):
     ready_path = directory / "ready.json"
     ready_ref = record(ready_path)
     ready = read(ready_ref)
@@ -84,7 +84,10 @@ def collector_ready(directory, scope, job):
         raise ValueError("Missing initial collector observation")
     pid = first["observer_pid"]
     rows = [r for r in first["snapshot"]["processes"] if r["pid"] == pid]
-    if len(rows) != 1 or first["snapshot"]["errors"] or job_scope(pid, job) != scope:
+    errors = first["snapshot"]["errors"]
+    if (not isinstance(errors, list) or len(rows) != 1 or job_scope(pid, job) != scope
+            or errors and (not shared_host or any(
+                error.get("pid") in {pid, ready["pid"]} for error in errors))):
         raise ValueError("Collector identity, initial sample or job scope is invalid")
     live_identity(rows[0])
     native_rows = [r for r in first["snapshot"]["processes"] if r["pid"] == ready["pid"]]
@@ -98,7 +101,8 @@ def collector_ready(directory, scope, job):
 
 def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
             image_check=images, collector_check=collector_ready, clock=time.time_ns,
-            sleep=time.sleep, waiter=wait_file, host_sample=host_snapshot):
+            sleep=time.sleep, waiter=wait_file, host_sample=host_snapshot,
+            capacity=psutil.virtual_memory):
     root = Path(root or Path(__file__).resolve().parent.parent)
     request = read(request_ref)
     selected = deployment(request)
@@ -110,21 +114,27 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
     policy = review(policy_ref, dict(decision="reviewed",
                                     host="bizon", plan_sha256=selected["plan_sha"]))
     pressure_role = native_pressure_role(policy)
+    shared = shared_environment(policy)
+    if shared != (request.get("execution_scope") == SHARED_SCOPE):
+        raise ValueError("Request and environmental execution scopes differ")
     if selected["name"] == "private_v2_20260928" and pressure_role != "diagnostic_only":
         raise ValueError("Private timing requires explicit v2 diagnostic-only native pressure policy")
     ready = read(request["readiness_review"])
     if ready.get("environment_policy") != policy_ref:
         raise ValueError("Readiness does not bind this environmental policy")
     process_policy = read(policy["process_policy"])
-    expect(process_policy, dict(schema="threadripper_process_policy_v2"))
+    expect(process_policy, dict(schema="threadripper_process_policy_v3" if shared else "threadripper_process_policy_v2"))
     cpu_limit = number(policy["maximum_foreign_average_cores"])
     pressure_limits = policy["maximum_pressure_percent"]
     if set(pressure_limits) != {"cpu", "io", "memory"} or any(
             number(value) > 100 for value in pressure_limits.values()):
         raise ValueError("Require prospectively reviewed CPU, I/O and memory pressure bounds")
     configuration = policy["configuration_files"]
-    if not isinstance(configuration, list) or not configuration:
+    if not isinstance(configuration, list) or not configuration and not shared:
         raise ValueError("Require reviewed service/configuration file evidence")
+    minimum_available = policy.get("minimum_available_memory_bytes") if shared else None
+    if shared and (type(minimum_available) is not int or minimum_available < 128 * 1024**3):
+        raise ValueError("Shared-host launch must allow the full 128-GiB native memory limit")
     evidence = [request_ref, policy_ref, request["readiness_review"], request["recipe"],
                 policy["process_policy"], *configuration, *policy["evidence"], *sources]
     for ref in evidence:
@@ -160,9 +170,17 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
         observation_started_unix_ns=started, review_reference=policy["review_reference"],
         scientific_timings_admitted=False)
     if pressure_role == "diagnostic_only":
-        response.update(native_pressure_role=pressure_role, preflight_pressure_limits_used=True)
+        response.update(native_pressure_role=pressure_role, preflight_pressure_limits_used=not shared)
+    if shared:
+        response.update(execution_scope=SHARED_SCOPE, background_competition_recorded=False,
+                        uncontended_timing=False, foreign_cpu_used_for_eligibility=False)
+    def check_collector():
+        extra = dict(shared_host=True) if shared and collector_check is collector_ready else {}
+        return collector_check(directory, scope, job, **extra)
     try:
-        collector_refs = collector_check(directory, scope, job)
+        collector_refs = check_collector()
+        if shared:
+            detail["available_memory_bytes"] = [capacity().available]
         detail["host_snapshots"] = [host_sample()]
         before = sample()
         detail["snapshots"].append(before)
@@ -176,9 +194,9 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
         response["boot_id"] = boot
         if not result["process_policy_matched"]:
             raise ValueError("Unresolved outside process inventory")
-        if result["cpu_diagnostic"]["sum_observed_foreign_average_cores"] > cpu_limit:
+        if not shared and result["cpu_diagnostic"]["sum_observed_foreign_average_cores"] > cpu_limit:
             raise ValueError("Reviewed prospective background CPU bound exceeded")
-        detail["loaded_images"] = image_check(process_policy, after)
+        detail["loaded_images"] = [] if shared else image_check(process_policy, after)
         detail["host_snapshots"].append(host_sample())
         if any(s["errors"] for s in detail["host_snapshots"]):
             raise ValueError("Host pressure/counter observation errors")
@@ -187,18 +205,29 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
             raise ValueError("Host observations or review worker changed identity")
         detail["pressure"] = {resource: pressure_summary(detail["host_snapshots"], resource)
                               for resource in pressure_limits}
-        if any(detail["pressure"][resource]["midpoint_percent"]["some"] > limit
+        if not shared and any(detail["pressure"][resource]["midpoint_percent"]["some"] > limit
                for resource, limit in pressure_limits.items()):
             raise ValueError("Reviewed prospective host pressure bound exceeded")
+        if shared:
+            detail["available_memory_bytes"].append(capacity().available)
+            if any(type(value) is not int or value < minimum_available
+                   for value in detail["available_memory_bytes"]):
+                raise ValueError("Insufficient safe available memory for the shared-host launch")
         for ref in [*evidence, marker_ref, *collector_refs]:
             check(ref)
-        collector_check(directory, scope, job)
+        check_collector()
         if Path("/proc/sys/kernel/random/boot_id").read_text().strip() != boot:
             raise ValueError("Boot changed during environmental review")
         if not requested <= clock() < requested + 20_000_000_000:
             raise TimeoutError("Environmental review missed its release deadline")
-        response.update(decision="passed", whole_run_observer_ready=True,
-                        unrelated_scientific_work_present=False)
+        response.update(decision="passed", whole_run_observer_ready=True)
+        if shared:
+            response.update(background_competition_recorded=True,
+                observed_foreign_average_cores=result["cpu_diagnostic"]["sum_observed_foreign_average_cores"],
+                available_memory_bytes=detail["available_memory_bytes"])
+            detail["limitations"].append("Shared-host observation: background images/services are not certified ordinary or isolated.")
+        else:
+            response["unrelated_scientific_work_present"] = False
         detail.update(status="reviewed_preflight_observation", collector_evidence=collector_refs)
     except BaseException as error:
         response["decision"] = "failed"

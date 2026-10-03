@@ -156,6 +156,76 @@ def explicit_lookup_setup(setup, monkeypatch):
     return root, request, runs
 
 
+def shared_execution_setup(setup, monkeypatch):
+    root, request, runs = explicit_lookup_setup(setup, monkeypatch)
+    script = root / "benchmark_tools/run_threadripper_shared_scaling.sh"
+    script.write_text("# synthetic shared submission\n")
+    request.update(execution_scope="shared_host_matched_resources", scheduler_command=str(script))
+    recipe = put(root / "recipe.json", dict(schema="threadripper_executor_recipe_v1", root=str(root),
+        sources=[driver.record(root / "benchmark_tools/run_threadripper_scaling.py"), driver.record(script)]))
+    request["recipe"] = recipe
+    policy_path = root / "environment_policy.json"
+    policy = json.loads(policy_path.read_text())
+    policy.update(schema="threadripper_environment_policy_v3", execution_scope="shared_host_matched_resources",
+        foreign_cpu_role="diagnostic_only", native_pressure_role="diagnostic_only",
+        preflight_pressure_role="diagnostic_only")
+    policy_ref = put(policy_path, policy)
+    ready_path = root / "ready.json"
+    ready = json.loads(ready_path.read_text())
+    ready.pop("full_scale_observer_validated")
+    ready.update(schema="threadripper_shared_readiness_review_v1", execution_scope="shared_host_matched_resources",
+        recipe_sha256=recipe["sha256"], environment_policy=policy_ref, observer_accounting_validated=True,
+        contention_annotation_required=True, isolation_required=False)
+    request["readiness_review"] = put(ready_path, ready)
+    preflight_path = root / "preflight.json"
+    preflight = json.loads(preflight_path.read_text())
+    preflight.update(execution_scope="shared_host_matched_resources", background_competition_recorded=True,
+        uncontended_timing=False, foreign_cpu_used_for_eligibility=False,
+        unrelated_scientific_work_present=None, recipe_sha256=recipe["sha256"],
+        readiness_review_sha256=request["readiness_review"]["sha256"])
+    put(preflight_path, preflight)
+    return root, request, runs
+
+
+def test_shared_selection_and_release_bind_scope_without_altering_native_run(setup, monkeypatch):
+    root, request, runs = shared_execution_setup(setup, monkeypatch)
+    run, _, history, _ = driver.select(request, root, 42)
+    assert run == runs[0] and history["progress"]["index"] == 0
+    assert driver.deployment(request)["allocation_mode"] == "shared"
+    assert not (root / "runs").exists()
+    gate, directory, calls = guard((root, request, runs))
+    assert gate(directory) == {"budget": "checked"} and calls == [directory]
+
+
+@pytest.mark.parametrize("fault", ["scope", "lookup", "old_script", "old_ready", "old_policy", "annotation"])
+def test_shared_selection_never_borrows_quiet_host_approval(setup, monkeypatch, fault):
+    root, request, runs = shared_execution_setup(setup, monkeypatch)
+    if fault == "scope": request["execution_scope"] = "unknown"
+    elif fault == "lookup": request.pop("runtime_lookup")
+    elif fault == "old_script": request["scheduler_command"] = str(root / "benchmark_tools/run_threadripper_private_scaling.sh")
+    elif fault == "annotation":
+        path = root / "preflight.json"
+        preflight = json.loads(path.read_text())
+        preflight["background_competition_recorded"] = False
+        put(path, preflight)
+        gate, directory, _ = guard((root, request, runs))
+        with pytest.raises(ValueError): gate(directory)
+        return
+    else:
+        path = root / ("ready.json" if fault == "old_ready" else "environment_policy.json")
+        value = json.loads(path.read_text())
+        value["schema"] = "threadripper_readiness_review_v1" if fault == "old_ready" else "threadripper_environment_policy_v2"
+        ref = put(path, value)
+        if fault == "old_ready": request["readiness_review"] = ref
+        else:
+            ready_path = root / "ready.json"
+            ready = json.loads(ready_path.read_text())
+            ready["environment_policy"] = ref
+            request["readiness_review"] = put(ready_path, ready)
+    with pytest.raises(ValueError): driver.select(request, root, 42)
+    assert not (root / "runs").exists()
+
+
 def overhead_setup(setup, monkeypatch):
     root, request, _ = explicit_lookup_setup(setup, monkeypatch)
     parent_path = root / "benchmark_tools/results/threadripper_private_commands_20260928.json"

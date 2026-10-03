@@ -4,10 +4,12 @@ from collections import Counter
 
 from benchmark_tools.audit_dgx_pressure import pressure_summary
 from benchmark_tools.probe_host_counters import parse_group
-from benchmark_tools.review_threadripper_process_policy import group, number
+from benchmark_tools.review_threadripper_process_policy import group, number, shared_environment
 
 
 def native_pressure_role(policy):
+    if shared_environment(policy):
+        return "diagnostic_only"
     schema = policy.get("schema")
     if schema == "threadripper_environment_policy_v1" and "native_pressure_role" not in policy:
         return "eligibility"

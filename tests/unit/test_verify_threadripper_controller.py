@@ -23,6 +23,23 @@ def test_running_allocation_separates_node_and_task_cpus():
     assert r["scientific_execution_authorized"] is False
 
 
+@pytest.mark.parametrize("subscription", ["NO", "OK"])
+def test_explicit_shared_allocation_reserves_only_matched_task_slots(subscription):
+    raw = RAW.replace("NumCPUs=192", "NumCPUs=64").replace("OverSubscribe=NO", "OverSubscribe=" + subscription)
+    result = validate(raw, 42, "running", command="/recipe/run.sh", cwd="/recipe", allocation_mode="shared")
+    assert result["fields"]["NumCPUs"] == "64" and result["allocation_mode"] == "shared"
+    raw = raw.replace("1-00:00:00", "1-02:00:00") + " RunTime=00:00:10"
+    budget = remaining_budget(raw, 42, command="/recipe/run.sh", cwd="/recipe",
+                             query_elapsed_s=.1, allocation_mode="shared")
+    assert budget["conservative_available_s"] >= 90000
+
+
+@pytest.mark.parametrize("mode", ["unknown", "shared"])
+def test_shared_allocation_does_not_accept_wrong_node_reservation(mode):
+    with pytest.raises(ValueError):
+        validate(RAW, 42, "running", command="/recipe/run.sh", cwd="/recipe", allocation_mode=mode)
+
+
 @pytest.mark.parametrize("old,new", [
     ("NumCPUs=192", "NumCPUs=64"), ("CPUs/Task=64", "CPUs/Task=32"),
     ("MinMemoryNode=128G", "MinMemoryNode=96G"), ("OverSubscribe=NO", "OverSubscribe=YES"),

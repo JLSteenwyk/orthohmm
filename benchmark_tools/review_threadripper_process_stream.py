@@ -8,7 +8,7 @@ from collections import Counter
 import json
 from pathlib import Path
 
-from benchmark_tools.review_threadripper_process_policy import number, review
+from benchmark_tools.review_threadripper_process_policy import number, review, SHARED_SCOPE, shared_environment
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save
 from benchmark_tools.slurm_resource_snapshot import scoped_path
@@ -26,7 +26,10 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
     """
     number(launch, positive=True)
     number(end, positive=True)
-    if end <= launch or policy.get("schema") != "threadripper_process_policy_v2":
+    shared = policy.get("schema") == "threadripper_process_policy_v3"
+    if shared and policy.get("execution_scope") != SHARED_SCOPE:
+        raise ValueError("Require explicit shared-host scope")
+    if end <= launch or policy.get("schema") not in {"threadripper_process_policy_v2", "threadripper_process_policy_v3"}:
         raise ValueError("Require a positive native interval and typed process policy")
     number(maximum_foreign_average_cores)
     number(maximum_sample_period_s, positive=True)
@@ -64,7 +67,7 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
                 maximum_cores = max(maximum_cores, cores)
                 if not verdict["process_policy_matched"]:
                     failures["process_policy_mismatch"] += 1
-                if cores > maximum_foreign_average_cores:
+                if not shared and cores > maximum_foreign_average_cores:
                     failures["foreign_cpu_bound_exceeded"] += 1
                 if period > maximum_sample_period_s or finish - start > maximum_sample_period_s:
                     failures["sample_period_bound_exceeded"] += 1
@@ -83,7 +86,7 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
     if intervals == 0 or intervals != records - 1:
         failures["incomplete_interval_chain"] += 1
     passed = not failures
-    return dict(schema="threadripper_process_stream_review_v1",
+    result = dict(schema="threadripper_process_stream_review_v1",
         status="sampled_process_policy_satisfied" if passed else "unresolved_process_stream",
         sampled_process_policy_satisfied=passed, scientific_timings_admitted=False,
         controlled_workload_verified=False, records=records, intervals=intervals,
@@ -99,6 +102,10 @@ def evaluate(lines, policy, *, boot_id, job_scope, observer_pid, launch, end,
             "This checks process identities and CPU only, not executable or configuration drift, PSI or device contention.",
             "All intervals are checked, including bracketing intervals outside native execution.",
             "No production timing admission, automatic retry or next-run authorization."])
+    if shared:
+        result.update(execution_scope=SHARED_SCOPE, foreign_cpu_used_for_eligibility=False)
+        result["limitations"].append("Background activity and churn do not reject shared-host observations; distortion is unknown.")
+    return result
 
 
 def audit(directory, policy_ref, preflight_ref, *, job_id, index, collector_arm="periodic"):
@@ -121,6 +128,7 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index, collector_arm=
         return value
 
     policy = read(policy_ref)
+    shared = shared_environment(policy)
     pressure_role = native_pressure_role(policy)
     if collector_arm == "boundary" and pressure_role != "diagnostic_only":
         raise ValueError("Boundary environment review requires diagnostic-only native pressure")
@@ -136,8 +144,13 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index, collector_arm=
         raise ValueError("Policy and preflight do not identify the same reviewed attempt")
     process_ref = policy["process_policy"]
     process_policy = read(process_ref)
+    if shared != (process_policy.get("schema") == "threadripper_process_policy_v3"):
+        raise ValueError("Environment and process contention scopes differ")
+    if shared and (preflight.get("execution_scope") != SHARED_SCOPE
+                   or preflight.get("background_competition_recorded") is not True):
+        raise ValueError("Shared-host preflight scope or annotation differs")
     configuration = policy.get("configuration_files")
-    if not isinstance(configuration, list) or not configuration:
+    if not isinstance(configuration, list) or not configuration and not shared:
         raise ValueError("Require reviewed configuration file inventory")
     references.extend([process_ref, *configuration, *policy["evidence"], *preflight["evidence"]])
     refs = {name: record(directory / name) for name in
@@ -197,12 +210,17 @@ def audit(directory, policy_ref, preflight_ref, *, job_id, index, collector_arm=
     if pressure_role == "diagnostic_only":
         result.update(schema="threadripper_process_stream_review_v2", native_pressure_role=pressure_role,
                       pressure_thresholds_used_for_eligibility=False)
+    if shared:
+        result.update(execution_scope=SHARED_SCOPE, uncontended_timing=False,
+                      background_cpu_used_for_eligibility=False)
     if collector_arm == "boundary":
         result.update(schema="threadripper_boundary_environment_review_v1", collector_arm=collector_arm,
                       native_pressure_observation="boundary_only", periodic_pressure_cadence_checked=False)
     for ref in references:
         check(ref)
-    result["configuration_endpoint_hashes_verified"] = True
+    result["configuration_endpoint_hashes_verified"] = bool(configuration)
+    if shared:
+        result["background_configuration_review_required"] = False
     result["limitations"].append(
         "Configuration bytes are checked before and after post-run review; transient changes during native execution may be missed.")
     result.update(job_id=job_id, index=index, evidence=references,

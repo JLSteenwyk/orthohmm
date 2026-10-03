@@ -47,6 +47,48 @@ def test_all_intervals_recomputed_not_trusted_and_not_admission():
     assert rows == saved
 
 
+def shared_fixture():
+    policy, rows = fixture()
+    policy.update(schema="threadripper_process_policy_v3", execution_scope="shared_host_matched_resources")
+    policy.pop("ordinary_processes")
+    for index, row in enumerate(rows):
+        row["snapshot"]["processes"][0].update(user_s=100. * index, name="competing_analysis")
+    return policy, rows
+
+
+def test_shared_stream_annotates_cpu_and_outside_churn_without_quiet_claim():
+    policy, rows = shared_fixture()
+    outside = deepcopy(rows[1]["snapshot"]["processes"][0])
+    outside.update(pid=30, name="new_unrelated_analysis")
+    rows[1]["snapshot"]["processes"].append(outside)
+    rows[2]["snapshot"]["errors"].append(dict(pid=31, type="NoSuchProcess"))
+    result = run(policy, rows)
+    assert result["sampled_process_policy_satisfied"]
+    assert result["maximum_observed_foreign_average_cores"] == 50.
+    assert result["foreign_cpu_used_for_eligibility"] is False
+    assert result["controlled_workload_verified"] is False
+
+
+@pytest.mark.parametrize("change", ["scope", "observer", "boot", "gap", "counter", "migration", "index"])
+def test_shared_stream_retains_integrity_and_attribution_failures(change):
+    policy, rows = shared_fixture()
+    sample = rows[1]["snapshot"]
+    if change == "scope":
+        policy["execution_scope"] = "unknown"
+        with pytest.raises(ValueError):
+            run(policy, rows)
+        return
+    if change == "observer": sample["processes"].pop(1)
+    elif change == "boot": sample["boot_id"] = "other"
+    elif change == "gap":
+        assert not run(policy, rows, maximum_sample_period_s=1.)["sampled_process_policy_satisfied"]
+        return
+    elif change == "counter": rows[0]["snapshot"]["processes"][1]["user_s"] = 1.
+    elif change == "migration": sample["processes"][1]["cgroup"] = "/other_job"
+    else: rows[1]["index"] = 5
+    assert not run(policy, rows)["sampled_process_policy_satisfied"]
+
+
 def test_real_monitor_serialization_composes_with_stream_reviewer():
     policy, rows = fixture()
     samples = iter(r["snapshot"] for r in rows)
@@ -204,6 +246,33 @@ def test_bound_audit_keeps_evidence_and_refuses_overwrite(tmp_path):
         stream.check(item)
     with pytest.raises(FileExistsError):
         stream.audit(tmp_path, *refs, job_id=42, index=0)
+
+
+def test_bound_shared_audit_requires_same_preflight_scope_and_records_contention(tmp_path):
+    environment_ref, preflight_ref = bound_fixture(tmp_path)
+    process_path = tmp_path / "process_policy.json"
+    process = json.loads(process_path.read_text())
+    process.update(schema="threadripper_process_policy_v3", execution_scope="shared_host_matched_resources")
+    process_path.write_text(json.dumps(process))
+    environment_path = tmp_path / "policy.json"
+    environment = json.loads(environment_path.read_text())
+    environment.update(schema="threadripper_environment_policy_v3", execution_scope="shared_host_matched_resources",
+        foreign_cpu_role="diagnostic_only", native_pressure_role="diagnostic_only",
+        preflight_pressure_role="diagnostic_only", configuration_files=[], process_policy=stream.record(process_path))
+    environment_path.write_text(json.dumps(environment))
+    environment_ref = stream.record(environment_path)
+    preflight_path = tmp_path / "preflight.json"
+    preflight = json.loads(preflight_path.read_text())
+    preflight.update(environment_policy=environment_ref, execution_scope="shared_host_matched_resources",
+                     background_competition_recorded=True)
+    preflight_path.write_text(json.dumps(preflight))
+    preflight_ref = stream.record(preflight_path)
+    _, result = stream.audit(tmp_path, environment_ref, preflight_ref, job_id=42, index=0)
+    assert result["sampled_environment_policy_satisfied"]
+    assert result["uncontended_timing"] is False
+    assert result["background_cpu_used_for_eligibility"] is False
+    assert result["pressure_thresholds_used_for_eligibility"] is False
+    for evidence in result["evidence"]: stream.check(evidence)
 
 
 @pytest.mark.parametrize("inventory", [None, [], "not-a-list"])
