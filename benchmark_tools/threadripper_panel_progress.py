@@ -8,14 +8,16 @@ TERMINAL = {"COMPLETED", "FAILED", "TIMEOUT", "CANCELLED", "OUT_OF_MEMORY",
 NATIVE_OUTCOMES = {"exited_zero", "exited_nonzero", "timed_out"}
 
 
-def position(runs, attempts):
+def position(runs, attempts, *, allow_monitoring_resolution=False):
     """Require a contiguous one-attempt prefix and explicit post-run review.
 
     The caller must independently validate scheduler observations and review
     evidence. This function checks their state-machine consistency only.
     """
     expected = planned_runs()
-    return _position(runs, attempts, expected)
+    if type(allow_monitoring_resolution) is not bool:
+        raise ValueError("Require explicit monitoring-resolution policy")
+    return _position(runs, attempts, expected, allow_monitoring_resolution=allow_monitoring_resolution)
 
 
 def overhead_position(tasks, attempts):
@@ -30,7 +32,7 @@ def overhead_position(tasks, attempts):
     return _position(tasks, attempts, expected, stop_on_native_failure=True)
 
 
-def _position(runs, attempts, expected, *, stop_on_native_failure=False):
+def _position(runs, attempts, expected, *, stop_on_native_failure=False, allow_monitoring_resolution=False):
     identities = [{k: r[k] for k in expected[0]} for r in runs]
     if identities != expected or any(
             type(r[k]) is not type(e[k]) for r, e in zip(identities, expected) for k in e):
@@ -53,6 +55,22 @@ def _position(runs, attempts, expected, *, stop_on_native_failure=False):
         outcome = attempt.get("native_outcome")
         if outcome is not None and outcome not in NATIVE_OUTCOMES:
             raise ValueError("Unknown native outcome")
+        resolution = attempt.get("resolution")
+        if resolution is not None:
+            fields = dict(schema="threadripper_monitoring_failure_resolution_v1", index=index,
+                job_id=job, execution_scope="shared_host_matched_resources",
+                kind="post_native_process_cadence_failure", decision="retain_excluded_attempt_and_advance",
+                comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False)
+            original_review = dict(runtime="passed", environment="failed", resources="passed", outputs_or_failure="passed")
+            if (not allow_monitoring_resolution or not isinstance(resolution, dict)
+                    or any(type(resolution.get(k)) is not type(v) or resolution[k] != v for k, v in fields.items())
+                    or state != "FAILED" or attempt.get("scheduler_exit_code") != "1:0"
+                    or outcome != "exited_zero" or review != original_review):
+                raise ValueError("Monitoring resolution cannot admit, retry or disguise another outcome")
+            reviewed.append(dict(index=index, job_id=job, native_outcome=outcome,
+                scheduler_state=state, original_review=review, excluded_from_comparative_timing=True,
+                resolution_kind=resolution["kind"]))
+            continue
         status = None
         if state in LIVE:
             if review is not None:
@@ -90,5 +108,5 @@ def result(status, index, reviewed, job=None):
                 reviewed_attempts=reviewed, automatic_retry=False,
                 scientific_execution_authorized=False, scientific_timings_admitted=False,
                 limitations=["Recorded state consistency only, not live scheduler or evidence verification.",
-                             "Next identity still requires pinned recipe, allocation and fresh quiet-host preflight.",
+                             "Next identity still requires pinned recipe, allocation and fresh scope-appropriate preflight.",
                              "All attempts reviewed does not imply all native runs succeeded or publication readiness."])

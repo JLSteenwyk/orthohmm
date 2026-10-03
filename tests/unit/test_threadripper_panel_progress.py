@@ -48,6 +48,61 @@ def test_scheduler_failure_never_advances(state):
     assert position(planned_runs(), [a])["status"] == "infrastructure_failure_requires_resolution"
 
 
+def resolved_attempt():
+    row = attempt()
+    row.update(scheduler_state='FAILED', scheduler_exit_code='1:0')
+    row['review']['environment'] = 'failed'
+    row['resolution'] = dict(schema='threadripper_monitoring_failure_resolution_v1',
+        index=0, job_id=row['job_id'], execution_scope='shared_host_matched_resources',
+        kind='post_native_process_cadence_failure', decision='retain_excluded_attempt_and_advance',
+        comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False)
+    return row
+
+
+def test_explicit_shared_resolution_preserves_failure_and_excludes_timing():
+    result = position(planned_runs(), [resolved_attempt()], allow_monitoring_resolution=True)
+    assert result['index'] == 1 and result['status'] == 'next_identity_requires_preflight'
+    retained = result['reviewed_attempts'][0]
+    assert retained['scheduler_state'] == 'FAILED'
+    assert retained['original_review']['environment'] == 'failed'
+    assert retained['excluded_from_comparative_timing'] is True
+    assert not result['automatic_retry'] and not result['scientific_timings_admitted']
+    with pytest.raises(ValueError, match='Monitoring resolution'):
+        position(planned_runs(), [resolved_attempt()])
+    with pytest.raises(ValueError, match='Monitoring resolution'):
+        overhead_position(overhead_tasks(), [resolved_attempt()])
+
+
+@pytest.mark.parametrize('field,value', [('schema', 'other'), ('index', True), ('job_id', 42),
+    ('execution_scope', 'isolated_controlled'), ('kind', 'native_failure'),
+    ('decision', 'retry'), ('comparative_timing_eligible', True), ('automatic_retry', True),
+    ('scientific_timings_admitted', True), ('automatic_retry', 0)])
+def test_resolution_cannot_disguise_identity_retry_or_admission(field, value):
+    row = resolved_attempt()
+    row['resolution'][field] = value
+    with pytest.raises(ValueError, match='Monitoring resolution'):
+        position(planned_runs(), [row], allow_monitoring_resolution=True)
+
+
+@pytest.mark.parametrize('field,value', [('scheduler_state', 'COMPLETED'), ('scheduler_state', 'RUNNING'),
+    ('scheduler_state', 'OUT_OF_MEMORY'), ('scheduler_exit_code', '9:0'),
+    ('native_outcome', 'exited_nonzero'), ('native_outcome', 'timed_out')])
+def test_resolution_does_not_borrow_another_scheduler_or_native_outcome(field, value):
+    row = resolved_attempt()
+    row[field] = value
+    with pytest.raises(ValueError, match='Monitoring resolution'):
+        position(planned_runs(), [row], allow_monitoring_resolution=True)
+
+
+@pytest.mark.parametrize('field,value', [('runtime', 'failed'), ('environment', 'passed'),
+    ('resources', 'unresolved'), ('outputs_or_failure', 'failed')])
+def test_resolution_preserves_all_original_review_decisions(field, value):
+    row = resolved_attempt()
+    row['review'][field] = value
+    with pytest.raises(ValueError, match='Monitoring resolution'):
+        position(planned_runs(), [row], allow_monitoring_resolution=True)
+
+
 @pytest.mark.parametrize("field", ["runtime", "environment", "resources", "outputs_or_failure"])
 @pytest.mark.parametrize("decision", ["failed", "unresolved"])
 def test_adverse_review_stops(field, decision):

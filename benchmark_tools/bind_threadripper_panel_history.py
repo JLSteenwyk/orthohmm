@@ -85,12 +85,59 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
                     check(supporting)
                     evidence.append(supporting)
                 decisions[category] = review["decision"]
-        attempts.append(dict(index=index, job_id=job,
+        attempt = dict(index=index, job_id=job,
             scheduler_state=allocation["scheduler_state"], review=decisions,
-            native_outcome=outcome))
+            native_outcome=outcome)
+        if "resolution" in session:
+            if overhead or allocation_mode != "shared":
+                raise ValueError("Monitoring resolution requires the shared production panel")
+            resolution = read(session["resolution"])
+            if resolution.get("plan_sha256") != plan_ref["sha256"]:
+                raise ValueError("Monitoring resolution belongs to another plan")
+            original = read(resolution["original_session"])
+            if original != {key: value for key, value in session.items() if key != "resolution"}:
+                raise ValueError("Resolution changed the original attempt or review decisions")
+            if (resolution["native_audit"] != session["native_audit"]
+                    or resolution["environment_review"] != reviews["environment"]):
+                raise ValueError("Resolution borrows another native or environment review")
+            supporting = resolution.get("evidence")
+            if not isinstance(supporting, list) or not supporting or not resolution.get("review_reference"):
+                raise ValueError("Resolution lacks explicit supporting evidence")
+            for pin in supporting:
+                check(pin)
+                evidence.append(pin)
+            replay = read(resolution["environment_replay"])
+            env_review = read(reviews["environment"])
+            if resolution["environment_replay"] not in env_review["evidence"]:
+                raise ValueError("Resolution replay was not bound by the original independent review")
+            process, pressure = replay["processes"], replay["pressure"]
+            failures = process["failures"]
+            if (set(failures) != {"sample_period_bound_exceeded"}
+                    or type(failures["sample_period_bound_exceeded"]) is not int
+                    or failures["sample_period_bound_exceeded"] <= 0
+                    or process["sampled_process_policy_satisfied"] is not False
+                    or process["execution_scope"] != "shared_host_matched_resources"
+                    or process["job_scope"].split("/")[-1] != f"job_{job}"
+                    or process["command_bracketed_by_samples"] is not True
+                    or process["intervals"] != process["records"] - 1
+                    or process["policy_matched_intervals"] != process["intervals"]
+                    or pressure["sampled_pressure_evidence_satisfied"] is not True
+                    or pressure["failures"]):
+                raise ValueError("Resolution cannot waive identity, bracketing, pressure or accounting failures")
+            result = read(resolution["executor_result"])
+            if (result.get("status") != "executor_failed" or result.get("job_id") != job
+                    or result.get("index") != index
+                    or result.get("error") != "Whole-run sampled environment policy was not satisfied"
+                    or result["wrapper"]["status"] != "command_exited_zero"
+                    or result["wrapper"]["measurement"]["native"]["exit_code"] != 0
+                    or result["wrapper"]["measurement"]["native"]["timed_out"] is not False):
+                raise ValueError("Resolution does not explain the actual post-native executor failure")
+            attempt.update(resolution=resolution, scheduler_exit_code=allocation["scheduler_exit_code"])
+        attempts.append(attempt)
         if allocation["scheduler_state"] == "COMPLETED" and allocation["scheduler_exit_code"] != "0:0":
             raise ValueError("Completed scheduler record has contradictory exit status")
-    progress = (overhead_position if overhead else position)(plan["runs"], attempts)
+    extra = dict(allow_monitoring_resolution=allocation_mode == "shared") if not overhead else {}
+    progress = (overhead_position if overhead else position)(plan["runs"], attempts, **extra)
     for ref in evidence:
         check(ref)
     return dict(status="threadripper_panel_history_bound", progress=progress,
