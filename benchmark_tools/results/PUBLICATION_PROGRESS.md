@@ -1,5 +1,55 @@
 # Publication Progress
 
+## OrthoFinder Reviewed And Shared-Host Figure Added (2026-10-03)
+
+Previous turn progresses at pushed 00eef8d9. Read the full goal and poll exact
+22398, initially RUNNING. While it runs, prepare a resource figure from the
+reviewed table without modifying pinned runtime/launch helpers. Slurm then
+reports COMPLETED 0:0. The retained reviewer independently passes all four
+categories: native wall **441.2889663s**, CPU **4,602.758499s**, native-step peak
+**7,438,495,744 bytes**. Validate 73,266 input proteins, 24,052 checkpoint
+groups and 88,890 pair rows, not new benchmark accuracy. Process/pressure
+failures are empty. Foreign CPU demand is 57.3957 cores at preflight and at most
+55.3806 cores over sampled intervals. Canonical summary is 10,326 bytes, SHA-256
+`543dc7cc5b40769994d463450cf4e104c8cb6900e23b4b64920fb0eb2334fd08`.
+
+Available RAM is about 163 GiB before continuation, above the unchanged
+128-GiB prospective minimum. Bind the reviewed prefix and release frozen
+index 3 as **22399**, phylogenetic satellite_v2 on eight proteomes, repeat 0.
+Actual preflight/release pass; snapshot [22399](threadripper_shared_live_22399.json)
+records about 162 GiB available, 54.9844 foreign CPU-core equivalents and first
+process start gap 30.000447794s. Native limits, settings, inputs and order are
+unchanged. This observation is not a final timing for the live identity.
+
+Export [v3 resource snapshot](threadripper_shared_panel_snapshot_20261003_v3/panel.json):
+three reviewed attempts, two eligible, index 0 retained/excluded. Add
+[figure source](plot_shared_threadripper_resources_20261003.py), validating
+table identities, recomputed cells, coverage, resource scopes and provenance.
+Show individual attempts; excluded raw values are gray crosses. No unreviewed
+zeros, incomplete medians/ranges, fitted scaling lines, speed ratios, fastest
+selection or pooling with historical times. Visual inspection of draft v1
+finds clipped memory markers; preserve that working draft and add explicit
+axis headroom. The [accepted interim v2 figure](threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf)
+renders PNG/PDF/SVG with a source/input/output manifest. It remains partial,
+not a final publication scaling figure. All three point sets are visible and
+labels fit. Focused suite **56 passes in 2.75s**, including actual export,
+PDF text/bounds, colored pixels in every panel, provenance and partial/full
+layout checks. Plot reproduction requires retained local review evidence;
+this does not yet establish a portable resource archive component.
+
+Create [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md),
+preserving the older draft and rendered PDFs. Explain the shared-host protocol,
+endpoint scopes, exclusions and observed interim results. Remove the obsolete
+claim that a controlled Threadripper panel has not run, without introducing
+isolation or causal-efficiency claims. Keep existing accuracy/uncertainty
+evidence and all scientific limitations unchanged.
+
+Next: poll exact 22399, review its terminal outcome, then continue frozen index
+4 (full OrthoFinder, eight proteomes). Finish remaining panel, final resource
+figures, manuscript/PDF reconciliation and versioned release/archive evidence.
+Full publication scope remains active and incomplete. No calibration/inference
+retry, quiet-window requirement, unrelated work/service change or DGX action.
+
 ## Phylogenetic Run Reviewed And Resource Tables Exported (2026-10-03)
 
 The preceding prompt-only turn verifies an already saved amendment and changes

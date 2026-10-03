@@ -1,0 +1,548 @@
+# OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement
+
+Condensed scientific draft, updated 3 October 2026. Not submission-ready.
+This working revision preserves the [2 October text](PUBLICATION_MAIN_TEXT_20260927.md)
+and its existing rendered review PDFs; it does not relabel their historical
+resource statements. The
+[extended manuscript](PUBLICATION_MANUSCRIPT_DRAFT_20260916.md) retains detailed
+methods, historical analyses, citations and audit records. This main text
+does not supersede frozen protocols or historical result manifests.
+
+## Abstract
+
+Orthology inference requires balancing homolog recovery against separation of
+paralogs. We evaluated an HMM-centered pipeline with candidate-family expansion
+and phylogenetic refinement against established orthology tools. QfO and
+OrthoBench were the primary development-exposed benchmarks; a frozen YGOB
+evaluation assessed transfer to additional taxa. Phylogenetic OrthoHMM improved
+on its high-sensitivity configuration but did not consistently outperform full
+OrthoFinder. On OrthoBench, their group-recovery F1 values were 74.11% and
+72.74%, respectively. On corrected QfO, OrthoFinder had higher VGNC, SwissTrees
+and TreeFam-A point estimates, whereas OrthoHMM had higher GO/EC similarity and
+FAS. A matched-recall simulation control supported an initial HMM-search
+contribution in a fixed graph procedure, not full-pipeline superiority.
+Family-disjoint generalization and uncertainty for several QfO endpoints
+remain unresolved. A shared-host matched-resource panel is in progress;
+it does not establish isolated comparative efficiency. The evidence supports a
+bounded contribution and an explicit precision-recall trade-off, not universal
+accuracy or efficiency claims. Synthetic null scoring revealed
+composition-dependent behavior of the approximate significance filter.
+Heterogeneous-length simulations favored full OrthoFinder; supplied generating
+trees did not establish an accuracy gain, and stronger topology perturbations
+reduced F1 and recall in several conditions.
+
+## Methods
+
+The retained configurations are high-sensitivity OrthoHMM and the satellite_v2
+phylogenetic pipeline. The original OrthoHMM preprint [@orthohmm2024preprint]
+describes its lineage, not all subsequent implementation changes. The prospective
+method was frozen at `7f3a9e4`, with BLOSUM62, E-value threshold 1e-4, Leiden
+CPM resolution 0.1 and seed 4 [@leiden2019; @cpm2011].
+The phylogenetic configuration expands candidate families, infers gene and
+species trees, and applies positive-paralogy pair inference. Historical runs
+retain their actual revisions rather than inheriting this prospective pin.
+The [method diagram](figures_publication_method_20260916/publication_method.pdf)
+distinguishes initial search, profile refinement, candidate expansion and
+phylogenetic inference.
+
+Initial search uses banded local maximum-path scoring with match, insert and
+delete states, integer BLOSUM62 emissions and fixed transition costs.
+Raw scores receive an approximate significance filter before geometric-mean
+length normalization. MSA-derived profiles learn match emissions, while
+retaining uniform transition costs; strict expansion requires both a member-score
+threshold and an initial sequence-supported anchor. This is not demonstrated
+HMMER/phmmer equivalence or calibrated assignment confidence. The
+[numerical specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md)
+records the recurrence, constants, profile construction and acceptance rules
+at the full frozen source revision. No scoring/default change accompanies it.
+
+A [prespecified null-score protocol](FROZEN_NULL_SCORE_PROTOCOL_20261002.md)
+examined that significance filter without fitting parameters. Three residue
+compositions and lengths 50/150/400 each used ten seeds and 1,000 independently
+drawn query-target pairs per seed. Each pair had a one-target database and was
+scored with full and width-64 bands: 90,000 independent pairs, not 180,000
+independent observations. Five fixed cutoffs yielded 90 tail endpoints with
+Bonferroni-adjusted exact binomial intervals. These intervals describe the
+synthetic generator, not reference-family or orthology uncertainty.
+
+Comparators were OrthoFinder 3.1.5 [@orthofinder2026; @orthofinder2026correction],
+SonicParanoid 2.0.9 [@sonicparanoid2024], ProteinOrtho 6.3.6 [@proteinortho2023],
+FastOMA 0.3.5 [@fastoma2025] and OrthoMCL 1.4 [@orthomcl2003]. These method
+references do not replace run-specific executable provenance.
+OrthoFinder's sequence-only MCL checkpoint was
+a diagnostic output, not a separately finalized phylogenetic analysis.
+FastOMA used a supplied OrthoFinder species tree. QfO inputs included native
+ortholog pairs, native post-clustering relations or group-derived cross-species
+pairs as appropriate; these are not interchangeable output semantics. The
+[generated comparison](qfo_corrected_comparison_20260926_v7/scores.md)
+reports each conversion and prediction count.
+
+OrthoBench measures curated group recovery [@orthobench2020]. QfO
+[@qfo2016; @qfo2020] reports GO and EC similarity,
+VGNC, SwissTrees and TreeFam-A F1, and FAS separately. Their arithmetic mean
+is a project-defined secondary summary, not an official QfO F1. Three Kingdoms
+is supplementary BUSCO-reference recovery [@busco2021], not genome-wide orthology truth.
+QfO and OrthoBench were repeatedly inspected during development. The
+[YGOB protocol](YGOB_VALIDATION_PROTOCOL_20260916.md), using the curated
+homology/synteny resource [@ygob2005], froze evaluation before
+test-score inspection; overlap assessment limits its interpretation to
+novel-taxon transfer rather than family-disjoint validation.
+
+Uncertainty analyses resample declared reference units and recompute the
+benchmark statistic within replicates. They retain prespecified multiplicity
+adjustments, negative findings and unavailable contrasts. Curated families
+are not automatically independent: shared evolutionary history and predictions
+joining families can violate exchangeability. Dependent protein pairs are not
+treated as independent observations to obtain narrower intervals.
+
+The prespecified QfO parameter neighborhood retained seven arms: the frozen
+control and six one-at-a-time changes. CPM resolutions were 0.08/0.12 versus
+0.1, candidate minimum normalization 0.024/0.036 versus 0.03, and minimum
+margin 1.2/1.8 versus 1.5. SwissTrees F1 was recomputed from macro precision
+and recall in each of 100,000 shared family-bootstrap draws, not averaged
+across family F1 values. The seed was 20260925; Bonferroni adjustment retained
+all 18 planned endpoints across six contrasts and three metrics. This is
+development-exposed local sensitivity, not independent method selection.
+[Frozen parameter protocol](QFO_PARAMETER_NEIGHBORHOOD_PROTOCOL_20260919.md).
+
+Two evolutionary simulation panels used Zombi and Pyvolve
+[@zombi2019online; @pyvolve2015], ten seeds and seven conditions each: baseline,
+divergence, duplication/loss turnover, their combination, missing proteins,
+uneven sampling and a taxon-count control. Event-derived cross-species truth
+was not replaced by ancestral-family membership. Fixed 300-residue sequences
+and heterogeneous ancestral-family lengths of 100-500 residues were analyzed
+separately; descendants retain family length, without within-family indels.
+Native admission, including finite comparator graph weights, preceded scoring.
+Within each panel, 20,000 paired successful-seed resamples recomputed mean
+seed-level metrics, with a 14-contrast adjustment for primary F1. Failures were
+not imputed; available-case means from different seed sets are not paired effects.
+[Simulation protocols and results](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).
+
+On the 70 heterogeneous-length datasets, phylogenetic OrthoHMM and full
+OrthoFinder also used supplied generating trees and deterministic rooted
+nearest-neighbor interchanges at clade distances two and four. Generating
+trees are oracle diagnostics, not achievable end-to-end inference or guaranteed
+accuracy upper bounds. All 126 F1/precision/recall endpoints were exploratory,
+with 20,000 paired-seed resamples, seed 20260918 and Bonferroni adjustment.
+[Tree-control protocol](SIMULATION_TREE_CONTROL_PROTOCOL_20260917.md).
+
+### Shared-Host Resource Measurement
+
+The replacement resource panel uses the local x86 Threadripper host, bizon,
+not the historical DGX/ARM environment. The frozen panel comprises
+high-sensitivity OrthoHMM, satellite_v2 OrthoHMM with inferred phylogeny and
+full OrthoFinder 3.1.5 on nested sets of 4, 8 and 12 proteomes, with three
+rotated repeats per method and size (27 sequential attempts). The input counts
+are 73,266, 165,168 and 251,378 proteins. Scientific settings, input bytes and
+order remain frozen. Native tasks use the same 32-CPU affinity and 128-GiB
+ceiling; each non-exclusive Slurm allocation reserves 64 slots to accommodate
+measurement and reporting work. The selected affinity uses distinct physical
+cores, but allocation does not reserve the host against unrelated processes.
+
+Under the user-authorized 3 October amendment, background analyses do not
+invalidate a run merely by competing for resources. Launch capacity, source
+and input identity, process attribution, measurement continuity and failure
+handling still apply. Process snapshots and pressure observations bracket the
+native interval and retain background CPU demand, memory pressure and I/O
+diagnostics. Snapshot coverage is not continuous isolation certification, and
+CPU pressure can exceed nominal bounds because of non-atomic accounting;
+pressure magnitudes are diagnostic rather than timing-eligibility thresholds.
+
+The primary endpoints are native-command monotonic elapsed time, native
+task-subtree CPU-stat change including wrapper work, and native-step lifetime
+memory peak including the launcher. They exclude separate preparation,
+conversion and scoring; the peak is not pure algorithm RSS. Terminal scheduler,
+runtime, environment, resource and native-output evidence is reviewed before
+the next identity. All attempts and failures are retained without fastest-run
+selection, automatic retries or estimated overhead subtraction. Median/range
+summaries require all three eligible repeats; observed ranges are not confidence
+intervals. Shared-host distortion is unknown and potentially method dependent.
+Historical DGX and earlier shared-host timings are not pooled with this panel.
+[Execution amendment](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md),
+[endpoint and continuation contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md).
+
+## Results
+
+### Accuracy Depends On The Endpoint
+
+Phylogenetic OrthoHMM achieved 74.1061% OrthoBench F1 versus 72.7365% for full
+OrthoFinder. In the exploratory eight-method comparison, the F1 difference
+was +1.370 percentage points (21-endpoint adjusted interval [-7.281, 12.166]).
+The precision difference was +15.705 [1.175, 30.634] and recall difference
+-13.151 [-26.947, -0.609]. This is a precision-recall tradeoff, not established
+F1 superiority. The complete panel uses 100,000 paired RefOG draws and
+remains conditional on family exchangeability and development exposure.
+[All 21 contrasts](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md).
+The [complete interval figure](figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf)
+shows F1, precision and recall on the same difference scale without ranking
+methods by their observed effects.
+A fresh installed full run reproduced all 59,770 OrthoHMM groups
+exactly; this establishes reproducibility, not independent accuracy or a
+controlled runtime comparison.
+[Full-run verification](INTEGRATED_FULL_OB_RESULT_22337.md).
+A second full run using a separately reconstructed base Python and fresh
+inference/reader environments also reproduced all groups and all 70 family
+score records. Native pair, confidence, reconciliation-event and hierarchy
+files were byte-identical to the earlier run. This extends same-host
+environment reproduction, not biological validation or complete archive
+restoration. [Reconstructed-base verification](RECONSTRUCTED_FULL_OB_RESULT_22376.md).
+A third full run used restored local execution assets and separately acquired
+upstream inputs. Its independent scientific admission reproduced all 59,770
+groups, all 70 family score records and four native TSVs exactly, without
+reusing phylogenetic checkpoints. This validates local archive-to-results
+reproduction, not cross-host/OS restoration, independent accuracy or controlled
+timing. [Restored-archive verification](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md).
+
+On corrected QfO, phylogenetic OrthoHMM versus full OrthoFinder scored 0.901690
+versus 0.988546 on VGNC, 0.833513 versus 0.848413 on SwissTrees, and 0.614864
+versus 0.791918 on TreeFam-A. OrthoHMM had higher GO similarity (0.490349
+versus 0.469548), EC similarity (0.965650 versus 0.936130) and FAS (0.762993
+versus 0.691422). These endpoints differ in reference scope and eligibility;
+they do not form a single accuracy ranking.
+[All eight methods](qfo_corrected_comparison_20260926_v7/scores.md).
+
+An exploratory [VGNC deletion diagnostic](CORRECTED_VGNC_INFLUENCE_RESULT_20260928.md)
+removed each of 16,844 reference blocks and its incident scored pairs in turn,
+across all eight methods. Every comparator retained a negative F1 difference
+against full OrthoFinder for every deletion. For phylogenetic OrthoHMM the
+range was [-8.7353, -8.6729] percentage points. These are sensitivity ranges,
+not confidence intervals: dependent deletions change the fixed scored table,
+and single-block sign stability does not establish population or joint-deletion
+robustness. Native inference and eligibility were not rerun.
+
+For corrected SwissTrees, phylogenetic-minus-full-OrthoFinder F1 was -1.4900
+percentage points, with a multiplicity-adjusted interval of [-8.7078, 7.2090].
+Phylogenetic-minus-high-sensitivity OrthoHMM was +14.8015 points
+[4.9791, 26.6015]. These conditional estimates use 18 development-exposed
+families and a 24-endpoint adjustment; inclusion of zero is not equivalence.
+Candidate expansion also changes between OrthoHMM configurations, so their
+contrast does not isolate reconciliation.
+[Protocol and contrast evidence](CORRECTED_SWISS_COMPARISON_RESULT_21987.md).
+
+All 56 method-pair GO/EC comparisons had identical six-decimal scores on
+shared scored pairs. Aggregate differences arose from different eligible
+pair sets and their denominators. Restricting evaluation to intersections
+would change the endpoint rather than resolve uncertainty. Historical raw
+hashes were verified for all 16 input tables.
+[Scored-pair audit](QFO_SCORED_PAIR_TRANSITIVE_BINDING_20260927.md).
+The [complete pair-composition figure](figures_qfo_scored_pair_decomposition_20260930/qfo_pair_decomposition.pdf)
+displays the shared-denominator and exclusive-pair terms for all seven
+comparators against full OrthoFinder. Phylogenetic OrthoHMM's shared pairs
+account for 90.12% of its GO scored set but 46.40% of OrthoFinder's, and
+86.59% versus 58.00% for EC. The original rounded-mean differences, +2.080130
+and +2.952029 score points, are the sums of much larger opposing terms.
+These fractions describe eligible scored pairs, not proteome-wide coverage;
+the decomposition is arithmetic, not causal attribution or paired uncertainty.
+
+### Component Evidence Is Bounded
+
+The corrected QfO factorial supported candidate-expansion-by-reconciliation
+interactions on SwissTrees F1, while all four profile-refinement F1 intervals
+included zero. Reconciliation increased precision and reduced recall. These
+results support conditional component effects, not proof that profile
+expansion universally improves orthology inference.
+[Complete factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).
+
+In 35 matched-recall simulation datasets spanning seven conditions and five
+seeds, HMM-derived search evidence yielded mean downstream graph F1 of
+83.6097%, versus 80.5180% for DIAMOND [@diamond2021]. The adjusted paired seed-block interval
+for the +3.0917-point difference was [1.6782, 4.5313]. Profile expansion and
+phylogeny were off. This is a development-exposed fixed-graph comparison,
+not a comparison against OrthoFinder or a matched-effort result. Score
+rankings and hit identities differ, so the design does not isolate a causal
+mechanism. [Matched-recall control](MATCHED_GRAPH_RESULT_20260926.md).
+
+### Synthetic Null Tails Depend On Composition
+
+At the frozen `E < 1e-4` cutoff, width-64 scoring passed 0/1/0 of 10,000
+ordinary-background pairs at lengths 50/150/400. These sparse counts do not
+establish rare-tail calibration. Half-background-plus-half-glutamine sampling
+passed 89.83%, 100% and 100%; its adjusted intervals were [88.7484%, 90.8453%]
+and [99.9181%, 100%] for each longer length. All
+[90 endpoints and their figure](figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf)
+are retained. A hit here is only a forced pair passing the approximate
+significance gate, not a predicted ortholog or an observed pipeline false
+positive. No prefilter or biological inference ran. The strong synthetic
+composition is not a measured real-proteome prevalence. The
+[audit](FROZEN_NULL_SCORE_RESULT_20261002.md) reproduces all endpoint counts and
+180 sparse reference-Python scores, not all native scores. No coefficients,
+thresholds or defaults were fitted or promoted.
+
+### Evolutionary Simulations Retain Failures And Tree Sensitivity
+
+In the fixed-length stress panel, high-sensitivity and phylogenetic OrthoHMM
+had 70 and 64 admitted datasets out of 70. No OrthoFinder output passed its
+native-completion/finite-graph gate; all 14 planned comparisons are unavailable,
+not wins for OrthoHMM. The heterogeneous-length panel admitted 70 and 67
+OrthoHMM datasets and 65 full OrthoFinder datasets. Full OrthoFinder had higher
+paired mean F1 than both OrthoHMM modes in all seven conditions. Adjusted F1
+intervals were below zero for all seven high-sensitivity contrasts and four
+phylogenetic contrasts. Phylogenetic-minus-full-OrthoFinder effects were
+-11.7433 points for divergence (five paired seeds) and -12.2842 for combined
+divergence/turnover (eight). These are success-conditioned comparisons, not
+failure-adjusted population estimates. Species-tree inference failures for
+OrthoHMM and nonfinite graph weights for OrthoFinder remain explicit.
+[Fixed stress results](SIMULATION_FIXED_NATIVE_INTERPRETATION_20260916.md),
+[heterogeneous-length results](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).
+
+The complete tree-control analysis retained 560 arm outcomes: 537 scored and
+23 failed. No generating-minus-inferred adjusted interval excluded zero. The
+stronger perturbation reduced F1 and recall with adjusted intervals below zero
+in four OrthoHMM conditions and two OrthoFinder conditions: 12 endpoints;
+no precision interval excluded zero. Retained upstream artifacts agreed in
+400 comparisons, differed in two and were unavailable in 18. The differing
+OrthoFinder cases prevent a strict tree-only causal attribution there. These
+deterministic perturbations and ten planned seeds do not establish robustness
+to arbitrary trees or empirical posterior uncertainty.
+[Complete tree results and figure](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md).
+
+### Local Parameter Sensitivity Did Not Establish Improvement
+
+The [complete seven-arm panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md)
+includes separately admitted private-runtime high-CPM recovery. Its SwissTrees
+F1 was 83.253016% versus 83.351322% for the frozen control, a difference of
+-0.098306 percentage points with adjusted interval [-1.050447, 0.747525].
+All 18 adjusted intervals include zero; no statistically supported parameter
+improvement is established. Identical observed normalization-arm statistics
+do not imply identical whole-proteome predictions or equivalence on unseen
+families. No defaults were changed. The [all-arm figure](qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf)
+retains every contrast and the full adjustment denominator.
+
+Historical SIGSEGV, allocator and admission failures remain failed. Recovery
+followed a validated content-equivalent private control and has
+[separate inference, conversion and score evidence](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md);
+it neither repairs those earlier attempts nor proves their cause or memory
+safety. This panel is not an OrthoFinder superiority test or a controlled
+runtime comparison.
+
+### Transfer And Biological Recovery Reveal Trade-Offs
+
+Frozen YGOB group-recovery F1 was 92.233654% for phylogenetic OrthoHMM and
+92.318524% for full OrthoFinder. Their difference was -0.084870 points,
+with adjusted interval [-0.622528, 0.445222]. OrthoHMM had higher precision
+and lower recall. The evaluation projects predictions onto the reference
+universe and assumes exchangeable pillars; it does not establish unrestricted
+generalization or resolved pairwise orthology.
+[YGOB results](YGOB_FROZEN_RESULTS_20260916.md).
+
+A descriptive partition by the frozen overlap screen retained all original
+false-positive allocations. In screen-negative pillars, phylogenetic OrthoHMM
+versus full OrthoFinder had F1 of 57.93% versus 45.02%, precision of 55.92%
+versus 30.74%, and recall of 60.10% versus 84.03%. In screen-positive pillars,
+their F1 values were 93.37% versus 95.01%. The negative stratum contained
+2,893 singleton pillars out of 3,298, compared with 2,017 out of 6,952 in the
+positive stratum. This composition difference and the screen's inability to
+exclude remote homology prevent independent-family or causal interpretations.
+The [all-method stratum figure](figures_ygob_overlap_20260928/ygob_overlap_strata.pdf)
+is descriptive, with no new uncertainty estimate or method tuning.
+
+The prespecified whole-genome-duplicate application used experimental evidence
+from Kuzmin and colleagues [@kuzmin2020]. All 240 experimental pairs were
+retained, with 239 input-eligible and 231 shared-reference-pillar pairs.
+On this development-exposed application, phylogenetic OrthoHMM separated
+238 of 239 input-eligible pairs, versus 58 for high sensitivity and 236 for
+full OrthoFinder. Among the 231 reference-eligible pairs, however, only 193
+OrthoHMM separations retained at least one non-S. cerevisiae reference homolog
+with each anchor, versus 56 for high sensitivity and 227 for full OrthoFinder.
+Mean per-pair homolog coverage was 82.338%, 99.149% and 98.413%, respectively.
+Coverage counts reference homologs in the union of the anchor groups and can
+be high even when the anchors are merged; it is not orthology recall.
+The [complete five-method comparison](BIOLOGICAL_WGD_RESULTS_20260917.md)
+also retains SonicParanoid and the diagnostic OrthoFinder MCL checkpoint.
+
+Phylogenetic OrthoHMM minus full OrthoFinder had a supported-separation
+difference of -14.719 percentage points, with adjusted interval
+[-21.645, -8.225], and a coverage difference of -16.075 points
+[-19.755, -12.496]. These exploratory percentile intervals use 20,000 paired
+pillar resamples and a 12-endpoint adjustment. Each eligible pair occupies
+a distinct pillar; these conditional estimates do not establish independent
+generalization. Supported separation does not establish
+cross-species copy-specific orthology. In the
+[six prespecified case traces](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), five
+focal homologs left their anchor groups during root-lineage reconstruction,
+before satellite constraints. They remained in other output groups; no example
+was replaced to improve the result.
+
+A subsequent [fixed-tree diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md)
+evaluated all four existing root-duplication rules on the same seven candidate
+families and six examples, with its protocol frozen before alternative outcomes
+were examined. The supported-children and confidence rules reproduced the
+species-overlap baseline partitions exactly. The mapped-event rule reduced
+homolog coverage in four of five reference-eligible examples, without improving
+supported separation. None recovered the five focal homologs into either anchor
+group. Native pair predictions and confidence annotations remained unchanged.
+This post hoc intervention rejects these three alternatives as a repair on the
+fixed inputs, not as methods in general. It neither establishes topology error
+nor identifies ancestral-copy truth, and no defaults were changed.
+
+### Shared-Host Resource Panel (Interim)
+
+The retained interim snapshot has three reviewed attempts out of 27, not a
+completed scaling comparison. Four-proteome phylogenetic OrthoHMM (repeat 0)
+passes all review categories: native elapsed time 797.6576 seconds, CPU use
+17,154.0433 CPU-seconds and native-step peak 3,380,301,824 bytes (3.148 GiB).
+Native validity covers all 73,266 input proteins, 35,560 groups/root HOGs and
+51,644 pair rows; these checks do not provide new prediction-accuracy evidence.
+Observed foreign CPU demand is 53.2495 cores at preflight and at most 53.8988
+cores over sampled intervals. These measurements do not estimate causal slowdown.
+
+The first high-sensitivity attempt completes native inference, but fails its
+original process-monitoring cadence criterion. Its raw endpoints and failure
+remain visible and excluded from eligible summaries. The observer scheduling
+repair is tested before subsequent attempts; this is not a retrospective pass
+or a rerun chosen for faster timing. Full OrthoFinder 3.1.5 (four proteomes,
+repeat 0) also passes all review categories: native elapsed time 441.2890
+seconds, CPU use 4,602.7585 CPU-seconds and native-step peak 7,438,495,744 bytes
+(6.928 GiB). Its output validation covers all 73,266 proteins in 24,052
+checkpoint groups and 88,890 pair rows. Observed foreign CPU demand is 57.3957
+cores at preflight and at most 55.3806 cores over sampled intervals. This
+single-repeat comparison is potentially confounded, not an isolated speedup
+or new accuracy score. The eight-proteome phylogenetic run has started at this
+checkpoint. Unreviewed rows remain missing, not zeros. No cell yet has three
+eligible repeats, so no median/range
+or method-speed ranking is reported.
+[Machine-readable interim table](threadripper_shared_panel_snapshot_20261003_v3/panel.json),
+[attempt table](threadripper_shared_panel_snapshot_20261003_v3/attempts.tsv),
+[interim resource figure](threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf).
+
+## Discussion And Limitations
+
+The supported contribution is an HMM-centered alternative with measurable
+component effects and explicit accuracy trade-offs. Initial HMM search has
+bounded support in matched-recall simulations; additional profile refinement
+has not demonstrated a general benefit. Neither simulation evidence nor an
+OrthoBench point advantage establishes superiority over full OrthoFinder.
+
+The approximate significance formula is not universally calibrated under
+the tested synthetic conditions. The null experiment does not measure real-data
+orthology false-positive rates or causally explain any benchmark difference;
+independent calibration would be needed before claiming statistical significance
+for arbitrary compositions, search spaces, profiles or band settings.
+
+Original TreeFam-A family mappings and complete source trees remain unavailable.
+Public QfO container searches now cover recognized benchmark build contexts
+for [all 40 listed tag names](TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md)
+at retained digests, without finding original NHX/mapping filename candidates.
+Other layers and archive-embedded or differently named contents remain outside
+that search; no family labels are inferred from its negative result.
+Public archive recovery yielded historical Selectome subtrees, but all are
+restricted to Euteleostomi. A [taxonomic coverage audit](TREEFAM_RECOVERED_SCOPE_20260928.md)
+found that 55,933 of 79,320 retained reference relations (70.52%) have at least
+one endpoint outside that clade. Those relations cannot be reconstructed from
+these subtrees under a species-consistent mapping; the other 23,387 relations
+are only potentially in scope, not demonstrated reconstructions. This is a
+coverage exclusion, not an accuracy effect or a basis for family-level intervals.
+VGNC dependence and
+rare-error diagnostics do not justify the candidate confidence-interval
+procedure. Valid paired uncertainty for GO/EC, FAS and the secondary mean is
+also unfinished. These gaps must remain visible alongside point estimates.
+The [corrected FAS sample audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md)
+reproduces all eight means, but scored fractions range from 0.0067% to 58.46%
+of reported eligible pairs and every sample reuses proteins across pairs.
+Native pair-level standard errors do not resolve this comparison uncertainty.
+The [requested-score audit](QFO_FAS_SAMPLE_ATTRITION_20260928.md) found 1-49
+missing new scores per method except OrthoMCL, which lacked 1,252 of 9,000.
+Assuming omitted scores lie in [0,1], its intended-sample mean is bounded by
+0.724872-0.736975; this is not a confidence interval. A
+[native-complexity audit](FAS_SAVED_COMPLEXITY_EXPOSURE_20260928.md) found no
+above-limit protein in saved new-score pairs, but found them in precomputed
+pairs. This agrees with the demonstrated cutoff mechanism without identifying
+historical omitted pairs or establishing comparison bias.
+The [completed eligible-population audit](QFO_FAS_POPULATION_COMPLETED_22383.md)
+matches all eight methods' native logged counts, reusing six fixed recounts
+and freshly scanning two. Pairs absent from the precomputed lookup constitute
+5.13% of satellite_v2's eligible set, 16.86% of full OrthoFinder's and 82.05%
+of its sequence-only checkpoint's. Assuming their scores lie in [0,1] gives
+conservative full-mean bounds of 0.733966-0.785282 for satellite_v2 and
+0.605946-0.774511 for full OrthoFinder. These overlapping bounds neither
+establish a full-eligible-set advantage nor replace native sample scores or
+confidence intervals. Some lookup-missing pairs were newly scored in native
+samples; those values are not used to tighten these bounds.
+An [eight-method stratum-weight decomposition](QFO_FAS_STRATUM_WEIGHT_RESULT_20261001.md)
+separates count rounding from omission-induced changes in the saved mixture.
+Holding the observed stratum means fixed, native-minus-reweighted-saved-strata
+differences are +0.001318947 FAS units for OrthoMCL and +0.000030716 for
+phylogenetic OrthoHMM. These are numerical diagnostics, not corrected benchmark
+scores or estimates of population bias. Omissions can also change the stratum
+means; the unknown omitted pair identities, unseeded selection and dependence
+remain unresolved. No FAS confidence interval or new method ranking follows.
+The completed simulations and tree perturbations do not cover arbitrary
+evolutionary conditions, and novel-taxon YGOB testing retains homolog-family
+overlap with development data.
+
+Recovered OrthoMCL results retain sequence-specific BLAST failures. The
+separately recovered high-CPM result does not replace failed historical runs;
+no missing score was imputed and no failure was recategorized as a success.
+Shared-host runs and the historical DGX panel are descriptive resource records.
+The replacement matched-resource Threadripper panel is in progress under the
+shared-host amendment, not an unrun isolation-controlled experiment. Competing
+workloads may affect tools differently, and identical resource limits do not
+identify isolated speed or causal speedups. The interim figure retains excluded
+attempts and missing repeats; it cannot support an efficiency ranking. The
+remaining panel, final resource figures, manuscript reconciliation and versioned
+archival release remain open, alongside bounded redistribution limitations,
+journal formatting and final visual review.
+
+## Reproducibility And Availability
+
+The extended manuscript links frozen protocols, source revisions, seeds,
+input/output manifests, conversion audits, executable workflows and generated
+figures. Installed inference and independent readback have been validated on
+full OrthoBench, but that is not proof of all-method cross-host portability.
+Historical locks are retained as provenance; patched replacement environments
+must be distinguished from the binaries used for original scores. The
+[QfO parameter numerical component](QFO_PARAMETER_NUMERICAL_COMPONENT_RESULT_20261001.md)
+passed fresh local archive extraction, copied byte verification and reproduction
+of all 18 endpoints within 1e-12 using unchanged arithmetic. A Python-event
+guard rejected its original-checkout canary and observed no later original-path
+events or project-module imports. This is not OS containment, a new independent
+statistical implementation, raw-reference recount, native inference restoration,
+cross-host validation or redistribution clearance.
+
+A separate [descriptive-table component](SWISS_DESCRIPTIVE_COMPONENT_20261002.md)
+restored under standard-library Python 3.12 and reproduced all 208 rows and
+984 score/difference cells across four SwissTrees tables and eight methods.
+This verifies arithmetic from retained sufficient statistics and annotations,
+not raw-source admission, new benchmark scoring or bootstrap uncertainty.
+An [input-only private archive workflow](SWISS_RAW_ARCHIVE_RESTORATION_20261002.md)
+then restored the complete duplication and fragment dependency panels, retaining
+all 11 and 1,774 original record occurrences respectively. Independently pinned
+archive and binding digests preserve source identities at new locations.
+All 27 affected regression/options cases passed using the restored inputs,
+including four raw-export regressions with unchanged assertions. The fresh
+children blocked original-checkout reads and subprocesses; these Python-event
+guards are not OS containment. Native annotation extraction/admission was not
+rerun, and private archives remain unuploaded with redistribution uncleared.
+Neither component establishes complete executable study restoration or
+all-method cross-host portability.
+
+The [null-score observations](frozen_null_score_observations_20261002.json.gz)
+retain all 180,000 synthetic score evaluations and their source/runtime pins.
+Its public numerical readback checks all 90 tail endpoints without loading
+the native kernel; this is not a complete inference runtime archive.
+
+The [standalone YGOB arithmetic replay](YGOB_ARITHMETIC_REPLAY_RESULT_20261002.md)
+uses identifier-free retained counts to reproduce all 12 point metrics and
+six nominal/adjusted interval endpoints after local archive restoration.
+This is not native re-admission, proof of pillar exchangeability or independent
+family validation; original transfer scores and overlap limitations remain.
+
+The [standalone simulation replay](../SIMULATION_ARITHMETIC_REPLAY.md) reproduces
+retained-count arithmetic for the two length panels without historical file
+reads. It preserves fixed-length unavailable comparisons and variable-length
+conditional effects; native admission and tree-control inference are not rerun.
+
+The
+[progress ledger](PUBLICATION_PROGRESS.md) records completed work and unmet
+requirements. No submission-ready release or archival DOI is claimed.
+Dated main-text HTML/PDF and review archives preserve the exact inputs of
+their own snapshots; older versions are not rendered copies of revised
+Markdown. A refreshed review is not a complete executable study release.
+Final manuscript/figure/archive reconciliation after outstanding analyses
+remains required.
+
+## References
+
+The bibliography attributes the methods and resources cited above. Full
+execution evidence and additional dependency references remain in the extended
+manuscript; this selected list is not complete software attribution.
