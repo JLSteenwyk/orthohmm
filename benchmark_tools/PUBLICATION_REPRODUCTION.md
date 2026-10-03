@@ -1392,7 +1392,7 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Shared-host resource panel: three of the 27 frozen attempts are reviewed in
+- Shared-host resource panel: four of the 27 frozen attempts are reviewed in
   the current snapshot; the remaining sequential panel and final reporting are
   incomplete. Local Threadripper `bizon` is approved, not the DGX. Use the
   [executed continuation contract](results/THREADRIPPER_SHARED_CONTINUATION_20261003.md)

@@ -1,5 +1,30 @@
 # Publication Progress
 
+## OrthoFinder Gene-Tree Phase Verified Live (2026-10-03)
+
+The previous goal turn makes concrete progress at pushed **bad71bf6**: index 3
+is independently reviewed, index 4 is released and four-attempt reporting is
+retained. This continuation reads the full goal and checks current state.
+Exact job **22400** is RUNNING, not inferred live from a lock or dated receipt;
+the latest scheduler poll is at 12:31. Its native log completes all 64 DIAMOND
+searches, MCL and initial orthogroup writing, then all 1,828 species-tree
+alignments. Own-process queries witness the remaining alignment/gene-tree
+workers. Initial groups are intermediate, not reviewed phylogenetic results.
+
+Leave frozen argv, helpers, input bytes, run order and unrelated workloads
+unchanged. No terminal result is admitted, inference restarted or index 5
+submitted. Correct the reproduction guide's remaining-gate count from three
+to four reviewed attempts, matching its existing current snapshot; scoped
+prose whitespace check passes. No numerical result or complete-repeat summary
+changes. The existing native/runtime assembly and source-handoff scope remain
+bounded; raw OrthoBench/YGOB inputs remain acquisition-only. Do not manufacture
+an interim release or rerun completed native/statistical/TreeFam diagnostics.
+
+This is a verified live-job wait, not a blocker or completed publication goal.
+Next: poll 22400; once terminal, obtain the independent index-4 review before
+releasing index 5. Finish the remaining panel, final resource/manuscript/archive
+reconciliation and versioned study release under the unchanged full scope.
+
 ## Eight-Proteome OrthoHMM Reviewed; OrthoFinder Released (2026-10-03)
 
 The preceding user-requested goal confirmation only checks the existing shared
