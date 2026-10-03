@@ -78,7 +78,7 @@ This historical local measurement is not a matched-resource comparison with
 other tools. The 27-attempt matched-resource panel is now running on the local
 Threadripper with 32 native CPUs and a 128-GiB limit per run. These are shared-host
 observations: competing analyses can distort timing by an unknown, potentially
-method-dependent amount. The [interim resource report](benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v5/panel.json)
+method-dependent amount. The [interim resource report](benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v6/panel.json)
 retains exclusions and missing repeats; it does not establish isolated speedups.
 Historical measurements are not pooled with this panel. See the
 [progress ledger](benchmark_tools/results/PUBLICATION_PROGRESS.md) for dated checkpoints.

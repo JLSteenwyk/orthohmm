@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -161,7 +161,7 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
     assert report['reviewed_attempts'] == count and report['eligible_attempts'] == count - 1
     assert report['excluded_attempts'] == [0]
     assert all(row['resources'] is None for row in report['runs'][count:])
-    if count == 5:
+    if count >= 5:
         orthofinder = json.loads((results / 'threadripper_shared_attempt_22400.json').read_text())
         assert report['runs'][4]['job_id'] == orthofinder['job_id'] == 22400
         assert report['runs'][4]['resources'] == orthofinder['resources'] == dict(
@@ -169,6 +169,14 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert orthofinder['native_outputs']['input_genes'] == 165168
         assert orthofinder['native_outputs']['checkpoint_groups'] == 33013
         assert orthofinder['native_outputs']['native_pair_rows'] == 597451
+    if count == 6:
+        high = json.loads((results / 'threadripper_shared_attempt_22401.json').read_text())
+        assert report['runs'][5]['job_id'] == high['job_id'] == 22401
+        assert report['runs'][5]['resources'] == high['resources'] == dict(
+            wall_seconds=1238.935206005, cpu_seconds=34395.748088, peak_memory_bytes=8293474304)
+        assert high['native_outputs']['input_genes'] == 165168
+        assert high['native_outputs']['orthogroups'] == 58278
+        assert all(cell['eligible_repeats'] == 1 for cell in report['cells'] if cell['proteomes'] == 8)
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'

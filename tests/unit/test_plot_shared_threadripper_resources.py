@@ -114,7 +114,7 @@ def test_figure_text_fits_for_partial_and_full_panels(count):
     plt.close(figure)
 
 
-@pytest.mark.parametrize('version,reviewed,eligible', [('v3', 3, 2), ('v4', 4, 3), ('v5', 5, 4)])
+@pytest.mark.parametrize('version,reviewed,eligible', [('v3', 3, 2), ('v4', 4, 3), ('v5', 5, 4), ('v6', 6, 5)])
 def test_actual_export_pdf_text_pixels_and_provenance(tmp_path, version, reviewed, eligible):
     import fitz
     import numpy as np

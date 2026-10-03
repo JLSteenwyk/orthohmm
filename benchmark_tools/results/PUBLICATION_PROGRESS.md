@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Eight-Proteome High Sensitivity Reviewed; Twelve-Proteome OrthoFinder Live (2026-10-03)
+
+The preceding user-requested goal confirmation verifies the existing shared-host
+amendment but does not itself advance native analyses. This continuation reads
+the full goal, latest ledger and current worktree, then confirms exact **22402**
+RUNNING through a fresh scheduler query. Do not restart completed jobs or infer
+live state from a dated receipt. Recover the preceding uncommitted milestone:
+index 5, job **22401**, has a canonical terminal independent review with parent,
+batch and native step COMPLETED 0:0. Readback verifies the unchanged public
+summary against the canonical bytes and all four review-category pins/decisions.
+Runtime, environment, resources and native-output categories pass.
+
+The [retained summary](threadripper_shared_attempt_22401.json) is 4,469 bytes,
+SHA-256 `a500f67ca948ad4cef14b3903e09b301ce0ef892973698ce7d306666e909544e`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22401.md) records a checked partition
+of 165,168 proteins in 58,278 orthogroups, not a new accuracy result. Primary
+resources are 1,238.935206005 native wall seconds, 34,395.748088 native-task CPU
+seconds and 8,293,474,304 native-step lifetime peak bytes. Maximum sampled foreign
+demand is 52.9808092544 cores; process/pressure failure maps are empty. Preserve
+the wrapper-bracket CPU and step-lifetime memory scopes and unknown,
+potentially method-dependent shared-host timing distortion.
+
+Only after canonical index-5 review, the unchanged launcher binds the reviewed
+prefix and releases index 6, full OrthoFinder 3.1.5, 12 proteomes, repeat 0,
+as **22402**. Capture its [live snapshot](threadripper_shared_live_22402.json)
+once after fresh RUNNING confirmation: actual native affinity is CPUs 0-31,
+the enforced job/user memory limit is 128 GiB, preflight available memory is
+171,780,444,160 and 171,768,557,568 bytes, and foreign average demand is
+52.7452027652 cores. The initial process-sample interval is 30.0005156001 seconds.
+The native log is in 32-thread DIAMOND all-versus-all search; this live evidence
+is not terminal review or timing admission. No next identity is released yet.
+
+Export [six-attempt tables](threadripper_shared_panel_snapshot_20261003_v6/panel.json)
+and [updated partial figure](threadripper_shared_resource_figure_20261003_v5/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Five observations are eligible, original
+index 0 remains excluded, and 21 identities are unreviewed. Each method now has
+one eligible eight-proteome observation; no cell has three eligible repeats.
+Inspect the actual PNG: six markers have headroom, no text overlaps, and missing
+coverage/exclusions remain explicit. Earlier snapshots, reporting archive and
+main PDF keep their dated payloads. Update active README/reproduction/claim
+links and counts, not pinned timing sources or historical receipts.
+
+Drain the already-running component/table/figure regression session: **79 cases
+pass in 8.02s**. Retained-table byte replay and PDF/pixel/provenance checks now
+cover the sixth attempt. Scoped source/prose whitespace validation passes;
+generated TSV CRLF/empty fields and SVG spacing remain hash-bound bytes. No
+unrelated sample changes, native inputs, method settings or jobs are altered.
+
+Next: poll exact **22402**, independently review its terminal native/runtime/
+environment/resource outcome, and only then release index 7 (OrthoHMM high
+sensitivity, 12 proteomes). Complete the remaining panel and final resource/
+manuscript/archive reconciliation plus versioned study release. The full goal
+remains active and incomplete; no quiet-window or DGX prerequisite is restored.
+
 ## Eight-Proteome Full OrthoFinder Reviewed; High Sensitivity Released (2026-10-03)
 
 Previous continuation is a verified live-job wait, not an unmet external gate.
