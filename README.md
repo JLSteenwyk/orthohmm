@@ -75,8 +75,13 @@ harness rerun. See `PERFORMANCE_OPTIMIZATION.md` for commands, checksums,
 stage timings, and rejected experiments. The legacy `phmmer` path is still available via
 `--search_mode phmmer` but is no longer the default.
 This historical local measurement is not a matched-resource comparison with
-other tools. The planned comparative timing panel on the local Threadripper
-is deferred until isolation and measurement gates are satisfied.
+other tools. The 27-attempt matched-resource panel is now running on the local
+Threadripper with 32 native CPUs and a 128-GiB limit per run. These are shared-host
+observations: competing analyses can distort timing by an unknown, potentially
+method-dependent amount. The [interim resource report](benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/panel.json)
+retains exclusions and missing repeats; it does not establish isolated speedups.
+Historical measurements are not pooled with this panel. See the
+[progress ledger](benchmark_tools/results/PUBLICATION_PROGRESS.md) for dated checkpoints.
 
 **Clustering step.** OrthoHMM uses **Leiden CPM with resolution=0.1** as
 the development default. This setting was selected using development-exposed
@@ -192,7 +197,7 @@ remains `midpoint` while this policy is under evaluation.
 
 The [corrected eight-method QfO table](benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md)
 reports individual endpoints and prediction semantics. The
-[main scientific draft](benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md)
+[main scientific draft](benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261003.md)
 links OrthoBench uncertainty, ablations, transfer evaluation and limitations.
 QfO and OrthoBench are development-exposed, not independent confirmation.
 Three Kingdoms evaluates the BUSCO reference subset, not proteome-wide

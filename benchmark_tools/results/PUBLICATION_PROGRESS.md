@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Shared-Host Documentation And Completion Gates Reconciled (2026-10-03)
+
+Previous turn progresses at pushed d5ad80cd. Read the full goal and confirm
+exact 22399 RUNNING before acting; no observation expiry or log marker is used
+to restart it. The resource workflow and frozen helper/policy bytes stay intact.
+
+Inspect active user-facing documentation and find obsolete timing deferral in
+README, Sphinx index/performance and the current claim/reproduction tables.
+Replace the active quiet-window/causal-overhead gates with the authorized
+shared-host scope, while retaining accounting, integrity, capacity and failure
+requirements. Link the three reviewed attempts, partial figure and 3 October
+main text. Clearly distinguish dated historical entries from current execution
+status; do not relabel old protocols/outcomes or infer isolation from matched
+limits. Other scientific, generalization, uncertainty and release gaps remain.
+
+Sphinx **8.1.3** builds all seven pages with warnings treated as errors, without
+environment upgrades. All **635 local Markdown targets** checked in README,
+the reproduction guide and claim checklist exist (7 / 240 / 388 respectively).
+This checks target presence, not anchors, transitive evidence or scientific
+correctness. Scoped whitespace check passes. Rendering/printing/PDF component
+tests run separately; no native inference, calibration, scoring or scientific
+configuration is repeated or changed by the documentation update.
+
+Next: render the current working manuscript to a new dated review without
+overwriting the older PDF. Continue polling exact 22399, review its terminal
+outcome and only then advance to frozen index 4. The panel and publication
+package remain incomplete; no quiet-host blocker, DGX work or unrelated-job
+change is introduced.
+
 ## OrthoFinder Reviewed And Shared-Host Figure Added (2026-10-03)
 
 Previous turn progresses at pushed 00eef8d9. Read the full goal and poll exact

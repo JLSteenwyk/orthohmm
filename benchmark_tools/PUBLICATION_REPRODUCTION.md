@@ -9,7 +9,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 2 October 2026, incomplete working package. This guide routes
+Status: 3 October 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not
@@ -24,8 +24,40 @@ shared Threadripper despite unrelated analyses. The
 [full goal](PUBLICATION_GOAL_20261003.txt) supersede historical quiet-window
 requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
-observations. Policy/implementation/readiness must be prospectively reconciled
-on resumption; no new run or isolation pass is implied by this prompt update.
+observations. Shared policy/readiness, runtime binding and native handoff now
+support actual production runs. The
+[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v3/panel.json)
+has three reviewed attempts, two eligible shared-host observations and one
+retained/excluded cadence failure. The remaining panel is not complete.
+
+The [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md)
+and [interim resource figure](results/threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf)
+record the new scope without isolated speedup claims. Resource-table collection
+and plotting use the sources below; both refuse existing output directories.
+Plotting validates the snapshot, direct retained evidence and source hashes.
+It requires local reviewed evidence, including files under ignored work paths;
+these commands do not yet constitute a portable resource archive component.
+
+```sh
+python -B benchmark_tools/results/report_shared_threadripper_panel_20261003.py \
+  --output /absolute/fresh/resource-table
+python -B benchmark_tools/results/plot_shared_threadripper_resources_20261003.py \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/panel.json \
+  --sha256 ec176d15eb9bbd2a6c158a32efca7aeab06ba1988f87e1bc4c7c0e72ac5c91de \
+  --output /absolute/fresh/resource-figure
+```
+
+The retained figure uses Matplotlib 3.10.8; actual PDF/pixel tests use PyMuPDF
+1.27.2.3. These versions describe the reporting environment, not inference.
+Only cells with three eligible repeats receive medians/ranges; all failures
+and missing coverage remain explicit. Do not pool historical timings or use
+these observations to claim causal speedups.
+
+### Retained Evidence Chronology
+
+The dated entries below preserve earlier observations and bindings. Descriptions
+of then-absent readiness or quiet-host gates are historical, superseded for the
+new panel by the shared-host amendment and reviewed production results above.
 
 The [portable presentation rebuild](results/PUBLICATION_REVIEW_REBUILD_20261002.md)
 now rebuilds the accepted review from 17 Git-managed files in a relocated
@@ -1132,11 +1164,14 @@ The [DGX original-panel disposition](results/DGX_POSTRUN_ADMISSION_20260918.md)
 admits native outputs but retains timings as descriptive only. The
 [replacement specification](results/DGX_SCALING_REPLACEMENT_PROTOCOL_20260920.md)
 and [long-run amendment](results/DGX_SCALING_LONG_RUN_AMENDMENT_20260920.md)
-do not authorize a launch: environmental policy and executor integration
-remain incomplete. Do not claim matched-resource speedups from the old panel.
+remain historical; they do not authorize renewed DGX work. Do not claim
+matched-resource speedups from the old panel. The separate local Threadripper
+panel follows its shared-host authorization and execution contract.
 The user deferred further DGX work on September 23. No further DGX access
 requests or timing submissions are planned without renewed direction;
-controlled comparative timing remains an unmet publication requirement.
+isolated comparative timing is not established or required by the amended
+shared-host resource scope. Completing the authorized panel and reporting its
+contention limitations remain required.
 
 ## Archive And Outstanding Work
 
@@ -1347,23 +1382,20 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Controlled timing: the 27 replacement scaling runs remain unexecuted.
-  The local Threadripper `bizon` is the approved host; DGX access or permissions
-  are not prerequisites. The [prospective resource amendment](results/THREADRIPPER_RESOURCE_SCOPE_DECISION_20260929.md)
-  selects inference wall time, bracketed native CPU and native-step peak memory;
-  preparation/reporting scopes remain separate and terminal whole-job counters
-  remain unavailable. The endpoint decision is resolved under the goal's
-  authorization for autonomous engineering. The prospective
-  [32-worker accounting calibration](results/THREADRIPPER_OBSERVER_CALIBRATION_PROTOCOL_20260929.md)
-  tests independent worker CPU witnesses, known allocations and sampled thread
-  identities; it does not certify causal observer slowdown or host isolation.
-  [Effective service launch/file evidence](results/THREADRIPPER_EFFECTIVE_SERVICES_20260929.md)
-  supplements the unit-file inventory without approving background processes;
-  bare executables, file gaps and a pending reload remain explicit.
-  Complete resource containment,
-  full-scale overhead and environmental validation and
-  establish a verified quiet window before launch. Do not substitute
-  uncontrolled shared-host timings or restart DGX work.
+- Shared-host resource panel: three of the 27 frozen attempts are reviewed in
+  the current snapshot; the remaining sequential panel and final reporting are
+  incomplete. Local Threadripper `bizon` is approved, not the DGX. Use the
+  [executed continuation contract](results/THREADRIPPER_SHARED_CONTINUATION_20261003.md)
+  with identical native limits, fresh capacity checks, intact input/runtime
+  pins and independent terminal/resource/output review. The
+  [shared-host amendment](results/PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md)
+  removes the quiet-window prerequisite, not accounting or safety checks.
+  Native wall time, bracketed CPU and native-step peak retain separate endpoint
+  scopes; whole-job teardown counters remain supplementary/unavailable.
+  Retain all attempts and contention, do not retry solely for background load,
+  and do not fabricate isolated timing or a causal observer-overhead certificate.
+  Complete resource tables/figures, the manuscript and portable release
+  evidence under this authorized scope without disturbing unrelated analyses.
 - Uncertainty: native VGNC, GO/EC, FAS and the secondary summary lack admitted
   paired intervals. The [rare-event screen](results/SPARSE_DYADIC_F1_RESULT_20260926.md)
   rejects blanket promotion of the tested Wald approach. More implementation
