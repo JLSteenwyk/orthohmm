@@ -1,5 +1,66 @@
 # Publication Progress
 
+## Twelve-Proteome Full OrthoFinder Reviewed; High Sensitivity Released (2026-10-03)
+
+The preceding goal turn is a verified live-job wait, not an external blocker.
+Read the full goal, newest ledger and scoped worktree, then poll exact **22402**
+through gene-tree inference and the enclosing post-run checks. File counts and
+accumulating worker CPU demonstrate progress, not terminal output validity.
+The native log eventually confirms all 13,342 alignment/tree tasks, STRIDE,
+reconciliation and final writing. Native exit alone does not complete the job.
+Fresh sacct reports parent, batch and native step COMPLETED 0:0; run the
+independent index-6 reviewer once, retaining its terminal controller before
+purge. All four categories pass, including frozen argv/inputs, pre/post runtime
+identity, native output validation, raw resource replay and whole-run sampled
+process/pressure evidence.
+
+The [canonical-summary copy](threadripper_shared_attempt_22402.json) is 60,845
+bytes, SHA-256
+`ca6d16ea6e1ebb58b9c8c3779f5240f8381adcbb5f9ce00ca075ec95959c8b7c`.
+Readback verifies identical canonical/public bytes and all four category
+pins/decisions. The [review note](THREADRIPPER_SHARED_ATTEMPT_22402.md) distinguishes
+34,230 pre-phylogeny checkpoint groups from 1,487,084 expanded native ortholog
+pair rows across 251,378 input proteins. This is full phylogenetic inference,
+not a new accuracy score or sequence-only run. Primary resources are
+1,896.732060134 native wall seconds, 39,246.594856 native-task CPU seconds and
+11,897,724,928 native-step lifetime peak bytes. Maximum sampled foreign demand
+is 60.8152990336 cores; process/pressure failure maps are empty. Preserve the
+wrapper-bracket CPU and step-lifetime memory scopes, and unknown,
+potentially method-dependent shared-host distortion.
+
+Only after canonical terminal review, the unchanged launcher binds the seven
+reviewed attempts and releases frozen index 7, OrthoHMM high sensitivity,
+12 proteomes, repeat 0, as **22403**. The [live snapshot](threadripper_shared_live_22403.json)
+checks actual native affinity CPUs 0-31, enforced job/user memory limit 128 GiB,
+successful preflight and the unchanged request. Available memory observations
+are 165,318,594,560 and 165,735,276,544 bytes; foreign average demand is
+58.8194471963 cores. The first observed process interval is 30.0006005460 seconds.
+The native log enters built-in all-to-all HMM search. A dated live receipt is
+not terminal review or proof of future state. No retry, skipped identity,
+scientific retuning or unrelated workload change occurs.
+
+Export [seven-attempt tables](threadripper_shared_panel_snapshot_20261003_v7/panel.json)
+and [updated partial figure](threadripper_shared_resource_figure_20261003_v6/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Six observations are eligible, index 0
+remains excluded, and 20 identities are unreviewed. OrthoFinder now has one
+eligible observation at each size, but no cell has three eligible repeats.
+Inspect the actual PNG: seven observations are visible with headroom, no text
+overlaps, and exclusions/missing coverage stay explicit. Earlier snapshots,
+portable reporting archive and main PDF retain their dated payloads. Update
+active README/reproduction/claim links and counts, not pinned timing sources.
+
+Extend retained-table byte replay and actual PDF/pixel/provenance checks to
+the seventh attempt: the component/table/figure suite passes **81 cases in
+8.57s**. Scoped code/prose whitespace validation passes; generated TSV CRLF/
+empty fields and SVG spacing remain hash-bound bytes, not normalization targets.
+No expensive statistical/inference/calibration or TreeFam search is repeated.
+
+Next: poll exact **22403**, independently review its terminal native/runtime/
+environment/resource outcome and only then release index 8 (OrthoHMM
+satellite_v2, 12 proteomes). Complete the remaining panel, final resource/
+manuscript/archive reconciliation and versioned study release. Full publication
+scope remains active and incomplete; no quiet-window or DGX prerequisite returns.
+
 ## Eight-Proteome High Sensitivity Reviewed; Twelve-Proteome OrthoFinder Live (2026-10-03)
 
 The preceding user-requested goal confirmation verifies the existing shared-host

@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -169,7 +169,7 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert orthofinder['native_outputs']['input_genes'] == 165168
         assert orthofinder['native_outputs']['checkpoint_groups'] == 33013
         assert orthofinder['native_outputs']['native_pair_rows'] == 597451
-    if count == 6:
+    if count >= 6:
         high = json.loads((results / 'threadripper_shared_attempt_22401.json').read_text())
         assert report['runs'][5]['job_id'] == high['job_id'] == 22401
         assert report['runs'][5]['resources'] == high['resources'] == dict(
@@ -177,6 +177,15 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert high['native_outputs']['input_genes'] == 165168
         assert high['native_outputs']['orthogroups'] == 58278
         assert all(cell['eligible_repeats'] == 1 for cell in report['cells'] if cell['proteomes'] == 8)
+    if count == 7:
+        full = json.loads((results / 'threadripper_shared_attempt_22402.json').read_text())
+        assert report['runs'][6]['job_id'] == full['job_id'] == 22402
+        assert report['runs'][6]['resources'] == full['resources'] == dict(
+            wall_seconds=1896.732060134, cpu_seconds=39246.594856, peak_memory_bytes=11897724928)
+        assert full['native_outputs']['input_genes'] == 251378
+        assert full['native_outputs']['checkpoint_groups'] == 34230
+        assert full['native_outputs']['native_pair_rows'] == 1487084
+        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 1
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'
