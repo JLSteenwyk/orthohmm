@@ -1,0 +1,355 @@
+{
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22400",
+      "--oneliner"
+    ],
+    "finished_unix_ns": 1791059184359156823,
+    "returncode": 0,
+    "started_unix_ns": 1791059184352238052,
+    "stderr": "",
+    "stdout": "JobId=22400 JobName=orthohmm_shared_scaling UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:02:42 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-03T16:23:33 EligibleTime=2026-10-03T16:23:42 AccrueTime=2026-10-03T16:23:42 StartTime=2026-10-03T16:23:42 EndTime=2026-10-04T18:23:42 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-03T16:23:42 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:794934 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_shared_scaling.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=acbfeb2f4a60611a4cbeea613319fad2a0d5bceff8ec4ba85e5cf8d50f58f93e  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_04-22400.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_04-22400.log TresPerTask=cpu=64 \n"
+  },
+  "evidence": [
+    {
+      "bytes": 1177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/launch_04.json",
+      "sha256": "0835bc410679d4873a19a5cfd6dd20e5cc0b9195d767b76e5a1930dd6c55877a"
+    },
+    {
+      "bytes": 2746,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/request_run_04.json",
+      "sha256": "acbfeb2f4a60611a4cbeea613319fad2a0d5bceff8ec4ba85e5cf8d50f58f93e"
+    },
+    {
+      "bytes": 2696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/repaired_preparation.json",
+      "sha256": "341b429380210f7c8622a0c12f5e7d2dfecd9313eb2ba82ebd8a05a6b9352314"
+    },
+    {
+      "bytes": 224379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_04/environment_preflight.json",
+      "sha256": "500a99c3c345ad608431800de7fe94c5e98c4862f5ec3d3094ad8ba140fc68a8"
+    },
+    {
+      "bytes": 4606,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/measurement/ready.json",
+      "sha256": "76f120c9757e231404087af415d8480aee6cf60964bfb97ba6e231a29b6e90b6"
+    },
+    {
+      "bytes": 52590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_04/started.json",
+      "sha256": "bfc1ee3f2ba2e66569f14f002c3b0ab92e43502ff4de60390dc15cb346201c69"
+    },
+    {
+      "bytes": 2226,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_04/lookup_checks/checked_01.json",
+      "sha256": "865649faac8892659cfae19e2f6689d447229265b3a5a327cacb3aeacfb22a87"
+    },
+    {
+      "bytes": 452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/measurement/command.json",
+      "sha256": "27dedbda8a5775d9c0dfff44e8d6d9ffdf731adc63d1aad76e24e64a7a2ff1d7"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/measurement/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/measurement/environment_release.json",
+      "sha256": "05407186bd918a4cd85a561c8efb1ba9e039bba6f9fb29fd8274f20bbea0ec00"
+    },
+    {
+      "bytes": 5396,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_04/measurement/release_budget.json",
+      "sha256": "eaa39bf12c1ac24bdf2308b34d9b8a0ae1c8739cb2641987b396852b581c0845"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "first_observed_process_start_gap_s": 30.000348692992702,
+  "index": 4,
+  "job_id": 22400,
+  "limitations": [
+    "Live snapshot only; obtain a fresh scheduler query on every continuation.",
+    "An early sampling interval does not prove whole-run monitoring validity.",
+    "Background diagnostics do not quantify causal slowdown or correct timings.",
+    "The excluded index-0 failure remains excluded; no native attempt is retried."
+  ],
+  "method": "orthofinder_3_1_5_full",
+  "native_log_excerpt": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/tools/tree.py:371: SyntaxWarning: invalid escape sequence '\\-'\n  \"\"\"\n/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/lib/python3.12/site-packages/orthofinder/tools/newick.py:341: SyntaxWarning: invalid escape sequence '\\s'\n  MATCH = '%s\\s*%s\\s*(%s)?' % (FIRST_MATCH, SECOND_MATCH, _NHX_RE)\n\n2026-10-03 16:24:53 : Starting OrthoFinder v3.1.5\n32 thread(s) for highly parallel tasks (BLAST searches etc.)\n32 thread(s) for OrthoFinder algorithm\n\nOrthoFinder version 3.1.5 Copyright (C) 2014 David Emms\n\nResults directory:\n    /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/resul\nts/threadripper_scaling_v1/run_04/orthofinder_full/Results_Oct03/\n\nChecking required programs are installed\n========================================\nRunning with the recommended MSA tree inference by default. To revert to legacy \nmethod use \"-M dendroblast\".\n\nTest can run \"mcl\" - ok\nTest can run \"famsa\" - ok\nTest can run \"fasttree\" - ok\n\nDividing up work for BLAST for parallel processing\n--------------------------------------------------\nProcessing... \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501   8/8 0:00:00\n\nRunning diamond all-versus-all\n==============================\nUsing 32 thread(s)\n2026-10-03 16:24:56 : This may take some time...\n",
+  "native_placement": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "ancestors": [
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22400/step_0/user/task_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22400/step_0/user"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22400/step_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22400"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice"
+      }
+    ],
+    "cgroup": "0::/system.slice/slurmstepd.scope/job_22400/step_0/user/task_0\n",
+    "host": "bizon",
+    "pid": 796378,
+    "slurm": {
+      "SLURM_CPUS_PER_TASK": "64",
+      "SLURM_JOB_ID": "22400",
+      "SLURM_MEM_PER_NODE": "131072"
+    },
+    "topology": [
+      {
+        "core": 0,
+        "cpu": 0,
+        "package": 0
+      },
+      {
+        "core": 1,
+        "cpu": 1,
+        "package": 0
+      },
+      {
+        "core": 2,
+        "cpu": 2,
+        "package": 0
+      },
+      {
+        "core": 3,
+        "cpu": 3,
+        "package": 0
+      },
+      {
+        "core": 4,
+        "cpu": 4,
+        "package": 0
+      },
+      {
+        "core": 5,
+        "cpu": 5,
+        "package": 0
+      },
+      {
+        "core": 6,
+        "cpu": 6,
+        "package": 0
+      },
+      {
+        "core": 7,
+        "cpu": 7,
+        "package": 0
+      },
+      {
+        "core": 8,
+        "cpu": 8,
+        "package": 0
+      },
+      {
+        "core": 9,
+        "cpu": 9,
+        "package": 0
+      },
+      {
+        "core": 10,
+        "cpu": 10,
+        "package": 0
+      },
+      {
+        "core": 11,
+        "cpu": 11,
+        "package": 0
+      },
+      {
+        "core": 12,
+        "cpu": 12,
+        "package": 0
+      },
+      {
+        "core": 13,
+        "cpu": 13,
+        "package": 0
+      },
+      {
+        "core": 14,
+        "cpu": 14,
+        "package": 0
+      },
+      {
+        "core": 15,
+        "cpu": 15,
+        "package": 0
+      },
+      {
+        "core": 16,
+        "cpu": 16,
+        "package": 0
+      },
+      {
+        "core": 17,
+        "cpu": 17,
+        "package": 0
+      },
+      {
+        "core": 18,
+        "cpu": 18,
+        "package": 0
+      },
+      {
+        "core": 19,
+        "cpu": 19,
+        "package": 0
+      },
+      {
+        "core": 20,
+        "cpu": 20,
+        "package": 0
+      },
+      {
+        "core": 21,
+        "cpu": 21,
+        "package": 0
+      },
+      {
+        "core": 22,
+        "cpu": 22,
+        "package": 0
+      },
+      {
+        "core": 23,
+        "cpu": 23,
+        "package": 0
+      },
+      {
+        "core": 24,
+        "cpu": 24,
+        "package": 0
+      },
+      {
+        "core": 25,
+        "cpu": 25,
+        "package": 0
+      },
+      {
+        "core": 26,
+        "cpu": 26,
+        "package": 0
+      },
+      {
+        "core": 27,
+        "cpu": 27,
+        "package": 0
+      },
+      {
+        "core": 28,
+        "cpu": 28,
+        "package": 0
+      },
+      {
+        "core": 29,
+        "cpu": 29,
+        "package": 0
+      },
+      {
+        "core": 30,
+        "cpu": 30,
+        "package": 0
+      },
+      {
+        "core": 31,
+        "cpu": 31,
+        "package": 0
+      }
+    ]
+  },
+  "next_submission_authorized": false,
+  "preflight": {
+    "available_memory_bytes": [
+      173272891392,
+      173099524096
+    ],
+    "background_competition_recorded": true,
+    "observed_foreign_average_cores": 52.12885978461151
+  },
+  "proteomes": 8,
+  "repeat": 0,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4649,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/snapshot_repaired_shared_threadripper_20261003.py",
+    "sha256": "0d339dd8c160b1383913421e6e96ad7009c288ef50668df043ce0344a61a9cc1"
+  },
+  "status": "repaired_shared_native_observed_running",
+  "terminal_review_completed": false,
+  "uncontended_timing": false
+}

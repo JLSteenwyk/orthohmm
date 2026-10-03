@@ -1,5 +1,61 @@
 # Publication Progress
 
+## Eight-Proteome OrthoHMM Reviewed; OrthoFinder Released (2026-10-03)
+
+The preceding user-requested goal confirmation only checks the existing shared
+scope; it does not itself advance the analyses. This resumption reads the full
+goal and actual worktree, confirms no prior focused pytest process remains,
+and polls exact 22399. Fresh scontrol and sacct show parent, batch and native
+step COMPLETED 0:0. Run the independent reviewer once, preserving its fresh
+controller record before purge. All four runtime/environment/resource/output
+categories pass; raw counters and process/pressure streams independently replay.
+
+The [terminal summary](threadripper_shared_attempt_22399.json) and
+[review note](THREADRIPPER_SHARED_ATTEMPT_22399.md) retain 165,168 proteins,
+56,919 groups/root HOGs and 340,183 native pair rows. Resource observations are
+1,999.550829241 wall seconds, 56,008.347090 native-task CPU seconds and
+8,243,466,240 native-step lifetime peak bytes. Maximum sampled foreign demand
+is 55.7529273778 CPU-core equivalents; no process/pressure failure is found.
+These are shared-host observations, not accuracy or isolated speed estimates.
+
+Retain the portable three-attempt reporting archive with actual restore/replay
+receipt and scoped tests at pushed **3f02468b**. The three-module reporting suite
+passes **73 tests in 4.07s**. It closes bounded portable table/figure reporting,
+not raw measurement or native reproduction, complete runtime or full release.
+
+Only after canonical index-3 review does the unchanged launcher bind the
+four-attempt history and release frozen index 4, full OrthoFinder 3.1.5 on eight
+proteomes, repeat 0, as **22400**. Its [live native snapshot](threadripper_shared_live_22400.json)
+confirms RUNNING, CPUs 0-31 on distinct physical cores, the same 128-GiB limit,
+successful launch capacity checks and OrthoFinder's DIAMOND all-versus-all
+search. Available preflight memory is 173,272,891,392 / 173,099,524,096 bytes;
+observed foreign demand is 52.1288597846 cores. The first process sampling gap
+is 30.000348693 seconds. These are launch observations, not terminal admission.
+
+Export the [four-attempt table](threadripper_shared_panel_snapshot_20261003_v4/panel.json)
+and [new interim figure](threadripper_shared_resource_figure_20261003_v3/shared_threadripper_resources.pdf)
+from unchanged reporting functions. There are three eligible observations,
+excluded index 0, 23 unreviewed identities and no complete three-repeat cell.
+No missing value is replaced by zero or partial median. Inspect the actual
+PNG: all four points are visible with headroom and no text overlap. Existing
+three-attempt archive/main PDF remain unchanged dated checkpoints, not current
+full-panel artifacts. Update active README/reproduction/claim links without
+altering pinned execution helpers or scientific settings.
+
+Add retained-four-attempt table replay and extend actual PDF/pixel/provenance
+checks to both three- and four-attempt snapshots. The final combined component,
+table and figure suite passes **75 cases in 5.08s**. Scoped code/prose whitespace
+checks pass. The full staged whitespace check flags generated TSV CRLF/empty
+fields and SVG path spacing; preserve those exact generated/hash-bound bytes
+rather than normalizing them. These are reporting regressions, not new native
+scientific evaluations.
+
+Next: poll exact 22400; review its terminal evidence and only then release
+index 5 (OrthoHMM high sensitivity, eight proteomes). Finish the full panel,
+final resource/figure/manuscript/archive reconciliation and versioned release.
+No quiet window, DGX or unrelated job/service change is introduced. Full goal
+remains active and incomplete.
+
 ## Resource Reporting Archive Restored And Replayed (2026-10-03)
 
 Previous turn progresses at pushed 0581953d. Read the full goal and poll exact

@@ -114,15 +114,16 @@ def test_figure_text_fits_for_partial_and_full_panels(count):
     plt.close(figure)
 
 
-def test_actual_export_pdf_text_pixels_and_provenance(tmp_path):
+@pytest.mark.parametrize('version,reviewed,eligible', [('v3', 3, 2), ('v4', 4, 3)])
+def test_actual_export_pdf_text_pixels_and_provenance(tmp_path, version, reviewed, eligible):
     import fitz
     import numpy as np
 
-    path = Path(__file__).resolve().parents[2] / 'benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/panel.json'
+    path = Path(__file__).resolve().parents[2] / f'benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_{version}/panel.json'
     report = json.loads(path.read_text())
     output = tmp_path / 'figure'
     manifest = module.export(path, module.executor.record(path)['sha256'], output)
-    assert manifest['reviewed_attempts'] == 3 and manifest['eligible_attempts'] == 2
+    assert manifest['reviewed_attempts'] == reviewed and manifest['eligible_attempts'] == eligible
     assert manifest['excluded_indices'] == [0]
     assert not manifest['uncontended_timing'] and not manifest['publication_ready']
     for pin in manifest['outputs']:
@@ -132,7 +133,7 @@ def test_actual_export_pdf_text_pixels_and_provenance(tmp_path):
         assert len(document) == 1
         page = document[0]
         text = page.get_text()
-        assert '(partial)' in text and '3/27 attempts reviewed' in text
+        assert '(partial)' in text and f'{reviewed}/27 attempts reviewed' in text
         assert 'unknown and potentially method dependent' in text
         assert 'excluded raw values' in text
         for block in page.get_text('dict')['blocks']:

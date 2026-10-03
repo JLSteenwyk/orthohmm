@@ -26,13 +26,14 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v3/panel.json)
-has three reviewed attempts, two eligible shared-host observations and one
+[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v4/panel.json)
+has four reviewed attempts, three eligible shared-host observations and one
 retained/excluded cadence failure. The remaining panel is not complete.
 
-The [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md)
-and [interim resource figure](results/threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf)
-record the new scope without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261003_v3/shared_threadripper_resources.pdf)
+includes the fourth observation without isolated speedup claims. The
+[3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
+describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
 preserves its render-time Git inputs and closed PDF/page identities; it is not
 a completed resource panel or portable study archive. Resource-table collection
@@ -51,8 +52,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_threadripper_panel_20261003.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_threadripper_resources_20261003.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/panel.json \
-  --sha256 ec176d15eb9bbd2a6c158a32efca7aeab06ba1988f87e1bc4c7c0e72ac5c91de \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v4/panel.json \
+  --sha256 b54c09b0a556dfb5ac2e84cf9dba881e50cb4aad770e988027b6c7f0f1b288d5 \
   --output /absolute/fresh/resource-figure
 ```
 

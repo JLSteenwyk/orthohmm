@@ -1,6 +1,7 @@
 from copy import deepcopy
 import csv
 import json
+from pathlib import Path
 
 import pytest
 
@@ -143,3 +144,25 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
     with pytest.raises(ValueError):
         reporter.terminal_matches(row, session, controller, plan)
         reporter.environment_matches(row, replay, preflight)
+
+
+def test_retained_four_attempt_snapshot_replays_tables_without_original_evidence(tmp_path):
+    results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
+    snapshot = results / 'threadripper_shared_panel_snapshot_20261003_v4'
+    report = json.loads((snapshot / 'panel.json').read_text())
+    outcome = json.loads((results / 'threadripper_shared_attempt_22399.json').read_text())
+    row = report['runs'][3]
+    assert {key: row[key] for key in reporter.IDENTITY} == planned_runs()[3]
+    assert row['job_id'] == outcome['job_id'] == 22399
+    assert row['resources'] == outcome['resources'] == dict(
+        wall_seconds=1999.550829241, cpu_seconds=56008.34709, peak_memory_bytes=8243466240)
+    assert row['whole_run_maximum_foreign_average_cores'] == outcome['whole_run_maximum_foreign_average_cores']
+    assert report['reviewed_attempts'] == 4 and report['eligible_attempts'] == 3
+    assert report['excluded_attempts'] == [0]
+    assert all(row['resources'] is None for row in report['runs'][4:])
+    assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
+    assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
+    output = tmp_path / 'four_attempt_replay'
+    export(output, report)
+    assert all((output / name).read_bytes() == (snapshot / name).read_bytes()
+               for name in ('panel.json', 'attempts.tsv', 'cells.tsv'))
