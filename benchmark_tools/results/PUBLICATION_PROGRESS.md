@@ -1,5 +1,63 @@
 # Publication Progress
 
+## Twelve-Proteome High Sensitivity Reviewed; Phylogenetic Run Live (2026-10-03)
+
+The preceding user-requested goal confirmation verifies the existing shared-host
+amendment but does not itself advance analyses. Revalidate that no-progress
+turn against the full goal, newest ledger, retained reviews and fresh scheduler
+state. Exact **22404** is RUNNING; do not restart completed inference or treat
+dated receipts as live state. Recover the preceding uncommitted milestone:
+index 7, job **22403**, has parent, batch and native step COMPLETED 0:0 and an
+independent terminal review. Built-in HMM search, threshold/graph construction
+and clustering finish under the frozen high-sensitivity configuration, without
+phylogenetic reconciliation. Native exit alone was not treated as completion.
+
+Readback verifies identical canonical/public summary bytes and all four
+review-category pins/decisions. Runtime, environment, resources and native
+outputs pass. The [retained summary](threadripper_shared_attempt_22403.json)
+is 4,471 bytes, SHA-256
+`beb31a9d114d41a18f2e8df81f82ec637ee9a7d46269a882a5c5745da127ef23`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22403.md) records a complete
+partition of 251,378 proteins into 62,885 orthogroups, not a new accuracy
+evaluation. Primary resources are 3,027.060520509 native wall seconds,
+86,415.319181 native-task CPU seconds and 11,309,355,008 native-step lifetime
+peak bytes. Maximum sampled foreign demand is 60.3531642451 cores;
+process/pressure failure maps are empty. Preserve wrapper-bracket CPU and
+step-lifetime memory scopes, without overhead subtraction or isolated ranking.
+
+Only after canonical terminal review does the unchanged launcher release
+index 8, OrthoHMM satellite_v2, 12 proteomes, repeat 0, as **22404**. Capture
+its [live snapshot](threadripper_shared_live_22404.json) after a fresh RUNNING
+query. Actual native affinity is CPUs 0-31, enforced job/user memory is
+128 GiB, preflight available memory is 312,176,836,608 and 313,337,806,848
+bytes, and foreign average demand is 59.9950600778 cores. The initial observed
+process interval is 30.0009086970 seconds. The native log is in built-in HMM
+search. This is live evidence, not terminal review or admission of timing.
+No retry, skipped identity, scientific retuning or unrelated workload change
+occurs. Contention distortion remains unknown and potentially method dependent.
+
+Export [eight-attempt tables](threadripper_shared_panel_snapshot_20261003_v8/panel.json)
+and the [updated partial figure](threadripper_shared_resource_figure_20261003_v7/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Seven observations are eligible, original
+index 0 stays excluded and 19 identities are unreviewed. High sensitivity and
+full OrthoFinder each have one eligible 12-proteome point; no cell has three
+eligible repeats. The actual PNG has eight observations, headroom and no text
+overlap; excluded/missing coverage and the shared-host limitation stay explicit.
+Earlier snapshots, portable reporting archive and main PDF retain their dated
+payloads. Update active README/reproduction/claim links, not pinned sources.
+
+The component/table/figure suite passes **83 cases in 9.85s**, including new
+retained-table byte replay and actual PDF/pixel/provenance checks for this
+attempt. Scoped code/prose whitespace validation passes; generated TSV CRLF/
+empty fields and SVG spacing remain hash-bound bytes, not normalization targets.
+No expensive inference/statistical/calibration or TreeFam diagnostic is repeated.
+
+Next: poll exact **22404**, review its terminal native/runtime/environment/
+resource evidence once, and only then release index 9 (OrthoHMM satellite_v2,
+four proteomes, repeat 1). Finish the remaining panel, final resource/manuscript/
+archive reconciliation and versioned study release. Full publication scope
+remains active and incomplete; no quiet-window or DGX prerequisite returns.
+
 ## Twelve-Proteome Full OrthoFinder Reviewed; High Sensitivity Released (2026-10-03)
 
 The preceding goal turn is a verified live-job wait, not an external blocker.
