@@ -33,10 +33,13 @@ Groups include singletons. The former 20-100 proteome table used a separate
 experimental driver and is not production-CLI scaling evidence. The
 `historical optimization report <https://github.com/JLSteenwyk/orthohmm/blob/main/PERFORMANCE_OPTIMIZATION.md>`_
 retains commands, checksums and rejected experiments. This local measurement
-does not establish comparative speed or memory advantages. The planned
-matched-resource panel on the local Threadripper is deferred until isolation
-and measurement gates are satisfied. See :ref:`performance` for current
-benchmark scope and limitations.
+does not establish comparative speed or memory advantages. The 27-attempt
+matched-resource panel is now running on the local Threadripper, with 32 native
+CPUs and a 128-GiB limit per run. Competing analyses may distort shared-host
+timing by an unknown, potentially method-dependent amount; matching limits
+does not establish isolated speedups. Exclusions and missing repeats remain
+explicit, and historical measurements are not pooled with the new panel.
+See :ref:`performance` for current benchmark scope and limitations.
 The legacy ``phmmer`` path is still available via
 ``--search_mode phmmer`` but is no longer the default.
 

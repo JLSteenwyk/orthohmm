@@ -28,10 +28,13 @@ Current evidence
   paralog separation with phylogenetic OrthoHMM relative to high sensitivity,
   alongside lower homolog coverage. Full OrthoFinder and SonicParanoid perform
   better on supported separation and coverage in this application.
-* The planned matched-resource panel will use the local Threadripper, not the
-  DGX. Production timing is deferred pending isolation and measurement gates;
-  other publication work continues. Historical resource measurements should
-  not be pooled with the new panel or described as controlled comparisons.
+* The 27-attempt matched-resource panel is running on the local Threadripper,
+  not the DGX, with 32 native CPUs and a 128-GiB limit per run. A quiet window
+  is not required. Background workload monitoring, resource accounting and
+  output checks remain required. Competing analyses may distort timing by an
+  unknown, potentially method-dependent amount; matching resource limits does
+  not isolate tool speed. Exclusions and missing repeats are explicit.
+  Historical resource measurements are not pooled with this panel.
 
 OrthoBench and QfO were inspected during development. Their scores are not
 independent confirmation of settings selected using those datasets. The
@@ -52,8 +55,12 @@ Reports and reproducibility
 
 The `corrected eight-method QfO comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md>`_
 contains current observed endpoints and prediction semantics. The
-`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20260927.md>`_
+`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261003.md>`_
 links OrthoBench, uncertainty and transfer evidence. The
+`interim resource table <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/attempts.tsv>`_
+and `interim resource figure <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf>`_
+show reviewed attempts only, retaining excluded raw values without incomplete
+median/range summaries or causal speed rankings. The
 `claim-to-evidence checklist <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md>`_
 links uncertainty, ablations, simulations, transfer evaluation and the
 biological application. The

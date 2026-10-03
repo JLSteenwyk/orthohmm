@@ -110,10 +110,13 @@ CLI measurement used five bacterial proteomes (15,932 proteins) and a
 experimental driver and is not production-CLI scaling evidence. The
 <a class="reference external" href="https://github.com/JLSteenwyk/orthohmm/blob/main/PERFORMANCE_OPTIMIZATION.md">historical optimization report</a>
 retains commands, checksums and rejected experiments. This local measurement
-does not establish comparative speed or memory advantages. The planned
-matched-resource panel on the local Threadripper is deferred until isolation
-and measurement gates are satisfied. See <a class="reference internal" href="performance_assessment/index.html#performance"><span class="std std-ref">Performance Assessment</span></a> for current
-benchmark scope and limitations.
+does not establish comparative speed or memory advantages. The 27-attempt
+matched-resource panel is now running on the local Threadripper, with 32 native
+CPUs and a 128-GiB limit per run. Competing analyses may distort shared-host
+timing by an unknown, potentially method-dependent amount; matching limits
+does not establish isolated speedups. Exclusions and missing repeats remain
+explicit, and historical measurements are not pooled with the new panel.
+See <a class="reference internal" href="performance_assessment/index.html#performance"><span class="std std-ref">Performance Assessment</span></a> for current benchmark scope and limitations.
 The legacy <code class="docutils literal notranslate"><span class="pre">phmmer</span></code> path is still available via
 <code class="docutils literal notranslate"><span class="pre">--search_mode</span> <span class="pre">phmmer</span></code> but is no longer the default.</p>
 <div class="line-block">
