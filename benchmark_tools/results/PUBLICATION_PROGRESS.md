@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Generating Gene-Tree Mechanism Control Prepared (2026-10-04)
+
+The preceding user turn updates the authoritative shared-host policy, concrete
+execution-scope progress. On resumption read the full goal/current ledger and
+query Slurm: no owned native job is live. Completed timing and rc2 receipts
+remain retained; no contention-only retry, quiet-window or DGX gate is added.
+
+The [prospective gene-tree diagnostic](SIMULATION_GENE_TREE_ORACLE_PROTOCOL_20261004.md)
+addresses the unresolved distinction between gene-tree estimation/rooting and
+reconciliation. All70 generating-species-tree OrthoHMM cells are retained.
+Single-ancestral-family, actually inferred candidates receive generating-root
+and native-rerooted oracle controls; mixed candidates and bypasses are unchanged.
+Exact baseline pair reproduction is mandatory before interpreting intervention.
+Twenty-four focused tests pass, including complete synthetic native cells,
+constraint semantics, input identities, root/topology distance and eligibility.
+
+Commit/push protocol, runner and tests before actual scoring. Then execute the
+fixed70-cell read-only diagnostic and independently check counts, preserved
+inputs and finite-panel summaries. This is not new inference, an independent
+test, a new default or completed publication readiness. Do not rebuild rc2 for
+this preparation milestone or repeat completed scientific controls.
+
 ## Main Statistical Routes Restored And Replayed In Actual rc2 (2026-10-04)
 
 The [actual local rc2 package](PUBLICATION_PACKAGE_RC2_RESULT_20261004.md)
