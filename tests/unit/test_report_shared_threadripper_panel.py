@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10), ('v11', 11), ('v12', 12), ('v13', 13)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10), ('v11', 11), ('v12', 12), ('v13', 13), ('v14', 14)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -244,7 +244,7 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
                      if cell['method'] == 'orthohmm_high_sensitivity' and cell['proteomes'] == 4)
         assert high4['eligible_repeats'] == 1 and high4['excluded_indices'] == [0]
         assert report['runs'][0]['comparative_timing_eligible'] is False
-    if count == 13:
+    if count >= 13:
         full8_repeat = json.loads((results / 'threadripper_shared_attempt_22408.json').read_text())
         assert report['runs'][12]['job_id'] == full8_repeat['job_id'] == 22408
         assert report['runs'][12]['resources'] == full8_repeat['resources'] == dict(
@@ -256,8 +256,22 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         full8 = next(cell for cell in report['cells']
                      if cell['method'] == 'orthofinder_3_1_5_full' and cell['proteomes'] == 8)
         assert full8['eligible_repeats'] == 2
-        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 8) == 4
+        if count == 13:
+            assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 8) == 4
         assert report['runs'][4]['resources'] != report['runs'][12]['resources']
+    if count == 14:
+        high8_repeat = json.loads((results / 'threadripper_shared_attempt_22409.json').read_text())
+        assert report['runs'][13]['job_id'] == high8_repeat['job_id'] == 22409
+        assert report['runs'][13]['resources'] == high8_repeat['resources'] == dict(
+            wall_seconds=1303.633011611, cpu_seconds=36610.569612, peak_memory_bytes=8284278784)
+        assert high8_repeat['native_outputs']['input_genes'] == 165168
+        assert high8_repeat['native_outputs']['orthogroups'] == 58278
+        assert high8_repeat['native_outputs']['accuracy_evaluated'] is False
+        high8 = next(cell for cell in report['cells']
+                     if cell['method'] == 'orthohmm_high_sensitivity' and cell['proteomes'] == 8)
+        assert high8['eligible_repeats'] == 2
+        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 8) == 5
+        assert report['runs'][5]['resources'] != report['runs'][13]['resources']
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'
