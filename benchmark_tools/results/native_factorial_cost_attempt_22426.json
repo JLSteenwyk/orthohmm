@@ -1,0 +1,107 @@
+{
+  "absent_native_paths": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/run_00/input",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/run_00/native",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/run_00/measurement"
+  ],
+  "automatic_retry": false,
+  "cell": "p0_c0_r0",
+  "evidence": [
+    {
+      "bytes": 1469,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/sessions/run_00/result.json",
+      "sha256": "347f8a12c428a65cba1e73795fc0a40e04c0a0092a3c3619bcef5c2f8d299fd8"
+    },
+    {
+      "bytes": 876,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/sessions/run_00/started.json",
+      "sha256": "f3400938dc519cdd5f00256c153a03ee4d2c04199e62c20dbdd54bb8863012f5"
+    },
+    {
+      "bytes": 548,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v1_20261004/run_00/verification.json",
+      "sha256": "6677377f0f9eb98f0a1367b9dc05911cfdc27a1c5c43320af1810064e28a0e83"
+    },
+    {
+      "bytes": 1700,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_00.json",
+      "sha256": "d98bf9c8cbedd058203c964431779ba710ce9f608372f6c7ff1ed6c7fc1a2a3a"
+    },
+    {
+      "bytes": 2260,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/runtime_delta_22426.json",
+      "sha256": "73575259bb7d3da50ca69f336a034a1ca11617f9e457db6b5da4720017a1bfea"
+    },
+    {
+      "bytes": 6528,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_runtime_lookup_repaired_20261004.json",
+      "sha256": "11cb73a07588744d188fec0e4852fd452e8ddf098b64b3a91bc991181729619f"
+    },
+    {
+      "bytes": 52526,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_cost_repair_final_20261004.xml",
+      "sha256": "228545ce43afafa87407d2e7d8b5c0124b559784f474f86f59e25a14d6d4ac70"
+    }
+  ],
+  "index": 0,
+  "inference_started": false,
+  "job_id": 22426,
+  "limitations": [
+    "Scheduler elapsed includes failed preflight, not native execution time.",
+    "A justified replacement needs a new prospective plan/policy/request; no old attempt is overwritten."
+  ],
+  "native_cpu_seconds": null,
+  "native_peak_memory_bytes": null,
+  "native_wall_s": null,
+  "next_identity_authorized": false,
+  "replacement_protocol": {
+    "bytes": 2230,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/NATIVE_FACTORIAL_RUNTIME_REPAIR_22426.md",
+    "sha256": "0e21e00d7ae6e5498585ed38fc267da3a3cdb22558888e294e3b4b1c5d5196d4"
+  },
+  "scheduler": {
+    "controller_observation": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22426",
+        "--oneliner"
+      ],
+      "returncode": 1,
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+      "stdout": ""
+    },
+    "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+    "observation": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "22426",
+        "-n",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+      ],
+      "stderr": "",
+      "stdout": "22426|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-04T18:52:24|2026-10-04T18:52:59|2026-10-04T18:53:27|orthohmm_factorial_cost\n"
+    },
+    "source": "fresh_accounting_after_controller_expiry",
+    "verified": {
+      "AllocCPUS": "64",
+      "End": "2026-10-04T18:53:27",
+      "ExitCode": "1:0",
+      "JobIDRaw": "22426",
+      "JobName": "orthohmm_factorial_cost",
+      "NodeList": "bizon",
+      "Partition": "gpu",
+      "ReqMem": "128G",
+      "Start": "2026-10-04T18:52:59",
+      "State": "FAILED",
+      "Submit": "2026-10-04T18:52:24",
+      "TimelimitRaw": "1560"
+    }
+  },
+  "scientific_timings_admitted": false,
+  "status": "runtime_preflight_failed_before_inference_retained"
+}

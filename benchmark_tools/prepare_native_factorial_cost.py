@@ -18,7 +18,7 @@ PINS = dict(
     qfo_corrected=("benchmarks/results/qfo_corrected_factorial_v1/manifest.json", "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a", "input_fastas"))
 
 
-def prepare(output, panel):
+def prepare(output, panel, runtime_lookup=None, supersedes=None, retained_failure=None):
     if output.exists() or output.is_symlink() or panel.exists() or panel.is_symlink():
         raise FileExistsError("Require a new plan and absent new factorial panel")
     datasets, evidence = {}, []
@@ -30,10 +30,31 @@ def prepare(output, panel):
         evidence.append(ref)
         for pin in datasets[label]:
             check(pin)
-    lookup = record(ROOT / "benchmark_tools/results/threadripper_private_lookup_preparation_sync_20261004.json")
-    if lookup["sha256"] != "7e3ac02b46cf1ead426ec19889fc5bd23e6a0e01dbd3737bf374c3ae3180ed1d":
+    old_lookup = record(ROOT / "benchmark_tools/results/threadripper_private_lookup_preparation_sync_20261004.json")
+    if old_lookup["sha256"] != "7e3ac02b46cf1ead426ec19889fc5bd23e6a0e01dbd3737bf374c3ae3180ed1d":
         raise ValueError("Retained runtime lookup differs")
+    lookup = old_lookup if runtime_lookup is None else runtime_lookup
     receipt = read(lookup)
+    old = read(old_lookup)
+    if runtime_lookup is not None:
+        prior_binding, current_binding = read(old["binding"]), read(receipt["binding"])
+        if (receipt.get("status") != "native_lookup_repeated_identity_match" or receipt["baseline"] != old["baseline"]
+                or receipt["source"] != old["source"]
+                or any(prior_binding[k] != current_binding[k] for k in
+                    ("baseline", "controller_python", "command_plan", "baseline_paths", "retired_roots"))
+                or prior_binding["runtime_specs"][1:] != current_binding["runtime_specs"][1:]):
+            raise ValueError("New lookup changed the frozen scientific/private deployment")
+        evidence.extend([lookup, old_lookup, receipt["current_validation"]["delta"]])
+    if (supersedes is None) != (retained_failure is None):
+        raise ValueError("A replacement must retain both the old plan and failed attempt")
+    if supersedes is not None:
+        old_plan, failure = read(supersedes), read(retained_failure)
+        validate_plan(old_plan)
+        if (failure.get("plan") != supersedes or failure.get("status") != "factorial_attempt_failed_retained"
+                or failure.get("index") != 0 or failure.get("wrapper", {}).get("status") != "verified_wrapper_failed"
+                or failure["wrapper"].get("error") != "Runtime inventory changed"):
+            raise ValueError("Replacement is not the retained runtime-preflight failure")
+        evidence.extend([supersedes, retained_failure, record(ROOT / "benchmark_tools/NATIVE_FACTORIAL_RUNTIME_REPAIR_22426.md")])
     baseline = receipt["baseline"]
     frozen = read(baseline)
     if frozen["core_commit"] != CORE_COMMIT:
@@ -77,6 +98,9 @@ def prepare(output, panel):
         limitations=["Plan preparation is not execution authorization; each held Slurm job requires an explicit bound request.",
             "Descriptive one-attempt costs, not replicated causal component effects or isolated efficiency ranks.",
             "Fresh persistent input copies differ in storage scope/order from historical tmpfs runs; no exact-output equality is assumed."])
+    if supersedes is not None:
+        plan.update(supersedes_plan=supersedes, retained_preflight_failure=retained_failure,
+                    replacement_reason="Known packaging-only stale inventory; original attempt retained and no native inference previously ran")
     validate_plan(plan)
     with output.open("x") as handle:
         json.dump(plan, handle, indent=2, sort_keys=True)
@@ -88,5 +112,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--panel-root", type=Path, required=True)
+    parser.add_argument("--runtime-lookup", type=Path)
+    parser.add_argument("--runtime-lookup-sha256")
+    parser.add_argument("--supersedes-plan", type=Path)
+    parser.add_argument("--retained-preflight-failure", type=Path)
     args = parser.parse_args()
-    prepare(args.output.absolute(), args.panel_root.absolute())
+    runtime_ref = record(args.runtime_lookup) if args.runtime_lookup else None
+    if bool(args.runtime_lookup) != bool(args.runtime_lookup_sha256) or runtime_ref and runtime_ref["sha256"] != args.runtime_lookup_sha256:
+        parser.error("A refreshed lookup requires its explicit SHA256")
+    prepare(args.output.absolute(), args.panel_root.absolute(), runtime_lookup=runtime_ref,
+        supersedes=record(args.supersedes_plan) if args.supersedes_plan else None,
+        retained_failure=record(args.retained_preflight_failure) if args.retained_preflight_failure else None)

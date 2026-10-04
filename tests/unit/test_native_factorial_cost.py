@@ -257,6 +257,7 @@ def test_launch_bootstrap_uses_separate_request_scope():
 
 def test_actual_prepared_plan_and_policy_bytes():
     import hashlib
+    import subprocess
     path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_plan_20261004.json"
     assert hashlib.sha256(path.read_bytes()).hexdigest() == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
     plan = json.loads(path.read_text())
@@ -265,6 +266,10 @@ def test_actual_prepared_plan_and_policy_bytes():
     assert plan["source_commit"] == "3c275a025b6e3743beffe08db6d48a54454e4732"
     for ref in plan["helper_sources"] + plan["evidence"]:
         raw = Path(ref["path"]).read_bytes()
+        if Path(ref["path"]).name in {"prepare_native_factorial_cost.py", "run_native_factorial_cost.py"}:
+            # The failed attempt keeps its historical generator, not a rewritten pin.
+            relative = Path(ref["path"]).relative_to(cost.ROOT).as_posix()
+            raw = subprocess.check_output(["git", "-C", str(cost.ROOT), "show", plan["source_commit"] + ":" + relative])
         assert len(raw) == ref["bytes"]
         assert hashlib.sha256(raw).hexdigest() == ref["sha256"]
     for index in (0, 6):
@@ -278,3 +283,64 @@ def test_actual_prepared_plan_and_policy_bytes():
     assert policy["plan_sha256"] == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
     assert policy["foreign_cpu_role"] == policy["native_pressure_role"] == policy["preflight_pressure_role"] == "diagnostic_only"
     assert policy["minimum_available_memory_bytes"] == cost.MEMORY
+
+
+def test_exact_packaging_only_runtime_delta():
+    from benchmark_tools.refresh_native_factorial_lookup import delta, CHANGES
+    before = dict(roots=["/unchanged"], records=[])
+    after = deepcopy(before)
+    for name, (a, b) in CHANGES.items():
+        row = dict(path=str(cost.ROOT / "benchmark_tools" / name), mode=436, kind="file", bytes=10, sha256=a)
+        before["records"].append(row)
+        after["records"].append(dict(row, sha256=b, bytes=20))
+    assert len(delta(before, after)) == 3
+    for mutation in ("add", "hash", "mode", "roots", "other"):
+        wrong = deepcopy(after)
+        if mutation == "add":
+            wrong["records"].append(dict(path="/unexpected", mode=436, kind="file", bytes=4, sha256="bad"))
+        elif mutation in ("hash", "mode"):
+            wrong["records"][0]["sha256" if mutation == "hash" else "mode"] = "bad" if mutation == "hash" else 0
+        elif mutation == "roots":
+            wrong["roots"] = ["/other"]
+        else:
+            wrong["unreviewed_metadata"] = True
+        with pytest.raises(ValueError):
+            delta(before, wrong)
+
+
+def test_actual_22426_failed_before_materialization_or_inference():
+    import hashlib
+    root = cost.ROOT / "benchmarks/results/native_factorial_cost_v1_20261004"
+    report = root / "sessions/run_00/result.json"
+    result = json.loads(report.read_text())
+    assert result["job_id"] == 22426 and result["index"] == 0
+    assert result["status"] == "factorial_attempt_failed_retained"
+    assert result["wrapper"]["status"] == "verified_wrapper_failed"
+    assert result["wrapper"]["error"] == "Runtime inventory changed"
+    assert result["automatic_retry"] is False
+    assert result["next_identity_authorized"] is False
+    assert not (root / "run_00/input").exists()
+    assert not (root / "run_00/native").exists()
+    assert not (root / "run_00/measurement").exists()
+    assert hashlib.sha256(Path(result["plan"]["path"]).read_bytes()).hexdigest() == result["plan"]["sha256"]
+
+
+def test_expired_controller_accounting_identity():
+    raw = "22426|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-04T18:52:24|2026-10-04T18:52:59|2026-10-04T18:53:27|orthohmm_factorial_cost\n"
+    assert cost.terminal_accounting(raw, 22426)["State"] == "FAILED"
+    for a, b in (("22426", "22426_0"), ("FAILED", "RUNNING"), ("64|128G", "32|128G"),
+                 ("128G", "96G"), ("1560", "1440"), ("bizon", "dgx")):
+        with pytest.raises(ValueError):
+            cost.terminal_accounting(raw.replace(a, b), 22426)
+
+
+def test_transient_controller_error_does_not_imply_terminal(monkeypatch):
+    import subprocess
+    calls = []
+    def failed(command, **kwargs):
+        calls.append(command)
+        return subprocess.CompletedProcess(command, 1, "", "Connection refused")
+    monkeypatch.setattr(cost.subprocess, "run", failed)
+    with pytest.raises(ValueError, match="not an expired"):
+        cost.verify_terminal(22426)
+    assert len(calls) == 1

@@ -1,5 +1,45 @@
 # Publication Progress
 
+## First Full-Cost Preflight Retained And Runtime Binding Repaired (2026-10-04)
+
+Prepare/push separate executor at3c275a02 and freeze/push its thirteen-identity
+plan/shared-host policy at7edc3976. Recheck collector provenance:39 of43
+static local dependencies are byte-identical to job22380 calibration; retain
+explicit diffs for earlier host-observer anchoring, Linux-affinity portability
+and Python-version float-summation compatibility fixes. The current collector
+is not falsely described as byte-identical to historical calibration. Its
+existing accounting/cadence component evidence is reused within that scope;
+364 handoff/collector/source-replay tests pass, no repeat calibration.
+
+Submit exactly one held index0 job22426, bind request SHA to its scheduler
+comment, then release. Actual runtime verification fails before input copies,
+native measurement or inference. Slurm reports FAILED1:0 after28s; later
+fresh sacct confirms terminal identity/resources after controller expiry.
+No native cost/output exists, so costs remain null, not scheduler elapsed
+or zero. Preserve original plan/request/session/verification and collect
+[the failed-attempt receipt](native_factorial_cost_attempt_22426.json).
+
+Actual52.94s full inventory comparison identifies exactly three changed
+packaging helpers, zero added/removed records. They are already committed
+archive/reporting changes; no scientific, native-tool, private-runtime or
+OS drift is accepted. A narrow refresh pins precisely these old/new hashes,
+preserves roots/baseline/controller/private manifests and rejects any other
+change. Fresh whole-runtime checks pass before/after native interpreter
+lookup; OrthoHMM and OrthoFinder declared scientific lookup signatures match
+the retained deployment. [Repaired lookup](native_factorial_runtime_lookup_repaired_20261004.json)
+is validation only, not inference. Final repair/failed-output/terminal-state
+regressions pass368 without failures/skips.
+
+Freeze [a prospective replacement amendment](../NATIVE_FACTORIAL_RUNTIME_REPAIR_22426.md)
+before another launch. It permits one distinct replacement for the unmeasured
+index0 only after new plan/policy/request and actual capacity/accounting
+checks. Keep original22426 visible; no output overwrite, implicit resume,
+requeue or timing-outcome selection. Remaining sequential history can use
+fresh terminal accounting after explicit controller expiry, not treat
+transient observation errors as terminal. No replacement is launched at
+this repair milestone. Broader goal remains active and incomplete; prior
+scores/publication snapshots/cached cost nulls and unrelated work unchanged.
+
 ## Separate Full Native Factorial Executor Validated (2026-10-04)
 
 The previous turn updates the user-authorized shared-host goal prompt; it

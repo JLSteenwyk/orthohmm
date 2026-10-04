@@ -5,12 +5,14 @@ runtime/input hashing remain outside the collector's native interval.
 """
 
 import argparse
+import csv
 import hashlib
 import importlib
 import json
 import os
 from pathlib import Path
 import shutil
+import re
 import subprocess
 import sys
 import time
@@ -88,6 +90,43 @@ def validate_request(request, plan_ref, job):
             or not isinstance(request.get("history"), list)
             or len(request["history"]) != request["index"]):
         raise ValueError("Wrong explicit factorial request or sequential history")
+
+
+def terminal_accounting(raw, job):
+    from benchmark_tools.capture_array_scheduler import TERMINAL
+    rows = list(csv.reader(raw.strip().splitlines(), delimiter="|"))
+    if len(rows) != 1 or len(rows[0]) != 12:
+        raise ValueError("Require one full non-array accounting row")
+    fields = dict(zip(("JobIDRaw", "State", "ExitCode", "AllocCPUS", "ReqMem", "NodeList", "Partition",
+                       "TimelimitRaw", "Submit", "Start", "End", "JobName"), rows[0]))
+    if (fields["JobIDRaw"] != str(job) or fields["State"] not in TERMINAL
+            or not re.fullmatch(r"[0-9]+:[0-9]+", fields["ExitCode"])
+            or fields["AllocCPUS"] != "64" or fields["ReqMem"] not in {"128G", "128Gn", "131072M", "131072Mn"}
+            or fields["NodeList"] != "bizon" or fields["Partition"] != "gpu"
+            or fields["TimelimitRaw"] != "1560" or fields["JobName"] != "orthohmm_factorial_cost"
+            or any(not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}", fields[k])
+                   for k in ("Submit", "Start", "End"))):
+        raise ValueError("Accounting identity, resource envelope or terminal state differs")
+    return fields
+
+
+def verify_terminal(job):
+    from benchmark_tools.verify_threadripper_controller import validate
+    command = ["scontrol", "show", "job", str(job), "--oneliner"]
+    result = subprocess.run(command, capture_output=True, text=True, timeout=5)
+    observation = dict(command=command, returncode=result.returncode, stdout=result.stdout, stderr=result.stderr)
+    if result.returncode == 0:
+        verified = validate(result.stdout, job, "terminal", command=str(SCRIPT), cwd=str(ROOT),
+                            time_limit="1-02:00:00", allocation_mode="shared")
+        return dict(source="live_controller", observation=observation, verified=verified)
+    if "Invalid job id specified" not in result.stderr:
+        raise ValueError("Controller observation failed, not an expired terminal record")
+    command = ["sacct", "-X", "-j", str(job), "-n", "-P", "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"]
+    account = subprocess.run(command, capture_output=True, text=True, timeout=5, check=True)
+    return dict(source="fresh_accounting_after_controller_expiry", controller_observation=observation,
+        observation=dict(command=command, stdout=account.stdout, stderr=account.stderr),
+        verified=terminal_accounting(account.stdout, job),
+        limitation="Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.")
 
 
 def native_kwargs(module, run, baseline):
@@ -295,7 +334,6 @@ def execute(request_ref):
     from benchmark_tools.measure_threadripper_scaling import measure
     from benchmark_tools.review_threadripper_process_stream import audit
     from benchmark_tools.run_simulation_methods import execution_environment, verify_environment
-    from benchmark_tools.verify_threadripper_controller import validate
     request = read(request_ref)
     plan_ref = request["plan"]
     plan = read(plan_ref)
@@ -319,16 +357,13 @@ def execute(request_ref):
     if (not shared_environment(policy) or policy["plan_sha256"] != plan_ref["sha256"]
             or policy["minimum_available_memory_bytes"] != MEMORY):
         raise ValueError("Policy does not bind this shared-host plan")
+    history_evidence = []
     for i, prior_ref in enumerate(request["history"]):
         prior = read(prior_ref)
         if (prior.get("index") != i or prior.get("plan") != plan_ref
                 or prior.get("terminal_reviewed") is not True or prior.get("next_identity_authorized") is not True):
             raise ValueError("Previous factorial identity unresolved")
-        old_job = prior["job_id"]
-        result = subprocess.run(["scontrol", "show", "job", str(old_job), "--oneliner"],
-                                capture_output=True, text=True, timeout=5, check=True)
-        validate(result.stdout, old_job, "terminal", command=str(SCRIPT), cwd=str(ROOT),
-                 time_limit="1-02:00:00", allocation_mode="shared")
+        history_evidence.append(dict(review=prior_ref, scheduler=verify_terminal(prior["job_id"])))
     for ref in [plan_ref, request_ref, *plan["evidence"], *plan["helper_sources"]]:
         check(ref)
     run = runs[request["index"]]
@@ -339,6 +374,7 @@ def execute(request_ref):
         request=request_ref, plan=plan_ref, execution_scope=SCOPE, automatic_retry=False,
         scientific_timings_admitted=False, next_identity_authorized=False, uncontended_timing=False,
         contention_distortion="unknown_potentially_method_dependent")
+    outcome["history_scheduler_evidence"] = history_evidence
     save(session / "started.json", outcome)
     env, _ = execution_environment(baseline)
     env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONPYCACHEPREFIX=str(session / "absent_python_cache"))
