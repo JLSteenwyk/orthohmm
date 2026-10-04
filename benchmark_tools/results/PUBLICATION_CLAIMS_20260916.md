@@ -28,7 +28,9 @@ aborted before OrthoFinder started; it has no native resource measurement and
 has a [tested repair and explicit history resolution](THREADRIPPER_PRENATIVE_REPAIR_20261004.md);
 the [new runtime/reporting checkpoint](THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
 binds the three changed helpers and explicitly reports its null endpoints.
-Fresh preparation and actual native handoff still precede progression.
+Actual preparation and native handoff now pass for
+[22414, index 18](THREADRIPPER_SHARED_SUBMISSION_22414.md); its dated live
+checkpoint is not terminal resource review or final panel completion.
 The [partial figure](threadripper_shared_resource_figure_20261004_v17/shared_threadripper_resources.pdf)
 retains the seventeen measurements and explains the unplotted abort; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
@@ -626,8 +628,9 @@ failure and [tested, explicitly resolved history](THREADRIPPER_PRENATIVE_REPAIR_
 The refreshed native lookup preserves scientific/private runtime identities;
 the new continuation/review/reporting sources include the resolved abort without
 fabricating a native timing record. Before index 18 (full OrthoFinder 3.1.5,
-four proteomes, repeat 2), prepare current-source protocol/readiness bindings
-and satisfy fresh actual native handoff checks.
+four proteomes, repeat 2), current-source protocol/readiness preparation and
+actual native handoff now pass as 22414. Its terminal resource/output review
+is pending; use fresh scheduler state, not the dated live snapshot.
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 

@@ -34,8 +34,10 @@ index 17: OrthoFinder never started, so there are no native resource endpoints.
 The snapshot includes that abort explicitly with null endpoints, not as a measurement. The remaining panel
 is not complete. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
 now pass; the [new runtime and reporting checkpoint](results/THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
-preserves all earlier source-bound artifacts. Fresh preparation and actual
-native handoff remain required before advancing. No attempt is overwritten or retried.
+preserves all earlier source-bound artifacts. Actual preparation and native
+handoff now pass for [22414, index 18](results/THREADRIPPER_SHARED_SUBMISSION_22414.md),
+full OrthoFinder, four proteomes, repeat 2. Its dated live checkpoint is not
+a terminal review; obtain fresh scheduler state on continuation. No attempt is overwritten or retried.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v17/shared_threadripper_resources.pdf)
 retains the seventeen measured observations and explains the unplotted abort without isolated speedup claims. The

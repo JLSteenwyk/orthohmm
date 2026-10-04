@@ -68,3 +68,19 @@ At this checkpoint no timing job is live. Actual preparation and subsequent
 submission/native handoff are separate retained milestones, not inferred from
 unit tests or the runtime lookup. Next identity is full OrthoFinder 3.1.5,
 four proteomes, repeat 2, index 18. The full publication goal remains incomplete.
+
+## Subsequent Preparation
+
+After committing/pushing the new integration at `af32242d`, actual preparation
+passes with next index 18. The
+[public preparation copy](threadripper_shared_prenative_preparation_20261004.json)
+is byte-identical to canonical preparation: 7,377 bytes, SHA-256
+`2296ce1c7ed1c0c4f394fb243d1e8c7387a4e37acb6408c454f280bae499687d`.
+It pins all 887 execution sources at that commit, the refreshed lookup/binding,
+unchanged plan, newly frozen resource protocol, policy, readiness and all eighteen
+reviewed sessions. Independent readback checks all seven direct preparation
+pins, endpoint protocol, both resolved sessions and next identity. All policy
+bounds/diagnostic roles remain exactly unchanged; only evidence and explanation
+are refreshed. No ordinary contention threshold or measurement-validity bound
+is relaxed. Preparation records `native_runs_started: false`; submission and
+native handoff are separate events.

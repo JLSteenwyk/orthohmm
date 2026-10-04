@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Repaired Shared Panel Resumed As 22414 (2026-10-04)
+
+This continuation makes concrete progress: commit/push `af32242d` binds the
+new runtime, continuation/reviewer/snapshot and explicit abort reporting;
+151 relevant regression cases pass in 47.01s. Actual preparation and binding/
+policy readback then pass: 887 execution sources, eighteen reviewed sessions,
+both retained resolutions, new lookup/protocol/readiness, next index 18 and
+unchanged capacity/monitoring/diagnostic bounds. Public preparation exactly
+matches canonical 7,377 bytes, SHA-256
+`2296ce1c7ed1c0c4f394fb243d1e8c7387a4e37acb6408c454f280bae499687d`.
+
+The next frozen identity is selected/held/request-bound/released as **22414**:
+full OrthoFinder 3.1.5, four proteomes, repeat 2, index 18. The
+[submission and actual native-handoff note](THREADRIPPER_SHARED_SUBMISSION_22414.md)
+links exact canonical/public launch metadata and a fresh native live snapshot.
+Parent/batch/native are RUNNING; native log confirms v3.1.5, 32 threads,
+default MSA-tree pipeline and DIAMOND search. Actual environmental preflight
+passes, release binds it and `go` is true. Available memory 329,769,832,448 /
+329,574,883,328 bytes exceeds the full 128-GiB floor; observed foreign demand
+41.2694294498 cores is annotated, not excluded. Immutable initial sample is
+pinned while the log grows; first observed process gap 30.0004067310s meets
+the unchanged 35-second bound. This is actual repaired handoff, not final
+resource/output/cadence admission or an isolation pass.
+
+The live snapshot at scheduler elapsed 3:38 is dated evidence only. Fresh
+sacct/controller queries must establish state on every continuation. All
+owned refresh/report/plot/test/prepare/launch/snapshot tool sessions are terminal;
+Slurm 22414 continues independently. Do not start or retry any other identity.
+Wait for parent/batch/native terminal state, preserve terminal controller
+evidence before purge if necessary, then run the **new** independent reviewer
+on index 18. Only its canonical review and full-prefix validation authorize
+index 19. The current eighteen-reviewed-attempt table does not yet include
+this live attempt as reviewed; both earlier exclusions remain preserved.
+
+All new sources/results are scoped; unrelated dirty sample outputs and other
+analyses/services remain untouched. No expensive completed scientific analysis,
+calibration, failure audit, resolution or unchanged runtime refresh is repeated.
+Full publication goal remains active and incomplete, including remaining
+panel, final resource/manuscript reconciliation and versioned/archive release.
+
 ## Pre-Native Runtime, Reporting And Continuation Integration (2026-10-04)
 
 The preceding user-requested confirmation is no analysis progress, but draining
