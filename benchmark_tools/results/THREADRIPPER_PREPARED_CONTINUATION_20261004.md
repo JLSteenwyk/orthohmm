@@ -50,3 +50,22 @@ observations. Leave unrelated analyses/services untouched and retain unknown,
 potentially method-dependent contention limits. The six remaining identities,
 final manuscript/resource reconciliation and versioned/archive release are
 not yet complete.
+
+## Actual Preparation
+
+Prospective sources/validation are committed and pushed at `7b0bf151`.
+The frozen controller executes preparation once and selects index 21 after
+the real 21-identity history passes. The [public preparation copy](threadripper_prepared_panel_preparation_20261004.json)
+matches the canonical work receipt exactly: 8,266 bytes, SHA-256
+`3e92b96fd7c6a705d61b793306c7cbbe74f844255ea4be2e6ae23fd17b09f78e`.
+It pins new source recipe, endpoint protocol, environmental policy and readiness
+at the prospective commit, not an inferred or fabricated handoff.
+
+Actual structured readback verifies all 887 source hashes, direct preparation/
+policy/readiness/prefix evidence and frozen private controller/plan identities.
+Policy fields other than evidence/review wording equal the original policy:
+128 GiB safe available-memory floor, 35s process gap, 1.5s pressure gap, diagnostic
+foreign CPU/PSI roles and no isolation requirement. The three original endpoint
+scopes remain unchanged. Readiness still has native handoff and causal observer
+slowdown false. No index-21 request or measurement directory exists at readback.
+Preparation/check handles are terminal; commit/push these receipts before launch.

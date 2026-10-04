@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Actual Prepared Panel Bindings Pass (2026-10-04)
+
+Prospective continuation/terminal-review/live-snapshot and 54-case captured
+validation are committed/pushed at `7b0bf151`. Frozen-controller preparation
+executes once, checks the actual 21-identity prefix and selects index 21.
+The [public preparation copy](threadripper_prepared_panel_preparation_20261004.json)
+is byte-identical to canonical work receipt: 8,266 bytes, SHA-256
+`3e92b96fd7c6a705d61b793306c7cbbe74f844255ea4be2e6ae23fd17b09f78e`.
+New source recipe/resource protocol/policy/readiness bind this prospective
+commit, new lookup, current repair/validation and both preserved abort sessions.
+
+Structured actual readback passes: 887 source hashes, direct preparation/policy/
+readiness/prefix evidence, controller/plan/lookup bindings and unchanged endpoint
+scopes. All original policy fields except evidence/review wording are equal:
+128-GiB available floor, 35s process gap, 1.5s pressure gap, diagnostic background
+roles. Isolation, native-handoff and causal-slowdown flags remain false. No next
+request/measurement path exists. No unchanged kernel/regression/calibration or
+successful scientific execution is repeated. All preparation/check handles end.
+
+Commit/push the actual preparation before launching only index 21, OH high,
+eight proteomes, repeat 2. Verify actual job/prepared/capacity/native handoff;
+do not infer it from readiness. Full panel/manuscript/release remain incomplete.
+
 ## Prepared Continuation Helpers Validated (2026-10-04)
 
 The preceding user-request turn restates the already-saved shared-host scope

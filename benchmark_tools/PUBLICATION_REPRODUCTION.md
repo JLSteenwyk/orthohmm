@@ -56,8 +56,9 @@ The [prepared continuation helpers](results/THREADRIPPER_PREPARED_CONTINUATION_2
 now pass 54 source-pinned tests. Use the new dated continuation, terminal
 reviewer and live snapshot, not the old pre-native continuation/lookup. They
 retain both abort resolutions and verify preparation-before-release ordering;
-actual new source/resource/environment/readiness preparation and index-21
-native handoff still remain. Do not repeat the existing kernel regression,
+Actual [new source/resource/environment/readiness preparation](results/threadripper_prepared_panel_preparation_20261004.json)
+now passes real history and source/bounds readback; index-21 native handoff
+still remains. Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)
