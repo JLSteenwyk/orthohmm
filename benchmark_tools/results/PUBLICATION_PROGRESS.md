@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Selected QfO OrthoHMM Stage Linkage Prepared (2026-10-04)
+
+The preceding user-requested turn only reconfirms the already amended goal;
+classify it as no scientific progress. Re-read the full goal and current
+ledger, query Slurm (no owned job live), and take the available safe action:
+resolve the two selected QfO OrthoHMM metadata omissions without re-running
+native inference, scoring, expensive inventories or the closed timing panel.
+
+The new [workflow](QFO_ORTHOHMM_STAGE_LINKAGE_WORKFLOW_20261004.md) and tested
+reporter join exact score/conversion/candidate/replay/native-pair chains.
+The first real in-memory collection passes, checks 16 direct metadata files
+and preserves all 24 rows; no preliminary output is created. The focused
+suite passes 83 cases with one selected-export readback skipped until the
+source-frozen output exists. Prepare/push source before that actual export.
+
+Retain all 37 previous resource entries and add five stage associations:
+one shared cached replay represented in both rows, two candidate-arm costs
+and one native reconciliation cost. Full costs remain unavailable for the
+selected cached executions. Do not sum intervals, promote scheduler times
+or combine GNU-time process RSS with sampled tree RSS. Raw artifact/input
+consumption and transitive runtime/source identities remain inherited.
+
+Next export/read back the exact selected result, run the final no-skip
+focused suite and push generated artifacts/receipt/result updates. Broader
+uncertainty, family exposure inventory, biological strata, configuration
+costs and distribution still require work; the full goal remains active.
+No quiet-window/DGX gate or unrelated job/service action is introduced.
+
 ## Actual All-Tool Metadata Integration Delivered (2026-10-04)
 
 The preceding goal turn made progress through the pushed candidate mechanism
