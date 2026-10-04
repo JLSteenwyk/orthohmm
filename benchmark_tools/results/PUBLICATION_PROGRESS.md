@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Source Helper Export Repair Tested In Isolation (2026-10-04)
+
+Previous goal turn is a verified wait: actual22422 remains live with changing
+FAMSA/FastTree children and resource samples;22423 waits on its exact terminal
+dependency. Read the full objective/current ledger and retain the same jobs.
+No native analysis or gap audit is repeated; source tests address a concrete
+packaging implementation rather than another resumption check.
+
+Implement the [source-export fix](PUBLICATION_SOURCE_HELPERS_STAGED_20261004.md)
+in an isolated copy of the bound bundler, not the live source. Explicit
+result-helper selection/schema3 preserves historical defaults and exports
+committed Python helpers without result data. Legacy/new fixture tests,
+relocated copied CLI verification, imports and test collection pass:187 cases
+in35.00s. The initial35 fixture failures remain pinned/local; final self-
+contained tests pass. Patch-check and isolated application reproduce both
+tested files exactly. Live bundler bytes/hash remain unchanged.
+
+Retain the unapplied patch and validation receipt; integrate after27 reviews,
+then build/validate the actual final committed-source export. Do not present
+fixture execution as a final archive or native/data-runtime reproduction.
+This prepares required packaging without changing frozen timing inputs,
+source/runtime/recipe/bounds or unrelated work/services.
+
+Fresh accounting now shows22422 native step COMPLETED0:0; parent/batch still
+RUNNING in post-inference finalization and22423 dependency-pending. Actual log
+reports completed full OrthoFinder. This is not terminal parent/provenance
+review or a new timing admission. Observe the same parent through finalization,
+use retained controller when available and independently review before26.
+Tablev25/figurev24 stay25 reviewed/23 measured/22 eligible/five complete cells;
+two identities remain unreviewed(one finalizing,one unsubmitted). Final panel,
+manuscript/PDF and executable/versioned archive remain open; full goal active.
+Subsequent fresh accounting confirms parent/batch/native22422 and capture-only
+22423 COMPLETED0:0. Retained terminal controller is available. Run the existing
+independent reviewer once, not new inference, before advancing the final identity.
+
 ## Current Workflow Source Export Gap Quantified (2026-10-04)
 
 Previous goal turn is progress: commits/pushes `58cc3036` and `576d715a`

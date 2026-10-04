@@ -1,0 +1,251 @@
+--- a/benchmark_tools/bundle_publication_source.py
++++ b/benchmark_tools/bundle_publication_source.py
+@@ -63,7 +63,7 @@
+     return name
+ 
+ 
+-def selected(name, component, profile="source-only"):
++def selected(name, component, profile="source-only", include_result_helpers=False):
+     if profile not in PROFILES:
+         raise ValueError("Unknown source profile")
+     if component == "scientific":
+@@ -73,6 +73,7 @@
+     if component == "workflow":
+         return (name in {"LICENSE.md", GUIDE, "benchmark_tools/PUBLICATION_REPRODUCTION.md"}
+                 or re.fullmatch(r"benchmark_tools/[^/]+\.py", name) is not None
++                or (include_result_helpers and re.fullmatch(r"benchmark_tools/results/[^/]+\.py", name) is not None)
+                 or re.fullmatch(r"tests/unit/[^/]+\.py", name) is not None
+                 or name in support_pins(profile))
+     raise ValueError("Unknown source component")
+@@ -96,7 +97,7 @@
+     return names
+ 
+ 
+-def inventory(repo, revision, component, profile="source-only"):
++def inventory(repo, revision, component, profile="source-only", include_result_helpers=False):
+     data = subprocess.check_output(["git", "-C", str(repo), "ls-tree", "-rz", revision])
+     result = {}
+     for entry in data.split(b"\0"):
+@@ -104,7 +105,7 @@
+             continue
+         header, raw_name = entry.split(b"\t", 1)
+         name = relative(raw_name.decode())
+-        if not selected(name, component, profile):
++        if not selected(name, component, profile, include_result_helpers):
+             continue
+         mode, kind, blob = header.decode().split()
+         if kind != "blob" or mode not in {"100644", "100755"} or name in result:
+@@ -129,7 +130,13 @@
+     if identity(content)["sha256"] != manifest_sha:
+         raise ValueError("Source index digest differs from external anchor")
+     manifest = json.loads(content)
+-    if manifest["schema"] == "publication_source_components_v1":
++    include_result_helpers = False
++    if manifest["schema"] == "publication_source_components_v3":
++        profile = manifest.get("profile")
++        if profile not in PROFILES or manifest.get("include_result_helpers") is not True:
++            raise ValueError("Current source schema must explicitly include result helpers")
++        include_result_helpers = True
++    elif manifest["schema"] == "publication_source_components_v1":
+         if "profile" in manifest:
+             raise ValueError("Historical source schema cannot override profile")
+         profile = "source-only"
+@@ -139,6 +146,8 @@
+             raise ValueError("Unsupported acquisition-support profile")
+     else:
+         raise ValueError("Unknown source schema")
++    if not include_result_helpers and "include_result_helpers" in manifest:
++        raise ValueError("Historical source schema cannot override helper selection")
+     if profile == "native-build" and manifest.get("build_revision") != BUILD_REVISION:
+         raise ValueError("Build overlay revision differs")
+     if (
+@@ -155,7 +164,7 @@
+         component, source = name.split("/", 1)
+         expected_revision = (SCIENTIFIC_REVISION if component == "scientific" else
+                              BUILD_REVISION if component == "build" else manifest["workflow_revision"])
+-        if (name in seen or not selected(source, component, profile) or row["git_path"] != source
++        if (name in seen or not selected(source, component, profile, include_result_helpers) or row["git_path"] != source
+                 or row["git_revision"] != expected_revision or row["mode"] not in (0o644, 0o755)
+                 or not re.fullmatch(r"[0-9a-f]{40}", row["git_blob"])):
+             raise ValueError("Source index contains invalid mapping or duplicate")
+@@ -190,12 +199,16 @@
+                 redistribution_clearance=False, publication_ready=False)
+     if profile == "native-build":
+         result["build_revision"] = BUILD_REVISION
++    if include_result_helpers:
++        result["result_helpers_included"] = True
+     return result
+ 
+ 
+-def build(repo, revision, output, profile="source-only"):
++def build(repo, revision, output, profile="source-only", include_result_helpers=False):
+     if profile not in PROFILES:
+         raise ValueError("Unknown source profile")
++    if type(include_result_helpers) is not bool:
++        raise ValueError("Result-helper selection must be an explicit boolean")
+     repo, output = Path(repo).resolve(), Path(output).absolute()
+     if output.exists() or output.is_symlink():
+         raise FileExistsError(output)
+@@ -205,7 +218,7 @@
+     if profile == "native-build":
+         components.append(("build", BUILD_REVISION))
+     for component, source_revision in components:
+-        for source, (content, mode, blob) in sorted(inventory(repo, source_revision, component, profile).items()):
++        for source, (content, mode, blob) in sorted(inventory(repo, source_revision, component, profile, include_result_helpers).items()):
+             name = component + "/" + source
+             payloads[name] = (content, mode)
+             rows.append(dict(path=name, git_path=source, git_revision=source_revision,
+@@ -237,6 +250,11 @@
+             manifest["build_revision"] = BUILD_REVISION
+             manifest["limitations"].append(
+                 "Native-build additionally carries the frozen setup-only overlay separately; a rebuilt candidate wheel is not silently substituted into historical hash locks or admitted scientific executors.")
++    if include_result_helpers:
++        manifest.update(schema="publication_source_components_v3", profile=profile,
++                        include_result_helpers=True)
++        manifest["limitations"].append(
++            "Operational results-module Python sources are included as exact committed blobs. Result data remain excluded; syntax/integrity do not establish runtime/data closure or executable inference.")
+     output.mkdir(parents=True, exist_ok=False)
+     for name, (content, mode) in payloads.items():
+         path = output / name
+@@ -259,9 +277,10 @@
+     builder.add_argument("--revision", required=True)
+     builder.add_argument("--output", type=Path, required=True)
+     builder.add_argument("--profile", choices=sorted(PROFILES), default="source-only")
++    builder.add_argument("--include-result-helpers", action="store_true")
+     verifier = commands.add_parser("verify")
+     verifier.add_argument("directory", type=Path)
+     verifier.add_argument("--manifest-sha256", required=True)
+     args = parser.parse_args()
+-    result = build(args.repo, args.revision, args.output, args.profile) if args.command == "build" else verify(args.directory, args.manifest_sha256)
++    result = build(args.repo, args.revision, args.output, args.profile, args.include_result_helpers) if args.command == "build" else verify(args.directory, args.manifest_sha256)
+     print(json.dumps(result, indent=2, sort_keys=True))
+--- /dev/null
++++ b/tests/unit/test_bundle_publication_source_helpers.py
+@@ -0,0 +1,126 @@
++import json
++import shutil
++import subprocess
++import sys
++
++import pytest
++
++from tests.unit.test_bundle_publication_source import exported, git, rewrite_index
++from tests.unit import test_bundle_publication_source as legacy
++
++
++@pytest.fixture
++def source_module():
++    return legacy.module
++
++
++def commit_helpers(repo):
++    root = repo / 'benchmark_tools/results'
++    root.mkdir(parents=True, exist_ok=True)
++    (root / 'fixture_dep.py').write_text('VALUE = 42\n')
++    (root / 'fixture_source.py').write_text('from .fixture_dep import VALUE\n')
++    (repo / 'tests/unit/test_example.py').write_text(
++        'from benchmark_tools.results.fixture_source import VALUE\n'
++        'def test_example():\n    assert VALUE == 42\n')
++    git(repo, 'add', 'benchmark_tools/results/fixture_dep.py',
++        'benchmark_tools/results/fixture_source.py', 'tests/unit/test_example.py')
++    git(repo, 'commit', '-qm', 'Result helper fixture')
++    # Export must read Git, not mutable working source.
++    (root / 'fixture_source.py').write_text('not valid python !')
++    return git(repo, 'rev-parse', 'HEAD')
++
++
++def test_result_helpers_relocated_import_collection_and_verifier(exported, source_module, tmp_path):
++    repo, _, original = exported
++    revision = commit_helpers(repo)
++    output = tmp_path / 'with-helpers'
++    original_index = json.loads((tmp_path / 'bundle/SOURCE_INDEX.json').read_text())
++    profile = original_index.get('profile', 'source-only')
++    result = source_module.build(repo, revision, output, profile, include_result_helpers=True)
++    index = json.loads((output / 'SOURCE_INDEX.json').read_text())
++    assert index['schema'] == 'publication_source_components_v3'
++    assert index['include_result_helpers'] is True
++    assert result['result_helpers_included'] is True
++    assert result['executable_benchmark_reproduced'] is False
++    assert result['publication_ready'] is False
++    assert not (output / 'workflow/benchmark_tools/results/private.json').exists()
++    assert (output / 'workflow/benchmark_tools/results/fixture_source.py').read_text() == 'from .fixture_dep import VALUE\n'
++    assert (output / 'scientific/orthohmm/version.py').read_text() == "VERSION = 'fixture'\n"
++    legacy = tmp_path / 'legacy-again'
++    source_module.build(repo, revision, legacy, profile)
++    assert not (legacy / 'workflow/benchmark_tools/results/fixture_source.py').exists()
++    assert json.loads((legacy / 'SOURCE_INDEX.json').read_text())['schema'] == original_index['schema']
++
++    relocated = tmp_path / 'relocated'
++    shutil.copytree(output, relocated)
++    shutil.rmtree(output)
++    shutil.rmtree(repo)
++    command = [sys.executable, '-I', '-S', '-B', str(relocated / 'workflow' / source_module.RUNNER),
++               'verify', str(relocated), '--manifest-sha256', result['manifest']['sha256']]
++    checked = subprocess.run(command, cwd=tmp_path, env={'PATH': '/no-git-here'},
++                             capture_output=True, text=True, timeout=10)
++    assert checked.returncode == 0, checked.stderr
++    assert json.loads(checked.stdout) == result
++    workflow = relocated / 'workflow'
++    imported = subprocess.run([sys.executable, '-I', '-S', '-B', '-c',
++        f'import sys; sys.path.insert(0, {str(workflow)!r}); '
++        'from benchmark_tools.results.fixture_source import VALUE; assert VALUE == 42'],
++        cwd=tmp_path, env={'PATH': '/no-git-here'}, capture_output=True, text=True, timeout=10)
++    assert imported.returncode == 0, imported.stderr
++    collected = subprocess.run([sys.executable, '-I', '-B', '-c',
++        f'import sys; sys.path.insert(0, {str(workflow)!r}); import pytest; '
++        f'raise SystemExit(pytest.main(["--collect-only", "-q", {str(workflow / "tests/unit/test_example.py")!r}]))'],
++        cwd=tmp_path, capture_output=True, text=True, timeout=15)
++    assert collected.returncode == 0, collected.stderr
++    assert '1 test collected' in collected.stdout
++
++
++@pytest.mark.parametrize('flag', [False, None, 1, 'true'])
++def test_current_schema_requires_exact_boolean(exported, source_module, tmp_path, flag):
++    repo, _, _ = exported
++    revision = commit_helpers(repo)
++    output = tmp_path / 'with-helpers'
++    source_module.build(repo, revision, output, include_result_helpers=True)
++    digest = rewrite_index(output, lambda index: index.update(include_result_helpers=flag))
++    with pytest.raises(ValueError, match='explicitly include result helpers'):
++        source_module.verify(output, digest)
++
++
++@pytest.mark.parametrize('exported', ['orthobench-inputs'], indirect=True)
++@pytest.mark.parametrize('schema', ['publication_source_components_v1', 'publication_source_components_v2'])
++def test_historical_schema_cannot_enable_helpers(exported, source_module, tmp_path, schema):
++    repo, _, _ = exported
++    revision = commit_helpers(repo)
++    output = tmp_path / 'with-helpers'
++    source_module.build(repo, revision, output, 'orthobench-inputs', include_result_helpers=True)
++    digest = rewrite_index(output, lambda index: index.update(schema=schema))
++    with pytest.raises(ValueError, match='Historical source schema'):
++        source_module.verify(output, digest)
++
++
++def test_all_observed_missing_helpers_selected_without_data(source_module):
++    helpers = (
++        'bundle_shared_prepared_component_20261004', 'bundle_shared_resource_component_20261003',
++        'capture_shared_terminal_controller_20261004', 'continue_shared_goal_reaffirmed_20261004',
++        'continue_shared_prenative_panel_20261004', 'continue_shared_prepared_panel_20261004',
++        'plot_shared_prenative_resources_20261004', 'plot_shared_prepared_resources_20261004',
++        'plot_shared_threadripper_resources_20261003', 'prepare_shared_threadripper_launch_20261003',
++        'render_shared_resource_section_20261004', 'report_shared_prenative_panel_20261004',
++        'report_shared_prepared_panel_20261004', 'report_shared_threadripper_panel_20261003',
++        'review_shared_deadline_failure_20261004', 'review_shared_prenative_failure_20261004',
++        'review_shared_prenative_panel_20261004', 'review_shared_prepared_panel_20261004',
++        'snapshot_shared_prenative_panel_20261004', 'snapshot_shared_prepared_panel_20261004',
++    )
++    for helper in helpers:
++        path = f'benchmark_tools/results/{helper}.py'
++        assert source_module.selected(path, 'workflow', 'native-build', True)
++        assert not source_module.selected(path, 'workflow', 'native-build')
++    for name in ['benchmark_tools/results/private.json', 'benchmark_tools/results/raw.fa',
++                 'benchmark_tools/results/nested/helper.py', 'tests/samples/input.fa']:
++        assert not source_module.selected(name, 'workflow', 'native-build', True)
++
++
++def test_builder_refuses_non_boolean_before_output(source_module, tmp_path):
++    with pytest.raises(ValueError, match='explicit boolean'):
++        source_module.build(tmp_path, 'HEAD', tmp_path / 'never-created', include_result_helpers=1)
++    assert not (tmp_path / 'never-created').exists()
+
