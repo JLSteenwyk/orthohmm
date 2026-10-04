@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Actual Versioned Candidate Restored And Presentation Replayed (2026-10-04)
+
+Commit/push `09012201` freezes the package workflow and explicit current outer
+instructions. Build the [actual local study candidate](PUBLICATION_PACKAGE_RESULT_20261004.md)
+`orthohmm-study-2026.10.04-rc1` from75 selected inputs/77 payload files.
+It joins current manuscript/source,32-page figures and replay inputs, final
+reporting, native assets used in successful job22377 and retained evidence.
+Scientific and child-workflow revisions remain separately recorded.
+
+Archive132562749 bytes and restore outside the repository. Copied isolated,
+site-disabled stdlib reader verifies all streams before extraction and exact
+inventory/modes afterward, with external archive/index anchors and no Git or
+checkout imports. The [actual execution receipt](publication_package_execution_20261004.json)
+binds source/selection/index/archive,26 passing fixture cases and actual results.
+From that restored root, execute the copied presentation assembler once:
+all32 pages and the entire PDF match retained text/geometry/pixels/links and
+bookmarks. This is new outer-package restoration evidence, not an inference
+or unchanged-scientific-diagnostic rerun.
+
+Local archive includes native asset payloads but not raw benchmark inputs,
+base/bootstrap or OS; use current documented acquisition/private-base routes.
+No public upload/new software version/DOI, rights clearance, isolated timing,
+full goal audit or publication readiness is claimed. Preserve candidate bytes
+and all historical archives. Next audit the entire numbered goal and central
+claims against authoritative current evidence, distinguish explicit unmet
+science from completed delivery, and finish remaining release/submission
+work within that scope. No owned native job is live; goal stays active/incomplete.
+
 ## Versioned Local Package Workflow Prepared (2026-10-04)
 
 The preceding goal turn makes actual presentation/handoff progress, committed
