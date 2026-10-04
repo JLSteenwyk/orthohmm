@@ -89,6 +89,9 @@ def bundle(tmp_path, monkeypatch):
         scores.append({"key": key, "label": key, "scores": {"OrthoBench": .5, "ThreeKingdoms": .5,
             "QfO_secondary_mean": .5, **{e: .5 for e in ("GO", "EC", "VGNC", "SwissTrees", "TreeFam-A", "FAS")}},
             "orthobench_retained_evidence": {"prediction_provenance": output}, "three_kingdoms": {"groups": output}})
+        if i >= 3:
+            scores[-1]["orthobench_retained_evidence"] = {}
+            scores[-1]["orthobench_supplemental_readback"] = {"prediction": output}
         ob.append(dict(key=key, prediction=output, weighted_refog_f1=.5, input_note="Unknown",
             inference_wall_seconds=None, conversion_wall_seconds=None, peak_process_rss_kib=None, timing_basis="Unknown", output_semantics="groups"))
         counts = {"f_score": .5}
@@ -184,3 +187,13 @@ def test_existing_destination_is_not_overwritten(bundle, tmp_path):
     with pytest.raises(FileExistsError):
         provenance.assemble(repo, output)
     assert marker.read_text() == "preserve"
+
+
+@pytest.mark.parametrize("damage", ["missing", "conflicting"])
+def test_selected_ob_prediction_requires_bound_evidence(damage):
+    row = {"orthobench_retained_evidence": {}}
+    if damage == "conflicting":
+        row["orthobench_retained_evidence"]["prediction_provenance"] = {"sha256": "first"}
+        row["orthobench_supplemental_readback"] = {"prediction": {"sha256": "second"}}
+    with pytest.raises(ValueError):
+        provenance.ob_prediction(row)

@@ -43,6 +43,15 @@ def same_score(actual, expected):
         raise ValueError("Score row differs from selected current evidence")
 
 
+def ob_prediction(row):
+    direct = row["orthobench_retained_evidence"].get("prediction_provenance")
+    supplemental = row.get("orthobench_supplemental_readback", {}).get("prediction")
+    pins = [p for p in (direct, supplemental) if p is not None]
+    if not pins or any(p != pins[0] for p in pins):
+        raise ValueError("Missing or conflicting selected OrthoBench prediction")
+    return pins[0]
+
+
 class Reader:
     def __init__(self):
         self.checked = {}
@@ -206,7 +215,7 @@ def assemble(repo, output):
             if dataset == "OrthoBench":
                 source = ob[key]
                 same_score(source["weighted_refog_f1"], score[dataset])
-                if source["prediction"] != selected[key]["orthobench_retained_evidence"]["prediction_provenance"]:
+                if source["prediction"] != ob_prediction(selected[key]):
                     raise ValueError("OrthoBench prediction binding differs")
                 details = dict(output_records=[source["prediction"]], input_records=[],
                     input_note=source["input_note"], commands=source.get("command"),
