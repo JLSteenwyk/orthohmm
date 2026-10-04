@@ -1,0 +1,47 @@
+{
+  "status": "explicit_manuscript_selection_staged_tests_passed",
+  "live_source_changed": false,
+  "patch_applied_to_live_project": false,
+  "scientific_inference_repeated": false,
+  "final_archive_verified": false,
+  "final_handoff_builder_updated": false,
+  "base": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_review.py",
+    "bytes": 15293,
+    "sha256": "f102f5f70e2c11d78e3ddfa0e0778c21372eebc4c889bb6347154ae341b31de2"
+  },
+  "staged": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_manuscript_closure_20261004/stage/benchmark_tools/bundle_publication_review.py",
+    "bytes": 16368,
+    "sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999"
+  },
+  "test": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_manuscript_closure_20261004/stage/test_review_main_selection.py",
+    "bytes": 5874,
+    "sha256": "0b499414dada9aeb99ac3c0214f54e4c08e0b5b7a6aeaad66bfdeb598967d6a4"
+  },
+  "legacy_test": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_bundle_publication_review.py",
+    "bytes": 14792,
+    "sha256": "192eab0cf6da927c134cfbea8cc938248d658794991be28d1b716afbfdd4ad8f"
+  },
+  "junit": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_manuscript_closure_20261004/tests.xml",
+    "bytes": 10684,
+    "sha256": "4b8d415d512635ebd564624782fe821ac4e212492d320c42ebadb6aa6351a057"
+  },
+  "test_summary": {
+    "tests": 70,
+    "failures": 0,
+    "errors": 0,
+    "time_seconds": 6.458
+  },
+  "patch": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_review_main_staged_20261004.patch",
+    "bytes": 16624,
+    "sha256": "06a8654a7241f2c846e88188eb68b149edad5e44dec5cbc34309a437469b16b5"
+  },
+  "scope": "Synthetic committed review fixtures and relocated copied CLI execution; not final study archive or scientific validation.",
+  "patch_check_without_live_application_passed": true,
+  "isolated_patch_application_matches_tested_files": true
+}

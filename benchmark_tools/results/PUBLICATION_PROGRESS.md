@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Final Manuscript Selection Prepared Without Changing Timing Source (2026-10-04)
+
+Previous turn made progress: commit/push `81a2123b` launches the final native
+identity22424 and queues exact-dependent capture22425. Read the full objective
+and fresh accounting: parent/batch/native22424 RUNNING,22425 dependency-pending.
+Actual HMM/k-mer search advances from5.56% to16.67%; retain the same attempt.
+Neither a lock nor a retained snapshot substitutes for this live observation.
+
+Inspect the final packaging route: the live direct-review exporter fixes the
+September27 manuscript filename even with explicit stage receipts. Prepare
+[explicit manuscript selection](PUBLICATION_REVIEW_MAIN_STAGED_20261004.md)
+in an isolated copy with schema3/CLI/API selection, exact committed source/
+receipt chain and unchanged legacy formats. All70 legacy/new cases pass
+in6.50s, including relocated copied CLI after fixture checkout removal.
+Patch-check and isolated application reproduce both tested files exactly;
+the bound live review helper is not modified. Retain the unapplied patch and
+actual source/test/JUnit validation rather than rerun completed diagnostics.
+
+After27 terminal reviews, integrate both prepared packaging patches, finish
+final manuscript/resource/prose/PDF and update the handoff coordinator's dated
+fixed review selection. Validate actual committed/relocated final exports and
+the executable/versioned archive. Fixture execution is not final study export.
+Tablev26/figurev25 stay26 reviewed/24 measured/23 eligible/five complete cells;
+one identity remains unreviewed/live. Full goal remains active and incomplete;
+scientific/runtime/recipe/bounds and unrelated work/services stay unchanged.
+
 ## Final Frozen Native Identity Running (2026-10-04)
 
 Previous turn verified the goal amendment and finished push `9d02ec02`.
