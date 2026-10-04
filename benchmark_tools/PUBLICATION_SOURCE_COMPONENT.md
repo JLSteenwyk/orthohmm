@@ -4,6 +4,14 @@ This source-only component supplements, rather than replaces, the retained
 scientific source archive and figure/runtime evidence packages. It is not the
 complete executable study, an installed package, a public release or a DOI.
 
+**Current-export limitation (4 October 2026):** the historical selector omits
+20 results-module Python dependencies imported by newer exported unit tests.
+The [committed-source inspection](results/PUBLICATION_SOURCE_DEPENDENCY_GAP_20261004.md)
+records their exact identities. Syntax verification is not import/collection
+or complete current-workflow validation. Correct the final source selection
+after the frozen timing panel; do not alter historical archive bytes or infer
+that this finding invalidates the separate executed native/reporting components.
+
 ## Contents
 
 - `scientific/`: `LICENSE.md`, `README.md`, `requirements.txt`, `setup.py` and

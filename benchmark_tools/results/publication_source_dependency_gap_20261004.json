@@ -1,0 +1,138 @@
+{
+  "status": "current_source_profile_omits_static_workflow_dependencies",
+  "workflow_revision": "576d715a14e4535edd779a59607688832f1574ca",
+  "profile": "native-build",
+  "selector": {
+    "path": "benchmark_tools/bundle_publication_source.py",
+    "bytes": 15388,
+    "sha256": "b199863d32a2370d8ce0b20dfbeb2e082d3486a0fc89a0dafd1b568b2bb0cc32"
+  },
+  "selected_paths": 1824,
+  "python_modules_inspected": 1834,
+  "missing_results_module_count": 20,
+  "missing_results_modules": [
+    {
+      "path": "benchmark_tools/results/bundle_shared_prepared_component_20261004.py",
+      "bytes": 16527,
+      "sha256": "be30c04eeafbf51e5c2a012b3247f6217da1c9831b6a09565b6938698d84daad",
+      "imported_by": ["tests/unit/test_bundle_shared_prepared_component.py", "tests/unit/test_prepared_resource_section_bundle.py"]
+    },
+    {
+      "path": "benchmark_tools/results/bundle_shared_resource_component_20261003.py",
+      "bytes": 13009,
+      "sha256": "98d723bb70910eed22a8ab75ef4e17f0332490ada309121f607fc0ed3d5b5781",
+      "imported_by": ["tests/unit/test_bundle_shared_resource_component.py"]
+    },
+    {
+      "path": "benchmark_tools/results/capture_shared_terminal_controller_20261004.py",
+      "bytes": 2573,
+      "sha256": "e1b252680d3ef7ab0617dc3970a4a869dec08873d60b71b8d4e0fda321c9842c",
+      "imported_by": ["tests/unit/test_capture_shared_terminal_controller.py"]
+    },
+    {
+      "path": "benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py",
+      "bytes": 8838,
+      "sha256": "b21335eabc5d1d81d3a0e5c21b0d397053d1174bbec64c7d9bf07e01943c455d",
+      "imported_by": ["tests/unit/test_continue_shared_goal_reaffirmed.py"]
+    },
+    {
+      "path": "benchmark_tools/results/continue_shared_prenative_panel_20261004.py",
+      "bytes": 12504,
+      "sha256": "5b7706c49035866dd02a27628b46748b6850eab5ab667d687f0d53678faedd2a",
+      "imported_by": ["benchmark_tools/results/review_shared_prenative_panel_20261004.py", "benchmark_tools/results/snapshot_shared_prenative_panel_20261004.py", "tests/unit/test_continue_shared_prenative_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/continue_shared_prepared_panel_20261004.py",
+      "bytes": 17435,
+      "sha256": "88ef92eb77b66b0ee63b56434a0f8692df0f0db37b9f4ad4d4ee650eaa28330e",
+      "imported_by": ["benchmark_tools/results/capture_shared_terminal_controller_20261004.py", "benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py", "benchmark_tools/results/review_shared_prepared_panel_20261004.py", "benchmark_tools/results/snapshot_shared_prepared_panel_20261004.py", "tests/unit/test_continue_shared_prepared_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/plot_shared_prenative_resources_20261004.py",
+      "bytes": 9336,
+      "sha256": "39721392531cd3a9788bf786ada5f771ebaae430bf0a6d0ce03aac388235af8a",
+      "imported_by": ["tests/unit/test_shared_prenative_reporting.py"]
+    },
+    {
+      "path": "benchmark_tools/results/plot_shared_prepared_resources_20261004.py",
+      "bytes": 9335,
+      "sha256": "4b391bf9c03599afcbdb62f6962fab867378de8a29ab6fa1bfad5f65f91b6b5f",
+      "imported_by": ["benchmark_tools/results/render_shared_resource_section_20261004.py", "tests/unit/test_latest_prepared_resource_checkpoint.py", "tests/unit/test_shared_prepared_repeat21_reporting.py", "tests/unit/test_shared_prepared_reporting.py"]
+    },
+    {
+      "path": "benchmark_tools/results/plot_shared_threadripper_resources_20261003.py",
+      "bytes": 9242,
+      "sha256": "122779587d5f4e1c4ce11b5ab34be76df0268dd5bfa4ef6bee07609a4114f57f",
+      "imported_by": ["benchmark_tools/results/plot_shared_prenative_resources_20261004.py", "benchmark_tools/results/plot_shared_prepared_resources_20261004.py", "tests/unit/test_plot_shared_threadripper_resources.py"]
+    },
+    {
+      "path": "benchmark_tools/results/prepare_shared_threadripper_launch_20261003.py",
+      "bytes": 11667,
+      "sha256": "37bdc6135fa1f52ca81f32ccb9bea03933bac9f786eb89354a4a2c66f5508d27",
+      "imported_by": ["benchmark_tools/results/continue_shared_prenative_panel_20261004.py", "benchmark_tools/results/continue_shared_prepared_panel_20261004.py"]
+    },
+    {
+      "path": "benchmark_tools/results/render_shared_resource_section_20261004.py",
+      "bytes": 5888,
+      "sha256": "2d9c721093d723da7c47fac0d96c979f40a134673aedba394501de8af36d12df",
+      "imported_by": ["tests/unit/test_render_shared_resource_section.py"]
+    },
+    {
+      "path": "benchmark_tools/results/report_shared_prenative_panel_20261004.py",
+      "bytes": 11388,
+      "sha256": "17e485ca3f5313c6a738beb17645abcbf112e5eabd578cdae5e18dad29373a1b",
+      "imported_by": ["benchmark_tools/results/plot_shared_prenative_resources_20261004.py", "tests/unit/test_shared_prenative_reporting.py"]
+    },
+    {
+      "path": "benchmark_tools/results/report_shared_prepared_panel_20261004.py",
+      "bytes": 11591,
+      "sha256": "ebc4ce7ec8d0d287de9bd67ea28ecc1155210a874266d67689e0b4db3883e9b0",
+      "imported_by": ["benchmark_tools/results/plot_shared_prepared_resources_20261004.py"]
+    },
+    {
+      "path": "benchmark_tools/results/report_shared_threadripper_panel_20261003.py",
+      "bytes": 14805,
+      "sha256": "dfd90665b816cc08311b1d612e68d2108f042dc8877a146b86447f794d1da2c6",
+      "imported_by": ["benchmark_tools/results/plot_shared_threadripper_resources_20261003.py", "benchmark_tools/results/report_shared_prenative_panel_20261004.py", "benchmark_tools/results/report_shared_prepared_panel_20261004.py", "tests/unit/test_plot_shared_threadripper_resources.py", "tests/unit/test_report_shared_threadripper_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/review_shared_deadline_failure_20261004.py",
+      "bytes": 11331,
+      "sha256": "744a5bcb738ce116f57fc57f7777dd097e084e7508703e899776fefa99bf698b",
+      "imported_by": ["tests/unit/test_shared_deadline_failure_review.py"]
+    },
+    {
+      "path": "benchmark_tools/results/review_shared_prenative_failure_20261004.py",
+      "bytes": 10538,
+      "sha256": "c14c426674902072acff84b7861d343dd5cc697cef02414e654e7512774faa21",
+      "imported_by": ["tests/unit/test_review_shared_prenative_failure.py"]
+    },
+    {
+      "path": "benchmark_tools/results/review_shared_prenative_panel_20261004.py",
+      "bytes": 17025,
+      "sha256": "cd4d87d59aaafa7e17546cd5808184796badb0134a793a23cfdc686885ccf37a",
+      "imported_by": ["tests/unit/test_continue_shared_prenative_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/review_shared_prepared_panel_20261004.py",
+      "bytes": 17286,
+      "sha256": "efccc9fd687aef94daa296d87b7a7aaec3767c477f9a4398f108150a9574863b",
+      "imported_by": ["tests/unit/test_continue_shared_prepared_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/snapshot_shared_prenative_panel_20261004.py",
+      "bytes": 4758,
+      "sha256": "2eaf0e86b0cd31159528289d65205f0f50bd9a6fbed2eb0f70d6dd1aaf1c1ea6",
+      "imported_by": ["tests/unit/test_continue_shared_prenative_panel.py"]
+    },
+    {
+      "path": "benchmark_tools/results/snapshot_shared_prepared_panel_20261004.py",
+      "bytes": 5051,
+      "sha256": "b25427d18b59b243e2a580f60d2d74dc22801da6722e17e81703000badd351a1",
+      "imported_by": ["tests/unit/test_continue_shared_prepared_panel.py"]
+    }
+  ],
+  "scope": "Read-only static dependency inspection of committed workflow/unit-test source; not runtime imports, test execution, full data/runtime closure or an archive build",
+  "native_analysis_repeated": false,
+  "publication_ready": false
+}

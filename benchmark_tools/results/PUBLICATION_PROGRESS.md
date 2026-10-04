@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Current Workflow Source Export Gap Quantified (2026-10-04)
+
+Previous goal turn is progress: commits/pushes `58cc3036` and `576d715a`
+retain index24 review and index25 native handoff. Read the full objective and
+current ledger; fresh accounting confirms 22422 parent/batch/native RUNNING
+and 22423 dependency-pending. Actual DIAMOND children advance through native
+all-versus-all searches. Do not restart either job or release index26 early.
+
+Read-only committed-source AST inspection now quantifies the final packaging
+gap: historical `native-build` selects1,824 paths, but20 results-module sources
+are required by selected unit tests/transitive local imports and omitted.
+The [observation](PUBLICATION_SOURCE_DEPENDENCY_GAP_20261004.md) pins selector,
+all20 dependencies and importing files at `576d715a`. Inspecting1,834 committed
+Python modules is static evidence, not runtime/data closure, a native audit,
+archive execution or complete release validation. Historical syntax-only
+verification does not establish current exported test collection. The actual
+reporting component retains its separate executed scope.
+
+Record this concrete final-source repair without editing the bound top-level
+bundler while native timing is active. After27 independent reviews, include
+the operational results-module sources in final export, test relocated import/
+collection and reconcile final manuscript/resource/reporting evidence. Do not
+turn this packaging issue into a timing or quiet-host gate. Tablev25/figurev24
+remain25 reviewed/23 measured/22 eligible/five complete cells; two identities
+remain unreviewed(one live,one unsubmitted). Full publication goal active and
+incomplete; scientific/runtime/input/resource settings and unrelated work are
+unchanged. Successful diagnostics and native analyses are not repeated.
+
 ## Index 25 Full OrthoFinder Native Search Live (2026-10-04)
 
 Commit/push `58cc3036` retains index24 independent review, tablev25,
