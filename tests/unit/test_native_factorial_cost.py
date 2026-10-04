@@ -344,3 +344,32 @@ def test_transient_controller_error_does_not_imply_terminal(monkeypatch):
     with pytest.raises(ValueError, match="not an expired"):
         cost.verify_terminal(22426)
     assert len(calls) == 1
+
+
+def test_actual_repaired_plan_preserves_factors_and_failed_attempt():
+    import hashlib
+    path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json"
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+    plan = json.loads(path.read_text())
+    cost.validate_plan(plan)
+    old = json.loads(Path(plan["supersedes_plan"]["path"]).read_text())
+    for i, run in enumerate(plan["runs"]):
+        for key in ("index", "dataset", "cell", "repeat", "inputs", "genes", "proteomes", "native_order", "input_creation_order"):
+            assert run[key] == old["runs"][i][key]
+        assert run["output_root"] != old["runs"][i]["output_root"]
+    for ref in plan["helper_sources"] + plan["evidence"]:
+        raw = Path(ref["path"]).read_bytes()
+        assert len(raw) == ref["bytes"] and hashlib.sha256(raw).hexdigest() == ref["sha256"]
+    failure = json.loads(Path(plan["retained_preflight_failure"]["path"]).read_text())
+    assert failure["job_id"] == 22426 and failure["status"] == "factorial_attempt_failed_retained"
+    lookup = json.loads(Path(plan["runtime_lookup"]["path"]).read_text())
+    prior = json.loads(Path(old["runtime_lookup"]["path"]).read_text())
+    assert lookup["baseline"] == prior["baseline"] == plan["baseline"]
+    a, b = (json.loads(Path(r["binding"]["path"]).read_text()) for r in (prior, lookup))
+    for key in ("baseline", "controller_python", "command_plan", "baseline_paths", "retired_roots"):
+        assert a[key] == b[key]
+    assert a["runtime_specs"][1:] == b["runtime_specs"][1:]
+    delta = json.loads(Path(lookup["current_validation"]["delta"]["path"]).read_text())
+    assert len(delta["changed"]) == 3 and delta["added"] == delta["removed"] == []
+    for side in ("before", "after"):
+        assert all(row["status"] == "runtime_tree_identity_matches" for row in lookup["current_validation"]["runtime_checks"][side])
