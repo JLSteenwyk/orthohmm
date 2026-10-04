@@ -51,6 +51,11 @@ Fresh capacity/prepared handoff and all four terminal review categories pass.
 It supplies the third complete cell, phylogenetic/eight proteomes. Four
 identities remain unreviewed, none live at this review checkpoint. No failed
 identity is retried.
+Index23 is subsequently released as
+[22419, full OrthoFinder/eight-proteome repeat](THREADRIPPER_SHARED_ATTEMPT_22419.md).
+Fresh capacity and prepared/native handoff pass; DIAMOND search is observed
+running. One of the four unreviewed identities is live at this checkpoint,
+three unsubmitted. Startup evidence does not admit another resource point.
 The [partial figure](threadripper_shared_resource_figure_20261004_v22/shared_threadripper_resources.pdf)
 retains the twenty-one measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve

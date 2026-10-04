@@ -67,6 +67,12 @@ now pass. The phylogenetic/eight-proteome cell is the third complete cell.
 Four identities remain unreviewed; no panel job is live at this review
 checkpoint. Next is index 23, full OrthoFinder/eight proteomes/repeat 2,
 after fresh history/capacity/native handoff under the existing continuation.
+Index 23 is subsequently released as
+[22419, full OrthoFinder/eight-proteome repeat](results/THREADRIPPER_SHARED_ATTEMPT_22419.md).
+Fresh prepared/capacity/native handoff passes; DIAMOND search is observed
+running. Four identities remain unreviewed, one live at this checkpoint and
+three not submitted. On resumption poll this exact job and independently
+review after termination before advancing24. No new resource point is admitted.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 

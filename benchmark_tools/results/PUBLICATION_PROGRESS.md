@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Index 23 Full OrthoFinder Native Search Live (2026-10-04)
+
+Index-22 independent review/table v23/figure v22/reusable three-test checkpoint
+is committed/pushed at `24522c6f`. Existing continuation checks all23 reviewed
+identities, held placement/request binding and releases only index23 as
+[22419](THREADRIPPER_SHARED_ATTEMPT_22419.md), full OrthoFinder3.1.5,
+eight proteomes,repeat2. Public submission matches canonical1,180 bytes,
+SHA-256 `92fc1bb1ae4c0c3d5357295b74786a7a785e59bf25c1637a269273786789e173`.
+
+Actual one-shot live handoff passes:15,751 bytes,SHA-256
+`63713feafcada7cc5a2d567f6337fea9bf240b648ebb2aea4d6875fd70159ffd`.
+Prepared-before-release, actual preflight/go, live native PID/cgroup/affinity
+0-31,128-GiB enforcement and controller request comment verify. Both available
+memory observations exceed128-GiB floor; foreign CPU45.5390796485 is annotated.
+First process gap is null, not a cadence pass. Snapshot has upstream syntax
+warnings; subsequent fresh log shows DIAMOND all-versus-all with32 threads.
+Direct child/cgroup inspection confirms actual frozen executable/command.
+One read uses the method label as output-directory name and finds no such
+directory; actual command specifies `orthofinder_full`, not that label. This
+inspection error neither restarts native work nor establishes an output failure.
+
+No unrelated job/service or frozen science/kernel/runtime changes. Existing
+successful validations/preparation/calibration are reused. All owned observer/
+review/report/plot/test/launch/handoff handles are terminal; the specific Slurm
+job remains RUNNING. Table v23/figure v22 are unchanged:23 reviewed/21 measured/
+20 eligible, exclusions0/17/20,three complete cells,four unreviewed(one live,
+three unsubmitted). Commit/push startup records/status. Next continuation
+polls22419 and reviews only after actual termination before releasing24.
+Final panel/manuscript/resource reconciliation and versioned/archive release
+keep the full goal active; no isolation or new accuracy claim is made.
+
 ## Index 22 Reviewed And Third Complete Cell (2026-10-04)
 
 Previous turn is progress: `84217cc3` and `8fe43cf6` commit/push the new
