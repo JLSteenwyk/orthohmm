@@ -1,0 +1,1799 @@
+{
+  "checked_records": [
+    {
+      "bytes": 458287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/all_benchmark_provenance_20261004_v2/register.json",
+      "sha256": "48be4b216f9f3776354246894c8c2a38f790fd4f075528e88f56b230a0a3c47c"
+    },
+    {
+      "bytes": 11686,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/three_kingdoms_parity_20260907.json",
+      "sha256": "beba94cba53eef41c76c9d525eed48fb52287b98fc7e632c11c2894319e8a75a"
+    },
+    {
+      "bytes": 9497035,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/orthogroups.txt",
+      "sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/source_commit.txt",
+      "sha256": "41073b309835f9528e1d6b76294d4ec71011ad5703ef1c178dd0f9310c086700"
+    },
+    {
+      "bytes": 13162,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/metrics.json",
+      "sha256": "73342f751abc0e96e039832dbbbedb049c1596392db5b176a7b2a5d6e880afd2"
+    },
+    {
+      "bytes": 7848775,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/orthogroups.txt",
+      "sha256": "07eae3dad852c6376d95e76fb7c7a5f08554342fd44f7bf8a5cf40cf999ca0e3"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/source_commit.txt",
+      "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+    },
+    {
+      "bytes": 60,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/tool_version.txt",
+      "sha256": "da88cb669e8f758d9a3393bf1e8366805e970bc330d1edf65d47e8f199171176"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/inference_wall_time_s.txt",
+      "sha256": "04b363cbcbaeef26a6003890851c2d767ecf11a97b15bab4fff8d6e7457fa7a0"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/runner_wall_time_s.txt",
+      "sha256": "70062d4c6a70d2fca2722cac49f9080531046d324ee767caefc1610ab025a9ac"
+    },
+    {
+      "bytes": 94,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/run_metadata.tsv",
+      "sha256": "215ab2d2ae153d4cb981564a332916ebbe6e1eece56b520a0cf4f31afc4e6f77"
+    },
+    {
+      "bytes": 19296,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/metrics.json",
+      "sha256": "2019ade1fe8175dd8b2ec765acb250f276b66dda99815d9fa97e1e7152f1c3ba"
+    },
+    {
+      "bytes": 8587216,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/orthogroups.txt",
+      "sha256": "cb730780d6577d446f7f30e155baa2d1800087cbafa54e128d4f52967010f9c4"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/source_commit.txt",
+      "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+    },
+    {
+      "bytes": 19,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/tool_version.txt",
+      "sha256": "ce98f128f54ebbc3bd79bd2f40c4404175e54292346bed575892aa7564390ce4"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/inference_wall_time_s.txt",
+      "sha256": "281859aa7f4081e6b3bcc91338ce53c9f22aba3c63ab523529778323da80d93a"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/runner_wall_time_s.txt",
+      "sha256": "1bf7ad379694bbc5fba980d5ac1764dc8c0a15641faf0e4f1bd66af810b31221"
+    },
+    {
+      "bytes": 94,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run_metadata.tsv",
+      "sha256": "3d0bab629a0f4620221f736e2d5172c9eced6d80929045b38ab273a889433ad8"
+    },
+    {
+      "bytes": 997,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/time.log",
+      "sha256": "773b601130fc8aeb5ad276aeaeee232abd243df41fcd9c94815290cbbc8db395"
+    },
+    {
+      "bytes": 7848775,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/orthogroups.txt",
+      "sha256": "e94fb298e8fa7807f5c98038dd55f147d1fdb7fa5491592641049d5fd1988d50"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/source_commit.txt",
+      "sha256": "89cf492ba9893c25ccc13d17e094db9b9fc623c8e8c809e0273f376f117a1ada"
+    },
+    {
+      "bytes": 19,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/tool_version.txt",
+      "sha256": "ce98f128f54ebbc3bd79bd2f40c4404175e54292346bed575892aa7564390ce4"
+    },
+    {
+      "bytes": 76,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/runtime_note.txt",
+      "sha256": "cd415b059e390854bfac70cd9ceab3e7e57fecf3225e26246b7407f4b791076a"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/inference_wall_time_s.txt",
+      "sha256": "fc5c6c129806d578767894144c47c03af21399ac11d20512b91201d33164fcba"
+    },
+    {
+      "bytes": 2,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/runner_wall_time_s.txt",
+      "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+    },
+    {
+      "bytes": 93,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/run_metadata.tsv",
+      "sha256": "0510a559e1379eb313274a5b82f945ca6679efe72d6c0962178f3a93c9a6e56d"
+    },
+    {
+      "bytes": 1419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/conversion_time.log",
+      "sha256": "9108c4627bb4d5444c0bc79fd6423100b6a9aca7dd8a0476bddf356ead25e43a"
+    },
+    {
+      "bytes": 3854242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/orthogroups.txt",
+      "sha256": "4069a10ce5f302c17a915cc7d2bff8c97b6fc801e314b4743eb34d2b7d3d50b0"
+    },
+    {
+      "bytes": 4,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/wall_time_s.txt",
+      "sha256": "20cc7ab749765f98c9a16788476d8fc91d9c450eafd1e40e962caaa290c8f82c"
+    },
+    {
+      "bytes": 1027,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/time.log",
+      "sha256": "539190d455dc5284794268253bd2c6a9b3fcd53c8bab04c9a80c5a07c627b4ad"
+    },
+    {
+      "bytes": 1738026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/orthogroups.txt",
+      "sha256": "3a8b30791c01b847244dfb86e86bebaec97731275d8bbfbf7517902758adf7ef"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/source_commit.txt",
+      "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+    },
+    {
+      "bytes": 80,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/tool_version.txt",
+      "sha256": "5074dec8c6bb1bfe611186754922b1f7ef462d3bcee9b5340094853b333cafa8"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/inference_wall_time_s.txt",
+      "sha256": "bbdbf2d46750dd8d042a84228deb69440f58e16192916415a6af722d697b343f"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/runner_wall_time_s.txt",
+      "sha256": "2e1d6a991bc664bb4c6f5af3cebc802e403248b226bd769445afd53afd0b5f33"
+    },
+    {
+      "bytes": 95,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run_metadata.tsv",
+      "sha256": "71e46b5a9afb34898dfcbd0e51b6ebffb306dae9f92b8299839ecebb5f7d137a"
+    },
+    {
+      "bytes": 1550,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/time.log",
+      "sha256": "4be3a5846fef30797bc899754f776bface38fa547b23d038bb4e38da413803f4"
+    },
+    {
+      "bytes": 6804749,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthogroups.txt",
+      "sha256": "e2edb47e56844adcc16f196b530e15c9ca872cbc2fe9b018d8a64b2ddc47b7d8"
+    },
+    {
+      "bytes": 41,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/source_commit.txt",
+      "sha256": "437473462212dc2d1dbe48ac598c05b60e894fd0d5afb75cc7289a97f4557ce6"
+    },
+    {
+      "bytes": 100,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/tool_version.txt",
+      "sha256": "0e172ace8bda257e839af296bbcdd7aeab60150ee0060df510f155b2061ce86c"
+    },
+    {
+      "bytes": 7,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/inference_wall_time_s.txt",
+      "sha256": "3daf869731561d5f62d1a76f3fe0cb382417e3440d41373855154fa582c2b55b"
+    },
+    {
+      "bytes": 7,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/runner_wall_time_s.txt",
+      "sha256": "0901a239fa78b3057a85f73dadce7e11da5c596eae136e0a9f1b1b06ff7761cf"
+    },
+    {
+      "bytes": 7,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/blast_wall_time_s.txt",
+      "sha256": "dbd0e6c6240bb4952d90171f6d83621cdfbcb2e022b3548ca03b9e875b0e2e6c"
+    },
+    {
+      "bytes": 4,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_conversion_wall_time_s.txt",
+      "sha256": "397ed9ce86afaf9e127cd9cceddf99eb12c6b98a3e02df1e8f5c21e15ab324ad"
+    },
+    {
+      "bytes": 4,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_index_wall_time_s.txt",
+      "sha256": "f0448ca7d8645d6c1d4902a2c058a37abfc44f1de59ab54163c80faaf72f6a4c"
+    },
+    {
+      "bytes": 5,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/downstream_wall_time_s.txt",
+      "sha256": "49c3f590d9a08e5d6aa461c23d397b889a64af48107688b3c833b440a5c805e9"
+    },
+    {
+      "bytes": 582,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/run_metadata.tsv",
+      "sha256": "52badd70dafbfc0c961a4b4ad88e90852610f935a012f45a2836d72f484d30a0"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/time.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_converter.time.log",
+      "sha256": "bbfee741d8922e3f40e543ed2f56df8bfd1100fa406ba910a01261fc3c7752b6"
+    },
+    {
+      "bytes": 7436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/downstream_time.log",
+      "sha256": "3bfb2fb296ebc3ed64584907363f4523358d92e6d5064d72d4ad038b26eebbe8"
+    }
+  ],
+  "controlled_comparative_resources": false,
+  "helpers": [
+    {
+      "bytes": 19979,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/assemble_benchmark_provenance.py",
+      "sha256": "7e1b8c36ae61277d54f42808855e80738dfe2225c3fc52381b354bece11675bc"
+    },
+    {
+      "bytes": 10365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_ob_orthofinder_provenance.py",
+      "sha256": "6f1c5730395c21d90a5ec54066cf1dee2252fda83e3bf0e08dd92f21c60c8dc5"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_matched_resources.py",
+      "sha256": "2f64fe9004dd543f074e4eed9fe378647d1aa6192b5e8ab2ab45f62bca5908c8"
+    },
+    {
+      "bytes": 2020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/gnu_time_companion.py",
+      "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"
+    }
+  ],
+  "historical_consumption_proven": false,
+  "limitations": [
+    "New direct metadata readback; no inference, conversion or scoring is re-executed.",
+    "Contemporary matched Sonic evidence is already bound in the selected register; older Sonic logs are deliberately excluded.",
+    "Fractional GNU-time durations and integer wrapper/stage intervals remain separate observations, not replacements or independent repeats.",
+    "OrthoFinder MCL checkpoint timestamp, checkpoint conversion and full pipeline retain different scopes.",
+    "Repeated recovery metadata keys preserve all ordered events, including later-invalidated attempts; exit0 alone does not validate their science.",
+    "Executable names, version text and source revisions do not prove complete historical executable or dependency identity."
+  ],
+  "native_runs_repeated": false,
+  "publication_ready": false,
+  "rows": [
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "0.5.0",
+      "empty_timing_logs": [],
+      "evidence": {
+        "metrics.json": {
+          "bytes": 13162,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/metrics.json",
+          "sha256": "73342f751abc0e96e039832dbbbedb049c1596392db5b176a7b2a5d6e880afd2"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/source_commit.txt",
+          "sha256": "41073b309835f9528e1d6b76294d4ec71011ad5703ef1c178dd0f9310c086700"
+        }
+      },
+      "key": "orthohmm_high_sensitivity",
+      "metadata_events": [],
+      "metrics": {
+        "cpu_scope": "Historical metrics collector's recorded CPU totals; no fresh process-tree/cgroup accounting validation",
+        "entrypoint_argv": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/__main__.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/output",
+          "-c",
+          "32",
+          "--threads_per_worker",
+          "8",
+          "-x",
+          "BLOSUM62",
+          "-e",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm_resolution",
+          "0.1",
+          "--refinement_profile",
+          "default",
+          "--accuracy_profile",
+          "high_sensitivity",
+          "--metrics_json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/metrics.json",
+          "--stop",
+          "infer"
+        ],
+        "harness_argv": [
+          "/home/bizon/anaconda3/bin/python",
+          "-m",
+          "orthohmm",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/output",
+          "-c",
+          "32",
+          "--threads_per_worker",
+          "8",
+          "-x",
+          "BLOSUM62",
+          "-e",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm_resolution",
+          "0.1",
+          "--refinement_profile",
+          "default",
+          "--accuracy_profile",
+          "high_sensitivity",
+          "--metrics_json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/metrics.json",
+          "--stop",
+          "infer"
+        ],
+        "harness_git_dirty": true,
+        "harness_revision_at_completion": "63aeb8a83b81a89719ac87042d131c03557d727e",
+        "inherited_input_manifest": [
+          {
+            "bytes": 22455028,
+            "path": "Amph.fasta",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          },
+          {
+            "bytes": 15376532,
+            "path": "Anol.fasta",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          },
+          {
+            "bytes": 33366601,
+            "path": "Arab.fasta",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          },
+          {
+            "bytes": 6750862,
+            "path": "Asfu.fasta",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          },
+          {
+            "bytes": 42222249,
+            "path": "Dani.fasta",
+            "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+          },
+          {
+            "bytes": 21984251,
+            "path": "Oryz.fasta",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          },
+          {
+            "bytes": 5875882,
+            "path": "Scer.fasta",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          },
+          {
+            "bytes": 8582364,
+            "path": "Scom.fasta",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          },
+          {
+            "bytes": 20561355,
+            "path": "Sela.fasta",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          },
+          {
+            "bytes": 3805824,
+            "path": "Spom.fasta",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          },
+          {
+            "bytes": 25382533,
+            "path": "Xeno.fasta",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          },
+          {
+            "bytes": 95382422,
+            "path": "Zeam.fasta",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        ],
+        "inherited_source_manifest": [
+          {
+            "bytes": 0,
+            "path": "orthohmm/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 127,
+            "path": "orthohmm/__main__.py",
+            "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+          },
+          {
+            "bytes": 9643,
+            "path": "orthohmm/accuracy.py",
+            "sha256": "4d64a017a9ac793a57db3e2dffc740321a6f8c860ab07ce7cd434be4bf928701"
+          },
+          {
+            "bytes": 5847,
+            "path": "orthohmm/args_processing.py",
+            "sha256": "1a0e14598b7754260c1b277537b7154eec7356cf979ae9f7600a588b6c889527"
+          },
+          {
+            "bytes": 7398,
+            "path": "orthohmm/externals.py",
+            "sha256": "c305a01e02a4b067dcef697fcd85cc5e8e1bda1d09252221f925f0e7a516c3dc"
+          },
+          {
+            "bytes": 2977,
+            "path": "orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          {
+            "bytes": 32293,
+            "path": "orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 6812,
+            "path": "orthohmm/metrics.py",
+            "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+          },
+          {
+            "bytes": 21265,
+            "path": "orthohmm/orthohmm.py",
+            "sha256": "c04560da14ece231e4d33a9aab78af95bbd75d40d7dff9217a152ea25945b671"
+          },
+          {
+            "bytes": 12840,
+            "path": "orthohmm/parser.py",
+            "sha256": "49f00fde484c89f558eaed545958990f554150a1553e3bc83ee7441608e69071"
+          },
+          {
+            "bytes": 48145,
+            "path": "orthohmm/refinement.py",
+            "sha256": "1d6a7d067c6af3b252a04689c052982cec74b7a40ed181e5333a4a71039e0440"
+          },
+          {
+            "bytes": 0,
+            "path": "orthohmm/search/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 0,
+            "path": "orthohmm/search/_experimental/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 8599,
+            "path": "orthohmm/search/_experimental/viterbi_cuda_numba.py",
+            "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+          },
+          {
+            "bytes": 21146,
+            "path": "orthohmm/search/engine.py",
+            "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+          },
+          {
+            "bytes": 1865,
+            "path": "orthohmm/search/evalue.py",
+            "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+          },
+          {
+            "bytes": 27982,
+            "path": "orthohmm/search/matrices.py",
+            "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+          },
+          {
+            "bytes": 9180,
+            "path": "orthohmm/search/msa_center_star.py",
+            "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+          },
+          {
+            "bytes": 6728,
+            "path": "orthohmm/search/msa_profile.py",
+            "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+          },
+          {
+            "bytes": 22855,
+            "path": "orthohmm/search/prefilter.py",
+            "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+          },
+          {
+            "bytes": 6143,
+            "path": "orthohmm/search/profile.py",
+            "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+          },
+          {
+            "bytes": 19079,
+            "path": "orthohmm/search/profile_expansion.py",
+            "sha256": "7f41570e1c86d33683dd04b3df93589297f0c9dffdea62bd867e82d6b1800458"
+          },
+          {
+            "bytes": 4509,
+            "path": "orthohmm/search/sequences.py",
+            "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+          },
+          {
+            "bytes": 5324,
+            "path": "orthohmm/search/species_prune.py",
+            "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+          },
+          {
+            "bytes": 17693,
+            "path": "orthohmm/search/viterbi.py",
+            "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+          },
+          {
+            "bytes": 4420,
+            "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+            "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+          },
+          {
+            "bytes": 22,
+            "path": "orthohmm/version.py",
+            "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+          },
+          {
+            "bytes": 2949,
+            "path": "orthohmm/writer.py",
+            "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+          },
+          {
+            "bytes": 5732,
+            "path": "benchmark_tools/benchmark_production.py",
+            "sha256": "09f133ae7feac36bb44005e7f0c5e84d36680d351ca4abaa58aaa58a3ecfb286"
+          }
+        ],
+        "limitations": [
+          "Manifests were recorded by the historical harness; raw inputs and source bytes are not re-admitted here.",
+          "Launch source revision and harness-at-completion revision are distinct historical fields."
+        ],
+        "matched_output_manifest": [
+          {
+            "bytes": 9497035,
+            "path": "orthohmm_orthogroups.txt",
+            "sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1"
+          }
+        ],
+        "measurement": {
+          "elapsed_seconds": 6556.426547,
+          "system_seconds": 92.579848,
+          "user_seconds": 189932.597022
+        },
+        "memory": {
+          "scope": "sampled_sum_of_linux_proc_tree_rss",
+          "unit": "bytes",
+          "value": 11941715968
+        },
+        "recorded_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+      },
+      "previously_reported_resources": [
+        {
+          "full_inference": true,
+          "measurement": {
+            "elapsed_seconds": 6556.426547
+          },
+          "memory": {
+            "scope": "sampled peak process-tree RSS",
+            "unit": "KiB",
+            "value": 11661832.0
+          },
+          "memory_scope": "sampled peak process-tree RSS",
+          "requested_cpus": 32,
+          "scope": "measured"
+        }
+      ],
+      "retained_text": {
+        "source_commit.txt": "599dda43569d28faae9844368d54733c632435d4"
+      },
+      "selected_prediction": {
+        "bytes": 9497035,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/orthohmm_high_sensitivity/orthogroups.txt",
+        "sha256": "28ba45202afc7f51e719d59405674023c9b284a2d5ea18575b03c7b949e13db1"
+      },
+      "timing_records": []
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "0.5.0",
+      "empty_timing_logs": [],
+      "evidence": {
+        "inference_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/inference_wall_time_s.txt",
+          "sha256": "04b363cbcbaeef26a6003890851c2d767ecf11a97b15bab4fff8d6e7457fa7a0"
+        },
+        "metrics.json": {
+          "bytes": 19296,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/metrics.json",
+          "sha256": "2019ade1fe8175dd8b2ec765acb250f276b66dda99815d9fa97e1e7152f1c3ba"
+        },
+        "run_metadata.tsv": {
+          "bytes": 94,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/run_metadata.tsv",
+          "sha256": "215ab2d2ae153d4cb981564a332916ebbe6e1eece56b520a0cf4f31afc4e6f77"
+        },
+        "runner_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/runner_wall_time_s.txt",
+          "sha256": "70062d4c6a70d2fca2722cac49f9080531046d324ee767caefc1610ab025a9ac"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/source_commit.txt",
+          "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+        },
+        "tool_version.txt": {
+          "bytes": 60,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/tool_version.txt",
+          "sha256": "da88cb669e8f758d9a3393bf1e8366805e970bc330d1edf65d47e8f199171176"
+        }
+      },
+      "key": "orthohmm_phylogeny_satellite_v2",
+      "metadata_events": [
+        {
+          "key": "slurm_job_id",
+          "value": "20893"
+        },
+        {
+          "key": "cpus",
+          "value": "32"
+        },
+        {
+          "key": "started_epoch_s",
+          "value": "1788764556"
+        },
+        {
+          "key": "finished_epoch_s",
+          "value": "1788772782"
+        },
+        {
+          "key": "exit_code",
+          "value": "0"
+        }
+      ],
+      "metrics": {
+        "cpu_scope": "Historical metrics collector's recorded CPU totals; no fresh process-tree/cgroup accounting validation",
+        "entrypoint_argv": [
+          "/home/bizon/anaconda3/bin/python",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/__main__.py",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/output",
+          "-c",
+          "32",
+          "--threads_per_worker",
+          "8",
+          "-x",
+          "BLOSUM62",
+          "-e",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm_resolution",
+          "0.1",
+          "--refinement_profile",
+          "default",
+          "--accuracy_profile",
+          "high_sensitivity",
+          "--metrics_json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/metrics.json",
+          "--stop",
+          "infer",
+          "--phylogeny",
+          "reconcile",
+          "--species_tree_mode",
+          "infer",
+          "--aligner",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+          "--tree_builder",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+          "--phylogeny_candidates",
+          "satellite_v2",
+          "--phylogeny_root_rule",
+          "species_overlap",
+          "--phylogeny_pair_rule",
+          "positive_paralogy",
+          "--species_tree_rooting",
+          "min_variance"
+        ],
+        "harness_argv": [
+          "/home/bizon/anaconda3/bin/python",
+          "-m",
+          "orthohmm",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/input",
+          "-o",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/output",
+          "-c",
+          "32",
+          "--threads_per_worker",
+          "8",
+          "-x",
+          "BLOSUM62",
+          "-e",
+          "0.0001",
+          "--clustering",
+          "leiden",
+          "--cpm_resolution",
+          "0.1",
+          "--refinement_profile",
+          "default",
+          "--accuracy_profile",
+          "high_sensitivity",
+          "--metrics_json",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/metrics.json",
+          "--stop",
+          "infer",
+          "--phylogeny",
+          "reconcile",
+          "--species_tree_mode",
+          "infer",
+          "--aligner",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+          "--tree_builder",
+          "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+          "--phylogeny_candidates",
+          "satellite_v2",
+          "--phylogeny_root_rule",
+          "species_overlap",
+          "--phylogeny_pair_rule",
+          "positive_paralogy",
+          "--species_tree_rooting",
+          "min_variance"
+        ],
+        "harness_git_dirty": true,
+        "harness_revision_at_completion": "9c293177446e2881cc480b625e8121f18edb4c26",
+        "inherited_input_manifest": [
+          {
+            "bytes": 22455028,
+            "path": "Amph.fasta",
+            "sha256": "ef309054ffc2b6a96e9c523569bc84a9286dd48c2caa4b0eb6a0adad6a48b61f"
+          },
+          {
+            "bytes": 15376532,
+            "path": "Anol.fasta",
+            "sha256": "3572dfe704fbd7da7e7a59085f06252964d0a5f8426858cbb55353bbc9455e05"
+          },
+          {
+            "bytes": 33366601,
+            "path": "Arab.fasta",
+            "sha256": "d7c319fa8c6d3b5569ae43cfe0cad2a1331b5c0db9b97b49ceadcf9fef62b3b4"
+          },
+          {
+            "bytes": 6750862,
+            "path": "Asfu.fasta",
+            "sha256": "64472bec6c765b88656f884ef6edfc5180a14859c1a0e2170ea441e16ee049a5"
+          },
+          {
+            "bytes": 42222249,
+            "path": "Dani.fasta",
+            "sha256": "c0a902d57898468f0df1a77a0773f935ef80d53abc4c3831381736f8d13d4e73"
+          },
+          {
+            "bytes": 21984251,
+            "path": "Oryz.fasta",
+            "sha256": "613aa313a07ff90ed70fb599f1b3d71cbfe24d0970111431466297c01da970d4"
+          },
+          {
+            "bytes": 5875882,
+            "path": "Scer.fasta",
+            "sha256": "b4d38c9f505484f0dd7218e769b97f79ad1c3bf94619b989d4bc05b5fae22e42"
+          },
+          {
+            "bytes": 8582364,
+            "path": "Scom.fasta",
+            "sha256": "f078d61dc29427086de601369fe6ed541fa5d937c7a58c717fbdd28a2a397f8a"
+          },
+          {
+            "bytes": 20561355,
+            "path": "Sela.fasta",
+            "sha256": "63d77c81ef9e1e437a7ed210f274d325dfb87983faf74fc0bec2dd37347a173e"
+          },
+          {
+            "bytes": 3805824,
+            "path": "Spom.fasta",
+            "sha256": "643f960eb5531a2a642dc0c39d9db04e85fe7f0e6940fb5c880bc1369f7e7dc5"
+          },
+          {
+            "bytes": 25382533,
+            "path": "Xeno.fasta",
+            "sha256": "8eb459d5da98a95f6e228b8bda9d7136456b511abbf33356acd5bb69d063e398"
+          },
+          {
+            "bytes": 95382422,
+            "path": "Zeam.fasta",
+            "sha256": "1b0b9e82cfaee672f9ceaa6156f3a1ab3812b3f2dbac9af9dce4c0232222700c"
+          }
+        ],
+        "inherited_source_manifest": [
+          {
+            "bytes": 0,
+            "path": "orthohmm/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 127,
+            "path": "orthohmm/__main__.py",
+            "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+          },
+          {
+            "bytes": 14046,
+            "path": "orthohmm/accuracy.py",
+            "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+          },
+          {
+            "bytes": 7908,
+            "path": "orthohmm/args_processing.py",
+            "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+          },
+          {
+            "bytes": 10166,
+            "path": "orthohmm/externals.py",
+            "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+          },
+          {
+            "bytes": 2977,
+            "path": "orthohmm/files.py",
+            "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+          },
+          {
+            "bytes": 32293,
+            "path": "orthohmm/helpers.py",
+            "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+          },
+          {
+            "bytes": 1411,
+            "path": "orthohmm/leiden_worker.py",
+            "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+          },
+          {
+            "bytes": 6812,
+            "path": "orthohmm/metrics.py",
+            "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+          },
+          {
+            "bytes": 30663,
+            "path": "orthohmm/orthohmm.py",
+            "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+          },
+          {
+            "bytes": 15939,
+            "path": "orthohmm/parser.py",
+            "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+          },
+          {
+            "bytes": 29732,
+            "path": "orthohmm/phylogeny.py",
+            "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+          },
+          {
+            "bytes": 41369,
+            "path": "orthohmm/phylogeny_pipeline.py",
+            "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+          },
+          {
+            "bytes": 61183,
+            "path": "orthohmm/refinement.py",
+            "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+          },
+          {
+            "bytes": 0,
+            "path": "orthohmm/search/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 0,
+            "path": "orthohmm/search/_experimental/__init__.py",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "bytes": 8599,
+            "path": "orthohmm/search/_experimental/viterbi_cuda_numba.py",
+            "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+          },
+          {
+            "bytes": 21146,
+            "path": "orthohmm/search/engine.py",
+            "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+          },
+          {
+            "bytes": 1865,
+            "path": "orthohmm/search/evalue.py",
+            "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+          },
+          {
+            "bytes": 27982,
+            "path": "orthohmm/search/matrices.py",
+            "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+          },
+          {
+            "bytes": 9180,
+            "path": "orthohmm/search/msa_center_star.py",
+            "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+          },
+          {
+            "bytes": 6728,
+            "path": "orthohmm/search/msa_profile.py",
+            "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+          },
+          {
+            "bytes": 22855,
+            "path": "orthohmm/search/prefilter.py",
+            "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+          },
+          {
+            "bytes": 6143,
+            "path": "orthohmm/search/profile.py",
+            "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+          },
+          {
+            "bytes": 25077,
+            "path": "orthohmm/search/profile_expansion.py",
+            "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+          },
+          {
+            "bytes": 4509,
+            "path": "orthohmm/search/sequences.py",
+            "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+          },
+          {
+            "bytes": 5324,
+            "path": "orthohmm/search/species_prune.py",
+            "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+          },
+          {
+            "bytes": 17693,
+            "path": "orthohmm/search/viterbi.py",
+            "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+          },
+          {
+            "bytes": 4420,
+            "path": "orthohmm/search/viterbi_cuda_ctypes.py",
+            "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+          },
+          {
+            "bytes": 22,
+            "path": "orthohmm/version.py",
+            "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+          },
+          {
+            "bytes": 2949,
+            "path": "orthohmm/writer.py",
+            "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+          },
+          {
+            "bytes": 7954,
+            "path": "benchmark_tools/benchmark_production.py",
+            "sha256": "47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc"
+          }
+        ],
+        "limitations": [
+          "Manifests were recorded by the historical harness; raw inputs and source bytes are not re-admitted here.",
+          "Launch source revision and harness-at-completion revision are distinct historical fields."
+        ],
+        "matched_output_manifest": [
+          {
+            "bytes": 7848775,
+            "path": "orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "sha256": "07eae3dad852c6376d95e76fb7c7a5f08554342fd44f7bf8a5cf40cf999ca0e3"
+          }
+        ],
+        "measurement": {
+          "elapsed_seconds": 8222.745564,
+          "system_seconds": 7087.538037,
+          "user_seconds": 231374.661843
+        },
+        "memory": {
+          "scope": "sampled_sum_of_linux_proc_tree_rss",
+          "unit": "bytes",
+          "value": 11784400896
+        },
+        "recorded_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+      },
+      "previously_reported_resources": [
+        {
+          "full_inference": true,
+          "measurement": {
+            "elapsed_seconds": 8225
+          },
+          "memory": {
+            "scope": "sampled peak process-tree RSS",
+            "unit": "KiB",
+            "value": 11508204
+          },
+          "memory_scope": "sampled peak process-tree RSS",
+          "requested_cpus": 32,
+          "scope": "measured"
+        }
+      ],
+      "retained_text": {
+        "inference_wall_time_s.txt": "8225",
+        "runner_wall_time_s.txt": "8226",
+        "source_commit.txt": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "tool_version.txt": "OrthoHMM high_sensitivity + inferred phylogeny satellite_v2"
+      },
+      "selected_prediction": {
+        "bytes": 7848775,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/orthogroups.txt",
+        "sha256": "07eae3dad852c6376d95e76fb7c7a5f08554342fd44f7bf8a5cf40cf999ca0e3"
+      },
+      "timing_records": []
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "3.1.5",
+      "empty_timing_logs": [],
+      "evidence": {
+        "inference_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/inference_wall_time_s.txt",
+          "sha256": "281859aa7f4081e6b3bcc91338ce53c9f22aba3c63ab523529778323da80d93a"
+        },
+        "run_metadata.tsv": {
+          "bytes": 94,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run_metadata.tsv",
+          "sha256": "3d0bab629a0f4620221f736e2d5172c9eced6d80929045b38ab273a889433ad8"
+        },
+        "runner_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/runner_wall_time_s.txt",
+          "sha256": "1bf7ad379694bbc5fba980d5ac1764dc8c0a15641faf0e4f1bd66af810b31221"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/source_commit.txt",
+          "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+        },
+        "time.log": {
+          "bytes": 997,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/time.log",
+          "sha256": "773b601130fc8aeb5ad276aeaeee232abd243df41fcd9c94815290cbbc8db395"
+        },
+        "tool_version.txt": {
+          "bytes": 19,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/tool_version.txt",
+          "sha256": "ce98f128f54ebbc3bd79bd2f40c4404175e54292346bed575892aa7564390ce4"
+        }
+      },
+      "key": "orthofinder_3_1_5_full",
+      "metadata_events": [
+        {
+          "key": "slurm_job_id",
+          "value": "20892"
+        },
+        {
+          "key": "cpus",
+          "value": "32"
+        },
+        {
+          "key": "started_epoch_s",
+          "value": "1788764556"
+        },
+        {
+          "key": "finished_epoch_s",
+          "value": "1788770891"
+        },
+        {
+          "key": "exit_code",
+          "value": "0"
+        }
+      ],
+      "metrics": null,
+      "previously_reported_resources": [
+        {
+          "full_inference": true,
+          "measurement": {
+            "elapsed_seconds": 6332
+          },
+          "memory": {
+            "scope": "maximum RSS reported by GNU time",
+            "unit": "KiB",
+            "value": 4178948
+          },
+          "memory_scope": "maximum RSS reported by GNU time",
+          "requested_cpus": 32,
+          "scope": "measured"
+        }
+      ],
+      "retained_text": {
+        "inference_wall_time_s.txt": "6332",
+        "runner_wall_time_s.txt": "6335",
+        "source_commit.txt": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "tool_version.txt": "OrthoFinder:v3.1.5"
+      },
+      "selected_prediction": {
+        "bytes": 8587216,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/orthogroups.txt",
+        "sha256": "cb730780d6577d446f7f30e155baa2d1800087cbafa54e128d4f52967010f9c4"
+      },
+      "timing_records": [
+        {
+          "argv": [
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/orthofinder_3.1.5/bin/orthofinder",
+            "-f",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input",
+            "-t",
+            "32",
+            "-a",
+            "32",
+            "-S",
+            "diamond"
+          ],
+          "evidence": {
+            "bytes": 997,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/time.log",
+            "sha256": "773b601130fc8aeb5ad276aeaeee232abd243df41fcd9c94815290cbbc8db395"
+          },
+          "measurement": {
+            "elapsed_seconds": 6332.0,
+            "exit_status": 0,
+            "max_process_rss_kib": 4178948,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 1890.13,
+            "user_seconds": 69581.08
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "native command; FastOMA CPU/RSS are driver/waited descendants, not aggregate Docker tasks"
+        }
+      ]
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "3.1.5",
+      "empty_timing_logs": [],
+      "evidence": {
+        "conversion_time.log": {
+          "bytes": 1419,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/conversion_time.log",
+          "sha256": "9108c4627bb4d5444c0bc79fd6423100b6a9aca7dd8a0476bddf356ead25e43a"
+        },
+        "inference_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/inference_wall_time_s.txt",
+          "sha256": "fc5c6c129806d578767894144c47c03af21399ac11d20512b91201d33164fcba"
+        },
+        "run_metadata.tsv": {
+          "bytes": 93,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/run_metadata.tsv",
+          "sha256": "0510a559e1379eb313274a5b82f945ca6679efe72d6c0962178f3a93c9a6e56d"
+        },
+        "runner_wall_time_s.txt": {
+          "bytes": 2,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/runner_wall_time_s.txt",
+          "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        "runtime_note.txt": {
+          "bytes": 76,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/runtime_note.txt",
+          "sha256": "cd415b059e390854bfac70cd9ceab3e7e57fecf3225e26246b7407f4b791076a"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/source_commit.txt",
+          "sha256": "89cf492ba9893c25ccc13d17e094db9b9fc623c8e8c809e0273f376f117a1ada"
+        },
+        "tool_version.txt": {
+          "bytes": 19,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/tool_version.txt",
+          "sha256": "ce98f128f54ebbc3bd79bd2f40c4404175e54292346bed575892aa7564390ce4"
+        }
+      },
+      "key": "orthofinder_3_1_5_sequence_only",
+      "metadata_events": [
+        {
+          "key": "slurm_job_id",
+          "value": "20897"
+        },
+        {
+          "key": "cpus",
+          "value": "1"
+        },
+        {
+          "key": "started_epoch_s",
+          "value": "1788771199"
+        },
+        {
+          "key": "finished_epoch_s",
+          "value": "1788771202"
+        },
+        {
+          "key": "exit_code",
+          "value": "0"
+        }
+      ],
+      "metrics": null,
+      "previously_reported_resources": [
+        {
+          "full_inference": false,
+          "measurement": {
+            "elapsed_seconds": 4884
+          },
+          "memory": {
+            "scope": null,
+            "unit": "KiB",
+            "value": null
+          },
+          "memory_scope": null,
+          "requested_cpus": 32,
+          "scope": "derived from matching full run's MCL checkpoint"
+        }
+      ],
+      "retained_text": {
+        "inference_wall_time_s.txt": "4884",
+        "runner_wall_time_s.txt": "3",
+        "runtime_note.txt": "Derived from the matching full OrthoFinder 3.1.5 run at its MCL checkpoint.",
+        "source_commit.txt": "9c293177446e2881cc480b625e8121f18edb4c26",
+        "tool_version.txt": "OrthoFinder:v3.1.5"
+      },
+      "selected_prediction": {
+        "bytes": 7848775,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/orthogroups.txt",
+        "sha256": "e94fb298e8fa7807f5c98038dd55f147d1fdb7fa5491592641049d5fd1988d50"
+      },
+      "timing_records": [
+        {
+          "argv": [
+            "/home/bizon/anaconda3/bin/python",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_full/run/input/OrthoFinder/Results_Sep07/WorkingDirectory/SequenceIDs.txt",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/orthogroups.txt"
+          ],
+          "evidence": {
+            "bytes": 1419,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthofinder_3_1_5_sequence_only/conversion_time.log",
+            "sha256": "9108c4627bb4d5444c0bc79fd6423100b6a9aca7dd8a0476bddf356ead25e43a"
+          },
+          "measurement": {
+            "elapsed_seconds": 0.84,
+            "exit_status": 0,
+            "max_process_rss_kib": 150084,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 0.16,
+            "user_seconds": 0.68
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "checkpoint conversion only; not sequence-only inference"
+        }
+      ]
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "6.3.6",
+      "empty_timing_logs": [],
+      "evidence": {
+        "time.log": {
+          "bytes": 1027,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/time.log",
+          "sha256": "539190d455dc5284794268253bd2c6a9b3fcd53c8bab04c9a80c5a07c627b4ad"
+        },
+        "wall_time_s.txt": {
+          "bytes": 4,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/wall_time_s.txt",
+          "sha256": "20cc7ab749765f98c9a16788476d8fc91d9c450eafd1e40e962caaa290c8f82c"
+        }
+      },
+      "key": "proteinortho_6_3_6",
+      "metadata_events": [],
+      "metrics": null,
+      "previously_reported_resources": [
+        {
+          "full_inference": true,
+          "measurement": {
+            "elapsed_seconds": 569
+          },
+          "memory": {
+            "scope": "maximum RSS reported by GNU time",
+            "unit": "KiB",
+            "value": 2698752
+          },
+          "memory_scope": "maximum RSS reported by GNU time",
+          "requested_cpus": 32,
+          "scope": "measured"
+        }
+      ],
+      "retained_text": {
+        "wall_time_s.txt": "569"
+      },
+      "selected_prediction": {
+        "bytes": 3854242,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/orthogroups.txt",
+        "sha256": "4069a10ce5f302c17a915cc7d2bff8c97b6fc801e314b4743eb34d2b7d3d50b0"
+      },
+      "timing_records": [
+        {
+          "argv": [
+            "singularity",
+            "exec",
+            "--bind",
+            "/mnt",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/proteinortho_6.3.6--h2b77389_0.sif",
+            "proteinortho",
+            "-project=tk",
+            "-cpus=32",
+            "Amph.fasta",
+            "Anol.fasta",
+            "Arab.fasta",
+            "Asfu.fasta",
+            "Dani.fasta",
+            "Oryz.fasta",
+            "Scer.fasta",
+            "Scom.fasta",
+            "Sela.fasta",
+            "Spom.fasta",
+            "Xeno.fasta",
+            "Zeam.fasta"
+          ],
+          "evidence": {
+            "bytes": 1027,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/proteinortho/time.log",
+            "sha256": "539190d455dc5284794268253bd2c6a9b3fcd53c8bab04c9a80c5a07c627b4ad"
+          },
+          "measurement": {
+            "elapsed_seconds": 568.44,
+            "exit_status": 0,
+            "max_process_rss_kib": 2698752,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 55.67,
+            "user_seconds": 8847.27
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "native command; FastOMA CPU/RSS are driver/waited descendants, not aggregate Docker tasks"
+        }
+      ]
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "0.3.5",
+      "empty_timing_logs": [],
+      "evidence": {
+        "inference_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/inference_wall_time_s.txt",
+          "sha256": "bbdbf2d46750dd8d042a84228deb69440f58e16192916415a6af722d697b343f"
+        },
+        "run_metadata.tsv": {
+          "bytes": 95,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run_metadata.tsv",
+          "sha256": "71e46b5a9afb34898dfcbd0e51b6ebffb306dae9f92b8299839ecebb5f7d137a"
+        },
+        "runner_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/runner_wall_time_s.txt",
+          "sha256": "2e1d6a991bc664bb4c6f5af3cebc802e403248b226bd769445afd53afd0b5f33"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/source_commit.txt",
+          "sha256": "3d74ee402e2c4a018621b7cab07edff1d45046414d2d3a960ccce3ec13a6894e"
+        },
+        "time.log": {
+          "bytes": 1550,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/time.log",
+          "sha256": "4be3a5846fef30797bc899754f776bface38fa547b23d038bb4e38da413803f4"
+        },
+        "tool_version.txt": {
+          "bytes": 80,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/tool_version.txt",
+          "sha256": "5074dec8c6bb1bfe611186754922b1f7ef462d3bcee9b5340094853b333cafa8"
+        }
+      },
+      "key": "fastoma_0_3_5",
+      "metadata_events": [
+        {
+          "key": "slurm_job_id",
+          "value": "20895"
+        },
+        {
+          "key": "cpus",
+          "value": "128"
+        },
+        {
+          "key": "started_epoch_s",
+          "value": "1788770892"
+        },
+        {
+          "key": "finished_epoch_s",
+          "value": "1788777416"
+        },
+        {
+          "key": "exit_code",
+          "value": "0"
+        }
+      ],
+      "metrics": null,
+      "previously_reported_resources": [
+        {
+          "full_inference": true,
+          "measurement": {
+            "elapsed_seconds": 6523
+          },
+          "memory": {
+            "scope": "maximum RSS reported by GNU time",
+            "unit": "KiB",
+            "value": 621124
+          },
+          "memory_scope": "maximum RSS reported by GNU time",
+          "requested_cpus": 128,
+          "scope": "measured"
+        }
+      ],
+      "retained_text": {
+        "inference_wall_time_s.txt": "6523",
+        "runner_wall_time_s.txt": "6524",
+        "source_commit.txt": "6bb08e5bafc791d557296f99acb80abd735ecdff",
+        "tool_version.txt": "FastOMA version: 0.3.5\nFastOMA source: bf6dcbaa8cf516ab6f6e074dba37eceb59a9b80e"
+      },
+      "selected_prediction": {
+        "bytes": 1738026,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/orthogroups.txt",
+        "sha256": "3a8b30791c01b847244dfb86e86bebaec97731275d8bbfbf7517902758adf7ef"
+      },
+      "timing_records": [
+        {
+          "argv": [
+            "/home/bizon/bin/nextflow",
+            "-c",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/fastoma_qfo.config",
+            "run",
+            "FastOMA.nf",
+            "-profile",
+            "docker",
+            "-ansi-log",
+            "false",
+            "--container_version",
+            "0.3.5",
+            "--input_folder",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/run/input",
+            "--output_folder",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/output",
+            "--omamer_db",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/data/LUCA.h5",
+            "--fasta_header_id_transformer",
+            "noop",
+            "--force_pairwise_ortholog_generation",
+            "true",
+            "--max_cpus",
+            "128",
+            "--max_memory",
+            "700.GB",
+            "-work-dir",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/work"
+          ],
+          "evidence": {
+            "bytes": 1550,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/fastoma_0_3_5/time.log",
+            "sha256": "4be3a5846fef30797bc899754f776bface38fa547b23d038bb4e38da413803f4"
+          },
+          "measurement": {
+            "elapsed_seconds": 6522.0,
+            "exit_status": 0,
+            "max_process_rss_kib": 621124,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 99.46,
+            "user_seconds": 84.99
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "native command; FastOMA CPU/RSS are driver/waited descendants, not aggregate Docker tasks"
+        }
+      ]
+    },
+    {
+      "binding_scope": "Retained result-directory association plus selected prediction identity; not immutable historical execution attestation",
+      "declared_version": "1.4",
+      "empty_timing_logs": [
+        "time.log"
+      ],
+      "evidence": {
+        "blast_wall_time_s.txt": {
+          "bytes": 7,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/blast_wall_time_s.txt",
+          "sha256": "dbd0e6c6240bb4952d90171f6d83621cdfbcb2e022b3548ca03b9e875b0e2e6c"
+        },
+        "bpo_conversion_wall_time_s.txt": {
+          "bytes": 4,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_conversion_wall_time_s.txt",
+          "sha256": "397ed9ce86afaf9e127cd9cceddf99eb12c6b98a3e02df1e8f5c21e15ab324ad"
+        },
+        "bpo_converter.time.log": {
+          "bytes": 1052,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_converter.time.log",
+          "sha256": "bbfee741d8922e3f40e543ed2f56df8bfd1100fa406ba910a01261fc3c7752b6"
+        },
+        "bpo_index_wall_time_s.txt": {
+          "bytes": 4,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_index_wall_time_s.txt",
+          "sha256": "f0448ca7d8645d6c1d4902a2c058a37abfc44f1de59ab54163c80faaf72f6a4c"
+        },
+        "downstream_time.log": {
+          "bytes": 7436,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/downstream_time.log",
+          "sha256": "3bfb2fb296ebc3ed64584907363f4523358d92e6d5064d72d4ad038b26eebbe8"
+        },
+        "downstream_wall_time_s.txt": {
+          "bytes": 5,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/downstream_wall_time_s.txt",
+          "sha256": "49c3f590d9a08e5d6aa461c23d397b889a64af48107688b3c833b440a5c805e9"
+        },
+        "inference_wall_time_s.txt": {
+          "bytes": 7,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/inference_wall_time_s.txt",
+          "sha256": "3daf869731561d5f62d1a76f3fe0cb382417e3440d41373855154fa582c2b55b"
+        },
+        "run_metadata.tsv": {
+          "bytes": 582,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/run_metadata.tsv",
+          "sha256": "52badd70dafbfc0c961a4b4ad88e90852610f935a012f45a2836d72f484d30a0"
+        },
+        "runner_wall_time_s.txt": {
+          "bytes": 7,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/runner_wall_time_s.txt",
+          "sha256": "0901a239fa78b3057a85f73dadce7e11da5c596eae136e0a9f1b1b06ff7761cf"
+        },
+        "source_commit.txt": {
+          "bytes": 41,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/source_commit.txt",
+          "sha256": "437473462212dc2d1dbe48ac598c05b60e894fd0d5afb75cc7289a97f4557ce6"
+        },
+        "time.log": {
+          "bytes": 0,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/time.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "tool_version.txt": {
+          "bytes": 100,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/tool_version.txt",
+          "sha256": "0e172ace8bda257e839af296bbcdd7aeab60150ee0060df510f155b2061ce86c"
+        }
+      },
+      "key": "orthomcl_1_4",
+      "metadata_events": [
+        {
+          "key": "slurm_job_id",
+          "value": "20899"
+        },
+        {
+          "key": "cpus",
+          "value": "32"
+        },
+        {
+          "key": "started_epoch_s",
+          "value": "1788777869"
+        },
+        {
+          "key": "finished_epoch_s",
+          "value": "1788921035"
+        },
+        {
+          "key": "exit_code",
+          "value": "0"
+        },
+        {
+          "key": "recovery_slurm_job_id",
+          "value": "20900"
+        },
+        {
+          "key": "recovery_started_epoch_s",
+          "value": "1788921055"
+        },
+        {
+          "key": "recovery_finished_epoch_s",
+          "value": "1788924634"
+        },
+        {
+          "key": "recovery_exit_code",
+          "value": "0"
+        },
+        {
+          "key": "recovery_slurm_job_id",
+          "value": "20901"
+        },
+        {
+          "key": "recovery_started_epoch_s",
+          "value": "1788924689"
+        },
+        {
+          "key": "recovery_finished_epoch_s",
+          "value": "1788930136"
+        },
+        {
+          "key": "recovery_exit_code",
+          "value": "0"
+        },
+        {
+          "key": "recovery_slurm_job_id",
+          "value": "20902"
+        },
+        {
+          "key": "recovery_started_epoch_s",
+          "value": "1788930185"
+        },
+        {
+          "key": "recovery_finished_epoch_s",
+          "value": "1788934666"
+        },
+        {
+          "key": "recovery_exit_code",
+          "value": "0"
+        },
+        {
+          "key": "recovery_slurm_job_id",
+          "value": "20903"
+        },
+        {
+          "key": "recovery_started_epoch_s",
+          "value": "1788935018"
+        },
+        {
+          "key": "recovery_finished_epoch_s",
+          "value": "1788937315"
+        },
+        {
+          "key": "recovery_exit_code",
+          "value": "0"
+        }
+      ],
+      "metrics": null,
+      "previously_reported_resources": [
+        {
+          "full_inference": false,
+          "measurement": {
+            "elapsed_seconds": 141193
+          },
+          "memory": {
+            "scope": "sampled sum of process-tree RSS; shared fork pages double-counted",
+            "unit": "KiB",
+            "value": 93351928
+          },
+          "memory_scope": "sampled sum of process-tree RSS; shared fork pages double-counted",
+          "requested_cpus": 32,
+          "scope": "measured stage sum"
+        }
+      ],
+      "retained_text": {
+        "blast_wall_time_s.txt": "138194",
+        "bpo_conversion_wall_time_s.txt": "548",
+        "bpo_index_wall_time_s.txt": "175",
+        "downstream_wall_time_s.txt": "2276",
+        "inference_wall_time_s.txt": "141193",
+        "runner_wall_time_s.txt": "143166",
+        "source_commit.txt": "fd1b55e08b3916119adfe3416b5c7eaa4d929a81",
+        "tool_version.txt": "OrthoMCL 1.4 + MCL 02-063; 32-thread legacy BLAST; exact-compatible BPO conversion; 11 pair workers"
+      },
+      "selected_prediction": {
+        "bytes": 6804749,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthogroups.txt",
+        "sha256": "e2edb47e56844adcc16f196b530e15c9ca872cbc2fe9b018d8a64b2ddc47b7d8"
+      },
+      "timing_records": [
+        {
+          "argv": [
+            "python",
+            "benchmark_tools/convert_orthomcl_blast.py",
+            "three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.blast",
+            "three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.fa",
+            "three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.accelerated.bpo",
+            "--progress-every",
+            "1000000"
+          ],
+          "evidence": {
+            "bytes": 1052,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/bpo_converter.time.log",
+            "sha256": "bbfee741d8922e3f40e543ed2f56df8bfd1100fa406ba910a01261fc3c7752b6"
+          },
+          "measurement": {
+            "elapsed_seconds": 547.24,
+            "exit_status": 0,
+            "max_process_rss_kib": 72392,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 12.45,
+            "user_seconds": 534.73
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "BLAST-to-BPO conversion only"
+        },
+        {
+          "argv": [
+            "env",
+            "PATH=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS//bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/home/bizon/.codex/tmp/arg0/codex-arg0ZA0Uk6:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/home/bizon/.cargo/bin:/home/bizon/anaconda3/bin:/home/bizon/anaconda3/condabin:/usr/local/cuda/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin:/home/bizon/.cache/lm-studio/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/VSEARCH/vsearch-2.30.5-linux-x86_64/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/clustalo:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/iqtree-3.0.1-Linux-intel/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/diamond-linux64:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/eggnog-mapper/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/foldseek/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/hmmer-3.4/src:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/NPM_DOWNLOADS/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ncbi-blast-2.17.0+/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mcl-02-063/bin:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/raxml-ng_v1.2.2_linux_x86_64/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/TREE-QMC/build/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/minimap2-2.30_x64-linux/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/muscle_v5.3/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/indelible/:/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mmseqs/bin/:/usr/local/cuda/bin:/home/bizon/.pyenv/plugins/pyenv-virtualenv/shims:/home/bizon/.pyenv/shims:/home/bizon/.pyenv/bin:/home/bizon/.vscode-server/cli/servers/Stable-258e40fedc6cb8edf399a463ce3a9d32e7e1f6f3/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/bizon/.cache/lm-studio/bin",
+            "PERL5LIB=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl:",
+            "ORTHOMCL_PAIR_WORKERS=11",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/ORTHOMCLV1.4/venv_orthomcl/bin/perl",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/orthomcl.pl",
+            "--mode",
+            "4",
+            "--bpo_file",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.accelerated.bpo",
+            "--gg_file",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/orthomcl/Sep_7/tmp/all.gg"
+          ],
+          "evidence": {
+            "bytes": 7436,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/three_kingdoms/results/parity_20260907/orthomcl_1_4/downstream_time.log",
+            "sha256": "3bfb2fb296ebc3ed64584907363f4523358d92e6d5064d72d4ad038b26eebbe8"
+          },
+          "measurement": {
+            "elapsed_seconds": 2276.32,
+            "exit_status": 0,
+            "max_process_rss_kib": 16676844,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 3109.58,
+            "user_seconds": 6127.68
+          },
+          "memory_scope": "GNU-time maximum process RSS; not aggregate concurrent workflow memory",
+          "scope": "recovered mode4 downstream only; excludes BLAST/BPO"
+        }
+      ]
+    }
+  ],
+  "scores_recomputed": false,
+  "source": {
+    "bytes": 9456,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_three_kingdoms_run_metadata.py",
+    "sha256": "669c4ab84acfd6fe1df73e37940780e6abc09be3fadc64bb399af855e6b9d64c"
+  },
+  "status": "historical_three_kingdoms_metadata_supplement"
+}

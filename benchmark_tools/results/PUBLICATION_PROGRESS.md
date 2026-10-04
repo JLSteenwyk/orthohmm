@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Historical Three Kingdoms Commands And Stage Costs Recovered (2026-10-04)
+
+Commit/push090e61f1 publishes the corrected24-row register. Continue goal1.2
+from actual retained metadata rather than rerunning tools. Tested source
+3ef56766 is pushed before the [seven-row supplement](THREE_KINGDOMS_RUN_METADATA_20261004.md)
+executes successfully. Six GNU-time records, two OrthoHMM metrics and50 direct
+file identities are retained; independent readback passes. Twenty new cases
+plus30 existing register cases pass,50 total.
+
+Preserve distinct native/wrapper/checkpoint/conversion intervals, all four
+OrthoMCL recovery job records and empty full-run timing log. Accepted MCL
+stage arithmetic remains141193 seconds. Harness manifests/revisions were
+recorded after inference with a dirty worktree, not at launch. These are
+directory-associated historical records with selected prediction identities,
+not immutable execution/input-consumption attestation or comparable memory.
+The newer matched Sonic run is never joined to its older historical logs.
+
+No inference/scoring/timing identities or completed diagnostics are repeated;
+no owned native job is live. Preserve earlier immutable evidence bytes.
+Next finish available OrthoBench historical metadata and transitive workflow
+routes, then address remaining scientifically defensible uncertainty/error
+analysis and release gaps. Full publication goal stays active/incomplete.
+
 ## Actual All-Tool Provenance And Scoped Resources Consolidated (2026-10-04)
 
 The preceding user exchange confirms shared-host authorization but makes no
