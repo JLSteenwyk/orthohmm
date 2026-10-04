@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Index 25 OrthoFinder Reviewed; Final Identity Remains (2026-10-04)
+
+Commit/push `86656432` retains the staged source-helper fix without applying
+it to the live bound source. Fresh accounting confirms22422 parent/batch/
+native and capture-only22423 COMPLETED0:0. The existing independent reviewer
+runs once and all four categories/prepared-owner lifecycle pass. Public
+summary/controller match canonical retained bytes; raw audit stays local/ignored.
+
+[Attempt22422](THREADRIPPER_SHARED_ATTEMPT_22422.md) supplies command wall
+1,580.470034134s, wrapper-inclusive CPU bracket34,290.331463 CPU-seconds and
+launcher-inclusive native-step lifetime peak13,647,224,832 bytes. Maximum
+observed foreign CPU56.8722536621 cores is annotated, not subtracted. Both
+environment failure maps are empty. Native counts are coverage, not accuracy.
+
+[Tablev26](threadripper_shared_panel_snapshot_20261004_v26/panel.json) has26
+reviewed/24 measured/23 eligible, exclusions0/17/20 and five complete cells.
+All earlier25 rows are unchanged. Full OrthoFinder/twelve proteomes has only
+two eligible repeats because17 aborted before native; summaries stay null.
+[Figurev25](threadripper_shared_resource_figure_20261004_v25/shared_threadripper_resources.pdf)
+is generated and visually checked. Three current-checkpoint tests pass in3.60s;
+[readback](threadripper_checkpoint_validation_22422.json) pins all six source/
+artifact identities and actual JUnit. No completed native analysis is repeated.
+
+No panel job is live at this completed checkpoint. Only26 is unsubmitted.
+Commit/push before releasing the final high-sensitivity/twelve-proteome/repeat2
+identity through the goal-reaffirmed continuation, actual26-history prefix and
+fresh capacity/prepared/native handoff. Do not retry earlier failed identities.
+After27 independent reviews, generate final resource prose/reporting bundle,
+integrate the staged source patch and reconcile full manuscript/PDF and actual
+executable/versioned archive. These final tasks and scientific limitations
+keep the full publication goal active and incomplete. Frozen science/runtime/
+recipe/resource settings and unrelated work remain unchanged.
+
 ## Source Helper Export Repair Tested In Isolation (2026-10-04)
 
 Previous goal turn is a verified wait: actual22422 remains live with changing

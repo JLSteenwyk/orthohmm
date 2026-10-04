@@ -1,0 +1,32 @@
+{
+  "capture_source": {
+    "bytes": 2573,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/capture_shared_terminal_controller_20261004.py",
+    "sha256": "e1b252680d3ef7ab0617dc3970a4a869dec08873d60b71b8d4e0fda321c9842c"
+  },
+  "command": [
+    "scontrol",
+    "show",
+    "job",
+    "22422",
+    "--oneliner"
+  ],
+  "finished_unix_ns": 1791118485959850456,
+  "launch": {
+    "bytes": 1173,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/launch_25.json",
+    "sha256": "95cdc339f4a9f271b1bc366cdc7c3e05a739dd271028c54537f3b6299533ba95"
+  },
+  "native_review_completed": false,
+  "next_submission_authorized": false,
+  "request": {
+    "bytes": 8593,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/request_run_25.json",
+    "sha256": "b47f8bd72dce69b9ea8e8b7821e1326ac58d6d2b6f21a57b586964f3929733f2"
+  },
+  "returncode": 0,
+  "scientific_timings_admitted": false,
+  "started_unix_ns": 1791118485951743110,
+  "stderr": "",
+  "stdout": "JobId=22422 JobName=orthohmm_shared_scaling UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=COMPLETED Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:32:34 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-04T08:20:40 EligibleTime=2026-10-04T08:22:10 AccrueTime=Unknown StartTime=2026-10-04T08:22:10 EndTime=2026-10-04T08:54:44 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T08:22:10 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:3952772 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_shared_scaling.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=b47f8bd72dce69b9ea8e8b7821e1326ac58d6d2b6f21a57b586964f3929733f2  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_25-22422.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_25-22422.log TresPerTask=cpu=64 \n"
+}

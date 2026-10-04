@@ -1,0 +1,47 @@
+{
+  "status": "latest_prepared_checkpoint_tests_passed",
+  "counts": {"errors": 0, "failures": 0, "skipped": 0, "tests": 3},
+  "junit_time_seconds": 3.58,
+  "reviewed_attempts": 26,
+  "resource_reviewed_attempts": 24,
+  "eligible_attempts": 23,
+  "excluded_attempts": [0, 17, 20],
+  "previous_25_rows_unchanged": true,
+  "three_eligible_repeat_cells": 5,
+  "native_inference_repeated": false,
+  "raw_audit_repeated": false,
+  "publication_ready": false,
+  "source_and_artifacts_at_readback": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_latest_prepared_resource_checkpoint.py",
+      "bytes": 5993,
+      "sha256": "1bbc56d0ba54b1b61a055bb10e4c9b9eb3eab431a9784b9dbe4a86ab76257e05"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/latest_prepared_checkpoint_tests_22422.xml",
+      "bytes": 706,
+      "sha256": "059d84ef505abd3f61aad369514a4ed9d1186e70163ae565819ad105e0b74f5a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v26/panel.json",
+      "bytes": 363967,
+      "sha256": "f761e8134dd052fa98431f445cdd0d1860afa780f94c29f790092163cf77894c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v25/manifest.json",
+      "bytes": 346380,
+      "sha256": "0dba39e9241eda9ed4eba594537fa1ec502ca372ff8d0777896d7b34ac747024"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22422.json",
+      "bytes": 61399,
+      "sha256": "c1c709c17603d3780eeb39d9ef2f9c4766ce51a22f7e68da68760e651d50f6a1"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_terminal_controller_22422.json",
+      "bytes": 2736,
+      "sha256": "153e52d7db0be2d66b39587555037a3738915d098fab1d6f550c5d4999327427"
+    }
+  ],
+  "scope": "Local retained-checkpoint reporting and provenance tests; not new inference, accuracy or isolated speed evidence"
+}

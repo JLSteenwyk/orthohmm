@@ -61,3 +61,39 @@ one live and 26 unsubmitted. Final resource/manuscript/PDF reconciliation and
 executable/versioned archive remain incomplete. These are shared-host
 measurements with unknown, potentially method-dependent timing distortion,
 not isolated speed comparisons. The full publication goal stays active.
+
+## Terminal Review
+
+The startup descriptions above are historical. Parent/batch/native22422 and
+capture-only22423 now finish COMPLETED0:0. The [terminal controller](threadripper_shared_terminal_controller_22422.json)
+matches canonical2,736 bytes,SHA-256
+`153e52d7db0be2d66b39587555037a3738915d098fab1d6f550c5d4999327427`.
+All four independent categories and prepared-owner lifecycle pass. The
+[public summary](threadripper_shared_attempt_22422.json) matches canonical
+61,399 bytes,SHA-256
+`c1c709c17603d3780eeb39d9ef2f9c4766ce51a22f7e68da68760e651d50f6a1`.
+Raw independent audit remains local/ignored and is not repeated on resumption.
+
+Primary command wall is1,580.470034134s, wrapper-inclusive task-subtree CPU
+bracket34,290.331463 CPU-seconds and launcher-inclusive native-step lifetime
+peak13,647,224,832 bytes (12.7099685669GiB). Maximum observed foreign CPU
+56.8722536621 cores is annotated, not subtracted. Both original environment
+failure maps are empty. Native checks find251,378 input genes,34,230 checkpoint
+groups and1,487,146 native pair rows. Counts are coverage, not new accuracy.
+The tool's own printed duration and enclosing job elapsed time are not substituted
+for the defined primary command interval.
+
+[Tablev26](threadripper_shared_panel_snapshot_20261004_v26/panel.json) has26
+reviewed/24 measured/23 eligible, exclusions0/17/20 and five complete cells.
+Earlier25 rows are unchanged. Full OrthoFinder/twelve proteomes has two eligible
+repeats because index17 aborted before native inference; its three-repeat
+summaries remain null. [Figurev25](threadripper_shared_resource_figure_20261004_v25/shared_threadripper_resources.pdf)
+is visually checked; three current-checkpoint tests pass in3.60s. Their
+[readback](threadripper_checkpoint_validation_22422.json) pins the actual JUnit,
+table, figure, summary, controller and test source without new inference.
+
+Only index26 remains unsubmitted at this reviewed checkpoint. Commit/push it
+before releasing the final frozen high-sensitivity/twelve-proteome repeat through
+the goal-reaffirmed continuation and fresh prefix/capacity/handoff checks.
+The tested source-export repair remains an unapplied patch until all27 reviews.
+Final panel/manuscript/PDF and executable/versioned archive remain open.
