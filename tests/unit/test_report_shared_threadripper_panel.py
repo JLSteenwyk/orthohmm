@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10), ('v11', 11), ('v12', 12), ('v13', 13), ('v14', 14), ('v15', 15), ('v16', 16)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10), ('v11', 11), ('v12', 12), ('v13', 13), ('v14', 14), ('v15', 15), ('v16', 16), ('v17', 17)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -287,7 +287,7 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert outcome['native_outputs']['native_pair_rows'] == phy8_repeat['native_outputs']['native_pair_rows']
         assert all(cell['eligible_repeats'] == 2 for cell in report['cells'] if cell['proteomes'] == 8)
         assert report['runs'][3]['resources'] != report['runs'][14]['resources']
-    if count == 16:
+    if count >= 16:
         high12_repeat = json.loads((results / 'threadripper_shared_attempt_22411.json').read_text())
         assert report['runs'][15]['job_id'] == high12_repeat['job_id'] == 22411
         assert report['runs'][15]['resources'] == high12_repeat['resources'] == dict(
@@ -298,8 +298,23 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         high12_cell = next(cell for cell in report['cells']
                            if cell['method'] == 'orthohmm_high_sensitivity' and cell['proteomes'] == 12)
         assert high12_cell['eligible_repeats'] == 2
-        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 4
+        if count == 16:
+            assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 4
         assert report['runs'][7]['resources'] != report['runs'][15]['resources']
+    if count == 17:
+        phy12_repeat = json.loads((results / 'threadripper_shared_attempt_22412.json').read_text())
+        assert report['runs'][16]['job_id'] == phy12_repeat['job_id'] == 22412
+        assert report['runs'][16]['resources'] == phy12_repeat['resources'] == dict(
+            wall_seconds=4042.426197872, cpu_seconds=116000.996415, peak_memory_bytes=11384778752)
+        assert phy12_repeat['native_outputs']['input_genes'] == 251378
+        assert phy12_repeat['native_outputs']['orthogroups'] == phy12_repeat['native_outputs']['root_hogs'] == 59770
+        assert phy12_repeat['native_outputs']['native_pair_rows'] == 966439
+        assert phy12_repeat['native_outputs']['accuracy_evaluated'] is False
+        phy12_cell = next(cell for cell in report['cells']
+                         if cell['method'] == 'orthohmm_satellite_v2' and cell['proteomes'] == 12)
+        assert phy12_cell['eligible_repeats'] == 2
+        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 5
+        assert report['runs'][8]['resources'] != report['runs'][16]['resources']
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'

@@ -1,5 +1,75 @@
 # Publication Progress
 
+## Phylogenetic Repeat Reviewed; OrthoFinder Pre-Native Abort Retained (2026-10-04)
+
+The preceding user-requested confirmation is no analysis progress: it verifies
+that the active goal and repository prompt already match the shared-host
+amendment. Read the full goal and current worktree again on continuation.
+Reuse the completed index-16 review and exports rather than rerunning inference
+or calibration. Canonical/public summary bytes agree and all four review
+categories pass. Parent/batch/native 22412 completed 0:0, with parent elapsed
+1:12:54 and native elapsed 1:07:52. The
+[retained summary](threadripper_shared_attempt_22412.json) is 5,170 bytes,
+SHA-256 `ca48fa547eedb389732af3eba76d322e8394039cbbc8fb93dc83da951216cadc`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22412.md) records 251,378 proteins,
+59,770 orthogroups/root HOGs and 966,439 native pair rows, not new accuracy.
+Primary resources are 4,042.426197872 wall seconds, 116,000.996415 task-bracket
+CPU seconds and 11,384,778,752 step-lifetime peak bytes. Sampled foreign demand
+reaches 54.7672559188 cores; process/pressure failure maps are empty. Equal
+twelve-proteome output counts are not proof of identical predictions. Preserve
+the independently documented eight-proteome grouping variation.
+
+The unchanged launcher had released index 17 only after that canonical review,
+as **22413**, full OrthoFinder 3.1.5, twelve proteomes, repeat 1. Fresh sacct on
+this turn establishes terminal FAILED 1:0 for parent/batch at 3:03, not live
+work. The parked native step exits zero at 0:36 because it receives an abort;
+OrthoFinder never starts. Read actual measurement/session schemas instead of
+guessing an absent native log or treating native-step zero as algorithm success.
+There is no native completion, pressure-point series or OrthoFinder output.
+
+The [pre-native failure review](THREADRIPPER_SHARED_ATTEMPT_22413.md) retains the
+specific infrastructure cause: preflight hashes an append-only process stream
+as immutable, then rechecks it while the anchored periodic observer legitimately
+appends sample 1. Sample starts are 30.0010393669 seconds apart and the second
+overlaps preflight. Available memory is 332,716,515,328 / 332,481,789,952 bytes,
+above the full 128-GiB capacity floor; foreign demand is 42.0544714236 cores.
+Neither ordinary contention nor unsafe capacity caused this failure. Preserve
+the original failed preflight, wrapper release error, child exit 1 and enclosing
+cleanup error. After controller purge, corroborate the exact retained successful
+terminal-query output with fresh accounting, without inventing observation
+timestamps. The [failure receipt](threadripper_shared_prenative_failure_22413.json)
+is 9,252 bytes, SHA-256
+`9d643efb649b5a7c67cdda51fc6e359b5baaa89d938fce5e45c276d3186ea115`.
+It explicitly records `not_started`, null resources and no next-submission
+authorization. Seventeen new focused cases pass in 0.50s, including original
+stream-append hash-failure reproduction and contradictory-evidence refusal.
+These tests document the defect, not a completed repair.
+
+Publish the retained [seventeen-attempt resource export](threadripper_shared_panel_snapshot_20261003_v17/panel.json)
+and [partial figure](threadripper_shared_resource_figure_20261003_v16/shared_threadripper_resources.pdf).
+Sixteen observations are eligible; index 0 remains excluded. Ten resource rows
+are not yet reviewed, including the separately recorded pre-native abort. No
+cell has three eligible repeats; no median/range is imputed. The phylogenetic
+twelve-proteome cell has two eligible observations. Existing table/figure/component
+checks passed **101 cases in 17.25s** at export, with actual PNG inspection;
+reuse that unchanged validation. No new source changes affect those generators.
+Active README, reproduction and claim links/counts now reflect this checkpoint
+and explicitly distinguish the eighteenth abort from an unattempted identity.
+Earlier snapshots, reporting archive and manuscript PDF stay date-bound and
+unchanged. No raw datasets, completed statistical/TreeFam diagnostics or
+unrelated sample changes are edited.
+
+Next: implement/test the immutable-initial-observation preflight repair,
+preserving the anchored observer and all safety/measurement bounds. Refresh
+affected source/runtime/resource bindings and add an explicit, independently
+reviewed history resolution/reporting representation for this pre-native abort
+before index 18 (full OrthoFinder, four proteomes, repeat 2). Do not reuse the
+cadence-only resolution or forge a successful native measurement; never retry
+or overwrite index 17 silently. No timing job is live at this checkpoint.
+Full publication work, the remaining panel, manuscript/archive reconciliation
+and versioned release remain active and incomplete. This is a concrete repair
+task, not an external blocker or renewed quiet-window/DGX requirement.
+
 ## Twelve-Proteome High Sensitivity Reviewed; Phylogenetic Repeat Released (2026-10-04)
 
 The preceding goal turns are verified waits: fresh scheduler/process evidence

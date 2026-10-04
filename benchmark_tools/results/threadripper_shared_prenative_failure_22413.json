@@ -1,0 +1,159 @@
+{
+  "automatic_retry": false,
+  "available_memory_bytes": [
+    332716515328,
+    332481789952
+  ],
+  "comparative_timing_eligible": false,
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22413",
+      "--oneliner"
+    ],
+    "provenance": "Exact stdout and exit status retained from the successful exec_command tool observation in the 4 October goal continuation, before controller purge. Observation timestamps were not recorded and are not imputed. Corroborate with fresh sacct before use.",
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=22413 JobName=orthohmm_shared_scaling UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=FAILED Reason=NonZeroExitCode Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0 RunTime=00:03:03 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-04T01:18:35 EligibleTime=2026-10-04T01:19:39 AccrueTime=2026-10-04T01:19:39 StartTime=2026-10-04T01:19:39 EndTime=2026-10-04T01:22:42 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T01:19:39 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1290079 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_shared_scaling.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=423eb668018e45a31eeb83da40a74746254e6633773c5746747fd014457656e9  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_17-22413.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_17-22413.log TresPerTask=cpu=64 \n"
+  },
+  "evidence": [
+    {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 6335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/request_run_17.json",
+      "sha256": "423eb668018e45a31eeb83da40a74746254e6633773c5746747fd014457656e9"
+    },
+    {
+      "bytes": 224257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/environment_preflight.json",
+      "sha256": "4a47124a2e2e771dba72eafc5179a5aef7898a3c772f5157e489f62af9b1cb04"
+    },
+    {
+      "bytes": 2485033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/environment_worker_evidence.json",
+      "sha256": "a22caca6fe8136499d12de2cae838cf893c755edf20d7bac668cba9c5669092b"
+    },
+    {
+      "bytes": 2118,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/environment_worker_lifecycle.json",
+      "sha256": "719e2d0e11ed890498f267f08ec4a1682733bf2a6f94db9ac0d4c3182972c5aa"
+    },
+    {
+      "bytes": 182928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/result.json",
+      "sha256": "39ad62de3c60818e1689922e35adbec008dacf47dce161e72ef98bfdf493bbd8"
+    },
+    {
+      "bytes": 17390,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_17/verification.json",
+      "sha256": "0b493065f8cafbfd0420b9e20a3600318e71bf0df2a6dedaddeab56c67367761"
+    },
+    {
+      "bytes": 177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_17/measurement/environment_release.json",
+      "sha256": "f7179e7f02f2c607f50e8d589a0f230f78ef8a26f2929bf5e372b491886a922f"
+    },
+    {
+      "bytes": 20,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_17/measurement/go.json",
+      "sha256": "6c4c4fa1cfe8df7746af91e75305a32d64610136c53e378a9c1da5ab82596c4f"
+    },
+    {
+      "bytes": 50,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_17/measurement/aborted_before_native.json",
+      "sha256": "6df8f8a6452626a5f894584b3641d6230a2793b92030ab0e9c78934530a343b2"
+    },
+    {
+      "bytes": 4134,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_environment_policy_repaired_20261003.json",
+      "sha256": "1a018252985791421eab4f34bd0f8772f0cc5987bcc614ba0e2a24d089c98d96"
+    },
+    {
+      "bytes": 1579597,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_17/measurement/host_processes.jsonl",
+      "sha256": "9a19f4fc78c0404bd5ad4d5ccebfdea5882098d23b830d424bff40977c7fb91d"
+    },
+    {
+      "bytes": 1341081,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/lookup_checks/check_01/orthofinder.json",
+      "sha256": "22b4ddfa8c91f724fd78b91f528d9d9b272309cdd0e058ba4a18dd92132faf36"
+    },
+    {
+      "bytes": 958454,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/lookup_checks/check_01/orthohmm.json",
+      "sha256": "ab8b965505459e7584515dddf38fb756c49fb3854236b8ee10c9abd92bd3ba1d"
+    },
+    {
+      "bytes": 1341081,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/lookup_checks/check_02/orthofinder.json",
+      "sha256": "df44df150e33f5f655aadf6c09399ac39aac870b086fa807086ebcb3178c2c05"
+    },
+    {
+      "bytes": 958454,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_17/lookup_checks/check_02/orthohmm.json",
+      "sha256": "4c6f111da4536ac3da3796dde4a1b8a836bc38e02f8673fb038b5557b3512546"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "failure_kind": "mutable_process_stream_identity_during_preflight",
+  "first_process_interval_seconds": 30.00103936693631,
+  "index": 17,
+  "job_id": 22413,
+  "limitations": [
+    "A pre-native abort is neither failed OrthoFinder inference nor a native resource measurement.",
+    "Recorded runtime checks are retained, not repeated or promoted to a full successful-run review.",
+    "The failed preflight and scheduler outcome remain failed; no native endpoints are imputed.",
+    "A targeted monitoring repair and explicit history resolution are required before progression.",
+    "Contention remains accepted with unknown, potentially method-dependent distortion."
+  ],
+  "method": "orthofinder_3_1_5_full",
+  "minimum_available_memory_bytes": 137438953472,
+  "native_outcome": "not_started",
+  "next_submission_authorized": false,
+  "plan": {
+    "bytes": 206643,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+    "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+  },
+  "preflight_foreign_average_cores": 42.05447142355838,
+  "proteomes": 12,
+  "repeat": 1,
+  "resources": null,
+  "retained_process_samples": 2,
+  "scheduler_exit_code": "1:0",
+  "scheduler_state": "FAILED",
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 10538,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_shared_prenative_failure_20261004.py",
+    "sha256": "c14c426674902072acff84b7861d343dd5cc697cef02414e654e7512774faa21"
+  },
+  "status": "pre_native_infrastructure_failure_reviewed",
+  "terminal_accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22413",
+      "--noheader",
+      "--parsable2",
+      "--format=JobID,State,ExitCode,Start,End"
+    ],
+    "finished_unix_ns": 1791091913590955904,
+    "retained_controller": {
+      "bytes": 1992,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_terminal_controller_22413.json",
+      "sha256": "1c18e40c0efeb0137db4c231c7eb09267a22f909c83ea0c9120048066e8de52f"
+    },
+    "returncode": 0,
+    "started_unix_ns": 1791091913582871459,
+    "stderr": "",
+    "stdout": "22413|FAILED|1:0|2026-10-04T01:19:39|2026-10-04T01:22:42\n22413.batch|FAILED|1:0|2026-10-04T01:19:39|2026-10-04T01:22:42\n22413.0|COMPLETED|0:0|2026-10-04T01:21:26|2026-10-04T01:22:02\n"
+  },
+  "uncontended_timing": false
+}
