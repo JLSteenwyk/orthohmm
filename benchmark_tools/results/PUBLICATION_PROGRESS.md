@@ -1,5 +1,50 @@
 # Publication Progress
 
+## OrthoFinder Repeat Reviewed; First Complete Resource Cell (2026-10-04)
+
+Classify the preceding goal turn as progress: `3bfa6135` commits/pushes the
+repaired bindings and actual submission/handoff. On continuation read the
+full goal/current ledger and recheck worktree/accounting: 22414 initially
+RUNNING, then native completion observed while parent remained in post-runtime
+checks. Wait for parent/batch terminal state; fresh sacct establishes all
+COMPLETED 0:0 (parent/batch 10:36, native 7:41). Do not repeat inference,
+calibration, resolution or the unchanged runtime refresh.
+
+Run the new independent reviewer once on index 18; all four categories pass.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22414.md) links exact canonical/
+public summary (10,330 bytes, SHA-256
+`889b0d10d7c298f2a127f8d7f989fa37db82d3aa7c7257dc46330ffab297b08a`).
+Native wall 420.740000613s, task-bracket CPU 4455.373716s, step-lifetime peak
+7,274,196,992 bytes. Independently checked 73,266 genes, 24,052 checkpoint
+groups and 88,890 native pair rows; no new accuracy, identical-prediction or
+determinism claim. Whole-run process/pressure failure maps empty; foreign
+demand reaches 42.7759537979 cores, not isolation or a slowdown correction.
+Actual initial-sample repair survives the complete production review.
+
+New snapshot v19 checks actual history/evidence: 19 reviewed attempts,
+18 measured, 17 eligible, exclusions `[0, 17]`, abort endpoints null and eight
+not-yet-reviewed identities. All prior eighteen rows unchanged. Full OF/four
+proteomes is the first and only three-eligible-repeat cell; its median/range
+uses 22398/22406/22414, never selected fastest repeats. Other cell summaries
+remain null. New figure v18 renders measured points/exclusion and exactly
+one complete-cell median/range per panel. Actual PNG inspected; PDF bounds
+and colored-panel pixels pass. No historical reporting/manuscript artifact
+is overwritten or replayed merely because the goal resumed.
+
+The first added arithmetic test finds a wrong assumed public receipt filename,
+not a production/result error. Use the original first-repeat snapshot rather
+than invent a duplicate receipt. Corrected focused case passes, then all 52
+reporting/continuation tests pass in 60.14s. Scientific settings/inputs and
+execution sources remain unchanged; only focused test coverage is extended.
+
+Next: commit/push this validated review/reporting milestone, then release only
+index 19 (high-sensitivity OrthoHMM, four proteomes, repeat 2) under the unchanged
+new continuation/readiness with full-prefix validation and fresh safe-capacity
+handoff. No timing job is live at this review checkpoint. Both historical
+exclusions remain retained; do not retry, skip identities or disturb unrelated
+work. Full publication scope, remaining panel, final manuscript reconciliation
+and versioned/archive release remain active and incomplete.
+
 ## Repaired Shared Panel Resumed As 22414 (2026-10-04)
 
 This continuation makes concrete progress: commit/push `af32242d` binds the

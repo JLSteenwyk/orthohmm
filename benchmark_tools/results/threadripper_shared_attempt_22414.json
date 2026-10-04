@@ -1,0 +1,168 @@
+{
+  "execution_scope": "shared_host_matched_resources",
+  "index": 18,
+  "job_id": 22414,
+  "limitations": [
+    "Shared-host observations only; contention distortion is unknown and potentially method dependent.",
+    "Periodic observations are not continuous containment or isolation certification.",
+    "CPU includes wrapper bracket work; memory is native-step lifetime peak, not pure algorithm RSS.",
+    "All-prefix history and a fresh launch preflight remain required for the next frozen identity."
+  ],
+  "method": "orthofinder_3_1_5_full",
+  "native_outputs": {
+    "accuracy_evaluated": false,
+    "checked_files": [
+      {
+        "bytes": 1302,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Log.txt",
+        "sha256": "5a1348802b48573c3e23f2d792fa647ff552c6420012184ad53f30b657dcfa36"
+      },
+      {
+        "bytes": 4970770,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/WorkingDirectory/OrthoFinder_graph.txt",
+        "sha256": "f1fb9ab4dbafc0776945766eab027abce7decf3036d9e66a85c4e37eec129f4a"
+      },
+      {
+        "bytes": 1868997,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/WorkingDirectory/SequenceIDs.txt",
+        "sha256": "4b3c016e2c1f191eeccb60273af43b3249fd975de3dc4369604c19fd0e97cb18"
+      },
+      {
+        "bytes": 853825,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/WorkingDirectory/clusters_OrthoFinder_I1.2.txt_id_pairs.txt",
+        "sha256": "6d44cc926b85b95990a84601fdc676492b86dfd0b29b7d4d8f323f5c18ef5d39"
+      },
+      {
+        "bytes": 241341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "b4bfb9763900994f89e5524afe42fd1a8eca25c67241ebab5f9955bc7970c94a"
+      },
+      {
+        "bytes": 325096,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "6717b551bbec419f2cd3f392fb303b4483bfd65f81f1ded1be1c8dd271a8d6e5"
+      },
+      {
+        "bytes": 355201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Caenorhabditis_elegans.WBcel235.pep.all/Caenorhabditis_elegans.WBcel235.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "bb6d91667e6970adcd0eb1da53f5533083bee7a31dc506f6972f623e23fb02df"
+      },
+      {
+        "bytes": 241341,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "66c4c451dd365dc94f3fd4d2a91695c4e81118524fc4aa4de97b1dbb57200b38"
+      },
+      {
+        "bytes": 329005,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "50612f70036f3d7b3d812137c1e4734aefffab73e371870e6d1eb9cf721b5eb2"
+      },
+      {
+        "bytes": 365903,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Drosophila_melanogaster.BDGP6.28.pep.all/Drosophila_melanogaster.BDGP6.28.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "49c480a0d29e529dca2eb24c5378f5b318b9ee3ce5176ef8bfb1d272a93a0341"
+      },
+      {
+        "bytes": 325096,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "dcabe23897929e8dc24a6b8962f98d499df41f3e0574b5237c256963dc7ab1b6"
+      },
+      {
+        "bytes": 329005,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "ca617a73f315d5c7843ee7d7d939e92264c2a63606dbe5b72412d68843cc42c7"
+      },
+      {
+        "bytes": 567416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Gallus_gallus.GRCg6a.pep.all/Gallus_gallus.GRCg6a.pep.all__v__Rattus_norvegicus.Rnor_6.0.pep.all.tsv",
+        "sha256": "546250cfd24da544f77f7ebc15b5604678bc801bd9a99e7fade325c1847adc9a"
+      },
+      {
+        "bytes": 355201,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Caenorhabditis_elegans.WBcel235.pep.all.tsv",
+        "sha256": "90a3cc25a6bee90acc86bebf991e8a74170613f93970519fccfa295acd1fc6fe"
+      },
+      {
+        "bytes": 365903,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Drosophila_melanogaster.BDGP6.28.pep.all.tsv",
+        "sha256": "6cc8157801187544998764fd322d8d732dd1fcdaccaf270b5db589a27a21ebe0"
+      },
+      {
+        "bytes": 567416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_18/orthofinder_full/Results_Oct04/Orthologues/Orthologues_Rattus_norvegicus.Rnor_6.0.pep.all/Rattus_norvegicus.Rnor_6.0.pep.all__v__Gallus_gallus.GRCg6a.pep.all.tsv",
+        "sha256": "90cbd25ca91e0b40a9ec994f085c5052b6eea52998de84b0d6a2de8571d0d76c"
+      }
+    ],
+    "checkpoint_groups": 24052,
+    "evidence_relocation": {},
+    "input_genes": 73266,
+    "limitations": [
+      "Caller must independently verify frozen manifest/source/runtime before and after inference.",
+      "Native validity does not establish a quiet host, valid timing, or prediction accuracy.",
+      "OrthoFinder validation expands native relation rows outside the inference timer."
+    ],
+    "native_pair_rows": 88890,
+    "resource_measurements_admitted": false,
+    "source": {
+      "bytes": 8784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_scaling_outputs.py",
+      "sha256": "d76d8c65eaba0ece8ac98688033784b974f6859ff5b2ded807a2cf4d4847f172"
+    },
+    "status": "native_scaling_outputs_checked"
+  },
+  "next_submission_authorized": false,
+  "original_environment_failures": {
+    "pressure": {},
+    "processes": {}
+  },
+  "original_environment_protocol_passed": true,
+  "preflight_foreign_average_cores": 41.269429449834206,
+  "primary_resources_replayed": true,
+  "proteomes": 4,
+  "repeat": 2,
+  "resource_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "resources": {
+    "cpu_seconds": 4455.373716,
+    "peak_memory_bytes": 7274196992,
+    "wall_seconds": 420.740000613
+  },
+  "reviews": {
+    "environment": {
+      "bytes": 1853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_18/environment_review.json",
+      "sha256": "a00e93bb7701b7472c787bc1b9ec8af5a05908bbedbd5a70413f379ea994bb3a"
+    },
+    "outputs_or_failure": {
+      "bytes": 1010,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_18/outputs_or_failure_review.json",
+      "sha256": "49c857ac2c8f5cd5e60640394de0d7ce7ea1f57e58c9aefe894bd500bd18ccc9"
+    },
+    "resources": {
+      "bytes": 1561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_18/resources_review.json",
+      "sha256": "69dca65bfcc604d998125a993fafe8470e7748d6bd872e40e51f58a17fbfe54c"
+    },
+    "runtime": {
+      "bytes": 4345,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_18/runtime_review.json",
+      "sha256": "61d43cd0f55f92042dac2406c41d0659393f946580bc23acc1148dae98bb5aae"
+    }
+  },
+  "scheduler_exit_code": "0:0",
+  "scheduler_state": "COMPLETED",
+  "scientific_timings_admitted": false,
+  "session": {
+    "bytes": 2028,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_18/session.json",
+    "sha256": "2e265ffd963ed82b4dfb2896c7510a143a6c621126a1fac6c06de7821f78d20f"
+  },
+  "shared_host_resources_reviewed": true,
+  "status": "shared_attempt_independently_reviewed",
+  "terminal_accounting": null,
+  "uncontended_timing": false,
+  "whole_run_maximum_foreign_average_cores": 42.775953797936005
+}

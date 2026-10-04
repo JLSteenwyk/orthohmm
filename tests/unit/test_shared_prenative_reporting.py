@@ -137,29 +137,31 @@ def test_no_abort_symbol_or_layout_clipping(count):
     plt.close(figure)
 
 
-def test_retained_actual_snapshot_and_pdf_pixels(tmp_path):
+@pytest.mark.parametrize('version,reviewed_count,resource_count,eligible_count', [
+    ('v18', 18, 17, 16), ('v19', 19, 18, 17)])
+def test_retained_actual_snapshot_and_pdf_pixels(tmp_path, version, reviewed_count, resource_count, eligible_count):
     import fitz
     import numpy as np
 
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
-    path = results / 'threadripper_shared_panel_snapshot_20261004_v18/panel.json'
+    path = results / f'threadripper_shared_panel_snapshot_20261004_{version}/panel.json'
     value = json.loads(path.read_text())
     original = json.loads((results / 'threadripper_shared_panel_snapshot_20261003_v17/panel.json').read_text())
     assert value['runs'][:17] == original['runs'][:17]
     assert value['runs'][17]['job_id'] == 22413
     assert value['runs'][17]['resources'] is None
-    assert len(plotter.validate(value)) == 17
+    assert len(plotter.validate(value)) == resource_count
     output = tmp_path / 'figure'
     manifest = plotter.export(path, plotter.executor.record(path)['sha256'], output)
-    assert manifest['reviewed_attempts'] == 18 and manifest['resource_reviewed_attempts'] == 17
-    assert manifest['eligible_attempts'] == 16 and manifest['excluded_indices'] == [0, 17]
+    assert manifest['reviewed_attempts'] == reviewed_count and manifest['resource_reviewed_attempts'] == resource_count
+    assert manifest['eligible_attempts'] == eligible_count and manifest['excluded_indices'] == [0, 17]
     assert manifest['pre_native_aborted_indices'] == [17]
     for pin in manifest['outputs']: plotter.executor.check(pin)
     with fitz.open(output / 'shared_threadripper_resources.pdf') as document:
         assert len(document) == 1
         page = document[0]
         text = page.get_text()
-        assert '18/27 attempts reviewed' in text and '17 with measured resources' in text
+        assert f'{reviewed_count}/27 attempts reviewed' in text and f'{resource_count} with measured resources' in text
         assert '1 pre-native aborts' in text and 'not zero or unattempted runs' in text
         assert 'unknown and potentially method dependent' in text
         for block in page.get_text('dict')['blocks']:
@@ -175,4 +177,37 @@ def test_retained_actual_snapshot_and_pdf_pixels(tmp_path):
         for color in ('#007d83', '#a66b0b', '#755297'):
             rgb = np.array([int(color[index:index+2], 16) for index in (1, 3, 5)]) / 255.
             assert np.sum(np.max(np.abs(crop-rgb), axis=2) < .04) > 5
+    plt.close(figure)
+
+
+def test_first_complete_actual_cell_uses_all_three_reviewed_repeats():
+    results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
+    value = json.loads((results / 'threadripper_shared_panel_snapshot_20261004_v19/panel.json').read_text())
+    prior = json.loads((results / 'threadripper_shared_panel_snapshot_20261004_v18/panel.json').read_text())
+    outcome = json.loads((results / 'threadripper_shared_attempt_22414.json').read_text())
+    assert value['runs'][:18] == prior['runs'][:18]
+    assert value['runs'][18]['job_id'] == outcome['job_id'] == 22414
+    assert value['runs'][18]['resources'] == outcome['resources']
+    assert outcome['native_outputs']['input_genes'] == 73266
+    assert outcome['native_outputs']['checkpoint_groups'] == 24052
+    assert outcome['native_outputs']['native_pair_rows'] == 88890
+    assert outcome['native_outputs']['accuracy_evaluated'] is False
+    assert (value['reviewed_attempts'], value['resource_reviewed_attempts'], value['eligible_attempts']) == (19, 18, 17)
+    assert value['excluded_attempts'] == [0, 17] and value['pre_native_aborted_indices'] == [17]
+    assert value['runs'][17]['resources'] is None and value['runs'][19]['resources'] is None
+    cell = next(cell for cell in value['cells'] if cell['method'] == 'orthofinder_3_1_5_full' and cell['proteomes'] == 4)
+    assert cell['eligible_repeats'] == 3 and cell['summary_status'] == 'three_eligible_repeats'
+    assert cell['excluded_indices'] == [] and cell['pending_indices'] == []
+    earliest = json.loads((results / 'threadripper_shared_panel_snapshot_20261003_v3/panel.json').read_text())
+    summaries = [earliest['runs'][2],
+        json.loads((results / 'threadripper_shared_attempt_22406.json').read_text()), outcome]
+    assert [summary['job_id'] for summary in summaries] == [22398, 22406, 22414]
+    for metric in tables.METRICS:
+        ordered = sorted(summary['resources'][metric] for summary in summaries)
+        assert cell['resources'][metric] == dict(median=ordered[1], minimum=ordered[0], maximum=ordered[2])
+    assert sum(cell['summary_status'] == 'three_eligible_repeats' for cell in value['cells']) == 1
+    figure = plotter.plot(value)
+    for axis in figure.axes:
+        assert sum(len(collection.get_offsets()) for collection in axis.collections) == 18
+        assert len(axis.lines) == 2
     plt.close(figure)
