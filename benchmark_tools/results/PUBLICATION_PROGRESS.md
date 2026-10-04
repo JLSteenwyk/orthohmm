@@ -1,5 +1,18 @@
 # Publication Progress
 
+## Shared-Host Goal Prompt Synchronized (2026-10-04)
+
+User requests a goal update before resumption, not a new analysis launch.
+The authoritative attachment already permits shared-host execution; synchronize
+the repository's [full goal](../PUBLICATION_GOAL_20261003.txt) with its explicit
+2026-10-04 reaffirmation. No quiet window or DGX is required. Preserve safe
+capacity, valid accounting, frozen science, retained attempts and failure rules.
+Record contention and disclose unknown, potentially method-dependent timing
+distortion in tables, figures, Methods and limitations; do not assume it is
+slight or infer isolated tool speed from matched limits. Do not disrupt
+unrelated work or restart completed analyses. This prompt-only update neither
+launches work nor verifies current job state; consult fresh state on resumption.
+
 ## Index 23 Full OrthoFinder Native Search Live (2026-10-04)
 
 Index-22 independent review/table v23/figure v22/reusable three-test checkpoint
