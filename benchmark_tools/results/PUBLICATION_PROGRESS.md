@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Mechanism-Integrated Text And rc3 Reporting Route Prepared (2026-10-04)
+
+The preceding9cd1c63f turn completes the residual-error scientific milestone.
+Read the full goal/current ledger and query Slurm; no owned job is live.
+Preserve successful native, timing, statistical and mechanism executions.
+
+Create a [second 4 October main text](PUBLICATION_MAIN_TEXT_20261004_v2.md)
+that integrates the three validated simulation addenda into Methods, Results
+and limitations. Preserve original text/PDF, frozen method and all endpoints.
+Primary accuracy and shared-resource method sections are byte-identical to
+the preceding text. The old32-page review is explicitly not a rendered copy
+of the new Markdown. A new render remains required, not fabricated.
+
+Prepare the standalone standard-library checked-summary replay and [rc3
+instructions](../PUBLICATION_PACKAGE_RC3_20261004.md). Recompute70-cell means,
+all163,527 upstream pair-count totals and complete20-candidate/800-pair residual
+class projections without following historical metadata paths. Initial14-case
+tests have seven failures/seven passes on omitted zero Counter keys; retain
+that JUnit. Correct sparse-zero handling and add its regression:15 pass.
+Ten package/text/inheritance cases then bring the focused total to25 passing.
+
+The rc3 collector inherits all115 rc2 payload identities, preserving its old
+README under a historical evidence name. Add only new text/checked reports/
+reporting worker/diagnostic evidence and current instructions. Commit/push
+before actual selection, build, archive, external restore and copied replay.
+Do not rerun preserved rc2 statistics/native/resource routes to populate a new
+version. Full-goal scientific, historical, rendering and deposition gaps remain
+active; this is bounded reproducibility integration, not publication readiness.
+
 ## All Generating-Root Residuals Explained By Histories And Filtering (2026-10-04)
 
 Prepared5a2cfcfc is pushed before actual read-only tracing. The complete20-
