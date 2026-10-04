@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Every Goal Requirement Registered Against Current Evidence (2026-10-04)
+
+Commit/push4b1be273 completes the reproduced output-path repair. The
+[full original-scope audit](PUBLICATION_REQUIREMENT_AUDIT_RESULT_20261004.md)
+now covers47 requirements without merging adjacent bullets or dropping the
+wrapped completion criterion. It pins the exact amended goal and55 direct
+evidence files. Eighteen parser/inventory/output-preservation cases pass;
+independent line-based coverage/hash readback also passes. This is reviewed
+direct evidence, not transitive native re-admission or statistical certification.
+
+Thirty-seven requirements have bounded support, nine remain partial and full
+completion is unmet. Update the current claim table to acknowledge actual
+32-page review, final reporting replay and restored local rc1; preserve dated
+chronology and existing PDFs/archives. No inference, source search, native
+scoring or completed timing identity is restarted. No owned native job is live.
+
+Next consolidate all-tool/all-dataset provenance/resource gaps from retained
+receipts, then finish remaining scientific and release work. Preserve unresolved
+QfO uncertainty, partial error-stratum/mechanism validity, development-family
+inventory, per-ablation full-pipeline cost gaps and incomplete transitive study
+delivery. These are not resolved by hashes or packaging. Goal remains active;
+no quiet-window/DGX or new certification requirement is introduced.
+
 ## Archive Output Defect Reproduced And Fixed (2026-10-04)
 
 The preceding goal-update turn makes authoritative progress by reaffirming

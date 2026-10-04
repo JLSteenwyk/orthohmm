@@ -1,0 +1,728 @@
+{
+  "evidence": {
+    "BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md": {
+      "bytes": 6444,
+      "sha256": "8126f75eaf30c34d4988c73ea233127a1f7f069fcb8487abaafaa1cf5200569d"
+    },
+    "BIOLOGICAL_WGD_CASE_TRACE_20260917.md": {
+      "bytes": 3807,
+      "sha256": "9aedeef4aa814ef5714737e9d18ffab5c717ae0b9b47e9c66e5860a07179017a"
+    },
+    "BIOLOGICAL_WGD_RESULTS_20260917.md": {
+      "bytes": 2770,
+      "sha256": "210c577cecca2e2e12c3ec624b98010de6df66a0f1ff15d281ef5d366cd40ad9"
+    },
+    "FROZEN_HMM_SCORING_SPECIFICATION_20260930.md": {
+      "bytes": 8055,
+      "sha256": "42af4df926356dbf73f41c827cb5ba7806706414176221913f8422d83791a75d"
+    },
+    "MATCHED_GRAPH_RESULT_20260926.md": {
+      "bytes": 3707,
+      "sha256": "ba37c6e9bbe051d27441ba5e4a086be9610670c74a4fd663961b111604ae5ed6"
+    },
+    "OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md": {
+      "bytes": 4509,
+      "sha256": "0614e0b24c0341bd84360a49ade3f0c3357677bb903f027932995e1558d93191"
+    },
+    "OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md": {
+      "bytes": 3637,
+      "sha256": "1861c6fcb625996b3e31e02e1653ab52b83d82d69216cb940b6afaf7669c6925"
+    },
+    "ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md": {
+      "bytes": 3365,
+      "sha256": "d6f097e4ec755c69f26db9432a685c23608223382b750fca86518cf44bd0b8d4"
+    },
+    "ORTHOMCL_FAILURE_IMPACT_20260916.md": {
+      "bytes": 4017,
+      "sha256": "fe2f8c7b3929f8008d13892221f437f51e2faa620faa4196fddffa916cdabf65"
+    },
+    "PUBLICATION_ABLATION_PROTOCOL_20260916.md": {
+      "bytes": 9336,
+      "sha256": "b093109b10cf77b7d98ae231b7553443fe7d3895830b26ec882a236993148ef2"
+    },
+    "PUBLICATION_CLAIMS_20260916.md": {
+      "bytes": 145752,
+      "sha256": "ab508473988d88786fda3e398a51d2b3bf840bf96668dd44fa078d24a8d68f06"
+    },
+    "PUBLICATION_MAIN_TEXT_20261004.md": {
+      "bytes": 40038,
+      "sha256": "a10e29332c09e5ba84d4348d22c3ca7a4ecb4ec383d70b211ffa660d7f2a30a5"
+    },
+    "PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md": {
+      "bytes": 1838,
+      "sha256": "ea685db3ca94ba0ef13e69991a1cfdb31e56d5200d3404ff56bf9f09f4e5138a"
+    },
+    "PUBLICATION_PACKAGE_RESULT_20261004.md": {
+      "bytes": 3294,
+      "sha256": "5b9fe3ee7e67981b4b500d55dcbb45453ccf2649306a175f44e01045149fa7f3"
+    },
+    "PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md": {
+      "bytes": 2751,
+      "sha256": "9ddc063aede84ecb49558fecd10fbdb022f375ceaf50418c90247a98b4d71432"
+    },
+    "PUBLICATION_SIMULATION_PROTOCOL_20260916.md": {
+      "bytes": 8640,
+      "sha256": "d7b7726674e43b9c730265c32a16e8b51ec9316d01bda8ff54673f303611b39b"
+    },
+    "QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md": {
+      "bytes": 4150,
+      "sha256": "6a5459c30aa61485b62c445583973a45ae4d3a7e716853d19515a91445f8c72f"
+    },
+    "SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md": {
+      "bytes": 3225,
+      "sha256": "1cac1dbce9915f1d1af4bf153b3a833a5b0f3b5743cd11962cd728770d12ce82"
+    },
+    "THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md": {
+      "bytes": 3093,
+      "sha256": "7da5168279cfb3328b62ec79da78d85f1e95f927c64fedab87703dfcc2df87f5"
+    },
+    "THREADRIPPER_SHARED_CONTINUATION_20261003.md": {
+      "bytes": 3030,
+      "sha256": "ec6e941956496cb507836ebfec574d0450acc886f010d97a508e04cd4083f23a"
+    },
+    "THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md": {
+      "bytes": 2118,
+      "sha256": "23daab763d0ec7ac79129a77e79bceabac9f415cba0b2a8f670a9a9e851cc107"
+    },
+    "TREEFAM_RECOVERED_SCOPE_20260928.md": {
+      "bytes": 3352,
+      "sha256": "9602bd062819b9ef0475143be0ff5d66f895e3471ff9f2a81b5d696efa1d6254"
+    },
+    "VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md": {
+      "bytes": 4747,
+      "sha256": "f6c0424db6ebdad4c2b88e72bceb38b1613b2e5ce5d671f2e1332e0816294a2f"
+    },
+    "WGD_FIXED_TREE_RULE_RESULTS_20260928.md": {
+      "bytes": 3218,
+      "sha256": "64242cc471a1105e7eb0680e01575b91cc93e6d1898ef0c438c67bb3605c96f7"
+    },
+    "YGOB_FROZEN_INTERPRETATION_20260916.md": {
+      "bytes": 2240,
+      "sha256": "edeaaa4deff1e2fffe959676b7093ff1d30e9917742398f7a01d190931176747"
+    },
+    "YGOB_VALIDATION_PROTOCOL_20260916.md": {
+      "bytes": 7668,
+      "sha256": "4a8acc957120a82dbba74448dacb8fd2e017680bbe43301a249c21ff6a7cb473"
+    },
+    "biological_wgd_case_trace_20260917.json": {
+      "bytes": 111899,
+      "sha256": "5b346d99d1ac063fdf169ecf76fde69390d876073e9c27d43968469936ac07cc"
+    },
+    "current_benchmark_scores_20260926_v2/manifest.json": {
+      "bytes": 22282,
+      "sha256": "8d56dae74721c4530ab2b86c5008b2d0ebac07878e574fd85b1ad84e4b908f07"
+    },
+    "final_prepared_resource_reporting_execution_20261004.json": {
+      "bytes": 4364,
+      "sha256": "d804cf0ae1940af7602187098a3008f426ebbeb85933c6e11041a3f022aa5f39"
+    },
+    "matched_graph_scores_20260926/results.json": {
+      "bytes": 109960,
+      "sha256": "d31dbc0f4e3f02dfb534c8b59b559db00260227f23f2640b4fed13d5aee8ec89"
+    },
+    "ob_complete_strata_20260928/report.json": {
+      "bytes": 159022,
+      "sha256": "1850a897bef81e7a5a2829dc6770388b4936d767b4e41f1e704ee8ffc4093811"
+    },
+    "ob_complete_uncertainty_20260928.json": {
+      "bytes": 53139,
+      "sha256": "f472916ccafa2392b7ca27f39448195b7c3e6b9464772e0ca6775092908f6b75"
+    },
+    "orthobench_factorial_results_20260916.json": {
+      "bytes": 199307,
+      "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+    },
+    "orthobench_provenance_register_20260927/register.json": {
+      "bytes": 48713,
+      "sha256": "21b1a736521ddfd87e3def36387258b8f509a73ea7ab58af8678bb101aca490d"
+    },
+    "orthomcl_reference_impact_20260916.json": {
+      "bytes": 35780,
+      "sha256": "125928f604755a9fa4d00c56a27edd31f9755e38545576c1f2a660ce36a05ab5"
+    },
+    "publication_completion_audits_result_22379.json": {
+      "bytes": 3588,
+      "sha256": "f4e4df870b421b1990521330ee87def663a1988e2a17913d6f870c13b94d71cd"
+    },
+    "publication_final_figure_review_20261004.json": {
+      "bytes": 3395,
+      "sha256": "e6d59ae20fb59d1bf88d1c68c71a6a800300b16cf6bfc6e95d9e31461d052a8d"
+    },
+    "publication_main_final_visual_review_20261004.json": {
+      "bytes": 26300,
+      "sha256": "c1998376a7955c98e10fb307e205d1b82196ed1d4ce0fb0eb253df8f8c3b966b"
+    },
+    "publication_package_execution_20261004.json": {
+      "bytes": 6766,
+      "sha256": "37e7485ae6a1635d4b8a33acd74194c0b614e55282425d55dbe8707058dae2bb"
+    },
+    "publication_package_index_20261004.json": {
+      "bytes": 16993,
+      "sha256": "e847bea0740761b6fdcb41b142539891f6be37ed586089ba29b608c94003d70c"
+    },
+    "qfo_corrected_comparison_20260926_v7/scores.md": {
+      "bytes": 2836,
+      "sha256": "19c66a846018e4aa8cb9664fd0d2b01666fd431ab42b368d6624bcb9d9da8764"
+    },
+    "qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json": {
+      "bytes": 73364,
+      "sha256": "f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211"
+    },
+    "qfo_fas_sample_attrition_20260928.json": {
+      "bytes": 23197,
+      "sha256": "1f6ddfd5aadf9f5be8147164b23904d2e5db1ffee69a6fc18b654a54f3f25d36"
+    },
+    "qfo_private_cpm_parameter_result_22395.json": {
+      "bytes": 11879,
+      "sha256": "0d356368746dd20b815d19cddf44ce86661ebac0ed889817a2e2d6b21861aad4"
+    },
+    "qfo_recovered_swiss_uncertainty_22178.json": {
+      "bytes": 594127,
+      "sha256": "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34"
+    },
+    "restored_archive_full_ob_result_22377.json": {
+      "bytes": 39853,
+      "sha256": "43e882d1795996c567b6348d33d547052b708910a61a8bd5cf7da0ce059ba4da"
+    },
+    "simulation_tree_robustness_summary_20260917.json": {
+      "bytes": 5129931,
+      "sha256": "1f965d18f572864922e1cdaffb9e4f0443d4ba91ab8b7418dbc99482a162674b"
+    },
+    "swiss_duplication_features_v2_20260923.json": {
+      "bytes": 9056,
+      "sha256": "97b0c4755d6a9df258d5c3f60fc0d5d25f1e5c09c42216c754a245a67d1942ec"
+    },
+    "swiss_historical_fragment_admission_22117.json": {
+      "bytes": 971419,
+      "sha256": "a480f32666bb96de3395213c7cad024c170318ca110c389f15e4756f8052adf8"
+    },
+    "threadripper_async_calibration_audit_22380.json": {
+      "bytes": 17197,
+      "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+    },
+    "threadripper_shared_panel_snapshot_20261004_v27/panel.json": {
+      "bytes": 378715,
+      "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+    },
+    "threadripper_shared_resource_section_20261004_v27/resource_section.md": {
+      "bytes": 3750,
+      "sha256": "423df6d3d630e319b15153ffdd3137e4e41bb472c0d981b19f02abafa9505de8"
+    },
+    "treefam_remaining_context_receipt_20260930.json": {
+      "bytes": 598125,
+      "sha256": "246c62030ff09ab4512f696337323849668290a84ed05d4db96dd4a69b709a77"
+    },
+    "wgd_fixed_tree_rules_20260928.json": {
+      "bytes": 88031,
+      "sha256": "c7e1615d0135d8b15771d6747c090a6edfb2017e0b99b16d7499d5931bd1a556"
+    },
+    "ygob_frozen_results_20260916.json": {
+      "bytes": 7978,
+      "sha256": "3927d81b1fd851eef3c8ce1343679558ef4f93bcfe2e643435e369587a44a4ef"
+    }
+  },
+  "generator": {
+    "bytes": 5781,
+    "sha256": "9b8a0e46d884a1d9b831666328d793ba839b58c7733d8aa460ac0364d14be60f"
+  },
+  "goal": {
+    "bytes": 14267,
+    "sha256": "4028ccc3863abae74c26973cf577fa0ffcc717909d326f2811a5c4bf02e237b7",
+    "snapshot": "goal.txt"
+  },
+  "goal_completion_proven": false,
+  "requirement_count": 47,
+  "requirements": [
+    {
+      "assessment": "Shared-host execution is authorized, not isolated timing. All27 attempts are\nreviewed; retain24 eligible observations,25 measurements, three exclusions,\nsix complete cells and three unavailable summaries. No contention-driven retry\nor claim that distortion is slight. Remaining scientific work is not gated on\nthe DGX or a quiet window. See [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json)\nand [reporting execution](final_prepared_resource_reporting_execution_20261004.json).",
+      "evidence_paths": [
+        "final_prepared_resource_reporting_execution_20261004.json",
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "scope.1",
+      "requirement": "Shared-host timing authorization reaffirmed 2026-10-04: on resumption, proceed on the current Threadripper despite competing analyses, provided safe capacity and valid accounting are maintained. Competing analyses alone are not a reason to block the remaining goal work. Do not wait for a quiet window or require the DGX. Record contention for each run and disclose in timing tables, figures, Methods and limitations that its effect is unknown and may differ between tools; matching resource limits does not establish isolated performance. Do not characterize the distortion as slight without evidence or infer definitive tool-speed rankings from these timings alone. Reuse completed, valid shared-host measurements rather than rerunning them solely because of contention; continue only genuinely remaining work. Preserve all other scientific requirements, retained results and failure-handling rules. This update changes the execution/reporting scope only; it does not request restarting completed runs or disrupting unrelated work. Resume execution only when the user resumes the goal.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The frozen method remains HMM-centered. QfO/OrthoBench are primary,\nThree Kingdoms supplementary; the manuscript explicitly rejects universal\nsuperiority. See [main text](PUBLICATION_MAIN_TEXT_20261004.md) and\n[frozen scoring specification](FROZEN_HMM_SCORING_SPECIFICATION_20260930.md).",
+      "evidence_paths": [
+        "FROZEN_HMM_SCORING_SPECIFICATION_20260930.md",
+        "PUBLICATION_MAIN_TEXT_20261004.md"
+      ],
+      "id": "scope.2",
+      "requirement": "Work autonomously through implementation, analysis, validation, and reporting. Prioritize QfO and OrthoBench; treat Three Kingdoms as a supplementary conserved-family benchmark. Preserve an HMM-centered method and determine its defensible scientific contribution without assuming it must outperform every competitor.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The latest retained candidate is built/restored, not merely planned. Reuse its\nreceipt and finished panel. A fresh Slurm query on resumption finds no owned\nlive job. No DGX work is needed. See [candidate execution](publication_package_execution_20261004.json)\nand [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json).",
+      "evidence_paths": [
+        "publication_package_execution_20261004.json",
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "scope.3",
+      "requirement": "Resume from the current repository and the newest entries in benchmark_tools/results/PUBLICATION_PROGRESS.md. Verify current job state and retained receipts before acting; do not restart completed analyses or repeat expensive diagnostics without a concrete scientific or engineering reason. The user's host decision is final for this goal: use the local Threadripper, not the DGX. No dedicated replacement machine, DGX access, GPU availability or DGX service repair is required. Amendment authorized 2026-10-03: proceed with the planned matched-resource panel despite unrelated analyses running on the Threadripper. A quiet window is no longer a prerequisite. Label these as shared-host, matched-resource measurements, not isolated or uncontended controlled timing. Record competing workloads and disclose that contention may distort timings by an unknown, potentially method-dependent amount; do not assume the distortion is slight.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Shared-host rules retain enforceable limits, integrity, capacity, accounting\nand failure handling. Unrelated activity is annotated rather than rejected\nfor contention alone. Do not repeat completed collector diagnostics. See\n[continuation contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md) and\n[calibration](threadripper_async_calibration_audit_22380.json).",
+      "evidence_paths": [
+        "THREADRIPPER_SHARED_CONTINUATION_20261003.md",
+        "threadripper_async_calibration_audit_22380.json"
+      ],
+      "id": "scope.4",
+      "requirement": "On resumption, reuse the retained private-runtime, collector-fixture, and memory-scope validation receipts where their inputs and bindings remain valid. Diagnostic fixtures are not production scaling runs. Identify only the remaining execution gates, including defensible CPU and peak-memory accounting, safe capacity and correct workload attribution. Prospectively amend the execution/environmental protocol and corresponding checks to accept observed unrelated activity as annotated contention rather than automatically rejecting it or waiting for isolation. Preserve input/runtime integrity, enforceable CPU/RAM limits, measurement validity and failure handling. Do not repeat completed diagnostics merely because the goal resumed. Scheduler or service changes require explicit approval; approval to use the Threadripper is not approval to disrupt unrelated work.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Full OrthoBench archive reproduction and async accounting/cadence calibration\npassed within their stated scopes. Original failed22379 remains failed, not a\npublication pass. Final shared-host measurements are separately admitted; no\ncausal observer-overhead pass is fabricated. See [native reproduction](restored_archive_full_ob_result_22377.json),\n[calibration](THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md) and\n[failed completion audit](publication_completion_audits_result_22379.json).",
+      "evidence_paths": [
+        "THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md",
+        "publication_completion_audits_result_22379.json",
+        "restored_archive_full_ob_result_22377.json"
+      ],
+      "id": "scope.5",
+      "requirement": "Resume checkpoint: consult benchmark_tools/results/RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md and benchmark_tools/results/THREADRIPPER_ASYNC_CALIBRATION_RESULT_22380.md alongside the newest progress-ledger entries and the 2026-10-03 shared-host amendment. The archive reproduction and accounting/cadence calibration passed; reuse those receipts subject to their recorded bindings rather than rerunning them. Preserve the failed 22378 calibration and overall failed 22379 audit as historical evidence. Calibration is not production timing. Final readiness and environmental handoff must reflect the amended shared-host scope, without fabricating an isolation pass. Recheck current capacity and record workloads at launch. Retained observer-overhead protocols and any new controls must also reflect contention; shared-host paired differences do not isolate causal observer slowdown. Do not turn unavailable quiet-host overhead certification into a substitute quiet-window blocker. Continue the full publication work and retain comparable resource evidence with explicit contention limits.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Repository/experiment/scoring and completed OrthoMCL audits exist. Preserve\nunrelated dirty samples; stage only focused changes. See [OrthoMCL failures](ORTHOMCL_FAILURE_IMPACT_20260916.md)\nand [eight-method register](orthobench_provenance_register_20260927/register.json).",
+      "evidence_paths": [
+        "ORTHOMCL_FAILURE_IMPACT_20260916.md",
+        "orthobench_provenance_register_20260927/register.json"
+      ],
+      "id": "1.1",
+      "requirement": "Inspect the repository, existing experiments, scoring audit, and completed OrthoMCL outputs. Preserve unrelated working-tree changes.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Eight-tool scores and available commands/resource metadata are consolidated.\nHistorical input-consumption evidence, runtime identities and full-inference\ncosts remain incomplete across all tools/datasets. Proteinortho and historical\nOrthoMCL sequence sanitization is not identical-input proof. High-sensitivity\ncached replay cost must not replace missing initial-search time. Finish an\nall-dataset provenance table or explicitly retain each gap; no inferred pin.\nSee [OB register](orthobench_provenance_register_20260927/register.json),\n[Three Kingdoms input audit](THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md) and\n[current score manifest](current_benchmark_scores_20260926_v2/manifest.json).",
+      "evidence_paths": [
+        "THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md",
+        "current_benchmark_scores_20260926_v2/manifest.json",
+        "orthobench_provenance_register_20260927/register.json"
+      ],
+      "id": "1.2",
+      "requirement": "Consolidate exact scores, versions, commands, input checksums, output provenance, and resource measurements for every retained method.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Completed OrthoMCL QfO scores are retained. All53 failed queries are absent\nfrom groups; direct reference exposure was checked natively. Four proteins\nhave qualifying GO annotations and46 have FAS features. Indirect clustering\neffects and counterfactual accuracy are not bounded. This investigation does\nnot justify replacing the primary unmodified1.4 run. See [failure impact](orthomcl_reference_impact_20260916.json)\nand [corrected comparison](qfo_corrected_comparison_20260926_v7/scores.md).",
+      "evidence_paths": [
+        "orthomcl_reference_impact_20260916.json",
+        "qfo_corrected_comparison_20260926_v7/scores.md"
+      ],
+      "id": "1.3",
+      "requirement": "Incorporate the completed OrthoMCL QfO results and investigate the extent and consequences of its sequence-specific BLAST failures.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Native pairs, group-derived cliques, root HOGs and OrthoFinder's diagnostic\nMCL checkpoint are distinguished. FastOMA's supplied OrthoFinder tree is\ndisclosed. All-tool conversion/native-output transitive provenance is not\nfully certified by this direct review; consolidate those paths with1.2.\nSee [methods](PUBLICATION_MAIN_TEXT_20261004.md) and\n[conversion-labelled comparison](qfo_corrected_comparison_20260926_v7/scores.md).",
+      "evidence_paths": [
+        "PUBLICATION_MAIN_TEXT_20261004.md",
+        "qfo_corrected_comparison_20260926_v7/scores.md"
+      ],
+      "id": "1.4",
+      "requirement": "Verify that each benchmark evaluates the intended output: orthogroups, hierarchical groups, or pairwise orthologs. Explicitly distinguish native pair predictions, pre-clustering graph edges, and cluster-derived pairs; validate conversion choices against tool documentation.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Prospective scientific source7f3a9e4 and fixed settings/protocols precede\nadditional scoring. Canonical ordering and private dependency routes are\nseparately documented rather than relabelling historical runs. No outcome-led\ndefault promotion. See [claims](PUBLICATION_CLAIMS_20260916.md),\n[ablations](PUBLICATION_ABLATION_PROTOCOL_20260916.md) and\n[YGOB freeze](YGOB_VALIDATION_PROTOCOL_20260916.md).",
+      "evidence_paths": [
+        "PUBLICATION_ABLATION_PROTOCOL_20260916.md",
+        "PUBLICATION_CLAIMS_20260916.md",
+        "YGOB_VALIDATION_PROTOCOL_20260916.md"
+      ],
+      "id": "1.5",
+      "requirement": "Freeze a reproducible OrthoHMM configuration and define the proposed publication claims, primary endpoints, and analysis plan before additional evaluation.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Primary benchmarks are labelled development-exposed and the frozen overlap\nscreen reports homolog-family overlap. A complete family-by-experiment\ndevelopment inventory, including original TreeFam-A families, is unavailable.\nDo not claim family-disjoint independence. See [transfer interpretation](YGOB_FROZEN_INTERPRETATION_20260916.md)\nand [TreeFam search](treefam_remaining_context_receipt_20260930.json).",
+      "evidence_paths": [
+        "YGOB_FROZEN_INTERPRETATION_20260916.md",
+        "treefam_remaining_context_receipt_20260930.json"
+      ],
+      "id": "2.1",
+      "requirement": "Inventory which datasets and families influenced development. Treat repeatedly inspected QfO and OrthoBench results as development-exposed evidence.",
+      "status": "partial"
+    },
+    {
+      "assessment": "YGOB provides the original goal's separate-clade/novel-taxon route, with\nprospective taxon exclusions, independent reference reconstruction and overlap\nchecks. Its endpoint is curated co-membership, not resolved ortholog truth.\n85.98% of proteins and67.82% of pillars have development homology; stronger\nfamily independence remains unproven, not a newly imposed completion gate.\nSee [protocol](YGOB_VALIDATION_PROTOCOL_20260916.md) and\n[frozen result](ygob_frozen_results_20260916.json).",
+      "evidence_paths": [
+        "YGOB_VALIDATION_PROTOCOL_20260916.md",
+        "ygob_frozen_results_20260916.json"
+      ],
+      "id": "2.2",
+      "requirement": "Select an independent curated test set or separate clade, checking overlap with development families and reference resources used by the methods.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Method/protocol were frozen before held-out accuracy. No transfer-outcome\ntuning is admitted. Any future scientific change requires fresh independent\nconfirmation rather than reusing YGOB as untouched evidence. See\n[protocol](YGOB_VALIDATION_PROTOCOL_20260916.md) and\n[first-inspection interpretation](YGOB_FROZEN_INTERPRETATION_20260916.md).",
+      "evidence_paths": [
+        "YGOB_FROZEN_INTERPRETATION_20260916.md",
+        "YGOB_VALIDATION_PROTOCOL_20260916.md"
+      ],
+      "id": "2.3",
+      "requirement": "Freeze the method and evaluation protocol before inspecting test scores. Do not tune on this test set. Any subsequent method changes require a new independent confirmation.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Both eight-cell factorials hold reviewed settings fixed and retain neutral\nprofile effects. Profile-off still has initial HMM search. Reconciliation\nalso changes output semantics and membership filtering, not a pure scorer\ntoggle. Preserve original batch failures and admitted recoveries. See\n[OB results](orthobench_factorial_results_20260916.json),\n[OB interpretation](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) and\n[QfO factorial](qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json).",
+      "evidence_paths": [
+        "ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md",
+        "orthobench_factorial_results_20260916.json",
+        "qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json"
+      ],
+      "id": "3.1",
+      "requirement": "Run controlled ablations of HMM refinement, candidate-family expansion, and phylogenetic reconciliation, holding other settings constant.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Thirty-five simulation datasets/70 graph arms supply a frozen matched-recall\nDIAMOND alternative: HMM-minus-DIAMOND F1+3.0917 points, adjusted interval\n[1.6782,4.5313]. Only five seed blocks; not matched effort, real-data matching,\nfull OrthoFinder or independent confirmation. See [result](matched_graph_scores_20260926/results.json)\nand [bounded interpretation](MATCHED_GRAPH_RESULT_20260926.md).",
+      "evidence_paths": [
+        "MATCHED_GRAPH_RESULT_20260926.md",
+        "matched_graph_scores_20260926/results.json"
+      ],
+      "id": "3.2",
+      "requirement": "Include a sequence-search alternative with comparable sensitivity or computational effort where feasible.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Corrected SwissTrees tests candidate-by-reconciliation interactions with\n42-endpoint multiplicity; OB interactions are descriptive only. Oracle/tree\nstress and FastOMA supplied-tree diagnoses are not independent end-to-end\ninference. See [factorial interpretation](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md)\nand [tree panel](simulation_tree_robustness_summary_20260917.json).",
+      "evidence_paths": [
+        "QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md",
+        "simulation_tree_robustness_summary_20260917.json"
+      ],
+      "id": "3.3",
+      "requirement": "Evaluate interactions between candidate expansion and reconciliation. Distinguish diagnostic runs using supplied trees from fully independent end-to-end inference.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Accuracy and coverage exist for all factorial cells, with negative/neutral\noutcomes. Resource records mix cached incremental wall/sampled tree-RSS and\nunmeasured candidate-only costs. The three-method scaling panel does not\nsupply full-pipeline costs for every ablation. Identify absent per-cell\nend-to-end runtime/memory explicitly; no substitution from cached stages.\nSee [OB costs](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md) and\n[QfO factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).",
+      "evidence_paths": [
+        "ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md",
+        "QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md"
+      ],
+      "id": "3.4",
+      "requirement": "Report accuracy, coverage, runtime, and memory for each configuration, retaining negative and neutral results.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Appropriate-unit paired conditional intervals exist for OB, SwissTrees, YGOB\nand simulations. Native VGNC/TreeFam/GO/EC/FAS and secondary-mean uncertainty\nremain unresolved. Original TreeFam families are missing; failed rare-error\nand shared-clade candidate estimators are not rescued by clipping or naming\na new bootstrap. No pair-IID intervals. See [OB intervals](ob_complete_uncertainty_20260928.json),\n[SwissTrees comparator intervals](qfo_recovered_swiss_uncertainty_22178.json),\n[VGNC method decision](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) and\n[FAS attrition](qfo_fas_sample_attrition_20260928.json).",
+      "evidence_paths": [
+        "VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md",
+        "ob_complete_uncertainty_20260928.json",
+        "qfo_fas_sample_attrition_20260928.json",
+        "qfo_recovered_swiss_uncertainty_22178.json"
+      ],
+      "id": "4.1",
+      "requirement": "Calculate paired confidence intervals for method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Declared family/seed/pillar analyses recompute their actual statistics,\nreport effect sizes/outcome counts and retain original correction inventories.\nOB21-endpoint intervals supersede neither historical6-endpoint bytes nor\nunresolved QfO endpoints. Arithmetic reproduction does not prove exchangeability\nor coverage. See [OB complete check](OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md)\nand [SwissTrees factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md).",
+      "evidence_paths": [
+        "OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md",
+        "QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md"
+      ],
+      "id": "4.2",
+      "requirement": "Recompute the actual benchmark statistic within bootstrap replicates. Report effect sizes, family-level wins and losses, and multiplicity handling where applicable.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Descriptive bins cover size/composition/domain and sequence-identity, retained\nduplication annotations and historical fragment flags. Identity is not\ncalibrated divergence, copy number not duplication history, unflagged sequences\nnot verified complete; some features are reference-derived. The requirement\nfor all listed prespecified label-independent strata is not fully met. Do not\nretroactively relabel these as validated causal strata. See [all-method OB strata](ob_complete_strata_20260928/report.json),\n[duplication features](swiss_duplication_features_v2_20260923.json) and\n[fragment admission](swiss_historical_fragment_admission_22117.json).",
+      "evidence_paths": [
+        "ob_complete_strata_20260928/report.json",
+        "swiss_duplication_features_v2_20260923.json",
+        "swiss_historical_fragment_admission_22117.json"
+      ],
+      "id": "4.3",
+      "requirement": "Analyze errors by divergence, duplication history, family size, fragments, domain architecture, and composition bias using prespecified, label-independent strata.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Search-stage forced scoring tests a mechanism; all six prespecified WGD cases\nare traced, with five focal losses localized before membership constraints.\nThree alternative root rules do not recover those losses. These tests do not\nestablish gene-tree correctness or explain all benchmark differences through\nevery upstream stage. Retain those unverified mechanisms. See [case trace](biological_wgd_case_trace_20260917.json)\nand [fixed-tree rules](wgd_fixed_tree_rules_20260928.json).",
+      "evidence_paths": [
+        "biological_wgd_case_trace_20260917.json",
+        "wgd_fixed_tree_rules_20260928.json"
+      ],
+      "id": "4.4",
+      "requirement": "Trace representative errors through search, candidate selection, grouping, and reconciliation. Test explanations rather than assuming the cause of a score difference.",
+      "status": "partial"
+    },
+    {
+      "assessment": "All eight corrected QfO rows retain separate GO/EC/FAS, three F1 endpoints,\nprediction volumes and available coverage diagnostics. The mean is explicitly\nproject-defined/secondary, not official QfO F1 or a superiority rank. See\n[complete comparison](qfo_corrected_comparison_20260926_v7/scores.md) and\n[main discussion](PUBLICATION_MAIN_TEXT_20261004.md).",
+      "evidence_paths": [
+        "PUBLICATION_MAIN_TEXT_20261004.md",
+        "qfo_corrected_comparison_20260926_v7/scores.md"
+      ],
+      "id": "4.5",
+      "requirement": "Present individual QfO metrics, precision\u2013recall trade-offs, and prediction coverage. Label the six-metric mean as a project-defined secondary summary.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Validated Zombi/Pyvolve workflows supply fixed/variable-length panels with\nten seeds and seven challenging conditions, event-derived truth and native\nadmission. No within-family indels, true domain evolution or arbitrary\nevolutionary realism is claimed. Fixed-panel unavailable OrthoFinder scores\nare not counted as OrthoHMM wins. See [simulation protocol](PUBLICATION_SIMULATION_PROTOCOL_20260916.md)\nand [variable native interpretation](SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md).",
+      "evidence_paths": [
+        "PUBLICATION_SIMULATION_PROTOCOL_20260916.md",
+        "SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md"
+      ],
+      "id": "5.1",
+      "requirement": "Extend simulations with a validated evolutionary simulator, multiple independent seeds, and challenging duplication/loss, divergence, missing-data, and uneven-sampling conditions.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Complete generating/NNI controls retain560 outcomes/537 scores/23 failures,\nincluding two upstream-different comparator contrasts. Frozen OB and complete\nQfO local neighborhoods preserve null/negative effects and do not promote\ndefaults. See [tree summary](simulation_tree_robustness_summary_20260917.json),\n[OB neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md) and\n[QfO neighborhood](qfo_private_cpm_parameter_result_22395.json).",
+      "evidence_paths": [
+        "OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md",
+        "qfo_private_cpm_parameter_result_22395.json",
+        "simulation_tree_robustness_summary_20260917.json"
+      ],
+      "id": "5.2",
+      "requirement": "Measure sensitivity to species-tree error and a limited, prespecified neighborhood of key parameters.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Final nested4/8/12 panel uses identical enforced limits and declared native\nwall/CPU/step-peak scopes, excluding preparation/conversion/scoring. These\nstages must not be silently added or labelled whole-workflow cost. Three\nmissing repeat summaries remain missing. See [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json)\nand [generated resource section](threadripper_shared_resource_section_20261004_v27/resource_section.md).",
+      "evidence_paths": [
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json",
+        "threadripper_shared_resource_section_20261004_v27/resource_section.md"
+      ],
+      "id": "5.3",
+      "requirement": "Benchmark representative dataset sizes under matched hardware limits and consistent memory accounting. Separate preprocessing, inference, conversion, and scoring.",
+      "status": "supported"
+    },
+    {
+      "assessment": "All27 requested repeat identities are retained, including two pre-native\naborts and one measurement exclusion. CPU/failure/background observations\nare retained per attempt. Three repeats are required for each displayed\nmedian/range; six cells qualify. See [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json).",
+      "evidence_paths": [
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "5.4",
+      "requirement": "Use repeated runs where practical, record actual CPU use and failures, and monitor concurrent workloads during timing measurements. Unrelated background activity is accepted under the 2026-10-03 amendment, with explicit limitations rather than an isolation claim.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The replacement panel ran on bizon/x86, not the historical ARM/DGX. No DGX\nservice action or access gate is introduced. See [final resource section](threadripper_shared_resource_section_20261004_v27/resource_section.md).",
+      "evidence_paths": [
+        "threadripper_shared_resource_section_20261004_v27/resource_section.md"
+      ],
+      "id": "5.5",
+      "requirement": "Use the local Threadripper host (bizon) for the replacement shared-host matched-resource timing panel. The DGX is no longer required: do not access it, modify its services, or treat its dashboard-unit permissions as a prerequisite unless the user explicitly reauthorizes DGX work.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Threadripper topology/capacity and scheduler/process observations underlie\nthe prospective local contract. Native32 distinct-core affinity/128GiB limits\nare explicitly enforced, not inherited DGX assumptions; launch inventory\nalone does not certify isolation. See [shared amendment](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md)\nand [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json).",
+      "evidence_paths": [
+        "PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md",
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "5.6",
+      "requirement": "Before timing, inventory the Threadripper's physical/logical CPUs, RAM, NUMA topology, scheduler limits and both Slurm and non-Slurm workloads. Freeze feasible, identical CPU and RAM limits for every tool before examining timing outcomes; do not assume the earlier 32-CPU/128-GiB suggestion is available or reuse the DGX allocation blindly.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Preserve all27 frozen method/size/repeat identities, order and input bytes;\nOrthoFinder is3.1.5/full. Runtime/accounting calibration predates production,\nwhich is distinct from fixtures. No replacements for excluded identities.\nSee [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json)\nand [calibration](threadripper_async_calibration_audit_22380.json).",
+      "evidence_paths": [
+        "threadripper_async_calibration_audit_22380.json",
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "5.7",
+      "requirement": "Preserve the planned 27 method/size/repeat identities: OrthoHMM high sensitivity, OrthoHMM satellite_v2 and full OrthoFinder 3.1.5, each on 4/8/12 proteomes with three repeats. Preserve frozen input bytes, scientific settings and run order. Record a prospective Threadripper-specific execution amendment and validate the x86 runtime and measurement workflow before starting fresh runs.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Sequential attempts retain fresh launch capacity, runtime/environment and\nterminal review bindings. Process/pressure/I/O evidence records contention;\nbackground-core maxima range roughly42-73. Other jobs are not displaced and\nno node-wide isolation is inferred. See [contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md)\nand [final resource section](threadripper_shared_resource_section_20261004_v27/resource_section.md).",
+      "evidence_paths": [
+        "THREADRIPPER_SHARED_CONTINUATION_20261003.md",
+        "threadripper_shared_resource_section_20261004_v27/resource_section.md"
+      ],
+      "id": "5.8",
+      "requirement": "Execute the planned runs sequentially with identical enforced CPU/RAM limits and whole-run background-workload monitoring. Use scheduler allocation without displacing other jobs where feasible; do not require node-wide exclusivity or a quiet window. An empty queue or exclusive Slurm allocation alone does not establish isolation from non-Slurm processes. Do not stop, suspend, renice, re-affinitize or modify unrelated jobs/services. Record CPU demand, memory pressure and relevant I/O activity before and during each run. Launch when safe capacity and measurement prerequisites are satisfied, even if other analyses remain active.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Prespecified measurement/integrity rules retain exclusions and null endpoints;\nordinary contention does not cause retries or automatic exclusion. Original\nfailed states stay recorded, with no fastest-repeat selection or overhead\nsubtraction. See [contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md)\nand [final panel](threadripper_shared_panel_snapshot_20261004_v27/panel.json).",
+      "evidence_paths": [
+        "THREADRIPPER_SHARED_CONTINUATION_20261003.md",
+        "threadripper_shared_panel_snapshot_20261004_v27/panel.json"
+      ],
+      "id": "5.9",
+      "requirement": "Prespecify shared-host annotation, measurement-invalidity and failure handling before launch. Ordinary competing workloads are retained and annotated, not automatically excluded or retried until faster. Retain all attempts, failed/timed-out outcomes, actual CPU use and consistent process-tree or cgroup peak-memory measurements. Pause for genuinely unsafe capacity or invalid accounting, not for contention alone. Separate preparation, inference, conversion and scoring. Do not select fastest repeats, silently retry failures, subtract estimated background overhead or present incomplete repeats as complete summaries.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Final figures/tables/main identify the panel as shared-host matched-resource.\nHistorical DGX times are not pooled and no causal speedup/efficiency ranking is\nclaimed. Distortion is unknown and potentially method dependent. See\n[main text](PUBLICATION_MAIN_TEXT_20261004.md) and\n[final reporting execution](final_prepared_resource_reporting_execution_20261004.json).",
+      "evidence_paths": [
+        "PUBLICATION_MAIN_TEXT_20261004.md",
+        "final_prepared_resource_reporting_execution_20261004.json"
+      ],
+      "id": "5.10",
+      "requirement": "Report the new Threadripper panel separately from historical DGX/ARM and earlier shared-host measurements. Do not pool cross-host times, claim cross-host speedups or reinterpret historical runs as controlled evidence. Tables, figures, Methods and limitations must identify the new timings as potentially confounded shared-host observations. Matching resource limits does not isolate tool speed; avoid definitive efficiency rankings or causal speedup claims from these timings alone.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Retained native22377, calibration22380, all27 panel attempts and local archive\nreplay are reused. The later output-path guard is a concrete engineering\nreason for synthetic tests, not another unchanged native run. See\n[native result](restored_archive_full_ob_result_22377.json),\n[candidate execution](publication_package_execution_20261004.json) and\n[guard repair](PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md).",
+      "evidence_paths": [
+        "PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md",
+        "publication_package_execution_20261004.json",
+        "restored_archive_full_ob_result_22377.json"
+      ],
+      "id": "5.11",
+      "requirement": "Preserve existing expensive runs when scientifically reusable; justify selective reruns and report any remaining comparability limitations.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Six WGD examples and the complete240 experimentally grounded duplicate pairs\nwere specified before outcome inspection, independent of OrthoHMM predictions.\nThis application is development-exposed, not an independent orthology test.\nSee [biological protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md)\nand [case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md).",
+      "evidence_paths": [
+        "BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md",
+        "BIOLOGICAL_WGD_CASE_TRACE_20260917.md"
+      ],
+      "id": "6.1",
+      "requirement": "Choose a prespecified set of biologically informative families with evidence independent of OrthoHMM\u2019s predictions.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Complete comparisons retain both the improvement over high sensitivity and\nthe deficits against full OrthoFinder/SonicParanoid in supported separation\nand homolog coverage.239 input-eligible/231 reference-eligible pairs are\nexplicit, with no success-only examples. These endpoints are not orthology F1.\nSee [biological results](BIOLOGICAL_WGD_RESULTS_20260917.md)\nand [all-example trace](biological_wgd_case_trace_20260917.json).",
+      "evidence_paths": [
+        "BIOLOGICAL_WGD_RESULTS_20260917.md",
+        "biological_wgd_case_trace_20260917.json"
+      ],
+      "id": "6.2",
+      "requirement": "Assess whether OrthoHMM improves difficult ortholog recovery or paralog separation. Include successes, failures, and comparison with full OrthoFinder and relevant competitors.",
+      "status": "supported"
+    },
+    {
+      "assessment": "All prespecified cases and negative fixed-rule interventions remain in the\nrecord; competitor predictions are not ground truth. Experimental duplicate\nevidence and curated pillars bound the interpretation, not ancestral-copy\nidentity inferred from pillar order. See [protocol](BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md)\nand [rule diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md).",
+      "evidence_paths": [
+        "BIOLOGICAL_WGD_APPLICATION_PROTOCOL_20260917.md",
+        "WGD_FIXED_TREE_RULE_RESULTS_20260928.md"
+      ],
+      "id": "6.3",
+      "requirement": "Avoid cherry-picking examples or using a competing tool\u2019s predictions as ground truth.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Machine-readable score/interval/resource inputs generate retained tables and\nfigures. Final resource reporting replays after archive relocation; current\n32-page presentation is byte-identical after restored assembler execution.\nSee [reporting receipt](final_prepared_resource_reporting_execution_20261004.json)\nand [presentation receipt](publication_package_execution_20261004.json).",
+      "evidence_paths": [
+        "final_prepared_resource_reporting_execution_20261004.json",
+        "publication_package_execution_20261004.json"
+      ],
+      "id": "7.1",
+      "requirement": "Generate tables and publication-quality figures directly from machine-readable results.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The assembled32-page review includes method diagram, accuracy/uncertainty,\nfactorials, error analyses, simulations/tree stress, biological application and\nfinal scaling figure. It does not manufacture absent QfO intervals. See\n[final figure review](publication_final_figure_review_20261004.json)\nand [package receipt](publication_package_execution_20261004.json).",
+      "evidence_paths": [
+        "publication_final_figure_review_20261004.json",
+        "publication_package_execution_20261004.json"
+      ],
+      "id": "7.2",
+      "requirement": "Include a method diagram, accuracy comparisons with uncertainty, HMM/phylogeny ablations, error analyses, scaling measurements, and a biological application.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Methods/Results/limitations/availability are drafted and source-bound visual\nreviews exist. The claim checklist plus this register retain unmet science.\nDrafting is completed within this scope, not journal submission/readiness.\nSee [main text](PUBLICATION_MAIN_TEXT_20261004.md),\n[twelve-page review](publication_main_final_visual_review_20261004.json)\nand [claim checklist](PUBLICATION_CLAIMS_20260916.md).",
+      "evidence_paths": [
+        "PUBLICATION_CLAIMS_20260916.md",
+        "PUBLICATION_MAIN_TEXT_20261004.md",
+        "publication_main_final_visual_review_20261004.json"
+      ],
+      "id": "7.3",
+      "requirement": "Draft Methods, Results, limitations, data/code availability, and a claim-to-evidence checklist.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Local rc1 joins executable/source/review/native assets, selected manifests,\ntests and instructions; actual native22377 and copied presentation/reporting\nreproduction pass. Raw inputs/base/OS and some transitive scientific evidence\nare separately retained/acquired, not all bundled. This does not certify an\nall-tool executable study or cross-host restoration. Consolidate the remaining\nevidence/dependency routes; no new hermeticity/OS certification gate is required.\nSee [exact candidate index](publication_package_index_20261004.json),\n[outer instructions](PUBLICATION_PACKAGE_RESULT_20261004.md) and\n[native reproduction](restored_archive_full_ob_result_22377.json).",
+      "evidence_paths": [
+        "PUBLICATION_PACKAGE_RESULT_20261004.md",
+        "publication_package_index_20261004.json",
+        "restored_archive_full_ob_result_22377.json"
+      ],
+      "id": "7.4",
+      "requirement": "Package executable workflows, pinned dependencies, seeds, dataset manifests, scoring tests, and instructions for reproducing the main results.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Versioned local study candidate rc1 is actually archived/restored. Software\nremains0.5.0; no new public release, upload or DOI exists. External deposition\nand submission are explicitly unexecuted, permissible documented limitations,\nnot fabricated successes or a demand for new authorization. Final release\nmetadata/format and scientific readiness remain unfinished. See\n[candidate receipt](publication_package_execution_20261004.json)\nand [delivery scope](PUBLICATION_PACKAGE_RESULT_20261004.md).",
+      "evidence_paths": [
+        "PUBLICATION_PACKAGE_RESULT_20261004.md",
+        "publication_package_execution_20261004.json"
+      ],
+      "id": "7.5",
+      "requirement": "Prepare a versioned release and archival bundle. Document external submission or archival steps that remain unexecuted.",
+      "status": "partial"
+    },
+    {
+      "assessment": "Focused milestones are committed/pushed to the authorized remote, including\noutput guard4b1be273; unrelated sample edits/raw datasets are not staged.\nThe register itself must be committed as the next milestone. See\n[candidate milestone](PUBLICATION_PACKAGE_RESULT_20261004.md)\nand [guard tests](PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md).",
+      "evidence_paths": [
+        "PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md",
+        "PUBLICATION_PACKAGE_RESULT_20261004.md"
+      ],
+      "id": "engineering.1",
+      "requirement": "Make focused commits and push to the existing authorized remote at validated milestones, including analysis scripts, tests, and result summaries. Do not commit unrelated changes or large raw datasets.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Retained scientific admissions/negative outcomes and focused tests are scoped\nto their risks. Guard tests demonstrate four failures before repair and30\npasses afterward; no dated26-case receipt is overwritten. See [guard record](PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md)\nand [candidate execution](publication_package_execution_20261004.json).",
+      "evidence_paths": [
+        "PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md",
+        "publication_package_execution_20261004.json"
+      ],
+      "id": "engineering.2",
+      "requirement": "Test changes according to their scientific and computational impact. Preserve checkpoints and record provenance for resumed jobs.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The progress ledger distinguishes completed work, terminal jobs, unresolved\nrequirements and next actions. This register supplies a stable evidence-pinned\nrequirement view rather than treating old live-job descriptions as current.\nSee [current candidate checkpoint](PUBLICATION_PACKAGE_RESULT_20261004.md)\nand [claim checklist](PUBLICATION_CLAIMS_20260916.md).",
+      "evidence_paths": [
+        "PUBLICATION_CLAIMS_20260916.md",
+        "PUBLICATION_PACKAGE_RESULT_20261004.md"
+      ],
+      "id": "engineering.3",
+      "requirement": "Maintain a progress ledger with completed work, running jobs, unresolved issues, and next actions. Give concise progress updates.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Public archive/source/container searches downloaded/validated promising\nartifacts without contacting anyone. All40 listed contexts were inspected\nwithin their recorded scope; original TreeFam-A7 NHX/mapping remain missing.\nRecovered Selectome subtrees cannot cover70.52% of retained reference relations.\nDo not invent labels or repeat unchanged searches without a concrete lead.\nThe goal explicitly permits retaining this limitation. See [public search](treefam_remaining_context_receipt_20260930.json)\nand [recovered taxonomic scope](TREEFAM_RECOVERED_SCOPE_20260928.md).",
+      "evidence_paths": [
+        "TREEFAM_RECOVERED_SCOPE_20260928.md",
+        "treefam_remaining_context_receipt_20260930.json"
+      ],
+      "id": "engineering.4",
+      "requirement": "Search public internet sources and archives for the original TreeFam-A release-7 trees and treefam2reference.txt used to generate the retained QfO reference. Download and validate promising original artifacts when available, preserving provenance and verifying reconstruction against the pooled reference before using family-level labels. Do not contact maintainers or anyone else, and do not substitute newer releases, derived trees or inferred family labels without establishing their suitability. If the originals remain unavailable, retain the explicit limitation.",
+      "status": "supported"
+    },
+    {
+      "assessment": "Negative/neutral effects, unavailable intervals and native/batch failures are\nretained. The manuscript rejects custom-mean superiority and calibrated\nconfidence/HMMER equivalence. No endpoint/default change accompanies this\naudit. See [main limitations](PUBLICATION_MAIN_TEXT_20261004.md)\nand [claim decisions](PUBLICATION_CLAIMS_20260916.md).",
+      "evidence_paths": [
+        "PUBLICATION_CLAIMS_20260916.md",
+        "PUBLICATION_MAIN_TEXT_20261004.md"
+      ],
+      "id": "engineering.5",
+      "requirement": "Never fabricate missing results, hide failures, change endpoints after seeing outcomes, or claim general superiority from a custom aggregate.",
+      "status": "supported"
+    },
+    {
+      "assessment": "The full publication goal is not proven complete. Separate-clade validation,\nbounded HMM/phylogeny ablations, full27-identity shared-host execution and a\nrestored local candidate are real evidence. They do not close all-dataset\nprovenance, per-ablation end-to-end resources, other-QfO paired uncertainty,\nall prespecified label-independent error strata or full transitive study\nreproduction. Keep the goal active and narrow unsupported claims. No quiet\nwindow, DGX, universal superiority or newly imposed family-disjoint/OS/security\ncertification is required. See [main scientific limitations](PUBLICATION_MAIN_TEXT_20261004.md)\nand [local delivery limits](PUBLICATION_PACKAGE_RESULT_20261004.md).",
+      "evidence_paths": [
+        "PUBLICATION_MAIN_TEXT_20261004.md",
+        "PUBLICATION_PACKAGE_RESULT_20261004.md"
+      ],
+      "id": "completion.1",
+      "requirement": "Finish when the frozen method has independent validation, interpretable ablations, appropriate uncertainty estimates, documented failure modes, comparable resource evidence within the authorized shared-host scope, and a reproducible manuscript package. Resource completion requires the planned matched-resource panel and honest contention reporting, not an uncontended host or a claim of isolated performance. All other scientific and reproducibility requirements remain intact. Every major claim must link to supporting results. If the evidence does not support a claimed advantage, narrow the claim or explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished.",
+      "status": "unmet"
+    }
+  ],
+  "review": {
+    "bytes": 22482,
+    "sha256": "fca9cf40c4223ac3e43db649f91030664fc26b3f60b3652fe0f8005bf6ce393c"
+  },
+  "schema_version": 1,
+  "scope": "Human-reviewed direct evidence; byte pins do not re-admit raw scientific results or certify biological/statistical assumptions.",
+  "status": "publication_requirement_audit_incomplete",
+  "status_counts": {
+    "partial": 9,
+    "supported": 37,
+    "unmet": 1
+  }
+}
