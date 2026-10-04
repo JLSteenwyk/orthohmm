@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Full Native Output-Semantics Gate Added (2026-10-04)
+
+The previous continuation confirmed the shared-host goal authorization; it
+made no scientific change. Re-read the full goal and verify live22427 before
+acting. Add a separate terminal output validator without modifying any of
+the916 helpers pinned to this job. Actual pin checks still pass. No inference
+run, completed panel or expensive diagnostic is restarted.
+
+The new gate checks exact wrapper command/settings/factors/stages, input-copy
+and gene ownership provenance, sorted HMM checkpoint arrays, complete native
+partitions, candidate seed/merge coverage, phylogenetic summary/tree/tool
+provenance and canonical native pair rows. Reuse all eight committed tiny
+diagnostic artifact copies, with explicit test-only relocation; no new search
+or tree construction. Fix initial fixture-format assumptions from actual
+source: checkpoint genes are lexically sorted, and R-off metadata omits
+reconciliation settings. Retain the initial four test failures.
+
+All436 relevant output/executor/collector/accounting tests pass, zero
+failures/errors/skips. See [review protocol and limitations](../NATIVE_FACTORIAL_OUTPUT_REVIEW_20261004.md)
+and [retained JUnit](native_factorial_output_tests_20261004.xml).
+This gate alone admits neither accuracy nor timing and never authorizes the
+next identity. Full terminal runtime/resource/environment review and frozen
+benchmark rescoring remain required.
+
+Latest actual squeue/sacct confirm22427 RUNNING, allocation24:18/native23:35,
+with initial HMM search60.42%. No terminal outcome/cost/score is available.
+Next poll this same job and complete the independent terminal-review join;
+leave other jobs/services and unrelated sample changes untouched. The full
+publication goal remains active and completion unproven.
+
 ## First Full Native Factorial Search Confirmed Live (2026-10-04)
 
 After actual packaging-only lookup repair, freeze/push the prospectively
