@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Prepared Continuation Helpers Validated (2026-10-04)
+
+The preceding user-request turn restates the already-saved shared-host scope
+without changing execution evidence; classify it as no progress, not a live
+wait or blocker. On resumption read full goal/current ledger and retained
+archive/calibration notes, inspect worktree and fresh queue: no timing job live.
+Take the next available action without repeating completed diagnostics.
+
+The [new dated continuation](THREADRIPPER_PREPARED_CONTINUATION_20261004.md)
+binds the prepared lookup and both new abort resolutions. Prefix starts at 21;
+failed indices 0/17/20 stay excluded and unretried. New terminal reviewer keeps
+all old raw checks and adds prepared-receipt/lifecycle replay; live snapshots
+check preparation-before-request without requiring a departed observer PID
+or a lifecycle file written only after measurement. Response/freshness and all
+CPU/RAM/accounting/cadence bounds remain unchanged; no top-level helper changes.
+
+Initial 54 tests pass in 0.79s. Captured validation also passes 54 in 0.79s,
+zero failures/errors/skips, before/after source hashes and retained log/JUnit:
+4,321 bytes, SHA-256
+`e2d377c462953432b021aba2ad75f8cd62db69227550f81030c10d81bd480b44`.
+Existing 655-case regression/runtime refresh/calibration are reused, not rerun.
+No job or preparation is started by validation. All test handles are terminal.
+
+Commit/push prospective sources, then prepare new source/resource/policy/
+readiness receipts once using frozen controller. Verify original bounds and
+shared-host scope, commit/push, then submit only index 21 high-sensitivity OH,
+eight proteomes, repeat 2. Actual capacity/prepared/native handoff still required.
+Keep full goal active; remaining panel/manuscript/release work is incomplete.
+
 ## Preparation Barrier, History Resolution And Runtime Refresh (2026-10-04)
 
 Classify the preceding turn as progress: `0ad646b1` commits/pushes the actual

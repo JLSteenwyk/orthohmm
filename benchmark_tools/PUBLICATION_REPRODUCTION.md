@@ -52,6 +52,14 @@ with null endpoints. Next is index 21, high-sensitivity OrthoHMM, eight
 proteomes, repeat 2, after new prospective execution/readiness bindings and
 fresh capacity/native handoff. Neither pre-native abort is retried.
 
+The [prepared continuation helpers](results/THREADRIPPER_PREPARED_CONTINUATION_20261004.md)
+now pass 54 source-pinned tests. Use the new dated continuation, terminal
+reviewer and live snapshot, not the old pre-native continuation/lookup. They
+retain both abort resolutions and verify preparation-before-release ordering;
+actual new source/resource/environment/readiness preparation and index-21
+native handoff still remain. Do not repeat the existing kernel regression,
+runtime refresh or accounting calibration solely because the goal resumed.
+
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)
 retains the nineteen measured observations and explains both unplotted aborts without isolated speedup claims. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still

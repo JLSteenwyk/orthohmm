@@ -1,0 +1,92 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "--tb=short",
+    "--junitxml=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_continuation_validation_20261004/regression.xml",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_continue_shared_prepared_panel.py"
+  ],
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 54
+  },
+  "evidence": [
+    {
+      "bytes": 15431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_continue_shared_prepared_panel.py",
+      "sha256": "e752d2feecb2a226ec0c457843a617a383bb8b89d7b240e9dce74ffe30121549"
+    },
+    {
+      "bytes": 17435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/continue_shared_prepared_panel_20261004.py",
+      "sha256": "88ef92eb77b66b0ee63b56434a0f8692df0f0db37b9f4ad4d4ee650eaa28330e"
+    },
+    {
+      "bytes": 17286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_shared_prepared_panel_20261004.py",
+      "sha256": "efccc9fd687aef94daa296d87b7a7aaec3767c477f9a4398f108150a9574863b"
+    },
+    {
+      "bytes": 5051,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/snapshot_shared_prepared_panel_20261004.py",
+      "sha256": "b25427d18b59b243e2a580f60d2d74dc22801da6722e17e81703000badd351a1"
+    },
+    {
+      "bytes": 22490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_scaling.py",
+      "sha256": "748500c2d318c29f7292d8b96e07f571c31c8191408bce8ad68e1f0c8ce6635a"
+    },
+    {
+      "bytes": 7427,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/manage_threadripper_environment_worker.py",
+      "sha256": "36f8f4d1dbb677b4877a09dd324379461d036c25e1e5088c7b62d610cb97d16b"
+    },
+    {
+      "bytes": 16257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_environment_worker.py",
+      "sha256": "52b976bb87967db52aae0f03df21a71293cf20cb278df96779e40d4741e86bba"
+    },
+    {
+      "bytes": 13891,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_threadripper_panel_history.py",
+      "sha256": "28dfc80c867c00828a33033e2a39a814c254ad9c73c465a69d43bb35b125822a"
+    },
+    {
+      "bytes": 8708,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_panel_progress.py",
+      "sha256": "83d01e4ab19ae4ce47d44375212c85a765bdac581c5053d3630a9260ef6ce10b"
+    },
+    {
+      "bytes": 3249,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/validate_prepared_continuation_20261004.py",
+      "sha256": "060703484b4814c07796b03cb1244d52060c8b478ece809ebfb9224408c52a14"
+    },
+    {
+      "bytes": 99,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_continuation_validation_20261004/regression.log",
+      "sha256": "5049dee6c00f88a028529fc91716742c8c4aa429a98c9be0267b367e0a3f0d1c"
+    },
+    {
+      "bytes": 9589,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_continuation_validation_20261004/regression.xml",
+      "sha256": "4e43be0082c8495fe462896597d7455c9399e02dd5def6c9b31caf1a516ec1aa"
+    }
+  ],
+  "finished_unix_ns": 1791101188130099731,
+  "limitations": [
+    "Software regression only; production preparation/handoff remains to be observed.",
+    "Existing 655-test kernel regression and runtime refresh are retained, not repeated.",
+    "Both aborts remain excluded; resource, response and freshness bounds are unchanged."
+  ],
+  "native_runs_started": false,
+  "returncode": 0,
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "started_unix_ns": 1791101187013587418,
+  "status": "prepared_continuation_regression_passed"
+}
