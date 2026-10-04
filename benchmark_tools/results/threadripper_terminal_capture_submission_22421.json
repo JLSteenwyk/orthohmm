@@ -1,0 +1,24 @@
+{
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--partition=gpu",
+    "--job-name=orthohmm_terminal_capture",
+    "--nodes=1",
+    "--ntasks=1",
+    "--cpus-per-task=1",
+    "--mem=1G",
+    "--time=00:05:00",
+    "--no-requeue",
+    "--dependency=afterany:22420",
+    "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/terminal_capture_22420-%j.log",
+    "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/terminal_capture_22420-%j.log",
+    "--wrap=env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/dev/shm/orthohmm_terminal_capture_22420 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/venv/bin/python -B /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/capture_shared_terminal_controller_20261004.py --index 24"
+  ],
+  "finished_unix_ns": 1791111065629794394,
+  "returncode": 0,
+  "started_unix_ns": 1791111065622151616,
+  "stderr": "",
+  "stdout": "22421\n"
+}

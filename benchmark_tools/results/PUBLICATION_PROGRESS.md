@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Index 24 Live And Deferred Terminal Capture Queued (2026-10-04)
+
+Previous turn is progress: `5d465692`, `363fdee3`, `7b811fa8` and `d28176e8`
+retain index23 review, documentary reaffirmation and index24 native handoff.
+Read full objective/current ledger and inspect current scheduler/native log:
+22420 parent/batch/native step remains RUNNING, HMM all-to-all search reaches
+22.22% in the latest inspected log, not a whole-pipeline percentage. No
+one-shot handoff, successful diagnostic or native inference is restarted.
+
+Publication-packaging inspection finds that final panel/manuscript/resource
+reconciliation and the versioned/archive package remain pending. Active
+handoff guide still names isolation as an execution gate; update only that
+operational guide to the current authorized shared-host scope. Historical
+archives and dated scientific/reproduction evidence remain untouched.
+
+Commit/push `3fef4bf1` adds a capture-only terminal-controller helper and
+14 passing focused tests. Submit auxiliary22421 once with `afterany:22420`,
+one CPU/1GiB/five minutes/no requeue; fresh scheduler confirms PENDING/Dependency.
+It preserves scheduler evidence before purge when available, not raw review,
+native success, timing admission, inference retry or next-run authorization.
+The [attempt note](THREADRIPPER_SHARED_ATTEMPT_22420.md) distinguishes this
+auxiliary from the27 planned native identities. On continuation poll both
+actual jobs, retain any capture failure, and review22420 independently only
+after terminal state. Use captured controller plus fresh accounting if available.
+
+Table v24/figure v23 remain24 reviewed/22 measured/21 eligible/four complete
+cells; three unreviewed identities(one live,two unsubmitted). No frozen source,
+runtime, recipe, resource bound, scientific endpoint or unrelated work changes.
+Full goal stays active and incomplete. Advance25 only after reviewed history.
+
 ## Index 24 Prepared Handoff And Native Search Live (2026-10-04)
 
 Documentary-only preparation and its 76-reference readback are committed/

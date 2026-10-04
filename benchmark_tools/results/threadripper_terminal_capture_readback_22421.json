@@ -1,0 +1,52 @@
+{
+  "capture_job_id": 22421,
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22421",
+      "--oneliner"
+    ],
+    "finished_unix_ns": 1791111172384479725,
+    "returncode": 0,
+    "started_unix_ns": 1791111172377401747,
+    "stderr": "",
+    "stdout": "JobId=22421 JobName=orthohmm_terminal_capture UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=Dependency Dependency=afterany:22420(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:05:00 TimeMin=N/A SubmitTime=2026-10-04T06:51:05 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T06:51:05 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2771522 ReqNodeList=(null) ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=1G,node=1,billing=1 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=1G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=(null) WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/terminal_capture_22420-22421.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/terminal_capture_22420-22421.log TresPerTask=cpu=1 \n"
+  },
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 14
+  },
+  "evidence": [
+    {
+      "bytes": 1351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_terminal_capture_submission_22421.json",
+      "sha256": "c67d3426de91ac33c06b422fa04e4f68ce14cfa0b7d19e94d2922151231443eb"
+    },
+    {
+      "bytes": 2338,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/terminal_capture_tests_20261004.xml",
+      "sha256": "9a417e0dd6e486a82ff89c710e3dc2341c1e001e4c1ac73db705371121dd4743"
+    },
+    {
+      "bytes": 2573,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/capture_shared_terminal_controller_20261004.py",
+      "sha256": "e1b252680d3ef7ab0617dc3970a4a869dec08873d60b71b8d4e0fda321c9842c"
+    },
+    {
+      "bytes": 3532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_capture_shared_terminal_controller.py",
+      "sha256": "11b264a00bff17680b5fed6a453b7deab41c91973b4655ae845550a4b00a7357"
+    }
+  ],
+  "junit_time_seconds": 0.552,
+  "native_review_completed": false,
+  "next_submission_authorized": false,
+  "scope": "Capture-only scheduler evidence, not a new native panel identity or admission",
+  "status": "terminal_capture_submitted_and_dependency_verified",
+  "target_job_id": 22420,
+  "terminal_capture_completed": false
+}

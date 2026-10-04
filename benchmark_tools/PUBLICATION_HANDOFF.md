@@ -3,8 +3,18 @@
 This local candidate connects the retained manuscript review, frozen scientific
 source, explicitly selected workflow profile, current benchmark table and two standalone
 arithmetic replays. It is not a submission-ready or redistribution-cleared
-public release. Controlled timing and final runtime, rights and manuscript
+public release. Final resource reporting, runtime, rights and manuscript
 reconciliation remain open. Scientific scores and settings are unchanged.
+
+This guide describes the dated 2 October candidate, not the newer working
+manuscript or a completed resource panel. The current
+`benchmark_tools/PUBLICATION_REPRODUCTION.md` governs remaining execution
+(under `source/workflow/` in a rebuilt handoff):
+the shared Threadripper is authorized despite competing analyses. No quiet
+window, DGX or isolation certificate is required. Preserve safe capacity,
+matched limits, valid accounting and failures, and disclose unknown,
+potentially method-dependent contention. Existing archives retain their
+original guide bytes; rebuilding a candidate does not silently update them.
 
 ## Contents
 
@@ -118,7 +128,8 @@ legacy validation unchanged. The included report records successful relocated
 References are scoring inputs, not inference inputs. Native payloads are
 not delivered by this source/count handoff. Do not execute historical DGX
 scripts: the approved timing host is the local Threadripper, and production
-timing requires its separate environment/resource/isolation gates.
+timing follows the current shared-host environment/resource protocol. It does
+not require isolation; competing workloads are monitored and annotated.
 
 No archive upload, public release, DOI, journal submission, raw-data rights
 clearance, complete bootstrap/native/OS dependency closure or controlled

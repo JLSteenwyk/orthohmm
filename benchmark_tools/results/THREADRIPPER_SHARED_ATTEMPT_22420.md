@@ -55,3 +55,26 @@ one-shot snapshot, successful preparation/regression/calibration or native
 attempts without concrete reason. Final panel/manuscript/resource reconciliation
 and versioned/archive release remain incomplete. Timings are shared-host
 observations with unknown, potentially method-dependent contention distortion.
+
+## Deferred Terminal Evidence Capture
+
+Capture-only job **22421** is submitted once with `afterany:22420`, one CPU,
+1 GiB, five minutes and no requeue. Its
+[submission receipt](threadripper_terminal_capture_submission_22421.json)
+retains the actual scheduler command. Fresh controller inspection confirms
+PENDING/Dependency with this exact prerequisite. The
+[capture helper](capture_shared_terminal_controller_20261004.py), committed at
+`3fef4bf1`, queries only the selected job, verifies terminal allocation and
+request digest, and exclusively creates its controller receipt. Fourteen
+focused tests pass in 0.61s, including failure-state retention and refusal
+of live/mismatched/existing evidence. Scheduler tests use doubles.
+The [actual submission readback](threadripper_terminal_capture_readback_22421.json)
+binds the helper/test/JUnit/submission and fresh dependency observation. It
+explicitly reports capture and native review as incomplete.
+
+This auxiliary job is not a 28th native panel attempt. It does not start
+inference, review raw resources, retry failures or authorize index25. On
+resumption inspect both jobs; if capture succeeds, use its retained
+`terminal_controller_22420.json` with the existing terminal reviewer and fresh
+accounting. A queued dependency is not proof of completed capture. If it fails,
+retain that failure and inspect actual state before any replacement action.
