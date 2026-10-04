@@ -32,6 +32,14 @@ def overhead_position(tasks, attempts):
     return _position(tasks, attempts, expected, stop_on_native_failure=True)
 
 
+PRE_NATIVE_RESOLUTIONS = {
+    "pre_native_process_stream_identity_failure": (
+        "mutable_process_stream_identity_during_preflight", "immutable_initial_observation_regression_passed"),
+    "pre_native_environment_response_deadline": (
+        "environment_response_deadline_with_parked_worker_disappearance", "preparation_synchronization_regression_passed"),
+}
+
+
 def _position(runs, attempts, expected, *, stop_on_native_failure=False, allow_monitoring_resolution=False):
     identities = [{k: r[k] for k in expected[0]} for r in runs]
     if identities != expected or any(
@@ -58,9 +66,12 @@ def _position(runs, attempts, expected, *, stop_on_native_failure=False, allow_m
         resolution = attempt.get("resolution")
         if resolution is not None:
             if isinstance(resolution, dict) and resolution.get("schema") == "threadripper_pre_native_failure_resolution_v1":
+                kind = resolution.get("kind")
+                if type(kind) is not str or kind not in PRE_NATIVE_RESOLUTIONS:
+                    raise ValueError("Pre-native resolution has an unsupported failure kind")
                 fields = dict(schema="threadripper_pre_native_failure_resolution_v1", index=index,
                     job_id=job, execution_scope="shared_host_matched_resources",
-                    kind="pre_native_process_stream_identity_failure", decision="retain_excluded_attempt_and_advance",
+                    kind=kind, decision="retain_excluded_attempt_and_advance",
                     comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False)
                 original_review = dict(runtime="passed", environment="failed", resources="unresolved", outputs_or_failure="passed")
                 if (not allow_monitoring_resolution or stop_on_native_failure

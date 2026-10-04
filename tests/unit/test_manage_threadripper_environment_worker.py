@@ -127,3 +127,95 @@ def test_join_timeout_still_cleans_up_owned_child(tmp_path):
             worker.process.wait = wait
             worker.finish()
     assert receipt(tmp_path)["cleanup_requested"] and worker.process.poll() is not None
+
+
+def preparing_owner(tmp_path, monkeypatch, *, delay=.1):
+    worker, calls = owner(tmp_path, '')
+    request_path = Path(worker.request_ref['path'])
+    request_path.write_text(json.dumps(dict(job_id=42, index=21, synthetic_test_only=True)))
+    worker.request_ref = record(request_path)
+    payload = dict(schema='threadripper_environment_worker_prepared_v1',
+        status='prepared_waiting_for_release_request', request=worker.request_ref,
+        policy=worker.policy_ref, job_id=42, index=21, job_scope='/synthetic/job_42',
+        native_release_authorized=False, scientific_timings_admitted=False)
+    code = f"""
+import json, os, pathlib, time
+time.sleep({delay!r})
+data = json.loads({json.dumps(payload)!r})
+data.update(pid=os.getpid(), prepared_unix_ns=time.time_ns(),
+            boot_id=pathlib.Path('/proc/sys/kernel/random/boot_id').read_text().strip())
+path = pathlib.Path('environment_worker_prepared.json')
+pending = path.with_suffix('.pending')
+pending.write_text(json.dumps(data))
+pending.rename(path)
+while not pathlib.Path('synthetic_release.json').exists():
+    time.sleep(.01)
+pathlib.Path('response.json').write_text('{{"synthetic":true}}')
+"""
+    def launch(command, **kwargs):
+        calls.append((command, kwargs))
+        return subprocess.Popen([sys.executable, '-I', '-B', '-c', code], **kwargs)
+    worker.popen = launch
+    original_read = Path.read_text
+    def read(path, *args, **kwargs):
+        if worker.process is not None and path == Path(f'/proc/{worker.process.pid}/cgroup'):
+            return '0::/synthetic/job_42/step_batch/task_0\n'
+        return original_read(path, *args, **kwargs)
+    monkeypatch.setattr(Path, 'read_text', read)
+    return worker, calls
+
+
+def test_preparation_barrier_precedes_release_and_retains_bound_receipt(tmp_path, monkeypatch):
+    worker, calls = preparing_owner(tmp_path, monkeypatch)
+    with worker:
+        prepared = worker.wait_prepared(seconds=5)
+        check(prepared)
+        value = json.loads(Path(prepared['path']).read_text())
+        assert value['pid'] == worker.process.pid and not value['native_release_authorized']
+        assert not (tmp_path / 'synthetic_release.json').exists()
+        with pytest.raises(RuntimeError, match='newly owned'):
+            worker.wait_prepared(seconds=5)
+        (tmp_path / 'synthetic_release.json').write_text('{}')
+        assert worker.wait_response(tmp_path / 'response.json', seconds=5) == {'synthetic': True}
+        worker.finish()
+    assert receipt(tmp_path)['prepared'] == prepared
+    assert receipt(tmp_path)['status'] == 'completed' and len(calls) == 1
+
+
+@pytest.mark.parametrize('key,value', [
+    ('schema', 'wrong'), ('status', 'passed'), ('job_id', 43), ('index', 20),
+    ('pid', 1), ('request', {}), ('policy', {}), ('job_scope', '/synthetic/job_43'),
+    ('boot_id', 'wrong-boot'), ('prepared_unix_ns', 0), ('prepared_unix_ns', True),
+    ('native_release_authorized', True), ('scientific_timings_admitted', True),
+])
+def test_preparation_cannot_borrow_or_admit_another_worker(tmp_path, monkeypatch, key, value):
+    worker, _ = preparing_owner(tmp_path, monkeypatch, delay=0)
+    with pytest.raises(ValueError):
+        with worker:
+            path = tmp_path / 'environment_worker_prepared.json'
+            prepared = worker.wait_response(path, seconds=5)
+            prepared[key] = value
+            path.write_text(json.dumps(prepared))
+            worker.wait_prepared(seconds=5)
+    assert receipt(tmp_path)['status'] == 'failed_or_cancelled'
+    assert not (tmp_path / 'synthetic_release.json').exists()
+
+
+def test_preparation_timeout_reaps_child_without_starting_native_work(tmp_path, monkeypatch):
+    worker, _ = preparing_owner(tmp_path, monkeypatch, delay=60)
+    with pytest.raises(TimeoutError):
+        with worker:
+            worker.wait_prepared(seconds=.05)
+    assert receipt(tmp_path)['cleanup_requested']
+    assert not (tmp_path / 'synthetic_release.json').exists()
+
+
+def test_dead_prepared_worker_cannot_release_native_work(tmp_path, monkeypatch):
+    worker, _ = preparing_owner(tmp_path, monkeypatch, delay=0)
+    with pytest.raises((ValueError, FileNotFoundError)):
+        with worker:
+            worker.wait_response(tmp_path / 'environment_worker_prepared.json', seconds=5)
+            worker.process.terminate()
+            worker.process.wait(timeout=5)
+            worker.wait_prepared(seconds=5)
+    assert receipt(tmp_path)['status'] == 'failed_or_cancelled'

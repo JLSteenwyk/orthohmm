@@ -249,6 +249,64 @@ def test_bound_pre_native_abort_keeps_failure_and_missing_resources(tmp_path):
         bind_resolved(tmp_path, plan, session, allocation_mode='exclusive')
 
 
+def deadline_setup(tmp_path):
+    plan, session, resolution, audit = pre_native_setup(tmp_path)
+    resolution['kind'] = 'pre_native_environment_response_deadline'
+    audit['failure_kind'] = 'environment_response_deadline_with_parked_worker_disappearance'
+    preflight = json.loads((tmp_path / 'environment_preflight.json').read_text())
+    preflight['publication_deadline_expired'] = True
+    release = dict(status='environment_release_failed', error_type='TimeoutError',
+        error='Environmental worker response deadline exceeded')
+    replacements = {name: put(tmp_path / name, data) for name, data in (
+        ('environment_preflight.json', preflight), ('environment_release.json', release))}
+    audit['evidence'] = [replacements.get(Path(pin['path']).name, pin) for pin in audit['evidence']]
+    session['pre_native_audit'] = put(tmp_path / 'pre_native_audit.json', audit)
+    resolution['pre_native_audit'] = session['pre_native_audit']
+    resolution['repair_validation'] = put(tmp_path / 'repair.json', dict(
+        status='preparation_synchronization_regression_passed', returncode=0,
+        evidence=[record(tmp_path / 'support.json')]))
+    resolution['original_session'] = put(tmp_path / 'original_session.json',
+        {k:v for k,v in session.items() if k != 'resolution'})
+    session['resolution'] = put(tmp_path / 'resolution.json', resolution)
+    return plan, session
+
+
+def test_bound_deadline_abort_keeps_failed_verdict_and_missing_resources(tmp_path):
+    plan, session = deadline_setup(tmp_path)
+    result = bind_resolved(tmp_path, plan, session)
+    row = result['progress']['reviewed_attempts'][0]
+    assert row['resolution_kind'] == 'pre_native_environment_response_deadline'
+    assert row['excluded_from_comparative_timing'] and not row['native_resources_available']
+    assert row['original_review']['environment'] == 'failed'
+    assert result['progress']['index'] == 1 and not result['scientific_execution_authorized']
+
+
+@pytest.mark.parametrize('name,field,value', [
+    ('repair.json', 'status', 'immutable_initial_observation_regression_passed'),
+    ('environment_preflight.json', 'publication_deadline_expired', False),
+    ('environment_release.json', 'error_type', 'ValueError'),
+    ('environment_release.json', 'error', 'other failure'),
+])
+def test_deadline_resolution_needs_its_own_repair_and_original_timeout(tmp_path, name, field, value):
+    plan, session = deadline_setup(tmp_path)
+    data = json.loads((tmp_path / name).read_text())
+    data[field] = value
+    pin = put(tmp_path / name, data)
+    resolution = json.loads((tmp_path / 'resolution.json').read_text())
+    if name == 'repair.json':
+        resolution['repair_validation'] = pin
+    else:
+        audit = json.loads((tmp_path / 'pre_native_audit.json').read_text())
+        audit['evidence'] = [pin if Path(row['path']).name == name else row for row in audit['evidence']]
+        session['pre_native_audit'] = put(tmp_path / 'pre_native_audit.json', audit)
+        resolution['pre_native_audit'] = session['pre_native_audit']
+        resolution['original_session'] = put(tmp_path / 'original_session.json',
+            {k:v for k,v in session.items() if k != 'resolution'})
+    session['resolution'] = put(tmp_path / 'resolution.json', resolution)
+    with pytest.raises(ValueError):
+        bind_resolved(tmp_path, plan, session)
+
+
 @pytest.mark.parametrize('fault', ['resources', 'kind', 'native_outcome', 'job', 'index', 'retry',
     'admission', 'source_drift', 'missing_evidence', 'success_gate', 'abort_marker',
     'passed_preflight', 'other_job_preflight', 'released', 'repair_failed',

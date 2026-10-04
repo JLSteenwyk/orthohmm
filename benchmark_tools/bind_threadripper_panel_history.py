@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
-from benchmark_tools.threadripper_panel_progress import overhead_position, position
+from benchmark_tools.threadripper_panel_progress import overhead_position, position, PRE_NATIVE_RESOLUTIONS
 from benchmark_tools.verify_threadripper_controller import validate
 
 REVIEWS = {"runtime", "environment", "resources", "outputs_or_failure"}
@@ -117,9 +117,13 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
             if original != {key: value for key, value in session.items() if key != "resolution"}:
                 raise ValueError("Resolution changed the original attempt or review decisions")
             if resolution.get("schema") == "threadripper_pre_native_failure_resolution_v1":
+                kind = resolution.get("kind")
+                if type(kind) is not str or kind not in PRE_NATIVE_RESOLUTIONS:
+                    raise ValueError("Pre-native resolution has an unsupported failure kind")
+                failure_kind, validation_status = PRE_NATIVE_RESOLUTIONS[kind]
                 if (outcome != "not_started" or resolution.get("pre_native_audit") != session.get("pre_native_audit")
                         or resolution.get("environment_review") != reviews["environment"]
-                        or native.get("failure_kind") != "mutable_process_stream_identity_during_preflight"
+                        or native.get("failure_kind") != failure_kind
                         or native.get("scheduler_state") != allocation["scheduler_state"]
                         or native.get("scheduler_exit_code") != allocation["scheduler_exit_code"]):
                     raise ValueError("Pre-native resolution borrows or changes the original failure")
@@ -130,7 +134,7 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
                     check(pin)
                     evidence.append(pin)
                 repair = read(resolution["repair_validation"])
-                if (repair.get("status") != "immutable_initial_observation_regression_passed"
+                if (repair.get("status") != validation_status
                         or repair.get("returncode") != 0 or type(repair.get("returncode")) is not int
                         or not repair.get("evidence")):
                     raise ValueError("Pre-native resolution lacks successful repair validation")
@@ -147,6 +151,11 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
                         or preflight.get("decision") != "failed"
                         or preflight.get("index") != index or preflight.get("job_id") != job):
                     raise ValueError("Pre-native resolution lacks the actual aborted release evidence")
+                if kind == "pre_native_environment_response_deadline" and (
+                        preflight.get("publication_deadline_expired") is not True
+                        or release.get("error_type") != "TimeoutError"
+                        or release.get("error") != "Environmental worker response deadline exceeded"):
+                    raise ValueError("Deadline resolution lacks the actual expired response evidence")
                 attempt.update(resolution=resolution, scheduler_exit_code=allocation["scheduler_exit_code"])
                 attempts.append(attempt)
                 continue

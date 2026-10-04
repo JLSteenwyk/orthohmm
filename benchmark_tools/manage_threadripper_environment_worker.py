@@ -7,8 +7,9 @@ import subprocess
 import sys
 import time
 
-from benchmark_tools.prepare_ob_candidate_neighborhood import record
+from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_dgx_step_separation import save
+from benchmark_tools.slurm_resource_snapshot import scoped_path
 
 
 class EnvironmentWorker:
@@ -57,6 +58,37 @@ class EnvironmentWorker:
                 raise TimeoutError("Environmental worker response deadline exceeded")
             time.sleep(.02)
         return json.loads(Path(path).read_text())
+
+    def wait_prepared(self, seconds=4000):
+        if self.process is None or self.report.get("prepared") is not None:
+            raise RuntimeError("Preparation requires one newly owned environmental worker")
+        path = self.session / "environment_worker_prepared.json"
+        prepared = self.wait_response(path, seconds)
+        ref = record(path)
+        check(self.request_ref)
+        check(self.policy_ref)
+        request = json.loads(Path(self.request_ref["path"]).read_text())
+        expected = dict(schema="threadripper_environment_worker_prepared_v1",
+            status="prepared_waiting_for_release_request", request=self.request_ref,
+            policy=self.policy_ref, job_id=request["job_id"], index=request["index"],
+            pid=self.process.pid, native_release_authorized=False, scientific_timings_admitted=False)
+        if any(type(prepared.get(key)) is not type(value) or prepared[key] != value
+               for key, value in expected.items()):
+            raise ValueError("Environmental preparation belongs to another worker or request")
+        stamp = prepared.get("prepared_unix_ns")
+        if (type(stamp) is not int or not self.report["started_unix_ns"] <= stamp <= time.time_ns()
+                or prepared.get("boot_id") != Path("/proc/sys/kernel/random/boot_id").read_text().strip()):
+            raise ValueError("Environmental preparation has stale or invalid identity")
+        scope = scoped_path(Path(f"/proc/{self.process.pid}/cgroup").read_text(), request["job_id"])
+        job_scope = str(Path(*scope.parts[:scope.parts.index(f"job_{request['job_id']}") + 1]))
+        if prepared.get("job_scope") != job_scope or self.process.poll() is not None:
+            raise ValueError("Prepared environmental worker is not live in this allocation")
+        if json.loads(path.read_text()) != prepared:
+            raise ValueError("Environmental preparation changed during validation")
+        for pin in (self.request_ref, self.policy_ref, ref):
+            check(pin)
+        self.report["prepared"] = ref
+        return ref
 
     def finish(self):
         code = self.process.wait(timeout=5)

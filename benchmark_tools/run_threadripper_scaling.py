@@ -339,11 +339,13 @@ def execute(request_path, request_sha):
         budget = ReleaseBudgetGuard(job, command=request["scheduler_command"], cwd=str(root), **budget_extra)
         evidence = [request["recipe"], request["readiness_review"], policy_ref, *sources, *history["evidence"]]
         with EnvironmentWorker(session, request_ref, policy_ref, root) as worker:
+            # Finish observer setup before parking a native worker on its short gate.
+            prepared_ref = worker.wait_prepared()
             def finished_worker_budget(directory):
                 worker.finish()
                 return budget(directory)
             guard = EnvironmentalReleaseGuard(request, request_ref, finished_worker_budget,
-                evidence=evidence, waiter=worker.wait_response)
+                evidence=[*evidence, prepared_ref], waiter=worker.wait_response)
             collector = measure_boundary if task and task["arm"] == "boundary" else measure
             result["wrapper"] = measure_run(run, baseline, binding["runtime_specs"], collector, job,
                                             runtime_checker=checker, release_guard=guard)

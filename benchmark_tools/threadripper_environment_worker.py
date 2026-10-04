@@ -150,6 +150,13 @@ def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,
         check(ref)
     directory = Path(run["measurement_directory"])
     marker_path = directory / "environment_review_requested.json"
+    prepared_path = Path(request["environment_preflight_path"]).with_name("environment_worker_prepared.json")
+    save(prepared_path, dict(schema="threadripper_environment_worker_prepared_v1",
+        status="prepared_waiting_for_release_request", request=request_ref, policy=policy_ref,
+        job_id=job, index=request["index"], pid=os.getpid(), job_scope=scope,
+        boot_id=Path("/proc/sys/kernel/random/boot_id").read_text().strip(),
+        prepared_unix_ns=time.time_ns(), native_release_authorized=False, scientific_timings_admitted=False))
+    evidence.append(record(prepared_path))
     # Preparation may take up to an hour. This wait does not authorize a rerun.
     waiter(marker_path, seconds=4000)
     marker_ref = record(marker_path)

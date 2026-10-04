@@ -1,5 +1,61 @@
 # Publication Progress
 
+## Preparation Barrier, History Resolution And Runtime Refresh (2026-10-04)
+
+Classify the preceding turn as progress: `0ad646b1` commits/pushes the actual
+index-20 failure audit and 27 passing tests. On continuation read the full
+goal/current ledger and retained archive/calibration notes, inspect worktree
+and fresh accounting/queue: 22416 remains FAILED 1:0, no job live. Preserve
+all earlier source-bound artifacts and unrelated changes; do not retry science.
+
+The [repair checkpoint](THREADRIPPER_PREPARATION_SYNC_REPAIR_20261004.md)
+adds an atomic, request/policy/job/PID/boot-bound observer preparation receipt.
+The owner validates live scope and stable bytes before any collector starts.
+Slow history/source setup no longer consumes the parked worker's short gate.
+Fresh capacity/process observations still follow release request; response
+20s, parked gate 45s, preparation wait 4000s and all resource/monitoring/budget/
+integrity bounds remain unchanged. Failure cleans up only the owned child.
+History validates the deadline kind against its matching repair and original
+timeout, not a general waiver. Exactly five top-level execution helpers change.
+
+Focused 291 tests pass in 24.72s, expanded 453 in 30.46s. Captured joint
+655-test regression passes in 35.91s with zero failures/errors/skips and
+before/after source/test hashes. Its immutable-sample revalidation reuses the
+same actual execution. Do not rerun it without concrete source changes.
+The real 21-identity history then binds successfully: new resolutions preserve
+both aborts' original audits/decisions; old resolution bytes remain unchanged.
+Next is index 21, high-sensitivity OrthoHMM, eight proteomes, repeat 2, not
+submission authorization. No successful index-20 summary is fabricated.
+
+The actual runtime refresh passes once. Exactly the five tested helper hashes
+change; scientific/private runtime, baseline, controller and command-plan
+identities stay equal. All 57,959 records match before/after native startup;
+native import comparisons retain 913 OrthoHMM / 1,563 OrthoFinder modules.
+New public lookup is 6,661 bytes, SHA-256
+`7e3ac02b46cf1ead426ec19889fc5bd23e6a0e01dbd3737bf374c3ae3180ed1d`.
+This is justified rebinding, not inference or a repeated unchanged diagnostic.
+
+New reporter/plotter preserve all old sources/artifacts. Actual snapshot v21
+has 21 reviewed attempts, 19 measured, 18 eligible, exclusions `[0, 17, 20]`,
+two pre-native aborts with null endpoints and six not-yet-reviewed identities.
+All first twenty rows remain unchanged. Both four-proteome OrthoHMM cells
+have only two eligible repeats despite all three reviewed attempts; medians
+remain null. Full OF/four proteomes remains the only complete cell. Figure
+v20 renders 19 measured points, only that median/range and no abort symbol.
+Actual PNG inspected; all nine new reporting tests pass in 1.16s, including
+PDF bounds/colored-panel pixels/provenance and failure-imputation refusals.
+No accuracy/scientific configuration or isolated-efficiency claim changes.
+
+All owned test/resolution/refresh/report/plot handles are terminal. No timing
+job is live. Commit/push the validated checkpoint, then add new bound
+continuation/terminal-review/live-snapshot helpers using the refreshed lookup
+and both new resolved sessions. Prepare new current-source recipe/resource/
+environment/readiness bindings before index 21; verify bounds and fresh safe
+capacity/actual prepared/native handoff. Do not use or rerun old completed
+preparation, repeat successful refresh/regression/calibration, retry failures,
+or disturb unrelated jobs/services. Remaining panel, final manuscript/resource
+reconciliation and versioned/archive release keep the full goal active/incomplete.
+
 ## Index 20 Pre-Native Deadline Failure Retained (2026-10-04)
 
 Commit/push `7de68449` preserves the index-19 review, table v20, figure v19,

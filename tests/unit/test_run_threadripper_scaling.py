@@ -725,7 +725,7 @@ temporary.rename(target)
         request["environment_preflight_path"])
 
 
-@pytest.mark.parametrize("raises", [False, True])
+@pytest.mark.parametrize("raises", [False, True, "preparation"])
 @pytest.mark.parametrize("worker_fails", [False, True])
 @pytest.mark.parametrize("stream_fails", [False, True])
 @pytest.mark.parametrize("private,native_v2", [(False, False), (False, True), (True, True), ("explicit", True), ("overhead", True), ("overhead_second", True)])
@@ -770,6 +770,12 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
         def __enter__(self):
             worker_events.append("started")
             return self
+        def wait_prepared(self):
+            if raises == "preparation":
+                worker_events.append("preparation_failed")
+                raise RuntimeError("synthetic preparation failure")
+            worker_events.append("prepared")
+            return put(self.session / "environment_worker_prepared.json", dict(synthetic_test_only=True))
         def finish(self):
             worker_events.append("joined")
             if worker_fails: raise RuntimeError("synthetic worker failure")
@@ -791,7 +797,7 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
             assert collector is (driver.measure_boundary if task["arm"] == "boundary" else driver.measure)
         else:
             assert collector is driver.measure
-        assert worker_events == ["started"]
+        assert worker_events == ["started", "prepared"]
         if raises:
             raise RuntimeError("synthetic infrastructure failure")
         kwargs["release_guard"].budget(root)
@@ -824,8 +830,10 @@ def test_execute_one_preserves_attempt_and_never_submits(setup, monkeypatch, rai
     assert not saved["scientific_timings_admitted"] and not saved["next_submission_authorized"]
     with pytest.raises(FileExistsError):
         driver.execute(Path(ref["path"]), ref["sha256"])
-    assert len(calls) == 1
-    expected = ["started"] + ([] if raises else ["joined"] + ([] if worker_fails else ["budget"])) + ["cleaned"]
+    assert len(calls) == (0 if raises == "preparation" else 1)
+    expected = ["started", "prepared"] + ([] if raises else ["joined"] + ([] if worker_fails else ["budget"])) + ["cleaned"]
+    if raises == "preparation":
+        expected = ["started", "preparation_failed", "cleaned"]
     if not raises and not worker_fails:
         expected.append("stream_review")
         assert saved["process_stream_review"]["path"].endswith("stream_review.json")

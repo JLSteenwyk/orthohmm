@@ -26,9 +26,9 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[latest resolved-prefix snapshot](results/threadripper_shared_panel_snapshot_20261004_v20/panel.json)
-has twenty reviewed attempts, nineteen with measured resources, eighteen eligible
-shared-host observations and two exclusions. The
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v21/panel.json)
+has twenty-one reviewed attempts, nineteen with measured resources, eighteen eligible
+shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
 The snapshot includes that abort explicitly with null endpoints, not as a measurement. The remaining panel
@@ -45,13 +45,15 @@ Index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
 is now [22416, audited pre-native abort](results/THREADRIPPER_SHARED_ATTEMPT_22416.md).
 Its environmental response exceeded the release deadline; OrthoHMM did not
 start and native resource endpoints are absent. No job is live at this checkpoint.
-The snapshot above predates that separate failure audit; its pending index-20
-row is not current submission state. A prospective synchronization repair,
-validated binding/history resolution and reporting extension are required
-before advancing to index 21. Neither pre-native abort is retried.
+The [synchronization repair](results/THREADRIPPER_PREPARATION_SYNC_REPAIR_20261004.md)
+now passes 655 source-bound tests, real 21-identity history resolution and a
+five-helper runtime refresh. The current table includes both aborts explicitly
+with null endpoints. Next is index 21, high-sensitivity OrthoHMM, eight
+proteomes, repeat 2, after new prospective execution/readiness bindings and
+fresh capacity/native handoff. Neither pre-native abort is retried.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v19/shared_threadripper_resources.pdf)
-retains the nineteen measured observations and explains the unplotted abort without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)
+retains the nineteen measured observations and explains both unplotted aborts without isolated speedup claims. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
@@ -69,11 +71,11 @@ component's own reader and externally pinned manifest, not the local evidence
 collector, for this bounded reporting replay.
 
 ```sh
-python -B benchmark_tools/results/report_shared_prenative_panel_20261004.py \
+python -B benchmark_tools/results/report_shared_prepared_panel_20261004.py \
   --output /absolute/fresh/resource-table
-python -B benchmark_tools/results/plot_shared_prenative_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v20/panel.json \
-  --sha256 c4f8d60b04459a48d1aaf6e93f8bc206350b0f8e74ab4bfda8159ff99131eee0 \
+python -B benchmark_tools/results/plot_shared_prepared_resources_20261004.py \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v21/panel.json \
+  --sha256 9ded273a1383ca4cf027ed40bc28310f553cad287f24f1ce0892784cd3425af0 \
   --output /absolute/fresh/resource-figure
 ```
 

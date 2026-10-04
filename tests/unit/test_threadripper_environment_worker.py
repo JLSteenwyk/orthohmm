@@ -84,6 +84,32 @@ def test_success_is_only_a_preflight_and_atomic_files(setup):
     with pytest.raises(FileExistsError): setup.run()
 
 
+def test_slow_preparation_finishes_before_release_window_begins(setup, monkeypatch):
+    now = [10**12]
+    original = worker.select
+    def slow_selection(*args):
+        now[0] += 120 * 10**9
+        return original(*args)
+    monkeypatch.setattr(worker, 'select', slow_selection)
+    (setup.directory / 'environment_review_requested.json').unlink()
+    prepared_path = setup.root / 'environment_worker_prepared.json'
+    def request_after_preparation(path, **kwargs):
+        prepared = json.loads(prepared_path.read_text())
+        assert prepared['status'] == 'prepared_waiting_for_release_request'
+        assert prepared['request'] == setup.request_ref and prepared['policy'] == setup.policy_ref
+        assert prepared['pid'] == os.getpid() and not prepared['native_release_authorized']
+        assert kwargs == {'seconds': 4000}
+        setup.marker['requested_unix_ns'] = now[0]
+        put(path, setup.marker)
+    result = setup.run(clock=lambda: now[0], waiter=request_after_preparation,
+        sleep=lambda seconds: now.__setitem__(0, now[0] + int(seconds * 10**9)))
+    assert result['decision'] == 'passed'
+    assert result['observation_started_unix_ns'] == setup.marker['requested_unix_ns']
+    assert result['observation_finished_unix_ns'] - setup.marker['requested_unix_ns'] == 3 * 10**9
+    assert worker.record(prepared_path) in result['evidence']
+    assert not (setup.directory / 'go.json').exists()
+
+
 def shared_worker_setup(setup):
     setup.request.update(deployment="private_v2_20260928", runtime_lookup=setup.support,
                          execution_scope="shared_host_matched_resources")

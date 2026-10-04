@@ -114,8 +114,10 @@ def pre_native_attempt(index=0):
     return row
 
 
-def test_explicit_pre_native_resolution_advances_without_resources_or_retry():
+@pytest.mark.parametrize('kind', ['pre_native_process_stream_identity_failure', 'pre_native_environment_response_deadline'])
+def test_explicit_pre_native_resolution_advances_without_resources_or_retry(kind):
     row = pre_native_attempt()
+    row['resolution']['kind'] = kind
     result = position(planned_runs(), [row], allow_monitoring_resolution=True)
     assert result['index'] == 1
     assert result['reviewed_attempts'][0]['native_outcome'] == 'not_started'
