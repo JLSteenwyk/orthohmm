@@ -1,5 +1,74 @@
 # Publication Progress
 
+## Initial-Sample Repair And Explicit Pre-Native Resolution (2026-10-04)
+
+Classify the preceding goal turn as progress: committed/pushed 00e9a9dd retains
+the completed phylogenetic repeat, the actual pre-native failure and updated
+resource exports. On continuation read the full goal, ledger and current
+worktree. Fresh sacct confirms 22413 terminal FAILED 1:0; no native inference
+is running or restarted. Reuse the original audited failure and index-16
+resource review rather than repeating scientific/calibration diagnostics.
+
+Implement the targeted [pre-native monitoring repair](THREADRIPPER_PRENATIVE_REPAIR_20261004.md).
+Only three top-level execution helpers change: environmental worker, panel
+position and history binder. Shared preflight pins an immutable initial sample,
+not the growing process log. A periodic append between observations no longer
+changes that pin; repeated checks still compare the first record, verify live
+observer/native identities and job membership, and reject an already released
+worker. Legacy exclusive behavior stays strict. Observer anchoring, 30-second
+target, 35-second bound, capacity/runtime/freshness checks, scientific settings
+and input bytes are unchanged. Full post-run stream replay remains required.
+
+Add an explicit pre-native resolution contract with `not_started`, unavailable
+resources, retained FAILED 1:0 and category decisions runtime passed on recorded
+checks, environment failed, resources unresolved and outputs-or-failure passed.
+Default/unresolved, exclusive and overhead paths cannot treat this as success.
+Malformed/borrowed identity, invented endpoints, retry/admission and unsuccessful
+repair validation are rejected. The original cadence-only resolution is retained
+and is not repurposed to explain this different failure.
+
+The first ten-module regression passes 576 cases in 26.75s. Add full shared
+preflight coverage for an append between observations, then capture the final
+regression with JUnit and before/after source/test pins: **579 passed in 27.01s**,
+zero errors/failures/skips. The
+[validation receipt](threadripper_prenative_repair_validation_20261004.json) is
+7,660 bytes, SHA-256
+`07d0b0bcaefc384f9ea5ba7e52083b09d263f341fe5888daf3d4645c11a57fc0`.
+This is a software repair regression, not repeated native/accounting calibration
+or a new production measurement. No bound source file changes after capture.
+
+The [resolution source](resolve_shared_prenative_failure_20261004.py) checks the
+unchanged original failure receipt and fresh terminal accounting, retains the
+four original-outcome review categories and writes a no-retry resolution. Its
+[resolution](threadripper_prenative_resolution_22413.json) is 9,827 bytes,
+SHA-256 `d35501e6a969043c494a4bfb20f8a993972d5aea14f899c1c764d553f5fdf399`;
+the [resolved session](threadripper_prenative_resolved_session_22413.json) is
+2,395 bytes, SHA-256
+`dc463a3bf9f27c5035ffdd82dbacc8470fb6226dbc1daabbc05fc9c8dde20f45`.
+Original metadata and failed decisions remain unchanged. The
+[real eighteen-attempt history result](threadripper_prenative_resolution_result_20261004.json)
+binds 586 direct evidence records, preserves both exclusions and points to
+index 18, full OrthoFinder 3.1.5, four proteomes, repeat 2. This is a concrete
+history-position pass, not next-submission or native-execution authorization.
+Public receipt copies are byte-identical to canonical artifacts; supporting
+work/raw files remain local, not a complete portable archive.
+
+Current runtime/source bindings intentionally still contain the old three
+helper hashes. Do not submit with those stale bindings. Next: prospectively
+refresh the changed-helper runtime lookup/source/resource/readiness binding,
+integrate the new resolved abort in continuation and reporting, then submit
+only index 18 after fresh safe-capacity/native handoff checks. No fabricated
+successful-native index-17 summary, retry, skipped identity or unrelated-workload
+change is permitted. Preserve the current dated seventeen-resource-attempt
+tables/figure and earlier reporting archive/PDF; the next reporting version
+must explicitly include the abort with null endpoints. Do not rerun the completed
+resolution or captured regression without an actual source/evidence change.
+
+No timing job is live at this checkpoint. Full publication scope, the remaining
+panel, manuscript/resource reconciliation and versioned/archive release remain
+active and incomplete. This is further implementation work, not a user-input
+blocker, quiet-window prerequisite or DGX dependency.
+
 ## Phylogenetic Repeat Reviewed; OrthoFinder Pre-Native Abort Retained (2026-10-04)
 
 The preceding user-requested confirmation is no analysis progress: it verifies

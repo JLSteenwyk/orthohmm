@@ -103,6 +103,56 @@ def test_resolution_preserves_all_original_review_decisions(field, value):
         position(planned_runs(), [row], allow_monitoring_resolution=True)
 
 
+def pre_native_attempt(index=0):
+    row = attempt(index, outcome='not_started')
+    row.update(scheduler_state='FAILED', scheduler_exit_code='1:0')
+    row['review'].update(environment='failed', resources='unresolved')
+    row['resolution'] = dict(schema='threadripper_pre_native_failure_resolution_v1',
+        index=index, job_id=row['job_id'], execution_scope='shared_host_matched_resources',
+        kind='pre_native_process_stream_identity_failure', decision='retain_excluded_attempt_and_advance',
+        comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False)
+    return row
+
+
+def test_explicit_pre_native_resolution_advances_without_resources_or_retry():
+    row = pre_native_attempt()
+    result = position(planned_runs(), [row], allow_monitoring_resolution=True)
+    assert result['index'] == 1
+    assert result['reviewed_attempts'][0]['native_outcome'] == 'not_started'
+    assert result['reviewed_attempts'][0]['native_resources_available'] is False
+    assert result['reviewed_attempts'][0]['excluded_from_comparative_timing'] is True
+    assert result['automatic_retry'] is False
+    with pytest.raises(ValueError, match='Pre-native resolution'):
+        position(planned_runs(), [row])
+    with pytest.raises(ValueError, match='Pre-native resolution'):
+        overhead_position(overhead_tasks(), [row])
+
+
+@pytest.mark.parametrize('target,field,value', [
+    ('resolution', 'index', True), ('resolution', 'job_id', 101),
+    ('resolution', 'kind', 'native_failure'), ('resolution', 'decision', 'retry'),
+    ('resolution', 'comparative_timing_eligible', True), ('resolution', 'automatic_retry', True),
+    ('resolution', 'scientific_timings_admitted', True), ('resolution', 'automatic_retry', 0),
+    ('attempt', 'native_outcome', 'exited_zero'), ('attempt', 'scheduler_state', 'COMPLETED'),
+    ('attempt', 'scheduler_exit_code', '0:0'), ('review', 'environment', 'passed'),
+    ('review', 'resources', 'passed'), ('review', 'runtime', 'failed')])
+def test_pre_native_resolution_cannot_waive_failure_or_fabricate_endpoints(target, field, value):
+    row = pre_native_attempt()
+    selected = row if target == 'attempt' else row[target]
+    selected[field] = value
+    with pytest.raises(ValueError, match='Pre-native resolution'):
+        position(planned_runs(), [row], allow_monitoring_resolution=True)
+
+
+def test_not_started_is_not_an_ordinary_success_or_implicit_resolution():
+    with pytest.raises(ValueError, match='requires explicit'):
+        position(planned_runs(), [attempt(outcome='not_started')])
+    row = pre_native_attempt()
+    row.pop('resolution')
+    result = position(planned_runs(), [row], allow_monitoring_resolution=True)
+    assert result['status'] == 'infrastructure_failure_requires_resolution'
+
+
 @pytest.mark.parametrize("field", ["runtime", "environment", "resources", "outputs_or_failure"])
 @pytest.mark.parametrize("decision", ["failed", "unresolved"])
 def test_adverse_review_stops(field, decision):

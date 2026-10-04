@@ -78,7 +78,7 @@ def collector_ready(directory, scope, job, *, shared_host=False):
     stream = directory / "host_processes.jsonl"
     with stream.open() as handle:
         first = json.loads(handle.readline())
-        if handle.readline():
+        if not shared_host and handle.readline():
             raise ValueError("Collector already advanced beyond its initial sample")
     if first.get("index") != 0 or first.get("interval") is not None:
         raise ValueError("Missing initial collector observation")
@@ -96,7 +96,16 @@ def collector_ready(directory, scope, job, *, shared_host=False):
     live_identity(native_rows[0])
     if (directory / "go.json").exists() or (directory / "done.json").exists():
         raise ValueError("Native worker has already been released or finished")
-    return [ready_ref, record(stream)]
+    if not shared_host:
+        return [ready_ref, record(stream)]
+    # The periodic observer owns the append-only stream; pin only its first sample.
+    initial_path = directory / "preflight_initial_process_sample.json"
+    if not initial_path.exists():
+        save(initial_path, first)
+    initial_ref = record(initial_path)
+    if read(initial_ref) != first:
+        raise ValueError("Initial collector observation changed during preflight")
+    return [ready_ref, initial_ref]
 
 
 def respond(request_ref, policy_ref, *, root=None, sample=enriched_snapshot,

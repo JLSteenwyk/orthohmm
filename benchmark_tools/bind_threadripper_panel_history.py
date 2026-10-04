@@ -57,9 +57,28 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
                               command=command, cwd=cwd, time_limit=time_limit, allocation_mode=allocation_mode)
         outcome = session.get("native_outcome")
         if outcome is not None:
-            native = read(session["native_audit"])
-            expected_status = ("native_success_outputs_verified" if outcome == "exited_zero"
-                               else "native_failure_requires_review")
+            if outcome == "not_started":
+                if overhead or allocation_mode != "shared" or "native_audit" in session:
+                    raise ValueError("Pre-native abort requires explicit shared production evidence")
+                native = read(session["pre_native_audit"])
+                expected_status = "pre_native_infrastructure_failure_reviewed"
+                if (native.get("index") != index or type(native.get("index")) is not int
+                        or native.get("execution_scope") != "shared_host_matched_resources"
+                        or native.get("resources") is not None
+                        or native.get("comparative_timing_eligible") is not False
+                        or native.get("automatic_retry") is not False
+                        or native.get("scientific_timings_admitted") is not False):
+                    raise ValueError("Pre-native review has contradictory identity or resource claims")
+                check(native["source"])
+                if not isinstance(native.get("evidence"), list) or not native["evidence"]:
+                    raise ValueError("Pre-native review lacks pinned evidence")
+                for pin in native["evidence"]:
+                    check(pin)
+                    evidence.append(pin)
+            else:
+                native = read(session["native_audit"])
+                expected_status = ("native_success_outputs_verified" if outcome == "exited_zero"
+                                   else "native_failure_requires_review")
             if (type(native.get("job_id")) is not int or native["job_id"] != job
                     or native.get("native_outcome") != outcome
                     or native.get("status") != expected_status):
@@ -97,6 +116,40 @@ def bind(plan_ref, session_refs, *, command, cwd, time_limit="1-00:00:00", overh
             original = read(resolution["original_session"])
             if original != {key: value for key, value in session.items() if key != "resolution"}:
                 raise ValueError("Resolution changed the original attempt or review decisions")
+            if resolution.get("schema") == "threadripper_pre_native_failure_resolution_v1":
+                if (outcome != "not_started" or resolution.get("pre_native_audit") != session.get("pre_native_audit")
+                        or resolution.get("environment_review") != reviews["environment"]
+                        or native.get("failure_kind") != "mutable_process_stream_identity_during_preflight"
+                        or native.get("scheduler_state") != allocation["scheduler_state"]
+                        or native.get("scheduler_exit_code") != allocation["scheduler_exit_code"]):
+                    raise ValueError("Pre-native resolution borrows or changes the original failure")
+                supporting = resolution.get("evidence")
+                if not isinstance(supporting, list) or not supporting or not resolution.get("review_reference"):
+                    raise ValueError("Pre-native resolution lacks explicit supporting evidence")
+                for pin in supporting:
+                    check(pin)
+                    evidence.append(pin)
+                repair = read(resolution["repair_validation"])
+                if (repair.get("status") != "immutable_initial_observation_regression_passed"
+                        or repair.get("returncode") != 0 or type(repair.get("returncode")) is not int
+                        or not repair.get("evidence")):
+                    raise ValueError("Pre-native resolution lacks successful repair validation")
+                for pin in repair["evidence"]:
+                    check(pin)
+                    evidence.append(pin)
+                pinned = {Path(pin["path"]).name: pin for pin in native["evidence"]}
+                gate = read(pinned["go.json"])
+                aborted = read(pinned["aborted_before_native.json"])
+                release = read(pinned["environment_release.json"])
+                preflight = read(pinned["environment_preflight.json"])
+                if (gate != {"abort": True} or aborted != {"status": "observer_did_not_release_native"}
+                        or release.get("status") != "environment_release_failed"
+                        or preflight.get("decision") != "failed"
+                        or preflight.get("index") != index or preflight.get("job_id") != job):
+                    raise ValueError("Pre-native resolution lacks the actual aborted release evidence")
+                attempt.update(resolution=resolution, scheduler_exit_code=allocation["scheduler_exit_code"])
+                attempts.append(attempt)
+                continue
             if (resolution["native_audit"] != session["native_audit"]
                     or resolution["environment_review"] != reviews["environment"]):
                 raise ValueError("Resolution borrows another native or environment review")

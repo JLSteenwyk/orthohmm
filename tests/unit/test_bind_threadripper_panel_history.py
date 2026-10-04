@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 
@@ -198,3 +199,98 @@ def test_resolution_cannot_waive_missing_or_different_evidence(tmp_path, fault):
     session['resolution'] = put(tmp_path / 'resolution.json', resolution)
     with pytest.raises(ValueError):
         bind_resolved(tmp_path, plan, session)
+
+
+def pre_native_setup(tmp_path):
+    plan, session = setup(tmp_path)
+    controller = json.loads((tmp_path / 'controller.json').read_text())
+    controller['stdout'] = controller['stdout'].replace('COMPLETED', 'FAILED').replace('ExitCode=0:0', 'ExitCode=1:0').replace('NumCPUs=192', 'NumCPUs=64')
+    session['controller'] = put(tmp_path / 'controller.json', controller)
+    support = record(tmp_path / 'support.json')
+    pins = [put(tmp_path / 'go.json', {'abort': True}),
+        put(tmp_path / 'aborted_before_native.json', {'status': 'observer_did_not_release_native'}),
+        put(tmp_path / 'environment_release.json', {'status': 'environment_release_failed'}),
+        put(tmp_path / 'environment_preflight.json', dict(decision='failed', index=0, job_id=42))]
+    audit = dict(status='pre_native_infrastructure_failure_reviewed', index=0, job_id=42,
+        native_outcome='not_started', execution_scope='shared_host_matched_resources',
+        resources=None, comparative_timing_eligible=False, automatic_retry=False,
+        scientific_timings_admitted=False, failure_kind='mutable_process_stream_identity_during_preflight',
+        scheduler_state='FAILED', scheduler_exit_code='1:0', source=support, evidence=pins)
+    session.pop('native_audit')
+    session.update(native_outcome='not_started', pre_native_audit=put(tmp_path / 'pre_native_audit.json', audit))
+    for category, decision in [('environment', 'failed'), ('resources', 'unresolved')]:
+        review = json.loads((tmp_path / (category + '.json')).read_text())
+        review['decision'] = decision
+        session['reviews'][category] = put(tmp_path / (category + '.json'), review)
+    repair = put(tmp_path / 'repair.json', dict(status='immutable_initial_observation_regression_passed',
+        returncode=0, evidence=[support]))
+    resolution = dict(schema='threadripper_pre_native_failure_resolution_v1', index=0, job_id=42,
+        plan_sha256=plan['sha256'], execution_scope='shared_host_matched_resources',
+        kind='pre_native_process_stream_identity_failure', decision='retain_excluded_attempt_and_advance',
+        comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False,
+        original_session=put(tmp_path / 'original_session.json', session),
+        pre_native_audit=session['pre_native_audit'], environment_review=session['reviews']['environment'],
+        repair_validation=repair, evidence=[support], review_reference='Synthetic pre-native failure resolution')
+    session['resolution'] = put(tmp_path / 'resolution.json', resolution)
+    return plan, session, resolution, audit
+
+
+def test_bound_pre_native_abort_keeps_failure_and_missing_resources(tmp_path):
+    plan, session, _, _ = pre_native_setup(tmp_path)
+    result = bind_resolved(tmp_path, plan, session)
+    assert result['progress']['index'] == 1
+    retained = result['progress']['reviewed_attempts'][0]
+    assert retained['native_outcome'] == 'not_started'
+    assert retained['scheduler_state'] == 'FAILED'
+    assert retained['native_resources_available'] is False
+    assert retained['original_review']['resources'] == 'unresolved'
+    assert result['scientific_execution_authorized'] is False
+    with pytest.raises(ValueError):
+        bind_resolved(tmp_path, plan, session, allocation_mode='exclusive')
+
+
+@pytest.mark.parametrize('fault', ['resources', 'kind', 'native_outcome', 'job', 'index', 'retry',
+    'admission', 'source_drift', 'missing_evidence', 'success_gate', 'abort_marker',
+    'passed_preflight', 'other_job_preflight', 'released', 'repair_failed',
+    'repair_bool_exit', 'repair_empty', 'changed_original', 'borrowed_audit', 'no_resolution'])
+def test_pre_native_resolution_cannot_disguise_or_borrow_other_evidence(tmp_path, fault):
+    plan, session, resolution, audit = pre_native_setup(tmp_path)
+    if fault == 'resources': audit['resources'] = {'wall_seconds': 0}
+    elif fault == 'kind': audit['failure_kind'] = 'other_failure'
+    elif fault == 'native_outcome': audit['native_outcome'] = 'exited_zero'
+    elif fault == 'job': audit['job_id'] = 43
+    elif fault == 'index': audit['index'] = False
+    elif fault == 'retry': audit['automatic_retry'] = True
+    elif fault == 'admission': audit['scientific_timings_admitted'] = True
+    elif fault == 'source_drift': (tmp_path / 'support.json').write_text('{}')
+    elif fault == 'missing_evidence': audit['evidence'] = []
+    elif fault in ('success_gate', 'abort_marker', 'passed_preflight', 'other_job_preflight', 'released'):
+        name = {'success_gate':'go.json', 'abort_marker':'aborted_before_native.json',
+            'passed_preflight':'environment_preflight.json', 'other_job_preflight':'environment_preflight.json',
+            'released':'environment_release.json'}[fault]
+        data = json.loads((tmp_path / name).read_text())
+        if fault == 'success_gate': data = {'go': True}
+        elif fault == 'other_job_preflight': data['job_id'] = 43
+        elif fault == 'passed_preflight': data['decision'] = 'passed'
+        else: data['status'] = 'success'
+        new_ref = put(tmp_path / name, data)
+        audit['evidence'] = [new_ref if Path(pin['path']).name == name else pin for pin in audit['evidence']]
+    elif fault.startswith('repair_'):
+        repair = json.loads((tmp_path / 'repair.json').read_text())
+        if fault == 'repair_failed': repair['returncode'] = 1
+        elif fault == 'repair_bool_exit': repair['returncode'] = False
+        else: repair['evidence'] = []
+        resolution['repair_validation'] = put(tmp_path / 'repair.json', repair)
+    session['pre_native_audit'] = put(tmp_path / 'pre_native_audit.json', audit)
+    resolution['pre_native_audit'] = session['pre_native_audit']
+    original = {k:v for k,v in session.items() if k != 'resolution'}
+    if fault == 'changed_original': original['native_outcome'] = 'exited_zero'
+    resolution['original_session'] = put(tmp_path / 'original_session.json', original)
+    if fault == 'borrowed_audit': resolution['pre_native_audit'] = record(tmp_path / 'support.json')
+    session['resolution'] = put(tmp_path / 'resolution.json', resolution)
+    if fault == 'no_resolution':
+        session.pop('resolution')
+        assert bind_resolved(tmp_path, plan, session)['progress']['status'] == 'infrastructure_failure_requires_resolution'
+    else:
+        with pytest.raises((ValueError, KeyError)):
+            bind_resolved(tmp_path, plan, session)

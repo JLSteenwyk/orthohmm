@@ -5,7 +5,7 @@ from benchmark_tools.prepare_scaling_inputs import planned_runs
 LIVE = {"PENDING", "RUNNING", "CONFIGURING", "COMPLETING", "SUSPENDED", "RESIZING"}
 TERMINAL = {"COMPLETED", "FAILED", "TIMEOUT", "CANCELLED", "OUT_OF_MEMORY",
             "NODE_FAIL", "PREEMPTED", "BOOT_FAIL", "DEADLINE", "REVOKED"}
-NATIVE_OUTCOMES = {"exited_zero", "exited_nonzero", "timed_out"}
+NATIVE_OUTCOMES = {"exited_zero", "exited_nonzero", "timed_out", "not_started"}
 
 
 def position(runs, attempts, *, allow_monitoring_resolution=False):
@@ -57,6 +57,21 @@ def _position(runs, attempts, expected, *, stop_on_native_failure=False, allow_m
             raise ValueError("Unknown native outcome")
         resolution = attempt.get("resolution")
         if resolution is not None:
+            if isinstance(resolution, dict) and resolution.get("schema") == "threadripper_pre_native_failure_resolution_v1":
+                fields = dict(schema="threadripper_pre_native_failure_resolution_v1", index=index,
+                    job_id=job, execution_scope="shared_host_matched_resources",
+                    kind="pre_native_process_stream_identity_failure", decision="retain_excluded_attempt_and_advance",
+                    comparative_timing_eligible=False, automatic_retry=False, scientific_timings_admitted=False)
+                original_review = dict(runtime="passed", environment="failed", resources="unresolved", outputs_or_failure="passed")
+                if (not allow_monitoring_resolution or stop_on_native_failure
+                        or any(type(resolution.get(k)) is not type(v) or resolution[k] != v for k, v in fields.items())
+                        or state != "FAILED" or attempt.get("scheduler_exit_code") != "1:0"
+                        or outcome != "not_started" or review != original_review):
+                    raise ValueError("Pre-native resolution cannot admit, retry or disguise another outcome")
+                reviewed.append(dict(index=index, job_id=job, native_outcome=outcome,
+                    scheduler_state=state, original_review=review, excluded_from_comparative_timing=True,
+                    native_resources_available=False, resolution_kind=resolution["kind"]))
+                continue
             fields = dict(schema="threadripper_monitoring_failure_resolution_v1", index=index,
                 job_id=job, execution_scope="shared_host_matched_resources",
                 kind="post_native_process_cadence_failure", decision="retain_excluded_attempt_and_advance",
@@ -90,6 +105,8 @@ def _position(runs, attempts, expected, *, stop_on_native_failure=False, allow_m
                 status = "post_run_review_prevents_continuation"
             elif outcome is None:
                 raise ValueError("Reviewed attempt lacks native outcome")
+            elif outcome == "not_started":
+                raise ValueError("Not-started native outcome requires explicit failed-attempt resolution")
             elif stop_on_native_failure and outcome != "exited_zero":
                 status = "native_failure_prevents_continuation"
             else:

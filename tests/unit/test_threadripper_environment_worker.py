@@ -335,3 +335,81 @@ def test_shared_collector_retains_outside_errors_but_not_native_observer_errors(
         assert len(worker.collector_ready(tmp_path, scope, 42, shared_host=True)) == 2
     else:
         with pytest.raises(ValueError): worker.collector_ready(tmp_path, scope, 42, shared_host=True)
+
+
+@pytest.mark.parametrize('append', ['complete', 'in_progress'])
+def test_shared_collector_pins_initial_sample_not_growing_stream(tmp_path, monkeypatch, append):
+    scope = '/root/job_42'
+    put(tmp_path / 'ready.json', dict(pid=50, cgroup=f'0::{scope}/step_0/user/task_0\n'))
+    first = dict(index=0, interval=None, observer_pid=60,
+        snapshot=dict(errors=[], processes=[dict(pid=50), dict(pid=60)]))
+    stream = tmp_path / 'host_processes.jsonl'
+    stream.write_text(json.dumps(first) + '\n')
+    monkeypatch.setattr(worker, 'job_scope', lambda *args: scope)
+    monkeypatch.setattr(worker, 'membership', lambda *args: scope + '/step_0/user/task_0')
+    checked = []
+    monkeypatch.setattr(worker, 'live_identity', lambda row: checked.append(row['pid']))
+    refs = worker.collector_ready(tmp_path, scope, 42, shared_host=True)
+    with stream.open('a') as handle:
+        handle.write(json.dumps(dict(first, index=1, interval={})) + '\n' if append == 'complete' else '{"index":')
+    for ref in refs:
+        worker.check(ref)
+    assert worker.collector_ready(tmp_path, scope, 42, shared_host=True) == refs
+    assert checked == [60, 50, 60, 50]
+    assert json.loads(Path(refs[1]['path']).read_text()) == first
+    assert not (tmp_path / 'go.json').exists()
+
+
+@pytest.mark.parametrize('problem', ['first_changed', 'copy_changed', 'native_exited', 'observer_exited', 'released'])
+def test_shared_collector_still_rejects_identity_and_initial_copy_drift(tmp_path, monkeypatch, problem):
+    scope = '/root/job_42'
+    put(tmp_path / 'ready.json', dict(pid=50, cgroup=f'0::{scope}/step_0/user/task_0\n'))
+    first = dict(index=0, interval=None, observer_pid=60,
+        snapshot=dict(errors=[], processes=[dict(pid=50), dict(pid=60)]))
+    stream = tmp_path / 'host_processes.jsonl'
+    stream.write_text(json.dumps(first) + '\n')
+    monkeypatch.setattr(worker, 'job_scope', lambda *args: scope)
+    monkeypatch.setattr(worker, 'membership', lambda *args: scope + '/step_0/user/task_0')
+    monkeypatch.setattr(worker, 'live_identity', lambda *args: None)
+    refs = worker.collector_ready(tmp_path, scope, 42, shared_host=True)
+    if problem == 'first_changed':
+        first['snapshot']['changed'] = True
+        stream.write_text(json.dumps(first) + '\n')
+    elif problem == 'copy_changed':
+        Path(refs[1]['path']).write_text('{}')
+    elif problem in ('native_exited', 'observer_exited'):
+        target = 50 if problem == 'native_exited' else 60
+        def exited(row):
+            if row['pid'] == target:
+                raise ValueError('Approved user process changed')
+        monkeypatch.setattr(worker, 'live_identity', exited)
+    else:
+        put(tmp_path / 'go.json', {'go': True})
+    with pytest.raises(ValueError):
+        worker.collector_ready(tmp_path, scope, 42, shared_host=True)
+
+
+def test_full_shared_preflight_survives_periodic_append_during_observation(setup, monkeypatch):
+    shared_worker_setup(setup)
+    put(setup.directory / 'ready.json', dict(pid=50, cgroup='0::/job/step\n'))
+    first = dict(index=0, interval=None, observer_pid=60,
+        snapshot=dict(errors=[], processes=[dict(pid=50), dict(pid=60)]))
+    stream = setup.directory / 'host_processes.jsonl'
+    stream.write_text(json.dumps(first) + '\n')
+    monkeypatch.setattr(worker, 'membership', lambda *args: '/job/step')
+    monkeypatch.setattr(worker, 'scoped_path', lambda *args: '/job/step')
+    monkeypatch.setattr(worker, 'live_identity', lambda *args: None)
+    def append_during_observation(seconds):
+        assert seconds == 3.
+        with stream.open('a') as handle:
+            handle.write(json.dumps(dict(first, index=1, interval={})) + '\n')
+    result = setup.run(sleep=append_during_observation,
+        collector_check=lambda *args: worker.collector_ready(*args, shared_host=True),
+        capacity=lambda: SimpleNamespace(available=256 * 1024**3))
+    assert result['decision'] == 'passed'
+    assert result['whole_run_observer_ready'] is True
+    detail = json.loads((setup.root / 'environment_worker_evidence.json').read_text())
+    assert Path(detail['collector_evidence'][1]['path']).name == 'preflight_initial_process_sample.json'
+    for pin in detail['collector_evidence']:
+        worker.check(pin)
+    assert not (setup.directory / 'go.json').exists()

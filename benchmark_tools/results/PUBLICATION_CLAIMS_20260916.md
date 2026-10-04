@@ -25,7 +25,9 @@ retains seventeen reviewed resource attempts: sixteen eligible shared-host obser
 excluded monitoring failure. No isolated comparative timing is established.
 The separately reviewed [eighteenth attempt](THREADRIPPER_SHARED_ATTEMPT_22413.md)
 aborted before OrthoFinder started; it has no native resource measurement and
-requires explicit infrastructure resolution before progression. Its absence from
+has a [tested repair and explicit history resolution](THREADRIPPER_PRENATIVE_REPAIR_20261004.md);
+prospective runtime/protocol rebinding and execution/reporting integration still
+precede progression. Its absence from
 the resource snapshot is not an unattempted identity or a zero-valued timing.
 The [partial figure](threadripper_shared_resource_figure_20261003_v16/shared_threadripper_resources.pdf)
 includes the seventeenth observation; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
@@ -620,8 +622,10 @@ The next identity, index 17 (full OrthoFinder 3.1.5, twelve proteomes, repeat 1)
 was released as 22413 only after that canonical review. Its
 [terminal pre-native failure review](THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 an aborted launch, not live work or failed OrthoFinder inference. Retain the
-failure, repair the mutable-stream preflight race and explicitly resolve panel
-history before index 18 (full OrthoFinder 3.1.5, four proteomes, repeat 2).
+failure and [tested, explicitly resolved history](THREADRIPPER_PRENATIVE_REPAIR_20261004.md).
+Before index 18 (full OrthoFinder 3.1.5, four proteomes, repeat 2), refresh the
+changed-helper runtime/protocol bindings and integrate the abort into the
+continuation/reporting path without fabricating a native timing record.
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 

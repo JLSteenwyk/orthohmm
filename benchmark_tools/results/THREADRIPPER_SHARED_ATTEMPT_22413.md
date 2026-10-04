@@ -1,5 +1,9 @@
 # OrthoFinder Repeat Aborted Before Native Inference
 
+This retains the original failure review. The subsequent
+[repair and explicit history resolution](THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
+does not change any failed verdict or supply missing native endpoints.
+
 Index 17, full OrthoFinder 3.1.5 on twelve proteomes, repeat 1, was released as
 22413 after the canonical index-16 review passed. Fresh accounting reports
 parent and batch FAILED 1:0 at 3:03; the parked native step completed 0:0 at

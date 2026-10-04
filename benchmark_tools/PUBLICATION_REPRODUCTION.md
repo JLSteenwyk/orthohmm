@@ -32,8 +32,9 @@ and one retained/excluded cadence failure. A separate
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
 The snapshot does not include that abort as a measurement. The remaining panel
-is not complete; repair and explicitly resolve the infrastructure failure before
-advancing, without overwriting or silently retrying the attempt.
+is not complete. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
+now pass; current-source runtime/protocol rebinding and continuation/reporting
+integration remain required before advancing. No attempt is overwritten or retried.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261003_v16/shared_threadripper_resources.pdf)
 includes the seventeenth observation without isolated speedup claims. The
@@ -1400,7 +1401,7 @@ does not supply original family identities for uncertainty estimation.
 - Shared-host resource panel: seventeen of the 27 frozen attempts have reviewed
   native resource evidence in the current snapshot. The eighteenth attempt was
   separately reviewed as aborted before native launch and has no endpoints;
-  the remaining sequential panel, failure resolution and final reporting are
+  the remaining sequential panel, post-repair binding/integration and final reporting are
   incomplete. Local Threadripper `bizon` is approved, not the DGX. Use the
   [executed continuation contract](results/THREADRIPPER_SHARED_CONTINUATION_20261003.md)
   with identical native limits, fresh capacity checks, intact input/runtime

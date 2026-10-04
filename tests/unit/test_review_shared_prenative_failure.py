@@ -74,7 +74,7 @@ def test_refuses_borrowed_or_contradictory_failure(case, change):
         reviewer.assess(run, request, docs, rows, present)
 
 
-def test_original_collector_stream_pin_is_invalidated_by_normal_append(tmp_path, monkeypatch):
+def test_shared_initial_copy_survives_append_while_old_stream_pin_fails(tmp_path, monkeypatch):
     ready = dict(pid=456, cgroup='scope')
     row = dict(pid=123)
     sample = dict(index=0, interval=None, observer_pid=123,
@@ -87,13 +87,15 @@ def test_original_collector_stream_pin_is_invalidated_by_normal_append(tmp_path,
     monkeypatch.setattr(worker, 'scoped_path', lambda *args: 'scope')
     monkeypatch.setattr(worker, 'live_identity', lambda *args: None)
     pins = worker.collector_ready(tmp_path, 'scope', 42, shared_host=True)
+    old_stream_pin = worker.record(stream)
     worker.check(pins[1])
     with stream.open('a') as handle:
         handle.write(json.dumps(dict(sample, index=1, interval={})) + '\n')
     with pytest.raises(ValueError, match='Frozen input/source identity changed'):
-        worker.check(pins[1])
-    with pytest.raises(ValueError, match='advanced beyond its initial sample'):
-        worker.collector_ready(tmp_path, 'scope', 42, shared_host=True)
+        worker.check(old_stream_pin)
+    worker.check(pins[1])
+    assert worker.collector_ready(tmp_path, 'scope', 42, shared_host=True) == pins
+    assert Path(pins[1]['path']).name == 'preflight_initial_process_sample.json'
 
 
 def test_actual_receipt_preserves_failure_and_null_resources():
