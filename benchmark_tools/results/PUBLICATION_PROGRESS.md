@@ -1,5 +1,40 @@
 # Publication Progress
 
+## High-Sensitivity Third Repeat Released As 22415 (2026-10-04)
+
+Commit/push `cf6323ab` preserves completed index-18 review, new table v19,
+figure v18 and 52 passing focused tests. The unchanged new continuation helper
+validates all nineteen reviewed identities and selects/holds/request-binds/
+releases only index 19 as **22415**: high-sensitivity OrthoHMM, four proteomes,
+repeat 2. The [submission/handoff note](THREADRIPPER_SHARED_SUBMISSION_22415.md)
+links byte-identical public/canonical launch metadata and dated live evidence.
+No new runtime refresh, calibration, scientific rerun, altered endpoint or
+retry of indices 0/17. Scientific settings, input bytes and resource limits
+remain frozen; unrelated workloads/services and dirty sample outputs untouched.
+
+Actual native handoff now passes. Fresh controller observes RUNNING at 3:33,
+matches actual request digest, and the selected worker is live in the correct
+job/step with affinity 0..31. Native log confirms built-in profile-HMM/k-mer
+search, high-sensitivity profile, BLOSUM62, E value .0001, Leiden CPM .1,
+32 CPUs, stop at inference and running all-to-all comparisons. Available memory
+329,388,662,784 / 329,634,897,920 bytes exceeds the 128-GiB floor; foreign demand
+41.1505908056 cores is annotated, not excluded. Initial immutable sample is
+bound while the stream grows; first gap 30.0004490131s is below 35s. Live
+receipt is 12,006 bytes, SHA-256
+`5f81a75a0679c74cb69452fe941005ba16c401bce40477a122bb4cac6b60746d`.
+Early cadence/handoff is not final validity or an isolated timing claim.
+
+All owned review/report/plot/test/launch/snapshot/push handles are terminal.
+Slurm 22415 remains live independently; use a fresh scheduler/accounting query
+on every continuation rather than treating this dated observation as permanent.
+Wait for parent/batch/native terminal outcomes, capture controller before purge
+if needed, then review **index 19** with the new bound reviewer. Do not retry,
+resubmit or advance index 20 before canonical review and full-prefix validation.
+The offline table remains at nineteen reviewed identities, eighteen measured,
+seventeen eligible and exclusions `[0, 17]`; this live attempt is not added as
+reviewed. Full panel, final manuscript/resource reconciliation and versioned/
+archive release remain active/incomplete, not a quiet-window or user-input blocker.
+
 ## OrthoFinder Repeat Reviewed; First Complete Resource Cell (2026-10-04)
 
 Classify the preceding goal turn as progress: `3bfa6135` commits/pushes the

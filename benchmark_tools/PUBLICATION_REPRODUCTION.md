@@ -38,6 +38,9 @@ preserves all earlier source-bound artifacts. All four independent terminal
 review categories now pass for [22414, index 18](results/THREADRIPPER_SHARED_ATTEMPT_22414.md),
 full OrthoFinder, four proteomes, repeat 2. This supplies the first complete
 three-eligible-repeat cell; other cell summaries remain missing. No attempt is overwritten or retried.
+The next identity, [22415/index 19](results/THREADRIPPER_SHARED_SUBMISSION_22415.md),
+has a passed native handoff and dated RUNNING checkpoint; it is not yet a reviewed
+timing. Fresh scheduler state is required on continuation.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v18/shared_threadripper_resources.pdf)
 retains the eighteen measured observations and explains the unplotted abort without isolated speedup claims. The

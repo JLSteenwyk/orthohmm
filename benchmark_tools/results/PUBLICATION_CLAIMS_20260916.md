@@ -31,6 +31,8 @@ binds the three changed helpers and explicitly reports its null endpoints.
 All four independent terminal review categories now pass for
 [22414, index 18](THREADRIPPER_SHARED_ATTEMPT_22414.md). Full OF/four proteomes
 is the first and only three-eligible-repeat cell; other summaries remain missing.
+The next identity [22415/index 19](THREADRIPPER_SHARED_SUBMISSION_22415.md) has
+passed actual native handoff and is observed RUNNING, not terminally reviewed.
 The [partial figure](threadripper_shared_resource_figure_20261004_v18/shared_threadripper_resources.pdf)
 retains the eighteen measurements and explains the unplotted abort; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
