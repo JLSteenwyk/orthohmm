@@ -146,6 +146,8 @@ def build(root, selection, selection_sha256, output):
 
 def archive(directory, manifest_sha256, output):
     directory, output = Path(directory).resolve(strict=True), fresh(output)
+    require(not output.resolve().is_relative_to(directory),
+            "Archive output must be outside immutable package")
     result = verify(directory, manifest_sha256)
     with output.open("xb") as raw, gzip.GzipFile(filename="", fileobj=raw, mode="wb", mtime=0) as compressed:
         with tarfile.open(fileobj=compressed, mode="w") as container:

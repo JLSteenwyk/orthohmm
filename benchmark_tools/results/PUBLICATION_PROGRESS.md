@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Archive Output Defect Reproduced And Fixed (2026-10-04)
+
+The preceding goal-update turn makes authoritative progress by reaffirming
+shared-host execution without assuming slight timing distortion. On explicit
+resumption, read the full amended goal/current ledger and query Slurm: no
+owned native job is live. All27 panel identities remain terminal-reviewed;
+reuse valid results rather than starting contention-driven retries.
+
+Finish the [immutable archive output repair](PUBLICATION_PACKAGE_OUTPUT_GUARD_20261004.md):
+four new direct/symlink, normal/optimized copied-CLI cases fail before the guard;
+all30 package cases pass afterward. The retained real rc1 archive used an
+external output and is unaffected. Do not rewrite its historical bytes/pins.
+
+Continue the full numbered requirement audit. Historical all-tool provenance,
+other-QfO uncertainty, some error-stratum validity, per-ablation full-pipeline
+costs and complete transitive release evidence remain unresolved. Local
+archive restoration and a finished shared-host panel do not certify those
+scientific requirements. No DGX/quiet-window or new isolation gate is imposed.
+
 ## Actual Versioned Candidate Restored And Presentation Replayed (2026-10-04)
 
 Commit/push `09012201` freezes the package workflow and explicit current outer

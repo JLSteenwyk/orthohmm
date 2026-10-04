@@ -128,6 +128,26 @@ def test_existing_output_preserved(selected, tmp_path, stage):
     assert marker.read_text() == "preserve"
 
 
+@pytest.mark.parametrize("alias", [False, True])
+@pytest.mark.parametrize("optimized", [False, True])
+def test_archive_output_cannot_mutate_verified_package(selected, tmp_path, alias, optimized):
+    root, selection, anchor, _ = selected
+    built = package.build(root, selection, anchor, tmp_path / "built")
+    parent = tmp_path / "built"
+    if alias:
+        parent = tmp_path / "alias"
+        parent.symlink_to(tmp_path / "built", target_is_directory=True)
+    output = parent / "nested.tar.gz"
+    command = [sys.executable, "-I", "-S", "-B", *(["-O"] if optimized else []),
+        str(tmp_path / "built" / package.RUNNER), "archive", str(tmp_path / "built"),
+        "--manifest-sha256", built["manifest"]["sha256"], "--output", str(output)]
+    completed = subprocess.run(command, cwd=tmp_path, capture_output=True, text=True)
+    assert completed.returncode != 0
+    assert "Archive output must be outside immutable package" in completed.stderr
+    assert not output.exists()
+    assert package.verify(tmp_path / "built", built["manifest"]["sha256"]) == built
+
+
 @pytest.mark.parametrize("damage", ["anchor", "changed", "traversal", "symlink", "duplicate"])
 def test_archive_damage_refused_before_extraction(selected, tmp_path, damage):
     root, selection, anchor, _ = selected
