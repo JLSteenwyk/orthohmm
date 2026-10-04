@@ -26,12 +26,12 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v9/panel.json)
-has nine reviewed attempts, eight eligible shared-host observations and one
+[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v10/panel.json)
+has ten reviewed attempts, nine eligible shared-host observations and one
 retained/excluded cadence failure. The remaining panel is not complete.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261003_v8/shared_threadripper_resources.pdf)
-includes the ninth observation without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261003_v9/shared_threadripper_resources.pdf)
+includes the tenth observation without isolated speedup claims. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
@@ -52,8 +52,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_threadripper_panel_20261003.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_threadripper_resources_20261003.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v9/panel.json \
-  --sha256 5f0028c6ef5d09f88e8ce4bd5058dbbba7d324e36bace6dca1c074b51be7be6c \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v10/panel.json \
+  --sha256 7c00e93dd5fd5b1bba0fe2aa77207a64746bea64540f970f5326f6e195181eaa \
   --output /absolute/fresh/resource-figure
 ```
 
@@ -1392,7 +1392,7 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Shared-host resource panel: nine of the 27 frozen attempts are reviewed in
+- Shared-host resource panel: ten of the 27 frozen attempts are reviewed in
   the current snapshot; the remaining sequential panel and final reporting are
   incomplete. Local Threadripper `bizon` is approved, not the DGX. Use the
   [executed continuation contract](results/THREADRIPPER_SHARED_CONTINUATION_20261003.md)

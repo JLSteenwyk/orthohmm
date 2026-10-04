@@ -1,5 +1,72 @@
 # Publication Progress
 
+## Four-Proteome Phylogeny Repeat Reviewed; Full OrthoFinder Released (2026-10-03)
+
+The preceding user-requested confirmation verifies the existing goal amendment
+but does not advance analyses. Revalidate that no-progress turn against the
+full goal, newest ledger and fresh scheduler evidence. Exact **22405** is
+RUNNING; follow it through completed HMM search/graph construction, grouping,
+species-tree inference and family-level MAFFT/FastTree work without restarting.
+A remaining MAFFT dvtditr process accumulates CPU, rather than establishing a
+stalled job. Native inference exits zero and the log confirms reconciliation
+completion; wait for enclosing post-run checks before treating it as terminal.
+
+Fresh sacct reports parent, batch and native step COMPLETED 0:0. Parent elapsed
+is 20:06; native step elapsed is 16:54. Run the unchanged index-9 independent
+reviewer once, retaining its terminal controller before purge. All four review
+categories pass. Readback verifies the four category pins/decisions and the
+byte-identical canonical/public summary. The
+[retained outcome](threadripper_shared_attempt_22405.json) is 5,159 bytes,
+SHA-256 `58692c4a5a0318adda516492ba1f56ca8c1357a245e63e6625be4467e6bc19e1`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22405.md) records a complete
+partition of 73,266 proteins into 35,560 orthogroups/root HOGs and 51,644
+native pair rows, not a new accuracy evaluation. Primary resources are
+986.109450535 native wall seconds, 20,678.338812 native-task CPU seconds and
+3,491,352,576 native-step lifetime peak bytes. Maximum sampled foreign demand
+is 61.3543514536 cores; process/pressure failure maps are empty. Preserve the
+wrapper-bracket CPU and step-lifetime memory scopes. Contention distortion
+remains unknown and potentially method dependent; no overhead subtraction,
+fastest-repeat selection or isolated speed ranking occurs.
+
+Only after canonical terminal review does the unchanged launcher bind the
+ten-attempt reviewed prefix and release index 10, full OrthoFinder 3.1.5,
+four proteomes, repeat 1, as **22406**. A fresh RUNNING query and the
+[live checkpoint](threadripper_shared_live_22406.json) verify actual native
+affinity CPUs 0-31, enforced job/user memory limit 128 GiB, successful preflight
+and unchanged request. Available-memory observations are 165,701,341,184 and
+166,287,114,240 bytes; foreign average demand is 53.0266716099 cores. The first
+observed process interval is 30.0003806460 seconds. The native log confirms
+OrthoFinder 3.1.5, recommended MSA/tree inference, 32 threads and DIAMOND
+all-versus-all search. This dated receipt is not terminal review or a guarantee
+of future state. No skipped identity, retry, scientific retuning or unrelated
+workload change occurs. Read the actual plan: index 11 is OrthoHMM high
+sensitivity on four proteomes, repeat 1; index 12 is full OrthoFinder on eight
+proteomes, repeat 1.
+
+Export [ten-attempt tables](threadripper_shared_panel_snapshot_20261003_v10/panel.json)
+and the [updated partial figure](threadripper_shared_resource_figure_20261003_v9/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Nine observations are eligible, original
+index 0 stays excluded and 17 identities remain unreviewed. The four-proteome
+phylogenetic cell has two eligible repeats, but no cell has three; no median/
+range is imputed. Inspect the actual PNG: ten observations have headroom and
+no text overlap; exclusions, incomplete coverage, endpoint scopes and contention
+remain explicit. Earlier snapshots, reporting archive and main PDF retain their
+dated payloads. Update active README/reproduction/claim links and counts,
+not frozen timing/helper sources or scientific settings.
+
+Retained-table byte replay and actual PDF/pixel/provenance checks now cover
+the tenth attempt: the component/table/figure suite passes **87 cases in
+11.64s**. Scoped code/prose whitespace validation passes; generated TSV CRLF/
+empty fields and SVG spacing remain hash-bound bytes, not normalization targets.
+No expensive inference/statistical/calibration or TreeFam diagnostic is repeated.
+Preserve unrelated sample changes and frozen runtime/input bytes.
+
+Next: poll exact **22406**, review terminal native/runtime/environment/resource
+evidence once, and only then release index 11. Finish the remaining panel,
+final resource/manuscript/archive reconciliation and versioned study release.
+Full publication scope remains active and incomplete; no quiet-window or DGX
+prerequisite returns.
+
 ## Twelve-Proteome Phylogeny Reviewed; Four-Proteome Repeat Released (2026-10-03)
 
 The preceding goal turns are verified live-job waits, not an external blocker.
