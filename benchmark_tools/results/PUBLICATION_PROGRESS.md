@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Full Native Upstream Trace Prepared (2026-10-04)
+
+The preceding ca0f1981 turn completes a concrete gene-tree oracle milestone.
+Read the full goal/current ledger and query Slurm; no owned native job is live.
+Preserve the completed oracle, timing and rc2 artifacts without rerunning them.
+
+Freeze the [70-cell retained upstream trace](SIMULATION_UPSTREAM_TRACE_PROTOCOL_20261004.md)
+before computing new stage outcomes. Every true pair is retained through
+significant initial HMM hits, direct final graph edges, graph connectivity,
+candidate membership and native prediction. Native TP/FN and cross-candidate
+loss must reproduce the preceding scores. The saved graph is pre-refinement;
+missing significant hits do not identify prefilter versus scoring rejection.
+Merged-candidate gene-to-seed membership is unavailable, not inferred.
+
+Twenty-five focused tests pass. Commit/push protocol, runner and tests before
+actual execution, then independently read all-pair TSV counts and check graph
+components with installed igraph1.0.0 rather than SciPy. Local NetworkX is
+absent; no new dependency installation is needed. This is descriptive stage
+localization, not new inference, tuning, independent confirmation or timing.
+Keep raw pair rows local and publish compact results/provenance after checking.
+All other full-goal scientific and delivery gaps remain active.
+
 ## Actual Gene-Tree Oracle Localizes Simulation Recall Deficit (2026-10-04)
 
 Prepared source9335be8c is pushed before all70 generating-species-tree cells
