@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -187,14 +187,24 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert full['native_outputs']['native_pair_rows'] == 1487084
         if count == 7:
             assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 1
-    if count == 8:
+    if count >= 8:
         high12 = json.loads((results / 'threadripper_shared_attempt_22403.json').read_text())
         assert report['runs'][7]['job_id'] == high12['job_id'] == 22403
         assert report['runs'][7]['resources'] == high12['resources'] == dict(
             wall_seconds=3027.060520509, cpu_seconds=86415.319181, peak_memory_bytes=11309355008)
         assert high12['native_outputs']['input_genes'] == 251378
         assert high12['native_outputs']['orthogroups'] == 62885
-        assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 2
+        if count == 8:
+            assert sum(cell['eligible_repeats'] for cell in report['cells'] if cell['proteomes'] == 12) == 2
+    if count == 9:
+        phy12 = json.loads((results / 'threadripper_shared_attempt_22404.json').read_text())
+        assert report['runs'][8]['job_id'] == phy12['job_id'] == 22404
+        assert report['runs'][8]['resources'] == phy12['resources'] == dict(
+            wall_seconds=4809.292429717, cpu_seconds=136293.332246, peak_memory_bytes=11285721088)
+        assert phy12['native_outputs']['input_genes'] == 251378
+        assert phy12['native_outputs']['orthogroups'] == phy12['native_outputs']['root_hogs'] == 59770
+        assert phy12['native_outputs']['native_pair_rows'] == 966439
+        assert all(cell['eligible_repeats'] == 1 for cell in report['cells'] if cell['proteomes'] == 12)
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'

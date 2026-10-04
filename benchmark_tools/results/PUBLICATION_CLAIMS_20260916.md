@@ -12,7 +12,7 @@ A quiet window is no longer required: matched-resource runs accept
 annotated contention with unknown distortion, without isolated-efficiency
 claims. Historical quiet-host gates below are superseded for future execution;
 the actual shared policy/readiness and runtime reconciliation have now supported
-eight executed and independently reviewed attempts, not just planned work.
+nine executed and independently reviewed attempts, not just planned work.
 Existing outcomes and the other publication requirements are unchanged.
 
 This index consolidates retained evidence; it is not a fresh audit of every raw
@@ -20,11 +20,11 @@ artifact. The detailed chronology below preserves historical observations,
 including jobs described as running at the time. Those descriptions do not
 establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. The
-[current resource snapshot](threadripper_shared_panel_snapshot_20261003_v8/panel.json)
-retains eight reviewed attempts: seven eligible shared-host observations and one
+[current resource snapshot](threadripper_shared_panel_snapshot_20261003_v9/panel.json)
+retains nine reviewed attempts: eight eligible shared-host observations and one
 excluded monitoring failure. No isolated comparative timing is established.
-The [partial figure](threadripper_shared_resource_figure_20261003_v7/shared_threadripper_resources.pdf)
-includes the eighth observation; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
+The [partial figure](threadripper_shared_resource_figure_20261003_v8/shared_threadripper_resources.pdf)
+includes the ninth observation; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
 contention, missing repeats and endpoint scopes. The older assembled review
 does not include these additions. The remaining panel, final resource figures,
@@ -603,17 +603,17 @@ rights clearance, controlled efficiency or a complete executable release.
 | 2. Independent generalization | [Frozen YGOB novel-taxon evaluation](YGOB_FROZEN_INTERPRETATION_20260916.md), [overlap diagnostic](YGOB_OVERLAP_STRATA_RESULT_20260928.md) | The separate-clade evaluation supplies bounded transfer evidence under the original goal; family-disjoint validation is not established. The later overlap analysis is descriptive, not a second independent confirmation. No test-informed tuning |
 | 3. HMM and phylogeny contributions | [OrthoBench factorial](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md), [corrected QfO factorial](QFO_CORRECTED_FACTORIAL_COMPLETE_20260919.md), [matched-recall diagnostic](MATCHED_GRAPH_RESULT_20260926.md) | Preserve endpoint-specific negative/neutral findings and limited causal scope. Shared-host resources do not establish controlled efficiency |
 | 4. Uncertainty and errors | [OrthoBench paired intervals](ORTHOBENCH_UNCERTAINTY_20260916.md), [corrected SwissTrees comparisons](qfo_recovered_swiss_uncertainty_22178.json), [FAS audit](QFO_CORRECTED_FAS_SAMPLE_AUDIT_20260928.md), [VGNC method review](VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md) | Appropriate uncertainty remains unresolved for other QfO challenges and the secondary mean. Original TreeFam trees/mapping remain missing despite [public archive inspections](TREEFAM_SOURCE_RETRIEVAL_20260918.md). Do not substitute pair-IID intervals or inferred family labels |
-| 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [OrthoBench parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [complete QfO parameter panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md), [recovered high-CPM score admission](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md), [shared-host authorization](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md), [executed continuation contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md), [eight reviewed attempts](threadripper_shared_panel_snapshot_20261003_v8/panel.json), [partial resource figure](threadripper_shared_resource_figure_20261003_v7/shared_threadripper_resources.pdf) | Original high-CPM admission remains failed; separate private recovery completes the prespecified SwissTrees panel. Broader robustness and other-QfO uncertainty remain limited. Finish the sequential 27-attempt shared-host panel and final resource reporting. Runtime/input integrity, safe launch capacity, measurement validity and failure retention remain required; no quiet window or causal observer-overhead certificate is a gate. Contention distortion is unknown and potentially method dependent; no isolated efficiency claim follows |
+| 5. Robustness and efficiency | [Simulation tree controls](SIMULATION_TREE_ROBUSTNESS_RESULTS_20260917.md), [OrthoBench parameter neighborhood](OB_PARAMETER_NEIGHBORHOOD_RESULTS_20260916.md), [complete QfO parameter panel](QFO_COMPLETE_PARAMETER_UNCERTAINTY_20261001.md), [recovered high-CPM score admission](QFO_PRIVATE_CPM_SCORE_RESULT_22394.md), [shared-host authorization](PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md), [executed continuation contract](THREADRIPPER_SHARED_CONTINUATION_20261003.md), [nine reviewed attempts](threadripper_shared_panel_snapshot_20261003_v9/panel.json), [partial resource figure](threadripper_shared_resource_figure_20261003_v8/shared_threadripper_resources.pdf) | Original high-CPM admission remains failed; separate private recovery completes the prespecified SwissTrees panel. Broader robustness and other-QfO uncertainty remain limited. Finish the sequential 27-attempt shared-host panel and final resource reporting. Runtime/input integrity, safe launch capacity, measurement validity and failure retention remain required; no quiet window or causal observer-overhead certificate is a gate. Contention distortion is unknown and potentially method dependent; no isolated efficiency claim follows |
 | 6. Biological usefulness | [Prespecified WGD case trace](BIOLOGICAL_WGD_CASE_TRACE_20260917.md), [fixed-tree four-rule diagnostic](WGD_FIXED_TREE_RULE_RESULTS_20260928.md) | All three alternative root rules fail to recover the five focal losses on fixed inputs; mapped-event reduces coverage in four eligible cases. No general rule ranking, topology-error diagnosis or superiority claim follows |
 | 7. Reproducible publication package | [Current text-and-figure review](PUBLICATION_TEXT_FIGURE_REVIEW_20261002.md), [retained nine-page main-text review](PUBLICATION_MAIN_SIMULATION_REVIEW_20261002.md), [historical 55-file direct-review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20261002.md), [historical 48-file review archive](PUBLICATION_REVIEW_COMPONENT_RESULT_20260930_V2.md), [complete local regression](PUBLICATION_FULL_REGRESSION_20261001.md), [full OrthoBench installation result](INTEGRATED_FULL_OB_RESULT_22337.md), [reconstructed-base full result](RECONSTRUCTED_FULL_OB_RESULT_22376.md), [admitted archive-to-results reproduction](RESTORED_ARCHIVE_FULL_OB_RESULT_22377.md), [combined source component](PUBLICATION_SOURCE_COMPONENT_RESULT_20260929.md), [release security scope](RELEASE_SECURITY_SCOPE_20260928.md), [native source evidence](LIBLEIDEN_SOURCE_VERSION_20260928.md) | The latest review includes main text, a figure guide and 14 original vector figures, preserving length-panel/tree-stress, null and negative findings. Historical review archives do not contain this new assembled PDF. These and same-host inference reproduction are not a complete executable release or cross-host restoration. Transitive evidence/raw inputs are excluded from review archives. Main draft is reviewed, not submission-ready. Final reconciliation after outstanding analyses, compiled/transitive dependency and data-rights review, public versioned release and archival deposition remain unfinished |
 
-The [twelve-proteome high-sensitivity review](THREADRIPPER_SHARED_ATTEMPT_22403.md)
-records terminal success and passes all four review categories for index 7.
-The latest retained [live checkpoint](threadripper_shared_live_22404.json)
-observes job 22404 running at index 8 (OrthoHMM satellite_v2, 12 proteomes,
-repeat 0). Query that exact job on resumption; a dated snapshot is not live
+The [twelve-proteome phylogenetic review](THREADRIPPER_SHARED_ATTEMPT_22404.md)
+records terminal success and passes all four review categories for index 8.
+The latest retained [live checkpoint](threadripper_shared_live_22405.json)
+observes job 22405 running at index 9 (OrthoHMM satellite_v2, four proteomes,
+repeat 1). Query that exact job on resumption; a dated snapshot is not live
 state. Review terminal native, runtime, environment and accounting evidence
-before advancing to index 9 (OrthoHMM satellite_v2, four proteomes, repeat 1).
+before advancing to index 10 (full OrthoFinder 3.1.5, four proteomes, repeat 1).
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 
