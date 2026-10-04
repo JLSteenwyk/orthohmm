@@ -2,6 +2,16 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [later full native QfO cost addendum](results/QFO_NATIVE_COST_RESULT_20261004.md)
+directly verifies the selected high-sensitivity configuration's corrected
+inputs, frozen source/settings and whole partition against retained native
+job21707. All101 focused tests pass; 133 direct records rehash. This is one
+historical shared-host inference observation, with sampled process-tree RSS,
+not a new repeat or the original cached factorial execution's full cost.
+It is separate from the later private-runtime cgroup panel and is not pooled
+with it. Original costs/scores and all earlier manuscript/archive snapshots
+remain unchanged. Rc4 below does not already include this later addendum.
+
 Use the [actual local rc4 result](results/PUBLICATION_PACKAGE_RC4_RESULT_20261004.md)
 and [rc4 outer instructions](PUBLICATION_PACKAGE_RC4_20261004.md) for the newest
 versioned working candidate. It preserves all 139 rc3 indexed identities and

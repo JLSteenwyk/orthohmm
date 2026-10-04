@@ -1,4 +1,5 @@
 from copy import deepcopy
+import hashlib
 import json
 from pathlib import Path
 
@@ -128,3 +129,39 @@ def test_existing_output_refused_before_collection(tmp_path, monkeypatch):
     monkeypatch.setattr(cost, "collect", lambda _: pytest.fail("Must not collect again"))
     with pytest.raises(ValueError, match="existing output"):
         cost.main()
+
+
+def test_actual_association_against_raw_retained_inputs_partitions_and_metrics():
+    root = Path(__file__).resolve().parents[2]
+    report = json.loads((root / "benchmark_tools/results/qfo_native_configuration_cost_20261004/association.json").read_text())
+    assert report["schema"] == "qfo_native_configuration_cost_v1"
+    assert report["job_id"] == 21707 and report["cell"] == "p1_c0_r0" and report["repeats"] == 1
+    assert len(report["checked_records"]) == 133 and len(report["input_fastas"]) == 78
+    for pin in report["checked_records"]:
+        data = Path(pin["path"]).read_bytes()
+        assert len(data) == pin["bytes"]
+        assert hashlib.sha256(data).hexdigest() == pin["sha256"]
+    inputs = [line[1:].split()[0] for pin in report["input_fastas"]
+              for line in Path(pin["path"]).read_text().splitlines() if line.startswith(">")]
+    assert len(inputs) == len(set(inputs)) == 984137
+    native_rows = [line.split(":", 1) for line in Path(report["partition"]["native"]["path"]).read_text().splitlines()]
+    assert len({row[0] for row in native_rows}) == len(native_rows) == 391908
+    native = {tuple(sorted(row[1].split())) for row in native_rows}
+    factorial = {tuple(sorted(line.split())) for line in
+                 Path(report["partition"]["factorial"]["path"]).read_text().splitlines()}
+    assert len(native) == len(factorial) == 391908 and native == factorial
+    assert sum(map(len, native)) == 984137
+    assert {gene for group in native for gene in group} == set(inputs)
+    metrics = json.loads(Path(report["native_metrics"]["path"]).read_text())
+    assert report["metrics"] == {key: metrics[key] for key in report["metrics"]}
+    assert report["recorded_stages"] == metrics["stages"]
+    assert report["metrics"]["wall_s"] == 70886.239038
+    assert report["metrics"]["peak_process_tree_rss_bytes"] == 18245820416
+    companion = report["companion"]["measurement"]
+    assert companion["elapsed_seconds"] == 70888. and companion["max_process_rss_kib"] == 11885516
+    assert all(v is None for v in report["original_cached_full_costs"].values())
+    original = json.loads(Path(report["sources"]["costs"]["path"]).read_text())
+    assert len(original["rows"]) == 16
+    assert all(row["full_pipeline_wall_s"] is None for row in original["rows"])
+    assert report["native_inference_repeated"] is False and report["scoring_repeated"] is False
+    assert report["controlled_comparative_resources"] is False and report["publication_ready"] is False

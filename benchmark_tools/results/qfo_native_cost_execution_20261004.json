@@ -1,0 +1,57 @@
+{
+  "schema": "qfo_native_cost_execution_v1",
+  "status": "retained_native_association_collected_and_independently_checked",
+  "prepared_source_commit": "8cdaff17",
+  "collection_exit_code": 0,
+  "collection_attempts": 1,
+  "checked_direct_records": 133,
+  "input_fastas": 78,
+  "genes": 984137,
+  "groups": 391908,
+  "partition_equal": true,
+  "preparation_tests": {"passed": 33, "failed": 0, "skipped": 0, "seconds": 0.40},
+  "final_tests": {"passed": 101, "failed": 0, "skipped": 0, "seconds": 6.29},
+  "artifacts": [
+    {
+      "path": "benchmark_tools/link_qfo_native_cost.py",
+      "bytes": 14394,
+      "sha256": "a005f8393c7a0529a1375ce3733df75dd226076dd3a7e4f69ff2a3d95867de24"
+    },
+    {
+      "path": "tests/unit/test_link_qfo_native_cost.py",
+      "bytes": 8930,
+      "sha256": "22312b4da590e5409732d25a0aad681eabe49447ecab819ab000c95d9399f476"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_native_configuration_cost_20261004/association.json",
+      "bytes": 64304,
+      "sha256": "3fe028577bcfc8fa989e55043de61c493593d1d6c4462ce1f11c0d09341ca446"
+    },
+    {
+      "path": "benchmark_tools/results/qfo_native_configuration_cost_20261004/association.md",
+      "bytes": 1845,
+      "sha256": "e60a7683b093060dd2815a24212d61d1548466e0375fe936f2f3820dfe8f0aaa"
+    },
+    {
+      "path": "benchmarks/work/qfo_native_cost_prepared_tests_20261004.xml",
+      "bytes": 5397,
+      "sha256": "2807cfed3e208738776b57e06d03f69c1bddb0e202b1cb6b1dd492dab9857022"
+    },
+    {
+      "path": "benchmarks/work/qfo_native_cost_final_tests_20261004.xml",
+      "bytes": 15069,
+      "sha256": "132a396db1d5e3f778d805cf8745b0796c4ce5cf71d5095ecc682bc46acf1e97"
+    }
+  ],
+  "native_inference_repeated": false,
+  "scoring_repeated": false,
+  "original_cached_execution_costs_modified": false,
+  "controlled_comparative_resources": false,
+  "publication_ready": false,
+  "limitations": [
+    "One historical shared-host native run; no isolated/corrected performance or causal component cost is established.",
+    "Rechecks direct evidence and whole partition, not all historical transitive process execution, raw numeric hits or independent accuracy.",
+    "Native sampled summed RSS, GNU-time maximum process RSS and newer panel lifetime cgroup peak are different scopes and not pooled.",
+    "Rc4 and previous manuscript/archive snapshots remain immutable; this later addendum is not already bundled."
+  ]
+}

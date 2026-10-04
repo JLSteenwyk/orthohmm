@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Full Native QfO Cost Associated Without Rerun (2026-10-04)
+
+The preceding goal-policy reply verifies an already synchronized prompt but
+adds no scientific evidence. On explicit goal continuation, read the full
+goal/newest ledger and check Slurm: no owned live job. Resume genuinely
+missing resource work without a contention/quiet-window/DGX gate. Current
+available RAM is about 614 GiB and workspace free disk about 10 TiB; this
+small readback needs no native allocation or unrelated workload change.
+
+Prepare/push checker/tests at 8cdaff17, then perform the actual collection
+once. The [result](QFO_NATIVE_COST_RESULT_20261004.md) associates native QfO
+job21707 with the selected high-sensitivity p1_c0_r0 configuration. Rehash
+133 direct records including 78 FASTAs and 40 frozen source records, verify
+settings/command/outcome/checkpoint bindings and recompute raw whole-partition
+equality: 984,137 genes/391,908 groups. Native wall70,886.239038s and sampled
+tree-RSS18,245,820,416bytes are separate from GNU-time70,888s and maximum
+processRSS11,885,516KiB. No native inference or score is repeated.
+
+All33 preparation tests pass; after actual artifact readback, new/native-OB/
+QfO-stage tests pass101 cases without failures/skips. Independent test
+rehashes every direct record and recomputes raw partition equality without
+the collector/partition helper. Exact output/source/local JUnit pins are
+retained. All16 original cached full costs remain null; do not retroactively
+fill them or add cached/native stages into an observed full total.
+
+This plus the existing OB report supplies native associations for3 prescribed
+configurations, leaving13 without linked full-native costs in this combined
+inventory. Check retained measurements before justified new native runs;
+profile-off cannot be substituted with CLI standard mode because initial
+search/multipass settings differ. Candidate-on/reconciliation-off also lacks
+a direct production CLI route. Any new factorial native adapter requires
+explicit factor-equivalence validation and prospective resource protocol,
+not altered frozen defaults or reuse/restart of the closed27-attempt panel.
+
+Original historical deployment/32CPU192GiB request and sampledRSS are not
+the later private32-core128GiB cgroup panel; no contention series, isolated
+ranking or matching-memory pass is imputed. Earlier main/PDF/rc4 snapshots
+are unchanged and do not already contain this addendum. Commit/push actual
+results/routing. Broader scientific/native/distribution gaps remain; full
+goal active, readiness unproven, unrelated samples/jobs/services untouched.
+
 ## Evidence-Integrated Candidate Rc4 Delivered (2026-10-04)
 
 Prepare/push source at cd1894ca before actual selected workflow. Selection,
