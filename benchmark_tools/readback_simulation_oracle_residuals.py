@@ -18,6 +18,10 @@ CONDITIONS = {"baseline", "divergent", "turnover", "divergent_turnover",
               "missing20", "uneven_taxa", "taxon_count_control"}
 
 
+def record_path(item):
+    return Path(item.get("absolute_path") or item["path"]).resolve()
+
+
 def xml_lineages(path):
     root = ET.parse(path).getroot()
     clades = root.findall("./phylogeny/clade")
@@ -49,7 +53,7 @@ def xml_lineages(path):
 def owners_from_fasta(items, verify):
     owners = {}
     for item in items:
-        path = verify(item.get("absolute_path") or item["path"])
+        path = verify(record_path(item))
         for line in path.read_text().splitlines():
             if line.startswith(">"):
                 gene = line[1:].split()[0]
@@ -246,7 +250,7 @@ def run(repo, path, digest):
         directory = Path(native["native_report"]["path"]).parent / METHOD
         partition = verify(directory / "orthohmm_working_res/phylogeny_candidate_superfamilies.txt").read_text().splitlines()
         native_genes = set(partition[int(row["family"].removeprefix("Family"))].split())
-        reference_doc = json.loads(verify(dataset["input_evidence"]["truth"]["path"]).read_text())
+        reference_doc = json.loads(verify(record_path(dataset["input_evidence"]["truth"])).read_text())
         reference = {tuple(sorted(p)) for p in reference_doc["ortholog_pairs"] if set(p) <= native_genes}
         xml_path = Path(parent["generating_tree"]["path"]).parent.parent / f"G/Gene_trees/{row['ancestor']}_rec.xml"
         paths, descendants, events = xml_lineages(verify(xml_path))

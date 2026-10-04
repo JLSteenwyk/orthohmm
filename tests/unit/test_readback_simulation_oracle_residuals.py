@@ -18,6 +18,21 @@ def dtree(text):
     return dendropy.Tree.get(data=text, schema="newick", preserve_underscores=True, rooting="force-rooted")
 
 
+@pytest.mark.parametrize("relative", ["prepared/a/truth.json", "another/root/truth.json"])
+def test_retained_absolute_path_takes_precedence_over_manifest_relative_path(tmp_path, relative):
+    actual = tmp_path / "truth.json"
+    assert readback.record_path({"path": relative, "absolute_path": str(actual)}) == actual
+
+
+def test_records_without_absolute_path_resolve_recorded_path(tmp_path):
+    assert readback.record_path({"path": str(tmp_path / "truth.json")}) == tmp_path / "truth.json"
+
+
+def test_empty_optional_absolute_path_falls_back_to_recorded_path(tmp_path):
+    actual = tmp_path / "truth.json"
+    assert readback.record_path({"path": str(actual), "absolute_path": ""}) == actual
+
+
 def fixture(tmp_path, bypass=False, constraint=False):
     last = "a_2" if constraint else "d_1"
     graph = {"Root_1": ("D", ("Left_1", "Right_1")),
