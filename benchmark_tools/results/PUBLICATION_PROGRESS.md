@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Actual All-Tool Metadata Integration Delivered (2026-10-04)
+
+The preceding goal turn made progress through the pushed candidate mechanism
+result. This turn reuses the already completed 24-row provenance and seven-row
+Three Kingdoms metadata audits. No owned Slurm job is live; no native, timing,
+scoring or completed raw-file audit repeats. Prepare/push source at 5c5c0192
+before actual selected integration, preserving the full scientific goal.
+
+The [final integrated metadata](ALL_BENCHMARK_METADATA_INTEGRATION_RESULT_20261004.md)
+retains every original field and all 72 score positions across 24 cells. Add
+historical command/metrics/chronology supplements to seven Three Kingdoms rows
+only; preserve the matched contemporary Sonic row. Resource TSV has 37 entries:
+29 previous entries plus eight supplemental intervals, with 34 numeric wall
+observations/three explicit unavailable entries. Do not treat them as independent
+replicates, replace wrapper intervals, impute full costs or rank isolated speed.
+
+Final source-frozen collection exits zero. All 72 focused cases pass; independent
+stdlib readback checks every old field, selected score/supplement/source binding
+and all 481 TSV fields. Keep minimal-runtime missing-Biopython failure before
+output, first unselected 35-entry export and second preliminary 37-entry export.
+Both preliminary source versions are archived with exact report bindings.
+Preparation passes 71 cases plus one final-readback skip; final run has no skip.
+
+Commit/push generated JSON/TSV/Markdown, pinned execution receipt and result/guide
+updates. Original register/supplement, frozen method, scores, main PDF and rc3
+snapshot remain unchanged. Full historical/transitive execution and consumption
+are still not attested. No quiet-window/DGX gate or unrelated job/service change.
+
+Next use exact current output/admission bindings to consolidate any genuinely
+remaining stage-specific QfO OrthoHMM provenance, without calling cached replay
+full inference. Continue broader uncertainty, inventory, biological strata and
+configuration-cost/distribution requirements; the full goal remains incomplete.
+
 ## Historical Metadata Integration Prepared (2026-10-04)
 
 The preceding 920958de turn completes/pushes the candidate-cap diagnosis.

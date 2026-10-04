@@ -1,0 +1,57 @@
+{
+  "schema": "benchmark_metadata_integration_execution_v1",
+  "status": "actual_source_frozen_integration_and_readback_passed",
+  "execution_date": "2026-10-04",
+  "prepared_commit": "5c5c0192",
+  "command": "env -u PYTHONHOME -u PYTHONPATH -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B benchmark_tools/integrate_benchmark_metadata.py --repo . --output benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v3",
+  "selected_collection_exit_code": 0,
+  "selected_collection_attempts": 1,
+  "method_dataset_cells": 24,
+  "selected_score_positions_unchanged": 72,
+  "original_register_fields_unchanged": true,
+  "historical_rows_supplemented": 7,
+  "matched_sonic_row_unchanged": true,
+  "resource_table_entries": 37,
+  "previous_resource_entries_including_placeholders": 29,
+  "supplemental_interval_entries": 8,
+  "recorded_wall_observations": 34,
+  "unavailable_wall_entries": 3,
+  "independent_readback_passed": true,
+  "tsv_fields_independently_checked": 481,
+  "tests": {
+    "initial_second_preliminary_export": {"passed": 72, "failed": 0},
+    "source_frozen_preparation": {"passed": 71, "skipped": 1, "failed": 0},
+    "actual_selected_export": {"passed": 72, "skipped": 0, "failed": 0}
+  },
+  "development_history": [
+    {"result": "minimal_runtime_import_failure", "exit_code": 1, "output_created": false, "reason": "Existing assemble helper imports Biopython, absent from the minimal -I -S controller; use the installed analysis environment without new installation."},
+    {"result": "unselected_first_successful_export", "entries": 35, "reason": "Omitted two explicit unavailable QfO OrthoHMM resource-table placeholders; source bytes preserved in the preliminary local archive."},
+    {"result": "unselected_second_successful_export", "entries": 37, "reason": "Corrected placeholders but precedes finalized empty-output refusal and source-pin test checks; exact source/report identity preserved in the second local archive."}
+  ],
+  "native_inference_scoring_timing_or_completed_raw_audits_repeated": false,
+  "scientific_method_defaults_or_endpoints_modified": false,
+  "historical_consumption_or_complete_transitive_provenance_attested": false,
+  "publication_ready": false,
+  "limitations": [
+    "Direct integration checks three metadata/score inputs and the selected source. Prior transitive raw/native audits are inherited, not new admissions.",
+    "Historical directory associations, recorded version text and post-run manifests do not prove immutable historical input or executable consumption.",
+    "37 table entries are not independent timing replicates. Native/wrapper/cached/conversion/recovered-stage observations and memory scopes are not pooled or substituted.",
+    "Observed shared-host contention is unknown and potentially method dependent; no isolated efficiency ranking or corrected time is produced.",
+    "Final main PDF and rc3 archive remain unchanged. JUnit files and preliminary source archives remain local pinned development evidence, not public deposition."
+  ],
+  "references": [
+    {"path": "benchmark_tools/integrate_benchmark_metadata.py", "bytes": 13820, "sha256": "14784bd4cadfb912f6461c1aa043fb4a9f559fe8eec5f808b305dd852fe89bc7"},
+    {"path": "benchmark_tools/assemble_benchmark_provenance.py", "bytes": 19979, "sha256": "7e1b8c36ae61277d54f42808855e80738dfe2225c3fc52381b354bece11675bc"},
+    {"path": "benchmark_tools/prepare_ob_candidate_neighborhood.py", "bytes": 7448, "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"},
+    {"path": "tests/unit/test_integrate_benchmark_metadata.py", "bytes": 9851, "sha256": "682ec10f12fc058af6ca1894540ca975ff95fd8dd8d79d6832554244dae278ac"},
+    {"path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v3/register.json", "bytes": 571775, "sha256": "4c6f01afb28ef36c25991155c2484a6e2db273556529506350c2f7912083ba80"},
+    {"path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v3/register.md", "bytes": 5242, "sha256": "efaacb577bdc31ebd3542044429c49a8da9cd753b28461e1762968aaa3148c4b"},
+    {"path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v3/resources.tsv", "bytes": 6996, "sha256": "28795f79e348bc1c180f5e9ad95b7aa9139c4f7dd19fd8dc94d69457098c4f2b"},
+    {"path": "benchmarks/work/benchmark_metadata_integration_tests_20261004.xml", "bytes": 10091, "sha256": "17ab80eec756958beab952e5799ef5e018b79737d333c44876e5960dae95b1b6"},
+    {"path": "benchmarks/work/benchmark_metadata_integration_prepared_tests_20261004.xml", "bytes": 10346, "sha256": "8ac9e563783cf98aa437ff1c09c296cd0b2d0670748de446a09b7f0d9dc416a6"},
+    {"path": "benchmarks/work/benchmark_metadata_integration_final_tests_20261004.xml", "bytes": 10091, "sha256": "09fafdab476fa9dce4b8c2558d9e6619cf4a0b2baa6c6382debe25f27df35111"},
+    {"path": "benchmarks/work/benchmark_metadata_preliminary_source_20261004.tar", "bytes": 20480, "sha256": "3be8d2ad7a0ea5af3fe459cc5ae5ad07bebe85f79079eb82608dd1cadaf59af5"},
+    {"path": "benchmarks/work/benchmark_metadata_second_source_20261004.tar", "bytes": 20480, "sha256": "f86b078a42bc9328a024b136980c9956d1ff498a9b93ddb56fe0ad985a293360"},
+    {"path": "benchmark_tools/results/ALL_BENCHMARK_METADATA_INTEGRATION_RESULT_20261004.md", "bytes": 5760, "sha256": "3c6436a4f60524159ea0cfa7f821797a3fc5e8a8c3d67c915973190e31d55f56"}
+  ]
+}

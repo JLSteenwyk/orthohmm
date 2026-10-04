@@ -1680,3 +1680,31 @@ in their recorded Python version. The
 records input/source pins and 77 passing combined tests. Preserve every original
 repeat and its resource scope; do not use the diagnostic to select outputs,
 correct timings or change the frozen baseline retrospectively.
+
+### Integrated All-Tool Historical Metadata
+
+The [current integration](results/ALL_BENCHMARK_METADATA_INTEGRATION_RESULT_20261004.md)
+preserves the existing 24-row register exactly and adds the separate seven-
+method Three Kingdoms historical command/resource supplement. The matched
+contemporary Sonic row is unchanged. Its 37 resource-table entries comprise
+29 earlier entries and eight supplemental intervals, not independent repeats;
+three unavailable wall observations remain explicit. All 72 score positions
+and all 481 TSV fields check without new scoring or raw-native audits.
+
+Use the environment-cleared installed analysis interpreter shown above with:
+
+```bash
+benchmark_tools/integrate_benchmark_metadata.py --repo . \
+  --output /tmp/orthohmm-integrated-benchmark-metadata
+```
+
+Use an absent destination. Existing helper imports require Biopython, so the
+minimal `-I -S` controller is not this integration's execution environment.
+The [receipt](results/benchmark_metadata_integration_execution_20261004.json)
+records the actual source-frozen v3 run, 72 passing cases and independent
+standard-library readback. Historical-directory associations do not establish
+immutable historical input/executable attestation. Keep existing provenance
+gaps, supplied-tree/checkpoint/recovery semantics, mixed memory scopes and
+unknown potentially method-dependent contention. The newer matched timing
+panel and original factorial costs stay separate from these historical score
+runs. This addendum is not yet incorporated into the unchanged main PDF/rc3.
