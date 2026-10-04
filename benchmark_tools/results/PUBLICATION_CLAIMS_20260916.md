@@ -110,6 +110,10 @@ The [4 October main text](PUBLICATION_MAIN_TEXT_20261004.md) incorporates the
 generated final resource section and failure history without changing its
 scientific methods, accuracy sections or citation set. Its new source-bound
 render/review and actual study archives require separate validation.
+The [actual twelve-page review](PUBLICATION_MAIN_FINAL_REVIEW_20261004.md)
+now passes bounds/closed-artifact/value checks and visual inspection of all
+pages, with exact render-time Git inputs. Figures remain linked; the actual
+selected-main review/source exports and whole-study archive remain unfinished.
 The [generated v24 resource section](RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now replaces manual transcription with validated prose/three metric tables.
 Eight tests pass; real section readback preserves12 available and15 unavailable

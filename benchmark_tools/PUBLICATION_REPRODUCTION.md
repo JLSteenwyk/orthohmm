@@ -177,6 +177,13 @@ these observations to claim causal speedups.
 
 ### Retained Evidence Chronology
 
+The [resource-complete twelve-page review](results/PUBLICATION_MAIN_FINAL_REVIEW_20261004.md)
+now renders the 4 October main text from exact committed source; every page
+is visually checked and both closed-artifact/PDF-value tests pass. Its 17
+artifacts preserve render-time inputs despite later ledger changes. Figures
+are linked, not embedded; actual review/source exports and complete figure/
+executable/versioned archive reconciliation remain separate requirements.
+
 The [final reporting component](results/FINAL_RESOURCE_REPORTING_COMPONENT_20261004.md)
 now includes all 27 reviewed attempts and generated prose. Actual external
 restoration, copied isolated verification and replay reproduce all three

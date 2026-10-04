@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Resource-Complete Main PDF Reviewed (2026-10-04)
+
+The source/text/documentation checkpoint is committed and pushed at `904f4d4b`.
+Render citation-resolved HTML, print and run PDF bounds checks once using the
+existing trusted workflow. [The new twelve-page review](PUBLICATION_MAIN_FINAL_REVIEW_20261004.md)
+is actually inspected on every page; zero bounds violations and no observed
+clipping/overlap. Resource tables on7-8 preserve18 available/nine unavailable
+summaries; repeated CPU header and all values remain readable.
+
+Its [closed visual receipt](publication_main_final_visual_review_20261004.json)
+binds17 artifacts and61 direct repository input occurrences to the exact
+render-time source commit. All18 citation identifiers resolve;59 local links
+and57 targets are tracked. Two actual-PDF/closed-artifact cases pass in1.11s,
+with [actual JUnit/source readback](publication_main_final_review_test_validation_20261004.json).
+Scientific sections, citations and resource arithmetic remain unchanged.
+Native inference/scoring and older successful diagnostics are not repeated.
+
+Commit these actual render/print/review artifacts before building selected-main
+review and helper-inclusive native-build source components. For the review,
+use this artifact commit and ledger revision904f4d4b to preserve render-time
+ledger bytes; use explicit4October main and receipt paths. Validate copied
+relocated components and workflow imports/test collection. Reconcile the
+complete figure appendix, handoff and executable/versioned archive afterward.
+Figures remain linked in this12-page review; no fresh acceptance of every
+linked figure or whole-study release follows. Full goal stays active/incomplete.
+
 ## Resource-Complete Main Manuscript Prepared (2026-10-04)
 
 Previous goal turn makes progress through final resource checkpoint, actual
