@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Index 23 Reviewed And Fourth Complete Cell (2026-10-04)
+
+Previous turn is progress: `ba13ea79` synchronizes and pushes the shared-host
+goal reaffirmation without launching analyses. Read the full objective, current
+ledger and retained archive/calibration notes. Fresh Slurm accounting confirms
+22419 parent/batch/native step COMPLETED 0:0. Retained independent review passes
+all four categories and prepared-owner lifecycle; no raw/native audit is repeated.
+Public terminal summary/controller match the retained checkpoint receipt.
+
+[Attempt 22419](THREADRIPPER_SHARED_ATTEMPT_22419.md) supplies command wall
+1,120.254785285s, CPU bracket 17,232.284253s and native-step lifetime peak
+10,979,917,824 bytes. Maximum observed foreign CPU53.8712755279 cores is
+annotated, not subtracted. Input/group/pair counts are coverage, not accuracy.
+Both process/pressure failure maps are empty; raw audit stays local/ignored.
+
+Table v24/figure v23 have 24 reviewed/22 measured/21 eligible, exclusions
+0/17/20, four complete three-repeat cells and three unsubmitted identities.
+All previous 23 rows are unchanged. Retained three-test reporting execution
+passes; fresh readback verifies its six pins without repeating successful tests.
+Final panel, manuscript/resource reconciliation and versioned/archive release
+remain open. No panel job is live at this review checkpoint.
+
+Commit/push this checkpoint before index 24. The newly synchronized goal prompt
+changes documentary bytes pinned by readiness; reconcile that binding
+prospectively before release, retaining old evidence and unchanged scientific,
+resource and accounting rules. Do not treat contention as a quiet-window gate.
+
 ## Shared-Host Goal Prompt Synchronized (2026-10-04)
 
 User requests a goal update before resumption, not a new analysis launch.

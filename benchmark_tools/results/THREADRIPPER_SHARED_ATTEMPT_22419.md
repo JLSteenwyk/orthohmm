@@ -55,3 +55,43 @@ termination; advance index24 only after reviewed history permits. Do not rerun
 the one-shot snapshot, successful calibration/regression/preparation, native
 attempts or raw audits without concrete reason. Final panel/manuscript/resource
 reconciliation and versioned/archive release remain open.
+
+## Terminal Review And Reporting
+
+Parent/batch completed with exit 0:0 at 24:07; native step completed with
+exit 0:0 at 19:14. A retained terminal controller is corroborated by fresh
+Slurm accounting. The [independent review](threadripper_shared_attempt_22419.json)
+passes runtime/input, raw resources, environment and native outputs, including
+prepared-owner lifecycle. Public summary matches canonical bytes: 29,438 bytes,
+SHA-256 `e0451eb6db388ff15740d45b6bc37e800ab5554d560922ccd5577db856fda532`.
+The [terminal controller](threadripper_shared_terminal_controller_22419.json)
+is 1,822 bytes, SHA-256
+`0b9ded784f15009a040a2feb2aaf10e638c5fb26fc50026f09a37ffd1ab9eec3`.
+
+| Native resource endpoint | Measurement |
+| --- | --- |
+| Command wall | 1,120.254785285 seconds |
+| Task-subtree CPU bracket, including wrapper | 17,232.284253 seconds |
+| Native-step lifetime memory peak, including launcher | 10,979,917,824 bytes |
+
+Both process/pressure failure maps are empty. Whole-run maximum foreign CPU
+53.8712755279 core equivalents is annotated, not subtracted. Native validation
+covers 165,168 input genes, 33,013 checkpoint groups and 597,451 pair rows;
+these counts are not new accuracy estimates. The 172,736,364-byte raw audit
+stays local/ignored. Successful raw/native reviews are not repeated.
+
+[Table v24](threadripper_shared_panel_snapshot_20261004_v24/panel.json) has
+24 reviewed, 22 measured and 21 eligible attempts; exclusions 0/17/20 remain.
+All previous 23 rows are unchanged. Full OrthoFinder/eight proteomes now has
+three eligible repeats, the fourth complete cell. Its wall median is
+1,139.939834238 seconds, range 1,120.254785285-1,179.970330278; ranges are not
+confidence intervals. Three planned identities remain unsubmitted at this
+review checkpoint: indices 24-26.
+
+[Figure v23](threadripper_shared_resource_figure_20261004_v23/shared_threadripper_resources.pdf)
+retains all 22 measured observations, measured exclusion and both unplotted
+abort explanations. Actual PNG inspection and three retained-checkpoint tests
+pass; the [validation receipt](threadripper_checkpoint_validation_22419.json)
+binds source, JUnit, table, figure and terminal evidence. No inference or raw
+audit is repeated. No panel job is live at this checkpoint. Commit/push this
+result before advancing index 24 under fresh history/capacity/native handoff.
