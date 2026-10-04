@@ -1,0 +1,71 @@
+{
+  "status": "explicit_review_handoff_coordinator_staged_tests_passed",
+  "live_source_changed": false,
+  "patch_applied_to_live_project": false,
+  "scientific_inference_repeated": false,
+  "final_archive_verified": false,
+  "base": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_handoff.py",
+    "bytes": 17710,
+    "sha256": "9be5629233687af860856d297a698b7df0705d44e208c911f1937d0687f7ef6e"
+  },
+  "staged": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_closure_20261004/stage/benchmark_tools/bundle_publication_handoff.py",
+    "bytes": 23302,
+    "sha256": "0b45067395262d168733c772e8f2a40ab6b069112a319eb031cbcc0e6b044a00"
+  },
+  "test": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_closure_20261004/stage/test_handoff_review_selection.py",
+    "bytes": 14193,
+    "sha256": "689d3e5cffb56d8c006cf5cf84bbbc4112863fc23042a824637854d7e73c6808"
+  },
+  "legacy_test": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_bundle_publication_handoff.py",
+    "bytes": 15198,
+    "sha256": "d5147c01ee88b2404879cd2e032357f87e88e4c8465d1a96cfa2e3943cf387ac"
+  },
+  "components": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_source_closure_20261004/benchmark_tools/bundle_publication_source.py",
+      "bytes": 16919,
+      "sha256": "cf5f2c49ffe8871de6ec5dbf471d16eaa949cb338218ff1f18b49e3e571f3880"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_manuscript_closure_20261004/stage/benchmark_tools/bundle_publication_review.py",
+      "bytes": 16368,
+      "sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999"
+    }
+  ],
+  "test_runs": [
+    {
+      "junit": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_closure_20261004/tests.xml",
+        "bytes": 14144,
+        "sha256": "5fe1d239caa835f5ecd063b0c7f943d285e4dd27d796942ffb6d150836987838"
+      },
+      "tests": 80,
+      "failures": 1,
+      "errors": 0,
+      "time_seconds": 2.976
+    },
+    {
+      "junit": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_handoff_closure_20261004/tests_v2.xml",
+        "bytes": 13770,
+        "sha256": "76b9de3bab63394ce27d46f32f2cba00d0a189d03993bbf1bce33168c57fa857"
+      },
+      "tests": 82,
+      "failures": 0,
+      "errors": 0,
+      "time_seconds": 4.988
+    }
+  ],
+  "patch": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_handoff_review_staged_20261004.patch",
+    "bytes": 25375,
+    "sha256": "f5fe6a7718ee2632b08d22f20d9351b7125ccd58f9fdbdb319ec86ef8793a72d"
+  },
+  "scope": "Legacy and synthetic coordinator fixtures plus actual staged child exports/copied CLI verification after relocation; not final study rendering, native execution or release archive.",
+  "patch_check_without_live_application_passed": true,
+  "isolated_patch_application_matches_tested_files": true
+}

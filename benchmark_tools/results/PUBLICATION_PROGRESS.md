@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Explicit Final Handoff Coordinator Prepared (2026-10-04)
+
+Previous turn made progress: commit/push `ebcbca0f` preserves the tested
+explicit manuscript-export patch. Read the full objective/current ledger;
+fresh parent/batch/native22424 RUNNING and22425 dependency-pending confirm a
+verified wait on the same attempt. Native search advances22.22% to37.50%.
+No completed native work, one-shot snapshot or diagnostic suite is repeated.
+
+Prepare the [matching handoff coordinator](PUBLICATION_HANDOFF_REVIEW_STAGED_20261004.md)
+in an isolated copy. Explicit review/ledger commits, main-text/three receipt
+paths and observed page count bind the actual child review. Helper-inclusive
+source selection and child workflow/revision mapping are checked. Schema3
+does not reinterpret legacy exports or claim publication readiness.
+
+All82 focused cases pass in5.04s. Two actual staged child-export integrations
+use native-preparation/native-build fixtures, retain frozen scientific fixture
+source and a committed result helper, then verify relocated combined exports
+using copied isolated CLI without Git/original fixture checkout. Synthetic
+fixtures do not establish the final study rendering, runtime or archive.
+The initial one mocked-reader failure/79 passes remains pinned; repair the
+fixture before the successful82-case run. Patch-check and isolated application
+reproduce both tested files; live bound coordinator/source/review remain unchanged.
+
+After all27 terminal reviews integrate all three prepared helpers/tests,
+reconcile/render/visually review final manuscript and build/validate committed
+final source/review/handoff/reporting exports and executable/versioned archive.
+Tablev26/figurev25 remain26 reviewed/24 measured/23 eligible/five complete cells;
+one identity is still unreviewed/live. Full goal remains active and incomplete;
+scientific/runtime/input/bounds and unrelated work/services are untouched.
+
 ## Final Manuscript Selection Prepared Without Changing Timing Source (2026-10-04)
 
 Previous turn made progress: commit/push `81a2123b` launches the final native

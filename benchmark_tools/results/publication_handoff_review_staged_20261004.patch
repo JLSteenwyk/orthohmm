@@ -1,0 +1,435 @@
+--- a/benchmark_tools/bundle_publication_handoff.py
++++ b/benchmark_tools/bundle_publication_handoff.py
+@@ -64,6 +64,28 @@
+     return name
+ 
+ 
++def review_selection(value, *, recorded=False):
++    keys = {"review_revision", "ledger_revision", "main_text", "stages"}
++    if recorded:
++        keys.add("page_count")
++    if not isinstance(value, dict) or set(value) != keys:
++        raise ValueError("Require explicit manuscript revisions, path and three stages")
++    for key in ("review_revision", "ledger_revision"):
++        if not isinstance(value[key], str) or not re.fullmatch(r"[0-9a-f]{40}", value[key]):
++            raise ValueError("Require exact committed manuscript revisions")
++    if not relative(value["main_text"]).endswith(".md"):
++        raise ValueError("Require a Markdown manuscript")
++    stages = value["stages"]
++    if not isinstance(stages, dict) or set(stages) != {"render", "print", "review"}:
++        raise ValueError("Require distinct committed render/print/review receipts")
++    paths = [relative(name) for name in stages.values()]
++    if len(set(paths)) != 3 or any(not name.endswith(".json") for name in paths):
++        raise ValueError("Require distinct committed render/print/review receipts")
++    if recorded and (type(value["page_count"]) is not int or value["page_count"] < 1):
++        raise ValueError("Require the selected positive manuscript page count")
++    return dict(value, stages=dict(stages))
++
++
+ def load(path, name):
+     spec = importlib.util.spec_from_file_location(name, path)
+     module = importlib.util.module_from_spec(spec)
+@@ -125,14 +147,23 @@
+     if index_path.is_symlink() or identity(index_path.read_bytes())["sha256"] != manifest_sha:
+         raise ValueError("Handoff index differs from external anchor")
+     index = json.loads(index_path.read_bytes())
++    chosen_review = None
+     if index["schema"] == "publication_handoff_candidate_v1":
+         profile = "native-preparation"
+         if "source_profile" in index:
+             raise ValueError("Legacy handoff cannot select a new source profile")
+     elif index["schema"] == "publication_handoff_candidate_v2" and index.get("source_profile") == "native-build":
+         profile = "native-build"
++    elif index["schema"] == "publication_handoff_candidate_v3":
++        profile = index.get("source_profile")
++        selection(profile)
++        if index.get("result_helpers_included") is not True:
++            raise ValueError("Explicit-review handoff requires result-helper source export")
++        chosen_review = review_selection(index.get("review_selection"), recorded=True)
+     else:
+         raise ValueError("Handoff schema/source profile differs")
++    if chosen_review is None and {"review_selection", "result_helpers_included"} & index.keys():
++        raise ValueError("Historical handoff cannot reinterpret review/helper selection")
+     extras = selection(profile)
+     if (any(index[key] is not False for key in ("publication_ready", "redistribution_clearance", "public_release_uploaded"))
+             or not re.fullmatch(r"[0-9a-f]{40}", index["workflow_revision"])
+@@ -179,9 +210,30 @@
+         component_files |= {role + "/" + row["path"] for row in child["files"]} | {role + "/" + index_name}
+         if role == "source" and child.get("profile") != profile:
+             raise ValueError("Source profile differs from selected handoff format")
++        if chosen_review is not None:
++            if role == "source":
++                if (child.get("schema") != "publication_source_components_v3"
++                        or child.get("include_result_helpers") is not True
++                        or result.get("result_helpers_included") is not True
++                        or child.get("workflow_revision") != index["workflow_revision"]):
++                    raise ValueError("Selected result-helper source scope differs")
++            else:
++                main = module.manuscript_path(chosen_review["main_text"])
++                stages = module.stage_paths(chosen_review["stages"], main)
++                if (child.get("schema") != "publication_direct_review_v3"
++                        or child.get("main_text") != main or child.get("stages") != stages
++                        or result.get("entrypoints", {}).get("markdown") != main
++                        or result["page_count"] != chosen_review["page_count"]):
++                    raise ValueError("Selected manuscript/component scope differs")
++                for row in child["files"]:
++                    expected = (index["workflow_revision"] if row["path"] in {module.RUNNER, module.GUIDE, "LICENSE.md"}
++                        else chosen_review["ledger_revision"] if row["path"] == module.LEDGER
++                        else chosen_review["review_revision"])
++                    if row.get("git_revision") != expected:
++                        raise ValueError("Selected manuscript revision mapping differs")
+     if seen != component_files | set(extras):
+         raise ValueError("Unaccounted handoff payloads")
+-    if results["manuscript"]["page_count"] != 9:
++    if chosen_review is None and results["manuscript"]["page_count"] != 9:
+         raise ValueError("Require the retained nine-page manuscript")
+     table = check_table((directory / "comparison/scores.tsv").read_bytes())
+     result = dict(status="publication_handoff_candidate_verified", files=len(seen), payload_bytes=total,
+@@ -191,16 +243,22 @@
+     if profile == "native-build":
+         result.update(source_profile=profile, runtime_evidence_included=True, runtime_payload_delivered=False,
+                       runtime_evidence=check_runtime_evidence(directory))
++    if chosen_review is not None:
++        result.update(review_selection=chosen_review, result_helpers_included=True)
+     return result
+ 
+ 
+-def build(repo, revision, output, source_profile="native-preparation"):
++def build(repo, revision, output, source_profile="native-preparation", *, selected_review=None):
++    chosen_review = None if selected_review is None else review_selection(selected_review)
+     repo, output = Path(repo).resolve(), Path(output).absolute()
+     if output.exists() or output.is_symlink():
+         raise FileExistsError(output)
+     selected = selection(source_profile)
+     from benchmark_tools import bundle_publication_source as source
+     from benchmark_tools import bundle_publication_review as review
++    if chosen_review is not None:
++        review.manuscript_path(chosen_review["main_text"])
++        review.stage_paths(chosen_review["stages"], chosen_review["main_text"])
+     commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
+     extras, mappings = {}, {}
+     for name, (git_path, digest) in selected.items():
+@@ -211,9 +269,13 @@
+         mappings[name] = dict(git_path=git_path, git_revision=commit, git_blob=blob)
+     output.mkdir(parents=True, exist_ok=False)
+     try:
+-        results = dict(source=source.build(repo, commit, output / "source", source_profile),
+-            manuscript=review.build(repo, REVIEW_REVISION, LEDGER_REVISION, commit,
+-                                    output / "manuscript", stages=STAGES))
++        source_options = {} if chosen_review is None else dict(include_result_helpers=True)
++        review_options = dict(stages=STAGES) if chosen_review is None else dict(
++            stages=chosen_review["stages"], main_text=chosen_review["main_text"])
++        results = dict(source=source.build(repo, commit, output / "source", source_profile, **source_options),
++            manuscript=review.build(repo, REVIEW_REVISION if chosen_review is None else chosen_review["review_revision"],
++                LEDGER_REVISION if chosen_review is None else chosen_review["ledger_revision"],
++                commit, output / "manuscript", **review_options))
+         # Component builders inherit the host umask for their generated indexes.
+         for role, (index_name, _) in COMPONENTS.items():
+             (output / role / index_name).chmod(0o644)
+@@ -245,6 +307,12 @@
+             index.update(schema="publication_handoff_candidate_v2", source_profile=source_profile)
+             index["limitations"].append(
+                 "Native-build adds frozen setup overlay, seven acquisition/runtime support documents and pinned integration evidence; raw/native/runtime payloads remain excluded.")
++        if chosen_review is not None:
++            index.update(schema="publication_handoff_candidate_v3", source_profile=source_profile,
++                result_helpers_included=True,
++                review_selection=dict(chosen_review, page_count=results["manuscript"]["page_count"]))
++            index["limitations"][1] = (
++                "Manuscript and ledger are explicitly selected committed snapshots; source workflow has its own revision.")
+         with (output / "HANDOFF_INDEX.json").open("x") as stream:
+             json.dump(index, stream, indent=2, sort_keys=True, allow_nan=False)
+             stream.write("\n")
+@@ -264,6 +332,8 @@
+     builder.add_argument("--revision", required=True)
+     builder.add_argument("--output", type=Path, required=True)
+     builder.add_argument("--source-profile", choices=sorted(PROFILES), default="native-preparation")
++    for name in ("review-revision", "ledger-revision", "main-text", "render-receipt", "print-receipt", "review-receipt"):
++        builder.add_argument("--" + name, help="Explicit review selection; supply all six arguments")
+     verifier = commands.add_parser("verify")
+     verifier.add_argument("directory", type=Path)
+     verifier.add_argument("--manifest-sha256", required=True)
+@@ -271,7 +341,15 @@
+     if args.command == "build":
+         import sys
+         sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+-        result = build(args.repo, args.revision, args.output, args.source_profile)
++        values = [getattr(args, name) for name in ("review_revision", "ledger_revision", "main_text",
++                  "render_receipt", "print_receipt", "review_receipt")]
++        chosen = None
++        if any(value is not None for value in values):
++            if any(value is None for value in values):
++                parser.error("Explicit manuscript selection requires both revisions, main text and all three receipts")
++            chosen = dict(review_revision=args.review_revision, ledger_revision=args.ledger_revision,
++                main_text=args.main_text, stages={role: getattr(args, role + "_receipt") for role in ("render", "print", "review")})
++        result = build(args.repo, args.revision, args.output, args.source_profile, selected_review=chosen)
+     else:
+         result = verify(args.directory, args.manifest_sha256)
+     print(json.dumps(result, indent=2, sort_keys=True))
+--- /dev/null
++++ b/tests/unit/test_bundle_publication_handoff_review.py
+@@ -0,0 +1,265 @@
++import json
++from pathlib import Path
++import shutil
++import subprocess
++import sys
++from types import SimpleNamespace
++
++import pytest
++
++from tests.unit import test_bundle_publication_handoff as legacy
++from tests.unit import test_bundle_publication_source as source_legacy
++
++candidate = legacy.candidate
++native_candidate = legacy.native_candidate
++exported = source_legacy.exported
++MAIN = "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md"
++STAGES = {role: "benchmark_tools/results/final_" + role + ".json"
++          for role in ("render", "print", "review")}
++
++
++def chosen(revision="a" * 40):
++    return dict(review_revision=revision, ledger_revision=revision,
++                main_text=MAIN, stages=dict(STAGES))
++
++
++def refresh(directory, index):
++    module = legacy.module
++    for role, (index_name, _) in module.COMPONENTS.items():
++        path = directory / role / index_name
++        index["components"][role]["sha256"] = module.identity(path.read_bytes())["sha256"]
++        index["components"][role]["verified"]["manifest"] = module.identity(path.read_bytes())
++    index["files"] = [dict(path=p.relative_to(directory).as_posix(),
++        mode=p.stat().st_mode & 0o777, **module.identity(p.read_bytes()))
++        for p in sorted(directory.rglob("*")) if p.is_file()
++        and p != directory / "HANDOFF_INDEX.json"]
++    path = directory / "HANDOFF_INDEX.json"
++    path.write_text(json.dumps(index))
++    return module.identity(path.read_bytes())["sha256"]
++
++
++@pytest.fixture(params=["native-preparation", "native-build"])
++def selected(request):
++    module = legacy.module
++    directory, _ = request.getfixturevalue("candidate" if request.param == "native-preparation" else "native_candidate")
++    index = json.loads((directory / "HANDOFF_INDEX.json").read_bytes())
++    index.update(schema="publication_handoff_candidate_v3", source_profile=request.param,
++                 result_helpers_included=True, review_selection=dict(chosen(), page_count=12))
++    for role, (index_name, verifier_name) in module.COMPONENTS.items():
++        path = directory / role / index_name
++        child = json.loads(path.read_bytes())
++        child["files"][0]["git_revision"] = "a" * 40
++        result = dict(publication_ready=False, page_count=12, fixture_interface=True)
++        if role == "source":
++            child.update(schema="publication_source_components_v3", workflow_revision="a" * 40,
++                         include_result_helpers=True)
++            result["result_helpers_included"] = True
++        else:
++            child.update(schema="publication_direct_review_v3", main_text=MAIN, stages=dict(STAGES))
++            result["entrypoints"] = dict(markdown=MAIN)
++        path.write_text(json.dumps(child))
++        result["manifest"] = module.identity(path.read_bytes())
++        index["components"][role]["verified"] = result
++        verifier = directory / role / verifier_name
++        # Synthetic interfaces exercise coordinator binding, not actual child exports.
++        code = ("import hashlib\nfrom pathlib import Path\n"
++            f"RUNNER={verifier_name!r}\nGUIDE='fixture-guide.md'\n"
++            "LEDGER='benchmark_tools/results/PUBLICATION_PROGRESS.md'\n"
++            "def manuscript_path(name):\n    return name\n"
++            "def stage_paths(value,main):\n    return value\n"
++            "def verify(directory,digest):\n"
++            f"    content=(Path(directory)/{index_name!r}).read_bytes()\n"
++            "    if hashlib.sha256(content).hexdigest()!=digest:\n        raise ValueError('Component digest differs')\n"
++            f"    result={result!r}\n"
++            "    result['manifest']=dict(bytes=len(content),sha256=digest)\n"
++            "    return result\n")
++        verifier.write_text(code)
++    return directory, refresh(directory, index)
++
++
++def test_explicit_review_and_helpers_relocated(selected, tmp_path):
++    module = legacy.module
++    directory, digest = selected
++    result = module.verify(directory, digest)
++    assert result["review_selection"] == dict(chosen(), page_count=12)
++    assert result["result_helpers_included"] is True
++    assert result["components"]["manuscript"]["page_count"] == 12
++    assert result["publication_ready"] is False
++    copied = tmp_path / "relocated-explicit-review"
++    shutil.move(directory, copied)
++    checked = subprocess.run([sys.executable, "-I", "-S", "-B",
++        str(copied / "bundle_publication_handoff.py"), "verify", str(copied),
++        "--manifest-sha256", digest], cwd=tmp_path,
++        env={"PATH": "/no-git-or-original-artifacts"}, capture_output=True,
++        text=True, timeout=30)
++    assert checked.returncode == 0, checked.stderr
++    assert json.loads(checked.stdout) == result
++
++
++@pytest.mark.parametrize("defect", ["missing_selection", "helper_flag", "legacy_v1", "legacy_v2",
++    "page_bool", "page_mismatch", "main_mismatch", "stage_mismatch", "source_helpers",
++    "source_revision", "review_revision", "review_schema"])
++def test_explicit_component_bindings_not_relaxed(selected, defect):
++    module = legacy.module
++    directory, _ = selected
++    index = json.loads((directory / "HANDOFF_INDEX.json").read_bytes())
++    if defect == "missing_selection":
++        del index["review_selection"]
++    elif defect == "helper_flag":
++        index["result_helpers_included"] = False
++    elif defect.startswith("legacy_"):
++        index["schema"] = "publication_handoff_candidate_" + defect.split("_", 1)[1]
++        if defect == "legacy_v1":
++            index.pop("source_profile")
++    elif defect.startswith("page_"):
++        index["review_selection"]["page_count"] = True if defect == "page_bool" else 13
++    else:
++        role = "source" if defect.startswith("source_") else "manuscript"
++        path = directory / role / module.COMPONENTS[role][0]
++        child = json.loads(path.read_bytes())
++        if defect == "main_mismatch": child["main_text"] = "wrong.md"
++        elif defect == "stage_mismatch": child["stages"]["render"] = "wrong.json"
++        elif defect == "source_helpers": child["include_result_helpers"] = False
++        elif defect == "source_revision": child["workflow_revision"] = "b" * 40
++        elif defect == "review_revision": child["files"][0]["git_revision"] = "b" * 40
++        else: child["schema"] = "publication_direct_review_v2"
++        path.write_text(json.dumps(child))
++    digest = refresh(directory, index)
++    with pytest.raises(ValueError):
++        module.verify(directory, digest)
++
++
++@pytest.mark.parametrize("change", [
++    {"main_text": "../main.md"}, {"main_text": "main.json"},
++    {"review_revision": "HEAD"}, {"ledger_revision": True}, {"extra": 1},
++    {"stages": {}}, {"stages": dict(render=[], print="b.json", review="c.json")},
++    {"stages": dict(render="a.json", print="a.json", review="c.json")},
++])
++def test_bad_selection_fails_before_output(tmp_path, change):
++    selection = chosen()
++    selection.update(change)
++    with pytest.raises(ValueError):
++        legacy.module.build(tmp_path, "HEAD", tmp_path / "output", selected_review=selection)
++    assert not (tmp_path / "output").exists()
++
++
++def test_builder_forwards_explicit_selection_and_records_it(tmp_path, monkeypatch):
++    module = legacy.module
++    import benchmark_tools
++    repo = tmp_path / "repo"
++    repo.mkdir()
++    subprocess.run(["git", "init", "-q", str(repo)], check=True)
++    for key, value in (("user.name", "Test"), ("user.email", "test@example.invalid")):
++        subprocess.run(["git", "-C", str(repo), "config", key, value], check=True)
++    fixture_root = Path(module.__file__).resolve().parent.parent
++    for name, _ in module.EXTRAS.values():
++        target = repo / name
++        target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_bytes((fixture_root / name).read_bytes())
++    subprocess.run(["git", "-C", str(repo), "add", "."], check=True)
++    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "handoff fixture"], check=True)
++    revision = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
++    calls = []
++
++    def source_build(repo, commit, output, profile, **options):
++        calls.append(("source", commit, profile, options))
++        output.mkdir()
++        (output / "SOURCE_INDEX.json").write_text("{}")
++        return dict(manifest=module.identity(b"{}"), page_count=12)
++
++    def review_build(repo, review, ledger, workflow, output, **options):
++        calls.append(("review", review, ledger, workflow, options))
++        output.mkdir()
++        (output / "REVIEW_INDEX.json").write_text("{}")
++        return dict(manifest=module.identity(b"{}"), page_count=12)
++
++    monkeypatch.setattr(benchmark_tools, "bundle_publication_source", SimpleNamespace(build=source_build))
++    committed = benchmark_tools.bundle_publication_review.committed
++    monkeypatch.setattr(benchmark_tools, "bundle_publication_review", SimpleNamespace(build=review_build,
++        committed=committed, manuscript_path=lambda main: main, stage_paths=lambda stages, main: stages))
++    monkeypatch.setattr(module, "verify", lambda directory, digest:
++                        json.loads((directory / "HANDOFF_INDEX.json").read_bytes()))
++    result = module.build(repo, revision, tmp_path / "export", selected_review=chosen(revision))
++    assert calls == [("source", revision, "native-preparation", dict(include_result_helpers=True)),
++                     ("review", revision, revision, revision, dict(main_text=MAIN, stages=STAGES))]
++    assert result["schema"] == "publication_handoff_candidate_v3"
++    assert result["review_selection"] == dict(chosen(revision), page_count=12)
++    assert result["result_helpers_included"] is True
++    assert "nine-page" not in " ".join(result["limitations"])
++
++
++def test_cli_requires_complete_explicit_review(tmp_path):
++    completed = subprocess.run([sys.executable, "-I", "-S", "-B", legacy.module.__file__,
++        "build", "--repo", str(tmp_path), "--revision", "HEAD", "--output", str(tmp_path / "output"),
++        "--main-text", MAIN], cwd=tmp_path, capture_output=True, text=True, timeout=30)
++    assert completed.returncode == 2
++    assert "requires both revisions" in completed.stderr
++    assert not (tmp_path / "output").exists()
++
++
++@pytest.mark.parametrize("exported", ["native-preparation", "native-build"], indirect=True)
++def test_actual_child_builders_and_relocated_handoff(exported, tmp_path):
++    import benchmark_tools
++    module = legacy.module
++    review = benchmark_tools.bundle_publication_review
++    repo, _, _ = exported
++    fixture_root = Path(module.__file__).resolve().parent.parent
++    profile = json.loads((exported[1] / "SOURCE_INDEX.json").read_bytes())["profile"]
++    for name, _ in module.selection(profile).values():
++        target = repo / name
++        target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_bytes((fixture_root / name).read_bytes())
++    html = "benchmark_tools/results/final_review.html"
++    pdf = "benchmark_tools/results/final_print/document.pdf"
++    page = "benchmark_tools/results/final_pdf/page_001.png"
++    payloads = {MAIN: b"# Final fixture\n[Ledger](PUBLICATION_PROGRESS.md)\n",
++        review.LEDGER: b"Frozen fixture ledger\n",
++        html: b'<html><a href="PUBLICATION_PROGRESS.md">Ledger</a></html>',
++        pdf: b"Synthetic PDF fixture", page: b"Synthetic page fixture",
++        review.RUNNER: Path(review.__file__).read_bytes(), review.GUIDE: b"Review fixture scope",
++        "benchmark_tools/results/fixture_helper.py": b"def marker():\n    return 42\n"}
++    for name, content in payloads.items():
++        target = repo / name
++        target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_bytes(content)
++
++    def record(name):
++        return dict(path="/historical/worktree/" + name,
++                    **review.identity((repo / name).read_bytes()))
++
++    def save(name, data):
++        target = repo / name
++        target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_text(json.dumps(data))
++
++    save(STAGES["render"], dict(status="manuscript_review_rendered", publication_ready=False,
++        html=record(html), sources=[record(MAIN)], targets=[record(review.LEDGER)], unique_targets=1,
++        occurrences=[dict(path=review.LEDGER, url="PUBLICATION_PROGRESS.md")], local_occurrences=1))
++    save(STAGES["print"], dict(status="verified_html_printed", publication_ready=False,
++        returncode=0, page_count=1, pdf=record(pdf), checked_records=[record(STAGES["render"]), record(html)]))
++    save(STAGES["review"], dict(status="pdf_bounds_checked", publication_ready=False,
++        page_count=1, bounds_violations=[], checked_records=[record(pdf), record(STAGES["render"])],
++        rendered_pages=[record(page)]))
++    # The source fixture intentionally dirties probe.py; do not stage that file.
++    paths = {*[name for name, _ in module.selection(profile).values()], *payloads, *STAGES.values()}
++    subprocess.run(["git", "-C", str(repo), "add", *sorted(paths)], check=True)
++    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "actual child fixture integration"], check=True)
++    revision = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "HEAD"], text=True).strip()
++    output = tmp_path / "combined-export"
++    result = module.build(repo, revision, output, profile, selected_review=chosen(revision))
++    assert result["result_helpers_included"] is True
++    assert result["review_selection"]["page_count"] == 1
++    assert result["components"]["manuscript"]["entrypoints"]["markdown"] == MAIN
++    assert result["publication_ready"] is False
++    assert (output / "source/workflow/benchmark_tools/results/fixture_helper.py").exists()
++    assert (output / "source/scientific/orthohmm/version.py").read_text() == "VERSION = 'fixture'\n"
++    relocated = tmp_path / "relocated-real-children"
++    shutil.move(output, relocated)
++    shutil.rmtree(repo)
++    checked = subprocess.run([sys.executable, "-I", "-S", "-B",
++        str(relocated / "bundle_publication_handoff.py"), "verify", str(relocated),
++        "--manifest-sha256", result["manifest"]["sha256"]], cwd=tmp_path,
++        env={"PATH": "/no-git-or-original-artifacts"}, capture_output=True,
++        text=True, timeout=30)
++    assert checked.returncode == 0, checked.stderr
++    assert json.loads(checked.stdout) == result
