@@ -1,0 +1,66 @@
+{
+  "executions": [
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 1,
+        "skipped": 0,
+        "tests": 3
+      },
+      "junit": {
+        "bytes": 2676,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/repeat21_reporting_tests_20261004.xml",
+        "sha256": "3f8fb8e630dc31a02a876739247e4dd65d8bb69338867e590bb6fdcadce4d4fd"
+      },
+      "test_names": [
+        "test_actual_repeat21_preserves_prefix_and_completes_only_high8_cell",
+        "test_actual_terminal_handoff_and_four_review_pins_remain_bound",
+        "test_actual_repeat21_figure_provenance_bounds_pixels_and_complete_cells"
+      ]
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 3
+      },
+      "junit": {
+        "bytes": 729,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/repeat21_reporting_tests_completed_20261004.xml",
+        "sha256": "f837adf520fe54c6718c8576c965469c65f9a48fb1ddec96139614d8e0dde6d0"
+      },
+      "test_names": [
+        "test_actual_repeat21_preserves_prefix_and_completes_only_high8_cell",
+        "test_actual_terminal_handoff_and_four_review_pins_remain_bound",
+        "test_actual_repeat21_figure_provenance_bounds_pixels_and_complete_cells"
+      ]
+    }
+  ],
+  "figure_manifest": {
+    "bytes": 289241,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v21/manifest.json",
+    "sha256": "423ddbe73d513c60a24e02898735dbef65f12c04b682862027e2d8406881cb6f"
+  },
+  "limitations": [
+    "Three targeted actual-data/receipt/figure checks, not a rerun of the full kernel or old reporting suites.",
+    "The passed figure check follows exporter completion; the initial test orchestration failure is not hidden.",
+    "Shared-host resource admission is separate from biological accuracy or isolated efficiency."
+  ],
+  "native_runs_started": false,
+  "publication_ready": false,
+  "retained_initial_failure": "Figure test started before exporter finished its manifest; original failing JUnit retained unchanged.",
+  "scientific_execution_repeated": false,
+  "source_changed_between_executions": false,
+  "status": "completed_repeat21_reporting_checks_passed",
+  "table": {
+    "bytes": 305273,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v22/panel.json",
+    "sha256": "1213d47f73d9f07fd6ce317655d429f340068f94d1aad1cdfad0222feaa71a23"
+  },
+  "test_source": {
+    "bytes": 5318,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_shared_prepared_repeat21_reporting.py",
+    "sha256": "59b02b95cfe6a8cab2b6d9e28a01f2d139057ac5681735395ecd01f411f9f817"
+  }
+}

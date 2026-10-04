@@ -1,0 +1,14 @@
+{
+  "command": [
+    "scontrol",
+    "show",
+    "job",
+    "22417",
+    "--oneliner"
+  ],
+  "finished_unix_ns": 1791103197594351900,
+  "returncode": 0,
+  "started_unix_ns": 1791103197587294371,
+  "stderr": "",
+  "stdout": "JobId=22417 JobName=orthohmm_shared_scaling UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=COMPLETED Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:25:27 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-04T04:13:17 EligibleTime=2026-10-04T04:14:24 AccrueTime=2026-10-04T04:14:24 StartTime=2026-10-04T04:14:24 EndTime=2026-10-04T04:39:51 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T04:14:24 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1568636 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_shared_scaling.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=70a435fdc2988dd6ee5c75c11e0011622acaec959a51fbd066d384ef50590038  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_21-22417.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_21-22417.log TresPerTask=cpu=64 \n"
+}

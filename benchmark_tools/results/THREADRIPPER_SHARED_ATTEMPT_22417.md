@@ -65,3 +65,63 @@ specific job. Do not rerun preparation, snapshot, calibration, regression or
 runtime refresh without concrete cause. Review only after actual terminal
 state and preserve a terminal controller before purge when available. No
 later index may launch before independently reviewed history advances.
+
+## Terminal Independent Review
+
+On continuation, read the full goal/current ledger and retained archive and
+calibration notes. Previous turn is progress (`d80a45fa`); fresh accounting
+confirms the same job is live. Observe that job through search/clustering and
+post-run checks without restarting science. Parent/batch finish COMPLETED 0:0
+at 25:27; native step COMPLETED 0:0 at 20:53. The bounded terminal observer
+retains the actual [controller](threadripper_shared_terminal_controller_22417.json)
+before purge: 1,822 bytes, SHA-256
+`a269ae6466d84ec0a0208eefb6e4c0fe4b68499dac622f11557ff74df6baeb88`.
+Fresh accounting independently corroborates state, exit and timestamps.
+
+The prepared terminal reviewer passes all four categories: runtime/input,
+raw resources, environment and native outputs. It independently replays
+process/pressure streams and the prepared-owner lifecycle; no cleanup/kill
+is required and the owner is successfully joined. Process/pressure failure
+maps are both empty. Native coverage is all 165,168 proteins in 58,278 groups,
+not a new benchmark-accuracy result. The 187,503,815-byte raw native audit
+stays under ignored work paths, not committed or mistaken for a portable bundle.
+
+The [public terminal summary](threadripper_shared_attempt_22417.json) matches
+canonical work bytes: 5,024 bytes, SHA-256
+`9023c1218129675df6e84648bef3c59f57bc954f9a7d5f8dd0d2dcbe2b038b3e`.
+Native command wall is **1,221.444435089s**; CPU bracket is **33,878.994558s**;
+native-step lifetime peak is **8,517,451,776 bytes**. Whole-run maximum observed
+foreign CPU is 42.1423543496 cores. These are eligible shared-host observations
+under unchanged scopes, not isolated speed or causal overhead evidence.
+
+## Reporting Checkpoint
+
+[Table v22](threadripper_shared_panel_snapshot_20261004_v22/panel.json) has
+22 reviewed attempts, 20 measured, 19 eligible, exclusions 0/17/20, two
+pre-native aborts and five unreviewed identities. Its 305,273 bytes have SHA-256
+`1213d47f73d9f07fd6ce317655d429f340068f94d1aad1cdfad0222feaa71a23`.
+All first 21 rows remain unchanged. The high-sensitivity/eight-proteome cell
+now has three eligible repeats: wall median 1,238.935206005s, range
+1,221.444435089-1,303.633011611s; CPU median 34,395.748088s, range
+33,878.994558-36,610.569612s; peak median 8,293,474,304 bytes, range
+8,284,278,784-8,517,451,776 bytes. Full OF/four proteomes remains complete;
+other cell summaries remain null. Ranges are not confidence intervals.
+
+[Figure v21](threadripper_shared_resource_figure_20261004_v21/shared_threadripper_resources.pdf)
+renders 20 measured points, both complete-cell median/ranges, one measured
+exclusion and no imputed abort symbols. Actual PNG inspected with readable
+layout. Three new targeted tests pass in 1.10s, checking prefix/median arithmetic,
+actual handoff/review pins and PDF bounds/panel pixels/provenance/line counts.
+The initial test execution has two passes and one missing-manifest failure
+because it starts before the exporter finishes; its original JUnit is retained,
+not overwritten. The exporter then ends successfully, and unchanged tests pass
+against the completed artifact. The [validation receipt](threadripper_repeat21_reporting_validation_20261004.json)
+binds both executions and actual outputs. No benchmark, raw audit, unchanged
+kernel regression, calibration or runtime refresh is repeated by this correction.
+
+All observer/review/report/plot/test handles are terminal; fresh queue is empty.
+Commit/push this validated milestone before launching index 22, satellite_v2,
+eight proteomes, repeat 2, with the existing prepared continuation. Reuse valid
+preparation and checks, but require fresh history/capacity/actual native handoff.
+Remaining five identities, final manuscript/resource reconciliation and
+versioned/archive release keep the full goal active and incomplete.

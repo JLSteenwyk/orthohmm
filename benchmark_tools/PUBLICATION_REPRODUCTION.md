@@ -26,8 +26,8 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v21/panel.json)
-has twenty-one reviewed attempts, nineteen with measured resources, eighteen eligible
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v22/panel.json)
+has twenty-two reviewed attempts, twenty with measured resources, nineteen eligible
 shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
@@ -37,7 +37,7 @@ now pass; the [new runtime and reporting checkpoint](results/THREADRIPPER_PRENAT
 preserves all earlier source-bound artifacts. All four independent terminal
 review categories now pass for [22414, index 18](results/THREADRIPPER_SHARED_ATTEMPT_22414.md),
 full OrthoFinder, four proteomes, repeat 2. This supplies the first complete
-three-eligible-repeat cell; other cell summaries remain missing. No attempt is overwritten or retried.
+three-eligible-repeat cell at that checkpoint. No attempt is overwritten or retried.
 All four categories also pass for [22415/index 19](results/THREADRIPPER_SHARED_ATTEMPT_22415.md),
 high-sensitivity OrthoHMM, four proteomes, repeat 2. All three planned attempts
 in that cell are reviewed, but only two are eligible: its summaries remain null.
@@ -48,23 +48,28 @@ start and native resource endpoints are absent. No job was live at that failure 
 The [synchronization repair](results/THREADRIPPER_PREPARATION_SYNC_REPAIR_20261004.md)
 now passes 655 source-bound tests, real 21-identity history resolution and a
 five-helper runtime refresh. The current table includes both aborts explicitly
-with null endpoints. Next is index 21, high-sensitivity OrthoHMM, eight
-proteomes, repeat 2. Neither pre-native abort is retried.
+with null endpoints. Neither pre-native abort is retried.
 
 The [prepared continuation helpers](results/THREADRIPPER_PREPARED_CONTINUATION_20261004.md)
 now pass 54 source-pinned tests. Use the new dated continuation, terminal
 reviewer and live snapshot, not the old pre-native continuation/lookup. They
 retain both abort resolutions and verify preparation-before-release ordering.
 Actual [new source/resource/environment/readiness preparation](results/threadripper_prepared_panel_preparation_20261004.json)
-passes real history and source/bounds readback. Index 21 is now
-[22417, native HMM search observed running](results/THREADRIPPER_SHARED_ATTEMPT_22417.md)
-after actual prepared-receipt/capacity/native handoff. It is not a terminal
-resource result; obtain fresh scheduler state and review after completion.
+passes real history and source/bounds readback. Index 21,
+[22417, high-sensitivity/eight-proteome repeat](results/THREADRIPPER_SHARED_ATTEMPT_22417.md),
+now completes and passes all four independent terminal categories, including
+prepared-owner lifecycle. It supplies the second complete cell with three
+eligible repeats. Other summaries remain null; no job is live at this review
+checkpoint. Next is index 22, satellite_v2/eight proteomes/repeat 2, only after
+fresh history/capacity/native handoff under the existing prepared continuation.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)
-retains the nineteen measured observations and explains both unplotted aborts without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v21/shared_threadripper_resources.pdf)
+retains the twenty measured observations and both complete-cell median/ranges,
+explaining both unplotted aborts without isolated speedup claims. Three new
+actual-data/receipt/PDF-pixel tests pass; their initial pre-export-manifest
+failure remains retained separately. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
@@ -85,8 +90,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_prepared_panel_20261004.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_prepared_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v21/panel.json \
-  --sha256 9ded273a1383ca4cf027ed40bc28310f553cad287f24f1ce0892784cd3425af0 \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v22/panel.json \
+  --sha256 1213d47f73d9f07fd6ce317655d429f340068f94d1aad1cdfad0222feaa71a23 \
   --output /absolute/fresh/resource-figure
 ```
 

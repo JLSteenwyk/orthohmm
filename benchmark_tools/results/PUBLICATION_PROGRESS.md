@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Index 21 Terminal Review And Second Complete Cell (2026-10-04)
+
+Classify preceding turn as progress: `d80a45fa` commits/pushes prepared native
+handoff/submission evidence. On resumption read full goal/current ledger and
+retained archive/calibration notes; fresh queue/accounting confirm the same
+22417 live. Watch that attempt without restart through search/clustering and
+post-run checks. Parent/batch finish COMPLETED 0:0 at 25:27; native step at 20:53.
+Terminal controller is retained before purge and freshly corroborated by
+accounting. No unrelated workload/service or frozen scientific setting changes.
+
+The [independent terminal review](THREADRIPPER_SHARED_ATTEMPT_22417.md) passes
+all four categories, raw process/pressure replay and prepared-owner lifecycle.
+Both environment failure maps are empty; native outputs cover all 165,168
+proteins in 58,278 groups, not accuracy. Public/canonical summary are identical:
+5,024 bytes, SHA-256
+`9023c1218129675df6e84648bef3c59f57bc954f9a7d5f8dd0d2dcbe2b038b3e`.
+Native wall 1,221.444435089s; CPU 33,878.994558s; peak 8,517,451,776 bytes.
+Preflight foreign CPU 42.9693181133, whole-run maximum 42.1423543496 cores.
+Raw 187,503,815-byte native audit stays local/ignored. All scopes/bounds unchanged.
+
+Table v22 has 22 reviewed/20 measured/19 eligible, exclusions 0/17/20, both
+null-endpoint aborts and five pending identities. All first 21 rows unchanged.
+OH high/eight proteomes now has three eligible repeats and median/ranges;
+only it and full OF/four proteomes are complete. Other summaries stay null.
+Figure v21 renders 20 measured points and these two summaries; actual PNG
+inspected. Three new actual-data/receipt/PDF-pixel tests pass in 1.10s.
+Initial figure test runs before export manifest completes and fails that file
+read (two passes/one failure); original JUnit is retained. After exporter
+success, unchanged tests pass; validation binds both runs. No scientific
+execution/audit/kernel/calibration/runtime refresh is repeated or failure hidden.
+
+All owned observer/review/report/plot/test handles end; no job live. Commit/push
+the validated checkpoint, then launch only index 22, phylogenetic satellite_v2,
+eight proteomes, repeat 2, using the existing prepared continuation. Full-prefix
+history and fresh capacity/native handoff remain required. Final panel,
+manuscript/resource reconciliation and versioned/archive release remain open.
+
 ## Index 21 Prepared Handoff And Native Search Live (2026-10-04)
 
 This continuation makes progress: new dated launcher/terminal-review/snapshot
