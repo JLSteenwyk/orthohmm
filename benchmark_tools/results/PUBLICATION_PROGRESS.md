@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Resource Section Generated From Reviewed Arithmetic (2026-10-04)
+
+Previous turn is a verified wait: it freshly polls22420/22421 and observes
+search advancement without edits or retries. Read full objective/current
+ledger and revalidate the same jobs:22420 remains RUNNING;22421 waits on its
+exact dependency. No finished scientific analysis or diagnostic is repeated.
+
+Commit/push `9c41830d` adds a
+[resource-section generator](RESOURCE_MANUSCRIPT_SECTION_20261004.md) and eight
+focused tests, passing in17.81s. It reuses actual full snapshot arithmetic
+validation and emits unit-labelled prose/three tables, preserving failures,
+unreviewed rows, missing repeats and unknown contention distortion. Completed-
+panel test data are synthetic and not persisted as native evidence.
+
+Actual committed CLI generates v24 prose/manifest:3,649 bytes,SHA-256
+`bf902f95d48108d983505fb0cac978ca579f51c2f1b9c3c51a5b8489b8a1b77d`.
+Independent CSV-row readback checks27 rows,12 available displayed summaries
+and15 unavailable cells, all source/table/section pins and actual JUnit.
+This improves final manuscript reconciliation without new inference, raw
+replay, accuracy or timing admission. Existing main manuscript stays dated;
+integrate the final section/figure and render/inspect after all27 reviews.
+
+Fresh accounting still confirms22420 parent/batch/native step RUNNING and
+22421 PENDING/Dependency; last inspected HMM search reaches72.22%, not total
+pipeline completion. Table v24/figure v23 remain24 reviewed/22 measured/21
+eligible/four complete cells, with three unreviewed(one live,two unsubmitted).
+Keep observing those exact jobs; capture terminal controller when available
+and independently review before25. Scientific source/runtime/recipe/resources
+and unrelated jobs/services remain unchanged. Final panel/manuscript/archive/
+versioned release remain open; full goal active and incomplete.
+
 ## Index 24 Live And Deferred Terminal Capture Queued (2026-10-04)
 
 Previous turn is progress: `5d465692`, `363fdee3`, `7b811fa8` and `d28176e8`

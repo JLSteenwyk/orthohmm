@@ -94,6 +94,12 @@ explaining both unplotted aborts without isolated speedup claims. Three new
 actual-data/receipt/PDF-pixel tests for index 21 pass; their initial pre-export-
 manifest failure remains retained separately. Three new reusable latest-
 checkpoint tests now pass against the completed index-23 table/figure. The
+new [resource-section generator](results/RESOURCE_MANUSCRIPT_SECTION_20261004.md)
+now produces actual v24 prose and three unit-labelled metric tables directly
+from reviewed arithmetic, retaining all missing summaries and exclusions.
+Eight focused tests and all27 displayed-row readback pass. This section is
+interim; final whole-manuscript integration/rendering waits for the full panel.
+The
 new [prepared reporting component](results/PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md)
 now archives this table/figure format without omitting pre-native aborts.
 Its committed 20-member archive restores and passes copied CLI verification

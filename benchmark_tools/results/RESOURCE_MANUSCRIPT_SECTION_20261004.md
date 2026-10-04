@@ -31,3 +31,18 @@ full 27-attempt panel is reviewed, then render/inspect the whole manuscript.
 Do not claim the partial section is a completed study. The same generator uses
 completed-panel wording only when all planned attempts are actually reviewed;
 incomplete eligible-repeat cells still have no median/range.
+
+## Actual Partial Section
+
+After source commit `9c41830d`, the real CLI generates
+[v24 prose/tables](resource_manuscript_section_20261004_v24/resource_section.md)
+and a [source/table/section manifest](resource_manuscript_section_20261004_v24/manifest.json).
+Prose is 3,649 bytes, SHA-256
+`bf902f95d48108d983505fb0cac978ca579f51c2f1b9c3c51a5b8489b8a1b77d`.
+The [readback](resource_manuscript_section_validation_20261004_v24.json)
+verifies every source/table/section pin and independently parses all27 table
+rows: 12 available median/range cells match exact displayed rounding and units;
+15 unavailable cells stay missing. It binds the actual eight-test JUnit.
+No test, native inference or raw audit is repeated for this generation. This
+closes local prose generation, not final manuscript integration, rendering,
+archive portability or completion of the resource panel.

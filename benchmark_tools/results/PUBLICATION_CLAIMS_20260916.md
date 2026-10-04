@@ -68,6 +68,11 @@ and its review retain their earlier three-attempt checkpoint. Both preserve
 contention, missing repeats and endpoint scopes. The older assembled review
 does not include these additions. The remaining panel, final resource figures,
 current manuscript/PDF reconciliation and versioned release/archive remain open.
+The [generated v24 resource section](RESOURCE_MANUSCRIPT_SECTION_20261004.md)
+now replaces manual transcription with validated prose/three metric tables.
+Eight tests pass; real section readback preserves12 available and15 unavailable
+summaries across27 rows. It is not whole-manuscript reconciliation, a new
+native result, isolated performance or a completed resource panel.
 The [ten-page shared-host main review](PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
 now renders the interim Methods/Results with all pages inspected and a closed
 source/artifact receipt. Figures remain linked, and the older assembled PDF
