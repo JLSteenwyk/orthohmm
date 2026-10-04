@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Final Shared-Host Panel Reviewed (2026-10-04)
+
+Previous user turn verifies the existing goal amendment, without changing
+its source-bound bytes. Read the full objective and current ledger. Fresh
+accounting observes native22424 completed while its parent remains live;
+retain that verified wait. Parent/batch22424 and exact-dependent capture22425
+then complete with exit0:0. The existing independent reviewer runs once and
+passes native outputs, runtime, resources, environment and prepared-owner
+lifecycle. No inference, completed snapshot or successful diagnostic is repeated.
+
+[Final attempt22424](THREADRIPPER_SHARED_ATTEMPT_22424.md) retains primary
+wall2621.497644780s, task-subtree CPU bracket75126.858767 CPU-seconds and
+native-step lifetime peak11333189632 bytes. Foreign CPU maximum51.1237094572
+core equivalents is annotated, not subtracted. Public summary/controller
+exactly match canonical bytes; native251378 genes/62885 groups are coverage,
+not prediction accuracy.
+
+[Tablev27](threadripper_shared_panel_snapshot_20261004_v27/panel.json) now has
+all27 reviewed identities,25 measured attempts,24 eligible observations and
+six complete three-repeat cells. No identity is live, pending or unsubmitted;
+there is no identity27. Exclusions0/17/20 remain, including both pre-native
+aborts with null endpoints. Three incomplete cells retain unavailable summaries.
+Earlier26 rows are unchanged. [Figurev26](threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf)
+is actually visually checked; [final generated prose](threadripper_shared_resource_section_20261004_v27/resource_section.md)
+retains18 available/nine unavailable summaries across27 metric rows.
+
+Three actual checkpoint/provenance/PDF-pixel tests pass in3.63s; two new final
+prose tests pass in2.48s, independently recalculating displayed values from
+eligible raw observations and checking previous-row preservation and pinned
+sources. The [readback](threadripper_checkpoint_validation_22424.json) records
+both actual JUnits and ten source/artifact identities. Current claims/guide
+distinguish final execution/reporting from unfinished publication integration.
+
+Next integrate the three tested, still-unapplied source-helper, explicit-main
+and explicit-review handoff patches after rechecking their bases; validate and
+commit actual helper changes before committed-source exports. Build the final
+reporting component with prose, reconcile/render/visually inspect the complete
+manuscript and validate relocated executable/versioned source/review/handoff
+archives. Full scientific goal remains active and incomplete. Contention has
+unknown, potentially method-dependent effects; no isolated speedup is claimed.
+
 ## Explicit Final Handoff Coordinator Prepared (2026-10-04)
 
 Previous turn made progress: commit/push `ebcbca0f` preserves the tested

@@ -1,0 +1,103 @@
+{
+  "available_metric_summaries": 18,
+  "canonical_summary_and_controller_match": true,
+  "displayed_metric_rows": 27,
+  "eligible_attempts": 24,
+  "excluded_attempts": [
+    0,
+    17,
+    20
+  ],
+  "native_inference_repeated": false,
+  "previous_26_rows_unchanged": true,
+  "publication_ready": false,
+  "raw_audit_repeated": false,
+  "resource_reviewed_attempts": 25,
+  "reviewed_attempts": 27,
+  "scope": "Actual final retained-data arithmetic, prose, provenance and PDF-pixel tests; not new inference, accuracy, isolated speed or final study archive",
+  "source_and_artifacts_at_readback": [
+    {
+      "bytes": 5993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_latest_prepared_resource_checkpoint.py",
+      "sha256": "1bbc56d0ba54b1b61a055bb10e4c9b9eb3eab431a9784b9dbe4a86ab76257e05"
+    },
+    {
+      "bytes": 3333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_final_shared_resource_prose.py",
+      "sha256": "1c24d2172049b3a46bb2969e803c9d72d284c67c836097ef7e38a85e4f26ec2c"
+    },
+    {
+      "bytes": 378715,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json",
+      "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+    },
+    {
+      "bytes": 4016,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/attempts.tsv",
+      "sha256": "81f9c35d693257eddde9799dc8f937928ede909b3855e9f48ca382bdd70b37de"
+    },
+    {
+      "bytes": 1531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/cells.tsv",
+      "sha256": "dd7a15383d286cd1d95efa4326b9abaa1b5c07fb06ab66cfeb4e9566deefb537"
+    },
+    {
+      "bytes": 360658,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/manifest.json",
+      "sha256": "c7286a1581ce9c93a96ad218a649d7be0d45a631a43f853e6354ee0ee75d8b7b"
+    },
+    {
+      "bytes": 2323,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_section_20261004_v27/manifest.json",
+      "sha256": "50ebd4fe723dafce3ef270294d3606d2d8de3a2168f9eb6095f812b5eaa82225"
+    },
+    {
+      "bytes": 3750,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_section_20261004_v27/resource_section.md",
+      "sha256": "423df6d3d630e319b15153ffdd3137e4e41bb472c0d981b19f02abafa9505de8"
+    },
+    {
+      "bytes": 5026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22424.json",
+      "sha256": "3df555a7bba6fffd5a1e9c77eae91d3754458db26b38f8ed22eb1c14bbc85be9"
+    },
+    {
+      "bytes": 2736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_terminal_controller_22424.json",
+      "sha256": "12eb37b4e966623500e87f75ca25d81a5ba1a1b55644447cf2c7a54d50b64028"
+    }
+  ],
+  "status": "final_shared_checkpoint_tests_passed",
+  "suites": [
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 3
+      },
+      "junit": {
+        "bytes": 706,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/latest_prepared_checkpoint_tests_22424.xml",
+        "sha256": "27146d479deaf20f79664249cadb7ae2feb38af838134127d919c24a45cd9cc5"
+      },
+      "junit_time_seconds": 3.614
+    },
+    {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 2
+      },
+      "junit": {
+        "bytes": 543,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/final_shared_resource_prose_tests_22424.xml",
+        "sha256": "df0ee0671519eb7bf7e38541b32a1aa4d838e165e0d1696160bcde2e8233fea4"
+      },
+      "junit_time_seconds": 2.451
+    }
+  ],
+  "three_eligible_repeat_cells": 6,
+  "unavailable_metric_summaries": 9
+}

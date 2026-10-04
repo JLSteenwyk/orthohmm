@@ -26,13 +26,14 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v26/panel.json)
-has twenty-six reviewed attempts, twenty-four with measured resources, twenty-three eligible
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v27/panel.json)
+has twenty-seven reviewed attempts, twenty-five with measured resources, twenty-four eligible
 shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
 The snapshot includes that abort explicitly with null endpoints, not as a measurement. The remaining panel
-is not complete. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
+has now finished execution and terminal review. Final reporting and manuscript/archive
+integration remain separate requirements. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
 now pass; the [new runtime and reporting checkpoint](results/THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
 preserves all earlier source-bound artifacts. All four independent terminal
 review categories now pass for [22414, index 18](results/THREADRIPPER_SHARED_ATTEMPT_22414.md),
@@ -108,17 +109,29 @@ placement checks pass. HMM/k-mer search is running; capture-only22425 waits
 on afterany22424. One identity remains unreviewed, now live; none is unsubmitted.
 Current table/figure counts stay unchanged. After actual termination, use the
 existing independent reviewer before final panel/prose/manuscript/source export.
+It now completes, and all four terminal review categories and prepared-owner
+lifecycle pass. All 27 identities are terminal-reviewed; no native run is pending.
+The high-sensitivity/twelve-proteome cell supplies the sixth complete cell.
+The three missing eligible repeats remain missing, with unavailable summaries;
+none of the exclusions is retried to fill a cell. Native coverage is not accuracy.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v25/shared_threadripper_resources.pdf)
-retains the twenty-four measured observations and five complete-cell median/ranges,
+The [final resource figure](results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf)
+retains the twenty-five measured observations and six complete-cell median/ranges,
 explaining both unplotted aborts without isolated speedup claims. Three new
 actual-data/receipt/PDF-pixel tests for index 21 pass; their initial pre-export-
 manifest failure remains retained separately. Three new reusable latest-
 checkpoint tests now pass against the completed index-25 table/figure; their
 [actual readback](results/threadripper_checkpoint_validation_22422.json) pins
-all six source/artifact identities without repeating native inference. The
+all six source/artifact identities without repeating native inference. That
+index-25 validation remains historical; the final checkpoint has separate
+reporting and actual-data prose tests, not repeated inference or raw auditing.
+The [final generated section](results/threadripper_shared_resource_section_20261004_v27/resource_section.md)
+reports all 27 reviewed attempts, 18 available metric summaries and nine
+unavailable summaries. The [final test receipt](results/threadripper_checkpoint_validation_22424.json)
+pins three checkpoint/provenance/PDF tests and two final-data prose tests.
+Final whole-manuscript integration remains open. The
 new [resource-section generator](results/RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now produces actual v24 prose and three unit-labelled metric tables directly
 from reviewed arithmetic, retaining all missing summaries and exclusions.
@@ -150,8 +163,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_prepared_panel_20261004.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_prepared_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v26/panel.json \
-  --sha256 f761e8134dd052fa98431f445cdd0d1860afa780f94c29f790092163cf77894c \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json \
+  --sha256 1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187 \
   --output /absolute/fresh/resource-figure
 ```
 
@@ -1490,12 +1503,12 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Shared-host resource panel: 26 of the 27 frozen attempts are reviewed,
-  including 24 native resource measurements, 23 eligible observations and two
-  pre-native aborts with no endpoints. Five cells have three eligible repeats.
-  The remaining sequential panel and final reporting are incomplete.
-  The final identity26 is running as22424; capture-only22425 waits on its
-  terminal dependency. No native identity remains unsubmitted.
+- Shared-host resource panel: all 27 frozen attempts are terminal-reviewed,
+  including 25 native resource measurements, 24 eligible observations and two
+  pre-native aborts with no endpoints. Six cells have three eligible repeats.
+  Final identity26/22424 and capture-only22425 complete successfully; no native
+  run is pending. Three cells lack an eligible repeat and retain unavailable
+  summaries. Final manuscript and portable release integration remain open.
   Local Threadripper `bizon` is approved, not the DGX. Use the
   [goal-reaffirmed continuation](results/THREADRIPPER_GOAL_REAFFIRMATION_20261004.md)
   with identical native limits, fresh capacity checks, intact input/runtime

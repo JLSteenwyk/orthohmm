@@ -58,3 +58,45 @@ reporting bundle, integrate the staged source-export fix and reconcile the
 whole manuscript/PDF and executable/versioned archive. The full publication
 goal remains active and incomplete. Contention has unknown, potentially
 method-dependent effects; these observations do not isolate tool speed.
+
+## Terminal Review
+
+The startup statements above are historical. Parent/batch 22424 complete
+with exit 0:0 at 2026-10-04T10:08:29; its native step completes with exit 0:0
+at 10:05:54. Capture-only 22425 completes with exit 0:0 at 10:08:31. The
+[terminal controller](threadripper_shared_terminal_controller_22424.json)
+matches canonical 2,736 bytes, SHA-256
+`12eb37b4e966623500e87f75ca25d81a5ba1a1b55644447cf2c7a54d50b64028`.
+The independent reviewer passes all four categories and prepared-owner
+lifecycle. Its [public summary](threadripper_shared_attempt_22424.json)
+matches canonical 5,026 bytes, SHA-256
+`3df555a7bba6fffd5a1e9c77eae91d3754458db26b38f8ed22eb1c14bbc85be9`.
+
+Primary native-command wall is 2,621.497644780s, wrapper-inclusive task-subtree
+CPU bracket 75,126.858767 CPU-seconds, and launcher-inclusive native-step
+lifetime peak 11,333,189,632 bytes. Maximum observed foreign CPU demand
+of 51.1237094572 core equivalents is annotated, not subtracted. Both environment
+failure maps are empty. Native output checks find 251,378 input genes and 62,885
+orthogroups; these are coverage counts, not new prediction accuracy.
+The enclosing scheduler elapsed time is not the primary command interval.
+
+All 27 frozen identities are now terminal-reviewed. There is no identity 27,
+no pending native run, and no retry of excluded identities 0/17/20. The panel
+retains 25 measured attempts and 24 eligible observations; six method/size cells
+have three eligible repeats. High-sensitivity/four proteomes, phylogenetic/four
+proteomes and full OrthoFinder/twelve proteomes each lack an eligible repeat,
+so their three-repeat summaries remain unavailable. Final reporting and the
+whole manuscript/executable/versioned archive remain separate deliverables.
+
+The [final table](threadripper_shared_panel_snapshot_20261004_v27/panel.json),
+[figure](threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf)
+and [generated manuscript section](threadripper_shared_resource_section_20261004_v27/resource_section.md)
+retain all these counts, scopes, exclusions and contention limits. The actual
+figure is visually checked for readable labels, coverage and non-overlap.
+Three checkpoint/provenance/PDF-pixel tests pass in 3.63s; separate final-data
+prose tests recompute each of the 27 displayed metric rows from eligible raw
+observations and preserve the preceding 26 attempt rows.
+Those two tests pass in 2.48s. The [validation receipt](threadripper_checkpoint_validation_22424.json)
+pins both actual JUnits and the final table, figure, section, summary,
+controller and test sources. This is final local reporting, not the whole
+publication package or an isolated-performance result.
