@@ -1,5 +1,20 @@
 # Publication Reproduction Guide
 
+## Current Entry Point (2026-10-04)
+
+Use the [actual local rc2 result](results/PUBLICATION_PACKAGE_RC2_RESULT_20261004.md)
+and [current outer instructions](PUBLICATION_PACKAGE_RC2_20261004.md) for the
+versioned package. It preserves rc1's manuscript/source/figure/resource/native
+assets and adds24 directly delivered files for the main OrthoBench/SwissTrees
+comparison and factorial count replays. All four copied statistical routes
+pass after external restoration. These are derived-count replays, not native
+inference or new biological/uncertainty validation. Historical provenance,
+several scientific requirements and public deposition remain unresolved.
+The [progress ledger](results/PUBLICATION_PROGRESS.md) governs remaining work.
+The chronology below preserves earlier scoped checkpoints; statements that
+delivery/resource integration was then pending do not override these newer
+completed results. Do not restart completed analyses from historical recipes.
+
 The [eight-method OrthoBench uncertainty extension](results/OB_COMPLETE_UNCERTAINTY_RESULT_20260928.md)
 reports all 21 paired contrasts under a frozen exploratory protocol. It
 preserves historical intervals separately and does not establish independent

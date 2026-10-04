@@ -1,0 +1,245 @@
+{
+  "archive": {
+    "bytes": 132866131,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthohmm-study-2026.10.04-rc2.tar.gz",
+    "sha256": "30fe21442d4693eac559c25228861c3ca098fbdbf8eef27ac2dd9dde788c65d4"
+  },
+  "file_access_scans": {
+    "historical_qfo_benchmark_paths_observed": false,
+    "original_checkout_analysis_paths_observed": false,
+    "scope": "File syscall traces for four copied statistics commands; private interpreter/site packages remain separately provided.",
+    "checked_absence_strings": [
+      "/ORTHOHMM/orthohmm/benchmark_tools/",
+      "qfo_benchmark",
+      "/ORTHOHMM/orthohmm/orthobench"
+    ]
+  },
+  "generated": [
+    {
+      "bytes": 2671,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-comparison/TABLE.md",
+      "sha256": "43922ccced76ff3a0756fc63ed18ca55e3f79b7e6611ca0f83ec639126974334"
+    },
+    {
+      "bytes": 8965,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-comparison/crosscheck.json",
+      "sha256": "db99f3b34537060936e02426b8434ddfd75e21c8f123f60969aa73f883aa455a"
+    },
+    {
+      "bytes": 22675,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-factorial/statistics.json",
+      "sha256": "71044699ffe61f4a4e756f1accfe70eca4228e40d93c44ad66b71aa1accc47e1"
+    },
+    {
+      "bytes": 6677,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-factorial/statistics.md",
+      "sha256": "08750871e5596218999872aceffbc682ec049538385c6f04ce285e5090fb39c2"
+    },
+    {
+      "bytes": 57421,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/qfo-factorial/statistics.json",
+      "sha256": "bc59208444abce60df3fe6c6aebbe0f925e42136451244fedc309e286b66b144"
+    },
+    {
+      "bytes": 854,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/swiss-comparison.json",
+      "sha256": "a5a59c51d160170fd07a5a9e4dc5b1be31a27404863e51ba7a3bed966cbbaa56"
+    }
+  ],
+  "index": {
+    "bytes": 25958,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc2_index_20261004.json",
+    "sha256": "30bafb084ccf218ade33356cea3ad33dfee3f0c88a18f0ab22c59ed421ddf3a1"
+  },
+  "limitations": [
+    "Derived-count arithmetic and component closure, not independent biological or interval-coverage validation.",
+    "All unresolved scientific/historical provenance gaps remain explicit.",
+    "The private interpreter and NumPy are not bundled; no cross-host/OS claim.",
+    "No native timing, conversion, input acquisition or successful unchanged diagnostic is restarted."
+  ],
+  "native_inference_repeated": false,
+  "ob_comparison": {
+    "status": "complete_ob_intervals_independently_reproduced",
+    "endpoints": 21,
+    "maximum_absolute_error_percentage_points": 2.1316282072803006e-14,
+    "family_outcome_triples": 7,
+    "verification_scope": "portable_derived_counts_only_no_raw_input_verification"
+  },
+  "ob_factorial_scientific_fields_exact": true,
+  "payload_bytes": 146591259,
+  "preserved_rc1_selected_files": 75,
+  "public_archive_uploaded": false,
+  "publication_ready": false,
+  "qfo_factorial_numerical_fields_exact": true,
+  "reader": {
+    "bytes": 11794,
+    "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/bundle_publication_package.py",
+    "sha256": "948efb04abfa84aea1c6822d9145592a15d54416838245f0c1bf569f5d81bbab"
+  },
+  "restored_root": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "scores_recomputed_from_raw": false,
+  "selection": {
+    "bytes": 35618,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc2_selection_20261004_v2.json",
+    "sha256": "593bb4f9298c99da9d3a7428e184a95e832fb73ee1c68759e453e30c144b888e"
+  },
+  "source_revision": "b7107df5e46c12a9d2d4afe085c0f7cac658c46e",
+  "statistics_files": 24,
+  "statistics_runtime": {
+    "numpy": "2.2.6",
+    "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]"
+  },
+  "status": "rc2_main_statistics_delivery_verified",
+  "swiss_comparison": {
+    "absolute_tolerance": 1e-12,
+    "endpoints": 24,
+    "historical_paths_accessed": false,
+    "input_sha256": "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34",
+    "limitations": [
+      "Arithmetic only from hash-pinned retained counts; native inference, conversion and raw scoring were not rerun.",
+      "Historical absolute paths are provenance, not accessed inputs.",
+      "Uses the same NumPy RNG and quantile implementation; this is not cross-platform validation or a full release."
+    ],
+    "numpy_version": "2.2.6",
+    "planned_endpoints": 24,
+    "publication_ready": false,
+    "python_version": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+    "raw_source_admission_repeated": false,
+    "source_sha256": "55c4882a1b273c54e3c674f4e52082d6d6ff9a39c47a1d03f12ac314c2fd9fa0",
+    "status": "retained_corrected_swiss_arithmetic_reproduced"
+  },
+  "traces": [
+    {
+      "bytes": 163921,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/ob-comparison.files.log",
+      "sha256": "9eb3157b4ff09c3df65121ca70f5b217a400872992ea47f50c6853018e8200dc"
+    },
+    {
+      "bytes": 164846,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/swiss-comparison.files.log",
+      "sha256": "7d4ee6e74d834d7a303b3e87b830b125b3be65763821c2b6a6214eabb0ccbdd7"
+    },
+    {
+      "bytes": 185850,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/ob-factorial.files.log",
+      "sha256": "2824865e403b9ee1874a0d3f5b76d8f3bb121f9db6568071c73ba8327ca31608"
+    },
+    {
+      "bytes": 197483,
+      "path": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/qfo-factorial.files.log",
+      "sha256": "e875dd8f690a2dc6dcdd118b06a1377d6cff115d0d8a3ce362ea8cd14e29cb10"
+    }
+  ],
+  "verified_files": 117,
+  "version": "orthohmm-study-2026.10.04-rc2",
+  "workflow_revision": "5e0468511184df34f48f53f1bf04e65809308683",
+  "copied_statistics_commands": [
+    {
+      "role": "OrthoBench comparison",
+      "trace": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/ob-comparison.files.log",
+      "exit_code": 0,
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/check_ob_complete_uncertainty.py",
+        "--portable",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/results/ob_complete_portable_statistics_20260928.json",
+        "--sha256",
+        "cdb30ff987100843f3127a39a75eb3649123a136229b8b41e6ed156209aff30e",
+        "--output",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-comparison"
+      ]
+    },
+    {
+      "role": "SwissTrees comparison",
+      "trace": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/swiss-comparison.files.log",
+      "exit_code": 0,
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/reproduce_corrected_swiss_comparison.py",
+        "--results",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json",
+        "--results-sha256",
+        "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34",
+        "--retained-counts-only",
+        "--output",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/swiss-comparison.json"
+      ]
+    },
+    {
+      "role": "OrthoBench factorial",
+      "trace": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/ob-factorial.files.log",
+      "exit_code": 0,
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/reproduce_orthobench_factorial.py",
+        "--worker",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics",
+        "--output",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/ob-factorial"
+      ]
+    },
+    {
+      "role": "Corrected QfO factorial",
+      "trace": "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/qfo-factorial.files.log",
+      "exit_code": 0,
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics/benchmark_tools/reproduce_corrected_factorial.py",
+        "--worker",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/restored/statistics",
+        "--output",
+        "/tmp/orthohmm-study-2026.10.04-rc2-yqNc12/replayed/qfo-factorial"
+      ]
+    }
+  ],
+  "command_environment": {
+    "cwd": "/tmp",
+    "removed": [
+      "PYTHONHOME",
+      "PYTHONPATH",
+      "LD_PRELOAD",
+      "LD_LIBRARY_PATH",
+      "LD_AUDIT"
+    ],
+    "set": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "cache_prefix_scope": "Each execution used a distinct absent /dev/shm/orthohmm-rc2-* cache prefix.",
+    "instrumentation_argv": [
+      "/usr/bin/strace",
+      "-f",
+      "-e",
+      "trace=%file",
+      "-o",
+      "PER_COMMAND_TRACE"
+    ]
+  },
+  "initial_selection_failure": {
+    "selection": "benchmark_tools/results/publication_package_rc2_selection_20261004.json",
+    "sha256": "86c065cf80feb68a0e98f325af45d89eae5064f1e3d050c8b402a807f3f9139c",
+    "exit_code": 1,
+    "reason": "Source checksum mismatch: benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md",
+    "output_created": false,
+    "disposition": "Preserve initial selection. V2 inherits archived rc1 bytes and adds current claims separately."
+  },
+  "build_archive_restore_verify_exit_codes": {
+    "build": 0,
+    "archive": 0,
+    "copied_restore": 0,
+    "copied_verify": 0
+  }
+}

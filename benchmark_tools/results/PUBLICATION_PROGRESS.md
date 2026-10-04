@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Main Statistical Routes Restored And Replayed In Actual rc2 (2026-10-04)
+
+The [actual local rc2 package](PUBLICATION_PACKAGE_RC2_RESULT_20261004.md)
+has115 selected inputs/117 payloads, with24 added statistics/count/protocol
+files. Initial selection7588064d refuses a changed inherited claim file before
+writing output. V2 sourceb7107df5 inherits verified rc1 bytes and retains the
+current checklist separately, preserving all75 original selected payloads.
+
+Actual build/archive/copied isolated restore/verify all pass. Then execute
+the four newly integrated routes outside the checkout:21 OrthoBench and24
+SwissTrees endpoints reproduce, and both factorials exactly match their
+retained scientific fields. Python3.12.3/NumPy2.2.6 and single-thread numerical
+execution are recorded. Independent output/inventory/hash readback passes;
+four file traces show no original analysis-checkout or historical QfO input
+access. Scientific conditions, endpoints and all original artifacts stay fixed.
+
+This is concrete main-results delivery progress, not native inference,
+statistical-coverage proof or full publication completion. Reuse unchanged
+rc1/native/reporting/presentation tests and executions rather than rerun them.
+Commit/push public selection/index/receipt/result and route current readers to
+rc2 without reinterpreting historical guides. Archive remains local; no DOI,
+public upload, new software release or journal submission is fabricated.
+
+Next address remaining scientifically justified uncertainty/error-analysis,
+development-family inventory and per-ablation cost gaps, with exact missing
+historical evidence retained. No owned native job is live. The full goal
+remains active/incomplete; no contention-only or DGX gate is reintroduced.
+
 ## Main Comparison And Factorial Delivery Gap Identified (2026-10-04)
 
 The precedingc66c35d9 turn makes concrete register/metadata progress. Read the
