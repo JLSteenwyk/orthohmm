@@ -2,6 +2,14 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [third working main text](results/PUBLICATION_MAIN_TEXT_20261004_v3.md)
+now integrates the exposure, candidate-cap and historical cost/provenance
+addenda below. [Forty-two tests](results/PUBLICATION_EVIDENCE_INTEGRATION_RESULT_20261004.md)
+check new quantitative claims and preserve original abstract/results/references.
+This source is not yet rendered or archived. The 34-page review remains bound
+to revision two; rc3 remains its separately described older snapshot. Do not
+present either as a rendered/bundled copy of revision three.
+
 The [retained development-family inventory](results/DEVELOPMENT_FAMILY_INVENTORY_RESULT_20261004.md)
 now covers 1,785 immutable JSON result blobs plus 114 separately hash-frozen
 local-only reports. All 70 OrthoBench/18 retained SwissTrees families have

@@ -1,0 +1,51 @@
+{
+  "schema": "publication_evidence_integration_v1",
+  "status": "revised_manuscript_source_and_claim_readback_passed",
+  "date": "2026-10-04",
+  "preceding_inventory_commit": "e78150a1",
+  "scientific_or_native_runs_started": 0,
+  "timing_or_accuracy_recomputed": false,
+  "frozen_method_modified": false,
+  "original_results_content_preserved": true,
+  "original_abstract_and_references_preserved": true,
+  "previous_source_and_pdf_identity_preserved": true,
+  "new_source_rendered": false,
+  "new_source_graphically_reviewed": false,
+  "new_source_archived": false,
+  "tests": {
+    "files": ["tests/unit/test_publication_evidence_integration.py", "tests/unit/test_inventory_development_families.py"],
+    "interpreter": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m pytest",
+    "environment": {"removed": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"], "PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"},
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "reported_seconds": 0.66,
+    "invocations": 1
+  },
+  "drafting_history": [
+    "Copied the previous source through apply_patch into a separately named third revision; exact anchors preserve previous scientific sections.",
+    "Before tests/render/package, direct fixture JSON inspection corrected an unpublished interpretation of unattached satellite IDs as counts. All three cases leave one satellite unattached; their identities are 8, 0 and 7.",
+    "Added tests binding those identities/counts and all other newly integrated quantitative claims to retained evidence. No selected render or archive was created or retried."
+  ],
+  "pins": [
+    {"path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004_v2.md", "bytes": 46072, "sha256": "8c4635d8bb5041937ffc60f3e5155d6e60e6a53b808d174c78d6801e2592d337"},
+    {"path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004_v3.md", "bytes": 52755, "sha256": "18baad343773fbf3c142a64b21a5d0c4245c1f37b9ddec7610af3999c20bd5ec"},
+    {"path": "tests/unit/test_publication_evidence_integration.py", "bytes": 6707, "sha256": "b9d5222f457e98869ae4876efdf47ba9475ce477e7a062e5eb750984037d5bc3"},
+    {"path": "benchmarks/work/publication_evidence_integration_tests_20261004.xml", "bytes": 7216, "sha256": "5205bee3341772042de09ef0f332025c0af2a0a8f7a66749fbd264706dc42b9a"},
+    {"path": "benchmark_tools/results/development_family_inventory_20261004/inventory.json", "bytes": 3587549, "sha256": "d5a9b2b778164fd86ed069d379a96eaaedf7be541c021d10c0534acaba154761"},
+    {"path": "benchmark_tools/results/candidate_trace_variation_20261004/diagnostic.json", "bytes": 57796, "sha256": "11d576cbdf671dc777bdd3c7a0926d80e15922e095000785c82f9f3e332fffbb"},
+    {"path": "benchmark_tools/results/factorial_native_resource_linkage_20261004/linkage.json", "bytes": 112199, "sha256": "896063b253c06f8691068231d241f8cc6eb2c7f588baee4efa1a6e72a42d4cac"},
+    {"path": "benchmark_tools/results/qfo_orthohmm_stage_metadata_20261004/register.json", "bytes": 601870, "sha256": "a1cf40e172614f7c9a5e7906cb4121dce17ac7f6c8ff516977a421de05ac867a"},
+    {"path": "benchmark_tools/results/factorial_retained_resources_20261004/resources.json", "bytes": 24361, "sha256": "4c7801197a9bc89927964f952d03325187341a0ce2fe2cc5f6c4aa7700e581a6"},
+    {"path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v3/register.json", "bytes": 571775, "sha256": "4c6f01afb28ef36c25991155c2484a6e2db273556529506350c2f7912083ba80"},
+    {"path": "benchmark_tools/results/publication_main_with_figures_20261004_v2/document.pdf", "bytes": 565362, "sha256": "07f2411b3e59f8295c928b8164b30ee6ba0c76cc4a470121871941200a73d1f2"}
+  ],
+  "scope": {
+    "new_statistical_or_biological_validation": false,
+    "complete_causal_tuning_history": false,
+    "full_cached_execution_costs_established": false,
+    "all_tool_runtime_attestation_established": false,
+    "public_deposition_executed": false,
+    "publication_ready": false
+  }
+}

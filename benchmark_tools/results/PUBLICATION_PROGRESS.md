@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Development And Reproducibility Evidence Integrated (2026-10-04)
+
+After delivering/pushing the verified inventory at e78150a1, take the next
+available substantive publication action. The new third main-text revision
+integrates that inventory, candidate-cap/tie diagnostics, six retained OB
+native observations, selected corrected QfO stage chains and all-tool metadata.
+No scientific score, endpoint, native run, timing observation or default changes.
+
+All 42 integration/inventory tests pass on their first invocation. They bind
+new claims to actual JSON evidence and preserve the original abstract, Results
+content, references, v2 source and 34-page PDF identities. During drafting,
+direct fixture JSON inspection corrects an unpublished ID/count error: 8/0/7
+are unattached satellite IDs, and every case leaves one satellite unattached.
+Three identity/count regression cases prevent that misleading interpretation.
+The [result/receipt](PUBLICATION_EVIDENCE_INTEGRATION_RESULT_20261004.md) pins
+both source texts, tests/JUnit, six machine-readable inputs and the unchanged PDF.
+
+Deliver/push the new source/tests/receipt and routing updates. No new render,
+graphical review or archive is executed here; v2 PDF and rc3 keep their actual
+historical scope. Next render/view the exact v3 source and integrate the now
+completed scientific addenda into a new reproducible bundle. Do not rerun
+the closed timing panel or completed native/statistical admissions for that.
+Broader QfO uncertainty, causal history, biological strata, missing original
+costs and distribution/readiness gaps remain; the full goal is active.
+
 ## Retained Development-Family Inventory Delivered (2026-10-04)
 
 The previous user-requested turn synchronizes/pushes the shared-host goal at
