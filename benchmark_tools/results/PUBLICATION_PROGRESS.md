@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Evidence-Integrated Candidate Rc4 Prepared (2026-10-04)
+
+The preceding f65a6e8a turn makes progress through the source-bound 35-page
+review. Read the full goal/newest ledger and query Slurm: no owned job live.
+Preserve the finished scientific/native/timing routes; use the existing package
+reader for the next actual publication action rather than repeat them.
+
+New rc4 preparation preserves all 137 selected rc3 payloads and includes the
+original selection/reader under history, retaining all 139 indexed identities.
+Add the exact reviewed third source/PDF, compact exposure/candidate/native-cost/
+QfO/all-tool/factorial reports and their scope/receipt documentation. Old reviews
+and archive statements remain historical, not relabelled as current artifacts.
+
+The stdlib-only addenda replay recomputes all 88-family exposure projections,
+9,156 association rows, satellite IDs/counts, six native-point summaries,
+64 metric positions/eight secondary means and stage-observation identities.
+It retains sixteen unavailable original full costs and never opens historical
+paths in metadata. This does not replay raw Git/local discovery, fixture engine,
+raw accepted traces, native accounting or scientific uncertainty/independence.
+The original 114 local reports remain separately pinned and unbundled.
+
+All 29 replay/composer preparation cases pass on their first invocation.
+An earlier read-only metadata probe assumed the factorial 'cells' field was a
+list; its TypeError precedes any selected output or scientific invocation.
+Prepare/push source/tests/guide before selection/build/archive. Next perform
+actual external copied restore/verify/replay, compare every inherited identity
+and regenerated TSV, and deliver exact anchors/receipt. The full goal remains
+active with broader scientific, rights and public-distribution gaps intact.
+
 ## Evidence-Integrated Main Text Rendered And Reviewed (2026-10-04)
 
 Classify the preceding 6fd0b51f turn as progress: it delivered the verified
