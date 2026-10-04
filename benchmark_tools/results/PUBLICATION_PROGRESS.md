@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Documentary Reaffirmation Prepared And Index 24 Released (2026-10-04)
+
+Commit/push `5d465692` closes index-23 review/table v24/figure v23. The prior
+goal synchronization changes a directly pinned documentary file, not science.
+Commit/push `363fdee3` adds a separately dated narrow continuation and 12
+passing focused tests. Actual preparation verifies the original goal against
+its historical Git commit and accepts only the authorized insertion. New
+[binding receipts](THREADRIPPER_GOAL_REAFFIRMATION_20261004.md) preserve all
+nondocumentary preparation/policy/readiness fields. Independent readback
+verifies 76 direct references; original preparation, kernel, runtime, accounting
+calibration and earlier attempts stay unchanged. No expensive diagnostic repeats.
+
+The new continuation checks the 24-identity reviewed prefix, exact held
+allocation, request/comment and frozen selection, then releases only index24
+as 22420: satellite_v2/twelve proteomes/repeat2. Launcher tool handle is terminal.
+Fresh accounting confirms parent/batch RUNNING at2:24; observer setup is still
+in progress and native handoff is not yet established at this checkpoint.
+Keep observing this exact job, without restart or advancing25. Table v24/figure
+v23 remain 24 reviewed/22 measured/21 eligible/four complete cells; no resource
+point or accuracy is admitted from submission. Full goal remains active with
+remaining panel, final manuscript/resource reconciliation and release/archive.
+
 ## Index 23 Reviewed And Fourth Complete Cell (2026-10-04)
 
 Previous turn is progress: `ba13ea79` synchronizes and pushes the shared-host

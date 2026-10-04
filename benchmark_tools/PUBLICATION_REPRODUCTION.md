@@ -74,6 +74,11 @@ pass. Full OrthoFinder/eight proteomes supplies the fourth complete cell.
 Three identities remain unreviewed and unsubmitted; no panel job is live at
 this review checkpoint. Next is index 24, satellite_v2/twelve proteomes/repeat 2,
 after fresh history/capacity/native handoff. Native output counts are not accuracy.
+The [goal reaffirmation binding](results/THREADRIPPER_GOAL_REAFFIRMATION_20261004.md)
+preserves historical preparation and writes new documentary-only policy/readiness
+references for the synchronized goal. Use its new continuation for indices 24-26;
+the existing prepared live-snapshot/terminal-review helpers and resource protocol
+remain unchanged. Actual launch history and capacity still require fresh checks.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
@@ -1448,12 +1453,12 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Shared-host resource panel: seventeen of the 27 frozen attempts have reviewed
-  native resource evidence in the current snapshot. The eighteenth attempt was
-  separately reviewed as aborted before native launch and has no endpoints;
-  the remaining sequential panel, post-repair binding/integration and final reporting are
-  incomplete. Local Threadripper `bizon` is approved, not the DGX. Use the
-  [executed continuation contract](results/THREADRIPPER_SHARED_CONTINUATION_20261003.md)
+- Shared-host resource panel: 24 of the 27 frozen attempts are reviewed,
+  including 22 native resource measurements, 21 eligible observations and two
+  pre-native aborts with no endpoints. Four cells have three eligible repeats.
+  The remaining sequential panel and final reporting are incomplete.
+  Local Threadripper `bizon` is approved, not the DGX. Use the
+  [goal-reaffirmed continuation](results/THREADRIPPER_GOAL_REAFFIRMATION_20261004.md)
   with identical native limits, fresh capacity checks, intact input/runtime
   pins and independent terminal/resource/output review. The
   [shared-host amendment](results/PUBLICATION_SHARED_HOST_AMENDMENT_20261003.md)

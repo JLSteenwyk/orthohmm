@@ -26,3 +26,18 @@ the actual request supplies the new policy/readiness. Fresh live handoff and
 all terminal reviews remain required. Never call old preparation again or
 overwrite failed/successful attempts. Shared timings remain potentially
 confounded observations, not isolated efficiency evidence.
+
+## Actual Preparation
+
+After source commit `363fdee3`, preparation completes once. New
+[policy](threadripper_goal_reaffirmed_policy_20261004.json),
+[readiness](threadripper_goal_reaffirmed_readiness_20261004.json) and
+[preparation](threadripper_goal_reaffirmed_preparation_20261004.json) retain
+all nondocumentary fields exactly. Preparation is 9,549 bytes, SHA-256
+`4ca020551c2a4461d2e129c175ad87df2cfee60ce4b77c3a8529e56c08733380`.
+Independent readback checks 76 direct evidence references and field equality;
+the [validation receipt](threadripper_goal_reaffirmation_validation_20261004.json)
+binds the actual 12-test JUnit, test/continuation source and preparation.
+Its scope is documentary binding, not a new accounting/runtime diagnostic or
+an actual native launch. The preparation retains its historical 21-identity
+prefix metadata; every new launch independently checks the current full prefix.

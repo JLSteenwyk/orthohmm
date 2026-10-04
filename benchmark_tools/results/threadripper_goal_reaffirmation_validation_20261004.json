@@ -1,0 +1,37 @@
+{
+  "accounting_calibration_repeated": false,
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 12
+  },
+  "evidence": [
+    {
+      "bytes": 2038,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/goal_reaffirmation_tests_20261004.xml",
+      "sha256": "58b19d552e71fe42d68cb0fc8964e27b676fb14721dbaf27b07aeb4a15b49c33"
+    },
+    {
+      "bytes": 8458,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_continue_shared_goal_reaffirmed.py",
+      "sha256": "aba553684f8f28c58795da63f373efaa0b084de4b3d89e4e8f8e5408b0e28402"
+    },
+    {
+      "bytes": 8838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py",
+      "sha256": "b21335eabc5d1d81d3a0e5c21b0d397053d1174bbec64c7d9bf07e01943c455d"
+    },
+    {
+      "bytes": 9549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_goal_reaffirmed_preparation_20261004.json",
+      "sha256": "4ca020551c2a4461d2e129c175ad87df2cfee60ce4b77c3a8529e56c08733380"
+    }
+  ],
+  "junit_time_seconds": 0.477,
+  "native_inference_repeated": false,
+  "science_runtime_resource_bounds_unchanged": true,
+  "scope": "Documentary binding and focused unit tests; actual launch capacity and native handoff remain per-run gates",
+  "status": "documentary_reaffirmation_validated",
+  "verified_direct_evidence_pins": 76
+}
