@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Prepared Resource Archive Compatibility (2026-10-04)
+
+Previous turn is progress: `eb12b88a` commits/pushes index-22 startup evidence.
+Read the full goal/current ledger and inspect fresh accounting: the same
+22418 parent/batch/native step remains RUNNING. No completed science or
+diagnostic is restarted. Remaining release review finds that the historical
+resource component handles only the older table format, not prepared-panel
+pre-native aborts. Add a separately versioned
+[reporting component](PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md),
+preserving historical sources/archives and all current execution bindings.
+
+The new component reuses actual table/figure functions and hash-pinned helper,
+includes the current source formats and explicitly records schema 2. Eighteen
+focused tests pass in 3.97s: actual partial coverage/failures, relocated isolated
+stdlib CLI, exact three-table/PNG replay and negative integrity/scope/coverage/
+imputation/output guards. The unit builder mocks Git; commit the source before
+actual committed archive execution. No raw-accounting/native reproduction,
+new accuracy, complete panel or publication readiness is inferred.
+
+22418 search reaches 75%, not a whole-pipeline percentage. Table v22/figure v21
+remain unchanged. On continuation poll the exact job and review after terminal
+state before advancing index 23. Final panel/manuscript reconciliation and
+versioned/archive release remain open; no quiet-host prerequisite returns.
+
 ## Index 22 Prepared Handoff And Native Search Live (2026-10-04)
 
 The preceding goal-prompt update is progress: it changes the authoritative
