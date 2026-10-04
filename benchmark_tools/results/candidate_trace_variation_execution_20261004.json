@@ -1,0 +1,47 @@
+{
+  "schema": "candidate_trace_variation_execution_v1",
+  "status": "actual_retained_trace_and_frozen_fixture_readback_passed",
+  "execution_date": "2026-10-04",
+  "full_native_inference_or_timing_repeated": false,
+  "tiny_candidate_stage_fixtures_executed": true,
+  "hmm_search_or_accuracy_scoring_repeated": false,
+  "frozen_method_or_defaults_modified": false,
+  "unrelated_work_changed": false,
+  "publication_ready": false,
+  "collections": [
+    {"interpreter": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "python": "3.12.3", "numpy": "2.2.6", "output_directory": "benchmark_tools/results/candidate_trace_variation_20261004", "exit_code": 0, "attempts": 1},
+    {"interpreter": "benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python", "python": "3.10.13", "numpy": "2.2.6", "output_directory": "benchmark_tools/results/candidate_trace_variation_native_runtime_20261004", "exit_code": 0, "attempts": 1}
+  ],
+  "invocation": "env -u PYTHONHOME -u PYTHONPATH -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 INTERPRETER -B benchmark_tools/diagnose_candidate_trace_variation.py --root . --output-directory OUTPUT_DIRECTORY",
+  "report_differences_between_interpreters": ["diagnostic_runtime"],
+  "direct_inputs_per_report": 7,
+  "accepted_records_per_trace": 8440,
+  "common_semantic_merges_by_index": {"8": 8428, "16": 8439, "24": 8426},
+  "common_anchors_with_changed_sources_by_index": {"8": 2, "16": 1, "24": 4},
+  "every_changed_common_anchor_at_four_attachment_cap": true,
+  "all_common_cluster_indices_and_directional_hit_counts_equal": true,
+  "maximum_common_support_absolute_delta": 2.1316282072803006e-14,
+  "fixture": {"genes": 19, "directed_hits": 180, "cases": 3, "merges_per_case": 8, "rounds_per_case": 2, "unattached_satellites": [8, 0, 7], "maximum_score_perturbation": 2.220446049250313e-16},
+  "tests": {"initial": {"passed": 76, "failed": 0}, "extended_runtime_readback": {"passed": 77, "failed": 0}, "final_portability_guards": {"passed": 77, "failed": 0, "skipped": 0}},
+  "limitations": [
+    "Complete accepted-trace readback and synthetic sufficient-mechanism fixture, not complete historical candidate/hit-array causal replay.",
+    "Historical common cluster IDs match; index-order sensitivity in the fixture is not proof of historical relabeling.",
+    "Score-bit provenance, rejected candidate order, native pair/tree/alignment equality and new benchmark accuracy remain unestablished.",
+    "Frozen native source, existing timing panel, original results, main PDF and rc3 archive are unchanged. No timing correction or contention-only retry is performed.",
+    "JUnit execution evidence remains local and pinned; no public deposition or full-goal completion is asserted."
+  ],
+  "references": [
+    {"path": "benchmark_tools/diagnose_candidate_trace_variation.py", "bytes": 15043, "sha256": "bb8160b4d0a5290f9a80461631623423a8facfc5584304789c56c7fb1d9c0c2e"},
+    {"path": "benchmark_tools/collect_factorial_resources.py", "bytes": 12895, "sha256": "42455c76194fbfae27cb0d0367d77e24c5e9c95417319c57d8413f4aaca164d6"},
+    {"path": "benchmark_tools/prepare_ob_candidate_neighborhood.py", "bytes": 7448, "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"},
+    {"path": "tests/unit/test_diagnose_candidate_trace_variation.py", "bytes": 7619, "sha256": "a7d599f5482a5d88e27d67d996c2455cd2c582aae85a1269b05e2a17bd6b6799"},
+    {"path": "benchmark_tools/results/candidate_trace_variation_20261004/diagnostic.json", "bytes": 57796, "sha256": "11d576cbdf671dc777bdd3c7a0926d80e15922e095000785c82f9f3e332fffbb"},
+    {"path": "benchmark_tools/results/candidate_trace_variation_20261004/diagnostic.md", "bytes": 2169, "sha256": "41d95dabb303b77cdc973d7e356e4e3faadcfd303b39af2e938835dec04417ff"},
+    {"path": "benchmark_tools/results/candidate_trace_variation_native_runtime_20261004/diagnostic.json", "bytes": 57797, "sha256": "f8e8d41583c25e96f98120ab4fcfae7ea158d419fc9daca80e6f310baa34828b"},
+    {"path": "benchmark_tools/results/candidate_trace_variation_native_runtime_20261004/diagnostic.md", "bytes": 2169, "sha256": "41d95dabb303b77cdc973d7e356e4e3faadcfd303b39af2e938835dec04417ff"},
+    {"path": "benchmarks/work/candidate_trace_variation_tests_20261004.xml", "bytes": 11333, "sha256": "643654f43a35ac8044766bf455af33fac008d79d2a00e3707c48c0cbea8ef9f0"},
+    {"path": "benchmarks/work/candidate_trace_variation_final_tests_20261004.xml", "bytes": 11489, "sha256": "d26fbb7ad2005e4e7393f9d8a130a707406bb7df1834f7b7327a081f2938b350"},
+    {"path": "benchmarks/work/candidate_trace_variation_portability_tests_20261004.xml", "bytes": 11489, "sha256": "5006d6bf9e215ef3bab1fe2ab1898277068cb87ba6850cbfe3cf942e1eab86f8"},
+    {"path": "benchmark_tools/results/CANDIDATE_TRACE_VARIATION_RESULT_20261004.md", "bytes": 5532, "sha256": "d64a0224d68941499bf828c4ead9ffccba6c652d2584145825413f43391e743d"}
+  ]
+}

@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Candidate Cap/Tie Sensitivity Demonstrated (2026-10-04)
+
+The preceding 17a9184f turn delivers and pushes the native cost/partition
+linkage. Read the full goal/current ledger and check Slurm; no owned native
+job is live. Trace the actual newly discovered candidate differences using
+retained artifacts, not fresh inference or contention-only retries.
+
+The [new mechanism result](CANDIDATE_TRACE_VARIATION_RESULT_20261004.md) compares
+all four 8,440-record merge traces by named memberships and round. Native
+repeats share 8,428/8,439/8,426 accepted records with the original. Common
+cluster indices and directional hit counts match; maximum support delta is
+2.13e-14. All 2/1/4 changed common anchors reach the four-attachment cap.
+Preserve round-specific differences and propagated anchor changes. Accepted
+traces alone do not prove rejected-candidate ranks or score-bit provenance.
+
+A 19-gene frozen-engine fixture with the original parameters changes the
+unattached satellite under cluster-order-only and one-ULP-score-only changes,
+while preserving eight merges/two rounds. Reporting Python 3.12.3 and the
+actual native timing Python 3.10.13 reproduce all diagnostic fields identically
+except interpreter version; both use NumPy 2.2.6. This demonstrates sufficient
+cap/tie mechanisms, not a causal reconstruction of every historical difference.
+Do not attribute observed variation to changed common indices or host contention.
+
+Both diagnostic collections pass first invocation; initial/final combined
+tests pass 76/77 cases. Pin both reports, source/helpers, tests and JUnit evidence.
+Commit/push the executable diagnosis, real readbacks and guide/result/ledger
+updates. No native inference, HMM search, scoring, production setting/default,
+main PDF or rc3 snapshot changes. No unrelated job/service action is introduced.
+
+Next audit genuinely remaining configuration-cost requirements and the current
+full-goal gaps before selective new measurements. A future determinism change
+needs prospective numerical/order tests and new independent confirmation if
+memberships change; do not silently revise the frozen study baseline. Broader
+uncertainty, inventory, biological strata and distribution remain incomplete.
+
 ## Native Configuration Costs Linked Without Rerunning (2026-10-04)
 
 The preceding goal-update turn restates the already-authorized shared-host

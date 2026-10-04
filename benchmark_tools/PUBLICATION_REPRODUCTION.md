@@ -1653,3 +1653,30 @@ for the existing group reader, not fresh inference or a newly certified quiet
 host. The [receipt](results/factorial_native_resource_linkage_execution_20261004.json)
 records the actual collection, preserved reporting failures and 53 passing tests.
 This addendum is newer than the unchanged main PDF and rc3 snapshot.
+
+### Candidate Cap And Tie Diagnostic
+
+The [candidate-variation result](results/CANDIDATE_TRACE_VARIATION_RESULT_20261004.md)
+compares all accepted satellite merge records and demonstrates cap/tie sensitivity
+with a 19-gene frozen-engine fixture. It establishes a sufficient mechanism,
+not historical score-bit provenance or a new accuracy result. Common historical
+cluster indices match; do not claim that relabeling or shared-host contention
+caused the observed differences. Frozen method/settings remain unchanged.
+
+Use the same environment-cleared command shown above, but replace its script
+and destination with:
+
+```bash
+benchmark_tools/diagnose_candidate_trace_variation.py --root . \
+  --output-directory /tmp/orthohmm-candidate-trace-readback
+```
+
+Use an absent output directory. This reads four retained traces and runs three
+tiny candidate-stage fixtures. It does not launch native benchmarks or recheck
+completed raw accounting audits. The reporting Python 3.12.3 and actual private
+native timing Python 3.10.13 executions both pass; retained reports differ only
+in their recorded Python version. The
+[execution receipt](results/candidate_trace_variation_execution_20261004.json)
+records input/source pins and 77 passing combined tests. Preserve every original
+repeat and its resource scope; do not use the diagnostic to select outputs,
+correct timings or change the frozen baseline retrospectively.
