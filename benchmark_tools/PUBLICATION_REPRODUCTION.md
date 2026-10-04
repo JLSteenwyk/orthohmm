@@ -1625,3 +1625,31 @@ submission or completed publication release is asserted. The
 use live scheduler state, not historical ledger prose, to decide whether
 a job is still running. Preserve failed and incomplete experiments rather
 than silently rerunning or selecting favorable outcomes.
+
+### Retained Native Configuration Cost Linkage
+
+The [native linkage addendum](results/FACTORIAL_NATIVE_RESOURCE_LINKAGE_RESULT_20261004.md)
+checks six completed 12-proteome native observations against the original
+OrthoBench inputs and prescribed settings. All high-sensitivity final partitions
+match; phylogenetic candidates and two final partitions vary outside the reference
+families. Costs remain separately scoped to the retained private deployment and
+shared host, not the original cached factorial executions. Keep all repeats and
+the difference lists; do not silently attach these costs as exact-output costs
+to the historical accuracy table. Fourteen other configurations remain unmatched.
+
+To replay this read-only linkage using the existing analysis environment:
+
+```bash
+env -u PYTHONHOME -u PYTHONPATH -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT \
+  PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 \
+  OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B \
+  benchmark_tools/link_factorial_scaling_resources.py --root . \
+  --output-directory /tmp/orthohmm-native-linkage-readback
+```
+
+Use an absent output directory. This needs retained local artifacts and NumPy
+for the existing group reader, not fresh inference or a newly certified quiet
+host. The [receipt](results/factorial_native_resource_linkage_execution_20261004.json)
+records the actual collection, preserved reporting failures and 53 passing tests.
+This addendum is newer than the unchanged main PDF and rc3 snapshot.

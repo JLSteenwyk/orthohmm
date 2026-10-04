@@ -1,0 +1,50 @@
+{
+  "schema": "factorial_native_resource_linkage_execution_v1",
+  "status": "actual_retained_linkage_and_readback_passed",
+  "execution_date": "2026-10-04",
+  "native_inference_or_timing_repeated": false,
+  "accuracy_recomputed": false,
+  "scientific_defaults_changed": false,
+  "unrelated_work_changed": false,
+  "publication_ready": false,
+  "command": "env -u PYTHONHOME -u PYTHONPATH -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B benchmark_tools/link_factorial_scaling_resources.py --root . --output-directory benchmark_tools/results/factorial_native_resource_linkage_20261004",
+  "successful_collection_exit_code": 0,
+  "observations": 6,
+  "prescribed_configurations": 2,
+  "direct_input_identities": 173,
+  "unmatched_factorial_configurations": 14,
+  "exact_final_partition_matches": 4,
+  "all_reference_touching_final_partitions_equal": true,
+  "final_partition_genes_in_changed_groups_by_index": {"7": 0, "8": 0, "15": 0, "16": 149, "24": 172, "26": 0},
+  "candidate_partition_genes_in_changed_groups_by_index": {"8": 70, "16": 160, "24": 253},
+  "tests": {
+    "initial": {"passed": 23, "skipped": 1, "failed": 0},
+    "interim_actual_readback_and_stage_cost_tests": {"passed": 48, "failed": 0},
+    "final_actual_readback_and_stage_cost_tests": {"passed": 53, "failed": 0}
+  },
+  "preserved_reporting_failures": [
+    {"exit_code": 1, "output_created": false, "reason": "Reader incorrectly expected final panel to pin every intermediate attempt summary; terminal review pins and panel fields are the retained authoritative bindings."},
+    {"exit_code": 1, "output_created": false, "reason": "Reader omitted interpreter prefix from expected native metrics command; corrected to the actual recorded convention."},
+    {"exit_code": 1, "output_created": false, "reason": "Candidate equality assertion detected genuine membership differences; report these as diagnostics rather than claiming exact original intermediate reproduction."}
+  ],
+  "limitations": [
+    "Actual collection and focused readback, not new scientific inference, independent accuracy scoring or whole-goal completion.",
+    "All native observations remain shared-host with unknown potentially method-dependent contention; no isolated or causal speed claim.",
+    "New cost associations describe prescribed configurations under the patched private runtime, not original cached execution costs or exact reproduction of all intermediates.",
+    "Main PDF and rc3 archive remain unchanged historical snapshots. Original factorial stage table and failures remain intact.",
+    "JUnit files remain local pinned execution evidence, not committed scientific inputs or public archive deposition."
+  ],
+  "references": [
+    {"path": "benchmark_tools/link_factorial_scaling_resources.py", "bytes": 17394, "sha256": "909dfa6b30f9f3f0aed219d398a1630682f3482611110843df13440f60783c21"},
+    {"path": "benchmark_tools/collect_factorial_resources.py", "bytes": 12895, "sha256": "42455c76194fbfae27cb0d0367d77e24c5e9c95417319c57d8413f4aaca164d6"},
+    {"path": "benchmark_tools/prepare_ob_candidate_neighborhood.py", "bytes": 7448, "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"},
+    {"path": "benchmark_tools/score_ygob_groups.py", "bytes": 8335, "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"},
+    {"path": "tests/unit/test_link_factorial_scaling_resources.py", "bytes": 9501, "sha256": "47fbb024c1316924b3f0ee3963ae4d1ef98620bbd1161dbcfa501c843756b98c"},
+    {"path": "benchmark_tools/results/factorial_native_resource_linkage_20261004/linkage.json", "bytes": 112199, "sha256": "896063b253c06f8691068231d241f8cc6eb2c7f588baee4efa1a6e72a42d4cac"},
+    {"path": "benchmark_tools/results/factorial_native_resource_linkage_20261004/linkage.md", "bytes": 2672, "sha256": "23d5b99c305cee804ba57dbb3862a20a466b9a1c211604b5a1c4a1338b98fc40"},
+    {"path": "benchmarks/work/factorial_native_linkage_initial_tests_20261004.xml", "bytes": 3831, "sha256": "a056bcbae42dab8397321fbdca273e89da55ab21941e252c3e731dc6013c382a"},
+    {"path": "benchmarks/work/factorial_native_linkage_readback_tests_20261004.xml", "bytes": 7307, "sha256": "8b249f797cfdf6654644d48b4c3f5ed88403e26c411a017e1404640040fd81fc"},
+    {"path": "benchmarks/work/factorial_native_linkage_final_tests_20261004.xml", "bytes": 8097, "sha256": "b8a1154204c42aec89eedddd51875fc44b704ea43ecbdc7edcbfc98f5c624abe"},
+    {"path": "benchmark_tools/results/FACTORIAL_NATIVE_RESOURCE_LINKAGE_RESULT_20261004.md", "bytes": 5106, "sha256": "b92e3143475e296dca712e750591473f55a21319b2d74fa302046f562f363fdc"}
+  ]
+}

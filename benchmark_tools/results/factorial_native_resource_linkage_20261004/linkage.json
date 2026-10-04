@@ -1,0 +1,3005 @@
+{
+  "accuracy_recomputed": false,
+  "frozen_resources": {
+    "host": "bizon",
+    "memory_bytes": 137438953472,
+    "native_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "native_timeout_s": 85800,
+    "native_workers": 32,
+    "scheduler_cpu_slots": 64
+  },
+  "inputs": [
+    {
+      "bytes": 63452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+      "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+    },
+    {
+      "bytes": 199307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+      "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+    },
+    {
+      "bytes": 206643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_private_commands_20260928.json",
+      "sha256": "a9358ac4f3c2f3eb9c1d7ce6a32528f8dd4bffef25d43cf95ac9765c5f2f3d05"
+    },
+    {
+      "bytes": 4471,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22403.json",
+      "sha256": "beb31a9d114d41a18f2e8df81f82ec637ee9a7d46269a882a5c5745da127ef23"
+    },
+    {
+      "bytes": 5167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22404.json",
+      "sha256": "15e34be890d8a86335886bfb902e4e9b882a342da9ae5111231c902ff80c8f10"
+    },
+    {
+      "bytes": 4473,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22411.json",
+      "sha256": "14fb0e58a31d2ac4278871383e7b56ae78029c544a1121d4673507247626513f"
+    },
+    {
+      "bytes": 5170,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22412.json",
+      "sha256": "ca48fa547eedb389732af3eba76d322e8394039cbbc8fb93dc83da951216cadc"
+    },
+    {
+      "bytes": 5724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22420.json",
+      "sha256": "b22b112be3f827145e5f3cf4be446234b6c5feee132fb785691a30620bb9fc53"
+    },
+    {
+      "bytes": 5026,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22424.json",
+      "sha256": "3df555a7bba6fffd5a1e9c77eae91d3754458db26b38f8ed22eb1c14bbc85be9"
+    },
+    {
+      "bytes": 378715,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json",
+      "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c0/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "8ee100f4370fef6e3e6a3e0fd36112adcc3aefeb60197331115667c519ca121f"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "44f201dbc7e4eccf06d9401e5ce1b20fdf6ad523e15ee6007fe1c58f3941842d"
+    },
+    {
+      "bytes": 6489,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1.json",
+      "sha256": "e87e31f5715d1cca1a3934b7731cd3ad68e62209d6df67a23d2463f1b814816f"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/cells/p1_c1_r1/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "5e35c1de220d0d4dca2ff64f255a55ad4d1740abbcbadbf746f91cba57f9622b"
+    },
+    {
+      "bytes": 4760,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_07/orthohmm_high_sensitivity.json",
+      "sha256": "95d9756452e51d605708d83d0314d7a09a66a165eb30c2e982c638cf77e89cfc"
+    },
+    {
+      "bytes": 5133681,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_07/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+      "sha256": "6e45166cde26bcf17585c208f385b4a8ab5b2460a642f1ce2e5e619cd465e5d5"
+    },
+    {
+      "bytes": 7951,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_08/orthohmm_satellite_v2.json",
+      "sha256": "adf18c06809074036ba1ce8fdfad963a7e805e1b16dada6c268f8735bb9d318d"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_08/orthohmm_satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "3ee914d81d0dc01c5fe7f623277e201587c84eba8e4d4496c35d76d0e44d2f84"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_08/orthohmm_satellite_v2/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "9ac1218e6827a411e339c642837d0ab008fca96cc1abd96aed7642215b409f04"
+    },
+    {
+      "bytes": 4759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/orthohmm_high_sensitivity.json",
+      "sha256": "e0bd28d286aaf996d676dfa8ad43cbbb4069535ff5423f2ab3aa43233c5d2159"
+    },
+    {
+      "bytes": 5133681,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+      "sha256": "6e45166cde26bcf17585c208f385b4a8ab5b2460a642f1ce2e5e619cd465e5d5"
+    },
+    {
+      "bytes": 7947,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_16/orthohmm_satellite_v2.json",
+      "sha256": "a973b2c6363402ae1c1b5748fbf277f95b9d73570ece6a56775358d21cf883e3"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_16/orthohmm_satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "d86d081eb36670ada8abcc10e84a410f9fcff04739e3253342f14631202ddad4"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_16/orthohmm_satellite_v2/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "e5baba1e9a4803f6d8d85c9fb2c1485647fba809a38c218576e5e784ccefec39"
+    },
+    {
+      "bytes": 7948,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_24/orthohmm_satellite_v2.json",
+      "sha256": "db91853afe859d6a3bd17d29435ecac22cb1ebe19f5c985108370dfbf0f86fb0"
+    },
+    {
+      "bytes": 6301075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_24/orthohmm_satellite_v2/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "20cc2f5d32e675ff5b945863605c6f69a34c5ca33e856d9fb1a1a2d8f8ea37de"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_24/orthohmm_satellite_v2/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "sha256": "ea6de6f7fd857a45e269a21b719e329f362fe9d5cf3235c59d9b1044e24879e9"
+    },
+    {
+      "bytes": 4755,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_26/orthohmm_high_sensitivity.json",
+      "sha256": "b689cdb1eac1e53dd93d9da12dac21790054e728d4da5f315d47483e86d994da"
+    },
+    {
+      "bytes": 5133681,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_26/orthohmm_high_sensitivity/orthohmm_orthogroups.txt",
+      "sha256": "6e45166cde26bcf17585c208f385b4a8ab5b2460a642f1ce2e5e619cd465e5d5"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/__main__.py",
+      "sha256": "59690e02073880a5ec60087a93d77e3448a3370bb78fb17ee9ce9d5300d0d45a"
+    },
+    {
+      "bytes": 14046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/accuracy.py",
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "bytes": 7908,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/args_processing.py",
+      "sha256": "12648aeaa4e8d0b0af60f707e90ec2c95b6983c4498dacd9bccfade1839f4c54"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 2977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/files.py",
+      "sha256": "f1ec2acaea2566615b06b0a37e17b77f76bbd87fe6f2c76560a318343f6871a1"
+    },
+    {
+      "bytes": 32293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/leiden_worker.py",
+      "sha256": "7d6d9fa5827bd99dcce28d2248688bbeb762b4b547bbc4e7491c16f0e2090c41"
+    },
+    {
+      "bytes": 6812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/metrics.py",
+      "sha256": "d19bc9c9777b2dd01943f6421930f9fab02b7153519ab76e6a40272328195a1a"
+    },
+    {
+      "bytes": 30663,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/orthohmm.py",
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    {
+      "bytes": 15939,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/parser.py",
+      "sha256": "9a959b9948d944fc5361a661ac3faad55575674993c746800daf6db7eccceba5"
+    },
+    {
+      "bytes": 29732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny.py",
+      "sha256": "216d97608e6dede8960f3b06fe7036bd23da8fae5677df88583ba9369ec3c1bf"
+    },
+    {
+      "bytes": 41369,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/phylogeny_pipeline.py",
+      "sha256": "44e00316546b5df78354badd2b1a6bb595b685e98b86f686f1a32543d7f15e4f"
+    },
+    {
+      "bytes": 61183,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/refinement.py",
+      "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 7759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/hmm_forward.c",
+      "sha256": "f29e0ce42978e43ca2b3a8576e327e536a1ec8537757feff01d756d96045c026"
+    },
+    {
+      "bytes": 15413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/hmm_viterbi_striped.c",
+      "sha256": "261c1a298663b9c9c46050c9b5a521e8be9cc5997e07b06204e08f4a45a19917"
+    },
+    {
+      "bytes": 7506,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/csrc/kmer_merge.c",
+      "sha256": "8dce3c7e882c0ec68195b6dacc96c31d246bfa38c2515a473cd03542a8f28c2a"
+    },
+    {
+      "bytes": 8599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/_experimental/viterbi_cuda_numba.py",
+      "sha256": "be998cf737f5c468417a84cc42d6f9c288133b6da09989ba1630d2c7d07fbdd2"
+    },
+    {
+      "bytes": 46012,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "b668f86de525776e939f1c3196b41f3c870dd22cc56e35a93dff6a957d01f67c"
+    },
+    {
+      "bytes": 13696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/hmm_viterbi_cuda.cu",
+      "sha256": "aa0a7a6fa53da025f28607a055364c08c365e561033a48dcf2c4381d350301d2"
+    },
+    {
+      "bytes": 10657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 9098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 21146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/engine.py",
+      "sha256": "596e6e56b6dd3c2e72bbfa5bb67087285bd22833e4897443df0f9629a2f18b74"
+    },
+    {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/evalue.py",
+      "sha256": "b395cd48874d75963512b5d1e249c5251796f869592a52983c8d55b98fe11841"
+    },
+    {
+      "bytes": 27982,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/matrices.py",
+      "sha256": "36e59a6c649a72f9c3a5d6eca117b7fe84d5ff8e975a1d7561a82ee8d6c29fcb"
+    },
+    {
+      "bytes": 9180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/msa_center_star.py",
+      "sha256": "3790801fc294f2df9ae3c84897de410b1a1bb487b8ea4226d86c388c379f40ab"
+    },
+    {
+      "bytes": 6728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/msa_profile.py",
+      "sha256": "d4076b61905325f643dca1f7a6b4dbd6f2833398840fad7b79e3f255f2240468"
+    },
+    {
+      "bytes": 22855,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/prefilter.py",
+      "sha256": "9842b1787d98a89bd819f9adbe340b6e2a170d63d16057645720a6bc9faf6d06"
+    },
+    {
+      "bytes": 6143,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile.py",
+      "sha256": "20dca3dea06a85bdcf99e03e3abfab921fce38b9d7715097b0b4588a7cd7587e"
+    },
+    {
+      "bytes": 25077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/profile_expansion.py",
+      "sha256": "1025cfab4f80e3a85d6eaa3e768ae5e0e25dedb48fdba9deb08cb6e6aa7bb42a"
+    },
+    {
+      "bytes": 4509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/sequences.py",
+      "sha256": "e083679cb9ea780664943355d260f398a96d93a2db336bb615af1032766f5980"
+    },
+    {
+      "bytes": 5324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/species_prune.py",
+      "sha256": "d729b9aa8ddf311c52e1d46c51d89dc5a6ef5d64ccd979deca90b7d980905b9e"
+    },
+    {
+      "bytes": 17693,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/viterbi.py",
+      "sha256": "ba8543538d9bcbd55c5eaf5c7c3d5725a62c071b00d925f5fabaa474001948ba"
+    },
+    {
+      "bytes": 4420,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/search/viterbi_cuda_ctypes.py",
+      "sha256": "fba688e77941c92c5e4080ef5de3dc23e4dfee6c5c2dad5d7ccdf876f81f9d20"
+    },
+    {
+      "bytes": 22,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/version.py",
+      "sha256": "2c12b8ea17aeb6f9f72a6b02aca218bbc4508a46df9e365a8f6c45ad769e0b34"
+    },
+    {
+      "bytes": 2949,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/writer.py",
+      "sha256": "d3dc7a318166272762395dfcb772d8779286bbf60023b2934a7d7bef0e0003fe"
+    },
+    {
+      "bytes": 1858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_07/environment_review.json",
+      "sha256": "a049c19fc3e3d22aeb137f67be58bd22030ed95367a6739ee15a81ef05217295"
+    },
+    {
+      "bytes": 1016,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_07/outputs_or_failure_review.json",
+      "sha256": "ab49395917c7343307a78a985c272f43eac6d563ff59b5a20f2f5d23c0d54e93"
+    },
+    {
+      "bytes": 1565,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_07/resources_review.json",
+      "sha256": "d5ca6f75181919a94bf808c142fbd0e37bfe95fce7b96f3e663d34d6e0197ddf"
+    },
+    {
+      "bytes": 4363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_07/runtime_review.json",
+      "sha256": "6a0418b3f534fbdbfd1f03be7f3580152f5b5e105c64364404a80ecbb280bd2e"
+    },
+    {
+      "bytes": 1858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_08/environment_review.json",
+      "sha256": "9bcf62686eba6cfe4ebdd6211584f137e24313affd88b9bf89e06b93eb38a4d8"
+    },
+    {
+      "bytes": 1016,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_08/outputs_or_failure_review.json",
+      "sha256": "a016df7beb719bcdc6f2cf1326b11a159b690ccf5c07cf7c0753fdf81990e1d9"
+    },
+    {
+      "bytes": 1565,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_08/resources_review.json",
+      "sha256": "468aa96ce3102089b7ae6d9e56c9e04eb7ff43fd9909cd2e988edddaffe2fbb1"
+    },
+    {
+      "bytes": 4363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_08/runtime_review.json",
+      "sha256": "1b6f6ff869ff028b4465d4930b38a9924f90558c8ba0976aa05f1d3cfe3c5624"
+    },
+    {
+      "bytes": 1858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_15/environment_review.json",
+      "sha256": "c034f9a153c92699a81c90893879ed5d253fc0318dde480ebe9b876b0161bc3c"
+    },
+    {
+      "bytes": 1017,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_15/outputs_or_failure_review.json",
+      "sha256": "c5e377cc4c5c4788056700b0735fdb1b5154e85597cc20db8de9ac85d0297116"
+    },
+    {
+      "bytes": 1566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_15/resources_review.json",
+      "sha256": "669800b2d251d2dc29d7049a92434bbc15561c0c117de5de3aca77c3be473194"
+    },
+    {
+      "bytes": 4364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_15/runtime_review.json",
+      "sha256": "6eabd9988b52dafadc5afbb3c0977abe510838f68643c5abec055e8d2c083ae7"
+    },
+    {
+      "bytes": 1859,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_16/environment_review.json",
+      "sha256": "9f003f611ef32a41b17dca956cce1b5b780d1605415df1a8486fbe6433b948f8"
+    },
+    {
+      "bytes": 1017,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_16/outputs_or_failure_review.json",
+      "sha256": "fcf9fda1da50537660b654d57edff88fd749ffec413b727c272b4986648720f7"
+    },
+    {
+      "bytes": 1566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_16/resources_review.json",
+      "sha256": "a687f236452c7fa8e22393062aae84ea52e93df42e1f4f384896592f3f247ea0"
+    },
+    {
+      "bytes": 4364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_16/runtime_review.json",
+      "sha256": "09fa1ea8ca9894d549281485c5e41f44c78cacde1e6cabba7a62bea2feaa5e17"
+    },
+    {
+      "bytes": 4363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_24/environment_review.json",
+      "sha256": "3512a13017b307a481f585c387f67e3fcea2579bf3dc12c2607155486b391312"
+    },
+    {
+      "bytes": 1010,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_24/outputs_or_failure_review.json",
+      "sha256": "799c32a0942f5aaa53f546c0f007e5408ac8e0f0b93e8bac4b001b86869e896a"
+    },
+    {
+      "bytes": 1560,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_24/resources_review.json",
+      "sha256": "f784670b57e248999b60cc11c52c0e48a6da9d7e8daac6f3253e89a78cb85061"
+    },
+    {
+      "bytes": 4359,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_24/runtime_review.json",
+      "sha256": "e6a8012b0bde6a10d8d49fd4528efca7e52e5b868c8d81bb00bc274a34e42fd1"
+    },
+    {
+      "bytes": 4362,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_26/environment_review.json",
+      "sha256": "e6a3ade18b47d9dc83b7b236d54278d7df7ec829dbda17dcdf2c321f84e5ddbd"
+    },
+    {
+      "bytes": 1010,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_26/outputs_or_failure_review.json",
+      "sha256": "376ac720ed1e39cb7faf412877f842fc725188644fa8d11d0a8c620d0de2e38e"
+    },
+    {
+      "bytes": 1560,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_26/resources_review.json",
+      "sha256": "ae47457425180599e559805a63e46df731f14141b08481faf5440563d986074f"
+    },
+    {
+      "bytes": 4359,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/review_run_26/runtime_review.json",
+      "sha256": "bd6246a9d7394cc02208cbc637e75c1026aa204d7166fe7d327fe723663d0157"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG001.txt",
+      "sha256": "83429b3e93256557d7b22e5262702de391bb81c5d94c3d1d409103e87e46cb30"
+    },
+    {
+      "bytes": 346,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG002.txt",
+      "sha256": "cc41b273ef98fb394b52b2167f9f7277c5914c4baf481afcbe96dee0319b4a61"
+    },
+    {
+      "bytes": 935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG003.txt",
+      "sha256": "0eab9b709426d7b3303d621215c1fe6bb5c9ad2032697c053ae062bf12086224"
+    },
+    {
+      "bytes": 223,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG004.txt",
+      "sha256": "8ad2db4e9a3ced09fe52ffff2c1aa90986de760f5df22266c301099b0061fbc2"
+    },
+    {
+      "bytes": 628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG005.txt",
+      "sha256": "21d3c8f98e4e6402cc9e90d649aa5acc0b269082a550c2b6b2637b2e26d1d505"
+    },
+    {
+      "bytes": 886,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG006.txt",
+      "sha256": "2a4b44023011b5e7b88ae8f6089ab43d0a4d5d9857d8ee1e0db4b132ce42fb8c"
+    },
+    {
+      "bytes": 1065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG007.txt",
+      "sha256": "f55ee153b25f544784d13319ab2cf5eacb564e90ae9161dadc818a55a7d2eabc"
+    },
+    {
+      "bytes": 251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG008.txt",
+      "sha256": "34b3bfdb70a847d36fa2afb1230271ce7bec67cab42bab3f88b659c7fe994626"
+    },
+    {
+      "bytes": 422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG009.txt",
+      "sha256": "77a03d9e055790dd789d12032e54ef15fb2f7c61834d695685176d5e0b6a6c21"
+    },
+    {
+      "bytes": 57,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG010.txt",
+      "sha256": "cffa508146453c480a0959a9e2ed08617804d519c937be9094385ec4c5795ff5"
+    },
+    {
+      "bytes": 1743,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG011.txt",
+      "sha256": "1f32f081e3f1ef11a507164620b5e6d05b76e6e8f0fabc86bb4e4f0de3789047"
+    },
+    {
+      "bytes": 846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG012.txt",
+      "sha256": "697b92f069841e7b9ec967db9e045e331b58403acc1dcf177a92be24ec262ddd"
+    },
+    {
+      "bytes": 339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG013.txt",
+      "sha256": "ccd3d5e217b5485620465f27e71b0477c895f4bc6f8349b8f94e1021165a0bd1"
+    },
+    {
+      "bytes": 781,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG014.txt",
+      "sha256": "b9d2746e3d4485239f992db90fb3ac69d0e0114f9a47ebfd947a5ff190f5fca3"
+    },
+    {
+      "bytes": 551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG015.txt",
+      "sha256": "042d77fb136b840e4e46f089c1923ba077226d860e14829bd684f09863040504"
+    },
+    {
+      "bytes": 462,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG016.txt",
+      "sha256": "b88255bb9a44d76fe001d10395edadfa4055a451352d6d7870a5cf82cfe0e191"
+    },
+    {
+      "bytes": 545,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG017.txt",
+      "sha256": "873750215ea94753e998895d4f3fc344a75720cada7bf372bb3d6318bed81813"
+    },
+    {
+      "bytes": 219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG018.txt",
+      "sha256": "29a622397ed97572bf0483f0095eb4efbc2073b0439d260a16c10c202b92b09a"
+    },
+    {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG019.txt",
+      "sha256": "e685d81377adc9ba9df0f2c8ab387799698c70c824a7f9e6ffaac5d116dd4006"
+    },
+    {
+      "bytes": 514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG020.txt",
+      "sha256": "fe3bd2f9b42f1d4229a57b8384dc94ba101da00b5e817bf91960c874461fd5dd"
+    },
+    {
+      "bytes": 2323,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG021.txt",
+      "sha256": "8e5b2c8a45af7d108d9e63282b6544b518ddeaf68b033ed3b3f65de71f85c211"
+    },
+    {
+      "bytes": 647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG022.txt",
+      "sha256": "0b19a8ec969fac32886200de47c4641a0d269df81d603d12807fbc2eb6a2c606"
+    },
+    {
+      "bytes": 1275,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG023.txt",
+      "sha256": "6a1b29994c981d6d6c1ffd3ceb2e3f66c0bcbb9aef1acfe52561c85ea67c40be"
+    },
+    {
+      "bytes": 945,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG024.txt",
+      "sha256": "127afacdd0443f0f2106706f51dfeebbdca3010d8891a7f4072d18793c3caa83"
+    },
+    {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG025.txt",
+      "sha256": "f7b773801fde7b29ececec18eab286caa4fed334ff5a4513776e2f0beff8e186"
+    },
+    {
+      "bytes": 789,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG026.txt",
+      "sha256": "e5d3ec13969b8c881106427b6aa7ebd5bfd1d8570faf750da181c7b076272a58"
+    },
+    {
+      "bytes": 367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG027.txt",
+      "sha256": "96219227d0d623ab6e866b0f8479defb2765dff6fadd1614389f088db8e7728d"
+    },
+    {
+      "bytes": 443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG028.txt",
+      "sha256": "c9c1011e5cd7985abf5090097a341c162c53384a9267d00a54e51dea02b1a851"
+    },
+    {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG029.txt",
+      "sha256": "7dc2b1ba66646679201360b40df5f593393944e8c96e8578eaa2aefa9f1af05f"
+    },
+    {
+      "bytes": 232,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG030.txt",
+      "sha256": "f54fb4593b909faee8b179c7214167f68a0a62596b901b61ab77c5c8ffb9107b"
+    },
+    {
+      "bytes": 587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG031.txt",
+      "sha256": "5bfc570a11355d5855bf421ce855e68e8ab87ad69893993243ae4a0d8356dce9"
+    },
+    {
+      "bytes": 240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG032.txt",
+      "sha256": "d383a06984f78e2d6a25356ca8ae9b3fce2864082a9deb08fc26db3fa67dbbc2"
+    },
+    {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG033.txt",
+      "sha256": "3d59ba23ebde8498d2597e4c386f49ad36bbdbf5a502ac146b871485931e4668"
+    },
+    {
+      "bytes": 393,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG034.txt",
+      "sha256": "37d37458c70f2b002f3a6da00f200e2acf07f5788e01f09afe34038b1a4f781a"
+    },
+    {
+      "bytes": 599,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG035.txt",
+      "sha256": "938760f99423516db71efa3744b9876ea6b4a015a337f30dbc437b80bb169cd9"
+    },
+    {
+      "bytes": 853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG036.txt",
+      "sha256": "8fe4b897a7cf9d0d45b247064eb4cf306e98dba2875becf9b40bba602db6fa89"
+    },
+    {
+      "bytes": 630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG037.txt",
+      "sha256": "81607943a81f43af7fa27b1ca4c426c4285dd0b5008b7755e100feffc8294008"
+    },
+    {
+      "bytes": 168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG038.txt",
+      "sha256": "4e196096b0a785d18edd335c2c5fce33cfe647132bd6dbea1c6162631f569180"
+    },
+    {
+      "bytes": 372,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG039.txt",
+      "sha256": "fd884b568fc7a38bbf72d37858c318385be126688535ed2e7c3a3e4467f0fb78"
+    },
+    {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG040.txt",
+      "sha256": "dd543547410ce8d8e19869ff271dadca05cc04c6bb4e7e8c2b6615192420554b"
+    },
+    {
+      "bytes": 309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG041.txt",
+      "sha256": "56f003823b1313a6e719286591201a9cc156ee62717dd91129872f385d124553"
+    },
+    {
+      "bytes": 199,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG042.txt",
+      "sha256": "a285ba294591e98fb6932e5321ebe25714503419cc49559e717cbc94f42c7f7a"
+    },
+    {
+      "bytes": 311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG043.txt",
+      "sha256": "5ea47e0533f6475d8ba7a88738929be897d89aa1736d05bc2b77fc7d5eb28505"
+    },
+    {
+      "bytes": 251,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG044.txt",
+      "sha256": "1b3c6818c8fcfc4595a85773f1080bd2b8b64239c70f3d62a878c86e6ccd82b5"
+    },
+    {
+      "bytes": 233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG045.txt",
+      "sha256": "a15febeab6c95f24711bf5e6ce74e3f0af6d627342727836f98e3838a359ba9a"
+    },
+    {
+      "bytes": 596,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG046.txt",
+      "sha256": "d144bd70880389693b80ecd78446bf1f6a5095001e221d16f90a6f4523cc636d"
+    },
+    {
+      "bytes": 663,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG047.txt",
+      "sha256": "bb42a9c8b8a551c1824deb190ebde19d5c4bd18f6c77d660815f7a4e77cfe484"
+    },
+    {
+      "bytes": 745,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG048.txt",
+      "sha256": "042ec2230f0266557b989b9a7e18e2a97196b7a8cbfdc3fef436634c1b5353ba"
+    },
+    {
+      "bytes": 184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG049.txt",
+      "sha256": "650593062675fe03672ead1bb2c99ea019033087d6d2affc99db93ea840223c6"
+    },
+    {
+      "bytes": 248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG050.txt",
+      "sha256": "b8709f35070f357fcdbde427cf421c53f02de6b2de79ccaa2033afb013c1e002"
+    },
+    {
+      "bytes": 311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG051.txt",
+      "sha256": "7ed92e4910292450ecb63193946105125f017d28b256a8796df83d79a5f101ee"
+    },
+    {
+      "bytes": 282,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG052.txt",
+      "sha256": "cfab4664d45c49c68ac8285e2205d79d5c7737f7b1f56268a892b440015d2478"
+    },
+    {
+      "bytes": 237,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG053.txt",
+      "sha256": "79aeb065ecb4ef38326288187e3c478e73abace5e6ae09ff1c99c2f669602290"
+    },
+    {
+      "bytes": 801,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG054.txt",
+      "sha256": "7f136708ffb2ea5ef3185ed4ab3fc9f199caa3d56c81fd2f57589df819aee2ef"
+    },
+    {
+      "bytes": 539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG055.txt",
+      "sha256": "38611031e58d4c818f900044b091b9fdb5e377a147a1322a653cba557cb29298"
+    },
+    {
+      "bytes": 161,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG056.txt",
+      "sha256": "947e4834280633318c0e236d7b9ee95406cf5b610333001ff5ac888e227c082a"
+    },
+    {
+      "bytes": 292,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG057.txt",
+      "sha256": "15b85f9f0575b69408ce48b9da07cdc2539f4df9bcb65c99c52fd346716f55bd"
+    },
+    {
+      "bytes": 929,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG058.txt",
+      "sha256": "5697a188e1f95be9ba1cb8d07fc510c449eb680b0e9c64ede9e75d891fe444fd"
+    },
+    {
+      "bytes": 187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG059.txt",
+      "sha256": "232e7260d7ebe987757520539390d71862d9632b68729c35621f2260a82ae9c7"
+    },
+    {
+      "bytes": 1263,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG060.txt",
+      "sha256": "8d86da3230a2c31ce57a1d3e1042f8b4c9b40e9853fb8ef17869432848e6e377"
+    },
+    {
+      "bytes": 561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG061.txt",
+      "sha256": "87476a60757a7e8fc8286ab2b325df5cb020a8e4b35b61fc4166bb0834a59c60"
+    },
+    {
+      "bytes": 199,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG062.txt",
+      "sha256": "6960f0a5a9768a53684f6a181fc80c6971850edc0716b268f5cc69e19abc9368"
+    },
+    {
+      "bytes": 386,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG063.txt",
+      "sha256": "350a327be6b22ca3cfa0721d75188f34835be03368549a83061368a714114bf3"
+    },
+    {
+      "bytes": 264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG064.txt",
+      "sha256": "98d3b3b091217279227b5924293bb6c6fa740b3658415c3793a8a643511c504a"
+    },
+    {
+      "bytes": 180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG065.txt",
+      "sha256": "b6255142e05c38a987eb06562ff1ee6491aeb766c2419833b84f6784cd8e7149"
+    },
+    {
+      "bytes": 252,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG066.txt",
+      "sha256": "f5ab9dc90a1385c3df885483670bc43f147d06d17b1b95f643575f379d0c1f0b"
+    },
+    {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG067.txt",
+      "sha256": "25122b591f8f1bea20e25940669f02e693a2aba9e2b370e3bd6738cc1279dd53"
+    },
+    {
+      "bytes": 590,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG068.txt",
+      "sha256": "1d096936b040969a593ee687c5121d0bb73d94101300ded9225898059d34d312"
+    },
+    {
+      "bytes": 570,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG069.txt",
+      "sha256": "0d218d0bcd422e20b11bef77627de30d84b64f28517d6cd03707ca09507980c5"
+    },
+    {
+      "bytes": 235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/RefOGs/RefOG070.txt",
+      "sha256": "8c47b04182dc619071875562f04d867a1b59c97e0635a4e262af72d85dfd8205"
+    }
+  ],
+  "limitations": [
+    "All six points are retained shared-host native CLI observations. Contention distortion is unknown and potentially method dependent; do not infer isolated tool speed or causal HMM/phylogeny overhead.",
+    "Native launch-to-exit includes inference and output/metrics writing; excludes preparation, harness hashing, conversion and scoring. CPU includes wrapper work; lifetime cgroup memory peak includes launcher work.",
+    "Frozen scientific source and original twelve-proteome bytes are checked, but the patched private runtime differs from the original factorial deployment. These are not costs of the original cached-stage executions.",
+    "Phylogenetic candidate partitions differ despite identical prescribed settings and counts; two final partitions differ in nonreference groups. Retain every repeat, not only matching outputs. These costs describe the prescribed native configurations, not exact reproduction of every original factorial intermediate. Reference-touching final group equality is a structural check, not newly recomputed accuracy or proof of exact whole-output reproducibility.",
+    "Native pair files, inferred trees and alignment bytes are not compared. No pairwise-orthology equivalence or cause of output differences is established.",
+    "Reuse pinned terminal environment/resource/runtime reviews; do not repeat their raw forensic audits. New candidate files are checked as current readbacks, not independently attested historical write events.",
+    "Fourteen other factorial configurations have no associated full-native costs in this report. Do not impute them, combine old/new memory scopes, or pool observations across deployments."
+  ],
+  "native_inference_repeated": false,
+  "original_core_commit": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "original_factorial_stage_costs_modified": false,
+  "points": [
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": null,
+      "cell": "p1_c0_r0",
+      "comparative_timing_eligible": true,
+      "index": 7,
+      "job_id": 22403,
+      "method": "orthohmm_high_sensitivity",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 0,
+        "groups": 62885,
+        "original_only_groups": [],
+        "partition_equal": true,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": []
+      },
+      "preflight_foreign_average_cores": 58.819447196255695,
+      "proteomes": 12,
+      "repeat": 0,
+      "resources": {
+        "cpu_seconds": 86415.319181,
+        "peak_memory_bytes": 11309355008,
+        "wall_seconds": 3027.060520509
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 60.35316424514852
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 70,
+        "groups": 54445,
+        "original_only_groups": [
+          [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSCAFP00000033563",
+            "ENSCAFP00000034229",
+            "ENSCAFP00000036545",
+            "ENSCAFP00000037324",
+            "ENSCAFP00000037435",
+            "ENSCAFP00000038752",
+            "ENSCAFP00000040694",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSP00000477870",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000082015",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ],
+          [
+            "ENSCAFP00000040000",
+            "ENSCAFP00000041760",
+            "ENSCAFP00000054547",
+            "ENSDARP00000084277",
+            "ENSDARP00000099321",
+            "ENSDARP00000107737",
+            "ENSDARP00000112824",
+            "ENSDARP00000127819",
+            "ENSDARP00000142122",
+            "ENSGALP00000042290",
+            "ENSMODP00000038126",
+            "ENSMODP00000052599",
+            "ENSMUSP00000089346",
+            "ENSMUSP00000151536",
+            "ENSP00000333277",
+            "ENSP00000339835",
+            "ENSP00000355657",
+            "ENSP00000494070",
+            "ENSP00000496014",
+            "ENSP00000497053",
+            "ENSP00000499501",
+            "ENSPTRP00000002098",
+            "ENSPTRP00000048353",
+            "ENSRNOP00000048020",
+            "ENSRNOP00000060626",
+            "ENSRNOP00000071260",
+            "ENSRNOP00000071520",
+            "ENSRNOP00000071603",
+            "ENSRNOP00000073598",
+            "ENSTNIP00000000561",
+            "ENSTNIP00000001815",
+            "FBpp0091053",
+            "WBGene00001944.1",
+            "WBGene00012276.1",
+            "WBGene00017638.1"
+          ],
+          [
+            "ENSP00000358154"
+          ],
+          [
+            "ENSP00000385479"
+          ],
+          [
+            "ENSRNOP00000039602"
+          ],
+          [
+            "ENSRNOP00000065233"
+          ],
+          [
+            "ENSRNOP00000066653"
+          ],
+          [
+            "ENSTNIP00000005044"
+          ],
+          [
+            "ENSTNIP00000010417"
+          ],
+          [
+            "ENSTNIP00000011592"
+          ]
+        ],
+        "partition_equal": false,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": [
+          [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSCAFP00000033563",
+            "ENSCAFP00000034229",
+            "ENSCAFP00000036545",
+            "ENSCAFP00000037324",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSP00000477870",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000082015",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000039602",
+            "ENSRNOP00000065233",
+            "ENSRNOP00000066622",
+            "ENSRNOP00000066653",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ],
+          [
+            "ENSCAFP00000037435"
+          ],
+          [
+            "ENSCAFP00000038752"
+          ],
+          [
+            "ENSCAFP00000040000",
+            "ENSCAFP00000041760",
+            "ENSDARP00000127819",
+            "ENSDARP00000142122",
+            "ENSGALP00000042290",
+            "ENSMODP00000038126",
+            "ENSMODP00000052599",
+            "ENSMUSP00000089346",
+            "ENSMUSP00000151536",
+            "ENSP00000333277",
+            "ENSP00000339835",
+            "ENSP00000355657",
+            "ENSP00000358154",
+            "ENSP00000385479",
+            "ENSP00000494070",
+            "ENSP00000496014",
+            "ENSP00000497053",
+            "ENSP00000499501",
+            "ENSPTRP00000002098",
+            "ENSPTRP00000048353",
+            "ENSRNOP00000048020",
+            "ENSRNOP00000060626",
+            "ENSRNOP00000071260",
+            "ENSRNOP00000071520",
+            "ENSRNOP00000071603",
+            "ENSRNOP00000073598",
+            "ENSTNIP00000000561",
+            "ENSTNIP00000001815",
+            "ENSTNIP00000005044",
+            "ENSTNIP00000010417",
+            "ENSTNIP00000011592",
+            "FBpp0091053",
+            "WBGene00001944.1",
+            "WBGene00012276.1",
+            "WBGene00017638.1"
+          ],
+          [
+            "ENSCAFP00000040694"
+          ],
+          [
+            "ENSCAFP00000054547"
+          ],
+          [
+            "ENSDARP00000084277"
+          ],
+          [
+            "ENSDARP00000099321"
+          ],
+          [
+            "ENSDARP00000107737"
+          ],
+          [
+            "ENSDARP00000112824"
+          ]
+        ]
+      },
+      "cell": "p1_c1_r1",
+      "comparative_timing_eligible": true,
+      "index": 8,
+      "job_id": 22404,
+      "method": "orthohmm_satellite_v2",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 0,
+        "groups": 59770,
+        "original_only_groups": [],
+        "partition_equal": true,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": []
+      },
+      "preflight_foreign_average_cores": 59.99506007784335,
+      "proteomes": 12,
+      "repeat": 0,
+      "resources": {
+        "cpu_seconds": 136293.332246,
+        "peak_memory_bytes": 11285721088,
+        "wall_seconds": 4809.292429717
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 61.1453857479534
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": null,
+      "cell": "p1_c0_r0",
+      "comparative_timing_eligible": true,
+      "index": 15,
+      "job_id": 22411,
+      "method": "orthohmm_high_sensitivity",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 0,
+        "groups": 62885,
+        "original_only_groups": [],
+        "partition_equal": true,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": []
+      },
+      "preflight_foreign_average_cores": 54.088758024190476,
+      "proteomes": 12,
+      "repeat": 1,
+      "resources": {
+        "cpu_seconds": 78335.830623,
+        "peak_memory_bytes": 11521089536,
+        "wall_seconds": 2720.077391309
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 54.003228514276124
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 160,
+        "groups": 54445,
+        "original_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000036347",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042491",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000053075",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000138271",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000215057",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000321848",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000341165",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000380840",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000019946",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000048464",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000079698",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000055361",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSPTRP00000067832"
+          ]
+        ],
+        "partition_equal": false,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000036347",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042491",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000053075",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000138271",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000215057",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000321848",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000341165",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000019946",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000048464",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000067832",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000079698",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000055361",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSP00000380840"
+          ]
+        ]
+      },
+      "cell": "p1_c1_r1",
+      "comparative_timing_eligible": true,
+      "index": 16,
+      "job_id": 22412,
+      "method": "orthohmm_satellite_v2",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 149,
+        "groups": 59770,
+        "original_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000380840",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSPTRP00000067832"
+          ]
+        ],
+        "partition_equal": false,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000067832",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSP00000380840"
+          ]
+        ]
+      },
+      "preflight_foreign_average_cores": 53.29699614044061,
+      "proteomes": 12,
+      "repeat": 1,
+      "resources": {
+        "cpu_seconds": 116000.996415,
+        "peak_memory_bytes": 11384778752,
+        "wall_seconds": 4042.426197872
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 54.767255918826756
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 253,
+        "groups": 54445,
+        "original_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000036347",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042491",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000053075",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000138271",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000215057",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000321848",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000341165",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000380840",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000019946",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000048464",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000079698",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000055361",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSCAFP00000033563",
+            "ENSCAFP00000034229",
+            "ENSCAFP00000036545",
+            "ENSCAFP00000037324",
+            "ENSCAFP00000037435",
+            "ENSCAFP00000038752",
+            "ENSCAFP00000040694",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSP00000477870",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000082015",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ],
+          [
+            "ENSCAFP00000036635",
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ],
+          [
+            "ENSCAFP00000040000",
+            "ENSCAFP00000041760",
+            "ENSCAFP00000054547",
+            "ENSDARP00000084277",
+            "ENSDARP00000099321",
+            "ENSDARP00000107737",
+            "ENSDARP00000112824",
+            "ENSDARP00000127819",
+            "ENSDARP00000142122",
+            "ENSGALP00000042290",
+            "ENSMODP00000038126",
+            "ENSMODP00000052599",
+            "ENSMUSP00000089346",
+            "ENSMUSP00000151536",
+            "ENSP00000333277",
+            "ENSP00000339835",
+            "ENSP00000355657",
+            "ENSP00000494070",
+            "ENSP00000496014",
+            "ENSP00000497053",
+            "ENSP00000499501",
+            "ENSPTRP00000002098",
+            "ENSPTRP00000048353",
+            "ENSRNOP00000048020",
+            "ENSRNOP00000060626",
+            "ENSRNOP00000071260",
+            "ENSRNOP00000071520",
+            "ENSRNOP00000071603",
+            "ENSRNOP00000073598",
+            "ENSTNIP00000000561",
+            "ENSTNIP00000001815",
+            "FBpp0091053",
+            "WBGene00001944.1",
+            "WBGene00012276.1",
+            "WBGene00017638.1"
+          ],
+          [
+            "ENSGALP00000044176"
+          ],
+          [
+            "ENSGALP00000049375"
+          ],
+          [
+            "ENSGALP00000055093"
+          ],
+          [
+            "ENSGALP00000069974"
+          ],
+          [
+            "ENSMODP00000043464"
+          ],
+          [
+            "ENSMODP00000047842"
+          ],
+          [
+            "ENSMODP00000048299"
+          ],
+          [
+            "ENSMUSP00000018246"
+          ],
+          [
+            "ENSPTRP00000067832"
+          ],
+          [
+            "ENSRNOP00000044600"
+          ]
+        ],
+        "partition_equal": false,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000036347",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042491",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000053075",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000138271",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000215057",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000321848",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000341165",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000019946",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000048464",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000067832",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000079698",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000055361",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSCAFP00000033563",
+            "ENSCAFP00000034229",
+            "ENSCAFP00000036545",
+            "ENSCAFP00000037324",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000043464",
+            "ENSMODP00000047842",
+            "ENSMODP00000048299",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSP00000477870",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000082015",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ],
+          [
+            "ENSCAFP00000036635"
+          ],
+          [
+            "ENSCAFP00000037435"
+          ],
+          [
+            "ENSCAFP00000038752"
+          ],
+          [
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000018246",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ],
+          [
+            "ENSCAFP00000040000",
+            "ENSCAFP00000041760",
+            "ENSDARP00000127819",
+            "ENSDARP00000142122",
+            "ENSGALP00000042290",
+            "ENSGALP00000044176",
+            "ENSGALP00000049375",
+            "ENSGALP00000055093",
+            "ENSGALP00000069974",
+            "ENSMODP00000038126",
+            "ENSMODP00000052599",
+            "ENSMUSP00000089346",
+            "ENSMUSP00000151536",
+            "ENSP00000333277",
+            "ENSP00000339835",
+            "ENSP00000355657",
+            "ENSP00000494070",
+            "ENSP00000496014",
+            "ENSP00000497053",
+            "ENSP00000499501",
+            "ENSPTRP00000002098",
+            "ENSPTRP00000048353",
+            "ENSRNOP00000044600",
+            "ENSRNOP00000048020",
+            "ENSRNOP00000060626",
+            "ENSRNOP00000071260",
+            "ENSRNOP00000071520",
+            "ENSRNOP00000071603",
+            "ENSRNOP00000073598",
+            "ENSTNIP00000000561",
+            "ENSTNIP00000001815",
+            "FBpp0091053",
+            "WBGene00001944.1",
+            "WBGene00012276.1",
+            "WBGene00017638.1"
+          ],
+          [
+            "ENSCAFP00000040694"
+          ],
+          [
+            "ENSCAFP00000054547"
+          ],
+          [
+            "ENSDARP00000084277"
+          ],
+          [
+            "ENSDARP00000099321"
+          ],
+          [
+            "ENSDARP00000107737"
+          ],
+          [
+            "ENSDARP00000112824"
+          ],
+          [
+            "ENSP00000380840"
+          ]
+        ]
+      },
+      "cell": "p1_c1_r1",
+      "comparative_timing_eligible": true,
+      "index": 24,
+      "job_id": 22420,
+      "method": "orthohmm_satellite_v2",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 172,
+        "groups": 59770,
+        "original_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000380840",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSCAFP00000036635",
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ],
+          [
+            "ENSMUSP00000018246"
+          ],
+          [
+            "ENSPTRP00000067832"
+          ]
+        ],
+        "partition_equal": false,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": [
+          [
+            "ENSCAFP00000002450",
+            "ENSCAFP00000026421",
+            "ENSCAFP00000026466",
+            "ENSCAFP00000028490",
+            "ENSCAFP00000036327",
+            "ENSCAFP00000037944",
+            "ENSCAFP00000038021",
+            "ENSCAFP00000039025",
+            "ENSCAFP00000039078",
+            "ENSCAFP00000040210",
+            "ENSCAFP00000040347",
+            "ENSCAFP00000040746",
+            "ENSCAFP00000041646",
+            "ENSCAFP00000042003",
+            "ENSCAFP00000042561",
+            "ENSCAFP00000042785",
+            "ENSCAFP00000043327",
+            "ENSCAFP00000044182",
+            "ENSCAFP00000045745",
+            "ENSCAFP00000050264",
+            "ENSCAFP00000055039",
+            "ENSDARP00000070251",
+            "ENSDARP00000100490",
+            "ENSDARP00000108385",
+            "ENSDARP00000111096",
+            "ENSDARP00000124764",
+            "ENSDARP00000125339",
+            "ENSDARP00000128228",
+            "ENSDARP00000132644",
+            "ENSDARP00000133215",
+            "ENSDARP00000133353",
+            "ENSDARP00000143192",
+            "ENSDARP00000156951",
+            "ENSGALP00000042881",
+            "ENSGALP00000067418",
+            "ENSMODP00000007819",
+            "ENSMODP00000020981",
+            "ENSMODP00000027685",
+            "ENSMODP00000028109",
+            "ENSMODP00000028624",
+            "ENSMODP00000030190",
+            "ENSMODP00000030503",
+            "ENSMODP00000030629",
+            "ENSMODP00000030659",
+            "ENSMODP00000032816",
+            "ENSMODP00000034671",
+            "ENSMODP00000036195",
+            "ENSMODP00000037236",
+            "ENSMODP00000043181",
+            "ENSMODP00000044353",
+            "ENSMODP00000044486",
+            "ENSMODP00000046274",
+            "ENSMODP00000046932",
+            "ENSMODP00000048238",
+            "ENSMODP00000048634",
+            "ENSMODP00000048889",
+            "ENSMODP00000051113",
+            "ENSMODP00000051605",
+            "ENSMODP00000053013",
+            "ENSMODP00000053775",
+            "ENSMODP00000054774",
+            "ENSMODP00000055670",
+            "ENSMODP00000055689",
+            "ENSMODP00000057127",
+            "ENSMODP00000057246",
+            "ENSMODP00000058764",
+            "ENSMUSP00000023176",
+            "ENSMUSP00000032802",
+            "ENSMUSP00000032803",
+            "ENSMUSP00000051861",
+            "ENSMUSP00000054020",
+            "ENSMUSP00000057253",
+            "ENSMUSP00000072900",
+            "ENSMUSP00000077867",
+            "ENSMUSP00000079482",
+            "ENSMUSP00000079647",
+            "ENSMUSP00000079840",
+            "ENSMUSP00000081167",
+            "ENSMUSP00000140742",
+            "ENSMUSP00000146824",
+            "ENSMUSP00000155685",
+            "ENSP00000219069",
+            "ENSP00000244576",
+            "ENSP00000269834",
+            "ENSP00000270001",
+            "ENSP00000276816",
+            "ENSP00000292579",
+            "ENSP00000319053",
+            "ENSP00000320347",
+            "ENSP00000322545",
+            "ENSP00000328515",
+            "ENSP00000329738",
+            "ENSP00000331577",
+            "ENSP00000333802",
+            "ENSP00000335437",
+            "ENSP00000343581",
+            "ENSP00000362446",
+            "ENSP00000379363",
+            "ENSP00000379368",
+            "ENSP00000406469",
+            "ENSP00000430987",
+            "ENSP00000431265",
+            "ENSP00000466101",
+            "ENSP00000486354",
+            "ENSP00000486576",
+            "ENSP00000487032",
+            "ENSPTRP00000013134",
+            "ENSPTRP00000017417",
+            "ENSPTRP00000018664",
+            "ENSPTRP00000019624",
+            "ENSPTRP00000019874",
+            "ENSPTRP00000025552",
+            "ENSPTRP00000025557",
+            "ENSPTRP00000030442",
+            "ENSPTRP00000035311",
+            "ENSPTRP00000036557",
+            "ENSPTRP00000044543",
+            "ENSPTRP00000054434",
+            "ENSPTRP00000058290",
+            "ENSPTRP00000066502",
+            "ENSPTRP00000067060",
+            "ENSPTRP00000067832",
+            "ENSPTRP00000068347",
+            "ENSPTRP00000072212",
+            "ENSPTRP00000073440",
+            "ENSPTRP00000073639",
+            "ENSPTRP00000081743",
+            "ENSPTRP00000085521",
+            "ENSRNOP00000006641",
+            "ENSRNOP00000010442",
+            "ENSRNOP00000026979",
+            "ENSRNOP00000035384",
+            "ENSRNOP00000036983",
+            "ENSRNOP00000042236",
+            "ENSRNOP00000046702",
+            "ENSRNOP00000064174",
+            "ENSRNOP00000064739",
+            "ENSRNOP00000064992",
+            "ENSRNOP00000065446",
+            "ENSRNOP00000067546",
+            "ENSRNOP00000067685",
+            "ENSRNOP00000068565",
+            "ENSRNOP00000071787",
+            "ENSRNOP00000073606",
+            "ENSRNOP00000075093",
+            "ENSRNOP00000075741",
+            "ENSTNIP00000002552",
+            "ENSTNIP00000009359"
+          ],
+          [
+            "ENSCAFP00000036635"
+          ],
+          [
+            "ENSCAFP00000038958",
+            "ENSCAFP00000047241",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000046557",
+            "ENSMODP00000047271",
+            "ENSMODP00000048087",
+            "ENSMODP00000054239",
+            "ENSMODP00000054862",
+            "ENSMUSP00000018246",
+            "ENSMUSP00000076397",
+            "ENSP00000358151",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ],
+          [
+            "ENSP00000380840"
+          ]
+        ]
+      },
+      "preflight_foreign_average_cores": 62.10478741232914,
+      "proteomes": 12,
+      "repeat": 2,
+      "resources": {
+        "cpu_seconds": 125264.737465,
+        "peak_memory_bytes": 11277897728,
+        "wall_seconds": 4392.871580988
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 72.87075385829765
+    },
+    {
+      "boundary": "Native CLI launch through exit; includes native metrics/output writing, excludes harness hashing and external validation",
+      "candidate_partition": null,
+      "cell": "p1_c0_r0",
+      "comparative_timing_eligible": true,
+      "index": 26,
+      "job_id": 22424,
+      "method": "orthohmm_high_sensitivity",
+      "native_python": "3.10.13",
+      "partition": {
+        "genes": 251378,
+        "genes_in_changed_groups": 0,
+        "groups": 62885,
+        "original_only_groups": [],
+        "partition_equal": true,
+        "reference_genes_in_changed_groups": [],
+        "reference_touching_groups_equal": true,
+        "scaling_only_groups": []
+      },
+      "preflight_foreign_average_cores": 48.115459310348555,
+      "proteomes": 12,
+      "repeat": 2,
+      "resources": {
+        "cpu_seconds": 75126.858767,
+        "peak_memory_bytes": 11333189632,
+        "wall_seconds": 2621.49764478
+      },
+      "retained_terminal_reviews_reused": true,
+      "status": "reviewed_shared_observation",
+      "whole_run_maximum_foreign_average_cores": 51.12370945720034
+    }
+  ],
+  "publication_ready": false,
+  "resource_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "schema": "factorial_native_resource_linkage_v1",
+  "source": {
+    "bytes": 17394,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/link_factorial_scaling_resources.py",
+    "sha256": "909dfa6b30f9f3f0aed219d398a1630682f3482611110843df13440f60783c21"
+  },
+  "status": "native_configuration_cost_linkage_checked",
+  "summaries": [
+    {
+      "cell": "p1_c0_r0",
+      "dataset": "OrthoBench",
+      "exact_partition_repeats": 3,
+      "reference_touching_groups_equal_all_repeats": true,
+      "repeats": 3,
+      "resources": {
+        "cpu_seconds": {
+          "maximum": 86415.319181,
+          "median": 78335.830623,
+          "minimum": 75126.858767
+        },
+        "peak_memory_bytes": {
+          "maximum": 11521089536,
+          "median": 11333189632,
+          "minimum": 11309355008
+        },
+        "wall_seconds": {
+          "maximum": 3027.060520509,
+          "median": 2720.077391309,
+          "minimum": 2621.49764478
+        }
+      }
+    },
+    {
+      "cell": "p1_c1_r1",
+      "dataset": "OrthoBench",
+      "exact_partition_repeats": 1,
+      "reference_touching_groups_equal_all_repeats": true,
+      "repeats": 3,
+      "resources": {
+        "cpu_seconds": {
+          "maximum": 136293.332246,
+          "median": 125264.737465,
+          "minimum": 116000.996415
+        },
+        "peak_memory_bytes": {
+          "maximum": 11384778752,
+          "median": 11285721088,
+          "minimum": 11277897728
+        },
+        "wall_seconds": {
+          "maximum": 4809.292429717,
+          "median": 4392.871580988,
+          "minimum": 4042.426197872
+        }
+      }
+    }
+  ],
+  "unmatched_cells": [
+    {
+      "cell": "p0_c0_r0",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p0_c0_r1",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p0_c1_r0",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p0_c1_r1",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p1_c0_r1",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p1_c1_r0",
+      "dataset": "OrthoBench"
+    },
+    {
+      "cell": "p0_c0_r0",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p0_c0_r1",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p0_c1_r0",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p0_c1_r1",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p1_c0_r0",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p1_c0_r1",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p1_c1_r0",
+      "dataset": "Corrected QfO"
+    },
+    {
+      "cell": "p1_c1_r1",
+      "dataset": "Corrected QfO"
+    }
+  ]
+}

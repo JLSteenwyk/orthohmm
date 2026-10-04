@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native Configuration Costs Linked Without Rerunning (2026-10-04)
+
+The preceding goal-update turn restates the already-authorized shared-host
+scope but adds no scientific evidence. On resumption read the full goal/current
+ledger and check Slurm: no owned job is live. Continue the retained full-cost
+linkage investigation rather than restart timing, diagnostics or inference.
+
+The [new source-bound report](FACTORIAL_NATIVE_RESOURCE_LINKAGE_RESULT_20261004.md)
+checks 173 direct input identities and associates six completed native observations
+with two prescribed OrthoBench configurations. All twelve original FASTAs,
+251,378 genes, 38 core sources, scientific settings and complete native stages
+check. Reuse the four-category terminal reviews and final panel's exact resource
+and contention values. All 53 focused tests pass, including actual readback.
+
+High sensitivity reproduces the original final partition in all three repeats.
+Phylogeny reproduces it in one repeat; two differ in groups containing 149/172
+genes. All three phylogenetic candidate partitions also differ (70/160/253 genes
+in affected groups). None of these changed groups intersects the 70 reference
+families. Preserve complete difference lists; matching counts/settings are not
+proof of exact outputs or candidate membership. No new accuracy or cause of
+variation is asserted. Do not select matching or fastest repeats.
+
+Native wall medians are 2720.077 and 4392.872 seconds under the retained private
+runtime and shared-host contention. These are not the original cached-execution
+costs, isolated efficiency evidence or causal HMM/phylogeny overhead. Fourteen
+other configurations remain unmatched here. Original sixteen-cell stage table,
+main PDF, rc3 archive, frozen source/defaults and all native runs stay unchanged.
+Three reporting failures before output are documented, not hidden native retries.
+
+Commit/push source/tests, checked JSON/Markdown, execution receipt and guide/result
+changes. Next trace candidate reproducibility using existing artifacts and
+inventory remaining configuration costs before selective new measurements.
+Broader uncertainty, inventory, biological strata and distribution work remain
+active. No quiet-window/DGX gate or unrelated job/service action is introduced.
+
 ## All Original Factorial Stage Costs Consolidated (2026-10-04)
 
 The preceding1cec6ca0 turn completes/pushes actual revised manuscript review.
