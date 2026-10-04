@@ -176,6 +176,13 @@ these observations to claim causal speedups.
 
 ### Retained Evidence Chronology
 
+The [final reporting component](results/FINAL_RESOURCE_REPORTING_COMPONENT_20261004.md)
+now includes all 27 reviewed attempts and generated prose. Actual external
+restoration, copied isolated verification and replay reproduce all three
+tables, PNG pixels and section text exactly. Use its externally pinned
+manifest and copied runner. This closes reporting-only portability, not
+raw-accounting/native reproduction or the full executable/versioned archive.
+
 The dated entries below preserve earlier observations and bindings. Descriptions
 of then-absent readiness or quiet-host gates are historical, superseded for the
 new panel by the shared-host amendment and reviewed production results above.

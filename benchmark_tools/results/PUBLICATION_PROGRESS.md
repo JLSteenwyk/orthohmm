@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Final Resource Reporting Archive Replayed (2026-10-04)
+
+Actual export-helper integration is committed and pushed at `a78a5966`.
+Build the [final schema3 reporting component](FINAL_RESOURCE_REPORTING_COMPONENT_20261004.md)
+once from those committed sources, tablev27, figurev26 and sectionv27.
+It has22 payloads plus its manifest and includes all27 reviewed identities,
+25 measurements/24 eligible observations/six complete cells; no incomplete
+cell or exclusion is imputed. Public archive/manifest equal canonical bytes.
+
+Restore the actual465108-byte archive into a fresh `/tmp` directory outside
+the repository. Copied isolated standard-library verification passes; copied
+isolated reporting replay reproduces all three table files exactly, identical
+PNG pixels and exact resource-section text. The [execution receipt](final_prepared_resource_reporting_execution_20261004.json)
+records actual commands, external manifest anchor, copied reader and replay
+record. Copied pure functions do not follow original evidence paths. No
+native inference, raw audit or unchanged fixture suite is repeated.
+
+Next reconcile the complete final manuscript with these resources and current
+scientific limitations; render and visually inspect its actual pages. Build
+and verify actual committed/relocated helper-inclusive source, selected-main
+review and explicit-review handoff components, including workflow imports/test
+collection and the executable/versioned archive. Reporting-only portability
+is not those broader requirements. No native panel job is live. Full
+publication goal stays active and incomplete.
+
 ## Actual Export Helpers Integrated (2026-10-04)
 
 After final panel/reporting checkpoint `4a58c088` is committed and pushed,

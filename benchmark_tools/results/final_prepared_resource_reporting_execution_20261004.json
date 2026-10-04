@@ -1,0 +1,82 @@
+{
+  "status": "final_resource_reporting_archive_relocated_and_replayed",
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/final_prepared_resource_reporting_component_20261004.tar.gz",
+    "bytes": 465108,
+    "sha256": "f48b5a3946bc982f038d65a7a4b2222214c4ef49caacaa8190d48f2a4b11c8a8"
+  },
+  "manifest": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/final_prepared_resource_reporting_manifest_20261004.json",
+    "bytes": 3997,
+    "sha256": "e36c79c29ed47deec1b32cfded059d92c75726ecc0054fc87c84fc396b551bb8"
+  },
+  "component_source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_prepared_component_20261004.py",
+    "bytes": 16527,
+    "sha256": "be30c04eeafbf51e5c2a012b3247f6217da1c9831b6a09565b6938698d84daad"
+  },
+  "restored_reader": {
+    "path": "/tmp/orthohmm-final-resource-20261004-W5QLdg/restored/component.py",
+    "bytes": 16527,
+    "sha256": "be30c04eeafbf51e5c2a012b3247f6217da1c9831b6a09565b6938698d84daad"
+  },
+  "replay_record": {
+    "path": "/tmp/orthohmm-final-resource-20261004-W5QLdg/replay/replay.json",
+    "bytes": 548,
+    "sha256": "dab86ed4157042b478b61180f9a8c1639f3b2ffaf46ebf59cd3e87bb78c65623"
+  },
+  "replay_result": {
+    "equal_png_pixels": true,
+    "exact_resource_section": true,
+    "exact_table_files": 3,
+    "manifest_sha256": "e36c79c29ed47deec1b32cfded059d92c75726ecc0054fc87c84fc396b551bb8",
+    "matplotlib": "3.10.8",
+    "native_inference_reproduced": false,
+    "numpy": "2.2.6",
+    "pre_native_aborted_indices": [
+      17,
+      20
+    ],
+    "publication_ready": false,
+    "raw_measurements_revalidated": false,
+    "reviewed_attempts": 27,
+    "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+    "status": "prepared_resource_reporting_replayed"
+  },
+  "source_commit": "a78a5966ead250d20f838d19cce58f851638613e",
+  "payload_files": 22,
+  "archive_members": 23,
+  "public_archive_and_manifest_match_canonical": true,
+  "restored_directory": "/tmp/orthohmm-final-resource-20261004-W5QLdg/restored",
+  "verification": {
+    "command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -S -B /tmp/orthohmm-final-resource-20261004-W5QLdg/restored/component.py verify --directory /tmp/orthohmm-final-resource-20261004-W5QLdg/restored --manifest-sha256 e36c79c29ed47deec1b32cfded059d92c75726ecc0054fc87c84fc396b551bb8",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"prepared_resource_reporting_component_verified\",\n  \"files\": 22,\n  \"scope\": \"shared_host_resource_reporting_not_raw_measurement_reproduction\",\n  \"publication_ready\": false\n}\n"
+  },
+  "replay": {
+    "command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B /tmp/orthohmm-final-resource-20261004-W5QLdg/restored/component.py replay --directory /tmp/orthohmm-final-resource-20261004-W5QLdg/restored --manifest-sha256 e36c79c29ed47deec1b32cfded059d92c75726ecc0054fc87c84fc396b551bb8 --output /tmp/orthohmm-final-resource-20261004-W5QLdg/replay",
+    "exit_code": 0,
+    "result": {
+      "equal_png_pixels": true,
+      "exact_resource_section": true,
+      "exact_table_files": 3,
+      "manifest_sha256": "e36c79c29ed47deec1b32cfded059d92c75726ecc0054fc87c84fc396b551bb8",
+      "matplotlib": "3.10.8",
+      "native_inference_reproduced": false,
+      "numpy": "2.2.6",
+      "pre_native_aborted_indices": [
+        17,
+        20
+      ],
+      "publication_ready": false,
+      "raw_measurements_revalidated": false,
+      "reviewed_attempts": 27,
+      "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+      "status": "prepared_resource_reporting_replayed"
+    }
+  },
+  "native_inference_repeated": false,
+  "raw_audit_repeated": false,
+  "publication_ready": false,
+  "scope": "Final 27-attempt reporting archive only; not raw-accounting/native reproduction or the whole study release"
+}

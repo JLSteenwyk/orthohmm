@@ -102,6 +102,10 @@ The [three export repairs](PUBLICATION_EXPORT_INTEGRATION_20261004.md) are
 now applied after all 27 terminal reviews. All 339 actual combined helper
 tests pass, including fixture export relocation, but the final study's
 manuscript/source/handoff/executable archives remain to be built and checked.
+The [final reporting archive](FINAL_RESOURCE_REPORTING_COMPONENT_20261004.md)
+now restores outside the repository and reproduces all three tables, figure
+pixels and prose exactly with its copied isolated reader. This establishes
+final reporting portability only, not those broader publication requirements.
 The [generated v24 resource section](RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now replaces manual transcription with validated prose/three metric tables.
 Eight tests pass; real section readback preserves12 available and15 unavailable

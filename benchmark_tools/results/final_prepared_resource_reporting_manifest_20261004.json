@@ -1,0 +1,133 @@
+{
+  "all_planned_attempts_reviewed": true,
+  "eligible_attempts": 24,
+  "excluded_attempts": [
+    0,
+    17,
+    20
+  ],
+  "files": [
+    {
+      "bytes": 1078,
+      "path": "LICENSE.md",
+      "sha256": "4b9b0c3ffc73fce4c47734d7ef12bd70b9d2cdc4a3bf76ac0f3a35edbe2c3d9e"
+    },
+    {
+      "bytes": 472,
+      "path": "README.md",
+      "sha256": "0da805d06fc96efec0d32d4d02edeba680101bd310795ab7534daceedbd75400"
+    },
+    {
+      "bytes": 13009,
+      "path": "bundle_shared_resource_component_20261003.py",
+      "sha256": "98d723bb70910eed22a8ab75ef4e17f0332490ada309121f607fc0ed3d5b5781"
+    },
+    {
+      "bytes": 16527,
+      "path": "component.py",
+      "sha256": "be30c04eeafbf51e5c2a012b3247f6217da1c9831b6a09565b6938698d84daad"
+    },
+    {
+      "bytes": 4016,
+      "path": "data/attempts.tsv",
+      "sha256": "81f9c35d693257eddde9799dc8f937928ede909b3855e9f48ca382bdd70b37de"
+    },
+    {
+      "bytes": 1531,
+      "path": "data/cells.tsv",
+      "sha256": "dd7a15383d286cd1d95efa4326b9abaa1b5c07fb06ab66cfeb4e9566deefb537"
+    },
+    {
+      "bytes": 378715,
+      "path": "data/panel.json",
+      "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+    },
+    {
+      "bytes": 360658,
+      "path": "figures/manifest.json",
+      "sha256": "c7286a1581ce9c93a96ad218a649d7be0d45a631a43f853e6354ee0ee75d8b7b"
+    },
+    {
+      "bytes": 29279,
+      "path": "figures/shared_threadripper_resources.pdf",
+      "sha256": "5c807122a1cec760e039e13628d9403dceb7a3590f98854f965ce61565ad387c"
+    },
+    {
+      "bytes": 335102,
+      "path": "figures/shared_threadripper_resources.png",
+      "sha256": "e65047b0f163b91a2a89ad52734e2be4a530afcd866a78c85d1dcfd00f4f7429"
+    },
+    {
+      "bytes": 188372,
+      "path": "figures/shared_threadripper_resources.svg",
+      "sha256": "097a4595edf5ebbdd8b7f2eaba68474c87c05e7a4db99e65547bcf4c1ffa3874"
+    },
+    {
+      "bytes": 2323,
+      "path": "manuscript/manifest.json",
+      "sha256": "50ebd4fe723dafce3ef270294d3606d2d8de3a2168f9eb6095f812b5eaa82225"
+    },
+    {
+      "bytes": 3750,
+      "path": "manuscript/resource_section.md",
+      "sha256": "423df6d3d630e319b15153ffdd3137e4e41bb472c0d981b19f02abafa9505de8"
+    },
+    {
+      "bytes": 19,
+      "path": "requirements.txt",
+      "sha256": "12a0a7bc6e1b1254c2f593a250e6ccff4dbd3cf0b27d6819696a9db86f4e530d"
+    },
+    {
+      "bytes": 9335,
+      "path": "sources/figure.py",
+      "sha256": "4b391bf9c03599afcbdb62f6962fab867378de8a29ab6fa1bfad5f65f91b6b5f"
+    },
+    {
+      "bytes": 22490,
+      "path": "sources/identity.py",
+      "sha256": "748500c2d318c29f7292d8b96e07f571c31c8191408bce8ad68e1f0c8ce6635a"
+    },
+    {
+      "bytes": 4925,
+      "path": "sources/plan.py",
+      "sha256": "db8b826efdc24de7116dc4b41353e221f4949634d8b37a803f65f66a12ec38b4"
+    },
+    {
+      "bytes": 9242,
+      "path": "sources/prior_figure.py",
+      "sha256": "122779587d5f4e1c4ce11b5ab34be76df0268dd5bfa4ef6bee07609a4114f57f"
+    },
+    {
+      "bytes": 14805,
+      "path": "sources/prior_tables.py",
+      "sha256": "dfd90665b816cc08311b1d612e68d2108f042dc8877a146b86447f794d1da2c6"
+    },
+    {
+      "bytes": 4000,
+      "path": "sources/scopes.py",
+      "sha256": "cae4720d11655dd45e2f0a2c8c2ca73005e67870eae91301c5c7587193cae062"
+    },
+    {
+      "bytes": 5888,
+      "path": "sources/section.py",
+      "sha256": "2d9c721093d723da7c47fac0d96c979f40a134673aedba394501de8af36d12df"
+    },
+    {
+      "bytes": 11591,
+      "path": "sources/tables.py",
+      "sha256": "ebc4ce7ec8d0d287de9bd67ea28ecc1155210a874266d67689e0b4db3883e9b0"
+    }
+  ],
+  "native_inference_reproduced": false,
+  "pre_native_aborted_indices": [
+    17,
+    20
+  ],
+  "publication_ready": false,
+  "raw_measurements_revalidated": false,
+  "resource_reviewed_attempts": 25,
+  "reviewed_attempts": 27,
+  "schema_version": 3,
+  "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+  "source_commit": "a78a5966ead250d20f838d19cce58f851638613e"
+}
