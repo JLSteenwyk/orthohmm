@@ -1,0 +1,41 @@
+{
+  "schema": "publication_evidence_review_execution_v1",
+  "status": "rendered_assembled_visually_reviewed_and_readback_passed",
+  "source_revision": "6fd0b51fb114813ee4136ca717f4b8eabfc153ca",
+  "successful_exit_codes": {"pandoc_render": 0, "trusted_local_html_print": 0, "pdf_bounds_review": 0, "pinned_figure_assembly": 0, "focused_readback_tests": 0},
+  "retained_failure": {
+    "stage": "first_pandoc_render",
+    "bibliography": "benchmark_tools/results/publication_references_reviewed_20260919.csl.json",
+    "exit_code": 1,
+    "output_created": false,
+    "missing_citation_ids": ["cpm2011", "diamond2021", "leiden2019", "pyvolve2015", "qfo2020", "zombi2019online"],
+    "correction": "Select unchanged publication_bibliography_20260920_v5.csl.json, matching the previous successful render. No scientific or previously successful artifact retry."
+  },
+  "render_and_print_commands": "Exact argv and direct inputs are retained in publication_main_render_20261004_v3.json and publication_main_print_20261004_v3/print.json. Chrome --no-sandbox is limited to trusted local HTML, not security certification.",
+  "assembly_command": ["benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "-B", "-m", "benchmark_tools.assemble_publication_review", "--root", ".", "--selection", "benchmark_tools/results/publication_figure_selection_20261004_v3.json", "--selection-sha256", "a9ece39a341947250dfe662ef9649c3abd8289342d5e7c4fbdb7d5cc7b5bfdf2", "--output", "benchmark_tools/results/publication_main_with_figures_20261004_v3"],
+  "test_command": ["benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "-B", "-m", "pytest", "-q", "-p", "no:cacheprovider", "tests/unit/test_evidence_main_review_artifacts.py", "tests/unit/test_publication_evidence_integration.py", "--junitxml=benchmarks/work/evidence_main_review_tests_20261004.xml"],
+  "runtime_environment": {"removed": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"], "set": {"PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}},
+  "tests": {"passed": 25, "failed": 0, "errors": 0, "skipped": 0, "reported_seconds": 2.17, "invocations": 1},
+  "checks": {"committed_direct_source_and_asset_bindings": 75, "manual_main_pages": 15, "manual_new_guide_pages": 4, "source_pages_pixel_text_geometry_identical": 31, "figure_inventory_and_captions_unchanged": 16, "bookmarks": 18, "redirected_main_figure_links": 7, "restored_original_nonfigure_file_uri_actions": 74, "retained_resource_tables": 3, "unavailable_table_cells": 9},
+  "pins": [
+    {"path": "tests/unit/test_evidence_main_review_artifacts.py", "bytes": 9120, "sha256": "8eb9ab30dfd7876968be77639440ca356c9469367a492a6963ef5a2109dfd434"},
+    {"path": "benchmarks/work/evidence_main_review_tests_20261004.xml", "bytes": 4524, "sha256": "7acd2eab97535f72efefb91332a56cee0f569cfb12410c880598016962d293b3"},
+    {"path": "benchmark_tools/results/publication_main_evidence_visual_review_20261004.json", "bytes": 28398, "sha256": "1b257cfc17aaa8ebda11fa894330d34b55b3231a77cd2349ed1e9b4bab5e999f"},
+    {"path": "benchmark_tools/results/publication_main_render_20261004_v3.json", "bytes": 35960, "sha256": "fcba7fec421756b8c6550aa640cf0747d025ba85d697c673109a3ed7aebbf618"},
+    {"path": "benchmark_tools/results/publication_main_print_20261004_v3/print.json", "bytes": 22408, "sha256": "da1f28615d557b85cff1de80c4c818492a681d11f03fb49a05f358145ea7aa99"},
+    {"path": "benchmark_tools/results/publication_main_pdf_review_20261004_v3/report.json", "bytes": 26286, "sha256": "278601055684bf69b789dfd2fe99b4b53038e13b64310af14989d204792026dd"},
+    {"path": "benchmark_tools/results/publication_figure_selection_20261004_v3.json", "bytes": 16849, "sha256": "a9ece39a341947250dfe662ef9649c3abd8289342d5e7c4fbdb7d5cc7b5bfdf2"},
+    {"path": "benchmark_tools/results/publication_main_with_figures_20261004_v3/assembly.json", "bytes": 62175, "sha256": "a7552d8adbc8dfa1fb3e3bcb0c4e7e8b4bc57a0806a38b22b7af67db013c7bd1"},
+    {"path": "benchmark_tools/results/publication_main_with_figures_20261004_v3/document.pdf", "bytes": 576279, "sha256": "feb0b085def6eed4d2c111668e8ebb6571c8d55e38c7c3a80cdc01b34f567a9b"},
+    {"path": "benchmark_tools/results/publication_main_print_20261004_v3/document.pdf", "bytes": 256970, "sha256": "ee755aa31502e8bb6e425c6c913cf59862fe17aa4b996482a147de925b098a6e"},
+    {"path": "benchmark_tools/results/publication_main_review_20261004_v3.html", "bytes": 69342, "sha256": "f9b9f045409d283ac7695a3c58635eb854dcd9a672c2b2efee44a6a1ddc75305"}
+  ],
+  "benchmark_accuracy_or_frozen_method_changed": false,
+  "completed_native_scientific_or_timing_runs_repeated": false,
+  "unrelated_jobs_or_services_modified": false,
+  "prior_pdf_or_rc3_archive_changed": false,
+  "new_versioned_archive_created": false,
+  "public_archive_uploaded": false,
+  "publication_ready": false,
+  "remaining_scientific_work": "Broader QfO uncertainty, complete causal development history, prespecified biological strata and original full configuration costs remain. Presentation validation does not establish complete study restoration or publication readiness."
+}

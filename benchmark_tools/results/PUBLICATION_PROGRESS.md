@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Evidence-Integrated Main Text Rendered And Reviewed (2026-10-04)
+
+Classify the preceding 6fd0b51f turn as progress: it delivered the verified
+family inventory and evidence-integrated third source. Re-read the full goal,
+newest ledger and current commits; Slurm has no owned live job. About 613 GiB
+RAM is available for this small presentation workflow, without a quiet-window
+or DGX gate. No expensive/native/scientific/timing work is repeated.
+
+Use unchanged renderer/print/bounds/assembly tools. First render selects the
+older reviewed bibliography and fails before output on six missing citation
+IDs; corrected selection uses the previous v5 bibliography and succeeds.
+Printing/bounds/assembly succeed once. All 15 main pages and four new guides
+are actually viewed; no clipping/overlap is observed. All 31 source pages retain
+exact text/geometry/pixels; all 16 figure identities/captions stay unchanged.
+The [actual result](PUBLICATION_EVIDENCE_REVIEW_RESULT_20261004.md) delivers
+15-page main/35-page combined PDFs, 18 bookmarks, seven redirected figure links
+and 74 restored original nonfigure file actions. Reuse prior figure visual
+review; do not claim fresh manual review of every unchanged figure.
+
+All 25 focused artifact/source tests pass on their first invocation, including
+75 direct render-time commit/blob/hash bindings at 6fd0b51f, new quantitative
+claims, guide/bookmark navigation, original resource values and unavailable
+cells. Source-bound receipts pin the exact outputs and local JUnit. Rendering
+is subsequent evidence, not a retroactive edit to the source's pending-render
+checkpoint. Viewing PNG caches stay local; preserve PDFs and JSON receipts.
+
+Deliver/push new artifacts/tests/routing. Original source/PDF/rc3 identities,
+science/defaults and completed panel remain unchanged. Next integrate the exact
+new review and completed addenda into a fresh reproducible study bundle, then
+continue genuinely incomplete scientific requirements. Broader uncertainty,
+causal history, biological strata, original costs and distribution/readiness
+remain unresolved. The full goal is active, not publication-complete.
+
 ## Development And Reproducibility Evidence Integrated (2026-10-04)
 
 After delivering/pushing the verified inventory at e78150a1, take the next

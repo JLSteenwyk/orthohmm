@@ -2,13 +2,22 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [new evidence-integrated review](results/PUBLICATION_EVIDENCE_REVIEW_RESULT_20261004.md)
+now provides a [35-page text-plus-figures PDF](results/publication_main_with_figures_20261004_v3/document.pdf)
+for revision three: 15 main pages, four guides and 16 unchanged figures.
+All new main/guide pages were viewed; all 31 source pages preserve exact
+text/geometry/pixels. Twenty-five readback/source tests pass. The first failed
+old-bibliography render is retained; the corrected route uses the unchanged
+previous bibliography. The new PDF is not yet in a refreshed study archive.
+
 The [third working main text](results/PUBLICATION_MAIN_TEXT_20261004_v3.md)
 now integrates the exposure, candidate-cap and historical cost/provenance
 addenda below. [Forty-two tests](results/PUBLICATION_EVIDENCE_INTEGRATION_RESULT_20261004.md)
 check new quantitative claims and preserve original abstract/results/references.
-This source is not yet rendered or archived. The 34-page review remains bound
-to revision two; rc3 remains its separately described older snapshot. Do not
-present either as a rendered/bundled copy of revision three.
+The source-only checkpoint has now been rendered by the review above, but is
+not yet included in a refreshed study bundle. The older 34-page review remains
+bound to revision two; rc3 remains its separately described older snapshot.
+Do not present either as a rendered/bundled copy of revision three.
 
 The [retained development-family inventory](results/DEVELOPMENT_FAMILY_INVENTORY_RESULT_20261004.md)
 now covers 1,785 immutable JSON result blobs plus 114 separately hash-frozen
