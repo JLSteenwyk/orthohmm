@@ -1,0 +1,37 @@
+{
+  "schema": "final_publication_handoff_execution_v1",
+  "status": "built_archived_restored_and_copied_verified",
+  "workflow_revision": "7fe7bc57d5b9f2cfb5c91abc90cb099eb42953e6",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "setup_overlay_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+  "review_revision": "79a850e8779b808d0ac659ef563063909f3f989d",
+  "ledger_revision": "904f4d4b99cd3a87d543da0ac7abe2fdaad64285",
+  "builder": {"path": "benchmark_tools/bundle_publication_handoff.py", "bytes": 23302, "sha256": "0b45067395262d168733c772e8f2a40ab6b069112a319eb031cbcc0e6b044a00"},
+  "canonical_directory": "benchmarks/work/final_publication_handoff_20261004",
+  "archive": {"path": "benchmarks/work/final_publication_handoff_20261004.tar.gz", "bytes": 7836357, "sha256": "5bb2b48fcc3cb5879416ba1c3d4fd0af796915a39f41b2d72721916d21db4597"},
+  "public_index": {"path": "benchmark_tools/results/final_publication_handoff_index_20261004.json", "bytes": 445025, "sha256": "3476abcbbbb19b8300f6942fdc55c676eaec82033da9911d63626dae7e7f0bf8"},
+  "source_index": {"path": "source/SOURCE_INDEX.json", "bytes": 777126, "sha256": "ac52c857b0dce337ebf7f626d9d6b37a031c86c3bb9a07110818f39e014eab38"},
+  "review_index": {"path": "manuscript/REVIEW_INDEX.json", "bytes": 30609, "sha256": "e0882ac171945bc4008be2589d0f0b8fc070f9b11a976043f41da0cc72cf7b65"},
+  "restored_directory": "/tmp/orthohmm-final-handoff-20261004-hwP751",
+  "commands": [
+    {"stage": "build", "cwd": "repository_root", "argv": ["benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "-B", "-m", "benchmark_tools.bundle_publication_handoff", "build", "--repo", ".", "--revision", "HEAD", "--source-profile", "native-build", "--review-revision", "79a850e8779b808d0ac659ef563063909f3f989d", "--ledger-revision", "904f4d4b99cd3a87d543da0ac7abe2fdaad64285", "--main-text", "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md", "--render-receipt", "benchmark_tools/results/publication_main_render_20261004.json", "--print-receipt", "benchmark_tools/results/publication_main_print_20261004/print.json", "--review-receipt", "benchmark_tools/results/publication_main_pdf_review_20261004/report.json", "--output", "benchmarks/work/final_publication_handoff_20261004"], "returncode": 0},
+    {"stage": "archive", "cwd": "repository_root", "argv": ["tar", "-czf", "benchmarks/work/final_publication_handoff_20261004.tar.gz", "-C", "benchmarks/work/final_publication_handoff_20261004", "."], "returncode": 0},
+    {"stage": "restore", "argv": ["tar", "-xzf", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_handoff_20261004.tar.gz", "-C", "/tmp/orthohmm-final-handoff-20261004-hwP751"], "returncode": 0},
+    {"stage": "copied_verify", "cwd": "/tmp", "argv": ["/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "-I", "-S", "-B", "/tmp/orthohmm-final-handoff-20261004-hwP751/bundle_publication_handoff.py", "verify", "/tmp/orthohmm-final-handoff-20261004-hwP751", "--manifest-sha256", "3476abcbbbb19b8300f6942fdc55c676eaec82033da9911d63626dae7e7f0bf8"], "returncode": 0}
+  ],
+  "environment": {"removed": ["PYTHONHOME", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"], "python_no_user_site": true, "python_hash_seed": "0", "bytecode_writes_disabled": true, "copied_verify_pythonpath_removed": true, "copied_verify_path": "/no-git", "copied_verify_isolated_and_site_disabled": true},
+  "verified": {"status": "publication_handoff_candidate_verified", "payload_files": 2018, "payload_bytes": 22576492, "source_files": 1915, "source_components": {"scientific": 43, "workflow": 1871, "build": 1}, "source_python_files_syntax_checked": 1894, "review_files": 83, "main_pages": 12, "direct_targets": 57, "local_html_occurrences": 59, "comparison_methods": 8, "comparison_numeric_cells": 72, "result_helpers_included": true, "runtime_evidence_included": true, "runtime_payload_delivered": false},
+  "frozen_source_syntax_warnings_retained": ["scientific/orthohmm/parser.py:40 invalid escape sequence", "scientific/orthohmm/writer.py:83 invalid escape sequence"],
+  "native_inference_repeated": false,
+  "numerical_replay_repeated": false,
+  "scientific_results_changed": false,
+  "publication_ready": false,
+  "public_archive_uploaded": false,
+  "limitations": [
+    "The handoff is a local current-source/direct-main/count component, not the final whole-study executable/versioned release.",
+    "The separately assembled32-page figure presentation and final reporting archive are not silently added to this exact handoff inventory.",
+    "Native runtime/data assets and raw scoring inputs remain separately provisioned and independently pinned.",
+    "Included README retains its explicitly dated2October default-candidate guide; HANDOFF_INDEX.json records the actual schema3 selection and current main/source identities. The new companion document provides current commands and scope.",
+    "Copied verification validates bytes, modes, inventories, source syntax and recorded scope; it does not execute new science, replay previously successful arithmetic or establish rights, isolation or submission readiness."
+  ]
+}

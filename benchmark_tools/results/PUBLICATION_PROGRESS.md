@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Explicit Current-Main Handoff Archived And Restored (2026-10-04)
+
+The figure checkpoint is committed/pushed at `7fe7bc57`. Build the
+[actual schema3/native-build current-main handoff](FINAL_PUBLICATION_HANDOFF_20261004.md)
+from that workflow with selected manuscript79a850e8/ledger904f4d4b.
+It includes2018 payload files,1915 source files/1894 syntactically checked
+Python files, the83-file twelve-page direct review, counts/current comparison
+and pinned runtime evidence. Scientific/setup revisions remain frozen.
+
+Archive once locally and restore outside the repository. Its copied verifier
+passes with isolated/site-disabled Python, no Git/site packages/checkout
+imports, and the external handoff-index anchor. The [execution receipt](final_publication_handoff_execution_20261004.json)
+and exact public index record actual bytes, commands and return codes.
+Frozen syntax warnings remain visible. No native inference, raw scoring or
+already successful arithmetic/diagnostic replay is repeated.
+
+This current-main/count/source archive does not include native runtime/data
+payloads, the separate current32-page figure assembly or final reporting
+component. Its historical default README is preserved; actual schema3
+selection and the new companion explain the current12-page scope. Next
+assemble the final executable/versioned package with explicit current
+instructions, using those completed components and retained reproduction
+assets, then perform the full goal/claim audit. Local payload archive is not
+uploaded; no submission-ready claim is made. Full goal stays active/incomplete.
+
 ## Current Figure Appendix Assembled And Replayed (2026-10-04)
 
 The previous goal-update turn changes the authoritative shared-host scope;
