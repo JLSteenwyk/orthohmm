@@ -60,8 +60,13 @@ passes real history and source/bounds readback. Index 21,
 now completes and passes all four independent terminal categories, including
 prepared-owner lifecycle. It supplies the second complete cell with three
 eligible repeats. Other summaries remain null; no job is live at this review
-checkpoint. Next is index 22, satellite_v2/eight proteomes/repeat 2, only after
-fresh history/capacity/native handoff under the existing prepared continuation.
+checkpoint. Index 22 is subsequently released as
+[22418, satellite_v2/eight proteomes/repeat 2](results/THREADRIPPER_SHARED_ATTEMPT_22418.md).
+Its fresh capacity and prepared/native handoff pass under the existing
+continuation; native HMM search is observed running, not terminally admitted.
+On resumption obtain fresh scheduler state for this job and review only after
+termination, before launching index 23. Five identities remain unreviewed,
+one live at this checkpoint and four not submitted. Tables/figures are unchanged.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 

@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Index 22 Prepared Handoff And Native Search Live (2026-10-04)
+
+The preceding goal-prompt update is progress: it changes the authoritative
+goal to reaffirm shared-host execution, without changing scientific scope.
+Read full goal/current ledger and retained archive/calibration notes, then
+freshly confirm the same 22418 parent/batch/native step RUNNING. Do not restart
+completed work or interpret earlier startup records as current state.
+
+Index-21 terminal/reporting checkpoint is committed/pushed at `67727254`.
+The existing prepared continuation validates the 22-identity prefix and
+releases index 22, phylogenetic satellite_v2/eight proteomes/repeat 2, as
+[22418](THREADRIPPER_SHARED_ATTEMPT_22418.md). Public submission is identical
+to canonical launch: 1,179 bytes, SHA-256
+`1e110b3d9edc4b02c056141c1e468c90f3363e80322b58a997a419d11ad74b19`.
+Fresh one-shot native snapshot passes: 16,770 bytes, SHA-256
+`01b4724a6c8bf6b860c08a9d065176ed53eff9d4c8fa13ab1b10a02227bb6198`.
+Prepared-before-release ordering, actual go/preflight, live PID/cgroup,
+affinity 0-31, controller/request digest and native HMM search all verify.
+Both available-memory observations exceed the 128-GiB floor; foreign CPU
+39.2836691948 cores and initial process gap 30.000301076s are recorded.
+They do not prove whole-run validity or quantify causal slowdown.
+
+Focused readback passes 17 distinct stable evidence pins, exact submission/
+canonical bytes, both public hashes, startup-only flags, placement/capacity
+and all links in the new attempt note. Scoped documentation diff check passes.
+Fresh accounting still shows the same three steps RUNNING; search reaches
+37.50%, not a whole-pipeline percentage. No scientific test is rerun for these
+metadata/documentation additions.
+
+No frozen science/kernel/runtime or unrelated workload changes. No successful
+diagnostic or one-shot preparation is repeated. Table v22/figure v21 remain
+22 reviewed/20 measured/19 eligible, exclusions 0/17/20 and two complete cells.
+Five identities are unreviewed, one live/four unsubmitted. All owned launch/
+snapshot tool handles are terminal; only the specific Slurm attempt remains
+live. Commit/push startup evidence and status. Next continuation polls 22418,
+retains terminal controller when available and independently reviews before
+reporting a new point or releasing 23. Full panel, final manuscript/resource
+reconciliation and versioned/archive release remain open.
+
 ## Index 21 Terminal Review And Second Complete Cell (2026-10-04)
 
 Classify preceding turn as progress: `d80a45fa` commits/pushes prepared native

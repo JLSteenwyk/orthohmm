@@ -45,7 +45,12 @@ handoff now pass for [22417/index 21](THREADRIPPER_SHARED_ATTEMPT_22417.md),
 high-sensitivity OrthoHMM/eight proteomes/repeat 2. All four terminal categories
 now pass, including prepared-owner lifecycle and whole-run raw replay. It
 supplies the second complete three-eligible-repeat cell. Five identities remain
-unreviewed; no job is live at this checkpoint. No failed identity is retried.
+unreviewed. Index 22 is subsequently released as
+[22418, satellite_v2/eight proteomes/repeat 2](THREADRIPPER_SHARED_ATTEMPT_22418.md).
+Fresh capacity and prepared/native handoff pass; native HMM search is observed
+running. This is startup evidence, not terminal admission or a new resource
+point. One of the five unreviewed identities is live at this checkpoint, four
+not yet submitted. No failed identity is retried.
 The [partial figure](threadripper_shared_resource_figure_20261004_v21/shared_threadripper_resources.pdf)
 retains the twenty measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
@@ -654,7 +659,8 @@ explicit history resolution now pass without overwriting earlier evidence.
 New execution/readiness bindings and live capacity/prepared handoff pass for
 index 21 as 22417. Its [terminal independent review](threadripper_shared_attempt_22417.json)
 now passes and supplies eligible shared-host endpoints, not a new accuracy
-result or isolated efficiency claim. Next is index 22 after fresh history/handoff.
+result or isolated efficiency claim. Index 22 subsequently passes fresh
+history/capacity/prepared handoff as 22418; its terminal review remains open.
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 
