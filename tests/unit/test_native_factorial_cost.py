@@ -253,3 +253,28 @@ def test_launch_bootstrap_uses_separate_request_scope():
     assert "unset PYTHONHOME PYTHONPATH LD_PRELOAD LD_LIBRARY_PATH LD_AUDIT" in script
     assert "scheduler-comment" in script
     assert "run_native_factorial_cost.py" in script and "run_threadripper_scaling.py" not in script
+
+
+def test_actual_prepared_plan_and_policy_bytes():
+    import hashlib
+    path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_plan_20261004.json"
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
+    plan = json.loads(path.read_text())
+    assert len(cost.validate_plan(plan)) == 13
+    assert plan["scientific_execution_authorized"] is False
+    assert plan["source_commit"] == "3c275a025b6e3743beffe08db6d48a54454e4732"
+    for ref in plan["helper_sources"] + plan["evidence"]:
+        raw = Path(ref["path"]).read_bytes()
+        assert len(raw) == ref["bytes"]
+        assert hashlib.sha256(raw).hexdigest() == ref["sha256"]
+    for index in (0, 6):
+        run = plan["runs"][index]
+        names = {Path(ref["path"]).name for ref in run["inputs"]}
+        assert names == set(run["native_order"]) == set(run["input_creation_order"])
+        assert run["native_order"] == plan["filename_enumeration_probes"][run["dataset"]]["datasets"][0]["native_order"]
+    policy_path = cost.ROOT / "benchmark_tools/results/native_factorial_cost_policy_20261004.json"
+    assert hashlib.sha256(policy_path.read_bytes()).hexdigest() == "5a7ef6f0b0b4f201ca41376a1bc3c2c652ac916e5b6fbf72f803765151954c31"
+    policy = json.loads(policy_path.read_text())
+    assert policy["plan_sha256"] == "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
+    assert policy["foreign_cpu_role"] == policy["native_pressure_role"] == policy["preflight_pressure_role"] == "diagnostic_only"
+    assert policy["minimum_available_memory_bytes"] == cost.MEMORY

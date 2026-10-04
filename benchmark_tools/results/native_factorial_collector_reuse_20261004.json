@@ -1,0 +1,309 @@
+{
+  "audit": {
+    "bytes": 17197,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_async_calibration_audit_22380.json",
+    "sha256": "cc48eb2d3c51eea492126bda66aab744351bfec228ab33e93d30e9d74e815a32"
+  },
+  "calibration_protocol": {
+    "bytes": 202251,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_observer_calibration_async_protocol_20260930.json",
+    "sha256": "7ed6720e659586f54c6f180aa69ecd08c51ec087c14593f03bef153e9a3a6b5d"
+  },
+  "changed_sources": [
+    {
+      "current": {
+        "bytes": 12257,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+        "sha256": "515ee409b3ee3105873027dde3798420c42572211742c59333ba33160b4f1845"
+      },
+      "prior": {
+        "bytes": 12153,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+        "sha256": "50922f13df9ccd8c1b4661d104f4943c2402fac851a4ff0046406cfd35f3a2d2"
+      },
+      "source_diff": "diff --git a/benchmark_tools/measure_threadripper_scaling.py b/benchmark_tools/measure_threadripper_scaling.py\nindex da18d7e7..a715d6d9 100644\n--- a/benchmark_tools/measure_threadripper_scaling.py\n+++ b/benchmark_tools/measure_threadripper_scaling.py\n@@ -119,6 +119,8 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_\n             host = HostMonitor(host_log, str(job_scope), sample_fn=enriched_snapshot)\n             host.observe()\n             periodic_host = PeriodicHostObserver(host, host_interval_s)\n+            # Release checks must not postpone the first scheduled host sample.\n+            periodic_host.start(anchor=host.last_started)\n             job_memory_before = read_job_memory(job_scope)\n             save(directory / \"job_memory_before.json\", job_memory_before)\n             # Inventory the host before starting the one-second point cadence.\n@@ -127,7 +129,6 @@ def measure(command, directory, job_id, cpus, memory_bytes, timeout_s, interval_\n                 release_guard(directory)\n                 checked_at = time.monotonic()\n             points.append(read_point(ready[\"pid\"], ready[\"cgroup\"], job_id, directory / \"failed_point.json\"))\n-            periodic_host.start()\n             if release_guard is not None and time.monotonic() - checked_at > 1:\n                 save(directory / \"release_freshness_failed.json\", dict(status=\"release_guard_stale\"))\n                 raise ValueError(\"Release guard stale after initial observation\")\n"
+    },
+    {
+      "current": {
+        "bytes": 4513,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+        "sha256": "d0116f8bea2b625df0c66128e0a259c2262f57c7cc8ffbbecf2a19a362989775"
+      },
+      "prior": {
+        "bytes": 4309,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+        "sha256": "9bb13b2fa23d48e73c528445009116ab64214d5a4585357eb9125215479e578a"
+      },
+      "source_diff": "diff --git a/benchmark_tools/observe_thread_affinity.py b/benchmark_tools/observe_thread_affinity.py\nindex 47b3274c..a65d7c20 100644\n--- a/benchmark_tools/observe_thread_affinity.py\n+++ b/benchmark_tools/observe_thread_affinity.py\n@@ -33,7 +33,7 @@ def inventory(scope):\n \n \n def observe(scope, allowed_cpus, *, cgroup_root=Path(\"/sys/fs/cgroup\"),\n-            proc_root=Path(\"/proc\"), get_affinity=os.sched_getaffinity):\n+            proc_root=Path(\"/proc\"), get_affinity=None):\n     \"\"\"Sample every enumerated thread, including threads in descendant cgroups.\n \n     A subset affinity is valid (workers may pin themselves). Races, inaccessible\n@@ -43,6 +43,10 @@ def observe(scope, allowed_cpus, *, cgroup_root=Path(\"/sys/fs/cgroup\"),\n     if (not allowed or any(type(v) is not int or v < 0 for v in allowed)\n             or len(set(allowed)) != len(allowed)):\n         raise ValueError(\"Require distinct nonnegative CPU IDs\")\n+    if get_affinity is None:\n+        get_affinity = getattr(os, \"sched_getaffinity\", None)\n+        if get_affinity is None:\n+            raise NotImplementedError(\"CPU affinity observation requires os.sched_getaffinity\")\n     cgroup_root = Path(cgroup_root).resolve(strict=True)\n     scope = Path(scope).resolve(strict=True)\n     relative = scope.relative_to(cgroup_root)\n"
+    },
+    {
+      "current": {
+        "bytes": 2577,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/periodic_host_observer.py",
+        "sha256": "0b0c09d79bb8b56e965842d146084750b3b58ff80b99448da0f6ca5ec83f44c6"
+      },
+      "prior": {
+        "bytes": 2144,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/periodic_host_observer.py",
+        "sha256": "c4ff0cc5632381785681f88f260358765892bfa4b4fac07ef54ea8d2d5645685"
+      },
+      "source_diff": "diff --git a/benchmark_tools/periodic_host_observer.py b/benchmark_tools/periodic_host_observer.py\nindex 7b8bc4ef..a797d836 100644\n--- a/benchmark_tools/periodic_host_observer.py\n+++ b/benchmark_tools/periodic_host_observer.py\n@@ -16,10 +16,16 @@ class PeriodicHostObserver:\n         self.stop = threading.Event()\n         self.thread = None\n         self.error = None\n+        self.deadline = None\n \n-    def start(self):\n+    def start(self, *, anchor=None):\n         if self.thread is not None or self.stop.is_set():\n             raise ValueError(\"Periodic observer cannot be restarted\")\n+        now = time.monotonic()\n+        if anchor is not None and (type(anchor) not in (int, float)\n+                or not math.isfinite(anchor) or not 0 <= anchor <= now):\n+            raise ValueError(\"Require a finite observed monotonic anchor, not a future time\")\n+        self.deadline = (now if anchor is None else anchor) + self.period\n         self.thread = threading.Thread(target=self._observe, daemon=True)\n         try:\n             self.thread.start()\n@@ -29,7 +35,7 @@ class PeriodicHostObserver:\n \n     def _observe(self):\n         try:\n-            deadline = time.monotonic() + self.period\n+            deadline = self.deadline if self.deadline is not None else time.monotonic() + self.period\n             while not self.stop.wait(max(0., deadline - time.monotonic())):\n                 self.monitor.observe()\n                 # A slow scan remains slow evidence, not a burst of catch-up scans.\n"
+    },
+    {
+      "current": {
+        "bytes": 7207,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cgroup_frontier.py",
+        "sha256": "719b90cf4147d6c48211926cda9221229d492a44437c035962194b7b67a73e75"
+      },
+      "prior": {
+        "bytes": 6989,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cgroup_frontier.py",
+        "sha256": "ee8d978878adc889d6d66e50601d67dc915b1dc2645ea9fcc8c11b84dbb63635"
+      },
+      "source_diff": "diff --git a/benchmark_tools/probe_cgroup_frontier.py b/benchmark_tools/probe_cgroup_frontier.py\nindex 1f3130b4..f6b93fbb 100644\n--- a/benchmark_tools/probe_cgroup_frontier.py\n+++ b/benchmark_tools/probe_cgroup_frontier.py\n@@ -117,9 +117,15 @@ def compare(left, right):\n         return value / 1e6\n     scopes = {a[\"scope\"]: delta(a, b) for a, b in zip(left[\"rows\"], right[\"rows\"])}\n     root_delta = delta(left[\"root\"][0], right[\"root\"][1])\n+    # Preserve the historical left-to-right float addition across Python versions.\n+    frontier_total, outside_total = 0, 0\n+    for scope, value in scopes.items():\n+        frontier_total += value\n+        if scope != left[\"target\"]:\n+            outside_total += value\n     return dict(scope_cpu_s=scopes, target_cpu_s=scopes[left[\"target\"]],\n-                outside_target_frontier_cpu_s=sum(v for k, v in scopes.items() if k != left[\"target\"]),\n-                root_outer_cpu_s=root_delta, root_minus_frontier_cpu_s=root_delta-sum(scopes.values()),\n+                outside_target_frontier_cpu_s=outside_total,\n+                root_outer_cpu_s=root_delta, root_minus_frontier_cpu_s=root_delta-frontier_total,\n                 scientific_timings_admitted=False, controlled_workload_verified=False,\n                 limitations=[\"Non-atomic counters; differences are not bounds or timing corrections.\",\n                     \"Ancestor-direct tasks and accounting discrepancies remain in the signed root residual.\",\n"
+    }
+  ],
+  "collector_byte_identical_to_calibration": false,
+  "interpretation": [
+    "Periodic host observer now starts before release checks, anchored to the first observed snapshot; native cadence/CPU/memory endpoints are unchanged.",
+    "Affinity portability change resolves the same os.sched_getaffinity dynamically on Linux; it does not change allowed CPU sets or observation semantics.",
+    "Frontier float summation is explicitly left-to-right, preserving historical Python3.10 results on newer interpreters; counter/scoping inputs are unchanged.",
+    "All seven historical accounting/cadence checks passed. Reuse those bounded component findings, not a claim that every current source byte was historically calibrated."
+  ],
+  "later_shared_panel": {
+    "bytes": 378715,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/panel.json",
+    "sha256": "1a586d5d85262267ddfbdd4fccc43a2d43208dae5b028368964d710d2b587187"
+  },
+  "limitations": [
+    "Static local imports are traversed, not a proof of every dynamically imported workload branch.",
+    "New native adapter and release guard are separately bound/tested; historical calibration did not execute them.",
+    "Current full-native observations still need independent accounting/cadence/output review; no causal slowdown or isolation certification is inferred."
+  ],
+  "new_plan": {
+    "bytes": 486581,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_20261004.json",
+    "sha256": "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
+  },
+  "scientific_execution_authorized": false,
+  "sources": [
+    {
+      "bytes": 59,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/__init__.py",
+      "sha256": "f379db82028a8af2ba14a89ec9ef6381346807470523fa1836554ba6f26a2746"
+    },
+    {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    {
+      "bytes": 6840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_dgx_pressure.py",
+      "sha256": "d636b6584ea734a1e92752a0cf287d7c690a7845098c2b7e6b642a2eeadbda79"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 7954,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/benchmark_production.py",
+      "sha256": "47afa3439fea5e0c6c9ac9d62a1c1f819394ba56ec65a55f7192ac9407f918dc"
+    },
+    {
+      "bytes": 5270,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/build_publication_runtime.py",
+      "sha256": "34af7d2933a7bfd5b46b2b3af3fcf9f21bd597f533a6d9a23a332e4415286ade"
+    },
+    {
+      "bytes": 3748,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/command_host_monitor.py",
+      "sha256": "3ef0f82132bad825509f8fade0e11c1b17d12be11d578327a7c593cbe3db30c9"
+    },
+    {
+      "bytes": 1475,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/disk_observation_sequence.py",
+      "sha256": "2c12c6622d96feeb007f5ee11de57bec427ef3e6515d29ae4b05460bb224bcce"
+    },
+    {
+      "bytes": 5820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_counter_step.py",
+      "sha256": "6c8ce070a90b2410f01e274cbf97c9d4b80023f0cc1e49207420f3cf2cf2fc34"
+    },
+    {
+      "bytes": 5862,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_hierarchy_step.py",
+      "sha256": "d2e3647ac80ce4bc2b28a11a8edb9336c02df2519ac055740e4d70aa61459b54"
+    },
+    {
+      "bytes": 7461,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_interval_step.py",
+      "sha256": "0503cee2c49e1f77086232dd99076041f33ff8dc697097d01909d9315af0990e"
+    },
+    {
+      "bytes": 10019,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_lineage_step.py",
+      "sha256": "a35383d4c3e69a6bdc21eab1414ba57bb81adf3aad04c4915a8be8aefbdd6de9"
+    },
+    {
+      "bytes": 4268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_native_root_context.py",
+      "sha256": "667ef20bfd363a213b56e273aa93ee7f6eca5d9615c12227979f66b087fdeb49"
+    },
+    {
+      "bytes": 12257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_threadripper_scaling.py",
+      "sha256": "515ee409b3ee3105873027dde3798420c42572211742c59333ba33160b4f1845"
+    },
+    {
+      "bytes": 5721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/monitor_slurm_resources.py",
+      "sha256": "9e994aab177eff74c259416efdd509945708d1363271f63c996523447e346924"
+    },
+    {
+      "bytes": 2254,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_completion.py",
+      "sha256": "1b93b92cd7dc4615cc7b9aa71c8344a3df85250a1f63af009b6bae6207410d58"
+    },
+    {
+      "bytes": 6556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_host_competition.py",
+      "sha256": "d8b66001bdabf4c436aab8185f218dac019dd45b3075c71521513235a1c07e0a"
+    },
+    {
+      "bytes": 4513,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_thread_affinity.py",
+      "sha256": "d0116f8bea2b625df0c66128e0a259c2262f57c7cc8ffbbecf2a19a362989775"
+    },
+    {
+      "bytes": 4521,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/observe_threadripper_process_identity.py",
+      "sha256": "29c4a74595016c8eae1d0ac827c6f04af17791ba7a60cce9146a4144e04ca676"
+    },
+    {
+      "bytes": 13747,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthobench_stage_diagnostics.py",
+      "sha256": "1ea4a651fef6765104b082d3b0d17d5c8a6263b8da61afbdab006cd85159b72e"
+    },
+    {
+      "bytes": 2577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/periodic_host_observer.py",
+      "sha256": "0b0c09d79bb8b56e965842d146084750b3b58ff80b99448da0f6ca5ec83f44c6"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 10824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_orthobench_factorial.py",
+      "sha256": "8363f1f5720424ed2aa79ad073eac3b09d726be0f8c63157293dfb20683f8bdd"
+    },
+    {
+      "bytes": 7207,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cgroup_frontier.py",
+      "sha256": "719b90cf4147d6c48211926cda9221229d492a44437c035962194b7b67a73e75"
+    },
+    {
+      "bytes": 5435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_cgroup_lineage.py",
+      "sha256": "54753e22ed11bac0c3d9cc231bfa9c12699aceb433dd57a1df488a3c37fadf85"
+    },
+    {
+      "bytes": 9059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_cpu_hierarchy.py",
+      "sha256": "e2ae95faad1630f0c055d0b5a152b87991e0c8a529ec58d7a43e072b25ee55e1"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    },
+    {
+      "bytes": 5845,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_host_counters.py",
+      "sha256": "3d3c193305085e17aa10e05be842d814f66d020d7dde285c8d9288ead2ce3f3c"
+    },
+    {
+      "bytes": 10645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_interval_cpu.py",
+      "sha256": "b535124efb386265555e1ea946e4edc16ad6d8ff1c3d467955576875d944e366"
+    },
+    {
+      "bytes": 7070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_pressure.py",
+      "sha256": "4d35b4435eb46e46f8b2933432944d74b0d6bb08a80c94945b59d38778340fbc"
+    },
+    {
+      "bytes": 4316,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_threadripper_allocation.py",
+      "sha256": "081b14ef140a84a09b45e8c7e0e1580deb73a2218217632cf87c90619ad41550"
+    },
+    {
+      "bytes": 16533,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_high_sensitivity.py",
+      "sha256": "1e220981be64cc75ba772968b9d53fbaea9638da4fff9c48071fec48d33bd6eb"
+    },
+    {
+      "bytes": 11445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_phylogeny.py",
+      "sha256": "e4de6f39c66c0f7e7f63229188a76ece44dbdc9b7771ab1c3b1465cec63aa539"
+    },
+    {
+      "bytes": 2733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_finalization.py",
+      "sha256": "269dea63b97cfea631aed730ed4a2550facd752327402dbb666634b1c3cb538c"
+    },
+    {
+      "bytes": 7039,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_generation.py",
+      "sha256": "464e5c7b6f0d0430eadeba19ca151e5b1a2b8dc046ba372e99cce48a127158a2"
+    },
+    {
+      "bytes": 12030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_methods.py",
+      "sha256": "cccf579c221c51e8d03d512264efc3d0a61f4c0a598863d2423bdbd90f7921be"
+    },
+    {
+      "bytes": 6229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_orthobench_partition.py",
+      "sha256": "0e24c302a9d12ce8c82a4111ff0321c87303469b3c866c317dc2629ad66f9746"
+    },
+    {
+      "bytes": 6808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/screen_bracketed_cpu.py",
+      "sha256": "9175b0033b079d50cb086d64397a4996850d4f79dac317cd15ea83d96f4b8075"
+    },
+    {
+      "bytes": 6539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/slurm_resource_snapshot.py",
+      "sha256": "4f78a03aab56c9e0771eba90ad15c4f91b3d5cb6289a9dd4b6407d444cec45d3"
+    },
+    {
+      "bytes": 7076,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/summarize_frontier_overhead.py",
+      "sha256": "f0f1c78ec7dd607943474931b1f2611e759a89fa8c2a72665d8945eb34cf38fa"
+    },
+    {
+      "bytes": 4014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_profile_runtime.py",
+      "sha256": "94f6dc4b3fe18e6a7ac7e9a95d4cdf67f98c6d9c5697cf08683e002c200f42d8"
+    },
+    {
+      "bytes": 4464,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_simulation_histories.py",
+      "sha256": "7a50ac5cb159f4f674b8acd5c40a316b11ac798e7e7fd3a539430ccc223166f1"
+    },
+    {
+      "bytes": 9370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_validation.py",
+      "sha256": "a1d4d6e092e37a134a6307aee8527d654f132aab0a35c4bf93204aa0b1e4e7a6"
+    }
+  ],
+  "static_dependency_records": 43,
+  "status": "calibration_scope_reused_with_explicit_source_differences",
+  "unchanged_records": 39
+}

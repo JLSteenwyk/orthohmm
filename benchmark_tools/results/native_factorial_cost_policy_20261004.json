@@ -1,0 +1,49 @@
+{
+  "configuration_files": [],
+  "decision": "reviewed",
+  "evidence": [
+    {
+      "bytes": 10808,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_goal_reaffirmed_policy_20261004.json",
+      "sha256": "8e0960bd365b970e52a8b43d5730c4b69ea09a462a54fa73fed3eb14eb0d3d7c"
+    },
+    {
+      "bytes": 486581,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_20261004.json",
+      "sha256": "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784"
+    },
+    {
+      "bytes": 4365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/NATIVE_FACTORIAL_EXECUTION_PROTOCOL_20261004.md",
+      "sha256": "962779d8bd1ee12a876c44e0ebd67622574dc5607a762450ab6da104e3795a89"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "foreign_cpu_role": "diagnostic_only",
+  "host": "bizon",
+  "limitations": [
+    "All CPU/PSI magnitudes are diagnostics; limits are not outside-work eligibility.",
+    "Outside read errors/churn limit contention estimates; native accounting remains separately validated.",
+    "128 GiB available memory is checked at launch, not a guarantee of future host capacity."
+  ],
+  "maximum_foreign_average_cores": 0.0,
+  "maximum_pressure_percent": {
+    "cpu": 100.0,
+    "io": 100.0,
+    "memory": 100.0
+  },
+  "maximum_pressure_sample_period_s": 1.5,
+  "maximum_sample_period_s": 35.0,
+  "minimum_available_memory_bytes": 137438953472,
+  "native_pressure_role": "diagnostic_only",
+  "plan_sha256": "c697d9c9b08df1c0ad40807e6db6044ffd597dc3dc997debf60fbcf492d45784",
+  "preflight_pressure_role": "diagnostic_only",
+  "process_policy": {
+    "bytes": 293,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_process_policy_20261003.json",
+    "sha256": "530b7f3740c924b7a5ede7ed98365a2327130f72f2c93039fb18cb1bb089772a"
+  },
+  "review_reference": "Prospective native factorial execution protocol; user-authorized shared-host scope; unchanged typed process/capacity roles",
+  "schema": "threadripper_environment_policy_v3",
+  "scientific_timings_admitted": false
+}
