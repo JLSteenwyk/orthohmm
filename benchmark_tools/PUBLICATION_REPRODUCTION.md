@@ -2,6 +2,18 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [native factorial adapter diagnostic](results/NATIVE_FACTORIAL_ADAPTER_RESULT_20261004.md)
+now verifies all eight explicit P/C/R paths on a small mechanical fixture,
+without editing frozen defaults or rerunning full benchmarks. Sensitive
+initial-search checkpoint bytes are identical; real profiles and inferred
+trees/reconciliation execute in their declared cells. A separate nonzero
+candidate-gate test validates C-on/R-off. All59 final tests pass;222 copied
+fixture files/363,122bytes are hash-checked. The
+[prospective remaining-cost protocol](NATIVE_FACTORIAL_COST_PROTOCOL_20261004.md)
+does not itself authorize full-dataset launch. New full-cost executor/handoff
+remain required; no publication timing/accuracy result is added, and rc4
+does not already contain this later addendum.
+
 The [later full native QfO cost addendum](results/QFO_NATIVE_COST_RESULT_20261004.md)
 directly verifies the selected high-sensitivity configuration's corrected
 inputs, frozen source/settings and whole partition against retained native

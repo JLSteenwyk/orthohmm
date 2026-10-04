@@ -1,0 +1,85 @@
+{
+  "cpu_budget": 2,
+  "created_at_epoch_s": 1791151904.6413813,
+  "gene_tree_rooting": "explicit_root_or_min_duplication_loss",
+  "input_cluster_sha256": "2d426fa7484c17351abda028272ba619344f5596bd45b42a18fc178fac53f2f6",
+  "input_proteomes": [
+    {
+      "filename": "s0.fa",
+      "sha256": "2b34e794787fa3623eac9194c699a98111ef49903ab03b340ea486b52b7f78eb",
+      "taxon": "s0"
+    },
+    {
+      "filename": "s2.fa",
+      "sha256": "b69faad5ede3ff2bbbaa7bdb0c48c7936c9ce30c8aea000ba82bf09de21f0690",
+      "taxon": "s2"
+    },
+    {
+      "filename": "s1.fa",
+      "sha256": "6a2920be07d7876e48acbf62fb433aea3a15f2be911f81e00f3c0ffe6121570f",
+      "taxon": "s1"
+    },
+    {
+      "filename": "s3.fa",
+      "sha256": "841d5e1237e45c9e673b746bfd98f3678329db64a08b2c166d9abf08b9ef6bef",
+      "taxon": "s3"
+    }
+  ],
+  "membership_reconciliation": null,
+  "mode": "reconcile",
+  "pair_orthology_rule": "positive_paralogy",
+  "parallelism": "deterministic_family_order_external_tools_one_thread_each",
+  "results": {
+    "bypassed_families": 5,
+    "candidate_families": 6,
+    "checkpoint_hits": 0,
+    "duplications": 2,
+    "ortholog_pairs": 43,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1/native/orthohmm_phylogeny",
+    "reconciled_families": 1,
+    "remapped_checkpoint_hits": 0,
+    "root_hogs": 6,
+    "schema_version": 1,
+    "speciations": 3,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 5,
+    "uncertain_events": 0
+  },
+  "root_duplication_rule": "species_overlap",
+  "schema_version": 1,
+  "species_tree_inference": {
+    "checkpoint_hit": false,
+    "families": 5,
+    "minimum_core_taxa": 2,
+    "placement_families": 0,
+    "placement_family_ids": [],
+    "selected_family_ids": [
+      "Family0000000",
+      "Family0000001",
+      "Family0000002",
+      "Family0000003",
+      "Family0000004"
+    ],
+    "supermatrix_columns": 800
+  },
+  "species_tree_mode": "infer",
+  "species_tree_rooting": "min_variance",
+  "species_tree_sha256": "350085e6830c74c8ac32cf5a552ae3eb95debefef3d76df47e852483b1c091c2",
+  "species_tree_source": "internally_inferred_from_orthohmm_single_copy_families",
+  "species_tree_taxa": [
+    "s0",
+    "s1",
+    "s2",
+    "s3"
+  ],
+  "tools": {
+    "aligner": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/mafft-7.525-with-extensions/bin/mafft",
+      "version": "v7.525 (2024/Mar/13)"
+    },
+    "tree_builder": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/SOFTWARE/FastTree_v220/FastTree",
+      "version": "FastTree Version 2.2.0 Double precision"
+    }
+  }
+}

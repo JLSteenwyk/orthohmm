@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Native Factorial Adapter And Eight Diagnostics Passed (2026-10-04)
+
+The preceding608a20cc turn makes progress by verifying the retained native
+QfO whole-partition/cost association. Read full goal/newest ledger and
+query Slurm: no owned job live. Take the next safe missing-resource action,
+not another package version. A benchmark-only adapter exposes P-off and
+C-on/R-off while requiring exact frozen pipeline bytes and preserving
+production source/globals/defaults. P-off retains the sensitive initial
+HMM search and multipass graph; only the profile field changes. Only C1R0
+changes the existing candidate gate, with all other execution AST unchanged.
+
+Prepare/push source at56fcc355 after32 unit cases pass. Then run exactly
+one bounded native diagnostic per eight P/C/R cells on a26-protein/four-species
+fixture, under the retained private Python and CPU affinity0/1. About753GiB
+RAM available; no timing-panel launch or unrelated workload change. All8
+native attempts succeed. Initial116-hit checkpoint bytes are identical;
+P-on builds6 profiles/26 profile hits, R-on infers from5 families/reconciles
+1 family with2 duplications, no tree checkpoint reused. Native fixture has
+zero C merges and unchanged6-group partitions, so no accuracy effect is
+claimed. Separate19-gene actual candidate-block tests exercise8 nonzero
+capped merges even with R-off, leaving one satellite IDg8; C-off is unchanged.
+
+The [actual result](NATIVE_FACTORIAL_ADAPTER_RESULT_20261004.md) retains222
+small fixture files/363,122bytes and a288-record tree inventory. Allrecords
+verify; independent raw-artifact tests check all copied bytes/arrays, actual
+stage/factor data, input/group universes and inferred/reconciled trees. After
+40 gate and58 raw-readback cases pass, final inventory/pipeline/accuracy
+tests pass59 cases without failures/skips. The diagnostic harness's50.47s
+GNU-time record is engineering evidence only, not publication efficiency.
+
+Freeze the [prospective13-identity cost protocol](../NATIVE_FACTORIAL_COST_PROTOCOL_20261004.md)
+before new full-dataset timings.
+It retains original input bytes, factors/order, private32-core128GiB shared
+scope and all failure/contamination limits. Diagnostic CLI remains bounded;
+full-run execution is not yet authorized or started. Next implement/validate
+the separately bound native executor and launch handoff using valid existing
+runtime/accounting/observer receipts, then release genuinely missing runs
+sequentially after safe-capacity checks. Do not restart the closed27-attempt
+panel, retry until faster, change defaults or add a quiet-window/DGX gate.
+
+Commit/push diagnostics/tests/protocol and reporting route. Prior official
+scores, sixteen unavailable original cached full costs, main/PDF/rc4 archive,
+unrelated samples/jobs/services remain unchanged. This later addendum is not
+already bundled. Broader scientific/generalization/uncertainty/strata/native/
+distribution gaps remain; full goal active and readiness unproven.
+
 ## Full Native QfO Cost Associated Without Rerun (2026-10-04)
 
 The preceding goal-policy reply verifies an already synchronized prompt but

@@ -1,0 +1,11 @@
+hog_id	parent_hog_id	species_tree_node	source_family	event	genes
+Family0000000.root			Family0000000	unambiguous	s0_f0,s1_f0,s2_f0,s3_f0
+Family0000001.root			Family0000001	unambiguous	s0_f1,s1_f1,s2_f1,s3_f1
+Family0000002.root			Family0000002	unambiguous	s0_f2,s1_f2,s2_f2,s3_f2
+Family0000003.root			Family0000003	unambiguous	s0_f3,s1_f3,s2_f3,s3_f3
+Family0000004.root			Family0000004	unambiguous	s0_f4,s1_f4,s2_f4,s3_f4
+Family0000005.G00000	Family0000005.G00002	s1	Family0000005	duplication	s1_f5,s1_f5_copy
+Family0000005.G00001	Family0000005.G00002	s0	Family0000005	duplication	s0_f5,s0_f5_copy
+Family0000005.G00002	Family0000005.G00004	S0001	Family0000005	speciation	s0_f5,s0_f5_copy,s1_f5,s1_f5_copy
+Family0000005.G00003	Family0000005.G00004	S0002	Family0000005	speciation	s2_f5,s3_f5
+Family0000005.G00004		S0000	Family0000005	speciation	s0_f5,s0_f5_copy,s1_f5,s1_f5_copy,s2_f5,s3_f5

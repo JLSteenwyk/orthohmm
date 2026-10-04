@@ -1,0 +1,42 @@
+{
+  "schema": "native_factorial_adapter_execution_v1",
+  "status": "eight_native_diagnostics_and_independent_gate_artifact_checks_passed",
+  "prepared_source_commit": "56fcc355",
+  "native_diagnostic_attempts": 8,
+  "native_diagnostic_failures": 0,
+  "diagnostic_genes": 26,
+  "diagnostic_hits": 116,
+  "identical_initial_search_checkpoints": true,
+  "copied_files": 222,
+  "copied_bytes": 363122,
+  "copied_inventory_records": 288,
+  "prepared_tests": {"passed": 32, "failed": 0, "skipped": 0, "seconds": 0.68},
+  "gate_tests": {"passed": 40, "failed": 0, "skipped": 0, "seconds": 0.85},
+  "raw_readback_tests": {"passed": 58, "failed": 0, "skipped": 0, "seconds": 1.72},
+  "final_tests": {"passed": 59, "failed": 0, "skipped": 0, "seconds": 1.57},
+  "artifacts": [
+    {"path": "benchmark_tools/native_factorial_adapter.py", "bytes": 4685, "sha256": "765a8239299f9962b0bcec1fc657c9552dbdd35dc912fe67a779436ca7614189"},
+    {"path": "benchmark_tools/diagnose_native_factorial.py", "bytes": 7724, "sha256": "485904ed334d4f69086628d31587718a81f162a65958ce10a964dd2c6f71a648"},
+    {"path": "benchmark_tools/probe_native_factorial_adapter.py", "bytes": 7130, "sha256": "3d76a9a071815d4ad1c03c298034028374465417eb33547a39e402f28295b77b"},
+    {"path": "tests/unit/test_native_factorial_adapter.py", "bytes": 11609, "sha256": "8be8feb1eddded03a464f6694f0e37dd9c58a4dd445924bb236bdcc5f6d09767"},
+    {"path": "benchmark_tools/NATIVE_FACTORIAL_COST_PROTOCOL_20261004.md", "bytes": 7373, "sha256": "36c4324af09c6e80ce640e3c5b14706ddf114143bc0e087304fc32e273f9a487"},
+    {"path": "benchmark_tools/results/native_factorial_adapter_diagnostic_20261004/probe.json", "bytes": 30959, "sha256": "fed38601efe21cf17879438eb3b8bc65c0768aeefc104cb24b2c9c75d1fdbbf5"},
+    {"path": "benchmark_tools/results/native_factorial_adapter_artifacts_20261004.json", "bytes": 99189, "sha256": "53d60e03d039de3a92311ba6223ee9c9a5836f983a785d37466c50818c9e0d7c"},
+    {"path": "benchmarks/work/native_factorial_adapter_artifacts_verified_20261004.json", "bytes": 110, "sha256": "127ff3c059cb0d7a01c1eaf1f0423c1f4ff16e150a0096d8091d8e914538f8c8"},
+    {"path": "benchmarks/work/native_factorial_adapter_prepared_tests_20261004.xml", "bytes": 5048, "sha256": "63786d7448682ce749860ef36be22bde46967c72d42dd5dfbb2bed42a5731a79"},
+    {"path": "benchmarks/work/native_factorial_adapter_gate_tests_20261004.xml", "bytes": 6424, "sha256": "a15b35a4c3f19a250e95d6a9905d9a0eba3f53587c22679e34fdcd6895624432"},
+    {"path": "benchmarks/work/native_factorial_adapter_final_tests_20261004.xml", "bytes": 8665, "sha256": "20afdfb1e85c6318eda18c04d625337ea4f388b27b012355465390422121f16b"},
+    {"path": "benchmarks/work/native_factorial_adapter_inventory_tests_20261004.xml", "bytes": 8806, "sha256": "928b4de0140faab820f234ca54eb03763beea53f64aeb3c701df28767b717d5f"}
+  ],
+  "full_dataset_execution_started": false,
+  "publication_timing_observation_created": false,
+  "accuracy_evaluated": false,
+  "frozen_method_defaults_changed": false,
+  "publication_ready": false,
+  "limitations": [
+    "Only bounded mechanical native diagnostics and a controlled candidate-block fixture; full-dataset costs/equivalence remain unmeasured.",
+    "The diagnostic CLI is not a full-run authorization; prospective protocol needs an independently bound executor and live capacity/accounting handoff.",
+    "Copied artifact inventory and content checks are not a hermetic runtime snapshot or all-study scientific completion.",
+    "Previous manuscript/archive/scaling snapshots remain unchanged; this addendum is not already bundled in rc4."
+  ]
+}

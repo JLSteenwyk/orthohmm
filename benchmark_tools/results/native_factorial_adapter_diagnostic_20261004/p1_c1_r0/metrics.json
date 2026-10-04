@@ -1,0 +1,187 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+    "--diagnostic",
+    "--core-root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+    "--baseline",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+    "--baseline-sha256",
+    "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+    "--fasta-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+    "--output-directory",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0",
+    "--cell",
+    "p1_c1_r0"
+  ],
+  "counts": {
+    "genes": 26,
+    "high_sensitivity_final_singleton_edges": 0,
+    "high_sensitivity_profile_candidates": 26,
+    "high_sensitivity_profile_edges": 0,
+    "high_sensitivity_profile_hits": 26,
+    "high_sensitivity_profiles": 6,
+    "high_sensitivity_rbnh_edges": 44,
+    "high_sensitivity_singleton_edges": 0,
+    "network_edges": 44,
+    "orthogroups": 6,
+    "phylogeny_candidate_merges": 0,
+    "phylogeny_seed_families": 6,
+    "search_candidates": 116,
+    "significant_hits": 116,
+    "single_copy_orthogroups": 5,
+    "singletons": 0,
+    "species": 4,
+    "species_pairs": 16
+  },
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "finished_at_epoch_s": 1791151925.2010844,
+  "metadata": {
+    "accuracy_profile": "high_sensitivity",
+    "clustering": "leiden",
+    "cpm_resolution": 0.1,
+    "cpu_budget": 2,
+    "evalue_threshold": 0.0001,
+    "fasta_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+    "high_sensitivity_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_working_res/high_sensitivity_checkpoint",
+    "leiden_seed": 4,
+    "native_factorial": {
+      "active_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "candidate_expansion": true,
+      "candidate_gate_decoupled": true,
+      "cell": "p1_c1_r0",
+      "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+      "original_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "production_globals_modified": false,
+      "production_source_modified": false,
+      "profile_expansion": true,
+      "reconciliation": false
+    },
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native",
+    "phylogeny_candidate_profile": {
+      "candidate_checkpoint": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_working_res/phylogeny_candidate_superfamilies.txt",
+      "candidate_families": 6,
+      "directed_relations": 0,
+      "iterations": 0,
+      "membership_policy": "high_confidence_pair",
+      "merge_trace_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "merges": 0,
+      "parameters": {
+        "iteration_margin_increment": 0.5,
+        "max_component_genes": 500,
+        "max_iterations": 2,
+        "max_satellite_genes": 12,
+        "max_satellite_to_anchor_ratio": 0.75,
+        "max_satellites_per_anchor": 4,
+        "max_species_overlap_fraction": 1.0,
+        "min_avg_score": 0.0,
+        "min_coverage": 0.5,
+        "min_margin": 1.5,
+        "min_max_score": 0.0,
+        "min_norm": 0.03
+      },
+      "profile": "satellite_v2",
+      "seed_families": 6,
+      "seed_sidecar": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_working_res/phylogeny_candidate_seeds.tsv"
+    },
+    "refinement_substages_s": {
+      "cluster_write": 0.000119,
+      "hit_and_edge_collection": 0.000193,
+      "numeric_refinement": 0.000264,
+      "setup_and_cluster_read": 7.9e-05
+    },
+    "search_kmer_k": 4,
+    "search_max_candidates_per_query": 100,
+    "search_mode": "builtin",
+    "search_threads_per_worker": 2,
+    "search_total_threads": 2,
+    "search_workers": 1,
+    "substitution_matrix": "BLOSUM62"
+  },
+  "peak_process_tree_rss_bytes": 403861504,
+  "peak_process_tree_rss_gib": 0.376125,
+  "pid": 334339,
+  "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+  "python": "3.10.13",
+  "rss_measurement": "sampled_sum_of_linux_proc_tree_rss",
+  "schema_version": 1,
+  "stages": {
+    "clustering": {
+      "peak_process_tree_rss_bytes": 158494720,
+      "peak_process_tree_rss_gib": 0.14761,
+      "system_cpu_s": 0.044972,
+      "user_cpu_s": 1.166044,
+      "wall_s": 1.207567
+    },
+    "edge_thresholds": {
+      "peak_process_tree_rss_bytes": 121077760,
+      "peak_process_tree_rss_gib": 0.112762,
+      "system_cpu_s": 0.0,
+      "user_cpu_s": 0.000486,
+      "wall_s": 0.000492
+    },
+    "network_edges": {
+      "peak_process_tree_rss_bytes": 121077760,
+      "peak_process_tree_rss_gib": 0.112762,
+      "system_cpu_s": 0.0,
+      "user_cpu_s": 0.002879,
+      "wall_s": 0.002886
+    },
+    "orthogroup_materialization": {
+      "peak_process_tree_rss_bytes": 234897408,
+      "peak_process_tree_rss_gib": 0.218765,
+      "system_cpu_s": 0.001002,
+      "user_cpu_s": 0.00098,
+      "wall_s": 0.000991
+    },
+    "phylogeny_candidates": {
+      "peak_process_tree_rss_bytes": 234897408,
+      "peak_process_tree_rss_gib": 0.218765,
+      "system_cpu_s": 1.1e-05,
+      "user_cpu_s": 0.00218,
+      "wall_s": 0.001199
+    },
+    "profile_expansion": {
+      "peak_process_tree_rss_bytes": 403861504,
+      "peak_process_tree_rss_gib": 0.376125,
+      "system_cpu_s": 0.245004,
+      "user_cpu_s": 3.765945,
+      "wall_s": 2.481545
+    },
+    "refinement": {
+      "peak_process_tree_rss_bytes": 234897408,
+      "peak_process_tree_rss_gib": 0.218765,
+      "system_cpu_s": 0.0,
+      "user_cpu_s": 0.001989,
+      "wall_s": 0.000997
+    },
+    "search": {
+      "peak_process_tree_rss_bytes": 277196800,
+      "peak_process_tree_rss_gib": 0.25816,
+      "system_cpu_s": 0.102259,
+      "user_cpu_s": 0.895466,
+      "wall_s": 0.941928
+    }
+  },
+  "started_at_epoch_s": 1791151919.720156,
+  "status": "complete",
+  "system_cpu_s": 0.499904,
+  "user_cpu_s": 7.104354,
+  "wall_s": 5.480929
+}

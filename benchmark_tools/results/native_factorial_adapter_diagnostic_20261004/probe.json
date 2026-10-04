@@ -1,0 +1,667 @@
+{
+  "accuracy_evaluated": false,
+  "adapter_source": {
+    "bytes": 4685,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_factorial_adapter.py",
+    "sha256": "765a8239299f9962b0bcec1fc657c9552dbdd35dc912fe67a779436ca7614189"
+  },
+  "attempts": [
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r0",
+        "--cell",
+        "p0_c0_r0"
+      ],
+      "cell": "p0_c0_r0",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r0/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16284,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r0/diagnostic.json",
+        "sha256": "fc223569049ec52fcf1e8da6003fef303ab6bce4542c1a59cd031a1b38c39b53"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1684,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r0.log",
+        "sha256": "68952f71d8c38ec9f81717b254975b3b2f6fcca6ff4afd67b5e1854c12261c19"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r0/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r1",
+        "--cell",
+        "p0_c0_r1"
+      ],
+      "cell": "p0_c0_r1",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r1/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_bypassed_families": 5,
+        "phylogeny_candidate_families": 6,
+        "phylogeny_checkpoint_hits": 0,
+        "phylogeny_duplications": 2,
+        "phylogeny_ortholog_pairs": 43,
+        "phylogeny_reconciled_families": 1,
+        "phylogeny_remapped_checkpoint_hits": 0,
+        "phylogeny_root_hogs": 6,
+        "phylogeny_speciations": 3,
+        "phylogeny_species_tree_checkpoint_hit": false,
+        "phylogeny_species_tree_families": 5,
+        "phylogeny_uncertain_events": 0,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16760,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r1/diagnostic.json",
+        "sha256": "2f179fa1552fcab0d81aa8c5c81f17c2e8e12259cec3d22d7352a39ef2341e51"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1747,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r1.log",
+        "sha256": "e0b55b1de017cc314c17c8a03c8095f9ac067e7081e1341d7812a965ac5ab8c2"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c0_r1/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r0",
+        "--cell",
+        "p0_c1_r0"
+      ],
+      "cell": "p0_c1_r0",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r0/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_candidate_merges": 0,
+        "phylogeny_seed_families": 6,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16381,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r0/diagnostic.json",
+        "sha256": "533f218732090d8736bc3ce6ebf2cbb1830d8aadee4661ce9d646aa9557d4060"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1684,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r0.log",
+        "sha256": "6e8eda5a96ce945dceffddeed36dc14172d91814d65986e924982bef0ad18ed7"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r0/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny_candidates",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1",
+        "--cell",
+        "p0_c1_r1"
+      ],
+      "cell": "p0_c1_r1",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_bypassed_families": 5,
+        "phylogeny_candidate_families": 6,
+        "phylogeny_candidate_merges": 0,
+        "phylogeny_checkpoint_hits": 0,
+        "phylogeny_duplications": 2,
+        "phylogeny_ortholog_pairs": 43,
+        "phylogeny_reconciled_families": 1,
+        "phylogeny_remapped_checkpoint_hits": 0,
+        "phylogeny_root_hogs": 6,
+        "phylogeny_seed_families": 6,
+        "phylogeny_speciations": 3,
+        "phylogeny_species_tree_checkpoint_hit": false,
+        "phylogeny_species_tree_families": 5,
+        "phylogeny_uncertain_events": 0,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16858,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1/diagnostic.json",
+        "sha256": "85e8db3988ff49fbd1756a9b283462e3526b4642e7f9337c3c58d2411844ea8a"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1747,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1.log",
+        "sha256": "00038a546a5047c0adbfe6b02d070537e943cd13243329cbf0b2541ac3283608"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p0_c1_r1/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny",
+        "phylogeny_candidates",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r0",
+        "--cell",
+        "p1_c0_r0"
+      ],
+      "cell": "p1_c0_r0",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r0/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_final_singleton_edges": 0,
+        "high_sensitivity_profile_candidates": 26,
+        "high_sensitivity_profile_edges": 0,
+        "high_sensitivity_profile_hits": 26,
+        "high_sensitivity_profiles": 6,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16521,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r0/diagnostic.json",
+        "sha256": "f6ccc733d43c34de189ffe08b1bb507fc89314a9451abc05fa4783bc737896bf"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1684,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r0.log",
+        "sha256": "5819ae72dcb84fd61f80568221f3481f4fb864502b2152f59667802df6f55b4c"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r0/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "profile_expansion",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1",
+        "--cell",
+        "p1_c0_r1"
+      ],
+      "cell": "p1_c0_r1",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_final_singleton_edges": 0,
+        "high_sensitivity_profile_candidates": 26,
+        "high_sensitivity_profile_edges": 0,
+        "high_sensitivity_profile_hits": 26,
+        "high_sensitivity_profiles": 6,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_bypassed_families": 5,
+        "phylogeny_candidate_families": 6,
+        "phylogeny_checkpoint_hits": 0,
+        "phylogeny_duplications": 2,
+        "phylogeny_ortholog_pairs": 43,
+        "phylogeny_reconciled_families": 1,
+        "phylogeny_remapped_checkpoint_hits": 0,
+        "phylogeny_root_hogs": 6,
+        "phylogeny_speciations": 3,
+        "phylogeny_species_tree_checkpoint_hit": false,
+        "phylogeny_species_tree_families": 5,
+        "phylogeny_uncertain_events": 0,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16997,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1/diagnostic.json",
+        "sha256": "ce92dd0de6eb2df9de502e139d9287928e1cd92827fa2faf90269995146579ad"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1747,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1.log",
+        "sha256": "b5307385e4ae3db0f27db90b6da18eda10294af3c2b32be019f89d5c439e77a9"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny",
+        "profile_expansion",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0",
+        "--cell",
+        "p1_c1_r0"
+      ],
+      "cell": "p1_c1_r0",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_final_singleton_edges": 0,
+        "high_sensitivity_profile_candidates": 26,
+        "high_sensitivity_profile_edges": 0,
+        "high_sensitivity_profile_hits": 26,
+        "high_sensitivity_profiles": 6,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_candidate_merges": 0,
+        "phylogeny_seed_families": 6,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 16618,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/diagnostic.json",
+        "sha256": "7340202984f12db4405b7ad21668be026beb5245b0c19e660bafa08adb7f514e"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1684,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0.log",
+        "sha256": "90cf2b3e13f77422bce0c697b9caa84aae0b153a0e9da27bf8727c4a0723e5a3"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r0/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny_candidates",
+        "profile_expansion",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    },
+    {
+      "argv": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+        "--diagnostic",
+        "--core-root",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2",
+        "--baseline",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+        "--baseline-sha256",
+        "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041",
+        "--fasta-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture",
+        "--output-directory",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r1",
+        "--cell",
+        "p1_c1_r1"
+      ],
+      "cell": "p1_c1_r1",
+      "checkpoint": {
+        "bytes": 771,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r1/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+        "sha256": "ead77c3312973b0552716ccfd4b358dd25777c5a477bea5cf343e8362e077b15"
+      },
+      "counts": {
+        "genes": 26,
+        "high_sensitivity_final_singleton_edges": 0,
+        "high_sensitivity_profile_candidates": 26,
+        "high_sensitivity_profile_edges": 0,
+        "high_sensitivity_profile_hits": 26,
+        "high_sensitivity_profiles": 6,
+        "high_sensitivity_rbnh_edges": 44,
+        "high_sensitivity_singleton_edges": 0,
+        "network_edges": 44,
+        "orthogroups": 6,
+        "phylogeny_bypassed_families": 5,
+        "phylogeny_candidate_families": 6,
+        "phylogeny_candidate_merges": 0,
+        "phylogeny_checkpoint_hits": 0,
+        "phylogeny_duplications": 2,
+        "phylogeny_ortholog_pairs": 43,
+        "phylogeny_reconciled_families": 1,
+        "phylogeny_remapped_checkpoint_hits": 0,
+        "phylogeny_root_hogs": 6,
+        "phylogeny_seed_families": 6,
+        "phylogeny_speciations": 3,
+        "phylogeny_species_tree_checkpoint_hit": false,
+        "phylogeny_species_tree_families": 5,
+        "phylogeny_uncertain_events": 0,
+        "search_candidates": 116,
+        "significant_hits": 116,
+        "single_copy_orthogroups": 5,
+        "singletons": 0,
+        "species": 4,
+        "species_pairs": 16
+      },
+      "diagnostic": {
+        "bytes": 17095,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r1/diagnostic.json",
+        "sha256": "0517185ca04853d561878b408a1aaea1ea3c2d24a9d6eaf4538726fdc5d8659e"
+      },
+      "exit_code": 0,
+      "log": {
+        "bytes": 1747,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r1.log",
+        "sha256": "6b1b6b19c6bb39127da687b417a5da2b66e6a5334aa9c3a940a4149a6aed15fb"
+      },
+      "native_groups": {
+        "bytes": 196,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c1_r1/native/orthohmm_orthogroups.txt",
+        "sha256": "79fefff65a91016350dfc07cc4043b78e708cf3378c5014f0af4376e8aaa921f"
+      },
+      "stages": [
+        "clustering",
+        "edge_thresholds",
+        "network_edges",
+        "orthogroup_materialization",
+        "phylogeny",
+        "phylogeny_candidates",
+        "profile_expansion",
+        "refinement",
+        "search"
+      ],
+      "status": "diagnostic_checked"
+    }
+  ],
+  "baseline": {
+    "bytes": 489545,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_native_baseline_20260928.json",
+    "sha256": "84ec3c10e2075ea564bef049e7cfc5c72aa878c1f050afbff43bff512805d041"
+  },
+  "diagnostic_only": true,
+  "diagnostic_source": {
+    "bytes": 7724,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_native_factorial.py",
+    "sha256": "485904ed334d4f69086628d31587718a81f162a65958ce10a964dd2c6f71a648"
+  },
+  "fixture_seed": 317,
+  "full_dataset_execution_authorized": false,
+  "genes": 26,
+  "hits": 116,
+  "initial_search_checkpoints_identical": true,
+  "inputs": [
+    {
+      "bytes": 1181,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture/s0.fa",
+      "sha256": "2b34e794787fa3623eac9194c699a98111ef49903ab03b340ea486b52b7f78eb"
+    },
+    {
+      "bytes": 1181,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture/s1.fa",
+      "sha256": "6a2920be07d7876e48acbf62fb433aea3a15f2be911f81e00f3c0ffe6121570f"
+    },
+    {
+      "bytes": 1008,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture/s2.fa",
+      "sha256": "b69faad5ede3ff2bbbaa7bdb0c48c7936c9ce30c8aea000ba82bf09de21f0690"
+    },
+    {
+      "bytes": 1008,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture/s3.fa",
+      "sha256": "841d5e1237e45c9e673b746bfd98f3678329db64a08b2c166d9abf08b9ef6bef"
+    }
+  ],
+  "limitations": [
+    "Mechanical fixtures, not accuracy simulations or full-dataset measurements.",
+    "No frozen method/default changes or full production runs; missing configuration costs remain missing.",
+    "Identical fixture checkpoints/stage presence do not prove full-dataset equivalence or causal efficiency.",
+    "Native adapter handles explicit P/C/R experiments; a prospective resource protocol/launch handoff is still required."
+  ],
+  "publication_ready": false,
+  "python_executable": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "schema": "native_factorial_adapter_probe_v1",
+  "source": {
+    "bytes": 7130,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_factorial_adapter.py",
+    "sha256": "3d76a9a071815d4ad1c03c298034028374465417eb33547a39e402f28295b77b"
+  },
+  "status": "eight_native_factorial_diagnostics_complete"
+}

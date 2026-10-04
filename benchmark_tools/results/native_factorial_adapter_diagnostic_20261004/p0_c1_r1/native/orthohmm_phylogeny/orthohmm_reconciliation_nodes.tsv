@@ -1,0 +1,12 @@
+source_family	node_id	parent_node_id	event	species_tree_node	species	genes	pair_event	event_confidence	species_overlap_count	mapping_conflict	branch_support
+Family0000005	s1_f5	G00000	leaf	s1	s1	s1_f5	leaf	not_applicable	0	false	
+Family0000005	s1_f5_copy	G00000	leaf	s1	s1	s1_f5_copy	leaf	not_applicable	0	false	
+Family0000005	G00000	G00002	duplication	s1	s1	s1_f5,s1_f5_copy	duplication	medium	1	true	
+Family0000005	s0_f5	G00001	leaf	s0	s0	s0_f5	leaf	not_applicable	0	false	
+Family0000005	s0_f5_copy	G00001	leaf	s0	s0	s0_f5_copy	leaf	not_applicable	0	false	
+Family0000005	G00001	G00002	duplication	s0	s0	s0_f5,s0_f5_copy	duplication	medium	1	true	
+Family0000005	G00002	G00004	speciation	S0001	s0,s1	s0_f5,s0_f5_copy,s1_f5,s1_f5_copy	speciation	high	0	false	0.000000
+Family0000005	s2_f5	G00003	leaf	s2	s2	s2_f5	leaf	not_applicable	0	false	
+Family0000005	s3_f5	G00003	leaf	s3	s3	s3_f5	leaf	not_applicable	0	false	
+Family0000005	G00003	G00004	speciation	S0002	s2,s3	s2_f5,s3_f5	speciation	high	0	false	
+Family0000005	G00004		speciation	S0000	s0,s1,s2,s3	s0_f5,s0_f5_copy,s1_f5,s1_f5_copy,s2_f5,s3_f5	speciation	high	0	false	

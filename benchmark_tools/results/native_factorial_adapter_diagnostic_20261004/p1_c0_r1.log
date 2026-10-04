@@ -1,0 +1,40 @@
+  ____       _   _           _    _ __  __ __  __
+ / __ \     | | | |         | |  | |  \/  |  \/  |
+| |  | |_ __| |_| |__   ___ | |__| | \  / | \  / |
+| |  | | '__| __| '_ \ / _ \|  __  | |\/| | |\/| |
+| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |
+ \____/|_|   \__|_| |_|\___/|_|  |_|_|  |_|_|  |_|
+
+Version: 0.5.0
+
+-------------
+| Arguments |
+-------------
+Directory of FASTA files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/fixture
+Number of FASTA files: 4
+Directory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_adapter_diagnostic_20261004/p1_c0_r1/native
+Step to start analysis: NA
+Step to stop analysis: infer
+Search engine: built-in (profile HMM + k-mer prefilter)
+Accuracy profile: high_sensitivity
+E-value threshold: 0.0001
+Substitution matrix: BLOSUM62
+Clustering: Leiden CPM (resolution=0.1)
+Single-copy threshold: 0.5
+CPUs: 2
+
+
+Step 1/4: Conducting all-to-all comparisons (built-in search).
+          6.25% complete          12.50% complete          18.75% complete          25.00% complete          31.25% complete          37.50% complete          43.75% complete          50.00% complete          56.25% complete          62.50% complete          68.75% complete          75.00% complete          81.25% complete          87.50% complete          93.75% complete          100.00% complete
+          Completed!      
+
+Step 2/4: Determining edge thresholds
+          Completed!      
+
+Step 3/4: Identifying network edges
+          Completed!      
+
+Step 4/4: Conducting clustering
+          Reconciling ambiguous families with the species tree
+          Completed!
+
