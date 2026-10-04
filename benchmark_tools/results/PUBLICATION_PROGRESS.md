@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Selected QfO OrthoHMM Stage Linkage Delivered (2026-10-04)
+
+Prepare/push source at 55fef935 before first selected export, which exits
+zero. The [actual result](QFO_ORTHOHMM_STAGE_LINKAGE_RESULT_20261004.md)
+links both selected corrected QfO OrthoHMM rows through exact retained
+score/conversion/candidate/replay/native metadata. All original 24 rows,
+scores, gaps and 37 resource entries remain unchanged. Add five associations
+for four retained observations; shared replay is not two independent runs.
+Full costs for the exact selected cached executions remain unavailable.
+
+Prepared suite passes 83 cases plus one not-yet-exported readback skip;
+final suite passes all 84 cases. Independent stdlib readbacks check every
+earlier field, both selected chains, 16 direct metadata/source identities
+and all 546 TSV fields. An initial distinct-interval diagnostic collapses
+two preparation arms under a shared manifest; arm-aware grouping verifies
+four observations. No native/scoring/timing failure or retry occurs.
+
+Push generated JSON/TSV/Markdown, execution receipt and result/guide updates.
+Original register/cost table, frozen source/defaults, all scientific results,
+current main PDF and rc3 snapshot stay untouched. Raw/transitive artifact
+identity and historical input consumption remain inherited, not re-certified.
+No owned native job, quiet-window/DGX gate or unrelated job/service action.
+
+Next consolidate upstream QfO complete-native evidence only under its exact
+partition-equivalence scope, not as the selected cached execution's cost.
+Continue the genuinely incomplete family-by-experiment exposure inventory,
+appropriate QfO uncertainty, biological strata and publication distribution
+requirements. The full goal remains active and publication readiness unproven.
+
 ## Selected QfO OrthoHMM Stage Linkage Prepared (2026-10-04)
 
 The preceding user-requested turn only reconfirms the already amended goal;

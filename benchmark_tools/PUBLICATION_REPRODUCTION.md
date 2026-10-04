@@ -2,6 +2,17 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [selected QfO OrthoHMM stage addendum](results/QFO_ORTHOHMM_STAGE_LINKAGE_RESULT_20261004.md)
+now links both selected corrected pair outputs through exact retained
+score/conversion/candidate/replay/native metadata. It preserves all 24 earlier
+rows and all 37 earlier resource entries; five new stage associations describe
+four observations, not independent repetitions or full pipelines. All 84
+focused tests pass and independent stdlib readbacks check 16 direct metadata
+pins, every original field and all 546 TSV fields. The original score register,
+factorial costs, main PDF and rc3 snapshot remain unchanged. This addendum is
+separate from those immutable historical artifacts; historical consumption,
+full cached-execution costs and broader scientific/distribution gaps remain.
+
 Use the [actual local rc3 result](results/PUBLICATION_PACKAGE_RC3_RESULT_20261004.md)
 and [current rc3 outer instructions](PUBLICATION_PACKAGE_RC3_20261004.md).
 It preserves all115 rc2 payload identities and adds22 payloads for the

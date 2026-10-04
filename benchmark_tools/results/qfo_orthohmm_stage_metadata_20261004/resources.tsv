@@ -1,0 +1,43 @@
+cpu_system_seconds	cpu_user_seconds	dataset	declared_version	independent_repeat	memory_scope	memory_unit	memory_value	method	origin	scope	wall_measurement_status	wall_seconds
+NA	NA	OrthoBench	0.5.0	False	Reported process RSS in cached replay	GiB	5.560291	orthohmm_high_sensitivity	previous_register	Cached-hit downstream replay only; initial search excluded	recorded	319.467197
+3001.015671	73322.972274	OrthoBench	0.5.0	False	sampled_sum_of_linux_proc_tree_rss	bytes	12733403136	orthohmm_phylogeny_satellite_v2	previous_register	Historical full inference, shared host; scoring excluded	recorded	3274.102675
+3743.77	64429.47	OrthoBench	3.1.5	False	Reported maximum process RSS; not aggregate memory	KiB	4787980	orthofinder_3_1_5_full	previous_register	GNU-time full native run; shared host	recorded	3421.07
+NA	NA	OrthoBench	3.1.5	False	Reported maximum process RSS; not aggregate memory	KiB	NA	orthofinder_3_1_5_sequence_only	previous_register	Conversion only; sequence-only inference time unknown	recorded	0.42
+NA	NA	OrthoBench	2.0.9	False	Reported maximum process RSS; not aggregate memory	KiB	NA	sonicparanoid_2_0_9	previous_register	Tool-reported run duration	recorded	1219.933
+NA	NA	OrthoBench	6.3.6	False	Reported maximum process RSS; not aggregate memory	KiB	NA	proteinortho_6_3_6	previous_register	No verified per-invocation duration	unavailable	NA
+NA	NA	OrthoBench	0.3.5	False	Reported maximum process RSS; not aggregate memory	KiB	NA	fastoma_0_3_5	previous_register	Nextflow workflow duration including failed attempts	recorded	3023
+NA	NA	OrthoBench	1.4	False	Reported maximum process RSS; not aggregate memory	KiB	NA	orthomcl_1_4	previous_register	July 2025 native-log interval; 8 BLAST threads	recorded	371702.0
+NA	NA	QfO	0.5.0	False	Not measured	KiB	NA	orthohmm_high_sensitivity	previous_register	Unestablished; no full-inference interval	unavailable	NA
+NA	NA	QfO	0.5.0	False	Not measured	KiB	NA	orthohmm_phylogeny_satellite_v2	previous_register	Unestablished; no full-inference interval	unavailable	NA
+9128.89	453857.43	QfO	3.1.5	False	GNU-time maximum process RSS, not aggregate memory	KiB	6479368	orthofinder_3_1_5_full	previous_register	full native inference	recorded	42018.0
+NA	NA	QfO	3.1.5	False	Not measured	KiB	NA	orthofinder_3_1_5_full	previous_register	pair conversion	recorded	193.52124190330505
+NA	NA	QfO	3.1.5	False	Not measured	KiB	NA	orthofinder_3_1_5_sequence_only	previous_register	pair conversion	recorded	249.17388200759888
+4243.62	330386.1	QfO	2.0.9	False	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory	KiB	8125440	sonicparanoid_2_0_9	previous_register	full native inference	recorded	11423.0
+NA	NA	QfO	2.0.9	False	Not measured	KiB	NA	sonicparanoid_2_0_9	previous_register	pair conversion	recorded	71.87821364402771
+1923.05	134669.24	QfO	6.3.6	False	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory	KiB	2617320	proteinortho_6_3_6	previous_register	full native inference	recorded	4709.0
+NA	NA	QfO	6.3.6	False	Not measured	KiB	NA	proteinortho_6_3_6	previous_register	pair conversion	recorded	30.44321322441101
+367.69	256.31	QfO	0.3.5	False	GNU-time driver maximum RSS; Docker tasks not aggregate workflow memory	KiB	845416	fastoma_0_3_5	previous_register	full native inference	recorded	14094.0
+NA	NA	QfO	0.3.5	False	Not measured	KiB	NA	fastoma_0_3_5	previous_register	pair conversion	recorded	183.20080041885376
+61425.43	118989.41	QfO	1.4	False	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory	KiB	22425488	orthomcl_1_4	previous_register	recovered downstream mode4 only; excludes BLAST/BPO	recorded	7455.0
+NA	NA	QfO	1.4	False	Not measured	KiB	NA	orthomcl_1_4	previous_register	pair conversion	recorded	146.14664673805237
+NA	NA	ThreeKingdoms	0.5.0	False	sampled peak process-tree RSS	KiB	11661832.0	orthohmm_high_sensitivity	previous_register	measured	recorded	6556.426547
+92.579848	189932.597022	ThreeKingdoms	0.5.0	False	sampled_sum_of_linux_proc_tree_rss	bytes	11941715968	orthohmm_high_sensitivity	historical_directory_supplement	Historical pipeline metrics; not newly attested native execution/accounting	recorded	6556.426547
+NA	NA	ThreeKingdoms	0.5.0	False	sampled peak process-tree RSS	KiB	11508204	orthohmm_phylogeny_satellite_v2	previous_register	measured	recorded	8225
+7087.538037	231374.661843	ThreeKingdoms	0.5.0	False	sampled_sum_of_linux_proc_tree_rss	bytes	11784400896	orthohmm_phylogeny_satellite_v2	historical_directory_supplement	Historical pipeline metrics; not newly attested native execution/accounting	recorded	8222.745564
+NA	NA	ThreeKingdoms	3.1.5	False	maximum RSS reported by GNU time	KiB	4178948	orthofinder_3_1_5_full	previous_register	measured	recorded	6332
+1890.13	69581.08	ThreeKingdoms	3.1.5	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	4178948	orthofinder_3_1_5_full	historical_directory_supplement	historical native-command GNU-time interval	recorded	6332.0
+NA	NA	ThreeKingdoms	3.1.5	False	NA	KiB	NA	orthofinder_3_1_5_sequence_only	previous_register	derived from matching full run's MCL checkpoint	recorded	4884
+0.16	0.68	ThreeKingdoms	3.1.5	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	150084	orthofinder_3_1_5_sequence_only	historical_directory_supplement	checkpoint conversion only; not separate sequence-only inference	recorded	0.84
+1193.64	44678.76	ThreeKingdoms	2.0.9	False	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory	KiB	8266448	sonicparanoid_2_0_9	previous_register	full native inference	recorded	4533.0
+NA	NA	ThreeKingdoms	6.3.6	False	maximum RSS reported by GNU time	KiB	2698752	proteinortho_6_3_6	previous_register	measured	recorded	569
+55.67	8847.27	ThreeKingdoms	6.3.6	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	2698752	proteinortho_6_3_6	historical_directory_supplement	historical native-command GNU-time interval	recorded	568.44
+NA	NA	ThreeKingdoms	0.3.5	False	maximum RSS reported by GNU time	KiB	621124	fastoma_0_3_5	previous_register	measured	recorded	6523
+99.46	84.99	ThreeKingdoms	0.3.5	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	621124	fastoma_0_3_5	historical_directory_supplement	historical native-command GNU-time interval; supplied-tree workflow; CPU/RSS exclude aggregate Docker tasks	recorded	6522.0
+NA	NA	ThreeKingdoms	1.4	False	sampled sum of process-tree RSS; shared fork pages double-counted	KiB	93351928	orthomcl_1_4	previous_register	measured stage sum	recorded	141193
+12.45	534.73	ThreeKingdoms	1.4	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	72392	orthomcl_1_4	historical_directory_supplement	BLAST-to-BPO conversion only	recorded	547.24
+3109.58	6127.68	ThreeKingdoms	1.4	False	GNU-time maximum process RSS; not aggregate concurrent workflow memory	KiB	16676844	orthomcl_1_4	historical_directory_supplement	recovered mode4 downstream only; excludes BLAST/BPO	recorded	2276.32
+138.87	37942.68	QfO	0.5.0	False	GNU-time maximum process RSS; not aggregate workflow memory	KiB	8285760	orthohmm_high_sensitivity	retained_qfo_stage_linkage	Shared checked cached replay worker; excludes initial search, parent validation and downstream stages	recorded	2987.81
+NA	NA	QfO	0.5.0	False	NA	NA	NA	orthohmm_high_sensitivity	retained_qfo_stage_linkage	Candidate arm preparation from cached seed; shared with the arm's other R cell	recorded	3.035759819991654
+138.87	37942.68	QfO	0.5.0	False	GNU-time maximum process RSS; not aggregate workflow memory	KiB	8285760	orthohmm_phylogeny_satellite_v2	retained_qfo_stage_linkage	Shared checked cached replay worker; excludes initial search, parent validation and downstream stages	recorded	2987.81
+NA	NA	QfO	0.5.0	False	NA	NA	NA	orthohmm_phylogeny_satellite_v2	retained_qfo_stage_linkage	Candidate arm preparation from cached seed; shared with the arm's other R cell	recorded	77.64100861502811
+11696.142257	192097.440979	QfO	0.5.0	False	sampled_sum_of_linux_proc_tree_rss	bytes	7846866944	orthohmm_phylogeny_satellite_v2	retained_qfo_stage_linkage	Cached-candidate native reconciliation; excludes initial search, replay, preparation, conversion and scoring	recorded	6822.365357

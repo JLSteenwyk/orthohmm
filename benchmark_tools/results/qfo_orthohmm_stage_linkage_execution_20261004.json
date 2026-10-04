@@ -1,0 +1,65 @@
+{
+  "schema": "qfo_orthohmm_stage_linkage_execution_v1",
+  "status": "selected_stage_linkage_export_and_readback_passed",
+  "prepared_source_commit": "55fef935985341d5bd66732f7ece48cd8ac506c0",
+  "prepared_source_pushed_before_selected_export": true,
+  "collection_command": [
+    "env", "-u", "PYTHONHOME", "-u", "PYTHONPATH", "-u", "LD_PRELOAD",
+    "-u", "LD_LIBRARY_PATH", "-u", "LD_AUDIT", "PYTHONNOUSERSITE=1",
+    "PYTHONDONTWRITEBYTECODE=1", "OPENBLAS_NUM_THREADS=1", "OMP_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1", "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B", "benchmark_tools/link_qfo_orthohmm_stages.py", "--repo", ".", "--output",
+    "benchmark_tools/results/qfo_orthohmm_stage_metadata_20261004"
+  ],
+  "collection_exit_code": 0,
+  "test_files": [
+    "tests/unit/test_link_qfo_orthohmm_stages.py",
+    "tests/unit/test_collect_factorial_resources.py",
+    "tests/unit/test_integrate_benchmark_metadata.py"
+  ],
+  "prepared_tests": {"passed": 83, "skipped": 1, "failed": 0, "seconds": 0.88},
+  "final_tests": {"passed": 84, "skipped": 0, "failed": 0, "seconds": 0.88},
+  "independent_readback": {
+    "interpreter": "/usr/bin/python3 -I -S -B",
+    "reporter_imported": false,
+    "exit_code": 0,
+    "direct_metadata_pins_checked": 16,
+    "reporter_source_pin_checked": true,
+    "every_original_field_preserved": true,
+    "unchanged_method_dataset_cells": 24,
+    "selected_score_conversion_chains_checked": 2,
+    "all_TSV_fields_checked": 546,
+    "resource_table_entries": 42,
+    "numeric_wall_entries": 39,
+    "unavailable_wall_entries": 3,
+    "new_stage_associations": 5,
+    "distinct_new_stage_observations": 4,
+    "initial_diagnostic_counting_note": "A path-plus-scope grouping collapsed the two candidate arms under their shared preparation manifest and reported three distinct intervals. A second readback included candidate-arm identity and verified four observations represented by five associations. No generated scientific or resource artifact changed."
+  },
+  "execution_history": [
+    "First real in-memory collection passes before source preparation; no preliminary output is created.",
+    "Prepared focused suite passes with selected-output readback skipped because the selected destination does not exist yet.",
+    "Tested source is committed and pushed, then selected export completes at first invocation with exit zero.",
+    "Final suite and independent stdlib readbacks pass; no native, scoring or timing retry occurs."
+  ],
+  "pinned_files": [
+    {"path": "benchmark_tools/link_qfo_orthohmm_stages.py", "bytes": 18258, "sha256": "d0edbc33d8e1f3f893b3e6dc44f461eb5f144aa17997ecc9128712ce36a2faf1"},
+    {"path": "tests/unit/test_link_qfo_orthohmm_stages.py", "bytes": 11537, "sha256": "5d30a520c4e4a79c3aee232d6f2dc4b6b5ca433625261e76e6281a0f28741214"},
+    {"path": "benchmark_tools/results/qfo_orthohmm_stage_metadata_20261004/register.json", "bytes": 601870, "sha256": "a1cf40e172614f7c9a5e7906cb4121dce17ac7f6c8ff516977a421de05ac867a"},
+    {"path": "benchmark_tools/results/qfo_orthohmm_stage_metadata_20261004/stages.md", "bytes": 1585, "sha256": "90621678959df45fef01234744112ed35560c974e754060007eda169caf3913c"},
+    {"path": "benchmark_tools/results/qfo_orthohmm_stage_metadata_20261004/resources.tsv", "bytes": 8224, "sha256": "e2127da961d1076487f4c34fcd40b65850e7265445dd9b69415fcca8cbd28f2f"},
+    {"path": "benchmark_tools/results/QFO_ORTHOHMM_STAGE_LINKAGE_WORKFLOW_20261004.md", "bytes": 3882, "sha256": "81f6dcdc5fbbebb44c467774e1c903b295bcf262cd13853b1a7d4e833b610051"},
+    {"path": "benchmarks/work/qfo_stage_linkage_prepared_tests_20261004.xml", "bytes": 12608, "sha256": "8e9ac4914600c5c0e0661245196270cb15eabbede6670f81b9cff69b1a81c258"},
+    {"path": "benchmarks/work/qfo_stage_linkage_final_tests_20261004.xml", "bytes": 12345, "sha256": "280c7418718803de946e683a68735bb75ca6884917a1a07cfff8472fabd7fc88"},
+    {"path": "benchmark_tools/assemble_benchmark_provenance.py", "bytes": 19979, "sha256": "7e1b8c36ae61277d54f42808855e80738dfe2225c3fc52381b354bece11675bc"},
+    {"path": "benchmark_tools/audit_ob_orthofinder_provenance.py", "bytes": 10365, "sha256": "6f1c5730395c21d90a5ec54066cf1dee2252fda83e3bf0e08dd92f21c60c8dc5"},
+    {"path": "benchmark_tools/collect_factorial_resources.py", "bytes": 12895, "sha256": "42455c76194fbfae27cb0d0367d77e24c5e9c95417319c57d8413f4aaca164d6"},
+    {"path": "benchmark_tools/prepare_ob_candidate_neighborhood.py", "bytes": 7448, "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"},
+    {"path": "benchmark_tools/summarize_matched_resources.py", "bytes": 6756, "sha256": "2f64fe9004dd543f074e4eed9fe378647d1aa6192b5e8ab2ab45f62bca5908c8"},
+    {"path": "benchmark_tools/gnu_time_companion.py", "bytes": 2020, "sha256": "1e74ad99b8b9bdbbc261f506e7869fe0ca8df1710b4901953008f18dc8aef1f9"}
+  ],
+  "native_inference_or_scoring_repeated": false,
+  "historical_consumption_reaudited": false,
+  "controlled_comparative_resources": false,
+  "publication_ready": false
+}
