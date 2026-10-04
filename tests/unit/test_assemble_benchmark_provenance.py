@@ -19,7 +19,8 @@ def execution(tmp_path, stem="native", recovered=False):
         'Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.00\n'
         'Maximum resident set size (kbytes): 4096\nExit status: 0\n')
     value = {"job_id": "123", "native_argv": ["/tool", "-c", "32"],
-             "exit_code": 0, "timing": provenance.record(timing)}
+             "exit_code": 0, "timing": provenance.record(timing),
+             "copied_inputs": [{"path": "/real_input.fasta", "sha256": "a" * 64, "bytes": 1}]}
     if recovered:
         value["command"] = value.pop("native_argv")
         value["native_exit_code"] = value.pop("exit_code")
@@ -104,6 +105,7 @@ def bundle(tmp_path, monkeypatch):
         recovered = key == "orthomcl_1_4"
         pin = execution(tmp_path, f"exec{i}", recovered)
         native = {"execution": pin, "native_pairs": output}
+        native["checked_records"] = [{"path": "/native_relations/a.fasta-b.fasta", "bytes": 1, "sha256": "b" * 64}]
         native_pin = write_json(tmp_path / f"admission{i}.json", native)
         conversion = dict(semantics="pairs", participant="participant", total_pairs=2, retained_pairs=2,
             removed_mapping_pairs=0, filtered_pairs=output, admission=native_pin)
@@ -116,6 +118,9 @@ def bundle(tmp_path, monkeypatch):
             retained_pairs=2, removed_mapping_pairs=0, status="admitted", scores=endpoints, secondary_mean=.5,
             admission=native_pin, details={}))
         if key.startswith("orthofinder"):
+            conversion.update(started_epoch=10, finished_epoch=11)
+            conversion_pin = write_json(Path(conversion_pin["path"]), conversion)
+            qfo[-1]["conversion"] = conversion_pin
             of_rows.append(dict(key=key, pair_file=output, native_admission=native_pin, scores=endpoints, conversion_wall_seconds=1))
         if key == "sonicparanoid_2_0_9":
             sonic = dict(normalized=output, counts=counts, execution=pin,
@@ -145,8 +150,11 @@ def test_complete_24_row_consolidation_preserves_scopes(bundle, tmp_path):
     assert sonic["resources"][0]["measurement"]["elapsed_seconds"] == 12  # Never historical99.
     of_seq = next(r for r in result["rows"] if r["dataset"] == "QfO" and r["key"].endswith("sequence_only"))
     assert all(r["full_inference"] is False for r in of_seq["resources"])
+    assert [r["scope"] for r in of_seq["resources"]] == ["pair conversion"]
     fastoma = next(r for r in result["rows"] if r["dataset"] == "QfO" and r["key"].startswith("fastoma"))
     assert "Docker" in fastoma["resources"][0]["memory_scope"]
+    qfo_sonic = next(r for r in result["rows"] if r["dataset"] == "QfO" and r["key"].startswith("sonic"))
+    assert [r["path"] for r in qfo_sonic["input_records"]] == ["/real_input.fasta"]
     assert (tmp_path / "register" / "resources.tsv").exists()
 
 
@@ -197,3 +205,27 @@ def test_selected_ob_prediction_requires_bound_evidence(damage):
         row["orthobench_supplemental_readback"] = {"prediction": {"sha256": "second"}}
     with pytest.raises(ValueError):
         provenance.ob_prediction(row)
+
+
+@pytest.mark.parametrize("stage", ["replay", "conversion", "tree_rss"])
+def test_ob_resource_stage_and_memory_scope(stage):
+    row = {"inference_wall_seconds": None, "conversion_wall_seconds": None,
+           "peak_process_rss_kib": None, "timing_basis": stage}
+    if stage == "replay":
+        row.update(replay_wall_seconds=319.467197, resources={"peak_process_rss_gib": 5.560291})
+    elif stage == "conversion":
+        row["conversion_wall_seconds"] = .42
+    else:
+        row.update(inference_wall_seconds=3274.102675, resources={"peak_process_tree_rss_bytes": 12733403136,
+            "rss_measurement": "sampled_sum_of_linux_proc_tree_rss", "user_cpu_s": 73322.972274})
+    resource = provenance.ob_resources(row)[0]
+    assert resource["measurement"]["elapsed_seconds"] == {
+        "replay": 319.467197, "conversion": .42, "tree_rss": 3274.102675}[stage]
+    assert resource["full_inference"] is (stage == "tree_rss")
+    memory = provenance.memory_info(resource)
+    if stage == "replay":
+        assert memory["unit"] == "GiB"
+    elif stage == "tree_rss":
+        assert memory["unit"] == "bytes"
+        assert memory["scope"] == "sampled_sum_of_linux_proc_tree_rss"
+        assert resource["measurement"]["user_seconds"] == 73322.972274

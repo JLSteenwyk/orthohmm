@@ -132,8 +132,9 @@ def qfo_details(row, reader, orthofinder):
                 memory_scope="GNU-time maximum process RSS, not aggregate memory"))
         else:
             gaps.append("No separately timed sequence-only inference; same full-run checkpoint.")
-        resources.append(dict(scope="pair conversion", full_inference=False,
-            measurement={"elapsed_seconds": bound["conversion_wall_seconds"]}))
+        seconds = conversion["finished_epoch"] - conversion["started_epoch"]
+        if seconds != bound["conversion_wall_seconds"]:
+            raise ValueError("Consolidated conversion time differs")
         inputs = [r for r in orthofinder["checked_records"] if r["path"].endswith(".fasta")]
     elif row["key"] in {"sonicparanoid_2_0_9", "proteinortho_6_3_6", "fastoma_0_3_5", "orthomcl_1_4"}:
         native = reader.read(native_pin)
@@ -142,9 +143,7 @@ def qfo_details(row, reader, orthofinder):
         resource = timed_execution(reader, execution_pin(native), scope, native.get("scheduler"))
         resources.append(resource)
         commands.append(dict(scope=scope, argv=resource["command"]))
-        inputs = native.get("input_fastas", [r for r in native.get("checked_records", []) if r["path"].endswith(".fasta")])
-        if not inputs:
-            inputs = resource["input_records"]
+        inputs = native.get("input_fastas", resource["input_records"])
         if recovered:
             gaps.append("No uninterrupted full search-to-clusters runtime; recovered downstream time is not full inference.")
         if row["key"] == "fastoma_0_3_5":
@@ -183,12 +182,39 @@ def three_details(row, historical, inputs, sonic, reader):
     scope = performance["runtime_kind"]
     checkpoint = row["key"].endswith("sequence_only")
     resources = [dict(scope=scope, full_inference=not checkpoint and scope == "measured",
-        measurement={"elapsed_seconds": performance["wall_s"], "max_process_rss_kib": performance["peak_rss_kib"]},
+        measurement={"elapsed_seconds": performance["wall_s"]},
+        memory={"value": performance["peak_rss_kib"], "unit": "KiB", "scope": performance["memory_measurement"]},
         memory_scope=performance["memory_measurement"], requested_cpus=performance["cpus_requested"])]
     return dict(resources=resources, commands=[], input_records=inputs["evidence"] + [r["file"] for r in inputs["copies"]],
         input_note=row["input_status"], gaps=["Historical native argv and complete runtime identity are not consolidated.",
             "Historical input consumption is not proven by current copies/hash manifests."],
         historical_run_metadata=historical["provenance"])
+
+
+def ob_resources(source):
+    raw = source.get("resources", {}) or {}
+    elapsed, scope = source["inference_wall_seconds"], source["timing_basis"]
+    if source.get("replay_wall_seconds") is not None:
+        elapsed = source["replay_wall_seconds"]
+    elif source["conversion_wall_seconds"] is not None:
+        elapsed = source["conversion_wall_seconds"]
+    measurement = {"elapsed_seconds": elapsed}
+    measurement.update({k: raw[k] for k in ("user_seconds", "system_seconds") if k in raw})
+    measurement.update({new: raw[old] for old, new in (("user_cpu_s", "user_seconds"), ("system_cpu_s", "system_seconds")) if old in raw})
+    memory = {"value": source["peak_process_rss_kib"], "unit": "KiB", "scope": "Reported maximum process RSS; not aggregate memory"}
+    if "peak_process_rss_gib" in raw:
+        memory = {"value": raw["peak_process_rss_gib"], "unit": "GiB", "scope": "Reported process RSS in cached replay"}
+    if "peak_process_tree_rss_bytes" in raw:
+        memory = {"value": raw["peak_process_tree_rss_bytes"], "unit": "bytes", "scope": raw["rss_measurement"]}
+    return [dict(scope=scope, full_inference=source["inference_wall_seconds"] is not None,
+        measurement=measurement, memory=memory, retained_measurements=raw)]
+
+
+def memory_info(resource):
+    if "memory" in resource:
+        return resource["memory"]
+    return dict(value=resource["measurement"].get("max_process_rss_kib"), unit="KiB",
+                scope=resource.get("memory_scope", "Not measured"))
 
 
 def assemble(repo, output):
@@ -220,10 +246,7 @@ def assemble(repo, output):
                 details = dict(output_records=[source["prediction"]], input_records=[],
                     input_note=source["input_note"], commands=source.get("command"),
                     retained_ob_metadata=source, gaps=source.get("limitations", []) + ["Historical transitive provenance remains partial."],
-                    resources=[dict(scope=source["timing_basis"], full_inference=source["inference_wall_seconds"] is not None,
-                        measurement={"elapsed_seconds": source["inference_wall_seconds"], "max_process_rss_kib": source["peak_process_rss_kib"]},
-                        retained_measurements=source.get("resources"), replay_wall_seconds=source.get("replay_wall_seconds"),
-                        conversion_wall_seconds=source["conversion_wall_seconds"])])
+                    resources=ob_resources(source))
                 values, semantics = {"weighted_refog_F1": score[dataset]}, source["output_semantics"]
             elif dataset == "QfO":
                 source = qfo[key]
@@ -268,16 +291,17 @@ def assemble(repo, output):
         check(pin)
     output.mkdir(parents=True, exist_ok=False)
     (output / "register.json").write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
-    fields = ["dataset", "method", "version", "wall_seconds", "scope", "peak_process_rss_kib", "memory_scope"]
+    fields = ["dataset", "method", "version", "wall_seconds", "scope", "memory_value", "memory_unit", "memory_scope"]
     with (output / "resources.tsv").open("x") as stream:
         writer = csv.DictWriter(stream, fields, delimiter="\t", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             for resource in row["resources"] or [dict(scope="Unestablished", measurement={})]:
                 values = resource["measurement"]
+                memory = memory_info(resource)
                 writer.writerow(dict(dataset=row["dataset"], method=row["label"], version=row["declared_version"],
                     wall_seconds=values.get("elapsed_seconds"), scope=resource["scope"],
-                    peak_process_rss_kib=values.get("max_process_rss_kib"), memory_scope=resource.get("memory_scope", "See retained metadata")))
+                    memory_value=memory["value"], memory_unit=memory["unit"], memory_scope=memory["scope"]))
     lines = ["# All-Tool Benchmark Provenance", "", "Descriptive retained evidence; no comparative speed ranking.", "",
         "| Dataset | Method | Declared version | Resource scopes | Input evidence |", "|---|---|---|---|---|"]
     for row in rows:
