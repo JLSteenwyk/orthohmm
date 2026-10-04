@@ -78,3 +78,39 @@ resumption inspect both jobs; if capture succeeds, use its retained
 `terminal_controller_22420.json` with the existing terminal reviewer and fresh
 accounting. A queued dependency is not proof of completed capture. If it fails,
 retain that failure and inspect actual state before any replacement action.
+
+## Terminal Review
+
+The startup/dependency observations above are historical. Fresh accounting
+now confirms 22420 parent/batch/native step COMPLETED 0:0 and capture-only
+22421 COMPLETED 0:0. The [captured terminal controller](threadripper_shared_terminal_controller_22420.json)
+matches its canonical 2,736 bytes, SHA-256
+`bc8556e0c0d9c6b5fe31e0fb92e241febb1ed9977bffe6abff1b3c5d207b72b2`.
+All four independent review categories and prepared-owner lifecycle pass.
+The [public summary](threadripper_shared_attempt_22420.json) matches canonical
+5,724 bytes, SHA-256
+`b22b112be3f827145e5f3cf4be446234b6c5feee132fb785691a30620bb9fc53`.
+Raw review/evidence remains local under ignored work paths; it is not rerun
+on this resumption.
+
+Command wall is 4,392.871580988 seconds; task-subtree CPU bracket including
+wrapper is 125,264.737465 CPU-seconds; native-step lifetime peak including
+launcher is 11,277,897,728 bytes (10.5033607483 GiB). Both environment failure
+maps are empty. Maximum observed foreign CPU is 72.8707538583 cores, annotated
+without subtraction or an isolated-speed claim. Native checks find 251,378
+input genes, 59,770 orthogroups/root HOGs and 966,439 native pair rows.
+These are output coverage, not new accuracy evidence.
+
+[Table v25](threadripper_shared_panel_snapshot_20261004_v25/panel.json) now has
+25 reviewed attempts, 23 measured, 22 eligible and exclusions 0/17/20. All
+previous 24 rows are unchanged. Phylogenetic/twelve-proteome is the fifth
+complete three-eligible-repeat cell. [Figure v24](threadripper_shared_resource_figure_20261004_v24/shared_threadripper_resources.pdf)
+retains all measured observations, incomplete cells and contention. Three
+checkpoint tests pass (JUnit 3.554 seconds); the [readback](threadripper_checkpoint_validation_22420.json)
+pins actual tests, JUnit, table, figure, summary and controller.
+
+Indices 25/26 remain unsubmitted at this completed checkpoint. Commit/push
+this review, then release only index25 through the goal-reaffirmed continuation
+after actual full-prefix and fresh launch checks. No failed identity is retried.
+Final panel, manuscript/PDF reconciliation and executable/versioned archive
+remain incomplete; the full publication goal stays active.

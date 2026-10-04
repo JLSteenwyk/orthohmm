@@ -26,8 +26,8 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v24/panel.json)
-has twenty-four reviewed attempts, twenty-two with measured resources, twenty-one eligible
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v25/panel.json)
+has twenty-five reviewed attempts, twenty-three with measured resources, twenty-two eligible
 shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
@@ -83,17 +83,22 @@ Index 24 is subsequently released as
 [22420, satellite_v2/twelve proteomes/repeat 2](results/THREADRIPPER_SHARED_ATTEMPT_22420.md).
 Fresh capacity and prepared/native handoff pass; HMM/k-mer search is observed
 running. Three identities remain unreviewed, one live and two unsubmitted at
-this checkpoint. Poll this exact job on resumption; independent terminal review
-is required before advancing25. Startup does not admit a new resource point.
+that startup checkpoint. It now completes and all four terminal review categories
+and prepared-owner lifecycle pass. The phylogenetic/twelve-proteome cell is
+the fifth complete cell; two identities remain unreviewed/unsubmitted, none
+live at this completed checkpoint. Advance only index25 after current history
+and fresh launch checks; native counts do not establish new accuracy.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v23/shared_threadripper_resources.pdf)
-retains the twenty-two measured observations and four complete-cell median/ranges,
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v24/shared_threadripper_resources.pdf)
+retains the twenty-three measured observations and five complete-cell median/ranges,
 explaining both unplotted aborts without isolated speedup claims. Three new
 actual-data/receipt/PDF-pixel tests for index 21 pass; their initial pre-export-
 manifest failure remains retained separately. Three new reusable latest-
-checkpoint tests now pass against the completed index-23 table/figure. The
+checkpoint tests now pass against the completed index-24 table/figure; their
+[actual readback](results/threadripper_checkpoint_validation_22420.json) pins
+all six source/artifact identities without repeating native inference. The
 new [resource-section generator](results/RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now produces actual v24 prose and three unit-labelled metric tables directly
 from reviewed arithmetic, retaining all missing summaries and exclusions.
@@ -125,8 +130,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_prepared_panel_20261004.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_prepared_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v24/panel.json \
-  --sha256 4816200c3550d80507e63f191480f09924057348494cc48d21eaa5a5c34576b2 \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v25/panel.json \
+  --sha256 62bc46554309b7e06b13bb36312b663dff2f7c847f7207912cdb59c69e0cc4a8 \
   --output /absolute/fresh/resource-figure
 ```
 
@@ -1465,9 +1470,9 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
-- Shared-host resource panel: 24 of the 27 frozen attempts are reviewed,
-  including 22 native resource measurements, 21 eligible observations and two
-  pre-native aborts with no endpoints. Four cells have three eligible repeats.
+- Shared-host resource panel: 25 of the 27 frozen attempts are reviewed,
+  including 23 native resource measurements, 22 eligible observations and two
+  pre-native aborts with no endpoints. Five cells have three eligible repeats.
   The remaining sequential panel and final reporting are incomplete.
   Local Threadripper `bizon` is approved, not the DGX. Use the
   [goal-reaffirmed continuation](results/THREADRIPPER_GOAL_REAFFIRMATION_20261004.md)

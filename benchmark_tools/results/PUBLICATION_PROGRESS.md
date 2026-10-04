@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Index 24 Reviewed And Fifth Complete Cell (2026-10-04)
+
+Previous prompt-only turn verifies the already committed/pushed shared-host
+goal amendment but changes no authoritative execution state. Revalidate the
+full objective and actual scheduler: 22420 parent/batch/native step and
+capture-only 22421 are COMPLETED 0:0. Reuse the completed independent review,
+not another native/raw audit. All four categories and prepared-owner lifecycle
+pass; public summary/controller match canonical retained bytes.
+
+[Attempt 22420](THREADRIPPER_SHARED_ATTEMPT_22420.md) supplies 4,392.871580988s
+command wall, 125,264.737465 CPU-seconds in the wrapper-inclusive bracket and
+11,277,897,728-byte launcher-inclusive native-step lifetime peak. Maximum
+observed foreign CPU72.8707538583 cores is annotated, not subtracted. Both
+environment failure maps are empty. Native gene/group/pair counts are coverage,
+not new accuracy. Raw evidence stays local/ignored.
+
+[Table v25](threadripper_shared_panel_snapshot_20261004_v25/panel.json) has
+25 reviewed/23 measured/22 eligible, exclusions0/17/20 and five complete cells;
+all prior24 rows are unchanged. The phylogenetic/twelve-proteome cell is now
+complete. [Figure v24](threadripper_shared_resource_figure_20261004_v24/shared_threadripper_resources.pdf)
+is generated and visually checked. Three latest-checkpoint tests pass;
+[readback](threadripper_checkpoint_validation_22420.json) binds their actual
+JUnit and six source/artifact identities. No passed diagnostics or tests are
+repeated merely on resumption.
+
+No panel job is live at this terminal checkpoint. Indices25/26 are unsubmitted.
+Commit/push this checkpoint before releasing only25 using the goal-reaffirmed
+continuation and actual prefix/fresh capacity/native handoff checks. Previous
+prose-bundle change is committed/pushed at `42ba9d6c`; build the final selected
+schema3 reporting component once after27 reviews, not an unchanged interim
+archive. Final panel, manuscript/PDF reconciliation, executable/versioned
+release/archive and explicit scientific limitations keep the full goal active
+and incomplete. Frozen science/runtime/recipe/limits and unrelated work remain
+unchanged; no quiet-window prerequisite or isolated-speed claim is introduced.
+
 ## Resource Prose Added To Portable Reporting (2026-10-04)
 
 Previous turn is a verified wait: fresh accounting and changing MAFFT/FastTree

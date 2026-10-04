@@ -1,0 +1,47 @@
+{
+  "counts": {"errors": 0, "failures": 0, "skipped": 0, "tests": 3},
+  "eligible_attempts": 22,
+  "excluded_attempts": [0, 17, 20],
+  "junit_time_seconds": 3.554,
+  "native_inference_repeated": false,
+  "previous_24_rows_unchanged": true,
+  "publication_ready": false,
+  "raw_audit_repeated": false,
+  "resource_reviewed_attempts": 23,
+  "reviewed_attempts": 25,
+  "scope": "Local retained-checkpoint reporting and provenance tests; not new inference, accuracy or isolated speed evidence",
+  "source_and_artifacts_at_readback": [
+    {
+      "bytes": 5993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_latest_prepared_resource_checkpoint.py",
+      "sha256": "1bbc56d0ba54b1b61a055bb10e4c9b9eb3eab431a9784b9dbe4a86ab76257e05"
+    },
+    {
+      "bytes": 706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/latest_prepared_checkpoint_tests_22420.xml",
+      "sha256": "7433a928c8d4b8ff50a32a3bfcb36fbd89741f0ee3904c22c19d5d583b5fb61b"
+    },
+    {
+      "bytes": 349546,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v25/panel.json",
+      "sha256": "62bc46554309b7e06b13bb36312b663dff2f7c847f7207912cdb59c69e0cc4a8"
+    },
+    {
+      "bytes": 332102,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v24/manifest.json",
+      "sha256": "661a9b100f56f049b9abd918aa526d13eba2cbe8860416bbc7e513a388fb5305"
+    },
+    {
+      "bytes": 5724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22420.json",
+      "sha256": "b22b112be3f827145e5f3cf4be446234b6c5feee132fb785691a30620bb9fc53"
+    },
+    {
+      "bytes": 2736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_terminal_controller_22420.json",
+      "sha256": "bc8556e0c0d9c6b5fe31e0fb92e241febb1ed9977bffe6abff1b3c5d207b72b2"
+    }
+  ],
+  "status": "latest_prepared_checkpoint_tests_passed",
+  "three_eligible_repeat_cells": 5
+}
