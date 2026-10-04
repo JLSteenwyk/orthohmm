@@ -55,12 +55,14 @@ Reports and reproducibility
 
 The `corrected eight-method QfO comparison <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/qfo_corrected_comparison_20260926_v7/scores.md>`_
 contains current observed endpoints and prediction semantics. The
-`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261003.md>`_
+`main scientific draft <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md>`_
 links OrthoBench, uncertainty and transfer evidence. The
-`interim resource table <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v3/attempts.tsv>`_
-and `interim resource figure <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_resource_figure_20261003_v2/shared_threadripper_resources.pdf>`_
-show reviewed attempts only, retaining excluded raw values without incomplete
-median/range summaries or causal speed rankings. The
+`final resource table <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v27/attempts.tsv>`_
+and `final resource figure <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf>`_
+retain all 27 reviewed attempts, 25 measured runs and 24 eligible observations.
+Six cells have three eligible repeats; three retain unavailable summaries.
+Excluded raw values and both pre-native aborts remain explicit, without causal
+speed rankings. The
 `claim-to-evidence checklist <https://github.com/JLSteenwyk/orthohmm/blob/main/benchmark_tools/results/PUBLICATION_CLAIMS_20260916.md>`_
 links uncertainty, ablations, simulations, transfer evaluation and the
 biological application. The
