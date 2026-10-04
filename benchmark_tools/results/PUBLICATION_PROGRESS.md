@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Separate Full Native Factorial Executor Validated (2026-10-04)
+
+The previous turn updates the user-authorized shared-host goal prompt; it
+changes execution instructions, not scientific evidence. Read that amended
+goal and latest ledger, query actual Slurm state (no live jobs), and advance
+the genuinely missing full-native ablation costs. About755GiB RAM available
+and10TiB workspace free; swap is already full and remains recorded, not
+changed. No unrelated process/service is modified and no quiet window or
+DGX gate is introduced.
+
+Add a separate thirteen-identity plan generator, explicit per-job executor
+and scheduler bootstrap. Production defaults/source and the bounded
+diagnostic CLI remain unchanged. Reuse the retained private deployment,
+native collector and accounting/cadence receipts. Bind all current helper
+sources, original manifests, fresh persistent input copies, actual frozen
+enumeration/gene ownership, factor settings and32-core/128GiB resources.
+This persistent storage/filename-order scope is prospectively documented;
+it differs from historical tmpfs runs and does not imply exact reproduction
+or a matched causal timing comparison. Launch guard uses factual typed
+process observations, current available RAM and scheduler/request/budget
+checks; background CPU and pressure magnitudes remain diagnostic-only.
+
+Initial copy test catches an invalid sorted-enumeration assumption, with
+its failed JUnit retained. Add same-filesystem filename probes and actual
+enumeration checks rather than changing the scientific enumerator. Final
+new/adapter unit cases pass85; broader collector/runtime/scheduler/placement/
+shared-policy/wrapper tests pass283 without failures or skips. These tests
+validate engineering composition, not publication full-native completion.
+Next freeze the actual plan/policy and release only index0 after the actual
+held-job request and fresh runtime/capacity handoff pass. No full native
+factorial inference has started at this preparation milestone. Subsequent
+identities require retained terminal/output/resource reviews, not automatic
+submission, retry or fastest selection. All broader goal gaps persist.
+
 ## Native Factorial Adapter And Eight Diagnostics Passed (2026-10-04)
 
 The preceding608a20cc turn makes progress by verifying the retained native

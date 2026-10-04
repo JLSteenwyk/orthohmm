@@ -1,0 +1,255 @@
+"""Control/input/resource semantics; no production native inference in tests."""
+
+from copy import deepcopy
+import json
+from pathlib import Path
+from types import SimpleNamespace
+
+import pytest
+
+from benchmark_tools import run_native_factorial_cost as cost
+from benchmark_tools.native_factorial_adapter import factors
+from benchmark_tools.prepare_ob_candidate_neighborhood import record
+
+
+def plan_fixture():
+    panel = cost.ROOT / "benchmarks/results/test_factorial_cost_uncreated"
+    runs = []
+    for i, (dataset, cell) in enumerate(cost.IDENTITIES):
+        inputs = [dict(path=f"/input/{dataset}/s{j:02d}.fa", bytes=9, sha256="a" * 64)
+                  for j in range(12 if i < 6 else 78)]
+        names = [Path(r["path"]).name for r in inputs]
+        runs.append(dict(index=i, dataset=dataset, cell=cell, repeat=0, inputs=inputs,
+            input_directory=f"/input/{dataset}", native_order=names, input_creation_order=names,
+            genes=251378 if i < 6 else 984137, proteomes=len(inputs), output_root=str(panel / f"run_{i:02d}")))
+    return dict(schema="native_factorial_cost_plan_v1", root=str(cost.ROOT), panel_root=str(panel),
+        core_commit=cost.CORE_COMMIT, execution_scope=cost.SCOPE, automatic_retry=False, runs=runs,
+        resources=dict(native_cpu_ids=list(range(32)), slurm_slots=64, memory_bytes=cost.MEMORY,
+            timeout_s=85800, sample_period_s=1., host_period_s=30., minimum_available_memory_bytes=cost.MEMORY),
+        helper_sources=[dict(path=str(cost.ROOT / "benchmark_tools" / name)) for name in (
+            "run_native_factorial_cost.py", "prepare_native_factorial_cost.py", "native_factorial_adapter.py", "run_native_factorial_cost.sh")])
+
+
+def test_exact_thirteen_identities_and_no_completed_cells():
+    plan = plan_fixture()
+    assert cost.validate_plan(plan) == plan["runs"]
+    assert len(cost.IDENTITIES) == 13
+    assert ("orthobench", "p1_c0_r0") not in cost.IDENTITIES
+    assert ("orthobench", "p1_c1_r1") not in cost.IDENTITIES
+    assert ("qfo_corrected", "p1_c0_r0") not in cost.IDENTITIES
+
+
+@pytest.mark.parametrize("key,value", [("schema", "old_scaling_panel"), ("root", "/tmp"),
+    ("execution_scope", "isolated_controlled"), ("automatic_retry", True), ("core_commit", "changed")])
+def test_plan_scope_mutation(key, value):
+    plan = plan_fixture()
+    plan[key] = value
+    with pytest.raises(ValueError):
+        cost.validate_plan(plan)
+
+
+@pytest.mark.parametrize("key,value", [("memory_bytes", 96 * 1024**3), ("native_cpu_ids", list(range(1, 33))),
+    ("slurm_slots", 32), ("timeout_s", 3600), ("sample_period_s", 5.), ("host_period_s", 60.),
+    ("minimum_available_memory_bytes", 0)])
+def test_resource_mutation(key, value):
+    plan = plan_fixture()
+    plan["resources"][key] = value
+    with pytest.raises(ValueError):
+        cost.validate_plan(plan)
+
+
+@pytest.mark.parametrize("key,value", [("index", True), ("cell", "p1_c0_r0"), ("dataset", "other"),
+    ("repeat", 1), ("genes", 10), ("proteomes", 4), ("output_root", "/tmp/output")])
+def test_identity_mutation(key, value):
+    plan = plan_fixture()
+    plan["runs"][0][key] = value
+    with pytest.raises(ValueError):
+        cost.validate_plan(plan)
+
+
+def test_duplicate_or_unbound_sources_and_inputs():
+    plan = plan_fixture()
+    plan["helper_sources"].pop()
+    with pytest.raises(ValueError):
+        cost.validate_plan(plan)
+    plan = plan_fixture()
+    plan["runs"][0]["inputs"][1] = plan["runs"][0]["inputs"][0]
+    with pytest.raises(ValueError):
+        cost.validate_plan(plan)
+
+
+def request_fixture():
+    ref = dict(path="/plan.json", bytes=123, sha256="b" * 64)
+    return dict(schema="native_factorial_cost_request_v1", execution_authorized=True, job_id=123,
+        plan=ref, scheduler_command=str(cost.SCRIPT), allocation_cwd=str(cost.ROOT), index=0, history=[]), ref
+
+
+def test_request_exact_job_plan_history():
+    request, ref = request_fixture()
+    cost.validate_request(request, ref, 123)
+    for key, value in (("job_id", 124), ("index", True), ("index", 13), ("execution_authorized", False),
+                       ("history", [dict(job_id=12)]), ("allocation_cwd", "/tmp"), ("scheduler_command", "/other.sh")):
+        changed = dict(request, **{key: value})
+        with pytest.raises(ValueError):
+            cost.validate_request(changed, ref, 123)
+
+
+@pytest.mark.parametrize("p", (0, 1))
+@pytest.mark.parametrize("c", (0, 1))
+@pytest.mark.parametrize("r", (0, 1))
+def test_all_factor_native_arguments_and_stages(p, c, r):
+    run = dict(cell=f"p{p}_c{c}_r{r}", output_root="/native/run_00", genes=8)
+    module = SimpleNamespace(StopStep=SimpleNamespace(infer="infer"), SubstitutionMatrix=SimpleNamespace(blosum62="BLOSUM62"))
+    baseline = dict(tool_entrypoints={n: dict(absolute_path="/tools/" + n) for n in ("mafft", "FastTree")})
+    args = cost.native_kwargs(module, run, baseline)
+    assert args["accuracy_profile"] == "high_sensitivity"
+    assert args["start"] is None and args["stop"] == "infer"
+    assert args["cpu"] == 32 and args["threads_per_worker"] == 4
+    assert args["evalue_threshold"] == .0001 and args["substitution_matrix"] == "BLOSUM62"
+    assert args["phylogeny"] == ("reconcile" if r else "off")
+    assert args["phylogeny_candidates"] == ("satellite_v2" if c else "seed")
+    flags = factors(run["cell"])
+    stages = {"search", "edge_thresholds", "network_edges", "clustering", "refinement", "orthogroup_materialization"}
+    for enabled, stage in ((p, "profile_expansion"), (c, "phylogeny_candidates"), (r, "phylogeny")):
+        if enabled:
+            stages.add(stage)
+    metrics = dict(status="complete", metadata=dict(native_factorial=flags), counts=dict(genes=8,
+        phylogeny_checkpoint_hits=0, phylogeny_species_tree_checkpoint_hit=False), stages=dict.fromkeys(stages))
+    cost.verify_metrics(metrics, run, flags)
+    wrong = deepcopy(metrics)
+    wrong["stages"].pop("search")
+    with pytest.raises(ValueError):
+        cost.verify_metrics(wrong, run, flags)
+    if r:
+        wrong = deepcopy(metrics)
+        wrong["counts"]["phylogeny_checkpoint_hits"] = 1
+        with pytest.raises(ValueError):
+            cost.verify_metrics(wrong, run, flags)
+
+
+def preparation_fixture(tmp_path):
+    core = tmp_path / "core"
+    (core / "orthohmm").mkdir(parents=True)
+    enumerator = core / "orthohmm/files.py"
+    enumerator.write_text("import glob, os\ndef fetch_fasta_files(directory):\n    return [os.path.basename(p) for p in glob.glob(directory + '/*.fa')]\n")
+    pin = record(enumerator)
+    baseline = dict(core_root=str(core), core_sources=[dict(absolute_path=pin["path"], bytes=pin["bytes"], sha256=pin["sha256"])])
+    source = tmp_path / "original"
+    source.mkdir()
+    for i in range(4):
+        (source / f"s{i}.fa").write_text(f">g{i}a description\nAAAA\n>g{i}b\nCCCC\n")
+    root = tmp_path / "run_00"
+    root.mkdir()
+    names = [f"s{i}.fa" for i in range(4)]
+    run = dict(output_root=str(root), inputs=[record(source / n) for n in names],
+               input_creation_order=names, native_order=[p.name for p in source.iterdir()], genes=8, proteomes=4)
+    return run, baseline
+
+
+def test_actual_fresh_copy_ownership_and_enum(tmp_path):
+    run, baseline = preparation_fixture(tmp_path)
+    result = cost.prepare_inputs(run, baseline)
+    assert result["genes"] == 8
+    assert result["per_species_counts"] == dict.fromkeys(run["native_order"], 2)
+    assert result["input_snapshot"]["datasets"][0]["native_order"] == run["native_order"]
+    assert result["cold_cache_claim"] is False
+    for pin in run["inputs"]:
+        assert Path(pin["path"]).read_bytes() == (Path(run["output_root"]) / "input" / Path(pin["path"]).name).read_bytes()
+    with pytest.raises(FileExistsError):
+        cost.prepare_inputs(run, baseline)
+    changed = Path(run["output_root"]) / "input/s0.fa"
+    changed.write_text(changed.read_text() + "\n")
+    with pytest.raises(ValueError, match="bytes changed"):
+        cost.prepared_inputs(run, baseline)
+
+
+def test_duplicate_ownership_fails_and_preserves_copy(tmp_path):
+    run, baseline = preparation_fixture(tmp_path)
+    original = Path(run["inputs"][1]["path"])
+    original.write_text(">g0a\nAAAA\n>other\nCCCC\n")
+    run["inputs"][1] = record(original)
+    with pytest.raises(ValueError, match="Duplicate gene ownership"):
+        cost.prepare_inputs(run, baseline)
+    assert (Path(run["output_root"]) / "input/s0.fa").exists()
+
+
+def test_enumeration_mismatch_does_not_recopy_or_infer(tmp_path):
+    run, baseline = preparation_fixture(tmp_path)
+    run["native_order"] = list(reversed(run["native_order"]))
+    with pytest.raises(ValueError, match="enumeration differs"):
+        cost.prepare_inputs(run, baseline)
+    assert not (Path(run["output_root"]) / "native").exists()
+    assert len(list((Path(run["output_root"]) / "input").iterdir())) == 4
+
+
+@pytest.mark.parametrize("memory,comment,matched,success", [
+    (cost.MEMORY, "request_sha", True, True),
+    (cost.MEMORY - 1024, "request_sha", True, False),
+    (cost.MEMORY, "other_request", True, False),
+    (cost.MEMORY, "request_sha", False, False)])
+def test_release_capacity_attribution_and_scheduler_request(tmp_path, monkeypatch, memory, comment, matched, success):
+    from benchmark_tools import probe_host_counters, observe_threadripper_process_identity
+    from benchmark_tools import review_threadripper_process_policy, slurm_resource_snapshot, verify_threadripper_controller
+    plan_ref = dict(path="/plan.json", bytes=1, sha256="plan_sha")
+    request_ref = dict(path="/request.json", bytes=1, sha256="request_sha")
+    policy_ref = dict(path="/policy.json", bytes=1, sha256="policy_sha")
+    process_ref = dict(path="/process.json", bytes=1, sha256="process_sha")
+    request = dict(job_id=123)
+    plan = dict(helper_sources=[])
+    policy = dict(process_policy=process_ref)
+    refs = {"/request.json": request, "/policy.json": policy, "/process.json": dict(schema="typed")}
+    monkeypatch.setattr(cost, "read", lambda ref: refs[ref["path"]])
+    monkeypatch.setattr(cost, "check", lambda ref: None)
+    monkeypatch.setattr(cost, "prepared_inputs", lambda *args: None)
+    monkeypatch.setattr(probe_host_counters, "snapshot", lambda: dict(cpu="diagnostic"))
+    monkeypatch.setattr(observe_threadripper_process_identity, "enriched_snapshot", lambda: dict(sequence=2))
+    monkeypatch.setattr(review_threadripper_process_policy, "review", lambda *args, **kw: dict(process_policy_matched=matched))
+    monkeypatch.setattr(slurm_resource_snapshot, "scoped_path", lambda *args: Path("/slurm/job_123/step_0/user/task_0"))
+    class Budget:
+        def __init__(self, *args, **kwargs):
+            assert kwargs["allocation_mode"] == "shared"
+        def __call__(self, directory):
+            cost.save(directory / "release_budget.json", dict(test_only=True))
+            return dict(allocation=dict(fields=dict(Comment=comment)))
+    monkeypatch.setattr(verify_threadripper_controller, "ReleaseBudgetGuard", Budget)
+    original_read = Path.read_text
+    monkeypatch.setattr(Path, "read_text", lambda path, *a, **kw:
+        f"MemAvailable: {memory // 1024} kB\n" if str(path) == "/proc/meminfo" else original_read(path, *a, **kw))
+    (tmp_path / "ready.json").write_text(json.dumps(dict(cgroup="test")))
+    (tmp_path / "host_processes.jsonl").write_text(json.dumps(dict(snapshot=dict(sequence=1), observer_pid=99)) + "\n")
+    guard = cost.ReleaseGuard(request_ref, plan_ref, plan, dict(index=0), {}, policy_ref)
+    if success:
+        guard(tmp_path)
+        preflight = json.loads((tmp_path / "environment_preflight.json").read_text())
+        assert preflight["background_competition_recorded"] is True
+        assert preflight["uncontended_timing"] is False
+        assert preflight["plan_sha256"] == "plan_sha"
+    else:
+        with pytest.raises(ValueError):
+            guard(tmp_path)
+        assert not (tmp_path / "environment_preflight.json").exists()
+    assert (tmp_path / "launch_environment_observation.json").exists()
+
+
+@pytest.mark.parametrize("raw", ("MemAvailable: -1 kB", "MemAvailable: 200 MB", "MemTotal: 5 kB", "MemAvailable: 12"))
+def test_invalid_capacity(raw):
+    with pytest.raises(ValueError):
+        cost.available_memory(raw)
+
+
+def test_capacity_is_not_a_foreign_cpu_gate():
+    assert cost.available_memory("MemTotal: 9999 kB\nMemAvailable: 1048576 kB\n") == 1024**3
+    source = (cost.ROOT / "benchmark_tools/run_native_factorial_cost.py").read_text()
+    assert "capacity < MEMORY or not verdict[\"process_policy_matched\"]" in source
+    assert "maximum_foreign_average_cores" not in source
+    assert "scancel" not in source and "os.kill" not in source
+
+
+def test_launch_bootstrap_uses_separate_request_scope():
+    script = cost.SCRIPT.read_text()
+    assert "#SBATCH --cpus-per-task=64" in script and "#SBATCH --mem=128G" in script
+    assert "#SBATCH --time=1-02:00:00" in script and "#SBATCH --no-requeue" in script
+    assert "#SBATCH --exclusive" not in script
+    assert "unset PYTHONHOME PYTHONPATH LD_PRELOAD LD_LIBRARY_PATH LD_AUDIT" in script
+    assert "scheduler-comment" in script
+    assert "run_native_factorial_cost.py" in script and "run_threadripper_scaling.py" not in script
