@@ -64,6 +64,28 @@ def relative(name):
     return name
 
 
+def review_selection(value, *, recorded=False):
+    keys = {"review_revision", "ledger_revision", "main_text", "stages"}
+    if recorded:
+        keys.add("page_count")
+    if not isinstance(value, dict) or set(value) != keys:
+        raise ValueError("Require explicit manuscript revisions, path and three stages")
+    for key in ("review_revision", "ledger_revision"):
+        if not isinstance(value[key], str) or not re.fullmatch(r"[0-9a-f]{40}", value[key]):
+            raise ValueError("Require exact committed manuscript revisions")
+    if not relative(value["main_text"]).endswith(".md"):
+        raise ValueError("Require a Markdown manuscript")
+    stages = value["stages"]
+    if not isinstance(stages, dict) or set(stages) != {"render", "print", "review"}:
+        raise ValueError("Require distinct committed render/print/review receipts")
+    paths = [relative(name) for name in stages.values()]
+    if len(set(paths)) != 3 or any(not name.endswith(".json") for name in paths):
+        raise ValueError("Require distinct committed render/print/review receipts")
+    if recorded and (type(value["page_count"]) is not int or value["page_count"] < 1):
+        raise ValueError("Require the selected positive manuscript page count")
+    return dict(value, stages=dict(stages))
+
+
 def load(path, name):
     spec = importlib.util.spec_from_file_location(name, path)
     module = importlib.util.module_from_spec(spec)
@@ -125,14 +147,23 @@ def verify(directory, manifest_sha):
     if index_path.is_symlink() or identity(index_path.read_bytes())["sha256"] != manifest_sha:
         raise ValueError("Handoff index differs from external anchor")
     index = json.loads(index_path.read_bytes())
+    chosen_review = None
     if index["schema"] == "publication_handoff_candidate_v1":
         profile = "native-preparation"
         if "source_profile" in index:
             raise ValueError("Legacy handoff cannot select a new source profile")
     elif index["schema"] == "publication_handoff_candidate_v2" and index.get("source_profile") == "native-build":
         profile = "native-build"
+    elif index["schema"] == "publication_handoff_candidate_v3":
+        profile = index.get("source_profile")
+        selection(profile)
+        if index.get("result_helpers_included") is not True:
+            raise ValueError("Explicit-review handoff requires result-helper source export")
+        chosen_review = review_selection(index.get("review_selection"), recorded=True)
     else:
         raise ValueError("Handoff schema/source profile differs")
+    if chosen_review is None and {"review_selection", "result_helpers_included"} & index.keys():
+        raise ValueError("Historical handoff cannot reinterpret review/helper selection")
     extras = selection(profile)
     if (any(index[key] is not False for key in ("publication_ready", "redistribution_clearance", "public_release_uploaded"))
             or not re.fullmatch(r"[0-9a-f]{40}", index["workflow_revision"])
@@ -179,9 +210,30 @@ def verify(directory, manifest_sha):
         component_files |= {role + "/" + row["path"] for row in child["files"]} | {role + "/" + index_name}
         if role == "source" and child.get("profile") != profile:
             raise ValueError("Source profile differs from selected handoff format")
+        if chosen_review is not None:
+            if role == "source":
+                if (child.get("schema") != "publication_source_components_v3"
+                        or child.get("include_result_helpers") is not True
+                        or result.get("result_helpers_included") is not True
+                        or child.get("workflow_revision") != index["workflow_revision"]):
+                    raise ValueError("Selected result-helper source scope differs")
+            else:
+                main = module.manuscript_path(chosen_review["main_text"])
+                stages = module.stage_paths(chosen_review["stages"], main)
+                if (child.get("schema") != "publication_direct_review_v3"
+                        or child.get("main_text") != main or child.get("stages") != stages
+                        or result.get("entrypoints", {}).get("markdown") != main
+                        or result["page_count"] != chosen_review["page_count"]):
+                    raise ValueError("Selected manuscript/component scope differs")
+                for row in child["files"]:
+                    expected = (index["workflow_revision"] if row["path"] in {module.RUNNER, module.GUIDE, "LICENSE.md"}
+                        else chosen_review["ledger_revision"] if row["path"] == module.LEDGER
+                        else chosen_review["review_revision"])
+                    if row.get("git_revision") != expected:
+                        raise ValueError("Selected manuscript revision mapping differs")
     if seen != component_files | set(extras):
         raise ValueError("Unaccounted handoff payloads")
-    if results["manuscript"]["page_count"] != 9:
+    if chosen_review is None and results["manuscript"]["page_count"] != 9:
         raise ValueError("Require the retained nine-page manuscript")
     table = check_table((directory / "comparison/scores.tsv").read_bytes())
     result = dict(status="publication_handoff_candidate_verified", files=len(seen), payload_bytes=total,
@@ -191,16 +243,22 @@ def verify(directory, manifest_sha):
     if profile == "native-build":
         result.update(source_profile=profile, runtime_evidence_included=True, runtime_payload_delivered=False,
                       runtime_evidence=check_runtime_evidence(directory))
+    if chosen_review is not None:
+        result.update(review_selection=chosen_review, result_helpers_included=True)
     return result
 
 
-def build(repo, revision, output, source_profile="native-preparation"):
+def build(repo, revision, output, source_profile="native-preparation", *, selected_review=None):
+    chosen_review = None if selected_review is None else review_selection(selected_review)
     repo, output = Path(repo).resolve(), Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     selected = selection(source_profile)
     from benchmark_tools import bundle_publication_source as source
     from benchmark_tools import bundle_publication_review as review
+    if chosen_review is not None:
+        review.manuscript_path(chosen_review["main_text"])
+        review.stage_paths(chosen_review["stages"], chosen_review["main_text"])
     commit = subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
     extras, mappings = {}, {}
     for name, (git_path, digest) in selected.items():
@@ -211,9 +269,13 @@ def build(repo, revision, output, source_profile="native-preparation"):
         mappings[name] = dict(git_path=git_path, git_revision=commit, git_blob=blob)
     output.mkdir(parents=True, exist_ok=False)
     try:
-        results = dict(source=source.build(repo, commit, output / "source", source_profile),
-            manuscript=review.build(repo, REVIEW_REVISION, LEDGER_REVISION, commit,
-                                    output / "manuscript", stages=STAGES))
+        source_options = {} if chosen_review is None else dict(include_result_helpers=True)
+        review_options = dict(stages=STAGES) if chosen_review is None else dict(
+            stages=chosen_review["stages"], main_text=chosen_review["main_text"])
+        results = dict(source=source.build(repo, commit, output / "source", source_profile, **source_options),
+            manuscript=review.build(repo, REVIEW_REVISION if chosen_review is None else chosen_review["review_revision"],
+                LEDGER_REVISION if chosen_review is None else chosen_review["ledger_revision"],
+                commit, output / "manuscript", **review_options))
         # Component builders inherit the host umask for their generated indexes.
         for role, (index_name, _) in COMPONENTS.items():
             (output / role / index_name).chmod(0o644)
@@ -245,6 +307,12 @@ def build(repo, revision, output, source_profile="native-preparation"):
             index.update(schema="publication_handoff_candidate_v2", source_profile=source_profile)
             index["limitations"].append(
                 "Native-build adds frozen setup overlay, seven acquisition/runtime support documents and pinned integration evidence; raw/native/runtime payloads remain excluded.")
+        if chosen_review is not None:
+            index.update(schema="publication_handoff_candidate_v3", source_profile=source_profile,
+                result_helpers_included=True,
+                review_selection=dict(chosen_review, page_count=results["manuscript"]["page_count"]))
+            index["limitations"][1] = (
+                "Manuscript and ledger are explicitly selected committed snapshots; source workflow has its own revision.")
         with (output / "HANDOFF_INDEX.json").open("x") as stream:
             json.dump(index, stream, indent=2, sort_keys=True, allow_nan=False)
             stream.write("\n")
@@ -264,6 +332,8 @@ if __name__ == "__main__":
     builder.add_argument("--revision", required=True)
     builder.add_argument("--output", type=Path, required=True)
     builder.add_argument("--source-profile", choices=sorted(PROFILES), default="native-preparation")
+    for name in ("review-revision", "ledger-revision", "main-text", "render-receipt", "print-receipt", "review-receipt"):
+        builder.add_argument("--" + name, help="Explicit review selection; supply all six arguments")
     verifier = commands.add_parser("verify")
     verifier.add_argument("directory", type=Path)
     verifier.add_argument("--manifest-sha256", required=True)
@@ -271,7 +341,15 @@ if __name__ == "__main__":
     if args.command == "build":
         import sys
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-        result = build(args.repo, args.revision, args.output, args.source_profile)
+        values = [getattr(args, name) for name in ("review_revision", "ledger_revision", "main_text",
+                  "render_receipt", "print_receipt", "review_receipt")]
+        chosen = None
+        if any(value is not None for value in values):
+            if any(value is None for value in values):
+                parser.error("Explicit manuscript selection requires both revisions, main text and all three receipts")
+            chosen = dict(review_revision=args.review_revision, ledger_revision=args.ledger_revision,
+                main_text=args.main_text, stages={role: getattr(args, role + "_receipt") for role in ("render", "print", "review")})
+        result = build(args.repo, args.revision, args.output, args.source_profile, selected_review=chosen)
     else:
         result = verify(args.directory, args.manifest_sha256)
     print(json.dumps(result, indent=2, sort_keys=True))

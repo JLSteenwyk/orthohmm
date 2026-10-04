@@ -1,5 +1,9 @@
 # Explicit Manuscript Export Staged
 
+Historical staging record: the actual helper/test are now applied after all
+27 terminal reviews. See [integration](PUBLICATION_EXPORT_INTEGRATION_20261004.md)
+for current source validation and remaining actual-archive work.
+
 The live review exporter binds `PUBLICATION_MAIN_TEXT_20260927.md`. Supplying
 new render/print/review receipts alone cannot export the differently named
 3 October or final manuscript: the historical-root and entrypoint checks

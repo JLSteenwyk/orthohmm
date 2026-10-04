@@ -1,5 +1,9 @@
 # Source Helper Export Fix Staged
 
+Historical staging record: the actual helper/test are now applied after all
+27 terminal reviews. See [integration](PUBLICATION_EXPORT_INTEGRATION_20261004.md)
+for current source validation and remaining actual-archive work.
+
 The [unapplied patch](publication_source_helpers_staged_20261004.patch) implements
 the source-export repair in an isolated copy, preserving the live timing
 recipe. It adds explicit `--include-result-helpers` selection and schema3;

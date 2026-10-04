@@ -1503,6 +1503,13 @@ does not supply original family identities for uncertainty estimation.
 
 ### Remaining Publication Gates
 
+The [three actual export repairs](results/PUBLICATION_EXPORT_INTEGRATION_20261004.md)
+are now integrated after all 27 terminal reviews; 339 combined tests pass.
+Final source exports must explicitly include result helpers. Direct review
+and handoff must explicitly select the final manuscript and committed receipt
+chain; historical default filenames/page counts remain unchanged. These
+helper tests do not establish the actual final study archive or rendering.
+
 - Shared-host resource panel: all 27 frozen attempts are terminal-reviewed,
   including 25 native resource measurements, 24 eligible observations and two
   pre-native aborts with no endpoints. Six cells have three eligible repeats.

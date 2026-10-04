@@ -1,5 +1,9 @@
 # Explicit Review Handoff Staged
 
+Historical staging record: the actual helper/test are now applied after all
+27 terminal reviews. See [integration](PUBLICATION_EXPORT_INTEGRATION_20261004.md)
+for current source validation and remaining actual-archive work.
+
 The [unapplied coordinator patch](publication_handoff_review_staged_20261004.patch)
 connects the prepared source-helper and explicit manuscript-export repairs.
 Legacy handoffs keep their dated review/default inventory. Explicit selection

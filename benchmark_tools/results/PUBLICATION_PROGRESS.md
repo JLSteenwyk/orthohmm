@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Actual Export Helpers Integrated (2026-10-04)
+
+After final panel/reporting checkpoint `4a58c088` is committed and pushed,
+all 27 native identities are terminal-reviewed with exclusions preserved.
+Recheck three base source hashes and three retained patch hashes; apply the
+source-helper, explicit-main and explicit-review handoff repairs through
+`apply_patch`. All six actual helper/test files match the previously tested
+isolated copies exactly. No scientific/runtime/native inference or historical
+receipt is regenerated under the changed export source.
+
+[Integration](PUBLICATION_EXPORT_INTEGRATION_20261004.md) preserves old
+schemas/defaults, explicitly includes committed result helpers, and binds
+the selected manuscript, receipt chain, exact revisions and observed page
+count. The combined actual legacy/new suite passes339 cases in47.40s,
+including real child fixture exports and relocated copied CLI checks without
+fixture Git/original checkout. Its [receipt](publication_export_integration_validation_20261004.json)
+pins actual JUnit, six applied files and three historical patches. Historical
+staging notes are marked superseded, not silently rewritten as execution proof.
+
+Next build the final resource reporting component with prose from committed
+sources, reconcile/render/visually inspect the whole final manuscript, and
+validate actual committed/relocated source/review/handoff and executable/
+versioned archive. Fixture tests are not those final deliverables. All 27
+timing identities remain reviewed,25 measured/24 eligible/six complete cells;
+none is running or awaiting launch. Full goal stays active and incomplete.
+
 ## Final Shared-Host Panel Reviewed (2026-10-04)
 
 Previous user turn verifies the existing goal amendment, without changing

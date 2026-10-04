@@ -35,14 +35,21 @@ def relative(name):
     return name
 
 
-def stage_paths(stages=None):
+def manuscript_path(name):
+    name = relative(name)
+    if not name.endswith(".md") or name in {LEDGER, RUNNER, GUIDE, "LICENSE.md"}:
+        raise ValueError("Require a distinct repository-relative Markdown manuscript")
+    return name
+
+
+def stage_paths(stages=None, main=MAIN):
     if stages is None:
         return dict(render=RENDER, print=PRINT, review=REVIEW)
     if not isinstance(stages, dict) or set(stages) != {"render", "print", "review"}:
         raise ValueError("Require exactly render/print/review stage paths")
     paths = [relative(stages[key]) for key in ("render", "print", "review")]
     if (len(set(paths)) != 3 or any(not path.endswith(".json") for path in paths)
-            or set(paths) & {MAIN, LEDGER, RUNNER, GUIDE, "LICENSE.md", "REVIEW_INDEX.json"}):
+            or set(paths) & {main, LEDGER, RUNNER, GUIDE, "LICENSE.md", "REVIEW_INDEX.json"}):
         raise ValueError("Stage paths must be distinct JSON receipts, not support files")
     return dict(zip(("render", "print", "review"), paths))
 
@@ -55,9 +62,9 @@ def pin(row):
     return {key: row[key] for key in ("bytes", "sha256")}
 
 
-def historical_root(render):
+def historical_root(render, main=MAIN):
     source = render["sources"][0]["path"]
-    suffix = "/" + MAIN
+    suffix = "/" + main
     if not source.startswith("/") or not source.endswith(suffix):
         raise ValueError("Render source does not identify the main text")
     return source[:-len(suffix)]
@@ -100,7 +107,7 @@ def direct_links(content, html_name):
     return result
 
 
-def evidence(render, printed, reviewed):
+def evidence(render, printed, reviewed, main=MAIN):
     if (render["status"] != "manuscript_review_rendered"
             or printed["status"] != "verified_html_printed"
             or reviewed["status"] != "pdf_bounds_checked"
@@ -109,7 +116,7 @@ def evidence(render, printed, reviewed):
             or type(printed["page_count"]) is not int or printed["page_count"] < 1
             or printed["page_count"] != reviewed["page_count"]):
         raise ValueError("Require retained successful review stages, not publication readiness")
-    root = historical_root(render)
+    root = historical_root(render, main)
     records = {}
     external = {}
     for row in [render["html"], *render["sources"], *render["targets"],
@@ -128,7 +135,7 @@ def evidence(render, printed, reviewed):
     if len(occurrences) != render["local_occurrences"] or {o["path"] for o in occurrences} != set(targets):
         raise ValueError("Direct-target occurrences differ")
     for occurrence in occurrences:
-        if direct_links(('<a href="' + occurrence["url"].replace('"', '&quot;') + '">').encode(), MAIN) != [occurrence["path"]]:
+        if direct_links(('<a href="' + occurrence["url"].replace('"', '&quot;') + '">').encode(), main) != [occurrence["path"]]:
             raise ValueError("Historical local link mapping differs")
     return root, records, external, targets
 
@@ -139,15 +146,18 @@ def verify(directory, manifest_sha):
     if index.is_symlink() or identity(index.read_bytes())["sha256"] != manifest_sha:
         raise ValueError("Review index differs from external digest")
     manifest = json.loads(index.read_bytes())
-    if (manifest["schema"] not in {"publication_direct_review_v1", "publication_direct_review_v2"}
+    if (manifest["schema"] not in {"publication_direct_review_v1", "publication_direct_review_v2", "publication_direct_review_v3"}
             or manifest["publication_ready"] is not False
             or manifest["redistribution_clearance"] is not False
             or manifest["transitive_evidence_included"] is not False):
         raise ValueError("Review component scope differs")
-    if manifest["schema"] == "publication_direct_review_v2":
+    main = manuscript_path(manifest.get("main_text")) if manifest["schema"] == "publication_direct_review_v3" else MAIN
+    if manifest["schema"] != "publication_direct_review_v3" and "main_text" in manifest:
+        raise ValueError("Historical schema cannot override manuscript path")
+    if manifest["schema"] in {"publication_direct_review_v2", "publication_direct_review_v3"}:
         if not isinstance(manifest.get("stages"), dict):
             raise ValueError("Missing explicit stage paths")
-        stages = stage_paths(manifest["stages"])
+        stages = stage_paths(manifest["stages"], main)
     else:
         if "stages" in manifest:
             raise ValueError("Historical schema cannot override stage paths")
@@ -173,7 +183,7 @@ def verify(directory, manifest_sha):
     if not support <= payloads.keys():
         raise ValueError("Missing review support files")
     render, printed, reviewed = [json.loads(payloads[stages[key]]) for key in ("render", "print", "review")]
-    _, expected, external, targets = evidence(render, printed, reviewed)
+    _, expected, external, targets = evidence(render, printed, reviewed, main)
     if set(payloads) != set(expected) | support:
         raise ValueError("Unexpected or missing historical review inventory")
     if manifest["external_provenance_not_included"] != external:
@@ -181,19 +191,19 @@ def verify(directory, manifest_sha):
     for name, row in expected.items():
         if identity(payloads[name]) != row:
             raise ValueError("Historical review identity differs")
-    if manifest["schema"] == "publication_direct_review_v2":
+    if manifest["schema"] in {"publication_direct_review_v2", "publication_direct_review_v3"}:
         render_name = stages["render"]
         if (render_name not in expected or identity(payloads[render_name]) != expected[render_name]
-                or not all(any(mapped(row, historical_root(render)) == render_name
+                or not all(any(mapped(row, historical_root(render, main)) == render_name
                                and pin(row) == identity(payloads[render_name]) for row in stage["checked_records"])
                            for stage in (printed, reviewed))
                 or not any(row == printed["pdf"] for row in reviewed["checked_records"])):
             raise ValueError("Selected render/print/review chain differs")
-    html_name = mapped(render["html"], historical_root(render))
+    html_name = mapped(render["html"], historical_root(render, main))
     links = direct_links(payloads[html_name], html_name)
     if set(links) != set(targets):
         raise ValueError("Rendered direct links differ from recorded targets")
-    entrypoints = dict(html=html_name, markdown=MAIN, pdf=mapped(printed["pdf"], historical_root(render)))
+    entrypoints = dict(html=html_name, markdown=main, pdf=mapped(printed["pdf"], historical_root(render, main)))
     if manifest["entrypoints"] != entrypoints:
         raise ValueError("Review entrypoints differ")
     return dict(status="publication_direct_review_verified", files=len(payloads),
@@ -217,17 +227,18 @@ def committed(repo, revision, name):
     return content, int(mode, 8) & 0o777, blob
 
 
-def build(repo, review_revision, ledger_revision, workflow_revision, output, *, stages=None):
+def build(repo, review_revision, ledger_revision, workflow_revision, output, *, stages=None, main_text=None):
+    main = MAIN if main_text is None else manuscript_path(main_text)
     repo, output = Path(repo).resolve(), Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
     revisions = [subprocess.check_output(["git", "-C", str(repo), "rev-parse", "--verify", r + "^{commit}"], text=True).strip()
                  for r in (review_revision, ledger_revision, workflow_revision)]
     review_revision, ledger_revision, workflow_revision = revisions
-    selected = stage_paths(stages)
+    selected = stage_paths(stages, main)
     render, printed, reviewed = [json.loads(committed(repo, review_revision, selected[key])[0])
                                 for key in ("render", "print", "review")]
-    root, expected, external, _ = evidence(render, printed, reviewed)
+    root, expected, external, _ = evidence(render, printed, reviewed, main)
     support = {RUNNER, GUIDE, "LICENSE.md", *selected.values()}
     payloads, rows = {}, []
     for name in sorted(set(expected) | support):
@@ -238,7 +249,7 @@ def build(repo, review_revision, ledger_revision, workflow_revision, output, *, 
         payloads[name] = content
         rows.append(dict(path=name, mode=mode, git_revision=revision, git_blob=blob, **identity(content)))
     manifest = dict(schema="publication_direct_review_v2" if stages is not None else "publication_direct_review_v1", files=rows,
-        entrypoints=dict(html=mapped(render["html"], root), markdown=MAIN, pdf=mapped(printed["pdf"], root)),
+        entrypoints=dict(html=mapped(render["html"], root), markdown=main, pdf=mapped(printed["pdf"], root)),
         external_provenance_not_included=external, publication_ready=False,
         redistribution_clearance=False, transitive_evidence_included=False,
         limitations=["Only main-text direct links are included; links inside linked documents may be unavailable.",
@@ -248,6 +259,8 @@ def build(repo, review_revision, ledger_revision, workflow_revision, output, *, 
             "No inference, scoring, plotting, rendering, installation or public release is performed."])
     if stages is not None:
         manifest["stages"] = selected
+    if main_text is not None:
+        manifest.update(schema="publication_direct_review_v3", main_text=main, stages=selected)
     output.mkdir(parents=True, exist_ok=False)
     for row in rows:
         path = output / row["path"]
@@ -270,6 +283,7 @@ if __name__ == "__main__":
     builder.add_argument("--ledger-revision", default=LEDGER_REVISION)
     builder.add_argument("--workflow-revision", required=True)
     builder.add_argument("--output", type=Path, required=True)
+    builder.add_argument("--main-text", help="Explicit committed repository-relative Markdown manuscript")
     for role in ("render", "print", "review"):
         builder.add_argument("--" + role + "-receipt", help="Committed repository-relative JSON path; supply all three")
     verifier = commands.add_parser("verify")
@@ -282,7 +296,8 @@ if __name__ == "__main__":
             stages = None
         elif any(value is None for value in stages.values()):
             parser.error("Explicit stage selection requires all three receipts")
-        result = build(args.repo, args.review_revision, args.ledger_revision, args.workflow_revision, args.output, stages=stages)
+        result = build(args.repo, args.review_revision, args.ledger_revision, args.workflow_revision, args.output,
+                       stages=stages, main_text=args.main_text)
     else:
         result = verify(args.directory, args.manifest_sha256)
     print(json.dumps(result, indent=2, sort_keys=True))

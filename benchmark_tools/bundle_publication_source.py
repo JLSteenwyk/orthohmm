@@ -63,7 +63,7 @@ def relative(name):
     return name
 
 
-def selected(name, component, profile="source-only"):
+def selected(name, component, profile="source-only", include_result_helpers=False):
     if profile not in PROFILES:
         raise ValueError("Unknown source profile")
     if component == "scientific":
@@ -73,6 +73,7 @@ def selected(name, component, profile="source-only"):
     if component == "workflow":
         return (name in {"LICENSE.md", GUIDE, "benchmark_tools/PUBLICATION_REPRODUCTION.md"}
                 or re.fullmatch(r"benchmark_tools/[^/]+\.py", name) is not None
+                or (include_result_helpers and re.fullmatch(r"benchmark_tools/results/[^/]+\.py", name) is not None)
                 or re.fullmatch(r"tests/unit/[^/]+\.py", name) is not None
                 or name in support_pins(profile))
     raise ValueError("Unknown source component")
@@ -96,7 +97,7 @@ def required(component, profile):
     return names
 
 
-def inventory(repo, revision, component, profile="source-only"):
+def inventory(repo, revision, component, profile="source-only", include_result_helpers=False):
     data = subprocess.check_output(["git", "-C", str(repo), "ls-tree", "-rz", revision])
     result = {}
     for entry in data.split(b"\0"):
@@ -104,7 +105,7 @@ def inventory(repo, revision, component, profile="source-only"):
             continue
         header, raw_name = entry.split(b"\t", 1)
         name = relative(raw_name.decode())
-        if not selected(name, component, profile):
+        if not selected(name, component, profile, include_result_helpers):
             continue
         mode, kind, blob = header.decode().split()
         if kind != "blob" or mode not in {"100644", "100755"} or name in result:
@@ -129,7 +130,13 @@ def verify(directory, manifest_sha):
     if identity(content)["sha256"] != manifest_sha:
         raise ValueError("Source index digest differs from external anchor")
     manifest = json.loads(content)
-    if manifest["schema"] == "publication_source_components_v1":
+    include_result_helpers = False
+    if manifest["schema"] == "publication_source_components_v3":
+        profile = manifest.get("profile")
+        if profile not in PROFILES or manifest.get("include_result_helpers") is not True:
+            raise ValueError("Current source schema must explicitly include result helpers")
+        include_result_helpers = True
+    elif manifest["schema"] == "publication_source_components_v1":
         if "profile" in manifest:
             raise ValueError("Historical source schema cannot override profile")
         profile = "source-only"
@@ -139,6 +146,8 @@ def verify(directory, manifest_sha):
             raise ValueError("Unsupported acquisition-support profile")
     else:
         raise ValueError("Unknown source schema")
+    if not include_result_helpers and "include_result_helpers" in manifest:
+        raise ValueError("Historical source schema cannot override helper selection")
     if profile == "native-build" and manifest.get("build_revision") != BUILD_REVISION:
         raise ValueError("Build overlay revision differs")
     if (
@@ -155,7 +164,7 @@ def verify(directory, manifest_sha):
         component, source = name.split("/", 1)
         expected_revision = (SCIENTIFIC_REVISION if component == "scientific" else
                              BUILD_REVISION if component == "build" else manifest["workflow_revision"])
-        if (name in seen or not selected(source, component, profile) or row["git_path"] != source
+        if (name in seen or not selected(source, component, profile, include_result_helpers) or row["git_path"] != source
                 or row["git_revision"] != expected_revision or row["mode"] not in (0o644, 0o755)
                 or not re.fullmatch(r"[0-9a-f]{40}", row["git_blob"])):
             raise ValueError("Source index contains invalid mapping or duplicate")
@@ -190,12 +199,16 @@ def verify(directory, manifest_sha):
                 redistribution_clearance=False, publication_ready=False)
     if profile == "native-build":
         result["build_revision"] = BUILD_REVISION
+    if include_result_helpers:
+        result["result_helpers_included"] = True
     return result
 
 
-def build(repo, revision, output, profile="source-only"):
+def build(repo, revision, output, profile="source-only", include_result_helpers=False):
     if profile not in PROFILES:
         raise ValueError("Unknown source profile")
+    if type(include_result_helpers) is not bool:
+        raise ValueError("Result-helper selection must be an explicit boolean")
     repo, output = Path(repo).resolve(), Path(output).absolute()
     if output.exists() or output.is_symlink():
         raise FileExistsError(output)
@@ -205,7 +218,7 @@ def build(repo, revision, output, profile="source-only"):
     if profile == "native-build":
         components.append(("build", BUILD_REVISION))
     for component, source_revision in components:
-        for source, (content, mode, blob) in sorted(inventory(repo, source_revision, component, profile).items()):
+        for source, (content, mode, blob) in sorted(inventory(repo, source_revision, component, profile, include_result_helpers).items()):
             name = component + "/" + source
             payloads[name] = (content, mode)
             rows.append(dict(path=name, git_path=source, git_revision=source_revision,
@@ -237,6 +250,11 @@ def build(repo, revision, output, profile="source-only"):
             manifest["build_revision"] = BUILD_REVISION
             manifest["limitations"].append(
                 "Native-build additionally carries the frozen setup-only overlay separately; a rebuilt candidate wheel is not silently substituted into historical hash locks or admitted scientific executors.")
+    if include_result_helpers:
+        manifest.update(schema="publication_source_components_v3", profile=profile,
+                        include_result_helpers=True)
+        manifest["limitations"].append(
+            "Operational results-module Python sources are included as exact committed blobs. Result data remain excluded; syntax/integrity do not establish runtime/data closure or executable inference.")
     output.mkdir(parents=True, exist_ok=False)
     for name, (content, mode) in payloads.items():
         path = output / name
@@ -259,9 +277,10 @@ if __name__ == "__main__":
     builder.add_argument("--revision", required=True)
     builder.add_argument("--output", type=Path, required=True)
     builder.add_argument("--profile", choices=sorted(PROFILES), default="source-only")
+    builder.add_argument("--include-result-helpers", action="store_true")
     verifier = commands.add_parser("verify")
     verifier.add_argument("directory", type=Path)
     verifier.add_argument("--manifest-sha256", required=True)
     args = parser.parse_args()
-    result = build(args.repo, args.revision, args.output, args.profile) if args.command == "build" else verify(args.directory, args.manifest_sha256)
+    result = build(args.repo, args.revision, args.output, args.profile, args.include_result_helpers) if args.command == "build" else verify(args.directory, args.manifest_sha256)
     print(json.dumps(result, indent=2, sort_keys=True))
