@@ -177,6 +177,14 @@ these observations to claim causal speedups.
 
 ### Retained Evidence Chronology
 
+The [actual final source/review components](results/FINAL_SOURCE_REVIEW_COMPONENTS_20261004.md)
+now verify after external copying with isolated standard-library runners and
+no Git. Helper-inclusive source preserves frozen science/setup revisions;
+selected review preserves the actual render-time ledger. All 20 result helpers
+import and 344 relevant cases collect in copied workflow. This is actual
+component closure, not full native or transitive study reproduction. Complete
+figure/handoff/executable/versioned archives remain open.
+
 The [resource-complete twelve-page review](results/PUBLICATION_MAIN_FINAL_REVIEW_20261004.md)
 now renders the 4 October main text from exact committed source; every page
 is visually checked and both closed-artifact/PDF-value tests pass. Its 17

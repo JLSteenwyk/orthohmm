@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Actual Final Source And Review Components Verified (2026-10-04)
+
+Commit/push `79a850e8` closes the twelve-page main review checkpoint.
+Build [actual schema3 source and selected-main review components](FINAL_SOURCE_REVIEW_COMPONENTS_20261004.md)
+from that committed workflow, not fixture outputs. Source includes1912 files,
+43 scientific/1868 workflow/one setup overlay; all1891 Python files pass syntax.
+Frozen scientific parser/writer warnings remain visible and unchanged.
+Direct review includes83 files/57 direct targets/59 local HTML links and
+the actual4October text/HTML/twelve-page PDF. Ledger revision904f4d4b
+preserves the exact render-time ledger bytes.
+
+Copy both components outside the repository. Copied isolated standard-library
+verifiers with no Git pass against their external manifest anchors. Import
+all20 previously omitted result helpers from copied paths; collect344 cases
+across eight relevant modules. Every project module resolves within copied
+workflow; these tests are collected, not run. The [execution receipt](final_publication_components_execution_20261004.json)
+and public indexes bind actual commands/results and canonical/copied bytes.
+Native inference, raw audit and successful scientific diagnostics are not repeated.
+
+Next reconcile the complete figure appendix with current main/resource inputs;
+the retained assembler/replayer hardcodes the old nine-page/no-timing review.
+Preserve that historical presentation rather than relabeling it. Build and
+validate explicit-review handoff and executable/versioned archives, using
+retained runtime/data assets and final reporting component, then audit full
+goal scope and central claim support. Components are local; payload archives,
+rights, external deposition and all scientific limitations remain separate.
+No native panel job is live. Full publication goal stays active/incomplete.
+
 ## Resource-Complete Main PDF Reviewed (2026-10-04)
 
 The source/text/documentation checkpoint is committed and pushed at `904f4d4b`.

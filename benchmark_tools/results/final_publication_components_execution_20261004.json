@@ -1,0 +1,132 @@
+{
+  "status": "actual_final_source_and_review_components_relocated",
+  "workflow_revision": "79a850e8779b808d0ac659ef563063909f3f989d",
+  "ledger_revision": "904f4d4b99cd3a87d543da0ac7abe2fdaad64285",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "setup_only_build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+  "components": {
+    "source": {
+      "manifest": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/final_publication_source_index_20261004.json",
+        "bytes": 775869,
+        "sha256": "e7f2f0e72eabbd45127f83ef75a9829c547bc611acc3034898349360672abf25"
+      },
+      "schema": "publication_source_components_v3",
+      "files": 1912,
+      "canonical_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_components_20261004/source",
+      "copied_directory": "/tmp/orthohmm-final-components-20261004-jbpvMU/source"
+    },
+    "review": {
+      "manifest": {
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/final_publication_review_index_20261004.json",
+        "bytes": 30609,
+        "sha256": "c6dcecc874d33e6ad06a404036c9a697356370607f07ac4abafdd21b64fff816"
+      },
+      "schema": "publication_direct_review_v3",
+      "files": 83,
+      "canonical_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_components_20261004/review",
+      "copied_directory": "/tmp/orthohmm-final-components-20261004-jbpvMU/review"
+    }
+  },
+  "source_build_command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.bundle_publication_source build --repo . --revision 79a850e8779b808d0ac659ef563063909f3f989d --profile native-build --include-result-helpers --output benchmarks/work/final_publication_components_20261004/source",
+  "review_build_command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.bundle_publication_review build --repo . --review-revision 79a850e8779b808d0ac659ef563063909f3f989d --ledger-revision 904f4d4b99cd3a87d543da0ac7abe2fdaad64285 --workflow-revision 79a850e8779b808d0ac659ef563063909f3f989d --main-text benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md --render-receipt benchmark_tools/results/publication_main_render_20261004.json --print-receipt benchmark_tools/results/publication_main_print_20261004/print.json --review-receipt benchmark_tools/results/publication_main_pdf_review_20261004/report.json --output benchmarks/work/final_publication_components_20261004/review",
+  "public_indexes_match_canonical_and_copied": true,
+  "source_verification": {
+    "command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT -u PYTHONPATH PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PATH=/no-git /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -S -B /tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/benchmark_tools/bundle_publication_source.py verify /tmp/orthohmm-final-components-20261004-jbpvMU/source --manifest-sha256 e7f2f0e72eabbd45127f83ef75a9829c547bc611acc3034898349360672abf25",
+    "exit_code": 0,
+    "output": "scientific/orthohmm/parser.py:40: SyntaxWarning: invalid escape sequence '\\ '\nscientific/orthohmm/writer.py:83: SyntaxWarning: invalid escape sequence '\\ '\n{\n  \"build_revision\": \"6fd6df19daba83ec6467b917988f99e27a95be14\",\n  \"components\": {\n    \"build\": 1,\n    \"scientific\": 43,\n    \"workflow\": 1868\n  },\n  \"executable_benchmark_reproduced\": false,\n  \"files\": 1912,\n  \"manifest\": {\n    \"bytes\": 775869,\n    \"sha256\": \"e7f2f0e72eabbd45127f83ef75a9829c547bc611acc3034898349360672abf25\"\n  },\n  \"payload_bytes\": 11828926,\n  \"publication_ready\": false,\n  \"python_files_syntax_checked\": 1891,\n  \"redistribution_clearance\": false,\n  \"result_helpers_included\": true,\n  \"scientific_revision\": \"7f3a9e40dd7e79f842cc2c11fb8b548f9a802806\",\n  \"status\": \"publication_source_components_verified\",\n  \"workflow_revision\": \"79a850e8779b808d0ac659ef563063909f3f989d\"\n}\n",
+    "result": {
+      "build_revision": "6fd6df19daba83ec6467b917988f99e27a95be14",
+      "components": {
+        "build": 1,
+        "scientific": 43,
+        "workflow": 1868
+      },
+      "executable_benchmark_reproduced": false,
+      "files": 1912,
+      "manifest": {
+        "bytes": 775869,
+        "sha256": "e7f2f0e72eabbd45127f83ef75a9829c547bc611acc3034898349360672abf25"
+      },
+      "payload_bytes": 11828926,
+      "publication_ready": false,
+      "python_files_syntax_checked": 1891,
+      "redistribution_clearance": false,
+      "result_helpers_included": true,
+      "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+      "status": "publication_source_components_verified",
+      "workflow_revision": "79a850e8779b808d0ac659ef563063909f3f989d"
+    }
+  },
+  "review_verification": {
+    "command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT -u PYTHONPATH PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PATH=/no-git /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -S -B /tmp/orthohmm-final-components-20261004-jbpvMU/review/benchmark_tools/bundle_publication_review.py verify /tmp/orthohmm-final-components-20261004-jbpvMU/review --manifest-sha256 c6dcecc874d33e6ad06a404036c9a697356370607f07ac4abafdd21b64fff816",
+    "exit_code": 0,
+    "output": "{\n  \"direct_targets\": 57,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/publication_main_review_20261004.html\",\n    \"markdown\": \"benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md\",\n    \"pdf\": \"benchmark_tools/results/publication_main_print_20261004/document.pdf\"\n  },\n  \"files\": 83,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 59,\n  \"manifest\": {\n    \"bytes\": 30609,\n    \"sha256\": \"c6dcecc874d33e6ad06a404036c9a697356370607f07ac4abafdd21b64fff816\"\n  },\n  \"page_count\": 12,\n  \"payload_bytes\": 6577344,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+    "result": {
+      "direct_targets": 57,
+      "entrypoints": {
+        "html": "benchmark_tools/results/publication_main_review_20261004.html",
+        "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md",
+        "pdf": "benchmark_tools/results/publication_main_print_20261004/document.pdf"
+      },
+      "files": 83,
+      "inference_reproduced": false,
+      "local_html_occurrences": 59,
+      "manifest": {
+        "bytes": 30609,
+        "sha256": "c6dcecc874d33e6ad06a404036c9a697356370607f07ac4abafdd21b64fff816"
+      },
+      "page_count": 12,
+      "payload_bytes": 6577344,
+      "publication_ready": false,
+      "redistribution_clearance": false,
+      "status": "publication_direct_review_verified",
+      "transitive_evidence_included": false
+    }
+  },
+  "workflow_collection": {
+    "command": "env -u PYTHONHOME -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT -u PYTHONPATH PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import sys,json,importlib; from pathlib import Path; workflow=Path(\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow\"); sys.path.insert(0,str(workflow)); names=[\"bundle_shared_prepared_component_20261004\",\"bundle_shared_resource_component_20261003\",\"capture_shared_terminal_controller_20261004\",\"continue_shared_goal_reaffirmed_20261004\",\"continue_shared_prenative_panel_20261004\",\"continue_shared_prepared_panel_20261004\",\"plot_shared_prenative_resources_20261004\",\"plot_shared_prepared_resources_20261004\",\"plot_shared_threadripper_resources_20261003\",\"prepare_shared_threadripper_launch_20261003\",\"render_shared_resource_section_20261004\",\"report_shared_prenative_panel_20261004\",\"report_shared_prepared_panel_20261004\",\"report_shared_threadripper_panel_20261003\",\"review_shared_deadline_failure_20261004\",\"review_shared_prenative_failure_20261004\",\"review_shared_prenative_panel_20261004\",\"review_shared_prepared_panel_20261004\",\"snapshot_shared_prenative_panel_20261004\",\"snapshot_shared_prepared_panel_20261004\"]; imported=[]\nfor name in names:\n module=importlib.import_module(\"benchmark_tools.results.\"+name); path=Path(module.__file__).resolve(); assert path.is_relative_to(workflow); imported.append(str(path.relative_to(workflow)))\nimport pytest\nclass Inventory:\n def pytest_collection_finish(self,session): self.count=len(session.items)\ntracker=Inventory(); status=pytest.main([\"--collect-only\",\"-qq\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_source.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_source_helpers.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_review.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_review_main.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_handoff.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_bundle_publication_handoff_review.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_final_resource_manuscript.py\",\"/tmp/orthohmm-final-components-20261004-jbpvMU/source/workflow/tests/unit/test_final_main_review_artifacts.py\"],plugins=[tracker]); assert status==0 and tracker.count==344\nfor name,module in list(sys.modules.items()):\n if name.startswith((\"benchmark_tools\",\"tests.unit\")) and getattr(module,\"__file__\",None): assert Path(module.__file__).resolve().is_relative_to(workflow),(name,module.__file__)\nprint(json.dumps(dict(status=\"relocated_workflow_imports_and_test_collection_passed\",imported_helpers=imported,collected_tests=tracker.count,tests_executed=False,native_inference_reproduced=False),indent=2))'",
+    "exit_code": 0,
+    "output": "source/workflow/tests/unit/test_bundle_publication_handoff.py: 44\nsource/workflow/tests/unit/test_bundle_publication_handoff_review.py: 38\nsource/workflow/tests/unit/test_bundle_publication_review.py: 49\nsource/workflow/tests/unit/test_bundle_publication_review_main.py: 21\nsource/workflow/tests/unit/test_bundle_publication_source.py: 158\nsource/workflow/tests/unit/test_bundle_publication_source_helpers.py: 29\nsource/workflow/tests/unit/test_final_main_review_artifacts.py: 2\nsource/workflow/tests/unit/test_final_resource_manuscript.py: 3\n\n{\n  \"status\": \"relocated_workflow_imports_and_test_collection_passed\",\n  \"imported_helpers\": [\n    \"benchmark_tools/results/bundle_shared_prepared_component_20261004.py\",\n    \"benchmark_tools/results/bundle_shared_resource_component_20261003.py\",\n    \"benchmark_tools/results/capture_shared_terminal_controller_20261004.py\",\n    \"benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py\",\n    \"benchmark_tools/results/continue_shared_prenative_panel_20261004.py\",\n    \"benchmark_tools/results/continue_shared_prepared_panel_20261004.py\",\n    \"benchmark_tools/results/plot_shared_prenative_resources_20261004.py\",\n    \"benchmark_tools/results/plot_shared_prepared_resources_20261004.py\",\n    \"benchmark_tools/results/plot_shared_threadripper_resources_20261003.py\",\n    \"benchmark_tools/results/prepare_shared_threadripper_launch_20261003.py\",\n    \"benchmark_tools/results/render_shared_resource_section_20261004.py\",\n    \"benchmark_tools/results/report_shared_prenative_panel_20261004.py\",\n    \"benchmark_tools/results/report_shared_prepared_panel_20261004.py\",\n    \"benchmark_tools/results/report_shared_threadripper_panel_20261003.py\",\n    \"benchmark_tools/results/review_shared_deadline_failure_20261004.py\",\n    \"benchmark_tools/results/review_shared_prenative_failure_20261004.py\",\n    \"benchmark_tools/results/review_shared_prenative_panel_20261004.py\",\n    \"benchmark_tools/results/review_shared_prepared_panel_20261004.py\",\n    \"benchmark_tools/results/snapshot_shared_prenative_panel_20261004.py\",\n    \"benchmark_tools/results/snapshot_shared_prepared_panel_20261004.py\"\n  ],\n  \"collected_tests\": 344,\n  \"tests_executed\": false,\n  \"native_inference_reproduced\": false\n}\n",
+    "result": {
+      "status": "relocated_workflow_imports_and_test_collection_passed",
+      "imported_helpers": [
+        "benchmark_tools/results/bundle_shared_prepared_component_20261004.py",
+        "benchmark_tools/results/bundle_shared_resource_component_20261003.py",
+        "benchmark_tools/results/capture_shared_terminal_controller_20261004.py",
+        "benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py",
+        "benchmark_tools/results/continue_shared_prenative_panel_20261004.py",
+        "benchmark_tools/results/continue_shared_prepared_panel_20261004.py",
+        "benchmark_tools/results/plot_shared_prenative_resources_20261004.py",
+        "benchmark_tools/results/plot_shared_prepared_resources_20261004.py",
+        "benchmark_tools/results/plot_shared_threadripper_resources_20261003.py",
+        "benchmark_tools/results/prepare_shared_threadripper_launch_20261003.py",
+        "benchmark_tools/results/render_shared_resource_section_20261004.py",
+        "benchmark_tools/results/report_shared_prenative_panel_20261004.py",
+        "benchmark_tools/results/report_shared_prepared_panel_20261004.py",
+        "benchmark_tools/results/report_shared_threadripper_panel_20261003.py",
+        "benchmark_tools/results/review_shared_deadline_failure_20261004.py",
+        "benchmark_tools/results/review_shared_prenative_failure_20261004.py",
+        "benchmark_tools/results/review_shared_prenative_panel_20261004.py",
+        "benchmark_tools/results/review_shared_prepared_panel_20261004.py",
+        "benchmark_tools/results/snapshot_shared_prenative_panel_20261004.py",
+        "benchmark_tools/results/snapshot_shared_prepared_panel_20261004.py"
+      ],
+      "collected_tests": 344,
+      "tests_executed": false,
+      "native_inference_reproduced": false
+    }
+  },
+  "native_inference_or_scoring_repeated": false,
+  "raw_audit_repeated": false,
+  "complete_figure_appendix_reconciled": false,
+  "combined_versioned_study_archive_built": false,
+  "public_release_or_deposition_executed": false,
+  "publication_ready": false,
+  "limitations": [
+    "Actual source and direct-review component checks, not all transitive evidence or full native reproduction.",
+    "Source verification checks syntax; frozen-source escape-sequence warnings are retained without modifying scientific code.",
+    "344 tests are collected but not executed in the copied workflow; 20 result helpers import from copied paths.",
+    "Canonical component directories are retained locally; raw/runtime assets and publication rights are separate scopes."
+  ]
+}

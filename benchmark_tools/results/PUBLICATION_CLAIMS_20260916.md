@@ -114,6 +114,10 @@ The [actual twelve-page review](PUBLICATION_MAIN_FINAL_REVIEW_20261004.md)
 now passes bounds/closed-artifact/value checks and visual inspection of all
 pages, with exact render-time Git inputs. Figures remain linked; the actual
 selected-main review/source exports and whole-study archive remain unfinished.
+The [actual source/review exports](FINAL_SOURCE_REVIEW_COMPONENTS_20261004.md)
+now verify after external copying, including all 20 result-helper imports and
+344-case collection. These close component delivery, not full native/transitive
+reproduction. Figure-appendix, handoff and executable/versioned archive work remain.
 The [generated v24 resource section](RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now replaces manual transcription with validated prose/three metric tables.
 Eight tests pass; real section readback preserves12 available and15 unavailable
