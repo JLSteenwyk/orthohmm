@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Pre-Native Runtime, Reporting And Continuation Integration (2026-10-04)
+
+The preceding user-requested confirmation is no analysis progress, but draining
+the already running refresh provides new verified evidence. On goal continuation
+read the full goal/current ledger and check the worktree and scheduler: no timing
+job is live. Take the next implementation action; do not restart completed
+science, calibration, resolution or runtime probes.
+
+The [runtime/reporting checkpoint](THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
+records a successful prospective lookup refresh. Exactly the three tested helper
+hashes change; scientific/private runtime, baseline, controller and command-plan
+identities stay equal. All 57,959 runtime records match before/after startup;
+declared imports reproduce 913 OrthoHMM / 1,563 OrthoFinder modules. Public lookup
+is 6,617 bytes, SHA-256
+`37901e9a28db2c717096dd1e92de7318d3ad52c528392e35cb595191eea9d1ed`.
+Do not repeat this successful refresh without concrete source/runtime changes.
+
+New dated reporter/plotter preserve all earlier hash-bound sources and outputs.
+Actual eighteen-attempt history and direct evidence checks pass. New snapshot
+v18 has 18 reviewed attempts, 17 measured, 16 eligible, exclusions `[0, 17]`,
+index 17 explicitly aborted with null endpoints, and nine not-yet-reviewed
+identities. All earlier seventeen measurement rows remain exactly unchanged.
+New figure v17 preserves measured gray-cross exclusions and explains the
+unplotted abort; actual PNG visually inspected, PDF bounds/panel pixels pass.
+No three-eligible-repeat cell exists yet; no median is invented.
+
+New continuation/reviewer/live-snapshot sources bind the repaired lookup and
+resolved index 17 while keeping all older source-bound artifacts immutable.
+Continuation requires the fully reviewed eighteen-attempt prefix, retains held
+resource/request checks and refuses retries/overwrite. Terminal reviewer differs
+from its predecessor only by its explicit new launcher import. All 50 new tests
+pass in 30.88s, including actual table parity and PDF/pixels. This is execution
+integration, not submission or native-handoff evidence.
+The combined old/new reporting, portable-component and continuation regression
+passes all 151 cases in 47.01s without changing historical outputs.
+
+Next: commit the validated new sources/results, prepare the new source/resource/
+policy/readiness bindings, then release only index 18 after fresh capacity and
+actual native handoff. Preserve both exclusions and the full planned panel.
+Publication reconciliation, remaining attempts and versioned/archive release
+remain incomplete; no quiet-window, DGX or user-input blocker exists.
+
 ## Initial-Sample Repair And Explicit Pre-Native Resolution (2026-10-04)
 
 Classify the preceding goal turn as progress: committed/pushed 00e9a9dd retains

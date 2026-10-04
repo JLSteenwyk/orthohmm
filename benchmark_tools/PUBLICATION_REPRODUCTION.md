@@ -26,18 +26,19 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261003_v17/panel.json)
-has seventeen reviewed resource attempts, sixteen eligible shared-host observations
-and one retained/excluded cadence failure. A separate
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v18/panel.json)
+has eighteen reviewed attempts, seventeen with measured resources, sixteen eligible
+shared-host observations and two exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
-The snapshot does not include that abort as a measurement. The remaining panel
+The snapshot includes that abort explicitly with null endpoints, not as a measurement. The remaining panel
 is not complete. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
-now pass; current-source runtime/protocol rebinding and continuation/reporting
-integration remain required before advancing. No attempt is overwritten or retried.
+now pass; the [new runtime and reporting checkpoint](results/THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
+preserves all earlier source-bound artifacts. Fresh preparation and actual
+native handoff remain required before advancing. No attempt is overwritten or retried.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261003_v16/shared_threadripper_resources.pdf)
-includes the seventeenth observation without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v17/shared_threadripper_resources.pdf)
+retains the seventeen measured observations and explains the unplotted abort without isolated speedup claims. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
@@ -55,11 +56,11 @@ component's own reader and externally pinned manifest, not the local evidence
 collector, for this bounded reporting replay.
 
 ```sh
-python -B benchmark_tools/results/report_shared_threadripper_panel_20261003.py \
+python -B benchmark_tools/results/report_shared_prenative_panel_20261004.py \
   --output /absolute/fresh/resource-table
-python -B benchmark_tools/results/plot_shared_threadripper_resources_20261003.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v17/panel.json \
-  --sha256 39896dd72367cf95aa05e092fb07b041a1f71488160206a1cb02f95c25a08c99 \
+python -B benchmark_tools/results/plot_shared_prenative_resources_20261004.py \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v18/panel.json \
+  --sha256 99b19b1309cc92cfe865c4fcf26b7b7888a7cd33133cfd9601f3cc22cda61123 \
   --output /absolute/fresh/resource-figure
 ```
 
