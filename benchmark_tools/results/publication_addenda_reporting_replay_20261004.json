@@ -1,0 +1,234 @@
+{
+  "input_sha256": {
+    "all_tool_register.json": "4c6f01afb28ef36c25991155c2484a6e2db273556529506350c2f7912083ba80",
+    "diagnostic.json": "11d576cbdf671dc777bdd3c7a0926d80e15922e095000785c82f9f3e332fffbb",
+    "factorial_resources.json": "4c7801197a9bc89927964f952d03325187341a0ce2fe2cc5f6c4aa7700e581a6",
+    "inventory.json": "d5a9b2b778164fd86ed069d379a96eaaedf7be541c021d10c0534acaba154761",
+    "linkage.json": "896063b253c06f8691068231d241f8cc6eb2c7f588baee4efa1a6e72a42d4cac",
+    "qfo_register.json": "a1cf40e172614f7c9a5e7906cb4121dce17ac7f6c8ff516977a421de05ac867a"
+  },
+  "native_or_scoring_repeated": false,
+  "publication_ready": false,
+  "raw_or_historical_paths_accessed": false,
+  "schema": "publication_addenda_reporting_replay_v1",
+  "scope": "Retained reporting metadata/arithmetic, not raw admissions or independent scientific validation",
+  "source_sha256": "a5b1534f17111560c6768bfe177c105aecd2bee750f6d5a3295870a6bac6dbcd",
+  "summary": {
+    "candidate_trace": {
+      "fixture_cases": [
+        {
+          "case": "baseline",
+          "merges": 8,
+          "unattached_count": 1,
+          "unattached_ids": [
+            8
+          ]
+        },
+        {
+          "case": "cluster_order_only",
+          "merges": 8,
+          "unattached_count": 1,
+          "unattached_ids": [
+            0
+          ]
+        },
+        {
+          "case": "one_ulp_scores_only",
+          "merges": 8,
+          "unattached_count": 1,
+          "unattached_ids": [
+            7
+          ]
+        }
+      ],
+      "fixture_engine_rerun": false,
+      "raw_trace_replayed": false,
+      "retained_support_maximum_delta": 2.1316282072803006e-14,
+      "retained_trace_common_merges": [
+        8428,
+        8439,
+        8426
+      ]
+    },
+    "exposure": {
+      "associations": 9156,
+      "families": 88,
+      "files": 1899,
+      "summary": {
+        "OrthoBench": {
+          "distinct_count_vectors": 84,
+          "families_with_scored_evidence": 70,
+          "family_block_associations": 7770,
+          "reference_families": 70,
+          "scored_blocks": 134,
+          "scored_files": 84
+        },
+        "QfO_SwissTrees": {
+          "distinct_count_vectors": 36,
+          "families_with_scored_evidence": 18,
+          "family_block_associations": 1386,
+          "reference_families": 18,
+          "scored_blocks": 77,
+          "scored_files": 16
+        }
+      },
+      "unresolved_kinds": {
+        "ordinal_candidate_diagnostic": 34,
+        "unmapped_scored_reference_labels": 2
+      }
+    },
+    "native_costs": {
+      "new_measurements": false,
+      "original_cached_costs_established": false,
+      "summaries": [
+        {
+          "cell": "p1_c0_r0",
+          "exact_partition_repeats": 3,
+          "resources": {
+            "cpu_seconds": {
+              "maximum": 86415.319181,
+              "median": 78335.830623,
+              "minimum": 75126.858767
+            },
+            "peak_memory_bytes": {
+              "maximum": 11521089536,
+              "median": 11333189632,
+              "minimum": 11309355008
+            },
+            "wall_seconds": {
+              "maximum": 3027.060520509,
+              "median": 2720.077391309,
+              "minimum": 2621.49764478
+            }
+          }
+        },
+        {
+          "cell": "p1_c1_r1",
+          "exact_partition_repeats": 1,
+          "resources": {
+            "cpu_seconds": {
+              "maximum": 136293.332246,
+              "median": 125264.737465,
+              "minimum": 116000.996415
+            },
+            "peak_memory_bytes": {
+              "maximum": 11384778752,
+              "median": 11285721088,
+              "minimum": 11277897728
+            },
+            "wall_seconds": {
+              "maximum": 4809.292429717,
+              "median": 4392.871580988,
+              "minimum": 4042.426197872
+            }
+          }
+        }
+      ]
+    },
+    "register": {
+      "distinct_stage_observations": 4,
+      "method_dataset_rows": 24,
+      "metric_positions": 64,
+      "original_full_cost_cells_unavailable": 16,
+      "secondary_mean_positions": 8,
+      "secondary_means": {
+        "fastoma_0_3_5": 0.7294407011591449,
+        "orthofinder_3_1_5_full": 0.7876629450346927,
+        "orthofinder_3_1_5_sequence_only": 0.5483523991117748,
+        "orthohmm_high_sensitivity": 0.6895554410913293,
+        "orthohmm_phylogeny_satellite_v2": 0.7615100187756848,
+        "orthomcl_1_4": 0.7135257317724517,
+        "proteinortho_6_3_6": 0.7632156753824589,
+        "sonicparanoid_2_0_9": 0.7695058866351091
+      },
+      "selected_qfo_cells": [
+        {
+          "cell": "p1_c0_r0",
+          "full_pipeline_wall_s": null
+        },
+        {
+          "cell": "p1_c1_r1",
+          "full_pipeline_wall_s": null
+        }
+      ],
+      "stage_associations": 5,
+      "stage_observations": [
+        {
+          "candidate_arm": null,
+          "evidence_sha256": "791d55cdbfcaa2d16b9a497d9d79caf94cee4e7c0b10b3363d87573198f9ad74",
+          "measurement": {
+            "elapsed_seconds": 2987.81,
+            "system_seconds": 138.87,
+            "user_seconds": 37942.68
+          },
+          "memory": {
+            "scope": "GNU-time maximum process RSS; not aggregate workflow memory",
+            "unit": "KiB",
+            "value": 8285760
+          },
+          "scope": "Shared checked cached replay worker; excludes initial search, parent validation and downstream stages"
+        },
+        {
+          "candidate_arm": "p1_c0",
+          "evidence_sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a",
+          "measurement": {
+            "elapsed_seconds": 3.035759819991654,
+            "system_seconds": null,
+            "user_seconds": null
+          },
+          "memory": {
+            "scope": null,
+            "unit": null,
+            "value": null
+          },
+          "scope": "Candidate arm preparation from cached seed; shared with the arm's other R cell"
+        },
+        {
+          "candidate_arm": null,
+          "evidence_sha256": "791d55cdbfcaa2d16b9a497d9d79caf94cee4e7c0b10b3363d87573198f9ad74",
+          "measurement": {
+            "elapsed_seconds": 2987.81,
+            "system_seconds": 138.87,
+            "user_seconds": 37942.68
+          },
+          "memory": {
+            "scope": "GNU-time maximum process RSS; not aggregate workflow memory",
+            "unit": "KiB",
+            "value": 8285760
+          },
+          "scope": "Shared checked cached replay worker; excludes initial search, parent validation and downstream stages"
+        },
+        {
+          "candidate_arm": "p1_c1",
+          "evidence_sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a",
+          "measurement": {
+            "elapsed_seconds": 77.64100861502811,
+            "system_seconds": null,
+            "user_seconds": null
+          },
+          "memory": {
+            "scope": null,
+            "unit": null,
+            "value": null
+          },
+          "scope": "Candidate arm preparation from cached seed; shared with the arm's other R cell"
+        },
+        {
+          "candidate_arm": null,
+          "evidence_sha256": "65ebd4ef69945a8ffe5e10a46791a473625388d10310f86a4212d1e9f14d4303",
+          "measurement": {
+            "elapsed_seconds": 6822.365357,
+            "system_seconds": 11696.142257,
+            "user_seconds": 192097.440979
+          },
+          "memory": {
+            "scope": "sampled_sum_of_linux_proc_tree_rss",
+            "unit": "bytes",
+            "value": 7846866944
+          },
+          "scope": "Cached-candidate native reconciliation; excludes initial search, replay, preparation, conversion and scoring"
+        }
+      ]
+    }
+  }
+}

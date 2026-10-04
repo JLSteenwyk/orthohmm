@@ -2,20 +2,31 @@
 
 ## Current Entry Point (2026-10-04)
 
+Use the [actual local rc4 result](results/PUBLICATION_PACKAGE_RC4_RESULT_20261004.md)
+and [rc4 outer instructions](PUBLICATION_PACKAGE_RC4_20261004.md) for the newest
+versioned working candidate. It preserves all 139 rc3 indexed identities and
+adds the reviewed 35-page presentation and portable addenda reporting. Actual
+copy/external restore/stdlib replay/post-replay verification pass; all 183
+restored payloads rehash. All 32 final tests pass and the regenerated 9,156-row
+family table is byte-identical. This is reporting/delivery validation, not raw
+discovery, all-method native restoration, new scientific uncertainty or readiness.
+The archive remains local/unuploaded; broader scientific and rights gaps remain.
+
 The [new evidence-integrated review](results/PUBLICATION_EVIDENCE_REVIEW_RESULT_20261004.md)
 now provides a [35-page text-plus-figures PDF](results/publication_main_with_figures_20261004_v3/document.pdf)
 for revision three: 15 main pages, four guides and 16 unchanged figures.
 All new main/guide pages were viewed; all 31 source pages preserve exact
 text/geometry/pixels. Twenty-five readback/source tests pass. The first failed
 old-bibliography render is retained; the corrected route uses the unchanged
-previous bibliography. The new PDF is not yet in a refreshed study archive.
+previous bibliography. This exact new PDF is now included in rc4 above;
+older rc3 and earlier review snapshots remain unchanged.
 
 The [third working main text](results/PUBLICATION_MAIN_TEXT_20261004_v3.md)
 now integrates the exposure, candidate-cap and historical cost/provenance
 addenda below. [Forty-two tests](results/PUBLICATION_EVIDENCE_INTEGRATION_RESULT_20261004.md)
 check new quantitative claims and preserve original abstract/results/references.
-The source-only checkpoint has now been rendered by the review above, but is
-not yet included in a refreshed study bundle. The older 34-page review remains
+The source-only checkpoint has now been rendered and included in rc4 above.
+The older 34-page review remains
 bound to revision two; rc3 remains its separately described older snapshot.
 Do not present either as a rendered/bundled copy of revision three.
 

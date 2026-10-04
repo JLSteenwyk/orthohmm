@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Evidence-Integrated Candidate Rc4 Delivered (2026-10-04)
+
+Prepare/push source at cd1894ca before actual selected workflow. Selection,
+build/archive, external copied restore, copied stdlib addenda replay and
+post-replay verify all succeed once. The [actual result](PUBLICATION_PACKAGE_RC4_RESULT_20261004.md)
+delivers 181 selected files/183 indexed payloads, 155,540,034 payload bytes and
+a local 133,946,947-byte archive. Add 44 selected files while preserving all
+139 rc3 indexed identities with explicit guide/selection/reader relocations.
+The exact reviewed third source and 35-page PDF are included; old artifacts
+are unchanged and not retroactively relabelled as current evidence.
+
+Independent stdlib readback compares all inherited identities and rehashes
+all 183 restored payloads after replay. Regenerated 9,156-row family TSV is
+byte-identical to archived/original copies, covering all 73,248 fields.
+The copied replay reproduces 88-family exposure, correct satellite identities,
+six native-point summaries, 64 metric/eight secondary-mean positions and four
+stage observations represented by five associations. Sixteen original full
+costs remain unavailable. File-access trace sees all six copied inputs and no
+original-checkout/historical scientific reads for that one command, not OS
+containment or all-study certification. Preparation/final tests pass 29/32
+cases with no failures/skips; exact source/output/local JUnit pins are retained.
+
+Deliver/push selection/index/replayed summary, artifact tests and execution/
+result/routing receipts. Archive and temporary copied execution remain local,
+not committed or uploaded. No native, scoring, completed statistics/timing,
+method default or unrelated workload changes occur. The earlier read-only
+integer/list metadata probe failure remains disclosed without artifact retry.
+
+Next audit genuinely missing per-configuration resource/scientific evidence
+and execute justified remaining work, rather than generate another package
+version for unchanged contents. Broader QfO uncertainty, complete causal history,
+prespecified strata, original full costs and all-method native restoration
+remain unresolved; rights/deposition are unexecuted. The full goal is active
+and publication readiness unproven. No quiet-window/DGX gate is introduced.
+
 ## Evidence-Integrated Candidate Rc4 Prepared (2026-10-04)
 
 The preceding f65a6e8a turn makes progress through the source-bound 35-page
