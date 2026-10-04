@@ -26,8 +26,8 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v19/panel.json)
-has nineteen reviewed attempts, eighteen with measured resources, seventeen eligible
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v20/panel.json)
+has twenty reviewed attempts, nineteen with measured resources, eighteen eligible
 shared-host observations and two exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
@@ -38,12 +38,14 @@ preserves all earlier source-bound artifacts. All four independent terminal
 review categories now pass for [22414, index 18](results/THREADRIPPER_SHARED_ATTEMPT_22414.md),
 full OrthoFinder, four proteomes, repeat 2. This supplies the first complete
 three-eligible-repeat cell; other cell summaries remain missing. No attempt is overwritten or retried.
-The next identity, [22415/index 19](results/THREADRIPPER_SHARED_SUBMISSION_22415.md),
-has a passed native handoff and dated RUNNING checkpoint; it is not yet a reviewed
-timing. Fresh scheduler state is required on continuation.
+All four categories also pass for [22415/index 19](results/THREADRIPPER_SHARED_ATTEMPT_22415.md),
+high-sensitivity OrthoHMM, four proteomes, repeat 2. All three planned attempts
+in that cell are reviewed, but only two are eligible: its summaries remain null.
+Next is index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
+subject to full-prefix validation and fresh capacity/handoff.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v18/shared_threadripper_resources.pdf)
-retains the eighteen measured observations and explains the unplotted abort without isolated speedup claims. The
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v19/shared_threadripper_resources.pdf)
+retains the nineteen measured observations and explains the unplotted abort without isolated speedup claims. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
@@ -64,8 +66,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_prenative_panel_20261004.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_prenative_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v19/panel.json \
-  --sha256 1204e49045fa5d8785dc34a61b3b01e57f75a3adcda39fe21b6adf3308e84c53 \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v20/panel.json \
+  --sha256 c4f8d60b04459a48d1aaf6e93f8bc206350b0f8e74ab4bfda8159ff99131eee0 \
   --output /absolute/fresh/resource-figure
 ```
 

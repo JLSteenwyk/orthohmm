@@ -1,5 +1,45 @@
 # Publication Progress
 
+## High-Sensitivity Repeat Reviewed; First Exclusion Preserved (2026-10-04)
+
+The preceding user-requested goal confirmation makes no new analysis progress.
+On resumption read the full goal, current ledger and retained archive/calibration
+notes, then recheck accounting and worktree. Parent/batch/native 22415 are
+COMPLETED 0:0 (9:35 / 6:40); no timing job is live. The completed independent
+review and report artifacts are present and their hashes/canonical public copy
+match. Do not repeat successful inference, calibration, runtime refresh or review.
+
+The [completed review](THREADRIPPER_SHARED_ATTEMPT_22415.md) passes all four
+categories. Native wall is 359.295812268s, CPU 8974.765381s and step-lifetime
+peak 3,379,163,136 bytes. Native validator checks 73,266 genes and 35,242
+orthogroups; no accuracy or deterministic-partition claim. Whole-run process/
+pressure failure maps are empty. Foreign demand reaches 42.3982092509 cores,
+an annotation rather than isolated timing or causal slowdown evidence.
+
+New snapshot v20 has 20 reviewed identities, 19 measured, 18 eligible,
+exclusions `[0, 17]` and seven not-yet-reviewed identities. All preceding
+nineteen rows remain unchanged, including the explicit abort's null endpoints.
+All three high-sensitivity/four-proteome attempts are reviewed but only two
+eligible; its medians remain null. Full OF/four proteomes remains the only
+three-eligible-repeat cell, unchanged. Figure v19 renders all 19 measured
+points and only that complete cell's median/range; actual PNG inspected.
+
+Two added focused tests pass in 31.19s (37 deselected): actual v20 provenance,
+PDF bounds/panel pixels and preservation of the first exclusion despite three
+reviewed high-sensitivity repeats. Reuse the prior 52-test execution for
+unchanged sources/fixtures rather than claim a fresh full-suite run. Historical
+reporting/archive/manuscript bytes, scientific settings, inputs and execution
+bindings are unchanged; raw native audit remains local. Unrelated dirty sample
+outputs and other jobs/services are untouched.
+
+Next: commit/push the reviewed result and reporting checkpoint, then submit
+only index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
+under unchanged readiness with full-prefix validation and fresh safe-capacity
+handoff. No extra retry of either exclusion. Full publication goal remains
+active/incomplete, including the remaining panel, final manuscript/resource
+reconciliation and versioned/archive release. No quiet-window or user-input
+blocker is introduced.
+
 ## High-Sensitivity Third Repeat Released As 22415 (2026-10-04)
 
 Commit/push `cf6323ab` preserves completed index-18 review, new table v19,

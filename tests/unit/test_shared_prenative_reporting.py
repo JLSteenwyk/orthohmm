@@ -138,7 +138,7 @@ def test_no_abort_symbol_or_layout_clipping(count):
 
 
 @pytest.mark.parametrize('version,reviewed_count,resource_count,eligible_count', [
-    ('v18', 18, 17, 16), ('v19', 19, 18, 17)])
+    ('v18', 18, 17, 16), ('v19', 19, 18, 17), ('v20', 20, 19, 18)])
 def test_retained_actual_snapshot_and_pdf_pixels(tmp_path, version, reviewed_count, resource_count, eligible_count):
     import fitz
     import numpy as np
@@ -209,5 +209,34 @@ def test_first_complete_actual_cell_uses_all_three_reviewed_repeats():
     figure = plotter.plot(value)
     for axis in figure.axes:
         assert sum(len(collection.get_offsets()) for collection in axis.collections) == 18
+        assert len(axis.lines) == 2
+    plt.close(figure)
+
+
+def test_third_high_sensitivity_attempt_does_not_rehabilitate_first_exclusion():
+    results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
+    value = json.loads((results / 'threadripper_shared_panel_snapshot_20261004_v20/panel.json').read_text())
+    prior = json.loads((results / 'threadripper_shared_panel_snapshot_20261004_v19/panel.json').read_text())
+    outcome = json.loads((results / 'threadripper_shared_attempt_22415.json').read_text())
+    assert value['runs'][:19] == prior['runs'][:19]
+    assert value['runs'][19]['job_id'] == outcome['job_id'] == 22415
+    assert value['runs'][19]['resources'] == outcome['resources']
+    assert outcome['native_outputs']['input_genes'] == 73266
+    assert outcome['native_outputs']['orthogroups'] == 35242
+    assert outcome['native_outputs']['accuracy_evaluated'] is False
+    assert (value['reviewed_attempts'], value['resource_reviewed_attempts'], value['eligible_attempts']) == (20, 19, 18)
+    assert value['excluded_attempts'] == [0, 17] and value['pre_native_aborted_indices'] == [17]
+    high4 = next(cell for cell in value['cells'] if cell['method'] == 'orthohmm_high_sensitivity' and cell['proteomes'] == 4)
+    assert high4['reviewed_repeats'] == 3 and high4['eligible_repeats'] == 2
+    assert high4['pending_indices'] == [] and high4['excluded_indices'] == [0]
+    assert high4['summary_status'] == 'incomplete_eligible_repeats'
+    assert all(item is None for item in high4['resources'].values())
+    full4 = next(cell for cell in value['cells'] if cell['method'] == 'orthofinder_3_1_5_full' and cell['proteomes'] == 4)
+    assert full4 == next(cell for cell in prior['cells'] if cell['method'] == 'orthofinder_3_1_5_full' and cell['proteomes'] == 4)
+    assert sum(cell['summary_status'] == 'three_eligible_repeats' for cell in value['cells']) == 1
+    assert value['runs'][17]['resources'] is None and value['runs'][20]['resources'] is None
+    figure = plotter.plot(value)
+    for axis in figure.axes:
+        assert sum(len(collection.get_offsets()) for collection in axis.collections) == 19
         assert len(axis.lines) == 2
     plt.close(figure)
