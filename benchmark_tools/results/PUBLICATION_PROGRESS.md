@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Actual rc3 Mechanism Text And Portable Reporting Delivered (2026-10-04)
+
+Preparedb37852f0 is pushed before selection/build/archive. The [actual rc3
+result](PUBLICATION_PACKAGE_RC3_RESULT_20261004.md) preserves all115 rc2
+payload identities and adds22 files:137 selected/139 verified payloads,
+147,001,961 bytes. The updated manuscript, three mechanism addenda/checked
+reports and standard-library reporting route are delivered together. Scientific
+revision, method defaults, benchmark scores and completed timing stay fixed.
+
+Actual copied archive/trusted-reader restoration and copied verification
+outside the checkout pass. The copied worker runs with `-I -S -B` using
+Python3.12.3, no scientific dependencies. All70 cells/10,125 candidates and
+163,527 upstream true-pair totals remain; complete20-candidate/800-pair residual
+counts/classes reproduce. Independent readback checks63 means, seven condition
+error projections and all115 inherited bytes. All139 restored payloads rehash
+after replay; its file trace observes no original analysis/raw benchmark paths.
+
+Twenty-five focused tests pass; the initial seven-failure/seven-pass JUnit is
+retained. No previously successful scientific, native or timing route repeats.
+The archive stays local/pinned, not publicly deposited. Commit/push selection,
+index, generated replay, actual receipt/result and updated reproduction guide.
+The old32-page PDF remains unchanged and is explicitly older than the new text.
+
+Next render and graphically review the actual updated manuscript, then continue
+the full-goal uncertainty, development-family inventory, biological-stratum,
+per-ablation cost and native-delivery requirements. This integration closes a
+bounded reporting gap, not publication readiness. No owned native job is live
+and no quiet-window/DGX gate is reintroduced.
+
 ## Mechanism-Integrated Text And rc3 Reporting Route Prepared (2026-10-04)
 
 The preceding9cd1c63f turn completes the residual-error scientific milestone.

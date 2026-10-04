@@ -2,6 +2,22 @@
 
 ## Current Entry Point (2026-10-04)
 
+Use the [actual local rc3 result](results/PUBLICATION_PACKAGE_RC3_RESULT_20261004.md)
+and [current rc3 outer instructions](PUBLICATION_PACKAGE_RC3_20261004.md).
+It preserves all115 rc2 payload identities and adds22 payloads for the
+[mechanism-integrated working text](results/PUBLICATION_MAIN_TEXT_20261004_v2.md),
+three checked diagnostic summaries and standalone reporting replay. Actual
+archive/copy/external restoration/verification and copied `-I -S -B` replay
+pass; all139 restored payloads rehash. The replay verifies63 mean endpoints
+and all70-cell/20-residual-candidate count identities without native input
+reads. This is reporting portability, not raw-stage admission or independent
+biological validation. The older32-page PDF is preserved and explicitly is
+not a rendered copy of the new text; fresh graphical review remains open.
+Native/timing/statistical routes already validated for rc2 are not repeated.
+Scientific, historical provenance and public-deposition gaps remain active.
+
+The preceding rc2 checkpoint below is preserved as historical routing:
+
 Use the [actual local rc2 result](results/PUBLICATION_PACKAGE_RC2_RESULT_20261004.md)
 and [current outer instructions](PUBLICATION_PACKAGE_RC2_20261004.md) for the
 versioned package. It preserves rc1's manuscript/source/figure/resource/native

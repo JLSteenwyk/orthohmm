@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "rc3_mechanism_text_and_reporting_delivery_verified",
+  "version": "orthohmm-study-2026.10.04-rc3",
+  "date": "2026-10-04",
+  "host": "bizon",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "workflow_revision": "b37852f0a71c81929f9718745c573d84e2826e93",
+  "selection": {"path": "benchmark_tools/results/publication_package_rc3_selection_20261004.json", "bytes": 42007, "sha256": "1d10dbf8f65c390b80a5470092aa8c72dec2db73a1f625001b53574c939d57a8"},
+  "index": {"path": "benchmark_tools/results/publication_package_rc3_index_20261004.json", "bytes": 30704, "sha256": "0e937cf483bba07d7a3a99682c9646b57d192b0cbe04f75272eef09fe29d19a1"},
+  "archive": {"path": "benchmarks/work/orthohmm-study-2026.10.04-rc3.tar.gz", "bytes": 132922462, "sha256": "4ab84287890ada3b821e5da2719672c1707ab30795f823e90d140bfbb862ee72", "committed": false},
+  "selected_files": 137,
+  "verified_payloads": 139,
+  "payload_bytes": 147001961,
+  "preserved_rc2_payloads": 115,
+  "added_payloads": 22,
+  "sources": [
+    {"path": "benchmark_tools/replay_simulation_mechanisms.py", "bytes": 11363, "sha256": "95ded30e78f107101974c9c173fe8eb921cbe520512ed52f6cd1eb663761f2a0"},
+    {"path": "benchmark_tools/prepare_publication_package_rc3.py", "bytes": 4711, "sha256": "2ae2d5a0fb86f0daa014fff6560fe0ef6ef11357b7dd5b1a0b5cdd77f1ad5044"},
+    {"path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004_v2.md", "bytes": 46072, "sha256": "8c4635d8bb5041937ffc60f3e5155d6e60e6a53b808d174c78d6801e2592d337"}
+  ],
+  "runtime": {
+    "python": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "python_version": "3.12.3",
+    "copied_reader_and_replay_flags": ["-I", "-S", "-B"],
+    "scientific_packages_required_by_replay": false,
+    "unset_environment": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "environment": {"PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1"},
+    "private_interpreter_bundled": false
+  },
+  "executions": [
+    {"role": "selection", "module": "benchmark_tools.prepare_publication_package_rc3", "exit_code": 0},
+    {"role": "build", "module": "benchmark_tools.bundle_publication_package", "command": "build", "exit_code": 0},
+    {"role": "archive", "module": "benchmark_tools.bundle_publication_package", "command": "archive", "exit_code": 0},
+    {"role": "external_restore", "script": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/trusted_reader.py", "command": "restore", "archive": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/candidate.tar.gz", "output": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/restored", "exit_code": 0},
+    {"role": "copied_verify", "script": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/restored/bundle_publication_package.py", "command": "verify", "exit_code": 0},
+    {"role": "copied_mechanism_replay", "script": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/restored/evidence/replay_simulation_mechanisms.py", "arguments": ["--inputs", "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/restored/evidence", "--output", "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/replayed"], "exit_code": 0}
+  ],
+  "restored_root": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/restored",
+  "copied_reader": {"path": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/trusted_reader.py", "bytes": 11794, "sha256": "948efb04abfa84aea1c6822d9145592a15d54416838245f0c1bf569f5d81bbab"},
+  "file_access_trace": {"path": "/tmp/orthohmm-study-2026.10.04-rc3-lFtVh2/mechanism_replay.files.log", "bytes": 30577, "sha256": "652813eaae6dc5e9c46e303d7ff08315d80d9d38a400ac2ded51b7c000a40393"},
+  "file_access_scan": {
+    "original_analysis_paths_observed": false,
+    "historical_qfo_or_orthobench_paths_observed": false,
+    "checked_absence_strings": ["/ORTHOHMM/orthohmm/benchmark_tools/", "qfo_benchmark", "/ORTHOHMM/orthohmm/orthobench"],
+    "scope": "One copied standard-library reporting command; private interpreter remains separately provided"
+  },
+  "outputs": [
+    {"path": "benchmark_tools/results/simulation_mechanism_reporting_replay_20261004.json", "bytes": 9807, "sha256": "8ac52c7cd2d9784ca52e6032827f043cb11f282b200911e91f6f8da2cadfeb35"},
+    {"path": "benchmark_tools/results/SIMULATION_MECHANISM_REPORTING_REPLAY_20261004.md", "bytes": 1444, "sha256": "02519f269b93958732232504f730979afe9f12db406317cb8405e0edf6a51978"}
+  ],
+  "independent_readback": {"mean_endpoints_verified": 63, "condition_decompositions": 7, "inherited_payloads_verified": 115, "all_restored_payloads_rehashed_after_replay": 139},
+  "scientific_scope": {"cells": 70, "screened_candidates": 10125, "eligible_gene_tree_controls": 1377, "upstream_true_pairs": 163527, "residual_candidates": 20, "residual_pair_rows": 800, "residual_tp": 380, "residual_fn": 62, "residual_fp": 66},
+  "tests": {
+    "initial": {"passed": 7, "failed": 7, "exit_code": 1, "failure": "Sparse Counter omits zero native_fn keys", "junit": {"path": "benchmarks/work/simulation_mechanism_reporting_tests_20261004.xml", "bytes": 32322, "sha256": "c912cd99b8810161c4393e0d99102a86d28488fad7f5170d2bfecc3fc92693c8"}},
+    "corrected_replay_passed": 15,
+    "final": {"passed": 25, "failed": 0, "skipped": 0, "exit_code": 0, "pytest_seconds": 0.70, "junit_seconds": 0.662, "junit": {"path": "benchmarks/work/simulation_mechanism_package_tests_20261004.xml", "bytes": 4388, "sha256": "d089007870390be94a4d001dcddde50702342aa2abcbd391ee265bd4f126cf42"}}
+  },
+  "native_inference_repeated": false,
+  "previous_successful_statistics_or_timing_repeated": false,
+  "new_graphical_review_completed": false,
+  "scientific_defaults_changed": false,
+  "unrelated_workloads_modified": false,
+  "public_archive_uploaded": false,
+  "publication_ready": false,
+  "limitations": ["Derived checked-summary arithmetic, not raw-native admission or independent biological/coverage validation.", "Historical 32-page PDF predates the mechanism-integrated text; fresh render/review remains required.", "Unresolved scientific, historical, licensing and full native delivery gaps remain explicit."]
+}
