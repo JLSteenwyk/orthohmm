@@ -1,0 +1,28 @@
+{
+  "automatic_retry": false,
+  "execution_scope": "shared_host_matched_resources",
+  "index": 26,
+  "job_id": 22424,
+  "method": "orthohmm_high_sensitivity",
+  "native_phase": "requires_live_observation",
+  "preparation": {
+    "bytes": 9549,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_goal_reaffirmed_preparation_20261004.json",
+    "sha256": "4ca020551c2a4461d2e129c175ad87df2cfee60ce4b77c3a8529e56c08733380"
+  },
+  "proteomes": 12,
+  "repeat": 2,
+  "request": {
+    "bytes": 8869,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/request_run_26.json",
+    "sha256": "3b948d77d0eb2a1cd7b5b0eb88473ec74c339285c36d384c0a2969899817939c"
+  },
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 8838,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/continue_shared_goal_reaffirmed_20261004.py",
+    "sha256": "b21335eabc5d1d81d3a0e5c21b0d397053d1174bbec64c7d9bf07e01943c455d"
+  },
+  "status": "repaired_shared_job_bound_and_released",
+  "uncontended_timing": false
+}

@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Final Frozen Native Identity Running (2026-10-04)
+
+Previous turn verified the goal amendment and finished push `9d02ec02`.
+Read the full objective/current ledger; fresh empty queue and the retained
+index25 terminal checkpoint authorize only the remaining index26. The existing
+goal-reaffirmed continuation checks the actual26-reviewed prefix and releases
+[22424, high-sensitivity/twelve-proteome repeat2](THREADRIPPER_SHARED_ATTEMPT_22424.md).
+Launcher finishes normally; public launch exactly matches canonical bytes.
+No earlier failure is retried and no scientific/runtime/recipe/bound source changes.
+
+One-shot live snapshot passes prepared-before-request, actual preflight/go,
+live native PID/cgroup,32-core affinity and128-GiB enforcement. Available
+memory exceeds the safety floor; foreign CPU48.1154593103 cores is annotated.
+Native log confirms OrthoHMM0.5.0 high_sensitivity HMM/k-mer all-to-all search,
+BLOSUM62/E-value0.0001/Leiden CPM0.1. Startup is not final timing or accuracy.
+
+Capture-only22425 waits on exact afterany22424 with1CPU/1GiB/five minutes/no
+requeue; canonical equality and four source/artifact pins independently check.
+Both owned launcher/snapshot handles finish. Fresh accounting confirms22424
+parent/batch/native RUNNING and22425 dependency-pending. Poll those exact
+jobs on continuation, then independently review after actual termination.
+Fresh readback verifies20 retained source/artifact pins and startup invariants;
+scoped documentation whitespace checks pass. Unchanged tests are not rerun.
+Do not repeat completed inference, unchanged diagnostics or the live snapshot.
+
+Tablev26/figurev25 stay26 reviewed/24 measured/23 eligible/five complete cells;
+one identity is unreviewed and live, none unsubmitted. There is no identity27.
+After all27 reviews, finish final reporting/prose/manuscript/PDF, integrate the
+tested source-export patch and validate the actual executable/versioned archive.
+The full goal remains active; scientific limitations and unknown potentially
+method-dependent contention persist. Unrelated jobs/services are untouched.
+
 ## Index 25 OrthoFinder Reviewed; Final Identity Remains (2026-10-04)
 
 Commit/push `86656432` retains the staged source-helper fix without applying

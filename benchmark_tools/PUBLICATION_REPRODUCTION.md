@@ -101,6 +101,13 @@ lifecycle passing. One identity remains unreviewed/unsubmitted; none is live
 at this completed checkpoint. OrthoFinder/twelve proteomes has only two eligible
 repeats, so no three-repeat summary is supplied. Advance only26 after current
 history and fresh launch checks. Native output counts are not new accuracy.
+Index26 is subsequently released as
+[22424, high-sensitivity/twelve-proteome repeat2](results/THREADRIPPER_SHARED_ATTEMPT_22424.md).
+Actual26-reviewed prefix, fresh capacity/prepared/native handoff and live
+placement checks pass. HMM/k-mer search is running; capture-only22425 waits
+on afterany22424. One identity remains unreviewed, now live; none is unsubmitted.
+Current table/figure counts stay unchanged. After actual termination, use the
+existing independent reviewer before final panel/prose/manuscript/source export.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
@@ -1487,6 +1494,8 @@ does not supply original family identities for uncertainty estimation.
   including 24 native resource measurements, 23 eligible observations and two
   pre-native aborts with no endpoints. Five cells have three eligible repeats.
   The remaining sequential panel and final reporting are incomplete.
+  The final identity26 is running as22424; capture-only22425 waits on its
+  terminal dependency. No native identity remains unsubmitted.
   Local Threadripper `bizon` is approved, not the DGX. Use the
   [goal-reaffirmed continuation](results/THREADRIPPER_GOAL_REAFFIRMATION_20261004.md)
   with identical native limits, fresh capacity checks, intact input/runtime

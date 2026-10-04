@@ -78,6 +78,11 @@ none is live. OrthoFinder/twelve proteomes has two eligible repeats and null
 three-repeat summaries. [Current readback](threadripper_checkpoint_validation_22422.json)
 retains three passing reporting/provenance/PDF tests and unchanged earlier rows.
 The [partial figure](threadripper_shared_resource_figure_20261004_v25/shared_threadripper_resources.pdf)
+is unchanged while [22424/index26](THREADRIPPER_SHARED_ATTEMPT_22424.md), the final
+high-sensitivity/twelve-proteome repeat, runs. Fresh prefix/capacity/prepared
+handoff and live native placement pass; capture-only22425 waits on afterany22424.
+Only one identity remains unreviewed, now live; none is unsubmitted. Startup
+adds no final resource or accuracy result. The same partial figure
 retains the twenty-four measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
 contention, missing repeats and endpoint scopes. The older assembled review
