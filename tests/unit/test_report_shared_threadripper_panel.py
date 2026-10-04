@@ -146,7 +146,7 @@ def test_summary_cannot_relabel_retained_terminal_or_contention(target, key, val
         reporter.environment_matches(row, replay, preflight)
 
 
-@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10)])
+@pytest.mark.parametrize('version,count', [('v4', 4), ('v5', 5), ('v6', 6), ('v7', 7), ('v8', 8), ('v9', 9), ('v10', 10), ('v11', 11)])
 def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_path, version, count):
     results = Path(__file__).resolve().parents[2] / 'benchmark_tools/results'
     snapshot = results / f'threadripper_shared_panel_snapshot_20261003_{version}'
@@ -205,7 +205,7 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
         assert phy12['native_outputs']['orthogroups'] == phy12['native_outputs']['root_hogs'] == 59770
         assert phy12['native_outputs']['native_pair_rows'] == 966439
         assert all(cell['eligible_repeats'] == 1 for cell in report['cells'] if cell['proteomes'] == 12)
-    if count == 10:
+    if count >= 10:
         phy4_repeat = json.loads((results / 'threadripper_shared_attempt_22405.json').read_text())
         assert report['runs'][9]['job_id'] == phy4_repeat['job_id'] == 22405
         assert report['runs'][9]['resources'] == phy4_repeat['resources'] == dict(
@@ -218,6 +218,19 @@ def test_retained_partial_snapshots_replay_tables_without_original_evidence(tmp_
                     if cell['method'] == 'orthohmm_satellite_v2' and cell['proteomes'] == 4)
         assert phy4['eligible_repeats'] == 2
         assert report['runs'][1]['resources'] != report['runs'][9]['resources']
+    if count == 11:
+        full4_repeat = json.loads((results / 'threadripper_shared_attempt_22406.json').read_text())
+        assert report['runs'][10]['job_id'] == full4_repeat['job_id'] == 22406
+        assert report['runs'][10]['resources'] == full4_repeat['resources'] == dict(
+            wall_seconds=474.299930051, cpu_seconds=5008.896961, peak_memory_bytes=7268642816)
+        assert full4_repeat['native_outputs']['input_genes'] == 73266
+        assert full4_repeat['native_outputs']['checkpoint_groups'] == 24052
+        assert full4_repeat['native_outputs']['native_pair_rows'] == 88890
+        assert full4_repeat['native_outputs']['accuracy_evaluated'] is False
+        full4 = next(cell for cell in report['cells']
+                     if cell['method'] == 'orthofinder_3_1_5_full' and cell['proteomes'] == 4)
+        assert full4['eligible_repeats'] == 2
+        assert report['runs'][2]['resources'] != report['runs'][10]['resources']
     assert all(value is None for cell in report['cells'] for value in cell['resources'].values())
     assert not report['all_planned_attempts_reviewed'] and not report['publication_ready']
     output = tmp_path / 'partial_attempt_replay'
