@@ -26,8 +26,8 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v22/panel.json)
-has twenty-two reviewed attempts, twenty with measured resources, nineteen eligible
+[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v23/panel.json)
+has twenty-three reviewed attempts, twenty-one with measured resources, twenty eligible
 shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
@@ -62,19 +62,20 @@ prepared-owner lifecycle. It supplies the second complete cell with three
 eligible repeats. Other summaries remain null; no job is live at this review
 checkpoint. Index 22 is subsequently released as
 [22418, satellite_v2/eight proteomes/repeat 2](results/THREADRIPPER_SHARED_ATTEMPT_22418.md).
-Its fresh capacity and prepared/native handoff pass under the existing
-continuation; native HMM search is observed running, not terminally admitted.
-On resumption obtain fresh scheduler state for this job and review only after
-termination, before launching index 23. Five identities remain unreviewed,
-one live at this checkpoint and four not submitted. Tables/figures are unchanged.
+Its fresh capacity/prepared handoff and all four terminal review categories
+now pass. The phylogenetic/eight-proteome cell is the third complete cell.
+Four identities remain unreviewed; no panel job is live at this review
+checkpoint. Next is index 23, full OrthoFinder/eight proteomes/repeat 2,
+after fresh history/capacity/native handoff under the existing continuation.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
-The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v21/shared_threadripper_resources.pdf)
-retains the twenty measured observations and both complete-cell median/ranges,
+The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v22/shared_threadripper_resources.pdf)
+retains the twenty-one measured observations and three complete-cell median/ranges,
 explaining both unplotted aborts without isolated speedup claims. Three new
-actual-data/receipt/PDF-pixel tests pass; their initial pre-export-manifest
-failure remains retained separately. The
+actual-data/receipt/PDF-pixel tests for index 21 pass; their initial pre-export-
+manifest failure remains retained separately. Three new reusable latest-
+checkpoint tests now pass against the completed index-22 table/figure. The
 new [prepared reporting component](results/PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md)
 now archives this table/figure format without omitting pre-native aborts.
 Its committed 20-member archive restores and passes copied CLI verification
@@ -100,8 +101,8 @@ collector, for this bounded reporting replay.
 python -B benchmark_tools/results/report_shared_prepared_panel_20261004.py \
   --output /absolute/fresh/resource-table
 python -B benchmark_tools/results/plot_shared_prepared_resources_20261004.py \
-  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v22/panel.json \
-  --sha256 1213d47f73d9f07fd6ce317655d429f340068f94d1aad1cdfad0222feaa71a23 \
+  --results benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v23/panel.json \
+  --sha256 aba2771cd6eae6ab84499183c02b4f43deffcbdabc7dac59088bdd1d6b6dbce8 \
   --output /absolute/fresh/resource-figure
 ```
 

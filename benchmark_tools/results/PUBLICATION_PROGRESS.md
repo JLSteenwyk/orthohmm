@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Index 22 Reviewed And Third Complete Cell (2026-10-04)
+
+Previous turn is progress: `84217cc3` and `8fe43cf6` commit/push the new
+prepared reporting component and actual archive replay. Read full goal/current
+ledger and retained archive/calibration notes, inspect current worktree and
+freshly confirm 22418 live. Follow that same job through alignment/tree building
+and reconciliation without restart. Parent/batch finish COMPLETED 0:0 at37:08;
+native step at32:01. Retain terminal controller before purge; fresh accounting
+corroborates. No unrelated workload/service, kernel or scientific setting changes.
+
+The [terminal independent review](THREADRIPPER_SHARED_ATTEMPT_22418.md) passes
+runtime/input, raw resource, environment and native output categories, including
+prepared-owner lifecycle. Process/pressure failure maps are empty. Public and
+canonical summary are identical: 5,720 bytes, SHA-256
+`fdc7f83883302dc5b9ce932cc64f086dd14dcd3a10d860360def655f24bf075d`.
+Wall1,888.884734679s; CPU52,911.781894s; peak8,247,656,448 bytes, unchanged scopes.
+Whole-run maximum foreign CPU47.1999075526 cores is annotated, not subtracted.
+Optional implausible `sstat` AveCPU is not used. Native outputs cover165,168
+proteins in56,918 groups and340,183 pair rows, not accuracy. Raw290,314,077-byte
+audit remains local/ignored; no successful audit or diagnostic is repeated.
+
+Table v23/figure v22 pass export and inspection: 23 reviewed/21 measured/20
+eligible, exclusions0/17/20, both absent-endpoint aborts, four pending identities.
+All previous22 rows unchanged. Phylogenetic/eight-proteome cell now completes;
+three cells have three eligible repeats, other summaries remain null. New
+reusable latest-checkpoint tests pass3 in1.19s after exporter completion,
+checking arithmetic/failures, current terminal pins and figure bounds/pixels/
+provenance. Validation receipt binds actual source/JUnit/table/figure/summary.
+No new native/scientific estimate or isolated efficiency claim is created.
+
+All owned observer/review/report/plot/test handles finish; no panel job live.
+Commit/push validated checkpoint, then release only index23, full OrthoFinder
+3.1.5/eight proteomes/repeat2, with existing prepared continuation and fresh
+history/capacity/native handoff. Remaining panel, final manuscript/resource
+reconciliation and versioned/archive release keep the full goal active.
+
 ## Prepared Resource Archive Compatibility (2026-10-04)
 
 Previous turn is progress: `eb12b88a` commits/pushes index-22 startup evidence.

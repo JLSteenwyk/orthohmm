@@ -1,0 +1,61 @@
+{
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 3
+  },
+  "eligible_attempts": 20,
+  "excluded_attempts": [
+    0,
+    17,
+    20
+  ],
+  "junit_time_seconds": 1.169,
+  "native_inference_repeated": false,
+  "previous_22_rows_unchanged": true,
+  "publication_ready": false,
+  "raw_audit_repeated": false,
+  "resource_reviewed_attempts": 21,
+  "reviewed_attempts": 23,
+  "scope": "Local retained-checkpoint reporting and provenance tests; not new inference, accuracy or isolated speed evidence",
+  "source_and_artifacts_at_readback": [
+    {
+      "bytes": 5993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_latest_prepared_resource_checkpoint.py",
+      "sha256": "1bbc56d0ba54b1b61a055bb10e4c9b9eb3eab431a9784b9dbe4a86ab76257e05"
+    },
+    {
+      "bytes": 706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/latest_prepared_checkpoint_tests_22418.xml",
+      "sha256": "143c6215455f46a7f59a5385911cf6eb6140538ec020d0dc12d4a731fd327516"
+    },
+    {
+      "bytes": 320030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_panel_snapshot_20261004_v23/panel.json",
+      "sha256": "aba2771cd6eae6ab84499183c02b4f43deffcbdabc7dac59088bdd1d6b6dbce8"
+    },
+    {
+      "bytes": 303532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v22/manifest.json",
+      "sha256": "3acbc33adf1b2e1f3ab2f5a8c208c9c8c24e9c50fc7b59b37527ed18023fb300"
+    },
+    {
+      "bytes": 5720,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_attempt_22418.json",
+      "sha256": "fdc7f83883302dc5b9ce932cc64f086dd14dcd3a10d860360def655f24bf075d"
+    },
+    {
+      "bytes": 1822,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_terminal_controller_22418.json",
+      "sha256": "b38270fef0dd31a73f5c8ca3fec4e299a61b6480d4f489e0c8785d2ff623a6e9"
+    }
+  ],
+  "status": "latest_prepared_checkpoint_tests_passed",
+  "tests": [
+    "test_latest_arithmetic_preserves_failure_endpoints_and_complete_cells",
+    "test_latest_terminal_row_and_handoff_remain_bound",
+    "test_latest_figure_provenance_bounds_pixels_and_coverage"
+  ],
+  "three_eligible_repeat_cells": 3
+}
