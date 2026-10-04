@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Retained Development-Family Inventory Delivered (2026-10-04)
+
+The previous user-requested turn synchronizes/pushes the shared-host goal at
+663e5077; classify it as an authoritative policy update, not new scientific
+results. On actual resumption read the full goal/newest ledger and query Slurm:
+no owned job live. Continue the prepared inventory rather than re-run timing,
+native inference or completed scientific admissions.
+
+Prepare/push at 9a9c5dc4, then perform the first selected export once; it exits
+zero. The [result](DEVELOPMENT_FAMILY_INVENTORY_RESULT_20261004.md) inventories
+all 1,785 selected Git JSON blobs and 114 separately frozen local reports,
+all 211 score blocks/88 families, 9,226 mentions and 36 unresolved containers.
+Every originally validation-labelled RefOG has 18 declared validation score
+blocks. Preserve the 35/35 historical split but do not call it untouched
+publication validation. Reports are not independent native experiments or
+complete causal tuning history. Synthetic/ordinal labels are not misassigned.
+
+Resumed preparation passes 61 tests plus one absent-export skip; final suite
+passes all 62. Independent stdlib archive readback verifies every identity,
+all family-count payloads, contexts, per-family partition totals and all
+73,248 TSV fields. Receipt binds source/input/output/local JUnit history.
+No reporter or scientific retry occurs; earlier pre-export schema/import
+probe failures remain disclosed. Deliver/push generated artifacts and guides.
+
+Original local reports, scientific code/defaults/results, the closed timing
+panel, current main PDF and rc3 archive remain unchanged. The full publication
+goal is active; original TreeFam family reconstruction, complete causal
+history, broader uncertainty/strata, full configuration costs and distribution
+still require work. Next integrate completed scientific addenda into the
+working manuscript/claim evidence and continue genuinely incomplete analyses.
+No DGX/quiet-window gate or unrelated job/service action is introduced.
+
 ## Retained Development-Family Inventory Prepared (2026-10-04)
 
 The preceding f145fff1 turn delivers/pushes the selected QfO stage linkage;

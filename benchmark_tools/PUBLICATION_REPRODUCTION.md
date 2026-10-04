@@ -2,6 +2,19 @@
 
 ## Current Entry Point (2026-10-04)
 
+The [retained development-family inventory](results/DEVELOPMENT_FAMILY_INVENTORY_RESULT_20261004.md)
+now covers 1,785 immutable JSON result blobs plus 114 separately hash-frozen
+local-only reports. All 70 OrthoBench/18 retained SwissTrees families have
+explicit score evidence; every originally validation-labelled RefOG occurs
+in 18 declared validation score blocks. These are development-exposed reports,
+not independent native experiment counts or a complete causal tuning history.
+All 62 focused tests pass; independent readback verifies every source identity,
+all 9,156 associations and 73,248 TSV fields. Use the linked protocol to reproduce
+the inventory only where the pinned local inputs are available. Original local
+files, scientific scores/defaults, main PDF and rc3 archive remain unchanged.
+This addendum does not establish family-disjoint validation or replace YGOB's
+separately documented novel-taxon route.
+
 The [selected QfO OrthoHMM stage addendum](results/QFO_ORTHOHMM_STAGE_LINKAGE_RESULT_20261004.md)
 now links both selected corrected pair outputs through exact retained
 score/conversion/candidate/replay/native metadata. It preserves all 24 earlier
