@@ -1,0 +1,97 @@
+{
+  "counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 3
+  },
+  "eligible_attempts": 24,
+  "generated_resource_section_embedded_exactly": true,
+  "initial_readback_failure": "Recursive RST inventory included docs/.venv package licenses and Sphinx templates; select the seven actual source documents instead. No build or test is rerun.",
+  "junit": {
+    "bytes": 669,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/final_resource_manuscript_tests_20261004.xml",
+    "sha256": "6887ec54d426573681b99bd287a8216d0467222e9ea9a0879f24384763919a26"
+  },
+  "junit_time_seconds": 0.195,
+  "measured_attempts": 25,
+  "native_inference_or_scoring_repeated": false,
+  "pdf_rendered_or_visually_reviewed": false,
+  "publication_ready": false,
+  "resource_attempts": 27,
+  "scientific_sections_and_citation_set_unchanged": true,
+  "sources": [
+    {
+      "bytes": 15255,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/README.md",
+      "sha256": "f04a0227de7e13a61e35882979d6e261e45a9b5ba8c37e3bb1a0c9492bbd6054"
+    },
+    {
+      "bytes": 4539,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/docs/performance_assessment/index.rst",
+      "sha256": "c35b213ffe9f296b0015c453036395a27c88e7fe90db7ef5a59ea15ea629abc1"
+    },
+    {
+      "bytes": 3042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_final_resource_manuscript.py",
+      "sha256": "6c83015807f0b527151f62ad8a291f0f865c6256cd5a63b7bdad7a60bd677652"
+    },
+    {
+      "bytes": 40038,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261004.md",
+      "sha256": "a10e29332c09e5ba84d4348d22c3ca7a4ecb4ec383d70b211ffa660d7f2a30a5"
+    }
+  ],
+  "sphinx": {
+    "command": [
+      "/home/bizon/anaconda3/bin/sphinx-build",
+      "-b",
+      "html",
+      "-W",
+      "docs",
+      "benchmarks/work/final_publication_docs_20261004"
+    ],
+    "pages": [
+      {
+        "bytes": 17511,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/index.html",
+        "sha256": "722e02a71cd4ae14961e6a7da76c10f7e9719ae62c806b321955eb62ffb8301a"
+      },
+      {
+        "bytes": 12200,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/about/index.html",
+        "sha256": "95be96b37a451403d1f3e06dfde141bc04de0bb8defd060635ebd6af159cf99e"
+      },
+      {
+        "bytes": 25711,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/advanced/index.html",
+        "sha256": "e22fe1265bd18c9f987d12ef6a987b237e9f15354230b74b4a9f1430cca6fe5b"
+      },
+      {
+        "bytes": 9706,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/change_log/index.html",
+        "sha256": "559aea8a618bbb6db17f7a87e4f2c0a0aa98bb8c3e1968a15c324f36fbb975fa"
+      },
+      {
+        "bytes": 5933,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/frequently_asked_questions/index.html",
+        "sha256": "95bf84a27aa8fb90ded2665a188b588723032f7107af4cdb741352282279f34a"
+      },
+      {
+        "bytes": 5569,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/other_software/index.html",
+        "sha256": "4d008948f7dfd216cf24eea37ba79893173f6ca2f427c17b234303e206d281ae"
+      },
+      {
+        "bytes": 10833,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/final_publication_docs_20261004/performance_assessment/index.html",
+        "sha256": "cb4be61eb2b43bc31c3e5edc73d20440058f9aa7ecc60d6d87a1320099c54c6c"
+      }
+    ],
+    "returncode": 0,
+    "version": "8.1.3",
+    "warnings_as_errors": true,
+    "website_deployed": false
+  },
+  "status": "final_resource_manuscript_source_checked"
+}

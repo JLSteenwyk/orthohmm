@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Resource-Complete Main Manuscript Prepared (2026-10-04)
+
+Previous goal turn makes progress through final resource checkpoint, actual
+export-helper integration and relocated reporting replay, pushed through
+`f26a3b92`. Read the full objective/current ledger; retain those completed
+receipts without rerunning inference, raw audits or unchanged fixture suites.
+
+The [4 October main manuscript](PUBLICATION_MAIN_TEXT_20261004.md) preserves
+the prior dated text and scientific sections, while embedding the exact
+generated final resource prose and tables. Abstract, failure history,
+limitations and availability now distinguish all27 reviewed attempts from
+24 eligible measurements, preserve the three incomplete cells, and disclose
+unknown, potentially method-dependent contention. No scores, endpoints,
+defaults or scientific citations change. README/RST/current guide/checklist
+point to the final panel instead of describing it as in progress.
+
+Three new regression cases pass in0.22s: exact generated resource content,
+unchanged scientific sections/citation set, and present final links/bounded
+claims. Sphinx8.1.3 builds all seven pages with warnings treated as errors.
+The [source validation](publication_main_final_source_validation_20261004.json)
+pins actual JUnit, changed main/docs/test inputs and built page outputs.
+These are source/documentation checks, not an actual final PDF or archive.
+
+Commit this render-time source before creating new citation-resolved HTML,
+printing and inspecting every PDF page. Bind that source commit and actual
+render/print/review receipts before exporting the selected-main review;
+later living ledger changes must not alter its render-time bytes. Continue
+actual helper-inclusive source/handoff and executable/versioned packaging.
+Full publication goal remains active and incomplete; no timing job is live.
+
 ## Final Resource Reporting Archive Replayed (2026-10-04)
 
 Actual export-helper integration is committed and pushed at `a78a5966`.

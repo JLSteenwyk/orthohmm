@@ -106,6 +106,10 @@ The [final reporting archive](FINAL_RESOURCE_REPORTING_COMPONENT_20261004.md)
 now restores outside the repository and reproduces all three tables, figure
 pixels and prose exactly with its copied isolated reader. This establishes
 final reporting portability only, not those broader publication requirements.
+The [4 October main text](PUBLICATION_MAIN_TEXT_20261004.md) incorporates the
+generated final resource section and failure history without changing its
+scientific methods, accuracy sections or citation set. Its new source-bound
+render/review and actual study archives require separate validation.
 The [generated v24 resource section](RESOURCE_MANUSCRIPT_SECTION_20261004.md)
 now replaces manual transcription with validated prose/three metric tables.
 Eight tests pass; real section readback preserves12 available and15 unavailable

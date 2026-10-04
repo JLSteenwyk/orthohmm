@@ -143,8 +143,9 @@ now archives this table/figure format without omitting pre-native aborts.
 Its committed 20-member archive restores and passes copied CLI verification
 and exact three-table/PNG replay. This is interim reporting portability, not
 raw-accounting/native reproduction or final panel completion. The
-[3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
-describes the earlier three-attempt checkpoint. The
+[4 October working main text](results/PUBLICATION_MAIN_TEXT_20261004.md) now
+embeds the final generated resource section, all exclusions and current scope.
+Its accuracy/method sections remain unchanged. The historical
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)
 preserves its render-time Git inputs and closed PDF/page identities; it is not
 a completed resource panel or portable study archive. Resource-table collection
