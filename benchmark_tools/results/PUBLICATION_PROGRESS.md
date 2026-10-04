@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Current Figure Appendix Assembled And Replayed (2026-10-04)
+
+The previous goal-update turn changes the authoritative shared-host scope;
+on this explicit resumption read the full goal and current ledger. Retained
+source/review/reporting and native measurements remain valid; the current
+Slurm queue has no owned live job. No native inference, raw scoring or
+unchanged successful diagnostic suite is restarted.
+
+Create a [new32-page working presentation](PUBLICATION_FINAL_FIGURE_REVIEW_20261004.md),
+preserving the historical nine-page/no-resource assembly. The current main
+has twelve pages; fourteen retained scientific figures gain the existing
+all-method OrthoBench strata and final shared-host resource figure.
+Relative selection paths and exact input hashes support relocation; caption
+limitations and unknown contention remain explicit. All28 source pages retain
+identical text, geometry and pixels; seven main links, sixteen guide links
+and eighteen bookmarks lead to embedded destinations. Other file-URI actions
+retain their historical locations, not portable raw-data access.
+
+Actually inspect four guide pages and both added figure pages; no observed
+clipping/overlap. Thirteen focused cases pass in6.46s, including actual32-page
+copied-inventory replay with isolated optimized Python and no checkout/Git.
+The [review receipt](publication_final_figure_review_20261004.json) binds actual
+sources, PDF/assembly and JUnit, with bounded manual/pixel-proof scope.
+
+Commit/push this presentation checkpoint, then build explicit-review handoff
+and executable/versioned archives using current main/source, this appendix,
+final reporting and retained runtime/data reproduction assets. Audit full
+goal scope and central claim support afterward. No submission-ready claim,
+new raw-data redistribution gate or native rerun follows from assembly.
+
 ## Actual Final Source And Review Components Verified (2026-10-04)
 
 Commit/push `79a850e8` closes the twelve-page main review checkpoint.
