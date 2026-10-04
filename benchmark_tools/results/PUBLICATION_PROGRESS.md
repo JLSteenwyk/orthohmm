@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Main Comparison And Factorial Delivery Gap Identified (2026-10-04)
+
+The precedingc66c35d9 turn makes concrete register/metadata progress. Read the
+full goal/current ledger and current source; no owned Slurm job is live.
+Existing OrthoBench native audits already retain multiple ProteinOrtho calls,
+missing Sonic argv and heterogeneous/input-sanitized historical rows. No
+newly justified native rerun or repeated audit is needed to relabel those gaps.
+
+The local rc1 package delivers YGOB/simulation counts but no direct portable
+main OrthoBench/SwissTrees comparison or factorial replay route. Prepare a
+new [rc2 outer guide](../PUBLICATION_PACKAGE_RC2_20261004.md), preserving rc1
+and all unchanged child/review assets. Select the existing pinned count files,
+standalone workers and required numerical imports/protocols; then build,
+archive, restore and execute the four newly delivered copied routes outside
+the checkout. This is a concrete packaging/closure validation, not new
+inference or outcome-led scientific reanalysis. Source and statistical pins
+remain distinct; full publication completion is still unproven.
+
 ## Historical Three Kingdoms Commands And Stage Costs Recovered (2026-10-04)
 
 Commit/push090e61f1 publishes the corrected24-row register. Continue goal1.2
