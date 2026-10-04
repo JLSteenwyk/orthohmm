@@ -15,11 +15,18 @@ The new component reuses actual table/figure functions and hash-pinned helper,
 includes the current source formats and explicitly records schema 2. Eighteen
 focused tests pass in 3.97s: actual partial coverage/failures, relocated isolated
 stdlib CLI, exact three-table/PNG replay and negative integrity/scope/coverage/
-imputation/output guards. The unit builder mocks Git; commit the source before
-actual committed archive execution. No raw-accounting/native reproduction,
-new accuracy, complete panel or publication readiness is inferred.
+imputation/output guards. The unit builder mocks Git; source is then committed/
+pushed at `84217cc3` before actual archive execution. The committed build
+creates 19 payloads plus manifest; all 20 regular members check before fresh
+`/tmp` extraction. Copied CLI verification and replay pass with zero exit and
+empty stderr; all three tables and PNG pixels match. Actual execution receipt
+is 5,964 bytes, SHA-256
+`4b2d1a84032704ecb3d3aee45f4999cf1fef9bc84284033bde347744e404934d`.
+Source/test/historical-helper bytes stay unchanged, original JUnit retained;
+archive stays local/ignored. No raw-accounting/native reproduction, new
+accuracy, complete panel or publication readiness is inferred.
 
-22418 search reaches 75%, not a whole-pipeline percentage. Table v22/figure v21
+22418 search reaches 90.62%, not a whole-pipeline percentage. Table v22/figure v21
 remain unchanged. On continuation poll the exact job and review after terminal
 state before advancing index 23. Final panel/manuscript reconciliation and
 versioned/archive release remain open; no quiet-host prerequisite returns.

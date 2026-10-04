@@ -75,6 +75,11 @@ retains the twenty measured observations and both complete-cell median/ranges,
 explaining both unplotted aborts without isolated speedup claims. Three new
 actual-data/receipt/PDF-pixel tests pass; their initial pre-export-manifest
 failure remains retained separately. The
+new [prepared reporting component](results/PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md)
+now archives this table/figure format without omitting pre-native aborts.
+Its committed 20-member archive restores and passes copied CLI verification
+and exact three-table/PNG replay. This is interim reporting portability, not
+raw-accounting/native reproduction or final panel completion. The
 [3 October working main text](results/PUBLICATION_MAIN_TEXT_20261003.md) still
 describes the earlier three-attempt checkpoint. The
 [ten-page working review](results/PUBLICATION_MAIN_SHARED_REVIEW_20261003.md)

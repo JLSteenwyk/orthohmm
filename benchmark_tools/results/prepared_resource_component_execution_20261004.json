@@ -1,0 +1,154 @@
+{
+  "all_planned_attempts_reviewed": false,
+  "archive_inventory_rechecked": true,
+  "archive_members": 20,
+  "build": {
+    "archive": {
+      "bytes": 441980,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_reporting_component_20261004.tar.gz",
+      "sha256": "7614c4b6c4ce5d48bbac13945ebe29e6ccaec0293033acf562fef096659920f3"
+    },
+    "files": 19,
+    "manifest": {
+      "bytes": 3521,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_reporting_component_20261004/bundle.json",
+      "sha256": "edda5231a18e0634aa189dec6da03f8fd3c60468ee7d8e412a4462dbdfbc539e"
+    },
+    "publication_ready": false,
+    "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+    "status": "prepared_resource_reporting_component_built"
+  },
+  "commands": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/component/component.py",
+        "verify",
+        "--directory",
+        "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/component",
+        "--manifest-sha256",
+        "edda5231a18e0634aa189dec6da03f8fd3c60468ee7d8e412a4462dbdfbc539e"
+      ],
+      "result": {
+        "files": 19,
+        "publication_ready": false,
+        "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+        "status": "prepared_resource_reporting_component_verified"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/component/component.py",
+        "replay",
+        "--directory",
+        "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/component",
+        "--manifest-sha256",
+        "edda5231a18e0634aa189dec6da03f8fd3c60468ee7d8e412a4462dbdfbc539e",
+        "--output",
+        "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/replay"
+      ],
+      "result": {
+        "equal_png_pixels": true,
+        "exact_table_files": 3,
+        "manifest_sha256": "edda5231a18e0634aa189dec6da03f8fd3c60468ee7d8e412a4462dbdfbc539e",
+        "matplotlib": "3.10.8",
+        "native_inference_reproduced": false,
+        "numpy": "2.2.6",
+        "pre_native_aborted_indices": [
+          17,
+          20
+        ],
+        "publication_ready": false,
+        "raw_measurements_revalidated": false,
+        "reviewed_attempts": 22,
+        "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+        "status": "prepared_resource_reporting_replayed"
+      },
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "eligible_attempts": 19,
+  "excluded_attempts": [
+    0,
+    17,
+    20
+  ],
+  "extracted_directory": "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/component",
+  "native_inference_reproduced": false,
+  "pre_native_aborted_indices": [
+    17,
+    20
+  ],
+  "publication_ready": false,
+  "raw_measurements_revalidated": false,
+  "replay": {
+    "bytes": 514,
+    "path": "/tmp/orthohmm-prepared-report-20261004-i8dw4cv6/replay/replay.json",
+    "sha256": "7b8cfc51ff241446912774c6cbac23c83c08df384e6e1d1389dfa56850abd076"
+  },
+  "resource_reviewed_attempts": 20,
+  "reviewed_attempts": 22,
+  "scope": "shared_host_resource_reporting_not_raw_measurement_reproduction",
+  "source_after": [
+    {
+      "bytes": 12952,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_prepared_component_20261004.py",
+      "sha256": "2734bb24c54ff179ddcaff6e7105e5d44d31da3760b122be70145a14c9f2a28a"
+    },
+    {
+      "bytes": 5549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_bundle_shared_prepared_component.py",
+      "sha256": "36d3971cbfa20fe86a6360035bde579117cdcefd43a1d5944a3036d42e7dae31"
+    },
+    {
+      "bytes": 13009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_resource_component_20261003.py",
+      "sha256": "98d723bb70910eed22a8ab75ef4e17f0332490ada309121f607fc0ed3d5b5781"
+    }
+  ],
+  "source_before": [
+    {
+      "bytes": 12952,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_prepared_component_20261004.py",
+      "sha256": "2734bb24c54ff179ddcaff6e7105e5d44d31da3760b122be70145a14c9f2a28a"
+    },
+    {
+      "bytes": 5549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_bundle_shared_prepared_component.py",
+      "sha256": "36d3971cbfa20fe86a6360035bde579117cdcefd43a1d5944a3036d42e7dae31"
+    },
+    {
+      "bytes": 13009,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/bundle_shared_resource_component_20261003.py",
+      "sha256": "98d723bb70910eed22a8ab75ef4e17f0332490ada309121f607fc0ed3d5b5781"
+    }
+  ],
+  "source_commit": "84217cc33fe111659940d852d8c30da75b926da3",
+  "status": "committed_prepared_reporting_archive_restored_and_replayed",
+  "tests": {
+    "counts": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "18",
+      "time": "3.936",
+      "timestamp": "2026-10-04T05:12:04.474838-04:00"
+    },
+    "junit": {
+      "bytes": 3112,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/prepared_reporting_component_tests_20261004.xml",
+      "sha256": "283ac6408dbfafc2863004a5b22fee1077ccb42b0a6fc2f697bffff87bb97592"
+    }
+  }
+}

@@ -54,8 +54,29 @@ Eighteen focused tests pass in 3.97s. Tests use the actual 22-attempt table and
 the copied CLI with `-I -S -B`; exact tables/PNG replay. Negative cases reject
 wrong anchors, changed/missing/extra/symlink members, scope/schema/coverage
 promotion, imputed abort endpoints, altered medians and unsafe output reuse.
-The unit builder mocks Git reads; separately building from the committed
-repository is required for actual archive provenance.
+The unit builder mocks Git reads; the actual committed execution below
+separately establishes archive provenance.
+
+## Actual Committed Archive
+
+Source commit `84217cc33fe111659940d852d8c30da75b926da3` builds the current
+table v22/figure v21 once. The [execution receipt](prepared_resource_component_execution_20261004.json)
+is 5,964 bytes, SHA-256
+`4b2d1a84032704ecb3d3aee45f4999cf1fef9bc84284033bde347744e404934d`.
+The local archive contains 19 payload files plus the manifest, all 20 regular
+members checked for unique names/type/mode/bytes/hash before fresh extraction
+under `/tmp`. Archive: 441,980 bytes, SHA-256
+`7614c4b6c4ce5d48bbac13945ebe29e6ccaec0293033acf562fef096659920f3`.
+External manifest anchor: 3,521 bytes, SHA-256
+`edda5231a18e0634aa189dec6da03f8fd3c60468ee7d8e412a4462dbdfbc539e`.
+
+The copied CLI verifies with `-I -S -B` and replays with `-I -B`, both zero
+exit and no stderr. All three table files and PNG pixels match. Source/test/
+historical-helper hashes remain unchanged; the retained JUnit has 18 passes,
+zero failures/errors/skips. The archive remains under ignored local work paths,
+not committed or uploaded. This is an interim reporting archive, not a final
+panel or replacement for any older archive. No native audit or benchmark is
+repeated to obtain it.
 
 This closes a reporting-format compatibility gap. It does not replay raw
 accounting, scientific inputs, native inference, accuracy or uncertainty;

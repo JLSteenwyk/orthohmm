@@ -69,6 +69,13 @@ opening original measurement paths. It is reporting-only, not a full runtime,
 raw-accounting reproduction or complete study release. Its dated payloads stay
 unchanged as the live panel advances.
 
+The separate [prepared-format reporting component](PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md)
+now includes actual pre-native aborts and measured exclusions. Its committed
+20-member archive restores under `/tmp`, copied CLI verification passes and
+all three tables/PNG pixels replay exactly for the current partial panel.
+Eighteen tests pass. This extends reporting portability, not raw-accounting/
+native reproduction, isolated performance, final panel or publication readiness.
+
 ### Retained Evidence Chronology
 
 The dated entries below retain their original scope and observations. Statements
