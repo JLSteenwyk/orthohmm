@@ -5,7 +5,7 @@ prepared-panel table/figure format, including measured exclusions and
 pre-native aborts with absent endpoints. It reuses the actual reporting and
 plotting functions rather than independently implementing their arithmetic.
 The historical v1 component/source/archives remain unchanged. New bundles
-explicitly use schema 2 and include the hash-pinned historical standard-library
+use schema 2 by default and include the hash-pinned historical standard-library
 helper alongside the current prepared table/figure sources.
 
 ## Build And Replay
@@ -82,3 +82,27 @@ This closes a reporting-format compatibility gap. It does not replay raw
 accounting, scientific inputs, native inference, accuracy or uncertainty;
 establish independent validation; remove contention; or complete the full
 versioned publication release. Missing repeats and failures stay visible.
+
+## Prose-Inclusive Bundle Preparation
+
+The optional `build --section /path/to/generated-resource-section` selects
+schema 3 and adds the section generator, exact prose and its provenance
+manifest. It checks the same table bytes, all five section-source pins,
+coverage and reporting-only scope, then recomputes the prose. Relocated replay
+now also emits byte-identical `resource_section.md`. This includes eight source
+files and 23 regular archive members; it still does not open raw evidence paths
+or reproduce native inference. Omitting `--section` preserves the schema-2
+inventory. Historical archives and their bundled readers remain unchanged;
+use their exact copied readers, not a newer reader substituted into old bundles.
+
+Eight added tests plus the 18 existing component cases pass: 26 tests in 8.53s.
+They use actual v24 data/figure v23/prose v24 with mocked Git reads and temporary
+archives. Copied CLI verification runs with `-I -S -B`, copied replay with
+`-I -B`; tables, PNG pixels and prose agree. Mismatched table/source/coverage,
+scope promotion and reanchored edited prose are rejected. JUnit at
+`benchmarks/work/threadripper_shared_execution_20261003/resource_section_bundle_tests_20261004.xml`
+has SHA-256 `92e3d25acc0886c2545abce033bc429712a7e3ebbe6ff08d3d68788e29255da3`.
+This is tested final-bundle preparation, not an actual committed-source final
+archive execution. After all 27 attempt reviews, build the final component once
+from committed sources and the final table/figure/section; independently
+restore and inspect it. Do not rebuild unchanged interim archives per attempt.

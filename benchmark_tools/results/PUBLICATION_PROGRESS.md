@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Resource Prose Added To Portable Reporting (2026-10-04)
+
+Previous turn is a verified wait: fresh accounting and changing MAFFT/FastTree
+children confirm live22420, with22421 waiting on its exact dependency. Read
+the full objective and newest ledger; no native/diagnostic analysis is restarted.
+
+The [prepared reporting component](PREPARED_RESOURCE_REPORTING_COMPONENT_20261004.md)
+now supports optional schema3 prose delivery from the same reviewed table,
+checking all section-source pins, coverage, scope and exact regenerated prose.
+Eight new tests plus18 existing cases pass:26 in8.53s. A temporary archive
+restores and copied isolated CLI verification/replay reproduce tables, PNG
+pixels and prose. Test builders mock Git reads; this is not a committed-source
+final archive execution. Default schema2 inventory and historical archive bytes
+remain unchanged. Build/restore the final selected component once after all27
+reviews rather than regenerate unchanged interim archives.
+
+Fresh accounting confirms22420 parent/batch/native step RUNNING and22421
+dependency-pending. Live native children have advanced through species-tree
+inference to parallel family alignments/gene trees; buffered log still reports
+clustering. No terminal resource point is admitted. Tablev24/figurev23 remain
+24 reviewed/22 measured/21 eligible/four complete cells, with three unreviewed
+identities(one live,two unsubmitted). Preserve independent review before25.
+Frozen science/runtime/recipe/limits and unrelated jobs/services are unchanged.
+Final panel, manuscript/PDF reconciliation, executable/versioned archive and
+explicit scientific limitations keep the full publication goal incomplete.
+
 ## Resource Section Generated From Reviewed Arithmetic (2026-10-04)
 
 Previous turn is a verified wait: it freshly polls22420/22421 and observes

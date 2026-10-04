@@ -40,6 +40,53 @@ EXPECTED = {
     'figures/shared_threadripper_resources.svg', 'figures/manifest.json',
     *['sources/' + name for name in SOURCES],
 }
+SECTION_SOURCE = 'benchmark_tools/results/render_shared_resource_section_20261004.py'
+SECTION_MEMBERS = {'sources/section.py', 'manuscript/resource_section.md',
+                   'manuscript/manifest.json'}
+
+
+def section_text(payloads):
+    report, _, figure = reporting(payloads)
+    constants = pure(payloads['sources/prior_figure.py'], {'METHODS'}, {})
+    plotter = SimpleNamespace(validate=figure['validate'], **constants)
+    renderer = pure(payloads['sources/section.py'], {'METRICS', 'LABELS', 'render'},
+                    dict(plotter=plotter))
+    return renderer['render'](report).encode()
+
+
+def check_section(payloads):
+    report = json.loads(payloads['data/panel.json'])
+    receipt = json.loads(payloads['manuscript/manifest.json'])
+    if receipt['status'] != 'reviewed_resource_section_generated':
+        raise ValueError('Resource section generation differs')
+    checked(payloads['data/panel.json'], receipt['table'])
+    checked(payloads['manuscript/resource_section.md'], receipt['section'])
+    source_names = {'section.py', 'figure.py', 'tables.py', 'prior_figure.py', 'prior_tables.py'}
+    mapping = {Path(SECTION_SOURCE if name == 'section.py' else SOURCES[name]).name: name
+               for name in source_names}
+    seen = set()
+    for pin in receipt['sources']:
+        name = mapping.get(Path(pin['path']).name)
+        if name is None or name in seen:
+            raise ValueError('Resource section source inventory differs')
+        checked(payloads['sources/' + name], pin)
+        seen.add(name)
+    if seen != source_names:
+        raise ValueError('Resource section source inventory is incomplete')
+    for key, report_key in (
+        ('reviewed_attempts', 'reviewed_attempts'),
+        ('measured_attempts', 'resource_reviewed_attempts'),
+        ('eligible_attempts', 'eligible_attempts'),
+        ('excluded_attempts', 'excluded_attempts'),
+        ('all_planned_attempts_reviewed', 'all_planned_attempts_reviewed'),
+    ):
+        if receipt[key] != report[report_key] or type(receipt[key]) is not type(report[report_key]):
+            raise ValueError('Resource section coverage differs: ' + key)
+    if any(receipt[key] is not False for key in (
+            'native_inference_repeated', 'raw_audit_repeated', 'publication_ready')):
+        raise ValueError('Resource section scope differs')
+    if payloads['manuscript/resource_section.md'] != section_text(payloads):
+        raise ValueError('Resource section prose replay differs')
 
 
 def reporting(payloads, plotting=False):
@@ -78,24 +125,25 @@ def verify(directory, manifest_sha):
     if path.is_symlink() or identity(path.read_bytes())['sha256'] != manifest_sha:
         raise ValueError('Externally pinned manifest differs')
     manifest = json.loads(path.read_bytes())
-    if (type(manifest['schema_version']) is not int or manifest['schema_version'] != 2
+    if (type(manifest['schema_version']) is not int or manifest['schema_version'] not in (2, 3)
             or manifest['scope'] != SCOPE
             or not re.fullmatch('[0-9a-f]{40}', manifest['source_commit'])
             or any(manifest[key] is not False for key in (
                 'native_inference_reproduced', 'raw_measurements_revalidated', 'publication_ready'))):
         raise ValueError('Prepared reporting-only scope differs')
+    expected = EXPECTED | (SECTION_MEMBERS if manifest['schema_version'] == 3 else set())
     payloads = {}
     for pin in manifest['files']:
         name = safe_name(pin['path'])
         member = directory / name
-        if (name not in EXPECTED or name in payloads or member.is_symlink()
+        if (name not in expected or name in payloads or member.is_symlink()
                 or not member.is_file() or not member.resolve().is_relative_to(directory)):
             raise ValueError('Invalid reporting payload')
         payloads[name] = member.read_bytes()
         checked(payloads[name], pin)
     actual = {p.relative_to(directory).as_posix() for p in directory.rglob('*')
               if p.is_file() or p.is_symlink()}
-    if set(payloads) != EXPECTED or actual != EXPECTED | {'bundle.json'}:
+    if set(payloads) != expected or actual != expected | {'bundle.json'}:
         raise ValueError('Missing or extra reporting member')
     if payloads['component.py'] != Path(__file__).read_bytes() or payloads[CORE] != core_bytes:
         raise ValueError('Use exact bundled reporting readers')
@@ -120,6 +168,8 @@ def verify(directory, manifest_sha):
         raise ValueError('Incomplete figure inventory')
     if payloads['requirements.txt'].decode() != 'matplotlib==' + figure['matplotlib'] + '\n':
         raise ValueError('Reporting dependency differs')
+    if manifest['schema_version'] == 3:
+        check_section(payloads)
     return manifest, payloads
 
 
@@ -150,6 +200,11 @@ def replay(directory, manifest_sha, output):
     rendered = mpimg.imread(output / 'shared_threadripper_resources.png')
     if original.shape != rendered.shape or not np.array_equal(original, rendered):
         raise ValueError('Figure PNG pixels differ')
+    if manifest['schema_version'] == 3:
+        prose = section_text(payloads)
+        if prose != payloads['manuscript/resource_section.md']:
+            raise ValueError('Resource section prose replay differs')
+        (output / 'resource_section.md').write_bytes(prose)
     verify(directory, manifest_sha)
     result = dict(status='prepared_resource_reporting_replayed', scope=SCOPE,
         manifest_sha256=manifest_sha, exact_table_files=3, equal_png_pixels=True,
@@ -157,11 +212,13 @@ def replay(directory, manifest_sha, output):
         pre_native_aborted_indices=manifest['pre_native_aborted_indices'],
         native_inference_reproduced=False, raw_measurements_revalidated=False,
         publication_ready=False, matplotlib=matplotlib.__version__, numpy=np.__version__)
+    if manifest['schema_version'] == 3:
+        result['exact_resource_section'] = True
     (output / 'replay.json').write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
     return result
 
 
-def build(repo, snapshot, figure, output):
+def build(repo, snapshot, figure, output, section=None):
     repo, snapshot, figure = [Path(p).resolve(strict=True) for p in (repo, snapshot, figure)]
     output = Path(output).absolute()
     output = output.parent.resolve() / output.name
@@ -172,6 +229,8 @@ def build(repo, snapshot, figure, output):
     sources = {**{'sources/' + k: v for k, v in SOURCES.items()},
         'component.py': str(Path(__file__).resolve().relative_to(repo)),
         CORE: 'benchmark_tools/results/' + CORE, 'LICENSE.md': 'LICENSE.md'}
+    if section is not None:
+        sources['sources/section.py'] = SECTION_SOURCE
     payloads = {}
     for name, path in sources.items():
         raw = subprocess.check_output(['git', '-C', str(repo), 'show', commit + ':' + path])
@@ -190,7 +249,13 @@ def build(repo, snapshot, figure, output):
         'Replay preserves excluded measurements, pre-native aborts and incomplete repeats.\n'
         'This is not raw-accounting/native reproduction, isolated speed evidence or publication readiness.\n').encode()
     report, _, _ = reporting(payloads)
-    manifest = dict(schema_version=2, scope=SCOPE, source_commit=commit,
+    if section is not None:
+        section = Path(section).resolve(strict=True)
+        for name in ('manifest.json', 'resource_section.md'):
+            payloads['manuscript/' + name] = (section / name).read_bytes()
+        check_section(payloads)
+        payloads['README.md'] += b'Prose replay includes resource_section.md from the same reviewed snapshot.\n'
+    manifest = dict(schema_version=2 if section is None else 3, scope=SCOPE, source_commit=commit,
         **{k: report[k] for k in ('reviewed_attempts', 'resource_reviewed_attempts',
             'eligible_attempts', 'excluded_attempts', 'pre_native_aborted_indices',
             'all_planned_attempts_reviewed')},
@@ -206,7 +271,7 @@ def build(repo, snapshot, figure, output):
     digest = record(output / 'bundle.json')['sha256']
     verify(output, digest)
     with archive.open('xb') as stream, tarfile.open(fileobj=stream, mode='w:gz') as handle:
-        for name in sorted(EXPECTED | {'bundle.json'}):
+        for name in sorted(set(payloads) | {'bundle.json'}):
             raw = (output / name).read_bytes()
             member = tarfile.TarInfo(name)
             member.size, member.mode = len(raw), 0o644
@@ -222,6 +287,7 @@ if __name__ == '__main__':
     build_parser = sub.add_parser('build')
     for name in ('repo', 'snapshot', 'figure', 'output'):
         build_parser.add_argument('--' + name, type=Path, required=True)
+    build_parser.add_argument('--section', type=Path)
     for action in ('verify', 'replay'):
         child = sub.add_parser(action)
         child.add_argument('--directory', type=Path, required=True)
@@ -230,7 +296,7 @@ if __name__ == '__main__':
             child.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     if args.action == 'build':
-        result = build(args.repo, args.snapshot, args.figure, args.output)
+        result = build(args.repo, args.snapshot, args.figure, args.output, args.section)
     elif args.action == 'replay':
         result = replay(args.directory, args.manifest_sha256, args.output)
     else:
