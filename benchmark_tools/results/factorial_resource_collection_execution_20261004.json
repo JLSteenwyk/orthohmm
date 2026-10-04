@@ -1,0 +1,92 @@
+{
+  "schema": "factorial_resource_collection_execution_v1",
+  "tsv_independent_roundtrip": {
+    "cells": 16,
+    "fields": 320,
+    "all_fields_match_json_serialization": true,
+    "line_endings": "Python csv default CRLF",
+    "git_whitespace_check": "Default diff --check flags CRLF as trailing whitespace. Explicit per-command cr-at-eol policy passes while retaining other whitespace checks; no output bytes or repository configuration changed."
+  },
+  "status": "actual_collection_and_independent_readback_passed",
+  "checkout_head_before_collection": "1cec6ca044ff9e74ed653ca1b6bfc4d14ef2adfd",
+  "collector": {
+    "path": "benchmark_tools/collect_factorial_resources.py",
+    "bytes": 12895,
+    "sha256": "42455c76194fbfae27cb0d0367d77e24c5e9c95417319c57d8413f4aaca164d6"
+  },
+  "test_source": {
+    "path": "tests/unit/test_collect_factorial_resources.py",
+    "bytes": 7464,
+    "sha256": "358a3205cf879b8bed03ef0b4dfa97c38ec3e566349c7cfdb8bcdc7d7a385078"
+  },
+  "outputs": [
+    {
+      "path": "benchmark_tools/results/factorial_retained_resources_20261004/resources.json",
+      "bytes": 24361,
+      "sha256": "4c7801197a9bc89927964f952d03325187341a0ce2fe2cc5f6c4aa7700e581a6"
+    },
+    {
+      "path": "benchmark_tools/results/factorial_retained_resources_20261004/resources.md",
+      "bytes": 2685,
+      "sha256": "2a5cdda5a4bb091dd0471990ae581eba2fa09c6b1387ad530e04fd549172af34"
+    },
+    {
+      "path": "benchmark_tools/results/factorial_retained_resources_20261004/resources.tsv",
+      "bytes": 7877,
+      "sha256": "07a31c10ef58aaa64f37b984e6054620d4500a7cb20bfff55c7836f5f80fe1df"
+    }
+  ],
+  "fixture_tests": {
+    "path": "benchmarks/work/factorial_resource_collection_tests_20261004.xml",
+    "bytes": 3803,
+    "sha256": "ff1d40025285164e30db66d8afd98ca27bbe2435e43bc3f4057407866ea6f102",
+    "junit": {
+      "tests": "23",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.220"
+    }
+  },
+  "fixture_and_actual_readback_tests": {
+    "path": "benchmarks/work/factorial_resource_collection_readback_tests_20261004.xml",
+    "bytes": 3963,
+    "sha256": "8f04811fb763568b0d85f63a78736cf559ca1a9b38e4463f191183ee9a989ba2",
+    "junit": {
+      "tests": "24",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.237"
+    }
+  },
+  "collection_command": [
+    "/usr/bin/python3",
+    "-I",
+    "-S",
+    "-B",
+    "benchmark_tools/collect_factorial_resources.py",
+    "--root",
+    ".",
+    "--output-directory",
+    "benchmark_tools/results/factorial_retained_resources_20261004"
+  ],
+  "collection_python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+  "collection_returncode": 0,
+  "scope": "Direct readback of original OrthoBench and corrected-QfO factorial executions; not a new experiment, full-pipeline measurement, sampling-method validation or global inventory of all production-run costs.",
+  "checks": {
+    "cells": 16,
+    "shared_candidate_preparation_arms": 8,
+    "reconciliation_records": 8,
+    "direct_input_files_rehashed": 15,
+    "measured_reconciliation_scalar_values_read_back": 32,
+    "preparation_values_read_back": 8,
+    "original_failed_orthobench_batches_preserved": 4,
+    "full_pipeline_cost_cells_in_original_factorial_available": 0
+  },
+  "native_inference_or_scoring_repeated": false,
+  "latest_scaling_panel_or_completed_results_changed": false,
+  "current_host_contention_probe_or_dgx_access": false,
+  "publication_ready": false,
+  "remaining": "The per-configuration full-inference-cost requirement remains incomplete. Separate production/scaling observations exist and must be considered under their own validated inputs/runtime/scopes; no claim of globally absent costs follows from this scoped collection."
+}

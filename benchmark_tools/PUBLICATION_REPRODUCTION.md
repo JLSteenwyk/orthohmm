@@ -22,6 +22,14 @@ review or complete native/statistical validation is claimed for that archive.
 Native/timing/statistical routes already validated for rc2 are not repeated.
 Scientific, historical provenance and public-deposition gaps remain active.
 
+The [retained factorial-cost addendum](results/FACTORIAL_RESOURCE_RESULT_20261004.md)
+now consolidates all16 original OrthoBench/corrected-QfO cells, eight shared
+preparation arms and eight incremental reconciliation measurements. Twenty-four
+tests pass, including actual direct-source readback. It preserves failed batch
+states and missing full-pipeline costs; sampled treeRSS is not the scaling
+panel's lifetime cgroup peak. This newer addendum is separate from the preserved
+rc3 archive and34-page review, not new native execution or isolated timing.
+
 The preceding rc2 checkpoint below is preserved as historical routing:
 
 Use the [actual local rc2 result](results/PUBLICATION_PACKAGE_RC2_RESULT_20261004.md)

@@ -1,5 +1,40 @@
 # Publication Progress
 
+## All Original Factorial Stage Costs Consolidated (2026-10-04)
+
+The preceding1cec6ca0 turn completes/pushes actual revised manuscript review.
+Read full goal/current ledger; no owned Slurm job is live. Preserve completed
+scientific, timing, statistics and presentation routes. Investigate genuinely
+remaining per-ablation cost reporting before commissioning new measurements.
+
+Retained corrected-QfO metrics provide all four admitted reconciliation-cell
+costs. A new [stdlib collector and result](FACTORIAL_RESOURCE_RESULT_20261004.md)
+consolidate all16 original OB/corrected-QfO cells, eight shared preparation arms
+and eight reconciliation observations. Check15 direct input pins, candidate/
+constraint bindings, finite fields and original memory convention. All four
+original OB FAILED batch states remain FAILED. Do not substitute superseded
+QfO release records or call shared preparation two independent runs.
+
+Twenty-three fixture tests pass; actual JSON/direct-source readback adds a
+24th passing case and checks all32 measured reconciliation values/eight prep
+values, scheduler states and deliberately absent full costs. Actual isolated
+standard-library Python3.12.3 collection exits0. Commit/push source/tests,
+JSON/TSV/Markdown table, pinned receipt, result and guide/ledger changes.
+
+Costs are cached-stage observations, not new native runs, whole-inference
+timings, valid-lifetime cgroup peaks or isolated efficiency evidence. All16
+full-cost entries within original factorial executions stay unavailable.
+No global absence of production/scaling costs is claimed. Current mainPDF
+and rc3 remain unchanged historical snapshots; no rerender/archive churn.
+
+Next inspect exact12-proteome final-panel input/runtime/configuration bindings
+before mapping any full-inference baseline cost to a factorial cell or planning
+only missing configuration measurements. Do not equate shared-panel subset/
+ordering/settings with original factorial without evidence. Scientific
+uncertainty, inventory, biological-stratum and broader package/deposition work
+remain active. No quiet-window/DGX gate, contention-only retry or unrelated
+process/service action is introduced.
+
 ## Revised Mechanism Manuscript And Figure Review Completed (2026-10-04)
 
 The preceding turn confirms the authorized shared-host amendment without
