@@ -20,7 +20,7 @@ artifact. The detailed chronology below preserves historical observations,
 including jobs described as running at the time. Those descriptions do not
 establish live work now. The current execution plan uses the local Threadripper;
 DGX permissions and services are not prerequisites. The
-[current resource snapshot](threadripper_shared_panel_snapshot_20261004_v20/panel.json)
+[latest resolved-prefix resource snapshot](threadripper_shared_panel_snapshot_20261004_v20/panel.json)
 retains twenty reviewed attempts: nineteen measured resource attempts,
 eighteen eligible shared-host observations and two exclusions. No isolated comparative timing is established.
 The separately reviewed [eighteenth attempt](THREADRIPPER_SHARED_ATTEMPT_22413.md)
@@ -33,9 +33,14 @@ All four independent terminal review categories now pass for
 is the first and only three-eligible-repeat cell; other summaries remain missing.
 All four categories also pass for [22415/index 19](THREADRIPPER_SHARED_ATTEMPT_22415.md).
 The high-sensitivity/four-proteome cell has all three attempts reviewed but
-only two eligible repeats, so no summary is supplied. Next is index 20,
-phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2, subject to actual
-full-prefix validation and fresh capacity/handoff.
+only two eligible repeats, so no summary is supplied. Index 20,
+phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2, is now
+[22416, audited pre-native abort](THREADRIPPER_SHARED_ATTEMPT_22416.md):
+the environmental response exceeded its deadline before OrthoHMM started.
+Its resource endpoints are absent. The snapshot predates this separate audit;
+its pending index-20 row is not current submission state. No job is live here.
+Preparation synchronization repair, validation, refreshed bindings, explicit
+failure-history resolution and reporting extension remain required before index 21.
 The [partial figure](threadripper_shared_resource_figure_20261004_v19/shared_threadripper_resources.pdf)
 retains the nineteen measurements and explains the unplotted abort; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
@@ -635,8 +640,11 @@ the new continuation/review/reporting sources include the resolved abort without
 fabricating a native timing record. Before index 18 (full OrthoFinder 3.1.5,
 four proteomes, repeat 2), current-source protocol/readiness preparation and
 actual native handoff pass as 22414. Its independent terminal resource/output
-review now passes. Next is index 19, high-sensitivity OrthoHMM/four proteomes,
-repeat 2, after full-prefix and fresh launch-capacity/handoff checks.
+review now passes. Index 19, high-sensitivity OrthoHMM/four proteomes,
+repeat 2, also passes terminal review. Index 20 is subsequently released as
+22416 and separately audited as a deadline-related pre-native abort with no
+resource endpoints. Preserve its failure; do not retry or fabricate a passing
+summary. Repair and explicitly resolve history before index 21.
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 

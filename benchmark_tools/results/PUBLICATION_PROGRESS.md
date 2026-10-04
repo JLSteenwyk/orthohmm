@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Index 20 Pre-Native Deadline Failure Retained (2026-10-04)
+
+Commit/push `7de68449` preserves the index-19 review, table v20, figure v19,
+focused tests and updated guide. The unchanged continuation checks the full
+twenty-identity prefix, then selects/holds/request-binds/releases only index 20
+as **22416**, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2.
+Submission public copy matches canonical metadata. Native handoff never passes.
+Parent/batch ultimately FAILED 1:0 at 3:06; parked native step COMPLETED 0:0
+at 0:38 after abort, not successful inference. No native resource endpoints.
+
+The [failure note and audit](THREADRIPPER_SHARED_ATTEMPT_22416.md) retain the
+20s observer response timeout. Actual review begins 11.799922912s after marker,
+response publishes at 21.377395496s. Observer final check records the missing
+parked-worker cgroup; deadline and wrapper abort are retained, not rewritten.
+Both memory observations exceed 128 GiB; background policy passes and records
+40.3849069388 foreign cores. Not a capacity rejection, ordinary-contention
+exclusion, OrthoHMM failure or repeated mutable-stream race. Why setup was slow
+is not isolated by these records.
+
+Capture terminal controller before purge with actual timestamps, independently
+corroborate by fresh accounting and pin raw failure evidence. New targeted
+reviewer initially rejects an empty harness-created output directory; no
+receipt is produced. Correct artifact inventory to allow only an empty real
+preparation directory while rejecting any native files, metrics and symlinks.
+Initial 20 tests pass in 3.88s; extended 27 pass in 3.79s. Corrected actual
+audit passes once and produces 8,526 bytes, SHA-256
+`53bac27059a4a636b3986d98ad57907fb106899b645cf103ce6db1f9b3bf507e`.
+Original production failure and failed audit implementation remain documented.
+No native inference, old review, calibration or unchanged runtime refresh is repeated.
+
+No job is live; no live snapshot, successful canonical index-20 summary or next
+submission is invented. Table v20/figure v19 are now explicitly described as
+the resolved twenty-identity prefix predating this separate failure audit. Do
+not overwrite their bytes or interpret their pending row as current state.
+No silent retry, background-service change or scientific retuning occurs.
+
+Next: repair observer preparation/request synchronization prospectively, retain
+the 20s response and 45s parked-worker gates and all capacity/accounting/cadence/
+integrity bounds, test the real deadline path, refresh affected source/runtime/
+protocol bindings and explicitly resolve excluded index 20. Then extend
+continuation/reporting for both pre-native aborts before selecting index 21.
+Current continuation correctly refuses unresolved index 20; do not bypass it.
+All owned launch/test/audit sessions are terminal. Full publication scope and
+remaining panel/manuscript/release work remain active, not blocked or complete.
+
 ## High-Sensitivity Repeat Reviewed; First Exclusion Preserved (2026-10-04)
 
 The preceding user-requested goal confirmation makes no new analysis progress.

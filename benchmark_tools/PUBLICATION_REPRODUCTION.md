@@ -26,7 +26,7 @@ requirements below. Retain identical resource limits, valid accounting and
 whole-run contention records; label timings as potentially confounded shared-host
 observations. Shared policy/readiness, runtime binding and native handoff now
 support actual production runs. The
-[current snapshot](results/threadripper_shared_panel_snapshot_20261004_v20/panel.json)
+[latest resolved-prefix snapshot](results/threadripper_shared_panel_snapshot_20261004_v20/panel.json)
 has twenty reviewed attempts, nineteen with measured resources, eighteen eligible
 shared-host observations and two exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
@@ -41,8 +41,14 @@ three-eligible-repeat cell; other cell summaries remain missing. No attempt is o
 All four categories also pass for [22415/index 19](results/THREADRIPPER_SHARED_ATTEMPT_22415.md),
 high-sensitivity OrthoHMM, four proteomes, repeat 2. All three planned attempts
 in that cell are reviewed, but only two are eligible: its summaries remain null.
-Next is index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
-subject to full-prefix validation and fresh capacity/handoff.
+Index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
+is now [22416, audited pre-native abort](results/THREADRIPPER_SHARED_ATTEMPT_22416.md).
+Its environmental response exceeded the release deadline; OrthoHMM did not
+start and native resource endpoints are absent. No job is live at this checkpoint.
+The snapshot above predates that separate failure audit; its pending index-20
+row is not current submission state. A prospective synchronization repair,
+validated binding/history resolution and reporting extension are required
+before advancing to index 21. Neither pre-native abort is retried.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v19/shared_threadripper_resources.pdf)
 retains the nineteen measured observations and explains the unplotted abort without isolated speedup claims. The
