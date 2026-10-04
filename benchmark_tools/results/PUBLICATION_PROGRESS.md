@@ -1,5 +1,75 @@
 # Publication Progress
 
+## Eight-Proteome Full OrthoFinder Repeat Reviewed; High Sensitivity Released (2026-10-03)
+
+The earlier goal continuations verified exact 22408 live while its remaining
+alignment/tree tasks accumulated CPU. The user-requested goal confirmation
+then verified the existing amendment without advancing analyses. On resumption,
+read the full goal and current evidence; fresh scheduler observations confirm
+exact **22409** RUNNING. Preserve its live execution rather than restarting it.
+
+Frozen index 12, full OrthoFinder 3.1.5 on eight proteomes, repeat 1, finishes
+all 64 DIAMOND searches, MCL, 1,828 species-tree alignments, 12,110 remaining
+alignment/tree tasks, STRIDE rooting, reconciliation and final writing. Retain
+MCL's warning about 22 overlap instances. Stable file counts were not treated
+as proof of stopped work or completed valid trees. Wait for enclosing post-run
+checks after native exit. Fresh terminal sacct reports parent, batch and native
+step COMPLETED 0:0; parent elapsed is 23:06 and native elapsed is 20:07.
+
+Run the unchanged index-12 independent reviewer once, retaining its terminal
+controller before purge. All four review categories pass; readback verifies
+category pins and decisions and the byte-identical canonical/public summary.
+The [retained outcome](threadripper_shared_attempt_22408.json) is 28,882 bytes,
+SHA-256 `4dec1a8b5d37d4612c175fb32ec84b14d1d525890150d22f71124b0d18745bc7`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22408.md) records 165,168 input
+proteins, 33,013 pre-phylogeny checkpoint groups including singletons and
+597,451 expanded native ortholog-pair rows, not new accuracy evaluation.
+Primary resources are 1,179.970330278 native wall seconds, 18,787.311821
+native-task CPU seconds and 10,967,740,416 native-step lifetime peak bytes.
+OrthoFinder's printed 1,174.491257 seconds is not the monotonic endpoint.
+Maximum sampled foreign demand is 55.0811204187 cores; process/pressure failure
+maps are empty. Preserve wrapper-bracket CPU and step-lifetime memory scopes.
+Contention distortion is unknown and potentially method dependent; no overhead
+subtraction, fastest-repeat selection or isolated speed ranking occurs.
+
+Only after canonical terminal review does the unchanged launcher bind the
+thirteen-attempt reviewed prefix and release index 13, OrthoHMM high sensitivity,
+eight proteomes, repeat 1, as **22409**. Its dated
+[live checkpoint](threadripper_shared_live_22409.json) verifies actual native
+affinity CPUs 0-31 and enforced job/user memory ceilings of 128 GiB.
+Preflight available-memory observations are 162,722,668,544 and 162,874,347,520
+bytes; foreign average demand is 53.0506094482 cores. The first observed process
+interval is 30.0008063340 seconds. Native logging confirms the frozen built-in
+high-sensitivity HMM search with 32 CPUs. This receipt is not terminal review
+or proof of future state. No retry, skipped identity, tuning or unrelated
+workload change occurs. Index 14 is OrthoHMM satellite_v2 on eight proteomes,
+repeat 1; release it only after terminal index-13 review.
+
+Export [thirteen-attempt tables](threadripper_shared_panel_snapshot_20261003_v13/panel.json)
+and the [updated partial figure](threadripper_shared_resource_figure_20261003_v12/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Twelve observations are eligible,
+original index 0 stays excluded and fourteen identities remain unreviewed.
+Full OrthoFinder's eight-proteome cell has two eligible repeats; no cell has
+three eligible repeats and no median/range is imputed. Inspect the actual PNG:
+thirteen observations have headroom, readable text and explicit exclusions,
+incomplete coverage, endpoint scopes and contention limitations. Earlier
+snapshots, reporting archive and main PDF retain their dated payloads. Update
+active README/reproduction/claim links and counts, not frozen timing/helper
+sources or scientific settings.
+
+Retained-table byte replay and actual PDF/pixel/provenance checks cover the
+thirteenth attempt: the component/table/figure suite passes **93 cases in
+13.42s**. Generated TSV CRLF/empty fields and SVG spacing remain hash-bound
+bytes, not normalization targets. No completed inference, statistical,
+calibration or TreeFam diagnostic is repeated. Preserve unrelated sample
+changes and frozen runtime/input bytes.
+
+Next: poll exact **22409**, review terminal native/runtime/environment/resource
+evidence once, and only then release index 14. Finish the remaining panel,
+final resource/manuscript/archive reconciliation and versioned study release.
+Full publication scope remains active and incomplete; no quiet-window or DGX
+prerequisite returns.
+
 ## Four-Proteome High Sensitivity Reviewed; Eight-Proteome Full OrthoFinder Released (2026-10-03)
 
 The preceding goal turn makes a validated execution/reporting milestone.
