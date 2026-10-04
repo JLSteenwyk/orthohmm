@@ -1,0 +1,476 @@
+{
+  "available_memory_at_handoff_bytes": 659967463424,
+  "cell": "p0_c0_r0",
+  "evidence": [
+    {
+      "bytes": 3320,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_00_replacement.json",
+      "sha256": "9ff63c6bc382abe62ffeb4f046bcc422d82dc207a4e2256bb9ecb9361ad54455"
+    },
+    {
+      "bytes": 489120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+      "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+    },
+    {
+      "bytes": 2524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_policy_repaired_20261004.json",
+      "sha256": "be9fa07b4eb5dee63d0a7d0d9c074a13dbc8b5b2146eb6a9a2d05ccf53af4b6c"
+    },
+    {
+      "bytes": 6528,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_runtime_lookup_repaired_20261004.json",
+      "sha256": "11cb73a07588744d188fec0e4852fd452e8ddf098b64b3a91bc991181729619f"
+    },
+    {
+      "bytes": 4477,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_attempt_22426.json",
+      "sha256": "3985c5528c5b9c3ebf7ffd50e1cd2ac3172acd1cea0a7c98c352573fa7a0a8cc"
+    },
+    {
+      "bytes": 52671,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_cost_replacement_20261004.xml",
+      "sha256": "15e05d7abc2797d7832fd39797637e85996bc26bed169192679f15dcb173bb46"
+    },
+    {
+      "bytes": 6893,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/preparation.json",
+      "sha256": "bef7905c3f98c7960b3b126bec5d907213d41e9c6280e3ec2100d4ebba03f33f"
+    },
+    {
+      "bytes": 626,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/command.json",
+      "sha256": "3e85cb01833fb293f1d639d56d1ebfd1b7d1f4d33feb7fe838925b54d718e72f"
+    },
+    {
+      "bytes": 4606,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/ready.json",
+      "sha256": "1a47308119b114f68cc682d1a2d6263e74ce2418b6ae9c5486dd3c6972ec2e02"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 5332,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/release_budget.json",
+      "sha256": "1958cc41c732aa1b2f79ec760eb52db356ed9531a302b082f312d1464fc7f864"
+    },
+    {
+      "bytes": 1272,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/environment_preflight.json",
+      "sha256": "bdbc2db7909b57e5d3a97a5c1927984edbb3055abc86caaba09770fa6168f2c0"
+    },
+    {
+      "bytes": 2420752,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/measurement/launch_environment_observation.json",
+      "sha256": "a55139d11d7953bea87814fe1aa42e1fe1f0fc196e89d263af9dcbcbb2923dd8"
+    }
+  ],
+  "full_native_outcome_available": false,
+  "host_rows_observed": 5,
+  "index": 0,
+  "job_id": 22427,
+  "limitations": [
+    "Live launch snapshot, not completion, timing admission or output equivalence.",
+    "Native receipt, point inventory and process streams remain live/mutable; final bindings require terminal review.",
+    "Shared-host distortion is unknown and potentially method-dependent; no isolated efficiency ranking."
+  ],
+  "native_costs_available": false,
+  "native_receipt_mutable_source": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native_execution.json",
+  "native_receipt_snapshot": {
+    "accuracy_evaluated": false,
+    "automatic_retry": false,
+    "cell": "p0_c0_r0",
+    "cold_cache_claim": false,
+    "factors": {
+      "active_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": false
+      },
+      "candidate_expansion": false,
+      "candidate_gate_decoupled": false,
+      "cell": "p0_c0_r0",
+      "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+      "original_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "production_globals_modified": false,
+      "production_source_modified": false,
+      "profile_expansion": false,
+      "reconciliation": false
+    },
+    "index": 0,
+    "native_order": [
+      "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "Ciona_intestinalis.KH.pep.all.fa",
+      "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "Mus_musculus.GRCm38.pep.all.fa",
+      "Danio_rerio.GRCz11.pep.all.fa",
+      "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "Gallus_gallus.GRCg6a.pep.all.fa",
+      "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "Homo_sapiens.GRCh38.pep.all.fa"
+    ],
+    "placement": {
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "ancestors": [
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22427/step_0/user/task_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22427/step_0/user"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22427/step_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22427"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice"
+        }
+      ],
+      "cgroup": "0::/system.slice/slurmstepd.scope/job_22427/step_0/user/task_0\n",
+      "host": "bizon",
+      "pid": 367294,
+      "slurm": {
+        "SLURM_CPUS_PER_TASK": "64",
+        "SLURM_JOB_ID": "22427",
+        "SLURM_MEM_PER_NODE": "131072"
+      },
+      "topology": [
+        {
+          "core": 0,
+          "cpu": 0,
+          "package": 0
+        },
+        {
+          "core": 1,
+          "cpu": 1,
+          "package": 0
+        },
+        {
+          "core": 2,
+          "cpu": 2,
+          "package": 0
+        },
+        {
+          "core": 3,
+          "cpu": 3,
+          "package": 0
+        },
+        {
+          "core": 4,
+          "cpu": 4,
+          "package": 0
+        },
+        {
+          "core": 5,
+          "cpu": 5,
+          "package": 0
+        },
+        {
+          "core": 6,
+          "cpu": 6,
+          "package": 0
+        },
+        {
+          "core": 7,
+          "cpu": 7,
+          "package": 0
+        },
+        {
+          "core": 8,
+          "cpu": 8,
+          "package": 0
+        },
+        {
+          "core": 9,
+          "cpu": 9,
+          "package": 0
+        },
+        {
+          "core": 10,
+          "cpu": 10,
+          "package": 0
+        },
+        {
+          "core": 11,
+          "cpu": 11,
+          "package": 0
+        },
+        {
+          "core": 12,
+          "cpu": 12,
+          "package": 0
+        },
+        {
+          "core": 13,
+          "cpu": 13,
+          "package": 0
+        },
+        {
+          "core": 14,
+          "cpu": 14,
+          "package": 0
+        },
+        {
+          "core": 15,
+          "cpu": 15,
+          "package": 0
+        },
+        {
+          "core": 16,
+          "cpu": 16,
+          "package": 0
+        },
+        {
+          "core": 17,
+          "cpu": 17,
+          "package": 0
+        },
+        {
+          "core": 18,
+          "cpu": 18,
+          "package": 0
+        },
+        {
+          "core": 19,
+          "cpu": 19,
+          "package": 0
+        },
+        {
+          "core": 20,
+          "cpu": 20,
+          "package": 0
+        },
+        {
+          "core": 21,
+          "cpu": 21,
+          "package": 0
+        },
+        {
+          "core": 22,
+          "cpu": 22,
+          "package": 0
+        },
+        {
+          "core": 23,
+          "cpu": 23,
+          "package": 0
+        },
+        {
+          "core": 24,
+          "cpu": 24,
+          "package": 0
+        },
+        {
+          "core": 25,
+          "cpu": 25,
+          "package": 0
+        },
+        {
+          "core": 26,
+          "cpu": 26,
+          "package": 0
+        },
+        {
+          "core": 27,
+          "cpu": 27,
+          "package": 0
+        },
+        {
+          "core": 28,
+          "cpu": 28,
+          "package": 0
+        },
+        {
+          "core": 29,
+          "cpu": 29,
+          "package": 0
+        },
+        {
+          "core": 30,
+          "cpu": 30,
+          "package": 0
+        },
+        {
+          "core": 31,
+          "cpu": 31,
+          "package": 0
+        }
+      ]
+    },
+    "plan": {
+      "bytes": 489120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+      "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+    },
+    "status": "native_factorial_running"
+  },
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791155332181578109,
+  "point_count_observed": 133,
+  "prepared_genes": 251378,
+  "proteomes": 12,
+  "publication_ready": false,
+  "raw_scheduler": "JobId=22427 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:03:03 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-04T19:05:13 EligibleTime=2026-10-04T19:05:49 AccrueTime=2026-10-04T19:05:49 StartTime=2026-10-04T19:05:49 EndTime=2026-10-05T21:05:49 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T19:05:49 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:366421 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=9ff63c6bc382abe62ffeb4f046bcc422d82dc207a4e2256bb9ecb9361ad54455  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_22427.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_22427.log TresPerTask=cpu=64 \n",
+  "ready_pid": 367212,
+  "ready_proc_stat": "367212 (python) S 367208 367212 367207 0 -1 4194560 6618 0 0 0 37 9 0 0 20 0 1 0 80287157 32284672 5359 137438953472 4321280 6396818 140737459972960 0 0 0 0 16781312 2 1 0 0 17 25 0 0 0 0 0 7459464 7666528 1006542848 140737459979945 140737459980330 140737459980330 140737459998579 0\n",
+  "run_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00",
+  "scheduler": {
+    "allocation_mode": "shared",
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "2026-10-04T19:05:49",
+      "AllocNode:Sid": "bizon-link:366421",
+      "AllocTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "BatchFlag": "1",
+      "BatchHost": "bizon",
+      "CPUs/Task": "64",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh",
+      "Comment": "9ff63c6bc382abe62ffeb4f046bcc422d82dc207a4e2256bb9ecb9361ad54455",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "2026-10-04T19:05:49",
+      "EndTime": "2026-10-05T21:05:49",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "22427",
+      "JobName": "orthohmm_factorial_cost",
+      "JobState": "RUNNING",
+      "LastSchedEval": "2026-10-04T19:05:49",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "bizon",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "64",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "1",
+      "QOS": "normal",
+      "Reason": "None",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:03:03",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "2026-10-04T19:05:49",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_22427.log",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_22427.log",
+      "SubmitTime": "2026-10-04T19:05:13",
+      "SuspendTime": "None",
+      "TimeLimit": "1-02:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=64",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "job_id": 22427,
+    "limitations": [
+      "Recorded controller fields only; caller must verify freshness and submission provenance.",
+      "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+      "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+    ],
+    "scheduler_exit_code": "0:0",
+    "scheduler_state": "RUNNING",
+    "scheduler_terminal_verified": false,
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "status": "threadripper_controller_record_verified"
+  },
+  "scientific_timings_admitted": false,
+  "status": "native_factorial_search_confirmed_live"
+}

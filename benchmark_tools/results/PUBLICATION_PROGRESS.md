@@ -1,5 +1,34 @@
 # Publication Progress
 
+## First Full Native Factorial Search Confirmed Live (2026-10-04)
+
+After actual packaging-only lookup repair, freeze/push the prospectively
+amended replacement plan/policy at1b5a1aeb. Final369 tests pass without
+failures/skips, including actual frozen-plan bindings, unchanged factors/
+inputs/order/resources and retained22426 failure. Create one new held job
+22427 and bind its request SHA to the scheduler comment before release.
+No quiet-window/DGX gate, unrelated process change or outcome-based retry.
+
+Unlike failed22426, actual runtime/lookup, fresh-copy/gene ownership,
+CPU/RAM/typed-process/capacity and release-budget checks pass. Native HMM
+search is confirmed live on all251,378 proteins/12 OrthoBench species,
+with P0C0R0: profile expansion off, sensitive initial HMM/k4/cap100/
+multipass unchanged. Actual affinity0-31/128GiB cap and about614.64GiB
+host available at handoff are retained. At live snapshot133 native points
+and5 host rows exist; native log reports fresh all-to-all built-in search.
+No terminal outcome/cost/accuracy is yet available or admitted.
+
+See [live execution/result routing](NATIVE_FACTORIAL_EXECUTION_START_22427.md)
+and its raw snapshot/immutable launch pins. Repaired panel is
+`benchmarks/results/native_factorial_cost_v2_20261004`, index0 session/run;
+original failedv1 remains untouched. Next poll22427 and actual native handles,
+then independently review terminal outputs/resources/environment/source/
+runtime before any explicit next identity. Do not restart completed panel,
+rerun finished diagnostics or edit pinned benchmark Python helpers while
+this job's before/after checks are live. Metadata/ledger additions alone
+do not authorize another run. All wider goal requirements remain unchanged,
+active and not yet satisfied; publication readiness is unproven.
+
 ## First Full-Cost Preflight Retained And Runtime Binding Repaired (2026-10-04)
 
 Prepare/push separate executor at3c275a02 and freeze/push its thirteen-identity
