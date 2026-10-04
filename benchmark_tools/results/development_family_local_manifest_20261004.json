@@ -1,0 +1,578 @@
+{
+  "local_reports": [
+    {
+      "bytes": 569100,
+      "path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004/register.json",
+      "sha256": "8d74718e05d99485241d71f0431d0a9ec24c5eeb2e3fc0982ed14bb476d979a2"
+    },
+    {
+      "bytes": 571775,
+      "path": "benchmark_tools/results/all_benchmark_metadata_integrated_20261004_v2/register.json",
+      "sha256": "62c170ec62901c1515946064aa1cce80a41a22d661176112c51be3254a36ee22"
+    },
+    {
+      "bytes": 1724116,
+      "path": "benchmark_tools/results/all_benchmark_provenance_20261004/register.json",
+      "sha256": "1d6eb2c9d216af64450bea499532a84b6efc4470a31428321acacf24c79dda76"
+    },
+    {
+      "bytes": 27005,
+      "path": "benchmark_tools/results/dgx_pressure_flags_21889_20260919.json",
+      "sha256": "9f5959e2589f2321f9ee17b411c25ef6ca1a38dc1f7f448b20a90f4e4c0ab1c0"
+    },
+    {
+      "bytes": 12325,
+      "path": "benchmark_tools/results/figures_current_accuracy_overview_20261002/manifest.json",
+      "sha256": "0f7766996d193b31130dddfbcc2fb3eab3c7d8d5271312d2efa6cddc770adb4a"
+    },
+    {
+      "bytes": 2688,
+      "path": "benchmark_tools/results/figures_frozen_null_scores_20261002/manifest.json",
+      "sha256": "f245a35ba5e57ac262fa271a4a4f9196bb0e32f1581dd3838ed096c8c73fd721"
+    },
+    {
+      "bytes": 1445,
+      "path": "benchmark_tools/results/figures_simulation_fixed_native_20260916/manifest.json",
+      "sha256": "0612cc784533b8fbf84b39fde100b63a40dc1b9d3c360ad73e47866f8bb36323"
+    },
+    {
+      "bytes": 1461,
+      "path": "benchmark_tools/results/figures_simulation_variable_native_20260916/manifest.json",
+      "sha256": "e43afe24641b3d315747281552d210c84b30b7c7def4ebed6a2a76af59a44465"
+    },
+    {
+      "bytes": 85162,
+      "path": "benchmark_tools/results/manuscript_asset_review_20260923_v5.json",
+      "sha256": "e1b69155d2176aaa96f2681a1b47b8b4501f2b6e61e8b80420d36bb334c1102a"
+    },
+    {
+      "bytes": 1401,
+      "path": "benchmark_tools/results/matched_graph_figure_20260926/manifest.json",
+      "sha256": "f6fce08055e237095e4bc6e2e34b5efa9e4e93fcf483bc266f34b29329bc78a8"
+    },
+    {
+      "bytes": 784481,
+      "path": "benchmark_tools/results/matched_graph_stage_trace_20260926/results.json",
+      "sha256": "bbb778e54740724aeef6c1260685a78458ea6a1b7d31a43d90ba392ba60ed7fa"
+    },
+    {
+      "bytes": 7876,
+      "path": "benchmark_tools/results/ob_complete_uncertainty_check_20260928/crosscheck.json",
+      "sha256": "43d21b49dade8788b64ceb14f1ed3711124be57c5144a6212e1acb592f28ef5f"
+    },
+    {
+      "bytes": 18410,
+      "path": "benchmark_tools/results/orthobench_all_production_satellite_v2_candidates_20260902.json",
+      "sha256": "37e0f4d7a3393dc628ab07885b55d9c9554d7cfeefd2ecb45d1c7c34d85062f7"
+    },
+    {
+      "bytes": 18374,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_confidence_20260902.json",
+      "sha256": "0659b234c8c440a13acc0cc2e230a4b79784ee3f4e655fe44964c090b75b9f0d"
+    },
+    {
+      "bytes": 18409,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_minvariance_20260902.json",
+      "sha256": "9961148e5569817d25467990ff9e41463bb2fe8445825657d354b29fd1d61c2b"
+    },
+    {
+      "bytes": 18397,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm003_confidence_20260902.json",
+      "sha256": "6d793989a21d4d22e459c3a32698a5ac32c7f956150bcc4de6fac75e9d1ec845"
+    },
+    {
+      "bytes": 18411,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm003_mapped_event_20260902.json",
+      "sha256": "61dc28310dfe800aad056758dc830fcea004169d3f29a98eea3706c04182230a"
+    },
+    {
+      "bytes": 18431,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm003_minvariance_20260902.json",
+      "sha256": "a4a71a76cfb070911f8e2535f06cfb0e27597e7194dcaba7cea4c6ee916c43cf"
+    },
+    {
+      "bytes": 18409,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm003_species_overlap_20260902.json",
+      "sha256": "3deca75658d0178da1c974c4f18f03e682cc07f9a0c4fe932c54420f8cdc03bf"
+    },
+    {
+      "bytes": 18422,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm003_supported_children_20260902.json",
+      "sha256": "06c610e66bafd1ea8f181a7d7b19009a07c77b78996912fe5dc4ecbd9917eebd"
+    },
+    {
+      "bytes": 18430,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm004_minvariance_20260902.json",
+      "sha256": "af7646cb6f2807a163e0df850e8ad6e6912b8a4ed5574478681a23d1a89c67bf"
+    },
+    {
+      "bytes": 18429,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_norm005_minvariance_20260902.json",
+      "sha256": "f6410261ee270404d47d3306bc4eca014ef3b83e2f2095e444bd5b36616813c3"
+    },
+    {
+      "bytes": 18387,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_species_overlap_20260902.json",
+      "sha256": "a9f3a490011a9d875528433c2fba2861ba6054fa5a501dc9c370778b6730871b"
+    },
+    {
+      "bytes": 18400,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_itermargin050_supported_children_20260902.json",
+      "sha256": "0f65ce7e37bb010fe80f1fe82bf212ef1a46e2412e4c5c29ab54bbef03b4f291"
+    },
+    {
+      "bytes": 18395,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_margin200_minvariance_20260902.json",
+      "sha256": "aa4e99b402ac37cdd0caa9fb09167762d8d6334d5736139b82aa8a86ad685f32"
+    },
+    {
+      "bytes": 18367,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_a4_minvariance_20260902.json",
+      "sha256": "0cff83eb9069738c1133f7d40a4937767bf46f0b9649435d910d2337b3384660"
+    },
+    {
+      "bytes": 18397,
+      "path": "benchmark_tools/results/orthobench_all_satellite_m12_i2_seedbounded_minvariance_20260902.json",
+      "sha256": "ac1136188ebcbb6ea4ab7b65e191dee8119c27de9d900ad6e88dba4e4823777c"
+    },
+    {
+      "bytes": 10361,
+      "path": "benchmark_tools/results/orthobench_development_production_satellite_v2_candidates_20260902.json",
+      "sha256": "60345c24c0011044d9a68d8182a13daf2081e37df51428f3f86ff5c393fe83d3"
+    },
+    {
+      "bytes": 10327,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_confidence_20260902.json",
+      "sha256": "511716fd01f794447612480ee1df164b5540f089c443e21a39c2f39a22b41b92"
+    },
+    {
+      "bytes": 10362,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_minvariance_20260902.json",
+      "sha256": "c9966e820c4f14268060f192d607041aa744a63ccca2b8f34facc0239b9d2fdb"
+    },
+    {
+      "bytes": 10364,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_norm003_mapped_event_20260902.json",
+      "sha256": "18371c4e37895e254067807612d1c8eabea7519092e2bb85f4978ea4aec092b9"
+    },
+    {
+      "bytes": 10383,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_norm003_minvariance_20260902.json",
+      "sha256": "43e1b5880c31888bf84ea5acb1cd2c474a95b078cdf7b131f5737eb2291280d8"
+    },
+    {
+      "bytes": 10383,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_norm004_minvariance_20260902.json",
+      "sha256": "2eebbc99eb07d58e475c48eb92ef1118ed6ec3372f36c28200424d04242fce3e"
+    },
+    {
+      "bytes": 10384,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_norm005_minvariance_20260902.json",
+      "sha256": "c112269a856d90a7f8f512f9c7e5e63ac01af581beafc5fd03a0b4daf407e88d"
+    },
+    {
+      "bytes": 10340,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_species_overlap_20260902.json",
+      "sha256": "cabd0deb1a39ab62f4e0dadb4822f5ef862325312bfa82d134cc364cb85742ea"
+    },
+    {
+      "bytes": 10354,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_itermargin050_supported_children_20260902.json",
+      "sha256": "ee156a6d96827f5f16445f465b064a6cbfcc5751eced391f62492bd562a37473"
+    },
+    {
+      "bytes": 10352,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_margin200_minvariance_20260902.json",
+      "sha256": "a2c631a5811843a5371d52c9759067ae8e802c53e2fe87f34ea5e8af5f1585a3"
+    },
+    {
+      "bytes": 10318,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_a4_minvariance_20260902.json",
+      "sha256": "1b94c62425e1c5c45226d6457ca35b1ca82be0154c7e4d7d1cad7b2358916805"
+    },
+    {
+      "bytes": 10348,
+      "path": "benchmark_tools/results/orthobench_development_satellite_m12_i2_seedbounded_minvariance_20260902.json",
+      "sha256": "5a07ceaebc8778e0a85cdd06c4742e208e0ecfe3710f1693c58d925060900d23"
+    },
+    {
+      "bytes": 10373,
+      "path": "benchmark_tools/results/orthobench_validation_production_satellite_v2_candidates_20260902.json",
+      "sha256": "1f36530132671776b81e72f5d92cde2a497897ab7bf658d903b02d4c536cee1f"
+    },
+    {
+      "bytes": 10348,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_confidence_20260902.json",
+      "sha256": "822afe7eb0bf472978e072498cc489985c4a62f8191a83c2632c1b205bc58fd2"
+    },
+    {
+      "bytes": 10385,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_minvariance_20260902.json",
+      "sha256": "22b17ac9d83ed0058f49adafb0c97fc8ec48f29c0e6c1f6c99e17c40c8df04d1"
+    },
+    {
+      "bytes": 10380,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_norm003_mapped_event_20260902.json",
+      "sha256": "9e2a7f41fe124f05eab898a2eb35e0a9e60c1aabe7a57c115e0248ba713feeec"
+    },
+    {
+      "bytes": 10408,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_norm003_minvariance_20260902.json",
+      "sha256": "d8247c878894475b43428d605fa55b5ab8b0eddf4f71b8f7e491a52392c9466e"
+    },
+    {
+      "bytes": 10408,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_norm004_minvariance_20260902.json",
+      "sha256": "dbc96779b1145269cafd43a62d13a0787436cf320641c3f9c016a1e525077f5e"
+    },
+    {
+      "bytes": 10408,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_norm005_minvariance_20260902.json",
+      "sha256": "e9eb3e145c949e811b239ffc9e06ee7b66e830335c0af1f004021af0ba1d506f"
+    },
+    {
+      "bytes": 10363,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_species_overlap_20260902.json",
+      "sha256": "755228381369234944bab5c33fee83faffd02241c146b4ce98a609e9c2ff345d"
+    },
+    {
+      "bytes": 10373,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_itermargin050_supported_children_20260902.json",
+      "sha256": "47768177c2f8721b7674076734b733e70e0e9c91d72fd12be94ad6794e043fca"
+    },
+    {
+      "bytes": 10367,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_margin200_minvariance_20260902.json",
+      "sha256": "1f4ec39f0948b0d50002aea37680739e22985a90c522e774ac428c012824ff4b"
+    },
+    {
+      "bytes": 10342,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_a4_minvariance_20260902.json",
+      "sha256": "2d7e1a87db22a0bac25c1d09cfaefea71c7d4289444dbc14575bb6ca4a365e07"
+    },
+    {
+      "bytes": 10371,
+      "path": "benchmark_tools/results/orthobench_validation_satellite_m12_i2_seedbounded_minvariance_20260902.json",
+      "sha256": "577783f428f8448800798c31af37b43a3731b8613d6d6e3e2f3d9433f602e24a"
+    },
+    {
+      "bytes": 4302,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a3_20260902.json",
+      "sha256": "eccb3ebfff119d971099f7bc207f3e3f8a0447607ce79c666fb36d605ce1fb2b"
+    },
+    {
+      "bytes": 11888,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a3_dev_audit_20260902.json",
+      "sha256": "c24fd2651fcc5ed84e144f73beaf8862b0d0de8bd7299a58073bfd9a1e9ad63b"
+    },
+    {
+      "bytes": 4302,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_20260902.json",
+      "sha256": "706bc382cba3e2284ff4264990729c806e57b2d4ee52b4c36d73b0f0981cff2e"
+    },
+    {
+      "bytes": 11887,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_dev_audit_20260902.json",
+      "sha256": "50e65101a2cc81035a42c80bc8aa2f3499b335639166061d208ea7fddeba15d9"
+    },
+    {
+      "bytes": 4432,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_20260902.json",
+      "sha256": "7556152006caffb1199d6054061f26da09da31ec966a0ac25805c34540a9fa2a"
+    },
+    {
+      "bytes": 11939,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_dev_audit_20260902.json",
+      "sha256": "a86f0f82b61b1e8ab1a29c9f8d7850c1984f4c6f80d00f778c446e52ae717b1a"
+    },
+    {
+      "bytes": 4457,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_20260902.json",
+      "sha256": "7d1286182832b91ccaea4433fb9d45e190d715b5bcdc0bd44c100b7f55aa77dd"
+    },
+    {
+      "bytes": 11949,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_dev_audit_20260902.json",
+      "sha256": "32287a95433a25babb7ac4872cac8aa20058456196b0b7c48ff2f37824f4f5eb"
+    },
+    {
+      "bytes": 14645755,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_merge_trace_20260902.json",
+      "sha256": "5f6da18121525899d7349bb64bf035de73f0f85bb3ecddc4516a8411944734a9"
+    },
+    {
+      "bytes": 21078,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_merge_trace_validation_analysis_20260902.json",
+      "sha256": "05a28814c965ec1e737d03aa0ac8e99c9250c4d0b811457ed34531f16f49d5df"
+    },
+    {
+      "bytes": 4942,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_traced_20260902.json",
+      "sha256": "31004130fcb0510645c7adc4339f3c70b7fb1573e21520b85708a4c733f63e0d"
+    },
+    {
+      "bytes": 12127,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm003_validation_audit_20260902.json",
+      "sha256": "9debf396a0eaf318f7e74aa40e9467aec3e9960b0ac36186cfbacc47a39c083f"
+    },
+    {
+      "bytes": 4456,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm004_20260902.json",
+      "sha256": "a1316a25ec93173d48264d37e9c3bdb38b9cb814c7a78b39f366362160309f0a"
+    },
+    {
+      "bytes": 11953,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm004_dev_audit_20260902.json",
+      "sha256": "8a5a913353c2367d44e5dfb93875acf265558654d8401dc7fc75159c46672dc1"
+    },
+    {
+      "bytes": 12131,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm004_validation_audit_20260902.json",
+      "sha256": "389437110b08b83a88e9494dac893ec34af10aa38018467bb467109ade75f43c"
+    },
+    {
+      "bytes": 4456,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm005_20260902.json",
+      "sha256": "994ebd45e495a3d9979fcc17f0dee67c3ab4cfe730137705cd7f3d58128c0d3c"
+    },
+    {
+      "bytes": 11953,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm005_dev_audit_20260902.json",
+      "sha256": "09ecb7e1e9f2def1dd91a0aa6cd5dc4b8a23602865c6139eb2638a547ffd38a5"
+    },
+    {
+      "bytes": 12131,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_norm005_validation_audit_20260902.json",
+      "sha256": "fcca6b578248ec11d9042289916a9edcbd7b90b91332770e64535c70f1c04725"
+    },
+    {
+      "bytes": 12117,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin050_validation_audit_20260902.json",
+      "sha256": "a0d3cead39493999bc50a7d135517f3670e31a6a091c5f3c13759042aa1c85b5"
+    },
+    {
+      "bytes": 4431,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin060_20260902.json",
+      "sha256": "459caa4ddd2865a9c60dbfb0c18b6374f8bda68d25f82462691214d8923f1337"
+    },
+    {
+      "bytes": 11931,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin060_dev_audit_20260902.json",
+      "sha256": "eac3583b021376d9f2cc1cdf1e33f0e28d0e847617bc35e606c0a76639f58071"
+    },
+    {
+      "bytes": 12107,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_itermargin060_validation_audit_20260902.json",
+      "sha256": "dc853713d174f331c61cdadcfc40a27a51d7020444eb2fd774d71eedaf80e7ab"
+    },
+    {
+      "bytes": 4330,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_margin200_20260902.json",
+      "sha256": "d63246e8fafaf93b386ffaa1bcec2ce27c557edefb25e6395b772e132ae3c895"
+    },
+    {
+      "bytes": 11914,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_margin200_dev_audit_20260902.json",
+      "sha256": "85084c84cc0a964660e5bd39186a2d0219da2baab21674127f6af441560c755c"
+    },
+    {
+      "bytes": 12090,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_margin200_validation_audit_20260902.json",
+      "sha256": "96790e6de6e02d4c5e97d5d7ebb23812fd07c58acc30c256def14483bf076888"
+    },
+    {
+      "bytes": 4328,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_margin250_20260902.json",
+      "sha256": "a45231bff790ff7cd18d4c8361ae87d6faa3c616db32dde6f9cca308529fc709"
+    },
+    {
+      "bytes": 11916,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_margin250_dev_audit_20260902.json",
+      "sha256": "0877597cfd6419f01e12eaae180f7d254c94c776a3ba03c814e282033698827b"
+    },
+    {
+      "bytes": 15557028,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_merge_trace_20260902.json",
+      "sha256": "4ae58aa47f309f51ecf0b74aa705863ee64dadb7b53e962314004bc6c282dd1d"
+    },
+    {
+      "bytes": 19166,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_merge_trace_dev_analysis_20260902.json",
+      "sha256": "3be62c0f5071d734634e988ff7d9c54bc272993f989890cbf9c7effac57b3fee"
+    },
+    {
+      "bytes": 4746,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_traced_20260902.json",
+      "sha256": "0355d8ea5e297a0fbd9260ef051781da0dbde198e1e84658a5b3d9c3c95a96e9"
+    },
+    {
+      "bytes": 12065,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_a4_validation_audit_20260902.json",
+      "sha256": "7947a630c63ba778f4ae2477445b7f5693a1752bbb64ca4cd44aad1650101d9c"
+    },
+    {
+      "bytes": 4318,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_ratio100_20260902.json",
+      "sha256": "978788ab20bac2d44aa5b7efdb7c4668b0d2450ecc1bc2059e0f87b79b421d2b"
+    },
+    {
+      "bytes": 11918,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_ratio100_dev_audit_20260902.json",
+      "sha256": "751344937d15da999cab82ab420795b454811d0946bf855394e71f1094d195f9"
+    },
+    {
+      "bytes": 4328,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_seedbounded_20260902.json",
+      "sha256": "efaf54aade0b619711eefe6eddab09424422014fbc44dc7ed533066680553b7a"
+    },
+    {
+      "bytes": 11931,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_seedbounded_dev_audit_20260902.json",
+      "sha256": "faeb9f88d50066c71ddb3d1d76d7d9d8a34ab5e22e07b9b48aa8a1096f7baedc"
+    },
+    {
+      "bytes": 12093,
+      "path": "benchmark_tools/results/phylogeny_candidate_satellite_m12_i2_seedbounded_validation_audit_20260902.json",
+      "sha256": "d24445aaa238e585763d38fccb3f5a537bd0ab58ad7106dc50a73fb1f30e5dd9"
+    },
+    {
+      "bytes": 5761,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_minvariance_20260902.json",
+      "sha256": "a7454b411aa0d3d7aaffaaa6c761eba74c707ec56095305db955bb3f9a58c26d"
+    },
+    {
+      "bytes": 1908,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_norm003_mapped_event_20260902.json",
+      "sha256": "569b29a642ee67cf62997061eaed1ae342f6a30e5ee0b43cbf962bc0b2180adb"
+    },
+    {
+      "bytes": 5853,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_norm003_minvariance_20260902.json",
+      "sha256": "067ce7c5b30a9667aff740b12b0371a91946ece67828832e353ac3cf3c49f4ca"
+    },
+    {
+      "bytes": 2959,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_norm003_root_rules_20260902.json",
+      "sha256": "087373c5673359ebf89f164c2cf1fc9d1209b1f359805bb5751d3a70cc7ef113"
+    },
+    {
+      "bytes": 5870,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_norm004_minvariance_20260902.json",
+      "sha256": "fd306deedac69a860d3662a92828c3fbe8d5e026a5394448f2a4c22c2ab2e3d3"
+    },
+    {
+      "bytes": 5854,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_norm005_minvariance_20260902.json",
+      "sha256": "4215c947dd77dc9a81039a07e9d43fd58091bfe1a2528f1edf4fabff00b1513e"
+    },
+    {
+      "bytes": 2909,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_itermargin050_root_rules_20260902.json",
+      "sha256": "5caad08ddc6582df3d04edc8717f0c5194db6ae33ee55e902d536f3e5ba9a8e1"
+    },
+    {
+      "bytes": 5749,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_margin200_minvariance_20260902.json",
+      "sha256": "ba73fdba8fbd915a06e36982b35183f7289e329c4584a5f860d75b139739d97d"
+    },
+    {
+      "bytes": 5674,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_a4_minvariance_20260902.json",
+      "sha256": "cc0ea7fc3ab7779506fcb576798404cdcf4e50ff7605d9e9b5f0ab4e198b8732"
+    },
+    {
+      "bytes": 5722,
+      "path": "benchmark_tools/results/phylogeny_satellite_m12_i2_seedbounded_minvariance_20260902.json",
+      "sha256": "5571e01bd7db26432cbfb7a4c32180893df90c114d0119e5763dc9ed1176ee2a"
+    },
+    {
+      "bytes": 4628,
+      "path": "benchmark_tools/results/publication_main_layout_20260928_v6.json",
+      "sha256": "e7e1f52d67d4885f58b2bd80a83f2ec79232c7e9287e3c0ec46e32e08d5947a9"
+    },
+    {
+      "bytes": 7321,
+      "path": "benchmark_tools/results/publication_main_render_20260927.json",
+      "sha256": "5893aafbbe4e250ae48c35b63f9edbcc12c7ed5359b6a0e081d24527810fc99c"
+    },
+    {
+      "bytes": 10246,
+      "path": "benchmark_tools/results/publication_main_render_20260928_v6.json",
+      "sha256": "28fcf46e3d13f8ff1bedf5eaa6b6497e67f1747d5bc3a98abe8e9aecf9bb6505"
+    },
+    {
+      "bytes": 45301,
+      "path": "benchmark_tools/results/publication_main_with_figures_20261002/assembly.json",
+      "sha256": "7d658fc4acab5729251727a714407d2a754e21ca368f02dbce91b1cb067e6e8a"
+    },
+    {
+      "bytes": 46006,
+      "path": "benchmark_tools/results/publication_main_with_figures_20261002_v2/assembly.json",
+      "sha256": "0e76d60b2b3c398c8d24941316ed232d14cdf6bb4db046067b6bfdf26d87646b"
+    },
+    {
+      "bytes": 151323,
+      "path": "benchmark_tools/results/qfo_original_archive_mapping_coverage_20260917.json",
+      "sha256": "181e3d8a1ead9a5486532c1dc8045204ef5a32a1fff836b40b558898fbfe8d74"
+    },
+    {
+      "bytes": 35696908,
+      "path": "benchmark_tools/results/qfo_parameter_complete_export_20261001/manifest.json",
+      "sha256": "33c6a699ebd692e6259d4cc8a1f79174d3c3f45e91a1ea25d7dafad64bb0ca46"
+    },
+    {
+      "bytes": 10028063,
+      "path": "benchmark_tools/results/qfo_parameter_partial_export_20261001_v2/manifest.json",
+      "sha256": "600ecb3495152531985fe850af6dea6ebf687e7346cc99e9560a01cf8fc017df"
+    },
+    {
+      "bytes": 25454943,
+      "path": "benchmark_tools/results/simulation_gene_tree_oracle_20261004.json",
+      "sha256": "d2299d73238f1a4bb511320add9a62dbb427bc1ea9b4f414e74aefab20e7ad53"
+    },
+    {
+      "bytes": 8623,
+      "path": "benchmark_tools/results/swiss_duplication_features_20260923.json",
+      "sha256": "8508e602e845159dde77e6fa49b8d411301156464d84ca94111cd1814964c9d8"
+    },
+    {
+      "bytes": 29028,
+      "path": "benchmark_tools/results/swiss_retained_mapping_20260923.json",
+      "sha256": "e776ed2deef025a1408579036437129d24848ff7db9053f47eb26641cce20514"
+    },
+    {
+      "bytes": 184866,
+      "path": "benchmark_tools/results/swiss_retained_tree_inventory_20260923.json",
+      "sha256": "52ccc54120770f285bf040b3c70126042e2b03224f2253ba211bf3e048dd55fb"
+    },
+    {
+      "bytes": 184867,
+      "path": "benchmark_tools/results/swiss_retained_tree_inventory_v2_20260923.json",
+      "sha256": "f794ecbb7227541cb334a0029568c3b64fe6b82f8cdcacfe9b83404275cc97ce"
+    },
+    {
+      "bytes": 9801,
+      "path": "benchmark_tools/results/threadripper_process_stream_negative_20260928.json",
+      "sha256": "0937a48cfe5b7f494d5c3207219556b657cd89ede09e781daa3af1cc78e301bd"
+    },
+    {
+      "bytes": 1481978,
+      "path": "benchmark_tools/results/threadripper_resumption_load_20260929.json",
+      "sha256": "6d35b997ca70655fca3bf134229b9a74790cbf06a19a09aaf4f3790dc904d6d3"
+    },
+    {
+      "bytes": 19385,
+      "path": "benchmark_tools/results/threadripper_shared_panel_snapshot_20261003_v1/panel.json",
+      "sha256": "f50c3479f94b211054f852be131df6b4f7834dc12420a440974118bf29b138fb"
+    },
+    {
+      "bytes": 11499,
+      "path": "benchmark_tools/results/threadripper_shared_resource_figure_20261003_v1/manifest.json",
+      "sha256": "dd55aa690e9447b792d1fa5828815b25c9b48ef7990048839e0e2f41e56a2fa9"
+    }
+  ],
+  "local_scan_root": "benchmark_tools/results",
+  "raw_files_modified": false,
+  "schema": "local_development_report_manifest_v1",
+  "snapshot_commit": "f145fff1bd1e425cdd3630ae7abdbde014fd4be0"
+}

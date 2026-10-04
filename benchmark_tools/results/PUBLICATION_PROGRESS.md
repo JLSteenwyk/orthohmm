@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Retained Development-Family Inventory Prepared (2026-10-04)
+
+The preceding f145fff1 turn delivers/pushes the selected QfO stage linkage;
+classify it as progress. Read the full goal/newest ledger and query Slurm:
+no owned job live. Take the next broad scientific action rather than repeat
+native inference, completed timing or expensive raw admissions.
+
+The new [inventory protocol](DEVELOPMENT_FAMILY_INVENTORY_PROTOCOL_20261004.md)
+covers all 1,785 committed JSON results at f145fff1 and 114 separately pinned
+local-only reports, including missing historical parameter sweeps. Original
+local files remain unchanged/untracked. Canonicalize the 70 RefOG/18 retained
+SwissTrees identities only. Preserve explicit evaluations, mentions, source/
+command context and unresolved subset-ordinal diagnostic/synthetic labels.
+
+The successful in-memory full readback finds 134 OB blocks/84 files and
+77 SwissTrees blocks/16 files, with 7,770/1,386 family-block associations.
+All 88 reference families have explicit score evidence. Each originally
+validation-labelled RefOG appears in 18 declared validation score reports;
+development families appear in 28 declared development reports, and all
+70 in 21 declared all-partition blocks. These are reporting blocks, not
+independent native experiments or proof that each influenced tuning.
+
+Keep the initial isolated-import failure, ordinal-schema and synthetic-label
+probe failures as development history; no selected/preliminary result output
+or scientific run is created by them. Focused suite passes 61 cases with
+one selected-export readback skipped until source-frozen output exists.
+Prepare/push source, tests, local manifest and protocol before actual export;
+then independently validate every identity/association and deliver results.
+
+This does not resolve original TreeFam family labels, complete causal tuning
+history or family-disjoint independence. The frozen YGOB novel-taxon route
+retains its prior scope. Broader uncertainty, biological strata, full resource
+coverage and publication distribution remain active. No DGX/quiet-window gate,
+unrelated job/service action, frozen scientific or completed artifact change.
+
 ## Selected QfO OrthoHMM Stage Linkage Delivered (2026-10-04)
 
 Prepare/push source at 55fef935 before first selected export, which exits
