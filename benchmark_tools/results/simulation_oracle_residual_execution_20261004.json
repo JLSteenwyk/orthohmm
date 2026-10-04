@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "host": "bizon",
+  "scope": "Complete post hoc retained generating-root within-candidate error trace; not new inference or comparative timing",
+  "runtime": {
+    "python": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "python_version": "3.12.3",
+    "dendropy": "5.0.8",
+    "biopython": "1.87",
+    "unset_environment": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "environment": {"PYTHONNOUSERSITE": "1", "PYTHONHASHSEED": "0", "PYTHONDONTWRITEBYTECODE": "1", "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"},
+    "bytecode_disabled": true,
+    "diagnostic_timing_is_not_tool_scaling": true
+  },
+  "protocol": {"path": "benchmark_tools/results/SIMULATION_ORACLE_RESIDUAL_PROTOCOL_20261004.md", "bytes": 3489, "sha256": "83e8a5b5c38143562b7c6b03b32d6fb9d0e7433ddd6411ae97b0117a214821af"},
+  "primary_execution": {
+    "source_commit": "5a2cfcfc",
+    "source": {"path": "benchmark_tools/trace_simulation_oracle_residuals.py", "bytes": 20600, "sha256": "b4636993fb049be4d8f5136bbe319ecd0f9a2b6633cdd7c46fc29e71d321d083"},
+    "module": "benchmark_tools.trace_simulation_oracle_residuals",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--output", "benchmarks/results/simulation_oracle_residual_trace_20261004"],
+    "exit_code": 0,
+    "gnu_time": {"elapsed_seconds": 2.59, "user_seconds": 2.24, "system_seconds": 0.33, "maximum_resident_set_kib": 197356},
+    "report": {"path": "benchmarks/results/simulation_oracle_residual_trace_20261004/results.json", "bytes": 1462878, "sha256": "31e00e04c8495d95c65a8e381838dcca80d8600514568ae4f24312504acebf28", "committed": false},
+    "generated_markdown": {"path": "benchmarks/results/simulation_oracle_residual_trace_20261004/results.md", "bytes": 3264, "sha256": "49609dd8b403901e910fd3f115dbf025fea1b5b13092c89911ad75bba01a3f9a"}
+  },
+  "independent_readback": {
+    "module": "benchmark_tools.readback_simulation_oracle_residuals",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--report", "benchmarks/results/simulation_oracle_residual_trace_20261004/results.json", "--report-sha256", "31e00e04c8495d95c65a8e381838dcca80d8600514568ae4f24312504acebf28", "--output", "benchmark_tools/results/simulation_oracle_residual_readback_20261004.json"],
+    "attempts": [
+      {"source_commit": "4594b045", "exit_code": 1, "failure": "ValueError: Original readback file not bound in trace inputs; manifest-relative truth path incorrectly resolved", "output_written": false, "gnu_time": {"elapsed_seconds": 1.37, "user_seconds": 1.14, "system_seconds": 0.23, "maximum_resident_set_kib": 167040}},
+      {"source_commit": "55e7c9e3", "exit_code": 0, "gnu_time": {"elapsed_seconds": 1.55, "user_seconds": 1.29, "system_seconds": 0.26, "maximum_resident_set_kib": 171924}}
+    ],
+    "source": {"path": "benchmark_tools/readback_simulation_oracle_residuals.py", "bytes": 17581, "sha256": "11a09a72130da1a7046ce84a51ebf7931cfb2122ed4d19c938db61dba7c91c61"},
+    "output": {"path": "benchmark_tools/results/simulation_oracle_residual_readback_20261004.json", "bytes": 7749, "sha256": "5623a34ff8c7e53aa6f010264d5f9d9521d0023582e9182c8a0b727dda0d607b"},
+    "pair_rows_verified": 800,
+    "input_identities_rechecked": 228,
+    "primary_worker_imported": false
+  },
+  "summary": {
+    "screened_cells": 70,
+    "screened_candidates": 10125,
+    "selected_candidates": 20,
+    "eligible_candidates": 8,
+    "bypass_candidates": 12,
+    "traced_pairs": 800,
+    "tp": 380,
+    "tn": 292,
+    "fp": 66,
+    "fn": 62,
+    "unsupported_satellite_constraint_fn": 62,
+    "single_copy_bypass_true_duplication_fp": 45,
+    "true_duplication_without_retained_species_overlap_fp": 21,
+    "false_positive_pairs_with_parent_overlap_and_no_candidate_overlap": 66,
+    "false_negative_pairs_with_raw_high_confidence_speciation_calls": 62
+  },
+  "tests": {
+    "files": ["tests/unit/test_trace_simulation_oracle_residuals.py", "tests/unit/test_readback_simulation_oracle_residuals.py"],
+    "passed": 47,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "pytest_seconds": 1.48,
+    "junit_seconds": 1.436,
+    "junit": {"path": "benchmarks/work/simulation_oracle_residual_corrected_tests_20261004.xml", "bytes": 8228, "sha256": "e966a874e6a491bee3c36098610e562d55c1ba73816d9e73f05dda78e403a88a"}
+  },
+  "selected_table": {"path": "benchmark_tools/results/SIMULATION_ORACLE_RESIDUAL_RESULTS_20261004.md", "bytes": 3264, "sha256": "49609dd8b403901e910fd3f115dbf025fea1b5b13092c89911ad75bba01a3f9a"},
+  "native_inference_repeated": false,
+  "primary_trace_repeated": false,
+  "scientific_defaults_changed": false,
+  "unrelated_workloads_modified": false,
+  "rc2_or_pdf_rebuilt": false,
+  "publication_ready": false
+}

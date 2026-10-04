@@ -1,0 +1,319 @@
+{
+  "candidates": [
+    {
+      "cell": "divergent_20261102",
+      "counts": {
+        "fn": 15,
+        "fp": 0,
+        "tp": 41
+      },
+      "error_classes": {
+        "unsupported_satellite_constraint": 15
+      },
+      "family": "Family0000133",
+      "pair_rows_verified": 112,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_20261105",
+      "counts": {
+        "fn": 15,
+        "fp": 0,
+        "tp": 19
+      },
+      "error_classes": {
+        "unsupported_satellite_constraint": 15
+      },
+      "family": "Family0000200",
+      "pair_rows_verified": 62,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261102",
+      "counts": {
+        "fn": 0,
+        "fp": 15,
+        "tp": 13
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 15
+      },
+      "family": "Family0000108",
+      "pair_rows_verified": 28,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261102",
+      "counts": {
+        "fn": 15,
+        "fp": 0,
+        "tp": 41
+      },
+      "error_classes": {
+        "unsupported_satellite_constraint": 15
+      },
+      "family": "Family0000148",
+      "pair_rows_verified": 112,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261102",
+      "counts": {
+        "fn": 0,
+        "fp": 5,
+        "tp": 10
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 5
+      },
+      "family": "Family0000192",
+      "pair_rows_verified": 15,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261105",
+      "counts": {
+        "fn": 2,
+        "fp": 0,
+        "tp": 44
+      },
+      "error_classes": {
+        "unsupported_satellite_constraint": 2
+      },
+      "family": "Family0000013",
+      "pair_rows_verified": 82,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261106",
+      "counts": {
+        "fn": 0,
+        "fp": 14,
+        "tp": 21
+      },
+      "error_classes": {
+        "true_duplication_without_retained_species_overlap": 14
+      },
+      "family": "Family0000128",
+      "pair_rows_verified": 35,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261107",
+      "counts": {
+        "fn": 0,
+        "fp": 4,
+        "tp": 6
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 4
+      },
+      "family": "Family0000080",
+      "pair_rows_verified": 10,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261108",
+      "counts": {
+        "fn": 0,
+        "fp": 4,
+        "tp": 5
+      },
+      "error_classes": {
+        "true_duplication_without_retained_species_overlap": 4
+      },
+      "family": "Family0000013",
+      "pair_rows_verified": 9,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261108",
+      "counts": {
+        "fn": 0,
+        "fp": 3,
+        "tp": 2
+      },
+      "error_classes": {
+        "true_duplication_without_retained_species_overlap": 3
+      },
+      "family": "Family0000014",
+      "pair_rows_verified": 5,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261108",
+      "counts": {
+        "fn": 0,
+        "fp": 2,
+        "tp": 4
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 2
+      },
+      "family": "Family0000126",
+      "pair_rows_verified": 6,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261108",
+      "counts": {
+        "fn": 0,
+        "fp": 2,
+        "tp": 1
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 2
+      },
+      "family": "Family0000416",
+      "pair_rows_verified": 3,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261110",
+      "counts": {
+        "fn": 0,
+        "fp": 1,
+        "tp": 0
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 1
+      },
+      "family": "Family0000067",
+      "pair_rows_verified": 1,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261110",
+      "counts": {
+        "fn": 15,
+        "fp": 0,
+        "tp": 91
+      },
+      "error_classes": {
+        "unsupported_satellite_constraint": 15
+      },
+      "family": "Family0000138",
+      "pair_rows_verified": 222,
+      "status": "oracle_eligible"
+    },
+    {
+      "cell": "divergent_turnover_20261110",
+      "counts": {
+        "fn": 0,
+        "fp": 6,
+        "tp": 4
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 6
+      },
+      "family": "Family0000142",
+      "pair_rows_verified": 10,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261110",
+      "counts": {
+        "fn": 0,
+        "fp": 5,
+        "tp": 10
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 5
+      },
+      "family": "Family0000286",
+      "pair_rows_verified": 15,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "divergent_turnover_20261110",
+      "counts": {
+        "fn": 0,
+        "fp": 2,
+        "tp": 1
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 2
+      },
+      "family": "Family0000306",
+      "pair_rows_verified": 3,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "missing20_20261103",
+      "counts": {
+        "fn": 0,
+        "fp": 1,
+        "tp": 27
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 1
+      },
+      "family": "Family0000053",
+      "pair_rows_verified": 28,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "missing20_20261103",
+      "counts": {
+        "fn": 0,
+        "fp": 1,
+        "tp": 20
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 1
+      },
+      "family": "Family0000085",
+      "pair_rows_verified": 21,
+      "status": "unambiguous_bypass"
+    },
+    {
+      "cell": "missing20_20261108",
+      "counts": {
+        "fn": 0,
+        "fp": 1,
+        "tp": 20
+      },
+      "error_classes": {
+        "single_copy_bypass_on_true_duplication": 1
+      },
+      "family": "Family0000080",
+      "pair_rows_verified": 21,
+      "status": "unambiguous_bypass"
+    }
+  ],
+  "input_identities_rechecked": 228,
+  "limitations": [
+    "Selected post hoc simulation diagnostic, not independent biological validation.",
+    "Independently checks XML clades, event ancestors, frozen-rule arithmetic and constraint flags; not native search scores."
+  ],
+  "primary_worker_imported": false,
+  "report": {
+    "bytes": 1462878,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_oracle_residual_trace_20261004/results.json",
+    "sha256": "31e00e04c8495d95c65a8e381838dcca80d8600514568ae4f24312504acebf28"
+  },
+  "source": {
+    "bytes": 17581,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_simulation_oracle_residuals.py",
+    "sha256": "11a09a72130da1a7046ce84a51ebf7931cfb2122ed4d19c938db61dba7c91c61"
+  },
+  "status": "independent_xml_rules_and_stage_readback_passed",
+  "summary": {
+    "candidates": 20,
+    "counts": {
+      "fn": 62,
+      "fp": 66,
+      "tp": 380
+    },
+    "error_classes": {
+      "single_copy_bypass_on_true_duplication": 45,
+      "true_duplication_without_retained_species_overlap": 21,
+      "unsupported_satellite_constraint": 62
+    },
+    "pair_rows": 800,
+    "status_counts": {
+      "oracle_eligible": 8,
+      "unambiguous_bypass": 12
+    }
+  }
+}

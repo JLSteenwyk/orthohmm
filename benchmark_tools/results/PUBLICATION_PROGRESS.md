@@ -1,5 +1,36 @@
 # Publication Progress
 
+## All Generating-Root Residuals Explained By Histories And Filtering (2026-10-04)
+
+Prepared5a2cfcfc is pushed before actual read-only tracing. The complete20-
+candidate post hoc cohort reproduces the original oracle's62 within-candidate
+false negatives and66 false positives, retaining all800 cross-species pairs
+including380 true positives/292 true negatives. All70 cells/10,125 candidates
+are screened; no native search or inference is repeated and no defaults change.
+
+The [generated tables](SIMULATION_ORACLE_RESIDUAL_RESULTS_20261004.md) retain
+every candidate. All62 false negatives receive raw high-confidence speciation
+calls but are filtered by unsupported satellite constraints. Forty-five false
+positives are bypass calls at true duplications;21 are eligible positive-
+paralogy calls lacking retained species overlap. All66 have parent-family
+overlap evidence lost in the retained candidate. This [mechanism addendum](SIMULATION_ORACLE_RESIDUAL_REVIEW_20261004.md)
+does not prove that loosening constraints or indiscriminate candidate merging
+improves independent real-data accuracy. Cross-candidate losses remain dominant.
+
+Initial independent4594b045 fails before output on manifest-relative truth
+resolution. Preserve that attempt; corrected55e7c9e3 adds four regression tests.
+All47 focused tests pass, then actual independent XML/Biopython/rule/constraint
+readback verifies every800 pair row and228 selected input/source identities.
+The primary trace is unchanged and not rerun. Both successful executions exit
+zero. Compact readback, selected exact generated tables, review and execution
+receipt are selected for commit; the1.46 MB detailed report stays local/pinned.
+
+Next integrate the three validated simulation mechanism addenda into a
+scientifically needed manuscript/reproduction revision. Full-goal uncertainty,
+development-family inventory, label-independent biological strata, per-ablation
+cost and delivery gaps remain explicit. No owned job is live; prior timing,
+rc2 and review PDF are unchanged, with no renewed quiet-window/DGX gate.
+
 ## Complete Oracle Residual History Trace Prepared (2026-10-04)
 
 The user explicitly resumes after reaffirming shared-host authorization.
