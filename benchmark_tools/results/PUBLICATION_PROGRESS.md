@@ -1,5 +1,24 @@
 # Publication Progress
 
+## All-Tool, Three-Dataset Provenance Join Prepared (2026-10-04)
+
+The preceding99ce6565 turn makes concrete full-goal audit progress. Read the
+full authoritative goal/current ledger; scoped tracked files are clean and
+Slurm reports no owned live job. Preserve completed/native/reporting evidence.
+
+Prepare a [24-row provenance/resource join](ALL_BENCHMARK_PROVENANCE_WORKFLOW_20261004.md)
+with nine pinned existing receipts and selected QfO conversion/native/command/
+time bindings. Twenty-five focused synthetic cases pass. Contemporary matched
+Three Kingdoms Sonic cannot inherit its historical timing. OrthoFinder MCL
+checkpoints, OrthoHMM cached cells and recovered OrthoMCL mode4 are not
+separately timed full pipelines. FastOMA driver RSS/CPU exclude aggregate
+Docker-task usage. Missing versions/commands/input consumption remain labelled.
+
+Commit/push the helper before executing the actual join, then check all24 rows
+and compact resource output. This is not new inference/scoring or full
+transitive provenance. Do not update immutable rc1 or the previous audit's pins
+to stand for later work. Full publication goal remains active/incomplete.
+
 ## Every Goal Requirement Registered Against Current Evidence (2026-10-04)
 
 Commit/push4b1be273 completes the reproduced output-path repair. The
