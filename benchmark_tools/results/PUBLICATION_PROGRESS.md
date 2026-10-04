@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Versioned Local Package Workflow Prepared (2026-10-04)
+
+The preceding goal turn makes actual presentation/handoff progress, committed
+and pushed through `b6498991`. Read the full goal/current ledger; no owned
+Slurm job is live and the scoped tracked benchmark/tests/docs worktree is clean.
+Reuse completed inference, measurement, reporting and relocation evidence.
+
+Prepare a stdlib local package builder/archiver/restorer/verifier, a pinned
+component selector and explicit current outer instructions for
+`orthohmm-study-2026.10.04-rc1`. The selector joins the exact current-main
+handoff,32-page figure presentation and replay inputs, final reporting archive,
+and native asset archive used in admitted full OrthoBench job22377.
+Raw inputs/base/bootstrap/OS remain separately acquired; no hermeticity,
+cross-host validation, rights clearance or public deposition is inferred.
+
+Twenty-six focused synthetic cases pass in1.33s, covering stream/hash identity,
+deterministic archival metadata, fresh output, changed/unsafe inventories and
+normal/optimized copied stdlib-only verification. These are package workflow
+tests, not an actual versioned archive or new scientific results.
+Commit this workflow before selecting its exact source revision, then build,
+archive and restore the actual candidate outside the repository. The full
+goal/central-claim audit remains separate; do not certify publication readiness.
+
 ## Explicit Current-Main Handoff Archived And Restored (2026-10-04)
 
 The figure checkpoint is committed/pushed at `7fe7bc57`. Build the
