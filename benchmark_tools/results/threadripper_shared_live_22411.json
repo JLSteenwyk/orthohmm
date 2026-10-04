@@ -1,0 +1,355 @@
+{
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22411",
+      "--oneliner"
+    ],
+    "finished_unix_ns": 1791083173963205536,
+    "returncode": 0,
+    "started_unix_ns": 1791083173955442336,
+    "stderr": "",
+    "stdout": "JobId=22411 JobName=orthohmm_shared_scaling UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:02:21 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-03T23:03:03 EligibleTime=2026-10-03T23:03:52 AccrueTime=Unknown StartTime=2026-10-03T23:03:52 EndTime=2026-10-05T01:03:52 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-03T23:03:52 Scheduler=Backfill Partition=gpu AllocNode:Sid=bizon-link:50541 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_threadripper_shared_scaling.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=66cb0d964772230e448ab14035ec67f05207228a0c15b7c2a873aa3aaac59753  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_15-22411.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/slurm_run_15-22411.log TresPerTask=cpu=64 \n"
+  },
+  "evidence": [
+    {
+      "bytes": 1182,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/launch_15.json",
+      "sha256": "fa21c2ebdf1f394fe538cf555be8598d449e0c71af5beb42249506e7052e4956"
+    },
+    {
+      "bytes": 5783,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/request_run_15.json",
+      "sha256": "66cb0d964772230e448ab14035ec67f05207228a0c15b7c2a873aa3aaac59753"
+    },
+    {
+      "bytes": 2696,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_shared_execution_20261003/repaired_preparation.json",
+      "sha256": "341b429380210f7c8622a0c12f5e7d2dfecd9313eb2ba82ebd8a05a6b9352314"
+    },
+    {
+      "bytes": 224381,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_15/environment_preflight.json",
+      "sha256": "0f4c74df95c32bc62427b36ef2ca9552039a6c32777629bbf8c3fcab112ab7c3"
+    },
+    {
+      "bytes": 4604,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/measurement/ready.json",
+      "sha256": "8cb6de782c4c40636e1f9e3ae5f5a4fb1da631dcd88317abb265b139ca53ac52"
+    },
+    {
+      "bytes": 147217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_15/started.json",
+      "sha256": "84f10dd4b03640b12a3d8d2d707a6465a86795d0039454b32411495eadf208ba"
+    },
+    {
+      "bytes": 2226,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/sessions/run_15/lookup_checks/checked_01.json",
+      "sha256": "eb94417c5094e73eb7d360dea95b969389e2fde610927de38494aa3abed23d65"
+    },
+    {
+      "bytes": 923,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/measurement/command.json",
+      "sha256": "e45aa2adb3ac41d708007861aabc6d394ceb323e568b8ade4bd5d49aa14f9c16"
+    },
+    {
+      "bytes": 17,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/measurement/go.json",
+      "sha256": "3d200a42d2091765afca8e5407ef635c7009990e071c0ee9d59550ebc663fcd5"
+    },
+    {
+      "bytes": 468,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/measurement/environment_release.json",
+      "sha256": "40d6dad5e3cbe11575937c3f007b8cbe59b29a7c0d601b6162d98082156eb506"
+    },
+    {
+      "bytes": 5379,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/measurement/release_budget.json",
+      "sha256": "046a1f43689c00de55c84e15a0cec70453bfab4bfe551cf2b4ada28de1458c85"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "first_observed_process_start_gap_s": 30.000413527945057,
+  "index": 15,
+  "job_id": 22411,
+  "limitations": [
+    "Live snapshot only; obtain a fresh scheduler query on every continuation.",
+    "An early sampling interval does not prove whole-run monitoring validity.",
+    "Background diagnostics do not quantify causal slowdown or correct timings.",
+    "The excluded index-0 failure remains excluded; no native attempt is retried."
+  ],
+  "method": "orthohmm_high_sensitivity",
+  "native_log_excerpt": "  ____       _   _           _    _ __  __ __  __\n / __ \\     | | | |         | |  | |  \\/  |  \\/  |\n| |  | |_ __| |_| |__   ___ | |__| | \\  / | \\  / |\n| |  | | '__| __| '_ \\ / _ \\|  __  | |\\/| | |\\/| |\n| |__| | |  | |_| | | | (_) | |  | | |  | | |  | |\n \\____/|_|   \\__|_| |_|\\___/|_|  |_|_|  |_|_|  |_|\n\nVersion: 0.5.0\n\n-------------\n| Arguments |\n-------------\nDirectory of FASTA files: /dev/shm/orthohmm_threadripper_scaling_v1/run_15/input\nNumber of FASTA files: 12\nDirectory for output files: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/threadripper_scaling_v1/run_15/orthohmm_high_sensitivity\nStep to start analysis: NA\nStep to stop analysis: infer\nSearch engine: built-in (profile HMM + k-mer prefilter)\nAccuracy profile: high_sensitivity\nE-value threshold: 0.0001\nSubstitution matrix: BLOSUM62\nClustering: Leiden CPM (resolution=0.1)\nSingle-copy threshold: 0.5\nCPUs: 32\n\n\nStep 1/4: Conducting all-to-all comparisons (built-in search).\n",
+  "native_placement": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "ancestors": [
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22411/step_0/user/task_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22411/step_0/user"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22411/step_0"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-31,96-127",
+        "memory.max": "137438953472",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22411"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+      },
+      {
+        "cpu.max": "max 100000",
+        "cpuset.cpus.effective": "0-191",
+        "memory.max": "max",
+        "memory.swap.max": "max",
+        "path": "/sys/fs/cgroup/system.slice"
+      }
+    ],
+    "cgroup": "0::/system.slice/slurmstepd.scope/job_22411/step_0/user/task_0\n",
+    "host": "bizon",
+    "pid": 55176,
+    "slurm": {
+      "SLURM_CPUS_PER_TASK": "64",
+      "SLURM_JOB_ID": "22411",
+      "SLURM_MEM_PER_NODE": "131072"
+    },
+    "topology": [
+      {
+        "core": 0,
+        "cpu": 0,
+        "package": 0
+      },
+      {
+        "core": 1,
+        "cpu": 1,
+        "package": 0
+      },
+      {
+        "core": 2,
+        "cpu": 2,
+        "package": 0
+      },
+      {
+        "core": 3,
+        "cpu": 3,
+        "package": 0
+      },
+      {
+        "core": 4,
+        "cpu": 4,
+        "package": 0
+      },
+      {
+        "core": 5,
+        "cpu": 5,
+        "package": 0
+      },
+      {
+        "core": 6,
+        "cpu": 6,
+        "package": 0
+      },
+      {
+        "core": 7,
+        "cpu": 7,
+        "package": 0
+      },
+      {
+        "core": 8,
+        "cpu": 8,
+        "package": 0
+      },
+      {
+        "core": 9,
+        "cpu": 9,
+        "package": 0
+      },
+      {
+        "core": 10,
+        "cpu": 10,
+        "package": 0
+      },
+      {
+        "core": 11,
+        "cpu": 11,
+        "package": 0
+      },
+      {
+        "core": 12,
+        "cpu": 12,
+        "package": 0
+      },
+      {
+        "core": 13,
+        "cpu": 13,
+        "package": 0
+      },
+      {
+        "core": 14,
+        "cpu": 14,
+        "package": 0
+      },
+      {
+        "core": 15,
+        "cpu": 15,
+        "package": 0
+      },
+      {
+        "core": 16,
+        "cpu": 16,
+        "package": 0
+      },
+      {
+        "core": 17,
+        "cpu": 17,
+        "package": 0
+      },
+      {
+        "core": 18,
+        "cpu": 18,
+        "package": 0
+      },
+      {
+        "core": 19,
+        "cpu": 19,
+        "package": 0
+      },
+      {
+        "core": 20,
+        "cpu": 20,
+        "package": 0
+      },
+      {
+        "core": 21,
+        "cpu": 21,
+        "package": 0
+      },
+      {
+        "core": 22,
+        "cpu": 22,
+        "package": 0
+      },
+      {
+        "core": 23,
+        "cpu": 23,
+        "package": 0
+      },
+      {
+        "core": 24,
+        "cpu": 24,
+        "package": 0
+      },
+      {
+        "core": 25,
+        "cpu": 25,
+        "package": 0
+      },
+      {
+        "core": 26,
+        "cpu": 26,
+        "package": 0
+      },
+      {
+        "core": 27,
+        "cpu": 27,
+        "package": 0
+      },
+      {
+        "core": 28,
+        "cpu": 28,
+        "package": 0
+      },
+      {
+        "core": 29,
+        "cpu": 29,
+        "package": 0
+      },
+      {
+        "core": 30,
+        "cpu": 30,
+        "package": 0
+      },
+      {
+        "core": 31,
+        "cpu": 31,
+        "package": 0
+      }
+    ]
+  },
+  "next_submission_authorized": false,
+  "preflight": {
+    "available_memory_bytes": [
+      168865427456,
+      169057058816
+    ],
+    "background_competition_recorded": true,
+    "observed_foreign_average_cores": 54.088758024190476
+  },
+  "proteomes": 12,
+  "repeat": 1,
+  "scientific_timings_admitted": false,
+  "source": {
+    "bytes": 4649,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/snapshot_repaired_shared_threadripper_20261003.py",
+    "sha256": "0d339dd8c160b1383913421e6e96ad7009c288ef50668df043ce0344a61a9cc1"
+  },
+  "status": "repaired_shared_native_observed_running",
+  "terminal_review_completed": false,
+  "uncontended_timing": false
+}

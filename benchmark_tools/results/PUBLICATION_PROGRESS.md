@@ -1,5 +1,79 @@
 # Publication Progress
 
+## Eight-Proteome Phylogenetic Repeat Reviewed; Twelve-Proteome High Sensitivity Released (2026-10-03)
+
+The user-requested confirmation verifies that the active goal and repository
+prompt already contain the shared-host amendment; it does not advance analyses.
+On goal resumption, read the full prompt, newest ledger and current worktree.
+Fresh sacct confirms exact 22410 terminal, with parent, batch and native step
+COMPLETED 0:0. Parent elapsed is 39:03; native step elapsed is 35:15. Preserve
+the completed inference rather than restarting it. Native exit alone was not
+treated as enclosing-job completion.
+
+Run the unchanged index-14 independent reviewer once, retaining its terminal
+controller before purge. All four review categories pass. Readback verifies
+category pins/decisions and the byte-identical canonical/public summary. The
+[retained outcome](threadripper_shared_attempt_22410.json) is 5,165 bytes,
+SHA-256 `f32a3ffc325d7bca0511873a334047e964efe9a4b1e868ee50aba9fbedf1fdaa`.
+The [review note](THREADRIPPER_SHARED_ATTEMPT_22410.md) records 165,168 proteins,
+56,918 orthogroups/root HOGs and 340,183 native ortholog-pair rows, not new
+accuracy evaluation. Primary resources are 2,086.947282256 native wall seconds,
+58,240.723374 native-task CPU seconds and 8,269,803,520 native-step lifetime
+peak bytes. Maximum sampled foreign demand is 54.8075973213 cores;
+process/pressure failure maps are empty. Preserve wrapper-bracket CPU and
+step-lifetime memory scopes. Contention distortion remains unknown and
+potentially method dependent; no overhead subtraction, fastest-repeat selection
+or isolated speed ranking occurs.
+
+Retain the one-group difference from repeat 0, which has 56,919 groups. Compare
+unordered membership sets: exactly one pair and one singleton merge into a
+three-member group, involving ENSMODP00000038126, ENSRNOP00000060626 and
+ENSRNOP00000073598; all other group membership sets agree. Parse and normalize
+native ortholog pairs: both have 340,183 unique pairs and no set differences.
+Fresh cmp confirms their raw pair tables byte-identical, matching the two
+retained hashes. The note records source pins and the bounded comparison.
+This documents grouping variability, not its cause or a reason to retune/retry.
+Do not substitute group co-membership for native ortholog predictions.
+
+Only after canonical terminal review does the unchanged launcher bind the
+fifteen-attempt reviewed prefix and release index 15, OrthoHMM high sensitivity,
+twelve proteomes, repeat 1, as **22411**. A fresh RUNNING query and the
+[live checkpoint](threadripper_shared_live_22411.json) verify actual native
+affinity CPUs 0-31, enforced job/user memory limit 128 GiB, successful preflight
+and unchanged request. Available-memory observations are 168,865,427,456 and
+169,057,058,816 bytes; foreign average demand is 54.0887580242 cores. The first
+observed process interval is 30.0004135279 seconds. Native logging confirms
+twelve FASTA inputs, high-sensitivity built-in HMM search, BLOSUM62, E-value
+0.0001, Leiden CPM 0.1 and 32 CPUs. This dated receipt is not terminal review
+or proof of future state. No skipped identity, retry, scientific retuning or
+unrelated workload change occurs. Index 16 is OrthoHMM satellite_v2 on twelve
+proteomes, repeat 1; release it only after terminal index-15 review.
+
+Export [fifteen-attempt tables](threadripper_shared_panel_snapshot_20261003_v15/panel.json)
+and the [updated partial figure](threadripper_shared_resource_figure_20261003_v14/shared_threadripper_resources.pdf)
+using unchanged reporting functions. Fourteen observations are eligible,
+original index 0 stays excluded and twelve identities remain unreviewed.
+All eight-proteome cells have two eligible repeats; no cell has three eligible
+repeats and no median/range is imputed. Inspect the actual PNG: fifteen
+observations have headroom, readable text and explicit exclusions, incomplete
+coverage, endpoint scopes and contention limitations. Earlier snapshots,
+reporting archive and main PDF retain their dated payloads. Update active
+README/reproduction/claim links and counts, not frozen timing/helper sources
+or scientific settings.
+
+Retained-table byte replay and actual PDF/pixel/provenance checks cover the
+fifteenth attempt and its differing group count: the component/table/figure
+suite passes **97 cases in 14.86s**. Generated TSV CRLF/empty fields and SVG
+spacing remain hash-bound bytes, not normalization targets. No completed
+inference, statistical, calibration or TreeFam diagnostic is repeated.
+Preserve unrelated sample changes and frozen runtime/input bytes.
+
+Next: poll exact **22411**, review terminal native/runtime/environment/resource
+evidence once, and only then release index 16. Finish the remaining panel,
+final resource/manuscript/archive reconciliation and versioned study release.
+Full publication scope remains active and incomplete; no quiet-window or DGX
+prerequisite returns.
+
 ## Eight-Proteome High Sensitivity Reviewed; Phylogenetic Repeat Released (2026-10-03)
 
 The preceding goal turn is a verified wait: fresh scheduler/process evidence
