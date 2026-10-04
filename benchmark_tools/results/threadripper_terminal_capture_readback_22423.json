@@ -1,0 +1,30 @@
+{
+  "status": "capture_submission_and_exact_dependency_checked",
+  "native_job_id": 22422,
+  "capture_job_id": 22423,
+  "capture_completed": false,
+  "native_review_completed": false,
+  "next_submission_authorized": false,
+  "source_and_artifacts": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_terminal_capture_submission_22423.json",
+      "bytes": 1351,
+      "sha256": "62ed577e1ae3760ef7823ded518dfb4b240e44d2bbeea75292d231fad1d6616d"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_terminal_capture_pending_22423.json",
+      "bytes": 1586,
+      "sha256": "e3ae0d54b40e483fdb8bdcb3d451605fb863494ee8a9c08fd90f1b453fef7f51"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_submission_22422.json",
+      "bytes": 1173,
+      "sha256": "95cdc339f4a9f271b1bc366cdc7c3e05a739dd271028c54537f3b6299533ba95"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/capture_shared_terminal_controller_20261004.py",
+      "bytes": 2573,
+      "sha256": "e1b252680d3ef7ab0617dc3970a4a869dec08873d60b71b8d4e0fda321c9842c"
+    }
+  ]
+}

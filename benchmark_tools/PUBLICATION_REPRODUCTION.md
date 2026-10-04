@@ -88,6 +88,14 @@ and prepared-owner lifecycle pass. The phylogenetic/twelve-proteome cell is
 the fifth complete cell; two identities remain unreviewed/unsubmitted, none
 live at this completed checkpoint. Advance only index25 after current history
 and fresh launch checks; native counts do not establish new accuracy.
+Index25 is subsequently released as
+[22422, full OrthoFinder/twelve proteomes/repeat2](results/THREADRIPPER_SHARED_ATTEMPT_22422.md).
+Actual full-prefix, fresh capacity/prepared/native handoff and live placement
+checks pass. Native OrthoFinder3.1.5 runs all-versus-all DIAMOND with32 threads
+and the full phylogenetic pipeline selected. Capture-only22423 waits on its
+exact terminal dependency. Two identities remain unreviewed, one live and
+index26 unsubmitted; startup adds no resource or accuracy point. Review22422
+after actual termination before advancing26, using retained capture when available.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 

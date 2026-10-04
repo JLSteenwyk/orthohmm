@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Index 25 Full OrthoFinder Native Search Live (2026-10-04)
+
+Commit/push `58cc3036` retains index24 independent review, tablev25,
+figurev24 and actual three-test checkpoint readback. Reuse those completed
+results rather than repeat native/raw review or passing diagnostics.
+The goal-reaffirmed continuation checks the actual25-identity reviewed prefix,
+held allocation/request/comment and frozen selection, then releases only
+[22422/index25](THREADRIPPER_SHARED_ATTEMPT_22422.md): full OrthoFinder3.1.5,
+twelve proteomes,repeat2. Public launch matches canonical1,173 bytes,SHA-256
+`95cdc339f4a9f271b1bc366cdc7c3e05a739dd271028c54537f3b6299533ba95`.
+The owned launcher handle completes normally.
+
+One-shot live snapshot passes:16,938 bytes,SHA-256
+`427fbd368b8b09cd8d100a0b06c687c486041be0f219104ecbfce2808c7e64c8`.
+Prepared-before-request, actual preflight/go, live native PID/cgroup,
+affinity0-31,128-GiB enforcement and request digest verify. Available memory
+exceeds128-GiB safety floor; observed foreign CPU55.7329597473 cores is
+annotated. Actual log identifies OrthoFinder3.1.5,32thread all-versus-all
+DIAMOND search and default MSA tree inference; no sequence-only stop is used.
+Startup is not completed phylogenetics, final resource evidence or accuracy.
+
+Capture-only22423 is submitted once with afterany22422,1CPU/1GiB/five minutes/
+no requeue. Actual pending controller and readback verify the exact dependency;
+unchanged helper/source tests are not rerun. Fresh accounting confirms22422
+parent/batch/native RUNNING and22423 dependency-pending. Poll these exact jobs
+on continuation; use retained terminal capture when available and independently
+review before26. No one-shot snapshot or successful native analysis is restarted.
+
+Tablev25/figurev24 remain25 reviewed/23 measured/22 eligible/five complete
+cells,exclusions0/17/20. Two identities remain unreviewed(one live,one
+unsubmitted). Commit/push startup evidence without admitting a new endpoint.
+Frozen science/runtime/recipe/limits and unrelated work/services are unchanged.
+Final panel,manuscript/PDF reconciliation and executable/versioned archive
+keep the full publication goal active and incomplete. Final source-package
+inspection also confirms the historical selector omits results-module helpers
+imported by newer unit tests; address actual dependency closure after the
+timing panel rather than edit its bound top-level source during execution.
+
 ## Index 24 Reviewed And Fifth Complete Cell (2026-10-04)
 
 Previous prompt-only turn verifies the already committed/pushed shared-host

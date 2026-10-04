@@ -67,6 +67,11 @@ lifecycle pass. Phylogenetic/twelve-proteome supplies the fifth complete cell.
 Two identities remain unreviewed/unsubmitted at this terminal checkpoint;
 none is live. The [checkpoint readback](threadripper_checkpoint_validation_22420.json)
 retains three passing reporting/provenance/PDF tests and unchanged earlier rows.
+Index25 is subsequently released as [22422, full OrthoFinder/twelve-proteome repeat](THREADRIPPER_SHARED_ATTEMPT_22422.md).
+Fresh capacity/prepared/native handoff passes; actual OrthoFinder3.1.5 native
+search is live and its full phylogenetic pipeline selected. Capture-only22423
+waits on the exact terminal dependency. Two identities remain unreviewed,
+one live and26 unsubmitted; no startup resource or accuracy point is admitted.
 The [partial figure](threadripper_shared_resource_figure_20261004_v24/shared_threadripper_resources.pdf)
 retains the twenty-three measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
