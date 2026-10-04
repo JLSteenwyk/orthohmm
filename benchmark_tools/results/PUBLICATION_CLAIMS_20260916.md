@@ -57,6 +57,11 @@ Fresh capacity/prepared handoff and all four terminal categories pass.
 Full OrthoFinder/eight proteomes is the fourth complete three-repeat cell.
 Three identities remain unreviewed/unsubmitted, none live at this review
 checkpoint. Native counts establish coverage, not new accuracy.
+After the [documentary-only goal rebind](THREADRIPPER_GOAL_REAFFIRMATION_20261004.md),
+index24 is released as [22420, satellite_v2/twelve-proteome repeat](THREADRIPPER_SHARED_ATTEMPT_22420.md).
+Fresh capacity/prepared/native handoff passes and HMM/k-mer search is observed
+running. Three identities remain unreviewed, one live and two unsubmitted at
+this startup checkpoint. No further resource point or accuracy is admitted.
 The [partial figure](threadripper_shared_resource_figure_20261004_v23/shared_threadripper_resources.pdf)
 retains the twenty-two measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve

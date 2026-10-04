@@ -41,3 +41,8 @@ binds the actual 12-test JUnit, test/continuation source and preparation.
 Its scope is documentary binding, not a new accounting/runtime diagnostic or
 an actual native launch. The preparation retains its historical 21-identity
 prefix metadata; every new launch independently checks the current full prefix.
+
+Index24 is subsequently released as
+[22420, twelve-proteome phylogenetic repeat](THREADRIPPER_SHARED_ATTEMPT_22420.md).
+Fresh capacity and prepared/native handoff pass; live search is observed.
+This does not complete the panel or authorize index25 before terminal review.

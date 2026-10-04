@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Index 24 Prepared Handoff And Native Search Live (2026-10-04)
+
+Documentary-only preparation and its 76-reference readback are committed/
+pushed at `7b811fa8`; native science, kernel/runtime, source recipe, resource
+limits and earlier attempt outcomes remain unchanged. The new continuation
+releases only [22420/index24](THREADRIPPER_SHARED_ATTEMPT_22420.md), satellite_v2/
+twelve proteomes/repeat2, after all24 reviewed identities and held/request checks.
+Public submission matches canonical1,172 bytes,SHA-256
+`98c6e9af04f4d7fe155086f1e99414e13ce798e8c6c954707e4dee3c94fa1a96`.
+
+Actual one-shot live handoff passes:16,332 bytes,SHA-256
+`cc57f16826cd68875ab2d85e79cfb663190b675599a92e2a6c2f4bcabb4351a4`.
+Prepared-before-request, preflight/go, live native PID/cgroup/affinity0-31,
+128-GiB enforcement and request digest verify. Available memory observations
+exceed128-GiB floor; foreign CPU62.1047874123 cores is annotated. First gap
+30.000415914s passes its early bound, not whole-run coverage. Actual frozen
+command includes full reconciliation/inferred-tree settings; native log reports
+HMM/k-mer search on12 proteomes. Parent/batch/native step remain RUNNING.
+
+All owned launcher/snapshot/test/push handles finish. Commit/push startup
+records; no unrelated workload or service is changed. Table v24/figure v23
+remain24 reviewed/22 measured/21 eligible/four complete cells. Three identities
+remain unreviewed(one live,two unsubmitted); no startup resource point or
+accuracy is admitted. Next continuation polls22420 and independently reviews
+after termination before releasing25 via the goal-reaffirmed continuation.
+Final panel/manuscript/resource reconciliation and versioned/archive release
+keep the full publication goal active and incomplete, with no quiet-host gate.
+
 ## Documentary Reaffirmation Prepared And Index 24 Released (2026-10-04)
 
 Commit/push `5d465692` closes index-23 review/table v24/figure v23. The prior

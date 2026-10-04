@@ -79,6 +79,12 @@ preserves historical preparation and writes new documentary-only policy/readines
 references for the synchronized goal. Use its new continuation for indices 24-26;
 the existing prepared live-snapshot/terminal-review helpers and resource protocol
 remain unchanged. Actual launch history and capacity still require fresh checks.
+Index 24 is subsequently released as
+[22420, satellite_v2/twelve proteomes/repeat 2](results/THREADRIPPER_SHARED_ATTEMPT_22420.md).
+Fresh capacity and prepared/native handoff pass; HMM/k-mer search is observed
+running. Three identities remain unreviewed, one live and two unsubmitted at
+this checkpoint. Poll this exact job on resumption; independent terminal review
+is required before advancing25. Startup does not admit a new resource point.
 Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
