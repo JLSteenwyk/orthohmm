@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Complete Oracle Residual History Trace Prepared (2026-10-04)
+
+The user explicitly resumes after reaffirming shared-host authorization.
+Read the full goal/current ledger and query Slurm: no owned job is live.
+Validate retained upstream receipt hashes, exact generated tables and all41
+JUnit outcomes; commit/push b3a2d13a and confirm remote. No completed native
+or timing analysis is restarted and no unrelated workload is modified.
+
+The [residual history plan](SIMULATION_ORACLE_RESIDUAL_PROTOCOL_20261004.md)
+screens all70 cells/10,125 candidates. Existing oracle outcomes identify the
+complete post hoc20-candidate cohort, including eight eligible candidates and
+twelve bypasses. New stage outcomes have not been computed at preparation.
+Trace every cross-species pair against original simulator events/XML, induced
+clades, frozen pair calls, root partitions and satellite constraint evidence.
+Require exact retained oracle count reproduction. Keep bypasses unchanged.
+
+The first21 focused tests pass; add an explicit wrong-topology guard before
+final preparation tests/commit/push and actual read-only execution. No defaults
+or original scores change. An exploratory schema read initially requests
+nonexistent `false_positive` instead of actual `fp`; it writes no output and
+is corrected by inspecting the retained schema, not changing scientific data.
+Large output stays local and pinned. Next independently check pair/event
+readback, then publish validated mechanism results and update the manuscript
+only when integrating genuinely new evidence. Full-goal gaps remain active.
+
 ## Native Upstream Losses Independently Localized (2026-10-04)
 
 Prepared source3d5fd9f7 is pushed before actual retained-data tracing. All70
