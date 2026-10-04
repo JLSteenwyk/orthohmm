@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Native Upstream Losses Independently Localized (2026-10-04)
+
+Prepared source3d5fd9f7 is pushed before actual retained-data tracing. All70
+cells pass exact native TP/FN/FP and oracle cross-candidate count reproduction.
+The [generated tables](SIMULATION_UPSTREAM_TRACE_RESULTS_20261004.md) distinguish
+different graph components from connected-but-separated candidates, without
+inventing missing gene-to-seed membership or treating hits as predictions.
+
+Independent source72ad11eb is pushed before readback. All163,527 true-pair TSV
+rows occur once and all six stage flags match independently read native inputs.
+igraph1.0.0 agrees with SciPy1.15.3 component relations/counts; every cell,
+family and condition projection matches. All1,568 selected input/source records
+rehash. Forty-one focused tests pass. Both executions exit zero; larger local
+report/pair TSV stay pinned, while compact readback/tables/review/receipt are
+selected for commit. No native inference or search is repeated.
+
+In divergent/divergent-turnover,89.840%/88.387% of cross-candidate losses have
+no retained graph path. The other10.160%/11.613% remain separated despite
+connectivity, including117/128 direct edges. Significant-hit absence cannot
+separate prefilter/score rejection/caps/ranking; paths may cross other families.
+This is [stage localization](SIMULATION_UPSTREAM_TRACE_REVIEW_20261004.md), not
+causal proof or a tuning recommendation. Native within-candidate losses are
+separate from the preceding generating-root oracle residuals.
+
+Next exhaustively trace remaining generating-tree oracle errors using original
+event histories/constraints, then integrate the validated mechanism addenda
+into a genuinely needed publication-package revision. Keep primary QfO and
+OrthoBench scientific priorities and full-goal uncertainty, biological strata,
+family-inventory and per-ablation cost gaps visible. No owned native job is
+live; completed timing/rc2/review evidence and defaults remain unchanged. Full
+goal remains active/incomplete with no renewed quiet-window or DGX gate.
+
 ## Full Native Upstream Trace Prepared (2026-10-04)
 
 The preceding ca0f1981 turn completes a concrete gene-tree oracle milestone.

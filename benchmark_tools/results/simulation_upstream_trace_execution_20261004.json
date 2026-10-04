@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "host": "bizon",
+  "scope": "Retained native simulation upstream mechanism trace, not new search/inference or matched timing",
+  "runtime": {
+    "python": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "python_version": "3.12.3",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "igraph": "1.0.0",
+    "unset_environment": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "environment": {"PYTHONNOUSERSITE": "1", "PYTHONHASHSEED": "0", "PYTHONDONTWRITEBYTECODE": "1", "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"},
+    "bytecode_disabled": true
+  },
+  "primary_execution": {
+    "source_commit": "3d5fd9f7",
+    "source": {"path": "benchmark_tools/trace_simulation_upstream.py", "bytes": 20142, "sha256": "c57a59f63f909bb63f6824b36b14aec757faf1585827f41f98f4d0ef83b2cd58"},
+    "module": "benchmark_tools.trace_simulation_upstream",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--output", "benchmarks/results/simulation_upstream_trace_20261004"],
+    "exit_code": 0,
+    "cells": 70,
+    "gnu_time": {"elapsed_seconds": 9.54, "user_seconds": 8.72, "system_seconds": 0.71, "maximum_resident_set_kib": 133940},
+    "report": {"path": "benchmarks/results/simulation_upstream_trace_20261004/results.json", "bytes": 1387184, "sha256": "eb096b6275b2035877bf67f7229c6983fd4f7010c25ba87620d558360fa78806", "committed": false},
+    "pair_trace": {"path": "benchmarks/results/simulation_upstream_trace_20261004/true_pair_trace.tsv", "bytes": 13216818, "sha256": "012d9f395a6e3f6cdcc008caa9df7bdecd3b77ca9975b72f638ff0de15a9b62a", "committed": false},
+    "generated_markdown": {"path": "benchmarks/results/simulation_upstream_trace_20261004/results.md", "bytes": 2313, "sha256": "cc984cd1e9edb120957751eab607e530535aa9004d82568b584965d70e198e71"}
+  },
+  "independent_readback": {
+    "source_commit": "72ad11eb",
+    "source": {"path": "benchmark_tools/readback_simulation_upstream.py", "bytes": 11369, "sha256": "a597a8a1c2439a89ebff4db8b88dafe737ae26c6d4f6927057483984ee286fcf"},
+    "module": "benchmark_tools.readback_simulation_upstream",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--report", "benchmarks/results/simulation_upstream_trace_20261004/results.json", "--report-sha256", "eb096b6275b2035877bf67f7229c6983fd4f7010c25ba87620d558360fa78806", "--output", "benchmark_tools/results/simulation_upstream_trace_readback_20261004.json"],
+    "exit_code": 0,
+    "gnu_time": {"elapsed_seconds": 5.70, "user_seconds": 5.21, "system_seconds": 0.49, "maximum_resident_set_kib": 305348},
+    "cells": 70,
+    "pair_rows_verified": 163527,
+    "input_identities_rechecked": 1568,
+    "all_six_flags_independently_checked": true,
+    "igraph_scipy_component_agreement": true,
+    "output": {"path": "benchmark_tools/results/simulation_upstream_trace_readback_20261004.json", "bytes": 30018, "sha256": "729636edf23d1858376860465e0b5f283c6031b301f385cc756cec66f1ed759d"}
+  },
+  "tests": {
+    "files": ["tests/unit/test_trace_simulation_upstream.py", "tests/unit/test_readback_simulation_upstream.py"],
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "pytest_seconds": 3.37,
+    "junit_seconds": 3.345,
+    "junit": {"path": "benchmarks/work/simulation_upstream_trace_readback_tests_20261004.xml", "bytes": 5992, "sha256": "7fc1ba6fd3e3bf2063830eec3dd1103eeb1f4fd3997a2be9fef5521bdf97696b"}
+  },
+  "selected_table": {"path": "benchmark_tools/results/SIMULATION_UPSTREAM_TRACE_RESULTS_20261004.md", "bytes": 2313, "sha256": "cc984cd1e9edb120957751eab607e530535aa9004d82568b584965d70e198e71"},
+  "scientific_defaults_changed": false,
+  "native_inference_repeated": false,
+  "unrelated_workloads_modified": false,
+  "rc2_or_pdf_rebuilt": false,
+  "publication_ready": false
+}

@@ -1,0 +1,1045 @@
+{
+  "all_stage_flags_verified_against_native_inputs": true,
+  "cells": [
+    {
+      "condition": "baseline",
+      "label": "baseline_20261101",
+      "seed": 20261101,
+      "totals": {
+        "native_fn": 3,
+        "native_fn_within_candidates": 3,
+        "native_tp": 2881,
+        "true_pairs": 2884
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261102",
+      "seed": 20261102,
+      "totals": {
+        "native_fn": 1,
+        "native_fn_within_candidates": 1,
+        "native_tp": 2889,
+        "true_pairs": 2890
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261103",
+      "seed": 20261103,
+      "totals": {
+        "native_tp": 2862,
+        "true_pairs": 2862
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261104",
+      "seed": 20261104,
+      "totals": {
+        "native_tp": 2861,
+        "true_pairs": 2861
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261105",
+      "seed": 20261105,
+      "totals": {
+        "native_fn": 10,
+        "native_fn_within_candidates": 10,
+        "native_tp": 2856,
+        "true_pairs": 2866
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261106",
+      "seed": 20261106,
+      "totals": {
+        "native_fn": 31,
+        "native_fn_within_candidates": 31,
+        "native_tp": 3001,
+        "true_pairs": 3032
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261107",
+      "seed": 20261107,
+      "totals": {
+        "native_tp": 2826,
+        "true_pairs": 2826
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261108",
+      "seed": 20261108,
+      "totals": {
+        "native_tp": 2874,
+        "true_pairs": 2874
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 170,
+        "different_graph_components": 170,
+        "different_graph_components_hit_orientations_0": 170,
+        "native_fn": 170,
+        "native_tp": 2856,
+        "true_pairs": 3026
+      }
+    },
+    {
+      "condition": "baseline",
+      "label": "baseline_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 7,
+        "different_graph_components": 7,
+        "different_graph_components_hit_orientations_0": 7,
+        "native_fn": 60,
+        "native_fn_within_candidates": 53,
+        "native_tp": 2870,
+        "true_pairs": 2930
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261101",
+      "seed": 20261101,
+      "totals": {
+        "across_candidates": 1059,
+        "connected_but_separated": 249,
+        "connected_but_separated_hit_orientations_0": 231,
+        "connected_but_separated_hit_orientations_2": 18,
+        "different_graph_components": 810,
+        "different_graph_components_hit_orientations_0": 810,
+        "direct_graph_edge_but_separated": 18,
+        "native_fn": 1060,
+        "native_fn_within_candidates": 1,
+        "native_tp": 1824,
+        "true_pairs": 2884
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261102",
+      "seed": 20261102,
+      "totals": {
+        "across_candidates": 1191,
+        "connected_but_separated": 249,
+        "connected_but_separated_hit_orientations_0": 230,
+        "connected_but_separated_hit_orientations_2": 19,
+        "different_graph_components": 942,
+        "different_graph_components_hit_orientations_0": 941,
+        "different_graph_components_hit_orientations_2": 1,
+        "direct_graph_edge_but_separated": 19,
+        "native_fn": 1207,
+        "native_fn_within_candidates": 16,
+        "native_tp": 1683,
+        "true_pairs": 2890
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261103",
+      "seed": 20261103,
+      "totals": {
+        "across_candidates": 255,
+        "connected_but_separated": 47,
+        "connected_but_separated_hit_orientations_0": 44,
+        "connected_but_separated_hit_orientations_2": 3,
+        "different_graph_components": 208,
+        "different_graph_components_hit_orientations_0": 208,
+        "direct_graph_edge_but_separated": 3,
+        "native_fn": 255,
+        "native_tp": 2607,
+        "true_pairs": 2862
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261104",
+      "seed": 20261104,
+      "totals": {
+        "across_candidates": 1750,
+        "connected_but_separated": 204,
+        "connected_but_separated_hit_orientations_0": 188,
+        "connected_but_separated_hit_orientations_2": 16,
+        "different_graph_components": 1546,
+        "different_graph_components_hit_orientations_0": 1546,
+        "direct_graph_edge_but_separated": 16,
+        "native_fn": 1754,
+        "native_fn_within_candidates": 4,
+        "native_tp": 1107,
+        "true_pairs": 2861
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261105",
+      "seed": 20261105,
+      "totals": {
+        "across_candidates": 873,
+        "connected_but_separated": 63,
+        "connected_but_separated_hit_orientations_0": 58,
+        "connected_but_separated_hit_orientations_2": 5,
+        "different_graph_components": 810,
+        "different_graph_components_hit_orientations_0": 810,
+        "direct_graph_edge_but_separated": 5,
+        "native_fn": 892,
+        "native_fn_within_candidates": 19,
+        "native_tp": 1974,
+        "true_pairs": 2866
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261106",
+      "seed": 20261106,
+      "totals": {
+        "across_candidates": 593,
+        "connected_but_separated": 56,
+        "connected_but_separated_hit_orientations_0": 53,
+        "connected_but_separated_hit_orientations_2": 3,
+        "different_graph_components": 537,
+        "different_graph_components_hit_orientations_0": 537,
+        "direct_graph_edge_but_separated": 3,
+        "native_fn": 604,
+        "native_fn_within_candidates": 11,
+        "native_tp": 2428,
+        "true_pairs": 3032
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261107",
+      "seed": 20261107,
+      "totals": {
+        "across_candidates": 1402,
+        "connected_but_separated": 320,
+        "connected_but_separated_hit_orientations_0": 278,
+        "connected_but_separated_hit_orientations_2": 42,
+        "different_graph_components": 1082,
+        "different_graph_components_hit_orientations_0": 1082,
+        "direct_graph_edge_but_separated": 42,
+        "native_fn": 1402,
+        "native_tp": 1424,
+        "true_pairs": 2826
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261108",
+      "seed": 20261108,
+      "totals": {
+        "across_candidates": 2219,
+        "connected_but_separated": 27,
+        "connected_but_separated_hit_orientations_0": 23,
+        "connected_but_separated_hit_orientations_1": 1,
+        "connected_but_separated_hit_orientations_2": 3,
+        "different_graph_components": 2192,
+        "different_graph_components_hit_orientations_0": 2192,
+        "direct_graph_edge_but_separated": 4,
+        "native_fn": 2219,
+        "native_tp": 655,
+        "true_pairs": 2874
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 1710,
+        "different_graph_components": 1710,
+        "different_graph_components_hit_orientations_0": 1710,
+        "native_fn": 1712,
+        "native_fn_within_candidates": 2,
+        "native_tp": 1314,
+        "true_pairs": 3026
+      }
+    },
+    {
+      "condition": "divergent",
+      "label": "divergent_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 1684,
+        "connected_but_separated": 79,
+        "connected_but_separated_hit_orientations_0": 72,
+        "connected_but_separated_hit_orientations_2": 7,
+        "different_graph_components": 1605,
+        "different_graph_components_hit_orientations_0": 1605,
+        "direct_graph_edge_but_separated": 7,
+        "native_fn": 1691,
+        "native_fn_within_candidates": 7,
+        "native_tp": 1239,
+        "true_pairs": 2930
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261101",
+      "seed": 20261101,
+      "totals": {
+        "across_candidates": 1093,
+        "connected_but_separated": 231,
+        "connected_but_separated_hit_orientations_0": 217,
+        "connected_but_separated_hit_orientations_2": 14,
+        "different_graph_components": 862,
+        "different_graph_components_hit_orientations_0": 862,
+        "direct_graph_edge_but_separated": 14,
+        "native_fn": 1111,
+        "native_fn_within_candidates": 18,
+        "native_tp": 2080,
+        "true_pairs": 3191
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261102",
+      "seed": 20261102,
+      "totals": {
+        "across_candidates": 1384,
+        "connected_but_separated": 243,
+        "connected_but_separated_hit_orientations_0": 220,
+        "connected_but_separated_hit_orientations_2": 23,
+        "different_graph_components": 1141,
+        "different_graph_components_hit_orientations_0": 1141,
+        "direct_graph_edge_but_separated": 21,
+        "native_fn": 1400,
+        "native_fn_within_candidates": 16,
+        "native_tp": 1977,
+        "true_pairs": 3377
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261103",
+      "seed": 20261103,
+      "totals": {
+        "across_candidates": 257,
+        "connected_but_separated": 47,
+        "connected_but_separated_hit_orientations_0": 44,
+        "connected_but_separated_hit_orientations_2": 3,
+        "different_graph_components": 210,
+        "different_graph_components_hit_orientations_0": 210,
+        "direct_graph_edge_but_separated": 3,
+        "native_fn": 269,
+        "native_fn_within_candidates": 12,
+        "native_tp": 2536,
+        "true_pairs": 2805
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261104",
+      "seed": 20261104,
+      "totals": {
+        "across_candidates": 1758,
+        "connected_but_separated": 175,
+        "connected_but_separated_hit_orientations_0": 156,
+        "connected_but_separated_hit_orientations_2": 19,
+        "different_graph_components": 1583,
+        "different_graph_components_hit_orientations_0": 1582,
+        "different_graph_components_hit_orientations_1": 1,
+        "direct_graph_edge_but_separated": 19,
+        "native_fn": 1768,
+        "native_fn_within_candidates": 10,
+        "native_tp": 1336,
+        "true_pairs": 3104
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261105",
+      "seed": 20261105,
+      "totals": {
+        "across_candidates": 913,
+        "connected_but_separated": 118,
+        "connected_but_separated_hit_orientations_0": 110,
+        "connected_but_separated_hit_orientations_2": 8,
+        "different_graph_components": 795,
+        "different_graph_components_hit_orientations_0": 795,
+        "direct_graph_edge_but_separated": 8,
+        "native_fn": 920,
+        "native_fn_within_candidates": 7,
+        "native_tp": 2021,
+        "true_pairs": 2941
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261106",
+      "seed": 20261106,
+      "totals": {
+        "across_candidates": 558,
+        "connected_but_separated": 73,
+        "connected_but_separated_hit_orientations_0": 71,
+        "connected_but_separated_hit_orientations_2": 2,
+        "different_graph_components": 485,
+        "different_graph_components_hit_orientations_0": 485,
+        "direct_graph_edge_but_separated": 2,
+        "native_fn": 578,
+        "native_fn_within_candidates": 20,
+        "native_tp": 2237,
+        "true_pairs": 2815
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261107",
+      "seed": 20261107,
+      "totals": {
+        "across_candidates": 1264,
+        "connected_but_separated": 337,
+        "connected_but_separated_hit_orientations_0": 299,
+        "connected_but_separated_hit_orientations_2": 38,
+        "different_graph_components": 927,
+        "different_graph_components_hit_orientations_0": 927,
+        "direct_graph_edge_but_separated": 37,
+        "native_fn": 1266,
+        "native_fn_within_candidates": 2,
+        "native_tp": 1646,
+        "true_pairs": 2912
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261108",
+      "seed": 20261108,
+      "totals": {
+        "across_candidates": 2094,
+        "connected_but_separated": 108,
+        "connected_but_separated_hit_orientations_0": 91,
+        "connected_but_separated_hit_orientations_2": 17,
+        "different_graph_components": 1986,
+        "different_graph_components_hit_orientations_0": 1986,
+        "direct_graph_edge_but_separated": 14,
+        "native_fn": 2111,
+        "native_fn_within_candidates": 17,
+        "native_tp": 967,
+        "true_pairs": 3078
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 2084,
+        "connected_but_separated": 38,
+        "connected_but_separated_hit_orientations_0": 35,
+        "connected_but_separated_hit_orientations_2": 3,
+        "different_graph_components": 2046,
+        "different_graph_components_hit_orientations_0": 2046,
+        "direct_graph_edge_but_separated": 3,
+        "native_fn": 2102,
+        "native_fn_within_candidates": 18,
+        "native_tp": 1559,
+        "true_pairs": 3661
+      }
+    },
+    {
+      "condition": "divergent_turnover",
+      "label": "divergent_turnover_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 1667,
+        "connected_but_separated": 148,
+        "connected_but_separated_hit_orientations_0": 141,
+        "connected_but_separated_hit_orientations_2": 7,
+        "different_graph_components": 1519,
+        "different_graph_components_hit_orientations_0": 1519,
+        "direct_graph_edge_but_separated": 7,
+        "native_fn": 1689,
+        "native_fn_within_candidates": 22,
+        "native_tp": 1375,
+        "true_pairs": 3064
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261101",
+      "seed": 20261101,
+      "totals": {
+        "native_fn": 3,
+        "native_fn_within_candidates": 3,
+        "native_tp": 1835,
+        "true_pairs": 1838
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261102",
+      "seed": 20261102,
+      "totals": {
+        "native_fn": 1,
+        "native_fn_within_candidates": 1,
+        "native_tp": 1872,
+        "true_pairs": 1873
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261103",
+      "seed": 20261103,
+      "totals": {
+        "native_tp": 1836,
+        "true_pairs": 1836
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261104",
+      "seed": 20261104,
+      "totals": {
+        "native_tp": 1832,
+        "true_pairs": 1832
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261105",
+      "seed": 20261105,
+      "totals": {
+        "native_fn": 8,
+        "native_fn_within_candidates": 8,
+        "native_tp": 1841,
+        "true_pairs": 1849
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261106",
+      "seed": 20261106,
+      "totals": {
+        "native_fn": 31,
+        "native_fn_within_candidates": 31,
+        "native_tp": 1905,
+        "true_pairs": 1936
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261107",
+      "seed": 20261107,
+      "totals": {
+        "native_tp": 1824,
+        "true_pairs": 1824
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261108",
+      "seed": 20261108,
+      "totals": {
+        "native_tp": 1849,
+        "true_pairs": 1849
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 125,
+        "different_graph_components": 125,
+        "different_graph_components_hit_orientations_0": 125,
+        "native_fn": 125,
+        "native_tp": 1801,
+        "true_pairs": 1926
+      }
+    },
+    {
+      "condition": "missing20",
+      "label": "missing20_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 13,
+        "different_graph_components": 13,
+        "different_graph_components_hit_orientations_0": 13,
+        "native_fn": 30,
+        "native_fn_within_candidates": 17,
+        "native_tp": 1859,
+        "true_pairs": 1889
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261101",
+      "seed": 20261101,
+      "totals": {
+        "native_tp": 1544,
+        "true_pairs": 1544
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261102",
+      "seed": 20261102,
+      "totals": {
+        "native_tp": 1549,
+        "true_pairs": 1549
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261103",
+      "seed": 20261103,
+      "totals": {
+        "native_fn": 1,
+        "native_fn_within_candidates": 1,
+        "native_tp": 1024,
+        "true_pairs": 1025
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261104",
+      "seed": 20261104,
+      "totals": {
+        "native_tp": 1015,
+        "true_pairs": 1015
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261105",
+      "seed": 20261105,
+      "totals": {
+        "native_fn": 2,
+        "native_fn_within_candidates": 2,
+        "native_tp": 1020,
+        "true_pairs": 1022
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261106",
+      "seed": 20261106,
+      "totals": {
+        "native_fn": 24,
+        "native_fn_within_candidates": 24,
+        "native_tp": 1605,
+        "true_pairs": 1629
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261107",
+      "seed": 20261107,
+      "totals": {
+        "across_candidates": 6,
+        "different_graph_components": 6,
+        "different_graph_components_hit_orientations_0": 6,
+        "native_fn": 6,
+        "native_tp": 1005,
+        "true_pairs": 1011
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261108",
+      "seed": 20261108,
+      "totals": {
+        "native_tp": 1554,
+        "true_pairs": 1554
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 82,
+        "different_graph_components": 82,
+        "different_graph_components_hit_orientations_0": 82,
+        "native_fn": 82,
+        "native_tp": 993,
+        "true_pairs": 1075
+      }
+    },
+    {
+      "condition": "taxon_count_control",
+      "label": "taxon_count_control_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 4,
+        "different_graph_components": 4,
+        "different_graph_components_hit_orientations_0": 4,
+        "native_fn": 20,
+        "native_fn_within_candidates": 16,
+        "native_tp": 1014,
+        "true_pairs": 1034
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261101",
+      "seed": 20261101,
+      "totals": {
+        "native_fn": 14,
+        "native_fn_within_candidates": 14,
+        "native_tp": 3177,
+        "true_pairs": 3191
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261102",
+      "seed": 20261102,
+      "totals": {
+        "native_fn": 12,
+        "native_fn_within_candidates": 12,
+        "native_tp": 3365,
+        "true_pairs": 3377
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261103",
+      "seed": 20261103,
+      "totals": {
+        "native_fn": 12,
+        "native_fn_within_candidates": 12,
+        "native_tp": 2793,
+        "true_pairs": 2805
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261104",
+      "seed": 20261104,
+      "totals": {
+        "native_fn": 41,
+        "native_fn_within_candidates": 41,
+        "native_tp": 3063,
+        "true_pairs": 3104
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261105",
+      "seed": 20261105,
+      "totals": {
+        "native_fn": 42,
+        "native_fn_within_candidates": 42,
+        "native_tp": 2899,
+        "true_pairs": 2941
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261106",
+      "seed": 20261106,
+      "totals": {
+        "native_fn": 37,
+        "native_fn_within_candidates": 37,
+        "native_tp": 2778,
+        "true_pairs": 2815
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261107",
+      "seed": 20261107,
+      "totals": {
+        "native_tp": 2912,
+        "true_pairs": 2912
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261108",
+      "seed": 20261108,
+      "totals": {
+        "native_fn": 19,
+        "native_fn_within_candidates": 19,
+        "native_tp": 3059,
+        "true_pairs": 3078
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 190,
+        "different_graph_components": 190,
+        "different_graph_components_hit_orientations_0": 190,
+        "native_fn": 199,
+        "native_fn_within_candidates": 9,
+        "native_tp": 3462,
+        "true_pairs": 3661
+      }
+    },
+    {
+      "condition": "turnover",
+      "label": "turnover_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 6,
+        "different_graph_components": 6,
+        "different_graph_components_hit_orientations_0": 6,
+        "native_fn": 26,
+        "native_fn_within_candidates": 20,
+        "native_tp": 3038,
+        "true_pairs": 3064
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261101",
+      "seed": 20261101,
+      "totals": {
+        "native_fn": 3,
+        "native_fn_within_candidates": 3,
+        "native_tp": 1538,
+        "true_pairs": 1541
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261102",
+      "seed": 20261102,
+      "totals": {
+        "native_fn": 1,
+        "native_fn_within_candidates": 1,
+        "native_tp": 1545,
+        "true_pairs": 1546
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261103",
+      "seed": 20261103,
+      "totals": {
+        "native_fn": 6,
+        "native_fn_within_candidates": 6,
+        "native_tp": 1013,
+        "true_pairs": 1019
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261104",
+      "seed": 20261104,
+      "totals": {
+        "native_tp": 1019,
+        "true_pairs": 1019
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261105",
+      "seed": 20261105,
+      "totals": {
+        "native_fn": 6,
+        "native_fn_within_candidates": 6,
+        "native_tp": 1025,
+        "true_pairs": 1031
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261106",
+      "seed": 20261106,
+      "totals": {
+        "native_fn": 17,
+        "native_fn_within_candidates": 17,
+        "native_tp": 1575,
+        "true_pairs": 1592
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261107",
+      "seed": 20261107,
+      "totals": {
+        "native_tp": 1001,
+        "true_pairs": 1001
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261108",
+      "seed": 20261108,
+      "totals": {
+        "native_tp": 1544,
+        "true_pairs": 1544
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261109",
+      "seed": 20261109,
+      "totals": {
+        "across_candidates": 154,
+        "different_graph_components": 154,
+        "different_graph_components_hit_orientations_0": 154,
+        "native_fn": 154,
+        "native_tp": 938,
+        "true_pairs": 1092
+      }
+    },
+    {
+      "condition": "uneven_taxa",
+      "label": "uneven_taxa_20261110",
+      "seed": 20261110,
+      "totals": {
+        "across_candidates": 8,
+        "different_graph_components": 8,
+        "different_graph_components_hit_orientations_0": 8,
+        "native_fn": 18,
+        "native_fn_within_candidates": 10,
+        "native_tp": 1016,
+        "true_pairs": 1034
+      }
+    }
+  ],
+  "igraph_version": "1.0.0",
+  "independent_confirmation": false,
+  "input_identities_rechecked": 1568,
+  "limits": "Independent native row/graph/count verification, not validation of all search decisions, native scores or evolutionary truth.",
+  "native_admission": {
+    "bytes": 24209059,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_tree_panel_admission_v1/results.json",
+    "sha256": "17a1be71823b9fb7fb13082d05001d7667bb89c3366da2e3138a124e90907820"
+  },
+  "numpy_version": "2.2.6",
+  "pair_rows_verified": 163527,
+  "pair_trace": {
+    "bytes": 13216818,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_upstream_trace_20261004/true_pair_trace.tsv",
+    "sha256": "012d9f395a6e3f6cdcc008caa9df7bdecd3b77ca9975b72f638ff0de15a9b62a"
+  },
+  "publication_ready": false,
+  "record_helper": {
+    "bytes": 11203,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_simulation_gene_tree_oracle.py",
+    "sha256": "e6d53953c3d27f849b6ea266b1478558a8696703d9f27ff17e871a2005eccaff"
+  },
+  "report": {
+    "bytes": 1387184,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/simulation_upstream_trace_20261004/results.json",
+    "sha256": "eb096b6275b2035877bf67f7229c6983fd4f7010c25ba87620d558360fa78806"
+  },
+  "scientific_defaults_changed": false,
+  "source": {
+    "bytes": 11369,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_simulation_upstream.py",
+    "sha256": "a597a8a1c2439a89ebff4db8b88dafe737ae26c6d4f6927057483984ee286fcf"
+  },
+  "status": "independent_native_rows_and_igraph_components_verified",
+  "summary": [
+    {
+      "cells": 10,
+      "condition": "baseline",
+      "totals": {
+        "across_candidates": 177,
+        "different_graph_components": 177,
+        "different_graph_components_hit_orientations_0": 177,
+        "native_fn": 275,
+        "native_fn_within_candidates": 98,
+        "native_tp": 28776,
+        "true_pairs": 29051
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "divergent",
+      "totals": {
+        "across_candidates": 12736,
+        "connected_but_separated": 1294,
+        "connected_but_separated_hit_orientations_0": 1177,
+        "connected_but_separated_hit_orientations_1": 1,
+        "connected_but_separated_hit_orientations_2": 116,
+        "different_graph_components": 11442,
+        "different_graph_components_hit_orientations_0": 11441,
+        "different_graph_components_hit_orientations_2": 1,
+        "direct_graph_edge_but_separated": 117,
+        "native_fn": 12796,
+        "native_fn_within_candidates": 60,
+        "native_tp": 16255,
+        "true_pairs": 29051
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "divergent_turnover",
+      "totals": {
+        "across_candidates": 13072,
+        "connected_but_separated": 1518,
+        "connected_but_separated_hit_orientations_0": 1384,
+        "connected_but_separated_hit_orientations_2": 134,
+        "different_graph_components": 11554,
+        "different_graph_components_hit_orientations_0": 11553,
+        "different_graph_components_hit_orientations_1": 1,
+        "direct_graph_edge_but_separated": 128,
+        "native_fn": 13214,
+        "native_fn_within_candidates": 142,
+        "native_tp": 17734,
+        "true_pairs": 30948
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "missing20",
+      "totals": {
+        "across_candidates": 138,
+        "different_graph_components": 138,
+        "different_graph_components_hit_orientations_0": 138,
+        "native_fn": 198,
+        "native_fn_within_candidates": 60,
+        "native_tp": 18454,
+        "true_pairs": 18652
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "taxon_count_control",
+      "totals": {
+        "across_candidates": 92,
+        "different_graph_components": 92,
+        "different_graph_components_hit_orientations_0": 92,
+        "native_fn": 135,
+        "native_fn_within_candidates": 43,
+        "native_tp": 12323,
+        "true_pairs": 12458
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "turnover",
+      "totals": {
+        "across_candidates": 196,
+        "different_graph_components": 196,
+        "different_graph_components_hit_orientations_0": 196,
+        "native_fn": 402,
+        "native_fn_within_candidates": 206,
+        "native_tp": 30546,
+        "true_pairs": 30948
+      }
+    },
+    {
+      "cells": 10,
+      "condition": "uneven_taxa",
+      "totals": {
+        "across_candidates": 162,
+        "different_graph_components": 162,
+        "different_graph_components_hit_orientations_0": 162,
+        "native_fn": 205,
+        "native_fn_within_candidates": 43,
+        "native_tp": 12214,
+        "true_pairs": 12419
+      }
+    }
+  ]
+}
