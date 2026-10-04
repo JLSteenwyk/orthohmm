@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Actual All-Tool Provenance And Scoped Resources Consolidated (2026-10-04)
+
+The preceding user exchange confirms shared-host authorization but makes no
+new analytical progress. On resumption read the complete goal/current ledger,
+collect terminal export/push sessions and query Slurm: no owned native job is
+live. Source `b13883ba` is pushed to the authorized remote.
+
+The [corrected actual register](ALL_BENCHMARK_PROVENANCE_RESULT_20261004.md)
+joins24 method/dataset rows and29 scoped resource entries. Independent stdlib
+readback verifies all scores/predictions,32 direct records, five source/helper
+identities and exact TSV projection. Thirty focused tests pass. Preserve the
+pre-output schema failure and unselected first export's reporting defects;
+corrected output uses explicit inputs, single conversion entries and distinct
+memory units/scopes. No native inference, scoring or timing identity is rerun.
+
+Historical unknowns stay unknown: cached replay, MCL checkpoints and OrthoMCL
+mode4 are not full inference; FastOMA driver RSS/CPU exclude aggregate Docker
+tasks. Version declarations and inherited input/output pins are not universal
+historical runtime/consumption attestation. Commit/push selected v2 outputs,
+result summary and this ledger without modifying prior immutable evidence.
+
+Next recover any available missing historical commands/runtime evidence from
+retained records, then continue the remaining scientific and delivery gaps.
+The full goal remains active/incomplete; no uncontended-host/DGX requirement
+or contention-driven retry is introduced.
+
 ## All-Tool, Three-Dataset Provenance Join Prepared (2026-10-04)
 
 The preceding99ce6565 turn makes concrete full-goal audit progress. Read the

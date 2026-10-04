@@ -1,0 +1,30 @@
+dataset	method	version	wall_seconds	scope	memory_value	memory_unit	memory_scope
+OrthoBench	OrthoHMM high sensitivity	0.5.0	319.467197	Cached-hit downstream replay only; initial search excluded	5.560291	GiB	Reported process RSS in cached replay
+OrthoBench	OrthoHMM phylogeny satellite_v2	0.5.0	3274.102675	Historical full inference, shared host; scoring excluded	12733403136	bytes	sampled_sum_of_linux_proc_tree_rss
+OrthoBench	OrthoFinder 3.1.5 full	3.1.5	3421.07	GNU-time full native run; shared host	4787980	KiB	Reported maximum process RSS; not aggregate memory
+OrthoBench	OrthoFinder 3.1.5 sequence-only checkpoint	3.1.5	0.42	Conversion only; sequence-only inference time unknown		KiB	Reported maximum process RSS; not aggregate memory
+OrthoBench	SonicParanoid 2.0.9	2.0.9	1219.933	Tool-reported run duration		KiB	Reported maximum process RSS; not aggregate memory
+OrthoBench	ProteinOrtho 6.3.6	6.3.6		No verified per-invocation duration		KiB	Reported maximum process RSS; not aggregate memory
+OrthoBench	FastOMA 0.3.5 final orthologous groups	0.3.5	3023	Nextflow workflow duration including failed attempts		KiB	Reported maximum process RSS; not aggregate memory
+OrthoBench	OrthoMCL 1.4	1.4	371702.0	July 2025 native-log interval; 8 BLAST threads		KiB	Reported maximum process RSS; not aggregate memory
+QfO	OrthoHMM high sensitivity	0.5.0		Unestablished		KiB	Not measured
+QfO	OrthoHMM phylogeny satellite_v2	0.5.0		Unestablished		KiB	Not measured
+QfO	OrthoFinder 3.1.5 full	3.1.5	42018.0	full native inference	6479368	KiB	GNU-time maximum process RSS, not aggregate memory
+QfO	OrthoFinder 3.1.5 full	3.1.5	193.52124190330505	pair conversion		KiB	Not measured
+QfO	OrthoFinder 3.1.5 sequence-only checkpoint	3.1.5	249.17388200759888	pair conversion		KiB	Not measured
+QfO	SonicParanoid 2.0.9	2.0.9	11423.0	full native inference	8125440	KiB	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory
+QfO	SonicParanoid 2.0.9	2.0.9	71.87821364402771	pair conversion		KiB	Not measured
+QfO	ProteinOrtho 6.3.6	6.3.6	4709.0	full native inference	2617320	KiB	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory
+QfO	ProteinOrtho 6.3.6	6.3.6	30.44321322441101	pair conversion		KiB	Not measured
+QfO	FastOMA 0.3.5 final orthologous groups	0.3.5	14094.0	full native inference	845416	KiB	GNU-time driver maximum RSS; Docker tasks not aggregate workflow memory
+QfO	FastOMA 0.3.5 final orthologous groups	0.3.5	183.20080041885376	pair conversion		KiB	Not measured
+QfO	OrthoMCL 1.4	1.4	7455.0	recovered downstream mode4 only; excludes BLAST/BPO	22425488	KiB	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory
+QfO	OrthoMCL 1.4	1.4	146.14664673805237	pair conversion		KiB	Not measured
+ThreeKingdoms	OrthoHMM high sensitivity	0.5.0	6556.426547	measured	11661832.0	KiB	sampled peak process-tree RSS
+ThreeKingdoms	OrthoHMM phylogeny satellite_v2	0.5.0	8225	measured	11508204	KiB	sampled peak process-tree RSS
+ThreeKingdoms	OrthoFinder 3.1.5 full	3.1.5	6332	measured	4178948	KiB	maximum RSS reported by GNU time
+ThreeKingdoms	OrthoFinder 3.1.5 sequence-only checkpoint	3.1.5	4884	derived from matching full run's MCL checkpoint		KiB	
+ThreeKingdoms	SonicParanoid 2.0.9	2.0.9	4533.0	full native inference	8266448	KiB	GNU-time maximum process RSS; not aggregate concurrent process-tree/cgroup memory
+ThreeKingdoms	ProteinOrtho 6.3.6	6.3.6	569	measured	2698752	KiB	maximum RSS reported by GNU time
+ThreeKingdoms	FastOMA 0.3.5 final orthologous groups	0.3.5	6523	measured	621124	KiB	maximum RSS reported by GNU time
+ThreeKingdoms	OrthoMCL 1.4	1.4	141193	measured stage sum	93351928	KiB	sampled sum of process-tree RSS; shared fork pages double-counted
