@@ -40,9 +40,11 @@ the environmental response exceeded its deadline before OrthoHMM started.
 Its resource endpoints are absent. The [synchronization repair and current
 history/runtime checkpoint](THREADRIPPER_PREPARATION_SYNC_REPAIR_20261004.md)
 pass; the new table includes both pre-native aborts with null endpoints.
-No job is live. New prospective execution/readiness bindings and fresh
-capacity/native handoff remain required before index 21, high-sensitivity
-OrthoHMM/eight proteomes/repeat 2. No failed identity is retried.
+New prospective execution/readiness bindings and fresh capacity/native
+handoff now pass for [22417/index 21](THREADRIPPER_SHARED_ATTEMPT_22417.md),
+high-sensitivity OrthoHMM/eight proteomes/repeat 2. Native HMM search is
+observed running; terminal review and resources remain unestablished. The
+current table still contains only 21 reviewed attempts. No failed identity is retried.
 The [partial figure](threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)
 retains the nineteen measurements and explains both unplotted aborts; the [3 October working main text](PUBLICATION_MAIN_TEXT_20261003.md)
 and its review retain their earlier three-attempt checkpoint. Both preserve
@@ -648,7 +650,9 @@ repeat 2, also passes terminal review. Index 20 is subsequently released as
 resource endpoints. Preserve its failure; do not retry or fabricate a passing
 summary. Current-source synchronization regression, runtime refresh and
 explicit history resolution now pass without overwriting earlier evidence.
-New execution/readiness bindings and live capacity/handoff remain before index 21.
+New execution/readiness bindings and live capacity/prepared handoff pass for
+index 21 as 22417; [its live snapshot](threadripper_shared_live_22417.json)
+establishes native startup, not a completed timing or new accuracy result.
 Ordinary contention is annotated, not excluded or retried until faster. Fresh
 capacity and measurement checks still apply; unrelated work must not be changed.
 

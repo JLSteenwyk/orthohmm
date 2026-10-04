@@ -44,21 +44,23 @@ in that cell are reviewed, but only two are eligible: its summaries remain null.
 Index 20, phylogenetic OrthoHMM satellite_v2, four proteomes, repeat 2,
 is now [22416, audited pre-native abort](results/THREADRIPPER_SHARED_ATTEMPT_22416.md).
 Its environmental response exceeded the release deadline; OrthoHMM did not
-start and native resource endpoints are absent. No job is live at this checkpoint.
+start and native resource endpoints are absent. No job was live at that failure checkpoint.
 The [synchronization repair](results/THREADRIPPER_PREPARATION_SYNC_REPAIR_20261004.md)
 now passes 655 source-bound tests, real 21-identity history resolution and a
 five-helper runtime refresh. The current table includes both aborts explicitly
 with null endpoints. Next is index 21, high-sensitivity OrthoHMM, eight
-proteomes, repeat 2, after new prospective execution/readiness bindings and
-fresh capacity/native handoff. Neither pre-native abort is retried.
+proteomes, repeat 2. Neither pre-native abort is retried.
 
 The [prepared continuation helpers](results/THREADRIPPER_PREPARED_CONTINUATION_20261004.md)
 now pass 54 source-pinned tests. Use the new dated continuation, terminal
 reviewer and live snapshot, not the old pre-native continuation/lookup. They
-retain both abort resolutions and verify preparation-before-release ordering;
+retain both abort resolutions and verify preparation-before-release ordering.
 Actual [new source/resource/environment/readiness preparation](results/threadripper_prepared_panel_preparation_20261004.json)
-now passes real history and source/bounds readback; index-21 native handoff
-still remains. Do not repeat the existing kernel regression,
+passes real history and source/bounds readback. Index 21 is now
+[22417, native HMM search observed running](results/THREADRIPPER_SHARED_ATTEMPT_22417.md)
+after actual prepared-receipt/capacity/native handoff. It is not a terminal
+resource result; obtain fresh scheduler state and review after completion.
+Do not repeat the existing kernel regression,
 runtime refresh or accounting calibration solely because the goal resumed.
 
 The [interim resource figure](results/threadripper_shared_resource_figure_20261004_v20/shared_threadripper_resources.pdf)

@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Index 21 Prepared Handoff And Native Search Live (2026-10-04)
+
+This continuation makes progress: new dated launcher/terminal-review/snapshot
+helpers with 54 captured passing tests are committed/pushed at `7b0bf151`;
+actual source/resource/policy/readiness preparation at `18b9a426`. Full goal,
+shared-host scope, frozen science and unrelated work remain unchanged.
+
+The frozen controller checks all 21 prior identities, submits/holds/binds the
+actual next request and releases only index 21 as **22417**, high-sensitivity
+OH, eight proteomes, repeat 2. The [public submission](threadripper_shared_submission_22417.json)
+matches canonical 1,183-byte launch metadata, SHA-256
+`7cb8f5d06bddd9fe36e96e14bea7de37b9df0d904b431ecda2bc55ce24b39436`.
+64 SMT allocation slots/128 GiB/26h/shared/no requeue and native affinity 0-31
+retain the original limits. No excluded attempt is retried.
+
+The [actual live handoff](THREADRIPPER_SHARED_ATTEMPT_22417.md) passes once.
+Live snapshot is 16,352 bytes, SHA-256
+`a863af941fcb716602dbfb8cfd2ebbce7936061f2fe1b8533956c4b48c398422`.
+Prepared receipt precedes release request by 57.768748744s; actual review bound
+9.802725716s after request under unchanged bounds. Live native PID/step,
+affinity, request comment, preflight/go and HMM search log all verify. Both
+available-memory observations exceed 128-GiB floor (about 606 GiB available).
+Preflight foreign CPU is 42.9693181133 cores; first process gap 30.000419972s.
+These are contention/early-coverage observations, not causal overhead or
+whole-run admission. Observer terminal lifecycle remains a post-measurement
+review requirement, not a live-snapshot file requirement.
+
+All owned preparation/launch/snapshot tool handles finish; fresh queue/accounting
+show parent/batch/native step RUNNING. Current v21 table/v20 figure remain
+21 reviewed/19 measured/18 eligible, exclusions 0/17/20 and six unreviewed
+identities (one live, five not yet submitted). No resource point or success
+summary for 21 is fabricated. On continuation poll **22417**, preserve terminal
+controller before purge when available, then use the new terminal reviewer and
+update reporting only after independent admission. Do not rerun completed
+preparation/calibration/regression/runtime refresh or this one-shot snapshot;
+do not launch 22 until reviewed history advances. Remaining panel/final
+manuscript/resource reconciliation and versioned/archive release remain open.
+
 ## Actual Prepared Panel Bindings Pass (2026-10-04)
 
 Prospective continuation/terminal-review/live-snapshot and 54-case captured
