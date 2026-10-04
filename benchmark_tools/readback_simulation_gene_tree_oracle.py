@@ -45,6 +45,16 @@ def validate_counts(score):
             raise ValueError("Metric differs from counts")
 
 
+def retained_baselines(scores):
+    rows = [r for r in scores["records"]
+            if r["method"] == "orthohmm_satellite_v2" and r["arm"] == "generating"]
+    expected = {(c, s) for c in CONDITIONS for s in range(20261101, 20261111)}
+    if (len(rows) != 70 or {(r["condition"], r["seed"]) for r in rows} != expected
+            or any(r["status"] != "complete" for r in rows)):
+        raise ValueError("Incomplete retained baseline inventory or completion status")
+    return {(r["condition"], r["seed"]): r["score"] for r in rows}
+
+
 def decompose(cell, groups, ancestors, true_pairs):
     seen, index = set(), {}
     if len(cell["candidates"]) != len(groups):
@@ -100,8 +110,7 @@ def run(repo, path, digest):
         if ref["path"] in inputs or record(ref["path"]) != ref:
             raise ValueError("Duplicate or changed retained input")
         inputs[ref["path"]] = ref
-    old = {(r["condition"], r["seed"]): r["score"] for r in scores["records"]
-           if r["method"] == "orthohmm_satellite_v2" and r["arm"] == "generating" and r["status"] == "scored"}
+    old = retained_baselines(scores)
     native = {(r["condition"], r["seed"]): r for r in admission["records"]
               if r["method"] == "orthohmm_satellite_v2" and r["variant"] == "generating"}
     expected = {(c, s) for c in CONDITIONS for s in range(20261101, 20261111)}

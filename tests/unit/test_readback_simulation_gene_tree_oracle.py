@@ -95,3 +95,26 @@ def test_readback_does_not_mutate_input_records():
     before = deepcopy(original)
     readback.decompose(*original)
     assert original == before
+
+
+def retained_fixture():
+    return {"records": [{"condition": c, "seed": s, "method": "orthohmm_satellite_v2",
+                          "arm": "generating", "status": "complete", "score": score(1, 0, 0)}
+                         for c in readback.CONDITIONS for s in range(20261101, 20261111)]}
+
+
+def test_retained_schema_uses_complete_not_scored():
+    assert len(readback.retained_baselines(retained_fixture())) == 70
+
+
+@pytest.mark.parametrize("change", ["status", "duplicate", "missing"])
+def test_retained_baselines_do_not_drop_failed_or_missing_seeds(change):
+    data = retained_fixture()
+    if change == "status":
+        data["records"][0]["status"] = "scored"
+    elif change == "duplicate":
+        data["records"][-1] = data["records"][0]
+    else:
+        data["records"].pop()
+    with pytest.raises(ValueError, match="baseline inventory"):
+        readback.retained_baselines(data)
