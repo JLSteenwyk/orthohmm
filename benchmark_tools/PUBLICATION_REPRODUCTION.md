@@ -11,8 +11,14 @@ archive/copy/external restoration/verification and copied `-I -S -B` replay
 pass; all139 restored payloads rehash. The replay verifies63 mean endpoints
 and all70-cell/20-residual-candidate count identities without native input
 reads. This is reporting portability, not raw-stage admission or independent
-biological validation. The older32-page PDF is preserved and explicitly is
-not a rendered copy of the new text; fresh graphical review remains open.
+biological validation. The [new source-bound graphical review](results/PUBLICATION_MECHANISM_REVIEW_RESULT_20261004.md)
+now provides a [34-page text-plus-figures PDF](results/publication_main_with_figures_20261004_v2/document.pdf):
+14 revised main pages, four guides and all16 unchanged figures. All14 main
+pages and four new guides were viewed;30 source pages preserve exact text,
+geometry and pixels. Six focused readback tests pass, retaining the earlier
+two-failure/four-pass receipt. This separate review does not alter the rc3
+archive, which still contains the older32-page PDF; no retroactive graphical
+review or complete native/statistical validation is claimed for that archive.
 Native/timing/statistical routes already validated for rc2 are not repeated.
 Scientific, historical provenance and public-deposition gaps remain active.
 
@@ -63,8 +69,9 @@ shared-host observations and three exclusions. The
 [pre-native abort review](results/THREADRIPPER_SHARED_ATTEMPT_22413.md) records
 index 17: OrthoFinder never started, so there are no native resource endpoints.
 The snapshot includes that abort explicitly with null endpoints, not as a measurement. The remaining panel
-has now finished execution and terminal review. Final reporting and manuscript/archive
-integration remain separate requirements. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
+has now finished execution and terminal review. Final reporting is incorporated
+in the current manuscript/review and the retained study packages; wider
+scientific and release requirements remain. The [software repair and explicit history resolution](results/THREADRIPPER_PRENATIVE_REPAIR_20261004.md)
 now pass; the [new runtime and reporting checkpoint](results/THREADRIPPER_PRENATIVE_CONTINUATION_20261004.md)
 preserves all earlier source-bound artifacts. All four independent terminal
 review categories now pass for [22414, index 18](results/THREADRIPPER_SHARED_ATTEMPT_22414.md),

@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Revised Mechanism Manuscript And Figure Review Completed (2026-10-04)
+
+The preceding turn confirms the authorized shared-host amendment without
+changing scientific state. On resumption read the full goal, current ledger
+and retained artifacts; no owned Slurm job is live. Preserve completed native,
+timing and statistical routes. Resume the actual pending presentation review.
+
+The [new reviewed manuscript](PUBLICATION_MECHANISM_REVIEW_RESULT_20261004.md)
+is rendered as14 main pages and assembled with four guides/all16 unchanged
+figures:34 pages total. All14 main pages and four new guides were actually
+viewed, with no clipping/overlap observed. All-page bounds checks pass; all30
+source pages retain exact text/geometry/pixels. Eighteen citations,18 bookmarks,
+seven redirected figure links and63 original nonfigure file actions remain.
+Prior unchanged-figure visual evidence is reused, not a fresh16-figure review.
+
+Bind67 direct inputs to the actual render-time45af9c00 commit. Six focused
+readback tests pass in1.76s, including actualPDF source preservation, navigation,
+mechanism counts, all resource-table numbers and nine unavailable summary cells.
+Preserve first tests:two failures/four passes from wrong empty-warning type and
+contention phrase assumptions. Correct tests without altering PDF/results.
+Preserve wrong-case bounds selector failure before output; corrected selector
+passes without reprinting or scientific retry. An invalid first Add File hunk
+also made no test file before the corrected patch.
+
+Commit/push HTML, main/combinedPDFs, receipts, new selection, readback tests and
+guide/result changes. Leave browser profiles/PNG caches local and preserve
+historical32-pagePDF and immutable rc3 archive. No benchmark endpoint/default,
+native analysis, scoring or timing is changed/repeated. No quiet-window/DGX gate
+or unrelated job/service action is introduced.
+
+Next continue the genuinely remaining uncertainty, development-family inventory,
+prespecified biological error-stratum and per-ablation-cost requirements; archive
+and public-deposition/rights gaps remain. The full publication goal is active
+and incomplete. Rendering does not establish scientific sufficiency.
+
 ## Actual rc3 Mechanism Text And Portable Reporting Delivered (2026-10-04)
 
 Preparedb37852f0 is pushed before selection/build/archive. The [actual rc3

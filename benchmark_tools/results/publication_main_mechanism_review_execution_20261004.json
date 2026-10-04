@@ -1,0 +1,121 @@
+{
+  "schema": "publication_mechanism_review_execution_v1",
+  "status": "rendered_assembled_visually_reviewed_and_readback_passed",
+  "source_revision": "45af9c000485ea7003a046f74ef582cf7200237e",
+  "test_source": {
+    "path": "tests/unit/test_mechanism_main_review_artifacts.py",
+    "bytes": 7704,
+    "sha256": "138462b30038c7d0dcd1f9e6b2cd05649bbb34b5399315aab8ccc572b20fecc4"
+  },
+  "initial_test_result": {
+    "path": "benchmarks/work/mechanism_main_review_tests_20261004.xml",
+    "bytes": 4363,
+    "sha256": "bedcf425d55b4424720cfb14ecbd1cfafb4c1b6aebcbd8e834d32236609978be",
+    "junit": {
+      "tests": "6",
+      "failures": "2",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.048"
+    }
+  },
+  "corrected_test_result": {
+    "path": "benchmarks/work/mechanism_main_review_corrected_tests_20261004.xml",
+    "bytes": 1190,
+    "sha256": "8ace5abccff8d561400c1ecc92d458d47ac66f868d13e3ebae881cb542c21598",
+    "junit": {
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "1.760"
+    }
+  },
+  "visual_review": {
+    "path": "benchmark_tools/results/publication_main_mechanism_visual_review_20261004.json",
+    "bytes": 25971,
+    "sha256": "8e6bd7affedac433ab0276b324280e56b6bfb9d96eeae93f6d694fc4186a880f"
+  },
+  "successful_exit_codes": {
+    "pandoc_render": 0,
+    "trusted_local_html_print": 0,
+    "corrected_text_selector_bounds_review": 0,
+    "pinned_figure_assembly": 0,
+    "corrected_focused_readback_tests": 0
+  },
+  "assembly_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-m",
+    "benchmark_tools.assemble_publication_review",
+    "--root",
+    ".",
+    "--selection",
+    "benchmark_tools/results/publication_figure_selection_20261004_v2.json",
+    "--selection-sha256",
+    "3dc166c05ce5837ff63949ae87113435a42848e1013a5483246dff369289013e",
+    "--output",
+    "benchmark_tools/results/publication_main_with_figures_20261004_v2"
+  ],
+  "render_and_print_command_records": "Exact render and print commands and direct runtime/input pins are retained in the linked render and print receipts. No render/print rerun was needed for the failed selector.",
+  "test_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "tests/unit/test_mechanism_main_review_artifacts.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=benchmarks/work/mechanism_main_review_corrected_tests_20261004.xml"
+  ],
+  "runtime_environment": {
+    "removed": [
+      "PYTHONHOME",
+      "PYTHONPATH",
+      "LD_PRELOAD",
+      "LD_LIBRARY_PATH",
+      "LD_AUDIT"
+    ],
+    "set": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "retained_preparation_failures": [
+    {
+      "stage": "apply_patch_test_creation",
+      "detail": "First Add File patch had an invalid trailing blank hunk; the test file was not created. Correct patch applied."
+    },
+    {
+      "stage": "initial_readback_tests",
+      "detail": "Two failures/four passes: the test expected empty PyMuPDF warnings as [] instead of its actual empty string; it expected 'unknown, potentially' rather than the manuscript's existing 'unknown and potentially'. Corrected checks retain no-warnings and contention disclosure requirements; PDF and science were not edited."
+    },
+    {
+      "stage": "original_bounds_selector",
+      "detail": "Wrong-case 'Fixed-Candidate' raised before output creation; corrected to 'fixed-candidate'. No PDF regeneration or scientific retry."
+    }
+  ],
+  "checks": {
+    "committed_direct_source_and_asset_bindings": 67,
+    "manual_main_pages": 14,
+    "manual_new_guide_pages": 4,
+    "source_pages_pixel_text_geometry_identical": 30,
+    "figure_inventory_and_captions_unchanged": 16,
+    "bookmarks": 18,
+    "redirected_main_figure_links": 7,
+    "restored_original_nonfigure_file_uri_actions": 63,
+    "retained_resource_tables": 3,
+    "unavailable_table_cells": 9,
+    "mechanism_counts_compared_to_previously_checked_summary": true
+  },
+  "benchmark_accuracy_or_frozen_method_changed": false,
+  "completed_native_scientific_or_timing_runs_repeated": false,
+  "unrelated_jobs_or_services_modified": false,
+  "public_archive_uploaded": false,
+  "publication_ready": false,
+  "remaining_scientific_work": "QfO uncertainty, development-family inventory limitations, prespecified biological error strata and per-ablation cost evidence remain. This review closes the updated presentation gap, not the full publication goal."
+}
