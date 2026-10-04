@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "host": "bizon",
+  "scope": "Fixed-candidate simulation oracle mechanism diagnostic, not inference or matched timing",
+  "runtime": {
+    "python": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "python_version": "3.12.3",
+    "dendropy": "5.0.8",
+    "biopython": "1.87",
+    "unset_environment": ["PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "environment": {
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "bytecode_disabled": true
+  },
+  "scientific_execution": {
+    "source_commit": "9335be8c",
+    "source": {
+      "path": "benchmark_tools/probe_simulation_gene_tree_oracle.py",
+      "bytes": 19685,
+      "sha256": "3fd49552afcce4b09a58ecbbc5b1290429c0019392bc5a8b29422f9a3a55ff8c"
+    },
+    "module": "benchmark_tools.probe_simulation_gene_tree_oracle",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--output", "benchmark_tools/results/simulation_gene_tree_oracle_20261004.json"],
+    "exit_code": 0,
+    "cells": 70,
+    "native_baseline_pair_sets_reproduced": 70,
+    "gnu_time": {
+      "elapsed_seconds": 32.52,
+      "user_seconds": 29.07,
+      "system_seconds": 2.40,
+      "maximum_resident_set_kib": 207696,
+      "interpretation": "Diagnostic process resource observation on shared host, not tool timing or causal efficiency"
+    },
+    "local_output": {
+      "path": "benchmark_tools/results/simulation_gene_tree_oracle_20261004.json",
+      "bytes": 25454943,
+      "sha256": "d2299d73238f1a4bb511320add9a62dbb427bc1ea9b4f414e74aefab20e7ad53",
+      "committed": false
+    }
+  },
+  "readback_attempts": [
+    {
+      "source_commit": "9e450025",
+      "source_sha256": "566803dcb249491702d3dda49ec9776501706a615b4f7e84545495593c67e86f",
+      "module": "benchmark_tools.readback_simulation_gene_tree_oracle",
+      "exit_code": 1,
+      "error": "ValueError: Incomplete fixed panel or retained baseline",
+      "cause": "Readback incorrectly selected status scored; original retained scores use status complete",
+      "output_created": false,
+      "scientific_execution_repeated": false
+    },
+    {
+      "source_commit": "9893f6a0a3299ccf4b4255eadb2365de5f6a7453",
+      "source_sha256": "e6d53953c3d27f849b6ea266b1478558a8696703d9f27ff17e871a2005eccaff",
+      "module": "benchmark_tools.readback_simulation_gene_tree_oracle",
+      "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--report", "benchmark_tools/results/simulation_gene_tree_oracle_20261004.json", "--report-sha256", "d2299d73238f1a4bb511320add9a62dbb427bc1ea9b4f414e74aefab20e7ad53", "--output", "benchmark_tools/results/simulation_gene_tree_oracle_readback_20261004.json"],
+      "exit_code": 0,
+      "original_baseline_scores_matched": 70,
+      "input_identities_rechecked": 6334,
+      "output": {
+        "path": "benchmark_tools/results/simulation_gene_tree_oracle_readback_20261004.json",
+        "bytes": 238131,
+        "sha256": "db016a1b4c68ab39caed061122e2196aadfb3ebdc38a4d4f5ad38d9edd664dec"
+      },
+      "scope": "Independent count/partition/original-score readback, not independent new-oracle-pair validation"
+    }
+  ],
+  "final_tests": {
+    "files": ["tests/unit/test_probe_simulation_gene_tree_oracle.py", "tests/unit/test_readback_simulation_gene_tree_oracle.py", "tests/unit/test_render_simulation_gene_tree_oracle.py"],
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "pytest_seconds": 1.51,
+    "junit_seconds": 1.479,
+    "junit": {
+      "path": "benchmarks/work/simulation_gene_tree_oracle_delivery_tests_20261004.xml",
+      "bytes": 7053,
+      "sha256": "b2cdbef955fbdbba2957f43384e38721c5a4164fd3910213c63aacd58973fed5"
+    }
+  },
+  "rendering": {
+    "module": "benchmark_tools.render_simulation_gene_tree_oracle",
+    "source_sha256": "06c163c6acc878578b531cc10d7084aa6fb2d18d4aabc8adc07b4c520cfb91df",
+    "exit_code": 0,
+    "input_sha256": "db016a1b4c68ab39caed061122e2196aadfb3ebdc38a4d4f5ad38d9edd664dec",
+    "output": {
+      "path": "benchmark_tools/results/SIMULATION_GENE_TREE_ORACLE_RESULTS_20261004.md",
+      "bytes": 4716,
+      "sha256": "5fefeed779ae81f3fad3240716d4ad3a9e1e80522e4016bd641109cd96595571"
+    }
+  },
+  "existing_benchmark_scores_changed": false,
+  "method_defaults_changed": false,
+  "unrelated_workloads_modified": false,
+  "rc2_or_review_pdf_rebuilt": false,
+  "publication_ready": false
+}

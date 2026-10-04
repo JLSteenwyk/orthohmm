@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Actual Gene-Tree Oracle Localizes Simulation Recall Deficit (2026-10-04)
+
+Prepared source9335be8c is pushed before all70 generating-species-tree cells
+execute successfully. Native inferred-tree pair sets reproduce exactly.
+The [generated mechanism addendum](SIMULATION_GENE_TREE_ORACLE_RESULTS_20261004.md)
+reports10,125 candidates,1,377 eligible controls,300 unrooted topology errors
+and30 additional root-only disagreements. Generating-root F1 changes are
++0.136 to+0.734 percentage points across the seven fixed conditions; no new
+default, superiority claim or independent-confirmation designation is made.
+
+First independent readback9e450025 fails before output because its historical
+status filter expects `scored` instead of `complete`; preserve that failure.
+Corrected9893f6a0 explicitly checks all70 completions. Actual stdlib readback
+then matches every retained baseline score, verifies all6,334 input/source
+identities, recomputes candidate/global counts and all condition means.
+Forty-six focused diagnostic/readback/renderer tests pass. The compact result
+and [execution receipt](simulation_gene_tree_oracle_execution_20261004.json)
+are selected for commit; detailed25 MB candidate output stays local and pinned.
+
+In divergent and divergent-turnover conditions,99.765% and99.756% of residual
+generating-root false negatives are true pairs already separated by candidates.
+This localizes that fixed-panel deficit upstream, not specifically to HMM
+search rather than clustering/expansion. Within-candidate oracle errors,
+bypass false positives and rerooting losses remain explicit. Readback is not
+independent verification of new oracle pair sets or a biological tree audit.
+
+Next trace cross-candidate true pairs through retained search/grouping/expansion
+stages and exhaustively explain the remaining oracle-error candidates under
+their actual histories/constraints, without tuning on outcomes. Continue the
+other full-goal uncertainty, family-inventory and per-ablation-cost gaps. No
+owned inference job is live, no completed timing/inference is repeated, and
+existing rc2/review artifacts remain unchanged. Full goal stays incomplete.
+
 ## Generating Gene-Tree Mechanism Control Prepared (2026-10-04)
 
 The preceding user turn updates the authoritative shared-host policy, concrete
