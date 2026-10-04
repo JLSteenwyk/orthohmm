@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Historical Metadata Integration Prepared (2026-10-04)
+
+The preceding 920958de turn completes/pushes the candidate-cap diagnosis.
+Read the full goal/current ledger and query Slurm: no owned job is live.
+Existing 24-row all-tool provenance and seven-row Three Kingdoms metadata
+audits already exist; reuse them rather than repeat native or raw audits.
+
+Prepare a new integration layer that preserves every original register field,
+checks every score against the frozen score manifest, and adds the seven
+historical command/resource/chronology supplements. The matched contemporary
+Sonic row must remain untouched. Primary and supplemental intervals are not
+independent repeats or substitutes. Explicit unavailable resource placeholders
+retain all 24 method/dataset cells in the resource table.
+
+Initial actual export has 35 entries and omits two unavailable QfO cells;
+retain it as unselected development evidence. The second preliminary export
+has 37 entries, including those placeholders. Preserve both preliminary
+source versions in local archives with exact source/report bindings. The
+first minimal-runtime invocation fails before output because an existing
+import requires Biopython; use the installed analysis environment, no install.
+
+The first combined suite passes 72 cases against the second preliminary join.
+After source/refusal/source-pin checks are finalized, 71 cases pass and one
+final-export readback skips because the selected v3 destination is not created
+yet. Commit/push tested source before collecting the final v3 register; then
+read back all 24 rows, every TSV field, exact pins and unchanged older fields.
+No scientific endpoint, default, native run, main PDF or rc3 archive changes.
+Full provenance and publication requirements remain incomplete, not certified
+by the forthcoming metadata integration alone.
+
 ## Candidate Cap/Tie Sensitivity Demonstrated (2026-10-04)
 
 The preceding 17a9184f turn delivers and pushes the native cost/partition
