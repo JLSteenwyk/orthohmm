@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Full-Native QfO Endpoint Handoff Tested (2026-10-04)
+
+Previous scientific milestone c15fed51 made progress on full-native pair
+conversion. The latest user turn verified the already-updated shared-host
+goal, without launching new work. This continuation reads the full goal and
+fresh squeue/sacct confirms the same 22428 attempt RUNNING; no restart or
+index2 release. Ordinary contention remains accepted, recorded and disclosed.
+
+Add [full-native assessment and independent admission](../NATIVE_QFO_ASSESSMENT_20261004.md),
+using a separate schema and work/results/participant namespace, not older
+cached-candidate gates. Require successful two-CPU conversion, complete native
+terminal review, fresh scheduler and exact request/plan/input/output/ownership
+bindings. Recheck frozen scorer/runtime/reference file inventories and helper
+sources before/after execution. A zero scorer exit remains unadmitted until
+all15 fresh native tasks and all6 endpoint identities/aggregates are validated.
+Retain failed/empty attempts with no fabricated scores or next-run release.
+
+Preserve native FAS eligible-population/sampling/missing-score conventions;
+independently verify saved-sample membership in submitted predictions and
+aggregate mean/SEM arithmetic. Report sample size/fraction, eligible count,
+submitted pair volume and input-protein coverage separately. This does not
+certify the full eligible denominator, pair independence, annotation quality,
+representative sampling or paired-method uncertainty. Only3 endpoints use F1;
+GO/EC/FAS and the secondary six-metric mean retain distinct semantics.
+
+[Dependency-check snapshot](native_qfo_assessment_dependency_check_20261004.json)
+retains the actual read-only structured audit: all704 declared scoring records,
+12 assessment helpers and all920 native-bound helpers check; all7 new work/
+scoring namespaces are unused. Source pins are rechecked after observation.
+This establishes frozen file identities, not hermetic runtime closure or an
+executed native QfO conversion/assessment. No new benchmark scores here.
+
+[Expanded tests](native_qfo_assessment_tests_20261004.xml):809 pass,0 failures/
+errors/skips,12.26s. Includes72 new tests and a joined synthetic execution/
+metric/FAS admission, refusal/tampering, immutable paths and retained failures.
+Preserve initial16failure/53pass JUnit: long pytest paths correctly hit Darwin's
+limit; use a short private synthetic temporary root, without weakening the
+production gate. Preserve subsequent1failure/68pass report: an inventory test
+also rewrote its expected inventory; keep that inventory fixed for that test.
+
+Latest actual22428 RUNNING49:57; all-to-all search completed and actual MAFFT/
+FastTree child processes build alignments/gene trees. No terminal score/cost
+yet. Leave its920 bound sources unchanged. Next review this same attempt under
+matchingPython3.10, apply native OrthoBench scoring if successful, and release
+only the next reviewed-prefix identity. QfO endpoint execution remains later
+in the frozen sequence. Independent validation/uncertainty/robustness/biology/
+archive/publication obligations remain active and unmet.
+
 ## Full-Native QfO Conversion Adapter Tested (2026-10-04)
 
 Previous turn made progress at ac1501d5: separate frozen-statistic native

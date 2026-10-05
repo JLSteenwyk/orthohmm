@@ -1,0 +1,100 @@
+{
+  "accuracy_admitted": false,
+  "assessment_helpers": [
+    {
+      "bytes": 11870,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_qfo_assessment.py",
+      "sha256": "ba051efa4b2dd9f72a4464f56a891b4742fa3a1c6999f8b95a65d0805c77dafe"
+    },
+    {
+      "bytes": 13935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_qfo_pairs.py",
+      "sha256": "472f26a140cf89aed36f8212a31fef7d8f5061204dac2e0ce80c3c7e6746630e"
+    },
+    {
+      "bytes": 6424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_qfo_recovered_assessment.py",
+      "sha256": "caca3e622937f9f6006f394a8e063406dd2225ad4b147bc4f6ffa1140ec29b4c"
+    },
+    {
+      "bytes": 9219,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_qfo_corrected_comparator_assessment.py",
+      "sha256": "105bbe95cefab870a678dccb8e4e000f1245e823191601d0ae13584c23ab89ac"
+    },
+    {
+      "bytes": 9370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/verify_ygob_validation.py",
+      "sha256": "a1d4d6e092e37a134a6307aee8527d654f132aab0a35c4bf93204aa0b1e4e7a6"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6706,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_dgx_step_separation.py",
+      "sha256": "c00eae1c44c86f0ee02c72e4634cf4e5cc70e2656a8ebfc0f9070769f6f7f97b"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    },
+    {
+      "bytes": 8180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_qfo_recovered_assessment.py",
+      "sha256": "7aae757dc199cbb4fe68456f4bfc37e699eb51c38323ce46a4e99213830686e5"
+    },
+    {
+      "bytes": 6229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_fas_samples.py",
+      "sha256": "e21f6865062685651fed6e16e30dc9935c53de08aca5cd96baf6dce7331deac2"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    }
+  ],
+  "bound_native_helpers": 920,
+  "conversion_executed": false,
+  "endpoint_assessment_executed": false,
+  "environment": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "environment_records": 704,
+  "fas_protocol": {
+    "missing_scores": "native scorer omits uncomputed/failed missing-pair scores; no zero imputation",
+    "newly_computed_pair_cap": 9000,
+    "pipeline": {
+      "bytes": 14659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+      "sha256": "f1793f4efdc19ee4bebf73d186cc14e371d13d9236714f59881befad4f349946"
+    },
+    "population": "precomputed predictions plus missing predictions with both feature annotations; not all submitted pairs",
+    "sampling": "unseeded native shuffle; precomputed sample preserves eligible precomputed/missing ratio when missing pairs exist",
+    "source": {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    "species_scope": "all supplied species; frozen pipeline does not pass --limited-species",
+    "uncertainty": "native pair-IID SEM is not an independent-family or paired-method confidence interval"
+  },
+  "limitation": "Frozen declared file identities and unused namespaces checked, not hermetic runtime closure or completed native QfO provenance.",
+  "native_inference_executed": false,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "status": "native_qfo_assessment_dependency_records_checked_not_executed"
+}
