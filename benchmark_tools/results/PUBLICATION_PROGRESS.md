@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Index1 Actually Running Under Receipt Amendment (2026-10-04)
+
+Prepare and push amended plan347105b5, then submit held22428 for the next
+different frozen identity, OrthoBenchP0C0R1. Before release, validate actual
+held job/resource/command identity, re-query22427 FAILED1:0, check current
+capacity/all pins and bind the explicit request digest in scheduler Comment.
+No index-zero retry, runtime refresh or unrelated job/service change.
+
+Fresh squeue/scontrol subsequently confirm22428 RUNNING. Native preflight
+and full runtime/input checks pass; actual PID407728 command/affinity0..31
+match. Launch availableRAM615.709667GiB;128GiB cap enforced. Observe native
+HMM search on251378proteins12species, with profile/candidate expansionoff
+and reconciliationon. See [attempt/provenance and review routing](NATIVE_FACTORIAL_SHARED_ATTEMPT_22428.md)
+and [live observation](native_factorial_native_start_22428.json).
+
+This is one live inference attempt, not a terminal score/resource result or
+full factorial completion. Request and preparer copied byte-identically to
+results; originals remain at work paths. Leave all920 bound helper sources
+unchanged while it runs. Next poll this same22428 and independently review
+terminal runtime/resources/environment/output, then frozen OrthoBench score.
+Do not launch index2 before reviewed prefix. Shared-host contention is recorded
+with unknown tool-dependent timing distortion; no isolation claim. Full
+publication goal remains active with broader scientific requirements unmet.
+
 ## Actual Receipt Amendment Ready For Index1 (2026-10-04)
 
 After source commit6d59a5de, immutable preparation succeeds in2.48s. The
