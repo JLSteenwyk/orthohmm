@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Original QfO Native Job Gets Its Queued Terminal Review (2026-10-05)
+
+Previous turn makes concrete progress at pusheda6da75b5: bind all420 native
+RefOG records and six conditional contrasts, report neutral profile result
+and pass25 tests. Re-read full goal; current scheduler and actualPID4059977
+confirm original22435 live. Preserve it, with no restart or early QfO score.
+
+Actually [queue existing terminal reviewer as held22436](NATIVE_QFO_TERMINAL_REVIEW_22436.md),
+afterany22435. No new worker/code implementation:direct matched3.10 CLI is
+already pinned among920 native helpers. It does terminal/runtime/resource/
+environment/output review only, not conversion/scoring or next launch.
+Retain actual submission and scheduler-generated batch with exact parsed
+argv/request SHA. Independent held check passes owner/exact2CPU/32GiB/six-
+hour/no-requeue envelope, dependency, Comment, sources/interpreter, fresh
+destination, all920 helpers, original live parent and safe RAM812,807,774,208bytes.
+Generated wrap passes bash and POSIX sh syntax, not a completed review test.
+
+Actually release22436 once; retained observation confirms pending/not held/
+same unfulfilled dependency and actual native parent live. Fresh accounting
+22435RUNNING13:55/22436PENDING. Controller Command is null for sbatch-wrap;
+use generated batch/submission bindings, not an executed-argv claim. The
+separate review allocation anticipates a longer QfO monitor record, with
+adequacy not guaranteed; it changes no matched inference resources or timing.
+
+Observe these original two handles next, no duplicate reviewer. After whole
+termination inspect actual review or failure; successful full-native review
+permits index7's fresh gates without waiting for separately scoped QfO
+conversion/assessment/admission. No score or successful future review is
+imputed. No native retry, code/default/frozen-helper change or unrelated-job
+modification. Broad scientific/release scope persists; goal active/unproven.
+
 ## Sixth Native Cell Adds A Neutral Profile Contrast (2026-10-05)
 
 Previous goal turn makes concrete progress at pushedbb6f1717: actually release

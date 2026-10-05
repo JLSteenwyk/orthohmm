@@ -1,0 +1,191 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "available_memory_bytes": 812807774208,
+  "generated_batch": {
+    "bytes": 805,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_batch_22436.sh",
+    "sha256": "b561a974f29aeba0a769fb50aff2da5cd662d449f884db12ec3cbeca94a55417"
+  },
+  "generated_batch_exact": true,
+  "helper_sources_checked": 920,
+  "index": 6,
+  "inference_reexecuted": false,
+  "job_id": 22436,
+  "limitations": [
+    "Held source/argv/controller observation, not a final native review or executed-argv observation.",
+    "Review memory/time allocation is separate from matched inference resources.",
+    "Controller Command is null for this sbatch-wrap submission; exact generated batch and retained submission bind the command."
+  ],
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791179083833812281,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,os,pwd,re,shlex,subprocess,sys,time,psutil\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read,validate_request,validate_plan,available_memory\nfrom benchmark_tools.probe_dgx_step_separation import save\nsubref=record(ROOT/\"benchmark_tools/results/native_factorial_review_submission_22436.json\");assert subref[\"sha256\"]==\"eef1ad6b6cbf1bd071dbe63de2c0edd22b8b8472b5c53a2643a99aa7f711b3a7\"\ns=read(subref);req=read(s[\"request\"]);validate_request(req,req[\"plan\"],22435);plan=read(req[\"plan\"]);run=validate_plan(plan)[6];assert run[\"dataset\"]==\"qfo_corrected\"\nfor r in [s[\"request\"],s[\"reviewer_source\"],s[\"review_python\"],*plan[\"helper_sources\"]]:check(r)\nassert s[\"reviewer_source\"] in plan[\"helper_sources\"] and s[\"review_python\"][\"sha256\"]==\"8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b\"\nbatch=ROOT/\"benchmark_tools/results/native_factorial_review_batch_22436.sh\"\nassert batch.read_text()==\"#!/bin/sh\\n# This script was created by sbatch --wrap.\\n\\n\"+s[\"wrapped_command\"]+\"\\n\"\nassert shlex.split(s[\"wrapped_command\"])==[\"exec\",*s[\"review_command\"]]\nsyntax=subprocess.run([\"sh\",\"-n\",str(batch)],capture_output=True,text=True,check=True)\ncmd=[\"scontrol\",\"show\",\"job\",\"22436\",\"--oneliner\"]; raw=subprocess.run(cmd,capture_output=True,text=True,check=True,timeout=5)\npairs=re.findall(r\"(?<!\\S)([A-Za-z][^\\s=]*)=([^\\s]+)\",raw.stdout);fields=dict(pairs);assert len(fields)==len(pairs)\nexpected=dict(JobId=\"22436\",JobName=\"orthohmm_factorial_review\",UserId=f\"{pwd.getpwuid(os.getuid()).pw_name}({os.getuid()})\",JobState=\"PENDING\",Reason=\"JobHeldUser\",Dependency=\"afterany:22435(unfulfilled)\",Requeue=\"0\",Restarts=\"0\",Partition=\"gpu\",ReqNodeList=\"bizon\",NumCPUs=\"2\",NumTasks=\"1\",MinMemoryNode=\"32G\",TimeLimit=\"06:00:00\",WorkDir=str(ROOT),Comment=s[\"request\"][\"sha256\"],Command=\"(null)\");expected[\"CPUs/Task\"]=\"2\"\nassert all(fields.get(k)==v for k,v in expected.items()),fields\nassert not {\"ArrayJobId\",\"ArrayTaskId\",\"HetJobId\",\"HetJobOffset\"}.intersection(fields)\nassert not Path(s[\"review_directory\"]).exists() and not Path(s[\"review_directory\"]).is_symlink()\nmem=Path(\"/proc/meminfo\").read_text();capacity=available_memory(mem);assert capacity>=32*2**30\nparent=psutil.Process(4059977);assert parent.is_running() and parent.create_time()==1791178342.93 and parent.cpu_affinity()==list(range(32))\npcommand=[\"scontrol\",\"show\",\"job\",\"22435\",\"--oneliner\"]; praw=subprocess.run(pcommand,capture_output=True,text=True,check=True,timeout=5);assert \"JobState=RUNNING\" in praw.stdout and \"Comment=\"+s[\"request\"][\"sha256\"] in praw.stdout\nout=ROOT/\"benchmark_tools/results/native_factorial_review_pre_release_22436.json\"\nsave(out,dict(schema=\"native_factorial_review_pre_release_inline_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),observed_unix_ns=time.time_ns(),job_id=22436,parent_native_job_id=22435,index=6,submission=subref,request=s[\"request\"],reviewer_source=s[\"reviewer_source\"],review_python=s[\"review_python\"],generated_batch=record(batch),generated_batch_exact=True,wrapped_argv_exact=True,posix_syntax=dict(command=syntax.args,returncode=syntax.returncode,stdout=syntax.stdout,stderr=syntax.stderr),scheduler=dict(command=cmd,stdout=raw.stdout,stderr=raw.stderr,fields=fields),parent_scheduler=dict(command=pcommand,stdout=praw.stdout,stderr=praw.stderr),parent_native_process=dict(pid=parent.pid,create_time=parent.create_time(),affinity=parent.cpu_affinity()),review_directory_absent=True,available_memory_bytes=capacity,raw_meminfo=mem,helper_sources_checked=920,release_executed=False,inference_reexecuted=False,automatic_retry=False,accuracy_evaluated=False,next_identity_authorized=False,limitations=[\"Held source/argv/controller observation, not a final native review or executed-argv observation.\",\"Review memory/time allocation is separate from matched inference resources.\",\"Controller Command is null for this sbatch-wrap submission; exact generated batch and retained submission bind the command.\"]))\nprint(json.dumps(dict(receipt=record(out),available_memory_bytes=capacity)))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "parent_native_job_id": 22435,
+  "parent_native_process": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "create_time": 1791178342.93,
+    "pid": 4059977
+  },
+  "parent_scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22435",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22435 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:13:21 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-05T01:30:02 EligibleTime=2026-10-05T01:31:22 AccrueTime=2026-10-05T01:31:22 StartTime=2026-10-05T01:31:22 EndTime=2026-10-06T03:31:22 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T01:31:22 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4058606 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index06_22435.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index06_22435.out TresPerTask=cpu=64 \n"
+  },
+  "posix_syntax": {
+    "command": [
+      "sh",
+      "-n",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_batch_22436.sh"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        310415536 kB\nMemAvailable:   793757592 kB\nBuffers:        13066532 kB\nCached:         448926408 kB\nSwapCached:        12540 kB\nActive:         274382848 kB\nInactive:       430057848 kB\nActive(anon):   218878028 kB\nInactive(anon): 25936596 kB\nActive(file):   55504820 kB\nInactive(file): 404121252 kB\nUnevictable:        4456 kB\nMlocked:              96 kB\nSwapTotal:       4194300 kB\nSwapFree:            168 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              1816 kB\nWriteback:             0 kB\nAnonPages:      242390244 kB\nMapped:           929328 kB\nShmem:           2362228 kB\nKReclaimable:   29806776 kB\nSlab:           34082396 kB\nSReclaimable:   29806776 kB\nSUnreclaim:      4275620 kB\nKernelStack:       65600 kB\nPageTables:       851560 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   851645704 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      944260 kB\nVmallocChunk:          0 kB\nPercpu:           431616 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:  11868160 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    15339080 kB\nDirectMap2M:    548276224 kB\nDirectMap1G:    509607936 kB\n",
+  "release_executed": false,
+  "request": {
+    "bytes": 41936,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+    "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+  },
+  "review_directory_absent": true,
+  "review_python": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "reviewer_source": {
+    "bytes": 21072,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native_factorial_attempt.py",
+    "sha256": "63e7d7fdda52afa7a36eecd89492a2684e8310260febbfb5adf6d23f88fd26de"
+  },
+  "scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22436",
+      "--oneliner"
+    ],
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "Unknown",
+      "AllocNode:Sid": "bizon-link:4065759",
+      "AllocTRES": "(null)",
+      "BatchFlag": "1",
+      "CPUs/Task": "2",
+      "Command": "(null)",
+      "Comment": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "afterany:22435(unfulfilled)",
+      "EligibleTime": "Unknown",
+      "EndTime": "Unknown",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "22436",
+      "JobName": "orthohmm_factorial_review",
+      "JobState": "PENDING",
+      "LastSchedEval": "2026-10-05T01:43:32",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "2",
+      "MinMemoryNode": "32G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "2",
+      "NumNodes": "1-1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "0",
+      "QOS": "normal",
+      "Reason": "JobHeldUser",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=2,mem=32G,node=1,billing=2",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:00",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "Unknown",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review06_22436.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review06_22436.out",
+      "SubmitTime": "2026-10-05T01:43:32",
+      "SuspendTime": "None",
+      "TimeLimit": "06:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=2",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "stderr": "",
+    "stdout": "JobId=22436 JobName=orthohmm_factorial_review UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=afterany:22435(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-05T01:43:32 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T01:43:32 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4065759 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=(null) WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review06_22436.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review06_22436.out TresPerTask=cpu=2 \n"
+  },
+  "schema": "native_factorial_review_pre_release_inline_v1",
+  "submission": {
+    "bytes": 10841,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_submission_22436.json",
+    "sha256": "eef1ad6b6cbf1bd071dbe63de2c0edd22b8b8472b5c53a2643a99aa7f711b3a7"
+  },
+  "wrapped_argv_exact": true
+}
