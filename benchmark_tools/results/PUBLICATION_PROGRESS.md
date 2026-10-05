@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Remaining Native Request Handoff Prepared (2026-10-04)
+
+Previous goal turn makes progress at pushed5cf1832f by generating validated
+native-ablation reporting. Re-read full goal/current ledger and fresh Slurm
+confirms22429 still RUNNING. Preserve the same native attempt; no restart or
+premature index3 release. Existing uncertainty limitations are not resolved
+by rereading them, and no unnecessary manuscript/archive rebuild is done.
+
+Add the [remaining request handoff](../NATIVE_FACTORIAL_REQUEST_20261004.md),
+replacing duplicated per-index request scripts for indices3-12. Derive the
+next index from the complete explicit reviewed prefix; use the existing
+fresh scheduler/history/adoption checks, fixed plan/policy, exact held-job
+envelope, safe capacity and absent output/session checks. Require separately
+bound scoring after a preceding successful OrthoBench run. QfO conversion/
+native assessment/admission remain distinct; no fabricated score or extra
+quiet-window gate. The helper cannot submit, release, cancel, retry or resume.
+
+All251 joined handoff/reporting/execution/history/review/scoring tests pass,
+zero failures/errors/skips,4.36s, including30 new handoff cases. These are
+synthetic composition tests, not proof of actual held-job preparation or
+native start. Prepare/push tested helper/guide before any actual successor
+request. Existing920 pinned sources, runtime/scientific defaults, previous
+requests/receipts and unrelated work remain unchanged. Next complete22429's
+terminal review and score, then prepare its actual held successor using this
+source-bound route. Full scientific and distribution goal remains active.
+
 ## Native Ablation Score/Resource Reporting Executed (2026-10-04)
 
 Previous user turn confirms the already-amended goal; no new inference or
