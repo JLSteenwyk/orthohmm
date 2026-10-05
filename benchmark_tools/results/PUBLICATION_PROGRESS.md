@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Full-Native P0C0R1 Scored; Next Distinct Identity Running (2026-10-04)
+
+Previous goal turn made progress at pushed4f534363, completing the new QfO
+endpoint handoff. Read full goal/current worktree and freshly verify22428,
+initially RUNNING. Its native step then completes0:0; wait for actual whole-job
+COMPLETED0:0,57:40 allocation elapsed, not only files/intent. No restart.
+
+MatchingPython3.10 [terminal review and frozen score](NATIVE_FACTORIAL_RESULT_22428.md)
+actually succeed. Raw runtime/collector/typed process-pressure/output evidence
+is independently replayed; all categories pass. F1=.7270499607171313,
+precision=.8749484204713542, recall=.6219222319893305. All70RefOGs/1,944reference
+genes/251,378input genes are covered. All64,925root HOGs equal the cachedP0C0R1
+partition, zero changed genes/groups and zero aggregate score differences.
+This is full-native reproduction/cost evidence, not new independent accuracy
+or the principal high-sensitivity/satellite_v2 configuration.
+
+Observed native wall3254.922748587s, CPU93796.695195s and native-step lifetime
+peak4971315200bytes(4.629898GiB). CPU includes wrapper; peak includes launcher,
+not pure algorithm RSS. Maximum observed foreign CPU demand42.46343cores;
+unknown, potentially tool-dependent shared-host distortion remains explicit.
+Do not pool failed-wrapper22427 with clean timing successes or rewrite it.
+
+Prepare [next held request and live22429 evidence](NATIVE_FACTORIAL_SHARED_ATTEMPT_22429.md)
+for index2/P0C1R0 only. Both prior reviews/current scheduler outcomes and all
+plan/policy/helper pins check. Held-controller resources/command and request
+Comment match; fresh pre-release MemAvailable827,404,398,592bytes. Release only
+this owned job after checks. Native preflight/input admission pass; actual
+PID1629713 command/affinity0..31,32physical cores, cgroup and128GiB cap verify.
+Launch availableRAM827,173,789,696bytes. Latest22429RUNNING4:04/search5.56%.
+
+Publish byte-identical terminal/score/request/control-script copies plus actual
+startup observation; original references/raw evidence remain untouched. Reuse
+previous809-test milestone; no scientific/default/runtime/helper change or
+unrelated job/service interference. Actual CLI held/native identity checks and
+production validation, not fixture scores, support this new checkpoint.
+
+Two of13 native identities reviewed (one original failed wrapper with science
+recovery), one live, ten unsubmitted. Observe22429 next; terminal review and
+separate score must precede index3 release. Other generalization/uncertainty/
+stratum/mechanism/provenance/reproducibility requirements remain unresolved;
+reviewing existing negative evidence does not promote it to validation.
+Publication goal remains active, not complete or blocked.
+
 ## Full-Native QfO Endpoint Handoff Tested (2026-10-04)
 
 Previous scientific milestone c15fed51 made progress on full-native pair
