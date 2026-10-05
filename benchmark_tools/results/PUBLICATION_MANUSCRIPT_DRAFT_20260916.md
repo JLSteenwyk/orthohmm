@@ -866,6 +866,56 @@ the failed22427 wrapper's scientific recovery remains failed timing. This
 binding does not replace the complete retained eight-cell analysis or
 establish native completion for the remaining identities.
 
+### First Fresh Native QfO Ablation
+
+The first fresh native QfO configuration, P0C0R0, now has independently
+admitted scores. Native inference22435, pair conversion22439, assessment22441
+and admission22442 completed successfully. The admission checked 3,975
+declared records and all 15 fresh assessment tasks. Initial high-sensitivity
+HMM search remains enabled; downstream profile expansion, candidate
+expansion and reconciliation are disabled. This is not a non-HMM control.
+
+| Endpoint | Statistic | Native Score |
+| --- | --- | ---: |
+| VGNC | F1 | 0.6668335335736216 |
+| SwissTrees | F1 | 0.6891839606644314 |
+| TreeFam-A | F1 | 0.6054035649224192 |
+| GO | Schlicker similarity | 0.47211905 |
+| EC | Schlicker similarity | 0.93211406 |
+| FAS | FAS similarity | 0.7749447305326528 |
+| Project-defined secondary mean | Mean of six endpoints, not official QfO F1 | 0.6900998166155209 |
+
+Native precision/recall are 0.5551202978274157/0.8348374697083647 for VGNC,
+0.64394009/0.74126605 for SwissTrees and 0.79224541/0.48987278 for TreeFam-A.
+Predictions comprise 9,009,082 cross-species group-derived clique pairs,
+with zero mapping loss. Of 984,137 input accessions across 78 proteomes,
+546,450 occur in at least one relation: all-input relation coverage is
+0.555258058583307, not reference coverage or accuracy. R-on configurations
+instead submit native phylogenetically inferred pairs.
+
+The raw FAS sample contains 38,205 pairs and 66,678 proteins, including
+8,506 proteins appearing in multiple sampled pairs. The 9,000 cap applies
+to newly computed missing pairs, not the entire mixed/precomputed sample.
+Native FAS SEM is pair-IID, not a paired-family confidence interval;
+unseeded sampling and eligible-population/missing-score limitations persist.
+Only one of seven fresh native QfO identities has supplied scores; the other
+six remain unavailable, not zero. No cached result or its family intervals
+is substituted. This development-exposed result establishes neither
+historical partition equivalence, independent generalization, a total HMM
+effect nor superiority over OrthoFinder. It does not replace the retained
+eight-cell cached factorial or the earlier comparator table.
+[Validated result and limits](NATIVE_QFO_SCORE_RESULT_22442.md),
+[generated native score table](native_qfo_scores_20261005_v1/scores.md),
+[original admission](native_qfo_assessment_admission_22442.json),
+[independent content readback](native_qfo_score_readback_22442.json).
+
+Conversion, scoring and admission are separate from matched inference timing.
+Timings are observed shared-Threadripper measurements: competing analyses
+may affect CPU, memory bandwidth and I/O by an unknown, tool-dependent
+amount. Matching resource limits does not establish isolated performance.
+The existing rc4 archive and reviewed PDF predate this partial native result;
+final package integration and broader publication requirements remain open.
+
 The original-release QfO factorial likewise completed all eight cells. Its
 prespecified SwissTrees family bootstrap used 100,000 shared draws and
 adjusted 42 endpoints. All 14 adjusted F1 intervals included zero. The four

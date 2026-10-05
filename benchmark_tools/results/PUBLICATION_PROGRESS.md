@@ -1,5 +1,58 @@
 # Publication Progress
 
+## First Native QfO Scores Admitted And Exported (2026-10-05)
+
+The score-admission checkpoint verifies original22437/22441, not a restart.
+Observe producers still live, then assessment22441 and
+independent admission22442 actually complete0:0 in28:29 and0:27. Preserve
+existing converter/native terminal reviews and both successful original jobs.
+
+[Retain actual native P0C0R0 scores](NATIVE_QFO_SCORE_RESULT_22442.md),
+byte-identical admission1,321,308bytes/SHA1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411.
+Independent validator checks3975 records/all15 fresh tasks/native endpoints/
+FAS/provenance. VGNC F1.6668335335736216, SwissTrees.6891839606644314,
+TreeFam-A.6054035649224192; GO.47211905/EC.93211406 similarity,
+FAS.7749447305326528; secondary mean.6900998166155209, not QfO F1.
+Initial HMM search remains on, P/C/R off; R-off cross-species group cliques.
+9,009,082 pairs/zero mapping loss/all-input relation coverage546450/984137.
+
+Unchanged new reporter executes once against actual successful admission,
+producing seven-row JSON/TSV/Markdown:one supplied native result, six null/
+blank/Unavailable rows. No cached substitution or invented single QfO F1.
+Independent readback checks48 native metric records,15 actual task identities/
+exits,six native aggregations,12 direct report pins,all105 TSV fields and920
+unchanged helpers. Rational-decimal arithmetic matches scores/mean within
+1e-12; native last-bit values are preserved. No repeated full raw admission,
+resource replay, inference, scorer, FAS shuffle or bootstrap.
+
+Actual FAS sample38,205 pairs/66,678 proteins,8,506 multiply represented
+proteins/max degree6.9000 cap concerns newly computed missing pairs, not
+total sample size. Keep eligible-population/unseeded/missing-score/native-
+SEM/pair-dependence limits; no paired-family interval or feature-completeness
+claim. One development-exposed configuration is not full factorial,
+independent validation, total HMM contribution or OrthoFinder superiority.
+
+Update reproduction guide from stale executor-pending entry to actual native
+workflow, exact environment-path warning and completed QfO score route.
+Preserve older snapshots, failed/cancelled attempts and all broader scientific
+requirements. Native22437 still live/reviewer22440 pending; observe originals,
+do not launch index8 before full terminal review/fresh gates. Shared-host
+effects unknown/tool-dependent, scoring separate from inference, no unrelated
+work modified. Publication readiness unproven; full goal remains active.
+
+On the next continuation, re-read the full goal and observe original22437
+RUNNING and22440 dependency-pending;22441/22442 remain successful terminals.
+Integrate the single native row into the extended manuscript and claim
+checklist without changing earlier cached comparisons. All217 joined tests
+pass in3.42s, zero failures/errors/skips, including12 new documentation/
+integration contracts. Preserve earlier9/215-test receipts. The milestone
+readback records actual prepared-environment CLI/import probes, direct
+bindings,920 unchanged sources and original live PID creation/affinity.
+An initial milestone observer fails before output on a string-versus-integer
+job-ID comparison; retain the failure and correct only the observer.
+This is a reporting milestone, not another scientific admission, full
+factorial or release; no new native/scoring job is submitted or restarted.
+
 ## Native QfO Validator Queued And Reporter Implemented (2026-10-05)
 
 Previous turn makes concrete progress at pushed8d3106f5: completes native

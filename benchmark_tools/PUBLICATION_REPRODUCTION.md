@@ -1,6 +1,91 @@
 # Publication Reproduction Guide
 
-## Current Entry Point (2026-10-04)
+## Current Entry Point (2026-10-05)
+
+The [full-native factorial snapshot](results/native_factorial_progress_20261005_v7/report.md)
+now contains seven reviewed attempts of the thirteen planned identities:
+six OrthoBench cells and corrected-QfO P0C0R0. Failed-wrapper22427 remains
+explicitly distinguished from successful timing, even though its scientific
+outputs were recovered. Native OrthoBench scores are separately validated;
+QfO accuracy is not copied from older cached predictions. Initial sensitive
+HMM search remains on in every cell; P toggles downstream profiles, C
+candidate expansion and R reconciliation. This partial experiment is not
+an eight-cell accuracy confirmation or a causal runtime comparison.
+
+[Original native22437](results/NATIVE_FACTORIAL_SHARED_ATTEMPT_22437.md),
+QfO P0C0R1, is running at this checkpoint, with
+[terminal reviewer22440](results/NATIVE_QFO_TERMINAL_REVIEW_22440.md) queued
+after it. Five later native identities are unsubmitted. Observe the original
+handles; only successful terminal/runtime/resource/environment/output review
+permits fresh gates for the next different identity. Do not restart a live
+run, use a quiet-window prerequisite or bypass capacity/accounting checks.
+The progress ledger and actual scheduler state supersede dated live-status
+statements, including those in the chronology below.
+
+Corrected-QfO P0C0R0 native22435 and its terminal review have completed.
+[Separate converter22439](results/NATIVE_QFO_CONVERSION_AND_ASSESSMENT_22439.md)
+completed0:0:9,009,082 cross-species group-clique pairs, zero mapping loss;
+546,450 of984,137 input accessions are present in at least one pair. This
+relation-coverage denominator includes every inference input and is not
+reference coverage or accuracy. R-on uses resolved native pairs instead.
+Assessment22441 and
+[independent admission22442](results/NATIVE_QFO_ADMISSION_AND_REPORTING_22442.md)
+now both complete0:0. The [validated native result](results/NATIVE_QFO_SCORE_RESULT_22442.md)
+and [new score table](results/native_qfo_scores_20261005_v1/scores.md) retain
+one supplied native admission across the seven fresh QfO identities. Six
+others remain unavailable, not zero or implied live-job statuses. Their
+separate conversion/scoring/validation allocations do not change matched
+inference resources or establish new paired uncertainty or superiority.
+
+### Full-Native QfO Reproduction Stages
+
+Use these four existing CLIs in order, with explicit bound manifest digests,
+fresh destinations and the scheduler/terminal gates documented in the linked
+receipts. They are local, source-bound workflows, not portable fresh-install
+certification. Do not duplicate the currently queued/running jobs or execute
+their retained batches as a new attempt; those paths identify original work.
+
+| Stage | CLI Module | Required Evidence And Execution Scope |
+| --- | --- | --- |
+| Pair conversion | `benchmark_tools.prepare_native_factorial_qfo_pairs` | Successful original native terminal review; explicit request/review hashes; scheduled two-CPU conversion; new separate output directory |
+| Six-endpoint assessment | `benchmark_tools.run_native_factorial_qfo_assessment` | Successful two-CPU conversion; explicit pair-manifest hash/conversion job; scheduled eight-CPU scorer; three unused namespaces |
+| Independent admission | `benchmark_tools.admit_native_factorial_qfo_assessment` | Actual assessmentCOMPLETED0:0, original conversion/job bindings, all15 fresh tasks, native endpoint/aggregation arithmetic, FAS sample and provenance; new admission directory |
+| Table export | `benchmark_tools.export_native_qfo_factorial_scores` | Explicit frozen plan/admission hashes; only successful full-native admissions; new JSON/TSV/Markdown destination; no new scoring, admission or job launch |
+
+**Preserve the Python invocation path.** The retained review environment is
+`benchmarks/work/native_factorial_review_py310_20261004/bin/python`. Its
+symlink-resolved executable shares binary bytes with the native base
+environment, but not installed packages. Passing `record(python)["path"]`
+as the invocation changed environments and lost Biopython in held22438;
+that job was cancelled before execution and the correction is retained.
+Record binary identity separately, retain the original virtual-environment
+invocation path and verify its prefix/imports. Never substitute the resolved
+binary merely because its checksum matches. All execution receipts remove
+Python/library injection variables, disable user-site/bytecode writes and
+set BLAS/OMP/MKL thread counts to one.
+
+The new reporter has69 focused cases and205 joined passing tests. It labels
+VGNC/SwissTrees/TreeFam-A as F1, GO/EC similarity and FAS separately, and the
+six-metric mean as a project-defined secondary summary. Missing admissions
+stay null/blank/Unavailable; reused P1C0R0 and older cached scores are not
+substituted. Native SEMs are not paired-family confidence intervals, and FAS
+sampling/eligible-population/missing-score limits remain explicit. See the
+linked reporting milestone for the prospective export command; it is not
+a completed scientific score result at that earlier queue checkpoint. The
+new table above is now an actual completed export from successful22442,
+not a fixture or an inherited cached score. The secondary mean is0.6900998166155209;
+no universal advantage or independent biological validation follows.
+
+The later [integrated validation](results/native_qfo_score_result_integrated_tests_20261005.xml)
+passes 217 tests, including 12 reproduction-guide/manuscript/claim contracts.
+These documentation and reporting checks are not biological validation or
+a replacement for the original native admission.
+
+The old local rc4 archive and35-page review below are preserved snapshots.
+They do not already contain these later native executions, reporting code
+or guide update. No archive/PDF is regenerated merely for a live-job update.
+Final uncertainty, provenance, reproducibility, rights/deposition and release
+requirements remain; this guide update does not establish publication readiness.
 
 The [native factorial adapter diagnostic](results/NATIVE_FACTORIAL_ADAPTER_RESULT_20261004.md)
 now verifies all eight explicit P/C/R paths on a small mechanical fixture,
@@ -10,8 +95,10 @@ trees/reconciliation execute in their declared cells. A separate nonzero
 candidate-gate test validates C-on/R-off. All59 final tests pass;222 copied
 fixture files/363,122bytes are hash-checked. The
 [prospective remaining-cost protocol](NATIVE_FACTORIAL_COST_PROTOCOL_20261004.md)
-does not itself authorize full-dataset launch. New full-cost executor/handoff
-remain required; no publication timing/accuracy result is added, and rc4
+does not itself authorize full-dataset launch. At that diagnostic checkpoint,
+the full-cost executor/handoff still remained to be built; the newer execution
+route above supersedes that pending state. The fixture added no publication
+timing/accuracy result, and rc4
 does not already contain this later addendum.
 
 The [later full native QfO cost addendum](results/QFO_NATIVE_COST_RESULT_20261004.md)
@@ -128,7 +215,7 @@ The [candidate wheel dependency audit](results/RELEASE_WHEEL_DEPENDENCIES_202609
 checks declared runtime dependencies against both hash-pinned wheel sets on
 the recorded interpreter. It does not establish native/OS closure or security.
 
-Status: 4 October 2026, incomplete working package. This guide routes
+Status: 5 October 2026, incomplete working package. This guide routes
 readers to executed workflows and their evidence; it is not an archival
 release or an assertion that every requirement is complete. Direct commands
 below recompute statistics or audit retained local artifacts; they do not

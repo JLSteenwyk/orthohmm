@@ -1,0 +1,244 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22435,22439,22441,22442,22437,22440",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList"
+    ],
+    "stderr": "",
+    "stdout": "22435|orthohmm_factorial_cost|COMPLETED|0:0|11:05:03|64|bizon\n22435.batch|batch|COMPLETED|0:0|11:05:03|64|bizon\n22435.0|python|COMPLETED|0:0|10:42:01|64|bizon\n22437|orthohmm_factorial_cost|RUNNING|0:0|01:05:45|64|bizon\n22437.batch|batch|RUNNING|0:0|01:05:45|64|bizon\n22437.0|python|RUNNING|0:0|01:04:53|64|bizon\n22439|ohmm_qfo_native_pairs06|COMPLETED|0:0|00:01:16|2|bizon\n22439.batch|batch|COMPLETED|0:0|00:01:16|2|bizon\n22440|ohmm_native_review07|PENDING|0:0|00:00:00|0|None assigned\n22441|ohmm_native_qfo_assess06|COMPLETED|0:0|00:28:29|8|bizon\n22441.batch|batch|COMPLETED|0:0|00:28:29|8|bizon\n22442|ohmm_native_qfo_admit06|COMPLETED|0:0|00:00:27|2|bizon\n22442.batch|batch|COMPLETED|0:0|00:00:27|2|bizon\n"
+  },
+  "accuracy_admitted": true,
+  "admission": {
+    "bytes": 1321308,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+    "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+  },
+  "admission_source": {
+    "bytes": 7815,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+    "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+  },
+  "aggregated_endpoints": [
+    {
+      "bytes": 678,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/VGNC/VGNC.json",
+      "sha256": "616d5c88e2bac012a2c29f69b7b2a5c515eb8742b72df8895add8e7d5e27b444"
+    },
+    {
+      "bytes": 657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/SwissTrees.json",
+      "sha256": "86a2ff5660ec1436dcad7106668cb5ea908bc9c4719ba85351ef61db9968b201"
+    },
+    {
+      "bytes": 657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/TreeFam-A/TreeFam-A.json",
+      "sha256": "2113c84e34898a0df352fc3936201e29a2ac8faee0b7aa64cf55c6ba121464b4"
+    },
+    {
+      "bytes": 647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/GO/GO.json",
+      "sha256": "148d614654d6e4696b6985934a48620d129f8ed96faa5d8eca3e4fac5f001d33"
+    },
+    {
+      "bytes": 648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/EC/EC.json",
+      "sha256": "d3895d1c1d5e39fba3d9908647608ebd73058f6e6ea62eb1a6a99bbac5bd7069"
+    },
+    {
+      "bytes": 659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/FAS/FAS.json",
+      "sha256": "566211d8f2bd7f9751a36388d73b80bc85e863b5f3f073e334d209e722b69784"
+    }
+  ],
+  "automatic_retry": false,
+  "endpoint_details": {
+    "EC": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "x": 186098.0,
+      "y": 0.93211406
+    },
+    "FAS": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "FAS"
+      },
+      "x": 9009082.0,
+      "y": 0.7749447305326528
+    },
+    "GO": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "x": 145142.0,
+      "y": 0.47211905
+    },
+    "SwissTrees": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.74126605,
+      "y": 0.64394009
+    },
+    "TreeFam-A": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.48987278,
+      "y": 0.79224541
+    },
+    "VGNC": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.8348374697083647,
+      "y": 0.5551202978274157
+    }
+  },
+  "exported_secondary_mean": 0.6900998166155209,
+  "helper_sources_checked": 920,
+  "independent_biological_validation": false,
+  "limitations": [
+    "Independent rational arithmetic/native-record/trace/direct-report/table readback, not another inference, score admission or full3975-record raw audit.",
+    "One of seven fresh native QfO configurations; six missing rows remain null, not zero or scheduler status.",
+    "FAS raw sample is unseeded and contains38205pairs;9000cap concerns newly computed missing pairs, not total sample size.",
+    "Native SEMs are not paired-family intervals; no cached-family uncertainty or superiority is inherited.",
+    "Shared-host contention is unknown and potentially tool-dependent; scoring/conversion are outside native inference timing."
+  ],
+  "native_assessment": {
+    "bytes": 18083,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/assessment_out/Assessment_datasets.json",
+    "sha256": "fedd0f8d8072379a74301893a9c5cce3e1938b162c5eecf2f1d68c8b01239843"
+  },
+  "native_metric_records": 48,
+  "native_tasks": 15,
+  "native_trace": {
+    "bytes": 1784,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/stats/trace_2026-10-05_13-43-14.txt",
+    "sha256": "af22cbc43a414e80b2ada49bc90174dafb2fc5216cc22163c0bbc21031596f42"
+  },
+  "new_bootstrap_draws": 0,
+  "new_fas_sampling": false,
+  "observed_unix_ns": 1791224470008182455,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport csv,json,math,psutil,subprocess,sys,time\nfrom fractions import Fraction\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read\nadmission=record(ROOT/\"benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json\");assert admission[\"sha256\"]==\"1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411\";a=read(admission);published=record(ROOT/\"benchmark_tools/results/native_qfo_assessment_admission_22442.json\");assert all(published[k]==admission[k] for k in (\"bytes\",\"sha256\"))\nassert a[\"status\"]==\"full_native_factorial_qfo_assessment_admitted\" and a[\"accuracy_admitted\"] is True and a[\"native_index\"]==6 and a[\"native_job_id\"]==22435 and a[\"publication_ready\"] is False\ncheck(a[\"source\"]);assert a[\"source\"][\"sha256\"]==\"1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb\"\nrawref=record(ROOT/\"qfo_benchmark/scoring/full_native_06/assessment_out/Assessment_datasets.json\");assert rawref in a[\"checked_records\"];raw=read(rawref);assert raw==a[\"assessment\"][\"native_assessments\"] and len(raw)==48\nnative={(r[\"challenge_id\"],r[\"metrics\"][\"metric_id\"]):r for r in raw};assert len(native)==48 and len({r[\"_id\"] for r in raw})==48 and all(r[\"participant_id\"]==a[\"participant\"] and r[\"type\"]==\"assessment\" for r in raw)\ntrace=a[\"native_trace\"];check(trace);tasks=list(csv.DictReader(Path(trace[\"path\"]).open(),delimiter=\"\\t\"));assert tasks==a[\"native_tasks\"] and len(tasks)==15 and len({r[\"task_id\"] for r in tasks})==15\nexpected={\"validate_input_file\",\"convertPredictions\",\"consolidate\",\"vgnc_benchmark (1)\",\"ec_benchmark (1)\",\"go_benchmark (1)\",\"fas_benchmark (1)\",\"reference_genetrees_benchmark (SwissTrees)\",\"reference_genetrees_benchmark (TreeFam-A)\"}|{f\"scheduleMetrics ({i})\" for i in range(1,7)}\nassert {r[\"name\"] for r in tasks}==expected and all(r[\"status\"]==\"COMPLETED\" and r[\"exit\"]==(\"-\" if r[\"name\"].startswith(\"scheduleMetrics (\") else \"0\") for r in tasks)\nrefs=[];scores={};details={};fractions=[]\nfor name in (\"VGNC\",\"SwissTrees\",\"TreeFam-A\",\"GO\",\"EC\",\"FAS\"):\n ref=record(ROOT/f\"qfo_benchmark/scoring/full_native_06/results/{name}/{name}.json\");assert ref in a[\"checked_records\"];refs.append(ref);agg=read(ref);rows=agg[\"datalink\"][\"inline_data\"][\"challenge_participants\"];assert len(rows)==1 and rows[0]==a[\"assessment\"][\"endpoints\"][name][\"native_participant\"];row=rows[0];axes=agg[\"datalink\"][\"inline_data\"][\"visualization\"]\n for field,axis in ((\"metric_x\",\"x_axis\"),(\"metric_y\",\"y_axis\")):\n  assert row[field]==native[name,axes[axis]][\"metrics\"][\"value\"] and type(row[field]) in (int,float) and math.isfinite(row[field])\n x,y=Fraction(str(row[\"metric_x\"])),Fraction(str(row[\"metric_y\"]));value=2*x*y/(x+y) if name in {\"VGNC\",\"SwissTrees\",\"TreeFam-A\"} and x+y else Fraction(0) if name in {\"VGNC\",\"SwissTrees\",\"TreeFam-A\"} else y;fractions.append(value);scores[name]=float(value);assert math.isclose(scores[name],a[\"assessment\"][\"endpoints\"][name][\"score\"],rel_tol=0,abs_tol=1e-12);details[name]=dict(x=float(x),y=float(y),axes=axes)\nmean=float(sum(fractions)/6);assert math.isclose(mean,a[\"assessment\"][\"secondary_six_metric_mean\"],rel_tol=0,abs_tol=1e-12)\nreportref=record(ROOT/\"benchmark_tools/results/native_qfo_scores_20261005_v1/report.json\");r=read(reportref);assert r[\"supplied_admissions\"]==1 and len(r[\"rows\"])==7 and r[\"new_scoring_or_admission\"] is False;row=r[\"rows\"][0];assert row[\"index\"]==6 and row[\"admission\"]==admission\nfor name,score in scores.items():assert math.isclose(row[\"scores\"][name],score,rel_tol=0,abs_tol=1e-12)\nassert math.isclose(row[\"secondary_mean\"],mean,rel_tol=0,abs_tol=1e-12) and row[\"relation_coverage\"]==546450/984137 and row[\"submitted_pairs\"]==9009082\nfor ref in r[\"evidence\"]+r[\"outputs\"]+[r[\"source\"]]:check(ref)\nwith (ROOT/\"benchmark_tools/results/native_qfo_scores_20261005_v1/scores.tsv\").open() as stream:table=list(csv.DictReader(stream,delimiter=\"\\t\"))\nassert len(table)==7;fields={\"Index\":\"index\",\"Cell\":\"cell\",\"Status\":\"status\",\"Secondary mean\":\"secondary_mean\",\"Submitted pairs\":\"submitted_pairs\",\"Input accessions\":\"input_accessions\",\"Relation accessions\":\"relation_accessions\",\"Relation coverage\":\"relation_coverage\",\"Prediction semantics\":\"prediction_semantics\"};metricfields={\"VGNC F1\":\"VGNC\",\"SwissTrees F1\":\"SwissTrees\",\"TreeFam-A F1\":\"TreeFam-A\",\"GO similarity\":\"GO\",\"EC similarity\":\"EC\",\"FAS\":\"FAS\"}\nfor actual,expectedrow in zip(table,r[\"rows\"]):\n for field,key in fields.items():\n  v=expectedrow[key];assert actual[field]==(\"\" if v is None else str(v))\n for field,key in metricfields.items():\n  v=expectedrow[\"scores\"][key];assert actual[field]==(\"\" if v is None else str(v))\nassert all(v is None for row in r[\"rows\"][1:] for v in row[\"scores\"].values())\nplan=read(r[\"plan\"])\nfor ref in plan[\"helper_sources\"]:check(ref)\ncmd=[\"sacct\",\"-j\",\"22435,22439,22441,22442,22437,22440\",\"--noheader\",\"--parsable2\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList\"];p=subprocess.run(cmd,capture_output=True,text=True,check=True);states={line.split(\"|\")[0]:line.split(\"|\")[2:4] for line in p.stdout.splitlines()}\nfor job in (22435,22439,22441,22442):assert states[str(job)]==[\"COMPLETED\",\"0:0\"]\nassert states[\"22437\"][0]==\"RUNNING\" and states[\"22440\"][0]==\"PENDING\";np=psutil.Process(265470);assert np.create_time()==1791220584.63 and np.cpu_affinity()==list(range(32))\nout=ROOT/\"benchmark_tools/results/native_qfo_score_readback_22442.json\";assert not out.exists();save(out,dict(schema=\"native_qfo_score_table_independent_readback_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),admission=admission,published_admission=published,score_report=reportref,admission_source=a[\"source\"],native_assessment=rawref,native_metric_records=48,native_trace=trace,native_tasks=15,aggregated_endpoints=refs,rational_decimal_recomputed_scores=scores,rational_decimal_secondary_mean=mean,endpoint_details=details,exported_secondary_mean=r[\"rows\"][0][\"secondary_mean\"],table_rows_checked=7,table_fields_checked=105,report_evidence_checked=r[\"evidence\"],report_outputs_checked=r[\"outputs\"],helper_sources_checked=920,accounting=dict(command=cmd,stdout=p.stdout,stderr=p.stderr),original_native_pid=np.pid,original_native_create_time=np.create_time(),accuracy_admitted=True,independent_biological_validation=False,new_bootstrap_draws=0,new_fas_sampling=False,publication_ready=False,automatic_retry=False,limitations=[\"Independent rational arithmetic/native-record/trace/direct-report/table readback, not another inference, score admission or full3975-record raw audit.\",\"One of seven fresh native QfO configurations; six missing rows remain null, not zero or scheduler status.\",\"FAS raw sample is unseeded and contains38205pairs;9000cap concerns newly computed missing pairs, not total sample size.\",\"Native SEMs are not paired-family intervals; no cached-family uncertainty or superiority is inherited.\",\"Shared-host contention is unknown and potentially tool-dependent; scoring/conversion are outside native inference timing.\"]))\nprint(json.dumps(dict(receipt=record(out),scores=scores,mean=mean,table_rows=7)))\n"
+  ],
+  "original_native_create_time": 1791220584.63,
+  "original_native_pid": 265470,
+  "publication_ready": false,
+  "published_admission": {
+    "bytes": 1321308,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_admission_22442.json",
+    "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+  },
+  "rational_decimal_recomputed_scores": {
+    "EC": 0.93211406,
+    "FAS": 0.7749447305326528,
+    "GO": 0.47211905,
+    "SwissTrees": 0.6891839606644315,
+    "TreeFam-A": 0.6054035649224192,
+    "VGNC": 0.6668335335736217
+  },
+  "rational_decimal_secondary_mean": 0.6900998166155209,
+  "report_evidence_checked": [
+    {
+      "bytes": 12830,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_factorial_progress.py",
+      "sha256": "af87cf899b8ae474822ea81a922643ab2c229275f99a1df57d5149b0d280448a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 300029,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/results.json",
+      "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+    },
+    {
+      "bytes": 41936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+      "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+    },
+    {
+      "bytes": 11303409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+      "sha256": "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490"
+    },
+    {
+      "bytes": 1287135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/results.json",
+      "sha256": "7d5e25171f09c949f89a52452986e7d2ab8d508685d4ef485015653861ed44d2"
+    },
+    {
+      "bytes": 1277793,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/preflight.json",
+      "sha256": "58f51b777230a6e7720075c32f96ac505f55b5e1e3a0f612939b798b6f92dec1"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    }
+  ],
+  "report_outputs_checked": [
+    {
+      "bytes": 974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/scores.tsv",
+      "sha256": "924982dbd3f0de09ce158e2efa85d9d25cd208861978db2e46df7e816818eec2"
+    },
+    {
+      "bytes": 3191,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/scores.md",
+      "sha256": "cb6b4395085655869f10f4ea9f60baea32031c2a3bddedd7e7dcb217bd41cc60"
+    }
+  ],
+  "schema": "native_qfo_score_table_independent_readback_inline_v1",
+  "score_report": {
+    "bytes": 14657,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/report.json",
+    "sha256": "6bca0b771af5604f76dfe7796fa1590fdfda71e78f7599c28cd6f1555d6a1c13"
+  },
+  "table_fields_checked": 105,
+  "table_rows_checked": 7
+}
