@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Sixth Native Cell Adds A Neutral Profile Contrast (2026-10-05)
+
+Previous goal turn makes concrete progress at pushedbb6f1717: actually release
+first nativeQfO22435 and retain its launch bindings. Re-read full goal and
+fresh scheduler/actualPID4059977 verify that same attemptRUNNING. No restart,
+duplicate inference, early QfO score or successor release occurs.
+
+Completed sixth OrthoBench cell supplies genuinely new input for the
+[existing uncertainty binding](NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261005_V4.md).
+All420 RefOG records and aggregate statistics match the pinned retained
+eight-cell analysis exactly. Unchanged helper replays six-result snapshot,
+supporting six of12 contrasts with unchanged36-endpoint adjustment. The
+previous five supported contrasts are numerically unchanged. Six native
+contrasts remain unavailable; exact missing-cell lists are retained.
+
+New C1R0 downstream profile contrastP1C1R0 minusP0C1R0:
+F1+0.5679664267983782pp, adjusted interval[-1.1132088102248157,4.290615410522566],
+family6/59/5 wins/ties/losses. All nominal/adjusted F1/P/R intervals span zero.
+Reuse original20,000 paired RefOG draws/seed20260918, no new bootstrap or
+independent confirmation. Initial HMM search stays on; not total HMM
+contribution, resolved-pair accuracy or OrthoFinder superiority. The60
+changed non-reference genes do not change these RefOG statistics; no causal
+explanation for those partition differences is inferred.
+
+Independent readback checks420 records, weighted F1/P/R, exact retained
+intervals/counts, previous contrasts, failed22427 and920 unchanged helpers.
+Integrate neutral result and six-versus-complete-eight-cell scope into the
+extended manuscript and claims. All25 joined tests pass, zero failures/
+errors/skips,0.66s. Edits are outside live pins; after edits all920 helpers
+and binding source remain unchanged. No PDF/archive/figure, defaults or
+frozen scientific/helper changes. Fresh22435RUNNING8:42, initial search1.51%,
+actualPID4059977/creation time/affinity match. Observe original run; full
+native termination/review precede separate QfO conversion and assessment.
+The complete goal stays active and publication readiness remains unproven.
+
 ## First Remaining Full-Native QfO Identity Released (2026-10-05)
 
 Previous goal turn makes concrete progress at pushed148641cb: retain actual

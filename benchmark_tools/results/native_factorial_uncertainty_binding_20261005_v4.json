@@ -1,0 +1,685 @@
+{
+  "alpha": 0.05,
+  "bound_cells": {
+    "p0_c0_r0": {
+      "index": 0,
+      "job_id": 22427,
+      "scheduler_exit_code": "1:0",
+      "scheduler_state": "FAILED",
+      "score_or_recovery": {
+        "bytes": 926274,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+        "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+      },
+      "terminal_review": {
+        "bytes": 898602,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+        "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+      },
+      "whole_job_succeeded": false
+    },
+    "p0_c0_r1": {
+      "index": 1,
+      "job_id": 22428,
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "COMPLETED",
+      "score_or_recovery": {
+        "bytes": 294817,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22428/score.json",
+        "sha256": "da7937a9bdb5a5bfd2771395d5cfa9ea7e92dc3b6f9b5f88d36b8de80ecfbe68"
+      },
+      "terminal_review": {
+        "bytes": 1185333,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+        "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+      },
+      "whole_job_succeeded": true
+    },
+    "p0_c1_r0": {
+      "index": 2,
+      "job_id": 22429,
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "COMPLETED",
+      "score_or_recovery": {
+        "bytes": 297987,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22429/score.json",
+        "sha256": "f1ed516cb1d8f48de35e91aec31384a92d63368e729b5662263018d80e998023"
+      },
+      "terminal_review": {
+        "bytes": 913623,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+        "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+      },
+      "whole_job_succeeded": true
+    },
+    "p0_c1_r1": {
+      "index": 3,
+      "job_id": 22430,
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "COMPLETED",
+      "score_or_recovery": {
+        "bytes": 293861,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22430/score.json",
+        "sha256": "8709f9df33f7e903a0c7682aa1aefba4f9e7447196bd5e7e495b3ec9fe01324e"
+      },
+      "terminal_review": {
+        "bytes": 1262940,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+        "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+      },
+      "whole_job_succeeded": true
+    },
+    "p1_c0_r1": {
+      "index": 4,
+      "job_id": 22431,
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "COMPLETED",
+      "score_or_recovery": {
+        "bytes": 294827,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431/score.json",
+        "sha256": "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18"
+      },
+      "terminal_review": {
+        "bytes": 1244250,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+        "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+      },
+      "whole_job_succeeded": true
+    },
+    "p1_c1_r0": {
+      "index": 5,
+      "job_id": 22433,
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "COMPLETED",
+      "score_or_recovery": {
+        "bytes": 298025,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22433/score.json",
+        "sha256": "d47a591b84d029d3e9fe4a8702a6cefde7bbfbee0a5038ac17e6369e1e2fcecc"
+      },
+      "terminal_review": {
+        "bytes": 991416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+        "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+      },
+      "whole_job_succeeded": true
+    }
+  },
+  "contrasts": [
+    {
+      "factor": "profile_expansion",
+      "fixed": {
+        "candidate_expansion": 0,
+        "reconciliation": 0
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c0_r0"
+      ],
+      "off": "p0_c0_r0",
+      "on": "p1_c0_r0",
+      "status": "native_records_unavailable"
+    },
+    {
+      "factor": "profile_expansion",
+      "family_f1_losses": 5,
+      "family_f1_ties": 61,
+      "family_f1_wins": 4,
+      "fixed": {
+        "candidate_expansion": 0,
+        "reconciliation": 1
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -1.2114359037526952,
+            4.520970311951387
+          ],
+          "difference_percentage_points": 0.6063680296846456,
+          "paired_percentile_ci": [
+            -0.7818660834460829,
+            2.829213190422542
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            -1.3160359491892883,
+            1.144899575220177
+          ],
+          "difference_percentage_points": -0.03625742104762253,
+          "paired_percentile_ci": [
+            -0.8130543786057117,
+            0.66817855793141
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -1.1841218051888265,
+            6.317027679625983
+          ],
+          "difference_percentage_points": 0.9115348176624067,
+          "paired_percentile_ci": [
+            -0.7756114915307013,
+            3.892888286648632
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c0_r1",
+      "on": "p1_c0_r1",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "profile_expansion",
+      "family_f1_losses": 5,
+      "family_f1_ties": 59,
+      "family_f1_wins": 6,
+      "fixed": {
+        "candidate_expansion": 1,
+        "reconciliation": 0
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -1.1132088102248157,
+            4.290615410522566
+          ],
+          "difference_percentage_points": 0.5679664267983782,
+          "paired_percentile_ci": [
+            -0.6952861922180759,
+            2.650746205783999
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            -1.1512970442046537,
+            2.252320179955322
+          ],
+          "difference_percentage_points": 0.2118681102550255,
+          "paired_percentile_ci": [
+            -0.6972810715641037,
+            1.4185920927778046
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -1.1577634680346018,
+            6.4922540494016285
+          ],
+          "difference_percentage_points": 0.977755327473318,
+          "paired_percentile_ci": [
+            -0.7453284646915769,
+            4.0025729294105785
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c1_r0",
+      "on": "p1_c1_r0",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "profile_expansion",
+      "fixed": {
+        "candidate_expansion": 1,
+        "reconciliation": 1
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c1_r1"
+      ],
+      "off": "p0_c1_r1",
+      "on": "p1_c1_r1",
+      "status": "native_records_unavailable"
+    },
+    {
+      "factor": "candidate_expansion",
+      "family_f1_losses": 28,
+      "family_f1_ties": 25,
+      "family_f1_wins": 17,
+      "fixed": {
+        "profile_expansion": 0,
+        "reconciliation": 0
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -10.658788812389316,
+            3.2751336427236426
+          ],
+          "difference_percentage_points": -3.123930606322034,
+          "paired_percentile_ci": [
+            -7.567566518787847,
+            0.8962842950811368
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            -26.492936992508874,
+            -5.793324299722933
+          ],
+          "difference_percentage_points": -14.380327000959113,
+          "paired_percentile_ci": [
+            -21.258561955105545,
+            -8.489652735653282
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            1.4062014485950995,
+            12.573312186752988
+          ],
+          "difference_percentage_points": 6.396177087345016,
+          "paired_percentile_ci": [
+            2.8850751849502174,
+            10.103201141436193
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c0_r0",
+      "on": "p0_c1_r0",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "candidate_expansion",
+      "family_f1_losses": 21,
+      "family_f1_ties": 30,
+      "family_f1_wins": 19,
+      "fixed": {
+        "profile_expansion": 0,
+        "reconciliation": 1
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            -2.4590063487699045,
+            4.820889090477263
+          ],
+          "difference_percentage_points": 0.6972920555623858,
+          "paired_percentile_ci": [
+            -1.395701263546703,
+            3.037417845395344
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            -11.609991141049269,
+            -1.2272363378495101
+          ],
+          "difference_percentage_points": -6.008673105401343,
+          "paired_percentile_ci": [
+            -9.386750834781417,
+            -2.890011976852462
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            1.251336340982499,
+            9.27345341730566
+          ],
+          "difference_percentage_points": 4.585357781873384,
+          "paired_percentile_ci": [
+            2.1863976463782455,
+            7.257669444970356
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c0_r1",
+      "on": "p0_c1_r1",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "candidate_expansion",
+      "fixed": {
+        "profile_expansion": 1,
+        "reconciliation": 0
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c0_r0"
+      ],
+      "off": "p1_c0_r0",
+      "on": "p1_c1_r0",
+      "status": "native_records_unavailable"
+    },
+    {
+      "factor": "candidate_expansion",
+      "fixed": {
+        "profile_expansion": 1,
+        "reconciliation": 1
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c1_r1"
+      ],
+      "off": "p1_c0_r1",
+      "on": "p1_c1_r1",
+      "status": "native_records_unavailable"
+    },
+    {
+      "factor": "reconciliation",
+      "family_f1_losses": 0,
+      "family_f1_ties": 59,
+      "family_f1_wins": 11,
+      "fixed": {
+        "candidate_expansion": 0,
+        "profile_expansion": 0
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            0.25422098208500854,
+            8.14427852386278
+          ],
+          "difference_percentage_points": 2.941608228208281,
+          "paired_percentile_ci": [
+            0.8406865915019033,
+            5.948528439828997
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            0.7857402755426779,
+            21.387892575012785
+          ],
+          "difference_percentage_points": 8.626250216198542,
+          "paired_percentile_ci": [
+            2.732074592930746,
+            16.01941328278994
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -1.214046705953031,
+            0.0
+          ],
+          "difference_percentage_points": -0.3507205195859697,
+          "paired_percentile_ci": [
+            -0.8466884243942706,
+            0.0
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c0_r0",
+      "on": "p0_c0_r1",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "reconciliation",
+      "family_f1_losses": 5,
+      "family_f1_ties": 42,
+      "family_f1_wins": 23,
+      "fixed": {
+        "candidate_expansion": 1,
+        "profile_expansion": 0
+      },
+      "metrics": {
+        "f_score": {
+          "bonferroni_percentile_ci": [
+            1.376176697490489,
+            14.611640901649412
+          ],
+          "difference_percentage_points": 6.762830890092701,
+          "paired_percentile_ci": [
+            3.1588995753799116,
+            11.285302326426825
+          ]
+        },
+        "precision": {
+          "bonferroni_percentile_ci": [
+            6.889863373364332,
+            30.900154715320387
+          ],
+          "difference_percentage_points": 16.997904111756313,
+          "paired_percentile_ci": [
+            10.123960254847162,
+            24.78057965626745
+          ]
+        },
+        "recall": {
+          "bonferroni_percentile_ci": [
+            -5.227157037168223,
+            -0.061969151297575985
+          ],
+          "difference_percentage_points": -2.161539825057602,
+          "paired_percentile_ci": [
+            -3.9762758278731916,
+            -0.4984379942288935
+          ]
+        }
+      },
+      "missing_cells": [],
+      "off": "p0_c1_r0",
+      "on": "p0_c1_r1",
+      "status": "native_records_matched"
+    },
+    {
+      "factor": "reconciliation",
+      "fixed": {
+        "candidate_expansion": 0,
+        "profile_expansion": 1
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c0_r0"
+      ],
+      "off": "p1_c0_r0",
+      "on": "p1_c0_r1",
+      "status": "native_records_unavailable"
+    },
+    {
+      "factor": "reconciliation",
+      "fixed": {
+        "candidate_expansion": 1,
+        "profile_expansion": 1
+      },
+      "metrics": null,
+      "missing_cells": [
+        "p1_c1_r1"
+      ],
+      "off": "p1_c1_r0",
+      "on": "p1_c1_r1",
+      "status": "native_records_unavailable"
+    }
+  ],
+  "evidence": [
+    {
+      "bytes": 11560,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261005_v6/report.json",
+      "sha256": "4024277cdfcb39d109b37360fb2efc09be93af5cdbbb83cfffdccf88a1315a1f"
+    },
+    {
+      "bytes": 199307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+      "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 898602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+    },
+    {
+      "bytes": 926274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+      "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+    },
+    {
+      "bytes": 31376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_scientific_recovery_22427/score.json",
+      "sha256": "354113714384905a57c980840d32432f1feaf4f83fe0249291597056ca8beca1"
+    },
+    {
+      "bytes": 1185333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+    },
+    {
+      "bytes": 294817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22428/score.json",
+      "sha256": "da7937a9bdb5a5bfd2771395d5cfa9ea7e92dc3b6f9b5f88d36b8de80ecfbe68"
+    },
+    {
+      "bytes": 913623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+      "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+    },
+    {
+      "bytes": 297987,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22429/score.json",
+      "sha256": "f1ed516cb1d8f48de35e91aec31384a92d63368e729b5662263018d80e998023"
+    },
+    {
+      "bytes": 1262940,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+      "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+    },
+    {
+      "bytes": 293861,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22430/score.json",
+      "sha256": "8709f9df33f7e903a0c7682aa1aefba4f9e7447196bd5e7e495b3ec9fe01324e"
+    },
+    {
+      "bytes": 1244250,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+      "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+    },
+    {
+      "bytes": 294827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431/score.json",
+      "sha256": "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18"
+    },
+    {
+      "bytes": 991416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+      "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+    },
+    {
+      "bytes": 298025,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22433/score.json",
+      "sha256": "d47a591b84d029d3e9fe4a8702a6cefde7bbfbee0a5038ac17e6369e1e2fcecc"
+    },
+    {
+      "bytes": 31376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_scientific_recovery_22427/score.json",
+      "sha256": "354113714384905a57c980840d32432f1feaf4f83fe0249291597056ca8beca1"
+    }
+  ],
+  "exporter_source": {
+    "bytes": 12830,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_factorial_progress.py",
+    "sha256": "af87cf899b8ae474822ea81a922643ab2c229275f99a1df57d5149b0d280448a"
+  },
+  "factorial": {
+    "bytes": 199307,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+    "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+  },
+  "families": [
+    "RefOG001.txt",
+    "RefOG002.txt",
+    "RefOG003.txt",
+    "RefOG004.txt",
+    "RefOG005.txt",
+    "RefOG006.txt",
+    "RefOG007.txt",
+    "RefOG008.txt",
+    "RefOG009.txt",
+    "RefOG010.txt",
+    "RefOG011.txt",
+    "RefOG012.txt",
+    "RefOG013.txt",
+    "RefOG014.txt",
+    "RefOG015.txt",
+    "RefOG016.txt",
+    "RefOG017.txt",
+    "RefOG018.txt",
+    "RefOG019.txt",
+    "RefOG020.txt",
+    "RefOG021.txt",
+    "RefOG022.txt",
+    "RefOG023.txt",
+    "RefOG024.txt",
+    "RefOG025.txt",
+    "RefOG026.txt",
+    "RefOG027.txt",
+    "RefOG028.txt",
+    "RefOG029.txt",
+    "RefOG030.txt",
+    "RefOG031.txt",
+    "RefOG032.txt",
+    "RefOG033.txt",
+    "RefOG034.txt",
+    "RefOG035.txt",
+    "RefOG036.txt",
+    "RefOG037.txt",
+    "RefOG038.txt",
+    "RefOG039.txt",
+    "RefOG040.txt",
+    "RefOG041.txt",
+    "RefOG042.txt",
+    "RefOG043.txt",
+    "RefOG044.txt",
+    "RefOG045.txt",
+    "RefOG046.txt",
+    "RefOG047.txt",
+    "RefOG048.txt",
+    "RefOG049.txt",
+    "RefOG050.txt",
+    "RefOG051.txt",
+    "RefOG052.txt",
+    "RefOG053.txt",
+    "RefOG054.txt",
+    "RefOG055.txt",
+    "RefOG056.txt",
+    "RefOG057.txt",
+    "RefOG058.txt",
+    "RefOG059.txt",
+    "RefOG060.txt",
+    "RefOG061.txt",
+    "RefOG062.txt",
+    "RefOG063.txt",
+    "RefOG064.txt",
+    "RefOG065.txt",
+    "RefOG066.txt",
+    "RefOG067.txt",
+    "RefOG068.txt",
+    "RefOG069.txt",
+    "RefOG070.txt"
+  ],
+  "independent_confirmation": false,
+  "limitations": [
+    "All family records, including metadata, must match; aggregate agreement alone is insufficient.",
+    "Intervals are reused from retained paired RefOG draws, not new independent evidence.",
+    "Development exposure, family exchangeability and approximate percentile-coverage limits remain.",
+    "All 36 planned endpoints remain in the multiplicity adjustment; unavailable native contrasts are not imputed.",
+    "Reconciliation changes candidate co-membership to root-HOG co-membership, not resolved-pair accuracy.",
+    "Profile-off retains initial HMM search; these effects do not measure its total contribution.",
+    "Failed-wrapper scientific recovery is retained, not converted to successful timing.",
+    "Direct report replay is not a new transitive raw review, runtime closure or speed comparison."
+  ],
+  "multiplicity_endpoints": 36,
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "planned_contrasts": 12,
+  "publication_ready": false,
+  "replicates_reused": 20000,
+  "schema": "native_orthobench_retained_uncertainty_binding_v1",
+  "seed_reused": 20260918,
+  "snapshot": {
+    "bytes": 11560,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261005_v6/report.json",
+    "sha256": "4024277cdfcb39d109b37360fb2efc09be93af5cdbbb83cfffdccf88a1315a1f"
+  },
+  "source": {
+    "bytes": 7210,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_native_orthobench_uncertainty.py",
+    "sha256": "ff6c6f3ac394f930044c7108352d508bf42f90bd322e61c4b004545e4edb3fe4"
+  }
+}

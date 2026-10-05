@@ -8,7 +8,7 @@ BASE = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
 
 
 def binding():
-    return json.loads((BASE / "native_factorial_uncertainty_binding_20261005_v3.json").read_text())
+    return json.loads((BASE / "native_factorial_uncertainty_binding_20261005_v4.json").read_text())
 
 
 def paragraph():
@@ -36,13 +36,13 @@ def test_profile_numbers_and_interpretation_match_bound_contrast():
 
 def test_native_scope_and_missing_contrasts_remain_explicit():
     data, text = binding(), paragraph()
-    assert len(data["bound_cells"]) == 5
-    assert sum(row["status"] == "native_records_matched" for row in data["contrasts"]) == 5
-    assert sum(row["metrics"] is None for row in data["contrasts"]) == 7
+    assert len(data["bound_cells"]) == 6
+    assert sum(row["status"] == "native_records_matched" for row in data["contrasts"]) == 6
+    assert sum(row["metrics"] is None for row in data["contrasts"]) == 6
     assert data["new_bootstrap_draws"] == 0
     assert data["replicates_reused"] == 20000
     assert data["multiplicity_endpoints"] == 36
-    for literal in ("All350", "five supported contrasts", "Seven native contrasts",
+    for literal in ("All420", "six supported contrasts", "Six native contrasts",
                     "not imputed", "initial HMM search", "conditional downstream",
                     "resolved-pair truth", "independent", "failed timing",
                     "does not replace the complete retained eight-cell analysis"):
@@ -55,14 +55,34 @@ def test_claim_checklist_retains_neutral_effect_and_source_links():
                if "Fresh native OrthoBench profile expansion" in line)
     assert "Not established" in row and "spanning zero" in row
     assert "not independent confirmation" in row and "initial HMM search" in row
-    for filename in ("NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261005.md",
-                     "native_factorial_uncertainty_binding_20261005_v3.json"):
+    for filename in ("NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261005_V4.md",
+                     "native_factorial_uncertainty_binding_20261005_v4.json"):
         assert filename in row and (BASE / filename).is_file()
 
 
 def test_independent_readback_matches_new_bound_result():
-    result = json.loads((BASE / "native_factorial_uncertainty_readback_20261005.json").read_text())
+    result = json.loads((BASE / "native_factorial_uncertainty_readback_20261005_v2.json").read_text())
     assert result["status"] == "passed" and result["checked_helpers"] == 920
-    assert len(result["cells"]) == 5 and len(result["contrasts"]) == 5
+    assert len(result["cells"]) == 6 and len(result["contrasts"]) == 6
     assert all(row["family_records_exact"] for row in result["cells"])
-    assert result["binding"]["path"].endswith("native_factorial_uncertainty_binding_20261005_v3.json")
+    assert result["binding"]["path"].endswith("native_factorial_uncertainty_binding_20261005_v4.json")
+
+
+def test_candidate_on_profile_contrast_remains_inconclusive():
+    data, text = binding(), paragraph()
+    contrast = next(row for row in data["contrasts"]
+                    if row["on"] == "p1_c1_r0" and row["off"] == "p0_c1_r0")
+    assert contrast["status"] == "native_records_matched"
+    assert contrast["fixed"] == {"candidate_expansion": 1, "reconciliation": 0}
+    metric = contrast["metrics"]["f_score"]
+    assert f'{metric["difference_percentage_points"]:+.6f}' in text
+    lo, hi = metric["bonferroni_percentile_ci"]
+    assert f"[{lo:.6f},{hi:.6f}]" in text
+    assert (contrast["family_f1_wins"], contrast["family_f1_ties"],
+            contrast["family_f1_losses"]) == (6, 59, 5)
+    assert "six family wins,59 ties and five losses" in text
+    for metric in contrast["metrics"].values():
+        for key in ("paired_percentile_ci", "bonferroni_percentile_ci"):
+            lo, hi = metric[key]
+            assert lo < 0 < hi
+    assert "span zero" in text and "not a total HMM advantage" in text
