@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native Ablation Score/Resource Reporting Executed (2026-10-04)
+
+Previous user turn confirms the already-amended goal; no new inference or
+scientific evidence is created by that confirmation. On this continuation,
+read full goal/current ledger and freshly confirm22429 RUNNING, not terminal.
+Preserve the same job and frozen inputs/runtime/helper sources; no restart or
+index3 release. Shared-host contention remains authorized and disclosed.
+
+Actually execute the [new thirteen-identity reporting snapshot](NATIVE_FACTORIAL_REPORTING_RESULT_20261004.md).
+Join checksum-bound terminal reviews with separate scores/recovery. Keep
+22427 failed-wrapper science/resource evidence visibly failed and22428 a
+native success. F1 values69.7634%/72.7050% and native wall2289.7647/3254.9227s
+are unchanged. Eleven absent reviews retain null endpoints, not inherited
+cached scores, zero costs or claims about actual scheduler state. QfO
+resources remain distinct from its native six-metric assessment semantics.
+
+Independent stdlib readback checks all13 JSON/TSV rows, two original resource/
+score joins and seven direct report/source pins; all920 live helper pins
+remain unchanged. Tests465 pass, zero failures/errors/skips,8.13s, including
+41 new reporting cases. Direct reporting validation is not new scoring,
+transitive raw re-admission, independent accuracy or publication completion.
+No causal overhead, pooled median, isolated speed ranking or next-run release.
+
+Latest actual22429 RUNNING20:52/initial-search52.78%. Continue observing that
+same attempt; complete terminal review and separate scoring before index3.
+All remaining native identities and broader scientific/reproducibility/
+distribution requirements remain in scope. MainPDF/rc4, frozen defaults,
+raw receipts and unrelated jobs/services/worktree changes stay unchanged.
+
 ## Full-Native P0C0R1 Scored; Next Distinct Identity Running (2026-10-04)
 
 Previous goal turn made progress at pushed4f534363, completing the new QfO
