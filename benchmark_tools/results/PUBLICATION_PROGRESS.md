@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Dependent OrthoBench Review/Score Worker Prepared (2026-10-05)
+
+Previous turn makes progress at pushed72d6226f with the actual 472-file
+current-byte check. Re-read full goal/current ledger; freshly confirm the
+same22431 RUNNING and preserve it. Initial search reaches100%, but full
+profile/reconciliation inference and whole-job terminal review are not complete.
+
+Prepare a [dependent postprocessing worker](../NATIVE_ORTHOBENCH_FOLLOWUP_20261005.md)
+to call the unchanged terminal reviewer and, only after native success,
+unchanged separate scorer. It pins its source and original request, requires
+matchingPython3.10, fresh distinct destinations and refuses QfO. Native
+failures remain unscored; unknown outcomes are refused. No inference/retry
+or automatic successor release. TwoCPUs/8GiB/two hours are postprocessing,
+not replacement native resources or comparative cost evidence.
+
+All94 joined tests pass, zero failures/errors/skips,1.73s, including14 new
+orchestration/runtime/source/request/envelope cases. Matching-runtime import
+and bash syntax pass; all920 frozen helpers remain unchanged. Preserve the
+earlier91-case JUnit and final94-case receipt. Commit/push the protocol/worker
+before real submission; then independently validate its held afterany22431
+dependency and owner/envelope/argv/source/request before release.
+
+Latest22431 RUNNING44:19. No real followup job or native score exists at this
+preparation checkpoint. Whole-job terminal review/separate score still precede
+index5. Full-goal scientific, native-resource and distribution obligations
+remain active; preparation is not final admission or publication readiness.
+
 ## Current All-Tool Input/Output File Identities Rechecked (2026-10-04)
 
 Previous turn makes progress at pushede1ec6db6 with the actual four-cell
