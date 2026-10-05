@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Agent Observation Restored Without Native Restart (2026-10-05)
+
+Three consecutive goal turns could not read the goal or query jobs because
+the agent command launcher failed before execution with
+`bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`. The goal was
+marked blocked, not complete; those failed observations did not establish
+any analysis outcome. The user restores the execution environment and
+resumes the goal. Re-read the full attachment and newest ledger successfully.
+
+[Bounded recovery receipt](native_qfo_agent_observation_recovery_20261005.json)
+and its [actual observer source](observe_native_qfo_recovery_20261005.py)
+verify original22437 RUNNING,22440 dependency-pending, unchanged request/
+Comment, zero scheduler restarts and original PID265470/create1791220584.63,
+affinity0..31/eight original worker IDs. All920 frozen helper files still
+match. The source goal and repository goal copy remain byte-identical.
+
+Read796 existing primary collector points6437..7232 around the last pre-gap
+and first recovered process observations. Indices are contiguous, observed
+cadence0.935794..1.062588s, job/native-step CPU counters nondecreasing and
+observed affinity error inventories empty. All796 points contain two
+bracketing parent readings. An initial readback assumed one parent row and
+failed before output; retain that observer failure and correct only the
+observer, not original measurement data or frozen code. This bounded check
+is not a full raw-resource replay, terminal timing admission or proof of
+every aspect of uninterrupted execution. Exact launcher-outage boundaries
+are unknown; no measurement time is subtracted or corrected.
+
+No inference/scoring/review is restarted, new job submitted or unrelated
+work changed. Existing scores/failures and next-identity gates stay intact.
+Native22437 and its original reviewer are the next handles to observe;
+index8 still requires successful full terminal review and fresh launch gates.
+Shared-host timing effects remain unknown/tool-dependent. Broader science
+and final-release requirements persist; the resumed full goal is active,
+publication readiness unproven. No completed diagnostic/test is rerun merely
+because the agent environment resumed.
+
 ## First Native QfO SwissTrees Family Evidence Verified (2026-10-05)
 
 Previous goal turn made concrete progress at pushed95d8f528. Re-read the full
