@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Actual Receipt Amendment Ready For Index1 (2026-10-04)
+
+After source commit6d59a5de, immutable preparation succeeds in2.48s. The
+[new preparation](native_factorial_receipt_amendment_20261004/preparation.json)
+checks3390 unique retained evidence files and920 current helper bindings.
+Plan SHA6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b;
+policy SHA9e79989611fde9f7fa69dbca11be692a6783654f0ada5e27fd1727003c3282fc.
+Independent executor-history readback passes, with a new actual sacct query
+confirming22427 FAILED1:0. All13run paths/order/input/resource fields remain
+unchanged; no scientific search or completed diagnostic is repeated.
+
+Host precheck: Slurm idle192slots; about614GiB available memory, full4GiB
+swap retained as diagnostic,10TiB disk available. This is not host isolation
+or a guarantee of future capacity. Still require an explicit held index1
+request and fresh native handoff/counters/runtime before inference. Ordinary
+contention alone is accepted and annotated. No new job has launched at this
+preparation milestone; full publication completion remains unproven.
+
 ## Prospective Receipt/History Amendment Tested (2026-10-04)
 
 Resume after the shared-host goal update; previous user turn made progress

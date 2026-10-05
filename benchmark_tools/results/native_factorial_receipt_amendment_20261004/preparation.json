@@ -1,0 +1,50 @@
+{
+  "adoption": {
+    "executed_source": {
+      "bytes": 25393,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_failed_source_22427/run_native_factorial_cost.py",
+      "sha256": "07a926e38ba49144b56bf9a7d23478d3dd050fc3a14b98e1ce8889d1f98a8d20"
+    },
+    "inference_reexecuted": false,
+    "prior_plan": {
+      "bytes": 489120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+      "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+    },
+    "prior_review": {
+      "bytes": 898602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+    },
+    "recovery": {
+      "bytes": 926274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+      "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+    },
+    "retained_evidence_checked": 3390,
+    "scheduler_success": false,
+    "scientific_settings_unchanged": true,
+    "status": "reviewed_failed_index_zero_adopted_without_retry",
+    "timing_success_established": false
+  },
+  "automatic_retry": false,
+  "first_remaining_index": 1,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "policy": {
+    "bytes": 3285,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/policy.json",
+    "sha256": "9e79989611fde9f7fa69dbca11be692a6783654f0ada5e27fd1727003c3282fc"
+  },
+  "scientific_execution_authorized": false,
+  "source": {
+    "bytes": 10037,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/amend_native_factorial_receipt.py",
+    "sha256": "923cbe227eaa789a0d973e8f810ac93acf389a51995a731a2d53ac91e8738aab"
+  },
+  "status": "receipt_amendment_prepared_not_launched",
+  "timing_scope": "shared_host_matched_resources"
+}

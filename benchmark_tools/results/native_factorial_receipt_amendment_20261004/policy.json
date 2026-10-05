@@ -1,0 +1,69 @@
+{
+  "configuration_files": [],
+  "decision": "reviewed",
+  "evidence": [
+    {
+      "bytes": 2245,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_policy_20261004.json",
+      "sha256": "5a7ef6f0b0b4f201ca41376a1bc3c2c652ac916e5b6fbf72f803765151954c31"
+    },
+    {
+      "bytes": 489120,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+      "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+    },
+    {
+      "bytes": 4477,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_attempt_22426.json",
+      "sha256": "3985c5528c5b9c3ebf7ffd50e1cd2ac3172acd1cea0a7c98c352573fa7a0a8cc"
+    },
+    {
+      "bytes": 2230,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/NATIVE_FACTORIAL_RUNTIME_REPAIR_22426.md",
+      "sha256": "0e21e00d7ae6e5498585ed38fc267da3a3cdb22558888e294e3b4b1c5d5196d4"
+    },
+    {
+      "bytes": 2524,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_policy_repaired_20261004.json",
+      "sha256": "be9fa07b4eb5dee63d0a7d0d9c074a13dbc8b5b2146eb6a9a2d05ccf53af4b6c"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 926274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+      "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+    }
+  ],
+  "execution_scope": "shared_host_matched_resources",
+  "foreign_cpu_role": "diagnostic_only",
+  "host": "bizon",
+  "limitations": [
+    "All CPU/PSI magnitudes are diagnostics; limits are not outside-work eligibility.",
+    "Outside read errors/churn limit contention estimates; native accounting remains separately validated.",
+    "128 GiB available memory is checked at launch, not a guarantee of future host capacity."
+  ],
+  "maximum_foreign_average_cores": 0.0,
+  "maximum_pressure_percent": {
+    "cpu": 100.0,
+    "io": 100.0,
+    "memory": 100.0
+  },
+  "maximum_pressure_sample_period_s": 1.5,
+  "maximum_sample_period_s": 35.0,
+  "minimum_available_memory_bytes": 137438953472,
+  "native_pressure_role": "diagnostic_only",
+  "plan_sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b",
+  "preflight_pressure_role": "diagnostic_only",
+  "process_policy": {
+    "bytes": 293,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_process_policy_20261003.json",
+    "sha256": "530b7f3740c924b7a5ede7ed98365a2327130f72f2c93039fb18cb1bb089772a"
+  },
+  "review_reference": "Receipt/control amendment only; failed index zero and recovered science retained; same shared-host resources",
+  "schema": "threadripper_environment_policy_v3",
+  "scientific_timings_admitted": false
+}
