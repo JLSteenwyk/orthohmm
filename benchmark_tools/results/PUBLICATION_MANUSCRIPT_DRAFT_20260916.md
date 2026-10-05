@@ -848,6 +848,20 @@ Shared-node cached reconciliation costs are not end-to-end timings. The
 factorial remains development-exposed and supplies no new direct OrthoFinder
 comparison. [Results and interpretation](ORTHOBENCH_FACTORIAL_INTERPRETATION_20260916.md).
 
+A separate [full-native uncertainty binding](NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261005.md)
+currently links five terminal-scored cells to that retained analysis. All350
+RefOG records, including metadata, exactly match; the five supported contrasts
+reuse the original20,000 paired draws and36-endpoint adjustment. With candidate
+expansion off and reconciliation on, P1C0R1 minusP0C0R1 gives+0.606368 F1
+percentage points, adjusted percentile interval[-1.211436,4.520970], with
+four family wins,61 ties and five losses. This interval includes zero.
+Both cells retain initial HMM search, so this is a conditional downstream
+profile effect, not a total HMM advantage, resolved-pair truth or independent
+confirmation. Seven native contrasts remain unavailable and are not imputed;
+the failed22427 wrapper's scientific recovery remains failed timing. This
+binding does not replace the complete retained eight-cell analysis or
+establish native completion for the remaining identities.
+
 The original-release QfO factorial likewise completed all eight cells. Its
 prespecified SwissTrees family bootstrap used 100,000 shared draws and
 adjusted 42 endpoints. All 14 adjusted F1 intervals included zero. The four

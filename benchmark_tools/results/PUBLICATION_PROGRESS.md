@@ -1,5 +1,37 @@
 # Publication Progress
 
+## New Native Profile Contrast Bound And Reported (2026-10-05)
+
+Previous turn makes actual progress at pushed0752068d: retain the reviewed/
+scored22431 result and release different native22433 plus dependent22434.
+Re-read full goal and current ledger; fresh scheduler and actualPID4028693
+confirm the same22433 live,22434 pending. Initial search is still running.
+No duplicate worker, native restart, early score or next identity release.
+
+The completed fifth cell supplies genuinely new inputs for the existing
+[native uncertainty binding](NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261005.md).
+All350 family records and point estimates exactly match the pinned retained
+factorial. Unchanged helper replays the five-result snapshot, supporting
+five of12 contrasts while preserving36-endpoint adjustment and seven missing
+native contrasts. Retain old snapshots/bindings without overwriting them.
+
+New downstream-profile contrast atC0R1:P1 minusP0 F1+0.6063680296846456pp,
+adjusted interval[-1.2114359037526952,4.520970311951387], family4/61/5
+wins/ties/losses. All three nominal/adjusted metric intervals span zero.
+Reuse original20,000 paired draws/seed20260918, no new draws or independent
+confirmation. Initial HMM search remains on; this is conditional profile
+evidence, not total HMM contribution, resolved-pair truth or OF superiority.
+
+Independent readback checks350 records, weighted F1/P/R, exact interval/count
+bindings, failed22427 and920 unchanged helpers. Integrate the neutral effect
+and native-versus-retained scope into the extended manuscript and claim table.
+All24 joined tests pass, zero failures/errors/skips,0.65s; four new document
+cases plus existing projection/candidate controls. No PDF/archive/figure or
+frozen scientific helper changes. Current checksum check also retains queued
+reviewer source unchanged. Latest22433RUNNING10:07/actualPID4028693;
+22434PENDING. Continue observing both original handles; terminal review and
+separate score precede index6. Full goal remains active and unproven.
+
 ## Actual Index5 Native And Dependent Followup Released (2026-10-05)
 
 After pushed85a03641 retains22431's reviewed/scored result, actually submit
