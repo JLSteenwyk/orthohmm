@@ -1,5 +1,40 @@
 # Publication Progress
 
+## First Full-Native QfO Ablation Passes Terminal Review (2026-10-05)
+
+Previous turn is a verified wait on original reviewer22436. Re-read the
+full goal and inspect the same handles: native22435 and reviewer22436
+now both COMPLETED0:0. Native whole job11:05:03, step10:42:01, reviewer29:44.
+No restart, duplicate review, implicit retry or successor release occurs.
+
+Retain the [new reviewed result](NATIVE_FACTORIAL_RESULT_22435.md) and
+byte-identical original terminal review. Index6 QfO P0C0R0 passes runtime,
+exact matched-Python resource replay, shared-host environment and native
+output review:78 proteomes,984,137 genes,394,328 groups. Initial sensitive
+HMM search stays on; downstream profiles/candidates/reconciliation off.
+Historical hit/partition equivalence and QfO accuracy remain unestablished.
+
+Native wall38509.157179042s, CPU1169184.709484s and peak15,424,811,008bytes.
+CPU includes wrapper; lifetime peak includes launcher. Maximum observed
+foreign average demand41.636270496984366 cores. Shared-host effects remain
+unknown and potentially tool-dependent, not isolated performance or a
+corrected speed estimate. Conversion/scoring remain outside inference.
+
+Unchanged exporter adds the seventh review to all13 identities. Six prior
+rows stay exact, failed22427 retained; six remaining rows are unavailable,
+not live statuses or zero. QfO accuracy fields remain null. Independent
+readback passes13 JSON/TSV rows,15 direct snapshot pins, original request/
+four review reports/raw-replay byte digest/published copy/scheduler jobs,
+and all920 unchanged helpers:950 distinct records. This is report/binding
+readback, not a repeated raw replay or rescore. Large raw replay stays out
+of Git. No new tests or code/default/frozen-setting changes are claimed.
+
+Next: index7 fresh held request and full-prefix/capacity/release/startup
+gates, plus separate index6 two-CPU QfO pair conversion, eight-CPU endpoint
+assessment and independent admission. Successful native review permits
+the next native identity without waiting for QfO scores. All broader
+scientific and release requirements persist; readiness remains unproven.
+
 ## Original QfO Native Job Gets Its Queued Terminal Review (2026-10-05)
 
 Previous turn makes concrete progress at pusheda6da75b5: bind all420 native
