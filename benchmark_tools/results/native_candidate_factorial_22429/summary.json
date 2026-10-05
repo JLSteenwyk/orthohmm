@@ -1,0 +1,88 @@
+{
+  "accuracy_scored": false,
+  "audit_sha256": "8ad5cd74372c5924c079526ae7301bfce255f981630fca69b2f526626fa434bd",
+  "diagnostic_only": true,
+  "direct_audit_pins_checked": 41,
+  "independent_gene_unions": [
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "label": "historical_order_historical_scores",
+      "whole_partition_equal": true
+    },
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "label": "historical_order_fresh_scores",
+      "whole_partition_equal": true
+    },
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_order_historical_scores",
+      "whole_partition_equal": true
+    },
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_order_fresh_scores",
+      "whole_partition_equal": true
+    },
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_full_self_control",
+      "whole_partition_equal": true
+    }
+  ],
+  "native_helpers_unchanged": 920,
+  "plan": {
+    "bytes": 10217,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/plan.json",
+    "sha256": "73edbaee2c1602880ccc0bf5a7ac7d45dcdef007919ee71b819b497324ef3144"
+  },
+  "published_copies_byte_identical": 3,
+  "report": {
+    "bytes": 30426,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/report.json",
+    "sha256": "d52ea8286ad92ca246b1860abcf87b4755a0d5feda613fd483aa19c2f54e563b"
+  },
+  "rows": [
+    {
+      "genes_changed_vs_historical": 0,
+      "genes_changed_vs_native": 58,
+      "groups": 54745,
+      "label": "historical_order_historical_scores",
+      "merges": 8500
+    },
+    {
+      "genes_changed_vs_historical": 0,
+      "genes_changed_vs_native": 58,
+      "groups": 54745,
+      "label": "historical_order_fresh_scores",
+      "merges": 8500
+    },
+    {
+      "genes_changed_vs_historical": 58,
+      "genes_changed_vs_native": 0,
+      "groups": 54745,
+      "label": "fresh_order_historical_scores",
+      "merges": 8500
+    },
+    {
+      "genes_changed_vs_historical": 58,
+      "genes_changed_vs_native": 0,
+      "groups": 54745,
+      "label": "fresh_order_fresh_scores",
+      "merges": 8500
+    },
+    {
+      "genes_changed_vs_historical": 58,
+      "genes_changed_vs_native": 0,
+      "groups": 54745,
+      "label": "fresh_full_self_control",
+      "merges": 8500
+    }
+  ],
+  "schema": "native_candidate_factorial_summary_v1"
+}

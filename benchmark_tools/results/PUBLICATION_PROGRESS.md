@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Candidate Hit-Order Intervention Reproduces Whole Difference (2026-10-04)
+
+Previous turn makes progress at pushed3b8c524c with complete accepted-trace
+reconstruction. Read full goal/current ledger; fresh scheduler confirms the
+same22430 RUNNING. Preserve it unchanged and all920 native helper pins.
+
+Prespecify/push6a59e1d0's five-arm protocol before real outcomes. Matching
+runtime preparation initially fails on an unused loader's Numba import,
+before any plan or scientific attempt. Fix/push85c7f41d's direct trusted-cache
+loader;48 joined tests and actual Python3.10 CLI import pass. Then bind the
+real plan, check662,731,202,560bytes available RAM and execute once on own
+CPU32, outside native affinity0..31. No runtime/default or unrelated changes.
+
+The [actual fixed-seed order/score factorial](NATIVE_CANDIDATE_FACTORIAL_RESULT_22429.md)
+completes0, both full controls exact. Every arm has54,745groups/8,500merges
+and251,378genes. Order-only reproduces the entire58-gene difference; score-only
+changes do not change either respective partition, and self hits have no
+partition effect. All18,235,373nonself pair sets match;251,135self hits are
+removed for the four nonself arms. No new benchmark accuracy or phylogeny.
+
+Independent readback reconstructs five whole partitions/ten comparisons/
+41direct pins; a separate gene-union check independently reconstructs all
+five, verifies920 unchanged helpers and three byte-identical published
+copies. In the order-only intervention, common counts/maxima/coverage/IDs
+agree while1,725 common support values change by at most1.4210854715202004e-14.
+Stable within-pair ordering before reduceat is order-sensitive here. This
+is a controlled boundary effect, not universal or full historical causality.
+All57 joined tests pass, zero failures/errors/skips,29.21s, including actual
+complete-report reproduction and order-only common-feature checks.
+
+Latest22430 RUNNING43:09, actually in MAFFT/FastTree inference; do not restart
+or release index4 early. Terminal review/separate scoring and remaining
+native, uncertainty, generalization and publication deliverables stay active.
+No default change, opportunistic rounding, timing correction or causal
+resource-contention claim. The full goal remains active and unproven.
+
 ## Full Candidate Partitions Reconstructed From Accepted Traces (2026-10-04)
 
 Previous user turn verifies the already-amended shared-host goal; this alone

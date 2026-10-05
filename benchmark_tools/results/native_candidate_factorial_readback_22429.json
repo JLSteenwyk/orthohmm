@@ -1,0 +1,2646 @@
+{
+  "accepted_trace_comparisons_against_historical": {
+    "fresh_full_self_control": {
+      "common_anchors_with_changed_sources": [
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000008064"
+            ],
+            [
+              "ENSPTRP00000030393"
+            ],
+            [
+              "ENSPTRP00000065079"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11258,
+              "source_genes": [
+                "ENSPTRP00000008064"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11259,
+              "source_genes": [
+                "ENSPTRP00000030393"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11260,
+              "source_genes": [
+                "ENSPTRP00000065079"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000033563"
+            ],
+            [
+              "ENSCAFP00000034229"
+            ],
+            [
+              "ENSCAFP00000036545"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11180,
+              "source_genes": [
+                "ENSCAFP00000033563"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11181,
+              "source_genes": [
+                "ENSCAFP00000034229"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11183,
+              "source_genes": [
+                "ENSCAFP00000036545"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 7.105427357601002e-15,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSMODP00000048087"
+            ],
+            [
+              "ENSMODP00000054862"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9623,
+              "source_genes": [
+                "ENSMODP00000048087"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9624,
+              "source_genes": [
+                "ENSMODP00000054862"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000038958"
+            ],
+            [
+              "ENSCAFP00000047241"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9561,
+              "source_genes": [
+                "ENSCAFP00000038958"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9569,
+              "source_genes": [
+                "ENSCAFP00000047241"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000033114",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000054239",
+            "ENSMUSP00000076397",
+            "ENSMUSP00000135427",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000051820"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.36012953678085,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10257,
+              "source_genes": [
+                "ENSPTRP00000051820"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000017000"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.360129536780853,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10136,
+              "source_genes": [
+                "ENSCAFP00000017000"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000035973",
+            "ENSCAFP00000062537",
+            "ENSCINP00000011952",
+            "ENSCINP00000020149",
+            "ENSDARP00000090794",
+            "ENSDARP00000142451",
+            "ENSGALP00000027026",
+            "ENSGALP00000042371",
+            "ENSMODP00000010146",
+            "ENSMUSP00000074142",
+            "ENSP00000438553",
+            "ENSPTRP00000062923",
+            "ENSPTRP00000092333",
+            "ENSRNOP00000040177",
+            "ENSRNOP00000049580",
+            "ENSTNIP00000009383",
+            "FBpp0091075",
+            "WBGene00001877.1"
+          ]
+        }
+      ],
+      "common_feature_differences": {
+        "forward_average": {
+          "changed_values": 1842,
+          "maximum_absolute_delta": 1.7763568394002505e-15
+        },
+        "forward_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_maximum": {
+          "changed_values": 5,
+          "maximum_absolute_delta": 2.220446049250313e-16
+        },
+        "forward_normalized_support": {
+          "changed_values": 1815,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "margin": {
+          "changed_values": 1650,
+          "maximum_absolute_delta": 1.1368683772161603e-13
+        },
+        "reverse_average": {
+          "changed_values": 1878,
+          "maximum_absolute_delta": 2.220446049250313e-15
+        },
+        "reverse_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_maximum": {
+          "changed_values": 6,
+          "maximum_absolute_delta": 4.440892098500626e-16
+        },
+        "reverse_normalized_support": {
+          "changed_values": 1874,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "species_overlap_fraction": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "support": {
+          "changed_values": 1725,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        }
+      },
+      "common_semantic_merges": 8482,
+      "common_source_cluster_ids_changed": 0,
+      "common_target_cluster_ids_changed": 0,
+      "native_merges": 8500,
+      "native_only_anchor_identities": 3,
+      "native_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      },
+      "original_merges": 8500,
+      "original_only_anchor_identities": 3,
+      "original_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      }
+    },
+    "fresh_order_fresh_scores": {
+      "common_anchors_with_changed_sources": [
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000008064"
+            ],
+            [
+              "ENSPTRP00000030393"
+            ],
+            [
+              "ENSPTRP00000065079"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11258,
+              "source_genes": [
+                "ENSPTRP00000008064"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11259,
+              "source_genes": [
+                "ENSPTRP00000030393"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11260,
+              "source_genes": [
+                "ENSPTRP00000065079"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000033563"
+            ],
+            [
+              "ENSCAFP00000034229"
+            ],
+            [
+              "ENSCAFP00000036545"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11180,
+              "source_genes": [
+                "ENSCAFP00000033563"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11181,
+              "source_genes": [
+                "ENSCAFP00000034229"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11183,
+              "source_genes": [
+                "ENSCAFP00000036545"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 7.105427357601002e-15,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSMODP00000048087"
+            ],
+            [
+              "ENSMODP00000054862"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9623,
+              "source_genes": [
+                "ENSMODP00000048087"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9624,
+              "source_genes": [
+                "ENSMODP00000054862"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000038958"
+            ],
+            [
+              "ENSCAFP00000047241"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9561,
+              "source_genes": [
+                "ENSCAFP00000038958"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9569,
+              "source_genes": [
+                "ENSCAFP00000047241"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000033114",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000054239",
+            "ENSMUSP00000076397",
+            "ENSMUSP00000135427",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000051820"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.36012953678085,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10257,
+              "source_genes": [
+                "ENSPTRP00000051820"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000017000"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.360129536780853,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10136,
+              "source_genes": [
+                "ENSCAFP00000017000"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000035973",
+            "ENSCAFP00000062537",
+            "ENSCINP00000011952",
+            "ENSCINP00000020149",
+            "ENSDARP00000090794",
+            "ENSDARP00000142451",
+            "ENSGALP00000027026",
+            "ENSGALP00000042371",
+            "ENSMODP00000010146",
+            "ENSMUSP00000074142",
+            "ENSP00000438553",
+            "ENSPTRP00000062923",
+            "ENSPTRP00000092333",
+            "ENSRNOP00000040177",
+            "ENSRNOP00000049580",
+            "ENSTNIP00000009383",
+            "FBpp0091075",
+            "WBGene00001877.1"
+          ]
+        }
+      ],
+      "common_feature_differences": {
+        "forward_average": {
+          "changed_values": 1842,
+          "maximum_absolute_delta": 1.7763568394002505e-15
+        },
+        "forward_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_maximum": {
+          "changed_values": 5,
+          "maximum_absolute_delta": 2.220446049250313e-16
+        },
+        "forward_normalized_support": {
+          "changed_values": 1815,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "margin": {
+          "changed_values": 1650,
+          "maximum_absolute_delta": 1.1368683772161603e-13
+        },
+        "reverse_average": {
+          "changed_values": 1878,
+          "maximum_absolute_delta": 2.220446049250313e-15
+        },
+        "reverse_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_maximum": {
+          "changed_values": 6,
+          "maximum_absolute_delta": 4.440892098500626e-16
+        },
+        "reverse_normalized_support": {
+          "changed_values": 1874,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "species_overlap_fraction": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "support": {
+          "changed_values": 1725,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        }
+      },
+      "common_semantic_merges": 8482,
+      "common_source_cluster_ids_changed": 0,
+      "common_target_cluster_ids_changed": 0,
+      "native_merges": 8500,
+      "native_only_anchor_identities": 3,
+      "native_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      },
+      "original_merges": 8500,
+      "original_only_anchor_identities": 3,
+      "original_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      }
+    },
+    "fresh_order_historical_scores": {
+      "common_anchors_with_changed_sources": [
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000008064"
+            ],
+            [
+              "ENSPTRP00000030393"
+            ],
+            [
+              "ENSPTRP00000065079"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11258,
+              "source_genes": [
+                "ENSPTRP00000008064"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11259,
+              "source_genes": [
+                "ENSPTRP00000030393"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11260,
+              "source_genes": [
+                "ENSPTRP00000065079"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000033563"
+            ],
+            [
+              "ENSCAFP00000034229"
+            ],
+            [
+              "ENSCAFP00000036545"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.8665193978570627,
+              "source_cluster": 42921,
+              "source_genes": [
+                "ENSP00000477870",
+                "ENSPTRP00000082015"
+              ],
+              "support": 20.484206049858688,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11180,
+              "source_genes": [
+                "ENSCAFP00000033563"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11181,
+              "source_genes": [
+                "ENSCAFP00000034229"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            },
+            {
+              "margin": 3.791539621892218,
+              "source_cluster": 11183,
+              "source_genes": [
+                "ENSCAFP00000036545"
+              ],
+              "support": 20.08697509809174,
+              "target_cluster": 11179
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000019126",
+            "ENSCAFP00000033017",
+            "ENSDARP00000142134",
+            "ENSDARP00000142481",
+            "ENSDARP00000153440",
+            "ENSGALP00000054826",
+            "ENSMODP00000049228",
+            "ENSMUSP00000100030",
+            "ENSP00000347168",
+            "ENSPTRP00000061640",
+            "ENSPTRP00000084113",
+            "ENSPTRP00000084305",
+            "ENSRNOP00000066622",
+            "ENSTNIP00000001155",
+            "ENSTNIP00000004237",
+            "ENSTNIP00000011625",
+            "FBpp0091140",
+            "WBGene00001875.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 7.105427357601002e-15,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSMODP00000048087"
+            ],
+            [
+              "ENSMODP00000054862"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9623,
+              "source_genes": [
+                "ENSMODP00000048087"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9624,
+              "source_genes": [
+                "ENSMODP00000054862"
+              ],
+              "support": 18.17848847858758,
+              "target_cluster": 9556
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000038958"
+            ],
+            [
+              "ENSCAFP00000047241"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9561,
+              "source_genes": [
+                "ENSCAFP00000038958"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9569,
+              "source_genes": [
+                "ENSCAFP00000047241"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9621,
+              "source_genes": [
+                "ENSMODP00000046557"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            },
+            {
+              "margin": 3.6492844123777997,
+              "source_cluster": 9622,
+              "source_genes": [
+                "ENSMODP00000047271"
+              ],
+              "support": 18.17848847858759,
+              "target_cluster": 9556
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000033114",
+            "ENSDARP00000067948",
+            "ENSGALP00000065924",
+            "ENSMODP00000045399",
+            "ENSMODP00000054239",
+            "ENSMUSP00000076397",
+            "ENSMUSP00000135427",
+            "ENSP00000477527",
+            "ENSP00000479284",
+            "ENSPTRP00000051821",
+            "ENSPTRP00000088185",
+            "ENSRNOP00000028779",
+            "ENSRNOP00000042464",
+            "ENSTNIP00000011624",
+            "FBpp0091127",
+            "WBGene00001915.1"
+          ]
+        },
+        {
+          "both_at_attachment_cap": true,
+          "changed_selection_margin_spread": 0.0,
+          "changed_selection_support_spread": 0.0,
+          "iteration": 0,
+          "native_attachments": 4,
+          "native_only_sources": [
+            [
+              "ENSPTRP00000051820"
+            ]
+          ],
+          "native_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.36012953678085,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.986805776335054,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10257,
+              "source_genes": [
+                "ENSPTRP00000051820"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "original_attachments": 4,
+          "original_only_sources": [
+            [
+              "ENSCAFP00000017000"
+            ]
+          ],
+          "original_selected": [
+            {
+              "margin": 2.9868205023408594,
+              "source_cluster": 35402,
+              "source_genes": [
+                "ENSDARP00000137682",
+                "ENSTNIP00000010566"
+              ],
+              "support": 18.360129536780853,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10216,
+              "source_genes": [
+                "ENSMUSP00000088288"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 2.906724128478173,
+              "source_cluster": 10229,
+              "source_genes": [
+                "ENSP00000332194"
+              ],
+              "support": 17.98680577633505,
+              "target_cluster": 10135
+            },
+            {
+              "margin": 1.666360679429355,
+              "source_cluster": 10136,
+              "source_genes": [
+                "ENSCAFP00000017000"
+              ],
+              "support": 17.967451109867447,
+              "target_cluster": 10135
+            }
+          ],
+          "target_genes": [
+            "ENSCAFP00000035973",
+            "ENSCAFP00000062537",
+            "ENSCINP00000011952",
+            "ENSCINP00000020149",
+            "ENSDARP00000090794",
+            "ENSDARP00000142451",
+            "ENSGALP00000027026",
+            "ENSGALP00000042371",
+            "ENSMODP00000010146",
+            "ENSMUSP00000074142",
+            "ENSP00000438553",
+            "ENSPTRP00000062923",
+            "ENSPTRP00000092333",
+            "ENSRNOP00000040177",
+            "ENSRNOP00000049580",
+            "ENSTNIP00000009383",
+            "FBpp0091075",
+            "WBGene00001877.1"
+          ]
+        }
+      ],
+      "common_feature_differences": {
+        "forward_average": {
+          "changed_values": 1838,
+          "maximum_absolute_delta": 1.7763568394002505e-15
+        },
+        "forward_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_maximum": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_normalized_support": {
+          "changed_values": 1813,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "margin": {
+          "changed_values": 1648,
+          "maximum_absolute_delta": 1.1368683772161603e-13
+        },
+        "reverse_average": {
+          "changed_values": 1875,
+          "maximum_absolute_delta": 2.220446049250313e-15
+        },
+        "reverse_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_maximum": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_normalized_support": {
+          "changed_values": 1871,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        },
+        "species_overlap_fraction": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "support": {
+          "changed_values": 1725,
+          "maximum_absolute_delta": 1.4210854715202004e-14
+        }
+      },
+      "common_semantic_merges": 8482,
+      "common_source_cluster_ids_changed": 0,
+      "common_target_cluster_ids_changed": 0,
+      "native_merges": 8500,
+      "native_only_anchor_identities": 3,
+      "native_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      },
+      "original_merges": 8500,
+      "original_only_anchor_identities": 3,
+      "original_only_merges_by_iteration": {
+        "0": 6,
+        "1": 12
+      }
+    },
+    "historical_order_fresh_scores": {
+      "common_anchors_with_changed_sources": [],
+      "common_feature_differences": {
+        "forward_average": {
+          "changed_values": 7,
+          "maximum_absolute_delta": 2.220446049250313e-16
+        },
+        "forward_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "forward_maximum": {
+          "changed_values": 5,
+          "maximum_absolute_delta": 2.220446049250313e-16
+        },
+        "forward_normalized_support": {
+          "changed_values": 7,
+          "maximum_absolute_delta": 3.552713678800501e-15
+        },
+        "margin": {
+          "changed_values": 11,
+          "maximum_absolute_delta": 8.881784197001252e-16
+        },
+        "reverse_average": {
+          "changed_values": 3,
+          "maximum_absolute_delta": 2.220446049250313e-16
+        },
+        "reverse_coverage": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_hits": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "reverse_maximum": {
+          "changed_values": 6,
+          "maximum_absolute_delta": 4.440892098500626e-16
+        },
+        "reverse_normalized_support": {
+          "changed_values": 3,
+          "maximum_absolute_delta": 1.7763568394002505e-15
+        },
+        "species_overlap_fraction": {
+          "changed_values": 0,
+          "maximum_absolute_delta": 0.0
+        },
+        "support": {
+          "changed_values": 5,
+          "maximum_absolute_delta": 3.552713678800501e-15
+        }
+      },
+      "common_semantic_merges": 8500,
+      "common_source_cluster_ids_changed": 0,
+      "common_target_cluster_ids_changed": 0,
+      "native_merges": 8500,
+      "native_only_anchor_identities": 0,
+      "native_only_merges_by_iteration": {},
+      "original_merges": 8500,
+      "original_only_anchor_identities": 0,
+      "original_only_merges_by_iteration": {}
+    }
+  },
+  "accuracy_scored": false,
+  "candidate_scores_recalculated": false,
+  "checked_records": [
+    {
+      "bytes": 15043,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/diagnose_candidate_trace_variation.py",
+      "sha256": "bb8160b4d0a5290f9a80461631623423a8facfc5584304789c56c7fb1d9c0c2e"
+    },
+    {
+      "bytes": 17394,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/link_factorial_scaling_resources.py",
+      "sha256": "909dfa6b30f9f3f0aed219d398a1630682f3482611110843df13440f60783c21"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 8153,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_installed_ob_graph.py",
+      "sha256": "4f5fce7b57ab1177d5606b0d3f081d85c6b1b27bf32aa0cc41de7852ac05c5fb"
+    },
+    {
+      "bytes": 12530,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_candidate_order_scores.py",
+      "sha256": "7fcad94c7abe45cf94c96f02f83fa5fcd83db23c0a4e7acc885de83b5a5e702b"
+    },
+    {
+      "bytes": 12101,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_ob_candidate_order_scores.py",
+      "sha256": "e23aa1e8de1ae368624a1efd036924bb42d1d634092922e7eab782cddbc02ff9"
+    },
+    {
+      "bytes": 6161,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_candidate_factorial.py",
+      "sha256": "77a4600b62397db7b4fea7c39c11c4a01b8a6bea87071065683edb8b64fee9ad"
+    },
+    {
+      "bytes": 9490,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_native_candidate_trace.py",
+      "sha256": "97553322b70034576a61c8fdeddc7c6968d8733a267cd2721baa0c51ec28baf7"
+    },
+    {
+      "bytes": 297987,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_orthobench_score_22429.json",
+      "sha256": "f1ed516cb1d8f48de35e91aec31384a92d63368e729b5662263018d80e998023"
+    },
+    {
+      "bytes": 63452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_prepared_20260916.json",
+      "sha256": "5c325f4d77865e0c7571fe4bb4df0be0959977a49e1d22169f192518700f9382"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 8728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_ob_initial_edges.py",
+      "sha256": "4c5a49d7dde6b274a91edbbc210e42cb61ec2efd8a7dd466693f0ea8612c9b2a"
+    },
+    {
+      "bytes": 952325450,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/hits_BLOSUM62_mc100.pkl",
+      "sha256": "78a5af40ea2683a69e1baefefb0966c3549cffe71b24bda03b9ba4a6e29e65e1"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+    },
+    {
+      "bytes": 1005640,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ec7f34055237e77d4b84150640cb94ae12589bde32339cca9c8b1f726a68e7ff"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "d7aaf35099dbd7949e0fc88e8bfd2e8b7cc5476d79a49bd4f4e25cf80ed993a3"
+    },
+    {
+      "bytes": 147892192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "16411c75e06409c1d44ef7086e4c346536093203872a6894eda3882c81ab8d64"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "eadc33a904b03eb9a4bb3b5a202c461718251f8726b9db0bdafee3e37bed5171"
+    },
+    {
+      "bytes": 803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "6caa0357af543527c23ae2de424d556058a6d505b44834db0c7f72be5f019c33"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "f87b977161d2e157ba32442dae4cbc671791fe621e46b396c188587d230830f7"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "def179f076fcd7813f4b34303b581cc7aeda1f0329012825da5cb6c401ad1eea"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_replay_check_v2/replay/orthogroups_multipass_refined.txt",
+      "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_full_self_control.txt",
+      "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+    },
+    {
+      "bytes": 13764733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_full_self_control_merges.json",
+      "sha256": "d51a3382f746944a9080e7123491da52179d83cd19e7587b2b16f6fa7fb61c32"
+    },
+    {
+      "bytes": 401,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_full_self_control_result.json",
+      "sha256": "9367f37927c09e1b8f7362c22e582dc9b90be352fc597d1c4c0a644114d75448"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_fresh_scores.txt",
+      "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+    },
+    {
+      "bytes": 13764733,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_fresh_scores_merges.json",
+      "sha256": "d51a3382f746944a9080e7123491da52179d83cd19e7587b2b16f6fa7fb61c32"
+    },
+    {
+      "bytes": 403,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_fresh_scores_result.json",
+      "sha256": "4df92b2137ac548dd5c38469de09f56bbe14e21b2247ae2b8659d12a4bfebd77"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_historical_scores.txt",
+      "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+    },
+    {
+      "bytes": 13764742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_historical_scores_merges.json",
+      "sha256": "ae7afb797bf3fe4a6f0bb493552a847cc4b3be7dfb9411dc9bfeeea5228b79bb"
+    },
+    {
+      "bytes": 413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_historical_scores_result.json",
+      "sha256": "dcb5cd3ff6e04847300e9b59e524105dd8de8e1e006fcb9d6e54094143333486"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_fresh_scores.txt",
+      "sha256": "55166ecb959fdd25783039105ffc02884fcbf43c6a93dde45e71060c6c0a952c"
+    },
+    {
+      "bytes": 13764798,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_fresh_scores_merges.json",
+      "sha256": "5bfaa82e81fc136d95200f61a4809dac52c86ed67c37c40fccc1466e48990bc0"
+    },
+    {
+      "bytes": 413,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_fresh_scores_result.json",
+      "sha256": "6d66d2f3138ea6ed6999040f4feafa7ea3302641461a4e482f75a1b90d975d0b"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_historical_scores.txt",
+      "sha256": "55166ecb959fdd25783039105ffc02884fcbf43c6a93dde45e71060c6c0a952c"
+    },
+    {
+      "bytes": 13764802,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_historical_scores_merges.json",
+      "sha256": "aad7875945e057777fb358601670c08f524a6cc9ca16d774fc3f6238e1b165fa"
+    },
+    {
+      "bytes": 423,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_historical_scores_result.json",
+      "sha256": "64867a41a24ebb25d5a8381de63a79acc63081b8cd7c8d55d0ae2b53fec4fccd"
+    },
+    {
+      "bytes": 10217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/plan.json",
+      "sha256": "73edbaee2c1602880ccc0bf5a7ac7d45dcdef007919ee71b819b497324ef3144"
+    },
+    {
+      "bytes": 30426,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/report.json",
+      "sha256": "d52ea8286ad92ca246b1860abcf87b4755a0d5feda613fd483aa19c2f54e563b"
+    },
+    {
+      "bytes": 1812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/started.json",
+      "sha256": "a99eaa3ae6b3619b3b80e0c8339d0338b05b27cbafe6b7b7b212fb226271fb5f"
+    },
+    {
+      "bytes": 61183,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/refinement.py",
+      "sha256": "991f1eb6a5f73d0442529ed19095a34b7c6ba8bff8dfe43a1127e24ec73fb26d"
+    }
+  ],
+  "comparisons": {
+    "fresh_order_fresh_scores__vs__fresh_full_self_control": {
+      "genes": 251378,
+      "genes_in_changed_groups": 0,
+      "groups": 54745,
+      "original_only_groups": [],
+      "partition_equal": true,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": []
+    },
+    "fresh_order_historical_scores__vs__fresh_full_self_control": {
+      "genes": 251378,
+      "genes_in_changed_groups": 0,
+      "groups": 54745,
+      "original_only_groups": [],
+      "partition_equal": true,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": []
+    },
+    "fresh_order_historical_scores__vs__fresh_order_fresh_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 0,
+      "groups": 54745,
+      "original_only_groups": [],
+      "partition_equal": true,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": []
+    },
+    "historical_order_fresh_scores__vs__fresh_full_self_control": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_fresh_scores__vs__fresh_order_fresh_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_fresh_scores__vs__fresh_order_historical_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_historical_scores__vs__fresh_full_self_control": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_historical_scores__vs__fresh_order_fresh_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_historical_scores__vs__fresh_order_historical_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 58,
+      "groups": 54745,
+      "original_only_groups": [
+        [
+          "ENSCAFP00000017000",
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSCAFP00000037435",
+          "ENSCAFP00000038752",
+          "ENSCAFP00000040694",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSPTRP00000008064"
+        ],
+        [
+          "ENSPTRP00000030393"
+        ],
+        [
+          "ENSPTRP00000051820"
+        ],
+        [
+          "ENSPTRP00000065079"
+        ]
+      ],
+      "partition_equal": false,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": [
+        [
+          "ENSCAFP00000017000"
+        ],
+        [
+          "ENSCAFP00000019126",
+          "ENSCAFP00000033017",
+          "ENSCAFP00000033563",
+          "ENSCAFP00000034229",
+          "ENSCAFP00000036545",
+          "ENSCAFP00000037324",
+          "ENSDARP00000142134",
+          "ENSDARP00000142481",
+          "ENSDARP00000153440",
+          "ENSGALP00000054826",
+          "ENSMODP00000049228",
+          "ENSMUSP00000100030",
+          "ENSP00000347168",
+          "ENSP00000477870",
+          "ENSPTRP00000008064",
+          "ENSPTRP00000030393",
+          "ENSPTRP00000061640",
+          "ENSPTRP00000065079",
+          "ENSPTRP00000082015",
+          "ENSPTRP00000084113",
+          "ENSPTRP00000084305",
+          "ENSRNOP00000066622",
+          "ENSTNIP00000001155",
+          "ENSTNIP00000004237",
+          "ENSTNIP00000011625",
+          "FBpp0091140",
+          "WBGene00001875.1"
+        ],
+        [
+          "ENSCAFP00000035973",
+          "ENSCAFP00000062537",
+          "ENSCINP00000011952",
+          "ENSCINP00000020149",
+          "ENSDARP00000090794",
+          "ENSDARP00000137682",
+          "ENSDARP00000142451",
+          "ENSGALP00000027026",
+          "ENSGALP00000042371",
+          "ENSGALP00000044632",
+          "ENSGALP00000050888",
+          "ENSGALP00000056288",
+          "ENSGALP00000066955",
+          "ENSMODP00000010146",
+          "ENSMUSP00000074142",
+          "ENSMUSP00000088288",
+          "ENSP00000332194",
+          "ENSP00000438553",
+          "ENSPTRP00000051820",
+          "ENSPTRP00000062923",
+          "ENSPTRP00000092333",
+          "ENSRNOP00000040177",
+          "ENSRNOP00000049580",
+          "ENSTNIP00000009383",
+          "ENSTNIP00000010566",
+          "FBpp0091075",
+          "WBGene00001877.1"
+        ],
+        [
+          "ENSCAFP00000037435"
+        ],
+        [
+          "ENSCAFP00000038752"
+        ],
+        [
+          "ENSCAFP00000040694"
+        ]
+      ]
+    },
+    "historical_order_historical_scores__vs__historical_order_fresh_scores": {
+      "genes": 251378,
+      "genes_in_changed_groups": 0,
+      "groups": 54745,
+      "original_only_groups": [],
+      "partition_equal": true,
+      "reference_genes_in_changed_groups": [],
+      "reference_touching_groups_equal": true,
+      "scaling_only_groups": []
+    }
+  },
+  "controls": {
+    "fresh_full": true,
+    "historical": true
+  },
+  "limitations": [
+    "Complete partition/accepted-union consistency is checked; rejected candidates and score computation are not independently replayed.",
+    "This readback pins retained merge traces now; their digests were not saved in the runner's per-arm rows.",
+    "Fixed-seed interventions support boundary-specific effects, not universal determinism, full upstream historical causality or biological accuracy gains.",
+    "No native inference restart, timing correction, job release or full runtime closure claim."
+  ],
+  "plan": {
+    "bytes": 10217,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/plan.json",
+    "sha256": "73edbaee2c1602880ccc0bf5a7ac7d45dcdef007919ee71b819b497324ef3144"
+  },
+  "report": {
+    "bytes": 30426,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/report.json",
+    "sha256": "d52ea8286ad92ca246b1860abcf87b4755a0d5feda613fd483aa19c2f54e563b"
+  },
+  "rows": [
+    {
+      "accepted_merges": 8500,
+      "genes": 251378,
+      "groups": 54745,
+      "label": "historical_order_historical_scores",
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_historical_scores.txt",
+        "sha256": "55166ecb959fdd25783039105ffc02884fcbf43c6a93dde45e71060c6c0a952c"
+      },
+      "trace": {
+        "bytes": 13764802,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_historical_scores_merges.json",
+        "sha256": "aad7875945e057777fb358601670c08f524a6cc9ca16d774fc3f6238e1b165fa"
+      },
+      "whole_partition_reconstructed": true
+    },
+    {
+      "accepted_merges": 8500,
+      "genes": 251378,
+      "groups": 54745,
+      "label": "historical_order_fresh_scores",
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_fresh_scores.txt",
+        "sha256": "55166ecb959fdd25783039105ffc02884fcbf43c6a93dde45e71060c6c0a952c"
+      },
+      "trace": {
+        "bytes": 13764798,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/historical_order_fresh_scores_merges.json",
+        "sha256": "5bfaa82e81fc136d95200f61a4809dac52c86ed67c37c40fccc1466e48990bc0"
+      },
+      "whole_partition_reconstructed": true
+    },
+    {
+      "accepted_merges": 8500,
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_order_historical_scores",
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_historical_scores.txt",
+        "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+      },
+      "trace": {
+        "bytes": 13764742,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_historical_scores_merges.json",
+        "sha256": "ae7afb797bf3fe4a6f0bb493552a847cc4b3be7dfb9411dc9bfeeea5228b79bb"
+      },
+      "whole_partition_reconstructed": true
+    },
+    {
+      "accepted_merges": 8500,
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_order_fresh_scores",
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_fresh_scores.txt",
+        "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+      },
+      "trace": {
+        "bytes": 13764733,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_order_fresh_scores_merges.json",
+        "sha256": "d51a3382f746944a9080e7123491da52179d83cd19e7587b2b16f6fa7fb61c32"
+      },
+      "whole_partition_reconstructed": true
+    },
+    {
+      "accepted_merges": 8500,
+      "genes": 251378,
+      "groups": 54745,
+      "label": "fresh_full_self_control",
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_full_self_control.txt",
+        "sha256": "63c49799d8b3a8357af6835f3c4c79c6fc3a43de00f474d64added81fc862c50"
+      },
+      "trace": {
+        "bytes": 13764733,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/fresh_full_self_control_merges.json",
+        "sha256": "d51a3382f746944a9080e7123491da52179d83cd19e7587b2b16f6fa7fb61c32"
+      },
+      "whole_partition_reconstructed": true
+    }
+  ],
+  "schema": "native_candidate_factorial_readback_v1"
+}

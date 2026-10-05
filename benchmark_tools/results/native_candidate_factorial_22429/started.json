@@ -1,0 +1,40 @@
+{
+  "affinity": [
+    32
+  ],
+  "argv": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "benchmark_tools/probe_native_candidate_order_scores.py",
+    "--run",
+    "benchmarks/work/native_candidate_order_scores_22429/plan.json",
+    "--plan-sha256",
+    "73edbaee2c1602880ccc0bf5a7ac7d45dcdef007919ee71b819b497324ef3144"
+  ],
+  "pid": 1675877,
+  "plan": {
+    "bytes": 10217,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_candidate_order_scores_22429/plan.json",
+    "sha256": "73edbaee2c1602880ccc0bf5a7ac7d45dcdef007919ee71b819b497324ef3144"
+  },
+  "runtime": {
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "numpy": "2.2.6",
+    "numpy_extension": {
+      "bytes": 10449209,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/lib/python3.10/site-packages/numpy/_core/_multiarray_umath.cpython-310-x86_64-linux-gnu.so",
+      "sha256": "c634eaf05367af02b815cf3d2020fbeee9b47426af1fe26cf3189e4798932dc5"
+    },
+    "numpy_init": {
+      "bytes": 22147,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/lib/python3.10/site-packages/numpy/__init__.py",
+      "sha256": "6ae17b070c0f70a8e3cad89a510a256942e5a1f37ea5feb120cec167ed2a6236"
+    },
+    "python": "3.10.13",
+    "python_binary": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    }
+  }
+}
