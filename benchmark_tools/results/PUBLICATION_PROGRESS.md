@@ -1,5 +1,37 @@
 # Publication Progress
 
+## First Remaining Full-Native QfO Identity Released (2026-10-05)
+
+Previous goal turn makes concrete progress at pushed148641cb: retain actual
+22433/22434 completion, independent readbacks and six-result table. Re-read
+full goal and newest ledger, verify both jobsCOMPLETED0:0 and no competing
+own native identity queued. Submit [new index6P0C0R0 as held22435](NATIVE_FACTORIAL_SHARED_ATTEMPT_22435.md).
+This is corrected QfO with78 proteomes/984,137 genes; initial sensitive HMM
+search stays on, downstream profiles/candidates/reconciliation are off.
+
+Unchanged request helper verifies complete original review prefix0..5 and
+separate22433 score. Request41,936bytes/SHA3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a,
+sourcecommit148641cb. Bind checksum in held controller Comment; independent
+owner/exact-envelope/full-prefix/score/absent-output/session/helper920 check
+passes with815,346,257,920bytes available RAM. Actually release22435 once;
+retain both historical held check and actual command/post-release observation.
+
+Fresh accounting confirms original nativeRUNNING; actualPID4059977 passes
+exact argv, affinity0..31/32 distinct physical cores, matching cgroup and
+128-GiB ancestor cap. Launch available RAM816,027,545,600bytes, all920 helpers
+unchanged. Published request copy compares byte-identically. This is startup
+evidence, not final resources, admitted QfO accuracy or continuous integrity.
+No code/default/scientific helper change, inference retry or unrelated-job
+modification. Shared-host distortion stays unknown and potentially tool-dependent.
+
+Six of13 identities reviewed, one live, six unsubmitted. Observe original
+22435 next. After whole termination use matched3.10 terminal review and
+QfO's separate two-CPU conversion/eight-CPU assessment/admission workflow;
+do not substitute OrthoBench scoring or cached metrics. No followup is queued
+in this milestone. Successor native launch follows successful full-native
+review and fresh gates, not completion of separately scoped QfO scoring.
+Preserve all broader goal requirements; completion remains unproven.
+
 ## Full-Native P1C1R0 Reviewed And Scored (2026-10-05)
 
 Previous goal turn is a verified wait on original22434, following whole

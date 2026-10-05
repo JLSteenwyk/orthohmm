@@ -1,0 +1,63 @@
+{
+  "helper": {
+    "bytes": 6452,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+    "sha256": "2c790a60290bfd07564edebc4ed3efa4e11cfb2f8e326c4de66d873cbe1c3a59"
+  },
+  "index": 6,
+  "invocation": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+      "--job",
+      "22435",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+      "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+      "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+      "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+      "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f",
+      "--prior-score",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22433/score.json",
+      "d47a591b84d029d3e9fe4a8702a6cefde7bbfbee0a5038ac17e6369e1e2fcecc",
+      "--output",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"bytes\": 41936, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json\", \"sha256\": \"3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a\"}\n"
+  },
+  "job_id": 22435,
+  "observed_unix_ns": 1791178227132046074,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nfrom benchmark_tools.probe_dgx_step_separation import save\nR=Path.cwd(); prior=json.loads((R/\"benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json\").read_text()); f=json.loads((R/\"benchmarks/work/native_factorial_terminal_review_22433/followup.json\").read_text())\nhistory=[*prior[\"history\"],f[\"terminal_review\"]]; assert len(history)==6\nrequest=R/\"benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json\"\nargv=[sys.executable,\"-B\",str(R/\"benchmark_tools/prepare_native_factorial_request.py\"),\"--job\",\"22435\"]\nfor r in history:argv.extend([\"--history\",r[\"path\"],r[\"sha256\"]])\nargv.extend([\"--prior-score\",f[\"score\"][\"path\"],f[\"score\"][\"sha256\"],\"--output\",str(request)])\na=subprocess.run(argv,capture_output=True,text=True,check=True)\nout=R/\"benchmark_tools/results/native_factorial_preparation_22435.json\"\nsave(out,dict(schema=\"native_factorial_request_preparation_observation_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),observed_unix_ns=time.time_ns(),job_id=22435,index=6,helper=record(R/\"benchmark_tools/prepare_native_factorial_request.py\"),invocation=dict(command=argv,stdout=a.stdout,stderr=a.stderr,returncode=a.returncode),request=record(request),released=False))\nprint(json.dumps(dict(receipt=record(out),request=record(request))))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "released": false,
+  "request": {
+    "bytes": 41936,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+    "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+  },
+  "schema": "native_factorial_request_preparation_observation_v1"
+}

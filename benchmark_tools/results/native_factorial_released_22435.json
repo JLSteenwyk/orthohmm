@@ -1,0 +1,50 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "index": 6,
+  "job_id": 22435,
+  "observed_unix_ns": 1791178282643106621,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.prepare_native_factorial_request import held_job\nfrom benchmark_tools.run_native_factorial_cost import MEMORY,available_memory,ROOT\nfrom benchmark_tools.probe_dgx_step_separation import save\npre=record(ROOT/\"benchmark_tools/results/native_factorial_pre_release_22435.json\");assert pre[\"sha256\"]==\"614823ac2f6204edc8353a4893030a14c19f799064694376ce2f084456f82beb\"\nd=json.loads(Path(pre[\"path\"]).read_text());check(d[\"request\"])\na=subprocess.run([\"scontrol\",\"show\",\"job\",\"22435\",\"--oneliner\"],capture_output=True,text=True,check=True,timeout=5);fields=held_job(a.stdout,22435);assert fields[\"Comment\"]==d[\"request\"][\"sha256\"]\nassert available_memory(Path(\"/proc/meminfo\").read_text())>=MEMORY\ncmd=[\"scontrol\",\"release\",\"22435\"]; released=subprocess.run(cmd,capture_output=True,text=True,check=True,timeout=5)\npost=subprocess.run([\"scontrol\",\"show\",\"job\",\"22435\",\"--oneliner\"],capture_output=True,text=True,check=True,timeout=5)\nout=ROOT/\"benchmark_tools/results/native_factorial_released_22435.json\"\nsave(out,dict(schema=\"native_factorial_actual_release_observation_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),observed_unix_ns=time.time_ns(),job_id=22435,index=6,pre_release=pre,request=d[\"request\"],release=dict(command=cmd,returncode=released.returncode,stdout=released.stdout,stderr=released.stderr),post_release_scheduler=dict(command=post.args,stdout=post.stdout,stderr=post.stderr),automatic_retry=False,accuracy_evaluated=False))\nprint(json.dumps(dict(receipt=record(out),post_release=post.stdout)))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "post_release_scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22435",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22435 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-05T01:30:02 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T01:30:02 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4058606 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index06_22435.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index06_22435.out TresPerTask=cpu=64 \n"
+  },
+  "pre_release": {
+    "bytes": 22194,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_pre_release_22435.json",
+    "sha256": "614823ac2f6204edc8353a4893030a14c19f799064694376ce2f084456f82beb"
+  },
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "22435"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "request": {
+    "bytes": 41936,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+    "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+  },
+  "schema": "native_factorial_actual_release_observation_v1"
+}
