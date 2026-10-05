@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Full-Native QfO Conversion Adapter Tested (2026-10-04)
+
+Previous turn made progress at ac1501d5: separate frozen-statistic native
+OrthoBench scoring is ready; no incomplete job is scored. Read full goal and
+fresh squeue/sacct confirm22428 and its native step still RUNNING. Preserve
+that same attempt and all920bound sources; no restart/index2 release.
+
+Inspect actual older QfO converters: their cached-candidate admission/executor
+gates cannot accept the new full-native requests. Add a separate
+[QfO adapter/protocol](../NATIVE_QFO_CONVERSION_20261004.md) with a distinct
+schema/participant namespace. Reuse audited group/native pair routines;
+require completed terminal reviews/current scheduler/source/input/output
+bindings and full gene-ownership/reference-mapping checks. R-off uses final
+cluster cliques, R-on resolved native pairs, never root-HOG clique substitution.
+Reject normalization collisions, mapping losses and changed pair counts;
+retain conversion failures/empty predictions. Report protein relation coverage
+separately from pair volume. No inference, scoring or next-job release here.
+
+[Actual dependency audit](native_qfo_conversion_dependency_audit_20261004.json)
+checks all7forthcoming QfO identities,78input hashes, frozen scoring-env/mapping
+pins and all920live sources unchanged. It establishes dependency identities,
+not fresh scorer closure or a completed QfO output/score. Final735tests pass,
+zero failures/errors/skips,11.20s;55new tests include actual audited converter
+invocations on synthetic inputs and both joined conversion paths. Retain
+initial1failure/44pass report: a test output collided with its native source;
+use a distinct fixture path, without weakening no-overwrite production rules.
+
+Latest actual22428 RUNNING29:53, native HMM search73.61%. It still has no
+terminal score/resources. Next observe same job, terminal-review it under
+matchingPython3.10, then apply native OrthoBench scoring if successful.
+Future QfO assessment needs a new-schema native endpoint/admission handoff,
+including scorer/reference runtime and FAS population scope; do not bypass
+old cached gates. Broader independent validation/uncertainty/robustness/
+biology/archive/publication obligations remain active and unmet. Contention
+remains accepted/recorded with unknown tool-dependent timing effects.
+
 ## Separate Native OrthoBench Scoring Workflow Ready (2026-10-04)
 
 Previous turn made progress: pushed e17e9bb5, retained native0 scientific
