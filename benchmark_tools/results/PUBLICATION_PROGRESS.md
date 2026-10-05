@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Separate Native OrthoBench Scoring Workflow Ready (2026-10-04)
+
+Previous turn made progress: pushed e17e9bb5, retained native0 scientific
+recovery/failure, tested/froze prospective receipt/history amendment and
+actually launched index1. Read full goal and fresh squeue/sacct:22428 and
+native step remain RUNNING, not terminal. No restart or index2 launch.
+
+Add [separate scoring workflow](../NATIVE_ORTHOBENCH_SCORING_20261004.md),
+without changing any920 source pins bound to live22428. Admit only successful
+terminal-reviewed requests with runtime/resources/environment/native outputs
+and fresh scheduler check. Score all70 frozen RefOGs using audited weighted
+formula/low-certainty exclusions; correctly select root HOGs for R-on and
+clusters for R-off, reproduce original cached statistic and compare whole
+partitions. Retain development exposure/output semantics/shared-time limits.
+QfO's native endpoint pipeline is not replaced by a RefOG score.
+
+Actual production-bound attempt to score live22428 is refused; no score or
+destination created. [Live refusal evidence](native_orthobench_live_refusal_22428.json)
+includes fresh RUNNING query. Recheck all920 live helper pins unchanged.
+Final616 tests pass, zero failures/errors/skips,10.25s;44 new scoring tests
+include all8 factor formats, synthetic joined workflow and refusal/tampering.
+Retain intermediate2failure/42pass JUnit: joined fixture omitted its input
+list; complete that synthetic fixture, leaving production gates intact.
+
+Latest actual squeue22428 RUNNING14:23; native HMM search36.11%. No terminal
+score/cost or full factorial completion claim. Leave this same job and its
+bound sources alone; next poll it, perform matching-Python3.10 full terminal
+review, then new scoring route if successful. All other independent
+validation, uncertainty, robustness, biology/archive publication obligations
+remain in scope. Goal active; no unrelated job/service/default change.
+
 ## Index1 Actually Running Under Receipt Amendment (2026-10-04)
 
 Prepare and push amended plan347105b5, then submit held22428 for the next

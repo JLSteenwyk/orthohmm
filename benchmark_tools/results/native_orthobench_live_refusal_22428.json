@@ -1,0 +1,37 @@
+{
+  "index": 1,
+  "inference_reexecuted": false,
+  "job_id": 22428,
+  "live_start_observation": {
+    "bytes": 16086,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_native_start_22428.json",
+    "sha256": "2457f85b07ad1230d240016558c556a6c0d87cd7f02b4cafc94e481def34c697"
+  },
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791160294663318451,
+  "refusal": "Require the bound successful terminal/runtime/resource/environment/output review",
+  "request": {
+    "bytes": 31582,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_01_receipt_amended.json",
+    "sha256": "ba72ed12e822465140257b0fe15acc56dbe12fd8ef8a398abae075afe00df02d"
+  },
+  "scheduler_observation": {
+    "command": [
+      "squeue",
+      "-j",
+      "22428",
+      "--noheader",
+      "-o",
+      "%i|%T|%M"
+    ],
+    "stderr": "",
+    "stdout": "22428|RUNNING|13:25\n"
+  },
+  "score_written": false,
+  "source": {
+    "bytes": 10799,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_native_orthobench_attempt.py",
+    "sha256": "ad97cc7ea0a6f06052fe3e6d7fbdccde03b8b0421513eef499e1dfe270a563b1"
+  },
+  "status": "actual_live_attempt_refused_from_scoring"
+}
