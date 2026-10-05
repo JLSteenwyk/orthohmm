@@ -1,0 +1,124 @@
+{
+  "changed_gene_union": [
+    "ENSCAFP00000036635",
+    "ENSCAFP00000038958",
+    "ENSCAFP00000040000",
+    "ENSCAFP00000041760",
+    "ENSCAFP00000047241",
+    "ENSCAFP00000054547",
+    "ENSDARP00000067948",
+    "ENSDARP00000084277",
+    "ENSDARP00000099321",
+    "ENSDARP00000107737",
+    "ENSDARP00000112824",
+    "ENSDARP00000127819",
+    "ENSDARP00000142122",
+    "ENSGALP00000042290",
+    "ENSGALP00000065924",
+    "ENSMODP00000038126",
+    "ENSMODP00000045399",
+    "ENSMODP00000046361",
+    "ENSMODP00000046557",
+    "ENSMODP00000047271",
+    "ENSMODP00000047435",
+    "ENSMODP00000048087",
+    "ENSMODP00000052599",
+    "ENSMODP00000054239",
+    "ENSMODP00000054862",
+    "ENSMUSP00000018246",
+    "ENSMUSP00000076397",
+    "ENSMUSP00000089346",
+    "ENSMUSP00000151536",
+    "ENSP00000333277",
+    "ENSP00000339835",
+    "ENSP00000355657",
+    "ENSP00000358151",
+    "ENSP00000477527",
+    "ENSP00000479284",
+    "ENSP00000494070",
+    "ENSP00000496014",
+    "ENSP00000497053",
+    "ENSP00000499501",
+    "ENSPTRP00000002098",
+    "ENSPTRP00000048353",
+    "ENSPTRP00000051821",
+    "ENSPTRP00000088185",
+    "ENSRNOP00000028779",
+    "ENSRNOP00000042464",
+    "ENSRNOP00000048020",
+    "ENSRNOP00000060626",
+    "ENSRNOP00000071260",
+    "ENSRNOP00000071520",
+    "ENSRNOP00000071603",
+    "ENSRNOP00000073598",
+    "ENSTNIP00000000561",
+    "ENSTNIP00000001815",
+    "ENSTNIP00000011624",
+    "FBpp0091053",
+    "FBpp0091127",
+    "WBGene00001915.1",
+    "WBGene00001944.1",
+    "WBGene00012276.1",
+    "WBGene00017638.1"
+  ],
+  "family_records": 70,
+  "followup": {
+    "bytes": 1361,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/followup.json",
+    "sha256": "ac98fd6b5daa123a7df49ec622ee9eb6d6144d1868deaa4f58cb8c03b4f753e3"
+  },
+  "inference_reexecuted": false,
+  "limitations": [
+    "Replays existing family counts, not new prediction scoring or transitive inference validation.",
+    "Checks changed-group witness unions against frozen reference genes; no cause of partition differences is inferred.",
+    "The initial observer-only denominator assumption was corrected to the frozen genes-minus-one statistic; no scorer or output was changed."
+  ],
+  "new_scoring_or_admission": false,
+  "observed_unix_ns": 1791178028956785548,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport hashlib,json,math,sys,time\nfrom fractions import Fraction\nfrom pathlib import Path\nR=Path.cwd()\ndef rec(p):\n p=Path(p).absolute()\n assert p.is_file() and not p.is_symlink(),p\n with p.open(\"rb\") as f:h=hashlib.file_digest(f,\"sha256\").hexdigest()\n return dict(path=str(p),bytes=p.stat().st_size,sha256=h)\ndef read(r):\n assert rec(r[\"path\"])==r\n return json.loads(Path(r[\"path\"]).read_text())\nfref=rec(R/\"benchmarks/work/native_factorial_terminal_review_22433/followup.json\"); f=read(fref)\nassert f[\"status\"]==\"terminal_reviewed_and_scored\" and f[\"parent_native_job_id\"]==22433 and f[\"review_score_scheduler_job_id\"]==\"22434\"\ns=read(f[\"score\"]); v=read(f[\"terminal_review\"])\nassert s[\"terminal_review\"]==f[\"terminal_review\"] and s[\"resource_observation\"]==v[\"resources\"]\nrows=s[\"score_percent\"][\"refog_records\"]\nassert len(rows)==70 and sorted(x[\"refog\"] for x in rows)==[f\"RefOG{i:03d}.txt\" for i in range(1,71)]\na={k:sum((Fraction(str(x[k]))/(x[\"genes\"]-1) for x in rows),Fraction()) for k in (\"true_positive\",\"false_positive\",\"false_negative\")}\ntp,fp,fn=(a[k] for k in (\"true_positive\",\"false_positive\",\"false_negative\"))\nratios=dict(f_score=2*tp/(2*tp+fp+fn),precision=tp/(tp+fp),recall=tp/(tp+fn))\nassert all(math.isclose(float(x),s[\"score_fraction\"][k],rel_tol=0,abs_tol=1e-12) for k,x in ratios.items())\nassert all(math.isclose(float(x),s[\"score_percent\"][\"weighted_\"+k],rel_tol=0,abs_tol=1e-10) for k,x in a.items())\nassert s[\"difference_from_original_percentage_points\"]==dict(f_score=0.,precision=0.,recall=0.)\nc=s[\"canonical_partition_comparison\"]\nold={g for group in c[\"original_only_groups\"] for g in group}; new={g for group in c[\"native_only_groups\"] for g in group}\nassert old==new and len(old)==c[\"genes_in_changed_groups\"]==60 and c[\"reference_touching_groups_equal\"] and not c[\"reference_genes_in_changed_groups\"] and not c[\"partition_equal\"]\nm=read(s[\"reference_manifest\"]); refgenes=set()\nfor r in m[\"references\"]:\n assert rec(r[\"path\"])==r\n p=Path(r[\"path\"])\n if p.parent.name!=\"low_certainty_assignments\":refgenes.update(p.read_text().split())\nassert len(refgenes)==1944 and not refgenes&old\nout=R/\"benchmark_tools/results/native_factorial_score_readback_22433.json\"\nresult=dict(schema=\"native_orthobench_inline_score_readback_v1\",observer_command=sys.orig_argv,observer_interpreter=rec(Path(sys.executable).resolve()),observed_unix_ns=time.time_ns(),followup=fref,score=f[\"score\"],review=f[\"terminal_review\"],reference_manifest=s[\"reference_manifest\"],reference_files_checked=len(m[\"references\"]),reference_genes=len(refgenes),family_records=70,weighted_totals_exact={k:str(x) for k,x in a.items()},score_fraction_replayed={k:float(x) for k,x in ratios.items()},original_metric_deltas=s[\"difference_from_original_percentage_points\"],changed_gene_union=sorted(old),reference_genes_in_changed_union=[],status=\"passed\",inference_reexecuted=False,new_scoring_or_admission=False,limitations=[\"Replays existing family counts, not new prediction scoring or transitive inference validation.\",\"Checks changed-group witness unions against frozen reference genes; no cause of partition differences is inferred.\",\"The initial observer-only denominator assumption was corrected to the frozen genes-minus-one statistic; no scorer or output was changed.\"])\nwith out.open(\"x\") as g:json.dump(result,g,indent=2,sort_keys=True);g.write(\"\\n\")\nprint(json.dumps(dict(receipt=rec(out),score=result[\"score_fraction_replayed\"],changed_genes=60,reference_files=result[\"reference_files_checked\"])))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 8019136,
+    "path": "/usr/bin/python3.12",
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "original_metric_deltas": {
+    "f_score": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "reference_files_checked": 81,
+  "reference_genes": 1944,
+  "reference_genes_in_changed_union": [],
+  "reference_manifest": {
+    "bytes": 199307,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/orthobench_factorial_results_20260916.json",
+    "sha256": "6a0d588b5cb47c60fc6bc8bae8aa0c83e5f2aadb11de970919d8c6527c387141"
+  },
+  "review": {
+    "bytes": 991416,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+    "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+  },
+  "schema": "native_orthobench_inline_score_readback_v1",
+  "score": {
+    "bytes": 298025,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22433/score.json",
+    "sha256": "d47a591b84d029d3e9fe4a8702a6cefde7bbfbee0a5038ac17e6369e1e2fcecc"
+  },
+  "score_fraction_replayed": {
+    "f_score": 0.6720742366398121,
+    "precision": 0.6470013294023279,
+    "recall": 0.6991687613333735
+  },
+  "status": "passed",
+  "weighted_totals_exact": {
+    "false_negative": "9423643416227595029/33061053914648760",
+    "false_positive": "15382613429818453099/42559938808036650",
+    "true_positive": "21901705167902105071/33061053914648760"
+  }
+}

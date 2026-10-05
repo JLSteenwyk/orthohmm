@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Full-Native P1C1R0 Reviewed And Scored (2026-10-05)
+
+Previous goal turn is a verified wait on original22434, following whole
+native22433 completion. Re-read full goal and inspect authoritative scheduler:
+both original jobs nowCOMPLETED0:0. No duplicate review or native restart.
+Retain the [new result](NATIVE_FACTORIAL_RESULT_22433.md), byte-identical
+terminal review, separate score and completed followup without overwriting
+earlier snapshots. Native job46:02/step43:09; dependent followup4:32.
+
+P1C1R0 F1.672074236639812, precision.6470013294023279,
+recall.6991687613333736,70 RefOGs/all1,944 reference genes. Aggregate cached
+score differences zero; whole partition differs across60 non-reference genes,
+five old/five new groups,54,445 groups/all251,378 genes. Reference-touching
+groups identical. No accuracy improvement, independent confirmation or causal
+attribution follows. Existing P0C1R0 intervention does not establish this
+different cell's mechanism.
+
+Native wall2578.528469847s, CPU73225.28424s, lifetime peak11,349,929,984bytes
+(10.570446014404297GiB); scopes retain wrapper/launcher inclusions.
+Maximum observed foreign average demand42.067551141030144 cores. Shared-host
+distortion is unknown and potentially tool-dependent, not corrected or slight.
+
+Unchanged exporter generates new six-result/all13-identity table; earlier
+five rows unchanged and seven missing endpoints remain null. Independent
+readback verifies six joins/all JSON and TSV rows/15 direct source-report
+pins/all920 unchanged helpers/three published copies. Separate rational
+family-count readback reproduces metrics, checks81 frozen reference files
+and both60-gene witness unions against1,944 references. Observer-only
+adaptation/weighting checks initially fail, then corrected readbacks pass;
+no native/scorer/helper changes or reruns. No new tests of unchanged code
+are claimed. These are new-input bindings, not another raw replay.
+
+All six planned OrthoBench native identities now reviewed; failed22427
+remains failed with recovered science, not a clean timing success. Next is
+index6QfO P0C0R0 with full-prefix, preceding score, held identity, safe capacity
+and fresh launch gates. No successor is released in this milestone. Native
+QfO conversion/assessment and all remaining full-goal requirements persist;
+publication readiness remains unproven.
+
 ## New Native Profile Contrast Bound And Reported (2026-10-05)
 
 Previous turn makes actual progress at pushed0752068d: retain the reviewed/

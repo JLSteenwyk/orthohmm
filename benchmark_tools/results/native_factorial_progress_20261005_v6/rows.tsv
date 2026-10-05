@@ -1,0 +1,14 @@
+index	dataset	cell	job_id	outcome	f1	precision	recall	reference_gene_coverage	partition_equal	wall_seconds	cpu_seconds	peak_memory_bytes	maximum_foreign_average_cores
+0	orthobench	p0_c0_r0	22427	failed_wrapper_science_recovered	0.6976338784350485	0.7886859183093687	0.6254294371851902		True	2289.764741234	67271.677476	4954263552	41.88460354100697
+1	orthobench	p0_c0_r1	22428	native_success	0.7270499607171313	0.8749484204713542	0.6219222319893305	1.0	True	3254.922748587	93796.695195	4971315200	42.46343088185875
+2	orthobench	p0_c1_r0	22429	native_success	0.6663945723718282	0.6448826482997777	0.6893912080586404	1.0	False	2306.635375674	67315.217871	4969009152	41.761246599019756
+3	orthobench	p0_c1_r1	22430	native_success	0.7340228812727554	0.8148616894173408	0.6677758098080644	1.0	False	3522.029233711	102817.764963	5072842752	42.50704465302236
+4	orthobench	p1_c0_r1	22431	native_success	0.7331136410139777	0.874585846260878	0.6310375801659546	1.0	True	3460.657033564	97852.112871	11368222720	42.58017971710081
+5	orthobench	p1_c1_r0	22433	native_success	0.672074236639812	0.6470013294023279	0.6991687613333736	1.0	False	2578.528469847	73225.28424	11349929984	42.067551141030144
+6	qfo_corrected	p0_c0_r0		no_supplied_terminal_review									
+7	qfo_corrected	p0_c0_r1		no_supplied_terminal_review									
+8	qfo_corrected	p0_c1_r0		no_supplied_terminal_review									
+9	qfo_corrected	p0_c1_r1		no_supplied_terminal_review									
+10	qfo_corrected	p1_c0_r1		no_supplied_terminal_review									
+11	qfo_corrected	p1_c1_r0		no_supplied_terminal_review									
+12	qfo_corrected	p1_c1_r1		no_supplied_terminal_review									

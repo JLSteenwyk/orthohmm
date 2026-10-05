@@ -1,0 +1,30 @@
+{
+  "automatic_retry": false,
+  "inference_reexecuted": false,
+  "next_identity_released": false,
+  "parent_native_job_id": 22433,
+  "publication_ready": false,
+  "request": {
+    "bytes": 39861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json",
+    "sha256": "5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7"
+  },
+  "review_score_scheduler_job_id": "22434",
+  "schema": "native_orthobench_terminal_followup_v1",
+  "score": {
+    "bytes": 298025,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22433/score.json",
+    "sha256": "d47a591b84d029d3e9fe4a8702a6cefde7bbfbee0a5038ac17e6369e1e2fcecc"
+  },
+  "source": {
+    "bytes": 3402,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/finish_native_orthobench_attempt.py",
+    "sha256": "7a5962eea9d775b9143e700e8afaf7952c6f88ff76e9f96030ff900c6a790303"
+  },
+  "status": "terminal_reviewed_and_scored",
+  "terminal_review": {
+    "bytes": 991416,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+    "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+  }
+}
