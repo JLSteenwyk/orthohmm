@@ -358,7 +358,11 @@ def test_actual_repaired_plan_preserves_factors_and_failed_attempt():
             assert run[key] == old["runs"][i][key]
         assert run["output_root"] != old["runs"][i]["output_root"]
     for ref in plan["helper_sources"] + plan["evidence"]:
-        raw = Path(ref["path"]).read_bytes()
+        source = Path(ref["path"])
+        if source == cost.ROOT / "benchmark_tools/run_native_factorial_cost.py":
+            # Verify the historical executor, not the repaired current source.
+            source = cost.ROOT / "benchmark_tools/results/native_factorial_failed_source_22427/run_native_factorial_cost.py"
+        raw = source.read_bytes()
         assert len(raw) == ref["bytes"] and hashlib.sha256(raw).hexdigest() == ref["sha256"]
     failure = json.loads(Path(plan["retained_preflight_failure"]["path"]).read_text())
     assert failure["job_id"] == 22426 and failure["status"] == "factorial_attempt_failed_retained"
@@ -373,3 +377,42 @@ def test_actual_repaired_plan_preserves_factors_and_failed_attempt():
     assert len(delta["changed"]) == 3 and delta["added"] == delta["removed"] == []
     for side in ("before", "after"):
         assert all(row["status"] == "runtime_tree_identity_matches" for row in lookup["current_validation"]["runtime_checks"][side])
+
+
+@pytest.mark.parametrize("status", ["native_factorial_completed_pending_output_review", "native_factorial_failed"])
+def test_terminal_native_receipt_updates_owned_running_file(tmp_path, status):
+    path = tmp_path / "native_execution.json"
+    initial = dict(status="native_factorial_running", index=0, cell="p0_c0_r0")
+    cost.save(path, initial)
+    terminal = dict(initial, status=status, counts=dict(genes=2))
+    cost.update_native_receipt(path, initial, terminal)
+    assert json.loads(path.read_text()) == terminal
+    assert not path.with_name(path.name + ".terminal.pending").exists()
+    with pytest.raises(ValueError, match="changed"):
+        cost.update_native_receipt(path, initial, terminal)
+
+
+def test_receipt_update_does_not_overwrite_collision_or_foreign_change(tmp_path):
+    path = tmp_path / "native_execution.json"
+    initial = dict(status="native_factorial_running")
+    cost.save(path, initial)
+    pending = path.with_name(path.name + ".terminal.pending")
+    pending.write_text("foreign evidence")
+    with pytest.raises(FileExistsError):
+        cost.update_native_receipt(path, initial, dict(status="complete"))
+    assert json.loads(path.read_text()) == initial
+    assert pending.read_text() == "foreign evidence"
+    path.write_text(json.dumps(dict(status="externally_changed")))
+    with pytest.raises(ValueError, match="changed"):
+        cost.update_native_receipt(path, initial, dict(status="complete"))
+
+
+def test_receipt_update_rejects_symlink(tmp_path):
+    actual = tmp_path / "actual.json"
+    initial = dict(status="native_factorial_running")
+    actual.write_text(json.dumps(initial))
+    link = tmp_path / "native_execution.json"
+    link.symlink_to(actual)
+    with pytest.raises(ValueError, match="changed"):
+        cost.update_native_receipt(link, initial, dict(status="complete"))
+    assert json.loads(actual.read_text()) == initial

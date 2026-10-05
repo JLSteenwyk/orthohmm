@@ -1,0 +1,237 @@
+{
+  "accuracy_evaluated": false,
+  "cell": "p0_c0_r0",
+  "checked_files": [
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 12782304,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "sha256": "03e4ab186ff6c30fc1df8af7ce897270cc5bae77ef8211d428e36d985d45a39b"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 11930628,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "sha256": "6c7275ee1b2147ae803eebdd9f28fad6a748c7099b8bcdb51f82171e9be9bb48"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 5797677,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Ciona_intestinalis.KH.pep.all.fa",
+      "sha256": "729f930f526b3b60493f9685f345aab100705b81559b32359ad769b08802809a"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 12000073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "sha256": "60a255888f79a473e402b8ced1d5bc942bb6741148565bc4afd053680b993880"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 8784620,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "sha256": "7efd2a0912e3b75db88f152e1b0095e010c1d22b6dc2cfac5d2e1fcafbbbd03a"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 12880578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Mus_musculus.GRCm38.pep.all.fa",
+      "sha256": "3b6e0a68688294135324824e1879de86c1715a9f3c655406f6ec8fcfdd75db1a"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 17020497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Danio_rerio.GRCz11.pep.all.fa",
+      "sha256": "e1045fcca6bd927363608a1dd6d34e79ba859e051ef1059aa427fe0a4575d5bf"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 11973324,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Canis_familiaris.CanFam3.1.pep.all.fa",
+      "sha256": "0d87161a9990b9d8b0d56b4e71dfbe74c6016b0dda3352247b35d85501c33b33"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 10463972,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "sha256": "1f6ebacc342da127e4ab9c1a9cf7b627e8169df3cbc0d971d57655d974c8d9b2"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 9883133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Gallus_gallus.GRCg6a.pep.all.fa",
+      "sha256": "9dc452b11ac1c53a60370d2065ac6a8f7fc467184820560d693884f4f6ef2161"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 7778910,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "sha256": "3c047761101292d8d1be65c54657a64aefd969c99697fea58d0eca63c4aa70e9"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 13576811,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/input/Homo_sapiens.GRCh38.pep.all.fa",
+      "sha256": "bff5d1f0f259c801dc607045e4c13bfc759098f17d536b307c13a89a523569ac"
+    },
+    {
+      "bytes": 4795,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/metrics.json",
+      "sha256": "c0b3b60ec829f24467679cdd86917bc9f957673627ff42ed6f87516b2d0e1253"
+    },
+    {
+      "bytes": 803,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "4a5c34ea81a95e566b31358a4b6b1fb3e9d2a6f9db3f9c100b2302d3c714ab34"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "7d00e70589c72c747464e5b6c9840c2744be93ba7752c8fabcd2222bffdca090"
+    },
+    {
+      "bytes": 1005640,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ec7f34055237e77d4b84150640cb94ae12589bde32339cca9c8b1f726a68e7ff"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "6ed3e0fe2cb5d36e7f61cba3b4de1d46a416570062e53afc8363a7bdc22a18d0"
+    },
+    {
+      "bytes": 147892192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "e21500c027bd416938689525694a4ac2fc9d92a61e7bc1926949a778eb7a0341"
+    },
+    {
+      "bytes": 73946160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "4d1abac1b2407a207024b313f39e840edb545219080b63a339d2bf4f27d52d9e"
+    },
+    {
+      "bytes": 5136921,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_orthogroups.txt",
+      "sha256": "f43e40e1a9e41797faf7690dbdff8e57e6d958e58cb7eed152a95e30e744ac5a"
+    },
+    {
+      "bytes": 4567716,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_00/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "3ab1c37f8f073492b3c28f6bf261f3db85e4882020cce74cfd17b66cdb356899"
+    }
+  ],
+  "checkpoint": {
+    "exact_historical_hit_equivalence_established": false,
+    "genes": 251378,
+    "hits": 18486508,
+    "order": "lexical_gene_ids",
+    "validation": "mmap_bounded_slices"
+  },
+  "factors": {
+    "active_accuracy_profile": {
+      "kmer_k": 4,
+      "leiden_seed": 4,
+      "max_candidates_per_query": 100,
+      "multipass_graph": true,
+      "name": "high_sensitivity",
+      "profile_expansion": false
+    },
+    "candidate_expansion": false,
+    "candidate_gate_decoupled": false,
+    "cell": "p0_c0_r0",
+    "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+    "original_accuracy_profile": {
+      "kmer_k": 4,
+      "leiden_seed": 4,
+      "max_candidates_per_query": 100,
+      "multipass_graph": true,
+      "name": "high_sensitivity",
+      "profile_expansion": true
+    },
+    "production_globals_modified": false,
+    "production_source_modified": false,
+    "profile_expansion": false,
+    "reconciliation": false
+  },
+  "gene_ownership_sha256": "4d1c00a5f28a39665342fba23783cdd2ec6bb5d0563fabc8fc3a253a94db676e",
+  "input_genes": 251378,
+  "limitations": [
+    "Semantic output review is not accuracy evaluation, runtime integrity or resource admission.",
+    "Species tree provenance/coverage are checked; no independent tree reconstruction is claimed.",
+    "Stage durations are diagnostics, not full native resource costs or causal component overheads."
+  ],
+  "native_outputs_validated": true,
+  "next_identity_authorized": false,
+  "orthogroups": 63245,
+  "per_species_counts": {
+    "Caenorhabditis_elegans.WBcel235.pep.all.fa": 20191,
+    "Canis_familiaris.CanFam3.1.pep.all.fa": 20257,
+    "Ciona_intestinalis.KH.pep.all.fa": 16671,
+    "Danio_rerio.GRCz11.pep.all.fa": 30313,
+    "Drosophila_melanogaster.BDGP6.28.pep.all.fa": 13947,
+    "Gallus_gallus.GRCg6a.pep.all.fa": 16878,
+    "Homo_sapiens.GRCh38.pep.all.fa": 23485,
+    "Monodelphis_domestica.ASM229v1.pep.all.fa": 21384,
+    "Mus_musculus.GRCm38.pep.all.fa": 22866,
+    "Pan_troglodytes.Pan_tro_3.0.pep.all.fa": 23534,
+    "Rattus_norvegicus.Rnor_6.0.pep.all.fa": 22250,
+    "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa": 19602
+  },
+  "phylogeny": null,
+  "resource_measurements_admitted": false,
+  "schema": "native_factorial_output_review_v1",
+  "source": {
+    "bytes": 24937,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_native_factorial_outputs.py",
+    "sha256": "3357637503f35238f654edea5c4c12bd293f8d20908c141421a2d40278af7c8d"
+  },
+  "status": "native_outputs_validated"
+}

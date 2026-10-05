@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Full Native P0 Cell Verified; Failed Receipt Preserved And Fixed (2026-10-04)
+
+Previous turn made progress at314fa5cf with the independent output gate.
+Add a separate terminal join for scheduler, wrapper/runtime brackets, declared
+lookup, raw resource replay, launch checks and typed shared-host monitoring.
+482 component tests pass before applying it to live22427, without changing
+any of the916 helpers pinned to that running job.
+
+The actual scientific pipeline finishes P0C0R0 inference on251,378 proteins,
+but final wrapper receipt publication raises FileExistsError: the create-once
+writer cannot replace its own running receipt. Slurm finishes FAILED1:0,
+40:59 allocation elapsed. Preserve running/pending receipts, logs, metrics,
+all raw accounting and this failure; no inference restart.
+
+First raw terminal review underPython3.12 fails a reproduced2.13e-14 host-CPU
+summation difference. Preserve the failed review. A separate cached-wheel
+Python3.10/Bio1.87/NumPy2.2.6/psutil7.2.2 review environment exactly reproduces
+the full resource and typed contention evidence; frozen native/controller
+runtimes are untouched. Scientific recovery verifies this exact late receipt
+failure, independently validates outputs and rescores frozen70 RefOGs.
+
+Actual full-native P0C0R0 F1=.697633878435, precision=.788685918309,
+recall=.625429437185; all63,245 groups/251,378 genes match the original cached
+partition exactly, not merely benchmark scores. This is one ablation's
+development-exposed evidence, not the main HS/phy method or independent
+generalization. Observed failed-wrapper native wall2289.764741234s,
+CPU67271.677476s, native-step peak4954263552bytes; foreignCPUmax41.8846cores.
+Keep failed-attempt/shared-host labels and unknown tool-dependent distortion.
+
+See [complete result, recovery, scope and next routing](NATIVE_FACTORIAL_RESULT_AND_RECEIPT_REPAIR_22427.md).
+Only after terminal review/recovery, fix the wrapper's terminal receipt with
+a guarded atomic update; retain executed source byte-for-byte. Final496
+tests pass, zero failures/errors/skips, including failure recovery and atomic
+successful/failed transitions. Earlier1failure/495pass historical-source
+test is retained; its assertion now checks the executed archived bytes.
+
+Next prospectively update source/plan and explicitly validate cross-plan
+adoption of index0 history before launching index1. Never rewrite the old
+plan/review or retry index0 to obtain a clean/fast time. No new job at this
+milestone. No unrelated work/service/default change. Broader uncertainty,
+independent validation, robustness, biology and publication gaps remain;
+full goal active, completion unproven.
+
 ## Full Native Output-Semantics Gate Added (2026-10-04)
 
 The previous continuation confirmed the shared-host goal authorization; it

@@ -252,7 +252,6 @@ def native(plan_ref, index):
         automatic_retry=False, cold_cache_claim=False, accuracy_evaluated=False)
     report = Path(run["output_root"]) / "native_execution.json"
     save(report, receipt)
-    initial_receipt = dict(receipt)
     try:
         try:
             adapted(**native_kwargs(module, run, baseline))
@@ -267,23 +266,7 @@ def native(plan_ref, index):
         receipt.update(status="native_factorial_failed", error_type=type(error).__name__, error=str(error))
         raise
     finally:
-        update_native_receipt(report, initial_receipt, receipt)
-
-
-def update_native_receipt(path, initial, terminal):
-    """Atomically update our running receipt; immutable evidence uses save()."""
-    path = Path(path)
-    if path.is_symlink() or not path.is_file() or json.loads(path.read_text()) != initial:
-        raise ValueError("Running native receipt changed before terminal update")
-    pending = path.with_name(path.name + ".terminal.pending")
-    with pending.open("x") as handle:
-        json.dump(terminal, handle, indent=2, sort_keys=True)
-        handle.write("\n")
-        handle.flush()
-        os.fsync(handle.fileno())
-    if path.is_symlink() or json.loads(path.read_text()) != initial:
-        raise ValueError("Running native receipt changed during terminal update")
-    os.replace(pending, path)
+        save(report, receipt)
 
 
 def available_memory(raw):

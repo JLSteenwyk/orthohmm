@@ -1,0 +1,27 @@
+{
+  "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+  "first_py312_interval": {
+    "difference": -2.1316282072803006e-14,
+    "index": 1,
+    "replayed_sum": 41.374891945581766,
+    "retained_sum": 41.37489194558179
+  },
+  "limitations": [
+    "Pinned review interpreter and package versions, not a new scientific execution environment or a hermetic import manifest.",
+    "Python3.10 reproduces the retained collector arithmetic exactly; failed Python3.12 replay is retained."
+  ],
+  "native_runtime_modified": false,
+  "packages": {
+    "biopython": "1.87",
+    "numpy": "2.2.6",
+    "psutil": "7.2.2"
+  },
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "resolved_executable": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "review_only": true,
+  "schema": "native_factorial_review_interpreter_v1"
+}
