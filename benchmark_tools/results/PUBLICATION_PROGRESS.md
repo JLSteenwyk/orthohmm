@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Full Candidate Partitions Reconstructed From Accepted Traces (2026-10-04)
+
+Previous user turn verifies the already-amended shared-host goal; this alone
+creates no new scientific evidence. Re-read the full objective and current
+ledger; fresh Slurm confirms the same22430 RUNNING. Preserve it unchanged,
+without restart, early scoring or premature index4 release.
+
+Actually complete the [22429 accepted-trace reconstruction](NATIVE_CANDIDATE_TRACE_REPLAY_22429.md).
+All8,500 old/native accepted unions reconstruct each complete54,745-group,
+251,378-gene partition from63,245 original seeds. Common semantic merges
+8,482; each trace has6unique round0/12unique round1 merges. Three round0
+anchors change attachments, all at cap4, with tied/near-tied support. Some
+intermediate differences reconverge; final58genes remain in changed groups,
+none reference-touching according to the retained separate score. This
+locates the membership difference, not a proven score-bit/order cause.
+
+Independent gene-level union readback confirms both whole partitions,
+12direct pins and all920 unchanged native helpers. All44 joined tests pass,
+zero failures/errors/skips,9.29s; matchingPython3.10 reproduces the complete
+serialized report. No new inference, accuracy, source/runtime/default change,
+timing correction, causal contention claim or unrelated-work interference.
+
+Latest22430 RUNNING21:43; terminal review and separate score still precede
+index4. Full remaining scientific, resource and publication deliverables
+stay active. Near-tie/cap evidence does not justify changing frozen assignments
+or declaring general superiority, independent validation or completion.
+
 ## Full-Native Candidate Expansion Scored; Reconciliation Successor Live (2026-10-04)
 
 Previous turn makes progress at5cf1832f. Read full goal/current ledger and

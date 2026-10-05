@@ -1,0 +1,43 @@
+{
+  "direct_pins_checked": 12,
+  "independent_union_algorithm": "gene-level union across every seed and accepted endpoint; no imported replay or partition helper",
+  "native_inference_reexecuted": false,
+  "partitions": [
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "merges": 8500,
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "def179f076fcd7813f4b34303b581cc7aeda1f0329012825da5cb6c401ad1eea"
+      },
+      "trace": {
+        "bytes": 13721572,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/publication_ob_factorial_v1/candidates/p0_c1/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "sha256": "e55fe12b36748804f237eb9168f65b5e3fbff18f064bc1574f144a96ef178761"
+      },
+      "whole_partition_equal": true
+    },
+    {
+      "genes": 251378,
+      "groups": 54745,
+      "merges": 8500,
+      "partition": {
+        "bytes": 4567716,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+        "sha256": "f87b977161d2e157ba32442dae4cbc671791fe621e46b396c188587d230830f7"
+      },
+      "trace": {
+        "bytes": 13721503,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_02/native/orthohmm_working_res/phylogeny_candidate_merges.json",
+        "sha256": "73d59325f258a3def692fbb76692c0a9529c719b7ce98f57c1b843ab4bfb39aa"
+      },
+      "whole_partition_equal": true
+    }
+  ],
+  "report_sha256": "c0a5815c10de8ef51e3429af3e08a69bacb89f56ae6386f4fde1f422063f735c",
+  "schema": "independent_gene_union_trace_readback_v1",
+  "scientific_score_recomputed": false,
+  "unchanged_native_helper_pins_checked": 920
+}
