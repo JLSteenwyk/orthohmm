@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Full-Native Candidate/Reconciliation Result Retained (2026-10-04)
+
+The preceding user turn only verifies the already-amended goal; it is not
+new scientific progress. On resumption, read the full goal and current
+ledger, then confirm the same 22431 actually RUNNING rather than restarting
+or inferring its state from a receipt. Preserve all unrelated work.
+
+[22430 completes and passes full review/separate scoring](NATIVE_FACTORIAL_RESULT_22430.md):
+F1 73.40228812727554%, precision 81.48616894173408%, recall
+66.77758098080643%, all 70 RefOGs/1,944 reference genes. Scores equal the
+cached cell, but 28 nonreference genes occur in two changed groups on each
+side. Root-HOG co-membership is not resolved-pair accuracy; no independent
+validation, whole-partition equality or proven cause is claimed.
+
+Observed native wall 3522.029233711s, CPU 102817.764963s, peak 5072842752bytes;
+preserve wrapper/launcher scopes and maximum foreign average demand
+42.50704465302236 cores. Timing distortion is unknown and potentially
+tool-dependent. The [v4 table](native_factorial_progress_20261004_v4/report.md)
+passes independent 13-row/four-join/11-direct-pin readback, with 920 unchanged
+helpers and three byte-identical copies; old v3 and failed22427 remain intact.
+
+[22431/index4](NATIVE_FACTORIAL_SHARED_ATTEMPT_22431.md) is actually prepared
+on hold after full prefix/score validation, independently checked and released.
+Fresh startup confirms PID2805435, native affinity0..31/32 physical cores,
+128GiB cap and launch availableRAM664,775,131,136bytes. Startup is not final
+resource/accuracy admission. Four reviewed, one live, eight unsubmitted.
+Observe the same job; full terminal review/separate score precede index5.
+Remaining native, uncertainty, generalization, scientific and distribution
+requirements remain active. No runtime/helper/default changes or completion.
+
 ## Native Candidate Mechanism Integrated In Extended Manuscript (2026-10-04)
 
 Previous turn makes progress at pushed8219899a with the real five-arm
