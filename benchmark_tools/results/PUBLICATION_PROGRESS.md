@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native Candidate Mechanism Integrated In Extended Manuscript (2026-10-04)
+
+Previous turn makes progress at pushed8219899a with the real five-arm
+intervention and independent readback. Read the full goal/current ledger;
+fresh scheduler confirms22430 still RUNNING. Preserve the same attempt and
+all920 frozen helper pins, without restart, early score or index4 release.
+
+Integrate the [bounded P0C1R0 result](NATIVE_CANDIDATE_MANUSCRIPT_INTEGRATION_20261004.md)
+into the extended manuscript and claim checklist, explicitly separate from
+the older93-gene dependency-control case. Bind54,745groups/251,378genes,
+both controls,58-gene order-only change, unaffected reference scores and
+score/self-hit negative controls. No accuracy gain, canonical promotion,
+universal determinism, upstream/machine-operation cause or comparative
+timing is claimed. Main text/PDF/archive remain unchanged; this is not a
+render or publication-delivery pass.
+
+The joined suite initially13passes/one failure: an old test still expects
+all27 scaling runs unexecuted, while the guide correctly reports completion.
+Verify it is outside the920 native helpers; repair only that stale assertion
+against the saved27-reviewed/25-measured/24-eligible panel and its remaining
+limits. Retain failed JUnit. Corrected14tests pass, zero failures/errors/skips,
+0.62s, including four new actual-result binding checks. Current checksum
+readback independently verifies all920 native helpers unchanged.
+
+Latest22430 RUNNING51:33/whole job, actually in phylogenetic inference.
+Its complete terminal review/separate score still precede index4. Remaining
+native, uncertainty, independent-generalization and publication/distribution
+requirements remain in scope. Full completion is not established.
+
 ## Candidate Hit-Order Intervention Reproduces Whole Difference (2026-10-04)
 
 Previous turn makes progress at pushed3b8c524c with complete accepted-trace

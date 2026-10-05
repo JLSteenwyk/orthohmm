@@ -75,7 +75,15 @@ def test_reproduction_guide_distinguishes_completed_runs_from_open_release_work(
     gates = text.split("### Remaining Publication Gates", 1)[1]
     assert "locally supplied assets" in gates
     assert "cross-host execution" in gates
-    assert "27 replacement scaling runs remain unexecuted" in gates
+    panel = json.loads((BASE / "threadripper_shared_panel_snapshot_20261004_v27/panel.json").read_text())
+    assert panel["all_planned_attempts_reviewed"] is True
+    assert panel["planned_attempts"] == panel["reviewed_attempts"] == len(panel["runs"]) == 27
+    assert panel["resource_reviewed_attempts"] == 25 and panel["eligible_attempts"] == 24
+    assert panel["publication_ready"] is False
+    assert "all 27 frozen attempts are terminal-reviewed" in gates
+    assert "24 eligible observations" in gates
+    assert "Three cells lack an eligible repeat" in gates
+    assert "27 replacement scaling runs remain unexecuted" not in gates
     assert "MAIN_RECONSTRUCTION_REVIEW_20260929.md" in text
 
 

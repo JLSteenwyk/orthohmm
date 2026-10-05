@@ -2571,6 +2571,32 @@ not a fresh full-pipeline or controlled comparative timing measurement.
 [weight control](INSTALLED_OB_CLUSTERING_PROBE_20260926.md), and
 [runtime contrast](OB_CLUSTERING_RUNTIME_PROBE_20260926.md).
 
+A separate [full-native candidate-only diagnostic](NATIVE_CANDIDATE_FACTORIAL_RESULT_22429.md)
+evaluated P0C1R0: sensitive initial HMM search, profile expansion disabled,
+satellite candidate expansion enabled and reconciliation disabled. The fresh
+and cached outputs each contained 54,745 groups covering 251,378 genes,
+but 58 genes occurred in changed groups. None touched the frozen reference;
+the separately evaluated OrthoBench statistic was unchanged. This is distinct
+from the 93-gene dependency-control discrepancy above.
+Five prospectively fixed arms crossed historical/fresh hit order and score
+values, with a fresh self-hit control, using the original seed bytes/order,
+unchanged parameters and frozen refinement function. Both complete saved
+partitions were reproduced. Changing order alone reproduced the whole
+58-gene difference; score-value changes alone did not change either
+respective partition, and self-hit inclusion had no partition effect.
+Independent accepted-union and gene-level readbacks reconstructed all five
+partitions and checked all ten pairwise comparisons. Under the order-only
+intervention, common accepted counts, maximum scores and coverage agreed,
+while support changed by at most 1.42e-14; three round-zero anchors selected
+different attachments at the four-satellite cap. Stable within-pair order
+before floating-point aggregation provides an order-sensitive path. This
+identifies a fixed-boundary effect, not universal determinism, original
+upstream order provenance, individual machine-level causality or a new
+accuracy advantage. No default was changed, score rounded or phylogeny run
+by this diagnostic. Its duration is not comparative timing; shared-host
+distortion remains unknown and potentially tool-dependent.
+[Complete five-arm table](native_candidate_factorial_22429/summary.md).
+
 A subsequent [fresh recovery installation](PUBLICATION_RECOVERY_INSTALL_20260926.md)
 uses a complete 11-wheel hash lock, including a provider-digest-verified Leiden
 0.11 wheel whose 15 payload files match the validated private distribution.
