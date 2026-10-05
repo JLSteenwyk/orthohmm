@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Full-Native QfO Conversion Completed, Assessment Running (2026-10-05)
+
+Previous turn verifies the saved shared-host goal amendment, without a new
+analysis milestone. Re-read the full goal and newest ledger on resumption;
+original22437 remains live, and the existing converter22438 is held. No
+completed inference is restarted and contention alone does not block work.
+
+Actual import probe identifies an erroneous symlink-resolved Python command
+in held22438: same binary, wrong environment, missing Bio. Cancel this owned
+job before execution and retain original submission/batch, cancellation and
+both import probes. AccountingCANCELLED/zero elapsed/no start/no steps, no
+execution logs or output directory. Cancellation observer initially applies
+a native-only terminal verifier to the converter and fails after cancellation;
+retain that scope error, then verify converter identity directly. No hidden
+execution failure, second cancellation or automatic retry.
+
+[Explicit corrected converter22439](NATIVE_QFO_CONVERSION_AND_ASSESSMENT_22439.md)
+preserves prepared review-venv invocation separately from binary checksum.
+Independent held gate, exact envelope/source/request/review/environment,
+batch/argv, all920 pins, fresh destination and safe RAM pass. Release once.
+Actual job/batchCOMPLETED0:0 in1:16. New nativeQfO P0C0R0 has9,009,082
+cross-species group-clique pairs, zero mapping loss;546,450 of984,137 inputs
+in any pair, fraction0.555258058583307. This is relation coverage, not accuracy.
+Independent full-pair streaming readback matches row/accession counts and
+assessment binding gates; byte-identical result retained, raw pairs outside Git.
+Late process scan misses the already-completed short job; no startupPID claimed.
+
+Actually submit/gate/release six-endpoint assessment22441,8CPU/64GiB/24h,
+unchanged scorer and fresh native namespaces. Actual driverPID283857 passes
+exact argv/job cgroup/eight-CPU environment/64-GiB cap; preflight bound and
+Nextflow tasks submitted. No endpoint score or independent admission yet.
+Conversion/scoring are outside matched inference timing; may overlap22437.
+Keep FAS sampling/population/missing-score and uncertainty limitations.
+
+Also [queue existing terminal reviewer22440](NATIVE_QFO_TERMINAL_REVIEW_22440.md)
+afterany22437. Independent held owner/envelope/dependency/batch/request/
+environment/source/helper/capacity gate passes; release once, pending on
+original native. No duplicate inference, reviewer implementation, scientific
+default/helper edit or new test-suite result. Shell syntax/import checks pass.
+
+Milestone readback checks14 retained receipts/four exact batch copies/all920
+pins/current original native PID and scheduler states. Retain and correct
+an observer-only path-versus-record reader error; no scientific change.
+
+Next: observe original22437/22440 and22441. After assessment true termination,
+independently admit actual endpoints/trace/FAS/provenance. After successful
+native terminal review, fresh index8 gates remain necessary; QfO scoring
+does not block that different native identity. Unknown, potentially tool-
+dependent shared-host effects remain explicit; no quiet-window prerequisite,
+speed correction/ranking or unrelated workload change. Full goal active;
+publication readiness unproven.
+
 ## Next Full-Native QfO Configuration Actually Starts (2026-10-05)
 
 Previous turn makes progress at pushed41d494e3: validate and retain first

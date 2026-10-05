@@ -1,0 +1,160 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22438",
+      "--parsable2",
+      "--noheader",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed,Start,End,AllocCPUS,ReqMem"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22438|ohmm_qfo_native_pairs06|CANCELLED by 1000|0:0|00:00:00|None|2026-10-05T13:32:03|0|32G\n"
+  },
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "batch": {
+    "bytes": 1041,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.sh",
+    "sha256": "0f028693775335c2c25f44ca6448c8c14faeef978f7c0829dc74a7f51da65184"
+  },
+  "cancellation_command_previously_executed": [
+    "scancel",
+    "22438"
+  ],
+  "cancellation_observer_failure": {
+    "cause": "verify_terminal() is bound to the native 64-slot/128-GiB script identity, not a two-CPU converter. Cancellation had already executed. Current readback checks the actual converter identity directly; no second cancellation or resubmission was performed.",
+    "error": "Threadripper allocation or execution identity differs",
+    "error_type": "ValueError"
+  },
+  "destination_absent": true,
+  "environment_import_checks": [
+    {
+      "binary": {
+        "bytes": 17157264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+      },
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "-B",
+        "-c",
+        "import sys,Bio,numpy,psutil; import benchmark_tools.prepare_native_factorial_qfo_pairs as m; print(sys.executable,sys.prefix); print(sys.version); print(Bio.__version__,numpy.__version__,psutil.__version__); print(m.__file__)"
+      ],
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'Bio'\n",
+      "stdout": ""
+    },
+    {
+      "binary": {
+        "bytes": 17157264,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+        "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+      },
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+        "-B",
+        "-c",
+        "import sys,Bio,numpy,psutil; import benchmark_tools.prepare_native_factorial_qfo_pairs as m; print(sys.executable,sys.prefix); print(sys.version); print(Bio.__version__,numpy.__version__,psutil.__version__); print(m.__file__)"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004\n3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\n1.87 2.2.6 7.2.2\n/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_qfo_pairs.py\n"
+    }
+  ],
+  "job_id": 22438,
+  "native_inference_reexecuted": false,
+  "no_execution_logs": true,
+  "no_scheduler_steps": true,
+  "observed_unix_ns": 1791221581715835299,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,os,pwd,re,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT\nsub=record(ROOT/\"benchmark_tools/results/native_qfo_conversion_submission_22438.json\");assert sub[\"sha256\"]==\"f1dfa7d9a883230031566a18ceb71df7cdc586b161f6d7b08407efc67d21856e\";s=json.loads(Path(sub[\"path\"]).read_text())\ncmd=[\"scontrol\",\"show\",\"job\",\"22438\",\"--oneliner\"];p=subprocess.run(cmd,capture_output=True,text=True,check=True);f=dict(re.findall(r\"(?:^|\\s)([^\\s=]+)=([^\\s]*)\",p.stdout));assert f[\"JobId\"]==\"22438\" and f[\"UserId\"]==f\"{pwd.getpwuid(os.getuid()).pw_name}({os.getuid()})\" and f[\"JobState\"]==\"CANCELLED\" and f[\"Restarts\"]==\"0\" and f[\"Comment\"]==s[\"request\"][\"sha256\"] and f[\"RunTime\"]==\"00:00:00\"\nacmd=[\"sacct\",\"-j\",\"22438\",\"--parsable2\",\"--noheader\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed,Start,End,AllocCPUS,ReqMem\"];a=subprocess.run(acmd,capture_output=True,text=True,check=True);lines=a.stdout.strip().splitlines();assert len(lines)==1 and lines[0].split(\"|\")[0]==\"22438\" and lines[0].split(\"|\")[2].startswith(\"CANCELLED\")\nbatch=record(ROOT/\"benchmarks/work/native_factorial_launch_20261004/convert06_22438.sh\");body=[x for x in Path(batch[\"path\"]).read_text().splitlines() if x.strip() and not x.startswith(\"#\")];assert body==[s[\"wrap\"]]\nenv=os.environ.copy()\nfor name in (\"PYTHONHOME\",\"PYTHONPATH\",\"LD_PRELOAD\",\"LD_LIBRARY_PATH\",\"LD_AUDIT\"):env.pop(name,None)\nenv.update(PYTHONNOUSERSITE=\"1\",PYTHONDONTWRITEBYTECODE=\"1\",OPENBLAS_NUM_THREADS=\"1\",OMP_NUM_THREADS=\"1\",MKL_NUM_THREADS=\"1\")\nchecks=[]\nfor executable in [s[\"python\"][\"path\"],str(ROOT/\"benchmarks/work/native_factorial_review_py310_20261004/bin/python\")]:\n command=[executable,\"-B\",\"-c\",\"import sys,Bio,numpy,psutil; import benchmark_tools.prepare_native_factorial_qfo_pairs as m; print(sys.executable,sys.prefix); print(sys.version); print(Bio.__version__,numpy.__version__,psutil.__version__); print(m.__file__)\"];r=subprocess.run(command,env=env,capture_output=True,text=True);checks.append(dict(command=command,returncode=r.returncode,stdout=r.stdout,stderr=r.stderr,binary=record(executable)))\nassert checks[0][\"returncode\"]==1 and \"No module named\" in checks[0][\"stderr\"] and \"Bio\" in checks[0][\"stderr\"] and checks[1][\"returncode\"]==0 and checks[0][\"binary\"]==checks[1][\"binary\"]\nassert not Path(s[\"destination\"]).exists()\nfor suffix in (\"out\",\"err\"):assert not (ROOT/f\"benchmarks/work/native_factorial_launch_20261004/convert06_22438.{suffix}\").exists()\nout=ROOT/\"benchmark_tools/results/native_qfo_conversion_cancelled_22438.json\";assert not out.exists()\nsave(out,dict(schema=\"native_qfo_conversion_preexecution_cancelled_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),submission=sub,job_id=22438,terminal_scheduler=dict(command=cmd,returncode=p.returncode,stdout=p.stdout,stderr=p.stderr,fields=f),accounting=dict(command=acmd,returncode=a.returncode,stdout=a.stdout,stderr=a.stderr),batch=batch,environment_import_checks=checks,destination_absent=True,no_execution_logs=True,no_scheduler_steps=True,pair_conversion_completed=False,accuracy_evaluated=False,native_inference_reexecuted=False,cancellation_command_previously_executed=[\"scancel\",\"22438\"],cancellation_observer_failure=dict(error_type=\"ValueError\",error=\"Threadripper allocation or execution identity differs\",cause=\"verify_terminal() is bound to the native 64-slot/128-GiB script identity, not a two-CPU converter. Cancellation had already executed. Current readback checks the actual converter identity directly; no second cancellation or resubmission was performed.\"),reason=\"record() resolved the prepared venv symlink to its base executable; identical binary checksum does not establish equivalent site-packages. Held incorrect invocation cancelled before execution. Corrected invocation must preserve prepared environment path.\",automatic_retry=False))\nprint(json.dumps(dict(receipt=record(out),terminal_state=f[\"JobState\"])))\n"
+  ],
+  "pair_conversion_completed": false,
+  "reason": "record() resolved the prepared venv symlink to its base executable; identical binary checksum does not establish equivalent site-packages. Held incorrect invocation cancelled before execution. Corrected invocation must preserve prepared environment path.",
+  "schema": "native_qfo_conversion_preexecution_cancelled_inline_v1",
+  "submission": {
+    "bytes": 12349,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_submission_22438.json",
+    "sha256": "f1dfa7d9a883230031566a18ceb71df7cdc586b161f6d7b08407efc67d21856e"
+  },
+  "terminal_scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22438",
+      "--oneliner"
+    ],
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "Unknown",
+      "AllocNode:Sid": "bizon-link:269344",
+      "AllocTRES": "(null)",
+      "BatchFlag": "1",
+      "CPUs/Task": "2",
+      "Command": "(null)",
+      "Comment": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "Unknown",
+      "EndTime": "2026-10-05T13:32:03",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "22438",
+      "JobName": "ohmm_qfo_native_pairs06",
+      "JobState": "CANCELLED",
+      "LastSchedEval": "2026-10-05T13:22:20",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "2",
+      "MinMemoryNode": "32G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "2",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "0",
+      "QOS": "normal",
+      "Reason": "JobHeldUser",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=2,mem=32G,node=1,billing=2",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:00",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "2026-10-05T13:32:03",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.out",
+      "SubmitTime": "2026-10-05T13:22:20",
+      "SuspendTime": "None",
+      "TimeLimit": "06:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=2",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=22438 JobName=ohmm_qfo_native_pairs06 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=CANCELLED Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-05T13:22:20 EligibleTime=Unknown AccrueTime=Unknown StartTime=2026-10-05T13:32:03 EndTime=2026-10-05T13:32:03 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T13:22:20 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:269344 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=(null) WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.out TresPerTask=cpu=2 \n"
+  }
+}

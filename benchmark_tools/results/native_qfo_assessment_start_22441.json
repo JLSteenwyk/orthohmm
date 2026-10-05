@@ -1,0 +1,110 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22437,22440,22441",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed"
+    ],
+    "stderr": "",
+    "stdout": "22437|orthohmm_factorial_cost|RUNNING|0:0|00:28:51\n22437.batch|batch|RUNNING|0:0|00:28:51\n22437.0|python|RUNNING|0:0|00:27:59\n22440|ohmm_native_review07|PENDING|0:0|00:00:00\n22441|ohmm_native_qfo_assess06|RUNNING|0:0|00:01:17\n22441.batch|batch|RUNNING|0:0|00:01:17\n"
+  },
+  "accuracy_admitted": false,
+  "argv": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-m",
+    "benchmark_tools.run_native_factorial_qfo_assessment",
+    "--root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--pairs",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/results.json",
+    "--pairs-sha256",
+    "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d",
+    "--conversion-job",
+    "22439"
+  ],
+  "assessment_completed": false,
+  "automatic_retry": false,
+  "cgroup": "0::/system.slice/slurmstepd.scope/job_22441/step_batch/user/task_0\n",
+  "cpu_affinity": [
+    32,
+    33,
+    34,
+    35,
+    128,
+    129,
+    130,
+    131
+  ],
+  "create_time": 1791222179.34,
+  "environment_selected": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONNOUSERSITE": "1",
+    "SLURM_CPUS_PER_TASK": "8",
+    "SLURM_JOB_ID": "22441"
+  },
+  "job_id": 22441,
+  "limitations": [
+    "Actual assessment driver startup, not final endpoint validation or continuous integrity/runtime-closure proof.",
+    "Separate scoring cgroup/allocation; not comparable matched inference memory or CPU use."
+  ],
+  "memory_limits": [
+    {
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22441/step_batch/user/task_0/memory.max",
+      "value": "max"
+    },
+    {
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22441/step_batch/user/memory.max",
+      "value": "68719476736"
+    },
+    {
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22441/step_batch/memory.max",
+      "value": "max"
+    },
+    {
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22441/memory.max",
+      "value": "68719476736"
+    },
+    {
+      "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/memory.max",
+      "value": "max"
+    },
+    {
+      "path": "/sys/fs/cgroup/system.slice/memory.max",
+      "value": "max"
+    }
+  ],
+  "observed_unix_ns": 1791222256476138565,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,psutil,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read\nsref=record(ROOT/\"benchmark_tools/results/native_qfo_assessment_submission_22441.json\");assert sref[\"sha256\"]==\"ac0ef1162e535385178148c31e2689dc0425e9f6eed8961c9cbb6fb1ae4398fd\";s=read(sref);expected=s[\"execution_argv\"][18:];found=[]\nfor p in psutil.process_iter([\"pid\",\"cmdline\"]):\n try:\n  if p.info[\"cmdline\"]==expected:found.append(p)\n except (psutil.NoSuchProcess,psutil.AccessDenied):pass\nassert len(found)==1,len(found);p=found[0];cg=Path(f\"/proc/{p.pid}/cgroup\").read_text();assert \"/job_22441/\" in cg;line=next(x for x in cg.splitlines() if x.startswith(\"0::\"));scope=Path(\"/sys/fs/cgroup\")/line[3:].lstrip(\"/\");limits=[]\nfor path in [scope,*scope.parents]:\n file=path/\"memory.max\"\n if file.is_file():limits.append(dict(path=str(file),value=file.read_text().strip()))\nassert any(r[\"value\"]==str(64*2**30) for r in limits)\nenv=p.environ();assert env[\"SLURM_JOB_ID\"]==\"22441\" and env[\"SLURM_CPUS_PER_TASK\"]==\"8\"\npreflight=record(Path(s[\"fresh_paths\"][\"cwd\"])/\"preflight.json\");d=read(preflight);assert d[\"status\"]==\"running\" and d[\"job_id\"]==\"22441\" and d[\"native_index\"]==6 and d[\"pairs_manifest\"]==s[\"pairs_manifest\"] and d[\"command\"]==s[\"assessment_command\"] and d[\"accuracy_admitted\"] is False\nfor name,job in ((\"convert06\",22438),(\"convert06\",22439),(\"review07\",22440),(\"assess06\",22441)):\n original=record(ROOT/f\"benchmarks/work/native_factorial_launch_20261004/{name}_{job}.sh\");copy=record(ROOT/f\"benchmark_tools/results/{name}_{job}.sh\");assert all(original[k]==copy[k] for k in (\"bytes\",\"sha256\"))\ncmd=[\"sacct\",\"-j\",\"22437,22440,22441\",\"--noheader\",\"--parsable2\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed\"];a=subprocess.run(cmd,capture_output=True,text=True,check=True)\nout=ROOT/\"benchmark_tools/results/native_qfo_assessment_start_22441.json\";assert not out.exists();save(out,dict(schema=\"native_qfo_assessment_process_start_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),submission=sref,job_id=22441,pid=p.pid,create_time=p.create_time(),argv=p.cmdline(),cpu_affinity=p.cpu_affinity(),cgroup=cg,memory_limits=limits,python_invocation_path=s[\"python_invocation_path\"],python_binary=record(s[\"python_invocation_path\"]),environment_selected={k:env.get(k) for k in (\"SLURM_JOB_ID\",\"SLURM_CPUS_PER_TASK\",\"PYTHONNOUSERSITE\",\"PYTHONDONTWRITEBYTECODE\",\"PYTHONHASHSEED\",\"OPENBLAS_NUM_THREADS\",\"OMP_NUM_THREADS\",\"MKL_NUM_THREADS\")},preflight=preflight,accounting=dict(command=cmd,stdout=a.stdout,stderr=a.stderr),published_batch_copies_byte_identical=True,assessment_completed=False,accuracy_admitted=False,automatic_retry=False,limitations=[\"Actual assessment driver startup, not final endpoint validation or continuous integrity/runtime-closure proof.\",\"Separate scoring cgroup/allocation; not comparable matched inference memory or CPU use.\"]))\nprint(json.dumps(dict(receipt=record(out),pid=p.pid,preflight=preflight)))\n"
+  ],
+  "pid": 283857,
+  "preflight": {
+    "bytes": 1277793,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/preflight.json",
+    "sha256": "58f51b777230a6e7720075c32f96ac505f55b5e1e3a0f612939b798b6f92dec1"
+  },
+  "published_batch_copies_byte_identical": true,
+  "python_binary": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "python_invocation_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+  "schema": "native_qfo_assessment_process_start_inline_v1",
+  "submission": {
+    "bytes": 13771,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_submission_22441.json",
+    "sha256": "ac0ef1162e535385178148c31e2689dc0425e9f6eed8961c9cbb6fb1ae4398fd"
+  }
+}

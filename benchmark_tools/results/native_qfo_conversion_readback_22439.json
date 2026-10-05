@@ -1,0 +1,171 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22437,22438,22439,22440",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22437|orthohmm_factorial_cost|RUNNING|0:0|00:24:55|64|bizon\n22437.batch|batch|RUNNING|0:0|00:24:55|64|bizon\n22437.0|python|RUNNING|0:0|00:24:03|64|bizon\n22438|ohmm_qfo_native_pairs06|CANCELLED by 1000|0:0|00:00:00|0|None assigned\n22439|ohmm_qfo_native_pairs06|COMPLETED|0:0|00:01:16|2|bizon\n22439.batch|batch|COMPLETED|0:0|00:01:16|2|bizon\n22440|ohmm_native_review07|PENDING|0:0|00:00:00|0|None assigned\n"
+  },
+  "accuracy_admitted": false,
+  "accuracy_evaluated": false,
+  "assessment_command": [
+    "/home/bizon/bin/nextflow",
+    "-c",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment.config",
+    "run",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+    "-profile",
+    "singularity",
+    "-ansi-log",
+    "false",
+    "--input",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/pairs.qfo.tsv",
+    "--participant_id",
+    "ohmm_qfo_full_native_p0_c0_r0",
+    "--event_year",
+    "2020",
+    "--challenges_ids",
+    "GO EC VGNC SwissTrees TreeFam-A FAS",
+    "--goldstandard_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020",
+    "--assess_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data",
+    "--results_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06",
+    "-work-dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq06"
+  ],
+  "assessment_fresh_paths": {
+    "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0",
+    "results": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06",
+    "work": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq06"
+  },
+  "assessment_helpers": {
+    "bytes": 11870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_qfo_assessment.py",
+    "sha256": "ba051efa4b2dd9f72a4464f56a891b4742fa3a1c6999f8b95a65d0805c77dafe"
+  },
+  "assessment_preparation": {
+    "bytes": 1277635,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_qfo_assessment_preparation_22439.json",
+    "sha256": "370a5969f73d53bd5c2a0c143e46bafa40ef9f88067a1e45812f7cdc6b70d907"
+  },
+  "automatic_retry": false,
+  "conversion": {
+    "bytes": 300029,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/results.json",
+    "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+  },
+  "conversion_job_id": 22439,
+  "conversion_scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:01:16",
+    "ExitCode": "0:0",
+    "JobIDRaw": "22439",
+    "NodeList": "bizon",
+    "State": "COMPLETED"
+  },
+  "conversion_semantics": "cross-species group-derived clique pairs",
+  "elapsed_check_seconds": 18.711469499976374,
+  "fas_protocol": {
+    "missing_scores": "native scorer omits uncomputed/failed missing-pair scores; no zero imputation",
+    "newly_computed_pair_cap": 9000,
+    "pipeline": {
+      "bytes": 14659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+      "sha256": "f1793f4efdc19ee4bebf73d186cc14e371d13d9236714f59881befad4f349946"
+    },
+    "population": "precomputed predictions plus missing predictions with both feature annotations; not all submitted pairs",
+    "sampling": "unseeded native shuffle; precomputed sample preserves eligible precomputed/missing ratio when missing pairs exist",
+    "source": {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    "species_scope": "all supplied species; frozen pipeline does not pass --limited-species",
+    "uncertainty": "native pair-IID SEM is not an independent-family or paired-method confidence interval"
+  },
+  "helper_sources_checked": 920,
+  "independently_counted_relation_accessions": 546450,
+  "independently_streamed_pair_rows": 9009082,
+  "limitations": [
+    "Independent pair row/coverage readback and existing conversion/scoring binding gates, not an independent reimplementation of group clique conversion or raw accounting.",
+    "Conversion is outside matched inference timing; all984137input genes remain the relation-coverage denominator.",
+    "Scoring is prepared but unrun; no endpoint value is imputed."
+  ],
+  "live_process_start_observation": "Exact-command process scan returned zero candidates after this short job was already COMPLETED0:0; no startup process receipt is claimed. Terminal scheduler, job-tagged conversion report and batch bind this execution.",
+  "native_index": 6,
+  "native_inference_reexecuted": false,
+  "native_job_id": 22435,
+  "native_scheduler": {
+    "controller_observation": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22435",
+        "--oneliner"
+      ],
+      "returncode": 1,
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+      "stdout": ""
+    },
+    "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+    "observation": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "22435",
+        "-n",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+      ],
+      "stderr": "",
+      "stdout": "22435|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-05T01:30:02|2026-10-05T01:31:22|2026-10-05T12:36:25|orthohmm_factorial_cost\n"
+    },
+    "source": "fresh_accounting_after_controller_expiry",
+    "verified": {
+      "AllocCPUS": "64",
+      "End": "2026-10-05T12:36:25",
+      "ExitCode": "0:0",
+      "JobIDRaw": "22435",
+      "JobName": "orthohmm_factorial_cost",
+      "NodeList": "bizon",
+      "Partition": "gpu",
+      "ReqMem": "128G",
+      "Start": "2026-10-05T01:31:22",
+      "State": "COMPLETED",
+      "Submit": "2026-10-05T01:30:02",
+      "TimelimitRaw": "1560"
+    }
+  },
+  "observed_unix_ns": 1791222020293918664,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read\nfrom benchmark_tools.run_native_factorial_qfo_assessment import prepare\npairs=record(ROOT/\"benchmarks/work/native_factorial_qfo_pairs_22435/results.json\");assert pairs[\"sha256\"]==\"be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d\";stage=read(pairs)\nstart=time.monotonic();spec=prepare(ROOT,pairs,\"22439\");assert spec[\"status\"]==\"prepared_unrun\" and stage[\"conversion_kind\"]==\"group\" and stage[\"native_index\"]==6\nrows=0;covered=set()\nwith Path(stage[\"filtered_pairs\"][\"path\"]).open() as stream:\n for line in stream:\n  g=line.rstrip(\"\\n\").split(\"\\t\");assert len(g)==2 and g[0]<g[1];rows+=1;covered.update(g)\ncoverage=stage[\"pair_coverage\"];assert rows==stage[\"total_pairs\"]==stage[\"retained_pairs\"]==stage[\"expected_pairs\"] and len(covered)==coverage[\"accessions_in_any_pair\"] and coverage[\"input_accessions\"]==984137 and stage[\"removed_mapping_pairs\"]==0\nwork=ROOT/\"benchmarks/work/native_qfo_assessment_preparation_22439.json\";assert not work.exists();save(work,spec)\ncmd=[\"sacct\",\"-j\",\"22437,22438,22439,22440\",\"--noheader\",\"--parsable2\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList\"];p=subprocess.run(cmd,capture_output=True,text=True,check=True)\npublished=ROOT/\"benchmark_tools/results/native_qfo_conversion_result_22439.json\";assert not published.exists();published.write_bytes(Path(pairs[\"path\"]).read_bytes());pubref=record(published);assert all(pubref[k]==pairs[k] for k in (\"bytes\",\"sha256\"))\nout=ROOT/\"benchmark_tools/results/native_qfo_conversion_readback_22439.json\";assert not out.exists();save(out,dict(schema=\"native_qfo_conversion_readback_and_assessment_gate_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),conversion_job_id=22439,native_job_id=22435,native_index=6,status=\"completed_conversion_bound_assessment_prepared_unrun\",conversion=pairs,published_conversion=pubref,assessment_preparation=record(work),conversion_scheduler=spec[\"conversion_scheduler\"],native_scheduler=spec[\"native_scheduler\"],accounting=dict(command=cmd,returncode=p.returncode,stdout=p.stdout,stderr=p.stderr),independently_streamed_pair_rows=rows,independently_counted_relation_accessions=len(covered),pair_coverage=coverage,conversion_semantics=stage[\"semantics\"],verified_records=len(spec[\"verified_records\"]),helper_sources_checked=920,assessment_helpers=spec[\"source\"],assessment_command=spec[\"command\"],assessment_fresh_paths={k:spec[k] for k in (\"cwd\",\"work\",\"results\")},fas_protocol=spec[\"fas_protocol\"],elapsed_check_seconds=time.monotonic()-start,live_process_start_observation=\"Exact-command process scan returned zero candidates after this short job was already COMPLETED0:0; no startup process receipt is claimed. Terminal scheduler, job-tagged conversion report and batch bind this execution.\",accuracy_evaluated=False,accuracy_admitted=False,native_inference_reexecuted=False,automatic_retry=False,limitations=[\"Independent pair row/coverage readback and existing conversion/scoring binding gates, not an independent reimplementation of group clique conversion or raw accounting.\",\"Conversion is outside matched inference timing; all984137input genes remain the relation-coverage denominator.\",\"Scoring is prepared but unrun; no endpoint value is imputed.\"]))\nprint(json.dumps(dict(receipt=record(out),preparation=record(work),pair_rows=rows,coverage=coverage,command=spec[\"command\"])))\n"
+  ],
+  "pair_coverage": {
+    "accessions_in_any_pair": 546450,
+    "definition": "fraction of all inference input accessions present in at least one submitted pair",
+    "fraction_inputs_in_any_pair": 0.555258058583307,
+    "input_accessions": 984137,
+    "pair_rows": 9009082
+  },
+  "published_conversion": {
+    "bytes": 300029,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_result_22439.json",
+    "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+  },
+  "schema": "native_qfo_conversion_readback_and_assessment_gate_inline_v1",
+  "status": "completed_conversion_bound_assessment_prepared_unrun",
+  "verified_records": 3919
+}

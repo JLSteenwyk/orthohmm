@@ -1,0 +1,201 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22437,22438,22439,22440,22441",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed,Start,End,AllocCPUS,NodeList"
+    ],
+    "stderr": "",
+    "stdout": "22437|orthohmm_factorial_cost|RUNNING|0:0|00:32:56|2026-10-05T13:15:25|Unknown|64|bizon\n22437.batch|batch|RUNNING|0:0|00:32:56|2026-10-05T13:15:25|Unknown|64|bizon\n22437.0|python|RUNNING|0:0|00:32:04|2026-10-05T13:16:17|Unknown|64|bizon\n22438|ohmm_qfo_native_pairs06|CANCELLED by 1000|0:0|00:00:00|None|2026-10-05T13:32:03|0|None assigned\n22439|ohmm_qfo_native_pairs06|COMPLETED|0:0|00:01:16|2026-10-05T13:35:43|2026-10-05T13:36:59|2|bizon\n22439.batch|batch|COMPLETED|0:0|00:01:16|2026-10-05T13:35:43|2026-10-05T13:36:59|2|bizon\n22440|ohmm_native_review07|PENDING|0:0|00:00:00|Unknown|Unknown|0|None assigned\n22441|ohmm_native_qfo_assess06|RUNNING|0:0|00:05:22|2026-10-05T13:42:59|Unknown|8|bizon\n22441.batch|batch|RUNNING|0:0|00:05:22|2026-10-05T13:42:59|Unknown|8|bizon\n"
+  },
+  "accuracy_admitted": false,
+  "automatic_retry": false,
+  "conversion_completed": true,
+  "earlier_observer_failure": {
+    "cause": "Milestone observer passed a path instead of a record to the local read(ref) helper; corrected observer uses parsed retained records. No report was written and no scientific code, output or job changed.",
+    "error": "PosixPath object is not subscriptable",
+    "error_type": "TypeError"
+  },
+  "helper_sources_checked": 920,
+  "limitations": [
+    "Readback checks structured receipts/copies and all frozen helper pins, not repeated scientific conversion, raw accounting or endpoint admission.",
+    "Live job states are observations at this time, not proof of eventual success.",
+    "Unrelated worktree changes and jobs untouched; no scientific settings or helper source edits."
+  ],
+  "observed_unix_ns": 1791222501669422632,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,psutil,shlex,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read\nplanref=record(ROOT/\"benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json\");assert planref[\"sha256\"]==\"6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b\";plan=read(planref)\nfor ref in plan[\"helper_sources\"]:check(ref)\nfiles=[\"native_qfo_conversion_submission_22438.json\",\"native_qfo_conversion_cancelled_22438.json\",\"native_qfo_conversion_submission_22439.json\",\"native_qfo_conversion_pre_release_22439.json\",\"native_qfo_conversion_released_22439.json\",\"native_qfo_conversion_result_22439.json\",\"native_qfo_conversion_readback_22439.json\",\"native_factorial_review_submission_22440.json\",\"native_factorial_review_pre_release_22440.json\",\"native_factorial_review_released_22440.json\",\"native_qfo_assessment_submission_22441.json\",\"native_qfo_assessment_pre_release_22441.json\",\"native_qfo_assessment_released_22441.json\",\"native_qfo_assessment_start_22441.json\"]\nrefs=[record(ROOT/\"benchmark_tools/results\"/name) for name in files];data={Path(ref[\"path\"]).name:read(ref) for ref in refs};copies=[]\nfor name,job in ((\"convert06\",22438),(\"convert06\",22439),(\"review07\",22440),(\"assess06\",22441)):\n original=record(ROOT/f\"benchmarks/work/native_factorial_launch_20261004/{name}_{job}.sh\");copy=record(ROOT/f\"benchmark_tools/results/{name}_{job}.sh\");assert all(original[k]==copy[k] for k in (\"bytes\",\"sha256\"));body=[x for x in Path(copy[\"path\"]).read_text().splitlines() if x.strip() and not x.startswith(\"#\")];prefix=\"native_factorial_review_submission\" if job==22440 else \"native_qfo_assessment_submission\" if job==22441 else \"native_qfo_conversion_submission\";submission=data[f\"{prefix}_{job}.json\"];assert body==[submission[\"wrap\"]] and shlex.split(body[0])==submission[\"execution_argv\"];copies.append(dict(original=original,published=copy))\nconversion=data[\"native_qfo_conversion_result_22439.json\"];assert conversion[\"retained_pairs\"]==9009082 and conversion[\"removed_mapping_pairs\"]==0 and conversion[\"pair_coverage\"][\"input_accessions\"]==984137 and conversion[\"pair_coverage\"][\"accessions_in_any_pair\"]==546450\np=psutil.Process(265470);assert p.create_time()==1791220584.63 and p.cpu_affinity()==list(range(32))\ncmd=[\"sacct\",\"-j\",\"22437,22438,22439,22440,22441\",\"--noheader\",\"--parsable2\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed,Start,End,AllocCPUS,NodeList\"];a=subprocess.run(cmd,capture_output=True,text=True,check=True);states={row.split(\"|\")[0]:row.split(\"|\")[2] for row in a.stdout.splitlines()};assert states[\"22437\"]==\"RUNNING\" and states[\"22438\"].startswith(\"CANCELLED\") and states[\"22439\"]==\"COMPLETED\" and states[\"22440\"]==\"PENDING\" and states[\"22441\"]==\"RUNNING\"\nout=ROOT/\"benchmark_tools/results/native_qfo_conversion_assessment_milestone_20261005.json\";assert not out.exists();save(out,dict(schema=\"native_qfo_conversion_assessment_milestone_readback_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),plan=planref,source_commit=subprocess.check_output([\"git\",\"rev-parse\",\"HEAD\"],text=True).strip(),retained_receipts=refs,published_batch_copies=copies,helper_sources_checked=920,original_native_pid=p.pid,original_native_create_time=p.create_time(),original_native_affinity=p.cpu_affinity(),accounting=dict(command=cmd,stdout=a.stdout,stderr=a.stderr),conversion_completed=True,accuracy_admitted=False,publication_ready=False,automatic_retry=False,earlier_observer_failure=dict(error_type=\"TypeError\",error=\"PosixPath object is not subscriptable\",cause=\"Milestone observer passed a path instead of a record to the local read(ref) helper; corrected observer uses parsed retained records. No report was written and no scientific code, output or job changed.\"),limitations=[\"Readback checks structured receipts/copies and all frozen helper pins, not repeated scientific conversion, raw accounting or endpoint admission.\",\"Live job states are observations at this time, not proof of eventual success.\",\"Unrelated worktree changes and jobs untouched; no scientific settings or helper source edits.\"]))\nprint(json.dumps(dict(receipt=record(out),states=states)))\n"
+  ],
+  "original_native_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "original_native_create_time": 1791220584.63,
+  "original_native_pid": 265470,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "publication_ready": false,
+  "published_batch_copies": [
+    {
+      "original": {
+        "bytes": 1041,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22438.sh",
+        "sha256": "0f028693775335c2c25f44ca6448c8c14faeef978f7c0829dc74a7f51da65184"
+      },
+      "published": {
+        "bytes": 1041,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/convert06_22438.sh",
+        "sha256": "0f028693775335c2c25f44ca6448c8c14faeef978f7c0829dc74a7f51da65184"
+      }
+    },
+    {
+      "original": {
+        "bytes": 1037,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert06_22439.sh",
+        "sha256": "d68086aa8d2895df4baf03a30a07205514fe9e49b76e2b46cdd7c803ebb3bd81"
+      },
+      "published": {
+        "bytes": 1037,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/convert06_22439.sh",
+        "sha256": "d68086aa8d2895df4baf03a30a07205514fe9e49b76e2b46cdd7c803ebb3bd81"
+      }
+    },
+    {
+      "original": {
+        "bytes": 805,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review07_22440.sh",
+        "sha256": "b63f1f3ff5b86aa0977ec3ef90312bdbee16031dcc83cfcb8c7696e5af5c999d"
+      },
+      "published": {
+        "bytes": 805,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review07_22440.sh",
+        "sha256": "b63f1f3ff5b86aa0977ec3ef90312bdbee16031dcc83cfcb8c7696e5af5c999d"
+      }
+    },
+    {
+      "original": {
+        "bytes": 742,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/assess06_22441.sh",
+        "sha256": "b40dff4cb95dc462678acc7da645b1e9cf21d194390ccbdae87e062780c31695"
+      },
+      "published": {
+        "bytes": 742,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/assess06_22441.sh",
+        "sha256": "b40dff4cb95dc462678acc7da645b1e9cf21d194390ccbdae87e062780c31695"
+      }
+    }
+  ],
+  "retained_receipts": [
+    {
+      "bytes": 12349,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_submission_22438.json",
+      "sha256": "f1dfa7d9a883230031566a18ceb71df7cdc586b161f6d7b08407efc67d21856e"
+    },
+    {
+      "bytes": 12301,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_cancelled_22438.json",
+      "sha256": "6d6371da1cb38e08e577e873a34d49f9f101eeaeab30ae686289bdc6cc96d87c"
+    },
+    {
+      "bytes": 15824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_submission_22439.json",
+      "sha256": "fea015b267df085a0bf0ca6e38a869836f516e9ac691475427ceb21b95a681fa"
+    },
+    {
+      "bytes": 16752,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_pre_release_22439.json",
+      "sha256": "39c21b351bdf860f1c8a613ade99642992f9ccbb47b4727fa9bc935d43cd1658"
+    },
+    {
+      "bytes": 11277,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_released_22439.json",
+      "sha256": "529242f9dbd14789308283ea7403aadc3f4f48a77536e2024a72ebc104440337"
+    },
+    {
+      "bytes": 300029,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_result_22439.json",
+      "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+    },
+    {
+      "bytes": 11443,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_conversion_readback_22439.json",
+      "sha256": "9ef95f604795fc559f694a4598746be8f854a76b13ea4853fde23f6a44e7fc74"
+    },
+    {
+      "bytes": 13232,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_submission_22440.json",
+      "sha256": "efa6fffe370389d61bf52c539ec0fec1d42158d47086dd406695891ba42168f4"
+    },
+    {
+      "bytes": 13936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_pre_release_22440.json",
+      "sha256": "daf7b06c26f72b3c0b9629e2d04f7cfd4116ca1d15e2bba08ee7e12a8e658642"
+    },
+    {
+      "bytes": 11303,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_released_22440.json",
+      "sha256": "332ebe12414d983eac26115ebf3232ee906ec8eb95fdf5ecf16961506f25de35"
+    },
+    {
+      "bytes": 13771,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_submission_22441.json",
+      "sha256": "ac0ef1162e535385178148c31e2689dc0425e9f6eed8961c9cbb6fb1ae4398fd"
+    },
+    {
+      "bytes": 12380,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_pre_release_22441.json",
+      "sha256": "82a61f6ead0d57c2d2e9f1f00fe0554568ef2f22f031b7e115cdeb7411d15bd0"
+    },
+    {
+      "bytes": 11149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_released_22441.json",
+      "sha256": "995dbde4b37cdaf442fb14d8d4a0128a009cccadb8f8a63f57273aa89b5ec750"
+    },
+    {
+      "bytes": 7214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_assessment_start_22441.json",
+      "sha256": "ed45455a0285209ae7fc3943469b8689df2c364d07fbafca9b1f1147832b51f5"
+    }
+  ],
+  "schema": "native_qfo_conversion_assessment_milestone_readback_inline_v1",
+  "source_commit": "4c561b6d450747ef09a3b686083b2d7de639cc0c"
+}
