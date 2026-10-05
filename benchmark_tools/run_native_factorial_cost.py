@@ -342,6 +342,28 @@ class ReleaseGuard:
         return result
 
 
+def reviewed_history(request, plan_ref, plan):
+    history_evidence = []
+    if plan.get("history_adoption") is not None and request["index"] == 0:
+        raise ValueError("Index zero is already executed and must not be retried")
+    for i, prior_ref in enumerate(request["history"]):
+        prior = read(prior_ref)
+        if (prior.get("index") != i
+                or prior.get("terminal_reviewed") is not True or prior.get("next_identity_authorized") is not True):
+            raise ValueError("Previous factorial identity unresolved")
+        adoption = None
+        if prior.get("plan") != plan_ref:
+            from benchmark_tools.amend_native_factorial_receipt import adopt
+            adoption = adopt(prior_ref, prior, plan)
+        terminal = verify_terminal(prior["job_id"])
+        fields = terminal["verified"].get("fields", terminal["verified"])
+        if (fields.get("JobState", fields.get("State")) != prior.get("scheduler_state")
+                or fields.get("ExitCode") != prior.get("scheduler_exit_code")):
+            raise ValueError("Historical scheduler outcome changed")
+        history_evidence.append(dict(review=prior_ref, scheduler=terminal, adoption=adoption))
+    return history_evidence
+
+
 def execute(request_ref):
     from benchmark_tools.check_threadripper_runtime import RuntimeChecker
     from benchmark_tools.isolated_numba_cache import fresh_cache
@@ -374,13 +396,7 @@ def execute(request_ref):
     if (not shared_environment(policy) or policy["plan_sha256"] != plan_ref["sha256"]
             or policy["minimum_available_memory_bytes"] != MEMORY):
         raise ValueError("Policy does not bind this shared-host plan")
-    history_evidence = []
-    for i, prior_ref in enumerate(request["history"]):
-        prior = read(prior_ref)
-        if (prior.get("index") != i or prior.get("plan") != plan_ref
-                or prior.get("terminal_reviewed") is not True or prior.get("next_identity_authorized") is not True):
-            raise ValueError("Previous factorial identity unresolved")
-        history_evidence.append(dict(review=prior_ref, scheduler=verify_terminal(prior["job_id"])))
+    history_evidence = reviewed_history(request, plan_ref, plan)
     for ref in [plan_ref, request_ref, *plan["evidence"], *plan["helper_sources"]]:
         check(ref)
     run = runs[request["index"]]

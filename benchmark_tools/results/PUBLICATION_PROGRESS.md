@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Prospective Receipt/History Amendment Tested (2026-10-04)
+
+Resume after the shared-host goal update; previous user turn made progress
+by synchronizing the explicit timing disclosure. Read the full authoritative
+goal. Fresh squeue is empty; sacct confirms22427 FAILED1:0. Finish reviewing,
+commit and push the actual native recovery/receipt fix as5f90537c; remote main
+is independently verified. All496 relevant tests pass again in6.99s.
+
+Add [explicit prospective amendment](../NATIVE_FACTORIAL_RECEIPT_AMENDMENT_20261004.md)
+for source-bound continuation, not an index-zero retry. Preserve all13
+identities, paths, input/settings/runtime/resource bindings and old evidence.
+Only current executor receipt/history control changes; AST checks prove
+unchanged scientific invocation. Require the exact reviewed failed22427 and
+scientific recovery, byte-identical archived executor and all retained pins.
+Reject unapproved cross-plan history, changed science/resources, unrelated
+helper additions and index-zero retries. Re-query prior scheduler outcomes
+before proceeding. No raw observation or original receipt is rewritten.
+
+Final543 relevant tests pass, zero failures/errors/skips, in8.80s. The initial
+1failure/136pass run exposed a test-fixture shared dictionary; deep-copy the
+fixture so a deliberate helper mutation cannot also mutate its expected
+baseline. The534-pass intermediate suite is also retained. These are tests,
+not a new scientific run or actual launch. Next run immutable preparation
+against actual evidence, check fresh capacity, and bind a held index1 job.
+Shared timings retain unknown tool-dependent contention. Full publication
+goal remains active; no unrelated job/service or scientific default change.
+
 ## Full Native P0 Cell Verified; Failed Receipt Preserved And Fixed (2026-10-04)
 
 Previous turn made progress at314fa5cf with the independent output gate.
