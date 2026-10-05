@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Native QfO Validator Queued And Reporter Implemented (2026-10-05)
+
+Previous turn makes concrete progress at pushed8d3106f5: completes native
+QfO conversion22439, retains erroneous held22438 cancellation/correction,
+starts six-endpoint assessment22441 and queues terminal reviewer22440.
+Re-read full goal; actual22437/22441 RUNNING,22440 dependency-pending.
+Observe these original handles without restart or premature accuracy claim.
+
+[Actually submit/gate/release existing admission22442](NATIVE_QFO_ADMISSION_AND_REPORTING_22442.md),
+afterany22441,2CPU/32GiB/six hours/no requeue. Exact source/prepared3.10
+environment/import/input checks, held owner/envelope/dependency/Comment,
+generated batch/argv/syntax, absent destination/all920 pins/safe RAM pass.
+Retain single release, pending/not held with original unfulfilled dependency.
+Validator checks terminal assessment/all15 tasks/endpoint/native arithmetic/
+FAS sample/provenance, not another scoring or inference attempt. Parent
+failure yields a retained validation failure, not imputed scores or retry.
+
+Current resource exporter deliberately refuses QfO scores. Add separate
+full-native QfO reporting CLI and69 new tests outside frozen pins. Seven
+fresh identities, six individually labeled metrics, secondary mean and
+all-input relation coverage; reused P1C0R0/cached values not substituted.
+Explicit supplied-admission/plan hashes and direct native request/review/
+conversion/execution bindings checked; endpoint arithmetic recomputed.
+Missing is null/blank/Unavailable, genuine admitted zero stays zero. Keep
+group-versus-resolved semantics/FAS limits/native SEM caveats. Reporting is
+not transitive admission, independent validation or an efficiency ranking.
+
+All205 joined tests pass,69 new reporter cases, zero failures/errors/skips,
+2.12s. Initial64 pre-edge-case tests retained separately. No native score
+export is executed while22441/22442 are incomplete. No frozen scientific,
+inference/scorer/admitter/helper default is changed; all920 pins rechecked.
+New reporting code does not certify eventual accuracy or completion.
+Independent readback checks actual frozen-plan compatibility without an
+export, all920 pins,205-test XML/69 new cases, exact batch/three receipts,
+pending validator dependency and both original live producer processes.
+
+Next observe original22437/22440 and22441/22442, inspect true terminal
+success/failure. Only successful independent admission supplies actual
+native QfO table input. Successful native review permits fresh index8 gates
+without waiting for QfO scores. Full uncertainty/generalization/provenance/
+release requirements persist. Unknown, potentially tool-dependent shared-
+host effects remain explicit, no quiet window or unrelated-work disruption.
+Goal active; publication readiness unproven.
+
 ## Full-Native QfO Conversion Completed, Assessment Running (2026-10-05)
 
 Previous turn verifies the saved shared-host goal amendment, without a new
