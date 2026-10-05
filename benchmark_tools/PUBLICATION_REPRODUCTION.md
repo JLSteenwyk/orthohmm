@@ -81,6 +81,15 @@ passes 217 tests, including 12 reproduction-guide/manuscript/claim contracts.
 These documentation and reporting checks are not biological validation or
 a replacement for the original native admission.
 
+The later [native SwissTrees family audit](results/NATIVE_QFO_SWISS_FAMILY_COUNTS_20261005.md)
+uses `benchmark_tools.audit_native_qfo_swiss_counts` to read actual raw
+family evidence after admitted-score export. P0C0R0's 18 complete records
+match the retained corrected cell; independent readback also matches all
+10,765 scored reference-pair labels. This neither inherits cached confidence
+intervals nor establishes whole-partition or other-endpoint equality. Six
+fresh native cells remain unavailable. The linked command refuses overwrite
+and does not launch inference/scoring or draw another bootstrap sample.
+
 The old local rc4 archive and35-page review below are preserved snapshots.
 They do not already contain these later native executions, reporting code
 or guide update. No archive/PDF is regenerated merely for a live-job update.

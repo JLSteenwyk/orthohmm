@@ -909,6 +909,16 @@ eight-cell cached factorial or the earlier comparator table.
 [original admission](native_qfo_assessment_admission_22442.json),
 [independent content readback](native_qfo_score_readback_22442.json).
 
+A subsequent [native SwissTrees count audit](NATIVE_QFO_SWISS_FAMILY_COUNTS_20261005.md)
+reads the actual raw output: all 18 family records, including confusion
+counts, represented genes and prior-adjusted statistics, match the retained
+corrected P0C0R0 cell. Separate parser/rational readback also verifies all
+10,765 scored SwissTrees reference-pair labels exactly match. Count-derived
+full-precision F1 is 0.689183963152562; the native decimal endpoint above
+remains unchanged. These bounded checks do not establish whole-partition or
+other-endpoint equivalence. No historical interval is attached, new bootstrap
+draw made or missing native contrast imputed; other QfO uncertainty remains open.
+
 Conversion, scoring and admission are separate from matched inference timing.
 Timings are observed shared-Threadripper measurements: competing analyses
 may affect CPU, memory bandwidth and I/O by an unknown, tool-dependent

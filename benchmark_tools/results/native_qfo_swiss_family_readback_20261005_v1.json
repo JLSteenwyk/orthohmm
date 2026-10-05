@@ -1,0 +1,198 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22437,22440",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,NodeList"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22437|RUNNING|0:0|01:26:40|64|bizon\n22437.batch|RUNNING|0:0|01:26:40|64|bizon\n22437.0|RUNNING|0:0|01:25:48|64|bizon\n22440|PENDING|0:0|00:00:00|0|None assigned\n"
+  },
+  "checked_direct_records": 27,
+  "family_records_checked": 18,
+  "helper_sources_checked": 920,
+  "historical_intervals_attached": false,
+  "limitations": [
+    "Independent raw readback covers only the 10,765 scored SwissTrees reference pairs, not whole partitions or other endpoints.",
+    "Native decimal F1 is preserved; rational count-derived values differ only by scorer decimal output precision.",
+    "One native cell has no native contrast or paired interval; six fresh cells remain unavailable.",
+    "No inference/scoring/admission/FAS sampling/resource replay, new scientific settings, helper edits or unrelated-work disruption.",
+    "Shared-host contention has unknown, potentially tool-dependent effects; no isolated timing claim."
+  ],
+  "live_process_probe": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "-c",
+      "import json,psutil; p=psutil.Process(265470); print(json.dumps(dict(pid=p.pid,create_time=p.create_time(),affinity=p.cpu_affinity(),argv=p.cmdline())))"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"pid\": 265470, \"create_time\": 1791220584.63, \"affinity\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31], \"argv\": [\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python\", \"-B\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.py\", \"--native\", \"--plan\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json\", \"--plan-sha256\", \"6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b\", \"--index\", \"7\"]}\n"
+  },
+  "native_decimal_f1": 0.6891839606644314,
+  "native_decimal_f1_unchanged": true,
+  "native_raw": {
+    "bytes": 39728,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+    "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+  },
+  "new_bootstrap_draws": 0,
+  "new_tests": 21,
+  "observed_unix_ns": 1791225725976157713,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-"
+  ],
+  "prepared_python_help": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "-m",
+      "benchmark_tools.audit_native_qfo_swiss_counts",
+      "--help"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "usage: audit_native_qfo_swiss_counts.py [-h] --snapshot SNAPSHOT\n                                        --snapshot-sha256 SNAPSHOT_SHA256\n                                        --retained-counts RETAINED_COUNTS\n                                        --output OUTPUT\n\nRead native SwissTrees family counts without inheriting cached intervals.\n\noptions:\n  -h, --help            show this help message and exit\n  --snapshot SNAPSHOT\n  --snapshot-sha256 SNAPSHOT_SHA256\n  --retained-counts RETAINED_COUNTS\n  --output OUTPUT\n"
+  },
+  "preserved_initial_test_failure": {
+    "bytes": 3979,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_counts_tests_20261005.xml",
+    "sha256": "634679adf8f96824125b72538cf605fa973a823c6051b9a1510bd953810b9017"
+  },
+  "publication_ready": false,
+  "rational_aggregate": {
+    "F1": 0.689183963152562,
+    "PPV": 0.6439400942516949,
+    "TPR": 0.741266050122766
+  },
+  "rational_family_statistics": {
+    "APP": {
+      "F1": 0.7164179104477612,
+      "PPV": 0.5614035087719298,
+      "TPR": 0.9896907216494846
+    },
+    "ASTER": {
+      "F1": 0.4012738853503185,
+      "PPV": 0.984375,
+      "TPR": 0.252
+    },
+    "BAMBI": {
+      "F1": 0.7284768211920529,
+      "PPV": 0.9482758620689655,
+      "TPR": 0.5913978494623656
+    },
+    "BAR": {
+      "F1": 0.6885245901639344,
+      "PPV": 0.7620967741935484,
+      "TPR": 0.627906976744186
+    },
+    "CASP": {
+      "F1": 0.7175572519083969,
+      "PPV": 0.6103896103896104,
+      "TPR": 0.8703703703703703
+    },
+    "CITE": {
+      "F1": 0.6648351648351648,
+      "PPV": 0.5845410628019324,
+      "TPR": 0.7707006369426752
+    },
+    "Clusterin": {
+      "F1": 0.6532663316582915,
+      "PPV": 0.49242424242424243,
+      "TPR": 0.9701492537313433
+    },
+    "GH14": {
+      "F1": 0.3870967741935484,
+      "PPV": 0.3157894736842105,
+      "TPR": 0.5
+    },
+    "HOX": {
+      "F1": 0.3333333333333333,
+      "PPV": 0.3111111111111111,
+      "TPR": 0.358974358974359
+    },
+    "MAPT": {
+      "F1": 0.5797101449275363,
+      "PPV": 0.5714285714285714,
+      "TPR": 0.5882352941176471
+    },
+    "NOX": {
+      "F1": 0.5294117647058824,
+      "PPV": 0.40084835630965004,
+      "TPR": 0.7793814432989691
+    },
+    "POP": {
+      "F1": 0.7272727272727273,
+      "PPV": 0.6199261992619927,
+      "TPR": 0.8795811518324608
+    },
+    "PSEN": {
+      "F1": 0.8088978766430738,
+      "PPV": 0.8695652173913043,
+      "TPR": 0.7561436672967864
+    },
+    "RPS": {
+      "F1": 0.8780487804878049,
+      "PPV": 0.9642857142857143,
+      "TPR": 0.8059701492537313
+    },
+    "SERC": {
+      "F1": 0.8373655913978495,
+      "PPV": 0.8251655629139073,
+      "TPR": 0.849931787175989
+    },
+    "SUMF": {
+      "F1": 0.6470588235294118,
+      "PPV": 0.4925373134328358,
+      "TPR": 0.9428571428571428
+    },
+    "TRFE": {
+      "F1": 0.46770601336302897,
+      "PPV": 0.31722054380664655,
+      "TPR": 0.8898305084745762
+    },
+    "VATB": {
+      "F1": 0.9391796322489392,
+      "PPV": 0.9595375722543352,
+      "TPR": 0.9196675900277008
+    }
+  },
+  "raw_confusion_counts_identical": true,
+  "raw_pair_labels_checked": 10765,
+  "raw_pair_labels_identical": true,
+  "raw_represented_members_identical": true,
+  "report": {
+    "bytes": 30311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+    "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+  },
+  "retained_raw": {
+    "bytes": 39736,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_0/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-corrected-factorial-p0-c0-r0_abf2b4fafb7d_raw.txt.gz",
+    "sha256": "6198baaae092c45524f3bb6765287bd983f1cbe32cc5a96f152eab8f6b584cdd"
+  },
+  "schema": "native_qfo_swiss_family_readback_v1",
+  "source": {
+    "bytes": 8195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+    "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+  },
+  "test_counts": {
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 143
+  },
+  "test_report": {
+    "bytes": 21187,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_counts_joined_tests_20261005.xml",
+    "sha256": "d4301e832ea854c67ee912d9b002a41ff9666f551b2a3937415b6e404ff72ae5"
+  }
+}

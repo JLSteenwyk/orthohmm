@@ -1,5 +1,42 @@
 # Publication Progress
 
+## First Native QfO SwissTrees Family Evidence Verified (2026-10-05)
+
+Previous goal turn made concrete progress at pushed95d8f528. Re-read the full
+goal; original22437 is RUNNING and reviewer22440 dependency-pending. No
+restart, duplicate review or premature index8 submission. Independently
+admitted first-native QfO scores remain intact.
+
+[New family-count audit](NATIVE_QFO_SWISS_FAMILY_COUNTS_20261005.md) reads
+actual native SwissTrees raw evidence and validates native score snapshot/
+execution/admission bindings, all18 families, exact reference labels/members
+and prior-adjusted macro precision/recall/F1. All18 records and reconstructed
+aggregate exactly match the corresponding retained corrected-factorial cell.
+Independent parser/rational readback also verifies all10,765 scored
+SwissTrees pair labels and represented members match. This is bounded to
+that reference universe, not whole partition, other endpoints or all submitted
+relations. Native decimal F1 remains.6891839606644314; full-precision count
+reconstruction.689183963152562 is not a replacement or biological difference.
+
+All143 joined tests pass in2.62s, zero failures/errors/skips, including21
+new audit cases. Preserve initial20 passes/one failed fixture assertion:
+the selected alternate cell had different decisions but identical counts;
+use the genuinely count-changing fixture without changing production code.
+Final manuscript/claim/guide integration also passes155 tests in3.84s,
+including12 existing documentation contracts, zero failures/errors/skips.
+Actual audit executes once with1 cell/18 records. Independent readback
+checks22 direct inputs, helpers/source, final test counts, all920 unchanged
+frozen helpers, prepared3.10 CLI-help and original live PID265470/create/
+affinity. New audit/test lie outside frozen pins.
+
+No cached interval is inherited, new bootstrap drawn, native contrast imputed
+or independent biological claim made. Six native QfO cells remain unavailable;
+observe original22437/22440 and apply fresh successor gates only after full
+terminal review. No scientific settings/defaults, expensive inference/scoring/
+resource diagnostics, FAS shuffle or unrelated work are altered/repeated.
+Unknown tool-dependent shared-host timing effects remain explicit. Full
+uncertainty/provenance/release work persists; goal active/readiness unproven.
+
 ## First Native QfO Scores Admitted And Exported (2026-10-05)
 
 The score-admission checkpoint verifies original22437/22441, not a restart.

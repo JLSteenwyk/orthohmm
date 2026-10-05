@@ -1,0 +1,1084 @@
+{
+  "cells": [
+    {
+      "admission": {
+        "bytes": 1321308,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+        "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+      },
+      "aggregate": {
+        "F1": 0.689183963152562,
+        "PPV": 0.6439400942516949,
+        "TPR": 0.741266050122766
+      },
+      "cell": "p0_c0_r0",
+      "differing_families": [],
+      "families": [
+        {
+          "counts_without_prior": {
+            "FN": 0,
+            "FP": 148,
+            "TN": 13,
+            "TP": 190
+          },
+          "family": "APP",
+          "represented_genes": [
+            "A7RTM2",
+            "B0V0E5",
+            "B7QN64",
+            "C3XR12",
+            "E1C440",
+            "F1LRS5",
+            "F1MIL3",
+            "F1P0A7",
+            "F1P603",
+            "F6TDQ9",
+            "F6YNC0",
+            "F7DF67",
+            "G3R2X8",
+            "H2LQ91",
+            "H2LYH0",
+            "H2Q546",
+            "P05067",
+            "P08592",
+            "P12023",
+            "P15943",
+            "P51693",
+            "Q03157",
+            "Q06335",
+            "Q06481",
+            "Q10651",
+            "Q5IS80",
+            "Q7QCS9"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.7164179104477612,
+            "PPV": 0.5614035087719298,
+            "TPR": 0.9896907216494846
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 372,
+            "FP": 0,
+            "TN": 0,
+            "TP": 124
+          },
+          "family": "ASTER",
+          "represented_genes": [
+            "A0BRT2",
+            "A4D9G4",
+            "A7EFA2",
+            "A7RTY3",
+            "A8IJC4",
+            "A9TN27",
+            "B7P4G5",
+            "C3ZJ28",
+            "E3JVR2",
+            "F1PKC8",
+            "F4NWI3",
+            "F6QLB4",
+            "F6UJ88",
+            "G3RC27",
+            "H2QFG1",
+            "H3GWW4",
+            "Q09714",
+            "Q09993",
+            "Q0V6H7",
+            "Q10CL8",
+            "Q12160",
+            "Q2M2T6",
+            "Q5KPK8",
+            "Q6CDT4",
+            "Q6PC46",
+            "Q6ZWX0",
+            "Q7QIP7",
+            "Q7SGX6",
+            "Q86H65",
+            "Q9SD88",
+            "Q9VRJ8",
+            "Q9Y284"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.40127388535031844,
+            "PPV": 0.984375,
+            "TPR": 0.252
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 36,
+            "FP": 1,
+            "TN": 1,
+            "TP": 53
+          },
+          "family": "BAMBI",
+          "represented_genes": [
+            "A0A5F8H622",
+            "B7PBM8",
+            "C3ZPM5",
+            "D6X0I9",
+            "E1AWU3",
+            "G3QPL0",
+            "H2LI24",
+            "K7AAP2",
+            "Q13145",
+            "Q1RMX1",
+            "Q6GQM7",
+            "Q91XN4",
+            "Q9D0L6",
+            "Q9DFZ0"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.728476821192053,
+            "PPV": 0.9482758620689655,
+            "TPR": 0.5913978494623656
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 222,
+            "FP": 116,
+            "TN": 664,
+            "TP": 376
+          },
+          "family": "BAR",
+          "represented_genes": [
+            "A4FUG5",
+            "A7ENZ2",
+            "A7S0R8",
+            "A7SPL1",
+            "A9UPC6",
+            "B1H1H2",
+            "B7PLE6",
+            "B7PU93",
+            "C3YHW0",
+            "C3YIY0",
+            "D3Z6Q9",
+            "E7FD40",
+            "F1NZ04",
+            "F1PTG7",
+            "F1PZH8",
+            "F1QJB5",
+            "F1QK94",
+            "F4NYQ0",
+            "F6XMZ3",
+            "F6YXG1",
+            "F6ZUK5",
+            "G3QJ12",
+            "G3R5Y4",
+            "G3RIZ8",
+            "H2M5R5",
+            "H2Q5Y0",
+            "H2QIN5",
+            "H2R019",
+            "H2RDE5",
+            "O00499",
+            "O08539",
+            "O08839",
+            "P25343",
+            "P49418",
+            "Q0UGL3",
+            "Q21004",
+            "Q4WTS7",
+            "Q54IA6",
+            "Q54NT2",
+            "Q5AFE4",
+            "Q5KLL3",
+            "Q5ZKL7",
+            "Q68FR2",
+            "Q68FW8",
+            "Q6CCM8",
+            "Q7KLE5",
+            "Q7Q9R8",
+            "Q7S814",
+            "Q7TQF7",
+            "Q9JI08",
+            "Q9NQY0",
+            "Q9UBW5",
+            "Q9UUM7"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.6885245901639344,
+            "PPV": 0.7620967741935484,
+            "TPR": 0.627906976744186
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 5,
+            "FP": 28,
+            "TN": 1875,
+            "TP": 45
+          },
+          "family": "CASP",
+          "represented_genes": [
+            "A3A2W2",
+            "O23413",
+            "P0CB17",
+            "Q0DHM7",
+            "Q0ILZ7",
+            "Q0IN16",
+            "Q10EJ2",
+            "Q10QH3",
+            "Q1PFB8",
+            "Q2QNE3",
+            "Q2R2T4",
+            "Q3EA54",
+            "Q3EB59",
+            "Q3ECT8",
+            "Q501G6",
+            "Q56X75",
+            "Q5JM57",
+            "Q5N794",
+            "Q66GI1",
+            "Q67W83",
+            "Q67X40",
+            "Q6EP58",
+            "Q6ETN2",
+            "Q6K478",
+            "Q6NPF8",
+            "Q6YT98",
+            "Q6YW53",
+            "Q6Z1Y7",
+            "Q6Z2U5",
+            "Q7XPU9",
+            "Q7XUV7",
+            "Q84UT5",
+            "Q84WP5",
+            "Q8GWD5",
+            "Q8L7R5",
+            "Q8L8U9",
+            "Q8L8Z1",
+            "Q8L924",
+            "Q8L9B5",
+            "Q8LE26",
+            "Q8VZQ3",
+            "Q945M8",
+            "Q9ARX2",
+            "Q9CAX3",
+            "Q9FE29",
+            "Q9FFT2",
+            "Q9FFZ7",
+            "Q9FI10",
+            "Q9FNE8",
+            "Q9LI17",
+            "Q9LR57",
+            "Q9LUL1",
+            "Q9LXF3",
+            "Q9LZM5",
+            "Q9M0L3",
+            "Q9M2U0",
+            "Q9SIH4",
+            "Q9SKN3",
+            "Q9SQU2",
+            "Q9SUP0",
+            "Q9XI72",
+            "Q9ZQI2",
+            "Q9ZT81"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.7175572519083969,
+            "PPV": 0.6103896103896104,
+            "TPR": 0.8703703703703703
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 34,
+            "FP": 84,
+            "TN": 141,
+            "TP": 119
+          },
+          "family": "CITE",
+          "represented_genes": [
+            "A7SUP3",
+            "C3YX71",
+            "E2RQM2",
+            "F1QI18",
+            "F1R408",
+            "F6VBX1",
+            "F6VSF3",
+            "G3QDG8",
+            "H2LW29",
+            "H2M0T9",
+            "H2MGS0",
+            "H2PYS8",
+            "J9JHR0",
+            "O35740",
+            "P97769",
+            "Q0VCT9",
+            "Q1L8S4",
+            "Q2HJ78",
+            "Q6NX30",
+            "Q96RK1",
+            "Q99966",
+            "Q99967",
+            "Q99MA0",
+            "Q99MA1",
+            "Q9BDI3",
+            "Q9DDW4",
+            "Q9I8K7",
+            "Q9WUL8"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.6648351648351649,
+            "PPV": 0.5845410628019324,
+            "TPR": 0.7707006369426752
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 0,
+            "FP": 65,
+            "TN": 8,
+            "TP": 63
+          },
+          "family": "Clusterin",
+          "represented_genes": [
+            "A5PMY8",
+            "F1MWI1",
+            "F1N8T1",
+            "F6UX07",
+            "F7G367",
+            "G3RL83",
+            "H2MTZ0",
+            "P05371",
+            "P10909",
+            "P17697",
+            "Q06890",
+            "Q15846",
+            "Q3ZRW6",
+            "Q3ZRW7",
+            "Q3ZRW9",
+            "Q5SPR2",
+            "Q95KN1"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.6532663316582914,
+            "PPV": 0.49242424242424243,
+            "TPR": 0.9701492537313433
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 4,
+            "FP": 11,
+            "TN": 86,
+            "TP": 4
+          },
+          "family": "GH14",
+          "represented_genes": [
+            "O23553",
+            "O65258",
+            "O80831",
+            "P25853",
+            "Q10LG9",
+            "Q10RZ1",
+            "Q5NB81",
+            "Q652P5",
+            "Q8L762",
+            "Q8VYW2",
+            "Q9AV88",
+            "Q9FH80",
+            "Q9FM68",
+            "Q9LIR6",
+            "Q9V7A4"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.3870967741935484,
+            "PPV": 0.3157894736842105,
+            "TPR": 0.5
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 98,
+            "FP": 122,
+            "TN": 1266,
+            "TP": 54
+          },
+          "family": "HOX",
+          "represented_genes": [
+            "A0A6I8Q068",
+            "A2BE68",
+            "C3XTC7",
+            "C3XTC8",
+            "C3XTD0",
+            "C3XTD1",
+            "C3XTD2",
+            "E1BQM6",
+            "E1BRT6",
+            "F6PXE7",
+            "F6PXR2",
+            "F7BEF0",
+            "F7BEI0",
+            "F7D5A4",
+            "F7D5I9",
+            "O43248",
+            "P09087",
+            "P17482",
+            "P24342",
+            "P24343",
+            "P24344",
+            "P28356",
+            "P28358",
+            "P31258",
+            "P31260",
+            "P31269",
+            "P31270",
+            "P31271",
+            "P31274",
+            "P31275",
+            "P31276",
+            "P31277",
+            "P35452",
+            "P35453",
+            "P79724",
+            "Q1ECY2",
+            "Q58EL0",
+            "Q6JIY4",
+            "Q6JIY5",
+            "Q6W990",
+            "Q8AWY2",
+            "Q90469",
+            "Q90470",
+            "Q90471",
+            "Q90472",
+            "Q90X25",
+            "Q92826",
+            "Q98924",
+            "Q9DDU0",
+            "Q9DDU1",
+            "Q9NYD6",
+            "Q9PWL6",
+            "Q9PWM2",
+            "Q9PWM6",
+            "Q9YGT0",
+            "Q9YGT5"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.3333333333333333,
+            "PPV": 0.3111111111111111,
+            "TPR": 0.358974358974359
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 12,
+            "FP": 13,
+            "TN": 35,
+            "TP": 18
+          },
+          "family": "MAPT",
+          "represented_genes": [
+            "F1MEW3",
+            "F6VD01",
+            "H2R011",
+            "P10636",
+            "P11137",
+            "P20357",
+            "P27546",
+            "P27816",
+            "P29172",
+            "P36225",
+            "Q5M7W5",
+            "Q5YCW0",
+            "Q5YCW1"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.5797101449275363,
+            "PPV": 0.5714285714285714,
+            "TPR": 0.5882352941176471
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 105,
+            "FP": 563,
+            "TN": 181,
+            "TP": 376
+          },
+          "family": "NOX",
+          "represented_genes": [
+            "A0A3B3IDP9",
+            "A0A3Q2U7E3",
+            "A0A3Q2UE93",
+            "A0A5F4CEF0",
+            "A7E3L1",
+            "A7RPH5",
+            "A7SCJ4",
+            "A7SD95",
+            "A9V5V7",
+            "C3XUP1",
+            "C3YUJ9",
+            "C3ZTT7",
+            "E1BFF3",
+            "E1BPJ7",
+            "F1MQX5",
+            "F1NVG4",
+            "F1PL03",
+            "F1PSM8",
+            "F6U2X4",
+            "F6YS00",
+            "F6Z703",
+            "F7AMC8",
+            "F7CLH6",
+            "F7ELK5",
+            "G3QVH2",
+            "G3QXY3",
+            "G3RI51",
+            "H2L879",
+            "H2M5R6",
+            "H2QTY3",
+            "H2R4R9",
+            "H2R516",
+            "O46522",
+            "P04839",
+            "Q505H9",
+            "Q61093",
+            "Q672J9",
+            "Q672K1",
+            "Q7PS77",
+            "Q7RW00",
+            "Q86GL4",
+            "Q8CIZ9",
+            "Q924V1",
+            "Q9ERL1",
+            "Q9HBY0",
+            "Q9JHI8",
+            "Q9NPH5",
+            "Q9WV87",
+            "Q9XYS3",
+            "Q9Y5S8"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.5294117647058824,
+            "PPV": 0.40084835630965004,
+            "TPR": 0.7793814432989691
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 21,
+            "FP": 101,
+            "TN": 273,
+            "TP": 166
+          },
+          "family": "POP",
+          "represented_genes": [
+            "A0A2J8M3H2",
+            "A5PJG2",
+            "B1H1F6",
+            "B1H1G2",
+            "E1BB94",
+            "E2R5H9",
+            "F1NPM0",
+            "F1R6V1",
+            "F6PGY0",
+            "F6VQE7",
+            "F6ZS78",
+            "F6ZWG8",
+            "F6ZWH6",
+            "G3N3W7",
+            "G3QNZ3",
+            "G3RLV4",
+            "G3RSB1",
+            "H2LXG3",
+            "H2MZF5",
+            "H2QTG8",
+            "H2QTG9",
+            "J9NU29",
+            "J9NZA1",
+            "Q3BCU4",
+            "Q5PQZ7",
+            "Q6JWV8",
+            "Q6P722",
+            "Q8NE79",
+            "Q9DG23",
+            "Q9ES81",
+            "Q9ES82",
+            "Q9ES83",
+            "Q9HBU9",
+            "Q9HBV1"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.7272727272727273,
+            "PPV": 0.6199261992619927,
+            "TPR": 0.8795811518324608
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 127,
+            "FP": 58,
+            "TN": 12,
+            "TP": 398
+          },
+          "family": "PSEN",
+          "represented_genes": [
+            "A7ST19",
+            "A9S846",
+            "A9VBA9",
+            "B8BVL0",
+            "B8C3Y7",
+            "C3Z2C5",
+            "C7J054",
+            "F1NGP7",
+            "F4NZK7",
+            "F6RA92",
+            "F7C949",
+            "G3QI95",
+            "G3QLC6",
+            "H2N0U7",
+            "H2Q8K1",
+            "H2R821",
+            "H3GE34",
+            "H3GSQ0",
+            "H3GZZ9",
+            "O02194",
+            "O64668",
+            "O88777",
+            "P49768",
+            "P49769",
+            "P49810",
+            "P97887",
+            "Q4JIM4",
+            "Q4QF26",
+            "Q54DE8",
+            "Q54ET2",
+            "Q7PR98",
+            "Q90ZE4",
+            "Q9SIK7",
+            "Q9XT96",
+            "Q9XT97"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.8088978766430739,
+            "PPV": 0.8695652173913043,
+            "TPR": 0.7561436672967864
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 11,
+            "FP": 0,
+            "TN": 3,
+            "TP": 52
+          },
+          "family": "RPS",
+          "represented_genes": [
+            "A8IWQ1",
+            "O66430",
+            "P21471",
+            "P35027",
+            "P35686",
+            "P54029",
+            "P61929",
+            "Q10P27",
+            "Q7NEF1",
+            "Q8IK02",
+            "Q8IKM3",
+            "Q8LNL2"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.8780487804878049,
+            "PPV": 0.9642857142857143,
+            "TPR": 0.8059701492537313
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 108,
+            "FP": 130,
+            "TN": 44,
+            "TP": 621
+          },
+          "family": "SERC",
+          "represented_genes": [
+            "A0A6I8Q293",
+            "A0C5A5",
+            "A0CSR0",
+            "A6NH21",
+            "A8WCG0",
+            "A9UY97",
+            "B7Q347",
+            "C3Y299",
+            "C3YMU1",
+            "E7F5D2",
+            "F7A8J9",
+            "O45719",
+            "Q0JBW5",
+            "Q12116",
+            "Q13530",
+            "Q494Q0",
+            "Q4FZV1",
+            "Q4Q8G8",
+            "Q4X0I0",
+            "Q54UF8",
+            "Q5KDT2",
+            "Q5U2V2",
+            "Q5VR48",
+            "Q5XK03",
+            "Q5ZME5",
+            "Q63175",
+            "Q6CHG9",
+            "Q6K688",
+            "Q7QCD1",
+            "Q7SAQ3",
+            "Q7SZW7",
+            "Q7TNK0",
+            "Q803X0",
+            "Q84SS3",
+            "Q86VE9",
+            "Q8BHJ6",
+            "Q8VZI4",
+            "Q95XV3",
+            "Q96SA4",
+            "Q9HDY3",
+            "Q9NRX5",
+            "Q9QZI8",
+            "Q9S9L9"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.8373655913978495,
+            "PPV": 0.8251655629139073,
+            "TPR": 0.849931787175989
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 0,
+            "FP": 32,
+            "TN": 3,
+            "TP": 31
+          },
+          "family": "SUMF",
+          "represented_genes": [
+            "A9V4V4",
+            "A9V5J3",
+            "F1NWF3",
+            "F5HMR5",
+            "F7EQ26",
+            "H2LCF1",
+            "H2MHZ5",
+            "Q58CP2",
+            "Q5XJ75",
+            "Q8NBJ7",
+            "Q8NBK3",
+            "Q9W0U6"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.6470588235294117,
+            "PPV": 0.4925373134328358,
+            "TPR": 0.9428571428571428
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 11,
+            "FP": 224,
+            "TN": 127,
+            "TP": 103
+          },
+          "family": "TRFE",
+          "represented_genes": [
+            "A5A6I6",
+            "D3ZAB1",
+            "D4ADK7",
+            "E1BG25",
+            "E1BVL8",
+            "E7F2E3",
+            "F1NVN3",
+            "F1PR54",
+            "F1R9Z0",
+            "G3QYG5",
+            "G3R4X1",
+            "G3RDQ3",
+            "G3X6N3",
+            "H2M6H2",
+            "H2MFE8",
+            "H2N079",
+            "H2QMG6",
+            "H2QP17",
+            "H9H969",
+            "P02787",
+            "P02788",
+            "P02789",
+            "P08071",
+            "P08582",
+            "P12346",
+            "P24627",
+            "Q0VIL3",
+            "Q501K5",
+            "Q921I1",
+            "Q9DBD0",
+            "Q9R0R1"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.46770601336302897,
+            "PPV": 0.31722054380664655,
+            "TPR": 0.8898305084745762
+          }
+        },
+        {
+          "counts_without_prior": {
+            "FN": 27,
+            "FP": 12,
+            "TN": 9,
+            "TP": 330
+          },
+          "family": "VATB",
+          "represented_genes": [
+            "A8BPV3",
+            "A9SJK8",
+            "A9SP56",
+            "B7QDF5",
+            "D3ZZS8",
+            "F6SX31",
+            "F7A8C2",
+            "P11574",
+            "P11593",
+            "P15313",
+            "P16140",
+            "P21281",
+            "P31409",
+            "P31411",
+            "P62814",
+            "P62815",
+            "Q0VGW2",
+            "Q19626",
+            "Q4Q821",
+            "Q4X0J7",
+            "Q59PT0",
+            "Q5KBW0",
+            "Q76NU1",
+            "Q86WQ0",
+            "Q8W4E2",
+            "Q91YH6",
+            "Q9N5A0",
+            "Q9SZN1"
+          ],
+          "statistics_with_prior": {
+            "F1": 0.9391796322489391,
+            "PPV": 0.9595375722543352,
+            "TPR": 0.9196675900277008
+          }
+        }
+      ],
+      "index": 6,
+      "native_endpoint_f1": 0.6891839606644314,
+      "native_job_id": 22435,
+      "raw_file": {
+        "bytes": 39728,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+        "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+      },
+      "retained_aggregate_identical": true,
+      "retained_family_records_identical": true
+    }
+  ],
+  "checked_inputs": [
+    {
+      "bytes": 14657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/report.json",
+      "sha256": "6bca0b771af5604f76dfe7796fa1590fdfda71e78f7599c28cd6f1555d6a1c13"
+    },
+    {
+      "bytes": 176438,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_counts.json",
+      "sha256": "c9d8bf02ef6f287c56d073fa61f165c982caf834a94fc6e44e6589f03e46eba6"
+    },
+    {
+      "bytes": 12830,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_factorial_progress.py",
+      "sha256": "af87cf899b8ae474822ea81a922643ab2c229275f99a1df57d5149b0d280448a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 300029,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/results.json",
+      "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+    },
+    {
+      "bytes": 41936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+      "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+    },
+    {
+      "bytes": 11303409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+      "sha256": "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490"
+    },
+    {
+      "bytes": 1287135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/results.json",
+      "sha256": "7d5e25171f09c949f89a52452986e7d2ab8d508685d4ef485015653861ed44d2"
+    },
+    {
+      "bytes": 1277793,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/preflight.json",
+      "sha256": "58f51b777230a6e7720075c32f96ac505f55b5e1e3a0f612939b798b6f92dec1"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    },
+    {
+      "bytes": 974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/scores.tsv",
+      "sha256": "924982dbd3f0de09ce158e2efa85d9d25cd208861978db2e46df7e816818eec2"
+    },
+    {
+      "bytes": 3191,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/scores.md",
+      "sha256": "cb6b4395085655869f10f4ea9f60baea32031c2a3bddedd7e7dcb217bd41cc60"
+    },
+    {
+      "bytes": 14117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_factorial_scores.py",
+      "sha256": "f0332ed8986693da606ee85c113d997aeb2227e6fbf7abbd5f99c11949305428"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 39736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/corrected_factorial_0/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-corrected-factorial-p0-c0-r0_abf2b4fafb7d_raw.txt.gz",
+      "sha256": "6198baaae092c45524f3bb6765287bd983f1cbe32cc5a96f152eab8f6b584cdd"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 1287135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/results.json",
+      "sha256": "7d5e25171f09c949f89a52452986e7d2ab8d508685d4ef485015653861ed44d2"
+    },
+    {
+      "bytes": 39728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+      "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+    }
+  ],
+  "count_conversion": "native confusion count = raw one-direction relation count / 2 + 1",
+  "families": [
+    "APP",
+    "ASTER",
+    "BAMBI",
+    "BAR",
+    "CASP",
+    "CITE",
+    "Clusterin",
+    "GH14",
+    "HOX",
+    "MAPT",
+    "NOX",
+    "POP",
+    "PSEN",
+    "RPS",
+    "SERC",
+    "SUMF",
+    "TRFE",
+    "VATB"
+  ],
+  "helpers": [
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 9202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 14117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_factorial_scores.py",
+      "sha256": "f0332ed8986693da606ee85c113d997aeb2227e6fbf7abbd5f99c11949305428"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    }
+  ],
+  "historical_intervals_attached": false,
+  "independent_confirmation": false,
+  "limitations": [
+    "Reads actual raw counts only for supplied native admissions; missing native cells are not imputed.",
+    "Exact reference truth and members are anchored to retained corrected-reference raw evidence.",
+    "Identical family sufficient statistics do not prove identical pair decisions or whole partitions.",
+    "No contrast, bootstrap interval or cached interval is attached by this count audit.",
+    "Count-derived F1 uses full precision; native decimal endpoint values remain unchanged.",
+    "SwissTrees only: no uncertainty for other QfO endpoints or the secondary mean.",
+    "Eighteen development-exposed families may not be exchangeable; this is not independent confirmation.",
+    "Initial HMM search remains on; downstream P-off is not a total-HMM control.",
+    "R changes group-clique to resolved-pair semantics, not only group splitting.",
+    "No inference/scoring/FAS rerun, raw-resource replay, new job or isolated efficiency claim."
+  ],
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "publication_ready": false,
+  "reference": {
+    "bytes": 318907,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+    "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+  },
+  "reference_relation_count": 10765,
+  "retained_counts": {
+    "bytes": 176438,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_counts.json",
+    "sha256": "c9d8bf02ef6f287c56d073fa61f165c982caf834a94fc6e44e6589f03e46eba6"
+  },
+  "schema": "native_qfo_swiss_family_count_audit_v1",
+  "snapshot": {
+    "bytes": 14657,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/report.json",
+    "sha256": "6bca0b771af5604f76dfe7796fa1590fdfda71e78f7599c28cd6f1555d6a1c13"
+  },
+  "source": {
+    "bytes": 8195,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+    "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+  },
+  "status": "supplied_native_swiss_family_counts_verified",
+  "unavailable_cells": [
+    "p0_c0_r1",
+    "p0_c1_r0",
+    "p0_c1_r1",
+    "p1_c0_r1",
+    "p1_c1_r0",
+    "p1_c1_r1"
+  ]
+}
