@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+import pickle
 import platform
 import sys
 import time
@@ -16,7 +17,6 @@ from benchmark_tools.diagnose_candidate_trace_variation import load_engine
 from benchmark_tools.link_factorial_scaling_resources import compare, partition
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 from benchmark_tools.probe_ob_candidate_order_scores import LABELS, factorial_arrays
-from benchmark_tools.replay_high_sensitivity import load_replay_input
 
 
 def save(path, value):
@@ -57,7 +57,7 @@ def prepare(preparation_ref, score_ref, output):
         raise ValueError("Require complete native checkpoint bindings")
     sources = [record(Path(__file__).with_name(name)) for name in (
         "probe_native_candidate_order_scores.py", "probe_ob_candidate_order_scores.py",
-        "probe_installed_ob_graph.py", "replay_high_sensitivity.py",
+        "probe_installed_ob_graph.py", "trace_ob_initial_edges.py",
         "diagnose_candidate_trace_variation.py", "link_factorial_scaling_resources.py",
         "prepare_ob_candidate_neighborhood.py", "score_ygob_groups.py")]
     refs = [preparation_ref, score_ref, arm["seed_partition"], prep["cache"], engine,
@@ -100,6 +100,27 @@ def validate_species(old, fresh):
         raise ValueError("Species memberships differ")
 
 
+def load_trusted_hits(cache_ref):
+    check(cache_ref)
+    with Path(cache_ref["path"]).open("rb") as stream:
+        payload = pickle.load(stream)
+    if (not isinstance(payload, dict) or not {"all_gene_ids", "gene_to_species", "all_hits"} <= payload.keys()
+            or not isinstance(payload["all_hits"], dict) or not isinstance(payload["gene_to_species"], dict)):
+        raise ValueError("Malformed retained hit cache")
+    names = sorted(payload["all_gene_ids"])
+    if not names or len(names) != len(set(names)) or any(not isinstance(g, str) or not g for g in names):
+        raise ValueError("Invalid retained gene names")
+    lookup = {g: i for i, g in enumerate(names)}
+    labels = sorted({str(payload["gene_to_species"][g]) for g in names})
+    label_ids = {label: i for i, label in enumerate(labels)}
+    species = np.fromiter((label_ids[str(payload["gene_to_species"][g])] for g in names), dtype=np.int32, count=len(names))
+    hits = payload["all_hits"]
+    q = np.fromiter((lookup[a] for a, b in hits), dtype=np.int32, count=len(hits))
+    t = np.fromiter((lookup[b] for a, b in hits), dtype=np.int32, count=len(hits))
+    s = np.fromiter(hits.values(), dtype=np.float64, count=len(hits))
+    return names, species, q, t, s
+
+
 def run(plan_ref):
     check(plan_ref)
     plan = json.loads(Path(plan_ref["path"]).read_text())
@@ -120,7 +141,7 @@ def run(plan_ref):
     rows, partitions = [], {}
     try:
         # This trusted local pickle is loaded only after its retained checksum check.
-        names, species, q, t, s, _ = load_replay_input(pickle_path=Path(plan["cache"]["path"]))
+        names, species, q, t, s = load_trusted_hits(plan["cache"])
         checkpoint = Path(plan["checkpoint"])
         fresh_names = (checkpoint / "gene_names.txt").read_text().splitlines()
         if names != fresh_names:

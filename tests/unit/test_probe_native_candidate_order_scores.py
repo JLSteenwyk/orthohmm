@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
-from benchmark_tools.probe_native_candidate_order_scores import indexed_seed, prepare, run, validate_species
+from benchmark_tools.probe_native_candidate_order_scores import indexed_seed, load_trusted_hits, prepare, run, validate_species
 from benchmark_tools.probe_ob_candidate_order_scores import LABELS
 
 
@@ -35,6 +35,17 @@ def test_species_bijection_not_numeric_label_equality():
 def test_species_change_rejected(fresh):
     with pytest.raises(ValueError):
         validate_species(np.array([0, 1, 0]), fresh)
+
+
+@pytest.mark.parametrize("payload", [{}, [], {"all_gene_ids":["a", "a"], "gene_to_species":{"a":"s"}, "all_hits":{}},
+                                     {"all_gene_ids":[], "gene_to_species":{}, "all_hits":{}},
+                                     {"all_gene_ids":["a"], "gene_to_species":{"a":"s"}, "all_hits":[]}])
+def test_malformed_trusted_cache_rejected(tmp_path, payload):
+    path = tmp_path / "fixture.pkl"
+    with path.open("wb") as stream:
+        pickle.dump(payload, stream)
+    with pytest.raises(ValueError):
+        load_trusted_hits(record(path))
 
 
 @pytest.fixture
