@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Full-Native Candidate Expansion Scored; Reconciliation Successor Live (2026-10-04)
+
+Previous turn makes progress at5cf1832f. Read full goal/current ledger and
+freshly verify the same22429 still RUNNING; never restart it on polling delay.
+Prepare/push the generic held-request helper07ca446e, with251 joined tests
+passing. Its actual live-history refusal preserves the startup-versus-terminal
+distinction without creating a request or successor early.
+
+Wait for whole-job22429 COMPLETED0:0,41:20 allocation, native step0:0/38:38.
+MatchingPython3.10 [full terminal review and separate frozen score](NATIVE_FACTORIAL_RESULT_22429.md)
+actually pass. F1=.6663945723718282, precision=.6448826482997777,
+recall=.6893912080586404; all70RefOGs/1,944reference genes covered. Native
+54,745groups after8,500candidate merges include all251,378 input genes.
+Aggregate score differences from cachedP0C1R0 are zero, but58 genes occur in
+six changed groups on each side. None touches a reference family; do not
+claim exact whole-output reproduction or a demonstrated cause.
+
+Observed native wall2306.635375674s, CPU67315.217871s, native-step lifetime
+peak4969009152bytes(4.627750GiB), maximum foreign average demand41.76125cores.
+Retain wrapper/launcher scopes, unknown potentially tool-dependent shared-host
+distortion and failed22427 separately. New [three-result snapshot](native_factorial_progress_20261004_v3/report.md)
+passes independent13-row/three-join/nine-pin readback; preserve the old table.
+Three byte-identical terminal/score/request copies retain original bindings.
+
+After terminal review/scoring, actually prepare [held22430/index3](NATIVE_FACTORIAL_SHARED_ATTEMPT_22430.md).
+Complete prefix/current scheduler, exact score, fixed plan/policy/source pins,
+held envelope/owner and safe capacity check. Bind request digest in Comment,
+independently reread prefix/held/request/RAM, then release only22430. Fresh
+controller and actualPID1657709/affinity0..31/32physical cores/cgroup128GiB
+verify native startup. Launch availableRAM665,051,697,152bytes. P0C1R1 adds
+reconciliation with profilesoff, preserving sensitive initial HMM search.
+
+Three of13 identities reviewed (one original failed wrapper with scientific
+recovery), one live, nine unsubmitted. Next preserve/observe22430; terminal
+review and separate score precede index4. No frozen scientific/runtime/helper
+change, isolated ranking, cached-score substitution or unrelated-work action.
+Broader uncertainty/generalization/strata/mechanism/restoration/distribution
+requirements remain active; publication completion is unproven.
+
 ## Remaining Native Request Handoff Prepared (2026-10-04)
 
 Previous goal turn makes progress at pushed5cf1832f by generating validated

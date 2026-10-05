@@ -1,0 +1,49 @@
+{
+  "index": 2,
+  "job_id": 22429,
+  "limitation": "A startup record cannot replace a full terminal review; this refusal is not a held-job success or scientific admission.",
+  "live_helpers_unchanged": 920,
+  "native_restarted": false,
+  "next_identity_released": false,
+  "observed_unix_ns": 1791165235917766251,
+  "refusal": "Previous factorial identity unresolved",
+  "request_created": false,
+  "request_destination": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_03_live_refusal.json",
+  "scheduler": {
+    "command": [
+      "squeue",
+      "-j",
+      "22429",
+      "--noheader",
+      "-o",
+      "%i|%T|%M|%R"
+    ],
+    "stderr": "",
+    "stdout": "22429|RUNNING|31:59|bizon\n"
+  },
+  "schema": "native_factorial_live_history_refusal_v1",
+  "source": {
+    "bytes": 6452,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+    "sha256": "2c790a60290bfd07564edebc4ed3efa4e11cfb2f8e326c4de66d873cbe1c3a59"
+  },
+  "source_commit": "07ca446e4f9fbf6c305b1978a04409fc236d3a09",
+  "status": "unreviewed_live_prefix_refused",
+  "supplied_history": [
+    {
+      "bytes": 898602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+    },
+    {
+      "bytes": 1185333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+    },
+    {
+      "bytes": 16374,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_native_start_22429.json",
+      "sha256": "9f96e276cd0321f7e28d9edff8a09a3bf114e570bdd1453322a7a33630fe70ae"
+    }
+  ]
+}

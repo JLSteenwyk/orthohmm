@@ -1,0 +1,514 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "cell": "p0_c1_r1",
+  "evidence": [
+    {
+      "bytes": 1276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_03/measurement/environment_preflight.json",
+      "sha256": "dc13b2c3bfd5d6d2e0835071cc0ad56db47b344ad43c48fe46719e9617d5f039"
+    },
+    {
+      "bytes": 5342,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_03/measurement/release_budget.json",
+      "sha256": "6c2b7bf709a2eec8d5622cec3d92002f76e44cae4dbef2e2ce8e8d2b844f37dd"
+    },
+    {
+      "bytes": 2417314,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_03/measurement/launch_environment_observation.json",
+      "sha256": "df3df24ef510d63dfe9f4116bb8cf410369a4652239984fe205783c7eda111c7"
+    },
+    {
+      "bytes": 630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_03/measurement/command.json",
+      "sha256": "bf849100a8d8358f3fc4d13ce960532b568a0cb80fdd152170f70cd184424cdf"
+    }
+  ],
+  "index": 3,
+  "job_id": 22430,
+  "launch_available_memory_bytes": 665051697152,
+  "limitations": [
+    "Recorded inline observer argv, not a full environment/runtime closure certification.",
+    "Actual live startup only, not final resources/accuracy or continuous integrity.",
+    "Running receipt is a captured snapshot, not a future immutable-file claim.",
+    "Shared-host contention has unknown potentially tool-dependent timing effects."
+  ],
+  "live_helpers_unchanged": 920,
+  "native_process": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.py",
+      "--native",
+      "--plan",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "--plan-sha256",
+      "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b",
+      "--index",
+      "3"
+    ],
+    "cpu_times_at_observation": [
+      2.08,
+      0.78,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "create_time": 1791166247.13,
+    "pid": 1657709
+  },
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791166353942014483,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "import json, os, pwd, subprocess, sys, time; from pathlib import Path; import psutil; from benchmark_tools.prepare_ob_candidate_neighborhood import check, record; from benchmark_tools.probe_dgx_step_separation import save; from benchmark_tools.run_native_factorial_cost import ROOT, SCRIPT, MEMORY, read, validate_request, validate_plan; from benchmark_tools.review_native_factorial_attempt import native_command; from benchmark_tools.verify_threadripper_controller import validate; ref=record(ROOT/\"benchmarks/work/native_factorial_launch_20261004/request_03_receipt_amended.json\"); assert ref[\"sha256\"]==\"f3d478db97610fe45d4dc7e5d6defd7c604c0b48d4a0b1b232dd08d81718d646\"; request=read(ref); validate_request(request,request[\"plan\"],22430); plan=read(request[\"plan\"]); run=validate_plan(plan)[3]; root=Path(run[\"output_root\"]); receipt=json.loads((root/\"native_execution.json\").read_text()); assert receipt[\"status\"]==\"native_factorial_running\" and receipt[\"index\"]==3 and receipt[\"plan\"]==request[\"plan\"]; proc=psutil.Process(receipt[\"placement\"][\"pid\"]); expected=native_command(request[\"plan\"],run,read(plan[\"baseline\"])); affinity=proc.cpu_affinity(); assert proc.cmdline()==expected and affinity==list(range(32))==receipt[\"placement\"][\"affinity\"]; assert len({(r[\"package\"],r[\"core\"]) for r in receipt[\"placement\"][\"topology\"]})==32; assert Path(f\"/proc/{proc.pid}/cgroup\").read_text()==receipt[\"placement\"][\"cgroup\"]; assert str(MEMORY) in {(Path(r[\"path\"])/\"memory.max\").read_text().strip() for r in receipt[\"placement\"][\"ancestors\"]}; cmd=[\"scontrol\",\"show\",\"job\",\"22430\",\"--oneliner\"]; done=subprocess.run(cmd,capture_output=True,text=True,check=True,timeout=5); controller=validate(done.stdout,22430,\"running\",command=str(SCRIPT),cwd=str(ROOT),time_limit=\"1-02:00:00\",allocation_mode=\"shared\"); assert controller[\"fields\"][\"Comment\"]==ref[\"sha256\"] and controller[\"fields\"][\"UserId\"]==f\"{pwd.getpwuid(os.getuid()).pw_name}({os.getuid()})\"; refs=[record(root/\"measurement\"/n) for n in (\"environment_preflight.json\",\"release_budget.json\",\"launch_environment_observation.json\",\"command.json\")]; preflight=read(refs[0]); launch=read(refs[2]); assert preflight[\"decision\"]==\"passed\" and preflight[\"job_id\"]==22430 and preflight[\"index\"]==3 and launch[\"available_memory_bytes\"]>=MEMORY; [check(r) for r in [ref,request[\"plan\"],*refs,*request[\"evidence\"],*plan[\"helper_sources\"]]]; assert proc.is_running() and proc.cmdline()==expected; result=dict(schema=\"native_factorial_live_start_inline_observation_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),observed_unix_ns=time.time_ns(),job_id=22430,index=3,cell=run[\"cell\"],request=ref,plan=request[\"plan\"],scheduler=dict(command=cmd,stdout=done.stdout,stderr=done.stderr,validated=controller),native_process=dict(pid=proc.pid,create_time=proc.create_time(),command=expected,affinity=affinity,cpu_times_at_observation=list(proc.cpu_times())),running_receipt_snapshot=receipt,evidence=refs,launch_available_memory_bytes=launch[\"available_memory_bytes\"],live_helpers_unchanged=len(plan[\"helper_sources\"]),terminal_reviewed=False,accuracy_evaluated=False,scientific_timings_admitted=False,next_identity_authorized=False,automatic_retry=False,uncontended_timing=False,limitations=[\"Recorded inline observer argv, not a full environment/runtime closure certification.\",\"Actual live startup only, not final resources/accuracy or continuous integrity.\",\"Running receipt is a captured snapshot, not a future immutable-file claim.\",\"Shared-host contention has unknown potentially tool-dependent timing effects.\"]); output=ROOT/\"benchmark_tools/results/native_factorial_native_start_22430.json\"; save(output,result); print(json.dumps(dict(receipt=record(output),native_pid=proc.pid,launch_available_memory_bytes=launch[\"available_memory_bytes\"]),sort_keys=True))"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "request": {
+    "bytes": 35698,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_03_receipt_amended.json",
+    "sha256": "f3d478db97610fe45d4dc7e5d6defd7c604c0b48d4a0b1b232dd08d81718d646"
+  },
+  "running_receipt_snapshot": {
+    "accuracy_evaluated": false,
+    "automatic_retry": false,
+    "cell": "p0_c1_r1",
+    "cold_cache_claim": false,
+    "factors": {
+      "active_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": false
+      },
+      "candidate_expansion": true,
+      "candidate_gate_decoupled": false,
+      "cell": "p0_c1_r1",
+      "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+      "original_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "production_globals_modified": false,
+      "production_source_modified": false,
+      "profile_expansion": false,
+      "reconciliation": true
+    },
+    "index": 3,
+    "native_order": [
+      "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "Ciona_intestinalis.KH.pep.all.fa",
+      "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "Mus_musculus.GRCm38.pep.all.fa",
+      "Danio_rerio.GRCz11.pep.all.fa",
+      "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "Gallus_gallus.GRCg6a.pep.all.fa",
+      "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "Homo_sapiens.GRCh38.pep.all.fa"
+    ],
+    "placement": {
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "ancestors": [
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22430/step_0/user/task_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22430/step_0/user"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22430/step_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22430"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice"
+        }
+      ],
+      "cgroup": "0::/system.slice/slurmstepd.scope/job_22430/step_0/user/task_0\n",
+      "host": "bizon",
+      "pid": 1657709,
+      "slurm": {
+        "SLURM_CPUS_PER_TASK": "64",
+        "SLURM_JOB_ID": "22430",
+        "SLURM_MEM_PER_NODE": "131072"
+      },
+      "topology": [
+        {
+          "core": 0,
+          "cpu": 0,
+          "package": 0
+        },
+        {
+          "core": 1,
+          "cpu": 1,
+          "package": 0
+        },
+        {
+          "core": 2,
+          "cpu": 2,
+          "package": 0
+        },
+        {
+          "core": 3,
+          "cpu": 3,
+          "package": 0
+        },
+        {
+          "core": 4,
+          "cpu": 4,
+          "package": 0
+        },
+        {
+          "core": 5,
+          "cpu": 5,
+          "package": 0
+        },
+        {
+          "core": 6,
+          "cpu": 6,
+          "package": 0
+        },
+        {
+          "core": 7,
+          "cpu": 7,
+          "package": 0
+        },
+        {
+          "core": 8,
+          "cpu": 8,
+          "package": 0
+        },
+        {
+          "core": 9,
+          "cpu": 9,
+          "package": 0
+        },
+        {
+          "core": 10,
+          "cpu": 10,
+          "package": 0
+        },
+        {
+          "core": 11,
+          "cpu": 11,
+          "package": 0
+        },
+        {
+          "core": 12,
+          "cpu": 12,
+          "package": 0
+        },
+        {
+          "core": 13,
+          "cpu": 13,
+          "package": 0
+        },
+        {
+          "core": 14,
+          "cpu": 14,
+          "package": 0
+        },
+        {
+          "core": 15,
+          "cpu": 15,
+          "package": 0
+        },
+        {
+          "core": 16,
+          "cpu": 16,
+          "package": 0
+        },
+        {
+          "core": 17,
+          "cpu": 17,
+          "package": 0
+        },
+        {
+          "core": 18,
+          "cpu": 18,
+          "package": 0
+        },
+        {
+          "core": 19,
+          "cpu": 19,
+          "package": 0
+        },
+        {
+          "core": 20,
+          "cpu": 20,
+          "package": 0
+        },
+        {
+          "core": 21,
+          "cpu": 21,
+          "package": 0
+        },
+        {
+          "core": 22,
+          "cpu": 22,
+          "package": 0
+        },
+        {
+          "core": 23,
+          "cpu": 23,
+          "package": 0
+        },
+        {
+          "core": 24,
+          "cpu": 24,
+          "package": 0
+        },
+        {
+          "core": 25,
+          "cpu": 25,
+          "package": 0
+        },
+        {
+          "core": 26,
+          "cpu": 26,
+          "package": 0
+        },
+        {
+          "core": 27,
+          "cpu": 27,
+          "package": 0
+        },
+        {
+          "core": 28,
+          "cpu": 28,
+          "package": 0
+        },
+        {
+          "core": 29,
+          "cpu": 29,
+          "package": 0
+        },
+        {
+          "core": 30,
+          "cpu": 30,
+          "package": 0
+        },
+        {
+          "core": 31,
+          "cpu": 31,
+          "package": 0
+        }
+      ]
+    },
+    "plan": {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    "status": "native_factorial_running"
+  },
+  "scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22430",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22430 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:02:38 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-04T22:08:32 EligibleTime=2026-10-04T22:09:55 AccrueTime=2026-10-04T22:09:55 StartTime=2026-10-04T22:09:55 EndTime=2026-10-06T00:09:55 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-04T22:09:55 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1656263 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=f3d478db97610fe45d4dc7e5d6defd7c604c0b48d4a0b1b232dd08d81718d646  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index03_22430.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index03_22430.out TresPerTask=cpu=64 \n",
+    "validated": {
+      "allocation_mode": "shared",
+      "fields": {
+        "Account": "(null)",
+        "AccrueTime": "2026-10-04T22:09:55",
+        "AllocNode:Sid": "bizon-link:1656263",
+        "AllocTRES": "cpu=64,mem=128G,node=1,billing=64",
+        "BatchFlag": "1",
+        "BatchHost": "bizon",
+        "CPUs/Task": "64",
+        "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh",
+        "Comment": "f3d478db97610fe45d4dc7e5d6defd7c604c0b48d4a0b1b232dd08d81718d646",
+        "Contiguous": "0",
+        "CoreSpec": "*",
+        "Deadline": "N/A",
+        "DelayBoot": "00:00:00",
+        "Dependency": "(null)",
+        "EligibleTime": "2026-10-04T22:09:55",
+        "EndTime": "2026-10-06T00:09:55",
+        "ExcNodeList": "(null)",
+        "ExitCode": "0:0",
+        "Features": "(null)",
+        "GroupId": "bizon(1000)",
+        "JobId": "22430",
+        "JobName": "orthohmm_factorial_cost",
+        "JobState": "RUNNING",
+        "LastSchedEval": "2026-10-04T22:09:55",
+        "Licenses": "(null)",
+        "MCS_label": "N/A",
+        "MinCPUsNode": "64",
+        "MinMemoryNode": "128G",
+        "MinTmpDiskNode": "0",
+        "Network": "(null)",
+        "Nice": "0",
+        "NodeList": "bizon",
+        "NtasksPerN:B:S:C": "0:0:*:*",
+        "NumCPUs": "64",
+        "NumNodes": "1",
+        "NumTasks": "1",
+        "OverSubscribe": "OK",
+        "Partition": "gpu",
+        "Priority": "1",
+        "QOS": "normal",
+        "Reason": "None",
+        "Reboot": "0",
+        "ReqB:S:C:T": "0:0:*:*",
+        "ReqNodeList": "bizon",
+        "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+        "Requeue": "0",
+        "Restarts": "0",
+        "RunTime": "00:02:38",
+        "Scheduler": "Main",
+        "SecsPreSuspend": "0",
+        "Socks/Node": "*",
+        "StartTime": "2026-10-04T22:09:55",
+        "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index03_22430.err",
+        "StdIn": "/dev/null",
+        "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index03_22430.out",
+        "SubmitTime": "2026-10-04T22:08:32",
+        "SuspendTime": "None",
+        "TimeLimit": "1-02:00:00",
+        "TimeMin": "N/A",
+        "TresPerTask": "cpu=64",
+        "UserId": "bizon(1000)",
+        "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+      },
+      "job_id": 22430,
+      "limitations": [
+        "Recorded controller fields only; caller must verify freshness and submission provenance.",
+        "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+        "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+      ],
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "RUNNING",
+      "scheduler_terminal_verified": false,
+      "scientific_execution_authorized": false,
+      "scientific_timings_admitted": false,
+      "status": "threadripper_controller_record_verified"
+    }
+  },
+  "schema": "native_factorial_live_start_inline_observation_v1",
+  "scientific_timings_admitted": false,
+  "terminal_reviewed": false,
+  "uncontended_timing": false
+}
