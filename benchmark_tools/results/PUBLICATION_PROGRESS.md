@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Native RefOG Records Permit Bounded Uncertainty Reuse (2026-10-04)
+
+After pushed7c79363a retains the completed22430 result and live22431,
+verify all four profiles-off native cells match their retained 70-family
+records exactly, not just aggregate F1. Implement a
+[reproducible pinned binding](NATIVE_FACTORIAL_UNCERTAINTY_BINDING_20261004.md)
+that replays the reporting snapshot and rejects changed counts/metadata,
+scalar scores, multiplicity or source. No frozen helper/runtime/default
+changes, native reruns or new bootstrap draws.
+
+Actual v2 binding matches four cells/four contrasts; all12 planned contrasts
+and36 metric endpoints remain. Eight contrasts lack full-native inputs and
+are not imputed. Reconciliation's profiles-off adjusted F1 intervals remain
+above zero; candidate expansion's adjusted intervals include zero. These
+reuse the original20,000 paired draws/seed20260918, not independent evidence,
+gene-pair resampling or an OrthoFinder superiority test.
+
+Independent stdlib readback checks all280 family records, recomputes weighted
+F1/P/R, verifies exact retained intervals/counts, preserves failed22427 and
+checks all920 unchanged helpers. All68 joined tests pass, zero failures,
+errors or skips,0.92s, including16 new projection tests. Original local
+pre-source-pin binding remains preserved; v2 records the unchanged exporter.
+
+Fresh22431 RUNNING15:35; preserve it unchanged. Whole-job terminal review and
+separate score precede index5. Remaining native, generalization, uncertainty,
+manuscript/distribution and other full-goal requirements are still active.
+No causal timing, universal accuracy or publication-readiness claim follows.
+
 ## Full-Native Candidate/Reconciliation Result Retained (2026-10-04)
 
 The preceding user turn only verifies the already-amended goal; it is not

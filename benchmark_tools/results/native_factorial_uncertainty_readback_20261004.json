@@ -1,0 +1,131 @@
+{
+  "binding": {
+    "bytes": 18052,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_uncertainty_binding_20261004_v2.json",
+    "sha256": "02a1085bb2e0adf046320fc99d71d8e211cf3bc4ada76f9aa88c51169571f1be"
+  },
+  "cells": [
+    {
+      "cell": "p0_c0_r0",
+      "family_records_exact": true,
+      "independent_point_estimates_percent": {
+        "f_score": 69.76338784350486,
+        "precision": 78.86859183093686,
+        "recall": 62.54294371851901
+      },
+      "job_id": 22427
+    },
+    {
+      "cell": "p0_c0_r1",
+      "family_records_exact": true,
+      "independent_point_estimates_percent": {
+        "f_score": 72.70499607171315,
+        "precision": 87.49484204713542,
+        "recall": 62.192223198933064
+      },
+      "job_id": 22428
+    },
+    {
+      "cell": "p0_c1_r0",
+      "family_records_exact": true,
+      "independent_point_estimates_percent": {
+        "f_score": 66.63945723718281,
+        "precision": 64.48826482997777,
+        "recall": 68.93912080586405
+      },
+      "job_id": 22429
+    },
+    {
+      "cell": "p0_c1_r1",
+      "family_records_exact": true,
+      "independent_point_estimates_percent": {
+        "f_score": 73.40228812727554,
+        "precision": 81.48616894173408,
+        "recall": 66.77758098080643
+      },
+      "job_id": 22430
+    }
+  ],
+  "checked_helpers": 920,
+  "contrasts": [
+    {
+      "f1": {
+        "bonferroni_percentile_ci": [
+          -10.658788812389316,
+          3.2751336427236426
+        ],
+        "difference_percentage_points": -3.123930606322034,
+        "paired_percentile_ci": [
+          -7.567566518787847,
+          0.8962842950811368
+        ]
+      },
+      "off": "p0_c0_r0",
+      "on": "p0_c1_r0"
+    },
+    {
+      "f1": {
+        "bonferroni_percentile_ci": [
+          -2.4590063487699045,
+          4.820889090477263
+        ],
+        "difference_percentage_points": 0.6972920555623858,
+        "paired_percentile_ci": [
+          -1.395701263546703,
+          3.037417845395344
+        ]
+      },
+      "off": "p0_c0_r1",
+      "on": "p0_c1_r1"
+    },
+    {
+      "f1": {
+        "bonferroni_percentile_ci": [
+          0.25422098208500854,
+          8.14427852386278
+        ],
+        "difference_percentage_points": 2.941608228208281,
+        "paired_percentile_ci": [
+          0.8406865915019033,
+          5.948528439828997
+        ]
+      },
+      "off": "p0_c0_r0",
+      "on": "p0_c0_r1"
+    },
+    {
+      "f1": {
+        "bonferroni_percentile_ci": [
+          1.376176697490489,
+          14.611640901649412
+        ],
+        "difference_percentage_points": 6.762830890092701,
+        "paired_percentile_ci": [
+          3.1588995753799116,
+          11.285302326426825
+        ]
+      },
+      "off": "p0_c1_r0",
+      "on": "p0_c1_r1"
+    }
+  ],
+  "limitations": [
+    "Exact family/statistic/interval bindings, not a new bootstrap or transitive inference validation.",
+    "Development-exposed paired intervals retain family-exchangeability and approximate simultaneous-coverage limitations.",
+    "Failed22427 remains failed; no new timing or independent confirmation."
+  ],
+  "observed_unix_ns": 1791171617428237613,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport hashlib,json,math,sys,time\nfrom pathlib import Path\nR=Path.cwd()\ndef rec(path):\n p=Path(path).absolute();assert p.is_file() and not p.is_symlink()\n with p.open(\"rb\") as f:h=hashlib.file_digest(f,\"sha256\").hexdigest()\n return dict(path=str(p),bytes=p.stat().st_size,sha256=h)\ndef read(ref):\n assert rec(ref[\"path\"])==ref\n return json.loads(Path(ref[\"path\"]).read_text())\npath=R/\"benchmark_tools/results/native_factorial_uncertainty_binding_20261004_v2.json\"\nd=json.loads(path.read_text());old=read(d[\"factorial\"]);snap=read(d[\"snapshot\"])\nfor ref in [*d[\"evidence\"],d[\"source\"],d[\"exporter_source\"]]:assert rec(ref[\"path\"])==ref\nplan=read(snap[\"plan\"])\nfor ref in plan[\"helper_sources\"]:assert rec(ref[\"path\"])==ref\nassert len(plan[\"helper_sources\"])==920 and len(d[\"bound_cells\"])==4\nassert d[\"new_bootstrap_draws\"]==0 and d[\"replicates_reused\"]==old[\"replicates\"]==20000 and d[\"seed_reused\"]==20260918\nassert d[\"planned_contrasts\"]==12 and d[\"multiplicity_endpoints\"]==36\ncells=[]\nfor cell,binding in d[\"bound_cells\"].items():\n rev=read(binding[\"terminal_review\"]);score=read(binding[\"score_or_recovery\"])\n assert (binding[\"scheduler_state\"],binding[\"scheduler_exit_code\"])==(rev[\"scheduler_state\"],rev[\"scheduler_exit_code\"])\n assert binding[\"whole_job_succeeded\"]==(rev[\"scheduler_state\"]==\"COMPLETED\")\n if rev[\"job_id\"]==22427:\n  assert not binding[\"whole_job_succeeded\"] and rev[\"scheduler_state\"]==\"FAILED\"\n  actual=read(score[\"score\"])[\"score\"]\n else:\n  assert binding[\"whole_job_succeeded\"] and score[\"terminal_review\"]==binding[\"terminal_review\"]\n  actual=score[\"score_percent\"]\n records={r[\"refog\"]:r for r in actual[\"refog_records\"]}\n assert len(records)==70 and records=={r[\"refog\"]:r for r in old[\"scores\"][cell][\"refog_records\"]}\n sums=[math.fsum(r[k]/(r[\"genes\"]-1) for r in records.values()) for k in (\"true_positive\",\"false_positive\",\"false_negative\")]\n tp,fp,fn=sums\n calculated={\"f_score\":200*tp/(2*tp+fp+fn),\"precision\":100*tp/(tp+fp),\"recall\":100*tp/(tp+fn)}\n assert all(abs(v-actual[k])<1e-10 for k,v in calculated.items())\n cells.append(dict(cell=cell,job_id=rev[\"job_id\"],family_records_exact=True,independent_point_estimates_percent=calculated))\noriginal={(c[\"on\"],c[\"off\"]):c for c in old[\"comparisons\"]}\nmatched=[]\nassert len(d[\"contrasts\"])==12\nfor c in d[\"contrasts\"]:\n expected=original[c[\"on\"],c[\"off\"]]\n if c[\"status\"]==\"native_records_matched\":\n  assert c[\"on\"] in d[\"bound_cells\"] and c[\"off\"] in d[\"bound_cells\"]\n  assert all(c[k]==expected[k] for k in (\"metrics\",\"factor\",\"fixed\",\"family_f1_wins\",\"family_f1_ties\",\"family_f1_losses\"))\n  assert sum(c[k] for k in (\"family_f1_wins\",\"family_f1_ties\",\"family_f1_losses\"))==70\n  matched.append(dict(on=c[\"on\"],off=c[\"off\"],f1=c[\"metrics\"][\"f_score\"]))\n else:assert c[\"metrics\"] is None and c[\"missing_cells\"]\nassert len(matched)==4 and not d[\"publication_ready\"] and not d[\"independent_confirmation\"] and not d[\"new_accuracy_or_resource_admission\"]\nout=R/\"benchmark_tools/results/native_factorial_uncertainty_readback_20261004.json\"\nresult=dict(schema=\"native_orthobench_uncertainty_inline_readback_v1\",observer_command=sys.orig_argv,observer_interpreter=rec(Path(sys.executable).resolve()),observed_unix_ns=time.time_ns(),binding=rec(path),status=\"passed\",cells=cells,contrasts=matched,checked_helpers=920,limitations=[\"Exact family/statistic/interval bindings, not a new bootstrap or transitive inference validation.\",\"Development-exposed paired intervals retain family-exchangeability and approximate simultaneous-coverage limitations.\",\"Failed22427 remains failed; no new timing or independent confirmation.\"])\nwith out.open(\"x\") as f:json.dump(result,f,indent=2,sort_keys=True);f.write(\"\\n\")\nprint(json.dumps(dict(readback=rec(out),matched=len(matched),family_records=280,helpers=920)))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 8019136,
+    "path": "/usr/bin/python3.12",
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "schema": "native_orthobench_uncertainty_inline_readback_v1",
+  "status": "passed"
+}
