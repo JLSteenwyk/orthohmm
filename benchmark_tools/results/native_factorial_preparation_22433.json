@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "benchmark_tools/prepare_native_factorial_request.py",
+    "--job",
+    "22433",
+    "--history",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+    "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13",
+    "--history",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+    "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19",
+    "--history",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+    "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0",
+    "--history",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+    "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08",
+    "--history",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+    "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842",
+    "--prior-score",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431/score.json",
+    "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "{\"bytes\": 39861, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json\", \"sha256\": \"5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7\"}\n"
+}

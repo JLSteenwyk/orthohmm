@@ -1,0 +1,700 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "cell": "p1_c1_r0",
+  "evidence": [
+    {
+      "bytes": 1276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_05/measurement/environment_preflight.json",
+      "sha256": "15d3d6c4a1833c1a3f54d4092a0c66117893e0faf1985879a362dc554ead93db"
+    },
+    {
+      "bytes": 5342,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_05/measurement/release_budget.json",
+      "sha256": "e42249fd4411c939074f80deac959ef80f441f18519825e2e47612830d4e4580"
+    },
+    {
+      "bytes": 2421857,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_05/measurement/launch_environment_observation.json",
+      "sha256": "82c625de43d72a43c7ccf20dfb1328199441cca3294121c25dbae10cb4e039b4"
+    },
+    {
+      "bytes": 630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_05/measurement/command.json",
+      "sha256": "bea024d4988da6fe09adad078723099f79cf29e7649aaeadc4ce53862e45245a"
+    }
+  ],
+  "index": 5,
+  "job_id": 22433,
+  "launch_available_memory_bytes": 664431509504,
+  "limitations": [
+    "Actual startup observation, not final resource/accuracy admission or continuous runtime integrity.",
+    "Running receipt is a snapshot, not a future immutable-file claim.",
+    "Earlier observer import used the wrong helper module and exited before observation; corrected import only, no native restart.",
+    "Shared-host distortion is unknown and potentially tool-dependent."
+  ],
+  "live_helpers_unchanged": 920,
+  "native_process": {
+    "affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "cgroup": "0::/system.slice/slurmstepd.scope/job_22433/step_0/user/task_0\n",
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.py",
+      "--native",
+      "--plan",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "--plan-sha256",
+      "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b",
+      "--index",
+      "5"
+    ],
+    "cpu_times_at_observation": [
+      2.07,
+      0.76,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "create_time": 1791174781.03,
+    "memory_ancestors": [
+      {
+        "memory_max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0/user/task_0"
+      },
+      {
+        "memory_max": "137438953472",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0/user"
+      },
+      {
+        "memory_max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0"
+      },
+      {
+        "memory_max": "137438953472",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433"
+      },
+      {
+        "memory_max": "max",
+        "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+      },
+      {
+        "memory_max": "max",
+        "path": "/sys/fs/cgroup/system.slice"
+      }
+    ],
+    "pid": 4028693,
+    "topology": [
+      {
+        "core": 0,
+        "cpu": 0,
+        "package": 0
+      },
+      {
+        "core": 1,
+        "cpu": 1,
+        "package": 0
+      },
+      {
+        "core": 2,
+        "cpu": 2,
+        "package": 0
+      },
+      {
+        "core": 3,
+        "cpu": 3,
+        "package": 0
+      },
+      {
+        "core": 4,
+        "cpu": 4,
+        "package": 0
+      },
+      {
+        "core": 5,
+        "cpu": 5,
+        "package": 0
+      },
+      {
+        "core": 6,
+        "cpu": 6,
+        "package": 0
+      },
+      {
+        "core": 7,
+        "cpu": 7,
+        "package": 0
+      },
+      {
+        "core": 8,
+        "cpu": 8,
+        "package": 0
+      },
+      {
+        "core": 9,
+        "cpu": 9,
+        "package": 0
+      },
+      {
+        "core": 10,
+        "cpu": 10,
+        "package": 0
+      },
+      {
+        "core": 11,
+        "cpu": 11,
+        "package": 0
+      },
+      {
+        "core": 12,
+        "cpu": 12,
+        "package": 0
+      },
+      {
+        "core": 13,
+        "cpu": 13,
+        "package": 0
+      },
+      {
+        "core": 14,
+        "cpu": 14,
+        "package": 0
+      },
+      {
+        "core": 15,
+        "cpu": 15,
+        "package": 0
+      },
+      {
+        "core": 16,
+        "cpu": 16,
+        "package": 0
+      },
+      {
+        "core": 17,
+        "cpu": 17,
+        "package": 0
+      },
+      {
+        "core": 18,
+        "cpu": 18,
+        "package": 0
+      },
+      {
+        "core": 19,
+        "cpu": 19,
+        "package": 0
+      },
+      {
+        "core": 20,
+        "cpu": 20,
+        "package": 0
+      },
+      {
+        "core": 21,
+        "cpu": 21,
+        "package": 0
+      },
+      {
+        "core": 22,
+        "cpu": 22,
+        "package": 0
+      },
+      {
+        "core": 23,
+        "cpu": 23,
+        "package": 0
+      },
+      {
+        "core": 24,
+        "cpu": 24,
+        "package": 0
+      },
+      {
+        "core": 25,
+        "cpu": 25,
+        "package": 0
+      },
+      {
+        "core": 26,
+        "cpu": 26,
+        "package": 0
+      },
+      {
+        "core": 27,
+        "cpu": 27,
+        "package": 0
+      },
+      {
+        "core": 28,
+        "cpu": 28,
+        "package": 0
+      },
+      {
+        "core": 29,
+        "cpu": 29,
+        "package": 0
+      },
+      {
+        "core": 30,
+        "cpu": 30,
+        "package": 0
+      },
+      {
+        "core": 31,
+        "cpu": 31,
+        "package": 0
+      }
+    ]
+  },
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791174899328632935,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,os,pwd,psutil,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.run_native_factorial_cost import ROOT,MEMORY,read,validate_request,validate_plan\nfrom benchmark_tools.review_native_factorial_attempt import native_command\nfrom benchmark_tools.verify_threadripper_controller import validate\nfrom benchmark_tools.probe_dgx_step_separation import save\nref=record(ROOT/\"benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json\")\nassert ref[\"sha256\"]==\"5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7\"\nreq=read(ref);validate_request(req,req[\"plan\"],22433);plan=read(req[\"plan\"]);run=validate_plan(plan)[5];base=read(plan[\"baseline\"])\nroot=Path(run[\"output_root\"]);receipt=json.loads((root/\"native_execution.json\").read_text())\nassert receipt[\"status\"]==\"native_factorial_running\" and receipt[\"index\"]==5 and receipt[\"cell\"]==\"p1_c1_r0\"\np=psutil.Process(receipt[\"placement\"][\"pid\"]);assert p.is_running()\ncmd=native_command(req[\"plan\"],run,base);assert p.cmdline()==cmd and p.cpu_affinity()==list(range(32))\ncg=Path(f\"/proc/{p.pid}/cgroup\").read_text()\nassert cg==receipt[\"placement\"][\"cgroup\"] and \"job_22433/step_0/\" in cg\npath=Path(\"/sys/fs/cgroup\")/cg.strip().split(\"::\",1)[1].lstrip(\"/\")\nancestors=[]\nwhile path!=Path(\"/sys/fs/cgroup\"):\n cap=(path/\"memory.max\").read_text().strip();ancestors.append(dict(path=str(path),memory_max=cap));path=path.parent\nassert any(a[\"memory_max\"]==str(MEMORY) for a in ancestors)\ntop=[]\nfor cpu in p.cpu_affinity():\n t=Path(f\"/sys/devices/system/cpu/cpu{cpu}/topology\");top.append(dict(cpu=cpu,core=int((t/\"core_id\").read_text()),package=int((t/\"physical_package_id\").read_text())))\nassert len({(t[\"core\"],t[\"package\"]) for t in top})==32\ncommand=[\"scontrol\",\"show\",\"job\",\"22433\",\"--oneliner\"]\nraw=subprocess.run(command,capture_output=True,text=True,check=True,timeout=5)\ncontroller=validate(raw.stdout,22433,\"running\",command=req[\"scheduler_command\"],cwd=str(ROOT),time_limit=\"1-02:00:00\",allocation_mode=\"shared\")\nassert controller[\"fields\"][\"Comment\"]==ref[\"sha256\"] and controller[\"fields\"][\"UserId\"]==f\"{pwd.getpwuid(os.getuid()).pw_name}({os.getuid()})\"\nfor r in [*req[\"evidence\"],*plan[\"helper_sources\"]]:check(r)\nd=root/\"measurement\";evidence=[record(d/x) for x in (\"environment_preflight.json\",\"release_budget.json\",\"launch_environment_observation.json\",\"command.json\")]\nlaunch=read(evidence[2]);assert launch[\"available_memory_bytes\"]>=MEMORY\nout=ROOT/\"benchmark_tools/results/native_factorial_native_start_22433.json\"\nsave(out,dict(schema=\"native_factorial_live_inline_observation_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),observed_unix_ns=time.time_ns(),job_id=22433,index=5,cell=run[\"cell\"],request=ref,plan=req[\"plan\"],scheduler=dict(command=command,stdout=raw.stdout,stderr=raw.stderr,validation=controller),native_process=dict(pid=p.pid,create_time=p.create_time(),command=p.cmdline(),affinity=p.cpu_affinity(),cpu_times_at_observation=list(p.cpu_times()),cgroup=cg,memory_ancestors=ancestors,topology=top),running_receipt_snapshot=receipt,evidence=evidence,live_helpers_unchanged=920,launch_available_memory_bytes=launch[\"available_memory_bytes\"],accuracy_evaluated=False,next_identity_authorized=False,automatic_retry=False,limitations=[\"Actual startup observation, not final resource/accuracy admission or continuous runtime integrity.\",\"Running receipt is a snapshot, not a future immutable-file claim.\",\"Earlier observer import used the wrong helper module and exited before observation; corrected import only, no native restart.\",\"Shared-host distortion is unknown and potentially tool-dependent.\"]))\nprint(json.dumps(dict(receipt=record(out),pid=p.pid,launch_available_memory_bytes=launch[\"available_memory_bytes\"])))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "request": {
+    "bytes": 39861,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_05_receipt_amended.json",
+    "sha256": "5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7"
+  },
+  "running_receipt_snapshot": {
+    "accuracy_evaluated": false,
+    "automatic_retry": false,
+    "cell": "p1_c1_r0",
+    "cold_cache_claim": false,
+    "factors": {
+      "active_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "candidate_expansion": true,
+      "candidate_gate_decoupled": true,
+      "cell": "p1_c1_r0",
+      "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+      "original_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "production_globals_modified": false,
+      "production_source_modified": false,
+      "profile_expansion": true,
+      "reconciliation": false
+    },
+    "index": 5,
+    "native_order": [
+      "Pan_troglodytes.Pan_tro_3.0.pep.all.fa",
+      "Monodelphis_domestica.ASM229v1.pep.all.fa",
+      "Ciona_intestinalis.KH.pep.all.fa",
+      "Rattus_norvegicus.Rnor_6.0.pep.all.fa",
+      "Caenorhabditis_elegans.WBcel235.pep.all.fa",
+      "Mus_musculus.GRCm38.pep.all.fa",
+      "Danio_rerio.GRCz11.pep.all.fa",
+      "Canis_familiaris.CanFam3.1.pep.all.fa",
+      "Tetraodon_nigroviridis.TETRAODON8.pep.all.fa",
+      "Gallus_gallus.GRCg6a.pep.all.fa",
+      "Drosophila_melanogaster.BDGP6.28.pep.all.fa",
+      "Homo_sapiens.GRCh38.pep.all.fa"
+    ],
+    "placement": {
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "ancestors": [
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0/user/task_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0/user"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433/step_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-31,96-127",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_22433"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice"
+        }
+      ],
+      "cgroup": "0::/system.slice/slurmstepd.scope/job_22433/step_0/user/task_0\n",
+      "host": "bizon",
+      "pid": 4028693,
+      "slurm": {
+        "SLURM_CPUS_PER_TASK": "64",
+        "SLURM_JOB_ID": "22433",
+        "SLURM_MEM_PER_NODE": "131072"
+      },
+      "topology": [
+        {
+          "core": 0,
+          "cpu": 0,
+          "package": 0
+        },
+        {
+          "core": 1,
+          "cpu": 1,
+          "package": 0
+        },
+        {
+          "core": 2,
+          "cpu": 2,
+          "package": 0
+        },
+        {
+          "core": 3,
+          "cpu": 3,
+          "package": 0
+        },
+        {
+          "core": 4,
+          "cpu": 4,
+          "package": 0
+        },
+        {
+          "core": 5,
+          "cpu": 5,
+          "package": 0
+        },
+        {
+          "core": 6,
+          "cpu": 6,
+          "package": 0
+        },
+        {
+          "core": 7,
+          "cpu": 7,
+          "package": 0
+        },
+        {
+          "core": 8,
+          "cpu": 8,
+          "package": 0
+        },
+        {
+          "core": 9,
+          "cpu": 9,
+          "package": 0
+        },
+        {
+          "core": 10,
+          "cpu": 10,
+          "package": 0
+        },
+        {
+          "core": 11,
+          "cpu": 11,
+          "package": 0
+        },
+        {
+          "core": 12,
+          "cpu": 12,
+          "package": 0
+        },
+        {
+          "core": 13,
+          "cpu": 13,
+          "package": 0
+        },
+        {
+          "core": 14,
+          "cpu": 14,
+          "package": 0
+        },
+        {
+          "core": 15,
+          "cpu": 15,
+          "package": 0
+        },
+        {
+          "core": 16,
+          "cpu": 16,
+          "package": 0
+        },
+        {
+          "core": 17,
+          "cpu": 17,
+          "package": 0
+        },
+        {
+          "core": 18,
+          "cpu": 18,
+          "package": 0
+        },
+        {
+          "core": 19,
+          "cpu": 19,
+          "package": 0
+        },
+        {
+          "core": 20,
+          "cpu": 20,
+          "package": 0
+        },
+        {
+          "core": 21,
+          "cpu": 21,
+          "package": 0
+        },
+        {
+          "core": 22,
+          "cpu": 22,
+          "package": 0
+        },
+        {
+          "core": 23,
+          "cpu": 23,
+          "package": 0
+        },
+        {
+          "core": 24,
+          "cpu": 24,
+          "package": 0
+        },
+        {
+          "core": 25,
+          "cpu": 25,
+          "package": 0
+        },
+        {
+          "core": 26,
+          "cpu": 26,
+          "package": 0
+        },
+        {
+          "core": 27,
+          "cpu": 27,
+          "package": 0
+        },
+        {
+          "core": 28,
+          "cpu": 28,
+          "package": 0
+        },
+        {
+          "core": 29,
+          "cpu": 29,
+          "package": 0
+        },
+        {
+          "core": 30,
+          "cpu": 30,
+          "package": 0
+        },
+        {
+          "core": 31,
+          "cpu": 31,
+          "package": 0
+        }
+      ]
+    },
+    "plan": {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    "status": "native_factorial_running"
+  },
+  "scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22433",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22433 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:02:50 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-05T00:30:56 EligibleTime=2026-10-05T00:32:09 AccrueTime=2026-10-05T00:32:09 StartTime=2026-10-05T00:32:09 EndTime=2026-10-06T02:32:09 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T00:32:09 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4027451 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.out TresPerTask=cpu=64 \n",
+    "validation": {
+      "allocation_mode": "shared",
+      "fields": {
+        "Account": "(null)",
+        "AccrueTime": "2026-10-05T00:32:09",
+        "AllocNode:Sid": "bizon-link:4027451",
+        "AllocTRES": "cpu=64,mem=128G,node=1,billing=64",
+        "BatchFlag": "1",
+        "BatchHost": "bizon",
+        "CPUs/Task": "64",
+        "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh",
+        "Comment": "5a51f52d0f2abe61d13ce84d05c77d76e0b07eb333bfb1b0b9652814beaf5bd7",
+        "Contiguous": "0",
+        "CoreSpec": "*",
+        "Deadline": "N/A",
+        "DelayBoot": "00:00:00",
+        "Dependency": "(null)",
+        "EligibleTime": "2026-10-05T00:32:09",
+        "EndTime": "2026-10-06T02:32:09",
+        "ExcNodeList": "(null)",
+        "ExitCode": "0:0",
+        "Features": "(null)",
+        "GroupId": "bizon(1000)",
+        "JobId": "22433",
+        "JobName": "orthohmm_factorial_cost",
+        "JobState": "RUNNING",
+        "LastSchedEval": "2026-10-05T00:32:09",
+        "Licenses": "(null)",
+        "MCS_label": "N/A",
+        "MinCPUsNode": "64",
+        "MinMemoryNode": "128G",
+        "MinTmpDiskNode": "0",
+        "Network": "(null)",
+        "Nice": "0",
+        "NodeList": "bizon",
+        "NtasksPerN:B:S:C": "0:0:*:*",
+        "NumCPUs": "64",
+        "NumNodes": "1",
+        "NumTasks": "1",
+        "OverSubscribe": "OK",
+        "Partition": "gpu",
+        "Priority": "1",
+        "QOS": "normal",
+        "Reason": "None",
+        "Reboot": "0",
+        "ReqB:S:C:T": "0:0:*:*",
+        "ReqNodeList": "bizon",
+        "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+        "Requeue": "0",
+        "Restarts": "0",
+        "RunTime": "00:02:50",
+        "Scheduler": "Main",
+        "SecsPreSuspend": "0",
+        "Socks/Node": "*",
+        "StartTime": "2026-10-05T00:32:09",
+        "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.err",
+        "StdIn": "/dev/null",
+        "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.out",
+        "SubmitTime": "2026-10-05T00:30:56",
+        "SuspendTime": "None",
+        "TimeLimit": "1-02:00:00",
+        "TimeMin": "N/A",
+        "TresPerTask": "cpu=64",
+        "UserId": "bizon(1000)",
+        "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+      },
+      "job_id": 22433,
+      "limitations": [
+        "Recorded controller fields only; caller must verify freshness and submission provenance.",
+        "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+        "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+      ],
+      "scheduler_exit_code": "0:0",
+      "scheduler_state": "RUNNING",
+      "scheduler_terminal_verified": false,
+      "scientific_execution_authorized": false,
+      "scientific_timings_admitted": false,
+      "status": "threadripper_controller_record_verified"
+    }
+  },
+  "schema": "native_factorial_live_inline_observation_v1"
+}

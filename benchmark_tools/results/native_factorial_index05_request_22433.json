@@ -1,0 +1,400 @@
+{
+  "allocation_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "authorization_basis": "Active publication goal; next different frozen identity after explicit reviewed prefix; shared-host authorization",
+  "automatic_retry": false,
+  "capacity_precheck": {
+    "available_memory_bytes": 664713146368,
+    "background_cpu_used_for_eligibility": false,
+    "capacity_guaranteed_through_run": false,
+    "host_counters": {
+      "cpu_ticks": {
+        "guest": 0,
+        "guest_nice": 0,
+        "idle": 10178579893,
+        "iowait": 2716108,
+        "irq": 0,
+        "nice": 702185178,
+        "softirq": 844693,
+        "steal": 0,
+        "system": 173343824,
+        "user": 4703481045
+      },
+      "errors": [],
+      "finished_monotonic_ns": 822360354279846,
+      "optional": {
+        "cgroup_cpu.stat": "usage_usec 391488735885\nuser_usec 331356603414\nsystem_usec 60132132470\ncore_sched.force_idle_usec 0\nnr_periods 0\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+        "cgroup_memory.current": "171174170624\n",
+        "cgroup_memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_memory.peak": "441758232576\n",
+        "host_cpu_pressure": "some avg10=0.00 avg60=0.00 avg300=0.28 total=2821417077\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=0\n",
+        "host_io_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=306211850\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=302061794\n",
+        "host_memory_pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=126875108\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=126374591\n"
+      },
+      "raw": {
+        "boot_id": "ac228d23-948f-4cab-b48a-8267581781a7\n",
+        "cgroup_membership": "0::/user.slice/user-1000.slice/user@1000.service/tmux-spawn-a4c3e9d8-e83f-4221-afc8-e5cc2ca4b5a1.scope\n",
+        "online_cpus": "0-191\n",
+        "proc_stat": "cpu  4703481045 702185178 173343824 10178579893 2716108 0 844693 0 0 0\ncpu0 17220756 693863 778235 56368512 3615 0 29837 0 0 0\ncpu1 23520330 1740476 791563 55270884 7526 0 8088 0 0 0\ncpu2 21166275 1513915 704041 58545371 8186 0 2447 0 0 0\ncpu3 21749560 1524148 765012 58051625 8940 0 1514 0 0 0\ncpu4 22645956 1479297 760525 57245764 11532 0 307 0 0 0\ncpu5 22437982 1570404 762952 57373078 8296 0 302 0 0 0\ncpu6 22990261 1565478 776758 56817580 8761 0 238 0 0 0\ncpu7 23336442 1736448 777305 56306281 7126 0 207 0 0 0\ncpu8 25453843 2430687 960951 53286837 11981 0 135 0 0 0\ncpu9 25363527 2193591 930096 53651904 11549 0 136 0 0 0\ncpu10 25728767 2111774 924364 53374567 10316 0 124 0 0 0\ncpu11 25579582 2068190 930955 53568090 10006 0 163 0 0 0\ncpu12 26577830 2212157 908174 52447112 10290 0 169 0 0 0\ncpu13 26334332 2125360 944167 52745979 8432 0 164 0 0 0\ncpu14 26457165 2189514 919706 52584068 9161 0 176 0 0 0\ncpu15 26323441 2322721 942043 52564111 9747 0 164 0 0 0\ncpu16 21720681 2749055 801742 56523191 11335 0 1951 0 0 0\ncpu17 20784560 2350932 735788 58157535 11929 0 1583 0 0 0\ncpu18 20200912 2385289 720418 58781363 14026 0 557 0 0 0\ncpu19 20705914 2390263 725161 58296031 11557 0 346 0 0 0\ncpu20 20330898 2168440 712613 58917209 10142 0 214 0 0 0\ncpu21 20686384 2388790 745071 58321075 6783 0 163 0 0 0\ncpu22 21367779 2236134 720736 57816496 11368 0 146 0 0 0\ncpu23 21715784 2807759 751203 56858309 13458 0 143 0 0 0\ncpu24 17645244 4072789 970895 59348669 15505 0 1370 0 0 0\ncpu25 16498884 3204177 887905 61457151 16173 0 1062 0 0 0\ncpu26 17063010 3189495 882105 60921522 16856 0 863 0 0 0\ncpu27 16832131 2831132 855380 61552520 13494 0 771 0 0 0\ncpu28 14784314 2306168 757978 64229579 13930 0 648 0 0 0\ncpu29 16741632 2513038 838395 61993733 12024 0 595 0 0 0\ncpu30 16431941 2451979 827716 62384726 10364 0 563 0 0 0\ncpu31 27983931 6295523 1688264 44574051 13953 0 761348 0 0 0\ncpu32 16685117 2910797 709493 61525466 17669 0 1325 0 0 0\ncpu33 15999245 2618689 670812 62749502 16443 0 512 0 0 0\ncpu34 15843979 2432020 625315 63193784 17542 0 214 0 0 0\ncpu35 15758708 2218273 633354 63507392 16104 0 111 0 0 0\ncpu36 15868792 2390645 659475 63208469 12054 0 171 0 0 0\ncpu37 16525879 2858728 622761 62124152 13999 0 128 0 0 0\ncpu38 16717360 2398254 661491 62352625 16689 0 126 0 0 0\ncpu39 16536808 2645711 684518 62269710 13560 0 129 0 0 0\ncpu40 15898040 4662019 634024 60967697 6130 0 59 0 0 0\ncpu41 18505998 5309057 734088 57616019 15124 0 69 0 0 0\ncpu42 19758327 4071018 839904 57455569 49329 0 93 0 0 0\ncpu43 14111169 4675101 548629 62870107 2423 0 51 0 0 0\ncpu44 16004614 2076525 1325377 62716361 34874 0 119 0 0 0\ncpu45 14832147 1798893 1412483 64069153 33673 0 146 0 0 0\ncpu46 6823656 1157419 708107 73396134 22713 0 122 0 0 0\ncpu47 18204231 3032272 1131761 59681194 56864 0 148 0 0 0\ncpu48 16010432 2733955 635485 62745935 14021 0 117 0 0 0\ncpu49 15142979 2330974 610318 64044956 12552 0 113 0 0 0\ncpu50 14518589 2354496 590747 64666985 12435 0 97 0 0 0\ncpu51 14382615 2330823 585608 64839242 10185 0 107 0 0 0\ncpu52 14616424 2199169 546451 64770754 14269 0 105 0 0 0\ncpu53 15057021 2246793 595679 64235478 13018 0 88 0 0 0\ncpu54 14706785 2572333 554431 64307239 11828 0 132 0 0 0\ncpu55 14897026 2319307 586418 64341122 10404 0 127 0 0 0\ncpu56 15829324 2483389 701029 63098386 16215 0 117 0 0 0\ncpu57 14334295 2338210 626211 64816391 15021 0 111 0 0 0\ncpu58 14221498 2198680 637672 65059331 15643 0 107 0 0 0\ncpu59 14454798 2180647 690636 64795819 13881 0 120 0 0 0\ncpu60 15033880 2017023 681233 64389555 16666 0 129 0 0 0\ncpu61 14877330 2121329 684564 64445499 14178 0 153 0 0 0\ncpu62 14742912 2079943 685542 64616960 17798 0 149 0 0 0\ncpu63 14975633 2435538 660238 64062647 13932 0 145 0 0 0\ncpu64 13450549 4552547 602521 63521734 10023 0 166 0 0 0\ncpu65 18440859 4011640 803430 58848799 42118 0 112 0 0 0\ncpu66 17006857 5232082 686115 59233276 15255 0 85 0 0 0\ncpu67 14934323 2042426 1216314 63909273 38126 0 178 0 0 0\ncpu68 17464666 3119237 1073328 60460001 39467 0 166 0 0 0\ncpu69 14496895 1675775 1332984 64593599 30662 0 188 0 0 0\ncpu70 16414898 5150725 599932 60018662 5605 0 68 0 0 0\ncpu71 6808690 1012290 709536 73543712 17307 0 196 0 0 0\ncpu72 14637045 2555084 668795 64251449 16826 0 148 0 0 0\ncpu73 13560962 2246886 650726 65657044 16980 0 156 0 0 0\ncpu74 13084425 2084752 630376 66322905 13786 0 165 0 0 0\ncpu75 13375453 1941573 626625 66177049 14762 0 143 0 0 0\ncpu76 13545800 1827497 621931 66127563 15452 0 107 0 0 0\ncpu77 13788739 1899664 642408 65796511 14470 0 111 0 0 0\ncpu78 13703845 2068987 650723 65702550 16905 0 155 0 0 0\ncpu79 14354234 2275858 647981 64852100 13906 0 202 0 0 0\ncpu80 14282391 2192268 611656 65032358 12075 0 129 0 0 0\ncpu81 12967892 1946756 555969 66652539 9726 0 150 0 0 0\ncpu82 12435851 1829795 570027 67289196 10369 0 126 0 0 0\ncpu83 12499701 1856949 529599 67243338 10464 0 134 0 0 0\ncpu84 12907937 1776336 539217 66909269 10818 0 151 0 0 0\ncpu85 13236980 1751266 574269 66575456 9511 0 162 0 0 0\ncpu86 13142138 1825719 543232 66625428 10252 0 135 0 0 0\ncpu87 13531761 1802623 547707 66258535 9852 0 133 0 0 0\ncpu88 14253269 2447614 669346 64727341 22317 0 178 0 0 0\ncpu89 13127258 2205274 670321 66097119 22401 0 157 0 0 0\ncpu90 13883049 2080145 620928 65513444 25302 0 209 0 0 0\ncpu91 12970439 2102547 593507 66440495 18923 0 166 0 0 0\ncpu92 12972623 1994384 611769 66530523 19541 0 142 0 0 0\ncpu93 13056163 2172586 587349 66291198 21275 0 166 0 0 0\ncpu94 13288628 1997857 606560 66217260 21264 0 155 0 0 0\ncpu95 13556430 1820276 630209 66105560 21651 0 155 0 0 0\ncpu96 45894858 5187919 1377044 29567205 12219 0 83 0 0 0\ncpu97 36626832 3381515 1175605 40843651 7500 0 93 0 0 0\ncpu98 38431821 3698691 1156648 38738271 8733 0 81 0 0 0\ncpu99 37089009 4302947 1071481 39561477 9516 0 84 0 0 0\ncpu100 34709827 3386062 1055030 42865565 11820 0 102 0 0 0\ncpu101 34042685 3416253 1002016 43557586 8826 0 90 0 0 0\ncpu102 33528788 3505167 1008456 43971874 11389 0 131 0 0 0\ncpu103 33738325 3107909 1014818 44158603 9099 0 124 0 0 0\ncpu104 32227319 3352952 1173730 45325180 10899 0 95 0 0 0\ncpu105 32247305 3571453 1059509 45197949 9602 0 95 0 0 0\ncpu106 32009774 3484531 1046757 45533136 11736 0 89 0 0 0\ncpu107 32060092 3902535 1044509 45072315 8211 0 137 0 0 0\ncpu108 30132827 3582605 968004 47387544 9976 0 130 0 0 0\ncpu109 30649866 3701630 1014140 46709666 9571 0 128 0 0 0\ncpu110 31391344 3599074 962994 46121471 9852 0 145 0 0 0\ncpu111 31566016 3474860 979588 46056072 8608 0 141 0 0 0\ncpu112 28427710 4263498 901038 48495635 10051 0 132 0 0 0\ncpu113 29706811 4637303 852272 46892362 9889 0 93 0 0 0\ncpu114 30046266 4790908 814612 46438065 8770 0 90 0 0 0\ncpu115 30622132 4242702 835260 46389772 9751 0 87 0 0 0\ncpu116 30339797 5102320 823511 45827794 8045 0 107 0 0 0\ncpu117 30190354 5065102 778942 46055799 8478 0 97 0 0 0\ncpu118 29482454 4155869 821534 47623656 11345 0 92 0 0 0\ncpu119 28971640 4369189 803052 47937337 9502 0 85 0 0 0\ncpu120 21609931 7427085 1618357 51394793 15317 0 1695 0 0 0\ncpu121 25829943 6923775 1656127 47654878 16762 0 1355 0 0 0\ncpu122 27263537 6426581 1627509 46762174 14501 0 1153 0 0 0\ncpu123 29969926 5806430 1605038 44705037 16538 0 995 0 0 0\ncpu124 33690596 6147725 1585851 40633306 16451 0 853 0 0 0\ncpu125 34070781 6072877 1572428 40386892 14188 0 770 0 0 0\ncpu126 37097740 6378173 1511147 37127824 11108 0 689 0 0 0\ncpu127 7808867 2324018 815721 71084609 20337 0 1264 0 0 0\ncpu128 31324253 4311381 942840 45565502 16299 0 85 0 0 0\ncpu129 31149664 4922912 894241 45178252 14524 0 102 0 0 0\ncpu130 30089029 4877588 834298 46342810 14716 0 93 0 0 0\ncpu131 32616569 5127096 841129 43561427 16054 0 83 0 0 0\ncpu132 32171142 5334731 834946 43806616 13202 0 101 0 0 0\ncpu133 31150558 5103845 798488 45096631 15896 0 98 0 0 0\ncpu134 31303013 5173599 831666 44844403 12810 0 102 0 0 0\ncpu135 31020145 5591545 858636 44682538 12711 0 106 0 0 0\ncpu136 50463197 9650681 1764755 20352704 3326 0 44 0 0 0\ncpu137 43794913 6796832 1652195 29982792 6902 0 49 0 0 0\ncpu138 35653151 4679538 1673632 40200714 15933 0 66 0 0 0\ncpu139 48857685 13446341 1522680 18414268 2444 0 47 0 0 0\ncpu140 17437871 1845433 1509066 61369488 24842 0 97 0 0 0\ncpu141 8230921 1175227 842425 71897714 18459 0 118 0 0 0\ncpu142 3327696 610953 405736 77760195 25523 0 113 0 0 0\ncpu143 26686199 3007819 1687516 50810493 12411 0 66 0 0 0\ncpu144 31306585 4437791 890553 45517996 12960 0 114 0 0 0\ncpu145 32105018 4845531 832958 44375647 8361 0 95 0 0 0\ncpu146 32853311 4799504 806662 43702825 9072 0 77 0 0 0\ncpu147 33317811 4921601 811320 43110601 11563 0 82 0 0 0\ncpu148 33335327 5111164 804853 42906098 14663 0 89 0 0 0\ncpu149 32231958 4349156 813423 44764726 10793 0 79 0 0 0\ncpu150 34373280 4922894 734106 42129492 11759 0 95 0 0 0\ncpu151 33910370 5190042 806716 42258539 11234 0 84 0 0 0\ncpu152 31595936 4278457 1056295 45216954 11739 0 110 0 0 0\ncpu153 32928270 5031657 1009761 43176016 14267 0 115 0 0 0\ncpu154 32906193 5294355 993133 42955773 13375 0 104 0 0 0\ncpu155 33421387 4878071 997940 42855816 11735 0 103 0 0 0\ncpu156 32677527 4969776 991982 43504227 15372 0 107 0 0 0\ncpu157 33114954 5159005 1004182 42871592 12917 0 113 0 0 0\ncpu158 33139162 5255870 1014838 42741251 13958 0 119 0 0 0\ncpu159 33397590 5711472 955998 42089587 13021 0 99 0 0 0\ncpu160 52489016 10763021 1662791 17316731 2809 0 85 0 0 0\ncpu161 36148820 4937648 1568790 39556787 8157 0 57 0 0 0\ncpu162 43798930 7243509 1519810 29668730 3337 0 60 0 0 0\ncpu163 17690476 1658524 1358256 61467113 12072 0 108 0 0 0\ncpu164 26950313 2904469 1532723 50815320 10208 0 101 0 0 0\ncpu165 8127109 948916 765133 72306998 14334 0 128 0 0 0\ncpu166 49236390 9945253 1507663 21550034 2605 0 54 0 0 0\ncpu167 3203658 529523 355777 78038219 12023 0 129 0 0 0\ncpu168 32067729 4494928 1078426 44507528 13254 0 119 0 0 0\ncpu169 33184395 4971904 1075208 42916854 14099 0 121 0 0 0\ncpu170 33672524 4971561 1033620 42473542 11903 0 137 0 0 0\ncpu171 33509552 4824401 975236 42840883 13677 0 108 0 0 0\ncpu172 34284573 5353037 963028 41549598 13880 0 95 0 0 0\ncpu173 33837743 5632194 971630 41712481 12784 0 110 0 0 0\ncpu174 33736115 5663697 960092 41792328 15739 0 121 0 0 0\ncpu175 32964260 5143420 1002892 43043994 12154 0 158 0 0 0\ncpu176 33408354 4343476 922435 43475490 10804 0 106 0 0 0\ncpu177 34723192 4689122 882725 41855989 13229 0 116 0 0 0\ncpu178 35013160 5169937 884175 41085269 13180 0 109 0 0 0\ncpu179 35455727 5573776 867128 40258794 11180 0 114 0 0 0\ncpu180 35601993 5307066 876219 40368180 13445 0 122 0 0 0\ncpu181 34694671 6130912 880275 40449906 10466 0 120 0 0 0\ncpu182 36257704 5245684 824871 39829921 10834 0 104 0 0 0\ncpu183 36944415 4920362 824363 39466740 12692 0 110 0 0 0\ncpu184 33164468 4662635 1118379 43184781 24043 0 151 0 0 0\ncpu185 34281571 4611577 1079644 42159270 23613 0 119 0 0 0\ncpu186 33608960 4887770 1046870 42592043 18392 0 141 0 0 0\ncpu187 34705238 5446727 1023873 40963686 19120 0 133 0 0 0\ncpu188 34391014 5915926 1029600 40804893 19193 0 105 0 0 0\ncpu189 34952319 5468270 1005959 40711139 21363 0 129 0 0 0\ncpu190 35250589 5032538 1020125 40834303 22020 0 123 0 0 0\ncpu191 35323716 5675351 1076861 40061228 24984 0 125 0 0 0\nintr 72312812523 151 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 310 0 0 0 0 0 0 0 310 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 576132403 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28814 3135 30110 2972 3382 41878 3061 2817 0 0 262406 122 122 0 0 0 0 0 0 609393 0 0 0 0 0 4 0 73845 0 0 0 0 116 18 2 5 6046 1881 3 476 5 3 445 216 2 8 7 94678 393295 609831 722798 718325 906627 700706 709731 954906 787075 73845 757927 535453 792172 539329 982088 513484 600865 399182 736781 632634 711536 573298 967998 405018 954353 865809 1179591 501419 994175 575002 835998 527928 582995 779317 775759 472602 1061629 458472 1920574 548779 1915776 587529 1837118 1640895 1557185 1326212 1167427 1872493 1653684 1450048 1404426 1474959 1196957 1268769 1230535 1030353 360198 1377751 4631225 170778 2235254 3084830 1610921 4125518 1001698 851825 806642 744585 907201 942336 769115 682896 1121186 1060052 1088047 870783 1202699 998856 1122007 928137 297298 3267945 1193594 2225257 2777865 1713188 361318 887180 1038855 1128956 1019249 898247 1019726 1009823 949429 840184 937278 688233 932432 717268 782746 707502 825893 684031 1586610 1425533 1602720 1185607 1197274 1457113 1501205 1365560 1252028 551151 737118 781325 1241305 764379 895678 751986 767163 826405 825345 615600 628249 557559 685113 586621 771382 885783 748929 866479 681866 688968 862455 718962 1820152 2098371 1904497 2308404 1929034 1524569 1171292 2590792 1973615 1183614 1208047 1426475 1356862 1407968 1011420 1206284 261357 726535 1514866 161521 1681672 1322204 870570 763683 809158 604374 640088 879437 893892 1072618 802690 750165 1089638 993793 982348 905594 1235798 852513 976849 949079 160390 606148 252149 573159 641163 673745 122927 411566 1002741 943741 862209 1026656 821173 1003817 1039414 781976 796005 1105815 1006776 976693 998238 760137 814667 1339256 1610006 1701201 1327827 1447845 1426805 1396828 1565806 1723708 0 0 0 0 0 0 0 0 0 0 904 0 0 0 0 0 0 0 0 0 0 0 0 1012 0 4401 366443 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\nctxt 40863857830\nbtime 1790352320\nprocesses 62698460\nprocs_running 42\nprocs_blocked 0\nsoftirq 21360767998 261215487 346319458 8852 214179852 2109661 0 776440837 3323955941 373658 3551262364\n"
+      },
+      "started_monotonic_ns": 822360353151911
+    },
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        168810648 kB\nMemAvailable:   649133932 kB\nBuffers:        13045148 kB\nCached:         446039052 kB\nSwapCached:        12536 kB\nActive:         416683132 kB\nInactive:       427205816 kB\nActive(anon):   361231560 kB\nInactive(anon): 25939836 kB\nActive(file):   55451572 kB\nInactive(file): 401265980 kB\nUnevictable:        4456 kB\nMlocked:              96 kB\nSwapTotal:       4194300 kB\nSwapFree:            112 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              3848 kB\nWriteback:             0 kB\nAnonPages:      384746620 kB\nMapped:           811336 kB\nShmem:           2362172 kB\nKReclaimable:   29696524 kB\nSlab:           33969124 kB\nSReclaimable:   29696524 kB\nSUnreclaim:      4272600 kB\nKernelStack:       64960 kB\nPageTables:      1124756 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1021451684 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      944484 kB\nVmallocChunk:          0 kB\nPercpu:           429312 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   9291776 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    15339080 kB\nDirectMap2M:    548276224 kB\nDirectMap1G:    509607936 kB\n"
+  },
+  "evidence": [
+    {
+      "bytes": 2422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/preparation.json",
+      "sha256": "30bfac83243891ce494f893e206779c0e4315ef32b9f18ea63d4b7f05dacb314"
+    },
+    {
+      "bytes": 6452,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+      "sha256": "2c790a60290bfd07564edebc4ed3efa4e11cfb2f8e326c4de66d873cbe1c3a59"
+    },
+    {
+      "bytes": 294827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431/score.json",
+      "sha256": "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18"
+    }
+  ],
+  "execution_authorized": true,
+  "held_scheduler": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22433",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22433 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-05T00:30:56 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-05T00:30:56 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4027451 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index05_22433.out TresPerTask=cpu=64 \n"
+  },
+  "history": [
+    {
+      "bytes": 898602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+    },
+    {
+      "bytes": 1185333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+    },
+    {
+      "bytes": 913623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+      "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+    },
+    {
+      "bytes": 1262940,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+      "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+    },
+    {
+      "bytes": 1244250,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+      "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+    }
+  ],
+  "index": 5,
+  "job_id": 22433,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "policy": {
+    "bytes": 3285,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/policy.json",
+    "sha256": "9e79989611fde9f7fa69dbca11be692a6783654f0ada5e27fd1727003c3282fc"
+  },
+  "prepared_unix_ns": 1791174681046127223,
+  "prior_history_scheduler_checks": [
+    {
+      "adoption": {
+        "executed_source": {
+          "bytes": 25393,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_failed_source_22427/run_native_factorial_cost.py",
+          "sha256": "07a926e38ba49144b56bf9a7d23478d3dd050fc3a14b98e1ce8889d1f98a8d20"
+        },
+        "inference_reexecuted": false,
+        "prior_plan": {
+          "bytes": 489120,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+          "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+        },
+        "prior_review": {
+          "bytes": 898602,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+          "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+        },
+        "recovery": {
+          "bytes": 926274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+          "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+        },
+        "retained_evidence_checked": 3390,
+        "scheduler_success": false,
+        "scientific_settings_unchanged": true,
+        "status": "reviewed_failed_index_zero_adopted_without_retry",
+        "timing_success_established": false
+      },
+      "review": {
+        "bytes": 898602,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+        "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22427",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22427",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22427|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-04T19:05:13|2026-10-04T19:05:49|2026-10-04T19:46:48|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T19:46:48",
+          "ExitCode": "1:0",
+          "JobIDRaw": "22427",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T19:05:49",
+          "State": "FAILED",
+          "Submit": "2026-10-04T19:05:13",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1185333,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+        "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22428",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22428",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22428|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T20:17:05|2026-10-04T20:18:09|2026-10-04T21:15:49|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T21:15:49",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22428",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T20:18:09",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T20:17:05",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 913623,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+        "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22429",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22429",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22429|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T21:20:21|2026-10-04T21:21:54|2026-10-04T22:03:14|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T22:03:14",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22429",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T21:21:54",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T21:20:21",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1262940,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+        "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22430",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22430",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22430|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T22:08:32|2026-10-04T22:09:55|2026-10-04T23:12:18|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T23:12:18",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22430",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T22:09:55",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T22:08:32",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1244250,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+        "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22431",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22431",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22431|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T23:19:42|2026-10-04T23:22:36|2026-10-05T00:23:53|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-05T00:23:53",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22431",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T23:22:36",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T23:19:42",
+          "TimelimitRaw": "1560"
+        }
+      }
+    }
+  ],
+  "scheduler_command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh",
+  "schema": "native_factorial_cost_request_v1",
+  "source_commit": "85a0364168e3176bd5b426bde4dfae0a67cf1f4e",
+  "timing_success_established": false
+}

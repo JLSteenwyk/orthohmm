@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Actual Index5 Native And Dependent Followup Released (2026-10-05)
+
+After pushed85a03641 retains22431's reviewed/scored result, actually submit
+[next distinct P1C1R0 as held22433](NATIVE_FACTORIAL_SHARED_ATTEMPT_22433.md).
+The unchanged request helper validates the entire original prefix0..4 and
+bound preceding score. Independent pre-release check passes owner/exact
+envelope/request digest, absent output/session, all920 helpers and safe RAM
+664,289,800,192bytes. Bind digest and actually release that one new identity.
+
+Fresh controller/accounting and actualPID4028693 confirm nativeRUNNING,
+exact argv/affinity0..31,32 distinct physical cores and128-GiB ancestor cap.
+Launch available RAM664,431,509,504bytes. An observer-only bad helper import
+fails before observation; corrected import passes without native restart.
+Startup is not a final measurement, accuracy admission or continuous closure.
+
+Actually queue unchanged tested followup22434 afterany22433. Its generated
+batch is byte-identical. Independent held check passes2CPU/8GiB/two-hour
+envelope, owner/dependency/source/request/submission argv/destinations and
+all920 helpers; available RAM661,569,748,992bytes. Actually release22434 and
+confirmPENDING/not held/unfulfilled dependency plus original nativePID live.
+No duplicate reviewer, automatic retry or native successor release.
+
+Five of13 native identities reviewed, one live, seven unsubmitted. Observe
+22433/22434 next; only actual whole-terminal review plus separate frozen
+score permit index6's launch gates. QfO's native pair conversion and six-
+endpoint assessment remain separate. Preserve unknown potentially tool-
+dependent contention and all remaining full-goal requirements. No defaults,
+frozen science/helpers or unrelated jobs/services change; completion unproven.
+
 ## Full-Native P1C0R1 Reviewed And Scored (2026-10-05)
 
 Fresh scheduler observations confirm22431 COMPLETED0:0 and its original
