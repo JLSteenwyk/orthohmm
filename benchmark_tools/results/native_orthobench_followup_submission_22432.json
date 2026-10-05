@@ -1,0 +1,81 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "batch": {
+    "bytes": 765,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/finish_native_orthobench_attempt.sh",
+    "sha256": "2e2d6a3d3d54299a9845a0314a30e97e6d01747c74bc4c94dd632498df2a19c5"
+  },
+  "execution_role": "terminal_review_and_scoring_only",
+  "job_id": 22432,
+  "native_inference_reexecuted": false,
+  "next_identity_released": false,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nR=Path.cwd()\nsource=record(R/\"benchmark_tools/finish_native_orthobench_attempt.py\")\nbatch=record(R/\"benchmark_tools/finish_native_orthobench_attempt.sh\")\nrequest=record(R/\"benchmarks/work/native_factorial_launch_20261004/request_04_receipt_amended.json\")\nassert source[\"sha256\"]==\"7a5962eea9d775b9143e700e8afaf7952c6f88ff76e9f96030ff900c6a790303\"\nassert batch[\"sha256\"]==\"2e2d6a3d3d54299a9845a0314a30e97e6d01747c74bc4c94dd632498df2a19c5\"\nassert request[\"sha256\"]==\"436541a8977289cf190c1d3918eea1930e5eb7c5ef518421670971ae7dfc583f\"\nreview=R/\"benchmarks/work/native_factorial_terminal_review_22431\"\nscore=R/\"benchmarks/work/native_factorial_orthobench_score_22431\"\nassert all(not p.exists() and not p.is_symlink() for p in (review,score))\nqueue_command=[\"squeue\",\"-h\",\"-u\",\"bizon\",\"--name=orthohmm_native_review\",\"-o\",\"%i|%j|%k\"]\nqueue=subprocess.run(queue_command,capture_output=True,text=True,check=True,timeout=5)\nassert not queue.stdout.strip(), \"An existing followup handle requires inspection, not duplicate submission\"\nargv=[\"sbatch\",\"--hold\",\"--parsable\",\"--partition=gpu\",\"--dependency=afterany:22431\",\"--comment=\"+source[\"sha256\"],\"--output=\"+str(R/\"benchmarks/work/native_factorial_launch_20261004/followup04_%j.out\"),\"--error=\"+str(R/\"benchmarks/work/native_factorial_launch_20261004/followup04_%j.err\"),batch[\"path\"],\"--request\",request[\"path\"],\"--request-sha256\",request[\"sha256\"],\"--source-sha256\",source[\"sha256\"],\"--review-directory\",str(review),\"--score-directory\",str(score)]\ncompleted=subprocess.run(argv,cwd=R,capture_output=True,text=True,check=True,timeout=20)\nassert completed.stdout.strip().isdigit(),completed.stdout\njob=int(completed.stdout.strip())\nresult=dict(schema=\"native_orthobench_followup_held_submission_v1\",observer_command=sys.orig_argv,observer_interpreter=record(sys.executable),submitted_unix_ns=time.time_ns(),source_commit=subprocess.check_output([\"git\",\"rev-parse\",\"HEAD\"],text=True).strip(),job_id=job,parent_native_job_id=22431,worker=source,batch=batch,request=request,review_directory=str(review),score_directory=str(score),submission=dict(command=argv,returncode=completed.returncode,stdout=completed.stdout,stderr=completed.stderr),prior_queue_check=dict(command=queue_command,stdout=queue.stdout,stderr=queue.stderr),execution_role=\"terminal_review_and_scoring_only\",released=False,native_inference_reexecuted=False,next_identity_released=False,automatic_retry=False,accuracy_evaluated=False,publication_ready=False)\nout=R/f\"benchmark_tools/results/native_orthobench_followup_submission_{job}.json\"\nsave(out,result)\nprint(json.dumps(dict(job_id=job,submission=record(out))))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "parent_native_job_id": 22431,
+  "prior_queue_check": {
+    "command": [
+      "squeue",
+      "-h",
+      "-u",
+      "bizon",
+      "--name=orthohmm_native_review",
+      "-o",
+      "%i|%j|%k"
+    ],
+    "stderr": "",
+    "stdout": ""
+  },
+  "publication_ready": false,
+  "released": false,
+  "request": {
+    "bytes": 37777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_04_receipt_amended.json",
+    "sha256": "436541a8977289cf190c1d3918eea1930e5eb7c5ef518421670971ae7dfc583f"
+  },
+  "review_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431",
+  "schema": "native_orthobench_followup_held_submission_v1",
+  "score_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431",
+  "source_commit": "17d24eea305fce9bb1d63bb774e400226a28d60f",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--hold",
+      "--parsable",
+      "--partition=gpu",
+      "--dependency=afterany:22431",
+      "--comment=7a5962eea9d775b9143e700e8afaf7952c6f88ff76e9f96030ff900c6a790303",
+      "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/followup04_%j.out",
+      "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/followup04_%j.err",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/finish_native_orthobench_attempt.sh",
+      "--request",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_04_receipt_amended.json",
+      "--request-sha256",
+      "436541a8977289cf190c1d3918eea1930e5eb7c5ef518421670971ae7dfc583f",
+      "--source-sha256",
+      "7a5962eea9d775b9143e700e8afaf7952c6f88ff76e9f96030ff900c6a790303",
+      "--review-directory",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431",
+      "--score-directory",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22432\n"
+  },
+  "submitted_unix_ns": 1791173409934344048,
+  "worker": {
+    "bytes": 3402,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/finish_native_orthobench_attempt.py",
+    "sha256": "7a5962eea9d775b9143e700e8afaf7952c6f88ff76e9f96030ff900c6a790303"
+  }
+}

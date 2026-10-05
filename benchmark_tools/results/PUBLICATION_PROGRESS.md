@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Actual Dependent Terminal Followup Released As22432 (2026-10-05)
+
+After the preceding preparation checkpoint is pushed as17d24eea, actually
+submit [held followup22432](NATIVE_ORTHOBENCH_FOLLOWUP_22432.md) with afterany22431.
+Retain real submission argv/source/request pins and the byte-identical
+generated Slurm script. Separate pre-release observation verifies owner,
+held dependency, bizon/gpu envelope2CPUs/8GiB/two hours/no requeue, command/
+cwd/comment, submitted argv, absent destinations, safeRAM662,367,207,424bytes
+and all920 unchanged native helpers. Controller only reports the script path;
+argv are checked against the retained submission, not full executed lookup.
+
+An optional JSON client probe fails on missing serializer plugin/exit139;
+fresh text observations work. No native/job restart or scheduler/service
+repair. Actually release22432 once. Fresh post-release controller confirms
+pending/not held/same unfulfilled parent dependency. Parent22431 remains
+RUNNING with livePID2805435/affinity0..31. Preserve the pre-release snapshot
+without rewriting its historical release=false field.
+
+This queued worker performs only the unchanged terminal review and separate
+score after actual parent termination. No inference rerun, automatic retry,
+QfO substitution or native successor release. Expected outputs are original
+work/native_factorial_terminal_review_22431/{review,followup}.json and
+work/native_factorial_orthobench_score_22431/score.json, not present successes.
+On resumption inspect both handles and do not duplicate the dependent work.
+Review/readback its actual outcomes before index5's full prefix/launch gates.
+
+Latest22431 RUNNING50:14, initial search complete and clustering/profile stage
+not yet final. 94 joined tests remain preparation evidence, not real terminal
+admission. Broader scientific/native and publication/distribution obligations
+remain active and unproven; shared-host timing caveats are unchanged.
+
 ## Dependent OrthoBench Review/Score Worker Prepared (2026-10-05)
 
 Previous turn makes progress at pushed72d6226f with the actual 472-file
