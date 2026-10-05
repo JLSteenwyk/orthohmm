@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Next Full-Native QfO Configuration Actually Starts (2026-10-05)
+
+Previous turn makes progress at pushed41d494e3: validate and retain first
+native QfO result22435, independent950-record readback and seven-review
+snapshot. Re-read full goal; verify22435/22436 COMPLETED0:0 and no owned
+native job in queue. Preserve those results without restart or new score.
+
+Actually [submit different index7 as held22437](NATIVE_FACTORIAL_SHARED_ATTEMPT_22437.md),
+QfO P0C0R1: sensitive HMM search on, downstream profiles/candidates off,
+reconciliation on. Unchanged request helper executes successfully with
+complete seven-review prefix and no inapplicable OrthoBench score argument.
+Request43,782bytes/SHA1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7,
+sourcecommit41d494e3. Bind held scheduler Comment; published request exact.
+
+Independent held gate passes owner/exact resource envelope/full prefix/
+fresh output/session/request evidence/all920 helper pins and safe RAM
+685,794,828,288bytes. Actually release22437 once; capture exit0 and pending/
+not-held/same owner/request observation. Native step later starts. Actual
+PID265470 passes exact command, affinity0..31/32 distinct physical cores,
+matching cgroup and128-GiB ancestor cap. Launch available RAM
+685,485,678,592bytes, all920 helpers unchanged. Startup is not final
+accounting, accuracy admission or continuous integrity proof.
+
+Seven reviewed, one running, five unsubmitted native identities. Observe
+original22437 without duplicate or retry; completed22435 still requires
+separate QfO conversion/assessment/admission. No reviewer or scorer is
+queued in this milestone. Shared-host distortion remains unknown and
+potentially tool-dependent; no quiet-window requirement or interference
+with unrelated work. No code/default/frozen-setting change. Full goal
+remains active and publication readiness unproven.
+
 ## First Full-Native QfO Ablation Passes Terminal Review (2026-10-05)
 
 Previous turn is a verified wait on original reviewer22436. Re-read the

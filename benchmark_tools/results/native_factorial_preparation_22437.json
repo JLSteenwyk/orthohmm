@@ -1,0 +1,70 @@
+{
+  "automatic_retry": false,
+  "comment_update": {
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=22437",
+      "Comment=1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "helper": {
+    "bytes": 6452,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+    "sha256": "2c790a60290bfd07564edebc4ed3efa4e11cfb2f8e326c4de66d873cbe1c3a59"
+  },
+  "index": 7,
+  "job_id": 22437,
+  "observed_unix_ns": 1791220439148053383,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nfrom benchmark_tools.probe_dgx_step_separation import save\nroot=Path.cwd();original=json.loads((root/\"benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json\").read_text())\nreview=record(root/\"benchmarks/work/native_factorial_terminal_review_22435/review.json\");assert review[\"sha256\"]==\"998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490\"\nhelper=record(root/\"benchmark_tools/prepare_native_factorial_request.py\");assert helper[\"sha256\"]==\"2c790a60290bfd07564edebc4ed3efa4e11cfb2f8e326c4de66d873cbe1c3a59\"\ncmd=[sys.executable,\"-B\",helper[\"path\"],\"--job\",\"22437\"]\nfor ref in [*original[\"history\"],review]:cmd.extend([\"--history\",ref[\"path\"],ref[\"sha256\"]])\nrequest=root/\"benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json\";cmd.extend([\"--output\",str(request)])\ndone=subprocess.run(cmd,capture_output=True,text=True,check=True)\nref=json.loads(done.stdout);assert ref==record(request)\ncomment=[\"scontrol\",\"update\",\"JobId=22437\",\"Comment=\"+ref[\"sha256\"]];bound=subprocess.run(comment,capture_output=True,text=True,check=True)\nout=root/\"benchmark_tools/results/native_factorial_preparation_22437.json\";assert not out.exists()\nsave(out,dict(schema=\"native_factorial_request_preparation_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),job_id=22437,index=7,helper=helper,preparation=dict(command=cmd,returncode=done.returncode,stdout=done.stdout,stderr=done.stderr),request=ref,comment_update=dict(command=comment,returncode=bound.returncode,stdout=bound.stdout,stderr=bound.stderr),released=False,automatic_retry=False))\nprint(json.dumps(dict(request=ref,receipt=record(out))))\n"
+  ],
+  "preparation": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_request.py",
+      "--job",
+      "22437",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+      "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+      "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+      "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+      "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f",
+      "--history",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+      "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490",
+      "--output",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"bytes\": 43782, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json\", \"sha256\": \"1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7\"}\n"
+  },
+  "released": false,
+  "request": {
+    "bytes": 43782,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json",
+    "sha256": "1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7"
+  },
+  "schema": "native_factorial_request_preparation_inline_v1"
+}
