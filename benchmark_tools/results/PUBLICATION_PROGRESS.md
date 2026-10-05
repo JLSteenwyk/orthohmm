@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Full-Native P1C0R1 Reviewed And Scored (2026-10-05)
+
+Fresh scheduler observations confirm22431 COMPLETED0:0 and its original
+dependent22432 RUNNING with actualPID4023588. Preserve that worker rather
+than duplicate it. It subsequently completes0:0 after3:32 and writes the
+full terminal review, separate frozen score and bound followup receipt.
+
+[P1C0R1 result](NATIVE_FACTORIAL_RESULT_22431.md):F1 73.31136410139777%,
+precision87.4585846260878%, recall63.10375801659546%, all70 RefOGs/1,944
+reference genes covered. Entire64,616-group/251,378-gene partition and
+all aggregate scores match the retained cached result. This is development-
+exposed root-HOG co-membership reproduction, not resolved-pair truth or
+independent accuracy. Raw resource and typed shared-host review pass.
+
+Native wall3460.657033564s, CPU97852.112871s, peak11,368,222,720bytes;
+maximum foreign average demand42.58017971710081 cores. Preserve unknown,
+potentially tool-dependent shared-host timing distortion and exact scopes.
+Publish byte-identical original review, score and completed followup copies.
+The five-result snapshot and independent readback preserve all13 identities,
+five actual joins, eight unsupplied endpoint rows, failed22427, earlier four
+rows, and all920 unchanged helpers. No science/helper code changes or
+inference retries. Next safe action is index5's original full-prefix gates.
+The full goal remains active; broader completion is unproven.
+
 ## Actual Dependent Terminal Followup Released As22432 (2026-10-05)
 
 After the preceding preparation checkpoint is pushed as17d24eea, actually

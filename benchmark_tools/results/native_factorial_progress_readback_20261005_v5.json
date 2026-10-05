@@ -1,0 +1,117 @@
+{
+  "byte_identical_copies": [
+    {
+      "original": {
+        "bytes": 1244250,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+        "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+      },
+      "published": {
+        "bytes": 1244250,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_terminal_review_22431.json",
+        "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+      }
+    },
+    {
+      "original": {
+        "bytes": 294827,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_orthobench_score_22431/score.json",
+        "sha256": "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18"
+      },
+      "published": {
+        "bytes": 294827,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_orthobench_score_22431.json",
+        "sha256": "c472261fab6804020cb6eb70ada492742767a4486321c3640a7d224f983b4a18"
+      }
+    },
+    {
+      "original": {
+        "bytes": 1362,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/followup.json",
+        "sha256": "0fe2b7ee698d43cb7dddd971196f9ebfa983d0c3ff76e2a7c9e51019820e815e"
+      },
+      "published": {
+        "bytes": 1362,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_orthobench_followup_completed_22432.json",
+        "sha256": "0fe2b7ee698d43cb7dddd971196f9ebfa983d0c3ff76e2a7c9e51019820e815e"
+      }
+    }
+  ],
+  "direct_report_source_pins": 13,
+  "identities": 13,
+  "limitations": [
+    "Independent direct-report/table binding, not another raw replay.",
+    "Missing rows are unavailable endpoints, not live-job states or zeros.",
+    "Failed22427 recovery is not a clean-success timing.",
+    "Shared-host distortion is unknown and potentially tool-dependent."
+  ],
+  "markdown": {
+    "bytes": 2837,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261005_v5/report.md",
+    "sha256": "09d131902c30f26155d0cde833f7dc17ae7913704767f6cc379a28127286ab9a"
+  },
+  "new_admission": false,
+  "observed_unix_ns": 1791174540865665433,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport csv,hashlib,json,sys,time\nfrom pathlib import Path\nR=Path.cwd()\ndef rec(p):\n p=Path(p).absolute()\n assert p.is_file() and not p.is_symlink(),str(p)\n with p.open(\"rb\") as f:h=hashlib.file_digest(f,\"sha256\").hexdigest()\n return dict(path=str(p),bytes=p.stat().st_size,sha256=h)\ndef read(r):\n assert rec(r[\"path\"])==r\n return json.loads(Path(r[\"path\"]).read_text())\nB=R/\"benchmark_tools/results/native_factorial_progress_20261005_v5\"\nd=json.loads((B/\"report.json\").read_text()); old=json.loads((R/\"benchmark_tools/results/native_factorial_progress_20261004_v4/report.json\").read_text())\nfor r in [*d[\"evidence\"],d[\"source\"]]:read(r) if r!=d[\"source\"] else rec(r[\"path\"])==r\nassert rec(d[\"source\"][\"path\"])==d[\"source\"]\nplan=read(d[\"plan\"])\nfor r in plan[\"helper_sources\"]:assert rec(r[\"path\"])==r\nassert len(plan[\"helper_sources\"])==920 and len(d[\"rows\"])==13 and d[\"rows\"][:4]==old[\"rows\"][:4]\nwith (B/\"rows.tsv\").open(newline=\"\") as f:t=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(t)==13\nfor r,s in zip(d[\"rows\"],t):assert {k:(\"\" if v is None else str(v)) for k,v in r.items()}==s\njoins=[]\nfor i,row in enumerate(d[\"rows\"][:5]):\n rr=next(r for r in d[\"evidence\"] if \"/native_factorial_terminal_review_\" in r[\"path\"] and read(r)[\"index\"]==i)\n rev=read(rr)\n assert row[\"job_id\"]==rev[\"job_id\"]==22427+i\n assert all(row[k]==v for k,v in rev[\"resources\"].items())\n assert row[\"maximum_foreign_average_cores\"]==rev[\"whole_run_maximum_foreign_average_cores\"]\n if i==0:\n  assert row[\"outcome\"]==\"failed_wrapper_science_recovered\" and rev[\"scheduler_state\"]==\"FAILED\" and row[\"reference_gene_coverage\"] is None\n  recovery=read(plan[\"history_adoption\"][\"recovery\"]);assert recovery[\"terminal_review\"]==rr\n  score=read(recovery[\"score\"]);part=score[\"original_partition_comparison\"]\n else:\n  sr=next(r for r in d[\"evidence\"] if f\"/native_factorial_orthobench_score_{22427+i}/score.json\" in r[\"path\"])\n  score=read(sr);part=score[\"canonical_partition_comparison\"]\n  assert score[\"terminal_review\"]==rr and rev[\"status\"]==\"native_success\" and rev[\"scheduler_state\"]==\"COMPLETED\" and rev[\"scheduler_exit_code\"]==\"0:0\"\n  assert score[\"resource_observation\"]==rev[\"resources\"] and row[\"reference_gene_coverage\"]==score[\"covered_reference_genes\"]/score[\"reference_genes\"]\n assert row[\"partition_equal\"]==part[\"partition_equal\"]\n for k,s in ((\"f1\",\"f_score\"),(\"precision\",\"precision\"),(\"recall\",\"recall\")):assert row[k]==score[\"score_fraction\"][s]\n joins.append(dict(index=i,job_id=row[\"job_id\"],f1=row[\"f1\"],outcome=row[\"outcome\"]))\nfor row in d[\"rows\"][5:]:\n assert row[\"outcome\"]==\"no_supplied_terminal_review\" and all(v is None for k,v in row.items() if k not in (\"index\",\"dataset\",\"cell\",\"outcome\"))\nf=json.loads((R/\"benchmarks/work/native_factorial_terminal_review_22431/followup.json\").read_text())\nassert f[\"status\"]==\"terminal_reviewed_and_scored\" and f[\"parent_native_job_id\"]==22431 and f[\"review_score_scheduler_job_id\"]==\"22432\"\nassert read(f[\"terminal_review\"])[\"index\"]==4 and read(f[\"score\"])[\"index\"]==4\ncopies=[]\nfor a,b in ((\"benchmarks/work/native_factorial_terminal_review_22431/review.json\",\"benchmark_tools/results/native_factorial_terminal_review_22431.json\"),(\"benchmarks/work/native_factorial_orthobench_score_22431/score.json\",\"benchmark_tools/results/native_factorial_orthobench_score_22431.json\"),(\"benchmarks/work/native_factorial_terminal_review_22431/followup.json\",\"benchmark_tools/results/native_orthobench_followup_completed_22432.json\")):\n x,y=rec(R/a),rec(R/b);assert x[\"bytes\"]==y[\"bytes\"] and x[\"sha256\"]==y[\"sha256\"];copies.append(dict(original=x,published=y))\nassert not d[\"publication_ready\"] and not d[\"new_scoring_or_admission\"] and \"unknown and potentially tool-dependent\" in d[\"timing_disclosure\"]\nresult=dict(schema=\"native_factorial_reporting_inline_readback_v1\",observer_command=sys.orig_argv,observer_interpreter=rec(Path(sys.executable).resolve()),observed_unix_ns=time.time_ns(),report=rec(B/\"report.json\"),markdown=rec(B/\"report.md\"),table=rec(B/\"rows.tsv\"),previous_report=rec(R/\"benchmark_tools/results/native_factorial_progress_20261004_v4/report.json\"),direct_report_source_pins=len(d[\"evidence\"])+1,unchanged_helpers=920,identities=13,supplied_review_score_joins=joins,unsupplied_endpoint_rows=8,byte_identical_copies=copies,status=\"passed\",new_admission=False,limitations=[\"Independent direct-report/table binding, not another raw replay.\",\"Missing rows are unavailable endpoints, not live-job states or zeros.\",\"Failed22427 recovery is not a clean-success timing.\",\"Shared-host distortion is unknown and potentially tool-dependent.\"])\nout=R/\"benchmark_tools/results/native_factorial_progress_readback_20261005_v5.json\"\nwith out.open(\"x\") as g:json.dump(result,g,indent=2,sort_keys=True);g.write(\"\\n\")\nprint(json.dumps(dict(receipt=rec(out),joins=5,helpers=920,peak_gib=d[\"rows\"][4][\"peak_memory_bytes\"]/2**30)))\n"
+  ],
+  "observer_interpreter": {
+    "bytes": 8019136,
+    "path": "/usr/bin/python3.12",
+    "sha256": "8a8654fbee2f679f3138783c9973cf0a8394cac1518eaf98de654c2166d669b4"
+  },
+  "previous_report": {
+    "bytes": 10386,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261004_v4/report.json",
+    "sha256": "39369ecbc99f09dd2fe56a31a63bb0ffb4f52c3a40e20bbd9197af45fe824496"
+  },
+  "report": {
+    "bytes": 10979,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261005_v5/report.json",
+    "sha256": "46c6d5f79cbac94b90d717e2cfc7f9b4d352f899f557291759e7e43d70f33705"
+  },
+  "schema": "native_factorial_reporting_inline_readback_v1",
+  "status": "passed",
+  "supplied_review_score_joins": [
+    {
+      "f1": 0.6976338784350485,
+      "index": 0,
+      "job_id": 22427,
+      "outcome": "failed_wrapper_science_recovered"
+    },
+    {
+      "f1": 0.7270499607171313,
+      "index": 1,
+      "job_id": 22428,
+      "outcome": "native_success"
+    },
+    {
+      "f1": 0.6663945723718282,
+      "index": 2,
+      "job_id": 22429,
+      "outcome": "native_success"
+    },
+    {
+      "f1": 0.7340228812727554,
+      "index": 3,
+      "job_id": 22430,
+      "outcome": "native_success"
+    },
+    {
+      "f1": 0.7331136410139777,
+      "index": 4,
+      "job_id": 22431,
+      "outcome": "native_success"
+    }
+  ],
+  "table": {
+    "bytes": 1520,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_progress_20261005_v5/rows.tsv",
+    "sha256": "37da75c719798de590daa4df729a695d3edbb0af7fb7442d5bf39dbcbfeb78dd"
+  },
+  "unchanged_helpers": 920,
+  "unsupplied_endpoint_rows": 8
+}
