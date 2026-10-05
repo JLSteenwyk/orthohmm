@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Current All-Tool Input/Output File Identities Rechecked (2026-10-04)
+
+Previous turn makes progress at pushede1ec6db6 with the actual four-cell
+uncertainty binding. Read the full goal/current ledger and freshly confirm
+the same22431 RUNNING. Preserve it, without restart or early scoring. The
+remaining scientific uncertainty/stratum limitations are not solved by
+relabeling failed estimators or proxy features.
+
+The all-tool register's selected files are present but its identities are
+inherited. [Actually stream-check all472 selected paths](BENCHMARK_FILE_RECHECK_20261004.md),
+33,912,479,521bytes, across24 method/dataset rows: all match, no missing,
+mismatched, nonregular, unreadable or unstable outcome. Shared files are
+checked once. Preserve source/register pins and every stat/descriptor bracket.
+Named OrthoMCL inputs include BPO/index artifacts; the selected field contains
+zero OrthoBench input paths, so do not claim a complete input-consumption audit.
+
+Independent stdlib readback reconstructs every association/identity, re-hashes
+all24 prediction outputs(3,840,707,945bytes), checks the primary brackets and
+all920 unchanged frozen helpers. It does not repeat large input hashing.
+Initial42passes/one failure reflects an aliased synthetic fixture; replace
+only one conflict pin, retain failed JUnit, add unreadable/missing/output-alias
+controls. All46 joined tests pass, zero failures/errors/skips,0.82s.
+
+Both bookkeeping checks use ownCPU32 outside native0..31, with no unrelated
+work modification. Primary58.498961848s is not a tool timing. It adds shared
+CPU/I/O activity, already observed by the live run; unknown distortion is not
+subtracted. Current byte agreement neither upgrades historical consumption,
+transitive execution, conversions/scores nor archival completion.
+
+Latest22431 RUNNING32:18; verify its current state again before acting. Full
+terminal review/separate score still precede index5. The full publication
+goal, genuinely remaining native work and scientific/distribution obligations
+remain active and unproven. No defaults, frozen helpers or retained scores change.
+
 ## Native RefOG Records Permit Bounded Uncertainty Reuse (2026-10-04)
 
 After pushed7c79363a retains the completed22430 result and live22431,
