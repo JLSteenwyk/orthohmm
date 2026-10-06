@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Recovered QfO Scoring Live, Validator Queued And Reporting Prepared (2026-10-06)
+
+Committed/pushed9bdeb160 supplies validated distinct scoring/admission sources.
+Submit held22448, check original conversion/1,645-binding preparation,259-test
+receipt, source hashes, prepared3.10 invocation/imports, owner/envelope/Comment,
+unused namespaces and safe RAM821,772,636,160bytes. Release once on8CPU/64GiB/
+24h/no-requeue. Actual scoring preflight matches the prepared command and live
+PythonPID4144546/create1791271899.35; JavaPID4144788/create1791271912.33 runs
+the exact frozen command suffix under `nextflow.cli.Launcher`. Pipeline submits
+all six endpoint tasks; this is not completion or admitted accuracy.
+
+Preserve initial observer assertion expecting standalone Nextflow-script token
+inside Java argv. Correct only observer and retain failure; no scoring restart.
+Retain frozen Nextflow22.10.8/workflow19.10.0 warning, not a new compatibility
+certification or changed runtime. Independent validator22449 is separately
+held-checked/released afterany22448 on2CPU/32GiB/6h/no-requeue. Fresh scheduler
+shows scoring RUNNING and validator dependency-pending. Original native22444
+continues live;22445 remains its original dependent review.
+
+New [scientific reporting protocol](NATIVE_QFO_SCIENTIFIC_REPORTING_PROTOCOL_20261006.md)
+combines actual successful-measurement and recovered-science admissions without
+forging old schemas. Keeps accuracy/measurement statuses separate, failed
+timing resources null and eligibility false, missing cells unavailable and
+all native endpoint/precision/recall/coverage/FAS semantics intact.316 joined
+tests3.48s include60 new reporter cases. Original success-only helpers and920
+frozen sources remain unchanged. No real recovered score/interval/table exists
+yet; only export after actual terminal independent admission passes.
+
+Next: observe original22448/22449, retain terminal outcomes, independently
+read back admitted evidence then export actual native score snapshot and
+family evidence where justified. Observe22444/22445 before any index9 action.
+No repeated inference, raw cadence census, paired bootstrap or contention
+retry. Full uncertainty/scientific/reporting/release requirements remain;
+goal active, publication readiness unproven, shared-host impact unknown.
+
 ## Recovered-Science Scoring And Admission Prepared (2026-10-06)
 
 Previous goal turn makes concrete progress at pushed3b320d61: recovered

@@ -81,6 +81,16 @@ This route preserves original FAILED1:0/null/ineligible timing even after
 independent accuracy admission; its output is not interchangeable with a
 successful-measurement admission or the success-only exporter above.
 
+The [combined scientific reporting protocol](results/NATIVE_QFO_SCIENTIFIC_REPORTING_PROTOCOL_20261006.md)
+adds `benchmark_tools.export_native_qfo_scientific_scores` with separate
+`--admission PATH SHA256` and `--recovered-admission PATH SHA256` arguments.
+Use only actual independently admitted accuracy, never pending/live endpoint
+files. It retains failed timing as null/ineligible, rejects duplicate cells,
+labels measurement separately, and keeps missing cells unavailable.316 tests
+pass, including60 new reporting cases. Actual recovered scoring22448 and
+independent validator22449 remain live/dependency-pending at this checkpoint;
+no new recovered score or table is yet admitted.
+
 **Preserve the Python invocation path.** The retained review environment is
 `benchmarks/work/native_factorial_review_py310_20261004/bin/python`. Its
 symlink-resolved executable shares binary bytes with the native base
