@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Distinct Scientific Recovery Route Prepared (2026-10-06)
+
+Previous turn makes concrete progress at175ae07d: original22437/22440 are
+terminal failures and cadence diagnosis is retained. Read full goal and current
+ledger; no live inference is assumed. New [failure-recovery protocol](
+NATIVE_MEASUREMENT_FAILURE_RECOVERY_PROTOCOL_20261006.md) separates semantic
+scientific validation from invalid measurement admission. No920 frozen helper
+file, original receipt/threshold, setting or native identity changes.
+
+140 joined tests pass3.02s, including29 new failure-scope/runtime-reuse/
+converter-refusal cases. The new reviewer reuses bound original runtime-tree
+verdict with explicit non-fresh scope, validates actual scientific semantics,
+and only after success writes a distinct failed-measurement disposition.
+Resources stay null/ineligible; no absent report or success-only receipt is
+fabricated. Valid disposition can permit only the next different frozen
+identity through unchanged fresh launch gates, not a retry or timing pass.
+
+After committed source, submit the prepared2CPU/32GiB review held, verify
+capacity/bindings and release once. Actual scientific recovery is not yet
+proven by these tests. Existing success-only converter intentionally rejects
+the new schema; recovered-output scoring needs an explicit separate route.
+Full goal remains active/unproven, not narrowed to recovery alone.
+
 ## Original Native QfO 22437 Measurement Failure Diagnosed (2026-10-06)
 
 The previous goal turn was a verified wait on original22437. Fresh scheduler
