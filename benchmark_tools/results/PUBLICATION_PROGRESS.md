@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Native QfO Assessment Released Behind Original Conversion (2026-10-06)
+
+Prepared worker/protocol4d532428 committed/pushed before actual submission.
+[Assessment22451 checkpoint](CONVERSION_GATED_NATIVE_QFO_ASSESSMENT_RESULT_22451.md)
+retains held source/resource/request/dependency inspection, one successful
+release and independent original-handle re-poll. New22451 dependency-pending
+afterany22450,8CPU/64GiB/4hours/no-requeue. Preserve immediate transient
+Reason=None; fresh poll confirms Dependency, without repeated release or
+resubmission. Original22444 RUNNING3:01:35;22445/22450 remain pending/invariant.
+
+417 joined tests5.97s pass, no skips, including eight actual assessment-launch
+readbacks and earlier conversion-launch/wrapper/native science contracts.
+Explicit endpoint stubs in fixtures are not production scoring. Actual
+original-Python preflight checks all920 helpers,704 frozen runtime records
+and12 assessment helpers, original FAS protocol, namespace/capacity/command
+preview, without reading future conversion or evaluating endpoints. Known
+runtime integrity is not future/continuous integrity; original driver rechecks.
+
+Next: original terminal inference/review, actual conversion22450 and scoring
+22451 gates, then independent admission/export/uncertainty if successful.
+No new score, automated admission, native-index9 release, inference retry,
+timing repair or unrelated workload change. Public TreeFam API/TFF-storage
+follow-up exposes no authenticated original download/mapping, no contact or
+substitution. Full remaining native/scientific/generalization/reproducibility/
+release/deposition scope stays active and incomplete. Shared-host contention
+unknown and potentially tool-dependent; no isolated speed ranking.
+
 ## Deferred Native QfO Assessment Validated (2026-10-06)
 
 Previous goal turn makes progress at b8192281/fd48e8d4 by actually queueing
