@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Scientific Outputs Recovered, Timing Failure Retained (2026-10-06)
+
+Committed/pushede0ceae93 supplies the validated distinct route. Actual
+review22443 completes0:0 in1:03 after one checked held submission/release
+on2CPU/32GiB. Original22437 allocation remains FAILED1:0, native step
+COMPLETED0:0 and original reviewer22440 FAILED1:0. No inference/reviewer
+retry, original receipt rewrite or fabricated measurement report occurs.
+
+[Actual result](NATIVE_SCIENTIFIC_RECOVERY_RESULT_22443.md) publishes the
+byte-identical distinct failed-measurement disposition and semantic-output
+report. Independently validates984,137 inputs/397,041 groups/90,687,327
+checkpoint hits/5,113,820 resolved pairs. Accuracy remains unevaluated;
+no new score/interval or independent gene-tree correctness claim. Reuses
+original runtime verdict with checked bracket/lookup/input bindings and
+explicit non-fresh scope. Primary resources null; full resource replay,
+timing admission/eligibility and original scheduler success remain false.
+
+Independent readback checks actual reviewer scheduler/stdout/stderr, eight
+direct references, published bytes, scientific counts,140-test XML/29 new
+cases and all920 helper pins. Does not rerun semantic review or cadence census.
+Classified, excluded failure now permits only the next different frozen
+identity through unchanged fresh launch gates. Index8/P0C1R0 can be prepared;
+no native successor starts at this recovery checkpoint. Existing converter
+still rejects the distinct schema; prepare an explicit recovered-science
+conversion/scoring route rather than forging a success-only review.
+Full goal active/unproven; old results/failures and release requirements persist.
+
 ## Distinct Scientific Recovery Route Prepared (2026-10-06)
 
 Previous turn makes concrete progress at175ae07d: original22437/22440 are
