@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Native Functional-Pair Composition Completed And Integrated (2026-10-06)
+
+Prepared source/protocol committed/pushed atfe6fe1af. The real original-Python3.10
+invocation completes with two native cells, six admission/execution-bound raw
+tables and three comparisons. Read about7MB compressed retained data, not large
+inference/resource files. No inference, scoring, admission or bootstrap repeats;
+historical all-method GO/EC/FAS analyses and frozen helpers remain unchanged.
+
+[Actual result](NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md): R-on GO78,607 and
+EC116,929 scored pairs are complete subsets of R-off145,142/186,098, with identical
+six-decimal values on all shared pairs. R-off-only means0.4506870677/0.8719528955
+are lower; positive functional means reflect pair-set/denominator composition,
+not changed common-pair scores or proven ortholog selection. Original endpoints
+are preserved. FAS shares only1,007 realized sampled pairs,0.3989% ofR-on and
+2.6358% ofR-off, all shared values identical. Unseeded method-specific samples,
+eligibility, missing scores and dependence still preclude an admitted paired CI.
+
+Independent SQLite parsing/join checks817,432 raw rows, exact GO/EC totals,
+shared counts/equality and FAS means. Preserve actual JSON and separate readback
+digests. Diagnostic-only GNU-time observes3.41s/181,976KiB peakRSS/exit0 under
+shared-host contention; these are not native inference or scaling measurements.
+Original22437 failed timing remains failed/null/ineligible.
+
+Working manuscript/checklist/guide now include this bounded native finding and
+explicit unresolved functional-score uncertainty; older comparator/rc4 archive/
+PDF payloads are not rewritten.237 joined tests9.49s pass, including15 independent
+SQL/content/documentation cases and21 primary native-composition cases. Native
+22444 remains RUNNING at1:46:04 and original22445 dependency-pending. Next native
+identity still requires actual terminal review and fresh capacity/accounting
+gates. Full goal active, publication readiness unproven; unknown potentially
+tool-dependent contention remains disclosed. This is concrete analytical and
+reporting progress, not completion of the remaining uncertainty/release scope.
+
 ## Native Functional-Pair Composition Workflow Prepared (2026-10-06)
 
 Previous turn progresses at pushed50fdea48/d633a1b8 with actual native figures

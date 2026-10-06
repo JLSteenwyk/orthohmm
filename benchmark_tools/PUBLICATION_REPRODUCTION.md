@@ -26,6 +26,17 @@ visual review or scientific admission. PNG and PDF preview were inspected
 separately. This is a local source-bound workflow, not portable fresh-install
 certification or a completed publication archive.
 
+The [new native functional-pair diagnostic](results/NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md)
+uses `benchmark_tools.compare_native_qfo_functional_pairs` with an explicit
+scientific snapshot digest in the original Python3.10 environment. The
+[protocol](results/NATIVE_QFO_FUNCTIONAL_PAIR_PROTOCOL_20261006.md) binds six
+small raw GO/EC/FAS tables through original admission/execution records; it
+does not repeat historical all-tool overlap analysis or inference/scoring.
+`benchmark_tools.readback_native_qfo_functional_pairs` independently parses
+and joins all 817,432 rows with SQLite. Fresh destinations are required.
+Original endpoints and denominators remain unchanged; subset/shared-sample
+conditioning is not a replacement endpoint or a paired uncertainty estimator.
+
 ## Current Entry Point (2026-10-05)
 
 The [full-native factorial snapshot](results/native_factorial_progress_20261005_v7/report.md)

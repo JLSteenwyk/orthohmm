@@ -995,6 +995,39 @@ CPU, memory-bandwidth and I/O demand, with unknown, tool-dependent effects;
 matching limits does not establish isolated performance. Failed timing stays
 failed; broader publication requirements and final package integration remain.
 
+### Native Functional-Pair Composition
+
+A separate raw-pair comparison explains the two fresh native cells' GO/EC
+arithmetic without replacing their endpoints. All 78,607 R-on GO and 116,929
+R-on EC scored pairs occur in the respective R-off sets (145,142 and 186,098
+pairs), with identical six-decimal similarity values on every shared pair.
+The 66,535 GO and 69,169 EC R-off-only scored pairs have means 0.4506870677
+and 0.8719528955. These are lower than the shared means, explaining the
+positive serialized differences (+0.0181405879 GO and +0.0355881593 EC)
+through pair membership and original denominators rather than score changes
+on common pairs. This is arithmetic composition, not correct ortholog
+selection, annotation validation or causal biological improvement.
+
+The realized FAS samples share only 1,007 pairs: 0.3989% of the 252,451 R-on
+sample and 2.6358% of the 38,205 R-off sample. Their shared serialized values
+are identical, but conditioning on this intersection changes the endpoint
+and does not replace the original +0.0100620873 sample-mean difference.
+Method-specific eligibility, unseeded sampling, missing scores and shared
+proteins remain unresolved sampling/dependence issues. The scored GO/EC
+pair sets likewise reuse proteins (maximum degrees 38-63 across the four
+tables). Neither intersections nor these degrees define independent units;
+no paired functional-score interval is added.
+
+An independent SQLite parser/join checks all 817,432 rows across the six
+admitted raw tables, including exact GO/EC integer totals, overlap counts,
+shared-score equality and FAS means. The diagnostic does not rescore
+annotations or establish an HMM-versus-OrthoFinder advantage. Its own
+3.41-second shared-host execution is postprocessing, not native inference
+timing or a scaling repeat; unknown contention effects remain.
+[Native functional-pair result and limits](NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md),
+[machine-readable composition](native_qfo_functional_pair_composition_20261006_v1.json),
+[independent readback](native_qfo_functional_pair_sql_readback_20261006.json).
+
 The original-release QfO factorial likewise completed all eight cells. Its
 prespecified SwissTrees family bootstrap used 100,000 shared draws and
 adjusted 42 endpoints. All 14 adjusted F1 intervals included zero. The four

@@ -18,6 +18,16 @@ replace historical comparator results or certify the complete publication goal.
 | Reconciliation improves every QfO endpoint | [Actual two-cell table](native_qfo_scientific_scores_20261006_v1/scores.md) | Contradicted by TreeFam-A F1: 0.6054035649 to 0.6025078294. Other endpoint and secondary-mean paired uncertainty remain open; FAS sample SEM is not a paired interval |
 | The native factorial or final publication archive is complete | [Current native figure](native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.pdf), [progress ledger](PUBLICATION_PROGRESS.md) | Not achieved: five fresh QfO score rows remain unavailable. Earlier rc4 archive/PDF payloads predate this evidence. No isolated timing or general OrthoFinder advantage follows |
 
+Native functional-score interpretation is additionally bounded by the
+[actual raw-pair composition](NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md)
+and [independent SQLite readback](native_qfo_functional_pair_sql_readback_20261006.json).
+GO/EC R-on scored sets are subsets of R-off with identical serialized shared
+scores; removing lower-mean scored relations explains the arithmetic increases,
+not correct ortholog selection or causal biological improvement. FAS has only
+1,007 shared sampled pairs (0.3989% of R-on and 2.6358% of R-off). Conditioning
+on them changes the endpoint; no functional-score paired CI or independent
+sampling law is established. Other-endpoint uncertainty remains open.
+
 ## Current Requirement Status
 
 Timing scope amended 3 October 2026 under the user's

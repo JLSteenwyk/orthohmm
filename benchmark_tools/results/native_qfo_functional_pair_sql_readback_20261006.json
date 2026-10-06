@@ -1,0 +1,100 @@
+{
+  "checked_raw_rows": 817432,
+  "comparisons": [
+    {
+      "independent_sql_join": {
+        "differing_shared_pairs": 0,
+        "left_pairs": 78607,
+        "left_sum": 38537839657,
+        "maximum_shared_difference": 0,
+        "right_pairs": 145142,
+        "right_sum": 68524303708,
+        "shared_left_sum": 38537839657,
+        "shared_pairs": 78607,
+        "shared_right_sum": 38537839657
+      },
+      "metric": "GO"
+    },
+    {
+      "independent_sql_join": {
+        "differing_shared_pairs": 0,
+        "left_pairs": 116929,
+        "left_sum": 113152453304,
+        "maximum_shared_difference": 0,
+        "right_pairs": 186098,
+        "right_sum": 173464563133,
+        "shared_left_sum": 113152453304,
+        "shared_pairs": 116929,
+        "shared_right_sum": 113152453304
+      },
+      "metric": "EC"
+    },
+    {
+      "independent_sql_join": {
+        "differing_shared_pairs": 0,
+        "left_pairs": 252451,
+        "left_sum": 198175.7561599912,
+        "maximum_shared_difference": 0.0,
+        "right_pairs": 38205,
+        "right_sum": 29606.763430000232,
+        "shared_left_sum": 795.147769999999,
+        "shared_pairs": 1007,
+        "shared_right_sum": 795.147769999999
+      },
+      "metric": "FAS"
+    }
+  ],
+  "composition": {
+    "bytes": 12376,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_functional_pair_composition_20261006_v1.json",
+    "sha256": "1807b3269518590eb339637cf618f07c99abdd7e547e268fc0fea932b4ddf853"
+  },
+  "evidence": [
+    {
+      "bytes": 12376,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_functional_pair_composition_20261006_v1.json",
+      "sha256": "1807b3269518590eb339637cf618f07c99abdd7e547e268fc0fea932b4ddf853"
+    },
+    {
+      "bytes": 737721,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/GO/GO_ohmm-qfo-recovered-native-p0-c0-r1_ccb3eedbc0ea_raw.txt.gz",
+      "sha256": "b834bdb48d4e4d27bcfd1aec48f5c6c1ec9023a6baa31621509795f999033f10"
+    },
+    {
+      "bytes": 1289801,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/GO/GO_ohmm-qfo-full-native-p0-c0-r0_a9965f0f8f26_raw.txt.gz",
+      "sha256": "447c5a1571957c0ecee82898ac10e64a10158a06d3238a072151f8d12c48f583"
+    },
+    {
+      "bytes": 638516,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/EC/EC_ohmm-qfo-recovered-native-p0-c0-r1_d44ace5dd3ff_raw.txt.gz",
+      "sha256": "2ec7dd6aee3fb6895ae71c93ce905b69323bc93da32707c60405f69a7d7d3132"
+    },
+    {
+      "bytes": 990866,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/EC/EC_ohmm-qfo-full-native-p0-c0-r0_80bad5534b4f_raw.txt.gz",
+      "sha256": "511f74a713105693f2b25dc73458d04497216a03db1b925f0a9d248e370d8874"
+    },
+    {
+      "bytes": 2904631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/FAS/FAS_ohmm-qfo-recovered-native-p0-c0-r1_raw.txt.gz",
+      "sha256": "5e982cf23ee830315068f3439a23cd542b589b652d5c676be4376fcc8c545bf6"
+    },
+    {
+      "bytes": 441788,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/FAS/FAS_ohmm-qfo-full-native-p0-c0-r0_raw.txt.gz",
+      "sha256": "38d27e870402730a33a9b7295ed93b8e4475fa18b08ab712727cf4c18f70f404"
+    }
+  ],
+  "independent_parsing_and_join": true,
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "schema": "native_qfo_functional_pair_sql_readback_v1",
+  "source": {
+    "bytes": 7097,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_functional_pairs.py",
+    "sha256": "f436b95fe3866d015c7e54f3a3ec60e0c41b9a5c81582d4a4583b425cf81a8d5"
+  },
+  "sqlite_version": "3.41.2",
+  "uncertainty_admitted": false
+}
