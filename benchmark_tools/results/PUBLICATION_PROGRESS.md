@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Deferred Native QfO Conversion Validated (2026-10-06)
+
+The intervening user turn confirms the existing shared-host goal amendment;
+it changes no analytical state. Re-read full goal on resumption and verify
+original22444 RUNNING/original22445 dependency-pending. Prior native-evidence
+component milestone603b640f remains intact. No native inference/scoring retry.
+
+[Prospective conversion protocol](REVIEW_GATED_NATIVE_QFO_CONVERSION_PROTOCOL_20261006.md)
+adds a wrapper outside frozen920 helpers. It requires successful original
+reviewer completion, original3.10 venv/package/source/request bindings and
+the unchanged native admission/converter gates before preparing index8
+P0/C1/R0 group-clique pairs. Future review digest is observed only after
+producer completion. Fresh namespaces/capacity and postflight bindings are
+required; failures retained without automatic retry or overwrite. Scoring,
+scientific admission and native index9 authorization remain separate.
+
+323 joined tests5.00s pass, no skips. Wrapper tests explicitly stub expensive
+conversion and exercise invalid review/admission/resources/input drift,
+occupied/dangling namespaces and wrong returned stage scope/identity. Original
+converter/reviewer/output/resource/assessment contracts are included. Earlier
+83/97 passing receipts retained. Bash syntax and actual original-Python import
+checks pass. Read-only preflight checks all920 helpers and actual queue,
+current capacity and empty future namespaces, without reading future output.
+
+Next: commit/push prepared workflow, submit held2CPU/32GiB/6hour/no-requeue
+job afterany:22445, inspect actual request/dependency/resources before release
+and retain scheduler receipts. Queueing conversion is not completed conversion
+or a benchmark score. Full publication scope remains incomplete; shared-host
+contention unknown and potentially tool-dependent, not an isolation claim.
+
 ## Native-Evidence Review Component Archived And Restored (2026-10-06)
 
 Previous goal turn progresses at pushed47b7f14b/c2a0ea99 with the actual
