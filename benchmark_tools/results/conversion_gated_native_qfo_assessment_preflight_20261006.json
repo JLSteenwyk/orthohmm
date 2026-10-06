@@ -1,0 +1,193 @@
+{
+  "accuracy_admitted": false,
+  "assessment_driver_invoked": false,
+  "assessment_helper_records_checked": 12,
+  "automatic_retry": false,
+  "batch": {
+    "bytes": 956,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/conversion_gated_native_qfo_assess08_20261006.sh",
+    "sha256": "4670d52641bd631f93eef78ec60261aeac83efd594b48c8263463824e4844f39"
+  },
+  "command_executed": false,
+  "command_preview": [
+    "/home/bizon/bin/nextflow",
+    "-c",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment.config",
+    "run",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+    "-profile",
+    "singularity",
+    "-ansi-log",
+    "false",
+    "--input",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444/pairs.qfo.tsv",
+    "--participant_id",
+    "ohmm_qfo_full_native_p0_c1_r0",
+    "--event_year",
+    "2020",
+    "--challenges_ids",
+    "GO EC VGNC SwissTrees TreeFam-A FAS",
+    "--goldstandard_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020",
+    "--assess_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data",
+    "--results_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08",
+    "-work-dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08"
+  ],
+  "conversion_output_namespaces": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_conversion_gate_22444",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444"
+  ],
+  "conversion_submission": {
+    "bytes": 8935,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_conversion_submission_22450.json",
+    "sha256": "9fab579abb0de79ef9cb163a4afb3aad76776021fe1eb86c9fe8f3b828af3e4f"
+  },
+  "driver": {
+    "bytes": 11870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_qfo_assessment.py",
+    "sha256": "ba051efa4b2dd9f72a4464f56a891b4742fa3a1c6999f8b95a65d0805c77dafe"
+  },
+  "fas_protocol": {
+    "missing_scores": "native scorer omits uncomputed/failed missing-pair scores; no zero imputation",
+    "newly_computed_pair_cap": 9000,
+    "pipeline": {
+      "bytes": 14659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+      "sha256": "f1793f4efdc19ee4bebf73d186cc14e371d13d9236714f59881befad4f349946"
+    },
+    "population": "precomputed predictions plus missing predictions with both feature annotations; not all submitted pairs",
+    "sampling": "unseeded native shuffle; precomputed sample preserves eligible precomputed/missing ratio when missing pairs exist",
+    "source": {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    "species_scope": "all supplied species; frozen pipeline does not pass --limited-species",
+    "uncertainty": "native pair-IID SEM is not an independent-family or paired-method confidence interval"
+  },
+  "future_conversion_read": false,
+  "helper_sources_checked": 920,
+  "limitations": [
+    "Current frozen environment integrity does not guarantee future integrity; unchanged original driver rechecks before and after execution.",
+    "Future conversion output digests not available yet and not invented.",
+    "Safe available memory/disk does not assure whole-job budget adequacy.",
+    "Shared-host timing effects unknown and potentially tool-dependent; no isolated performance claim.",
+    "Assessment and independent scientific admission remain unexecuted."
+  ],
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791280967432583831,
+  "output_namespaces": {
+    "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c1_r0",
+    "gate": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_assessment_gate_22444",
+    "results": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08",
+    "work": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08"
+  },
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "protocol": {
+    "bytes": 4671,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/CONVERSION_GATED_NATIVE_QFO_ASSESSMENT_PROTOCOL_20261006.md",
+    "sha256": "6ba0dd94b2912b05f81d97d43ce60907666ae734ab79e69d92abf788266814ec"
+  },
+  "publication_ready": false,
+  "request": {
+    "bytes": 45929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+    "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+  },
+  "resource_context": {
+    "available_disk_bytes": 10432168869888,
+    "available_memory_bytes": 678695407616,
+    "observed_unix_ns": 1791280962541948055
+  },
+  "reviewer_submission": {
+    "bytes": 7519,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_submission_22445.json",
+    "sha256": "97cac14882db9ad15ae597e569a77ae8f5f5a6b748915948182d2cfae699f62b"
+  },
+  "runtime": {
+    "binary": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    "invocation": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "packages": {
+      "Bio": "1.87",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "scheduler_observations": [
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22444",
+        "--oneliner"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "JobId=22444 JobName=orthohmm_factorial_cost UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=02:56:40 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-06T03:01:09 EligibleTime=2026-10-06T03:06:02 AccrueTime=2026-10-06T03:06:02 StartTime=2026-10-06T03:06:02 EndTime=2026-10-07T05:06:02 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T03:06:02 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4124471 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index08_22444.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/index08_22444.out TresPerTask=cpu=64 \n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22445",
+        "--oneliner"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "JobId=22445 JobName=ohmm_native_review08 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=Dependency Dependency=afterany:22444(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-06T03:10:20 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T03:10:20 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4130394 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_22444_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review08_22445.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review08_22445.out TresPerTask=cpu=2 \n"
+    },
+    {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22450",
+        "--oneliner"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "JobId=22450 JobName=ohmm_qfo_native_pairs08 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=Dependency Dependency=afterany:22445(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-06T05:50:01 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T05:50:01 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:62845 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_pairs08_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.out TresPerTask=cpu=2 \n"
+    },
+    {
+      "command": [
+        "squeue",
+        "--me",
+        "--name=ohmm_qfo_native_assess08",
+        "--noheader",
+        "--format=%i"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "schema": "conversion_gated_native_qfo_assessment_readonly_preflight_v1",
+  "scorer_environment": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "scorer_runtime_records_checked": 704,
+  "scorer_runtime_summed_record_bytes": 4746361652,
+  "status": "read_only_preflight_passed",
+  "worker": {
+    "bytes": 11152,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_conversion_gated_native_qfo_assessment.py",
+    "sha256": "797902b45f3decc1b3c20ce03fc4c9084bce8092efa9f0e66b4a13be3f80fbde"
+  }
+}

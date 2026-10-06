@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Deferred Native QfO Assessment Validated (2026-10-06)
+
+Previous goal turn makes progress at b8192281/fd48e8d4 by actually queueing
+conversion22450 behind original reviewer22445. Re-read full goal and current
+ledger; original22444 RUNNING at2:56:51,22445/22450 dependency-pending. Do not
+restart original handles or completed native/scoring work.
+
+[Prospective assessment protocol](CONVERSION_GATED_NATIVE_QFO_ASSESSMENT_PROTOCOL_20261006.md)
+adds another wrapper outside920 frozen helpers. It schedules no endpoint
+execution until actual conversion terminal accounting and successful bound
+gate/output identities pass. Then invoke unchanged original native assessment
+driver, retaining all full scientific/reference/runtime checks and native FAS
+limitations. Output digests observed after producer completion, not invented.
+Original inference/reviewer/converter jobs and native-index9 gates unchanged.
+
+400 joined tests5.79s pass, no skips, following initial138 passing cases.
+Expensive endpoint execution explicitly stubbed in wrapper fixtures. Refuse
+wrong/incomplete conversion, wrong gate/stage/submission/returned result,
+unsafe capacity, occupied/dangling namespaces and postflight drift; retain
+failures without retry or scientific admission. Original native scorer,
+conversion, reviewer, resources and output contracts included.
+
+Actual original-Python read-only preflight checks all920 helper sources and
+704 frozen scorer-runtime records totaling4,746,361,652 listed bytes,12 direct
+assessment helpers, package/binary/venv bindings, native FAS protocol and
+fresh namespaces. Validated command preview uses original2020/six endpoints,
+no-resume and Darwin-safe work path. No unfinished conversion output read,
+endpoint process executed or accuracy admitted. Current safe capacity does
+not guarantee future capacity or whole-job budget adequacy; worker rechecks.
+
+New public-only TreeFam API/TFF-storage documentation searches expose no new
+authenticated original download/mapping; preserve explicit missing-original
+limitation. No old archive redownload, tree substitution or person contact.
+Next: commit/push prepared stage, held8CPU/64GiB/4hour/no-requeue afterany22450
+submission and inspection before release. Independent score admission remains
+separate. Full goal active/incomplete; timing contention unknown and potentially
+tool-dependent, not assumed slight or isolated.
+
 ## Native QfO Conversion Released Behind Original Review (2026-10-06)
 
 Prepared source/protocol b8192281 committed/pushed before submission. New
