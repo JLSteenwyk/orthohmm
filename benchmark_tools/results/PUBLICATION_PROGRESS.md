@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native Domain-Bin Error Evidence Completed On Resume (2026-10-06)
+
+Previous goal turn `2a016630` makes administrative progress by updating the
+authoritative prompt/resume handoff, not scientific computation. This turn
+resumes the full unchanged publication objective and reads the current prompt
+and ledger. Same original handles verified: 22444 RUNNING10:14:13, all four
+downstream stages dependency-pending. No contention-only blocker or retry.
+
+Existing all-tool provenance/Three Kingdoms metadata consolidation is already
+completed, so not repeated. [New native domain-bin evidence](NATIVE_QFO_SWISS_DOMAIN_STRATA_RESULT_20261006.md)
+instead extends goal4.3 to the completed native P0C0 cells, retaining the
+original September17 input-only splits. Protocol642ed16d/code880acc47 pushed
+before actual calculation;92 focused joined tests pass1.68s/33new cases.
+
+Actual exporter and independent stdlib reader both succeed:49 original
+annotation JSONs/433,906,275bytes,563 proteins including five zero-hit records,
+21,530 native raw relations, ten scores/five differences/all36 family rows.
+The other29 annotation source identities explicitly inherited, not rechecked.
+Higher-type sixfamilies F1gain+20.946pp versus twelve lower-type+4.891pp;
+precision+42.987/+24.288pp and recall-1.262/-9.169pp. Three-family higher-repeat
+bin recall-13.296pp. Descriptive only: no new intervals/draws, transferred
+selected-default uncertainty, method tuning or causal domain explanation.
+
+Original reviewPython3.10/independent-I-S reader; export32.71s396,028KiB and
+readback32.10s372,148KiB,exit0/zero swaps. Shared-host postprocessing, not
+inference costs; unknown/tool-dependent contention, near-full swap noted.
+No scientific-environment install or unrelatedwork modification. Retain
+failedR1 timing ineligible, original manuscript/supplement/archive bytes.
+
+Latest original22444 RUNNING10:23:49; downstream22445/22450/22451/22452 pending.
+Await original terminal gates before nextnativeidentity. Remaining native
+cells, matched search/interactions, valid broader uncertainty/generalization,
+full error strata, provenance/TreeFam and manuscript/archive/release scope
+stay open. Full goal active, publication completion unproven.
+
 ## Shared-Host Prompt Update And Resume Handoff (2026-10-06)
 
 User requests a goal-prompt update before resuming execution. The authoritative

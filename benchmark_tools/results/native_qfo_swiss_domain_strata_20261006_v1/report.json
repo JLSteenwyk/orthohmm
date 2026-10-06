@@ -1,0 +1,2858 @@
+{
+  "annotations": {
+    "bytes": 334879,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_domain_annotation_inventory_20260917.json",
+    "sha256": "d5e269158c2fb603acc0805a1c140a88758342d7b8e32b3094750ade22fbc06c"
+  },
+  "bins": {
+    "all": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "HOX",
+      "MAPT",
+      "NOX",
+      "POP",
+      "PSEN",
+      "RPS",
+      "SERC",
+      "SUMF",
+      "TRFE",
+      "VATB"
+    ],
+    "median_pfam_types_at_least_two": [
+      "APP",
+      "BAR",
+      "HOX",
+      "NOX",
+      "TRFE",
+      "VATB"
+    ],
+    "median_pfam_types_below_two": [
+      "ASTER",
+      "BAMBI",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "MAPT",
+      "POP",
+      "PSEN",
+      "RPS",
+      "SERC",
+      "SUMF"
+    ],
+    "repeated_type_fraction_at_least_quarter": [
+      "MAPT",
+      "PSEN",
+      "TRFE"
+    ],
+    "repeated_type_fraction_below_quarter": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "HOX",
+      "NOX",
+      "POP",
+      "RPS",
+      "SERC",
+      "SUMF",
+      "VATB"
+    ]
+  },
+  "cells": [
+    {
+      "admission": {
+        "bytes": 1321308,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+        "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+      },
+      "cell": "p0_c0_r0",
+      "native_job_id": 22435,
+      "raw_file": {
+        "bytes": 39728,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+        "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 781476,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+        "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+      },
+      "cell": "p0_c0_r1",
+      "native_job_id": 22437,
+      "raw_file": {
+        "bytes": 39334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-recovered-native-p0-c0-r1_4a515aacafb7_raw.txt.gz",
+        "sha256": "f55ee75d4fc93c43889baa469c870f188410e7a5af0f6d7fd0fab04ee00af538"
+      },
+      "timing_admitted": false,
+      "timing_eligible": false
+    }
+  ],
+  "checked_inputs": [
+    {
+      "bytes": 31585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_20261006_v1/report.json",
+      "sha256": "4650f614d2fdeebd65cbcbf4999c61c83cc549560d2738bfbb5502f686f660e3"
+    },
+    {
+      "bytes": 8718,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_readback_20261006.json",
+      "sha256": "8d0356bc0e159d204939271578e23a6a5b6efcf6198b75a18c0f3d38e0e67c0a"
+    },
+    {
+      "bytes": 334879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_domain_annotation_inventory_20260917.json",
+      "sha256": "d5e269158c2fb603acc0805a1c140a88758342d7b8e32b3094750ade22fbc06c"
+    },
+    {
+      "bytes": 5020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/SWISS_DOMAIN_STRATA_PROTOCOL_20260917.md",
+      "sha256": "8316866d11f988cef6a3e88f07e2802d1557a7ae581b100b85884f704b0afee8"
+    },
+    {
+      "bytes": 3538,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_SWISS_SEQUENCE_STRATA_PROTOCOL_20261006.md",
+      "sha256": "e7c9ef1583589969ba19a107f439590297e2b5f9cf853e4bd3956dd54610f4bb"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 43525,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_uncertainty_binding_22449_20261006.json",
+      "sha256": "85673a114b7f7c6e05de5da189c8cbe8d77ec5d1378604dbae7e5902dfd996cc"
+    },
+    {
+      "bytes": 351883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_sequence_strata_20260918.json",
+      "sha256": "912363276fa5456f11aeff9f398fce71aec8d377c8c8eda7b144105945e554f1"
+    },
+    {
+      "bytes": 10765,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bind_native_qfo_swiss_uncertainty.py",
+      "sha256": "1475c5070f56ea2ddecd3a5fe861eeed6010a6573c0569cd623397e3a9c29a1c"
+    },
+    {
+      "bytes": 9905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_corrected_swiss_sequence_strata.py",
+      "sha256": "41c5cf70ca40debeb19476b636ea60ce115579e8015c29ada59738368383e26a"
+    },
+    {
+      "bytes": 5853,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_sequences.py",
+      "sha256": "7f6dd0d3ada54ea2d34c091bc33a667e688518acf9405c8fbffaef7d949d5d0d"
+    },
+    {
+      "bytes": 3915,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/CORRECTED_SWISS_SEQUENCE_STRATA_PROTOCOL_20260918.md",
+      "sha256": "2c87ba1df8ee39dfc325eefcdf374e713ba8fab1279a0330c3ea600ab637da54"
+    },
+    {
+      "bytes": 27130,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_staging_manifest_20260918.json",
+      "sha256": "07a890eb816944f946d46039559a6046c2a3664f033eaa0f30f35bb25b9c9ab8"
+    },
+    {
+      "bytes": 171197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_swiss_comparator_counts_20260917.json",
+      "sha256": "2995868b0407ceda2e7422db6c3fc3b99523716e4bec8b1b43e15f296e40769b"
+    },
+    {
+      "bytes": 322204,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_sequence_inventory_20260917.json",
+      "sha256": "f4a147ff1ecdf0c8df046ab1a5c63069fef106fa627d52eaec008aae250527a5"
+    },
+    {
+      "bytes": 24314,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json",
+      "sha256": "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b"
+    },
+    {
+      "bytes": 12385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_scientific_scores.py",
+      "sha256": "5d0a10a101fa788efff05143634b3104edadfdd49409c65e4a497c407f69a56b"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 30311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+      "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 8195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+      "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+    },
+    {
+      "bytes": 39728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+      "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+    },
+    {
+      "bytes": 34593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+      "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+    },
+    {
+      "bytes": 781476,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+      "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+    },
+    {
+      "bytes": 7889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovered_native_qfo_swiss_counts.py",
+      "sha256": "b216f8f9c90211a8d912d10fc31e6279641ed777729e98ad675a3ad4d34e8095"
+    },
+    {
+      "bytes": 39334,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-recovered-native-p0-c0-r1_4a515aacafb7_raw.txt.gz",
+      "sha256": "f55ee75d4fc93c43889baa469c870f188410e7a5af0f6d7fd0fab04ee00af538"
+    },
+    {
+      "bytes": 13720,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_swiss_sequence_strata.py",
+      "sha256": "13ca5653fd62f2254e7d88edf0ab7cf199de0e71d06de275ce769e04eb8cd953"
+    },
+    {
+      "bytes": 8965,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_sequence_strata.py",
+      "sha256": "722be2e7d40982f70ecb03aca13b1658fc004a392deacde4cfdb81306a6da396"
+    },
+    {
+      "bytes": 5804,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/inventory_swiss_annotations.py",
+      "sha256": "6fea168f170bed4b66ef0040ff88da724ae33c45a2bfa838581cc0cfe871b1a9"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 3812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_SWISS_DOMAIN_STRATA_PROTOCOL_20261006.md",
+      "sha256": "5691e9ded730a6956597e195141662f361f4d8f857f460eb7c5d4f99c2e56315"
+    },
+    {
+      "bytes": 19615165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000437_7955.json",
+      "sha256": "50d563b89fd802e0d0ae14f67714d5ed6a81679f024185cb2103dd7761701232"
+    },
+    {
+      "bytes": 12294885,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000539_9031.json",
+      "sha256": "b7b98c218c69f077c67146e193078fd0e647af3aa67e218c760d14e4fa7f20c5"
+    },
+    {
+      "bytes": 4361556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000542_5664.json",
+      "sha256": "ec458dd084c76f0570cb84e66aa9705eb70eb445256b01deccc1db381f22e5d9"
+    },
+    {
+      "bytes": 2039374,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000557_251221.json",
+      "sha256": "045c29826e3e8e24e069effc666628567b273a29a1c01bdfe281ae3bb943abfb"
+    },
+    {
+      "bytes": 3299614,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000559_237561.json",
+      "sha256": "f6e248f478f5425fe1bef421b2df7593c4407bf7e20e2cda1e2aff5585488c8e"
+    },
+    {
+      "bytes": 15411163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000589_10090.json",
+      "sha256": "631eee1ff5575078af1f6c919abcc23fad13e0f642c3447b28463d33896ac665"
+    },
+    {
+      "bytes": 19868762,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000600_5888.json",
+      "sha256": "095c1173e40754ceccf6aeff74dc83115354ac3756ecabeb03b5bce7b7e23285"
+    },
+    {
+      "bytes": 822387,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000798_224324.json",
+      "sha256": "e71958285547869f73d97a6199638c6ae542e2cbeb05631b4d364e1912b77579"
+    },
+    {
+      "bytes": 8310912,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000803_7227.json",
+      "sha256": "1ac66a0b1779c6994840f0a0b64ee7734084cd1d3b224a050c9117022e40704c"
+    },
+    {
+      "bytes": 932300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000805_243232.json",
+      "sha256": "5d3ccbcaf308c5c30454832ad2ea5fb368f820a6242d808bd5f56b59db8e7c92"
+    },
+    {
+      "bytes": 15962851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001038_8090.json",
+      "sha256": "734afa2c75f8ab6e2a3177e8cad559885c3b10158d6eef6e1f18d21c00681cef"
+    },
+    {
+      "bytes": 5998020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001055_321614.json",
+      "sha256": "0a203360002052b84d405d03f6770f3760dbf9dd4ade5c47dc29bf6376528102"
+    },
+    {
+      "bytes": 3290800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001300_284591.json",
+      "sha256": "1902deec28b756d9c639ad34d231c455f15286e1667737ce706cb97bfe9f028f"
+    },
+    {
+      "bytes": 5398994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001312_665079.json",
+      "sha256": "49722f069077511ac2cc9262b3974243ca256b629605ad5a569b77b4538446eb"
+    },
+    {
+      "bytes": 5683052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001357_81824.json",
+      "sha256": "c4854679182c3135fe6d883250b567c963423802c98e31b7568b80c3a483a49c"
+    },
+    {
+      "bytes": 5578845,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001449_35128.json",
+      "sha256": "a31e097483327e8ca196a1d7812763bfb8097b9dcb6d5c59a63d15da9d82908c"
+    },
+    {
+      "bytes": 3948957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001450_36329.json",
+      "sha256": "d15583e795f80d844aeba1511609a63bb322328e24249c25372bf7ae2c972abb"
+    },
+    {
+      "bytes": 14822351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001519_9595.json",
+      "sha256": "5f346c8916b338acd99f5067c1bc81b52e8558d79173431d86247101e87b3e57"
+    },
+    {
+      "bytes": 3412284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001548_184922.json",
+      "sha256": "1e7787cc18e86e60886504684a0cda1d173b7e4fad55e906dad0dae6fe49da89"
+    },
+    {
+      "bytes": 19448984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001554_7739.json",
+      "sha256": "26f8e0385fdf16d384e0f340d1f4c7318a84b9e4fe91fecc097780cebbbd8120"
+    },
+    {
+      "bytes": 8124404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001555_6945.json",
+      "sha256": "939e24c53258efbe90900b71a70b3446205022d2b11b3b7771417ca59c1fd61e"
+    },
+    {
+      "bytes": 1909955,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001570_224308.json",
+      "sha256": "9bf86313b75d2ce0ab8e4eb0946bb7811552dc308a41049510092935c542e13b"
+    },
+    {
+      "bytes": 11678107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001593_45351.json",
+      "sha256": "014615e13d150891b17fa7d050f2655183e8c035e1bb107049e7050fba87e98d"
+    },
+    {
+      "bytes": 4994383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001805_367110.json",
+      "sha256": "bb06c37780651463509862f90e5e8dd6c3616e926f92bbf20283096be65946e6"
+    },
+    {
+      "bytes": 9465994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001940_6239.json",
+      "sha256": "dc07134df79d078b013165f0b7fe6df354bfda8232c766f9d3289315559a600a"
+    },
+    {
+      "bytes": 1278518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001974_273057.json",
+      "sha256": "0e615f2a546f47d8eab3ce8325e31b00b2916e03e0000a29edcbe0cd89e39248"
+    },
+    {
+      "bytes": 3558059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002149_214684.json",
+      "sha256": "758a9cf3b9510c12affac27b03d88b44c553b2dee22adcd92b029b8fd5731ffa"
+    },
+    {
+      "bytes": 8102732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002195_44689.json",
+      "sha256": "963c5c8d10649365294274870d7f088c39410a3f8367244f92cc3389899d9341"
+    },
+    {
+      "bytes": 14450286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002254_9615.json",
+      "sha256": "b37527c7f5940932f6ebf72e0e09e0058de4c1e522556d05c4a4bc19ddf38908"
+    },
+    {
+      "bytes": 15878889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002277_9598.json",
+      "sha256": "a8d5b7719642855f5b6e0fd5402cdd5f8decc5062cd17e5a25f4de0fb5d30d46"
+    },
+    {
+      "bytes": 15615177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002280_13616.json",
+      "sha256": "5465bac2c15feca574bee8f3c76c29bfaaa433491ed9ba710ff28dfd1f3329d1"
+    },
+    {
+      "bytes": 2980367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002311_559292.json",
+      "sha256": "9b0edae55eaa52eef55660bb5b6a1bb102df6ef4db8a28701533c0171c48045b"
+    },
+    {
+      "bytes": 2557585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002485_284812.json",
+      "sha256": "cd847cb4b328b79c41cb5fab755a2bb31e20bc7ccff05402f48cf4952b8cfc5d"
+    },
+    {
+      "bytes": 2145208,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002487_188937.json",
+      "sha256": "09976fc7b0b5949b2ccba62d7667335b6c8a42d39b21b50a0136095263eace7b"
+    },
+    {
+      "bytes": 14405466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002494_10116.json",
+      "sha256": "ddb1adf9452202517f4b214afcdccb2c6ffa4130c64cb8d04b9eacc41cd5a3e9"
+    },
+    {
+      "bytes": 4638820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002530_330879.json",
+      "sha256": "6fc1371ce0bc56a92b6bf8336f6dedb2b374a60e29a2f1dfb463b2622eae9804"
+    },
+    {
+      "bytes": 7626627,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005238_164328.json",
+      "sha256": "f2c04930721b178dd9eac9ff4c273a4e054900ef939777c39e47084dc0aa16df"
+    },
+    {
+      "bytes": 15211666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005640_9606.json",
+      "sha256": "5ff67d6cff37b18db33d206669c72665dc5db7bdf1882088f89acf9b364f8d92"
+    },
+    {
+      "bytes": 13779014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006548_3702.json",
+      "sha256": "0eb4de7a69c581d64ee6e56bc0fc16137555dcda092771602a38d0f7c29a85a7"
+    },
+    {
+      "bytes": 12450289,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006727_3218.json",
+      "sha256": "ede5a355e7d873aabdc3a3433b09f0719a5d269f384c3f1bc7e3101abca09a22"
+    },
+    {
+      "bytes": 13063719,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006906_3055.json",
+      "sha256": "97d6165c765b5e8685bc02fffd54bd057972bdbb8879eb4bbaf174a264f92bbb"
+    },
+    {
+      "bytes": 7635144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007062_7165.json",
+      "sha256": "eb1314b29a976ba10fa39caf1ccc84e6be3849c1d973e49027205626eb028dfe"
+    },
+    {
+      "bytes": 3817977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007241_684364.json",
+      "sha256": "8d6692bcbc9dc9c1df3dd41c40c93d7d18fc2d90ea77182e1ccf7dacf868f3f2"
+    },
+    {
+      "bytes": 8584834,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007266_7070.json",
+      "sha256": "b0ec830ca0fe6d81ff25729b89695e2f6d8976f22db758b1dc4930eddc8ef63f"
+    },
+    {
+      "bytes": 11705188,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008143_8364.json",
+      "sha256": "f99efaf376ca4f52fcdc54574debe25bb6899ed71f5641e3fe80b9d1d4e056b5"
+    },
+    {
+      "bytes": 7230742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008144_7719.json",
+      "sha256": "b37c9f5a0035a5f2523a4f57e41adf4bac0dd4f06be9dd8fe2b28de836853a2f"
+    },
+    {
+      "bytes": 5762382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008783_418459.json",
+      "sha256": "876521fb42e013ecd170e89d1f5bb60227750383f89ce83839e87e9d13bac6a9"
+    },
+    {
+      "bytes": 16049319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000009136_9913.json",
+      "sha256": "9b526eaed50c86e706d550e262bc7e9af1f8b9cb0b77366ef7412731e8bff961"
+    },
+    {
+      "bytes": 18704168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000059680_39947.json",
+      "sha256": "035a9c8bf21227f42248def0cfe8c232f42ec157f9095330beedff99d9dd78e1"
+    }
+  ],
+  "differences": [
+    {
+      "F1": 0.10039037081913615,
+      "PPV": 0.3052118719287774,
+      "TPR": -0.06533385473118047,
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "stratum": "all"
+    },
+    {
+      "F1": 0.04890523013736903,
+      "PPV": 0.24288492263359873,
+      "TPR": -0.09168868660485152,
+      "families": 12,
+      "family_members": [
+        "ASTER",
+        "BAMBI",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF"
+      ],
+      "stratum": "median_pfam_types_below_two"
+    },
+    {
+      "F1": 0.20946314654730858,
+      "PPV": 0.4298657705191343,
+      "TPR": -0.012624190983838157,
+      "families": 6,
+      "family_members": [
+        "APP",
+        "BAR",
+        "HOX",
+        "NOX",
+        "TRFE",
+        "VATB"
+      ],
+      "stratum": "median_pfam_types_at_least_two"
+    },
+    {
+      "F1": 0.10204090756595519,
+      "PPV": 0.2914733274151423,
+      "TPR": -0.05180957337747938,
+      "families": 15,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "NOX",
+        "POP",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "VATB"
+      ],
+      "stratum": "repeated_type_fraction_below_quarter"
+    },
+    {
+      "F1": 0.09136487764053491,
+      "PPV": 0.3739045944969527,
+      "TPR": -0.13295526149968495,
+      "families": 3,
+      "family_members": [
+        "MAPT",
+        "PSEN",
+        "TRFE"
+      ],
+      "stratum": "repeated_type_fraction_at_least_quarter"
+    }
+  ],
+  "family_rows": [
+    {
+      "F1": 0.7164179104477612,
+      "PPV": 0.5614035087719298,
+      "TPR": 0.9896907216494846,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 148,
+        "TN": 13,
+        "TP": 190
+      },
+      "family": "APP"
+    },
+    {
+      "F1": 0.40127388535031844,
+      "PPV": 0.984375,
+      "TPR": 0.252,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 372,
+        "FP": 0,
+        "TN": 0,
+        "TP": 124
+      },
+      "family": "ASTER"
+    },
+    {
+      "F1": 0.728476821192053,
+      "PPV": 0.9482758620689655,
+      "TPR": 0.5913978494623656,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 36,
+        "FP": 1,
+        "TN": 1,
+        "TP": 53
+      },
+      "family": "BAMBI"
+    },
+    {
+      "F1": 0.6885245901639344,
+      "PPV": 0.7620967741935484,
+      "TPR": 0.627906976744186,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 222,
+        "FP": 116,
+        "TN": 664,
+        "TP": 376
+      },
+      "family": "BAR"
+    },
+    {
+      "F1": 0.7175572519083969,
+      "PPV": 0.6103896103896104,
+      "TPR": 0.8703703703703703,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 5,
+        "FP": 28,
+        "TN": 1875,
+        "TP": 45
+      },
+      "family": "CASP"
+    },
+    {
+      "F1": 0.6648351648351649,
+      "PPV": 0.5845410628019324,
+      "TPR": 0.7707006369426752,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 34,
+        "FP": 84,
+        "TN": 141,
+        "TP": 119
+      },
+      "family": "CITE"
+    },
+    {
+      "F1": 0.6532663316582914,
+      "PPV": 0.49242424242424243,
+      "TPR": 0.9701492537313433,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 65,
+        "TN": 8,
+        "TP": 63
+      },
+      "family": "Clusterin"
+    },
+    {
+      "F1": 0.3870967741935484,
+      "PPV": 0.3157894736842105,
+      "TPR": 0.5,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 4,
+        "FP": 11,
+        "TN": 86,
+        "TP": 4
+      },
+      "family": "GH14"
+    },
+    {
+      "F1": 0.3333333333333333,
+      "PPV": 0.3111111111111111,
+      "TPR": 0.358974358974359,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 98,
+        "FP": 122,
+        "TN": 1266,
+        "TP": 54
+      },
+      "family": "HOX"
+    },
+    {
+      "F1": 0.5797101449275363,
+      "PPV": 0.5714285714285714,
+      "TPR": 0.5882352941176471,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 12,
+        "FP": 13,
+        "TN": 35,
+        "TP": 18
+      },
+      "family": "MAPT"
+    },
+    {
+      "F1": 0.5294117647058824,
+      "PPV": 0.40084835630965004,
+      "TPR": 0.7793814432989691,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 105,
+        "FP": 563,
+        "TN": 181,
+        "TP": 376
+      },
+      "family": "NOX"
+    },
+    {
+      "F1": 0.7272727272727273,
+      "PPV": 0.6199261992619927,
+      "TPR": 0.8795811518324608,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 21,
+        "FP": 101,
+        "TN": 273,
+        "TP": 166
+      },
+      "family": "POP"
+    },
+    {
+      "F1": 0.8088978766430739,
+      "PPV": 0.8695652173913043,
+      "TPR": 0.7561436672967864,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 127,
+        "FP": 58,
+        "TN": 12,
+        "TP": 398
+      },
+      "family": "PSEN"
+    },
+    {
+      "F1": 0.8780487804878049,
+      "PPV": 0.9642857142857143,
+      "TPR": 0.8059701492537313,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 11,
+        "FP": 0,
+        "TN": 3,
+        "TP": 52
+      },
+      "family": "RPS"
+    },
+    {
+      "F1": 0.8373655913978495,
+      "PPV": 0.8251655629139073,
+      "TPR": 0.849931787175989,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 108,
+        "FP": 130,
+        "TN": 44,
+        "TP": 621
+      },
+      "family": "SERC"
+    },
+    {
+      "F1": 0.6470588235294117,
+      "PPV": 0.4925373134328358,
+      "TPR": 0.9428571428571428,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 32,
+        "TN": 3,
+        "TP": 31
+      },
+      "family": "SUMF"
+    },
+    {
+      "F1": 0.46770601336302897,
+      "PPV": 0.31722054380664655,
+      "TPR": 0.8898305084745762,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 11,
+        "FP": 224,
+        "TN": 127,
+        "TP": 103
+      },
+      "family": "TRFE"
+    },
+    {
+      "F1": 0.9391796322489391,
+      "PPV": 0.9595375722543352,
+      "TPR": 0.9196675900277008,
+      "cell": "p0_c0_r0",
+      "counts_without_prior": {
+        "FN": 27,
+        "FP": 12,
+        "TN": 9,
+        "TP": 330
+      },
+      "family": "VATB"
+    },
+    {
+      "F1": 0.9896907216494846,
+      "PPV": 0.9896907216494846,
+      "TPR": 0.9896907216494846,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 0,
+        "TN": 161,
+        "TP": 190
+      },
+      "family": "APP"
+    },
+    {
+      "F1": 0.40127388535031844,
+      "PPV": 0.984375,
+      "TPR": 0.252,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 372,
+        "FP": 0,
+        "TN": 0,
+        "TP": 124
+      },
+      "family": "ASTER"
+    },
+    {
+      "F1": 0.7333333333333334,
+      "PPV": 0.9649122807017544,
+      "TPR": 0.5913978494623656,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 36,
+        "FP": 0,
+        "TN": 2,
+        "TP": 53
+      },
+      "family": "BAMBI"
+    },
+    {
+      "F1": 0.7686034658511723,
+      "PPV": 0.9947229551451188,
+      "TPR": 0.6262458471760798,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 223,
+        "FP": 0,
+        "TN": 780,
+        "TP": 375
+      },
+      "family": "BAR"
+    },
+    {
+      "F1": 0.8468468468468469,
+      "PPV": 0.8245614035087719,
+      "TPR": 0.8703703703703703,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 5,
+        "FP": 8,
+        "TN": 1895,
+        "TP": 45
+      },
+      "family": "CASP"
+    },
+    {
+      "F1": 0.7674418604651161,
+      "PPV": 0.9801980198019802,
+      "TPR": 0.6305732484076433,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 56,
+        "FP": 0,
+        "TN": 225,
+        "TP": 97
+      },
+      "family": "CITE"
+    },
+    {
+      "F1": 0.9701492537313433,
+      "PPV": 0.9701492537313433,
+      "TPR": 0.9701492537313433,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 0,
+        "TN": 73,
+        "TP": 63
+      },
+      "family": "Clusterin"
+    },
+    {
+      "F1": 0.5263157894736842,
+      "PPV": 0.7142857142857143,
+      "TPR": 0.4166666666666667,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 5,
+        "FP": 0,
+        "TN": 97,
+        "TP": 3
+      },
+      "family": "GH14"
+    },
+    {
+      "F1": 0.5233644859813085,
+      "PPV": 0.9655172413793104,
+      "TPR": 0.358974358974359,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 98,
+        "FP": 0,
+        "TN": 1388,
+        "TP": 54
+      },
+      "family": "HOX"
+    },
+    {
+      "F1": 0.7142857142857143,
+      "PPV": 0.9090909090909091,
+      "TPR": 0.5882352941176471,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 12,
+        "FP": 0,
+        "TN": 48,
+        "TP": 18
+      },
+      "family": "MAPT"
+    },
+    {
+      "F1": 0.8617142857142858,
+      "PPV": 0.9666666666666667,
+      "TPR": 0.777319587628866,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 106,
+        "FP": 11,
+        "TN": 733,
+        "TP": 375
+      },
+      "family": "NOX"
+    },
+    {
+      "F1": 0.9307479224376732,
+      "PPV": 0.9882352941176471,
+      "TPR": 0.8795811518324608,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 21,
+        "FP": 0,
+        "TN": 374,
+        "TP": 166
+      },
+      "family": "POP"
+    },
+    {
+      "F1": 0.525,
+      "PPV": 0.9895287958115183,
+      "TPR": 0.3572778827977316,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 338,
+        "FP": 0,
+        "TN": 70,
+        "TP": 187
+      },
+      "family": "PSEN"
+    },
+    {
+      "F1": 0.5473684210526316,
+      "PPV": 0.9285714285714286,
+      "TPR": 0.3880597014925373,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 39,
+        "FP": 0,
+        "TN": 3,
+        "TP": 24
+      },
+      "family": "RPS"
+    },
+    {
+      "F1": 0.8812785388127854,
+      "PPV": 0.9965576592082617,
+      "TPR": 0.7899045020463847,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 152,
+        "FP": 0,
+        "TN": 174,
+        "TP": 577
+      },
+      "family": "SERC"
+    },
+    {
+      "F1": 0.9428571428571428,
+      "PPV": 0.9428571428571428,
+      "TPR": 0.9428571428571428,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 0,
+        "FP": 0,
+        "TN": 35,
+        "TP": 31
+      },
+      "family": "SUMF"
+    },
+    {
+      "F1": 0.9333333333333332,
+      "PPV": 0.9813084112149533,
+      "TPR": 0.8898305084745762,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 11,
+        "FP": 0,
+        "TN": 351,
+        "TP": 103
+      },
+      "family": "TRFE"
+    },
+    {
+      "F1": 0.9147982062780269,
+      "PPV": 0.9935064935064936,
+      "TPR": 0.8476454293628809,
+      "cell": "p0_c0_r1",
+      "counts_without_prior": {
+        "FN": 53,
+        "FP": 0,
+        "TN": 21,
+        "TP": 304
+      },
+      "family": "VATB"
+    }
+  ],
+  "independent_confirmation": false,
+  "limitations": [
+    "Retrospective fixed-bin projections, not a new inferential test or method tuning.",
+    "Macro precision/recall then harmonic F1, not pair-pooled or mean-family F1.",
+    "Pfam counts are annotations, not complete validated domain architectures or causal mechanisms.",
+    "Repeated-type high bin has three families; bins overlap; no new or historical intervals attached.",
+    "FAS reference annotations do not independently validate FAS; no fragment or domain-loss truth.",
+    "Direct source/raw/selected-annotation checks, not full transitive admission.",
+    "R1 failed timing remains ineligible. Shared-host postprocessing time is not inference cost;",
+    "contention effects are unknown and potentially tool-dependent, not isolated speed evidence."
+  ],
+  "memberships": {
+    "APP": [
+      "A7RTM2",
+      "B0V0E5",
+      "B7QN64",
+      "C3XR12",
+      "E1C440",
+      "F1LRS5",
+      "F1MIL3",
+      "F1P0A7",
+      "F1P603",
+      "F6TDQ9",
+      "F6YNC0",
+      "F7DF67",
+      "G3R2X8",
+      "H2LQ91",
+      "H2LYH0",
+      "H2Q546",
+      "P05067",
+      "P08592",
+      "P12023",
+      "P15943",
+      "P51693",
+      "Q03157",
+      "Q06335",
+      "Q06481",
+      "Q10651",
+      "Q5IS80",
+      "Q7QCS9"
+    ],
+    "ASTER": [
+      "A0BRT2",
+      "A4D9G4",
+      "A7EFA2",
+      "A7RTY3",
+      "A8IJC4",
+      "A9TN27",
+      "B7P4G5",
+      "C3ZJ28",
+      "E3JVR2",
+      "F1PKC8",
+      "F4NWI3",
+      "F6QLB4",
+      "F6UJ88",
+      "G3RC27",
+      "H2QFG1",
+      "H3GWW4",
+      "Q09714",
+      "Q09993",
+      "Q0V6H7",
+      "Q10CL8",
+      "Q12160",
+      "Q2M2T6",
+      "Q5KPK8",
+      "Q6CDT4",
+      "Q6PC46",
+      "Q6ZWX0",
+      "Q7QIP7",
+      "Q7SGX6",
+      "Q86H65",
+      "Q9SD88",
+      "Q9VRJ8",
+      "Q9Y284"
+    ],
+    "BAMBI": [
+      "A0A5F8H622",
+      "B7PBM8",
+      "C3ZPM5",
+      "D6X0I9",
+      "E1AWU3",
+      "G3QPL0",
+      "H2LI24",
+      "K7AAP2",
+      "Q13145",
+      "Q1RMX1",
+      "Q6GQM7",
+      "Q91XN4",
+      "Q9D0L6",
+      "Q9DFZ0"
+    ],
+    "BAR": [
+      "A4FUG5",
+      "A7ENZ2",
+      "A7S0R8",
+      "A7SPL1",
+      "A9UPC6",
+      "B1H1H2",
+      "B7PLE6",
+      "B7PU93",
+      "C3YHW0",
+      "C3YIY0",
+      "D3Z6Q9",
+      "E7FD40",
+      "F1NZ04",
+      "F1PTG7",
+      "F1PZH8",
+      "F1QJB5",
+      "F1QK94",
+      "F4NYQ0",
+      "F6XMZ3",
+      "F6YXG1",
+      "F6ZUK5",
+      "G3QJ12",
+      "G3R5Y4",
+      "G3RIZ8",
+      "H2M5R5",
+      "H2Q5Y0",
+      "H2QIN5",
+      "H2R019",
+      "H2RDE5",
+      "O00499",
+      "O08539",
+      "O08839",
+      "P25343",
+      "P49418",
+      "Q0UGL3",
+      "Q21004",
+      "Q4WTS7",
+      "Q54IA6",
+      "Q54NT2",
+      "Q5AFE4",
+      "Q5KLL3",
+      "Q5ZKL7",
+      "Q68FR2",
+      "Q68FW8",
+      "Q6CCM8",
+      "Q7KLE5",
+      "Q7Q9R8",
+      "Q7S814",
+      "Q7TQF7",
+      "Q9JI08",
+      "Q9NQY0",
+      "Q9UBW5",
+      "Q9UUM7"
+    ],
+    "CASP": [
+      "A3A2W2",
+      "O23413",
+      "P0CB17",
+      "Q0DHM7",
+      "Q0ILZ7",
+      "Q0IN16",
+      "Q10EJ2",
+      "Q10QH3",
+      "Q1PFB8",
+      "Q2QNE3",
+      "Q2R2T4",
+      "Q3EA54",
+      "Q3EB59",
+      "Q3ECT8",
+      "Q501G6",
+      "Q56X75",
+      "Q5JM57",
+      "Q5N794",
+      "Q66GI1",
+      "Q67W83",
+      "Q67X40",
+      "Q6EP58",
+      "Q6ETN2",
+      "Q6K478",
+      "Q6NPF8",
+      "Q6YT98",
+      "Q6YW53",
+      "Q6Z1Y7",
+      "Q6Z2U5",
+      "Q7XPU9",
+      "Q7XUV7",
+      "Q84UT5",
+      "Q84WP5",
+      "Q8GWD5",
+      "Q8L7R5",
+      "Q8L8U9",
+      "Q8L8Z1",
+      "Q8L924",
+      "Q8L9B5",
+      "Q8LE26",
+      "Q8VZQ3",
+      "Q945M8",
+      "Q9ARX2",
+      "Q9CAX3",
+      "Q9FE29",
+      "Q9FFT2",
+      "Q9FFZ7",
+      "Q9FI10",
+      "Q9FNE8",
+      "Q9LI17",
+      "Q9LR57",
+      "Q9LUL1",
+      "Q9LXF3",
+      "Q9LZM5",
+      "Q9M0L3",
+      "Q9M2U0",
+      "Q9SIH4",
+      "Q9SKN3",
+      "Q9SQU2",
+      "Q9SUP0",
+      "Q9XI72",
+      "Q9ZQI2",
+      "Q9ZT81"
+    ],
+    "CITE": [
+      "A7SUP3",
+      "C3YX71",
+      "E2RQM2",
+      "F1QI18",
+      "F1R408",
+      "F6VBX1",
+      "F6VSF3",
+      "G3QDG8",
+      "H2LW29",
+      "H2M0T9",
+      "H2MGS0",
+      "H2PYS8",
+      "J9JHR0",
+      "O35740",
+      "P97769",
+      "Q0VCT9",
+      "Q1L8S4",
+      "Q2HJ78",
+      "Q6NX30",
+      "Q96RK1",
+      "Q99966",
+      "Q99967",
+      "Q99MA0",
+      "Q99MA1",
+      "Q9BDI3",
+      "Q9DDW4",
+      "Q9I8K7",
+      "Q9WUL8"
+    ],
+    "Clusterin": [
+      "A5PMY8",
+      "F1MWI1",
+      "F1N8T1",
+      "F6UX07",
+      "F7G367",
+      "G3RL83",
+      "H2MTZ0",
+      "P05371",
+      "P10909",
+      "P17697",
+      "Q06890",
+      "Q15846",
+      "Q3ZRW6",
+      "Q3ZRW7",
+      "Q3ZRW9",
+      "Q5SPR2",
+      "Q95KN1"
+    ],
+    "GH14": [
+      "O23553",
+      "O65258",
+      "O80831",
+      "P25853",
+      "Q10LG9",
+      "Q10RZ1",
+      "Q5NB81",
+      "Q652P5",
+      "Q8L762",
+      "Q8VYW2",
+      "Q9AV88",
+      "Q9FH80",
+      "Q9FM68",
+      "Q9LIR6",
+      "Q9V7A4"
+    ],
+    "HOX": [
+      "A0A6I8Q068",
+      "A2BE68",
+      "C3XTC7",
+      "C3XTC8",
+      "C3XTD0",
+      "C3XTD1",
+      "C3XTD2",
+      "E1BQM6",
+      "E1BRT6",
+      "F6PXE7",
+      "F6PXR2",
+      "F7BEF0",
+      "F7BEI0",
+      "F7D5A4",
+      "F7D5I9",
+      "O43248",
+      "P09087",
+      "P17482",
+      "P24342",
+      "P24343",
+      "P24344",
+      "P28356",
+      "P28358",
+      "P31258",
+      "P31260",
+      "P31269",
+      "P31270",
+      "P31271",
+      "P31274",
+      "P31275",
+      "P31276",
+      "P31277",
+      "P35452",
+      "P35453",
+      "P79724",
+      "Q1ECY2",
+      "Q58EL0",
+      "Q6JIY4",
+      "Q6JIY5",
+      "Q6W990",
+      "Q8AWY2",
+      "Q90469",
+      "Q90470",
+      "Q90471",
+      "Q90472",
+      "Q90X25",
+      "Q92826",
+      "Q98924",
+      "Q9DDU0",
+      "Q9DDU1",
+      "Q9NYD6",
+      "Q9PWL6",
+      "Q9PWM2",
+      "Q9PWM6",
+      "Q9YGT0",
+      "Q9YGT5"
+    ],
+    "MAPT": [
+      "F1MEW3",
+      "F6VD01",
+      "H2R011",
+      "P10636",
+      "P11137",
+      "P20357",
+      "P27546",
+      "P27816",
+      "P29172",
+      "P36225",
+      "Q5M7W5",
+      "Q5YCW0",
+      "Q5YCW1"
+    ],
+    "NOX": [
+      "A0A3B3IDP9",
+      "A0A3Q2U7E3",
+      "A0A3Q2UE93",
+      "A0A5F4CEF0",
+      "A7E3L1",
+      "A7RPH5",
+      "A7SCJ4",
+      "A7SD95",
+      "A9V5V7",
+      "C3XUP1",
+      "C3YUJ9",
+      "C3ZTT7",
+      "E1BFF3",
+      "E1BPJ7",
+      "F1MQX5",
+      "F1NVG4",
+      "F1PL03",
+      "F1PSM8",
+      "F6U2X4",
+      "F6YS00",
+      "F6Z703",
+      "F7AMC8",
+      "F7CLH6",
+      "F7ELK5",
+      "G3QVH2",
+      "G3QXY3",
+      "G3RI51",
+      "H2L879",
+      "H2M5R6",
+      "H2QTY3",
+      "H2R4R9",
+      "H2R516",
+      "O46522",
+      "P04839",
+      "Q505H9",
+      "Q61093",
+      "Q672J9",
+      "Q672K1",
+      "Q7PS77",
+      "Q7RW00",
+      "Q86GL4",
+      "Q8CIZ9",
+      "Q924V1",
+      "Q9ERL1",
+      "Q9HBY0",
+      "Q9JHI8",
+      "Q9NPH5",
+      "Q9WV87",
+      "Q9XYS3",
+      "Q9Y5S8"
+    ],
+    "POP": [
+      "A0A2J8M3H2",
+      "A5PJG2",
+      "B1H1F6",
+      "B1H1G2",
+      "E1BB94",
+      "E2R5H9",
+      "F1NPM0",
+      "F1R6V1",
+      "F6PGY0",
+      "F6VQE7",
+      "F6ZS78",
+      "F6ZWG8",
+      "F6ZWH6",
+      "G3N3W7",
+      "G3QNZ3",
+      "G3RLV4",
+      "G3RSB1",
+      "H2LXG3",
+      "H2MZF5",
+      "H2QTG8",
+      "H2QTG9",
+      "J9NU29",
+      "J9NZA1",
+      "Q3BCU4",
+      "Q5PQZ7",
+      "Q6JWV8",
+      "Q6P722",
+      "Q8NE79",
+      "Q9DG23",
+      "Q9ES81",
+      "Q9ES82",
+      "Q9ES83",
+      "Q9HBU9",
+      "Q9HBV1"
+    ],
+    "PSEN": [
+      "A7ST19",
+      "A9S846",
+      "A9VBA9",
+      "B8BVL0",
+      "B8C3Y7",
+      "C3Z2C5",
+      "C7J054",
+      "F1NGP7",
+      "F4NZK7",
+      "F6RA92",
+      "F7C949",
+      "G3QI95",
+      "G3QLC6",
+      "H2N0U7",
+      "H2Q8K1",
+      "H2R821",
+      "H3GE34",
+      "H3GSQ0",
+      "H3GZZ9",
+      "O02194",
+      "O64668",
+      "O88777",
+      "P49768",
+      "P49769",
+      "P49810",
+      "P97887",
+      "Q4JIM4",
+      "Q4QF26",
+      "Q54DE8",
+      "Q54ET2",
+      "Q7PR98",
+      "Q90ZE4",
+      "Q9SIK7",
+      "Q9XT96",
+      "Q9XT97"
+    ],
+    "RPS": [
+      "A8IWQ1",
+      "O66430",
+      "P21471",
+      "P35027",
+      "P35686",
+      "P54029",
+      "P61929",
+      "Q10P27",
+      "Q7NEF1",
+      "Q8IK02",
+      "Q8IKM3",
+      "Q8LNL2"
+    ],
+    "SERC": [
+      "A0A6I8Q293",
+      "A0C5A5",
+      "A0CSR0",
+      "A6NH21",
+      "A8WCG0",
+      "A9UY97",
+      "B7Q347",
+      "C3Y299",
+      "C3YMU1",
+      "E7F5D2",
+      "F7A8J9",
+      "O45719",
+      "Q0JBW5",
+      "Q12116",
+      "Q13530",
+      "Q494Q0",
+      "Q4FZV1",
+      "Q4Q8G8",
+      "Q4X0I0",
+      "Q54UF8",
+      "Q5KDT2",
+      "Q5U2V2",
+      "Q5VR48",
+      "Q5XK03",
+      "Q5ZME5",
+      "Q63175",
+      "Q6CHG9",
+      "Q6K688",
+      "Q7QCD1",
+      "Q7SAQ3",
+      "Q7SZW7",
+      "Q7TNK0",
+      "Q803X0",
+      "Q84SS3",
+      "Q86VE9",
+      "Q8BHJ6",
+      "Q8VZI4",
+      "Q95XV3",
+      "Q96SA4",
+      "Q9HDY3",
+      "Q9NRX5",
+      "Q9QZI8",
+      "Q9S9L9"
+    ],
+    "SUMF": [
+      "A9V4V4",
+      "A9V5J3",
+      "F1NWF3",
+      "F5HMR5",
+      "F7EQ26",
+      "H2LCF1",
+      "H2MHZ5",
+      "Q58CP2",
+      "Q5XJ75",
+      "Q8NBJ7",
+      "Q8NBK3",
+      "Q9W0U6"
+    ],
+    "TRFE": [
+      "A5A6I6",
+      "D3ZAB1",
+      "D4ADK7",
+      "E1BG25",
+      "E1BVL8",
+      "E7F2E3",
+      "F1NVN3",
+      "F1PR54",
+      "F1R9Z0",
+      "G3QYG5",
+      "G3R4X1",
+      "G3RDQ3",
+      "G3X6N3",
+      "H2M6H2",
+      "H2MFE8",
+      "H2N079",
+      "H2QMG6",
+      "H2QP17",
+      "H9H969",
+      "P02787",
+      "P02788",
+      "P02789",
+      "P08071",
+      "P08582",
+      "P12346",
+      "P24627",
+      "Q0VIL3",
+      "Q501K5",
+      "Q921I1",
+      "Q9DBD0",
+      "Q9R0R1"
+    ],
+    "VATB": [
+      "A8BPV3",
+      "A9SJK8",
+      "A9SP56",
+      "B7QDF5",
+      "D3ZZS8",
+      "F6SX31",
+      "F7A8C2",
+      "P11574",
+      "P11593",
+      "P15313",
+      "P16140",
+      "P21281",
+      "P31409",
+      "P31411",
+      "P62814",
+      "P62815",
+      "Q0VGW2",
+      "Q19626",
+      "Q4Q821",
+      "Q4X0J7",
+      "Q59PT0",
+      "Q5KBW0",
+      "Q76NU1",
+      "Q86WQ0",
+      "Q8W4E2",
+      "Q91YH6",
+      "Q9N5A0",
+      "Q9SZN1"
+    ]
+  },
+  "native": {
+    "bytes": 31585,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_20261006_v1/report.json",
+    "sha256": "4650f614d2fdeebd65cbcbf4999c61c83cc549560d2738bfbb5502f686f660e3"
+  },
+  "native_readback": {
+    "bytes": 8718,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_readback_20261006.json",
+    "sha256": "8d0356bc0e159d204939271578e23a6a5b6efcf6198b75a18c0f3d38e0e67c0a"
+  },
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "original_protocol": {
+    "bytes": 5020,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/SWISS_DOMAIN_STRATA_PROTOCOL_20260917.md",
+    "sha256": "8316866d11f988cef6a3e88f07e2802d1557a7ae581b100b85884f704b0afee8"
+  },
+  "outputs": [
+    {
+      "bytes": 1190,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_domain_strata_20261006_v1/scores.tsv",
+      "sha256": "845861a1b089bc365b3df8a4ecc99591b5c88abbc832ae3bf5b5825d1350e20c"
+    },
+    {
+      "bytes": 1458,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_domain_strata_20261006_v1/TABLE.md",
+      "sha256": "53e6294330d7037bed7d14c16f5bf64dada51036eacfbd974cbafaa4a54d15dd"
+    }
+  ],
+  "publication_ready": false,
+  "raw_relations_checked": 21530,
+  "rows": [
+    {
+      "F1": 0.689183963152562,
+      "PPV": 0.6439400942516949,
+      "TPR": 0.741266050122766,
+      "cell": "p0_c0_r0",
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "stratum": "all"
+    },
+    {
+      "F1": 0.7100609825130608,
+      "PPV": 0.689891985840274,
+      "TPR": 0.7314447752533759,
+      "cell": "p0_c0_r0",
+      "families": 12,
+      "family_members": [
+        "ASTER",
+        "BAMBI",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF"
+      ],
+      "prediction_semantics": "group_clique",
+      "stratum": "median_pfam_types_below_two"
+    },
+    {
+      "F1": 0.6398580367442509,
+      "PPV": 0.5520363110745369,
+      "TPR": 0.7609085998615459,
+      "cell": "p0_c0_r0",
+      "families": 6,
+      "family_members": [
+        "APP",
+        "BAR",
+        "HOX",
+        "NOX",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "stratum": "median_pfam_types_at_least_two"
+    },
+    {
+      "F1": 0.6954517605949861,
+      "PPV": 0.6555138242602657,
+      "TPR": 0.7405719621547184,
+      "cell": "p0_c0_r0",
+      "families": 15,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "NOX",
+        "POP",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "stratum": "repeated_type_fraction_below_quarter"
+    },
+    {
+      "F1": 0.6559455786521935,
+      "PPV": 0.5860714442088408,
+      "TPR": 0.7447364899630032,
+      "cell": "p0_c0_r0",
+      "families": 3,
+      "family_members": [
+        "MAPT",
+        "PSEN",
+        "TRFE"
+      ],
+      "prediction_semantics": "group_clique",
+      "stratum": "repeated_type_fraction_at_least_quarter"
+    },
+    {
+      "F1": 0.7895743339716982,
+      "PPV": 0.9491519661804723,
+      "TPR": 0.6759321953915856,
+      "cell": "p0_c0_r1",
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "resolved_native_pairs",
+      "stratum": "all"
+    },
+    {
+      "F1": 0.7589662126504299,
+      "PPV": 0.9327769084738727,
+      "TPR": 0.6397560886485244,
+      "cell": "p0_c0_r1",
+      "families": 12,
+      "family_members": [
+        "ASTER",
+        "BAMBI",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF"
+      ],
+      "prediction_semantics": "resolved_native_pairs",
+      "stratum": "median_pfam_types_below_two"
+    },
+    {
+      "F1": 0.8493211832915595,
+      "PPV": 0.9819020815936712,
+      "TPR": 0.7482844088777078,
+      "cell": "p0_c0_r1",
+      "families": 6,
+      "family_members": [
+        "APP",
+        "BAR",
+        "HOX",
+        "NOX",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "resolved_native_pairs",
+      "stratum": "median_pfam_types_at_least_two"
+    },
+    {
+      "F1": 0.7974926681609413,
+      "PPV": 0.946987151675408,
+      "TPR": 0.688762388777239,
+      "cell": "p0_c0_r1",
+      "families": 15,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "NOX",
+        "POP",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "VATB"
+      ],
+      "prediction_semantics": "resolved_native_pairs",
+      "stratum": "repeated_type_fraction_below_quarter"
+    },
+    {
+      "F1": 0.7473104562927284,
+      "PPV": 0.9599760387057935,
+      "TPR": 0.6117812284633183,
+      "cell": "p0_c0_r1",
+      "families": 3,
+      "family_members": [
+        "MAPT",
+        "PSEN",
+        "TRFE"
+      ],
+      "prediction_semantics": "resolved_native_pairs",
+      "stratum": "repeated_type_fraction_at_least_quarter"
+    }
+  ],
+  "schema": "native_qfo_swiss_domain_strata_v1",
+  "selected_annotation_sources": [
+    {
+      "bytes": 19615165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000437_7955.json",
+      "selected_accessions": [
+        "A2BE68",
+        "A5PMY8",
+        "B0V0E5",
+        "B1H1H2",
+        "E7F2E3",
+        "E7F5D2",
+        "E7FD40",
+        "F1QI18",
+        "F1QJB5",
+        "F1QK94",
+        "F1R408",
+        "F1R6V1",
+        "F1R9Z0",
+        "P79724",
+        "Q0VIL3",
+        "Q1ECY2",
+        "Q1L8S4",
+        "Q58EL0",
+        "Q5PQZ7",
+        "Q5SPR2",
+        "Q5XJ75",
+        "Q6GQM7",
+        "Q6JIY4",
+        "Q6JIY5",
+        "Q6JWV8",
+        "Q6PC46",
+        "Q6W990",
+        "Q7SZW7",
+        "Q803X0",
+        "Q8AWY2",
+        "Q90469",
+        "Q90470",
+        "Q90471",
+        "Q90472",
+        "Q90ZE4",
+        "Q9DDU0",
+        "Q9DDU1",
+        "Q9DFZ0",
+        "Q9PWL6",
+        "Q9PWM2",
+        "Q9PWM6",
+        "Q9YGT0",
+        "Q9YGT5"
+      ],
+      "sha256": "50d563b89fd802e0d0ae14f67714d5ed6a81679f024185cb2103dd7761701232"
+    },
+    {
+      "bytes": 12294885,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000539_9031.json",
+      "selected_accessions": [
+        "A0A3Q2U7E3",
+        "A0A3Q2UE93",
+        "E1AWU3",
+        "E1BQM6",
+        "E1BRT6",
+        "E1BVL8",
+        "E1C440",
+        "F1N8T1",
+        "F1NGP7",
+        "F1NPM0",
+        "F1NVG4",
+        "F1NVN3",
+        "F1NWF3",
+        "F1NZ04",
+        "F1P0A7",
+        "P02789",
+        "P24342",
+        "P24343",
+        "P24344",
+        "P31258",
+        "Q4JIM4",
+        "Q5ZKL7",
+        "Q5ZME5",
+        "Q90X25",
+        "Q98924",
+        "Q9DDW4",
+        "Q9DG23",
+        "Q9I8K7"
+      ],
+      "sha256": "b7b98c218c69f077c67146e193078fd0e647af3aa67e218c760d14e4fa7f20c5"
+    },
+    {
+      "bytes": 4361556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000542_5664.json",
+      "selected_accessions": [
+        "Q4Q821",
+        "Q4Q8G8",
+        "Q4QF26"
+      ],
+      "sha256": "ec458dd084c76f0570cb84e66aa9705eb70eb445256b01deccc1db381f22e5d9"
+    },
+    {
+      "bytes": 2039374,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000557_251221.json",
+      "selected_accessions": [
+        "Q7NEF1"
+      ],
+      "sha256": "045c29826e3e8e24e069effc666628567b273a29a1c01bdfe281ae3bb943abfb"
+    },
+    {
+      "bytes": 3299614,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000559_237561.json",
+      "selected_accessions": [
+        "Q59PT0",
+        "Q5AFE4"
+      ],
+      "sha256": "f6e248f478f5425fe1bef421b2df7593c4407bf7e20e2cda1e2aff5585488c8e"
+    },
+    {
+      "bytes": 15411163,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000589_10090.json",
+      "selected_accessions": [
+        "D3Z6Q9",
+        "O08539",
+        "O35740",
+        "P08071",
+        "P12023",
+        "P20357",
+        "P27546",
+        "P49769",
+        "P62814",
+        "P97769",
+        "Q03157",
+        "Q06335",
+        "Q06890",
+        "Q3ZRW6",
+        "Q5XK03",
+        "Q61093",
+        "Q672J9",
+        "Q6ZWX0",
+        "Q7TQF7",
+        "Q8BHJ6",
+        "Q8CIZ9",
+        "Q91YH6",
+        "Q921I1",
+        "Q9D0L6",
+        "Q9DBD0",
+        "Q9ES81",
+        "Q9ES82",
+        "Q9ES83",
+        "Q9JHI8",
+        "Q9JI08",
+        "Q9QZI8",
+        "Q9R0R1",
+        "Q9WUL8"
+      ],
+      "sha256": "631eee1ff5575078af1f6c919abcc23fad13e0f642c3447b28463d33896ac665"
+    },
+    {
+      "bytes": 19868762,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000600_5888.json",
+      "selected_accessions": [
+        "A0BRT2",
+        "A0C5A5",
+        "A0CSR0"
+      ],
+      "sha256": "095c1173e40754ceccf6aeff74dc83115354ac3756ecabeb03b5bce7b7e23285"
+    },
+    {
+      "bytes": 822387,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000798_224324.json",
+      "selected_accessions": [
+        "O66430"
+      ],
+      "sha256": "e71958285547869f73d97a6199638c6ae542e2cbeb05631b4d364e1912b77579"
+    },
+    {
+      "bytes": 8310912,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000803_7227.json",
+      "selected_accessions": [
+        "O02194",
+        "P09087",
+        "P31409",
+        "Q7KLE5",
+        "Q9V7A4",
+        "Q9VRJ8",
+        "Q9W0U6"
+      ],
+      "sha256": "1ac66a0b1779c6994840f0a0b64ee7734084cd1d3b224a050c9117022e40704c"
+    },
+    {
+      "bytes": 932300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000000805_243232.json",
+      "selected_accessions": [
+        "P54029"
+      ],
+      "sha256": "5d3ccbcaf308c5c30454832ad2ea5fb368f820a6242d808bd5f56b59db8e7c92"
+    },
+    {
+      "bytes": 15962851,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001038_8090.json",
+      "selected_accessions": [
+        "A0A3B3IDP9",
+        "H2L879",
+        "H2LCF1",
+        "H2LI24",
+        "H2LQ91",
+        "H2LW29",
+        "H2LXG3",
+        "H2LYH0",
+        "H2M0T9",
+        "H2M5R5",
+        "H2M5R6",
+        "H2M6H2",
+        "H2MFE8",
+        "H2MGS0",
+        "H2MHZ5",
+        "H2MTZ0",
+        "H2MZF5",
+        "H2N079",
+        "H2N0U7"
+      ],
+      "sha256": "734afa2c75f8ab6e2a3177e8cad559885c3b10158d6eef6e1f18d21c00681cef"
+    },
+    {
+      "bytes": 5998020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001055_321614.json",
+      "selected_accessions": [
+        "Q0UGL3",
+        "Q0V6H7"
+      ],
+      "sha256": "0a203360002052b84d405d03f6770f3760dbf9dd4ade5c47dc29bf6376528102"
+    },
+    {
+      "bytes": 3290800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001300_284591.json",
+      "selected_accessions": [
+        "Q6CCM8",
+        "Q6CDT4",
+        "Q6CHG9"
+      ],
+      "sha256": "1902deec28b756d9c639ad34d231c455f15286e1667737ce706cb97bfe9f028f"
+    },
+    {
+      "bytes": 5398994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001312_665079.json",
+      "selected_accessions": [
+        "A7EFA2",
+        "A7ENZ2"
+      ],
+      "sha256": "49722f069077511ac2cc9262b3974243ca256b629605ad5a569b77b4538446eb"
+    },
+    {
+      "bytes": 5683052,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001357_81824.json",
+      "selected_accessions": [
+        "A9UPC6",
+        "A9UY97",
+        "A9V4V4",
+        "A9V5J3",
+        "A9V5V7",
+        "A9VBA9"
+      ],
+      "sha256": "c4854679182c3135fe6d883250b567c963423802c98e31b7568b80c3a483a49c"
+    },
+    {
+      "bytes": 5578845,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001449_35128.json",
+      "selected_accessions": [
+        "B8BVL0",
+        "B8C3Y7"
+      ],
+      "sha256": "a31e097483327e8ca196a1d7812763bfb8097b9dcb6d5c59a63d15da9d82908c"
+    },
+    {
+      "bytes": 3948957,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001450_36329.json",
+      "selected_accessions": [
+        "Q8IK02",
+        "Q8IKM3"
+      ],
+      "sha256": "d15583e795f80d844aeba1511609a63bb322328e24249c25372bf7ae2c972abb"
+    },
+    {
+      "bytes": 14822351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001519_9595.json",
+      "selected_accessions": [
+        "G3QDG8",
+        "G3QI95",
+        "G3QJ12",
+        "G3QLC6",
+        "G3QNZ3",
+        "G3QPL0",
+        "G3QVH2",
+        "G3QXY3",
+        "G3QYG5",
+        "G3R2X8",
+        "G3R4X1",
+        "G3R5Y4",
+        "G3RC27",
+        "G3RDQ3",
+        "G3RI51",
+        "G3RIZ8",
+        "G3RL83",
+        "G3RLV4",
+        "G3RSB1",
+        "Q5YCW0"
+      ],
+      "sha256": "5f346c8916b338acd99f5067c1bc81b52e8558d79173431d86247101e87b3e57"
+    },
+    {
+      "bytes": 3412284,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001548_184922.json",
+      "selected_accessions": [
+        "A8BPV3"
+      ],
+      "sha256": "1e7787cc18e86e60886504684a0cda1d173b7e4fad55e906dad0dae6fe49da89"
+    },
+    {
+      "bytes": 19448984,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001554_7739.json",
+      "selected_accessions": [
+        "C3XR12",
+        "C3XTC7",
+        "C3XTC8",
+        "C3XTD0",
+        "C3XTD1",
+        "C3XTD2",
+        "C3XUP1",
+        "C3Y299",
+        "C3YHW0",
+        "C3YIY0",
+        "C3YMU1",
+        "C3YUJ9",
+        "C3YX71",
+        "C3Z2C5",
+        "C3ZJ28",
+        "C3ZPM5",
+        "C3ZTT7"
+      ],
+      "sha256": "26f8e0385fdf16d384e0f340d1f4c7318a84b9e4fe91fecc097780cebbbd8120"
+    },
+    {
+      "bytes": 8124404,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001555_6945.json",
+      "selected_accessions": [
+        "B7P4G5",
+        "B7PBM8",
+        "B7PLE6",
+        "B7PU93",
+        "B7Q347",
+        "B7QDF5",
+        "B7QN64"
+      ],
+      "sha256": "939e24c53258efbe90900b71a70b3446205022d2b11b3b7771417ca59c1fd61e"
+    },
+    {
+      "bytes": 1909955,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001570_224308.json",
+      "selected_accessions": [
+        "P21471"
+      ],
+      "sha256": "9bf86313b75d2ce0ab8e4eb0946bb7811552dc308a41049510092935c542e13b"
+    },
+    {
+      "bytes": 11678107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001593_45351.json",
+      "selected_accessions": [
+        "A7RPH5",
+        "A7RTM2",
+        "A7RTY3",
+        "A7S0R8",
+        "A7SCJ4",
+        "A7SD95",
+        "A7SPL1",
+        "A7ST19",
+        "A7SUP3"
+      ],
+      "sha256": "014615e13d150891b17fa7d050f2655183e8c035e1bb107049e7050fba87e98d"
+    },
+    {
+      "bytes": 4994383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001805_367110.json",
+      "selected_accessions": [
+        "P11593",
+        "Q7RW00",
+        "Q7S814",
+        "Q7SAQ3",
+        "Q7SGX6"
+      ],
+      "sha256": "bb06c37780651463509862f90e5e8dd6c3616e926f92bbf20283096be65946e6"
+    },
+    {
+      "bytes": 9465994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001940_6239.json",
+      "selected_accessions": [
+        "O45719",
+        "Q09993",
+        "Q10651",
+        "Q19626",
+        "Q21004",
+        "Q95XV3",
+        "Q9N5A0"
+      ],
+      "sha256": "dc07134df79d078b013165f0b7fe6df354bfda8232c766f9d3289315559a600a"
+    },
+    {
+      "bytes": 1278518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000001974_273057.json",
+      "selected_accessions": [
+        "P35027"
+      ],
+      "sha256": "0e615f2a546f47d8eab3ce8325e31b00b2916e03e0000a29edcbe0cd89e39248"
+    },
+    {
+      "bytes": 3558059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002149_214684.json",
+      "selected_accessions": [
+        "Q5KBW0",
+        "Q5KDT2",
+        "Q5KLL3",
+        "Q5KPK8"
+      ],
+      "sha256": "758a9cf3b9510c12affac27b03d88b44c553b2dee22adcd92b029b8fd5731ffa"
+    },
+    {
+      "bytes": 8102732,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002195_44689.json",
+      "selected_accessions": [
+        "Q54DE8",
+        "Q54ET2",
+        "Q54IA6",
+        "Q54NT2",
+        "Q54UF8",
+        "Q76NU1",
+        "Q86GL4",
+        "Q86H65",
+        "Q9XYS3"
+      ],
+      "sha256": "963c5c8d10649365294274870d7f088c39410a3f8367244f92cc3389899d9341"
+    },
+    {
+      "bytes": 14450286,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002254_9615.json",
+      "selected_accessions": [
+        "A0A5F4CEF0",
+        "A7E3L1",
+        "E2R5H9",
+        "E2RQM2",
+        "F1P603",
+        "F1PKC8",
+        "F1PL03",
+        "F1PR54",
+        "F1PSM8",
+        "F1PTG7",
+        "F1PZH8",
+        "J9JHR0",
+        "J9NU29",
+        "J9NZA1",
+        "Q95KN1"
+      ],
+      "sha256": "b37527c7f5940932f6ebf72e0e09e0058de4c1e522556d05c4a4bc19ddf38908"
+    },
+    {
+      "bytes": 15878889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002277_9598.json",
+      "selected_accessions": [
+        "A0A2J8M3H2",
+        "A5A6I6",
+        "H2PYS8",
+        "H2Q546",
+        "H2Q5Y0",
+        "H2Q8K1",
+        "H2QFG1",
+        "H2QIN5",
+        "H2QMG6",
+        "H2QP17",
+        "H2QTG8",
+        "H2QTG9",
+        "H2QTY3",
+        "H2R011",
+        "H2R019",
+        "H2R4R9",
+        "H2R516",
+        "H2R821",
+        "H2RDE5",
+        "K7AAP2",
+        "Q5IS80",
+        "Q5YCW1"
+      ],
+      "sha256": "a8d5b7719642855f5b6e0fd5402cdd5f8decc5062cd17e5a25f4de0fb5d30d46"
+    },
+    {
+      "bytes": 15615177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002280_13616.json",
+      "selected_accessions": [
+        "A0A5F8H622",
+        "F6PGY0",
+        "F6TDQ9",
+        "F6U2X4",
+        "F6UX07",
+        "F6VBX1",
+        "F6VSF3",
+        "F6YXG1",
+        "F6Z703",
+        "F6ZWG8",
+        "F6ZWH6",
+        "F7ELK5",
+        "F7EQ26",
+        "F7G367",
+        "H9H969"
+      ],
+      "sha256": "5465bac2c15feca574bee8f3c76c29bfaaa433491ed9ba710ff28dfd1f3329d1"
+    },
+    {
+      "bytes": 2980367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002311_559292.json",
+      "selected_accessions": [
+        "P16140",
+        "P25343",
+        "Q12116",
+        "Q12160"
+      ],
+      "sha256": "9b0edae55eaa52eef55660bb5b6a1bb102df6ef4db8a28701533c0171c48045b"
+    },
+    {
+      "bytes": 2557585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002485_284812.json",
+      "selected_accessions": [
+        "P31411",
+        "Q09714",
+        "Q9HDY3",
+        "Q9UUM7"
+      ],
+      "sha256": "cd847cb4b328b79c41cb5fab755a2bb31e20bc7ccff05402f48cf4952b8cfc5d"
+    },
+    {
+      "bytes": 2145208,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002487_188937.json",
+      "selected_accessions": [
+        "P61929"
+      ],
+      "sha256": "09976fc7b0b5949b2ccba62d7667335b6c8a42d39b21b50a0136095263eace7b"
+    },
+    {
+      "bytes": 14405466,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002494_10116.json",
+      "selected_accessions": [
+        "A8WCG0",
+        "D3ZAB1",
+        "D3ZZS8",
+        "D4ADK7",
+        "F1LRS5",
+        "O08839",
+        "O88777",
+        "P05371",
+        "P08592",
+        "P12346",
+        "P15943",
+        "P62815",
+        "P97887",
+        "Q3BCU4",
+        "Q3ZRW7",
+        "Q4FZV1",
+        "Q5M7W5",
+        "Q5U2V2",
+        "Q63175",
+        "Q672K1",
+        "Q68FR2",
+        "Q68FW8",
+        "Q6P722",
+        "Q7TNK0",
+        "Q91XN4",
+        "Q924V1",
+        "Q99MA0",
+        "Q99MA1",
+        "Q9ERL1",
+        "Q9WV87"
+      ],
+      "sha256": "ddb1adf9452202517f4b214afcdccb2c6ffa4130c64cb8d04b9eacc41cd5a3e9"
+    },
+    {
+      "bytes": 4638820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000002530_330879.json",
+      "selected_accessions": [
+        "A4D9G4",
+        "Q4WTS7",
+        "Q4X0I0",
+        "Q4X0J7"
+      ],
+      "sha256": "6fc1371ce0bc56a92b6bf8336f6dedb2b374a60e29a2f1dfb463b2622eae9804"
+    },
+    {
+      "bytes": 7626627,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005238_164328.json",
+      "selected_accessions": [
+        "H3GE34",
+        "H3GSQ0",
+        "H3GWW4",
+        "H3GZZ9"
+      ],
+      "sha256": "f2c04930721b178dd9eac9ff4c273a4e054900ef939777c39e47084dc0aa16df"
+    },
+    {
+      "bytes": 15211666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000005640_9606.json",
+      "selected_accessions": [
+        "A6NH21",
+        "O00499",
+        "O43248",
+        "P02787",
+        "P02788",
+        "P04839",
+        "P05067",
+        "P08582",
+        "P10636",
+        "P10909",
+        "P11137",
+        "P15313",
+        "P17482",
+        "P21281",
+        "P27816",
+        "P28356",
+        "P28358",
+        "P31260",
+        "P31269",
+        "P31270",
+        "P31271",
+        "P31274",
+        "P31275",
+        "P31276",
+        "P31277",
+        "P35452",
+        "P35453",
+        "P49418",
+        "P49768",
+        "P49810",
+        "P51693",
+        "Q06481",
+        "Q13145",
+        "Q13530",
+        "Q15846",
+        "Q86VE9",
+        "Q86WQ0",
+        "Q8NBJ7",
+        "Q8NBK3",
+        "Q8NE79",
+        "Q92826",
+        "Q96RK1",
+        "Q96SA4",
+        "Q99966",
+        "Q99967",
+        "Q9HBU9",
+        "Q9HBV1",
+        "Q9HBY0",
+        "Q9NPH5",
+        "Q9NQY0",
+        "Q9NRX5",
+        "Q9NYD6",
+        "Q9UBW5",
+        "Q9Y284",
+        "Q9Y5S8"
+      ],
+      "sha256": "5ff67d6cff37b18db33d206669c72665dc5db7bdf1882088f89acf9b364f8d92"
+    },
+    {
+      "bytes": 13779014,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006548_3702.json",
+      "selected_accessions": [
+        "O23413",
+        "O23553",
+        "O64668",
+        "O65258",
+        "O80831",
+        "P0CB17",
+        "P11574",
+        "P25853",
+        "Q1PFB8",
+        "Q3EA54",
+        "Q3EB59",
+        "Q3ECT8",
+        "Q494Q0",
+        "Q501G6",
+        "Q56X75",
+        "Q66GI1",
+        "Q6NPF8",
+        "Q84WP5",
+        "Q8GWD5",
+        "Q8L762",
+        "Q8L7R5",
+        "Q8L8U9",
+        "Q8L8Z1",
+        "Q8L924",
+        "Q8L9B5",
+        "Q8LE26",
+        "Q8VYW2",
+        "Q8VZI4",
+        "Q8VZQ3",
+        "Q8W4E2",
+        "Q945M8",
+        "Q9CAX3",
+        "Q9FE29",
+        "Q9FFT2",
+        "Q9FFZ7",
+        "Q9FH80",
+        "Q9FI10",
+        "Q9FM68",
+        "Q9FNE8",
+        "Q9LIR6",
+        "Q9LR57",
+        "Q9LUL1",
+        "Q9LXF3",
+        "Q9LZM5",
+        "Q9M0L3",
+        "Q9M2U0",
+        "Q9S9L9",
+        "Q9SD88",
+        "Q9SIH4",
+        "Q9SIK7",
+        "Q9SKN3",
+        "Q9SQU2",
+        "Q9SUP0",
+        "Q9SZN1",
+        "Q9XI72",
+        "Q9ZQI2",
+        "Q9ZT81"
+      ],
+      "sha256": "0eb4de7a69c581d64ee6e56bc0fc16137555dcda092771602a38d0f7c29a85a7"
+    },
+    {
+      "bytes": 12450289,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006727_3218.json",
+      "selected_accessions": [
+        "A9S846",
+        "A9SJK8",
+        "A9SP56",
+        "A9TN27"
+      ],
+      "sha256": "ede5a355e7d873aabdc3a3433b09f0719a5d269f384c3f1bc7e3101abca09a22"
+    },
+    {
+      "bytes": 13063719,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000006906_3055.json",
+      "selected_accessions": [
+        "A8IJC4",
+        "A8IWQ1"
+      ],
+      "sha256": "97d6165c765b5e8685bc02fffd54bd057972bdbb8879eb4bbaf174a264f92bbb"
+    },
+    {
+      "bytes": 7635144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007062_7165.json",
+      "selected_accessions": [
+        "F5HMR5",
+        "Q7PR98",
+        "Q7PS77",
+        "Q7Q9R8",
+        "Q7QCD1",
+        "Q7QCS9",
+        "Q7QIP7"
+      ],
+      "sha256": "eb1314b29a976ba10fa39caf1ccc84e6be3849c1d973e49027205626eb028dfe"
+    },
+    {
+      "bytes": 3817977,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007241_684364.json",
+      "selected_accessions": [
+        "F4NWI3",
+        "F4NYQ0",
+        "F4NZK7"
+      ],
+      "sha256": "8d6692bcbc9dc9c1df3dd41c40c93d7d18fc2d90ea77182e1ccf7dacf868f3f2"
+    },
+    {
+      "bytes": 8584834,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000007266_7070.json",
+      "selected_accessions": [
+        "D6X0I9"
+      ],
+      "sha256": "b0ec830ca0fe6d81ff25729b89695e2f6d8976f22db758b1dc4930eddc8ef63f"
+    },
+    {
+      "bytes": 11705188,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008143_8364.json",
+      "selected_accessions": [
+        "A0A6I8Q068",
+        "A0A6I8Q293",
+        "B1H1F6",
+        "B1H1G2",
+        "F6PXE7",
+        "F6PXR2",
+        "F6QLB4",
+        "F6SX31",
+        "F6YNC0",
+        "F7AMC8",
+        "F7BEF0",
+        "F7BEI0",
+        "F7C949",
+        "F7CLH6",
+        "F7D5A4",
+        "F7D5I9",
+        "F7DF67",
+        "Q0VGW2",
+        "Q501K5",
+        "Q505H9",
+        "Q6NX30"
+      ],
+      "sha256": "f99efaf376ca4f52fcdc54574debe25bb6899ed71f5641e3fe80b9d1d4e056b5"
+    },
+    {
+      "bytes": 7230742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008144_7719.json",
+      "selected_accessions": [
+        "F6RA92",
+        "F6UJ88",
+        "F6VD01",
+        "F6VQE7",
+        "F6XMZ3",
+        "F6YS00",
+        "F6ZS78",
+        "F6ZUK5",
+        "F7A8C2",
+        "F7A8J9"
+      ],
+      "sha256": "b37c9f5a0035a5f2523a4f57e41adf4bac0dd4f06be9dd8fe2b28de836853a2f"
+    },
+    {
+      "bytes": 5762382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000008783_418459.json",
+      "selected_accessions": [
+        "E3JVR2"
+      ],
+      "sha256": "876521fb42e013ecd170e89d1f5bb60227750383f89ce83839e87e9d13bac6a9"
+    },
+    {
+      "bytes": 16049319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000009136_9913.json",
+      "selected_accessions": [
+        "A4FUG5",
+        "A5PJG2",
+        "E1BB94",
+        "E1BFF3",
+        "E1BG25",
+        "E1BPJ7",
+        "F1MEW3",
+        "F1MIL3",
+        "F1MQX5",
+        "F1MWI1",
+        "G3N3W7",
+        "G3X6N3",
+        "O46522",
+        "P17697",
+        "P24627",
+        "P29172",
+        "P36225",
+        "Q0VCT9",
+        "Q1RMX1",
+        "Q2HJ78",
+        "Q2M2T6",
+        "Q3ZRW9",
+        "Q58CP2",
+        "Q9BDI3",
+        "Q9XT96",
+        "Q9XT97"
+      ],
+      "sha256": "9b526eaed50c86e706d550e262bc7e9af1f8b9cb0b77366ef7412731e8bff961"
+    },
+    {
+      "bytes": 18704168,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/fas_annotations/UP000059680_39947.json",
+      "selected_accessions": [
+        "A3A2W2",
+        "C7J054",
+        "P35686",
+        "Q0DHM7",
+        "Q0ILZ7",
+        "Q0IN16",
+        "Q0JBW5",
+        "Q10CL8",
+        "Q10EJ2",
+        "Q10LG9",
+        "Q10P27",
+        "Q10QH3",
+        "Q10RZ1",
+        "Q2QNE3",
+        "Q2R2T4",
+        "Q5JM57",
+        "Q5N794",
+        "Q5NB81",
+        "Q5VR48",
+        "Q652P5",
+        "Q67W83",
+        "Q67X40",
+        "Q6EP58",
+        "Q6ETN2",
+        "Q6K478",
+        "Q6K688",
+        "Q6YT98",
+        "Q6YW53",
+        "Q6Z1Y7",
+        "Q6Z2U5",
+        "Q7XPU9",
+        "Q7XUV7",
+        "Q84SS3",
+        "Q84UT5",
+        "Q8LNL2",
+        "Q9ARX2",
+        "Q9AV88",
+        "Q9LI17"
+      ],
+      "sha256": "035a9c8bf21227f42248def0cfe8c232f42ec157f9095330beedff99d9dd78e1"
+    }
+  ],
+  "source": {
+    "bytes": 12525,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_swiss_domain_strata.py",
+    "sha256": "ccc979a24eeb78965081e72a78da9fa9fc0eaca50ead56c59e3ab0c8e5230ae0"
+  },
+  "unselected_annotation_source_count": 29,
+  "unselected_annotation_sources_rechecked": false
+}
