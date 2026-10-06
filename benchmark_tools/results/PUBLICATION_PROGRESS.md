@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Deferred Independent Native QfO Admission Validated (2026-10-06)
+
+Previous goal turn makes progress at4d532428/f7a02cd1 by queuing actual
+assessment22451 behind conversion22450. Re-read full goal/current ledger and
+verify original22444 RUNNING3:13:46;22445/22450/22451 dependency-pending.
+No original handle or completed scientific analysis is restarted.
+
+[Prospective independent-admission protocol](ASSESSMENT_GATED_NATIVE_QFO_ADMISSION_PROTOCOL_20261006.md)
+adds a wrapper outside920 frozen sources. It requires completed8CPU/64GiB
+assessment accounting and actual matching successful assessment/conversion
+gate outputs before invoking unchanged original independent native validator.
+Future digests observed only after producer completion, not invented. Native
+inference, endpoint execution, uncertainty, export and index9 are not run here.
+
+498 joined tests7.07s pass, no skips, following initial148 cases. Original
+independent validator is explicitly stubbed in wrapper fixtures, not falsely
+claimed executed. Wrong/incomplete accounting, mismatched submissions/gates,
+wrong returned original admission, runtime/source drift, unsafe capacity,
+occupied/dangling namespaces and postflight drift all refuse admission.
+Residual original admitted report alone is insufficient: downstream export
+requires successful new job accounting and final accuracy-admitted wrapper.
+Original native science/reviewer/conversion/assessment and launch contracts
+remain included. No core validator or scientific endpoint change.
+
+Real original-Python read-only preflight checks all920 helper pins, known
+submission/source/runtime/venv/package bindings, fresh namespace/capacity and
+all four current scheduler identities/dependencies. Reuse dated704-record
+scorer preflight without falsely claiming fresh/continuous4.7GB-byte checks;
+original independent validator performs required full runtime checks later.
+Bash syntax/help imports pass. No unfinished output read or accuracy admitted.
+
+Next: commit/push prepared stage, held2CPU/32GiB/6hour/no-requeue job afterany
+22451, exact held inspection and one release; retain real scheduler receipts.
+Full native/scientific/uncertainty/provenance/generalization/reproducibility/
+release/deposition work remains active/incomplete. Timing contention unknown,
+potentially tool-dependent; no isolation claim, retry or unrelated-job change.
+
 ## Native QfO Assessment Released Behind Original Conversion (2026-10-06)
 
 Prepared worker/protocol4d532428 committed/pushed before actual submission.
