@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Native Accuracy And Mechanism Manuscript Supplement Checked (2026-10-06)
+
+Previous goal turn makes real progress at b3bdd678 by completing native VGNC
+decomposition and independent readback. Re-read full amended prompt/current
+ledger; original22444 verified RUNNING8:09:08, downstream22445/22450/22451/
+22452 dependency-pending. No original handle restarted or unfinished output read.
+
+[New seven-page supplement](NATIVE_QFO_SUPPLEMENT_RESULT_20261006.md) assembles
+20 pinned report/manifest/readback inputs into Methods/Results/limits, current
+native point estimates, conditional SwissTrees intervals, VGNC pair changes,
+complete SwissTrees search/graph/reconciliation evidence, original input-only
+strata and functional selection. Native cells are not relabeled selected defaults;
+initial HMM search on, five rows unavailable, failed R1 timing ineligible.
+Historical main text/PDF/archive bytes unchanged. Claim checklist adds bounded
+presentation evidence, not scientific completion or superiority.
+
+Generator/tests/selection pushed at9888cd1e before actual assembly. First
+invocation refuses integer-zero versus boolean-false draw-count schema bug;
+no output written. Retain failure/time receipt and30-test fixture XML.
+a780d653 requires integer zero and adds three schema refusals/33 tests.
+Version2 prints six pages; agent review finds duplicate Pandoc captions.
+3f457e78 removes duplication and adds independent presentation checker.
+Version3 final seven pages; all eight version2/version3 TSVs byte-identical.
+Retain historical successful-but-unpolished version2 and all receipts.
+
+Eight TSVs/51 rows preserve zero cells/empty bins; eight manuscript tables/
+34 displayed rows independently match structured Pandoc AST and printed PDF
+text. Both embedded figures decode to exact original PNG pixels/dimensions.
+No generator imports or figure redraw. HTML checks33 local occurrences/24
+tracked targets; default-sandbox Chrome print/copy hashes match. Zero PDF
+bounds violations; all seven pages rendered. Viewed version2 pages1-3 exactly
+match final pixels; final pages4-7 viewed separately. Agent visual review,
+not human certification. Final143 joined tests4.48s pass/no failures/errors/skips,
+33 generator/six presentation cases plus render/print/PDF/VGNC contracts.
+
+Final assembly0.24s/64,576KiB exit0/zero swaps originalPython3.10.13, separate
+render/check environment3.12/PyMuPDF1.27.2.3. Shared-host postprocessing only,
+contention unknown/tool-dependent;765GiBavailable/near-fullswap disclosed.
+No scientific inference/scoring/bootstrap/transitive admission/timing repair,
+scientific-environment installs or unrelatedwork modification.
+
+Latest original22444 RUNNING8:29:35; allfourdownstream stages pending.
+Await actual terminal/production gates for new native admission/nextidentity.
+Fullgoal still requires missing native cells/matched search/interactions,
+wider uncertainty/generalization/error strata, TreeFam/provenance and full
+manuscript/archive/release scope. No quiet-window/dedicated-host blocker;
+publication completion remains unproven.
+
 ## Native VGNC Counts And Paired Changes Independently Verified (2026-10-06)
 
 Previous scientific goal turn makes progress at ebe0a531 with complete native

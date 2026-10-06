@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OrthoHMM publication working draft</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @media print {
+    @page { margin: 18mm; }
+    html, body { margin: 0; padding: 0; }
+    body { max-width: none; }
+    h1, h2, h3, h4 { break-after: avoid; }
+    p { orphans: 3; widows: 3; }
+  }
+  </style>
+</head>
+<body>
+<h1 id="orthohmm-native-qfo-supplement">OrthoHMM Native QfO
+Supplement</h1>
+<p>Working manuscript supplement, 6 October 2026. Not submission-ready.
+Generated from existing verified reports; no new inference, scoring,
+accuracy admission, bootstrap or timing repair. Historical main text and
+archive bytes are unchanged. This document supplements, not supersedes,
+their frozen methods and all-tool results.</p>
+<h2 id="methods-and-evidence-scope">Methods And Evidence Scope</h2>
+<p>P0/C0/R0 and P0/C0/R1 retain initial HMM search; downstream profile
+refinement and candidate expansion are off. R changes group-derived
+cross-species clique predictions to native phylogenetically inferred
+pairs. This is not a total-HMM ablation, the selected-default
+high-sensitivity/satellite_v2 comparison or a sensitivity-matched
+non-HMM control. QfO and OrthoBench remain development-exposed primary
+benchmarks; Three Kingdoms is supplementary.</p>
+<p>Only 2 of 7 native QfO identities have supplied accuracy admissions.
+Missing from this snapshot: <code>p0_c1_r0</code>,
+<code>p0_c1_r1</code>, <code>p1_c0_r1</code>, <code>p1_c1_r0</code>,
+<code>p1_c1_r1</code>. Unavailable cells are not imputed and their
+interactions cannot be evaluated here. R1 accuracy was recovered after a
+native measurement failure; its inference resource values remain null
+and timing ineligible. Current job states belong in the progress ledger,
+not this fixed score snapshot.</p>
+<p>Report and code identities are directly checked, with each
+diagnostic’s original independent readback bound. Existing scientific
+receipts are reused; their raw scans and transitive admissions are not
+repeated for writing. Present-day checksum agreement is not evidence of
+uninterrupted integrity. <a
+href="../native_qfo_scientific_scores_20261006_v1/report.json">Score
+snapshot</a>.</p>
+<h2 id="native-endpoint-results">Native Endpoint Results</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Endpoint</th>
+<th>Statistic</th>
+<th>R0</th>
+<th>R1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>VGNC</td>
+<td>F1</td>
+<td>0.666834</td>
+<td>0.898185</td>
+</tr>
+<tr class="even">
+<td>SwissTrees</td>
+<td>F1</td>
+<td>0.689184</td>
+<td>0.789574</td>
+</tr>
+<tr class="odd">
+<td>TreeFam-A</td>
+<td>F1</td>
+<td>0.605404</td>
+<td>0.602508</td>
+</tr>
+<tr class="even">
+<td>GO</td>
+<td>Similarity</td>
+<td>0.472119</td>
+<td>0.490260</td>
+</tr>
+<tr class="odd">
+<td>EC</td>
+<td>Similarity</td>
+<td>0.932114</td>
+<td>0.967702</td>
+</tr>
+<tr class="even">
+<td>FAS</td>
+<td>FAS</td>
+<td>0.774945</td>
+<td>0.785007</td>
+</tr>
+<tr class="odd">
+<td>Six-metric mean</td>
+<td>Secondary, not F1</td>
+<td>0.690100</td>
+<td>0.755539</td>
+</tr>
+</tbody>
+</table>
+<p>VGNC, SwissTrees and TreeFam-A are F1 endpoints. GO/EC similarity and
+FAS are not F1. The six-metric arithmetic mean is project-defined and
+secondary, not official QfO F1 or a superiority ranking. Native
+serialized scores are retained rather than replaced by unrounded
+diagnostic arithmetic.</p>
+<h2 id="swisstrees-conditional-uncertainty">SwissTrees Conditional
+Uncertainty</h2>
+<p>Paired intervals are attached only after every complete native family
+record matches the retained count manifest. The analysis reuses 100,000
+family draws, seed 20260922, and correction over all 42 originally
+planned endpoints. It does not shrink multiplicity to the single
+available contrast or create new independent confirmation. The statistic
+is the harmonic mean of macro precision and recall, not mean family F1
+or pooled pair F1.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Metric</th>
+<th>Change (pp)</th>
+<th>Adjusted Lower</th>
+<th>Adjusted Upper</th>
+<th>Wins</th>
+<th>Ties</th>
+<th>Losses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F1</td>
+<td>10.039037</td>
+<td>-4.641773</td>
+<td>24.419899</td>
+<td>14</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>PPV</td>
+<td>30.521187</td>
+<td>14.325178</td>
+<td>46.547258</td>
+<td>16</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>TPR</td>
+<td>-6.533385</td>
+<td>-18.041319</td>
+<td>-0.043593</td>
+<td>0</td>
+<td>10</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>The adjusted F1 interval includes zero: a conclusive improvement is
+not established. The intervals are conditional on 18 development-exposed
+reference families, exchangeability and approximate percentile coverage.
+They do not apply to VGNC, TreeFam-A, GO, EC, FAS or the secondary mean.
+<a
+href="../native_qfo_swiss_uncertainty_binding_22449_20261006.json">Retained
+interval binding</a>.</p>
+<h2 id="vgnc-precision-recall-trade-off">VGNC Precision-Recall
+Trade-Off</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Cell</th>
+<th>TP</th>
+<th>FP</th>
+<th>FN</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>p0_c0_r0</td>
+<td>19981</td>
+<td>16013</td>
+<td>3953</td>
+<td>0.555120</td>
+<td>0.834837</td>
+<td>0.666834</td>
+</tr>
+<tr class="even">
+<td>p0_c0_r1</td>
+<td>19518</td>
+<td>9</td>
+<td>4416</td>
+<td>0.999539</td>
+<td>0.815493</td>
+<td>0.898185</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>R0</th>
+<th>R1</th>
+<th>Pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FN</td>
+<td>FN</td>
+<td>3953</td>
+</tr>
+<tr class="even">
+<td>FP</td>
+<td>FP</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>FP</td>
+<td>not_scored</td>
+<td>16004</td>
+</tr>
+<tr class="even">
+<td>TP</td>
+<td>FN</td>
+<td>463</td>
+</tr>
+<tr class="odd">
+<td>TP</td>
+<td>TP</td>
+<td>19518</td>
+</tr>
+</tbody>
+</table>
+<p>The actual native scored-pair union retains all category changes, not
+historical selected-default counts. <code>not_scored</code> is not a TN
+or biological non-orthology label. Shared-protein reference labels form
+overlap blocks; neither these blocks nor method-dependent prediction
+components establish independent biological units.
+Rare-error/shared-clade uncertainty-validation failures remain
+unresolved; no arbitrary block bootstrap is used. Full
+prediction-database hashes were checked before and after
+reference-mapping reads, but prediction edges were not requeried and
+omitted-FP completeness was not independently rescored. <a
+href="../native_qfo_vgnc_blocks_20261006_v1/report.json">Native
+decomposition</a>.</p>
+<h2 id="swisstrees-pair-and-stage-localization">SwissTrees Pair And
+Stage Localization</h2>
+<table>
+<thead>
+<tr class="header">
+<th>R0</th>
+<th>R1</th>
+<th>Pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>FN</td>
+<td>FN</td>
+<td>1193</td>
+</tr>
+<tr class="even">
+<td>FP</td>
+<td>FP</td>
+<td>19</td>
+</tr>
+<tr class="odd">
+<td>FP</td>
+<td>TN</td>
+<td>1689</td>
+</tr>
+<tr class="even">
+<td>TN</td>
+<td>TN</td>
+<td>4741</td>
+</tr>
+<tr class="odd">
+<td>TP</td>
+<td>FN</td>
+<td>334</td>
+</tr>
+<tr class="even">
+<td>TP</td>
+<td>TP</td>
+<td>2789</td>
+</tr>
+</tbody>
+</table>
+<p>These pair counts describe all scored reference relations; they are
+not the macro F1 denominator. Every changed pair was traced, avoiding
+selection of representative successes. <a
+href="../native_qfo_swiss_pair_transitions_20261006_v2.json">Pair
+transitions</a>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Cell</th>
+<th>Removed</th>
+<th>Direct_edge</th>
+<th>Indirect_path</th>
+<th>Disconnected</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>p0_c0_r0</td>
+<td>TP</td>
+<td>270</td>
+<td>64</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>p0_c0_r0</td>
+<td>FP</td>
+<td>1137</td>
+<td>552</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>p0_c0_r1</td>
+<td>TP</td>
+<td>270</td>
+<td>64</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>p0_c0_r1</td>
+<td>FP</td>
+<td>1137</td>
+<td>552</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>A direct graph edge or within-family path is observed homology
+support, not true orthology, a causal recruitment test or evolutionary
+distance. Full candidate-family members, including same-species and
+non-reference genes, were eligible intermediates. All changed pairs
+without a direct significant hit had indirect graph paths; direct-hit
+absence alone does not isolate a prefilter failure. The combined final
+graph does not isolate reciprocal-best-normalized-hit and
+singleton-attachment decisions. <a
+href="../native_qfo_swiss_search_support_20261006_v1.json">Search
+evidence</a>; <a
+href="../native_qfo_swiss_graph_support_20261006_v1/report.json">Graph
+evidence</a>.</p>
+<p>All changed pairs share their original candidate family and have an
+exclusion LCA annotated as a duplication under the saved
+positive-paralogy rule. Some excluded true pairs lie within the same
+final root HOG: inspecting only split groups misses those exclusions.
+Saved Newicks independently reproduce LCAs, but inferred duplication
+annotations and node confidence are not validated biological histories.
+Graphs and node annotations were not inventoried by the original
+validators; later observed bytes cannot be promoted into original
+admission. <a
+href="../native_qfo_swiss_reconciliation_trace_20261006_v1.json">Reconciliation
+localization</a>.</p>
+<h2 id="prespecified-sequence-strata">Prespecified Sequence Strata</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Input-Only Bin</th>
+<th>Families</th>
+<th>F1 Change (pp)</th>
+<th>Precision Change</th>
+<th>Recall Change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>higher_entropy</td>
+<td>9</td>
+<td>19.973579</td>
+<td>37.818321</td>
+<td>-1.749082</td>
+</tr>
+<tr class="even">
+<td>lower_entropy</td>
+<td>9</td>
+<td>0.420134</td>
+<td>23.224053</td>
+<td>-11.317689</td>
+</tr>
+<tr class="odd">
+<td>not_short_relative</td>
+<td>11</td>
+<td>11.380692</td>
+<td>29.920385</td>
+<td>-5.121208</td>
+</tr>
+<tr class="even">
+<td>short_relative</td>
+<td>7</td>
+<td>7.731014</td>
+<td>31.465305</td>
+<td>-8.752521</td>
+</tr>
+</tbody>
+</table>
+<p>Unchanged September input-only bins describe associations, not
+validated subgroup effects or mechanisms. Global residue entropy is not
+divergence or local low complexity; relative shortness does not prove
+fragmentation. Empty bins remain unavailable in the complete generated
+table. No subgroup CI, tuning or default promotion follows. <a
+href="../native_qfo_swiss_sequence_strata_20261006_v1/report.json">Complete
+native projections</a>.</p>
+<h2 id="functional-scores-and-pair-selection">Functional Scores And Pair
+Selection</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Endpoint</th>
+<th>R0_scored_pairs</th>
+<th>R1_scored_pairs</th>
+<th>Shared</th>
+<th>Changed_shared_scores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GO</td>
+<td>145142</td>
+<td>78607</td>
+<td>78607</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>EC</td>
+<td>186098</td>
+<td>116929</td>
+<td>116929</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>FAS</td>
+<td>38205</td>
+<td>252451</td>
+<td>1007</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Every R1 GO/EC scored pair is present in R0 with the same six-decimal
+serialized score. Their higher native means therefore reflect changed
+scored-pair membership and denominators at retained precision, not
+improved values on shared pairs. This does not prove orthology
+correctness or full-precision equality. FAS rows are realized samples,
+not all eligible predictions; their small shared subset, unseeded
+method-specific mixtures and missing-score attrition do not identify
+inclusion probabilities or support a paired population CI. <a
+href="../native_qfo_functional_pair_composition_20261006_v1.json">Functional
+composition</a>.</p>
+<h2 id="verified-companion-figures">Verified Companion Figures</h2>
+<p><img src="../native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.png"
+alt="Figure S1" /> <a
+href="../native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.pdf">Vector
+PDF</a>. Native P0/C0 endpoint scores and the conditional SwissTrees
+reconciliation contrast. F1 uncertainty remains inconclusive; other
+endpoints are point estimates without validated difference
+intervals.</p>
+<p><img
+src="../native_qfo_swiss_mechanism_figure_20261006_v3/native_swiss_mechanism.png"
+alt="Figure S2" /> <a
+href="../native_qfo_swiss_mechanism_figure_20261006_v3/native_swiss_mechanism.pdf">Vector
+PDF</a>. Complete SwissTrees exclusions, direct significant-search
+evidence and unchanged input-only strata. This earlier companion does
+not depict the subsequent graph/VGNC diagnostic; those are reported
+above.</p>
+<h2 id="claim-boundaries-and-remaining-work">Claim Boundaries And
+Remaining Work</h2>
+<p>Supported: the two admitted native cells and their explicit
+precision-recall/selection differences; conditional SwissTrees interval
+reuse; complete observed error-stage localization. Not established:
+conclusive native F1 superiority, verified evolutionary causes,
+total-HMM advantage, isolated efficiency or genome-wide
+generalization.</p>
+<p>Timing measurements were collected on a shared Threadripper while
+other analyses were running. Competition for CPU, memory bandwidth and
+I/O may have affected elapsed times, with an unknown and potentially
+tool-dependent impact. These are observed shared-host timings, not
+estimates of isolated performance. Matching resource limits does not
+isolate speed; failed R1 timing remains ineligible. This supplement does
+not create a new timing panel.</p>
+<p>Remaining work includes the missing native identities and
+interactions, sensitivity-matched search, valid wider uncertainty,
+independent-generalization limitations, remaining error strata, original
+TreeFam files and all-tool provenance/resource gaps. The full
+manuscript, executable archive/release and external-deposition scope
+remain unfinished. No dedicated host or quiet window is required; safe
+capacity and valid accounting still apply.</p>
+<h2 id="direct-evidence-index">Direct Evidence Index</h2>
+<ul>
+<li><a
+href="../native_qfo_scientific_scores_20261006_v1/report.json">snapshot</a></li>
+<li><a
+href="../native_qfo_swiss_uncertainty_binding_22449_20261006.json">intervals</a></li>
+<li><a
+href="../native_qfo_functional_pair_composition_20261006_v1.json">functional</a></li>
+<li><a
+href="../native_qfo_functional_pair_sql_readback_20261006.json">functional
+reader</a></li>
+<li><a
+href="../native_qfo_swiss_pair_transitions_20261006_v2.json">transitions</a></li>
+<li><a
+href="../native_qfo_swiss_pair_transition_sql_readback_20261006.json">transitions
+reader</a></li>
+<li><a
+href="../native_qfo_swiss_reconciliation_trace_20261006_v1.json">reconciliation</a></li>
+<li><a
+href="../native_qfo_swiss_reconciliation_newick_readback_20261006.json">reconciliation
+reader</a></li>
+<li><a
+href="../native_qfo_swiss_search_support_20261006_v1.json">search</a></li>
+<li><a
+href="../native_qfo_swiss_search_support_code_readback_20261006.json">search
+reader</a></li>
+<li><a
+href="../native_qfo_swiss_graph_support_20261006_v1/report.json">graph</a></li>
+<li><a
+href="../native_qfo_swiss_graph_floyd_readback_20261006.json">graph
+reader</a></li>
+<li><a
+href="../native_qfo_swiss_sequence_strata_20261006_v1/report.json">strata</a></li>
+<li><a
+href="../native_qfo_swiss_sequence_strata_readback_20261006.json">strata
+reader</a></li>
+<li><a
+href="../native_qfo_vgnc_blocks_20261006_v1/report.json">vgnc</a></li>
+<li><a href="../native_qfo_vgnc_blocks_readback_20261006_v1.json">vgnc
+reader</a></li>
+<li><a href="../native_qfo_p0c0_figure_20261006_v1/manifest.json">score
+figure</a></li>
+<li><a href="../native_qfo_p0c0_figure_readback_20261006.json">score
+figure reader</a></li>
+<li><a
+href="../native_qfo_swiss_mechanism_figure_20261006_v3/manifest.json">mechanism
+figure</a></li>
+<li><a
+href="../native_qfo_swiss_mechanism_figure_readback_20261006_v3.json">mechanism
+figure reader</a></li>
+</ul>
+</body>
+</html>
