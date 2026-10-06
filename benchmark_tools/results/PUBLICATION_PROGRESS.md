@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Native SwissTrees Significant Search Support Independently Traced (2026-10-06)
+
+Previous scientific goal turn makes progress at0e5dfeb2 by localizing actual
+reconciliation exclusions and independently reading saved Newicks. Latest
+user-requested amendment confirmation makes no new scientific execution;
+it verifies the existing shared-host goal and collects the final306-test
+result. Re-read full objective/current ledger on continuation. Same original
+handle22444 verified RUNNING4:09:03, downstream22445/22450/22451/22452
+dependency-pending. No original job restarted or unfinished output read.
+
+[New direct-search evidence](NATIVE_QFO_SWISS_SEARCH_SUPPORT_RESULT_20261006.md)
+traces every2,023 changed SwissTrees pair/361genes through both original
+admitted significant-search checkpoints, each90,687,327 directed records.
+All selected directional score multisets identical, preserving multiplicity
+but ignoring execution-dependent row order. Each view: removed TP60no-hit/
+6one-direction/268bidirectional; removed FP479no-hit/20one-direction/
+1,190bidirectional. Selected agreement is not whole-hit-set equality.
+
+Independent sorted-integer-key scan, without primary lookup imports, checks
+all181,374,654rows/all5,884 selected records/complete absent directions,
+original checkpoint inventories/pins, every score/row/classification and
+complete generated TSV. Significant direct homology support precedes RB-NH
+graph construction and is not orthology specificity, graph edges or raw
+prefilter evidence. Missing hit does not localize the upstream omission cause.
+This strengthens measured stage separation, not biological event correctness.
+
+306 joined tests11.94s pass/no skips, including61 new oracle/binding/readback/
+corruption/actual-receipt cases. Synthetic full-readback fixtures are not
+production admission; actual original-Python scans separately executed.
+Primary8.21s/1,464,672KiB and independent13.60s/1,499,152KiB are shared-host
+postprocessing, not inference timing; both exit0/zero swaps. Full host swap
+occupancy disclosed. Retain earlier305-case receipt, no repeated large scan.
+
+No scientific source/default/scorer change, new accuracy/uncertainty/admission,
+inference/graph/tree/reconciliation replay, timing repair or unrelated-job
+change. Initial HMM search on both cells; not total-HMM/sensitivity-matched
+comparison. Frozen manuscript/PDF/archive unchanged; companion evidence awaits
+complete assembly. Await original production gates before newscore export/
+uncertainty/successor launch. Remaining native cells, graph/error-strata/tree
+analyses, wider uncertainty/generalization/provenance/reproducibility/release
+requirements remain incomplete. Contention impact unknown/tool-dependent;
+shared host authorized without a quiet-window or dedicated-host gate.
+
+Fresh same-handle queue22444 RUNNING4:11:05; all four downstream stages
+dependency-pending. No new scientific output yet; retain original handles.
+
 ## Native SwissTrees Reconciliation Path Independently Localized (2026-10-06)
 
 Previous goal turn makes real scientific progress at6a063978 by tracing and
