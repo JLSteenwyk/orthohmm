@@ -1,6 +1,7 @@
 import copy
 import json
 from pathlib import Path
+from types import SimpleNamespace
 import xml.etree.ElementTree as ET
 
 import numpy as np
@@ -12,6 +13,7 @@ from benchmark_tools.prepare_ob_candidate_neighborhood import record
 from tests.unit.test_export_native_qfo_factorial_scores import write
 
 ROOT = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+VALIDATOR = ROOT.parents[1] / "benchmarks/work/native_factorial_review_py310_20261004/bin/python"
 
 
 def inputs():
@@ -73,7 +75,7 @@ def test_existing_output_preserved_before_input_reads(tmp_path):
     output.mkdir()
     (output / "retain").write_text("retain me")
     with pytest.raises(ValueError, match="Output already exists"):
-        module.run(Path("absent"), "absent", Path("absent"), "absent", output)
+        module.run(Path("absent"), "absent", Path("absent"), "absent", output, Path("absent"))
     assert (output / "retain").read_text() == "retain me"
 
 
@@ -84,7 +86,7 @@ def test_cross_snapshot_binding_rejected_before_output_creation(tmp_path):
     output = tmp_path / "plot"
     with pytest.raises(ValueError, match="different snapshots"):
         module.run(Path(snapshot_ref["path"]), snapshot_ref["sha256"],
-                   Path(binding_ref["path"]), binding_ref["sha256"], output)
+                   Path(binding_ref["path"]), binding_ref["sha256"], output, Path("absent"))
     assert not output.exists()
 
 
@@ -93,9 +95,9 @@ def test_render_fixture_exports_pixels_vector_labels_and_bound_endpoints(tmp_pat
     snapshot_ref = write(tmp_path / "snapshot.json", snapshot)
     binding["snapshot"] = snapshot_ref
     binding_ref = write(tmp_path / "binding.json", binding)
-    monkeypatch.setattr(module.binder, "bind", lambda *args: copy.deepcopy(binding))
+    monkeypatch.setattr(module, "replay_binding", lambda *args: dict(python=record(VALIDATOR), fixture=True))
     result = module.run(Path(snapshot_ref["path"]), snapshot_ref["sha256"],
-        Path(binding_ref["path"]), binding_ref["sha256"], tmp_path / "plot")
+        Path(binding_ref["path"]), binding_ref["sha256"], tmp_path / "plot", VALIDATOR)
     assert result["new_bootstrap_draws"] == 0
     assert result["new_scoring_or_admission"] is result["scientific_timings_admitted"] is False
     assert result["publication_ready"] is result["visual_review_complete"] is False
@@ -113,3 +115,73 @@ def test_render_fixture_exports_pixels_vector_labels_and_bound_endpoints(tmp_pat
     for text in ("Orthology F1", "Similarity endpoints (not F1)", "precision-recall",
                  "42-endpoint adjusted interval", "2/7 fresh cells admitted", "F1 adjusted interval includes zero"):
         assert text in labels
+
+
+def fake_worker(monkeypatch, tmp_path, binding):
+    python = tmp_path / "venv/bin/python"
+    ref = dict(path=str(python), bytes=1, sha256=module.VALIDATION_PYTHON_SHA)
+    response = dict(binding=copy.deepcopy(binding), versions=dict(module.VALIDATION_VERSIONS),
+                    executable=str(python), prefix=str(python.parent.parent))
+    process = SimpleNamespace(returncode=0, stderr="", stdout=json.dumps(response))
+    calls = []
+    monkeypatch.setattr(module, "record", lambda *args: ref)
+    monkeypatch.setattr(module, "check", lambda *args: None)
+    monkeypatch.setattr(module.subprocess, "run", lambda *args, **kwargs: (calls.append((args, kwargs)) or process))
+    return python, ref, response, process, calls
+
+
+def test_worker_preserves_venv_invocation_and_sanitizes_environment(tmp_path, monkeypatch):
+    _, binding = inputs()
+    python, _, _, _, calls = fake_worker(monkeypatch, tmp_path, binding)
+    for name in ("PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
+        monkeypatch.setenv(name, "untrusted-injection")
+    result = module.replay_binding(python, tmp_path / "snapshot", "digest", binding)
+    command = calls[0][0][0]
+    assert command[:3] == [str(python), "-B", "-c"]
+    assert command[3] == module.WORKER
+    request = json.loads(command[4])
+    assert request["versions"] == module.VALIDATION_VERSIONS
+    assert request["snapshot"] == str(tmp_path / "snapshot")
+    kwargs = calls[0][1]
+    assert kwargs["timeout"] == 180 and kwargs["check"] is False
+    assert all(name not in kwargs["env"] for name in
+               ("PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"))
+    assert all(kwargs["env"][name] == "1" for name in
+               ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"))
+    assert result["exact_binding_replay"] is True
+    assert result["new_scoring_or_admission"] is False
+
+
+@pytest.mark.parametrize("change", ["binary", "python_version", "package", "prefix", "executable",
+                                   "binding", "worker_failed", "stderr", "malformed_json"])
+def test_changed_worker_identity_or_exact_replay_refused(tmp_path, monkeypatch, change):
+    _, binding = inputs()
+    python, ref, response, process, calls = fake_worker(monkeypatch, tmp_path, binding)
+    if change == "binary": ref["sha256"] = "0" * 64
+    elif change == "python_version": response["versions"]["python"] = "3.12.3"
+    elif change == "package": response["versions"]["numpy"] = "2.0.0"
+    elif change == "prefix": response["prefix"] = "/other/environment"
+    elif change == "executable": response["executable"] = "/symlink-resolved/python"
+    elif change == "binding": response["binding"]["alpha"] = .05000000000000001
+    elif change == "worker_failed": process.returncode = 1
+    elif change == "stderr": process.stderr = "unexpected warning"
+    process.stdout = "not-json" if change == "malformed_json" else json.dumps(response)
+    with pytest.raises(ValueError):
+        module.replay_binding(python, tmp_path / "snapshot", "digest", binding)
+    if change == "binary": assert not calls
+
+
+def test_actual_retained_binding_replays_exactly_in_original_environment():
+    if not VALIDATOR.exists():
+        pytest.skip("Original scientific environment not installed on this host")
+    snapshot_path = ROOT / "native_qfo_scientific_scores_20261006_v1/report.json"
+    snapshot, binding = inputs()
+    values = [snapshot["rows"][1]["scores"][name] for name in module.reporter.original.ENDPOINTS]
+    sequential = 0.0
+    for value in values:
+        sequential += value
+    assert sequential / 6 == snapshot["rows"][1]["secondary_mean"]
+    result = module.replay_binding(VALIDATOR, snapshot_path, record(snapshot_path)["sha256"], binding)
+    assert result["versions"] == module.VALIDATION_VERSIONS
+    assert result["exact_binding_replay"] is True
+    assert result["invocation"] == str(VALIDATOR)

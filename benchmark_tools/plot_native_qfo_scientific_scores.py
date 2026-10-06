@@ -2,9 +2,12 @@
 
 import argparse
 import csv
+import hashlib
 import json
 import math
+import os
 from pathlib import Path
+import subprocess
 import sys
 
 import matplotlib
@@ -12,13 +15,60 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from benchmark_tools import bind_native_qfo_swiss_uncertainty as binder
 from benchmark_tools import export_native_qfo_scientific_scores as reporter
 from benchmark_tools.export_native_factorial_progress import finite, load, require
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
 
 CELLS = ("p0_c0_r0", "p0_c0_r1")
 COLORS = ("#12786f", "#b64b37")
+VALIDATION_PYTHON_SHA = "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+VALIDATION_VERSIONS = dict(python="3.10.13", biopython="1.87", numpy="2.2.6", psutil="7.2.2")
+WORKER = """import json, sys
+from importlib.metadata import version
+from pathlib import Path
+from benchmark_tools import bind_native_qfo_swiss_uncertainty as binder
+request = json.loads(sys.argv[1])
+versions = dict(python=".".join(map(str, sys.version_info[:3])),
+                **{name: version(name) for name in ("biopython", "numpy", "psutil")})
+if versions != request["versions"]:
+    raise ValueError("Validation environment versions differ")
+result = binder.bind(Path(request["snapshot"]), request["snapshot_sha"], request["audits"],
+                     request["retained_counts"], request["bootstrap"])
+print(json.dumps(dict(binding=result, versions=versions, executable=sys.executable,
+                     prefix=sys.prefix), sort_keys=True, allow_nan=False))
+"""
+
+
+def replay_binding(validation_python, snapshot_path, snapshot_sha, binding):
+    # Keep the venv entry point: resolving its symlink selects a different environment.
+    invocation = str(validation_python.absolute())
+    python_ref = record(invocation)
+    require(python_ref["sha256"] == VALIDATION_PYTHON_SHA, "Validation Python binary differs")
+    audits = {r["count_audit"]["path"]: r["count_audit"]["sha256"] for r in binding["bound_cells"].values()}
+    request = dict(snapshot=str(snapshot_path.absolute()), snapshot_sha=snapshot_sha,
+        audits=list(audits.items()), retained_counts=binding["retained_counts"]["path"],
+        bootstrap=binding["bootstrap"]["path"], versions=VALIDATION_VERSIONS)
+    environment = dict(os.environ)
+    for name in ("PYTHONHOME", "PYTHONPATH", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
+        environment.pop(name, None)
+    environment.update(PYTHONNOUSERSITE="1", PYTHONDONTWRITEBYTECODE="1", PYTHONHASHSEED="0",
+                       OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", MKL_NUM_THREADS="1")
+    command = [invocation, "-B", "-c", WORKER, json.dumps(request, sort_keys=True)]
+    process = subprocess.run(command, cwd=Path(__file__).resolve().parent.parent,
+        env=environment, capture_output=True, text=True, timeout=180, check=False)
+    require(process.returncode == 0, "Validation worker failed: " + process.stderr)
+    require(not process.stderr, "Validation worker emitted unexpected stderr")
+    response = json.loads(process.stdout)
+    require(response["versions"] == VALIDATION_VERSIONS
+            and response["executable"] == invocation
+            and response["prefix"] == str(validation_python.absolute().parent.parent),
+            "Validation environment identity differs")
+    require(response["binding"] == binding, "Retained native uncertainty binding replay differs")
+    check(python_ref)
+    return dict(python=python_ref, invocation=invocation, command=command,
+        versions=response["versions"], prefix=response["prefix"],
+        stdout_sha256=hashlib.sha256(process.stdout.encode()).hexdigest(),
+        exact_binding_replay=True, new_scoring_or_admission=False)
 
 
 def figure_data(snapshot, binding):
@@ -127,18 +177,15 @@ def render(rows, intervals, admitted, output):
         plt.close(fig)
 
 
-def run(snapshot_path, snapshot_sha, binding_path, binding_sha, output):
+def run(snapshot_path, snapshot_sha, binding_path, binding_sha, output, validation_python):
     require(not output.exists() and not output.is_symlink(), "Output already exists")
     evidence = []
     snapshot, snapshot_ref = load(snapshot_path, snapshot_sha, evidence)
     binding, binding_ref = load(binding_path, binding_sha, evidence)
     require(binding["snapshot"] == snapshot_ref, "Plot inputs refer to different snapshots")
-    audits = {r["count_audit"]["path"]: r["count_audit"]["sha256"] for r in binding["bound_cells"].values()}
-    replay = binder.bind(snapshot_path, snapshot_sha, list(audits.items()), binding["retained_counts"]["path"],
-                         binding["bootstrap"]["path"])
-    require(binding == replay, "Retained native uncertainty binding replay differs")
+    validation = replay_binding(validation_python, snapshot_path, snapshot_sha, binding)
     rows, scores, intervals, admitted = figure_data(snapshot, binding)
-    evidence.extend([*binding["evidence"], binding["source"], record(__file__)])
+    evidence.extend([*binding["evidence"], binding["source"], validation["python"], record(__file__)])
     output.mkdir(parents=True, exist_ok=False)
     for name, values in (("scores.tsv", scores), ("swiss_intervals.tsv", intervals)):
         with (output / name).open("x") as stream:
@@ -151,7 +198,7 @@ def run(snapshot_path, snapshot_sha, binding_path, binding_sha, output):
     result = dict(schema="native_qfo_p0c0_figure_v1", snapshot=snapshot_ref, swiss_binding=binding_ref,
         plotted_cells=list(CELLS), admitted_cells_in_snapshot=admitted, plotted_score_endpoints=12,
         plotted_swiss_contrast_endpoints=3, evidence=evidence, outputs=[record(p) for p in sorted(output.iterdir())],
-        source=record(__file__), observer_command=sys.orig_argv, python_version=sys.version,
+        source=record(__file__), validation=validation, observer_command=sys.orig_argv, python_version=sys.version,
         matplotlib_version=matplotlib.__version__, new_bootstrap_draws=0, new_scoring_or_admission=False,
         scientific_timings_admitted=False, publication_ready=False, visual_review_complete=False)
     with (output / "manifest.json").open("x") as stream:
@@ -162,10 +209,11 @@ def run(snapshot_path, snapshot_sha, binding_path, binding_sha, output):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("snapshot", "swiss-binding", "output"):
+    for name in ("snapshot", "swiss-binding", "output", "validation-python"):
         parser.add_argument("--" + name, type=Path, required=True)
     for name in ("snapshot-sha256", "swiss-binding-sha256"):
         parser.add_argument("--" + name, required=True)
     args = parser.parse_args()
-    result = run(args.snapshot, args.snapshot_sha256, args.swiss_binding, args.swiss_binding_sha256, args.output)
+    result = run(args.snapshot, args.snapshot_sha256, args.swiss_binding, args.swiss_binding_sha256,
+                 args.output, args.validation_python)
     print(json.dumps(dict(plotted_cells=result["plotted_cells"], score_endpoints=12, swiss_endpoints=3)))

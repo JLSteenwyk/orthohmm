@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Exact Native Figure Validation Environment Repair (2026-10-06)
+
+Previous goal work progresses at e529120e; the intervening user turn only
+confirms the already-amended goal. Re-read the full goal and revalidate current
+scheduler state: original22444 RUNNING at1:25:37, original22445 dependency-pending.
+Continue publication work without restarting any scientific analysis or asking
+for a quiet host. No unrelated workloads are modified.
+
+The [real figure refusal](NATIVE_QFO_FIGURE_INITIAL_REFUSAL_20261006.json)
+precedes output creation. Bounded report comparison finds only the unplotted
+secondary mean differs by2.22e-16 under Python3.12. Preserve this refusal and
+exact integrity checks. The new explicit worker replays unchanged binding/report
+checks in the original Python3.10 environment, checking original binary,
+versions and venv identity; rendering remains separate Python3.12. No scientific
+runtime package installation, default change or new score/count/bootstrap.
+
+140 joined tests5.86s pass, including actual retained-environment exact replay
+and36 plot cases. Retain an earlier139-pass/one-failure receipt whose assertion
+used sorted JSON endpoint order, then correct only the fixture to scientific
+endpoint order. Next: actual fresh figure export, inspect/read back assets,
+integrate current manuscript/claims/guide and commit/push validated milestones.
+Keep next native identity gated on22444/22445 terminal review. Full goal active,
+publication readiness unproven and shared-host distortion unknown.
+
 ## Native QfO Figure Workflow Prepared (2026-10-06)
 
 Previous turn completes/pushesa9bf24fc: two native accuracy cells and one

@@ -1,0 +1,16 @@
+{
+  "schema": "native_qfo_figure_initial_refusal_v1",
+  "source_commit": "e529120e",
+  "source_sha256": "35dfddc6c0986f18b250bb8c65e9b363c76e3e871cefe0470994aa1a8c32aade",
+  "rendering_python": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+  "rendering_python_version": "3.12.3",
+  "command_arguments": ["-B", "-m", "benchmark_tools.plot_native_qfo_scientific_scores", "--snapshot", "benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json", "--snapshot-sha256", "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b", "--swiss-binding", "benchmark_tools/results/native_qfo_swiss_uncertainty_binding_22449_20261006.json", "--swiss-binding-sha256", "85673a114b7f7c6e05de5da189c8cbe8d77ec5d1378604dbae7e5902dfd996cc", "--output", "benchmark_tools/results/native_qfo_p0c0_figure_20261006_v1"],
+  "exit_code": 1,
+  "exception": "ValueError: Scientific snapshot replay differs",
+  "output_directory_created": false,
+  "bounded_report_replay_differences": [{"cell": "p0_c0_r1", "field": "secondary_mean", "retained_python310": 0.7555392374929232, "replayed_python312": 0.755539237492923}],
+  "all_other_report_fields_equal": true,
+  "new_scoring_inference_or_bootstrap": false,
+  "remedy": "Keep exact checks and unchanged scientific artifacts; replay binding in the original Python 3.10 environment before rendering with Python 3.12. Do not install plotting packages into the scientific environment.",
+  "scope": "Read-only figure postprocessing failure; not a native inference or shared-host contention retry. This receipt summarizes the observed exception and a bounded recursive report comparison, not a retained full stderr log."
+}
