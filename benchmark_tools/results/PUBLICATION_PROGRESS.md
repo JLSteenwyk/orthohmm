@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Native SwissTrees Frozen Sequence Strata Independently Verified (2026-10-06)
+
+Previous goal turn makes real progress ata56734d4 by tracing direct significant
+search evidence and independently scanning both original checkpoints. Re-read
+full objective/current ledger. Original22444 verified RUNNING4:11:50 at start;
+22445/22450/22451/22452 dependency-pending. No original handle restarted.
+
+[New native sequence-strata projection](NATIVE_QFO_SWISS_SEQUENCE_STRATA_RESULT_20261006.md)
+uses unchanged input-only September18 bins, actual admitted native P0/C0/R0
+and R1 counts, all18families/563proteins. Recompute original feature bins and
+require exact equality. Feature inventory/plan/both admitted conversions have
+same78recorded FASTA refs; explicitly reused evidence, not fresh genome rehash.
+Re-read both actual raw files/commontruth/counts/members. Generated22cell/bin
+rows,11descriptive differences,36family rows; all empty bins explicitNA/null.
+
+Higher/lower entropy nine families each: R1-minus-R0 F1+19.974/+0.420pp,
+precision+37.818/+23.224pp, recall-1.749/-11.318pp. Seven short-relative
+families F1+7.731/recall-8.753pp; other11 F1+11.381/recall-5.121pp. These
+are observed development-exposed associations, not mechanism or subgroup
+significance. Global entropy not divergence/local complexity; relative
+shortness not fragmentation. Neither cell is relabeled as selected defaults.
+
+Independent stdlib-I-S-B raw reader imports no primary aggregation/count
+helper and checks all21,530rawrows/36familyrows/22projections/11differences/
+completeTSV/empties/semantics. Direct artifact pins checkedbefore/after, not
+repeated transitive admission. 352joinedtests12.42s pass/no skips, including
+46new arithmetic/binding/syntheticexport/readback/refusal/actual-result cases.
+Retain earlier23/45case XMLs; fixtures not production admission.
+
+Actual original-Python export0.43s/56,832KiB and stdlibreadback0.10s/19,968KiB
+are shared-host postprocessing only, exit0/zero swaps. Capacitycheck769GiB
+available/9.5TiBdisk/fullswap disclosed. No native timing repair, uncertainty
+draws/newintervals, accuracy/resourceadmission, inference/scoring/default/source
+change or unrelatedjob modification. R1failedtiming remainsineligible, initial
+HMMsearch onboth/Rchangespairsemantics. Frozen main/PDF/archive unchanged;
+companion evidence awaits complete assembly.
+
+Latest original22444 RUNNING4:21:09; allfourdownstream stages dependency-pending.
+Await actual terminal/production gates for newscoreexport/uncertainty or next
+identity. Remaining nativecells/matchedsearch/graph/tree/otherstrata, wider
+uncertainty/generalization/provenance/reproducibility/release scope incomplete.
+No quiet-window/dedicated-host blocker; contentionimpactunknown/tooldependent.
+
 ## Native SwissTrees Significant Search Support Independently Traced (2026-10-06)
 
 Previous scientific goal turn makes progress at0e5dfeb2 by localizing actual
