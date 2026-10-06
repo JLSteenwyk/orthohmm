@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native Functional-Pair Composition Workflow Prepared (2026-10-06)
+
+Previous turn progresses at pushed50fdea48/d633a1b8 with actual native figures
+and manuscript integration. Re-read full goal and fresh scheduler: original
+22444 RUNNING at1:36:43;22445 dependency-pending. No scientific job or completed
+audit is restarted. Historical all-tool GO/EC/FAS overlap is already complete;
+do not repeat it or infer sampling independence from its pair intersections.
+
+The [new native-only protocol](NATIVE_QFO_FUNCTIONAL_PAIR_PROTOCOL_20261006.md)
+describes the two newly admitted P0/C0 cells' functional-score composition
+in R-on-minus-R-off orientation. It reuses original parsers/comparison without
+changing frozen helpers, endpoints, inference, scoring or bootstrap. Bind
+six small raw tables to original admissions/execution pins, replay current
+snapshot exactly in scientific Python3.10, retain failed timing and original
+mean denominators. FAS realized-sample overlap is not full population pairing.
+
+113 joined tests1.73s pass, including21 new scope/binding/decomposition cases.
+Fixtures stub report replay, not actual provenance. Available memory about
+631GiB; bounded single-process diagnostic leaves unrelated work untouched.
+Next: commit/push prepared workflow, execute real read-only comparison, verify
+actual numbers independently, then integrate bounded results/uncertainty limits.
+Native index9 remains gated on22444/22445. Full goal active and publication
+readiness unproven; shared-host effects unknown and potentially tool-dependent.
+
 ## Native QfO Figure Rendered, Reviewed And Integrated (2026-10-06)
 
 The repaired workflow is committed/pushed at50fdea48. Actual fresh export
