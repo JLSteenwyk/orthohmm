@@ -1,0 +1,233 @@
+{
+  "bootstrap_reused": {
+    "bytes": 73364,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_bootstrap.json",
+    "sha256": "f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211"
+  },
+  "count_audit": {
+    "bytes": 34593,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+    "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+  },
+  "independent_confirmation": false,
+  "limitations": [
+    "Independent new-raw count/member and rational arithmetic readback; original successful native raw is not recounted.",
+    "Exact reference pair truth was checked by the primary recovered count audit; this readback does not independently reconstruct reference trees.",
+    "Full family-record equality permits reuse of retained draws, not new biological evidence or selection adjustment.",
+    "All42 adjusted endpoints remain;13 native contrasts unavailable and no other-QfO uncertainty admitted.",
+    "Original failed timing remains ineligible; shared-host effects unknown and tool-dependent."
+  ],
+  "matched_contrasts": 1,
+  "matched_effect": {
+    "candidate": "p0_c0_r1",
+    "differing_cells": [],
+    "family_differences": [
+      {
+        "F1": 0.2732728112017234,
+        "PPV": 0.4282872128775548,
+        "TPR": 0.0,
+        "family": "APP"
+      },
+      {
+        "F1": 0.0,
+        "PPV": 0.0,
+        "TPR": 0.0,
+        "family": "ASTER"
+      },
+      {
+        "F1": 0.004856512141280356,
+        "PPV": 0.016636418632788863,
+        "TPR": 0.0,
+        "family": "BAMBI"
+      },
+      {
+        "F1": 0.08007887568723793,
+        "PPV": 0.2326261809515704,
+        "TPR": -0.0016611295681062677,
+        "family": "BAR"
+      },
+      {
+        "F1": 0.12928959493844994,
+        "PPV": 0.21417179311916157,
+        "TPR": 0.0,
+        "family": "CASP"
+      },
+      {
+        "F1": 0.10260669562995117,
+        "PPV": 0.39565695700004777,
+        "TPR": -0.14012738853503193,
+        "family": "CITE"
+      },
+      {
+        "F1": 0.3168829220730519,
+        "PPV": 0.4777250113071009,
+        "TPR": 0.0,
+        "family": "Clusterin"
+      },
+      {
+        "F1": 0.1392190152801358,
+        "PPV": 0.3984962406015038,
+        "TPR": -0.08333333333333331,
+        "family": "GH14"
+      },
+      {
+        "F1": 0.19003115264797515,
+        "PPV": 0.6544061302681993,
+        "TPR": 0.0,
+        "family": "HOX"
+      },
+      {
+        "F1": 0.13457556935817805,
+        "PPV": 0.33766233766233766,
+        "TPR": 0.0,
+        "family": "MAPT"
+      },
+      {
+        "F1": 0.3323025210084034,
+        "PPV": 0.5658183103570167,
+        "TPR": -0.0020618556701030855,
+        "family": "NOX"
+      },
+      {
+        "F1": 0.20347519516494594,
+        "PPV": 0.36830909485565444,
+        "TPR": 0.0,
+        "family": "POP"
+      },
+      {
+        "F1": -0.28389787664307387,
+        "PPV": 0.11996357842021399,
+        "TPR": -0.3988657844990548,
+        "family": "PSEN"
+      },
+      {
+        "F1": -0.33068035943517327,
+        "PPV": -0.0357142857142857,
+        "TPR": -0.417910447761194,
+        "family": "RPS"
+      },
+      {
+        "F1": 0.0439129474149359,
+        "PPV": 0.17139209629435437,
+        "TPR": -0.06002728512960431,
+        "family": "SERC"
+      },
+      {
+        "F1": 0.29579831932773115,
+        "PPV": 0.45031982942430704,
+        "TPR": 0.0,
+        "family": "SUMF"
+      },
+      {
+        "F1": 0.46562731997030427,
+        "PPV": 0.6640878674083067,
+        "TPR": 0.0,
+        "family": "TRFE"
+      },
+      {
+        "F1": -0.024381425970912196,
+        "PPV": 0.033968921252158335,
+        "TPR": -0.07202216066481992,
+        "family": "VATB"
+      }
+    ],
+    "kind": "simple_effect",
+    "metrics": {
+      "F1": {
+        "bonferroni_percentile_ci": [
+          -0.04641773414031378,
+          0.2441989901765022
+        ],
+        "difference": 0.10039037081913615,
+        "family_losses": 3,
+        "family_ties": 1,
+        "family_wins": 14,
+        "paired_percentile_ci": [
+          0.011741304339520307,
+          0.1890787299941449
+        ]
+      },
+      "PPV": {
+        "bonferroni_percentile_ci": [
+          0.14325178402419914,
+          0.4654725816264042
+        ],
+        "difference": 0.3052118719287774,
+        "family_losses": 1,
+        "family_ties": 1,
+        "family_wins": 16,
+        "paired_percentile_ci": [
+          0.20516444283075178,
+          0.4048338422829203
+        ]
+      },
+      "TPR": {
+        "bonferroni_percentile_ci": [
+          -0.18041319033411446,
+          -0.00043592758768979094
+        ],
+        "difference": -0.06533385473118047,
+        "family_losses": 8,
+        "family_ties": 10,
+        "family_wins": 0,
+        "paired_percentile_ci": [
+          -0.13074768252024638,
+          -0.014454553266346815
+        ]
+      }
+    },
+    "missing_cells": [],
+    "name": "R_at_P0_C0",
+    "reference": "p0_c0_r0",
+    "status": "native_records_matched",
+    "weights": [
+      -1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "maximum_family_arithmetic_error": 2.220446049250313e-16,
+  "multiplicity_endpoints": 42,
+  "native_bound_cells": 2,
+  "new_bootstrap_draws": 0,
+  "observed_unix_ns": 1791274131309947798,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport csv,gzip,json,math,sys,time\nfrom collections import Counter\nfrom fractions import Fraction\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nroot=Path.cwd()\naudit_ref=record(root/\"benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json\")\nassert audit_ref[\"sha256\"]==\"af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471\"\naudit=json.loads(Path(audit_ref[\"path\"]).read_text());cell=audit[\"cells\"][0];families=audit[\"families\"]\nassert len(families)==len(set(families))==18 and cell[\"cell\"]==\"p0_c0_r1\" and cell[\"resources\"] is None and cell[\"timing_admitted\"] is cell[\"timing_eligible\"] is False\nraw=cell[\"raw_file\"];check(raw)\ncounts={f:Counter({k:0 for k in (\"TP\",\"FP\",\"FN\",\"TN\")}) for f in families}\nmembers={f:set() for f in families};pairs=set()\nwith gzip.open(raw[\"path\"],\"rt\",newline=\"\") as stream:\n assert stream.readline().startswith(\"# Dataset\")\n for fields in csv.reader(stream,delimiter=\"\\t\"):\n  assert len(fields)==4\n  f,a,b,label=fields;assert f in counts and label in counts[f] and a and b and a!=b\n  pair=(f,*sorted((a,b)));assert pair not in pairs;pairs.add(pair)\n  counts[f][label]+=1;members[f].update((a,b))\nassert len(pairs)==audit[\"reference_relation_count\"]==10765\nretained_ref=audit[\"retained_counts\"];check(retained_ref)\nretained=json.loads(Path(retained_ref[\"path\"]).read_text())\nhistorical={r[\"cell\"]:r for r in retained[\"cells\"]}\nmax_error=0.0\ndef statistics(c):\n tp,fp,fn=(Fraction(c[k],2)+1 for k in (\"TP\",\"FP\",\"FN\"))\n p,r=tp/(tp+fp),tp/(tp+fn)\n return {\"PPV\":p,\"TPR\":r,\"F1\":2*p*r/(p+r)}\nfor row in cell[\"families\"]:\n f=row[\"family\"];assert dict(counts[f])==row[\"counts_without_prior\"] and sorted(members[f])==row[\"represented_genes\"]\n for name,value in statistics(counts[f]).items():\n  error=abs(float(value)-row[\"statistics_with_prior\"][name]);max_error=max(max_error,error);assert error<=1e-12\nassert cell[\"families\"]==historical[\"p0_c0_r1\"][\"families\"] and cell[\"aggregate\"]==historical[\"p0_c0_r1\"][\"aggregate\"]\nbinding_ref=record(root/\"benchmark_tools/results/native_qfo_swiss_uncertainty_binding_22449_20261006.json\")\nassert binding_ref[\"sha256\"]==\"85673a114b7f7c6e05de5da189c8cbe8d77ec5d1378604dbae7e5902dfd996cc\"\nbinding=json.loads(Path(binding_ref[\"path\"]).read_text())\nassert set(binding[\"bound_cells\"])=={\"p0_c0_r0\",\"p0_c0_r1\"} and binding[\"new_bootstrap_draws\"]==0 and binding[\"multiplicity_endpoints\"]==42\nfrozen_ref=binding[\"bootstrap\"];check(frozen_ref)\nassert frozen_ref[\"sha256\"]==\"f777dead1294b3810c0479877aade7fb4411c0544696f671226ff198432e9211\"\nfrozen=json.loads(Path(frozen_ref[\"path\"]).read_text())\nmatched=[r for r in binding[\"contrasts\"] if r[\"status\"]==\"native_records_matched\"]\nassert len(binding[\"contrasts\"])==14 and len(matched)==1 and matched[0][\"name\"]==\"R_at_P0_C0\"\neffect=matched[0];old=next(r for r in frozen[\"comparisons\"] if r[\"name\"]==effect[\"name\"])\nassert effect[\"metrics\"]==old[\"metrics\"] and effect[\"family_differences\"]==old[\"family_differences\"]\nassert all(r[\"metrics\"] is r[\"family_differences\"] is None for r in binding[\"contrasts\"] if r[\"status\"]!=\"native_records_matched\")\nordinary_ref=binding[\"bound_cells\"][\"p0_c0_r0\"][\"count_audit\"];check(ordinary_ref)\nordinary=json.loads(Path(ordinary_ref[\"path\"]).read_text())\nassert ordinary[\"cells\"][0][\"families\"]==historical[\"p0_c0_r0\"][\"families\"]\nstats={c:[statistics(r[\"counts_without_prior\"]) for r in historical[c][\"families\"]] for c in (\"p0_c0_r0\",\"p0_c0_r1\")}\naggregates={}\nfor c,rows in stats.items():\n p=sum(r[\"PPV\"] for r in rows)/18;r=sum(r[\"TPR\"] for r in rows)/18\n aggregates[c]={\"PPV\":p,\"TPR\":r,\"F1\":2*p*r/(p+r)}\n for name,v in aggregates[c].items():assert math.isclose(float(v),historical[c][\"aggregate\"][name],rel_tol=0,abs_tol=1e-12)\nfor name,metric in effect[\"metrics\"].items():\n difference=float(aggregates[\"p0_c0_r1\"][name]-aggregates[\"p0_c0_r0\"][name])\n assert math.isclose(difference,metric[\"difference\"],rel_tol=0,abs_tol=1e-12)\n signs=[float(b[name]-a[name]) for a,b in zip(stats[\"p0_c0_r0\"],stats[\"p0_c0_r1\"])]\n assert metric[\"family_wins\"]==sum(v>1e-10 for v in signs) and metric[\"family_ties\"]==sum(abs(v)<=1e-10 for v in signs) and metric[\"family_losses\"]==sum(v< -1e-10 for v in signs)\nfor ref in audit[\"checked_inputs\"]+audit[\"helpers\"]+[audit[\"source\"]]+binding[\"evidence\"]+[binding[\"source\"]]:check(ref)\nout=root/\"benchmark_tools/results/recovered_native_qfo_swiss_readback_22449_20261006.json\";assert not out.exists()\nsave(out,dict(schema=\"recovered_native_swiss_counts_interval_independent_readback_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),count_audit=audit_ref,raw=raw,raw_pairs_checked=10765,raw_families_checked=18,maximum_family_arithmetic_error=max_error,retained_counts=retained_ref,ordinary_count_audit_reused=ordinary_ref,ordinary_raw_recounted=False,uncertainty_binding=binding_ref,bootstrap_reused=frozen_ref,native_bound_cells=2,matched_contrasts=1,unavailable_contrasts=13,multiplicity_endpoints=42,new_bootstrap_draws=0,matched_effect=effect,scientific_timings_admitted=False,resources=None,independent_confirmation=False,publication_ready=False,limitations=[\"Independent new-raw count/member and rational arithmetic readback; original successful native raw is not recounted.\",\"Exact reference pair truth was checked by the primary recovered count audit; this readback does not independently reconstruct reference trees.\",\"Full family-record equality permits reuse of retained draws, not new biological evidence or selection adjustment.\",\"All42 adjusted endpoints remain;13 native contrasts unavailable and no other-QfO uncertainty admitted.\",\"Original failed timing remains ineligible; shared-host effects unknown and tool-dependent.\"]))\nprint(json.dumps(dict(receipt=record(out),raw_pairs_checked=10765,matched_contrasts=1,maximum_family_arithmetic_error=max_error)))\n"
+  ],
+  "ordinary_count_audit_reused": {
+    "bytes": 30311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+    "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+  },
+  "ordinary_raw_recounted": false,
+  "publication_ready": false,
+  "raw": {
+    "bytes": 39334,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-recovered-native-p0-c0-r1_4a515aacafb7_raw.txt.gz",
+    "sha256": "f55ee75d4fc93c43889baa469c870f188410e7a5af0f6d7fd0fab04ee00af538"
+  },
+  "raw_families_checked": 18,
+  "raw_pairs_checked": 10765,
+  "resources": null,
+  "retained_counts": {
+    "bytes": 176438,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_complete_20260919/swiss_counts.json",
+    "sha256": "c9d8bf02ef6f287c56d073fa61f165c982caf834a94fc6e44e6589f03e46eba6"
+  },
+  "schema": "recovered_native_swiss_counts_interval_independent_readback_inline_v1",
+  "scientific_timings_admitted": false,
+  "unavailable_contrasts": 13,
+  "uncertainty_binding": {
+    "bytes": 43525,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_uncertainty_binding_22449_20261006.json",
+    "sha256": "85673a114b7f7c6e05de5da189c8cbe8d77ec5d1378604dbae7e5902dfd996cc"
+  }
+}

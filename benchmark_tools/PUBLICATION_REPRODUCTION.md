@@ -1,5 +1,17 @@
 # Publication Reproduction Guide
 
+## Native QfO Accuracy Update (2026-10-06)
+
+[Recovered P0/C0/R1 scoring and independent admission](results/RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md)
+now complete. The [actual combined table](results/native_qfo_scientific_scores_20261006_v1/scores.md)
+contains two admitted cells and five unavailable rows; failed native timing is
+still null/ineligible. Fresh 18-family counts match retained records exactly,
+allowing guarded reuse of one SwissTrees contrast and no new bootstrap draws.
+Its adjusted F1 interval includes zero, with a precision-recall trade-off.
+Native22444 remains live with dependent22445; no next identity is launched.
+The older snapshots and preparation checkpoints below remain historical,
+not current score availability or publication readiness.
+
 ## Current Entry Point (2026-10-05)
 
 The [full-native factorial snapshot](results/native_factorial_progress_20261005_v7/report.md)

@@ -1,0 +1,330 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "22437,22443,22447,22448,22449,22444,22445",
+      "--noheader",
+      "--parsable2",
+      "--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList"
+    ],
+    "stderr": "",
+    "stdout": "22437|orthohmm_factorial_cost|FAILED|1:0|13:04:30|64|bizon\n22437.batch|batch|FAILED|1:0|13:04:30|64|bizon\n22437.0|python|COMPLETED|0:0|12:55:21|64|bizon\n22443|ohmm_recover07|COMPLETED|0:0|00:01:03|2|bizon\n22443.batch|batch|COMPLETED|0:0|00:01:03|2|bizon\n22444|orthohmm_factorial_cost|RUNNING|0:0|01:01:08|64|bizon\n22444.batch|batch|RUNNING|0:0|01:01:08|64|bizon\n22444.0|python|RUNNING|0:0|01:00:16|64|bizon\n22445|ohmm_native_review08|PENDING|0:0|00:00:00|0|None assigned\n22447|ohmm_qfo_recovered_pairs07|COMPLETED|0:0|00:01:23|2|bizon\n22447.batch|batch|COMPLETED|0:0|00:01:23|2|bizon\n22448|ohmm_qfo_recovered_score07|COMPLETED|0:0|00:32:09|8|bizon\n22448.batch|batch|COMPLETED|0:0|00:32:09|8|bizon\n22449|ohmm_qfo_recovered_admit07|COMPLETED|0:0|00:00:24|2|bizon\n22449.batch|batch|COMPLETED|0:0|00:00:24|2|bizon\n"
+  },
+  "accuracy_admitted": true,
+  "admission": {
+    "bytes": 781476,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+    "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+  },
+  "aggregated_endpoints": [
+    {
+      "bytes": 686,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/VGNC/VGNC.json",
+      "sha256": "4d0e6ac80df26098f8b9270ace24597f3863fb17d91194892e0d3a2ea66731d2"
+    },
+    {
+      "bytes": 661,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/SwissTrees.json",
+      "sha256": "59dd8eccb4febcf54ebb5e439e3462e33be48ddab17e2e35ad379682016a4321"
+    },
+    {
+      "bytes": 661,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/TreeFam-A/TreeFam-A.json",
+      "sha256": "ed94baf1543dc4f55d672cc1b7e66ff0d58b08a48e0f44e2c19784118a2528d4"
+    },
+    {
+      "bytes": 651,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/GO/GO.json",
+      "sha256": "33c2ea313c95bba67d24af91693a0cdeb68cc95200595863ff512016ed9b3644"
+    },
+    {
+      "bytes": 653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/EC/EC.json",
+      "sha256": "9868c5f1f64f182272e80fb0b44381ac09133314bebe4f0e72ca3ea832df966c"
+    },
+    {
+      "bytes": 665,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/FAS/FAS.json",
+      "sha256": "78d25eb595a33f87086a4dbf9efe8de8ae0c35f047fcbe970aa6b926a7200446"
+    }
+  ],
+  "automatic_retry": false,
+  "eligible_for_timing_comparison": false,
+  "endpoint_details": {
+    "EC": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "x": 116929.0,
+      "y": 0.96770222
+    },
+    "FAS": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "FAS"
+      },
+      "x": 5113820.0,
+      "y": 0.7850068177983054
+    },
+    "GO": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "NR_ORTHOLOGS",
+        "y_axis": "avg Schlicker"
+      },
+      "x": 78607.0,
+      "y": 0.49025964
+    },
+    "SwissTrees": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.6759322,
+      "y": 0.94915197
+    },
+    "TreeFam-A": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.43971892,
+      "y": 0.95668249
+    },
+    "VGNC": {
+      "axes": {
+        "type": "2D-plot",
+        "x_axis": "TPR",
+        "y_axis": "PPV"
+      },
+      "x": 0.8154926046628228,
+      "y": 0.9995390997080965
+    }
+  },
+  "fas_sample": {
+    "maximum_sample_protein_degree": 17,
+    "mean": 0.7850068177983054,
+    "native_pair_iid_sem": 0.0003342372953311271,
+    "proteins_in_multiple_sample_pairs": 126521,
+    "raw": {
+      "bytes": 2904631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/FAS/FAS_ohmm-qfo-recovered-native-p0-c0-r1_raw.txt.gz",
+      "sha256": "5e982cf23ee830315068f3439a23cd542b589b652d5c676be4376fcc8c545bf6"
+    },
+    "reported_eligible_pairs": 5113820,
+    "sample_fraction": 0.04936642275246293,
+    "sample_membership_verified": true,
+    "sample_pairs": 252451,
+    "sample_proteins": 257077
+  },
+  "independent_biological_validation": false,
+  "limitations": [
+    "Independent bounded native-record/trace/rational-arithmetic/table readback, not another full1702-record transitive raw admission.",
+    "Five missing native score rows remain null; historical reused/cached scores are not substituted.",
+    "The original22437 allocation/timing remains failed and ineligible; conversion/scoring are separate.",
+    "FAS sample is unseeded and has shared proteins; native pair-IID SEM is not a paired-method/family CI.",
+    "9000 cap concerns new missing-pair computations, not total252451 sampled pairs.",
+    "Shared-host CPU/memory-bandwidth/I/O effects remain unknown and tool-dependent."
+  ],
+  "live_native": {
+    "created": 1791270422.45,
+    "job_id": 22444,
+    "pid": 4128293
+  },
+  "native_assessment": {
+    "bytes": 18569,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/assessment_out/Assessment_datasets.json",
+    "sha256": "d3b02f563155c2284f247b90de8e8cd71ad04bb0a02f3ca76d7324c8f79f35c2"
+  },
+  "native_metric_records": 48,
+  "native_tasks": 15,
+  "native_trace": {
+    "bytes": 1803,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/stats/trace_2026-10-06_03-31-56.txt",
+    "sha256": "d30304cded17d3be875899b6862a91a8a3c41d10a51b98d7ff45018e6c0e688a"
+  },
+  "new_bootstrap_draws": 0,
+  "new_fas_sampling": false,
+  "observed_unix_ns": 1791274030520505965,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-c",
+    "\nimport csv,json,math,psutil,subprocess,sys,time\nfrom fractions import Fraction\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nroot=Path.cwd()\nadmission=record(root/\"benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json\")\nassert admission[\"sha256\"]==\"4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b\"\na=json.loads(Path(admission[\"path\"]).read_text())\npublished=record(root/\"benchmark_tools/results/recovered_native_qfo_assessment_admission_22449.json\")\nassert all(published[k]==admission[k] for k in (\"bytes\",\"sha256\"))\nassert a[\"schema\"]==\"measurement_failed_native_qfo_admission_v1\" and a[\"status\"]==\"measurement_failed_native_qfo_assessment_admitted\" and a[\"accuracy_admitted\"] is True\nassert a[\"native_index\"]==7 and a[\"native_job_id\"]==22437 and a[\"resources\"] is None\nassert all(a[k] is False for k in (\"publication_ready\",\"next_identity_authorized\",\"automatic_retry\",\"native_inference_reexecuted\",\"original_native_scheduler_success\",\"scientific_timings_admitted\",\"eligible_for_timing_comparison\"))\ncheck(a[\"source\"]);assert a[\"source\"][\"sha256\"]==\"d1ff039aeea9bd52ac425b374932351128385e141ac903aa65fe3fb070448968\"\nrawref=record(root/\"qfo_benchmark/scoring/recovered_native_07/assessment_out/Assessment_datasets.json\")\nassert rawref in a[\"checked_records\"]\nraw=json.loads(Path(rawref[\"path\"]).read_text())\nassert raw==a[\"assessment\"][\"native_assessments\"] and len(raw)==48\nnative={(r[\"challenge_id\"],r[\"metrics\"][\"metric_id\"]):r for r in raw}\nassert len(native)==48 and len({r[\"_id\"] for r in raw})==48 and all(r[\"participant_id\"]==a[\"participant\"] and r[\"type\"]==\"assessment\" for r in raw)\ntrace=a[\"native_trace\"];check(trace)\nwith Path(trace[\"path\"]).open() as stream:tasks=list(csv.DictReader(stream,delimiter=\"\\t\"))\nassert tasks==a[\"native_tasks\"] and len(tasks)==15 and len({r[\"task_id\"] for r in tasks})==15\nexpected={\"validate_input_file\",\"convertPredictions\",\"consolidate\",\"vgnc_benchmark (1)\",\"ec_benchmark (1)\",\"go_benchmark (1)\",\"fas_benchmark (1)\",\"reference_genetrees_benchmark (SwissTrees)\",\"reference_genetrees_benchmark (TreeFam-A)\"}|{f\"scheduleMetrics ({i})\" for i in range(1,7)}\nassert {r[\"name\"] for r in tasks}==expected and all(r[\"status\"]==\"COMPLETED\" and r[\"exit\"]==(\"-\" if r[\"name\"].startswith(\"scheduleMetrics (\") else \"0\") for r in tasks)\nscores={};details={};refs=[];values=[]\nfor name in (\"VGNC\",\"SwissTrees\",\"TreeFam-A\",\"GO\",\"EC\",\"FAS\"):\n ref=record(root/f\"qfo_benchmark/scoring/recovered_native_07/results/{name}/{name}.json\");assert ref in a[\"checked_records\"];refs.append(ref)\n agg=json.loads(Path(ref[\"path\"]).read_text())[\"datalink\"][\"inline_data\"]\n rows=agg[\"challenge_participants\"];assert len(rows)==1 and rows[0]==a[\"assessment\"][\"endpoints\"][name][\"native_participant\"];row=rows[0];axes=agg[\"visualization\"]\n for field,axis in ((\"metric_x\",\"x_axis\"),(\"metric_y\",\"y_axis\")):\n  assert row[field]==native[name,axes[axis]][\"metrics\"][\"value\"] and type(row[field]) in (int,float) and math.isfinite(row[field])\n x,y=Fraction(str(row[\"metric_x\"])),Fraction(str(row[\"metric_y\"]))\n v=(2*x*y/(x+y) if x+y else Fraction(0)) if name in {\"VGNC\",\"SwissTrees\",\"TreeFam-A\"} else y\n values.append(v);scores[name]=float(v);assert math.isclose(scores[name],a[\"assessment\"][\"endpoints\"][name][\"score\"],rel_tol=0,abs_tol=1e-12)\n details[name]=dict(x=float(x),y=float(y),axes=axes)\nmean=float(sum(values)/6);assert math.isclose(mean,a[\"assessment\"][\"secondary_six_metric_mean\"],rel_tol=0,abs_tol=1e-12)\nreportref=record(root/\"benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json\")\nassert reportref[\"sha256\"]==\"6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b\"\nr=json.loads(Path(reportref[\"path\"]).read_text());assert r[\"supplied_admissions\"]==2 and r[\"supplied_recovered_admissions\"]==1 and len(r[\"rows\"])==7\nrow=r[\"rows\"][1];assert row[\"admission\"]==admission and row[\"index\"]==7 and row[\"resources\"] is None and row[\"timing_eligible\"] is row[\"timing_admitted\"] is False\nfor name,score in scores.items():assert math.isclose(row[\"scores\"][name],score,rel_tol=0,abs_tol=1e-12)\nassert math.isclose(row[\"secondary_mean\"],mean,rel_tol=0,abs_tol=1e-12) and row[\"relation_coverage\"]==542365/984137 and row[\"submitted_pairs\"]==5113820\noldref=record(root/\"benchmark_tools/results/native_qfo_scores_20261005_v1/report.json\");old=json.loads(Path(oldref[\"path\"]).read_text())\nassert all(r[\"rows\"][0][k]==v for k,v in old[\"rows\"][0].items())\nassert all(v is None for row in r[\"rows\"][2:] for v in row[\"scores\"].values())\nfor ref in r[\"evidence\"]+r[\"outputs\"]+[r[\"source\"]]:check(ref)\nwith (Path(reportref[\"path\"]).parent/\"scores.tsv\").open() as stream:table=list(csv.DictReader(stream,delimiter=\"\\t\"))\nassert len(table)==7 and len(table[0])==16\nfields={\"Index\":\"index\",\"Cell\":\"cell\",\"Accuracy status\":\"status\",\"Measurement status\":\"measurement_status\",\"Secondary mean\":\"secondary_mean\",\"Submitted pairs\":\"submitted_pairs\",\"Input accessions\":\"input_accessions\",\"Relation accessions\":\"relation_accessions\",\"Relation coverage\":\"relation_coverage\",\"Prediction semantics\":\"prediction_semantics\"}\nmetricfields={\"VGNC F1\":\"VGNC\",\"SwissTrees F1\":\"SwissTrees\",\"TreeFam-A F1\":\"TreeFam-A\",\"GO similarity\":\"GO\",\"EC similarity\":\"EC\",\"FAS\":\"FAS\"}\nfor actual,row in zip(table,r[\"rows\"]):\n for label,key in fields.items():assert actual[label]==(\"\" if row[key] is None else str(row[key]))\n for label,key in metricfields.items():assert actual[label]==(\"\" if row[\"scores\"][key] is None else str(row[\"scores\"][key]))\ncmd=[\"sacct\",\"-j\",\"22437,22443,22447,22448,22449,22444,22445\",\"--noheader\",\"--parsable2\",\"--format=JobIDRaw,JobName,State,ExitCode,Elapsed,AllocCPUS,NodeList\"]\np=subprocess.run(cmd,capture_output=True,text=True,check=True)\nstates={line.split(\"|\")[0]:line.split(\"|\")[2:4] for line in p.stdout.splitlines()}\nassert states[\"22437\"]==[\"FAILED\",\"1:0\"]\nfor job in (22443,22447,22448,22449):assert states[str(job)]==[\"COMPLETED\",\"0:0\"]\nassert states[\"22444\"][0]==\"RUNNING\" and states[\"22445\"][0]==\"PENDING\"\nprocess=psutil.Process(4128293);assert process.create_time()==1791270422.45 and process.cpu_affinity()==list(range(32))\nsample=a[\"fas_sample\"];assert sample[\"sample_membership_verified\"] is True and sample[\"sample_pairs\"]==252451 and sample[\"reported_eligible_pairs\"]==5113820\nassert sample[\"mean\"]==a[\"assessment\"][\"endpoints\"][\"FAS\"][\"score\"] and sample[\"sample_fraction\"]==252451/5113820\nout=root/\"benchmark_tools/results/recovered_native_qfo_score_readback_22449_20261006.json\";assert not out.exists()\nsave(out,dict(schema=\"recovered_native_qfo_score_independent_readback_inline_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),admission=admission,published_admission=published,source=a[\"source\"],score_report=reportref,preserved_normal_snapshot=oldref,native_assessment=rawref,native_metric_records=48,native_trace=trace,native_tasks=15,aggregated_endpoints=refs,rational_decimal_scores=scores,rational_decimal_secondary_mean=mean,endpoint_details=details,table_rows_checked=7,table_fields_checked=112,report_evidence_checked=r[\"evidence\"],report_outputs_checked=r[\"outputs\"],fas_sample=sample,accounting=dict(command=cmd,stdout=p.stdout,stderr=p.stderr),live_native=dict(job_id=22444,pid=process.pid,created=process.create_time()),accuracy_admitted=True,scientific_timings_admitted=False,eligible_for_timing_comparison=False,resources=None,new_bootstrap_draws=0,new_fas_sampling=False,independent_biological_validation=False,publication_ready=False,automatic_retry=False,limitations=[\"Independent bounded native-record/trace/rational-arithmetic/table readback, not another full1702-record transitive raw admission.\",\"Five missing native score rows remain null; historical reused/cached scores are not substituted.\",\"The original22437 allocation/timing remains failed and ineligible; conversion/scoring are separate.\",\"FAS sample is unseeded and has shared proteins; native pair-IID SEM is not a paired-method/family CI.\",\"9000 cap concerns new missing-pair computations, not total252451 sampled pairs.\",\"Shared-host CPU/memory-bandwidth/I/O effects remain unknown and tool-dependent.\"]))\nprint(json.dumps(dict(receipt=record(out),scores=scores,secondary_mean=mean,fields_checked=112)))\n"
+  ],
+  "preserved_normal_snapshot": {
+    "bytes": 14657,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scores_20261005_v1/report.json",
+    "sha256": "6bca0b771af5604f76dfe7796fa1590fdfda71e78f7599c28cd6f1555d6a1c13"
+  },
+  "publication_ready": false,
+  "published_admission": {
+    "bytes": 781476,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_assessment_admission_22449.json",
+    "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+  },
+  "rational_decimal_scores": {
+    "EC": 0.96770222,
+    "FAS": 0.7850068177983054,
+    "GO": 0.49025964,
+    "SwissTrees": 0.7895743384374164,
+    "TreeFam-A": 0.6025078294438428,
+    "VGNC": 0.8981845792779733
+  },
+  "rational_decimal_secondary_mean": 0.755539237492923,
+  "report_evidence_checked": [
+    {
+      "bytes": 12830,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_factorial_progress.py",
+      "sha256": "af87cf899b8ae474822ea81a922643ab2c229275f99a1df57d5149b0d280448a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 3214,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/qfo_summarize_scores.py",
+      "sha256": "e0b89ddcd99209e8c95b6f8dbd6371be037fea4958fb9ca283b20e940f756688"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 300029,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22435/results.json",
+      "sha256": "be4243d8470c9dd4e7f23a8d734824aab8b67c63a1acbd54c958868b9ec5009d"
+    },
+    {
+      "bytes": 41936,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_06_receipt_amended.json",
+      "sha256": "3ce0e9d294a75ff12bf3d44d8fa05b501395fce3120c7fc1b65848c13baa000a"
+    },
+    {
+      "bytes": 11303409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+      "sha256": "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490"
+    },
+    {
+      "bytes": 1287135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/results.json",
+      "sha256": "7d5e25171f09c949f89a52452986e7d2ab8d508685d4ef485015653861ed44d2"
+    },
+    {
+      "bytes": 1277793,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/preflight.json",
+      "sha256": "58f51b777230a6e7720075c32f96ac505f55b5e1e3a0f612939b798b6f92dec1"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    },
+    {
+      "bytes": 14117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_factorial_scores.py",
+      "sha256": "f0332ed8986693da606ee85c113d997aeb2227e6fbf7abbd5f99c11949305428"
+    },
+    {
+      "bytes": 12244,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_measurement_failed_native_qfo_pairs.py",
+      "sha256": "9099d63e66d051757f9e43d522c49f9228c8c38a317c65791f5d66d7a74a5cee"
+    },
+    {
+      "bytes": 10194,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_measurement_failed_native_qfo_assessment.py",
+      "sha256": "350456803dbda1a14093617a948876a8e4bdf87d2529603c9c6b1d4af1f02d01"
+    },
+    {
+      "bytes": 21072,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native_factorial_attempt.py",
+      "sha256": "63e7d7fdda52afa7a36eecd89492a2684e8310260febbfb5adf6d23f88fd26de"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 781476,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+      "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+    },
+    {
+      "bytes": 311430,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/measurement_failed_native_qfo_pairs_22437_snapshot_restored/results.json",
+      "sha256": "5b29ded11bd81b2b077b128a373ab2d1da037c5886b3a005ff8970bc09ca169c"
+    },
+    {
+      "bytes": 43782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json",
+      "sha256": "1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7"
+    },
+    {
+      "bytes": 287561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_measurement_failure_review_22437/review.json",
+      "sha256": "650b69e0965e0a667359efaa43c1d814108f613547cbe66cf12964bd1e64e459"
+    },
+    {
+      "bytes": 746138,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_assessment_v1/p0_c0_r1/results.json",
+      "sha256": "5c905ccddc00a3160ba35eff373836dbc64bc391d9b92c4d84bea9983773f3e0"
+    },
+    {
+      "bytes": 736587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_assessment_v1/p0_c0_r1/preflight.json",
+      "sha256": "d1579f7e9e8101b554538927ef38bd7e892c413ceacfeaceeae84cd2f31b21f4"
+    },
+    {
+      "bytes": 7377,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_measurement_failed_native_qfo_assessment.py",
+      "sha256": "d1ff039aeea9bd52ac425b374932351128385e141ac903aa65fe3fb070448968"
+    }
+  ],
+  "report_outputs_checked": [
+    {
+      "bytes": 1392,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/scores.tsv",
+      "sha256": "85dd3266a1670b12ea1d4530ab6c63b97a9ddf788ce89f76437bee75622bd12e"
+    },
+    {
+      "bytes": 3690,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/scores.md",
+      "sha256": "38f6a87175a79b3edfee33c93b39ec83f204a080fd3a577464f391d69790cb15"
+    }
+  ],
+  "resources": null,
+  "schema": "recovered_native_qfo_score_independent_readback_inline_v1",
+  "scientific_timings_admitted": false,
+  "score_report": {
+    "bytes": 24314,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json",
+    "sha256": "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b"
+  },
+  "source": {
+    "bytes": 7377,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_measurement_failed_native_qfo_assessment.py",
+    "sha256": "d1ff039aeea9bd52ac425b374932351128385e141ac903aa65fe3fb070448968"
+  },
+  "table_fields_checked": 112,
+  "table_rows_checked": 7
+}

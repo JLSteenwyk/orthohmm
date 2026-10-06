@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Recovered Native QfO Admitted, Exported And SwissTrees Intervals Bound (2026-10-06)
+
+After pushed94163ac3, actual22448 completes0:0/32:09 on8CPU/64GiB and original
+queued22449 completes0:0/0:24 on2CPU/32GiB. Preserve original22437 failed native
+timing, null/ineligible resources and distinct recovered-science admission.
+No inference restart, endpoint/default change or contention-selected retry.
+
+[Actual result](RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md) publishes the
+byte-identical781,476-byte admission/SHA4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b.
+15 fresh tasks/48 native metrics/1,702 admission records checked. Actual combined
+export contains two admitted cells/five unavailable rows; normal P0C0R0 is
+unchanged. Recovered scores VGNC0.8981845793/Swiss0.7895743384/TreeFam0.6025078294,
+GO0.49025964/EC0.96770222/FAS0.7850068178 and secondary mean0.7555392375.
+TreeFam decrease retained; coverage55.1107% is not accuracy and mean is not F1.
+
+Fresh recovered family audit checks18 records/10,765 reference relations; all
+full records match retained corrected P0C0R1. Guarded native binding matches
+two cells/one contrast, retains13 unavailable contrasts/all42 adjusted endpoints
+and reuses100,000 shared draws with no new bootstrap. R F1+10.0390pp, adjusted
+interval[-4.6418,24.4199] includes0; precision+30.5212pp/recall-6.5334pp.
+This is a conditional development-exposed trade-off, not universal superiority.
+
+Independent bounded score readback checks native records/trace/aggregations,
+rational arithmetic and112 TSV fields; old normal row is preserved, not rescored.
+Independent recovered-raw/rational family readback checks10,765 pairs/18 families,
+maximum arithmetic error2.22e-16, exact records, original intervals and family
+signs. Original normal native raw is not recounted. Native pair-IID FAS SEM is
+not a paired CI; sample252,451 pairs/257,077 proteins with126,521 reused proteins
+and maximumdegree17/unseeded sampling limits. No new FAS sampling or raw cadence
+census.416 joined tests plus12 guide contracts pass before use.
+Post-result integrated suite passes436 tests9.53s, including8 new portable
+artifact checks; these are consistency checks, not a new raw admission.
+
+An initial result-document patch refuses a mismatched guide heading before
+writing files; read actual heading and apply scoped correction. This is not an
+analysis failure or source/runtime mutation. Latest guide supersedes prior
+preparation checkpoints while preserving original snapshots. Original22444
+remains RUNNING;22445 pending. Observe genuine terminal review before index9.
+Full scientific/uncertainty/provenance/manuscript/release requirements persist;
+goal active, publication readiness unproven, contention impact unknown.
+
 ## Guarded Native SwissTrees Interval Reuse Prepared (2026-10-06)
 
 Previous turn progresses at pushedd4e03c12 and449222c2. Re-read full active
