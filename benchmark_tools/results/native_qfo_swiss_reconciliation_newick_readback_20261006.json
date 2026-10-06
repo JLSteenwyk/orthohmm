@@ -1,0 +1,530 @@
+{
+  "biopython_version": "1.87",
+  "changed_pairs_checked": 2023,
+  "checked_inputs": [
+    {
+      "bytes": 15634,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_reconciliation_trace_20261006_v1.json",
+      "sha256": "53c692cf7dab9affac7b0240cf5191d2530bd4369b66f4165e8acb811391dacb"
+    },
+    {
+      "bytes": 321948,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_reconciliation_pairs_20261006_v1.tsv",
+      "sha256": "4ac42d9537dd6b914aa019b2b45005b393cb96d56ebdd941981509f4430d60a9"
+    },
+    {
+      "bytes": 28028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_pair_transitions_20261006_v2.json",
+      "sha256": "fe003f2cbc4285ea56cd80a92b71703b5c9e135ad1c8f244504dcfeab0911b46"
+    },
+    {
+      "bytes": 16351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_reconciliation.py",
+      "sha256": "4723fd9067d6a558743914ed2ee635f971165e2291bd6eb40b3471005220b3e4"
+    },
+    {
+      "bytes": 50460,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_changed_pairs_20261006_v2.tsv",
+      "sha256": "6276f2c7610accfd32332b1f90fa6d3191d901e3b1aed09340a78cd7b1c731ea"
+    },
+    {
+      "bytes": 18203,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/provenance_manifest.json",
+      "sha256": "de96512b200b85953888ee5a70bfb983de59445f428c4d99e96b737bee0ed3b8"
+    },
+    {
+      "bytes": 6247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0020330.json",
+      "sha256": "40b49c85ec09f0c189fecd7edf436479e1462790fdbdd7a4e552e98fde10d071"
+    },
+    {
+      "bytes": 7653,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0020330.raw.nwk",
+      "sha256": "fb17597bc75abe862dd2640c87f5accfd80804dd3cf0e326f95b38e4bd8ea11f"
+    },
+    {
+      "bytes": 10395,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0020330.rooted.nwk",
+      "sha256": "e52f9e61d332d48ed2c6e9bb2ea6dcc91a249491e116e9750f2954c562d5b691"
+    },
+    {
+      "bytes": 12398,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0020330.reconciled.nwk",
+      "sha256": "53743bb4f907ff98dd649723cd9707a969893bb94321db1f59cae3476b294f03"
+    },
+    {
+      "bytes": 4431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0021204.json",
+      "sha256": "2288f2ab0a94237bc20db12ff0d8fe055cfbf4f765917aad0bb17f988bfc1aaf"
+    },
+    {
+      "bytes": 4914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0021204.raw.nwk",
+      "sha256": "1a5a3b5938464859021b4a7d0ed4f96cb32a3ba9da4904d1563ae174ffd40fb3"
+    },
+    {
+      "bytes": 6754,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0021204.rooted.nwk",
+      "sha256": "c3d3268f067618a6f72f86be91885db4740c34e95f820b2d1f4576ff053437c1"
+    },
+    {
+      "bytes": 8033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0021204.reconciled.nwk",
+      "sha256": "e47311fbf00f9bf810498d62c18b93f388a99e4a0fb8cc574c465ee869d8b62a"
+    },
+    {
+      "bytes": 1775,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0029528.json",
+      "sha256": "4643b56a3a6c7302a790a0baf4df457a72f436627f7e440d0195ebdb93703b78"
+    },
+    {
+      "bytes": 1565,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0029528.raw.nwk",
+      "sha256": "c07c758a15c5ee8eae44d3e4d91dc2054a47a0bc6fd7c06bd01dc61190b0fa1e"
+    },
+    {
+      "bytes": 2153,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0029528.rooted.nwk",
+      "sha256": "b35203849671ceab4af04e9da9579374002cdddc026cd9f94516c80e4ee322f7"
+    },
+    {
+      "bytes": 2519,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0029528.reconciled.nwk",
+      "sha256": "7268ec127a5563892b6f98315434e2f2f9f5da26a025db6b16879e034d196842"
+    },
+    {
+      "bytes": 4149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0038727.json",
+      "sha256": "bdfc574d9572c719ab00aada1bde5e45947c77394999c5acb5fbc328b28d6406"
+    },
+    {
+      "bytes": 4660,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0038727.raw.nwk",
+      "sha256": "e2d0fb92e3c83dd5a034fd00942388ef0c7ce41396653f958c0d739215a642dd"
+    },
+    {
+      "bytes": 6453,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0038727.rooted.nwk",
+      "sha256": "11cd33a898c882bca75c27b790006841abcff48e0ddaca242eb89f52c3680d90"
+    },
+    {
+      "bytes": 7657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0038727.reconciled.nwk",
+      "sha256": "adf07ed38aff85c0c89f4e5b7741d0b1e8ff4677c80963bad138d70629aedd16"
+    },
+    {
+      "bytes": 1914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0041654.json",
+      "sha256": "7304798c4a55a5fa3c8304608868f7e313d02a7cfa0e65e1c95a6763e799f8d8"
+    },
+    {
+      "bytes": 1750,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0041654.raw.nwk",
+      "sha256": "6aff971a9961d14ab072796665811620d7cfd711a88a7258874fb3390b04933d"
+    },
+    {
+      "bytes": 2451,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0041654.rooted.nwk",
+      "sha256": "664c802ba145dc523bca205378e5b6cb3ebc9389c7811b9ee1df3d8dcce9b66e"
+    },
+    {
+      "bytes": 2887,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0041654.reconciled.nwk",
+      "sha256": "5e295db0c839e16de725c90e31fc73547d52718b19e58a0e939bf671e5dcd827"
+    },
+    {
+      "bytes": 2242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0061221.json",
+      "sha256": "c3fc59a17fd587806afd2e1a31bf8558cab7a74187ceceb282b7c0d4bd983dc9"
+    },
+    {
+      "bytes": 2063,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061221.raw.nwk",
+      "sha256": "a93ccdfc09fe4c8e1b0405fccab2d407faca9cdcdbd53064fa4c526beb8d554a"
+    },
+    {
+      "bytes": 2867,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061221.rooted.nwk",
+      "sha256": "c7a590798fe3e843bc8b3662bd6957e3a3ce98b2fd1a2dcdc939fef855ff58b4"
+    },
+    {
+      "bytes": 3391,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061221.reconciled.nwk",
+      "sha256": "860c463bec097c5f5b1046b5ea27e10754495f50bf49ffe4199087eac0a925a3"
+    },
+    {
+      "bytes": 1131,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0061565.json",
+      "sha256": "90caa3566c1486733a4f5d94e9c40b32e2a936875842baf63c445c0048f662bd"
+    },
+    {
+      "bytes": 725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061565.raw.nwk",
+      "sha256": "c69e5535feb8cd3bc00523ccd8a68a47248ec1bc8e1e711c1a033846fd33c697"
+    },
+    {
+      "bytes": 1024,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061565.rooted.nwk",
+      "sha256": "0ca95c1824e20141417ac6463f1afcd34c5f6eab616f6ca7e48780f7ab092ec6"
+    },
+    {
+      "bytes": 1274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0061565.reconciled.nwk",
+      "sha256": "7306ff369df3b15d3a044022b1279bcb083d5ed436e268d3732e944485b23df2"
+    },
+    {
+      "bytes": 2149,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0066745.json",
+      "sha256": "4244a0161b328971e6f8df93520fd07ac5c9f2555a9f14ef63b46c4a1266fe91"
+    },
+    {
+      "bytes": 1996,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0066745.raw.nwk",
+      "sha256": "8b6bc81eba1faafdf26bab595a45360de8982e037c8e79d126d631477ea3a128"
+    },
+    {
+      "bytes": 2815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0066745.rooted.nwk",
+      "sha256": "803cd6477eea6656da99e9f8cea03c4e692a1da6ff310e818baebcf989e112d8"
+    },
+    {
+      "bytes": 3293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0066745.reconciled.nwk",
+      "sha256": "bd5063ad3e1a06b5b5120a634455ef2f6d17dcb348d392c653357681c2542b50"
+    },
+    {
+      "bytes": 2279,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0074956.json",
+      "sha256": "858f4a3c51c18591fa8bccd8fa838170503b71d665836f7bdc07a496a0d736da"
+    },
+    {
+      "bytes": 2283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0074956.raw.nwk",
+      "sha256": "9ca9d54660a3a8171b2fdd3a245a7cbb2c76c08e3a27fc452fea27a5764019eb"
+    },
+    {
+      "bytes": 3146,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0074956.rooted.nwk",
+      "sha256": "bfbaad5af2a8f19c8d762ea2232f812d9b875c09dc99b1464fe927c498650406"
+    },
+    {
+      "bytes": 3689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0074956.reconciled.nwk",
+      "sha256": "0af004634c38858579f8424301c695b2c5c52862d2adc479179cf3975195a603"
+    },
+    {
+      "bytes": 2325,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0077302.json",
+      "sha256": "b2f5dda479a2d9c29efac027f6e6edad5dc1a4787a251fd35abd6e727ed984a9"
+    },
+    {
+      "bytes": 2303,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0077302.raw.nwk",
+      "sha256": "ecde5e054e6acfbb0ed8b9b995b58428b868c9ce25229911243ef6b5122a2fbe"
+    },
+    {
+      "bytes": 3167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0077302.rooted.nwk",
+      "sha256": "c53d6d53f14753dc42f994c93da198970ee0aeb22bfd9913e069c833d818dba3"
+    },
+    {
+      "bytes": 3773,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0077302.reconciled.nwk",
+      "sha256": "c99e4fb55137c5b9529d68af99c7e1d7cd3bbb03951176e850e679da835ca95b"
+    },
+    {
+      "bytes": 1175,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0083694.json",
+      "sha256": "04b11cae3750a2c1fd6b147e3464f8371255fb67dc8d98a1ebc4e77b90a54c05"
+    },
+    {
+      "bytes": 725,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0083694.raw.nwk",
+      "sha256": "920635f0ad16056a41e0b0c9fc22a7375fd9829869b1fde6519f63b7cc66d996"
+    },
+    {
+      "bytes": 1073,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0083694.rooted.nwk",
+      "sha256": "d383af9e7b298f065f69193a6de0eab6458a7662e8fb8530a876a7e2bfb600f0"
+    },
+    {
+      "bytes": 1310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0083694.reconciled.nwk",
+      "sha256": "687f2aa5256f16a15a3017f3e88ce6f66ab576a1412d77d777d19595c76fd965"
+    },
+    {
+      "bytes": 1380,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0085958.json",
+      "sha256": "65e14187f2cd82b23066754c8696ee298d5004629c963c4bca38e3c425b4f334"
+    },
+    {
+      "bytes": 1053,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0085958.raw.nwk",
+      "sha256": "3e702b0fb4824f66859edcc9845c6ebdb05b0123553e2a7ec7a052897a1d209c"
+    },
+    {
+      "bytes": 1451,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0085958.rooted.nwk",
+      "sha256": "fe5a46e5a374941e7431b5e511c4f766ee118e00a371454cce45d492565f105b"
+    },
+    {
+      "bytes": 1708,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0085958.reconciled.nwk",
+      "sha256": "6b5b83834627cef0f4971442f621d6059520733b42e827764bbde02e56091aa1"
+    },
+    {
+      "bytes": 1789,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0086773.json",
+      "sha256": "56002c922d79767a43c93d6c523747e1d9107ed211440993a4513373a675bafd"
+    },
+    {
+      "bytes": 1544,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0086773.raw.nwk",
+      "sha256": "c268b41a0b06e21abfc1f26dcf508195298f2507b381aa98cd4e995143cf851c"
+    },
+    {
+      "bytes": 2152,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0086773.rooted.nwk",
+      "sha256": "e70c449b25ac6c3c5c56861f663c2df0c4a2c44ee8619c71661b6734888d9e21"
+    },
+    {
+      "bytes": 2523,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0086773.reconciled.nwk",
+      "sha256": "14a60f6685f0267b105550600368814fd3dc19eb5d099d4f6d31f3e161fc23f3"
+    },
+    {
+      "bytes": 2618,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0087148.json",
+      "sha256": "0abff7b0e63aff3d31fd67200a078ab23f085c9d434eee61423a891a5b35b3ef"
+    },
+    {
+      "bytes": 2645,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0087148.raw.nwk",
+      "sha256": "cd8f459b4453dd00346036ab721f13ea92609e7ade6ec06b43fcc79a2af42c42"
+    },
+    {
+      "bytes": 3699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0087148.rooted.nwk",
+      "sha256": "805fda0c93f62f94583b5b6e08493e66e7dafc580ca244ea35ff2ae3dab15408"
+    },
+    {
+      "bytes": 4313,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0087148.reconciled.nwk",
+      "sha256": "7c3eb7056737cdf98e32898aeda1f20a2380e8435e70ea074623aebc03c77e05"
+    },
+    {
+      "bytes": 827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0090752.json",
+      "sha256": "5aa62f1b92ab9bd7495c57a8713c83a44801f8250cbb6502032eb201a0aab69c"
+    },
+    {
+      "bytes": 274,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0090752.raw.nwk",
+      "sha256": "81358d61eb11ae17f9ea48b3936c155e0b853b48d5b23aec0e34d2bf82200bfb"
+    },
+    {
+      "bytes": 439,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0090752.rooted.nwk",
+      "sha256": "965eac0992ab39c07cd6f7b06fd7719cd3e2619ebfc727f76031069284c42bfc"
+    },
+    {
+      "bytes": 512,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0090752.reconciled.nwk",
+      "sha256": "f097060ee2aab897b676ab080e0228c7481c983b4870b175c6ed1535614f610f"
+    },
+    {
+      "bytes": 2084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0093283.json",
+      "sha256": "910981237d3cc84c75bfcd3e597be35f849d95d9a9032de0b5fdb8d3d2795398"
+    },
+    {
+      "bytes": 1914,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093283.raw.nwk",
+      "sha256": "8d8c3c7ec190960304a45323dcea93d0c8260454ddf908f66926669d339f1cb4"
+    },
+    {
+      "bytes": 2709,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093283.rooted.nwk",
+      "sha256": "c171aa8764b9e3f6af1deffc6ad50a96b2530373b78008bb17c19a5140b0a294"
+    },
+    {
+      "bytes": 3142,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093283.reconciled.nwk",
+      "sha256": "0265fd0c006d4e091734ff9b6795245c2d49f75553bb63ea4416c44535493a4b"
+    },
+    {
+      "bytes": 1428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0093302.json",
+      "sha256": "f442daebbc02d4bc9657e4658fd6f03659631937df2ab8eb68dda8e250e5a907"
+    },
+    {
+      "bytes": 1094,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093302.raw.nwk",
+      "sha256": "1568cfbb89171b4f994112f5c1466da6ea099424e5641d579571d9bcc7c2d43f"
+    },
+    {
+      "bytes": 1535,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093302.rooted.nwk",
+      "sha256": "8e582c9e893146c0e61f09f103e13dd17a6ec2fe09fbe3682a09da8976696af8"
+    },
+    {
+      "bytes": 1827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0093302.reconciled.nwk",
+      "sha256": "5ee78f598af4d9b714dd5365f5552a11ac2d211047e0670f781ae2dc902e2c3f"
+    },
+    {
+      "bytes": 1446,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0095766.json",
+      "sha256": "14b3cb53bed2ced5a204325e1925899d672ce73b6432d9510c0096e18e3b9d0e"
+    },
+    {
+      "bytes": 1094,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0095766.raw.nwk",
+      "sha256": "a3aad44bf7772fa7485fcc6b2e06cdf275fe3ce7a0ee1002695c2aa332fcd2a8"
+    },
+    {
+      "bytes": 1569,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0095766.rooted.nwk",
+      "sha256": "22b467f85e633fb54d756b4888c94450fc5db0abddfa1e8cc9870d0d9edf4858"
+    },
+    {
+      "bytes": 1848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0095766.reconciled.nwk",
+      "sha256": "0e2e8e7bb512292762b9ee0d8720ab4a4d3da286e1b448d93f61285c700aa280"
+    },
+    {
+      "bytes": 1276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0096552.json",
+      "sha256": "3f185ff4018134b3c764fbe848a9305a613cb90f74952e3ae45cc0c0e3e6fcee"
+    },
+    {
+      "bytes": 930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096552.raw.nwk",
+      "sha256": "fc3549b854bc77a713f93d7ef241bb6d6b912b5ff669a3f56f0dfe6e5657e32d"
+    },
+    {
+      "bytes": 1272,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096552.rooted.nwk",
+      "sha256": "99d6043d8b4b380c4409cc5be415bc28b04e5a28853886970a95ec01b4954c77"
+    },
+    {
+      "bytes": 1489,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096552.reconciled.nwk",
+      "sha256": "9ef24e9af200f92042763c58a242239dd058a5ec92fdf8e091c4a873e608587a"
+    },
+    {
+      "bytes": 2114,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0096640.json",
+      "sha256": "9328e1d78084f492380d8a577dc3309ebe0e6b485d971fa0bc055de67484699d"
+    },
+    {
+      "bytes": 1968,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096640.raw.nwk",
+      "sha256": "660bfb27d56850c11a67bdf38756098a16ac0e11e61bbb18e97e0a9c686c0441"
+    },
+    {
+      "bytes": 2683,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096640.rooted.nwk",
+      "sha256": "db0736ce80a0317c053afbfddc092ba3897d0553e0d36685b76c847f06b27733"
+    },
+    {
+      "bytes": 3170,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0096640.reconciled.nwk",
+      "sha256": "1c48c03d0ea89808a41baa63093a53da657c4f0ed146dc35c96a7c4dea82f1b3"
+    },
+    {
+      "bytes": 960,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0106289.json",
+      "sha256": "6dfa827e9ebd39b97d2685e284558926b100516a717ebbae2840c092c25f7819"
+    },
+    {
+      "bytes": 458,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0106289.raw.nwk",
+      "sha256": "0bc64da7a19efb67ea4b6555d40fd8e3671a50e562ee692c4325b9a6e64aaf87"
+    },
+    {
+      "bytes": 671,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0106289.rooted.nwk",
+      "sha256": "c694046b2367735a9299e479dc78f2b9fdb84829c06db9e5a3517d2ac39ed0e4"
+    },
+    {
+      "bytes": 794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0106289.reconciled.nwk",
+      "sha256": "7aa3849c33682a0d1b11969f44d122e8bac2791f9be3aa9df4fa4c568eb711c0"
+    },
+    {
+      "bytes": 1315,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0112928.json",
+      "sha256": "75c5bbf555cfeb762c93fbb3c3cf242069c1558d9c015c8445db41ca9c0df63a"
+    },
+    {
+      "bytes": 923,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0112928.raw.nwk",
+      "sha256": "51d109dabdb78d43425bfc91adb95e2728457ef81dc85c51981fb6be6c51945a"
+    },
+    {
+      "bytes": 1308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0112928.rooted.nwk",
+      "sha256": "f5654cf7e38d45bc74166f7f9fe22dade0862f6f3f3626f16cd63ba7cce43e88"
+    },
+    {
+      "bytes": 1530,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0112928.reconciled.nwk",
+      "sha256": "641154ebffca8620daadfe4ffcab8de468fa3683539403dbf89021d4da8e7de2"
+    },
+    {
+      "bytes": 899,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/checkpoints/Family0145356.json",
+      "sha256": "70de8d2c28e9a7dc141ab5236195fd2743e028899596efabd09a524e5771e949"
+    },
+    {
+      "bytes": 356,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0145356.raw.nwk",
+      "sha256": "d17aecfe3cea270b8ef6fc8fa941819bcd4550fc7769b79afcea1c06856272c8"
+    },
+    {
+      "bytes": 559,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0145356.rooted.nwk",
+      "sha256": "e6543403d3487fb6fbb5d77c40cb658130d39ba629291a2ce75e45c8785f3e48"
+    },
+    {
+      "bytes": 689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_phylogeny/gene_trees/Family0145356.reconciled.nwk",
+      "sha256": "29c90c865c48b11daf999344f4801eb48f7fd3553f2d84643d10d7ce9e1b8c09"
+    }
+  ],
+  "distinct_exclusion_lcas_checked": 51,
+  "independent_confirmation": false,
+  "limitations": [
+    "Independent Biopython/Newick LCA/topology readback; same saved native data, not biological replication.",
+    "Checkpoint/raw/rooted/annotated trees are newly observed and digest-consistent, not originally inventoried evidence.",
+    "Does not rerun tree rooting/reconciliation or establish true duplication history or tree correctness.",
+    "Direct localization/ledger/selected-tree checks, not repeated whole-study or transitive admission validation."
+  ],
+  "new_scoring_or_admission": false,
+  "original_node_annotation_admission_established": false,
+  "publication_ready": false,
+  "report": {
+    "bytes": 15634,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_reconciliation_trace_20261006_v1.json",
+    "sha256": "53c692cf7dab9affac7b0240cf5191d2530bd4369b66f4165e8acb811391dacb"
+  },
+  "schema": "native_qfo_swiss_reconciliation_newick_readback_v1",
+  "source": {
+    "bytes": 7686,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_reconciliation.py",
+    "sha256": "456e50642b694d449679e5ab0d20a75c3f4402597fde04b0162a4865106a1dda"
+  },
+  "source_families_checked": 23,
+  "summary": {
+    "FP_high": 1688,
+    "FP_medium": 1,
+    "FP_same_root": 1689,
+    "TP_different_root": 54,
+    "TP_high": 332,
+    "TP_medium": 2,
+    "TP_same_root": 280
+  },
+  "tree_leaves_checked": 1139,
+  "uncertainty_admitted": false
+}

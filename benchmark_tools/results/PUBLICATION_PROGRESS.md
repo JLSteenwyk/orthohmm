@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Native SwissTrees Reconciliation Path Independently Localized (2026-10-06)
+
+Previous goal turn makes real scientific progress at6a063978 by tracing and
+SQL-validating complete SwissTrees pair changes. Re-read full objective/current
+ledger. Original22444 live RUNNING3:38:03, downstream22445/22450/22451/22452
+dependency-pending; do not restart jobs or read unfinished outputs.
+
+[New event-localization evidence](NATIVE_QFO_SWISS_RECONCILIATION_TRACE_RESULT_20261006.md)
+reconstructs all984,137 input genes/394,328 source families from admitted R1
+RootHOGs and reproduces exact admitted R0 input-cluster checksum. Every2,023
+changed pair shares an input candidate, is absent from actual final native
+pairs and has a duplication pair-event with positive species overlap at its
+LCA. All1,689 removed FP and280/334 removed TP remain within final RootHOGs;
+54 removed TP cross roots,28RPS/26VATB. All211 PSEN TP removals are within-root.
+Group splitting alone does not explain this observed pair-selection trade-off.
+
+Primary checks858,427 annotation rows/2,248 selected nodes/5,113,820 native pair
+rows. Independent Biopython saved-Newick/checkpoint readback confirms all23
+affected trees/1,139 leaves/51 distinct exclusion nodes/all2,023 pairs. Original
+root/manifest/prediction files admitted; node TSV and selected checkpoint/tree
+files explicitly newly observed current-byte evidence, not retroactive admission
+or execution proof. High/medium labels remain model annotations, not calibrated
+confidence. Software-path localization is not biological tree/event correctness.
+
+281 joined tests12.54s pass, no skips, including topology/event-rule/identity,
+actual saved-tree and corrupted-report refusals. Original Python3.10 diagnostic
+15.55s/66,048KiB is shared-host postprocessing, not native inference timing.
+No source/scoring/default change, new uncertainty/admission, native inference/
+alignment/tree/reconciliation replay, timing repair or unrelated-workload change.
+
+Fresh original-handle queue:22444 RUNNING3:50:26;22445/22450/22451/22452 all
+dependency-pending. Await actual terminal/production gates before new score
+export, uncertainty binding or successor launch. Direct search/stage evidence,
+tree-error/strata analyses, missing native cells, broader uncertainty and the
+full generalization/provenance/reproducibility/release scope remain incomplete.
+Contention effects unknown and potentially tool-dependent; no quiet-host gate.
+
 ## Native SwissTrees Pair Selection Independently Traced (2026-10-06)
 
 Previous user-requested turn confirms the goal amendment, without new goal
