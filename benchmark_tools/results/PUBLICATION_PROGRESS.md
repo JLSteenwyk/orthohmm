@@ -1,5 +1,19 @@
 # Publication Progress
 
+## Shared-Host Prompt Update And Resume Handoff (2026-10-06)
+
+User requests a goal-prompt update before resuming execution. The authoritative
+goal attachment explicitly permits remaining work on the shared Threadripper:
+no dedicated host, DGX or quiet window required. Retain valid measurements and
+failures, check safe capacity and accounting before launches, and disclose
+unknown, potentially tool-dependent CPU/memory-bandwidth/I/O contention in
+timing comparisons. Do not assume the distortion is slight or infer isolated
+speed rankings. All scientific and provenance requirements remain unchanged.
+
+Prompt now explicitly pauses agent goal work until the user's resume. This
+administrative update launches, restarts and cancels no analyses; running and
+queued jobs are left unchanged. Frozen protocol files are not edited.
+
 ## Native Accuracy And Mechanism Manuscript Supplement Checked (2026-10-06)
 
 Previous goal turn makes real progress at b3bdd678 by completing native VGNC
