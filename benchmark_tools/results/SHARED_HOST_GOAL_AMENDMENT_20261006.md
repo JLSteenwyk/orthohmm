@@ -1,13 +1,27 @@
 # Shared-Host Authorization Reaffirmed
 
-## Latest Prompt-Update Handoff
+## Latest Continuation Correction
 
-The latest user request reaffirms proceeding despite competing analyses and
-resuming the goal afterward. The authoritative attachment already contains
-this amendment; no scientific settings or historical prompt bytes need change.
-Pause agent goal execution after this administrative handoff until the user
-resumes it. Leave all existing running and queued analyses unchanged. On
-resumption, check safe capacity and accounting, not a quiet-host requirement.
+The latest user request identifies recurring goal stops. The authoritative
+attachment previously combined shared-host authorization with stale instructions
+to pause after saving and wait for another resume. Those instructions have now
+been removed and superseded, including their historical ledger copies.
+
+Continue the full goal autonomously on the shared Threadripper, checking safe
+capacity and accounting without requiring renewed approval or a quiet host.
+A running job or scheduler dependency is a waiting state, not a goal pause or
+blocker. Recheck the same handles and advance other genuinely remaining work.
+Unsafe capacity or invalid accounting defers the affected launch, not unrelated
+work. Preserve scientific gates, all failures, completed results and existing
+jobs; do not submit duplicates or manufacture administrative work while waiting.
+Pause only on a fresh explicit user request. System-level resume remains a user
+control: this prompt edit does not itself change a paused goal to active.
+
+Validated corrected attachment SHA256:
+`7ad8050171640ee38585cda61ff054fafb469d60ac9066928548fefcf90c2bce`.
+Readback checks confirm removal of stale pause directives, retention of all
+seven goal sections and completion criteria, and the unchanged historical
+prompt SHA256 `7d99ecb39a740b689101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0`.
 
 Use this disclosure in timing tables, figures, Methods and limitations:
 "Timing measurements were collected on a shared Threadripper while other

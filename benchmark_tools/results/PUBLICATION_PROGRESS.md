@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Recurring Prompt-Update Pause Instructions Removed (2026-10-06)
+
+The latest user asks to fix repeated goal stops. The authoritative attachment
+still contained one-time instructions to pause after saving and await another
+resume, despite its shared-host authorization. Remove those stale instructions
+from the current prompt and explicitly supersede historical pause/handoff entries
+below. Preserve the hash-bound historical PUBLICATION_GOAL_20261003.txt and all
+frozen scientific settings, helpers, inputs and failure-handling requirements.
+
+[Current continuation amendment](SHARED_HOST_GOAL_AMENDMENT_20261006.md): continue
+autonomously despite contention, retain the unknown/tool-dependent timing caveat,
+and require no renewed quiet-window permission. Running jobs/dependencies mean
+wait on the same handles, not pause/block the goal. Defer only unsafe launches
+or invalid accounting while advancing other genuinely remaining work. Do not
+restart completed runs, submit duplicates or invent administrative filler.
+
+Read-only accounting at this correction: diagnostic22734 COMPLETED0:0 54:23;
+full reviewer23017 RUNNING52:17. No analysis launched, restarted, cancelled or
+admitted by this correction. Inspect actual terminal evidence in subsequent
+goal work; the live review is not a success or scientific admission.
+
+The goal system currently reports paused. Available goal tools cannot resume
+that state; the user must use the resume control once. The corrected prompt
+does not request another pause after resumption. This is not goal completion.
+
 ## Explicit Full Reviewer23017 Queued With Future-Digest Gate (2026-10-06)
 
 Previous goal turn is progress: guarded full-review source/tests/protocol
