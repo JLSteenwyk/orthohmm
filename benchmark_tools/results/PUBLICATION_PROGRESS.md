@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Native QfO Conversion Released Behind Original Review (2026-10-06)
+
+Prepared source/protocol b8192281 committed/pushed before submission. New
+[conversion22450 checkpoint](REVIEW_GATED_NATIVE_QFO_CONVERSION_RESULT_22450.md)
+retains held submission/inspection and one successful release. Fresh original
+handle re-poll confirms dependency-pending afterany:22445,2CPU/32GiB/6hours,
+no requeue and unchanged committed command/request/source bindings. Original
+22444 RUNNING at2:46:11 and original22445 dependency-pending remain intact.
+
+Preserve immediate post-release Reason=None observation and failed inline
+expectation of Dependency. Release itself succeeded; re-poll same22450 handle
+confirms intended dependency. No repeated release, resubmission, cancellation
+or gate weakening. Future review/converter outputs are not yet complete.
+
+332 joined tests5.13s pass, no skips, including nine actual launch/Git-blob/
+receipt/resource/dependency/scope readbacks. Original converter/reviewer/
+assessment/native output/resource contracts included. Wrapper fixtures stub
+expensive conversion explicitly; no claim of production pair preparation.
+All920 helper pins and original scientific venv pass real read-only preflight.
+Observed total-system85.887 busy core-equivalents includes our job/observer,
+not falsely attributed to unrelated processes. Safe capacity is not isolation.
+
+Next: actual22444/22445 terminal outcomes and22450 converter gates, then real
+endpoint assessment and independent admission if successful. Native index9
+still needs original terminal review/fresh native launch gates. No new score,
+timing repair/default change or completed-run retry. Continue remaining native
+cells and broader uncertainty/provenance/independent-validation/executable
+whole-study package, retaining external-deposition limits. Full goal active,
+completion unproven; shared-host contention unknown/potentially tool-dependent.
+
 ## Deferred Native QfO Conversion Validated (2026-10-06)
 
 The intervening user turn confirms the existing shared-host goal amendment;

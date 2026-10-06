@@ -1,0 +1,189 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "batch": {
+    "bytes": 927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_pairs08_20261006.sh",
+    "sha256": "fc11f49f9a103a4a3825ad80d73f05bd84a3bc344abeaa210eb0aafa154003d0"
+  },
+  "cell": "p0_c1_r0",
+  "converter": {
+    "bytes": 13935,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_qfo_pairs.py",
+    "sha256": "472f26a140cf89aed36f8212a31fef7d8f5061204dac2e0ce80c3c7e6746630e"
+  },
+  "held_controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22450",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=22450 JobName=ohmm_qfo_native_pairs08 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=afterany:22445(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-06T05:50:01 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T05:50:01 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:62845 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_pairs08_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.out TresPerTask=cpu=2 \n"
+  },
+  "held_fields": {
+    "Account": "(null)",
+    "AccrueTime": "Unknown",
+    "AllocNode:Sid": "bizon-link:62845",
+    "AllocTRES": "(null)",
+    "BatchFlag": "1",
+    "CPUs/Task": "2",
+    "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_pairs08_20261006.sh",
+    "Comment": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a",
+    "Contiguous": "0",
+    "CoreSpec": "*",
+    "Deadline": "N/A",
+    "DelayBoot": "00:00:00",
+    "Dependency": "afterany:22445(unfulfilled)",
+    "EligibleTime": "Unknown",
+    "EndTime": "Unknown",
+    "ExcNodeList": "(null)",
+    "ExitCode": "0:0",
+    "Features": "(null)",
+    "GroupId": "bizon(1000)",
+    "JobId": "22450",
+    "JobName": "ohmm_qfo_native_pairs08",
+    "JobState": "PENDING",
+    "LastSchedEval": "2026-10-06T05:50:01",
+    "Licenses": "(null)",
+    "MCS_label": "N/A",
+    "MinCPUsNode": "2",
+    "MinMemoryNode": "32G",
+    "MinTmpDiskNode": "0",
+    "Network": "(null)",
+    "Nice": "0",
+    "NodeList": "",
+    "NtasksPerN:B:S:C": "0:0:*:*",
+    "NumCPUs": "2",
+    "NumNodes": "1-1",
+    "NumTasks": "1",
+    "OverSubscribe": "OK",
+    "Partition": "gpu",
+    "Priority": "0",
+    "QOS": "normal",
+    "Reason": "JobHeldUser",
+    "Reboot": "0",
+    "ReqB:S:C:T": "0:0:*:*",
+    "ReqNodeList": "bizon",
+    "ReqTRES": "cpu=2,mem=32G,node=1,billing=2",
+    "Requeue": "0",
+    "Restarts": "0",
+    "RunTime": "00:00:00",
+    "Scheduler": "Main",
+    "SecsPreSuspend": "0",
+    "Socks/Node": "*",
+    "StartTime": "Unknown",
+    "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.err",
+    "StdIn": "/dev/null",
+    "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.out",
+    "SubmitTime": "2026-10-06T05:50:01",
+    "SuspendTime": "None",
+    "TimeLimit": "06:00:00",
+    "TimeMin": "N/A",
+    "TresPerTask": "cpu=2",
+    "UserId": "bizon(1000)",
+    "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+  },
+  "held_inspection_passed": true,
+  "helper_sources_checked": 920,
+  "index": 8,
+  "job_id": 22450,
+  "limitations": [
+    "Future terminal review/conversion not complete; no scientific admission or score.",
+    "Shared-host postprocessing outside native inference interval; no isolation claim.",
+    "Retain refusal/failure without automatic retry."
+  ],
+  "native_job_id": 22444,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791280201653290318,
+  "output_namespaces": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_conversion_gate_22444",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444"
+  ],
+  "owned_queue_precheck": {
+    "command": [
+      "squeue",
+      "--me",
+      "--name=ohmm_qfo_native_pairs08",
+      "--noheader",
+      "--format=%i"
+    ],
+    "stderr": "",
+    "stdout": ""
+  },
+  "pair_conversion_completed": false,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "preflight": {
+    "bytes": 8131,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_conversion_preflight_20261006.json",
+    "sha256": "a0fbe583bc056f25c32c5219be59885a146fecb30672558f69e68ca824a839a5"
+  },
+  "protocol": {
+    "bytes": 4220,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/REVIEW_GATED_NATIVE_QFO_CONVERSION_PROTOCOL_20261006.md",
+    "sha256": "9e8fc6da573ce89ee62c68dd4c1003883136e4525162b0ef4a8c9cf8f9cd1a65"
+  },
+  "publication_ready": false,
+  "released": false,
+  "request": {
+    "bytes": 45929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+    "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+  },
+  "resource_context": {
+    "available_disk_bytes": 10432835252224,
+    "available_memory_bytes": 678250270720,
+    "observed_unix_ns": 1791280201618246712
+  },
+  "reviewer_job_id": 22445,
+  "reviewer_submission": {
+    "bytes": 7519,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_review_submission_22445.json",
+    "sha256": "97cac14882db9ad15ae597e569a77ae8f5f5a6b748915948182d2cfae699f62b"
+  },
+  "runtime": {
+    "binary": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    "invocation": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "packages": {
+      "Bio": "1.87",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "schema": "review_gated_native_qfo_conversion_held_submission_v1",
+  "source_commit": "b819228177cded9349fb66bd8f3c5440fa6d349e",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--hold",
+      "--parsable",
+      "--dependency=afterany:22445",
+      "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "--comment=35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a",
+      "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_%j.out",
+      "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_%j.err",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/review_gated_native_qfo_pairs08_20261006.sh"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "22450\n"
+  },
+  "worker": {
+    "bytes": 9023,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_review_gated_native_qfo_pairs.py",
+    "sha256": "bbb1681c6d68da076fac6d51815404282ce635fe1273eb05c5e6b040cb17e0ee"
+  }
+}
