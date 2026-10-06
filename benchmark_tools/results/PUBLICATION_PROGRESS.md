@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Explicit Full Reviewer23017 Queued With Future-Digest Gate (2026-10-06)
+
+Previous goal turn is progress: guarded full-review source/tests/protocol
+d573e429 pushed, with original22734 still live. This turn reads authoritative
+goal/newest ledger and verifies same22734 RUNNING14:43; no stopped handle,
+duplicate diagnostic or genuine blocker. Continue full goal by eliminating
+the manual digest/submit handoff, not changing scientific completion criteria.
+
+[Queued reviewer checkpoint](FAULT_REPORTED_NATIVE_REVIEW_QUEUED_RESULT_23017.md):
+prospective amendment/current wrapper/batchf3cdb6c3 pushed before submission.
+Original diagnostic accounting must be COMPLETED0:0 and pinned producer valid
+BEFORE output is opened; only then observe/bind its digest. Current-worker SHA
+is known at submission, future diagnostic SHA remainsnull. Full original CLI
+and every gate are unchanged; no monkeypatch or inference execution.
+
+One held23017 inspected2CPU/128GiB/6hours/no-requeue/bizon/gpu/afterany22734.
+Held-receipt08c349c1 pushed before one release; safe capacity/all920 helpers/
+evidence/owner/source/arguments checked. Immediate Reason=None retained, fresh
+same-handle query confirms PENDING/Dependency/unfulfilled22734. Original22734
+RUNNING24:56, owned1198962 present; future full-review namespaces absent.
+No unfinished output read or success/admission/fix inferred from submission.
+
+200 final joined tests pass3.31s/44new, zero failures/errors/skips; prior200
+v3/197/d573e429/first-fixture-failure receipts remain historical, not current
+source certification. Scientific3.10 import/help and Bash syntax pass, tests
+use3.12, no runtime install. Current wrapper/BATCH are new operational sources
+outside unchanged920-helper plan; independently pinned before/after execution.
+
+Next poll original22734/23017, inspect actual terminal evidence before new
+conversion/scoring or index9 history/fresh release gates. Preserve original
+22445/22450/22451/22452 failures and any new refusal; no automatic retry.
+Review-only128GiB is not a proven crash fix, OOM diagnosis or native cost change.
+Unknown/tool-dependent shared-host contention retained. Full uncertainty/
+generalization/provenance/native interactions/matched-search/TreeFam/final
+manuscript/archive/release work remains active and readiness unproven.
+
 ## Full Fault-Reported Review Prepared Behind Live Diagnostic (2026-10-06)
 
 Previous goal turn is verified wait: same22734 RUNNING4:22, owned1198962 R
