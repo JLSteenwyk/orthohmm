@@ -1,4 +1,36 @@
-# Native Reviewer Crash: Diagnostic Launched
+# Native Reviewer Crash: Standalone Diagnostic Completed
+
+## Terminal Diagnostic Readback
+
+Job22734 is COMPLETED0:0 in54:23 under its declared2CPU/32GiB/bizon
+envelope. The [independent terminal receipt](native_review_sigsegv_terminal_22734.json)
+checks fresh producer accounting, the original diagnostic contract, source,
+request/plan and launch bindings, actual output, GNU time and empty Slurm logs.
+All13 small direct bindings reproduce on separate readback. The168 checked
+files and1003 evidence records reported by the producer are not transitive
+raw-file rechecks by this receipt; the full reviewer retains that responsibility.
+
+Actual output SHA256:
+`9f3d7c2ff6504fb139a4beea07c177ff84f6847f3469d3ede1d8227ddd251d2b`.
+Receipt SHA256:
+`d8038dcc69a538c759c6739fe383ec53c86f8055e812240644362a53cfe08aec`.
+The unchanged validator admits semantic output for984137 genes/78 proteomes,
+90687327 checkpoint hits and353638 orthogroups in candidate-on/profile-off/
+reconciliation-off cellp0_c1_r0. No exact historical hit equivalence is claimed.
+
+GNU time reports3256.91s user/5.86s system/54:23.53 elapsed and1033212KiB
+maximum resident set size. This is diagnostic invocation rusage, not native
+inference, cgroup lifetime peak or full-review cost. Slurm TotalCPU is zero and
+MaxRSS absent; these uninformative fields are not actual zero CPU/memory use.
+Both diagnostic stdout/stderr logs are empty, GNU time exit status0.
+
+Standalone success does not explain or fix the original signal11, establish
+full review, admit accuracy/timing, or authorize the next native identity.
+Original22445/22450/22451/22452 failures remain unchanged. Queued full
+reviewer23017 is RUNNING58:50 at receipt observation, not yet admitted.
+Its unchanged full original review and independent successful terminal binding
+remain prerequisites for conversion and index9. The historical launch record
+below is retained; do not resubmit this completed diagnostic.
 
 ## Original Outcomes
 
@@ -58,10 +90,10 @@ Tests run in the retained Python3.12 test environment; scientific Python3.10
 has no pytest and is not modified. Bash syntax passes. These tests do not
 reproduce or explain the production crash or validate an unfinished diagnostic.
 
-Poll original22734 until terminal. Inspect its actual fault stack/error or
-validated output only after completion. Success would prove standalone
-semantic validation in that invocation only; a separately documented full
-postprocessing repair and all unchanged gates remain required. Keep native
+The terminal readback above now establishes standalone semantic validation
+in that invocation only. Poll the existing23017 full-review handle; its
+separately documented full postprocessing attempt and all unchanged gates
+remain required. Keep native
 index9 gated; no automatic retry, substitution of diagnostic admission or
 rewriting of the original22445/22450/22451/22452 failures.
 

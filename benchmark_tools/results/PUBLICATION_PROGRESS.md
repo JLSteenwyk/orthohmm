@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Standalone Diagnostic22734 Completed; Full Review Still Live (2026-10-06)
+
+Previous turn is progress: authoritative prompt pause correction and repository
+handoff5566aeff pushed. This continuation reads that corrected goal and newest
+ledger, then checks actual handles:22734 COMPLETED0:0 54:23;23017 RUNNING57:26.
+No recurring pause, quiet-host gate or completed-job restart is needed.
+
+[Terminal diagnostic result](NATIVE_REVIEW_SIGSEGV_DIAGNOSTIC_RESULT_22734.md)
+and new independent readback bind successful22734 accounting, exact original
+diagnostic contract, request/plan/sources/launch, actual output/time/logs.
+Original output9f3d7c2f reports984137genes/78species/353638groups forp0_c1_r0;
+its168 checked files/1003 evidence records are producer evidence, not freshly
+rehash-certified raw files by this bounded readback. All13 small direct bindings
+independently reproduce; receipt8055bytes/d8038dcc.
+
+GNU time3256.91user/5.86system/54:23.53elapsed/1033212KiBmaxRSS/exit0,
+empty diagnostic stdout/stderr. Slurm zeroTotalCPU/absentMaxRSS are uninformative,
+not actual resource zeros. Shared-host diagnostic invocation only, not native
+inference cost, isolated performance or a causal crash diagnosis/fix.
+
+Original reviewer22445 and downstream22450/22451/22452 failures preserved;
+standalone semantic success still does not admit timing/accuracy or index9.
+Actual23017 controller remainsRUNNING59:05,2CPU/128GiB/no-requeue/zero-restarts,
+original pinned wrapper comment. Next poll same23017, inspect actual terminal
+wrapper and ordinary original review before conversion or next-identity gates.
+No unfinished full-review output read as a success; no source/algorithm changes.
+
+Full publication scope remains active and completion unproven: finish native
+cells/interactions, valid uncertainty/error interpretations and final executable
+manuscript/archive/release without changing frozen science or adding quiet-host
+requirements. Existing complete panels and diagnostics are reused, not rerun.
+
 ## Recurring Prompt-Update Pause Instructions Removed (2026-10-06)
 
 The latest user asks to fix repeated goal stops. The authoritative attachment

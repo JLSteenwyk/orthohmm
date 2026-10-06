@@ -1,0 +1,159 @@
+{
+  "accuracy_evaluated": false,
+  "cell": "p0_c1_r0",
+  "crash_fix_established": false,
+  "diagnostic_accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n22734|COMPLETED|0:0|00:54:23|bizon|2|32G\n22734.batch|COMPLETED|0:0|00:54:23|bizon|2|\n",
+  "diagnostic_job_id": 22734,
+  "diagnostic_logs": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "diagnostic_scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:54:23",
+    "ExitCode": "0:0",
+    "JobIDRaw": "22734",
+    "NodeList": "bizon",
+    "ReqMem": "32G",
+    "State": "COMPLETED"
+  },
+  "diagnostic_time": {
+    "fields": {
+      "Average resident set size (kbytes)": "0",
+      "Average shared text size (kbytes)": "0",
+      "Average stack size (kbytes)": "0",
+      "Average total size (kbytes)": "0",
+      "Average unshared data size (kbytes)": "0",
+      "Command being timed": "\"env -u PYTHONHOME -u PYTHONPATH -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONFAULTHANDLER=1 PYTHONUNBUFFERED=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python -B -X faulthandler -m benchmark_tools.validate_native_factorial_outputs --request /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json --request-sha256 35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a --output /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1/outputs.json\"",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "54:23.53",
+      "Exit status": "0",
+      "File system inputs": "4534480",
+      "File system outputs": "584",
+      "Involuntary context switches": "5233",
+      "Major (requiring I/O) page faults": "0",
+      "Maximum resident set size (kbytes)": "1033212",
+      "Minor (reclaiming a frame) page faults": "565811",
+      "Page size (bytes)": "4096",
+      "Percent of CPU this job got": "99%",
+      "Signals delivered": "0",
+      "Socket messages received": "0",
+      "Socket messages sent": "0",
+      "Swaps": "0",
+      "System time (seconds)": "5.86",
+      "User time (seconds)": "3256.91",
+      "Voluntary context switches": "2658"
+    },
+    "file": {
+      "bytes": 1566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1/time.txt",
+      "sha256": "684ec05047c48d0f8b55d8141ac77afd865af5146d1818b0e4c7f2e8a2d1c716"
+    },
+    "scope": "standalone semantic-validator process invocation; not native inference or full cgroup review costs"
+  },
+  "direct_bindings_checked": [
+    {
+      "bytes": 45929,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+      "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 24937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_native_factorial_outputs.py",
+      "sha256": "3357637503f35238f654edea5c4c12bd293f8d20908c141421a2d40278af7c8d"
+    },
+    {
+      "bytes": 21072,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native_factorial_attempt.py",
+      "sha256": "63e7d7fdda52afa7a36eecd89492a2684e8310260febbfb5adf6d23f88fd26de"
+    },
+    {
+      "bytes": 8948,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_submission_22734.json",
+      "sha256": "4f1df72adca42257ec48d8b3585a4e1f4f462d6aefb46098fd913df5c9db4d14"
+    },
+    {
+      "bytes": 8435,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_release_22734.json",
+      "sha256": "f10cc8db4356ea5353eaa4343eab7894005fa1800b4ff23bc6d1cd53435bd28e"
+    },
+    {
+      "bytes": 1164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_diagnostic_20261006.sh",
+      "sha256": "1f75aa2a8719adbdff634835dc4b264261700120ce383348fa4519dd10049172"
+    },
+    {
+      "bytes": 12031,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_fault_reported_native_review.py",
+      "sha256": "15ddd0d51e6ebc6aa00de754ce26d6a28f7c6dab0f347f23b84a0c06a4720c7d"
+    },
+    {
+      "bytes": 927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_22444_20261006.sh",
+      "sha256": "e578a9c771d6f5d4a754e8b2e8b676ff9cee677a8d11e3b107051e3ce6df6f46"
+    }
+  ],
+  "failed_original_review_job_id": 22445,
+  "full_review_followup": {
+    "command": [
+      "sacct",
+      "-j",
+      "23017",
+      "--format=JobIDRaw,State,ExitCode,Elapsed",
+      "-P"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobIDRaw|State|ExitCode|Elapsed\n23017|RUNNING|0:0|00:58:50\n23017.batch|RUNNING|0:0|00:58:50\n"
+  },
+  "limitations": [
+    "Independent accounting, exact original diagnostic contract and small direct bindings checked; raw inference inputs/outputs and transitive result evidence are not rehashed or semantically rerun in this readback.",
+    "Standalone success applies to this invocation; original signal-11 reviewer and refused downstream attempts remain unchanged.",
+    "The queued full reviewer repeats all original gates; its terminal success and independent bindings remain required for conversion or next native identity.",
+    "Slurm TotalCPU/MaxRSS are uninformative here; GNU time reports invocation rusage, not full native whole-job resource measurements.",
+    "Shared-host diagnostic timing may be affected by CPU, memory-bandwidth and I/O contention by an unknown, potentially tool-dependent amount."
+  ],
+  "native_index": 8,
+  "native_inference_reexecuted": false,
+  "native_job_id": 22444,
+  "next_identity_authorized": false,
+  "observed_utc": "2026-10-06T23:03:00.293946+00:00",
+  "original_crash_explained": false,
+  "output": {
+    "bytes": 298412,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1/outputs.json",
+    "sha256": "9f3d7c2ff6504fb139a4beea07c177ff84f6847f3469d3ede1d8227ddd251d2b"
+  },
+  "publication_ready": false,
+  "resource_measurements_admitted": false,
+  "schema": "native_reviewer_standalone_diagnostic_terminal_readback_v1",
+  "semantic_summary": {
+    "checked_files_in_producer_result": 168,
+    "checkpoint": {
+      "exact_historical_hit_equivalence_established": false,
+      "genes": 984137,
+      "hits": 90687327,
+      "order": "lexical_gene_ids",
+      "validation": "mmap_bounded_slices"
+    },
+    "evidence_records_in_producer_result": 1003,
+    "gene_ownership_sha256": "2ec2dc8c61a24fecb7a7df0677114cee58a4522188bafc650322bc7b4a87f2ef",
+    "input_genes": 984137,
+    "orthogroups": 353638,
+    "species": 78
+  },
+  "status": "standalone_semantic_validation_completed",
+  "uncontended_timing": false
+}
