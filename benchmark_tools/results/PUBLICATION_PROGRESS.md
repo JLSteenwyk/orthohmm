@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Native-Evidence Main Text Rendered And Reviewed (2026-10-06)
+
+Source milestone47b7f14b committed/pushed before rendering. The
+[actual review result](NATIVE_MAIN_TEXT_REVIEW_RESULT_20261006.md) retains fresh
+18-page main-text HTML/PDF,18 citations,85 tracked targets, empty Pandoc stderr
+and no detected page-bounds violations. Direct repository inputs match source
+commit47b7f14b rather than future ledger state. No frozen helper/source changes.
+
+Actually inspect14 raster pages3-8/10-12/14-18, not all18 or the linked figures.
+New native OrthoBench table repeats headers across pages6/7; QfO table is whole
+on7. All native values/conditional effects/coverage/means, composition caveats,
+failed timings, incomplete cells and original resource-table values survive
+PDF rendering. Separate manual review preserves original manifest flags and
+binds actual source/receipts/PDF/pages. Old v3/35-page review hashes remain;
+rc4 is not expanded or replaced. No combined new-figure or executable archive.
+
+101 joined tests8.59s pass, including five new artifact/PDF tests and the
+earlier35-page review contracts. Retain first93-pass/one-failure receipt whose
+unknown-cost wording selector differs from actual unchanged source; correct
+only the selector. Source-time pre-render statement is superseded by these
+actual review receipts, not retroactively edited. Nothing is newly scored,
+admitted, bootstrapped or inferred for this reporting step.
+
+Fresh22444 RUNNING2:06:28/native2:05:36, actualPID4128293 exists with index8
+bound command; original22445 dependency-pending. Next native identity remains
+gated on actual terminal review/fresh capacity/accounting. Continue remaining
+native QfO cells and broader uncertainty, independent validation/provenance,
+versioned executable package and external-deposition scope. Full goal active,
+completion unproven; shared-host effects unknown and potentially tool-dependent.
+
 ## Condensed Native-Evidence Manuscript Prepared (2026-10-06)
 
 The preceding user turn confirms the already-amended goal and launches nothing;
