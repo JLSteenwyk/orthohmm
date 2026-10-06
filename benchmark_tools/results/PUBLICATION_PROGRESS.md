@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Native Duplication Projection Privately Restored And Replayed (2026-10-06)
+
+Previous goal turn is a verified wait on live22444 postflight, not a blocker.
+This turn reads full authoritative goal/newest ledger and polls same22444
+RUNNING11:30:14, native step already terminal. Continue full scope with
+[executable relocated duplication reproduction](NATIVE_DUPLICATION_PORTABLE_RESULT_20261006.md)
+under7.4, not an easier replacement completion criterion. Protocold8c70fd6/
+source-tests43bfceab pushed before actual packaging/replay. Scientific/source/
+historical result bytes and frozen920-helper plan unchanged.
+
+Existing bounded content-addressed stager/archive/restorer:34 original direct
+occurrences (one duplicate),33 inputs+binding,34 members; payload43,904,145bytes,
+tar43,939,840bytes/compressed39,171,350. Private archives retained, not committed
+or public. Source archive19 files at43bfceab; post-replay Git/tar/copied bytes
+all match,12 Python sources compile. Operational replay helpers/inputs/outputs
+bracketed; unused docs/fixtures only postchecked, not whole-package bracketed.
+
+Real exported scientificPython3.10-I-S-B/std-only subprocess runs in separate
+/tmp cwd using restored inputs. All18 families/563 genes/21,530 raw rows/36
+family records/eight rows/four differences/TSV values checked,1e-12 tolerance;
+original reference-entry sets and failedR1 timing exclusions retained. No
+logical original-path fallback; synthetic originals removed in tests. Actual
+originals still physically accessible, no OS-denial/security/cross-platform
+certification. Primary exporter/JSON regeneration/tree extraction/native
+inference/scoring/bootstrap not rerun; no transitive admission or timing repair.
+
+Final176 joined tests pass2.36s/27new, zero failures/errors/skips; earlier19-case
+receipt retained. Six copied test/time receipts byte-identical. Stage/archive/
+restore/replay0.29/1.80/0.59/6.45s, all exit0/zero swaps; replay1,655,260KiB
+maxprocessRSS. Shared-host packaging/postprocessing only, not inference or
+isolated speed; unknown/tool-dependent CPU/memory-bandwidth/I/O contention.
+Pre-launch RAM658,819,556KiB available/swap24,988KiB free. No install or
+unrelated-job/service/environment modification. Raw redistribution unauthorized.
+
+Original22444 now COMPLETED0:0 11:42:59, native22444.0 COMPLETED0:0 11:18:09.
+Original reviewer22445 RUNNING3:24;22450/22451/22452 pending. Do not read its
+unfinished outputs or release index9 before actual terminal/review gates.
+No original job restarted. Five score cells, native interactions/matched search,
+broader valid uncertainty/generalization/strata/provenance/TreeFam and final
+manuscript/archive/release still open. Full goal active, completion unproven.
+
 ## Native Duplication-Annotation Trade-Off Checked On Resume (2026-10-06)
 
 Previous turn makes administrative progress by confirming the shared-host

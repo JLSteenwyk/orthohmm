@@ -32,6 +32,16 @@ effects. Reference-derived labels/default-S/alias handling, original inherited
 traversal evidence and confounding remain explicit. Initial HMM search on;
 no new CI, tuning, timing repair or publication-complete admission.
 
+Native duplication-projection replay is executable from privately archived/
+restored direct inputs: [protocol](NATIVE_DUPLICATION_PORTABLE_PROTOCOL_20261006.md),
+[actual isolated replay](native_duplication_portable_replay_20261006_v1.json),
+[19-file source identity](native_duplication_portable_source_identity_20261006.json)
+and [delivery limits](NATIVE_DUPLICATION_PORTABLE_RESULT_20261006.md).
+All21,530 raw rows/36 family records/eight bin rows/four differences/TSV values
+check with no original logical-input fallback. Same-host stdlib replay of the
+original independent functions, not primary exporter/inference/tree extraction/
+scoring reproduction, timing repair, public data rights or full final archive.
+
 Native functional-score interpretation is additionally bounded by the
 [actual raw-pair composition](NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md)
 and [independent SQLite readback](native_qfo_functional_pair_sql_readback_20261006.json).
