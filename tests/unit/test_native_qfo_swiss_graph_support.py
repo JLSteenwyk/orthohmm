@@ -21,6 +21,8 @@ def test_path_oracle_includes_nonreference_and_same_species_nodes():
     edges = [edge("a", "b"), edge("a", "c", 2), edge("b", "d", 3), edge("c", "d", 4)]
     paths = trace.path_witnesses(families, edges, [("a", "d"), ("d", "a"), ("a", "e"), ("a", "b")])
     assert paths == {("a", "d"): ["a", "b", "d"], ("d", "a"): ["d", "b", "a"], ("a", "e"): None, ("a", "b"): ["a", "b"]}
+    reference, species = {"a", "d"}, {"a": "one", "b": "one", "c": "two", "d": "three", "e": "four"}
+    assert paths["a", "d"][1] not in reference and species[paths["a", "d"][1]] == species["a"]
     ids, matrix = reader.distances(families["Family0000000"], [(r["gene_a"], r["gene_b"]) for r in edges])
     assert matrix[ids["a"], ids["d"]] == 2 and matrix[ids["a"], ids["e"]] == 6
 
@@ -88,7 +90,10 @@ def synthetic(tmp_path):
                                 "independent_confirmation", "publication_ready")}
     names = ["g%03d" % i for i in range(67)]
     pairs = list(itertools.combinations(names, 2))[:2023]
-    core_dir = Path(trace.__file__).parent.parent / "benchmarks/work/publication_method_native_v2/orthohmm"
+    core_dir = tmp_path / "synthetic_core/orthohmm"
+    core_dir.mkdir(parents=True)
+    for name in ("accuracy.py", "helpers.py", "externals.py", "orthohmm.py"):
+        (core_dir / name).write_text("# Synthetic source identity fixture; never executed.\n")
     core = [dict(trace.record(core_dir / name), absolute_path=str((core_dir / name).resolve()))
             for name in ("accuracy.py", "helpers.py", "externals.py", "orthohmm.py")]
     for r in core:
@@ -232,3 +237,27 @@ def test_independent_readback_refuses_synthetic_corruption(synthetic, fault):
     save(path, report)
     with pytest.raises(ValueError):
         reader.verify(path, trace.record(path)["sha256"])
+
+
+def test_actual_retained_result_and_reader_receipt_without_repeating_graph_scan():
+    results = Path(trace.__file__).parent / "results"
+    report_path = results / "native_qfo_swiss_graph_support_20261006_v1/report.json"
+    result = json.loads(report_path.read_text())
+    verified = json.loads((results / "native_qfo_swiss_graph_floyd_readback_20261006.json").read_text())
+    assert result["source"] == trace.record(trace.__file__)
+    assert verified["source"] == trace.record(reader.__file__) and verified["report"] == trace.record(report_path)
+    assert verified["changed_pairs_checked"] == result["changed_pairs"] == 2023
+    assert verified["selected_families_checked"] == len(result["selected_families"]) == 23
+    assert verified["selected_genes_checked"] == result["selected_genes"] == 1139
+    assert verified["table_rows_checked"] == 4046 and verified["complete_graph_rows_checked"] == 51260606
+    assert verified["induced_edges_checked"] == 46470 and verified["summary"] == result["summary"]
+    assert result["graph_bytes_identical"] is result["selected_induced_graph_records_identical"] is True
+    for document in (result, verified):
+        assert all(document[k] is False for k in ("graph_original_admission_established", "raw_search_rescanned",
+                   "new_scoring_or_admission", "uncertainty_admitted", "scientific_timings_admitted", "publication_ready"))
+    for cell in trace.CELLS:
+        view = [r for r in result["summary"] if r["cell"] == cell]
+        assert sum(r["pairs"] for r in view if r["before"] == "TP" and r["graph_support"] == "direct_edge") == 270
+        assert sum(r["pairs"] for r in view if r["before"] == "FP" and r["graph_support"] == "direct_edge") == 1137
+        assert sum(r["pairs"] for r in view if r["graph_support"] == "disconnected") == 0
+        assert sum(r["pairs"] for r in view if r["search_support"] == "no_direct_hit" and r["graph_support"] == "indirect_path") == 539

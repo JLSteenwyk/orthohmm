@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Native SwissTrees Observed Final Graphs Independently Traced (2026-10-06)
+
+Previous goal turn makes real progress at327805ac by completing the source-bound
+mechanism companion figure, independent readback and strict layout tests.
+Re-read full objective/current ledger; original22444 verified RUNNING7:18:02,
+22445/22450/22451/22452 dependency-pending. No original handle restarted.
+
+[New complete graph diagnostic](NATIVE_QFO_SWISS_GRAPH_SUPPORT_RESULT_20261006.md)
+prospectively specified post-hoc atfbeb4f4a, implementation/tests pushed
+at6d9643d2 before selected actual outcomes. Both retained final graph files
+currently SHA/size-identical,25,630,303rows each; original native validators
+did not inventory graphs. Newly observed current-byte evidence only, not
+retroactive original admission/continuous integrity. Original metric counts,
+candidate hash/gene universe and frozen relevant private source pins checked.
+
+All2,023changedSwisspairs traced in23originalcandidatefamilies/1,139genes.
+270removedTP/1,137removedFP have direct graph edges;64TP/552FP indirect
+within-family paths. All539no-direct-significant-hit pairs have paths. Further
+77pairs have direct hits but no final edge. Pathlengths1/2/3:1,407/607/9 each
+view; no induced disconnection. Full23,235inducededges each/completewitnesses/
+4,046TSVrows/36cross-tabs retained. Connectivity not causal clustering or true
+orthology; combined final graph does not isolate RB-NH/singleton filtering.
+
+Independent CSV scan checks all51,260,606graphrows/all46,470inducedrecords;
+bounded per-family NumPyFloyd-Warshall independently checks allshortest
+distances/pathwitnesses/cohort/tablevalues. No primary traversal imports.
+Initial40/49fixture suites and444-case22.23s receipt retained; final444cases
+20.80s pass/no skips after synthetic source fixtures made self-contained,
+50new graph cases inclsource-bound complete synthetic export/readback,
+corruption/refusal and actualreceipt binding without anotherlarge scan.
+Fixtures notproduction admission; bothactualscans separately executed.
+
+Primary86.09s/282,648KiB, reader112.16s/355,140KiB under originalPython3.10.13,
+exit0/zeroswaps. Shared-host postprocessing, not native timing/comparative
+speed; unknown potentially tool-dependent contention. Capacity627GiBavailable/
+9.5TiBdisk; nearfullhostswap disclosed. No unrelatedjob changes. No inference,
+Leiden/refinement/tree/scoring/bootstrap/hit-array/transitive admission replay,
+timingrepair or frozenmethod/default changes. FailedR1timing remainsineligible.
+
+Latest original22444 RUNNING7:44:12; allfourdownstream stages dependency-pending.
+Await actual terminal/production gates for newnativeadmission/score/uncertainty
+or next identity. Frozen main/PDF/archive unchanged; newcompanionawaits complete
+assembly. Remaining nativecells/matchedsearch/tree/otherstrata, wideruncertainty/
+generalization/TreeFam/provenance/fullarchive/manuscript/release scope incomplete.
+Fullgoal active/completionunproven; no quiet-window/dedicated-host requirement.
+
 ## Native SwissTrees Mechanism Figure Checked (2026-10-06)
 
 Previous completed scientific milestone525d6d64 makes real progress by

@@ -1,0 +1,419 @@
+{
+  "changed_pairs_checked": 2023,
+  "checked_inputs": [
+    {
+      "bytes": 12858109,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_graph_support_20261006_v1/report.json",
+      "sha256": "014455a42df4c60e70025d763e1d7920f842bb55a67b8ac6697100cdda7e9ca0"
+    },
+    {
+      "bytes": 16520,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_graph_support.py",
+      "sha256": "ec2370581636796645bf8fdd9300e093d689c4fc1ab97682ad8cf0198c5b9894"
+    },
+    {
+      "bytes": 3614,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_SWISS_GRAPH_SUPPORT_PROTOCOL_20261006.md",
+      "sha256": "369ad039aefb3dc23da4eccf06f03c42565d9739b39bdea3f0d9676f95716186"
+    },
+    {
+      "bytes": 1999028,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_search_support_20261006_v1.json",
+      "sha256": "787bde01ffacd60547fb290bdbb1d04242230ed05ce77d25d270227310252d5a"
+    },
+    {
+      "bytes": 8585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_search_support_code_readback_20261006.json",
+      "sha256": "8ffc58fe192fa060de4e068161e72b8ab626066446608e5c0011925e62c67ede"
+    },
+    {
+      "bytes": 13674,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_search_support.py",
+      "sha256": "bbe25899d7bf0ac5ed67ca69e40ca0a3860517f0a4d54f9bb7f269f3be804384"
+    },
+    {
+      "bytes": 10850,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_search_support.py",
+      "sha256": "7aeb5bd36cdae727d72c81f70a28d7745fd13d16a548549f26d9b533e0f9efea"
+    },
+    {
+      "bytes": 15634,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_reconciliation_trace_20261006_v1.json",
+      "sha256": "53c692cf7dab9affac7b0240cf5191d2530bd4369b66f4165e8acb811391dacb"
+    },
+    {
+      "bytes": 16351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_reconciliation.py",
+      "sha256": "4723fd9067d6a558743914ed2ee635f971165e2291bd6eb40b3471005220b3e4"
+    },
+    {
+      "bytes": 321948,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_reconciliation_pairs_20261006_v1.tsv",
+      "sha256": "4ac42d9537dd6b914aa019b2b45005b393cb96d56ebdd941981509f4430d60a9"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 470750,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_deployment_20260928/baseline.json",
+      "sha256": "b39e5f26518191ad53e7a796690f083a0bd5ede2081cbfbcb7b00a86947acdc3"
+    },
+    {
+      "bytes": 14046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/accuracy.py",
+      "sha256": "1a35944ab7fea859143f599b1262aa111272787f6f735b9acc37d299427f2ad6"
+    },
+    {
+      "bytes": 32293,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/helpers.py",
+      "sha256": "faf9e85c6af8ad5f5740c81157e8ce40bbd98c1731991d9f3fbe1f47a05f6149"
+    },
+    {
+      "bytes": 10166,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/externals.py",
+      "sha256": "5304b4190b01a53c7c4e3235f9d1df9e7eff1f01d09633d07750103487268115"
+    },
+    {
+      "bytes": 30663,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/publication_method_native_v2/orthohmm/orthohmm.py",
+      "sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb"
+    },
+    {
+      "bytes": 297457,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/outputs_or_failure.json",
+      "sha256": "e7067c2e0f5354a27d4bd0e93bddd32060663a0119c41dc63e428fc6242bd8cf"
+    },
+    {
+      "bytes": 4823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_06/metrics.json",
+      "sha256": "b88dba9f986e88dfe77f01a757301ef8892060c61c4f6d58ce4a4f441b67fe23"
+    },
+    {
+      "bytes": 1724697831,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_06/native/orthohmm_working_res/orthohmm_edges.txt",
+      "sha256": "4f5d3d0ab83e9bb39a8e53c18d9af2ddcbf9ef508caf73631333b2a343c28e6e"
+    },
+    {
+      "bytes": 52724,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_measurement_failure_review_22437/outputs.json",
+      "sha256": "925b8bb346414ff784b18eeadfa05c7ad7c4bfa8b0784c079c49aa787288ed5e"
+    },
+    {
+      "bytes": 6013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/metrics.json",
+      "sha256": "433ad0e2982092dc0415d29794580893a1505fce9231023e021c6b6e5b4a2604"
+    },
+    {
+      "bytes": 1724697831,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_working_res/orthohmm_edges.txt",
+      "sha256": "4f5d3d0ab83e9bb39a8e53c18d9af2ddcbf9ef508caf73631333b2a343c28e6e"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_06/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_06/native/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "4dadc740f64cd0a539a099e0577094e47ad4ba5862374dd8a8aca86a78eabdbf"
+    },
+    {
+      "bytes": 602392,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_graph_support_20261006_v1/pairs.tsv",
+      "sha256": "aa4fc300907201d674b1bce1bff8361861322571f5986ae3ad11147298c90c13"
+    }
+  ],
+  "complete_graph_rows_checked": 51260606,
+  "graph_original_admission_established": false,
+  "independent_confirmation": false,
+  "induced_edges_checked": 46470,
+  "limitations": [
+    "Independent CSV scan and Floyd-Warshall distances/witness check, not native/biological replication.",
+    "Graphs remain newly observed current-byte evidence, not original graph admission or continuous integrity.",
+    "Unweighted paths restricted to original candidates; no induced path is not global disconnection.",
+    "No inference/Leiden/scoring/uncertainty replay or repair of failed R1 timing."
+  ],
+  "new_scoring_or_admission": false,
+  "numpy_version": "2.2.6",
+  "publication_ready": false,
+  "raw_search_rescanned": false,
+  "report": {
+    "bytes": 12858109,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_graph_support_20261006_v1/report.json",
+    "sha256": "014455a42df4c60e70025d763e1d7920f842bb55a67b8ac6697100cdda7e9ca0"
+  },
+  "schema": "native_qfo_swiss_graph_support_floyd_readback_v1",
+  "scientific_timings_admitted": false,
+  "selected_families_checked": 23,
+  "selected_genes_checked": 1139,
+  "source": {
+    "bytes": 13584,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_graph_support.py",
+    "sha256": "1b8176e2e3a79d6d6e3656cfe9eca88498d02e315d904056a5fb260de8d8a354"
+  },
+  "summary": [
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 60,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 6,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 264,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 4,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 60,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 6,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 264,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 4,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "TP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 479,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 16,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 4,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "direct_edge",
+      "pairs": 1121,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "indirect_path",
+      "pairs": 69,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r0",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 479,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "no_direct_hit"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 16,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 4,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "one_direction"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "direct_edge",
+      "pairs": 1121,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "indirect_path",
+      "pairs": 69,
+      "search_support": "both_directions"
+    },
+    {
+      "before": "FP",
+      "cell": "p0_c0_r1",
+      "graph_support": "disconnected",
+      "pairs": 0,
+      "search_support": "both_directions"
+    }
+  ],
+  "table_rows_checked": 4046,
+  "uncertainty_admitted": false
+}
