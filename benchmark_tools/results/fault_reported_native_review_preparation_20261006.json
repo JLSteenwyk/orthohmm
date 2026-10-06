@@ -1,0 +1,136 @@
+{
+  "batch": {
+    "bytes": 840,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_22444_20261006.sh",
+    "sha256": "52247ed90bf67712cdfb47e192c3a11c309cb3050f785c6fcc3a90bdc5cbd2a1"
+  },
+  "cli_help": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "-m",
+      "benchmark_tools.run_fault_reported_native_review",
+      "--help"
+    ],
+    "stderr": "",
+    "stdout": "usage: run_fault_reported_native_review.py [-h] --diagnostic-sha256\n                                           DIAGNOSTIC_SHA256 --worker-sha256\n                                           WORKER_SHA256\n\nOne explicit full-review postprocessing attempt after successful diagnosis.\nExecute the original reviewer in a fresh namespace; never inference or\nscoring. The larger postprocessing allocation is not a change to native\nresource limits.\n\noptions:\n  -h, --help            show this help message and exit\n  --diagnostic-sha256 DIAGNOSTIC_SHA256\n  --worker-sha256 WORKER_SHA256\n"
+  },
+  "diagnostic_digest": null,
+  "full_review_executed": false,
+  "helper_sources_checked": 920,
+  "native_inference_reexecuted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791321769186276835,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time,xml.etree.ElementTree as ET\nfrom pathlib import Path\nfrom benchmark_tools import run_fault_reported_native_review as module\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record,check\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import read\nroot=module.ROOT;request=record(module.REQUEST);assert request[\"sha256\"]==module.REQUEST_SHA\nreq=read(request);plan=read(req[\"plan\"])\nfor ref in [request,req[\"plan\"],*plan[\"helper_sources\"],*plan[\"evidence\"]]:check(ref)\nassert len(plan[\"helper_sources\"])==920\nassert record(module.REVIEWER)[\"sha256\"]==module.REVIEWER_SHA and record(module.VALIDATOR)[\"sha256\"]==module.VALIDATOR_SHA\nassert not module.CONTROL.exists() and not module.DESTINATION.exists()\nbatch=record(module.BATCH);subprocess.run([\"bash\",\"-n\",str(module.BATCH)],check=True)\ncommand=[str(module.PYTHON),\"-B\",\"-c\",\"import sys,Bio,numpy,psutil; import benchmark_tools.run_fault_reported_native_review as m; print(sys.version.split()[0],Bio.__version__,numpy.__version__,psutil.__version__,m.MEMORY)\"]\nruntime=subprocess.run(command,capture_output=True,text=True,check=True)\nassert runtime.stdout.split()==[\"3.10.13\",\"1.87\",\"2.2.6\",\"7.2.2\",str(module.MEMORY)]\nhelpcmd=[str(module.PYTHON),\"-B\",\"-m\",\"benchmark_tools.run_fault_reported_native_review\",\"--help\"]\nhelpresult=subprocess.run(helpcmd,capture_output=True,text=True,check=True)\naccountcmd=[\"sacct\",\"-j\",\"22734\",\"--format=JobID,State,ExitCode,Elapsed\",\"-P\"]\naccount=subprocess.run(accountcmd,capture_output=True,text=True,check=True)\nassert \"22734|RUNNING|0:0|\" in account.stdout\npscmd=[\"ps\",\"-p\",\"1198962\",\"-o\",\"pid,ppid,stat,etime,time,rss\"]\nprocess=subprocess.run(pscmd,capture_output=True,text=True,check=True)\nassert \"1198962\" in process.stdout\nreceipts=[]\nfor name,expected in [(\"fault_reported_native_review_tests_20261006_v1.xml\",(196,1)),(\"fault_reported_native_review_tests_20261006_v2.xml\",(197,0))]:\n    path=root/\"benchmark_tools/results\"/name\n    suite=ET.parse(path).getroot().find(\"testsuite\")\n    assert (int(suite.attrib[\"tests\"]),int(suite.attrib[\"failures\"]))==expected\n    assert suite.attrib[\"errors\"]==suite.attrib[\"skipped\"]==\"0\"\n    receipts.append(dict(reference=record(path),counts=suite.attrib))\nout=root/\"benchmark_tools/results/fault_reported_native_review_preparation_20261006.json\";assert not out.exists()\nsave(out,dict(schema=\"fault_reported_native_review_preparation_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),request=request,plan=req[\"plan\"],worker=record(module.__file__),tests=record(root/\"tests/unit/test_run_fault_reported_native_review.py\"),batch=batch,protocol=record(root/\"benchmark_tools/results/FAULT_REPORTED_NATIVE_REVIEW_PROTOCOL_20261006.md\"),test_receipts=receipts,helper_sources_checked=920,scientific_runtime=dict(command=command,stdout=runtime.stdout,stderr=runtime.stderr,python=record(module.PYTHON)),cli_help=dict(command=helpcmd,stdout=helpresult.stdout,stderr=helpresult.stderr),original_diagnostic=dict(command=accountcmd,stdout=account.stdout,stderr=account.stderr,output_read=False),owned_process=dict(command=pscmd,stdout=process.stdout,stderr=process.stderr),review_limit_bytes=module.MEMORY,review_cpu_slots=2,review_hours=6,diagnostic_digest=None,submission_executed=False,full_review_executed=False,native_inference_reexecuted=False,scientific_timings_admitted=False,next_identity_authorized=False,publication_ready=False))\nprint(json.dumps(dict(preparation=record(out),diagnostic=account.stdout)))\n"
+  ],
+  "original_diagnostic": {
+    "command": [
+      "sacct",
+      "-j",
+      "22734",
+      "--format=JobID,State,ExitCode,Elapsed",
+      "-P"
+    ],
+    "output_read": false,
+    "stderr": "",
+    "stdout": "JobID|State|ExitCode|Elapsed\n22734|RUNNING|0:0|00:13:02\n22734.batch|RUNNING|0:0|00:13:02\n"
+  },
+  "owned_process": {
+    "command": [
+      "ps",
+      "-p",
+      "1198962",
+      "-o",
+      "pid,ppid,stat,etime,time,rss"
+    ],
+    "stderr": "",
+    "stdout": "    PID    PPID STAT     ELAPSED     TIME   RSS\n1198962 1198960 R          13:01 00:13:01 1023108\n"
+  },
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "protocol": {
+    "bytes": 3311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/FAULT_REPORTED_NATIVE_REVIEW_PROTOCOL_20261006.md",
+    "sha256": "68e02f83cc0a7eefb6175dcdfe6f517eebab7f20e5ba9ab0d0c1c8aac12b2c84"
+  },
+  "publication_ready": false,
+  "request": {
+    "bytes": 45929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+    "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+  },
+  "review_cpu_slots": 2,
+  "review_hours": 6,
+  "review_limit_bytes": 137438953472,
+  "schema": "fault_reported_native_review_preparation_v1",
+  "scientific_runtime": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "-c",
+      "import sys,Bio,numpy,psutil; import benchmark_tools.run_fault_reported_native_review as m; print(sys.version.split()[0],Bio.__version__,numpy.__version__,psutil.__version__,m.MEMORY)"
+    ],
+    "python": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    "stderr": "",
+    "stdout": "3.10.13 1.87 2.2.6 7.2.2 137438953472\n"
+  },
+  "scientific_timings_admitted": false,
+  "submission_executed": false,
+  "test_receipts": [
+    {
+      "counts": {
+        "errors": "0",
+        "failures": "1",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "0",
+        "tests": "196",
+        "time": "3.515",
+        "timestamp": "2026-10-06T17:20:32.666362-04:00"
+      },
+      "reference": {
+        "bytes": 29036,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_tests_20261006_v1.xml",
+        "sha256": "3c621930171e7080bb030b9af23d04a7bca6469c9fd45a9ebd90c11838683f5b"
+      }
+    },
+    {
+      "counts": {
+        "errors": "0",
+        "failures": "0",
+        "hostname": "bizon",
+        "name": "pytest",
+        "skipped": "0",
+        "tests": "197",
+        "time": "3.424",
+        "timestamp": "2026-10-06T17:21:20.252787-04:00"
+      },
+      "reference": {
+        "bytes": 28634,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_tests_20261006_v2.xml",
+        "sha256": "9a0707e4c629198e0dc4dcb61d3dd2d0c552fe18727abc52caf06e67c2e5ae1a"
+      }
+    }
+  ],
+  "tests": {
+    "bytes": 9343,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_fault_reported_native_review.py",
+    "sha256": "272ab07fe0564a2c285e85b322a112200b31ca30ce7e11139ec9910fc3360f8f"
+  },
+  "worker": {
+    "bytes": 10516,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_fault_reported_native_review.py",
+    "sha256": "665ddafb9e0f574d69fa0ea8cbac6f28463b39022ad1618a5bdbcf68b98a89a8"
+  }
+}

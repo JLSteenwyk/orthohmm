@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Full Fault-Reported Review Prepared Behind Live Diagnostic (2026-10-06)
+
+Previous goal turn is verified wait: same22734 RUNNING4:22, owned1198962 R
+with4:21CPU, not a stopped job or blocker. This turn reads full authoritative
+goal/newest ledger and revalidates original diagnostic live. Review the full
+requirement audit; remaining native cells need a valid full predecessor review,
+not new unneeded reruns or a substitute completion criterion.
+
+[Prepared postprocessing attempt](FAULT_REPORTED_NATIVE_REVIEW_PREPARATION_20261006.md)
+adds a separately pinned wrapper/protocol/batch. ONLY after actual22734 success
+and bound original semantic output, execute unchanged full reviewer in new
+namespace with fault reporting and prospective2CPU/128GiB/6hours/no-requeue.
+Larger allocation is review-only, not a proven OOM/crash fix or native resource
+change. All original full-review gates repeat; no monkeypatch or replaced
+semantic decision. Preserve22445/22450/22451/22452 failures. No job submitted.
+
+197 joined tests pass3.51s/41new, zero errors/failures/skips. Initial195pass/one
+fixture failure retained; same-line duplicate fixture corrected, separate
+two-record refusal added, no guard relaxed. Scientific3.10 import/help and
+Bash syntax pass; test3.12, no install. Actual preparation checks all920 sources/
+evidence and original request/reviewer/validator; future outputs absent.
+
+Latest preparation22734 RUNNING13:02, output not read, future digest null.
+Poll same handle to terminal. Successful diagnosis alone still cannot authorize
+native index9 or scoring; new full-review producer completion and unchanged
+history/fresh launch gates remain. No separate diagnostic or inference retry.
+Shared-host postprocessing scope/unknown contention retained. Broader full
+publication requirements remain active and completion unproven.
+
 ## Native Reviewer Signal-11 Failure Retained And Diagnosed (2026-10-06)
 
 Previous goal turn is administrative progress: shared-host handoff committed
