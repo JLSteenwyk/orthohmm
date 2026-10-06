@@ -1,0 +1,70 @@
+{
+  "checked_input_records": 20,
+  "exporter_or_reference_helpers_imported": false,
+  "failed_r1_timing_remains_ineligible": true,
+  "methods": [
+    {
+      "cell": "p0_c0_r0",
+      "counts": {
+        "FN": 3953,
+        "FP": 16013,
+        "TP": 19981
+      },
+      "sparse_cells": 24529
+    },
+    {
+      "cell": "p0_c0_r1",
+      "counts": {
+        "FN": 4416,
+        "FP": 9,
+        "TP": 19518
+      },
+      "sparse_cells": 16850
+    }
+  ],
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "raw_rows": 63890,
+  "reference_rows": 16844,
+  "report": {
+    "bytes": 15722,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_vgnc_blocks_20261006_v1/report.json",
+    "sha256": "23cb9fd4b1c2219239ff354c97cd7dab9758667700667f88e8424414184e4c1f"
+  },
+  "schema": "native_qfo_vgnc_blocks_readback_v1",
+  "source": {
+    "bytes": 15001,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_vgnc_blocks.py",
+    "sha256": "0f8fc093af6ea027c739e798160508bdfdf91316d1abbb9b441d6afbb1660fe5"
+  },
+  "status": "complete_native_decomposition_independently_verified",
+  "transition_pairs": 39947,
+  "transitions": [
+    {
+      "pairs": 3953,
+      "r0": "FN",
+      "r1": "FN"
+    },
+    {
+      "pairs": 9,
+      "r0": "FP",
+      "r1": "FP"
+    },
+    {
+      "pairs": 16004,
+      "r0": "FP",
+      "r1": "not_scored"
+    },
+    {
+      "pairs": 463,
+      "r0": "TP",
+      "r1": "FN"
+    },
+    {
+      "pairs": 19518,
+      "r0": "TP",
+      "r1": "TP"
+    }
+  ],
+  "uncertainty_admitted": false
+}

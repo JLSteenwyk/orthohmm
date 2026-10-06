@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Native VGNC Counts And Paired Changes Independently Verified (2026-10-06)
+
+Previous scientific goal turn makes progress at ebe0a531 with complete native
+SwissTrees graph support. Intervening goal-prompt amendment is administrative;
+this continuation resumes the unchanged full publication objective. Re-read
+the authoritative amended prompt/current ledger; original 22444 verified
+RUNNING 7:54:51, downstream 22445/22450/22451/22452 dependency-pending.
+No original handle restarted or unfinished output read.
+
+[New native VGNC decomposition](NATIVE_QFO_VGNC_BLOCK_RESULT_20261006.md)
+prospectively specified post-hoc at e3c40104; implementation/79 passing tests
+pushed at b6f4ac70 before actual selected outcomes. Historical selected-default
+counts differ and were not substituted. Actual R0 TP/FP/FN 19,981/16,013/3,953;
+R1 19,518/9/4,416. Native F1 0.666834 to 0.898185; precision +44.442pp,
+recall -1.934pp. Complete 39,947-pair ledger: 16,004 FP excluded, 463 TP to
+FN, no scored additions/recoveries/overlaps. Absence is not relabeled as TN.
+
+Reference reconstruction retains 16,863 labels/36,986 proteins/23,934 asserted
+pairs, eleven shared proteins/eleven merged groups/16,844 blocks. Exact original
+mapping digest and complete reference inventory preserved. R0 24,529 nonzero
+cells/7,685 cross-block links, including two within-block FPs; R1 16,850 cells/
+six cross-block links/nine FPs. All native eligibility/categories and sparse
+cells retained, including cross-category overlap capability in fixtures.
+
+Independent stdlib union-find/SQLite/raw/Fraction reader imports no primary
+helper and checks all 63,890 raw rows, all sparse cells, every inventory row,
+every transition pair/count and pooled ratios within 1e-12. Both prediction
+databases fully hashed before/after against original execution/admission
+inventories; current-byte consistency, not uninterrupted integrity proof.
+No prediction-edge requery or omitted-FP completeness rescore. Neither blocks
+nor prediction components establish independent sampling units; wider valid
+uncertainty and earlier rare-error/shared-clade failures remain unresolved.
+
+79 focused tests pass, no failures/errors/skips: 69 new/10 existing mapping.
+Retain earlier 66-test XML and final 79-test XML. Actual export/readback
+5.07s/101,836KiB and 4.99s/131,332KiB exit0/zero swaps under original Python
+3.10.13, independent -I-S-B stdlib. Shared-host postprocessing, not native
+timing or tool-speed ranking; contention unknown and potentially tool-dependent.
+Capacity 627GiB available/9.5TiB disk, near-full host swap disclosed. No
+unrelated job/service modification, scientific inference/scoring/bootstrap,
+native timing repair or frozen method/default/endpoint changes.
+
+Latest original 22444 RUNNING 8:06:03; downstream four stages pending. Await
+actual terminal/production gates before new native admission or next identity.
+Frozen main/PDF/archive unchanged; companion awaits complete assembly.
+Remaining native cells, matched search/interactions, tree/other error strata,
+wider uncertainty/generalization, TreeFam/provenance/full manuscript/archive/
+release requirements remain open. Full goal active/completion unproven;
+no quiet-window/dedicated-host blocker.
+
 ## Native SwissTrees Observed Final Graphs Independently Traced (2026-10-06)
 
 Previous goal turn makes real progress at327805ac by completing the source-bound
