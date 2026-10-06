@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Direct Post-Review QfO Launches Prepared While23017 Remains Live (2026-10-06)
+
+Previous goal turn is verified wait: same23017 RUNNING1:00:49 with owned
+Python1750977 R/1:00:38 CPU. This continuation reads the authoritative goal/
+newest ledger and revalidates same23017 RUNNING1:00:56; not stopped or blocked.
+Advance genuinely remaining conversion/scoring preparation without reading
+unfinished full-review output or adding a new scientific gate.
+
+[Prepared direct route](FAULT_REVIEWED_NATIVE_QFO_POSTPROCESSING_PREPARATION_20261006.md)
+uses unchanged original converter/assessment CLI, not the failed22445-bound
+canonical32GiB wrappers. Two new static launch batches/prospective protocol
+are outside unchanged920-helper plan. Original ordinary review/conversion/
+scorer/admission gates retain their exact source/semantics. Conversion uses
+a fresh fault-reported directory; assessment/admission retain original fixed
+paths. All producer completion/binding, safe capacity, owned held allocation,
+source/arguments and pushed-submission-before-one-release checks remain.
+No downstream submission, inference rerun or source/endpoint changes.
+
+301 joined tests pass5.75s/29new launch cases/272existing, zero errors/failures/
+skips. Original scientific3.10 runtime versions/import/help checks pass; tests
+use3.12, no installation. All920 frozen native helper sources and15 small
+direct preparation bindings match. Actual receipt9345a9c1/10789bytes pins
+protocol/batches/test XML/sources/23017 submission-release/diagnostic; future
+review/conversion hashes/job IDs remainnull and all launch/admission flagsfalse.
+
+At preparation23017 RUNNING1:05:18; all five downstream namespaces absent.
+Next inspect actual23017 terminal outcome and bound ordinary full review;
+only then new conversion held submission or separately gated native index9.
+Do not require completed QfO accuracy for index9 if original full-review
+history permits the different frozen identity. Original failures preserved.
+Shared-host/unknown contention and full publication requirements remain active.
+
 ## Standalone Diagnostic22734 Completed; Full Review Still Live (2026-10-06)
 
 Previous turn is progress: authoritative prompt pause correction and repository

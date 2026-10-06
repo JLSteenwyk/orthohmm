@@ -1,0 +1,195 @@
+{
+  "accuracy_admitted": false,
+  "accuracy_evaluated": false,
+  "assessment_job_id": null,
+  "automatic_retry": false,
+  "bindings": [
+    {
+      "bytes": 5403,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/FAULT_REVIEWED_NATIVE_QFO_POSTPROCESSING_PROTOCOL_20261006.md",
+      "sha256": "946e54da011c888e5e1265ef4fa5875562011ca79a7bf21e1ae3133c42c9c1fc"
+    },
+    {
+      "bytes": 1625,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_pairs08_20261006.sh",
+      "sha256": "2d4fbcf0c3632d01be9df11bd13c9901abd5df520aa2dec7cdeb95b19d2fa7fd"
+    },
+    {
+      "bytes": 1428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assess08_20261006.sh",
+      "sha256": "73a66282a56ef2dcb1688763484222b6948a6f0c4d605bc6e1c6f6ed9b98f1de"
+    },
+    {
+      "bytes": 5133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_fault_reviewed_native_qfo_batches.py",
+      "sha256": "ca7720e07ad9ff122825c4fedbe171faf7ef0e9922fdbbbc96de09161293780b"
+    },
+    {
+      "bytes": 44613,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_postprocessing_tests_20261006.xml",
+      "sha256": "f4fa298789c29f9be6646ffff07b19e7c03ccccdf6a8bbf658552d4f2e9797dc"
+    },
+    {
+      "bytes": 13935,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_factorial_qfo_pairs.py",
+      "sha256": "472f26a140cf89aed36f8212a31fef7d8f5061204dac2e0ce80c3c7e6746630e"
+    },
+    {
+      "bytes": 11870,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_qfo_assessment.py",
+      "sha256": "ba051efa4b2dd9f72a4464f56a891b4742fa3a1c6999f8b95a65d0805c77dafe"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    },
+    {
+      "bytes": 14181,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_submission_23017.json",
+      "sha256": "6eaa16c42a840db28f05a3aef55c9025e53e5b393e41c947486507868108fd19"
+    },
+    {
+      "bytes": 9065,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_release_23017.json",
+      "sha256": "423548b421d1348232957bb6d5c003edcdb45f0fe7a4e61eec879eb1cf6dbc6d"
+    },
+    {
+      "bytes": 8055,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_terminal_22734.json",
+      "sha256": "d8038dcc69a538c759c6739fe383ec53c86f8055e812240644362a53cfe08aec"
+    },
+    {
+      "bytes": 12031,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_fault_reported_native_review.py",
+      "sha256": "15ddd0d51e6ebc6aa00de754ce26d6a28f7c6dab0f347f23b84a0c06a4720c7d"
+    },
+    {
+      "bytes": 927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reported_native_review_22444_20261006.sh",
+      "sha256": "e578a9c771d6f5d4a754e8b2e8b676ff9cee677a8d11e3b107051e3ce6df6f46"
+    }
+  ],
+  "cell": "p0_c1_r0",
+  "conversion_completed": false,
+  "conversion_job_id": null,
+  "full_review_accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "23017",
+      "--format=JobIDRaw,State,ExitCode,Elapsed",
+      "-P"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobIDRaw|State|ExitCode|Elapsed\n23017|RUNNING|0:0|01:05:18\n23017.batch|RUNNING|0:0|01:05:18\n"
+  },
+  "full_reviewer_job_id": 23017,
+  "future_conversion_sha256": null,
+  "future_terminal_review_sha256": null,
+  "limitations": [
+    "Preparation is not producer completion, independent full-review admission, future namespace freshness or launch authorization.",
+    "Before held submission/release independently inspect actual successful producer accounting, original wrapper/review bindings, safe capacity and exact allocation/source/argument identity under the prospective protocol.",
+    "Original downstream failures and old canonical wrappers remain unchanged; direct original drivers retain all scientific gates.",
+    "Scientific environment import/help checks use Python3.10; the joined unit tests use retained Python3.12, not a production-runtime reproduction.",
+    "All920 native helper-source pins rechecked; no raw inference transitive evidence, scorer execution or full-study restoration is certified here.",
+    "Shared-host postprocessing timing may have unknown, potentially tool-dependent contention; not isolated native performance."
+  ],
+  "native_index": 8,
+  "native_inference_reexecuted": false,
+  "native_job_id": 22444,
+  "next_identity_authorized": false,
+  "observed_utc": "2026-10-06T23:09:28.509540+00:00",
+  "output_namespaces_at_preparation": [
+    {
+      "absent": true,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1"
+    },
+    {
+      "absent": true,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c1_r0"
+    },
+    {
+      "absent": true,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08"
+    },
+    {
+      "absent": true,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08"
+    },
+    {
+      "absent": true,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c1_r0"
+    }
+  ],
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "publication_ready": false,
+  "request": {
+    "bytes": 45929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+    "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+  },
+  "schema": "fault_reviewed_native_qfo_postprocessing_preparation_v1",
+  "scientific_runtime": {
+    "binary": {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    },
+    "invocation": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "packages": {
+      "Bio": "1.87",
+      "numpy": "2.2.6",
+      "psutil": "7.2.2"
+    },
+    "prefix": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "scientific_timings_admitted": false,
+  "status": "prepared_unsubmitted_after_actual_terminal_review_required",
+  "submitted": false,
+  "tests": {
+    "cases": 301,
+    "errors": 0,
+    "existing_contract_cases": 272,
+    "failures": 0,
+    "junit": {
+      "errors": "0",
+      "failures": "0",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "0",
+      "tests": "301",
+      "time": "5.701",
+      "timestamp": "2026-10-06T19:08:04.225621-04:00"
+    },
+    "new_batch_contract_cases": 29,
+    "pytest_wall_s": 5.75,
+    "scope": "bash syntax, argument and allocation refusal, driver/source/envelope routing, existing synthetic native/converter/assessment/reviewer contracts; no production job execution",
+    "skipped": 0
+  },
+  "unchanged_native_helper_sources_checked": 920,
+  "original_cli_help_observations": [
+    {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -B -m benchmark_tools.prepare_native_factorial_qfo_pairs --help",
+      "chunk_id": "6b5535",
+      "wall_time_seconds": 0.260774975,
+      "exit_code": 0,
+      "original_token_count": 242,
+      "output": "usage: prepare_native_factorial_qfo_pairs.py [-h] --request REQUEST\n                                             --terminal-review TERMINAL_REVIEW\n                                             --output-directory\n                                             OUTPUT_DIRECTORY --request-sha256\n                                             REQUEST_SHA256\n                                             --terminal-review-sha256\n                                             TERMINAL_REVIEW_SHA256\n\nConvert terminal-reviewed full-native QfO outputs, never cached admissions.\nR-off uses cross-species cluster cliques; R-on uses resolved native pairs.\nPreparation does not execute endpoint assessment or authorize another\ninference.\n\noptions:\n  -h, --help            show this help message and exit\n  --request REQUEST\n  --terminal-review TERMINAL_REVIEW\n  --output-directory OUTPUT_DIRECTORY\n  --request-sha256 REQUEST_SHA256\n  --terminal-review-sha256 TERMINAL_REVIEW_SHA256\n"
+    },
+    {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -B -m benchmark_tools.run_native_factorial_qfo_assessment --help",
+      "chunk_id": "1f4bcf",
+      "wall_time_seconds": 0.281988728,
+      "exit_code": 0,
+      "original_token_count": 135,
+      "output": "usage: run_native_factorial_qfo_assessment.py [-h] --root ROOT --pairs PAIRS\n                                              --pairs-sha256 PAIRS_SHA256\n                                              --conversion-job CONVERSION_JOB\n                                              [--check-only]\n\nAssess terminal-reviewed full-native QfO pairs in a separate namespace.\n\noptions:\n  -h, --help            show this help message and exit\n  --root ROOT\n  --pairs PAIRS\n  --pairs-sha256 PAIRS_SHA256\n  --conversion-job CONVERSION_JOB\n  --check-only\n"
+    }
+  ]
+}
