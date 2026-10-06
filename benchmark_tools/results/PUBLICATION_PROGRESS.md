@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Original Six-Endpoint Assessment23894 Running (2026-10-06)
+
+Commit80e7edf3 pushed before one actual23894 release; fresh held source/owner/
+resources/digests/capacity and successful23892 accounting pass. Release1a8162d5
+records the real command and resulting scheduler state. Livefd37821d verifies
+same23894 RUNNING1:20/bizon/8CPU/64GiB, owned Python2252935 and Java2253453 in
+job_23894. Ordinary preflight/exact arguments/pairsacaeca12 match; all six
+2020 endpoints selected and scheduled. No score/admission inferred from startup.
+Original Nextflow warning retained. No other jobs/services modified.
+
+[Current checkpoint](NEXT_NATIVE_QFO_LAUNCHES_20261006.md): monitor same23894
+to actual terminal outcome, then use original independent admission driver
+for successfully completed endpoints. Do not restart after observation timeout
+or read partial results as final. Conversion23892 completed and independently
+bound; native23891 terminal binding failure is retained, not a live wait or
+algorithm/timing result. Work on an explicit validated failure disposition and
+prospective scheduler-placement solution before more native launches. Preserve
+frozen science/inputs/counts/limits/accounting, historical sources and failure
+evidence. Do not require quietness, automatically retry9 or force exclusivity.
+Full goal remains active; publication completion and placement fix unproven.
+
 ## Conversion Completed; Assessment Held; Native Binding Failure Retained (2026-10-06)
 
 After held receipts are pushed2ed88240, release23891/23892 exactly once with

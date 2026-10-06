@@ -1,5 +1,30 @@
 # Remaining Native QfO Launches
 
+## Current Assessment Checkpoint
+
+Commit80e7edf3 is pushed before a single actual23894 release.
+[Release record](fault_reviewed_native_qfo_assessment_released_23894.json)
+is9475bytes/1a8162d55d95e75a12d7d8d6618da8b8f18c24048a2eaa8efe84b684a071b5dc.
+Fresh held-source/ownership/resources/digests/capacity and successful23892
+accounting pass at release. No duplicate or automatic retry is submitted.
+[Live observation](fault_reviewed_native_qfo_assessment_live_23894.json)
+is11794bytes/fd37821de59561bbda42bb1f633133b1e42c8115c06fe5444df99eb3dc0324c6:
+actual23894 RUNNING1:20 on bizon/8CPU/64GiB. Owned Python2252935 and
+Nextflow Java2253453 belong tojob_23894; exact assessment and Nextflow
+arguments match preflight/pair digest. All six endpoints are selected and
+scheduled. The startup log is an observation, not a final checksum/admission;
+the original Nextflow version warning remains recorded, not silently changed.
+
+Recheck the same23894 handle before reading terminal results. Only successful
+accounting plus the unchanged independent admission driver can admit accuracy.
+Continue the native placement/failure-disposition work without pausing the full
+goal or waiting for unrelated analyses to stop. Native23891 is already terminal
+and must not be polled as live or resubmitted automatically. Conversion23892
+and all earlier valid scientific work remain reusable. The native placement
+solution is not implemented by this checkpoint. Full publication completion
+is still unproven, particularly remaining native ablations/costs, unresolved
+uncertainty endpoints and full-study reproducibility/claim requirements.
+
 ## Release And Terminal Outcomes
 
 Both held launch records were committed and pushed as2ed88240 before their
