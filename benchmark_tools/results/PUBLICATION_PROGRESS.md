@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Recovered-Science Scoring And Admission Prepared (2026-10-06)
+
+Previous goal turn makes concrete progress at pushed3b320d61: recovered
+conversion22447 completes and all5,113,820 transformed pairs pass independent
+readback. Re-read full active goal and current ledger. Fresh accounting shows
+original22444 RUNNING,22445 dependency-pending and22447 COMPLETED0:0; no
+native restart, duplicated review, cadence census or pair-transform repetition.
+
+New [assessment/admission protocol](RECOVERED_NATIVE_QFO_ASSESSMENT_PROTOCOL_20261006.md)
+provides distinct recovered-science workflows using unchanged six native QfO
+endpoints and existing arithmetic/task/FAS validators. Require completed
+conversion, checked original recovery/FAILED1:0 native outcome, input/ownership/
+prediction/mapping bindings and unused namespaces. Actual read-only preparation
+passes1,645 records without starting scoring or creating scoring directories.
+Prepared3.10 scorer/admitter CLI imports pass;259 joined tests3.24s include78
+new scope/identity/execution/admission/failure cases. No fixture proves a real
+score. Resources remain null and timing admission/eligibility false.
+
+Commit/push validated sources, then submit scoring held on8CPU/64GiB/24h,
+check capacity/source/envelope/owner/unused paths and release once. Queue a
+separately checked independent admission allocation only after actual scorer
+identity is known. Preserve failed attempts and reject synthetic successful
+measurement receipts; later reporting needs an explicit recovered-schema path.
+Original live22444/queued22445 remain the next native handles; no index9 until
+genuine terminal review and fresh gates. Broader uncertainty/scientific/release
+work remains required. Shared-host distortion unknown/tool-dependent; full
+goal active, publication readiness unproven.
+
 ## Recovered Native QfO Conversion Completed And Checked (2026-10-06)
 
 After pushed1c27ba4f preserves failed22446 and restores the historical goal

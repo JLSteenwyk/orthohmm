@@ -71,6 +71,16 @@ hash-bound historical repository goal snapshot. Successful-measurement
 assessment stages above remain intentionally incompatible with the distinct
 recovered conversion; the explicit recovered-science scoring route is next.
 
+The [validated recovered assessment protocol](results/RECOVERED_NATIVE_QFO_ASSESSMENT_PROTOCOL_20261006.md)
+now supplies `benchmark_tools.run_measurement_failed_native_qfo_assessment`
+and `benchmark_tools.admit_measurement_failed_native_qfo_assessment`. Use
+explicit original conversion hashes/job, fresh distinct namespaces and actual
+prepared3.10 invocation. The real read-only preparation passes1,645 bindings;
+259 tests pass, including78 new cases. Preparation is not an executed score.
+This route preserves original FAILED1:0/null/ineligible timing even after
+independent accuracy admission; its output is not interchangeable with a
+successful-measurement admission or the success-only exporter above.
+
 **Preserve the Python invocation path.** The retained review environment is
 `benchmarks/work/native_factorial_review_py310_20261004/bin/python`. Its
 symlink-resolved executable shares binary bytes with the native base
