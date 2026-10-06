@@ -52,6 +52,15 @@ their retained batches as a new attempt; those paths identify original work.
 | Independent admission | `benchmark_tools.admit_native_factorial_qfo_assessment` | Actual assessmentCOMPLETED0:0, original conversion/job bindings, all15 fresh tasks, native endpoint/aggregation arithmetic, FAS sample and provenance; new admission directory |
 | Table export | `benchmark_tools.export_native_qfo_factorial_scores` | Explicit frozen plan/admission hashes; only successful full-native admissions; new JSON/TSV/Markdown destination; no new scoring, admission or job launch |
 
+The separate [recovered-science conversion protocol](results/RECOVERED_NATIVE_QFO_CONVERSION_PROTOCOL_20261006.md)
+handles original22437 after successful scientific recovery22443, while keeping
+its timing failure and null resources intact. Its CLI is
+`benchmark_tools.prepare_measurement_failed_native_qfo_pairs`; it uses a
+distinct schema and participant namespace. Do not forge a successful terminal
+review or pass its results to the unchanged success-only stages above.
+Conversion alone is not a new admitted QfO score; separate recovered-science
+assessment and independent admission remain necessary.
+
 **Preserve the Python invocation path.** The retained review environment is
 `benchmarks/work/native_factorial_review_py310_20261004/bin/python`. Its
 symlink-resolved executable shares binary bytes with the native base

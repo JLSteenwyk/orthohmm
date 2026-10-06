@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Next Frozen Native QfO Identity Launched (2026-10-06)
+
+Previous turn makes progress by reaffirming the active goal's shared-host scope.
+Read the complete updated goal and current ledger; existing held22444 is
+authoritative, not an invitation to duplicate submission. Prepare index8/
+P0C1R0 with the eight reviewed original attempts, including the failed-timing
+scientific recovery. All920 frozen helpers, original history, unused paths,
+scheduler owner/envelope/Comment and safe RAM pass unchanged launch gates.
+Current pre-release RAM is827,240,787,968bytes; not an isolation guarantee.
+
+Release original22444 once; actual live readback follows measurement supervisor
+PID4128232 to native child4128293, affinity0..31/eight search workers, all984,137
+inputs and passed budget/environment handoff. No inference restart or retry.
+Initial observer assertion confuses the supervisor with its child; retained
+and corrected without touching original measurement. Source-bound original
+reviewer22445 is released with afterany22444 and remains dependency-pending,
+2CPU/32GiB/6h/no-requeue. Neither live inference nor queued review is a score
+or timing admission. Retain original22437 failure/ineligible resources.
+
+Prepare the [explicit recovered-science conversion route](
+RECOVERED_NATIVE_QFO_CONVERSION_PROTOCOL_20261006.md), using existing pair
+helpers but distinct schema/namespace and failed original scheduler outcome.
+Preserve initial fixture failures and its127-pass correction; actual semantic
+inspection identifies that recovery uses raw semantics rather than the
+metadata-enriched success report, so align only the new route/fixture.
+Final joined validation passes225 tests3.98s, including57 new recovered-
+conversion cases, existing successful conversion/assessment/recovery and guide
+contracts. Preserve the additional wrong-test-path collection error. Prepared
+3.10 CLI-help and bounded real raw-semantic/recovery binding pass. Commit/push
+validated source and launch receipts before actual recovered conversion;
+no recovered score or synthetic success receipt exists at this checkpoint.
+
+Synchronize repository goal copy to the user's2026-10-06 amendment. Competing
+analyses alone are accepted; distortion remains unknown/tool-dependent.
+Do not demand the DGX, a quiet window, isolated timings or rerun completed
+analyses. All scientific uncertainty/generalization/coverage/release requirements
+remain intact; full goal active, publication readiness unproven.
+
 ## Scientific Outputs Recovered, Timing Failure Retained (2026-10-06)
 
 Committed/pushede0ceae93 supplies the validated distinct route. Actual
