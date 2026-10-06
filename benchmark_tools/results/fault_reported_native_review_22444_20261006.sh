@@ -9,7 +9,11 @@
 #SBATCH --time=06:00:00
 #SBATCH --no-requeue
 set -euo pipefail
-test "$#" -eq 2
+case "$#" in
+    1) ARGS=(--worker-sha256 "$1") ;;
+    2) ARGS=(--diagnostic-sha256 "$1" --worker-sha256 "$2") ;;
+    *) exit 2 ;;
+esac
 ROOT=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm
 cd "$ROOT"
 exec env -u PYTHONHOME -u PYTHONPATH -u PYTHONUSERBASE \
@@ -19,4 +23,4 @@ exec env -u PYTHONHOME -u PYTHONPATH -u PYTHONUSERBASE \
     OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
     "$ROOT/benchmarks/work/native_factorial_review_py310_20261004/bin/python" \
     -B -X faulthandler -m benchmark_tools.run_fault_reported_native_review \
-    --diagnostic-sha256 "$1" --worker-sha256 "$2"
+    "${ARGS[@]}"

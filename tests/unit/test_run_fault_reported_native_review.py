@@ -114,6 +114,12 @@ def attempt(tmp_path, monkeypatch):
         terminal_reviewed=False, resource_measurements_admitted=False, next_identity_authorized=False,
         uncontended_timing=False, checked_files=[], evidence=[])
     diagnostic = store(module.DIAGNOSTIC, output)
+    producer = store(tmp_path / "producer.json", dict(schema="native_reviewer_signal11_diagnostic_submission_v1",
+        job_id=22734, native_job_id=22444, original_failed_reviewer=22445, index=8,
+        request=request, destination=str(module.DIAGNOSTIC.parent), automatic_retry=False,
+        batch=module.record(module.BATCH)))
+    monkeypatch.setattr(module, "DIAGNOSTIC_SUBMISSION", Path(producer["path"]))
+    monkeypatch.setattr(module, "DIAGNOSTIC_SUBMISSION_SHA", producer["sha256"])
     scheduler = dict(JobIDRaw="22734", State="COMPLETED", ExitCode="0:0", NodeList="bizon",
         AllocCPUS="2", ReqMem="32G")
     monkeypatch.setattr(module, "accounting", lambda *a, **kw: ("synthetic", scheduler))
@@ -130,7 +136,8 @@ def attempt(tmp_path, monkeypatch):
         if command[0] == "sacct":
             return SimpleNamespace(stdout="22445|FAILED|0:11\n", stderr="", returncode=0)
         if command[0] == "scontrol":
-            return SimpleNamespace(stdout=raw(controller(digest=diagnostic["sha256"])), stderr="", returncode=0)
+            digest = module.record(module.__file__)["sha256"] if state["mode"] == "observed" else diagnostic["sha256"]
+            return SimpleNamespace(stdout=raw(controller(digest=digest)), stderr="", returncode=0)
         assert command[:6] == [str(module.PYTHON), "-B", "-X", "faulthandler", "-m",
                               "benchmark_tools.review_native_factorial_attempt"]
         assert kwargs["cwd"] == tmp_path and kwargs["check"] is False
@@ -199,3 +206,32 @@ def test_wrong_worker_digest_never_queries_scheduler(attempt):
     with pytest.raises(ValueError, match="wrapper source changed"):
         module.execute(attempt[0]["sha256"], "0" * 64)
     assert not attempt[1]["calls"]
+
+
+def test_future_digest_observed_only_after_successful_producer(attempt):
+    attempt[1]["mode"] = "observed"
+    report = module.read(module.execute(None, module.record(module.__file__)["sha256"]))
+    assert report["diagnostic"] == attempt[0]
+    assert report["diagnostic_digest_mode"] == "observed_after_producer_completion"
+
+
+def test_pending_producer_blocks_before_opening_output(attempt, monkeypatch):
+    attempt[2]["State"] = "RUNNING"
+    real_record = module.record
+    opened = []
+
+    def observed(path):
+        opened.append(Path(path))
+        return real_record(path)
+
+    monkeypatch.setattr(module, "record", observed)
+    with pytest.raises(ValueError, match="successful original diagnostic"):
+        module.execute(None, real_record(module.__file__)["sha256"])
+    assert module.DIAGNOSTIC not in opened and not attempt[1]["calls"]
+
+
+def test_wrong_producer_binding_blocks_output_and_execution(attempt, monkeypatch):
+    monkeypatch.setattr(module, "DIAGNOSTIC_SUBMISSION_SHA", "0" * 64)
+    with pytest.raises(ValueError, match="submission changed"):
+        module.execute(None, module.record(module.__file__)["sha256"])
+    assert not attempt[1]["calls"] and not module.CONTROL.exists()

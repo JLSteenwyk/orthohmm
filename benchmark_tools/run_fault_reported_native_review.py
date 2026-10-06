@@ -29,6 +29,8 @@ REVIEWER_SHA = "63e7d7fdda52afa7a36eecd89492a2684e8310260febbfb5adf6d23f88fd26de
 VALIDATOR = ROOT / "benchmark_tools/validate_native_factorial_outputs.py"
 VALIDATOR_SHA = "3357637503f35238f654edea5c4c12bd293f8d20908c141421a2d40278af7c8d"
 DIAGNOSTIC = ROOT / "benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1/outputs.json"
+DIAGNOSTIC_SUBMISSION = ROOT / "benchmark_tools/results/native_review_sigsegv_submission_22734.json"
+DIAGNOSTIC_SUBMISSION_SHA = "4f1df72adca42257ec48d8b3585a4e1f4f462d6aefb46098fd913df5c9db4d14"
 PYTHON = ROOT / "benchmarks/work/native_factorial_review_py310_20261004/bin/python"
 BATCH = ROOT / "benchmark_tools/results/fault_reported_native_review_22444_20261006.sh"
 CONTROL = ROOT / "benchmarks/work/native_factorial_fault_reported_review_22444_v1"
@@ -36,12 +38,16 @@ DESTINATION = ROOT / "benchmarks/work/native_factorial_terminal_review_22444_fau
 MEMORY = 128 * 2**30
 
 
-def diagnostic_gate(output, scheduler, request_ref, plan_ref):
+def diagnostic_scheduler_gate(scheduler):
     require(scheduler.get("JobIDRaw") == "22734" and scheduler.get("State") == "COMPLETED"
         and scheduler.get("ExitCode") == "0:0" and scheduler.get("NodeList") == "bizon"
         and scheduler.get("AllocCPUS") == "2"
         and scheduler.get("ReqMem") in {"32G", "32Gn", "32768M", "32768Mn"},
         "Require successful original diagnostic in its declared envelope")
+
+
+def diagnostic_gate(output, scheduler, request_ref, plan_ref):
+    diagnostic_scheduler_gate(scheduler)
     require(output.get("schema") == "native_factorial_output_review_v1"
         and output.get("status") == "native_outputs_validated" and output.get("job_id") == 22444
         and type(output.get("index")) is int and output["index"] == 8
@@ -77,14 +83,26 @@ def execute(diagnostic_sha256, worker_sha256):
     request_ref = record(REQUEST)
     require(request_ref["sha256"] == REQUEST_SHA and record(REVIEWER)["sha256"] == REVIEWER_SHA
         and record(VALIDATOR)["sha256"] == VALIDATOR_SHA, "Original review/request sources changed")
-    diagnostic_ref = record(DIAGNOSTIC)
-    require(diagnostic_ref["sha256"] == diagnostic_sha256, "Diagnostic result digest differs")
     request = read(request_ref)
     plan = read(request["plan"])
     run = validate_plan(plan)[8]
     validate_request(request, request["plan"], 22444)
     require(run["cell"] == "p0_c1_r0", "Native cell differs")
     text, scheduler = accounting(22734, include_memory=True)
+    diagnostic_scheduler_gate(scheduler)
+    producer_ref = record(DIAGNOSTIC_SUBMISSION)
+    require(producer_ref["sha256"] == DIAGNOSTIC_SUBMISSION_SHA, "Original diagnostic submission changed")
+    producer = read(producer_ref)
+    require(producer.get("schema") == "native_reviewer_signal11_diagnostic_submission_v1"
+        and producer.get("job_id") == 22734 and producer.get("native_job_id") == 22444
+        and producer.get("original_failed_reviewer") == 22445 and producer.get("index") == 8
+        and producer.get("request") == request_ref and producer.get("destination") == str(DIAGNOSTIC.parent)
+        and producer.get("automatic_retry") is False, "Diagnostic producer identity differs")
+    check(producer["batch"])
+    # Observe a future digest only after the pinned producer is terminal and successful.
+    diagnostic_ref = record(DIAGNOSTIC)
+    require(diagnostic_sha256 is None or diagnostic_ref["sha256"] == diagnostic_sha256,
+        "Diagnostic result digest differs")
     diagnostic = read(diagnostic_ref)
     diagnostic_gate(diagnostic, scheduler, request_ref, request["plan"])
     failure_command = ["sacct", "-j", "22445", "--parsable2", "--noheader", "--format=JobIDRaw,State,ExitCode"]
@@ -93,7 +111,8 @@ def execute(diagnostic_sha256, worker_sha256):
     original = ROOT / "benchmarks/work/native_factorial_terminal_review_22444"
     require(not (original / "review.json").exists() and not (original / "failure.json").exists(),
         "Original failed-review namespace differs")
-    refs = [source, request_ref, request["plan"], diagnostic_ref, record(REVIEWER), record(VALIDATOR),
+    refs = [source, record(BATCH), request_ref, request["plan"], diagnostic_ref, producer_ref, producer["batch"],
+        record(REVIEWER), record(VALIDATOR),
         *diagnostic["checked_files"], *diagnostic["evidence"], *plan["helper_sources"], *plan["evidence"]]
     for ref in refs:
         check(ref)
@@ -102,7 +121,7 @@ def execute(diagnostic_sha256, worker_sha256):
     require(os.environ.get("SLURM_CPUS_PER_TASK") == "2", "Require scheduled full review")
     query = ["scontrol", "show", "job", str(job), "--oneliner"]
     observed = subprocess.run(query, capture_output=True, text=True, check=True, timeout=5)
-    allocation = allocation_gate(observed.stdout, job, diagnostic_sha256)
+    allocation = allocation_gate(observed.stdout, job, worker_sha256 if diagnostic_sha256 is None else diagnostic_sha256)
     raw_meminfo = Path("/proc/meminfo").read_text()
     capacity = available_memory(raw_meminfo)
     require(capacity >= MEMORY, "Unsafe full-review available memory")
@@ -113,7 +132,9 @@ def execute(diagnostic_sha256, worker_sha256):
     command = [str(PYTHON), "-B", "-X", "faulthandler", "-m", "benchmark_tools.review_native_factorial_attempt",
         "--request", str(REQUEST), "--request-sha256", REQUEST_SHA, "--output-directory", str(DESTINATION)]
     report = dict(schema="fault_reported_native_factorial_review_attempt_v1", status="running_original_full_review",
-        source=source, diagnostic=diagnostic_ref, diagnostic_accounting=text, diagnostic_scheduler=scheduler,
+        source=source, diagnostic=diagnostic_ref, diagnostic_submission=producer_ref,
+        diagnostic_digest_mode="observed_after_producer_completion" if diagnostic_sha256 is None else "supplied_after_producer_completion",
+        diagnostic_accounting=text, diagnostic_scheduler=scheduler,
         job_id=job, native_job_id=22444, failed_reviewer_job_id=22445, request=request_ref, plan=request["plan"],
         reviewer=record(REVIEWER), command=command, destination=str(DESTINATION), runtime=runtime,
         scheduler=dict(command=query, stdout=observed.stdout, stderr=observed.stderr, fields=allocation),
@@ -157,7 +178,8 @@ def execute(diagnostic_sha256, worker_sha256):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--diagnostic-sha256", required=True)
+    parser.add_argument("--diagnostic-sha256",
+        help="Optional known digest; otherwise observe it only after successful producer completion")
     parser.add_argument("--worker-sha256", required=True)
     args = parser.parse_args()
     print(json.dumps(execute(args.diagnostic_sha256, args.worker_sha256), sort_keys=True))
