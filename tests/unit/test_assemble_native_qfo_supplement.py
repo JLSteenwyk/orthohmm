@@ -24,7 +24,7 @@ def reports(tmp_path):
     rows += [dict(index=i, cell="missing" + str(i), accuracy_admitted=False,
         scores={name: None for name in module.ENDPOINTS}) for i in range(8, 13)]
     data["snapshot"].update(rows=rows, new_scoring_or_admission=False, recovered_inference_resources_admitted=False)
-    data["intervals"].update(new_bootstrap_draws=False, replicates_reused=100000, seed_reused=20260922,
+    data["intervals"].update(new_bootstrap_draws=0, replicates_reused=100000, seed_reused=20260922,
         multiplicity_endpoints=42, families=["f" + str(i) for i in range(18)], contrasts=[dict(name="R_at_P0_C0",
             status="native_records_matched", metrics={name: dict(difference=.1, bonferroni_percentile_ci=[-.1, .3],
                 family_wins=10, family_ties=3, family_losses=5) for name in ("F1", "PPV", "TPR")})])
@@ -192,3 +192,11 @@ def test_table_arithmetic_and_no_family_f1_averaging(reports):
     assert values["swiss_intervals"][1][0] == ["F1", 10., -10., 30., 10, 3, 5]
     assert values["graph_support"][1][0] == ["p0_c0_r0", "TP", 1, 0, 0]
     assert len(values["swiss_transitions"][1]) == 3
+
+
+@pytest.mark.parametrize("value", (False, 0., -1))
+def test_draw_count_is_integer_zero_not_a_boolean(reports, value):
+    data, refs, _ = reports
+    data["intervals"]["new_bootstrap_draws"] = value
+    with pytest.raises(ValueError, match="retained uncertainty protocol"):
+        module.validate(data, refs)

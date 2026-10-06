@@ -78,7 +78,8 @@ def validate(data, refs):
         require(row.get("accuracy_admitted") is False and all(v is None for v in row["scores"].values()),
             "Missing identity has a supplied score")
     intervals = data["intervals"]
-    require(intervals["new_bootstrap_draws"] is False and intervals["replicates_reused"] == 100000
+    require(type(intervals["new_bootstrap_draws"]) is int and intervals["new_bootstrap_draws"] == 0
+        and intervals["replicates_reused"] == 100000
         and intervals["seed_reused"] == 20260922 and intervals["multiplicity_endpoints"] == 42
         and len(intervals["families"]) == 18, "Changed retained uncertainty protocol")
     matches = [c for c in intervals["contrasts"] if c["name"] == "R_at_P0_C0"]
