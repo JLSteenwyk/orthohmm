@@ -1,0 +1,184 @@
+{
+  "automatic_retry": false,
+  "available_disk_bytes": 10316398379008,
+  "available_memory_bytes": 645655040000,
+  "batch": {
+    "bytes": 1164,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_diagnostic_20261006.sh",
+    "sha256": "1f75aa2a8719adbdff634835dc4b264261700120ce383348fa4519dd10049172"
+  },
+  "crash_location": {
+    "command": [
+      "addr2line",
+      "-f",
+      "-e",
+      "/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python",
+      "0x53ea83"
+    ],
+    "root_cause_established": false,
+    "stderr": "",
+    "stdout": "_Py_INCREF\n/usr/local/src/conda/python-3.10.13/Include/object.h:472\n"
+  },
+  "destination": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1",
+  "failed_downstream_gates": [
+    {
+      "error": "Requested job is not uniquely confirmed COMPLETED with exit 0:0",
+      "reference": {
+        "bytes": 2135,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_conversion_gate_22444/results.json",
+        "sha256": "6a7e755cef0f2c60448d5ea7ba4d1ae05af82df726f973cd8b0bc954252c6e07"
+      },
+      "status": "review_gated_native_qfo_conversion_failed_retained"
+    },
+    {
+      "error": "Requested job is not uniquely confirmed COMPLETED with exit 0:0",
+      "reference": {
+        "bytes": 2357,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_assessment_gate_22444/results.json",
+        "sha256": "4ab0da7fa9ceaf5352c2611dcc7f4b9edd4651443417c4898a5b965aca3393f3"
+      },
+      "status": "conversion_gated_native_qfo_assessment_failed_retained"
+    },
+    {
+      "error": "Requested job is not uniquely confirmed COMPLETED with exit 0:0",
+      "reference": {
+        "bytes": 2331,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_admission_gate_22444/results.json",
+        "sha256": "3d4ae0d2eaa2d071202c784357ca5ae22b07032c2b5910a8f2c26bffb3f78dda"
+      },
+      "status": "assessment_gated_native_qfo_admission_failed_retained"
+    }
+  ],
+  "helper_sources_checked": 920,
+  "index": 8,
+  "kernel": {
+    "command": [
+      "journalctl",
+      "-k",
+      "--since",
+      "2026-10-06 15:20:00",
+      "--until",
+      "2026-10-06 15:21:00",
+      "--no-pager"
+    ],
+    "filter": "python[818632] and segfault",
+    "selected_lines": [
+      "Oct 06 15:20:23 bizon kernel: python[818632]: segfault at 768da0566fb0 ip 000000000053ea83 sp 00007ffd05263340 error 6 in python[41f000+1fb000] likely on CPU 96 (core 0, socket 0)"
+    ]
+  },
+  "native_inference_reexecuted": false,
+  "native_job_id": 22444,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791320924799288137,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,subprocess,sys,time,shutil\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read,validate_plan,validate_request,available_memory\nrequest=record(ROOT/\"benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json\")\nassert request[\"sha256\"]==\"35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a\"\nreq=read(request);plan=read(req[\"plan\"]);run=validate_plan(plan)[8];validate_request(req,req[\"plan\"],22444)\nassert run[\"cell\"]==\"p0_c1_r0\"\nfor ref in [request,req[\"plan\"],*plan[\"helper_sources\"],*plan[\"evidence\"]]:check(ref)\nreview=ROOT/\"benchmarks/work/native_factorial_terminal_review_22444\"\nassert not (review/\"review.json\").exists() and not (review/\"failure.json\").exists()\ncmd=[\"sacct\",\"-j\",\"22444,22445,22450,22451,22452\",\"--format=JobID,State,ExitCode,Elapsed,Start,End,NodeList,AllocCPUS,ReqMem\",\"-P\"]\nscheduler=subprocess.run(cmd,capture_output=True,text=True,check=True)\nrows={r.split(\"|\")[0]:r.split(\"|\") for r in scheduler.stdout.splitlines()[1:]}\nassert rows[\"22444\"][1:3]==[\"COMPLETED\",\"0:0\"] and rows[\"22445\"][1:3]==[\"FAILED\",\"0:11\"]\nassert all(rows[str(j)][1:3]==[\"FAILED\",\"1:0\"] for j in (22450,22451,22452))\nlogs=[record(ROOT/f\"benchmarks/work/native_factorial_launch_20261004/{name}_{job}.{ext}\") for name,job in [(\"review08\",22445),(\"convert08\",22450),(\"assess08\",22451),(\"admit08\",22452)] for ext in (\"out\",\"err\")]\nintermediates=[record(p) for p in sorted(review.iterdir())];assert {Path(r[\"path\"]).name for r in intermediates}=={\"scheduler.json\",\"runtime.json\",\"resource_replay.json\",\"resources.json\",\"environment.json\"}\ngates=[]\nfor kind in (\"conversion\",\"assessment\",\"admission\"):\n    ref=record(ROOT/f\"benchmarks/work/native_factorial_qfo_{kind}_gate_22444/results.json\")\n    item=read(ref);assert \"failed\" in item[\"status\"] and item[\"automatic_retry\"] is False\n    gates.append(dict(reference=ref,status=item[\"status\"],error=item[\"error\"]))\nkcmd=[\"journalctl\",\"-k\",\"--since\",\"2026-10-06 15:20:00\",\"--until\",\"2026-10-06 15:21:00\",\"--no-pager\"]\nk=subprocess.run(kcmd,capture_output=True,text=True,check=True)\nlines=[line for line in k.stdout.splitlines() if \"python[818632]\" in line and \"segfault\" in line];assert len(lines)==1\nacmd=[\"addr2line\",\"-f\",\"-e\",\"/tmp/orthohmm-base-reconstruction-20260927/python-runtime/bin/python\",\"0x53ea83\"]\na=subprocess.run(acmd,capture_output=True,text=True,check=True)\nbatch=record(ROOT/\"benchmark_tools/results/native_review_sigsegv_diagnostic_20261006.sh\")\nsubprocess.run([\"bash\",\"-n\",batch[\"path\"]],check=True)\ndest=ROOT/\"benchmarks/work/native_review_sigsegv_diagnostic_20261006_v1\";assert not dest.exists() and not dest.is_symlink()\npython=ROOT/\"benchmarks/work/native_factorial_review_py310_20261004/bin/python\"\nip=subprocess.run([str(python),\"-B\",\"-X\",\"faulthandler\",\"-c\",\"import sys,Bio,numpy,psutil; print(sys.executable,Bio.__version__,numpy.__version__,psutil.__version__)\"],capture_output=True,text=True,check=True)\nassert ip.stdout.split()==[str(python),\"1.87\",\"2.2.6\",\"7.2.2\"]\nassert record(python)[\"sha256\"]==\"8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b\"\nmem=Path(\"/proc/meminfo\").read_text();capacity=available_memory(mem);assert capacity>=32*2**30\nout=ROOT/\"benchmark_tools/results/native_review_sigsegv_observation_20261006.json\";assert not out.exists()\nsave(out,dict(schema=\"native_reviewer_signal11_observation_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),request=request,plan=req[\"plan\"],index=8,native_job_id=22444,reviewer_job_id=22445,scheduler=dict(command=cmd,stdout=scheduler.stdout,stderr=scheduler.stderr),original_logs=logs,original_intermediates=intermediates,failed_downstream_gates=gates,kernel=dict(command=kcmd,selected_lines=lines,filter=\"python[818632] and segfault\"),crash_location=dict(command=acmd,stdout=a.stdout,stderr=a.stderr,root_cause_established=False),protocol=record(ROOT/\"benchmark_tools/results/NATIVE_REVIEW_SIGSEGV_DIAGNOSTIC_PROTOCOL_20261006.md\"),batch=batch,helper_sources_checked=len(plan[\"helper_sources\"]),python_import_check=dict(stdout=ip.stdout,stderr=ip.stderr),available_memory_bytes=capacity,available_disk_bytes=shutil.disk_usage(ROOT).free,raw_meminfo=mem,destination=str(dest),automatic_retry=False,native_inference_reexecuted=False,terminal_review_complete=False,next_identity_authorized=False,scientific_timings_admitted=False,publication_ready=False))\nprint(json.dumps(dict(observation=record(out),available_memory_bytes=capacity,helper_sources_checked=len(plan[\"helper_sources\"]))))\n"
+  ],
+  "original_intermediates": [
+    {
+      "bytes": 509283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444/environment.json",
+      "sha256": "e53285f424de5db53720fcc3ba90a197bad8161e7c3cbe7e09f084ea0fb76678"
+    },
+    {
+      "bytes": 5641600070,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444/resource_replay.json",
+      "sha256": "590d794693420e3ae920f60fd5730c0089c9d07343f3603163bdc446f7da5e21"
+    },
+    {
+      "bytes": 1741439,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444/resources.json",
+      "sha256": "25d31125984b3587fc2ce3f5f66d54f709ac9039641fd18fdf735c3200744f6a"
+    },
+    {
+      "bytes": 5180,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444/runtime.json",
+      "sha256": "fbcd8168fc507f8d603b1b94227e7900cefa8173b4af2037fe6b5ab22ea08949"
+    },
+    {
+      "bytes": 4792,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444/scheduler.json",
+      "sha256": "104af3daf2d8b8765aaeeeaba984f68a802349e19c096c4613e93ab80560f912"
+    }
+  ],
+  "original_logs": [
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review08_22445.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/review08_22445.err",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1307,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/convert08_22450.err",
+      "sha256": "dbcca8e91645c10201c0ac2486518dbce25bfce5d1bfc24432f9b7785e4d2202"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/assess08_22451.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1329,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/assess08_22451.err",
+      "sha256": "64377ae6a4cff15db71bc64d2659f65b0725eeeb584a7814c3a4ce66c3c80249"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/admit08_22452.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1319,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/admit08_22452.err",
+      "sha256": "9a154703e76fb8cc53ed36e2f764721f292d56e0925035a976606f721c3a9dc0"
+    }
+  ],
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "protocol": {
+    "bytes": 3074,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_REVIEW_SIGSEGV_DIAGNOSTIC_PROTOCOL_20261006.md",
+    "sha256": "a1bfa2407cca8d21adfa90df59c6075d0bbf89494bf53b3f6b58637c504ec922"
+  },
+  "publication_ready": false,
+  "python_import_check": {
+    "stderr": "",
+    "stdout": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python 1.87 2.2.6 7.2.2\n"
+  },
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:         4108440 kB\nMemAvailable:   630522500 kB\nBuffers:        20984500 kB\nCached:         564112044 kB\nSwapCached:        13012 kB\nActive:         589733400 kB\nInactive:       398804456 kB\nActive(anon):   384137136 kB\nInactive(anon): 22440228 kB\nActive(file):   205596264 kB\nInactive(file): 376364228 kB\nUnevictable:        4488 kB\nMlocked:             128 kB\nSwapTotal:       4194300 kB\nSwapFree:          25388 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             43496 kB\nWriteback:             0 kB\nAnonPages:      403368824 kB\nMapped:          1296948 kB\nShmem:           3130616 kB\nKReclaimable:   50544360 kB\nSlab:           55578440 kB\nSReclaimable:   50544360 kB\nSUnreclaim:      5034080 kB\nKernelStack:       74064 kB\nPageTables:      1186104 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1058579248 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      955556 kB\nVmallocChunk:          0 kB\nPercpu:           815616 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8884224 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    20522568 kB\nDirectMap2M:    587132928 kB\nDirectMap1G:    465567744 kB\n",
+  "request": {
+    "bytes": 45929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_08_receipt_amended.json",
+    "sha256": "35f8ef9b1d7abc1f574b8e7e3c55bc91c68c9f8f74247a9a816754a41a93fb6a"
+  },
+  "reviewer_job_id": 22445,
+  "scheduler": {
+    "command": [
+      "sacct",
+      "-j",
+      "22444,22445,22450,22451,22452",
+      "--format=JobID,State,ExitCode,Elapsed,Start,End,NodeList,AllocCPUS,ReqMem",
+      "-P"
+    ],
+    "stderr": "",
+    "stdout": "JobID|State|ExitCode|Elapsed|Start|End|NodeList|AllocCPUS|ReqMem\n22444|COMPLETED|0:0|11:42:59|2026-10-06T03:06:02|2026-10-06T14:49:01|bizon|64|128G\n22444.batch|COMPLETED|0:0|11:42:59|2026-10-06T03:06:02|2026-10-06T14:49:01|bizon|64|\n22444.0|COMPLETED|0:0|11:18:09|2026-10-06T03:06:54|2026-10-06T14:25:03|bizon|64|\n22445|FAILED|0:11|00:31:25|2026-10-06T14:49:01|2026-10-06T15:20:26|bizon|2|32G\n22445.batch|CANCELLED|0:11|00:31:25|2026-10-06T14:49:01|2026-10-06T15:20:26|bizon|2|\n22450|FAILED|1:0|00:00:01|2026-10-06T15:20:26|2026-10-06T15:20:27|bizon|2|32G\n22450.batch|FAILED|1:0|00:00:01|2026-10-06T15:20:26|2026-10-06T15:20:27|bizon|2|\n22451|FAILED|1:0|00:00:00|2026-10-06T15:20:29|2026-10-06T15:20:29|bizon|8|64G\n22451.batch|FAILED|1:0|00:00:00|2026-10-06T15:20:29|2026-10-06T15:20:29|bizon|8|\n22452|FAILED|1:0|00:00:01|2026-10-06T15:20:32|2026-10-06T15:20:33|bizon|2|32G\n22452.batch|FAILED|1:0|00:00:01|2026-10-06T15:20:32|2026-10-06T15:20:33|bizon|2|\n"
+  },
+  "schema": "native_reviewer_signal11_observation_v1",
+  "scientific_timings_admitted": false,
+  "terminal_review_complete": false
+}
