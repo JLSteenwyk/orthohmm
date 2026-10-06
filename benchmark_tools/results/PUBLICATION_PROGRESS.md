@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native Fragment-Annotation Pair Explanation Tested (2026-10-06)
+
+Previous goal turn is a verified wait: same original22444 live10:31:10,
+four original downstream stages pending; no completed inventory repeated.
+This turn reads the full prompt/newest ledger and verifies22444 live10:31:31.
+Continue full scope with [new native fragment-pair evidence](NATIVE_QFO_FRAGMENT_PAIR_RESULT_20261006.md),
+not another status-only turn, historical interval transfer or method tuning.
+
+Protocolb1370417 and source/tests84cd61b1 pushed before actual computation.
+119 joined tests pass3.84s/27new cases, no failures/errors/skips. Actual primary
+Counter and independent SQLite executions both succeed. Full10,765-reference-
+relation ledger/21,530 raw rows plus563 original historical entries/5,759,359
+bytes re-read and hash/identity/annotation checked. All96 transitions/48
+marginals/six summaries/rates agree; Bio.SwissProt1.87 parser shared and disclosed.
+Prior history selection/input-consumption admission retained,1,209 other
+acquisition/source record identities inherited, not newly rechecked.
+
+All334 removed TPs have two historically matched unflagged endpoints. All42
+R0 TPs involving positive endpoints retained; of1,689 removed FPs,35 involve
+positive endpoints and1,654 do not. Positive family does not label every pair.
+Baseline-only14later entries move557relations to missing (121R0TP/11lost);
+the9,681 remaining unflagged relations contain2,960R0TP/323lost. Positive bin
+unchanged. Zero denominators null; no pair-IID inference, completeness proof
+or causal explanation. This counters the recorded-positive-endpoint explanation
+for TP losses, not the possibility of unannotated biological fragments.
+
+Original reviewPython3.10; independent-I-B reader uses sharedBio, not-S/stdlib-
+only. Primary1.17s62,976KiB/reader1.17s44,544KiB,exit0/zero swaps. Shared-host
+postprocessing only, unknown/tool-dependent contention, near-full swap noted.
+No environment install, unrelatedwork modification, inference restart or
+unfinished output read. FailedR1 timing stays ineligible; historical documents/
+supplement/archive/frozen protocol bytes unchanged.
+
+Latest original22444 RUNNING10:45:44; downstream22445/22450/22451/22452 pending.
+Await actual original terminal/production gates before nextnativeidentity.
+Missing nativecells/matched search/interactions, broader justified uncertainty/
+generalization/error strata, TreeFam/provenance and manuscript/archive/release
+scope remain open; full goal active, publication completion unproven.
+
 ## Native Domain-Bin Error Evidence Completed On Resume (2026-10-06)
 
 Previous goal turn `2a016630` makes administrative progress by updating the
