@@ -1,5 +1,22 @@
 # Shared-Host Authorization Reaffirmed
 
+## Latest Prompt-Update Handoff
+
+The latest user request reaffirms proceeding despite competing analyses and
+resuming the goal afterward. The authoritative attachment already contains
+this amendment; no scientific settings or historical prompt bytes need change.
+Pause agent goal execution after this administrative handoff until the user
+resumes it. Leave all existing running and queued analyses unchanged. On
+resumption, check safe capacity and accounting, not a quiet-host requirement.
+
+Use this disclosure in timing tables, figures, Methods and limitations:
+"Timing measurements were collected on a shared Threadripper while other
+analyses were running. Competition for CPU, memory bandwidth and I/O may have
+affected elapsed times, with an unknown and potentially tool-dependent impact.
+These are observed shared-host timings, not estimates of isolated performance."
+
+## Retained Amendment History
+
 The user authorizes proceeding on the shared Threadripper despite competing
 analyses, with safe capacity and valid accounting. A dedicated host, DGX or
 quiet window is not required. Reuse valid completed runs and execute only

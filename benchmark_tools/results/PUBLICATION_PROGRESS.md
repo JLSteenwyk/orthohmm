@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Shared-Host Prompt Handoff Reaffirmed (2026-10-06)
+
+Latest user request is an administrative goal-prompt update, with execution to
+resume afterward. Read the authoritative attachment and verify it already
+authorizes remaining work on the shared Threadripper despite contention, with
+safe capacity and valid accounting. Record the renewed handoff in
+[the shared-host amendment](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+
+Disclose unknown, potentially tool-dependent CPU/memory-bandwidth/I/O effects
+in timing tables, figures, Methods and limitations. Do not assume slight
+distortion, infer isolated speed rankings, require a dedicated host or repeat
+valid completed runs just because other analyses were active. All scientific,
+provenance and failure-handling requirements remain intact.
+
+This update does not launch, restart, cancel or modify any analysis or service,
+and does not change the hash-bound historical publication prompt or helper
+plan. Pause agent goal execution after this handoff until the user resumes it;
+already-running and queued jobs continue unchanged. Full completion remains
+unproven; on resume verify fresh job state before continuing remaining work.
+
 ## Native Duplication Projection Privately Restored And Replayed (2026-10-06)
 
 Previous goal turn is a verified wait on live22444 postflight, not a blocker.
