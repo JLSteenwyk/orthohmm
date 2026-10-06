@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Original Native QfO 22437 Measurement Failure Diagnosed (2026-10-06)
+
+The previous goal turn was a verified wait on original22437. Fresh scheduler
+state now reports original native step COMPLETED0:0/12:55:21, enclosing
+allocation FAILED1:0/13:04:30 and original reviewer22440 FAILED1:0/00:00:34.
+Original parent PID265470 is absent after terminal completion; do not infer
+a need to restart. The scientific metrics and native receipt report complete/
+completed-pending-output-review, but predictions are not yet independently
+validated or scored. Preserve all outcomes separately.
+
+[Read-only diagnosis](NATIVE_QFO_MEASUREMENT_FAILURE_22437_20261006.md) scans
+all46,511 original points once:9,991,918,809bytes/46,510 intervals. Unchanged
+interval API rejects exactly23210->23211 (1.6594024915s) and23211->23212
+(0.3398767975s), retaining the0.5..1.5s bounds. No other interval-API rejection
+occurs. Original finalization fails on cadence before creating lineage/root-
+context reports; original reviewer completes runtime checks then fails on
+the absent lineage report. Retained pressure review separately rejects one
+1.659820477s cadence interval. Ordinary background contention remains
+accepted, but invalid measurement evidence is not admitted or corrected.
+
+All920 frozen helper files still match. New diagnosis/test sources are outside
+that frozen set.25 joined tests pass0.63s, including10 new audit cases; retain
+the initial new-test collection/import error. No scientific inference,
+scoring, FAS sampling, bootstrap or original reviewer is reexecuted. Original
+receipts/raw observations are untouched; resource replay/output validation/
+timing admission/successor authorization remain false, primary resources null.
+
+Next: separately review scientific outputs and explicitly classify/dispose
+the terminal measurement failure, reusing bound runtime evidence without
+fabricating missing reports. Only a valid reviewed disposition plus fresh
+launch gates may permit index8; current diagnosis does not authorize it.
+Existing admitted P0C0R0 scores and all earlier results remain unchanged.
+The full goal is active, not blocked by a live wait or completed merely by
+this diagnosis. Publication-readiness requirements remain unproven.
+
 ## Agent Observation Restored Without Native Restart (2026-10-05)
 
 Three consecutive goal turns could not read the goal or query jobs because

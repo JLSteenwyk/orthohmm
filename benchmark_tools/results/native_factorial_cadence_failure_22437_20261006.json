@@ -1,0 +1,269 @@
+{
+  "automatic_retry": false,
+  "cell": "p0_c0_r1",
+  "census": {
+    "failure_counts": {
+      "Missing or irregular observation interval": 2
+    },
+    "failures": [
+      {
+        "error": "Missing or irregular observation interval",
+        "error_type": "ValueError",
+        "left_index": 23210,
+        "left_native_read_ns": [
+          891474634256184,
+          891474634333382
+        ],
+        "right_index": 23211,
+        "right_native_read_ns": [
+          891476293659257,
+          891476293735292
+        ],
+        "wall_s": 1.6594024915
+      },
+      {
+        "error": "Missing or irregular observation interval",
+        "error_type": "ValueError",
+        "left_index": 23211,
+        "left_native_read_ns": [
+          891476293659257,
+          891476293735292
+        ],
+        "right_index": 23212,
+        "right_native_read_ns": [
+          891476633536700,
+          891476633611444
+        ],
+        "wall_s": 0.3398767975
+      }
+    ],
+    "full_resource_replay": false,
+    "intervals": 46510,
+    "maximum_period_s": 1.6594024915,
+    "minimum_period_s": 0.3398767975,
+    "native_outputs_validated": false,
+    "next_identity_authorized": false,
+    "points": 46511,
+    "scientific_timings_admitted": false,
+    "unchanged_cadence_bounds_s": [
+      0.5,
+      1.5
+    ]
+  },
+  "evidence": [
+    {
+      "bytes": 43782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json",
+      "sha256": "1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 1514,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22437/failure.json",
+      "sha256": "2a11c748611dd01b3c29b86bf072be9bef5f864fb30e8d6dcd91fba11de81fbb"
+    },
+    {
+      "bytes": 9684,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_factorial_cadence_failure.py",
+      "sha256": "f3a064a3ab5ea0e8a7f3831f049057a8e41dcabfcc77a49355661bf8af7e7594"
+    },
+    {
+      "bytes": 97247,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/sessions/run_07/result.json",
+      "sha256": "8dba22cd856ed9b9c9a44cf44915a394e9b03f7facf6149b4f017afbc24921fa"
+    },
+    {
+      "bytes": 78918,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/verification.json",
+      "sha256": "21610839052f7a87d1a1adcb2bf67badd86577478864e0fbbdf919fcf518bfd7"
+    },
+    {
+      "bytes": 9310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/native_execution.json",
+      "sha256": "0a708cfa4955ef74ebc5f346dbafe03d6bb8af19a05636e3fdbb81b9fb8c1cc5"
+    },
+    {
+      "bytes": 6013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/metrics.json",
+      "sha256": "433ad0e2982092dc0415d29794580893a1505fce9231023e021c6b6e5b4a2604"
+    },
+    {
+      "bytes": 45167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/done.json",
+      "sha256": "e86d797b52ae27aff38656e7bc444aec424b3ee62c3d8dd61188316a541d8829"
+    },
+    {
+      "bytes": 2257,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/report_finalization.json",
+      "sha256": "ffcd812ffa2d2f06e65d7b2de9e17e2cbf4f051a8dca6274fff49ed88b0a2131"
+    },
+    {
+      "bytes": 13309949,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/process_stream_review.json",
+      "sha256": "a0ac2073c8ce7069275d6d589b6cb0b02191e5c5818fce4124013319a43b752d"
+    },
+    {
+      "bytes": 3643,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/native_completion.json",
+      "sha256": "28dd71f6e349b1cb6516323f934dc083279295fde1527bed08d8cf6a7541962c"
+    }
+  ],
+  "frozen_helper_sources_checked": 920,
+  "full_resource_replay": false,
+  "index": 7,
+  "inference_reexecuted": false,
+  "job_id": 22437,
+  "limitations": [
+    "Cadence diagnosis only, not full lineage/affinity/resource or scientific-output admission.",
+    "Successful native completion records do not establish valid scientific outputs or benchmark scores.",
+    "Original failed allocation and review remain failed; absent measurement reports are not synthesized.",
+    "Unchanged interval API retains all rejections; no interpolation, threshold relaxation or timing correction.",
+    "Shared-host contention effects and the cause of the cadence violations remain unknown."
+  ],
+  "missing_measurement_reports": [
+    "lineage_report.json",
+    "root_context_report.json"
+  ],
+  "native_completion_records": {
+    "exit_code": 0,
+    "metric_status": "complete",
+    "status": "native_factorial_completed_pending_output_review",
+    "timed_out": false
+  },
+  "native_outputs_validated": false,
+  "next_identity_authorized": false,
+  "original_receipts_rewritten": false,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "primary_resources": null,
+  "raw_inventory": {
+    "bytes": 9991918809,
+    "encoding": "SHA256 of sorted-key compact JSON path/bytes/sha256 records plus LF in point order",
+    "failing_interval_points": [
+      {
+        "bytes": 211056,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/point_023210.json",
+        "sha256": "09a3a3e02ffc552eabfe0da2c8db9bdcce1da7d4c8d8aa51a7eccfe5b52008c6"
+      },
+      {
+        "bytes": 211056,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/point_023211.json",
+        "sha256": "3b7cb341cf6e22bdca4b139ca8a8f41e4c64859af2e120daa6da71611280ca3f"
+      },
+      {
+        "bytes": 211056,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/point_023212.json",
+        "sha256": "0d8046aa6163947cc5bc198aadfb7144c0cb52031a1c265bc7eb2966950c7304"
+      }
+    ],
+    "first": {
+      "bytes": 184622,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/point_000000.json",
+      "sha256": "4950b494417aa5f5a96e2df36f8c1702bf83959f24734592731a61733694e46e"
+    },
+    "last": {
+      "bytes": 186013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_07/measurement/point_046510.json",
+      "sha256": "ad423af433d0d62d3ae50e3075d02b42f01f961e082d8f32e1a33f20af599de6"
+    },
+    "ordered_record_digest_sha256": "0c81b6de2bd8f6a75b317215f4f16124db0a0edaade929ccfe36ba1fad7ab0ab",
+    "points": 46511
+  },
+  "request": {
+    "bytes": 43782,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_07_receipt_amended.json",
+    "sha256": "1078eb4bb39bd2f068e3faae3df1ca0131c2cf848c333aa0bc18424fe82213c7"
+  },
+  "retained_pressure_review": {
+    "bounds": {
+      "maximum_period_s": 1.5,
+      "some_percent": {
+        "cpu": 100.0,
+        "io": 100.0,
+        "memory": 100.0
+      }
+    },
+    "controlled_workload_verified": false,
+    "diagnostic_threshold_exceedances": {
+      "cpu_pressure_bound_exceeded": 43
+    },
+    "diagnostic_thresholds_satisfied": false,
+    "failures": {
+      "pressure_sample_period_exceeded": 1
+    },
+    "intervals": 46510,
+    "limitations": [
+      "System PSI includes native and foreign work; a failed bound does not identify its cause.",
+      "Non-atomic reads and delayed accounting make midpoint percentages approximate; values are not clipped.",
+      "CPU full is undefined at system scope and is not interpreted.",
+      "Checks do not establish absence of cache, memory-bandwidth or device interference.",
+      "Valid native-interval PSI magnitudes are diagnostic only; they neither exclude a slow method nor certify an uncontended host."
+    ],
+    "maximum_observed_period_s": 1.659820477,
+    "maximum_observed_some_percent": {
+      "cpu": 446.37550736774546,
+      "io": 8.012034941854036,
+      "memory": 25.525201085669828
+    },
+    "native_interval_bracketed": true,
+    "native_pressure_role": "diagnostic_only",
+    "points": 46511,
+    "pressure_thresholds_used_for_eligibility": false,
+    "sampled_pressure_evidence_satisfied": false,
+    "schema": "threadripper_pressure_stream_review_v2",
+    "scientific_timings_admitted": false
+  },
+  "scheduler": {
+    "controller_observation": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "22437",
+        "--oneliner"
+      ],
+      "returncode": 1,
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+      "stdout": ""
+    },
+    "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+    "observation": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "22437",
+        "-n",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+      ],
+      "stderr": "",
+      "stdout": "22437|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-05T13:13:24|2026-10-05T13:15:25|2026-10-06T02:19:55|orthohmm_factorial_cost\n"
+    },
+    "source": "fresh_accounting_after_controller_expiry",
+    "verified": {
+      "AllocCPUS": "64",
+      "End": "2026-10-06T02:19:55",
+      "ExitCode": "1:0",
+      "JobIDRaw": "22437",
+      "JobName": "orthohmm_factorial_cost",
+      "NodeList": "bizon",
+      "Partition": "gpu",
+      "ReqMem": "128G",
+      "Start": "2026-10-05T13:15:25",
+      "State": "FAILED",
+      "Submit": "2026-10-05T13:13:24",
+      "TimelimitRaw": "1560"
+    }
+  },
+  "schema": "native_factorial_cadence_failure_audit_v1",
+  "scientific_timings_admitted": false,
+  "status": "retained_measurement_cadence_failure_reproduced"
+}
