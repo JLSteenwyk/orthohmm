@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Condensed Native-Evidence Manuscript Prepared (2026-10-06)
+
+The preceding user turn confirms the already-amended goal and launches nothing;
+it is no new analytical progress. On resumption, re-read the full goal and
+fresh scheduler: original22444 RUNNING at2:01:13,22445 dependency-pending.
+No completed inference/scoring/accounting audit is restarted. Continue the
+full publication scope while this actual native identity remains live.
+
+[New condensed source](PUBLICATION_MAIN_TEXT_20261006.md) retains all broad
+scientific sections from v3, including all-tool accuracy, simulations/mechanisms,
+biological transfer,27-attempt shared-host resources and limitations. Add six
+fresh native OrthoBench rows/six conditional effects, two admitted native QfO
+rows/one conditional SwissTrees effect, reviewed figure and functional-pair
+composition. Historical versus fresh scope, initial HMM-on status, failed
+timing, unavailable cells, development exposure and unfinished uncertainty
+remain explicit. No original source/PDF/rc4 payload or frozen helper changes.
+
+[Prospective review protocol](NATIVE_MAIN_TEXT_PROTOCOL_20261006.md) records
+89 passing tests5.83s and retained first63-pass/one-failure link-count fixture.
+Replace its arbitrary count with exact old-target preservation and explicit
+native evidence paths; no scientific check is relaxed. New19 source cases
+check actual point/interval/coverage/mean/pair data, historical sections and
+all18 citations. About630GiB memory available for bounded reporting.
+
+Next: commit/push this source milestone, render fresh HTML/PDF, inspect actual
+new table pages and bind a separate review. Old review artifacts do not become
+new renders; executable release/archive integration remains unfinished. Native
+index9 still gated on22444/22445 terminal review. Full goal active; publication
+readiness unproven and timing contention unknown/potentially tool-dependent.
+
 ## Native Functional-Pair Composition Completed And Integrated (2026-10-06)
 
 Prepared source/protocol committed/pushed atfe6fe1af. The real original-Python3.10
