@@ -129,6 +129,13 @@ intervals nor establishes whole-partition or other-endpoint equality. Six
 fresh native cells remain unavailable. The linked command refuses overwrite
 and does not launch inference/scoring or draw another bootstrap sample.
 
+The separate [recovered SwissTrees count protocol](results/RECOVERED_NATIVE_QFO_SWISS_COUNT_PROTOCOL_20261006.md)
+adds `benchmark_tools.audit_recovered_native_qfo_swiss_counts` for the combined
+scientific snapshot. It reads only independently admitted recovered cells,
+preserves failed timing, checks raw reference labels and native count arithmetic,
+and does not recount normal cells or inherit cached intervals.349 joined tests
+pass, including23 new cases. No actual recovered count audit is yet completed.
+
 The old local rc4 archive and35-page review below are preserved snapshots.
 They do not already contain these later native executions, reporting code
 or guide update. No archive/PDF is regenerated merely for a live-job update.

@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Scientific Reporter Pushed And Recovered Family Audit Prepared (2026-10-06)
+
+Previous turn verifies12 guide tests; this continuation re-reads the full active
+goal and confirms22444/22448 RUNNING with22445/22449 dependency-pending.
+Check all920 frozen helper sources and19 plan evidence files unchanged.
+Commit/pushd4e03c12 preserves actual22448/22449 launch receipts and the validated
+combined reporter. No native inference, score execution or expensive resource
+replay is restarted. Leave unrelated dirty sample outputs untouched.
+
+The [new recovered family-count protocol](RECOVERED_NATIVE_QFO_SWISS_COUNT_PROTOCOL_20261006.md)
+uses real independently admitted recovered raw counts, not synthetic successful
+timing receipts.349 joined tests6.54s include23 new cases, with mixed snapshots
+explicitly avoiding normal-cell recounts. Prepared3.10 CLI imports pass. Exact
+reference labels/members, complete18-family universe, native prior/half-relation
+arithmetic and PPV/TPR/F1 are checked. Record actual differences from retained
+counts; do not inherit cached intervals or claim partition equality. Timing
+remains failed/null/ineligible. No actual recovered count audit exists yet.
+
+Current scheduler remains live:22448 at18:12,22444 at43:49; original validators
+remain dependency-pending. A read-onlysstat observation returns nonsensical
+AveCPU `213503982334-14:25:51` and blank MaxRSS for22448.batch. Retain it as
+an unusable scheduler diagnostic, not a valid resource metric or analysis
+failure; QfO scoring runtime is not native inference timing. Do not alter jobs.
+Next: observe terminal22448/22449, independently read back admission and export
+the actual combined score snapshot, then run the recovered-only family audit.
+Observe22444/22445 before index9. Full uncertainty/reporting/release work remains;
+goal active, publication readiness unproven, contention impact unknown.
+
 ## Recovered QfO Scoring Live, Validator Queued And Reporting Prepared (2026-10-06)
 
 Committed/pushed9bdeb160 supplies validated distinct scoring/admission sources.
