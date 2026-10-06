@@ -1,0 +1,26 @@
+{
+  "schema": "native_qfo_supplement_selection_v1",
+  "publication_ready": false,
+  "inputs": {
+    "snapshot": {"path": "benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json", "bytes": 24314, "sha256": "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b"},
+    "intervals": {"path": "benchmark_tools/results/native_qfo_swiss_uncertainty_binding_22449_20261006.json", "bytes": 43525, "sha256": "85673a114b7f7c6e05de5da189c8cbe8d77ec5d1378604dbae7e5902dfd996cc"},
+    "functional": {"path": "benchmark_tools/results/native_qfo_functional_pair_composition_20261006_v1.json", "bytes": 12376, "sha256": "1807b3269518590eb339637cf618f07c99abdd7e547e268fc0fea932b4ddf853"},
+    "functional_reader": {"path": "benchmark_tools/results/native_qfo_functional_pair_sql_readback_20261006.json", "bytes": 4126, "sha256": "db4f3b6771a4627f5ae039c489a63f9fe6e35c2ad47495d971fdfdc81ee63e24"},
+    "transitions": {"path": "benchmark_tools/results/native_qfo_swiss_pair_transitions_20261006_v2.json", "bytes": 28028, "sha256": "fe003f2cbc4285ea56cd80a92b71703b5c9e135ad1c8f244504dcfeab0911b46"},
+    "transitions_reader": {"path": "benchmark_tools/results/native_qfo_swiss_pair_transition_sql_readback_20261006.json", "bytes": 9195, "sha256": "09249d97c6ed3da6c840586552b4f5a72480cc46bbb944bc60124f5382164ffb"},
+    "reconciliation": {"path": "benchmark_tools/results/native_qfo_swiss_reconciliation_trace_20261006_v1.json", "bytes": 15634, "sha256": "53c692cf7dab9affac7b0240cf5191d2530bd4369b66f4165e8acb811391dacb"},
+    "reconciliation_reader": {"path": "benchmark_tools/results/native_qfo_swiss_reconciliation_newick_readback_20261006.json", "bytes": 32260, "sha256": "ee83382000bb48b95323209a197e7edb44de918bad6c6b8a1fbf8a1ea6e38835"},
+    "search": {"path": "benchmark_tools/results/native_qfo_swiss_search_support_20261006_v1.json", "bytes": 1999028, "sha256": "787bde01ffacd60547fb290bdbb1d04242230ed05ce77d25d270227310252d5a"},
+    "search_reader": {"path": "benchmark_tools/results/native_qfo_swiss_search_support_code_readback_20261006.json", "bytes": 8585, "sha256": "8ffc58fe192fa060de4e068161e72b8ab626066446608e5c0011925e62c67ede"},
+    "graph": {"path": "benchmark_tools/results/native_qfo_swiss_graph_support_20261006_v1/report.json", "bytes": 12858109, "sha256": "014455a42df4c60e70025d763e1d7920f842bb55a67b8ac6697100cdda7e9ca0"},
+    "graph_reader": {"path": "benchmark_tools/results/native_qfo_swiss_graph_floyd_readback_20261006.json", "bytes": 14484, "sha256": "5fba0de77a8c609dcb8b872f7972b77c0e4b95e2c5a0a43ef51f68bdc99f760d"},
+    "strata": {"path": "benchmark_tools/results/native_qfo_swiss_sequence_strata_20261006_v1/report.json", "bytes": 31585, "sha256": "4650f614d2fdeebd65cbcbf4999c61c83cc549560d2738bfbb5502f686f660e3"},
+    "strata_reader": {"path": "benchmark_tools/results/native_qfo_swiss_sequence_strata_readback_20261006.json", "bytes": 8718, "sha256": "8d0356bc0e159d204939271578e23a6a5b6efcf6198b75a18c0f3d38e0e67c0a"},
+    "vgnc": {"path": "benchmark_tools/results/native_qfo_vgnc_blocks_20261006_v1/report.json", "bytes": 15722, "sha256": "23cb9fd4b1c2219239ff354c97cd7dab9758667700667f88e8424414184e4c1f"},
+    "vgnc_reader": {"path": "benchmark_tools/results/native_qfo_vgnc_blocks_readback_20261006_v1.json", "bytes": 1638, "sha256": "6eadf57f4f3032bbc3b787c6771824f73f47baae9c643d524b7422709ee94720"},
+    "score_figure": {"path": "benchmark_tools/results/native_qfo_p0c0_figure_20261006_v1/manifest.json", "bytes": 36793, "sha256": "6d21105f36311f2529ee9447d93790c40125f34216be6b0e8daea69aa3180577"},
+    "score_figure_reader": {"path": "benchmark_tools/results/native_qfo_p0c0_figure_readback_20261006.json", "bytes": 1901, "sha256": "57183a46d2faf6b86d36b4b437063ed804093e990be78cadb43f03976b57af96"},
+    "mechanism_figure": {"path": "benchmark_tools/results/native_qfo_swiss_mechanism_figure_20261006_v3/manifest.json", "bytes": 9002, "sha256": "c3e96b8a2aecc8d9926c19875e3a321c4edb1173d522b012301152da137876fe"},
+    "mechanism_figure_reader": {"path": "benchmark_tools/results/native_qfo_swiss_mechanism_figure_readback_20261006_v3.json", "bytes": 10213, "sha256": "51dc6135ddc367c1dff32361f70e22d365c667c417274d0d9f545b35f2d98625"}
+  }
+}
