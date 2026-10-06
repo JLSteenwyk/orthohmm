@@ -3,6 +3,7 @@
 import argparse
 import csv
 from fractions import Fraction
+import gzip
 import json
 from pathlib import Path
 from statistics import median
@@ -28,6 +29,19 @@ PINS = {
     "SWISS_DUPLICATION_FEATURE_PROTOCOL_20260923.md":
         "2bca0f2b2a0c3a5426be268484bab8302b404d66cfdb29c5872afefd41c79b2f",
 }
+IDENTIFIERS_SHA = "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+
+
+def check_memberships(memberships, mapping, identifiers):
+    require(set(mapping["families"]) == set(memberships), "Changed retained family inventory")
+    for family, genes in memberships.items():
+        original = mapping["families"][family]
+        values = [identifiers.get(g) for g in genes]
+        retained = list(original["mapped_labels"].values())
+        require(all(type(v) is int and v > 0 for v in [*values, *retained])
+                and len(set(values)) == len(genes) and set(values) == set(retained)
+                and original["exact_match"] is True and original["mapped_members"] == len(genes),
+                "Native and retained mapped-entry memberships differ")
 
 
 def bins_for(memberships, feature):
@@ -106,15 +120,18 @@ def export(repo, output):
             and refs[3] in feature["checked_inputs"] and refs[4] in feature["checked_inputs"], "Changed admitted feature scope")
     checked.extend([*native["checked_inputs"], native["source"], reader["source"], feature["source"],
                     record(read_raw.__code__.co_filename),
-                    record(root / "NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md")])
+                    record(root / "NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md"),
+                    record(root / "NATIVE_QFO_SWISS_DUPLICATION_ALIAS_AMENDMENT_20261006.md")])
+    identifiers_ref = next(r for r in feature["checked_inputs"] if r["sha256"] == IDENTIFIERS_SHA)
+    checked.append(identifiers_ref)
     for ref in checked:
         check(ref)
     memberships = json.loads(Path(native["strata"]["path"]).read_text())["family_memberships"]
-    require(len(memberships) == 18 and sum(map(len, memberships.values())) == 563
-            and set(mapping["families"]) == set(memberships)
-            and all(sorted(mapping["families"][f]["mapped_labels"]) == sorted(memberships[f])
-                    and mapping["families"][f]["exact_match"] is True for f in memberships),
-            "Native and retained mapped-tree memberships differ")
+    require(len(memberships) == 18 and sum(map(len, memberships.values())) == 563, "Changed native gene universe")
+    with gzip.open(identifiers_ref["path"], "rt") as stream:
+        identifiers = json.load(stream)["mapping"]
+    check_memberships(memberships, mapping, identifiers)
+    del identifiers
     binding = json.loads(Path(native["binding"]["path"]).read_text())
     truth_anchor, cells = None, []
     for cell in CELLS:
@@ -141,6 +158,7 @@ def export(repo, output):
             "Changed fixed bin coverage")
     result = dict(schema="native_qfo_swiss_duplication_strata_v1", source=record(__file__),
                   native=refs[0], native_readback=refs[1], features=refs[2], mapping=refs[3], original_protocol=refs[4],
+                  identifiers=identifiers_ref, membership_agreement="canonical accession/reference-entry sets; retained aliases deduplicated by entry ID",
                   checked_inputs=checked, inherited_feature_inputs=[r for r in feature["checked_inputs"] if r not in checked],
                   original_tree_traversal_repeated=False, memberships=memberships, bins=bins, rows=rows,
                   differences=differences, family_rows=native["family_rows"], cells=cells,

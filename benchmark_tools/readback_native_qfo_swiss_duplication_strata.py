@@ -3,6 +3,7 @@
 import argparse
 import csv
 from functools import cmp_to_key
+import gzip
 import json
 import math
 from pathlib import Path
@@ -15,6 +16,24 @@ from benchmark_tools.readback_native_qfo_swiss_sequence_strata import (
 
 NAMES = ("all", "lower_duplication_fraction", "upper_duplication_fraction", "missing_duplication_fraction")
 FEATURE_SHA = "97b0c4755d6a9df258d5c3f60fc0d5d25f1e5c09c42216c754a245a67d1942ec"
+IDENTIFIERS_SHA = "1c10f6ce5e53ebc3148dde02d16268b225c3c8817c952d1274daa41acbf9eb4d"
+
+
+def check_memberships(memberships, mapping, identifiers):
+    require(set(mapping["families"]) == set(memberships), "Wrong mapped family inventory")
+    for name, genes in memberships.items():
+        original = mapping["families"][name]
+        expected = set()
+        for value in original["mapped_labels"].values():
+            require(type(value) is int and value > 0, "Invalid retained entry ID")
+            expected.add(value)
+        observed = set()
+        for gene in genes:
+            number = identifiers.get(gene)
+            require(type(number) is int and number > 0 and number not in observed, "Unknown, invalid or duplicate entry ID")
+            observed.add(number)
+        require(observed == expected and len(observed) == original["mapped_members"]
+                and original["exact_match"] is True, "Mapped-entry inventory disagrees")
 
 
 def rational_text(n, d):
@@ -95,7 +114,8 @@ def verify(path, digest):
                 "new_accuracy_or_resource_admission", "independent_confirmation", "publication_ready")), "Wrong report scope")
     checked = [report_ref, report["source"], *report["checked_inputs"], *report["outputs"],
                record(Path(__file__).with_name("readback_native_qfo_swiss_sequence_strata.py"))]
-    require(all(ref in checked for ref in (report["features"], report["mapping"], report["native"],
+    require(report["identifiers"]["sha256"] == IDENTIFIERS_SHA
+            and all(ref in checked for ref in (report["features"], report["mapping"], report["native"], report["identifiers"],
                 report["native_readback"], report["original_protocol"])), "Missing supplied identity")
     for ref in checked:
         require(record(ref["path"]) == ref, "Changed supplied evidence")
@@ -103,11 +123,12 @@ def verify(path, digest):
     feature = json.loads(Path(report["features"]["path"]).read_text())
     mapping = json.loads(Path(report["mapping"]["path"]).read_text())
     require(report["family_rows"] == native["family_rows"] and len(report["memberships"]) == 18
-            and sum(map(len, report["memberships"].values())) == 563
-            and set(mapping["families"]) == set(report["memberships"])
-            and all(sorted(mapping["families"][f]["mapped_labels"]) == sorted(genes)
-                    and mapping["families"][f]["exact_match"] is True for f, genes in report["memberships"].items()),
+            and sum(map(len, report["memberships"].values())) == 563,
             "Changed native/mapping inventory")
+    with gzip.open(report["identifiers"]["path"], "rt") as stream:
+        identifiers = json.load(stream)["mapping"]
+    check_memberships(report["memberships"], mapping, identifiers)
+    del identifiers
     require(report["inherited_feature_inputs"] == [r for r in feature["checked_inputs"] if r not in report["checked_inputs"]],
             "Wrong inherited evidence inventory")
     binding = json.loads(Path(native["binding"]["path"]).read_text())

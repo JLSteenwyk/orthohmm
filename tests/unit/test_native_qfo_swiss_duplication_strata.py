@@ -182,3 +182,36 @@ def test_dangling_output_symlink_refused(tmp_path):
     output.symlink_to(tmp_path / "missing", target_is_directory=True)
     with pytest.raises(ValueError, match="Output already exists"):
         export.export(tmp_path / "missing", output)
+
+
+def mapped_panel():
+    return (dict(HOX=["U1", "U2"]),
+            dict(families=dict(HOX=dict(mapped_labels={"ENSEMBL_A": 10, "ENSEMBL_B": 20, "ENSEMBL_ALIAS": 20},
+                                        exact_match=True, mapped_members=2))),
+            dict(U1=10, U2=20))
+
+
+def test_entry_join_preserves_alias_collision_and_distinct_accessions():
+    for function in (export.check_memberships, reader.check_memberships):
+        function(*mapped_panel())
+
+
+@pytest.mark.parametrize("mutation", ["unknown", "wrong", "boolean", "negative", "native_collision",
+                                     "missing_family", "retained_invalid", "count", "status"])
+def test_entry_join_refuses_mismatch_not_just_equal_member_counts(mutation):
+    memberships, mapping, identifiers = mapped_panel()
+    if mutation == "unknown":
+        del identifiers["U1"]
+    elif mutation in ("wrong", "boolean", "negative", "native_collision"):
+        identifiers["U1"] = {"wrong": 30, "boolean": True, "negative": -1, "native_collision": 20}[mutation]
+    elif mutation == "missing_family":
+        mapping["families"] = {}
+    elif mutation == "retained_invalid":
+        mapping["families"]["HOX"]["mapped_labels"]["ENSEMBL_A"] = True
+    elif mutation == "count":
+        mapping["families"]["HOX"]["mapped_members"] = 3
+    else:
+        mapping["families"]["HOX"]["exact_match"] = False
+    for function in (export.check_memberships, reader.check_memberships):
+        with pytest.raises(ValueError):
+            function(memberships, mapping, identifiers)
