@@ -1,0 +1,146 @@
+{
+  "accuracy_admitted": false,
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "available_memory_bytes": 809921286144,
+  "batch": {
+    "bytes": 1428,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assess08_20261006.sh",
+    "sha256": "73a66282a56ef2dcb1688763484222b6948a6f0c4d605bc6e1c6f6ed9b98f1de"
+  },
+  "cell": "p0_c1_r0",
+  "conversion_accounting": {
+    "command": [
+      "sacct",
+      "-X",
+      "-j",
+      "23892",
+      "-n",
+      "-P",
+      "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+    ],
+    "stderr": "",
+    "stdout": "23892|COMPLETED|0:0|2|32G|bizon|gpu|360|2026-10-06T19:45:22|2026-10-06T19:46:48|2026-10-06T19:48:05|ohmm_qfo_fault_review_pairs08\n"
+  },
+  "conversion_job_id": 23892,
+  "free_disk_bytes": 10294959456256,
+  "full_reviewer_job_id": 23017,
+  "independent_conversion_terminal": {
+    "bytes": 51443,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_conversion_terminal_23892.json",
+    "sha256": "d9f080230ac29e712895482bc4fd1b53e513380530bf6a034f0cea10bb9c0183"
+  },
+  "index": 8,
+  "job_id": 23894,
+  "namespaces_checked_absent": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c1_r0",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c1_r0"
+  ],
+  "native_inference_reexecuted": false,
+  "native_job_id": 22444,
+  "observed_unix_ns": 1791330669065399740,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-"
+  ],
+  "original_assessment_check_only": {
+    "command": [
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+      "-B",
+      "-m",
+      "benchmark_tools.run_native_factorial_qfo_assessment",
+      "--root",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "--pairs",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1/results.json",
+      "--pairs-sha256",
+      "acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57",
+      "--conversion-job",
+      "23892",
+      "--check-only"
+    ],
+    "result": {
+      "command": [
+        "/home/bizon/bin/nextflow",
+        "-c",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment.config",
+        "run",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+        "-profile",
+        "singularity",
+        "-ansi-log",
+        "false",
+        "--input",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1/pairs.qfo.tsv",
+        "--participant_id",
+        "ohmm_qfo_full_native_p0_c1_r0",
+        "--event_year",
+        "2020",
+        "--challenges_ids",
+        "GO EC VGNC SwissTrees TreeFam-A FAS",
+        "--goldstandard_dir",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020",
+        "--assess_dir",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data",
+        "--results_dir",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08",
+        "-work-dir",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08"
+      ],
+      "status": "prepared_unrun"
+    },
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\"command\": [\"/home/bizon/bin/nextflow\", \"-c\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment.config\", \"run\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf\", \"-profile\", \"singularity\", \"-ansi-log\", \"false\", \"--input\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1/pairs.qfo.tsv\", \"--participant_id\", \"ohmm_qfo_full_native_p0_c1_r0\", \"--event_year\", \"2020\", \"--challenges_ids\", \"GO EC VGNC SwissTrees TreeFam-A FAS\", \"--goldstandard_dir\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020\", \"--assess_dir\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data\", \"--results_dir\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08\", \"-work-dir\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/nq08\"], \"status\": \"prepared_unrun\"}\n"
+  },
+  "own_queue_precheck": {
+    "command": [
+      "squeue",
+      "--me",
+      "--name=ohmm_qfo_fault_review_assess08",
+      "--noheader",
+      "--format=%i"
+    ],
+    "stderr": "",
+    "stdout": ""
+  },
+  "pairs_manifest": {
+    "bytes": 301170,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1/results.json",
+    "sha256": "acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57"
+  },
+  "preparation": {
+    "bytes": 10789,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_postprocessing_preparation_20261006.json",
+    "sha256": "9345a9c142ad3baf394d4ee07000bc98ea8b236ec5f1f50deec6561fec168670"
+  },
+  "publication_ready": false,
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        93523828 kB\nMemAvailable:   790938756 kB\nBuffers:        22132892 kB\nCached:         629300136 kB\nSwapCached:        13028 kB\nActive:         235756884 kB\nInactive:       657092856 kB\nActive(anon):   222645776 kB\nInactive(anon): 22475680 kB\nActive(file):   13111108 kB\nInactive(file): 634617176 kB\nUnevictable:        4504 kB\nMlocked:             144 kB\nSwapTotal:       4194300 kB\nSwapFree:          25588 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              3148 kB\nWriteback:           180 kB\nAnonPages:      241336124 kB\nMapped:          2593488 kB\nShmem:           3699484 kB\nKReclaimable:   55777436 kB\nSlab:           61087040 kB\nSReclaimable:   55777436 kB\nSUnreclaim:      5309604 kB\nKernelStack:       79312 kB\nPageTables:       910040 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   898236196 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:     1005648 kB\nVmallocChunk:          0 kB\nPercpu:          1181184 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8282112 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    21843528 kB\nDirectMap2M:    590006272 kB\nDirectMap1G:    461373440 kB\n",
+  "released": false,
+  "schema": "fault_reviewed_native_qfo_assessment_held_submission_v1",
+  "source": {
+    "bytes": 11870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native_factorial_qfo_assessment.py",
+    "sha256": "ba051efa4b2dd9f72a4464f56a891b4742fa3a1c6999f8b95a65d0805c77dafe"
+  },
+  "source_commit": "2ed88240971b0846d0083d23e619f09b84484534",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--hold",
+      "--parsable",
+      "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "--comment=acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57",
+      "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_%j.out",
+      "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_%j.err",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assess08_20261006.sh",
+      "acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57",
+      "23892"
+    ],
+    "stderr": "",
+    "stdout": "23894\n"
+  }
+}

@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Conversion Completed; Assessment Held; Native Binding Failure Retained (2026-10-06)
+
+After held receipts are pushed2ed88240, release23891/23892 exactly once with
+fresh actual held ownership/resource/source/capacity checks. Both observed
+RUNNING. Same23892 completes0:0/1:17, no retry. Independently reconstruct
+ownership and scan actual pair coverage/count:11734021 clique pairs covering
+585610/984137 inputs=59.5049%, zero mapping losses. Conversionacaeca12 and
+terminal receiptd9f08023 bind original driver/review/source/pairs/accounting.
+Original assessment --check-only passes frozen2020 six-endpoint command.
+
+[Launch outcomes](NEXT_NATIVE_QFO_LAUNCHES_20261006.md):23891 FAILED1:0/2:17,
+step CANCELLED0:64 because requestedOS CPUs0-31 lie outside actual allocation.
+Original worker never becomes ready, collector writesabort/cleanup gates;
+no native execution/metrics/output. Fresh request/session/wrapper/scheduler/
+920 sources bound in separate diagnosisdb8ce843. Initial observer's incorrect
+cleanup-absence assertion is retained and corrected against original source.
+No ordinary full review, native timing/accuracy or next-prefix authorization
+is invented.137s is allocation elapsed, not inference cost. No native retry.
+
+Continue unaffected work: original assessment23894 held8CPU/64GiB/4h with
+exact source/arguments/comment, successful23892 binding, absent fixed paths
+and safe capacity. Push terminal/held receipts before one verified release;
+then monitor same23894 and independently admit actual endpoint outputs.
+Native remaining identities need explicit failure disposition and validated
+prospective placement handling, not blind fixed-mask launches, altered frozen
+science, exclusivity, interference with unrelated jobs or a quiet-window gate.
+All full publication requirements remain active and unproven.
+
 ## Next Native Identity And Conversion Held (2026-10-06)
 
 Previous goal turn verifies the corrected active prompt but adds no scientific

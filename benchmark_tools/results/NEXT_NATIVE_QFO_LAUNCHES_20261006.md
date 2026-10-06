@@ -1,5 +1,68 @@
 # Remaining Native QfO Launches
 
+## Release And Terminal Outcomes
+
+Both held launch records were committed and pushed as2ed88240 before their
+single releases. [Native release](native_factorial_released_23891.json)
+is8993bytes/3eca50ff5ea0df3b88734a232fce699d436e6f6ffe4c9f4d36b6b83a6e043205.
+[Conversion release](fault_reviewed_native_qfo_conversion_released_23892.json)
+is9138bytes/138b84bbd23fba07dcb766afe1b8feb68537d7bee86438f147d0a3cee5750ac8.
+Actual scheduler observations subsequently confirm both RUNNING on bizon.
+
+Conversion23892 finishesCOMPLETED0:0 in1:17. The separate independent
+[terminal conversion binding](fault_reviewed_native_qfo_conversion_terminal_23892.json)
+is51443bytes/d9f080230ac29e712895482bc4fd1b53e513380530bf6a034f0cea10bb9c0183.
+Original ordinary conversion manifest301170bytes/acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57
+binds the successful producer and original driver, review, inputs and source.
+Fresh independent ownership reconstruction, expected group-clique count and
+actual pair-file coverage scan agree:11734021 pairs,585610/984137 input
+accessions covered, fraction0.595049266514723, zero mapping losses. Original
+assessment --check-only returnsprepared_unrun with the unchanged2020 six
+GO/EC/VGNC/SwissTrees/TreeFam-A/FAS endpoints and original fixed namespaces.
+No endpoint accuracy is admitted by conversion or check-only preparation.
+
+Native23891 finishesFAILED1:0 in2:17; step23891.0 isCANCELLED0:64 at launch.
+[CPU-binding diagnosis](native_factorial_cpu_binding_failure_23891.json)
+is13939bytes/db8ce843bbc710ac2118cbaec4b29b834bb12f38e885908c09bb613811306c70.
+The actual Slurm step log rejects mask0xffffffff because none of requested
+OS CPU IDs0-31 belongs to the allocated step mask. The original collector
+times out waiting for ready.json; its finally block writesgo.json={abort:true}
+and a cleanup release, not a native launch. Ready/done/native log/execution/
+metrics/output artifacts are absent. Session/wrapper/request/terminal binding
+and all920 source bindings pass. The initial independent observer wrongly
+expected cleanup gates absent; that failed observation is retained and the
+corrected check verifies their actual semantics without restarting the job.
+
+This is an infrastructure launch failure, not OrthoHMM algorithm failure or
+insufficient RAM.137 seconds is allocation elapsed time, not native runtime.
+Resources remainnull, native inference did not start, no scientific output can
+be recovered, and this diagnosis does not authorize the next native identity.
+Do not manufacture a successful full review or run the cadence-only recovery
+on this different failure. Preserve this attempt and all previous failures.
+
+Assessment23894 is now held under the prepared original batch,8CPU/64GiB/4h,
+one-node bizon/gpu/no-array/no-requeue/zero-restarts. Its actual arguments and
+comment bind conversionacaeca12 and successful job23892; all four assessment/
+work/scoring/admission paths are absent. Available RAM809936101376bytes and
+free disk10294959443968bytes pass the64GiB/128GiB gates.
+[Held assessment](fault_reviewed_native_qfo_assessment_submission_23894.json)
+is8969bytes/50f641032690abb2d900ba8a363fc743f7a80ed37bff8845917c1632e52cbcfa;
+[pre-release check](fault_reviewed_native_qfo_assessment_pre_release_23894.json)
+is31479bytes/68db990a6ed1c506fb9a81479916a2d39d0479f8e0d898519ccb192487d32fbe.
+Push these records before one fresh verified release. Endpoint execution and
+independent admission remain outstanding. Continue this unaffected work;
+the goal is active, not paused or blocked by the native placement failure.
+
+Remaining native execution needs an explicit validated infrastructure-failure
+disposition and a prospective scheduler-placement solution. Preserve historical
+plan/collector bytes and frozen science/input/run order. Do not launch further
+identities blindly with an unavailable fixed mask, automatically retry9,
+silently change CPU count, force node exclusivity, seek a quiet host or
+disrupt unrelated jobs. Any placement amendment must preserve32 distinct
+physical cores/64 slots/128GiB and defensible CPU/peak-memory accounting, record
+actual placement/topology and any comparability limits, and validate before
+remaining launches. This execution issue is not a DGX or quiet-window gate.
+
 ## Held And Independently Inspected
 
 The preceding goal turn verified the corrected active prompt but did not launch
