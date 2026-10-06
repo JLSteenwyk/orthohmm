@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Native QfO Figure Workflow Prepared (2026-10-06)
+
+Previous turn completes/pushesa9bf24fc: two native accuracy cells and one
+guarded SwissTrees contrast are admitted/reported, with failed timing retained.
+Re-read full goal/latest evidence. Fresh scheduler confirms22444 RUNNING and
+original22445 dependency-pending. No completed score/count/bootstrap/cadence
+analysis or native inference is restarted. Existing other-endpoint uncertainty
+and full publication/release requirements remain.
+
+The [figure protocol](NATIVE_QFO_FIGURE_PROTOCOL_20261006.md) directly consumes
+the actual reports.129 joined tests4.95s include25 new rendering/scope cases;
+fixture pixels and SVG text are checked, not certified as actual provenance.
+Separates F1 from other similarities and retains nominal/42-endpoint-adjusted
+intervals, including F1 zero crossing, without SEM reinterpretation or a new
+aggregate/contrast. Matplotlib3.10.8/Pillow12.3.0 are already installed in the
+retained3.12 environment. No existing frozen helper/runtime source is changed.
+
+Next: commit tested workflow, run the real fresh export, inspect PNG/PDF/text
+and record separate review; integrate caption and bounded claims into current
+working manuscript/checklist without rewriting archived PDF/payload bytes.
+Keep next native identity gated on actual22444/22445 terminal review. Goal
+active and publication readiness unproven; contention effects unknown.
+
 ## Recovered Native QfO Admitted, Exported And SwissTrees Intervals Bound (2026-10-06)
 
 After pushed94163ac3, actual22448 completes0:0/32:09 on8CPU/64GiB and original
