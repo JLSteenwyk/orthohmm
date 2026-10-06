@@ -12,6 +12,20 @@ Native22444 remains live with dependent22445; no next identity is launched.
 The older snapshots and preparation checkpoints below remain historical,
 not current score availability or publication readiness.
 
+The [native P0/C0 figure and separate review](results/NATIVE_QFO_FIGURE_RESULT_20261006.md)
+now display these two cells and the single guarded SwissTrees contrast.
+[Figure reproduction](results/NATIVE_QFO_FIGURE_PROTOCOL_20261006.md) requires
+`benchmark_tools.plot_native_qfo_scientific_scores` with explicit snapshot and
+binding digests, a fresh output directory and `--validation-python` preserving
+the original Python3.10 venv entry point. Rendering uses the existing
+Python3.12 plotting environment, without changing scientific helpers/runtime.
+Exact original-environment replay is not replaced with floating-point tolerance.
+`benchmark_tools.review_native_qfo_figure` independently checks exported
+tables/hashes/vector labels and raster pixels; its receipt does not certify
+visual review or scientific admission. PNG and PDF preview were inspected
+separately. This is a local source-bound workflow, not portable fresh-install
+certification or a completed publication archive.
+
 ## Current Entry Point (2026-10-05)
 
 The [full-native factorial snapshot](results/native_factorial_progress_20261005_v7/report.md)

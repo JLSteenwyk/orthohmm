@@ -898,7 +898,7 @@ The raw FAS sample contains 38,205 pairs and 66,678 proteins, including
 to newly computed missing pairs, not the entire mixed/precomputed sample.
 Native FAS SEM is pair-IID, not a paired-family confidence interval;
 unseeded sampling and eligible-population/missing-score limitations persist.
-Only one of seven fresh native QfO identities has supplied scores; the other
+At this first-admission checkpoint, only one of seven fresh native QfO identities has supplied scores; the other
 six remain unavailable, not zero. No cached result or its family intervals
 is substituted. This development-exposed result establishes neither
 historical partition equivalence, independent generalization, a total HMM
@@ -925,6 +925,75 @@ may affect CPU, memory bandwidth and I/O by an unknown, tool-dependent
 amount. Matching resource limits does not establish isolated performance.
 The existing rc4 archive and reviewed PDF predate this partial native result;
 final package integration and broader publication requirements remain open.
+
+### Second Native QfO Cell And Conditional Reconciliation Contrast
+
+Subsequently, native P0C0R1 has independent scientific admission 22449 after
+assessment 22448. The original 22437 timing remains failed and ineligible;
+recovering intact predictions does not repair its resource measurements.
+The current combined native snapshot has two admitted cells and five
+unavailable rows. None is replaced with a cached cell or a zero score.
+
+| Endpoint | Statistic | P0C0R0 | P0C0R1 |
+| --- | --- | ---: | ---: |
+| VGNC | F1 | 0.6668335336 | 0.8981845793 |
+| SwissTrees | F1 | 0.6891839607 | 0.7895743384 |
+| TreeFam-A | F1 | 0.6054035649 | 0.6025078294 |
+| GO | Schlicker similarity | 0.47211905 | 0.49025964 |
+| EC | Schlicker similarity | 0.93211406 | 0.96770222 |
+| FAS | FAS similarity | 0.7749447305 | 0.7850068178 |
+
+TreeFam-A F1 decreases; this is not a uniform endpoint improvement. The
+R-on project-defined secondary mean is 0.7555392374929232, not official QfO
+F1. Its 5,113,820 inferred pairs represent 542,365 of 984,137 inputs
+(55.1107% all-input relation coverage, not accuracy). R-off uses group-clique
+pairs; R therefore changes prediction semantics, not just group splitting.
+P-off retains the initial HMM search and is not a non-HMM control. These
+ablations are not the selected-default OrthoHMM-versus-OrthoFinder comparison.
+
+Independent audits verify all 18 complete SwissTrees family records and
+10,765 reference-pair labels. Both native cells exactly match retained
+corrected records and aggregates. Only after these checks, one native
+R-at-P0-C0 contrast reuses the original 100,000 shared bootstrap draws; all 42
+endpoints remain in the multiplicity correction. The F1 difference is
++10.0390 percentage points, with nominal interval [1.1741, 18.9079] and adjusted
+interval [-4.6418, 24.4199]. Precision rises 30.5212 points, adjusted
+interval [14.3252, 46.5473], while recall falls 6.5334 points, adjusted
+interval [-18.0413, -0.0436]. The adjusted F1 interval includes zero. This is
+a conditional precision-recall trade-off among 18 development-exposed families,
+subject to family exchangeability and approximate percentile coverage; it
+does not establish general superiority or independent confirmation.
+
+The recovered FAS sample contains 252,451 pairs and 257,077 proteins;
+126,521 proteins appear in multiple sampled pairs (maximum degree 17).
+Sampling is unseeded, and the 9,000 cap limits newly computed missing pairs,
+not total precomputed-plus-new observations. Native pair-IID SEM is not a
+paired confidence interval. Other QfO endpoint and secondary-mean paired
+uncertainty remain open, along with the missing original TreeFam family labels.
+
+[![Native QfO P0/C0 reconciliation ablation](native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.png)](native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.pdf "Vector PDF")
+
+Figure: fresh native P0/C0 ablation on the QfO development set. A separates
+three orthology F1 endpoints from B's GO/EC/FAS similarities. C shows the
+SwissTrees precision-recall trade-off. D shows the R-on-minus-R-off effect
+in percentage points; thick intervals are nominal 95% paired-family
+intervals and thin intervals retain all 42 endpoints in adjustment. Intervals
+are reused only after exact complete native family-record matches. There are
+no error bars for other endpoints and no new bootstrap draws. Failed R-on
+timing is excluded. Full-precision plotted values and provenance accompany
+the figure; PNG and PDF assets were visually inspected separately from the
+programmatic content readback.
+[Current scores](native_qfo_scientific_scores_20261006_v1/scores.md),
+[recovered result](RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md),
+[guarded interval binding](native_qfo_swiss_uncertainty_binding_22449_20261006.json),
+[figure review](NATIVE_QFO_FIGURE_RESULT_20261006.md).
+
+This update does not replace the earlier comparator table, establish a
+complete native factorial, or update the prior rc4 archive/PDF payloads.
+Any reported timings are shared-Threadripper observations under competing
+CPU, memory-bandwidth and I/O demand, with unknown, tool-dependent effects;
+matching limits does not establish isolated performance. Failed timing stays
+failed; broader publication requirements and final package integration remain.
 
 The original-release QfO factorial likewise completed all eight cells. Its
 prespecified SwissTrees family bootstrap used 100,000 shared draws and

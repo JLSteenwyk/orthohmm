@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native QfO Figure Rendered, Reviewed And Integrated (2026-10-06)
+
+The repaired workflow is committed/pushed at50fdea48. Actual fresh export
+replays the unchanged binding exactly in original Python3.10 while rendering
+PNG/PDF/SVG in Python3.12. No scientific runtime installation, raw recount,
+inference, scoring, bootstrap or native timing retry. Preserve the initial
+real-export refusal and earlier failed test receipt.
+
+[Figure result and separate visual review](NATIVE_QFO_FIGURE_RESULT_20261006.md)
+retain five output hashes and exact12-point/three-effect TSV readback.
+114 evidence records pass content hashes. Original PNG and actual PDF raster
+preview are inspected: four panels and limitation lines visible; small
+TreeFam-A marker overlap acknowledged and the decrease retained in tables.
+Original manifest leaves automated visual certification false; separate
+inspection does not rewrite it. The PDF preview is copied byte-identically
+from its recorded temporary path into the retained result directory.
+
+Working manuscript gains the actual two-cell table, conditional SwissTrees
+trade-off and figure caption. Current claims/guide distinguish two admitted
+cells/five unavailable rows, failed timing, initial HMM-on status, all42
+adjusted endpoints, F1 zero crossing, unseeded dependent FAS sample and
+unfinished other-endpoint uncertainty. Historical first-cell evidence and
+prior archive/PDF payloads remain separate and unchanged. Three document
+patch attempts refuse incorrect contexts before writing; reread actual
+contexts and apply scoped corrections, without touching scientific artifacts.
+
+169 joined tests8.56s pass, including17 new independent-content/artifact/
+manuscript checks plus actual exact binding replay. Fresh scheduler22444
+RUNNING at1:35:09; original nativePID4128293 exists with its boundindex8
+command. Original22445 remains dependency-pending. Do not duplicate either
+handle or submitindex9 before actual terminal review/fresh gates. Next work:
+observe this native identity, then advance remaining fresh QfO cells under
+the existing gates, integrate their evidence, and finish broader uncertainty,
+provenance and publication/release requirements. Full goal active; publication
+readiness unproven. Shared-host contention remains unknown and tool-dependent.
+
 ## Exact Native Figure Validation Environment Repair (2026-10-06)
 
 Previous goal work progresses at e529120e; the intervening user turn only

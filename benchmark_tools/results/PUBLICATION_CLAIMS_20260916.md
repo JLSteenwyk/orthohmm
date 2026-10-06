@@ -1,8 +1,22 @@
 # Publication Claim-To-Evidence Checklist
 
-Status updated 5 October 2026. This is a completion audit, not a replacement
+Status updated 6 October 2026 for bounded native QfO evidence. This is a completion audit, not a replacement
 for the original publication goal. A linked plan or passing unit test is not
 evidence that an experiment completed or a biological hypothesis is true.
+
+## Native QfO Update
+
+The current combined scientific snapshot has two admitted fresh cells and five
+unavailable rows. The first-native-only claims in the chronology below describe
+that earlier checkpoint, not current availability. This update does not
+replace historical comparator results or certify the complete publication goal.
+
+| Claim | Evidence | Status And Limit |
+| --- | --- | --- |
+| A second fresh native QfO cell has validated endpoint scores | [Recovered result](RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md), [combined table](native_qfo_scientific_scores_20261006_v1/scores.md), [independent readback](recovered_native_qfo_score_readback_22449_20261006.json) | Supported for P0C0R1: assessment 22448 and admission 22449 completed. Failed native 22437 timing remains null/ineligible. Two of seven fresh cells are admitted; five remain unavailable. Initial HMM search on; no total HMM or full-tool superiority claim |
+| Native reconciliation improves SwissTrees F1 conclusively | [Exact native count binding](native_qfo_swiss_uncertainty_binding_22449_20261006.json), [family readback](recovered_native_qfo_swiss_readback_22449_20261006.json), [figure review](NATIVE_QFO_FIGURE_RESULT_20261006.md) | Not established: one matched contrast reuses 100,000 retained draws only after full records match; all 42 endpoints remain adjusted. F1 +10.0390 pp, adjusted interval [-4.6418, 24.4199] includes zero. Precision +30.5212 pp and recall -6.5334 pp; conditional on 18 development-exposed families and percentile/exchangeability assumptions |
+| Reconciliation improves every QfO endpoint | [Actual two-cell table](native_qfo_scientific_scores_20261006_v1/scores.md) | Contradicted by TreeFam-A F1: 0.6054035649 to 0.6025078294. Other endpoint and secondary-mean paired uncertainty remain open; FAS sample SEM is not a paired interval |
+| The native factorial or final publication archive is complete | [Current native figure](native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.pdf), [progress ledger](PUBLICATION_PROGRESS.md) | Not achieved: five fresh QfO score rows remain unavailable. Earlier rc4 archive/PDF payloads predate this evidence. No isolated timing or general OrthoFinder advantage follows |
 
 ## Current Requirement Status
 
