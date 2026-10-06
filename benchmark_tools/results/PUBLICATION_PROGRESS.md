@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native Duplication-Annotation Trade-Off Checked On Resume (2026-10-06)
+
+Previous turn makes administrative progress by confirming the shared-host
+amendment and pausing at user's request. This turn resumes full goal, reads
+authoritative prompt/newest ledger, and verifies original22444 live11:11:07.
+No dedicated-host gate, completed-run repetition or contention-only retry.
+
+[New native duplication-annotation result](NATIVE_QFO_SWISS_DUPLICATION_STRATA_RESULT_20261006.md)
+advances4.3 with frozen September23 bins; protocol91ca7385 before actual scores.
+Initial1b893235 fails before output by comparing tree leaf labels with native
+accessions. Amendment/fix/tests10822eea pushed before recomputation. Correct
+join re-reads original identifier mapping and compares exact reference-entry
+sets; Ensembl aliases and HOX duplicate leaf aliases preserved, not guessed.
+Failed receipt and earlier test receipts retained; no scientific definition
+or inference setting changes. Pytest absent in scientific runtime: tests use
+retained test runtime, no install. Final131 tests pass1.88s/50new, no skips.
+
+Primary Fraction/median and independent stdlib integer-bin/raw-count readers
+agree for18 families/563 genes/21,530 native raw rows/36 family records/eight
+rows/four differences and TSV cells. Empty missing null/NA, not0. Lower/upper
+nine-family bins F1+14.291/+5.620pp, recall-1.598/-11.468pp. Descriptive only:
+reference-derived annotation fraction, default-S/alias handling/confounding;
+no true-duplication-history, causal/significant interaction or transferredCI.
+Eight original feature-source records inherited, original traversal not repeated.
+
+Original scientificPython3.10, independent-I-S-B/stdlib. Export7.10s1,573,724KiB/
+reader6.52s1,550,024KiB,exit0/zero swaps. Shared-host postprocessing, not
+inference/isolated speed; unknown potentially tool-dependent contention.
+Available RAM649,647,836KiB/free swap25,316KiB before execution. No unrelated
+work/service/environment modifications. FailedR1 timing remains ineligible.
+
+Latest original22444.0 COMPLETED0:0 11:18:09 but batch22444 RUNNING11:20:18;
+original22445/22450/22451/22452 pending. Native step not whole-run success.
+Wait for original terminal/review gates; no unfinished output read or successor
+release. Five score cells, native matched search/interactions, broader justified
+uncertainty/generalization/error strata, original TreeFam/transitive provenance
+and manuscript/archive/release scope still open. Historical package bytes
+unchanged; full goal active, publication completion unproven.
+
 ## Native Fragment-Annotation Pair Explanation Tested (2026-10-06)
 
 Previous goal turn is a verified wait: same original22444 live10:31:10,

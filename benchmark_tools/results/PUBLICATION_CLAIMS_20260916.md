@@ -21,6 +21,17 @@ replace historical comparator results or certify the complete publication goal.
 | Native reconciliation has a larger descriptive F1 gain in higher-Pfam-type SwissTrees families | [Fixed native protocol](NATIVE_QFO_SWISS_DOMAIN_STRATA_PROTOCOL_20261006.md), [actual table](native_qfo_swiss_domain_strata_20261006_v1/TABLE.md), [independent annotation/raw readback](native_qfo_swiss_domain_strata_readback_20261006_v1.json), [scope](NATIVE_QFO_SWISS_DOMAIN_STRATA_RESULT_20261006.md) | Supported as point estimates only: six higher-type families +20.946pp F1 versus twelve lower-type +4.891pp, with recall losses in both. Three higher-repeat families lose13.296pp recall. Complete563-protein/21,530-row readback; overlapping development-exposed bins, no new CI, significant interaction, causal domain mechanism, validated full architecture or independent FAS claim. Failed R1 timing stays ineligible |
 | Native VGNC and complete SwissTrees stage diagnostics are assembled into a checked manuscript supplement | [Seven-page supplement](native_qfo_manuscript_supplement_20261006_v3/supplement.pdf), [generated sources](native_qfo_manuscript_supplement_20261006_v3/assembly.json), [presentation readback](native_qfo_manuscript_supplement_20261006_v3/presentation_readback.json), [scope and review](NATIVE_QFO_SUPPLEMENT_RESULT_20261006.md) | Supported as presentation of the two admitted development-exposed P0/C0 cells: eight displayed tables/34 rows, exact source pixels for both figures and explicit missing-run/uncertainty/timing limits. VGNC excludes16,004 scored FPs and loses463 TPs; SwissTrees excludes1,689 FPs and334 TPs. Observed graph paths and saved duplication-LCA annotations do not establish evolutionary correctness, a prefilter-failure cause or general superiority. No new scientific computation, confidence interval, final archive or publication-ready admission |
 
+Native duplication-annotation strata are now checked in the completed P0C0
+cells: [fixed protocol](NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md),
+[table](native_qfo_swiss_duplication_strata_20261006_v1/TABLE.md),
+[independent integer-bin/raw-count readback](native_qfo_swiss_duplication_strata_readback_20261006_v1.json)
+and [result scope](NATIVE_QFO_SWISS_DUPLICATION_STRATA_RESULT_20261006.md).
+Lower/upper nine-family bins gain14.291/5.620pp F1 and lose1.598/11.468pp recall.
+These are point estimates, not significant interaction or causal duplication
+effects. Reference-derived labels/default-S/alias handling, original inherited
+traversal evidence and confounding remain explicit. Initial HMM search on;
+no new CI, tuning, timing repair or publication-complete admission.
+
 Native functional-score interpretation is additionally bounded by the
 [actual raw-pair composition](NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md)
 and [independent SQLite readback](native_qfo_functional_pair_sql_readback_20261006.json).
