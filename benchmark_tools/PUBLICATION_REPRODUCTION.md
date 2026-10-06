@@ -61,6 +61,16 @@ review or pass its results to the unchanged success-only stages above.
 Conversion alone is not a new admitted QfO score; separate recovered-science
 assessment and independent admission remain necessary.
 
+Actual [recovered conversion22447](results/RECOVERED_NATIVE_QFO_CONVERSION_RESULT_22447.md)
+now completes and passes independent full-row readback:5,113,820 native pairs,
+zero mapping loss and542,365/984,137 all-input relation coverage. This is not
+an accuracy score or timing admission. Original failed preflight22446 and
+restored historical-document bindings are retained. The active goal's current
+authorization is recorded in a separate amendment, not by modifying the
+hash-bound historical repository goal snapshot. Successful-measurement
+assessment stages above remain intentionally incompatible with the distinct
+recovered conversion; the explicit recovered-science scoring route is next.
+
 **Preserve the Python invocation path.** The retained review environment is
 `benchmarks/work/native_factorial_review_py310_20261004/bin/python`. Its
 symlink-resolved executable shares binary bytes with the native base

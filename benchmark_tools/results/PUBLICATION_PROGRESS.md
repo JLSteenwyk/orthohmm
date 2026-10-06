@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Recovered Native QfO Conversion Completed And Checked (2026-10-06)
+
+After pushed1c27ba4f preserves failed22446 and restores the historical goal
+snapshot, all1,139 current recovery bindings pass. Explicit repair22447 uses
+a separate fresh directory, unchanged committed converter and prepared3.10
+invocation; held scheduler/batch/source/capacity gates pass and it is released
+once. Actual conversion completes0:0/1:23 on2CPU/32GiB/no-requeue. This is not
+an inference retry or a fastest/contention-selected repeat.
+
+[Validated result](RECOVERED_NATIVE_QFO_CONVERSION_RESULT_22447.md) publishes
+byte-identical311,430-byte report/SHA5b29ded11bd81b2b077b128a373ab2d1da037c5886b3a005ff8970bc09ca169c.
+Independent streaming readback compares every5,113,820 original resolved row
+to converted canonical accessions, zero mapping loss and identical78,536,456-
+byte pair files.542,365/984,137 input proteins have a relation (55.1107%);
+coverage is not benchmark accuracy. Checks direct evidence/source bindings,
+225-test XML and actual completed scheduler/stdout/empty stderr. No semantic
+inference review, raw cadence census, FAS shuffle or bootstrap is repeated.
+
+Original22437 allocation/timing remains failed/ineligible/resources null;
+distinct participant/schema makes no new score or cached substitution.
+Next: implement the separately validated recovered-science assessment and
+independent admission with unchanged endpoints. Do not feed synthetic success
+to the unchanged successful-measurement CLIs. Observe original live22444/
+dependent22445, then apply genuine terminal-review/fresh gates to index9.
+Unknown tool-dependent shared-host distortion and the transient historical-
+document mutation remain explicit. Full scientific/release goal stays active;
+publication readiness is unproven, not narrowed to conversion completion.
+
 ## Historical Goal Snapshot Restored After Conversion Refusal (2026-10-06)
 
 Pushed471e74ed records actual22444 launch/dependent22445 and the explicit
