@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Guarded Native SwissTrees Interval Reuse Prepared (2026-10-06)
+
+Previous turn progresses at pushedd4e03c12 and449222c2. Re-read full active
+goal/current ledger; original22444/22448 remain RUNNING and22445/22449 remain
+dependency-pending. No missing observation is treated as terminal or restarted.
+The current Nextflow trace shows five endpoint tasks completed, with FAS still
+running. This is execution progress, not independently admitted accuracy.
+
+Review existing VGNC uncertainty evidence without repeating simulations or
+claiming a replacement law: rare-error/shared-clade failures and outcome-defined
+component limitations remain unresolved. The guarded [SwissTrees binding](NATIVE_QFO_SWISS_UNCERTAINTY_BINDING_PROTOCOL_20261006.md)
+requires native admission/count provenance and exact full family records before
+reusing the retained100,000 shared draws.416 joined tests7.57s include36 new
+cases; prepared3.10 CLI imports pass. All42 endpoints remain in adjustment,
+missing/differing native contrasts stay null and no new sampling/resource
+admission occurs. This extension leaves all920 frozen helpers unchanged.
+
+Current scorer22448 remains RUNNING at28:24; original22449 waits. Next: actual
+terminal admission readback, combined score export, recovered-only family audit
+and guarded interval binding if exact records match. Do not infer matches from
+aggregate similarity, use partial scores or inherit intervals automatically.
+Original22444/22445 remain required before next native identity. Full scientific
+uncertainty/reporting/release requirements persist; publication readiness
+unproven, goal active, shared-host distortion unknown and tool-dependent.
+
 ## Scientific Reporter Pushed And Recovered Family Audit Prepared (2026-10-06)
 
 Previous turn verifies12 guide tests; this continuation re-reads the full active

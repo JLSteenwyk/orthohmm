@@ -136,6 +136,13 @@ preserves failed timing, checks raw reference labels and native count arithmetic
 and does not recount normal cells or inherit cached intervals.349 joined tests
 pass, including23 new cases. No actual recovered count audit is yet completed.
 
+The [native SwissTrees interval-binding protocol](results/NATIVE_QFO_SWISS_UNCERTAINTY_BINDING_PROTOCOL_20261006.md)
+adds `benchmark_tools.bind_native_qfo_swiss_uncertainty`. It reuses retained
+intervals only for identical full audited native family records and aggregates,
+keeps missing/differing contrasts unavailable and preserves all42 adjusted
+endpoints.416 joined tests pass, including36 new cases. This draws no new native
+bootstrap sample, admits no failed timing and leaves non-Swiss uncertainty open.
+
 The old local rc4 archive and35-page review below are preserved snapshots.
 They do not already contain these later native executions, reporting code
 or guide update. No archive/PDF is regenerated merely for a live-job update.
