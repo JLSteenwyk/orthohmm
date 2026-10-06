@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Independent Native QfO Admission Released (2026-10-06)
+
+Prepared admission stage1b0915a8 committed/pushed before actual submission.
+[Admission22452 checkpoint](ASSESSMENT_GATED_NATIVE_QFO_ADMISSION_RESULT_22452.md)
+retains held inspection, one release and fresh same-handle verification of
+the full five-job chain. New22452 dependency-pending afterany22451,2CPU/32GiB/
+6hours/no-requeue. Retain immediate transitional Reason=None, without another
+release. Fresh live queue: original22444 RUNNING3:26:43;22445/22450/22451/22452
+dependency-pending. No original job restarted or completed analysis repeated.
+
+507 joined tests7.50s pass, no skips, including nine actual-launch receipt/
+Git-blob/resource/dependency/scope cases. Original scientific admission is
+explicitly stubbed in wrapper fixtures, not claimed executed. Read-only
+preflight checks920 frozen helpers/current source and original Python bindings;
+704-record scorer provenance is explicitly dated reuse, not freshly rehashed
+or continuous integrity. No unfinished producer output read.
+
+Next: actual original inference/review, guarded conversion22450, assessment
+22451 and independent admission22452, then export/uncertainty if all gates
+pass. Successful new admission accounting and its final wrapper gate are
+required; a residual original admitted report alone is insufficient. No new
+score, accuracy admission, index9 authorization, timing repair or retry here.
+Full scientific/generalization/provenance/reproducibility/release scope remains
+active/incomplete. Shared-host contention unknown/potentially tool-dependent;
+no isolated speed ranking or unrelated workload changes.
+
 ## Deferred Independent Native QfO Admission Validated (2026-10-06)
 
 Previous goal turn makes progress at4d532428/f7a02cd1 by queuing actual
