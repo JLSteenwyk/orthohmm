@@ -1,0 +1,178 @@
+{
+  "schema": "native_main_direct_review_archive_execution_v1",
+  "source_revision": "c2a0ea998c04122f70213116d47d396ae247a048",
+  "ledger_revision": "47b7f14ba0c2e8c5b7f070f5b11620dd356a1eb9",
+  "source_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_main_review_component_20261006_v1",
+  "index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_main_review_component_20261006_v1/REVIEW_INDEX.json",
+    "bytes": 41307,
+    "sha256": "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14"
+  },
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_main_review_component_20261006_v1.tar.gz",
+    "bytes": 4620877,
+    "sha256": "95fed303f76a40f281338c519be7a58304a752b1316c9c0714336d8a9dbe6df3"
+  },
+  "copied_archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/review.tar.gz",
+    "bytes": 4620877,
+    "sha256": "95fed303f76a40f281338c519be7a58304a752b1316c9c0714336d8a9dbe6df3"
+  },
+  "restored_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored",
+  "trusted_restored_worker": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored/benchmark_tools/bundle_publication_review.py",
+    "bytes": 16368,
+    "sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999"
+  },
+  "archive_member_count": 114,
+  "restored_payloads_independently_checked": 113,
+  "verification": {
+    "command": [
+      "/usr/bin/strace",
+      "-f",
+      "-e",
+      "trace=%file",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/copied-verifier.strace",
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored/benchmark_tools/bundle_publication_review.py",
+      "verify",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored",
+      "--manifest-sha256",
+      "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14"
+    ],
+    "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored",
+    "environment": {
+      "PATH": "/no-git",
+      "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j",
+      "LC_ALL": "C",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "stdout": "{\n  \"direct_targets\": 85,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/publication_main_review_20261006_v1.html\",\n    \"markdown\": \"benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006.md\",\n    \"pdf\": \"benchmark_tools/results/publication_main_print_20261006_v1/document.pdf\"\n  },\n  \"files\": 113,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 88,\n  \"manifest\": {\n    \"bytes\": 41307,\n    \"sha256\": \"6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14\"\n  },\n  \"page_count\": 18,\n  \"payload_bytes\": 8143531,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+    "stderr": "",
+    "result": {
+      "direct_targets": 85,
+      "entrypoints": {
+        "html": "benchmark_tools/results/publication_main_review_20261006_v1.html",
+        "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006.md",
+        "pdf": "benchmark_tools/results/publication_main_print_20261006_v1/document.pdf"
+      },
+      "files": 113,
+      "inference_reproduced": false,
+      "local_html_occurrences": 88,
+      "manifest": {
+        "bytes": 41307,
+        "sha256": "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14"
+      },
+      "page_count": 18,
+      "payload_bytes": 8143531,
+      "publication_ready": false,
+      "redistribution_clearance": false,
+      "status": "publication_direct_review_verified",
+      "transitive_evidence_included": false
+    }
+  },
+  "file_trace": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/copied-verifier.strace",
+    "bytes": 431153,
+    "sha256": "d45ec8883efbce065ad71911e098046156b594ed25c970c18a2c4092bab1ac5b"
+  },
+  "forbidden_trace_prefixes": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM",
+    "/home/bizon/.codex/attachments"
+  ],
+  "original_paths_observed_in_trace": [],
+  "initial_refusal_preserved": true,
+  "archive_build_repeated": false,
+  "native_or_scoring_repeated": false,
+  "new_bootstrap_draws": 0,
+  "publication_ready": false,
+  "transitive_evidence_included": false,
+  "redistribution_clearance": false,
+  "public_archive_uploaded": false,
+  "build": {
+    "command": [
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "benchmark_tools/bundle_publication_review.py",
+      "build",
+      "--repo",
+      ".",
+      "--review-revision",
+      "c2a0ea99",
+      "--ledger-revision",
+      "47b7f14b",
+      "--workflow-revision",
+      "c2a0ea99",
+      "--main-text",
+      "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006.md",
+      "--render-receipt",
+      "benchmark_tools/results/publication_main_render_20261006_v1.json",
+      "--print-receipt",
+      "benchmark_tools/results/publication_main_print_20261006_v1/print.json",
+      "--review-receipt",
+      "benchmark_tools/results/publication_main_pdf_review_20261006_v1/report.json",
+      "--output",
+      "benchmarks/work/native_main_review_component_20261006_v1"
+    ],
+    "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "returncode": 0,
+    "result": {
+      "direct_targets": 85,
+      "entrypoints": {
+        "html": "benchmark_tools/results/publication_main_review_20261006_v1.html",
+        "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006.md",
+        "pdf": "benchmark_tools/results/publication_main_print_20261006_v1/document.pdf"
+      },
+      "files": 113,
+      "inference_reproduced": false,
+      "local_html_occurrences": 88,
+      "manifest": {
+        "bytes": 41307,
+        "sha256": "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14"
+      },
+      "page_count": 18,
+      "payload_bytes": 8143531,
+      "publication_ready": false,
+      "redistribution_clearance": false,
+      "status": "publication_direct_review_verified",
+      "transitive_evidence_included": false
+    }
+  },
+  "published_index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_review_component_index_20261006.json",
+    "bytes": 41307,
+    "sha256": "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14"
+  },
+  "published_trace": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_review_component_verify_20261006.strace",
+    "bytes": 431153,
+    "sha256": "d45ec8883efbce065ad71911e098046156b594ed25c970c18a2c4092bab1ac5b"
+  },
+  "initial_refusal_receipt": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_component_initial_restore_refusal_20261006.json",
+  "archive_construction": {
+    "library": "Python standard-library tarfile",
+    "mode": "x:gz",
+    "regular_file_members": 114,
+    "selection": "113 committed-export payloads plus externally anchored REVIEW_INDEX.json",
+    "restore_filter": "data",
+    "payload_modes": "match each selected manifest record",
+    "index_mode": "0664",
+    "archive_rebuilt_after_refusal": false
+  },
+  "limitations": [
+    "Reporting component only; not raw reference admission, native inference/scoring, plotting, bootstrap or a complete study archive.",
+    "Strace covers this one copied verification invocation, not OS containment or every workflow command; system-library reads remain allowed.",
+    "Included component guide retains its dated historical defaults. Use this execution's explicit schema3 selection and companion result for the actual eighteen-page source.",
+    "Absolute provenance paths in JSON/PDF are historical metadata; relative HTML links are the portable navigation interface.",
+    "The separate manual visual-review receipt is not a direct render target and is not added to this immutable component.",
+    "No public upload, redistribution clearance, archival DOI, new isolated efficiency claim or publication readiness is established."
+  ]
+}

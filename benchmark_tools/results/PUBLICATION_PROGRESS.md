@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native-Evidence Review Component Archived And Restored (2026-10-06)
+
+Previous goal turn progresses at pushed47b7f14b/c2a0ea99 with the actual
+18-page native-evidence main review and101 checks. Re-read full goal and fresh
+scheduler: original22444 remains live,22445 dependency-pending. Leave both
+original handles and older rc4 payloads intact; no native/scoring retry.
+
+[New actual component](NATIVE_MAIN_REVIEW_COMPONENT_RESULT_20261006.md) uses the
+unchanged committed explicit-main exporter.113 payloads/8,143,531 bytes contain
+the actual18-page main,85 direct evidence targets and14 page images. Native
+point snapshots, conditional uncertainty/readbacks, native QfO vector figure
+and functional-pair evidence are included. Canonical index41307 bytes/SHA
+6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14 is publicly
+retained byte-identically. Local archive114 regular members/4,620,877 bytes
+stays uncommitted/unuploaded; no new whole-study rc version is claimed.
+
+Preserve pre-extraction staging refusal: inline guard applies payload-only
+0644/0755 modes to regular index0664. Actual build/archive already complete.
+Check payload modes individually and explicitly accept observed index mode,
+then resume original empty restoration without rebuilding or changing bytes.
+Copied verifier outside checkout exits0 under isolated/site-disabled standard
+Python andPATH=/no-git. Trace observes copied index/all113 payload paths and
+no original workspace/attachment prefixes, for this one command only; system
+libraries allowed and no OS-containment claim. Independent readback checks
+all113 restored identities and114 archive members. cp-n warnings retained.
+
+52 joined tests5.52s pass, no skips with explicit local-archive flag: seven new
+component/Git-blob/archive/trace/scope cases plus actual main source/PDF and
+existing explicit-main exporter tests. Guide's historical defaults remain
+dated; companion records actual schema3 selection/entrypoints. Manual-review
+receipt and transitive raw evidence are not silently added to component.
+
+Fresh22444 RUNNING2:21:32/native2:20:40,22445 dependency-pending. Next native
+identity still requires terminal review/fresh gates. Focus remaining execution
+on those native QfO cells and genuinely unresolved uncertainty/provenance/
+independent-validation/executable-study integration, rather than rebuilding
+another full archive for each partial result. Full goal active, completion
+unproven; no scoring/default change, isolation claim or unrelated-job change.
+
 ## Native-Evidence Main Text Rendered And Reviewed (2026-10-06)
 
 Source milestone47b7f14b committed/pushed before rendering. The

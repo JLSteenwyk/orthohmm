@@ -1,0 +1,28 @@
+{
+  "schema": "native_main_component_initial_restore_refusal_v1",
+  "date": "2026-10-06",
+  "source_revision": "c2a0ea998c04122f70213116d47d396ae247a048",
+  "phase": "archive_member_pre_extraction_guard",
+  "exception": "AssertionError",
+  "inline_python_line": 11,
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_main_review_component_20261006_v1.tar.gz",
+    "bytes": 4620877,
+    "sha256": "95fed303f76a40f281338c519be7a58304a752b1316c9c0714336d8a9dbe6df3"
+  },
+  "index_sha256": "6dffd552fa40a7a3f0f02fae8f291482264d6789773f9c4df096498b2808db14",
+  "archive_members": 114,
+  "restoration_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-0o8t_a9j/restored",
+  "restoration_directory_created": true,
+  "archive_extracted": false,
+  "copied_verifier_executed": false,
+  "observed_member_outside_assumed_modes": {
+    "name": "REVIEW_INDEX.json",
+    "is_regular_file": true,
+    "mode_octal": "0664"
+  },
+  "diagnosis": "The inline staging guard applied the payload-only 0644/0755 rule to the index. The existing component verifier does not impose that payload-mode rule on the externally anchored index; the completed build is valid.",
+  "next_action": "Preserve and reuse the complete archive and copied bytes. Confirm the original empty restoration directory, validate payload modes against each index record, permit the observed regular index mode, then extract and run the copied verifier. Do not rebuild or overwrite the archive.",
+  "native_inference_or_scoring_repeated": false,
+  "publication_ready": false
+}
