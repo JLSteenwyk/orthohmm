@@ -1,0 +1,56 @@
+{
+  "after": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22734",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22734 JobName=ohmm_review08_diagnostic UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-06T17:09:04 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T17:09:04 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1196068 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_diagnostic_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=bc8c743afaea219c9c2b1a94a3f6f3fb44919e56fdcac16c1680550d453bb481  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.out TresPerTask=cpu=2 \n"
+  },
+  "automatic_retry": false,
+  "available_memory_bytes": 646950420480,
+  "before": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "22734",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=22734 JobName=ohmm_review08_diagnostic UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-06T17:09:04 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T17:09:04 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1196068 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_diagnostic_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=bc8c743afaea219c9c2b1a94a3f6f3fb44919e56fdcac16c1680550d453bb481  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/diagnostic08_22734.out TresPerTask=cpu=2 \n"
+  },
+  "helper_sources_checked": 920,
+  "job_id": 22734,
+  "native_inference_reexecuted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791320985158159022,
+  "observer_command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "-B",
+    "-c",
+    "\nimport json,os,pwd,subprocess,sys,time\nfrom pathlib import Path\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record,check\nfrom benchmark_tools.probe_dgx_step_separation import save\nfrom benchmark_tools.run_native_factorial_cost import ROOT,read,available_memory\nsubref=record(ROOT/\"benchmark_tools/results/native_review_sigsegv_submission_22734.json\");assert subref[\"sha256\"]==\"4f1df72adca42257ec48d8b3585a4e1f4f462d6aefb46098fd913df5c9db4d14\"\nsub=read(subref);job=22734\nfor ref in (subref,sub[\"batch\"],sub[\"request\"],sub[\"protocol\"],sub[\"observation\"]):check(ref)\nreq=read(sub[\"request\"]);plan=read(req[\"plan\"])\nfor ref in [req[\"plan\"],*plan[\"helper_sources\"],*plan[\"evidence\"]]:check(ref)\ncommand=[\"scontrol\",\"show\",\"job\",str(job),\"--oneliner\"];before=subprocess.run(command,capture_output=True,text=True,check=True)\nf=dict(token.split(\"=\",1) for token in before.stdout.split() if \"=\" in token)\nassert f[\"JobState\"]==\"PENDING\" and f[\"Reason\"]==\"JobHeldUser\" and f[\"Comment\"]==sub[\"observation\"][\"sha256\"] and f[\"Command\"]==sub[\"batch\"][\"path\"] and f[\"NumCPUs\"]==\"2\" and f[\"CPUs/Task\"]==\"2\" and f[\"MinMemoryNode\"]==\"32G\" and f[\"TimeLimit\"]==\"06:00:00\" and f[\"Requeue\"]==f[\"Restarts\"]==\"0\" and f[\"NumNodes\"] in {\"1\",\"1-1\"} and f[\"UserId\"]==f\"{pwd.getpwuid(os.getuid()).pw_name}({os.getuid()})\"\nassert not Path(sub[\"destination\"]).exists()\nmem=Path(\"/proc/meminfo\").read_text();capacity=available_memory(mem);assert capacity>=32*2**30\nout=ROOT/\"benchmark_tools/results/native_review_sigsegv_release_22734.json\";assert not out.exists()\nreleasecmd=[\"scontrol\",\"release\",str(job)];release=subprocess.run(releasecmd,capture_output=True,text=True,check=True)\nafter=subprocess.run(command,capture_output=True,text=True,check=True)\nsave(out,dict(schema=\"native_reviewer_signal11_diagnostic_release_v1\",observer_command=sys.orig_argv,observed_unix_ns=time.time_ns(),job_id=job,submission=subref,before=dict(command=command,stdout=before.stdout,stderr=before.stderr),release=dict(command=releasecmd,stdout=release.stdout,stderr=release.stderr),after=dict(command=command,stdout=after.stdout,stderr=after.stderr),available_memory_bytes=capacity,raw_meminfo=mem,helper_sources_checked=len(plan[\"helper_sources\"]),release_executed=True,native_inference_reexecuted=False,automatic_retry=False,next_identity_authorized=False,scientific_timings_admitted=False,publication_ready=False))\nprint(json.dumps(dict(release=record(out),after=after.stdout)))\n"
+  ],
+  "publication_ready": false,
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        10005520 kB\nMemAvailable:   631787520 kB\nBuffers:        20986832 kB\nCached:         559841364 kB\nSwapCached:        13012 kB\nActive:         588733392 kB\nInactive:       394477492 kB\nActive(anon):   383116152 kB\nInactive(anon): 22440128 kB\nActive(file):   205617240 kB\nInactive(file): 372037364 kB\nUnevictable:        4488 kB\nMlocked:             128 kB\nSwapTotal:       4194300 kB\nSwapFree:          25388 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             19676 kB\nWriteback:             0 kB\nAnonPages:      402296204 kB\nMapped:          1418624 kB\nShmem:           3168832 kB\nKReclaimable:   50218188 kB\nSlab:           55245964 kB\nSReclaimable:   50218188 kB\nSUnreclaim:      5027776 kB\nKernelStack:       70336 kB\nPageTables:      1184876 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1044769436 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      978848 kB\nVmallocChunk:          0 kB\nPercpu:           815616 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8896512 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    20866632 kB\nDirectMap2M:    590983168 kB\nDirectMap1G:    461373440 kB\n",
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "22734"
+    ],
+    "stderr": "",
+    "stdout": ""
+  },
+  "release_executed": true,
+  "schema": "native_reviewer_signal11_diagnostic_release_v1",
+  "scientific_timings_admitted": false,
+  "submission": {
+    "bytes": 8948,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_review_sigsegv_submission_22734.json",
+    "sha256": "4f1df72adca42257ec48d8b3585a4e1f4f462d6aefb46098fd913df5c9db4d14"
+  }
+}

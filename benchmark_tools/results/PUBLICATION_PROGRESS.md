@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native Reviewer Signal-11 Failure Retained And Diagnosed (2026-10-06)
+
+Previous goal turn is administrative progress: shared-host handoff committed
+and pushed4bf0a318, agent paused at user's request. This turn resumes full
+goal, reads authoritative attachment/newest ledger, and checks actual job
+state before acting. Native22444 COMPLETED0:0 11:42:59, native step0:0
+11:18:09; reviewer22445 FAILED0:11 31:25. Downstream22450/22451/22452
+FAILED1:0 at predecessor-accounting gates, not scored/admitted outputs.
+
+[Crash/diagnostic checkpoint](NATIVE_REVIEW_SIGSEGV_DIAGNOSTIC_RESULT_22734.md)
+retains original five partial reviewer files/eight logs/three failed gates,
+actual kernel Python818632 segmentation fault and _Py_INCREF address mapping.
+Crash location is not root cause; no final review.json/failure.json exists.
+No original result overwritten, frozen920-helper source changed or inference
+repeated. Original timings are not newly admitted by these intermediates.
+
+Prospective protocol/batch5200f437 pushed before one new diagnostic22734,
+2CPU/32GiB/6hours/no-requeue. Original semantic validation only, original
+scientificPython3.10 venv, fault reporting enabled. Initial held observer
+refuses NumNodes=1-1 vs literal1; same held22734 repolled, exact one-node TRES
+checked, no resubmission. Failure/submission0804577d pushed before one release;
+fresh capacity/helpers checked. Latest22734 RUNNING56seconds, owned Python
+1198962 R/56secondsCPU/~999MiB RSS: verified wait, not completion.
+
+Existing156 validation/reviewer/conversion tests pass3.04s, zero skips/failures;
+testPython3.12, no install in scientific3.10. Bash syntax passes. No claim that
+fixtures explain production failure. Poll same22734 to terminal, then inspect
+actual diagnostic stack or semantic output and document any full-review repair.
+Native index9 remains gated; diagnostic alone never authorizes scoring/release.
+
+Shared-host diagnostic timings only; unknown/tool-dependent CPU/memory-bandwidth/
+I/O contention. No dedicated-host gate, unrelated-job/service changes, automatic
+retry or timing repair. Broader uncertainty/generalization/native interactions/
+matched search/provenance/TreeFam/manuscript/archive/release remain open.
+Full goal active and publication readiness unproven.
+
 ## Shared-Host Prompt Handoff Reaffirmed (2026-10-06)
 
 Latest user request is an administrative goal-prompt update, with execution to
