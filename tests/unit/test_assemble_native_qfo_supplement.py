@@ -104,6 +104,8 @@ def test_complete_synthetic_assembly(tmp_path, reports):
         "includes zero", "not a TN", "not validated biological histories",
         "unknown and potentially tool-dependent", "failed R1 timing remains ineligible", "Not submission-ready"):
         assert phrase in text
+    assert text.count("Native P0/C0 endpoint scores and the conditional SwissTrees reconciliation contrast.") == 1
+    assert "![Figure S1]" in text and "![Figure S2]" in text
     with (output / "strata_differences.tsv").open() as stream:
         rows = list(csv.reader(stream, delimiter="\t"))
     assert rows[-1] == ["empty", "0", "Unavailable", "Unavailable", "Unavailable"]

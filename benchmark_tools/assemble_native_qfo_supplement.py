@@ -226,10 +226,11 @@ def document(data, refs, output, admitted, contrast, derived, figure_assets):
         "F1 uncertainty remains inconclusive; other endpoints are point estimates without validated difference intervals.",
         mechanism_figure="Complete SwissTrees exclusions, direct significant-search evidence and unchanged input-only strata. "
         "This earlier companion does not depict the subsequent graph/VGNC diagnostic; those are reported above.")
-    for key in ("score_figure", "mechanism_figure"):
+    for number, key in enumerate(("score_figure", "mechanism_figure"), 1):
         assets = figure_assets[key]
         relative = {kind: Path(os.path.relpath(ref["path"], output)).as_posix() for kind, ref in assets.items()}
-        text += [f"![{captions[key]}]({relative['png']})", "", f"[Vector PDF]({relative['pdf']}). " + captions[key], ""]
+        # Inline caption text prevents Pandoc's implicit figure caption duplication.
+        text += [f"![Figure S{number}]({relative['png']})\n[Vector PDF]({relative['pdf']}). " + captions[key], ""]
     text += ["## Claim Boundaries And Remaining Work", "",
         "Supported: the two admitted native cells and their explicit precision-recall/selection differences; conditional "
         "SwissTrees interval reuse; complete observed error-stage localization. Not established: conclusive native F1 "
