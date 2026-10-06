@@ -1,0 +1,947 @@
+{
+  "cells": [
+    {
+      "admission": {
+        "bytes": 1321308,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+        "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+      },
+      "cell": "p0_c0_r0",
+      "count_audit": {
+        "bytes": 30311,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+        "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+      },
+      "macro_statistics": {
+        "F1": 0.689183963152562,
+        "PPV": 0.6439400942516949,
+        "TPR": 0.741266050122766
+      },
+      "native_endpoint_f1": 0.6891839606644314,
+      "raw": {
+        "bytes": 39728,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+        "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+      }
+    },
+    {
+      "admission": {
+        "bytes": 781476,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+        "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+      },
+      "cell": "p0_c0_r1",
+      "count_audit": {
+        "bytes": 34593,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+        "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+      },
+      "macro_statistics": {
+        "F1": 0.7895743339716982,
+        "PPV": 0.9491519661804723,
+        "TPR": 0.6759321953915856
+      },
+      "native_endpoint_f1": 0.7895743384374164,
+      "raw": {
+        "bytes": 39334,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-recovered-native-p0-c0-r1_4a515aacafb7_raw.txt.gz",
+        "sha256": "f55ee75d4fc93c43889baa469c870f188410e7a5af0f6d7fd0fab04ee00af538"
+      },
+      "resources": null,
+      "timing_admitted": false,
+      "timing_eligible": false
+    }
+  ],
+  "changed_relations_ledger": {
+    "bytes": 50460,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_changed_pairs_20261006_v2.tsv",
+    "sha256": "6276f2c7610accfd32332b1f90fa6d3191d901e3b1aed09340a78cd7b1c731ea"
+  },
+  "checked_inputs": [
+    {
+      "bytes": 24314,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json",
+      "sha256": "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b"
+    },
+    {
+      "bytes": 30311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+      "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+    },
+    {
+      "bytes": 1321308,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c0_r0/results.json",
+      "sha256": "1e5b7ba7824237080286a491ef2bf7c2566627bf614c7e667551fa6b566f6411"
+    },
+    {
+      "bytes": 1287135,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c0_r0/results.json",
+      "sha256": "7d5e25171f09c949f89a52452986e7d2ab8d508685d4ef485015653861ed44d2"
+    },
+    {
+      "bytes": 39728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_06/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p0-c0-r0_3b9c08ead0dd_raw.txt.gz",
+      "sha256": "5fb288b2285b9a2b3ce37a496a07776aa64ca97c503d95fe67a6d2d65994aa82"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 8195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+      "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 9202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 14117,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_factorial_scores.py",
+      "sha256": "f0332ed8986693da606ee85c113d997aeb2227e6fbf7abbd5f99c11949305428"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 34593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+      "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+    },
+    {
+      "bytes": 781476,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_admission_v1/p0_c0_r1/results.json",
+      "sha256": "4c3a17a76eff5043c8b40d0c9f1e8ead6c7ed32d4e248dbd485988c33537ae3b"
+    },
+    {
+      "bytes": 746138,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/measurement_failed_native_qfo_assessment_v1/p0_c0_r1/results.json",
+      "sha256": "5c905ccddc00a3160ba35eff373836dbc64bc391d9b92c4d84bea9983773f3e0"
+    },
+    {
+      "bytes": 39334,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/recovered_native_07/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-recovered-native-p0-c0-r1_4a515aacafb7_raw.txt.gz",
+      "sha256": "f55ee75d4fc93c43889baa469c870f188410e7a5af0f6d7fd0fab04ee00af538"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    },
+    {
+      "bytes": 7889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovered_native_qfo_swiss_counts.py",
+      "sha256": "b216f8f9c90211a8d912d10fc31e6279641ed777729e98ad675a3ad4d34e8095"
+    },
+    {
+      "bytes": 8195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+      "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 9202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 12385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_scientific_scores.py",
+      "sha256": "5d0a10a101fa788efff05143634b3104edadfdd49409c65e4a497c407f69a56b"
+    },
+    {
+      "bytes": 5577,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_qfo_native_assessment.py",
+      "sha256": "4786081a21ce04b8ae25f1f3e83ed8a1766472ff7e4476ae70752fe7f0656da5"
+    },
+    {
+      "bytes": 12385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_scientific_scores.py",
+      "sha256": "5d0a10a101fa788efff05143634b3104edadfdd49409c65e4a497c407f69a56b"
+    },
+    {
+      "bytes": 12194,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_transitions.py",
+      "sha256": "7cd34a02b27520b974ddacd3b773d885ce0966541e9936678d356001811a292d"
+    },
+    {
+      "bytes": 8195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+      "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+    },
+    {
+      "bytes": 7889,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_recovered_native_qfo_swiss_counts.py",
+      "sha256": "b216f8f9c90211a8d912d10fc31e6279641ed777729e98ad675a3ad4d34e8095"
+    },
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 8531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_swiss_stages.py",
+      "sha256": "0598773a8bd04846f24e4cb27ab7b3529410c11451cbb399b9148a320fd06435"
+    }
+  ],
+  "comparison": {
+    "added_false_positives": 0,
+    "added_true_positives": 0,
+    "after_predictions_subset_on_reference": true,
+    "changed_relations": 2023,
+    "families": [
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 161,
+          "TP": 190
+        },
+        "before_counts": {
+          "FN": 0,
+          "FP": 148,
+          "TN": 13,
+          "TP": 190
+        },
+        "family": "APP",
+        "relations": 351,
+        "removed_false_positives": 148,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 0,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 148,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 13,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 190
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 372,
+          "FP": 0,
+          "TN": 0,
+          "TP": 124
+        },
+        "before_counts": {
+          "FN": 372,
+          "FP": 0,
+          "TN": 0,
+          "TP": 124
+        },
+        "family": "ASTER",
+        "relations": 496,
+        "removed_false_positives": 0,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 372,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 0,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 0,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 124
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 36,
+          "FP": 0,
+          "TN": 2,
+          "TP": 53
+        },
+        "before_counts": {
+          "FN": 36,
+          "FP": 1,
+          "TN": 1,
+          "TP": 53
+        },
+        "family": "BAMBI",
+        "relations": 91,
+        "removed_false_positives": 1,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 36,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 1,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 1,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 53
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 223,
+          "FP": 0,
+          "TN": 780,
+          "TP": 375
+        },
+        "before_counts": {
+          "FN": 222,
+          "FP": 116,
+          "TN": 664,
+          "TP": 376
+        },
+        "family": "BAR",
+        "relations": 1378,
+        "removed_false_positives": 116,
+        "removed_true_positives": 1,
+        "transitions": {
+          "FN->FN": 222,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 116,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 664,
+          "TN->TP": 0,
+          "TP->FN": 1,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 375
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 5,
+          "FP": 8,
+          "TN": 1895,
+          "TP": 45
+        },
+        "before_counts": {
+          "FN": 5,
+          "FP": 28,
+          "TN": 1875,
+          "TP": 45
+        },
+        "family": "CASP",
+        "relations": 1953,
+        "removed_false_positives": 20,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 5,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 8,
+          "FP->TN": 20,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 1875,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 45
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 56,
+          "FP": 0,
+          "TN": 225,
+          "TP": 97
+        },
+        "before_counts": {
+          "FN": 34,
+          "FP": 84,
+          "TN": 141,
+          "TP": 119
+        },
+        "family": "CITE",
+        "relations": 378,
+        "removed_false_positives": 84,
+        "removed_true_positives": 22,
+        "transitions": {
+          "FN->FN": 34,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 84,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 141,
+          "TN->TP": 0,
+          "TP->FN": 22,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 97
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 73,
+          "TP": 63
+        },
+        "before_counts": {
+          "FN": 0,
+          "FP": 65,
+          "TN": 8,
+          "TP": 63
+        },
+        "family": "Clusterin",
+        "relations": 136,
+        "removed_false_positives": 65,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 0,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 65,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 8,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 63
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 5,
+          "FP": 0,
+          "TN": 97,
+          "TP": 3
+        },
+        "before_counts": {
+          "FN": 4,
+          "FP": 11,
+          "TN": 86,
+          "TP": 4
+        },
+        "family": "GH14",
+        "relations": 105,
+        "removed_false_positives": 11,
+        "removed_true_positives": 1,
+        "transitions": {
+          "FN->FN": 4,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 11,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 86,
+          "TN->TP": 0,
+          "TP->FN": 1,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 3
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 98,
+          "FP": 0,
+          "TN": 1388,
+          "TP": 54
+        },
+        "before_counts": {
+          "FN": 98,
+          "FP": 122,
+          "TN": 1266,
+          "TP": 54
+        },
+        "family": "HOX",
+        "relations": 1540,
+        "removed_false_positives": 122,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 98,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 122,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 1266,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 54
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 12,
+          "FP": 0,
+          "TN": 48,
+          "TP": 18
+        },
+        "before_counts": {
+          "FN": 12,
+          "FP": 13,
+          "TN": 35,
+          "TP": 18
+        },
+        "family": "MAPT",
+        "relations": 78,
+        "removed_false_positives": 13,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 12,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 13,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 35,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 18
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 106,
+          "FP": 11,
+          "TN": 733,
+          "TP": 375
+        },
+        "before_counts": {
+          "FN": 105,
+          "FP": 563,
+          "TN": 181,
+          "TP": 376
+        },
+        "family": "NOX",
+        "relations": 1225,
+        "removed_false_positives": 552,
+        "removed_true_positives": 1,
+        "transitions": {
+          "FN->FN": 105,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 11,
+          "FP->TN": 552,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 181,
+          "TN->TP": 0,
+          "TP->FN": 1,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 375
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 21,
+          "FP": 0,
+          "TN": 374,
+          "TP": 166
+        },
+        "before_counts": {
+          "FN": 21,
+          "FP": 101,
+          "TN": 273,
+          "TP": 166
+        },
+        "family": "POP",
+        "relations": 561,
+        "removed_false_positives": 101,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 21,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 101,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 273,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 166
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 338,
+          "FP": 0,
+          "TN": 70,
+          "TP": 187
+        },
+        "before_counts": {
+          "FN": 127,
+          "FP": 58,
+          "TN": 12,
+          "TP": 398
+        },
+        "family": "PSEN",
+        "relations": 595,
+        "removed_false_positives": 58,
+        "removed_true_positives": 211,
+        "transitions": {
+          "FN->FN": 127,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 58,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 12,
+          "TN->TP": 0,
+          "TP->FN": 211,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 187
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 39,
+          "FP": 0,
+          "TN": 3,
+          "TP": 24
+        },
+        "before_counts": {
+          "FN": 11,
+          "FP": 0,
+          "TN": 3,
+          "TP": 52
+        },
+        "family": "RPS",
+        "relations": 66,
+        "removed_false_positives": 0,
+        "removed_true_positives": 28,
+        "transitions": {
+          "FN->FN": 11,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 0,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 3,
+          "TN->TP": 0,
+          "TP->FN": 28,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 24
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 152,
+          "FP": 0,
+          "TN": 174,
+          "TP": 577
+        },
+        "before_counts": {
+          "FN": 108,
+          "FP": 130,
+          "TN": 44,
+          "TP": 621
+        },
+        "family": "SERC",
+        "relations": 903,
+        "removed_false_positives": 130,
+        "removed_true_positives": 44,
+        "transitions": {
+          "FN->FN": 108,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 130,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 44,
+          "TN->TP": 0,
+          "TP->FN": 44,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 577
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 0,
+          "FP": 0,
+          "TN": 35,
+          "TP": 31
+        },
+        "before_counts": {
+          "FN": 0,
+          "FP": 32,
+          "TN": 3,
+          "TP": 31
+        },
+        "family": "SUMF",
+        "relations": 66,
+        "removed_false_positives": 32,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 0,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 32,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 3,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 31
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 11,
+          "FP": 0,
+          "TN": 351,
+          "TP": 103
+        },
+        "before_counts": {
+          "FN": 11,
+          "FP": 224,
+          "TN": 127,
+          "TP": 103
+        },
+        "family": "TRFE",
+        "relations": 465,
+        "removed_false_positives": 224,
+        "removed_true_positives": 0,
+        "transitions": {
+          "FN->FN": 11,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 224,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 127,
+          "TN->TP": 0,
+          "TP->FN": 0,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 103
+        }
+      },
+      {
+        "added_false_positives": 0,
+        "added_true_positives": 0,
+        "after_counts": {
+          "FN": 53,
+          "FP": 0,
+          "TN": 21,
+          "TP": 304
+        },
+        "before_counts": {
+          "FN": 27,
+          "FP": 12,
+          "TN": 9,
+          "TP": 330
+        },
+        "family": "VATB",
+        "relations": 378,
+        "removed_false_positives": 12,
+        "removed_true_positives": 26,
+        "transitions": {
+          "FN->FN": 27,
+          "FN->FP": 0,
+          "FN->TN": 0,
+          "FN->TP": 0,
+          "FP->FN": 0,
+          "FP->FP": 0,
+          "FP->TN": 12,
+          "FP->TP": 0,
+          "TN->FN": 0,
+          "TN->FP": 0,
+          "TN->TN": 9,
+          "TN->TP": 0,
+          "TP->FN": 26,
+          "TP->FP": 0,
+          "TP->TN": 0,
+          "TP->TP": 304
+        }
+      }
+    ],
+    "reference_relations": 10765,
+    "removed_false_positives": 1689,
+    "removed_true_positives": 334,
+    "transitions": {
+      "FN->FN": 1193,
+      "FN->FP": 0,
+      "FN->TN": 0,
+      "FN->TP": 0,
+      "FP->FN": 0,
+      "FP->FP": 19,
+      "FP->TN": 1689,
+      "FP->TP": 0,
+      "TN->FN": 0,
+      "TN->FP": 0,
+      "TN->TN": 4741,
+      "TN->TP": 0,
+      "TP->FN": 334,
+      "TP->FP": 0,
+      "TP->TN": 0,
+      "TP->TP": 2789
+    }
+  },
+  "independent_confirmation": false,
+  "limitations": [
+    "Only the18 SwissTrees families and native P0/C0 cells; not all predicted relations or selected defaults.",
+    "Transitions describe actual assessed pairs, not causal proof of reconciliation events or tree correctness.",
+    "Initial HMM search remains on; R also changes clique to resolved-pair prediction semantics.",
+    "Pooled unsmoothed pair counts are descriptive, not the native prior-adjusted macro F1 endpoint.",
+    "All changed relations are retained in a deterministic ledger, not selected examples.",
+    "Family dependence and development exposure persist; no uncertainty or generalization admission.",
+    "Recovered inference timing remains failed/null/ineligible; contention effects unknown/tool-dependent.",
+    "Direct admitted evidence is checked; no expensive transitive admission/resource replay or new job."
+  ],
+  "new_bootstrap_draws": 0,
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "reference": {
+    "bytes": 318907,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+    "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+  },
+  "schema": "native_qfo_swiss_pair_transitions_v1",
+  "scientific_timings_admitted": false,
+  "snapshot": {
+    "bytes": 24314,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v1/report.json",
+    "sha256": "6b2f735ea8a44f72715e11a7f015e4328576baa74c544889cbed0cdfe70ea07b"
+  },
+  "source": {
+    "bytes": 12194,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_swiss_transitions.py",
+    "sha256": "7cd34a02b27520b974ddacd3b773d885ce0966541e9936678d356001811a292d"
+  },
+  "uncertainty_admitted": false
+}

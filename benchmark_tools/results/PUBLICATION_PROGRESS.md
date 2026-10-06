@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Native SwissTrees Pair Selection Independently Traced (2026-10-06)
+
+Previous user-requested turn confirms the goal amendment, without new goal
+execution; re-read full objective on resumption and take a concrete available
+action. Original22444 verified RUNNING3:26:43, original downstream chain live.
+Commit/push actual admission-launch milestoneb9d4b5de, without resubmission.
+
+[New pair-decision evidence](NATIVE_QFO_SWISS_PAIR_TRANSITION_RESULT_20261006.md)
+uses two already-admitted native P0/C0 cells. All10,765 reference relations
+share exact pair identities/truth. R1 removes1,689 FP and334 TP, adds no
+positives on this universe. Complete2,023-row changed-pair ledger and all18
+family/16-transition tables retained. PSEN loses211 TP; RPS loses28 TP with no
+FP removal. These describe where decisions change, not causal tree/event
+attribution, pooled macro F1, new uncertainty or total-HMM benefit.
+
+Actual original-Python primary trace checks direct admission/audit/raw/reference
+bindings and exact audited counts/members/arithmetic. Independent stdlib-only
+SQLite readback under-I-S-B confirms21,530 raw rows,10,765 paired relations,
+288 family-transition cells,all2,023 changed rows and both native macro points.
+230 joined tests7.64s pass, no skips, including corruption/refusal cases.
+Primary test snapshot replay is explicitly stubbed; actual execution is not.
+
+Retain initial diagnostic KeyError before outputs: successful ordinary accuracy
+snapshot lacks timing fields. Correct only new diagnostic, preserve optional
+fields and explicitly failed recovered timing, use freshv2 output/resource
+paths. Successful diagnostic0.60s/98,304KiB is shared-host postprocessing,
+not inference timing. No defaults, scoring, historical artifacts or native
+jobs changed; no raw-resource replay or new scientific admission.
+
+Latest same-handle queue:22444 RUNNING3:35:28;22445/22450/22451/22452 all
+dependency-pending. Await their actual bound outputs and terminal gates before
+export/uncertainty or next native launch. Biological stage/event tracing,
+remaining cells, wider uncertainty/generalization/provenance/reproducibility/
+release requirements remain open. Shared-host contention unknown and potentially
+tool-dependent; no quiet-window requirement or unrelated workload change.
+
 ## Independent Native QfO Admission Released (2026-10-06)
 
 Prepared admission stage1b0915a8 committed/pushed before actual submission.
