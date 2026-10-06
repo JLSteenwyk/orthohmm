@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Historical Goal Snapshot Restored After Conversion Refusal (2026-10-06)
+
+Pushed471e74ed records actual22444 launch/dependent22445 and the explicit
+recovered-science converter with225 passing tests/57 new cases. Submit/release
+original22446 once on2CPU/32GiB; it exitsFAILED1:0 in1s before creating any
+conversion destination. The preserved error rejects the agent-added two-line
+update to historical `PUBLICATION_GOAL_20261003.txt`, which is a hash-bound
+plan/recovery evidence file. This is a postprocessing failure, not native
+inference failure, native timing pass or an excuse to relax frozen checks.
+
+Restore only those agent-added lines to original15157bytes/SHA7d99ecb39a740b689
+101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0. Record the current user
+authorization in [a separate amendment](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+The active attachment remains updated; historical repository snapshot need
+not match it. All920 helper files remain unchanged. Native22444 remains live;
+no scientific source/input or analysis is restarted. Explicitly retain the
+transient historical-document mutation and non-continuous integrity scope.
+
+Before a new postprocessing attempt, check actual failed22446 accounting/error,
+unused destination and full current recovery/evidence bindings. A justified
+new allocation must use a separate fresh destination and preserve original
+submission/release/error. This is an explicit repair, not automatic retry or
+fastest/contention selection. Conversion/scoring/independent admission and
+the broader uncertainty/reproducibility package remain outstanding.
+
 ## Next Frozen Native QfO Identity Launched (2026-10-06)
 
 Previous turn makes progress by reaffirming the active goal's shared-host scope.

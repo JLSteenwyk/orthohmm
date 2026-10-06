@@ -55,6 +55,14 @@ inference directly. It actually identifies the measurement supervisor. The
 corrected observer follows its native child and retains the failed assertion;
 no process or analysis is restarted.
 
+Actual first converter22446 fails before output creation because the agent
+edited the hash-bound historical goal copy. Preserve FAILED1:0/1s and the
+original error. Restore the historical snapshot and record the current active
+goal in a [separate amendment](SHARED_HOST_GOAL_AMENDMENT_20261006.md). Recheck
+all recovery bindings before a separately recorded repair attempt in a new
+destination; do not weaken checks or overwrite original evidence. This failure
+is not a completed pair conversion and neither evaluates nor changes accuracy.
+
 Timing measurements are collected on a shared Threadripper with competing
 analyses. CPU, memory-bandwidth and I/O competition may affect elapsed times
 by an unknown, potentially tool-dependent amount. These are not estimates of
