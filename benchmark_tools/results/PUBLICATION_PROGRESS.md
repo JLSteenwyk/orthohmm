@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Native SwissTrees Mechanism Figure Checked (2026-10-06)
+
+Previous completed scientific milestone525d6d64 makes real progress by
+projecting native counts onto frozen sequence strata. Intervening user-requested
+goal amendment confirmation/pause is administrative, not new scientific
+execution. Re-read full objective and pending figure work on resumption.
+Original22444 verified RUNNING7:11:16; original22445/22450/22451/22452
+dependency-pending. No original handle restarted or unfinished output read.
+
+[New four-panel companion](NATIVE_QFO_SWISS_MECHANISM_FIGURE_RESULT_20261006.md)
+joins all2,023changedpairs and unchanged input-only18family bins. Direct
+report/source/actualreadback bindings reused; no181million-row scan, native
+inference/tree/scoring or transitive admission repeated for rendering. Three
+ten-row tables preserve exact counts, F1 and macroP/R. No new uncertainty,
+biology/causal confirmation, selected-default superiority or total-HMM claim.
+
+Independent reader derives all30table rows from original reports, checks
+sixoutput identities, SVG labels and four nonblank crops in actualPNG and
+PDFbitmap. Both viewed with view_image; this is agent visual inspection,
+not human review. ActualMatplotlib geometry test checks everylegend against
+axes and titles. Preserve v1/v2 history, original failed40case geometry XML
+and failedreader exit1/Counter-shadow exception. v3 fixes anchors without
+relaxing geometry; allthree table versions byteidentical. Final joined XML
+records394passingcases17.81s/no failures/errors/skips, extending initial392
+with retainedreceipt/history checks. Newfigure modules42cases; actual
+scientific admissions unchanged.
+
+Final render1.43s/112,728KiB exit0/zeroswaps is shared-host postprocessing,
+not native timing. Fresh capacity626GiBavailable/9.5TiBdisk; nearfullswap
+disclosed. FailedR1timing remainsineligible. Unknown tool-dependent contention
+disclosed; no quiet-window/dedicated-host gate or unrelatedwork modification.
+
+Latest original22444 RUNNING7:16:30; allfourdownstream stages dependency-pending.
+Await actual terminal/production gates before new scientific score/uncertainty
+exports or next identity. OriginalTreeFamfiles remain unrecovered after public
+follow-up/no contacts/no substitutions. Frozen main/PDF/archive unchanged;
+companion awaits complete assembly. Remaining nativecells/matchedsearch/
+graph/tree/otherstrata, wideruncertainty/generalization/provenance/fullarchive/
+manuscript/release requirements incomplete. Fullgoal active/completionunproven.
+
 ## Native SwissTrees Frozen Sequence Strata Independently Verified (2026-10-06)
 
 Previous goal turn makes real progress ata56734d4 by tracing direct significant

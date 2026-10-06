@@ -1,0 +1,23 @@
+{
+  "schema": "native_qfo_swiss_mechanism_readback_failure_v1",
+  "exit_code": 1,
+  "source_sha256_observed_before_fix": "ce76731393c2ba7783770df5c1e1fc785c5ec62dbc11de70373e31db6687776f",
+  "source": "benchmark_tools/review_native_qfo_swiss_mechanism.py",
+  "figure_directory": "benchmark_tools/results/native_qfo_swiss_mechanism_figure_20261006_v2",
+  "pdf_preview": "benchmark_tools/results/native_qfo_swiss_mechanism_pdf_preview_20261006_v2.png",
+  "requested_output": "benchmark_tools/results/native_qfo_swiss_mechanism_figure_readback_20261006_v2.json",
+  "requested_output_created": false,
+  "error": "TypeError: unsupported operand type(s) for /: 'Counter' and 'str'",
+  "location": "review(), opening root / name for plotted-table readback",
+  "cause": "A local RootHOG membership Counter shadowed the supplied figure directory variable.",
+  "fix_scope": "Rename the local Counter; preserve all figure inputs, data and rendered bytes.",
+  "native_inference_or_scoring_repeated": false,
+  "automatic_retry": false,
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "limitations": [
+    "Diagnostic exception and source hash retained from actual command observation; not native inference failure.",
+    "No GNU-time resource receipt was requested for this failed readback.",
+    "Original pre-fix source bytes are not separately archived by this receipt."
+  ]
+}
