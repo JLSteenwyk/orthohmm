@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Exact Four-Cell Review Built And Archived Before External Restore (2026-10-07)
+
+ccec7e4b prospectiveprotocol pushed BEFORE one unchangedexporter build with
+exact3b1dc7ad selection. Actualexit0/1.87s/23040KiBRSS:142payloads/8916531bytes,
+107directtargets/110links/21pages, INDEX3a6e46bc/52225bytes. Generatedindex
+copiedunchanged toresults. GNUtar regular-index-only archiveexit0/0.61s/
+23828KiBRSS,143requestedmembers,6158614bytes/SHAac604c4d, emptystderr.
+Source/restorerpins unchanged; before/after componentverification passes.
+No oldcomponent/mainrender/science/nativejob changed. Build/archive receipts
+truthfullydoNOTclaim externalrestore/copiedexecutionyet.
+
+Next commit/push newarchive/index/build+archivereceipts/checkpoint, then ONE
+existinganchoredrestore to fresh /tmp/orthohmm_four_cell_review_20261007_v1
+with externalarchiveac604c4d/index3a6e46bc digests and fresh
+four_cell_direct_review_restore_20261007_v1.json receipt. Checkcopiedverifier
+SHA4b9646bf before actuallyexecuting it -I-S-B from/tmp; retainactualoutput/
+costs and reportboundedresult. Manualmainreview/newclaims remainseparateGit,
+not silentlyinjectedinto immutable directinventory. No transitivefullstudy/
+nativeinference/publicrelease/rights/readinessclaim. SAME23985lastRUNNING1:52:27,
+23986DependencyPENDING; no duplicate/releaseagain. FullgoalACTIVE/incomplete.
+
 ## Package Exact Four-Cell Review With Existing Exporter (2026-10-07)
 
 Previous turn classified progress: actualfour-cell main/reporting integration

@@ -1,0 +1,49 @@
+{
+  "status": "new_four_cell_direct_review_component_built",
+  "prospective_protocol_commit": "ccec7e4b",
+  "source_revision": "3b1dc7add7e8f118fbb653c0b65866c17a65111d",
+  "command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python", "-I", "-S", "-B",
+    "benchmark_tools/bundle_publication_review.py", "build", "--repo", ".",
+    "--review-revision", "3b1dc7add7e8f118fbb653c0b65866c17a65111d",
+    "--ledger-revision", "3b1dc7add7e8f118fbb653c0b65866c17a65111d",
+    "--workflow-revision", "3b1dc7add7e8f118fbb653c0b65866c17a65111d",
+    "--main-text", "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md",
+    "--render-receipt", "benchmark_tools/results/publication_main_review_20261007_v4_checked_assets.json",
+    "--print-receipt", "benchmark_tools/results/publication_main_review_20261007_v4_checked_print/print.json",
+    "--review-receipt", "benchmark_tools/results/publication_main_review_20261007_v4_checked_pdf_review/report.json",
+    "--output", "benchmarks/work/four_cell_direct_review_20261007_v1"
+  ],
+  "environment": {
+    "unset": ["PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
+    "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"
+  },
+  "returncode": 0,
+  "stderr": "elapsed_s=1.87 max_rss_kib=23040 exit=0\n",
+  "elapsed_seconds": 1.87,
+  "max_rss_kib": 23040,
+  "result": {
+    "direct_targets": 107,
+    "entrypoints": {
+      "html": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4_checked.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md",
+      "pdf": "benchmark_tools/results/publication_main_review_20261007_v4_checked_print/document.pdf"
+    },
+    "files": 142,
+    "inference_reproduced": false,
+    "local_html_occurrences": 110,
+    "manifest": {"bytes": 52225, "sha256": "3a6e46bc6aafea5ba3b012e78091b778d046fe43790fa9cf0c1413eeeec9a4a1"},
+    "page_count": 21,
+    "payload_bytes": 8916531,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "historical_components_modified": false,
+  "manual_visual_receipt_in_component": false,
+  "new_claim_addendum_in_component": false,
+  "outside_checkout_restoration_proved": false,
+  "publication_ready": false
+}
