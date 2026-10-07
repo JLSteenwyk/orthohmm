@@ -1,0 +1,30 @@
+{
+  "schema": "four_cell_main_render_selection_failure_v1",
+  "source_commit": "ce70408d",
+  "command": [
+    "benchmarks/work/release_alert_refresh_20261001/venv/bin/python", "-B", "-m",
+    "benchmark_tools.render_manuscript_review", "--repo", ".", "--manuscript",
+    "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md", "--output",
+    "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.html", "--report",
+    "benchmark_tools/results/publication_main_review_20261007_v4_assets.json",
+    "--bibliography", "benchmark_tools/results/publication_bibliography_20260920_v5.csl.json"
+  ],
+  "environment": {
+    "unset": ["PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
+    "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"
+  },
+  "time_wrapper": ["/usr/bin/time", "-f", "elapsed_s=%e max_rss_kib=%M exit=%x"],
+  "returncode": 1,
+  "stdout": "",
+  "error_type": "ValueError",
+  "error": "Missing citation identifiers: ['iqtree3_2026']",
+  "stderr_tail": "ValueError: Missing citation identifiers: ['iqtree3_2026']\nCommand exited with non-zero status 1\nelapsed_s=0.81 max_rss_kib=112128 exit=1\n",
+  "elapsed_seconds": 0.81,
+  "max_rss_kib": 112128,
+  "checked_after_failure": {"html_exists": false, "assets_receipt_exists": false},
+  "diagnosis": "The selected historical CSL v5 lacks the IQ-TREE 3 citation. The actual parent v3 render uses existing CSL 20261007_v1 instead.",
+  "automatic_retry": false,
+  "source_or_manuscript_modified": false,
+  "publication_ready": false
+}

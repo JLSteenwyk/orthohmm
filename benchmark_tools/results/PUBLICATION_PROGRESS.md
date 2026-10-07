@@ -1,5 +1,26 @@
 # Publication Progress
 
+## V4 Render Failure Diagnosed Before Corrected Bibliography Selection (2026-10-07)
+
+ce70408d pushed actual v4 manuscript/content checks. Selected HTML render with
+old SeptemberCSLv5 failed before output, exit1/0.81s/112128KiBRSS, missing
+iqtree3_2026. Both destinations confirmed absent. Failure retained separately;
+no source/bibliography/manuscript edits or weakened check. Parent actual v3
+render instead binds OctoberCSLv1 a8b74a33/50517bytes. Direct preflight checks
+its exact parent binding,19unchanged citationIDs/no missing/uniqueIDs, all old
+entries identical and only IQTREE3entry added. This is established selection
+error, not a pipeline/scientific defect or whole-goal blocker.
+[Prospective correction](FOUR_CELL_MAIN_RENDER_SELECTION_20261007.md).
+
+Next commit/push failure/correction/checkpoint BEFORE one corrected render
+using existing publication_bibliography_20261007_v1.csl.json, unchangedrenderer
+and same v4 source. Fresh PUBLICATION_MAIN_TEXT_20261007_v4_checked.html and
+publication_main_review_20261007_v4_checked_assets.json. After success check
+actualreceipt then unchanged print/review into checked_print/checked_pdf_review
+namespaces, visually inspect all actual pages. Old CSLv5 handoff superseded
+only for input selection/output namespaces. No automatic retry/duplicatejob.
+Native23985/reviewer23986 unchanged pending science; fullgoal ACTIVE/incomplete.
+
 ## Four-Cell Main Manuscript Generated And Content Checked (2026-10-07)
 
 e7c1145d committed/pushed source/test/protocol/retainedXML BEFORE one selected
