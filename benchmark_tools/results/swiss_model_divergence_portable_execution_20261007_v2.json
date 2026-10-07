@@ -1,0 +1,109 @@
+{
+  "status": "actual_copied_distance_replay_v2_succeeded",
+  "returncode": 0,
+  "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /usr/bin/time -v -o /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_portable_replay_20261007_v2.time.txt /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B -c 'import json, os, runpy, sys\nfrom pathlib import Path\ncomponent = Path(\"/tmp/orthohmm_swiss_model_component_20261007_v2\")\noutput = Path(\"/tmp/orthohmm_swiss_model_replay_20261007_v2\")\noriginal = Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\")\ndenied = [original / \"benchmark_tools\", original / \"benchmarks/results\"]\nevents = []\ndef guard(event, args):\n    if event == \"open\" and args and isinstance(args[0], (str, bytes, os.PathLike)):\n        path = Path(os.fsdecode(args[0])).resolve()\n        if any(path.is_relative_to(root) for root in denied):\n            events.append(dict(event=event, path=str(path)))\n            raise PermissionError(\"Blocked original scientific source/logical-input path\")\n    if event in (\"subprocess.Popen\", \"os.system\", \"os.posix_spawn\"):\n        events.append(dict(event=event))\n        raise PermissionError(\"Blocked subprocess launch\")\nsys.addaudithook(guard)\nfor path in (original / \"benchmark_tools/readback_swiss_model_divergence.py\",\n             original / \"benchmarks/results/swiss_model_divergence_20261007_v1/report.json\"):\n    try:\n        open(path, \"rb\")\n    except PermissionError:\n        pass\n    else:\n        raise RuntimeError(\"Original-path canary did not block\")\ncanaries = list(events)\nif len(canaries) != 2:\n    raise RuntimeError(\"Unexpected canary audit\")\nevents.clear()\nnamespace = runpy.run_path(str(component / \"replay.py\"), run_name=\"copied_replay\")\nresult = namespace[\"replay\"](component, \"83e3b34b7b99de6f23b6f2c4a4c2cbf28d001c0ac8708b06f427a909346bf3e2\", output)\nif events:\n    raise RuntimeError(\"Replay attempted scientific fallback or subprocess\")\nprint(json.dumps(dict(status=\"copied_replay_executed_with_python_event_guard\",\n    python_version=sys.version, result_path=str(output / \"replay.json\"),\n    summary={k:v for k,v in result.items() if k != \"family_descriptors\"},\n    guard=dict(denied_original_roots=list(map(str, denied)), canaries=canaries,\n               replay_forbidden_events=events, os_containment=False,\n               runtime_site_packages_explicitly_allowed=True)), sort_keys=True))\n'",
+  "guard_source": "import json, os, runpy, sys\nfrom pathlib import Path\ncomponent = Path(\"/tmp/orthohmm_swiss_model_component_20261007_v2\")\noutput = Path(\"/tmp/orthohmm_swiss_model_replay_20261007_v2\")\noriginal = Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\")\ndenied = [original / \"benchmark_tools\", original / \"benchmarks/results\"]\nevents = []\ndef guard(event, args):\n    if event == \"open\" and args and isinstance(args[0], (str, bytes, os.PathLike)):\n        path = Path(os.fsdecode(args[0])).resolve()\n        if any(path.is_relative_to(root) for root in denied):\n            events.append(dict(event=event, path=str(path)))\n            raise PermissionError(\"Blocked original scientific source/logical-input path\")\n    if event in (\"subprocess.Popen\", \"os.system\", \"os.posix_spawn\"):\n        events.append(dict(event=event))\n        raise PermissionError(\"Blocked subprocess launch\")\nsys.addaudithook(guard)\nfor path in (original / \"benchmark_tools/readback_swiss_model_divergence.py\",\n             original / \"benchmarks/results/swiss_model_divergence_20261007_v1/report.json\"):\n    try:\n        open(path, \"rb\")\n    except PermissionError:\n        pass\n    else:\n        raise RuntimeError(\"Original-path canary did not block\")\ncanaries = list(events)\nif len(canaries) != 2:\n    raise RuntimeError(\"Unexpected canary audit\")\nevents.clear()\nnamespace = runpy.run_path(str(component / \"replay.py\"), run_name=\"copied_replay\")\nresult = namespace[\"replay\"](component, \"83e3b34b7b99de6f23b6f2c4a4c2cbf28d001c0ac8708b06f427a909346bf3e2\", output)\nif events:\n    raise RuntimeError(\"Replay attempted scientific fallback or subprocess\")\nprint(json.dumps(dict(status=\"copied_replay_executed_with_python_event_guard\",\n    python_version=sys.version, result_path=str(output / \"replay.json\"),\n    summary={k:v for k,v in result.items() if k != \"family_descriptors\"},\n    guard=dict(denied_original_roots=list(map(str, denied)), canaries=canaries,\n               replay_forbidden_events=events, os_containment=False,\n               runtime_site_packages_explicitly_allowed=True)), sort_keys=True))\n",
+  "source_commit": "2ea4be041226bdfe0f06bce5a093b6201f18c16b",
+  "precheck": {
+    "status": "copied_v2_component_checked_before_execution",
+    "files": 15,
+    "source_commit": "2ea4be041226bdfe0f06bce5a093b6201f18c16b",
+    "index_sha256": "83e3b34b7b99de6f23b6f2c4a4c2cbf28d001c0ac8708b06f427a909346bf3e2"
+  },
+  "result": {
+    "guard": {
+      "canaries": [
+        {
+          "event": "open",
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_swiss_model_divergence.py"
+        },
+        {
+          "event": "open",
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/swiss_model_divergence_20261007_v1/report.json"
+        }
+      ],
+      "denied_original_roots": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools",
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results"
+      ],
+      "os_containment": false,
+      "replay_forbidden_events": [],
+      "runtime_site_packages_explicitly_allowed": true
+    },
+    "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "result_path": "/tmp/orthohmm_swiss_model_replay_20261007_v2/replay.json",
+    "status": "copied_replay_executed_with_python_event_guard",
+    "summary": {
+      "bins": {
+        "all": [
+          "APP",
+          "ASTER",
+          "BAMBI",
+          "BAR",
+          "CASP",
+          "CITE",
+          "Clusterin",
+          "GH14",
+          "HOX",
+          "MAPT",
+          "NOX",
+          "POP",
+          "PSEN",
+          "RPS",
+          "SERC",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ],
+        "higher_than_median": [
+          "ASTER",
+          "BAR",
+          "CASP",
+          "Clusterin",
+          "HOX",
+          "MAPT",
+          "POP",
+          "PSEN",
+          "SERC"
+        ],
+        "lower_or_equal_median": [
+          "APP",
+          "BAMBI",
+          "CITE",
+          "GH14",
+          "NOX",
+          "RPS",
+          "SUMF",
+          "TRFE",
+          "VATB"
+        ]
+      },
+      "biopython_version": "1.87",
+      "component_files": 15,
+      "differences": 6,
+      "families": 18,
+      "family_rows": 54,
+      "independent_confirmation": false,
+      "index_sha256": "83e3b34b7b99de6f23b6f2c4a4c2cbf28d001c0ac8708b06f427a909346bf3e2",
+      "limitations": [
+        "Reuses frozen edge/rational functions and Biopython parsing; not a second independent implementation.",
+        "Historical raw-count admission, inference, model fit, runtime and scheduler are not reexecuted.",
+        "No new uncertainty, default, isolated timing, generalization or public redistribution claim."
+      ],
+      "median_family_distance": 2.24582463005,
+      "native_inference_reproduced": false,
+      "new_bootstrap_draws": 0,
+      "numpy_version": "2.2.6",
+      "pairs": 10765,
+      "proteins": 563,
+      "publication_ready": false,
+      "raw_counts_readmitted": false,
+      "restored_payloads": 183,
+      "scientific_timings_admitted": false,
+      "score_rows": 9,
+      "status": "retained_model_distance_arithmetic_replayed"
+    }
+  },
+  "failed_v1_preserved": true,
+  "publication_ready": false
+}

@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Actual Relocated Model-Distance Arithmetic Reproduced (2026-10-07)
+
+This continuation PROGRESS: new manuscript review/delivery plus genuine goal7
+replay completed, not a status-only stop. Source2ea4be04 pushed before ONEv2
+15file build, index83e3b34b/4815bytes. Every copied payload checked before
+execution outside checkout under Py3.10.13 -I -B/Bio1.87/NumPy2.2.6. Actual
+Python-event guard blocked two original source/logical-input canaries and saw
+NOforbidden scientific fallback/subprocess events during replay; runtime
+site-packages allowed, not OS containment. Actualv2exit0/0.47s/50688KiB/0swaps.
+
+All183regular evidence files,18family descriptors/563members/10765distances,
+original9/9bins,54count rows/9scores/6contrasts/bothTSVs/all15human table rows
+matched. Full descriptor output47a60315/18293bytes retained, executionb9d995b3
+retains exact guard source/command. Median2.24582463005; no changed science,
+bootstrap/inference/raw admission/timing/default/independent confirmation.
+Failedv1, its namespaces/source/archive and original science all unchanged.
+New15payload component archive6d995e04/693861bytes contains16regular members,
+every serialized byte checked against the external index. It archives the
+actually executed component; no second scientific replay was performed.
+17new artifact/repair/archive tests pass1.12s. See
+SWISS_MODEL_DIVERGENCE_PORTABLE_RESULT_20261007.md and updated claim addendum.
+
+Exact next action: commit/push ONLY actualv2 build/execution/full-result/time,
+small serialized component/result doc/artifact tests/claim update/checkpoint.
+Then inspect the remaining domain-architecture requirement using already
+retained ordered Pfam instances before deciding whether another scientific
+action is justified. Existing analysis uses type/repeat counts, not ordered
+signatures; the inventory already has all563genes with coordinates and five
+present-but-zero-Pfam records. Do not regenerate original annotation extraction
+or treat these predicted annotations as experimentally complete architecture.
+Only a prespecified label-independent ordered descriptor, if useful and not
+already analyzed, would support a new bounded error analysis; never select
+cutoffs after inspecting outcomes or add campaigns to occupy waiting time.
+
+Dependency-only SAME23902/23910 still RUNNING/PENDING-Dependency; inspect changing
+handles alongside remaining work, or use bounded actual waits if no useful
+independent action exists. Last search observation73.03% is not whole-pipeline
+progress or an ETA. No native terminal/review/admission, duplicate/restart/
+re-release or quiet-host/user-resume gate. Successful native/review precedes
+existing conversion/scoring/admission then unrun11/12; retain9failure.
+Full goalACTIVE and unmet scientific/external/reproducibility limits explicit.
+
 ## First Portable Replay Failed; Directory-Header Repair Tested (2026-10-07)
 
 Sourcec1cba50e was pushed before ONE15file build, index67d9f3bb/4809bytes.
