@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Divergence Job Live And Separate Projection Tested (2026-10-07)
+
+Protocol24c6e8ae/a596371c and feature/reader/batch sources8d075769 were pushed
+BEFORE ONEselected inference submission. New23932RUNNING6:26, actual controller
+2CPU/8G/4h/Requeue0/Restarts0, full sourcecommit8d075769e5792d6ae92e329eca59dd62a6d8c21b.
+Output benchmarks/results/swiss_model_divergence_20261007_v1. First3family
+receipts exist; terminal feature report/independent admission not yet proved.
+Never resubmit, restart, resume or alter its bound sources. SAME23902RUNNING
+7:42:57 and23910PENDING/Dependency untouched; no scientific timing admission.
+
+New separate exporter/readback implement frozen three bins x three native
+cells and two conditional contrasts. Only wholly invented feature/count
+fixtures evaluated, no selected subgroup scores yet.18focused tests pass0.44s
+for rational macro-vs-pooled/mean-F1, complete9score/6difference rows, emptyNA,
+pp units, all54count rows/TN, semantics, failed-timing retention, inherited
+verification scope and corruption/overwrite refusal. New projection sources
+remain uncommitted at this checkpoint; do not execute selected projection
+until these tested sources are committed/pushed and features are independently
+verified with successfully terminal23932 accounting. Feature stage does not
+read these counts, and projection does not reinfer trees or reread raw scores.
+
+Exact next independent action: commit/push ONLY new projection/readback/tests/
+this checkpoint before selected projection. Observe SAME23932 alongside native
+23902/review23910. If23932success/all18families, run the already committed
+feature edge-split reader once into fresh readback output; then use explicit
+feature/readback hashes with committed score exporter and independent rational
+reader. Retain a complete table/result and current direct bindings. If any
+family fails, retain report/partial outputs and no subset cutoff/projection or
+retry. Do not touch oldmain/rc5 or frozen source/job bytes. Full goal ACTIVE.
+
 ## Fixed-Model Divergence Sources Tested Before Selected Execution (2026-10-07)
 
 Previous goal turn PROGRESS: actual editable contract/checkpoint corrected and
