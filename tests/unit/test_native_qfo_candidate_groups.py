@@ -163,6 +163,7 @@ def retained(tmp_path):
             admission["checked_records"] = [conversion_ref] if mode != "unbound_conversion" or index != 8 else []
             methods.append(dict(participant=participant, admission=write(participant + "/admission.json", admission)))
         rows = [("a", "b", "TP", "TP"), *changes]
+        if mode == "identifier": rows[-1] = ("t", "z", "not_scored", "FP")
         if mode == "duplicate_transition": rows.append(rows[0])
         if mode == "unsupported_transition": rows[1] = ("a", "s", "TP", "FN")
         text = "protein_left\tprotein_right\tblock_left\tblock_right\tp0_c0_r0\tp0_c1_r0\n"
