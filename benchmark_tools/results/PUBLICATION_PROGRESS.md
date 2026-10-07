@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Goal Recovery Instructions Clarified (2026-10-06)
+
+Latest user request asks to fix recurring stops, not to pause or restart the
+publication goal. Read actual active attachment and goal state: already active,
+with contention authorized. Fresh queue shows unrelated fungal-rm2-full tasks;
+no new OrthoHMM production job is launched or inferred to be running.
+
+Update only the editable attachment and this documentary amendment, preserving
+the frozen historical goal hash7d99ecb3. New attachment hash e4e6ae43 explicitly
+distinguishes current authorization from historical evidence, directs substantive
+progress instead of permission/receipt loops, and makes ordinary turn endings
+or submitted-job waits neither pause nor completion. Shared-host timing caveat,
+all seven scientific sections and safety/accounting requirements remain.
+See [operational correction](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+
+Next substantive action remains the unfinished allocation-aware integration:
+preserve current uncommitted controller/request/reviewer/output-validation work
+and retained 420-pass integration test result; implement the missing QfO
+conversion, assessment and independent admission modules, validate and push,
+then prospectively bind the new route before sequential unrun identities10-12.
+Do not retry9 or repeat terminal23894/23897. Existing tests do not establish
+production readiness. No scientific result, runtime repair or launch claimed
+from this prompt edit. Full goal remains active and incomplete.
+
 ## Candidate-Expansion QfO Accuracy Admitted (2026-10-06)
 
 Same23894 completes0:0/30:36; unchanged original admission1e13da48 runs once
