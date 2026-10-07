@@ -1,0 +1,36 @@
+{
+  "status": "review_asset_revision_prepared",
+  "parent": {
+    "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v2.md",
+    "bytes": 74312,
+    "sha256": "eeff5806d2ac8d52458922c8fdd0910a65d892821e3fa227600289ed6a9ebc9b"
+  },
+  "output": {
+    "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v3.md",
+    "bytes": 74783,
+    "sha256": "41eab259cadea1d0339bf262cb1ad50a488aec4f29031f6aecce3e8d038c4951"
+  },
+  "edits": [
+    {
+      "from": "# OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement\n\n",
+      "to": "# OrthoHMM: HMM-Centered Group Inference With Phylogenetic Refinement\n\nReview-asset revision of 7 October 2026, v3. Not submission-ready.\nThis revision preserves the [editorial v2 source](PUBLICATION_MAIN_TEXT_20261007_v2.md),\nits render/PDF and the failed asset review. Only this version note and the\nprogress-ledger hyperlink differ from v2. The ledger remains a living\noperational record, not a hash-frozen review asset. Scientific prose,\nnumerical tables, endpoints and other evidence links are unchanged.\nEarlier opening notes below remain chronological history.\n\n",
+      "occurrences": 1
+    },
+    {
+      "from": "[progress ledger](PUBLICATION_PROGRESS.md)",
+      "to": "progress ledger",
+      "occurrences": 1
+    }
+  ],
+  "failed_review": {
+    "path": "benchmark_tools/results/publication_main_pdf_review_failure_20261007_v2.json",
+    "sha256": "5617184c78855add977340c08aed1f656ae73e24f2b7bd1dd13848ed7caeee5a"
+  },
+  "numerical_table_bytes_unchanged": true,
+  "scientific_scope_unchanged": true,
+  "old_render_or_pdf_modified": false,
+  "benchmark_or_scoring_reexecuted": false,
+  "new_render_or_package_proved": false,
+  "publication_ready": false,
+  "reason": "The existing v2 asset-review invocation rejected the changed live progress ledger. Preserve that failure and all v2 evidence. New v3 removes only its live-ledger hyperlink and adds a version note, so future goal checkpoints need not invalidate a frozen review."
+}

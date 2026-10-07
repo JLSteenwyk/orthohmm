@@ -1,0 +1,19 @@
+{
+  "status": "pdf_asset_review_failed_before_rasterization",
+  "returncode": 1,
+  "helper": "benchmark_tools/review_manuscript_pdf.py",
+  "pdf": "benchmark_tools/results/publication_main_print_20261007_v2/document.pdf",
+  "assets": "benchmark_tools/results/publication_main_render_20261007_v2.json",
+  "requested_output": "benchmark_tools/results/publication_main_pdf_review_20261007_v2",
+  "phrases": ["OrthoHMM", "Fixed-Stratum SwissTrees Error Analyses", "Lower/equal distance", "not calibrated biological time", "IQ-TREE 3: phylogenomic inference software"],
+  "error_type": "ValueError",
+  "error": "Frozen input/source identity changed: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_PROGRESS.md",
+  "recorded_ledger_bytes": 2541685,
+  "recorded_ledger_sha256": "f3166c8f71c7949ed8449617208a77f4517db803fd6da9aa8349b5f49e692696",
+  "ledger_changed_by_commit": "93f388dd",
+  "requested_output_created": false,
+  "old_render_or_pdf_modified": false,
+  "visual_review_complete": false,
+  "publication_ready": false,
+  "limitations": ["This retains the observed failed helper invocation, not successful asset validation or visual review.", "The ledger is a live operational record; no historical render receipt was rewritten to match its new bytes."]
+}
