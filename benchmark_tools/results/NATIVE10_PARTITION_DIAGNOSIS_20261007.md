@@ -74,3 +74,26 @@ The original error's cause remains unestablished.
 The context probe exited 0 in 58.10 seconds with 1,030,112 KiB peak RSS and
 zero swaps. The exact command is in its time record. It did not rerun inference
 or the completed resource/environment replay.
+
+## Fresh Full Review Outcome
+
+The prospectively documented, distinct full review23973 completed0:0 in44:35,
+ended2026-10-07T14:27:43 in scheduler accounting. It invoked the unchanged
+original reviewer with all runtime, resource, shared-environment and output
+checks active. Its actual `review/review.json` SHA256 is
+`7eab212d9788deb031232e4641089ff96503c0e5727e1ec369067f93ffb518b5`.
+It binds55,162evidencefiles and has `status=native_success`,
+`terminal_reviewed=true`, `native_outputs_validated=true`,
+`primary_resources_replayed=true`, `shared_host_resources_reviewed=true` and
+`next_identity_authorized=true`. Source is the original unchanged reviewer,
+not a substituted diagnostic. These are terminal-review gates, not accuracy
+assessment or publication readiness.
+
+No inference was rerun. Primary retained native resources are53,995.367466727s
+wall,1,585,693.069194CPU-s and19,355,951,104bytes step-lifetime peak memory,
+under the precise original resource scopes. Shared-host distortion remains
+unknown and potentially tool-dependent. Scientific timing/accuracy admission
+remains false until the downstream contracts complete. The large7.43GB replay
+and complete review stay outside Git. Original23910failure remains retained
+with unestablished cause. The next authorized step is the frozen two-CPU QfO
+pair conversion in a fresh namespace, then assessment and independent admission.
