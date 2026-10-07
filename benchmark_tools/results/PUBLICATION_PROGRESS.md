@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Current Goal Checkpoint Corrected (2026-10-06)
+
+Latest user request asks to fix recurring stops. Direct inspection confirms
+the goal is ACTIVE and the same native job 23902 RUNNING at 21:01. The active
+attachment still directs completion of missing integration, now implemented,
+tested and pushed through 1340853f. Replace only that stale current checkpoint
+and add explicit continuation dispatch; no frozen helper or evidence is edited.
+See [instruction correction](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+
+Next observe the existing job to its actual terminal outcome, review it, and
+only then process successful outputs through conversion/scoring/admission and
+the new reporter. Keep 11/12 sequential under their existing reviewed-history
+and launch gates, retain failure 9, and continue independent publication work.
+Newest ledger entries are at the TOP. No repeated integration, launch, fixture
+validation, quiet-window permission or DGX work is required by this edit.
+
+Normal turn endings and scheduler waits do not pause or complete the goal.
+The cause of any platform-level interruption remains unverified; this is an
+instruction/checkpoint correction, not a claim to repair the goal scheduler.
+No new score, terminal success, resource admission or readiness claim follows.
+
 ## Allocation-Aware Scientific Reporting Integrated (2026-10-06)
 
 Previous goal turn makes concrete progress by completing validated production

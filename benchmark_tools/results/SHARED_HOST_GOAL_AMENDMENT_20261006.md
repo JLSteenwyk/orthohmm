@@ -1,5 +1,38 @@
 # Shared-Host Authorization Reaffirmed
 
+## Current Checkpoint Correction
+
+The latest user request again asks about recurring stops. Direct inspection
+finds the goal ACTIVE and the existing native job 23902 RUNNING at 21:01;
+this does not establish why an earlier continuation appeared to stop.
+The editable attachment still describes the production integration as missing,
+although it is completed and pushed through 1340853f. Replace that stale
+instruction with the actual checkpoint, not another integration or launch.
+
+Continue observing the same identity-10 job. Its actual terminal outcome must
+be reviewed before successful outputs proceed through conversion, scoring,
+independent admission and reporting. Identities 11 and 12 remain sequential
+behind the required reviewed history; identity 9 is not automatically retried.
+Consult the newest progress entries at the TOP of the ledger rather than its
+historical tail. Continue other useful publication work during job waits.
+
+The attachment now explicitly distinguishes ordinary turn endings and running
+jobs from execution failures. Neither calls for another user resume or approval.
+No platform-level interruption has been diagnosed or repaired by this edit.
+The goal remains active; no job is submitted, released, restarted or cancelled.
+All frozen scientific inputs, execution sources, historical goal bytes and
+shared-host limitations are preserved. Earlier attachment hashes below identify
+historical revisions, not the current editable instruction file.
+
+Current attachment SHA256:
+`d74735360e2660bde5d21f846b16fbaa104e5ec0f05f5f013cc954ad0b62eb3c`.
+Readback confirms all seven sections, current checkpoint, removal of the stale
+immediate-work instruction, shared-host authorization and scientific/safety
+requirements. The historical goal hash remains `7d99ecb3...`. An initial
+readback assertion used the superseded retry sentence verbatim and failed;
+checking the actual equivalent no-retry instruction passes without another
+prompt edit. Scoped documentary diff checks pass. No execution code changed.
+
 ## Operational Recovery Correction
 
 The user reports continued stops after the earlier correction. Inspection
