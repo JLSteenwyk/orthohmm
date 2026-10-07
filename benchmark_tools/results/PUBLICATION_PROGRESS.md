@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Three-Cell Fixed Strata Actually Exported And Independently Verified (2026-10-07)
+
+Previous continuation PROGRESS: protocol762cbdb0/sourcea5952bbc before
+selected export, then diagnosed reader correctiond8b0981e before fresh
+v2validation. Original failedv1reader/sourcef59bd8cc/failure3bcf3f6e retained;
+no export/scoring/benchmark retry. Actual report55ed72ce/88759bytes and
+reader6f3eef63/9722bytes verify all54family/60score/40contrast rows and40prior
+cell/bin scores. All18families/563canonical accessions match original fixed
+bins. Current28direct source/input/output/repair-history bindings verified.
+One export and one successfulv2reader exit0 in isolatedPython3.10.13;
+0.05s/15360KiB and0.05s/16896KiB are postprocessing, not native inference cost.
+
+All18family C_at_P0_R0 changes F1-0.347pp/P-3.523pp/R+4.375pp.
+Every15nonempty suite/bin row has precision down and recall up. C F1 changes
+higher/lowerentropy-0.736/+0.599,short/other-0.703/-0.236,
+Pfam>=2/<2+0.643/-0.672,repeat>=quarter/<quarter+0.987/-0.591,
+lower/upperduplication-0.467/-0.273. All bins/emptyNULL retained; overlapping
+and repeated all-family rows are NOT independent findings. No new intervals,
+default/cutoff, interaction/causal claim, score/timing admission or readiness.
+See [complete table and bounded result](NATIVE_QFO_THREE_CELL_STRATA_RESULT_20261007.md).
+90fixture/actual-artifact/current-goal/shared-policy tests pass1.35s, including
+complete current hashes, TSV/human values, source bytes from pre-execution
+commits and oldmain2804448c/rc5index66bc02d7 unchanged.
+
+Latest SAME23902RUNNING5:22:41/search-stage35.57%,23910PENDING/Dependency.
+No terminal/restart/release/retry. Commit/push the new report/tables/reader/
+receipt/result/tests and checkpoint, then next independent goal7 action:
+prepare one publication-quality descriptive error-stratum figure from these
+verified contrasts, showing every nonempty nonredundant frozen bin and one
+overall row, with both C/R conditional contrasts, no intervals or cutoff
+selection. Keep all full tables as audit evidence and state exclusions are
+only empty/redundant all-family copies. Use new source/artifact namespace,
+test source before actual rendering, inspect full image and bind selected
+rows/labels/values. Do not rebuild oldmain/rc5 or redraw old endpoint plots.
+No figure source or selected figure exists yet. Then continue actual same
+native terminal/review and genuinely unrun11/12 sequential behind history.
+
 ## Projection Exported; Failed Reader Preserved And V2 Repair Tested (2026-10-07)
 
 Protocol762cbdb0 and sources a5952bbc were pushed BEFORE actual projection.

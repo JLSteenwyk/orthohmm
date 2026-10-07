@@ -1,0 +1,52 @@
+{
+  "schema": "native_qfo_three_cell_strata_execution_v1",
+  "date": "2026-10-07",
+  "source_commit_before_export": "a5952bbce9bd5f9ad6c6e823ab056314a0a75927",
+  "source_commit_before_v2_readback": "d8b0981e0c45aae87b2694ffca443f8c0fee3c0e",
+  "runtime": "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+  "python_version": "3.10.13",
+  "python_flags": ["-I", "-S", "-B"],
+  "environment_removed": ["PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+  "environment_set": {"PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0", "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"},
+  "export": {
+    "source_path": "benchmark_tools/export_native_qfo_three_cell_strata.py",
+    "source_bytes": 17179,
+    "source_sha256": "e6d0980fc71636e4cf0ae0ba4decf13caff54ad502cd182d36b6db773fab6586",
+    "arguments": ["--repo", "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm", "--output", "benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1"],
+    "exit_code": 0,
+    "elapsed_seconds": 0.05,
+    "maximum_resident_kib": 15360,
+    "swaps": 0,
+    "stdout": {"family_rows": 54, "rows": 60, "differences": 40}
+  },
+  "failed_v1_readback": {
+    "receipt_path": "benchmark_tools/results/native_qfo_three_cell_strata_readback_failure_20261007_v1.json",
+    "receipt_sha256": "3bcf3f6eafaf68a1e98a41d00ddf3579497ccaff4c8f553012f8a220d8eaef66",
+    "exit_code": 1,
+    "output_written": false
+  },
+  "v2_readback": {
+    "source_path": "benchmark_tools/readback_native_qfo_three_cell_strata_v2.py",
+    "source_bytes": 19258,
+    "source_sha256": "8aa274427c65920f59fc43d5eeba0f2ef5f54ca52736b16c1e5c7bdd2b23cf5f",
+    "arguments": ["--report", "benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json", "--report-sha256", "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5", "--output", "benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v2.json"],
+    "exit_code": 0,
+    "elapsed_seconds": 0.05,
+    "maximum_resident_kib": 16896,
+    "swaps": 0,
+    "stdout": {"family_rows_checked": 54, "score_rows_checked": 60, "differences_checked": 40}
+  },
+  "outputs": {
+    "native_qfo_three_cell_strata_20261007_v1/report.json": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5",
+    "native_qfo_three_cell_strata_20261007_v1/scores.tsv": "f23a4619e3f3f099f58ac0b6d74b763b470305b197078996745ffff64ae8401e",
+    "native_qfo_three_cell_strata_20261007_v1/differences.tsv": "407a9073a0447eb384444f231aa7867a1a825a501b6972077ef45fbc60a438d2",
+    "native_qfo_three_cell_strata_20261007_v1/family_counts.tsv": "762fe311edaf89822b69690c4d98caa6a15be86103e8a2faedae1e9a92d70ba6",
+    "native_qfo_three_cell_strata_20261007_v1/TABLE.md": "f69104c5044b4475671445a7c93504f1344d82f66e60a046a2f6b223d38e8a66",
+    "native_qfo_three_cell_strata_readback_20261007_v2.json": "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
+  },
+  "export_reexecuted": false,
+  "new_bootstrap_draws": 0,
+  "new_accuracy_or_resource_admission": false,
+  "publication_ready": false,
+  "resource_scope": "Observed /usr/bin/time -v shared-host postprocessing durations/RSS, not inference resources or isolated performance. Values recorded from actual tool outputs; no precise start/end timestamps were captured."
+}

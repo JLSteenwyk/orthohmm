@@ -1,0 +1,183 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 88759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+      "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+    },
+    {
+      "bytes": 31585,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_20261006_v1/report.json",
+      "sha256": "4650f614d2fdeebd65cbcbf4999c61c83cc549560d2738bfbb5502f686f660e3"
+    },
+    {
+      "bytes": 8718,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_sequence_strata_readback_20261006.json",
+      "sha256": "8d0356bc0e159d204939271578e23a6a5b6efcf6198b75a18c0f3d38e0e67c0a"
+    },
+    {
+      "bytes": 80268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_domain_strata_20261006_v1/report.json",
+      "sha256": "d3235c712e711f005b3182a3621c0079f8a85c3c7abd5db016d5e8ea95884cd6"
+    },
+    {
+      "bytes": 26139,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_domain_strata_readback_20261006_v1.json",
+      "sha256": "9e77b67ad97e6824e9442691be7a05ba1552d62ffe696ced6034a996ede1945d"
+    },
+    {
+      "bytes": 41397,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_duplication_strata_20261006_v1/report.json",
+      "sha256": "e0ecbc9d26738d0d3d573ca31772085b28d145ba2deaa9383c8cff75bd0d67b5"
+    },
+    {
+      "bytes": 12310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_duplication_strata_readback_20261006_v1.json",
+      "sha256": "84eb3d9fe02b5984cecaa06355d1cb1d68c54aec09ab588eef8b3ada42f1957b"
+    },
+    {
+      "bytes": 351883,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/corrected_swiss_sequence_strata_20260918.json",
+      "sha256": "912363276fa5456f11aeff9f398fce71aec8d377c8c8eda7b144105945e554f1"
+    },
+    {
+      "bytes": 30405,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_counts_20261006_v1.json",
+      "sha256": "7ed2ea1a7a94d55b28ecbadd7bd2be8e99df64b9fab3c266ebd987e8dbcfc479"
+    },
+    {
+      "bytes": 53823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_readback_20261006_v1.json",
+      "sha256": "07941ba9c55ba7dc14c5ba53df37d28cb3b2f60f599b9d177b10c9afa99c1329"
+    },
+    {
+      "bytes": 5613,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_THREE_CELL_STRATA_PROTOCOL_20261007.md",
+      "sha256": "9e14a818df91a4ab12d6db5c060e556cf872c4eb7d45dfc43f8331fcbbc685ca"
+    },
+    {
+      "bytes": 13720,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_swiss_sequence_strata.py",
+      "sha256": "13ca5653fd62f2254e7d88edf0ab7cf199de0e71d06de275ce769e04eb8cd953"
+    },
+    {
+      "bytes": 12525,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_swiss_domain_strata.py",
+      "sha256": "ccc979a24eeb78965081e72a78da9fa9fc0eaca50ead56c59e3ab0c8e5230ae0"
+    },
+    {
+      "bytes": 13728,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_swiss_duplication_strata.py",
+      "sha256": "8b2e0ab7e85e6d33fc8cee439245ec8e13c0698c9d41ebf9041c012774757e0f"
+    },
+    {
+      "bytes": 8965,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_sequence_strata.py",
+      "sha256": "722be2e7d40982f70ecb03aca13b1658fc004a392deacde4cfdb81306a6da396"
+    },
+    {
+      "bytes": 12375,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_domain_strata.py",
+      "sha256": "a6048b7518c26d7c86d99cd049fc8d625b04be3dbea48311875f1baf22788e66"
+    },
+    {
+      "bytes": 11383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_swiss_duplication_strata.py",
+      "sha256": "1a362d6a406e0bd29e865741d5363b58fd17ba69b923cd8a47ed010b380a1800"
+    },
+    {
+      "bytes": 9905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_corrected_swiss_sequence_strata.py",
+      "sha256": "41c5cf70ca40debeb19476b636ea60ce115579e8015c29ada59738368383e26a"
+    },
+    {
+      "bytes": 8195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_native_qfo_swiss_counts.py",
+      "sha256": "976a1b1fe72fa9374d1867c82aff4e21732a00386ec5c146f461df4f6e6306b5"
+    },
+    {
+      "bytes": 12177,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_swiss.py",
+      "sha256": "5b21270e1b640b6b2dd4df9061f93d959ab99eebc8dcd0fffc98c29f13197944"
+    },
+    {
+      "bytes": 17179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_three_cell_strata.py",
+      "sha256": "e6d0980fc71636e4cf0ae0ba4decf13caff54ad502cd182d36b6db773fab6586"
+    },
+    {
+      "bytes": 6787,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/scores.tsv",
+      "sha256": "f23a4619e3f3f099f58ac0b6d74b763b470305b197078996745ffff64ae8401e"
+    },
+    {
+      "bytes": 4872,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/differences.tsv",
+      "sha256": "407a9073a0447eb384444f231aa7867a1a825a501b6972077ef45fbc60a438d2"
+    },
+    {
+      "bytes": 4436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/family_counts.tsv",
+      "sha256": "762fe311edaf89822b69690c4d98caa6a15be86103e8a2faedae1e9a92d70ba6"
+    },
+    {
+      "bytes": 4141,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/TABLE.md",
+      "sha256": "f69104c5044b4475671445a7c93504f1344d82f66e60a046a2f6b223d38e8a66"
+    },
+    {
+      "bytes": 1419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_readback_failure_20261007_v1.json",
+      "sha256": "3bcf3f6eafaf68a1e98a41d00ddf3579497ccaff4c8f553012f8a220d8eaef66"
+    },
+    {
+      "bytes": 18055,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_three_cell_strata.py",
+      "sha256": "f59bd8cc924e5cbd0a6ef253a2ed47c243e92d1aaf2155dd3bc1ac286390583f"
+    },
+    {
+      "bytes": 1457,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_THREE_CELL_STRATA_READER_AMENDMENT_20261007.md",
+      "sha256": "768929b95f482c02e6e38a2d8feaf5b1f872c3376215cd0686f814f47cd2970f"
+    }
+  ],
+  "differences_checked": 40,
+  "families_checked": 18,
+  "family_rows_checked": 54,
+  "independent_confirmation": false,
+  "inherited_score_rows_reproduced": 40,
+  "limitations": [
+    "Development-exposed descriptive fixed bins; no subgroup intervals, significance or tuning.",
+    "Macro family precision/recall then harmonic F1; not pooled pairs or mean-family F1.",
+    "Initial HMM search on and downstream profile refinement off in all three cells.",
+    "Two conditional contrasts against baseline; candidate/reconciliation interaction not identified.",
+    "Bins overlap and all-family rows repeat; they are not independent findings.",
+    "Length/composition proxies are not calibrated divergence or literal fragment truth.",
+    "No explicit fragment annotation is not evidence of completeness.",
+    "Pfam descriptors are not complete validated domain architectures or domain-loss truth.",
+    "Reference informative-node duplication fractions are not ancestral duplication histories; default S is not explicit speciation.",
+    "Direct artifact/source checks only; prior raw validation inherited, not repeated or transitively readmitted.",
+    "Cell 7 failed timing remains ineligible; no timing repair or new inference resources.",
+    "Shared-host contention effects are unknown and potentially tool-dependent, not isolated speed evidence."
+  ],
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "original_tree_traversal_repeated": false,
+  "proteins_checked": 563,
+  "publication_ready": false,
+  "raw_evidence_reparsed": false,
+  "report": {
+    "bytes": 88759,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+    "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+  },
+  "schema": "native_qfo_three_cell_strata_rational_readback_v2",
+  "scientific_timings_admitted": false,
+  "score_rows_checked": 60,
+  "source": {
+    "bytes": 19258,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_three_cell_strata_v2.py",
+    "sha256": "8aa274427c65920f59fc43d5eeba0f2ef5f54ca52736b16c1e5c7bdd2b23cf5f"
+  }
+}
