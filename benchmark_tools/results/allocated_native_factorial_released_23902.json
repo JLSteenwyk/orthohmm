@@ -1,0 +1,603 @@
+{
+  "amendment": {
+    "bytes": 13317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+    "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+  },
+  "automatic_retry": false,
+  "available_memory_bytes": 672584114176,
+  "cell": "p1_c0_r1",
+  "held": {
+    "bytes": 4713,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_held_23902.json",
+    "sha256": "103887c9002caaab67909bf225e8740187dac49374822f16bbfe034324bbb14a"
+  },
+  "held_recheck": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23902",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=23902 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-06T20:59:19 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T20:59:19 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2514359 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log TresPerTask=cpu=64 \n"
+  },
+  "index": 10,
+  "job_id": 23902,
+  "observed_unix_ns": 1791334865027595794,
+  "post_release": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23902",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=23902 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-06T20:59:19 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T20:59:19 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2514359 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log TresPerTask=cpu=64 \n"
+  },
+  "prior_history_scheduler_checks": [
+    {
+      "adoption": {
+        "executed_source": {
+          "bytes": 25393,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_failed_source_22427/run_native_factorial_cost.py",
+          "sha256": "07a926e38ba49144b56bf9a7d23478d3dd050fc3a14b98e1ce8889d1f98a8d20"
+        },
+        "inference_reexecuted": false,
+        "prior_plan": {
+          "bytes": 489120,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_cost_plan_repaired_20261004.json",
+          "sha256": "61756d74d1778fd268c9c4fe4f85b32cc130121f9bf02793f470b202bc4c2b1a"
+        },
+        "prior_review": {
+          "bytes": 898602,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+          "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+        },
+        "recovery": {
+          "bytes": 926274,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_recovery_22427.json",
+          "sha256": "0c919cfb97f497a98ca7ad6e614cb370731ddb58a63bdc4550fa0e640f4cbc15"
+        },
+        "retained_evidence_checked": 3390,
+        "scheduler_success": false,
+        "scientific_settings_unchanged": true,
+        "status": "reviewed_failed_index_zero_adopted_without_retry",
+        "timing_success_established": false
+      },
+      "review": {
+        "bytes": 898602,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+        "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22427",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22427",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22427|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-04T19:05:13|2026-10-04T19:05:49|2026-10-04T19:46:48|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T19:46:48",
+          "ExitCode": "1:0",
+          "JobIDRaw": "22427",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T19:05:49",
+          "State": "FAILED",
+          "Submit": "2026-10-04T19:05:13",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1185333,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+        "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22428",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22428",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22428|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T20:17:05|2026-10-04T20:18:09|2026-10-04T21:15:49|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T21:15:49",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22428",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T20:18:09",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T20:17:05",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 913623,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+        "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22429",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22429",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22429|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T21:20:21|2026-10-04T21:21:54|2026-10-04T22:03:14|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T22:03:14",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22429",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T21:21:54",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T21:20:21",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1262940,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+        "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22430",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22430",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22430|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T22:08:32|2026-10-04T22:09:55|2026-10-04T23:12:18|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-04T23:12:18",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22430",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T22:09:55",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T22:08:32",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 1244250,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+        "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22431",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22431",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22431|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-04T23:19:42|2026-10-04T23:22:36|2026-10-05T00:23:53|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-05T00:23:53",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22431",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-04T23:22:36",
+          "State": "COMPLETED",
+          "Submit": "2026-10-04T23:19:42",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 991416,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+        "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22433",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22433",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22433|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-05T00:30:56|2026-10-05T00:32:09|2026-10-05T01:18:11|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-05T01:18:11",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22433",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-05T00:32:09",
+          "State": "COMPLETED",
+          "Submit": "2026-10-05T00:30:56",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 11303409,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+        "sha256": "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22435",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22435",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22435|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-05T01:30:02|2026-10-05T01:31:22|2026-10-05T12:36:25|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-05T12:36:25",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22435",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-05T01:31:22",
+          "State": "COMPLETED",
+          "Submit": "2026-10-05T01:30:02",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 287561,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_measurement_failure_review_22437/review.json",
+        "sha256": "650b69e0965e0a667359efaa43c1d814108f613547cbe66cf12964bd1e64e459"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22437",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22437",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22437|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-05T13:13:24|2026-10-05T13:15:25|2026-10-06T02:19:55|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-06T02:19:55",
+          "ExitCode": "1:0",
+          "JobIDRaw": "22437",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-05T13:15:25",
+          "State": "FAILED",
+          "Submit": "2026-10-05T13:13:24",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 11924235,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444_fault_reported_v1/review.json",
+        "sha256": "1ddc14f79f0f501e4189382cdfe613a883310a6fceacbd94b37f342bb33827ef"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "22444",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "22444",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "22444|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-06T03:01:09|2026-10-06T03:06:02|2026-10-06T14:49:01|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-06T14:49:01",
+          "ExitCode": "0:0",
+          "JobIDRaw": "22444",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-06T03:06:02",
+          "State": "COMPLETED",
+          "Submit": "2026-10-06T03:01:09",
+          "TimelimitRaw": "1560"
+        }
+      }
+    },
+    {
+      "adoption": null,
+      "review": {
+        "bytes": 263870,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_failure_review_23891/review.json",
+        "sha256": "1f6167cf997f37dcff5f795c9479475bd065aa7359a68a73994f7f53abf4ed9a"
+      },
+      "scheduler": {
+        "controller_observation": {
+          "command": [
+            "scontrol",
+            "show",
+            "job",
+            "23891",
+            "--oneliner"
+          ],
+          "returncode": 1,
+          "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+          "stdout": ""
+        },
+        "limitation": "Accounting confirms terminal identity/resources, not every historical controller field; prior bound request/review remain required.",
+        "observation": {
+          "command": [
+            "sacct",
+            "-X",
+            "-j",
+            "23891",
+            "-n",
+            "-P",
+            "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+          ],
+          "stderr": "",
+          "stdout": "23891|FAILED|1:0|64|128G|bizon|gpu|1560|2026-10-06T19:44:16|2026-10-06T19:46:48|2026-10-06T19:49:05|orthohmm_factorial_cost\n"
+        },
+        "source": "fresh_accounting_after_controller_expiry",
+        "verified": {
+          "AllocCPUS": "64",
+          "End": "2026-10-06T19:49:05",
+          "ExitCode": "1:0",
+          "JobIDRaw": "23891",
+          "JobName": "orthohmm_factorial_cost",
+          "NodeList": "bizon",
+          "Partition": "gpu",
+          "ReqMem": "128G",
+          "Start": "2026-10-06T19:46:48",
+          "State": "FAILED",
+          "Submit": "2026-10-06T19:44:16",
+          "TimelimitRaw": "1560"
+        }
+      }
+    }
+  ],
+  "publication_ready": false,
+  "pushed_commit": "58591ddd6c62676d32132814beffe097751f80ef",
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:         8197896 kB\nMemAvailable:   656820424 kB\nBuffers:        15101588 kB\nCached:         599355804 kB\nSwapCached:        13424 kB\nActive:         372787044 kB\nInactive:       621511632 kB\nActive(anon):   349556656 kB\nInactive(anon): 33395004 kB\nActive(file):   23230388 kB\nInactive(file): 588116628 kB\nUnevictable:        4504 kB\nMlocked:             144 kB\nSwapTotal:       4194300 kB\nSwapFree:              4 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              3424 kB\nWriteback:             0 kB\nAnonPages:      379771340 kB\nMapped:          1211584 kB\nShmem:           3105540 kB\nKReclaimable:   43407264 kB\nSlab:           48320476 kB\nSReclaimable:   43407264 kB\nSUnreclaim:      4913212 kB\nKernelStack:       67712 kB\nPageTables:      1127132 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1011162824 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      962208 kB\nVmallocChunk:          0 kB\nPercpu:           787968 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8077312 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    21843528 kB\nDirectMap2M:    590006272 kB\nDirectMap1G:    461373440 kB\n",
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "23902"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "release_count": 1,
+  "request": {
+    "bytes": 50810,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_10_allocated_v1.json",
+    "sha256": "1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910"
+  },
+  "schema": "allocated_native_factorial_release_receipt_v1",
+  "scientific_execution_succeeded": false,
+  "scientific_timings_admitted": false
+}

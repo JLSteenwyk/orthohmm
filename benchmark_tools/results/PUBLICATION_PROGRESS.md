@@ -1,5 +1,25 @@
 # Publication Progress
 
+## Identity10 Released And Actually Running (2026-10-06)
+
+Push58591ddd amendment/held receipts before one actual23902 release. Fresh
+gate rechecks exact request1355ae3b, complete amendment10cc9939, all14 sources
+against pushedHEAD, original ten-entry fresh scheduler/adoption history, absent
+next output/session/driver-cache paths, safe available RAM and held owner/
+resources/comment. Release fbd54f8e/26140bytes retains actual command return0
+and post-release scheduler; no duplicate submission or retry.
+
+Subsequent actual controller and accounting confirm same23902RUNNING onbizon,
+64CPU/128GiB; allocation and batch running00:28. Bound session/run_10/started.json
+exists; batch log empty and no result/ready yet at that check, consistent with
+runtime preflight rather than completed scientific execution. Observe this
+same handle and its evolving artifacts; do not assume startup is native success,
+scored output or resource/accuracy admission. Native worker/terminal review and
+downstream conversion/scoring still required.11/12 await reviewed prefix.
+
+No quiet-window/DGX gate,9 retry,23894/23897 repeat or unrelated job action.
+Shared-host timing limits retained. Goal active, full completion unproven.
+
 ## Actual Amendment Frozen; Identity10 Held (2026-10-06)
 
 Push5b9356de before preparing the actual amendment. Scientific Python3.10
