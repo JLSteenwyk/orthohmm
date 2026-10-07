@@ -1,5 +1,42 @@
 # Publication Progress
 
+## New Main Text Printed And All21 Actual Pages Reviewed (2026-10-07)
+
+Previous goal turn PROGRESS: actual prompt/checkpoint correction93f388dd.
+This continuation executed the next independent manuscript review, not another
+prompt rewrite. Existing helper rejected v2's changed live-ledger asset before
+rasterization; failure5617184c retained, old render/PDF unchanged. Newv3 differs
+from v2 ONLY by an explicit chronological note and removing the live-ledger
+hyperlink. Exact reversible receipt/tests retain all numerical table bytes and
+scientific prose. Source/failure/v2 artifacts pushedc4615b41 before new render.
+
+Freshv3 source41eab259/74783bytes, render5eb84ab3 and printc1638ebd retain
+117local occurrences/114tracked direct targets and19citations. Actual PDF
+22bf6bcd/389891bytes/21pages printed successfully without disabling sandbox.
+Actual reviewbc1917af checks all page bounds with zero violations and renders
+all21pages. Each actual page raster was individually opened/viewed; separate
+manual receipt records readability, no visible clipping/overlap, repeated
+headers on distance-table pages10-11 and resource tables14-15, explicit
+methods/limitations and Wong2026citation/DOI.12focused source/PDF/review tests
+pass1.70s, including every six-row distance contrast in extracted PDF text.
+This is bounded document review, not scientific admission, full-study release,
+redistribution clearance, journal formatting or publication readiness.
+
+Exact next independent action: commit/push ONLY newv3 HTML/render, PDF/print,
+automated review/report/21page rasters, separate manual visual receipt/tests
+and this checkpoint; exclude browser profiles. Then build ONE fresh direct-
+review component for this committed v3 using existing unchanged bundle helper
+with explicit manuscript and render/print/review selections. Validate only
+this new component, retain its exact inventory/anchors, and restore/check it
+outside the checkout before making a new portability claim. Preserve oldmain
+and rc5; do not rebuild their archives or claim transitive study restoration.
+
+Dependency-only native work: SAME23902 RUNNING9:04:20, SAME23910
+PENDING/Dependency. No terminal/review/admission. Observe those changing handles
+alongside new reporting work; only valid successful native and review outcomes
+permit existing conversion/scoring/admission then unrun11/12. Retain9failure.
+No duplicate/restart/re-release or renewed contention approval. Full goalACTIVE.
+
 ## Continuation Contract Verified And Actual Next Action Refreshed (2026-10-07)
 
 Direct user request: investigate repeated goal stops. The actual goal-linked
