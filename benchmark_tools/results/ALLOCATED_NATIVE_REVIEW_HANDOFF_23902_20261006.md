@@ -1,5 +1,24 @@
 # Allocated Native Review Handoff
 
+## Released Dependency Wait
+
+The held receipt was committed/pushed as2348eb8e before the fresh release
+checks. The SAME review23910 is released exactly once; its release command
+returns0. [Release receipt](allocated_native_review_released_23910.json) retains
+the immediate scheduler observation. A subsequent
+[independent readback](allocated_native_review_handoff_readback_23910.json)
+checks27 retained records, exact stored batch, receipt linkage and the actual
+release command. Fresh scheduler queries confirm native23902RUNNING and
+review23910PENDING/Dependency, afterany:23902(unfulfilled). Review destination
+is still absent. Do not release again, submit a duplicate or retry inference.
+
+Observe those existing handles to actual terminal outcomes. The next gate is
+successful completion and readback of the actual terminal review, not another
+submission milestone. Preserve failed/partial outcomes. Conversion, scoring,
+independent admission and subsequent identities require their existing gates;
+this handoff does not supply accuracy or authorize11/12. All historical held
+and prospective descriptions below remain evidence of earlier states.
+
 ## Actual Held Submission
 
 Review job23910 is now submitted exactly once, held with afterany:23902.

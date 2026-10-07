@@ -1,0 +1,154 @@
+{
+  "accuracy_evaluated": false,
+  "amendment": {
+    "bytes": 13317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+    "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+  },
+  "automatic_retry": false,
+  "batch": {
+    "bytes": 1860,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23902_20261006.sh",
+    "sha256": "4dbad1c1f8bed525398c0a0606f79e51cbebd0c6d4ae5e67fb91d7efb4919e4f"
+  },
+  "cell": "p1_c0_r1",
+  "control_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1",
+  "destination": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23902_v1",
+  "disclosure": "Shared Threadripper measurements while other analyses were running. CPU, memory-bandwidth and I/O contention may affect elapsed times by an unknown, potentially tool-dependent amount. These are observed shared-host timings, not estimates of isolated performance.",
+  "evidence": [
+    {
+      "bytes": 241,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_source_commit.json",
+      "sha256": "30fb775c35803179d7314efc6195ff7b2131feab413d35d2154529856c254059"
+    },
+    {
+      "bytes": 283,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_pushed_commit.json",
+      "sha256": "62fde492f47f16466407338cdf171d69e93f481da0eebe7c77f220c498ffb0f1"
+    },
+    {
+      "bytes": 879,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_queue.json",
+      "sha256": "5646f2d5e7d23e485a04541825324c48be8ffe143dc458f8a83650b630595d6b"
+    },
+    {
+      "bytes": 1838,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_parent.json",
+      "sha256": "772809409099ebe45ccbc4b1f02cd785b789e8fd0932b1408ae65549aa19efee"
+    },
+    {
+      "bytes": 1758,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_held_controller.json",
+      "sha256": "a6b3c8f0363767d5430e9c18ad0da259ad79fac7d974705342c57d8a317b4b37"
+    },
+    {
+      "bytes": 203,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_command.json",
+      "sha256": "5a9d8f9d87c74496775243a74cee1eb5fe996fdd35c1911d35585792d95890cf"
+    },
+    {
+      "bytes": 1751,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/released_controller.json",
+      "sha256": "0316503081160c57c5db4074c3c5e11326fe7026b1fb86980d45444eee070fcc"
+    },
+    {
+      "bytes": 353,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/post_release_queue.json",
+      "sha256": "677a03e16ca499733a25333bee95163e6fc008ab3130a319aece7cec6e6c64fb"
+    }
+  ],
+  "held_submission": {
+    "bytes": 8559,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_held_23910.json",
+    "sha256": "e5a382ff2565d901a199f344bc26f5384d90f21e0e333ef511e10ec1428a951e"
+  },
+  "index": 10,
+  "job_id": 23910,
+  "native_inference_reexecuted": false,
+  "native_job_id": 23902,
+  "precheck": {
+    "bytes": 8865,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_precheck.json",
+    "sha256": "c31006be79811148759a03981b6c4890eefe2880a64f2bc8d672d955ba2d05e8"
+  },
+  "publication_ready": false,
+  "release_attempt": {
+    "bytes": 664,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/release_attempt_start.json",
+    "sha256": "87df5d1497564014e7977e0f326c83f7a441ae2e7b2bc5add34d224622027b92"
+  },
+  "release_attempted": true,
+  "release_returncode": 0,
+  "request": {
+    "bytes": 50810,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_10_allocated_v1.json",
+    "sha256": "1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910"
+  },
+  "scheduler_fields": {
+    "Account": "(null)",
+    "AccrueTime": "Unknown",
+    "AllocNode:Sid": "bizon-link:2794523",
+    "AllocTRES": "(null)",
+    "BatchFlag": "1",
+    "CPUs/Task": "2",
+    "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23902_20261006.sh",
+    "Comment": "4dbad1c1f8bed525398c0a0606f79e51cbebd0c6d4ae5e67fb91d7efb4919e4f",
+    "Contiguous": "0",
+    "CoreSpec": "*",
+    "Deadline": "N/A",
+    "DelayBoot": "00:00:00",
+    "Dependency": "afterany:23902(unfulfilled)",
+    "EligibleTime": "Unknown",
+    "EndTime": "Unknown",
+    "ExcNodeList": "(null)",
+    "ExitCode": "0:0",
+    "Features": "(null)",
+    "GroupId": "bizon(1000)",
+    "JobId": "23910",
+    "JobName": "ohmm_allocated_review10",
+    "JobState": "PENDING",
+    "LastSchedEval": "2026-10-06T22:00:29",
+    "Licenses": "(null)",
+    "MCS_label": "N/A",
+    "MinCPUsNode": "2",
+    "MinMemoryNode": "128G",
+    "MinTmpDiskNode": "0",
+    "Network": "(null)",
+    "Nice": "0",
+    "NtasksPerN:B:S:C": "0:0:*:*",
+    "NumCPUs": "2",
+    "NumNodes": "1-1",
+    "NumTasks": "1",
+    "OverSubscribe": "OK",
+    "Partition": "gpu",
+    "Priority": "1",
+    "QOS": "normal",
+    "Reason": "None",
+    "Reboot": "0",
+    "ReqB:S:C:T": "0:0:*:*",
+    "ReqNodeList": "bizon",
+    "ReqTRES": "cpu=2,mem=128G,node=1,billing=2",
+    "Requeue": "0",
+    "Restarts": "0",
+    "RunTime": "00:00:00",
+    "Scheduler": "Main",
+    "SecsPreSuspend": "0",
+    "Socks/Node": "*",
+    "StartTime": "Unknown",
+    "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/slurm-23910.log",
+    "StdIn": "/dev/null",
+    "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_review_submission_23902_v1/slurm-23910.log",
+    "SubmitTime": "2026-10-06T22:00:29",
+    "SuspendTime": "None",
+    "TimeLimit": "06:00:00",
+    "TimeMin": "N/A",
+    "TresPerTask": "cpu=2",
+    "UserId": "bizon(1000)",
+    "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+  },
+  "schema": "allocated_native_factorial_review_release_v1",
+  "scientific_timings_admitted": false,
+  "source_commit": "2348eb8ed05fe0447c72a75dac7151e73245159e",
+  "status": "same_held_review_released_once",
+  "terminal_review_completed": false
+}

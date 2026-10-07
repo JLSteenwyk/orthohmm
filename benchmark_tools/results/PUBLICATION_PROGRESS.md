@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Allocated Native Review 23910 Released and Dependency-Verified (2026-10-06)
+
+Complete the actual handoff, not another prompt/preparation milestone. Held
+receipt2348eb8e is pushed before release. Fresh ownership, request/amendment,
+14 source bindings, stored batch, duplicate absence, dependency, resource and
+namespace checks pass for the SAME23910 handle. Release it once; retained
+release command returns0. No new native/reviewer handle or automatic retry.
+Release capacity669934923776bytes available RAM; execution checks capacity again.
+
+[Release receipt](allocated_native_review_released_23910.json),7122bytes,
+SHA70c83ff8ceeae70d92d02f8f0c09987c8a7f9fb3e65d023894793bb517ae535a,
+captures the immediate PENDING/ReasonNone scheduler observation. The subsequent
+independent [readback](allocated_native_review_handoff_readback_23910.json)
+checks27 retained records, exact stored batch and one successful same-handle
+release, then freshly confirms23902RUNNING and23910PENDING/Dependency with
+afterany:23902(unfulfilled). Readback16850bytes/SHA85bf237e622a801a8eebc9a50c3fb747a22d8e82cf809b28785a3099e4fae9c9.
+Review output remains absent. The native log is6.43% through SEARCH at1:01:21
+scheduler elapsed; not whole-pipeline progress or an ETA.
+
+Next observe existing23902/23910, continue useful unfinished publication work,
+and retain actual terminal outcomes. Review completion requires its own
+accounting and verified outputs. Only validated successful native output goes
+through conversion/scoring/independent admission/reporting.11/12 remain behind
+reviewed history; no9retry. No fresh score, terminal success, isolated-resource
+claim or full-goal completion follows from this scheduling milestone.
+Shared-host contention limitations remain; unrelated jobs are untouched.
+
 ## Allocated Native Review Held as 23910 (2026-10-06)
 
 Previous turn consolidates the active goal contract; this continuation advances
