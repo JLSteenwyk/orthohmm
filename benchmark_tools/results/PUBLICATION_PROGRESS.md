@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Allocated Native Review Batch Prepared (2026-10-06)
+
+Previous turn finishes the three-cell figure milestone. This turn observes
+same23902RUNNING43:42/44:15 and no queued allocated-review job. Prepare only
+the required review-stage scheduler wrapper around the already-tested frozen
+review CLI, without altering14 allocation sources/920 helpers/scientific inputs.
+Two CPU slots/128GiB/six-hour/no-requeue postprocessing onbizon, fixed original
+request1355ae3b, separate fresh review destination, safe available-RAM gate and
+unbuffered/faulthandler diagnostics. No native rerun or downstream admission.
+
+Seven batch cases plus17 existing reviewer cases pass24/1.02s, zero failures/
+errors/skips. Bash syntax and scientific3.10 CLI-help imports pass. Current
+available RAM661606872KiB and full swap recorded as observations, not proof of
+future capacity or quietness; the scheduled wrapper must recheck safe RAM when
+it executes. Unrelated fungal array/workloads remain untouched.
+
+Next commit/push this tested batch, submit exactly one held afterany:23902
+review job, independently check its actual ownership/dependency/resources/
+source/input/fresh-namespace gates, pin its receipt/comment and release it
+once to wait for the parent. No job submitted at this preparation checkpoint.
+See [prospective handoff](ALLOCATED_NATIVE_REVIEW_HANDOFF_23902_20261006.md).
+Reviewer startup or scheduling is not full review, scoring, accuracy/resource
+admission,11/12authorization or goal completion. Goal active; no9retry/DGX gate.
+
 ## Three-Cell Native QfO Figure Integrated (2026-10-06)
 
 Previous turn adds guarded candidate uncertainty; this turn advances goal7
