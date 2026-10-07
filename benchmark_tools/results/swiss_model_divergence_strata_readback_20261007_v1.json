@@ -1,0 +1,322 @@
+{
+  "alignment_repeated": false,
+  "checked_inputs": [
+    {
+      "bytes": 56269,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/report.json",
+      "sha256": "ddfa27757c4c256df9c881079ac352c37d7e17646f75fbd417b624e7980be78f"
+    },
+    {
+      "bytes": 88759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+      "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+    },
+    {
+      "bytes": 9722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v2.json",
+      "sha256": "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
+    },
+    {
+      "bytes": 69384,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_readback_23932_v1.json",
+      "sha256": "45cb12b3d201daf56e3fee5c5833153a69dd1732a2fee1c28d59261130eeb312"
+    },
+    {
+      "bytes": 94010,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/swiss_model_divergence_20261007_v1/report.json",
+      "sha256": "ceb4ca3675836e1815fcc1f14c29c8a50947633a8a5e8dd6c67477bdd853065c"
+    },
+    {
+      "bytes": 7882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/SWISS_MODEL_DIVERGENCE_PROTOCOL_20261007.md",
+      "sha256": "a596371c443471585b9a277cbdd1466bb3f9870200f3187d20286461d3699bfd"
+    },
+    {
+      "bytes": 17179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_three_cell_strata.py",
+      "sha256": "e6d0980fc71636e4cf0ae0ba4decf13caff54ad502cd182d36b6db773fab6586"
+    },
+    {
+      "bytes": 19258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_three_cell_strata_v2.py",
+      "sha256": "8aa274427c65920f59fc43d5eeba0f2ef5f54ca52736b16c1e5c7bdd2b23cf5f"
+    },
+    {
+      "bytes": 14317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_swiss_model_divergence.py",
+      "sha256": "f44f1f7765c2a6c665c2346a4685728be9c79bdc3b9a11cecd37019e9a246dfc"
+    },
+    {
+      "bytes": 11825,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_swiss_model_divergence.py",
+      "sha256": "eb453e0274f6730ec3c8765e3a99260f1eeab46e9f873321486c9c4f51b1f573"
+    },
+    {
+      "bytes": 12310,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_swiss_model_divergence_strata.py",
+      "sha256": "73ed693347de46cd84336074bdd3c6b9f4a042041ee151d77d68f205d78ea6cb"
+    },
+    {
+      "bytes": 1031,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/scores.tsv",
+      "sha256": "12d12819107fd9fd5436eb458110eea32f9870bccda23694811abc24c8b6a1c3"
+    },
+    {
+      "bytes": 635,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/differences.tsv",
+      "sha256": "3a120223d8f02d3eb2b1802c98829c7c4708543eb62ffac60d7ad76d15ebfa34"
+    },
+    {
+      "bytes": 2395,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/TABLE.md",
+      "sha256": "46be38ef7ddd144e3b6f499ef1e3fae908281932012c0fb9d40cd80a2e37d739"
+    }
+  ],
+  "differences_checked": 6,
+  "families_checked": 18,
+  "family_rows_checked": 54,
+  "independent_confirmation": false,
+  "limitations": [
+    "Independent exact arithmetic; inherited raw counts and distance verification.",
+    "No new intervals, admission, true history, causal inference or generalization."
+  ],
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "proteins_checked": 563,
+  "publication_ready": false,
+  "rational_macro_points": [
+    {
+      "F1": 0.689183963152562,
+      "PPV": 0.6439400942516949,
+      "TPR": 0.741266050122766,
+      "cell": "p0_c0_r0",
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "all"
+    },
+    {
+      "F1": 0.7895743339716982,
+      "PPV": 0.9491519661804722,
+      "TPR": 0.6759321953915856,
+      "cell": "p0_c0_r1",
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "native_pair",
+      "status": "descriptive",
+      "stratum": "all"
+    },
+    {
+      "F1": 0.6857094995663944,
+      "PPV": 0.6087055595840293,
+      "TPR": 0.7850177040241997,
+      "cell": "p0_c1_r0",
+      "families": 18,
+      "family_members": [
+        "APP",
+        "ASTER",
+        "BAMBI",
+        "BAR",
+        "CASP",
+        "CITE",
+        "Clusterin",
+        "GH14",
+        "HOX",
+        "MAPT",
+        "NOX",
+        "POP",
+        "PSEN",
+        "RPS",
+        "SERC",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "all"
+    },
+    {
+      "F1": 0.6956342118357214,
+      "PPV": 0.6160488230462466,
+      "TPR": 0.7988328935518495,
+      "cell": "p0_c0_r0",
+      "families": 9,
+      "family_members": [
+        "APP",
+        "BAMBI",
+        "CITE",
+        "GH14",
+        "NOX",
+        "RPS",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "lower_or_equal_median"
+    },
+    {
+      "F1": 0.8150802700704519,
+      "PPV": 0.9402218754728465,
+      "TPR": 0.7193378728891293,
+      "cell": "p0_c0_r1",
+      "families": 9,
+      "family_members": [
+        "APP",
+        "BAMBI",
+        "CITE",
+        "GH14",
+        "NOX",
+        "RPS",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "native_pair",
+      "status": "descriptive",
+      "stratum": "lower_or_equal_median"
+    },
+    {
+      "F1": 0.6831823537190631,
+      "PPV": 0.5705766719164542,
+      "TPR": 0.8511628948378848,
+      "cell": "p0_c1_r0",
+      "families": 9,
+      "family_members": [
+        "APP",
+        "BAMBI",
+        "CITE",
+        "GH14",
+        "NOX",
+        "RPS",
+        "SUMF",
+        "TRFE",
+        "VATB"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "lower_or_equal_median"
+    },
+    {
+      "F1": 0.6777133338514979,
+      "PPV": 0.6718313654571431,
+      "TPR": 0.6836992066936824,
+      "cell": "p0_c0_r0",
+      "families": 9,
+      "family_members": [
+        "ASTER",
+        "BAR",
+        "CASP",
+        "Clusterin",
+        "HOX",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "SERC"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "higher_than_median"
+    },
+    {
+      "F1": 0.7619879798311703,
+      "PPV": 0.9580820568880978,
+      "TPR": 0.6325265178940418,
+      "cell": "p0_c0_r1",
+      "families": 9,
+      "family_members": [
+        "ASTER",
+        "BAR",
+        "CASP",
+        "Clusterin",
+        "HOX",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "SERC"
+      ],
+      "prediction_semantics": "native_pair",
+      "status": "descriptive",
+      "stratum": "higher_than_median"
+    },
+    {
+      "F1": 0.6809535547355694,
+      "PPV": 0.6468344472516043,
+      "TPR": 0.7188725132105145,
+      "cell": "p0_c1_r0",
+      "families": 9,
+      "family_members": [
+        "ASTER",
+        "BAR",
+        "CASP",
+        "Clusterin",
+        "HOX",
+        "MAPT",
+        "POP",
+        "PSEN",
+        "SERC"
+      ],
+      "prediction_semantics": "group_clique",
+      "status": "descriptive",
+      "stratum": "higher_than_median"
+    }
+  ],
+  "raw_scorer_repeated": false,
+  "report": {
+    "bytes": 56269,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/report.json",
+    "sha256": "ddfa27757c4c256df9c881079ac352c37d7e17646f75fbd417b624e7980be78f"
+  },
+  "schema": "swiss_model_divergence_strata_rational_readback_v1",
+  "scientific_timings_admitted": false,
+  "score_rows_checked": 9,
+  "source": {
+    "bytes": 11068,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_swiss_model_divergence_strata.py",
+    "sha256": "c4d3a0e6fcaea31eda2374ae48b3adbd5009a898d5667430d785b85cb57f3bbd"
+  },
+  "source_commit": "8820881496abaf74e4248a1703a168b1970e5d77",
+  "status": "projection_verified"
+}

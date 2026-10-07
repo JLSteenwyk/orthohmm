@@ -1,0 +1,70 @@
+{
+  "schema": "swiss_model_divergence_execution_receipt_v1",
+  "protocol_commit": "24c6e8ae",
+  "feature_source_commit": "8d075769e5792d6ae92e329eca59dd62a6d8c21b",
+  "projection_source_commit": "8820881496abaf74e4248a1703a168b1970e5d77",
+  "job_id": 23932,
+  "scheduler": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:50:38",
+    "allocated_cpus": 2,
+    "allocated_memory_gib": 8,
+    "time_limit": "04:00:00",
+    "requeue": 0,
+    "restarts": 0,
+    "total_cpu_seconds": null,
+    "maximum_rss_bytes": null,
+    "accounting_limitation": "Slurm TotalCPU was 00:00:00 and MaxRSS absent; neither is usable measured resource evidence.",
+    "raw_parent_accounting": "23932|COMPLETED|0:0|00:50:38|00:00:00||billing=2,cpu=2,mem=8G,node=1|billing=2,cpu=2,mem=8G,node=1"
+  },
+  "feature_report": {
+    "path": "benchmarks/results/swiss_model_divergence_20261007_v1/report.json",
+    "bytes": 94010,
+    "sha256": "ceb4ca3675836e1815fcc1f14c29c8a50947633a8a5e8dd6c67477bdd853065c"
+  },
+  "feature_readback": {
+    "path": "benchmark_tools/results/swiss_model_divergence_readback_23932_v1.json",
+    "bytes": 69384,
+    "sha256": "45cb12b3d201daf56e3fee5c5833153a69dd1732a2fee1c28d59261130eeb312",
+    "exit_code": 0,
+    "elapsed_seconds": 0.47,
+    "maximum_rss_kib": 57456
+  },
+  "projection": {
+    "path": "benchmark_tools/results/swiss_model_divergence_strata_20261007_v1/report.json",
+    "bytes": 56269,
+    "sha256": "ddfa27757c4c256df9c881079ac352c37d7e17646f75fbd417b624e7980be78f",
+    "exit_code": 0,
+    "elapsed_seconds": 0.05,
+    "maximum_rss_kib": 13824
+  },
+  "projection_readback": {
+    "path": "benchmark_tools/results/swiss_model_divergence_strata_readback_20261007_v1.json",
+    "bytes": 9483,
+    "sha256": "186c0151137fd825513ef36c27df595b1a0f1cd4b2b4bf68de4b9665ad328d0e",
+    "exit_code": 0,
+    "elapsed_seconds": 0.06,
+    "maximum_rss_kib": 15360
+  },
+  "evidence_archive": {
+    "path": "benchmark_tools/results/swiss_model_divergence_evidence_23932_v1.tar.gz",
+    "bytes": 639031,
+    "sha256": "eeed6e6786f5720ee8c19fb6123fad64c38fdb25c33afe57f5e61bcae4a6113d"
+  },
+  "families": 18,
+  "proteins": 563,
+  "tip_pairs_verified": 10765,
+  "family_count_rows_verified": 54,
+  "score_rows_verified": 9,
+  "contrast_rows_verified": 6,
+  "selected_family_failures": [],
+  "automatic_retry": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "independent_confirmation": false,
+  "new_accuracy_or_resource_admission": false,
+  "scientific_timings_admitted": false,
+  "publication_ready": false,
+  "existing_native_jobs_unchanged": [23902, 23910]
+}

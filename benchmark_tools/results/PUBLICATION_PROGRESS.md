@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Model-Based Divergence And Complete Three-Cell Scores Verified (2026-10-07)
+
+This continuation PROGRESS, not a stopped goal: actual contract read, concrete
+independent original goal4.3 task executed through prospective protocol,
+tested sources, new inference, independent features and separate verified
+accuracy projection. Protocol24c6e8ae before selected inference; source8d075769
+before ONEjob23932; source88208814 before selected score projection. No selected
+failure, retry, source overwrite, MAFFT/proteome/raw-score rerun or existing
+native job mutation. See [complete bounded result](SWISS_MODEL_DIVERGENCE_RESULT_20261007.md).
+
+23932actually COMPLETED0:0/00:50:38; all18families/563members/10765tip pairs.
+Feature reportceb4ca36/94010bytes, independent edge-reader45cb12b3/69384bytes
+verifies ALL distances/descriptors/bins and190direct bindings. Shared Bio.Phylo
+parser disclosed; no independent model/alignment/ancestral-history claim.
+Fixed WAG+G4/seed20261007 family-median cutoff approximately2.24582463005,
+9lower/9higher families, ties retained below. Separate reportddfa2775 and
+rational reader186c0151 verify all54retained count rows,9scores/6conditional
+differences and all human/TSV values. New archiveeeed6e67/639031bytes retains
+every183selected alignment/new-attempt file with exact payload hashes.59joined
+artifact/projection/goal-policy tests pass1.18s;29feature tests already passed
+before execution, not rerun. Archive coverage tested without rerunning science.
+
+C_at_P0_R0 F1lower-1.245pp/higher+0.324pp, precision down/recall up in both;
+overall F1-0.347pp unchanged. R_at_P0_C0 F1lower+11.945pp/higher+8.427pp,
+precision up/recall down in both. No subgroup intervals, significance, tuning,
+default promotion, interaction, general superiority or independent-confirmation
+claim. This is exposed, fixed-model descriptive divergence, not dated history.
+Slurm feature-job TotalCPU/MaxRSS unusable, retained as NULL, not zeros or native
+timing. Cell7failed timing stays ineligible. Oldmain2804448c/rc5 unchanged.
+
+Exact next independent action: commit/push ONLY these verified science/table/
+archive/reader/time/result/receipt/test/checkpoint artifacts; then integrate the
+complete three-cell fixed-stratum result/figure and new model-distance methods/
+results/limitations into a fresh manuscript version derived from frozenv2.
+Preserve v2 and rc5 bytes, use tested versioned integration source and explicit
+claim-to-evidence links; no old rendering/archive/fixture qualification replay
+or new accuracy campaign. Do not claim unrendered new manuscript validation.
+This is unfinished goal7 work that does not depend on native23902.
+
+Dependency-only wait: SAME23902RUNNING8:30:56, SAME23910PENDING/Dependency.
+Observe changing state while doing manuscript work; successful terminal native
+output plus queued review precedes existing conversion/scoring/admission and
+sequential unrun11/12. Retain9failure. No duplicate/restart/re-release/quiet-host
+request. Full goal remains ACTIVE; native costs, other QfO uncertainty and
+true-history/fragment/domain/external/reproduction gaps remain explicit.
+
 ## Divergence Job Live And Separate Projection Tested (2026-10-07)
 
 Protocol24c6e8ae/a596371c and feature/reader/batch sources8d075769 were pushed
