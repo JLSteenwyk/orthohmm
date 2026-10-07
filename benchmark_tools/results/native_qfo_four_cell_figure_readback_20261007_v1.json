@@ -1,0 +1,72 @@
+{
+  "automatic_visual_certification": false,
+  "checked_evidence_records": 734,
+  "contrast_endpoints_checked": 9,
+  "coverage_endpoints_checked": 4,
+  "exact_table_readback": true,
+  "independent_confirmation": false,
+  "limitations": [
+    "Presentation readback, not raw scientific admission or uncertainty certification.",
+    "Decoded PDF, bounds and pixel checks do not replace separate visual inspection.",
+    "Four of seven cells; no missing-score imputation, timing repair or biological confirmation."
+  ],
+  "manifest": {
+    "bytes": 197687,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_figure_20261007_v1/manifest.json",
+    "sha256": "4732f525575b03d548bdf18a4047625b565ac1f28df005513d9457ac86f36d75"
+  },
+  "new_scoring_or_admission": false,
+  "pdf_preview": {
+    "color_pixels": {
+      "baseline": 6679,
+      "candidate": 7141,
+      "profile": 6644,
+      "reconciliation": 6647
+    },
+    "nonwhite_pixels": 113006,
+    "size": [
+      1776,
+      1272
+    ]
+  },
+  "pdf_preview_record": {
+    "bytes": 148034,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_pdf_preview_20261007_v1.png",
+    "sha256": "f429be12f3c38f02b1e916e71fc9386f5c838f8b7e76e6ee158687279465549a"
+  },
+  "pdf_text_within_page_bounds": true,
+  "png": {
+    "color_pixels": {
+      "baseline": 18711,
+      "candidate": 21034,
+      "profile": 19667,
+      "reconciliation": 19324
+    },
+    "nonwhite_pixels": 276690,
+    "size": [
+      2960,
+      2120
+    ]
+  },
+  "precision_recall_endpoints_checked": 8,
+  "publication_ready": false,
+  "schema": "native_qfo_four_cell_figure_readback_v1",
+  "scientific_timings_admitted": false,
+  "score_endpoints_checked": 24,
+  "snapshot": {
+    "bytes": 46870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261007_v3/report.json",
+    "sha256": "7aab1cbd31fb650df42e6e80a14ee0167b35a810f08202768c89c514755211a2"
+  },
+  "source": {
+    "bytes": 11095,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native_qfo_four_cell_figure.py",
+    "sha256": "f420b7d3b1add716023fd4c8345a3003d8e5f29962a23d10132a642d5c8bcfac"
+  },
+  "svg_and_decoded_pdf_required_labels_present": true,
+  "swiss_binding": {
+    "bytes": 95487,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json",
+    "sha256": "e8f554a178841da24a1892a7e42f8680f9fe8e4827dec6d6bfe4643cdb890bac"
+  }
+}

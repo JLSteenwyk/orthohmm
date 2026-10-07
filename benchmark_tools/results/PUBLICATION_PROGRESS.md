@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Four-Cell Figure Rendered, Read Back And Visually Inspected (2026-10-07)
+
+d9e8b807 committed/pushed prospective sources/tests/protocol BEFORE one
+selected plot and one selected reader. Plot exit0/8.98s/516088KiBRSS/zero
+swaps; actual scientificPython3.10 metadata replay succeeds. Render manifest
+4732f525 binds four cells/24endpoints/4coverage/9intervals. Separate review
+exit0/5.66s/148776KiBRSS/zero swaps, report71aa0807 checks all TSV values,
+8precision/recall values, all4colors, SVG/decodedPDF labels and text bounds.
+Both actual PNG and independently decoded PDF preview viewed; no clipping/
+overlap observed. Sources/assets NOWBOUND, no rerun/overwrite. Receipts and
+separate visual record retain actual commands/outcomes/inspection without
+rewriting frozen manifests. [Chronological supplement](NATIVE_FOUR_CELL_FIGURE_RESULT_20261007.md)
+integrates current figure/source tables with profile uncertainty and candidate
+separation result, complete missing-score/contrast/timing/biological limits.
+Old3cellplotter/reviewer/maintext/archives remain unchanged.
+Generated Matplotlib SVG has ordinary trailing spaces in path coordinates;
+git whitespace checker reports them. Preserve its selected/hash-bound bytes
+rather than postprocess it. Manual text/JSON/TSV scoped whitespace check
+excludes only that generated SVG; XML/PDF/content checks already pass.
+
+Next: focused commit/push actual newassets/manifest/readback/preview/receipts/
+visualrecord/supplement/ledger. Then inspect outstanding publication
+requirements against newly integrated evidence for genuinely unfinished
+independent work, without repeated completed analyses/admincertification.
+Native11 SAME23985 lastactualRUNNING40:44/step39:50. Observe this SAMEhandle;
+terminal originalreview is dependency-waiting, not a blocker. Prepared
+allocated_native_review_23985_20261007_v1.sh remains unsubmitted before
+actualterminaloutcome. Native12 sequential behind reviewed11; failure9
+retained. No live foregroundsession. Full publication goalACTIVE/incomplete.
+
 ## Four-Cell Figure Sources Tested Before Selected Rendering (2026-10-07)
 
 628cd9d6 committed/pushed actual profile-Newick report/receipt/mechanistic

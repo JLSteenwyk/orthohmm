@@ -1,0 +1,26 @@
+{
+  "schema": "native_four_cell_figure_execution_receipt_v1",
+  "source_commit_before_execution": "d9e8b807",
+  "selected_invocations": 1,
+  "stage": "review",
+  "command": "/usr/bin/time -v env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.review_native_qfo_four_cell_figure --figure-directory benchmark_tools/results/native_qfo_four_cell_figure_20261007_v1 --pdf-preview benchmark_tools/results/native_qfo_four_cell_pdf_preview_20261007_v1.png --output benchmark_tools/results/native_qfo_four_cell_figure_readback_20261007_v1.json",
+  "initial_exec": {
+    "chunk_id": "d0facf",
+    "wall_time_seconds": 1.001377059,
+    "session_id": 49710,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "terminal_exec": {
+    "chunk_id": "5a6f7d",
+    "wall_time_seconds": 0.00001262,
+    "exit_code": 0,
+    "original_token_count": 353,
+    "output": "{\"score_endpoints_checked\": 24, \"coverage_endpoints_checked\": 4, \"contrast_endpoints_checked\": 9}\n\tCommand being timed: \"env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.review_native_qfo_four_cell_figure --figure-directory benchmark_tools/results/native_qfo_four_cell_figure_20261007_v1 --pdf-preview benchmark_tools/results/native_qfo_four_cell_pdf_preview_20261007_v1.png --output benchmark_tools/results/native_qfo_four_cell_figure_readback_20261007_v1.json\"\n\tUser time (seconds): 4.78\n\tSystem time (seconds): 0.86\n\tPercent of CPU this job got: 99%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.66\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 148776\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 36734\n\tVoluntary context switches: 0\n\tInvoluntary context switches: 17\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 304\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+  },
+  "output_sha256": "71aa0807750223a22f7e6080db4de01a3a9f7ccae69c9d2ff5170418c514b614",
+  "new_inference": false,
+  "new_scoring_or_admission": false,
+  "new_bootstrap_draws": 0,
+  "resource_scope": "presentation process and reporting replay only; not native inference or admitted timing"
+}

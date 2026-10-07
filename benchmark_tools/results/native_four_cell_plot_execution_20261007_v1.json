@@ -1,0 +1,26 @@
+{
+  "schema": "native_four_cell_figure_execution_receipt_v1",
+  "source_commit_before_execution": "d9e8b807",
+  "selected_invocations": 1,
+  "stage": "plot",
+  "command": "/usr/bin/time -v env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.plot_native_qfo_four_cell_scores --snapshot benchmark_tools/results/native_qfo_scientific_scores_20261007_v3/report.json --snapshot-sha256 7aab1cbd31fb650df42e6e80a14ee0167b35a810f08202768c89c514755211a2 --swiss-binding benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json --swiss-binding-sha256 e8f554a178841da24a1892a7e42f8680f9fe8e4827dec6d6bfe4643cdb890bac --profile-readback benchmark_tools/results/native_qfo_profile_swiss_readback_20261007_v1.json --profile-readback-sha256 3f62b487014cb9ba99ea36b5adc15535f62c7e39c9a99f3cb4eb8c537523005d --output benchmark_tools/results/native_qfo_four_cell_figure_20261007_v1 --validation-python benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+  "initial_exec": {
+    "chunk_id": "34cc7d",
+    "wall_time_seconds": 1.000540865,
+    "session_id": 33934,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "terminal_exec": {
+    "chunk_id": "4fb700",
+    "wall_time_seconds": 0.000016325,
+    "exit_code": 0,
+    "original_token_count": 473,
+    "output": "{\"plotted_cells\": [\"p0_c0_r0\", \"p0_c0_r1\", \"p0_c1_r0\", \"p1_c0_r1\"], \"plotted_score_endpoints\": 24, \"plotted_swiss_contrast_endpoints\": 9}\n\tCommand being timed: \"env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -B -m benchmark_tools.plot_native_qfo_four_cell_scores --snapshot benchmark_tools/results/native_qfo_scientific_scores_20261007_v3/report.json --snapshot-sha256 7aab1cbd31fb650df42e6e80a14ee0167b35a810f08202768c89c514755211a2 --swiss-binding benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json --swiss-binding-sha256 e8f554a178841da24a1892a7e42f8680f9fe8e4827dec6d6bfe4643cdb890bac --profile-readback benchmark_tools/results/native_qfo_profile_swiss_readback_20261007_v1.json --profile-readback-sha256 3f62b487014cb9ba99ea36b5adc15535f62c7e39c9a99f3cb4eb8c537523005d --output benchmark_tools/results/native_qfo_four_cell_figure_20261007_v1 --validation-python benchmarks/work/native_factorial_review_py310_20261004/bin/python\"\n\tUser time (seconds): 6.79\n\tSystem time (seconds): 2.17\n\tPercent of CPU this job got: 99%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:08.98\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 516088\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 339265\n\tVoluntary context switches: 7\n\tInvoluntary context switches: 29\n\tSwaps: 0\n\tFile system inputs: 0\n\tFile system outputs: 1160\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+  },
+  "output_sha256": "4732f525575b03d548bdf18a4047625b565ac1f28df005513d9457ac86f36d75",
+  "new_inference": false,
+  "new_scoring_or_admission": false,
+  "new_bootstrap_draws": 0,
+  "resource_scope": "presentation process and reporting replay only; not native inference or admitted timing"
+}
