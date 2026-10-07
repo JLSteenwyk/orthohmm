@@ -1,0 +1,32 @@
+{
+  "schema": "native_main_provisional_visual_review_v1",
+  "status": "selected_changed_sections_visually_reviewed",
+  "manuscript_sha256": "2804448cbd99ffa3164fcb9e997640f966103a827c9da761bfb7c3732d79a9c1",
+  "pdf_sha256": "6f288300c73352e26cb485cc22b870d583510be1c660ea5f6f674e574711b872",
+  "page_count": 19,
+  "examined_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 17, 18, 19],
+  "native_bounds_report": "publication_main_pdf_review_20261006_v2/report.json",
+  "methods_bounds_report": "publication_main_methods_pdf_review_20261006_v2/report.json",
+  "observations": [
+    "Native scores, coverage, SwissTrees contrasts and candidate round/path tables fit their pages without observed clipping or overlap.",
+    "Adjusted interval cells wrap within their columns; minus signs, counts and zero-crossing statements are legible.",
+    "The path diagnostic preserves biological/uncertainty limitations and original functional-pair composition.",
+    "Introduction, added Methods and final availability distinguish the new provisional snapshot from historical PDFs and archives."
+  ],
+  "initial_selector_failure": {
+    "returncode": 1,
+    "selector": "hermetic full-study",
+    "reason": "PDF line wrapping serializes full- study with intervening whitespace; exact phrase selector was absent.",
+    "output_directory_created": false,
+    "subsequent_selector": "Such reporting portability",
+    "pdf_or_html_regenerated": false
+  },
+  "full_document_visual_certification": false,
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "limitations": [
+    "Visual inspection is scoped to the thirteen examined pages, not every page or linked figure.",
+    "Automated bounds checks cover all nineteen pages but do not prove scientific validity or full fidelity.",
+    "No new inference, scoring, confidence interval, transitive archive closure or redistribution clearance."
+  ]
+}

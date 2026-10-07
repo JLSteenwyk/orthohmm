@@ -200,3 +200,25 @@ def test_invalid_input_or_destination_fails_before_writing(tmp_path, mode):
     with pytest.raises(FileExistsError if mode in ("receipt_exists", "symlink") else ValueError):
         current.build(output, receipt, tmp_path)
     if mode != "symlink": assert not output.exists()
+
+
+def test_selected_manuscript_and_review_receipts_bind_actual_outputs(values):
+    output = BASE / "PUBLICATION_MAIN_TEXT_20261006_v2.md"
+    if not output.exists():
+        pytest.skip("New dated manuscript has not yet been generated")
+    assert output.read_text() == compose(values)
+    generation = json.loads((BASE / "native_main_text_generation_20261006_v2.json").read_text())
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == generation["output"]["sha256"]
+    assert generation["new_scoring_or_admission"] is False
+    render = json.loads((BASE / "publication_main_render_20261006_v2.json").read_text())
+    printed = json.loads((BASE / "publication_main_print_20261006_v2/print.json").read_text())
+    review = json.loads((BASE / "publication_main_pdf_review_20261006_v2/report.json").read_text())
+    visual = json.loads((BASE / "native_main_visual_review_20261006_v2.json").read_text())
+    assert generation["output"] in render["sources"]
+    assert printed["pdf"] in review["checked_records"]
+    assert printed["pdf"]["sha256"] == visual["pdf_sha256"]
+    assert printed["page_count"] == review["page_count"] == visual["page_count"] == 19
+    assert review["bounds_violations"] == []
+    assert render["unique_targets"] == 99 and render["local_occurrences"] == 102
+    assert visual["full_document_visual_certification"] is False
+    assert all(r["publication_ready"] is False for r in (generation, render, printed, review, visual))

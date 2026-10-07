@@ -1,0 +1,89 @@
+{
+  "admitted_cells": [
+    "p0_c0_r0",
+    "p0_c0_r1",
+    "p0_c1_r0"
+  ],
+  "inputs": {
+    "aliases": {
+      "bytes": 24497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/report.json",
+      "sha256": "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
+    },
+    "aliases_readback": {
+      "bytes": 3942,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_readback_20261006_v1.json",
+      "sha256": "4afc4aa6853a69027b9dc710602309f44923315b1e68dbae4cd1e61866f4b92d"
+    },
+    "figure": {
+      "bytes": 96411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_figure_20261006_v1/manifest.json",
+      "sha256": "bb55259208cf4c45949a64923bd601e1e150331d4542b4e3464bd34f27d742d3"
+    },
+    "figure_pdf": {
+      "bytes": 24109,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.pdf",
+      "sha256": "c3e6ca725b1a0e48653179956f87d41c8f957093517d9610324843387f8613f1"
+    },
+    "ledger": {
+      "bytes": 391881,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/changed_pair_groups.tsv",
+      "sha256": "3f0598f7e00cfc0942146604ab1863ad9f03f2d5017efd5244c7e76a29d43642"
+    },
+    "original": {
+      "bytes": 62834,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006.md",
+      "sha256": "748cf8ea335ef7bc0fedd10b583498e7dc29d4981e065f62dec482f55e524681"
+    },
+    "scores": {
+      "bytes": 30083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_scientific_scores_20261006_v2/report.json",
+      "sha256": "7916d3e23808edbb92b016b5c40ac56b9417a863d1af01a7b93a8ef5dbb53a63"
+    },
+    "swiss": {
+      "bytes": 57644,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_uncertainty_20261006_v1.json",
+      "sha256": "76e6f4d33a13a12b7f0a396f6b795b63b654666a038485fb8af2538259f553c2"
+    },
+    "swiss_readback": {
+      "bytes": 53823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_readback_20261006_v1.json",
+      "sha256": "07941ba9c55ba7dc14c5ba53df37d28cb3b2f60f599b9d177b10c9afa99c1329"
+    },
+    "vgnc": {
+      "bytes": 15598,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_vgnc_20261006_v1/report.json",
+      "sha256": "0c83ab917417ac4e97570b8a68b4bbb0bdfd72eeb301b930bf24446e1a623aea"
+    },
+    "vgnc_readback": {
+      "bytes": 1782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_vgnc_readback_20261006_v1.json",
+      "sha256": "f75cc5775eb63f5a4aa9c72d844782f285d39b00481a380dca6450669c109c57"
+    }
+  },
+  "limitations": [
+    "Bound-summary presentation, not another scientific or raw-evidence audit.",
+    "No render, visual review, archive restoration, transitive closure or rights implied.",
+    "Fresh native factorial, independent-family validation and other-endpoint uncertainty remain incomplete."
+  ],
+  "matched_swiss_contrasts": 2,
+  "native_inference_reexecuted": false,
+  "new_bootstrap_draws": 0,
+  "new_scoring_or_admission": false,
+  "original_evidence_modified": false,
+  "output": {
+    "bytes": 66814,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006_v2.md",
+    "sha256": "2804448cbd99ffa3164fcb9e997640f966103a827c9da761bfb7c3732d79a9c1"
+  },
+  "publication_ready": false,
+  "schema": "native_main_text_summary_generation_v1",
+  "source": {
+    "bytes": 22425,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native_main_text_v2.py",
+    "sha256": "1a26cc897a703bf34a74664bdf87fdbce702b8054be2946928151beaf0eb9645"
+  },
+  "status": "provisional_source_generated",
+  "unavailable_cells": 4,
+  "unavailable_swiss_contrasts": 12
+}
