@@ -1,5 +1,46 @@
 # Shared-Host Authorization Reaffirmed
 
+## Consolidated Execution Contract
+
+The user again reports recurring stops. Inspection confirms the goal is ACTIVE,
+native job 23902 is RUNNING at 55:17, and no allocated terminal-review job is
+queued. Remote main includes ef4078ef, the prepared and tested review batch.
+These observations do not diagnose the cause of any platform interruption.
+
+Replace the attachment's accumulated operational amendments with one execution
+contract. Preserve all seven scientific sections, completion criteria, frozen
+sources and historical evidence. The new contract explicitly distinguishes
+routine submission/dependency/release of our own jobs from scheduler or service
+configuration changes. The former is already authorized; the latter and any
+intervention in unrelated workloads are not. Remove the obsolete integration
+checkpoint and make the prepared review handoff the next actual execution
+action, subject to duplicate checks and its existing scientific/safety gates.
+
+The checkpoint must be refreshed from the newest ledger entries and scheduler,
+not followed blindly after its jobs have changed state. Reuse completed results
+and all attempted scaling identities; do not reinterpret the original plan as
+an instruction to restart the panel. Continue useful independent work during
+running jobs, or use wait/sleep and periodically observe the same handles when
+no independent task is useful. No dedicated host, quiet window, repeated prompt
+edit, renewed contention approval or permission to use the existing scheduler
+is required. Retain actual safety, accounting, source and admission requirements.
+
+Readback of the actual linked attachment confirms the consolidated contract,
+all seven sections, shared-host disclosure and full completion criteria.
+Attachment SHA256 is now
+`f25c88f8b61c6280a6f9303a9b814c033d211760604e058a2a89ac3efb8e144b`.
+The unchanged historical snapshot SHA256 remains
+`7d99ecb39a740b689101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0`.
+Earlier hashes and instructions below are amendment history, not current state.
+
+Official OpenAI documentation distinguishes goal continuation from lifecycle
+interruptions and limits: prompt wording cannot repair the platform dispatcher
+or override those controls. See
+[Using Goals in Codex](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex).
+This is a checked instruction repair, not a claimed platform fix. No goal status
+change, native retry, review submission, new score or readiness claim follows
+from this prompt edit. The full goal remains active and incomplete.
+
 ## Current Checkpoint Correction
 
 The latest user request again asks about recurring stops. Direct inspection

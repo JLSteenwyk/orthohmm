@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Active Goal Contract Consolidated (2026-10-06)
+
+Newest direct user request asks to fix recurring goal stops. Inspect the
+actual linked attachment, goal state, top ledger entries and queue: goal ACTIVE,
+same native23902RUNNING55:17, no allocated-review job queued, prepared batch
+ef4078ef confirmed on remote main. Do not duplicate inference or infer a
+platform-level cause from those observations.
+
+Consolidate overlapping operational amendments into one current contract:
+shared Threadripper contention accepted; routine management of our own jobs
+already authorized and distinct from scheduler/service configuration changes;
+prepared terminal-review handoff is the next execution action, not another
+batch-preparation or integration milestone. Recheck for an existing review
+before its single held submission and verified release. State observations are
+not permanent checkpoints; follow the newest ledger and actual handles.
+
+Preserve seven scientific sections, actual safety/accounting/admission gates,
+frozen science and no automatic retries. Reuse completed measurements and the
+already-attempted27-identity panel. Advance useful work or actually wait while
+submitted jobs run, without status-only permission handoffs or prompt loops.
+No quiet/DGX/dedicated-host prerequisite or isolated-speed claim. Attachment
+readback and unchanged historical goal hash checked. See
+[consolidated contract and limitations](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+
+No production source or goal lifecycle state changed; no review was submitted
+by this instruction-only correction. Next continuation completes the existing
+review handoff after actual duplicate/safety/source checks, then continues
+terminal review, successful-output scoring/admission and the remaining full
+publication work. Prompt repair does not claim to fix a platform interruption.
+
 ## Allocated Native Review Batch Prepared (2026-10-06)
 
 Previous turn finishes the three-cell figure milestone. This turn observes
