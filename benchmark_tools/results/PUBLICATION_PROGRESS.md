@@ -1,5 +1,42 @@
 # Publication Progress
 
+## New Error-Stratum Direct Review Restored And Verified (2026-10-07)
+
+New21page manuscript/actual page review pushed3aaf36a4. Existing unchanged
+direct-review builder executed once with explicit committed v3/stage selectors,
+producing149payloads/9272442bytes/114targets/117links. New archive42c8d5da/
+6354070bytes has150regular members including anchored index41d31073/54171bytes.
+Actual validated extraction to /tmp/orthohmm_error_strata_direct_review_20261007_v1
+checked every member first. Copied stdlib verifier actually executed there under
+Python3.10.13 -I -S -B, exit0/0.10s/24576KiB/0swaps and same149file inventory.
+11focused new archive/source/PDF tests pass1.70s. Actual result/receipts/times
+and new archive retained; see CURRENT_ERROR_STRATA_REVIEW_COMPONENT_20261007.md.
+
+New PUBLICATION_CLAIMS_20261007.md explicitly links every added distance/fixed-
+bin/reporting claim to evidence and preserves contradictory/unsupported claims.
+It supplements the old checklist, not a full completion audit. The component
+does not include transitive document inputs or the separately retained manual
+visual receipt, and does not rerun science, inference, timing or oldrc5. No
+whole-study restoration/publication readiness/redistribution/DOI is claimed.
+
+Exact next independent action: commit/push ONLY this new direct-review archive,
+build/restore/copied-verification/time receipts, result document, claim addendum,
+archive tests and checkpoint. Then close the newly introduced model-distance
+reporting reproducibility gap: a separately versioned portable replay can reuse
+the existing frozen edge-split/rational reader functions on the retained
+183payload archive and 54family counts, without original logical-input paths,
+Git/scheduler/runtime-binary access or rerunning IQ-TREE/raw scoring/bootstrap.
+Preserve original readers, counts, outcomes and scientific scope. Test/commit
+any new source before actual selected replay and describe its bounded scope.
+Do not rebuild the already verified review/rc5 or repeat old native fixtures.
+
+Dependency-only work: SAME23902 RUNNING9:11:37/search67.26% observed,
+SAME23910 PENDING/Dependency. Search percentage is not whole-pipeline progress
+or an ETA. No terminal outcome/review/admission. Observe same handles alongside
+portable work; only successful native and review permit existing conversion/
+scoring/admission then unrun11/12. Retain9failure; no duplicate/restart/re-release.
+Full goalACTIVE, not stopped at the document/archive milestone.
+
 ## New Main Text Printed And All21 Actual Pages Reviewed (2026-10-07)
 
 Previous goal turn PROGRESS: actual prompt/checkpoint correction93f388dd.

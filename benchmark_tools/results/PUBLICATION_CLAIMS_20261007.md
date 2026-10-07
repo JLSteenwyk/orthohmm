@@ -1,0 +1,32 @@
+# Current Error-Stratum Claim-To-Evidence Addendum
+
+This dated addendum covers the new error-stratum analysis and current manuscript
+delivery. It supplements, rather than overwrites, the
+[prior full claim checklist](PUBLICATION_CLAIMS_20260916.md).
+It is not a completion audit of every original publication requirement.
+
+## Scientific Claims
+
+| Claim | Evidence | Status And Limit |
+| --- | --- | --- |
+| All selected SwissTrees reference families have a model-based divergence descriptor | [Prospective protocol](SWISS_MODEL_DIVERGENCE_PROTOCOL_20261007.md), [independent feature readback](swiss_model_divergence_readback_23932_v1.json), [result and retained execution](SWISS_MODEL_DIVERGENCE_RESULT_20261007.md) | Supported for all 18 families, 563 members and 10,765 unordered tip pairs. Fixed WAG+G4, IQ-TREE 3.0.1, seed 20261007; all selected families succeeded before cutoff/scoring. A label-independent descriptor of estimated substitutions/site, not calibrated time, true ancestral history or verified model adequacy |
+| A complete three-cell projection retains every previous fixed sequence, Pfam and duplication stratum | [Full table and scope](NATIVE_QFO_THREE_CELL_STRATA_RESULT_20261007.md), [independent readback](native_qfo_three_cell_strata_readback_20261007_v2.json) | Supported for all 54 family count rows, 60 score records and 40 conditional differences, including empty bins as NA. Overlapping bins and repeated all-family summaries are not independent experiments; no new subgroup intervals or raw scoring |
+| The fixed-bin figure displays all nonempty, nonredundant records | [Manifest](native_qfo_three_cell_strata_figure_20261007_v1/manifest.json), [actual review](NATIVE_QFO_THREE_CELL_STRATA_FIGURE_RESULT_20261007.md) | Supported for 11 bins and 66 points. Nine excluded records are five empty bins and four redundant all-family copies; not outcome-selected omissions. Separate panel scales and descriptive dots are explicit |
+| Candidate expansion improves F1 uniformly across estimated-distance bins | [All nine scores and six contrasts](swiss_model_divergence_strata_20261007_v1/TABLE.md), [exact-rational readback](swiss_model_divergence_strata_readback_20261007_v1.json) | Contradicted by the point estimates: lower/equal F1 -1.245 pp, higher +0.324 pp and all-family -0.347 pp. Precision falls and recall rises in both bins. No subgroup significance, distance-specific default or independent accuracy improvement follows |
+| Reconciliation raises F1 and precision while reducing recall in both distance bins | [Complete conditional contrasts](swiss_model_divergence_strata_20261007_v1/TABLE.md), [readback](swiss_model_divergence_strata_readback_20261007_v1.json) | Supported descriptively: F1 +11.945/+8.427 pp, precision +32.417/+28.625 pp and recall -7.950/-5.117 pp for lower/higher bins. These exposed nine-family bins have no new intervals; larger lower-bin F1 gain is not an established effect modification |
+| These strata identify a profile-refinement effect or C-by-R interaction | [Cell semantics and scope](SWISS_MODEL_DIVERGENCE_RESULT_20261007.md) | Not identified: initial HMM search is on, downstream profile refinement P0 in all three cells. R at P0/C0 and C at P0/R0 are conditional effects, not a complete interaction. Reference-conditioned development-exposed counts are not independent confirmation |
+| The new distance analysis shows superiority over full OrthoFinder | [Retained comparator evidence](PUBLICATION_CLAIMS_20260916.md), [current manuscript](PUBLICATION_MAIN_TEXT_20261007_v3.md) | Not established: the new strata compare OrthoHMM component cells, not full OrthoFinder. Prior endpoint-specific estimates, uncertainty and trade-offs remain unchanged; no universal superiority or default promotion |
+
+## Reporting Claims
+
+| Claim | Evidence | Status And Limit |
+| --- | --- | --- |
+| The new main-text PDF has been visually reviewed | [Print receipt](publication_main_print_20261007_v3/print.json), [automated bounds check](publication_main_pdf_review_20261007_v3/report.json), [separate manual record](publication_main_pdf_visual_review_20261007_v3.json) | Supported: all 21 actual page rasters individually viewed, no visible clipping/overlap, all six distance-table rows readable across pages 10-11 with repeated header, updated IQ-TREE citation/DOI on page 21. This is document review, not scientific validation; journal-specific editing remains open |
+| The new direct-link review component restores and verifies outside the checkout | [Actual component result](CURRENT_ERROR_STRATA_REVIEW_COMPONENT_20261007.md), [restoration](current_error_strata_review_restore_20261007_v1.json), [copied verifier execution](current_error_strata_review_verify_20261007_v1.json) | Supported for 149 payloads, 114 direct targets and 117 local links. Standard-library copied verifier actually executed with -I -S -B. Historical rc5 unchanged. Transitive input/runtime closure and full-study native reproduction are not established; manual visual receipt remains separately in Git |
+| The v2 asset review succeeded after its ledger changed | [Retained failure](publication_main_pdf_review_failure_20261007_v2.json), [exact v3 revision](publication_main_review_asset_revision_20261007_v3.json) | False: v2 remains failed before rasterization. New v3 removes only the mutable-ledger hyperlink and adds a chronological note; every scientific statement/table remains unchanged. No historical hash was rewritten |
+| This addendum establishes publication readiness | [Current manuscript limitations](PUBLICATION_MAIN_TEXT_20261007_v3.md), [original requirement checklist](PUBLICATION_CLAIMS_20260916.md) | Not established: fresh native QfO work remains incomplete, including retained failed identity 9; other-endpoint paired uncertainty, generalization limits, literal fragment/full-architecture/history truth, full-study executable delivery and external archival steps remain explicit. No rerun or replacement of failed attempts is authorized by this reporting update |
+
+Actual scheduler state belongs in the live progress ledger and scheduler,
+not in this fixed scientific addendum. Shared-host resource measurements retain
+unknown, potentially tool-dependent contention effects; this update neither
+repairs failed timing nor claims isolated efficiency.
