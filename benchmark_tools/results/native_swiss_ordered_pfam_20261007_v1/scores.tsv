@@ -1,0 +1,13 @@
+stratum	cell	families	status	F1	PPV	TPR	prediction_semantics
+all	p0_c0_r0	18	descriptive	0.689183963152562	0.6439400942516949	0.741266050122766	group_clique
+all	p0_c0_r1	18	descriptive	0.7895743339716982	0.9491519661804723	0.6759321953915856	native_pair
+all	p0_c1_r0	18	descriptive	0.6857094995663944	0.6087055595840293	0.7850177040241997	group_clique
+all_members_usable_same_signature	p0_c0_r0	4	descriptive	0.7463217716851194	0.6653225724456188	0.8497772702215025	group_clique
+all_members_usable_same_signature	p0_c0_r1	4	descriptive	0.8164519067533572	0.9599654713370497	0.7102678111474461	native_pair
+all_members_usable_same_signature	p0_c1_r0	4	descriptive	0.7306595356906956	0.6157782158360448	0.8982371998726101	group_clique
+all_members_usable_multiple_signatures	p0_c0_r0	1	descriptive	0.6532663316582914	0.49242424242424243	0.9701492537313433	group_clique
+all_members_usable_multiple_signatures	p0_c0_r1	1	descriptive	0.9701492537313433	0.9701492537313433	0.9701492537313433	native_pair
+all_members_usable_multiple_signatures	p0_c1_r0	1	descriptive	0.6532663316582914	0.49242424242424243	0.9701492537313433	group_clique
+some_members_unusable	p0_c0_r0	13	descriptive	0.6690083358543644	0.6490159357172147	0.690271582122495	group_clique
+some_members_unusable	p0_c0_r1	13	descriptive	0.7648366804413596	0.9442095578591505	0.6427353091328778	native_pair
+some_members_unusable	p0_c1_r0	13	descriptive	0.6703378516350444	0.6154740743649312	0.7359400476318315	group_clique

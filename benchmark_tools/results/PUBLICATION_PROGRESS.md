@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Ordered-Pfam Selected Analysis And Both Readbacks Complete (2026-10-07)
+
+Sourcesd09e2bc4 pushed before FOUR selected one-shot invocations in fresh
+namespaces. Featurec002bf9d/331517bytes, independent reader275b8972/8669bytes,
+projectionf3389ad9/40391bytes and rational readerdb942129/4452bytes all complete.
+Every18family/563member retained with matching annotation/ungapped lengths;
+434usable,124ambiguous,fivezero-hit annotations, fixed family partition4/1/13.
+No order discordance among5564usable same-multiset pairs; Clusterin's two
+signatures differ in repeat number, not reordered shared content. No biological
+absence/conservation, independent-pair uncertainty or rearrangement effect claim.
+
+All54originalcountrows/12scores/8ppcontrasts/bothTSVs/all20humanrows checked
+independently with rational arithmetic. R1failed timing stays ineligible and
+unadmitted. Source/commands/actual time/exit/output receipt and full result/table
+retained; protocol frozen6948fb7b before construction, counts entered only
+aftercompletefeature readback. Diagnostic shared-host times0.25/.22/.05/.06s
+are not admitted inference/resource measurements. No annotation extraction,
+alignment, raw scoring, tree inference, bootstrap, default or OrthoFinder rerun.
+78joined tests pass1.60s. Initial artifact prose test failed solely on linewrap;
+uncommitted assertion normalized whitespace, not scientific source/results.
+Selected sources now bound and MUST NOT EDIT.
+
+These new selected files, four time records, execution/result/claim update and
+four artifact tests are included with this checkpoint. This is a separate
+chronological supplement; do not invalidate/reprint the already reviewed21page
+manuscript or rebuild oldrc5/current review/portable-distance components.
+Original full architecture/fragment/history truth and external uncertainty/
+generalization/release limitations remain explicit, not hidden by this result.
+
+Exact next action after focused commit/push: inspect changing SAME23902/23910
+and eventual terminal/review receipts. Last23902 RUNNING10:06:40, search76.55%
+observed later (search only, not whole-pipeline progress/ETA);23910 PENDING
+Dependency. No terminal/review/admission yet. Pending is not blocked. If still
+live and no genuinely unfinished independent requirement is executable, use
+actual30-300s waits and recheck SAMEhandles; do not end at this commit, request
+another resume, invent campaigns/admin work or repeat completed evidence.
+
+Successful native AND terminal review precede existing prospective conversion,
+scoring/admission and genuinely unrun identities11/12, sequentially behind the
+reviewed history. Retain identity9failure; no duplicate/restart/re-release/
+automatic retry. Only dependent work is gated. Reconsider independent work when
+new evidence changes a requirement, not a whole-ledger reaudit on every poll.
+Full goalACTIVE. No DGX/quiet-host/renewedapproval gate; actual prompt already
+corrected, not a proven platform lifecycle repair.
+
 ## Ordered-Pfam Sources Tested Before Selected Execution (2026-10-07)
 
 Actual relocated model-distance evidence/result/tests committed and pushed

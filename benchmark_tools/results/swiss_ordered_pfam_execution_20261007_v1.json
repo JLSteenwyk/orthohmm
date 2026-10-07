@@ -1,0 +1,66 @@
+{
+  "schema": "swiss_ordered_pfam_actual_execution_v1",
+  "source_commit": "d09e2bc41e12020c6217e28e22811c67477eaee4",
+  "protocol_commit": "6948fb7b",
+  "working_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+  "runtime": {
+    "python": "3.10.13",
+    "compiler": "GCC 11.2.0",
+    "biopython": "1.87",
+    "isolated": true,
+    "bytecode_disabled": true
+  },
+  "selected_invocations": [
+    {
+      "stage": "features",
+      "invocations": 1,
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /usr/bin/time -f 'exit=%x\\nelapsed_seconds=%e\\nmaximum_rss_kib=%M\\nswaps=%W' -o benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.time.txt benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B benchmark_tools/prepare_swiss_ordered_pfam.py features --repo /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm --source-commit d09e2bc41e12020c6217e28e22811c67477eaee4 --output benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.json",
+      "exit_code": 0,
+      "captured_output": "{\"status\": \"features_constructed_unverified\", \"bins\": {\"all\": 18, \"all_members_usable_same_signature\": 4, \"all_members_usable_multiple_signatures\": 1, \"some_members_unusable\": 13}}\n",
+      "time_file": "benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.time.txt"
+    },
+    {
+      "stage": "feature_readback",
+      "invocations": 1,
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /usr/bin/time -f 'exit=%x\\nelapsed_seconds=%e\\nmaximum_rss_kib=%M\\nswaps=%W' -o benchmark_tools/results/swiss_ordered_pfam_feature_readback_20261007_v1.time.txt benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B benchmark_tools/readback_swiss_ordered_pfam.py features --repo /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm --source-commit d09e2bc41e12020c6217e28e22811c67477eaee4 --report benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.json --output benchmark_tools/results/swiss_ordered_pfam_feature_readback_20261007_v1.json",
+      "exit_code": 0,
+      "captured_output": "{\"status\": \"ordered_features_verified\", \"genes_checked\": 563, \"families_checked\": 18}\n",
+      "time_file": "benchmark_tools/results/swiss_ordered_pfam_feature_readback_20261007_v1.time.txt"
+    },
+    {
+      "stage": "projection",
+      "invocations": 1,
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /usr/bin/time -f 'exit=%x\\nelapsed_seconds=%e\\nmaximum_rss_kib=%M\\nswaps=%W' -o benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1.time.txt benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B benchmark_tools/prepare_swiss_ordered_pfam.py scores --repo /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm --source-commit d09e2bc41e12020c6217e28e22811c67477eaee4 --features benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.json --feature-reader benchmark_tools/results/swiss_ordered_pfam_feature_readback_20261007_v1.json --output benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1",
+      "exit_code": 0,
+      "captured_output": "{\"status\": \"projection_constructed_unverified\", \"bins\": {\"all\": 18, \"all_members_usable_multiple_signatures\": 1, \"all_members_usable_same_signature\": 4, \"some_members_unusable\": 13}}\n",
+      "time_file": "benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1.time.txt"
+    },
+    {
+      "stage": "projection_readback",
+      "invocations": 1,
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 /usr/bin/time -f 'exit=%x\\nelapsed_seconds=%e\\nmaximum_rss_kib=%M\\nswaps=%W' -o benchmark_tools/results/native_swiss_ordered_pfam_readback_20261007_v1.time.txt benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B benchmark_tools/readback_swiss_ordered_pfam.py scores --repo /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm --source-commit d09e2bc41e12020c6217e28e22811c67477eaee4 --report benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/report.json --output benchmark_tools/results/native_swiss_ordered_pfam_readback_20261007_v1.json",
+      "exit_code": 0,
+      "captured_output": "{\"status\": \"ordered_projection_verified\", \"family_rows_checked\": 54, \"score_rows_checked\": 12, \"differences_checked\": 8, \"human_numeric_rows_checked\": 20}\n",
+      "time_file": "benchmark_tools/results/native_swiss_ordered_pfam_readback_20261007_v1.time.txt"
+    }
+  ],
+  "source_hashes": {
+    "prepare_swiss_ordered_pfam": "3eb2145b4916cf891a4a298a6b6085ac86e402b0adc82bba3e23027079608abc",
+    "readback_swiss_ordered_pfam": "45f2418dcbbf8a79ade3a2a9a0d23f13a5a6702d56de1a1e37fc54f3b16015f0"
+  },
+  "counts_entered_only_after_full_feature_readback": true,
+  "annotation_extraction_repeated": false,
+  "alignment_repeated": false,
+  "raw_scorer_repeated": false,
+  "tree_inference_repeated": false,
+  "new_bootstrap_draws": 0,
+  "scientific_timings_admitted": false,
+  "independent_confirmation": false,
+  "publication_ready": false,
+  "timing_scope": "Diagnostic postprocessing times only, on the shared Threadripper; not new admitted inference/resource measurements.",
+  "limitations": [
+    "Inherited annotation and raw-count admissions; no original source re-extraction or count re-admission.",
+    "Shared JSON/Biopython/csv parsing; separate descriptor and rational implementations.",
+    "Development-exposed families; no full architecture or biological domain absence truth."
+  ]
+}

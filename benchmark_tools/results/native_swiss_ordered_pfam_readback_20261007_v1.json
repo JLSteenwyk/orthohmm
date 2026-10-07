@@ -1,0 +1,129 @@
+{
+  "alignment_repeated": false,
+  "bins": {
+    "all": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CASP",
+      "CITE",
+      "Clusterin",
+      "GH14",
+      "HOX",
+      "MAPT",
+      "NOX",
+      "POP",
+      "PSEN",
+      "RPS",
+      "SERC",
+      "SUMF",
+      "TRFE",
+      "VATB"
+    ],
+    "all_members_usable_multiple_signatures": [
+      "Clusterin"
+    ],
+    "all_members_usable_same_signature": [
+      "CITE",
+      "POP",
+      "RPS",
+      "SUMF"
+    ],
+    "some_members_unusable": [
+      "APP",
+      "ASTER",
+      "BAMBI",
+      "BAR",
+      "CASP",
+      "GH14",
+      "HOX",
+      "MAPT",
+      "NOX",
+      "PSEN",
+      "SERC",
+      "TRFE",
+      "VATB"
+    ]
+  },
+  "checked_inputs": [
+    {
+      "bytes": 40391,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/report.json",
+      "sha256": "f3389ad993f7ffbf5a5ee3fe2e2e8bac061120dc10947237a082d2c9e13ea9b0"
+    },
+    {
+      "bytes": 88759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+      "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+    },
+    {
+      "bytes": 9722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v2.json",
+      "sha256": "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
+    },
+    {
+      "bytes": 8669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_ordered_pfam_feature_readback_20261007_v1.json",
+      "sha256": "275b89720a65d0c5d0a9afe70a806c53a3d9fbb8014d99d3d4ba361f78bf56bc"
+    },
+    {
+      "bytes": 331517,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/swiss_ordered_pfam_features_20261007_v1.json",
+      "sha256": "c002bf9d61b523545c9f46002e147ae5c04bacc9335d48c04886ffe549f0810f"
+    },
+    {
+      "bytes": 15915,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_swiss_ordered_pfam.py",
+      "sha256": "3eb2145b4916cf891a4a298a6b6085ac86e402b0adc82bba3e23027079608abc"
+    },
+    {
+      "bytes": 17840,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_swiss_ordered_pfam.py",
+      "sha256": "45f2418dcbbf8a79ade3a2a9a0d23f13a5a6702d56de1a1e37fc54f3b16015f0"
+    },
+    {
+      "bytes": 858,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/differences.tsv",
+      "sha256": "45f4665443b8f130e4006c5df8ecca4f1f9a3300183a2c7cef8ee93d668d7c08"
+    },
+    {
+      "bytes": 1488,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/scores.tsv",
+      "sha256": "ecf046dac73309cb2e34e945dc3cfeb0b53c727c3953d88d8b7002060309445d"
+    },
+    {
+      "bytes": 2105,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/TABLE.md",
+      "sha256": "f220d342a4c90109b9569f4c7f311de00c7a60c083c7aa1434f5db9fb49c1829"
+    }
+  ],
+  "differences_checked": 8,
+  "family_rows_checked": 54,
+  "human_numeric_rows_checked": 20,
+  "independent_confirmation": false,
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "publication_ready": false,
+  "raw_scorer_repeated": false,
+  "report": {
+    "bytes": 40391,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_swiss_ordered_pfam_20261007_v1/report.json",
+    "sha256": "f3389ad993f7ffbf5a5ee3fe2e2e8bac061120dc10947237a082d2c9e13ea9b0"
+  },
+  "schema": "swiss_ordered_pfam_readback_v1",
+  "scientific_timings_admitted": false,
+  "score_rows_checked": 12,
+  "shared_parsers": [
+    "json",
+    "csv"
+  ],
+  "source": {
+    "bytes": 17840,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_swiss_ordered_pfam.py",
+    "sha256": "45f2418dcbbf8a79ade3a2a9a0d23f13a5a6702d56de1a1e37fc54f3b16015f0"
+  },
+  "source_commit": "d09e2bc41e12020c6217e28e22811c67477eaee4",
+  "status": "ordered_projection_verified"
+}
