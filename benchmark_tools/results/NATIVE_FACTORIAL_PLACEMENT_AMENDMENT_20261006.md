@@ -1,5 +1,43 @@
 # Native Placement Failure And Prospective Correction
 
+## Prospective Production Integration
+
+The allocation-aware route now has its own execution contract, controller/batch,
+held-request preparer, scientific-output entry validator, terminal reviewer,
+QfO conversion, assessment and independent admission modules. The new amendment
+preparer requires committed sources/tests and a complete passing integration
+report before binding the original plan, ten reviewed historical identities,
+verified23897 fixture, 14 new-route sources and unchanged resource limits.
+It never submits or releases jobs. No old scientific helper or plan is changed.
+
+Final complete-integration v2 XML records749 passes/14.64s, zero failures/errors/
+skips. Scientific Python3.10 imports all14 prospective source records; Bash
+syntax passes. Tests exercise actual native/group conversion and unchanged
+six-endpoint/trace/FAS validation on synthetic scoring outputs. Amendment,
+upstream execution and scheduler fixtures remain synthetic in these tests;
+they do not establish live native production success or scientific accuracy.
+
+New scoring namespaces are `allocated_native_qfo_assessment_v1`, `w/aq10..12`,
+`scoring/allocated_native_10..12` and `allocated_native_qfo_admission_v1`.
+R-on remains resolved native pairs; R-off remains cross-species group cliques.
+Mapping loss is refused, all inference inputs remain in the coverage denominator,
+and failed/empty predictions are retained without fabricated scores. New schemas
+reject historical route records rather than relabeling their source identities.
+
+Retain earlier test stages: prior controller v1 has94passes/one shared-fixture
+failure; v2 is a no-test invocation with a wrong filename; v3 has404passes/three
+missing-stub-field failures; v4 passes420. Downstream v1 has one collection
+import-path error; v2 has142passes/42 fixture source-path failures; v3 passes190.
+Complete-integration v1 passes737 before the amendment preparer is added.
+Corrections affect test fixtures/imports, not frozen scientific kernels or
+production source-check relaxation. The final749-case suite covers current code.
+
+After committing/pushing this milestone, freeze the actual prospective amendment
+and prepare only next genuinely unrun identity10 with fresh gates;11/12 follow
+its reviewed terminal disposition. Failed9 and successful23894/23897 are not
+rerun. A passing integration suite is not a substitute for actual amendment,
+held-job/source/comment checks, runtime/accounting or terminal scientific review.
+
 ## Real Fixture Terminal Evidence
 
 Afterbb0a5d05 is pushed, release23897 once with fresh exact owner/comment/

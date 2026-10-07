@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="42" skipped="0" tests="184" time="5.893" timestamp="2026-10-06T20:54:24.856057-04:00" hostname="bizon"><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_conversion_route_retains_scientific_semantics[10]" time="0.001" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_conversion_route_retains_scientific_semantics[11]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_conversion_route_retains_scientific_semantics[12]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[schema-native_factorial_terminal_review_v1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[amendment-value1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[request-value2]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[plan-value3]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[job_id-998]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[index-9]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[dataset-orthobench]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[cell-p0_c0_r1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[repeat-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[status-native_failure_retained]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[scheduler_state-RUNNING]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[scheduler_exit_code-1:0]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[terminal_reviewed-False]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[native_outputs_validated-False]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[primary_resources_replayed-False]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[shared_host_resources_reviewed-False]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[execution_scope-isolated]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[resource_scopes-value17]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[uncontended_timing-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[automatic_retry-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[accuracy_evaluated-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[scientific_timings_admitted-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[publication_ready-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_wrong_terminal_route_or_claim_is_refused[reviews-value23]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_historical_native_identity_is_not_a_new_conversion[6]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_historical_native_identity_is_not_a_new_conversion[7]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_historical_native_identity_is_not_a_new_conversion[8]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_historical_native_identity_is_not_a_new_conversion[9]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_real_converter_retains_mapping_and_all_input_denominator[10]" time="0.037" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_real_converter_retains_mapping_and_all_input_denominator[11]" time="0.063" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_real_converter_retains_mapping_and_all_input_denominator[12]" time="0.033" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-schema-native_factorial_output_review_v1]" time="0.023" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-source-value1]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-semantic_validator_source-value2]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-amendment-value3]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-request-value4]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-plan-value5]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-job_id-998]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-native_cpu_ids-value7]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-allocated_ready-value8]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-native_outputs_validated-False]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[10-execution_scope-isolated]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-schema-native_factorial_output_review_v1]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-source-value1]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-semantic_validator_source-value2]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-amendment-value3]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-request-value4]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-plan-value5]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-job_id-998]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-native_cpu_ids-value7]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-allocated_ready-value8]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-native_outputs_validated-False]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[11-execution_scope-isolated]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-schema-native_factorial_output_review_v1]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-source-value1]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-semantic_validator_source-value2]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-amendment-value3]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-request-value4]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-plan-value5]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-job_id-998]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-native_cpu_ids-value7]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-allocated_ready-value8]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-native_outputs_validated-False]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_native_output_gate_cannot_consume_old_or_mismatched_receipts[12-execution_scope-isolated]" time="0.015" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-scheduler]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-comment]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-owner]" time="0.024" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-mapping_loss]" time="0.026" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-source]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[10-failed_conversion]" time="0.025" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-scheduler]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-comment]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-owner]" time="0.024" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-mapping_loss]" time="0.056" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-source]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[11-failed_conversion]" time="0.026" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-scheduler]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-comment]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-owner]" time="0.024" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-mapping_loss]" time="0.026" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-source]" time="0.014" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_converter_failure_boundary[12-failed_conversion]" time="0.026" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[False-10]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[False-11]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[False-12]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[True-10]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[True-11]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_identity_and_empty_counts[True-12]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[schema-full_native_factorial_qfo_conversion_v1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[status-full_native_factorial_qfo_pairs_prepared_unscored]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[native_index-9]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[native_index-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[cell-p0_c0_r1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[participant-cached]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[conversion_kind-group]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[accuracy_evaluated-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[automatic_retry-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[empty_predictions-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[removed_mapping_pairs-1]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[total_pairs-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[retained_pairs-3]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[filtered_pairs-value13]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[conversion_started_monotonic_ns-True]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_new_stage_rejects_historical_schema_or_bad_semantics[conversion_finished_monotonic_ns-9]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_successful_conversion_requires_actual_own_two_cpu_scheduler[State-RUNNING]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_successful_conversion_requires_actual_own_two_cpu_scheduler[ExitCode-1:0]" time="0.001" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_successful_conversion_requires_actual_own_two_cpu_scheduler[NodeList-dgx]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_successful_conversion_requires_actual_own_two_cpu_scheduler[AllocCPUS-8]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_successful_conversion_requires_actual_own_two_cpu_scheduler[JobIDRaw-888]" time="0.000" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command[10]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:268: in test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command
+    report = runner.run(root, ref, "777", check_only=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command[11]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:268: in test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command
+    report = runner.run(root, ref, "777", check_only=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command[12]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:268: in test_readonly_assessment_preflight_uses_new_namespace_and_same_six_endpoint_command
+    report = runner.run(root, ref, "777", check_only=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-amendment-value0]" time="0.032" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-native_cpu_ids-value1]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-allocated_ready-value2]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-conversion_kernel_source-value3]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-source-value4]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-gene_ownership_sha256-bad]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-input_fastas-value6]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-native_job_id-998]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-native_input-value8]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[10-mapping-value9]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-amendment-value0]" time="0.060" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-native_cpu_ids-value1]" time="0.060" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-allocated_ready-value2]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-conversion_kernel_source-value3]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-source-value4]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-gene_ownership_sha256-bad]" time="0.060" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-input_fastas-value6]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-native_job_id-998]" time="0.060" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-native_input-value8]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[11-mapping-value9]" time="0.059" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-amendment-value0]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-native_cpu_ids-value1]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-allocated_ready-value2]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-conversion_kernel_source-value3]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-source-value4]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-gene_ownership_sha256-bad]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-input_fastas-value6]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-native_job_id-998]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-native_input-value8]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_binding_refuses_resealed_stage_changes[12-mapping-value9]" time="0.031" /><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[10-exit]" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-npqehou9/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-npqehou9/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[10-tamper]" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-ofsihew5/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-ofsihew5/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[10-interrupt]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:312: in test_assessment_failure_retained_without_accuracy_claim
+    execute_fixture(fixture, monkeypatch, problem)
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[11-exit]" time="0.060"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-rnvus1a_/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r0/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-rnvus1a_/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r0/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[11-tamper]" time="0.061"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-2mshnjo8/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r0/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-2mshnjo8/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r0/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[11-interrupt]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:312: in test_assessment_failure_retained_without_accuracy_claim
+    execute_fixture(fixture, monkeypatch, problem)
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[12-exit]" time="0.031"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-611ybisz/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r1/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-611ybisz/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r1/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[12-tamper]" time="0.030"><failure message="FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-u_7c7wy2/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r1/results.json'">tests/unit/test_allocated_native_factorial_qfo.py:314: in test_assessment_failure_retained_without_accuracy_claim
+    report = json.loads((path / "results.json").read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1029: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.12/pathlib.py:1015: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/tmp/nq-u_7c7wy2/benchmarks/results/allocated_native_qfo_assessment_v1/p1_c1_r1/results.json'</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_assessment_failure_retained_without_accuracy_claim[12-interrupt]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:312: in test_assessment_failure_retained_without_accuracy_claim
+    execute_fixture(fixture, monkeypatch, problem)
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_joined_independent_endpoints_admitted_only_after_validation[10]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:331: in test_joined_independent_endpoints_admitted_only_after_validation
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_joined_independent_endpoints_admitted_only_after_validation[11]" time="0.059"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:331: in test_joined_independent_endpoints_admitted_only_after_validation
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_joined_independent_endpoints_admitted_only_after_validation[12]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:331: in test_joined_independent_endpoints_admitted_only_after_validation
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-scheduler]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-failed]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-command]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-preflight]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-outputs]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-trace]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-metrics]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-schema]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[10-source]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-scheduler]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-failed]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-command]" time="0.061"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-preflight]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-outputs]" time="0.059"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-trace]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-metrics]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-schema]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[11-source]" time="0.060"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-scheduler]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-failed]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-command]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-preflight]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-outputs]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-trace]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-metrics]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-schema]" time="0.030"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase><testcase classname="tests.unit.test_allocated_native_factorial_qfo" name="test_independent_admission_rejects_changed_or_incomplete_execution[12-source]" time="0.031"><failure message="ValueError: Allocated conversion source/kernel differs">tests/unit/test_allocated_native_factorial_qfo.py:355: in test_independent_admission_rejects_changed_or_incomplete_execution
+    execution = execute_fixture(fixture, monkeypatch)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_native_factorial_qfo.py:304: in execute_fixture
+    return runner.run(root, ref, "777")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:128: in run
+    report = prepare(root, pairs_ref, conversion_job)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:115: in prepare
+    stage, manifest, binding = conversion_binding(root, pairs_ref, conversion_job)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/run_allocated_native_factorial_qfo_assessment.py:69: in conversion_binding
+    require(stage["source"] == record(Path(__file__).with_name("prepare_allocated_native_factorial_qfo_pairs.py"))
+benchmark_tools/validate_native_factorial_outputs.py:41: in require
+    raise ValueError(message)
+E   ValueError: Allocated conversion source/kernel differs</failure></testcase></testsuite></testsuites>

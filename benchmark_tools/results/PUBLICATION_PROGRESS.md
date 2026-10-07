@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Allocated Native QfO Integration Tested (2026-10-06)
+
+Previous turn changes authoritative goal instructions at the user's request;
+this turn advances the missing production integration rather than another
+authorization/prompt update. Add new QfO conversion, assessment and independent
+admission modules using unchanged scientific kernels, explicit new schemas,
+allocation/amendment/source/ownership bindings and separate scoring namespaces.
+Retain and integrate the previously uncommitted controller/request/reviewer/
+output-validator work. Add amendment preparer that requires committed sources,
+all14 integration test modules, actual verified fixture and original ten-entry
+prefix; it does not submit or release jobs.
+
+[Production boundary](NATIVE_FACTORIAL_PLACEMENT_AMENDMENT_20261006.md):749
+joined tests pass14.64s/zero failures/errors/skips; scientific Python3.10 imports
+all14 prospective source records; batch Bash syntax passes. Actual conversion
+and native endpoint/trace/FAS kernels execute on synthetic test data; no real
+production inference, scoring result or complete hermetic runtime is established.
+Earlier failed test stages retained, including downstream collection import
+error and fixture source-path mismatch; fixes do not relax production bindings.
+
+Both actual23894/23897 remain terminal and reused; unrelated fungal-rm2-full
+queue observed, not changed. Next commit/push the validated route, freeze the
+actual prospective amendment and prepare new identity10 after fresh safe
+capacity/ownership/source/prefix checks. No automatic9 retry, quiet-host gate,
+scientific default change or production launch claimed at this checkpoint.
+Full publication goal active; completion remains unproven.
+
 ## Goal Recovery Instructions Clarified (2026-10-06)
 
 Latest user request asks to fix recurring stops, not to pause or restart the
