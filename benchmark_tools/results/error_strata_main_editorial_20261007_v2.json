@@ -1,0 +1,81 @@
+{
+  "schema": "error_strata_main_text_editorial_revision_v2",
+  "parent": {
+    "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v1.md",
+    "bytes": 74037,
+    "sha256": "31a9a10598b4e1729e3af21616252147e645315659935328e9d2f67d749aeb00"
+  },
+  "output": {
+    "path": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v2.md",
+    "bytes": 74312,
+    "sha256": "eeff5806d2ac8d52458922c8fdd0910a65d892821e3fa227600289ed6a9ebc9b"
+  },
+  "generation_receipt": {
+    "path": "benchmark_tools/results/error_strata_main_generation_20261007_v1.json",
+    "sha256": "bead52c3c6d5ffd484d91a9174f7d26a838f2a036c8dc9f5f6ee0ac53955b9d6"
+  },
+  "edits": [
+    {
+      "from": "All18families/563canonical members and all54count rows, including TN, are",
+      "to": "All 18 families, 563 canonical members and all 54 count rows, including TN, are",
+      "occurrences": 1
+    },
+    {
+      "from": "All60score and40conditional-difference records are retained, including",
+      "to": "All 60 score and 40 conditional-difference records are retained, including",
+      "occurrences": 1
+    },
+    {
+      "from": "IQ-TREE3.0.1 [@iqtree3_2026]",
+      "to": "IQ-TREE 3.0.1 [@iqtree3_2026]",
+      "occurrences": 1
+    },
+    {
+      "from": "all10765distances",
+      "to": "all 10,765 distances",
+      "occurrences": 1
+    },
+    {
+      "from": "all11nonempty,\nnonredundant bins (66points).",
+      "to": "all 11 nonempty,\nnonredundant bins (66 points).",
+      "occurrences": 1
+    },
+    {
+      "from": "all18families",
+      "to": "all 18 families",
+      "occurrences": 1
+    },
+    {
+      "from": "all18selected alignments",
+      "to": "all 18 selected alignments",
+      "occurrences": 1
+    },
+    {
+      "from": "IQ-TREE3citation",
+      "to": "IQ-TREE 3 citation",
+      "occurrences": 1
+    },
+    {
+      "from": "Wong et al.2026 paper",
+      "to": "Wong et al. 2026 paper",
+      "occurrences": 1
+    },
+    {
+      "from": "executed binary remains3.0.1",
+      "to": "executed binary remains 3.0.1",
+      "occurrences": 1
+    }
+  ],
+  "version_note": {
+    "from": "Error-stratum evidence revision of 7 October 2026. Not submission-ready.\n",
+    "to": "Error-stratum evidence revision of 7 October 2026, editorial v2. Not submission-ready.\nThis editorial version preserves the [generated first snapshot](PUBLICATION_MAIN_TEXT_20261007_v1.md).\nOnly added-prose spacing and this version note differ; numerical tables,\nendpoints, evidence bindings and limitations are unchanged.\n",
+    "occurrences": 1
+  },
+  "scientific_scope_unchanged": true,
+  "numerical_table_bytes_unchanged": true,
+  "prior_manuscript_and_archives_unchanged": true,
+  "benchmark_or_scoring_reexecuted": false,
+  "publication_ready": false,
+  "new_render_or_package_proved": false,
+  "limitation": "Manual editorial spacing/version-note revision only; render and package require their own receipts."
+}

@@ -1,5 +1,37 @@
 # Publication Progress
 
+## New Manuscript Sources Generated And Editorially Verified (2026-10-07)
+
+Integration source522cc882 pushed before ONE actual isolatedstdlib generation.
+Generated main7Octv1 31a9a105/74037bytes, bibliographya8b74a33/50517bytes and
+receiptbead52c3 retain all originalv2scientific bytes plus the declared new
+sections, six complete distance contrasts, fixed-bin figure and current
+IQ-TREE3citation. Actual0.05s/15360KiB/exit0 is postprocessing. No scoring,
+bootstrap, inference, default, scientific admission or oldrender/rc5 changed.
+
+New added prose had compressed number/word spacing. Original generator/source/
+snapshot retained unchanged. Separate manual editorialv2 eeff5806/74312bytes
+changes ONLY10declared added-prose strings and an explicit version note;
+machine-readable editorial receipt records exact reversible substitutions.
+Every numerical table line is byte-identical between newv1/v2; no old-parent
+phrase was changed.28integration/actual-snapshot/archive tests pass0.80s.
+New bibliography preserves every prior entry and adds publisher-deposited
+IQ-TREE3paper only, without upgrading installed3.0.1 or reexecuting inference.
+
+Exact next independent action: commit/push ONLY newmainv1/v2, bibliography,
+generation/time/editorial receipts, artifact tests and this checkpoint. Then
+render ONLY fresh7Octv2 HTML and print into fresh7Octv2 attempt namespace using
+existing unchanged validated render/print helpers and the new bibliography.
+Check actual PDF content/layout and new tables/citation/asset bindings before
+claiming visual review; no HTML/PDF/new-package proof yet. Preserve oldmainv2,
+19page review/rc5 and every frozen source/output. No oldrender replay.
+
+Dependency-only native work: SAME23902 was RUNNING8:44:57/search64.46%,
+SAME23910PENDING/Dependency; inspect changing state alongside reporting work.
+No native terminal/review/admission established, no duplicate/restart/release.
+Continue successful-native-only conversion/scoring/admission then unrun11/12
+after existing review, retaining9failure. Full goal ACTIVE, not a milestone stop.
+
 ## Fresh Error-Stratum Manuscript Integration Tested Before Generation (2026-10-07)
 
 Verified model-distance/three-cell tables/readers/183payload evidence archive
