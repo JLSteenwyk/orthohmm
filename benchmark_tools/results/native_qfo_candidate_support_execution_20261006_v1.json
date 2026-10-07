@@ -1,0 +1,68 @@
+{
+  "schema": "native_qfo_candidate_accepted_support_execution_v1",
+  "status": "actual_export_and_independent_readback_succeeded",
+  "protocol_pushed_before_selected_analysis": "0a829b96",
+  "tested_source_pushed_before_selected_analysis": "48e7c3916d3314ab3e0f80afb564fbaa1e908dd9",
+  "runtime": "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+  "python": "3.10.13",
+  "isolated_stdlib_flags": ["-I", "-S", "-B"],
+  "environment_unset": ["PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+  "environment_set": {
+    "PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
+    "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"
+  },
+  "observations": [
+    {
+      "source": "benchmark_tools/export_native_qfo_candidate_support.py",
+      "argv": ["--output", "benchmark_tools/results/native_qfo_candidate_support_20261006_v1"],
+      "exit_code": 0,
+      "stdout_status": "descriptive_accepted_event_support_exported",
+      "gnu_time_wall_seconds": 4.02,
+      "gnu_time_user_seconds": 3.60,
+      "gnu_time_system_seconds": 0.41,
+      "gnu_time_maximum_rss_kib": 280432,
+      "gnu_time_swaps": 0
+    },
+    {
+      "source": "benchmark_tools/readback_native_qfo_candidate_support.py",
+      "argv": [
+        "benchmark_tools/results/native_qfo_candidate_support_20261006_v1/report.json",
+        "--report-sha256", "a6dbe37a740ad657f9820cd20f78faf62c75e22e9a8ba28b258a886ee991ac8c",
+        "--output", "benchmark_tools/results/native_qfo_candidate_support_readback_20261006_v1.json"
+      ],
+      "exit_code": 0,
+      "stdout_status": "accepted_event_features_independently_verified",
+      "gnu_time_wall_seconds": 21.03,
+      "gnu_time_user_seconds": 20.47,
+      "gnu_time_system_seconds": 0.46,
+      "gnu_time_maximum_rss_kib": 344020,
+      "gnu_time_swaps": 0
+    }
+  ],
+  "outputs": [
+    {
+      "path": "benchmark_tools/results/native_qfo_candidate_support_20261006_v1/report.json",
+      "bytes": 60771,
+      "sha256": "a6dbe37a740ad657f9820cd20f78faf62c75e22e9a8ba28b258a886ee991ac8c"
+    },
+    {
+      "path": "benchmark_tools/results/native_qfo_candidate_support_20261006_v1/annotated_pairs.tsv",
+      "bytes": 843587,
+      "sha256": "07333b6ce3f7c563b08d084b9d7a514f0ab1c2d8d49885227284ac122ab35501"
+    },
+    {
+      "path": "benchmark_tools/results/native_qfo_candidate_support_20261006_v1/implicated_events.tsv",
+      "bytes": 101338,
+      "sha256": "30d4c80d92e6d167d1b1fd7342302f46d50b55f982b6354bc287f8c708447c83"
+    },
+    {
+      "path": "benchmark_tools/results/native_qfo_candidate_support_readback_20261006_v1.json",
+      "bytes": 3412,
+      "sha256": "dd399ccbf96943a67cb53061cafa2dd5f71cea3bc78538f4199a7770e2a4bf34"
+    }
+  ],
+  "timing_scope": "Shared-host descriptive postprocessing observations only; not native inference, accounting admission or isolated performance.",
+  "original_analysis_replayed": false,
+  "automatic_retry": false,
+  "publication_ready": false
+}

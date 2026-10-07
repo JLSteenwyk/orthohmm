@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Accepted-Event Support Actually Exported And Independently Verified (2026-10-06)
+
+Actual goal attachment/current copy remain equal3a2b66aa, full goal ACTIVE.
+No additional stale gate or platform dispatcher defect found. Contract already
+authorizes shared Threadripper work and continuation past routine milestones.
+Protocol0a829b96 and testedsource48e7c391 pushed BEFORE selected numbers.
+78tests pass1.11s including actual attachment readback and scientific safety.
+
+Actual fresh native_qfo_candidate_support_20261006_v1/report.json
+a6dbe37a/60771bytes checksALL40690accepted events andALL2295proven pair paths;
+no partition/alias/raw/scoring replay. Annotatedpairs07333b6c/843587bytes and
+449uniqueimplicatedevents30d4c80d/101338bytes preserve all original identities.
+Independent stdlib readerfaa2e7a, no exporter/union imports, reconstructs every
+join/row/cohort and exact rational summaries. Readbackdd399ccb/3412bytes
+verifies counts exactly, numericalsummarytol1e-12absolute/relative, current
+source/input/output bytes before/after. ActualPython3.10isolatedstdlibruns
+exit0: exporter4.02s/280432KiBRSS, reader21.03s/344020KiB, zero swaps. These
+are shared-host postprocessing, not native timing or isolation. No failure/retry.
+
+Cohorts51TP-only/352FP-only/46mixed/40241UNLABELED; rounds0counts49/322/37/
+33699,round1counts2/30/9/6542.150directTP/2033directFP; transitive12TP/100FP
+retain blank event features. Required numericfields nonmissing, positive-infinity
+margin separatelycounted12/55/10/20423. Supportrangesoverlap; highermedian
+TP-onlysupport does NOT imply usable threshold, calibratedconfidence or causal
+explanation. Mixed events affect both kinds of changes. No defaults/endpoint/
+bootstrap/score/admission/oldmanuscript/rc5 change. See
+[bounded actual diagnostic](NATIVE_QFO_CANDIDATE_SUPPORT_RESULT_20261006.md)
+and actual execution receipt. Joined goal/policy/source/artifact tests pass84
+tests1.28s, including all actual output hashes, committed pre-execution source
+bytes, complete pair preservation and event-unit counts. Commit/push these
+result files/receipt/tests/checkpoint, then continue the next action below.
+
+Latest SAME23902RUNNING2:30:34,23910PENDING/Dependency. Observe actualterminal
+and queuedreview without duplicate/release/restart, then validated-success
+conversion/scoring/admission/reporting.11/12 remain sequential behind reviewed
+history; no9retry. Independent next unfinished goal4/7 action is integrate this
+descriptive event-unit result and its limitations into NEW supplemental
+reporting/claim-to-evidence content, preserving old receipts/main/rc5. Avoid
+rerunning completed inputs, scientific audits, fixtures or archive builds.
+No other uncommitted task source besides the new result/artifact files above.
+Family-independent validation, several QfOCIs, remaining nativefactorial and
+complete raw/dependency/rights still unmet; do not claim publication readiness.
+
 ## Accepted-Event Support Source Tested Before Selected Execution (2026-10-06)
 
 The active goal attachment and committed current prompt still match
