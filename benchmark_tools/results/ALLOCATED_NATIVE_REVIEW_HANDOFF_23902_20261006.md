@@ -1,5 +1,21 @@
 # Allocated Native Review Handoff
 
+## Actual Held Submission
+
+Review job23910 is now submitted exactly once, held with afterany:23902.
+[Immutable receipt](allocated_native_review_held_23910.json) binds its actual
+owner, dependency, two-CPU/128GiB/six-hour/no-requeue envelope, source/input hashes,
+scientific Python environment, fresh namespaces and command observations.
+`scontrol write batch_script` exports stored bytes that match the committed
+batch exactly. Its scheduler comment pins that batch SHA256. No native retry,
+review completion or accuracy/resource admission follows from submission.
+
+Commit/push the held receipt, then recheck and release the same23910 handle
+once. Continue from actual scheduler state and the newest ledger entries; the
+prospective instructions below are not authorization to submit a duplicate.
+Original request1355ae3b remains fixed; output directory remains
+`benchmarks/work/allocated_native_factorial_terminal_review_23902_v1`.
+
 ## Prospective Postprocessing
 
 Native identity10/P1C0R1 is already running as23902. No allocated terminal

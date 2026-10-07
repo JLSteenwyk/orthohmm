@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Allocated Native Review Held as 23910 (2026-10-06)
+
+Previous turn consolidates the active goal contract; this continuation advances
+the prepared handoff. Native23902 remains RUNNING. Submit exactly one held
+review23910 with afterany:23902; no inference retry or unrelated-job action.
+Actual controller confirms owned bizon(1000), PENDING/JobHeldUser, two CPU slots,
+one task/node,128GiB/six-hour envelope, no requeue/restarts, fixed command/cwd,
+native dependency and fresh log/destination. Scheduler-exported batch bytes
+match the committed source exactly; batch SHA is the scheduler comment.
+
+Original native request1355ae3b/amendment10cc9939 and all14 bound route sources
+match. Pushed commit2cba9945 and actual scientific Python3.10.13/Bio1.87/
+NumPy2.2.6/psutil7.2.2 checked. Pre-submission available memory668913491968bytes,
+disk10288250159104bytes; full meminfo and command outcomes retained. Capacity
+will be checked again at release and execution; contention remains accepted,
+not certified quiet or necessarily slight.
+
+Immutable [held receipt](allocated_native_review_held_23910.json),8559bytes,
+SHAe5a382ff2565d901a199f344bc26f5384d90f21e0e333ef511e10ec1428a951e,
+binds all actual submission/controller/stored-batch observations under
+benchmarks/work/allocated_native_review_submission_23902_v1. The review output
+namespace is allocated_native_factorial_terminal_review_23902_v1 and is still
+absent. No release attempted or terminal review/scoring/admission inferred.
+
+Next commit/push this actual held receipt, recheck the SAME23910 handle and
+source/request/ownership/dependency/fresh-namespace/capacity gates, then release
+it once and retain its actual post-release state. Do not submit another review.
+11/12 remain behind reviewed history; no9retry. Full goal active/incomplete.
+
 ## Active Goal Contract Consolidated (2026-10-06)
 
 Newest direct user request asks to fix recurring goal stops. Inspect the
