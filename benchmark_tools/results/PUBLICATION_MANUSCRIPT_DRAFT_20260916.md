@@ -1047,6 +1047,23 @@ interval is supplied for the other QfO endpoints or the secondary mean.
 FAS retains unseeded sampling and dependent-pair limitations; its native
 pair-IID SEM is not a paired-family confidence interval.
 
+[![Three admitted native QfO ablation cells](native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.png)](native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.pdf "Vector PDF")
+
+Figure: three admitted native QfO cells. A shows orthology F1; B separately
+shows GO/EC/FAS similarities; C shows all-input relation coverage, not accuracy.
+D and E show candidate-expansion and reconciliation effects relative to
+P0C0R0, respectively. Thick intervals are nominal 95% paired-family intervals;
+thin intervals preserve the 42-endpoint adjustment after exact native family
+matches. Both adjusted F1 intervals include zero. F shows native SwissTrees
+precision-recall points. Four score rows remain unavailable; missing values
+are not plotted as zero. No other-endpoint uncertainty, timing comparison or
+independent validation is implied. Original Python3.10 binding replay matches
+exactly; the exported score/coverage/interval tables, SVG labels, decoded PDF
+text and all three cell colors pass independent content readback. PNG and PDF
+preview were visually inspected separately from those programmatic checks.
+[Figure outputs and reproduction](NATIVE_QFO_THREE_CELL_FIGURE_RESULT_20261006.md),
+[presentation readback](native_qfo_three_cell_figure_readback_20261006_v1.json).
+
 [Current three-cell scores](native_qfo_scientific_scores_20261006_v2/scores.md),
 [admitted candidate result](FULL_NATIVE_QFO_CANDIDATE_RESULT_20261006.md),
 [actual family counts](native_qfo_candidate_swiss_counts_20261006_v1.json),

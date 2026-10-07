@@ -112,7 +112,7 @@ def test_current_manuscript_caption_keeps_partial_scope_and_actual_numbers():
     assert "(native_qfo_p0c0_figure_20261006_v1/native_qfo_p0c0.png)" in section
     assert "(NATIVE_QFO_FIGURE_RESULT_20261006.md)" in section
     claims = (RESULTS / "PUBLICATION_CLAIMS_20260916.md").read_text()
-    assert "Two of seven fresh cells are admitted; five remain unavailable" in claims
+    assert "Three of seven fresh cells are now admitted; four remain unavailable" in claims
     assert "F1 +10.0390 pp, adjusted interval [-4.6418, 24.4199] includes zero" in claims
     assert "| The package is publication-ready | All sections below | Not achieved |" in claims
     guide = (ROOT / "benchmark_tools/PUBLICATION_REPRODUCTION.md").read_text()

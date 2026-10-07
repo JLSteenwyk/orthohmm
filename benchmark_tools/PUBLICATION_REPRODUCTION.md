@@ -3,17 +3,43 @@
 ## Native QfO Accuracy Update (2026-10-06)
 
 [Recovered P0/C0/R1 scoring and independent admission](results/RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md)
-now complete. The [actual combined table](results/native_qfo_scientific_scores_20261006_v1/scores.md)
-contains two admitted cells and five unavailable rows; failed native timing is
-still null/ineligible. Fresh 18-family counts match retained records exactly,
-allowing guarded reuse of one SwissTrees contrast and no new bootstrap draws.
-Its adjusted F1 interval includes zero, with a precision-recall trade-off.
-Native22444 remains live with dependent22445; no next identity is launched.
+and [P0/C1/R0 scoring](results/FULL_NATIVE_QFO_CANDIDATE_RESULT_20261006.md)
+are complete. The [actual combined table](results/native_qfo_scientific_scores_20261006_v2/scores.md)
+contains three admitted cells and four unavailable rows; failed recovered
+native timing remains null/ineligible. Complete 18-family native records now
+match retained records for both candidate-expansion and reconciliation
+contrasts, allowing guarded reuse of 100,000 frozen draws with all 42 endpoints
+adjusted, no new bootstrap draws. Both adjusted F1 intervals include zero.
+The [candidate uncertainty and independent raw/rational readback](results/NATIVE_QFO_CANDIDATE_UNCERTAINTY_RESULT_20261006.md)
+checks 32,295 raw rows and 10,765 candidate pair labels. Readback is not new
+independent biological confirmation or an interval for other QfO endpoints.
+The allocation-aware integration is implemented; identity 10 is already
+released as 23902 and running at this checkpoint. Observe that same handle,
+then its actual terminal review and downstream conversion/scoring/admission.
+Identities 11/12 remain sequential behind their required reviewed history.
+Retain identity 9's failure, without automatic retry. The newest progress
+entries and actual scheduler state supersede all dated live observations.
 The older snapshots and preparation checkpoints below remain historical,
 not current score availability or publication readiness.
 
+The [three-cell accuracy/coverage figure](results/NATIVE_QFO_THREE_CELL_FIGURE_RESULT_20261006.md)
+uses `benchmark_tools.plot_native_qfo_three_cell_scores` with the current v2
+snapshot, three-cell SwissTrees binding and independent candidate readback,
+each with its explicit digest. Preserve `--validation-python` as the original
+Python3.10 venv entry point; the unchanged scientific binder replays exactly
+before rendering in the existing Python3.12 plotting environment. The
+new `benchmark_tools.review_native_qfo_three_cell_figure` independently checks
+18 scores, three coverage values, six precision/recall values and six contrast
+endpoints, reads SVG text and decodes the actual one-page PDF with PyMuPDF.
+It creates a fresh PDF preview and requires fresh review/preview destinations.
+Manual visual inspection is separate from pixel/text checks. These are
+source-bound local presentation workflows, not fresh-install certification,
+scientific re-admission, a complete factorial or final publication archive.
+Both adjusted F1 intervals include zero; no other-endpoint interval or timing
+comparison is plotted. The earlier two-cell assets remain unchanged.
+
 The [native P0/C0 figure and separate review](results/NATIVE_QFO_FIGURE_RESULT_20261006.md)
-now display these two cells and the single guarded SwissTrees contrast.
+retain the earlier two-cell checkpoint and single guarded SwissTrees contrast.
 [Figure reproduction](results/NATIVE_QFO_FIGURE_PROTOCOL_20261006.md) requires
 `benchmark_tools.plot_native_qfo_scientific_scores` with explicit snapshot and
 binding digests, a fresh output directory and `--validation-python` preserving

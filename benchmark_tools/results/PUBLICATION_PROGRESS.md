@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Three-Cell Native QfO Figure Integrated (2026-10-06)
+
+Previous turn adds guarded candidate uncertainty; this turn advances goal7
+with new three-cell accuracy/coverage/uncertainty assets instead of changing
+the goal prompt or repeating completed native/scoring jobs. Same23902 remains
+RUNNING through41:20; no new native outcome or accuracy admission is inferred.
+
+New renderer preserves old figure/helpers and uses current v2 scientific
+snapshot7916d3e, three-cell uncertainty76e6f4d3 and independent candidate
+readback07941ba9. Unchanged original binder replays the entire binding exactly
+in scientificPython3.10.13/Bio1.87/NumPy2.2.6/psutil7.2.2 before rendering in
+the existing Python3.12 plotting environment. No new package/runtime change.
+
+Six panels separate three F1 endpoints from three similarities, all-input
+coverage from accuracy, candidate/reconciliation conditional SwissTrees CIs
+and native precision-recall. Both adjusted F1 intervals includezero.3/7 fresh
+cells admitted, four unavailable; no zero/cached imputation, other-endpoint CI,
+secondary-mean-as-F1, independent confirmation or timing comparison.
+Recovered failed timing stays ineligible. Old two-cell assets/supplement and
+rc4/PDF payloads remain intact, not represented as current final packages.
+
+New independent reviewer checks18 scores/3coverage/6precision-recall/6contrast
+values exactly, output hashes, SVG labels and actual decoded one-page PDF
+text/pixels/three colors. PNG2760x1960 and PDFpreview1656x1176 separately viewed:
+all panels/legend/labels/footers readable, no observed incoherent overlap or
+clipping. Generated flags still reject automatic visual/scientific certification.
+See [new figure, source/data and reproduction](NATIVE_QFO_THREE_CELL_FIGURE_RESULT_20261006.md).
+
+Integrate actual new figure/caption into manuscript and claims. Reproduction
+guide replaces stale22444live/two-cell current status with actual third-cell
+and23902checkpoint, preserving historical sections and oldfigure instructions.
+Update one unbound old documentation test's current claim count to3/fourmissing;
+no scientific source or historical figure receipt is changed to satisfy it.
+Initial104 tests pass9.38s; final362 joined tests pass15.07s/zero errors/failures/
+skips, including actual asset/source bindings and new documentation contracts.
+
+Next continue same23902 to actual terminal review and successful-output
+conversion/scoring/independent admission/reporting;11/12 remain sequential
+behind reviewed history. Retain9failure without automatic retry. Remaining
+uncertainty, full factorial, archive and other full-goal requirements remain.
+No quiet/DGX gate, isolated-efficiency claim or unrelated-workload action.
+Goal remains active/incomplete; this is a presentation milestone only.
+
 ## Native Candidate SwissTrees Uncertainty Integrated (2026-10-06)
 
 Previous turn corrects the active checkpoint; this turn advances goal sections
