@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Continuation Contract Verified And Actual Next Action Refreshed (2026-10-07)
+
+Direct user request: investigate repeated goal stops. The actual goal-linked
+attachment and PUBLICATION_GOAL_CURRENT.txt match byte-for-byte; correction
+966ef415 is already committed/pushed. All32 focused continuation-policy tests
+pass0.71s with the actual attachment supplied. Full goal status is ACTIVE.
+No further prompt rewrite, lifecycle change or dispatcher repair was performed.
+The contract already excludes quiet-host/DGX/contention approval gates and
+scopes pending jobs to their dependent work, with bounded actual waits and
+independent work proceeding. A direct maintenance answer is not goal completion.
+
+The previous TOP checkpoint is now historical: manuscript snapshots were
+committed/pushed b39abb69 and fresh7Octv2 HTML rendered and printed. Existing
+print.json reports verified_html_printed,21pages,388436bytes and PDF SHA256
+c546c8f1b1a53801b1c7ab3f13702e1be317392664688a20ac086e808a6e6dad.
+This establishes printing, NOT visual review, package integration or readiness.
+
+Exact next independent action: run the existing unchanged PDF review helper on
+publication_main_print_20261007_v2/document.pdf with
+publication_main_render_20261007_v2.json in a fresh review namespace. Inspect
+actual pages covering the added Methods, distance table, limitations and current
+IQ-TREE citation; retain bounded visual/content/layout evidence and focused
+artifact tests, then commit/push only those validated new artifacts. Do not
+repeat rendering/printing or rebuild oldmain/rc5. Uncommitted task paths:
+benchmark_tools/results/publication_main_review_20261007_v2.html,
+benchmark_tools/results/publication_main_render_20261007_v2.json and
+benchmark_tools/results/publication_main_print_20261007_v2/.
+Do not commit the generated browser profile.
+
+Dependency-only work: actual scheduler check shows SAME23902 RUNNING8:57:42 and
+SAME23910 PENDING/Dependency. No terminal/review/admission established; do not
+duplicate/restart/release. Inspect those changing handles alongside manuscript
+review. Only successful terminal output and its review permit existing native
+conversion/scoring/admission, then genuinely unrun11/12 after reviewed history.
+Retain9failure. No new resume or resource-contention approval is required.
+
 ## New Manuscript Sources Generated And Editorially Verified (2026-10-07)
 
 Integration source522cc882 pushed before ONE actual isolatedstdlib generation.
