@@ -145,3 +145,22 @@ def test_failed_validation_triggers_scoped_diagnosis_not_a_global_stop():
         "only if no meaningful permitted work remains",
     ):
         assert instruction in contract
+
+
+def test_independent_task_switch_is_persisted_before_work_can_be_lost():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "replace the ledger TOP handoff before substantial implementation",
+        "distinguish prepared/tested from committed/executed",
+        "Do not leave a wait-only or already-committed action at the TOP",
+        "On continuation, reconcile that work first",
+        "not a new scientific gate",
+    ):
+        assert instruction in contract
+
+
+def test_native_identity_state_is_observed_not_declared_statically():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    assert "Determine attempted, running and genuinely unrun native identities from actual history" in contract
+    assert "Genuinely unrun native identities 11 and 12" not in contract
+    assert "Any genuinely unrun identity remains sequential behind the reviewed existing history" in contract

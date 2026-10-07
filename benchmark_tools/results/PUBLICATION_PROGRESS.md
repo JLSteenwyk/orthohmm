@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Corrected Handoff: Finish Prepared Four-Cell Manuscript Integration (2026-10-07)
+
+The user requests investigation of recurring goal stops. Actual goal remains
+ACTIVE and reads the editable attachment; it matched the repository current
+prompt before this correction. Shared-host execution was already authorized.
+Found a concrete stale handoff: the previous TOP says to commit/push a release
+receipt already committed/pushed as 057f88e5, and omits prepared independent
+manuscript work. This establishes a bookkeeping defect, not the cause of every
+platform interruption. Both current instruction copies now require persisting
+task switches before substantial implementation and deriving native attempt
+state from evidence instead of calling running identity11 genuinely unrun.
+Seven-part scientific scope, frozen artifacts and lifecycle status unchanged.
+Validation:36 focused goal/shared-host tests pass in0.93s, with actual linked
+attachment equality enabled; scoped whitespace check passes. Tests preserve
+the original scientific-scope and historical-goal hashes. Both fresh v4 output
+destinations confirmed absent. These are instruction/handoff checks, not proof
+that the platform dispatcher will never interrupt work.
+
+Executable independent work: preserve the four existing untracked files:
+benchmark_tools/prepare_four_cell_main_text.py,
+tests/unit/test_prepare_four_cell_main_text.py,
+benchmark_tools/results/FOUR_CELL_MAIN_TEXT_PROTOCOL_20261007.md,
+benchmark_tools/results/four_cell_main_unit_20261007_v1.xml.
+Retained XML records29tests/0failures/0errors/0skips; selected v4 generation
+has NOT executed. Next inspect this new source/test/protocol scoped diff and
+fresh destinations, then commit/push those four files BEFORE one selected
+generation using scientific Python3.10 with the existing clean environment:
+`python -B -m benchmark_tools.prepare_four_cell_main_text --evidence-directory
+benchmark_tools/results --output benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md
+--receipt benchmark_tools/results/publication_four_cell_main_generation_20261007_v1.json`.
+Retain actual command/output/outcome; freeze selected source after use. Inspect
+generated tables and preservation diff, commit/push outputs, then unchanged
+render/print/PDF-review in fresh v4 namespaces with existing CSLv5. Visually
+inspect every new PDF page. Do not repeat old manuscript/figure/science work.
+
+Dependency-waiting work: fresh squeue confirms SAME23985 RUNNING1:24:17 and
+SAME23986 PENDING/Dependency afterany:23985(unfulfilled). Reviewer already
+submitted and released once; no resubmission or repeat release. After actual
+terminal outcomes inspect original review.json/failure.json under
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1 and
+retained stdout. Only original reviewed history/scientific/resource gates
+authorize conversion/scoring/admission and next native identity. Running jobs
+do not gate independent manuscript work. No quiet window, DGX or routine
+user resume required. This bounded prompt-maintenance answer is not completion
+or pause of the full publication goal.
+
 ## Reviewer23986 Released Once; Native23985 Still Running (2026-10-07)
 
 54914097 committed/pushed heldreceipt BEFORE release. Rechecked SAME23986
