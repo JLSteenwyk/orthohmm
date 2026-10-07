@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native10 Clustered Edges Present; Family Phylogenetic Workers Active (2026-10-07)
+
+After further actual300s waits on SAME23902/23910, native10 has
+orthohmm_edges.txt (1722159050bytes) and orthohmm_edges_clustered.txt
+(23875927bytes) in its working directory. Current native parent2524311 has
+MAFFT/FastTree family processes active; earlier32Python pool has ended except
+its manager. These are the existing authorized native pipeline's processes,
+not newly submitted postprocessing/inference runs. No partial output or
+file-presence check is final scientific validation.
+
+Last SAME23902 RUNNING14:16:25, SAME23910 PENDING/Dependency; native stdout
+still labels Step4/4 Conducting clustering, which spans downstream work and
+does not give whole-pipeline progress/ETA. No terminal/review/admission yet.
+Current selected analysis/result/test files all committed/pushed88419c78;
+prior phase checkpoint02d062ca pushed. No uncommitted task files.
+
+Exact next action: actual30-300s waits and inspect SAMEhandles/changing native
+phase or terminal/review receipts. Successful native AND review precede frozen
+conversion/scoring/admission, then genuinely unrun11/12 sequentially. Retain9
+failure; no duplicate/restart/re-release/automatic retry. No quiet-host/DGX/
+user-resume gate. Do not redo completed analyses/archives/prompt repairs or
+invent independent campaigns/admin certification. Remaining external, scientific
+and release limits persist; full goalACTIVE, pending is not blocked.
+
 ## Native10 Past Search And Edge Stages; Clustering Active (2026-10-07)
 
 Ordered-Pfam selected result/readbacks/commands/times/claim limits and four
