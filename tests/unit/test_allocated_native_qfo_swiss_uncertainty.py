@@ -22,6 +22,7 @@ def fixture(tmp_path, monkeypatch, problem=None, matching=True):
     if matching:
         for key in ("families", "aggregate"):
             counts["cells"][5][key] = deepcopy(counts["cells"][0][key])
+        counts["cells"][5]["raw_file"] = deepcopy(counts["cells"][0]["raw_file"])
         counts_ref = write(Path(counts_ref["path"]), counts)
         monkeypatch.setattr(audit.ordinary, "RETAINED_COUNTS_SHA", counts_ref["sha256"])
     snapshot = json.loads(Path(snapshot_ref["path"]).read_text())

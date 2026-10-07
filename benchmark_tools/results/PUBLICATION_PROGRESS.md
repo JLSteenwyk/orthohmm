@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Native10 Swiss Counts And Binding Succeed; Independent Reader Ready (2026-10-07)
+
+Source/test/protocol a9545d27 committed/pushed BEFORE one selected audit and
+one binder. Both completed0,3.95s/517260KiBRSS and3.47s/517264KiBRSS respectively,
+zero swaps; analysiscosts not inference. Exact command/stdout/time receipts
+native10_swiss_audit_execution_20261007_v1.json andnative10_swiss_bind_execution_20261007_v1.json.
+Audit d5bafed8 confirms all18families/10,765relations/records/aggregate match
+retained P1C0R1. Binder e8f554a1 binds4cells/3contrasts;11 remain null.
+P_at_C0_R1 F1 difference-0.0032021523014126307, adjusted[-.021128862394994244,
+.005132269324710426],1/16/1family wins/ties/losses. No default/superiority/
+equivalence/independent confirmation or other-endpoint uncertainty claim.
+New selected auditor/binder source NOWBOUND; do not edit them.
+
+New prospective reader readback_allocated_native_qfo_profile_swiss.py uses
+unchanged separate CSV/gzip/Fraction reader primitives and existing copied
+count-provenance check. No primary count/bootstrap functions. Reads recovered
+reference/newprofile/retainedprofile raw universes, reconstructs conditional
+effect/signs, verifies retained intervals and prior2contrast preservation.
+Joined196testspass9.93s/no errors/failures/skips. Newfixtureonly aligns invented
+retained raw record with its declared invented counts; selectedscience untouched.
+[Readback protocol](ALLOCATED_NATIVE_PROFILE_READBACK_PROTOCOL_20261007.md).
+
+Next: focused commit/push audit/binder reports/exec receipts, new reader/tests/
+protocol/ledger, then ONE selected reader in fresh result path with auditd5bafed8,
+bindinge8f554a1,prior76e6f4d3. Inspect actual outcome and arithmetic before
+chronological report/integration. If failure retain and diagnose without
+editing bound reader automatically. No rawadmission/bootstrap/scoring rerun.
+
+Native11 SAME23985 RUNNING9:53/step8:59, initial all-to-all underway at last
+loginspection. No terminal/review/admission yet; keep samehandle,12sequential.
+Currentuncommitted source/test/reports/receipts/protocol/ledger; no foreground
+session. Full goalACTIVE/incomplete; no prompt repair/quiet/DGX/userresume gate.
+
 ## Allocated Swiss Adapters Tested; Native11 Is Running (2026-10-07)
 
 Native11 SAME23985 RUNNING5:20/native step4:26. Actual native_execution.json
