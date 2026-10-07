@@ -1,0 +1,36 @@
+{
+  "schema": "native10_fresh_review_submission_v1",
+  "job_id": 23973,
+  "native_job_id": 23902,
+  "original_failed_review_job_id": 23910,
+  "source_commit": "51bcbc02",
+  "helper_sha256": "a1664a87f16a607e14069b25f586624e23093395991e86a439acc339d9df3678",
+  "batch_sha256": "1df78890404570e8c499fadb6b74acc189db1b0cccc1e4ecbf7fdaf3905039f3",
+  "submit_command": [
+    "sbatch",
+    "--hold",
+    "--parsable",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_review_finalization_submission_20261007_v1/slurm-%j.log",
+    "benchmark_tools/results/native10_review_finalization_20261007_v1.sh"
+  ],
+  "submit_stdout": "23973\n",
+  "submit_exit_code": 0,
+  "held_observation": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23973",
+      "--oneliner"
+    ],
+    "stdout": "JobId=23973 JobName=ohmm_native10_finalreview UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-07T13:42:36 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-07T13:42:36 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:855575 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native10_review_finalization_20261007_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_review_finalization_submission_20261007_v1/slurm-23973.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_review_finalization_submission_20261007_v1/slurm-23973.log TresPerTask=cpu=2 \n",
+    "exit_code": 0
+  },
+  "status": "submitted_held_envelope_verified_not_released",
+  "native_retry": false,
+  "automatic_retry": false,
+  "accuracy_evaluated": false,
+  "terminal_reviewed": false,
+  "next_identity_authorized": false,
+  "original_failure_cause_established": false
+}
