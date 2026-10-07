@@ -1,0 +1,587 @@
+{
+  "accuracy_evaluated": false,
+  "amendment": {
+    "bytes": 13317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+    "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+  },
+  "cell": "p1_c0_r1",
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23902",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=23902 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:01:50 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-06T20:59:19 EligibleTime=2026-10-06T21:01:05 AccrueTime=2026-10-06T21:01:05 StartTime=2026-10-06T21:01:05 EndTime=2026-10-07T23:01:05 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T21:01:05 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2514359 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=cpu=64,mem=128G,node=1,billing=64 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log TresPerTask=cpu=64 \n"
+  },
+  "environment_preflight": {
+    "bytes": 1563,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_10/measurement/environment_preflight.json",
+    "sha256": "31f89fd7083b156d11f5795b0bcfce66d8bd78f890e20443e84a3d2e64110bf8"
+  },
+  "index": 10,
+  "job_id": 23902,
+  "limitation": "Live startup observation and mutable execution snapshot, not terminal inference/accounting/scientific admission.",
+  "live_native_affinity": [
+    40,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "live_native_cgroup": "0::/system.slice/slurmstepd.scope/job_23902/step_0/user/task_0\n",
+  "live_native_pid": 2524311,
+  "native_execution_snapshot": {
+    "accuracy_evaluated": false,
+    "allocated_ready": {
+      "bytes": 34821,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_10/measurement/ready.json",
+      "sha256": "c3a10fe9aebaf128899deddb349dba9903d87f12832b7702274760254aa15868"
+    },
+    "amendment": {
+      "bytes": 13317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+      "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+    },
+    "automatic_retry": false,
+    "cell": "p1_c0_r1",
+    "cold_cache_claim": false,
+    "factors": {
+      "active_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "candidate_expansion": false,
+      "candidate_gate_decoupled": false,
+      "cell": "p1_c0_r1",
+      "frozen_pipeline_sha256": "2afb89b9dc683e64e58208188f720e07701d4760ff09d1ac3a53c7a8075b84bb",
+      "original_accuracy_profile": {
+        "kmer_k": 4,
+        "leiden_seed": 4,
+        "max_candidates_per_query": 100,
+        "multipass_graph": true,
+        "name": "high_sensitivity",
+        "profile_expansion": true
+      },
+      "production_globals_modified": false,
+      "production_source_modified": false,
+      "profile_expansion": true,
+      "reconciliation": true
+    },
+    "index": 10,
+    "native_cpu_ids": [
+      40,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "native_order": [
+      "UP000008183_243274.fasta",
+      "UP000000600_5888.fasta",
+      "UP000000577_243231.fasta",
+      "UP000001940_6239.fasta",
+      "UP000000561_237631.fasta",
+      "UP000002311_559292.fasta",
+      "UP000001450_36329.fasta",
+      "UP000006548_3702.fasta",
+      "UP000001584_83332.fasta",
+      "UP000002487_188937.fasta",
+      "UP000001038_8090.fasta",
+      "UP000000807_243273.fasta",
+      "UP000000718_289376.fasta",
+      "UP000007062_7165.fasta",
+      "UP000000437_7955.fasta",
+      "UP000009136_9913.fasta",
+      "UP000002494_10116.fasta",
+      "UP000001408_189518.fasta",
+      "UP000007241_684364.fasta",
+      "UP000002149_214684.fasta",
+      "UP000001973_100226.fasta",
+      "UP000001554_7739.fasta",
+      "UP000001686_374847.fasta",
+      "UP000007719_515635.fasta",
+      "UP000000559_237561.fasta",
+      "UP000018468_7918.fasta",
+      "UP000000589_10090.fasta",
+      "UP000001542_5722.fasta",
+      "UP000001805_367110.fasta",
+      "UP000002195_44689.fasta",
+      "UP000001425_1111708.fasta",
+      "UP000000625_83333.fasta",
+      "UP000000798_224324.fasta",
+      "UP000000805_243232.fasta",
+      "UP000001593_45351.fasta",
+      "UP000002524_243230.fasta",
+      "UP000005640_9606.fasta",
+      "UP000002526_224911.fasta",
+      "UP000015101_6412.fasta",
+      "UP000001025_243090.fasta",
+      "UP000002485_284812.fasta",
+      "UP000000557_251221.fasta",
+      "UP000001548_184922.fasta",
+      "UP000002280_13616.fasta",
+      "UP000001519_9595.fasta",
+      "UP000008144_7719.fasta",
+      "UP000002438_208964.fasta",
+      "UP000002530_330879.fasta",
+      "UP000006727_3218.fasta",
+      "UP000001300_284591.fasta",
+      "UP000001449_35128.fasta",
+      "UP000008783_418459.fasta",
+      "UP000000542_5664.fasta",
+      "UP000000792_436308.fasta",
+      "UP000005238_164328.fasta",
+      "UP000000431_272561.fasta",
+      "UP000001555_6945.fasta",
+      "UP000002254_9615.fasta",
+      "UP000000429_85962.fasta",
+      "UP000001055_321614.fasta",
+      "UP000001570_224308.fasta",
+      "UP000007305_4577.fasta",
+      "UP000001312_665079.fasta",
+      "UP000007266_7070.fasta",
+      "UP000001974_273057.fasta",
+      "UP000001414_226186.fasta",
+      "UP000002008_324602.fasta",
+      "UP000002277_9598.fasta",
+      "UP000000539_9031.fasta",
+      "UP000008143_8364.fasta",
+      "UP000001357_81824.fasta",
+      "UP000000425_122586.fasta",
+      "UP000002521_190304.fasta",
+      "UP000006906_3055.fasta",
+      "UP000059680_39947.fasta",
+      "UP000000803_7227.fasta",
+      "UP000000536_69014.fasta",
+      "UP000000554_64091.fasta"
+    ],
+    "parent_pid": 2523943,
+    "placement": {
+      "affinity": [
+        40,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "ancestors": [
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "40,49-79,136,145-175",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_23902/step_0/user/task_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "40,49-79,136,145-175",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_23902/step_0/user"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "40,49-79,136,145-175",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_23902/step_0"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "40,49-79,136,145-175",
+          "memory.max": "137438953472",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope/job_23902"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice/slurmstepd.scope"
+        },
+        {
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-191",
+          "memory.max": "max",
+          "memory.swap.max": "max",
+          "path": "/sys/fs/cgroup/system.slice"
+        }
+      ],
+      "cgroup": "0::/system.slice/slurmstepd.scope/job_23902/step_0/user/task_0\n",
+      "host": "bizon",
+      "pid": 2524311,
+      "slurm": {
+        "SLURM_CPUS_PER_TASK": "64",
+        "SLURM_JOB_ID": "23902",
+        "SLURM_MEM_PER_NODE": "131072"
+      },
+      "topology": [
+        {
+          "core": 40,
+          "cpu": 40,
+          "package": 0
+        },
+        {
+          "core": 49,
+          "cpu": 49,
+          "package": 0
+        },
+        {
+          "core": 50,
+          "cpu": 50,
+          "package": 0
+        },
+        {
+          "core": 51,
+          "cpu": 51,
+          "package": 0
+        },
+        {
+          "core": 52,
+          "cpu": 52,
+          "package": 0
+        },
+        {
+          "core": 53,
+          "cpu": 53,
+          "package": 0
+        },
+        {
+          "core": 54,
+          "cpu": 54,
+          "package": 0
+        },
+        {
+          "core": 55,
+          "cpu": 55,
+          "package": 0
+        },
+        {
+          "core": 56,
+          "cpu": 56,
+          "package": 0
+        },
+        {
+          "core": 57,
+          "cpu": 57,
+          "package": 0
+        },
+        {
+          "core": 58,
+          "cpu": 58,
+          "package": 0
+        },
+        {
+          "core": 59,
+          "cpu": 59,
+          "package": 0
+        },
+        {
+          "core": 60,
+          "cpu": 60,
+          "package": 0
+        },
+        {
+          "core": 61,
+          "cpu": 61,
+          "package": 0
+        },
+        {
+          "core": 62,
+          "cpu": 62,
+          "package": 0
+        },
+        {
+          "core": 63,
+          "cpu": 63,
+          "package": 0
+        },
+        {
+          "core": 64,
+          "cpu": 64,
+          "package": 0
+        },
+        {
+          "core": 65,
+          "cpu": 65,
+          "package": 0
+        },
+        {
+          "core": 66,
+          "cpu": 66,
+          "package": 0
+        },
+        {
+          "core": 67,
+          "cpu": 67,
+          "package": 0
+        },
+        {
+          "core": 68,
+          "cpu": 68,
+          "package": 0
+        },
+        {
+          "core": 69,
+          "cpu": 69,
+          "package": 0
+        },
+        {
+          "core": 70,
+          "cpu": 70,
+          "package": 0
+        },
+        {
+          "core": 71,
+          "cpu": 71,
+          "package": 0
+        },
+        {
+          "core": 72,
+          "cpu": 72,
+          "package": 0
+        },
+        {
+          "core": 73,
+          "cpu": 73,
+          "package": 0
+        },
+        {
+          "core": 74,
+          "cpu": 74,
+          "package": 0
+        },
+        {
+          "core": 75,
+          "cpu": 75,
+          "package": 0
+        },
+        {
+          "core": 76,
+          "cpu": 76,
+          "package": 0
+        },
+        {
+          "core": 77,
+          "cpu": 77,
+          "package": 0
+        },
+        {
+          "core": 78,
+          "cpu": 78,
+          "package": 0
+        },
+        {
+          "core": 79,
+          "cpu": 79,
+          "package": 0
+        }
+      ]
+    },
+    "plan": {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    "schema": "allocated_native_factorial_execution_v1",
+    "source": {
+      "bytes": 15236,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.py",
+      "sha256": "d77eb7b616fbfc42224557b8809564f401e3865ceb044bc1bc1772d013aa6ec4"
+    },
+    "status": "native_factorial_running"
+  },
+  "native_success_established": false,
+  "observed_unix_ns": 1791334975916650342,
+  "publication_ready": false,
+  "ready": {
+    "bytes": 34821,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_10/measurement/ready.json",
+    "sha256": "c3a10fe9aebaf128899deddb349dba9903d87f12832b7702274760254aa15868"
+  },
+  "released_native_gate": true,
+  "request": {
+    "bytes": 50810,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_10_allocated_v1.json",
+    "sha256": "1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910"
+  },
+  "resource_samples_observed": 50,
+  "runtime_preflight": {
+    "bytes": 2230,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/sessions/run_10/lookup_checks/checked_01.json",
+    "sha256": "44f5c4fa6d7e970fbac67e40890726db6b2591414f257ad1409532c6c1b29833"
+  },
+  "schema": "allocated_native_factorial_startup_observation_v1",
+  "scientific_timings_admitted": false,
+  "startup_verified": true,
+  "verified_controller": {
+    "allocation_mode": "shared",
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "2026-10-06T21:01:05",
+      "AllocNode:Sid": "bizon-link:2514359",
+      "AllocTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "BatchFlag": "1",
+      "BatchHost": "bizon",
+      "CPUs/Task": "64",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh",
+      "Comment": "1355ae3b73a9c8496133bd25a6cbf136d149598ccab680672e81f86482338910",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "2026-10-06T21:01:05",
+      "EndTime": "2026-10-07T23:01:05",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "23902",
+      "JobName": "orthohmm_allocated_factorial",
+      "JobState": "RUNNING",
+      "LastSchedEval": "2026-10-06T21:01:05",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "bizon",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "64",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "1",
+      "QOS": "normal",
+      "Reason": "None",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:01:50",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "2026-10-06T21:01:05",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_10_allocated-23902.log",
+      "SubmitTime": "2026-10-06T20:59:19",
+      "SuspendTime": "None",
+      "TimeLimit": "1-02:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=64",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "job_id": 23902,
+    "limitations": [
+      "Recorded controller fields only; caller must verify freshness and submission provenance.",
+      "Native affinity, effective cgroup limits and whole-host quietness require independent checks.",
+      "Caller must pin command/cwd/time limit in the production recipe; diagnostic records do not authorize production."
+    ],
+    "scheduler_exit_code": "0:0",
+    "scheduler_state": "RUNNING",
+    "scheduler_terminal_verified": false,
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "status": "threadripper_controller_record_verified"
+  }
+}

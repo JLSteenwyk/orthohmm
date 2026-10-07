@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Live Native Placement Verified For23902 (2026-10-06)
+
+Same23902 actuallyRUNNING through1:58. New startup3935338a/17567bytes verifies
+running controller/new batch/request comment, passing runtime preflight and
+environment release gate, bound ready evidence, new native-running execution
+snapshot and actual alive PID2524311. Native child inherits selected40,49-79:
+32 distinct allocated physical cores, correct job_23902 cgroup and parent.
+50 resource samples observed at startup record1:50. These are the actual CPUs
+that historical fixed0-31 execution could not use; no other workload is modified.
+
+Startup observer saves verified receipt, then exits1 on an extra display using
+nonexistent placement key initial (actual key allocated). Retain that rendering
+fault; independent readback of the already-saved receipt succeeds and fresh
+squeue confirms same job still running. Do not overwrite receipt, repeat the
+launch or misinterpret observer exit as terminal native failure. Startup is not
+terminal scientific success, resource admission, scored accuracy or readiness.
+
+Next monitor same23902 to actual terminal, then new terminal/runtime/resource/
+scientific-output review and QfO conversion/assessment/independent admission.
+Keep11/12 sequential behind reviewed outcomes; no automatic retry9, no quiet
+window/DGX gate. The full publication goal remains active and incomplete.
+
 ## Identity10 Released And Actually Running (2026-10-06)
 
 Push58591ddd amendment/held receipts before one actual23902 release. Fresh
