@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Native11 Dependent Reviewer23986 Submitted Held Once (2026-10-07)
+
+Prospective queue plan72f465cd committed/pushed BEFORE one submission of the
+unchanged tested batch8093add8 (source247033cd), with afterany:23985. Actual
+sbatch exit0 returns23986. Freshcontroller confirms ownbizon, PENDING/
+JobHeldUser, exact unfulfilled native23985 dependency,2CPUs/128G/6h/gpu/bizon,
+no-requeue/restarts, command/cwd/Comment/stdout/stderr allmatch. No array/other
+native attempt. Original reviewer/request/history/semantic/runtime sources
+unchanged; reviewer has NOT executed and doesnot admit liveoutput.
+Receipt native11_dependent_review_held_23986_20261007_v1.json retains exact
+command/output/preconditions/controller and explicitheldfield comparisons.
+
+Next commit/push heldreceipt/checkpoint, recheck SAME23986 held fields and
+source/request pins, then release SAME23986 ONCE. After release verify pending
+Dependency; monitor SAME23985 and23986 throughactualterminaloutcomes. Never
+resubmit/releaseagain or manually run a secondreviewer. Its originalfailure/
+review.json and next-identity flags govern downstream steps; no automatic
+conversion/scoring/native12 follows fromsubmission. FullgoalACTIVE/incomplete.
+
 ## Queue Unchanged Native11 Reviewer Behind Live Native Job (2026-10-07)
 
 Previous continuation has concrete progress: profile localization and
