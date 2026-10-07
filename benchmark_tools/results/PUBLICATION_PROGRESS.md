@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Native10 Complete Coverage Verified; Caller-Context Probe Prepared (2026-10-07)
+
+Diagnostic source c7ff87df pushed before ONE selected execution. Report4d8ce7b5
+binds/rechecks169files:984137 input IDs/78proteomes, identical984137membership
+coverage in checkpoint/final clusters/materialized groups/independent root
+parser/frozen parser. Missing/extra/duplicate IDs allzero, all394768output
+groups identical hash52e4db26. All392110sourcefamilies/IDs complete and canonical
+input payload56624444 matches provenance. Frozen root coverage gate passes.
+Selected diagnosis exit0/43.34s/1479044KiB RSS/0swaps; command retained in time
+record. No cause of the original failed23910review established; no admission.
+
+New diagnose_native_semantic_context.py reconstructs EXACT original allocated
+caller semantic context from bound request/amendment/plan/baseline and probes
+the unchanged kernel, preserving exceptions/owner counts if it fails. Nested
+kernel success is not an allocated terminal review or scoring authorization.
+42joined invented tests pass0.74s, including exact context construction,
+request identity/plan rejection, actual failed-frame missing/extra counts and
+interruptions propagated. No selected caller-context execution yet. Old/new
+partition helper and all frozen production/validator sources remain unchanged.
+
+Exact next action: commit/push ONLY new context-probe source/tests, partition
+report/time/result summary and checkpoint before ONE selected context probe
+using diagnosis SHA4d8ce7b5; fresh destination
+benchmark_tools/results/native10_semantic_context_diagnosis_20261007_v1.json.
+Retain actual command/time/exit/result. This repeats only the previously failed
+semantic stage for diagnosis, not a full heavy review/resource replay or native
+retry. Determine whether failure reproduces in original context. Current
+coverage consistency does not establish historical failure causality.
+
+SAME23902COMPLETED0:0/SAME23910FAILED1:0; both terminal, no live handle or new
+job. Failed receipt unchanged. Conversion/scoring/admission and11/12history
+remain unauthorized; do not fabricate the frozen review source identity.
+Source checks in reviewed_history and pair-conversion explicitly require the
+frozen original reviewer; any new recovery route needs a prospective tested
+contract, not ad hoc receipt edits or a gate bypass. Full goalACTIVE; continue
+diagnosis/retention and supported recovery work without another user resume.
+
 ## Native10 Coverage Contradiction Located; Diagnostic Source Tested (2026-10-07)
 
 Previous user-maintenance turn PROGRESS:214d6683 pushed actual prompt copies,
