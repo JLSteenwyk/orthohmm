@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Three-Cell Error-Stratum Work Delivered; Verified Native Wait (2026-10-07)
+
+This continuation is PROGRESS plus VERIFIED WAIT, not a stopped/blocked goal.
+Actual linked contract667961a1 read; previous correction27675840 is progress.
+Prospective protocol762cbdb0/sourcea5952bbc preceded selected export. Preserve
+failed readerf59bd8cc/failure3bcf3f6e; diagnosed versioned repaird8b0981e
+preceded successful independentv2readback. New scientific outputs/result/
+execution/tests pushed e1de515c. Figure source4c7f6050 before actual rendering;
+all reviewed figure/receipt/test/result artifacts pushed79025112. No
+uncommitted task source or result remains.103joined tests3.07s pass; source
+and scientific-text whitespace checks pass. Generated Matplotlib SVG has
+trailing path whitespace: preserve its already-bound bytes, do not edit it
+to silence the mechanical diff-check warning or rerender unchanged evidence.
+
+See [complete native error-stratum result](NATIVE_QFO_THREE_CELL_STRATA_RESULT_20261007.md)
+and [reviewed 66point/11bin figure](NATIVE_QFO_THREE_CELL_STRATA_FIGURE_RESULT_20261007.md).
+All54family/60score/40contrast rows and40prior score rows verified,18families/
+563canonical reference accessions; all negative/neutral effects retained.
+C_at_P0_R0 overall F1-0.347pp/P-3.523pp/R+4.375pp, not an accuracy gain or
+new independent/causal/interval claim. Native7failed timing remains ineligible.
+No oldmain2804448c, rc5index66bc02d7, oldfigures, raw/annotation/mapping/tree/
+bootstrap/scorer replays, defaults, frozen native sources or jobs changed.
+
+Original47requirement audit and bounded existing simulation schema/residual
+summary checked for another genuine unfinished independent action. All70
+generating-tree oracle cells and ALL within-candidate generating-root FP/FN
+residual cases across10125candidates were already handled onOct4; do NOT
+repeat those controls/trace because an old checkpoint suggests them. No
+already-prespecified unimplemented true-history analysis is identified from
+these sources; do not invent a new campaign or stronger completion gate.
+This is a provisional evidence-based assessment, not a permanent prohibition
+on useful independent work. Real original scientific gaps remain explicit.
+
+Two actual30second sleeps and an actual300second sleep followed by live
+queries verify SAME23902RUNNING5:43:00 and23910PENDING/Dependency. Native
+search-stage log advanced36.87% to37.66%, not whole-run progress or ETA.
+Accounting also retains parent/batch/native.0 RUNNING/EndUnknown. No native
+terminal output/result/admission is established. Exact next action: continue
+actual waits and poll SAMEhandles; inspect queued review output after actual
+terminal state. Do not resubmit, retry, restart or re-release either handle.
+Only validated successful native output advances through existing conversion,
+assessment, independent admission and reporting. Genuinely unrun11/12 remain
+sequential behind reviewed history; retain9failure. OtherQfOuncertainty,
+full descriptor/scientific/reproduction limitations remain, not closed by
+this bounded task. Keep full goal ACTIVE; no routine resume or quiet-host/
+DGX/renewed contention request, no milestone completion/blocked status.
+
 ## Complete Fixed-Stratum Figure Rendered And Visually Reviewed (2026-10-07)
 
 Sources4c7f6050 pushed before ONEactualfigure render. Manifest e0157657
