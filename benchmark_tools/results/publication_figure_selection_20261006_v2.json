@@ -1,0 +1,261 @@
+{
+  "figures": [
+    {
+      "caption": "Initial search, profile expansion, candidate families and phylogenetic refinement have distinct outputs. This schematic describes the frozen workflow, not proof of an HMM accuracy advantage.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_publication_method_20260916/publication_method.pdf"
+      ],
+      "number": 1,
+      "pdf": {
+        "bytes": 18925,
+        "path": "benchmark_tools/results/figures_publication_method_20260916/publication_method.pdf",
+        "sha256": "6c480b6af6ba893a040e2e14c32754c71577676e2e240546cb155c471b89e093"
+      },
+      "title": "HMM-centered workflow"
+    },
+    {
+      "caption": "OrthoBench precision/recall and Three Kingdoms pair F1 use different reference scopes. These descriptive comparisons do not form a cross-benchmark ranking; Three Kingdoms is supplementary conserved-family evidence.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_current_accuracy_overview_20261002_v2/current_accuracy_overview.pdf"
+      ],
+      "number": 2,
+      "pdf": {
+        "bytes": 23460,
+        "path": "benchmark_tools/results/figures_current_accuracy_overview_20261002_v2/current_accuracy_overview.pdf",
+        "sha256": "00d9e627c1c1a2ddb9f34164df30a71cebc2ff62c0be1651e88c6c719d4bfea8"
+      },
+      "title": "Current eight-method accuracy overview"
+    },
+    {
+      "caption": "GO and EC are similarity scores; VGNC, SwissTrees and TreeFam-A are F1 endpoints, and FAS measures feature-architecture similarity. Eligibility and denominators differ; this plot is descriptive, not paired uncertainty.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.pdf"
+      ],
+      "number": 3,
+      "pdf": {
+        "bytes": 22853,
+        "path": "benchmark_tools/results/figures_corrected_qfo_endpoints_20260926/corrected_qfo_endpoints.pdf",
+        "sha256": "b75cc43adf8446ebcc41ff96c89fc29afcfd34f05da7704c79140282f23e216f"
+      },
+      "title": "Individual corrected QfO endpoints"
+    },
+    {
+      "caption": "All 21 method-metric contrasts retain their multiplicity-adjusted RefOG intervals for F1, precision and recall. Development exposure and family-exchangeability assumptions limit inference. An interval containing zero establishes neither superiority nor equivalence.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf"
+      ],
+      "number": 4,
+      "pdf": {
+        "bytes": 25300,
+        "path": "benchmark_tools/results/figures_ob_complete_uncertainty_20260928/ob_complete_uncertainty.pdf",
+        "sha256": "58d7fce23f2773fd43f25ae233b541d98668ee8ea68c24056f6381b1c140b778"
+      },
+      "title": "OrthoBench paired differences"
+    },
+    {
+      "caption": "The corrected SwissTrees factorial retains all cells and component contrasts. Candidate expansion interacts with reconciliation; profile-refinement F1 intervals include zero. These conditional effects do not establish universal improvement.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf"
+      ],
+      "number": 5,
+      "pdf": {
+        "bytes": 33149,
+        "path": "benchmark_tools/results/qfo_corrected_factorial_figures_20260919/qfo_factorial_swiss.pdf",
+        "sha256": "6a96d0be739725e8ffef78b0a489c19c45a5f99b3bdba4d517bf4e84a6eb7e6d"
+      },
+      "title": "HMM, expansion and reconciliation factorial"
+    },
+    {
+      "caption": "Shared-denominator and exclusive-pair terms reproduce the aggregate differences for all seven comparators against full OrthoFinder. This is arithmetic decomposition of eligible scored sets, not proteome-wide coverage, causal attribution or confidence intervals.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_qfo_scored_pair_decomposition_20260930/qfo_pair_decomposition.pdf"
+      ],
+      "number": 6,
+      "pdf": {
+        "bytes": 19640,
+        "path": "benchmark_tools/results/figures_qfo_scored_pair_decomposition_20260930/qfo_pair_decomposition.pdf",
+        "sha256": "eb122dcc785bd54df0c0d81b9f0323b839ac193533069d65b6cf672b399d9721"
+      },
+      "title": "GO and EC scored-pair composition"
+    },
+    {
+      "caption": "The fixed-graph diagnostic compares HMM-derived search evidence with DIAMOND on 35 simulation datasets. It is development-exposed, without profile expansion or phylogeny, and does not match computational effort or compare full OrthoFinder.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/matched_graph_figure_v2_20260926/matched_graph.pdf"
+      ],
+      "number": 7,
+      "pdf": {
+        "bytes": 26260,
+        "path": "benchmark_tools/results/matched_graph_figure_v2_20260926/matched_graph.pdf",
+        "sha256": "c7f618833e6d68bcac2594abae4e8af1cc099d802cd26f75188941c707b8d953"
+      },
+      "title": "Matched-recall HMM search control"
+    },
+    {
+      "caption": "Ninety endpoints arise from 90,000 independent sequence pairs and 180,000 dependent full/banded evaluations. Composition and length change approximate tail behavior. This is not calibrated orthology confidence, a biological false-positive rate or fitted parameters.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf"
+      ],
+      "number": 8,
+      "pdf": {
+        "bytes": 30735,
+        "path": "benchmark_tools/results/figures_frozen_null_scores_20261002_v2/frozen_null_scores.pdf",
+        "sha256": "1ddd5fde7fd2855ad7f79e7f230a1c660e9b0fbe0a431e6bbb270eddf8131b01"
+      },
+      "title": "Synthetic null-score tails"
+    },
+    {
+      "caption": "Native failures remain in the fixed-length panel. No OrthoFinder output passes the stated native-completion/finite-graph gate, so its 14 planned comparisons are unavailable rather than OrthoHMM wins.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_simulation_fixed_native_20260916/simulation_evidence.pdf"
+      ],
+      "number": 9,
+      "pdf": {
+        "bytes": 20596,
+        "path": "benchmark_tools/results/figures_simulation_fixed_native_20260916/simulation_evidence.pdf",
+        "sha256": "d4fc7ca1579234afff293672325b9b8e91c0fb9db43c41fdad3f1ed69c6ba4e2"
+      },
+      "title": "Fixed-length evolutionary stress"
+    },
+    {
+      "caption": "The heterogeneous-length panel retains admitted and failed runs. Full OrthoFinder has higher paired mean F1 than both OrthoHMM modes in all seven conditions. Effects are conditioned on paired success, not failure-adjusted population estimates.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_simulation_variable_native_v2_20260916/simulation_evidence.pdf"
+      ],
+      "number": 10,
+      "pdf": {
+        "bytes": 24065,
+        "path": "benchmark_tools/results/figures_simulation_variable_native_v2_20260916/simulation_evidence.pdf",
+        "sha256": "d52e86531a449cd613d9afca7d994bb548c89cb1c1ddf9b8ce8151774276225c"
+      },
+      "title": "Heterogeneous-length evolutionary stress"
+    },
+    {
+      "caption": "Generating and perturbed trees are diagnostic interventions, not independent inferred pipelines or empirical tree posteriors. All 560 outcomes are retained. Two upstream OrthoFinder discrepancies limit strict tree-only causal attribution.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_simulation_tree_robustness_20260917/simulation_tree_robustness.pdf"
+      ],
+      "number": 11,
+      "pdf": {
+        "bytes": 40839,
+        "path": "benchmark_tools/results/figures_simulation_tree_robustness_20260917/simulation_tree_robustness.pdf",
+        "sha256": "5c3b293a49d6dbc49eb436ac3e80d43234cf82811b59afddcb7b01946b646f63"
+      },
+      "title": "Species-tree controls and perturbations"
+    },
+    {
+      "caption": "All seven arms, including separately admitted private-runtime recovery, remain in the 18-endpoint adjustment denominator. Every adjusted interval includes zero; no default or scientific setting was promoted.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf"
+      ],
+      "number": 12,
+      "pdf": {
+        "bytes": 34477,
+        "path": "benchmark_tools/results/qfo_parameter_complete_export_20261001/qfo_parameter_neighborhood.pdf",
+        "sha256": "b395ec4285f59b69c55888d5db73008e93a44deb9f5614b75bf6e3807d23c563"
+      },
+      "title": "Complete local parameter neighborhood"
+    },
+    {
+      "caption": "The frozen separate-clade test supplies bounded transfer evidence. Its subsequent overlap partition is descriptive, preserves false-positive allocations and does not establish family-disjoint confirmation or a second independent test.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_ygob_overlap_20260928/ygob_overlap_strata.pdf"
+      ],
+      "number": 13,
+      "pdf": {
+        "bytes": 32182,
+        "path": "benchmark_tools/results/figures_ygob_overlap_20260928/ygob_overlap_strata.pdf",
+        "sha256": "446a33dc00f198859a236c9c55b37493f60a3a3281eddd9cdac8c1a839ba2df3"
+      },
+      "title": "YGOB transfer and overlap strata"
+    },
+    {
+      "caption": "Anchor separation is distinguished from supported separation and reference-homolog coverage. Coverage can be high for merged anchors and is not orthology recall. Prespecified losses and negative OrthoHMM comparisons are retained.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/figures_wgd_application_20260917/wgd_application.pdf"
+      ],
+      "number": 14,
+      "pdf": {
+        "bytes": 26130,
+        "path": "benchmark_tools/results/figures_wgd_application_20260917/wgd_application.pdf",
+        "sha256": "0c1439735b8af157c481ccc3b31d31f4f9acb218f040803b0e888324aaec8c93"
+      },
+      "title": "Whole-genome-duplicate biological application"
+    },
+    {
+      "caption": "Fourteen frozen descriptive strata retain all eight methods, precision/recall/F1 and empty bins. Development exposure and small bins limit interpretation. Length, copy number and composition are descriptors, not validated fragments, duplication histories or causal error mechanisms.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.pdf"
+      ],
+      "number": 15,
+      "pdf": {
+        "bytes": 41981,
+        "path": "benchmark_tools/results/ob_complete_strata_figure_20260928/ob_complete_strata.pdf",
+        "sha256": "e8141adb34b6a8a4ffa14fde666e5194d084e161489943377228d6315e873a95"
+      },
+      "title": "All-method OrthoBench error strata"
+    },
+    {
+      "caption": "All 27 attempts are reviewed: 25 measured, 24 eligible; six cells have three eligible repeats. Three cells lack a third eligible repeat and remain unavailable. Matched CPU/RAM limits do not remove unknown, potentially tool-dependent contention; no isolated efficiency ranking follows.",
+      "link_aliases": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf"
+      ],
+      "number": 16,
+      "pdf": {
+        "bytes": 29279,
+        "path": "benchmark_tools/results/threadripper_shared_resource_figure_20261004_v26/shared_threadripper_resources.pdf",
+        "sha256": "5c807122a1cec760e039e13628d9403dceb7a3590f98854f965ce61565ad387c"
+      },
+      "title": "Completed shared-host resource panel"
+    },
+    {
+      "caption": "Initial sensitive HMM search is on in all three P0 cells. F1, GO/EC/FAS, prediction coverage and SwissTrees precision/recall remain separate; two conditional adjusted F1 intervals include zero. Four fresh cells and twelve contrasts remain unavailable. Recovered R1 timing remains failed; this is not initial-HMM-off, complete-factorial or isolated-efficiency evidence.",
+      "link_aliases": [
+        "benchmark_tools/results/native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.pdf"
+      ],
+      "number": 17,
+      "pdf": {
+        "bytes": 24109,
+        "path": "benchmark_tools/results/native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.pdf",
+        "sha256": "c3e6ca725b1a0e48653179956f87d41c8f957093517d9610324843387f8613f1"
+      },
+      "title": "Three admitted native QfO cells"
+    }
+  ],
+  "main": {
+    "bytes": 349569,
+    "path": "benchmark_tools/results/publication_main_print_20261006_v2/document.pdf",
+    "sha256": "6f288300c73352e26cb485cc22b870d583510be1c660ea5f6f674e574711b872"
+  },
+  "main_pages": 19,
+  "provenance": [
+    {
+      "bytes": 16849,
+      "path": "benchmark_tools/results/publication_figure_selection_20261004_v3.json",
+      "sha256": "a9ece39a341947250dfe662ef9649c3abd8289342d5e7c4fbdb7d5cc7b5bfdf2"
+    },
+    {
+      "bytes": 29966,
+      "path": "benchmark_tools/results/publication_main_print_20261006_v2/print.json",
+      "sha256": "3342e5cf442508ae45967e3edef726dd6eb30e7e9888d841ab46705ed6e7640d"
+    },
+    {
+      "bytes": 349569,
+      "path": "benchmark_tools/results/publication_main_print_20261006_v2/document.pdf",
+      "sha256": "6f288300c73352e26cb485cc22b870d583510be1c660ea5f6f674e574711b872"
+    },
+    {
+      "bytes": 24109,
+      "path": "benchmark_tools/results/native_qfo_three_cell_figure_20261006_v1/native_qfo_three_cell.pdf",
+      "sha256": "c3e6ca725b1a0e48653179956f87d41c8f957093517d9610324843387f8613f1"
+    },
+    {
+      "bytes": 3901,
+      "path": "benchmark_tools/prepare_native_figure_selection_v2.py",
+      "sha256": "678fed1c2561d273a6e361afca880fe586f293ae180cd89b5b55c6db9985b93e"
+    }
+  ],
+  "publication_ready": false,
+  "schema": "publication_figure_selection_v1",
+  "scientific_settings_or_results_changed": false
+}

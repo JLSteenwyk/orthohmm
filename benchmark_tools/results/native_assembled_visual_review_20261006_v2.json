@@ -1,0 +1,25 @@
+{
+  "schema": "native_assembled_provisional_visual_review_v1",
+  "status": "new_guide_and_native_figure_visually_reviewed",
+  "pdf_sha256": "e574d508993eb3c8a0a2a02b0a5fd533601b3fe9a3e31e4c88f8109afc7f3901",
+  "main_pages": 19,
+  "guide_pages": 5,
+  "figure_pages": 17,
+  "total_pages": 41,
+  "examined_assembled_pages": [20, 21, 22, 23, 24, 41],
+  "observations": [
+    "All five guide pages and the appended native six-panel figure are legible without observed clipping or overlap.",
+    "The native figure preserves endpoint separation, prediction coverage and both zero-crossing adjusted F1 intervals.",
+    "The guide keeps missing cells/contrasts, failed timing and shared-host/no-superiority limitations explicit."
+  ],
+  "full_document_visual_certification": false,
+  "old_figures_rerendered": false,
+  "new_scoring_or_admission": false,
+  "publication_ready": false,
+  "limitations": [
+    "Main-text inspection is recorded separately in native_main_visual_review_20261006_v2.json.",
+    "Assembly checks preserve all 36 source pages' text, geometry and pixels; this does not establish scientific validity.",
+    "Other historical figures are reused with their existing review, not newly recertified by this six-page inspection.",
+    "Preserved nonfigure PDF links can remain workstation-specific; no fully portable PDF-link claim."
+  ]
+}
