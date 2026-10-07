@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Wait Only Continuation Contract Clarified (2026-10-07)
+
+Direct user maintenance request: check why the goal appears to stop and fix
+the goal prompt. The actual goal tool reports ACTIVE, without a token budget;
+its objective points to the editable attachment. Before editing, that attachment
+matched PUBLICATION_GOAL_CURRENT.txt exactly. No stale DGX, quiet-window or
+contention-approval requirement was found. Available evidence does not establish
+the cause of every reported interruption; no dispatcher repair is claimed.
+
+Both current copies now begin with a concise action decision and explicit
+wait-only contract. Waiting is an authorized next action. A monitoring-window
+boundary or checkpoint commit is not a user-resume gate. Automatic wait-only
+turns must actually wait and check again when wait tools are available, unless
+preempted by a user instruction or interruption. Terminal outcomes replace
+waiting with review or diagnosis. Preserve same handles, no duplicates, no
+automatic retries, all original scientific gates and direct-request handling.
+
+Focused current-goal/shared-host tests: 37 passed in 0.98s, with the actual
+attachment supplied. Attachment equality, scientific scope and historical goal
+hash preservation pass. These tests guard prompt content, not dispatcher
+behavior. Scoped diff check passes. Only current prompt, its focused test and
+this ledger are changed in the repository; the external attachment is updated
+too. This scoped maintenance milestone does not change any job/source/result
+or require new scientific runs. Check its Git receipt before repeating any
+maintenance action; the scientific handoff below remains the next task.
+
+Latest actual accounting: native23985 RUNNING4:17:44; reviewer23986 PENDING.
+Live queue confirms afterany:23985(unfulfilled). Initial-search log was25.21%,
+not whole-run completion or an ETA. Current four-cell reporting/delivery remains
+complete; the next scientific action is unchanged.
+
+Full goal ACTIVE; next automatic continuation: observe SAME23985/23986 using
+fixed-format squeue/sacct and a bounded log tail, then wait30-300s and check
+again while pending. At terminal outcome inspect the alreadyqueued original
+review namespace benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+review.json or failure.json and reviewer stdout. Only its actual success and
+authorization permit dependent conversion/scoring/independent admission and
+the sequential genuinely unrun native12. Diagnose any failure without weakening
+gates or retrying automatically. No user resume, quiet host or DGX is required.
+
 ## Native11 Hour Long Wait Verified On Same Handles (2026-10-07)
 
 Previous turn was a verifiedwait; earlier reporting/archive progress remains

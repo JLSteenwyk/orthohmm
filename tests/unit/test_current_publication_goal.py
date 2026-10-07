@@ -104,6 +104,24 @@ def test_waiting_is_bounded_without_repeated_administrative_work():
         assert instruction in contract
 
 
+def test_wait_only_turn_has_an_action_and_not_a_user_resume_gate():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    assert contract.index("Immediate continuation decision:") < contract.index(
+        "Current execution contract"
+    )
+    for instruction in (
+        "Waiting is an authorized next action, not an absence of a next action",
+        "A completed monitoring window, unchanged poll or checkpoint commit",
+        "every automatic wait-only turn must include a real wait and a post-wait state check",
+        "unless a fresh user instruction or actual interruption preempts it",
+        "If the job becomes terminal, replace waiting with the required review or failure diagnosis",
+        "Full goal ACTIVE; next automatic continuation:",
+        "not authorization to stop the goal",
+        "Do not invent work, resubmit jobs or repeat completed analyses to avoid waiting",
+    ):
+        assert instruction in contract
+
+
 def test_stale_checkpoint_is_reconciled_without_repeating_completed_execution():
     contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
     for instruction in (
