@@ -104,6 +104,19 @@ def test_waiting_is_bounded_without_repeated_administrative_work():
         assert instruction in contract
 
 
+def test_stale_checkpoint_is_reconciled_without_repeating_completed_execution():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "before executing a ledger next action, reconcile it",
+        "existing output artifacts, execution receipts, source commits and live job handles",
+        "If the action has already executed, do not rerun it",
+        "Preserve any uncommitted result",
+        "actual next unfinished validation or integration step",
+        "A stale ledger is a recoverable bookkeeping issue",
+    ):
+        assert instruction in contract
+
+
 def test_direct_user_answer_does_not_complete_or_pause_the_full_goal():
     contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
     for instruction in (

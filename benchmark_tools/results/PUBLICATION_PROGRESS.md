@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Active Goal Checkpoint Reconciled; Profile Trace Already Executed (2026-10-07)
+
+Bounded user request: fix repeated stopping/continuation instructions. The
+active goal still points to the editable attachment, not the frozen October3
+prompt. Both current copies already authorize shared-Threadripper execution
+despite contention; no DGX, quiet window or renewed approval is required.
+Added explicit stale-checkpoint recovery to both copies and a focused test:
+inspect actual artifacts/receipts/commits/handles before a ledger next action,
+preserve uncommitted results, never repeat completed execution, and advance
+to actual unfinished validation. This does not repair or certify platform
+dispatch, and the full publication goal remains ACTIVE/incomplete.
+Validation: all22focused prompt tests pass0.28s with the actual goal-linked
+attachment supplied. Tests verify byte-identical current copies and unchanged
+scientific scope/historical prompt; scoped git diff --check passes.
+
+Actual source commit247033cd precedes the selected profile trace. Its report
+native_qfo_profile_localization_20261007_v1.json already exists, uncommitted,
+SHA256 0d09567de8828b46312aa280f0bdabe6bbfbfaa01f591cbbca9190241bdb5ae0.
+All4changed pairs localize to candidate separation before reconciliation:
+CASP3FP->TN and GH14oneTP->FN. Species-tree hashes differ; this does not prove
+individual profile-edge causality or biological tree correctness. Do NOT
+execute the selected trace again despite the older entry's next-action text.
+
+Executable independent next action: retain the existing trace execution
+receipt from session stores native10_profile_trace_cmd/native10_profile_trace_exec;
+prepare a separate prospective saved-Newick readback and focused tests;
+commit/push its source before one selected execution. Check all6saved family
+trees/checkpoints/70leaves, before speciation LCAs and after separate family
+memberships against the trace. Preserve bound trace and original helpers.
+Then integrate the checked result; four-cell figure/supplement is also
+unfinished independent reporting work. Do not repeat completed analyses.
+
+Dependency-waiting work: SAME23985 actually RUNNING at fresh sacct check,
+elapsed00:26:23/native step00:25:29; no terminal outcome or review yet.
+Keep the same handle, do not resubmit/release again. At terminal outcome use
+the prepared original-reviewer batch allocated_native_review_23985_20261007_v1.sh
+after checking existing handles and fresh review namespace. Only validated
+success proceeds to conversion/scoring/admission; native12 remains sequential
+behind reviewed11. No unrelated workloads or frozen scientific artifacts
+were changed by this bounded prompt correction.
+
 ## Complete Profile Pair Trace Prepared; Native11 Running (2026-10-07)
 
 Chronological profile result/readback5ec9604b committed/pushed. Bounded
