@@ -1,5 +1,46 @@
 # Shared-Host Authorization Reaffirmed
 
+## Existing-Job Checkpoint and Completed-Panel Correction
+
+The latest user request asks to fix recurring goal stops. Direct inspection
+confirms the goal remains ACTIVE, native23902RUNNING1:25:42 and review23910
+PENDING/Dependency. The current attachment still says no review is queued and
+commands its submission, although the actual held/released handoff is already
+pushed through7a6d587e. Replace that stale checkpoint with the existing handles;
+do not repeat submission or release. The running/pending observations do not
+establish a platform fault or explain every earlier stop.
+
+Preserve the full seven-part goal and actual safety/scientific gates. Make the
+already-attempted27-identity scaling-panel status explicit beside section5,
+rather than relying only on a distant override of its original prospective
+execution instructions. Retain25measured/24eligible and failed/ineligible
+identities0/17/20; no replacement panel or automatic retries. Contention remains
+accepted with unknown, potentially tool-dependent timing impact.
+
+Add a continuation-checkpoint rule: retain exact unfinished action, existing
+handles and uncommitted task/validation state at the ledger TOP; the next
+continuation resumes that work rather than another prompt/authorization loop.
+The next independent task is the pushed6cb6e6e6 candidate grouping protocol and
+uncommitted, untested tracer. Finish its separate reader/tests, push tested code
+before the selected analysis, and retain success or actual diagnostic failure.
+No outcome from that new analysis has been inspected or claimed here.
+
+Readback of the actual goal-linked attachment checks current job instructions,
+all seven sections, completed-panel precedence, full completion criteria and
+preserved disclosure/safety/no-retry rules. New attachment SHA256:
+`d8675e57e2866ab226cb6808fbc5da86fe446de04029d3850a4a2cf5cdc37a6c`.
+Historical goal bytes remain unchanged at
+`7d99ecb39a740b689101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0`.
+Earlier attachment hashes below are amendment history, not current state.
+
+Freshly fetched [official OpenAI documentation on Goals](https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex#how-goals-are-designed-in-codex)
+describes continuation at idle boundaries, lifecycle interruptions and budget
+controls. No prompt can guarantee uninterrupted dispatch. This correction
+does not modify application configuration, private goal-state stores, frozen
+execution sources or results. No job is submitted, restarted or released;
+no lifecycle tool is called. Goal ACTIVE/incomplete, with no platform repair
+claimed and no additional routine permission required.
+
 ## Consolidated Execution Contract
 
 The user again reports recurring stops. Inspection confirms the goal is ACTIVE,

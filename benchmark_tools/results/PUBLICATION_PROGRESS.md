@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Active Prompt's Stale Job and Panel Instructions Corrected (2026-10-06)
+
+Newest user asks to fix recurring stops. Goal tool reports ACTIVE; actual queue
+23902RUNNING1:25:42,23910PENDING/Dependency. The linked attachment still commands
+review submission even though the same23910 has already been submitted/released
+once and its receipts/readback pushed7a6d587e. Correct the attachment to observe
+those SAME handles, not repeat the handoff. Explicitly place the already-attempted
+27-panel status beside section5's historical prospective instructions; no rerun
+of failed/ineligible0/17/20 or new quiet/DGX/contention approval prerequisite.
+
+Preserve full seven-part science, safe capacity, accounting, provenance and
+admission/failure rules. A milestone or prompt edit is not full completion.
+Future continuation records/resumes the actual unfinished action at ledger TOP;
+no repeated prompt repair or routine authorization handoff. Actual-linked-file
+readback and unchanged historical goal SHA checked. See
+[correction, current hash and platform limitations](SHARED_HOST_GOAL_AMENDMENT_20261006.md).
+No private goal-store/app-setting change or platform-level fix is claimed.
+
+Next independent work:6cb6e6e6 prespecifies accepted-union reconstruction and
+all changed VGNC pairs; benchmark_tools/trace_native_qfo_candidate_groups.py is
+UNCOMMITTED/UNTESTED, independent reader and tests NOT yet written. Finish them,
+validate/push source before actual selected analysis, retain either outcome or
+diagnostic failure without forcing a grouping explanation. Prior candidate
+decomposition3d7b5fb7 remains validated; no new grouping-path result here.
+Continue23902/23910 to real terminal review then validated-success conversion,
+scoring/admission/reporting.11/12 stay behind reviewed history; no9retry. Full
+goal ACTIVE/incomplete; this correction submits/releases/restarts no job.
+
 ## Native Candidate VGNC Error Trade-Off Independently Checked (2026-10-06)
 
 Previous turn completes the review23910 dependency handoff. This continuation
