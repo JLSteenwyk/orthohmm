@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Event-Support Supplement Generator Tested Before Rendering (2026-10-06)
+
+Previous goal turn is PROGRESS: pushed9d6e0a16actual support outputs, independent
+rational readback and actual artifacts/tests. Read goal/current ledger and
+observed SAME23902RUNNING2:32:47,23910PENDING/Dependency. Neither terminal;
+no replacement/release/restart. Native11/12 still behind reviewed history.
+
+Next unfinished goal4/7 action advanced: new
+prepare_native_qfo_support_supplement.py constructs one bounded companion
+from reporta6dbe37a/readbackdd399ccb, with12cohort rows/204feature rows,
+complete copied pair/events, exact claim bindings and a4panel descriptive
+figure. Plot each accepted event once; ranges and medians NOT intervals;
+unlabeled NOT correct/TN; mixed events retained. No cutoff/default/causal/
+confidence/admission/newscore/raw-replay claims. Existing main2804448c and
+rc5index66bc02d7 unchanged. Source plus fixtures/current diagnostic artifact
+checks pass37tests2.33s. Only fixtures rendered; selected supplement DOES NOT
+yet exist. New generator/tests uncommitted, no actual render receipt yet.
+
+Exact next action: commit/push tested source/tests/thischeckpoint BEFORE
+actual generation into fresh native_qfo_support_supplement_20261006_v1.
+Render/print using retained workflows/runtime, inspect actual figure and PDF
+pages, retain scoped review/claim outputs and failures. Do not rebuild old
+main/rc5/scientific diagnostics. Then continue full goal, same native terminal/
+review and unrun sequential identities. Do not end at source milestone.
+
 ## Accepted-Event Support Actually Exported And Independently Verified (2026-10-06)
 
 Actual goal attachment/current copy remain equal3a2b66aa, full goal ACTIVE.
