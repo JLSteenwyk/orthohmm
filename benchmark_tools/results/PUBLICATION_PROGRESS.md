@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Independent Profile Newick Reader Ready (2026-10-07)
+
+Previous bounded prompt turn is progress: 1029d5bf committed/pushed the actual
+contract correction and reconciled the stale checkpoint; no scientific rerun.
+Retained actual selected trace stdout/command/time from session stores in
+native10_profile_trace_execution_20261007_v1.json: one selected execution,
+exit0/38.50s/250248KiBRSS/zero swaps, source247033cd before execution. Its
+existing report0d09567d remains unchanged; these are diagnostic costs only.
+
+New prospective readback_allocated_native_qfo_profile_newick.py uses unchanged
+saved.checked_tree and an independent CSV root-membership stream plus
+Biopython LCA lookup. It checks both states/allchanged pairs, complete selected
+members/hash/size, root IDs, saved topology/leaf universes/event labels,
+transition completeness and honest newly observed tree scope. Source not yet
+selected. Tests invented fixtures only:49pass1.43s; expanded helper checkpoint
+and invalid-path tests59pass1.60s, no errors/failures/skips. Both XMLs retained.
+No selected production readback has run before the source commit.
+[Prospective protocol](NATIVE_PROFILE_NEWICK_PROTOCOL_20261007.md).
+
+Next: focused commit/push new source/tests/protocol plus existing trace/receipt,
+then ONE selected reader on report0d09567d in fresh
+native_qfo_profile_newick_readback_20261007_v1.json. Inspect actual output before
+claiming sixfamilies/70leaves/fourpairs. Preserve source after selected execution,
+retain execution receipt and integrate honest candidate-separation result.
+Then four-cell figure/supplement remains unfinished independent reporting.
+SAME23985 RUNNING31:09/native step30:15 at fresh accounting check; observe same
+handle through terminal/review, no duplicate/release/retry. Native12 sequential
+behind reviewed11. Full publication goal ACTIVE/incomplete.
+
 ## Active Goal Checkpoint Reconciled; Profile Trace Already Executed (2026-10-07)
 
 Bounded user request: fix repeated stopping/continuation instructions. The
