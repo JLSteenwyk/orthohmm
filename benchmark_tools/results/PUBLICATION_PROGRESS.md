@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Four-Cell Reporting Complete And Native11 Wait Verified (2026-10-07)
+
+This continuation made concrete progress: prospective manuscript source/tests
+pushed e7c1145d before selected generation; actual v4/receipt/content checks
+pushed ce70408d; failed old-bibliography selection retained and correction
+prospectively pushed a0cf2805; actual newHTML/PDF/receipts/all21pages/fullmanual
+review pushed3b1dc7ad; current separateclaimchecklist pushed721a7743. The
+correction reuses actual parent-bound OctoberCSL, not the older wronghandoff.
+All24scores/fourcoverage/nineintervals checked in actualMarkdown; all24score
+strings located in actualPDF. Other scientificbody preserved. Focused29tests
+pass0.78s. Claimtable8scientific/4reporting rows/32links/22trackedtargets checked.
+All taskfiles committed; selectedsources/outputshashbound, noforegroundexec.
+Older manuscript/claims/figures/archives and unrelatedsamples unchanged.
+
+After scoped outstanding-requirement inspection, no further executable
+independent action identified beyond the already completed current reporting.
+Finalnative11/12 score/contrast/figure/manuscript integration remains dependent
+on actual outcomes/reviews/admission. Other-endpoint uncertainty/originalTreeFam,
+development-family/history/fragmenttruth and complete transitive archival
+limitations remain explicit; no substitute science or readiness claimed.
+This absence of independent work is provisional, not a permanent gate.
+
+Two actual300s waits followed by authoritative polls verify SAME23985still
+RUNNING; latestsqueue1:46:59. Initialall-to-alllog9.94% (not overallcompletion
+or ETA). SAME23986PENDING/Dependencyafterany:23985(unfulfilled); originalreview
+namespace has neither review.json nor failure.json yet. Running0:0accounting
+is not a success outcome. Keep these handles; no duplicate/resubmit/release.
+
+Concrete next unfinished action: bounded actual30-300s wait, then poll SAME
+23985/23986 with scheduler/accounting and bounded logtail. At actual native
+terminal outcome, queued23986review executes; inspect original
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/review.json
+or failure.json plus retained reviewerstdout. Diagnose any actualfailure;
+retain scientific/resource/next_identity_authorized gates, noautomaticretry.
+Only actualreviewauthorization/success permits dependent conversion/scoring/
+independentadmission and nextnative12. Reconsider independentwork on genuinely
+new evidence, not by repeating completed renders/checklists/fixtures/searches/
+archives or promptedits. Fullpublicationgoal ACTIVE/incomplete, notpaused or
+blocked; no newuserresume/quietwindow/DGX authorization is required.
+
 ## Current Four-Cell Claims Integrated And Checked (2026-10-07)
 
 Separate PUBLICATION_FOUR_CELL_CLAIMS_20261007.md completes current7.3 claim
