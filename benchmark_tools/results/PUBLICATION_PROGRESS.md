@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Four-Cell Swiss Uncertainty Independently Read Back (2026-10-07)
+
+Reader source/test/protocol f12e72fb committed/pushed BEFORE ONE selected
+execution. Actual exit0/2.17s/26944KiBRSS/0swaps, report3f62b487 confirms36native
+family records/32,295raw rows/10,765 profile scored pairs and exact rational
+macro/difference/sign arithmetic. Both prior matched contrasts unchanged.
+Exactcommand/time in native10_swiss_readback_execution_20261007_v1.json.
+Selected reader9db3b4c1 NOWBOUND; auditd9cfa907/binderf534b4e0 also bound.
+No source changes, scientific/reconciliation/inference/scoring/FAS/bootstrap
+rerun or whole-partition/other-endpoint/independent-confirmation claim.
+
+[Chronological conditional result](NATIVE_QFO_PROFILE_UNCERTAINTY_RESULT_20261007.md)
+adds P_at_C0_R1: F1-.320215pp adjusted[-2.112886,.513227],1/16/1families;
+precision-.010056pp adjusted[-1.322751,1.272471],1/16/1;
+recall-.462963pp adjusted[-2.314815,0],0/17/1. CASPimproves/GH14worsens,
+16ties; mechanism not established. Three matched contrasts/11unavailable,
+all42plannedendpoints/100kdraws/seed20260922 retained. Failed reference timing
+stays null/ineligible. New joined196tests pass9.93s/no failures/errors/skips.
+No equivalence/default/superiority/readiness claim. Frozen oldmanuscript/
+figures/archives unchanged; new supplements identify current4/7 scores.
+
+Native11 SAME23985 remains live (lastactualRUNNING9:53,step8:59); inspectfresh
+state after focused commit. Continue samehandle throughterminal/review, then
+dependent conversion/scoring/admission. Native12 sequential behind reviewed11;
+retained9failure no retry. Prepared original review batch for11 can be added
+prospectively without submitting before actual terminal outcome.
+
+Independent unfinished work: trace the newly observed CASP/GH14 profile
+differences through candidate grouping/profile expansion and reconciliation,
+using actual native10 versus recovered native7 outputs and reference-scored
+pairs. Do not infer causes from family signs alone or repeat completed P0
+reconciliation/candidate mechanisms. Four-cell publication figure/supplement
+also remains genuinely new reporting work. Inspect existing interfaces before
+new adapters; preserve selected sources. Currentuncommitted newreadback/result/
+execution receipt/this checkpoint; focused commit/push now. Full goalACTIVE.
+
 ## Native10 Swiss Counts And Binding Succeed; Independent Reader Ready (2026-10-07)
 
 Source/test/protocol a9545d27 committed/pushed BEFORE one selected audit and
