@@ -1,7 +1,9 @@
 """Proven original-protein joins must preserve all scored IDs and paths."""
 
 import ast
+from collections import Counter
 import copy
+import csv
 import gzip
 import json
 from pathlib import Path
@@ -184,3 +186,58 @@ def test_reader_import_boundary():
     names = [a.name for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom)) for a in n.names]
     assert "readback_native_qfo_candidate_groups" in names
     assert not set(names) & {"join_native_qfo_candidate_aliases", "trace_native_qfo_candidate_groups", "replay_native_candidate_trace", "numpy"}
+
+
+def test_actual_full_ledger_readback_and_failure_identities_without_rerun():
+    directory = ROOT / "benchmark_tools/results"
+    path = directory / "native_qfo_candidate_alias_group_20261006_v1/report.json"
+    if not path.is_file(): pytest.skip("Selected alias result not installed")
+    assert record(path)["sha256"] == "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
+    report = json.loads(path.read_text())
+    rb_path = directory / "native_qfo_candidate_alias_group_readback_20261006_v1.json"
+    assert record(rb_path)["sha256"] == "4afc4aa6853a69027b9dc710602309f44923315b1e68dbae4cd1e61866f4b92d"
+    readback = json.loads(rb_path.read_text())
+    assert readback["report"] == record(path) and readback["bridges"] == report["bridges"]
+    assert readback["localized_summary"] == report["localized_summary"]
+    assert (report["genes"], report["baseline_groups"], report["candidate_groups"], report["accepted_merges"],
+            report["changed_pairs"]) == (984137, 394328, 353638, 40690, 2295)
+    assert [(b["scored_accession"], b["native_accession"], b["prot_nr"], b["species"]) for b in report["bridges"]] == [
+        ("Q17QN5_BOVIN", "Q17QN5", 594577, "BOVIN"), ("Q1RMT5_BOVIN", "Q1RMT5", 594851, "BOVIN")]
+    assert record(report["original_failure"]["path"])["sha256"] == "bfad1eefd8f084adc6ab66d5da385c9ce8a1f17440948c59330cf1a761efb695"
+    assert record(report["diagnosis"]["path"])["sha256"] == "3bc6646e1dc7cb6488ceb6aaaf763e3a4e3cdcbd41268f2066ef2d8008f5be74"
+    assert record(report["ledger"]["path"])["sha256"] == "3f0598f7e00cfc0942146604ab1863ad9f03f2d5017efd5244c7e76a29d43642"
+    for ref in report["checked_records"]: assert record(ref["path"]) == ref
+    with Path(report["ledger"]["path"]).open(newline="") as stream:
+        rows = list(csv.DictReader(stream, delimiter="\t"))
+    assert len(rows) == 2295 and len({(r["protein_left"], r["protein_right"]) for r in rows}) == 2295
+    observed = Counter((r["candidate_state"], int(r["first_connected_iteration"]), r["connection_path"]) for r in rows)
+    assert [dict(candidate_state=s, iteration=i, connection_path=p, pairs=n) for (s, i, p), n in sorted(observed.items())] == report["localized_summary"]
+    assert sum(r["candidate_state"] == "TP" for r in rows) == 162
+    assert sum(r["candidate_state"] == "FP" for r in rows) == 2133
+    assert sum(r["candidate_state"] == "FP" and r["connection_path"] == "direct_cross_endpoint" for r in rows) == 2033
+    assert sum(any("_BOVIN" in r[k] for k in ("protein_left", "protein_right")) for r in rows) == 8
+    for key in ("whole_candidate_partition_reconstructed", "complete_pair_localization", "original_scored_identifiers_preserved"):
+        assert report[key] is readback[key] is True
+    for key in ("original_failed_export_retried", "accuracy_rescored", "native_inference_reexecuted",
+                "new_scoring_or_admission", "uncertainty_admitted", "publication_ready"):
+        assert report[key] is readback[key] is False
+
+
+def test_manuscript_result_table_matches_exact_retained_summary():
+    directory = ROOT / "benchmark_tools/results"
+    report = json.loads((directory / "native_qfo_candidate_alias_group_20261006_v1/report.json").read_text())
+    counts = {(r["candidate_state"], r["iteration"], r["connection_path"]): r["pairs"] for r in report["localized_summary"]}
+    for name in ("PUBLICATION_MANUSCRIPT_DRAFT_20260916.md", "NATIVE_QFO_CANDIDATE_ALIAS_GROUP_RESULT_20261006.md"):
+        text = (directory / name).read_text()
+        for iteration in (0, 1):
+            for path, label in (("direct_cross_endpoint", "Direct cross-endpoint"), ("transitive_union", "Transitive union")):
+                tp, fp = counts["TP", iteration, path], counts["FP", iteration, path]
+                assert f"| {iteration} | {label} | {tp:,} | {fp:,} |" in text
+        assert "| Total | All paths | 162 | 2,133 |" in text
+    manuscript = (directory / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text()
+    assert "The initial diagnosis does not admit" in manuscript
+    assert "ruling out an all-transitive explanation" in manuscript
+    assert "not suffix stripping or an independent biological validation" in manuscript
+    claims = (directory / "PUBLICATION_CLAIMS_20260916.md").read_text()
+    assert "localizes ALL2,295changed pair paths" in claims
+    assert "not a causal support" in claims

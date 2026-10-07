@@ -1115,18 +1115,45 @@ new admission, failed-timing repair or default tuning is performed.
 [independent readback](native_qfo_candidate_vgnc_readback_20261006_v1.json),
 [reproduction and limits](NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md).
 
-The subsequent prespecified grouping-path export fails at accession
+The initial prespecified grouping-path export fails at accession
 localization and is retained without retry. A separate stdlib graph traversal
 independently reconstructs the complete 353,638 candidate groups from
 394,328 baseline groups and 40,690 accepted unions, with all 984,137 genes
 retained. All 42,080 transition rows are unique and canonically ordered, but
 eight of the 2,295 changed pairs contain native-unmapped accessions
 `Q17QN5_BOVIN` or `Q1RMT5_BOVIN`; all eight are added scored FPs. No identifier
-substitution or approximate join is made. Complete pair-path localization
-remains unadmitted, including the 2,287 changed pairs without missing
+substitution or approximate join is made. The initial diagnosis does not admit
+complete pair-path localization, including the 2,287 changed pairs without missing
 accessions. Matching whole partitions diagnoses software compatibility, not
 biological truth or identical upstream hits; the reason for the identifier
-difference is unresolved. [Failed export, independent diagnosis and scope](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md).
+difference is unresolved in that artifact. [Failed export, independent diagnosis and scope](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md).
+
+A separately prespecified follow-up proves that the two scored identifiers
+share original QfO protein numbers 594577 and 594851 with native accessions
+Q17QN5 and Q1RMT5, respectively. Both original accession map and admitted
+database agree on the protein/species identities, with exactly one native
+accession per selected protein number. This is an explicit evidence-backed
+join, not suffix stripping or an independent biological validation of the
+mapping. The original failure remains immutable, and original scored IDs,
+categories, metrics and admissions are unchanged. The separate stdlib reader
+checks the proofs, complete partition and all 2,295 changed-pair ledger fields.
+
+| First Connected Round | Path | Recovered TP Pairs | Added FP Pairs |
+| ---: | --- | ---: | ---: |
+| 0 | Direct cross-endpoint | 131 | 1,794 |
+| 0 | Transitive union | 11 | 98 |
+| 1 | Direct cross-endpoint | 19 | 239 |
+| 1 | Transitive union | 1 | 2 |
+| Total | All paths | 162 | 2,133 |
+
+Thus 2,033 added scored FPs have direct cross-endpoint group paths and 100
+have transitive paths, ruling out an all-transitive explanation. Group-level
+direct connections do not necessarily imply direct sequence/HMM hits for
+each protein pair; transitive connections do not imply absent search evidence.
+Candidate eligibility, rejected alternatives and numeric support are not
+recomputed. No causal support mechanism, biological homology/duplication,
+confidence interval, default gain or superiority claim follows.
+[Original-protein proof, complete paths and limits](NATIVE_QFO_CANDIDATE_ALIAS_GROUP_RESULT_20261006.md).
 
 ### Native Functional-Pair Composition
 

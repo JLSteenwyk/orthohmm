@@ -103,7 +103,7 @@ def test_manuscript_claims_and_result_preserve_join_limitation():
     manuscript = (directory / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text()
     claims = (directory / "PUBLICATION_CLAIMS_20260916.md").read_text()
     result = (directory / "NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md").read_text()
-    assert "Complete pair-path localization\nremains unadmitted" in manuscript
+    assert "The initial diagnosis does not admit\ncomplete pair-path localization" in manuscript
     assert "353,638 candidate groups" in manuscript and "984,137 genes" in manuscript
     assert "No guessed replacement or partial localization is admitted" in claims
     assert "eight changed FP pairs" in claims

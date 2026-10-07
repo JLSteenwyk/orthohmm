@@ -37,7 +37,7 @@ improvement, a causal biological mechanism or independent validation. No
 VGNC CI or prediction-edge rescore; not_scored is not TN. Baseline raw audit
 reused, failed R1 timing unchanged and four fresh scores still unavailable.
 
-The [subsequent grouping-path export and identifier diagnosis](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md)
+The [initial grouping-path export and identifier diagnosis](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md)
 retain a failed complete pair join, not a successful localization. A separate
 stdlib graph traversal reconstructs all353,638candidate groups from394,328
 baseline groups/40,690 accepted unions across984,137genes. All42,080transition
@@ -46,6 +46,18 @@ accessions. No guessed replacement or partial localization is admitted.
 This supports whole-partition software compatibility and an identifier-join
 limitation, not a biological FP mechanism, calibrated confidence, identical
 upstream hits or a complete explanation of all2,295changed pair paths.
+
+The [separate original-protein alias follow-up](NATIVE_QFO_CANDIDATE_ALIAS_GROUP_RESULT_20261006.md)
+subsequently verifies original-map/DB protein/species identity for BOTH missing
+accessions and localizes ALL2,295changed pair paths. The independent stdlib
+reader checks every ledger field, not just pooled counts. Added scored FPs:
+round0direct1794/transitive98; round1direct239/transitive2. Recovered TPs:
+round0direct131/transitive11; round1direct19/transitive1. Original scored
+IDs/categories/metrics/admissions and the initial failed namespace remain
+unchanged. This rules out all-transitive added-FP paths, not a causal support
+mechanism, biological homology/duplication, calibrated confidence, valid VGNC
+CI, default improvement or independent/general superiority. Group-level direct
+paths do not necessarily mean direct sequence/HMM hits for each protein pair.
 
 Native duplication-annotation strata are now checked in the completed P0C0
 cells: [fixed protocol](NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md),

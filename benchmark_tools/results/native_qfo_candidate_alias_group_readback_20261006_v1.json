@@ -1,0 +1,135 @@
+{
+  "accepted_merges": 40690,
+  "accuracy_rescored": false,
+  "baseline_groups": 394328,
+  "bridges": [
+    {
+      "native_accession": "Q17QN5",
+      "native_gene": "tr|Q17QN5|Q17QN5_BOVIN",
+      "original_proteome_rows": [
+        {
+          "prot_nr": 594577,
+          "rowid": 698207,
+          "species": "BOVIN",
+          "uniprot_id": "Q17QN5"
+        },
+        {
+          "prot_nr": 594577,
+          "rowid": 698208,
+          "species": "BOVIN",
+          "uniprot_id": "Q17QN5_BOVIN"
+        }
+      ],
+      "prot_nr": 594577,
+      "scored_accession": "Q17QN5_BOVIN",
+      "species": "BOVIN"
+    },
+    {
+      "native_accession": "Q1RMT5",
+      "native_gene": "tr|Q1RMT5|Q1RMT5_BOVIN",
+      "original_proteome_rows": [
+        {
+          "prot_nr": 594851,
+          "rowid": 698557,
+          "species": "BOVIN",
+          "uniprot_id": "Q1RMT5"
+        },
+        {
+          "prot_nr": 594851,
+          "rowid": 698558,
+          "species": "BOVIN",
+          "uniprot_id": "Q1RMT5_BOVIN"
+        }
+      ],
+      "prot_nr": 594851,
+      "scored_accession": "Q1RMT5_BOVIN",
+      "species": "BOVIN"
+    }
+  ],
+  "candidate_groups": 353638,
+  "changed_pairs": 2295,
+  "checked_input_records": 55,
+  "complete_pair_localization": true,
+  "exporter_or_primary_replay_imported": false,
+  "failed_r1_timing_remains_ineligible": true,
+  "genes": 984137,
+  "graph_kernel_source": {
+    "bytes": 16743,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_groups.py",
+    "sha256": "b4f15b22da37d6f2a95347e2d407139ae25485e35ce4aa16f6fa5072351c28e0"
+  },
+  "identity_kernel_source": {
+    "bytes": 15001,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_vgnc_blocks.py",
+    "sha256": "0f8fc093af6ea027c739e798160508bdfdf91316d1abbb9b441d6afbb1660fe5"
+  },
+  "localized_summary": [
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 1794
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 98
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 239
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 2
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 131
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 11
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 19
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 1
+    }
+  ],
+  "native_inference_reexecuted": false,
+  "new_scoring_or_admission": false,
+  "original_failed_export_retried": false,
+  "original_scored_identifiers_preserved": true,
+  "publication_ready": false,
+  "report": {
+    "bytes": 24497,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/report.json",
+    "sha256": "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
+  },
+  "schema": "native_qfo_candidate_alias_group_readback_v1",
+  "source": {
+    "bytes": 15990,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_aliases.py",
+    "sha256": "d502b8c0477f95839f521e11dfd9e45d022c5c8e2b2994b5e8598d7901206d1d"
+  },
+  "status": "original_protein_identity_join_and_all_paths_independently_verified",
+  "uncertainty_admitted": false,
+  "whole_candidate_partition_reconstructed": true
+}

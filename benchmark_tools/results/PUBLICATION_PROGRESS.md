@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Original-Protein Alias Proof and All Candidate Pair Paths Verified (2026-10-06)
+
+Previous turn yields verified whole partitions and a retained eight-pair join
+failure (progress). Read current contract/TOPledger, observe SAME23902RUNNING
+and23910PENDING/Dependency, then investigate exact original mapping evidence.
+Original conversions bind mapping1c10f6ce; candidate admission inventories
+DBcd938ce7 and original map_relations/VGNC sources. Push prospective protocol
+9102ed47 before alias/path outcomes, then tested new exporter/stdlib reader
+173a4091 before actual selected execution.49new+83prior tests pass132/3.14s;
+scientific3.10 imports pass, reader also works-I-S-B. No old bound source edit.
+
+Actual new primary exits0/32.26s and independent reader exits0/22.35s. Both
+prove Q17QN5_BOVIN->Q17QN5/protein594577 and Q1RMT5_BOVIN->Q1RMT5/protein594851
+in the original map AND all selected original DB rows, same BOVIN species and
+unique native accession per number. No suffix guessing/current online alias
+or predicted-edge query. Original failurebfad1eef/diagnosis3bc6646e remain
+immutable, not automatically retried; this is a separately versioned diagnostic.
+Full984137gene/394328->353638group/40690union reconstruction and all42080
+transition rows preserved. All2295changed pair paths, original scored orientation/
+ID/categories and explicit native genes checked independently against55records.
+
+TP round0direct131/transitive11, round1direct19/transitive1; FP round0direct1794/
+transitive98, round1direct239/transitive2. Totals162TP/2133FP match previous
+decomposition; direct FP2033/transitive100 rules out an all-transitive software
+path explanation, NOT a biological FP/support mechanism. No new score, CI,
+admission/default/failed-timing repair, inference/conversion/scoring repeat or
+independent-generalization/superiority claim. Group directness is not proof of
+direct protein hit evidence. See
+[all results, identities, reproduction and limits](NATIVE_QFO_CANDIDATE_ALIAS_GROUP_RESULT_20261006.md).
+Report3b3ab8f1/complete ledger3f0598f7/readback4afc4aa6 retained; current
+manuscript/claims distinguish initial failure from evidence-backed follow-up.
+Final178joined tests pass12.14s, zero failures/errors/skips, including exact
+actual source/input/output identities and manuscript/result table correspondence.
+Scoped source/documentary diff checks pass; no bound analysis-source mutation.
+
+Latest observed23902RUNNING1:51:16,23910PENDING/Dependency; earlier SEARCH13.18%, not
+whole pipeline progress or ETA. No duplicate handle/release/restart. The alias
+join task is now complete, not a reason to pause or repeat it. Next continue
+existing jobs to terminal review and validated-success conversion/scoring/
+admission/reporting. While pending, the next concrete independent task is goal7:
+inspect current manuscript-render/archive workflows and integrate the current
+native score figure plus independently verified candidate pair-path evidence
+into a NEW explicitly provisional manuscript/package snapshot. Preserve older
+PDF/archive bytes and all documented missing scientific/dependency/rights
+requirements; do not label a reporting-only replay hermetic or publication-ready.
+Do NOT
+repeat whole-group/alias/raw scoring audits or exhausted TreeFam searches.
+11/12 remain behind reviewed history; no9retry. Full goal ACTIVE/incomplete,
+shared-host disclosure and all real safety/scientific gates retained.
+
 ## Whole Candidate Groups Reconstructed; Pair Join Failure Diagnosed (2026-10-06)
 
 Previous turn corrects authoritative instructions (progress), not a goal pause.
