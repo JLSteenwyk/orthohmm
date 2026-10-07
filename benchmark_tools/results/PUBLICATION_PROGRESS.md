@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Queue Unchanged Native11 Reviewer Behind Live Native Job (2026-10-07)
+
+Previous continuation has concrete progress: profile localization and
+independent Newick readback, actual four-cell figure/render/content/visual
+review and chronological supplements committed/pushed. Subsequent actual
+300s waits verify23985 live and progressing; latestaccountingRUNNING1:01:21,
+native step1:00:27, initialsearch4.95% (not overallcompletion).
+
+Useful authorized workflow action identified after waits: dependency-queue
+the already prepared/tested original reviewer, so it cannot execute before
+native23985terminal. Existing goal explicitly authorizes own dependency-chain
+jobs; no new approval/prompt repair is needed. This prospectively replaces
+deferred SUBMISSION in older checkpoint/protocol, not terminal execution or
+scientific gates. [Queue plan](NATIVE11_DEPENDENT_REVIEW_QUEUE_20261007.md).
+Script8093add8/request7bf63b80unchanged. Own reviewer-name query returnsnone;
+output namespace benchmarks/work/allocated_native_factorial_terminal_review_23985_v1
+doesnotexist. No reviewer is already queued/executed at this checkpoint.
+
+Next commit/push this prospective queue plan/checkpoint, recheck native own
+controller/comment and fresh namespace/handles, then submit unchanged batch
+ONCE HELD with afterany:23985 dependency. Retain/verify new actual handle,
+resources/owner/command/directory/comment/dependency/no-requeue before one
+release. New receipt/handle belongs at ledgerTOP; preserve ambiguities/failures
+without resubmission. Reviewer retains its own terminal/request/history/
+capacity/semantic gates; afterany allows failure classification, not invented
+scores. Native12 remains sequential behind actual reviewed11authorization.
+No source/scientific/runtime/unrelated workload change. Full goalACTIVE.
+
 ## New Diagnostics/Reporting Committed; Verified Native11 Wait (2026-10-07)
 
 21656728 committed/pushed all actual four-cell renders/tables/manifest,
