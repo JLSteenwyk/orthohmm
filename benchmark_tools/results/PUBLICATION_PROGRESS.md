@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Real Allocated-Core Fixture Replayed; QfO Scoring Completed (2026-10-06)
+
+Pushedbb0a5d05 before one actual23897 release. Fresh held owner/comment/source/
+arguments, absent output, safe available RAM/disk and matching pushed commit
+checked; release2f2101e9 retained. Same23897 COMPLETED0:0/16s, batch16s and
+native step14s, all64CPU/bizon. New worker initially observes52-83 plus148-179,
+binds itself to52-83/32 physical cores/NUMA0, never unallocated0-31. Four native
+engineering children inherit selected affinity and cgroup; eight recorded
+observations allwithinpolicy and completion anchor-only at boundaries.
+
+Independent terminal1bf2389a/241783bytes checks957 unique bound records,
+including all920 frozen helpers; actual controller/accounting and held/release/
+prepared/source/result match. Fresh replay exactly equals retained replay,
+fresh common resource arithmetic equals retained derivation, and actual sysfs
+topology reproduces. Engineering command wall6.078606311s, task-subtree CPU
+24.107568s, native-step peak45260800bytes. These are not scientific/scaling/
+isolated/comparative timing results or observer-overhead estimates. Production
+native controller/reviewer/request/conversion/admission integration still
+required before remaining native identities. No23891 retry or unrelated change.
+
+Same original six-endpoint assessment23894 nowCOMPLETED0:0/30:36,8CPU/64GiB;
+32 output records and process_succeeded_pending_independent_admission. Before
+one original admission CLI, check exact unchanged source1e13da48, conversion
+acaeca12, successful job/result and fresh admission destination. Scientific3.10
+admission is running; no score admitted until original independent validation
+actually succeeds. Full publication goal stays active, not complete or paused.
+
 ## Allocation-Aware Collector And Replay Prepared (2026-10-06)
 
 Previous turn is verified wait/prompt readback: same23894 is actuallyRUNNING,

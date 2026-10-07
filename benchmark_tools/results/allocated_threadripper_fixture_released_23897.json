@@ -1,0 +1,36 @@
+{
+  "schema": "allocated_threadripper_fixture_released_v1",
+  "job_id": 23897,
+  "held": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_threadripper_fixture_held_23897.json",
+    "bytes": 7115,
+    "sha256": "7cd909e383fea9d9e8a9699125df1ac63e6a81c06d954c6df6181bf3c4f777f8"
+  },
+  "prepared": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_threadripper_fixture_prepared_20261006.json",
+    "bytes": 31100,
+    "sha256": "c5e5f5b79a0b2907304868815dd0aa38cdd4d0434213a8b2b76f7322d264b816"
+  },
+  "pushed_commit": "bb0a5d050355b9702aa93ae2c1068a3e751d4de6",
+  "before": "JobId=23897 JobName=ohmm_allocated_core_fixture UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:20:00 TimeMin=N/A SubmitTime=2026-10-06T20:22:14 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T20:22:14 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2371061 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_threadripper_fixture_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=ohmm-allocated-fixture:c5e5f5b79a0b2907304868815dd0aa38cdd4d0434213a8b2b76f7322d264b816  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/allocated_fixture_23897.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/allocated_fixture_23897.out TresPerTask=cpu=64 \n",
+  "capacity": {
+    "meminfo": "MemTotal:       1055870852 kB\nMemFree:         8082084 kB\nMemAvailable:   646743260 kB\nBuffers:        15115344 kB\nCached:         588561132 kB\nSwapCached:        13428 kB\nActive:         376478808 kB\nInactive:       617061620 kB\nActive(anon):   359523716 kB\nInactive(anon): 33460120 kB\nActive(file):   16955092 kB\nInactive(file): 583601500 kB\nUnevictable:        4504 kB\nMlocked:             144 kB\nSwapTotal:       4194300 kB\nSwapFree:              0 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             36880 kB\nWriteback:             0 kB\nAnonPages:      389803604 kB\nMapped:          1274444 kB\nShmem:           3105564 kB\nKReclaimable:   44199472 kB\nSlab:           49138728 kB\nSReclaimable:   44199472 kB\nSUnreclaim:      4939256 kB\nKernelStack:       68560 kB\nPageTables:      1146072 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1021145784 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      963488 kB\nVmallocChunk:          0 kB\nPercpu:           787968 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8065024 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    21843528 kB\nDirectMap2M:    590006272 kB\nDirectMap1G:    461373440 kB\n",
+    "memory_pressure": "some avg10=1.56 avg60=0.57 avg300=0.84 total=188649085\nfull avg10=1.56 avg60=0.57 avg300=0.84 total=187584042\n",
+    "disk_free_bytes": 10291995099136,
+    "node": "NodeName=bizon Arch=x86_64 CoresPerSocket=1  CPUAlloc=104 CPUEfctv=192 CPUTot=192 CPULoad=112.31 AvailableFeatures=x86_64,avx512,rtx6000ada ActiveFeatures=x86_64,avx512,rtx6000ada Gres=gpu:NVIDIA_RTX_6000_Ada_Generation:2 NodeAddr=10.10.10.1 NodeHostName=bizon Version=24.05.2 OS=Linux 6.8.0-55-generic #57-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 23:42:21 UTC 2025  RealMemory=1030000 AllocMem=458752 FreeMem=6808 Sockets=192 Boards=1 State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A Partitions=gpu,all  BootTime=2026-09-25T12:05:20 SlurmdStartTime=2026-09-25T12:05:47 LastBusyTime=2026-10-06T17:09:18 ResumeAfterTime=None CfgTRES=cpu=192,mem=1030000M,billing=192 AllocTRES=cpu=104,mem=448G CurrentWatts=0 AveWatts=0 \n"
+  },
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "23897"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "after": "JobId=23897 JobName=ohmm_allocated_core_fixture UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=00:20:00 TimeMin=N/A SubmitTime=2026-10-06T20:22:14 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T20:22:14 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2371061 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_threadripper_fixture_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=ohmm-allocated-fixture:c5e5f5b79a0b2907304868815dd0aa38cdd4d0434213a8b2b76f7322d264b816  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/allocated_fixture_23897.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/allocated_fixture_23897.out TresPerTask=cpu=64 \n",
+  "native_inference_authorized": false,
+  "scientific_timings_admitted": false,
+  "publication_ready": false
+}

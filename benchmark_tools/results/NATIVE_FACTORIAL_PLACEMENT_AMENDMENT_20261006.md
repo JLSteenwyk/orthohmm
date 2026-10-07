@@ -1,5 +1,36 @@
 # Native Placement Failure And Prospective Correction
 
+## Real Fixture Terminal Evidence
+
+Afterbb0a5d05 is pushed, release23897 once with fresh exact owner/comment/
+source/request/absent-output/capacity checks. Release2f2101e9/6628bytes binds
+held7cd909e3/7115bytes and preparedc5e5f5b7/31100bytes. No resubmission or retry.
+Actual job and batchCOMPLETED0:0/16s; native stepCOMPLETED0:0/14s. This confirms
+core-bound bootstrap on installed Slurm24.05.2 for this actual allocation only.
+
+Initial affinity52-83,148-179 contains64 SMT slots on32 physical cores;
+selected/bound52-83 onNUMA0. Four isolated engineering children report identical
+inherited32-CPU affinity and cgroup. Eight periodic observations allwithinpolicy,
+with anchor-only completion at boundaries. Actual selected CPU IDs differ from
+the previously failed0-31 mask; no other process/job is re-affinitized.
+
+[Independent terminal receipt](allocated_threadripper_fixture_terminal_23897.json)
+1bf2389a1a9761a16e5ad423f5f167367a2addebd41cc2c708b123629597aa7c/
+241783bytes checks957 unique records, actual completed controller/accounting,
+held/released/submission/prepared/source/result and all920 original helper
+records. Fresh complete replay exactly reproduces retained replay; common
+resource arithmetic exactly reproduces derivation; current actual sysfs topology
+matches retained initial probe. Command wall6.078606311s, task-subtree CPU
+24.107568s, native-step lifetime peak45260800bytes. Job/reporting peaks remain
+separate overlapping scopes, not added or baseline-subtracted.
+
+Successful short fixture is not scientific inference, production authorization,
+scaling or comparative timing evidence. Allocation/batch elapsed includes
+observation/preparation/reporting and must not replace native command duration.
+No isolation or causal observer-overhead claim; shared-host contention retained.
+New production native controller/reviewer/request/conversion/admission route
+still must be implemented and bound before remaining identities can launch.
+
 ## New Collector Integration Prepared
 
 Separate native_factorial_allocated_placement.py records the initial actual
