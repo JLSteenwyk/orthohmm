@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Continuation Follow-Up And Recovered Independent Next Action (2026-10-07)
+
+Fresh user request is to fix recurring goal stops, not to repeat completed
+science. Actual goal tool reports ACTIVE. Its linked attachment and current
+repository copy were already equal and allowed shared Threadripper timing.
+Both now match667961a1, adding concrete evidence-tool entry and reassessment
+of provisional wait-only checkpoints.29tests pass0.70s including actual
+attachment equality; seven-part scientific scope and frozen goal unchanged.
+See [correction scope and validation](GOAL_CONTINUATION_FOLLOWUP_20261007.md).
+No demonstrated dispatcher cause, platform repair or lifecycle change.
+
+Existing SAME23902RUNNING5:04:09 and23910PENDING/Dependency at inspection;
+no terminal output, duplicate, retry or re-release. Continue inspecting those
+same handles and retain the queued review. A quiet host, DGX or renewed
+contention approval is not required. Timing remains potentially confounded.
+
+Independent next unfinished action for goal4.3: prospectively specify and
+implement a NEW three-cell SwissTrees sequence/domain/duplication-stratum
+projection, reusing the frozen two-cell memberships/features and verified
+candidate family-count audit7ed2ea1a/readback07941ba9. The existing domain
+report explicitly contains p0_c0_r0 and p0_c0_r1 only; the candidate readback
+verifies18families for p0_c0_r0 and p0_c1_r0. Sequence/duplication reports
+likewise retain the prior two-cell scope. Extend those same frozen bins,
+check common baseline counts and full family membership agreement, test new
+source plus independently implemented readback, and push protocol/source
+before computing the selected subgroup contrasts. No new bins, tuning or
+independent/causal/CI claims. No extension source or selected output exists;
+the preceding discovery turn made no files for this task. Do not reread raw
+relations, FASTAs, annotation inventory, mapping or candidate merge trace,
+repeat endpoint scoring/bootstrap, or overwrite bound prior exporters.
+
+After verified native terminal/review, use the existing validated-success
+conversion/assessment/admission route. Genuinely unrun11/12 remain sequential
+behind reviewed history; retain9failure and7timing-ineligibility. Finish and
+validate this correction's focused commit/push, then subsequent full-goal
+continuations start with the independent action above and the same handles.
+Do not treat this prompt correction, pending jobs or a report milestone as
+completion of the publication goal. No other task changes this turn; unrelated
+sample-output working-tree changes remain untouched.
+
 ## Accepted-Event Companion Rendered And All Three Pages Reviewed (2026-10-06)
 
 Previous turn PROGRESS9d6e0a16. Full goal/current contract read; no prompt

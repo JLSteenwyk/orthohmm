@@ -40,6 +40,21 @@ def test_current_contract_uses_live_ledger_not_stale_task_or_job_checkpoints():
         assert obsolete not in contract
 
 
+def test_continuation_checks_evidence_and_reassesses_wait_only_checkpoints():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "at the start of every automatic goal continuation",
+        "use a concrete tool call",
+        "Do not produce a no-tool acknowledgement or plan-only continuation",
+        "not dummy activity to keep the loop alive",
+        "no independent work is available is provisional, not a permanent gate",
+        "check the outstanding requirements against the retained evidence",
+        "Do not impose stronger requirements than the seven-part goal",
+        "Record any newly identified action at the ledger TOP",
+    ):
+        assert instruction in contract
+
+
 @pytest.mark.parametrize("instruction", [
     "No DGX, dedicated timing host, quiet window or renewed contention approval is required",
     "Do not request another routine authorization or another user resume at a milestone",
