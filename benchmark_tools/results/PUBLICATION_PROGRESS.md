@@ -1,5 +1,26 @@
 # Publication Progress
 
+## Package Exact Four-Cell Review With Existing Exporter (2026-10-07)
+
+Previous turn classified progress: actualfour-cell main/reporting integration
+and21page review completed/pushed. Current entryread confirms23985RUNNING1:47:49
+and23986PENDINGafteranyDependency; initialsearch9.99%, notoverallcompletion.
+Outstanding7.4 action identified: newv4review is not in the older v3direct-link
+component. Existing unchanged bundle_publication_review.py supports explicit
+main/stages and copied standardlibraryverification; no newsource/schema needed.
+This is actual newcontent portability, not repeating oldarchive/restoration.
+
+Prospective FOUR_CELL_DIRECT_REVIEW_PROTOCOL_20261007.md selects exactreview
+3b1dc7add7e8f118fbb653c0b65866c17a65111d and its v4main/checkedstage receipts.
+Source/restorer/guide unchanged; freshwork/archive/externalrestored namespaces
+confirmed absent. Next commit/push protocol/checkpoint before ONE export, then
+regular-file archive from checked index, existing anchored restorer outside
+checkout, actualcopiedverifier with-I-S-B. Retain actualcommands/output/costs/
+digests; no nativeinference/scoring/bootstrap/PDF rerender or oldbundle changes.
+Manualreview/newclaimaddendum remain separately inGit, not silently added to
+the direct-link inventory. Explicittransitive/raw/runtime/rights limits remain.
+Nativependingjobs do not gate this independentreporting action. FullgoalACTIVE.
+
 ## Four-Cell Reporting Complete And Native11 Wait Verified (2026-10-07)
 
 This continuation made concrete progress: prospective manuscript source/tests
