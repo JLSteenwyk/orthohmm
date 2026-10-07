@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Fresh Error-Stratum Manuscript Integration Tested Before Generation (2026-10-07)
+
+Verified model-distance/three-cell tables/readers/183payload evidence archive
+pushed52182d27. New independent goal7 integration source adds only Methods,
+complete6conditional distance contrasts, fixed66point/11bin figure links,
+descriptor/uncertainty limitations and bounded availability to frozen
+6Octv2main2804448c. Removing exact new blocks/header and one generator selector
+restores EVERYprior byte. No old scientific section/table/abstract changed;
+no oldmain/rc5/render/archive qualification replay or source overwrite.
+
+Primary author site recommends IQ-TREE3paper Wong2026/DOI10.1093/molbev/msag117.
+Direct publisher-deposited Crossref JSON628a6ab8 retained, actual title/year/
+16authors verified; installed binary's May2025submitted notice is historical,
+not current bibliography. New bibliography preserves all oldv5entries and
+adds exactly one structured CSL entry; executed IQ-TREE remains3.0.1. No
+upgrade, model change or rerun. Integration binds10direct inputs and reviewed
+existing figure outputs without reexecuting scientific calculations.
+
+15new integration tests plus9artifact/18projection tests pass42total0.86s.
+Newsource/test/Crossref input currently uncommitted; no selected new manuscript,
+bibliography, generation receipt, HTML/PDF or browser review exists yet.
+Exact next action: commit/push ONLY new generator/tests/citation metadata/this
+checkpoint BEFORE ONEgeneration of PUBLICATION_MAIN_TEXT_20261007_v1.md,
+publication_bibliography_20261007_v1.csl.json and fresh generation receipt.
+Validate its preserved parent bytes/complete new tables/citations, commit
+generated source, then render/review ONLY this new version using existing
+unchanged helpers. Do not claim rendering or whole-study release prematurely.
+Remain within same scientific scope and preserve historical reviews and rc5.
+
+Live SAME23902RUNNING8:44:57/search-stage64.46%, SAME23910PENDING/Dependency.
+No terminal result/review/admission. Inspect changing handles alongside new
+manuscript work; no duplicate/restart/release or quiet-window/user-resume gate.
+Full publication goal ACTIVE, not stopped at the scientific report milestone.
+
 ## Model-Based Divergence And Complete Three-Cell Scores Verified (2026-10-07)
 
 This continuation PROGRESS, not a stopped goal: actual contract read, concrete
