@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Reviewer23986 Released Once; Native23985 Still Running (2026-10-07)
+
+54914097 committed/pushed heldreceipt BEFORE release. Rechecked SAME23986
+ownheldfields/resources/command/cwd/comment/noarray and unchanged script/
+request pins. Released ONCE, scontrol exit0. Actual postreleasecontroller
+PENDING/ReasonNone, Priority1, afterany:23985(unfulfilled). Combinedsqueue
+confirms23985RUNNING1:06:30 and23986PENDING with that unfulfilled dependency.
+Receipt native11_dependent_review_released_23986_20261007_v1.json retains all
+actual observations and one release; no review executed or accuracy admitted.
+Do NOT reinterpret earlier heldreceipt as currentstate, releaseagain or
+submit a manual/duplicate reviewer when native11 ends. Queuedunchangedreview
+is now the next scheduled stage; its source/request are bound.
+
+Next focused commit/push release receipt/checkpoint, then bounded actual
+waits/polls of SAME23985 and23986. Native23985terminal now unblocks the already
+queuedreview, not a newsubmission. Observe actual23986terminal plus
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/review.json
+or failure.json and its stdout
+benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log.
+Original next_identity_authorized/native output/resource/terminal gates govern
+conversion/scoring/admission and genuinelyunrun12. Any failedcapacity/review
+is retained/diagnosed; no automaticretry or fabricatedscore. Completed
+independentdiagnostics/figures/tests/supplements committed; taskscopedtree
+otherwiseclean. Reconsider independentunfinished work on continuation/new
+evidence, not repeated prompts/certification/oldanalyses. FullgoalACTIVE.
+
 ## Native11 Dependent Reviewer23986 Submitted Held Once (2026-10-07)
 
 Prospective queue plan72f465cd committed/pushed BEFORE one submission of the

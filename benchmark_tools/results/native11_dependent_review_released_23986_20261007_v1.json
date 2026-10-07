@@ -1,0 +1,70 @@
+{
+  "schema": "native11_dependent_review_released_v1",
+  "source_commit_before_release": "54914097",
+  "review_job_id": 23986,
+  "native_job_id": 23985,
+  "submission_count": 1,
+  "release_count": 1,
+  "released": true,
+  "dependency": "afterany:23985",
+  "pre_release_controller": {
+    "chunk_id": "c1b2e5",
+    "wall_time_seconds": 0.000011227,
+    "exit_code": 0,
+    "original_token_count": 388,
+    "output": "JobId=23986 JobName=ohmm_allocated_review11 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=afterany:23985(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-07T16:32:56 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-07T16:32:56 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1347318 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23985_20261007_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=8093add87b49fb4aa470728d084e925b00d595d9fff09395cb0ff0ffb32462a0  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log TresPerTask=cpu=2 \n"
+  },
+  "pre_release_source_request_pins": {
+    "chunk_id": "3e3895",
+    "wall_time_seconds": 0.000011367,
+    "exit_code": 0,
+    "original_token_count": 70,
+    "output": "8093add87b49fb4aa470728d084e925b00d595d9fff09395cb0ff0ffb32462a0  benchmark_tools/results/allocated_native_review_23985_20261007_v1.sh\n7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1  benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json\n"
+  },
+  "pre_release_expected_fields": {
+    "JobId": "23986",
+    "JobName": "ohmm_allocated_review11",
+    "UserId": "bizon(1000)",
+    "JobState": "PENDING",
+    "Reason": "JobHeldUser",
+    "Dependency": "afterany:23985(unfulfilled)",
+    "Requeue": "0",
+    "Restarts": "0",
+    "Partition": "gpu",
+    "ReqNodeList": "bizon",
+    "NumNodes": "1-1",
+    "NumCPUs": "2",
+    "NumTasks": "1",
+    "CPUs/Task": "2",
+    "MinMemoryNode": "128G",
+    "TimeLimit": "06:00:00",
+    "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23985_20261007_v1.sh",
+    "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "Comment": "8093add87b49fb4aa470728d084e925b00d595d9fff09395cb0ff0ffb32462a0",
+    "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log",
+    "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log"
+  },
+  "release_command": "scontrol release 23986",
+  "release_result": {
+    "chunk_id": "5b37c1",
+    "wall_time_seconds": 0.000012699,
+    "exit_code": 0,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "post_release_controller": {
+    "chunk_id": "bc44b9",
+    "wall_time_seconds": 0.00001276,
+    "exit_code": 0,
+    "original_token_count": 386,
+    "output": "JobId=23986 JobName=ohmm_allocated_review11 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=afterany:23985(unfulfilled) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-07T16:32:56 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-07T16:32:56 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1347318 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23985_20261007_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=8093add87b49fb4aa470728d084e925b00d595d9fff09395cb0ff0ffb32462a0  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log TresPerTask=cpu=2 \n"
+  },
+  "scientific_review_executed": false,
+  "new_scoring_or_admission": false,
+  "automatic_retry": false,
+  "publication_ready": false,
+  "limitations": [
+    "Post-release observation is historical PENDING with unfulfilled dependency, not reviewer success.",
+    "Fresh-at-execution script capacity and original terminal-review gates remain mandatory."
+  ]
+}
