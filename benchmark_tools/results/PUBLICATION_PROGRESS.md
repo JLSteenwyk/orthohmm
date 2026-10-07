@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Ordered-Pfam Sources Tested Before Selected Execution (2026-10-07)
+
+Actual relocated model-distance evidence/result/tests committed and pushed
+867813c4; that replay is complete, not an action to repeat. The remaining
+original goal4.3 domain-order analysis is justified by retained coordinates,
+distinct from existing type/repeat strata. Protocol6948fb7b was committed/pushed
+before descriptors or outcomes, SHA c58b2171. All18families/563members retained,
+four fixed bins, unusable annotations explicit, no new accuracy campaign.
+
+prepare_swiss_ordered_pfam.py and readback_swiss_ordered_pfam.py plus guide and
+56wholly invented fixtures now implement all four stages. Joined74tests pass
+1.38s, including full18family/563member synthetic provenance roundtrip,
+all-pair versus adjacent overlap agreement, invalid annotations/universes,
+54count-row rational arithmetic,12scores/8contrasts/bothTSVs/all20humanrows,
+empty NA and corruption/overwrite checks. Selected descriptors/scores not run.
+
+Exact next independent action: commit/push ONLY these new tested sources/guide/
+tests and checkpoint before ONE selected feature construction, full independent
+feature readback, then separate54count-row projection and exact-rational
+presentation readback in fresh namespaces.
+Feature stage must not load native counts; validate annotation/ungapped sequence
+lengths. Preserve any failure, never score a successful-only subset or retry
+automatically. No annotation extraction, realignment, inference, bootstrap,
+raw scoring or native/OrthoFinder rerun. Original and portable sources frozen.
+
+Dependency-only SAME23902 RUNNING10:04:30 and SAME23910 PENDING/Dependency on
+latest check. No terminal native/review/admission; do not duplicate/restart/re-release.
+Inspect changing state alongside independent work. Successful native/review
+permits existing conversion/scoring/admission then genuinely unrun11/12; retain
+identity9 failure. No quiet-host, renewed authorization or user-resume gate.
+Full goalACTIVE; prompt already corrected and does not control dispatcher.
+
 ## Actual Relocated Model-Distance Arithmetic Reproduced (2026-10-07)
 
 This continuation PROGRESS: new manuscript review/delivery plus genuine goal7
