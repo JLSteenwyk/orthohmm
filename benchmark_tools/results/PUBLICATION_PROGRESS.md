@@ -1,5 +1,41 @@
 # Publication Progress
 
+## New Diagnostics/Reporting Committed; Verified Native11 Wait (2026-10-07)
+
+21656728 committed/pushed all actual four-cell renders/tables/manifest,
+independent reader/preview, execution receipts, visual record and chronological
+supplement. Earlier628cd9d6 likewise retains profile-Newick mechanism result;
+all selected new sources/results bound. Task-scoped working tree is clean;
+unrelated generated samples remain untouched. No foregroundexecsession.
+
+Fresh squeue confirms SAME23985 RUNNING43:59,64Slurmslots/128G/bizon/26h;
+native log reaches3.40% in initialall-to-all search, NOT overallcompletion.
+No terminal outcome or reviewer submission. Actual accounting/scheduler
+remains authoritative. Keep this handle; never restart/resubmit/releaseagain.
+
+Targeted requirements review after new evidence: the olderOctober4audit's
+metadata consolidation gaps are already addressed/disclosed in current24row
+register/maintext; new distance/Pfam/mechanistic/figure work is now retained.
+Do not repeat those analyses, software-wheel/native qualification, public
+TreeFam searches without a new lead, old PDFs, archive restores or final27run
+panel. Other-endpoint family uncertainty, original TreeFam/development-family
+inventory, biological-history/fragment truth and transitive whole-study
+runtime/redistribution gaps remain explicit limitations, not fabricated passes.
+No additional executable independent scientific action identified in this
+targeted check; this is provisional, not a permanent wait-only instruction.
+
+Concrete next action now: bounded actual wait30-300s, then recheck SAME23985
+via accounting/scheduler. Reconsider genuinely unfinished independent work
+on continuation/new evidence, without full-ledger reaudits/prompt edits/
+administrative campaigns. At actual terminal outcome inspect original native
+exit/failure evidence and fresh reviewer namespace/handles before submitting
+prepared allocated_native_review_23985_20261007_v1.sh once. Review success
+alone authorizes dependent conversion/scoring/admission and history-dependent
+native12; preserve all failures without automaticretry. Final score/figure/
+manuscript integration depends on actual11/12 outcomes, not live partials.
+Full publication goal ACTIVE/incomplete; running wait is not a blocker and
+no new user resume/quiet window/DGX approval is required.
+
 ## Four-Cell Figure Rendered, Read Back And Visually Inspected (2026-10-07)
 
 d9e8b807 committed/pushed prospective sources/tests/protocol BEFORE one
