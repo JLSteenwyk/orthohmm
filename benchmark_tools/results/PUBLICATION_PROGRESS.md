@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Actual Amendment Frozen; Identity10 Held (2026-10-06)
+
+Push5b9356de before preparing the actual amendment. Scientific Python3.10
+preparer validates committed14-source/test bundle, complete749-pass v2 report,
+original plan/920 helper/evidence records, real23897 fixture and historical
+ten-entry prefix. New amendment10cc9939/13317bytes leaves historical plan and
+all old helpers unchanged; no scientific output/timing admission implied.
+
+Fresh next paths run_10/session/request absent; safe available RAM672847843328
+bytes and free disk10291041607680bytes observed. Submit one held23902, original
+frozen identity10/p1_c0_r1, using new allocation-aware batch64CPU/128GiB/26h/
+no-requeue/bizon. Actual preparer rechecks all prior scheduler outcomes and
+historical adoptions, new-job monotonic identity, safe capacity and held owner/
+envelope. Request1355ae3b/50810bytes; actual scheduler comment set to its digest.
+Held receipt103887c9/4713bytes binds actual pending/JobHeldUser controller
+observation; single-node1-1 representation accepted by validated new gate.
+
+Commit/push these exact amendment/held receipts before fresh checked one-time
+release. Job is not yet inference success, scored, terminal-reviewed or timing
+admitted. No9 retry,23894/23897 repeat or unrelated workload change. Full goal
+stays active; next observe this same handle, not a duplicate submission.
+
 ## Allocated Native QfO Integration Tested (2026-10-06)
 
 Previous turn changes authoritative goal instructions at the user's request;
