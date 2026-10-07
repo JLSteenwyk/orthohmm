@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Allocation-Aware Collector And Replay Prepared (2026-10-06)
+
+Previous turn is verified wait/prompt readback: same23894 is actuallyRUNNING,
+not paused. This turn rechecks same handle through28:31 and advances placement
+integration while the original six-endpoint assessment continues unchanged.
+
+New separately versioned placement/collector/replay files observe the actual
+64-slot native step, select32 distinct physical cores, bind only the worker
+itself, and preserve that exact policy in thread observations and replay.
+No old collector/native/reviewer/plan/helper bytes are edited. Original CPU,
+memory, host, completion, cadence, disk-backed history and report-finalization
+semantics remain; all timing/scientific/publication admission flags stayfalse.
+New replay refuses historical schemas rather than translating them.
+
+261 joined tests pass3.59s, including both new routes and common accounting
+helpers. Initial129-test stage has25 failures caused by shared mutable test
+fixture constants; fix copies per fixture, retain v1 XML and successful129-test
+v2 XML. Finalv3 covers261 cases with zero failures/errors/skips. Scientific
+Python3.10 imports/preparation pass; batch shell syntax passes; all920 frozen
+helper records still match. No dependency or scientific-method changes.
+
+[Placement amendment](NATIVE_FACTORIAL_PLACEMENT_AMENDMENT_20261006.md): new
+fixture preparedc5e5f5b7 binds13 sources, exact isolated six-second/four-worker
+engineering command, original plan and fresh capacity/pressure/queue/node.
+Single job23897 held64CPU/128GiB/20min/no-requeue/bizon. Initial held observer
+expectsNumNodes1 but receives1-1; same-job actual controller/SubmitLine bind
+correct request/arguments, retain observer error, no duplicate or release.
+Push sources/prepared/held receipts before a fresh checked one-time release.
+
+This is not inference/scaling, a timing claim, production readiness or a retry
+of failed23891. Native controller/reviewer/request/conversion/admission route
+still requires explicit integration before remaining identities. Continue
+23894 to actual terminal and independent admission. Full goal stays active.
+
 ## Launch Failure Reviewed; Allocated-Core Selector Tested (2026-10-06)
 
 Previous goal turn is progress:23892 conversion succeeds and23894 assessment

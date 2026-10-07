@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="25" skipped="0" tests="129" time="1.707" timestamp="2026-10-06T20:18:37.484634-04:00" hostname="bizon"><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_actual_selection_binds_only_own_worker" time="0.006" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_incompatible_allocation_never_binds" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[schema]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[selection]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[cpu]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[pid]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[job]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[host]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[memory]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[cpuset]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[ancestor]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[topology]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[before_topology]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[source]" time="0.003" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[window]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[bool_window]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[admission]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[bound_flag]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[context]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[batch]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[duplicate]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_placement_refused[siblings]" time="0.001"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">change = 'siblings'
+
+    @pytest.mark.parametrize("change", ["schema", "selection", "cpu", "pid", "job", "host", "memory", "cpuset",
+        "ancestor", "topology", "before_topology", "source", "window", "bool_window", "admission", "bound_flag",
+        "context", "batch", "duplicate", "siblings"])
+    def test_bad_placement_refused(change):
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_job_refused[True]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_job_refused[0]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_job_refused[-1]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_job_refused[42]" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_selected_scope_passed_to_observer" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_selected_ids[cpus0]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_selected_ids[cpus1]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_selected_ids[cpus2]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_selected_ids[cpus3]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_bad_selected_ids[cpus4]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[schema-threadripper_scaling_v5]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[cpus-64]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[timeout_s-900]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[interval_s-True]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[cpu_policy-fixed_mask]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_command_amendment_refuses_tampering[sources-value5]" time="0.002" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_worker_abort_never_runs_command" time="0.004"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_worker_abort_never_runs_c0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef2e4b00&gt;
+
+    def test_worker_abort_never_runs_command(tmp_path, monkeypatch):
+        save(tmp_path / "command.json", collector.command_record(["/bin/sleep", "6"]))
+        monkeypatch.setenv("SLURM_JOB_ID", "42")
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:166: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_collector_release_and_cleanup[None]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_collector_release_and_cle0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef2ccb00&gt;
+denied = None
+
+    @pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant", "placement"])
+    def test_collector_release_and_cleanup(tmp_path, monkeypatch, denied):
+        directory = tmp_path / "measurement"
+        for key, value in {"SLURM_JOB_ID": "42", "SLURM_CPUS_PER_TASK": "64",
+                           "SLURM_MEM_PER_NODE": "131072"}.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.setattr(collector.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+        events = []
+        class Process:
+            finished = False
+            def poll(self):
+                return 0 if self.finished else None
+            def wait(self, **kwargs):
+                self.finished = True
+                events.append("cleanup")
+                return 0
+        def launch(argv, **kwargs):
+            assert "--cpu-bind=cores" in argv and not any("mask_cpu" in arg for arg in argv)
+            return Process()
+        monkeypatch.setattr(collector.subprocess, "Popen", launch)
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_collector_release_and_cleanup[budget]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_collector_release_and_cle1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef2ce240&gt;
+denied = 'budget'
+
+    @pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant", "placement"])
+    def test_collector_release_and_cleanup(tmp_path, monkeypatch, denied):
+        directory = tmp_path / "measurement"
+        for key, value in {"SLURM_JOB_ID": "42", "SLURM_CPUS_PER_TASK": "64",
+                           "SLURM_MEM_PER_NODE": "131072"}.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.setattr(collector.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+        events = []
+        class Process:
+            finished = False
+            def poll(self):
+                return 0 if self.finished else None
+            def wait(self, **kwargs):
+                self.finished = True
+                events.append("cleanup")
+                return 0
+        def launch(argv, **kwargs):
+            assert "--cpu-bind=cores" in argv and not any("mask_cpu" in arg for arg in argv)
+            return Process()
+        monkeypatch.setattr(collector.subprocess, "Popen", launch)
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_collector_release_and_cleanup[stale]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_collector_release_and_cle2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef05c680&gt;
+denied = 'stale'
+
+    @pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant", "placement"])
+    def test_collector_release_and_cleanup(tmp_path, monkeypatch, denied):
+        directory = tmp_path / "measurement"
+        for key, value in {"SLURM_JOB_ID": "42", "SLURM_CPUS_PER_TASK": "64",
+                           "SLURM_MEM_PER_NODE": "131072"}.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.setattr(collector.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+        events = []
+        class Process:
+            finished = False
+            def poll(self):
+                return 0 if self.finished else None
+            def wait(self, **kwargs):
+                self.finished = True
+                events.append("cleanup")
+                return 0
+        def launch(argv, **kwargs):
+            assert "--cpu-bind=cores" in argv and not any("mask_cpu" in arg for arg in argv)
+            return Process()
+        monkeypatch.setattr(collector.subprocess, "Popen", launch)
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_collector_release_and_cleanup[descendant]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_collector_release_and_cle3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef05f920&gt;
+denied = 'descendant'
+
+    @pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant", "placement"])
+    def test_collector_release_and_cleanup(tmp_path, monkeypatch, denied):
+        directory = tmp_path / "measurement"
+        for key, value in {"SLURM_JOB_ID": "42", "SLURM_CPUS_PER_TASK": "64",
+                           "SLURM_MEM_PER_NODE": "131072"}.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.setattr(collector.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+        events = []
+        class Process:
+            finished = False
+            def poll(self):
+                return 0 if self.finished else None
+            def wait(self, **kwargs):
+                self.finished = True
+                events.append("cleanup")
+                return 0
+        def launch(argv, **kwargs):
+            assert "--cpu-bind=cores" in argv and not any("mask_cpu" in arg for arg in argv)
+            return Process()
+        monkeypatch.setattr(collector.subprocess, "Popen", launch)
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_collector_release_and_cleanup[placement]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_collector_release_and_cle4')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb45df0&gt;
+denied = 'placement'
+
+    @pytest.mark.parametrize("denied", [None, "budget", "stale", "descendant", "placement"])
+    def test_collector_release_and_cleanup(tmp_path, monkeypatch, denied):
+        directory = tmp_path / "measurement"
+        for key, value in {"SLURM_JOB_ID": "42", "SLURM_CPUS_PER_TASK": "64",
+                           "SLURM_MEM_PER_NODE": "131072"}.items():
+            monkeypatch.setenv(key, value)
+        monkeypatch.setattr(collector.os, "uname", lambda: SimpleNamespace(nodename="bizon"))
+        events = []
+        class Process:
+            finished = False
+            def poll(self):
+                return 0 if self.finished else None
+            def wait(self, **kwargs):
+                self.finished = True
+                events.append("cleanup")
+                return 0
+        def launch(argv, **kwargs):
+            assert "--cpu-bind=cores" in argv and not any("mask_cpu" in arg for arg in argv)
+            return Process()
+        monkeypatch.setattr(collector.subprocess, "Popen", launch)
+&gt;       value = placement_value()
+                ^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:198: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_replay_preserves_violation_and_gap" time="0.001" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[scope]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[policy]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[window]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[admission]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[gap]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[outside]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[status]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[membership]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[duplicate]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[final_tids]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[start_ticks]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_affinity_replay_refuses_tampering[errors]" time="0.000" /><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_complete_bindings_and_accounting" time="0.001"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_complete_bindi0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb46870&gt;
+
+    def test_new_replay_complete_bindings_and_accounting(tmp_path, monkeypatch):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:357: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[historical]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb46510&gt;
+change = 'historical'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[sources]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb45f40&gt;
+change = 'sources'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[command]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb44aa0&gt;
+change = 'command'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[mask]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef05cda0&gt;
+change = 'mask'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[ready]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat4')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2e360&gt;
+change = 'ready'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[admission]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat5')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2f860&gt;
+change = 'admission'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[memory]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat6')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2e6c0&gt;
+change = 'memory'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[job_memory]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat7')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef05d970&gt;
+change = 'job_memory'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[completion_missing]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat8')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eeb44d10&gt;
+change = 'completion_missing'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[host_missing]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat9')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2d8e0&gt;
+change = 'host_missing'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[finalization_missing]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat10')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2c230&gt;
+change = 'finalization_missing'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[abort]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat11')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2ec30&gt;
+change = 'abort'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[stale]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat12')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eee6f170&gt;
+change = 'stale'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[wrong_expected]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat13')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2ff80&gt;
+change = 'wrong_expected'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[wrong_job]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat14')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eef2df40&gt;
+change = 'wrong_job'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[points]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat15')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282ef05fb90&gt;
+change = 'points'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_allocated_threadripper_scaling" name="test_new_replay_refuses_mismatched_route[placement_time]" time="0.002"><failure message="ValueError: Require sorted distinct OS IDs from an actual 64-slot step">tmp_path = PosixPath('/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-6879/test_new_replay_refuses_mismat16')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7282eee6cc80&gt;
+change = 'placement_time'
+
+    @pytest.mark.parametrize("change", ["historical", "sources", "command", "mask", "ready", "admission",
+        "memory", "job_memory", "completion_missing", "host_missing", "finalization_missing",
+        "abort", "stale", "wrong_expected", "wrong_job", "points", "placement_time"])
+    def test_new_replay_refuses_mismatched_route(tmp_path, monkeypatch, change):
+        directory = tmp_path / "measurement"
+&gt;       command = synthetic_measurement(directory, monkeypatch)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_allocated_threadripper_scaling.py:373: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/unit/test_allocated_threadripper_scaling.py:307: in synthetic_measurement
+    value = placement_value()
+            ^^^^^^^^^^^^^^^^^
+tests/unit/test_allocated_threadripper_scaling.py:36: in placement_value
+    allocated_topology=topology, selection=choose(ALLOCATED, topology),
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/native_factorial_cpu_selection.py:32: in choose
+    values = cpu_ids(values)
+             ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+values = [32, 32, 34, 35, 36, 37, ...]
+
+    def cpu_ids(values):
+        if (type(values) is not list or len(values) != 64
+                or any(type(cpu) is not int or not 0 &lt;= cpu &lt; 192 for cpu in values)
+                or len(set(values)) != 64 or values != sorted(values)):
+&gt;           raise ValueError("Require sorted distinct OS IDs from an actual 64-slot step")
+E           ValueError: Require sorted distinct OS IDs from an actual 64-slot step
+
+benchmark_tools/native_factorial_cpu_selection.py:10: ValueError</failure></testcase><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_chooses_allocated_physical_cores_without_binding" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_topology_order_does_not_change_selection" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_original_mask_is_retained_when_allocated" time="0.000" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_first_32_logical_ids_are_not_assumed_to_be_physical_cores" time="0.000" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[fewer]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[more]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[duplicate]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[unsorted]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[negative]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[outside]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[bool]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[tuple]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[missing_topology]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[duplicate_topology]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[unallocated]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[package]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[core]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[extra_field]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[missing_field]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[numa]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[numa_bool]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[sibling_numa]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[fewer_physical]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[more_physical]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_unmatched_or_invalid_allocations[non_sibling]" time="0.001" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_host_topology_reads_recorded_fields" time="0.038" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_invalid_host_topology[offline]" time="0.023" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_invalid_host_topology[ambiguous]" time="0.026" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_invalid_host_topology[missing]" time="0.029" /><testcase classname="tests.unit.test_native_factorial_cpu_selection" name="test_refuses_invalid_host_topology[nonnumeric]" time="0.029" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_frozen_settings[32-85800-1.0]" time="0.001" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_frozen_settings[32-85800-1]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command0-32-85800-1.0]" time="0.001" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command1-32-85800-1.0]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command2-20-85800-1.0]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command3-64-85800-1.0]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command4-32-900-1.0]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_wrong_settings[command5-32-85800-True]" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_step_user_scope_and_retained_gap" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_missing_user_scope_rejected" time="0.000" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_release_gate_precedes_native_and_denial_aborts[None]" time="0.005" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_release_gate_precedes_native_and_denial_aborts[budget]" time="0.002" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_release_gate_precedes_native_and_denial_aborts[stale]" time="0.003" /><testcase classname="tests.unit.test_measure_threadripper_scaling" name="test_release_gate_precedes_native_and_denial_aborts[descendant]" time="0.004" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_replay_all_outcomes" time="0.001" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[scope]" time="0.001" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[policy]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[admission]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[window]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[gap]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[outside]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[status]" time="0.000" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[membership]" time="0.001" /><testcase classname="tests.unit.test_replay_threadripper_scaling" name="test_rejects_tampering[duplicate]" time="0.001" /></testsuite></testsuites>

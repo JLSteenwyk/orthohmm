@@ -1,5 +1,47 @@
 # Native Placement Failure And Prospective Correction
 
+## New Collector Integration Prepared
+
+Separate native_factorial_allocated_placement.py records the initial actual
+64-slot step affinity/NUMA topology, deterministic32-physical-core selection,
+own-worker binding and final placement, all cgroup ancestor limits and sources.
+It rejects mismatched contexts/ancestry/job/topology/cpusets/RAM or admission.
+Only PID0 is bound; no scheduler policy or unrelated affinity is modified.
+
+measure_allocated_threadripper_scaling.py launches a core-bound bootstrap,
+validates ready placement before any native release, and observes the selected
+OS IDs instead of literal0-31. Old collector/helpers remain unchanged. Exact
+32 cores/64 slots/128GiB/85800s/1s/30s settings, abort/freshness checks, CPU and
+memory scopes, host monitoring, completion and report finalization persist.
+Distinct command/collector schemas and source bindings expose the amendment.
+replay_allocated_threadripper_scaling.py independently reproduces selection,
+ready/launch/source/command bindings and periodic affinity outcomes, and reuses
+the unchanged accounting arithmetic. It requires all native/job/host/completion/
+reporting evidence and refuses old schemas; it does not authorize production.
+
+261 tests pass3.59s/zero failures/errors/skips in finalv3 XML. Earlier v1
+failures expose mutable test-fixture aliasing, corrected with per-test copies;
+retain v1 and passing129-test v2 stages. Scientific3.10 preparation checks all
+920 original helpers unchanged. No runtime installs or frozen scientific edits.
+
+run_allocated_threadripper_fixture.py prepares one independent engineering
+route: isolated scientific3.10/four workers/six wall seconds each/4MiB each,
+32-CPU inherited affinity, new collector/replay and unchanged resource endpoints.
+Preparedc5e5f5b7 binds13 current source/runtime records, exact command, original
+plan and safe memory/disk plus pressure/node/queue observation. Swap is full;
+MemAvailable remains above128GiB; the short fixture is not a large-memory job.
+It records contention rather than claiming isolation. Job23897 is submitted
+once and held64CPU/128GiB/20min/no-requeue/singlebizon, not node-exclusive.
+Held actual scheduler SubmitLine binds both prepared and driver57e3be59 SHA.
+Initial held observer incorrectly expectsNumNodes1 instead of actual1-1;
+same-job readback corrects this representation, retaining the observation error.
+No duplicate/release/native inference is claimed. Push before fresh release.
+
+Real scheduler binding and complete replay still need fixture execution and
+independent terminal evidence. The full native controller/reviewer/request/
+conversion/admission integration is not yet implemented. No remaining native
+identity, old failure or historical measurement is restarted or reinterpreted.
+
 ## Verified Failure Disposition
 
 The preceding goal turn makes real progress: conversion23892 completes and
