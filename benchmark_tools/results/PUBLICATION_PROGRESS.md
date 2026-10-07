@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Four-Cell Main Manuscript Generated And Content Checked (2026-10-07)
+
+e7c1145d committed/pushed source/test/protocol/retainedXML BEFORE one selected
+clean scientificPython3.10 generation. Actual exit0/0.05s/12288KiBRSS. New
+v4 source0b7012e3/74287bytes and generationreceipt2bc79744 retained. Source
+7c09719e NOWBOUND, no rerun/overwrite. Actual independent Pandoc AST readback
+matches24scores/fourcoverage/nineintervals directly to snapshot/binding.
+Whole remaining scientific body restores exactly after the replaced section
+and three documented clarifications; actual preservation diff inspected.
+Original v3/render sources unchanged. [Result](FOUR_CELL_MAIN_TEXT_RESULT_20261007.md).
+
+Next commit/push actual manuscript/receipt/result/checkpoint, then unchanged
+render_manuscript_review.py with existing CSLv5 into fresh
+PUBLICATION_MAIN_TEXT_20261007_v4.html and
+publication_main_review_20261007_v4_assets.json beside the source. After actual
+render checks, unchanged print_manuscript_review.py into fresh
+publication_main_review_20261007_v4_print and review_manuscript_pdf.py into
+publication_main_review_20261007_v4_pdf_review. Retain actual outcomes; visually
+inspect EVERY actual new PDF page and record bounded review. Old reviews do
+not establish new render/visual/archive scope. Native23985running/reviewer23986
+dependency unchanged; do not duplicate/releaseagain or claim a terminal result.
+Fullgoal ACTIVE/incomplete, no new science/confirmation/readiness.
+
 ## Four-Cell Manuscript Source Ready For One Selected Generation (2026-10-07)
 
 Previous turn made progress: corrected actual prompt copies/handoff in pushed
