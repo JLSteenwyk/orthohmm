@@ -1,0 +1,27 @@
+{
+  "schema": "native_qfo_three_cell_strata_readback_failure_v1",
+  "report": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+    "bytes": 88759,
+    "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+  },
+  "source": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_three_cell_strata.py",
+    "bytes": 18055,
+    "sha256": "f59bd8cc924e5cbd0a6ef253a2ed47c243e92d1aaf2155dd3bc1ac286390583f"
+  },
+  "source_commit": "a5952bbc",
+  "runtime": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B",
+  "execution_exit_code": 1,
+  "elapsed_seconds": 0.05,
+  "maximum_resident_kib": 15360,
+  "swaps": 0,
+  "error": "AttributeError: 'str' object has no attribute 'open'",
+  "failure_site": "readback_native_qfo_three_cell_strata.py:201; tsv received report output path as str",
+  "intended_output": "benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v1.json",
+  "output_written": false,
+  "report_or_export_overwritten": false,
+  "new_accuracy_or_resource_admission": false,
+  "publication_ready": false,
+  "recorded_from": "Observed tool execution output, not an inferred failure or replacement scientific result. Resource fields describe this shared-host postprocessing attempt only."
+}

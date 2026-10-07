@@ -9,7 +9,8 @@ from pathlib import Path
 import pytest
 
 from benchmark_tools import export_native_qfo_three_cell_strata as export
-from benchmark_tools import readback_native_qfo_three_cell_strata as readback
+from benchmark_tools import readback_native_qfo_three_cell_strata as failed_reader
+from benchmark_tools import readback_native_qfo_three_cell_strata_v2 as readback
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -197,7 +198,7 @@ def test_tables_roundtrip_and_tampering(tmp_path):
     report = json.loads(json.dumps(report, sort_keys=True))
     score = tmp_path / "scores.tsv"
     export.write_tsv(score, report["rows"], export.SCORE_FIELDS)
-    readback.tsv(score, report["rows"], readback.SCORE_FIELDS)
+    readback.tsv(str(score), report["rows"], readback.SCORE_FIELDS)
     table = tmp_path / "TABLE.md"
     table.write_text(export.table(report))
     readback.human_table(table, report)
@@ -243,3 +244,72 @@ def test_frozen_direct_inputs_and_sources_match_without_selected_projection():
     assert docs["candidate_reader"]["audit"] == refs["candidate"]
     for suite in export.SUITES:
         assert docs[suite + "_reader"]["report"] == refs[suite]
+
+
+def test_original_failed_reader_preserved_and_string_path_bug_is_explicit(tmp_path):
+    assert export.record(failed_reader.__file__)["sha256"] == (
+        "f59bd8cc924e5cbd0a6ef253a2ed47c243e92d1aaf2155dd3bc1ac286390583f"
+    )
+    score = tmp_path / "scores.tsv"
+    rows = projected(fixture())["rows"]
+    export.write_tsv(score, rows, export.SCORE_FIELDS)
+    with pytest.raises(AttributeError, match="open"):
+        failed_reader.tsv(str(score), rows, failed_reader.SCORE_FIELDS)
+    readback.tsv(str(score), rows, readback.SCORE_FIELDS)
+
+
+def test_full_fixture_export_and_json_string_path_readback(tmp_path, monkeypatch):
+    docs = fixture()
+    root = tmp_path / "benchmark_tools/results"
+    root.mkdir(parents=True)
+    refs, sources = {}, []
+    for key in (*export.SUITES, *(s + "_reader" for s in export.SUITES),
+                "features", "candidate", "candidate_reader"):
+        path = tmp_path / (key + ".py")
+        path.write_text("# Fixture bound source: " + key + "\n")
+        docs[key]["source"] = export.record(path)
+        sources.append(docs[key]["source"])
+    names = {k: name for k, (name, _) in export.PINS.items()}
+
+    def save(key):
+        path = root / names[key]
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(docs[key], sort_keys=True))
+        refs[key] = export.record(path)
+
+    save("features")
+    docs["sequence"]["strata"] = refs["features"]
+    for suite in export.SUITES:
+        save(suite)
+        docs[suite + "_reader"]["report"] = refs[suite]
+        save(suite + "_reader")
+    save("candidate")
+    docs["candidate_reader"]["audit"] = refs["candidate"]
+    save("candidate_reader")
+    path = root / names["protocol"]
+    path.write_text("# Fixture protocol\n")
+    refs["protocol"] = export.record(path)
+    pins = {k: (names[k], refs[k]["sha256"]) for k in export.PINS}
+    monkeypatch.setattr(export, "PINS", pins)
+    monkeypatch.setattr(readback, "PINS", pins)
+    out = tmp_path / "fresh_projection"
+    result = export.export(tmp_path, out)
+    assert result["source"] == export.record(export.__file__)
+    report = export.record(out / "report.json")
+    failure_path = tmp_path / "fixture_failure.json"
+    failure_path.write_text(json.dumps(dict(report=report, execution_exit_code=1, output_written=False,
+        report_or_export_overwritten=False, source=export.record(failed_reader.__file__))))
+    amendment = tmp_path / "fixture_amendment.md"
+    amendment.write_text("# Fixture repair amendment\n")
+    monkeypatch.setattr(readback, "REPAIR_PINS", {
+        "failure": (str(failure_path), export.record(failure_path)["sha256"]),
+        "amendment": (str(amendment), export.record(amendment)["sha256"]),
+    })
+    checked = readback.verify(str(out / "report.json"), report["sha256"])
+    assert checked["score_rows_checked"] == 60
+    assert checked["differences_checked"] == 40
+    with pytest.raises(ValueError, match="already exists"):
+        export.export(tmp_path, out)
+    (out / "scores.tsv").write_text((out / "scores.tsv").read_text() + "tampered\n")
+    with pytest.raises(ValueError, match="output"):
+        readback.verify(out / "report.json", report["sha256"])

@@ -1,5 +1,32 @@
 # Publication Progress
 
+## Projection Exported; Failed Reader Preserved And V2 Repair Tested (2026-10-07)
+
+Protocol762cbdb0 and sources a5952bbc were pushed BEFORE actual projection.
+One actual isolatedPython3.10 export exits0 with54family/60score/40contrast
+rows; report55ed72ce/88759bytes. Elapsed0.05s/15360KiBRSS/zero swaps are
+postprocessing, not native cost. Exporter/sourcee6d0980f and all five fresh
+outputs remain unchanged. No old raw/annotation/tree/mapping/bootstrap read.
+
+First independentreaderf59bd8cc exits1 after numerical checks at TSV helper:
+JSON string path has no.open(). No v1 readback written. Retain original source
+and failure3bcf3f6e; do NOT silently repair that source or rerun export. New
+prospective reader amendment768929b9 specifies a versioned path-normalization
+repair and fresh v2validation, not a benchmark retry. New independently
+implemented v2reader preserves every count/bin/scope check and binds failed
+history/amendment; original v1 remains untouched.46focused tests pass0.50s,
+including actual string paths and full temporary fixture export/readback,
+plus overwrite refusal and altered-output rejection. Joined goal/policy
+tests are run before committing; no selected v2readback exists yet.
+
+Exact next action: validate and commit/push ONLY newv2reader, tests, amendment,
+failure receipt and this checkpoint BEFORE one fresh v2readback of unchanged
+report55ed72ce. Then verify/retain actual report/TSVs/table/source pins, actual
+success/failure receipt and scoped interpretation; commit/push result files.
+Do not overwrite output, retry inference, attach new uncertainty or claim
+publication readiness. Full goal ACTIVE, same23902/23910 still running/pending;
+after terminal/review use existing admitted-success route then sequential11/12.
+
 ## Three-Cell Fixed-Stratum Sources Tested Before Selected Projection (2026-10-07)
 
 Previous turn PROGRESS27675840: actual linked continuation contract fixed,
