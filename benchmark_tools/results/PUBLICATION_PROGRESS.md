@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Launch Failure Reviewed; Allocated-Core Selector Tested (2026-10-06)
+
+Previous goal turn is progress:23892 conversion succeeds and23894 assessment
+starts. This turn reads active prompt/newest ledger and rechecks same23894
+RUNNING2:01, subsequently12:21. Six original endpoints executing; no restart,
+partial-score admission or quiet-window/DGX gate. Advance actual placement work.
+
+[Placement milestone](NATIVE_FACTORIAL_PLACEMENT_AMENDMENT_20261006.md): new
+standalone failure reviewer13b37da7 outside920 frozen helpers accepts only exact
+pre-native binding refusal/failed scheduler/abort gates/no native artifacts.
+Actual scientific3.10 review1f6167cf/263870bytes checks original runtime brackets/
+lookup and fresh inventory28.247s, preserving137s allocation elapsed as not
+inference cost. No accuracy/resource/success recovery. Independent8b9292f8 binds
+1044 unique records; original ten-entry reviewed history accepts the actual
+failure disposition. Next different identity still needs all fresh gates and
+valid placement; no index10 job/request or retry is created.
+
+New pure selectora0f5c3a3 requires actual64-slot allocation/topology and32
+distinct paired physical cores, selecting lowest OS ID per core without binding
+or authorization. Real retained-mask/current-topology readback23f490ea gives
+40,49-79/32 physical cores/NUMA0, order invariant. Not a new live allocation.
+206 joined tests pass2.28s/87new+119existing; no failures/errors/skips. Earlier
+test stages retained; finalv2 covers current source/interleaved-SMT case.
+
+Next continue same23894 to terminal/admission. Integrate and validate a
+prospectively versioned scheduler-aware collector/native/replay/reviewer and
+bound request/conversion route before remaining native runs, preserving old
+files/history and frozen science/inputs/counts/limits/accounting. New selector
+alone is not a production fix. Full goal stays active; no readiness claim.
+
 ## Original Six-Endpoint Assessment23894 Running (2026-10-06)
 
 Commit80e7edf3 pushed before one actual23894 release; fresh held source/owner/

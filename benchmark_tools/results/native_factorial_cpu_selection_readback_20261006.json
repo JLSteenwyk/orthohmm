@@ -1,0 +1,883 @@
+{
+  "affinity_changed": false,
+  "allocation_evidence_scope": "historical failed Slurm step mask, not a newly allocated or currently running native job",
+  "documentation_sources": [
+    "https://slurm.schedmd.com/cpu_management.html",
+    "https://slurm.schedmd.com/srun.html"
+  ],
+  "failed_job_id": 23891,
+  "failure_binding": {
+    "bytes": 23558,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_launch_failure_binding_23891.json",
+    "sha256": "8b9292f8e8cc3e395bbf77bcd43d2f7c36156758fe492352ff8751b5b6dff2ee"
+  },
+  "host": "bizon",
+  "limitations": [
+    "This readback establishes the selector on a real retained mask/current hardware, not a new job allocation or native run.",
+    "Remaining execution requires a prospective versioned placement/collector/native/reviewer route preserving original source and artifact bindings.",
+    "Old fixed-mask collector/native/replay guards are still unchanged and cannot silently consume this alternative mask.",
+    "No unknown selected CPU is borrowed outside the supplied allocation.",
+    "No scheduler configuration, unrelated workloads, CPU binding or memory/accounting limits are changed.",
+    "NUMA/CPU placement may differ; report actual topology and comparability limits without isolated speed claims."
+  ],
+  "native_inference_executed": false,
+  "next_job_submitted": false,
+  "observed_unix_ns": 1791331502569731423,
+  "observer_command": [
+    "benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-B",
+    "-"
+  ],
+  "observer_interpreter": {
+    "bytes": 17157264,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+    "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+  },
+  "placement_issue_solved": false,
+  "production_collector_integrated": false,
+  "publication_ready": false,
+  "python_version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "review": {
+    "bytes": 263870,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_failure_review_23891/review.json",
+    "sha256": "1f6167cf997f37dcff5f795c9479475bd065aa7359a68a73994f7f53abf4ed9a"
+  },
+  "schema": "native_factorial_cpu_selection_readback_v1",
+  "scientific_execution_authorized": false,
+  "scientific_timings_admitted": false,
+  "selection": {
+    "affinity_changed": false,
+    "allocated_logical_cpu_count": 64,
+    "allocated_os_cpu_ids": [
+      40,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      136,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175
+    ],
+    "historical_fixed_mask_compatible": false,
+    "limitations": [
+      "Selection only; caller must obtain and bind the actual running step allocation.",
+      "No scheduler submission, CPU binding, cgroup limit check, inference or timing is performed.",
+      "A fresh step-placement, runtime, capacity and accounting check remains mandatory.",
+      "Different CPU/NUMA placement must be recorded; matched counts do not establish isolated performance."
+    ],
+    "native_cpu_ids": [
+      40,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79
+    ],
+    "native_os_cpu_mask": "0xfffffffe010000000000",
+    "native_physical_core_count": 32,
+    "physical_cores": [
+      {
+        "allocated_os_cpu_ids": [
+          40,
+          136
+        ],
+        "core": 40,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 40
+      },
+      {
+        "allocated_os_cpu_ids": [
+          49,
+          145
+        ],
+        "core": 49,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 49
+      },
+      {
+        "allocated_os_cpu_ids": [
+          50,
+          146
+        ],
+        "core": 50,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 50
+      },
+      {
+        "allocated_os_cpu_ids": [
+          51,
+          147
+        ],
+        "core": 51,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 51
+      },
+      {
+        "allocated_os_cpu_ids": [
+          52,
+          148
+        ],
+        "core": 52,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 52
+      },
+      {
+        "allocated_os_cpu_ids": [
+          53,
+          149
+        ],
+        "core": 53,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 53
+      },
+      {
+        "allocated_os_cpu_ids": [
+          54,
+          150
+        ],
+        "core": 54,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 54
+      },
+      {
+        "allocated_os_cpu_ids": [
+          55,
+          151
+        ],
+        "core": 55,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 55
+      },
+      {
+        "allocated_os_cpu_ids": [
+          56,
+          152
+        ],
+        "core": 56,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 56
+      },
+      {
+        "allocated_os_cpu_ids": [
+          57,
+          153
+        ],
+        "core": 57,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 57
+      },
+      {
+        "allocated_os_cpu_ids": [
+          58,
+          154
+        ],
+        "core": 58,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 58
+      },
+      {
+        "allocated_os_cpu_ids": [
+          59,
+          155
+        ],
+        "core": 59,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 59
+      },
+      {
+        "allocated_os_cpu_ids": [
+          60,
+          156
+        ],
+        "core": 60,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 60
+      },
+      {
+        "allocated_os_cpu_ids": [
+          61,
+          157
+        ],
+        "core": 61,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 61
+      },
+      {
+        "allocated_os_cpu_ids": [
+          62,
+          158
+        ],
+        "core": 62,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 62
+      },
+      {
+        "allocated_os_cpu_ids": [
+          63,
+          159
+        ],
+        "core": 63,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 63
+      },
+      {
+        "allocated_os_cpu_ids": [
+          64,
+          160
+        ],
+        "core": 64,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 64
+      },
+      {
+        "allocated_os_cpu_ids": [
+          65,
+          161
+        ],
+        "core": 65,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 65
+      },
+      {
+        "allocated_os_cpu_ids": [
+          66,
+          162
+        ],
+        "core": 66,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 66
+      },
+      {
+        "allocated_os_cpu_ids": [
+          67,
+          163
+        ],
+        "core": 67,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 67
+      },
+      {
+        "allocated_os_cpu_ids": [
+          68,
+          164
+        ],
+        "core": 68,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 68
+      },
+      {
+        "allocated_os_cpu_ids": [
+          69,
+          165
+        ],
+        "core": 69,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 69
+      },
+      {
+        "allocated_os_cpu_ids": [
+          70,
+          166
+        ],
+        "core": 70,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 70
+      },
+      {
+        "allocated_os_cpu_ids": [
+          71,
+          167
+        ],
+        "core": 71,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 71
+      },
+      {
+        "allocated_os_cpu_ids": [
+          72,
+          168
+        ],
+        "core": 72,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 72
+      },
+      {
+        "allocated_os_cpu_ids": [
+          73,
+          169
+        ],
+        "core": 73,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 73
+      },
+      {
+        "allocated_os_cpu_ids": [
+          74,
+          170
+        ],
+        "core": 74,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 74
+      },
+      {
+        "allocated_os_cpu_ids": [
+          75,
+          171
+        ],
+        "core": 75,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 75
+      },
+      {
+        "allocated_os_cpu_ids": [
+          76,
+          172
+        ],
+        "core": 76,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 76
+      },
+      {
+        "allocated_os_cpu_ids": [
+          77,
+          173
+        ],
+        "core": 77,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 77
+      },
+      {
+        "allocated_os_cpu_ids": [
+          78,
+          174
+        ],
+        "core": 78,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 78
+      },
+      {
+        "allocated_os_cpu_ids": [
+          79,
+          175
+        ],
+        "core": 79,
+        "numa_node": 0,
+        "package": 0,
+        "selected_os_cpu_id": 79
+      }
+    ],
+    "publication_ready": false,
+    "schema": "native_factorial_cpu_selection_v1",
+    "scientific_execution_authorized": false,
+    "scientific_timings_admitted": false,
+    "strategy": "lowest_os_cpu_id_per_allocated_physical_core"
+  },
+  "selection_order_invariant": true,
+  "source": {
+    "bytes": 3736,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_factorial_cpu_selection.py",
+    "sha256": "a0f5c3a3b8804dedf2bfa11f3d0a624419e03bf3d63eda3456d84e1377409b3f"
+  },
+  "status": "deterministic_selection_verified_on_retained_failed_allocation_current_topology",
+  "topology": [
+    {
+      "core": 40,
+      "cpu": 40,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 49,
+      "cpu": 49,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 50,
+      "cpu": 50,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 51,
+      "cpu": 51,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 52,
+      "cpu": 52,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 53,
+      "cpu": 53,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 54,
+      "cpu": 54,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 55,
+      "cpu": 55,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 56,
+      "cpu": 56,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 57,
+      "cpu": 57,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 58,
+      "cpu": 58,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 59,
+      "cpu": 59,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 60,
+      "cpu": 60,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 61,
+      "cpu": 61,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 62,
+      "cpu": 62,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 63,
+      "cpu": 63,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 64,
+      "cpu": 64,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 65,
+      "cpu": 65,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 66,
+      "cpu": 66,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 67,
+      "cpu": 67,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 68,
+      "cpu": 68,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 69,
+      "cpu": 69,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 70,
+      "cpu": 70,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 71,
+      "cpu": 71,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 72,
+      "cpu": 72,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 73,
+      "cpu": 73,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 74,
+      "cpu": 74,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 75,
+      "cpu": 75,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 76,
+      "cpu": 76,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 77,
+      "cpu": 77,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 78,
+      "cpu": 78,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 79,
+      "cpu": 79,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 40,
+      "cpu": 136,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 49,
+      "cpu": 145,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 50,
+      "cpu": 146,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 51,
+      "cpu": 147,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 52,
+      "cpu": 148,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 53,
+      "cpu": 149,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 54,
+      "cpu": 150,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 55,
+      "cpu": 151,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 56,
+      "cpu": 152,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 57,
+      "cpu": 153,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 58,
+      "cpu": 154,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 59,
+      "cpu": 155,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 60,
+      "cpu": 156,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 61,
+      "cpu": 157,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 62,
+      "cpu": 158,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 63,
+      "cpu": 159,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 64,
+      "cpu": 160,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 65,
+      "cpu": 161,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 66,
+      "cpu": 162,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 67,
+      "cpu": 163,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 68,
+      "cpu": 164,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 69,
+      "cpu": 165,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 70,
+      "cpu": 166,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 71,
+      "cpu": 167,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 72,
+      "cpu": 168,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 73,
+      "cpu": 169,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 74,
+      "cpu": 170,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 75,
+      "cpu": 171,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 76,
+      "cpu": 172,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 77,
+      "cpu": 173,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 78,
+      "cpu": 174,
+      "numa_node": 0,
+      "package": 0
+    },
+    {
+      "core": 79,
+      "cpu": 175,
+      "numa_node": 0,
+      "package": 0
+    }
+  ],
+  "topology_evidence_scope": "current local sysfs topology, read twice with identical records",
+  "topology_readback_equal": true
+}
