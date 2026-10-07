@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Native10 QfO Conversion23977 Running; Full Review Succeeded (2026-10-07)
+
+Fresh fullreview23973 completed0:0; final7eab212d has every required original
+terminal/runtime/resource/environment/native-output gate true. Original23910
+failure/causeunknown retained. No inference repeat, gate weakening or source
+substitution. Result summary/batchsyntax/checkpoint committed/pusheddf98b2da.
+
+Conversion23977 submitted HELD once with originalrequest1355ae3b/review7eab212d,
+new source-bound batch03c0b147. Actual held envelope verified2CPU32G6h/no-requeue/
+Restarts0/bizon/userbizon/expected batch,cwd,log. Held submission receipt
+native10_qfo_conversion_submission_23977_20261007_v1.json retained. Released
+ONCE returned0. Actualsacct23977RUNNING2:20, no conversionresults yet. No need
+to resubmit/release; preserve SAMEhandle. Destination
+benchmarks/work/native10_qfo_pairs_allocated_20261007_v1; stdout
+benchmarks/work/native10_qfo_conversion_submission_20261007_v1/slurm-23977.log.
+No accuracy or downstream admission yet.
+
+Exact next action: actual30-300s waits and inspect SAME23977 through terminal
+accounting and results.json, ensuring statusallocated_native_factorial_qfo_
+pairs_prepared_unscored, total=retained=expected, mappingloss0, all984137input
+accessions retained in coverage denominator, source/review/nativebindings.
+Only success permits frozen run_allocated_native_factorial_qfo_assessment.py:
+--rootROOT --pairsDEST/results.json --pairs-sha256ACTUALSHA --conversion-job23977
+in a fresh8CPU scheduled job. Outputfixed
+benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1;
+qfo_benchmark/w/aq10; qfo_benchmark/scoring/allocated_native_10.
+Verify all three absent and no assessment handle before submitting. Then
+independent admission requires actual assessment terminalsuccess. Only then
+advance unrun11/12sequentially with original reviewed history. Retain9failure.
+
+Do not fabricate empty/missing scores, rerun native or finished fixtures,
+repeat complete reviews, alter frozen sources, relaunch27scaling or select
+fastest/background-adjusted timings. Original resource/scientific/release
+limitations persist. Currentuncommitted taskfiles held conversionreceipt and
+this checkpoint; focused commit/push then continue. Full goalACTIVE, live
+conversion is dependency-waiting not a blocker or a new user-resume request.
+
 ## Fresh Full Review23973 Succeeds; Native10 Conversion Prepared (2026-10-07)
 
 After actual300s waits on SAME23973, full runtime/resource/environment receipts
