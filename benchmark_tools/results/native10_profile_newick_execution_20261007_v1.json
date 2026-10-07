@@ -1,0 +1,28 @@
+{
+  "schema": "native_profile_newick_execution_receipt_v1",
+  "source_commit_before_execution": "d27ca3ae",
+  "selected_invocations": 1,
+  "command": "/usr/bin/time -v env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -B -m benchmark_tools.readback_allocated_native_qfo_profile_newick --report benchmark_tools/results/native_qfo_profile_localization_20261007_v1.json --report-sha256 0d09567de8828b46312aa280f0bdabe6bbfbfaa01f591cbbca9190241bdb5ae0 --output benchmark_tools/results/native_qfo_profile_newick_readback_20261007_v1.json",
+  "initial_exec": {
+    "chunk_id": "bbe309",
+    "wall_time_seconds": 1.000580246,
+    "session_id": 99839,
+    "original_token_count": 0,
+    "output": ""
+  },
+  "terminal_exec": {
+    "chunk_id": "5b2402",
+    "wall_time_seconds": 0.000019921,
+    "exit_code": 0,
+    "original_token_count": 378,
+    "output": "{\"source_families_checked\": 6, \"tree_leaves_checked\": 70, \"changed_pairs_checked\": 4, \"distinct_lcas_checked\": 2, \"summary\": {\"candidate_separation\": 4}, \"species_tree_bytes_identical\": false}\n\tCommand being timed: \"env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -B -m benchmark_tools.readback_allocated_native_qfo_profile_newick --report benchmark_tools/results/native_qfo_profile_localization_20261007_v1.json --report-sha256 0d09567de8828b46312aa280f0bdabe6bbfbfaa01f591cbbca9190241bdb5ae0 --output benchmark_tools/results/native_qfo_profile_newick_readback_20261007_v1.json\"\n\tUser time (seconds): 4.74\n\tSystem time (seconds): 1.05\n\tPercent of CPU this job got: 99%\n\tElapsed (wall clock) time (h:mm:ss or m:ss): 0:05.80\n\tAverage shared text size (kbytes): 0\n\tAverage unshared data size (kbytes): 0\n\tAverage stack size (kbytes): 0\n\tAverage total size (kbytes): 0\n\tMaximum resident set size (kbytes): 36864\n\tAverage resident set size (kbytes): 0\n\tMajor (requiring I/O) page faults: 0\n\tMinor (reclaiming a frame) page faults: 57950\n\tVoluntary context switches: 19\n\tInvoluntary context switches: 12\n\tSwaps: 0\n\tFile system inputs: 144\n\tFile system outputs: 232\n\tSocket messages sent: 0\n\tSocket messages received: 0\n\tSignals delivered: 0\n\tPage size (bytes): 4096\n\tExit status: 0\n"
+  },
+  "output": {
+    "path": "benchmark_tools/results/native_qfo_profile_newick_readback_20261007_v1.json",
+    "sha256": "289ac094115f493b8607073b1395ca2d97493ba4a00d5f1a083ceb3aa030507f"
+  },
+  "inference_rerun": false,
+  "scoring_rerun": false,
+  "new_bootstrap_draws": 0,
+  "resource_scope": "read-only saved-tree diagnostic process; not inference or timing admission"
+}

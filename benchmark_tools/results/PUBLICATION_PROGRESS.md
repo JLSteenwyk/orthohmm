@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Profile Candidate Separation Independently Verified (2026-10-07)
+
+d27ca3ae committed/pushed new reader/tests/protocol and retained trace/receipt
+before ONE selected saved-Newick readback. Actual exit0/5.80s/36864KiBRSS/zero
+swaps: report289ac094 confirms6families/70leaves/4pairs/2beforeLCAs and all4
+candidate_separation, species-tree bytes different. Before pair-events
+speciation, after endpoints in separate saved candidate families/no LCA.
+No new duplication exclusion explains these four removals. Selected source
+c7b6bcb4 NOWBOUND; original trace/helpers/reports remain unchanged.
+Exact command/stdout/time in native10_profile_newick_execution_20261007_v1.json.
+[Chronological mechanism supplement](NATIVE_PROFILE_LOCALIZATION_RESULT_20261007.md)
+includes everychangedpair, complete candidate IDs/sizes, observed software
+phase and causal/biological limits. No edge causality, correct biological
+history, independent confirmation, timing repair or readiness claim.
+
+Next: commit/push actual readback/receipt/supplement/ledger, then create a
+separate prospective four-cell figure adapter using the actual allocated
+snapshot/source and new four-cell binding. Preserve old three-cell plotter/
+figures/manuscript/archives. Include24 endpoint scores,4all-input coverage
+rows and9Swiss contrast intervals; keep3missing scores/11missing contrasts
+null. New figure needs scientific metadata replay, focused tests before
+selected rendering, separate table/vector/PDF readback and visual inspection.
+No new scoring/bootstrap/inference/admission campaign.
+
+SAME23985 lastactualRUNNING31:09/step30:15; inspect fresh state while preparing
+new reporting. Observe samehandle throughterminal/originalreview;12sequential.
+Full publication goal ACTIVE/incomplete, no routine milestone resume.
+
 ## Independent Profile Newick Reader Ready (2026-10-07)
 
 Previous bounded prompt turn is progress: 1029d5bf committed/pushed the actual
