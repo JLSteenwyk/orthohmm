@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Allocated Swiss Adapters Tested; Native11 Is Running (2026-10-07)
+
+Native11 SAME23985 RUNNING5:20/native step4:26. Actual native_execution.json
+statusnative_factorial_running/index11/p1_c1_r0 confirms P1/C1/R0 and unchanged
+pipeline2afb89b9; native CPUs40,49..79 (32distinct). Ready/native log exist.
+This is actual startup, not terminal/accuracy/resource admission. Observe
+samehandle; no releaseagain, no12prematurely.
+
+New unselected sources audit_allocated_native_qfo_swiss_counts.py and
+bind_allocated_native_qfo_swiss_uncertainty.py replay actual allocated report
+metadata, select only new10's raw output, preserve original family/count/
+interval kernels and all18families/42endpoints/100k retained draws. Newschemas
+and actualsourceidentities, not relabelled historical interfaces. Oldraw counts
+not repeated. Only complete matching records permit interval reuse; differences
+remain null/retained. Recovered failed-timing flags/source checks preserved.
+
+Initial45testspass. Expanded v1 had191pass/two fixturebound-snapshot failures;
+retainreceipt. Fixfixtureonly using fresh mixedsnapshot; v2 all193pass8.99s/
+no failures/errors/skips, including originalauditor/binder/allocatedreporter.
+[Prospective execution protocol](ALLOCATED_NATIVE_SWISS_UNCERTAINTY_PROTOCOL_20261007.md)
+defines one selected newaudit, then one binder after sourcecommit/push.
+
+Next: focused source/test/protocol/receipt/ledger diff+commit+push, then
+scientificPython import and execute new10 audit freshdestination on report7aab1cbd
+and retainedcounts c9d8bf02. After inspecting actualcomplete raw-record match,
+run newbinder with original3audits plusnewaudit and bootstrapf777dead.
+Then independent raw/rational readback and honest chronological integration.
+Currentnewsourceunbound; afterselectedinvocation freeze it, no edits.
+No newsciencecampaign/promptrepair/oldartifactrecertification. Full goalACTIVE.
+
 ## Native11 Job23985 Released Once; Allocated Swiss Counts Need New Adapter (2026-10-07)
 
 Held preparation a5a8af0d committed/pushed. Rechecked SAME23985 held command/
