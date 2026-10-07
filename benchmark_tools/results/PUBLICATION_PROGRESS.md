@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Native10 Frozen Assessment23978 Running; Admission Batch Prepared (2026-10-07)
+
+Assessment batch/result/checkpoint committed/pushedd6829bb2. Fresh23978
+submitted HELD once, actual envelope verified8CPU128G24h/no-requeue/Restarts0/
+bizon/userbizon/expected sourcefc8c17fc,cwd,log. Heldreceipt
+native10_qfo_assessment_submission_23978_20261007_v1.json retained. Released
+ONCE returned0. Actualsqueue SAME23978RUNNING2:36; its preflight.json exists,
+stdout empty so far, no completed endpoint/admission yet. No duplicate/release.
+Output benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1;
+workqfo_benchmark/w/aq10; scoringqfo_benchmark/scoring/allocated_native_10;
+stdoutbenchmarks/work/native10_qfo_assessment_submission_20261007_v1/slurm-23978.log.
+
+Native23902COMPLETED0:0; originalreview23910FAILED1:0 retained/causeunknown;
+fresh fullreview23973COMPLETED0:0/review7eab212d; conversion23977COMPLETED0:0/
+pairmanifest593679a7,5115410retainedpairs/mappingloss0,984137full denominator.
+All scientific source/manifest/input/selecteddiagnostic hashes remain frozen.
+
+While assessment runs, prepared ONLY new2CPU32G6h/no-requeue admission batch
+native10_qfo_admission_20261007_v1.sh with frozen convertermanifest593679a7,
+conversion23977/assessment23978 and separate direct destination
+benchmarks/results/allocated_native_qfo_admission_v1/p1_c0_r1. No admission
+submission or execution yet. Admission MUST inspect actual terminalassessment
+success,all six endpoints,FASsample,trace/inventories and complete frozen
+bindings; process success alone is insufficient. Syntax check/commit/push
+new admission batch plus current heldreceipt/checkpoint before using it.
+
+Exact next action after focused commit: actual30-300s waits and inspect SAME
+23978/result/log through terminal. If successful process and full source-bound
+results, ensure admission destination/submission fresh and no existing handle;
+submit ONE held admission,verify/releaseONCE,observe actual admitted result.
+No unconditional retry if endpoint/admission fails. Only independently admitted
+accuracy may enter summaries. Then reportnative10sixmetrics/FAS/secondarymean/
+coverage/resources with shared-host and originalfailure limitations, and
+proceed genuinely unrun11/12 in original order/reviewed history. Retain9failure.
+
+No oldscience/fixtures/scaling/archives/mainPDF/prompt recertification campaign
+to occupy pending work. Full seven-part goalACTIVE; no quiet-host/DGX/another
+routine authorization or user-resume gate. Current taskuncommitted admission
+batch/held assessmentreceipt/this checkpoint; no live foreground execsession.
+
 ## Native10 Conversion23977 Completed; Frozen QfO Assessment Prepared (2026-10-07)
 
 After actual120s wait on SAME23977, sacct COMPLETED0:0/2:44/end14:33:56.
