@@ -1,0 +1,525 @@
+{
+  "schema": "full_native_qfo_assessment_terminal_binding_v1",
+  "status": "successful_terminal_and_original_accuracy_admission_bound",
+  "assessment_job_id": 23894,
+  "conversion_job_id": 23892,
+  "native_job_id": 22444,
+  "native_index": 8,
+  "cell": "p0_c1_r0",
+  "admission": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c1_r0/results.json",
+    "bytes": 1324700,
+    "sha256": "7e830778018ae78c32a6c01dee0fa85a413c18320a0d34487244e00971827c60"
+  },
+  "direct_evidence": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_admission_v1/p0_c1_r0/results.json",
+      "bytes": 1324700,
+      "sha256": "7e830778018ae78c32a6c01dee0fa85a413c18320a0d34487244e00971827c60"
+    },
+    {
+      "bytes": 7815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_native_factorial_qfo_assessment.py",
+      "sha256": "1e13da48cb3879e1ce46c041b9e2579eb69c845a8208560e7a959a82dab0f8eb"
+    },
+    {
+      "bytes": 301170,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_qfo_pairs_22444_fault_reported_v1/results.json",
+      "sha256": "acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57"
+    },
+    {
+      "bytes": 1290527,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c1_r0/results.json",
+      "sha256": "c93caa746e4a9e84798469e0d433c6053237ed1c580034e7634a436cb1dcdc6b"
+    },
+    {
+      "bytes": 1281184,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_native_qfo_assessment_v1/p0_c1_r0/preflight.json",
+      "sha256": "66b95912564f4971f94f3a90a2d0a842678059e9451b0c4d3c7fb154950208e5"
+    },
+    {
+      "bytes": 1793,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08/stats/trace_2026-10-06_19-54-09.txt",
+      "sha256": "e05aa07fc4d7e2b46f0d41d7092964dad4cfb869ff5d20d62c1b223537f4117f"
+    },
+    {
+      "bytes": 382419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08/results/FAS/FAS_ohmm-qfo-full-native-p0-c1-r0_raw.txt.gz",
+      "sha256": "f0d8b802b1333e50418edd60bfbd24e225f1e2b4c98f00f36d6988590fc94f96"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assessment_submission_23894.json",
+      "bytes": 8969,
+      "sha256": "50f641032690abb2d900ba8a363fc743f7a80ed37bff8845917c1632e52cbcfa"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assessment_pre_release_23894.json",
+      "bytes": 31479,
+      "sha256": "68db990a6ed1c506fb9a81479916a2d39d0479f8e0d898519ccb192487d32fbe"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assessment_released_23894.json",
+      "bytes": 9475,
+      "sha256": "1a8162d55d95e75a12d7d8d6618da8b8f18c24048a2eaa8efe84b684a071b5dc"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assessment_live_23894.json",
+      "bytes": 11794,
+      "sha256": "fd37821de59561bbda42bb1f633133b1e42c8115c06fe5444df99eb3dc0324c6"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_conversion_terminal_23892.json",
+      "bytes": 51443,
+      "sha256": "d9f080230ac29e712895482bc4fd1b53e513380530bf6a034f0cea10bb9c0183"
+    }
+  ],
+  "unique_records_in_original_admission": 1638,
+  "original_admission_checked_record_count": 3981,
+  "scheduler": {
+    "command": [
+      "sacct",
+      "-j",
+      "23894",
+      "-n",
+      "-P",
+      "--format=JobIDRaw,State,ExitCode,ElapsedRaw,AllocCPUS,ReqMem,NodeList"
+    ],
+    "raw": "23894|COMPLETED|0:0|1836|8|64G|bizon\n23894.batch|COMPLETED|0:0|1836|8||bizon\n",
+    "rows": [
+      [
+        "23894",
+        "COMPLETED",
+        "0:0",
+        "1836",
+        "8",
+        "64G",
+        "bizon"
+      ],
+      [
+        "23894.batch",
+        "COMPLETED",
+        "0:0",
+        "1836",
+        "8",
+        "",
+        "bizon"
+      ]
+    ],
+    "controller_raw": "JobId=23894 JobName=ohmm_qfo_fault_review_assess08 UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=COMPLETED Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:30:36 TimeLimit=04:00:00 TimeMin=N/A SubmitTime=2026-10-06T19:51:09 EligibleTime=2026-10-06T19:53:54 AccrueTime=2026-10-06T19:53:54 StartTime=2026-10-06T19:53:54 EndTime=2026-10-06T20:24:30 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-06T19:53:54 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:2243245 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=8 AllocTRES=cpu=8,mem=64G,node=1,billing=8 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assess08_20261006.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_23894.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_23894.out TresPerTask=cpu=8 \n",
+    "controller_fields": {
+      "JobId": "23894",
+      "JobName": "ohmm_qfo_fault_review_assess08",
+      "UserId": "bizon(1000)",
+      "GroupId": "bizon(1000)",
+      "MCS_label": "N/A",
+      "Priority": "1",
+      "Nice": "0",
+      "Account": "(null)",
+      "QOS": "normal",
+      "JobState": "COMPLETED",
+      "Reason": "None",
+      "Dependency": "(null)",
+      "Requeue": "0",
+      "Restarts": "0",
+      "BatchFlag": "1",
+      "Reboot": "0",
+      "ExitCode": "0:0",
+      "RunTime": "00:30:36",
+      "TimeLimit": "04:00:00",
+      "TimeMin": "N/A",
+      "SubmitTime": "2026-10-06T19:51:09",
+      "EligibleTime": "2026-10-06T19:53:54",
+      "AccrueTime": "2026-10-06T19:53:54",
+      "StartTime": "2026-10-06T19:53:54",
+      "EndTime": "2026-10-06T20:24:30",
+      "Deadline": "N/A",
+      "SuspendTime": "None",
+      "SecsPreSuspend": "0",
+      "LastSchedEval": "2026-10-06T19:53:54",
+      "Scheduler": "Main",
+      "Partition": "gpu",
+      "AllocNode:Sid": "bizon-link:2243245",
+      "ReqNodeList": "bizon",
+      "ExcNodeList": "(null)",
+      "NodeList": "bizon",
+      "BatchHost": "bizon",
+      "NumNodes": "1",
+      "NumCPUs": "8",
+      "NumTasks": "1",
+      "CPUs/Task": "8",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqTRES": "cpu=8,mem=64G,node=1,billing=8",
+      "AllocTRES": "cpu=8,mem=64G,node=1,billing=8",
+      "Socks/Node": "*",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "CoreSpec": "*",
+      "MinCPUsNode": "8",
+      "MinMemoryNode": "64G",
+      "MinTmpDiskNode": "0",
+      "Features": "(null)",
+      "DelayBoot": "00:00:00",
+      "OverSubscribe": "OK",
+      "Contiguous": "0",
+      "Licenses": "(null)",
+      "Network": "(null)",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/fault_reviewed_native_qfo_assess08_20261006.sh",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "Comment": "acaeca1238255957ae65a2308f513c7c70ac4a88753215e104658831ed34fa57",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_23894.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/fault_assess08_23894.out",
+      "TresPerTask": "cpu=8"
+    }
+  },
+  "assessment_outputs": 32,
+  "native_tasks": [
+    {
+      "%cpu": "99.9%",
+      "duration": "16.7s",
+      "exit": "0",
+      "hash": "e6/d48370",
+      "name": "validate_input_file",
+      "native_id": "2253685",
+      "peak_rss": "1.5 GB",
+      "peak_vmem": "1.5 GB",
+      "rchar": "213.4 MB",
+      "realtime": "16.4s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:11.492",
+      "task_id": "1",
+      "wchar": "740 B"
+    },
+    {
+      "%cpu": "-",
+      "duration": "3ms",
+      "exit": "-",
+      "hash": "88/df0364",
+      "name": "scheduleMetrics (3)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.203",
+      "task_id": "5",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "10ms",
+      "exit": "-",
+      "hash": "b0/34e076",
+      "name": "scheduleMetrics (2)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.205",
+      "task_id": "4",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "9ms",
+      "exit": "-",
+      "hash": "ba/0a56f6",
+      "name": "scheduleMetrics (1)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.213",
+      "task_id": "2",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "97ms",
+      "exit": "-",
+      "hash": "71/ef368a",
+      "name": "scheduleMetrics (4)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.218",
+      "task_id": "6",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "97ms",
+      "exit": "-",
+      "hash": "21/e4335e",
+      "name": "scheduleMetrics (5)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "0ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.220",
+      "task_id": "7",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "99ms",
+      "exit": "-",
+      "hash": "ba/b50ff8",
+      "name": "scheduleMetrics (6)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.221",
+      "task_id": "8",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "99.8%",
+      "duration": "1m 41s",
+      "exit": "0",
+      "hash": "43/9d7641",
+      "name": "convertPredictions",
+      "native_id": "2255345",
+      "peak_rss": "1.5 GB",
+      "peak_vmem": "1.5 GB",
+      "rchar": "2.1 GB",
+      "realtime": "1m 41s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:54:28.188",
+      "task_id": "3",
+      "wchar": "2.2 GB"
+    },
+    {
+      "%cpu": "89.4%",
+      "duration": "3.7s",
+      "exit": "0",
+      "hash": "f4/f52bb7",
+      "name": "vgnc_benchmark (1)",
+      "native_id": "2261070",
+      "peak_rss": "58.5 MB",
+      "peak_vmem": "74.4 MB",
+      "rchar": "69.2 MB",
+      "realtime": "3.1s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:09.100",
+      "task_id": "9",
+      "wchar": "583.6 KB"
+    },
+    {
+      "%cpu": "97.6%",
+      "duration": "10s",
+      "exit": "0",
+      "hash": "42/3dca4f",
+      "name": "reference_genetrees_benchmark (SwissTrees)",
+      "native_id": "2261081",
+      "peak_rss": "283.1 MB",
+      "peak_vmem": "2.8 GB",
+      "rchar": "219.4 MB",
+      "realtime": "9.6s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:09.112",
+      "task_id": "13",
+      "wchar": "13.1 MB"
+    },
+    {
+      "%cpu": "98.3%",
+      "duration": "24.5s",
+      "exit": "0",
+      "hash": "80/abf6e8",
+      "name": "reference_genetrees_benchmark (TreeFam-A)",
+      "native_id": "2261098",
+      "peak_rss": "532.5 MB",
+      "peak_vmem": "2.9 GB",
+      "rchar": "222.7 MB",
+      "realtime": "24s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:09.138",
+      "task_id": "14",
+      "wchar": "15 MB"
+    },
+    {
+      "%cpu": "100.2%",
+      "duration": "53.9s",
+      "exit": "0",
+      "hash": "18/0b4174",
+      "name": "ec_benchmark (1)",
+      "native_id": "2262929",
+      "peak_rss": "496.5 MB",
+      "peak_vmem": "2.8 GB",
+      "rchar": "27.2 MB",
+      "realtime": "53.5s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:12.850",
+      "task_id": "10",
+      "wchar": "16.6 MB"
+    },
+    {
+      "%cpu": "100.0%",
+      "duration": "2m 52s",
+      "exit": "0",
+      "hash": "41/11663d",
+      "name": "go_benchmark (1)",
+      "native_id": "2261059",
+      "peak_rss": "1 GB",
+      "peak_vmem": "2.8 GB",
+      "rchar": "42.2 MB",
+      "realtime": "2m 51s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:09.088",
+      "task_id": "11",
+      "wchar": "28.6 MB"
+    },
+    {
+      "%cpu": "263.8%",
+      "duration": "28m 1s",
+      "exit": "0",
+      "hash": "e3/710430",
+      "name": "fas_benchmark (1)",
+      "native_id": "2261089",
+      "peak_rss": "34.2 GB",
+      "peak_vmem": "37.4 GB",
+      "rchar": "154.5 GB",
+      "realtime": "28m 1s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 19:56:09.123",
+      "task_id": "12",
+      "wchar": "486.5 MB"
+    },
+    {
+      "%cpu": "171.7%",
+      "duration": "3.9s",
+      "exit": "0",
+      "hash": "52/3a96fd",
+      "name": "consolidate",
+      "native_id": "2379865",
+      "peak_rss": "93 MB",
+      "peak_vmem": "517.6 MB",
+      "rchar": "33.1 MB",
+      "realtime": "3.5s",
+      "status": "COMPLETED",
+      "submit": "2026-10-06 20:24:10.237",
+      "task_id": "15",
+      "wchar": "443.5 KB"
+    }
+  ],
+  "scores": {
+    "VGNC": 0.6474454783600919,
+    "SwissTrees": 0.6857094982951092,
+    "TreeFam-A": 0.633663907166237,
+    "GO": 0.47053999,
+    "EC": 0.92062409,
+    "FAS": 0.7503031363650162
+  },
+  "endpoint_details": {
+    "VGNC": {
+      "statistic": "F1",
+      "native_standard_errors": {
+        "stderr_x": 0.004625642982393395,
+        "stderr_y": 0.005001468812790164
+      },
+      "precision": 0.5260779858444984,
+      "recall": 0.8416060833960057
+    },
+    "SwissTrees": {
+      "statistic": "F1",
+      "native_standard_errors": {
+        "stderr_x": 0.030140472,
+        "stderr_y": 0.023683146
+      },
+      "precision": 0.60870556,
+      "recall": 0.7850177
+    },
+    "TreeFam-A": {
+      "statistic": "F1",
+      "native_standard_errors": {
+        "stderr_x": 0.0066303637,
+        "stderr_y": 0.00661146
+      },
+      "precision": 0.79005316,
+      "recall": 0.52895788
+    },
+    "GO": {
+      "statistic": "avg Schlicker",
+      "native_standard_errors": {
+        "stderr_x": 0,
+        "stderr_y": 0.0011220342
+      },
+      "assessed_relations": 166331
+    },
+    "EC": {
+      "statistic": "avg Schlicker",
+      "native_standard_errors": {
+        "stderr_x": 0,
+        "stderr_y": 0.00087300279
+      },
+      "assessed_relations": 201823
+    },
+    "FAS": {
+      "statistic": "FAS",
+      "native_standard_errors": {
+        "stderr_x": 0,
+        "stderr_y": 0.001005108463181881
+      },
+      "assessed_relations": 11734021
+    }
+  },
+  "secondary_six_metric_mean": 0.6847143500310757,
+  "prediction_semantics": "cross-species group-derived clique pairs",
+  "pair_coverage": {
+    "accessions_in_any_pair": 585610,
+    "definition": "fraction of all inference input accessions present in at least one submitted pair",
+    "fraction_inputs_in_any_pair": 0.595049266514723,
+    "input_accessions": 984137,
+    "pair_rows": 11734021
+  },
+  "fas_sample": {
+    "maximum_sample_protein_degree": 5,
+    "mean": 0.7503031363650162,
+    "native_pair_iid_sem": 0.001005108463181881,
+    "proteins_in_multiple_sample_pairs": 5805,
+    "raw": {
+      "bytes": 382419,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/full_native_08/results/FAS/FAS_ohmm-qfo-full-native-p0-c1-r0_raw.txt.gz",
+      "sha256": "f0d8b802b1333e50418edd60bfbd24e225f1e2b4c98f00f36d6988590fc94f96"
+    },
+    "reported_eligible_pairs": 11734021,
+    "sample_fraction": 0.0028073070603845006,
+    "sample_membership_verified": true,
+    "sample_pairs": 32941,
+    "sample_proteins": 59434
+  },
+  "accuracy_admitted": true,
+  "native_inference_reexecuted": false,
+  "automatic_retry": false,
+  "next_identity_authorized": false,
+  "scientific_timings_admitted": false,
+  "publication_ready": false,
+  "output_capture_note": {
+    "previous_extra_binding_cli_exit_code": 0,
+    "previous_json_stdout_truncated_by_observation_limit": true,
+    "current_export": "fresh small direct metadata checks; transitive records remain in the pinned original admission",
+    "expensive_raw_binding_scan_repeated": false
+  },
+  "limitations": [
+    "Six native endpoints on development-exposed QfO; not independent biological validation.",
+    "Only VGNC, SwissTrees and TreeFam-A summaries are F1; GO/EC similarity and FAS are not F1.",
+    "The six-endpoint mean is a project-defined secondary summary, not official QfO F1.",
+    "Native SEMs do not establish independent-family or paired-method confidence intervals.",
+    "FAS eligible population is not all predictions; sample membership/arithmetic does not prove annotation completeness or sample representativeness.",
+    "Frozen manifest files are rechecked; this is not a new hermetic host-runtime closure certification.",
+    "Empty predictions and failed assessments are retained; missing scores are not imputed.",
+    "Scoring interval is separate from inference/conversion and is not an isolated-performance estimate."
+  ]
+}

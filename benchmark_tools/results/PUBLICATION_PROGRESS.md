@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Candidate-Expansion QfO Accuracy Admitted (2026-10-06)
+
+Same23894 completes0:0/30:36; unchanged original admission1e13da48 runs once
+and accepts all six endpoints, trace/output inventory/provenance and FAS sample.
+Ordinary admission7e830778/1324700bytes binds22444/index8/p0_c1_r0 and23892
+conversion. No inference, source change or score imputation. Extra binding CLI
+completes0 but stdout is truncated; retain the observation fault in lightweight
+terminal readback rather than repeating expensive raw scan. Saved original
+admission is authoritative for3981 checked records/1638 unique paths.
+
+[Scientific milestone](FULL_NATIVE_QFO_CANDIDATE_RESULT_20261006.md): newVGNC/
+SwissTrees/TreeFam-A F1=.6474454784/.6857094983/.6336639072; GO/EC similarities
+.47053999/.92062409; FAS.7503031364; secondarymean.6847143500 isnotF1.
+11734021 submitted clique pairs cover585610/984137=.5950492665. Compared to
+P0C0R0, higher coverage/TreeFam-A but lower other summaries; no uniform gain,
+paired significance, new independent validation or default tuning claimed.
+
+Original exporter creates newv2 seven-identity table/report7916d3e,3 admitted
+rows including recovered failed-timing7; earlier two rows exactly matchv1.
+Recovered resources staynull/eligibilityfalse. Four missing rows staynull;
+9 is retained pre-native infrastructure failure,10-12 unrun.224 reporting/
+assessment/endpoint tests pass2.69s/zero failures/errors/skips. All old scientific
+reports/fixtures/failures/manuscript evidence remain unchanged.
+
+Current:23894 and23897 are terminal successful; do not monitor them as live,
+restart or resubmit. Real allocated-core collector/replay fixture is verified,
+but full native controller/reviewer/request/conversion/admission integration
+still required before remaining native identities. Preserve frozen science,
+all accounting gates and shared-host unknown contention limits. Goal active;
+full publication completion remains unproven.
+
 ## Real Allocated-Core Fixture Replayed; QfO Scoring Completed (2026-10-06)
 
 Pushedbb0a5d05 before one actual23897 release. Fresh held owner/comment/source/

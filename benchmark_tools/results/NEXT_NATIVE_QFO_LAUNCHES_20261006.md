@@ -1,5 +1,25 @@
 # Remaining Native QfO Launches
 
+## Terminal Assessment And Current Next Action
+
+23894 is nowCOMPLETED0:0/30:36, not live. Original independent admission
+returnsfull_native_factorial_qfo_assessment_admitted in scientific3.10, saved
+7e830778/1324700bytes. Six endpoints, trace/output inventory/provenance/FAS
+sample pass. [Scientific result](FULL_NATIVE_QFO_CANDIDATE_RESULT_20261006.md)
+and newv2 score table preserve three admissions, null missing rows and failed
+timing recovery. No repeated inference/scoring/admission or new tuning.
+
+Allocated-core collector/replay is separately versioned and its actual fixture
+23897 completes0:0; independent terminal/replay/resource/topology verification
+passes. [Placement evidence](NATIVE_FACTORIAL_PLACEMENT_AMENDMENT_20261006.md)
+does not yet cover the new production native controller, reviewer, request and
+conversion/admission route. Complete that integration before remaining10-12,
+preserving scientific settings/inputs/order/counts/limits/cost semantics and
+historical sources.9 stays reviewed pre-native failure, no automatic retry.
+Neither23894 nor23897 is a waiting state anymore. Noquiet/DGX gate or pause.
+
+Older launch/checkpoint entries below are retained history, not current actions.
+
 ## Current Assessment Checkpoint
 
 Commit80e7edf3 is pushed before a single actual23894 release.
