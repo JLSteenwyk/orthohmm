@@ -40,6 +40,7 @@ def test_review_only_envelope_request_and_scientific_environment_preserved():
     assert "native_factorial_review_py310_20261004/bin/python" in text
     assert "-X faulthandler" in text and "PYTHONUNBUFFERED=1" in text
     assert "n >= 128*2**30" in text and "raw_meminfo=raw" in text
+    assert "require(n >= 128*2**30" in text and "assert n" not in text
     for name in ("PYTHONHOME", "PYTHONPATH", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"):
         assert "-u " + name in text
     assert "run_allocated_native_factorial_cost" not in text

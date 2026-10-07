@@ -42,6 +42,11 @@ pass in1.02s, zero failures/errors/skips: seven new batch checks and the
 existing17 allocated-review tests. Bash syntax and real CLI-help loading in
 the scientific Python3.10 environment pass. These are scheduling/component
 checks, not an actual full postprocessing review or missing native score.
+Before any submission, strengthen the RAM gate to an explicit `require`, not
+an optimization-dependent Python assertion. Retained v1 tests precede this
+change; [v2 validation](allocated_native_review_batch_tests_20261006_v2.xml)
+passes the same 24 cases in0.90s with no failures/errors/skips and a static
+guard against reintroducing `assert n`. No scientific reviewer is changed.
 
 The current native job remains live and will not be restarted. Conversion,
 assessment and independent accuracy admission require its actual reviewed
