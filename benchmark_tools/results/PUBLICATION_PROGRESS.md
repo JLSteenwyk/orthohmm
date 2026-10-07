@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Portable Model-Distance Replay Tested Before Selected Execution (2026-10-07)
+
+New current direct-review package/claim addendum pushedf43057a1. Genuine remaining
+goal7 work is now addressed prospectively by reproduce_swiss_model_divergence.py:
+15flat component files include12frozen scientific inputs/readers plus committed
+replay/guide/requirements. Existing immutable edge/rational functions are reused,
+not their historical Git/scheduler-dependent admission routines. Component/index
+and all183regular evidence payloads are checked before copied code/extraction.
+Replay is limited to distances/descriptors/bins and54retained count rows with
+9scores/6contrasts/bothTSVs/all15human rows. No inference, count readmission,
+bootstrap, uncertainty/default/timing repair or independent validation claim.
+Pinned Bio1.87/NumPy2.2.6 parser/runtime requirements and limits are explicit.
+
+23new wholly invented fixture tests pass;28joined replay/archive/PDF tests
+pass1.96s. Corrupt anchors/files/extra/duplicate/symlink/scope/pins, unsafe or
+incomplete archives, wrong arithmetic/TSV/presentation, occupied outputs and
+created-attempt failure retention are covered. No selected portable build or
+actual relocated replay has occurred yet. New source/guide/requirements/tests
+are currently uncommitted; original readers and result hashes stay unchanged.
+
+Exact next action: commit/push ONLY these tested new files and checkpoint before
+ONE selected build from that exact commit into a fresh namespace. Retain the
+external component index digest, move verified regular payloads outside the
+checkout, byte-check copied replay/readers and execute ONCE with existing
+Py3.10.13 -I -B. Block original scientific source/logical-input paths and
+subprocess launches during that actual replay; runtime site-packages remain
+explicitly allowed. Record the guard and result accurately, not OS containment.
+Retain any actual failure; do not retry automatically or rerun IQ-TREE/raw scores.
+
+Dependency-only work: SAME23902 RUNNING9:23:50, SAME23910 PENDING/Dependency.
+No terminal/review/admission. Inspect changing handles alongside portable work;
+successful terminal native/review precedes conversion/scoring/admission and
+unrun11/12. Retain9failure, no duplicate/restart/re-release. Full goalACTIVE.
+
 ## New Error-Stratum Direct Review Restored And Verified (2026-10-07)
 
 New21page manuscript/actual page review pushed3aaf36a4. Existing unchanged
