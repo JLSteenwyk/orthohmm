@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Unrun Native11 Job23985 Prepared And HELD (2026-10-07)
+
+Native10 score/report milestone465cff22 committed/pushed. New11 request,
+output and session absent; no project native job in queue. Available RAM
+499,113,881,600bytes at launch precheck, not a throughout-run guarantee.
+Submitted ONE held23985 on original frozen64CPU128G26h/no-requeue route;
+no new scientific source, settings, inputs or identity9 retry.
+
+UNCHANGED request constructor succeeded with amendment10cc9939, original
+10-prefix plus original successful fullreview7eab212d for10. It performs
+original binding/history/scheduler/safeRAM checks. Request11 external path
+benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json,
+52,941bytes/SHA7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1.
+Own held-job Comment set to that digest. Actualheld command/ownership/cwd/
+resources/Comment verified. Heldreceipt allocated_native_factorial_held_23985.json
+retains preparation command and actual controller observation. No release yet.
+
+Next: focused diff/commit/push heldreceipt/checkpoint, recheck SAME23985 held
+envelope/comment and safe availableRAM, release ONCE and retain actual release/
+startup observations. Then same23985 through terminal/review/conversion/scoring/
+admission, with12 sequential behind reviewed11. Ordinary shared contention
+accepted; no user/DGX/quiet-host gate. Do not resubmit. Full goal ACTIVE.
+
+Independent work newly possible after native10 admission: use existing Swiss
+raw-count auditors/binder to add P1C0R1 and its conditional profile-refinement
+contrast at C0/R1, reusing frozen18-family draws/42-endpoint adjustment.
+Inspect route/schema compatibility before execution; preserve original sources,
+counts/bootstrap/failures. Other-endpoint uncertainty remains unresolved.
+Currentuncommitted heldreceipt/checkpoint; no foreground session.
+
 ## Native10 Independently Admitted And Four-Cell Scores Exported (2026-10-07)
 
 SAME admission23984 COMPLETED0:0/3:00/end15:20:18; actual result9fa1f24a/
