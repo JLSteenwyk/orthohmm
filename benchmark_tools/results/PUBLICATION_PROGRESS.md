@@ -1,5 +1,58 @@
 # Publication Progress
 
+## User-Requested Recovery Contract Fix; Native10 Review Failed (2026-10-07)
+
+The goal tool reports ACTIVE and still points to the editable attachment at
+/home/bizon/.codex/attachments/c53784d4-1029-4fd4-9dfb-dea6a2632e17/pasted-text-1.txt.
+Shared-Threadripper contention was already authorized; it is not a newly
+discovered timing-host gate. The earlier sandbox failure prevented tools from
+executing and was not repaired by a prompt edit. Current permitted local tools
+work. No private lifecycle state, services or scheduler configuration changed.
+
+User now requests correction for recurring stops. Both current instruction
+copies add scoped failure recovery: preserve failed evidence, immediately
+diagnose using retained data/contracts, distinguish pipeline from validator
+defects, never treat terminal failures as live waits, and continue independent
+work. Frozen sources remain immutable; any permitted repair must be a separate
+prospective tested version, with history authorization checked before launches.
+No weakened scientific gate, automatic retry or promise of dispatcher repair.
+All seven scientific sections and historical goal remain unchanged.
+
+Actual sacct confirms SAME23902 COMPLETED0:0, elapsed15:32:18, ended12:33:23;
+SAME23910 FAILED1:0, elapsed48:05, ended13:21:28 on2026-10-07. The review's
+benchmarks/work/allocated_native_factorial_terminal_review_23902_v1/failure.json
+reports ValueError: Native partition loses or adds input genes, index10,
+accuracy_evaluatedfalse, terminal_reviewedfalse, next_identity_authorizedfalse,
+automatic_retryfalse. The previous ledger's running-review instruction is
+superseded. Do not wait on23910 or rerun its heavy resource replay.
+
+Exact next executable action: read score_ygob_groups.py lines1-65 (root-HOG
+parser/membership), phylogeny_pipeline.py lines85-120 and1020-1158 (cluster/input
+loading and output coverage), then independently compare the984137 input IDs
+against root-HOG rows and retained pre/post-phylogeny cluster memberships.
+Identify missing/extra/duplicate IDs and per-species counts; establish whether
+the partition itself or parsing/output contract is wrong. A new formal helper
+should use invented fixtures and be committed/pushed before selected execution.
+Do not modify bound validators or production sources. Diagnosis is authorized
+work, not scoring or a retry. Retain all failed receipts; no new science jobs.
+
+Dependent conversion/scoring/admission for10 and history-dependent11/12 remain
+unauthorized until their contracts are satisfied. No implication that a failed
+review authorizes later identities. After diagnosis, inspect the supported
+prospective failure-history path; do not bypass next_identity_authorizedfalse.
+Retain9failure. Do not repeat the completed27-identity scaling panel, ordered
+Pfam/model-distance analyses or manuscript/archive reviews. Full goal ACTIVE;
+this bounded user-requested maintenance answer is not publication completion
+or a new requirement for user resumption. Current edits are the two prompt
+copies, focused prompt test and this checkpoint; validate and commit/push only
+the three repository files before handing this action to automatic continuation.
+
+Validation:33 focused goal-contract/shared-host tests pass0.82s, including
+actual attachment equality, unchanged scientific-scope/historical hashes and
+the new failed-validation recovery clauses. These tests verify instructions,
+not dispatcher behavior or scientific output validity. Scoped diff check is
+required; unrelated generated sample-output whitespace must remain untouched.
+
 ## Local Access Restored; Native10 Terminal, Existing Review Running (2026-10-07)
 
 Prior three goal continuations made no scientific progress because the new

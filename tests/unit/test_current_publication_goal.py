@@ -114,3 +114,21 @@ def test_direct_user_answer_does_not_complete_or_pause_the_full_goal():
         "never promise that editing this attachment repairs the dispatcher",
     ):
         assert instruction in contract
+
+
+def test_failed_validation_triggers_scoped_diagnosis_not_a_global_stop():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "Failure recovery is work, not an automatic whole-goal stop",
+        "stop ONLY dependent conversion/scoring/admission",
+        "immediately diagnose the failure using retained inputs, outputs",
+        "Distinguish pipeline defects from parser/validator defects",
+        "Do not leave a terminal job in a waiting checkpoint",
+        "no fabricated score, weakened validation or automatic retry",
+        "never edit a source or artifact bound to an existing attempt",
+        "a separate prospective version",
+        "check the existing history/authorization contract",
+        "bounded checks using already permitted tools",
+        "only if no meaningful permitted work remains",
+    ):
+        assert instruction in contract
