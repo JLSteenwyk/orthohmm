@@ -1,0 +1,34 @@
+{
+  "schema": "native10_qfo_admission_submission_v1",
+  "job_id": 23984,
+  "native_job_id": 23902,
+  "conversion_job_id": 23977,
+  "assessment_job_id": 23978,
+  "source_commit": "8b9420e6",
+  "batch_sha256": "8e1f7b2fe5e765b899fce0010c59ac31664c9f7a5cf436ab6ce092ae110cdd19",
+  "assessment_manifest_sha256": "c08db39eb2114bf5b835889f88642fd59c23cde765cee1d716b56bbcc3d9493e",
+  "submit_command": [
+    "sbatch",
+    "--hold",
+    "--parsable",
+    "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_qfo_admission_submission_20261007_v1/slurm-%j.log",
+    "benchmark_tools/results/native10_qfo_admission_20261007_v1.sh"
+  ],
+  "submit_stdout": "23984\n",
+  "submit_exit_code": 0,
+  "held_observation": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23984",
+      "--oneliner"
+    ],
+    "stdout": "JobId=23984 JobName=ohmm_native10_qfo_admit UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-07T15:16:55 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-07T15:16:55 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1197313 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native10_qfo_admission_20261007_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_qfo_admission_submission_20261007_v1/slurm-23984.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_qfo_admission_submission_20261007_v1/slurm-23984.log TresPerTask=cpu=2 \n",
+    "exit_code": 0
+  },
+  "status": "submitted_held_envelope_verified_not_released",
+  "automatic_retry": false,
+  "accuracy_admitted": false,
+  "native_inference_reexecuted": false
+}

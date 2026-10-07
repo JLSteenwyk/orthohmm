@@ -111,3 +111,14 @@ All984,137inputs remain in the coverage denominator;542,336occur in at least
 one predicted relation (fraction0.5510777462893885). This is relation coverage,
 not accuracy, recall or complete orthology recovery. No benchmark endpoint has
 yet been scored or independently admitted for this native attempt.
+
+## Assessment Outcome
+
+Assessment23978 completed0:0 in35:13, ended15:15:49. All six endpoints and
+consolidation completed exit0. The execution manifest has SHA256
+`c08db39eb2114bf5b835889f88642fd59c23cde765cee1d716b56bbcc3d9493e`,
+status `process_succeeded_pending_independent_admission` and32 output records.
+FAS took30m47s within the scoring workflow; this is not inference time.
+The separate independent admission23984 was submitted held, its2CPU32G6h
+envelope verified, and released once. Scores remain inadmissible until its
+frozen source/inventory/endpoint/FAS-sampling checks finish successfully.

@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native10 Assessment Completed; Independent Admission23984 Released (2026-10-07)
+
+Previous bounded user-response turn was a verified wait: actual assessment
+23978 was RUNNING. This continuation observed SAME23978 COMPLETED0:0,
+elapsed35:13/end15:15:49. All six endpoint tasks and consolidation completed
+exit0. Execution results SHA c08db39eb2114bf5b835889f88642fd59c23cde765cee1d716b56bbcc3d9493e,
+status process_succeeded_pending_independent_admission, exit_code0,
+accuracy_admitted=false,32 output records. FAS task elapsed30m47s; that is
+scoring cost, not inference or isolated tool performance.
+
+Confirmed admission/submission namespaces fresh and no existing project job.
+Submitted ONE held admission23984 using previously committed/pushed batch
+8e1f7b2f at8b9420e6. Actual held ownership/command/cwd/bizon/2CPU32G6h/
+no-requeue/Restarts0 verified. Submission receipt retained in
+native10_qfo_admission_submission_23984_20261007_v1.json. Released ONCE,
+exit0; immediately observed23984PENDING. Do not resubmit or release again.
+Output benchmarks/results/allocated_native_qfo_admission_v1/p1_c0_r1;
+stdout benchmarks/work/native10_qfo_admission_submission_20261007_v1/slurm-23984.log.
+
+Next action: inspect SAME23984 through actual terminal outcome and independent
+results.json. Successful process alone does not admit scores; require the
+frozen all-six-endpoint, inventory, FAS sampling and binding checks to succeed.
+Only then report native10 metrics/coverage/resources and advance genuinely
+unrun11/12 through the original reviewed history. Original23910 failure and
+identity9 failure retained; no inference retry or bound-source modification.
+No new prompt/old-panel/archive/fixture campaign. Full goal remains ACTIVE.
+Current task files uncommitted: this checkpoint and held admission receipt;
+focused commit/push now, then bounded actual waits on23984. No foreground session.
+
 ## Native10 Frozen Assessment23978 Running; Admission Batch Prepared (2026-10-07)
 
 Assessment batch/result/checkpoint committed/pushedd6829bb2. Fresh23978
