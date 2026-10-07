@@ -1,0 +1,34 @@
+{
+  "schema": "allocated_native_factorial_release_receipt_v1",
+  "job_id": 23985,
+  "index": 11,
+  "cell": "p1_c1_r0",
+  "request_sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1",
+  "source_commit": "a5a8af0d",
+  "available_memory_bytes": 499581669376,
+  "capacity_guaranteed_through_run": false,
+  "release_count": 1,
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "23985"
+    ],
+    "returncode": 0,
+    "stdout": ""
+  },
+  "post_release": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "23985",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stdout": "JobId=23985 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-07T15:26:36 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-07T15:26:36 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1219361 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_11_allocated-23985.log StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_run_11_allocated-23985.log TresPerTask=cpu=64 \n"
+  },
+  "automatic_retry": false,
+  "scientific_execution_succeeded": false,
+  "scientific_timings_admitted": false
+}

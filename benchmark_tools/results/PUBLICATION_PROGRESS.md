@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native11 Job23985 Released Once; Allocated Swiss Counts Need New Adapter (2026-10-07)
+
+Held preparation a5a8af0d committed/pushed. Rechecked SAME23985 held command/
+resources/ownership/request Comment using existing constructor's held_job;
+request7bf63b80 stillmatches. AvailableRAM499,581,669,376bytes. Released ONCE
+exit0; actual post-release23985PENDING/ReasonNone. New release receipt
+allocated_native_factorial_released_23985.json retains actual observation.
+Observe SAME23985, never duplicate/releaseagain. stdout
+benchmarks/work/native_factorial_launch_20261004/slurm_run_11_allocated-23985.log;
+output benchmarks/results/native_factorial_cost_v2_20261004/run_11;
+session benchmarks/results/native_factorial_cost_v2_20261004/sessions/run_11.
+No inferred startup/science success;12 remains sequential behind reviewed11.
+
+Independent next action: existing Swiss count auditor/binder reject allocated
+report schema/source/status. Preserve those selected sources. Add separate
+prospective allocated count adapter using actual four-cell reporting collector
+and unchanged family_cell kernel, selecting only newly admitted10 for raw
+readback. Add separately versioned binding adapter for allocated reporting
+plus original/recovered audits, reusing unchanged project/count/bootstrap
+kernels and frozen42-endpoint/100k draws. Focused tests before committing/
+pushing source, then one selected new audit and binder in fresh destinations.
+No relabelled oldschema/source, fake admission or oldraw recount. Newcount
+records mustmatch complete retained18families before any interval reuse.
+If different, report mismatch and null contrasts rather than cached interval.
+
+Currentuncommitted release receipt/this ledger; focused commit/push then
+inspect same23985 and implement genuine missing uncertainty handoff.
+Full seven-part goalACTIVE, shared-host uncertainty and all failures retained.
+
 ## Unrun Native11 Job23985 Prepared And HELD (2026-10-07)
 
 Native10 score/report milestone465cff22 committed/pushed. New11 request,
