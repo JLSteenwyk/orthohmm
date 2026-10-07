@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Current Four-Cell Claims Integrated And Checked (2026-10-07)
+
+Separate PUBLICATION_FOUR_CELL_CLAIMS_20261007.md completes current7.3 claim
+integration:8scientific/4reporting rows,32local links/22existingtrackedtargets
+allhashchecked through Pandoc AST. Direct binding check confirms new profile
+F1 effect/adjusted endpoints/1-16-1family counts. Negative/unknown scopes and
+other unmet requirements explicit. Oldchecklist/generator/v4main scoped diffs
+empty. No new science/rerun/default/readiness or archive claim.
+
+Next focused commit/push this addendum/checkpoint, then inspect SAME23985 and
+23986 authoritative state. New score/figure/mechanism/main/claim integration
+now complete at four-cell scope. Final11/12 result integration depends on
+actual outcomes/reviews/admission, not partial live evidence. Check outstanding
+requirements for another genuinely executable independent action once, then
+bounded actual waits30-300s/polls of these SAMEhandles if none. Do not repeat
+completed currentmanuscript/PDF/claims/figures/diagnostics/fixtures/searches/
+archives or revise prompts to fill a wait. At23985terminal the alreadyqueued
+23986review runs; inspect original review.json/failure.json and logs, diagnose
+failure if any, retain gates/noautomaticretry. Original nextidentity authority
+governs native12. FullgoalACTIVE/incomplete; no userresume/quietwindow/DGX.
+
+## Integrate Current Four-Cell Claims Without Rewriting Older Checklist (2026-10-07)
+
+3b1dc7ad pushed newmain checkedHTML/PDF/assets/all21pageimages/manualreview.
+Next independent7.3 action now underway: separate
+PUBLICATION_FOUR_CELL_CLAIMS_20261007.md. Existing PUBLICATION_CLAIMS_20261007.md
+is a bound earlier error-stratum checklist; preserve it. Add only current
+four-cell score/conditionaluncertainty/profilelocalization/documentreview
+claims with links to actual results and negative/unknown limits. No new
+science/default/missing-score substitution, whole-goalcompletionaudit or old
+archive rebuild. Check all new local evidence links and exact numerical
+claims, then focusedcommit/push. Afterward inspect same23985/23986 actual
+state and remaining independentrequirements; boundedwait if none executable.
+Lastactual native23985RUNNING1:32:54, initialsearch9.20% (not overallETA).
+Reviewer23986 is dependency-pending, not a terminal result. FullgoalACTIVE.
+
 ## Four-Cell V4 Render And All 21 PDF Pages Reviewed (2026-10-07)
 
 a0cf2805 prospective bibliography correction pushed before one new render.
