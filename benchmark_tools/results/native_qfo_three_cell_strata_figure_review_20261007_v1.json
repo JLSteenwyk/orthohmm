@@ -1,0 +1,34 @@
+{
+  "schema": "native_qfo_three_cell_strata_figure_visual_review_v1",
+  "source_commit_before_render": "4c7f6050",
+  "manifest_path": "benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/manifest.json",
+  "manifest_sha256": "e0157657d24ed39da8f8e39a41590311ec480537ac5aa35e06483d758ef85b02",
+  "figure_png_sha256": "9661d9a5958abf238a9e4c56c4e85cc5bd03a4b5855337fbf02b8f1d8efd3802",
+  "figure_pdf_sha256": "3a7805a1b1c069a98158f9add7cb2b0c21e08ee2a52bf5a450c97e2862712065",
+  "actual_render": {
+    "runtime": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B",
+    "source": "benchmark_tools/plot_native_qfo_three_cell_strata.py",
+    "source_sha256": "28af158a97372838b94b754e22d1b557522dba7377210b67b1bcadac05a9df65",
+    "output": "benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1",
+    "exit_code": 0,
+    "elapsed_seconds": 1.23,
+    "maximum_resident_kib": 98304,
+    "swaps": 0,
+    "plotted_points": 66,
+    "excluded_bins": 9,
+    "resource_scope": "Observed shared-host figure postprocessing, not inference resources or isolated efficiency."
+  },
+  "pdf_rasterization": {
+    "command": "pdftoppm -singlefile -png -scale-to 2240 benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/fixed_stratum_contrasts.pdf benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/pdf_page_1",
+    "exit_code": 0,
+    "path": "benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/pdf_page_1.png",
+    "bytes": 176321,
+    "sha256": "55b5317eb1fcc6e568400f073677c7b0a7a9054af2aeebc4ae08d39635334075"
+  },
+  "full_png_actually_viewed": true,
+  "full_pdf_page_raster_actually_viewed": true,
+  "review": "Both panels are nonblank and readable; all 11 stratum labels, n values, legend, axis labels and caption fit without overlap. All 66 descriptive points are visible. Different axis ranges are disclosed. No confidence whiskers or causal/default-selection claim is implied.",
+  "scope": "Manual visual review of this one error-stratum figure only, not full manuscript, scientific admission, transitive reproducibility, archival rights or publication readiness.",
+  "old_figures_or_archives_rebuilt": false,
+  "publication_ready": false
+}

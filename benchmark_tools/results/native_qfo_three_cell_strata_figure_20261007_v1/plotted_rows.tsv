@@ -1,0 +1,67 @@
+contrast	suite	stratum	families	label	metric	difference_pp
+R_at_P0_C0	sequence	all	18	All reference families (n=18)	F1	10.039037081913616
+R_at_P0_C0	sequence	all	18	All reference families (n=18)	PPV	30.52118719287774
+R_at_P0_C0	sequence	all	18	All reference families (n=18)	TPR	-6.533385473118047
+R_at_P0_C0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	F1	19.973579206752103
+R_at_P0_C0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	PPV	37.81832118573768
+R_at_P0_C0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	TPR	-1.7490816629806116
+R_at_P0_C0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	F1	0.42013402961231794
+R_at_P0_C0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	PPV	23.224053200017757
+R_at_P0_C0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	TPR	-11.317689283255472
+R_at_P0_C0	sequence	short_relative	7	Length: short-relative (n=7)	F1	7.731014333431396
+R_at_P0_C0	sequence	short_relative	7	Length: short-relative (n=7)	PPV	31.46530454902975
+R_at_P0_C0	sequence	short_relative	7	Length: short-relative (n=7)	TPR	-8.752520903814464
+R_at_P0_C0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	F1	11.380692443418006
+R_at_P0_C0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	PPV	29.920385238962822
+R_at_P0_C0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	TPR	-5.1212083808566895
+R_at_P0_C0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	F1	20.94631465473086
+R_at_P0_C0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	PPV	42.986577051913436
+R_at_P0_C0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	TPR	-1.2624190983838157
+R_at_P0_C0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	F1	4.890523013736903
+R_at_P0_C0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	PPV	24.288492263359874
+R_at_P0_C0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	TPR	-9.168868660485153
+R_at_P0_C0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	F1	9.136487764053491
+R_at_P0_C0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	PPV	37.39045944969527
+R_at_P0_C0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	TPR	-13.295526149968495
+R_at_P0_C0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	F1	10.20409075659552
+R_at_P0_C0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	PPV	29.14733274151423
+R_at_P0_C0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	TPR	-5.180957337747937
+R_at_P0_C0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	F1	14.29087890484907
+R_at_P0_C0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	PPV	32.61532239340045
+R_at_P0_C0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	TPR	-1.598337486369339
+R_at_P0_C0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	F1	5.620040278676064
+R_at_P0_C0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	PPV	28.42705199235499
+R_at_P0_C0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	TPR	-11.468433459866745
+C_at_P0_R0	sequence	all	18	All reference families (n=18)	F1	-0.3474463586167653
+C_at_P0_R0	sequence	all	18	All reference families (n=18)	PPV	-3.5234534667665574
+C_at_P0_R0	sequence	all	18	All reference families (n=18)	TPR	4.375165390143354
+C_at_P0_R0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	F1	-0.7357346409502807
+C_at_P0_R0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	PPV	-2.3452437081092903
+C_at_P0_R0	sequence	higher_entropy	9	Composition: higher entropy (n=9)	TPR	3.0792254774432037
+C_at_P0_R0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	F1	0.5991289590927873
+C_at_P0_R0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	PPV	-4.701663225423847
+C_at_P0_R0	sequence	lower_entropy	9	Composition: lower entropy (n=9)	TPR	5.671105302843538
+C_at_P0_R0	sequence	short_relative	7	Length: short-relative (n=7)	F1	-0.7034297464357353
+C_at_P0_R0	sequence	short_relative	7	Length: short-relative (n=7)	PPV	-2.8355466369605176
+C_at_P0_R0	sequence	short_relative	7	Length: short-relative (n=7)	TPR	1.9961710282140777
+C_at_P0_R0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	F1	-0.23613124937476027
+C_at_P0_R0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	PPV	-3.961212358461319
+C_at_P0_R0	sequence	not_short_relative	11	Length: not-short-relative (n=11)	TPR	5.889070893189263
+C_at_P0_R0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	F1	0.6433471869304097
+C_at_P0_R0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	PPV	-0.9584690302481769
+C_at_P0_R0	domain	median_pfam_types_at_least_two	6	Pfam types: median >=2 (n=6)	TPR	3.839030168914892
+C_at_P0_R0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	F1	-0.6724444296947851
+C_at_P0_R0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	PPV	-4.80594568502577
+C_at_P0_R0	domain	median_pfam_types_below_two	12	Pfam types: median <2 (n=12)	TPR	4.643233000757608
+C_at_P0_R0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	F1	0.9870847865354859
+C_at_P0_R0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	PPV	-1.0537697030751025
+C_at_P0_R0	domain	repeated_type_fraction_at_least_quarter	3	Repeated Pfam fraction: >=1/4 (n=3)	TPR	4.495744021872639
+C_at_P0_R0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	F1	-0.591406892191304
+C_at_P0_R0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	PPV	-4.017390219504846
+C_at_P0_R0	domain	repeated_type_fraction_below_quarter	15	Repeated Pfam fraction: <1/4 (n=15)	TPR	4.351049663797523
+C_at_P0_R0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	F1	-0.4671131198775602
+C_at_P0_R0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	PPV	-2.311219688288213
+C_at_P0_R0	duplication	lower_duplication_fraction	9	Reference duplication fraction: lower (n=9)	TPR	2.2072956772818064
+C_at_P0_R0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	F1	-0.2726128592839605
+C_at_P0_R0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	PPV	-4.7356872452449235
+C_at_P0_R0	duplication	upper_duplication_fraction	9	Reference duplication fraction: upper (n=9)	TPR	6.543035103004935

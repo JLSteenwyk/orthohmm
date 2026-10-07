@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Complete Fixed-Stratum Figure Rendered And Visually Reviewed (2026-10-07)
+
+Sources4c7f6050 pushed before ONEactualfigure render. Manifest e0157657
+binds66points=11nonempty nonredundant bins x2conditional contrasts x3metrics,
+exact inputreport55ed72ce/reader6f3eef63 and sources/outputs.9exclusions are
+5empty+4redundantall-familycopies, not outcome-based bin selection. Full
+tables remain complete. Descriptive dots only, different pp-axis ranges
+explicit; no interval, significance, causal/interaction, default promotion
+or independence claim. PNG9661d9a5/2240x1280, PDF3a7805a1/19057bytes,
+SVG3ca10582/textbearing and plottedTSVa973baca/6827bytes retained. Both full
+PNG and actualPDFpage raster55b5317e were actually viewed: alllabels/n values,
+legend, axes, caption and points fit without overlap/clipping. Scoped manual
+execution/visual receipt retained; actual1.23s/98304KiB is postprocessing.
+
+103joined tests pass3.07s for fixture and actual scientific/table/figure
+identities, complete66pointlabel/value replay, TSV, PDFtext/bounds, bothpanel
+pixels, current/pre-execution sourcebytes, failure history and preserved
+oldmain2804448c/rc5index66bc02d7. See
+[bounded figure delivery](NATIVE_QFO_THREE_CELL_STRATA_FIGURE_RESULT_20261007.md).
+No oldmain/archive/figure/920fixtures/raw/scorer replay or nativejob change.
+Commit/push ONLY newfigure5outputs/PDFpage raster/review/result/test/checkpoint.
+
+Original47requirement audit reread: it is historical evidence, not a new
+gate or completion percentage. Later24-tool provenance and source-export
+closure must not be repeated; YGOB is the authorized separate-clade route,
+not a newly required family-disjoint test. Real remaining science includes
+native per-cell costs, unresolved otherQfOintervals and limitations of actual
+divergence/history/fragment/domain descriptors. This three-cell projection
+does not convert proxies to validated truth or close those broader gaps.
+
+Latest SAME23902RUNNING5:31:13,23910PENDING/Dependency. Exact next changing
+prerequisite is actual native terminal and queuedreview, no retry/duplicate/
+release. Before settling into verified waits, inspect only existing
+generating-tree simulation summary/schema for an already-prespecified but
+unimplemented true-history error-stratum analysis (goal4.3); do not rerun
+completed simulation controls or launch a new campaign merely to fill time.
+If no genuine independent action is supported, use actual wait/sleep and
+poll SAMEhandles. Native-success-only conversion/scoring/admission follows
+review; unrun11/12 remain sequential behind retained history, no9retry.
+Full goal remains ACTIVE/incomplete, not stopped at this report milestone.
+
 ## Fixed-Stratum Figure Source Tested Before Selected Render (2026-10-07)
 
 Actual projection/readback/result/90tests were pushed e1de515c. New

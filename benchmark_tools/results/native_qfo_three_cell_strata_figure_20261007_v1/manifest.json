@@ -1,0 +1,743 @@
+{
+  "caption": "Dots are descriptive changes, not confidence intervals. Axes use different ranges, both in percentage points.\nAll 18 families are development-exposed; strata overlap. Empty bins and redundant all-family copies remain in the full tables.\nLength/composition, Pfam annotation and reference duplication descriptors are not causal biological validation.",
+  "checked_inputs": [
+    {
+      "bytes": 88759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+      "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+    },
+    {
+      "bytes": 9722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v2.json",
+      "sha256": "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
+    },
+    {
+      "bytes": 17179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_three_cell_strata.py",
+      "sha256": "e6d0980fc71636e4cf0ae0ba4decf13caff54ad502cd182d36b6db773fab6586"
+    },
+    {
+      "bytes": 19258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_three_cell_strata_v2.py",
+      "sha256": "8aa274427c65920f59fc43d5eeba0f2ef5f54ca52736b16c1e5c7bdd2b23cf5f"
+    },
+    {
+      "bytes": 10356,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_native_qfo_three_cell_strata.py",
+      "sha256": "28af158a97372838b94b754e22d1b557522dba7377210b67b1bcadac05a9df65"
+    }
+  ],
+  "excluded_bins": [
+    {
+      "families": 18,
+      "reason": "redundant_all_family_copy",
+      "stratum": "all",
+      "suite": "domain"
+    },
+    {
+      "families": 18,
+      "reason": "redundant_all_family_copy",
+      "stratum": "all",
+      "suite": "duplication"
+    },
+    {
+      "families": 0,
+      "reason": "empty_bin",
+      "stratum": "missing_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "families": 0,
+      "reason": "empty_bin",
+      "stratum": "concentrated",
+      "suite": "sequence"
+    },
+    {
+      "families": 0,
+      "reason": "empty_bin",
+      "stratum": "explicit_fragment",
+      "suite": "sequence"
+    },
+    {
+      "families": 0,
+      "reason": "empty_bin",
+      "stratum": "missing",
+      "suite": "sequence"
+    },
+    {
+      "families": 0,
+      "reason": "empty_bin",
+      "stratum": "missing_entropy",
+      "suite": "sequence"
+    },
+    {
+      "families": 18,
+      "reason": "redundant_all_family_copy",
+      "stratum": "no_explicit_fragment",
+      "suite": "sequence"
+    },
+    {
+      "families": 18,
+      "reason": "redundant_all_family_copy",
+      "stratum": "not_concentrated",
+      "suite": "sequence"
+    }
+  ],
+  "figure_inches": [
+    14,
+    8
+  ],
+  "independent_confirmation": false,
+  "inputs": {
+    "readback": {
+      "bytes": 9722,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_readback_20261007_v2.json",
+      "sha256": "6f3eef63c0e96e1d85805fcfb70ed9b66fbb1db76a08ca2a105483422a0f6969"
+    },
+    "report": {
+      "bytes": 88759,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_20261007_v1/report.json",
+      "sha256": "55ed72ce771c756424877cfa412da329ff104efb7dca4b35113b0d80703a59e5"
+    }
+  },
+  "matplotlib_version": "3.10.8",
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 0,
+  "new_uncertainty": false,
+  "outputs": [
+    {
+      "bytes": 6827,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/plotted_rows.tsv",
+      "sha256": "a973baca5db60248a24c88c8daedc8ad4a7ef55e5c6c5c977dc79a0b932cc9f7"
+    },
+    {
+      "bytes": 198487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/fixed_stratum_contrasts.png",
+      "sha256": "9661d9a5958abf238a9e4c56c4e85cc5bd03a4b5855337fbf02b8f1d8efd3802"
+    },
+    {
+      "bytes": 19057,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/fixed_stratum_contrasts.pdf",
+      "sha256": "3a7805a1b1c069a98158f9add7cb2b0c21e08ee2a52bf5a450c97e2862712065"
+    },
+    {
+      "bytes": 32680,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_three_cell_strata_figure_20261007_v1/fixed_stratum_contrasts.svg",
+      "sha256": "3ca105829aa8c3bdb7514c6b6645052af0c9aa7a28054ab2840946384f8abb23"
+    }
+  ],
+  "plotted_rows": [
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 10.039037081913616,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "F1",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 30.52118719287774,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "PPV",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -6.533385473118047,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "TPR",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 19.973579206752103,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "F1",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 37.81832118573768,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "PPV",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -1.7490816629806116,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "TPR",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 0.42013402961231794,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "F1",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 23.224053200017757,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "PPV",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -11.317689283255472,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "TPR",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 7.731014333431396,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "F1",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 31.46530454902975,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "PPV",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -8.752520903814464,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "TPR",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 11.380692443418006,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "F1",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 29.920385238962822,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "PPV",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -5.1212083808566895,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "TPR",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 20.94631465473086,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "F1",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 42.986577051913436,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "PPV",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -1.2624190983838157,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "TPR",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 4.890523013736903,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "F1",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 24.288492263359874,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "PPV",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -9.168868660485153,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "TPR",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 9.136487764053491,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "F1",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 37.39045944969527,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "PPV",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -13.295526149968495,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "TPR",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 10.20409075659552,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "F1",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 29.14733274151423,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "PPV",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -5.180957337747937,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "TPR",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 14.29087890484907,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "F1",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 32.61532239340045,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "PPV",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -1.598337486369339,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "TPR",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 5.620040278676064,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "F1",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": 28.42705199235499,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "PPV",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "R_at_P0_C0",
+      "difference_pp": -11.468433459866745,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "TPR",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.3474463586167653,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "F1",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -3.5234534667665574,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "PPV",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 4.375165390143354,
+      "families": 18,
+      "label": "All reference families (n=18)",
+      "metric": "TPR",
+      "stratum": "all",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.7357346409502807,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "F1",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -2.3452437081092903,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "PPV",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 3.0792254774432037,
+      "families": 9,
+      "label": "Composition: higher entropy (n=9)",
+      "metric": "TPR",
+      "stratum": "higher_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 0.5991289590927873,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "F1",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -4.701663225423847,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "PPV",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 5.671105302843538,
+      "families": 9,
+      "label": "Composition: lower entropy (n=9)",
+      "metric": "TPR",
+      "stratum": "lower_entropy",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.7034297464357353,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "F1",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -2.8355466369605176,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "PPV",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 1.9961710282140777,
+      "families": 7,
+      "label": "Length: short-relative (n=7)",
+      "metric": "TPR",
+      "stratum": "short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.23613124937476027,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "F1",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -3.961212358461319,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "PPV",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 5.889070893189263,
+      "families": 11,
+      "label": "Length: not-short-relative (n=11)",
+      "metric": "TPR",
+      "stratum": "not_short_relative",
+      "suite": "sequence"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 0.6433471869304097,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "F1",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.9584690302481769,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "PPV",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 3.839030168914892,
+      "families": 6,
+      "label": "Pfam types: median >=2 (n=6)",
+      "metric": "TPR",
+      "stratum": "median_pfam_types_at_least_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.6724444296947851,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "F1",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -4.80594568502577,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "PPV",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 4.643233000757608,
+      "families": 12,
+      "label": "Pfam types: median <2 (n=12)",
+      "metric": "TPR",
+      "stratum": "median_pfam_types_below_two",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 0.9870847865354859,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "F1",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -1.0537697030751025,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "PPV",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 4.495744021872639,
+      "families": 3,
+      "label": "Repeated Pfam fraction: >=1/4 (n=3)",
+      "metric": "TPR",
+      "stratum": "repeated_type_fraction_at_least_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.591406892191304,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "F1",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -4.017390219504846,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "PPV",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 4.351049663797523,
+      "families": 15,
+      "label": "Repeated Pfam fraction: <1/4 (n=15)",
+      "metric": "TPR",
+      "stratum": "repeated_type_fraction_below_quarter",
+      "suite": "domain"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.4671131198775602,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "F1",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -2.311219688288213,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "PPV",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 2.2072956772818064,
+      "families": 9,
+      "label": "Reference duplication fraction: lower (n=9)",
+      "metric": "TPR",
+      "stratum": "lower_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -0.2726128592839605,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "F1",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": -4.7356872452449235,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "PPV",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    },
+    {
+      "contrast": "C_at_P0_R0",
+      "difference_pp": 6.543035103004935,
+      "families": 9,
+      "label": "Reference duplication fraction: upper (n=9)",
+      "metric": "TPR",
+      "stratum": "upper_duplication_fraction",
+      "suite": "duplication"
+    }
+  ],
+  "png_dpi": 160,
+  "publication_ready": false,
+  "schema": "native_qfo_three_cell_strata_figure_v1",
+  "source": {
+    "bytes": 10356,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/plot_native_qfo_three_cell_strata.py",
+    "sha256": "28af158a97372838b94b754e22d1b557522dba7377210b67b1bcadac05a9df65"
+  },
+  "x_limits_pp": [
+    [
+      -15,
+      47
+    ],
+    [
+      -6,
+      8
+    ]
+  ]
+}
