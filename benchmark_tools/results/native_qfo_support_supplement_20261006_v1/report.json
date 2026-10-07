@@ -1,0 +1,2092 @@
+{
+  "accuracy_rescored": false,
+  "alias_readback": {
+    "bytes": 3942,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_readback_20261006_v1.json",
+    "sha256": "4afc4aa6853a69027b9dc710602309f44923315b1e68dbae4cd1e61866f4b92d"
+  },
+  "alias_report": {
+    "bytes": 24497,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/report.json",
+    "sha256": "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
+  },
+  "aliases_rederived": false,
+  "annotated_pairs": {
+    "bytes": 843587,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_support_20261006_v1/annotated_pairs.tsv",
+    "sha256": "07333b6ce3f7c563b08d084b9d7a514f0ab1c2d8d49885227284ac122ab35501"
+  },
+  "calibrated_confidence": false,
+  "causal_mechanism_established": false,
+  "checked_records": [
+    {
+      "bytes": 24497,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/report.json",
+      "sha256": "3b3ab8f1132e70362e1450ac990caf7a9dad536e528bc54d6af39db16183cd53"
+    },
+    {
+      "bytes": 3942,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_readback_20261006_v1.json",
+      "sha256": "4afc4aa6853a69027b9dc710602309f44923315b1e68dbae4cd1e61866f4b92d"
+    },
+    {
+      "bytes": 77022312,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_08/native/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "ec867165230af4b80e8df7d0227ccd5719910a41dcc83211022a7c265240dc48"
+    },
+    {
+      "bytes": 391881,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/changed_pair_groups.tsv",
+      "sha256": "3f0598f7e00cfc0942146604ab1863ad9f03f2d5017efd5244c7e76a29d43642"
+    },
+    {
+      "bytes": 14549,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_candidate_support.py",
+      "sha256": "6127234fb581446648100ee1565c5b07acc5165018a274fc232c2b822df2c7b1"
+    },
+    {
+      "bytes": 15480,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_support.py",
+      "sha256": "faa2e7a475ec23a72de584814f3a3eece39343557bb4a75d32a7a88f5c4d3f89"
+    },
+    {
+      "bytes": 4817,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_CANDIDATE_SUPPORT_PROTOCOL_20261006.md",
+      "sha256": "eb4112330dc7b4fc99a6ae3963bc7c8c19dd846f1fb7d24d0be26aa1fc8c82d7"
+    }
+  ],
+  "cohort_summaries": [
+    {
+      "cohort": "TP-only",
+      "events": 51,
+      "features": {
+        "forward_average": {
+          "finite": 51,
+          "maximum": 4.747329129512542,
+          "mean": 2.638301343600996,
+          "median": 3.3033600419374096,
+          "minimum": 0.09664601492778695,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 51,
+          "maximum": 41.0,
+          "mean": 8.712418300653594,
+          "median": 6.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 51,
+          "maximum": 41,
+          "mean": 9.627450980392156,
+          "median": 7,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 51,
+          "maximum": 5.467403590713354,
+          "mean": 3.354732953901412,
+          "median": 4.239616419310064,
+          "minimum": 0.13381696805343002,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 51,
+          "maximum": 24.91543964687043,
+          "mean": 6.957103191290994,
+          "median": 7.708574019192394,
+          "minimum": 0.04187068179258827,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 39,
+          "maximum": 23.845820408509375,
+          "mean": 3.552617038959983,
+          "median": 2.0279949454564434,
+          "minimum": 1.5270157331335368,
+          "missing": 0,
+          "positive_infinity": 12
+        },
+        "reverse_average": {
+          "finite": 51,
+          "maximum": 4.746204451545806,
+          "mean": 2.6084013166075692,
+          "median": 3.3155570820203115,
+          "minimum": 0.11601827414433796,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 51,
+          "maximum": 41.0,
+          "mean": 8.830065359477123,
+          "median": 6.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 51,
+          "maximum": 41,
+          "mean": 9.745098039215685,
+          "median": 6,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 51,
+          "maximum": 5.465567042647948,
+          "mean": 3.32958955754634,
+          "median": 4.239616419310064,
+          "minimum": 0.12814562069167856,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 51,
+          "maximum": 24.914944642249164,
+          "mean": 7.065106450011468,
+          "median": 7.682283157270891,
+          "minimum": 0.04225837329066779,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 51,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 51,
+          "maximum": 4,
+          "mean": 1.411764705882353,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 51,
+          "maximum": 1.0,
+          "mean": 0.30392156862745096,
+          "median": 0.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 51,
+          "maximum": 24.914944642249164,
+          "mean": 6.901023414261333,
+          "median": 7.682283157270891,
+          "minimum": 0.04187068179258827,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 51,
+          "maximum": 5,
+          "mean": 1.1568627450980393,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 51,
+          "maximum": 131,
+          "mean": 25.666666666666668,
+          "median": 17,
+          "minimum": 5,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": null
+    },
+    {
+      "cohort": "FP-only",
+      "events": 352,
+      "features": {
+        "forward_average": {
+          "finite": 352,
+          "maximum": 3.7644688255315284,
+          "mean": 0.7912308683026622,
+          "median": 0.5955917269091611,
+          "minimum": 0.08262122301936438,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 352,
+          "maximum": 76.88888888888889,
+          "mean": 9.043172491965105,
+          "median": 4.055555555555555,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 352,
+          "maximum": 721,
+          "mean": 72.4971590909091,
+          "median": 33.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 352,
+          "maximum": 5.01867966906693,
+          "mean": 1.2373230312104073,
+          "median": 0.9782337841760773,
+          "minimum": 0.11441833675815785,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 352,
+          "maximum": 55.141760150895124,
+          "mean": 3.0448294652634047,
+          "median": 1.1511309831231387,
+          "minimum": 0.03755752539525904,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 297,
+          "maximum": 51.72773087756577,
+          "mean": 4.749796007283142,
+          "median": 2.678003066450381,
+          "minimum": 1.501833680788618,
+          "missing": 0,
+          "positive_infinity": 55
+        },
+        "reverse_average": {
+          "finite": 352,
+          "maximum": 3.764468825531528,
+          "mean": 0.7989133943873292,
+          "median": 0.6108423994416075,
+          "minimum": 0.05087322763154207,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 352,
+          "maximum": 69.44444444444444,
+          "mean": 8.505346074380165,
+          "median": 3.784090909090909,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 352,
+          "maximum": 776,
+          "mean": 66.91761363636364,
+          "median": 30.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 352,
+          "maximum": 4.993653648469358,
+          "mean": 1.2409900194100265,
+          "median": 1.002866369945127,
+          "minimum": 0.07123140911288933,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 352,
+          "maximum": 54.481906701710386,
+          "mean": 2.9282940627574194,
+          "median": 1.076884048708159,
+          "minimum": 0.030518606847847386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 352,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 352,
+          "maximum": 12,
+          "mean": 8.491477272727273,
+          "median": 9.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 352,
+          "maximum": 1.0,
+          "mean": 0.9610543339236521,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 352,
+          "maximum": 54.481906701710386,
+          "mean": 2.8195689542646836,
+          "median": 0.9847760093495468,
+          "minimum": 0.030518606847847386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 352,
+          "maximum": 5,
+          "mean": 1.2698863636363635,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 352,
+          "maximum": 179,
+          "mean": 42.90625,
+          "median": 32.0,
+          "minimum": 8,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": null
+    },
+    {
+      "cohort": "mixed",
+      "events": 46,
+      "features": {
+        "forward_average": {
+          "finite": 46,
+          "maximum": 4.400401043080581,
+          "mean": 1.9364896658858697,
+          "median": 1.7606582743391372,
+          "minimum": 0.13255425041262922,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 46,
+          "maximum": 90.0,
+          "mean": 16.556451157538113,
+          "median": 12.5,
+          "minimum": 1.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 46,
+          "maximum": 193,
+          "mean": 30.956521739130434,
+          "median": 17.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 46,
+          "maximum": 5.520408163265306,
+          "mean": 3.0164499658175874,
+          "median": 2.5161107126218436,
+          "minimum": 0.15238148350241307,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 46,
+          "maximum": 24.65892839829189,
+          "mean": 6.499457264214214,
+          "median": 2.016114598878251,
+          "minimum": 0.0485300596038273,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 36,
+          "maximum": 56.34174714522592,
+          "mean": 6.14832749643069,
+          "median": 2.3299477026659217,
+          "minimum": 1.5491390511418173,
+          "missing": 0,
+          "positive_infinity": 10
+        },
+        "reverse_average": {
+          "finite": 46,
+          "maximum": 4.399947526056051,
+          "mean": 1.9135329932387335,
+          "median": 1.3802703770742344,
+          "minimum": 0.06439025197748244,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 46,
+          "maximum": 93.5,
+          "mean": 16.61085074345944,
+          "median": 10.5,
+          "minimum": 1.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 46,
+          "maximum": 192,
+          "mean": 29.717391304347824,
+          "median": 14.5,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 46,
+          "maximum": 5.520408163265306,
+          "mean": 3.011854105188478,
+          "median": 2.5183726496176186,
+          "minimum": 0.1047058155920386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 46,
+          "maximum": 24.65843339367063,
+          "mean": 6.414646835706763,
+          "median": 1.7981226182131957,
+          "minimum": 0.04742739209180737,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 46,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 46,
+          "maximum": 11,
+          "mean": 2.0434782608695654,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 46,
+          "maximum": 1.0,
+          "mean": 0.9021739130434783,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 46,
+          "maximum": 24.65843339367063,
+          "mean": 6.251898303173347,
+          "median": 1.7085563209672348,
+          "minimum": 0.04742739209180737,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 46,
+          "maximum": 5,
+          "mean": 1.7826086956521738,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 46,
+          "maximum": 226,
+          "mean": 59.78260869565217,
+          "median": 43.0,
+          "minimum": 7,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": null
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 40241,
+      "features": {
+        "forward_average": {
+          "finite": 40241,
+          "maximum": 5.623293819589492,
+          "mean": 0.7624491448139892,
+          "median": 0.4975587435123594,
+          "minimum": 0.023091883672725796,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 40241,
+          "maximum": 140.0,
+          "mean": 5.612518587056993,
+          "median": 2.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 40241,
+          "maximum": 1199,
+          "mean": 11.963122188812406,
+          "median": 4,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 40241,
+          "maximum": 5.667157265920143,
+          "mean": 0.994104476611936,
+          "median": 0.6372529878771661,
+          "minimum": 0.03292355857642539,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 40241,
+          "maximum": 94.89003657764546,
+          "mean": 1.5757296341649332,
+          "median": 0.32565946670504387,
+          "minimum": 0.030002493839033705,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 19818,
+          "maximum": 683.5571981234368,
+          "mean": 3.9383034257182836,
+          "median": 2.4847603195302392,
+          "minimum": 1.5000445696579798,
+          "missing": 0,
+          "positive_infinity": 20423
+        },
+        "reverse_average": {
+          "finite": 40241,
+          "maximum": 5.334812425928981,
+          "mean": 0.7840039698466669,
+          "median": 0.5169583069753488,
+          "minimum": 0.013647049710015876,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 40241,
+          "maximum": 147.0,
+          "mean": 5.502133338912992,
+          "median": 2.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 40241,
+          "maximum": 1203,
+          "mean": 11.46499838473199,
+          "median": 3,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 40241,
+          "maximum": 5.667157265920143,
+          "mean": 1.0142205609049002,
+          "median": 0.6642857142857143,
+          "minimum": 0.019901174716943516,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 40241,
+          "maximum": 94.43735343538096,
+          "mean": 1.4730118905588963,
+          "median": 0.32780997954530344,
+          "minimum": 0.030003063627121407,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 40241,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 40241,
+          "maximum": 12,
+          "mean": 2.0622996446410378,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 40241,
+          "maximum": 1.0,
+          "mean": 0.5690275389121094,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 40241,
+          "maximum": 94.43735343538096,
+          "mean": 1.3702627469797204,
+          "median": 0.2732556135539276,
+          "minimum": 0.030002493839033705,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 40241,
+          "maximum": 6,
+          "mean": 1.56956835068711,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 40241,
+          "maximum": 230,
+          "mean": 32.61106831341169,
+          "median": 22,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": null
+    },
+    {
+      "cohort": "TP-only",
+      "events": 49,
+      "features": {
+        "forward_average": {
+          "finite": 49,
+          "maximum": 4.747329129512542,
+          "mean": 2.5902362609019822,
+          "median": 2.801595192171292,
+          "minimum": 0.09664601492778695,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 49,
+          "maximum": 35.0,
+          "mean": 7.4557823129251695,
+          "median": 6.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 49,
+          "maximum": 35,
+          "mean": 8.408163265306122,
+          "median": 7,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 49,
+          "maximum": 5.467403590713354,
+          "mean": 3.3095579295584803,
+          "median": 4.237352139745103,
+          "minimum": 0.13381696805343002,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 49,
+          "maximum": 22.065266005226253,
+          "mean": 6.309446256841864,
+          "median": 7.47615421554978,
+          "minimum": 0.04187068179258827,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 37,
+          "maximum": 23.845820408509375,
+          "mean": 3.592459995113719,
+          "median": 2.0197714830471893,
+          "minimum": 1.5270157331335368,
+          "missing": 0,
+          "positive_infinity": 12
+        },
+        "reverse_average": {
+          "finite": 49,
+          "maximum": 4.746204451545806,
+          "mean": 2.5591022132339125,
+          "median": 2.855940689301263,
+          "minimum": 0.11601827414433796,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 49,
+          "maximum": 35.0,
+          "mean": 7.578231292517007,
+          "median": 6.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 49,
+          "maximum": 35,
+          "mean": 8.53061224489796,
+          "median": 6,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 49,
+          "maximum": 5.465567042647948,
+          "mean": 3.283388272127692,
+          "median": 4.237352139745103,
+          "minimum": 0.12814562069167856,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 49,
+          "maximum": 22.05899957694824,
+          "mean": 6.4217837227807655,
+          "median": 7.47615421554978,
+          "minimum": 0.04225837329066779,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 49,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 49,
+          "maximum": 4,
+          "mean": 1.4285714285714286,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 49,
+          "maximum": 1.0,
+          "mean": 0.2755102040816326,
+          "median": 0.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 49,
+          "maximum": 22.05899957694824,
+          "mean": 6.251087611456324,
+          "median": 7.47615421554978,
+          "minimum": 0.04187068179258827,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 49,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 49,
+          "maximum": 131,
+          "mean": 24.918367346938776,
+          "median": 13,
+          "minimum": 5,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 0
+    },
+    {
+      "cohort": "FP-only",
+      "events": 322,
+      "features": {
+        "forward_average": {
+          "finite": 322,
+          "maximum": 3.7644688255315284,
+          "mean": 0.8052708392183826,
+          "median": 0.6309892015331228,
+          "minimum": 0.08372591438314254,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 322,
+          "maximum": 76.88888888888889,
+          "mean": 8.958372097191972,
+          "median": 4.055555555555555,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 322,
+          "maximum": 721,
+          "mean": 73.35093167701864,
+          "median": 33.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 322,
+          "maximum": 5.01867966906693,
+          "mean": 1.2544998449012699,
+          "median": 1.0142141399409939,
+          "minimum": 0.12173295413342357,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 322,
+          "maximum": 55.141760150895124,
+          "mean": 3.097806969439538,
+          "median": 1.2261892242389356,
+          "minimum": 0.03755752539525904,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 275,
+          "maximum": 51.72773087756577,
+          "mean": 4.732048828662725,
+          "median": 2.6738274649689835,
+          "minimum": 1.501833680788618,
+          "missing": 0,
+          "positive_infinity": 47
+        },
+        "reverse_average": {
+          "finite": 322,
+          "maximum": 3.764468825531528,
+          "mean": 0.8176932366896665,
+          "median": 0.6491466020834209,
+          "minimum": 0.07073339432999991,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 322,
+          "maximum": 69.44444444444444,
+          "mean": 8.506299799234583,
+          "median": 3.873015873015873,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 322,
+          "maximum": 776,
+          "mean": 68.6055900621118,
+          "median": 30.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 322,
+          "maximum": 4.993653648469358,
+          "mean": 1.261756520291434,
+          "median": 1.0442498645605833,
+          "minimum": 0.10015699523775574,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 322,
+          "maximum": 54.481906701710386,
+          "mean": 2.984408145604199,
+          "median": 1.151145072739602,
+          "minimum": 0.03837645910463671,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 322,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 322,
+          "maximum": 12,
+          "mean": 8.5527950310559,
+          "median": 9.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 322,
+          "maximum": 1.0,
+          "mean": 0.9599916646500497,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 322,
+          "maximum": 54.481906701710386,
+          "mean": 2.8713124331719215,
+          "median": 1.0390498090404805,
+          "minimum": 0.03755752539525904,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 322,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 322,
+          "maximum": 179,
+          "mean": 41.059006211180126,
+          "median": 30.5,
+          "minimum": 8,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 0
+    },
+    {
+      "cohort": "mixed",
+      "events": 37,
+      "features": {
+        "forward_average": {
+          "finite": 37,
+          "maximum": 4.400401043080581,
+          "mean": 1.913169467774674,
+          "median": 1.7587905220709068,
+          "minimum": 0.13255425041262922,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 37,
+          "maximum": 90.0,
+          "mean": 13.79013104013104,
+          "median": 9.0,
+          "minimum": 1.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 37,
+          "maximum": 180,
+          "mean": 24.783783783783782,
+          "median": 13,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 37,
+          "maximum": 5.520408163265306,
+          "mean": 2.9427520476600257,
+          "median": 2.311154003806507,
+          "minimum": 0.15238148350241307,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 37,
+          "maximum": 21.09911278632203,
+          "mean": 5.506328585377474,
+          "median": 1.484147986026014,
+          "minimum": 0.0485300596038273,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 28,
+          "maximum": 56.34174714522592,
+          "mean": 5.950940693825169,
+          "median": 2.261691251993721,
+          "minimum": 1.5491390511418173,
+          "missing": 0,
+          "positive_infinity": 9
+        },
+        "reverse_average": {
+          "finite": 37,
+          "maximum": 4.399947526056051,
+          "mean": 1.8787137813809742,
+          "median": 1.2382447591532353,
+          "minimum": 0.06439025197748244,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 37,
+          "maximum": 93.5,
+          "mean": 13.855446355446356,
+          "median": 9.0,
+          "minimum": 1.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 37,
+          "maximum": 187,
+          "mean": 24.243243243243242,
+          "median": 13,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 37,
+          "maximum": 5.520408163265306,
+          "mean": 2.9241922873755866,
+          "median": 2.492910301216533,
+          "minimum": 0.1047058155920386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 37,
+          "maximum": 21.09962684205265,
+          "mean": 5.337235112227529,
+          "median": 1.3227087753423226,
+          "minimum": 0.04742739209180737,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 37,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 37,
+          "maximum": 11,
+          "mean": 1.945945945945946,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 37,
+          "maximum": 1.0,
+          "mean": 0.9378378378378379,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 37,
+          "maximum": 21.09911278632203,
+          "mean": 5.241083531780594,
+          "median": 0.95371660124638,
+          "minimum": 0.04742739209180737,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 37,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 37,
+          "maximum": 226,
+          "mean": 54.24324324324324,
+          "median": 39,
+          "minimum": 7,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 0
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 33699,
+      "features": {
+        "forward_average": {
+          "finite": 33699,
+          "maximum": 5.623293819589492,
+          "mean": 0.7694065190617366,
+          "median": 0.5107572015974732,
+          "minimum": 0.030188012480179334,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 33699,
+          "maximum": 140.0,
+          "mean": 5.001630676414795,
+          "median": 2.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 33699,
+          "maximum": 1199,
+          "mean": 11.148372355262767,
+          "median": 3,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 33699,
+          "maximum": 5.667157265920143,
+          "mean": 0.9973347720067268,
+          "median": 0.6493459851303602,
+          "minimum": 0.03299544882739527,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 33699,
+          "maximum": 94.89003657764546,
+          "mean": 1.457091056027979,
+          "median": 0.3387012553524317,
+          "minimum": 0.0300571479417083,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 16905,
+          "maximum": 683.5571981234368,
+          "mean": 3.8838304985993775,
+          "median": 2.3852187880754987,
+          "minimum": 1.5000445696579798,
+          "missing": 0,
+          "positive_infinity": 16794
+        },
+        "reverse_average": {
+          "finite": 33699,
+          "maximum": 5.334812425928981,
+          "mean": 0.7894625180175258,
+          "median": 0.5271113136197386,
+          "minimum": 0.021525385587520443,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 33699,
+          "maximum": 147.0,
+          "mean": 4.963770124633206,
+          "median": 2.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 33699,
+          "maximum": 1203,
+          "mean": 10.866138461081931,
+          "median": 3,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 33699,
+          "maximum": 5.667157265920143,
+          "mean": 1.0162563817928711,
+          "median": 0.6736513647635319,
+          "minimum": 0.026009715891974372,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 33699,
+          "maximum": 94.43735343538096,
+          "mean": 1.3881267970667615,
+          "median": 0.3443192706905691,
+          "minimum": 0.030003063627121407,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 33699,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 33699,
+          "maximum": 12,
+          "mean": 2.0933262114602806,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 33699,
+          "maximum": 1.0,
+          "mean": 0.5433748082239136,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 33699,
+          "maximum": 94.43735343538096,
+          "mean": 1.287746394110315,
+          "median": 0.2887279710571866,
+          "minimum": 0.030003063627121407,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 33699,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 33699,
+          "maximum": 226,
+          "mean": 27.69286922460607,
+          "median": 18,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 0
+    },
+    {
+      "cohort": "TP-only",
+      "events": 2,
+      "features": {
+        "forward_average": {
+          "finite": 2,
+          "maximum": 3.8911379387602776,
+          "mean": 3.815895869726834,
+          "median": 3.815895869726834,
+          "minimum": 3.74065380069339,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 2,
+          "maximum": 41.0,
+          "mean": 39.5,
+          "median": 39.5,
+          "minimum": 38.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 2,
+          "maximum": 41,
+          "mean": 39.5,
+          "median": 39.5,
+          "minimum": 38,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 2,
+          "maximum": 4.496835443037975,
+          "mean": 4.4615210503032205,
+          "median": 4.4615210503032205,
+          "minimum": 4.426206657568467,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 2,
+          "maximum": 24.91543964687043,
+          "mean": 22.82469808529467,
+          "median": 22.82469808529467,
+          "minimum": 20.733956523718913,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 2,
+          "maximum": 3.168478756306526,
+          "mean": 2.8155223501158817,
+          "median": 2.8155223501158817,
+          "minimum": 2.4625659439252376,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_average": {
+          "finite": 2,
+          "maximum": 3.8910606320264227,
+          "mean": 3.8162293492621515,
+          "median": 3.8162293492621515,
+          "minimum": 3.7413980664978808,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 2,
+          "maximum": 41.0,
+          "mean": 39.5,
+          "median": 39.5,
+          "minimum": 38.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 2,
+          "maximum": 41,
+          "mean": 39.5,
+          "median": 39.5,
+          "minimum": 38,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 2,
+          "maximum": 4.496835443037975,
+          "mean": 4.4615210503032205,
+          "median": 4.4615210503032205,
+          "minimum": 4.426206657568467,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 2,
+          "maximum": 24.914944642249164,
+          "mean": 22.82651326716368,
+          "median": 22.82651326716368,
+          "minimum": 20.738081892078196,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 2,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 2,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 2,
+          "maximum": 1.0,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 2,
+          "maximum": 24.914944642249164,
+          "mean": 22.82445058298404,
+          "median": 22.82445058298404,
+          "minimum": 20.733956523718913,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 2,
+          "maximum": 5,
+          "mean": 5.0,
+          "median": 5.0,
+          "minimum": 5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 2,
+          "maximum": 47,
+          "mean": 44.0,
+          "median": 44.0,
+          "minimum": 41,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 1
+    },
+    {
+      "cohort": "FP-only",
+      "events": 30,
+      "features": {
+        "forward_average": {
+          "finite": 30,
+          "maximum": 3.4370040810604503,
+          "mean": 0.6405351804739279,
+          "median": 0.44319488612221897,
+          "minimum": 0.08262122301936438,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 30,
+          "maximum": 50.1,
+          "mean": 9.953363395863395,
+          "median": 3.9734848484848486,
+          "minimum": 0.5714285714285714,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 30,
+          "maximum": 501,
+          "mean": 63.333333333333336,
+          "median": 35.5,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 30,
+          "maximum": 4.906451612903226,
+          "mean": 1.0529585642618167,
+          "median": 0.6977365227573746,
+          "minimum": 0.11441833675815785,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 30,
+          "maximum": 22.139634803156653,
+          "mean": 2.4762042537729076,
+          "median": 0.6905418884700285,
+          "minimum": 0.07838137434297762,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 22,
+          "maximum": 35.7978735698833,
+          "mean": 4.971635740038355,
+          "median": 2.9628706448684823,
+          "minimum": 2.0295494677468375,
+          "missing": 0,
+          "positive_infinity": 8
+        },
+        "reverse_average": {
+          "finite": 30,
+          "maximum": 3.4368707434602452,
+          "mean": 0.5973430870089086,
+          "median": 0.37578617695746686,
+          "minimum": 0.05087322763154207,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 30,
+          "maximum": 44.0,
+          "mean": 8.495109427609428,
+          "median": 3.3181818181818183,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 30,
+          "maximum": 299,
+          "mean": 48.8,
+          "median": 29.0,
+          "minimum": 4,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 30,
+          "maximum": 4.906451612903226,
+          "mean": 1.0180962432829186,
+          "median": 0.7062226257327919,
+          "minimum": 0.07123140911288933,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 30,
+          "maximum": 22.727449684953996,
+          "mean": 2.3260029068686525,
+          "median": 0.6434078446645897,
+          "minimum": 0.030518606847847386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 30,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 30,
+          "maximum": 12,
+          "mean": 7.833333333333333,
+          "median": 8.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 30,
+          "maximum": 1.0,
+          "mean": 0.9724603174603175,
+          "median": 1.0,
+          "minimum": 0.75,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 30,
+          "maximum": 22.139634803156653,
+          "mean": 2.2641889473269936,
+          "median": 0.6103529612268352,
+          "minimum": 0.030518606847847386,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 30,
+          "maximum": 5,
+          "mean": 4.166666666666667,
+          "median": 5.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 30,
+          "maximum": 149,
+          "mean": 62.733333333333334,
+          "median": 51.5,
+          "minimum": 15,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 1
+    },
+    {
+      "cohort": "mixed",
+      "events": 9,
+      "features": {
+        "forward_average": {
+          "finite": 9,
+          "maximum": 4.202762363052842,
+          "mean": 2.0323615914541207,
+          "median": 2.059217720528275,
+          "minimum": 0.20942473614855445,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 9,
+          "maximum": 48.0,
+          "mean": 27.929100529100527,
+          "median": 33.0,
+          "minimum": 4.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 9,
+          "maximum": 193,
+          "mean": 56.333333333333336,
+          "median": 42,
+          "minimum": 8,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 9,
+          "maximum": 5.395437262357414,
+          "mean": 3.3194302960208972,
+          "median": 4.361563517915309,
+          "minimum": 0.26046122438011576,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 9,
+          "maximum": 24.65892839829189,
+          "mean": 10.582319610543028,
+          "median": 11.023624426377626,
+          "minimum": 0.13796695553969748,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 8,
+          "maximum": 30.784816038761825,
+          "mean": 6.839181305550014,
+          "median": 2.9863851991904458,
+          "minimum": 2.0590695751480546,
+          "missing": 0,
+          "positive_infinity": 1
+        },
+        "reverse_average": {
+          "finite": 9,
+          "maximum": 4.202952766360002,
+          "mean": 2.0566786419873,
+          "median": 1.9685804020002406,
+          "minimum": 0.22281825821754084,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 9,
+          "maximum": 59.0,
+          "mean": 27.938624338624336,
+          "median": 36.0,
+          "minimum": 3.3333333333333335,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 9,
+          "maximum": 192,
+          "mean": 52.22222222222222,
+          "median": 41,
+          "minimum": 10,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 9,
+          "maximum": 5.395437262357414,
+          "mean": 3.3722415784192545,
+          "median": 4.361563517915309,
+          "minimum": 0.7505598596042389,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 9,
+          "maximum": 24.65843339367063,
+          "mean": 10.844006143343611,
+          "median": 11.496452775215287,
+          "minimum": 0.3889875755840557,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 9,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 9,
+          "maximum": 7,
+          "mean": 2.4444444444444446,
+          "median": 1,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 9,
+          "maximum": 1.0,
+          "mean": 0.7555555555555555,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 9,
+          "maximum": 24.65843339367063,
+          "mean": 10.40747014112133,
+          "median": 11.023624426377626,
+          "minimum": 0.13796695553969748,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 9,
+          "maximum": 5,
+          "mean": 5.0,
+          "median": 5,
+          "minimum": 5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 9,
+          "maximum": 176,
+          "mean": 82.55555555555556,
+          "median": 62,
+          "minimum": 17,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 1
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 6542,
+      "features": {
+        "forward_average": {
+          "finite": 6542,
+          "maximum": 5.496153846153846,
+          "mean": 0.7266104785384099,
+          "median": 0.44732735506583843,
+          "minimum": 0.023091883672725796,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_coverage": {
+          "finite": 6542,
+          "maximum": 136.0,
+          "mean": 8.75931034809818,
+          "median": 3.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_hits": {
+          "finite": 6542,
+          "maximum": 418,
+          "mean": 16.16004280036686,
+          "median": 5.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_maximum": {
+          "finite": 6542,
+          "maximum": 5.530769230769231,
+          "mean": 0.977464653238495,
+          "median": 0.5842508384304477,
+          "minimum": 0.03292355857642539,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "forward_normalized_support": {
+          "finite": 6542,
+          "maximum": 94.848611033702,
+          "mean": 2.1868579503736187,
+          "median": 0.2510597171649034,
+          "minimum": 0.030002493839033705,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "margin": {
+          "finite": 2913,
+          "maximum": 306.18407903511024,
+          "mean": 4.254425922438199,
+          "median": 2.847777988092183,
+          "minimum": 2.000447644678437,
+          "missing": 0,
+          "positive_infinity": 3629
+        },
+        "reverse_average": {
+          "finite": 6542,
+          "maximum": 5.256125356125356,
+          "mean": 0.7558860220004773,
+          "median": 0.4698591711022645,
+          "minimum": 0.013647049710015876,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_coverage": {
+          "finite": 6542,
+          "maximum": 139.0,
+          "mean": 8.275337551388454,
+          "median": 3.0,
+          "minimum": 0.5,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_hits": {
+          "finite": 6542,
+          "maximum": 426,
+          "mean": 14.54983185570162,
+          "median": 4.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_maximum": {
+          "finite": 6542,
+          "maximum": 5.530769230769231,
+          "mean": 1.003733687150126,
+          "median": 0.6132882704075375,
+          "minimum": 0.019901174716943516,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "reverse_normalized_support": {
+          "finite": 6542,
+          "maximum": 87.85159283627783,
+          "mean": 1.910270032654808,
+          "median": 0.246499474999003,
+          "minimum": 0.030045161906777397,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_seed_families": {
+          "finite": 6542,
+          "maximum": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "source_size": {
+          "finite": 6542,
+          "maximum": 12,
+          "mean": 1.9024763069397739,
+          "median": 1.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "species_overlap_fraction": {
+          "finite": 6542,
+          "maximum": 1.0,
+          "mean": 0.7011692954791396,
+          "median": 1.0,
+          "minimum": 0.0,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "support": {
+          "finite": 6542,
+          "maximum": 87.85159283627783,
+          "mean": 1.7953190868369644,
+          "median": 0.18852879205636475,
+          "minimum": 0.030002493839033705,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_seed_families": {
+          "finite": 6542,
+          "maximum": 6,
+          "mean": 4.503515744420667,
+          "median": 5.0,
+          "minimum": 1,
+          "missing": 0,
+          "positive_infinity": 0
+        },
+        "target_size": {
+          "finite": 6542,
+          "maximum": 230,
+          "mean": 57.94558239070621,
+          "median": 50.0,
+          "minimum": 2,
+          "missing": 0,
+          "positive_infinity": 0
+        }
+      },
+      "iteration": 1
+    }
+  ],
+  "defaults_changed": false,
+  "failed_r1_timing_remains_ineligible": true,
+  "grouping_replayed": false,
+  "implicated_events": {
+    "bytes": 101338,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_support_20261006_v1/implicated_events.tsv",
+    "sha256": "30d4c80d92e6d167d1b1fd7342302f46d50b55f982b6354bc287f8c708447c83"
+  },
+  "infinite_margin_policy": "positive_infinity kept separate from finite summaries",
+  "ledger": {
+    "bytes": 391881,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_alias_group_20261006_v1/changed_pair_groups.tsv",
+    "sha256": "3f0598f7e00cfc0942146604ab1863ad9f03f2d5017efd5244c7e76a29d43642"
+  },
+  "limitations": [
+    "Development-exposed association conditional on accepted events, not rejected alternatives.",
+    "No changed VGNC pair is unlabeled, not a true negative or correct event.",
+    "A group-level direct event is not evidence of a direct pairwise HMM hit.",
+    "Membership, sizes and reference scope confound descriptive differences.",
+    "Shared-host postprocessing is not native inference timing or isolated-speed evidence."
+  ],
+  "localized_summary": [
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 1794
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 98
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 239
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 2
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 131
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 11
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 19
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 1
+    }
+  ],
+  "missing_feature_policy": "all required features present; missing count zero",
+  "native_inference_reexecuted": false,
+  "native_trace": {
+    "bytes": 77022312,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native_factorial_cost_v2_20261004/run_08/native/orthohmm_working_res/phylogeny_candidate_merges.json",
+    "sha256": "ec867165230af4b80e8df7d0227ccd5719910a41dcc83211022a7c265240dc48"
+  },
+  "new_scoring_or_admission": false,
+  "protocol": {
+    "bytes": 4817,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_CANDIDATE_SUPPORT_PROTOCOL_20261006.md",
+    "sha256": "eb4112330dc7b4fc99a6ae3963bc7c8c19dd846f1fb7d24d0be26aa1fc8c82d7"
+  },
+  "publication_ready": false,
+  "reader_source": {
+    "bytes": 15480,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_support.py",
+    "sha256": "faa2e7a475ec23a72de584814f3a3eece39343557bb4a75d32a7a88f5c4d3f89"
+  },
+  "runtime": {
+    "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "schema": "native_qfo_candidate_accepted_support_v1",
+  "source": {
+    "bytes": 14549,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_candidate_support.py",
+    "sha256": "6127234fb581446648100ee1565c5b07acc5165018a274fc232c2b822df2c7b1"
+  },
+  "status": "descriptive_accepted_event_support_exported",
+  "totals": {
+    "accepted_events": 40690,
+    "changed_pairs": 2295,
+    "direct_fp_pairs": 2033,
+    "direct_tp_pairs": 150,
+    "implicated_events": 449,
+    "transitive_fp_pairs": 100,
+    "transitive_tp_pairs": 12
+  },
+  "uncertainty_admitted": false,
+  "unit": "each accepted event once; dependent pair counts only descriptive"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "native_qfo_support_supplement_visual_review_v1",
+  "status": "figure_and_all_three_companion_pdf_pages_viewed",
+  "generator_committed_and_pushed_before_selected_generation": "f721207e",
+  "generation_sha256": "c3d24e29d52ad5799011c4c2e87ca4c72e1c078847489990e96e6d0c28967926",
+  "manuscript_sha256": "0ac97664ba795e3e4c27ca7853ea43843e2a95cacc8855233d54c92e6227bfb4",
+  "claims_sha256": "d1db86fae65bb9a76a71b954264185c2a6de6d972d9ad5d1513e265ef4d6e084",
+  "figure_pdf_sha256": "535a441cce9d184f8b3145c8de0b9e673e6e88954fe4f87bbc221ddb0fdaa54a",
+  "render_sha256": "ce6f4c17715b8c6d20a07cd2d161d18085b20b914fc0c957d8a7721b9e351250",
+  "printed_pdf_sha256": "d5dc1fbd5ef786a86508bf75114554a2dff75ed075a1846c7e8731a0526806fd",
+  "pdf_bounds_review_sha256": "da7c4ad1c37487481a529a88741ed11ddcf6bc700b8118e3af10592f86449f17",
+  "full_resolution_figure_viewed": true,
+  "pdf_pages_viewed": [1, 2, 3],
+  "pdf_bounds_violations": [],
+  "observations": [
+    "Figure labels, event counts and all-round/round columns are visible without observed overlaps.",
+    "Ranges and medians are explicitly descriptive, not confidence intervals.",
+    "Mixed and unlabeled cohorts are retained; unlabeled is not described as correct or true negative.",
+    "Page 1 contains Methods, counts and a readable table; page 2 contains the figure, caption and limitations; page 3 contains claim-to-evidence links.",
+    "The no-default-tuning, no-causal-confidence, development-exposure and shared-host timing limitations remain visible."
+  ],
+  "all_companion_pdf_pages_viewed": true,
+  "full_study_or_main_manuscript_visual_review": false,
+  "independent_scientific_reproduction": false,
+  "transitive_dependency_or_rights_review": false,
+  "publication_ready": false
+}

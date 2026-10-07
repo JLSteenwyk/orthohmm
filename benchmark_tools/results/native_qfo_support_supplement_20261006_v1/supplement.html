@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OrthoHMM publication working draft</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @media print {
+    @page { margin: 18mm; }
+    html, body { margin: 0; padding: 0; }
+    body { max-width: none; }
+    h1, h2, h3, h4 { break-after: avoid; }
+    p { orphans: 3; widows: 3; }
+  }
+  </style>
+</head>
+<body>
+<h1 id="accepted-candidate-events-vgnc-support-diagnostic">Accepted
+Candidate Events: VGNC Support Diagnostic</h1>
+<h2 id="methods">Methods</h2>
+<p>This supplementary diagnostic joins the original accepted
+candidate-event trace to already-verified changed VGNC pair paths. It
+reuses the complete partition and original-protein identity evidence,
+without reexecuting inference, aliases, grouping or scoring. Every
+accepted event contributes once to feature summaries, irrespective of
+the number of dependent scored pairs it introduces. TP-only events have
+recovered asserted TPs but no added scored FPs; FP-only events have the
+converse; mixed events affect both. Events without a changed scored VGNC
+pair are unlabeled, not true negatives or biologically correct
+events.</p>
+<p>The exporter validates every accepted event, its round,
+nonoverlapping memberships, declared sizes, unique semantic identity and
+numeric features. All direct pair joins check named endpoints and the
+first-connection round. Transitive paths retain no direct event or
+assigned direct-event feature. A separate standard-library reader
+imports neither exporter nor union kernel and reconstructs joins, tables
+and rational summary statistics. Identities and integer counts agree
+exactly; numerical summaries use absolute and relative tolerance 1e-12.
+All source, input and output byte bindings are checked before and after
+each original diagnostic command.</p>
+<p>Feature summaries contain finite minimum, median, mean and maximum,
+missing counts and positive-infinity counts. All required features are
+present. The serialized positive-infinity margin denotes no positive
+alternative; it is counted separately and excluded from finite
+summaries, not replaced with a large number. No cutoff fitting,
+significance tests, bootstrap intervals or default tuning is
+performed.</p>
+<h2 id="results">Results</h2>
+<p>The trace contains 40,690 accepted events. The ledger retains all
+2,295 changed pair paths; 449 distinct events directly implicate changed
+scored pairs.</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cohort</th>
+<th style="text-align: right;">Accepted events</th>
+<th style="text-align: right;">Round 0</th>
+<th style="text-align: right;">Round 1</th>
+<th style="text-align: right;">Median support</th>
+<th style="text-align: right;">Finite median margin</th>
+<th style="text-align: right;">Positive-infinity margins</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TP-only</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7.682283</td>
+<td style="text-align: right;">2.027995</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td>FP-only</td>
+<td style="text-align: right;">352</td>
+<td style="text-align: right;">322</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0.984776</td>
+<td style="text-align: right;">2.678003</td>
+<td style="text-align: right;">55</td>
+</tr>
+<tr class="odd">
+<td>Mixed</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1.708556</td>
+<td style="text-align: right;">2.329948</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td>Unlabeled</td>
+<td style="text-align: right;">40,241</td>
+<td style="text-align: right;">33,699</td>
+<td style="text-align: right;">6,542</td>
+<td style="text-align: right;">0.273256</td>
+<td style="text-align: right;">2.484760</td>
+<td style="text-align: right;">20,423</td>
+</tr>
+</tbody>
+</table>
+<p>Direct paths account for 150 recovered TPs and 2,033 added scored
+FPs. The remaining 12 recovered TPs and 100 added FPs have transitive
+paths. These are dependent pair counts, not independent event units.</p>
+<figure>
+<img src="accepted_event_support.png"
+alt="Accepted-event counts, serialized support and group sizes." />
+<figcaption aria-hidden="true">Accepted-event counts, serialized support
+and group sizes.</figcaption>
+</figure>
+<p>Figure S1. Counts use each accepted event once. Lines show observed
+minimum to maximum and dots show medians, not confidence intervals.
+Feature ranges overlap; group-level support does not imply calibrated
+assignment confidence. The source and target sizes are retained
+serialized memberships.</p>
+<h2 id="interpretation-and-limitations">Interpretation And
+Limitations</h2>
+<p>The descriptive cohort support ranges overlap, and mixed events
+affect both recovered TPs and added FPs. Higher median support in one
+cohort is not a validated decision boundary or a demonstrated accuracy
+gain. Membership, group size, reference scope and conditioning on
+accepted events confound differences. This analysis does not inspect
+rejected alternatives, recompute eligibility/support criteria, establish
+a direct pairwise HMM hit, isolate a biological cause, provide
+independent VGNC uncertainty or supply independent validation. It
+neither changes defaults nor demonstrates superiority over OrthoFinder
+or any other tool.</p>
+<p>These analyses use development-exposed QfO observations. Failed R-on
+timing remains ineligible. Diagnostic postprocessing observations were
+collected on a shared Threadripper and are not native inference timings
+or isolated-performance estimates. The full publication goal remains
+incomplete. This companion does not modify or supersede the retained
+main manuscript, rc5 delivery, scientific admissions or earlier failed
+outcomes.</p>
+<h2 id="claim-to-evidence-checklist">Claim-To-Evidence Checklist</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claim</th>
+<th>Scope</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>All changed pair identities and paths retained</td>
+<td>Descriptive changed-pair ledger</td>
+<td><a href="annotated_pairs.tsv">annotated_pairs.tsv</a></td>
+</tr>
+<tr class="even">
+<td>Event units counted once, including mixed and unlabeled</td>
+<td>Accepted events only</td>
+<td><a href="event_cohorts.tsv">event_cohorts.tsv</a></td>
+</tr>
+<tr class="odd">
+<td>Finite summaries separate positive-infinity margin</td>
+<td>Serialized features, not calibrated confidence</td>
+<td><a href="feature_summaries.tsv">feature_summaries.tsv</a></td>
+</tr>
+<tr class="even">
+<td>Direct and transitive changes distinguished</td>
+<td>No invented direct event for transitive pairs</td>
+<td><a href="pair_paths.tsv">pair_paths.tsv</a></td>
+</tr>
+</tbody>
+</table>
+<p>Machine-readable <a href="claims.json">claim bindings</a>, <a
+href="report.json">original diagnostic report</a>, <a
+href="readback.json">independent verification</a>, <a
+href="implicated_events.tsv">unique implicated events</a>, <a
+href="execution.json">execution receipt</a> and <a
+href="protocol.md">prospective protocol</a> accompany this supplement.
+Presence and hash checking do not imply full inference reproduction,
+transitive dependency closure, permissions or archival readiness.</p>
+</body>
+</html>

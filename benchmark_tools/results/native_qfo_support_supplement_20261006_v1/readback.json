@@ -1,0 +1,145 @@
+{
+  "calibrated_confidence": false,
+  "causal_mechanism_established": false,
+  "cohort_counts": [
+    {
+      "cohort": "TP-only",
+      "events": 51,
+      "iteration": null
+    },
+    {
+      "cohort": "FP-only",
+      "events": 352,
+      "iteration": null
+    },
+    {
+      "cohort": "mixed",
+      "events": 46,
+      "iteration": null
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 40241,
+      "iteration": null
+    },
+    {
+      "cohort": "TP-only",
+      "events": 49,
+      "iteration": 0
+    },
+    {
+      "cohort": "FP-only",
+      "events": 322,
+      "iteration": 0
+    },
+    {
+      "cohort": "mixed",
+      "events": 37,
+      "iteration": 0
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 33699,
+      "iteration": 0
+    },
+    {
+      "cohort": "TP-only",
+      "events": 2,
+      "iteration": 1
+    },
+    {
+      "cohort": "FP-only",
+      "events": 30,
+      "iteration": 1
+    },
+    {
+      "cohort": "mixed",
+      "events": 9,
+      "iteration": 1
+    },
+    {
+      "cohort": "no changed scored VGNC pair",
+      "events": 6542,
+      "iteration": 1
+    }
+  ],
+  "defaults_changed": false,
+  "exporter_or_union_kernel_imported": false,
+  "localized_summary": [
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 1794
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 98
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 239
+    },
+    {
+      "candidate_state": "FP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 2
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 0,
+      "pairs": 131
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 0,
+      "pairs": 11
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "direct_cross_endpoint",
+      "iteration": 1,
+      "pairs": 19
+    },
+    {
+      "candidate_state": "TP",
+      "connection_path": "transitive_union",
+      "iteration": 1,
+      "pairs": 1
+    }
+  ],
+  "numeric_absolute_tolerance": 1e-12,
+  "numeric_relative_tolerance": 1e-12,
+  "original_scored_identifiers_preserved": true,
+  "publication_ready": false,
+  "rational_summaries_verified": true,
+  "report": {
+    "bytes": 60771,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_support_20261006_v1/report.json",
+    "sha256": "a6dbe37a740ad657f9820cd20f78faf62c75e22e9a8ba28b258a886ee991ac8c"
+  },
+  "schema": "native_qfo_candidate_accepted_support_readback_v1",
+  "source": {
+    "bytes": 15480,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_support.py",
+    "sha256": "faa2e7a475ec23a72de584814f3a3eece39343557bb4a75d32a7a88f5c4d3f89"
+  },
+  "status": "accepted_event_features_independently_verified",
+  "totals": {
+    "accepted_events": 40690,
+    "changed_pairs": 2295,
+    "direct_fp_pairs": 2033,
+    "direct_tp_pairs": 150,
+    "implicated_events": 449,
+    "transitive_fp_pairs": 100,
+    "transitive_tp_pairs": 12
+  },
+  "uncertainty_admitted": false
+}

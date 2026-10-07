@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Accepted-Event Companion Rendered And All Three Pages Reviewed (2026-10-06)
+
+Previous turn PROGRESS9d6e0a16. Full goal/current contract read; no prompt
+repair. New generator/tests f721207e pushed BEFORE selected presentation.
+Actual companion generationc3d24e29 produces12cohort rows/204feature rows,
+all8path rows, exact6evidencecopies and a4panel event-unit figure. Source
+0ac97664/5031bytes and claimsd1db86fa preserve descriptive scope. Counts
+51TP-only/352FP-only/46mixed/40241unlabeled; lines are observed ranges, dots
+medians, NOT intervals. No invented direct event for112transitive rows.
+
+Actual HTMLrenderce6f4c17 binds11targets/11occurrences/noexternalcitations.
+Singleactualprint d5dc1fbd/256029bytes yields3pages. Boundsreportda7c4ad1
+finds0violations and selectorpages1/2/3. Fullfigure2560x1760 and all3PDFpages
+actually viewed; scoped manual receipt retained.44joined tests3.39s verify
+allselected/current source/outputbindings, exact204features/12cohorts/8paths,
+actualpixels/PDFtext and oldmain2804448c/rc5index66bc02d7 preservation.
+See [actual companion/result](NATIVE_QFO_SUPPORT_SUPPLEMENT_RESULT_20261006.md).
+No oldevidence overwrite, raw/trace/scorer replay, default tuning, newscore/
+bootstrap/admission, archiverebuild or publicrelease. New artifact/test/result
+files need commit/push next; no other task source is uncommitted.
+
+Important scope correction from original authoritative47requirement audit:
+YGOB already supplies the authorized separate-clade/novel-taxon route for2.2/
+2.3. Stronger family-disjoint confirmation is NOT a newly required completion
+gate. Keep its overlap limitation and incomplete2.1development-family inventory
+explicit, but do not initiate another test just to satisfy checkpoint shorthand.
+Likewise the historical20result-module source-export gap was integrated and
+relocated-tested onOct4; do not repeat that completed source closure or920
+nativefixtures based on old gap documents. Whole-goal completion still unproven.
+
+Latest SAME23902RUNNING2:39:13 and23910PENDING/Dependency. Exact next changing
+prerequisite is their actual terminal state and already queued review. Poll
+the SAME handles; if no genuinely useful independent unfinished action is
+supported, use actual sleep/wait rather than invent more archive/goal repair
+work. On successful terminal/review: existing allocated conversion, assessment,
+independent admission and reporting. Genuinely unrun11/12 remain sequential
+behind reviewed history; no9retry, duplicate or re-release. Existing39-hour
+native failure histories/missing outcomes and other QfOCIs remain explicit.
+Do not mark goal complete at this companion milestone. Commit/push and continue.
+
 ## Event-Support Supplement Generator Tested Before Rendering (2026-10-06)
 
 Previous goal turn is PROGRESS: pushed9d6e0a16actual support outputs, independent

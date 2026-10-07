@@ -1,0 +1,51 @@
+{
+  "claims": [
+    {
+      "evidence": "annotated_pairs.tsv",
+      "id": "complete_paths",
+      "pairs": 2295,
+      "status": "independently_verified_descriptive"
+    },
+    {
+      "events": 40690,
+      "evidence": "event_cohorts.tsv",
+      "id": "event_units",
+      "status": "independently_verified_descriptive"
+    },
+    {
+      "evidence": "feature_summaries.tsv",
+      "id": "feature_summaries",
+      "nonfinite_policy": "positive infinity margin separate",
+      "status": "independently_verified_descriptive"
+    },
+    {
+      "evidence": "pair_paths.tsv",
+      "id": "path_semantics",
+      "status": "independently_verified_descriptive",
+      "transitive_direct_event_assigned": false
+    }
+  ],
+  "not_established": [
+    "biological correctness of unlabeled events",
+    "direct protein-pair HMM hits",
+    "calibrated confidence",
+    "causal error mechanisms",
+    "valid VGNC confidence intervals",
+    "independent confirmation",
+    "optimal thresholds",
+    "OrthoFinder superiority",
+    "publication readiness"
+  ],
+  "reader": {
+    "bytes": 3412,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_support_readback_20261006_v1.json",
+    "sha256": "dd399ccbf96943a67cb53061cafa2dd5f71cea3bc78538f4199a7770e2a4bf34"
+  },
+  "report": {
+    "bytes": 60771,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_support_20261006_v1/report.json",
+    "sha256": "a6dbe37a740ad657f9820cd20f78faf62c75e22e9a8ba28b258a886ee991ac8c"
+  },
+  "schema": "native_qfo_support_supplement_claims_v1",
+  "unit": "accepted event once; pair counts dependent"
+}
