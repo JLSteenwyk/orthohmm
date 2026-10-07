@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Native10 Past Search And Edge Stages; Clustering Active (2026-10-07)
+
+Ordered-Pfam selected result/readbacks/commands/times/claim limits and four
+artifact tests committed and pushed88419c78. All new selected sources and
+artifacts are frozen;78joined tests passed1.60s. No task files from that
+analysis remain uncommitted. Do not repeat it, relocated model arithmetic,
+manuscript review, completed source/runtime fixtures or oldarchive assemblies.
+
+During actual bounded300s waits, SAME23902 progressed through100% search,
+completed edge-threshold calculation and network-edge identification. Latest
+native.log says Step4/4 Conducting clustering; active32worker processes observed.
+SAME23902 remains RUNNING13:32:50, SAME23910 PENDING/Dependency. Step4/4 is not
+a verified whole-pipeline terminal outcome or an ETA. No native completion,
+terminal review or new accuracy/resource admission yet.
+
+Exact next action: observe SAMEhandles, native phase changes and eventual
+terminal/review receipts, using actual30-300s waits while dependencies remain
+live. Existing native sources/requests/limits and review release unchanged.
+No duplicate/restart/re-release, automatic retry, quiet-host/user-resume gate,
+new scaling panel, repeated external search or scope-growing busywork. No
+genuinely unfinished independent requirement currently identified as executable;
+that is provisional, not a permanent global gate. Reconsider only when new
+evidence changes an outstanding requirement or a genuine independent gap is
+identified, not by reauditing unchanged history every poll.
+
+Successful terminal native AND the existing review precede frozen conversion,
+scoring/admission and genuinely unrun identities11/12 sequentially behind
+reviewed history. Retain identity9 failure. Integrate new final evidence when
+available, without rewriting historical science or invalidating oldreviews.
+Full goalACTIVE, no pause/block/completion or claimed platform repair.
+
 ## Ordered-Pfam Selected Analysis And Both Readbacks Complete (2026-10-07)
 
 Sourcesd09e2bc4 pushed before FOUR selected one-shot invocations in fresh
