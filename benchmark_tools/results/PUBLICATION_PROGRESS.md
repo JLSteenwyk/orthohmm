@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Dependency-Scoped Continuation And Independent Next Action (2026-10-07)
+
+The user requests correction of repeated goal stops. The actual goal is ACTIVE
+and points to the editable attachment; that attachment and
+benchmark_tools/PUBLICATION_GOAL_CURRENT.txt matched before this correction.
+Shared-host timing was already authorized. No observed whole-goal quiet-host
+gate remains in the inspected native execution/review paths. This correction
+clarifies dependency scope, bounded useful waiting and prompt responses to
+direct user requests; it does not claim to repair the platform dispatcher.
+All seven scientific sections and the frozen historical goal remain unchanged.
+
+Executable independent work: goal4.3 still lacks model-based evolutionary
+distance strata. Check primary FastTree documentation and the trusted existing
+local executable/runtime, then prospectively specify a label-independent
+distance-feature procedure using the 18 already-admitted SwissTrees reference
+alignments/563 canonical members. Retained alignment inventory:
+corrected_swiss_identity_prepared_22102.json; independent admission:
+corrected_swiss_identity_admission_22102.json. Do not rerun MAFFT, sequence
+extraction, the old full admission or a benchmark. Freeze and commit/push
+protocol and tested new sources before selected feature calculations; feature
+construction must not read prediction outcomes. Use a fresh namespace and
+safe small allocation if supported. Verify new features independently before
+projecting existing three-cell counts into prespecified bins. No new tuning,
+default promotion, biological-time claim or independent-confirmation claim:
+these would be alignment/model-dependent descriptive distances on exposed
+families. If the retained inputs/runtime cannot support this procedure, record
+that limitation and choose another actual unmet requirement; do not install
+software or invent a replacement campaign just to avoid waiting.
+
+Dependency-waiting work: live squeue verified SAME23902 RUNNING7:22:50 and
+SAME23910 PENDING/Dependency during this correction. They gate only their
+dependent native conversion/scoring/admission and sequential identities11/12.
+Inspect changing state of these existing handles alongside independent work.
+After an actual terminal outcome, inspect the existing review.json and review
+job accounting; successful validated native output alone may proceed through
+the existing conversion, assessment and independent admission. Retain failures,
+including identity9; no duplicate submission, restart, automatic retry or
+second release of either handle. If independent work is exhausted, use actual
+bounded waits and poll the same handles, not another goal-prompt repair.
+
+This bounded prompt correction is not completion or a pause of the publication
+goal. No new scientific feature calculation, job submission or source bound to
+an existing job was changed. Actual32focused tests pass0.72s, including matching
+editable copies, unchanged scientific-scope/historical hashes, dependency
+scope, bounded waits and direct-user response rules. Scoped diff-check passes.
+Commit and push only these prompt/test/checkpoint edits. The next automatic goal
+continuation starts with the concrete independent documentation/runtime check
+above and a live query of the existing native/review handles, not a request for
+another user resume or a quiet window.
+
 ## Three-Cell Error-Stratum Work Delivered; Verified Native Wait (2026-10-07)
 
 This continuation is PROGRESS plus VERIFIED WAIT, not a stopped/blocked goal.

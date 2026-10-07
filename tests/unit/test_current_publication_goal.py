@@ -78,3 +78,39 @@ def test_actual_goal_linked_attachment_matches_version_controlled_contract():
     if attachment is None:
         pytest.skip("Optional local goal attachment is not part of portable repository tests")
     assert Path(attachment).read_bytes() == CURRENT.read_bytes()
+
+
+def test_pending_dependency_does_not_gate_independent_scientific_work():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "gates ONLY its dependent conversion, scoring, admission",
+        "does not gate independent error analyses, manuscript work",
+        "distinguish executable independent work from dependency-waiting work",
+        "identify the actual evidence needed to unblock a dependency",
+        "into a whole-goal stop",
+    ):
+        assert instruction in contract
+
+
+def test_waiting_is_bounded_without_repeated_administrative_work():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "execute a supported independent action if one exists",
+        "bounded actual waits (normally 30-300 seconds)",
+        "not by rereading the full ledger or reauditing unchanged evidence on every poll",
+        "not a new commit for every unchanged wait",
+        "Do not grow the scientific scope",
+    ):
+        assert instruction in contract
+
+
+def test_direct_user_answer_does_not_complete_or_pause_the_full_goal():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "answer a requested status check or bounded maintenance task promptly",
+        "not completion, a pause request or a request for another resume",
+        "Leave the full goal ACTIVE",
+        "an actionable checkpoint for its next automatic continuation",
+        "never promise that editing this attachment repairs the dispatcher",
+    ):
+        assert instruction in contract
