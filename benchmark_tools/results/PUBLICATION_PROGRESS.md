@@ -1,5 +1,50 @@
 # Publication Progress
 
+## RC5 Native-Evidence Delivery Actually Restored And Verified (2026-10-06)
+
+Continue past the prepared source milestone: c5cc58f4 composer/tests/guide and
+direct-archive results pushed BEFORE selected rc5 generation. Actual selection
+3825124e/327files inherits181selected/183indexed immutable rc4 payloads, not
+their mutable original worktree paths. New package66bc02d7/329payloads/
+167214767bytes and archive24f27934/138737221bytes created once into fresh paths.
+41pageassembledreview plus its scoped receipts and 121file direct component
+are explicitly separate routes. Older guides/reviews/reader/index bytes kept.
+
+Fresh outside-checkout archivecopy restores after external anchor/fullmember
+checks using byte-checked copied reader948efb04. Actual copied outer verifier
+checks329payloads; copied nested direct verifier checks121payloads/99targets/
+102links/19pages. Both exit0 under isolated stdlib/noGit. Retained two traces
+aafda66c/d432e833 observe every payload at new locations and no original
+checkout/attachment file accesses. Not OS containment/crosshost/native/hermetic
+reproduction or rights. All330archive member types/modes/hashes, inheritance,
+source/review correspondence and scopes pass148joined tests9.20s.
+See [actual versioned result and anchors](PUBLICATION_PACKAGE_RC5_RESULT_20261006.md).
+No inference/score/bootstrap/default/admission/timing repeats or public upload.
+
+Latest SAME23902RUNNING2:19:22,23910PENDING/Dependency. Follow actual terminal/
+review then validated-success conversion/scoring/admission/reporting;11/12
+remain sequential behind reviewed history, no9retry. Full goal ACTIVE with
+family-independent validation, several QfO CIs, native factorial and complete
+raw/dependency/rights requirements still unmet, not completed by rc5.
+
+Next concrete independent goal4 action: prospectively document/test association
+of ALL2295already-proven changed pair paths with accepted candidate event
+features. Only serialized trace FIELD NAMES inspected so far: hit counts,
+sizes, forward/reverse coverage/average/maximum/normalized support, margin,
+species overlap and support. No selected numeric distribution inspected.
+Bind alias report3b3ab8f1/reader4afc4aa6/ledger3f0598f7 and original trace
+ec867165/77022312bytes; do NOT replay partitions, aliases, raw scoring or
+candidate eligibility/rejected alternatives. Count each of40690accepted events
+once in descriptive TP-only/FP-only/mixed/no-changed-VGNC cohorts; keep
+transitive pair rows without direct event distinct. Verify the endpoint
+membership/event-round identities, preserve every original scored ID/state
+and use an independent stdlib reader for exact field/count/summary agreement.
+No calibrated confidence, biological cause, valid VGNC CI or default tuning.
+No new protocol/source for this support analysis exists yet; write/push the
+prospective protocol before inspecting numeric cohorts, then implement/test/
+push source before fresh selected execution and retain either outcome.
+Do not repeat completed presentation/archive/raw audits or prompt repairs.
+
 ## Three-Cell Main Text, 41-Page Review And Copied Direct Archive Complete (2026-10-06)
 
 Previous turn corrects/tests actual goal contract (progress). This continuation

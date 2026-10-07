@@ -1,0 +1,249 @@
+{
+  "schema": "publication_package_rc5_execution_v1",
+  "status": "local_provisional_delivery_restored_and_direct_review_verified",
+  "version": "orthohmm-study-2026.10.06-rc5",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "workflow_revision": "c5cc58f45c90b08e7ca58f913e1e53371c3188d4",
+  "selection": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc5_selection_20261006.json",
+    "bytes": 110409,
+    "sha256": "3825124e5a4397d713911d236766cb9074f29562ad986eb12c59473f6f5cc724",
+    "files": 327,
+    "preserved_parent_indexed_payloads": 183
+  },
+  "index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc5_index_20261006.json",
+    "bytes": 74998,
+    "sha256": "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922"
+  },
+  "archive": {
+    "bytes": 138737221,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/orthohmm-study-2026.10.06-rc5.tar.gz",
+    "sha256": "24f27934b6a7f8cb75ace61f1a0448a215f0a6d8f7eb7f6d891ae7f4d49adeb7"
+  },
+  "copied_archive": {
+    "bytes": 138737221,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/candidate.tar.gz",
+    "sha256": "24f27934b6a7f8cb75ace61f1a0448a215f0a6d8f7eb7f6d891ae7f4d49adeb7"
+  },
+  "restored_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored",
+  "trusted_reader": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/trusted_reader.py",
+    "sha256": "948efb04abfa84aea1c6822d9145592a15d54416838245f0c1bf569f5d81bbab"
+  },
+  "build": {
+    "files": 329,
+    "manifest": {
+      "bytes": 74998,
+      "sha256": "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922"
+    },
+    "native_inference_repeated": false,
+    "nested_component_execution_repeated": false,
+    "payload_bytes": 167214767,
+    "public_archive_uploaded": false,
+    "publication_ready": false,
+    "status": "local_publication_package_verified",
+    "version": "orthohmm-study-2026.10.06-rc5"
+  },
+  "selected_files": 327,
+  "indexed_payloads": 329,
+  "payload_bytes": 167214767,
+  "archive_members": 330,
+  "preserved_rc4_selected_payloads": 181,
+  "preserved_rc4_indexed_payloads": 183,
+  "inherited_sources": "retained immutable rc4 package; no mutable original source paths",
+  "direct_component": {
+    "index_sha256": "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a",
+    "payloads": 121,
+    "direct_targets": 99,
+    "local_occurrences": 102,
+    "main_pages": 19
+  },
+  "presentation": {
+    "main_pages": 19,
+    "guide_pages": 5,
+    "figure_pages": 17,
+    "assembled_pages": 41,
+    "all_prior_sixteen_figures_preserved": true
+  },
+  "environment": {
+    "PATH": "/no-git",
+    "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5",
+    "LC_ALL": "C",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "executions": {
+    "restore": {
+      "returncode": 0,
+      "stdout": "{\n  \"files\": 329,\n  \"manifest\": {\n    \"bytes\": 74998,\n    \"sha256\": \"66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922\"\n  },\n  \"native_inference_repeated\": false,\n  \"nested_component_execution_repeated\": false,\n  \"payload_bytes\": 167214767,\n  \"public_archive_uploaded\": false,\n  \"publication_ready\": false,\n  \"status\": \"local_publication_package_verified\",\n  \"version\": \"orthohmm-study-2026.10.06-rc5\"\n}\n",
+      "result": {
+        "files": 329,
+        "manifest": {
+          "bytes": 74998,
+          "sha256": "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922"
+        },
+        "native_inference_repeated": false,
+        "nested_component_execution_repeated": false,
+        "payload_bytes": 167214767,
+        "public_archive_uploaded": false,
+        "publication_ready": false,
+        "status": "local_publication_package_verified",
+        "version": "orthohmm-study-2026.10.06-rc5"
+      }
+    },
+    "outer_verify": {
+      "returncode": 0,
+      "stdout": "{\n  \"files\": 329,\n  \"manifest\": {\n    \"bytes\": 74998,\n    \"sha256\": \"66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922\"\n  },\n  \"native_inference_repeated\": false,\n  \"nested_component_execution_repeated\": false,\n  \"payload_bytes\": 167214767,\n  \"public_archive_uploaded\": false,\n  \"publication_ready\": false,\n  \"status\": \"local_publication_package_verified\",\n  \"version\": \"orthohmm-study-2026.10.06-rc5\"\n}\n",
+      "result": {
+        "files": 329,
+        "manifest": {
+          "bytes": 74998,
+          "sha256": "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922"
+        },
+        "native_inference_repeated": false,
+        "nested_component_execution_repeated": false,
+        "payload_bytes": 167214767,
+        "public_archive_uploaded": false,
+        "publication_ready": false,
+        "status": "local_publication_package_verified",
+        "version": "orthohmm-study-2026.10.06-rc5"
+      }
+    },
+    "child_verify": {
+      "returncode": 0,
+      "stdout": "{\n  \"direct_targets\": 99,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/publication_main_review_20261006_v2.html\",\n    \"markdown\": \"benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006_v2.md\",\n    \"pdf\": \"benchmark_tools/results/publication_main_print_20261006_v2/document.pdf\"\n  },\n  \"files\": 121,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 102,\n  \"manifest\": {\n    \"bytes\": 44163,\n    \"sha256\": \"c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a\"\n  },\n  \"page_count\": 19,\n  \"payload_bytes\": 7697373,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+      "result": {
+        "direct_targets": 99,
+        "entrypoints": {
+          "html": "benchmark_tools/results/publication_main_review_20261006_v2.html",
+          "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006_v2.md",
+          "pdf": "benchmark_tools/results/publication_main_print_20261006_v2/document.pdf"
+        },
+        "files": 121,
+        "inference_reproduced": false,
+        "local_html_occurrences": 102,
+        "manifest": {
+          "bytes": 44163,
+          "sha256": "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a"
+        },
+        "page_count": 19,
+        "payload_bytes": 7697373,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "status": "publication_direct_review_verified",
+        "transitive_evidence_included": false
+      }
+    }
+  },
+  "commands": {
+    "selection": [
+      "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+      "-m",
+      "benchmark_tools.prepare_publication_package_rc5",
+      "--root",
+      ".",
+      "--output",
+      "benchmark_tools/results/publication_package_rc5_selection_20261006.json",
+      "--revision",
+      "c5cc58f45c90b08e7ca58f913e1e53371c3188d4"
+    ],
+    "build": [
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "benchmark_tools/bundle_publication_package.py",
+      "build",
+      "--root",
+      ".",
+      "--selection",
+      "benchmark_tools/results/publication_package_rc5_selection_20261006.json",
+      "--selection-sha256",
+      "3825124e5a4397d713911d236766cb9074f29562ad986eb12c59473f6f5cc724",
+      "--output",
+      "benchmarks/work/orthohmm-study-2026.10.06-rc5"
+    ],
+    "restore": [
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/trusted_reader.py",
+      "restore",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/candidate.tar.gz",
+      "--archive-sha256",
+      "24f27934b6a7f8cb75ace61f1a0448a215f0a6d8f7eb7f6d891ae7f4d49adeb7",
+      "--manifest-sha256",
+      "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922",
+      "--output",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored"
+    ],
+    "outer_verify": [
+      "/usr/bin/strace",
+      "-f",
+      "-e",
+      "trace=%file",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/outer-verifier.strace",
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored/bundle_publication_package.py",
+      "verify",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored",
+      "--manifest-sha256",
+      "66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922"
+    ],
+    "child_verify": [
+      "/usr/bin/strace",
+      "-f",
+      "-e",
+      "trace=%file",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/child-verifier.strace",
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored/native-direct-review/benchmark_tools/bundle_publication_review.py",
+      "verify",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-study-2026.10.06-rc5/restored/native-direct-review",
+      "--manifest-sha256",
+      "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a"
+    ]
+  },
+  "file_access_traces": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc5_outer_verify_20261006.strace",
+      "bytes": 1122687,
+      "sha256": "aafda66c819f9d6f6b19c6d34da56c872519c375b869775da03693a8eefee01a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_package_rc5_child_verify_20261006.strace",
+      "bytes": 489946,
+      "sha256": "d432e8331ebfbd5e04b534b07b999535ebb5d646a907e5ca3161e6bf17d5f7fe"
+    }
+  ],
+  "forbidden_trace_prefixes": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM",
+    "/home/bizon/.codex/attachments"
+  ],
+  "original_paths_observed_in_trace": [],
+  "publication_ready": false,
+  "public_archive_uploaded": false,
+  "redistribution_clearance": false,
+  "hermetic_study_reproduction": false,
+  "native_inference_repeated": false,
+  "scoring_or_bootstrap_repeated": false,
+  "scientific_defaults_changed": false,
+  "unrelated_workloads_modified": false,
+  "limitations": [
+    "Fresh same-host copied outer/child verification proves selected payload integrity and direct HTML availability, not OS containment or cross-host/native reproduction.",
+    "Pending native identities and failed timing remain unchanged; no new scientific admission or new/bootstrap arithmetic replay.",
+    "Independent-family confirmation, appropriate uncertainty for several QfO endpoints, complete raw/transitive dependencies and rights remain unmet.",
+    "The current delivery preserves earlier reporting routes and exact bytes; it does not repeat their completed scientific or numerical analyses.",
+    "Native-review contains the separately assembled 41-page PDF; the child direct component still has 19 main pages and only its own 99 direct targets."
+  ]
+}
