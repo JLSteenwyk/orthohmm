@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Native Candidate SwissTrees Uncertainty Integrated (2026-10-06)
+
+Previous turn corrects the active checkpoint; this turn advances goal sections
+3/4/7 rather than another instruction amendment. Same native23902 remains
+RUNNING through30:34 (native step29:42); no duplicate, terminal inference,
+new score admission or resource eligibility is inferred.
+
+Original unchanged exporter supplies only newly admitted P0C1R0 to the original
+ordinary count auditor, avoiding recount of the existing baseline/recovered
+audits. This isolated count-input report is not the current comparison table.
+New raw audit7ed2ea1a confirms all18 complete family records/aggregate match
+retained counts exactly. Unchanged binder76e6f4d3 now binds three cells and
+two matched contrasts;12 remain null. Existing R_at_P0_C0 is exactly unchanged.
+Reuse100,000 frozen draws/seed20260922/all42 adjusted endpoints, no new draws.
+
+New independent stdlib CSV/gzip/Fraction readback07941ba9 checks36 native
+family records/32,295 raw rows and all10,765 candidate pair labels. Initial
+real readback fails before output because the frozen count copy has a distinct
+path; retain the diagnostic, then verify both exact records/bytes/digests/parsed
+content in the new reader only. Final readback succeeds; no frozen source edit.
+
+Candidate SwissTrees F1 difference-0.347446pp, adjusted[-5.816832,3.309051]
+includeszero; precision-3.523453pp, adjusted[-10.229612,0.373979]; recall+4.375165pp,
+adjusted[0.940111,8.688718]. F1 family wins/ties/losses5/8/5. Conditional on18
+development-exposed families/exchangeability/percentile limits, not independent
+confirmation, equivalence, general HMM/OrthoFinder superiority or default tuning.
+Other endpoint/secondary-mean uncertainty remains unresolved.
+
+Integrate the third-cell mixed endpoints/coverage and guarded uncertainty into
+the editable manuscript/claim checklist. Current availability3/7 admitted,
+four missing including retained9failure; historical two-cell figures/supplement
+and rc4/PDF archive remain unchanged and not presented as current final packages.
+See [result and reproduction](NATIVE_QFO_CANDIDATE_UNCERTAINTY_RESULT_20261006.md).
+Initial96/expanded101/final256 tests pass; final7.26s/zero failures/errors/skips
+includes exact machine-to-manuscript numerical contracts. Goal active/incomplete.
+
+Next continue same23902 to terminal review, then successful-output conversion/
+assessment/independent admission/reporting.11/12 remain sequential behind valid
+reviewed history, no9retry. Continue other useful full-goal work meanwhile.
+Shared Threadripper contention has unknown, tool-dependent timing effects;
+no quiet/DGX gate, isolated timing claim or unrelated-workload intervention.
+
 ## Current Goal Checkpoint Corrected (2026-10-06)
 
 Latest user request asks to fix recurring stops. Direct inspection confirms
