@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Whole Candidate Groups Reconstructed; Pair Join Failure Diagnosed (2026-10-06)
+
+Previous turn corrects authoritative instructions (progress), not a goal pause.
+This continuation reads those instructions/TOPledger and verifies SAME23902
+RUNNING/23910PENDING/Dependency, then resumes unfinished goal4 grouping work.
+Prespecified6cb6e6e6 primary/stdlib graph reader implemented;114joined tests
+pass9.72s and scientific3.10 CLI imports pass. Tested83e87c8d pushed BEFORE
+selected export into fresh native_qfo_candidate_group_trace_20261006_v1.
+
+Actual primary exits1 after18.30s at changed-pair accession join, retaining
+failurebfad1eef. No successful report/ledger, overwrite or automatic retry.
+Push original failure and separate prospective ID-diagnosis protocol1d468e27.
+New independent stdlib diagnostic/tests496aeaa7 pushed before execution;
+81tests pass1.41s. Actual diagnosis exits0/10.85s, validating original
+admission/conversion/terminal/output inventories and all source/input bytes.
+Complete graph reconstruction equals final394328->353638groups via40690
+accepted unions, with984137genes unchanged. All42080transition rows unique/
+ordered;2295changedpairs,8unmapped FPpairs across Q17QN5_BOVIN/Q1RMT5_BOVIN.
+No ordering/duplicate defect, guessed substitution, rescore or raw-DB repeat.
+2287otherchangedpairs NOT admitted as a complete localization. Retain full
+affected table6ec0ed60 and diagnosis3bc6646e; see
+[actual results, identities and limits](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md).
+Integrate bounded software compatibility/join limitation into manuscript/claims;
+no biological FP cause, CI/default gain, failed timing repair or readiness.
+Final127joined tests pass9.99s/zero failures, errors or skips, including actual
+retained-file/source identities and manuscript/claims/result correspondence.
+Scoped documentary/source diff checks pass; selected-source bytes preserved.
+
+Latest observed23902RUNNING1:35:36,23910PENDING/Dependency; native log10.32%
+SEARCH only, not whole pipeline/ETA. No duplicate job/release/restart.
+Next useful independent action: investigate the two exact scored identifiers
+using original inventoried accession/protein mappings; require proven identity,
+not suffix guessing, before any explicitly versioned follow-up join. Do NOT
+retry the failed selected export or alter its now-bound primary/reader/diagnostic
+sources. No uncommitted task scripts remain after result commit. Continue the
+existing jobs through actual terminal review, then validated-success conversion,
+scoring/admission/reporting.11/12 remain behind reviewed history; no9retry.
+Wider uncertainty/independent-validation/reproducibility/final-package gaps
+remain. Full goal ACTIVE/incomplete; shared-host disclosure/safety retained.
+
 ## Active Prompt's Stale Job and Panel Instructions Corrected (2026-10-06)
 
 Newest user asks to fix recurring stops. Goal tool reports ACTIVE; actual queue

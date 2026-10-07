@@ -37,6 +37,16 @@ improvement, a causal biological mechanism or independent validation. No
 VGNC CI or prediction-edge rescore; not_scored is not TN. Baseline raw audit
 reused, failed R1 timing unchanged and four fresh scores still unavailable.
 
+The [subsequent grouping-path export and identifier diagnosis](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md)
+retain a failed complete pair join, not a successful localization. A separate
+stdlib graph traversal reconstructs all353,638candidate groups from394,328
+baseline groups/40,690 accepted unions across984,137genes. All42,080transition
+rows are unique/canonical; eight changed FP pairs contain two native-unmapped
+accessions. No guessed replacement or partial localization is admitted.
+This supports whole-partition software compatibility and an identifier-join
+limitation, not a biological FP mechanism, calibrated confidence, identical
+upstream hits or a complete explanation of all2,295changed pair paths.
+
 Native duplication-annotation strata are now checked in the completed P0C0
 cells: [fixed protocol](NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md),
 [table](native_qfo_swiss_duplication_strata_20261006_v1/TABLE.md),

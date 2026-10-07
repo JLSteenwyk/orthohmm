@@ -72,3 +72,40 @@ def test_mapping_must_explain_failure(retained, tmp_path):
     ref = write("changed/failure.json", failure)
     with pytest.raises(ValueError, match="do not explain"):
         diagnosis.collect(ref)
+
+
+def test_actual_retained_diagnosis_contract_without_scientific_reexecution():
+    root = Path(__file__).resolve().parents[2]
+    path = root / "benchmark_tools/results/native_qfo_candidate_group_id_diagnosis_20261006_v1/report.json"
+    if not path.is_file():
+        pytest.skip("Selected retained diagnosis not installed")
+    assert record(path)["sha256"] == "3bc6646e1dc7cb6488ceb6aaaf763e3a4e3cdcbd41268f2066ef2d8008f5be74"
+    result = json.loads(path.read_text())
+    assert (result["genes"], result["baseline_groups"], result["candidate_groups"], result["accepted_merges"]) == (
+        984137, 394328, 353638, 40690)
+    assert result["baseline_groups"] - result["candidate_groups"] == result["accepted_merges"]
+    assert (result["union_scored_pairs"], result["changed_pairs"], result["pairs_with_unmapped_accessions"],
+            result["changed_pairs_without_missing_accessions"]) == (42080, 2295, 8, 2287)
+    assert result["unmapped_accessions"] == ["Q17QN5_BOVIN", "Q1RMT5_BOVIN"]
+    assert result["affected_pairs_by_candidate_state"] == {"FP": 8}
+    assert record(result["failure"]["path"])["sha256"] == "bfad1eefd8f084adc6ab66d5da385c9ce8a1f17440948c59330cf1a761efb695"
+    assert record(result["unmapped_pair_table"]["path"])["sha256"] == "6ec0ed60e8004f99ed8822d09ad87da665ddc25883bcf9ffd1b8c073400073b7"
+    assert len(Path(result["unmapped_pair_table"]["path"]).read_text().splitlines()) == 9
+    for ref in result["checked_records"]:
+        assert record(ref["path"]) == ref
+    for key in ("pair_localization_admitted", "primary_export_retried", "identifiers_substituted", "accuracy_rescored",
+                "native_inference_reexecuted", "uncertainty_admitted", "publication_ready"):
+        assert result[key] is False
+
+
+def test_manuscript_claims_and_result_preserve_join_limitation():
+    directory = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    manuscript = (directory / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text()
+    claims = (directory / "PUBLICATION_CLAIMS_20260916.md").read_text()
+    result = (directory / "NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md").read_text()
+    assert "Complete pair-path localization\nremains unadmitted" in manuscript
+    assert "353,638 candidate groups" in manuscript and "984,137 genes" in manuscript
+    assert "No guessed replacement or partial localization is admitted" in claims
+    assert "eight changed FP pairs" in claims
+    assert "The2,287 other changed pairs are NOT admitted as a complete localization" in result
+    assert "Q17QN5_BOVIN" in result and "Q1RMT5_BOVIN" in result

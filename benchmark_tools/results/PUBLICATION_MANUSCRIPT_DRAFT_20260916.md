@@ -1115,6 +1115,19 @@ new admission, failed-timing repair or default tuning is performed.
 [independent readback](native_qfo_candidate_vgnc_readback_20261006_v1.json),
 [reproduction and limits](NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md).
 
+The subsequent prespecified grouping-path export fails at accession
+localization and is retained without retry. A separate stdlib graph traversal
+independently reconstructs the complete 353,638 candidate groups from
+394,328 baseline groups and 40,690 accepted unions, with all 984,137 genes
+retained. All 42,080 transition rows are unique and canonically ordered, but
+eight of the 2,295 changed pairs contain native-unmapped accessions
+`Q17QN5_BOVIN` or `Q1RMT5_BOVIN`; all eight are added scored FPs. No identifier
+substitution or approximate join is made. Complete pair-path localization
+remains unadmitted, including the 2,287 changed pairs without missing
+accessions. Matching whole partitions diagnoses software compatibility, not
+biological truth or identical upstream hits; the reason for the identifier
+difference is unresolved. [Failed export, independent diagnosis and scope](NATIVE_QFO_CANDIDATE_GROUP_TRACE_RESULT_20261006.md).
+
 ### Native Functional-Pair Composition
 
 A separate raw-pair comparison explains the two fresh native cells' GO/EC
