@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native10 Independently Admitted And Four-Cell Scores Exported (2026-10-07)
+
+SAME admission23984 COMPLETED0:0/3:00/end15:20:18; actual result9fa1f24a/
+48,540,415bytes has allocated_native_factorial_qfo_assessment_admitted,
+accuracy_admitted=true and113,273 checked records. Native inference not
+rerun; failure23910/causeunknown retained. All six actual endpoint scores,
+precision/recall,FASsample/protocol and resource scopes in
+[chronological native10 result](NATIVE10_QFO_RESULT_20261007.md).
+
+Existing validated exporter ran ONCE unchanged: new four-cell report7aab1cbd,
+46,870bytes at native_qfo_scientific_scores_20261007_v3/report.json, all seven
+planned score identities retained, four admitted, three unavailable (9/11/12).
+Stdlib JSON/CSV readback confirms prior six rows EXACTLY unchanged, six new
+endpoint formulae/secondarymean/full coverage denominator and missing cells.
+Exporter exit0/2.49s/517452KiBRSS/0swaps is reporting cost, not inference.
+No new CI/default/superiority/isolated timing or publication-ready claim.
+
+Next after focused commit/push: launch genuinely unrun11(P1C1R0) through
+UNCHANGED allocated route. Fresh request11/output11/session11 required;
+history is amendment's original10-prefix plus successful ORIGINAL fullreview
+native10ref7eab212d (not diagnostic/failed23910/admissionreceipt). Submit ONE
+HELD64CPU128G26h/no-requeue command run_allocated_native_factorial_cost.sh
+with request_11_allocated_v1.json and --request-sha256 scheduler-comment.
+Run existing request constructor with frozen amendment10cc9939 and all11
+history refs; retain digest, set own held-job Comment, verifyheld envelope,
+commit/push prepared request/submission evidence, recheck safeRAM, releaseONCE.
+No user authorization/quiet/DGX gate, no duplicate/retry. Actual review/history
+checks and frozen sources/settings/inputs remain mandatory.12 stays sequential
+behind terminal/reviewed11; retain9failure. Continue independent meaningful
+analysis/integration while11 runs; preserve frozen manuscript/figures/archives.
+
+Current task files uncommitted: new scores directory/result and this ledger;
+focused commit/push now. No foreground session or active project job.
+Full seven-part goal ACTIVE/incomplete; no need to repair prompt again.
+
 ## Native10 Assessment Completed; Independent Admission23984 Released (2026-10-07)
 
 Previous bounded user-response turn was a verified wait: actual assessment
