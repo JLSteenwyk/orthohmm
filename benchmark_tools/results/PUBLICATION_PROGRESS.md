@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Fixed-Stratum Figure Source Tested Before Selected Render (2026-10-07)
+
+Actual projection/readback/result/90tests were pushed e1de515c. New
+plot_native_qfo_three_cell_strata.py selects EVERY11nonempty nonredundant
+fixed bin (oneoverall+10distinctfeaturebins), both conditional C/R contrasts
+and all3metrics=66points.9excludedbins are5empty+4redundant all-family copies;
+complete60score/40contrast tables remain audit evidence. Plain descriptive
+dots, no interval/range whiskers, explicit different pp-axis ranges and
+development-exposed/overlap/proxy limitations.10figure tests pass1.55s,
+including exact selection/current verified values, scope/unit/NaN/tampering,
+invented-numeric fixture PNG/PDF/SVG and professional canvas bounds. Only
+fixture image rendered; selected figure DOES NOT yet exist. Joined tests run
+before source commit. Current SAME23902RUNNING5:27:55,23910PENDING/Dependency.
+
+Exact next action: validate and commit/push newfigure source/tests/this
+checkpoint BEFORE actual render into fresh native_qfo_three_cell_strata_figure_20261007_v1.
+Inspect fullPNG and actualPDF/text, bind all66points/labels/direct sources/
+outputs and manual review; commit/push figure/result summary. No oldfigure,
+maintext, rc5, scientific score/admission, source or uncertainty is changed.
+Then continue SAME native terminal/queued review and unrun11/12 sequential.
+No native terminal yet; no duplicate/retry/re-release or quiet-host gate.
+
 ## Three-Cell Fixed Strata Actually Exported And Independently Verified (2026-10-07)
 
 Previous continuation PROGRESS: protocol762cbdb0/sourcea5952bbc before
