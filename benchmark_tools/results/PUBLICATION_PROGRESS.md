@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Fixed-Model Divergence Sources Tested Before Selected Execution (2026-10-07)
+
+Previous goal turn PROGRESS: actual editable contract/checkpoint corrected and
+pushed966ef415; no goal lifecycle change. Live SAME23902RUNNING7:35:24 and
+SAME23910PENDING/Dependency remain waiting prerequisites only for their native
+downstream work. No submission/release/retry of those handles occurred.
+
+Independent goal4.3 work advanced: retained18alignment inventory/admission
+inspected, no prior admission or MAFFT rerun. Primary FastTree documentation
+warns about small-sample CAT-derived Gamma estimates;14of18families have<50
+tips. Existing static trusted IQ-TREE3.0.1 checked (40424ccd/11333032bytes),
+no installation. New fixed WAG+G4/seed20261007/one-thread procedure and exact
+all-family median/tie bins frozen prospectively in protocol24c6e8ae/a596371c,
+pushed BEFORE selected feature computation. Only synthetic tree/alignment
+fixtures have been executed; no selected distance or accuracy projection yet.
+
+New feature driver, 2CPU/8G/4h no-requeue batch and independent edge-split
+reader use fresh namespaces, direct18alignment bindings and all563members;
+feature stage never reads native prediction counts. Negative/missing edges,
+multiple trees, membership changes and nonfinite values rejected. Original
+Newick parser exception caught as family failure after fixture discovery;
+no selected failure/retry. Timeout termination, existing-attempt refusal,
+fixed command/identical-tip retention and retaining one failed family while
+continuing the others tested. If any selected family fails, no successful-only
+cutoff or accuracy projection.29new tests plus32goal/shared-policy tests pass
+1.52s; installed binary fixed-model identical-tip synthetic smoke passed.
+
+Exact next independent action: commit/push these tested new sources/tests/
+checkpoint, then submit ONE fresh selected feature job with that source commit
+and output benchmarks/results/swiss_model_divergence_20261007_v1. Record and
+observe its handle without retry, alongside native23902/review23910. After
+terminal success use committed independent reader, then separately project
+existing three-cell counts into the frozen distance bins, verify every score
+and contrast rationally and retain a bounded result. Do not change old frozen
+sources, native jobs, old manuscript/rc5, default settings or scientific scope.
+No new calibration/true-history/generalization/timing admission is implied.
+
 ## Dependency-Scoped Continuation And Independent Next Action (2026-10-07)
 
 The user requests correction of repeated goal stops. The actual goal is ACTIVE
