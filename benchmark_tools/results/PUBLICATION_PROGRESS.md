@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Local Access Restored; Native10 Terminal, Existing Review Running (2026-10-07)
+
+Prior three goal continuations made no scientific progress because the new
+managed command sandbox failed before execution with bwrap loopback
+RTM_NEWADDR Operation not permitted. Local reads/polls and attempted checkpoint
+writes failed; neither checkpoint attempt created a task file. The goal was
+marked blocked after the third confirmed turn. User reactivated it and restored
+unrestricted execution. This continuation actually reread goal attachment,
+ledger and scheduler; permitted tools work again. Actual goal attachment equals
+PUBLICATION_GOAL_CURRENT.txt. No prompt, service, scheduler or private platform
+repair was performed by the agent, and no jobs were restarted or changed.
+
+Authoritative scheduler now has SAME23902 COMPLETED0:0, elapsed15:32:18,
+ended2026-10-07T12:33:23; its native step23902.0 COMPLETED0:0, elapsed15:00:08,
+ended12:02:05. Native execution record reports
+native_factorial_completed_pending_output_review for index10/p1_c0_r1,
+accuracy_evaluatedfalse. Session result/verification/metrics retained; they
+are not independent terminal admission. SAME23910 is RUNNING16:50 on first
+current observation, started12:33:23. Existing review destination contains
+runtime.json and scheduler.json, but not final review.json yet. Large result
+and verification JSONs remain outside Git; do not dump their full inventories
+or the ~54000 measurement point files into tool output.
+
+Exact next action: observe SAME23910 through its real terminal outcome and
+inspect its final review/actual accounting. Only bound successful review permits
+the frozen two-CPU pair-conversion workflow in a distinct fresh scheduled job,
+then frozen eight-CPU QfO scoring and independent admission. Inspect existing
+conversion/assessment handles and namespaces before each submission; no
+duplicate/restart/re-release or automatic retry. Successful history precedes
+genuinely unrun11/12 sequentially; retain9failure. If review remains live and
+no genuine independent work is executable, actual30-300s waits on SAMEhandle.
+No quiet-host/DGX/renewedapproval gate, new scaling panel or repeated science.
+
+Latest task Git state is clean for completed ordered-Pfam sources/results and
+failed observation-checkpoint path; prior HEAD8d6e8c65. Source/result/test work
+d09e2bc4/88419c78 remains frozen. All full scientific/reproducibility/external
+requirements persist; this is recovery and forward progress, not completion.
+Full goalACTIVE; previous blocked audit reset by explicit user resumption.
+
 ## Native10 Clustered Edges Present; Family Phylogenetic Workers Active (2026-10-07)
 
 After further actual300s waits on SAME23902/23910, native10 has
