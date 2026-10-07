@@ -1,0 +1,24 @@
+{
+  "accuracy_rescored": false,
+  "automatic_retry": false,
+  "decomposition": {
+    "bytes": 15598,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_vgnc_20261006_v1/report.json",
+    "sha256": "0c83ab917417ac4e97570b8a68b4bbb0bdfd72eeb301b930bf24446e1a623aea"
+  },
+  "error": "Duplicate, unordered or unmapped changed pair",
+  "error_type": "ValueError",
+  "native_inference_reexecuted": false,
+  "publication_ready": false,
+  "readback": {
+    "bytes": 1782,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_vgnc_readback_20261006_v1.json",
+    "sha256": "f75cc5775eb63f5a4aa9c72d844782f285d39b00481a380dca6450669c109c57"
+  },
+  "schema": "native_qfo_candidate_group_trace_failure_v1",
+  "source": {
+    "bytes": 15084,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_native_qfo_candidate_groups.py",
+    "sha256": "e12777dbeb0d1754bb8578ebee84e2d7006afedc4422dfea491d96072ad41123"
+  }
+}
