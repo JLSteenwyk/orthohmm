@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Complete Profile Pair Trace Prepared; Native11 Running (2026-10-07)
+
+Chronological profile result/readback5ec9604b committed/pushed. Bounded
+complete raw label comparison found exactly4changed pairs: CASP3FP->TN,
+GH14oneTP->FN, no additions. No mechanistic cause inferred from this alone.
+New prospective trace_allocated_native_qfo_profile.py uses unchanged raw
+transition/root reconstruction/topology/LCA/native-pair kernels. It binds
+admitted outputs in native7/native10, reconstructs complete candidate hash,
+checks observed node event rules and actual pair presence, records all4pair
+states/member hashes/species-tree equality. Newly observed node tables are
+explicitly not previously inventoried biological truth.
+
+Joined v1 104pass/one invented-LCA fixturefailure; retained. Fixfixtureonly
+to match its claimed native exclusion; v2 all105pass5.19s/no errors/skips.
+[Prospective protocol](NATIVE_PROFILE_LOCALIZATION_PROTOCOL_20261007.md).
+Original source and every selectedcount/binder/reader/report remain unchanged.
+
+Prepared ONLY new reviewbatch allocated_native_review_23985_20261007_v1.sh,
+2CPU128G6h/no-requeue, originalreviewer/request7bf63b80/safeRAM/differentjob
+check. Bash syntaxPASS; no reviewer submitted before terminalnative11.
+SAME23985 lastactualRUNNING19:22,step18:28. Keep samehandle;12sequential.
+
+Next focused commit/push newtrace/tests/protocol/reviewbatch/receipts/ledger,
+then ONE selected trace on readback3f62b487 in fresh results path
+native_qfo_profile_localization_20261007_v1.json. Inspect actual states before
+mechanistic claims; preserve result/failure/sourcebytes afterselected. If
+successful, perform independent saved-Newick/topology readback without rerun
+and integrate honest4pair explanations. Four-cell figure/supplement remains
+unfinished independent reporting work; no repeated oldscience/admincampaign.
+Currentnewfiles uncommitted; no foregroundsession. FullgoalACTIVE/incomplete.
+
 ## Four-Cell Swiss Uncertainty Independently Read Back (2026-10-07)
 
 Reader source/test/protocol f12e72fb committed/pushed BEFORE ONE selected
