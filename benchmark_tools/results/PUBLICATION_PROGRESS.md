@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Accepted-Event Support Source Tested Before Selected Execution (2026-10-06)
+
+The active goal attachment and committed current prompt still match
+3a2b66aa; the full goal is ACTIVE. Existing contract already removes quiet-host,
+DGX and routine milestone/resume gates. No new contradiction or dispatcher
+cause is demonstrated, so do not repeatedly edit the prompt. Actual attachment
+readback, current contract, shared-host policy and new support tests pass78
+tests1.01s; rerun after the small evidence-inventory correction below.
+
+Prospective accepted-event support protocol was pushed0a829b96 before any
+selected numeric distributions were inspected. New exporter and independent
+stdlib/rational reader plus fixtures are implemented. Preserve all2295ledger
+rows, direct/transitive paths, each40690accepted-event unit once, mixed and
+unlabeled cohorts, finite summaries and explicit positive-infinity margin.
+Do not replay partitions/aliases/scoring or infer calibrated confidence,
+causality, valid uncertainty or default changes. The prior ledger is a bound
+OUTPUT, not a member of the prior checked INPUT inventory; current bytes and
+its report output anchor are checked explicitly. Fixtures now match that scope.
+
+Exact next action: validate and commit/push these new sources/tests and this
+checkpoint BEFORE selected execution. Then use scientific Python3.10 for ONE
+fresh namespace native_qfo_candidate_support_20261006_v1, retaining failure or
+success without overwrite/retry. Run the independently imported-free reader
+against the resulting exact report hash, then retain verified results and
+interpretation. No selected export/readback exists yet. Older main/archive,
+rc5 and frozen execution source bytes remain unchanged.
+
+SAME23902RUNNING2:29:14 and23910PENDING/Dependency. Continue their actual
+terminal/review then validated-success conversion/scoring/admission/reporting.
+11/12 remain sequential behind reviewed history; no9retry/new duplicates.
+The full seven-part publication goal remains incomplete, including independent
+family validation, several QfO CIs, native factorial and raw/dependency/rights.
+Continue after the next commit and actual analysis, not a routine status stop.
+
 ## RC5 Native-Evidence Delivery Actually Restored And Verified (2026-10-06)
 
 Continue past the prepared source milestone: c5cc58f4 composer/tests/guide and
