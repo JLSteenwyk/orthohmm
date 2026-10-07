@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Four-Cell V4 Render And All 21 PDF Pages Reviewed (2026-10-07)
+
+a0cf2805 prospective bibliography correction pushed before one new render.
+Actual render exit0/1.29s/129024KiBRSS;19citations/110links/107trackedtargets,
+empty stderr. Print exit0/1.70s/196972KiBRSS;21pages/391777bytes/PDF2af09ee9.
+PDFreader exit0/1.81s/63448KiBRSS;zero bounds violations/all21pagesrendered.
+Actual receipt chain/all image hashes checked and all24scores located on
+PDFpage8. Every actualpage viewed in fivebatches; no observedclipping/overlap.
+New intervaltable continues8-9 with repeatedheader, qualifiers and lostTP
+readable. Separate visualrecord retains observations; automatedreceipts stay
+unchanged. [Review result](FOUR_CELL_MAIN_REVIEW_RESULT_20261007.md).
+First CSLselectionfailure retained; oldsources/reviews/archives untouched.
+
+Next focused commit/push ONLY actual checkedHTML/assets/print.json/document.pdf,
+PDFreviewreport/all21pagePNGs, visual/result/checkpoint; exclude browserprofile.
+Then independent remaining7.3 work: inspect existing PUBLICATION_CLAIMS_20261007.md
+and create a separate current four-cell claim-to-evidence addendum, preserving
+the bound older checklist. Ground only new profile/contrast/mechanism/render
+claims in actual four-cell evidence and explicit limits; no new completion
+gate or blanket superiority/readiness. Native23985 lastactualRUNNING1:30:12,
+reviewer23986PENDINGafteranyDependency. Check SAMEhandles throughterminal;
+do not duplicate/releaseagain. FullgoalACTIVE/incomplete.
+
 ## V4 Render Failure Diagnosed Before Corrected Bibliography Selection (2026-10-07)
 
 ce70408d pushed actual v4 manuscript/content checks. Selected HTML render with
