@@ -18,8 +18,8 @@ allselected/current source/outputbindings, exact204features/12cohorts/8paths,
 actualpixels/PDFtext and oldmain2804448c/rc5index66bc02d7 preservation.
 See [actual companion/result](NATIVE_QFO_SUPPORT_SUPPLEMENT_RESULT_20261006.md).
 No oldevidence overwrite, raw/trace/scorer replay, default tuning, newscore/
-bootstrap/admission, archiverebuild or publicrelease. New artifact/test/result
-files need commit/push next; no other task source is uncommitted.
+bootstrap/admission, archiverebuild or publicrelease. All companion artifact/
+test/result files are committed/pushed8530461f; no task source is uncommitted.
 
 Important scope correction from original authoritative47requirement audit:
 YGOB already supplies the authorized separate-clade/novel-taxon route for2.2/
@@ -30,15 +30,20 @@ Likewise the historical20result-module source-export gap was integrated and
 relocated-tested onOct4; do not repeat that completed source closure or920
 nativefixtures based on old gap documents. Whole-goal completion still unproven.
 
-Latest SAME23902RUNNING2:39:13 and23910PENDING/Dependency. Exact next changing
+Two actual30second sleeps followed by live queries retain a VERIFIED WAIT,
+not an impasse: SAME23902RUNNING beyond2:43:16,23910PENDING/Dependency.
+Search log19.15% to19.23% is search-stage progress, not overall progress/ETA.
+Exact next changing
 prerequisite is their actual terminal state and already queued review. Poll
 the SAME handles; if no genuinely useful independent unfinished action is
 supported, use actual sleep/wait rather than invent more archive/goal repair
 work. On successful terminal/review: existing allocated conversion, assessment,
 independent admission and reporting. Genuinely unrun11/12 remain sequential
-behind reviewed history; no9retry, duplicate or re-release. Existing39-hour
-native failure histories/missing outcomes and other QfOCIs remain explicit.
-Do not mark goal complete at this companion milestone. Commit/push and continue.
+behind reviewed history; no9retry, duplicate or re-release. Existing native
+failure histories/missing outcomes and other QfOCIs remain explicit.
+Do not mark goal complete at this companion milestone. Continue actual waiting
+on the same handles, not another prompt/source/archive correction or a resume
+request. No useful independent unfinished analysis is currently identified.
 
 ## Event-Support Supplement Generator Tested Before Rendering (2026-10-06)
 
