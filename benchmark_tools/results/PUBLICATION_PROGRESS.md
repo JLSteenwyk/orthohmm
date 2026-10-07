@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Full Native10 Semantic Context Passes; One Fresh Full Review Prepared (2026-10-07)
+
+Context source49f5c35e pushed before ONE selected probe. Reportd54f2062 binds/
+rechecks182files and runs the unchanged full semantic kernel in the EXACT
+original allocated caller context. It passes984137inputgenes/394768groups/
+5115410nativepairrows, all checkpoint/provenance/settings/partition/species
+tree checks. Exit0/58.10s/1030112KiB/0swaps; command retained in time record.
+This current semantic success does not establish original23910failure cause
+or substitute for allocated terminal review. Original failure remains intact.
+
+Given BOTH selected diagnostics pass, a prospective protocol justifies ONE
+distinct fresh full review of SAME native23902, using the UNCHANGED original
+reviewer and ALL runtime/resource/environment/output checks. It supersedes
+only the earlier do-not-repeat-heavy-review operational instruction: no cached
+partial adoption, weakened source gate, false reclassification or inference
+rerun. No unconditional/automatic further review retry. New wrapper
+finalize_native10_review.py pins diagnosis4d8ce7b5/contextd54f2062/request1355ae3b/
+failurebad4de50, checks distinct2CPUs/128GiBcapacity, rechecks all bound evidence
+and source, refuses consumed namespace, invokes originalreview unchanged.
+New batch2CPU128G6h/no-requeue.77joined tests pass1.02s after final source pin
+addition, covering admission/identity/allocation/difference/reuse checks.
+Shell syntax check passed. No selected finalization yet and no live own job.
+
+Exact next action: retain context report/time/updated result summary; commit/
+push ONLY new wrapper/batch/protocol/tests plus this checkpoint and artifacts.
+Inspect own scheduler and fresh control/submission namespaces. Submit ONE held
+review job, inspect its actual envelope/command, record handle, release ONCE.
+Observe THAT handle through real terminal review/accounting. Control
+benchmarks/work/native10_review_finalization_20261007_v1; reviewer childreview/.
+Do not resubmit23910 or duplicate/rerun23902. Full original gates remain for
+conversion/scoring/history and no scores are currently admitted. If newreview
+fails, retain it with no further automatic submission. Full goalACTIVE;
+independent work or actual bounded waits while it runs, no new user resume.
+
 ## Native10 Complete Coverage Verified; Caller-Context Probe Prepared (2026-10-07)
 
 Diagnostic source c7ff87df pushed before ONE selected execution. Report4d8ce7b5

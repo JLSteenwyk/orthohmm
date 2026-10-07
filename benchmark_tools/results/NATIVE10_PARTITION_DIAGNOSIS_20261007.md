@@ -51,3 +51,26 @@ a parser defect, a pipeline defect, continuous output integrity or successful
 full semantic/resource validation. All admission/next-identity flags remain
 false. The next bounded investigation is the unchanged semantic kernel in the
 original caller context, with a separate non-admitting diagnostic receipt.
+
+## Original Caller Context
+
+Context-probe source `49f5c35e` was committed/pushed before one selected
+execution. Its source SHA256 is
+`eb6db30bd691341f2189d3795a17b69b404c8a4f74087c760a3107ca0645f50e`.
+The new receipt `native10_semantic_context_diagnosis_20261007_v1.json` has
+SHA256 `d54f2062f1dd37a25a69c03b6e4993466f96ac2c5313692bc60f4580a732ab1c`.
+It binds/rechecks 182 files, including the exact original request, amendment,
+plan, baseline and caller/kernel sources. The original caller's context
+construction is reproduced without changing any kernel function or globals.
+
+The unchanged full semantic kernel passes: 984,137 input genes, 394,768
+orthogroups/root HOGs and 5,115,410 native pair rows. Checkpoint array/hash,
+frozen settings, materialization, source-family, species-tree and native-pair
+checks all run through the existing kernel. This is stronger than the root
+coverage-only probe, but still not the allocated terminal-review contract.
+Its nested semantic success cannot authorize conversion, scoring or identity 11.
+The original error's cause remains unestablished.
+
+The context probe exited 0 in 58.10 seconds with 1,030,112 KiB peak RSS and
+zero swaps. The exact command is in its time record. It did not rerun inference
+or the completed resource/environment replay.
