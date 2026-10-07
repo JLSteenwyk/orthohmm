@@ -1,0 +1,63 @@
+Command exited with non-zero status 1
+	Command being timed: "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B -c import json, os, runpy, sys
+from pathlib import Path
+component = Path("/tmp/orthohmm_swiss_model_component_20261007_v1")
+output = Path("/tmp/orthohmm_swiss_model_replay_20261007_v1")
+original = Path("/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm")
+denied = [original / "benchmark_tools", original / "benchmarks/results"]
+events = []
+def guard(event, args):
+    if event == "open" and args and isinstance(args[0], (str, bytes, os.PathLike)):
+        path = Path(os.fsdecode(args[0])).resolve()
+        if any(path.is_relative_to(root) for root in denied):
+            events.append(dict(event=event, path=str(path)))
+            raise PermissionError("Blocked original scientific source/logical-input path")
+    if event in ("subprocess.Popen", "os.system", "os.posix_spawn"):
+        events.append(dict(event=event))
+        raise PermissionError("Blocked subprocess launch")
+sys.addaudithook(guard)
+for path in (original / "benchmark_tools/readback_swiss_model_divergence.py",
+             original / "benchmarks/results/swiss_model_divergence_20261007_v1/report.json"):
+    try:
+        open(path, "rb")
+    except PermissionError:
+        pass
+    else:
+        raise RuntimeError("Original-path canary did not block")
+canaries = list(events)
+if len(canaries) != 2:
+    raise RuntimeError("Unexpected canary audit")
+events.clear()
+namespace = runpy.run_path(str(component / "replay.py"), run_name="copied_replay")
+result = namespace["replay"](component, "67d9f3bb0a9cf3297804ee8526ba295515a896aeb14b1675be9d57906b735614", output)
+if events:
+    raise RuntimeError("Replay attempted scientific fallback or subprocess")
+print(json.dumps(dict(status="copied_replay_executed_with_python_event_guard",
+    python_version=sys.version, result_path=str(output / "replay.json"),
+    summary={k:v for k,v in result.items() if k != "family_descriptors"},
+    guard=dict(denied_original_roots=list(map(str, denied)), canaries=canaries,
+               replay_forbidden_events=events, os_containment=False,
+               runtime_site_packages_explicitly_allowed=True)), sort_keys=True))
+"
+	User time (seconds): 0.13
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 30720
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4501
+	Voluntary context switches: 0
+	Involuntary context switches: 3
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

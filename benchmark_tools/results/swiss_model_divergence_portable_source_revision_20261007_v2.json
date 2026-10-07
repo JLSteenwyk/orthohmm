@@ -1,0 +1,30 @@
+{
+  "status": "prospective_directory_header_repair_v2",
+  "parent": "benchmark_tools/reproduce_swiss_model_divergence.py",
+  "parent_sha256": "64baa725385ab364d8bb07550e584c47d277126b4a582dbfb1a9109c97789987",
+  "output": "benchmark_tools/reproduce_swiss_model_divergence_v2.py",
+  "edits": [
+    {
+      "from": "\"replay.py\": \"benchmark_tools/reproduce_swiss_model_divergence.py\"",
+      "to": "\"replay.py\": \"benchmark_tools/reproduce_swiss_model_divergence_v2.py\""
+    },
+    {
+      "from": "\"README.md\": \"benchmark_tools/SWISS_MODEL_DIVERGENCE_REPLAY.md\"",
+      "to": "\"README.md\": \"benchmark_tools/SWISS_MODEL_DIVERGENCE_REPLAY_V2.md\""
+    },
+    {
+      "from": "SCHEMA = \"swiss_model_divergence_portable_v1\"",
+      "to": "SCHEMA = \"swiss_model_divergence_portable_v2\""
+    },
+    {
+      "from": "def restore_payloads(path, features, output):\n    expected = {archive_name(r[\"path\"]): r for r in features[\"checked_inputs\"]\n                if (\"benchmarks\", \"results\") in list(zip(PurePosixPath(r[\"path\"]).parts,\n                                                        PurePosixPath(r[\"path\"]).parts[1:]))}\n    require(len(expected) == 183, \"Incomplete retained payload inventory\")\n    with tarfile.open(path, \"r:gz\") as archive:\n        members = archive.getmembers()\n        require(len(members) == len(expected) and {m.name for m in members} == set(expected)\n                and all(m.isfile() for m in members), \"Incorrect archive inventory or types\")\n        for member in members:\n            relative = PurePosixPath(member.name)\n            require(not relative.is_absolute() and \"..\" not in relative.parts\n                    and str(relative) == member.name and \"\\\\\" not in member.name, \"Unsafe member path\")\n            raw = archive.extractfile(member).read()\n            require(identity(raw) == {k: expected[member.name][k] for k in (\"bytes\", \"sha256\")},\n                    \"Changed retained payload\")\n        output.mkdir(parents=True, exist_ok=False)\n        for member in members:\n            target = output / member.name\n            target.parent.mkdir(parents=True, exist_ok=True)\n            with target.open(\"xb\") as stream:\n                stream.write(archive.extractfile(member).read())\n    return len(members)\n\n",
+      "to": "def restore_payloads(path, features, output):\n    expected = {archive_name(r[\"path\"]): r for r in features[\"checked_inputs\"]\n                if (\"benchmarks\", \"results\") in list(zip(PurePosixPath(r[\"path\"]).parts,\n                                                        PurePosixPath(r[\"path\"]).parts[1:]))}\n    require(len(expected) == 183, \"Incomplete retained payload inventory\")\n    ancestors = {str(parent) for name in expected for parent in PurePosixPath(name).parents\n                 if str(parent) != \".\"}\n    with tarfile.open(path, \"r:gz\") as archive:\n        members = archive.getmembers()\n        files = [m for m in members if m.isfile()]\n        require(len(members) == len({m.name for m in members})\n                and all(m.isfile() or m.isdir() for m in members)\n                and len(files) == len(expected) and {m.name for m in files} == set(expected),\n                \"Incorrect archive inventory or types\")\n        for member in members:\n            relative = PurePosixPath(member.name)\n            require(not relative.is_absolute() and \"..\" not in relative.parts\n                    and str(relative) == member.name and \"\\\\\" not in member.name, \"Unsafe member path\")\n            if member.isdir():\n                require(member.name in ancestors and member.size == 0, \"Unexpected directory header\")\n                continue\n            raw = archive.extractfile(member).read()\n            require(identity(raw) == {k: expected[member.name][k] for k in (\"bytes\", \"sha256\")},\n                    \"Changed retained payload\")\n        output.mkdir(parents=True, exist_ok=False)\n        for member in files:\n            target = output / member.name\n            target.parent.mkdir(parents=True, exist_ok=True)\n            with target.open(\"xb\") as stream:\n                stream.write(archive.extractfile(member).read())\n    return len(files)\n\n"
+    }
+  ],
+  "reason": "Actual v1 failed before extraction because the original evidence archive has 183 regular files and 19 safe zero-sized ancestor directory headers, not 183 members total.",
+  "actual_selected_v2_replay_proved": false,
+  "original_v1_or_evidence_archive_changed": false,
+  "numerical_functions_changed": false,
+  "automatic_retry": false,
+  "publication_ready": false
+}

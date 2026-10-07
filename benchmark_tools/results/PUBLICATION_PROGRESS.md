@@ -1,5 +1,38 @@
 # Publication Progress
 
+## First Portable Replay Failed; Directory-Header Repair Tested (2026-10-07)
+
+Sourcec1cba50e was pushed before ONE15file build, index67d9f3bb/4809bytes.
+Copied outside checkout, all15regular component files byte-checked before copied
+code execution; Bio1.87/NumPy2.2.6/Py3.10.13 verified. ONE actual guarded v1
+invocation FAILED before extraction/arithmetic: original evidence archive has
+202members,183regular files and19zero-sized safe ancestor directory headers.
+The new v1 checker wrongly required183members total. Retained original source,
+component, failed attempt/trace/receipt/time and archive unchanged; no retry,
+new feature/score/inference or successful selected replay claimed.
+
+Separate reproduce_swiss_model_divergence_v2.py repairs ONLY header handling,
+runner/guide selection and schema. Exact four-edit receipt verifies EVERYother
+source byte, including all numerical functions/pins, unchanged. V2 permits
+only zero-sized known ancestor directory headers; all183regular payload hashes,
+duplicate/path/type/unknown-directory gates remain before extraction. Twelve
+new tests cover repair, safety and originalfailure;14joined archive tests pass
+0.85s. Newv2 source/guide/receipt/tests and actualv1 failure artifacts are
+currently uncommitted. No selectedv2 build or execution yet.
+
+Exact next action: commit/push ONLY newv2 tested source/docs/test/version receipt,
+actualv1 build/failure/invocation/time evidence and this checkpoint BEFORE
+ONE new explicitly versioned v2 component/build/replay. Do not reuse or rerun
+v1 namespaces. Retain new external index digest, check copied bytes outside
+checkout, then execute v2 ONCE under the same bounded Python-event guard with
+existing runtime; preserve failures, no native/scorer/bootstrap rerun. This is
+diagnosed/versioned software recovery, not a replacement scientific benchmark.
+
+Dependency-only SAME23902/23910 remain live/dependency-pending; inspect actual
+scheduler handles alongside recovery. No native terminal/review/admission yet,
+no duplicate/restart/re-release. Full goalACTIVE; original scientific and
+publication requirements are not resized around this component.
+
 ## Portable Model-Distance Replay Tested Before Selected Execution (2026-10-07)
 
 New current direct-review package/claim addendum pushedf43057a1. Genuine remaining
