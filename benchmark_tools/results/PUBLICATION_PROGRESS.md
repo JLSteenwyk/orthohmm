@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Stable Goal Contract; Resume Provisional Manuscript Work (2026-10-06)
+
+Newest user asks to fix recurring goal stops. Observed goal ACTIVE; SAME23902
+RUNNING1:58:04 and23910PENDING/Dependency. Allocated execution code already
+accepts CPU contention; no quiet-host guard defect or dispatcher cause proved.
+The actual goal-linked attachment still embeds an obsolete tracer/reader task
+although grouping/alias follow-up is complete through805a8012. Remove transient
+checkpoints from the contract instead of replacing them with another staleable
+task. Current work comes only from ledger TOP and actual retained/job state.
+Add explicit same-turn continuation beyond ordinary milestones and no routine
+status-only/resume handoff; preserve safety, science, failures and lifecycle.
+
+The attachment and new version-controlled PUBLICATION_GOAL_CURRENT.txt are
+byte-identical3a2b66aa. Seven-part scope/completion bytes5a4a4621 and historical
+goal7d99ecb3 unchanged.28focused tests pass0.71s including actual attachment
+readback and existing shared execution tests; initial test-only ASCII decoder
+fixed to UTF-8 for preserved old punctuation. No frozen execution-source edit,
+job submission/release/restart, new score, lifecycle change or platform fix.
+See [diagnosis, validation and boundaries](GOAL_CONTINUATION_FIX_20261006.md).
+
+Exact next independent action: implement/test a NEW provisional condensed
+main-text snapshot generator from unchanged PUBLICATION_MAIN_TEXT_20261006.md
+(748cf8ea), integrating admitted three-cell scores7916d3e, current Swiss
+uncertainty76e6f4d, existing six-panel native figure and complete candidate
+alias/path evidence3b3ab8f1/4afc4aa6. Earlier workflows have been inspected;
+NO generator, tests, new manuscript, render or archive have yet been created.
+Preserve older manuscript/PDF/archive bytes; retain missing scientific,
+dependency and rights requirements. Render/review/package only new versioned
+outputs, with no hermetic/native-full-study/publication-ready claim.
+
+Continue SAME23902/23910 through actual terminal/review, then validated-success
+conversion/scoring/admission/reporting; genuinely unrun11/12 stay sequential
+behind reviewed history, no9retry. Do not repeat completed aliases/raw audits,
+27-panel attempts, fixtures, old archive checks or exhausted TreeFam searches.
+No uncommitted publication generator exists. Full goal ACTIVE/incomplete;
+do not repeat prompt correction absent a newly demonstrated contradiction.
+
 ## Original-Protein Alias Proof and All Candidate Pair Paths Verified (2026-10-06)
 
 Previous turn yields verified whole partitions and a retained eight-pair join
