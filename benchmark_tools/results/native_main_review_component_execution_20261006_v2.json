@@ -1,0 +1,119 @@
+{
+  "schema": "native_main_direct_review_archive_execution_v2",
+  "source_revision": "00b6ab22f7a6e2ea148dfa5d724dd9c860639a59",
+  "ledger_revision": "f5eb601cf30c509e9fc7affe7b72f131598e7fec",
+  "archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_main_review_component_20261006_v2.tar.gz",
+    "bytes": 3544952,
+    "sha256": "889be71851fcfd40dcca6ef9656af286eb5951309303327d5d7513f3917e59bd"
+  },
+  "copied_archive": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/review.tar.gz",
+    "bytes": 3544952,
+    "sha256": "889be71851fcfd40dcca6ef9656af286eb5951309303327d5d7513f3917e59bd"
+  },
+  "published_index": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_review_component_index_20261006_v2.json",
+    "bytes": 44163,
+    "sha256": "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a"
+  },
+  "restoration_receipt": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_review_component_restoration_20261006_v2.json",
+    "bytes": 856,
+    "sha256": "0ef349519b7ed7db19cfe2ee26c849da58eaea6c2528d54d6296fc005a8e0708"
+  },
+  "restored_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/restored",
+  "trusted_restored_worker": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/restored/benchmark_tools/bundle_publication_review.py",
+    "bytes": 16368,
+    "sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999"
+  },
+  "archive_construction": {
+    "command": "rg --files --hidden --no-ignore --sort path -0 | tar --mtime=@0 --owner=0 --group=0 --numeric-owner --no-recursion --null --verbatim-files-from -czf <archive> -T -",
+    "regular_files_only": true,
+    "index_mode": "0664",
+    "modes": "payload modes from committed direct-review index; index accepts 0644 or 0664",
+    "pre_extraction_checks": "archive and index external anchors, canonical unique names, regular types, exact inventory/modes/sizes/full payload SHA256"
+  },
+  "archive_member_count": 122,
+  "restored_payloads_checked": 121,
+  "verification": {
+    "command": [
+      "/usr/bin/strace",
+      "-f",
+      "-e",
+      "trace=%file",
+      "-o",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/copied-verifier.strace",
+      "/usr/bin/python3",
+      "-I",
+      "-S",
+      "-B",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/restored/benchmark_tools/bundle_publication_review.py",
+      "verify",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/restored",
+      "--manifest-sha256",
+      "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a"
+    ],
+    "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2/restored",
+    "environment": {
+      "PATH": "/no-git",
+      "HOME": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-native-main-component-20261006-v2",
+      "LC_ALL": "C",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "returncode": 0,
+    "stdout": "{\n  \"direct_targets\": 99,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/publication_main_review_20261006_v2.html\",\n    \"markdown\": \"benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006_v2.md\",\n    \"pdf\": \"benchmark_tools/results/publication_main_print_20261006_v2/document.pdf\"\n  },\n  \"files\": 121,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 102,\n  \"manifest\": {\n    \"bytes\": 44163,\n    \"sha256\": \"c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a\"\n  },\n  \"page_count\": 19,\n  \"payload_bytes\": 7697373,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+    "result": {
+      "direct_targets": 99,
+      "entrypoints": {
+        "html": "benchmark_tools/results/publication_main_review_20261006_v2.html",
+        "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261006_v2.md",
+        "pdf": "benchmark_tools/results/publication_main_print_20261006_v2/document.pdf"
+      },
+      "files": 121,
+      "inference_reproduced": false,
+      "local_html_occurrences": 102,
+      "manifest": {
+        "bytes": 44163,
+        "sha256": "c8cc4899338689b9b6cd033e6ed7017f2bd3c2e152633a55869923cf7bb5d82a"
+      },
+      "page_count": 19,
+      "payload_bytes": 7697373,
+      "publication_ready": false,
+      "redistribution_clearance": false,
+      "status": "publication_direct_review_verified",
+      "transitive_evidence_included": false
+    }
+  },
+  "published_trace": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_main_review_component_verify_20261006_v2.strace",
+    "bytes": 457078,
+    "sha256": "9c95d84a4b28750f56fe283f9e0e0a7bf042085b7c3d8a70c0adcbaa4e0b5ecc"
+  },
+  "forbidden_trace_prefixes": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM",
+    "/home/bizon/.codex/attachments"
+  ],
+  "original_paths_observed_in_trace": [],
+  "assembled_review": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_main_with_figures_20261006_v2/document.pdf",
+    "bytes": 628238,
+    "sha256": "e574d508993eb3c8a0a2a02b0a5fd533601b3fe9a3e31e4c88f8109afc7f3901",
+    "pages": 41,
+    "included_in_direct_component": false
+  },
+  "native_or_scoring_repeated": false,
+  "new_bootstrap_draws": 0,
+  "publication_ready": false,
+  "transitive_evidence_included": false,
+  "redistribution_clearance": false,
+  "public_archive_uploaded": false,
+  "limitations": [
+    "Actual copied verifier observes no original-checkout or attachment file accesses; strace is observation, not OS containment.",
+    "Only 99 direct manuscript targets and review support are bundled; links inside linked documents may be missing.",
+    "The separate 41-page assembly, generation/manual-review receipts and complete transitive scientific workflow are not direct component payloads.",
+    "No new native inference, scoring, numerical/bootstrap replay, independent generalization, rights clearance, public release or complete-study reproduction."
+  ]
+}

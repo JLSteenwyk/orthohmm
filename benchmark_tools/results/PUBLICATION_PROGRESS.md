@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Three-Cell Main Text, 41-Page Review And Copied Direct Archive Complete (2026-10-06)
+
+Previous turn corrects/tests actual goal contract (progress). This continuation
+reads it and ledger TOP, then advances the prespecified independent goal7 task.
+Same23902RUNNING and23910PENDING/Dependency, no duplicate/release/restart. New
+tested generator f5eb601c pushed before actual generation; newsource2804448c
+preserves original748cf8ea and unrelated science/functionalpairs/citations.
+Current3cells/4missing,2Swisscontrasts/12missing, initialHMM-on semantics,
+failed22437timing and all2295proven candidate paths stay explicit.
+
+Actual render/print19pages,99targets/102occurrences. No PDF bounds violations;
+13changed/adjacent pages viewed. One initial phrase-selector failure caused by
+hyphen linewrap retained; unchanged PDF reviewed with corrected selector.
+No scientific or timing retry. Sources/assets00b6ab22 pushed. New tested
+selection preserves16oldfigures and appends native six-panel figure. Actual
+41pageassembly e574d508 preserves all36sourcepage text/geometry/pixels and
+redirects8figurelinks. Fiveguides+nativefigure viewed; no fullvisualcert.
+Selection/restoration code/assembly5303543a pushed before selected extraction.
+
+New committed direct component121payloads/7697373bytes,99targets/102links,
+indexc8cc4899. Archive889be718/3544952bytes copied outside checkout. All122
+members and modes/sizes/hashes validated before extraction; copied trusted
+worker4b9646bf exits0 under isolated stdlib/noGit. Retained trace9c95d84a
+opens every copied payload and no original checkout/attachment. Not OS
+containment, full scientific reproduction, rights or transitive closure.
+Joined91tests pass3.82s, including actual Git/source/archive/trace correspondence
+and newrc5 immutable inheritance (not mutable historical source paths).
+See [bounded result and exact receipts](NATIVE_MAIN_REVIEW_RESULT_20261006_V2.md).
+
+Exact next authorized action: commit/push new rc5 composer/tests/guide and
+the current direct-archive result/receipts, then run the prepared rc5 selection
+with that exact workflow revision. Inherit all181selected/183indexed rc4
+payload bytes from retained immutable benchmarks/work/orthohmm-study-2026.10.04-rc4;
+do not rebuild rc4 or use its mutable original worktree sources. Add the
+121file direct component plus index,41pageassembly/generation/visual receipts
+and reporting workflows. New version is orthohmm-study-2026.10.06-rc5.
+Use existing package builder/archiver/restorer into fresh destinations; verify
+actual copied outer reader and child direct component without original reads.
+NO selected rc5 package/archive/restoration exists yet. Prepared tests pass;
+do not represent their temporary selections as real execution.
+
+Latest same23902RUNNING2:11:52,23910PENDING/Dependency. Continue actual terminal
+and review, then successful conversion/scoring/admission/reporting.11/12 remain
+sequential behind reviewed history; no9retry. Full goal ACTIVE/incomplete with
+independent-family, other-endpoint uncertainty, native factorial and complete
+dependency/rights gaps. No prompt repair, oldarchive/scientific audit repeat,
+quiet-host/DGX requirement or publication readiness at this milestone.
+
 ## Stable Goal Contract; Resume Provisional Manuscript Work (2026-10-06)
 
 Newest user asks to fix recurring goal stops. Observed goal ACTIVE; SAME23902
