@@ -1,0 +1,58 @@
+{
+  "status": "copied_four_cell_review_verifier_executed",
+  "anchors_committed_before_restore": "0a890b7e",
+  "cwd": "/tmp",
+  "command": [
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "-I", "-S", "-B",
+    "/tmp/orthohmm_four_cell_review_20261007_v1/benchmark_tools/bundle_publication_review.py",
+    "verify", "/tmp/orthohmm_four_cell_review_20261007_v1",
+    "--manifest-sha256", "3a6e46bc6aafea5ba3b012e78091b778d046fe43790fa9cf0c1413eeeec9a4a1"
+  ],
+  "environment": {
+    "unset": ["PYTHONPATH", "PYTHONHOME", "PYTHONUSERBASE", "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT"],
+    "PYTHONNOUSERSITE": "1", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONHASHSEED": "0",
+    "OPENBLAS_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"
+  },
+  "time_wrapper": ["/usr/bin/time", "-f", "elapsed_s=%e max_rss_kib=%M exit=%x"],
+  "copied_source_sha256_checked_before_execution": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999",
+  "returncode": 0,
+  "stderr": "elapsed_s=0.10 max_rss_kib=23040 exit=0\n",
+  "elapsed_seconds": 0.10,
+  "max_rss_kib": 23040,
+  "result": {
+    "direct_targets": 107,
+    "entrypoints": {
+      "html": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4_checked.html",
+      "markdown": "benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md",
+      "pdf": "benchmark_tools/results/publication_main_review_20261007_v4_checked_print/document.pdf"
+    },
+    "files": 142,
+    "inference_reproduced": false,
+    "local_html_occurrences": 110,
+    "manifest": {"bytes": 52225, "sha256": "3a6e46bc6aafea5ba3b012e78091b778d046fe43790fa9cf0c1413eeeec9a4a1"},
+    "page_count": 21,
+    "payload_bytes": 8916531,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "preceding_restoration": {
+    "receipt": "benchmark_tools/results/four_cell_direct_review_restore_20261007_v1.json",
+    "returncode": 0,
+    "time_stderr": "elapsed_s=0.22 max_rss_kib=15360 exit=0\n",
+    "elapsed_seconds": 0.22,
+    "max_rss_kib": 15360,
+    "members": 143,
+    "payloads": 142
+  },
+  "outside_checkout_execution": true,
+  "original_components_modified": false,
+  "publication_ready": false,
+  "limitations": [
+    "This is actual copied verification of reporting bytes and direct links, not raw scientific admission, native inference or full transitive study reproduction.",
+    "The interpreter is an existing same-host Python; isolation flags do not establish OS containment, cross-host compatibility or complete runtime closure.",
+    "Separate manual visual review and current claim addendum remain in Git outside the unchanged direct-link inventory."
+  ]
+}

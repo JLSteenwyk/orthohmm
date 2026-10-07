@@ -1,5 +1,24 @@
 # Publication Progress
 
+## Four-Cell Review Restored And Copied Verifier Actually Executed (2026-10-07)
+
+0a890b7e pushed actualarchive/index/receipts before ONE anchoredrestore. Existing
+restorer exits0/0.22s/15360KiBRSS after143regularmember/142payloadchecks,
+fresh/tmp/orthohmm_four_cell_review_20261007_v1. Copiedverifier SHA4b9646bf
+checked before actual -I-S-B execution from/tmp; exit0/0.10s/23040KiBRSS.
+Reports exactoriginal142payloads/8916531bytes/107targets/110links/21pages and
+INDEX3a6e46bc. No source/schema/runtime/native/scientific changes or oldarchive
+rebuild. [Result and reproduction](FOUR_CELL_DIRECT_REVIEW_RESULT_20261007.md).
+Directreviewdelivery nowcurrent; wholetransitive/native/release/rights gaps
+explicit. Separatemanualreview/newclaims not injectedinto directinventory.
+
+Next check retained copiedresult==buildresult, restoreanchor/inventory and new
+resultlinks; focusedcommit/push actualrestore/verify/result/checkpoint. Then
+SAME23985/23986 observations and boundedactualwaits until terminaloriginalreview
+permits conversion/scoring/admission/native12. Reconsider meaningfulindependent
+requirements on newevidence without replaying nowcompletedcurrentarchive.
+FullgoalACTIVE/incomplete; no userresume/DGX/quietwindow requirement.
+
 ## Exact Four-Cell Review Built And Archived Before External Restore (2026-10-07)
 
 ccec7e4b prospectiveprotocol pushed BEFORE one unchangedexporter build with
