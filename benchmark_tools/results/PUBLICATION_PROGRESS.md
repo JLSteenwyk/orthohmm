@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native10 Conversion23977 Completed; Frozen QfO Assessment Prepared (2026-10-07)
+
+After actual120s wait on SAME23977, sacct COMPLETED0:0/2:44/end14:33:56.
+ResultsSHA593679a7/15763796bytes, statusallocated_native_factorial_qfo_pairs_
+prepared_unscored. All5115410expected/total/retained nativepairs preserved,
+mappingloss0. Bothpairs files78572552bytes/SHA6777d4c3. Coverage984137input
+accessions/542336with >=1pair/fraction0.5510777462893885. Full denominator
+preserved; coverage is not accuracy. Original native/review source bindings
+unchanged. No new benchmark score or independent admission yet. Conversion
+source/submission checkpoint7e2248d9 pushed; no active own scientific handle.
+
+Prepared new8CPU128G24h/no-requeue batch native10_qfo_assessment_20261007_v1.sh
+calls UNCHANGED frozen assessor with --rootROOT, pairreceipt593679a7 and
+--conversion-job23977. Actual three fixed paths allABSENT on inspection:
+benchmarks/results/allocated_native_qfo_assessment_v1/p1_c0_r1;
+qfo_benchmark/w/aq10; qfo_benchmark/scoring/allocated_native_10.
+No assessment job in own queue. No check-only replay, new endpoint, source
+edit or regenerated reference. Original failure23910retained/causeunknown;
+fresh fullreview23973COMPLETED0:0/review7eab212d authorizes conversion route.
+
+Exact next action: bash syntax/diff check new batch; focused commit/push
+batch/result-summary/checkpoint, then verify fresh submission namespace,
+submit ONE held8CPU128G24h assessment, inspect envelope/command/ownership,
+record/releaseONCE and observe SAMEhandle through actual terminalresult.
+Successful process is still pending independent assessment admission; call
+frozen admit_allocated_native_factorial_qfo_assessment only with successful
+conversion/assessment jobs and fresh admission destination. Then report six
+native metrics/FASsampling/secondarymean/coverage/native resources honestly
+and advance genuinely unrun11/12 in original order/history. Retain9failure.
+
+Full seven-part goalACTIVE; no duplicate, restart, automatic retry, arbitrary
+source/source-identity edits or originalfailureoverwrite. Do not rerun old
+science,27scaling,archives/PDFreviews or prompt repairs. Ordinary shared-host
+contention accepted with unknown potentially tool-dependent distortion.
+
 ## Native10 QfO Conversion23977 Running; Full Review Succeeded (2026-10-07)
 
 Fresh fullreview23973 completed0:0; final7eab212d has every required original

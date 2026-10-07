@@ -97,3 +97,17 @@ remains false until the downstream contracts complete. The large7.43GB replay
 and complete review stay outside Git. Original23910failure remains retained
 with unestablished cause. The next authorized step is the frozen two-CPU QfO
 pair conversion in a fresh namespace, then assessment and independent admission.
+
+## Conversion Outcome
+
+Distinct conversion23977 completed0:0 in2:44, ended14:33:56. Its frozen
+converter receipt `native10_qfo_pairs_allocated_20261007_v1/results.json` has
+SHA256 `593679a7c35a6c5e2eb706846a6fcced706dd0d624bccb5c1608e6f83f7e7040`.
+It materialized5,115,410native inferred pairs; expected/total/retained counts
+match and zero pairs were lost to the frozen QfO mapping. Both two-column files
+are78,572,552bytes with SHA256
+`6777d4c32d2f0cc22edc23006872c52be0d0ab6b8994b73b0f169be1b4c7fd90`.
+All984,137inputs remain in the coverage denominator;542,336occur in at least
+one predicted relation (fraction0.5510777462893885). This is relation coverage,
+not accuracy, recall or complete orthology recovery. No benchmark endpoint has
+yet been scored or independently admitted for this native attempt.
