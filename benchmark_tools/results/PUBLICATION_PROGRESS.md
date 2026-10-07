@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Four-Cell Figure Sources Tested Before Selected Rendering (2026-10-07)
+
+628cd9d6 committed/pushed actual profile-Newick report/receipt/mechanistic
+supplement. New unselected plot_native_qfo_four_cell_scores.py accepts actual
+allocated snapshot/source, binding and profile reader, checks all4admitted
+cells/24scores/4coverage/9intervals plus3nullscores/11nullcontrasts. Uses an
+explicit scientificPython3.10 subprocess to replay reporting metadata via
+unchanged allocated audit/reporter; renderingPython3.12 is separate.
+New review_native_qfo_four_cell_figure.py independently checks TSVs against
+native snapshot/binding, all4colors, SVG/decodedPDF scope labels, PDF page/text
+bounds, plus fresh preview. Neither changes scientific admission or oldsources.
+
+Focused new54tests pass6.66s; joined with old3cell suite107pass13.23s, no
+failures/errors/skips. Renderfixtures deliberately mock metadata replay and
+use synthetic paths; not selected production execution or provenance proof.
+Historical plotter/reviewer/exporter/selectedNewickreader/maintext scoped diff
+is empty. [Prospective protocol](NATIVE_FOUR_CELL_FIGURE_PROTOCOL_20261007.md).
+
+Next focused commit/push sources/tests/protocol/XMLs/ledger BEFORE one selected
+render on snapshot7aab1cbd/bindinge8f554a1/readback3f62b487 in fresh
+native_qfo_four_cell_figure_20261007_v1. Inspect actual replay outcome; after
+success one separate selected review in fresh readback/preview destinations,
+then visually inspect both actual PNG and PDF preview. Freeze sources after
+selected use, retain actual commands/stdout/costs, write honest chronological
+four-cell supplement; do not overwrite oldfigures/maintext/archives.
+
+SAME23985 lastactualRUNNING37:58/step37:04; ongoing initialnative work, no
+terminal/review/admission. Observe samehandle while independentreporting
+continues;12sequential behind reviewed11. Full goalACTIVE/incomplete.
+
 ## Profile Candidate Separation Independently Verified (2026-10-07)
 
 d27ca3ae committed/pushed new reader/tests/protocol and retained trace/receipt
