@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native10 Coverage Contradiction Located; Diagnostic Source Tested (2026-10-07)
+
+Previous user-maintenance turn PROGRESS:214d6683 pushed actual prompt copies,
+focused recovery tests and checkpoint;33tests passed. This continuation read
+the current attachment/ledger and actual accounting. SAME23902COMPLETED0:0 and
+SAME23910FAILED1:0 remain terminal; no new job, release, retry or scoring.
+
+Read-only ad hoc comparisons using Bio.SimpleFastaParser and csv.DictReader
+found984137 unique nonempty input IDs across78files,984137root memberships,
+no missing/extra/duplicate IDs, and matching checkpoint/final-cluster counters.
+A separate call to the UNCHANGED frozen root-HOG parser and groups coverage
+gate also passed394768groups on the retained file. This contradicts the review's
+coverage failure but does NOT establish its cause or invalidate the failed
+receipt. No file/source mutation or valid final admission has been established.
+Root/group file current mtimes precede the failed review; that alone is not
+continuous integrity evidence. All ad hoc commands completed; no live handle.
+
+New diagnose_native_partition.py performs independently parsed full coverage,
+per-species missing/extra/duplicate counts, input/preparation/checkpoint hash
+checks, parser agreement, canonical output-partition hashes and C0 source-family
+reconstruction checks. It invokes ONLY the frozen root coverage gate, not full
+semantics, resource replay or scoring. Every bound file rechecked before output;
+failure remains unreviewed/unauthorized, cause explicitly unknown.31 invented
+fixtures pass0.63s, including missing/extra/duplicate detection, parser/header/
+identity/pin failures and no-admission flags. Frozen sources unchanged.
+
+Exact next action: commit/push ONLY diagnostic source/test and this checkpoint
+before ONE selected diagnostic execution at
+benchmark_tools/results/native10_partition_diagnosis_20261007_v1.json using
+historical plan6c87babc and retained23910failure. Capture command/time/exit and
+report hash; inspect the full bounded diagnosis, then investigate the original
+semantic-call context if coverage still passes. Do not rerun the heavy complete
+review, duplicate native10, score or release11/12. Their history authorization
+remainsfalse. Full seven-part goalACTIVE; no timing-host/DGX/user-resume gate.
+
 ## User-Requested Recovery Contract Fix; Native10 Review Failed (2026-10-07)
 
 The goal tool reports ACTIVE and still points to the editable attachment at
