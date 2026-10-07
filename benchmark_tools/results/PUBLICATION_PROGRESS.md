@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Three-Cell Fixed-Stratum Sources Tested Before Selected Projection (2026-10-07)
+
+Previous turn PROGRESS27675840: actual linked continuation contract fixed,
+tested and pushed. This continuation read the actual attachment and newest
+ledger and observed SAME23902RUNNING5:14:51/23910PENDING/Dependency.
+No lifecycle change, duplicate job, restart, release or new timing gate.
+
+Prospective protocol762cbdb0 was pushed before candidate subgroup scores.
+New export_native_qfo_three_cell_strata.py and independently implemented
+readback_native_qfo_three_cell_strata.py reuse10pinned inputs and9bound
+inherited sources. Fixtures verify54family/60score/40contrast rows, full
+18family/563protein agreement, integer/prior/macro arithmetic, preserved
+failed timing, emptyNULL/NA bins and altered inputs/outputs.44tests pass0.47s;
+both CLIs run in retained isolated stdlib Python3.10. Joined current-goal/
+shared-host tests are run before the focused source commit. No selected
+projection or new subgroup values exist yet; prior raw/annotation/tree/
+mapping/bootstrap validation is inherited, not rerun. Protocol9e14a818 and
+old evidence/source files remain unchanged.
+
+Exact next action: finish/validate/push ONLY the two new sources, focused
+tests and this checkpoint BEFORE selected execution into fresh
+native_qfo_three_cell_strata_20261007_v1. Run exporter once and independent
+rational reader once, retaining actual receipt/failure; check all resulting
+JSON/TSV/human values and source/output bindings. Preserve descriptive scope,
+all negative/neutral results and no new intervals, tuning, causal/interaction
+claims or admission. Then commit/push result and continue the full goal,
+same native terminal/queued review and genuinely unrun11/12 sequentially.
+No selected source is yet frozen by a generated artifact; new source/test
+files are the only uncommitted task changes besides this checkpoint.
+
 ## Continuation Follow-Up And Recovered Independent Next Action (2026-10-07)
 
 Fresh user request is to fix recurring goal stops, not to repeat completed
