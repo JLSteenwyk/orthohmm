@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native11 Hour Long Wait Verified On Same Handles (2026-10-07)
+
+Previous turn was a verifiedwait; earlier reporting/archive progress remains
+committed. This continuation read actualcontract/ledger and livehandles, then
+performed13 authoritative queue/log observations separated by actual300s waits
+from22:39:41 to23:39:42UTC. SAME23985 stayedRUNNING3:11:48 to4:11:49; initial
+search19.31% to24.28%, NOT overallcompletion/ETA. SAME23986 stayedPENDING/
+Dependencyafterany:23985(unfulfilled). No native/reviewer terminal outcome;
+originalreview namespace still has neitherreview.json norfailure.json.
+Read-only monitoring cell292 finished; noforegroundexecsession remains.
+
+One optional squeue--json observation failed with serializer/json plugin
+unavailable, exit139. Established fixed-format squeue and accounting still
+work; fallback observations succeeded. This was observation-tool failure,
+not scientific-job failure. No unchangedJSONretry/plugininstall/scheduler
+configuration change or jobrestart was made. No sources/results/prompts
+rewritten, no scoring/admission/submission/release, no oldreport/archivereplay.
+
+Next unfinished action remains boundedactual30-300s waits/polls of SAME23985/
+23986. On actualterminalnative outcome observe alreadyqueued originalreview;
+inspect benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+review.json orfailure.json and retainedstdout. Preserve diagnosis/noautomatic
+retry and originalscientific/resource/nextidentity gates before conversion/
+scoring/independentadmission/native12. Currentfourcell reporting and direct
+delivery done; finalintegration depends on actualremainingoutcomes. No new
+executableindependent requirement identified from currentchangingevidence.
+Reconsider on newevidence, not repeatcompletedwork or inventcampaigns. Fullgoal
+ACTIVE/incomplete, notpaused/blocked; no userresume/quietwindow/DGX needed.
+
 ## Current Review Delivery Complete And Native11 Wait Revalidated (2026-10-07)
 
 This turn made progress under7.4: exactnewv4direct-review component selected
