@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Four-Cell Manuscript Source Ready For One Selected Generation (2026-10-07)
+
+Previous turn made progress: corrected actual prompt copies/handoff in pushed
+795c3cfc. This continuation read the actual contract and reconciled prepared
+work. Source/test/protocol inspected; focused29tests pass again0.78s. Original
+retained XML has29tests/0failures/0errors/0skips. Tests compare all24 score
+values/four coverage/nine intervals through Pandoc AST and restore the whole
+remaining scientific body exactly; they do not execute selected generation.
+Original v3 and render/print/review sources have empty scoped diff. Both v4
+manuscript/receipt destinations remain absent. Prepared source is unselected.
+
+Next commit/push source/test/protocol/retainedXML with this checkpoint, then
+ONE selected clean scientificPython3.10 generation using the exact command
+in the preceding handoff. Retain command/output/exit/time, freeze generator
+after use, check actual manuscript preservation/tables, commit/push outputs.
+Then unchanged render/print/PDF-review with fresh v4 namespaces/CSLv5 and
+actual full-document visual inspection. This is reporting integration of
+existing admitted evidence, not new scoring/admission/confirmation/readiness.
+Do not change old source/figures/archives to incorporate new results.
+
+SAME23985 confirmed RUNNING1:26:02, SAME23986 pending afterany23985/Dependency;
+these do not gate independent reporting. No new submission/release/retry.
+Observe actual original reviewer outcome before dependent science/native12.
+Full publication goal remains ACTIVE/incomplete.
+
 ## Corrected Handoff: Finish Prepared Four-Cell Manuscript Integration (2026-10-07)
 
 The user requests investigation of recurring goal stops. Actual goal remains
