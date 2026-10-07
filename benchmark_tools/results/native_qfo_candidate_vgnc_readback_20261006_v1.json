@@ -1,0 +1,61 @@
+{
+  "baseline_raw_audit_repeated": false,
+  "cached_baseline_union_rows": 39947,
+  "candidate_counts": {
+    "FN": 3791,
+    "FP": 18146,
+    "TP": 20143
+  },
+  "candidate_raw_rows": 42080,
+  "checked_input_records": 19,
+  "failed_r1_timing_remains_ineligible": true,
+  "independent_kernel_source": {
+    "bytes": 15001,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_vgnc_blocks.py",
+    "sha256": "0f8fc093af6ea027c739e798160508bdfdf91316d1abbb9b441d6afbb1660fe5"
+  },
+  "new_scoring_or_admission": false,
+  "primary_exporter_imported": false,
+  "publication_ready": false,
+  "report": {
+    "bytes": 15598,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_vgnc_20261006_v1/report.json",
+    "sha256": "0c83ab917417ac4e97570b8a68b4bbb0bdfd72eeb301b930bf24446e1a623aea"
+  },
+  "schema": "native_qfo_candidate_vgnc_readback_v1",
+  "source": {
+    "bytes": 12794,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_candidate_vgnc.py",
+    "sha256": "67255b6c4993c3f31eede03ae91fca8a799a9c340725f9ef11cf64ce32c7b2ad"
+  },
+  "status": "candidate_decomposition_independently_verified",
+  "transition_counts": [
+    {
+      "baseline": "FN",
+      "candidate": "FN",
+      "pairs": 3791
+    },
+    {
+      "baseline": "FN",
+      "candidate": "TP",
+      "pairs": 162
+    },
+    {
+      "baseline": "FP",
+      "candidate": "FP",
+      "pairs": 16013
+    },
+    {
+      "baseline": "TP",
+      "candidate": "TP",
+      "pairs": 19981
+    },
+    {
+      "baseline": "not_scored",
+      "candidate": "FP",
+      "pairs": 2133
+    }
+  ],
+  "transition_pairs": 42080,
+  "uncertainty_admitted": false
+}

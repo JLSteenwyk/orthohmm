@@ -1077,6 +1077,44 @@ Competition for CPU, memory bandwidth and I/O may have affected elapsed
 times, with an unknown and potentially tool-dependent impact. These are
 observed shared-host timings, not estimates of isolated performance.
 
+### Native Candidate VGNC Error Decomposition
+
+A prespecified raw decomposition adds the newly admitted P0C1R0 VGNC rows
+to the previously independently verified P0C0R0 baseline pair table. Aggregate
+outcomes were already inspected; this is not outcome-blind independent
+validation. Candidate TP/FP/FN counts are 20,143/18,146/3,791, compared with
+baseline 19,981/16,013/3,953. Both retain initial HMM search and submit group
+clique pairs with reconciliation off.
+
+| Baseline State | Candidate State | Scored Pairs |
+| --- | --- | ---: |
+| FN | FN | 3,791 |
+| FN | TP | 162 |
+| FP | FP | 16,013 |
+| TP | TP | 19,981 |
+| not_scored | FP | 2,133 |
+
+The complete 42,080-pair union contains no other nonzero transitions.
+Expansion recovers 162 asserted TPs but adds 2,133 scored FPs, retaining
+baseline TPs/FPs. Precision decreases 2.904231 percentage points, recall
+increases 0.676861 points and F1 decreases 1.938806 points. All added FPs
+cross unchanged reference overlap blocks; the two within-block FPs remain.
+This explains pooled-score arithmetic, not a causal evolutionary mechanism.
+VGNC eligibility defines the scored denominator; `not_scored` is not a true
+negative or proven biological non-orthology. Blocks do not establish valid
+independent resampling units, and no VGNC confidence interval is admitted.
+
+The separate stdlib reader checks all candidate raw rows, every sparse cell
+and transition pair, original alias/reference mappings, aggregate metrics
+and Fraction-based differences. Full candidate database hashes are checked
+before and after reading. The original baseline raw audit is reused, not
+repeated; omitted FPs are not independently rescored. No inference, scoring,
+new admission, failed-timing repair or default tuning is performed.
+[Protocol](NATIVE_QFO_CANDIDATE_VGNC_PROTOCOL_20261006.md),
+[machine-readable decomposition](native_qfo_candidate_vgnc_20261006_v1/report.json),
+[independent readback](native_qfo_candidate_vgnc_readback_20261006_v1.json),
+[reproduction and limits](NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md).
+
 ### Native Functional-Pair Composition
 
 A separate raw-pair comparison explains the two fresh native cells' GO/EC

@@ -24,6 +24,19 @@ replace historical comparator results or certify the complete publication goal.
 | Native reconciliation has a larger descriptive F1 gain in higher-Pfam-type SwissTrees families | [Fixed native protocol](NATIVE_QFO_SWISS_DOMAIN_STRATA_PROTOCOL_20261006.md), [actual table](native_qfo_swiss_domain_strata_20261006_v1/TABLE.md), [independent annotation/raw readback](native_qfo_swiss_domain_strata_readback_20261006_v1.json), [scope](NATIVE_QFO_SWISS_DOMAIN_STRATA_RESULT_20261006.md) | Supported as point estimates only: six higher-type families +20.946pp F1 versus twelve lower-type +4.891pp, with recall losses in both. Three higher-repeat families lose13.296pp recall. Complete563-protein/21,530-row readback; overlapping development-exposed bins, no new CI, significant interaction, causal domain mechanism, validated full architecture or independent FAS claim. Failed R1 timing stays ineligible |
 | Native VGNC and complete SwissTrees stage diagnostics are assembled into a checked manuscript supplement | [Seven-page supplement](native_qfo_manuscript_supplement_20261006_v3/supplement.pdf), [generated sources](native_qfo_manuscript_supplement_20261006_v3/assembly.json), [presentation readback](native_qfo_manuscript_supplement_20261006_v3/presentation_readback.json), [scope and review](NATIVE_QFO_SUPPLEMENT_RESULT_20261006.md) | Supported as presentation of the two admitted development-exposed P0/C0 cells: eight displayed tables/34 rows, exact source pixels for both figures and explicit missing-run/uncertainty/timing limits. VGNC excludes16,004 scored FPs and loses463 TPs; SwissTrees excludes1,689 FPs and334 TPs. Observed graph paths and saved duplication-LCA annotations do not establish evolutionary correctness, a prefilter-failure cause or general superiority. No new scientific computation, confidence interval, final archive or publication-ready admission |
 
+Native candidate VGNC errors now have a checked decomposition:
+[fixed protocol](NATIVE_QFO_CANDIDATE_VGNC_PROTOCOL_20261006.md),
+[actual report and complete pair table](native_qfo_candidate_vgnc_20261006_v1/report.json),
+[independent stdlib readback](native_qfo_candidate_vgnc_readback_20261006_v1.json)
+and [scope](NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md). Across42,080 union
+pairs, P0C1R0 recovers162 asserted TPs and adds2,133 scored FPs, retaining
+baseline TPs/FPs. All added FPs cross unchanged reference overlap blocks.
+Precision-2.904231pp/recall+0.676861pp/F1-1.938806pp reproduce admitted metrics.
+This supports a development-exposed arithmetic trade-off, not uniform accuracy
+improvement, a causal biological mechanism or independent validation. No
+VGNC CI or prediction-edge rescore; not_scored is not TN. Baseline raw audit
+reused, failed R1 timing unchanged and four fresh scores still unavailable.
+
 Native duplication-annotation strata are now checked in the completed P0C0
 cells: [fixed protocol](NATIVE_QFO_SWISS_DUPLICATION_STRATA_PROTOCOL_20261006.md),
 [table](native_qfo_swiss_duplication_strata_20261006_v1/TABLE.md),

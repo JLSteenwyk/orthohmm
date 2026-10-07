@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Native Candidate VGNC Error Trade-Off Independently Checked (2026-10-06)
+
+Previous turn completes the review23910 dependency handoff. This continuation
+confirms same23902RUNNING and23910PENDING/Dependency, then advances scientific
+goal4 rather than another prompt/receipt loop. Protocol61856584 is pushed
+before candidate raw rows/transition inspection; aggregate outcomes already
+known, not outcome-blind selection. New primary/independent reader and125
+passing tests pushed as37a0c67f before the actual selected export. Original
+scientific/audit kernels,14 allocation sources and unrelated work untouched.
+
+Reuse the previously independently verified baseline pair table; do not repeat
+its database/raw audit. Read the newly admitted P0C1R0 original candidate
+mapping/raw/aggregate only. Actual primary/independent reader each exit0,
+checking full new database hashes before/after, unchanged reference/79aliases,
+all42,080 raw rows/sparse cells/union transitions, original inventories and
+Fraction-based ratios/differences. Counts TP20143/FP18146/FN3791 exactly reproduce
+admitted metrics. Recover162 asserted TPs and add2133 scored FPs while retaining
+baseline TPs/FPs; all added FPs cross fixed reference overlap blocks. Precision
+-2.904231pp/recall+0.676861pp/F1-1.938806pp. No other nonzero transition.
+
+Integrate the bounded diagnostic into editable manuscript/claims. It explains
+score arithmetic, not evolutionary truth, causality, independent sampling or
+uniform accuracy gains. No VGNC CI, prediction-edge rescore, inference/scoring/
+bootstrap repeat, default change or failed-timing repair. Actual report0c83ab91,
+independent readbackf75cc577 and complete sparse/pair tables retained. See
+[result, identities, reproduction and limits](NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md).
+Initial119/expanded125 tests pass; latter3.45s/no failures/errors/skips. GNU-time
+5.01s/3.82s observations are shared-host postprocessing, not tool-speed evidence.
+Final212 joined tests pass8.98s with zero failures/errors/skips, including
+actual derived-output/source bindings and manuscript/result table correspondence.
+Same23902RUNNING1:12:25 and23910PENDING/Dependency at final scheduler inspection;
+neither is terminal or restarted. No prior scientific readback is repeated.
+
+Continue existing23902/23910 to real terminal review, then successful-output
+conversion/scoring/admission/reporting.11/12 stay behind reviewed history;
+no9retry. Four fresh scores/wider uncertainty/provenance/final package gaps
+remain. Goal active/incomplete; no dedicated/quiet/DGX gate or readiness claim.
+
 ## Allocated Native Review 23910 Released and Dependency-Verified (2026-10-06)
 
 Complete the actual handoff, not another prompt/preparation milestone. Held

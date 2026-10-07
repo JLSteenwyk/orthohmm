@@ -201,3 +201,40 @@ def test_database_mutation_during_mapping_is_retained_as_failure(inputs, monkeyp
     with pytest.raises(ValueError, match="identity changed"):
         run(inputs)
     assert not inputs["output"].exists()
+
+
+def test_actual_derived_outputs_and_sources_remain_bound():
+    root = Path(__file__).resolve().parents[2]
+    path = root / "benchmark_tools/results/native_qfo_candidate_vgnc_20261006_v1/report.json"
+    report = json.loads(path.read_text())
+    readback = json.loads((root / "benchmark_tools/results/native_qfo_candidate_vgnc_readback_20261006_v1.json").read_text())
+    assert readback["report"] == exporter.old.record(path)
+    assert readback["source"] == exporter.old.record(reader.__file__)
+    assert report["source"] == exporter.old.record(exporter.__file__)
+    for ref in (report["candidate"]["table"], report["transition_table"]):
+        exporter.old.check(ref)
+    assert report["candidate"]["counts"] == readback["candidate_counts"] == dict(TP=20143, FP=18146, FN=3791)
+    assert report["union_scored_pairs"] == readback["candidate_raw_rows"] == readback["transition_pairs"] == 42080
+    assert report["transition_counts"] == readback["transition_counts"] == [
+        dict(baseline="FN", candidate="FN", pairs=3791), dict(baseline="FN", candidate="TP", pairs=162),
+        dict(baseline="FP", candidate="FP", pairs=16013), dict(baseline="TP", candidate="TP", pairs=19981),
+        dict(baseline="not_scored", candidate="FP", pairs=2133)]
+    assert report["candidate"]["cross_block_false_positives"] - report["baseline"]["cross_block_false_positives"] == 2133
+    assert report["candidate"]["within_block_false_positives"] == report["baseline"]["within_block_false_positives"] == 2
+    assert report["failed_r1_timing_remains_ineligible"] is True
+    assert report["uncertainty_admitted"] is False
+
+
+def test_manuscript_and_result_transition_tables_match_actual_report():
+    root = Path(__file__).resolve().parents[2] / "benchmark_tools/results"
+    report = json.loads((root / "native_qfo_candidate_vgnc_20261006_v1/report.json").read_text())
+    manuscript = (root / "PUBLICATION_MANUSCRIPT_DRAFT_20260916.md").read_text().split(
+        "### Native Candidate VGNC Error Decomposition\n", 1)[1].split("### Native Functional-Pair Composition", 1)[0]
+    result = (root / "NATIVE_QFO_CANDIDATE_VGNC_RESULT_20261006.md").read_text()
+    for row in report["transition_counts"]:
+        line = f'| {row["baseline"]} | {row["candidate"]} | {row["pairs"]:,} |'
+        assert line in manuscript and line in result
+    for key in ("precision", "recall", "f1"):
+        assert f'{abs(report["differences"][key]) * 100:.6f}' in manuscript
+    assert "no VGNC confidence interval is admitted" in manuscript
+    assert "original baseline raw audit is reused" in manuscript
