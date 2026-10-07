@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Allocation-Aware Scientific Reporting Integrated (2026-10-06)
+
+Previous goal turn makes concrete progress by completing validated production
+integration and releasing23902; this turn verifies same job stillRUNNING and
+advances the reporting path required for its future independent admissions.
+New exporter `export_allocated_native_qfo_scientific_scores.py` composes the
+unchanged historical/science-recovery reporter with explicit new allocated
+admissions. It does not change any of14 frozen execution-route sources or920
+historical helpers; actual amendment validation confirms their bindings remain.
+
+New rows require matching amendment/plan/request/terminal/source/output/placement
+metadata, successful conversion/scoring schedulers, frozen Nextflow command/
+namespace/environment, reparsed retained native scheduler evidence and six
+endpoint arithmetic/FAS validation. Direct metadata checks do not repeat raw
+scientific admission or query/release jobs. Live/startup receipts cannot supply
+scores. Native wrapper/launcher resource scopes and shared-host unknown contention
+limits remain explicit; no independent-family CI, isolated speed or readiness
+claim follows. Historical rows remain exact; recovered failed timing staysnull/
+ineligible. Duplicate cross-route identities and coherent command tampering fail.
+
+Reporting v1/v2 each pass66 cases; expanded joined suite passes548/11.31s; final
+complete relevant suite passes964/21.22s, zero failures/errors/skips. Scientific
+Python3.10 import passes. Read-only actual v2 snapshot7916d3e comparison via the
+new collector exactly reproduces all seven rows/three admissions, with zero
+allocated admissions and failed-timing resources stillnull. No equivalent
+table is regenerated while no new real admission exists.
+
+Actual23902 allocation/batch/native step stillRUNNING at14:14/14:14/13:22;
+subsequent queue checkRUNNING16:10. Native log shows78 FASTAs, built-in HMM/
+k-mer/high_sensitivity/BLOSUM62/e1e-4/LeidenCPM.1/32CPUs and initial all-to-all
+search progressing through1.68%; this is search-stage progress, not overall
+inference or project completion. No new scoring or terminal outcome is inferred.
+Continue same handle to terminal/review/conversion/scoring/admission before
+feeding new rows to the exporter;11/12 remain sequential behind reviewed10.
+No9 retry, duplicate job, quiet/DGX gate or unrelated-workload change. Goal active.
+
 ## Live Native Placement Verified For23902 (2026-10-06)
 
 Same23902 actuallyRUNNING through1:58. New startup3935338a/17567bytes verifies

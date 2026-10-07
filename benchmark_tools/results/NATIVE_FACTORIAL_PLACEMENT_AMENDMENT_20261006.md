@@ -1,5 +1,29 @@
 # Native Placement Failure And Prospective Correction
 
+## Scientific Reporting Boundary
+
+`export_allocated_native_qfo_scientific_scores.py` accepts explicit new-route
+admissions via `--allocated-admission PATH SHA256` alongside the original
+`--admission` and `--recovered-admission` arguments. It uses the unchanged
+historical reporter and endpoint arithmetic rather than translating new records
+into historical schemas. The 14-source production amendment remains immutable;
+this separate reporting module does not enter or alter the measured pipeline.
+
+Before displaying new scores it binds the original plan and new amendment,
+request, successful terminal review and scientific output metadata; verifies
+selected32-CPU/source/ownership identities; checks conversion/scoring completion;
+derives the exact frozen endpoint command/namespace; and reparses retained
+native terminal records. Unknown controller failures cannot masquerade as expiry.
+Checks are direct metadata/provenance/arithmetic, not a second transitive raw
+scientific admission. No live-job query, scoring, submission or release occurs.
+
+Final964-case joined suite passes21.22s, including original and new reporting,
+conversion, scientific endpoint, execution/placement and accounting gates.
+Scientific Python3.10 import passes. A read-only actual snapshot7916d3e check
+reproduces all seven historical rows/three admissions exactly. Recovered resources
+remainnull/ineligible; missing cells remainnull, notzero. No duplicate table or
+new allocated score is generated before an actual independent admission.
+
 ## Prospective Production Integration
 
 The allocation-aware route now has its own execution contract, controller/batch,
