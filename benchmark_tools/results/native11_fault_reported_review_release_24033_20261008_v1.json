@@ -1,0 +1,68 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "before": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24033",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=24033 JobName=ohmm_native11_fullreview UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-08T10:50:01 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T10:50:01 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:3721258 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=2d48c2f447c72d04e3e96c9094fe4a941404bd19b8daff56aa550ac3fee712be  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.out TresPerTask=cpu=2 \n"
+  },
+  "capacity": {
+    "available_disk_bytes": 10133885681664,
+    "available_memory_bytes": 352865136640,
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:         5647696 kB\nMemAvailable:   344594860 kB\nBuffers:        10335016 kB\nCached:         300153960 kB\nSwapCached:        13576 kB\nActive:         777664232 kB\nInactive:       224133640 kB\nActive(anon):   662356756 kB\nInactive(anon): 32099592 kB\nActive(file):   115307476 kB\nInactive(file): 192034048 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:           1908 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             94044 kB\nWriteback:           236 kB\nAnonPages:      691233916 kB\nMapped:          1781692 kB\nShmem:           3142992 kB\nKReclaimable:   37696432 kB\nSlab:           42609628 kB\nSReclaimable:   37696432 kB\nSUnreclaim:      4913196 kB\nKernelStack:       78208 kB\nPageTables:      1758192 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1345644528 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      992768 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8452096 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22330952 kB\nDirectMap2M:    598956032 kB\nDirectMap1G:    451936256 kB\n"
+  },
+  "diagnostic_accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n24031|COMPLETED|0:0|00:48:19|bizon|2|32G\n24031.batch|COMPLETED|0:0|00:48:19|bizon|2|\n",
+  "diagnostic_scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:48:19",
+    "ExitCode": "0:0",
+    "JobIDRaw": "24031",
+    "NodeList": "bizon",
+    "ReqMem": "32G",
+    "State": "COMPLETED"
+  },
+  "full_review_success_claimed": false,
+  "held_submission": {
+    "bytes": 10516,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_held_20261008_v1.json",
+    "sha256": "b8167d7a12859845d8866c316d3bbb7a83f1b00b09bd1c236304adb7fa098b2e"
+  },
+  "historical_failure_cause_established": false,
+  "immediate_after": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24033",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=24033 JobName=ohmm_native11_fullreview UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-08T10:50:01 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T10:50:01 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:3721258 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=2d48c2f447c72d04e3e96c9094fe4a941404bd19b8daff56aa550ac3fee712be  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.out TresPerTask=cpu=2 \n"
+  },
+  "job_id": 24033,
+  "native_inference_reexecuted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791471042482855887,
+  "publication_ready": false,
+  "pushed_commit_before_release": "c706b6e943adaff6b24ed1356abb533cf9fc9d96",
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "24033"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "release_count": 1,
+  "schema": "native11_fault_reported_review_release_v1"
+}
