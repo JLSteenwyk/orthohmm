@@ -1,5 +1,72 @@
 # Publication Progress
 
+## Composed QfO Workflow Tested Prospectively (2026-10-08)
+
+Converter, scoring runner, independent admitter and three separate batches/
+protocol prepared.219 focused tests pass3.33s, zero failures/skips, XML
+retained; actual scientific3.10 --help imports succeed for all three modules.
+Shell syntax and unscheduled-invocation guards tested. Earlier assessment
+XML retains the single wrong participant_id assertion; corrected joined
+rerun213pass3.90s and final219pass3.33s retained separately. No production
+conversion/scoring/admission executed. Real original kernels on small fixtures
+are exercised; native/scheduler contexts and endpoint values are synthetic.
+
+New namespaces/schema preserve composed lineage; unchanged event2020 endpoints
+and FAS protocol, group-clique semantics, all-input coverage and mapping-loss
+rejection retained. Existing frozen workflows/source/artifacts unchanged.
+Source-only preparation does not admit scores, authorize native12 or complete
+publication readiness. Actual24034 remainsRUNNING; latest15:26/2CPU128G,
+stderr empty, final resource/environment/full review still absent.
+
+Full goal ACTIVE; next action:commit/push all workflow sources/tests/batches/
+protocol and retained XMLs, continue observing SAME24034 through actual
+terminal outcome with bounded waits. Meanwhile inspect genuinely unfinished
+native12 operational compatibility without launching it or changing frozen
+recipe/history. On successful24034 independently rehash/review actual full
+composed evidence, exercise production new binding, then submit/release ONE
+separate conversion using actual review digest. On failure retain/diagnose;
+no repeats or score imputation. No new quiet-host/DGX/user approval gate.
+
+## Composed Conversion And Assessment Kernels Prepared (2026-10-08)
+
+Current uncommitted task files:prepare_native11_composed_qfo_pairs.py,
+run_native11_composed_qfo_assessment.py, admit_native11_composed_qfo_assessment.py,
+test_prepare_native11_composed_qfo_pairs.py and test_native11_composed_qfo_assessment.py.
+Converter's105 focused tests pass1.80s; real group conversion and all-input
+coverage exercised with synthetic admission context. First assessment XML
+retains78 passes/one test assertion failure:validator result uses participant,
+not participant_id. Production synthetic admission itself passed. Assertion
+corrected; complete rerun pending. Real original endpoint/trace/FAS validators
+and failure checks exercised; native/scheduler fixtures are explicitly stubs,
+not production scoring or full-review admission.
+
+Actual24034 remainsRUNNING12:34/2CPU128G, stderr empty; runtime and semantic
+producer phase files exist but resource/environment/final review absent.
+Full goal ACTIVE; next action:run joined converter/scorer/admitter/binding tests,
+prepare prospective separate batches/protocol and commit/push. Continue SAME
+24034 through actual terminal review and readback before any conversion launch.
+No source/schema translation, automatic repeat, native inference or native12.
+
+## Composed Native11 QfO Conversion Implementation Started (2026-10-08)
+
+Previous goal turn PROGRESS:runtime component succeeded, composed review24034
+submitted/released once, explicit consumer committed/pushedf85d1707. Its ledger
+commit action already done; do NOT repeat. Fresh24034RUNNING05:57/2CPU128G.
+
+Current independent task:benchmark_tools/prepare_native11_composed_qfo_pairs.py
+and tests/unit/test_prepare_native11_composed_qfo_pairs.py, being implemented,
+not tested/committed/executed. Bind the truthful new review with the existing
+explicit consumer API; keep original pair conversion/ownership/mapping/coverage
+kernels unchanged. Native11 R-off predictions use cross-species group cliques,
+not pre-clustering graph edges or native phylogenetic pairs. Retain full-input
+coverage denominator and reject any mapping loss. New schema/fresh destination.
+
+Full goal ACTIVE; next action:finish/test this converter, then implement/test
+compatible assessment runner/admitter while SAME24034 runs. No conversion
+execution until actual successful composed review plus independent readback.
+Monitor SAME handle with bounded actual waits, no submission/release repeat,
+original-source/schema translation, inference retry or native12 launch.
+
 ## Composed Consumer Contract Tested; Review24034 Still Running (2026-10-08)
 
 New explicit native11_composed_review_binding.py and focused tests/protocol
