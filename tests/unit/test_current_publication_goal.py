@@ -182,3 +182,33 @@ def test_native_identity_state_is_observed_not_declared_statically():
     assert "Determine attempted, running and genuinely unrun native identities from actual history" in contract
     assert "Genuinely unrun native identities 11 and 12" not in contract
     assert "Any genuinely unrun identity remains sequential behind the reviewed existing history" in contract
+
+
+def test_correct_frozen_rejection_allows_truthful_prospective_compatibility_work():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "Compatibility recovery is explicitly authorized",
+        "does not require declaring that workflow defective",
+        "Preserve the old consumer and its rejection unchanged",
+        "smallest tested adapter or successor",
+        "truthful new source/schema and explicit compatibility checks",
+        "Reuse unchanged scientific kernels and validated components",
+        "never report current inventory equality when only historical equality was established",
+        "Revalidate affected integrity, resource, environment and scientific-output requirements",
+        "not admission by assertion, changed endpoints, automatic inference retries",
+    ):
+        assert instruction in contract
+
+
+def test_diagnosed_failure_leads_to_implementation_or_explicit_missing_outcome():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "Recovery must converge on an executable decision",
+        "execute the already-authorized dependent steps only if their evidence contracts pass",
+        "Do not repeatedly reclassify the same failure",
+        "retain the result as inadmissible",
+        "advance other unfinished requirements",
+        "Do not call that limitation publication readiness",
+        "neither a whole-goal stopping condition nor permission to rerun the failed inference",
+    ):
+        assert instruction in contract

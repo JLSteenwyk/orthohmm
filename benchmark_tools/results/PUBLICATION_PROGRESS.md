@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Goal Recovery Authorization Clarified (2026-10-08)
+
+User requests correction of recurring goal stops. Actual get_goal is ACTIVE,
+unbounded, and still points to the editable attachment. The attachment and
+repository current copy matched before editing; shared-host timing was already
+authorized. No cause of a platform interruption has been established.
+
+Both current instruction copies now explicitly authorize the smallest tested,
+prospective compatibility successor when an unchanged frozen workflow correctly
+rejects later evidence. Frozen sources and rejection records remain intact;
+truthful new source/schema and all affected scientific/integrity/resource/
+environment gates are required. Diagnosed failures must lead to implementation
+or an explicit inadmissible outcome, not another classification/prompt loop.
+All seven scientific sections and completion criteria remain byte-identical.
+This bounded prompt maintenance is not completion or a pause of the full goal.
+
+Validation:39 focused prompt/shared-host tests passed0.94s, zero failures or
+skips, including the actual goal-linked attachment equality check. Both current
+copies SHA2564442e7f99002e674708dfb09569ba18e2432deebbdfa491f00ef98ca5d0259d9;
+scientific-scope hash5a4a46210cbeae65d33c5ebf827d24d9265fbd71122368c7323bba9c7b01656c
+and historical goal hash7d99ecb39a740b689101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0
+unchanged. git diff --check passed. Tests validate instructions, not dispatch.
+Official lifecycle reference:
+https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex
+describes event-driven continuation and interruption/no-tool stopping behavior;
+this inspection does not attribute earlier stops to a proven dispatcher defect.
+No goal lifecycle change, private platform edit or scientific execution made.
+
+Fresh sacct:23985 COMPLETED0:0;23986 FAILED0:11;24031 COMPLETED0:0;
+24033 FAILED1:0. All four are terminal. Classification/result preservation
+already committed and pushed in1fb3a9a2; do NOT repeat that stale next action.
+
+Full goal ACTIVE; next automatic continuation: implement and test the separate
+postterminal-runtime review component, then the minimal compatible downstream
+adoption needed by its actual contracts. Original
+review_native_factorial_attempt.runtime_review has a tree_checker keyword
+hook; reuse its bracket/lookup checks only with explicit historical labeling.
+Recheck the retained first-terminal report and freshly inventory every original
+entry/private runtime plus ONLY the two pinned postterminal additions. Do not
+serialize a historical checker result as fresh current inventory equality.
+Use a new source/schema; keep original ordinary consumers unchanged and test
+that they reject the new type. Bind the successful original standalone output
+component and revalidate all remaining full-review gates before adoption.
+No original review retry, inference duplication, native12 or scoring launch
+before a tested valid successor contract. No DGX, quiet-host or user-resume gate.
+No running monitor/foreground exec session remains.
+
 ## Native11 Exact Postterminal Additions Classified (2026-10-08)
 
 Prospective60c24440 pushed before ONE read-only classification. Actual
