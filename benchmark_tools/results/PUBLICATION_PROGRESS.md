@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Direct Goal Continuation Check And Stale Handoff Repair (2026-10-08)
+
+User asks whether repeated stops indicate an incorrect goal prompt. Read the
+actual goal-linked attachment and current repository copy: both SHA256
+4442e7f99002e674708dfb09569ba18e2432deebbdfa491f00ef98ca5d0259d9.
+The correction is already committed/pushed in44b94fcb. It explicitly permits
+shared-Threadripper execution, bounded waits, scoped failure diagnosis and
+truthful prospective compatibility recovery without routine renewed approval.
+No additional prompt rewrite or platform-dispatcher repair is established.
+Goal-tool readback confirms the full publication goal ACTIVE and unbounded.
+Fresh prompt-contract test run:27passed in0.26s, including actual attachment
+equality and unchanged scientific scope/historical evidence. These tests check
+the instructions, not the platform's automatic-continuation dispatcher.
+
+The previous TOP handoff was stale: all QfO workflow preparation and tests
+were committed/pushed in2ecc5968; HEAD and origin/main agree. Do NOT repeat
+that commit or the completed scientific work. Actual24034 remainsRUNNING,
+elapsed21:36/2CPU128G, stderr empty. Allocation/runtime/scheduler/semantic
+producer phase files exist; final review and resource/environment reports
+remain absent. No production conversion/scoring/admission has executed.
+
+Full goal ACTIVE; next automatic continuation: inspect SAME24034 accounting,
+stderr and phase files. If still running, continue the genuinely unfinished
+native12 operational-compatibility inspection or use an actual bounded wait
+and post-wait observation. Preserve all frozen sources and do not launch
+native12 before valid reviewed history. If24034 succeeds, independently
+validate the actual composed review with native11_composed_review_binding,
+then submit/check/release ONE compatible conversion with its actual digest.
+If it fails, preserve and diagnose that outcome without an automatic repeat.
+No DGX, quiet-host or user-resume prerequisite; this direct maintenance answer
+does not pause or complete the seven-part goal.
+
 ## Composed QfO Workflow Tested Prospectively (2026-10-08)
 
 Converter, scoring runner, independent admitter and three separate batches/
