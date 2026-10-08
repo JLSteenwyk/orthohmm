@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native11 Composed Full Review Prepared And Tested (2026-10-08)
+
+Separate composed worker/batch/protocol/tests prepared.155 focused tests
+pass1.89s, zero failures/skips, XML retained; bash -n and diff --check passed.
+These test gates/wiring and real runtime kernel fixtures, not production full
+resource/environment replay. Worker SHA256
+1fa148071e8d080ea081140f517e955c16db46f989574a44183fc58e1b366410;
+batch SHA25628b8e2496a1636fc87946beca823fd2ce1b90428b4318373e97efcb8a0c2f16d.
+Actual readback's independent_checked_records is1123-element record array,
+standalone_semantics_passedtrue/full_review_admittedfalse. Fresh queue has only
+unrelated fungal array (12active8CPU32G members); no composed review handle.
+Observed MemAvailable672395698176bytes, above128GiB. No unrelated changes.
+
+Full goal ACTIVE; next action:commit/push prospective worker/batch/protocol/
+tests/XML, submit ONE held2CPU128G6h/no-requeue postprocessing job with exact
+source comment, retain/check owned held identity/resources/command/cwd and
+bindings, recheck capacity and release ONCE. Observe SAME handle through
+terminal outcome; preserve failure without automatic repeat. On success, new
+type still gates scoring/native12 behind compatible downstream adoption.
+Destination benchmarks/work/native11_composed_terminal_review_20261008_v1
+does not yet exist. No inference or original full-review retry; no live exec.
+
 ## Native11 Runtime Component V2 Successfully Executed (2026-10-08)
 
 Prospective9ec27308 pushed before ONE read-only v2 execution; actual process
@@ -16,7 +38,9 @@ V1 preflight wiring failure retained, original23986/24033 failures unchanged.
 No pipeline/source/OS edit or inferred crash cause; no inference/full-review retry.
 
 Current task:prepare separately versioned composed native11 full-review worker
-and focused tests. Use original allocated replay/resource/environment/session
+benchmark_tools/review_native11_composed_attempt.py,
+tests/unit/test_review_native11_composed_attempt.py and separate batch/protocol,
+not implemented/tested/committed/executed yet. Use original allocated replay/resource/environment/session
 kernels, successful unchanged standalone semantic component with original
 producer/source/file bindings, and newly valid historical/current runtime
 contract. Do not parse the old8.5GB resource_replay casually or manufacture an
