@@ -1,0 +1,96 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "cell": "p1_c1_r0",
+  "classification": {
+    "bytes": 9317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_postterminal_additions_classification_20261008_v1.json",
+    "sha256": "8718376a789f2175305d83496984ad057aaa559b57469638e97f05ec1fd9537b"
+  },
+  "component": {
+    "bytes": 274370,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_postterminal_runtime_review_20261008_v2/runtime.json",
+    "sha256": "ed8ca2d27e3f85d3fdf14952d33b2db7d64dca0bb76d5113fb483bfe7e27a8c6"
+  },
+  "continuous_runtime_integrity_established": false,
+  "current_additions": [
+    {
+      "bytes": 1700488,
+      "kind": "file",
+      "mode": 493,
+      "path": "/usr/bin/lftp",
+      "sha256": "a9ec9b5ebe74f12062260d513ee717d03c3da2c7ea0bceb79eb5a67674f3a249"
+    },
+    {
+      "bytes": 1301,
+      "kind": "file",
+      "mode": 493,
+      "path": "/usr/bin/lftpget",
+      "sha256": "51682b3030b25a3dc5b4b9b1c19cb14a63d2350cb18cb4b661df06269392ff05"
+    }
+  ],
+  "current_inventory_check_wall_s": 28.084651817101985,
+  "current_original_entries_unchanged": true,
+  "current_original_inventory_equality": false,
+  "current_private_inventory_equality": true,
+  "evidence_records": 1070,
+  "full_review_admitted": false,
+  "historical_check_time_is_upper_bound": true,
+  "index": 11,
+  "installed_at": "2026-10-08T10:40:45-04:00",
+  "inventory_counts": [
+    {
+      "equal": false,
+      "expected_records": 39208,
+      "observed_records": 39210
+    },
+    {
+      "equal": true,
+      "expected_records": 18751,
+      "observed_records": 18751
+    }
+  ],
+  "job_id": 23985,
+  "limitations": [
+    "This component does not replace full resource/environment/output review.",
+    "Current equality to the original OS inventory is false, with exactly the bound late additions.",
+    "Retained snapshots and package chronology do not establish continuous integrity or installer identity.",
+    "Original review failures remain failures; no segmentation-fault cause or fix is established."
+  ],
+  "native_end": "2026-10-08T08:56:00-04:00",
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791473085115367143,
+  "original_ordinary_full_review_success": false,
+  "prior_inventory_latest_at": "2026-10-08T09:41:50-04:00",
+  "prior_runtime": {
+    "bytes": 5179,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+    "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+  },
+  "publication_ready": false,
+  "request": {
+    "bytes": 52941,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+    "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+  },
+  "resource_measurements_admitted": false,
+  "runtime_kernel_source": {
+    "bytes": 12933,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native11_postterminal_runtime.py",
+    "sha256": "5c2e9c80c2c1be1f2972a914c08dcd4669909f755d73b445756f5d3144e6d8e0"
+  },
+  "scheduler": {
+    "bytes": 1205,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_postterminal_runtime_review_20261008_v2/scheduler.json",
+    "sha256": "cf7c42d63c181099260734b322b4adb4407076d87b8899f4155fdc73759ba04c"
+  },
+  "schema": "native11_postterminal_runtime_component_v2",
+  "source": {
+    "bytes": 6142,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native11_postterminal_runtime_v2.py",
+    "sha256": "46f6bc315fc41dbfd08979dd8b8ee7514344ad19a58a15af6c30c70919116e54"
+  },
+  "source_commit_before_execution": "9ec27308",
+  "status": "historical_brackets_and_current_exact_additions_revalidated",
+  "terminal_reviewed": false
+}
