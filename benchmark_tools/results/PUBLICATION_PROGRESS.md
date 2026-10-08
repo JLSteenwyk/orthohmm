@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Allocation Aware Runtime Component V2 Tested (2026-10-08)
+
+V2 prospective wrapper/protocol/tests prepared;114 focused tests pass1.67s,
+zero failures/skips, actual XML retained. Tests reproduce the historical
+job-name rejection with a64-slot fixture and verify original allocation-aware
+verifier identity, expiry/accounting route, invalid envelope rejection and
+failure retention. V1source unchanged; only its runtime kernels reused.
+V2 SHA25646f6bc315fc41dbfd08979dd8b8ee7514344ad19a58a15af6c30c70919116e54.
+
+Full goal ACTIVE; next action:commit/push v2 wrapper/tests/protocol/XML and
+this exact failed-v1 outcome, then ONE read-only v2 execution at
+benchmarks/work/native11_postterminal_runtime_review_20261008_v2 using
+scientific3.10 and sanitized single-thread environment. Require original
+allocated scheduler/request/session plus historical and fresh runtime proofs.
+If successful, persist/bind actual component and implement minimal composed
+full-review/adoption. No native inference or original full-review retry,
+ordinary source/schema claim, OS alteration or scoring/native12 admission.
+
+## Runtime Component V1 Terminal Preflight Wiring Failure (2026-10-08)
+
+Prospective9cf41015 pushed before ONE native11 runtime-component invocation.
+Actual command exited1 at verify_terminal -> historical terminal_accounting:
+Accounting identity, resource envelope or terminal state differs. No component
+destination was created; no inventory replay/scoring/inference occurred.
+Diagnosis corrected by source inspection:both accounting parsers require64
+slots; the historical parser requires job name orthohmm_factorial_cost instead
+of actual orthohmm_allocated_factorial. Component imported that historical
+verifier instead of native_factorial_allocated_execution.verify_terminal.
+Preserve v1source/tests/protocol
+unchanged. This is a new component wiring defect, not a native pipeline defect,
+changed scheduler outcome or OS alteration.
+
+Current task:separate review_native11_postterminal_runtime_v2.py successor and
+tests for allocation-aware wiring and orchestration. Reuse v1 runtime kernels
+without invoking its defective production wrapper, editing it or monkeypatching
+its imports. Pin v1 source and new schema; retain actual failed execution.
+
+Full goal ACTIVE; next action:finish/test/commit/push prospective v2 corrected
+wrapper, then one new read-only v2 component review. No inference retry,
+ordinary full-review retry, resource/scoring/native12 admission or duplicate
+destination. Continue full-review adoption only from valid actual evidence.
+
 ## Postterminal Runtime Component Tested For One Execution (2026-10-08)
 
 New component/tests/protocol prepared.101 focused tests pass1.75s, zero
