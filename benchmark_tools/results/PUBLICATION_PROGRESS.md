@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native11 Three Hour Live Wait Retained (2026-10-08)
+
+Previous turn was a verified wait; current continuation remains a verified
+wait. Read actual attachment/ledger and live handles, then36 actual300s waits
+with post-wait queue/log checks across cells339/341/342, all now finished.
+Observations2026-10-08T08:01:15Z to10:57:15Z: SAME23985 remains RUNNING, latest
+15:29:21; initial-search78.91% to95.58%, not overallcompletion or ETA.
+SAME23986 remains PENDING/Dependency afterany:23985(unfulfilled); no original
+review.json/failure.json yet. Running0:0 is not terminal success. No foreground
+exec session remains; scoped task tree clean before checkpoint. No source/
+prompt/scientific-result edits, submission/release/retry, conversion/scoring/
+admission or old-report rebuild. This checkpoint does not pause the goal;
+continue the same authorized wait immediately after its focused commit/push.
+
+Full goal ACTIVE; next authorized action: same23985/23986 fixed-format
+squeue/sacct and bounded native-log checks, actual30-300s wait and post-wait
+check while live. On native terminal outcome observe alreadyqueued original
+review, then inspect review.json/failure.json under
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+and retained reviewer stdout. Diagnose failure without automatic retry;
+original success/authorization gates conversion/scoring/independent admission
+and sequential genuinely unrun native12. Current four-cell reporting/direct
+delivery remains complete; final integration awaits actual remaining outcomes.
+Reconsider independent executable gaps on new evidence, not by repeating
+completed work or inventing campaigns. No user resume, DGX or quiet host.
+
 ## Native11 Twelve Hour Verified Wait (2026-10-08)
 
 Previous turn and this turn are verified waits. Actual attachment/ledger and
