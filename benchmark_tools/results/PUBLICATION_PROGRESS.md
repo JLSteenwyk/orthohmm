@@ -1,5 +1,49 @@
 # Publication Progress
 
+## Prospective Composed Score Export Validated; Family Audit Next (2026-10-08)
+
+New export_composed_native_qfo_scientific_scores.py and reporting protocol
+preserve exact frozen4admittedrows, replace11's unavailable status with retained
+OOM/coverage provenance but sixNULLscores/NULLmean, and require actual explicit
+new12admission/native-pair/request/reviewer/output/source/resource/FAS metadata
+plus unchanged endpoint arithmetic before a fifth admitted row. No old schema
+translation or automatic CI attachment. Successor score export is NOT executed;
+no actual12score exists. Scientific3.10 CLI import/help passed.
+
+First focused exporter suite retained3fixture failures: its copied binder source
+path was not relocated with the other synthetic source records. Corrected
+fixture21pass/1.81s, no production binding weakened. Final628joinedpass/11.84s,
+zero failures/skips. Negative cases exercise unadmitted/mixed schemas, native
+row-count/source/placement mutations, arithmetic and missing/failed scores.
+Sources/tests/protocol await focused commit/push; no original source changed.
+
+Full goal ACTIVE; next action:commit/push this prospective score exporter,
+then implement the genuinely unfinished composed-native12 Swiss-family raw
+count audit and guarded interval binding using unchanged count/projector kernels.
+Old intervals require full family-record AND aggregate equality; changed counts
+remain explicit and need new paired analysis rather than cached substitution.
+Native11OOM has no supplied count audit or contrasts. Observe SAME24036 live
+native inference; all actual output review/conversion/scoring/admission remain
+dependent on its successful terminal result.24038 remains terminalOOM, no retry.
+
+## Prospective Final-Native Scientific Score Export Implementation (2026-10-08)
+
+Failure addendum source/tests/actual JSON/TSV/Markdown milestonefbfdaecd pushed.
+Begin export_composed_native_qfo_scientific_scores.py and focused tests/protocol,
+not yet implemented/tested/executed. Preserve the exact frozen four-cell snapshot
+and explicit11OOM missing scores. A future12 row must require the actual new
+independent admission, exact native-pair conversion/review/request/source/resource
+metadata and unchanged endpoint arithmetic. Do not fabricate an ordinary schema,
+use unadmitted partial scores or attach old uncertainty merely from aggregate
+agreement. New Swiss-family audit/bootstrap consumer remains a separate unfinished
+task after this reporting implementation; no production final score exists yet.
+
+Full goal ACTIVE; next action:implement/test future12 extraction and a truthful
+successor table with failure/admission distinction and original4rows unchanged.
+Observe SAME24036 running inference; all production review/conversion/scoring/
+admission remain gated by its actual terminal success.24038 is terminalOOM with
+no automatic retry/admission. No existing bound source or raw evidence is edited.
+
 ## Actual Scoring-Failure Publication Addendum Generated (2026-10-08)
 
 New export_composed_qfo_failure_addendum.py passed22focused tests/0.73s.

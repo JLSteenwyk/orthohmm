@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="21" time="1.935" timestamp="2026-10-08T13:05:43.773734-04:00" hostname="bizon"><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_real_endpoint_arithmetic_accepts_only_new_admitted_native_row" time="0.051"><failure message="ValueError: Final conversion helper differs: binding_source">joined = {'root': PosixPath('/tmp/nq-dhsxfkvp'), 'run': {'index': 12, 'cell': 'p1_c1_r1', 'dataset': 'qfo_corrected', 'repeat':...sion_v1', 'status': 'native12_composed_qfo_pairs_prepared_unscored', 'native_index': 12, 'cell': 'p1_c1_r1', ...}, ...}
+
+    def test_real_endpoint_arithmetic_accepts_only_new_admitted_native_row(joined):
+        evidence = []
+&gt;       row = current.extract_final(joined["report"], joined["run"], joined["plan_ref"], evidence)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_export_composed_native_qfo_scientific_scores.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+benchmark_tools/export_composed_native_qfo_scientific_scores.py:48: in extract_final
+    original.require(stage[key] == ref, "Final conversion helper differs: " + key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Final conversion helper differs: binding_source'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Final conversion helper differs: binding_source
+
+benchmark_tools/export_native_factorial_progress.py:30: ValueError</failure></testcase><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[schema-allocated_native_factorial_qfo_admission_v1]" time="0.050" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[status-pending]" time="0.049" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[accuracy_admitted-False]" time="0.049" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[native_index-11]" time="0.049" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[native_job_id-23985]" time="0.050" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[cell-p1_c1_r0]" time="0.055" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[original_review_translated-True]" time="0.056" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[next_identity_authorized-True]" time="0.057" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[publication_ready-True]" time="0.056" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_other_schema_pending_or_broadened_admission_refuses[source-value9]" time="0.058" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[phylogeny-value0]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[schema-allocated_native_factorial_output_review_v1]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[accuracy_evaluated-True]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[native_cpu_ids-value3]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[gene_ownership_sha256-wrong]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_changed_resealed_scientific_metadata_refuses[semantic_validator_source-value5]" time="0.060" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_secondary_mean_cannot_be_changed_after_admission" time="0.059"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: 'secondary mean'&#10;  Actual message: 'Final conversion helper differs: binding_source'">joined = {'root': PosixPath('/tmp/nq-6pnsd2_5'), 'run': {'index': 12, 'cell': 'p1_c1_r1', 'dataset': 'qfo_corrected', 'repeat':...sion_v1', 'status': 'native12_composed_qfo_pairs_prepared_unscored', 'native_index': 12, 'cell': 'p1_c1_r1', ...}, ...}
+
+    def test_secondary_mean_cannot_be_changed_after_admission(joined):
+        joined["report"]["assessment"]["secondary_six_metric_mean"] = 0.
+&gt;       with pytest.raises(ValueError, match="secondary mean"):
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'secondary mean'
+E         Actual message: 'Final conversion helper differs: binding_source'
+
+tests/unit/test_export_composed_native_qfo_scientific_scores.py:106: AssertionError</failure></testcase><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_no_final_admission_preserves_four_rows_and_null_failed_scores" time="0.010" /><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_successor_collect_requires_actual_admission_not_unscored_prediction" time="0.061"><failure message="ValueError: Final conversion helper differs: binding_source">joined = {'root': PosixPath('/tmp/nq-nvtc9xru'), 'run': {'index': 12, 'cell': 'p1_c1_r1', 'dataset': 'qfo_corrected', 'repeat':...sion_v1', 'status': 'native12_composed_qfo_pairs_prepared_unscored', 'native_index': 12, 'cell': 'p1_c1_r1', ...}, ...}
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x753d4efc6cc0&gt;
+
+    def test_successor_collect_requires_actual_admission_not_unscored_prediction(joined, monkeypatch):
+        baseline, failure = baseline_fixture(joined["root"], monkeypatch, joined["plan_ref"])
+        admission_path = current.admission.DESTINATION / "results.json"
+        admission_ref = record(admission_path)
+&gt;       result = current.collect(admission_ref)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_export_composed_native_qfo_scientific_scores.py:162: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+benchmark_tools/export_composed_native_qfo_scientific_scores.py:175: in collect
+    rows[6] = dict(extract_final(report, plan["runs"][12], baseline["plan"], evidence), admission=final_admission_ref)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+benchmark_tools/export_composed_native_qfo_scientific_scores.py:48: in extract_final
+    original.require(stage[key] == ref, "Final conversion helper differs: " + key)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Final conversion helper differs: binding_source'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Final conversion helper differs: binding_source
+
+benchmark_tools/export_native_factorial_progress.py:30: ValueError</failure></testcase><testcase classname="tests.unit.test_export_composed_native_qfo_scientific_scores" name="test_new_table_explicitly_labels_failed_scores_unavailable" time="0.008" /></testsuite></testsuites>
