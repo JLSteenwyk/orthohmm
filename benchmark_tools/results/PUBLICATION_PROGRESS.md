@@ -1,5 +1,22 @@
 # Publication Progress
 
+## Native11 QfO Assessment24038 Held (2026-10-08)
+
+Accepted-conversion/native12-release milestoneac58cad3 pushed before ONE
+held assessment submission. Actual24038ownedPENDING/JobHeldUser matches
+8CPU32G26h/gpu/bizon, new batch/cwd/source comment, no array/dependency/
+requeue/restarts. Held receipt native11_composed_assessment_held_24038_20261008_v1.json
+8986bytes/SHA10a99dc0196ab7576882cd4c92932df5e156f6f54dadee16b5d0aca08ef06c9f
+retains actual source/batch/pairs/accepted conversion/tests/protocol and
+safe capacity/pre-submit empty matching queue. Actual conversion manifest
+digest is supplied with producer24035, no resume or repeated inference.
+
+Full goal ACTIVE; next action:commit/push held receipt/checkpoint, recheck
+SAME24038owned held resources/comment/source bindings and fresh scoring paths,
+capacity-check32GiB and release ONCE. Observe same assessment through actual
+terminal output review/independent admission; inspect SAME24036 preflight/native
+state. Do not submit/release either job again or edit bound sources. No score yet.
+
 ## Conversion24035 Independently Accepted; Native12 Preflight Running (2026-10-08)
 
 Actual scoring preparation/readback session26922 finished EXIT0. Rehashed
