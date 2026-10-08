@@ -1,0 +1,57 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "before": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24031",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=24031 JobName=ohmm_native11_diagnostic UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-08T09:53:21 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T09:53:21 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:3658363 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=f03466128039d3725295390eb0e72f8995fb34b24087c9bff43cd4e3cca75115  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_diagnostic-24031.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_diagnostic-24031.out TresPerTask=cpu=2 \n"
+  },
+  "capacity": {
+    "available_memory_bytes": 501155262464,
+    "minimum_available_memory_bytes": 34359738368,
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        171481152 kB\nMemAvailable:   489409436 kB\nBuffers:        15089304 kB\nCached:         273981348 kB\nSwapCached:        13312 kB\nActive:         554810208 kB\nInactive:       278821104 kB\nActive(anon):   515499680 kB\nInactive(anon): 32208324 kB\nActive(file):   39310528 kB\nInactive(file): 246612780 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:            876 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             22276 kB\nWriteback:             0 kB\nAnonPages:      544485396 kB\nMapped:          1759804 kB\nShmem:           3142976 kB\nKReclaimable:   38095768 kB\nSlab:           43016420 kB\nSReclaimable:   38095768 kB\nSUnreclaim:      4920652 kB\nKernelStack:       76512 kB\nPageTables:      1469864 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1167701912 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      990512 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8263680 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22330952 kB\nDirectMap2M:    598956032 kB\nDirectMap1G:    451936256 kB\n"
+  },
+  "diagnostic_terminal_success_claimed": false,
+  "full_review_admitted": false,
+  "held_submission": {
+    "bytes": 9126,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_held_20261008_v1.json",
+    "sha256": "95da0070b2e475e4c0885fdcc25ffb48f4cced939302bcf67731d1b116958e77"
+  },
+  "immediate_after": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24031",
+      "--oneliner"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "JobId=24031 JobName=ohmm_native11_diagnostic UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-08T09:53:21 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T09:53:21 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:3658363 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=32G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=f03466128039d3725295390eb0e72f8995fb34b24087c9bff43cd4e3cca75115  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_diagnostic-24031.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_diagnostic-24031.out TresPerTask=cpu=2 \n"
+  },
+  "job_id": 24031,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791467655669956097,
+  "publication_ready": false,
+  "pushed_commit_before_release": "cc64b10e4370bdbcf85f49b3eec79d6bd2369d3c",
+  "release": {
+    "command": [
+      "scontrol",
+      "release",
+      "24031"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "release_count": 1,
+  "schema": "native11_standalone_diagnostic_release_v1"
+}
