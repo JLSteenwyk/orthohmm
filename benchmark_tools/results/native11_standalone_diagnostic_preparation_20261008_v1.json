@@ -1,0 +1,270 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "capacity": {
+    "available_memory_bytes": 499981615104,
+    "minimum_available_memory_bytes": 34359738368,
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        170415668 kB\nMemAvailable:   488263296 kB\nBuffers:        15088792 kB\nCached:         273901248 kB\nSwapCached:        13312 kB\nActive:         555850056 kB\nInactive:       278740540 kB\nActive(anon):   516539656 kB\nInactive(anon): 32208324 kB\nActive(file):   39310400 kB\nInactive(file): 246532216 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:            876 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              3012 kB\nWriteback:             0 kB\nAnonPages:      545527468 kB\nMapped:          1749096 kB\nShmem:           3142976 kB\nKReclaimable:   38095804 kB\nSlab:           43016316 kB\nSReclaimable:   38095804 kB\nSUnreclaim:      4920512 kB\nKernelStack:       76592 kB\nPageTables:      1472252 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1168536472 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      990272 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8351744 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22330952 kB\nDirectMap2M:    598956032 kB\nDirectMap1G:    451936256 kB\n"
+  },
+  "checked_native_helper_count": 920,
+  "diagnostic_executed": false,
+  "diagnostic_submitted": false,
+  "direct_bindings": [
+    {
+      "bytes": 52941,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+      "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 13317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+      "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+    },
+    {
+      "bytes": 2020,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_20261008_v1.sh",
+      "sha256": "f03466128039d3725295390eb0e72f8995fb34b24087c9bff43cd4e3cca75115"
+    },
+    {
+      "bytes": 3657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE11_STANDALONE_DIAGNOSTIC_PROTOCOL_20261008.md",
+      "sha256": "d9d91a7b00e94252df001d0174c0c758fb0bc49d12240ed692d5f4b5147e89a6"
+    },
+    {
+      "bytes": 1860,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_review_23985_20261007_v1.sh",
+      "sha256": "8093add87b49fb4aa470728d084e925b00d595d9fff09395cb0ff0ffb32462a0"
+    },
+    {
+      "bytes": 11905,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_factorial_allocated_execution.py",
+      "sha256": "75b950fa137a1a4af35db7986a3274cd19f4898aafa236533ba19ad590b04902"
+    },
+    {
+      "bytes": 15236,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.py",
+      "sha256": "d77eb7b616fbfc42224557b8809564f401e3865ceb044bc1bc1772d013aa6ec4"
+    },
+    {
+      "bytes": 1960,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_cost.sh",
+      "sha256": "ecd5f8c208d4d2c97783a39c56f39c6e98836c95f690cd0dfeff3a4bbe65d14d"
+    },
+    {
+      "bytes": 5106,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_allocated_native_factorial_request.py",
+      "sha256": "dfb145fa05776c8c49319f7ca7483b07147b1336436b70be0433ac13ffbb402f"
+    },
+    {
+      "bytes": 5739,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_allocated_native_factorial_amendment.py",
+      "sha256": "9e4adec6df976c047d1d13545083b9a7e0efb66f70b499cda62700e1e01ddc27"
+    },
+    {
+      "bytes": 4829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_allocated_native_factorial_outputs.py",
+      "sha256": "146f1333715b5ef52ee17de855fad584d1efc91c7a1154edcd269829b5a871be"
+    },
+    {
+      "bytes": 15148,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_allocated_native_factorial_attempt.py",
+      "sha256": "c8707fdb1855a0d73fba537c001b4a355faff094a38a177a05e179148924c929"
+    },
+    {
+      "bytes": 12839,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_allocated_native_factorial_qfo_pairs.py",
+      "sha256": "d3a5d6af171546cacda48502ed53990e967dcf07f4211fa7351dfb6b46e05d2f"
+    },
+    {
+      "bytes": 10783,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_allocated_native_factorial_qfo_assessment.py",
+      "sha256": "69458afd98a42f020a780a12a81ac3775155a6eeefb8dab0acb632906fd20f9a"
+    },
+    {
+      "bytes": 6995,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/admit_allocated_native_factorial_qfo_assessment.py",
+      "sha256": "ffc02a6f04eaf4e71704835307a2c0dc3918de06bb80ff70e911c8c25da58fea"
+    },
+    {
+      "bytes": 4782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_factorial_allocated_placement.py",
+      "sha256": "05bff58ff71399d42505b0d8367831fa3ae223161bbc3b482c07abcf56b3b2e4"
+    },
+    {
+      "bytes": 3736,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_factorial_cpu_selection.py",
+      "sha256": "a0f5c3a3b8804dedf2bfa11f3d0a624419e03bf3d63eda3456d84e1377409b3f"
+    },
+    {
+      "bytes": 12333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/measure_allocated_threadripper_scaling.py",
+      "sha256": "97a2c90ade69dbe1a4715c50d8276ec9c5876109f0dac896d06435920a7c99de"
+    },
+    {
+      "bytes": 13242,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/replay_allocated_threadripper_scaling.py",
+      "sha256": "ece75e2cf12b40adb6aaa405be5243582f81756ac35cf533e221463cc4dfecf9"
+    },
+    {
+      "bytes": 24937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_native_factorial_outputs.py",
+      "sha256": "3357637503f35238f654edea5c4c12bd293f8d20908c141421a2d40278af7c8d"
+    },
+    {
+      "bytes": 3705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_native11_standalone_diagnostic_batch.py",
+      "sha256": "02cab030c21dfb9ff72a9e1cb29152f43395c26a595adfad3d8938bfe8ef35f2"
+    },
+    {
+      "bytes": 12235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_tests_20261008_v1.xml",
+      "sha256": "e76ce04af842e5ef3dcb5a733b3a8cf7371807126fe625e04c69ca8dac4ad053"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    }
+  ],
+  "existing_queue": {
+    "command": [
+      "squeue",
+      "-h",
+      "-u",
+      "bizon",
+      "-o",
+      "%i|%j|%T|%M|%C|%R"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "23002_[156-525%12]|fungal-rm2-full|PENDING|0:00|8|(JobArrayTaskLimit)\n23002_155|fungal-rm2-full|RUNNING|41:03|8|bizon\n23002_154|fungal-rm2-full|RUNNING|1:16:34|8|bizon\n23002_153|fungal-rm2-full|RUNNING|2:07:23|8|bizon\n23002_152|fungal-rm2-full|RUNNING|2:27:36|8|bizon\n23002_148|fungal-rm2-full|RUNNING|4:02:46|8|bizon\n23002_136|fungal-rm2-full|RUNNING|8:51:53|8|bizon\n23002_124|fungal-rm2-full|RUNNING|12:32:44|8|bizon\n23002_102|fungal-rm2-full|RUNNING|20:32:34|8|bizon\n23002_99|fungal-rm2-full|RUNNING|21:10:18|8|bizon\n23002_65|fungal-rm2-full|RUNNING|1-04:43:16|8|bizon\n23002_37|fungal-rm2-full|RUNNING|1-12:36:03|8|bizon\n23002_11|fungal-rm2-full|RUNNING|1-16:24:30|8|bizon\n"
+  },
+  "failed_original_review_job_id": 23986,
+  "failed_review_accounting": {
+    "command": [
+      "sacct",
+      "-X",
+      "-j",
+      "23986",
+      "-n",
+      "-P",
+      "--format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,JobName"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "23986|FAILED|0:11|00:45:50|2|128G|bizon|gpu|360|ohmm_allocated_review11\n"
+  },
+  "full_review_admitted": false,
+  "future_namespace_absent": true,
+  "future_output_namespace": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_standalone_diagnostic_20261008_v1",
+  "native_job_id": 23985,
+  "native_terminal": {
+    "controller_observation": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "23985",
+        "--oneliner"
+      ],
+      "returncode": 1,
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+      "stdout": ""
+    },
+    "limitation": "Terminal accounting lacks historical command/comment; bound request and held submission remain required.",
+    "observation": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "23985",
+        "-n",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+      ],
+      "stderr": "",
+      "stdout": "23985|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-07T15:26:36|2026-10-07T15:27:53|2026-10-08T08:56:00|orthohmm_allocated_factorial\n"
+    },
+    "source": "fresh_accounting_after_controller_expiry",
+    "verified": {
+      "AllocCPUS": "64",
+      "End": "2026-10-08T08:56:00",
+      "ExitCode": "0:0",
+      "JobIDRaw": "23985",
+      "JobName": "orthohmm_allocated_factorial",
+      "NodeList": "bizon",
+      "Partition": "gpu",
+      "ReqMem": "128G",
+      "Start": "2026-10-07T15:27:53",
+      "State": "COMPLETED",
+      "Submit": "2026-10-07T15:26:36",
+      "TimelimitRaw": "1560"
+    }
+  },
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791467530541271273,
+  "original_bound_sources_unchanged": true,
+  "original_partial_files_do_not_admit_review": true,
+  "original_partial_review_files": [
+    {
+      "bytes": 522004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/environment.json",
+      "sha256": "42eb7faf2a7146701cb139a5e0f1aa324b316dafbf79ae1e7aba036a5b4ad49f"
+    },
+    {
+      "bytes": 8519126217,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/resource_replay.json",
+      "sha256": "b89dbe95234dc7e0263e037994cda2e9f29a29a339d1c98ed240908a4d60fb9c"
+    },
+    {
+      "bytes": 2596807,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/resources.json",
+      "sha256": "36a4f7055b42bbfb3ef7c004861d8a7afc3f6dd91518f963bba122bbd3913426"
+    },
+    {
+      "bytes": 5179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+      "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+    },
+    {
+      "bytes": 4882,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/scheduler.json",
+      "sha256": "6e0667e59f1243103de2191dc8f300f1d244df278e01f09e77c8061ef4657b25"
+    }
+  ],
+  "original_review_log": {
+    "bytes": 3068,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/slurm_review_11_dependency-23986.log",
+    "sha256": "802ea8c8a1bd14e94413daffb562a7831dd2ffca6ed1d883541c357fb9e013c1"
+  },
+  "prospective_resources": {
+    "cpus": 2,
+    "memory_bytes": 34359738368,
+    "node": "bizon",
+    "partition": "gpu",
+    "requeue": false,
+    "time_limit": "06:00:00"
+  },
+  "publication_ready": false,
+  "request": {
+    "bytes": 52941,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+    "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+  },
+  "root_cause_established": false,
+  "runtime": {
+    "Bio": "1.87",
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "numpy": "2.2.6",
+    "platform": "Linux-6.8.0-55-generic-x86_64-with-glibc2.39",
+    "psutil": "7.2.2",
+    "version": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]"
+  },
+  "schema": "native11_standalone_diagnostic_preparation_v1",
+  "status": "prospective_diagnostic_prepared_not_executed"
+}
