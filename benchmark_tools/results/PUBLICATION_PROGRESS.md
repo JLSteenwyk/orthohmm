@@ -1,5 +1,60 @@
 # Publication Progress
 
+## Native12 Native-Pair Conversion Validated; Assessment Implementation Next (2026-10-08)
+
+New explicit native12_composed_review_binding.py validates the inference-bound
+new request/reviewer/batch, successful actual producer accounting, retained owned
+held/release receipts, producer stdout naming the exact review, new component
+paths, runtime/resource/environment/semantic contracts and transitive hashes.
+New prepare_native12_composed_qfo_pairs.py uses unchanged native conversion/
+mapping/coverage kernels; requires R-on native pair file/count, no mapping loss,
+all-input coverage denominator and one fresh2CPU32G conversion namespace.
+Separate no-requeue12h batch and NATIVE12_COMPOSED_QFO_PROTOCOL_20261008.md
+prepared. No producer review or production conversion has executed yet.
+
+Retained focused binding84pass/1.31s. First joined conversion109pass/1failure
+exposed implicit prediction postflight registration under stubbed review context;
+new converter now registers it directly. Retained corrected110pass/1.58s and
+joined410pass/6.66s, no skips. Actual scientific3.10 CLI import/help and batch
+syntax/unscheduled guard passed. The failing test result remains unchanged;
+no production or frozen scientific source was modified. Sources/tests/protocol
+are validated, awaiting focused commit/push before next implementation step.
+
+Latest actual24036RUNNING19:39/native step16:16;24038RUNNING14:20. Assessment
+log confirms submission of all six native QfO endpoints, not their completion.
+No accuracy admission yet. Both handles already released once; do not repeat.
+
+Full goal ACTIVE; next action:commit/push this validated consumer/conversion
+milestone, then implement compatible six-endpoint scoring and independent
+admission with fresh native12 namespaces and original frozen QfO/FAS kernels.
+Observe SAME24038; if successfully terminal, execute prepared native11 admission
+after validation. Observe SAME24036 through actual native terminal outcome and
+its prepared reviewer; conversion is dependent on successful full review, not
+on tests. No automatic retry, source/schema substitution or score imputation.
+
+## Native12 QfO Consumer And Conversion Implementation (2026-10-08)
+
+Previous direct maintenance turn was PROGRESS: linked prompt/current copy,
+two regression checks and actual running-job handoff committed/pushedb4bd08bb.
+Fresh accounting confirms SAME24036/24038 RUNNING; neither is resubmitted or
+released. Begin genuine remaining independent work while they run: new
+native12_composed_review_binding.py and prepare_native12_composed_qfo_pairs.py,
+separate conversion batch/protocol and focused tests. These files are NOT yet
+implemented/tested/committed/executed. Existing native12 controller/reviewer,
+native11 consumers and scientific kernels remain frozen and unchanged.
+
+Next action: implement explicit successful new-schema terminal-review binding
+with actual producer accounting and retained held/release provenance; require
+the final identity's native reconciled-pair output and exact admitted row count.
+Exercise unchanged native conversion/filter/coverage kernels on small real
+fixtures, including failure retention, missing owners, changed evidence and
+rejection of group-clique substitution. No production conversion or score is
+authorized before24036 terminal output review passes. Refresh this TOP at the
+validated milestone, then continue prospective scoring/admission implementation.
+Observe SAME24038 through terminal outcome; run already-prepared native11
+independent admission ONCE only if successful validated scoring is available.
+Full goal ACTIVE; no current blocker or renewed resource permission needed.
+
 ## Direct Stop-Report Maintenance; Both Jobs Running (2026-10-08)
 
 Actual goal tool reports ACTIVE and points to the editable attachment
