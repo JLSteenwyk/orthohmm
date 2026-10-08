@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native11 Search Advances On Same Running Handle (2026-10-07)
+
+Previous turn and this turn are verified waits. Read actual attachment/ledger
+and live queue; twelve actual300s waits followed by authoritative queue/log
+checks, 2026-10-08T01:53:51Z to02:48:53Z. SAME23985 remains RUNNING, latest
+7:21:00; initial search35.95% to46.50%, not whole-pipeline completion or ETA.
+SAME23986 remains PENDING/Dependency afterany:23985(unfulfilled), no original
+review.json/failure.json yet. Running0:0 is not terminal success. Cell315 has
+completed; no foreground exec session remains. Scoped task tree clean before
+this checkpoint. No source/prompt edits, new scientific admission, submission/
+release/retry, reporting rebuild or repeated completed analysis.
+
+Full goal ACTIVE; next automatic continuation: observe SAME23985/23986 with
+fixed-format squeue/sacct and bounded native-log tail, then actually wait
+30-300s and check again while live. At terminal state inspect alreadyqueued
+original review.json/failure.json under
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+and reviewer stdout. Diagnose failure without automatic retry; only original
+success/authorization permits dependent conversion/scoring/independent
+admission and sequential genuinely unrun native12. Current four-cell reporting
+and direct delivery remain complete, final integration awaits remaining
+outcomes. No new executable independent requirement identified from changing
+evidence; reconsider on new evidence, not by inventing campaigns or repeating
+completed work. Automatic handoff only; no user resume, DGX or quiet host.
+
 ## Native11 Second Automatic Wait Revalidated (2026-10-07)
 
 Previous turn and this turn are verified waits. Twelve actual300s waits with
