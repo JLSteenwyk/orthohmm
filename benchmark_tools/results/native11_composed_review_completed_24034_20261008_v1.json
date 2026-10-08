@@ -1,0 +1,151 @@
+{
+  "accuracy_evaluated": false,
+  "binding_source": {
+    "bytes": 7785,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native11_composed_review_binding.py",
+    "sha256": "fa0ff637ee974e97e1de0f08e1cd8a2213219e07e2711a1647a5f63f03f2236a"
+  },
+  "cell": "p1_c1_r0",
+  "composed_binding": {
+    "composed_schema_preserved": true,
+    "next_identity_authorized": false,
+    "original_review_translated": false,
+    "review_producer_accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n24034|COMPLETED|0:0|00:44:56|bizon|2|128G\n24034.batch|COMPLETED|0:0|00:44:56|bizon|2|\n",
+    "review_producer_scheduler": {
+      "AllocCPUS": "2",
+      "Elapsed": "00:44:56",
+      "ExitCode": "0:0",
+      "JobIDRaw": "24034",
+      "NodeList": "bizon",
+      "ReqMem": "128G",
+      "State": "COMPLETED"
+    }
+  },
+  "conversion_executed": false,
+  "conversion_kind": "group",
+  "current_original_inventory_equality": false,
+  "full_composed_review_revalidated": true,
+  "historical_failures_retained": [
+    23986,
+    24033
+  ],
+  "independent_checked_record_count": 61785,
+  "independent_checked_records_sha256": "0964bbb5c10b115e08bb3bd570e141bbc22f491ad8b84156c629cf1b3c38fe27",
+  "index": 11,
+  "native_cpu_ids": [
+    40,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "native_inference_reexecuted": false,
+  "native_job_id": 23985,
+  "native_scheduler": {
+    "controller_observation": {
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "23985",
+        "--oneliner"
+      ],
+      "returncode": 1,
+      "stderr": "slurm_load_jobs error: Invalid job id specified\n",
+      "stdout": ""
+    },
+    "limitation": "Terminal accounting lacks historical command/comment; bound request and held submission remain required.",
+    "observation": {
+      "command": [
+        "sacct",
+        "-X",
+        "-j",
+        "23985",
+        "-n",
+        "-P",
+        "--format=JobIDRaw,State,ExitCode,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,Submit,Start,End,JobName"
+      ],
+      "stderr": "",
+      "stdout": "23985|COMPLETED|0:0|64|128G|bizon|gpu|1560|2026-10-07T15:26:36|2026-10-07T15:27:53|2026-10-08T08:56:00|orthohmm_allocated_factorial\n"
+    },
+    "source": "fresh_accounting_after_controller_expiry",
+    "verified": {
+      "AllocCPUS": "64",
+      "End": "2026-10-08T08:56:00",
+      "ExitCode": "0:0",
+      "JobIDRaw": "23985",
+      "JobName": "orthohmm_allocated_factorial",
+      "NodeList": "bizon",
+      "Partition": "gpu",
+      "ReqMem": "128G",
+      "Start": "2026-10-07T15:27:53",
+      "State": "COMPLETED",
+      "Submit": "2026-10-07T15:26:36",
+      "TimelimitRaw": "1560"
+    }
+  },
+  "next_identity_authorized": false,
+  "original_ordinary_full_review_success": false,
+  "original_review_translated": false,
+  "output": {
+    "bytes": 303647,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_standalone_diagnostic_20261008_v1/outputs.json",
+    "sha256": "2d48c2f447c72d04e3e96c9094fe4a941404bd19b8daff56aa550ac3fee712be"
+  },
+  "output_genes": 984137,
+  "output_groups": 351739,
+  "publication_ready": false,
+  "readback_wall_s": 37.41173410299234,
+  "request": {
+    "bytes": 52941,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+    "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+  },
+  "resource_scopes": {
+    "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+    "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+    "wall_seconds": "native_command_monotonic_interval"
+  },
+  "resources": {
+    "cpu_seconds": 1607563.508002,
+    "peak_memory_bytes": 20407123968,
+    "wall_seconds": 60568.563058126
+  },
+  "review_job_id": 24034,
+  "schema": "native11_composed_review_terminal_readback_v1",
+  "scientific_timings_admitted": false,
+  "status": "successful_full_composed_review_independently_bound",
+  "terminal_review": {
+    "bytes": 17658819,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/review.json",
+    "sha256": "a87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e"
+  },
+  "uncontended_timing": false
+}

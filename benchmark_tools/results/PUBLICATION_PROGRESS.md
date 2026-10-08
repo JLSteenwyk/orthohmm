@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Composed Native11 Full Review Independently Accepted (2026-10-08)
+
+Production native11_composed_review_binding completed EXIT0. Independent
+readback rehashed61785unique records in37.411734103s, with original request,
+fresh successful native/reviewer accounting and exact source/submission/
+release/output/resource/environment bindings. Receipt:
+native11_composed_review_completed_24034_20261008_v1.json4580bytes/
+SHAee4019a8f6c96a866a83b798633f21ad3815f6f7a1aecd31b3351208f9bbd2e1.
+Actual full review SHAa87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e.
+Original-source/full-review-success/equality flags remain false; retained
+23986/24033 failures are unchanged. No conversion/accuracy admission yet.
+
+Fresh queue has no native11 conversion or native12 identity; composed
+conversion/scoring/admission destinations absent. Observed MemAvailable
+801650904kB, well above32GiB conversion envelope. Converter SHA
+d8a7709fb36710a8a39813c08ac96a5ac30a5c8340a925ddbb11190b789a2e4b;
+batch SHA3f014d516deeb4c905a9d44173fbbac9cbb057eada951f1ece61a63eb5d8ea5a.
+
+Full goal ACTIVE; next action:commit/push actual accepted review receipt, then
+submit ONE held2CPU32G12h/no-requeue compatible conversion with actual request/
+review/source digests, retain/check owned held resources/command/cwd/comment
+and source bindings, commit/push, recheck capacity and release ONCE. Observe
+the same conversion through terminal output review before scoring. Meanwhile
+native12 preparation can use tested new history route after fresh checks.
+Foreground readback session82992 is complete, no live exec session remains.
+
+## Composed Review24034 Successfully Terminal; Production Readback Next (2026-10-08)
+
+Native12 reviewer milestone27a98332 committed/pushed; do not repeat. An actual
+30-second wait followed by accounting confirms24034COMPLETED0:0, elapsed44:56,
+ended2026-10-08T12:14:43/2CPU128G. Stdout243bytes/stderr0. Actual separate
+review.json exists: native11_composed_terminal_review_v1/native_success;
+full review/output/resource/shared-host gates true,61773bound evidence records.
+Original OS equality/original ordinary-review success/history authorization/
+accuracy/timing/publication flags remain false. Native23985 inference observed
+wall60568.563058126s, CPU1607563.508002s, step peak20407123968bytes; these are
+shared-host resource observations, not new inference or isolated timings.
+
+Full goal ACTIVE; next action:execute production native11_composed_review_binding
+against the actual successful report and original request, independently rehash
+all bound records and retain a compact terminal/readback receipt. Then commit/
+push and submit/check/release ONE new compatible native11 conversion after
+fresh capacity/handle/destination checks. Actual readback has not executed yet;
+no production conversion/native12 request launched. Full reviewed history now
+can be evaluated for native12 using tested successor, not fabricated old flags.
+
 ## Native12 Compatible Terminal Review Tested Prospectively (2026-10-08)
 
 New review_native12_composed_attempt.py, separate2CPU128G6h batch and focused
