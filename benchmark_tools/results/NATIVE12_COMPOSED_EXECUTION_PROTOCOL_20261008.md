@@ -82,10 +82,54 @@ lookup, capacity and process contexts. They are not actual launch, resource or
 scientific evidence. Scientific Python3.10 CLI imports/help and batch syntax
 checks pass; unscheduled batch invocation is rejected.
 
+## Compatible Terminal Review
+
+`review_native12_composed_attempt.py` and a separate2CPU/128GiB/6-hour batch
+accept the explicit new controller/request/session lineage. The prospective
+controller now also binds both reviewer and review-batch source records before
+preparing any actual request. No previously executed source is modified: the
+controller has only been used for fixture tests/help, never production.
+
+Fresh terminal scheduler verification binds the new inference batch path;
+after confirmed controller expiry, use the original allocated terminal
+accounting parser and retained owned held-request/source provenance. Recheck
+the full new-type historical consumer and original reviewed prefix. Replay
+both fresh prospective runtime brackets and actual private lookup signatures,
+then perform another complete current inventory walk. Do not claim original
+OS-inventory equality or continuous integrity.
+
+Reuse the original allocated resource replay, native outcome classification,
+primary resource arithmetic, process-pair/stream and pressure-stream kernels.
+The new environment join explicitly binds its own batch and remaining-budget
+observation without changing globals in a frozen module. Retain the original
+raw resource evidence and small replay summary rather than duplicating the
+expanded multigigabyte host-process JSON. Full replay still executes.
+
+For successful native output, recheck the unchanged native producer receipt,
+actual selected CPU IDs/inheritance, original inputs/preparation/factors, then
+call `validate_semantics` unchanged. A separate truthful output-review schema
+does not alter the scientific validator. All failures remain retained without
+scoring or an automatic inference repeat. A successful full review still is
+not benchmark scoring, continuous integrity or publication readiness.
+
+Initial37review tests pass1.09s; expanded465joined tests pass7.46s; final467
+joined tests pass7.27s, zero failures/skips, separate XMLs retained. The final
+review tests use actual small inventory/lookup and process/pressure kernels.
+Scientific-output tests use an explicitly relocated/resealed copy of the
+retained26-gene fixture, with coherent synthetic32CPU metadata and native
+receipt, invoking unchanged semantic and placement kernels (116checkpoint
+hits,43native pair rows). These are not production native12 inference or
+accuracy/resource evidence. Full joined-review contexts and scheduler calls
+are stubs. Scientific Python3.10 CLI help imports pass; review-batch syntax
+and unscheduled guard are tested. Actual production review is unexecuted.
+
 ## Remaining Execution Work
 
-A compatible terminal review is still needed before one actual12 attempt;
-the prospective controller/request/batch are tested, not production-executed.
+The compatible terminal review and prospective controller/request/batches
+are tested, not production-executed. The actual complete native11 review and
+independent production readback must pass before preparing one held native12
+request. Inspect existing handles and fresh run/session/request paths first.
+Retain the prospective sources and held/release provenance before execution.
 Reuse the unchanged allocated
 native function and64-slot/32-physical-core/128GiB collector, original timeout,
 whole-run resource/process/pressure accounting and shared-host policy. Ordinary

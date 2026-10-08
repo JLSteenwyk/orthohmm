@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Native12 Compatible Terminal Review Tested Prospectively (2026-10-08)
+
+New review_native12_composed_attempt.py, separate2CPU128G6h batch and focused
+tests prepared. Prospective controller's source list now includes reviewer/
+batch before any production request; controller has never executed production.
+Initial37tests pass1.09s, expanded465pass7.46s, final467joined pass7.27s,
+zero failures/skips; separate XMLs retained. Real small runtime, original
+process/pressure and unchanged semantic/placement kernels exercised. Semantic
+fixture is an explicitly relocated/resealed26-gene copy with synthetic32CPU
+context/native receipt (116hits/43pairs); no production inference/scoring.
+Full joins/scheduler contexts remain stubs. Scientific3.10 CLI help and review
+batch syntax/unscheduled guard pass. No frozen or running24034 source changed.
+
+New reviewer binds actual new batch/request/session and explicit prospective
+runtime equality, retains original OS inequality and uses original scientific
+native receipt, full resource replay, environment policies and semantic kernel.
+Full raw resource evidence remains bound; no duplicate expanded host JSON.
+No production native12 request/launch/review executed. Actual24034 remains
+RUNNING43:24/2CPU128G with final resource/environment/review still absent.
+
+Full goal ACTIVE; next action:commit/push this tested reviewer milestone, then
+continue SAME24034 through actual terminal outcome and independent readback.
+Successful readback permits ONE compatible native11 conversion and preparation
+of ONE genuinely unrun native12 held request after fresh handle/path/capacity
+checks. Test preparation is not authorization by assertion. On24034 failure,
+retain/diagnose without an automatic repeat; no original-source/schema changes.
+
+## Native12 Compatible Terminal Review Implementation Started (2026-10-08)
+
+Controller milestone98a1c1d3 committed/pushed, including private controller
+interpreter --help success. Current independent task:
+benchmark_tools/review_native12_composed_attempt.py and focused review tests.
+Implement truthful new session/request/runtime acceptance and unchanged
+resource replay, process/pressure validation and semantic-output kernels;
+bind the new batch explicitly rather than patching a frozen module's SCRIPT.
+No production native12 request/launch or terminal review executed.
+
+Full goal ACTIVE; next action:finish/test this compatible reviewer, bind its
+source in the prospective controller before any actual request, and retain
+validated milestone. Continue SAME24034 through actual terminal outcome and
+readback; its reviewed evidence still gates production conversion/history.
+No frozen source changes, inference retry or ordinary-success fabrication.
+
 ## Native12 Prospective Controller Tested (2026-10-08)
 
 New run_native12_composed_cost.py/batch/tests prepared. Expanded336joined

@@ -30,7 +30,9 @@ JOB_NAME = "orthohmm_allocated_factorial"
 REQUEST_SCHEMA = "native12_composed_request_v1"
 SESSION_SCHEMA = "native12_composed_session_v1"
 SOURCE_NAMES = ("run_native12_composed_cost.py", "run_native12_composed_cost.sh",
-                "native12_composed_execution.py", "native11_composed_review_binding.py")
+                "native12_composed_execution.py", "native11_composed_review_binding.py",
+                "review_native12_composed_attempt.py",
+                "results/native12_composed_terminal_review_20261008_v1.sh")
 
 
 def sources():
