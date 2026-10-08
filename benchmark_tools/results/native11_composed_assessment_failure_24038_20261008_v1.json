@@ -1,0 +1,516 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-j",
+      "24038",
+      "--parsable2",
+      "--format=JobIDRaw,State,ExitCode,Elapsed,ReqMem,AllocCPUS,MaxRSS,MaxVMSize,Start,End"
+    ],
+    "rows": [
+      {
+        "AllocCPUS": "8",
+        "Elapsed": "00:16:06",
+        "End": "2026-10-08T12:47:53",
+        "ExitCode": "0:125",
+        "JobIDRaw": "24038",
+        "MaxRSS": "",
+        "MaxVMSize": "",
+        "ReqMem": "32G",
+        "Start": "2026-10-08T12:31:47",
+        "State": "OUT_OF_MEMORY"
+      },
+      {
+        "AllocCPUS": "8",
+        "Elapsed": "00:16:06",
+        "End": "2026-10-08T12:47:53",
+        "ExitCode": "0:125",
+        "JobIDRaw": "24038.batch",
+        "MaxRSS": "",
+        "MaxVMSize": "",
+        "ReqMem": "",
+        "Start": "2026-10-08T12:31:47",
+        "State": "OUT_OF_MEMORY"
+      }
+    ],
+    "stderr": "",
+    "stdout": "JobIDRaw|State|ExitCode|Elapsed|ReqMem|AllocCPUS|MaxRSS|MaxVMSize|Start|End\n24038|OUT_OF_MEMORY|0:125|00:16:06|32G|8|||2026-10-08T12:31:47|2026-10-08T12:47:53\n24038.batch|OUT_OF_MEMORY|0:125|00:16:06||8|||2026-10-08T12:31:47|2026-10-08T12:47:53\n"
+  },
+  "accuracy_admitted": false,
+  "admission_submitted": false,
+  "automatic_retry": false,
+  "cell": "p1_c1_r0",
+  "controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24038",
+      "--oneliner"
+    ],
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "2026-10-08T12:31:47",
+      "AllocNode:Sid": "bizon-link:4091632",
+      "AllocTRES": "cpu=8,mem=32G,node=1,billing=8",
+      "BatchFlag": "1",
+      "BatchHost": "bizon",
+      "CPUs/Task": "8",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_20261008_v1.sh",
+      "Comment": "c46f3f83cd257857038540c8abd4d7245a598c6f75d3ea9e7af0e07c4af50488",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "2026-10-08T12:31:47",
+      "EndTime": "2026-10-08T12:47:53",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:125",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "24038",
+      "JobName": "ohmm_native11_assess",
+      "JobState": "OUT_OF_MEMORY",
+      "LastSchedEval": "2026-10-08T12:31:47",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "8",
+      "MinMemoryNode": "32G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "bizon",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "8",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "1",
+      "QOS": "normal",
+      "Reason": "OutOfMemory",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=8,mem=32G,node=1,billing=8",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:16:06",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "2026-10-08T12:31:47",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.out",
+      "SubmitTime": "2026-10-08T12:30:52",
+      "SuspendTime": "None",
+      "TimeLimit": "1-02:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=8",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "stderr": "",
+    "stdout": "JobId=24038 JobName=ohmm_native11_assess UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=1 Nice=0 Account=(null) QOS=normal JobState=OUT_OF_MEMORY Reason=OutOfMemory Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:125 RunTime=00:16:06 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-08T12:30:52 EligibleTime=2026-10-08T12:31:47 AccrueTime=2026-10-08T12:31:47 StartTime=2026-10-08T12:31:47 EndTime=2026-10-08T12:47:53 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T12:31:47 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4091632 ReqNodeList=bizon ExcNodeList=(null) NodeList=bizon BatchHost=bizon NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=32G,node=1,billing=8 AllocTRES=cpu=8,mem=32G,node=1,billing=8 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=32G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=c46f3f83cd257857038540c8abd4d7245a598c6f75d3ea9e7af0e07c4af50488  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.out TresPerTask=cpu=8 \n"
+  },
+  "diagnostic_inference": "Frozen FAS code loads the full precomputed JSON and creates a second lookup. Its only logged message precedes that load, suggesting failure during loading; exact allocation/peak and failing line are not proven.",
+  "execution_exit_code": 1,
+  "execution_status": "failed",
+  "failed_tasks": [
+    {
+      "%cpu": "-",
+      "duration": "10m 2s",
+      "exit": "137",
+      "hash": "0f/8734ec",
+      "name": "fas_benchmark (1)",
+      "native_id": "4101322",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "10m 2s",
+      "status": "FAILED",
+      "submit": "2026-10-08 12:36:28.262",
+      "task_id": "10",
+      "wchar": "-"
+    }
+  ],
+  "job_id": 24038,
+  "limitations": [
+    "Five other endpoint tasks completed, but the six-endpoint assessment did not complete and is not admitted.",
+    "No scheduler MaxRSS/MaxVMSize is available; do not invent an exact memory peak or isolated timing.",
+    "Raw FAS output is not evidence of completed FAS scoring.",
+    "No retry, changed endpoint, partial six-metric mean or zero imputation is authorized."
+  ],
+  "native_index": 11,
+  "native_inference_reexecuted": false,
+  "native_job_id": 23985,
+  "observed_unix_ns": 1791478264416278272,
+  "output_file_count": 11,
+  "output_inventory_reproduced": true,
+  "outputs": [
+    {
+      "bytes": 829706240,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/other/ohmm_qfo_full_native_p1_c1_r0.db",
+      "sha256": "3feb3ed3e5c69270e8cd88072c8b99a48c6c662090bdb2c46551be5e7a7e6552"
+    },
+    {
+      "bytes": 1074812,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/EC/EC_ohmm-qfo-full-native-p1-c1-r0_a176c91e35dc_raw.txt.gz",
+      "sha256": "b922f2ba5e912402835d44e9a8b2b29852fb3baed4650a24a2d1644260faa2a2"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/FAS/FAS_ohmm-qfo-full-native-p1-c1-r0_raw.txt.gz",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1479859,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/GO/GO_ohmm-qfo-full-native-p1-c1-r0_d7e0a8dbc92e_raw.txt.gz",
+      "sha256": "90d05af822142c0731be58b57fe9310b8ad42624aaa191ffc78af4949f93069e"
+    },
+    {
+      "bytes": 39652,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/SwissTrees/RefPhylo-SwissTrees_ohmm-qfo-full-native-p1-c1-r0_618810775021_raw.txt.gz",
+      "sha256": "d90d79d6ba3f1a648d508e7400e4e4e4ec0de6449d43841fd8cad5f3fcef5037"
+    },
+    {
+      "bytes": 396192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/TreeFam-A/RefPhylo-TreeFam-A_ohmm-qfo-full-native-p1-c1-r0_beb23e3c1d12_raw.txt.gz",
+      "sha256": "c10e13180315314378b780fefd631b74c1d1f8c5037373c057a84a2c8082e35d"
+    },
+    {
+      "bytes": 596365,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/results/VGNC/VGNC_ohmm-qfo-full-native-p1-c1-r0_raw.txt.gz",
+      "sha256": "35805aafbb7902c02d392f5f7648ad5f8026403780cce035b30786057e082630"
+    },
+    {
+      "bytes": 14848,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/stats/DAG_2026-10-08_12-33-49.dot",
+      "sha256": "a7512408c1e68a8b83987604ba7382aaa0ef9ac1f480d686da7a989e1e9cc0db"
+    },
+    {
+      "bytes": 2955486,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/stats/report_2026-10-08_12-33-49.html",
+      "sha256": "ab15cd2aba4ea9486ddcdae9e6520c71c6f8e47533f24dc076ed9ac5297e3dd5"
+    },
+    {
+      "bytes": 255096,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/stats/timeline_2026-10-08_12-33-49.html",
+      "sha256": "97c74764becfb7f8d90b5a7baeae78beeffea6af16813d6f505428ce563a16ec"
+    },
+    {
+      "bytes": 1639,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/stats/trace_2026-10-08_12-33-49.txt",
+      "sha256": "991ffcaa3b459b6fd33512af4e86075901518eddfeed6a1b6f2ad32245475d89"
+    }
+  ],
+  "publication_ready": false,
+  "references": {
+    "batch": {
+      "bytes": 1167,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_20261008_v1.sh",
+      "sha256": "c399b148a960b6da87c005ee33ff94accd4265d9f91b0233cfcdb8f0422eae42"
+    },
+    "execution": {
+      "bytes": 54245043,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_assessment_v1/results.json",
+      "sha256": "ced6cd1a7772dcb5f040bba388b6f3895b55c37fd8596c1c522d34511ad8c2dc"
+    },
+    "fas_command": {
+      "bytes": 326,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/cn11/0f/8734eca215cbf0cbf7497a198f199d/.command.sh",
+      "sha256": "7c68eb2417f9e589b6673fb59b415cd9138dfee3de53706309078c33f1f3c962"
+    },
+    "fas_exit": {
+      "bytes": 3,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/cn11/0f/8734eca215cbf0cbf7497a198f199d/.exitcode",
+      "sha256": "d80eae6e96d148b3b2abbbc6760077b66c4ea071f847dab573d507a32c4d99a5"
+    },
+    "fas_source": {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    "fas_stderr": {
+      "bytes": 764,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/cn11/0f/8734eca215cbf0cbf7497a198f199d/.command.err",
+      "sha256": "50b034617fce15edfeb8a48256d3df2152284c2fcc888ec95941903407c43057"
+    },
+    "held": {
+      "bytes": 8986,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_held_24038_20261008_v1.json",
+      "sha256": "10a99dc0196ab7576882cd4c92932df5e156f6f54dadee16b5d0aca08ef06c9f"
+    },
+    "log": {
+      "bytes": 4248,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_assessment_v1/scoring.log",
+      "sha256": "b4203d2007ffcd266504f699658f69720374b1173141cb05d9737e3e398fb016"
+    },
+    "pairs_manifest": {
+      "bytes": 17657160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_pairs_v1/results.json",
+      "sha256": "77d33a77eb5eb1c85736ba6e7b303aa269907c8a930d74647d3b8bddff36fac8"
+    },
+    "preflight": {
+      "bytes": 54241368,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_assessment_v1/preflight.json",
+      "sha256": "62384fb1e8ad221b108ddee23819933fc1d05dd0e45b8b0dfa9626f602455b27"
+    },
+    "release": {
+      "bytes": 7974,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_release_24038_20261008_v1.json",
+      "sha256": "b1ff7eee5e23092e84292abd1934c6a2617b7f92a1f57eb88f89e1da23bf92ff"
+    },
+    "scheduler_stderr": {
+      "bytes": 1164,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.err",
+      "sha256": "96613ea896fe09e8af2eb9a3a1b69625f4acd95d4f0195572646fc3fac303cd9"
+    },
+    "scheduler_stdout": {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_assessment-24038.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "trace": {
+      "bytes": 1639,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1/stats/trace_2026-10-08_12-33-49.txt",
+      "sha256": "991ffcaa3b459b6fd33512af4e86075901518eddfeed6a1b6f2ad32245475d89"
+    },
+    "worker": {
+      "bytes": 11047,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native11_composed_qfo_assessment.py",
+      "sha256": "c46f3f83cd257857038540c8abd4d7245a598c6f75d3ea9e7af0e07c4af50488"
+    }
+  },
+  "schema": "native11_composed_assessment_failure_readback_v1",
+  "status": "failed_scoring_retained_not_admitted",
+  "trace_tasks": [
+    {
+      "%cpu": "99.0%",
+      "duration": "21.9s",
+      "exit": "0",
+      "hash": "69/7aef9a",
+      "name": "validate_input_file",
+      "native_id": "4095055",
+      "peak_rss": "1.5 GB",
+      "peak_vmem": "1.5 GB",
+      "rchar": "213.7 MB",
+      "realtime": "21.5s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:33:52.503",
+      "task_id": "1",
+      "wchar": "741 B"
+    },
+    {
+      "%cpu": "-",
+      "duration": "5ms",
+      "exit": "-",
+      "hash": "25/07b9c6",
+      "name": "scheduleMetrics (1)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "0ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.497",
+      "task_id": "3",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "4ms",
+      "exit": "-",
+      "hash": "47/186cdd",
+      "name": "scheduleMetrics (5)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.525",
+      "task_id": "7",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "7ms",
+      "exit": "-",
+      "hash": "d1/2d464c",
+      "name": "scheduleMetrics (3)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "0ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.542",
+      "task_id": "5",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "20ms",
+      "exit": "-",
+      "hash": "b5/3b56df",
+      "name": "scheduleMetrics (4)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "7ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.553",
+      "task_id": "6",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "31ms",
+      "exit": "-",
+      "hash": "0b/ea0866",
+      "name": "scheduleMetrics (2)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "1ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.558",
+      "task_id": "4",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "-",
+      "duration": "100ms",
+      "exit": "-",
+      "hash": "b6/9ffe57",
+      "name": "scheduleMetrics (6)",
+      "native_id": "-",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "0ms",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.573",
+      "task_id": "8",
+      "wchar": "-"
+    },
+    {
+      "%cpu": "98.7%",
+      "duration": "2m 14s",
+      "exit": "0",
+      "hash": "12/6fc7ab",
+      "name": "convertPredictions",
+      "native_id": "4096326",
+      "peak_rss": "1.5 GB",
+      "peak_vmem": "1.5 GB",
+      "rchar": "2.1 GB",
+      "realtime": "2m 13s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:34:14.520",
+      "task_id": "2",
+      "wchar": "2.3 GB"
+    },
+    {
+      "%cpu": "80.0%",
+      "duration": "4.7s",
+      "exit": "0",
+      "hash": "9f/c007a3",
+      "name": "vgnc_benchmark (1)",
+      "native_id": "4101315",
+      "peak_rss": "59.8 MB",
+      "peak_vmem": "78.1 MB",
+      "rchar": "69.4 MB",
+      "realtime": "4.1s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:36:28.233",
+      "task_id": "11",
+      "wchar": "584 KB"
+    },
+    {
+      "%cpu": "92.8%",
+      "duration": "11.7s",
+      "exit": "0",
+      "hash": "17/80f904",
+      "name": "reference_genetrees_benchmark (SwissTrees)",
+      "native_id": "4101337",
+      "peak_rss": "281 MB",
+      "peak_vmem": "2.8 GB",
+      "rchar": "219.7 MB",
+      "realtime": "11.1s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:36:28.298",
+      "task_id": "13",
+      "wchar": "13.1 MB"
+    },
+    {
+      "%cpu": "96.9%",
+      "duration": "26.5s",
+      "exit": "0",
+      "hash": "1f/0fe6af",
+      "name": "reference_genetrees_benchmark (TreeFam-A)",
+      "native_id": "4101380",
+      "peak_rss": "538.5 MB",
+      "peak_vmem": "2.9 GB",
+      "rchar": "223 MB",
+      "realtime": "26s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:36:28.337",
+      "task_id": "12",
+      "wchar": "15 MB"
+    },
+    {
+      "%cpu": "98.0%",
+      "duration": "1m 3s",
+      "exit": "0",
+      "hash": "ca/1d7b40",
+      "name": "ec_benchmark (1)",
+      "native_id": "4101361",
+      "peak_rss": "598.5 MB",
+      "peak_vmem": "2.8 GB",
+      "rchar": "225.9 MB",
+      "realtime": "1m 3s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:36:28.318",
+      "task_id": "14",
+      "wchar": "20.3 MB"
+    },
+    {
+      "%cpu": "99.4%",
+      "duration": "3m 27s",
+      "exit": "0",
+      "hash": "84/a8c757",
+      "name": "go_benchmark (1)",
+      "native_id": "4103293",
+      "peak_rss": "1 GB",
+      "peak_vmem": "2.9 GB",
+      "rchar": "42.2 MB",
+      "realtime": "3m 26s",
+      "status": "COMPLETED",
+      "submit": "2026-10-08 12:36:32.952",
+      "task_id": "9",
+      "wchar": "28.7 MB"
+    },
+    {
+      "%cpu": "-",
+      "duration": "10m 2s",
+      "exit": "137",
+      "hash": "0f/8734ec",
+      "name": "fas_benchmark (1)",
+      "native_id": "4101322",
+      "peak_rss": "-",
+      "peak_vmem": "-",
+      "rchar": "-",
+      "realtime": "10m 2s",
+      "status": "FAILED",
+      "submit": "2026-10-08 12:36:28.262",
+      "task_id": "10",
+      "wchar": "-"
+    }
+  ],
+  "verified_diagnosis": "Slurm reported a batch OOM kill at 32 GiB; Nextflow FAS exited 137; its worker retained failure."
+}

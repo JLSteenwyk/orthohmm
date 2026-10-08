@@ -1,5 +1,82 @@
 # Publication Progress
 
+## Scoring OOM Retained; Final Native QfO Workflow Validated (2026-10-08)
+
+Actual24038 failure independently retained in
+native11_composed_assessment_failure_24038_20261008_v1.json19786bytes/
+SHAb40f8075fd0168e3e7e1b895bcdba2576e2b903cc58e3484a7f3ce8b53b93e6b.
+Fresh controller/accounting confirm OUT_OF_MEMORY0:125/8CPU32GiB/16:06.
+Execution retained failed/exit1/accuracy_admittedfalse; all11failed-run output
+records independently rehashed and reproduce its inventory. Trace identifies
+FAS FAILED137; five other endpoint tasks completed. Slurm records one OOM kill.
+No final six-endpoint assessment/admission, retry or partial mean. No MaxRSS/
+MaxVMSize available; exact peak/failing allocation is not known. The scorer's
+last message precedes full JSON loading; loading failure is an inference only.
+Native11 admission is NOT submitted and must not be submitted against this failure.
+
+Prospective native12 assessment/admission and separate batches now implemented
+and validated, NOT submitted/executed. Original QfO/FAS scientific kernels
+unchanged; new exact identity/native-pair-count/source/provenance/fresh-path gates
+and original endpoint/trace/FAS validators. Before any native12 scoring attempt,
+prespecify8CPU128GiB26h to avoid copying the failed32GiB scoring envelope;
+conversion/admission stay2CPU32GiB. This changes only UNRUN scoring allocation,
+not inference, scientific settings, endpoints or sampling, and does not guarantee
+success. Different scoring resources are explicitly separate from matched-resource
+inference timings. See NATIVE12_COMPOSED_QFO_ASSESSMENT_PROTOCOL_20261008.md.
+Focused35pass/1.44s then strengthened68pass/2.00s; final585joinedpass/11.10s,
+no failures/skips. Both actual scientific3.10 CLI imports/help passed; all
+batch syntax/unscheduled guards tested. Files/results await focused commit/push.
+
+Actual SAME24036RUNNING27:19/native step23:56; do not resubmit/release or alter
+its bound sources. Full goal ACTIVE; next action:commit/push failed-scoring
+readback and tested prospective scoring/admission milestone, then update the
+publication integration with this explicit missing scoring outcome as a new
+truthful addendum/successor, preserving frozen v4/four-cell evidence. Implement
+the eventual native12 compatible score exporter/paired uncertainty/reporting
+consumer while inference runs; do not admit predictions or scores from tests.
+When24036 is actually terminal, execute its already prepared terminal reviewer
+ONCE with retained owned held/release provenance; only successful validated
+full review permits the prepared conversion/scoring/admission chain. Preserve
+any failure and diagnose without retry. If only waiting work is executable,
+actually wait30-300s then observe this SAME live handle.
+
+## Assessment24038 Terminal OOM; Diagnose Without Retry (2026-10-08)
+
+Fresh accounting: SAME24038 OUT_OF_MEMORY/0:125 elapsed16:06; it is terminal,
+not waiting. Native24036 remains RUNNING22:22/native step18:59. Stop ONLY
+dependent native11 accuracy admission; no admission job is submitted. Preserve
+assessment24038 outputs/logs/accounting and sources unchanged, no automatic retry.
+Next action: inspect actual task/trace/stderr and memory accounting to diagnose
+the failing stage and retain a compact failure readback with no score claim.
+
+Independent native12 scoring/admission implementation is currently UNCOMMITTED:
+run_native12_composed_qfo_assessment.py, admit_native12_composed_qfo_assessment.py,
+results/native12_composed_assessment_20261008_v1.sh and admission batch,
+tests/unit/test_native12_composed_qfo_assessment.py and batches.py, and focused
+native12_composed_qfo_assessment_tests_20261008_v1.xml35pass/1.44s. Real endpoint/
+trace/FAS fixture kernels passed with stubbed native/scheduler contexts. Next
+independent action: strengthen native12 provenance/count/resource/fresh-path
+tests, review whether the observed scoring OOM requires a prospective envelope
+change for the genuinely UNRUN native12 assessment, validate/commit/push the
+workflow. Native12 conversion consumer milestonea0f4d9d3 already pushed.
+No frozen source or running-job binding is altered. Full goal ACTIVE.
+
+## Native12 QfO Scoring And Admission Implementation (2026-10-08)
+
+Conversion/explicit review-consumer milestonea0f4d9d3 committed; push observation
+is being completed before this task's eventual production use. Begin new
+run_native12_composed_qfo_assessment.py/admit_native12_composed_qfo_assessment.py,
+separate batches and focused tests. These are not yet implemented/tested/
+committed/executed. Reuse original six-endpoint command, trace, endpoint and FAS
+validators unchanged; require native12 conversion schema and actual explicit
+terminal-review producer provenance. No production job is submitted for them.
+
+Full goal ACTIVE; next action: implement/test actual native-pair conversion
+binding and native12 execution/admission provenance, fresh paths, all six
+original endpoints and retained failures. Check SAME24036/24038 changing state;
+successful terminal24038 scoring alone enables the existing native11 admission.
+Do not edit sources bound to either running job or submit/release them again.
+
 ## Native12 Native-Pair Conversion Validated; Assessment Implementation Next (2026-10-08)
 
 New explicit native12_composed_review_binding.py validates the inference-bound
