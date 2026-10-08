@@ -201,8 +201,8 @@ def test_binding_checks_raw_binding_without_recount(tmp_path, monkeypatch, froze
         bind(refs)
 
 
-def mixed_fixture(tmp_path, monkeypatch, frozen, changed=False):
-    refs = binding_fixture(tmp_path, monkeypatch, frozen)
+def mixed_fixture(tmp_path, monkeypatch, frozen, changed=False, matching=True):
+    refs = binding_fixture(tmp_path, monkeypatch, frozen, matching=matching)
     inputs, composed_ref, frozen_ref, count_audit = refs
     counts = json.loads(Path(inputs[1]["path"]).read_text())
     old = deepcopy(count_audit)

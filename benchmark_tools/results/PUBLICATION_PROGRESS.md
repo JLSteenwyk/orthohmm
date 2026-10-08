@@ -1,5 +1,60 @@
 # Publication Progress
 
+## Actual Native-Count Bootstrap Validated; Figure Successor Next (2026-10-08)
+
+Prospective bootstrap_composed_native_qfo_swiss.py now validates distinct raw
+native audit routes through the composed binder, preserves the fixed reference
+universe, and recomputes ONLY estimable native contrasts with100000shared
+family draws/seed20260922/42endpoint adjustment. Cached unobserved values are
+used only for reference validation and discarded before sampling. Native
+macro F1 is recomputed per replicate. New draws are explicitly distinguished
+from retained-interval reuse and independent confirmation. No production
+bootstrap/count audit/score export is executed. Both previous new sources had
+only their extra EOF blank lines removed; neither is production-bound yet.
+
+Focused78pass/6.90s; joined401pass/19.59s, zero failures/skips. All8observed
+synthetic cells reproduce original full bootstrap points, intervals and family
+differences exactly; two observed cells expose only supported candidate effect;
+heterogeneous changed counts produce new nondegenerate intervals and distinguish
+macro F1 from mean family F1. Altered members/truth/stats/counts/aggregate are
+refused. Scientific3.10 CLI imports/help passed. Current files/results/protocol
+await focused commit/push; retain the earlier failed fixture JUnit unchanged.
+
+Next action: commit/push this validated milestone, then prepare a separate
+composed-native QfO figure/table successor that accepts the explicit final
+snapshot and newly computed native intervals, retains failed/missing cells,
+and does not assume all adjusted intervals include zero. Existing frozen
+four-cell plot/reviewer/manuscript remain unchanged. New planned files:
+plot_composed_native_qfo_scores.py, focused tests/protocol and an independent
+asset/table reviewer. These are NOT yet implemented/tested/executed. Actual
+rendering/report integration still needs admitted final12 evidence.
+
+Full goal ACTIVE; SAME24036 observed RUNNING00:54:00; observe that handle
+without resubmission. Actual native12 terminal review/conversion/scoring/
+admission/count audit remain dependent on its validated successful outcome.
+24038 remains terminalOOM, not waiting or eligible for retry/admission.
+
+## Native-Count Paired Bootstrap Implementation (2026-10-08)
+
+Swiss audit/binding milestone579787a5 committed and pushed. Its staged diff
+check found an extra blank line at EOF in each new source; these prospective
+sources have NOT been used in production. Remove only those blank lines and
+revalidate in this milestone; do not alter retained failed test evidence.
+
+Begin bootstrap_composed_native_qfo_swiss.py and focused tests/protocol for
+actual native-family differences. Not yet implemented/tested/executed. Next
+action: reuse the validated successor audit/binding route, independently
+validate native confusion counts/reference members and recompute available
+prespecified paired contrasts from actual native counts. Use unchanged
+aggregate/statistic/contrast kernels and planned42endpoint correction. Never
+draw missing cells from cached values or count dependent pairs as bootstrap
+units. Native-count intervals are new draws, not retained interval reuse and
+not independent confirmation. No actual12count or score exists yet.
+
+Full goal ACTIVE; observe SAME24036 and preserve all existing bound sources;
+24038 is terminalOOM, not waiting or eligible for admission. Actual downstream
+native12 execution remains dependent on successful terminal output review.
+
 ## Composed Swiss Audit And Retained Binding Validated (2026-10-08)
 
 New audit_composed_native_qfo_swiss_counts.py and
@@ -10,7 +65,9 @@ First synthetic suite51pass1fail: original fixture's last cell happened to have
 the same counts as its first cell. Corrected the test to select genuinely
 different raw counts, not the validator; second52pass/4.21s. Strengthened joined
 suite384pass/14.92s, including61new tests, no failures/skips. Both scientific3.10
-CLI imports/help passed. Source/docs diff check passed; first failed JUnit
+CLI imports/help passed. Pre-stage diff check omitted untracked source files;
+the staged check later found two extra EOF blank lines, corrected prospectively
+in the next milestone. First failed JUnit
 retained unchanged. Protocol records production prerequisites and null-CI rules.
 
 Next action: commit/push this validated prospective milestone, then implement
