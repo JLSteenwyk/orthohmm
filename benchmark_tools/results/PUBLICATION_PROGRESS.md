@@ -1,5 +1,64 @@
 # Publication Progress
 
+## Composed Manuscript Generator Validated; Actual Final Outcome Pending (2026-10-08)
+
+prepare_composed_native_main_text.py and protocol implemented/tested, not
+production-executed. Separate fresh v5 and native claim table require actual
+five-cell snapshot, native-count intervals, production figure/readback and
+pinned original v4/11OOM. Dynamic interval sign/zero interpretation, all missing
+scores/coverage/failure/resource/exposure limits, secondary-mean arithmetic,
+source/hash/cross-artifact checks. Original pair-localization block preserved
+and scoped to C0/R1, not a fabricated native12mechanism. Unrelated Results,
+Discussion and References remain exact in regression tests. No actual v5 exists.
+
+Initial19pass/6.06s; strengthened joined246pass/22.68s, no failures/skips.
+Figure-environment CLI import/help passed. Synthetic manuscript output is
+explicitly a fixture, not committed as scientific evidence. Both existing
+render/print helpers accept explicit paths/bibliography and need NO rewrite;
+reuse after actual admission with retained October IQ-TREE3bibliography.
+This prospective milestone awaits focused commit/push.
+
+Next action: commit/push validated generator/tests/protocol, then observe
+SAME24036 through actual terminal native output and its prepared terminal
+review. Successful reviewed output permits the already-tested conversion/
+scoring/admission/count/bootstrap/figure/manuscript chain. Failure remains
+missing, is diagnosed and integrated without automatic retry. All those actual
+scientific and reporting stages are still unfinished and dependent on evidence.
+No genuinely executable independent requirement identified after preparing
+this final reporting chain; this is provisional, not a permanent gate. Do not
+invent another adapter, recertify completed workflows or repeat old analyses
+to avoid real waiting. Reconsider when new evidence exposes a real gap.
+
+Full goal ACTIVE; latest24036RUNNING01:21:07. After the commit/push, actually
+wait30-300s and post-check this SAME live handle, with concrete terminal review
+or failure diagnosis if state changes.24038 remains terminalOOM, no retry or
+admission. No DGX/quiet-window/contention approval or another user resume needed.
+
+## Composed-Native Manuscript Integration Implementation (2026-10-08)
+
+Figure/table milestoneaf5c3962 committed and pushed. Source/tests/protocol/
+ledger staged diff check passed; full staged check flagged only two trailing
+spaces inside the retained FIRST failing JUnit traceback. Preserve that
+generated failure unchanged, rather than claiming a fully clean generated diff.
+
+Begin prepare_composed_native_main_text.py and focused tests/protocol, not yet
+implemented/tested/executed. Next action: inspect exact frozen v4 anchors, then
+prepare a separate v5 generator for actual eventual composed5cell snapshot,
+new native-count intervals, production figure/readback and retained11OOM.
+Update the Abstract/header/native section and claim table where their old
+four-cell/three-zero-crossing wording is stale; retain all unrelated all-tool,
+simulation, generalization, diagnostic and citation content unchanged. Preserve
+old pair-localization scope, not a new12mechanistic explanation by assertion.
+Require truthful input/source/hash and cross-artifact bindings, dynamic interval
+interpretation, explicit missing/failure/resource/exposure limits. No actual
+v5 scientific manuscript can be generated from synthetic final-cell fixtures.
+
+Actual12score/production figure remains unavailable. Full goal ACTIVE;
+next automatic continuation: implement/test this generator while observing
+SAME24036 through terminal outcome, then execute already-prepared downstream
+review only if successful. Last24036RUNNING01:05:51;24038terminalOOM, no
+retry/admission. Existing bound sources and frozen v4 remain unchanged.
+
 ## Composed Figure/Table Consumer Validated; Manuscript Integration Next (2026-10-08)
 
 New plot_composed_native_qfo_scores.py/review_composed_native_qfo_figure.py
