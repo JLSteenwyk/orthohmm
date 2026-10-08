@@ -1,5 +1,79 @@
 # Publication Progress
 
+## Native11 Runtime Addition Classifier Tested, Not Admitted (2026-10-08)
+
+Separate diagnostic classifier/tests/protocol prepared. Final76 joined tests
+pass0.79s, zero failures/skips (21 classification/55 full-review boundary);
+both XML observations retained. Chronology field explicitly describes an
+upper bound on the prior successful inventory check, not its invented exact
+time. Actual failure observation
+native11_full_review_runtime_refusal_24033_20261008_v1.json5416bytes/SHA
+72b3dd58678ef716b6ce42f2c003e28b5ce36979fb075126b1ca56d8a84d631e
+binds all new wrapper/child failure files, fresh accounting, matching package
+log lines and installed4.9.2-2ubuntu1.1. Fresh accounting corrects earlier
+one-second shorthand: original23986 ended09:41:50, not09:41:51, before
+lftp installation10:40:45. Native23985 ended08:56:00, new24033 ended10:51:51.
+No installer identity inferred or package/runtime changed.
+
+Full goal ACTIVE; next action: commit/push classifier/tests/protocol and
+actual diagnosis/failure evidence, then execute ONE read-only classification
+against pinned comparisonf0d8e63e and exact two binary descriptors, native and
+original-review terminal bounds, retained matching runtime report and package
+log evidence. Keep original_inventory_equalityfalse and every admission flag
+false. Then prepare/test any distinct prospective runtime/history/conversion
+adoption contract; original ordinary routes cannot accept this changed
+inventory and MUST NOT be made to appear successful. No retries or scoring/
+native12 launch, OS edits, file hiding, frozen-source edits or user-resume gate.
+
+## Native11 Runtime Refusal Narrowed To Postterminal Lftp Additions (2026-10-08)
+
+Read-only comparison completed (exec session23963 finished). Actual diagnosis
+native11_runtime_inventory_diagnosis_20261008_v1.json111224bytes/SHA
+f0d8e63eafea6fb65530f3397256353e789c76fa5335c8834d9f6656c47ff337:
+OS/helper snapshot39208->39210 records, ONLY added/usr/bin/lftp and
+/usr/bin/lftpget; no missing/changed original records or metadata differences.
+Private scientific/controller runtime18751records matches exactly. Original
+23986 runtime.json retains successful native before/after and first fresh
+terminal inventory checks. Package log records install2026-10-08 10:40:45/46
+America/New_York, AFTER native completed08:56:00 and original reviewer failure
+09:41:51. No package install/uninstall or bound runtime modification performed
+in this turn. Do not infer who installed it or delete these unrelated files.
+
+Current task: benchmark_tools/classify_postterminal_runtime_additions.py and
+tests/unit/test_classify_postterminal_runtime_additions.py being prepared,
+not yet tested/committed/executed. This is a separate strict diagnostic
+classification of exact additions and chronology, NOT a replacement inventory
+verifier, full review, history/conversion adoption or launch authorization.
+Preserve the correct original refusal and all frozen sources/manifests.
+
+Full goal ACTIVE; next action: finish/test the diagnostic classification,
+retain actual24033 child/wrapper failures and package-time evidence, execute
+one read-only classification only after pinning the new boundary. Determine
+any separate prospective full-review/history/conversion adoption from actual
+contracts; original ordinary routes do NOT accept a changed runtime snapshot.
+No automatic retry, gate weakening, fabricated original-source report,
+monkeypatch, OS alteration, native12 or scoring launch. No user-resume gate.
+
+## Native11 Fresh Full Review24033 Runtime Inventory Refusal (2026-10-08)
+
+Actual terminal state supersedes live checkpoint immediately:24033 FAILED1:0
+elapsed01:09; original reviewer child exited1 at runtime_review ->
+check_manifests -> snapshot_runtime_trees.verify: Runtime inventory changed.
+This is a new early runtime-integrity refusal, not recurrence of the original
+GC segfault, not semantic failure and not native inference failure. Original
+reviewer wrote failure.json; wrapper wrote results.json and retained child
+stderr. Original23986 FAILED0:11 and successful standalone24031 remain intact.
+No retry or dependent conversion/scoring/admission/native12 launch.
+
+Full goal ACTIVE; next automatic continuation: read unchanged runtime manifest
+verifier/binding contract and compare actual inventory to expected specs,
+without modifying bound runtime, deleting unknown/user files, changing gates
+or resubmitting. Retain actual failure and concrete differing paths/hashes;
+distinguish own diagnostic side effects from external changes using evidence.
+Determine any permitted prospective recovery only after that diagnosis.
+No running monitor or foreground exec session remains. Four-cell reporting/
+direct delivery complete; no user resume, quiet-host/DGX or whole-goal stop.
+
 ## Native11 Fresh Full Review24033 Released And Live (2026-10-08)
 
 Heldc706b6e9 pushed before ONE successful release24033. Release receipt

@@ -1,0 +1,118 @@
+{
+  "accounting": {
+    "command": [
+      "sacct",
+      "-X",
+      "-j",
+      "23985,23986,24033",
+      "-n",
+      "-P",
+      "--format=JobIDRaw,State,ExitCode,Start,End,Elapsed,AllocCPUS,ReqMem,NodeList,Partition,TimelimitRaw,JobName"
+    ],
+    "stderr": "",
+    "stdout": "23985|COMPLETED|0:0|2026-10-07T15:27:53|2026-10-08T08:56:00|17:28:07|64|128G|bizon|gpu|1560|orthohmm_allocated_factorial\n23986|FAILED|0:11|2026-10-08T08:56:00|2026-10-08T09:41:50|00:45:50|2|128G|bizon|gpu|360|ohmm_allocated_review11\n24033|FAILED|1:0|2026-10-08T10:50:42|2026-10-08T10:51:51|00:01:09|2|128G|bizon|gpu|360|ohmm_native11_fullreview\n"
+  },
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "bound_runtime_modified": false,
+  "child_exit_code": 1,
+  "failed_review_job_id": 24033,
+  "historical_segmentation_fault_cause_established": false,
+  "native_job_id": 23985,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791471695220092416,
+  "original_failed_review_job_id": 23986,
+  "original_reviewer_error": "Runtime inventory changed",
+  "package_install_performed": false,
+  "package_log_matching_lines": {
+    "/var/log/apt/history.log": [
+      "Commandline: apt install lftp",
+      "Install: lftp:amd64 (4.9.2-2ubuntu1.1)"
+    ],
+    "/var/log/dpkg.log": [
+      "2026-10-08 10:40:45 install lftp:amd64 <none> 4.9.2-2ubuntu1.1",
+      "2026-10-08 10:40:45 status half-installed lftp:amd64 4.9.2-2ubuntu1.1",
+      "2026-10-08 10:40:45 status unpacked lftp:amd64 4.9.2-2ubuntu1.1",
+      "2026-10-08 10:40:46 configure lftp:amd64 4.9.2-2ubuntu1.1 <none>",
+      "2026-10-08 10:40:46 status unpacked lftp:amd64 4.9.2-2ubuntu1.1",
+      "2026-10-08 10:40:46 status half-configured lftp:amd64 4.9.2-2ubuntu1.1",
+      "2026-10-08 10:40:46 status installed lftp:amd64 4.9.2-2ubuntu1.1"
+    ]
+  },
+  "package_query": {
+    "command": [
+      "dpkg-query",
+      "-W",
+      "-f=${Status}|${Version}\\n",
+      "lftp"
+    ],
+    "stderr": "",
+    "stdout": "install ok installed|4.9.2-2ubuntu1.1\n"
+  },
+  "publication_ready": false,
+  "retained_files": [
+    {
+      "bytes": 310008,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/preflight.json",
+      "sha256": "f86fbf8c18d67474d5c074f4b847c9a81421d05f9f7fff066341afadc0b2157a"
+    },
+    {
+      "bytes": 310820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/results.json",
+      "sha256": "fa1454fc30f33c7e1ab2ca3362db0da46150c5957c377557e14983bb7ce78621"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/stderr.txt",
+      "sha256": "922a9722803e79ca1d7b3e86f47131d36b32138098598232ce4223bc8dc8ba61"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_terminal_review_20261008_v1/failure.json",
+      "sha256": "7f9a5cf647de481891759f1232a8cab36276b6a1135c8fb65e2e90e8153b3d4a"
+    },
+    {
+      "bytes": 1205,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_terminal_review_20261008_v1/scheduler.json",
+      "sha256": "cf7c42d63c181099260734b322b4adb4407076d87b8899f4155fdc73759ba04c"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1088,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.err",
+      "sha256": "32a2651eccad3b447f62f0e9dfc63f3eb134cc370733acb761bd7626d850492a"
+    },
+    {
+      "bytes": 10516,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_held_20261008_v1.json",
+      "sha256": "b8167d7a12859845d8866c316d3bbb7a83f1b00b09bd1c236304adb7fa098b2e"
+    },
+    {
+      "bytes": 6288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_release_24033_20261008_v1.json",
+      "sha256": "c06e2e5634993c9b23cdf5e98597d551d768896f0d41d94e50136736eba1822a"
+    },
+    {
+      "bytes": 111224,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_runtime_inventory_diagnosis_20261008_v1.json",
+      "sha256": "f0d8e63eafea6fb65530f3397256353e789c76fa5335c8834d9f6656c47ff337"
+    },
+    {
+      "bytes": 5179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+      "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+    }
+  ],
+  "schema": "native11_full_review_runtime_refusal_observation_v1",
+  "terminal_reviewed": false,
+  "wrapper_status": "fault_reported_full_review_failed_retained"
+}
