@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Postterminal Runtime Component Tested For One Execution (2026-10-08)
+
+New component/tests/protocol prepared.101 focused tests pass1.75s, zero
+failures/skips; actual XML retained. Earlier fixture run had2 failures from
+assuming0644 despite local umask; fixture now reads its actual mode, with no
+production-gate relaxation. Unchanged original bracket/lookup kernel and real
+inventory walker exercised. Original conversion rejects the new component.
+Source SHA2565c2e9c80c2c1be1f2972a914c08dcd4669909f755d73b445756f5d3144e6d8e0.
+All component admission/history/resource/accuracy/readiness flags remainfalse.
+
+Full goal ACTIVE; next action: commit/push component/tests/protocol/XML, then
+ONE read-only execution using original scientific3.10 with sanitized native
+thread limits and exact source digest. Fixed fresh destination
+benchmarks/work/native11_postterminal_runtime_review_20261008_v1.
+Actual request/classification and original kernels pinned. Preserve any failure,
+no automatic retry. If successful, bind actual component evidence and proceed
+to composed full-review/resource/environment/output and compatible downstream
+adoption. No native12/scoring launch or original-source/schema fabrication.
+
+## Postterminal Runtime Review Implementation Started (2026-10-08)
+
+Previous turn PROGRESS:44b94fcb prompt/ledger/tests committed and pushed;
+39 focused tests passed. Fresh23985/23986/24031/24033 accounting unchanged,
+all terminal. No repeated classification, original full review or inference.
+
+Current task files:benchmark_tools/review_native11_postterminal_runtime.py and
+tests/unit/test_review_native11_postterminal_runtime.py, being implemented,
+not tested/committed/executed. Reuse original runtime_review's explicit
+tree_checker hook for retained historical first-terminal descriptors only,
+compare historical phases, and independently freshly inventory every original
+runtime root. Require unchanged original entries/metadata/private runtime and
+ONLY the exact pinned late additions. New component is NOT full-review or
+history/conversion/scoring admission. Preserve original current equalityfalse.
+
+Full goal ACTIVE; next action: finish/test this component, commit/push its
+prospective source and protocol, then execute one fresh read-only component
+review with actual original request/session and pinned classification/report.
+Then implement the minimal composed full-review/adoption using all unchanged
+resource/environment/output kernels or valid bound components. No ordinary
+source/schema fabrication, original retry, OS edit or native12/scoring launch
+before a valid compatible full contract. No running monitor/exec session.
+
 ## Goal Recovery Authorization Clarified (2026-10-08)
 
 User requests correction of recurring goal stops. Actual get_goal is ACTIVE,
