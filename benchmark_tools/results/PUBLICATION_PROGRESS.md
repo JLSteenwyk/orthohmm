@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Composed-Native Swiss Family Audit And Interval Binding Implementation (2026-10-08)
+
+Prospective score-export milestone0964af53 committed and pushed; origin/main
+matches that commit. Source/docs tests passed628joined; diff check flagged only six trailing
+spaces inside the retained FIRST failing JUnit traceback. Preserve that generated
+failure evidence unchanged; this is not a scientific/source validation failure.
+
+Begin audit_composed_native_qfo_swiss_counts.py and
+bind_composed_native_qfo_swiss_uncertainty.py with focused tests/protocol. Files
+are not yet implemented/tested/committed/executed. Next action: implement the
+selected actual12Swiss raw audit, truthful new-schema snapshot replay, reuse
+prior raw count audits without recount, and original guarded interval projector.
+Every family record plus aggregate must match before attaching a retained
+interval; differing/missing cells stay explicit and do not supply imputed
+contrasts. Preserve planned42endpoint multiplicity and development-exposure
+limitations. No actual12accuracy/raw family count exists until successful
+native/review/conversion/scoring/admission. SAME24036 remains the live inference
+handle;24038 is retained terminalOOM, not waiting or eligible for admission.
+Full goal ACTIVE; continue this task and observe24036 without resubmission.
+
+Direct stopping-diagnosis check: the goal tool reports ACTIVE, with no token
+budget, and points to the actual editable attachment. Attachment and current
+repository prompt both have SHA256
+1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c.
+All29prompt regression checks passed, including actual attachment equality,
+shared-host eligibility, bounded waiting, scoped failures and direct-request
+continuation. No remaining prompt contradiction or actual lifecycle stopping
+cause was established; do not claim a dispatcher repair. The existing prompt
+correction in b4bd08bb remains effective, rather than adding another revision.
+Fresh accounting:24036RUNNING00:46:13/64slots128G;24038OUT_OF_MEMORY0:125,
+terminal16:06/8slots32G. This maintenance answer is not a pause or completion.
+Full goal ACTIVE; next automatic continuation: implement/test the two named
+Swiss-family audit/binding modules, while observing SAME24036. No downstream
+native12 execution before successful terminal review; no24038retry/admission.
+
 ## Prospective Composed Score Export Validated; Family Audit Next (2026-10-08)
 
 New export_composed_native_qfo_scientific_scores.py and reporting protocol
