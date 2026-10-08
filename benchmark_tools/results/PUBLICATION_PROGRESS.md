@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Automatic Continuation Verified Same Native11 Wait (2026-10-07)
+
+Previous turn was progress: current prompt correction committed and pushed as
+6a20901a, 37 focused tests passed and actual attachment matched the repository
+copy. This automatic continuation read that attachment and the ledger, confirmed
+the same handles live, and performed twelve actual300s waits with post-wait
+queue/log checks from2026-10-07T23:51:49Z to2026-10-08T00:46:51Z. This turn is
+a verified wait, not a newly completed scientific analysis or a user-resume gate.
+One initial ledger-read command had a sed syntax error; the corrected bounded
+read succeeded immediately. No job was restarted for an observation error.
+
+SAME23985 remained RUNNING, latest5:18:58; initial all-to-all search advanced
+from25.48% at entry to33.15%, not whole-pipeline completion or an ETA.
+SAME23986 remained PENDING/Dependency afterany:23985(unfulfilled). No original
+review.json/failure.json yet. Running0:0 accounting is not a terminal success.
+Monitoring cell306 completed; no foreground exec session remains. Scoped task
+tree was clean before this checkpoint. No prompt/source/scientific-result
+changes, new submission/release, conversion/scoring/admission, old-report
+rebuild or repeated scientific work were performed.
+
+Full goal ACTIVE; next automatic continuation: poll SAME23985/23986 with
+fixed-format squeue/sacct and a bounded native-log tail, then actually wait
+30-300s and check again while live. Observe the alreadyqueued original review
+after native terminal state, then inspect
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/review.json
+or failure.json and its retained reviewer stdout. Diagnose failure without
+automatic retry; only actual original success/authorization permits dependent
+conversion/scoring/independent admission and sequential genuinely unrun
+native12. Current four-cell reporting and direct delivery remain complete;
+final integration depends on the remaining outcomes. No new independent
+executable gap identified from changing evidence; reconsider on new evidence,
+not by repeating completed work or inventing campaigns. No user resume, DGX
+or quiet host required. This checkpoint hands off to automatic continuation;
+the full publication objective remains incomplete.
+
 ## Wait Only Continuation Contract Clarified (2026-10-07)
 
 Direct user maintenance request: check why the goal appears to stop and fix
