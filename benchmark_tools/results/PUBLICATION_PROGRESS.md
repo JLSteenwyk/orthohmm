@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Native12 Compatibility Library Tested Prospectively (2026-10-08)
+
+New native12_composed_execution.py, test_native12_composed_execution.py and
+NATIVE12_COMPOSED_EXECUTION_PROTOCOL_20261008.md prepared/tested. Initial75
+tests pass0.86s; expanded219joined tests pass2.78s, zero failures/skips, XMLs
+retained. Real small inventory walks and original RuntimeChecker/run_checked
+kernels exercise postflight drift rejection; probe subprocess/history/native
+contexts remain stubs, not production scientific or scheduler evidence.
+Actual scientific3.10 imports succeed. No frozen sources changed, no production
+history binding or new request/launch executed. Current old OS inequality is
+preserved; ONLY the two exact bound additions are allowed by fresh tree walks.
+
+Full goal ACTIVE; next action:commit/push this tested library, then implement
+the prospective native12 controller/request/batch and compatible terminal
+review using unchanged scientific native command and accounting kernels.
+Continue observing SAME24034; lastactualRUNNING27:11/2CPU128G. Its successful
+full review/readback still gates native11 conversion and native12 preparation.
+No repeated inference, ordinary-review schema translation or changed settings.
+
+## Native12 Prospective Compatibility Implementation Started (2026-10-08)
+
+Previous direct-maintenance turn PROGRESS:actual prompt contract verified,
+27tests passed, stale handoff corrected and committed/pushed64e290e9. No
+prompt rewrite or dispatcher repair is needed. Actual24034RUNNING22:39/2CPU
+128G with empty stderr; resource/environment/final review remain absent.
+
+Independent unfinished task:benchmark_tools/native12_composed_execution.py,
+tests/unit/test_native12_composed_execution.py and a prospective protocol.
+Implement explicit reviewed-history acceptance for the new composed native11
+type and fresh runtime checks allowing ONLY the two exactly bound late OS
+files; reuse unchanged RuntimeChecker lookup probes, inventory comparison and
+scientific native/collector interfaces. Original history/schema/source remain
+unchanged. This library is not a prepared request, launch or scientific score.
+Actual frozen run_12 output/session/request paths are absent and queue has no
+native12 handle; a future launch must check these again, not assume freshness.
+
+Full goal ACTIVE; next action:implement/test this compatibility library and
+protocol, commit/push a validated milestone while SAME24034 runs. Continue
+observing that job through terminal outcome; successful full review/readback
+gates production conversion and any history-dependent preparation. Native12
+still needs a tested prospective controller/request/reviewer before ONE
+genuinely unrun attempt; no inference retry or modified scientific settings.
+
 ## Direct Goal Continuation Check And Stale Handoff Repair (2026-10-08)
 
 User asks whether repeated stops indicate an incorrect goal prompt. Read the
