@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Conversion24035 Independently Accepted; Native12 Preflight Running (2026-10-08)
+
+Actual scoring preparation/readback session26922 finished EXIT0. Rehashed
+62293unique records in112.646000176s, validating full composed/native/
+conversion provenance, exact frozen scoring environment and FAS protocol.
+Compact receipt native11_composed_conversion_completed_24035_20261008_v1.json
+6606bytes/SHAb5106073ea11bebc3cf4567839223af6825fc726362d00436fbb780dba56adb7.
+Actual3:22conversion retained11755521pairs, no mapping loss,585180/984137
+coverage. New assessment cwd/work/results paths passed freshness checks.
+No scoring or accuracy admission executed yet; no foreground session remains.
+
+SAME24036RUNNING03:18/64slots128G, stderr0. Explicit new run12 started.json
+and lookup/verification-cache phase exist; inference start is not yet verified.
+Do not repeat submission/release or alter its now-bound prospective sources.
+
+Full goal ACTIVE; next action:commit/push conversion accepted receipt and
+native12 release checkpoint, then submit ONE held8CPU32G26h/no-requeue QfO
+assessment with actual pair-manifest/source digests. Retain/check owned held
+batch/cwd/comment/resources/no-array/no-dependency, commit/push, capacity-check
+and release ONCE. Observe SAME24036 preflight/native outcome and the new
+assessment through terminal review and independent admission; no score imputation.
+
+## Native12 Released Once; Conversion Scoring Readback Started (2026-10-08)
+
+Held/prepared789bd877 pushed before ONE release24036. Actual release0 receipt
+native12_composed_release_24036_20261008_v1.json8355bytes/
+SHA55ca675e5afb6fbeccf384e45e00b12f0e52fe7f60a323a9b5f7b72190b463ef
+retains exact held request comment, fresh complete prospective source/input
+bindings, absent attempt paths and safe128GiB capacity. Do NOT release or
+submit native12 again. Scheduler/preflight/native state must now be observed
+on SAME24036; release alone is not proof that inference has started.
+
+Current next action:execute actual run_native11_composed_qfo_assessment.prepare
+against completed conversion24035 and manifest
+SHA77d33a77eb5eb1c85736ba6e7b303aa269907c8a930d74647d3b8bddff36fac8.
+Independently check actual full/native/conversion/environment/FAS bindings,
+retain a compact terminal/preflight receipt, then commit/push before ONE
+held8CPU32G26h scoring submission. No scoring executed yet. Observe SAME24036
+without retry or frozen-source edits; retain any preflight failure and diagnose.
+Full goal ACTIVE; no pause, quiet-host/DGX or renewed approval prerequisite.
+
 ## Native12 Actual Request Prepared And Bound; Conversion24035 Complete (2026-10-08)
 
 Actual prepare CLI session8827 finished EXIT0 after independent full composed

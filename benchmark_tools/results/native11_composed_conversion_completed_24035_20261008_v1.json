@@ -1,0 +1,137 @@
+{
+  "accuracy_admitted": false,
+  "automatic_retry": false,
+  "cell": "p1_c1_r0",
+  "composed_binding": {
+    "composed_schema_preserved": true,
+    "next_identity_authorized": false,
+    "original_review_translated": false,
+    "review_producer_accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS|ReqMem\n24034|COMPLETED|0:0|00:44:56|bizon|2|128G\n24034.batch|COMPLETED|0:0|00:44:56|bizon|2|\n",
+    "review_producer_scheduler": {
+      "AllocCPUS": "2",
+      "Elapsed": "00:44:56",
+      "ExitCode": "0:0",
+      "JobIDRaw": "24034",
+      "NodeList": "bizon",
+      "ReqMem": "128G",
+      "State": "COMPLETED"
+    }
+  },
+  "conversion_accounting": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24035|COMPLETED|0:0|00:03:22|bizon|2\n24035.batch|COMPLETED|0:0|00:03:22|bizon|2\n",
+  "conversion_interval_s": 102.613809641,
+  "conversion_job_id": 24035,
+  "conversion_reexecuted": false,
+  "conversion_scheduler": {
+    "AllocCPUS": "2",
+    "Elapsed": "00:03:22",
+    "ExitCode": "0:0",
+    "JobIDRaw": "24035",
+    "NodeList": "bizon",
+    "State": "COMPLETED"
+  },
+  "conversion_source": {
+    "bytes": 8773,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_native11_composed_qfo_pairs.py",
+    "sha256": "d8a7709fb36710a8a39813c08ac96a5ac30a5c8340a925ddbb11190b789a2e4b"
+  },
+  "coverage": {
+    "accessions_in_any_pair": 585180,
+    "definition": "fraction of all inference input accessions present in at least one submitted pair",
+    "fraction_inputs_in_any_pair": 0.5946123354776824,
+    "input_accessions": 984137,
+    "pair_rows": 11755521
+  },
+  "environment_manifest": {
+    "bytes": 172836,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_assessment_environment_20260917.json",
+    "sha256": "e86545fd04cb644ed642cf2a31b4993fb2225ca4c05743cd03e661db129e82bc"
+  },
+  "fas_protocol": {
+    "missing_scores": "native scorer omits uncomputed/failed missing-pair scores; no zero imputation",
+    "newly_computed_pair_cap": 9000,
+    "pipeline": {
+      "bytes": 14659,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+      "sha256": "f1793f4efdc19ee4bebf73d186cc14e371d13d9236714f59881befad4f349946"
+    },
+    "population": "precomputed predictions plus missing predictions with both feature annotations; not all submitted pairs",
+    "sampling": "unseeded native shuffle; precomputed sample preserves eligible precomputed/missing ratio when missing pairs exist",
+    "source": {
+      "bytes": 9930,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    },
+    "species_scope": "all supplied species; frozen pipeline does not pass --limited-species",
+    "uncertainty": "native pair-IID SEM is not an independent-family or paired-method confidence interval"
+  },
+  "independent_checked_record_count": 62293,
+  "independent_checked_records_sha256": "1c7f84c920c137495650f88211912ee63a762b3ea7c93efb9af02ade3aad1420",
+  "index": 11,
+  "native_inference_reexecuted": false,
+  "native_job_id": 23985,
+  "native_request": {
+    "bytes": 52941,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+    "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+  },
+  "native_terminal_review": {
+    "bytes": 17658819,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/review.json",
+    "sha256": "a87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e"
+  },
+  "next_identity_authorized": false,
+  "original_review_translated": false,
+  "pairs": {
+    "bytes": 181462138,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_pairs_v1/pairs.qfo.tsv",
+    "sha256": "83241f530432d8ba5a10176f5073e770f484cc272adab6595e2462c3b02416e8"
+  },
+  "pairs_manifest": {
+    "bytes": 17657160,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_pairs_v1/results.json",
+    "sha256": "77d33a77eb5eb1c85736ba6e7b303aa269907c8a930d74647d3b8bddff36fac8"
+  },
+  "participant": "ohmm_qfo_full_native_p1_c1_r0",
+  "publication_ready": false,
+  "readback_wall_s": 112.5135713799391,
+  "removed_mapping_pairs": 0,
+  "schema": "native11_composed_conversion_terminal_preflight_v1",
+  "scoring_command": [
+    "/home/bizon/bin/nextflow",
+    "-c",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_assessment.config",
+    "run",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/main.nf",
+    "-profile",
+    "singularity",
+    "-ansi-log",
+    "false",
+    "--input",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_pairs_v1/pairs.qfo.tsv",
+    "--participant_id",
+    "ohmm_qfo_full_native_p1_c1_r0",
+    "--event_year",
+    "2020",
+    "--challenges_ids",
+    "GO EC VGNC SwissTrees TreeFam-A FAS",
+    "--goldstandard_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020",
+    "--assess_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/data",
+    "--results_dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1",
+    "-work-dir",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/cn11"
+  ],
+  "scoring_cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_assessment_v1",
+  "scoring_executed": false,
+  "scoring_results": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/scoring/composed_native11_v1",
+  "scoring_work": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/w/cn11",
+  "source": {
+    "bytes": 11047,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native11_composed_qfo_assessment.py",
+    "sha256": "c46f3f83cd257857038540c8abd4d7245a598c6f75d3ea9e7af0e07c4af50488"
+  },
+  "status": "conversion_and_scoring_preflight_independently_bound",
+  "total_pairs": 11755521
+}
