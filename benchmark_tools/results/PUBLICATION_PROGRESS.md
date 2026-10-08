@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Composed Figure/Table Consumer Validated; Manuscript Integration Next (2026-10-08)
+
+New plot_composed_native_qfo_scores.py/review_composed_native_qfo_figure.py
+and protocol implemented/tested, not production-executed. Explicit5admitted
+snapshot/native-count bootstrap, all7status/coverage rows,42score table rows
+(30values/12null), and12supported contrast endpoints. No partial11scores,
+mean-as-F1, zero imputation, isolated timing or assumed CI zero inclusion.
+Scientific source replay uses separate retained Python, sanitized injection
+variables and5admission scope. Independent reader checks every table against
+bound input, SVG/PDF labels, raster colors/dimensions and PDF text bounds.
+
+Initial31pass/5.95s. Strengthened joined190pass1fixture failure/18.61s:
+stubbed subprocess result omitted stderr. Corrected only the synthetic stub;
+retained first failing JUnit unchanged. Final192pass/18.16s, no failures/skips;
+real statistical/render/CSV/PDF/PNG/SVG kernels, explicitly synthetic final
+admission/replay handoff. Both actual figure-environment CLI imports/help pass.
+Manually viewed both initial and corrected synthetic layouts: readable labels,
+no overlap/blank panels; added factor key and neutral interval marker color
+to avoid implying cell-legend correspondence. Synthetic figures are NOT
+publication results and are not committed as scientific figure outputs.
+
+Next action: commit/push this validated prospective milestone, then prepare
+the genuinely unfinished composed-native manuscript/claim-table successor
+from actual eventual5cell snapshot, native-count intervals and independently
+reviewed figure. Preserve v4/evidence unchanged; do not copy old zero-crossing
+or superiority assumptions. Actual text/figure integration requires successful
+final12admission and production assets; if12fails, retain4cell assets plus
+an honest new failure addendum. No new raw scientific results yet.
+
+Full goal ACTIVE; SAME24036RUNNING01:05:51. Observe same inference handle,
+no resubmission; successful terminal review alone enables prepared downstream
+conversion/scoring/admission/counts.24038terminalOOM/no retry or admission.
+
+## Composed-Native Figure And Table Implementation (2026-10-08)
+
+Milestone15359a7a committed/pushed. Start plot_composed_native_qfo_scores.py,
+review_composed_native_qfo_figure.py and focused tests/protocol. Not yet
+implemented/tested/executed. Next action: require exact five admitted-cell
+composed snapshot plus explicit native-count bootstrap, retain all seven
+cell statuses and missing scores, and generate endpoint/coverage/interval
+tables and vector/raster figure with independently checked arithmetic/assets.
+Keep old four-cell sources and manuscript unchanged. Do not presume interval
+direction/zero inclusion or use failed11partial scores. Actual rendering
+requires successful final12admission; synthetic rendering is test evidence only.
+Full goal ACTIVE; SAME24036RUNNING00:56:20, not resubmitted;24038terminalOOM.
+
 ## Actual Native-Count Bootstrap Validated; Figure Successor Next (2026-10-08)
 
 Prospective bootstrap_composed_native_qfo_swiss.py now validates distinct raw
@@ -28,6 +74,12 @@ four-cell plot/reviewer/manuscript remain unchanged. New planned files:
 plot_composed_native_qfo_scores.py, focused tests/protocol and an independent
 asset/table reviewer. These are NOT yet implemented/tested/executed. Actual
 rendering/report integration still needs admitted final12 evidence.
+
+Milestone15359a7a now committed and pushed; staged diff check passed. Reconcile
+this success rather than repeating the preceding commit/push next action.
+The next unfinished action is implementation/testing of the named figure/table
+successor. This ledger-only checkpoint refresh is uncommitted; include it with
+the next substantive validated milestone, not a separate monitoring campaign.
 
 Full goal ACTIVE; SAME24036 observed RUNNING00:54:00; observe that handle
 without resubmission. Actual native12 terminal review/conversion/scoring/
