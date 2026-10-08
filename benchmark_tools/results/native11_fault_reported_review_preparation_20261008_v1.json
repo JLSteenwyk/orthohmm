@@ -1,0 +1,126 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "bash_syntax_passed": true,
+  "checked_native_helper_count": 920,
+  "current_capacity": {
+    "available_memory_bytes": 502096863232,
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        10031508 kB\nMemAvailable:   490328968 kB\nBuffers:        14030428 kB\nCached:         437451608 kB\nSwapCached:        13312 kB\nActive:         564307608 kB\nInactive:       431929292 kB\nActive(anon):   515731252 kB\nInactive(anon): 32170956 kB\nActive(file):   48576356 kB\nInactive(file): 399758336 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:            876 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:              5020 kB\nWriteback:             0 kB\nAnonPages:      544680656 kB\nMapped:          1754596 kB\nShmem:           3142980 kB\nKReclaimable:   38053560 kB\nSlab:           42972464 kB\nSReclaimable:   38053560 kB\nSUnreclaim:      4918904 kB\nKernelStack:       76800 kB\nPageTables:      1471448 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1168282196 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      990868 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   7794688 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22330952 kB\nDirectMap2M:    598956032 kB\nDirectMap1G:    451936256 kB\n"
+  },
+  "diagnostic_output_read": false,
+  "diagnostic_state": {
+    "command": [
+      "sacct",
+      "-j",
+      "24031",
+      "--format=JobID,State,Elapsed,ExitCode,AllocCPUS,ReqMem",
+      "-P"
+    ],
+    "stderr": "",
+    "stdout": "JobID|State|Elapsed|ExitCode|AllocCPUS|ReqMem\n24031|RUNNING|00:16:31|0:0|2|32G\n24031.batch|RUNNING|00:16:31|0:0|2|\n"
+  },
+  "diagnostic_success_claimed": false,
+  "direct_bindings": [
+    {
+      "bytes": 12109,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native11_fault_reported_review.py",
+      "sha256": "2e7f9928de9e5f417bf7d842468fb827a8779f18318f426a21e9664474f3e6cb"
+    },
+    {
+      "bytes": 1281,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_20261008_v1.sh",
+      "sha256": "75114fa94ecae492bd4ffbd054ba98d14c35cf781de77cf0a57abf2b0ff70955"
+    },
+    {
+      "bytes": 3331,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE11_FAULT_REPORTED_REVIEW_PROTOCOL_20261008.md",
+      "sha256": "75070aa27991a4be89f7482ec6917ad20b98fc499b36bfb17a81d2c2de4efdf5"
+    },
+    {
+      "bytes": 7428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_native11_fault_reported_review.py",
+      "sha256": "21bf43cae41b82113fd4724ec040bcb0fba6b3133d52859ad17869cd4351090c"
+    },
+    {
+      "bytes": 23211,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_tests_20261008_v1.xml",
+      "sha256": "edbb050f2ad5141d48bc8ff6b34229fe9f8be3b81d22e104d2c8215a28822e11"
+    },
+    {
+      "bytes": 21702,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_tests_20261008_v2.xml",
+      "sha256": "c9a6a8c69c469eb8bfacc1183eeadc395abf552759ace446bb7f4b5c48baaf5b"
+    },
+    {
+      "bytes": 52941,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+      "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+    },
+    {
+      "bytes": 492927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+      "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+    },
+    {
+      "bytes": 13317,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+      "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+    },
+    {
+      "bytes": 13931,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_preparation_20261008_v1.json",
+      "sha256": "fc2ffe1c6b46647648fa4c1e8068e260bc605bb7328f0f2e1946090162174f98"
+    },
+    {
+      "bytes": 9126,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_held_20261008_v1.json",
+      "sha256": "95da0070b2e475e4c0885fdcc25ffb48f4cced939302bcf67731d1b116958e77"
+    },
+    {
+      "bytes": 15148,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_allocated_native_factorial_attempt.py",
+      "sha256": "c8707fdb1855a0d73fba537c001b4a355faff094a38a177a05e179148924c929"
+    },
+    {
+      "bytes": 4829,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_allocated_native_factorial_outputs.py",
+      "sha256": "146f1333715b5ef52ee17de855fad584d1efc91c7a1154edcd269829b5a871be"
+    },
+    {
+      "bytes": 24937,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_native_factorial_outputs.py",
+      "sha256": "3357637503f35238f654edea5c4c12bd293f8d20908c141421a2d40278af7c8d"
+    },
+    {
+      "bytes": 17157264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_patched_runtime_20260928/venv/bin/python",
+      "sha256": "8b1cd756be711ef53f35cb6c954472fdfc52094c4619a01f553f64354587388b"
+    }
+  ],
+  "fresh_control_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1",
+  "fresh_original_review_destination": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_terminal_review_20261008_v1",
+  "full_review_executed": false,
+  "future_diagnostic_sha256": null,
+  "future_review_job_id": null,
+  "historical_failure_cause_established": false,
+  "native_inference_reexecuted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791468646372051658,
+  "original_sources_unchanged": true,
+  "prospective_resources": {
+    "cpus": 2,
+    "memory_bytes": 137438953472,
+    "node": "bizon",
+    "partition": "gpu",
+    "requeue": false,
+    "time_limit": "06:00:00"
+  },
+  "publication_ready": false,
+  "retained_initial_test_failure": "Text-based call guard matched a reporting string; replaced with AST call inspection, no scientific gate relaxed.",
+  "schema": "native11_fault_reported_review_preparation_v1",
+  "scientific_timings_admitted": false,
+  "status": "prepared_not_submitted",
+  "test_cases": 142,
+  "test_failures": 0,
+  "wrapper_help_passed": true
+}

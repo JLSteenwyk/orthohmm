@@ -1,5 +1,58 @@
 # Publication Progress
 
+## Native11 Full Review Boundary Tested, Diagnostic Still Live (2026-10-08)
+
+Prospective standalone-gated full review wrapper/batch/protocol/tests prepared,
+not submitted or executed. Final joined142cases pass2.99s, zero failures/skips.
+Initial141passes/one test failure retained: literal text guard matched the
+word monkeypatch in a limitation; changed test to AST call inspection, with
+no scientific gate relaxation. Python3.10 imports/CLI help and Bash syntax pass.
+Preparation native11_fault_reported_review_preparation_20261008_v1.json
+(7428bytes,SHA14a54710aacda4f4ce2745fb9f922dc73173d27caa19619a7f3dbd4995f6c03f)
+binds new wrapper2e7f9928/batch75114fa9 and unchanged original request/sources;
+all920 frozen helpers rechecked. Future diagnostic SHA/reviewjob remainnull;
+unfinished diagnostic output not read. Latest24031 actuallyRUNNING16:31.
+
+Wrapper checks successful original diagnostic accounting BEFORE output access,
+request/plan/amendment/cell/source/diagnostic-only flags and original crash
+retention, original scientific runtime, safe128GiB capacity and distinct owned
+job. Then unchanged ORIGINAL reviewer child repeats ALL full gates in new
+namespace; a child segfault becomes a retained wrapper failure, not admission.
+Review-only128GiB is SAME as failed23986, not an OOM diagnosis or claimed fix.
+No source patches, monkeypatches, GC changes, inference or scoring.
+
+Full goal ACTIVE; next action: commit/push prospective preparation, then
+observe SAME24031 through actual terminal outcome using30-300s waits and
+post-wait fixed-format accounting/log checks. Only after successful standalone
+output and independent original bindings may one separately documented fresh
+full-review attempt be held/submission-pushed/released. If diagnostic fails,
+retain actual failure and diagnose instead; no automatic retry. No resume,
+quiet host, DGX or repeated completed reporting.
+
+## Native11 Prospective Full Review Boundary Preparation (2026-10-08)
+
+Standalone24031 remains actuallyRUNNING11:54 after two300s waits and fresh
+accounting; owned Python3659258 R with matching command, about1GiB RSS and
+CPU advancing. No diagnostic error output, terminal result or causal finding.
+This is a verified wait, not a stopped analysis or successful validation.
+
+Start genuinely remaining full-review recovery preparation outside all frozen
+helpers: benchmark_tools/run_native11_fault_reported_review.py,
+tests/unit/test_run_native11_fault_reported_review.py,
+benchmark_tools/results/NATIVE11_FAULT_REPORTED_REVIEW_PROTOCOL_20261008.md,
+benchmark_tools/results/native11_fault_reported_review_20261008_v1.sh.
+These are being prepared, not yet tested/committed/submitted/executed. Adapt
+the existing fault-reported child-CLI boundary to allocated native11; no source
+patch, monkeypatch, GC change, admission substitution or inferred crash fix.
+
+Full goal ACTIVE; next action: finish/test/commit prospective boundary while
+observing SAME24031. Only after actual diagnostic COMPLETED0:0 and independent
+original-output readback may its observed digest authorize ONE explicitly
+documented fresh full-review postprocessing attempt, not an automatic retry.
+Original23986 and diagnostic outcomes remain immutable; all original full
+review gates and independent completion checks remain required. If diagnostic
+fails, retain it and choose diagnosis from that actual evidence instead.
+
 ## Native11 Standalone Diagnostic24031 Released And Live (2026-10-08)
 
 Held receiptcc64b10e pushed before ONE successful scontrol release24031.
