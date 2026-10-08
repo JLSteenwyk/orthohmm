@@ -1,5 +1,28 @@
 # Publication Progress
 
+## Composed Swiss Audit And Retained Binding Validated (2026-10-08)
+
+New audit_composed_native_qfo_swiss_counts.py and
+bind_composed_native_qfo_swiss_uncertainty.py implemented with a distinct final12
+route, unchanged raw count/interval kernels, explicit prior audit reuse and full
+family-record/aggregate matching. No actual score/audit/binding is generated.
+First synthetic suite51pass1fail: original fixture's last cell happened to have
+the same counts as its first cell. Corrected the test to select genuinely
+different raw counts, not the validator; second52pass/4.21s. Strengthened joined
+suite384pass/14.92s, including61new tests, no failures/skips. Both scientific3.10
+CLI imports/help passed. Source/docs diff check passed; first failed JUnit
+retained unchanged. Protocol records production prerequisites and null-CI rules.
+
+Next action: commit/push this validated prospective milestone, then implement
+the genuinely unfinished native-count paired-bootstrap successor for available
+admitted contrasts when native counts differ. Keep planned18family units,
+100000shared draws/seed20260922/42endpoint adjustment and unchanged benchmark
+statistic kernels; missing native cells cannot be supplied by cached results.
+This is preparation/testing only while24036RUNNING00:50:30. Actual final12
+review/conversion/scoring/admission and downstream audit remain gated by its
+successful terminal evidence;24038 remains terminalOOM/no retry or admission.
+Full goal ACTIVE; no further prompt rewrite or routine approval is required.
+
 ## Composed-Native Swiss Family Audit And Interval Binding Implementation (2026-10-08)
 
 Prospective score-export milestone0964af53 committed and pushed; origin/main
