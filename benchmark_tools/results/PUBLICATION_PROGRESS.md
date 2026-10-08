@@ -1,5 +1,37 @@
 # Publication Progress
 
+## Native11 Terminal Success And Original Reviewer Running (2026-10-08)
+
+Native23985 is now actually COMPLETED0:0, elapsed17:28:07; native step23985.0
+COMPLETED0:0 elapsed16:49:41. Initial search reached100%, then edge thresholds,
+network edges and clustering logged completion. No native success was inferred
+from the earlier partial log or provisional running0:0. Alreadyqueued original
+review23986 started automatically; latest live check RUNNING4:11. Do not poll
+23985 as still running, resubmit its reviewer or duplicate either handle.
+
+Following19a98fb2 checkpoint/push, monitoring continued in this same turn:
+cell34512 actual300s waits and cell34812 actual300s waits with post-wait checks,
+last2026-10-08T12:59:06Z. All monitor cells finished; no foreground exec session.
+Original review destination contains runtime.json/scheduler.json, no terminal
+review.json/failure.json yet. Reviewer stdout records fresh capacity check:
+352578359296 available bytes, above137438953472 required. Retained script and
+original reviewer source unchanged. Native output metadata exists; no conversion,
+scoring/admission or next native identity authorized by observation alone.
+One file-inventory observation was overly broad; corrected to exclude point_*
+without modifying files. Own native process was verified live before terminal.
+
+Full goal ACTIVE; next authorized action: observe SAME23986 with fixed-format
+squeue/sacct, bounded reviewer stdout and original review.json/failure.json
+under benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/.
+Actually wait30-300s and recheck while reviewer is live. Inspect its actual
+terminal status and original native_outputs_validated/resource/
+next_identity_authorized flags; only successful original review authorizes
+dependent conversion/scoring/independent admission and sequential genuinely
+unrun native12 under existing contracts. Diagnose any actual failure without
+weakening gates or automatic retry. Current four-cell reporting/direct delivery
+remains complete; final integration awaits remaining outcomes. No user resume,
+DGX or quiet host required. Checkpoint does not pause full-goal work.
+
 ## Native11 Three Hour Live Wait Retained (2026-10-08)
 
 Previous turn was a verified wait; current continuation remains a verified
