@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Direct Stop-Report Maintenance; Both Jobs Running (2026-10-08)
+
+Actual goal tool reports ACTIVE and points to the editable attachment
+/home/bizon/.codex/attachments/c53784d4-1029-4fd4-9dfb-dea6a2632e17/pasted-text-1.txt.
+Its pre-edit SHA4442e7f99002e674708dfb09569ba18e2432deebbdfa491f00ef98ca5d0259d9
+matched PUBLICATION_GOAL_CURRENT.txt; the shared-host authorization was already
+present. No evidence establishes the cause of the user's reported prior stops.
+The old TOP was stale: held milestonee6465cef was pushed and assessment24038
+was already released ONCE. Preserve its release receipt
+native11_composed_assessment_release_24038_20261008_v1.json7974bytes/
+SHAb1ff7eee5e23092e84292abd1934c6a2617b7f92a1f57eb88f89e1da23bf92ff.
+Do NOT release it again. Fresh sacct/squeue show24036 and24038 RUNNING on bizon.
+Native24036 has an actual running native step, measurement/go.json and native.log;
+inference has started, not merely preparation. Both scheduler stderr files are
+empty at this observation. No new accuracy score has been admitted.
+
+Direct maintenance validated: linked/current prompt both now have
+SHA1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c.
+CPU-load/competing-core admission thresholds are explicitly rejected while safe
+memory, validated limits and accounting remain required. Stopping diagnosis now
+requires actual state, not an asserted cause or another prompt-maintenance loop.
+Actual attachment-enabled test_current_publication_goal.py:29passed/0failed/
+0skipped in0.31s; scientific scope and historical evidence hash checks passed.
+Focused diff check passed. Commit/push only these changes and retained24038
+release; no frozen scientific source or unrelated output changed. This direct
+maintenance answer does not complete or pause the goal.
+
+Full goal ACTIVE; next automatic continuation: inspect SAME24036/24038 states
+and changing artifacts without resubmission/release. If24038 becomes successful,
+execute the prepared independent native11 QfO admission workflow ONCE after its
+terminal evidence passes; retain/diagnose failure otherwise, with no automatic retry.
+While jobs run, implement the genuinely unfinished native12 compatible QfO
+consumer/conversion/scoring/admission workflow as separate prospective sources:
+reuse unchanged kernels, require the eventual actual new terminal-review schema,
+and use native reconciled pairs for P1C1R1, not group cliques. Do not launch its
+dependent conversion before validated native12 terminal review. Native12 reviewer
+and batch are already prepared/tested/bound; do not edit them. If only waiting work
+is executable, actually wait30-300s and recheck these SAME handles.
+
 ## Native11 QfO Assessment24038 Held (2026-10-08)
 
 Accepted-conversion/native12-release milestoneac58cad3 pushed before ONE

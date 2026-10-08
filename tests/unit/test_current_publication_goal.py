@@ -212,3 +212,25 @@ def test_diagnosed_failure_leads_to_implementation_or_explicit_missing_outcome()
         "neither a whole-goal stopping condition nor permission to rerun the failed inference",
     ):
         assert instruction in contract
+
+
+def test_resource_contention_is_not_a_launch_threshold_or_whole_goal_blocker():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "Do not use CPU load, competing core counts or estimates of timing distortion as admission thresholds",
+        "Preserve validated CPU/RAM limits, safe available memory and accounting checks",
+        "do not require spare uncontended cores, a quiet window or renewed approval",
+        "scheduler-resource-PENDING jobs remain authorized waiting work",
+    ):
+        assert instruction in contract
+
+
+def test_stopping_diagnosis_requires_observed_state_not_another_prompt_loop():
+    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
+    for instruction in (
+        "inspect the actual goal status, linked prompt, ledger TOP and relevant job handles",
+        "do not assert a stopping cause without evidence",
+        "Correct an established prompt contradiction or stale handoff once",
+        "More prompt edits are not a substitute for executing the already-authorized next step",
+    ):
+        assert instruction in contract
