@@ -1,5 +1,42 @@
 # Publication Progress
 
+## Native11 Original Reviewer Segfault Diagnosis (2026-10-08)
+
+Actual accounting supersedes the previous running checkpoint: native23985
+COMPLETED0:0 elapsed17:28:07; original reviewer23986 FAILED0:11 elapsed00:45:50.
+No review.json or failure.json exists in the original review destination.
+Retained stdout reports a segmentation fault while garbage-collecting at
+validate_native_factorial_outputs.py:331, the materialized/final-clustering
+partition comparison. This locates the failure; it does not establish its cause.
+Original runtime, scheduler, resource replay, resources and environment outputs
+remain retained. Do not poll terminal jobs as live or treat partial review files
+as admission. Conversion, scoring, admission and history-dependent native12
+remain gated. No retry, source modification or new job has occurred.
+
+Bounded historical readback: original22445 also failed0:11; standalone22734
+and separately prospective full review23017 later succeeded. Those outcomes
+do not establish a root cause or authorize repeating the failed23986 review.
+The current crash occurs after checkpoint verification, during the unchanged
+materialized/final-clustering frozenset comparison; candidate-sidecar checks
+have not yet completed. No OOM or particular extension-module cause is proven.
+
+Both current prompt copies match; actual attachment-aware focused tests pass
+25/25 in0.25s. Scientific scope and historical prompt bytes remain unchanged.
+The existing6a20901a correction is retained, not revised again to fill time.
+
+Full goal ACTIVE; next automatic continuation: prepare a separately pinned,
+bounded standalone semantic diagnostic using the unchanged allocated validator
+CLI and request_11_allocated_v1.json (SHA7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1),
+following the retained NATIVE_REVIEW_SIGSEGV_DIAGNOSTIC_PROTOCOL_20261006.md
+boundary with a fresh native11 namespace. This diagnostic is not a full-review
+retry, resource replay, inference, score or admission. Persist its prospective
+protocol and check original source/request bindings before any execution.
+Preserve original failed evidence and all bound sources; any diagnostic success
+still requires an independently justified full-review recovery route. Current
+four-cell reporting/direct delivery remains done. No DGX, quiet host, renewed
+contention approval or user resume is required. This bounded user-request
+answer does not pause or complete the publication goal.
+
 ## Native11 Terminal Success And Original Reviewer Running (2026-10-08)
 
 Native23985 is now actually COMPLETED0:0, elapsed17:28:07; native step23985.0
