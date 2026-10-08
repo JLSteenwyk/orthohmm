@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native11 Conversion24035 Running; Native12 Preparation Next (2026-10-08)
+
+Held2d2fad11 pushed before ONE successful release24035. Release receipt
+native11_composed_conversion_release_24035_20261008_v1.json8243bytes/
+SHA5b52aeedcea37a505eafd0bdc32d5bff2df0c6b14983a1ef83ee8672fff1ca0c
+retains fresh held-state/source/path/capacity rechecks and actual release0.
+Fresh accounting24035RUNNING01:19/2CPU32G, logs empty; no score yet.
+
+Actual native12 run/session paths and all12 request files are absent. Tested
+final prospective controller SHAf423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278;
+batch2ae07849ac56d39029244d9577dde88ccb8f1c4e0570d9e8d5a710782992e0ab;
+reviewer08b170ba1ee5aabd5665dd12fc359fc7f5ffe3d0834b0afb2e73289fa61ed649.
+Sources/protocol/467test milestone27a98332 already pushed. Full reviewed11
+history is independently valid; no old authorization/schema is fabricated.
+
+Full goal ACTIVE; next action:retain release milestone, inspect fresh matching
+native queue and safe128GiB capacity, submit ONE held native12 new batch.
+Retain/check owned64slot128G26h envelope and prospective source bindings;
+run actual new prepare CLI to revalidate all reviewed history before making
+the one fresh request. Do NOT release without passed request/digest/comment/
+source/capacity checks and retained held/request evidence. Observe SAME24035
+through conversion outcome; successful validated conversion gates QfO scoring.
+No inference repeat or changing frozen settings/inputs; no live foreground exec.
+
 ## Compatible Native11 Conversion24035 Held (2026-10-08)
 
 Accepted-review milestone834fe46e committed/pushed before ONE held conversion
