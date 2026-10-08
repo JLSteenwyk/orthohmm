@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Actual Scoring-Failure Publication Addendum Generated (2026-10-08)
+
+New export_composed_qfo_failure_addendum.py passed22focused tests/0.73s.
+Actual scientific3.10 CLI generated the separate
+native11_qfo_scoring_failure_addendum_20261008_v1/report.json3925bytes/
+SHA4f1a5c536af8ce992d46866374b3ab44ee3158077316d69ba2e9f5fb34cee203,
+plus status.tsv/addendum.md. Direct production checks bind actual retained
+failure, successful composed native review/conversion and unchanged manuscriptv4.
+Manual readback agrees with machine report:11.755521milliongroup-cliquepairs,
+585180/984137coverage=59.4612%, accuracy/meanUnavailable, FAS137/32GiBOOM,
+five completed but no admitted endpoint scores. Inference resource observations
+are explicitly separate from failed-scoring memory/time; no peakRSS fabricated.
+The four admitted-cell scores/uncertainty and frozen v4 bytes remain unchanged.
+No inference, scoring, raw count audit or admission repeated. Files/results are
+validated/generated, awaiting focused commit/push.
+
+Actual SAME24036RUNNING32:52/native step29:29.24038 remains terminalOOM;
+no native11 admission/retry is authorized. Full goal ACTIVE; next action:
+commit/push the new failure addendum, then implement the genuinely unfinished
+prospective composed-native12 score export/Swiss-family uncertainty consumer
+using actual eventual admission and unchanged endpoints/count kernels. Do not
+pretend tests supply final native scores. Observe24036 through terminal outcome;
+prepared reviewer/conversion/scoring/admission are dependent on actual successful
+review. All their production-bound existing sources remain unchanged.
+
+## Scoring-Failure Publication Addendum Implementation (2026-10-08)
+
+Prospective final-native scoring/admission and actual24038OOM readback milestone
+f3cab6b5 committed/pushed. Begin a new executable reporting addendum for the
+actual retained failure, separate from frozen v4 manuscript/four-cell export.
+New export_composed_qfo_failure_addendum.py and focused tests are not yet
+implemented/tested/executed. Next action: bind failure/readback, successful
+conversion/full review and frozen manuscript, validate failure-vs-coverage
+semantics and generate a new JSON/TSV/Markdown addendum with no admitted score.
+No raw scientific analysis or inference is repeated; original v4 bytes preserved.
+
+Native12 scorer/consumer/converter/admitter are now prepared/tested, not production
+executed. Eventual compatible score export/paired uncertainty/reporting remains
+genuinely unfinished and may be prepared while native24036 runs. Observe SAME
+24036 actual state;24038 is terminalOOM, not a waiting handle and not eligible
+for admission. Full goal ACTIVE; no automatic retry or renewed permission.
+
 ## Scoring OOM Retained; Final Native QfO Workflow Validated (2026-10-08)
 
 Actual24038 failure independently retained in

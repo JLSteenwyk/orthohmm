@@ -1,0 +1,88 @@
+{
+  "automatic_retry": false,
+  "frozen_manuscript_replaced": false,
+  "limitations": [
+    "Direct reporting of retained diagnostic/review/conversion evidence, not a new raw scientific admission.",
+    "Five completed endpoint tasks do not supply a successful six-endpoint assessment.",
+    "Coverage is not accuracy; failed scoring contributes no zero or six-metric mean.",
+    "Historical four-cell scores and uncertainty remain unchanged; final native outcome is still pending."
+  ],
+  "native_inference_reexecuted": false,
+  "new_scientific_admission": false,
+  "outputs": [
+    {
+      "bytes": 294,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_qfo_scoring_failure_addendum_20261008_v1/status.tsv",
+      "sha256": "1a6373a95cc93d2c48cc4f338079617dc8ac3e8734d17fda48f430ec6a5851f9"
+    },
+    {
+      "bytes": 2943,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_qfo_scoring_failure_addendum_20261008_v1/addendum.md",
+      "sha256": "4080c3cee56f7f3d074dcd9bbaa42fd103308b86d067eba4b253b87da77cb061"
+    }
+  ],
+  "publication_ready": false,
+  "references": {
+    "conversion": {
+      "bytes": 17657160,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/native11_composed_qfo_pairs_v1/results.json",
+      "sha256": "77d33a77eb5eb1c85736ba6e7b303aa269907c8a930d74647d3b8bddff36fac8"
+    },
+    "failure": {
+      "bytes": 19786,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_assessment_failure_24038_20261008_v1.json",
+      "sha256": "b40f8075fd0168e3e7e1b895bcdba2576e2b903cc58e3484a7f3ce8b53b93e6b"
+    },
+    "manuscript": {
+      "bytes": 74287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PUBLICATION_MAIN_TEXT_20261007_v4.md",
+      "sha256": "0b7012e3dd46bd3b028857bdb3cbe3a9e9048936b90f3df9e4833cb342d5705a"
+    },
+    "review": {
+      "bytes": 17658819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/review.json",
+      "sha256": "a87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e"
+    }
+  },
+  "row": {
+    "accuracy_admitted": false,
+    "admitted_endpoint_score_count": 0,
+    "assessment_job_id": 24038,
+    "cell": "p1_c1_r0",
+    "completed_endpoint_task_count": 5,
+    "conversion_job_id": 24035,
+    "conversion_status": "successful_unscored_group_cliques",
+    "failed_endpoint": "FAS",
+    "failed_endpoint_exit_code": 137,
+    "inference_status": "successful_composed_terminal_review",
+    "input_accessions": 984137,
+    "native_index": 11,
+    "native_job_id": 23985,
+    "prediction_semantics": "cross-species group-derived clique pairs",
+    "relation_accessions": 585180,
+    "relation_coverage": 0.5946123354776824,
+    "resource_scopes": {
+      "cpu_seconds": "native_task_subtree_cpu_stat_bracket_including_wrapper",
+      "peak_memory_bytes": "native_step_lifetime_memory_peak_including_launcher",
+      "wall_seconds": "native_command_monotonic_interval"
+    },
+    "resources": {
+      "cpu_seconds": 1607563.508002,
+      "peak_memory_bytes": 20407123968,
+      "wall_seconds": 60568.563058126
+    },
+    "scoring_cpu_slots": 8,
+    "scoring_memory_limit_bytes": 34359738368,
+    "scoring_peak_memory_bytes": null,
+    "scoring_scheduler_elapsed": "00:16:06",
+    "scoring_status": "OUT_OF_MEMORY",
+    "secondary_six_metric_mean": null,
+    "submitted_pairs": 11755521
+  },
+  "schema": "composed_native_qfo_failure_reporting_v1",
+  "source": {
+    "bytes": 11545,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_composed_qfo_failure_addendum.py",
+    "sha256": "1c4ce3aeadc35f9ac9c8d52f20023d6e18d784b4b0e0bdcc2a7a1b6d4ee95dc2"
+  }
+}
