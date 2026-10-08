@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native11 Overnight Verified Wait On Original Handles (2026-10-08)
+
+Previous turn and this turn are verified waits. Read actual attachment/ledger
+and live handles; twelve actual300s waits followed by queue/log checks from
+2026-10-08T03:57:08Z to04:52:09Z. SAME23985 remains RUNNING, latest9:24:16;
+initial-search54.85% to58.51%, not overallcompletion or ETA. SAME23986 remains
+PENDING/Dependency afterany:23985(unfulfilled), no original review.json or
+failure.json yet. No success inferred from running0:0 accounting. Cell323
+finished; no foreground exec session remains. Scoped task tree clean before
+checkpoint. No source/prompt/scientific-result changes, admission, submission/
+release/retry, repeated completed analysis or old-report rebuild.
+
+Full goal ACTIVE; next automatic continuation: observe SAME23985/23986 with
+fixed-format squeue/sacct and bounded native-log tail, actual30-300s wait and
+post-wait check while live. At terminal state inspect alreadyqueued original
+review.json/failure.json under
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+and reviewer stdout. Diagnose actual failure without automatic retry; original
+success/authorization gates dependent conversion/scoring/independent admission
+and sequential genuinely unrun native12. Current four-cell reporting/direct
+delivery remains complete; final integration awaits actual remaining outcomes.
+Reconsider executable independent requirements on new evidence, not by
+repeating completed work or inventing campaigns. Automatic handoff only,
+not a user-resume requirement or full-goal stopping condition; no DGX/quiet
+host needed. The date-context update did not change scientific instructions.
+
 ## Native11 Initial Search Passes Halfway While Running (2026-10-07)
 
 Previous turn and this turn are verified waits. Actual attachment/ledger and
