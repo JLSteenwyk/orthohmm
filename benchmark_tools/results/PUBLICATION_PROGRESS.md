@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Native11 Twelve Hour Verified Wait (2026-10-08)
+
+Previous turn and this turn are verified waits. Actual attachment/ledger and
+live handles read; twelve actual300s waits with post-wait queue/log checks,
+2026-10-08T07:00:07Z to07:55:08Z. SAME23985 remains RUNNING, latest12:27:15;
+initial-search73.09% to78.90%, not overallcompletion or ETA. SAME23986 remains
+PENDING/Dependency afterany:23985(unfulfilled), no original review.json or
+failure.json yet. Running0:0 is not terminal success. Cell335 finished; no
+foreground exec session remains. Scoped task tree clean before checkpoint.
+No source/prompt/scientific-result changes, submission/release/retry,
+conversion/scoring/admission or repeated completed analysis/report rebuild.
+
+Full goal ACTIVE; next automatic continuation: fixed-format squeue/sacct and
+bounded native-log checks of SAME23985/23986; actually wait30-300s and check
+again while live. On terminal outcome inspect alreadyqueued original
+review.json/failure.json under
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/
+and reviewer stdout. Diagnose failure without automatic retry; original
+success/authorization gates conversion/scoring/independent admission and
+sequential genuinely unrun native12. Current four-cell reporting/direct
+delivery remains complete; final integration awaits actual remaining outcomes.
+Reconsider independent executable gaps on new evidence, without repeating
+completed work or inventing campaigns. Automatic handoff only; no user resume,
+DGX or quiet host required. Full publication objective remains incomplete.
+
 ## Native11 Search Near Three Quarters Verified Live (2026-10-08)
 
 Previous turn and this turn are verified waits. Read actual goal attachment/
