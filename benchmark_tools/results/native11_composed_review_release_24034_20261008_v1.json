@@ -1,0 +1,135 @@
+{
+  "automatic_retry": false,
+  "available_memory_bytes": 673049079808,
+  "command": [
+    "scontrol",
+    "release",
+    "24034"
+  ],
+  "full_review_admitted": false,
+  "held": {
+    "bytes": 6623,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_review_held_24034_20261008_v1.json",
+    "sha256": "d6785db02c31034873c26b6f8350dac2672beee2a4387b87b5035c7c4b7b1427"
+  },
+  "job_id": 24034,
+  "native_inference_reexecuted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791473387439883366,
+  "pre_release_controller": {
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "Unknown",
+      "AllocNode:Sid": "bizon-link:3867471",
+      "AllocTRES": "(null)",
+      "BatchFlag": "1",
+      "CPUs/Task": "2",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_terminal_review_20261008_v1.sh",
+      "Comment": "1fa148071e8d080ea081140f517e955c16db46f989574a44183fc58e1b366410",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "Unknown",
+      "EndTime": "Unknown",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "24034",
+      "JobName": "ohmm_native11_composed",
+      "JobState": "PENDING",
+      "LastSchedEval": "2026-10-08T11:28:54",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "2",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "2",
+      "NumNodes": "1-1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "0",
+      "QOS": "normal",
+      "Reason": "JobHeldUser",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=2,mem=128G,node=1,billing=2",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:00",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "Unknown",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_review-24034.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_review-24034.out",
+      "SubmitTime": "2026-10-08T11:28:54",
+      "SuspendTime": "None",
+      "TimeLimit": "06:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=2",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "stderr": "",
+    "stdout": "JobId=24034 JobName=ohmm_native11_composed UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-08T11:28:54 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T11:28:54 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:3867471 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_terminal_review_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=1fa148071e8d080ea081140f517e955c16db46f989574a44183fc58e1b366410  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_review-24034.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_review-24034.out TresPerTask=cpu=2 \n"
+  },
+  "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        300873692 kB\nMemAvailable:   657274492 kB\nBuffers:        10397824 kB\nCached:         317672248 kB\nSwapCached:        13576 kB\nActive:         464004364 kB\nInactive:       240755904 kB\nActive(anon):   348358912 kB\nInactive(anon): 31479600 kB\nActive(file):   115645452 kB\nInactive(file): 209276304 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:           1920 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:             16732 kB\nWriteback:             4 kB\nAnonPages:      376615932 kB\nMapped:          1834428 kB\nShmem:           3143720 kB\nKReclaimable:   37864748 kB\nSlab:           42788340 kB\nSReclaimable:   37864748 kB\nSUnreclaim:      4923592 kB\nKernelStack:       85024 kB\nPageTables:      1147364 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   1043279892 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      999984 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   8136704 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22330952 kB\nDirectMap2M:    598956032 kB\nDirectMap1G:    451936256 kB\n",
+  "references": {
+    "batch": {
+      "bytes": 1030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_terminal_review_20261008_v1.sh",
+      "sha256": "28b8e2496a1636fc87946beca823fd2ce1b90428b4318373e97efcb8a0c2f16d"
+    },
+    "protocol": {
+      "bytes": 3050,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE11_COMPOSED_REVIEW_PROTOCOL_20261008.md",
+      "sha256": "e962db4e5c92e034fdadf6e9b09f70117c35979b0cb44e58fb4f50bdfe156e4d"
+    },
+    "request": {
+      "bytes": 52941,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+      "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+    },
+    "runtime": {
+      "bytes": 274370,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_postterminal_runtime_review_20261008_v2/runtime.json",
+      "sha256": "ed8ca2d27e3f85d3fdf14952d33b2db7d64dca0bb76d5113fb483bfe7e27a8c6"
+    },
+    "semantic_output": {
+      "bytes": 303647,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_standalone_diagnostic_20261008_v1/outputs.json",
+      "sha256": "2d48c2f447c72d04e3e96c9094fe4a941404bd19b8daff56aa550ac3fee712be"
+    },
+    "semantic_readback": {
+      "bytes": 281809,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_standalone_diagnostic_terminal_24031_20261008_v1.json",
+      "sha256": "e0aa4821e0b6295be7830ddf171e6de33921efd47d2b9759631054e2137a0f5a"
+    },
+    "tests": {
+      "bytes": 26006,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_review_tests_20261008_v1.xml",
+      "sha256": "e298716a0e54be73f1e7b4288970f0c39dbc0a905579218cfbf798462eb2b47f"
+    },
+    "worker": {
+      "bytes": 14763,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native11_composed_attempt.py",
+      "sha256": "1fa148071e8d080ea081140f517e955c16db46f989574a44183fc58e1b366410"
+    }
+  },
+  "release_count": 1,
+  "required_memory_bytes": 137438953472,
+  "returncode": 0,
+  "schema": "native11_composed_review_release_v1",
+  "source_commit_before_release": "ac095ae3",
+  "stderr": "",
+  "stdout": ""
+}

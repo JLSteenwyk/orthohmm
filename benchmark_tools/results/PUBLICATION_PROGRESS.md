@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Composed Consumer Contract Tested; Review24034 Still Running (2026-10-08)
+
+New explicit native11_composed_review_binding.py and focused tests/protocol
+prepared;195 joined tests pass2.55s, zero failures/skips. Actual first XML
+retains one fixture failure from expecting "groups" instead of original
+conversion_kind's "group"; corrected fixture rerun retained separately.
+The original conversion gate rejects the valid new type. Tests verify
+acceptance-gate invariants, not production end-to-end binding/scoring: actual
+complete review24034 does not yet exist and producer remainsRUNNING.
+Worker/batch bound hashes unchanged; no frozen consumer/source changes.
+
+Full goal ACTIVE; next action:commit/push new consumer contract/tests and
+release/current checkpoint, then continue implementing separate compatible
+pair converter plus assessment runner/admitter using unchanged scientific
+kernels while SAME24034 executes. Monitor SAME24034 with real bounded waits
+and fresh accounting; preserve source/report/destination identities. Before
+executing any conversion require actual terminal success and independent full
+composed-artifact readback. Diagnose any failure without automatic repeats.
+No ordinary-schema fabrication or native12 history authorization. Full goal
+not complete and not paused; source-only preparation is not scientific admission.
+
+## Composed Review24034 Released And Running; Consumer Work Started (2026-10-08)
+
+Heldac095ae3 pushed before ONE release24034. Actual release receipt8407bytes/
+SHA64258ad0fc6fd3714e3d044cc0afedc9e52594f01a76a47efd6ec84b3ba692d8
+retains fresh safe capacity, original held refs and successful release.
+One actual30s wait plus fresh accounting/controller confirmsRUNNING2CPU128G;
+latest elapsed01:15, stderr empty. New allocation/scheduler/runtime/
+semantic_producer files exist; no full review or resource output yet.
+All old failures and completed standalone/runtime components remain intact.
+
+Independent unfinished work started:benchmark_tools/native11_composed_review_binding.py
+and tests/unit/test_native11_composed_review_binding.py, not yet implemented/
+tested/committed/executed. This is the explicit new-type acceptance contract
+needed by conversion/scoring, NOT an original review-schema translation or
+history launch authorization. Require successful composed producer24034 and
+native23985, exact original sources/inputs/session/output/resource/environment
+evidence and explicit late-runtime lineage; ordinary routes remain unchanged.
+
+Full goal ACTIVE; next action:implement/test this binding while SAME24034 runs;
+retain release/current state at a meaningful milestone. Observe SAME handle
+with bounded actual waits, no repeat submission/release. Terminal success
+requires independent actual composed-artifact readback before any conversion;
+failure requires retained diagnosis. No scoring/native12 or quiet-host gate.
+
 ## Composed Native11 Review24034 Held (2026-10-08)
 
 Prospectivee159723a pushed before ONE held submission24034. Fresh owned
