@@ -1,0 +1,192 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "checked_records": [
+    {
+      "bytes": 111224,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_runtime_inventory_diagnosis_20261008_v1.json",
+      "sha256": "f0d8e63eafea6fb65530f3397256353e789c76fa5335c8834d9f6656c47ff337"
+    },
+    {
+      "bytes": 5416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_full_review_runtime_refusal_24033_20261008_v1.json",
+      "sha256": "72b3dd58678ef716b6ce42f2c003e28b5ce36979fb075126b1ca56d8a84d631e"
+    },
+    {
+      "bytes": 5179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+      "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+    },
+    {
+      "bytes": 3192,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/classify_postterminal_runtime_additions.py",
+      "sha256": "782defc4f5103511460658c44ad31fbe87c01d97b0506ecc784580c35b43751e"
+    },
+    {
+      "bytes": 2705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE11_RUNTIME_ADDITION_CLASSIFICATION_PROTOCOL_20261008.md",
+      "sha256": "5aa7c2847c02eed17431840687665b12c9e0786221b558b0a4f9bfd9d338862d"
+    },
+    {
+      "bytes": 2650,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_classify_postterminal_runtime_additions.py",
+      "sha256": "f0e8151ea0e0549c806a1e70f7302c18c6f189475f639069c8cfe382cddcbba8"
+    },
+    {
+      "bytes": 13218,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_runtime_addition_classification_tests_20261008_v2.xml",
+      "sha256": "ea209efbd0a0e0189cb626ad4baab3e468c94bca11dffbbb7c49d0249cb0829a"
+    },
+    {
+      "bytes": 9752059,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_runtime_repair_22426/native_os_helpers.json",
+      "sha256": "8c3a594124416e8e6ffd9c6a1f0e01f1802be001774dd0930ecb557763ad2633"
+    },
+    {
+      "bytes": 6173195,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/threadripper_private_controller_20260928/private_trees.json",
+      "sha256": "a6b90ec2fdbdca0d3138c6960850632225abaabfc41edc316eb53ec149fe8231"
+    },
+    {
+      "bytes": 1700488,
+      "path": "/usr/bin/lftp",
+      "sha256": "a9ec9b5ebe74f12062260d513ee717d03c3da2c7ea0bceb79eb5a67674f3a249"
+    },
+    {
+      "bytes": 1301,
+      "path": "/usr/bin/lftpget",
+      "sha256": "51682b3030b25a3dc5b4b9b1c19cb14a63d2350cb18cb4b661df06269392ff05"
+    },
+    {
+      "bytes": 310008,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/preflight.json",
+      "sha256": "f86fbf8c18d67474d5c074f4b847c9a81421d05f9f7fff066341afadc0b2157a"
+    },
+    {
+      "bytes": 310820,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/results.json",
+      "sha256": "fa1454fc30f33c7e1ab2ca3362db0da46150c5957c377557e14983bb7ce78621"
+    },
+    {
+      "bytes": 1411,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/stderr.txt",
+      "sha256": "922a9722803e79ca1d7b3e86f47131d36b32138098598232ce4223bc8dc8ba61"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_fault_reported_review_20261008_v1/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1699,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_terminal_review_20261008_v1/failure.json",
+      "sha256": "7f9a5cf647de481891759f1232a8cab36276b6a1135c8fb65e2e90e8153b3d4a"
+    },
+    {
+      "bytes": 1205,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_terminal_review_20261008_v1/scheduler.json",
+      "sha256": "cf7c42d63c181099260734b322b4adb4407076d87b8899f4155fdc73759ba04c"
+    },
+    {
+      "bytes": 0,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.out",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1088,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_full_review-24033.err",
+      "sha256": "32a2651eccad3b447f62f0e9dfc63f3eb134cc370733acb761bd7626d850492a"
+    },
+    {
+      "bytes": 10516,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_held_20261008_v1.json",
+      "sha256": "b8167d7a12859845d8866c316d3bbb7a83f1b00b09bd1c236304adb7fa098b2e"
+    },
+    {
+      "bytes": 6288,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_fault_reported_review_release_24033_20261008_v1.json",
+      "sha256": "c06e2e5634993c9b23cdf5e98597d551d768896f0d41d94e50136736eba1822a"
+    },
+    {
+      "bytes": 111224,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_runtime_inventory_diagnosis_20261008_v1.json",
+      "sha256": "f0d8e63eafea6fb65530f3397256353e789c76fa5335c8834d9f6656c47ff337"
+    },
+    {
+      "bytes": 5179,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+      "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+    }
+  ],
+  "classification_only": true,
+  "current_full_runtime_revalidated": false,
+  "diagnosis": {
+    "bytes": 111224,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_runtime_inventory_diagnosis_20261008_v1.json",
+    "sha256": "f0d8e63eafea6fb65530f3397256353e789c76fa5335c8834d9f6656c47ff337"
+  },
+  "failed_review_observation": {
+    "bytes": 5416,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_full_review_runtime_refusal_24033_20261008_v1.json",
+    "sha256": "72b3dd58678ef716b6ce42f2c003e28b5ce36979fb075126b1ca56d8a84d631e"
+  },
+  "full_review_admitted": false,
+  "next_identity_authorized": false,
+  "observed_unix_ns": 1791471793185504128,
+  "original_ordinary_full_review_success": false,
+  "original_runtime": {
+    "bytes": 5179,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/runtime.json",
+    "sha256": "a7c51782f6a67323a930e9c14e8da85668f5d38d85d97b372bb1a5eab447dba5"
+  },
+  "original_source_or_manifest_modified": false,
+  "package_install_matching_line": "2026-10-08 10:40:45 install lftp:amd64 <none> 4.9.2-2ubuntu1.1",
+  "package_modified": false,
+  "prior_inventory_source": {
+    "bytes": 15148,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_allocated_native_factorial_attempt.py",
+    "sha256": "c8707fdb1855a0d73fba537c001b4a355faff094a38a177a05e179148924c929"
+  },
+  "prior_inventory_time_is_review_terminal_upper_bound": true,
+  "private_runtime_comparison_equal": true,
+  "publication_ready": false,
+  "result": {
+    "accuracy_evaluated": false,
+    "additional_entries": [
+      {
+        "bytes": 1700488,
+        "kind": "file",
+        "mode": 493,
+        "path": "/usr/bin/lftp",
+        "sha256": "a9ec9b5ebe74f12062260d513ee717d03c3da2c7ea0bceb79eb5a67674f3a249"
+      },
+      {
+        "bytes": 1301,
+        "kind": "file",
+        "mode": 493,
+        "path": "/usr/bin/lftpget",
+        "sha256": "51682b3030b25a3dc5b4b9b1c19cb14a63d2350cb18cb4b661df06269392ff05"
+      }
+    ],
+    "automatic_retry": false,
+    "historical_failure_cause_established": false,
+    "installed_at": "2026-10-08T10:40:45-04:00",
+    "limitations": [
+      "Classification uses supplied retained comparison and timestamps; callers must bind their provenance.",
+      "This is not a replacement for the original exact runtime verifier or full-review admission.",
+      "Before/after inventory and installation records do not establish continuous runtime integrity.",
+      "Any prospective history/conversion or runtime adoption needs a separate explicit contract."
+    ],
+    "native_end": "2026-10-08T08:56:00-04:00",
+    "next_identity_authorized": false,
+    "original_entries_changed_or_missing": false,
+    "original_inventory_equality": false,
+    "prior_inventory_latest_at": "2026-10-08T09:41:50-04:00",
+    "publication_ready": false,
+    "status": "postterminal_additions_classified_not_admitted",
+    "terminal_reviewed": false
+  },
+  "schema": "native11_postterminal_runtime_addition_classification_v1",
+  "source_commit_before_execution": "60c24440efd0b9a6af3b861906edc516fca30fc3",
+  "timezone": "America/New_York"
+}

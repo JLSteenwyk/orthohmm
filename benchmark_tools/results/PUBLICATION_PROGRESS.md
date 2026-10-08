@@ -1,5 +1,33 @@
 # Publication Progress
 
+## Native11 Exact Postterminal Additions Classified (2026-10-08)
+
+Prospective60c24440 pushed before ONE read-only classification. Actual
+native11_postterminal_additions_classification_20261008_v1.json9317bytes/SHA
+8718376a789f2175305d83496984ad057aaa559b57469638e97f05ec1fd9537b
+binds comparison/failure/source/tests/original manifests, exact current
+lftp/lftpget descriptors, original retained matching runtime report and package
+log installation line. Native ended08:56:00; original reviewer ended09:41:50
+(upper bound on its earlier successful inventory check); package installed
+10:40:45, all America/New_York. Private runtime comparison18751records exact.
+Statuspostterminal_additions_classified_not_admitted, original equalityfalse,
+all full-review/accuracy/history/readiness flagsfalse. No current whole-runtime
+revalidation, continuous integrity, installer identity or GC crash fix claimed.
+No package/OS/source/manifest modification, duplicate/retry or new inference.
+
+Full goal ACTIVE; next automatic continuation: preserve/commit this actual
+classification/result, then prepare a separately versioned postterminal-runtime
+review/adoption boundary. Read the actual original runtime_review bracket
+checks and allocated history/conversion source contracts; keep them unchanged.
+Any new route must recheck original native before/after/first-terminal evidence,
+fresh exact old entries plus ONLY pinned postterminal additions, and all
+resource/environment/output gates with truthful NEW source/schema identity.
+Ordinary existing routes reject it; explicitly test compatible prospective
+conversion/history adoption rather than fabricate an original ordinary review.
+No further original full-review retry or native12/scoring launch until a
+validated prospective route exists. This is executable remaining work, not
+a quiet-host gate or user-input impasse. No running monitor/exec session.
+
 ## Native11 Runtime Addition Classifier Tested, Not Admitted (2026-10-08)
 
 Separate diagnostic classifier/tests/protocol prepared. Final76 joined tests
