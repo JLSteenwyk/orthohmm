@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Native11 Second Automatic Wait Revalidated (2026-10-07)
+
+Previous turn and this turn are verified waits. Twelve actual300s waits with
+post-wait queue/log checks, 2026-10-08T00:52:52Z to01:47:54Z: SAME23985 stays
+RUNNING, latest6:20:01; initial-search33.15% to35.90%, not overallcompletion
+or an ETA. SAME23986 staysPENDING/Dependency afterany:23985(unfulfilled).
+No original review.json/failure.json yet; no terminal success inferred from
+running0:0 accounting. Cell311 finished; no foreground exec session remains.
+No new scientific output admitted, no source/prompt edits, submission/release,
+duplicate/retry or completed-report rebuild. One initial ledger sed syntax
+error was immediately corrected with a bounded read; no job state inferred
+from it. The corrected read uses numeric1,80p, not a textual line count.
+
+Full goal ACTIVE; next automatic continuation: fixed-format squeue/sacct and
+bounded native-log observations of SAME23985/23986, actual30-300s wait and
+post-wait check while live. On terminal state inspect the alreadyqueued
+original review at
+benchmarks/work/allocated_native_factorial_terminal_review_23985_v1/review.json
+or failure.json and reviewer stdout. Diagnose actual failure without automatic
+retry; original success/authorization gates dependent conversion/scoring/
+independent admission and sequential genuinely unrun native12. Existing
+four-cell reporting/delivery remains complete; final integration awaits actual
+remaining outcomes. Reconsider independent gaps on new evidence, not by
+repeating completed work or inventing campaigns. This is an automatic handoff,
+not a user-resume requirement or a full-goal stopping condition.
+
 ## Automatic Continuation Verified Same Native11 Wait (2026-10-07)
 
 Previous turn was progress: current prompt correction committed and pushed as
