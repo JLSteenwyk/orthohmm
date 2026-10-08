@@ -1,0 +1,196 @@
+{
+  "accuracy_evaluated": false,
+  "automatic_retry": false,
+  "capacity_precheck": {
+    "available_memory_bytes": 820156669952,
+    "background_cpu_used_for_eligibility": false,
+    "capacity_guaranteed_through_run": false,
+    "raw_meminfo": "MemTotal:       1055870852 kB\nMemFree:        411013480 kB\nMemAvailable:   800934248 kB\nBuffers:        10501940 kB\nCached:         350447356 kB\nSwapCached:        13576 kB\nActive:         320763028 kB\nInactive:       273231844 kB\nActive(anon):   204713964 kB\nInactive(anon): 31479032 kB\nActive(file):   116049064 kB\nInactive(file): 241752812 kB\nUnevictable:        4520 kB\nMlocked:             160 kB\nSwapTotal:       4194300 kB\nSwapFree:           1924 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:            214360 kB\nWriteback:            16 kB\nAnonPages:      232971504 kB\nMapped:          1778196 kB\nShmem:           3143008 kB\nKReclaimable:   38504596 kB\nSlab:           43417192 kB\nSReclaimable:   38504596 kB\nSUnreclaim:      4912596 kB\nKernelStack:       76816 kB\nPageTables:       860232 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    532129724 kB\nCommitted_AS:   850848140 kB\nVmallocTotal:   13743895347199 kB\nVmallocUsed:      991172 kB\nVmallocChunk:          0 kB\nPercpu:           697344 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   7919616 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:    22763080 kB\nDirectMap2M:    599572480 kB\nDirectMap1G:    450887680 kB\n"
+  },
+  "cell": "p1_c1_r1",
+  "held_comparison_passed": true,
+  "held_controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24036",
+      "--oneliner"
+    ],
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "Unknown",
+      "AllocNode:Sid": "bizon-link:4047748",
+      "AllocTRES": "(null)",
+      "BatchFlag": "1",
+      "CPUs/Task": "64",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "Comment": "f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "Unknown",
+      "EndTime": "Unknown",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "24036",
+      "JobName": "orthohmm_allocated_factorial",
+      "JobState": "PENDING",
+      "LastSchedEval": "2026-10-08T12:21:20",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "64",
+      "NumNodes": "1-1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "0",
+      "QOS": "normal",
+      "Reason": "JobHeldUser",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:00",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "Unknown",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.out",
+      "SubmitTime": "2026-10-08T12:21:20",
+      "SuspendTime": "None",
+      "TimeLimit": "1-02:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=64",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "stderr": "",
+    "stdout": "JobId=24036 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-08T12:21:20 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T12:21:20 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4047748 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.out TresPerTask=cpu=64 \n"
+  },
+  "index": 12,
+  "job_id": 24036,
+  "native_execution_started": false,
+  "native_inference_reexecuted": false,
+  "observed_unix_ns": 1791476480473522364,
+  "prior_queue": {
+    "command": [
+      "squeue",
+      "-u",
+      "bizon",
+      "-h",
+      "--name=orthohmm_allocated_factorial",
+      "-o",
+      "%i|%j|%T"
+    ],
+    "stderr": "",
+    "stdout": ""
+  },
+  "prospective_sources": [
+    {
+      "bytes": 18382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.py",
+      "sha256": "f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278"
+    },
+    {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "sha256": "2ae07849ac56d39029244d9577dde88ccb8f1c4e0570d9e8d5a710782992e0ab"
+    },
+    {
+      "bytes": 9823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native12_composed_execution.py",
+      "sha256": "a4d2f1e39d27248df15d71e7444d706b519bca70d00131a3c05f535f9d314e60"
+    },
+    {
+      "bytes": 7785,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native11_composed_review_binding.py",
+      "sha256": "fa0ff637ee974e97e1de0f08e1cd8a2213219e07e2711a1647a5f63f03f2236a"
+    },
+    {
+      "bytes": 25045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native12_composed_attempt.py",
+      "sha256": "08b170ba1ee5aabd5665dd12fc359fc7f5ffe3d0834b0afb2e73289fa61ed649"
+    },
+    {
+      "bytes": 878,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_terminal_review_20261008_v1.sh",
+      "sha256": "0439a2c230909e3d060bb2c3b72e7bab6862e1109521203241f8165b948d6e93"
+    }
+  ],
+  "publication_ready": false,
+  "references": {
+    "batch": {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "sha256": "2ae07849ac56d39029244d9577dde88ccb8f1c4e0570d9e8d5a710782992e0ab"
+    },
+    "composed_review": {
+      "bytes": 17658819,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/review.json",
+      "sha256": "a87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e"
+    },
+    "controller": {
+      "bytes": 18382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.py",
+      "sha256": "f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278"
+    },
+    "original_request": {
+      "bytes": 52941,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+      "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+    },
+    "protocol": {
+      "bytes": 9268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE12_COMPOSED_EXECUTION_PROTOCOL_20261008.md",
+      "sha256": "8e3135661a6726a7ed7dbcc74ec12dd44c9bb50f8adbed97677ed10f26305866"
+    },
+    "readback": {
+      "bytes": 4580,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native11_composed_review_completed_24034_20261008_v1.json",
+      "sha256": "ee4019a8f6c96a866a83b798633f21ad3815f6f7a1aecd31b3351208f9bbd2e1"
+    },
+    "tests": {
+      "bytes": 71554,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_review_joined_tests_20261008_v2.xml",
+      "sha256": "1d8736835bfe88adb755abcfca02a6545679ec2836220946b391b1202eddf08b"
+    }
+  },
+  "request_prepared": false,
+  "schema": "native12_composed_submission_v1",
+  "source_commit": "0e0607904a8d67a675d8a96fb858928bd09a59e2",
+  "submission": {
+    "command": [
+      "sbatch",
+      "--hold",
+      "--parsable",
+      "--chdir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "--output=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-%j.out",
+      "--error=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-%j.err",
+      "--comment=f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "--request",
+      "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_12_composed_v1.json",
+      "--request-sha256",
+      "scheduler-comment"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "24036\n"
+  },
+  "submission_count": 1
+}

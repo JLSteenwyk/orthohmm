@@ -1,0 +1,338 @@
+{
+  "accuracy_evaluated": false,
+  "after_comment_controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24036",
+      "--oneliner"
+    ],
+    "fields": {
+      "Account": "(null)",
+      "AccrueTime": "Unknown",
+      "AllocNode:Sid": "bizon-link:4047748",
+      "AllocTRES": "(null)",
+      "BatchFlag": "1",
+      "CPUs/Task": "64",
+      "Command": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "Comment": "70bde16142da526de6f198aaf255a224b0f4e10c2bd79f98f0b1fd7d70269f89",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "Unknown",
+      "EndTime": "Unknown",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "bizon(1000)",
+      "JobId": "24036",
+      "JobName": "orthohmm_allocated_factorial",
+      "JobState": "PENDING",
+      "LastSchedEval": "2026-10-08T12:21:20",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "128G",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NtasksPerN:B:S:C": "0:0:*:*",
+      "NumCPUs": "64",
+      "NumNodes": "1-1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "gpu",
+      "Priority": "0",
+      "QOS": "normal",
+      "Reason": "JobHeldUser",
+      "Reboot": "0",
+      "ReqB:S:C:T": "0:0:*:*",
+      "ReqNodeList": "bizon",
+      "ReqTRES": "cpu=64,mem=128G,node=1,billing=64",
+      "Requeue": "0",
+      "Restarts": "0",
+      "RunTime": "00:00:00",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "Socks/Node": "*",
+      "StartTime": "Unknown",
+      "StdErr": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.out",
+      "SubmitTime": "2026-10-08T12:21:20",
+      "SuspendTime": "None",
+      "TimeLimit": "1-02:00:00",
+      "TimeMin": "N/A",
+      "TresPerTask": "cpu=64",
+      "UserId": "bizon(1000)",
+      "WorkDir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm"
+    },
+    "stderr": "",
+    "stdout": "JobId=24036 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-08T12:21:20 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T12:21:20 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4047748 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=70bde16142da526de6f198aaf255a224b0f4e10c2bd79f98f0b1fd7d70269f89  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.out TresPerTask=cpu=64 \n"
+  },
+  "amendment": {
+    "bytes": 13317,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/allocated_native_factorial_execution_amendment_20261006_v1.json",
+    "sha256": "10cc99398be2a2b0c47d227adc16eee43fa82438b87410c2b38a8c3e17105c1f"
+  },
+  "automatic_retry": false,
+  "before_comment_controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24036",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=24036 JobName=orthohmm_allocated_factorial UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=1-02:00:00 TimeMin=N/A SubmitTime=2026-10-08T12:21:20 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T12:21:20 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:4047748 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=128G,node=1,billing=64 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed-24036.out TresPerTask=cpu=64 \n"
+  },
+  "cell": "p1_c1_r1",
+  "comment_update": {
+    "command": [
+      "scontrol",
+      "update",
+      "JobId=24036",
+      "Comment=70bde16142da526de6f198aaf255a224b0f4e10c2bd79f98f0b1fd7d70269f89"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  "composed_review": {
+    "bytes": 17658819,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/review.json",
+    "sha256": "a87d65439a3f65dd80b199602231e8f95d10f26d2dbbee54c2f0d0eaa50abf2e"
+  },
+  "explicit_composed_review_revalidated": true,
+  "genes": 984137,
+  "held": {
+    "bytes": 10606,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_held_24036_20261008_v1.json",
+    "sha256": "458b7ada78efdc6c6168e1680a93ae873aa313227d37f24539065968366ae038"
+  },
+  "historical_prefix": [
+    {
+      "bytes": 898602,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22427_matched/review.json",
+      "sha256": "c3e55f042a230e54b531f429e207a9f2928709a66695a308869dd7feff90ef13"
+    },
+    {
+      "bytes": 1185333,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22428/review.json",
+      "sha256": "a4d0d1c8893a70a1a08fef0528da1ad0a3e3def54e81d051388152af2dfdab19"
+    },
+    {
+      "bytes": 913623,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22429/review.json",
+      "sha256": "1387273d4d6dddcdacda245c9ceaf5ba0d0bc0d73a2a56414c5534ab4d8ad3f0"
+    },
+    {
+      "bytes": 1262940,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22430/review.json",
+      "sha256": "4aec5f7ae480969670ba6b66dcc7f964613eace233bb759e5316db1ca25d6e08"
+    },
+    {
+      "bytes": 1244250,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22431/review.json",
+      "sha256": "c59289a543f0c142b8afb7d7998849cc404add14fb084cdbf71bc79dcefc0842"
+    },
+    {
+      "bytes": 991416,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22433/review.json",
+      "sha256": "268ead20a2b46fcdcf69ec540e782551791bdc55449a60df27444453dd8f969f"
+    },
+    {
+      "bytes": 11303409,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22435/review.json",
+      "sha256": "998026667fe890c40695b822f2310648fef58d5d57d674715c5195f9ea415490"
+    },
+    {
+      "bytes": 287561,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_measurement_failure_review_22437/review.json",
+      "sha256": "650b69e0965e0a667359efaa43c1d814108f613547cbe66cf12964bd1e64e459"
+    },
+    {
+      "bytes": 11924235,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_terminal_review_22444_fault_reported_v1/review.json",
+      "sha256": "1ddc14f79f0f501e4189382cdfe613a883310a6fceacbd94b37f342bb33827ef"
+    },
+    {
+      "bytes": 263870,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_failure_review_23891/review.json",
+      "sha256": "1f6167cf997f37dcff5f795c9479475bd065aa7359a68a73994f7f53abf4ed9a"
+    },
+    {
+      "bytes": 15768832,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native10_review_finalization_20261007_v1/review/review.json",
+      "sha256": "7eab212d9788deb031232e4641089ff96503c0e5727e1ec369067f93ffb518b5"
+    }
+  ],
+  "historical_scheduler_states": [
+    "FAILED",
+    "COMPLETED",
+    "COMPLETED",
+    "COMPLETED",
+    "COMPLETED",
+    "COMPLETED",
+    "COMPLETED",
+    "FAILED",
+    "COMPLETED",
+    "FAILED",
+    "COMPLETED"
+  ],
+  "history_evidence_count": 63953,
+  "history_schema": "native12_composed_history_v1",
+  "index": 12,
+  "job_id": 24036,
+  "native_execution_started": false,
+  "native_inference_reexecuted": false,
+  "native_input_order": [
+    "UP000008183_243274.fasta",
+    "UP000000600_5888.fasta",
+    "UP000000577_243231.fasta",
+    "UP000001940_6239.fasta",
+    "UP000000561_237631.fasta",
+    "UP000002311_559292.fasta",
+    "UP000001450_36329.fasta",
+    "UP000006548_3702.fasta",
+    "UP000001584_83332.fasta",
+    "UP000002487_188937.fasta",
+    "UP000001038_8090.fasta",
+    "UP000000807_243273.fasta",
+    "UP000000718_289376.fasta",
+    "UP000007062_7165.fasta",
+    "UP000000437_7955.fasta",
+    "UP000009136_9913.fasta",
+    "UP000002494_10116.fasta",
+    "UP000001408_189518.fasta",
+    "UP000007241_684364.fasta",
+    "UP000002149_214684.fasta",
+    "UP000001973_100226.fasta",
+    "UP000001554_7739.fasta",
+    "UP000001686_374847.fasta",
+    "UP000007719_515635.fasta",
+    "UP000000559_237561.fasta",
+    "UP000018468_7918.fasta",
+    "UP000000589_10090.fasta",
+    "UP000001542_5722.fasta",
+    "UP000001805_367110.fasta",
+    "UP000002195_44689.fasta",
+    "UP000001425_1111708.fasta",
+    "UP000000625_83333.fasta",
+    "UP000000798_224324.fasta",
+    "UP000000805_243232.fasta",
+    "UP000001593_45351.fasta",
+    "UP000002524_243230.fasta",
+    "UP000005640_9606.fasta",
+    "UP000002526_224911.fasta",
+    "UP000015101_6412.fasta",
+    "UP000001025_243090.fasta",
+    "UP000002485_284812.fasta",
+    "UP000000557_251221.fasta",
+    "UP000001548_184922.fasta",
+    "UP000002280_13616.fasta",
+    "UP000001519_9595.fasta",
+    "UP000008144_7719.fasta",
+    "UP000002438_208964.fasta",
+    "UP000002530_330879.fasta",
+    "UP000006727_3218.fasta",
+    "UP000001300_284591.fasta",
+    "UP000001449_35128.fasta",
+    "UP000008783_418459.fasta",
+    "UP000000542_5664.fasta",
+    "UP000000792_436308.fasta",
+    "UP000005238_164328.fasta",
+    "UP000000431_272561.fasta",
+    "UP000001555_6945.fasta",
+    "UP000002254_9615.fasta",
+    "UP000000429_85962.fasta",
+    "UP000001055_321614.fasta",
+    "UP000001570_224308.fasta",
+    "UP000007305_4577.fasta",
+    "UP000001312_665079.fasta",
+    "UP000007266_7070.fasta",
+    "UP000001974_273057.fasta",
+    "UP000001414_226186.fasta",
+    "UP000002008_324602.fasta",
+    "UP000002277_9598.fasta",
+    "UP000000539_9031.fasta",
+    "UP000008143_8364.fasta",
+    "UP000001357_81824.fasta",
+    "UP000000425_122586.fasta",
+    "UP000002521_190304.fasta",
+    "UP000006906_3055.fasta",
+    "UP000059680_39947.fasta",
+    "UP000000803_7227.fasta",
+    "UP000000536_69014.fasta",
+    "UP000000554_64091.fasta"
+  ],
+  "new_sources": [
+    {
+      "bytes": 18382,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.py",
+      "sha256": "f423a756f5270f7c2eeae6fef6503072fc842d654d6632d22db0512b3ffc5278"
+    },
+    {
+      "bytes": 1865,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_native12_composed_cost.sh",
+      "sha256": "2ae07849ac56d39029244d9577dde88ccb8f1c4e0570d9e8d5a710782992e0ab"
+    },
+    {
+      "bytes": 9823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native12_composed_execution.py",
+      "sha256": "a4d2f1e39d27248df15d71e7444d706b519bca70d00131a3c05f535f9d314e60"
+    },
+    {
+      "bytes": 7785,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native11_composed_review_binding.py",
+      "sha256": "fa0ff637ee974e97e1de0f08e1cd8a2213219e07e2711a1647a5f63f03f2236a"
+    },
+    {
+      "bytes": 25045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/review_native12_composed_attempt.py",
+      "sha256": "08b170ba1ee5aabd5665dd12fc359fc7f5ffe3d0834b0afb2e73289fa61ed649"
+    },
+    {
+      "bytes": 878,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_terminal_review_20261008_v1.sh",
+      "sha256": "0439a2c230909e3d060bb2c3b72e7bab6862e1109521203241f8165b948d6e93"
+    }
+  ],
+  "observed_unix_ns": 1791476731941806306,
+  "ordered_original_prefix_revalidated": true,
+  "original_request": {
+    "bytes": 52941,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_11_allocated_v1.json",
+    "sha256": "7bf63b80bd5932b9edbd1b2c5ff3fb77f5557e4f6c64e077045d6a50c8d366a1"
+  },
+  "original_review_translated": false,
+  "plan": {
+    "bytes": 492927,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/plan.json",
+    "sha256": "6c87babcbb5581830e0b9e7b9bf9aaba30a85bde1c4ab465e561017e67e9c89b"
+  },
+  "policy": {
+    "bytes": 3285,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_receipt_amendment_20261004/policy.json",
+    "sha256": "9e79989611fde9f7fa69dbca11be692a6783654f0ada5e27fd1727003c3282fc"
+  },
+  "preparation_process_succeeded": true,
+  "proteomes": 78,
+  "publication_ready": false,
+  "request": {
+    "bytes": 18838752,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_launch_20261004/request_12_composed_v1.json",
+    "sha256": "70bde16142da526de6f198aaf255a224b0f4e10c2bd79f98f0b1fd7d70269f89"
+  },
+  "request_comment_binding_passed": true,
+  "runtime_basis": {
+    "bytes": 9148,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native11_composed_terminal_review_20261008_v1/runtime.json",
+    "sha256": "477aafd724e2da2f4e8d6ecff302bc503ebc06bffcb0a24156fa32f33e22c582"
+  },
+  "schema": "native12_composed_prepared_request_receipt_v1"
+}

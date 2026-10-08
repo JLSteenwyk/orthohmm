@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Native12 Actual Request Prepared And Bound; Conversion24035 Complete (2026-10-08)
+
+Actual prepare CLI session8827 finished EXIT0 after independent full composed
+binding and original ordered-prefix scheduler revalidation. One fresh request
+request_12_composed_v1.json18838752bytes/
+SHA70bde16142da526de6f198aaf255a224b0f4e10c2bd79f98f0b1fd7d70269f89
+binds identity12/P1C1R1, unchanged plan/inputs/order/native settings, shared-host
+policy and complete prospective controller/reviewer sources. Do not repeat
+preparation. SAME24036 remains owned held64slots128G26h; held comment was
+updated ONCE to the actual prepared request digest and independently checked.
+Prepared receipt native12_composed_request_prepared_24036_20261008_v1.json
+15683bytes/SHAfbdb566e3985969f45b28f6b911df294b129fe0f4396dd4aa4c8bbddec970857.
+No native inference has started; no live foreground session remains.
+
+Actual24035conversionCOMPLETED0:0 elapsed03:22/2CPU32G, stderr empty.
+New result manifest SHA77d33a77eb5eb1c85736ba6e7b303aa269907c8a930d74647d3b8bddff36fac8:
+11755521expected/materialized/retained pairs, zero mapping loss, full-input
+coverage585180/984137=.5946123354776824. This is coverage, not accuracy.
+Scoring paths remain fresh; production conversion_binding/read-only scoring
+preflight and independent scoring/admission remain unexecuted.
+
+Full goal ACTIVE; next action:commit/push24036held/prepared receipts/checkpoint,
+recheck SAMEowned held request/comment/source/path/capacity, then release
+native12 ONCE with retained release receipt. Observe that handle without retry.
+Independently evaluate conversion24035 through actual scoring preparation,
+retain its terminal binding, then submit/check/release ONE8CPU32G26h assessment
+with exact pair/source digests. Do not rerun conversion/native inference or
+impute scores; no ordinary-review flag/schema substitution.
+
+## Final Unrun Native12 Job24036 Held; Actual History Preparation Next (2026-10-08)
+
+Conversion-release milestone0e060790 committed/pushed before ONE held native12
+submission. Actual24036ownedPENDING/JobHeldUser matches new batch/cwd,64slots,
+128GiB/26h, no requeue/restarts/arrays. Held receipt
+native12_composed_held_24036_20261008_v1.json10606bytes/
+SHA458b7ada78efdc6c6168e1680a93ae873aa313227d37f24539065968366ae038
+retains scientific identity12/P1C1R1, actual argv/controller, empty native queue,
+fresh path/capacity checks, successful11 review/readback and all prospective
+sources/tests/protocol. The scheduler comment is initially the controller
+source digest, NOT a prepared request digest; do not release in this state.
+
+Full goal ACTIVE; next action:run actual run_native12_composed_cost --prepare
+for SAMEheld24036 with original11 request, actual composed review and prospective
+controller digests. This must independently validate ordered original history
+and new full-review lineage before creating the one fresh12 request. Retain
+actual preparation outcome, then bind/update/check held comment to request
+digest, commit/push held/request checkpoint before one capacity-checked release.
+No native inference has started. SAME24035conversion remains running and must
+be observed through terminal validation before scoring; no duplicates/retries.
+
 ## Native11 Conversion24035 Running; Native12 Preparation Next (2026-10-08)
 
 Held2d2fad11 pushed before ONE successful release24035. Release receipt
