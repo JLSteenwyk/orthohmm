@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="65" time="1.227" timestamp="2026-10-08T12:02:31.905583-04:00" hostname="bizon"><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_held_scheduler_gate_binds_new_batch_and_matched_resources" time="0.001" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[JobName-other]" time="0.001" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[JobState-RUNNING]" time="0.001" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[Reason-Resources]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[Partition-other]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[ReqNodeList-other]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[NumCPUs-32]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[CPUs/Task-32]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[MinMemoryNode-32G]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[NumTasks-2]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[Requeue-1]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[Restarts-1]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[TimeLimit-06:00:00]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[Command-/old/batch.sh]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[WorkDir-/other]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[NumNodes-2]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[UserId-other(999999)]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[ArrayJobId-25000]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_held_identity_rejected[HetJobId-25000]" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_duplicate_fields_and_old_job_rejected" time="0.000" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_request_gate_preserves_new_schema_and_original_history" time="0.017" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[schema-allocated_native_factorial_request_v1]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[job_id-24034]" time="0.012" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[index-11]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[index-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[cell-p1_c1_r0]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[execution_authorized-False]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[plan-value6]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[amendment-value7]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[policy-value8]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[scheduler_command-/old/batch.sh]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[allocation_cwd-/other]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[automatic_retry-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[scientific_method_modified-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[original_review_translated-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[scientific_timings_admitted-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[publication_ready-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[source-value16]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[history-value17]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[runtime_basis-value18]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[new_sources-value19]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_request_rejected[history_basis-value20]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[schema-old]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[status-unreviewed]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[original_request-value2]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[composed_review-value3]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[historical_prefix-value4]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[next_unrun_index-11]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[original_review_translated-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[historical_failures_retained-value7]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_wrong_history_basis_rejected[next_identity_authorized-True]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_prepare_creates_one_bound_request_not_native_output" time="0.015" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_prepare_rejects_unsafe_or_repeated_attempt_without_request[source]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_prepare_rejects_unsafe_or_repeated_attempt_without_request[memory]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_prepare_rejects_unsafe_or_repeated_attempt_without_request[held]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_prepare_rejects_unsafe_or_repeated_attempt_without_request[prior_output]" time="0.011" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_execution_binding_requires_actual_consumers_and_source_pins" time="0.012" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_controller_reuses_original_native_command_and_measurement_envelope" time="0.013"><failure message="ValueError: Native12 runtime/private controller differs">fixture = namespace(context=({'plan': {'path': '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7...'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7070/test_controller_reuses_origina0'))
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7a1ca65f4ce0&gt;
+
+    def test_controller_reuses_original_native_command_and_measurement_envelope(fixture, monkeypatch):
+        ref, calls, _ = execution_stubs(fixture, monkeypatch)
+        before = Path.cwd()
+&gt;       result = module.execute(ref)
+                 ^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_run_native12_composed_cost.py:254: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+benchmark_tools/run_native12_composed_cost.py:207: in execute
+    require(lookup["baseline"] == plan["baseline"] and baseline["core_commit"] == CORE_COMMIT
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Native12 runtime/private controller differs'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Native12 runtime/private controller differs
+
+benchmark_tools/validate_native_factorial_outputs.py:41: ValueError</failure></testcase><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_runtime_failure_prevents_or_preserves_native_measurement[1]" time="0.012"><failure message="ValueError: Native12 runtime/private controller differs">fixture = namespace(context=({'plan': {'path': '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7...'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7070/test_runtime_failure_prevents_0'))
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7a1ca65f72c0&gt;
+phase = 1
+
+    @pytest.mark.parametrize("phase", [1, 2])
+    def test_runtime_failure_prevents_or_preserves_native_measurement(fixture, monkeypatch, phase):
+        ref, calls, _ = execution_stubs(fixture, monkeypatch, phase_failure=phase)
+&gt;       result = module.execute(ref)
+                 ^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_run_native12_composed_cost.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+benchmark_tools/run_native12_composed_cost.py:207: in execute
+    require(lookup["baseline"] == plan["baseline"] and baseline["core_commit"] == CORE_COMMIT
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Native12 runtime/private controller differs'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Native12 runtime/private controller differs
+
+benchmark_tools/validate_native_factorial_outputs.py:41: ValueError</failure></testcase><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_runtime_failure_prevents_or_preserves_native_measurement[2]" time="0.012"><failure message="ValueError: Native12 runtime/private controller differs">fixture = namespace(context=({'plan': {'path': '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7...'/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/pytest-of-bizon/pytest-7070/test_runtime_failure_prevents_1'))
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7a1ca65f6f90&gt;
+phase = 2
+
+    @pytest.mark.parametrize("phase", [1, 2])
+    def test_runtime_failure_prevents_or_preserves_native_measurement(fixture, monkeypatch, phase):
+        ref, calls, _ = execution_stubs(fixture, monkeypatch, phase_failure=phase)
+&gt;       result = module.execute(ref)
+                 ^^^^^^^^^^^^^^^^^^^
+
+tests/unit/test_run_native12_composed_cost.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+benchmark_tools/run_native12_composed_cost.py:207: in execute
+    require(lookup["baseline"] == plan["baseline"] and baseline["core_commit"] == CORE_COMMIT
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'Native12 runtime/private controller differs'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Native12 runtime/private controller differs
+
+benchmark_tools/validate_native_factorial_outputs.py:41: ValueError</failure></testcase><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_running_scheduler_identity_rechecked_before_attempt[Comment-wrong]" time="0.013" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_running_scheduler_identity_rechecked_before_attempt[JobName-other]" time="0.013" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_running_scheduler_identity_rechecked_before_attempt[UserId-other(999999)]" time="0.013" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_controller_does_not_reuse_output" time="0.012" /><testcase classname="tests.unit.test_run_native12_composed_cost" name="test_batch_fixed_envelope_and_unscheduled_guard" time="0.027" /></testsuite></testsuites>

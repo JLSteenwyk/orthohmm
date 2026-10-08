@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Native12 Prospective Controller Tested (2026-10-08)
+
+New run_native12_composed_cost.py/batch/tests prepared. Expanded336joined
+tests pass5.17s, zero failures/skips. Actual scientific3.10 help imports and
+bash syntax pass; unscheduled batch invocation rejects. Initial XML retains
+62passes/3test interpreter-alias fixture failures; corrected65pass1.24s.
+First expanded XML retains335passes/one missing release-budget stub receipt;
+corrected336pass XML retained separately. Native/scheduler/capacity/process
+contexts are stubs, not production launch/resource/scientific evidence.
+
+New request/session sources preserve old evidence and reuse unchanged native
+command, factor settings, input preparation, allocated collector, process/
+pressure policy and release-budget arithmetic. Fresh exact prospective tree
+checks and original lookup probes bracket measurement. Safe capacity and
+attribution still gate release; ordinary CPU contention is accepted/recorded.
+No production request, held native12 job or launch executed. Actual24034
+RUNNING34:30/2CPU128G; full resource/environment/review still absent.
+
+Full goal ACTIVE; next action:commit/push this tested controller milestone,
+then implement/test compatible native12 terminal runtime, resource/environment
+and scientific-output review before any actual12 attempt. Continue SAME24034
+through actual terminal outcome; its valid full review/readback gates native11
+conversion and native12 production history acceptance. No retries or prompt edit.
+
+## Native12 Prospective Controller Implementation Started (2026-10-08)
+
+Compatibility milestone c44c0df2 committed/pushed; do not repeat. Current
+independent task:benchmark_tools/run_native12_composed_cost.py,
+benchmark_tools/run_native12_composed_cost.sh and focused controller tests.
+Implement a truthful new request/session type with held ownership/source/
+history binding, same scientific native command and unchanged measurement,
+input preparation, resource/environment kernels. No prepared production
+request, held native12 job or launch yet. Compatible terminal review remains
+unfinished and must be ready before any actual native12 attempt.
+
+Full goal ACTIVE; next action:finish/test prospective controller and batch;
+observe SAME24034, lastactualRUNNING28:24/2CPU128G. Full composed review still
+gates any production history acceptance/conversion. No frozen source edits,
+ordinary-schema translation, native retry, DGX or quiet-host requirement.
+
 ## Native12 Compatibility Library Tested Prospectively (2026-10-08)
 
 New native12_composed_execution.py, test_native12_composed_execution.py and
