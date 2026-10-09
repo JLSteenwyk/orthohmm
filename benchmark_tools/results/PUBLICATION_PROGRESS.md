@@ -1,5 +1,47 @@
 # Publication Progress
 
+## Terminal-Failure Manuscript Render And Review (2026-10-09)
+
+Actual terminal review24080 completed0:0; production report/manuscript generated
+once, read back and committed/pushed9ab91916. Sources/tests committed9925199e.
+Four admitted rows exactly unchanged;42 score rows/7 status rows checked,
+18 missing values; parent body preserved except explicit failure section.
+Native12 SIGSEGV remains inadmissible; native11 scoringOOM retains zero admitted
+scores. No inference/conversion/scoring/admission/retry was performed.
+
+Executed render EXIT0 using existing render_manuscript_review.py and October
+IQTree3 bibliography; parsed/rendered stderr empty. Actual114 local link
+occurrences/110 unique targets,19 citation ids. Executed trusted local Chrome
+print once EXIT0:22-page PDF411752bytes SHA256
+470638f386ef64af6ee44061c22410dabeda40db93b5ff36c50068bb8575c177.
+Fresh outputs now exist beside source:
+native_qfo_terminal_failures_20261009_v1_review.html,
+native_qfo_terminal_failures_20261009_v1_html_assets.json,
+native_qfo_terminal_failures_20261009_v1_print/.
+Existing PDF bounds reviewer rendered all22 pages, no bounds violations.
+Actually visually inspected all22 page images; no clipping/overlap observed.
+New citation inventory resolves19 ids/no unresolved entries. Independent
+stdlib/PyMuPDF readback checks42 score rows/7 status rows, all24 rendered
+endpoint values/eight failure phrases and freshly decodes all pages of10
+direct PDF assets as nonblank. Receipt content_readback.json SHA256
+c27e5597b173775db639e4a42359359d8ff88e9de6d4858c3242927fd7eaaa25
+retains executed validation code. These are current checks, not inherited
+old21-page counts, new scoring/raw admission or complete reproduction.
+Manual review/scope recorded in NATIVE_QFO_TERMINAL_FAILURE_REVIEW_20261009.md.
+
+Full goal ACTIVE; next commit/push fresh render/PDF/page/citation/content/manual
+review milestone. Uncommitted task files are these new artifacts plus current
+ledger refresh; browser_profile is not a reporting payload and is not staged.
+Then prepare the direct reporting component with existing generic
+bundle_publication_review.py (explicit main/stage paths) and anchored restore
+tool. The new HTML directly links the untracked36MB terminal-review metadata
+manifest; resolve that specific payload's committed inclusion before build,
+without changing frozen HTML/manuscript/review bytes or silently omitting it.
+This is not a missing raw-sequence dataset or transitive-runtime certification.
+Do not rerender/reprint unchanged outputs or invent a new gate. Unrelated dirty
+samples/frozen sources untouched. No live24080 wait/foreground session or new
+scientific job remains in this task; package integration remains unfinished.
+
 ## Terminal Review Complete; Reporting Execution (2026-10-09)
 
 Previous goal turn was a verified wait plus bounded existing-dump check.

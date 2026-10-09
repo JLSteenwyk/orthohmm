@@ -1,0 +1,260 @@
+{
+  "bibliography_entries": 38,
+  "bibliography_not_explicitly_matched": [
+    "Ashburner2000GO",
+    "Bairoch2000ENZYME",
+    "Csardi2006igraph",
+    "Dosch2023FAS",
+    "GO2026Knowledgebase",
+    "Jones2023VGNC",
+    "Li2006TreeFam",
+    "SIBSwissTree",
+    "biopython2009",
+    "famsa2016",
+    "fastme2015",
+    "fasttree2010",
+    "mafft2013",
+    "matplotlib2007",
+    "mcl2002",
+    "numpy2020",
+    "orthofinder2015",
+    "orthofinder2019",
+    "qfo2022"
+  ],
+  "citation_adequacy_established": false,
+  "command": [
+    "/usr/bin/pandoc",
+    "--from=markdown",
+    "--to=json",
+    "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md"
+  ],
+  "internal_link_occurrences": 114,
+  "limitations": [
+    "Matches explicit DOI resolver links, exact bibliography URLs and Pandoc citation IDs only.",
+    "Other external links may be citations requiring manual review; unmatched bibliography entries are not automatically irrelevant.",
+    "Does not detect uncited claims or validate attribution, source semantics, versions, rights or linked local evidence.",
+    "Section names locate occurrences; this does not supply exact Markdown line numbers."
+  ],
+  "matched_bibliography_ids": [
+    "busco2021",
+    "cpm2011",
+    "diamond2021",
+    "fastoma2025",
+    "iqtree3_2026",
+    "kuzmin2020",
+    "leiden2019",
+    "orthobench2020",
+    "orthofinder2026",
+    "orthofinder2026correction",
+    "orthohmm2024preprint",
+    "orthomcl2003",
+    "proteinortho2023",
+    "pyvolve2015",
+    "qfo2016",
+    "qfo2020",
+    "sonicparanoid2024",
+    "ygob2005",
+    "zombi2019online"
+  ],
+  "occurrences": [
+    {
+      "bibliography_ids": [
+        "orthohmm2024preprint"
+      ],
+      "citation_id": "orthohmm2024preprint",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "leiden2019"
+      ],
+      "citation_id": "leiden2019",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "cpm2011"
+      ],
+      "citation_id": "cpm2011",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2026"
+      ],
+      "citation_id": "orthofinder2026",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "orthofinder2026correction"
+      ],
+      "citation_id": "orthofinder2026correction",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "sonicparanoid2024"
+      ],
+      "citation_id": "sonicparanoid2024",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "proteinortho2023"
+      ],
+      "citation_id": "proteinortho2023",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "fastoma2025"
+      ],
+      "citation_id": "fastoma2025",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "orthomcl2003"
+      ],
+      "citation_id": "orthomcl2003",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "orthobench2020"
+      ],
+      "citation_id": "orthobench2020",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "qfo2016"
+      ],
+      "citation_id": "qfo2016",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "qfo2020"
+      ],
+      "citation_id": "qfo2020",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "busco2021"
+      ],
+      "citation_id": "busco2021",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "ygob2005"
+      ],
+      "citation_id": "ygob2005",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "zombi2019online"
+      ],
+      "citation_id": "zombi2019online",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "pyvolve2015"
+      ],
+      "citation_id": "pyvolve2015",
+      "kind": "cite",
+      "section": "Methods",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "iqtree3_2026"
+      ],
+      "citation_id": "iqtree3_2026",
+      "kind": "cite",
+      "section": "Fixed-Stratum SwissTrees Error Analyses",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "diamond2021"
+      ],
+      "citation_id": "diamond2021",
+      "kind": "cite",
+      "section": "Component Evidence Is Bounded",
+      "status": "matched"
+    },
+    {
+      "bibliography_ids": [
+        "kuzmin2020"
+      ],
+      "citation_id": "kuzmin2020",
+      "kind": "cite",
+      "section": "Transfer And Biological Recovery Reveal Trade-Offs",
+      "status": "matched"
+    }
+  ],
+  "other_external_links": [],
+  "pandoc_version": "pandoc 3.1.3\nFeatures: -server +lua\nScripting engine: Lua 5.4\nUser data directory: /home/bizon/.local/share/pandoc\nCopyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org\nThis is free software; see the source for copying conditions. There is no\nwarranty, not even for merchantability or fitness for a particular purpose.\n",
+  "publication_ready": false,
+  "sources": [
+    {
+      "bytes": 77300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md",
+      "sha256": "16cb869bb9fc67905de0e98436242d7140851e26c10ada91f1670f169b871018"
+    },
+    {
+      "bytes": 50517,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_bibliography_20261007_v1.csl.json",
+      "sha256": "a8b74a33a5244a155779567aaf838895f03645c57e9e46be16b30105ce56f392"
+    },
+    {
+      "bytes": 199114624,
+      "path": "/usr/bin/pandoc",
+      "sha256": "3dd273647f0265cb439f22976d5366a54b071a3783f6fec50838b47fb53d701b"
+    },
+    {
+      "bytes": 5045,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_manuscript_citations.py",
+      "sha256": "d1e058cb0d4f2b4938542ee6fa985a4db4f6207e94c34a51c17c73daa3194a0b"
+    }
+  ],
+  "status": "explicit_citation_inventory",
+  "stderr": "",
+  "unresolved_citations": []
+}
