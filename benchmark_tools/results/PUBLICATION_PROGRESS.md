@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Terminal-Failure Reporting Preparation (2026-10-09)
+
+Previous turn made progress: stale continuation handoff corrected and
+committed/pushed7f33a6f3. Full seven-part goal ACTIVE. Fresh SAME24080 remains
+RUNNING00:09:41,2CPUs/128GiB; runtime/scheduler files only. No duplicate job,
+release, inference retry or partial-score admission is authorized.
+
+Independent unfinished task implemented/tested: fresh final-failure reporting
+successor preserves the four admitted cells and integrates native11 scoringOOM
+plus native12 inferenceSIGSEGV. Source
+benchmark_tools/export_native_qfo_terminal_failures.py SHA256
+288f80f1d3cb8438792d2e7b9058a6853646f45b5da4a33c4dd8d85e3b59767d;
+tests/unit/test_export_native_qfo_terminal_failures.py SHA256
+fcfd2edb8e4fb29d1d2f52dceaed9386f084c2b65b36f25572744028788b995f.
+153 focused/adjacent tests passed in2.42s under sanitized pinned test Python.
+These are fixtures, not production scores or actual terminal review evidence.
+Production execution depends on actual completed terminal review24080 and
+explicit digest readback; prepared success-only five-cell workflows stay
+unexecuted. The new report will keep null scores for all three missing cells,
+separate inference/conversion/scoring outcomes, retain shared-host disclosure,
+and generate a separate manuscript revision without altering frozen v4.
+Manuscript remains beside parent to preserve relative evidence links; generator
+requires fresh destination/manuscript, successful reviewer accounting and actual
+native receipt/final-output absence. It checks direct retained metadata only,
+not a new raw-resource replay, scientific admission or transitive archive audit.
+
+Fresh SAME24080RUNNING00:16:21; destination runtime/scheduler only, no terminal
+review/failure yet. Next: commit/push prepared source/tests; actually wait and
+recheck SAME24080, then inspect actual terminal evidence and execute only if
+compatible. Planned fresh output
+benchmark_tools/results/native_qfo_terminal_failures_20261009_v1/ and sibling
+native_qfo_terminal_failures_20261009_v1_manuscript.md (not yet generated).
+Then render/read back the new source with existing render/print tools and
+October IQTree3 bibliography before manuscript-package claims. This is
+reporting, not cause diagnosis, full-package verification or publication readiness.
+
 ## Stop Diagnosis And Current Handoff (2026-10-09)
 
 User requested correction of repeated goal stops. Actual goal API reports
