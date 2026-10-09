@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Fragment Adapters Tested And Retained Controls Validated (2026-10-09)
+
+Previous maintenance turn made progress by reconciling the stale handoff;
+835dad98 pushed. Actual next scientific task has now advanced. Transform,
+all-pair zero/one/two-endpoint scoring and fixed15-endpoint whole-seed
+bootstrap implemented in controlled_fragment_observations.py. Prospective
+preparer binds the five protocol pins, all40 retained native admissions,
+input/truth/scheduler/executor/prediction provenance and recomputed original
+scores. Source c5c81c1f pushed before its one check-only execution. EXIT0:
+all10 baselines and40 methods verified; per-seed genes806/822/813/811/806/
+847/804/816/852/823. No new biological inference or scores were produced.
+
+Original current-environment preflight EXIT1: package inventory changed for
+OrthoHMM. Source/native-library/profile/file checks preceding that refusal
+passed. Bounded inventory diagnosis: identical Python versions and full
+OrthoFinder inventory,72 added/removed/changed OrthoHMM distributions.
+Do not rewrite historical metadata or claim full historical equality.
+Separate tested prospective adoption source/amendment3456a889 pushed.
+Actual adoption EXIT0 at
+benchmark_tools/results/controlled_fragment_execution_runtime_20261009_v1.json,
+SHA4ea5d10bccd02ef42e49194908212d07af701c109db878e176f56c298c2ca4da.
+All11 required scientific versions unchanged; full current inventory,
+sources/native/profile/tool resolution passed the existing strict verifier.
+No historical output equivalence is established. No package installation,
+service change or unrelated-job interference occurred.
+
+Sequential scheduler runner prepared and tested; final focused suite167passed
+in2.39s, bash -n EXIT0. Tests include failure-local continuation, exact seed/
+method order, no retries, unchanged truth and actual written FASTA readback.
+Native settings remain4workers/4threads; planned new allocation16CPUs/16GiB,
+single sequential job onbizon, no GPU request or quiet-host requirement.
+Observed schedulerCPU allocation96/192 and availableRAM~795883MiB permit
+this bounded request; swap is full, so preserve enforced safe memory limits.
+No fragment input manifest, new inference or fragment score exists yet.
+
+Next prepare exactly once with the tested committed sources:
+`benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B benchmark_tools/prepare_controlled_fragment_observations.py --root . --output benchmarks/work/controlled_fragment_observations_20261009_v1 --inference-root benchmarks/results/controlled_fragment_methods_20261009_v1`
+Use the same sanitized environment as the successful baseline check. Then
+run the new runner --check-only against actual manifest/runtime hashes,
+independently read back all10 FASTA universes/coordinates/truth bytes, retain
+the prepared manifest and actual outcomes, and launch the single sequential
+scheduler job only after those checks pass. No baseline or failed inference
+rerun. Full goal ACTIVE; no live scientific session/job is currently awaited.
+Keep unrelated samples, browser profiles and local archive untouched.
+
 ## Controlled Fragment Observation Protocol Prepared (2026-10-09)
 
 Complete profile-stratum integration and original/clipped plus corrected
