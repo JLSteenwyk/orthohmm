@@ -1,0 +1,95 @@
+{
+  "checked_inputs": [
+    {
+      "bytes": 594127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json",
+      "sha256": "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34"
+    },
+    {
+      "bytes": 95487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json",
+      "sha256": "e8f554a178841da24a1892a7e42f8680f9fe8e4827dec6d6bfe4643cdb890bac"
+    },
+    {
+      "bytes": 30311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+      "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+    },
+    {
+      "bytes": 34593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+      "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+    },
+    {
+      "bytes": 30405,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_counts_20261006_v1.json",
+      "sha256": "7ed2ea1a7a94d55b28ecbadd7bd2be8e99df64b9fab3c266ebd987e8dbcfc479"
+    },
+    {
+      "bytes": 45172,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native10_allocated_swiss_counts_20261007_v1.json",
+      "sha256": "d5bafed830bf93e46b810728df14ffa34185d58ffe3eac78a693b0159d3d0a40"
+    }
+  ],
+  "internal_factorial_endpoints": 42,
+  "legacy_comparator_endpoints": 24,
+  "legacy_comparator_intervals_reusable": false,
+  "new_draws_executed": false,
+  "publication_ready": false,
+  "raw_scoring_repeated": false,
+  "rows": [
+    {
+      "cell": "p0_c0_r0",
+      "common_members_and_truth_with_both_orthofinder_modes": true,
+      "families": 18,
+      "index": 6,
+      "matching_legacy_methods": [],
+      "recomputed_aggregate": {
+        "F1": 0.689183963152562,
+        "PPV": 0.6439400942516949,
+        "TPR": 0.741266050122766
+      },
+      "represented_genes": 563
+    },
+    {
+      "cell": "p0_c0_r1",
+      "common_members_and_truth_with_both_orthofinder_modes": true,
+      "families": 18,
+      "index": 7,
+      "matching_legacy_methods": [],
+      "recomputed_aggregate": {
+        "F1": 0.7895743339716982,
+        "PPV": 0.9491519661804723,
+        "TPR": 0.6759321953915856
+      },
+      "represented_genes": 563
+    },
+    {
+      "cell": "p0_c1_r0",
+      "common_members_and_truth_with_both_orthofinder_modes": true,
+      "families": 18,
+      "index": 8,
+      "matching_legacy_methods": [],
+      "recomputed_aggregate": {
+        "F1": 0.6857094995663944,
+        "PPV": 0.6087055595840293,
+        "TPR": 0.7850177040241996
+      },
+      "represented_genes": 563
+    },
+    {
+      "cell": "p1_c0_r1",
+      "common_members_and_truth_with_both_orthofinder_modes": true,
+      "families": 18,
+      "index": 10,
+      "matching_legacy_methods": [],
+      "recomputed_aggregate": {
+        "F1": 0.7863721816702856,
+        "PPV": 0.9490514061383917,
+        "TPR": 0.6713025657619559
+      },
+      "represented_genes": 563
+    }
+  ],
+  "schema": "native_qfo_comparator_uncertainty_feasibility_v1"
+}

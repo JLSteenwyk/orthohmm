@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Native Comparator Uncertainty Feasible; Protocol Frozen Before Intervals (2026-10-09)
+
+Terminal resource result/report/receipt committed/pushed9b8594b0. Advanced the
+actual scientific uncertainty task: inspected original comparator protocol and
+both retained bindings. The old comparator analysis has24 endpoints/8 contrasts;
+the internal factorial has42 endpoints. Neither already supplies the new four-
+native-cell versus OrthoFinder comparisons. No direct interval transplant is
+valid: every native family-record array differs from all eight legacy methods.
+
+Actual independent stdlib feasibility check executed EXIT0 and saved
+native_qfo_comparator_uncertainty_feasibility_20261009_v1.json. It checks all
+four admitted native cells,18common families/563 disjoint represented genes,
+reference identity/member lists/positive and negative truth totals against full
+and sequence-only OrthoFinder, and recomputes each count aggregate within1e-14.
+Six direct input pins retained. No raw scoring, bootstrap draw, interval or new
+scientific admission occurred. Initial inspection jq queried a nonexistent
+methods field and failed; corrected field inspection only, no scientific rerun.
+
+Prepared NATIVE_QFO_COMPARATOR_UNCERTAINTY_PROTOCOL_20261009.md for a separately
+named retrospective conditional analysis: fixed8cells*2comparators*3metrics=48
+endpoints,4admitted cells/24estimable endpoints, all other endpoints missing.
+Explicitly does not change earlier24/42 corrections, primary endpoints, method,
+defaults, independent-validation status or original native failures. Reuse
+existing statistic/bootstrap kernel with original100000/PCG64seed20260920 and
+family order where compatible. Conservative48-family quantiles0.05/96 and
+1-0.05/96; no favorable-cell/seed selection or pair-IID calculation. Historical
+P1C0R0 exists but is not silently inserted into the supplied fresh-cell snapshot.
+
+Next validate/commit/push feasibility receipt and prospective protocol, inspect
+the byte-bound run_corrected_swiss_comparison.py and its bootstrap/count helpers,
+then implement/test a separately named native comparator uncertainty consumer
+with exact input/family/statistic checks and explicit missing endpoints. Commit
+prospective source/tests before any actual interval execution. Do not alter
+frozen helpers or relabel existing interval results. This is original goal4.1
+method-difference work, not another package/audit campaign or new scientific
+inference panel. All foreground sessions finished; no live handle waits.
+Full goal ACTIVE; next automatic continuation is this implementation after
+protocol commit. Local151MB rc6 archive/unrelated sample changes stay unstaged.
+
 ## Terminal Resource Table Executed; Comparator Uncertainty Next (2026-10-09)
 
 Source/tests committed/pushed9598abc9 after final111-test suite. Actual terminal
