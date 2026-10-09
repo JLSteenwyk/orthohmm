@@ -1,0 +1,622 @@
+{
+  "schema": "native_qfo_four_cell_strata_integration_execution_v1",
+  "integration_source_revision": "0be0d844",
+  "rendering_recovery_source_revision": "6b393fee",
+  "tests": [
+    {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_native_qfo_four_cell_strata_integration.py tests/unit/test_native_qfo_four_cell_strata_v2.py tests/unit/test_native_qfo_four_cell_strata.py tests/unit/test_native_qfo_three_cell_strata.py tests/unit/test_swiss_model_divergence_strata.py",
+      "result": {
+        "chunk_id": "2bdbc3",
+        "wall_time_seconds": 2.311803506,
+        "exit_code": 0,
+        "original_token_count": 65,
+        "output": "........................................................................ [ 46%]\n........................................................................ [ 92%]\n............                                                             [100%]\n156 passed in 2.22s\n"
+      }
+    },
+    {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_profile_stratum_review.py tests/unit/test_native_qfo_four_cell_strata_integration.py tests/unit/test_native_qfo_four_cell_strata_v2.py tests/unit/test_native_qfo_four_cell_strata.py tests/unit/test_native_qfo_three_cell_strata.py tests/unit/test_swiss_model_divergence_strata.py",
+      "result": {
+        "chunk_id": "4d67fb",
+        "wall_time_seconds": 2.546312814,
+        "exit_code": 0,
+        "original_token_count": 65,
+        "output": "........................................................................ [ 43%]\n........................................................................ [ 86%]\n......................                                                   [100%]\n166 passed in 2.45s\n"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "name": "fourcell_integration_actual",
+      "code": "import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.integrate_native_qfo_four_cell_strata import run\nfrom benchmark_tools.export_native_qfo_three_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1\"\nmanuscript=root/\"benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md\"\nresult=run(root,output,manuscript)\nprint(json.dumps(dict(manifest=record(output/\"manifest.json\"),manuscript=result[\"manuscript\"],profile_bin_rows=result[\"profile_bin_rows\"],profile_value_cells=result[\"profile_value_cells\"],changed_family_counts=result[\"changed_family_counts\"],started_unix=started,ended_unix=time.time(),publication_ready=False),allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.integrate_native_qfo_four_cell_strata import run\nfrom benchmark_tools.export_native_qfo_three_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1\"\nmanuscript=root/\"benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md\"\nresult=run(root,output,manuscript)\nprint(json.dumps(dict(manifest=record(output/\"manifest.json\"),manuscript=result[\"manuscript\"],profile_bin_rows=result[\"profile_bin_rows\"],profile_value_cells=result[\"profile_value_cells\"],changed_family_counts=result[\"changed_family_counts\"],started_unix=started,ended_unix=time.time(),publication_ready=False),allow_nan=False))\n'",
+      "result": {
+        "chunk_id": "f21f76",
+        "wall_time_seconds": 0.000011027,
+        "exit_code": 0,
+        "original_token_count": 205,
+        "output": "{\"manifest\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/manifest.json\", \"bytes\": 2861, \"sha256\": \"652f0a593ec8966d55158674a94c47c01a40ad53eaa835a865313d5ffd44ed7a\"}, \"manuscript\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md\", \"bytes\": 87595, \"sha256\": \"60af8bf7ead43a3860eee6c923fc793895a8d8ae8e5564a30b0fe0daef131efc\"}, \"profile_bin_rows\": 23, \"profile_value_cells\": 69, \"changed_family_counts\": [{\"family\": \"CASP\", \"TP\": 0, \"FP\": -3, \"FN\": 0, \"TN\": 3}, {\"family\": \"GH14\", \"TP\": -1, \"FP\": 0, \"FN\": 1, \"TN\": 0}], \"started_unix\": 1791573088.2680006, \"ended_unix\": 1791573088.273514, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_independent",
+      "code": "import csv,hashlib,json\nfrom pathlib import Path\nroot=Path.cwd()/\"benchmark_tools/results\"\nout=root/\"native_qfo_four_cell_strata_integration_20261009_v1\"\nmanifest=json.loads((out/\"manifest.json\").read_text())\ndef check(ref):\n    p=Path(ref[\"path\"]);d=p.read_bytes()\n    assert len(d)==ref[\"bytes\"] and hashlib.sha256(d).hexdigest()==ref[\"sha256\"]\nfor ref in [*manifest[\"inputs\"].values(),manifest[\"source\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    check(ref)\nresult=json.loads(Path(manifest[\"inputs\"][\"result\"][\"path\"]).read_text())\nreader=json.loads(Path(manifest[\"inputs\"][\"reader\"][\"path\"]).read_text())\nassert reader[\"report\"]==manifest[\"inputs\"][\"result\"]\nassert result[\"schema\"]==\"native_qfo_four_cell_strata_v2\" and reader[\"schema\"]==\"native_qfo_four_cell_strata_rational_readback_v2\"\nassert manifest[\"table_scale\"]==100 and manifest[\"tsv_scale\"]==1 and manifest[\"new_bootstrap_draws\"]==0 and not manifest[\"new_inference_or_scoring\"] and not manifest[\"publication_ready\"]\nmethods=(out/\"methods_section.md\").read_text();section=(out/\"results_section.md\").read_text()\nparent=Path(manifest[\"inputs\"][\"parent\"][\"path\"]).read_text()\ndraft=Path(manifest[\"manuscript\"][\"path\"]).read_text()\nassert methods not in parent and section not in parent and draft.count(methods)==draft.count(section)==1\nassert draft.replace(methods,\"\",1).replace(section,\"\",1)==parent\nsource=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nfields=[\"suite\",\"stratum\",\"families\",\"status\",\"F1\",\"PPV\",\"TPR\"]\nwith (out/\"profile_bins.tsv\").open() as f:\n    parser=csv.DictReader(f,delimiter=\"\\t\");text=list(parser)\nassert parser.fieldnames==fields and len(text)==len(source)==23\nlines=[]\nfor original,row in zip(source,text):\n    assert all(row[k]==str(original[k]) for k in fields[:4])\n    for metric in fields[4:]:\n        assert row[metric]==\"NA\" if original[metric] is None else float(row[metric])==original[metric]\n    numbers=[\"NA\" if original[m] is None else format(100*original[m],\"+.3f\") for m in fields[4:]]\n    lines.append(\"| \"+\" | \".join([original[\"suite\"],original[\"stratum\"],str(original[\"families\"]),*numbers])+\" |\")\nsuites={\"sequence\",\"domain\",\"duplication\",\"model_distance\"}\nactual=[line for line in section.splitlines() if line.startswith(\"| \") and line.split(\"|\")[1].strip() in suites]\nassert actual==lines\ncounts={(r[\"cell\"],r[\"family\"]):r[\"counts_without_prior\"] for r in result[\"family_rows\"]}\nchanges=[]\nfor family in sorted(result[\"memberships\"]):\n    delta={k:counts[\"p1_c0_r1\",family][k]-counts[\"p0_c0_r1\",family][k] for k in (\"TP\",\"FP\",\"FN\",\"TN\")}\n    if any(delta.values()): changes.append(dict(family=family,**delta))\nassert changes==manifest[\"changed_family_counts\"]==[dict(family=\"CASP\",TP=0,FP=-3,FN=0,TN=3),dict(family=\"GH14\",TP=-1,FP=0,FN=1,TN=0)]\nfor row in changes:\n    line=\"| \"+\" | \".join([row[\"family\"],*[format(row[k],\"+d\") for k in (\"TP\",\"FP\",\"FN\",\"TN\")]])+\" |\"\n    assert section.count(line)==1\nfor phrase in (\"-0.320215\",\"+0.132851\",\"-0.762755\",\"+0.160465\",\"-0.794278\",\"No subgroup intervals were computed\",\"not a general entropy\",\"Five empty bins support no effect\"):\n    assert phrase in section,phrase\nfor ref in [*manifest[\"inputs\"].values(),manifest[\"source\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    check(ref)\nprint(json.dumps(dict(status=\"independent_profile_strata_manuscript_readback_passed\",profile_rows=23,raw_and_human_value_cells=69,count_changes_verified=changes,parent_body_restored_exactly=True,no_integration_helper_imported=True,publication_ready=False)))\n",
+      "command": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import csv,hashlib,json\nfrom pathlib import Path\nroot=Path.cwd()/\"benchmark_tools/results\"\nout=root/\"native_qfo_four_cell_strata_integration_20261009_v1\"\nmanifest=json.loads((out/\"manifest.json\").read_text())\ndef check(ref):\n    p=Path(ref[\"path\"]);d=p.read_bytes()\n    assert len(d)==ref[\"bytes\"] and hashlib.sha256(d).hexdigest()==ref[\"sha256\"]\nfor ref in [*manifest[\"inputs\"].values(),manifest[\"source\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    check(ref)\nresult=json.loads(Path(manifest[\"inputs\"][\"result\"][\"path\"]).read_text())\nreader=json.loads(Path(manifest[\"inputs\"][\"reader\"][\"path\"]).read_text())\nassert reader[\"report\"]==manifest[\"inputs\"][\"result\"]\nassert result[\"schema\"]==\"native_qfo_four_cell_strata_v2\" and reader[\"schema\"]==\"native_qfo_four_cell_strata_rational_readback_v2\"\nassert manifest[\"table_scale\"]==100 and manifest[\"tsv_scale\"]==1 and manifest[\"new_bootstrap_draws\"]==0 and not manifest[\"new_inference_or_scoring\"] and not manifest[\"publication_ready\"]\nmethods=(out/\"methods_section.md\").read_text();section=(out/\"results_section.md\").read_text()\nparent=Path(manifest[\"inputs\"][\"parent\"][\"path\"]).read_text()\ndraft=Path(manifest[\"manuscript\"][\"path\"]).read_text()\nassert methods not in parent and section not in parent and draft.count(methods)==draft.count(section)==1\nassert draft.replace(methods,\"\",1).replace(section,\"\",1)==parent\nsource=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nfields=[\"suite\",\"stratum\",\"families\",\"status\",\"F1\",\"PPV\",\"TPR\"]\nwith (out/\"profile_bins.tsv\").open() as f:\n    parser=csv.DictReader(f,delimiter=\"\\t\");text=list(parser)\nassert parser.fieldnames==fields and len(text)==len(source)==23\nlines=[]\nfor original,row in zip(source,text):\n    assert all(row[k]==str(original[k]) for k in fields[:4])\n    for metric in fields[4:]:\n        assert row[metric]==\"NA\" if original[metric] is None else float(row[metric])==original[metric]\n    numbers=[\"NA\" if original[m] is None else format(100*original[m],\"+.3f\") for m in fields[4:]]\n    lines.append(\"| \"+\" | \".join([original[\"suite\"],original[\"stratum\"],str(original[\"families\"]),*numbers])+\" |\")\nsuites={\"sequence\",\"domain\",\"duplication\",\"model_distance\"}\nactual=[line for line in section.splitlines() if line.startswith(\"| \") and line.split(\"|\")[1].strip() in suites]\nassert actual==lines\ncounts={(r[\"cell\"],r[\"family\"]):r[\"counts_without_prior\"] for r in result[\"family_rows\"]}\nchanges=[]\nfor family in sorted(result[\"memberships\"]):\n    delta={k:counts[\"p1_c0_r1\",family][k]-counts[\"p0_c0_r1\",family][k] for k in (\"TP\",\"FP\",\"FN\",\"TN\")}\n    if any(delta.values()): changes.append(dict(family=family,**delta))\nassert changes==manifest[\"changed_family_counts\"]==[dict(family=\"CASP\",TP=0,FP=-3,FN=0,TN=3),dict(family=\"GH14\",TP=-1,FP=0,FN=1,TN=0)]\nfor row in changes:\n    line=\"| \"+\" | \".join([row[\"family\"],*[format(row[k],\"+d\") for k in (\"TP\",\"FP\",\"FN\",\"TN\")]])+\" |\"\n    assert section.count(line)==1\nfor phrase in (\"-0.320215\",\"+0.132851\",\"-0.762755\",\"+0.160465\",\"-0.794278\",\"No subgroup intervals were computed\",\"not a general entropy\",\"Five empty bins support no effect\"):\n    assert phrase in section,phrase\nfor ref in [*manifest[\"inputs\"].values(),manifest[\"source\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    check(ref)\nprint(json.dumps(dict(status=\"independent_profile_strata_manuscript_readback_passed\",profile_rows=23,raw_and_human_value_cells=69,count_changes_verified=changes,parent_body_restored_exactly=True,no_integration_helper_imported=True,publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "24dc42",
+        "wall_time_seconds": 0.00001314,
+        "exit_code": 0,
+        "original_token_count": 93,
+        "output": "{\"status\": \"independent_profile_strata_manuscript_readback_passed\", \"profile_rows\": 23, \"raw_and_human_value_cells\": 69, \"count_changes_verified\": [{\"family\": \"CASP\", \"TP\": 0, \"FP\": -3, \"FN\": 0, \"TN\": 3}, {\"family\": \"GH14\", \"TP\": -1, \"FP\": 0, \"FN\": 1, \"TN\": 0}], \"parent_body_restored_exactly\": true, \"no_integration_helper_imported\": true, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_render",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.render_manuscript_review import render\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nbase=root/\"benchmark_tools/results\"\nresult=render(root,base/\"native_qfo_four_cell_strata_manuscript_20261009_v1.md\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"publication_bibliography_20261007_v1.csl.json\")\nprint(json.dumps(dict(status=result[\"status\"],html=result[\"html\"],assets=record(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\"),citation_ids=result[\"citation_ids\"],local_occurrences=result[\"local_occurrences\"],unique_targets=result[\"unique_targets\"],stderr=result[\"stderr\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.render_manuscript_review import render\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nbase=root/\"benchmark_tools/results\"\nresult=render(root,base/\"native_qfo_four_cell_strata_manuscript_20261009_v1.md\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"publication_bibliography_20261007_v1.csl.json\")\nprint(json.dumps(dict(status=result[\"status\"],html=result[\"html\"],assets=record(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\"),citation_ids=result[\"citation_ids\"],local_occurrences=result[\"local_occurrences\"],unique_targets=result[\"unique_targets\"],stderr=result[\"stderr\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "f491a2",
+        "wall_time_seconds": 1.104147003,
+        "exit_code": 0,
+        "original_token_count": 254,
+        "output": "{\"status\": \"manuscript_review_rendered\", \"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\", \"bytes\": 118564, \"sha256\": \"d457907836a1d739bb1fcaeee5751c6a942f244f355004d2ff786277a613d1c8\"}, \"assets\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\", \"bytes\": 60988, \"sha256\": \"d430d54836357d2790f742102f78a9e31bc5d940a80ebacebe6303f7182418d2\"}, \"citation_ids\": [\"busco2021\", \"cpm2011\", \"diamond2021\", \"fastoma2025\", \"iqtree3_2026\", \"kuzmin2020\", \"leiden2019\", \"orthobench2020\", \"orthofinder2026\", \"orthofinder2026correction\", \"orthohmm2024preprint\", \"orthomcl2003\", \"proteinortho2023\", \"pyvolve2015\", \"qfo2016\", \"qfo2020\", \"sonicparanoid2024\", \"ygob2005\", \"zombi2019online\"], \"local_occurrences\": 128, \"unique_targets\": 123, \"stderr\": {\"parse\": \"\", \"render\": \"\"}, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_print",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\nbase=root/\"benchmark_tools/results\"\nresult=print_review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print\",Path(\"/opt/google/chrome/google-chrome\"),True)\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],pdf=result[\"pdf\"],returncode=result[\"returncode\"],elapsed_seconds=result[\"elapsed_seconds\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\nbase=root/\"benchmark_tools/results\"\nresult=print_review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print\",Path(\"/opt/google/chrome/google-chrome\"),True)\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],pdf=result[\"pdf\"],returncode=result[\"returncode\"],elapsed_seconds=result[\"elapsed_seconds\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "a0be2e",
+        "wall_time_seconds": 1.143795836,
+        "exit_code": 0,
+        "original_token_count": 102,
+        "output": "{\"status\": \"verified_html_printed\", \"page_count\": 25, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print/document.pdf\", \"bytes\": 505620, \"sha256\": \"05c54bb7bf4fb74b7f551697c452b080629fca392d27d2096615a2f9a962bcd6\"}, \"returncode\": 0, \"elapsed_seconds\": 0.8911560950800776, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_layout",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\nbase=root/\"benchmark_tools/results\"\nresult=review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print/document.pdf\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_layout\",[\"Four-Cell Profile Fixed-Stratum Extension\",\"Profile Refinement Across All Fixed Bins\",\"These patterns reflect the same retained changed families\"])\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],bounds_violations=result[\"bounds_violations\"],phrase_matches=result[\"phrase_matches\"],rendered_pages=result[\"rendered_pages\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\nbase=root/\"benchmark_tools/results\"\nresult=review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print/document.pdf\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_layout\",[\"Four-Cell Profile Fixed-Stratum Extension\",\"Profile Refinement Across All Fixed Bins\",\"These patterns reflect the same retained changed families\"])\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],bounds_violations=result[\"bounds_violations\"],phrase_matches=result[\"phrase_matches\"],rendered_pages=result[\"rendered_pages\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "15e9ef",
+        "wall_time_seconds": 0.913196874,
+        "exit_code": 0,
+        "original_token_count": 538,
+        "output": "{\"status\": \"pdf_bounds_checked\", \"page_count\": 25, \"bounds_violations\": [], \"phrase_matches\": {\"Four-Cell Profile Fixed-Stratum Extension\": [5], \"Profile Refinement Across All Fixed Bins\": [13], \"These patterns reflect the same retained changed families\": [14]}, \"rendered_pages\": [{\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_004.png\", \"bytes\": 243790, \"sha256\": \"4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_005.png\", \"bytes\": 239268, \"sha256\": \"9d997d1e6abed4a44b0fe91211dc54fbbef1204dd093ca8e08db0624a4d666a5\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_006.png\", \"bytes\": 258398, \"sha256\": \"df4779b6cdb9469ffd5fa9b272e95a99fec0db83f7b2ffc77e463c30589e54cc\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_012.png\", \"bytes\": 209538, \"sha256\": \"4394fa9869327ea4dcf367882f7f4f5e4041f1834701b68c5a250a8e7a58571c\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_013.png\", \"bytes\": 170895, \"sha256\": \"e2e93562a61d22de87ff45fd9be2f275692834db16adf473fcdf832d68c59a18\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_014.png\", \"bytes\": 187260, \"sha256\": \"a99c6738991fa00c870470834583fea43dfd5d050788c89d016a2c67d58b9894\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_015.png\", \"bytes\": 208325, \"sha256\": \"1b218936af6f2c41352daab0f7cd472865f8a550e1518d7009ca83190b9dc6c5\"}], \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_render_recovery",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.render_profile_stratum_review import run\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nbase=root/\"benchmark_tools/results\"\nresult=run(root,base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\")\nprint(json.dumps(dict(html=result[\"html\"],assets=record(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\"),rendering_recovery=result[\"rendering_recovery\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.render_profile_stratum_review import run\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record\nbase=root/\"benchmark_tools/results\"\nresult=run(root,base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\")\nprint(json.dumps(dict(html=result[\"html\"],assets=record(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\"),rendering_recovery=result[\"rendering_recovery\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "cd819b",
+        "wall_time_seconds": 0.395464287,
+        "exit_code": 0,
+        "original_token_count": 389,
+        "output": "{\"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\", \"bytes\": 119549, \"sha256\": \"720c48083adb82b5af47f1e5541dcd14fcc4086365aacfabf79ba8cc2aaedd35\"}, \"assets\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\", \"bytes\": 63038, \"sha256\": \"9584240bb41789876863ed2ad96d0822476e0e0acabba0cfad9165726315a733\"}, \"rendering_recovery\": {\"operation\": \"insert_scoped_print_css_only\", \"original_inputs\": {\"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\", \"bytes\": 118564, \"sha256\": \"d457907836a1d739bb1fcaeee5751c6a942f244f355004d2ff786277a613d1c8\"}, \"assets\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json\", \"bytes\": 60988, \"sha256\": \"d430d54836357d2790f742102f78a9e31bc5d940a80ebacebe6303f7182418d2\"}}, \"source\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_profile_stratum_review.py\", \"bytes\": 6022, \"sha256\": \"7426a356e8723cb5d09c2d96ea19717dc266368b265dfd723f3ff8c3d711fdca\"}, \"scientific_html_unchanged\": true, \"profile_rows\": 23, \"all_columns_required\": 6, \"selector\": \"#profile-refinement-across-all-fixed-bins + p + table\"}, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_print_recovery",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\nbase=root/\"benchmark_tools/results\"\nresult=print_review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2\",Path(\"/opt/google/chrome/google-chrome\"),True)\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],pdf=result[\"pdf\"],returncode=result[\"returncode\"],elapsed_seconds=result[\"elapsed_seconds\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\nbase=root/\"benchmark_tools/results\"\nresult=print_review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2\",Path(\"/opt/google/chrome/google-chrome\"),True)\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],pdf=result[\"pdf\"],returncode=result[\"returncode\"],elapsed_seconds=result[\"elapsed_seconds\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "f74174",
+        "wall_time_seconds": 1.150819766,
+        "exit_code": 0,
+        "original_token_count": 103,
+        "output": "{\"status\": \"verified_html_printed\", \"page_count\": 25, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\", \"bytes\": 507887, \"sha256\": \"f267d80682aa25de8e31bb65fc59c0b58970cd8382ca18e5da4d0ce8bd9d8d59\"}, \"returncode\": 0, \"elapsed_seconds\": 0.8963278101291507, \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_layout_recovery",
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\nbase=root/\"benchmark_tools/results\"\nresult=review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2\",[\"Four-Cell Profile Fixed-Stratum Extension\",\"Profile Refinement Across All Fixed Bins\",\"These patterns reflect the same retained changed families\"])\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],bounds_violations=result[\"bounds_violations\"],phrase_matches=result[\"phrase_matches\"],rendered_pages=result[\"rendered_pages\"],publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\nbase=root/\"benchmark_tools/results\"\nresult=review(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\",base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2\",[\"Four-Cell Profile Fixed-Stratum Extension\",\"Profile Refinement Across All Fixed Bins\",\"These patterns reflect the same retained changed families\"])\nprint(json.dumps(dict(status=result[\"status\"],page_count=result[\"page_count\"],bounds_violations=result[\"bounds_violations\"],phrase_matches=result[\"phrase_matches\"],rendered_pages=result[\"rendered_pages\"],publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "c16c88",
+        "wall_time_seconds": 0.926541547,
+        "exit_code": 0,
+        "original_token_count": 544,
+        "output": "{\"status\": \"pdf_bounds_checked\", \"page_count\": 25, \"bounds_violations\": [], \"phrase_matches\": {\"Four-Cell Profile Fixed-Stratum Extension\": [5], \"Profile Refinement Across All Fixed Bins\": [13], \"These patterns reflect the same retained changed families\": [14]}, \"rendered_pages\": [{\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_004.png\", \"bytes\": 243790, \"sha256\": \"4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_005.png\", \"bytes\": 239268, \"sha256\": \"9d997d1e6abed4a44b0fe91211dc54fbbef1204dd093ca8e08db0624a4d666a5\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_006.png\", \"bytes\": 258398, \"sha256\": \"df4779b6cdb9469ffd5fa9b272e95a99fec0db83f7b2ffc77e463c30589e54cc\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_012.png\", \"bytes\": 209538, \"sha256\": \"4394fa9869327ea4dcf367882f7f4f5e4041f1834701b68c5a250a8e7a58571c\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_013.png\", \"bytes\": 170398, \"sha256\": \"423197e384435c7492e8801415dd36bbd40c7b2ae5ebee3723d83ce1f756321b\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_014.png\", \"bytes\": 176840, \"sha256\": \"ad433ba0b7c3759ae555c06ec36922a3ee98d99a6b85508ec149876a4230812e\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_015.png\", \"bytes\": 207715, \"sha256\": \"432aeeca18d2160bff8a8dff9f8d4c540b88870289cf6d21d66d9bb40d63b744\"}], \"publication_ready\": false}\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_printed_independent",
+      "code": "import fitz,hashlib,json\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nbase=Path.cwd()/\"benchmark_tools/results\"\nold=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\").read_text()\nnew=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\").read_text()\nclass Styles(HTMLParser):\n    def __init__(self,text):\n        super().__init__();self.text=text;self.start=None;self.end=None;self.active=False;self.count=0\n    def offset(self):\n        line,col=self.getpos();return sum(len(x) for x in self.text.splitlines(keepends=True)[:line-1])+col\n    def handle_starttag(self,tag,attrs):\n        if tag==\"style\" and dict(attrs).get(\"id\")==\"profile-stratum-print-recovery\":\n            self.start=self.offset()-1;self.active=True;self.count+=1\n    def handle_endtag(self,tag):\n        if tag==\"style\" and self.active:\n            self.end=self.offset()+len(\"</style>\")+1;self.active=False\nparser=Styles(new);parser.feed(new);parser.close()\nassert parser.count==1 and parser.start is not None and parser.end is not None\nassert new[:parser.start]+new[parser.end:]==old\nassets=json.loads((base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\").read_text())\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    data=Path(ref[\"path\"]).read_bytes();assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nresult=json.loads((base/\"native_qfo_four_cell_strata_20261009_v2/report.json\").read_text())\nexpected=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nnames={r[\"stratum\"] for r in expected}\nbounds=(51.,112.2,316.2,362.1,428.4,494.7,561.)\nactual=[]\nnumeric_cells=0\npdf=base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\"\nwith fitz.open(pdf) as document:\n    assert len(document)==25\n    for page_index in (12,13):\n        page=document[page_index];words=page.get_text(\"words\")\n        anchors=sorted([w for w in words if w[4] in names and abs(w[0]-115.2)<1],key=lambda w:w[1])\n        for j,anchor in enumerate(anchors):\n            row=expected[len(actual)];y=anchor[1]\n            assert anchor[4]==row[\"stratum\"]\n            next_y=anchors[j+1][1] if j+1<len(anchors) else y+21\n            suite_words=sorted([w for w in words if bounds[0]<=w[0]<bounds[1] and y-.2<=w[1]<next_y-.2],key=lambda w:(w[1],w[0]))\n            assert \"\".join(w[4] for w in suite_words)==row[\"suite\"],(row,suite_words)\n            tokens=[]\n            for col in range(2,6):\n                matches=[w for w in words if bounds[col]<=w[0]<bounds[col+1] and abs(w[1]-y)<1]\n                assert len(matches)==1,(row,col,matches)\n                word=matches[0]\n                assert word[0]>=bounds[col]-1 and word[2]<=bounds[col+1]+1 and page.rect.contains(fitz.Rect(word[:4]))\n                tokens.append(word[4])\n            values=[str(row[\"families\"]),*[\"NA\" if row[m] is None else format(100*row[m],\"+.3f\") for m in (\"F1\",\"PPV\",\"TPR\")]]\n            assert tokens==values,(row,tokens,values)\n            numeric_cells+=3\n            actual.append(dict(page=page_index+1,suite=row[\"suite\"],stratum=row[\"stratum\"],families=row[\"families\"],printed_values=tokens[1:]))\nassert len(actual)==23 and numeric_cells==69\nprint(json.dumps(dict(status=\"printed_profile_strata_independent_coordinate_readback_passed\",pdf=dict(bytes=pdf.stat().st_size,sha256=hashlib.sha256(pdf.read_bytes()).hexdigest()),rows_checked=23,metric_cells_checked=69,all_family_sizes_and_suite_bin_labels_checked=True,all_numeric_cells_inside_columns_and_page=True,scientific_html_identical_except_scoped_style=True,rows=actual,publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import fitz,hashlib,json\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nbase=Path.cwd()/\"benchmark_tools/results\"\nold=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\").read_text()\nnew=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\").read_text()\nclass Styles(HTMLParser):\n    def __init__(self,text):\n        super().__init__();self.text=text;self.start=None;self.end=None;self.active=False;self.count=0\n    def offset(self):\n        line,col=self.getpos();return sum(len(x) for x in self.text.splitlines(keepends=True)[:line-1])+col\n    def handle_starttag(self,tag,attrs):\n        if tag==\"style\" and dict(attrs).get(\"id\")==\"profile-stratum-print-recovery\":\n            self.start=self.offset()-1;self.active=True;self.count+=1\n    def handle_endtag(self,tag):\n        if tag==\"style\" and self.active:\n            self.end=self.offset()+len(\"</style>\")+1;self.active=False\nparser=Styles(new);parser.feed(new);parser.close()\nassert parser.count==1 and parser.start is not None and parser.end is not None\nassert new[:parser.start]+new[parser.end:]==old\nassets=json.loads((base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\").read_text())\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    data=Path(ref[\"path\"]).read_bytes();assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nresult=json.loads((base/\"native_qfo_four_cell_strata_20261009_v2/report.json\").read_text())\nexpected=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nnames={r[\"stratum\"] for r in expected}\nbounds=(51.,112.2,316.2,362.1,428.4,494.7,561.)\nactual=[]\nnumeric_cells=0\npdf=base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\"\nwith fitz.open(pdf) as document:\n    assert len(document)==25\n    for page_index in (12,13):\n        page=document[page_index];words=page.get_text(\"words\")\n        anchors=sorted([w for w in words if w[4] in names and abs(w[0]-115.2)<1],key=lambda w:w[1])\n        for j,anchor in enumerate(anchors):\n            row=expected[len(actual)];y=anchor[1]\n            assert anchor[4]==row[\"stratum\"]\n            next_y=anchors[j+1][1] if j+1<len(anchors) else y+21\n            suite_words=sorted([w for w in words if bounds[0]<=w[0]<bounds[1] and y-.2<=w[1]<next_y-.2],key=lambda w:(w[1],w[0]))\n            assert \"\".join(w[4] for w in suite_words)==row[\"suite\"],(row,suite_words)\n            tokens=[]\n            for col in range(2,6):\n                matches=[w for w in words if bounds[col]<=w[0]<bounds[col+1] and abs(w[1]-y)<1]\n                assert len(matches)==1,(row,col,matches)\n                word=matches[0]\n                assert word[0]>=bounds[col]-1 and word[2]<=bounds[col+1]+1 and page.rect.contains(fitz.Rect(word[:4]))\n                tokens.append(word[4])\n            values=[str(row[\"families\"]),*[\"NA\" if row[m] is None else format(100*row[m],\"+.3f\") for m in (\"F1\",\"PPV\",\"TPR\")]]\n            assert tokens==values,(row,tokens,values)\n            numeric_cells+=3\n            actual.append(dict(page=page_index+1,suite=row[\"suite\"],stratum=row[\"stratum\"],families=row[\"families\"],printed_values=tokens[1:]))\nassert len(actual)==23 and numeric_cells==69\nprint(json.dumps(dict(status=\"printed_profile_strata_independent_coordinate_readback_passed\",pdf=dict(bytes=pdf.stat().st_size,sha256=hashlib.sha256(pdf.read_bytes()).hexdigest()),rows_checked=23,metric_cells_checked=69,all_family_sizes_and_suite_bin_labels_checked=True,all_numeric_cells_inside_columns_and_page=True,scientific_html_identical_except_scoped_style=True,rows=actual,publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "337613",
+        "wall_time_seconds": 0.003734923,
+        "exit_code": 1,
+        "original_token_count": 121,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\n  File \"/usr/lib/python3.12/html/parser.py\", line 111, in feed\n    self.goahead(0)\n  File \"/usr/lib/python3.12/html/parser.py\", line 171, in goahead\n    k = self.parse_starttag(i)\n        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/html/parser.py\", line 338, in parse_starttag\n    self.handle_starttag(tag, attrs)\n  File \"<string>\", line 14, in handle_starttag\nTypeError: 'int' object is not callable\n"
+      }
+    },
+    {
+      "name": "fourcell_integration_printed_independent_v2",
+      "code": "import fitz,hashlib,json\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nbase=Path.cwd()/\"benchmark_tools/results\"\nold=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\").read_text()\nnew=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\").read_text()\nclass Styles(HTMLParser):\n    def __init__(self,text):\n        super().__init__();self.text=text;self.start=None;self.end=None;self.active=False;self.count=0\n    def position_offset(self):\n        line,col=self.getpos();return sum(len(x) for x in self.text.splitlines(keepends=True)[:line-1])+col\n    def handle_starttag(self,tag,attrs):\n        if tag==\"style\" and dict(attrs).get(\"id\")==\"profile-stratum-print-recovery\":\n            self.start=self.position_offset()-1;self.active=True;self.count+=1\n    def handle_endtag(self,tag):\n        if tag==\"style\" and self.active:\n            self.end=self.position_offset()+len(\"</style>\")+1;self.active=False\nparser=Styles(new);parser.feed(new);parser.close()\nassert parser.count==1 and parser.start is not None and parser.end is not None\nassert new[:parser.start]+new[parser.end:]==old\nassets=json.loads((base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\").read_text())\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    data=Path(ref[\"path\"]).read_bytes();assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nresult=json.loads((base/\"native_qfo_four_cell_strata_20261009_v2/report.json\").read_text())\nexpected=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nnames={r[\"stratum\"] for r in expected}\nbounds=(51.,112.2,316.2,362.1,428.4,494.7,561.)\nactual=[]\nnumeric_cells=0\npdf=base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\"\nwith fitz.open(pdf) as document:\n    assert len(document)==25\n    for page_index in (12,13):\n        page=document[page_index];words=page.get_text(\"words\")\n        anchors=sorted([w for w in words if w[4] in names and abs(w[0]-115.2)<1],key=lambda w:w[1])\n        for j,anchor in enumerate(anchors):\n            row=expected[len(actual)];y=anchor[1]\n            assert anchor[4]==row[\"stratum\"]\n            next_y=anchors[j+1][1] if j+1<len(anchors) else y+21\n            suite_words=sorted([w for w in words if bounds[0]<=w[0]<bounds[1] and y-.2<=w[1]<next_y-.2],key=lambda w:(w[1],w[0]))\n            assert \"\".join(w[4] for w in suite_words)==row[\"suite\"],(row,suite_words)\n            tokens=[]\n            for col in range(2,6):\n                matches=[w for w in words if bounds[col]<=w[0]<bounds[col+1] and abs(w[1]-y)<1]\n                assert len(matches)==1,(row,col,matches)\n                word=matches[0]\n                assert word[0]>=bounds[col]-1 and word[2]<=bounds[col+1]+1 and page.rect.contains(fitz.Rect(word[:4]))\n                tokens.append(word[4])\n            values=[str(row[\"families\"]),*[\"NA\" if row[m] is None else format(100*row[m],\"+.3f\") for m in (\"F1\",\"PPV\",\"TPR\")]]\n            assert tokens==values,(row,tokens,values)\n            numeric_cells+=3\n            actual.append(dict(page=page_index+1,suite=row[\"suite\"],stratum=row[\"stratum\"],families=row[\"families\"],printed_values=tokens[1:]))\nassert len(actual)==23 and numeric_cells==69\nprint(json.dumps(dict(status=\"printed_profile_strata_independent_coordinate_readback_passed\",pdf=dict(bytes=pdf.stat().st_size,sha256=hashlib.sha256(pdf.read_bytes()).hexdigest()),rows_checked=23,metric_cells_checked=69,all_family_sizes_and_suite_bin_labels_checked=True,all_numeric_cells_inside_columns_and_page=True,scientific_html_identical_except_scoped_style=True,rows=actual,publication_ready=False)))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import fitz,hashlib,json\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nbase=Path.cwd()/\"benchmark_tools/results\"\nold=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review.html\").read_text()\nnew=(base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html\").read_text()\nclass Styles(HTMLParser):\n    def __init__(self,text):\n        super().__init__();self.text=text;self.start=None;self.end=None;self.active=False;self.count=0\n    def position_offset(self):\n        line,col=self.getpos();return sum(len(x) for x in self.text.splitlines(keepends=True)[:line-1])+col\n    def handle_starttag(self,tag,attrs):\n        if tag==\"style\" and dict(attrs).get(\"id\")==\"profile-stratum-print-recovery\":\n            self.start=self.position_offset()-1;self.active=True;self.count+=1\n    def handle_endtag(self,tag):\n        if tag==\"style\" and self.active:\n            self.end=self.position_offset()+len(\"</style>\")+1;self.active=False\nparser=Styles(new);parser.feed(new);parser.close()\nassert parser.count==1 and parser.start is not None and parser.end is not None\nassert new[:parser.start]+new[parser.end:]==old\nassets=json.loads((base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json\").read_text())\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    data=Path(ref[\"path\"]).read_bytes();assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nresult=json.loads((base/\"native_qfo_four_cell_strata_20261009_v2/report.json\").read_text())\nexpected=[r for r in result[\"differences\"] if r[\"contrast\"]==\"P_at_C0_R1\"]\nnames={r[\"stratum\"] for r in expected}\nbounds=(51.,112.2,316.2,362.1,428.4,494.7,561.)\nactual=[]\nnumeric_cells=0\npdf=base/\"native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf\"\nwith fitz.open(pdf) as document:\n    assert len(document)==25\n    for page_index in (12,13):\n        page=document[page_index];words=page.get_text(\"words\")\n        anchors=sorted([w for w in words if w[4] in names and abs(w[0]-115.2)<1],key=lambda w:w[1])\n        for j,anchor in enumerate(anchors):\n            row=expected[len(actual)];y=anchor[1]\n            assert anchor[4]==row[\"stratum\"]\n            next_y=anchors[j+1][1] if j+1<len(anchors) else y+21\n            suite_words=sorted([w for w in words if bounds[0]<=w[0]<bounds[1] and y-.2<=w[1]<next_y-.2],key=lambda w:(w[1],w[0]))\n            assert \"\".join(w[4] for w in suite_words)==row[\"suite\"],(row,suite_words)\n            tokens=[]\n            for col in range(2,6):\n                matches=[w for w in words if bounds[col]<=w[0]<bounds[col+1] and abs(w[1]-y)<1]\n                assert len(matches)==1,(row,col,matches)\n                word=matches[0]\n                assert word[0]>=bounds[col]-1 and word[2]<=bounds[col+1]+1 and page.rect.contains(fitz.Rect(word[:4]))\n                tokens.append(word[4])\n            values=[str(row[\"families\"]),*[\"NA\" if row[m] is None else format(100*row[m],\"+.3f\") for m in (\"F1\",\"PPV\",\"TPR\")]]\n            assert tokens==values,(row,tokens,values)\n            numeric_cells+=3\n            actual.append(dict(page=page_index+1,suite=row[\"suite\"],stratum=row[\"stratum\"],families=row[\"families\"],printed_values=tokens[1:]))\nassert len(actual)==23 and numeric_cells==69\nprint(json.dumps(dict(status=\"printed_profile_strata_independent_coordinate_readback_passed\",pdf=dict(bytes=pdf.stat().st_size,sha256=hashlib.sha256(pdf.read_bytes()).hexdigest()),rows_checked=23,metric_cells_checked=69,all_family_sizes_and_suite_bin_labels_checked=True,all_numeric_cells_inside_columns_and_page=True,scientific_html_identical_except_scoped_style=True,rows=actual,publication_ready=False)))\n'",
+      "result": {
+        "chunk_id": "deb31d",
+        "wall_time_seconds": 0.422788761,
+        "exit_code": 0,
+        "original_token_count": 863,
+        "output": "{\"status\": \"printed_profile_strata_independent_coordinate_readback_passed\", \"pdf\": {\"bytes\": 507887, \"sha256\": \"f267d80682aa25de8e31bb65fc59c0b58970cd8382ca18e5da4d0ce8bd9d8d59\"}, \"rows_checked\": 23, \"metric_cells_checked\": 69, \"all_family_sizes_and_suite_bin_labels_checked\": true, \"all_numeric_cells_inside_columns_and_page\": true, \"scientific_html_identical_except_scoped_style\": true, \"rows\": [{\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"all\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"concentrated\", \"families\": 0, \"printed_values\": [\"NA\", \"NA\", \"NA\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"explicit_fragment\", \"families\": 0, \"printed_values\": [\"NA\", \"NA\", \"NA\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"higher_entropy\", \"families\": 9, \"printed_values\": [\"-0.763\", \"-0.529\", \"-0.926\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"lower_entropy\", \"families\": 9, \"printed_values\": [\"+0.133\", \"+0.509\", \"+0.000\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"missing\", \"families\": 0, \"printed_values\": [\"NA\", \"NA\", \"NA\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"missing_entropy\", \"families\": 0, \"printed_values\": [\"NA\", \"NA\", \"NA\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"no_explicit_fragment\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"not_concentrated\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"not_short_relative\", \"families\": 11, \"printed_values\": [\"-0.499\", \"-0.016\", \"-0.758\"]}, {\"page\": 13, \"suite\": \"sequence\", \"stratum\": \"short_relative\", \"families\": 7, \"printed_values\": [\"+0.000\", \"+0.000\", \"+0.000\"]}, {\"page\": 13, \"suite\": \"domain\", \"stratum\": \"all\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 13, \"suite\": \"domain\", \"stratum\": \"median_pfam_types_at_least_two\", \"families\": 6, \"printed_values\": [\"+0.000\", \"+0.000\", \"+0.000\"]}, {\"page\": 13, \"suite\": \"domain\", \"stratum\": \"median_pfam_types_below_two\", \"families\": 12, \"printed_values\": [\"-0.496\", \"-0.015\", \"-0.694\"]}, {\"page\": 13, \"suite\": \"domain\", \"stratum\": \"repeated_type_fraction_at_least_quarter\", \"families\": 3, \"printed_values\": [\"+0.000\", \"+0.000\", \"+0.000\"]}, {\"page\": 13, \"suite\": \"domain\", \"stratum\": \"repeated_type_fraction_below_quarter\", \"families\": 15, \"printed_values\": [\"-0.378\", \"-0.012\", \"-0.556\"]}, {\"page\": 13, \"suite\": \"duplication\", \"stratum\": \"all\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 14, \"suite\": \"duplication\", \"stratum\": \"lower_duplication_fraction\", \"families\": 9, \"printed_values\": [\"+0.000\", \"+0.000\", \"+0.000\"]}, {\"page\": 14, \"suite\": \"duplication\", \"stratum\": \"missing_duplication_fraction\", \"families\": 0, \"printed_values\": [\"NA\", \"NA\", \"NA\"]}, {\"page\": 14, \"suite\": \"duplication\", \"stratum\": \"upper_duplication_fraction\", \"families\": 9, \"printed_values\": [\"-0.680\", \"-0.020\", \"-0.926\"]}, {\"page\": 14, \"suite\": \"model_distance\", \"stratum\": \"all\", \"families\": 18, \"printed_values\": [\"-0.320\", \"-0.010\", \"-0.463\"]}, {\"page\": 14, \"suite\": \"model_distance\", \"stratum\": \"higher_than_median\", \"families\": 9, \"printed_values\": [\"+0.160\", \"+0.509\", \"+0.000\"]}, {\"page\": 14, \"suite\": \"model_distance\", \"stratum\": \"lower_or_equal_median\", \"families\": 9, \"printed_values\": [\"-0.794\", \"-0.529\", \"-0.926\"]}], \"publication_ready\": false}\n"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md",
+      "bytes": 87595,
+      "sha256": "60af8bf7ead43a3860eee6c923fc793895a8d8ae8e5564a30b0fe0daef131efc"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_review.html",
+      "bytes": 118564,
+      "sha256": "d457907836a1d739bb1fcaeee5751c6a942f244f355004d2ff786277a613d1c8"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_assets.json",
+      "bytes": 60988,
+      "sha256": "d430d54836357d2790f742102f78a9e31bc5d940a80ebacebe6303f7182418d2"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html",
+      "bytes": 119549,
+      "sha256": "720c48083adb82b5af47f1e5541dcd14fcc4086365aacfabf79ba8cc2aaedd35"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json",
+      "bytes": 63038,
+      "sha256": "9584240bb41789876863ed2ad96d0822476e0e0acabba0cfad9165726315a733"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/manifest.json",
+      "bytes": 2861,
+      "sha256": "652f0a593ec8966d55158674a94c47c01a40ad53eaa835a865313d5ffd44ed7a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/methods_section.md",
+      "bytes": 1415,
+      "sha256": "1c3626825f40a2f38cd6bb98d1ddc905e32de3eaa05860fd9ec69ed787553819"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/profile_bins.tsv",
+      "bytes": 2013,
+      "sha256": "789420e1cf6da93315862ee6bb6184cca9d3b5aa95ae8a68afb3965de43074e8"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/results_section.md",
+      "bytes": 3680,
+      "sha256": "e35ed86d26fa1112f855303775ff5c7bdbc1fabf341f15e4fb071e232e4c2a1a"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_004.png",
+      "bytes": 243790,
+      "sha256": "4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_005.png",
+      "bytes": 239268,
+      "sha256": "9d997d1e6abed4a44b0fe91211dc54fbbef1204dd093ca8e08db0624a4d666a5"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_006.png",
+      "bytes": 258398,
+      "sha256": "df4779b6cdb9469ffd5fa9b272e95a99fec0db83f7b2ffc77e463c30589e54cc"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_012.png",
+      "bytes": 209538,
+      "sha256": "4394fa9869327ea4dcf367882f7f4f5e4041f1834701b68c5a250a8e7a58571c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_013.png",
+      "bytes": 170895,
+      "sha256": "e2e93562a61d22de87ff45fd9be2f275692834db16adf473fcdf832d68c59a18"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_014.png",
+      "bytes": 187260,
+      "sha256": "a99c6738991fa00c870470834583fea43dfd5d050788c89d016a2c67d58b9894"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/page_015.png",
+      "bytes": 208325,
+      "sha256": "1b218936af6f2c41352daab0f7cd472865f8a550e1518d7009ca83190b9dc6c5"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout/report.json",
+      "bytes": 38131,
+      "sha256": "c8e1a3e6e9d27f4c545f1c0ae67b09e724a5fd6a87b4d0c9f52ec552b93975d9"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_004.png",
+      "bytes": 243790,
+      "sha256": "4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_005.png",
+      "bytes": 239268,
+      "sha256": "9d997d1e6abed4a44b0fe91211dc54fbbef1204dd093ca8e08db0624a4d666a5"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_006.png",
+      "bytes": 258398,
+      "sha256": "df4779b6cdb9469ffd5fa9b272e95a99fec0db83f7b2ffc77e463c30589e54cc"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_012.png",
+      "bytes": 209538,
+      "sha256": "4394fa9869327ea4dcf367882f7f4f5e4041f1834701b68c5a250a8e7a58571c"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_013.png",
+      "bytes": 170398,
+      "sha256": "423197e384435c7492e8801415dd36bbd40c7b2ae5ebee3723d83ce1f756321b"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_014.png",
+      "bytes": 176840,
+      "sha256": "ad433ba0b7c3759ae555c06ec36922a3ee98d99a6b85508ec149876a4230812e"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/page_015.png",
+      "bytes": 207715,
+      "sha256": "432aeeca18d2160bff8a8dff9f8d4c540b88870289cf6d21d66d9bb40d63b744"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2/report.json",
+      "bytes": 38969,
+      "sha256": "52cc40660da8ba5e297cfacf3242dab9e5a615a6dff53a766e46d2d1a9b2b151"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print/document.pdf",
+      "bytes": 505620,
+      "sha256": "05c54bb7bf4fb74b7f551697c452b080629fca392d27d2096615a2f9a962bcd6"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print/print.json",
+      "bytes": 36749,
+      "sha256": "7fba93a10ca5b2073b126bf6833daf921c8e342fa18a075cfad1590b01f4e2ae"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/document.pdf",
+      "bytes": 507887,
+      "sha256": "f267d80682aa25de8e31bb65fc59c0b58970cd8382ca18e5da4d0ce8bd9d8d59"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2/print.json",
+      "bytes": 37578,
+      "sha256": "f65709d05098fd739b7c395ea47d5d7608ef850945eed807de97fae2de36e731"
+    }
+  ],
+  "independent_scientific_readback": {
+    "status": "independent_profile_strata_manuscript_readback_passed",
+    "profile_rows": 23,
+    "raw_and_human_value_cells": 69,
+    "count_changes_verified": [
+      {
+        "family": "CASP",
+        "TP": 0,
+        "FP": -3,
+        "FN": 0,
+        "TN": 3
+      },
+      {
+        "family": "GH14",
+        "TP": -1,
+        "FP": 0,
+        "FN": 1,
+        "TN": 0
+      }
+    ],
+    "parent_body_restored_exactly": true,
+    "no_integration_helper_imported": true,
+    "publication_ready": false
+  },
+  "independent_printed_readback": {
+    "status": "printed_profile_strata_independent_coordinate_readback_passed",
+    "pdf": {
+      "bytes": 507887,
+      "sha256": "f267d80682aa25de8e31bb65fc59c0b58970cd8382ca18e5da4d0ce8bd9d8d59"
+    },
+    "rows_checked": 23,
+    "metric_cells_checked": 69,
+    "all_family_sizes_and_suite_bin_labels_checked": true,
+    "all_numeric_cells_inside_columns_and_page": true,
+    "scientific_html_identical_except_scoped_style": true,
+    "rows": [
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "all",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "concentrated",
+        "families": 0,
+        "printed_values": [
+          "NA",
+          "NA",
+          "NA"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "explicit_fragment",
+        "families": 0,
+        "printed_values": [
+          "NA",
+          "NA",
+          "NA"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "higher_entropy",
+        "families": 9,
+        "printed_values": [
+          "-0.763",
+          "-0.529",
+          "-0.926"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "lower_entropy",
+        "families": 9,
+        "printed_values": [
+          "+0.133",
+          "+0.509",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "missing",
+        "families": 0,
+        "printed_values": [
+          "NA",
+          "NA",
+          "NA"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "missing_entropy",
+        "families": 0,
+        "printed_values": [
+          "NA",
+          "NA",
+          "NA"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "no_explicit_fragment",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "not_concentrated",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "not_short_relative",
+        "families": 11,
+        "printed_values": [
+          "-0.499",
+          "-0.016",
+          "-0.758"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "sequence",
+        "stratum": "short_relative",
+        "families": 7,
+        "printed_values": [
+          "+0.000",
+          "+0.000",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "domain",
+        "stratum": "all",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "domain",
+        "stratum": "median_pfam_types_at_least_two",
+        "families": 6,
+        "printed_values": [
+          "+0.000",
+          "+0.000",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "domain",
+        "stratum": "median_pfam_types_below_two",
+        "families": 12,
+        "printed_values": [
+          "-0.496",
+          "-0.015",
+          "-0.694"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "domain",
+        "stratum": "repeated_type_fraction_at_least_quarter",
+        "families": 3,
+        "printed_values": [
+          "+0.000",
+          "+0.000",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "domain",
+        "stratum": "repeated_type_fraction_below_quarter",
+        "families": 15,
+        "printed_values": [
+          "-0.378",
+          "-0.012",
+          "-0.556"
+        ]
+      },
+      {
+        "page": 13,
+        "suite": "duplication",
+        "stratum": "all",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "duplication",
+        "stratum": "lower_duplication_fraction",
+        "families": 9,
+        "printed_values": [
+          "+0.000",
+          "+0.000",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "duplication",
+        "stratum": "missing_duplication_fraction",
+        "families": 0,
+        "printed_values": [
+          "NA",
+          "NA",
+          "NA"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "duplication",
+        "stratum": "upper_duplication_fraction",
+        "families": 9,
+        "printed_values": [
+          "-0.680",
+          "-0.020",
+          "-0.926"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "model_distance",
+        "stratum": "all",
+        "families": 18,
+        "printed_values": [
+          "-0.320",
+          "-0.010",
+          "-0.463"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "model_distance",
+        "stratum": "higher_than_median",
+        "families": 9,
+        "printed_values": [
+          "+0.160",
+          "+0.509",
+          "+0.000"
+        ]
+      },
+      {
+        "page": 14,
+        "suite": "model_distance",
+        "stratum": "lower_or_equal_median",
+        "families": 9,
+        "printed_values": [
+          "-0.794",
+          "-0.529",
+          "-0.926"
+        ]
+      }
+    ],
+    "publication_ready": false
+  },
+  "visual_review": {
+    "initial_pages_viewed": [
+      5,
+      13,
+      14
+    ],
+    "initial_profile_table_clipped": true,
+    "initial_pdf_visually_complete": false,
+    "recovered_pdf_pages_viewed": [
+      4,
+      5,
+      6,
+      12,
+      13,
+      14,
+      15
+    ],
+    "recovered_profile_table_columns_visible": 6,
+    "recovered_changed_pages_readable_without_observed_clipping_or_overlap": true,
+    "other_pages_not_manually_viewed": 18,
+    "full_document_visual_certification": false
+  },
+  "readback_recovery": {
+    "failed_check": "fourcell_integration_printed_independent",
+    "diagnosis": "The inline reader helper named offset collided with HTMLParser's integer offset field; the check stopped before PDF verification.",
+    "prospective_check": "fourcell_integration_printed_independent_v2",
+    "input_pdf_or_html_rewritten": false
+  },
+  "parent_body_unchanged_except_insertions": true,
+  "new_inference_or_scoring": false,
+  "new_bootstrap_draws": 0,
+  "independent_confirmation": false,
+  "new_accuracy_or_resource_admission": false,
+  "publication_ready": false
+}

@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Profile-Stratum Manuscript And Scoped Print Recovery Verified (2026-10-09)
+
+Full four-cell fixed-stratum science and manuscript integration are executed.
+Source0be0d844/final156tests; actual manuscript87595bytes/SHA60af8bf7,
+manifest2861bytes/SHA652f0a59. Independent readback checks all23profile bins/
+69values, two localized count records and exact frozen-parent restoration.
+Initial print technically passed25pagebounds but visual review found TPR
+clipping; preserve that failed-visual attempt, not accepted visual completeness.
+
+Scoped successor source6b393fee/final166tests preserves every scientificHTML
+byte except one inserted style. Fresh render/print/layout EXIT0; correctedPDF
+25pages/507887bytes/SHAf267d80682aa25de8e31bb65fc59c0b58970cd8382ca18e5da4d0ce8bd9d8d59.
+Independent coordinate check verifies all23printed rows/69metric-or-NAcells,
+all family sizes/suite/bin labels and values inside actual columns/page.
+First inline check failed on helper-name collision with HTMLParser.offset;
+separately corrected inline check passed without input changes. Both retained.
+Actual correctedpages4-6/12-15 viewed/readable; other18not manually viewed.
+19citationIDs/128locallinks/123targets checked in inheritedoriginalrender;
+emptyPandocstderr. No full-document visual/scientific-readiness certification.
+NATIVE_QFO_FOUR_CELL_STRATA_INTEGRATION_RESULT_20261009.md and combined
+native_qfo_four_cell_strata_integration_execution_20261009_v1.json retain
+ten actual commands and29output identities including failures/recovery.
+
+Next commit/push new manuscript/insertion/TSV/manifest, initial and recovered
+HTML/assets/PDF/print/layout outputs and combined evidence/addendum. Stage
+only explicit paths, never private browser_profile or unrelated samples/archive.
+Then advance remaining original4.3fragment-truth gap: retained simulation
+protocol explicitly says missing20 is NOTfragmentation and existing panels
+exclude structural fragments. Inspect actual simulation generation/truth,
+frozen native method manifests and outcome identities to determine a bounded,
+prospective controlled-fragment observation test using valid existing baseline
+truth/results; do not relaunch completed panels or silently reinterpret flags
+as truth. Relevant sources: prepare_simulation_panel.py, run_simulation_generation.py,
+derive_simulation_conditions.py, simulation_conditions.py, prepare_simulation_methods.py.
+Freeze any genuinely new fragment condition/selection/scoring/controls before
+inference or score inspection. If retained baseline bindings cannot support
+it, record that concrete limitation and advance other original requirements.
+No new archive, prompt rewrite, biological-phylogeny claim or subgroupCI.
+Full goal ACTIVE; no live handles, host gate or routineapproval awaited.
+
 ## Scoped Print Recovery Tested; Fresh Render Next (2026-10-09)
 
 Prepared render_profile_stratum_review.py with HTMLParser verification of

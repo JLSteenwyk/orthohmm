@@ -1,0 +1,73 @@
+{
+  "changed_family_counts": [
+    {
+      "FN": 0,
+      "FP": -3,
+      "TN": 3,
+      "TP": 0,
+      "family": "CASP"
+    },
+    {
+      "FN": 1,
+      "FP": 0,
+      "TN": 0,
+      "TP": -1,
+      "family": "GH14"
+    }
+  ],
+  "inputs": {
+    "parent": {
+      "bytes": 82500,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md",
+      "sha256": "cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673"
+    },
+    "reader": {
+      "bytes": 8804,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_readback_20261009_v2.json",
+      "sha256": "1260c1c87ec4d3cbaa606a52225e94fc1fa084a689ba8af9e721f2f14966d1c2"
+    },
+    "result": {
+      "bytes": 125996,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2/report.json",
+      "sha256": "ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73"
+    }
+  },
+  "manuscript": {
+    "bytes": 87595,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md",
+    "sha256": "60af8bf7ead43a3860eee6c923fc793895a8d8ae8e5564a30b0fe0daef131efc"
+  },
+  "manuscript_rendered": false,
+  "new_bootstrap_draws": 0,
+  "new_inference_or_scoring": false,
+  "outputs": [
+    {
+      "bytes": 1415,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/methods_section.md",
+      "sha256": "1c3626825f40a2f38cd6bb98d1ddc905e32de3eaa05860fd9ec69ed787553819"
+    },
+    {
+      "bytes": 2013,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/profile_bins.tsv",
+      "sha256": "789420e1cf6da93315862ee6bb6184cca9d3b5aa95ae8a68afb3965de43074e8"
+    },
+    {
+      "bytes": 3680,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_integration_20261009_v1/results_section.md",
+      "sha256": "e35ed86d26fa1112f855303775ff5c7bdbc1fabf341f15e4fb071e232e4c2a1a"
+    }
+  ],
+  "parent_body_unchanged_except_insertions": true,
+  "profile_bin_rows": 23,
+  "profile_value_cells": 69,
+  "publication_ready": false,
+  "schema": "native_qfo_four_cell_strata_integration_v1",
+  "source": {
+    "bytes": 13170,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_native_qfo_four_cell_strata.py",
+    "sha256": "3addb6eba1d54891b6e448f81a2506b2ae34147865ffa7d185381f5796c84502"
+  },
+  "table_scale": 100,
+  "tsv_scale": 1,
+  "visual_reviewed": false
+}
