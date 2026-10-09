@@ -1,0 +1,88 @@
+{
+  "copied_verifiers_executed": true,
+  "executions": [
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "bundle_publication_package.py",
+        "verify",
+        ".",
+        "--manifest-sha256",
+        "c82edae203a0daceaafb731e90c7115856326aa19eadeffbc2f37727930f8773"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/orthohmm-study-2026.10.09-rc6-restored",
+      "elapsed_seconds": 0.33992653619498014,
+      "name": "outer",
+      "reader_sha256": "948efb04abfa84aea1c6822d9145592a15d54416838245f0c1bf569f5d81bbab",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"files\": 507,\n  \"manifest\": {\n    \"bytes\": 119231,\n    \"sha256\": \"c82edae203a0daceaafb731e90c7115856326aa19eadeffbc2f37727930f8773\"\n  },\n  \"native_inference_repeated\": false,\n  \"nested_component_execution_repeated\": false,\n  \"payload_bytes\": 215925778,\n  \"public_archive_uploaded\": false,\n  \"publication_ready\": false,\n  \"status\": \"local_publication_package_verified\",\n  \"version\": \"orthohmm-study-2026.10.09-rc6\"\n}\n",
+      "verified": {
+        "files": 507,
+        "manifest": {
+          "bytes": 119231,
+          "sha256": "c82edae203a0daceaafb731e90c7115856326aa19eadeffbc2f37727930f8773"
+        },
+        "native_inference_repeated": false,
+        "nested_component_execution_repeated": false,
+        "payload_bytes": 215925778,
+        "public_archive_uploaded": false,
+        "publication_ready": false,
+        "status": "local_publication_package_verified",
+        "version": "orthohmm-study-2026.10.09-rc6"
+      }
+    },
+    {
+      "command": [
+        "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "terminal-direct-review/benchmark_tools/bundle_publication_review.py",
+        "verify",
+        "terminal-direct-review",
+        "--manifest-sha256",
+        "506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396"
+      ],
+      "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/orthohmm-study-2026.10.09-rc6-restored",
+      "elapsed_seconds": 0.19015001016668975,
+      "name": "terminal_direct",
+      "reader_sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"direct_targets\": 110,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_review.html\",\n    \"markdown\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md\",\n    \"pdf\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_print/document.pdf\"\n  },\n  \"files\": 146,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 114,\n  \"manifest\": {\n    \"bytes\": 53744,\n    \"sha256\": \"506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396\"\n  },\n  \"page_count\": 22,\n  \"payload_bytes\": 45340378,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+      "verified": {
+        "direct_targets": 110,
+        "entrypoints": {
+          "html": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_review.html",
+          "markdown": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md",
+          "pdf": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_print/document.pdf"
+        },
+        "files": 146,
+        "inference_reproduced": false,
+        "local_html_occurrences": 114,
+        "manifest": {
+          "bytes": 53744,
+          "sha256": "506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396"
+        },
+        "page_count": 22,
+        "payload_bytes": 45340378,
+        "publication_ready": false,
+        "redistribution_clearance": false,
+        "status": "publication_direct_review_verified",
+        "transitive_evidence_included": false
+      }
+    }
+  ],
+  "native_inference_repeated": false,
+  "outside_checkout": true,
+  "public_archive_uploaded": false,
+  "publication_ready": false,
+  "schema": "publication_package_copied_verification_rc6_v1",
+  "scientific_scores_recomputed": false,
+  "transitive_runtime_restoration_proved": false,
+  "workflow_revision": "1b06c4049e22e25bd16e0a13e4004c37dfbfaa49"
+}

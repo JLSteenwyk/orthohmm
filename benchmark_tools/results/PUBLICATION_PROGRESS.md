@@ -1,5 +1,44 @@
 # Publication Progress
 
+## rc6 Executed; Scientific Requirement Reconciliation (2026-10-09)
+
+Source/tests/guide committed/pushed1b06c404 after128 tests passed. Production
+selection/build/archive/anchored restore executed once EXIT0. Selection505files,
+SHAa6d6049252533eda72db6fb669e858c1c03bd075df44bda696d8acbf6f63181c;
+package507 indexed payloads/215925778bytes; external indexSHA
+c82edae203a0daceaafb731e90c7115856326aa19eadeffbc2f37727930f8773.
+Archive151785046bytes SHA2b5f06534de05cf2b1c3778a0db28aff398cb0ed40af3e5e11a7bd680dc34207
+retained locally, not staged/uploaded. Fresh restore outside checkout under
+/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/orthohmm-study-2026.10.09-rc6-restored.
+Actual checksum-checked copied outer verifier EXIT0/0.3399s; terminal-direct
+verifier EXIT0/0.1902s,146files/22pages/110targets/114links. stderr empty.
+Execution/index/selection/tool receipts and PUBLICATION_PACKAGE_RC6_RESULT_20261009.md
+record exact scope. First tool-receipt serialization shell quoting failed
+before Python; corrected recording only, no repeated build/restore/verification.
+Full goal ACTIVE, no inference/retry/scoring/admission/default change/readiness.
+
+Current requirement reconciliation in
+PUBLICATION_REQUIREMENT_RECONCILIATION_20261009.md covers all36 numbered bullets,
+five engineering requirements, execution contract and unproven completion.
+Historical supported evidence is not fresh raw admission; unresolved uncertainty,
+literal biological truth/strata and provenance/runtime scope stay explicit.
+No extra all-method hermeticity/family-disjoint/OS/DOI gate is added. Existing
+separate-clade validation and permitted public-source limitation are retained.
+
+Next commit/push focused new metadata/result/reconciliation documents (not the
+151MB archive), then implement a separately named terminal native resource
+reporting successor. Inspect export_native_factorial_progress.py and its v7
+13-row snapshot, newer terminal reviews for7/8/9 and current QfO report10/11/12.
+v7 has resources only0-6 and stale unavailable placeholders7-12; recover actual
+already-reviewed observations without schema impersonation, scientific retries,
+cached stage sums or changing frozen sources. Add focused tests and retain
+success/failed-timing/failed-inference/missing-accuracy flags per identity.
+This is genuine requirement3.4 reporting, not another certification campaign.
+After that, advance unresolved scientific work from the seven-part assessment.
+All foreground sessions finished; no scientific live handle is awaited here.
+Unrelated samples/browser profile remain untouched. rc5, rc6 and direct component
+bytes remain immutable; do not rebuild them when updating this ledger.
+
 ## rc6 Selector Implementation (2026-10-09)
 
 Previous turn made progress by reconciling and committing/pushing the actual
