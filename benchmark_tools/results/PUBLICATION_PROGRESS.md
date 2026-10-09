@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Complete Profile-Stratum Manuscript Integration Tested (2026-10-09)
+
+Prepared integrate_native_qfo_four_cell_strata.py and focused tests against
+already executed/independently validated retained records. First run155pass/
+1failure: test parser accidentally counted the Markdown separator as data.
+Corrected that prospective test only; final156passed in2.22s, EXIT0.
+Tests check every23profile rows/69raw-to-human value cells,5empty bins,
+CASP/GH14count andmembership localization, complementary neutral bins,
+input/reader/schema/scope/NaN/identity refusal, serialization and exact frozen
+parent-body restoration. No source/result from a previous attempt changed.
+
+Next commit/push integration source/tests/ledger; then one fresh generation at
+native_qfo_four_cell_strata_integration_20261009_v1 and new manuscript
+native_qfo_four_cell_strata_manuscript_20261009_v1.md. Independently read back
+all23rows/69cells and count table/parent preservation, render with existing
+publication_bibliography_20261007_v1.csl.json, print using existing trusted
+local workflow and inspect changed pages. No new figure, subgroup uncertainty,
+archive, scientific inference/scoring or underlying projection rerun. Full
+goal ACTIVE; no live scientific handle, capacity or user-approval wait.
+
+## Four-Cell Stratum Manuscript Integration In Progress (2026-10-09)
+
+Validated v2report/complete tables/reader/actual command receipt/result addendum
+committed and pushed1cc014d0. Current task: implement/test
+integrate_native_qfo_four_cell_strata.py and focused tests, consuming only the
+committed report, executed reader and frozen comparator manuscript. Generate
+all23profile-bin effects including5empty and complementary unchanged bins,
+and a new Methods/Results insertion with exact parent-body preservation.
+Derive changed-family count descriptions from retained integer records;
+CASP3FP removals/GH14oneTP removal explain the observed pattern, not a
+general entropy/divergence effect or an isolated causal HMM edge.
+
+Next tests/sourcecommit before fresh generation at
+native_qfo_four_cell_strata_integration_20261009_v1 and
+native_qfo_four_cell_strata_manuscript_20261009_v1.md; independently check
+all23table rows/69numeric cells and parent restoration, render with existing
+checked bibliography/workflow, inspect changed pages and preserve old drafts.
+No new figure/uncertainty/archive campaign or old scientific recomputation.
+Full goal ACTIVE; no live handles/host/approval wait. Preserve unrelated
+samples, browser profiles and local archive; stage only focused task paths.
+
 ## Four-Cell Stratum Export And Independent Reader Executed (2026-10-09)
 
 Tested adapters/amendment pushed67dc83ab before the single fresh export.
