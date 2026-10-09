@@ -1,0 +1,27 @@
+{
+  "independent_readback": {
+    "code": "import csv, hashlib, json, math\nfrom pathlib import Path\nroot = Path.cwd()\nout = root / \"benchmark_tools/results/native_factorial_terminal_resources_20261009_v1\"\nreport = json.loads((out / \"report.json\").read_text())\nexpected = {}\nfor ref in report[\"evidence\"]:\n    raw = Path(ref[\"path\"]).read_bytes()\n    assert len(raw) == ref[\"bytes\"] and hashlib.sha256(raw).hexdigest() == ref[\"sha256\"]\n    value = json.loads(raw)\n    if value[\"schema\"] == \"native_factorial_reporting_snapshot_v1\":\n        baseline = value\n    elif value[\"schema\"] == \"native_qfo_terminal_failure_reporting_v1\":\n        qfo = {row[\"index\"]: row for row in value[\"rows\"]}\n    else:\n        expected[value[\"index\"]] = value\nrows = report[\"rows\"]\nassert [row[\"index\"] for row in rows] == list(range(13))\nassert report[\"baseline_rows_preserved\"] == baseline[\"rows\"]\nscopes = [\"wall_seconds\", \"cpu_seconds\", \"peak_memory_bytes\"]\nfor row in rows:\n    index = row[\"index\"]\n    if index < 7:\n        original = baseline[\"rows\"][index]\n        assert row[\"job_id\"] == original[\"job_id\"] and row[\"cell\"] == original[\"cell\"]\n        assert {key: row[key] for key in scopes} == {key: original[key] for key in scopes}\n    else:\n        review = expected[index]\n        assert row[\"job_id\"] == review[\"job_id\"] and row[\"cell\"] == review[\"cell\"]\n        resources = review[\"resources\"] or {key: None for key in scopes}\n        assert {key: row[key] for key in scopes} == resources\n        assert row[\"native_outcome\"] == review[\"status\"]\n    if index >= 6:\n        assert row[\"accuracy_admitted\"] == qfo[index][\"accuracy_admitted\"]\n        assert row[\"accuracy_status\"] == qfo[index][\"status\"]\n    assert row[\"new_timing_admission\"] is False\n    assert all(row[key] is None or math.isfinite(row[key]) for key in scopes)\nwith (out / \"resources.tsv\").open() as stream:\n    table = list(csv.DictReader(stream, delimiter=\"\\t\"))\nassert len(table) == 13\nfor left, right in zip(table, rows):\n    assert all(left[key] == (\"NA\" if right[key] is None else str(right[key])) for key in left)\nhuman = (out / \"resources.md\").read_text()\nfor row in rows:\n    assert \"| \" + row[\"dataset\"] + \" | \" + row[\"cell\"] + \" | \" + str(row[\"job_id\"]) + \" |\" in human\n    for key in scopes:\n        if row[key] is not None:\n            value = row[key] / (2**30 if key == \"peak_memory_bytes\" else 1)\n            assert f\"{value:.4f}\" in human\nassert sum(row[\"wall_seconds\"] is not None for row in rows) == 11\nassert sum(row[\"accuracy_admitted\"] for row in rows) == 10\nassert rows[7][\"wall_seconds\"] is None and rows[7][\"accuracy_admitted\"]\nassert rows[9][\"wall_seconds\"] is None and not rows[9][\"accuracy_admitted\"]\nassert not rows[11][\"accuracy_admitted\"] and not rows[12][\"accuracy_admitted\"]\nsummary = dict(schema=\"native_factorial_terminal_resource_readback_v1\", rows=13,\n    direct_input_pins_checked=len(report[\"evidence\"]), resource_vectors_checked=13,\n    tsv_cells_checked=sum(len(row) for row in table), measured_rows=11,\n    accuracy_admitted_rows=10, historical_baseline_preserved=True,\n    raw_accounting_replayed=False, new_scientific_admission=False, publication_ready=False)\nprint(json.dumps(summary))\n",
+    "result": {
+      "chunk_id": "6a9acf",
+      "exit_code": 0,
+      "original_token_count": 88,
+      "output": "{\"schema\": \"native_factorial_terminal_resource_readback_v1\", \"rows\": 13, \"direct_input_pins_checked\": 8, \"resource_vectors_checked\": 13, \"tsv_cells_checked\": 156, \"measured_rows\": 11, \"accuracy_admitted_rows\": 10, \"historical_baseline_preserved\": true, \"raw_accounting_replayed\": false, \"new_scientific_admission\": false, \"publication_ready\": false}\n",
+      "wall_time_seconds": 0.472227109
+    }
+  },
+  "native_inference_repeated": false,
+  "new_scientific_admission": false,
+  "production": {
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.export_native_factorial_terminal_resources import run; print(json.dumps(run(Path.cwd(),Path(\"benchmark_tools/results/native_factorial_terminal_resources_20261009_v1\"))))'",
+    "result": {
+      "chunk_id": "2450c2",
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "{\"rows\": 13, \"measured_rows\": 11, \"report\": {\"bytes\": 16135, \"sha256\": \"061f299cbeb2a1f2eeb69410ff548f4a90d5e9537767545cf02b23ba2a86af65\"}, \"publication_ready\": false}\n",
+      "wall_time_seconds": 0.487391171
+    }
+  },
+  "publication_ready": false,
+  "schema": "native_factorial_terminal_resource_execution_v1",
+  "source_revision": "9598abc900556ac94d750e557e9e587ad9f63367"
+}

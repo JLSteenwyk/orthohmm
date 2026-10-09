@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Terminal Resource Table Executed; Comparator Uncertainty Next (2026-10-09)
+
+Source/tests committed/pushed9598abc9 after final111-test suite. Actual terminal
+resource export executed once EXIT0 at
+benchmark_tools/results/native_factorial_terminal_resources_20261009_v1.
+13attempts/11measured/10admitted accuracy rows;16135byte report SHA
+061f299cbeb2a1f2eeb69410ff548f4a90d5e9537767545cf02b23ba2a86af65.
+Independent stdlib readback EXIT0 checks8direct pins/13resource vectors/156TSV
+cells/displayed values, accuracy flags and every unchanged v7 baseline row.
+Actual command/readback code/output retained in
+native_factorial_terminal_resource_execution_20261009_v1.json.
+NATIVE_FACTORIAL_TERMINAL_RESOURCE_RESULT_20261009.md records failure classes,
+resource scopes and separate historical configuration associations. No new
+timing admission, inference/scoring/retry/default or whole-goal certification.
+Original v7, rc5/rc6/direct archives and manuscript remain unchanged; the local
+151MB rc6 archive remains unstaged. Source test failure13cases was a new schema
+absence assumption, corrected before production, not a rerun of failed science.
+
+Current focused milestone: commit/push new report/TSV/Markdown/execution receipt
+and result document. After that advance genuinely unfinished scientific
+uncertainty work, not another package/audit campaign. Next inspect original
+SwissTrees comparator protocol and exact common-family records for the four
+admitted native QfO cells and retained full/sequence-only OrthoFinder rows.
+Determine whether a comparison/binding already exists and whether retained
+bootstrap kernels/protocols cover it before implementation or draws. Reuse
+any valid existing binding; do not duplicate completed intervals, silently
+expand correction inventories, change primary endpoints or select a favorable
+cell. If unsupported, document that specific inferential limit and identify
+the next scientifically valid unresolved action, not a new host/approval gate.
+Relevant entrypoints: native_qfo_four_cell_swiss_uncertainty_20261007_v1.json,
+qfo_recovered_swiss_uncertainty_22178.json, PUBLICATION_ABLATION_PROTOCOL_20260916.md,
+PUBLICATION_FOUR_CELL_CLAIMS_20261007.md and current terminal-failure snapshot.
+All foreground sessions finished; no live native/scoring handle is awaited.
+Full goal ACTIVE; next automatic continuation is this comparator-protocol and
+family-record inspection. Preserve unrelated dirty samples and frozen evidence.
+
 ## Terminal Native Resource Reporting Implementation (2026-10-09)
 
 rc6 actual execution/index/selection/result and requirement reconciliation
