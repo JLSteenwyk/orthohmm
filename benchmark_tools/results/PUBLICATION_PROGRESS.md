@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Four-Cell Stratum Export And Independent Reader Executed (2026-10-09)
+
+Tested adapters/amendment pushed67dc83ab before the single fresh export.
+Actual v2 export EXIT0:125996bytes/report SHA
+ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73.
+Independent reader EXIT0:8804bytes/SHA
+1260c1c87ec4d3cbaa606a52225e94fc1fa084a689ba8af9e721f2f14966d1c2.
+Verified72family/92score/69difference rows,69/46old values,23human rows,
+all TSVs and26direct refs; three explicit legacy-label mappings. No new
+inference/scoring/bootstrap/features or scientific admission. v1failure and
+attempt-bound source/input/test/protocol bytes remain unchanged.
+
+All23profile-bin effects are retained, including five empty bins. Overall
+F1change-.320215pp; lowerentropy+.132851/highdistance+.160465, complementary
+bins-.762755/-.794278. CASP3FP removals and GH14oneTP removal explain all
+changed family counts;16families unchanged. No subgroup CI, causal/default
+or general improvement follows. Fullresult and command/readback receipt:
+NATIVE_QFO_FOUR_CELL_STRATA_RESULT_20261009.md and
+native_qfo_four_cell_strata_execution_20261009_v2.json.
+
+Next commit/push the focused result/report/tables/readback/receipt/addendum,
+then add a tested machine-generated Methods/Results insertion with every
+profile-bin effect to a new manuscript based on
+native_qfo_comparator_manuscript_20261009_v1.md. Preserve exact parent body,
+older figures and archives, metadata amendment and actual scientific scopes.
+Use already checked renderer for the changed manuscript, not a new archive
+or unchanged science audit. Full goal ACTIVE; no live handles or host/approval
+wait. Preserve unrelated samples and local archive unstaged.
+
 ## Compatibility Recovery Tested; Real Export Not Yet Executed (2026-10-09)
 
 Prepared v2 exporter/independent-reader adapters and actual-vocabulary synthetic

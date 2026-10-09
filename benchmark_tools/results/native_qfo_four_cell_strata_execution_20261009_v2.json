@@ -1,0 +1,111 @@
+{
+  "schema": "native_qfo_four_cell_strata_execution_and_readback_v2",
+  "source_revision": "67dc83ab",
+  "production": {
+    "code": "import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.export_native_qfo_four_cell_strata_v2 import export\nfrom benchmark_tools.export_native_qfo_three_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2\"\nresult=export(root,output)\nprint(json.dumps(dict(report=record(output/\"report.json\"),rows={k:len(result[k]) for k in (\"family_rows\",\"rows\",\"differences\")},compatibility=result[\"compatibility\"],prior_score_rows_reproduced=result[\"prior_score_rows_reproduced\"],prior_difference_rows_reproduced=result[\"prior_difference_rows_reproduced\"],started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n",
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.export_native_qfo_four_cell_strata_v2 import export\nfrom benchmark_tools.export_native_qfo_three_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2\"\nresult=export(root,output)\nprint(json.dumps(dict(report=record(output/\"report.json\"),rows={k:len(result[k]) for k in (\"family_rows\",\"rows\",\"differences\")},compatibility=result[\"compatibility\"],prior_score_rows_reproduced=result[\"prior_score_rows_reproduced\"],prior_difference_rows_reproduced=result[\"prior_difference_rows_reproduced\"],started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n'",
+    "result": {
+      "chunk_id": "b05c7e",
+      "wall_time_seconds": 0.000010857,
+      "exit_code": 0,
+      "original_token_count": 337,
+      "output": "{\"report\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2/report.json\", \"bytes\": 125996, \"sha256\": \"ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73\"}, \"rows\": {\"family_rows\": 72, \"rows\": 92, \"differences\": 69}, \"compatibility\": {\"scope\": \"in_memory_metadata_only\", \"rows\": [{\"input\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"all\", \"retained\": \"native_pair\", \"normalized\": \"resolved_native_pairs\"}, {\"input\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"lower_or_equal_median\", \"retained\": \"native_pair\", \"normalized\": \"resolved_native_pairs\"}, {\"input\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"higher_than_median\", \"retained\": \"native_pair\", \"normalized\": \"resolved_native_pairs\"}], \"row_count\": 3, \"original_input_bytes_changed\": false, \"numerical_values_changed\": false}, \"prior_score_rows_reproduced\": 69, \"prior_difference_rows_reproduced\": 46, \"started_unix\": 1791572711.6501598, \"ended_unix\": 1791572711.6795828, \"python\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"executable\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python\", \"publication_ready\": false}\n"
+    }
+  },
+  "production_summary": {
+    "report": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2/report.json",
+      "bytes": 125996,
+      "sha256": "ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73"
+    },
+    "rows": {
+      "family_rows": 72,
+      "rows": 92,
+      "differences": 69
+    },
+    "compatibility": {
+      "scope": "in_memory_metadata_only",
+      "rows": [
+        {
+          "input": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "all",
+          "retained": "native_pair",
+          "normalized": "resolved_native_pairs"
+        },
+        {
+          "input": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "lower_or_equal_median",
+          "retained": "native_pair",
+          "normalized": "resolved_native_pairs"
+        },
+        {
+          "input": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "higher_than_median",
+          "retained": "native_pair",
+          "normalized": "resolved_native_pairs"
+        }
+      ],
+      "row_count": 3,
+      "original_input_bytes_changed": false,
+      "numerical_values_changed": false
+    },
+    "prior_score_rows_reproduced": 69,
+    "prior_difference_rows_reproduced": 46,
+    "started_unix": 1791572711.6501598,
+    "ended_unix": 1791572711.6795828,
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "publication_ready": false
+  },
+  "independent_readback": {
+    "code": "import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.readback_native_qfo_four_cell_strata_v2 import readback\nfrom benchmark_tools.readback_native_qfo_four_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_readback_20261009_v2.json\"\nresult=readback(Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2/report.json\"),\"ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73\",output)\nprint(json.dumps(dict(receipt=record(output),checks={k:result[k] for k in (\"compatibility_rows_checked\",\"family_rows_checked\",\"score_rows_checked\",\"differences_checked\",\"inherited_score_rows_reproduced\",\"inherited_difference_rows_reproduced\",\"score_tsv_rows\",\"difference_tsv_rows\",\"family_tsv_rows\",\"human_rows_checked\")},checked_inputs=len(result[\"checked_inputs\"]),started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n",
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.readback_native_qfo_four_cell_strata_v2 import readback\nfrom benchmark_tools.readback_native_qfo_four_cell_strata import record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_readback_20261009_v2.json\"\nresult=readback(Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2/report.json\"),\"ef3b9de78197a946399543b5aec0b35f0cbe9c89cce643da1a7024cae48fda73\",output)\nprint(json.dumps(dict(receipt=record(output),checks={k:result[k] for k in (\"compatibility_rows_checked\",\"family_rows_checked\",\"score_rows_checked\",\"differences_checked\",\"inherited_score_rows_reproduced\",\"inherited_difference_rows_reproduced\",\"score_tsv_rows\",\"difference_tsv_rows\",\"family_tsv_rows\",\"human_rows_checked\")},checked_inputs=len(result[\"checked_inputs\"]),started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n'",
+    "result": {
+      "chunk_id": "f5db77",
+      "wall_time_seconds": 0.000009986,
+      "exit_code": 0,
+      "original_token_count": 223,
+      "output": "{\"receipt\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_readback_20261009_v2.json\", \"bytes\": 8804, \"sha256\": \"1260c1c87ec4d3cbaa606a52225e94fc1fa084a689ba8af9e721f2f14966d1c2\"}, \"checks\": {\"compatibility_rows_checked\": 3, \"family_rows_checked\": 72, \"score_rows_checked\": 92, \"differences_checked\": 69, \"inherited_score_rows_reproduced\": 69, \"inherited_difference_rows_reproduced\": 46, \"score_tsv_rows\": 92, \"difference_tsv_rows\": 69, \"family_tsv_rows\": 72, \"human_rows_checked\": 23}, \"checked_inputs\": 26, \"started_unix\": 1791572724.0105145, \"ended_unix\": 1791572724.0333107, \"python\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"executable\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python\", \"publication_ready\": false}\n"
+    }
+  },
+  "readback_summary": {
+    "receipt": {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_readback_20261009_v2.json",
+      "bytes": 8804,
+      "sha256": "1260c1c87ec4d3cbaa606a52225e94fc1fa084a689ba8af9e721f2f14966d1c2"
+    },
+    "checks": {
+      "compatibility_rows_checked": 3,
+      "family_rows_checked": 72,
+      "score_rows_checked": 92,
+      "differences_checked": 69,
+      "inherited_score_rows_reproduced": 69,
+      "inherited_difference_rows_reproduced": 46,
+      "score_tsv_rows": 92,
+      "difference_tsv_rows": 69,
+      "family_tsv_rows": 72,
+      "human_rows_checked": 23
+    },
+    "checked_inputs": 26,
+    "started_unix": 1791572724.0105145,
+    "ended_unix": 1791572724.0333107,
+    "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+    "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python",
+    "publication_ready": false
+  },
+  "failed_v1_receipt": "native_qfo_four_cell_strata_failure_20261009_v1.json",
+  "attempt_bound_v1_source_unchanged": true,
+  "fresh_deterministic_reporting_recovery": true,
+  "new_inference": false,
+  "new_benchmark_scoring": false,
+  "new_bootstrap_draws": 0,
+  "new_accuracy_or_resource_admission": false,
+  "independent_confirmation": false,
+  "publication_ready": false
+}
