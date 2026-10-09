@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Four-Cell Stratum Implementation Handoff (2026-10-09)
+
+Comparator integration outputs/review and four-cell protocol are now committed
+and pushed21c78277. Prior turn made actual statistical/integration progress,
+not a wait or status-only turn. Protocol SHA
+fa512f814404bca3d88436b2484b32bda03a64d4efebe039a7e551f2791de58c.
+No new profile subgroup score has been calculated; no projection source yet.
+The produced/reviewed comparator report/manuscript/figure are immutable.
+gitdiff--check flagged24intentional trailing emptyTSV numeric fields and two
+section-separator EOFblanklines; these are generated-format warnings, not
+failed scientific checks. Preserve bound bytes; do not strip emptyTSV columns
+or separators and invalidate executed output/manuscript identities.
+
+Completed next-action schema inspection without subgroup projection:
+export_native_qfo_three_cell_strata.py SHAe6d0980f has reusable unchanged
+statistics/aggregate/same/write_tsv and explicit three-cell project guard.
+Exact distance source is export_swiss_model_divergence_strata.py SHA73ed6933,
+not swiss_model_divergence_strata.py. Distance family/score records have the
+same raw units but DIFFERENCEfields are F1_pp/PPV_pp/TPR_pp, not rawF1/PPV/TPR;
+new adapter must explicitly divide those retained differences by100 for
+prior-preservation checks, not impersonate a raw-unit schema. Distance uses
+math.fsum while fixed bins use sum; retain1e-12verification tolerance.
+Fixed report has54family/60score/40difference rows; distance54/9/6. Their
+independent readers are native_qfo_three_cell_strata_rational_readback_v2
+(reportbound,54/60/40) and swiss_model_divergence_strata_rational_readback_v1
+(reportbound,54/9/6). Profile reader schema
+allocated_native_qfo_profile_swiss_rational_readback_v1 binds audit rather
+than report and exposes rational_macro_points/native_family_records_checked.
+Profile audit allocated_native_qfo_swiss_family_count_audit_v1 selectsindex10,
+onecellp1_c0_r1/job23902; admission9fa1f24a/raw54877f7c. Seven protocolpins
+and exact schema keys are available in the committed protocol and actualfiles.
+
+Full goal ACTIVE; next automatic continuation: implement and test
+export_native_qfo_four_cell_strata.py and an independent Fractionreader, using
+the seven frozen inputs plus protocol/sourcepins and unchanged statistical
+kernel where valid. Synthetic subgroup fixtures only before sourcecommit;
+real prepare/binding checks may run without projection. Preserve all23bins,
+4cells/3contrasts,72family/92score/69difference rows and all69/46old values.
+Check canonical memberships, native admissions, original failed timing and
+count priors. Commit/push tested prospective source before selected export;
+then one fresh actual export and separately executed rational readback.
+No scoring/inference/bootstrap/feature extraction retry, newcutoff/default,
+subgroupinterval or oldschema impersonation. No live handles, userapproval,
+DGX or quiet host awaited. Other original scientific limitations remain open.
+
 ## Comparator Integration Executed; Four-Cell Stratum Extension Frozen (2026-10-09)
 
 Source/tests committed/pushed525e27b9 after69tests passed. Actual integration
