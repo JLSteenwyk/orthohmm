@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Compatibility Recovery Tested; Real Export Not Yet Executed (2026-10-09)
+
+Prepared v2 exporter/independent-reader adapters and actual-vocabulary synthetic
+regressions. Focused plus three adjacent suites:137passed in1.95s, EXIT0.
+Real prepare/metadata-only compatibility check verifies original pins and
+three mapping identities without selected subgroup projection. Invented
+end-to-end artifacts exercise all72family/92score/69contrast and23human rows,
+69/46prior values, new schema, independent mapping/arithmetic checks and
+input/output/provenance/overwrite refusal. v1 source/tests remain unchanged.
+Compatibility amendment SHA
+0edde329061ad42a9a3fe14d0e2a55373ffb285fa3e17a6715a72b4cac1b0fd4.
+
+Next focused milestone: commit/push export_native_qfo_four_cell_strata_v2.py,
+readback_native_qfo_four_cell_strata_v2.py, new unit tests, amendment and ledger.
+Then execute once with stdlib-isolated Python3.10 at fresh
+benchmark_tools/results/native_qfo_four_cell_strata_20261009_v2; use actual
+returned reportSHA for fresh independent output
+native_qfo_four_cell_strata_readback_20261009_v2.json. Retain actual commands/
+tool outputs, validate counts/prior preservation, and integrate all profile-bin
+effects and limits. No biological inference/scoring/timing/bootstrap retry,
+new cutoff/endpoint/default or old evidence overwrite. Full goal ACTIVE;
+no live handle, host gate or routine authorization awaits. Preserve unrelated
+samples and local archive unstaged.
+
+## Prospective Four-Cell Compatibility Recovery (2026-10-09)
+
+Prior turn made progress: current contract and actual failed-export receipt
+are committed/pushed99e0bb49. v1 output remains absent. No live job waits.
+Implementing export_native_qfo_four_cell_strata_v2.py and separately named
+independent-reader adapter with focused synthetic regression tests. Reuse
+v1 family/admission/statistical checks without modifying attempted source.
+Validate original fixed resolved_native_pairs and distance native_pair
+vocabularies, normalize only a copied distance-row metadata view, and preserve
+all three original row labels plus mapping in the truthful v2 output.
+Independent reader reuses its unchanged Fraction/table kernel only after
+checking the v2 schema and original metadata mapping separately.
+
+Compatibility amendment freezes this software-only correction; all original
+23bins/4cells/3contrasts/72family/92score/69difference rows and69/46prior values
+remain required. Synthetic projection only until source/test milestone pushed;
+real binding checks allowed without subgroup calculation. Next run focused and
+adjacent tests, commit/push validated prospective files, then one fresh v2
+export/readback and scientific interpretation of every profile-bin effect.
+Full goal ACTIVE; preserve previous failed receipt, source, protocol, inputs,
+unrelated samples and local archive. No inference/scoring/timing/bootstrap
+retry, new endpoint/cutoff/default, or additional host approval is needed.
+
 ## Actual Export Failure And Corrected Continuation Contract (2026-10-09)
 
 User reported repeated stops. Actual goal tool reports ACTIVE with no budget
