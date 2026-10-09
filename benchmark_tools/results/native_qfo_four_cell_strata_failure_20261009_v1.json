@@ -1,0 +1,101 @@
+{
+  "schema": "native_qfo_four_cell_strata_failed_export_v1",
+  "attempt_source_revision": "4b4e0bae0e86b1c6776d33cff3b92ad966dd9a27",
+  "sources": [
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_four_cell_strata.py",
+      "bytes": 17304,
+      "sha256": "024092bb653947ca2e6d1498498fe51273cd3718795abb0806367977073eac10"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_native_qfo_four_cell_strata.py",
+      "bytes": 15242,
+      "sha256": "9fb89edea6ea7f38f2cac25bb237c0cc9d475455d04e361ddab3eb9de60ef842"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_native_qfo_four_cell_strata.py",
+      "bytes": 15757,
+      "sha256": "783a9eb740e9e6426a402c532bad2aee55f765ca967f9fcfcaaf9f252701ed58"
+    },
+    {
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_FOUR_CELL_STRATA_PROTOCOL_20261009.md",
+      "bytes": 6624,
+      "sha256": "fa512f814404bca3d88436b2484b32bda03a64d4efebe039a7e551f2791de58c"
+    }
+  ],
+  "export": {
+    "code": "import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.export_native_qfo_four_cell_strata import export,record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_20261009_v1\"\nresult=export(root,output)\nprint(json.dumps(dict(report=record(output/\"report.json\"),rows={k:len(result[k]) for k in (\"family_rows\",\"rows\",\"differences\")},prior_score_rows_reproduced=result[\"prior_score_rows_reproduced\"],prior_difference_rows_reproduced=result[\"prior_difference_rows_reproduced\"],started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n",
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys,time\nfrom pathlib import Path\nroot=Path.cwd().resolve();sys.path.insert(0,str(root))\nfrom benchmark_tools.export_native_qfo_four_cell_strata import export,record\nstarted=time.time()\noutput=root/\"benchmark_tools/results/native_qfo_four_cell_strata_20261009_v1\"\nresult=export(root,output)\nprint(json.dumps(dict(report=record(output/\"report.json\"),rows={k:len(result[k]) for k in (\"family_rows\",\"rows\",\"differences\")},prior_score_rows_reproduced=result[\"prior_score_rows_reproduced\"],prior_difference_rows_reproduced=result[\"prior_difference_rows_reproduced\"],started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable,publication_ready=False),allow_nan=False))\n'",
+    "tool_result": {
+      "chunk_id": "38fe07",
+      "wall_time_seconds": 0.000009725,
+      "exit_code": 1,
+      "original_token_count": 197,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 7, in <module>\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_four_cell_strata.py\", line 241, in export\n    protocol=protocol, checked_inputs=checked, limitations=LIMITATIONS, **SCOPE, **project(docs))\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_four_cell_strata.py\", line 200, in project\n    require(all(new[k] == row[k] for k in (\"families\", \"family_members\", \"status\", \"prediction_semantics\")),\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_qfo_three_cell_strata.py\", line 62, in require\n    raise ValueError(message)\nValueError: Changed prior score identity\n"
+    }
+  },
+  "diagnosis": {
+    "code": "import json\nfrom pathlib import Path\nroot=Path.cwd()/\"benchmark_tools/results\"\nfixed=json.loads((root/\"native_qfo_three_cell_strata_20261007_v1/report.json\").read_text())\ndistance=json.loads((root/\"swiss_model_divergence_strata_20261007_v1/report.json\").read_text())\nmismatches=[]\nfor name,doc in ((\"fixed\",fixed),(\"distance\",distance)):\n    for row in doc[\"rows\"]:\n        suite=row.get(\"suite\",\"model_distance\")\n        members=doc[\"bins\"][row[\"stratum\"]] if name==\"distance\" else doc[\"bins\"][suite][row[\"stratum\"]]\n        expected=dict(families=len(members),family_members=members,status=\"descriptive\" if members else \"empty_bin\",\n            prediction_semantics=\"resolved_native_pairs\" if row[\"cell\"].endswith(\"r1\") else \"group_clique\")\n        differences={key:dict(retained=row[key],new_consumer_expected=value) for key,value in expected.items() if row[key]!=value}\n        if differences:\n            mismatches.append(dict(source=name,suite=suite,cell=row[\"cell\"],stratum=row[\"stratum\"],differences=differences))\noutput=root/\"native_qfo_four_cell_strata_20261009_v1\"\nprint(json.dumps(dict(status=\"retained_metadata_only_diagnosis\",mismatches=mismatches,\n    selected_projection_recomputed=False,output_exists=output.exists()),allow_nan=False))\n",
+    "command": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json\nfrom pathlib import Path\nroot=Path.cwd()/\"benchmark_tools/results\"\nfixed=json.loads((root/\"native_qfo_three_cell_strata_20261007_v1/report.json\").read_text())\ndistance=json.loads((root/\"swiss_model_divergence_strata_20261007_v1/report.json\").read_text())\nmismatches=[]\nfor name,doc in ((\"fixed\",fixed),(\"distance\",distance)):\n    for row in doc[\"rows\"]:\n        suite=row.get(\"suite\",\"model_distance\")\n        members=doc[\"bins\"][row[\"stratum\"]] if name==\"distance\" else doc[\"bins\"][suite][row[\"stratum\"]]\n        expected=dict(families=len(members),family_members=members,status=\"descriptive\" if members else \"empty_bin\",\n            prediction_semantics=\"resolved_native_pairs\" if row[\"cell\"].endswith(\"r1\") else \"group_clique\")\n        differences={key:dict(retained=row[key],new_consumer_expected=value) for key,value in expected.items() if row[key]!=value}\n        if differences:\n            mismatches.append(dict(source=name,suite=suite,cell=row[\"cell\"],stratum=row[\"stratum\"],differences=differences))\noutput=root/\"native_qfo_four_cell_strata_20261009_v1\"\nprint(json.dumps(dict(status=\"retained_metadata_only_diagnosis\",mismatches=mismatches,\n    selected_projection_recomputed=False,output_exists=output.exists()),allow_nan=False))\n'",
+    "tool_result": {
+      "chunk_id": "abe340",
+      "wall_time_seconds": 0.000009835,
+      "exit_code": 0,
+      "original_token_count": 197,
+      "output": "{\"status\": \"retained_metadata_only_diagnosis\", \"mismatches\": [{\"source\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"all\", \"differences\": {\"prediction_semantics\": {\"retained\": \"native_pair\", \"new_consumer_expected\": \"resolved_native_pairs\"}}}, {\"source\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"lower_or_equal_median\", \"differences\": {\"prediction_semantics\": {\"retained\": \"native_pair\", \"new_consumer_expected\": \"resolved_native_pairs\"}}}, {\"source\": \"distance\", \"suite\": \"model_distance\", \"cell\": \"p0_c0_r1\", \"stratum\": \"higher_than_median\", \"differences\": {\"prediction_semantics\": {\"retained\": \"native_pair\", \"new_consumer_expected\": \"resolved_native_pairs\"}}}], \"selected_projection_recomputed\": false, \"output_exists\": false}\n"
+    },
+    "metadata": {
+      "status": "retained_metadata_only_diagnosis",
+      "mismatches": [
+        {
+          "source": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "all",
+          "differences": {
+            "prediction_semantics": {
+              "retained": "native_pair",
+              "new_consumer_expected": "resolved_native_pairs"
+            }
+          }
+        },
+        {
+          "source": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "lower_or_equal_median",
+          "differences": {
+            "prediction_semantics": {
+              "retained": "native_pair",
+              "new_consumer_expected": "resolved_native_pairs"
+            }
+          }
+        },
+        {
+          "source": "distance",
+          "suite": "model_distance",
+          "cell": "p0_c0_r1",
+          "stratum": "higher_than_median",
+          "differences": {
+            "prediction_semantics": {
+              "retained": "native_pair",
+              "new_consumer_expected": "resolved_native_pairs"
+            }
+          }
+        }
+      ],
+      "selected_projection_recomputed": false,
+      "output_exists": false
+    }
+  },
+  "failure_stage": "prior_score_identity_metadata_check_before_output_directory_creation",
+  "output_exists_at_diagnosis": false,
+  "output_exists_at_receipt_check": false,
+  "result_written": false,
+  "independent_readback_executed": false,
+  "scientific_result_admitted": false,
+  "selected_projection_recomputed_during_diagnosis": false,
+  "new_inference_or_benchmark_scoring_run": false,
+  "publication_ready": false,
+  "recovery": "Separate tested prospective deterministic reporting adapter with explicit legacy label provenance; retain frozen inputs and this failed source."
+}

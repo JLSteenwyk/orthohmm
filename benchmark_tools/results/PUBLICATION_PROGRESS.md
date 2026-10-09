@@ -1,5 +1,46 @@
 # Publication Progress
 
+## Actual Export Failure And Corrected Continuation Contract (2026-10-09)
+
+User reported repeated stops. Actual goal tool reports ACTIVE with no budget
+limit; no paused/blocked transition or dispatcher fault was established.
+The prior TOP was stale: source/tests were pushed at4b4e0bae, and the real
+four-cell export executed once and exited1 before creating any output.
+No independent reader ran and no new scientific result was admitted.
+Exact retained command, code, traceback, metadata-only diagnosis and source
+hashes are in native_qfo_four_cell_strata_failure_20261009_v1.json.
+
+Diagnosis: exactly three model_distance rows for p0_c0_r1 retain the label
+native_pair; the new consumer expected resolved_native_pairs. All other
+checked prior-row identity fields match. Diagnosis did not repeat projection.
+Both vocabularies must be validated against the same retained admissions and
+count bindings, not silently relabeled or accepted by assertion.
+Existing v1 exporter, reader, tests, scientific protocol and inputs remain
+unchanged. native_qfo_four_cell_strata_20261009_v1 does not exist.
+
+Edited the ACTUAL goal-linked attachment and its version-controlled current
+copy together. Replaced repetitive operational clauses with a finite decision
+loop and explicit tested deterministic postprocessing recovery authorization.
+The seven scientific sections and completion criteria are preserved exactly.
+Shared-host contention remains accepted with unknown, potentially tool-specific
+timing distortion; no DGX, quiet window or routine approval is awaited.
+No platform lifecycle repair or guaranteed uninterrupted execution is claimed.
+
+Next executable action: add export_native_qfo_four_cell_strata_v2.py with a
+minimal explicit compatibility adapter, reusing the unchanged v1 family/count
+checks and statistical kernel. Preserve original labels and mapping provenance.
+Add tests reflecting the REAL distance native_pair vocabulary; reject other
+labels, changed cell identities or incorrect count/admission bindings. Test
+any prospective reader compatibility rather than impersonating a v1 schema.
+Retain the old source/test attempt unchanged. Commit/push focused tested source
+and compatibility amendment before one fresh deterministic v2 export; run its
+independent rational reader and integrate validated output. No biological
+inference, BLAST, scoring, timing or bootstrap retry is authorized or needed.
+Full goal ACTIVE; next automatic continuation is this compatibility recovery,
+not another prompt rewrite, unchanged audit or user-resume request. No live
+scientific handles are recorded at this boundary. Other original scientific
+limitations remain explicit. Preserve unrelated samples and local archive.
+
 ## Four-Cell Consumer And Rational Reader Tested (2026-10-09)
 
 Prepared exporter/independent reader/tests under the committed four-cell
