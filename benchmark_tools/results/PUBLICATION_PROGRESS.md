@@ -19,15 +19,26 @@ restores the exact parent. No inference, score or bootstrap is repeated.
 Validation uses absolute1e-15 for floating means across Python3.10/3.12;
 identities, integer counts, seed lists and original frozen bytes remain strict.
 
-Commit/push the tested generator, tests and this ledger before generation.
-Then execute exactly once at fresh paths, from the repo root:
-`benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.integrate_controlled_fragment_results import run; base=root/"benchmark_tools/results"; print(json.dumps(run(root,base/"controlled_fragment_integration_20261009_v1",base/"controlled_fragment_manuscript_20261009_v1.md")))'`
-Use the existing sanitized environment. Independently read back all emitted
-numbers and exact parent restoration, then render with the checked bibliography
-and existing workflow. Preserve any attempt-bound render; scope any needed
-profile/fragment table print correction prospectively. Inspect changed pages.
-No live job/session or resource gate remains. Full goal ACTIVE; representative
-fragment pipeline tracing follows integration. Unrelated samples untouched.
+Generator/tests committed and pushed421e7bfd BEFORE one actual generation,
+EXIT0. New manuscript controlled_fragment_manuscript_20261009_v1.md is96067bytes,
+SHA71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a;
+integration controlled_fragment_integration_20261009_v1/manifest.json.
+Independent reader EXIT0 verified all167displayed numbers, every TSV and exact
+parent restoration. Actual HTMLrender EXIT0:19citations/134links/129targets.
+Actual first PDFprinted EXIT0/28pages/SHA2af3b6f7d6bcb3ee4493134e1428f042fdce7b8457da4b04115815f7629dae98.
+Bounds check EXIT0/zero violations is insufficient: page14 clips the old
+profile table's rightmost TPR values. Preserve first HTML/assets/PDF/layout.
+
+Tested new render_controlled_fragment_review.py reuses the existing bounded
+profile.styled function; it adds only that established scoped print style,
+not scientific content or fragment-table changes. Commit/push this adapter,
+tests and ledger before applying it once. Then execute from root:
+`benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.render_controlled_fragment_review import run; b=root/"benchmark_tools/results"; r=run(root,b/"controlled_fragment_manuscript_20261009_v1_assets.json",b/"controlled_fragment_manuscript_20261009_v1_review_v2.html",b/"controlled_fragment_manuscript_20261009_v1_assets_v2.json"); print(json.dumps(r["rendering_recovery"]))'`
+Use sanitized environment. Print to new _print_v2, check all167fragment
+numeric cells and all69old profile values in PDF, and inspect changed pages.
+No live scientific job or resource gate remains. Full goal ACTIVE;
+representative fragment pipeline tracing follows integration. Unrelated
+samples untouched. Original attempt and generated integration not yet committed.
 
 ## Fragment Test Completed And Independently Verified (2026-10-09)
 
