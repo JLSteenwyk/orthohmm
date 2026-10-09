@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Fragment Representative Selection Tested (2026-10-09)
+
+Previous goal turn made actual progress: fccbeb68 pushed the integrated
+fragment manuscript and independently checked/rendered evidence. No repeat.
+Next original4.3 task advanced with a finite retrospective representative
+protocol and select_controlled_fragment_trace.py. ProtocolSHA
+bb5fadb866b33ec6131e61cc3159695aaa3d9dac483d33851610904c20694a9b.
+Rules: all4methods x3endpoint strata x7categories=84planned bins; count every
+eligible pair-record across10seeds, then choose one minimum SHA256 of
+method:category:seed:gene_a:gene_b per nonempty bin, stable lexical tie break.
+Categories include fragment FN/FP, new FN/FP, recovered FN/removed FP and
+retained TP controls. Empty bins retained; overlap and repeated representatives
+explicit. No preferred explanation or success-only selection.
+
+Tested synthetic categories/hash minimum/order independence/collision tie
+break/empty bins/malformed identity/unchanged bytes and adjacent converters.
+No real representative identities or stage explanations inspected yet.
+Selector binds original report/independent readback/prepared panel and all
+native execution/prediction inventories, reuses audited output converters,
+and requires exact retained integer TP/FP/FN. No new score, CI or admission.
+
+Commit/push protocol, selector, tests and ledger before one real selection at
+benchmark_tools/results/controlled_fragment_trace_selection_20261009_v1.
+Exact next command after that commit, sanitized environment:
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.select_controlled_fragment_trace import run; r=run(root,root/"benchmark_tools/results/controlled_fragment_trace_selection_20261009_v1"); print(json.dumps({k:r[k] for k in ("status","planned_bins","selected_records","unique_method_pair_records")}))'`
+Then independently verify all84bin counts and hash minima, without revealing
+individual stage causes, and implement/test the retained-stage trace adapter.
+Existing helpers graph/seed_sidecar, partition, read_nodes/pair_lca and
+reconstruct_nodes/apply_logged_constraints are reusable. Dev Python has
+Bio/NumPy/SciPy/DendroPy; no installation needed. Distinguish missing search
+hits from unobserved prefilter/scoring decisions and OF stage-unavailability
+from absence. No inference/clustering/reconciliation rerun, live job or host
+gate. Full goal ACTIVE; unrelated samples and browser profiles untouched.
+
 ## Fragment Manuscript Integrated; Goal Remains Active (2026-10-09)
 
 Actual progress, not another prompt revision: tested integration source421e7bfd
