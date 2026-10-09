@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Unexpected-Stop Check; Tested Executable Handoff (2026-10-09)
+
+User requested a stopping/prompt check. Actual goal API reports ACTIVE with no
+token budget. The linked attachment and PUBLICATION_GOAL_CURRENT.txt match SHA
+1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c.
+Both already authorize shared Threadripper contention, forbid quiet-host/DGX
+gates, and require continuation after milestones. No prompt contradiction or
+platform stopping cause was established; neither private lifecycle state nor
+the frozen/current prompts was modified. Do not rewrite the prompt again merely
+because this bounded user request ends. All seven scientific requirements remain.
+
+Advanced the real pending implementation instead of a status-only checkpoint.
+Focused/adjacent bootstrap/count tests initially returned3failed/69passed:
+the synthetic fixture supplied NumPy scalar aggregates where the unchanged
+legacy validator requires JSON-native numbers. Real source preparation/count
+validation passed. Corrected only the new test fixture with Python float values.
+Final invocation EXIT0:72passed in1.32s. No actual native bootstrap has executed.
+Source/tests and this checkpoint form the focused commit/push milestone.
+Unrelated sample changes and local151MB rc6 archive remain untouched/unstaged.
+
+Full goal ACTIVE; next automatic continuation: inspect git history and the fresh
+output path to confirm this source/test milestone was pushed and no production
+execution already exists. Then execute bootstrap_native_qfo_comparators.run once
+with the sanitized scientific Python, explicit repository import path and
+100000/20260920 controls at
+benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1.
+Use the existing48-endpoint protocol, retain24missing endpoints, independently
+read back the24estimated intervals/count statistic and integrate the scoped
+claims. No live benchmark handle or user/host approval is awaited. If an output
+already exists, reconcile it rather than duplicate execution. No inference,
+scoring, timing retry, new default or independent-confirmation claim follows.
+
+## Native Comparator Consumer Implementation (2026-10-09)
+
+Previous turn advanced actual rc6 execution, terminal resource consolidation and
+native-comparator feasibility/protocol, not a wait/no-progress turn. The latest
+protocol is committed/pushed30ffcddf. Current task: prepared separately named
+bootstrap_native_qfo_comparators.py and focused tests. Reuses unchanged native
+statistics, aggregate and legacy-count validator; adapts comparison routing and
+the original multinomial/quantile calculation to explicit48 endpoints. Old
+bootstrap entrypoint is fixed24, so no mutation or schema substitution is used.
+Exact parent/binding/snapshot/count/protocol/helper/reference checks precede draws.
+Tests use synthetic records for interval calculations; real artifacts are only
+prepared/validated without production bootstrap before source commit.
+
+Not yet tested/committed/production-executed. Next run focused and adjacent
+bootstrap tests, correct any defects, commit/push prospective source/tests,
+then execute once at a fresh output with100000/20260920 controls. Independently
+read back all24 estimable metric intervals and24 missing endpoints, exact macro
+statistics/family counts/multiplicity, then integrate honest results/claims.
+No method/scoring/inference/timing retry, new primary endpoint or independent
+confirmation follows. Full goal ACTIVE; no live handle/permission wait here.
+The prior post-commit handoff refresh is retained below with these new sources.
+
 ## Native Comparator Uncertainty Feasible; Protocol Frozen Before Intervals (2026-10-09)
 
 Terminal resource result/report/receipt committed/pushed9b8594b0. Advanced the
@@ -18,7 +72,8 @@ Six direct input pins retained. No raw scoring, bootstrap draw, interval or new
 scientific admission occurred. Initial inspection jq queried a nonexistent
 methods field and failed; corrected field inspection only, no scientific rerun.
 
-Prepared NATIVE_QFO_COMPARATOR_UNCERTAINTY_PROTOCOL_20261009.md for a separately
+Committed/pushed30ffcddf: feasibility receipt/executed code and
+NATIVE_QFO_COMPARATOR_UNCERTAINTY_PROTOCOL_20261009.md for a separately
 named retrospective conditional analysis: fixed8cells*2comparators*3metrics=48
 endpoints,4admitted cells/24estimable endpoints, all other endpoints missing.
 Explicitly does not change earlier24/42 corrections, primary endpoints, method,
@@ -28,7 +83,8 @@ family order where compatible. Conservative48-family quantiles0.05/96 and
 1-0.05/96; no favorable-cell/seed selection or pair-IID calculation. Historical
 P1C0R0 exists but is not silently inserted into the supplied fresh-cell snapshot.
 
-Next validate/commit/push feasibility receipt and prospective protocol, inspect
+Six pins/four native records/48-endpoint protocol scope and links validated;
+no draws executed. Next inspect
 the byte-bound run_corrected_swiss_comparison.py and its bootstrap/count helpers,
 then implement/test a separately named native comparator uncertainty consumer
 with exact input/family/statistic checks and explicit missing endpoints. Commit
@@ -36,8 +92,10 @@ prospective source/tests before any actual interval execution. Do not alter
 frozen helpers or relabel existing interval results. This is original goal4.1
 method-difference work, not another package/audit campaign or new scientific
 inference panel. All foreground sessions finished; no live handle waits.
-Full goal ACTIVE; next automatic continuation is this implementation after
-protocol commit. Local151MB rc6 archive/unrelated sample changes stay unstaged.
+Full goal ACTIVE; next automatic continuation is this implementation, with
+protocol already committed. This post-commit handoff refresh alone is uncommitted;
+retain it with the next source milestone. Local151MB rc6 archive/unrelated sample
+changes stay unstaged. Do not rerun feasibility or recommit the finished protocol.
 
 ## Terminal Resource Table Executed; Comparator Uncertainty Next (2026-10-09)
 
