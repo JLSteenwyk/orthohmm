@@ -1,0 +1,8 @@
+Cell	Status	Accuracy Admitted	Secondary Mean	Inference	Conversion	Scoring
+p0_c0_r0	supplied_native_admission	True	0.6900998166155209	See frozen snapshot	See frozen snapshot	See frozen snapshot
+p0_c0_r1	supplied_recovered_scientific_admission	True	0.7555392374929232	See frozen snapshot	See frozen snapshot	See frozen snapshot
+p0_c1_r0	supplied_native_admission	True	0.6847143500310757	See frozen snapshot	See frozen snapshot	See frozen snapshot
+p0_c1_r1	no_supplied_native_admission	False	Unavailable	See frozen snapshot	See frozen snapshot	See frozen snapshot
+p1_c0_r1	supplied_allocated_native_admission	True	0.7546377200341031	See frozen snapshot	See frozen snapshot	See frozen snapshot
+p1_c1_r0	scoring_OUT_OF_MEMORY_no_admission	False	Unavailable	successful_composed_terminal_review	successful_unscored_group_cliques	OUT_OF_MEMORY
+p1_c1_r1	native_SIGSEGV_no_admission	False	Unavailable	FAILED_SIGSEGV	not_run_failed_inference	not_run_failed_inference

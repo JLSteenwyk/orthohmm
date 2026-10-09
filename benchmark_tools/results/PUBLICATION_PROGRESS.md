@@ -1,11 +1,66 @@
 # Publication Progress
 
-## Terminal-Failure Reporting Preparation (2026-10-09)
+## Terminal Review Complete; Reporting Execution (2026-10-09)
 
-Previous turn made progress: stale continuation handoff corrected and
-committed/pushed7f33a6f3. Full seven-part goal ACTIVE. Fresh SAME24080 remains
-RUNNING00:09:41,2CPUs/128GiB; runtime/scheduler files only. No duplicate job,
-release, inference retry or partial-score admission is authorized.
+Previous goal turn was a verified wait plus bounded existing-dump check.
+This continuation performed actual waits300.0041s,300.0033s,300.0039s,60.0142s
+with SAME24080 post-checks. Reviewer24080COMPLETED0:0,00:47:52,2CPUs/128GiB.
+Final review.json exists,36151387bytes; SHA256
+a55a6da5ffb8dfbb362883937c915b161796a9ddd7275f4ac48a1c4d049e5c4a.
+Actual schema native12_composed_terminal_review_v1; status native_failure_retained,
+index12/cellp1_c1_r1/nativejob24036FAILED1:0. Terminal/resource/environment
+review flags true; native_outputs_validated/accuracy_evaluated/retry/publication
+ready false. Reviewer/request sources match frozen bindings. stderr empty.
+Do not poll or resubmit this terminal review as live.
+
+Executed committed exporter once, EXIT0 in0.8463s, under sanitized pinned
+scientific Python. Source
+benchmark_tools/export_native_qfo_terminal_failures.py (SHA256
+288f80f1d3cb8438792d2e7b9058a6853646f45b5da4a33c4dd8d85e3b59767d)
+used the actual review digest above. Fresh report directory
+benchmark_tools/results/native_qfo_terminal_failures_20261009_v1
+and sibling native_qfo_terminal_failures_20261009_v1_manuscript.md were absent
+before execution and now exist. report.json31685bytes SHA256
+863ebc334dbdb5a41d1a9e9bba56be82896f0ff26c98366047928c7ef802966f.
+This reports four admitted cells plus three missing cells,
+native11 scoringOOM and native12 inferenceSIGSEGV. No conversion/scoring of
+partial native12 files or automatic inference retry is authorized.
+
+Independent jq comparison verifies all four admitted rows exactly equal frozen
+snapshot, and all missing scores/means null. Independent stdlib CSV/JSON checks
+match42 endpoint rows and7 status rows,18 missing values. Removing only the new
+terminal-failure section reproduces the original parent Abstract/body bytes.
+No fresh accuracy or raw-scientific admission was performed.
+
+Next: commit/push focused output milestone, then render/print and manually review
+all new manuscript pages/assets/citations
+using existing tools and the October IQTree3 bibliography. Full goal ACTIVE;
+reporting completion is not whole-goal completion or publication readiness.
+Current report directory/manuscript plus previous/current progress refresh are
+uncommitted; sources already committed/pushed9925199e. Large raw review artifacts
+remain in retained work directory, not staged. Unrelated dirty samples/frozen
+evidence untouched. No live24080 wait remains; do not execute exporter again.
+
+## Terminal Review Wait; Reporting Prepared (2026-10-09)
+
+Previous goal turn made progress: reporting source/tests implemented,153 tests
+passed, committed/pushed9925199e, plus actual waits. This continuation re-read
+the linked prompt/TOP, reconciled matching source/test hashes and confirmed
+SAME24080 live. Actual waits120.0029s and300.0031s were followed by same-handle
+checks. Latest post-check24080RUNNING00:29:46,2CPUs/128GiB; destination still
+runtime/scheduler only, no terminal review/failure; stderr empty. Own reviewer
+PID1897288 was observed actively running,20:54 accumulated CPU at21:21 elapsed.
+This is evidence of active computation, not a completion estimate or resource
+admission. Full seven-part goal ACTIVE. No duplicate job, release, inference
+retry or partial-score admission is authorized.
+
+One bounded independent crash-dump check: current kernel core_pattern routes
+to Apport, coredumpctl unavailable; no core/core.* exists in the retained native
+working/run roots, and no matching Python crash report appears in /var/crash.
+Unrelated crash contents were not read; no services/OS configuration changed.
+This does not prove no dump exists anywhere. Native12 SIGSEGV cause/location
+remain unknown; no existing stack trace was recovered. Do not repeat this
+unchanged search absent a concrete new lead.
 
 Independent unfinished task implemented/tested: fresh final-failure reporting
 successor preserves the four admitted cells and integrates native11 scoringOOM
@@ -26,15 +81,31 @@ requires fresh destination/manuscript, successful reviewer accounting and actual
 native receipt/final-output absence. It checks direct retained metadata only,
 not a new raw-resource replay, scientific admission or transitive archive audit.
 
-Fresh SAME24080RUNNING00:16:21; destination runtime/scheduler only, no terminal
-review/failure yet. Next: commit/push prepared source/tests; actually wait and
-recheck SAME24080, then inspect actual terminal evidence and execute only if
-compatible. Planned fresh output
+Source/tests/ledger committed and pushed9925199e; staged check passed. All
+foreground test/push sessions completed successfully. Actual waits30.0043s and
+120.0043s performed after confirmed live24080, followed by same-handle checks.
+Current live state is the29:46 observation above; the20:02 checkpoint was
+historical. Destination still runtime/scheduler only, no terminal review/failure.
+Full goal ACTIVE; next automatic continuation: inspect SAME24080 accounting
+and terminal review outputs. If live, actually wait30-300s and recheck the same
+handle; no duplicate/release. If terminal, read its actual review/failure,
+producer receipts and direct resource/environment outcome, then execute the
+committed exporter only if the actual evidence contract passes. Planned fresh output
 benchmark_tools/results/native_qfo_terminal_failures_20261009_v1/ and sibling
 native_qfo_terminal_failures_20261009_v1_manuscript.md (not yet generated).
 Then render/read back the new source with existing render/print tools and
 October IQTree3 bibliography before manuscript-package claims. This is
 reporting, not cause diagnosis, full-package verification or publication readiness.
+No production report/manuscript was generated, no next job submitted and no
+failed inference retried. Prepared reporting is complete; downstream rendering
+and integration depend on the terminal review. No further independent unfinished
+action identified at this checkpoint. Only this post-wait ledger refresh remains
+uncommitted; include it with the next substantive result milestone. Unrelated
+dirty sample outputs and all frozen sources/results remain untouched. This
+previous turn made implementation/test/commit progress plus verified waits.
+Current continuation made a bounded failed-dump diagnosis and verified waits;
+no new result admission or production exporter execution. Next observation
+remains SAME24080, then retained terminal review and compatible reporting.
 
 ## Stop Diagnosis And Current Handoff (2026-10-09)
 
