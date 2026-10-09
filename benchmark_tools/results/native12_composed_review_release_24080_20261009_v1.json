@@ -1,0 +1,34 @@
+{
+  "automatic_retry": false,
+  "available_memory_bytes": 830113353728,
+  "command": [
+    "scontrol",
+    "release",
+    "24080"
+  ],
+  "fresh_held_controller": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "24080",
+      "--oneliner"
+    ],
+    "stderr": "",
+    "stdout": "JobId=24080 JobName=ohmm_native12_review UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A Priority=0 Nice=0 Account=(null) QOS=normal JobState=PENDING Reason=JobHeldUser Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=06:00:00 TimeMin=N/A SubmitTime=2026-10-09T12:17:53 EligibleTime=Unknown AccrueTime=Unknown StartTime=Unknown EndTime=Unknown Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-09T12:17:53 Scheduler=Main Partition=gpu AllocNode:Sid=bizon-link:1894149 ReqNodeList=bizon ExcNodeList=(null) NodeList= NumNodes=1-1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=128G,node=1,billing=2 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_terminal_review_20261008_v1.sh WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm Comment=08b170ba1ee5aabd5665dd12fc359fc7f5ffe3d0834b0afb2e73289fa61ed649  StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed_terminal_review-24080.err StdIn=/dev/null StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native12_composed_terminal_review-24080.out TresPerTask=cpu=2 \n"
+  },
+  "held": {
+    "bytes": 5226,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native12_composed_review_held_24080_20261009_v1.json",
+    "sha256": "2f7b12e76340171ac9a8954acb8c915802660bcfe7f4331589db0d0e21b01b5f"
+  },
+  "job_id": 24080,
+  "native_inference_reexecuted": false,
+  "release_count": 1,
+  "released_unix_ns": 1791562764825711002,
+  "returncode": 0,
+  "schema": "native12_composed_review_release_v1",
+  "source_commit": "5da4d5a3dc4cf3bdbcca0a9e8acd354b5f3c4521",
+  "stderr": "",
+  "stdout": ""
+}

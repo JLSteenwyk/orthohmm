@@ -23,8 +23,20 @@ ordinary background workloads retained. ONE held review submission24080:
 ohmm_native12_review,2CPUs/128GiB/6h, no requeue, owned envelope validated.
 Generated held provenance native12_composed_review_held_24080_20261009_v1.json
 SHA2562f7b12e76340171ac9a8954acb8c915802660bcfe7f4331589db0d0e21b01b5f.
-Next: commit/push this receipt and ledger, then validate SAME held envelope
-again and release24080 once with retained release provenance. Sources unchanged.
+Held receipt and ledger committed/pushed5da4d5a3; full staged check passed.
+SAME held envelope and source refs revalidated, safe memory rechecked, ONE
+release24080 returned0. Release receipt
+native12_composed_review_release_24080_20261009_v1.json SHA256
+db5eb14d97f112c4a1c5794bd9fee369fb6948fa78bba74e49795c92fba2835e.
+Actual24080RUNNING00:02:45,2CPUs/128GiB; no review output/destination yet.
+Next: retain/commit release provenance, observe SAME24080 through terminal
+review, then inspect and integrate its actual result. Sources unchanged.
+The failed native run retained phylogeny outputs, including pair TSV and
+reconciliation summary, despite missing final metrics and orthogroup output.
+Therefore the last clustering progress message does NOT locate the crash:
+stdout buffering and later side effects preclude that inference. No stack
+trace was captured. Root cause remains unknown, and these files are not a
+successful terminal result or admitted accuracy/coverage. Do not score them.
 Then diagnose/integrate the verified missing final outcome without automatic
 inference retry or partial-score admission. All final five-cell prepared
 reporting generators remain unexecuted and cannot be fed fabricated success.
@@ -32,7 +44,7 @@ reporting generators remain unexecuted and cannot be fed fabricated success.
 
 Full goal ACTIVE; next automatic continuation: reconcile this review task's
 actual held/release/terminal handles and outputs, not the old live24036 wait.
-Held receipt and ledger currently uncommitted; no release yet. All older source
+Release receipt and this checkpoint currently uncommitted. All older source
 milestones remain committed/pushed. Preserve unrelated dirty sample outputs.
 
 ## Native12 Verified Wait (2026-10-08)
