@@ -2,6 +2,14 @@
 
 ## Fragment Test Completed And Independently Verified (2026-10-09)
 
+Scientific results, complete tables and actual execution/readback receipt
+committed and pushed40e58d11. Do NOT repeat that completed commit action.
+Staged whitespace check flagged csv.DictWriter's CRLF records and empty final
+reason fields in TSVs. These are valid frozen tabular bytes, not missing
+values or a numerical failure; all tables parsed and independently matched.
+Preserve the original tables rather than stripping fixed-column delimiters
+or rewriting attempted scientific artifacts to satisfy a text whitespace check.
+
 Concrete progress: job24087 terminalCOMPLETED/0:0/7min29s, all30 native runs
 successful. Tested terminal consumer2125e688 pushed before its one assembly,
 EXIT0:80baseline/fragment score rows,40admitted fragment method/checkpoint
