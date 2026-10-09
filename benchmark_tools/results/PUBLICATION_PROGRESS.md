@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Authoritative Continuation Handoff (2026-10-09)
+
+User requested an audit of unexpected goal stops. The goal API reports ACTIVE;
+its objective points to the current editable attachment, not the frozen October
+3 prompt. The attachment and PUBLICATION_GOAL_CURRENT.txt have identical SHA256
+1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c.
+They already authorize the shared Threadripper, accept ordinary contention,
+require honest timing limitations, and do not require DGX access, a quiet
+window, another approval or another user resume. No prompt contradiction or
+platform stopping cause was established. Do not rewrite the prompt again to
+address this report; this entry repairs the ambiguous completed-task handoff.
+
+Completed prerequisite: the terminal-failure reporting component, archive,
+external index and copied-verifier receipts are committed/pushed at f134777a.
+Do not rebuild them or treat their completed commit as the next action.
+Scheduler accounting rechecked: native attempt 24036 FAILED 1:0; independent
+review 24080 COMPLETED 0:0. Neither is a live waiting dependency. Retain the
+native failure; no scientific retry, conversion, scoring or admission follows.
+
+Next executable action: read prepare_publication_package_rc5.py,
+bundle_publication_package.py and the immutable rc5 package index/selection;
+then implement benchmark_tools/prepare_publication_package_rc6.py with focused
+tests in tests/unit/test_prepare_publication_package_rc6.py. Preserve rc5 and
+inherit its immutable payloads; select the new direct reporting component and
+the separate manual/content/citation receipts without broad reproduction claims.
+The rc6 source, tests, package directory and selection file were rechecked and
+are absent, so this is unfinished work, not a duplicate execution.
+
+After tests and focused source commit/push, build the new selection/package
+against actual anchors, restore outside the checkout and run its copied
+verifier. Then audit the seven goal requirements and advance genuine remaining
+work. A candidate-package milestone is not completion of the publication goal.
+No dedicated host, renewed contention approval or user-supplied input is needed
+for this next action. Preserve unrelated dirty sample files.
+
+Full goal ACTIVE; next automatic continuation: implement and test the rc6
+selector above. This bounded user-requested handoff repair does not pause or
+complete the goal. Platform interruptions remain outside prompt control.
+
 ## Terminal-Failure Direct Reporting Component (2026-10-09)
 
 Completed/committed/pushed render/PDF/page/citation/content/manual review
@@ -8,7 +47,7 @@ milestone795c7e89. All22 new pages actually inspected; bounds violations none,
 19 citation ids resolved. Reporting/source milestone9ab91916 remains unchanged.
 Full goal ACTIVE; no scientific admission/inference retry/publication readiness.
 
-Current task: direct reporting component with existing generic
+Completed task: direct reporting component with existing generic
 bundle_publication_review.py and restore_direct_review_archive.py. These accept
 explicit manuscript/render/print/review paths; no adapter or schema change needed.
 The one untracked direct HTML target is actual terminal-review decision manifest
@@ -38,9 +77,9 @@ Manual/content/citation receipts remain separate repository evidence, not
 silently inserted into its strict direct inventory. Two external tool
 provenance entries excluded explicitly. No rerender/reprint/scoring/retry.
 
-Current uncommitted files: archive, external index, archive/restore/copied verify
-receipts, NATIVE_QFO_TERMINAL_FAILURE_COMPONENT_20261009.md and current ledger
-refresh. Next commit/push this validated reporting milestone, then integrate
+Archive, external index, archive/restore/copied verify receipts and component
+scope document committed/pushedf134777a; staged check passed. All foreground
+sessions completed EXIT0. No uncommitted reporting artifact remains. Next integrate
 the dated source/component/manual receipts into the versioned study candidate
 and perform the full seven-requirement evidence audit. Existing rc5 selector
 and generic bundle_publication_package.py inspected: outer selected-file/anchor
@@ -48,8 +87,26 @@ kernel is reusable; rc5 selector is frozen to older rc4/41-page content and
 must remain unchanged. A truthful prospective rc6 selection must inherit its
 immutable parent package, not mutable historical original paths; preserve all
 old candidate payloads and do not claim full-study runtime/deposition from
-outer byte verification. First inspect actual rc5 index/selection anchors and
-existing rc6 paths before writing or submitting anything. Full goal ACTIVE.
+outer byte verification. Actual rc5 parent freshly inspected:329 indexed files,
+versionorthohmm-study-2026.10.06-rc5/scientific revision
+7f3a9e40dd7e79f842cc2c11fb8b548f9a802806, readiness/native repeat false.
+PACKAGE_INDEX SHA66bc02d7821d1097808a870c38198bded9c88c379c24052b1828867af8692922;
+PACKAGE_SELECTION SHA3825124e5a4397d713911d236766cb9074f29562ad986eb12c59473f6f5cc724.
+No existing prepare_publication_package_rc6.py,2026.10.09-rc6 package or
+publication_package_selection_20261009_rc6.json found at intended paths.
+
+Full goal ACTIVE; next automatic continuation: implement/test a separately
+named rc6 selector using immutable parent payloads, the anchored new direct
+component and separate manual/content/citation evidence. Reuse unchanged
+outer selection/build/archive/restore/verifier kernels. Do not edit rc5
+selector/package, source7f3a9e4, executed report/render sources or artifacts.
+Record historical inherited content separately from selected new22-page
+reporting; no schema substitution, scientific rerun or broad reproduction claim.
+After prospective source/tests commit/push, execute new selection/package only
+on valid actual anchors, restore and run copied verifier, then audit all seven
+goal requirements against concrete evidence and advance genuine unmet work.
+This post-commit handoff refresh is retained with the authoritative continuation
+repair above. Goal API freshly verified ACTIVE.
 Browser_profile/unrelated sample changes remain unstaged. No foreground
 session/live review wait remains. This turn advanced actual terminal review,
 reporting,22-page render/content/visual review and copied archive verification;
