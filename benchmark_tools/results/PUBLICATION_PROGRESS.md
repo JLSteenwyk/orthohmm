@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Stop Diagnosis And Current Handoff (2026-10-09)
+
+User requested correction of repeated goal stops. Actual goal API reports
+ACTIVE and points to the editable attachment. Attachment and repository prompt
+copy both have SHA256
+1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c.
+Both already authorize shared-Threadripper timing despite contention, prohibit
+quiet-window/renewed-approval gates, and require continuation during job waits.
+No prompt contradiction requiring another rewrite was found. Historical
+executor failures (bwrap loopback RTM_NEWADDR Operation not permitted) are
+documented below; they are not evidence that contention blocked execution.
+Commands now work. No dispatcher, sandbox or private lifecycle repair was made
+or verified; a prompt cannot guarantee uninterrupted platform execution.
+
+The previous TOP's "execute ... reviewer once" is obsolete: submission and
+release already occurred. Do not submit or release again. Fresh accounting
+shows SAME24080 RUNNING00:08:01,2CPUs/128GiB. Review destination contains
+scheduler.json and runtime.json; no terminal review/failure file yet. Stderr
+is empty. Native24036's SIGSEGV remains a retained failed outcome, not an
+admissible scientific result; no inference retry or partial-score admission.
+
+Full goal ACTIVE; next automatic continuation: inspect SAME24080 with
+`sacct -j 24080 -n -P --format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,ReqMem`
+and inspect `benchmarks/work/native12_composed_terminal_review_20261008_v1`.
+If live, perform a real bounded wait and recheck the same handle. If terminal,
+inspect review.json or failure.json and actual retained failure evidence, then
+produce the honest terminal-failure addendum/status table and integrate the
+missing outcome into the manuscript package. Existing four admitted cells
+remain unchanged. Dependent success-only reporting stays unexecuted.
+
+This bounded maintenance request does not complete or pause the full goal and
+does not require another user resume. Only the progress ledger was changed;
+unrelated sample outputs and frozen evidence were left untouched. Preserve the
+prior uncommitted post-wait refresh below with this focused ledger milestone.
+
 ## Resumed Access; Native12 Terminal Segmentation Fault (2026-10-09)
 
 User resumed the full goal; current permission context permits commands again.
@@ -28,9 +63,14 @@ SAME held envelope and source refs revalidated, safe memory rechecked, ONE
 release24080 returned0. Release receipt
 native12_composed_review_release_24080_20261009_v1.json SHA256
 db5eb14d97f112c4a1c5794bd9fee369fb6948fa78bba74e49795c92fba2835e.
-Actual24080RUNNING00:02:45,2CPUs/128GiB; no review output/destination yet.
-Next: retain/commit release provenance, observe SAME24080 through terminal
-review, then inspect and integrate its actual result. Sources unchanged.
+Release receipt and ledger committed/pushed9e3a194a; staged check passed.
+Actual30.0031s wait completed after confirmed live24080. Post-check SAME24080
+RUNNING00:04:53,2CPUs/128GiB; destination now contains scheduler.json only,
+no review.json/failure.json yet, stderr empty. No foreground shell session
+remains. Next: observe SAME24080 through terminal review, independently inspect
+its actual status/resources/evidence and producer receipts, then integrate the
+verified missing final outcome into a fresh failure addendum/status table and
+manuscript package. Sources unchanged. No actual final-cell scores exist.
 The failed native run retained phylogeny outputs, including pair TSV and
 reconciliation summary, despite missing final metrics and orthogroup output.
 Therefore the last clustering progress message does NOT locate the crash:
@@ -44,8 +84,12 @@ reporting generators remain unexecuted and cannot be fed fabricated success.
 
 Full goal ACTIVE; next automatic continuation: reconcile this review task's
 actual held/release/terminal handles and outputs, not the old live24036 wait.
-Release receipt and this checkpoint currently uncommitted. All older source
-milestones remain committed/pushed. Preserve unrelated dirty sample outputs.
+Only this post-wait ledger refresh is uncommitted; include with the next
+substantive milestone. All source/held/release milestones committed/pushed.
+Preserve unrelated dirty sample outputs. This turn made concrete progress:
+restored observation, diagnosed native SIGSEGV vs observer success, retained
+and released one independent review, plus a verified wait. Full goal remains
+incomplete; no publication-readiness or completed scientific pipeline claim.
 
 ## Native12 Verified Wait (2026-10-08)
 
