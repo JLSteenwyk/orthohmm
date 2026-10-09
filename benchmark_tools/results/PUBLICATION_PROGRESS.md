@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Active Goal Checked; Fragment Integration Tested (2026-10-09)
+
+Maintenance check: get_goal returned ACTIVE with no token budget. The actual
+linked attachment and PUBLICATION_GOAL_CURRENT.txt have identical SHA
+d17f5d5ef244c7cdd31fc7256b4240573b7597cf54cbdd1b7708ab785139ee48.
+No stale quiet-host or DGX gate exists. No platform interruption cause is
+established by these observations; prompt changes cannot guarantee continued
+platform execution. Do not rewrite the same prompt or ask for routine resume.
+
+Actual next task advanced: integrate_controlled_fragment_results.py and its
+focused tests are implemented; 179 affected/adjacent tests passed in2.33s.
+The new integrator binds the frozen result, independent execution/readback,
+prepared panel, prospective runtime and latest parent manuscript. It emits
+all4method means/15interval comparisons/12endpoint count rows, scoped Methods,
+Results/limitations and a claim addendum. Removing the three inserted sections
+restores the exact parent. No inference, score or bootstrap is repeated.
+Validation uses absolute1e-15 for floating means across Python3.10/3.12;
+identities, integer counts, seed lists and original frozen bytes remain strict.
+
+Commit/push the tested generator, tests and this ledger before generation.
+Then execute exactly once at fresh paths, from the repo root:
+`benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.integrate_controlled_fragment_results import run; base=root/"benchmark_tools/results"; print(json.dumps(run(root,base/"controlled_fragment_integration_20261009_v1",base/"controlled_fragment_manuscript_20261009_v1.md")))'`
+Use the existing sanitized environment. Independently read back all emitted
+numbers and exact parent restoration, then render with the checked bibliography
+and existing workflow. Preserve any attempt-bound render; scope any needed
+profile/fragment table print correction prospectively. Inspect changed pages.
+No live job/session or resource gate remains. Full goal ACTIVE; representative
+fragment pipeline tracing follows integration. Unrelated samples untouched.
+
 ## Fragment Test Completed And Independently Verified (2026-10-09)
 
 Scientific results, complete tables and actual execution/readback receipt
