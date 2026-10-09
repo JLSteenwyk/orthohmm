@@ -1,5 +1,31 @@
 # Publication Progress
 
+## Terminal Native Resource Reporting Implementation (2026-10-09)
+
+rc6 actual execution/index/selection/result and requirement reconciliation
+committed/pushedd925b31a. Current independent task: prepared
+export_native_factorial_terminal_resources.py and focused tests. This separately
+named projection joins actual terminal reviews7-12 with the unchanged v7 first
+seven observations and current QfO admission/failure flags. It preserves old
+rows/source bytes and original schemas rather than impersonating the consumer.
+Index7 accuracy recovered but resource vector null;9 failed before native;
+11 native success/scoringOOM;12 failed native SIGSEGV resource observation only.
+Scientific timing admission stays false. Cached stages and separate historical
+configuration associations are not pooled or rewritten.
+
+First test invocation:13 failed/98 passed because the measurement-failure schema
+omits resource_scopes rather than storing explicit null. Corrected this new
+consumer's missing-resource branch only; retained schema/source bytes unchanged.
+Next invocation111 passed in2.07s. Added frozen prior helper identity checking
+and helper provenance; final focused/adjacent suite111 passed in2.11s.
+Not yet committed/production-executed. Next commit/push source/tests, then
+execute once at a fresh terminal resource output, independently read back all
+13 identities/resource vectors/accuracy flags, and commit the result. No
+inference/scoring/admission/retry/new default or new archive candidate follows.
+Full goal ACTIVE; unresolved scientific uncertainty/strata remain explicit in
+PUBLICATION_REQUIREMENT_RECONCILIATION_20261009.md. No live wait or user approval
+is needed for this reporting task. Local151MB rc6 archive remains unstaged.
+
 ## rc6 Executed; Scientific Requirement Reconciliation (2026-10-09)
 
 Source/tests/guide committed/pushed1b06c404 after128 tests passed. Production
