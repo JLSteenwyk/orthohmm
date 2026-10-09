@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Fragment Inputs And Launch Preflight Verified (2026-10-09)
+
+Concrete scientific progress, not a wait: c5c81c1f/3456a889/67b6b34d sources
+pushed and tested before production. All40 retained baseline results freshly
+validated. One actual prospective preparation EXIT0,10datasets/30identities.
+Manifest600745bytes at
+benchmarks/work/controlled_fragment_observations_20261009_v1/manifest.json,
+SHA8e58830911f60de5aec9ad616e5c02c12229702780e26216aa1371017637666d.
+Current prospective runtime SHA4ea5d10bccd02ef42e49194908212d07af701c109db878e176f56c298c2ca4da;
+original inventory refusal preserved,72differences explicit,11scientific
+versions and fullOrthoFinder inventory unchanged. No historical equivalence.
+
+Actual runner --check-only EXIT0; separate independent reader EXIT0 checks
+all8200gene IDs/owners,1636fragment coordinates/strings/hashes, exact parent
+truth bytes and all30argv changes limited to input/output/metrics paths.
+Detailed inventory in CONTROLLED_FRAGMENT_PREPARATION_20261009.md.
+No biological inference or fragment accuracy score has run yet. No matching
+live job name was found bysqueue before submission. Raw FASTA/coordinates
+remain local and ignored; retain only the complete prepared manifest inGit.
+
+Next submit exactly one job using run_controlled_fragment_methods.slurm with
+the absolute root, prepared manifest/hash, prospective runtime/hash and fresh
+benchmarks/results/controlled_fragment_methods_20261009_v1 destination.
+Allocation16CPUs/16GiB/2hours onbizon; ascending seeds and3methods sequential.
+Inspect the returned actual job handle; no duplicate submission or failure
+retry. While it runs, implement/test the terminal native admission and report
+consumer, reusing the already tested scoring/15-endpoint bootstrap library.
+Do not change any source in the running runner's SOURCES list or frozen core.
+After terminal accounting, preserve all40fragment method/checkpoint outcomes,
+independently verify counts/intervals/tables, and integrate negative/neutral/
+failed results in the manuscript. No rescoring or rerunning old panels.
+Full goal ACTIVE; no host or routineauthorization gate. No live handle yet.
+
 ## Fragment Adapters Tested And Retained Controls Validated (2026-10-09)
 
 Previous maintenance turn made progress by reconciling the stale handoff;
