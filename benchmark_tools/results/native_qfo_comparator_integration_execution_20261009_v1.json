@@ -1,0 +1,385 @@
+{
+  "executions": {
+    "integration": {
+      "code": "import json,sys,time; from pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.integrate_native_qfo_comparator_sensitivity import run\nstarted=time.time()\nresult=run(root,root/\"benchmark_tools/results/native_qfo_comparator_integration_20261009_v1\",root/\"benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md\")\nprint(json.dumps(dict(schema=result[\"schema\"],planned_endpoints=result[\"planned_endpoints\"],estimated_endpoints=result[\"estimated_endpoints\"],manuscript=result[\"manuscript\"],outputs=result[\"outputs\"],started_unix=started,ended_unix=time.time(),publication_ready=False),allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys,time; from pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.integrate_native_qfo_comparator_sensitivity import run\nstarted=time.time()\nresult=run(root,root/\"benchmark_tools/results/native_qfo_comparator_integration_20261009_v1\",root/\"benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md\")\nprint(json.dumps(dict(schema=result[\"schema\"],planned_endpoints=result[\"planned_endpoints\"],estimated_endpoints=result[\"estimated_endpoints\"],manuscript=result[\"manuscript\"],outputs=result[\"outputs\"],started_unix=started,ended_unix=time.time(),publication_ready=False),allow_nan=False))\n'",
+      "result": {
+        "ended_unix": 1791570362.3910997,
+        "estimated_endpoints": 24,
+        "manuscript": {
+          "bytes": 82500,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md",
+          "sha256": "cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673"
+        },
+        "outputs": [
+          {
+            "bytes": 7631,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/endpoints.tsv",
+            "sha256": "8e82b399d7934fcd01f556d4017f3d04b26b6eef16bb47d3d0caede42b715d5c"
+          },
+          {
+            "bytes": 1570,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/methods_section.md",
+            "sha256": "4155cb3671e29fad3f13f782953e7fdc613675438a8a783732f7dd3bd0a22b1c"
+          },
+          {
+            "bytes": 27776,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf",
+            "sha256": "a99113cde7d89828863fa291935466d77a5781574d2f112fb4f86e7a9068dbf5"
+          },
+          {
+            "bytes": 221280,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.png",
+            "sha256": "00e469ca13cae561c362188fbd86d17cc2fc011299a337e6030b763572d825cf"
+          },
+          {
+            "bytes": 3630,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/results_section.md",
+            "sha256": "aa34c0418a8f7003caf0da662cb1ccee0e49df7924b49ba34a0487eb569689ee"
+          }
+        ],
+        "planned_endpoints": 48,
+        "publication_ready": false,
+        "schema": "native_qfo_comparator_integration_v1",
+        "started_unix": 1791570361.6851041
+      },
+      "tool_result": {
+        "chunk_id": "40b19b",
+        "exit_code": 0,
+        "original_token_count": 0,
+        "output": "{\"schema\": \"native_qfo_comparator_integration_v1\", \"planned_endpoints\": 48, \"estimated_endpoints\": 24, \"manuscript\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md\", \"bytes\": 82500, \"sha256\": \"cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673\"}, \"outputs\": [{\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/endpoints.tsv\", \"bytes\": 7631, \"sha256\": \"8e82b399d7934fcd01f556d4017f3d04b26b6eef16bb47d3d0caede42b715d5c\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/methods_section.md\", \"bytes\": 1570, \"sha256\": \"4155cb3671e29fad3f13f782953e7fdc613675438a8a783732f7dd3bd0a22b1c\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf\", \"bytes\": 27776, \"sha256\": \"a99113cde7d89828863fa291935466d77a5781574d2f112fb4f86e7a9068dbf5\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.png\", \"bytes\": 221280, \"sha256\": \"00e469ca13cae561c362188fbd86d17cc2fc011299a337e6030b763572d825cf\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/results_section.md\", \"bytes\": 3630, \"sha256\": \"aa34c0418a8f7003caf0da662cb1ccee0e49df7924b49ba34a0487eb569689ee\"}], \"started_unix\": 1791570361.6851041, \"ended_unix\": 1791570362.3910997, \"publication_ready\": false}\n",
+        "session_id": 92560,
+        "wall_time_seconds": 1.1958e-05
+      }
+    },
+    "integration_readback": {
+      "code": "import csv,hashlib,io,json,math,re\nfrom pathlib import Path\nimport pymupdf\nroot=Path.cwd().resolve(); directory=root/\"benchmark_tools/results\"\noutput=directory/\"native_qfo_comparator_integration_20261009_v1\"\nmanifest=json.loads((output/\"manifest.json\").read_text())\ndef identity(path):\n    blob=Path(path).read_bytes()\n    return dict(bytes=len(blob),sha256=hashlib.sha256(blob).hexdigest())\nfor ref in [*manifest[\"inputs\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    assert identity(ref[\"path\"]) == {k:ref[k] for k in (\"bytes\",\"sha256\")}\nresult=json.loads((directory/\"native_qfo_comparator_uncertainty_20261009_v1/report.json\").read_text())\nrows=list(csv.DictReader(io.StringIO((output/\"endpoints.tsv\").read_text()),delimiter=\"\\t\"))\ncells=[\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p0_c1_r1\",\"p1_c0_r0\",\"p1_c0_r1\",\"p1_c1_r0\",\"p1_c1_r1\"]\ncomparators=[\"orthofinder_3_1_5_full\",\"orthofinder_3_1_5_sequence_only\"]\nmetrics=[\"F1\",\"PPV\",\"TPR\"]\nassert len(rows)==48 and sum(r[\"difference\"]==\"\" for r in rows)==24\nexpected_order=[(c,ref,m) for c in cells for ref in comparators for m in metrics]\nassert [(r[\"candidate\"],r[\"reference\"],r[\"metric\"]) for r in rows]==expected_order\nmapping={(c[\"candidate\"],c[\"reference\"]):c for c in result[\"comparisons\"]}\nfor row in rows:\n    comparison=mapping[(row[\"candidate\"],row[\"reference\"])]\n    assert row[\"status\"]==comparison[\"status\"] and row[\"missing_reason\"]==(comparison[\"missing_reason\"] or \"\")\n    numeric=(\"difference\",\"nominal_low\",\"nominal_high\",\"adjusted_low\",\"adjusted_high\",\"family_wins\",\"family_ties\",\"family_losses\")\n    if comparison[\"metrics\"] is None:\n        assert all(row[k]==\"\" for k in numeric)\n    else:\n        item=comparison[\"metrics\"][row[\"metric\"]]\n        expected=[item[\"difference\"],*item[\"paired_percentile_ci\"],*item[\"bonferroni_percentile_ci\"],\n                  *[item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")]]\n        assert all(float(row[k])==value for k,value in zip(numeric,expected))\nmethods=(output/\"methods_section.md\").read_text()\nresults=(output/\"results_section.md\").read_text()\nrevised=Path(manifest[\"manuscript\"][\"path\"]).read_text()\nparent=(directory/\"native_qfo_terminal_failures_20261009_v1_manuscript.md\").read_text()\nassert revised.count(methods)==revised.count(results)==1\nassert revised.replace(methods,\"\",1).replace(results,\"\",1)==parent\nf1_lines=[line for line in results.splitlines() if line.startswith(\"| P\")]\nassert len(f1_lines)==8\nfor comparison in result[\"comparisons\"]:\n    if comparison[\"metrics\"] is not None:\n        v=comparison[\"metrics\"][\"F1\"]\n        label=comparison[\"candidate\"].upper().replace(\"_\",\"/\")\n        reference=\"Full OrthoFinder\" if comparison[\"reference\"]==comparators[0] else \"Sequence-Only OrthoFinder\"\n        signs=\"/\".join(str(v[k]) for k in (\"family_wins\",\"family_ties\",\"family_losses\"))\n        expected=f\"| {label} | {reference} | {v['difference']:+.6f} | [{v['bonferroni_percentile_ci'][0]:.6f}, {v['bonferroni_percentile_ci'][1]:.6f}] | {signs} |\"\n        assert expected in f1_lines\nassert sum((v[\"bonferroni_percentile_ci\"][0]>0 or v[\"bonferroni_percentile_ci\"][1]<0)\n           for c in result[\"comparisons\"] if c[\"metrics\"] is not None for v in c[\"metrics\"].values())==8\npdf=pymupdf.open(output/\"native_comparator_sensitivity.pdf\")\nassert len(pdf)==1\npage=pdf[0]; w,h=page.rect.width,page.rect.height\nassert abs(w-1152)<1e-6 and abs(h-792)<1e-6\ntext=page.get_text()\nfor phrase in (\"48-endpoint adjusted CI\",\"Not supplied\",\"Inference SIGSEGV\",\"Assessment OOM\",\n               \"vs full OrthoFinder\",\"vs sequence-only checkpoint\",\"percentage points\"):\n    assert phrase in text\nbounds=[]\nfor block in page.get_text(\"dict\")[\"blocks\"]:\n    for line in block.get(\"lines\",[]):\n        for span in line[\"spans\"]:\n            x0,y0,x1,y1=span[\"bbox\"]\n            assert 0<=x0<=x1<=w and 0<=y0<=y1<=h\n            bounds.append(span[\"bbox\"])\ncolors=[(22/255,125/255,141/255),(189/255,65/255,72/255),(154/255,113/255,12/255)]\ndrawings=page.get_drawings()\ncolored=[]\nfor drawing in drawings:\n    color=drawing.get(\"color\")\n    if color is not None and any(max(abs(a-b) for a,b in zip(color,c))<1e-5 for c in colors):\n        colored.append(drawing)\nlines=[d for d in colored if len(d[\"items\"])==1 and d[\"items\"][0][0]==\"l\"]\nmarkers=[d for d in colored if any(item[0]==\"c\" for item in d[\"items\"])]\nassert len(lines)==48 and len(markers)==24,(len(lines),len(markers))\naxisw=w*(.985-.115)/(3+2*.16)\naxish=h*(.885-.09)/(2+.30)\nused=set(); used_markers=set()\nfor row in rows:\n    if row[\"difference\"]==\"\":\n        continue\n    i=comparators.index(row[\"reference\"]); j=metrics.index(row[\"metric\"]); y=cells.index(row[\"candidate\"])\n    left=w*.115+j*axisw*1.16\n    top=h*(1-.885)+i*axish*1.30\n    ypos=top+axish*(y+.6)/8.2\n    xpos=lambda value:left+axisw*(100*value+60)/120\n    for key,width in ((\"adjusted\",1.2),(\"nominal\",4)):\n        lo,hi=xpos(float(row[key+\"_low\"])),xpos(float(row[key+\"_high\"]))\n        matches=[]\n        for k,drawing in enumerate(lines):\n            item=drawing[\"items\"][0]; a,b=item[1],item[2]\n            if (max(abs(a.x-lo),abs(b.x-hi),abs(a.y-ypos),abs(b.y-ypos))<.002\n                    and abs(drawing[\"width\"]-width)<1e-5\n                    and max(abs(a-b) for a,b in zip(drawing[\"color\"],colors[j]))<1e-5):\n                matches.append(k)\n        assert len(matches)==1 and matches[0] not in used,(row,key,matches)\n        used.add(matches[0])\n    x=xpos(float(row[\"difference\"]))\n    matches=[]\n    for k,drawing in enumerate(markers):\n        rect=drawing[\"rect\"]\n        if (max(abs((rect.x0+rect.x1)/2-x),abs((rect.y0+rect.y1)/2-ypos))<.002\n                and max(abs(a-b) for a,b in zip(drawing[\"color\"],colors[j]))<1e-5):\n            matches.append(k)\n    assert len(matches)==1 and matches[0] not in used_markers,(row,matches)\n    used_markers.add(matches[0])\nassert len(used)==48 and len(used_markers)==24\npreview=output/\"native_comparator_sensitivity_pdf_preview.png\"\nassert not preview.exists()\npage.get_pixmap(matrix=pymupdf.Matrix(1.5,1.5),alpha=False).save(preview)\npdf.close()\nprint(json.dumps(dict(status=\"independent_native_comparator_integration_readback_passed\",\n    manifest=identity(output/\"manifest.json\"),tsv_rows=48,estimated_endpoints=24,missing_endpoints=24,\n    manuscript_f1_rows=8,parent_body_restored_exactly=True,adjusted_intervals_excluding_zero=8,\n    figure_pdf_pages=1,pdf_interval_segments_checked=48,pdf_point_markers_checked=24,\n    pdf_text_spans_in_bounds=len(bounds),pdf_preview=dict(path=str(preview),**identity(preview)),\n    production_helpers_imported=False,publication_ready=False),allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import csv,hashlib,io,json,math,re\nfrom pathlib import Path\nimport pymupdf\nroot=Path.cwd().resolve(); directory=root/\"benchmark_tools/results\"\noutput=directory/\"native_qfo_comparator_integration_20261009_v1\"\nmanifest=json.loads((output/\"manifest.json\").read_text())\ndef identity(path):\n    blob=Path(path).read_bytes()\n    return dict(bytes=len(blob),sha256=hashlib.sha256(blob).hexdigest())\nfor ref in [*manifest[\"inputs\"],*manifest[\"outputs\"],manifest[\"manuscript\"]]:\n    assert identity(ref[\"path\"]) == {k:ref[k] for k in (\"bytes\",\"sha256\")}\nresult=json.loads((directory/\"native_qfo_comparator_uncertainty_20261009_v1/report.json\").read_text())\nrows=list(csv.DictReader(io.StringIO((output/\"endpoints.tsv\").read_text()),delimiter=\"\\t\"))\ncells=[\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p0_c1_r1\",\"p1_c0_r0\",\"p1_c0_r1\",\"p1_c1_r0\",\"p1_c1_r1\"]\ncomparators=[\"orthofinder_3_1_5_full\",\"orthofinder_3_1_5_sequence_only\"]\nmetrics=[\"F1\",\"PPV\",\"TPR\"]\nassert len(rows)==48 and sum(r[\"difference\"]==\"\" for r in rows)==24\nexpected_order=[(c,ref,m) for c in cells for ref in comparators for m in metrics]\nassert [(r[\"candidate\"],r[\"reference\"],r[\"metric\"]) for r in rows]==expected_order\nmapping={(c[\"candidate\"],c[\"reference\"]):c for c in result[\"comparisons\"]}\nfor row in rows:\n    comparison=mapping[(row[\"candidate\"],row[\"reference\"])]\n    assert row[\"status\"]==comparison[\"status\"] and row[\"missing_reason\"]==(comparison[\"missing_reason\"] or \"\")\n    numeric=(\"difference\",\"nominal_low\",\"nominal_high\",\"adjusted_low\",\"adjusted_high\",\"family_wins\",\"family_ties\",\"family_losses\")\n    if comparison[\"metrics\"] is None:\n        assert all(row[k]==\"\" for k in numeric)\n    else:\n        item=comparison[\"metrics\"][row[\"metric\"]]\n        expected=[item[\"difference\"],*item[\"paired_percentile_ci\"],*item[\"bonferroni_percentile_ci\"],\n                  *[item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")]]\n        assert all(float(row[k])==value for k,value in zip(numeric,expected))\nmethods=(output/\"methods_section.md\").read_text()\nresults=(output/\"results_section.md\").read_text()\nrevised=Path(manifest[\"manuscript\"][\"path\"]).read_text()\nparent=(directory/\"native_qfo_terminal_failures_20261009_v1_manuscript.md\").read_text()\nassert revised.count(methods)==revised.count(results)==1\nassert revised.replace(methods,\"\",1).replace(results,\"\",1)==parent\nf1_lines=[line for line in results.splitlines() if line.startswith(\"| P\")]\nassert len(f1_lines)==8\nfor comparison in result[\"comparisons\"]:\n    if comparison[\"metrics\"] is not None:\n        v=comparison[\"metrics\"][\"F1\"]\n        label=comparison[\"candidate\"].upper().replace(\"_\",\"/\")\n        reference=\"Full OrthoFinder\" if comparison[\"reference\"]==comparators[0] else \"Sequence-Only OrthoFinder\"\n        signs=\"/\".join(str(v[k]) for k in (\"family_wins\",\"family_ties\",\"family_losses\"))\n        expected=f\"| {label} | {reference} | {v['\\''difference'\\'']:+.6f} | [{v['\\''bonferroni_percentile_ci'\\''][0]:.6f}, {v['\\''bonferroni_percentile_ci'\\''][1]:.6f}] | {signs} |\"\n        assert expected in f1_lines\nassert sum((v[\"bonferroni_percentile_ci\"][0]>0 or v[\"bonferroni_percentile_ci\"][1]<0)\n           for c in result[\"comparisons\"] if c[\"metrics\"] is not None for v in c[\"metrics\"].values())==8\npdf=pymupdf.open(output/\"native_comparator_sensitivity.pdf\")\nassert len(pdf)==1\npage=pdf[0]; w,h=page.rect.width,page.rect.height\nassert abs(w-1152)<1e-6 and abs(h-792)<1e-6\ntext=page.get_text()\nfor phrase in (\"48-endpoint adjusted CI\",\"Not supplied\",\"Inference SIGSEGV\",\"Assessment OOM\",\n               \"vs full OrthoFinder\",\"vs sequence-only checkpoint\",\"percentage points\"):\n    assert phrase in text\nbounds=[]\nfor block in page.get_text(\"dict\")[\"blocks\"]:\n    for line in block.get(\"lines\",[]):\n        for span in line[\"spans\"]:\n            x0,y0,x1,y1=span[\"bbox\"]\n            assert 0<=x0<=x1<=w and 0<=y0<=y1<=h\n            bounds.append(span[\"bbox\"])\ncolors=[(22/255,125/255,141/255),(189/255,65/255,72/255),(154/255,113/255,12/255)]\ndrawings=page.get_drawings()\ncolored=[]\nfor drawing in drawings:\n    color=drawing.get(\"color\")\n    if color is not None and any(max(abs(a-b) for a,b in zip(color,c))<1e-5 for c in colors):\n        colored.append(drawing)\nlines=[d for d in colored if len(d[\"items\"])==1 and d[\"items\"][0][0]==\"l\"]\nmarkers=[d for d in colored if any(item[0]==\"c\" for item in d[\"items\"])]\nassert len(lines)==48 and len(markers)==24,(len(lines),len(markers))\naxisw=w*(.985-.115)/(3+2*.16)\naxish=h*(.885-.09)/(2+.30)\nused=set(); used_markers=set()\nfor row in rows:\n    if row[\"difference\"]==\"\":\n        continue\n    i=comparators.index(row[\"reference\"]); j=metrics.index(row[\"metric\"]); y=cells.index(row[\"candidate\"])\n    left=w*.115+j*axisw*1.16\n    top=h*(1-.885)+i*axish*1.30\n    ypos=top+axish*(y+.6)/8.2\n    xpos=lambda value:left+axisw*(100*value+60)/120\n    for key,width in ((\"adjusted\",1.2),(\"nominal\",4)):\n        lo,hi=xpos(float(row[key+\"_low\"])),xpos(float(row[key+\"_high\"]))\n        matches=[]\n        for k,drawing in enumerate(lines):\n            item=drawing[\"items\"][0]; a,b=item[1],item[2]\n            if (max(abs(a.x-lo),abs(b.x-hi),abs(a.y-ypos),abs(b.y-ypos))<.002\n                    and abs(drawing[\"width\"]-width)<1e-5\n                    and max(abs(a-b) for a,b in zip(drawing[\"color\"],colors[j]))<1e-5):\n                matches.append(k)\n        assert len(matches)==1 and matches[0] not in used,(row,key,matches)\n        used.add(matches[0])\n    x=xpos(float(row[\"difference\"]))\n    matches=[]\n    for k,drawing in enumerate(markers):\n        rect=drawing[\"rect\"]\n        if (max(abs((rect.x0+rect.x1)/2-x),abs((rect.y0+rect.y1)/2-ypos))<.002\n                and max(abs(a-b) for a,b in zip(drawing[\"color\"],colors[j]))<1e-5):\n            matches.append(k)\n    assert len(matches)==1 and matches[0] not in used_markers,(row,matches)\n    used_markers.add(matches[0])\nassert len(used)==48 and len(used_markers)==24\npreview=output/\"native_comparator_sensitivity_pdf_preview.png\"\nassert not preview.exists()\npage.get_pixmap(matrix=pymupdf.Matrix(1.5,1.5),alpha=False).save(preview)\npdf.close()\nprint(json.dumps(dict(status=\"independent_native_comparator_integration_readback_passed\",\n    manifest=identity(output/\"manifest.json\"),tsv_rows=48,estimated_endpoints=24,missing_endpoints=24,\n    manuscript_f1_rows=8,parent_body_restored_exactly=True,adjusted_intervals_excluding_zero=8,\n    figure_pdf_pages=1,pdf_interval_segments_checked=48,pdf_point_markers_checked=24,\n    pdf_text_spans_in_bounds=len(bounds),pdf_preview=dict(path=str(preview),**identity(preview)),\n    production_helpers_imported=False,publication_ready=False),allow_nan=False))\n'",
+      "result": {
+        "adjusted_intervals_excluding_zero": 8,
+        "estimated_endpoints": 24,
+        "figure_pdf_pages": 1,
+        "manifest": {
+          "bytes": 3215,
+          "sha256": "5e79563ab71fac550c358aa20cce4ed03263577602e97e8c18daa503e25a1128"
+        },
+        "manuscript_f1_rows": 8,
+        "missing_endpoints": 24,
+        "parent_body_restored_exactly": true,
+        "pdf_interval_segments_checked": 48,
+        "pdf_point_markers_checked": 24,
+        "pdf_preview": {
+          "bytes": 125975,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity_pdf_preview.png",
+          "sha256": "511a07e6f240f0eee1126f08c999635d1686b82c2c406180d35e32896cb7bf05"
+        },
+        "pdf_text_spans_in_bounds": 85,
+        "production_helpers_imported": false,
+        "publication_ready": false,
+        "status": "independent_native_comparator_integration_readback_passed",
+        "tsv_rows": 48
+      },
+      "tool_result": {
+        "chunk_id": "83d394",
+        "exit_code": 0,
+        "original_token_count": 210,
+        "output": "{\"status\": \"independent_native_comparator_integration_readback_passed\", \"manifest\": {\"bytes\": 3215, \"sha256\": \"5e79563ab71fac550c358aa20cce4ed03263577602e97e8c18daa503e25a1128\"}, \"tsv_rows\": 48, \"estimated_endpoints\": 24, \"missing_endpoints\": 24, \"manuscript_f1_rows\": 8, \"parent_body_restored_exactly\": true, \"adjusted_intervals_excluding_zero\": 8, \"figure_pdf_pages\": 1, \"pdf_interval_segments_checked\": 48, \"pdf_point_markers_checked\": 24, \"pdf_text_spans_in_bounds\": 85, \"pdf_preview\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity_pdf_preview.png\", \"bytes\": 125975, \"sha256\": \"511a07e6f240f0eee1126f08c999635d1686b82c2c406180d35e32896cb7bf05\"}, \"production_helpers_imported\": false, \"publication_ready\": false}\n",
+        "wall_time_seconds": 0.094827799
+      }
+    },
+    "manuscript_content": {
+      "code": "import hashlib,json,re\nfrom pathlib import Path\nimport pymupdf\ndirectory=Path.cwd()/\"benchmark_tools/results\"\nassets=json.loads((directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\").read_text())\npdf=pymupdf.open(directory/\"native_qfo_comparator_manuscript_20261009_v1_print/document.pdf\")\nassert len(pdf)==24\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    blob=Path(ref[\"path\"]).read_bytes()\n    assert len(blob)==ref[\"bytes\"] and hashlib.sha256(blob).hexdigest()==ref[\"sha256\"]\nassert len(assets[\"citation_ids\"])==19 and assets[\"local_occurrences\"]==121 and assets[\"unique_targets\"]==117\nbibliography=json.loads((directory/\"publication_bibliography_20261007_v1.csl.json\").read_text())\nassert len(bibliography)==38 and set(assets[\"citation_ids\"]).issubset({r[\"id\"] for r in bibliography})\ntext=\"\\n\".join(page.get_text() for page in pdf)\ncompact=\" \".join(text.split())\nfor phrase in (\"48-endpoint Bonferroni quantiles 0.05/96\", \"563 disjoint represented proteins\",\n               \"leaving 24 of the 48 endpoints estimable\", \"Eight of 24 estimated\",\n               \"not globally missing\", \"not this separately specified retrospective calculation\"):\n    assert phrase in compact,phrase\ntabletext=\" \".join(pdf[10].get_text().split())\nreport=json.loads((directory/\"native_qfo_comparator_uncertainty_20261009_v1/report.json\").read_text())\nchecked=0\nfor comparison in report[\"comparisons\"]:\n    if comparison[\"metrics\"] is not None:\n        row=comparison[\"metrics\"][\"F1\"]\n        for number in (row[\"difference\"],*row[\"bonferroni_percentile_ci\"]):\n            assert f\"{number:.6f}\" in tabletext\n            checked+=1\n        assert \"/\".join(str(row[k]) for k in (\"family_wins\",\"family_ties\",\"family_losses\")) in tabletext\nlayout=json.loads((directory/\"native_qfo_comparator_manuscript_20261009_v1_layout/report.json\").read_text())\nassert layout[\"bounds_violations\"]==[]\nassert [int(Path(r[\"path\"]).stem.split(\"_\")[-1]) for r in layout[\"rendered_pages\"]]==[3,4,5,9,10,11,12]\npdf.close()\nprint(json.dumps(dict(status=\"native_comparator_render_content_readback_passed\",pages=24,\n    citation_ids=19,bibliography_entries=38,local_link_occurrences=121,unique_local_targets=117,\n    f1_printed_numeric_cells_checked=checked,f1_family_outcome_rows_checked=8,\n    bounds_violations=0,manual_visual_review_pages=[3,4,5,9,10,11,12],\n    full_document_manual_visual_review=False,publication_ready=False),allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import hashlib,json,re\nfrom pathlib import Path\nimport pymupdf\ndirectory=Path.cwd()/\"benchmark_tools/results\"\nassets=json.loads((directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\").read_text())\npdf=pymupdf.open(directory/\"native_qfo_comparator_manuscript_20261009_v1_print/document.pdf\")\nassert len(pdf)==24\nfor ref in [assets[\"html\"],*assets[\"sources\"],*assets[\"targets\"]]:\n    blob=Path(ref[\"path\"]).read_bytes()\n    assert len(blob)==ref[\"bytes\"] and hashlib.sha256(blob).hexdigest()==ref[\"sha256\"]\nassert len(assets[\"citation_ids\"])==19 and assets[\"local_occurrences\"]==121 and assets[\"unique_targets\"]==117\nbibliography=json.loads((directory/\"publication_bibliography_20261007_v1.csl.json\").read_text())\nassert len(bibliography)==38 and set(assets[\"citation_ids\"]).issubset({r[\"id\"] for r in bibliography})\ntext=\"\\n\".join(page.get_text() for page in pdf)\ncompact=\" \".join(text.split())\nfor phrase in (\"48-endpoint Bonferroni quantiles 0.05/96\", \"563 disjoint represented proteins\",\n               \"leaving 24 of the 48 endpoints estimable\", \"Eight of 24 estimated\",\n               \"not globally missing\", \"not this separately specified retrospective calculation\"):\n    assert phrase in compact,phrase\ntabletext=\" \".join(pdf[10].get_text().split())\nreport=json.loads((directory/\"native_qfo_comparator_uncertainty_20261009_v1/report.json\").read_text())\nchecked=0\nfor comparison in report[\"comparisons\"]:\n    if comparison[\"metrics\"] is not None:\n        row=comparison[\"metrics\"][\"F1\"]\n        for number in (row[\"difference\"],*row[\"bonferroni_percentile_ci\"]):\n            assert f\"{number:.6f}\" in tabletext\n            checked+=1\n        assert \"/\".join(str(row[k]) for k in (\"family_wins\",\"family_ties\",\"family_losses\")) in tabletext\nlayout=json.loads((directory/\"native_qfo_comparator_manuscript_20261009_v1_layout/report.json\").read_text())\nassert layout[\"bounds_violations\"]==[]\nassert [int(Path(r[\"path\"]).stem.split(\"_\")[-1]) for r in layout[\"rendered_pages\"]]==[3,4,5,9,10,11,12]\npdf.close()\nprint(json.dumps(dict(status=\"native_comparator_render_content_readback_passed\",pages=24,\n    citation_ids=19,bibliography_entries=38,local_link_occurrences=121,unique_local_targets=117,\n    f1_printed_numeric_cells_checked=checked,f1_family_outcome_rows_checked=8,\n    bounds_violations=0,manual_visual_review_pages=[3,4,5,9,10,11,12],\n    full_document_manual_visual_review=False,publication_ready=False),allow_nan=False))\n'",
+      "result": {
+        "bibliography_entries": 38,
+        "bounds_violations": 0,
+        "citation_ids": 19,
+        "f1_family_outcome_rows_checked": 8,
+        "f1_printed_numeric_cells_checked": 24,
+        "full_document_manual_visual_review": false,
+        "local_link_occurrences": 121,
+        "manual_visual_review_pages": [
+          3,
+          4,
+          5,
+          9,
+          10,
+          11,
+          12
+        ],
+        "pages": 24,
+        "publication_ready": false,
+        "status": "native_comparator_render_content_readback_passed",
+        "unique_local_targets": 117
+      },
+      "tool_result": {
+        "chunk_id": "80c2eb",
+        "exit_code": 0,
+        "original_token_count": 104,
+        "output": "{\"status\": \"native_comparator_render_content_readback_passed\", \"pages\": 24, \"citation_ids\": 19, \"bibliography_entries\": 38, \"local_link_occurrences\": 121, \"unique_local_targets\": 117, \"f1_printed_numeric_cells_checked\": 24, \"f1_family_outcome_rows_checked\": 8, \"bounds_violations\": 0, \"manual_visual_review_pages\": [3, 4, 5, 9, 10, 11, 12], \"full_document_manual_visual_review\": false, \"publication_ready\": false}\n",
+        "wall_time_seconds": 0.45139449
+      }
+    },
+    "manuscript_layout": {
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\ndirectory=root/\"benchmark_tools/results\"\nphrases=[\"Retrospective Native-Cell Comparator Protocol\",\"Retrospective Native-Cell Comparator Sensitivity\",\"Native Comparator Figure\"]\nresult=review(directory/\"native_qfo_comparator_manuscript_20261009_v1_print/document.pdf\",directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",directory/\"native_qfo_comparator_manuscript_20261009_v1_layout\",phrases)\nprint(json.dumps({key:result[key] for key in (\"status\",\"page_count\",\"bounds_violations\",\"phrase_matches\",\"rendered_pages\")},allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.review_manuscript_pdf import review\ndirectory=root/\"benchmark_tools/results\"\nphrases=[\"Retrospective Native-Cell Comparator Protocol\",\"Retrospective Native-Cell Comparator Sensitivity\",\"Native Comparator Figure\"]\nresult=review(directory/\"native_qfo_comparator_manuscript_20261009_v1_print/document.pdf\",directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",directory/\"native_qfo_comparator_manuscript_20261009_v1_layout\",phrases)\nprint(json.dumps({key:result[key] for key in (\"status\",\"page_count\",\"bounds_violations\",\"phrase_matches\",\"rendered_pages\")},allow_nan=False))\n'",
+      "result": {
+        "bounds_violations": [],
+        "page_count": 24,
+        "phrase_matches": {
+          "Native Comparator Figure": [
+            11
+          ],
+          "Retrospective Native-Cell Comparator Protocol": [
+            4
+          ],
+          "Retrospective Native-Cell Comparator Sensitivity": [
+            10
+          ]
+        },
+        "rendered_pages": [
+          {
+            "bytes": 258878,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_003.png",
+            "sha256": "bae8a2e688afb1f5a2d56757ea062e87bc6d59450001a8c97db8667cb0ba0b39"
+          },
+          {
+            "bytes": 243790,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_004.png",
+            "sha256": "4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01"
+          },
+          {
+            "bytes": 244566,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_005.png",
+            "sha256": "ea65196a58b3fdd13b48df5f78b2d1ff6b97545cb78d6490d528f77517071415"
+          },
+          {
+            "bytes": 186440,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_009.png",
+            "sha256": "27730c02c474403d63e84d849942d4cafd532f261d6eb2df2411f44d4c4c04f2"
+          },
+          {
+            "bytes": 223523,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_010.png",
+            "sha256": "3faff5c243ab9cdde1bd01d53f725f3f128cd967bd0791ca0f182883f844d39e"
+          },
+          {
+            "bytes": 198098,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_011.png",
+            "sha256": "e9a74fb9a40043e6d05c2cd5c8c05f9a8a493e7e0fbb8c1e9e28b980bebbfbd8"
+          },
+          {
+            "bytes": 202993,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_012.png",
+            "sha256": "88ba126bac9681a6dfbff5d26024881925df205380d6528c77de9d1314824108"
+          }
+        ],
+        "status": "pdf_bounds_checked"
+      },
+      "tool_result": {
+        "chunk_id": "d8f09d",
+        "exit_code": 0,
+        "original_token_count": 516,
+        "output": "{\"status\": \"pdf_bounds_checked\", \"page_count\": 24, \"bounds_violations\": [], \"phrase_matches\": {\"Retrospective Native-Cell Comparator Protocol\": [4], \"Retrospective Native-Cell Comparator Sensitivity\": [10], \"Native Comparator Figure\": [11]}, \"rendered_pages\": [{\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_003.png\", \"bytes\": 258878, \"sha256\": \"bae8a2e688afb1f5a2d56757ea062e87bc6d59450001a8c97db8667cb0ba0b39\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_004.png\", \"bytes\": 243790, \"sha256\": \"4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_005.png\", \"bytes\": 244566, \"sha256\": \"ea65196a58b3fdd13b48df5f78b2d1ff6b97545cb78d6490d528f77517071415\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_009.png\", \"bytes\": 186440, \"sha256\": \"27730c02c474403d63e84d849942d4cafd532f261d6eb2df2411f44d4c4c04f2\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_010.png\", \"bytes\": 223523, \"sha256\": \"3faff5c243ab9cdde1bd01d53f725f3f128cd967bd0791ca0f182883f844d39e\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_011.png\", \"bytes\": 198098, \"sha256\": \"e9a74fb9a40043e6d05c2cd5c8c05f9a8a493e7e0fbb8c1e9e28b980bebbfbd8\"}, {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_012.png\", \"bytes\": 202993, \"sha256\": \"88ba126bac9681a6dfbff5d26024881925df205380d6528c77de9d1314824108\"}]}\n",
+        "wall_time_seconds": 0.916961373
+      }
+    },
+    "manuscript_print": {
+      "code": "import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\ndirectory=root/\"benchmark_tools/results\"\nresult=print_review(directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",directory/\"native_qfo_comparator_manuscript_20261009_v1_print\",Path(\"/opt/google/chrome/google-chrome\"),no_sandbox=True)\nprint(json.dumps({key:result[key] for key in (\"status\",\"page_count\",\"pdf\",\"elapsed_seconds\",\"returncode\")},allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.print_manuscript_review import print_review\ndirectory=root/\"benchmark_tools/results\"\nresult=print_review(directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",directory/\"native_qfo_comparator_manuscript_20261009_v1_print\",Path(\"/opt/google/chrome/google-chrome\"),no_sandbox=True)\nprint(json.dumps({key:result[key] for key in (\"status\",\"page_count\",\"pdf\",\"elapsed_seconds\",\"returncode\")},allow_nan=False))\n'",
+      "result": {
+        "elapsed_seconds": 0.8534100418910384,
+        "page_count": 24,
+        "pdf": {
+          "bytes": 440373,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_print/document.pdf",
+          "sha256": "4ca152292c73301bd3a745f1abc8e2626d2b57e42927462039931f3e1230bb36"
+        },
+        "returncode": 0,
+        "status": "verified_html_printed"
+      },
+      "tool_result": {
+        "chunk_id": "ffd970",
+        "exit_code": 0,
+        "original_token_count": 94,
+        "output": "{\"status\": \"verified_html_printed\", \"page_count\": 24, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_print/document.pdf\", \"bytes\": 440373, \"sha256\": \"4ca152292c73301bd3a745f1abc8e2626d2b57e42927462039931f3e1230bb36\"}, \"elapsed_seconds\": 0.8534100418910384, \"returncode\": 0}\n",
+        "session_id": 79850,
+        "wall_time_seconds": 1.2038e-05
+      }
+    },
+    "manuscript_render": {
+      "code": "import hashlib,json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.render_manuscript_review import render\ndirectory=root/\"benchmark_tools/results\"\nbibliography=directory/\"publication_bibliography_20261007_v1.csl.json\"\nassert hashlib.sha256(bibliography.read_bytes()).hexdigest()==\"a8b74a33a5244a155779567aaf838895f03645c57e9e46be16b30105ce56f392\"\nresult=render(root,directory/\"native_qfo_comparator_manuscript_20261009_v1.md\",directory/\"native_qfo_comparator_manuscript_20261009_v1_review.html\",directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",bibliography)\nprint(json.dumps(dict(status=result[\"status\"],html=result[\"html\"],citation_ids=result[\"citation_ids\"],local_occurrences=result[\"local_occurrences\"],unique_targets=result[\"unique_targets\"],untracked_targets=result[\"untracked_targets\"],stderr=result[\"stderr\"],bibliography_entries=len(json.loads(bibliography.read_text())),publication_ready=False),allow_nan=False))\n",
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import hashlib,json,sys\nfrom pathlib import Path\nroot=Path.cwd().resolve(); sys.path.insert(0,str(root))\nfrom benchmark_tools.render_manuscript_review import render\ndirectory=root/\"benchmark_tools/results\"\nbibliography=directory/\"publication_bibliography_20261007_v1.csl.json\"\nassert hashlib.sha256(bibliography.read_bytes()).hexdigest()==\"a8b74a33a5244a155779567aaf838895f03645c57e9e46be16b30105ce56f392\"\nresult=render(root,directory/\"native_qfo_comparator_manuscript_20261009_v1.md\",directory/\"native_qfo_comparator_manuscript_20261009_v1_review.html\",directory/\"native_qfo_comparator_manuscript_20261009_v1_assets.json\",bibliography)\nprint(json.dumps(dict(status=result[\"status\"],html=result[\"html\"],citation_ids=result[\"citation_ids\"],local_occurrences=result[\"local_occurrences\"],unique_targets=result[\"unique_targets\"],untracked_targets=result[\"untracked_targets\"],stderr=result[\"stderr\"],bibliography_entries=len(json.loads(bibliography.read_text())),publication_ready=False),allow_nan=False))\n'",
+      "result": {
+        "bibliography_entries": 38,
+        "citation_ids": [
+          "busco2021",
+          "cpm2011",
+          "diamond2021",
+          "fastoma2025",
+          "iqtree3_2026",
+          "kuzmin2020",
+          "leiden2019",
+          "orthobench2020",
+          "orthofinder2026",
+          "orthofinder2026correction",
+          "orthohmm2024preprint",
+          "orthomcl2003",
+          "proteinortho2023",
+          "pyvolve2015",
+          "qfo2016",
+          "qfo2020",
+          "sonicparanoid2024",
+          "ygob2005",
+          "zombi2019online"
+        ],
+        "html": {
+          "bytes": 108428,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_review.html",
+          "sha256": "13a0c6cfa117aa4c4edff339bd27feaf59180fd585efd64d64439f2007e0cd88"
+        },
+        "local_occurrences": 121,
+        "publication_ready": false,
+        "status": "manuscript_review_rendered",
+        "stderr": {
+          "parse": "",
+          "render": ""
+        },
+        "unique_targets": 117,
+        "untracked_targets": [
+          "benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf"
+        ]
+      },
+      "tool_result": {
+        "chunk_id": "40617c",
+        "exit_code": 0,
+        "original_token_count": 226,
+        "output": "{\"status\": \"manuscript_review_rendered\", \"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_review.html\", \"bytes\": 108428, \"sha256\": \"13a0c6cfa117aa4c4edff339bd27feaf59180fd585efd64d64439f2007e0cd88\"}, \"citation_ids\": [\"busco2021\", \"cpm2011\", \"diamond2021\", \"fastoma2025\", \"iqtree3_2026\", \"kuzmin2020\", \"leiden2019\", \"orthobench2020\", \"orthofinder2026\", \"orthofinder2026correction\", \"orthohmm2024preprint\", \"orthomcl2003\", \"proteinortho2023\", \"pyvolve2015\", \"qfo2016\", \"qfo2020\", \"sonicparanoid2024\", \"ygob2005\", \"zombi2019online\"], \"local_occurrences\": 121, \"unique_targets\": 117, \"untracked_targets\": [\"benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf\"], \"stderr\": {\"parse\": \"\", \"render\": \"\"}, \"bibliography_entries\": 38, \"publication_ready\": false}\n",
+        "session_id": 86132,
+        "wall_time_seconds": 1.1548e-05
+      }
+    }
+  },
+  "manual_visual_review": {
+    "figure_png_and_decoded_pdf_inspected": true,
+    "full_document_manual_review": false,
+    "manuscript_pages": [
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12
+    ],
+    "observed_new_section_clipping_or_incoherent_overlap": false
+  },
+  "new_bootstrap": false,
+  "new_inference_or_scoring": false,
+  "outputs": [
+    {
+      "bytes": 82500,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md",
+      "sha256": "cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673"
+    },
+    {
+      "bytes": 108428,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_review.html",
+      "sha256": "13a0c6cfa117aa4c4edff339bd27feaf59180fd585efd64d64439f2007e0cd88"
+    },
+    {
+      "bytes": 58087,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_assets.json",
+      "sha256": "302dc23f1c4a7b13662e08a59ca872c5dc276afbbff6ed2411cf41501e40ac02"
+    },
+    {
+      "bytes": 35074,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_print/print.json",
+      "sha256": "16058a0c69e86fbad710425263f6bbe3f09ef306ad14d3647e8f470327cdc626"
+    },
+    {
+      "bytes": 440373,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_print/document.pdf",
+      "sha256": "4ca152292c73301bd3a745f1abc8e2626d2b57e42927462039931f3e1230bb36"
+    },
+    {
+      "bytes": 7631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/endpoints.tsv",
+      "sha256": "8e82b399d7934fcd01f556d4017f3d04b26b6eef16bb47d3d0caede42b715d5c"
+    },
+    {
+      "bytes": 3215,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/manifest.json",
+      "sha256": "5e79563ab71fac550c358aa20cce4ed03263577602e97e8c18daa503e25a1128"
+    },
+    {
+      "bytes": 1570,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/methods_section.md",
+      "sha256": "4155cb3671e29fad3f13f782953e7fdc613675438a8a783732f7dd3bd0a22b1c"
+    },
+    {
+      "bytes": 27776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf",
+      "sha256": "a99113cde7d89828863fa291935466d77a5781574d2f112fb4f86e7a9068dbf5"
+    },
+    {
+      "bytes": 221280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.png",
+      "sha256": "00e469ca13cae561c362188fbd86d17cc2fc011299a337e6030b763572d825cf"
+    },
+    {
+      "bytes": 125975,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity_pdf_preview.png",
+      "sha256": "511a07e6f240f0eee1126f08c999635d1686b82c2c406180d35e32896cb7bf05"
+    },
+    {
+      "bytes": 3630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/results_section.md",
+      "sha256": "aa34c0418a8f7003caf0da662cb1ccee0e49df7924b49ba34a0487eb569689ee"
+    },
+    {
+      "bytes": 258878,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_003.png",
+      "sha256": "bae8a2e688afb1f5a2d56757ea062e87bc6d59450001a8c97db8667cb0ba0b39"
+    },
+    {
+      "bytes": 243790,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_004.png",
+      "sha256": "4b1b6095e4aadec0541a9788062df051e74301273a0b726d03e9ae00885f8f01"
+    },
+    {
+      "bytes": 244566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_005.png",
+      "sha256": "ea65196a58b3fdd13b48df5f78b2d1ff6b97545cb78d6490d528f77517071415"
+    },
+    {
+      "bytes": 186440,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_009.png",
+      "sha256": "27730c02c474403d63e84d849942d4cafd532f261d6eb2df2411f44d4c4c04f2"
+    },
+    {
+      "bytes": 223523,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_010.png",
+      "sha256": "3faff5c243ab9cdde1bd01d53f725f3f128cd967bd0791ca0f182883f844d39e"
+    },
+    {
+      "bytes": 198098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_011.png",
+      "sha256": "e9a74fb9a40043e6d05c2cd5c8c05f9a8a493e7e0fbb8c1e9e28b980bebbfbd8"
+    },
+    {
+      "bytes": 202993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/page_012.png",
+      "sha256": "88ba126bac9681a6dfbff5d26024881925df205380d6528c77de9d1314824108"
+    },
+    {
+      "bytes": 36530,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1_layout/report.json",
+      "sha256": "feee048b1f093ca4d38f33e366803ee5b360fb7fb0cc811018d5b7772145628a"
+    }
+  ],
+  "publication_ready": false,
+  "schema": "native_qfo_comparator_integration_execution_v1",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source_revision": "525e27b9b78243793ecd9b3b944514c623c3d126"
+}

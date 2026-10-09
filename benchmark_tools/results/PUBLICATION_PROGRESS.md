@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Comparator Integration Executed; Four-Cell Stratum Extension Frozen (2026-10-09)
+
+Source/tests committed/pushed525e27b9 after69tests passed. Actual integration
+executed once EXIT0. New manuscript82500bytes SHA
+cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673;
+manifest3215bytes SHA5e79563ab71fac550c358aa20cce4ed03263577602e97e8c18daa503e25a1128.
+Independent readback EXIT0 verifies48table rows/24missing/8manuscriptF1rows,
+exact parent-body restoration, actualPDF48interval segments/24point markers
+against raw numeric endpoints and axis transforms,85in-bounds figure spans.
+ActualPNG and decodedPDF visually inspected with no observed clipping/overlap.
+
+Existing renderer/parent-boundbibliography executed EXIT0:19citationIDs resolve,
+121locallinks/117targets checked, emptyPandocstderr. Bibliography has38entries,
+not19entries (earlier checkpoint meant19citedIDs). FreshChrome print EXIT0:
+24pages/440373bytes SHA4ca152292c73301bd3a745f1abc8e2626d2b57e42927462039931f3e1230bb36.
+Allpagebounds checked,no violations; newsectionF1table24numbers/8outcome strings
+checked. Actualpages3-5/9-12 viewed; other17not manually viewed, no fullvisual
+certification claimed. Six executed commands and20outputpins retained in
+native_qfo_comparator_integration_execution_20261009_v1.json,49836bytes SHA
+fc0e811c182ead8bfa9eb811a00116271e6de7c1649cf1b4386c5889a481a8e7.
+NATIVE_QFO_COMPARATOR_INTEGRATION_RESULT_20261009.md records exact scope.
+Old manuscripts/archives/scientific source remain unchanged; no new package.
+
+Current milestone: commit/push new manuscript/figure/review/receipt/result
+outputs (explicit paths, NEVERbrowser_profile) and the new scientific protocol.
+Identified real originalgoal4.3 gap: existing three-cell fixed/model-distance
+strata contain onlyP0cells and explicitly cannot estimate the admittedP1cell.
+No four-cell/profile-stratum result exists in retained result names. New
+NATIVE_QFO_FOUR_CELL_STRATA_PROTOCOL_20261009.md freezes the descriptive
+extension BEFOREnew profile subgroup calculations: fourcells, unchanged23bins
+(11sequence/5domain/4duplication/3modeldistance), threeconditionalcontrasts,
+72family/92score/69difference rows, all69prior score/46prior difference rows
+must reproduce. No new cutoff/bootstrap/inference/scoring/feature extraction,
+causal or subgroup significance/default claim. Seven direct scientificpins.
+
+Next exact action after this commit: inspect export_native_qfo_three_cell_strata.py,
+swiss_model_divergence_strata.py (locate exact file if named differently), their
+actual report/reader schemas and native10 profile audit/rational reader; implement
+and test a separately named four-cell consumer using unchanged statistics/bins
+and truthful provenance. Reuse old validators where their contracts permit,
+never impersonate the oldthree-cell schema or overwrite bound sources. Commit/
+push tested implementation before actual subgroup projection; independent
+Fractionreadback required. This is unfinished scientific error analysis, not
+another archive/audit campaign. Full goal ACTIVE; no live handles or user/host
+approval awaited. Preserve unrelated samples and151MBlocalarchive unstaged.
+
 ## Comparator Manuscript/Figure Integration Tested (2026-10-09)
 
 Comparator result/table/executed independent readback/addendum committed and

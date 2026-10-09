@@ -1,0 +1,68 @@
+{
+  "estimated_endpoints": 24,
+  "inputs": [
+    {
+      "bytes": 50060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1/report.json",
+      "sha256": "aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02"
+    },
+    {
+      "bytes": 41800,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_execution_20261009_v1.json",
+      "sha256": "b7a407f57c7952079a129b8814ce96fcabb53456c88ceb3d719e01ce4eafa3b6"
+    },
+    {
+      "bytes": 77300,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md",
+      "sha256": "16cb869bb9fc67905de0e98436242d7140851e26c10ada91f1670f169b871018"
+    },
+    {
+      "bytes": 16999,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_native_qfo_comparator_sensitivity.py",
+      "sha256": "e3f8c2a40912c382a17a517069a2909883508be5b74b519a421e717c79170f40"
+    }
+  ],
+  "manuscript": {
+    "bytes": 82500,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md",
+    "sha256": "cb6741dcc53f5b67bb20deccdefe5f165c20f001385b227f697e0f19571d2673"
+  },
+  "manuscript_rendered": false,
+  "no_inference_or_scoring": true,
+  "no_new_bootstrap": true,
+  "outputs": [
+    {
+      "bytes": 7631,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/endpoints.tsv",
+      "sha256": "8e82b399d7934fcd01f556d4017f3d04b26b6eef16bb47d3d0caede42b715d5c"
+    },
+    {
+      "bytes": 1570,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/methods_section.md",
+      "sha256": "4155cb3671e29fad3f13f782953e7fdc613675438a8a783732f7dd3bd0a22b1c"
+    },
+    {
+      "bytes": 27776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.pdf",
+      "sha256": "a99113cde7d89828863fa291935466d77a5781574d2f112fb4f86e7a9068dbf5"
+    },
+    {
+      "bytes": 221280,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/native_comparator_sensitivity.png",
+      "sha256": "00e469ca13cae561c362188fbd86d17cc2fc011299a337e6030b763572d825cf"
+    },
+    {
+      "bytes": 3630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_integration_20261009_v1/results_section.md",
+      "sha256": "aa34c0418a8f7003caf0da662cb1ccee0e49df7924b49ba34a0487eb569689ee"
+    }
+  ],
+  "parent_body_unchanged_except_insertions": true,
+  "planned_endpoints": 48,
+  "plot_scale": 100,
+  "publication_ready": false,
+  "schema": "native_qfo_comparator_integration_v1",
+  "table_scale": 1,
+  "unavailable_endpoints": 24,
+  "visual_reviewed": false
+}
