@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Scoped Print Recovery Tested; Fresh Render Next (2026-10-09)
+
+Prepared render_profile_stratum_review.py with HTMLParser verification of
+the exact target heading/paragraph/table DOM,23rows/sixcolumns and explicit
+scoped print CSS. Original scientific HTML bytes restore exactly on removing
+the inserted style; other tables and old global header remain unchanged.
+Original failed-visual print and correct manuscript/result are untouched.
+First new test run165pass/1failure: overwrite test used an invalid parent path
+and exercised the relative-asset guard instead. Fixed prospective test setup;
+final166passed in2.45s. No attempted scientific/render source was modified.
+
+Next commit/push rendering successor/tests/ledger, then run fresh
+native_qfo_four_cell_strata_manuscript_20261009_v1_review_v2.html and
+native_qfo_four_cell_strata_manuscript_20261009_v1_assets_v2.json, print at
+native_qfo_four_cell_strata_manuscript_20261009_v1_print_v2, and review at
+native_qfo_four_cell_strata_manuscript_20261009_v1_layout_v2. Verify all23
+printed profile rows/69numeric-or-NA cells and row/column positions, plus
+actual visual inspection of changed pages. Preserve original clippedprint
+and all command/tool outcomes in the final integration execution receipt.
+No manuscript/projection/inference/scoring/bootstrap retry or new endpoint.
+Full goal ACTIVE; no live session/job, host or permission wait.
+
+## Manuscript Science Integrated; Printed Table Clipping Needs Recovery (2026-10-09)
+
+Tested generator pushed0be0d844; actual integration EXIT0, manuscript87595bytes
+SHA60af8bf7ead43a3860eee6c923fc793895a8d8ae8e5564a30b0fe0daef131efc;
+manifest2861bytes/SHA652f0a593ec8966d55158674a94c47c01a40ad53eaa835a865313d5ffd44ed7a.
+Independent no-helper readback EXIT0 validates23rows/69cells, CASP/GH14counts,
+all sourcepins and exact frozen-parent restoration. HTML render EXIT0,
+19citation IDs/128links/123targets, emptyPandocstderr. Initial print EXIT0,
+25pages/505620bytes/SHA05c54bb7bf4fb74b7f551697c452b080629fca392d27d2096615a2f9a962bcd6.
+Automated PDFbounds finds no violations, BUT actual visual inspection of
+pages5/13/14 finds new table's rightmost TPR column clipped on13/14. Do not
+call the initial PDF visually complete or all printed cells checked.
+
+Preserve this attempt's manuscript/source/HTML/assets/PDF/layout files and
+actual tool outputs. Numerical content is valid; rendering only is affected.
+Next implement/test a small prospective scoped-CSS rendering successor for
+the profile table, retaining original HTML body/values and prior render
+provenance; new output/asset/print paths only. Do not modify the attempted
+generator or old global print header. Use fixed table widths and wrapping
+so every column is visible; explicitly verify all23printed rows/69values
+and visually inspect changed pages. No science or underlying projection
+rerun is needed. Full goal ACTIVE; this recoverable presentation defect
+does not gate other science or need user approval. No live job/session waits.
+
 ## Complete Profile-Stratum Manuscript Integration Tested (2026-10-09)
 
 Prepared integrate_native_qfo_four_cell_strata.py and focused tests against
