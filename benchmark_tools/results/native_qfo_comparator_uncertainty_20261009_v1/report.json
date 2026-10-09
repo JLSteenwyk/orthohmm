@@ -1,0 +1,1968 @@
+{
+  "alpha": 0.05,
+  "comparisons": [
+    {
+      "candidate": "p0_c0_r0",
+      "family_differences": [
+        {
+          "F1": -0.20070916137544326,
+          "PPV": -0.42669172932330834,
+          "TPR": 0.1340206185567011,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.168074902945878,
+          "PPV": -0.014687100893997385,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.1850195030141022,
+          "PPV": -0.11290322580645162,
+          "TPR": -0.2441860465116279,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.1624427480916032,
+          "PPV": -0.34613212874082444,
+          "TPR": 0.05555555555555558,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.22405372405372403,
+          "PPV": -0.3925581738392889,
+          "TPR": -0.04458598726114649,
+          "family": "CITE"
+        },
+        {
+          "F1": -0.3168829220730519,
+          "PPV": -0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.2129032258064516,
+          "PPV": -0.4342105263157895,
+          "TPR": 0.0,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.31648616125150425,
+          "PPV": -0.43269054178145083,
+          "TPR": -0.2179487179487179,
+          "family": "HOX"
+        },
+        {
+          "F1": -0.13457556935817805,
+          "PPV": -0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.4512988951925948,
+          "PPV": -0.5651516436903499,
+          "TPR": -0.21649484536082475,
+          "family": "NOX"
+        },
+        {
+          "F1": -0.20347519516494594,
+          "PPV": -0.36830909485565444,
+          "TPR": 0.0,
+          "family": "POP"
+        },
+        {
+          "F1": -0.1560144040586805,
+          "PPV": -0.12641063773948036,
+          "TPR": -0.17958412098298682,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.4826999432785025,
+          "PPV": 0.06954887218045114,
+          "TPR": 0.5522388059701493,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.1288791343405471,
+          "PPV": -0.1719316794663539,
+          "TPR": -0.08731241473397,
+          "family": "SERC"
+        },
+        {
+          "F1": -0.29579831932773115,
+          "PPV": -0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": -0.3728736967818985,
+          "PPV": -0.6603075460809938,
+          "TPR": 0.15254237288135586,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.016216051204298254,
+          "PPV": -0.03447440379356892,
+          "TPR": 0.0,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.2726608599524121,
+            -0.007023260062511583
+          ],
+          "difference": -0.1592293039739051,
+          "family_losses": 17,
+          "family_ties": 0,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.2300880626389227,
+            -0.07777388526723363
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.4454965084389297,
+            -0.13541108225620654
+          ],
+          "difference": -0.29391273547448926,
+          "family_losses": 17,
+          "family_ties": 0,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.38849328938258704,
+            -0.19671649013523876
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.1571621776053903,
+            0.13948635979553484
+          ],
+          "difference": -0.03328147821069438,
+          "family_losses": 8,
+          "family_ties": 6,
+          "family_wins": 4,
+          "paired_percentile_ci": [
+            -0.11409352776332998,
+            0.06173374533141986
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_full",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c0_r0",
+      "family_differences": [
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.24478521089350846,
+          "PPV": -0.019809244314013208,
+          "TPR": -0.3870967741935484,
+          "family": "BAMBI"
+        },
+        {
+          "F1": 0.10941066611330152,
+          "PPV": 0.3378309318442439,
+          "TPR": -0.28405315614617943,
+          "family": "BAR"
+        },
+        {
+          "F1": 0.24880725190839686,
+          "PPV": 0.28430265386787124,
+          "TPR": 0.03703703703703698,
+          "family": "CASP"
+        },
+        {
+          "F1": 0.14556538795889717,
+          "PPV": 0.20358868184955148,
+          "TPR": -0.04458598726114649,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": 0.08709677419354839,
+          "PPV": 0.10150375939849623,
+          "TPR": 0.0,
+          "family": "GH14"
+        },
+        {
+          "F1": 0.10518518518518519,
+          "PPV": 0.18213288665549973,
+          "TPR": -0.6282051282051282,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.05286671630677586,
+          "PPV": -0.010565613025954712,
+          "TPR": -0.21649484536082475,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.2073277479054645,
+          "PPV": 0.2673142589634852,
+          "TPR": -0.10994764397905754,
+          "family": "POP"
+        },
+        {
+          "F1": -0.10438625619825459,
+          "PPV": -0.022326674500587562,
+          "TPR": -0.17958412098298682,
+          "family": "PSEN"
+        },
+        {
+          "F1": -0.08435723454978905,
+          "PPV": -0.005411255411255422,
+          "TPR": -0.14925373134328357,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.0752436470540856,
+          "PPV": -0.016031214991731324,
+          "TPR": -0.14733969986357442,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.051188957707732685,
+          "PPV": 0.05298364175653264,
+          "TPR": -0.09322033898305093,
+          "family": "TRFE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.09415201375525338,
+            0.09822421924588019
+          ],
+          "difference": -0.0013308651040623287,
+          "family_losses": 6,
+          "family_ties": 5,
+          "family_wins": 7,
+          "paired_percentile_ci": [
+            -0.056602742671919656,
+            0.05697956831106938
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.0015888015696284908,
+            0.17364774453390097
+          ],
+          "difference": 0.07487223956067435,
+          "family_losses": 6,
+          "family_ties": 5,
+          "family_wins": 7,
+          "paired_percentile_ci": [
+            0.02351448950560134,
+            0.13322806223598416
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.2837660308690891,
+            -0.03056133171929424
+          ],
+          "difference": -0.13659691051565237,
+          "family_losses": 11,
+          "family_ties": 6,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.21957161400427072,
+            -0.06607742219275614
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c0_r1",
+      "family_differences": [
+        {
+          "F1": 0.07256364982628016,
+          "PPV": 0.0015954835542464352,
+          "TPR": 0.1340206185567011,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.16321839080459766,
+          "PPV": 0.0019493177387914784,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.10494062732686427,
+          "PPV": 0.11972295514511877,
+          "TPR": -0.24584717607973416,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.03315315315315326,
+          "PPV": -0.13196033562166287,
+          "TPR": 0.05555555555555558,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.12144702842377286,
+          "PPV": 0.0030987831607588445,
+          "TPR": -0.18471337579617841,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.0736842105263158,
+          "PPV": -0.0357142857142857,
+          "TPR": -0.08333333333333331,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.1264550086035291,
+          "PPV": 0.22171558848674844,
+          "TPR": -0.2179487179487179,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.1189963741841914,
+          "PPV": 0.0006666666666667043,
+          "TPR": -0.21855670103092784,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "POP"
+        },
+        {
+          "F1": -0.43991228070175437,
+          "PPV": -0.006447059319266368,
+          "TPR": -0.5784499054820416,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.15201958384332925,
+          "PPV": 0.03383458646616544,
+          "TPR": 0.13432835820895522,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.0849661869256112,
+          "PPV": -0.0005395831719995359,
+          "TPR": -0.1473396998635743,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.09275362318840574,
+          "PPV": 0.0037803213273128744,
+          "TPR": 0.15254237288135586,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.04059747717521045,
+          "PPV": -0.0005054825414105846,
+          "TPR": -0.07202216066481992,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.16403968477319122,
+            0.01854254832315096
+          ],
+          "difference": -0.05883893315476896,
+          "family_losses": 11,
+          "family_ties": 4,
+          "family_wins": 3,
+          "paired_percentile_ci": [
+            -0.11715910217823931,
+            -0.010060094681995898
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.034951146027214317,
+            0.07069265778900838
+          ],
+          "difference": 0.01129913645428815,
+          "family_losses": 6,
+          "family_ties": 4,
+          "family_wins": 8,
+          "paired_percentile_ci": [
+            -0.01717160848108577,
+            0.0447629053373817
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.24735579744605862,
+            0.028099347861025546
+          ],
+          "difference": -0.09861533294187486,
+          "family_losses": 10,
+          "family_ties": 4,
+          "family_wins": 4,
+          "paired_percentile_ci": [
+            -0.18422052856808843,
+            -0.01956098073827912
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_full",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c0_r1",
+      "family_differences": [
+        {
+          "F1": 0.2732728112017234,
+          "PPV": 0.4282872128775548,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.2399286987522281,
+          "PPV": -0.003172825681224345,
+          "TPR": -0.3870967741935484,
+          "family": "BAMBI"
+        },
+        {
+          "F1": 0.18948954180053945,
+          "PPV": 0.5704571127958142,
+          "TPR": -0.2857142857142857,
+          "family": "BAR"
+        },
+        {
+          "F1": 0.3780968468468468,
+          "PPV": 0.4984744469870328,
+          "TPR": 0.03703703703703698,
+          "family": "CASP"
+        },
+        {
+          "F1": 0.24817208358884835,
+          "PPV": 0.5992456388495992,
+          "TPR": -0.18471337579617841,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.3168829220730519,
+          "PPV": 0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": 0.2263157894736842,
+          "PPV": 0.5,
+          "TPR": -0.08333333333333331,
+          "family": "GH14"
+        },
+        {
+          "F1": 0.29521633783316037,
+          "PPV": 0.836539016923699,
+          "TPR": -0.6282051282051282,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.13457556935817805,
+          "PPV": 0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": 0.27943580470162754,
+          "PPV": 0.5552526973310619,
+          "TPR": -0.21855670103092784,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.41080294307041043,
+          "PPV": 0.6356233538191396,
+          "TPR": -0.10994764397905754,
+          "family": "POP"
+        },
+        {
+          "F1": -0.38828413284132846,
+          "PPV": 0.09763690391962643,
+          "TPR": -0.5784499054820416,
+          "family": "PSEN"
+        },
+        {
+          "F1": -0.4150375939849623,
+          "PPV": -0.04112554112554112,
+          "TPR": -0.5671641791044776,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.031330699639149695,
+          "PPV": 0.15536088130262304,
+          "TPR": -0.20736698499317874,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.29579831932773115,
+          "PPV": 0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.516816277678037,
+          "PPV": 0.7170715091648394,
+          "TPR": -0.09322033898305093,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.024381425970912196,
+          "PPV": 0.033968921252158335,
+          "TPR": -0.07202216066481992,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.11735409214179897,
+            0.3021798915304813
+          ],
+          "difference": 0.09905950571507383,
+          "family_losses": 6,
+          "family_ties": 0,
+          "family_wins": 12,
+          "paired_percentile_ci": [
+            -0.030370173393486567,
+            0.22627308593426274
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            0.1746266094589386,
+            0.5682923918627598
+          ],
+          "difference": 0.38008411148945176,
+          "family_losses": 3,
+          "family_ties": 0,
+          "family_wins": 15,
+          "paired_percentile_ci": [
+            0.2565410244526444,
+            0.4996996822317045
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.37220930267914726,
+            -0.06145246015862823
+          ],
+          "difference": -0.20193076524683284,
+          "family_losses": 13,
+          "family_ties": 4,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.30160652433272445,
+            -0.11133959724328432
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c1_r0",
+      "family_differences": [
+        {
+          "F1": -0.20070916137544326,
+          "PPV": -0.42669172932330834,
+          "TPR": 0.1340206185567011,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.168074902945878,
+          "PPV": -0.014687100893997385,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.15925837889232242,
+          "PPV": -0.10279922779922779,
+          "TPR": -0.207641196013289,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.35422680412371144,
+          "PPV": -0.5922360248447205,
+          "TPR": 0.12962962962962965,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.3696191120126212,
+          "PPV": -0.5961468556888404,
+          "TPR": 0.0,
+          "family": "CITE"
+        },
+        {
+          "F1": -0.3168829220730519,
+          "PPV": -0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.35,
+          "PPV": -0.5909090909090909,
+          "TPR": 0.08333333333333337,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.3242380992360004,
+          "PPV": -0.44592931246703005,
+          "TPR": -0.2179487179487179,
+          "family": "HOX"
+        },
+        {
+          "F1": -0.13457556935817805,
+          "PPV": -0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.4406734159506186,
+          "PPV": -0.5796767317939608,
+          "TPR": -0.09896907216494844,
+          "family": "NOX"
+        },
+        {
+          "F1": -0.20347519516494594,
+          "PPV": -0.36830909485565444,
+          "TPR": 0.0,
+          "family": "POP"
+        },
+        {
+          "F1": -0.11981424148606812,
+          "PPV": -0.11817544779880917,
+          "TPR": -0.12098298676748587,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.5670571778282916,
+          "PPV": 0.07496012759170656,
+          "TPR": 0.7014925373134329,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.0536354872864615,
+          "PPV": -0.15590046447462258,
+          "TPR": 0.060027285129604424,
+          "family": "SERC"
+        },
+        {
+          "F1": -0.29579831932773115,
+          "PPV": -0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": -0.40957781978575925,
+          "PPV": -0.7001558271139178,
+          "TPR": 0.22881355932203384,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.016216051204298254,
+          "PPV": -0.03447440379356892,
+          "TPR": 0.0,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.2984760267853185,
+            0.013903500603525838
+          ],
+          "difference": -0.16270376756007277,
+          "family_losses": 17,
+          "family_ties": 0,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.24839978526958578,
+            -0.06834055077867128
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.5024466338797051,
+            -0.14585425815739506
+          ],
+          "difference": -0.32914727014215484,
+          "family_losses": 17,
+          "family_ties": 0,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.4384869734715358,
+            -0.21644612880169753
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.12734927399263332,
+            0.2101300927945832
+          ],
+          "difference": 0.010470175690739159,
+          "family_losses": 6,
+          "family_ties": 6,
+          "family_wins": 6,
+          "paired_percentile_ci": [
+            -0.07937442564485739,
+            0.1191863700018015
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_full",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c1_r0",
+      "family_differences": [
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.24478521089350846,
+          "PPV": -0.019809244314013208,
+          "TPR": -0.3870967741935484,
+          "family": "BAMBI"
+        },
+        {
+          "F1": 0.1351717902350813,
+          "PPV": 0.34793492985146773,
+          "TPR": -0.24750830564784054,
+          "family": "BAR"
+        },
+        {
+          "F1": 0.057023195876288624,
+          "PPV": 0.03819875776397513,
+          "TPR": 0.11111111111111105,
+          "family": "CASP"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.04999999999999999,
+          "PPV": -0.055194805194805185,
+          "TPR": 0.08333333333333337,
+          "family": "GH14"
+        },
+        {
+          "F1": 0.09743324720068905,
+          "PPV": 0.16889411596992052,
+          "TPR": -0.6282051282051282,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.04224123706479965,
+          "PPV": -0.025090701129565685,
+          "TPR": -0.09896907216494844,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.2073277479054645,
+          "PPV": 0.2673142589634852,
+          "TPR": -0.10994764397905754,
+          "family": "POP"
+        },
+        {
+          "F1": -0.06818609362564221,
+          "PPV": -0.014091484559916378,
+          "TPR": -0.12098298676748587,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "RPS"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.014484834703871963,
+          "PPV": 0.013135360723608713,
+          "TPR": -0.016949152542372947,
+          "family": "TRFE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.08124610040895995,
+            0.06753601056542217
+          ],
+          "difference": -0.004805328690229982,
+          "family_losses": 5,
+          "family_ties": 8,
+          "family_wins": 5,
+          "paired_percentile_ci": [
+            -0.04705508833179665,
+            0.037033297412893997
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.015244275742547147,
+            0.13617645200089995
+          ],
+          "difference": 0.039637704893008774,
+          "family_losses": 5,
+          "family_ties": 8,
+          "family_wins": 5,
+          "paired_percentile_ci": [
+            -0.003291995695119451,
+            0.09357381794210193
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.2549840591177626,
+            0.015229673961867909
+          ],
+          "difference": -0.09284525661421883,
+          "family_losses": 8,
+          "family_ties": 8,
+          "family_wins": 2,
+          "paired_percentile_ci": [
+            -0.1826537683864884,
+            -0.01913257391433132
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p0_c1_r1",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "pre_native_cpu_binding_failure",
+      "reference": "orthofinder_3_1_5_full",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p0_c1_r1",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "pre_native_cpu_binding_failure",
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c0_r0",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "not_in_supplied_fresh_cell_snapshot; historical method remains separate",
+      "reference": "orthofinder_3_1_5_full",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c0_r0",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "not_in_supplied_fresh_cell_snapshot; historical method remains separate",
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c0_r1",
+      "family_differences": [
+        {
+          "F1": 0.07256364982628016,
+          "PPV": 0.0015954835542464352,
+          "TPR": 0.1340206185567011,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.16321839080459766,
+          "PPV": 0.0019493177387914784,
+          "TPR": -0.24731182795698925,
+          "family": "BAMBI"
+        },
+        {
+          "F1": -0.10494062732686427,
+          "PPV": 0.11972295514511877,
+          "TPR": -0.24584717607973416,
+          "family": "BAR"
+        },
+        {
+          "F1": -0.009629629629629766,
+          "PPV": -0.08615136876006446,
+          "TPR": 0.05555555555555558,
+          "family": "CASP"
+        },
+        {
+          "F1": -0.12144702842377286,
+          "PPV": 0.0030987831607588445,
+          "TPR": -0.18471337579617841,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": -0.15555555555555556,
+          "PPV": -0.08333333333333337,
+          "TPR": -0.16666666666666669,
+          "family": "GH14"
+        },
+        {
+          "F1": -0.1264550086035291,
+          "PPV": 0.22171558848674844,
+          "TPR": -0.2179487179487179,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": -0.1189963741841914,
+          "PPV": 0.0006666666666667043,
+          "TPR": -0.21855670103092784,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "POP"
+        },
+        {
+          "F1": -0.43991228070175437,
+          "PPV": -0.006447059319266368,
+          "TPR": -0.5784499054820416,
+          "family": "PSEN"
+        },
+        {
+          "F1": 0.15201958384332925,
+          "PPV": 0.03383458646616544,
+          "TPR": 0.13432835820895522,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.0849661869256112,
+          "PPV": -0.0005395831719995359,
+          "TPR": -0.1473396998635743,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.0,
+          "PPV": 0.0,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.09275362318840574,
+          "PPV": 0.0037803213273128744,
+          "TPR": 0.15254237288135586,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.04059747717521045,
+          "PPV": -0.0005054825414105846,
+          "TPR": -0.07202216066481992,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.16863839809820227,
+            0.018128863621063675
+          ],
+          "difference": -0.06204108545618159,
+          "family_losses": 11,
+          "family_ties": 4,
+          "family_wins": 3,
+          "paired_percentile_ci": [
+            -0.12169306438373473,
+            -0.011712672291208863
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            -0.02953489359822399,
+            0.07056440703217258
+          ],
+          "difference": 0.011198576412207562,
+          "family_losses": 6,
+          "family_ties": 4,
+          "family_wins": 8,
+          "paired_percentile_ci": [
+            -0.015657684866034013,
+            0.04452052456018084
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.25144639763302673,
+            0.025601531002556986
+          ],
+          "difference": -0.1032449625715045,
+          "family_losses": 10,
+          "family_ties": 4,
+          "family_wins": 4,
+          "paired_percentile_ci": [
+            -0.18880000979532263,
+            -0.02333156266162219
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_full",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p1_c0_r1",
+      "family_differences": [
+        {
+          "F1": 0.2732728112017234,
+          "PPV": 0.4282872128775548,
+          "TPR": 0.0,
+          "family": "APP"
+        },
+        {
+          "F1": -0.27068378660735354,
+          "PPV": -0.0078125,
+          "TPR": -0.256,
+          "family": "ASTER"
+        },
+        {
+          "F1": -0.2399286987522281,
+          "PPV": -0.003172825681224345,
+          "TPR": -0.3870967741935484,
+          "family": "BAMBI"
+        },
+        {
+          "F1": 0.18948954180053945,
+          "PPV": 0.5704571127958142,
+          "TPR": -0.2857142857142857,
+          "family": "BAR"
+        },
+        {
+          "F1": 0.4016203703703703,
+          "PPV": 0.5442834138486312,
+          "TPR": 0.03703703703703698,
+          "family": "CASP"
+        },
+        {
+          "F1": 0.24817208358884835,
+          "PPV": 0.5992456388495992,
+          "TPR": -0.18471337579617841,
+          "family": "CITE"
+        },
+        {
+          "F1": 0.3168829220730519,
+          "PPV": 0.4777250113071009,
+          "TPR": 0.0,
+          "family": "Clusterin"
+        },
+        {
+          "F1": 0.14444444444444443,
+          "PPV": 0.45238095238095233,
+          "TPR": -0.16666666666666669,
+          "family": "GH14"
+        },
+        {
+          "F1": 0.29521633783316037,
+          "PPV": 0.836539016923699,
+          "TPR": -0.6282051282051282,
+          "family": "HOX"
+        },
+        {
+          "F1": 0.13457556935817805,
+          "PPV": 0.33766233766233766,
+          "TPR": 0.0,
+          "family": "MAPT"
+        },
+        {
+          "F1": 0.27943580470162754,
+          "PPV": 0.5552526973310619,
+          "TPR": -0.21855670103092784,
+          "family": "NOX"
+        },
+        {
+          "F1": 0.41080294307041043,
+          "PPV": 0.6356233538191396,
+          "TPR": -0.10994764397905754,
+          "family": "POP"
+        },
+        {
+          "F1": -0.38828413284132846,
+          "PPV": 0.09763690391962643,
+          "TPR": -0.5784499054820416,
+          "family": "PSEN"
+        },
+        {
+          "F1": -0.4150375939849623,
+          "PPV": -0.04112554112554112,
+          "TPR": -0.5671641791044776,
+          "family": "RPS"
+        },
+        {
+          "F1": -0.031330699639149695,
+          "PPV": 0.15536088130262304,
+          "TPR": -0.20736698499317874,
+          "family": "SERC"
+        },
+        {
+          "F1": 0.29579831932773115,
+          "PPV": 0.45031982942430704,
+          "TPR": 0.0,
+          "family": "SUMF"
+        },
+        {
+          "F1": 0.516816277678037,
+          "PPV": 0.7170715091648394,
+          "TPR": -0.09322033898305093,
+          "family": "TRFE"
+        },
+        {
+          "F1": -0.024381425970912196,
+          "PPV": 0.033968921252158335,
+          "TPR": -0.07202216066481992,
+          "family": "VATB"
+        }
+      ],
+      "metrics": {
+        "F1": {
+          "bonferroni_percentile_ci": [
+            -0.12022140513200925,
+            0.3001327202595402
+          ],
+          "difference": 0.0958573534136612,
+          "family_losses": 6,
+          "family_ties": 0,
+          "family_wins": 12,
+          "paired_percentile_ci": [
+            -0.03335976883068822,
+            0.22335146383286508
+          ]
+        },
+        "PPV": {
+          "bonferroni_percentile_ci": [
+            0.17411862360219185,
+            0.5701832607331669
+          ],
+          "difference": 0.37998355144737117,
+          "family_losses": 3,
+          "family_ties": 0,
+          "family_wins": 15,
+          "paired_percentile_ci": [
+            0.2564784465137043,
+            0.5000749842618795
+          ]
+        },
+        "TPR": {
+          "bonferroni_percentile_ci": [
+            -0.3754113444854633,
+            -0.06611523758525789
+          ],
+          "difference": -0.2065603948764625,
+          "family_losses": 13,
+          "family_ties": 4,
+          "family_wins": 1,
+          "paired_percentile_ci": [
+            -0.30540854762504965,
+            -0.11646663196596571
+          ]
+        }
+      },
+      "missing_reason": null,
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_native_comparison_estimated"
+    },
+    {
+      "candidate": "p1_c1_r0",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "native_success_but_scoring_OUT_OF_MEMORY_no_admission",
+      "reference": "orthofinder_3_1_5_full",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c1_r0",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "native_success_but_scoring_OUT_OF_MEMORY_no_admission",
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c1_r1",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "native_inference_SIGSEGV_no_admission",
+      "reference": "orthofinder_3_1_5_full",
+      "status": "native_cell_unavailable"
+    },
+    {
+      "candidate": "p1_c1_r1",
+      "family_differences": null,
+      "metrics": null,
+      "missing_reason": "native_inference_SIGSEGV_no_admission",
+      "reference": "orthofinder_3_1_5_sequence_only",
+      "status": "native_cell_unavailable"
+    }
+  ],
+  "estimated_endpoints": 24,
+  "evidence": [
+    {
+      "bytes": 594127,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json",
+      "sha256": "a599749d66433ec211ed1ab0e3a6a2a75eb99cb0dc57abc47c2d267930cbbe34"
+    },
+    {
+      "bytes": 95487,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json",
+      "sha256": "e8f554a178841da24a1892a7e42f8680f9fe8e4827dec6d6bfe4643cdb890bac"
+    },
+    {
+      "bytes": 31685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_terminal_failures_20261009_v1/report.json",
+      "sha256": "863ebc334dbdb5a41d1a9e9bba56be82896f0ff26c98366047928c7ef802966f"
+    },
+    {
+      "bytes": 30311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_swiss_family_counts_20261005_v1.json",
+      "sha256": "4a49225b50de31f153c1b701f866db7acdfdbefa3d6398339ef5bf8711b2b561"
+    },
+    {
+      "bytes": 34593,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/recovered_native_qfo_swiss_counts_22449_20261006.json",
+      "sha256": "af4276cd759412a5a10ba04012a6f742f147c28611a6cff83adee463f85b0471"
+    },
+    {
+      "bytes": 30405,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_candidate_swiss_counts_20261006_v1.json",
+      "sha256": "7ed2ea1a7a94d55b28ecbadd7bd2be8e99df64b9fab3c266ebd987e8dbcfc479"
+    },
+    {
+      "bytes": 45172,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native10_allocated_swiss_counts_20261007_v1.json",
+      "sha256": "d5bafed830bf93e46b810728df14ffa34185d58ffe3eac78a693b0159d3d0a40"
+    },
+    {
+      "bytes": 318907,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/ReconciledTrees_SwissTrees.drw",
+      "sha256": "40528e3537ba57e345c443c8024f99dc3940a66e2d102703754b41bb29858ecd"
+    }
+  ],
+  "families": [
+    "APP",
+    "ASTER",
+    "BAMBI",
+    "BAR",
+    "CASP",
+    "CITE",
+    "Clusterin",
+    "GH14",
+    "HOX",
+    "MAPT",
+    "NOX",
+    "POP",
+    "PSEN",
+    "RPS",
+    "SERC",
+    "SUMF",
+    "TRFE",
+    "VATB"
+  ],
+  "family_values": {
+    "orthofinder_3_1_5_full": [
+      [
+        0.9880952380952381,
+        0.8556701030927835
+      ],
+      [
+        0.9921875,
+        0.508
+      ],
+      [
+        0.9629629629629629,
+        0.8387096774193549
+      ],
+      [
+        0.875,
+        0.872093023255814
+      ],
+      [
+        0.9565217391304348,
+        0.8148148148148148
+      ],
+      [
+        0.9770992366412213,
+        0.8152866242038217
+      ],
+      [
+        0.9701492537313433,
+        0.9701492537313433
+      ],
+      [
+        0.75,
+        0.5
+      ],
+      [
+        0.743801652892562,
+        0.5769230769230769
+      ],
+      [
+        0.9090909090909091,
+        0.5882352941176471
+      ],
+      [
+        0.966,
+        0.9958762886597938
+      ],
+      [
+        0.9882352941176471,
+        0.8795811518324608
+      ],
+      [
+        0.9959758551307847,
+        0.9357277882797732
+      ],
+      [
+        0.8947368421052632,
+        0.2537313432835821
+      ],
+      [
+        0.9970972423802612,
+        0.937244201909959
+      ],
+      [
+        0.9428571428571428,
+        0.9428571428571428
+      ],
+      [
+        0.9775280898876404,
+        0.7372881355932204
+      ],
+      [
+        0.9940119760479041,
+        0.9196675900277008
+      ]
+    ],
+    "orthofinder_3_1_5_sequence_only": [
+      [
+        0.5614035087719298,
+        0.9896907216494846
+      ],
+      [
+        0.9921875,
+        0.508
+      ],
+      [
+        0.9680851063829787,
+        0.978494623655914
+      ],
+      [
+        0.4242658423493045,
+        0.9119601328903655
+      ],
+      [
+        0.32608695652173914,
+        0.8333333333333334
+      ],
+      [
+        0.38095238095238093,
+        0.8152866242038217
+      ],
+      [
+        0.49242424242424243,
+        0.9701492537313433
+      ],
+      [
+        0.21428571428571427,
+        0.5
+      ],
+      [
+        0.12897822445561138,
+        0.9871794871794872
+      ],
+      [
+        0.5714285714285714,
+        0.5882352941176471
+      ],
+      [
+        0.41141396933560476,
+        0.9958762886597938
+      ],
+      [
+        0.35261194029850745,
+        0.9895287958115183
+      ],
+      [
+        0.8918918918918919,
+        0.9357277882797732
+      ],
+      [
+        0.9696969696969697,
+        0.9552238805970149
+      ],
+      [
+        0.8411967779056386,
+        0.9972714870395635
+      ],
+      [
+        0.4925373134328358,
+        0.9428571428571428
+      ],
+      [
+        0.2642369020501139,
+        0.9830508474576272
+      ],
+      [
+        0.9595375722543352,
+        0.9196675900277008
+      ]
+    ],
+    "p0_c0_r0": [
+      [
+        0.5614035087719298,
+        0.9896907216494846
+      ],
+      [
+        0.984375,
+        0.252
+      ],
+      [
+        0.9482758620689655,
+        0.5913978494623656
+      ],
+      [
+        0.7620967741935484,
+        0.627906976744186
+      ],
+      [
+        0.6103896103896104,
+        0.8703703703703703
+      ],
+      [
+        0.5845410628019324,
+        0.7707006369426752
+      ],
+      [
+        0.49242424242424243,
+        0.9701492537313433
+      ],
+      [
+        0.3157894736842105,
+        0.5
+      ],
+      [
+        0.3111111111111111,
+        0.358974358974359
+      ],
+      [
+        0.5714285714285714,
+        0.5882352941176471
+      ],
+      [
+        0.40084835630965004,
+        0.7793814432989691
+      ],
+      [
+        0.6199261992619927,
+        0.8795811518324608
+      ],
+      [
+        0.8695652173913043,
+        0.7561436672967864
+      ],
+      [
+        0.9642857142857143,
+        0.8059701492537313
+      ],
+      [
+        0.8251655629139073,
+        0.849931787175989
+      ],
+      [
+        0.4925373134328358,
+        0.9428571428571428
+      ],
+      [
+        0.31722054380664655,
+        0.8898305084745762
+      ],
+      [
+        0.9595375722543352,
+        0.9196675900277008
+      ]
+    ],
+    "p0_c0_r1": [
+      [
+        0.9896907216494846,
+        0.9896907216494846
+      ],
+      [
+        0.984375,
+        0.252
+      ],
+      [
+        0.9649122807017544,
+        0.5913978494623656
+      ],
+      [
+        0.9947229551451188,
+        0.6262458471760798
+      ],
+      [
+        0.8245614035087719,
+        0.8703703703703703
+      ],
+      [
+        0.9801980198019802,
+        0.6305732484076433
+      ],
+      [
+        0.9701492537313433,
+        0.9701492537313433
+      ],
+      [
+        0.7142857142857143,
+        0.4166666666666667
+      ],
+      [
+        0.9655172413793104,
+        0.358974358974359
+      ],
+      [
+        0.9090909090909091,
+        0.5882352941176471
+      ],
+      [
+        0.9666666666666667,
+        0.777319587628866
+      ],
+      [
+        0.9882352941176471,
+        0.8795811518324608
+      ],
+      [
+        0.9895287958115183,
+        0.3572778827977316
+      ],
+      [
+        0.9285714285714286,
+        0.3880597014925373
+      ],
+      [
+        0.9965576592082617,
+        0.7899045020463847
+      ],
+      [
+        0.9428571428571428,
+        0.9428571428571428
+      ],
+      [
+        0.9813084112149533,
+        0.8898305084745762
+      ],
+      [
+        0.9935064935064936,
+        0.8476454293628809
+      ]
+    ],
+    "p0_c1_r0": [
+      [
+        0.5614035087719298,
+        0.9896907216494846
+      ],
+      [
+        0.984375,
+        0.252
+      ],
+      [
+        0.9482758620689655,
+        0.5913978494623656
+      ],
+      [
+        0.7722007722007722,
+        0.6644518272425249
+      ],
+      [
+        0.36428571428571427,
+        0.9444444444444444
+      ],
+      [
+        0.38095238095238093,
+        0.8152866242038217
+      ],
+      [
+        0.49242424242424243,
+        0.9701492537313433
+      ],
+      [
+        0.1590909090909091,
+        0.5833333333333334
+      ],
+      [
+        0.2978723404255319,
+        0.358974358974359
+      ],
+      [
+        0.5714285714285714,
+        0.5882352941176471
+      ],
+      [
+        0.38632326820603907,
+        0.8969072164948454
+      ],
+      [
+        0.6199261992619927,
+        0.8795811518324608
+      ],
+      [
+        0.8778004073319755,
+        0.8147448015122873
+      ],
+      [
+        0.9696969696969697,
+        0.9552238805970149
+      ],
+      [
+        0.8411967779056386,
+        0.9972714870395635
+      ],
+      [
+        0.4925373134328358,
+        0.9428571428571428
+      ],
+      [
+        0.2773722627737226,
+        0.9661016949152542
+      ],
+      [
+        0.9595375722543352,
+        0.9196675900277008
+      ]
+    ],
+    "p1_c0_r1": [
+      [
+        0.9896907216494846,
+        0.9896907216494846
+      ],
+      [
+        0.984375,
+        0.252
+      ],
+      [
+        0.9649122807017544,
+        0.5913978494623656
+      ],
+      [
+        0.9947229551451188,
+        0.6262458471760798
+      ],
+      [
+        0.8703703703703703,
+        0.8703703703703703
+      ],
+      [
+        0.9801980198019802,
+        0.6305732484076433
+      ],
+      [
+        0.9701492537313433,
+        0.9701492537313433
+      ],
+      [
+        0.6666666666666666,
+        0.3333333333333333
+      ],
+      [
+        0.9655172413793104,
+        0.358974358974359
+      ],
+      [
+        0.9090909090909091,
+        0.5882352941176471
+      ],
+      [
+        0.9666666666666667,
+        0.777319587628866
+      ],
+      [
+        0.9882352941176471,
+        0.8795811518324608
+      ],
+      [
+        0.9895287958115183,
+        0.3572778827977316
+      ],
+      [
+        0.9285714285714286,
+        0.3880597014925373
+      ],
+      [
+        0.9965576592082617,
+        0.7899045020463847
+      ],
+      [
+        0.9428571428571428,
+        0.9428571428571428
+      ],
+      [
+        0.9813084112149533,
+        0.8898305084745762
+      ],
+      [
+        0.9935064935064936,
+        0.8476454293628809
+      ]
+    ]
+  },
+  "helpers": [
+    {
+      "bytes": 9904,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_swiss_counts.py",
+      "sha256": "ff8e5314c98bdffce54732df94611e9d340d854e70392358c495b636b67452ae"
+    },
+    {
+      "bytes": 7042,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_corrected_swiss_comparators.py",
+      "sha256": "a5c339960936d0a41a66023059e4390db46e0cdc505194d209f56af060b97050"
+    },
+    {
+      "bytes": 8579,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_swiss_comparators.py",
+      "sha256": "c7b418c92a8b12dc06bb1a51880f7ef82c3451a8af4a876cd3c2cbd1802f9122"
+    },
+    {
+      "bytes": 8531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_swiss_stages.py",
+      "sha256": "0598773a8bd04846f24e4cb27ab7b3529410c11451cbb399b9148a320fd06435"
+    },
+    {
+      "bytes": 9202,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_qfo_factorial.py",
+      "sha256": "be09876ae4de31b923818385bd3d40d8d5e7df177215fc45a2101c7d30d1c1fa"
+    },
+    {
+      "bytes": 12830,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/export_native_factorial_progress.py",
+      "sha256": "af87cf899b8ae474822ea81a922643ab2c229275f99a1df57d5149b0d280448a"
+    },
+    {
+      "bytes": 11794,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_package.py",
+      "sha256": "948efb04abfa84aea1c6822d9145592a15d54416838245f0c1bf569f5d81bbab"
+    }
+  ],
+  "independent_confirmation": false,
+  "limitations": [
+    "Retrospective development-exposed conditional analysis, not selection-adjusted or independent confirmation.",
+    "All 48 planned endpoints stay in this separate correction; earlier 24/42 analyses remain unchanged.",
+    "Only 18 families; shared history/merged predictions can violate exchangeability and percentile coverage.",
+    "Regenerated deterministic multiplicities are computation, not another independent dataset.",
+    "Sequence-only OrthoFinder is an MCL-checkpoint diagnostic; R also changes prediction semantics.",
+    "Intervals do not cover other QfO challenges, secondary mean, timings or missing native outcomes.",
+    "No equivalence, general superiority, initial-HMM causal effect or new default follows."
+  ],
+  "multiplicity_endpoints": 48,
+  "new_accuracy_or_resource_admission": false,
+  "new_bootstrap_draws": 100000,
+  "numpy_version": "2.2.6",
+  "observed_cells": [
+    "p0_c0_r0",
+    "p0_c0_r1",
+    "p0_c1_r0",
+    "p1_c0_r1"
+  ],
+  "planned_endpoints": 48,
+  "point_estimates": {
+    "orthofinder_3_1_5_full": {
+      "F1": 0.8484132671264671,
+      "PPV": 0.9378528297261841,
+      "TPR": 0.7745475283334604
+    },
+    "orthofinder_3_1_5_sequence_only": {
+      "F1": 0.6905148282566244,
+      "PPV": 0.5690678546910205,
+      "TPR": 0.8778629606384184
+    },
+    "p0_c0_r0": {
+      "F1": 0.689183963152562,
+      "PPV": 0.6439400942516949,
+      "TPR": 0.741266050122766
+    },
+    "p0_c0_r1": {
+      "F1": 0.7895743339716982,
+      "PPV": 0.9491519661804723,
+      "TPR": 0.6759321953915856
+    },
+    "p0_c1_r0": {
+      "F1": 0.6857094995663944,
+      "PPV": 0.6087055595840293,
+      "TPR": 0.7850177040241996
+    },
+    "p1_c0_r1": {
+      "F1": 0.7863721816702856,
+      "PPV": 0.9490514061383917,
+      "TPR": 0.6713025657619559
+    }
+  },
+  "protocol": {
+    "bytes": 6255,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_QFO_COMPARATOR_UNCERTAINTY_PROTOCOL_20261009.md",
+    "sha256": "8941ed3c9fa206a988271faccc62484f9b1e4d55ef8195488024a36fc5c6a6ff"
+  },
+  "protocol_controls_match": true,
+  "publication_ready": false,
+  "quantile_method": "linear",
+  "replicates": 100000,
+  "retained_intervals_reused": false,
+  "rng": "numpy.PCG64 multinomial; shared family multiplicities",
+  "schema": "native_qfo_comparator_sensitivity_v1",
+  "seed": 20260920,
+  "source": {
+    "bytes": 16134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bootstrap_native_qfo_comparators.py",
+    "sha256": "ea1e94b06bfb38d4d2f591a465f50f16380f5baacb4d1862c980cd98ce31bba7"
+  },
+  "units": "raw 0-to-1 differences",
+  "unobserved_cells_imputed": false
+}

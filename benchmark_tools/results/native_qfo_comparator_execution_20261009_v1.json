@@ -1,0 +1,396 @@
+{
+  "independent_confirmation": false,
+  "inference_or_scoring_rerun": false,
+  "outputs": [
+    {
+      "bytes": 50060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1/report.json",
+      "sha256": "aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02"
+    },
+    {
+      "bytes": 6806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1/intervals.tsv",
+      "sha256": "9f23b585248be5dd51938581290a69e579f16818b4c2cce5c83a7b14cd25c505"
+    },
+    {
+      "bytes": 5632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1/TABLE.md",
+      "sha256": "a8a4f5cdedf41412fc8acb9e6a3750d1e88d47149750858de3b805d2998ad7dc"
+    }
+  ],
+  "production": {
+    "code": "import json, sys, time; from pathlib import Path; root=Path.cwd().resolve(); sys.path.insert(0,str(root)); from benchmark_tools.bootstrap_native_qfo_comparators import run; started=time.time(); result=run(root,root/'benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1'); print(json.dumps(dict(result=result,started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable),allow_nan=False))",
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys, time; from pathlib import Path; root=Path.cwd().resolve(); sys.path.insert(0,str(root)); from benchmark_tools.bootstrap_native_qfo_comparators import run; started=time.time(); result=run(root,root/'\\''benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1'\\''); print(json.dumps(dict(result=result,started_unix=started,ended_unix=time.time(),python=sys.version,executable=sys.executable),allow_nan=False))'",
+    "result": {
+      "ended_unix": 1791569922.2721725,
+      "executable": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+      "python": "3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]",
+      "result": {
+        "estimated_endpoints": 24,
+        "planned_endpoints": 48,
+        "publication_ready": false,
+        "report": {
+          "bytes": 50060,
+          "sha256": "aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02"
+        }
+      },
+      "started_unix": 1791569921.9919577
+    },
+    "tool_result": {
+      "chunk_id": "ff0107",
+      "exit_code": 0,
+      "original_token_count": 118,
+      "output": "{\"result\": {\"report\": {\"bytes\": 50060, \"sha256\": \"aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02\"}, \"planned_endpoints\": 48, \"estimated_endpoints\": 24, \"publication_ready\": false}, \"started_unix\": 1791569921.9919577, \"ended_unix\": 1791569922.2721725, \"python\": \"3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]\", \"executable\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python\"}\n",
+      "wall_time_seconds": 0.270339321
+    }
+  },
+  "publication_ready": false,
+  "readback": {
+    "code": "import csv, hashlib, io, json, math\nfrom pathlib import Path\nimport numpy as np\n\nroot = Path.cwd().resolve()\nout = root / \"benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1\"\nreport = json.loads((out / \"report.json\").read_text())\ndef identity(path):\n    blob = Path(path).read_bytes()\n    return {\"bytes\": len(blob), \"sha256\": hashlib.sha256(blob).hexdigest()}\ndef close(a, b):\n    assert math.isfinite(a) and math.isfinite(b) and abs(a-b) <= 1e-12, (a,b)\nrefs = [*report[\"evidence\"], *report[\"helpers\"], report[\"protocol\"], report[\"source\"]]\nfor ref in refs:\n    assert identity(ref[\"path\"]) == {k: ref[k] for k in (\"bytes\", \"sha256\")}\nassert len(report[\"evidence\"]) == 8 and len(report[\"helpers\"]) == 7\nlegacy = json.loads((root / \"benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json\").read_text())[\"reconstructed_counts\"]\nbinding = json.loads((root / \"benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json\").read_text())\nsnapshot = json.loads((root / \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1/report.json\").read_text())\ncells = [\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p0_c1_r1\",\"p1_c0_r0\",\"p1_c0_r1\",\"p1_c1_r0\",\"p1_c1_r1\"]\nobserved = [\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p1_c0_r1\"]\ncomparators = [\"orthofinder_3_1_5_full\",\"orthofinder_3_1_5_sequence_only\"]\nmetrics = [\"F1\",\"PPV\",\"TPR\"]\nfamilies = legacy[\"families\"]\nassert len(families) == len(set(families)) == 18\nassert report[\"families\"] == families\nassert report[\"observed_cells\"] == observed\nassert set(binding[\"bound_cells\"]) == set(observed)\nassert [r[\"index\"] for r in snapshot[\"rows\"]] == list(range(6,13))\nassert [r[\"cell\"] for r in snapshot[\"rows\"] if r[\"accuracy_admitted\"]] == observed\nassert report[\"schema\"] == \"native_qfo_comparator_sensitivity_v1\"\nassert report[\"planned_endpoints\"] == report[\"multiplicity_endpoints\"] == 48\nassert report[\"estimated_endpoints\"] == 24 and report[\"replicates\"] == report[\"new_bootstrap_draws\"] == 100000\nassert report[\"seed\"] == 20260920 and report[\"alpha\"] == .05 and report[\"quantile_method\"] == \"linear\"\nassert report[\"protocol_controls_match\"] is True\nfor key in (\"retained_intervals_reused\",\"unobserved_cells_imputed\",\"independent_confirmation\",\n            \"new_accuracy_or_resource_admission\",\"publication_ready\"):\n    assert report[key] is False\nrecords = {r[\"method\"]: r for r in legacy[\"methods\"] if r[\"method\"] in comparators}\nfor cell in observed:\n    bound = binding[\"bound_cells\"][cell]\n    audit = json.loads(Path(bound[\"count_audit\"][\"path\"]).read_text())\n    assert identity(bound[\"count_audit\"][\"path\"]) == {k: bound[\"count_audit\"][k] for k in (\"bytes\",\"sha256\")}\n    assert audit[\"reference\"] == legacy[\"reference\"] and audit[\"families\"] == families\n    matching = [r for r in audit[\"cells\"] if r[\"cell\"] == cell]\n    assert len(matching) == 1\n    row = matching[0]\n    target = next(r for r in snapshot[\"rows\"] if r[\"cell\"] == cell)\n    assert row[\"admission\"] == target[\"admission\"]\n    assert row[\"index\"] == target[\"index\"] == bound[\"index\"]\n    assert row[\"native_job_id\"] == target[\"native_job_id\"] == bound[\"native_job_id\"]\n    assert row[\"native_endpoint_f1\"] == target[\"scores\"][\"SwissTrees\"]\n    assert abs(row[\"aggregate\"][\"F1\"]-row[\"native_endpoint_f1\"]) <= 5e-8\n    if cell == \"p0_c0_r1\":\n        assert row[\"resources\"] is None and row[\"timing_admitted\"] is False and row[\"timing_eligible\"] is False\n    records[cell] = row\ncanonical = records[comparators[0]][\"families\"]\ngenes = set()\ntruth = []\nfor row in canonical:\n    members = row[\"represented_genes\"]\n    assert len(members) > 5 and len(members) == len(set(members)) and not genes.intersection(members)\n    genes.update(members)\n    c = row[\"counts_without_prior\"]\n    truth.append((c[\"TP\"]+c[\"FN\"],c[\"FP\"]+c[\"TN\"]))\nassert len(genes) == 563 and sum(p+n for p,n in truth) == legacy[\"reference_relation_count\"] == 10765\nvalues, points, family_stats = {}, {}, {}\nfor name, method in records.items():\n    assert [r[\"family\"] for r in method[\"families\"]] == families\n    vector = []\n    for i, row in enumerate(method[\"families\"]):\n        c = row[\"counts_without_prior\"]\n        assert set(c) == {\"TP\",\"FP\",\"FN\",\"TN\"} and all(type(v) is int and v >= 0 for v in c.values())\n        assert row[\"represented_genes\"] == canonical[i][\"represented_genes\"]\n        assert (c[\"TP\"]+c[\"FN\"],c[\"FP\"]+c[\"TN\"]) == truth[i]\n        p = (c[\"TP\"]+2)/(c[\"TP\"]+c[\"FP\"]+4)\n        r = (c[\"TP\"]+2)/(c[\"TP\"]+c[\"FN\"]+4)\n        f = 2*p*r/(p+r)\n        for metric, value in zip(metrics, (f,p,r)):\n            close(value,row[\"statistics_with_prior\"][metric])\n        vector.append([p,r])\n    array = np.array(vector)\n    values[name] = array\n    p = sum(v[0] for v in vector)/18\n    r = sum(v[1] for v in vector)/18\n    points[name] = np.array([2*p*r/(p+r),p,r])\n    family_stats[name] = np.column_stack([2*array[:,0]*array[:,1]/array.sum(axis=1),array])\n    for j, metric in enumerate(metrics):\n        close(points[name][j],method[\"aggregate\"][metric])\n        close(points[name][j],report[\"point_estimates\"][name][metric])\n    np.testing.assert_allclose(array,report[\"family_values\"][name],atol=1e-14,rtol=0)\nassert set(report[\"family_values\"]) == set(records)\nweights = np.random.Generator(np.random.PCG64(20260920)).multinomial(18,np.full(18,1/18),size=100000)\ndraws = {}\nfor name, array in values.items():\n    means = weights @ array/18\n    draws[name] = np.column_stack([2*means[:,0]*means[:,1]/means.sum(axis=1),means])\nexpected_order = [(cell,ref) for cell in cells for ref in comparators]\nassert [(r[\"candidate\"],r[\"reference\"]) for r in report[\"comparisons\"]] == expected_order\nmissing_reasons = {\n    \"p0_c1_r1\":\"pre_native_cpu_binding_failure\",\n    \"p1_c0_r0\":\"not_in_supplied_fresh_cell_snapshot; historical method remains separate\",\n    \"p1_c1_r0\":\"native_success_but_scoring_OUT_OF_MEMORY_no_admission\",\n    \"p1_c1_r1\":\"native_inference_SIGSEGV_no_admission\",\n}\nreadback = []\nfor row in report[\"comparisons\"]:\n    cell, ref = row[\"candidate\"], row[\"reference\"]\n    if cell not in observed:\n        assert row[\"status\"] == \"native_cell_unavailable\"\n        assert row[\"metrics\"] is None and row[\"family_differences\"] is None\n        assert row[\"missing_reason\"] == missing_reasons[cell]\n        continue\n    assert row[\"status\"] == \"conditional_native_comparison_estimated\" and row[\"missing_reason\"] is None\n    assert set(row[\"metrics\"]) == set(metrics)\n    delta = draws[cell]-draws[ref]\n    family_delta = family_stats[cell]-family_stats[ref]\n    assert [r[\"family\"] for r in row[\"family_differences\"]] == families\n    for i, family in enumerate(row[\"family_differences\"]):\n        for j, metric in enumerate(metrics):\n            close(family[metric],float(family_delta[i,j]))\n    for j, metric in enumerate(metrics):\n        item = row[\"metrics\"][metric]\n        point = float(points[cell][j]-points[ref][j])\n        close(point,item[\"difference\"])\n        nominal = np.quantile(delta[:,j],[.025,.975],method=\"linear\")\n        adjusted = np.quantile(delta[:,j],[.05/96,1-.05/96],method=\"linear\")\n        np.testing.assert_allclose(nominal,item[\"paired_percentile_ci\"],atol=1e-14,rtol=0)\n        np.testing.assert_allclose(adjusted,item[\"bonferroni_percentile_ci\"],atol=1e-14,rtol=0)\n        wins = int(np.sum(family_delta[:,j]>1e-10))\n        ties = int(np.sum(np.abs(family_delta[:,j])<=1e-10))\n        losses = int(np.sum(family_delta[:,j]<-1e-10))\n        assert wins+ties+losses == 18\n        assert [item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")] == [wins,ties,losses]\n        readback.append(dict(candidate=cell,reference=ref,metric=metric,difference=point,\n            adjusted_interval=adjusted.tolist(),wins=wins,ties=ties,losses=losses))\ntsv = list(csv.DictReader(io.StringIO((out/\"intervals.tsv\").read_text()),delimiter=\"\\t\"))\nassert len(tsv) == 48\nexpected_rows = [(cell,ref,metric) for cell,ref in expected_order for metric in metrics]\nassert [(r[\"candidate\"],r[\"reference\"],r[\"metric\"]) for r in tsv] == expected_rows\ncomparison_map = {(r[\"candidate\"],r[\"reference\"]):r for r in report[\"comparisons\"]}\nnumeric_fields = (\"difference\",\"nominal_low\",\"nominal_high\",\"adjusted_low\",\"adjusted_high\",\n                  \"family_wins\",\"family_ties\",\"family_losses\")\nfor row in tsv:\n    comparison = comparison_map[(row[\"candidate\"],row[\"reference\"])]\n    assert row[\"status\"] == comparison[\"status\"]\n    if row[\"candidate\"] not in observed:\n        assert all(row[k] == \"NA\" for k in numeric_fields)\n    else:\n        item = comparison[\"metrics\"][row[\"metric\"]]\n        expected = [item[\"difference\"],*item[\"paired_percentile_ci\"],*item[\"bonferroni_percentile_ci\"],\n                    *[item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")]]\n        for key, value in zip(numeric_fields,expected):\n            close(float(row[key]),float(value))\nmarkdown = (out/\"TABLE.md\").read_text()\nfor row in report[\"comparisons\"]:\n    for metric in metrics:\n        if row[\"metrics\"] is None:\n            line = \"| \"+\" | \".join([row[\"candidate\"],row[\"reference\"],metric,\"NA\",\"NA\",\"NA\",\"NA\"])+\" |\"\n        else:\n            item = row[\"metrics\"][metric]\n            cells_out = [f\"{item['difference']:+.6f}\",\n                \"[%.6f, %.6f]\"%tuple(item[\"paired_percentile_ci\"]),\n                \"[%.6f, %.6f]\"%tuple(item[\"bonferroni_percentile_ci\"]),\n                f\"{item['family_wins']}/{item['family_ties']}/{item['family_losses']}\"]\n            line = \"| \"+\" | \".join([row[\"candidate\"],row[\"reference\"],metric,*cells_out])+\" |\"\n        assert line in markdown\nfor ref in refs:\n    assert identity(ref[\"path\"]) == {k:ref[k] for k in (\"bytes\",\"sha256\")}\nprint(json.dumps(dict(status=\"independent_literal_count_and_interval_readback_passed\",\n    report=identity(out/\"report.json\"),families=18,represented_genes=563,reference_relations=10765,\n    planned_endpoints=48,estimated_endpoints=len(readback),missing_endpoints=24,\n    source_helper_protocol_input_pins_checked=len(refs),bootstrap_replay=\"same deterministic weights, verification only\",\n    endpoints=readback,tsv_rows=48,markdown_rows_checked=48,\n    production_helpers_imported=False,raw_inference_or_scoring_rerun=False,publication_ready=False),allow_nan=False))\n",
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import csv, hashlib, io, json, math\nfrom pathlib import Path\nimport numpy as np\n\nroot = Path.cwd().resolve()\nout = root / \"benchmark_tools/results/native_qfo_comparator_uncertainty_20261009_v1\"\nreport = json.loads((out / \"report.json\").read_text())\ndef identity(path):\n    blob = Path(path).read_bytes()\n    return {\"bytes\": len(blob), \"sha256\": hashlib.sha256(blob).hexdigest()}\ndef close(a, b):\n    assert math.isfinite(a) and math.isfinite(b) and abs(a-b) <= 1e-12, (a,b)\nrefs = [*report[\"evidence\"], *report[\"helpers\"], report[\"protocol\"], report[\"source\"]]\nfor ref in refs:\n    assert identity(ref[\"path\"]) == {k: ref[k] for k in (\"bytes\", \"sha256\")}\nassert len(report[\"evidence\"]) == 8 and len(report[\"helpers\"]) == 7\nlegacy = json.loads((root / \"benchmark_tools/results/qfo_recovered_swiss_uncertainty_22178.json\").read_text())[\"reconstructed_counts\"]\nbinding = json.loads((root / \"benchmark_tools/results/native_qfo_four_cell_swiss_uncertainty_20261007_v1.json\").read_text())\nsnapshot = json.loads((root / \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1/report.json\").read_text())\ncells = [\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p0_c1_r1\",\"p1_c0_r0\",\"p1_c0_r1\",\"p1_c1_r0\",\"p1_c1_r1\"]\nobserved = [\"p0_c0_r0\",\"p0_c0_r1\",\"p0_c1_r0\",\"p1_c0_r1\"]\ncomparators = [\"orthofinder_3_1_5_full\",\"orthofinder_3_1_5_sequence_only\"]\nmetrics = [\"F1\",\"PPV\",\"TPR\"]\nfamilies = legacy[\"families\"]\nassert len(families) == len(set(families)) == 18\nassert report[\"families\"] == families\nassert report[\"observed_cells\"] == observed\nassert set(binding[\"bound_cells\"]) == set(observed)\nassert [r[\"index\"] for r in snapshot[\"rows\"]] == list(range(6,13))\nassert [r[\"cell\"] for r in snapshot[\"rows\"] if r[\"accuracy_admitted\"]] == observed\nassert report[\"schema\"] == \"native_qfo_comparator_sensitivity_v1\"\nassert report[\"planned_endpoints\"] == report[\"multiplicity_endpoints\"] == 48\nassert report[\"estimated_endpoints\"] == 24 and report[\"replicates\"] == report[\"new_bootstrap_draws\"] == 100000\nassert report[\"seed\"] == 20260920 and report[\"alpha\"] == .05 and report[\"quantile_method\"] == \"linear\"\nassert report[\"protocol_controls_match\"] is True\nfor key in (\"retained_intervals_reused\",\"unobserved_cells_imputed\",\"independent_confirmation\",\n            \"new_accuracy_or_resource_admission\",\"publication_ready\"):\n    assert report[key] is False\nrecords = {r[\"method\"]: r for r in legacy[\"methods\"] if r[\"method\"] in comparators}\nfor cell in observed:\n    bound = binding[\"bound_cells\"][cell]\n    audit = json.loads(Path(bound[\"count_audit\"][\"path\"]).read_text())\n    assert identity(bound[\"count_audit\"][\"path\"]) == {k: bound[\"count_audit\"][k] for k in (\"bytes\",\"sha256\")}\n    assert audit[\"reference\"] == legacy[\"reference\"] and audit[\"families\"] == families\n    matching = [r for r in audit[\"cells\"] if r[\"cell\"] == cell]\n    assert len(matching) == 1\n    row = matching[0]\n    target = next(r for r in snapshot[\"rows\"] if r[\"cell\"] == cell)\n    assert row[\"admission\"] == target[\"admission\"]\n    assert row[\"index\"] == target[\"index\"] == bound[\"index\"]\n    assert row[\"native_job_id\"] == target[\"native_job_id\"] == bound[\"native_job_id\"]\n    assert row[\"native_endpoint_f1\"] == target[\"scores\"][\"SwissTrees\"]\n    assert abs(row[\"aggregate\"][\"F1\"]-row[\"native_endpoint_f1\"]) <= 5e-8\n    if cell == \"p0_c0_r1\":\n        assert row[\"resources\"] is None and row[\"timing_admitted\"] is False and row[\"timing_eligible\"] is False\n    records[cell] = row\ncanonical = records[comparators[0]][\"families\"]\ngenes = set()\ntruth = []\nfor row in canonical:\n    members = row[\"represented_genes\"]\n    assert len(members) > 5 and len(members) == len(set(members)) and not genes.intersection(members)\n    genes.update(members)\n    c = row[\"counts_without_prior\"]\n    truth.append((c[\"TP\"]+c[\"FN\"],c[\"FP\"]+c[\"TN\"]))\nassert len(genes) == 563 and sum(p+n for p,n in truth) == legacy[\"reference_relation_count\"] == 10765\nvalues, points, family_stats = {}, {}, {}\nfor name, method in records.items():\n    assert [r[\"family\"] for r in method[\"families\"]] == families\n    vector = []\n    for i, row in enumerate(method[\"families\"]):\n        c = row[\"counts_without_prior\"]\n        assert set(c) == {\"TP\",\"FP\",\"FN\",\"TN\"} and all(type(v) is int and v >= 0 for v in c.values())\n        assert row[\"represented_genes\"] == canonical[i][\"represented_genes\"]\n        assert (c[\"TP\"]+c[\"FN\"],c[\"FP\"]+c[\"TN\"]) == truth[i]\n        p = (c[\"TP\"]+2)/(c[\"TP\"]+c[\"FP\"]+4)\n        r = (c[\"TP\"]+2)/(c[\"TP\"]+c[\"FN\"]+4)\n        f = 2*p*r/(p+r)\n        for metric, value in zip(metrics, (f,p,r)):\n            close(value,row[\"statistics_with_prior\"][metric])\n        vector.append([p,r])\n    array = np.array(vector)\n    values[name] = array\n    p = sum(v[0] for v in vector)/18\n    r = sum(v[1] for v in vector)/18\n    points[name] = np.array([2*p*r/(p+r),p,r])\n    family_stats[name] = np.column_stack([2*array[:,0]*array[:,1]/array.sum(axis=1),array])\n    for j, metric in enumerate(metrics):\n        close(points[name][j],method[\"aggregate\"][metric])\n        close(points[name][j],report[\"point_estimates\"][name][metric])\n    np.testing.assert_allclose(array,report[\"family_values\"][name],atol=1e-14,rtol=0)\nassert set(report[\"family_values\"]) == set(records)\nweights = np.random.Generator(np.random.PCG64(20260920)).multinomial(18,np.full(18,1/18),size=100000)\ndraws = {}\nfor name, array in values.items():\n    means = weights @ array/18\n    draws[name] = np.column_stack([2*means[:,0]*means[:,1]/means.sum(axis=1),means])\nexpected_order = [(cell,ref) for cell in cells for ref in comparators]\nassert [(r[\"candidate\"],r[\"reference\"]) for r in report[\"comparisons\"]] == expected_order\nmissing_reasons = {\n    \"p0_c1_r1\":\"pre_native_cpu_binding_failure\",\n    \"p1_c0_r0\":\"not_in_supplied_fresh_cell_snapshot; historical method remains separate\",\n    \"p1_c1_r0\":\"native_success_but_scoring_OUT_OF_MEMORY_no_admission\",\n    \"p1_c1_r1\":\"native_inference_SIGSEGV_no_admission\",\n}\nreadback = []\nfor row in report[\"comparisons\"]:\n    cell, ref = row[\"candidate\"], row[\"reference\"]\n    if cell not in observed:\n        assert row[\"status\"] == \"native_cell_unavailable\"\n        assert row[\"metrics\"] is None and row[\"family_differences\"] is None\n        assert row[\"missing_reason\"] == missing_reasons[cell]\n        continue\n    assert row[\"status\"] == \"conditional_native_comparison_estimated\" and row[\"missing_reason\"] is None\n    assert set(row[\"metrics\"]) == set(metrics)\n    delta = draws[cell]-draws[ref]\n    family_delta = family_stats[cell]-family_stats[ref]\n    assert [r[\"family\"] for r in row[\"family_differences\"]] == families\n    for i, family in enumerate(row[\"family_differences\"]):\n        for j, metric in enumerate(metrics):\n            close(family[metric],float(family_delta[i,j]))\n    for j, metric in enumerate(metrics):\n        item = row[\"metrics\"][metric]\n        point = float(points[cell][j]-points[ref][j])\n        close(point,item[\"difference\"])\n        nominal = np.quantile(delta[:,j],[.025,.975],method=\"linear\")\n        adjusted = np.quantile(delta[:,j],[.05/96,1-.05/96],method=\"linear\")\n        np.testing.assert_allclose(nominal,item[\"paired_percentile_ci\"],atol=1e-14,rtol=0)\n        np.testing.assert_allclose(adjusted,item[\"bonferroni_percentile_ci\"],atol=1e-14,rtol=0)\n        wins = int(np.sum(family_delta[:,j]>1e-10))\n        ties = int(np.sum(np.abs(family_delta[:,j])<=1e-10))\n        losses = int(np.sum(family_delta[:,j]<-1e-10))\n        assert wins+ties+losses == 18\n        assert [item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")] == [wins,ties,losses]\n        readback.append(dict(candidate=cell,reference=ref,metric=metric,difference=point,\n            adjusted_interval=adjusted.tolist(),wins=wins,ties=ties,losses=losses))\ntsv = list(csv.DictReader(io.StringIO((out/\"intervals.tsv\").read_text()),delimiter=\"\\t\"))\nassert len(tsv) == 48\nexpected_rows = [(cell,ref,metric) for cell,ref in expected_order for metric in metrics]\nassert [(r[\"candidate\"],r[\"reference\"],r[\"metric\"]) for r in tsv] == expected_rows\ncomparison_map = {(r[\"candidate\"],r[\"reference\"]):r for r in report[\"comparisons\"]}\nnumeric_fields = (\"difference\",\"nominal_low\",\"nominal_high\",\"adjusted_low\",\"adjusted_high\",\n                  \"family_wins\",\"family_ties\",\"family_losses\")\nfor row in tsv:\n    comparison = comparison_map[(row[\"candidate\"],row[\"reference\"])]\n    assert row[\"status\"] == comparison[\"status\"]\n    if row[\"candidate\"] not in observed:\n        assert all(row[k] == \"NA\" for k in numeric_fields)\n    else:\n        item = comparison[\"metrics\"][row[\"metric\"]]\n        expected = [item[\"difference\"],*item[\"paired_percentile_ci\"],*item[\"bonferroni_percentile_ci\"],\n                    *[item[k] for k in (\"family_wins\",\"family_ties\",\"family_losses\")]]\n        for key, value in zip(numeric_fields,expected):\n            close(float(row[key]),float(value))\nmarkdown = (out/\"TABLE.md\").read_text()\nfor row in report[\"comparisons\"]:\n    for metric in metrics:\n        if row[\"metrics\"] is None:\n            line = \"| \"+\" | \".join([row[\"candidate\"],row[\"reference\"],metric,\"NA\",\"NA\",\"NA\",\"NA\"])+\" |\"\n        else:\n            item = row[\"metrics\"][metric]\n            cells_out = [f\"{item['\\''difference'\\'']:+.6f}\",\n                \"[%.6f, %.6f]\"%tuple(item[\"paired_percentile_ci\"]),\n                \"[%.6f, %.6f]\"%tuple(item[\"bonferroni_percentile_ci\"]),\n                f\"{item['\\''family_wins'\\'']}/{item['\\''family_ties'\\'']}/{item['\\''family_losses'\\'']}\"]\n            line = \"| \"+\" | \".join([row[\"candidate\"],row[\"reference\"],metric,*cells_out])+\" |\"\n        assert line in markdown\nfor ref in refs:\n    assert identity(ref[\"path\"]) == {k:ref[k] for k in (\"bytes\",\"sha256\")}\nprint(json.dumps(dict(status=\"independent_literal_count_and_interval_readback_passed\",\n    report=identity(out/\"report.json\"),families=18,represented_genes=563,reference_relations=10765,\n    planned_endpoints=48,estimated_endpoints=len(readback),missing_endpoints=24,\n    source_helper_protocol_input_pins_checked=len(refs),bootstrap_replay=\"same deterministic weights, verification only\",\n    endpoints=readback,tsv_rows=48,markdown_rows_checked=48,\n    production_helpers_imported=False,raw_inference_or_scoring_rerun=False,publication_ready=False),allow_nan=False))\n'",
+    "result": {
+      "bootstrap_replay": "same deterministic weights, verification only",
+      "endpoints": [
+        {
+          "adjusted_interval": [
+            -0.2726608599524121,
+            -0.007023260062511583
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": -0.1592293039739051,
+          "losses": 17,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 0,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.4454965084389297,
+            -0.13541108225620654
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": -0.29391273547448926,
+          "losses": 17,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 0,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.1571621776053903,
+            0.13948635979553484
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": -0.03328147821069449,
+          "losses": 8,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 6,
+          "wins": 4
+        },
+        {
+          "adjusted_interval": [
+            -0.09415201375525338,
+            0.09822421924588019
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": -0.0013308651040623287,
+          "losses": 6,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 5,
+          "wins": 7
+        },
+        {
+          "adjusted_interval": [
+            -0.0015888015696284908,
+            0.17364774453390097
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": 0.07487223956067435,
+          "losses": 6,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 5,
+          "wins": 7
+        },
+        {
+          "adjusted_interval": [
+            -0.2837660308690891,
+            -0.03056133171929424
+          ],
+          "candidate": "p0_c0_r0",
+          "difference": -0.13659691051565237,
+          "losses": 11,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 6,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.16403968477319122,
+            0.01854254832315096
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": -0.05883893315476896,
+          "losses": 11,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 3
+        },
+        {
+          "adjusted_interval": [
+            -0.034951146027214317,
+            0.07069265778900838
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": 0.01129913645428815,
+          "losses": 6,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 8
+        },
+        {
+          "adjusted_interval": [
+            -0.24735579744605862,
+            0.028099347861025546
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": -0.09861533294187497,
+          "losses": 10,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 4
+        },
+        {
+          "adjusted_interval": [
+            -0.11735409214179897,
+            0.3021798915304813
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": 0.09905950571507383,
+          "losses": 6,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 0,
+          "wins": 12
+        },
+        {
+          "adjusted_interval": [
+            0.1746266094589386,
+            0.5682923918627598
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": 0.38008411148945176,
+          "losses": 3,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 0,
+          "wins": 15
+        },
+        {
+          "adjusted_interval": [
+            -0.37220930267914726,
+            -0.06145246015862823
+          ],
+          "candidate": "p0_c0_r1",
+          "difference": -0.20193076524683284,
+          "losses": 13,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 4,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.2984760267853185,
+            0.013903500603525838
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": -0.16270376756007277,
+          "losses": 17,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 0,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.5024466338797051,
+            -0.14585425815739506
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": -0.32914727014215484,
+          "losses": 17,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 0,
+          "wins": 1
+        },
+        {
+          "adjusted_interval": [
+            -0.12734927399263332,
+            0.2101300927945832
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": 0.010470175690739159,
+          "losses": 6,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 6,
+          "wins": 6
+        },
+        {
+          "adjusted_interval": [
+            -0.08124610040895995,
+            0.06753601056542217
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": -0.004805328690229982,
+          "losses": 5,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 8,
+          "wins": 5
+        },
+        {
+          "adjusted_interval": [
+            -0.015244275742547147,
+            0.13617645200089995
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": 0.039637704893008774,
+          "losses": 5,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 8,
+          "wins": 5
+        },
+        {
+          "adjusted_interval": [
+            -0.2549840591177626,
+            0.015229673961867909
+          ],
+          "candidate": "p0_c1_r0",
+          "difference": -0.09284525661421872,
+          "losses": 8,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 8,
+          "wins": 2
+        },
+        {
+          "adjusted_interval": [
+            -0.16863839809820227,
+            0.018128863621063675
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": -0.06204108545618159,
+          "losses": 11,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 3
+        },
+        {
+          "adjusted_interval": [
+            -0.02953489359822399,
+            0.07056440703217258
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": 0.011198576412207562,
+          "losses": 6,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 8
+        },
+        {
+          "adjusted_interval": [
+            -0.25144639763302673,
+            0.025601531002556986
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": -0.10324496257150462,
+          "losses": 10,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_full",
+          "ties": 4,
+          "wins": 4
+        },
+        {
+          "adjusted_interval": [
+            -0.12022140513200925,
+            0.3001327202595402
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": 0.0958573534136612,
+          "losses": 6,
+          "metric": "F1",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 0,
+          "wins": 12
+        },
+        {
+          "adjusted_interval": [
+            0.17411862360219185,
+            0.5701832607331669
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": 0.37998355144737117,
+          "losses": 3,
+          "metric": "PPV",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 0,
+          "wins": 15
+        },
+        {
+          "adjusted_interval": [
+            -0.3754113444854633,
+            -0.06611523758525789
+          ],
+          "candidate": "p1_c0_r1",
+          "difference": -0.2065603948764625,
+          "losses": 13,
+          "metric": "TPR",
+          "reference": "orthofinder_3_1_5_sequence_only",
+          "ties": 4,
+          "wins": 1
+        }
+      ],
+      "estimated_endpoints": 24,
+      "families": 18,
+      "markdown_rows_checked": 48,
+      "missing_endpoints": 24,
+      "planned_endpoints": 48,
+      "production_helpers_imported": false,
+      "publication_ready": false,
+      "raw_inference_or_scoring_rerun": false,
+      "reference_relations": 10765,
+      "report": {
+        "bytes": 50060,
+        "sha256": "aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02"
+      },
+      "represented_genes": 563,
+      "source_helper_protocol_input_pins_checked": 17,
+      "status": "independent_literal_count_and_interval_readback_passed",
+      "tsv_rows": 48
+    },
+    "tool_result": {
+      "chunk_id": "967bfd",
+      "exit_code": 0,
+      "original_token_count": 1500,
+      "output": "{\"status\": \"independent_literal_count_and_interval_readback_passed\", \"report\": {\"bytes\": 50060, \"sha256\": \"aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02\"}, \"families\": 18, \"represented_genes\": 563, \"reference_relations\": 10765, \"planned_endpoints\": 48, \"estimated_endpoints\": 24, \"missing_endpoints\": 24, \"source_helper_protocol_input_pins_checked\": 17, \"bootstrap_replay\": \"same deterministic weights, verification only\", \"endpoints\": [{\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"F1\", \"difference\": -0.1592293039739051, \"adjusted_interval\": [-0.2726608599524121, -0.007023260062511583], \"wins\": 1, \"ties\": 0, \"losses\": 17}, {\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"PPV\", \"difference\": -0.29391273547448926, \"adjusted_interval\": [-0.4454965084389297, -0.13541108225620654], \"wins\": 1, \"ties\": 0, \"losses\": 17}, {\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"TPR\", \"difference\": -0.03328147821069449, \"adjusted_interval\": [-0.1571621776053903, 0.13948635979553484], \"wins\": 4, \"ties\": 6, \"losses\": 8}, {\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"F1\", \"difference\": -0.0013308651040623287, \"adjusted_interval\": [-0.09415201375525338, 0.09822421924588019], \"wins\": 7, \"ties\": 5, \"losses\": 6}, {\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"PPV\", \"difference\": 0.07487223956067435, \"adjusted_interval\": [-0.0015888015696284908, 0.17364774453390097], \"wins\": 7, \"ties\": 5, \"losses\": 6}, {\"candidate\": \"p0_c0_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"TPR\", \"difference\": -0.13659691051565237, \"adjusted_interval\": [-0.2837660308690891, -0.03056133171929424], \"wins\": 1, \"ties\": 6, \"losses\": 11}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"F1\", \"difference\": -0.05883893315476896, \"adjusted_interval\": [-0.16403968477319122, 0.01854254832315096], \"wins\": 3, \"ties\": 4, \"losses\": 11}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"PPV\", \"difference\": 0.01129913645428815, \"adjusted_interval\": [-0.034951146027214317, 0.07069265778900838], \"wins\": 8, \"ties\": 4, \"losses\": 6}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"TPR\", \"difference\": -0.09861533294187497, \"adjusted_interval\": [-0.24735579744605862, 0.028099347861025546], \"wins\": 4, \"ties\": 4, \"losses\": 10}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"F1\", \"difference\": 0.09905950571507383, \"adjusted_interval\": [-0.11735409214179897, 0.3021798915304813], \"wins\": 12, \"ties\": 0, \"losses\": 6}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"PPV\", \"difference\": 0.38008411148945176, \"adjusted_interval\": [0.1746266094589386, 0.5682923918627598], \"wins\": 15, \"ties\": 0, \"losses\": 3}, {\"candidate\": \"p0_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"TPR\", \"difference\": -0.20193076524683284, \"adjusted_interval\": [-0.37220930267914726, -0.06145246015862823], \"wins\": 1, \"ties\": 4, \"losses\": 13}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"F1\", \"difference\": -0.16270376756007277, \"adjusted_interval\": [-0.2984760267853185, 0.013903500603525838], \"wins\": 1, \"ties\": 0, \"losses\": 17}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"PPV\", \"difference\": -0.32914727014215484, \"adjusted_interval\": [-0.5024466338797051, -0.14585425815739506], \"wins\": 1, \"ties\": 0, \"losses\": 17}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"TPR\", \"difference\": 0.010470175690739159, \"adjusted_interval\": [-0.12734927399263332, 0.2101300927945832], \"wins\": 6, \"ties\": 6, \"losses\": 6}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"F1\", \"difference\": -0.004805328690229982, \"adjusted_interval\": [-0.08124610040895995, 0.06753601056542217], \"wins\": 5, \"ties\": 8, \"losses\": 5}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"PPV\", \"difference\": 0.039637704893008774, \"adjusted_interval\": [-0.015244275742547147, 0.13617645200089995], \"wins\": 5, \"ties\": 8, \"losses\": 5}, {\"candidate\": \"p0_c1_r0\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"TPR\", \"difference\": -0.09284525661421872, \"adjusted_interval\": [-0.2549840591177626, 0.015229673961867909], \"wins\": 2, \"ties\": 8, \"losses\": 8}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"F1\", \"difference\": -0.06204108545618159, \"adjusted_interval\": [-0.16863839809820227, 0.018128863621063675], \"wins\": 3, \"ties\": 4, \"losses\": 11}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"PPV\", \"difference\": 0.011198576412207562, \"adjusted_interval\": [-0.02953489359822399, 0.07056440703217258], \"wins\": 8, \"ties\": 4, \"losses\": 6}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_full\", \"metric\": \"TPR\", \"difference\": -0.10324496257150462, \"adjusted_interval\": [-0.25144639763302673, 0.025601531002556986], \"wins\": 4, \"ties\": 4, \"losses\": 10}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"F1\", \"difference\": 0.0958573534136612, \"adjusted_interval\": [-0.12022140513200925, 0.3001327202595402], \"wins\": 12, \"ties\": 0, \"losses\": 6}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"PPV\", \"difference\": 0.37998355144737117, \"adjusted_interval\": [0.17411862360219185, 0.5701832607331669], \"wins\": 15, \"ties\": 0, \"losses\": 3}, {\"candidate\": \"p1_c0_r1\", \"reference\": \"orthofinder_3_1_5_sequence_only\", \"metric\": \"TPR\", \"difference\": -0.2065603948764625, \"adjusted_interval\": [-0.3754113444854633, -0.06611523758525789], \"wins\": 1, \"ties\": 4, \"losses\": 13}], \"tsv_rows\": 48, \"markdown_rows_checked\": 48, \"production_helpers_imported\": false, \"raw_inference_or_scoring_rerun\": false, \"publication_ready\": false}\n",
+      "wall_time_seconds": 0.316580775
+    }
+  },
+  "schema": "native_qfo_comparator_execution_and_independent_readback_v1",
+  "scientific_revision": "7f3a9e40dd7e79f842cc2c11fb8b548f9a802806",
+  "source_revision": "fc9ff1282be85d5b1d6632392fc0c8cee4c76c61"
+}

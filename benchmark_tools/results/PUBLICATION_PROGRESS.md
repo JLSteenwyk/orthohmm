@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Native Comparator Intervals Executed And Independently Read Back (2026-10-09)
+
+Previous turn made actual progress: source/tests and actionable handoff were
+committed/pushedfc9ff128,72tests passed. Reconciled current source/origin and
+fresh output absence; no old action was repeated. Production executed once
+EXIT0 at native_qfo_comparator_uncertainty_20261009_v1 with100000draws,
+PCG64seed20260920 and fixed48-endpoint scope. Report50060bytes SHA
+aea49a83bcce9a80237fd1c8f04ada43efeb9bd41f6e17ba0aa0c7f911018c02.
+24estimated and24missing endpoints; missing correction family not shrunk.
+
+Independent literal-count/NumPy readback EXIT0 imports no production helper:
+18families/563disjointgenes/10765relations, allfamily prior statistics, actual
+macro endpoint, deterministic numerical replay of all24nominal/adjusted
+intervals, family differences/outcomes, all48TSV/Markdown rows and17pins before/
+after. Exact executed code/tool output/commands retained in
+native_qfo_comparator_execution_20261009_v1.json (41800bytes SHA
+b7a407f57c7952079a129b8814ce96fcabb53456c88ceb3d719e01ce4eafa3b6).
+NATIVE_QFO_COMPARATOR_RESULT_20261009.md links all outcomes/interpretive limits.
+Allfour nativeF1point estimates below fullOrthoFinder; reconciled cells have
+precision-recall trade-offs versus sequence-only checkpoint, but adjustedF1
+intervals includezero. Eightof24adjustedintervals excludezero conditionally.
+No independentconfirmation/equivalence/default/superiority claim follows.
+
+Current focused milestone is the new result/table/receipt/addendum commit/push.
+Next already-authorized task: integrate this science into a separately named
+machine-generated manuscript and figure, reusing the existing plotting/render
+patterns and actual table without changing frozen files or rebuilding archives.
+Inspect plot_corrected_swiss_comparison.py and current manuscript generator;
+test exact source/statistic/row bindings before generation. Retain the distinct
+48/24/42correction scopes,24missing endpoints, nonadmitted timings and parent
+body bytes. This is required Methods/Results/figure integration, not another
+package or integrity-certification campaign. Full goal ACTIVE; no live handles,
+quiet host, additional permission or resume awaited. Other uncertainty/strata
+remain unfinished; do not stop at this statistical milestone or retry inference.
+
 ## Unexpected-Stop Check; Tested Executable Handoff (2026-10-09)
 
 User requested a stopping/prompt check. Actual goal API reports ACTIVE with no
