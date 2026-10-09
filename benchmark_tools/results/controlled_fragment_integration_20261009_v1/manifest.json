@@ -1,0 +1,90 @@
+{
+  "inputs": {
+    "panel": {
+      "bytes": 600745,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/controlled_fragment_observations_20261009_v1/manifest.json",
+      "sha256": "8e58830911f60de5aec9ad616e5c02c12229702780e26216aa1371017637666d"
+    },
+    "parent": {
+      "bytes": 87595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_four_cell_strata_manuscript_20261009_v1.md",
+      "sha256": "60af8bf7ead43a3860eee6c923fc793895a8d8ae8e5564a30b0fe0daef131efc"
+    },
+    "reader": {
+      "bytes": 21970,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_execution_20261009_v1.json",
+      "sha256": "af665df1fff1ed454c9cce0286d9bcac831e935ad50b65aba5ee14e76d58edcf"
+    },
+    "result": {
+      "bytes": 584165,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_results_20261009_v1/report.json",
+      "sha256": "b1480e8eb2ace2aed743f5fc4e515e27ac4ba68b48e644b33989eda3cf8a7ab7"
+    },
+    "runtime": {
+      "bytes": 495287,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_execution_runtime_20261009_v1.json",
+      "sha256": "4ea5d10bccd02ef42e49194908212d07af701c109db878e176f56c298c2ca4da"
+    }
+  },
+  "manuscript": {
+    "bytes": 96067,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1.md",
+    "sha256": "71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a"
+  },
+  "manuscript_rendered": false,
+  "new_bootstrap_draws": 0,
+  "new_inference_or_scoring": false,
+  "outputs": [
+    {
+      "bytes": 993,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/claims.md",
+      "sha256": "70f1f3aa668ffde60a893a56fac12cac88ae64323a83fb49b4cceadbf787b9f3"
+    },
+    {
+      "bytes": 2640,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/comparisons.tsv",
+      "sha256": "dd51952c33af82190084bee74e12543c6782a5b03d1d1f9474f8a83f71f3605c"
+    },
+    {
+      "bytes": 670,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/endpoint_counts.tsv",
+      "sha256": "cf67e07c9ef4256bffc65d3372ddd001c1afd1711df81a7fcd6909138228e9fb"
+    },
+    {
+      "bytes": 1244,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/limitations_section.md",
+      "sha256": "7ab9a3685eb08976806104285f6dd2a8b5ef0a0bcc68450dded317add4836e56"
+    },
+    {
+      "bytes": 595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/means.tsv",
+      "sha256": "8279c2ee8f1c9cdfc513f442d81cc7f74d38d0b17b7dccee46d8308e85bc0183"
+    },
+    {
+      "bytes": 3078,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/methods_section.md",
+      "sha256": "6e0d351bf38e3b3ffd3feff079c8a8d1712fa2cdee426714218bb60757bdeeab"
+    },
+    {
+      "bytes": 4150,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_integration_20261009_v1/results_section.md",
+      "sha256": "49d2167c0ab77c537f806d4c5eed28913ca202cad99fc1241c2ead4a216d1635"
+    }
+  ],
+  "parent_body_unchanged_except_insertions": true,
+  "publication_ready": false,
+  "schema": "controlled_fragment_integration_v1",
+  "source": {
+    "bytes": 21671,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_controlled_fragment_results.py",
+    "sha256": "b6639300dcd7115e9a824e861f668a9ee79efad6590bbcdbec36ef19c8ba47d2"
+  },
+  "table_rows": {
+    "comparisons": 15,
+    "endpoint_counts": 12,
+    "means": 4
+  },
+  "table_scale": 100,
+  "tsv_scale": 1,
+  "visual_reviewed": false
+}

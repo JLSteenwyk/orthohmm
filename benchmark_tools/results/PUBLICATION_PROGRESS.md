@@ -1,5 +1,56 @@
 # Publication Progress
 
+## Fragment Manuscript Integrated; Goal Remains Active (2026-10-09)
+
+Actual progress, not another prompt revision: tested integration source421e7bfd
+and bounded print adapter47fd5721 pushed before use. One new draft generated,
+controlled_fragment_manuscript_20261009_v1.md SHA71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a.
+Integration directorycontrolled_fragment_integration_20261009_v1 contains
+Methods/Results/limitations,4means,15comparisons,12summed endpoint count rows,
+full-precision TSVs, claim addendum and source/input/output pins. Independent
+reader EXIT0 checks all167displayed numbers and byte-exact parent restoration.
+No inference, scoring, bootstrap, tuning or prior panel is repeated.
+Staged whitespace check flags the three generated section-ending blank lines;
+they are insertion separators, not scientific errors. Preserve validated bytes.
+
+Final220affected/adjacent tests passed in5.27s. Original render/print retained:
+19citations/134links/129targets/28pages; old profile TPR column clipped on14,
+despite zero bounds violations. Separately named _review_v2/_assets_v2/_print_v2
+reuse only the established profile-table scoped CSS, unchanged scientific HTML.
+Corrected PDF61b893efd3cea993412496799dd01d0c6e639b38c005ad00c918bf6c97b0a740,
+28pages/zero bounds violations. Independent PDF readback checks all31fragment
+rows/167numbers and23profile rows/69metric cells including NA. First text-only
+readback refusal and successful correction both retained: join exactly three
+wrapped `model_distan ce` labels to `model_distance`, no numeric normalization.
+Manually inspected corrected pages4,14,16,17,18,25: columns and numbers visible,
+no observed overlap; tables repeat headers across pages. This is NOT manual
+certification of all28pages. Actual commands, failures and readbacks retained
+in controlled_fragment_integration_execution_20261009_v1.json. Browser profiles
+and unreviewed raster caches remain local, not committed. Original evidence
+and full publication limitations preserved; no readiness or superiority claim.
+
+Goal check ACTIVE/no token budget; actual linked prompt and repo copy identical
+SHA d17f5d5ef244c7cdd31fc7256b4240573b7597cf54cbdd1b7708ab785139ee48.
+No host, quiet-window, DGX or routine approval gate exists. An external stop's
+cause is not established and cannot be guaranteed away by prompt edits.
+This milestone fixes the stale restart action by advancing and recording the
+real next task, not by asking the user to resume again. No live session/job.
+
+NEXT original4.3: trace representative fragment errors using the retained
+native stages, not a new inference run or another integrity/prompt campaign.
+The first seed already has clustered edges, candidate seeds/superfamilies,
+candidate merges, reconciliation nodes/summary and native gene trees.
+Read the existing reusable upstream tracing implementation next:
+`sed -n '1,240p' benchmark_tools/trace_simulation_upstream.py`
+Then freeze a finite, deterministic retrospective representative selection
+across methods and zero/one/two endpoint error strata (include unavailable
+strata and non-error controls honestly). Bind selections to admitted native
+artifacts, compare retained baseline/fragment stages, test the focused adapter
+before execution and preserve unexplained transitions rather than assume a
+causal search or phylogeny defect. No HMM-off causal claim, natural-fragment
+truth or new independent biology follows from this synthetic test. Commit/push
+tested milestones; keep the full goal ACTIVE while substantive work remains.
+
 ## Active Goal Checked; Fragment Integration Tested (2026-10-09)
 
 Maintenance check: get_goal returned ACTIVE with no token budget. The actual

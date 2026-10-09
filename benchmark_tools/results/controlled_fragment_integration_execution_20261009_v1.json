@@ -1,0 +1,196 @@
+{
+  "schema": "controlled_fragment_integration_execution_v1",
+  "scope": "Manuscript integration of already admitted fragment evidence; no inference, scoring or bootstrap production repeated",
+  "source_commits": {
+    "integration": "421e7bfd",
+    "scoped_print_adapter": "47fd5721"
+  },
+  "goal_check": {
+    "status": "active",
+    "remaining_token_budget": null,
+    "prompt_attachment": "/home/bizon/.codex/attachments/c53784d4-1029-4fd4-9dfb-dea6a2632e17/pasted-text-1.txt",
+    "repository_prompt": "benchmark_tools/PUBLICATION_GOAL_CURRENT.txt",
+    "both_sha256": "d17f5d5ef244c7cdd31fc7256b4240573b7597cf54cbdd1b7708ab785139ee48",
+    "prompt_rewritten": false,
+    "private_platform_state_modified": false,
+    "platform_stop_cause_established": false
+  },
+  "generation": {
+    "source_commit": "421e7bfd",
+    "exit_code": 0,
+    "output_manifest": "benchmark_tools/results/controlled_fragment_integration_20261009_v1/manifest.json",
+    "manuscript_sha256": "71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a",
+    "manuscript_bytes": 96067,
+    "planned_table_rows": {
+      "means": 4,
+      "comparisons": 15,
+      "endpoint_counts": 12
+    }
+  },
+  "tests": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_controlled_fragment_integration.py tests/unit/test_native_qfo_four_cell_strata_integration.py tests/unit/test_assemble_controlled_fragment_results.py tests/unit/test_controlled_fragment_observations.py tests/unit/test_controlled_fragment_runtime.py tests/unit/test_run_controlled_fragment_methods.py tests/unit/test_controlled_fragment_review.py tests/unit/test_profile_stratum_review.py tests/unit/test_render_manuscript_review.py tests/unit/test_print_manuscript_review.py tests/unit/test_review_manuscript_pdf.py",
+    "tool_result": {
+      "chunk_id": "54fc98",
+      "wall_time_seconds": 1.000796165,
+      "session_id": 93512,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "6b7f41",
+      "wall_time_seconds": 0.000011508,
+      "exit_code": 0,
+      "original_token_count": 85,
+      "output": "........................................................................ [ 32%]\n........................................................................ [ 65%]\n........................................................................ [ 98%]\n....                                                                     [100%]\n220 passed in 5.27s\n"
+    }
+  },
+  "independent_scientific_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import csv,hashlib,json,math; from pathlib import Path; b=Path(\"benchmark_tools/results\"); d=b/\"controlled_fragment_integration_20261009_v1\"; manifest=json.loads((d/\"manifest.json\").read_text()); raw=json.loads((b/\"controlled_fragment_results_20261009_v1/report.json\").read_text()); revised=Path(manifest[\"manuscript\"][\"path\"]).read_text(); parent=Path(manifest[\"inputs\"][\"parent\"][\"path\"]).read_text(); restored=revised\nfor name in (\"methods\",\"results\",\"limitations\"): restored=restored.replace((d/(name+\"_section.md\")).read_text(),\"\",1)\nassert restored==parent\nfor ref in [*manifest[\"inputs\"].values(),*manifest[\"outputs\"],manifest[\"source\"],manifest[\"manuscript\"]]:\n p=Path(ref[\"path\"]); payload=p.read_bytes(); assert len(payload)==ref[\"bytes\"] and hashlib.sha256(payload).hexdigest()==ref[\"sha256\"]\nmethods=(\"orthohmm_high_sensitivity\",\"orthohmm_satellite_v2\",\"orthofinder_full\",\"orthofinder_sequence_only\"); labels=dict(zip(methods,(\"HS\",\"PHY\",\"OF\",\"OF checkpoint\"))); summaries={(r[\"arm\"],r[\"method\"]):r for r in raw[\"metric_means\"]}; rows={(r[\"arm\"],r[\"seed\"],r[\"method\"]):r for r in raw[\"records\"]}; seeds=range(20261101,20261111); text=(d/\"results_section.md\").read_text(); numeric_cells=0\nwith (d/\"means.tsv\").open() as f: means=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(means)==4\nfor method,row in zip(methods,means):\n values=[summaries[\"baseline\",method][\"metrics\"][\"f1\"][\"mean\"]]+[summaries[\"fragment\",method][\"metrics\"][m][\"mean\"] for m in (\"f1\",\"precision\",\"recall\")]+[sum(rows[\"fragment\",s,method][\"score\"][\"pair_endpoint_coverage\"] for s in seeds)/10]; fields=(\"baseline_f1\",\"fragment_f1\",\"fragment_precision\",\"fragment_recall\",\"fragment_pair_endpoint_coverage\")\n assert row[\"method\"]==method and row[\"eligible_seeds\"]==\"10\" and all(float(row[k])==v for k,v in zip(fields,values)); assert \"| \"+\" | \".join([labels[method]]+[format(100*v,\".4f\") for v in values])+\" |\" in text; numeric_cells+=5\nwith (d/\"comparisons.tsv\").open() as f: differences=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(differences)==15\nfor observed,expected in zip(differences,raw[\"comparisons\"]):\n assert all(observed[k]==expected[k] for k in (\"target_arm\",\"target_method\",\"reference_arm\",\"reference_method\",\"metric\")); assert float(observed[\"estimate\"])==expected[\"estimate\"] and observed[\"eligible_seeds\"]==\"10\"; comparison=labels[expected[\"target_method\"]]+(\" F-B\" if expected[\"reference_arm\"]==\"baseline\" else \"-OF F-F\"); cells=[comparison,expected[\"metric\"],format(100*expected[\"estimate\"],\"+.4f\")]\n for kind in (\"nominal\",\"adjusted\"):\n  interval=expected[kind+\"_interval\"]; assert [float(observed[kind+\"_low\"]),float(observed[kind+\"_high\"])]==interval; cells.append(\"[\"+format(100*interval[0],\"+.4f\")+\", \"+format(100*interval[1],\"+.4f\")+\"]\")\n assert \"| \"+\" | \".join(cells+[\"10\"])+\" |\" in text; numeric_cells+=5\nwith (d/\"endpoint_counts.tsv\").open() as f: counts=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(counts)==12\nfor observed,(method,n) in zip(counts,((m,n) for m in methods for n in range(3))):\n assert observed[\"method\"]==method and int(observed[\"fragment_endpoints\"])==n; cells=[labels[method],str(n)]\n for arm in (\"baseline\",\"fragment\"):\n  values=[sum(rows[arm,s,method][\"strata\"][n][\"score\"][k] for s in seeds) for k in (\"tp\",\"fp\",\"fn\")]; assert all(int(observed[arm+\"_\"+k])==v for k,v in zip((\"tp\",\"fp\",\"fn\"),values)); cells.append(\" / \".join(str(v) for v in values))\n assert \"| \"+\" | \".join(cells)+\" |\" in text; numeric_cells+=6\nassert numeric_cells==167 and manifest[\"publication_ready\"] is False and manifest[\"new_bootstrap_draws\"]==0\nprint(json.dumps(dict(status=\"independent_fragment_integration_readback_verified\",mean_rows=4,comparison_rows=15,endpoint_count_rows=12,numeric_cells=167,parent_byte_restoration=True,manuscript_sha256=manifest[\"manuscript\"][\"sha256\"],publication_ready=False),sort_keys=True))'",
+    "tool_result": {
+      "chunk_id": "8f25a8",
+      "wall_time_seconds": 0.000010165,
+      "exit_code": 0,
+      "original_token_count": 76,
+      "output": "{\"comparison_rows\": 15, \"endpoint_count_rows\": 12, \"manuscript_sha256\": \"71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a\", \"mean_rows\": 4, \"numeric_cells\": 167, \"parent_byte_restoration\": true, \"publication_ready\": false, \"status\": \"independent_fragment_integration_readback_verified\"}\n"
+    }
+  },
+  "render": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.render_manuscript_review import render; b=root/\"benchmark_tools/results\"; r=render(root,b/\"controlled_fragment_manuscript_20261009_v1.md\",b/\"controlled_fragment_manuscript_20261009_v1_review.html\",b/\"controlled_fragment_manuscript_20261009_v1_assets.json\",b/\"publication_bibliography_20261007_v1.csl.json\"); print(json.dumps(dict(status=r[\"status\"],citations=len(r[\"citation_ids\"]),local_occurrences=r[\"local_occurrences\"],unique_targets=r[\"unique_targets\"],html=r[\"html\"])))'",
+    "tool_result": {
+      "chunk_id": "96527f",
+      "wall_time_seconds": 1.000785998,
+      "session_id": 58559,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "d315dc",
+      "wall_time_seconds": 0.000012409,
+      "exit_code": 0,
+      "original_token_count": 91,
+      "output": "{\"status\": \"manuscript_review_rendered\", \"citations\": 19, \"local_occurrences\": 134, \"unique_targets\": 129, \"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_review.html\", \"bytes\": 131843, \"sha256\": \"27dd3010a4f9a554fccac8b13bd3e3a23beafc175ecd1588986baad22cfe32e4\"}}\n"
+    }
+  },
+  "original_print": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.print_manuscript_review import print_review; b=root/\"benchmark_tools/results\"; r=print_review(b/\"controlled_fragment_manuscript_20261009_v1_assets.json\",b/\"controlled_fragment_manuscript_20261009_v1_print\",Path(\"/opt/google/chrome/google-chrome\")); print(json.dumps({k:r[k] for k in (\"status\",\"page_count\",\"pdf\")}))'",
+    "tool_result": {
+      "chunk_id": "b0dae5",
+      "wall_time_seconds": 1.001151969,
+      "session_id": 56799,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "4fa29a",
+      "wall_time_seconds": 0.000010797,
+      "exit_code": 0,
+      "original_token_count": 79,
+      "output": "{\"status\": \"verified_html_printed\", \"page_count\": 28, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_print/document.pdf\", \"bytes\": 585498, \"sha256\": \"2af3b6f7d6bcb3ee4493134e1428f042fdce7b8457da4b04115815f7629dae98\"}}\n"
+    }
+  },
+  "original_layout": {
+    "attempt": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.review_manuscript_pdf import review; b=root/\"benchmark_tools/results\"; r=review(b/\"controlled_fragment_manuscript_20261009_v1_print/document.pdf\",b/\"controlled_fragment_manuscript_20261009_v1_assets.json\",b/\"controlled_fragment_manuscript_20261009_v1_layout\",[\"Controlled Fragment Observation Test\",\"Controlled Fragment Accuracy\",\"Controlled Fragment Paired Differences\",\"Controlled Fragment Endpoint Counts\",\"Controlled Fragment Scope And Limitations\",\"Profile Refinement Across All Fixed Bins\"]); print(json.dumps({k:r[k] for k in (\"page_count\",\"bounds_violations\",\"phrase_matches\")}))'",
+      "tool_result": {
+        "chunk_id": "84c0bf",
+        "wall_time_seconds": 1.001269831,
+        "session_id": 19630,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "report": "benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_layout/report.json",
+    "terminal_exit_code": 0,
+    "observed_pages": 28,
+    "bounds_violations": 0,
+    "diagnosed_failure": "Page 14 clips the old profile table's TPR column despite zero bounds violations; original attempt retained"
+  },
+  "print_correction": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.render_controlled_fragment_review import run; b=root/\"benchmark_tools/results\"; r=run(root,b/\"controlled_fragment_manuscript_20261009_v1_assets.json\",b/\"controlled_fragment_manuscript_20261009_v1_review_v2.html\",b/\"controlled_fragment_manuscript_20261009_v1_assets_v2.json\"); print(json.dumps(dict(html=r[\"html\"],rendering_recovery=r[\"rendering_recovery\"])))'",
+    "tool_result": {
+      "chunk_id": "919ed9",
+      "wall_time_seconds": 0.403270753,
+      "exit_code": 0,
+      "original_token_count": 376,
+      "output": "{\"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_review_v2.html\", \"bytes\": 132828, \"sha256\": \"3925a4ba3f8f187d90b3399a0bdea7b1c391092eeff46b15210d35faebcb463f\"}, \"rendering_recovery\": {\"operation\": \"insert_scoped_print_css_only\", \"original_assets\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_assets.json\", \"bytes\": 63690, \"sha256\": \"cd07d9761acea9d3b207d7f28c1d5d8c2a49b2fb303613e18d974217fc92f190\"}, \"original_html\": {\"bytes\": 131843, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_review.html\", \"sha256\": \"27dd3010a4f9a554fccac8b13bd3e3a23beafc175ecd1588986baad22cfe32e4\"}, \"source\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_controlled_fragment_review.py\", \"bytes\": 2633, \"sha256\": \"0c43549c4cc47384aa55d4e4afd2d72c644fb108bcce01acce2de2103009fc10\"}, \"styling_source\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_profile_stratum_review.py\", \"bytes\": 6022, \"sha256\": \"7426a356e8723cb5d09c2d96ea19717dc266368b265dfd723f3ff8c3d711fdca\"}, \"scientific_html_unchanged\": true, \"profile_rows\": 23, \"all_columns_required\": 6, \"selector\": \"#profile-refinement-across-all-fixed-bins + p + table\", \"fragment_tables_changed\": false}}\n"
+    }
+  },
+  "corrected_print": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.print_manuscript_review import print_review; b=root/\"benchmark_tools/results\"; r=print_review(b/\"controlled_fragment_manuscript_20261009_v1_assets_v2.json\",b/\"controlled_fragment_manuscript_20261009_v1_print_v2\",Path(\"/opt/google/chrome/google-chrome\")); print(json.dumps({k:r[k] for k in (\"status\",\"page_count\",\"pdf\")}))'",
+    "tool_result": {
+      "chunk_id": "22b438",
+      "wall_time_seconds": 1.001421942,
+      "session_id": 77817,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "cfebf6",
+      "wall_time_seconds": 0.000011137,
+      "exit_code": 0,
+      "original_token_count": 80,
+      "output": "{\"status\": \"verified_html_printed\", \"page_count\": 28, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1_print_v2/document.pdf\", \"bytes\": 587484, \"sha256\": \"61b893efd3cea993412496799dd01d0c6e639b38c005ad00c918bf6c97b0a740\"}}\n"
+    }
+  },
+  "corrected_layout": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.review_manuscript_pdf import review; b=root/\"benchmark_tools/results\"; r=review(b/\"controlled_fragment_manuscript_20261009_v1_print_v2/document.pdf\",b/\"controlled_fragment_manuscript_20261009_v1_assets_v2.json\",b/\"controlled_fragment_manuscript_20261009_v1_layout_v2\",[\"Controlled Fragment Observation Test\",\"Controlled Fragment Accuracy\",\"Controlled Fragment Paired Differences\",\"Controlled Fragment Endpoint Counts\",\"Controlled Fragment Scope And Limitations\",\"Profile Refinement Across All Fixed Bins\"]); print(json.dumps({k:r[k] for k in (\"page_count\",\"bounds_violations\",\"phrase_matches\")}))'",
+    "tool_result": {
+      "chunk_id": "3c55ef",
+      "wall_time_seconds": 1.00163419,
+      "session_id": 26099,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "291155",
+      "wall_time_seconds": 0.000008893,
+      "exit_code": 0,
+      "original_token_count": 86,
+      "output": "{\"page_count\": 28, \"bounds_violations\": [], \"phrase_matches\": {\"Controlled Fragment Observation Test\": [4], \"Controlled Fragment Accuracy\": [16], \"Controlled Fragment Paired Differences\": [17], \"Controlled Fragment Endpoint Counts\": [18], \"Controlled Fragment Scope And Limitations\": [25], \"Profile Refinement Across All Fixed Bins\": [14]}}\n"
+    }
+  },
+  "first_printed_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import hashlib,json; from pathlib import Path; import fitz; b=Path(\"benchmark_tools/results\"); pdf=b/\"controlled_fragment_manuscript_20261009_v1_print_v2/document.pdf\"; document=fitz.open(pdf); text=\" \".join(\" \".join(p.get_text() for p in document).split()); sources=[(b/\"controlled_fragment_integration_20261009_v1/results_section.md\").read_text(),(b/\"native_qfo_four_cell_strata_integration_20261009_v1/results_section.md\").read_text()]; counts=[]\nfor source in sources:\n table=[line for line in source.splitlines() if line.startswith(\"| \") and not line.startswith(\"| ---\")]; data=[line for line in table if line.split(\"|\")[1].strip() not in (\"Method\",\"Comparison\",\"Suite\",\"Family\")]\n if source==sources[1]: data=[line for line in data if line.split(\"|\")[1].strip() in (\"sequence\",\"domain\",\"duplication\",\"model_distance\")]\n for row in data:\n  expected=\" \".join(row.replace(\"|\",\" \").split()); assert expected in text,expected\n counts.append(len(data))\nassert counts==[31,23]\noriginal=(b/\"controlled_fragment_manuscript_20261009_v1_review.html\").read_text(); corrected=(b/\"controlled_fragment_manuscript_20261009_v1_review_v2.html\").read_text(); start=corrected.index(chr(10)+\"<style id=\\\"profile-stratum-print-recovery\\\">\"); stop=corrected.index(\"</style>\",start)+len(\"</style>\")+1; assert corrected[:start]+corrected[stop:]==original\nprint(json.dumps(dict(status=\"independent_printed_fragment_and_profile_rows_verified\",fragment_rows=31,fragment_numeric_cells=167,profile_rows=23,profile_numeric_cells=69,page_count=len(document),pdf_sha256=hashlib.sha256(pdf.read_bytes()).hexdigest(),scientific_html_unchanged=True,visual_review_complete=False),sort_keys=True))'",
+    "tool_result": {
+      "chunk_id": "5fc82a",
+      "wall_time_seconds": 0.066936226,
+      "exit_code": 1,
+      "original_token_count": 34,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\nAssertionError: model_distance all 18 -0.320 -0.010 -0.463\n"
+    }
+  },
+  "corrected_printed_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import hashlib,json; from pathlib import Path; import fitz; b=Path(\"benchmark_tools/results\"); pdf=b/\"controlled_fragment_manuscript_20261009_v1_print_v2/document.pdf\"; document=fitz.open(pdf); text=\" \".join(\" \".join(p.get_text() for p in document).split()); assert text.count(\"model_distan ce\")==3; text=text.replace(\"model_distan ce\",\"model_distance\"); sources=[(b/\"controlled_fragment_integration_20261009_v1/results_section.md\").read_text(),(b/\"native_qfo_four_cell_strata_integration_20261009_v1/results_section.md\").read_text()]; counts=[]\nfor source in sources:\n table=[line for line in source.splitlines() if line.startswith(\"| \") and not line.startswith(\"| ---\")]; data=[line for line in table if line.split(\"|\")[1].strip() not in (\"Method\",\"Comparison\",\"Suite\",\"Family\")]\n if source==sources[1]: data=[line for line in data if line.split(\"|\")[1].strip() in (\"sequence\",\"domain\",\"duplication\",\"model_distance\")]\n for row in data:\n  expected=\" \".join(row.replace(\"|\",\" \").split()); assert expected in text,expected\n counts.append(len(data))\nassert counts==[31,23]\noriginal=(b/\"controlled_fragment_manuscript_20261009_v1_review.html\").read_text(); corrected=(b/\"controlled_fragment_manuscript_20261009_v1_review_v2.html\").read_text(); start=corrected.index(chr(10)+\"<style id=\\\"profile-stratum-print-recovery\\\">\"); stop=corrected.index(\"</style>\",start)+len(\"</style>\")+1; assert corrected[:start]+corrected[stop:]==original\nprint(json.dumps(dict(status=\"independent_printed_fragment_and_profile_rows_verified\",fragment_rows=31,fragment_numeric_cells=167,profile_rows=23,profile_metric_cells=69,presentation_normalization={\"model_distan ce\":\"model_distance\",\"occurrences\":3},page_count=len(document),pdf_sha256=hashlib.sha256(pdf.read_bytes()).hexdigest(),scientific_html_unchanged=True,visual_review_complete=False),sort_keys=True))'",
+    "tool_result": {
+      "chunk_id": "bcd6d0",
+      "wall_time_seconds": 0.069368507,
+      "exit_code": 0,
+      "original_token_count": 106,
+      "output": "{\"fragment_numeric_cells\": 167, \"fragment_rows\": 31, \"page_count\": 28, \"pdf_sha256\": \"61b893efd3cea993412496799dd01d0c6e639b38c005ad00c918bf6c97b0a740\", \"presentation_normalization\": {\"model_distan ce\": \"model_distance\", \"occurrences\": 3}, \"profile_metric_cells\": 69, \"profile_rows\": 23, \"scientific_html_unchanged\": true, \"status\": \"independent_printed_fragment_and_profile_rows_verified\", \"visual_review_complete\": false}\n"
+    }
+  },
+  "visual_review": {
+    "pages_inspected": [
+      4,
+      14,
+      16,
+      17,
+      18,
+      25
+    ],
+    "page_count": 28,
+    "all_pages_reviewed": false,
+    "full_document_certification": false,
+    "observations": "Changed Methods, fragment means/intervals/counts and limitations are legible with no observed overlap or missing numbers. Tables continue with repeated headers. Corrected profile TPR column is fully visible; model_distance wraps in three suite labels. Adjacent and unchanged pages not manually certified."
+  },
+  "new_inference_runs": 0,
+  "new_bootstrap_draws": 0,
+  "publication_ready": false,
+  "limitations": [
+    "Synthetic and development-exposed fragment condition, not natural-fragment biology or independent validation.",
+    "Ten-seed percentile intervals remain conditional approximations.",
+    "Shared-host timing limitations and changed full OrthoHMM inventory retained.",
+    "Representative fragment pipeline error tracing remains unfinished.",
+    "Active goal status and prompt consistency do not diagnose or prevent platform interruptions."
+  ]
+}
