@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Controlled Fragment Observation Protocol Prepared (2026-10-09)
+
+Complete profile-stratum integration and original/clipped plus corrected
+render/print evidence committed and pushed6698b5d2; do NOTrepeat those tasks.
+Original4.3fragment gap verified: existing missing20 removes genes, while
+the retained simulation protocol explicitly excludes structural fragments.
+Inspected actual generation/truth/transform/method sources and retained
+variable-length result, NOT a new benchmark calculation. All ten baseline
+seeds20261101..10 have allfour method outcomes admitted. Report SHA
+cc99fc31c3433809098212d3c8dc12f4ad829b4cfeb66dabcb13aede4e95258f.
+Methodmanifest488540bytes/bf677728; generation369800bytes/806aa1e5;
+old comparator481930bytes/f68b0caf; native runtime5789bytes/aebea838.
+Frozen7f3a9e40 core/root, ten baseline input/truth directories and existing
+Python/OrthoFinder entrypoints are PRESENT. Raw input/prediction and current
+runtime equivalence have NOTyet been freshly validated for this new test.
+
+Prepared CONTROLLED_FRAGMENT_OBSERVATION_PROTOCOL_20261009.md: all10existing
+variable-length baseline seeds, one label-independent20%gene/center60%length
+condition, unchanged IDs/species/event truth and frozen method settings.
+Reuse admitted controls;30genuinelynew inference identities, sequencecheckpoint
+diagnostic only. Full pair scoring includes inter-origin FP; zero/one/two
+fragment endpoint strata partition truth/predictions. Fiveplanned paired
+comparisons×3metrics=15correction endpoints;20kwhole-seed draws/PCG64seed20261011,
+explicit successful/defined pairing and exclusions. Development-exposed
+synthetic observation test, NOTnatural fragment truth or independent biology.
+No transformed inputs, fragment inference or fragment scores exist yet.
+
+Next commit/push this prospective scientific protocol/ledger, then implement
+and test the fragment transform plus baseline binding consumer. Inspect
+run_simulation_methods.py, simulation_method_outputs.py, simulation_conditions.py
+and validate_simulation_outputs.py for reusable validated launch/conversion/
+score checks; old70dataset verifier cannot simply accept a newcondition by
+schema renaming. Read the actual manifests above for per-seed input/truth/
+execution/prediction pins, and validate required reused runtime/source/tool
+bindings before any new launch. Use fresh derived paths/identities only,
+tested truthful prospective adapter and explicit scientific scope. No restart
+of completed baselines, automatic failures retry, prompt/archive campaign,
+DGX/quiet-host gate or request for another routine authorization.
+Full goal ACTIVE; next automatic continuation is this concrete implementation.
+No live job/session is awaited; keep unrelated samples/browser profiles/archive
+untouched. Newprotocol milestone not yet committed; stage only its exact path
+and ledger, then resume implementation rather than resuming an old checkpoint.
+
 ## Profile-Stratum Manuscript And Scoped Print Recovery Verified (2026-10-09)
 
 Full four-cell fixed-stratum science and manuscript integration are executed.
