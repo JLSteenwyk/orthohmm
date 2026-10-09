@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Terminal-Failure Direct Reporting Component (2026-10-09)
+
+Completed/committed/pushed render/PDF/page/citation/content/manual review
+milestone795c7e89. All22 new pages actually inspected; bounds violations none,
+24 endpoint values/eight failure phrases checked,10 linked PDFs freshly decoded,
+19 citation ids resolved. Reporting/source milestone9ab91916 remains unchanged.
+Full goal ACTIVE; no scientific admission/inference retry/publication readiness.
+
+Current task: direct reporting component with existing generic
+bundle_publication_review.py and restore_direct_review_archive.py. These accept
+explicit manuscript/render/print/review paths; no adapter or schema change needed.
+The one untracked direct HTML target is actual terminal-review decision manifest
+benchmarks/work/native12_composed_terminal_review_20261008_v1/review.json,
+36151387bytes SHA256a55a6da5ffb8dfbb362883937c915b161796a9ddd7275f4ac48a1c4d049e5c4a.
+Inspected top-level fields and all126436 evidence entries: each is ONLY
+bytes/path/SHA256 metadata. Other fields are outcome/source/resource/scope
+metadata and refs to component reviews. This is not a raw sequence dataset,
+expanded process-stream export or the8.5GB host replay. Preserve exact bytes
+and commit this specific required metadata payload, not the other work files.
+
+Next: commit/push that manifest plus this checkpoint; build one fresh direct
+component from committed current main/stage paths, externally anchor its index
+and tar, restore to a fresh directory and actually execute the byte-checked
+copied verifier. Keep direct-only scope, external provenance/rights limitations,
+and no full-study/runtime/deposition claim. Do not rerender/reprint unchanged
+outputs. Browser_profile/unrelated sample changes remain unstaged.
+Only current ledger refresh uncommitted before metadata staging; no foreground
+session/live review wait remains. Generic component will contain its selected
+direct render/print/bounds evidence; separate manual/content receipts remain
+repository evidence unless explicitly included by its actual inventory.
+
 ## Terminal-Failure Manuscript Render And Review (2026-10-09)
 
 Actual terminal review24080 completed0:0; production report/manuscript generated
