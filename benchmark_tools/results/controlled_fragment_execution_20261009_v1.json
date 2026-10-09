@@ -1,0 +1,175 @@
+{
+  "schema": "controlled_fragment_actual_execution_v1",
+  "scope": "One prespecified synthetic observation condition; retained baseline controls reused",
+  "source_commits": {
+    "transform_and_controls": "c5c81c1f",
+    "prospective_inventory": "3456a889",
+    "runner": "67b6b34d",
+    "prepared_inputs": "d24ce871",
+    "terminal_consumer": "2125e688"
+  },
+  "tests": {
+    "passed": 176,
+    "seconds": 2.66,
+    "bash_syntax_exit_code": 0
+  },
+  "prepared_manifest": {
+    "path": "benchmarks/work/controlled_fragment_observations_20261009_v1/manifest.json",
+    "bytes": 600745,
+    "sha256": "8e58830911f60de5aec9ad616e5c02c12229702780e26216aa1371017637666d"
+  },
+  "runtime_manifest": {
+    "path": "benchmark_tools/results/controlled_fragment_execution_runtime_20261009_v1.json",
+    "sha256": "4ea5d10bccd02ef42e49194908212d07af701c109db878e176f56c298c2ca4da"
+  },
+  "baseline_check": {
+    "initial": {
+      "chunk_id": "fe3b19",
+      "wall_time_seconds": 1.001154482,
+      "session_id": 99299,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "36a595",
+      "wall_time_seconds": 0.000010717,
+      "exit_code": 0,
+      "original_token_count": 70,
+      "output": "{\"datasets\": 10, \"genes\": {\"20261101\": 806, \"20261102\": 822, \"20261103\": 813, \"20261104\": 811, \"20261105\": 806, \"20261106\": 847, \"20261107\": 804, \"20261108\": 816, \"20261109\": 852, \"20261110\": 823}, \"methods\": 40, \"new_inference\": false, \"status\": \"retained_baselines_verified\"}\n"
+    }
+  },
+  "original_runtime_refusal": {
+    "chunk_id": "f0878a",
+    "wall_time_seconds": 0.947074119,
+    "exit_code": 1,
+    "original_token_count": 81,
+    "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_simulation_methods.py\", line 60, in verify_environment\n    raise ValueError(f\"Package inventory changed: {name}\")\nValueError: Package inventory changed: orthohmm\n"
+  },
+  "corrected_read_only_inventory_diagnosis": {
+    "chunk_id": "335951",
+    "wall_time_seconds": 0.599729908,
+    "exit_code": 0,
+    "original_token_count": 1124,
+    "output": "{\"current_python\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"historical_python\": \"3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]\", \"package_differences\": {\"ProDy\": {\"current\": \"2.6.1\", \"historical\": null}, \"Send2Trash\": {\"current\": null, \"historical\": \"1.8.0\"}, \"altgraph\": {\"current\": null, \"historical\": \"0.17.2\"}, \"anthropic\": {\"current\": null, \"historical\": \"0.84.0\"}, \"argon2-cffi\": {\"current\": null, \"historical\": \"21.3.0\"}, \"argon2-cffi-bindings\": {\"current\": null, \"historical\": \"21.2.0\"}, \"asttokens\": {\"current\": null, \"historical\": \"2.0.5\"}, \"backcall\": {\"current\": null, \"historical\": \"0.2.0\"}, \"beautifulsoup4\": {\"current\": \"4.12.2\", \"historical\": \"4.11.1\"}, \"bleach\": {\"current\": null, \"historical\": \"5.0.0\"}, \"blessings\": {\"current\": null, \"historical\": \"1.7\"}, \"cachetools\": {\"current\": null, \"historical\": \"5.0.0\"}, \"charset-normalizer\": {\"current\": \"3.4.1\", \"historical\": \"2.1.1\"}, \"debugpy\": {\"current\": null, \"historical\": \"1.6.0\"}, \"decorator\": {\"current\": null, \"historical\": \"5.1.1\"}, \"dm-tree\": {\"current\": \"0.1.10\", \"historical\": null}, \"docstring_parser\": {\"current\": null, \"historical\": \"0.17.0\"}, \"entrypoints\": {\"current\": null, \"historical\": \"0.4\"}, \"fastjsonschema\": {\"current\": \"2.16.2\", \"historical\": \"2.15.3\"}, \"gpustat\": {\"current\": null, \"historical\": \"0.6.0\"}, \"ipykernel\": {\"current\": null, \"historical\": \"6.13.0\"}, \"ipython\": {\"current\": null, \"historical\": \"8.3.0\"}, \"ipython-genutils\": {\"current\": null, \"historical\": \"0.2.0\"}, \"jedi\": {\"current\": null, \"historical\": \"0.18.1\"}, \"jiter\": {\"current\": null, \"historical\": \"0.13.0\"}, \"json5\": {\"current\": null, \"historical\": \"0.9.8\"}, \"jupyter-client\": {\"current\": null, \"historical\": \"7.3.1\"}, \"jupyter-core\": {\"current\": null, \"historical\": \"4.10.0\"}, \"jupyter-server\": {\"current\": null, \"historical\": \"1.17.0\"}, \"jupyter_core\": {\"current\": \"5.5.0\", \"historical\": \"4.10.0\"}, \"jupyterlab\": {\"current\": null, \"historical\": \"3.4.1\"}, \"jupyterlab-pygments\": {\"current\": null, \"historical\": \"0.2.2\"}, \"jupyterlab-server\": {\"current\": null, \"historical\": \"2.13.0\"}, \"matplotlib-inline\": {\"current\": null, \"historical\": \"0.1.3\"}, \"mistune\": {\"current\": null, \"historical\": \"0.8.4\"}, \"ml_collections\": {\"current\": \"1.1.0\", \"historical\": null}, \"mock\": {\"current\": null, \"historical\": \"4.0.3\"}, \"nbclassic\": {\"current\": null, \"historical\": \"0.3.7\"}, \"nbclient\": {\"current\": null, \"historical\": \"0.6.3\"}, \"nbconvert\": {\"current\": null, \"historical\": \"6.5.0\"}, \"nbformat\": {\"current\": \"5.9.2\", \"historical\": \"5.4.0\"}, \"nest-asyncio\": {\"current\": null, \"historical\": \"1.5.5\"}, \"notebook\": {\"current\": null, \"historical\": \"6.4.11\"}, \"notebook-shim\": {\"current\": null, \"historical\": \"0.1.0\"}, \"nvidia-ml-py3\": {\"current\": null, \"historical\": \"7.352.0\"}, \"nvitop\": {\"current\": null, \"historical\": \"0.5.5\"}, \"openai\": {\"current\": null, \"historical\": \"2.26.0\"}, \"pandocfilters\": {\"current\": null, \"historical\": \"1.5.0\"}, \"parso\": {\"current\": null, \"historical\": \"0.8.3\"}, \"pickleshare\": {\"current\": null, \"historical\": \"0.7.5\"}, \"prompt-toolkit\": {\"current\": null, \"historical\": \"3.0.29\"}, \"propka\": {\"current\": \"3.5.1\", \"historical\": null}, \"pure-eval\": {\"current\": null, \"historical\": \"0.2.2\"}, \"py-spy\": {\"current\": null, \"historical\": \"0.4.1\"}, \"pyinstaller\": {\"current\": null, \"historical\": \"5.1\"}, \"pyinstaller-hooks-contrib\": {\"current\": null, \"historical\": \"2022.7\"}, \"pyparsing\": {\"current\": \"3.1.1\", \"historical\": \"3.2.1\"}, \"pyrsistent\": {\"current\": null, \"historical\": \"0.18.1\"}, \"requests\": {\"current\": \"2.32.3\", \"historical\": \"2.32.5\"}, \"sniffio\": {\"current\": null, \"historical\": \"1.2.0\"}, \"soupsieve\": {\"current\": \"2.5\", \"historical\": \"2.3.2.post1\"}, \"sparkit-reboot\": {\"current\": null, \"historical\": \"0.1.0\"}, \"stack-data\": {\"current\": null, \"historical\": \"0.2.0\"}, \"termcolor\": {\"current\": null, \"historical\": \"1.1.0\"}, \"terminado\": {\"current\": null, \"historical\": \"0.13.3\"}, \"tinycss2\": {\"current\": null, \"historical\": \"1.1.1\"}, \"tornado\": {\"current\": \"6.3.3\", \"historical\": \"6.1\"}, \"traitlets\": {\"current\": \"5.7.1\", \"historical\": \"5.2.0\"}, \"urllib3\": {\"current\": \"2.3.0\", \"historical\": \"1.26.15\"}, \"wcwidth\": {\"current\": null, \"historical\": \"0.2.5\"}, \"webencodings\": {\"current\": null, \"historical\": \"0.5.1\"}, \"websocket-client\": {\"current\": null, \"historical\": \"1.3.2\"}}, \"tool\": \"orthohmm\"}\n{\"current_python\": \"3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]\", \"historical_python\": \"3.12.3 (main, May 26 2025, 18:50:19) [GCC 13.3.0]\", \"package_differences\": {}, \"tool\": \"orthofinder\"}\n"
+  },
+  "diagnosis_helper_limit": "An earlier read-only inline diagnostic had a SyntaxError before running; corrected inventory diagnosis is recorded here. No scientific process or file was changed by that helper failure.",
+  "prospective_runtime_adoption": {
+    "initial": {
+      "chunk_id": "7a4899",
+      "wall_time_seconds": 1.001058244,
+      "session_id": 34416,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "exit_code": 0,
+      "inventory_changes": 72,
+      "scientific_dependencies_unchanged": 11,
+      "historical_output_equivalence_established": false
+    }
+  },
+  "preparation": {
+    "initial": {
+      "chunk_id": "afb79f",
+      "wall_time_seconds": 1.001882737,
+      "session_id": 21380,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "8d6182",
+      "wall_time_seconds": 0.000010726,
+      "exit_code": 0,
+      "original_token_count": 20,
+      "output": "{\"status\": \"prepared_unexecuted\", \"datasets\": 10, \"inference_identities\": 30}\n"
+    }
+  },
+  "launch_check": {
+    "initial": {
+      "chunk_id": "8f2600",
+      "wall_time_seconds": 1.000823695,
+      "session_id": 12520,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "fc1aaa",
+      "wall_time_seconds": 0.000011177,
+      "exit_code": 0,
+      "original_token_count": 23,
+      "output": "{\"status\": \"fragment_launch_preflight_verified\", \"datasets\": 10, \"new_inference\": false}\n"
+    }
+  },
+  "independent_input_readback": {
+    "chunk_id": "e06ee3",
+    "wall_time_seconds": 0.178893886,
+    "exit_code": 0,
+    "original_token_count": 176,
+    "output": "{\"datasets\": [{\"fragment_genes\": 161, \"genes\": 806, \"seed\": 20261101}, {\"fragment_genes\": 164, \"genes\": 822, \"seed\": 20261102}, {\"fragment_genes\": 162, \"genes\": 813, \"seed\": 20261103}, {\"fragment_genes\": 162, \"genes\": 811, \"seed\": 20261104}, {\"fragment_genes\": 161, \"genes\": 806, \"seed\": 20261105}, {\"fragment_genes\": 169, \"genes\": 847, \"seed\": 20261106}, {\"fragment_genes\": 160, \"genes\": 804, \"seed\": 20261107}, {\"fragment_genes\": 163, \"genes\": 816, \"seed\": 20261108}, {\"fragment_genes\": 170, \"genes\": 852, \"seed\": 20261109}, {\"fragment_genes\": 164, \"genes\": 823, \"seed\": 20261110}], \"fragment_genes\": 1636, \"genes\": 8200, \"new_inference\": false, \"status\": \"independent_fragment_input_readback_passed\"}\n"
+  },
+  "scheduler_submission": {
+    "chunk_id": "2ce192",
+    "wall_time_seconds": 0.00001316,
+    "exit_code": 0,
+    "original_token_count": 2,
+    "output": "24087\n"
+  },
+  "terminal_scheduler": {
+    "job_id": 24087,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:07:29",
+    "allocated_cpus": 16,
+    "requested_memory": "16G",
+    "accounting": "JobIDRaw|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS\n24087|COMPLETED|0:0|00:07:29|16|16G|\n24087.batch|COMPLETED|0:0|00:07:29|16||\n"
+  },
+  "assembly": {
+    "initial": {
+      "chunk_id": "11491b",
+      "wall_time_seconds": 1.001214685,
+      "session_id": 67451,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "5fa5b0",
+      "wall_time_seconds": 0.000010707,
+      "exit_code": 0,
+      "original_token_count": 27,
+      "output": "{\"status\": \"complete_with_explicit_outcomes\", \"records\": 80, \"fragment_successes\": 40, \"comparisons\": 15}\n"
+    }
+  },
+  "independent_result_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -B -c 'import csv,hashlib,itertools,json,math,pathlib,sys\nfrom fractions import Fraction\nfrom Bio import SeqIO\nimport numpy as np\nsys.path.insert(0,str(pathlib.Path.cwd()))\nfrom benchmark_tools.orthofinder_mcl_to_orthogroups import iter_mcl_clusters,load_sequence_ids\nroot=pathlib.Path.cwd()\ndirectory=root/\"benchmark_tools/results/controlled_fragment_results_20261009_v1\"\nraw=(directory/\"report.json\").read_bytes()\nassert hashlib.sha256(raw).hexdigest()==\"b1480e8eb2ace2aed743f5fc4e515e27ac4ba68b48e644b33989eda3cf8a7ab7\"\nreport=json.loads(raw)\npanel=json.loads(pathlib.Path(report[\"manifest\"][\"absolute_path\"]).read_text())\nparent=json.loads((root/\"benchmark_tools/results/publication_variable_native_methods_20260916.json\").read_text())\nold={d[\"seed\"]:d for d in parent[\"datasets\"] if d[\"condition\"]==\"baseline\"}\nmethods=(\"orthohmm_high_sensitivity\",\"orthohmm_satellite_v2\",\"orthofinder_full\",\"orthofinder_sequence_only\")\ndef verify(item):\n    p=pathlib.Path(item[\"absolute_path\"])\n    assert p.stat().st_size==item[\"bytes\"] and hashlib.sha256(p.read_bytes()).hexdigest()==item[\"sha256\"]\ndef group_pairs(groups,owners):\n    seen=set()\n    pairs=set()\n    for group in groups:\n        assert group and all(g in owners and g not in seen for g in group) and len(set(group))==len(group)\n        seen.update(group)\n        pairs.update(tuple(sorted((a,b))) for a,b in itertools.combinations(group,2) if owners[a]!=owners[b])\n    return pairs\ndef predictions(method,config,owners,artifacts):\n    for item in artifacts: verify(item)\n    if method==methods[0]:\n        groups=[]\n        for line in pathlib.Path(artifacts[0][\"absolute_path\"]).read_text().splitlines():\n            tokens=line.split()\n            assert tokens and tokens[0].endswith(\":\")\n            groups.append(tokens[1:])\n        return group_pairs(groups,owners)\n    if method==methods[1]:\n        with pathlib.Path(artifacts[0][\"absolute_path\"]).open() as f:\n            rows=list(csv.DictReader(f,delimiter=\"\\t\"))\n        result=set()\n        for row in rows:\n            a,b=row[\"gene_a\"],row[\"gene_b\"]\n            assert owners[a]==row[\"species_a\"] and owners[b]==row[\"species_b\"] and owners[a]!=owners[b]\n            result.add(tuple(sorted((a,b))))\n        return result\n    if method==methods[2]:\n        orientations={}\n        for item in artifacts:\n            with pathlib.Path(item[\"absolute_path\"]).open() as f:\n                reader=csv.reader(f,delimiter=\"\\t\")\n                header=next(reader)\n                assert len(header)==3 and header[0]==\"Orthogroup\"\n                a,b=header[1:]\n                assert (a,b) not in orientations\n                pairs=set()\n                for row in reader:\n                    left=[x.strip() for x in row[1].split(\",\")]\n                    right=[x.strip() for x in row[2].split(\",\")]\n                    assert all(owners[g]==a for g in left) and all(owners[g]==b for g in right)\n                    pairs.update(tuple(sorted(p)) for p in itertools.product(left,right))\n                orientations[a,b]=pairs\n        species=set(owners.values())\n        assert set(orientations)==set(itertools.permutations(species,2))\n        assert all(pairs==orientations[b,a] for (a,b),pairs in orientations.items())\n        return set.union(*orientations.values())\n    mapping_path=next(pathlib.Path(i[\"absolute_path\"]) for i in artifacts if pathlib.Path(i[\"absolute_path\"]).name==\"SequenceIDs.txt\")\n    matrix=next(pathlib.Path(i[\"absolute_path\"]) for i in artifacts if \"id_pairs\" in pathlib.Path(i[\"absolute_path\"]).name)\n    mapping=load_sequence_ids(mapping_path)\n    assert set(mapping.values())==set(owners) and len(mapping)==len(owners)\n    return group_pairs([[mapping[g] for g in cluster] for cluster in iter_mcl_clusters(matrix)],owners)\ndef counts(p,t,owners):\n    assert all(a in owners and b in owners and a!=b and owners[a]!=owners[b] for a,b in p|t)\n    tp=len(p&t); fp=len(p-t); fn=len(t-p)\n    covered={g for pair in p for g in pair}\n    return dict(tp=tp,fp=fp,fn=fn,predicted_pairs=len(p),eligible_true_pairs=len(t),\n        f1=float(Fraction(2*tp,2*tp+fp+fn)) if 2*tp+fp+fn else None,\n        precision=float(Fraction(tp,len(p))) if p else None,recall=float(Fraction(tp,len(t))) if t else None,\n        input_genes=len(owners),genes_in_predicted_pairs=len(covered),pair_endpoint_coverage=float(Fraction(len(covered),len(owners))))\nindexed={(r[\"arm\"],r[\"seed\"],r[\"method\"]):r for r in report[\"records\"]}\nassert len(indexed)==80 and all(r[\"status\"]==\"complete\" for r in indexed.values())\nrecomputed={}\nfor d in panel[\"datasets\"]:\n    verify(d[\"coordinates\"])\n    flags={r[\"gene\"]:r[\"fragment\"] for r in json.loads(pathlib.Path(d[\"coordinates\"][\"absolute_path\"]).read_text())}\n    owners={s.id:p.stem for p in pathlib.Path(d[\"input\"]).glob(\"*.fasta\") for s in SeqIO.parse(p,\"fasta\")}\n    t={tuple(sorted(p)) for p in json.loads(pathlib.Path(d[\"truth\"]).read_text())[\"ortholog_pairs\"]}\n    for arm in (\"baseline\",\"fragment\"):\n        config=old[d[\"seed\"]] if arm==\"baseline\" else d\n        binding={r[\"method\"]:r for r in d[\"baseline_admission\"]}\n        for m in methods:\n            r=indexed[arm,d[\"seed\"],m]\n            artifacts=binding[m][\"predictions\"] if arm==\"baseline\" else r[\"prediction_artifacts\"]\n            p=predictions(m,config[\"methods\"][m],owners,artifacts)\n            c=counts(p,t,owners)\n            assert all(r[\"score\"][k]==v for k,v in c.items())\n            for stratum in r[\"strata\"]:\n                n=stratum[\"fragment_endpoints\"]\n                pc={pair for pair in p if sum(flags[g] for g in pair)==n}\n                tc={pair for pair in t if sum(flags[g] for g in pair)==n}\n                cs=counts(pc,tc,owners)\n                assert all(stratum[\"score\"][k]==v for k,v in cs.items())\n            recomputed[arm,d[\"seed\"],m]=c\nfor r in report[\"metric_means\"]:\n    for metric in (\"f1\",\"precision\",\"recall\"):\n        values=[recomputed[r[\"arm\"],seed,r[\"method\"]][metric] for seed in range(20261101,20261111)]\n        assert abs(sum(values)/10-r[\"metrics\"][metric][\"mean\"])<1e-15\nplanned=[(\"fragment\",m,\"baseline\",m) for m in methods[:3]]+[(\"fragment\",m,\"fragment\",methods[2]) for m in methods[:2]]\nassert [(r[\"target_arm\"],r[\"target_method\"],r[\"reference_arm\"],r[\"reference_method\"],r[\"metric\"]) for r in report[\"comparisons\"]]==[(*p,m) for p in planned for m in (\"f1\",\"precision\",\"recall\")]\nfor r in report[\"comparisons\"]:\n    assert r[\"eligible_seeds\"]==list(range(20261101,20261111)) and r[\"excluded_seeds\"]==[]\n    values=np.array([recomputed[r[\"target_arm\"],s,r[\"target_method\"]][r[\"metric\"]]-recomputed[r[\"reference_arm\"],s,r[\"reference_method\"]][r[\"metric\"]] for s in r[\"eligible_seeds\"]])\n    assert np.max(np.abs(values-np.array(r[\"paired_differences\"])))<1e-15 and abs(float(values.mean())-r[\"estimate\"])<1e-15\n    rng=np.random.Generator(np.random.PCG64(20261011))\n    draws=rng.integers(0,10,(20000,10))\n    distribution=np.sort(values[draws].mean(axis=1))\n    for name,probs in ((\"nominal_interval\",(.025,.975)),(\"adjusted_interval\",(.05/30,1-.05/30))):\n        expected=[]\n        for prob in probs:\n            location=(len(distribution)-1)*prob\n            left=math.floor(location); right=math.ceil(location)\n            expected.append(float(distribution[left]+(distribution[right]-distribution[left])*(location-left)))\n        assert max(abs(a-b) for a,b in zip(expected,r[name]))<1e-15\nfor filename,stratified in ((\"scores.tsv\",False),(\"strata.tsv\",True)):\n    with (directory/filename).open() as f: rows=list(csv.DictReader(f,delimiter=\"\\t\"))\n    assert len(rows)==(240 if stratified else 80)\n    for row in rows:\n        source=indexed[row[\"arm\"],int(row[\"seed\"]),row[\"method\"]]\n        score=source[\"strata\"][int(row[\"fragment_endpoints\"])][\"score\"] if stratified else source[\"score\"]\n        for key in (\"tp\",\"fp\",\"fn\",\"f1\",\"precision\",\"recall\",\"predicted_pairs\",\"eligible_true_pairs\",\"pair_endpoint_coverage\"):\n            assert (row[key]==\"NA\" and score[key] is None) or (score[key] is not None and abs(float(row[key])-score[key])<1e-15)\nwith (directory/\"comparisons.tsv\").open() as f: rows=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(rows)==15\nfor row,source in zip(rows,report[\"comparisons\"]):\n    assert float(row[\"estimate\"])==source[\"estimate\"] and int(row[\"paired_seeds\"])==10\n    for prefix in (\"nominal\",\"adjusted\"):\n        assert float(row[prefix+\"_low\"])==source[prefix+\"_interval\"][0] and float(row[prefix+\"_high\"])==source[prefix+\"_interval\"][1]\nprint(json.dumps(dict(status=\"independent_counts_intervals_and_tables_verified\",score_records=80,stratum_records=240,planned_comparisons=15,bootstrap_replicates=20000,reader_scope=\"Independent native pair/group expansion and Fraction counts; shared audited MCL syntax parser only; independent sorted linear interval interpolation\",report_sha256=hashlib.sha256(raw).hexdigest()),sort_keys=True))'",
+    "tool_result": {
+      "chunk_id": "553e5f",
+      "wall_time_seconds": 1.001342942,
+      "session_id": 82070,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "a08d95",
+      "wall_time_seconds": 0.000011728,
+      "exit_code": 0,
+      "original_token_count": 105,
+      "output": "{\"bootstrap_replicates\": 20000, \"planned_comparisons\": 15, \"reader_scope\": \"Independent native pair/group expansion and Fraction counts; shared audited MCL syntax parser only; independent sorted linear interval interpolation\", \"report_sha256\": \"b1480e8eb2ace2aed743f5fc4e515e27ac4ba68b48e644b33989eda3cf8a7ab7\", \"score_records\": 80, \"status\": \"independent_counts_intervals_and_tables_verified\", \"stratum_records\": 240}\n"
+    }
+  },
+  "outputs": {
+    "report": "benchmark_tools/results/controlled_fragment_results_20261009_v1/report.json",
+    "sha256": "b1480e8eb2ace2aed743f5fc4e515e27ac4ba68b48e644b33989eda3cf8a7ab7",
+    "score_records": 80,
+    "stratum_records": 240,
+    "comparisons": 15,
+    "new_inference_processes": 30,
+    "admitted_fragment_method_and_checkpoint_outcomes": 40
+  },
+  "automatic_inference_retries": 0,
+  "publication_ready": false,
+  "limitations": [
+    "Shared-host elapsed time includes sequential inference and preflights, not isolated performance.",
+    "Unchanged scientific versions do not establish historical full-inventory or output equivalence.",
+    "This diagnostic does not complete the full seven-part publication goal."
+  ]
+}

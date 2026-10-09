@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Fragment Test Completed And Independently Verified (2026-10-09)
+
+Concrete progress: job24087 terminalCOMPLETED/0:0/7min29s, all30 native runs
+successful. Tested terminal consumer2125e688 pushed before its one assembly,
+EXIT0:80baseline/fragment score rows,40admitted fragment method/checkpoint
+outcomes,240stratum rows and15whole-seed comparisons; no failure or retry.
+Report benchmark_tools/results/controlled_fragment_results_20261009_v1/report.json
+SHAb1480e8eb2ace2aed743f5fc4e515e27ac4ba68b48e644b33989eda3cf8a7ab7.
+Separate independent native pair/group expansion and Fraction counters plus
+sorted linear bootstrap interpolation reproduce every score/stratum/mean/
+comparison and all TSV values, EXIT0. Shared old MCL syntax parser only;
+no new producer/transform/scorer imports. Actual command/evidence retained in
+controlled_fragment_execution_20261009_v1.json; scientific result addendum
+CONTROLLED_FRAGMENT_RESULT_20261009.md. All controls reused, parameters frozen.
+
+Ten-seed fragment meanF1: high96.9773%,satellite99.3361%,fullOF99.9080%,
+checkpoint97.4260%. High-full difference-2.9307pp/adjusted[-5.6825,-1.0863];
+satellite-full-.5719pp/adjusted[-1.9815,-.0087]. All3native fragment-baseline
+F1 decrease intervals includezero; not equivalence or absence of sensitivity.
+All20native OrthoHMM metrics built98-100expansionprofiles and addedzeroedges;
+no profile-expansion benefit established, initialsearchHMMs stillON. Strata
+include untruncated-pair changes; causal pipeline explanation still requires
+tracing, not inferred from these count differences. Synthetic/development-
+exposed and changed-full-inventory limits remain explicit.
+
+Next integrate this complete fragment result into the latest frozen manuscript
+native_qfo_four_cell_strata_manuscript_20261009_v1.md (SHA60af8bf7...), using
+the actual report and independent execution receipt. Generate new Methods/
+Results/limits with all4methods,15comparisons and zero/one/two endpoint counts,
+preserving the frozen parent body. Test before generation, independently
+read back, then render using the retained checked bibliography/workflow and
+inspect only changed pages. Do NOT repeat inference, original baselines,
+bootstrap/score production, old rendering tasks or archive/prompt campaigns.
+Representative fragment search/group/reconciliation tracing remains part of
+original4.3 after integration; natural fragment biology is not fulfilled by
+this synthetic condition. Full goal ACTIVE; no live job/session or host gate
+is awaited. Keep unrelated samples/browser profiles/archive untouched.
+
 ## Fragment Job Running; Terminal Consumer Tested (2026-10-09)
 
 Prepared scientific manifest/result milestone d24ce871 pushed. Submitted

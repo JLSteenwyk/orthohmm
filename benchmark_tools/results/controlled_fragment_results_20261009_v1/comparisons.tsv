@@ -1,0 +1,16 @@
+target_arm	target_method	reference_arm	reference_method	metric	status	paired_seeds	estimate	nominal_low	nominal_high	adjusted_low	adjusted_high
+fragment	orthohmm_high_sensitivity	baseline	orthohmm_high_sensitivity	f1	conditional_approximation	10	-0.0009993838838697644	-0.0027586118061645793	0.0	-0.0038777656127567004	0.0
+fragment	orthohmm_high_sensitivity	baseline	orthohmm_high_sensitivity	precision	conditional_approximation	10	-0.00018822309985426776	-0.0005390842851547894	0.0	-0.0007400998922130642	0.0
+fragment	orthohmm_high_sensitivity	baseline	orthohmm_high_sensitivity	recall	conditional_approximation	10	-0.0018912541816204942	-0.005195946845202781	0.0	-0.007326108876652626	0.0
+fragment	orthohmm_satellite_v2	baseline	orthohmm_satellite_v2	f1	conditional_approximation	10	-0.001223293197818076	-0.003501740494318084	0.00037675694428351836	-0.004835057541299881	0.0008926036567997192
+fragment	orthohmm_satellite_v2	baseline	orthohmm_satellite_v2	precision	conditional_approximation	10	-0.00022222107771066035	-0.0008355125177796463	0.00022358715555683694	-0.0011258091775041446	0.00037618044439883256
+fragment	orthohmm_satellite_v2	baseline	orthohmm_satellite_v2	recall	conditional_approximation	10	-0.002115586138956305	-0.006016749899810714	0.000815383316936602	-0.008370560451488828	0.0018048292272268452
+fragment	orthofinder_full	baseline	orthofinder_full	f1	conditional_approximation	10	-0.0003439612949235449	-0.0008934755802723626	0.0	-0.0012374368751959075	0.0
+fragment	orthofinder_full	baseline	orthofinder_full	precision	conditional_approximation	10	-0.00013880363979731358	-0.00034681143184376315	0.0	-0.0004168062546909823	0.0
+fragment	orthofinder_full	baseline	orthofinder_full	recall	conditional_approximation	10	-0.0005470198519078373	-0.0015026512512252399	0.0	-0.002049671103133077	0.0
+fragment	orthohmm_high_sensitivity	fragment	orthofinder_full	f1	conditional_approximation	10	-0.02930680821018732	-0.04688100610150851	-0.015313935509563925	-0.05682473327489405	-0.010862700440102345
+fragment	orthohmm_high_sensitivity	fragment	orthofinder_full	precision	conditional_approximation	10	-0.0502169478174466	-0.07210625615093039	-0.03015781712979577	-0.08220829172523836	-0.021725763812476515
+fragment	orthohmm_high_sensitivity	fragment	orthofinder_full	recall	conditional_approximation	10	-0.0070509427235664005	-0.022931456786283565	0.0015706308886782928	-0.030667547918043603	0.0021861898744641286
+fragment	orthohmm_satellite_v2	fragment	orthofinder_full	f1	conditional_approximation	10	-0.005718750985499765	-0.013924029869964216	-0.0004037541918092	-0.01981457367997708	-8.71503553009814e-05
+fragment	orthohmm_satellite_v2	fragment	orthofinder_full	precision	conditional_approximation	10	-0.0003162255753698884	-0.00120642381368119	0.00018828057379952635	-0.0016548760940895857	0.0002362713322784815
+fragment	orthohmm_satellite_v2	fragment	orthofinder_full	recall	conditional_approximation	10	-0.010846019506495408	-0.02598065820009656	-0.0009056830548574067	-0.0366216288583554	-0.00024351127617033264
