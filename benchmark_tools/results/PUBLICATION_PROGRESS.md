@@ -1,5 +1,30 @@
 # Publication Progress
 
+## rc6 Selector Implementation (2026-10-09)
+
+Previous turn made progress by reconciling and committing/pushing the actual
+handoff at a780d8a1; it was not a live-job wait or whole-goal completion.
+Current task: implement/test prepare_publication_package_rc6.py and focused
+tests, with PUBLICATION_PACKAGE_RC6_20261009.md as the new outer guide.
+The selector inherits all329 indexed rc5 payloads from the immutable package,
+preserves its guide/selection/reader/index under history/rc5, and selects the
+new22-page terminal-failure direct review plus separate manual/content/citation
+and execution evidence. Generic bundle_publication_package.py remains unchanged.
+No inference/retry/scoring/admission/default change or readiness claim.
+
+Sources/guide/tests passed128 focused and adjacent tests in3.70s using the
+retained Python3.12 environment. Tests cover immutable inheritance despite
+original source drift, unsafe/changed inventories, separate component scope,
+fresh-output refusal, and fixture build/archive/restore with unchanged kernels.
+Actual selection tests confirm505 selected payloads,330 parent-derived files
+including its old index,147 terminal-direct files and unchanged scientific
+revision. This is a temporary test selection, not production execution.
+Next commit/push the prospective sources, then execute production selection,
+build/archive/anchored restore and actual copied verification at fresh paths.
+Retain immutable rc5/direct components, historical reporting and unrelated
+dirty samples. Full goal ACTIVE; the seven-requirement audit follows this
+integration and must identify genuinely unfinished scientific work.
+
 ## Authoritative Continuation Handoff (2026-10-09)
 
 User requested an audit of unexpected goal stops. The goal API reports ACTIVE;
