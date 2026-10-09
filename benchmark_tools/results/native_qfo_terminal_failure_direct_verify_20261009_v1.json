@@ -1,0 +1,48 @@
+{
+  "actual_exec": {
+    "chunk_id": "c7b999",
+    "exit_code": 0,
+    "original_token_count": 188,
+    "output": "{\n  \"direct_targets\": 110,\n  \"entrypoints\": {\n    \"html\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_review.html\",\n    \"markdown\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md\",\n    \"pdf\": \"benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_print/document.pdf\"\n  },\n  \"files\": 146,\n  \"inference_reproduced\": false,\n  \"local_html_occurrences\": 114,\n  \"manifest\": {\n    \"bytes\": 53744,\n    \"sha256\": \"506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396\"\n  },\n  \"page_count\": 22,\n  \"payload_bytes\": 45340378,\n  \"publication_ready\": false,\n  \"redistribution_clearance\": false,\n  \"status\": \"publication_direct_review_verified\",\n  \"transitive_evidence_included\": false\n}\n",
+    "wall_time_seconds": 0.059912047
+  },
+  "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B benchmark_tools/bundle_publication_review.py verify . --manifest-sha256 506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396",
+  "content_readback_in_component": false,
+  "copied_code_executed": true,
+  "copied_verifier_sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999",
+  "cwd": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/native_qfo_terminal_failure_direct_review_restore_20261009_v1",
+  "inference_reproduced": false,
+  "limitations": [
+    "Actual copied standard-library verifier checked anchored direct payloads; not a new scientific admission or full runtime restoration.",
+    "Separate manual/content receipts remain repository evidence; archived inventory does not contain them.",
+    "No transitive raw closure, rights clearance, cross-host validation or archival DOI is claimed."
+  ],
+  "manual_visual_receipt_in_component": false,
+  "outside_checkout_restoration_proved": true,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "result": {
+    "direct_targets": 110,
+    "entrypoints": {
+      "html": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_review.html",
+      "markdown": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md",
+      "pdf": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_print/document.pdf"
+    },
+    "files": 146,
+    "inference_reproduced": false,
+    "local_html_occurrences": 114,
+    "manifest": {
+      "bytes": 53744,
+      "sha256": "506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396"
+    },
+    "page_count": 22,
+    "payload_bytes": 45340378,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  },
+  "schema": "native_qfo_terminal_failure_direct_verification_execution_v1",
+  "source_revision": "b5a1237e4bca81df74cc6d9754ee377fca0a552e",
+  "transitive_evidence_included": false
+}

@@ -20,16 +20,40 @@ metadata and refs to component reviews. This is not a raw sequence dataset,
 expanded process-stream export or the8.5GB host replay. Preserve exact bytes
 and commit this specific required metadata payload, not the other work files.
 
-Next: commit/push that manifest plus this checkpoint; build one fresh direct
-component from committed current main/stage paths, externally anchor its index
-and tar, restore to a fresh directory and actually execute the byte-checked
-copied verifier. Keep direct-only scope, external provenance/rights limitations,
-and no full-study/runtime/deposition claim. Do not rerender/reprint unchanged
-outputs. Browser_profile/unrelated sample changes remain unstaged.
-Only current ledger refresh uncommitted before metadata staging; no foreground
-session/live review wait remains. Generic component will contain its selected
-direct render/print/bounds evidence; separate manual/content receipts remain
-repository evidence unless explicitly included by its actual inventory.
+Manifest/checkpoint committed/pushedb5a1237e; exact bytes unchanged. Existing
+generic builder executed once with explicit current main/stage paths, EXIT0:
+146 payloads/45340378bytes,110 targets/114 local HTML occurrences,22-page PDF.
+Fresh component benchmarks/work/native_qfo_terminal_failure_direct_review_20261009_v1.
+External index53744bytes SHA256
+506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396.
+Created one regular-file archive147members/12023636bytes SHA256
+6fcbf8132812814b9a1a8a91c859b43cfb1dee5bf85f6981dcc4fdd5ffb65c0d.
+Anchored restore EXIT0 into fresh /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/
+native_qfo_terminal_failure_direct_review_restore_20261009_v1 outside checkout.
+Copied verifier SHA4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999
+matched before actual-I-S-B execution EXIT0 in0.0599s, status
+publication_direct_review_verified with same146payloads/22pages. This is
+reporting portability only, not transitive raw/runtime restoration/rights/DOI.
+Manual/content/citation receipts remain separate repository evidence, not
+silently inserted into its strict direct inventory. Two external tool
+provenance entries excluded explicitly. No rerender/reprint/scoring/retry.
+
+Current uncommitted files: archive, external index, archive/restore/copied verify
+receipts, NATIVE_QFO_TERMINAL_FAILURE_COMPONENT_20261009.md and current ledger
+refresh. Next commit/push this validated reporting milestone, then integrate
+the dated source/component/manual receipts into the versioned study candidate
+and perform the full seven-requirement evidence audit. Existing rc5 selector
+and generic bundle_publication_package.py inspected: outer selected-file/anchor
+kernel is reusable; rc5 selector is frozen to older rc4/41-page content and
+must remain unchanged. A truthful prospective rc6 selection must inherit its
+immutable parent package, not mutable historical original paths; preserve all
+old candidate payloads and do not claim full-study runtime/deposition from
+outer byte verification. First inspect actual rc5 index/selection anchors and
+existing rc6 paths before writing or submitting anything. Full goal ACTIVE.
+Browser_profile/unrelated sample changes remain unstaged. No foreground
+session/live review wait remains. This turn advanced actual terminal review,
+reporting,22-page render/content/visual review and copied archive verification;
+none of these milestones completes the full publication goal.
 
 ## Terminal-Failure Manuscript Render And Review (2026-10-09)
 

@@ -1,0 +1,51 @@
+{
+  "archive": {
+    "bytes": 12023636,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_qfo_terminal_failure_direct_review_20261009_v1.tar.gz",
+    "sha256": "6fcbf8132812814b9a1a8a91c859b43cfb1dee5bf85f6981dcc4fdd5ffb65c0d"
+  },
+  "builder": {
+    "bytes": 16368,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/bundle_publication_review.py",
+    "sha256": "4b9646bf7fd88c750bf9df4e7fad22c4fac6d5f9810cf211a639c15009a07999"
+  },
+  "content_readback_in_component": false,
+  "index": {
+    "bytes": 53744,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/native_qfo_terminal_failure_direct_review_20261009_v1/REVIEW_INDEX.json",
+    "sha256": "506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396"
+  },
+  "limitations": [
+    "Direct committed reporting payloads only; no transitive raw evidence/runtime.",
+    "Separate manual/content receipts remain repository evidence, not archived direct payloads.",
+    "Anchored archive restoration and copied verifier execution remain separate unexecuted steps at this checkpoint."
+  ],
+  "manual_visual_receipt_in_component": false,
+  "members": 147,
+  "publication_ready": false,
+  "redistribution_clearance": false,
+  "schema": "native_qfo_terminal_failure_direct_archive_v1",
+  "source_revision": "b5a1237e4bca81df74cc6d9754ee377fca0a552e",
+  "transitive_evidence_included": false,
+  "verified": {
+    "direct_targets": 110,
+    "entrypoints": {
+      "html": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_review.html",
+      "markdown": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_manuscript.md",
+      "pdf": "benchmark_tools/results/native_qfo_terminal_failures_20261009_v1_print/document.pdf"
+    },
+    "files": 146,
+    "inference_reproduced": false,
+    "local_html_occurrences": 114,
+    "manifest": {
+      "bytes": 53744,
+      "sha256": "506c2a0b64d95282debb4eeae5b111fcaae39dbf8f5ebeb5e96f0319a227e396"
+    },
+    "page_count": 22,
+    "payload_bytes": 45340378,
+    "publication_ready": false,
+    "redistribution_clearance": false,
+    "status": "publication_direct_review_verified",
+    "transitive_evidence_included": false
+  }
+}
