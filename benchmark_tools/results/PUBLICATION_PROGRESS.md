@@ -1,5 +1,54 @@
 # Publication Progress
 
+## Four-Cell Consumer And Rational Reader Tested (2026-10-09)
+
+Prepared exporter/independent reader/tests under the committed four-cell
+protocol. No actual profile subgroup projection has executed. Tests use
+invented labels/predictions/bins with the same universe sizes; real prepare
+checks only existing family/count/admission bindings and known macro points.
+Initial new tests:2failed/34passed. One fixture shared admission dicts across
+inputs; deep-copy fixed that synthetic alias. Independent Markdown matching
+could hide a changed repeated all-family row through another suite's duplicate;
+corrected the prospective reader to compare all23human rows in exact order.
+Then100focused/adjacent tests passed. Added fully bound synthetic end-to-end
+readback and input/output/report-SHA tamper tests; final104passed in1.34s.
+Frozen helper/protocol/source bytes unchanged; no failed scientific attempt
+or automatic retry resulted from these pre-production unit defects.
+
+Current source milestone: commit/push export_native_qfo_four_cell_strata.py,
+readback_native_qfo_four_cell_strata.py, tests/unit/test_native_qfo_four_cell_strata.py
+and this ledger. Then execute one real stdlib-isolated Python3.10 export at
+fresh benchmark_tools/results/native_qfo_four_cell_strata_20261009_v1. Use
+actual returned reportSHA for one fresh independent Fractionreader output
+native_qfo_four_cell_strata_readback_20261009_v1.json. Retain command/code/tool
+receipts; verify72/92/69rows,69/46prior preservation and exact human/TSV tables.
+After validation integrate every profile-bin effect and limits, with no cutoff,
+new uncertainty/default or timing claim. Full goal ACTIVE; no livehandle,
+quiet host, DGX or routineapproval awaited. Preserve unrelated dirtysamples
+and local151MBarchive; stage only this source milestone.
+
+## Four-Cell Fixed-Stratum Consumer Implementation (2026-10-09)
+
+Read current goal, newest handoff and actual source/history; previous turn was
+progress (comparator science/render and frozen extension pushed), not a wait.
+No new four-cell exporter/reader/result exists. Current implementation files:
+export_native_qfo_four_cell_strata.py, readback_native_qfo_four_cell_strata.py
+and focused unit tests. Reuse unchanged e6d0980f statistics/aggregate and
+explicitly convert old distance F1_pp/PPV_pp/TPR_pp for preservation checks.
+Validate the seven protocol-bound artifacts, source/report/reader/admission
+bindings and canonical count universe without raw parsing. Synthetic subgroup
+fixtures only until tested source is committed/pushed; real prepare/count
+binding checks are allowed but no actual subgroup projection before commit.
+
+Implement truthful four-cell schema,23unchanged bins,72family/92score/69difference
+rows, preserving69old scores/46old differences. Independent reader uses exact
+Fraction arithmetic and imports no exporter/kernel. Test empty bins, priors,
+macro-not-pooled F1, identities/memberships/units, tampering and no overwrite.
+Next run focused/adjacent tests, fix prospective defects, commit/push source,
+then execute once at fresh native_qfo_four_cell_strata_20261009_v1 and a fresh
+independent readback. Do not rerun existing science/features/readers or change
+the frozen protocol. Full goal ACTIVE; no live handle/host/permission wait.
+
 ## Four-Cell Stratum Implementation Handoff (2026-10-09)
 
 Comparator integration outputs/review and four-cell protocol are now committed
