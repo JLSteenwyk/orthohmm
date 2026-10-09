@@ -27,8 +27,10 @@ explicit successful/defined pairing and exclusions. Development-exposed
 synthetic observation test, NOTnatural fragment truth or independent biology.
 No transformed inputs, fragment inference or fragment scores exist yet.
 
-Next commit/push this prospective scientific protocol/ledger, then implement
-and test the fragment transform plus baseline binding consumer. Inspect
+Protocol and ledger committed and pushed in41a1832b; verified HEAD and
+origin/main both at that commit during the continuation audit. Do NOT repeat
+that completed commit/push action. Next implement and test the fragment
+transform plus baseline binding consumer. Inspect
 run_simulation_methods.py, simulation_method_outputs.py, simulation_conditions.py
 and validate_simulation_outputs.py for reusable validated launch/conversion/
 score checks; old70dataset verifier cannot simply accept a newcondition by
@@ -38,10 +40,24 @@ bindings before any new launch. Use fresh derived paths/identities only,
 tested truthful prospective adapter and explicit scientific scope. No restart
 of completed baselines, automatic failures retry, prompt/archive campaign,
 DGX/quiet-host gate or request for another routine authorization.
-Full goal ACTIVE; next automatic continuation is this concrete implementation.
-No live job/session is awaited; keep unrelated samples/browser profiles/archive
-untouched. Newprotocol milestone not yet committed; stage only its exact path
-and ledger, then resume implementation rather than resuming an old checkpoint.
+Full goal ACTIVE; next continuation is this concrete implementation, not a
+request for another routine approval or resume. No live job/session is awaited;
+keep unrelated samples/browser profiles/archive untouched. The protocol is
+committed; transformation, launch adapter and scorer remain unimplemented.
+First command from the repository root:
+`sed -n '1,220p' benchmark_tools/run_simulation_methods.py`
+Then read the other three reusable consumers listed above and implement the
+prospective adapter under the frozen protocol. Do not launch new inference
+before its affected input/runtime/admission checks and focused tests pass.
+
+Continuation audit: get_goal reports ACTIVE and references the attachment
+named in PUBLICATION_GOAL_CURRENT.txt. The attachment and repository prompt
+are byte-identical, SHA256
+d17f5d5ef244c7cdd31fc7256b4240573b7597cf54cbdd1b7708ab785139ee48.
+Both already authorize shared-Threadripper execution and continued work after
+milestones or recoverable failures; no further prompt rewrite is needed.
+This repairs the stale handoff, not a demonstrated platform interruption.
+No automatic-continuation scheduling guarantee is asserted.
 
 ## Profile-Stratum Manuscript And Scoped Print Recovery Verified (2026-10-09)
 
