@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Comparator Manuscript/Figure Integration Tested (2026-10-09)
+
+Comparator result/table/executed independent readback/addendum committed and
+pushedaf5c1deb. Prepared separately named
+integrate_native_qfo_comparator_sensitivity.py and focused tests. The generator
+consumes exactly the committed report, executed readback and unchanged terminal
+manuscript; validates all48planned/24estimated endpoints and retains24missing
+rows. Six panels compare F1/PPV/TPR against fullOrthoFinder and its sequence-only
+checkpoint. Figure uses percentagepoints; tables retain raw0to1units. Distinct
+missing reasons stay visible. Methods and Results insertions are machine-derived
+and stripping just those insertions restores the exact parent body.
+
+Focused/adjacent suite EXIT0:69passed in4.03s, including real temporary figure
+generation and 48-row/missing-status/body-preservation checks. Production
+generation not yet executed. Next commit/push source/tests/ledger; then run once
+with sanitized scientificPython at fresh
+benchmark_tools/results/native_qfo_comparator_integration_20261009_v1 and
+benchmark_tools/results/native_qfo_comparator_manuscript_20261009_v1.md.
+Independently read back all48figure/table rows and 8manuscriptF1rows, inspect
+the actual PNG/decodedPDF, and reuse the existing checked manuscript renderer
+with the parent-bound19-entry bibliography. No bootstrap/inference/scoring
+rerun, frozen manuscript edit or new archive candidate. Full goal ACTIVE;
+no live handle/host/permission wait. Source/test milestone pending commit,
+not a user-resume boundary; preserve untracked archive/unrelated samples.
+
 ## Native Comparator Intervals Executed And Independently Read Back (2026-10-09)
 
 Previous turn made actual progress: source/tests and actionable handoff were
