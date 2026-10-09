@@ -1,5 +1,147 @@
 # Publication Progress
 
+## Resumed Access; Native12 Terminal Segmentation Fault (2026-10-09)
+
+User resumed the full goal; current permission context permits commands again.
+Previous goal turn was no progress at a sustained executor-access impasse,
+not a verified benchmark wait. Actual linked prompt and this ledger are now
+readable; earlier failed ledger patch did not persist. No platform repair was
+performed or inferred. Fresh accounting:24036FAILED1:0,18:36:30,
+2026-10-08T12:26:28 to2026-10-09T07:02:58; step24036.0COMPLETED0:0,
+17:55:40. This observer-step success is NOT native inference success.
+measurement/done.json records native exit_code-11, timed_out false; native log
+ends at clustering and native_execution.json remains native_factorial_running.
+Session result.json reports factorial_attempt_failed_retained and sampled
+environment evidence valid. Native result is not admissible for conversion,
+scoring or accuracy reporting. Root cause of SIGSEGV is not yet established.
+
+Current unfinished action: execute the existing prospective terminal reviewer
+once to retain full accounting/runtime/environment/resource failure review.
+Request/reviewer/batch hashes match their exact frozen bindings; no review
+destination or previous review job existed. Available memory809997948KiB,
+ordinary background workloads retained. ONE held review submission24080:
+ohmm_native12_review,2CPUs/128GiB/6h, no requeue, owned envelope validated.
+Generated held provenance native12_composed_review_held_24080_20261009_v1.json
+SHA2562f7b12e76340171ac9a8954acb8c915802660bcfe7f4331589db0d0e21b01b5f.
+Next: commit/push this receipt and ledger, then validate SAME held envelope
+again and release24080 once with retained release provenance. Sources unchanged.
+Then diagnose/integrate the verified missing final outcome without automatic
+inference retry or partial-score admission. All final five-cell prepared
+reporting generators remain unexecuted and cannot be fed fabricated success.
+24038 retains terminal scoringOOM. Unrelated jobs/sample changes untouched.
+
+Full goal ACTIVE; next automatic continuation: reconcile this review task's
+actual held/release/terminal handles and outputs, not the old live24036 wait.
+Held receipt and ledger currently uncommitted; no release yet. All older source
+milestones remain committed/pushed. Preserve unrelated dirty sample outputs.
+
+## Native12 Verified Wait (2026-10-08)
+
+Latest continuation: previous turn classified as verified wait. Re-read the
+actual linked prompt and this TOP, confirmed SAME24036RUNNING02:41:52/
+native24036.0RUNNING02:38:29/search16.67%. Two actual bounded waits:
+300.0080s then same-job post-check RUNNING02:47:04/native02:43:41/search17.08%;
+300.0082s then SAME24036RUNNING02:52:14/native24036.0RUNNING02:48:51,
+64slots/128G; initial search17.50%. No terminal outcome or new independent executable
+work identified. The next automatic action remains the exact checks and
+conditional review below; no resubmission or repeated prompt repair.
+Earlier verified five-minute windows: actual300.0039s wait, same job post-check
+RUNNING01:36:23/native01:33:00/search8.99%; actual300.0036s wait, same job
+post-check RUNNING01:41:55/native01:38:32/search9.22%; actual300.0085s wait,
+same job post-check RUNNING01:47:30/native01:44:07/search9.55%.
+Previous two-window continuation: actual300.0037s then same job post-check
+RUNNING01:53:02/native01:49:39/search9.80%; actual300.0081s then same job
+post-check RUNNING01:58:13/native01:54:50/search10.06%.
+Next retained two-window observation: actual300.0080s wait, same-job post-check
+RUNNING02:03:48/native02:00:25/search11.21%; actual300.0099s wait, same-job
+post-check RUNNING02:08:58/native02:05:35/search12.82%.
+Retained following window: actual300.0037s wait and same-job post-check
+RUNNING02:14:35/native02:11:12/search13.02%; actual300.0049s wait and same-job
+post-check RUNNING02:19:43/native02:16:20/search13.23%.
+Retained next two-window observation: actual300.0072s wait, same-job post-check
+RUNNING02:25:21/native02:21:58/search13.49%; actual300.0039s wait, same-job
+post-check RUNNING02:30:39/native02:27:16/search13.69%.
+Retained next two-window observation: actual300.0109s wait, same-job post-check
+RUNNING02:36:19/native02:32:56/search13.92%; actual300.0044s wait, same-job
+post-check RUNNING02:41:29/native02:38:06/search16.67%.
+
+Previous goal turn classified as verified wait: it confirmed the same live
+job, performed an actual bounded wait and rechecked accounting/log evidence.
+Current continuation read the actual linked prompt and ledger TOP, then
+confirmed24036RUNNING01:29:44/native24036.0RUNNING01:26:21/search8.23%.
+Actual30.0041s wait completed. Post-check SAME24036RUNNING01:30:33 and
+native24036.0RUNNING01:27:10,64slots/128G; search8.32%. Initial search
+percentage is not overall completion; provisional0:0 is not terminal success.
+No new independent task or executable downstream action identified. Prepared
+review/conversion/scoring/admission/reporting remains dependent on actual
+successful native12 output and full review.24038 retains terminalOOM;
+no retry, partial-score admission or duplicate native submission.
+
+Full goal ACTIVE; next automatic continuation: inspect SAME24036 with
+`sacct -j 24036 -n -P --format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,ReqMem`
+and `tail -c 240 benchmarks/results/native_factorial_cost_v2_20261004/run_12/measurement/native.log`.
+If live, actually wait30-300s and post-check this same handle. At successful
+terminal outcome, execute the prepared terminal reviewer once with truthful
+owned submission/release records; at failure, retain and diagnose without
+retry. All source milestones committed/pushed; this ledger-only checkpoint
+remains uncommitted with unrelated dirty sample outputs preserved. No new
+scientific result, production figure or v5 manuscript was generated.
+
+## Direct Stop Report Reconciled With Active Goal (2026-10-08)
+
+Direct user request: verify why the goal appears to stop and correct its
+handoff. The actual goal tool reports ACTIVE, unbounded, with the objective
+pointing to the editable attachment. Attachment and repository current prompt
+are identical (SHA256 1f41fabae68220a20527bad8769212dca589446c9e318c62d82072aab3eb9c5c).
+All 29 current-prompt tests pass, including the actual linked attachment,
+unchanged scientific scope, shared-host authority and wait-only continuation.
+No established prompt contradiction or lifecycle stopping cause was found;
+do not claim another prompt rewrite or a verified platform repair.
+
+Actual 30.0076s wait followed by accounting of SAME24036: RUNNING01:29:16,
+native24036.0 RUNNING01:25:53, 64 slots/128G. Search log advanced from
+8.02% to8.10%; this is initial search progress, not overall completion.
+24038 remains terminal OUT_OF_MEMORY, with no partial-score admission/retry.
+No independent unfinished action identified beyond the prepared reporting
+chain; reassess only on meaningful new evidence. All source milestones remain
+committed/pushed. Only this ledger checkpoint and unrelated sample outputs
+are dirty; no bound source, scheduler configuration or job was modified.
+
+Full goal ACTIVE; next automatic continuation: run
+`sacct -j 24036 -n -P --format=JobIDRaw,State,ExitCode,Elapsed,AllocCPUS,ReqMem`
+and `tail -c 240 benchmarks/results/native_factorial_cost_v2_20261004/run_12/measurement/native.log`.
+If still running, actually wait30-300s and recheck SAME handle. At terminal
+success, execute the prepared terminal reviewer once with truthful owned
+submission/release records; only successful full review enables conversion,
+scoring, admission and actual reporting. At failure, retain and diagnose it
+without automatic retry. No DGX, quiet host or renewed user resume required.
+This bounded direct-request answer is not a pause/completion instruction.
+
+## Final Native Outcome Wait After Reporting Preparation (2026-10-08)
+
+Manuscript generator/tests/protocol milestonebf547aa9 committed and pushed;
+full staged diff check passed. No production v5/figure/final score/audit/
+bootstrap exists. The prepared final conversion/scoring/admission/reporting
+chain remains unfinished, dependent on actual native12success and review.
+No new independent task identified after the final reporting preparation;
+reconsider on genuinely new evidence, not another adapter or prompt rewrite.
+
+Actual30.0072s wait executed after confirming live24036/native24036.0.
+Post-wait accounting confirms SAME job RUNNING01:24:21 and native step
+RUNNING01:20:58. Initial all-to-all search progressed from pre-wait7.15%
+to7.46% at the post-check; this is not
+overall completion or an ETA. Do not treat provisional0:0as terminal success.
+24038 remains retained terminalOOM, no retry or partial-score admission.
+
+Full goal ACTIVE; next automatic continuation: observe SAME24036, actual
+bounded30-300s wait and post-check if still running; at actual terminal state
+execute the prepared terminal reviewer once with truthful owned submission/
+release records, or retain and diagnose its failure. Do not resubmit/release
+native24036 again, modify bound sources or ask for user resume/quiet host/DGX.
+This checkpoint refresh is uncommitted; include with the next substantive
+milestone rather than committing every unchanged poll. All source work is
+committed; unrelated dirty sample outputs remain untouched.
+
 ## Composed Manuscript Generator Validated; Actual Final Outcome Pending (2026-10-08)
 
 prepare_composed_native_main_text.py and protocol implemented/tested, not
