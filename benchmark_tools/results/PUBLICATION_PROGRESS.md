@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Fragment Job Running; Terminal Consumer Tested (2026-10-09)
+
+Prepared scientific manifest/result milestone d24ce871 pushed. Submitted
+exactly one sequential job24087 using the committed Slurm runner; actual
+squeue/sacct confirm RUNNING onbizon,16CPUs/16GiB. At last inspection,
+seeds20261101..04 finished all3processes without reported failures and
+seed20261105 was executing. This is process completion, NOT accuracy
+admission. Do NOT resubmit this job or restart any identity. Live handle24087;
+logbenchmarks/results/controlled_fragment_20261009_v1_24087.log;
+statebenchmarks/results/controlled_fragment_methods_20261009_v1/panel_status.json.
+
+New terminal admission/report consumer and focused tests prepared without
+editing any source in the running runner's SOURCES list. Final176tests passed
+in2.66s, including all-failed terminal80-record/15-unavailable-comparison
+reporting and no imputation. It retains native failures, all pair/stratum
+counts, defined-only means and the already tested paired whole-seed intervals.
+No new scores have been inspected or method settings changed.
+
+Resource-description correction: original argv is CPU budget4 and
+threads-per-worker4, NOTfour simultaneous workers. Retained native metadata
+reports workers1/total searchthreads4. Frozen protocol wording remains
+historical; the actual commands/metadata are authoritative. New16CPU scheduler
+allocation does not change the tool budget. Preparation addendum records this.
+
+Next inspect the SAME job24087 withsqueue/sacct and panel_status.json. If it is
+still live and no unfinished independent task is executable, wait30-300seconds
+and inspect24087 again. Once accounting is terminal, execute the tested
+assembler exactly once at
+benchmark_tools/results/controlled_fragment_results_20261009_v1 using the
+existing manifestSHA8e588309 and runtimeSHA4ea5d10b, job24087 and the actual
+execution root. Preserve all80baseline/fragment rows and15comparisons, including
+failures, then independently verify counts/intervals/TSVs and integrate the
+results into the manuscript. No duplicate inference, old panel rerun or new
+runtime/prompt/archive campaign. Full goal ACTIVE; no permission/host gate.
+
 ## Fragment Inputs And Launch Preflight Verified (2026-10-09)
 
 Concrete scientific progress, not a wait: c5c81c1f/3456a889/67b6b34d sources

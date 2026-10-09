@@ -51,3 +51,11 @@ Execution uses the existing Threadripper scheduler,16CPUs/16GiB, ascending
 seeds and high-sensitivity/satellite_v2/full-OrthoFinder order within each seed.
 Shared-host timings remain descriptive; cached baseline costs are not paired
 runtime controls. No quiet window, DGX, automatic retry or baseline rerun.
+
+Execution-description correction: the frozen OrthoHMM arguments specify a
+CPU budget of4 and threads-per-worker4, not four simultaneous workers. The
+retained native baseline metadata reports search_workers=1 and total search
+threads=4. Keep the original protocol's wording as a historical record, but
+use the actual argv and recorded resolved parallelism when reporting resource
+use. The prospective16-CPU allocation does not increase the tool's frozen
+CPU budget or alter its scientific arguments.
