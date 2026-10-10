@@ -19,31 +19,42 @@ retained results and limitations rather than restarting it.
 
 Immediate Continuation Decision
 
-At every automatic continuation, reconcile the newest ledger entry with actual
-outputs and execution history, then use a concrete tool call for the next
-unfinished authorized task. If its output already exists, preserve it and
-advance to unfinished validation or integration; never replay the producer.
-If only an existing job can advance the work, wait and inspect that same job.
-Do not ask the user to resume after a milestone or treat an ordinary turn
-boundary as permission to stop. A direct user maintenance request may receive
-a concise final answer while the full goal remains ACTIVE.
+At every automatic continuation, reconcile the newest ledger entry with the
+actual task files, outputs, terminal results and relevant live handles. Include
+untracked and uncommitted implementation files: an absent result does not mean
+that implementation has not started. Read and finish those files; do not
+recreate them or discard partial work because the handoff is stale.
+
+Resume the current task at its first unfinished phase:
+- Existing draft: review and run focused tests; correct supported defects.
+- Tested implementation: complete any pending review, then commit/push the
+  scoped source before its first prospective scientific execution.
+- Running command: inspect or wait on the same handle; do not submit a duplicate.
+- Completed execution: validate its retained result, integrate it and commit/push.
+- Preserved failure: diagnose that specific failure without replaying historical
+  inference, scoring or timing; use another unfinished route if necessary.
+
+Observed state overrides a stale NEXT instruction. A passing unit test is not
+an observed native execution, and a completed producer must never be relaunched
+to make the checkpoint match reality. Keep draft, tested, committed, executed,
+validated and integrated states distinct in the latest ledger entry.
+
+A checkpoint, commit or concise progress message is not an autonomous stopping
+condition. Continue to the next dependent phase in the same turn when feasible.
+If only an existing job can advance work, wait and inspect that job as specified
+below. Do not ask the user to resume or renew routine resource approval.
+A direct user maintenance request may receive a concise final answer while
+the full goal remains ACTIVE; it does not authorize pausing the goal.
 
 Continuation Recovery Order
 
-Before choosing work from a handoff, check whether its named output and terminal
-result already exist. Observed completion supersedes a stale NEXT instruction,
-even when the ledger or manuscript has not yet been updated. Never relaunch a
-completed producer to make the checkpoint match reality.
+Finish pending integration of an already completed, validated result before
+starting another candidate. Otherwise finish the existing partial task before
+starting a replacement implementation or another prompt rewrite. Then select
+an unfinished scientific requirement. A restricted-model result does not close
+a native benchmark uncertainty requirement.
 
-If a completed, validated result is still uncommitted or absent from the current
-report, finish that result's scoped integration, checkpoint and commit/push first.
-Then select an unfinished scientific requirement. Do not start another candidate
-method, verification layer or prompt rewrite merely because integration is pending.
-A result valid only under a restricted model does not close a native benchmark
-uncertainty requirement.
-
-Keep a concrete next action distinct from the status of the full goal. Do not
-wait for user confirmation to continue an already authorized task. If all useful
+Keep the concrete next action distinct from full-goal status. If all useful
 authorized routes are exhausted, apply the goal tool's genuine-impasse rule
 honestly instead of generating an indefinite sequence of substitute analyses.
 

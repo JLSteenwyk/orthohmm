@@ -1,5 +1,40 @@
 # Publication Progress
 
+## Continuation Handoff Corrected For Existing Draft (2026-10-10)
+
+Direct user maintenance request: fix the repeatedly interrupted goal workflow.
+The goal tool reports ACTIVE and points to the editable attachment, not an old
+prompt. The attachment and repository copy already authorize the shared
+Threadripper without a quiet window, DGX or renewed contention approval.
+No observed lifecycle-stop reason is available; no platform repair is claimed.
+
+Corrected a concrete stale handoff: the prior NEXT says implement the FAS
+context check, but these untracked draft files already exist:
+`benchmark_tools/probe_native_fas_context.py` and
+`tests/unit/test_probe_native_fas_context.py`.
+Read and finish them rather than starting implementation again. The editable
+prompt now explicitly resumes partial uncommitted work at its actual phase and
+distinguishes tested, committed, executed, validated and integrated states.
+Scientific requirements, frozen protocols and completed results are unchanged.
+
+Actual focused unit tests EXIT0: 18 passed in 0.40s using
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_probe_native_fas_context.py`.
+These are unit tests, not native context-invariance results. The draft has not
+been committed, fully reviewed or executed in the native container. No native
+result, interval admission or publication readiness is claimed. No live handle.
+The maintenance commit stages only this checkpoint and the editable goal copy;
+it deliberately leaves the scientific draft files for review before freezing.
+
+NEXT review the existing draft's native I/O exception handling and failure
+preservation before execution. Start with
+`sed -n '135,310p' benchmark_tools/probe_native_fas_context.py`.
+Correct supported defects and run focused/adjacent tests; commit/push reviewed
+source and tests before the first prospective native context check. Preserve
+the frozen NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md and historical runs.
+Inspect whether `benchmark_tools/results/native_fas_context_probe_20261010_v1.json`
+already exists before launching; if it does, validate/integrate it instead.
+Full goal remains ACTIVE and incomplete; this maintenance request is not a pause.
+
 ## Native FAS Design Target Derived; Invariance Validation Next (2026-10-10)
 
 Previous turn was progress: e55405ee pushed actual manuscript integration.
