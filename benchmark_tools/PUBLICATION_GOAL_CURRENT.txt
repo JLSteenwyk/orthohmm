@@ -63,6 +63,13 @@ One Continuation Loop
    validation state, and exact next command. Keep the full goal ACTIVE while
    useful required work remains. Do not leave a completed action as NEXT.
 
+Each automatic continuation with an executable next step must actually run it,
+not stop after rereading this prompt, reviewing the ledger or proposing work.
+If only an existing job can advance, use an actual wait and inspect its handle.
+Do not add meaningless tool calls to trigger continuation. A final progress
+summary is not a request for user input, permission or manual resumption; keep
+the goal ACTIVE unless its actual lifecycle rules require another status.
+
 Finite Scope And Evidence
 
 Reuse completed scores, panels, fixtures, diagnostics and figures. Validate

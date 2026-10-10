@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Continuation Prompt And Executable Handoff Checked (2026-10-10)
+
+Direct user maintenance request, not a new scientific analysis. The supported
+goal API reports ACTIVE with no token budget. The actual objective references
+the attachment; it and PUBLICATION_GOAL_CURRENT.txt contain the settled shared
+Threadripper authorization. Recent thread inspection reports the preceding
+turns completed without a reported error, including actual FAS work pushed
+through 1df7dd78. This does not establish the cause of earlier interruptions.
+
+Added an explicit requirement to execute an available next step or actually
+wait on its existing handle during automatic continuation, rather than stop
+after prompt/ledger review. No meaningless tool-call loop, private platform
+state edit, inferred platform repair or renewed resource approval. Scientific
+requirements and admission rules unchanged; no benchmark was rerun.
+
+Current unfinished phase: original requirement 7, render the already-pushed
+114560-byte publication_native_fas_figure_manuscript_20261010_v1.md. The previous
+TOP entry's commit/push prerequisite is complete; do not repeat it. No live
+handle is known. No current-version review HTML was found. Existing render,
+profile-table styling, print and PDF-review helpers are unchanged and pushed.
+
+NEXT execute the focused existing renderer tests from the repository root:
+
+```bash
+env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_render_manuscript_review.py tests/unit/test_controlled_fragment_review.py tests/unit/test_profile_stratum_review.py tests/unit/test_print_manuscript_review.py tests/unit/test_review_manuscript_pdf.py
+```
+
+Then use render_manuscript_review.render with the current manuscript and
+publication_bibliography_20261007_v1.csl.json, at fresh sibling
+publication_native_fas_figure_manuscript_20261010_v1_review.html and
+publication_native_fas_figure_manuscript_20261010_v1_assets.json. Reconcile any
+existing output before execution. Reuse render_controlled_fragment_review.run
+for established profile-table print CSS at separate fresh paths, then the
+existing print/PDF review helpers in the same PyMuPDF-enabled runtime. Inspect
+the actual new FAS table/figure pages, integrate the review links and continue
+the original requirements. Do not repeat scientific calculations or figure
+production. Full goal ACTIVE/incomplete; prompt edits cannot guarantee platform
+continuation. Official behavior reference:
+https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex
+
 ## Conditional Native FAS Analysis, Figure And Manuscript Integration Complete (2026-10-10)
 
 This goal turn made concrete original4/7 progress, not a verified wait or another
