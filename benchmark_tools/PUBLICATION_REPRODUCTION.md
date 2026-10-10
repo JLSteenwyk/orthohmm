@@ -2,6 +2,12 @@
 
 ## Current Supplements (2026-10-10)
 
+The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
+links the controlled-fragment comparisons, observed stage decisions, actual
+relocated replay and restricted count-model outcomes to their limits. It keeps
+both negative F1 comparisons and non-Poisson failures explicit, supplements
+the original claim checklist, and does not admit native intervals or readiness.
+
 The [current manuscript](results/publication_supplements_manuscript_20261010_v1.md)
 adds the completed restricted-model validation and actual relocated fragment
 replay to the prior fragment-trace text. Its

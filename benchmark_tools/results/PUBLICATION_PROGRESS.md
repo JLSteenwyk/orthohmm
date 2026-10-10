@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Current Claims Match Fragment And Supplement Evidence (2026-10-10)
+
+Previous goal turn was progress: e55405ee pushed the current manuscript after
+tested source 84227a3d, with actual scoped restoration/readback. This turn adds
+PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md and links it from the guide.
+Nine claim rows cover the controlled condition, both negative OF comparisons,
+non-equivalence, retrospective observed stages, noncausal limitations, actual
+raw-stage relocation, restricted count law, current text and unmet completion.
+Five F1 rows are generated directly from the retained full-precision JSON;
+all 15 endpoints stay linked. No new source panel, score, inference, timing,
+bootstrap, raw replay, native CI, render, archive or prompt revision.
+
+Actual focused document check EXIT0: 9 claim rows, 5 F1 rows/15 displayed
+effect/endpoints at their stated precision, all ten paired seeds, 15-endpoint
+adjustment/20000 retained draws, both negative OF F1 intervals, three
+baseline-change intervals including zero, and all 25 local link occurrences.
+Poisson control failures and actual relocated count/payload fields also match
+retained JSON. No live handle. Historical claim snapshots stay unchanged.
+Full goal remains ACTIVE and incomplete; uncertainty is not admitted by links.
+
+Returned to original4.1 through the actual FAS sampler, not a new convenient
+gene-dependence toy model. Local native source fas_benchmark.py shuffles the
+precomputed list and caps a separately shuffled missing-score list at 9000;
+it then skips lookup-absent returns and reports the nonlinear retained-score
+mean. This has a real, algorithm-defined sampling mechanism worth examining.
+Unseeded historical state prevents exact random replay, but is not itself a
+proof that design-based sampling error is unidentified. Conversely, fixed
+scores/return status per pair, uniform selection and historical source binding
+must be established or stated before any such inference. Gene reuse alone
+does not prove dependence of random samples from a fixed score population.
+No new FAS estimator, target, interval or independence admission was made.
+
+NEXT original4.1 scientific action: inspect the historically pinned native FAS
+child scorer/omission probe and exact sampling implementation to determine
+whether pair score/return status is fixed independently of sample composition.
+Start with `sed -n '1,180p' benchmark_tools/results/QFO_FAS_OMISSION_MECHANISM_20260928.md`
+and `sed -n '53,152p' qfo_benchmark/benchmark-webservice/fas_benchmark.py`.
+Use existing container/source records; do not rerun historical scoring/probes
+or the expensive eligible-population joins. If justified, derive uncertainty
+for the actual post-attrition native mean, including random return counts and
+the realized mixture, rather than replacing it with a post-stratified or
+complete-case shared-pair endpoint. If sample-context invariance or a native
+target mapping cannot be justified, retain that specific limitation and avoid
+another restricted-model validation merely to obtain an interval. New supported
+source needs focused tests and prospective freezing before use. Missing native
+uncertainty and other genuine requirements remain open; no new administrative gate.
+
 ## Completed Supplements Now In Current Manuscript (2026-10-10)
 
 Previous turn was progress: 4c380216 fixed the stale handoff and preserved
