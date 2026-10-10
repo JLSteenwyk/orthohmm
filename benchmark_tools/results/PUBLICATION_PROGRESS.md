@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Sustained Native Uncertainty Impasse, Third Observation (2026-10-10)
+
+Previous turn was no new scientific progress and no verified wait: it
+revalidated the blocker and recorded the second observation at 14ca0d39.
+This third check reread the actual goal and retained VGNC/reference-block,
+functional-pair and TreeFam evidence. Selected source/result files remain
+unchanged; no original mapping/NHX filename is present in the repository
+file inventory. This is a bounded check, not global source-unavailability
+proof. No actual answer to the pending scope question has arrived.
+
+The same missing native biological uncertainty route has now persisted
+across three consecutive goal turns, starting with the post-delivery
+observation at 3769e235. Independent executable delivery was examined in
+the second check; completed render/claim/resource/archive work is not a
+queue to replay. No useful authorized unfinished producer was identified.
+No scoring, timing, estimator, public search, render or archive was rerun.
+No live own command/scientific handle is known. Resource contention is not
+the blocker; the goal's scientific requirements have not been narrowed.
+
+The sustained genuine-impasse audit supports an API transition to BLOCKED,
+not completion or a user-requested pause. This entry is written before that
+API call; the returned goal status is authoritative. NEXT requires an actual
+scope decision on the existing asynchronous question, or new original-family/
+independently justified sampling evidence. Descriptive-only permission would
+require an explicit goal amendment, not retroactive interval admission.
+Keeping the full requirement needs new supporting evidence/model justification,
+not fabricated pair-IID intervals or another status-only continuation loop.
+On any explicit resume, restart the blocked audit as required by the tool.
+
 ## Native Uncertainty Impasse Revalidated, Second Observation (2026-10-10)
 
 Previous goal turn was real progress: current render/review and FAS claim
