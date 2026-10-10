@@ -1,0 +1,68 @@
+{
+  "schema": "native_factorial_fas_figure_execution_v1",
+  "source_commit_pushed_before_render": "e4a2f8f2",
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_plot_native_factorial_fas_sampling.py tests/unit/test_insert_manuscript_supplement.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 3000,
+      "yield_time_ms": 1000
+    },
+    "observations": [
+      {
+        "chunk_id": "596d49",
+        "wall_time_seconds": 1.001248161,
+        "session_id": 87566,
+        "original_token_count": 2,
+        "output": "........"
+      },
+      {
+        "chunk_id": "51e663",
+        "wall_time_seconds": 0.000010416,
+        "exit_code": 0,
+        "original_token_count": 23,
+        "output": "...........                                                      [100%]\n19 passed in 1.71s\n"
+      }
+    ]
+  },
+  "render": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import json,sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.plot_native_factorial_fas_sampling import run; r=run(Path.cwd(),Path(\"benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1\")); print(json.dumps(dict(methods=len(r[\"plotted_methods\"]),contrasts=len(r[\"plotted_contrasts\"]),outputs=r[\"output_files\"]),sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 2000,
+      "yield_time_ms": 1000
+    },
+    "observations": [
+      {
+        "chunk_id": "6340d2",
+        "wall_time_seconds": 0.954793984,
+        "exit_code": 0,
+        "original_token_count": 217,
+        "output": "{\"contrasts\": 6, \"methods\": 4, \"outputs\": [{\"bytes\": 217361, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.png\", \"sha256\": \"adb485bc03e69257e458ab1a810a6e6b2b8533950bede91d41ee3a2d9672f7d1\"}, {\"bytes\": 24455, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.svg\", \"sha256\": \"2464ca1a23859450cf84c1d5f022afdc33f7f4ab86e39718d4b7c9fc2817f9e3\"}, {\"bytes\": 19555, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.pdf\", \"sha256\": \"0e4184f3e9ae3eaf99b263cccfd79cd9c07b19fee2ea84836afcf30a4620fb9f\"}]}\n"
+      }
+    ]
+  },
+  "readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import hashlib,json; import numpy as np; from PIL import Image; b=Path(\"benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1\"); f=json.loads((b/\"figure.json\").read_text()); r=json.loads(Path(f[\"report\"][\"path\"]).read_text()); assert f[\"plotted_methods\"]==r[\"methods\"] and f[\"plotted_contrasts\"]==r[\"contrasts\"]; assert sum(v[\"zero_included\"] for v in f[\"plotted_contrasts\"])==4\nfor ref in [f[\"source\"],f[\"report\"]]+f[\"output_files\"]:\n data=Path(ref[\"path\"]).read_bytes(); assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nwith Image.open(b/\"native_factorial_fas_sampling.png\") as im:\n assert im.size==(2900,1360); p=np.asarray(im.convert(\"RGB\")); marked=int(np.count_nonzero(np.any(p<240,axis=2))); assert marked>30000\nsvg=(b/\"native_factorial_fas_sampling.svg\").read_text()\nfor label in (\"P0/C0/R0\",\"P0/C0/R1\",\"P0/C1/R0\",\"P1/C0/R1\",\"Observed native Z (descriptive)\",\"not biological/generalization error bars\"): assert label in svg\nassert (b/\"native_factorial_fas_sampling.pdf\").read_bytes().startswith(b\"%PDF\"); assert f[\"publication_ready\"] is False and f[\"new_scoring_or_sampling\"] is False\nprint(json.dumps(dict(status=\"actual_native_fas_figure_readback_passed\",methods=4,contrasts=6,zero_including_ranges=4,png_dimensions=[2900,1360],nonwhite_pixels=marked,vector_labels_checked=True,all_output_identities_checked=True),sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 2000,
+      "yield_time_ms": 1000
+    },
+    "result": {
+      "chunk_id": "b35487",
+      "wall_time_seconds": 0.209738725,
+      "exit_code": 0,
+      "original_token_count": 61,
+      "output": "{\"all_output_identities_checked\": true, \"contrasts\": 6, \"methods\": 4, \"nonwhite_pixels\": 147168, \"png_dimensions\": [2900, 1360], \"status\": \"actual_native_fas_figure_readback_passed\", \"vector_labels_checked\": true, \"zero_including_ranges\": 4}\n"
+    }
+  },
+  "visual_inspection": {
+    "path": "native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.png",
+    "observed": "All four cell labels and six contrasts visible; ranges and offset descriptive circles separated; no observed label/caption overlap or cropping."
+  },
+  "integration_patch_first_attempt": "Failed guide-context match before any files were changed; corrected the literal context, not scientific outputs.",
+  "new_scoring_or_sampling": false,
+  "biological_generalization_intervals": false,
+  "publication_ready": false
+}

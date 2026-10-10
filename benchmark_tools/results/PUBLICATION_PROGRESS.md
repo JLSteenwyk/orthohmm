@@ -1,5 +1,29 @@
 # Publication Progress
 
+## Native FAS Figure Rendered And Actually Inspected (2026-10-10)
+
+e4a2f8f2 pushed tested renderer BEFORE production. Actual rendering EXIT0 once,
+PNG217361 bytes/SVG24455/PDF19555, all four original rows/six contrasts retained.
+Actual scoped readback EXIT0 checks input/source/output hashes, unchanged
+plotted values, four zero-overlap differences, PNG2900x1360/147168 nonwhite
+pixels, SVG labels and PDF signature. view_image inspection found no cropped
+or overlapping labels/captions; interval bars and offset descriptive circles
+are separated. NATIVE_FACTORIAL_FAS_FIGURE_20261010.md explicitly distinguishes
+Panel B's descriptive Z differences from expected-ratio bounds. Actual tests,
+render/readback/visual observation are in native_factorial_fas_figure_execution_20261010_v1.json.
+First integration patch had a guide-context mismatch before changing any file;
+literal-context correction changes no science. No inference, score, samples or
+interval computation repeated. All handles terminal; full goal ACTIVE/incomplete.
+
+NEXT commit/push the completed figure/caption, then use already tested/pushed
+insert_manuscript_supplement.run (no new adapter) to insert the pinned caption
+before `## References\n` in publication_native_factorial_fas_manuscript_20261010_v1.md
+(SHAba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0).
+Fresh output publication_native_fas_figure_manuscript_20261010_v1.md and record
+publication_native_fas_figure_generation_20261010_v1.json. Verify whole-parent
+restoration and local figure links, update current guide, commit/push. Existing
+outputs mean integrate, not rerun. No biological/generalization or readiness claim.
+
 ## Native FAS Figure Renderer Tested Before Production (2026-10-10)
 
 c93fee9c pushed completed 112030-byte manuscript integration and actual

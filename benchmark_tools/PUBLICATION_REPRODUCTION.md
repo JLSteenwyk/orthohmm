@@ -35,6 +35,13 @@ historically admission-bound; score/timing failures remain unchanged. This is
 native sampling uncertainty, not biological/generalization error bars or
 uncertainty for other endpoints. No native scores were rerun.
 
+The [native FAS figure and caption](results/NATIVE_FACTORIAL_FAS_FIGURE_20261010.md)
+show all four conditional expected-ratio ranges and all six contrasts, with
+observed native Z/differences offset separately. Actual PNG/SVG/PDF rendering,
+value/identity/pixel/vector checks and visual inspection are complete. Four
+contrast ranges include zero, not equivalence. This is not a manuscript-wide
+render or a new statistical/scoring admission.
+
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
 links the controlled-fragment comparisons, observed stage decisions, actual
 relocated replay and restricted count-model outcomes to their limits. It keeps
