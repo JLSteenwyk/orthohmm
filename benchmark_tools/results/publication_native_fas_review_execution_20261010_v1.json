@@ -1,0 +1,171 @@
+{
+  "status": "current_manuscript_review_completed",
+  "publication_ready": false,
+  "scope": "Review render of unchanged 114560-byte current manuscript; no inference, scoring, timing, statistical interval or figure-production rerun",
+  "manuscript": {
+    "path": "benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md",
+    "bytes": 114560,
+    "sha256": "cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1"
+  },
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_render_manuscript_review.py tests/unit/test_controlled_fragment_review.py tests/unit/test_profile_stratum_review.py tests/unit/test_print_manuscript_review.py tests/unit/test_review_manuscript_pdf.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 3000
+    },
+    "first": {
+      "chunk_id": "9978bc",
+      "wall_time_seconds": 1.001210366,
+      "session_id": 36675,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "d8294c",
+      "wall_time_seconds": 0.000011518,
+      "exit_code": 0,
+      "original_token_count": 25,
+      "output": ".........................................                                [100%]\n41 passed in 3.00s\n"
+    }
+  },
+  "render": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys\nfrom pathlib import Path\nsys.path.insert(0, str(Path.cwd()))\nfrom benchmark_tools.render_manuscript_review import render\nroot = Path.cwd()\nbase = root / \"benchmark_tools/results\"\nresult = render(root, base / \"publication_native_fas_figure_manuscript_20261010_v1.md\", base / \"publication_native_fas_figure_manuscript_20261010_v1_review.html\", base / \"publication_native_fas_figure_manuscript_20261010_v1_assets.json\", base / \"publication_bibliography_20261007_v1.csl.json\")\nprint(json.dumps({k: result[k] for k in (\"status\", \"html\", \"citation_ids\", \"local_occurrences\", \"unique_targets\", \"untracked_targets\", \"publication_ready\")}, sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "first": {
+      "chunk_id": "36b117",
+      "wall_time_seconds": 1.000978729,
+      "session_id": 48890,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "3e0c0e",
+      "wall_time_seconds": 0.000011127,
+      "exit_code": 0,
+      "original_token_count": 185,
+      "output": "{\"citation_ids\": [\"busco2021\", \"cpm2011\", \"diamond2021\", \"fastoma2025\", \"iqtree3_2026\", \"kuzmin2020\", \"leiden2019\", \"orthobench2020\", \"orthofinder2026\", \"orthofinder2026correction\", \"orthohmm2024preprint\", \"orthomcl2003\", \"proteinortho2023\", \"pyvolve2015\", \"qfo2016\", \"qfo2020\", \"sonicparanoid2024\", \"ygob2005\", \"zombi2019online\"], \"html\": {\"bytes\": 154567, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_review.html\", \"sha256\": \"e07c9cfaacfa55d3ce49d644ed0515b94f805e97ca2122ce36e1093df5ee2931\"}, \"local_occurrences\": 158, \"publication_ready\": false, \"status\": \"manuscript_review_rendered\", \"unique_targets\": 153, \"untracked_targets\": []}\n"
+    },
+    "assets": "publication_native_fas_figure_manuscript_20261010_v1_assets.json"
+  },
+  "style": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys\nfrom pathlib import Path\nsys.path.insert(0, str(Path.cwd()))\nfrom benchmark_tools.render_controlled_fragment_review import run\nroot = Path.cwd()\nbase = root / \"benchmark_tools/results\"\nresult = run(root, base / \"publication_native_fas_figure_manuscript_20261010_v1_assets.json\", base / \"publication_native_fas_figure_manuscript_20261010_v1_review_v2.html\", base / \"publication_native_fas_figure_manuscript_20261010_v1_assets_v2.json\")\nprint(json.dumps({k: result[k] for k in (\"status\", \"html\", \"rendering_recovery\", \"publication_ready\")}, sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "terminal": {
+      "chunk_id": "36d442",
+      "wall_time_seconds": 0.41152356,
+      "exit_code": 0,
+      "original_token_count": 401,
+      "output": "{\"html\": {\"bytes\": 155552, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_review_v2.html\", \"sha256\": \"b4ecb3c72ad745819ae0b9b1b2ae6541735422acedbaf3b90ada8d5e0ce53860\"}, \"publication_ready\": false, \"rendering_recovery\": {\"all_columns_required\": 6, \"fragment_tables_changed\": false, \"operation\": \"insert_scoped_print_css_only\", \"original_assets\": {\"bytes\": 75143, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_assets.json\", \"sha256\": \"017c2b6acdb628ffb4a3e7118c02fe6007af7842577e2b254c70bee38ac66431\"}, \"original_html\": {\"bytes\": 154567, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_review.html\", \"sha256\": \"e07c9cfaacfa55d3ce49d644ed0515b94f805e97ca2122ce36e1093df5ee2931\"}, \"profile_rows\": 23, \"scientific_html_unchanged\": true, \"selector\": \"#profile-refinement-across-all-fixed-bins + p + table\", \"source\": {\"bytes\": 2633, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_controlled_fragment_review.py\", \"sha256\": \"0c43549c4cc47384aa55d4e4afd2d72c644fb108bcce01acce2de2103009fc10\"}, \"styling_source\": {\"bytes\": 6022, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_profile_stratum_review.py\", \"sha256\": \"7426a356e8723cb5d09c2d96ea19717dc266368b265dfd723f3ff8c3d711fdca\"}}, \"status\": \"manuscript_review_rendered\"}\n"
+    },
+    "assets": "publication_native_fas_figure_manuscript_20261010_v1_assets_v2.json",
+    "scientific_html_unchanged": true
+  },
+  "print": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys\nfrom pathlib import Path\nsys.path.insert(0, str(Path.cwd()))\nfrom benchmark_tools.print_manuscript_review import print_review\nbase = Path.cwd() / \"benchmark_tools/results\"\nresult = print_review(base / \"publication_native_fas_figure_manuscript_20261010_v1_assets_v2.json\", base / \"publication_native_fas_figure_manuscript_20261010_v1_print\", Path(\"/opt/google/chrome/google-chrome\"))\nprint(json.dumps({k: result[k] for k in (\"status\", \"page_count\", \"pdf\", \"returncode\", \"elapsed_seconds\", \"publication_ready\")}, sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "first": {
+      "chunk_id": "92b1dd",
+      "wall_time_seconds": 1.000839855,
+      "session_id": 94036,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "5e9426",
+      "wall_time_seconds": 0.000013531,
+      "exit_code": 0,
+      "original_token_count": 102,
+      "output": "{\"elapsed_seconds\": 1.164869612082839, \"page_count\": 34, \"pdf\": {\"bytes\": 869066, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_print/document.pdf\", \"sha256\": \"6612f8c5570bfb8e88fbecf85764cabf2638b3bb3377da5bdeecf40799c24dad\"}, \"publication_ready\": false, \"returncode\": 0, \"status\": \"verified_html_printed\"}\n"
+    },
+    "receipt": "publication_native_fas_figure_manuscript_20261010_v1_print/print.json",
+    "browser_sandbox_disabled": false
+  },
+  "layout": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys\nfrom pathlib import Path\nsys.path.insert(0, str(Path.cwd()))\nfrom benchmark_tools.review_manuscript_pdf import review\nbase = Path.cwd() / \"benchmark_tools/results\"\nresult = review(base / \"publication_native_fas_figure_manuscript_20261010_v1_print/document.pdf\", base / \"publication_native_fas_figure_manuscript_20261010_v1_assets_v2.json\", base / \"publication_native_fas_figure_manuscript_20261010_v1_layout\", [\"Conditional Sampling In Retained Eight-Method FAS\", \"Native Factorial FAS Sampling Uncertainty\", \"Conditional Native FAS Sampling Figure\", \"Profile Refinement Across All Fixed Bins\"])\nprint(json.dumps({k: result[k] for k in (\"status\", \"page_count\", \"bounds_violations\", \"phrase_matches\", \"rendered_pages\", \"visual_review_complete\", \"publication_ready\")}, sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 5000
+    },
+    "first": {
+      "chunk_id": "fbbce7",
+      "wall_time_seconds": 1.001815996,
+      "session_id": 82732,
+      "original_token_count": 0,
+      "output": ""
+    },
+    "terminal": {
+      "chunk_id": "bc5086",
+      "wall_time_seconds": 0.000011587,
+      "exit_code": 0,
+      "original_token_count": 759,
+      "output": "{\"bounds_violations\": [], \"page_count\": 34, \"phrase_matches\": {\"Conditional Native FAS Sampling Figure\": [32], \"Conditional Sampling In Retained Eight-Method FAS\": [12], \"Native Factorial FAS Sampling Uncertainty\": [13], \"Profile Refinement Across All Fixed Bins\": [16]}, \"publication_ready\": false, \"rendered_pages\": [{\"bytes\": 227261, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_011.png\", \"sha256\": \"de7d194b61777e859bebff5957fd39053db666e0fa02843029099f4be90cc932\"}, {\"bytes\": 205172, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_012.png\", \"sha256\": \"56404efcf27e701512f10d4d9a02af91a460129f5827af7fc2b31c2eea96e9b2\"}, {\"bytes\": 192001, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_013.png\", \"sha256\": \"7115d123151b1bdeae049aedaac4529c9e5f6337dfced9c0f36ed8f9b3039361\"}, {\"bytes\": 202993, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_014.png\", \"sha256\": \"9a0116558739bc1ffe1f82e02f5763bf47904c741fa3392060efa30e46009f27\"}, {\"bytes\": 205858, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_015.png\", \"sha256\": \"61ebe0d03ebbcbe07bc4121e51efd6606fa8b0caafd7affc9934e2f4abc46f29\"}, {\"bytes\": 202792, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_016.png\", \"sha256\": \"1c8b2143b59ee6e786a707d3cebda7bd00ae66b7a1bf5d175c69747e01a85a52\"}, {\"bytes\": 126200, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_017.png\", \"sha256\": \"670b7332d68a3dc282d3842a2133fbb46a16041b99578e8466d0220e5c1e5c59\"}, {\"bytes\": 248452, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_031.png\", \"sha256\": \"a6ed38ecd92f3282026f4636460d021247b6c92e4ba7576412919d0ce4496ce9\"}, {\"bytes\": 196221, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_032.png\", \"sha256\": \"0cfc986198e16c9707a2f6b334941d70ffdb9f130efc4848e6a03840b7e7eb1a\"}, {\"bytes\": 251047, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1_layout/page_033.png\", \"sha256\": \"2d3d7ae729a86969a54a1e01dd26468aaf83924a6fa5a61923c30505226b60d0\"}], \"status\": \"pdf_bounds_checked\", \"visual_review_complete\": false}\n"
+    },
+    "report": "publication_native_fas_figure_manuscript_20261010_v1_layout/report.json",
+    "page_count": 34,
+    "bounds_violations": []
+  },
+  "manual_visual_review": {
+    "method": "view_image of all ten actual selected-page PNGs, not a claim of all-page visual certification",
+    "pages": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      31,
+      32,
+      33
+    ],
+    "observations": [
+      "Eight-method FAS table spans pages 12-13 with repeated header and all eight methods legible.",
+      "Four-cell FAS table on page 13 retains all six columns, four rows, wrapped range endpoints and count headers.",
+      "Inherited profile-stratum table on page 17 retains all 23 rows and six columns; model_distance wraps in its first column without overlap.",
+      "Actual FAS image and caption on pages 32-33 retain four expected-ratio ranges, six differences, separately offset descriptive observations and explicit conditional/biological scope.",
+      "No visible clipping or incoherent overlap on the ten viewed pages."
+    ],
+    "visual_review_complete_for_selected_pages": true,
+    "full_document_visual_review_complete": false
+  },
+  "exploration_failure": {
+    "command": "rg -n 'Current|current|manuscript|PDF|review|FAS' benchmark_tools/results/PUBLICATION_REPRODUCTION_GUIDE.md",
+    "exit_code": 2,
+    "reason": "Guessed filename absent; rg --files located existing benchmark_tools/PUBLICATION_REPRODUCTION.md. No output or science was altered."
+  },
+  "readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json, sys\nfrom pathlib import Path\nsys.path.insert(0, str(Path.cwd()))\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check\nfrom benchmark_tools.render_profile_stratum_review import STYLE\nbase = Path.cwd() / \"benchmark_tools/results\"\nstem = \"publication_native_fas_figure_manuscript_20261010_v1\"\nplain = json.loads((base / (stem + \"_assets.json\")).read_text())\nstyled = json.loads((base / (stem + \"_assets_v2.json\")).read_text())\nprinted = json.loads((base / (stem + \"_print/print.json\")).read_text())\nlayout = json.loads((base / (stem + \"_layout/report.json\")).read_text())\njournal = json.loads((base / \"publication_native_fas_review_execution_20261010_v1.json\").read_text())\nrefs = [plain[\"html\"], *plain[\"sources\"], *plain[\"targets\"], styled[\"html\"], *styled[\"sources\"], *styled[\"targets\"], printed[\"pdf\"], *printed[\"checked_records\"], *layout[\"checked_records\"], *layout[\"rendered_pages\"]]\nfor ref in refs: check(ref)\nassert Path(styled[\"html\"][\"path\"]).read_text().replace(STYLE, \"\", 1) == Path(plain[\"html\"][\"path\"]).read_text()\nassert journal[\"tests\"][\"terminal\"][\"exit_code\"] == 0 and \"41 passed\" in journal[\"tests\"][\"terminal\"][\"output\"]\nassert printed[\"status\"] == \"verified_html_printed\" and printed[\"page_count\"] == layout[\"page_count\"] == 34\nassert not layout[\"bounds_violations\"]\nassert len(plain[\"citation_ids\"]) == 19 and plain[\"local_occurrences\"] == 158 and plain[\"unique_targets\"] == 153 and not plain[\"untracked_targets\"]\nassert journal[\"manual_visual_review\"][\"pages\"] == [int(Path(item[\"path\"]).stem.split(\"_\")[1]) for item in layout[\"rendered_pages\"]]\nassert \"--no-sandbox\" not in printed[\"command\"]\nassert plain[\"sources\"][0][\"sha256\"] == journal[\"manuscript\"][\"sha256\"]\nguide = (Path.cwd() / \"benchmark_tools/PUBLICATION_REPRODUCTION.md\").read_text()\nfor suffix in (\"_review_v2.html\", \"_print/document.pdf\", \"_assets_v2.json\", \"_layout/report.json\"):\n    assert stem + suffix in guide\nassert journal[\"publication_ready\"] is False and journal[\"manual_visual_review\"][\"full_document_visual_review_complete\"] is False\nprint(json.dumps({\"status\":\"current_review_readback_passed\",\"direct_refs_checked\":len(refs),\"science_html_unchanged\":True,\"pages\":34,\"selected_visual_pages\":journal[\"manual_visual_review\"][\"pages\"],\"no_sandbox_flag\":False,\"manuscript_sha256\":journal[\"manuscript\"][\"sha256\"],\"scientific_recomputation\":False},sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "terminal": {
+      "chunk_id": "58f212",
+      "wall_time_seconds": 0.891062251,
+      "exit_code": 0,
+      "original_token_count": 84,
+      "output": "{\"direct_refs_checked\": 665, \"manuscript_sha256\": \"cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1\", \"no_sandbox_flag\": false, \"pages\": 34, \"science_html_unchanged\": true, \"scientific_recomputation\": false, \"selected_visual_pages\": [11, 12, 13, 14, 15, 16, 17, 31, 32, 33], \"status\": \"current_review_readback_passed\"}\n"
+    }
+  },
+  "limitations": [
+    "Current local review links repository-relative assets; it is not a standalone publication archive or full-study native reproduction.",
+    "Page-bounds checks and scoped visual inspection do not prove scientific correctness, missing historical provenance or all-document layout.",
+    "Sources, original plain HTML and corrected HTML remain preserved; the existing scoped print CSS changes no scientific HTML.",
+    "No new score, observed sampling outcome, conditional interval calculation, default, timing admission or publication-readiness assertion."
+  ]
+}

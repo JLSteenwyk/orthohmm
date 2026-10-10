@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Current Conditional FAS Manuscript Actually Rendered And Inspected (2026-10-10)
+
+Previous maintenance turn changed the authoritative prompt/checkpoint and pushed
+b537cae8. This automatic turn executed its next phase, not another prompt repair.
+All 41 existing renderer/style/print/PDF-review tests passed in 3.00s. Unchanged
+114560-byte current manuscript rendered once with the established bibliography:
+19 citation IDs, 158 local occurrences, 153 unique tracked targets. Reused the
+existing scoped profile-table CSS helper; scientific HTML remains unchanged.
+
+Actual sandbox-enabled browser print EXIT0 produced 34 pages, 869066 bytes,
+SHA6612f8c5570bfb8e88fbecf85764cabf2638b3bb3377da5bdeecf40799c24dad.
+All-page text/image bounds scan finds zero violations. Ten selected pages
+11-17/31-33 were actually viewed; both FAS tables, six-column/23-row profile
+table and FAS image/caption are legible without visible clipping/overlap.
+This is scoped inspection, not all-page visual certification or scientific
+admission. No score, interval computation, inference, timing or figure producer
+was rerun. Original plain/styled HTML and all current outputs are retained.
+
+Guide links the actual current HTML/PDF and records historical-render scope.
+publication_native_fas_review_execution_20261010_v1.json records actual command
+terminals, tests, selected-page observations and the harmless failed exploration
+of an absent guessed guide filename. All own handles are terminal.
+
+NEXT integrate the newer conditional FAS outcomes into the original requirement
+7 claim-to-evidence deliverable: the current historical checklists still treat
+FAS uncertainty as wholly unavailable. Preserve their frozen bytes and add a
+concise dated native-FAS claim supplement referencing the retained eight-method
+and four-cell results, all adverse/zero-overlap contrasts, current render and
+historical-provenance/biological limits. Reuse existing result values; no new
+intervals, draws, score runs, checklist generator or manuscript version. Finish
+that reporting integration and then advance a genuinely unfinished original
+scientific requirement. Full goal ACTIVE/incomplete.
+
 ## Continuation Prompt And Executable Handoff Checked (2026-10-10)
 
 Direct user maintenance request, not a new scientific analysis. The supported

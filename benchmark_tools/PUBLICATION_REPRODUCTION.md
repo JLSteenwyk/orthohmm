@@ -54,6 +54,23 @@ differences distinguished from expected-ratio ranges. Its
 [generation record](results/publication_native_fas_figure_generation_20261010_v1.json)
 and [actual scoped readback](results/publication_native_fas_figure_execution_20261010_v1.json)
 verify five new links and exact restoration of the 112030-byte parent. The
+current text now has an actual
+[HTML review](results/publication_native_fas_figure_manuscript_20261010_v1_review_v2.html)
+and [34-page PDF](results/publication_native_fas_figure_manuscript_20261010_v1_print/document.pdf).
+The [asset record](results/publication_native_fas_figure_manuscript_20261010_v1_assets_v2.json)
+retains 19 citation IDs, 158 local link/image occurrences and 153 tracked targets;
+only the established profile-table print CSS was inserted after Pandoc rendering.
+The [print record](results/publication_native_fas_figure_manuscript_20261010_v1_print/print.json)
+and [page-bounds review](results/publication_native_fas_figure_manuscript_20261010_v1_layout/report.json)
+report zero bounds violations across all 34 pages. Actual visual inspection
+covered pages 11-17 and 31-33, including both FAS tables, all 23 profile-table
+rows and the new FAS image/caption. All ten selected pages were readable with
+no visible clipping or incoherent overlap; this is not an all-page visual
+certification. The [actual execution and scoped visual record](results/publication_native_fas_review_execution_20261010_v1.json)
+retains 41 passing focused tests and the executed render/style/print/review
+commands. This review uses unchanged scientific content and repository-relative
+assets; it does not establish biological uncertainty or full-study reproduction.
+The
 [preceding native-FAS manuscript](results/publication_native_factorial_fas_manuscript_20261010_v1.md)
 added the newer four-cell sampling table separately from September comparators;
 its
@@ -74,8 +91,8 @@ its earlier
 [generation record](results/publication_supplements_generation_20261010_v1.json)
 and [actual execution/readback](results/publication_supplements_execution_20261010_v1.json)
 verify two insertions, six new local links and exact restoration of the complete
-parent body. The earlier 30-page PDF renders the earlier manuscript, not this
-successor or the current conditional-FAS text. No new observed score, default,
+parent body. The earlier 30-page PDF remains an earlier manuscript render;
+the linked 34-page PDF above renders the current conditional-FAS text. No new observed score, default,
 biological/unconditional historical interval admission or publication readiness follows.
 
 The [conditional paired-Poisson result](results/PAIRED_POISSON_F1_RESULT_20261010.md)
