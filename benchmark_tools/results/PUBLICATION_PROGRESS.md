@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Native Uncertainty Impasse Revalidated, Second Observation (2026-10-10)
+
+Previous goal turn was real progress: current render/review and FAS claim
+integration completed and pushed through 3769e235. This turn revalidated the
+same remaining scientific boundary; status review alone is not new scientific
+progress or a verified wait. Goal-linked prompt read and remains unchanged.
+No changes appeared in the selected native uncertainty/reference evidence;
+no original mapping/NHX filename was found by the repository file inventory.
+That limited inventory is not proof of global file/source unavailability.
+
+Checked independent original requirements before treating uncertainty as a
+whole-goal impasse: the rc6 result records actual archive/restoration and copied
+execution within its bounded reporting scope; current full manuscript review
+and new claim checklist are already complete. October 9 requirement
+reconciliation identifies the terminal resource join as its next task, but
+NATIVE_FACTORIAL_TERMINAL_RESOURCE_RESULT_20261009.md and the current guide
+record that completed successor. Do not repeat a stale task. The original
+generalization route permits a separate clade and does not require family-
+disjoint evidence. No quiet-host, DOI, all-tool hermeticity or OS gate is added.
+
+Older remote CI failure notes are superseded by
+CI_GLIBC_CONFIRMATION_20261002.md: recorded source9c81953d has eight successful
+jobs and its inspected coverage artifact has 14883 passes/119 skips. This is
+that recorded source's outcome, not current-HEAD certification. An attempted
+`gh run list` refused locally with exit2: the installed `gh` is a different CLI,
+not GitHub CLI. No GitHub request/job launch or remote-state observation was
+made by that command, no credential was inspected and no installation/retry
+is required for the scientific goal. Current full-matrix CI is not invented
+as a new publication completion gate.
+
+No independently justified native biological-CI route or genuinely unfinished
+authorized producer was identified. Existing dependent-pair blocks, missing
+TreeFam originals and failed sparse/shared-clade models remain insufficient;
+new conditional FAS ranges do not resolve these endpoints or the secondary
+mean. Documenting this does not fulfill the unmet science. No scientific run,
+native scorer, timing, failed estimator, source search, rendering, archive,
+prompt revision or new validation receipt was produced.
+
+Sent one asynchronous scope clarification: retain the full native uncertainty
+requirement, or explicitly permit descriptive-only reporting for unresolved
+VGNC/TreeFam/GO/EC/secondary-mean endpoints while restricting inferential claims
+to supported analyses. No answer is yet present at this checkpoint. Do not
+interpret the UI's preselected option or this question as a submitted answer,
+permission, a scope amendment or a goal pause. The original goal stays intact.
+
+This is observation2 of the same end-state scientific impasse, including the
+first observation after actual delivery in the preceding turn. No live own
+handle is known; this is not a polling/wait claim. NEXT honor any actual user
+reply or new independently justified reference/model evidence. If neither
+arrives and no useful authorized original work can advance, revalidate this
+same condition once more and apply the sustained-blocker tool rule at the
+third consecutive observation. Do not fabricate substitute progress or mark
+the goal complete. Until then goal remains ACTIVE/incomplete.
+
 ## Current Review And Claims Done; Native Biological Uncertainty Route Unresolved (2026-10-10)
 
 This turn made actual progress: e706348d pushed the current HTML/34-page PDF,
