@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "parent": {
+      "bytes": 107595,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md",
+      "sha256": "d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977"
+    },
+    "supplement": {
+      "bytes": 4434,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_FACTORIAL_FAS_SAMPLING_RESULT_20261010.md",
+      "sha256": "85d88d856e87c61409601e554c148fb70a08d619c8f7f0f342145b265b0e86e8"
+    }
+  },
+  "inserted_section": "### Native Factorial FAS Sampling Uncertainty\n\nThe four admitted newer QfO ablations have simultaneous conditional 95%\nranges for expected repeated native post-attrition FAS, accounting for unknown\nmeans in both the precomputed and newly scored strata. Initial HMM search\nremains on; P is profile refinement, C candidate expansion, R reconciliation.\nThese are not the earlier September eight-tool/default comparison. Observed\nZ is retained separately from the expected-ratio range; unknown numeric-return\npopulation size and stratum means preclude an exact expected-ratio point.\n\n| Cell | Observed Z | Conditional Expected FAS Range | Precomputed Draws | Missing Draws | Numeric Missing Returns |\n| --- | ---: | --- | ---: | ---: | ---: |\n| P0/C0/R0 | 0.774944731 | [0.762713985, 0.787179807] | 29216 | 9000 | 8989 |\n| P0/C0/R1 | 0.785006818 | [0.780906054, 0.789109619] | 243473 | 9000 | 8978 |\n| P0/C1/R0 | 0.750303136 | [0.736973521, 0.763638295] | 23962 | 9000 | 8979 |\n| P1/C0/R1 | 0.785014356 | [0.780955178, 0.789075399] | 248211 | 9000 | 8971 |\n\nAll six differences use the same joint rectangle. P0/C0/R1 minus P0/C0/R0\nis [-0.006273752, 0.026395633]; the approximately 0.010062 observed increase\ndoes not establish a nonzero expected-FAS effect under these bounds. P1/C0/R1\nminus P0/C0/R1 is [-0.008154440, 0.008169344], not proof of equivalence or of\nan additional profile-refinement benefit. P0/C0/R1 minus P0/C1/R0 is\n[0.017267759, 0.052136098], and P1/C0/R1 minus P0/C1/R0 is\n[0.017316883, 0.052101878]. These compare configurations differing in more\nthan one component, so they do not isolate a causal reconciliation effect.\nP0/C0/R0 minus P0/C1/R0 is [-0.000924310, 0.050206286], also including zero.\nAll orientations, observed differences and full-precision values are retained\nin the linked result, including unfavorable and unresolved comparisons.\n\nThe derivation conditions on fixed pair populations, lookup/annotations/options,\nand context-invariant numeric-return status and values. Within each cell,\nuniform without-replacement selections in the two strata are assumed; actual\nhistorical RNG states remain unavailable. A count-tail interval and two bounded\nsample-mean intervals receive error 0.05/12 per component across four cells.\nEight-corner projection retains the random native denominator rather than\nsubstituting a plug-in return count. No biological gene-pair IID, independent\nfamilies, cross-cell independence or missing-at-random condition is assumed.\nThe prior finite native context experiment is supportive only for its tested\npairs, not proof of all historical batch/worker outcomes.\n\nSuccessful native task identity, admitted execution/raw bindings and logged\ncounts are checked. Precomputed-first raw ordering in the pinned native writer\nrecovers exact sampled stratum means and reproduces the rounded logged means\nand full-precision aggregate. The four task logs were newly hash-pinned and\nwere not historically hash-bound in the original admission records. No full\nprecomputed population mean, database join or omitted-pair reconstruction is\nsubstituted. The native pair-IID SEM is not used as a biological interval.\n\nThe tested source/protocol was pushed as 88ddb696 before first application.\nAll 84 focused/adjacent tests passed. Actual reporting completed four ranges\nand six contrasts without numerical failure. An independent 80-digit relative\nprobability recurrence checks all 16 count endpoint/neighbor conditions,\nboth raw stratum means, mean bounds, weights, corner ranges and six contrasts;\nmaximum numerical disagreement was 7.044019369886139e-16. This is numerical\nand conditional-design validation, not biological confirmation. Retained\nscores, negative F1 comparisons, three unavailable factorial cells and\nP0/C0/R1's null/ineligible failed timing are unchanged. Biological generalization\nand other-endpoint uncertainty remain unresolved; publication readiness is\nnot established. Earlier manuscript statements of unavailable FAS uncertainty\nprecede this conditional extension and do not describe its biological scope.\n\n[Frozen derivation and reporting plan](NATIVE_FACTORIAL_FAS_SAMPLING_PROTOCOL_20261010.md),\n[all four ranges and six contrasts](native_factorial_fas_sampling_20261010_v1/report.json),\n[generated table](native_factorial_fas_sampling_20261010_v1/summary.md),\n[actual execution and independent readback](native_factorial_fas_sampling_execution_20261010_v1.json).\n\n",
+  "manuscript": {
+    "bytes": 112030,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_factorial_fas_manuscript_20261010_v1.md",
+    "sha256": "ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0"
+  },
+  "manuscript_rendered": false,
+  "new_inference_or_scoring": false,
+  "parent_unchanged_except_insertion": true,
+  "publication_ready": false,
+  "schema": "pinned_manuscript_supplement_v1",
+  "source": {
+    "bytes": 2355,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/insert_manuscript_supplement.py",
+    "sha256": "bcc017d57bc963e14917b70eda474addcd7bb60f9b42facfe5f4b786301041ce"
+  }
+}

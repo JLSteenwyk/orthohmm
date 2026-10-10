@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Four Native FAS Results Integrated Into Current Manuscript (2026-10-10)
+
+88ddb696 froze tested native four-cell source/protocol before calculation;
+bc37d4fb pushed actual four ranges/six contrasts, independent 80-digit check,
+result prose and tested reusable insertion source before manuscript generation.
+Actual generation EXIT0: publication_native_factorial_fas_manuscript_20261010_v1.md,
+112030 bytes, SHAba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0.
+First document readback failed shell quoting before execution (an apostrophe
+inside prose); corrected shell quoting then readback EXIT0. Both command
+outcomes are retained in publication_native_factorial_fas_execution_20261010_v1.json.
+Independent scoped readback verifies four table rows/counts, four new links,
+source/input/output identities, failure/causality/interval qualifications and
+complete 107595-byte parent restoration after removing the inserted section.
+The current guide links the successor and preserves previous manuscript and
+old PDF scopes. No producer, score, native sample or timing was repeated.
+
+The actual conditional FAS ranges do not support a nonzero R-at-P0/C0 effect
+or a P-at-C0/R1 effect at this joint allocation. R-on versus candidate-expanded
+R-off contrasts exclude zero, but do not isolate one component causally.
+All six orientations and limitations remain; no gene/family/cross-cell IID,
+biological generalization or unconditional historical admission. All four task
+logs were newly pinned rather than historically admission-bound. Other-QfO
+uncertainty, three failed native cells and full readiness remain unresolved.
+All handles terminal. Full seven-part goal ACTIVE/incomplete.
+
+Checked the next possible VGNC route against its actual native scorer and
+existing VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md plus
+NATIVE_QFO_VGNC_BLOCK_RESULT_20261006.md: raw records do preserve two family
+labels on cross-family false positives, but reference blocks/prediction-union
+components do not justify biological independence. This is the already known
+unresolved law, not a new lead. Do not repeat those completed exports, database
+joins, failed dyadic/Poisson screens or another convenient bootstrap.
+
+NEXT commit/push this completed manuscript integration, then original7's
+publication figure work: visualize the actual four-cell conditional FAS ranges
+and all six contrasts, keeping descriptive Z separate from interval bars and
+all zero-overlap results explicit. Read existing figure conventions with
+`sed -n '1,180p' benchmark_tools/plot_native_qfo_scientific_scores.py`.
+Use retained JSON and reusable plotting helpers, focused tests, source push
+before first render and actual raster/vector checks. This resolves an existing
+figure requirement; it is not a new all-study render/archive/validation gate.
+Do not repeat interval calculation or manuscript generation to satisfy NEXT.
+
 ## Four Native FAS Ranges Completed; Manuscript Insertion Tested (2026-10-10)
 
 88ddb696 pushed tested source/protocol BEFORE actual retained-data application.

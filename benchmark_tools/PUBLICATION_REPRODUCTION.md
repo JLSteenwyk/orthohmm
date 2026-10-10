@@ -41,9 +41,16 @@ relocated replay and restricted count-model outcomes to their limits. It keeps
 both negative F1 comparisons and non-Poisson failures explicit, supplements
 the original claim checklist, and does not admit native intervals or readiness.
 
-The [current manuscript](results/publication_conditional_fas_manuscript_20261010_v1.md)
-adds the retained September conditional-FAS table and explicit target/snapshot
-qualifications to the completed supplement text. Its
+The [current manuscript](results/publication_native_factorial_fas_manuscript_20261010_v1.md)
+also includes the newer four-cell FAS sampling supplement, separately from
+the retained September comparator ranges. Its
+[generation record](results/publication_native_factorial_fas_generation_20261010_v1.json)
+and [actual execution/readback](results/publication_native_factorial_fas_execution_20261010_v1.json)
+verify the inserted four-row table, four new links and exact byte restoration
+of the complete 107595-byte parent. The
+[preceding September-FAS manuscript](results/publication_conditional_fas_manuscript_20261010_v1.md)
+added the retained eight-tool table and explicit target/snapshot qualifications;
+its
 [generation record](results/publication_conditional_fas_generation_20261010_v1.json)
 and [actual execution/readback](results/publication_conditional_fas_execution_20261010_v1.json)
 verify two scoped insertions, eight table rows, four new links and exact byte

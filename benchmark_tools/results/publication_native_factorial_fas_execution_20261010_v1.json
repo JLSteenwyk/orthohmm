@@ -1,0 +1,60 @@
+{
+  "schema": "native_factorial_fas_manuscript_execution_v1",
+  "source_commit_pushed_before_generation": "bc37d4fb",
+  "generation": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import json,sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.insert_manuscript_supplement import run; from benchmark_tools.prepare_ob_candidate_neighborhood import record; b=Path(\"benchmark_tools/results\"); p=record(b/\"publication_conditional_fas_manuscript_20261010_v1.md\"); s=record(b/\"NATIVE_FACTORIAL_FAS_SAMPLING_RESULT_20261010.md\"); assert p[\"sha256\"]==\"d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977\"; assert s[\"sha256\"]==\"85d88d856e87c61409601e554c148fb70a08d619c8f7f0f342145b265b0e86e8\"; r=run(p,s,b/\"publication_native_factorial_fas_manuscript_20261010_v1.md\",b/\"publication_native_factorial_fas_generation_20261010_v1.json\",\"### Retrospective Native-Cell Comparator Sensitivity\\n\"); print(json.dumps(r[\"manuscript\"],sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 1500,
+      "yield_time_ms": 1000
+    },
+    "result": {
+      "chunk_id": "e0c2cb",
+      "wall_time_seconds": 0.000009274,
+      "exit_code": 0,
+      "original_token_count": 63,
+      "output": "{\"bytes\": 112030, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_factorial_fas_manuscript_20261010_v1.md\", \"sha256\": \"ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0\"}\n"
+    }
+  },
+  "readback": {
+    "first_failed_attempt": {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nb=Path(\"benchmark_tools/results\")\ng=json.loads((b/\"publication_native_factorial_fas_generation_20261010_v1.json\").read_text())\np=Path(g[\"inputs\"][\"parent\"][\"path\"]).read_bytes()\nm=Path(g[\"manuscript\"][\"path\"]).read_bytes()\npiece=g[\"inserted_section\"].encode()\nassert len(p)==107595 and m.count(piece)==1 and m.replace(piece,b\"\",1)==p\nassert len(m)==112030\nfor ref in list(g[\"inputs\"].values())+[g[\"source\"],g[\"manuscript\"]]:\n data=Path(ref[\"path\"]).read_bytes()\n assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nr=json.loads((b/\"native_factorial_fas_sampling_20261010_v1/report.json\").read_text())\nrows=[line for line in piece.decode().splitlines() if line.startswith(\"| P\")]\nassert len(rows)==4\nfor line,row in zip(rows,r[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0].replace(\"/\",\"_\").lower()==row[\"cell\"]\n assert fields[1]==\"%.9f\"%row[\"observed_native_mean\"]\n assert fields[2]==\"[%.9f, %.9f]\"%tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\n assert list(map(int,fields[3:]))==[row[k] for k in (\"k\",\"c\",\"r\")]\nlinks=re.findall(r\"\\]\\(([^)]+)\\)\",piece.decode())\nassert len(links)==4\nfor link in links:assert (b/link).resolve().exists()\nnormalized=re.sub(r\"\\s+\",\" \",piece.decode())\nfor phrase in (\"not proof of equivalence\",\"do not isolate a causal reconciliation effect\",\"not historically hash-bound\",\"P0/C0/R1's null/ineligible failed timing\"):\n assert phrase in normalized\nassert g[\"parent_unchanged_except_insertion\"] is True\nfor key in (\"new_inference_or_scoring\",\"publication_ready\",\"manuscript_rendered\"):assert g[key] is False\nprint(json.dumps(dict(status=\"native_factorial_fas_manuscript_readback_passed\",parent_restored_byte_exact=True,parent_bytes=len(p),manuscript_bytes=len(m),manuscript_sha256=hashlib.sha256(m).hexdigest(),table_rows=4,new_links=4,manuscript_rendered=False),sort_keys=True))\n'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "result": {
+        "chunk_id": "adf08e",
+        "wall_time_seconds": 0.000010286,
+        "exit_code": 2,
+        "original_token_count": 18,
+        "output": "/bin/bash: -c: line 31: unexpected EOF while looking for matching `\"'\n"
+      }
+    },
+    "corrected": {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nb=Path(\"benchmark_tools/results\")\ng=json.loads((b/\"publication_native_factorial_fas_generation_20261010_v1.json\").read_text())\np=Path(g[\"inputs\"][\"parent\"][\"path\"]).read_bytes()\nm=Path(g[\"manuscript\"][\"path\"]).read_bytes()\npiece=g[\"inserted_section\"].encode()\nassert len(p)==107595 and m.count(piece)==1 and m.replace(piece,b\"\",1)==p\nassert len(m)==112030\nfor ref in list(g[\"inputs\"].values())+[g[\"source\"],g[\"manuscript\"]]:\n data=Path(ref[\"path\"]).read_bytes()\n assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nr=json.loads((b/\"native_factorial_fas_sampling_20261010_v1/report.json\").read_text())\nrows=[line for line in piece.decode().splitlines() if line.startswith(\"| P\")]\nassert len(rows)==4\nfor line,row in zip(rows,r[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0].replace(\"/\",\"_\").lower()==row[\"cell\"]\n assert fields[1]==\"%.9f\"%row[\"observed_native_mean\"]\n assert fields[2]==\"[%.9f, %.9f]\"%tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\n assert list(map(int,fields[3:]))==[row[k] for k in (\"k\",\"c\",\"r\")]\nlinks=re.findall(r\"\\]\\(([^)]+)\\)\",piece.decode())\nassert len(links)==4\nfor link in links:assert (b/link).resolve().exists()\nnormalized=re.sub(r\"\\s+\",\" \",piece.decode())\nfor phrase in (\"not proof of equivalence\",\"do not isolate a causal reconciliation effect\",\"not historically hash-bound\",\"P0/C0/R1'\"'\"'s null/ineligible failed timing\"):\n assert phrase in normalized\nassert g[\"parent_unchanged_except_insertion\"] is True\nfor key in (\"new_inference_or_scoring\",\"publication_ready\",\"manuscript_rendered\"):assert g[key] is False\nprint(json.dumps(dict(status=\"native_factorial_fas_manuscript_readback_passed\",parent_restored_byte_exact=True,parent_bytes=len(p),manuscript_bytes=len(m),manuscript_sha256=hashlib.sha256(m).hexdigest(),table_rows=4,new_links=4,manuscript_rendered=False),sort_keys=True))\n'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "result": {
+        "chunk_id": "3728a5",
+        "wall_time_seconds": 0.000015694,
+        "exit_code": 0,
+        "original_token_count": 76,
+        "output": "{\"manuscript_bytes\": 112030, \"manuscript_rendered\": false, \"manuscript_sha256\": \"ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0\", \"new_links\": 4, \"parent_bytes\": 107595, \"parent_restored_byte_exact\": true, \"status\": \"native_factorial_fas_manuscript_readback_passed\", \"table_rows\": 4}\n"
+      }
+    }
+  },
+  "manuscript": {
+    "path": "publication_native_factorial_fas_manuscript_20261010_v1.md",
+    "bytes": 112030,
+    "sha256": "ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0"
+  },
+  "new_inference_or_scoring": false,
+  "biological_generalization_intervals": false,
+  "publication_ready": false,
+  "manuscript_rendered": false
+}
