@@ -1,5 +1,57 @@
 # Publication Progress
 
+## Fragment Trace Integrated And Reviewed (2026-10-10)
+
+Staged whitespace check reports only the three generated section-ending blank
+lines, which are preserved insertion separators. No table/scientific byte
+correction is needed; independent parent/table readback passed. Preserve them.
+
+Progress: retained stages/readback88f04ed3 and tested integrationf10580cb
+committed/pushed before use. One new integration generated EXIT0:
+controlled_fragment_trace_manuscript_20261010_v1.md101043bytes,
+SHAdf932f2299f47494851235fce68989a33f2bc24390bb4511597f445239b24b3c.
+Bundle controlled_fragment_trace_integration_20261010_v1 includes11location
+rows, three bounded sections, claims and recorded status replacement. Independent
+stdlib reader EXIT0 verifies22 count cells/all3 examples/exact parent restoration
+and input/output hashes. No inference, scoring, bootstrap or tuning repeated.
+
+Actual HTML render EXIT0:19 citation IDs/139 local link occurrences/134 targets,
+none untracked. Existing scoped profile-table CSS reused in fresh _review_v2;
+not a scientific content correction. First print invocation failed at fitz
+import under minimal Py3.10 BEFORE directory/browser creation; preserved.
+Existing scientific Py3.12/PyMuPDF1.27.2.3 then printed once with browser
+sandbox intact:30pages/PDF619622bytes,
+SHA064b1cb0093f515ff3ff0e40a96ef633dcae36968687674777a4b57a13062bad.
+Layout checker EXIT0/zero bounds violations. Independent printed reader EXIT0
+verifies all11 rows/22 count cells/3 example IDs and shared-host limitation.
+Actually viewed pages4,5,19,20,27: new Methods, location table and limitations
+readable, no observed clipping/overlap; continued table repeats header. NOT
+manual certification of all30pages. Receipt
+controlled_fragment_trace_integration_execution_20261010_v1.json preserves
+actual commands/results, import refusal, printed checks and review scope.
+
+Added benchmark_tools/CONTROLLED_FRAGMENT_REPRODUCTION.md for original7.4:
+source/execution order, raw input/output dependencies, exact receipt routes,
+runtime distinction, focused test command and no-retry interpretation. Absolute
+native paths still require original retained files; no relocated-native or
+all-tool certification claim. Existing archives/drafts stay unchanged.
+
+Commit/push focused integrated draft/bundle, HTML/assets, print PDF/receipt,
+layout report (not raster caches/browser profiles), execution receipt and
+reproduction instructions. Original full goal remains ACTIVE/incomplete.
+NEXT unfinished original1.2/1.4: reconcile the existing eight-tool x three-dataset
+score/provenance registers into one publication input/output/resource table,
+reusing retained native admissions and recording missing historical bindings
+as missing rather than launching reruns or adding transitive-certification
+gates. Start with bounded register schema and latest baseline result manifest:
+`sed -n '1,180p' benchmark_tools/results/THREE_KINGDOMS_ORTHOMCL_INPUTS_20260927.md`
+and inspect current_benchmark_scores_20260926_v2/manifest.json plus
+orthobench_provenance_register_20260927/register.json. The old20261004 audit
+still marks all-dataset provenance partial; do not copy its obsolete resource,
+fresh-cell or fragment execution state into current instructions. Other-QfO
+uncertainty remains unresolved, not an automatic whole-goal stop. No live
+handle/resource gate. Unrelated samples/profiles/local rc6 archive untouched.
+
 ## Fragment Trace Integration Prepared (2026-10-10)
 
 Verified observations/readback and actual recovery receipt committed/pushed

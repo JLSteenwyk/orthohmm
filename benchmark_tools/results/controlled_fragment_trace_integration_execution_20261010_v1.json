@@ -1,0 +1,135 @@
+{
+  "schema": "controlled_fragment_trace_integration_execution_v1",
+  "source_commit": "f10580cb",
+  "publication_ready": false,
+  "full_goal_complete": false,
+  "new_inference_or_scoring": false,
+  "new_bootstrap_draws": 0,
+  "focused_tests": {
+    "passed": 66,
+    "elapsed_seconds": 1.4,
+    "exit_code": 0
+  },
+  "integration": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.integrate_controlled_fragment_trace import run; b=root/\"benchmark_tools/results\"; r=run(root,b/\"controlled_fragment_trace_integration_20261010_v1\",b/\"controlled_fragment_trace_manuscript_20261010_v1.md\"); print(json.dumps({k:r[k] for k in (\"schema\",\"location_rows\",\"selected_cases\",\"stage_rows\")}))'",
+    "tool_result": {
+      "chunk_id": "80e0bd",
+      "wall_time_seconds": 0.000010847,
+      "exit_code": 0,
+      "original_token_count": 30,
+      "output": "{\"schema\": \"controlled_fragment_trace_integration_v1\", \"location_rows\": 11, \"selected_cases\": 53, \"stage_rows\": 106}\n"
+    }
+  },
+  "independent_integration_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import csv,hashlib,json; from pathlib import Path; from collections import Counter; b=Path(\"benchmark_tools/results\"); d=b/\"controlled_fragment_trace_integration_20261010_v1\"; manifest=json.loads((d/\"manifest.json\").read_text()); native=json.loads((b/\"controlled_fragment_stage_trace_20261010_v1/report.json\").read_text()); selected=json.loads((b/\"controlled_fragment_trace_selection_20261009_v1/selection.json\").read_text()); parent=(b/\"controlled_fragment_manuscript_20261009_v1.md\").read_text(); revised=(b/\"controlled_fragment_trace_manuscript_20261010_v1.md\").read_text(); restored=revised.replace(manifest[\"bounded_status_replacement\"][\"after\"],manifest[\"bounded_status_replacement\"][\"before\"],1); sections=[(d/(name+\"_section.md\")).read_text() for name in (\"methods\",\"results\",\"limitations\")];\nfor section in sections: assert revised.count(section)==1; restored=restored.replace(section,\"\",1)\nassert restored==parent\nfor ref in [*manifest[\"inputs\"].values(),*manifest[\"outputs\"],manifest[\"manuscript\"],manifest[\"source\"]]:\n data=Path(ref[\"path\"]).read_bytes(); assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\ncounts=Counter((c[\"method\"],c[\"stages\"][arm][\"observed_location\"],arm) for c in native[\"cases\"] for arm in (\"baseline\",\"fragment\")); rows=list(csv.DictReader((d/\"representative_locations.tsv\").open(),delimiter=\"\\t\")); assert len(rows)==11\nfor row in rows:\n for arm in (\"baseline\",\"fragment\"): assert int(row[arm+\"_representatives\"])==counts[row[\"method\"],row[\"observed_location\"],arm]\n labels={\"orthohmm_high_sensitivity\":\"HS\",\"orthohmm_satellite_v2\":\"PHY\",\"orthofinder_full\":\"OF\",\"orthofinder_sequence_only\":\"OF checkpoint\"}; line=\"| \"+\" | \".join((labels[row[\"method\"]],row[\"observed_location\"].replace(\"_\",\" \"),row[\"baseline_representatives\"],row[\"fragment_representatives\"]))+\" |\"; assert line in sections[1]\nassert len(native[\"cases\"])==53 and native[\"stage_rows\"]==106 and Counter(c[\"method\"] for c in native[\"cases\"])=={\"orthohmm_high_sensitivity\":12,\"orthohmm_satellite_v2\":18,\"orthofinder_full\":11,\"orthofinder_sequence_only\":12}; assert Counter(v[\"status\"] for v in selected[\"bins\"])=={\"empty_bin\":31,\"selected\":53}\ncases={c[\"case_id\"]:c for c in native[\"cases\"]}; a=cases[\"Case0000\"][\"stages\"][\"fragment\"]; assert not a[\"hit_forward\"] and not a[\"hit_reverse\"] and a[\"graph_connected\"] and not a[\"same_seed_group\"]; a=cases[\"Case0026\"][\"stages\"][\"fragment\"]; assert a[\"hit_forward\"] and a[\"hit_reverse\"] and a[\"graph_connected\"] and a[\"pair_event\"]==\"duplication\" and not a[\"predicted\"]; a=cases[\"Case0030\"][\"stages\"][\"fragment\"]; assert a[\"same_seed_group\"] and not a[\"predicted\"] and a[\"pair_event\"] is None\nprint(json.dumps({\"status\":\"independent_trace_integration_verified\",\"location_rows\":11,\"numeric_location_cells\":22,\"selected_cases\":53,\"stage_rows\":106,\"illustrative_records_checked\":3,\"exact_parent_restored\":True,\"manuscript_sha256\":hashlib.sha256(revised.encode()).hexdigest()}))'",
+    "tool_result": {
+      "chunk_id": "7f38e1",
+      "wall_time_seconds": 0.000011868,
+      "exit_code": 0,
+      "original_token_count": 75,
+      "output": "{\"status\": \"independent_trace_integration_verified\", \"location_rows\": 11, \"numeric_location_cells\": 22, \"selected_cases\": 53, \"stage_rows\": 106, \"illustrative_records_checked\": 3, \"exact_parent_restored\": true, \"manuscript_sha256\": \"df932f2299f47494851235fce68989a33f2bc24390bb4511597f445239b24b3c\"}\n"
+    }
+  },
+  "html_render": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.render_manuscript_review import render; from benchmark_tools.render_controlled_fragment_review import run; b=root/\"benchmark_tools/results\"; r=render(root,b/\"controlled_fragment_trace_manuscript_20261010_v1.md\",b/\"controlled_fragment_trace_manuscript_20261010_v1_review.html\",b/\"controlled_fragment_trace_manuscript_20261010_v1_assets.json\",b/\"publication_bibliography_20261007_v1.csl.json\"); print(json.dumps({\"status\":r[\"status\"],\"html\":r[\"html\"]})); s=run(root,b/\"controlled_fragment_trace_manuscript_20261010_v1_assets.json\",b/\"controlled_fragment_trace_manuscript_20261010_v1_review_v2.html\",b/\"controlled_fragment_trace_manuscript_20261010_v1_assets_v2.json\"); print(json.dumps(s[\"rendering_recovery\"]))'",
+      "tool_result": {
+        "chunk_id": "5c6973",
+        "wall_time_seconds": 1.001807703,
+        "session_id": 67979,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "080857",
+      "wall_time_seconds": 0.000020361,
+      "exit_code": 0,
+      "original_token_count": 384,
+      "output": "{\"status\": \"manuscript_review_rendered\", \"html\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1_review.html\", \"bytes\": 138507, \"sha256\": \"6aa707bdc1161d0759cf3986fdd079732400f226b1bed9a3c13ca3b18cccecde\"}}\n{\"operation\": \"insert_scoped_print_css_only\", \"original_assets\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1_assets.json\", \"bytes\": 66104, \"sha256\": \"95fca6801ab729eae9101f517194a38073bb6bed334e194ea0025ace5b1b58e1\"}, \"original_html\": {\"bytes\": 138507, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1_review.html\", \"sha256\": \"6aa707bdc1161d0759cf3986fdd079732400f226b1bed9a3c13ca3b18cccecde\"}, \"source\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_controlled_fragment_review.py\", \"bytes\": 2633, \"sha256\": \"0c43549c4cc47384aa55d4e4afd2d72c644fb108bcce01acce2de2103009fc10\"}, \"styling_source\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/render_profile_stratum_review.py\", \"bytes\": 6022, \"sha256\": \"7426a356e8723cb5d09c2d96ea19717dc266368b265dfd723f3ff8c3d711fdca\"}, \"scientific_html_unchanged\": true, \"profile_rows\": 23, \"all_columns_required\": 6, \"selector\": \"#profile-refinement-across-all-fixed-bins + p + table\", \"fragment_tables_changed\": false}\n"
+    }
+  },
+  "print_preimport_refusal": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.print_manuscript_review import print_review; from benchmark_tools.review_manuscript_pdf import review; b=root/\"benchmark_tools/results\"; assets=b/\"controlled_fragment_trace_manuscript_20261010_v1_assets_v2.json\"; out=b/\"controlled_fragment_trace_manuscript_20261010_v1_print_v2\"; p=print_review(assets,out,Path(\"/opt/google/chrome/google-chrome\")); print(json.dumps({k:p[k] for k in (\"status\",\"page_count\",\"pdf\")})); r=review(out/\"document.pdf\",assets,b/\"controlled_fragment_trace_manuscript_20261010_v1_layout_v2\",[\"Retained Fragment Representative Protocol\",\"Retained Fragment Pipeline Observations\",\"Representative Trace Limitations\"]); print(json.dumps({k:r[k] for k in (\"page_count\",\"bounds_violations\",\"phrase_matches\")}))'",
+      "tool_result": {
+        "chunk_id": "220041",
+        "wall_time_seconds": 0.000010626,
+        "exit_code": 1,
+        "original_token_count": 67,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/print_manuscript_review.py\", line 9, in <module>\n    import fitz\nModuleNotFoundError: No module named 'fitz'\n"
+      }
+    },
+    "scientific_or_print_attempt_started": false,
+    "cause": "Minimal Python 3.10 has no PyMuPDF; import failed before any print directory/browser launch."
+  },
+  "actual_print_and_layout": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.print_manuscript_review import print_review; from benchmark_tools.review_manuscript_pdf import review; b=root/\"benchmark_tools/results\"; assets=b/\"controlled_fragment_trace_manuscript_20261010_v1_assets_v2.json\"; out=b/\"controlled_fragment_trace_manuscript_20261010_v1_print_v2\"; p=print_review(assets,out,Path(\"/opt/google/chrome/google-chrome\")); print(json.dumps({k:p[k] for k in (\"status\",\"page_count\",\"pdf\")})); r=review(out/\"document.pdf\",assets,b/\"controlled_fragment_trace_manuscript_20261010_v1_layout_v2\",[\"Retained Fragment Representative Protocol\",\"Retained Fragment Pipeline Observations\",\"Representative Trace Limitations\"]); print(json.dumps({k:r[k] for k in (\"page_count\",\"bounds_violations\",\"phrase_matches\")}))'",
+      "tool_result": {
+        "chunk_id": "75e85a",
+        "wall_time_seconds": 1.000794074,
+        "session_id": 88405,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "0809bf",
+      "wall_time_seconds": 0.00001337,
+      "exit_code": 0,
+      "original_token_count": 133,
+      "output": "{\"status\": \"verified_html_printed\", \"page_count\": 30, \"pdf\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1_print_v2/document.pdf\", \"bytes\": 619622, \"sha256\": \"064b1cb0093f515ff3ff0e40a96ef633dcae36968687674777a4b57a13062bad\"}}\n{\"page_count\": 30, \"bounds_violations\": [], \"phrase_matches\": {\"Retained Fragment Representative Protocol\": [4], \"Retained Fragment Pipeline Observations\": [19], \"Representative Trace Limitations\": [27]}}\n"
+    },
+    "python": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python",
+    "pymupdf": "1.27.2.3",
+    "browser_sandbox_disabled": false
+  },
+  "independent_pdf_readback": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import csv,json,sys,hashlib; from pathlib import Path; import fitz; b=Path(\"benchmark_tools/results\"); pdf=b/\"controlled_fragment_trace_manuscript_20261010_v1_print_v2/document.pdf\"; doc=fitz.open(pdf); text=\" \".join(\" \".join(p.get_text().split()) for p in doc); rows=list(csv.DictReader((b/\"controlled_fragment_trace_integration_20261010_v1/representative_locations.tsv\").open(),delimiter=\"\\t\")); labels={\"orthohmm_high_sensitivity\":\"HS\",\"orthohmm_satellite_v2\":\"PHY\",\"orthofinder_full\":\"OF\",\"orthofinder_sequence_only\":\"OF checkpoint\"};\nfor row in rows:\n expected=\" \".join((labels[row[\"method\"]],row[\"observed_location\"].replace(\"_\",\" \"),row[\"baseline_representatives\"],row[\"fragment_representatives\"])); assert expected in text,expected\nfor phrase in (\"Retained Fragment Representative Protocol\",\"Retained Fragment Pipeline Observations\",\"Representative Trace Limitations\",\"Case0000\",\"Case0026\",\"Case0030\",\"unknown and potentially tool-dependent impact\"): assert phrase in text,phrase\nprint(json.dumps({\"status\":\"independent_printed_trace_cells_verified\",\"page_count\":len(doc),\"location_rows\":11,\"numeric_location_cells\":22,\"illustrative_ids\":3,\"pdf_sha256\":hashlib.sha256(pdf.read_bytes()).hexdigest()}))'",
+    "tool_result": {
+      "chunk_id": "4e2765",
+      "wall_time_seconds": 0.070915871,
+      "exit_code": 0,
+      "original_token_count": 58,
+      "output": "{\"status\": \"independent_printed_trace_cells_verified\", \"page_count\": 30, \"location_rows\": 11, \"numeric_location_cells\": 22, \"illustrative_ids\": 3, \"pdf_sha256\": \"064b1cb0093f515ff3ff0e40a96ef633dcae36968687674777a4b57a13062bad\"}\n"
+    }
+  },
+  "manuscript": {
+    "path": "benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1.md",
+    "bytes": 101043,
+    "sha256": "df932f2299f47494851235fce68989a33f2bc24390bb4511597f445239b24b3c"
+  },
+  "pdf": {
+    "path": "benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1_print_v2/document.pdf",
+    "bytes": 619622,
+    "sha256": "064b1cb0093f515ff3ff0e40a96ef633dcae36968687674777a4b57a13062bad",
+    "pages": 30
+  },
+  "asset_scope": {
+    "citation_ids": 19,
+    "local_link_occurrences": 139,
+    "unique_local_targets": 134,
+    "untracked_targets": 0
+  },
+  "manual_visual_review": {
+    "pages_individually_viewed": [
+      4,
+      5,
+      19,
+      20,
+      27
+    ],
+    "no_observed_clipping_or_overlap": true,
+    "location_table_columns_visible": true,
+    "location_table_continues_with_repeated_header": true,
+    "full_document_review": false,
+    "publication_ready": false
+  },
+  "limitations": [
+    "Manual review covers changed sections only, not all 30 pages.",
+    "No new inference, scoring, bootstrap or initial-HMM causal control.",
+    "Retained diagnostic cases do not establish prevalence, natural-fragment biology or general superiority.",
+    "Original seven-part scientific requirements remain incomplete."
+  ]
+}

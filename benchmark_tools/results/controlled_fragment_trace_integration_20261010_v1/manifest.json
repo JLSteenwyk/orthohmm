@@ -1,0 +1,80 @@
+{
+  "bounded_status_replacement": {
+    "after": "Representative search/candidate/group/reconciliation tracing\nis reported in the next section, with unobserved stages retained explicitly.",
+    "before": "Representative search/candidate/group/reconciliation tracing\nremains separate work."
+  },
+  "inputs": {
+    "execution": {
+      "bytes": 16024,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_execution_20261010_v1.json",
+      "sha256": "221ac09bcb21ee9ef1192f9fff7d948d1c1ea0a7f846cfc2e9dbb7a2aa7dad32"
+    },
+    "parent": {
+      "bytes": 96067,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_manuscript_20261009_v1.md",
+      "sha256": "71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a"
+    },
+    "readback": {
+      "bytes": 11509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json",
+      "sha256": "2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35"
+    },
+    "selection": {
+      "bytes": 726641,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_selection_20261009_v1/selection.json",
+      "sha256": "e072dbff2c570f1926bf46ba2ad1dcdbf31ce5197d8c3461dc3576edb41b8594"
+    },
+    "stages": {
+      "bytes": 289229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json",
+      "sha256": "0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c"
+    }
+  },
+  "location_rows": 11,
+  "manuscript": {
+    "bytes": 101043,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1.md",
+    "sha256": "df932f2299f47494851235fce68989a33f2bc24390bb4511597f445239b24b3c"
+  },
+  "manuscript_rendered": false,
+  "new_bootstrap_draws": 0,
+  "new_inference_or_scoring": false,
+  "outputs": [
+    {
+      "bytes": 356,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_integration_20261010_v1/claims.md",
+      "sha256": "6899d31a945590d5c3a778a8cb2cdbc2557a20a9d1061d9892d07bf2f531c456"
+    },
+    {
+      "bytes": 731,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_integration_20261010_v1/limitations_section.md",
+      "sha256": "3ce892393b6cc0a91812b62bbac7fe309c07a1eec2d18ac3cb2c2985a1160dc6"
+    },
+    {
+      "bytes": 1966,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_integration_20261010_v1/methods_section.md",
+      "sha256": "2ceaf6df2f7fc0032be5d9f7dace6813102a0e2b3bb13d12b93e0951ba61b2c3"
+    },
+    {
+      "bytes": 616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_integration_20261010_v1/representative_locations.tsv",
+      "sha256": "55d54a33c24938d0194129559b4b57365ecbbcb482fbe554dcbf7e8084980356"
+    },
+    {
+      "bytes": 2225,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_integration_20261010_v1/results_section.md",
+      "sha256": "7d9b2bd8304ead94fee7e1219aa41c1301fe3f1f3bec3edf6f9c04134b310da5"
+    }
+  ],
+  "parent_body_unchanged_except_insertions_and_recorded_status": true,
+  "publication_ready": false,
+  "schema": "controlled_fragment_trace_integration_v1",
+  "selected_cases": 53,
+  "source": {
+    "bytes": 13277,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_controlled_fragment_trace.py",
+    "sha256": "26b879c954b22b280bc0812ed7790f78de93d68e811e914293674f1a7a2e5de6"
+  },
+  "stage_rows": 106,
+  "visual_reviewed": false
+}
