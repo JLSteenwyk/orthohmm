@@ -1,5 +1,30 @@
 # Publication Progress
 
+## Completed Supplement Integration Source Tested (2026-10-10)
+
+Scoped result/guide integration 3f2aa311 pushed. Prepared one prospective
+integrate_publication_supplements.py reporting successor using the existing
+record/require helpers and only three directly pinned completed inputs.
+Two sections add the conditional-model outcome and actual relocated replay
+to a fresh manuscript; removing them restores the entire parent byte content.
+No prior score, claim, native uncertainty limit or frozen artifact is altered.
+Failure controls, local-only raw component and old-PDF provenance are explicit.
+
+Actual focused/adjacent test invocation EXIT0: 68 passed in 1.65s, including
+changed data/pins/scopes, missing/duplicate panel cells, occupied outputs,
+ambiguous/already-integrated anchors and exact full-parent restoration.
+No live handle remains. The actual production generation has NOT run yet.
+
+NEXT commit/push this tested source and tests, then invoke run once using
+the existing sanitized Python 3.12 runtime at the fresh manuscript
+benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md
+and receipt benchmark_tools/results/publication_supplements_generation_20261010_v1.json:
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.integrate_publication_supplements import run; r=run(Path.cwd(),"benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md","benchmark_tools/results/publication_supplements_generation_20261010_v1.json"); print(r["manuscript"])'`
+Check actual parent restoration, new-section numbers/links and explicit
+non-admission flags; link the successor in the mutable guide and commit/push.
+This is original7.3 reporting integration, not a new replay, scientific panel,
+render/archive gate or whole-goal completion. Full goal remains ACTIVE.
+
 ## Restricted Boundary Result Integrated; Main Text Supplements Remain (2026-10-10)
 
 Previous goal turn was progress: 4c380216 corrected the stale checkpoint and
