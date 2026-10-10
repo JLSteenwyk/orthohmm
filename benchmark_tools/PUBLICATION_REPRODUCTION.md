@@ -29,14 +29,22 @@ relocated replay and restricted count-model outcomes to their limits. It keeps
 both negative F1 comparisons and non-Poisson failures explicit, supplements
 the original claim checklist, and does not admit native intervals or readiness.
 
-The [current manuscript](results/publication_supplements_manuscript_20261010_v1.md)
-adds the completed restricted-model validation and actual relocated fragment
-replay to the prior fragment-trace text. Its
+The [current manuscript](results/publication_conditional_fas_manuscript_20261010_v1.md)
+adds the retained September conditional-FAS table and explicit target/snapshot
+qualifications to the completed supplement text. Its
+[generation record](results/publication_conditional_fas_generation_20261010_v1.json)
+and [actual execution/readback](results/publication_conditional_fas_execution_20261010_v1.json)
+verify two scoped insertions, eight table rows, four new links and exact byte
+restoration of the entire 103788-byte parent. The preceding
+[supplement manuscript](results/publication_supplements_manuscript_20261010_v1.md)
+contains the restricted count-model validation and relocated fragment replay;
+its earlier
 [generation record](results/publication_supplements_generation_20261010_v1.json)
 and [actual execution/readback](results/publication_supplements_execution_20261010_v1.json)
 verify two insertions, six new local links and exact restoration of the complete
 parent body. The earlier 30-page PDF renders the earlier manuscript, not this
-successor. No new native interval, score, default or publication admission follows.
+successor or the current conditional-FAS text. No new observed score, default,
+biological/unconditional historical interval admission or publication readiness follows.
 
 The [conditional paired-Poisson result](results/PAIRED_POISSON_F1_RESULT_20261010.md)
 reports the already-completed 12-cell mathematical validation and both failing

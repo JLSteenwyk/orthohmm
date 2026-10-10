@@ -1,0 +1,42 @@
+{
+  "biological_generalization_intervals": false,
+  "conditional_design_ranges_reported": true,
+  "inputs": {
+    "execution": {
+      "bytes": 20515,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_fas_conditional_execution_20261010_v1.json",
+      "sha256": "fd3572b7a29f8cfbb7a9221ea5d92f6956bd6e9d344dff7eef87a90473d26675"
+    },
+    "parent": {
+      "bytes": 103788,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md",
+      "sha256": "43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b"
+    },
+    "report": {
+      "bytes": 21615,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_fas_conditional_report_20261010_v1/report.json",
+      "sha256": "83548e93afd5ffe0eeeef13250684dd65485b9efba1934d3377787659f7b3d7f"
+    }
+  },
+  "inserted_sections": [
+    "### Conditional Sampling In Retained Eight-Method FAS\n\nThis analysis concerns the retained September eight-method comparator snapshot,\nnot the later four-cell fresh-native ablation above. It adds algorithmic\nsampling uncertainty without changing an observed score, method or default.\n\nCondition on eligible pair populations, annotation/lookup/scoring options and\nthe retained full precomputed mean mu_P. Assume uniform without-replacement\nselection and independent strata within a method, with fixed per-pair numeric\nreturn status/value under normal successful execution. If G of M missing-lookup\npairs return numeric values, R is hypergeometric for c requests. The expected\nnative ratio is theta=w*mu_P+(1-w)*mu_G, w=E[k/(k+R)], not substitution of E[R].\nCount-tail inversion and conditional bounded-mean concentration are projected\nthrough this mixture. Alpha=0.05 is allocated across two components for each\nof eight methods; their joint rectangle supplies all 28 difference ranges\nwithout assuming cross-method independence. Score-dependent omissions are\nallowed, with no missing-at-random or biological pair/family independence.\n\n| Retained Method | Observed Native Z | Conditional 95% Expected-Theta Range |\n| --- | ---: | --- |\n| orthohmm_high_sensitivity | 0.776585042 | [0.771332967, 0.780286193] |\n| orthohmm_phylogeny_satellite_v2 | 0.762993312 | [0.761929649, 0.763906702] |\n| orthofinder_3_1_5_full | 0.691422133 | [0.688429518, 0.694915139] |\n| orthofinder_3_1_5_sequence_only | 0.561753084 | [0.546499945, 0.577724179] |\n| sonicparanoid_2_0_9 | 0.736680187 | [0.732115268, 0.738512044] |\n| proteinortho_6_3_6 | 0.813594864 | [0.813565174, 0.813689528] |\n| fastoma_0_3_5 | 0.654366336 | [0.643583534, 0.662539506] |\n| orthomcl_1_4 | 0.733752216 | [0.731706501, 0.735008398] |\n\nObserved Z and expected theta are distinct: unknown G/mu_G preclude an exact\ntheta point value. These ranges are not biological error bars centered on Z.\nBoth OrthoHMM modes exceed full OrthoFinder on this conditional FAS target,\nbut Proteinortho exceeds both; high sensitivity exceeds phylogenetic OrthoHMM.\nSonicParanoid versus OrthoMCL overlaps zero. All favorable and unfavorable\ncontrasts are retained. This is not overall orthology superiority or a causal\nexplanation, and earlier negative F1 comparisons remain unchanged.\n\nThe prospective finite-population validation covers 15 cells, including four\nliteral 9000-cap cases; its context-dependent-return control is rejected.\nIndependent 80-digit recurrence readback checks native count endpoints, weights\nand all ranges/projections without producer/kernel/SciPy imports. Conditional\ndesign assumptions, unestablished historical parser/database bindings and\nmissing historical RNG/pair identities remain limitations, not certificates.\nNo biological generalization, other-endpoint uncertainty or readiness is admitted.\n[Frozen reporting plan](NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md),\n[actual conditional result and limits](NATIVE_FAS_CONDITIONAL_RESULT_20261010.md),\n[all 28 contrasts](native_fas_conditional_report_20261010_v1/summary.md),\n[actual execution and independent readback](native_fas_conditional_execution_20261010_v1.json).\n\n",
+    "The conditional repeated-statistic analysis above adds a distinct sampling\ntarget for the retained eight-method FAS comparison. It does not identify\nfull-eligible-population functional accuracy or new-family/clade uncertainty.\nEarlier population-bound and stratum-weight diagnostics alone do not supply\nconfidence intervals; the conditional ranges additionally require the stated\nuniform/fixed-return design assumptions and validation. Historical source\nidentity and biological/generalization gaps remain unresolved. The newer\nnative factorial's GO/EC/FAS uncertainty is not supplied by this older snapshot.\n\n"
+  ],
+  "manuscript": {
+    "bytes": 107595,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md",
+    "sha256": "d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977"
+  },
+  "manuscript_rendered": false,
+  "new_inference_or_scoring": false,
+  "parent_unchanged_except_insertions": true,
+  "publication_ready": false,
+  "schema": "conditional_fas_manuscript_integration_v1",
+  "source": {
+    "bytes": 9500,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_conditional_fas_manuscript.py",
+    "sha256": "4036d873d54475731a229d79b8c1df7e4f4baae17c49b2f4f2b4b701bc5514f0"
+  },
+  "unconditional_historical_interval_admission": false,
+  "visual_reviewed": false
+}

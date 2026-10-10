@@ -1,0 +1,68 @@
+{
+  "schema": "conditional_fas_manuscript_execution_v1",
+  "source_commit_pushed_before_generation": "801cba5a",
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_integrate_conditional_fas_manuscript.py tests/unit/test_report_native_fas_conditional.py tests/unit/test_integrate_publication_supplements.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 3000
+    },
+    "observations": [
+      {
+        "chunk_id": "af3978",
+        "wall_time_seconds": 1.001153267,
+        "session_id": 41540,
+        "original_token_count": 0,
+        "output": ""
+      },
+      {
+        "chunk_id": "b220f7",
+        "wall_time_seconds": 0.000014192,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": ".............................................                            [100%]\n45 passed in 1.24s\n"
+      }
+    ]
+  },
+  "generation": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.integrate_conditional_fas_manuscript import run; r=run(Path.cwd(),\"benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md\",\"benchmark_tools/results/publication_conditional_fas_generation_20261010_v1.json\"); print(r[\"manuscript\"])'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 1500
+    },
+    "result": {
+      "chunk_id": "aa9380",
+      "wall_time_seconds": 0.000017717,
+      "exit_code": 0,
+      "original_token_count": 62,
+      "output": "{'path': '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md', 'bytes': 107595, 'sha256': 'd357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977'}\n"
+    }
+  },
+  "scoped_readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nbase=Path(\"benchmark_tools/results\")\ngeneration=json.loads((base/\"publication_conditional_fas_generation_20261010_v1.json\").read_text())\ncurrent=base/\"publication_conditional_fas_manuscript_20261010_v1.md\"\ndata=current.read_bytes()\nparent=Path(generation[\"inputs\"][\"parent\"][\"path\"]).read_bytes()\nrestored=data\nfor section in generation[\"inserted_sections\"]:\n piece=section.encode()\n assert restored.count(piece)==1\n restored=restored.replace(piece,b\"\",1)\nassert restored==parent\nassert len(parent)==103788 and hashlib.sha256(parent).hexdigest()==\"43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b\"\nfor ref in list(generation[\"inputs\"].values())+[generation[\"source\"],generation[\"manuscript\"]]:\n raw=Path(ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\nreport=json.loads(Path(generation[\"inputs\"][\"report\"][\"path\"]).read_text())\nsection=generation[\"inserted_sections\"][0]; rows=[line for line in section.splitlines() if line.startswith(\"| \")][2:]\nassert len(rows)==8\nfor line,row in zip(rows,report[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0]==row[\"method\"] and float(fields[1])==round(row[\"observed_native_mean\"],9)\n assert fields[2]==\"[%.9f, %.9f]\" % tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\nfor text in generation[\"inserted_sections\"]:\n for target in re.findall(r\"\\]\\(([^)]+)\\)\",text): assert (current.parent/target).resolve().exists()\nnormalized=re.sub(r\"\\s+\",\" \",section)\nassert \"not the later four-cell\" in normalized and \"not biological error bars centered on Z\" in normalized\nassert \"Proteinortho exceeds both\" in normalized and \"earlier negative F1 comparisons remain unchanged\" in normalized\nassert \"Unknown\" not in normalized or \"theta point value\" in normalized\nassert \"newer native factorial\" in re.sub(r\"\\s+\",\" \",generation[\"inserted_sections\"][1])\nassert generation[\"parent_unchanged_except_insertions\"] is True and generation[\"conditional_design_ranges_reported\"] is True\nfor key in (\"new_inference_or_scoring\",\"unconditional_historical_interval_admission\",\"biological_generalization_intervals\",\"publication_ready\",\"manuscript_rendered\",\"visual_reviewed\"): assert generation[key] is False\nprint(json.dumps(dict(status=\"scoped_conditional_fas_manuscript_readback_passed\",parent_bytes=len(parent),manuscript_bytes=len(data),manuscript_sha256=hashlib.sha256(data).hexdigest(),insertions=2,table_rows=8,new_links=4,parent_restored_byte_exact=True,manuscript_rendered=False),sort_keys=True))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "result": {
+      "chunk_id": "94622f",
+      "wall_time_seconds": 0.000016375,
+      "exit_code": 0,
+      "original_token_count": 81,
+      "output": "{\"insertions\": 2, \"manuscript_bytes\": 107595, \"manuscript_rendered\": false, \"manuscript_sha256\": \"d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977\", \"new_links\": 4, \"parent_bytes\": 103788, \"parent_restored_byte_exact\": true, \"status\": \"scoped_conditional_fas_manuscript_readback_passed\", \"table_rows\": 8}\n"
+    }
+  },
+  "manuscript": {
+    "path": "publication_conditional_fas_manuscript_20261010_v1.md",
+    "bytes": 107595,
+    "sha256": "d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977"
+  },
+  "conditional_design_ranges_reported": true,
+  "unconditional_historical_interval_admission": false,
+  "biological_generalization_intervals": false,
+  "publication_ready": false,
+  "manuscript_rendered": false
+}

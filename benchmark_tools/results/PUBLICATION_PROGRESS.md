@@ -1,5 +1,53 @@
 # Publication Progress
 
+## Conditional Native FAS Is In The Current Manuscript (2026-10-10)
+
+This turn pushed actual eight-method ranges, all28 contrasts and independent
+native-scale recurrence readback as 15c563fe, then documented both harness
+failures/corrected check and tested manuscript source as 801cba5a BEFORE
+generation. Earlier producers, native scores, samples and timings were not rerun.
+Conditional design analysis is explicitly distinct from unconditional historical
+or biological admission. It applies to retained September comparator data,
+not the later native four-cell ablations or a newly tuned default.
+
+Actual manuscript tests EXIT0: 45 passed in 1.24s. Actual generation EXIT0:
+publication_conditional_fas_manuscript_20261010_v1.md, 107595 bytes, SHA
+d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977.
+Independent scoped readback EXIT0 verifies two insertions, all eight native Z/
+expected-theta table rows, four new links, three direct inputs and source pin;
+removing inserted bytes restores the complete 103788-byte parent exactly.
+Actual commands/test/generation/readback outcomes are in
+publication_conditional_fas_execution_20261010_v1.json; generation bindings
+in publication_conditional_fas_generation_20261010_v1.json. Mutable guide
+identifies the successor and distinguishes the earlier 30-page PDF. No new
+render, visual review, archive, native benchmark, default or readiness claim.
+All handles terminal. Full seven-part goal ACTIVE/incomplete.
+
+Both HMM modes' conditional expected-FAS contrasts with fullOF are positive
+in the retained comparator snapshot, while Proteinortho exceeds both and
+Sonic/OrthoMCL includes zero. Negative F1 remains intact. Source/protocol/
+unknown-historical-binding and sampling assumptions stay explicit; no observed
+mean is used as an exact theta point or as center of biological error bars.
+Other endpoint uncertainty and the newer factorial's functional uncertainty
+are not supplied by these older-snapshot intervals.
+
+NEXT commit/push this completed manuscript integration, then return to
+original4.1's genuinely unresolved newer-native functional uncertainty. Inspect
+the four admitted native cells' retained FAS aggregates, sample counts and
+native scorer source to determine whether the same real sampling design can
+support uncertainty when the full precomputed population mean is unavailable.
+Start with `sed -n '548,572p' benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md`
+and the linked four-cell score/functional reports. Use retained aggregates/logs
+and already pinned source; do not rerun scoring, old context/validation panels
+or large database/lookup recounts. An unknown precomputed mean must carry
+sampling uncertainty; do not reuse the older eight-method mean or shared-pair
+subset as a replacement. First establish actual k/c/r/design/target mapping.
+Any justified extension needs a prospective derivation/tests/freeze before
+native application and must retain arbitrary cross-method dependence and
+historical limitations. Otherwise retain that specific unavailable outcome
+and advance another original requirement, not another convenient gene-dependence
+toy. Do not alter defaults or claim full biological/overall superiority.
+
 ## Conditional FAS Manuscript Adapter Tested Before Generation (2026-10-10)
 
 15c563fe pushed actual ranges/readback. Both document-check failures and the
