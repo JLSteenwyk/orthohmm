@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Runner Restored; Representatives Selected And Verified (2026-10-10)
+
+Normal attachment/repository reads and commands now execute. The intervening
+three-turn bwrap loopback/RTM_NEWADDR failure prevented all commands and both
+checkpoint edits; no scientific run occurred then. User resumed goal ACTIVE.
+Actual localHEAD/origin both9a9b076b, no commit/push retry required. Previous
+no-progress blocked state is resolved, not a quiet-host or DGX requirement.
+
+Real selector executed exactly once at the previously absent
+controlled_fragment_trace_selection_20261009_v1, EXIT0. All84planned bins:
+53selected/31empty/53unique method-pair records, no overlapping representatives
+in this realized selection. selection.json726641bytes,
+SHAe072dbff2c570f1926bf46ba2ad1dcdbf31ce5197d8c3461dc3576edb41b8594.
+Independent native group/pair readers plus Boolean category tests reproduce
+all80original TP/FP/FN, all84eligibility counts/hash minima, every comparator
+label and serialized bin, EXIT0. No new score or bootstrap. Save this selection;
+do not repeat the completed selector, original baselines or inference.
+
+New trace_controlled_fragment_stages.py and focused tests prepared. It reuses
+numeric-checkpoint, graph/connectivity, candidate partition/seed sidecar,
+observed-node/LCA and logged-root-constraint helpers. It binds stage artifacts
+to original execution inventories and metrics to the distinct baseline versus
+fragment admissions. Missing significant hit is not a diagnosed prefilter
+failure. OrthoFinder stages are MCL/native pair observations; unmatched search
+or event evidence stays NULL/unavailable. Exact native selected-pair labels
+must agree with recorded positive-paralogy and active root-membership rules.
+The frozen pipeline activates membership filtering only for nonempty constraints;
+final RootHOG membership alone does not imply a pair was filtered.
+
+Commit/push tested trace source/tests and this ledger before its one execution,
+also retain the verified selection.json/bins.tsv. Then sanitized command:
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.trace_controlled_fragment_stages import run; b=root/"benchmark_tools/results"; r=run(root,b/"controlled_fragment_trace_selection_20261009_v1/selection.json","e072dbff2c570f1926bf46ba2ad1dcdbf31ce5197d8c3461dc3576edb41b8594",b/"controlled_fragment_stage_trace_20261010_v1"); print(json.dumps({k:r[k] for k in ("status","stage_rows")}))'`
+Expected106baseline/fragment observations for the fixed53cases. Independently
+read back those stages and retain neutral, negative and unexplained cases,
+then integrate bounded representative findings in the latest fragment draft.
+No live job/session or resource gate; full goal ACTIVE/incomplete. No initial
+HMM-off causal control, natural-fragment truth or new independent biology.
+
 ## Fragment Representative Selection Tested (2026-10-09)
 
 Previous goal turn made actual progress: fccbeb68 pushed the integrated
