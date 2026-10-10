@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Native FAS Figure Renderer Tested Before Production (2026-10-10)
+
+c93fee9c pushed completed 112030-byte manuscript integration and actual
+generation/readback records. No pending manuscript producer or commit remains.
+Prepared plot_native_factorial_fas_sampling.py using retained result JSON and
+existing matplotlib/record/check/require conventions, without native replay.
+Two panels show four expected-ratio ranges and all six contrasts; observed Z
+is offset separately rather than used as an expected-ratio estimate or interval
+center. Target/allocation/arithmetic/zero-status and admission scopes are checked.
+
+Actual focused tests EXIT0:19 passed in1.71s. Temporary renderer test checks
+2900x1360 pixels, nonblank raster, vector cell/target/qualification labels and
+PDF signature; no production figure generated yet. No live handle. Full goal
+ACTIVE/incomplete; no biological intervals, score/sampling changes or readiness.
+
+NEXT commit/push tested plotting source/tests, then render ONCE using run(repo,
+Path("benchmark_tools/results/native_factorial_fas_sampling_figure_20261010_v1")).
+Inspect the actual PNG, SVG/PDF and bound plotted values; integrate the figure
+link/caption into existing current reporting without changing scores or parent
+manuscript bytes. An existing production output means inspect/integrate, not
+repeat rendering or statistics. No new all-study render/archive gate.
+
 ## Four Native FAS Results Integrated Into Current Manuscript (2026-10-10)
 
 88ddb696 froze tested native four-cell source/protocol before calculation;
