@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Stage Readback NA Serialization Recovery Prepared (2026-10-10)
+
+Tested independent reader e49fd970 committed/pushed before its one actual
+execution. Terminal EXIT1 at TSV equality, after all106 native observation,
+selected identity, comparator and summary checks passed. Cause established:
+frozen exporter writes JSON null as TSV "NA"; reader wrongly expected an
+empty cell. Scientific report/table unchanged, no independent-success claim.
+Failed command/result retained in tool records for the final execution receipt.
+Original reader SHA f353ef1d9603a1bf1f4ee50db015d0f23fb24fd07e423590c74590e00a643952
+stays frozen. New readback_controlled_fragment_stage_table.py reuses its
+independent native/graph/node algorithms and corrects only serialization.
+Test NA/empty/False distinction and exact header/count; commit/push focused
+successor/tests/ledger before one deterministic readback recovery at fresh
+controlled_fragment_stage_readback_20261010_v2.json. This is authorized
+postprocessing recovery, not another inference/scoring/stage producer run.
+On success retain actual receipt/stage results and integrate representative
+findings into the fragment manuscript. Goal ACTIVE; no live handle/host gate.
+
 ## Independent Fragment Stage Readback In Progress (2026-10-10)
 
 Previous turn was progress: continuation fix 36fb7087 committed/pushed, actual
