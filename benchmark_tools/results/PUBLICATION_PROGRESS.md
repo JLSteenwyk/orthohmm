@@ -1,5 +1,38 @@
 # Publication Progress
 
+## Native FAS Context Check Reviewed Before First Execution (2026-10-10)
+
+Previous turn was progress: c18c9c8d pushed partial-work continuation and the
+corrected checkpoint. Resumed the existing draft without replacing it. Fixed
+pre-execution evidence loss for malformed/missing JSON, native-loader mismatch
+and exceptions before/after child launch. Raw text and child stdout/stderr
+remain available on failure; failure rows cannot pass invariance admission.
+The native helper, child flags, scorer, parser and sampling logic are unchanged.
+
+The prospective source defines 12 order/companion/worker/hash contexts and
+40 pair evaluations across six pairs. Four focal pairs cover identical and
+nonidentical numeric scores, priority mode and a path-limit NA; the latter's
+historical mechanism is not rerun as a separate probe. This is a new controlled
+batch-context check, not historical scores or attribution of old omissions.
+All-context agreement is a finite source/fixture check, not proof for every pair.
+No interval or native sampling-law admission follows automatically.
+
+Actual focused/adjacent tests EXIT0: 86 passed. The retained native image SHA
+62b8f97bca23b67d451384f94108a5510d5fafc1bc398f95ab93532d324563fe
+matches the existing binding. Read-only native create_jobs source confirms
+taxon filenames and unchanged child pipeline. No scoring execution yet.
+The intended result path is absent. Available memory was 653862 MiB; competing
+CPU load is not a gate. Only the new driver/children get two-CPU affinity,
+4-GiB per-process address-space limit, one numerical thread and 120-s child cap.
+No unrelated jobs, services, scheduler configuration or DGX are touched.
+
+NEXT commit/push reviewed source and tests, then execute ONCE at the fresh path:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 singularity exec --cleanenv --env PYTHONHASHSEED=0,PYTHONDONTWRITEBYTECODE=1,OPENBLAS_NUM_THREADS=1,OMP_NUM_THREADS=1,MKL_NUM_THREADS=1 qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img python -B benchmark_tools/probe_native_fas_context.py --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_context_probe_20261010_v1.json`
+Inspect the same handle to terminal if live. Validate raw/normalized bindings,
+contexts, invariance failures and source pins without rerunning the producer.
+If the output already exists, validate/integrate it rather than executing again.
+Full goal remains ACTIVE and incomplete; no live handle at this checkpoint.
+
 ## Continuation Handoff Corrected For Existing Draft (2026-10-10)
 
 Direct user maintenance request: fix the repeatedly interrupted goal workflow.
