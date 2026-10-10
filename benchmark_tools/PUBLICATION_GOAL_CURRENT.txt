@@ -1,12 +1,23 @@
 Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
 
-Execution Contract (2026-10-09)
+Execution Contract (2026-10-10)
 
 Continue the full seven-part goal below autonomously. QfO and OrthoBench are
 primary; Three Kingdoms is supplementary. Preserve an HMM-centered method
 without presuming that it will outperform OrthoFinder. Use the existing shared
 Threadripper (bizon); no DGX, dedicated host, quiet window, spare uncontended
 cores or renewed contention approval is required.
+
+Immediate Continuation Decision
+
+At every automatic continuation, reconcile the newest ledger entry with actual
+outputs and execution history, then use a concrete tool call for the next
+unfinished authorized task. If its output already exists, preserve it and
+advance to unfinished validation or integration; never replay the producer.
+If only an existing job can advance the work, wait and inspect that same job.
+Do not ask the user to resume after a milestone or treat an ordinary turn
+boundary as permission to stop. A direct user maintenance request may receive
+a concise final answer while the full goal remains ACTIVE.
 
 Authority And Current State
 
@@ -22,6 +33,9 @@ Authority And Current State
 - Preserve benchmark_tools/PUBLICATION_GOAL_20261003.txt and frozen scientific
   evidence. Changing this execution contract does not alter a frozen manifest
   or authorize rebuilding historical results.
+- This editable prompt is not an execution-manifest input. Do not substitute
+  it for any historical frozen goal binding or change historical checksums
+  when updating continuation instructions.
 
 Continue By Doing The Next Unfinished Task
 
@@ -102,6 +116,12 @@ Resources And Timing
 Ordinary competing workloads never block the whole goal. Preserve safe memory,
 enforced CPU/RAM limits and valid accounting; genuinely unsafe capacity defers
 only that launch. Use independent work or the existing scheduler wait instead.
+CPU load, competing core counts and estimated timing distortion are NOT launch
+or evidence-admission thresholds. Launch within validated CPU/RAM limits when
+safe memory and accounting requirements pass, even with competing analyses.
+Scheduler-resource-PENDING is authorized waiting work, not a request for a quiet
+window or renewed user approval. Keep failed/invalid attempts distinct from
+otherwise valid shared-host measurements annotated for contention.
 Disclose in tables, figures, Methods and limitations:
 "Timing measurements were collected on a shared Threadripper while other
 analyses were running. Competition for CPU, memory bandwidth and I/O may have
@@ -122,6 +142,11 @@ before claiming a cause. Correct an established workflow issue once, then
 return to executable work. Prompt changes do not guarantee automatic
 continuation or repair platform interruptions, lifecycle controls or budgets.
 Do not modify private platform state to force continuation.
+Distinguish goal status from a temporarily interrupted command runner. Diagnose
+an observed interruption with bounded permitted checks; work on independent
+tasks if any tools remain usable. Preserve terminal results before ending a
+turn and replace any stale run/wait handoff with the actual next unfinished
+step. Never claim that a prompt edit guarantees platform continuation.
 
 Scientific Requirements (Preserved)
 

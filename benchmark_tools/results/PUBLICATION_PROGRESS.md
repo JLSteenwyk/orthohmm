@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Continuation Contract And Stale Handoff Corrected (2026-10-10)
+
+User requested a fix for repeated goal stops. Actual goal is ACTIVE with no
+token budget; its objective references the editable attachment. Attachment
+and repository prompt were already identical and authorized shared-host work.
+Do not attribute a platform stop to resource contention without evidence.
+The prior bwrap runner interruption is resolved. This maintenance request
+does not pause or complete the scientific goal.
+
+Execution contract now puts the concrete continuation decision first and
+explicitly forbids CPU load/competing-core counts as launch or admission
+thresholds. Safe memory, enforced CPU/RAM limits and accounting remain required.
+Pending jobs mean wait/use independent work; completed milestones do not
+require user resume. Both editable copies updated together; historical goal
+and the full seven-part scientific scope remain byte-for-byte unchanged.
+Old prompt guards had 26 failures/2 passes/1 optional skip because they
+required obsolete prose. Updated focused guards test the current contract,
+unchanged scientific scope, historical binding and local attachment equality;
+they do not test or repair the platform dispatcher.
+Validation: 44 focused current-contract/historical-reaffirmation tests passed
+in 0.71s with ORTHOHMM_CURRENT_GOAL_ATTACHMENT set to the actual linked file;
+no skipped attachment check. Scoped git diff --check passed. Commit/push only
+the current prompt, focused guards and this ledger, not pending trace outputs.
+
+Actual HEAD b2b2e222 includes tested tracer and verified selection, and its
+push succeeded. The previously instructed stage producer ALREADY executed
+once, EXIT0, with status retained_stages_verified and 106 stage rows. Preserve:
+benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json
+289229 bytes, SHA256
+0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c.
+Adjacent stages.tsv and report are still uncommitted scientific outputs;
+do not stage them as validated maintenance results or rerun their producer.
+The report's status is producer validation, NOT independent readback.
+
+NEXT: independently read back the 106 retained baseline/fragment observations
+for the 53 selected cases, checking native pair labels, significant-hit rows,
+graph connectivity and available candidate/node/root observations. Keep
+unavailable OrthoFinder search/event fields NULL, distinguish absent hits from
+unobserved prefilter decisions and respect active membership-filter rules.
+No inference, scoring, selector or stage producer rerun. First command:
+`sed -n '1,240p' benchmark_tools/trace_controlled_fragment_stages.py`
+Then implement the focused independent readback using original selected
+bindings/native artifacts (not importing the stage producer), retain its
+actual result and proceed to bounded manuscript integration. Do not relaunch
+the completed timing panel. No live scientific handle or resource gate;
+full goal ACTIVE and incomplete. Preserve unrelated sample/browser changes.
+
 ## Runner Restored; Representatives Selected And Verified (2026-10-10)
 
 Normal attachment/repository reads and commands now execute. The intervening

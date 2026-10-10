@@ -1,4 +1,4 @@
-"""Guard the current instructions, not the platform's continuation dispatcher."""
+"""Guard the editable execution contract, not the platform dispatcher."""
 
 import hashlib
 import os
@@ -14,6 +14,11 @@ MARKER = b"  > 1. Establish and freeze the publication baseline\n"
 SCOPE_SHA256 = "5a4a46210cbeae65d33c5ebf827d24d9265fbd71122368c7323bba9c7b01656c"
 
 
+@pytest.fixture
+def contract():
+    return " ".join(CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii").split())
+
+
 def test_scientific_scope_and_completion_requirements_preserved_byte_for_byte():
     data = CURRENT.read_bytes()
     assert data.count(MARKER) == 1
@@ -21,216 +26,65 @@ def test_scientific_scope_and_completion_requirements_preserved_byte_for_byte():
     assert hashlib.sha256(scope).hexdigest() == SCOPE_SHA256
 
 
-def test_historical_evidence_is_not_replaced_by_current_instructions():
+def test_historical_evidence_is_not_replaced_by_current_instructions(contract):
     assert hashlib.sha256(HISTORICAL.read_bytes()).hexdigest() == (
         "7d99ecb39a740b689101e885ca9a8e8d337aaa51d2aa78efb5295e4de27acde0"
     )
-    text = CURRENT.read_text(encoding="utf-8")
-    assert "not an execution-manifest input" in text
-    assert "Do not substitute the editable current prompt for a frozen goal binding" in text
-
-
-def test_current_contract_uses_live_ledger_not_stale_task_or_job_checkpoints():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    assert "TOP of benchmark_tools/results/PUBLICATION_PROGRESS.md" in contract
-    assert "actual scheduler/accounting and retained outcomes supply job state" in contract
-    assert "Do not copy transient task or job-state assertions into this prompt" in contract
-    for obsolete in ("Live checkpoint", "23902", "23910", "uncommitted and untested",
-                     "finish its independent reader", "no review is queued"):
-        assert obsolete not in contract
-
-
-def test_continuation_checks_evidence_and_reassesses_wait_only_checkpoints():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "at the start of every automatic goal continuation",
-        "use a concrete tool call",
-        "Do not produce a no-tool acknowledgement or plan-only continuation",
-        "not dummy activity to keep the loop alive",
-        "no independent work is available is provisional, not a permanent gate",
-        "check the outstanding requirements against the retained evidence",
-        "Do not impose stronger requirements than the seven-part goal",
-        "Record any newly identified action at the ledger TOP",
-    ):
-        assert instruction in contract
-
-
-@pytest.mark.parametrize("instruction", [
-    "No DGX, dedicated timing host, quiet window or renewed contention approval is required",
-    "Do not request another routine authorization or another user resume at a milestone",
-    "Do not end routine goal work with a status-only final response",
-    "Running/dependency-pending jobs are waiting states, not blockers",
-    "use an available wait/sleep tool",
-    "Competing analyses alone NEVER block the goal",
-    "only the affected launch",
-    "keep the full goal ACTIVE",
-    "only validated successful native output",
-    "no-duplicate and no-automatic-retry rules",
-    "unknown and potentially tool-dependent impact",
-    "Prompt instructions cannot prevent platform interruptions",
-])
-def test_continuation_authority_and_scientific_safety_remain_explicit(instruction):
-    assert instruction in CURRENT.read_text(encoding="utf-8")
+    assert "not an execution-manifest input" in contract
+    assert "any historical frozen goal binding" in contract
 
 
 def test_actual_goal_linked_attachment_matches_version_controlled_contract():
     attachment = os.environ.get("ORTHOHMM_CURRENT_GOAL_ATTACHMENT")
     if attachment is None:
-        pytest.skip("Optional local goal attachment is not part of portable repository tests")
+        pytest.skip("Optional local attachment is not part of portable repository tests")
     assert Path(attachment).read_bytes() == CURRENT.read_bytes()
 
 
-def test_pending_dependency_does_not_gate_independent_scientific_work():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "gates ONLY its dependent conversion, scoring, admission",
-        "does not gate independent error analyses, manuscript work",
-        "distinguish executable independent work from dependency-waiting work",
-        "identify the actual evidence needed to unblock a dependency",
-        "into a whole-goal stop",
-    ):
-        assert instruction in contract
+@pytest.mark.parametrize("instruction", [
+    "At every automatic continuation",
+    "use a concrete tool call for the next unfinished authorized task",
+    "advance to unfinished validation or integration; never replay the producer",
+    "wait and inspect that same job",
+    "Do not ask the user to resume after a milestone",
+    "full goal remains ACTIVE",
+    "Older checkpoints are history, not commands",
+    "Keep transient job/task state in the ledger, not in this prompt",
+    "Every wait-only continuation includes a real wait and a post-wait observation",
+    "prevent ONLY its dependent scoring or admission",
+    "A recoverable parser, label, validation or reporting failure is not a whole-goal stop",
+    "Deterministic postprocessing recovery is explicitly authorized after focused tests",
+    "No duplicate submissions or automatic inference/timing retries",
+    "Do not stop, suspend, renice or re-affinitize unrelated jobs",
+    "do not commit large raw datasets",
+    "Ordinary competing workloads never block the whole goal",
+    "genuinely unsafe capacity defers only that launch",
+    "CPU load, competing core counts and estimated timing distortion are NOT launch or evidence-admission thresholds",
+    "safe memory and accounting requirements pass, even with competing analyses",
+    "Scheduler-resource-PENDING is authorized waiting work",
+    "unknown and potentially tool-dependent impact",
+    "not estimates of isolated performance",
+    "Pause only on an explicit user request",
+    "mark complete only on verified completion",
+    "use blocked only under the goal tool's sustained genuine impasse rule",
+    "Distinguish goal status from a temporarily interrupted command runner",
+    "Never claim that a prompt edit guarantees platform continuation",
+])
+def test_current_execution_safety_and_continuation_rules(contract, instruction):
+    assert instruction in contract
 
 
-def test_waiting_is_bounded_without_repeated_administrative_work():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "execute a supported independent action if one exists",
-        "bounded actual waits (normally 30-300 seconds)",
-        "not by rereading the full ledger or reauditing unchanged evidence on every poll",
-        "not a new commit for every unchanged wait",
-        "Do not grow the scientific scope",
-    ):
-        assert instruction in contract
-
-
-def test_wait_only_turn_has_an_action_and_not_a_user_resume_gate():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    assert contract.index("Immediate continuation decision:") < contract.index(
-        "Current execution contract"
+def test_immediate_action_precedes_long_scientific_scope(contract):
+    assert contract.index("Immediate Continuation Decision") < contract.index(
+        "Authority And Current State"
     )
-    for instruction in (
-        "Waiting is an authorized next action, not an absence of a next action",
-        "A completed monitoring window, unchanged poll or checkpoint commit",
-        "every automatic wait-only turn must include a real wait and a post-wait state check",
-        "unless a fresh user instruction or actual interruption preempts it",
-        "If the job becomes terminal, replace waiting with the required review or failure diagnosis",
-        "Full goal ACTIVE; next automatic continuation:",
-        "not authorization to stop the goal",
-        "Do not invent work, resubmit jobs or repeat completed analyses to avoid waiting",
-    ):
-        assert instruction in contract
+    assert "no DGX, dedicated host, quiet window, spare uncontended cores" in contract
+    assert "Do not assume slight distortion" in contract
+    assert "Do not modify private platform state to force continuation" in contract
 
 
-def test_stale_checkpoint_is_reconciled_without_repeating_completed_execution():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "before executing a ledger next action, reconcile it",
-        "existing output artifacts, execution receipts, source commits and live job handles",
-        "If the action has already executed, do not rerun it",
-        "Preserve any uncommitted result",
-        "actual next unfinished validation or integration step",
-        "A stale ledger is a recoverable bookkeeping issue",
-    ):
-        assert instruction in contract
-
-
-def test_direct_user_answer_does_not_complete_or_pause_the_full_goal():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "answer a requested status check or bounded maintenance task promptly",
-        "not completion, a pause request or a request for another resume",
-        "Leave the full goal ACTIVE",
-        "an actionable checkpoint for its next automatic continuation",
-        "never promise that editing this attachment repairs the dispatcher",
-    ):
-        assert instruction in contract
-
-
-def test_failed_validation_triggers_scoped_diagnosis_not_a_global_stop():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "Failure recovery is work, not an automatic whole-goal stop",
-        "stop ONLY dependent conversion/scoring/admission",
-        "immediately diagnose the failure using retained inputs, outputs",
-        "Distinguish pipeline defects from parser/validator defects",
-        "Do not leave a terminal job in a waiting checkpoint",
-        "no fabricated score, weakened validation or automatic retry",
-        "never edit a source or artifact bound to an existing attempt",
-        "a separate prospective version",
-        "check the existing history/authorization contract",
-        "bounded checks using already permitted tools",
-        "only if no meaningful permitted work remains",
-    ):
-        assert instruction in contract
-
-
-def test_independent_task_switch_is_persisted_before_work_can_be_lost():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "replace the ledger TOP handoff before substantial implementation",
-        "distinguish prepared/tested from committed/executed",
-        "Do not leave a wait-only or already-committed action at the TOP",
-        "On continuation, reconcile that work first",
-        "not a new scientific gate",
-    ):
-        assert instruction in contract
-
-
-def test_native_identity_state_is_observed_not_declared_statically():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    assert "Determine attempted, running and genuinely unrun native identities from actual history" in contract
-    assert "Genuinely unrun native identities 11 and 12" not in contract
-    assert "Any genuinely unrun identity remains sequential behind the reviewed existing history" in contract
-
-
-def test_correct_frozen_rejection_allows_truthful_prospective_compatibility_work():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "Compatibility recovery is explicitly authorized",
-        "does not require declaring that workflow defective",
-        "Preserve the old consumer and its rejection unchanged",
-        "smallest tested adapter or successor",
-        "truthful new source/schema and explicit compatibility checks",
-        "Reuse unchanged scientific kernels and validated components",
-        "never report current inventory equality when only historical equality was established",
-        "Revalidate affected integrity, resource, environment and scientific-output requirements",
-        "not admission by assertion, changed endpoints, automatic inference retries",
-    ):
-        assert instruction in contract
-
-
-def test_diagnosed_failure_leads_to_implementation_or_explicit_missing_outcome():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "Recovery must converge on an executable decision",
-        "execute the already-authorized dependent steps only if their evidence contracts pass",
-        "Do not repeatedly reclassify the same failure",
-        "retain the result as inadmissible",
-        "advance other unfinished requirements",
-        "Do not call that limitation publication readiness",
-        "neither a whole-goal stopping condition nor permission to rerun the failed inference",
-    ):
-        assert instruction in contract
-
-
-def test_resource_contention_is_not_a_launch_threshold_or_whole_goal_blocker():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "Do not use CPU load, competing core counts or estimates of timing distortion as admission thresholds",
-        "Preserve validated CPU/RAM limits, safe available memory and accounting checks",
-        "do not require spare uncontended cores, a quiet window or renewed approval",
-        "scheduler-resource-PENDING jobs remain authorized waiting work",
-    ):
-        assert instruction in contract
-
-
-def test_stopping_diagnosis_requires_observed_state_not_another_prompt_loop():
-    contract = CURRENT.read_bytes().split(MARKER, 1)[0].decode("ascii")
-    for instruction in (
-        "inspect the actual goal status, linked prompt, ledger TOP and relevant job handles",
-        "do not assert a stopping cause without evidence",
-        "Correct an established prompt contradiction or stale handoff once",
-        "More prompt edits are not a substitute for executing the already-authorized next step",
-    ):
-        assert instruction in contract
+def test_no_new_gates_or_placeholder_work_are_authorized(contract):
+    assert "Do not add new all-tool hermeticity" in contract
+    assert "or invent new analyses merely to keep the goal busy" in contract
+    assert "Documenting a limitation does not falsely mark an unmet scientific requirement as fulfilled" in contract
+    assert "Do not make more release candidates, copied-verifier layers, integrity receipts or prompt revisions without a specific remaining requirement" in contract
