@@ -1,5 +1,66 @@
 # Publication Progress
 
+## Real Relocated Fragment Readback Complete; Scientific Scope Still Open (2026-10-10)
+
+Previous continuation made progress, not a wait: tested source43f1e398 and
+prospective ownership correction96675b89 were committed/pushed before use.
+First actual relocation failure is preserved in
+controlled_fragment_relocation_execution_20261010_v1.json. Do not modify or
+repeat that component/attempt/source. Corrected prepare, copy, replay and
+independent result/source check all EXIT0; actual commands/terminals are in
+controlled_fragment_relocation_execution_20261010_v2.json. No live handle.
+
+One new corrected component at
+benchmarks/work/controlled_fragment_relocated_stages_20261010_v2 contains1783
+pinned artifacts/39428185payload bytes, plus manifest1075354bytes. ManifestSHA
+cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652.
+Relocated copy actually executed at
+/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component.
+Python3.12.3/NumPy2.2.6; original-artifact Python-open audit guards1783 paths
+and records0 attempts, not OS containment. All106 observations/53cases/
+44native contexts and415 original checked-input references exactly match the
+complete retained native-readback object. All352 configured FASTA reads are
+mapped:112 copied-checkpoint FASTAs and56 additionally missing configured
+originals are bound only to historical execution inventories.
+
+Independent stdlib check confirms full object equality, unchanged native kernel
+bytes, unchanged original stage report and failed-v1 manifest. Retained map
+controlled_fragment_relocated_manifest_20261010_v2.json has the same manifestSHA;
+result controlled_fragment_relocated_readback_20261010_v2.json14711bytes/SHA
+0128cd57399dbb4d1bdb7b72660d3be046b098f802059b81eb30162e6d25257f.
+Result summary CONTROLLED_FRAGMENT_RELOCATION_RESULT_20261010.md and both
+reproduction guides link the real workflow, dependency versions, raw-local
+availability, preserved failure and explicit non-inference limits. Actual
+receipt/output-pin/document-link checks EXIT0. This closes original7.4's
+specific raw-stage absolute-path gap, NOT full-study native reproduction,
+another release candidate, biological evidence or publication readiness.
+74affected/adjacent tests passed; final freeze-assertion update additionally
+passed all5 correction tests. Raw components, rc6 archive, unrelated samples,
+profiles and rasters are not staged. Original prompt unchanged this turn.
+
+Remaining work must address the full scientific goal, not duplicate portability
+or completed metadata/resource tables. The latest full requirement reconciliation
+is20261009; its next-action resource synthesis is ALREADY complete and integrated.
+Its pre-fragment4.3/4.4/7.4 assessments need to be interpreted alongside actual
+controlled-truncation scores/intervals, traced cases and this successful replay,
+not stronger natural-fragment/history or all-tool independence claims. Original
+full claim checklist also contains dated3-cell/current-status chronology;
+the four-cell addendum and latest30-page fragment manuscript supersede it.
+
+NEXT concrete original4.1/7.3 action: inspect
+`sed -n '1,150p' benchmark_tools/results/VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md`
+alongside the latest manuscript's uncertainty limits and four-cell claims.
+Reconcile which requested uncertainty claims remain scientifically supportable
+under an independently justified joint sampling law, and investigate an actually
+new supported route only if there is one. Do NOT re-run rejected dyadic/bootstrap
+coverage experiments, replace original endpoints with shared-sample means or
+make another status-only archive/audit as a substitute for science. Retain
+unavailable VGNC/TreeFam/GO/EC/FAS/secondary-mean intervals honestly; lack of
+proof is not completion. Any supported new analysis requires focused tests and
+prospective freezing before execution, not inference/timing retries or tuning.
+No new public TreeFam search without a concrete lead; no contact, DGX or quiet
+window. Full goal remains ACTIVE and incomplete.
+
 ## Real Relocation Failure Preserved; Ownership Correction Tested (2026-10-10)
 
 Source43f1e398 committed/pushed before actual preparation. One actual prepare

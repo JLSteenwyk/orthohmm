@@ -63,6 +63,22 @@ It and its component remain preserved in
 bindings for all selected contexts. It records that preparation revision in the
 same component layout, without changing native source or historical metadata.
 
+The actual corrected component is retained locally at
+`benchmarks/work/controlled_fragment_relocated_stages_20261010_v2`. Its 1,783
+pinned files contain 39,428,185 payload bytes, including 112 copied-checkpoint
+FASTAs and 56 additional configured originals. The
+[retained map](results/controlled_fragment_relocated_manifest_20261010_v2.json)
+has SHA-256 `cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652`.
+Python 3.12.3 with NumPy 2.2.6 executed the copied runner from a location outside
+the checkout. The [actual readback](results/controlled_fragment_relocated_readback_20261010_v2.json)
+matches the complete original result: 106 observations, 53 cases, 44 contexts
+and 415 native checked-input references. The
+[execution record](results/controlled_fragment_relocation_execution_20261010_v2.json)
+retains preparation, copy, replay and independent object/source checks. A
+Python-level `open` audit forbade reads of all 1,783 original artifact paths;
+zero were attempted. This is a functional check, not OS containment. All raw
+payloads remain local and are not supplied by a summary-only Git clone.
+
 From the original repository, prepare at a fresh path:
 
 ```bash

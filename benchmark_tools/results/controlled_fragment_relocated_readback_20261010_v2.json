@@ -1,0 +1,452 @@
+{
+  "added_checkpoint_fastas": 112,
+  "added_configured_fastas": 56,
+  "artifact_files": 1783,
+  "artifact_payload_bytes": 39428185,
+  "component": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component",
+  "copied_kernel_sources": [
+    {
+      "bytes": 4518,
+      "copied_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component/kernels/benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+      "logical_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/orthofinder_mcl_to_orthogroups.py",
+      "sha256": "20879a9a041b2a9b48e4bf0d81c895793d8b0a75c8d2e06c777f472e72484eb8"
+    },
+    {
+      "bytes": 20778,
+      "copied_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component/kernels/benchmark_tools/readback_controlled_fragment_stages.py",
+      "logical_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stages.py",
+      "sha256": "f353ef1d9603a1bf1f4ee50db015d0f23fb24fd07e423590c74590e00a643952"
+    },
+    {
+      "bytes": 5108,
+      "copied_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component/kernels/benchmark_tools/readback_controlled_fragment_stage_table.py",
+      "logical_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stage_table.py",
+      "sha256": "a23fb918cdffe9fe5a54a8fcddc55ae24efc38c998454e8477890299316039e5"
+    }
+  ],
+  "historical_inference_reproduced": false,
+  "manifest": {
+    "bytes": 1075354,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component/manifest.json",
+    "sha256": "cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652"
+  },
+  "native_readback": {
+    "checked_input_files": 415,
+    "compatibility_mapping": {
+      "JSON false": "TSV False",
+      "JSON null": "TSV NA",
+      "JSON true": "TSV True"
+    },
+    "native_contexts": 44,
+    "new_inference_or_scoring": false,
+    "original_report_modified": false,
+    "previous_reader": {
+      "bytes": 20778,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stages.py",
+      "sha256": "f353ef1d9603a1bf1f4ee50db015d0f23fb24fd07e423590c74590e00a643952"
+    },
+    "publication_ready": false,
+    "report": {
+      "bytes": 289229,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json",
+      "sha256": "0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c"
+    },
+    "selected_cases": 53,
+    "source": {
+      "bytes": 5108,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stage_table.py",
+      "sha256": "a23fb918cdffe9fe5a54a8fcddc55ae24efc38c998454e8477890299316039e5"
+    },
+    "stage_rows": 106,
+    "status": "independent_native_stages_and_na_table_verified",
+    "summary": [
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthofinder_full",
+        "observed_location": "mcl_group_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthofinder_full",
+        "observed_location": "within_mcl_native_pair_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthofinder_full",
+        "observed_location": "within_mcl_native_pair_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fp",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fp",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthofinder_full",
+        "observed_location": "mcl_group_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fn",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthofinder_full",
+        "observed_location": "within_mcl_native_pair_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fp",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fp",
+        "method": "orthofinder_full",
+        "observed_location": "within_mcl_native_pair_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "recovered_fn",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "recovered_fn",
+        "method": "orthofinder_full",
+        "observed_location": "within_mcl_native_pair_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "retained_tp",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "retained_tp",
+        "method": "orthofinder_full",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "mcl_group_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "mcl_group_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fn",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "mcl_group_separation",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "removed_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "mcl_group_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "removed_fp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "retained_tp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "retained_tp",
+        "method": "orthofinder_sequence_only",
+        "observed_location": "native_pair_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_separation",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_separation",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fp",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fp",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fn",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_separation",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "retained_tp",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "retained_tp",
+        "method": "orthohmm_high_sensitivity",
+        "observed_location": "group_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "candidate_separation",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "candidate_separation",
+        "representatives": 2
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "unambiguous_bypass_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "fragment_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "fragment_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "candidate_separation",
+        "representatives": 2
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 1
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "unambiguous_bypass_retention",
+        "representatives": 1
+      },
+      {
+        "arm": "fragment",
+        "category": "new_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "baseline",
+        "category": "new_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "recovered_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "recovered_fn",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 3
+      },
+      {
+        "arm": "baseline",
+        "category": "removed_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "event_rule_retention",
+        "representatives": 2
+      },
+      {
+        "arm": "fragment",
+        "category": "removed_fp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "observed_duplication_exclusion",
+        "representatives": 2
+      },
+      {
+        "arm": "baseline",
+        "category": "retained_tp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "unambiguous_bypass_retention",
+        "representatives": 3
+      },
+      {
+        "arm": "fragment",
+        "category": "retained_tp",
+        "method": "orthohmm_satellite_v2",
+        "observed_location": "unambiguous_bypass_retention",
+        "representatives": 3
+      }
+    ]
+  },
+  "new_inference_or_scoring": false,
+  "numpy_version": "2.2.6",
+  "original_artifacts_modified": false,
+  "original_path_fallback": false,
+  "original_reader_kernels_changed": false,
+  "preparation_revision": "all_configured_fasta_ownership_v2",
+  "publication_ready": false,
+  "python_version": "3.12.3",
+  "status": "relocated_native_readback_matches_retained_result"
+}

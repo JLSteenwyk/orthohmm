@@ -1,0 +1,111 @@
+{
+  "schema": "controlled_fragment_relocation_execution_v2",
+  "status": "real_relocated_native_stages_verified",
+  "source_commit": "96675b89",
+  "preserved_failure": "benchmark_tools/results/controlled_fragment_relocation_execution_20261010_v1.json",
+  "preparation_revision": "all_configured_fasta_ownership_v2",
+  "steps": [
+    {
+      "step": "prepare",
+      "command": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B benchmark_tools/relocate_controlled_fragment_stages_v2.py prepare --root \"$PWD\" --report benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json --readback benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json --readback-sha256 2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35 --output benchmarks/work/controlled_fragment_relocated_stages_20261010_v2",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "a9f057",
+        "wall_time_seconds": 0.000016265,
+        "exit_code": 0,
+        "original_token_count": 124,
+        "output": "{\"added_checkpoint_fastas\": 112, \"added_configured_fastas\": 56, \"artifact_files\": 1783, \"artifact_payload_bytes\": 39428185, \"manifest\": {\"bytes\": 1075354, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/controlled_fragment_relocated_stages_20261010_v2/manifest.json\", \"sha256\": \"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\"}, \"preparation_revision\": \"all_configured_fasta_ownership_v2\", \"status\": \"pinned_fragment_component_prepared\"}\n"
+      }
+    },
+    {
+      "step": "copy",
+      "command": {
+        "cmd": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'from pathlib import Path; import hashlib,json,shutil,tempfile; original=Path(\"benchmarks/work/controlled_fragment_relocated_stages_20261010_v2\").resolve(); parent=Path(tempfile.mkdtemp(prefix=\"orthohmm-fragment-relocated-20261010-v2-\")); copied=parent/\"component\"; shutil.copytree(original,copied); old=(original/\"manifest.json\").read_bytes(); new=(copied/\"manifest.json\").read_bytes(); assert old==new; manifest=json.loads(new); expected={r[\"target\"] for r in manifest[\"artifacts\"]}|{\"manifest.json\"}; actual={str(p.relative_to(copied)) for p in copied.rglob(\"*\") if p.is_file()}; assert actual==expected; print(json.dumps({\"copied_component\":str(copied),\"manifest_sha256\":hashlib.sha256(new).hexdigest(),\"copied_files\":len(actual),\"artifact_payload_bytes\":manifest[\"artifact_payload_bytes\"]}))'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "a4956a",
+        "wall_time_seconds": 0.351070523,
+        "exit_code": 0,
+        "original_token_count": 71,
+        "output": "{\"copied_component\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component\", \"manifest_sha256\": \"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\", \"copied_files\": 1784, \"artifact_payload_bytes\": 39428185}\n"
+      }
+    },
+    {
+      "step": "replay",
+      "command": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python' -I -B -c 'import json, os, runpy, sys\nfrom pathlib import Path\ncomponent = Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component\")\nmanifest = json.loads((component / \"manifest.json\").read_text())\ndenied = {row[\"logical_path\"] for row in manifest[\"artifacts\"]}\nobserved = {\"original_artifact_open_attempts\": 0}\ndef audit(event, args):\n    if event == \"open\" and isinstance(args[0], (str, bytes, os.PathLike)):\n        path = os.path.abspath(os.fsdecode(args[0]))\n        if path in denied:\n            observed[\"original_artifact_open_attempts\"] += 1\n            raise RuntimeError(\"Refused original artifact read: \" + path)\nsys.addaudithook(audit)\nrunner = component / \"runner/benchmark_tools/relocate_controlled_fragment_stages_v2.py\"\nsys.argv = [str(runner), \"replay\", \"--component\", str(component), \"--manifest-sha256\", \"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\", \"--output\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v2.json\"]\nrunpy.run_path(str(runner), run_name=\"__main__\")\nprint(json.dumps({\"python_open_audit\": observed, \"original_artifact_paths_guarded\": len(denied), \"os_containment_claimed\": False}))\n'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component",
+        "max_output_tokens": 3000,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "c04688",
+        "wall_time_seconds": 0.000016886,
+        "exit_code": 0,
+        "original_token_count": 175,
+        "output": "{\"added_checkpoint_fastas\": 112, \"added_configured_fastas\": 56, \"artifact_files\": 1783, \"artifact_payload_bytes\": 39428185, \"manifest\": {\"bytes\": 1075354, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component/manifest.json\", \"sha256\": \"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\"}, \"native_contexts\": 44, \"preparation_revision\": \"all_configured_fasta_ownership_v2\", \"selected_cases\": 53, \"stage_rows\": 106, \"status\": \"relocated_native_readback_matches_retained_result\"}\n{\"python_open_audit\": {\"original_artifact_open_attempts\": 0}, \"original_artifact_paths_guarded\": 1783, \"os_containment_claimed\": false}\n"
+      }
+    },
+    {
+      "step": "readback",
+      "command": {
+        "cmd": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'from pathlib import Path\nimport hashlib, json\nroot=Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\")\nresults=root/\"benchmark_tools/results\"\nobserved_path=results/\"controlled_fragment_relocated_readback_20261010_v2.json\"\nresult=json.loads(observed_path.read_text())\nexpected_path=results/\"controlled_fragment_stage_readback_20261010_v2.json\"\nexpected_data=expected_path.read_bytes()\nassert hashlib.sha256(expected_data).hexdigest()==\"2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35\"\nassert result[\"native_readback\"]==json.loads(expected_data)\nassert result[\"native_readback\"][\"stage_rows\"]==106 and result[\"native_readback\"][\"selected_cases\"]==53 and result[\"native_readback\"][\"native_contexts\"]==44\nassert result[\"native_readback\"][\"checked_input_files\"]==415\nassert all(result[k] is False for k in (\"original_path_fallback\",\"historical_inference_reproduced\",\"new_inference_or_scoring\",\"publication_ready\",\"original_reader_kernels_changed\"))\noriginal_component=root/\"benchmarks/work/controlled_fragment_relocated_stages_20261010_v2\"\ncopied_component=Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component\")\nmanifest_data=(original_component/\"manifest.json\").read_bytes()\nassert manifest_data==(copied_component/\"manifest.json\").read_bytes()\nassert hashlib.sha256(manifest_data).hexdigest()==\"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\"\nmanifest=json.loads(manifest_data)\nassert manifest[\"configured_native_contexts\"]==44 and manifest[\"configured_fasta_reads\"]==352\nassert manifest[\"added_configured_fastas\"]==56 and manifest[\"added_checkpoint_fastas\"]==112\nfor row in result[\"copied_kernel_sources\"]:\n    data=Path(row[\"copied_path\"]).read_bytes()\n    assert len(data)==row[\"bytes\"] and hashlib.sha256(data).hexdigest()==row[\"sha256\"]\n    assert data==Path(row[\"logical_path\"]).read_bytes()\nfor path,sha in ((root/\"benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json\",\"0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c\"),(root/\"benchmarks/work/controlled_fragment_relocated_stages_20261010_v1/manifest.json\",\"a2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21\")):\n    assert hashlib.sha256(path.read_bytes()).hexdigest()==sha\nindex=results/\"controlled_fragment_relocated_manifest_20261010_v2.json\"\nwith index.open(\"xb\") as stream:\n    stream.write(manifest_data)\ndef pin(path):\n    data=path.read_bytes()\n    return dict(path=str(path),bytes=len(data),sha256=hashlib.sha256(data).hexdigest())\nprint(json.dumps({\"status\":\"independent_relocated_result_and_unchanged_sources_verified\",\"retained_manifest\":pin(index),\"readback\":pin(observed_path),\"python_version\":result[\"python_version\"],\"numpy_version\":result[\"numpy_version\"],\"native_checked_files\":result[\"native_readback\"][\"checked_input_files\"],\"raw_dataset_files_committed\":False}))\n'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2500,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "0f0c8d",
+        "wall_time_seconds": 0.000014112,
+        "exit_code": 0,
+        "original_token_count": 181,
+        "output": "{\"status\": \"independent_relocated_result_and_unchanged_sources_verified\", \"retained_manifest\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_manifest_20261010_v2.json\", \"bytes\": 1075354, \"sha256\": \"cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652\"}, \"readback\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v2.json\", \"bytes\": 14711, \"sha256\": \"0128cd57399dbb4d1bdb7b72660d3be046b098f802059b81eb30162e6d25257f\"}, \"python_version\": \"3.12.3\", \"numpy_version\": \"2.2.6\", \"native_checked_files\": 415, \"raw_dataset_files_committed\": false}\n"
+      }
+    }
+  ],
+  "component": {
+    "copied_component": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-v2-f7s_zc6a/component",
+    "manifest_sha256": "cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652",
+    "copied_files": 1784,
+    "artifact_payload_bytes": 39428185
+  },
+  "retained_manifest": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_manifest_20261010_v2.json",
+    "bytes": 1075354,
+    "sha256": "cf42e0e5a9a0486879b976b5cc7848a94cb00d657caacbb64b77a1ba7d04f652"
+  },
+  "readback": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v2.json",
+    "bytes": 14711,
+    "sha256": "0128cd57399dbb4d1bdb7b72660d3be046b098f802059b81eb30162e6d25257f"
+  },
+  "python_version": "3.12.3",
+  "numpy_version": "2.2.6",
+  "validation": {
+    "stage_rows": 106,
+    "selected_cases": 53,
+    "native_contexts": 44,
+    "original_native_checked_files": 415,
+    "configured_fasta_reads": 352,
+    "artifact_files": 1783,
+    "artifact_payload_bytes": 39428185,
+    "added_checkpoint_fastas": 112,
+    "added_configured_fastas": 56,
+    "exact_original_native_readback_object": true,
+    "unchanged_original_reader_kernel_bytes": true,
+    "python_original_artifact_paths_guarded": 1783,
+    "python_original_artifact_open_attempts": 0,
+    "os_containment_claimed": false
+  },
+  "new_inference_or_scoring": false,
+  "historical_inference_reproduced": false,
+  "independent_biological_confirmation": false,
+  "publication_ready": false
+}

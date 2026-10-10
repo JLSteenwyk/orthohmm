@@ -1,5 +1,25 @@
 # Publication Reproduction Guide
 
+## Current Supplements (2026-10-10)
+
+The [controlled-fragment workflow](CONTROLLED_FRAGMENT_REPRODUCTION.md) documents
+the retained observation, selected native-stage diagnostics, manuscript and
+standalone relocated raw-stage check. The
+[actual copied replay](results/controlled_fragment_relocation_execution_20261010_v2.json)
+reproduces all 106 observations using unchanged reader kernels and copied pinned
+inputs; the first failed ownership-map attempt is preserved. This is native
+postprocessing portability, not historical inference reproduction or new accuracy.
+Its raw component remains local; a Git clone contains its map and results, not
+the full raw payloads. Historical rc6 and earlier archives remain unchanged.
+
+The [terminal native resource synthesis](results/NATIVE_FACTORIAL_TERMINAL_RESOURCE_RESULT_20261009.md)
+has also completed. All retained native factorial attempts are terminal; the
+dated running/queued observations below are history, not instructions to launch
+or wait on those jobs. Use the newest progress-ledger entry for actual work.
+Shared-Threadripper contention is authorized and disclosed, not a quiet-host
+or DGX prerequisite. These reporting updates do not establish full scientific
+completion, other-QfO endpoint uncertainty or publication readiness.
+
 ## Native QfO Accuracy Update (2026-10-06)
 
 [Recovered P0/C0/R1 scoring and independent admission](results/RECOVERED_NATIVE_QFO_SCORE_RESULT_22449.md)
