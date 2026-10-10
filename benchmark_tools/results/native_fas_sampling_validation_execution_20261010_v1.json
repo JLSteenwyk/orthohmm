@@ -1,0 +1,75 @@
+{
+  "schema": "native_fas_sampling_validation_execution_v1",
+  "source_commit_pushed_before_execution": "e5fd810d",
+  "execution": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import os,resource,sys; from pathlib import Path; os.sched_setaffinity(0,[min(os.sched_getaffinity(0))]); resource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3)); sys.path.insert(0,str(Path.cwd())); from benchmark_tools.validate_native_fas_sampling import main; main()' --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "observations": [
+      {
+        "chunk_id": "94a029",
+        "wall_time_seconds": 1.001862806,
+        "session_id": 51803,
+        "original_token_count": 24,
+        "output": "zero_returns 1\nsingleton_return 1\nzero_draws 1\ncomplete_draws 1\nrandom_denominator_example 1\n"
+      },
+      {
+        "chunk_id": "67bcff",
+        "wall_time_seconds": 0.000013561,
+        "exit_code": 0,
+        "original_token_count": 299,
+        "output": "balanced_partial 11975569102082048006961643136424630133/11975573020964041433067793888190275875\nhigh_pre_low_return 184239584937564657190690687939850314/184239584937908329739504521356773475\nlow_pre_high_return 184239584937564657190690687939850314/184239584937908329739504521356773475\nrare_partial_returns 1\nall_return_partial 479022834068918944012661972007634082/479022920838561657322711755527611035\nnative_cap_sparse 1\nnative_cap_dense 1\nnative_cap_no_returns 1\nnative_cap_all_returns 1\nunequal_strata 1\n{\"status\": \"prospective_validation_complete\", \"cells\": 15, \"joint\": {\"method_count\": 8, \"differences\": 28, \"rank_coupling_segments\": 2695, \"coupled_mean_coverage_fraction\": \"31431934206891553936449720979134204/31431950186257326595978461648793375\", \"coupled_difference_coverage_fraction\": \"1088688385210487380649702701508811716/1088688456451276493915253989835479625\", \"arbitrary_dependence_union_failure_bound_fraction\": \"72499000247932818548158801683359227/11975573020964041433067793888190275875\", \"numerical_max_error\": 3.3306690738754696e-16, \"scope\": \"Common-uniform rank coupling with alternate reversed outcome order; uniform precomputed selections independent within each method.\"}}\n"
+      }
+    ]
+  },
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_validate_native_fas_sampling.py tests/unit/test_native_fas_sampling_interval.py tests/unit/test_probe_native_fas_context.py tests/unit/test_probe_native_fas_context_lowercase.py tests/unit/test_audit_fas_sample_attrition.py tests/unit/test_audit_fas_stratum_weights.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "observations": [
+      {
+        "chunk_id": "f25259",
+        "wall_time_seconds": 1.000600975,
+        "session_id": 26355,
+        "original_token_count": 0,
+        "output": ""
+      },
+      {
+        "chunk_id": "7b2f02",
+        "wall_time_seconds": 0.000015454,
+        "exit_code": 0,
+        "original_token_count": 45,
+        "output": "........................................................................ [ 54%]\n............................................................             [100%]\n132 passed in 2.30s\n"
+      }
+    ]
+  },
+  "independent_target_and_scope_readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom fractions import Fraction\nfrom math import comb\nfrom pathlib import Path\nimport hashlib,json\npath=Path(\"benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json\")\ndata=json.loads(path.read_text())\nassert data[\"status\"]==\"prospective_validation_complete\" and len(data[\"cells\"])==len(data[\"plan\"])==15\nassert Fraction(data[\"alpha_fraction\"])==Fraction(1,20) and Fraction(data[\"component_error_fraction\"])==Fraction(1,320)\nmax_target_error=0; native_caps=0\nfor config,row in zip(data[\"plan\"],data[\"cells\"]):\n P=sum(n for n,_ in config[\"pre\"]);M=sum(n for n,_ in config[\"missing\"]);G=sum(n for n,s in config[\"missing\"] if s is not None)\n muP=sum((n*Fraction(s) for n,s in config[\"pre\"]),Fraction())/P\n muG=sum((n*Fraction(s) for n,s in config[\"missing\"] if s is not None),Fraction())/G if G else Fraction()\n c,k=config[\"c\"],config[\"k\"]\n assert row[\"name\"]==config[\"name\"] and row[\"population\"]==dict(P=P,M=M,G=G,c=c,k=k)\n target=Fraction()\n mass=Fraction()\n for r in range(max(0,c-M+G),min(c,G)+1):\n  p=Fraction(comb(G,r)*comb(M-G,c-r),comb(M,c))\n  mass+=p\n  target+=p*(k*muP+r*muG)/(k+r)\n assert mass==1 and target==Fraction(row[\"target_fraction\"])==Fraction(row[\"native_ratio_average_fraction\"])\n plugin=(k*muP+Fraction(c*G,M)*muG)/(k+Fraction(c*G,M))\n assert plugin==Fraction(row[\"expected_count_plugin_fraction\"]) and plugin-target==Fraction(row[\"plugin_minus_target_fraction\"])\n assert Fraction(row[\"count_coverage_fraction\"])>=1-Fraction(1,320)\n assert Fraction(row[\"mean_coverage_fraction\"])>=1-Fraction(1,320)\n assert Fraction(row[\"target_coverage_fraction\"])>=1-Fraction(1,160)\n assert row[\"numerical_max_error\"]<=1e-12\n native_caps+=c==9000\nassert native_caps==4\nassert Fraction(data[\"cells\"][4][\"target_fraction\"])==Fraction(107,240) and Fraction(data[\"cells\"][4][\"expected_count_plugin_fraction\"])==Fraction(9,20)\nselected=(3,4,5,6,7,8,9,11)\nunion=sum((2-Fraction(data[\"cells\"][i][\"count_coverage_fraction\"])-Fraction(data[\"cells\"][i][\"mean_coverage_fraction\"]) for i in selected),Fraction())\njoint=data[\"joint\"]\nassert union==Fraction(joint[\"arbitrary_dependence_union_failure_bound_fraction\"])<=Fraction(1,20)\nassert joint[\"method_count\"]==8 and joint[\"differences\"]==28 and joint[\"rank_coupling_segments\"]==2695\nassert Fraction(joint[\"coupled_mean_coverage_fraction\"])>=Fraction(19,20) and Fraction(joint[\"coupled_difference_coverage_fraction\"])>=Fraction(19,20)\nassert joint[\"numerical_max_error\"]<=1e-12\ncontrol=data[\"context_control\"]\nassert control[\"status\"]==\"fixed_return_assumption_rejected\" and not control[\"coverage_claimed\"] and not control[\"native_admission\"]\nassert Fraction(control[\"actual_expected_ratio_fraction\"])==Fraction(22,45) and Fraction(control[\"singleton_fixed_return_target_fraction\"])==Fraction(8,15)\nfor key in (\"kernel\",\"protocol\",\"driver\",\"provenance_helper\"):\n ref=data[key]; raw=Path(ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\nassert data[\"decimal_precision\"]==80 and data[\"reference_endpoint_margin\"]==\"1e-60\" and data[\"numerical_tolerance\"]==1e-12\nfor key in (\"historical_scores_rerun\",\"native_sampling_law_admitted\",\"native_intervals_admitted\",\"publication_ready\"): assert data[key] is False\nsummary=dict(status=\"independent_target_and_scope_readback_passed\",result_bytes=path.stat().st_size,result_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),cells=15,literal_9000_cap_cells=4,minimum_target_coverage=min(float(Fraction(x[\"target_coverage_fraction\"])) for x in data[\"cells\"]),minimum_count_coverage=min(float(Fraction(x[\"count_coverage_fraction\"])) for x in data[\"cells\"]),minimum_mean_coverage=min(float(Fraction(x[\"mean_coverage_fraction\"])) for x in data[\"cells\"]),maximum_numerical_error=max(joint[\"numerical_max_error\"],*(x[\"numerical_max_error\"] for x in data[\"cells\"])),joint_mean_coverage=float(Fraction(joint[\"coupled_mean_coverage_fraction\"])),joint_difference_coverage=float(Fraction(joint[\"coupled_difference_coverage_fraction\"])),arbitrary_dependence_union_failure_bound=float(union),scope=\"Targets and reported coverage/provenance scopes read back; not a second independent reconstruction of every coverage classification.\")\nprint(json.dumps(summary,sort_keys=True))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "result": {
+      "chunk_id": "2ef61e",
+      "wall_time_seconds": 0.000011057,
+      "exit_code": 0,
+      "original_token_count": 176,
+      "output": "{\"arbitrary_dependence_union_failure_bound\": 0.006053906574743311, \"cells\": 15, \"joint_difference_coverage\": 0.9999999345627404, \"joint_mean_coverage\": 0.9999994916202883, \"literal_9000_cap_cells\": 4, \"maximum_numerical_error\": 3.3306690738754696e-16, \"minimum_count_coverage\": 0.9974824696523465, \"minimum_mean_coverage\": 0.9999996727603776, \"minimum_target_coverage\": 0.9999996727603776, \"result_bytes\": 17766, \"result_sha256\": \"236ffb82887d816904d08df0e5b350a358badd8e9f5f6fc088004cd0d021ac57\", \"scope\": \"Targets and reported coverage/provenance scopes read back; not a second independent reconstruction of every coverage classification.\", \"status\": \"independent_target_and_scope_readback_passed\"}\n"
+    }
+  },
+  "result": {
+    "path": "native_fas_sampling_validation_20261010_v1.json",
+    "bytes": 17766,
+    "sha256": "236ffb82887d816904d08df0e5b350a358badd8e9f5f6fc088004cd0d021ac57"
+  },
+  "native_sampling_law_admitted": false,
+  "native_intervals_admitted": false,
+  "publication_ready": false
+}

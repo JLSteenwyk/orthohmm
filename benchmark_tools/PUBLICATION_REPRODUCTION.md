@@ -8,9 +8,15 @@ mean. The [actual native context check](results/NATIVE_FAS_CONTEXT_RESULT_202610
 completed 12 contexts/40 controlled pair evaluations without score or return
 differences after a separately frozen fixture-key correction; its first
 schema failure remains preserved. This finite fixture evidence is not proof
-for all historical pairs. Count/mean coverage and joint projection still
-require validation. No FAS interval, new historical sample, benchmark rescore
-or native sampling-law admission has run.
+for all historical pairs. The [prospective coverage validation](results/NATIVE_FAS_SAMPLING_VALIDATION_RESULT_20261010.md)
+has now completed 15 cells, four with the literal 9000 cap, and a dependent
+eight-cell/28-difference projection. Its context-dependent control is rejected;
+exact probability masses and high-precision references are distinct from
+floating agreement. No historical eight-method FAS intervals, new historical
+sample, benchmark rescore or native sampling-law admission has run.
+The [prospective conditional reporting plan](results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md)
+freezes the next retained-data application, separate observed/expected targets,
+all 28 contrasts and historical provenance qualifications before interval viewing.
 
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
 links the controlled-fragment comparisons, observed stage decisions, actual

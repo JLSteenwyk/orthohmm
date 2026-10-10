@@ -1,5 +1,60 @@
 # Publication Progress
 
+## Native FAS Finite Coverage Validation Completed; Reporting Plan Frozen (2026-10-10)
+
+Previous goal turn was progress: a5880096 pushed the tested native-design
+kernel. This turn pushed the prospective validation driver/tests as e5fd810d
+BEFORE actual production. Focused/adjacent tests EXIT0: 132 passed in 2.30s.
+
+Actual validation EXIT0: all 15 predeclared finite-population cells completed,
+including four literal 9000-cap/M12000 cases. Exact rational subset masses,
+independently summed two-stratum native ratios, rational count endpoint checks
+and 80-digit reference endpoints are distinct from floating-kernel agreement.
+Minimum count coverage .9974824696523465; minimum mean/target coverage
+.9999996727603776. Across 2695 dependent eight-method coupling segments,
+joint mean coverage .9999994916202883, joint 28-difference coverage
+.9999999345627404. Summed component-failure bound .006053906574743311 < .05
+permits arbitrary cross-method dependence. Maximum numerical error
+3.3306690738754696e-16. Context-dependent return control is rejected, not
+claimed covered: actual ratio expectation22/45 differs from singleton model8/15.
+
+Result native_fas_sampling_validation_20261010_v1.json: 17766 bytes, SHA
+236ffb82887d816904d08df0e5b350a358badd8e9f5f6fc088004cd0d021ac57.
+Separate target/scope readback EXIT0 recomputes all 15 targets and plugin
+contrasts without importing producer/kernels, verifies reported coverage bounds,
+control and all source/protocol identities. It does not independently reclassify
+every coverage outcome; the prospective producer compares against its exact-
+mass/high-precision reference. Actual execution, tests and readback are retained
+in native_fas_sampling_validation_execution_20261010_v1.json; table/scope in
+NATIVE_FAS_SAMPLING_VALIDATION_RESULT_20261010.md, linked from the current guide.
+No inference, historical scorer, sample, annotation, bootstrap, RNG draw or
+timing was repeated. All tool handles terminal. No historical intervals viewed.
+
+Advanced next prerequisite: inspected actual retained attrition JSON, which
+contains each returned-score stratum mean. Existing audit_fas_stratum_weights
+panel already validates original counts/labels/native rounding and reconstructs
+observed means. Its source/input SHA identities match. No large lookup/database
+join. The new prospective NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md
+fixes input identities, expected-statistic target, all28 contrasts, alpha/16,
+unchanged observed-score columns and explicit conditional/provenance limits.
+Historical parser/database bindings remain unestablished; no certificate or
+unconditional/biological interval admission is made by numerical validation.
+
+NEXT commit/push this completed result/integration and prospective reporting
+plan, then implement a thin retained-data adapter importing the frozen kernel
+and existing audit_fas_stratum_weights.panel. Start with
+`sed -n '1,112p' benchmark_tools/results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md`.
+Source/tests must be committed/pushed before its first application. Use direct
+attrition missing-stratum means and full population precomputed means, preserve
+observed native scores, report all eight conditional ranges and 28 contrasts,
+and keep unavailable/failure outcomes and assumptions explicit. Do not attach
+these ranges as biological error bars to the observed fixed scores or declare
+unconditional historical certification. Do not rerun completed validation or
+native context producers. If this integration is already committed, advance
+to the adapter rather than recreating its records or recommitting unchanged files.
+Full seven-part goal remains ACTIVE/incomplete; other endpoint uncertainty and
+publication requirements remain unresolved. No new scientific result is a pause.
+
 ## Native FAS Prospective Validation Driver Prepared (2026-10-10)
 
 Previous goal turn was progress: a5880096 pushed tested numerical kernels;
