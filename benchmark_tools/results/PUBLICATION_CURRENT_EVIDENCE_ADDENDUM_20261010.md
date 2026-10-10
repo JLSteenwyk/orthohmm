@@ -45,4 +45,3 @@ whole-seed draws with fixed-15 endpoint adjustment. This checklist reuses
 those outcomes without new draws or scores. The synthetic seed-level units
 are not reference-family or native dyadic resampling units, and do not
 justify confidence intervals for the unresolved QfO endpoints.
-

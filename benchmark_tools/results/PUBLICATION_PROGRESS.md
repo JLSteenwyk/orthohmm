@@ -1,5 +1,54 @@
 # Publication Progress
 
+## Native FAS Design Target Derived; Invariance Validation Next (2026-10-10)
+
+Previous turn was progress: e55405ee pushed actual manuscript integration.
+This turn pushed the checked current claims/negative fragment comparisons as
+3d2785ae. A trailing blank-line warning is corrected prospectively in this
+milestone; no claim value changes. All nine claim rows, five full-precision
+F1 effect rows, 25 links and explicit failure/non-admission scopes passed.
+
+Returned to original4.1 using the actual native sampling design. Read source
+functions inside the retained FAS image without scoring or rerunning the old
+omission probe. Three child-module hashes match historical probe records;
+host fas_benchmark.py matches native SHA1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d.
+Native child loads complete annotation files and uses MS_uni=1 (no mutable
+reference-domain counts); the configured priority mode excludes the inspected
+non-priority timeout branch. This supports investigating fixed pair outcomes,
+not claiming that every helper/worker/file path is invariant or that historical
+missing-pair causes are known. All eight retained native k counts checked
+positive in the existing stratum-weight JSON. No large database/lookup join.
+
+Prospective NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md derives the exact
+expectation of the post-attrition native ratio under uniform stratum sampling
+and fixed pair-return/value assumptions. R is hypergeometric; theta uses
+E[k/(k+R)], not k/(k+E[R]). One exact Fraction check of all 18 small subset
+combinations confirms theta=107/240, while expected-count substitution gives
+9/20. This is an algebraic check, not coverage or native interval admission.
+Primary Bardenet/Maillard v2 full PDF Proposition1.2 and SciPy1.15.3 hypergeom
+documentation opened. The proposed count-tail/conditional-mean rectangle and
+28-difference union-bound projection remain unimplemented/unvalidated.
+
+No new inference, native scoring, annotations, samples, bootstrap draws,
+interval, archived component, timing, public TreeFam search or prompt edit.
+The actual FAS observed means and endpoints remain unchanged. Fixed-population
+sampling error is distinct from biological-family/clade generalization and
+from proving historical ideal RNG states. No live tool handle remains.
+Full goal remains ACTIVE/incomplete; no new sampling unit is admitted yet.
+
+NEXT implement/test a narrowly scoped native FAS order/companion/worker
+invariance check with controlled annotation fixtures and numeric/NA outcomes.
+Start by reading `sed -n '1,190p' benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md`.
+Reuse the inspected native functions; do not rerun the historical omission
+probe or any historical scientific scoring. Make the new check exercise batch
+context, not just the already-established per-protein cutoff. Inspect remaining
+helper state and reachable branches. Commit/push tested source before actual
+container execution. If context invariance fails, retain the failure and reject
+the fixed-return design; if it passes, derive/test exact subset count/ratio
+coverage before any native eight-method application. No replacement endpoint,
+shared-pair conditioning or convenient gene-dependence toy model. Other
+uncertainty and full publication requirements remain unresolved.
+
 ## Current Claims Match Fragment And Supplement Evidence (2026-10-10)
 
 Previous goal turn was progress: e55405ee pushed the current manuscript after

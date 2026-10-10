@@ -2,6 +2,11 @@
 
 ## Current Supplements (2026-10-10)
 
+The [FAS sampling-design investigation](results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md)
+derives a prospective target for the actual random-denominator, post-attrition
+mean. Pair-return/value invariance and finite-sampling coverage are still to
+be validated. No FAS interval, new sample, rescore or native admission has run.
+
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
 links the controlled-fragment comparisons, observed stage decisions, actual
 relocated replay and restricted count-model outcomes to their limits. It keeps
