@@ -8,6 +8,15 @@ without presuming that it will outperform OrthoFinder. Use the existing shared
 Threadripper (bizon); no DGX, dedicated host, quiet window, spare uncontended
 cores or renewed contention approval is required.
 
+Closed Resource Decision
+
+The user has authorized proceeding on the shared Threadripper despite competing
+analyses. This decision is settled: do not ask again for a dedicated timing
+host, a quiet window, free CPU cores or acceptance of timing distortion. Apply
+the Resources And Timing safeguards below to an individual launch, not to the
+whole goal. The 27-identity timing panel has already been attempted; reuse its
+retained results and limitations rather than restarting it.
+
 Immediate Continuation Decision
 
 At every automatic continuation, reconcile the newest ledger entry with actual
@@ -58,6 +67,12 @@ Continue By Doing The Next Unfinished Task
    command in the ledger. Leave the goal ACTIVE when useful work remains.
    A milestone, commit, completed wait or status update requires neither a new
    user resume nor routine approval.
+5. Make the newest handoff executable: name the actual unfinished task, its
+   existing files, the next command and any live handle. Distinguish observed
+   test/command results from planned or unseen results. Replace an obsolete
+   next action when its output already exists; do not bury that correction
+   under another completed-work summary. This is a checkpoint update, not a
+   new evidence, validation or publication requirement.
 
 Recovery And Provenance
 

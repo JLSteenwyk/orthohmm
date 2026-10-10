@@ -1,5 +1,61 @@
 # Publication Progress
 
+## Goal Maintenance; Exact Unfinished Handoff (2026-10-10)
+
+User requested fixing repeated goal stops. get_goal reports ACTIVE, no token
+budget/remaining-token limit, and the objective references the editable
+attachment pasted-text-1.txt. Attachment and PUBLICATION_GOAL_CURRENT.txt were
+already byte-identical; no observed paused/blocked state or established
+platform-stop cause. Do not claim this prompt change repairs platform lifecycle
+interruptions. Added an explicit closed shared-Threadripper resource decision
+and an executable-handoff instruction in BOTH copies. Scientific requirements,
+completion criteria, frozen evidence and historical prompt remain unchanged.
+No dedicated host, quiet-window question, DGX access or timing-panel rerun.
+
+The older all-dataset provenance next action is obsolete: that output already
+exists and is integrated. Actual unfinished task remains the bounded relocated
+fragment-stage readback described in the next entry, not another metadata
+export. Uncommitted source benchmark_tools/fragment_trace_artifact_access.py
+and tests/unit/test_fragment_trace_artifact_access.py are preserved. A fresh
+focused UNIT test invocation completed EXIT0: 15 passed in 0.35s. This checks
+the access adapter only; no production copy, relocated replay, package or
+end-to-end validation has run. No live handle remains from this invocation;
+the earlier unseen test result is not asserted. Unrelated changes untouched.
+
+NEXT concrete command (repository cwd):
+`sed -n '1,260p' benchmark_tools/readback_controlled_fragment_stage_table.py`
+Then inspect read_context in readback_controlled_fragment_stages.py and finish
+the bounded relocation driver with the existing unchanged kernels. Add focused
+tests for copied-source loading and required checkpoint FASTA mappings; commit
+and push tested source before one fresh local copy/readback. Preserve the
+original report, source hashes and logical-path labels. No inference, benchmark
+scoring, new uncertainty estimator or repeated completed panel. Full goal
+remains ACTIVE and incomplete; this maintenance request does not pause it.
+
+## Existing Metadata Reused; Fragment Raw-Stage Portability In Progress (2026-10-10)
+
+Previous turn was progress;232ce533 pushed. Latest suggested24-row metadata
+export is ALREADY complete: all_benchmark_metadata_integrated_20261004_v3,
+24cells/37resource entries/34recorded walls, actual selected export/readback
+receipt benchmark_metadata_integration_execution_20261004.json. RegisterSHA
+4c6f01afb28ef36c25991155c2484a6e2db273556529506350c2f7912083ba80.
+Latest manuscript already links its result summary. No duplicate metadata
+implementation/export or historical-input audit; old20261004 requirement
+audit is stale, as20261009 reconciliation already records this consolidation.
+
+Next actual original7.4 gap: rc6 index contains no controlled_fragment data;
+the new retained-stage readback needs original absolute native paths. Work
+on bounded relocated artifact access for the existing frozen independent
+reader, not a new release candidate or statistical estimator. Joint retained
+selection/stage inputs have1605 unique pins/33723996bytes, all under repository
+root. Add only execution-inventoried FASTAs needed for checkpoint ownership.
+Read-only logical-to-copied-path view must reject missing/unindexed paths,
+validate original and copied bytes, preserve all source/JSON labels and reject
+writes. Reuse old native algorithms unchanged in a private loaded module.
+Freeze/test access mapping and source selection before one local copy/replay.
+No inference, scoring, HMM/search, new CI, DGX or timing work. No new OS/security
+certification gate or redistribution-clearance claim; full goal ACTIVE.
+
 ## Trace Package Retained; All-Dataset Provenance Next (2026-10-10)
 
 Full continuation made progress, not a wait: independent native stage reader,
