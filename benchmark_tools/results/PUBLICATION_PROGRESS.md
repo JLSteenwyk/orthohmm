@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Conditional FAS Manuscript Adapter Tested Before Generation (2026-10-10)
+
+15c563fe pushed actual ranges/readback. Both document-check failures and the
+successful corrected check are appended explicitly to its execution record;
+no numerical result or original command outcome was overwritten. The result
+summary now explicitly identifies the retained September eight-method snapshot,
+not newer four-cell native ablations or a newly tuned default.
+
+Prepared integrate_conditional_fas_manuscript.py using existing record/require
+helpers and only three directly pinned inputs: the current full parent text,
+actual conditional report and complete execution/readback/document-check record.
+Two scoped insertions add the separate Z/theta table and target/provenance/
+historical qualification. Existing results, negative F1, limits and links are
+preserved; removing insertions restores the complete parent. Existing earlier
+unresolved-uncertainty statements are distinguished from this conditional
+retained-snapshot sampling target, not silently rewritten or certified.
+
+Actual focused/adjacent tests EXIT0: 45 passed in 1.24s, covering restored
+parent, table/snapshot/negative-comparison scopes, changed allocation/identities,
+missing/altered contrasts, admission changes, actual document terminal,
+ambiguous anchors, pins and occupied destinations. No successor generated yet.
+No live handle. Full goal ACTIVE/incomplete; no new inference, score, timing,
+sample, uncertainty for another endpoint, render or archive.
+
+NEXT commit/push tested manuscript source/tests and documented harness recovery,
+then generate ONCE with fresh output/record:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.integrate_conditional_fas_manuscript import run; r=run(Path.cwd(),"benchmark_tools/results/publication_conditional_fas_manuscript_20261010_v1.md","benchmark_tools/results/publication_conditional_fas_generation_20261010_v1.json"); print(r["manuscript"])'`
+Check actual full-parent byte restoration and inserted table/link/scope values;
+link the successor in the mutable guide while preserving old text/PDF scope.
+If output already exists, validate/integrate rather than replaying the producer.
+No native/unconditional biological admission or full completion is implied.
+
+## Conditional FAS Document Check Recovered; Manuscript Integration Next (2026-10-10)
+
+15c563fe pushed actual eight-method ranges, all28 contrasts and successful
+independent recurrence readback. Report/table bytes and science are unchanged.
+The prior ledger prematurely claimed the separate document check EXIT0:
+its overly literal English predicate failed. A first correction failed Python
+command quoting before execution. Both failures are now explicitly appended
+to the existing actual execution record, without overwriting prior evidence.
+Corrected actual-phrase/whitespace check EXIT0 verifies all eight rows, output
+identities, links, execution/test/readback terminals and admission scope. This
+is a reporting-harness recovery, not rerun of the conditional producer, scorer,
+recurrence, simulation or native benchmark. No scientific value changed.
+
+NEXT proceed directly to the scoped manuscript adapter described immediately
+below, using fresh successor and exact parent-restoration checks. Existing
+current manuscript remains publication_supplements_manuscript_20261010_v1.md;
+conditional result is complete and already pushed. Do not recreate results or
+prompt. No live handles. Full goal ACTIVE/incomplete; no biological/historical
+or whole-publication admission. Preserve this recovery with the next tested
+source milestone, then execute that reporting adapter rather than stopping
+after another checkpoint-only turn.
+
 ## Conditional Native FAS Ranges Computed And Independently Checked (2026-10-10)
 
 Previous goal turn was progress: 25505498 pushed finite coverage validation

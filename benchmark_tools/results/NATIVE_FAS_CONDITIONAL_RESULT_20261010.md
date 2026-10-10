@@ -7,6 +7,8 @@ BEFORE applying the [frozen reporting plan](NATIVE_FAS_CONDITIONAL_REPORTING_PRO
 Focused/adjacent tests EXIT0: 151 passed in 2.50s. Actual retained-data
 application EXIT0: all eight conditional ranges and all 28 contrasts computed.
 No native benchmark score, annotation, RNG sample, inference or timing rerun.
+These are the retained September eight-method comparator values, not the
+later four-cell fresh-native ablation scores or a newly tuned OrthoHMM default.
 
 | Method | Observed Native Z | Conditional 95% Range For Expected Theta |
 | --- | --- | --- |

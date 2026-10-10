@@ -1,5 +1,55 @@
 {
   "schema": "conditional_native_fas_reporting_execution_v1",
+  "document_checks": [
+  {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nbase=Path(\"benchmark_tools/results\")\nrecord=json.loads((base/\"native_fas_conditional_execution_20261010_v1.json\").read_text())\nfor key in (\"execution\",\"tests\",\"independent_recurrence_readback\"): assert record[key][\"observations\"][-1][\"exit_code\"]==0\nfor ref in record[\"outputs\"].values():\n raw=(base/ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\ndata=json.loads((base/record[\"outputs\"][\"report\"][\"path\"]).read_text())\nsummary=base/\"NATIVE_FAS_CONDITIONAL_RESULT_20261010.md\";text=summary.read_text()\nrows=[line for line in text.splitlines() if line.startswith(\"| \")][2:]\nassert len(rows)==8\nfor line,row in zip(rows,data[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0]==row[\"method\"] and float(fields[1])==round(row[\"observed_native_mean\"],9)\n assert fields[2]==\"[%.9f, %.9f]\" % tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\nassert \"No native benchmark score\" in text and \"not biological error bars\" in text and \"No\" not in data[\"methods\"][0][\"method\"]\nfor target in re.findall(r\"\\]\\(([^)]+)\\)\",text): assert (summary.parent/target).resolve().exists(),target\nassert record[\"conditional_design_ranges_computed\"] is True\nassert all(record[key] is False for key in (\"unconditional_historical_interval_admission\",\"biological_generalization_intervals\",\"publication_ready\"))\nassert \"expected-ratio ranges\" in Path(\"benchmark_tools/PUBLICATION_REPRODUCTION.md\").read_text()\nprint(\"PASS: actual application/test/readback terminals, two output identities, eight table rows, links and conditional/unconditional scopes\")\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "result": {
+      "chunk_id": "725718",
+      "wall_time_seconds": 0.000011587,
+      "exit_code": 1,
+      "original_token_count": 23,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 18, in <module>\nAssertionError\n"
+    },
+    "scope": "Failed overly literal prose predicate; numerical values/rows reached this point successfully."
+  },
+  {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nbase=Path(\"benchmark_tools/results\")\nrecord=json.loads((base/\"native_fas_conditional_execution_20261010_v1.json\").read_text())\nfor key in (\"execution\",\"tests\",\"independent_recurrence_readback\"): assert record[key][\"observations\"][-1][\"exit_code\"]==0\nfor ref in record[\"outputs\"].values():\n raw=(base/ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\ndata=json.loads((base/record[\"outputs\"][\"report\"][\"path\"]).read_text())\nsummary=base/\"NATIVE_FAS_CONDITIONAL_RESULT_20261010.md\";text=summary.read_text()\nrows=[line for line in text.splitlines() if line.startswith(\"| \")][2:]\nassert len(rows)==8\nfor line,row in zip(rows,data[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0]==row[\"method\"] and float(fields[1])==round(row[\"observed_native_mean\"],9)\n assert fields[2]==\"[%.9f, %.9f]\" % tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\nnormalized=re.sub(r\"\\\\s+\",\" \",text)\\nassert \"No native benchmark score\" in normalized and \"must not be plotted as biological error bars centered on observed Z.\" in normalized\nfor target in re.findall(r\"\\]\\(([^)]+)\\)\",text): assert (summary.parent/target).resolve().exists(),target\nassert record[\"conditional_design_ranges_computed\"] is True\nassert all(record[key] is False for key in (\"unconditional_historical_interval_admission\",\"biological_generalization_intervals\",\"publication_ready\"))\nassert \"expected-ratio ranges\" in Path(\"benchmark_tools/PUBLICATION_REPRODUCTION.md\").read_text()\nprint(\"PASS: actual application/test/readback terminals, two output identities, eight table rows, links and conditional/unconditional scopes\")\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "result": {
+      "chunk_id": "20913b",
+      "wall_time_seconds": 0.000015864,
+      "exit_code": 1,
+      "original_token_count": 79,
+      "output": "  File \"<string>\", line 18\n    normalized=re.sub(r\"\\\\s+\",\" \",text)\\nassert \"No native benchmark score\" in normalized and \"must not be plotted as biological error bars centered on observed Z.\" in normalized\n                                        ^\nSyntaxError: unexpected character after line continuation character\n"
+    },
+    "scope": "Failed command quoting; Python did not execute."
+  },
+  {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nimport hashlib,json,re\nbase=Path(\"benchmark_tools/results\")\nrecord=json.loads((base/\"native_fas_conditional_execution_20261010_v1.json\").read_text())\nfor key in (\"execution\",\"tests\",\"independent_recurrence_readback\"): assert record[key][\"observations\"][-1][\"exit_code\"]==0\nfor ref in record[\"outputs\"].values():\n raw=(base/ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\ndata=json.loads((base/record[\"outputs\"][\"report\"][\"path\"]).read_text())\nsummary=base/\"NATIVE_FAS_CONDITIONAL_RESULT_20261010.md\";text=summary.read_text()\nrows=[line for line in text.splitlines() if line.startswith(\"| \")][2:]\nassert len(rows)==8\nfor line,row in zip(rows,data[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0]==row[\"method\"] and float(fields[1])==round(row[\"observed_native_mean\"],9)\n assert fields[2]==\"[%.9f, %.9f]\" % tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\nnormalized=re.sub(r\"\\s+\",\" \",text)\nassert \"No native benchmark score\" in normalized and \"must not be plotted as biological error bars centered on observed Z.\" in normalized\nfor target in re.findall(r\"\\]\\(([^)]+)\\)\",text): assert (summary.parent/target).resolve().exists(),target\nassert record[\"conditional_design_ranges_computed\"] is True\nassert all(record[key] is False for key in (\"unconditional_historical_interval_admission\",\"biological_generalization_intervals\",\"publication_ready\"))\nassert \"expected-ratio ranges\" in Path(\"benchmark_tools/PUBLICATION_REPRODUCTION.md\").read_text()\nprint(\"PASS: actual application/test/readback terminals, two output identities, eight table rows, links and conditional/unconditional scopes\")\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "result": {
+      "chunk_id": "9334b9",
+      "wall_time_seconds": 0.000014632,
+      "exit_code": 0,
+      "original_token_count": 34,
+      "output": "PASS: actual application/test/readback terminals, two output identities, eight table rows, links and conditional/unconditional scopes\n"
+    },
+    "scope": "Corrected whitespace-normalized actual prose, eight rows, links, output identities and non-admission scopes passed."
+  }
+],
   "source_commit_pushed_before_application": "c7200cc4",
   "execution": {
     "args": {
