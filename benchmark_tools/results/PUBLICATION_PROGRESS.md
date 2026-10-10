@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Restricted Boundary Result Integrated; Main Text Supplements Remain (2026-10-10)
+
+Previous goal turn was progress: 4c380216 corrected the stale checkpoint and
+preserved the actual completed validation and independent readback. No stopped
+producer was restarted. This turn integrates that retained result into
+PAIRED_POISSON_F1_RESULT_20261010.md and PUBLICATION_REPRODUCTION.md.
+The table is generated directly from all 12 retained JSON rows. Minimum covered
+mass is 0.999559608605; maximum omitted tail is 5.999645225074e-13. Both
+explicitly non-Poisson common-shock controls retain zero coverage. These are
+conditional mathematical results, not native intervals, new biological
+confirmation, tuning, initial-HMM benefit or publication readiness.
+
+Actual reporting checks EXIT0: all 12 rows/36 displayed numeric fields match
+their source at displayed precision; local result/guide links resolve;
+source, protocol and result bytes match the existing bindings; negative
+controls and non-admission flags remain explicit. Runtime Python 3.12.3.
+No new simulation, scoring, bootstrap draw, inference, timing, source lookup,
+raw-data replay, render, archive or goal-prompt edit. No live handle remains.
+
+NEXT genuine original7.3 integration gap: the latest manuscript
+controlled_fragment_trace_manuscript_20261010_v1.md predates the successful
+relocated raw-stage replay and the completed conditional-Poisson experiment.
+Add these two outcomes through one scoped, tested prospective manuscript
+integration, preserving the entire parent body and all native uncertainty
+limitations. Reuse existing reporting helpers; do not alter frozen source,
+protocol, readbacks or manuscript in place. Start with
+`sed -n '1,230p' benchmark_tools/integrate_controlled_fragment_trace.py`
+and the retained relocation readback/Poisson JSON. Commit/push tested source
+before generating a fresh manuscript. No new render/archive is required to
+prove the text integration, and no native CI admission follows. The existing
+30-page PDF remains the rendered copy of its earlier source, not the successor.
+Then return to original scientific requirements without inventing new gates.
+Full goal remains ACTIVE/incomplete; shared resources are authorized.
+
 ## Goal Maintenance: Completed Output Supersedes Stale Handoff (2026-10-10)
 
 User requested a fix for repeated stopping. Actual get_goal reports ACTIVE,

@@ -2,6 +2,15 @@
 
 ## Current Supplements (2026-10-10)
 
+The [conditional paired-Poisson result](results/PAIRED_POISSON_F1_RESULT_20261010.md)
+reports the already-completed 12-cell mathematical validation and both failing
+non-Poisson controls. Its [execution record](results/paired_poisson_f1_execution_20261010_v1.json)
+preserves source/protocol bindings, commands, 60 passing tests and independent
+tail/corner readback. This is restricted-model validation only: no native VGNC,
+TreeFam, GO/EC/FAS or secondary-mean interval is admitted. It changes no benchmark
+score, default, biological claim or historical manuscript. Do not rerun the
+completed panel to update a stale checkpoint.
+
 The [controlled-fragment workflow](CONTROLLED_FRAGMENT_REPRODUCTION.md) documents
 the retained observation, selected native-stage diagnostics, manuscript and
 standalone relocated raw-stage check. The
