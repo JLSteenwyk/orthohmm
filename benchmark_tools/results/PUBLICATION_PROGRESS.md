@@ -1,5 +1,34 @@
 # Publication Progress
 
+## Native FAS Fixture Failure Preserved; Lowercase Correction Tested (2026-10-10)
+
+Reviewed source/tests pushed f8124a75 BEFORE actual v1 container execution.
+That execution is terminal EXIT1 and preserved as
+`native_fas_context_probe_20261010_v1.json`, SHA
+0e5a0d4d6482a0fcc8ab46b1ef469a1275f06669a43cb3530d5816a436e0a176.
+The first singleton child EXIT1: "pfam is missing in the seed annotation".
+Zero pair scores; no context-invariance conclusion. This is a controlled
+fixture-schema failure, not a context-dependent scoring result or historical
+benchmark failure. Original attempt-bound source/output remain unchanged.
+
+Read-only native fasInput.featuretypes confirms it lowercases annoTools.txt.
+The first driver used its display-case labels in fixture JSON. The prospective
+`probe_native_fas_context_lowercase.py` uses a separate lowercase view, records
+the original-to-native key mapping and reads actual native tool configuration
+for path preparation. Protein identities, architecture values, context plan,
+native helper/CLI and comparison kernels are unchanged. It imports the original
+driver's validated fixture, capture, comparison and resource-limit functions;
+the frozen original source SHA d722944a7cadeee3e25433fc472cdf724ba58309aaac29952338e5c7575bae06 is enforced.
+Only the corrected orchestration is new. This is not a historical scoring retry.
+
+Actual focused/adjacent tests EXIT0: 89 passed. No v2 native execution yet.
+NEXT commit/push correction/tests and preserved v1 outcome, then run ONCE:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 singularity exec --cleanenv --env PYTHONHASHSEED=0,PYTHONDONTWRITEBYTECODE=1,OPENBLAS_NUM_THREADS=1,OMP_NUM_THREADS=1,MKL_NUM_THREADS=1 qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img python -B benchmark_tools/probe_native_fas_context_lowercase.py --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_context_probe_20261010_v2.json`
+Check absence before launch. If present, validate/integrate instead of replay.
+Poll the same live handle to terminal. Retain both outcomes in one concise
+summary and actual command record; no further archival/receipt layers.
+Full goal remains ACTIVE/incomplete. No native interval is admitted. No live handle.
+
 ## Native FAS Context Check Reviewed Before First Execution (2026-10-10)
 
 Previous turn was progress: c18c9c8d pushed partial-work continuation and the

@@ -1,0 +1,1295 @@
+{
+  "assessment": {
+    "all_tested_contexts_invariant": false,
+    "complete": false,
+    "executed_contexts": 1,
+    "failures": [
+      "singleton_0"
+    ],
+    "pair_evaluations": 0,
+    "planned_contexts": 12,
+    "variations": []
+  },
+  "assessment_error": null,
+  "contexts": [
+    {
+      "context": {
+        "hash_seed": "0",
+        "name": "singleton_0",
+        "pairs": [
+          [
+            "A",
+            "D"
+          ]
+        ],
+        "workers": 1
+      },
+      "error": null,
+      "normalized": null,
+      "raw": null,
+      "raw_text": null,
+      "terminal": {
+        "command": [
+          "fas.runMultiTaxa",
+          "--input",
+          "/tmp/tmprrw0napd/missing.txt",
+          "-a",
+          "/tmp/native-fas-context-3x7z26am/annotations",
+          "-o",
+          "/tmp/tmprrw0napd/fas_res",
+          "--bidirectional",
+          "--tsv",
+          "--domain",
+          "--no_config",
+          "--json",
+          "--mergeJson",
+          "--outName",
+          "computed_results",
+          "--max_cardinality",
+          "40",
+          "--paths_limit",
+          "15",
+          "--pairLimit",
+          "30000",
+          "--cpus",
+          "1"
+        ],
+        "returncode": 1,
+        "stderr": "Traceback (most recent call last):\n  File \"/usr/local/bin/fas.runMultiTaxa\", line 8, in <module>\n    sys.exit(main())\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/calcFASmulti.py\", line 373, in main\n    calcFAS.fas(j)\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/calcFAS.py\", line 305, in fas\n    greedyFAS.fc_start(option_dict)\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/greedyFAS.py\", line 118, in fc_start\n    raise Exception(tool + \" is missing in the seed annotation\")\nException: pfam is missing in the seed annotation\n",
+        "stdout": "==> preparing jobs...\n==> calculating FAS scores...\n",
+        "timed_out": false
+      }
+    }
+  ],
+  "fixture_annotations": {
+    "T1": {
+      "clan": {},
+      "count": {},
+      "feature": {
+        "A": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "B": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            },
+            "pfam_F2": {
+              "evalue": 0,
+              "instance": [
+                [
+                  110,
+                  160,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "C": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ]
+              ]
+            },
+            "pfam_F2": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "G": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ],
+                [
+                  1770,
+                  1820,
+                  0
+                ],
+                [
+                  1880,
+                  1930,
+                  0
+                ],
+                [
+                  1990,
+                  2040,
+                  0
+                ],
+                [
+                  2100,
+                  2150,
+                  0
+                ],
+                [
+                  2210,
+                  2260,
+                  0
+                ],
+                [
+                  2320,
+                  2370,
+                  0
+                ],
+                [
+                  2430,
+                  2480,
+                  0
+                ],
+                [
+                  2540,
+                  2590,
+                  0
+                ],
+                [
+                  2650,
+                  2700,
+                  0
+                ],
+                [
+                  2760,
+                  2810,
+                  0
+                ],
+                [
+                  2870,
+                  2920,
+                  0
+                ],
+                [
+                  2980,
+                  3030,
+                  0
+                ],
+                [
+                  3090,
+                  3140,
+                  0
+                ],
+                [
+                  3200,
+                  3250,
+                  0
+                ],
+                [
+                  3310,
+                  3360,
+                  0
+                ],
+                [
+                  3420,
+                  3470,
+                  0
+                ],
+                [
+                  3530,
+                  3580,
+                  0
+                ],
+                [
+                  3640,
+                  3690,
+                  0
+                ],
+                [
+                  3750,
+                  3800,
+                  0
+                ],
+                [
+                  3860,
+                  3910,
+                  0
+                ],
+                [
+                  3970,
+                  4020,
+                  0
+                ],
+                [
+                  4080,
+                  4130,
+                  0
+                ],
+                [
+                  4190,
+                  4240,
+                  0
+                ],
+                [
+                  4300,
+                  4350,
+                  0
+                ],
+                [
+                  4410,
+                  4460,
+                  0
+                ],
+                [
+                  4520,
+                  4570,
+                  0
+                ],
+                [
+                  4630,
+                  4680,
+                  0
+                ],
+                [
+                  4740,
+                  4790,
+                  0
+                ],
+                [
+                  4850,
+                  4900,
+                  0
+                ],
+                [
+                  4960,
+                  5010,
+                  0
+                ],
+                [
+                  5070,
+                  5120,
+                  0
+                ],
+                [
+                  5180,
+                  5230,
+                  0
+                ],
+                [
+                  5290,
+                  5340,
+                  0
+                ],
+                [
+                  5400,
+                  5450,
+                  0
+                ]
+              ]
+            },
+            "pfam_F2": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ],
+                [
+                  1770,
+                  1820,
+                  0
+                ],
+                [
+                  1880,
+                  1930,
+                  0
+                ],
+                [
+                  1990,
+                  2040,
+                  0
+                ],
+                [
+                  2100,
+                  2150,
+                  0
+                ],
+                [
+                  2210,
+                  2260,
+                  0
+                ],
+                [
+                  2320,
+                  2370,
+                  0
+                ],
+                [
+                  2430,
+                  2480,
+                  0
+                ],
+                [
+                  2540,
+                  2590,
+                  0
+                ],
+                [
+                  2650,
+                  2700,
+                  0
+                ],
+                [
+                  2760,
+                  2810,
+                  0
+                ],
+                [
+                  2870,
+                  2920,
+                  0
+                ],
+                [
+                  2980,
+                  3030,
+                  0
+                ],
+                [
+                  3090,
+                  3140,
+                  0
+                ],
+                [
+                  3200,
+                  3250,
+                  0
+                ],
+                [
+                  3310,
+                  3360,
+                  0
+                ],
+                [
+                  3420,
+                  3470,
+                  0
+                ],
+                [
+                  3530,
+                  3580,
+                  0
+                ],
+                [
+                  3640,
+                  3690,
+                  0
+                ],
+                [
+                  3750,
+                  3800,
+                  0
+                ],
+                [
+                  3860,
+                  3910,
+                  0
+                ],
+                [
+                  3970,
+                  4020,
+                  0
+                ],
+                [
+                  4080,
+                  4130,
+                  0
+                ],
+                [
+                  4190,
+                  4240,
+                  0
+                ],
+                [
+                  4300,
+                  4350,
+                  0
+                ],
+                [
+                  4410,
+                  4460,
+                  0
+                ],
+                [
+                  4520,
+                  4570,
+                  0
+                ],
+                [
+                  4630,
+                  4680,
+                  0
+                ],
+                [
+                  4740,
+                  4790,
+                  0
+                ],
+                [
+                  4850,
+                  4900,
+                  0
+                ],
+                [
+                  4960,
+                  5010,
+                  0
+                ],
+                [
+                  5070,
+                  5120,
+                  0
+                ],
+                [
+                  5180,
+                  5230,
+                  0
+                ],
+                [
+                  5290,
+                  5340,
+                  0
+                ],
+                [
+                  5400,
+                  5450,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "I": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        }
+      },
+      "version": {
+        "context_fixture": 1
+      }
+    },
+    "T2": {
+      "clan": {},
+      "count": {},
+      "feature": {
+        "D": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "E": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "F": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ]
+              ]
+            },
+            "pfam_F2": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ],
+                [
+                  120,
+                  170,
+                  0
+                ],
+                [
+                  230,
+                  280,
+                  0
+                ],
+                [
+                  340,
+                  390,
+                  0
+                ],
+                [
+                  450,
+                  500,
+                  0
+                ],
+                [
+                  560,
+                  610,
+                  0
+                ],
+                [
+                  670,
+                  720,
+                  0
+                ],
+                [
+                  780,
+                  830,
+                  0
+                ],
+                [
+                  890,
+                  940,
+                  0
+                ],
+                [
+                  1000,
+                  1050,
+                  0
+                ],
+                [
+                  1110,
+                  1160,
+                  0
+                ],
+                [
+                  1220,
+                  1270,
+                  0
+                ],
+                [
+                  1330,
+                  1380,
+                  0
+                ],
+                [
+                  1440,
+                  1490,
+                  0
+                ],
+                [
+                  1550,
+                  1600,
+                  0
+                ],
+                [
+                  1660,
+                  1710,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6400
+        },
+        "H": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        }
+      },
+      "version": {
+        "context_fixture": 1
+      }
+    },
+    "T3": {
+      "clan": {},
+      "count": {},
+      "feature": {
+        "J": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        },
+        "L": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        }
+      },
+      "version": {
+        "context_fixture": 1
+      }
+    },
+    "T4": {
+      "clan": {},
+      "count": {},
+      "feature": {
+        "K": {
+          "COILS2": {},
+          "Pfam": {
+            "pfam_F1": {
+              "evalue": 0,
+              "instance": [
+                [
+                  10,
+                  60,
+                  0
+                ]
+              ]
+            },
+            "pfam_F2": {
+              "evalue": 0,
+              "instance": [
+                [
+                  110,
+                  160,
+                  0
+                ]
+              ]
+            }
+          },
+          "SEG": {},
+          "SMART": {},
+          "SignalP": {},
+          "TMHMM": {},
+          "fLPS": {},
+          "length": 6000
+        }
+      },
+      "version": {
+        "context_fixture": 1
+      }
+    }
+  },
+  "fixture_sha256": "ec8befa278e0be7b9084c27b995a38618d15a70505a50b21987b66ddd2e01cbd",
+  "greedyfas_version": "1.18.7",
+  "historical_omissions_attributed": false,
+  "historical_scores_rerun": false,
+  "limitations": [
+    "Controlled annotations and successful contexts only; finite checks are not proof for all native pairs.",
+    "Fixed numeric return/status is a design assumption; batch crashes are outside this check.",
+    "No historical random state, sample, missing identities, benchmark score or annotation is reconstructed.",
+    "No confidence construction or independent biological generalization is admitted."
+  ],
+  "native_intervals_admitted": false,
+  "native_path_counts": {
+    "C": 65536,
+    "F": 65536,
+    "G": 1125899906842624
+  },
+  "native_sampling_law_admitted": false,
+  "owners": {
+    "A": "T1",
+    "B": "T1",
+    "C": "T1",
+    "D": "T2",
+    "E": "T2",
+    "F": "T2",
+    "G": "T1",
+    "H": "T2",
+    "I": "T1",
+    "J": "T3",
+    "K": "T4",
+    "L": "T3"
+  },
+  "protocol": {
+    "bytes": 8946,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md",
+    "sha256": "e47b22d456dea7a41fcdf9248981d0c2d4eafec5c6dcb6ace5ad2153297b70dd"
+  },
+  "publication_ready": false,
+  "resources": {
+    "child_timeout_seconds": 120,
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "maximum_child_workers": 2,
+    "numerical_threads": 1,
+    "per_process_address_space_bytes": 4294967296
+  },
+  "schema": "native_fas_context_probe_v1",
+  "sources": {
+    "calcFAS": {
+      "bytes": 20095,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/calcFAS.py",
+      "sha256": "40a920fcce24d76e7441f5f9368aa6232d779815956742c725ca16a169980c2b"
+    },
+    "calcFASmulti": {
+      "bytes": 21457,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/calcFASmulti.py",
+      "sha256": "7f9621c0dc6737c8b928c0cf35575101decc4af1cf039e4f3c044e80ce460b75"
+    },
+    "driver": {
+      "bytes": 14896,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_fas_context.py",
+      "sha256": "d722944a7cadeee3e25433fc472cdf724ba58309aaac29952338e5c7575bae06"
+    },
+    "engine": {
+      "bytes": 53457,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/greedyFAS.py",
+      "sha256": "f82a78d2787d30f106a58c760cae49d28f28d55956ad188b0b259ec8b9f0f7e8"
+    },
+    "greedyFAS.mainFAS.fasInput": {
+      "bytes": 3429,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasInput.py",
+      "sha256": "a05228397533d351cf9d1ceb111fd65ab91b8467c6025409f6e105ce846f1366"
+    },
+    "greedyFAS.mainFAS.fasOutput": {
+      "bytes": 19322,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasOutput.py",
+      "sha256": "a2ad7a42f16a32943eb4773f0e3cde526f8c0b0e1e07d331ee187ce94f4dff4f"
+    },
+    "greedyFAS.mainFAS.fasPathing": {
+      "bytes": 3094,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasPathing.py",
+      "sha256": "ff301641ce58d63f691205529b758427d4a20e2706125585407cd9dd71cf7feb"
+    },
+    "greedyFAS.mainFAS.fasScoring": {
+      "bytes": 17206,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasScoring.py",
+      "sha256": "2ba875394ee789c2660627b7eca00eb0d36f61c22265e65a9556d450f3072f15"
+    },
+    "greedyFAS.mainFAS.fasWeighting": {
+      "bytes": 8631,
+      "path": "/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/fasWeighting.py",
+      "sha256": "2751ce475534e2b1d00d72c49989d14a2427220906f3ce9e750280b92dc13303"
+    },
+    "scorer": {
+      "bytes": 9930,
+      "path": "/benchmark/fas_benchmark.py",
+      "sha256": "1045c57f4d0f4787bec3d1f0690799df63c68dcc67ccfd5a925c338e3d33661d"
+    }
+  },
+  "status": "controlled_native_context_invariance_not_established"
+}
