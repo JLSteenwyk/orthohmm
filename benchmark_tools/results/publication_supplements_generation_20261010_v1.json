@@ -1,0 +1,41 @@
+{
+  "inputs": {
+    "parent": {
+      "bytes": 101043,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_trace_manuscript_20261010_v1.md",
+      "sha256": "df932f2299f47494851235fce68989a33f2bc24390bb4511597f445239b24b3c"
+    },
+    "poisson": {
+      "bytes": 11041,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json",
+      "sha256": "314ddd68b690fb8a8ef210f49fa5be85e3a1a6a17b8f6362cefbf9d091ebee07"
+    },
+    "relocation": {
+      "bytes": 14711,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v2.json",
+      "sha256": "0128cd57399dbb4d1bdb7b72660d3be046b098f802059b81eb30162e6d25257f"
+    }
+  },
+  "inserted_sections": [
+    "### Conditional Count Model Does Not Establish Native Uncertainty\n\nA restricted mathematical experiment examines a fixed perfect-recall truth\nmass and Poisson shared/method-only whole-panel false-positive counts. Its\ntarget is the difference of F1 ratios at expected count vectors, not expected\nsample F1 or generalization from native families. Simultaneous component\nPoisson mean limits are sharply projected through that ratio difference.\nZero observed errors retain a positive rate bound, rather than a zero-width\nplug-in interval. The model is not fitted to native errors.\n\nAll 12 prespecified independent-Poisson enumeration cells passed; minimum\ncovered probability mass was 0.999559608605, with maximum omitted tail\n5.999645225074e-13. This finite panel is conservative, not proof of a native law\nor floating-point certification. Both non-Poisson common-shock controls had\nzero coverage despite having the same mean-count target form. Imperfect\nrecall, unequal family sizes and shared-clade dependence remain outside the\nconstruction. Earlier failed dyadic screens are not replaced. No native VGNC,\nTreeFam, GO/EC/FAS or secondary-mean confidence interval is admitted, and no\nbenchmark statistic, resampling unit or default is changed.\n[Frozen model and derivation](PAIRED_POISSON_F1_PROTOCOL_20261010.md),\n[all results and failure controls](paired_poisson_f1_validation_20261010_v1.json),\n[execution and independent tail/corner readback](paired_poisson_f1_execution_20261010_v1.json).\n\n",
+    "### Relocated Fragment Raw Stage Replay\n\nThe selected fragment-stage postprocessing was executed from a separately\nlocated component containing 1,783 pinned artifact files (39,428,185 payload\nbytes) and unchanged native-reader kernels. Its complete result matches the\nretained native readback: 106 observations, 53 selected cases, 44 contexts and\n415 original input references. The first ownership-map failure is preserved;\nthe corrected map includes all configured ownership FASTAs. Python-open\nauditing observed no original-artifact fallback, not operating-system\ncontainment. This is raw-stage postprocessing portability, not a repeat of\nhistorical inference, new biological evidence or whole-study restoration.\n\nThe component remains local. The Git repository contains its map, result and\nreproduction instructions, not the raw payload; no public deposition or\nredistribution clearance is inferred. The existing 30-page review PDF remains\nthe rendered copy of the prior manuscript, not this extended text.\n[Replay result and preserved failure](CONTROLLED_FRAGMENT_RELOCATION_RESULT_20261010.md),\n[complete copied readback](controlled_fragment_relocated_readback_20261010_v2.json),\n[reproduction workflow](../CONTROLLED_FRAGMENT_REPRODUCTION.md).\n\n"
+  ],
+  "manuscript": {
+    "bytes": 103788,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md",
+    "sha256": "43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b"
+  },
+  "manuscript_rendered": false,
+  "native_intervals_admitted": false,
+  "new_bootstrap_draws": 0,
+  "new_inference_or_scoring": false,
+  "parent_unchanged_except_insertions": true,
+  "publication_ready": false,
+  "schema": "publication_completed_supplements_v1",
+  "source": {
+    "bytes": 8417,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/integrate_publication_supplements.py",
+    "sha256": "699da1d8755af0d6577b902b27e8065c1d612fd35e12f7752f64c9ef01a8110b"
+  },
+  "visual_reviewed": false
+}

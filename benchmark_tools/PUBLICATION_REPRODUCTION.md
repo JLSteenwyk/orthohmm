@@ -2,6 +2,15 @@
 
 ## Current Supplements (2026-10-10)
 
+The [current manuscript](results/publication_supplements_manuscript_20261010_v1.md)
+adds the completed restricted-model validation and actual relocated fragment
+replay to the prior fragment-trace text. Its
+[generation record](results/publication_supplements_generation_20261010_v1.json)
+and [actual execution/readback](results/publication_supplements_execution_20261010_v1.json)
+verify two insertions, six new local links and exact restoration of the complete
+parent body. The earlier 30-page PDF renders the earlier manuscript, not this
+successor. No new native interval, score, default or publication admission follows.
+
 The [conditional paired-Poisson result](results/PAIRED_POISSON_F1_RESULT_20261010.md)
 reports the already-completed 12-cell mathematical validation and both failing
 non-Poisson controls. Its [execution record](results/paired_poisson_f1_execution_20261010_v1.json)

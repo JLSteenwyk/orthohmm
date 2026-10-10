@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Completed Supplements Now In Current Manuscript (2026-10-10)
+
+Previous turn was progress: 4c380216 fixed the stale handoff and preserved
+completed evidence. This turn pushed the restricted result/guide as 3f2aa311,
+then committed/pushed tested prospective integration source 84227a3d BEFORE
+actual production. No validation producer, inference, timing, score, bootstrap
+draw, TreeFam search, raw replay, archive or prompt update was repeated.
+
+Actual tests EXIT0: 68 focused/adjacent passed in 1.65s. Actual generation EXIT0
+at publication_supplements_manuscript_20261010_v1.md, 103788 bytes, SHA
+43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b.
+Separate scoped readback EXIT0: removing two inserted sections restores the
+entire 101043-byte parent exactly; six new local links resolve; all three
+direct input bindings and the prospective source are unchanged. Actual
+commands/terminals are in publication_supplements_execution_20261010_v1.json;
+generation bindings/insertions in publication_supplements_generation_20261010_v1.json.
+No live handle remains. The mutable guide identifies this current source and
+explicitly distinguishes the prior 30-page PDF. No new render is claimed.
+
+The text reports all 12 conditional Poisson cells and both zero-coverage
+non-Poisson controls without native interval admission. It also reports real
+relocated postprocessing of 106 observations/53 cases/44 contexts using 1783
+pinned artifact files; this is not historical inference or public raw release.
+Existing accuracy, biological claims, fixed endpoints, failures, uncertainty
+limits, local-only payloads and old render/archive scopes remain unchanged.
+Full goal remains ACTIVE/incomplete; this closes the narrow original7.3
+main-text integration, not the unresolved full scientific requirements.
+
+NEXT original7.3 task: bring the claim-to-evidence checklist alongside the
+current controlled-fragment and supplement results. The last full checklist
+PUBLICATION_CLAIMS_20260916.md and four-cell addendum predate these findings.
+Add a concise current addendum for the actual controlled-truncation comparison,
+retrospective representative-stage observations, relocated replay and restricted
+count-model validation. Link the current full manuscript and existing original
+claims; preserve all negative comparisons and distinguish software-stage
+observations from causal/biological validation. Do not recreate the entire
+requirement audit, claim an interval for an unsupported endpoint or add a new
+administrative gate. Start with
+`sed -n '949,1065p' benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md`
+and its linked retained results; derive every displayed effect from the actual
+machine-readable table rather than memory. Then return to genuinely unresolved
+scientific work. Missing native uncertainty requires a justified sampling
+mechanism, not another convenient restricted model. No automatic failed-cell
+retry, completed-panel replay or new archive/render layer is the next action.
+
 ## Completed Supplement Integration Source Tested (2026-10-10)
 
 Scoped result/guide integration 3f2aa311 pushed. Prepared one prospective

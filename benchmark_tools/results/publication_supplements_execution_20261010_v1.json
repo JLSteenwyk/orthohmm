@@ -1,0 +1,53 @@
+{
+  "schema": "publication_completed_supplements_execution_v1",
+  "source_commit_before_generation": "84227a3d",
+  "runs": {
+    "focused_adjacent_tests": {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest tests/unit/test_integrate_publication_supplements.py tests/unit/test_controlled_fragment_trace_integration.py tests/unit/test_validate_paired_poisson_f1.py -q",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "02e709",
+        "wall_time_seconds": 0.000011798,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": "....................................................................     [100%]\n68 passed in 1.65s\n"
+      }
+    },
+    "manuscript_generation": {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.integrate_publication_supplements import run; r=run(Path.cwd(),\"benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md\",\"benchmark_tools/results/publication_supplements_generation_20261010_v1.json\"); print(r[\"manuscript\"])'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "d98511",
+        "wall_time_seconds": 0.000011467,
+        "exit_code": 0,
+        "original_token_count": 61,
+        "output": "{'path': '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md', 'bytes': 103788, 'sha256': '43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b'}\n"
+      }
+    },
+    "actual_scoped_readback": {
+      "command": "benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import hashlib,json,re; d=Path(\"benchmark_tools/results\"); r=json.loads((d/\"publication_supplements_generation_20261010_v1.json\").read_text()); p=Path(r[\"manuscript\"][\"path\"]); raw=p.read_bytes(); assert len(raw)==r[\"manuscript\"][\"bytes\"] and hashlib.sha256(raw).hexdigest()==r[\"manuscript\"][\"sha256\"]; restored=raw.decode(); links=0\nfor section in r[\"inserted_sections\"]:\n    assert restored.count(section)==1; restored=restored.replace(section,\"\",1)\n    for target in re.findall(r\"\\]\\(([^)]+)\\)\",section):\n        assert (p.parent/target).is_file(),target; links+=1\nparent=Path(r[\"inputs\"][\"parent\"][\"path\"]); assert restored.encode()==parent.read_bytes()\nfor ref in [*r[\"inputs\"].values(),r[\"source\"]]:\n    data=Path(ref[\"path\"]).read_bytes(); assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nassert r[\"parent_unchanged_except_insertions\"] and r[\"new_bootstrap_draws\"]==0\nassert all(r[k] is False for k in (\"new_inference_or_scoring\",\"native_intervals_admitted\",\"publication_ready\",\"manuscript_rendered\",\"visual_reviewed\"))\ntext=raw.decode(); assert \"0.999559608605\" in text and \"5.999645225074e-13\" in text and \"Both non-Poisson common-shock controls had\\nzero coverage\" in text; assert \"prior manuscript, not this extended text\" in text\nprint(json.dumps({\"status\":\"actual_scoped_manuscript_integration_verified\",\"new_sections\":len(r[\"inserted_sections\"]),\"new_local_links\":links,\"parent_bytes_restored\":parent.stat().st_size,\"manuscript\":r[\"manuscript\"],\"native_interval_admission\":False}))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "979126",
+        "wall_time_seconds": 0.000015073,
+        "exit_code": 0,
+        "original_token_count": 107,
+        "output": "{\"status\": \"actual_scoped_manuscript_integration_verified\", \"new_sections\": 2, \"new_local_links\": 6, \"parent_bytes_restored\": 101043, \"manuscript\": {\"bytes\": 103788, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md\", \"sha256\": \"43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b\"}, \"native_interval_admission\": false}\n"
+      }
+    }
+  },
+  "actual_readback": {
+    "status": "actual_scoped_manuscript_integration_verified",
+    "new_sections": 2,
+    "new_local_links": 6,
+    "parent_bytes_restored": 101043,
+    "manuscript": {
+      "bytes": 103788,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md",
+      "sha256": "43daded442eab987cfe29863f8c661d82cdfbc4d55443d4e7896300e2917e45b"
+    },
+    "native_interval_admission": false
+  },
+  "native_intervals_admitted": false,
+  "publication_ready": false
+}
