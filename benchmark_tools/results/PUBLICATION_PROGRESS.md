@@ -1,5 +1,52 @@
 # Publication Progress
 
+## Conditional Exact Boundary Source Tested; Enumeration Next (2026-10-10)
+
+Previous goal turn was progress:d0b6988f pushed the completed real fragment
+relocation. No copied replay, timing panel or finished metadata work repeated.
+Returned to original4.1's genuinely unresolved uncertainty. Retrieved the full
+44-page Matsushita/Otsu paper from LSE STICERD, whereas earlier review had only
+limited full-text access. Its positive-limit average-degree sparsity regime
+does not cover the fixed-error-count boundary of the failed stress screen.
+Vector/smooth-function results do not establish a paired weighted native law.
+No named empirical-likelihood candidate or native interval was admitted.
+
+Implemented a new exact CONDITIONAL boundary construction in
+validate_paired_poisson_f1.py. Fixed perfect-recall truth mass; shared and
+method-only whole-panel Poisson counts; target is the actual F1 ratio difference
+at expected count vectors, NOT expectation of sample F1 or native biological
+generalization. Simultaneous Garwood limits use alpha/3 per category; their
+rectangle is projected sharply through the nonlinear paired statistic.
+Zero observations retain a positive rate bound. Primary Garwood paper and PDG
+chi-square form actually opened; new derivation and scope in prospective
+PAIRED_POISSON_F1_PROTOCOL_20261010.md, SHA
+3892ab86ee810740e85a3c968cc81142d2b9d542f89d535ba2f085ff7f0196b1.
+
+Frozen plan:12 deterministic Poisson coverage cells, T512/23934 and six fixed
+mean triples, tail budget1e-12/max2million triples; no bootstrap/random draws.
+Two additional explicitly non-Poisson common-shock controls are retained.
+Existing unequal-size/imperfect-recall/shared-clade laws remain excluded,
+NOT counted as successes or quietly dropped from a full-model admission.
+Old rejected coverage experiments and benchmark scores remain unchanged.
+All overall/native admission and publication-ready flags stay FALSE.
+
+Actual preproduction tests: first37-test invocation had2 bit-symmetry failures
+from differently factored floating-point operations (35passed). Before any
+production/freeze, changed the algebra to the symmetric rational expression
+and added overflow refusal, without weakening the assertion or ratio target.
+Final affected/adjacent invocation EXIT0:60passed in2.52s. Independent Poisson
+CDF tail identities, eight-corner/interior projections, scalar PMF mass sums,
+zeros/swapping/input refusals and out-of-model controls tested. No live handle.
+
+NEXT commit/push source/tests/protocol, then run once at a fresh result path:
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import runpy,sys; sys.path.insert(0,str(Path.cwd())); sys.argv=["validate_paired_poisson_f1","--root",str(Path.cwd()),"--protocol-sha256","3892ab86ee810740e85a3c968cc81142d2b9d542f89d535ba2f085ff7f0196b1","--output","benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json"]; runpy.run_module("benchmark_tools.validate_paired_poisson_f1",run_name="__main__")'`
+Use sanitized env and one numeric thread. Verify actual targets/probability
+mass/control outcomes, preserve failures and report restricted scope. Passing
+this law would repair a mathematical boundary ingredient only; native joint
+sampling assumptions and the remaining full publication requirements are still
+unproved. No new benchmark/inference/timing run, endpoint substitution, native
+confidence claim, default tuning, TreeFam search, DGX or prompt edit.
+
 ## Real Relocated Fragment Readback Complete; Scientific Scope Still Open (2026-10-10)
 
 Previous continuation made progress, not a wait: tested source43f1e398 and
