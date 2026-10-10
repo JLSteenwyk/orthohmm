@@ -12,10 +12,15 @@ for all historical pairs. The [prospective coverage validation](results/NATIVE_F
 has now completed 15 cells, four with the literal 9000 cap, and a dependent
 eight-cell/28-difference projection. Its context-dependent control is rejected;
 exact probability masses and high-precision references are distinct from
-floating agreement. No historical eight-method FAS intervals, new historical
-sample, benchmark rescore or native sampling-law admission has run.
+floating agreement. The [retained-data conditional report](results/NATIVE_FAS_CONDITIONAL_RESULT_20261010.md)
+now computes all eight expected-ratio ranges and all 28 differences without
+changing observed scores. An independent 80-digit recurrence checks native
+count endpoints, weights, ranges and projections without SciPy or producer
+imports. These are conditional repeated-statistic ranges, not biological
+error bars on observed scores or unconditional historical interval admission.
+No new historical sample, benchmark rescore or scoring rerun has occurred.
 The [prospective conditional reporting plan](results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md)
-freezes the next retained-data application, separate observed/expected targets,
+froze the retained-data application, separate observed/expected targets,
 all 28 contrasts and historical provenance qualifications before interval viewing.
 
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)

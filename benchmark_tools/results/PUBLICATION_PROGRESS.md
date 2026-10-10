@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Conditional Native FAS Ranges Computed And Independently Checked (2026-10-10)
+
+Previous goal turn was progress: 25505498 pushed finite coverage validation
+and the prospective reporting plan. This turn pushed c7200cc4 tested adapter
+BEFORE first retained-data application. Focused/adjacent tests EXIT0: 151
+passed in 2.50s. No completed validation/context producer was repeated.
+
+Actual conditional reporting EXIT0: eight expected-native-ratio ranges, eight
+G ranges and all 28 contrasts, unchanged observed means, no numerical failures.
+Report native_fas_conditional_report_20261010_v1/report.json: 21615 bytes,
+SHA83548e93afd5ffe0eeeef13250684dd65485b9efba1934d3377787659f7b3d7f.
+Generated summary.md: 4709 bytes,
+SHA55dc72d5f0da6c5432fcae6e8252919494621f5a4e51c4612027750ae59275ff.
+No scorer, inference, annotation, historical RNG sample or timing rerun.
+
+Independent 80-digit recurrence readback EXIT0 without producer/kernel/SciPy
+imports. First matched all15 rational validation targets to maximum1e-80;
+then verified native endpoints/adjacent-support conditions, full-support
+E[k/(k+R)] weights, means, eight ranges and all28 projections. Maximum native
+numerical difference2.8255175976710234e-14 < 1e-12. Source/input pins, all
+observed/table values and admission scopes verified. The 32 count conditions
+include support-boundary shortcuts, not 32 distinct CDF evaluations.
+Summary/links/output-identity check EXIT0. Actual commands/terminals are in
+native_fas_conditional_execution_20261010_v1.json, scope/results in
+NATIVE_FAS_CONDITIONAL_RESULT_20261010.md, linked from the current guide.
+All handles terminal. Full goal remains ACTIVE/incomplete.
+
+On this conditional FAS-only target, HS-minus-fullOF is [.076417827,.091856675]
+and PHY-minus-fullOF [.067014510,.075477184]. Proteinortho exceeds both;
+Sonic/OrthoMCL spans zero. All favorable/unfavorable ranges remain. These are
+not overall accuracy rankings, biological error bars on fixed observed means,
+new-family/clade confirmation or a certificate for historical parser/database
+bindings. Those bindings remain unestablished/false. Conditional design ranges
+are computed; unconditional historical, biological, other-endpoint and full-
+publication admission remain false. Negative F1 evidence is unchanged.
+
+NEXT commit/push this completed conditional result/integration, then integrate
+the eight-method result and precise target/limitations into a fresh successor
+of publication_supplements_manuscript_20261010_v1.md. Preserve every parent byte
+outside scoped insertions and do not overwrite the old text/render/archive.
+Start with `sed -n '1360,1405p' benchmark_tools/results/publication_supplements_manuscript_20261010_v1.md`
+and existing integrate_publication_supplements.py helpers. Use a small tested
+reporting adapter, commit/push BEFORE producing its successor. Include separate
+observed Z and conditional expected-theta ranges, all28 linked contrasts,
+assumptions/historical-binding gaps, favorable and unfavorable comparisons.
+Do not promote conditional ranges into biological or unconditional native
+admission. No new benchmark score, default, biological claim, PDF/render
+gate or archive is needed. If these completed results are already committed,
+advance to manuscript integration without replay/recommit of the producers.
+
 ## Conditional Native FAS Adapter Tested Before First Application (2026-10-10)
 
 Previous goal turn was progress: 25505498 pushed completed finite validation

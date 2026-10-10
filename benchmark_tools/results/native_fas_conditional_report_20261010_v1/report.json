@@ -1,0 +1,673 @@
+{
+  "all_eight_ranges_computed": true,
+  "allocation": "Two components per each of eight methods; all 28 differences use the same joint rectangle.",
+  "alpha": 0.05,
+  "biological_generalization_intervals": false,
+  "component_error": 0.003125,
+  "conditional_design_ranges_computed": true,
+  "contrasts": [
+    {
+      "conditional_expected_difference_bounds": [
+        0.007426264480022482,
+        0.018356544286319387
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.01359172969942668,
+      "right": "orthohmm_phylogeny_satellite_v2",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.07641782737569702,
+        0.09185667496003858
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.08516290855274689,
+      "right": "orthofinder_3_1_5_full",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.19360878735507592,
+        0.23378624830288053
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.21483195801684252,
+      "right": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.03282092251486557,
+        0.04817092550496571
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.03990485465967952,
+      "right": "sonicparanoid_2_0_9",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.0423565607818327,
+        -0.03327898056783174
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": -0.037009822319482466,
+      "right": "proteinortho_6_3_6",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.10879346076452534,
+        0.13670265898862533
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.12221870537538948,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.036324568674390934,
+        0.048579692069356195
+      ],
+      "left": "orthohmm_high_sensitivity",
+      "observed_difference": 0.0428328262260419,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.06701450964640321,
+        0.07547718392299052
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": 0.0715711788533202,
+      "right": "orthofinder_3_1_5_full",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.1842054696257821,
+        0.21740675726583247
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": 0.20124022831741584,
+      "right": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.023417604785571755,
+        0.031791434467917656
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": 0.026313124960252843,
+      "right": "sonicparanoid_2_0_9",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.05175987851112651,
+        -0.049658471604879795
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": -0.050601552018909146,
+      "right": "proteinortho_6_3_6",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.09939014303523153,
+        0.12032316795157727
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": 0.1086269756759628,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.02692125094509712,
+        0.03220020103230814
+      ],
+      "left": "orthohmm_phylogeny_satellite_v2",
+      "observed_difference": 0.029241096526615218,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.11070533895206291,
+        0.14841519437015793
+      ],
+      "left": "orthofinder_3_1_5_full",
+      "observed_difference": 0.12966904946409563,
+      "right": "orthofinder_3_1_5_sequence_only",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.05008252588814743,
+        -0.037200128427756884
+      ],
+      "left": "orthofinder_3_1_5_full",
+      "observed_difference": -0.04525805389306736,
+      "right": "sonicparanoid_2_0_9",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.1252600091848457,
+        -0.11865003450055434
+      ],
+      "left": "orthofinder_3_1_5_full",
+      "observed_difference": -0.12217273087222935,
+      "right": "proteinortho_6_3_6",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.025890012361512338,
+        0.05133160505590273
+      ],
+      "left": "orthofinder_3_1_5_full",
+      "observed_difference": 0.037055796822642595,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.04657887972862207,
+        -0.0367913618633664
+      ],
+      "left": "orthofinder_3_1_5_full",
+      "observed_difference": -0.04233008232670499,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.19201209923098939,
+        -0.15439108840713578
+      ],
+      "left": "orthofinder_3_1_5_sequence_only",
+      "observed_difference": -0.174927103357163,
+      "right": "sonicparanoid_2_0_9",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.26718958252768765,
+        -0.23584099447993323
+      ],
+      "left": "orthofinder_3_1_5_sequence_only",
+      "observed_difference": -0.251841780336325,
+      "right": "proteinortho_6_3_6",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.11603956098132961,
+        -0.06585935492347617
+      ],
+      "left": "orthofinder_3_1_5_sequence_only",
+      "observed_difference": -0.09261325264145304,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.18850845307146402,
+        -0.1539823218427453
+      ],
+      "left": "orthofinder_3_1_5_sequence_only",
+      "observed_difference": -0.17199913179080062,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.08157425972977284,
+        -0.07505312963972288
+      ],
+      "left": "sonicparanoid_2_0_9",
+      "observed_difference": -0.07691467697916199,
+      "right": "proteinortho_6_3_6",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.0695757618165852,
+        0.09492850991673418
+      ],
+      "left": "sonicparanoid_2_0_9",
+      "observed_difference": 0.08231385071570996,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.002893130273549205,
+        0.006805542997465053
+      ],
+      "left": "sonicparanoid_2_0_9",
+      "observed_difference": 0.002927971566362375,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": true
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.15102566788938265,
+        0.17010599321343245
+      ],
+      "left": "proteinortho_6_3_6",
+      "observed_difference": 0.15922852769487195,
+      "right": "fastoma_0_3_5",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        0.07855677579924825,
+        0.08198302629416332
+      ],
+      "left": "proteinortho_6_3_6",
+      "observed_difference": 0.07984264854552436,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    },
+    {
+      "conditional_expected_difference_bounds": [
+        -0.09142486375720882,
+        -0.06916699525219472
+      ],
+      "left": "fastoma_0_3_5",
+      "observed_difference": -0.07938587914934758,
+      "right": "orthomcl_1_4",
+      "status": "conditional_design_range_computed",
+      "zero_included": false
+    }
+  ],
+  "historical_parser_hash_identity_established": false,
+  "historical_scores_rerun": false,
+  "limitations": [
+    "Conditional uniform fixed-population sampling and fixed pair outcomes are assumptions, not historical certification.",
+    "Observed fixed means are separate descriptive scores, not point values or centers of the expected-ratio ranges.",
+    "Known precomputed population means are conditioned on the retained audit; historical parser/database hash gaps persist.",
+    "Finite context checks do not establish every historical annotation, file race, batch failure or worker choice.",
+    "No biological pair/family or cross-method independence, missing-at-random claim, new score, sample or rescore.",
+    "No interval for another endpoint, overall tool superiority, independent biological confirmation or publication readiness."
+  ],
+  "methods": [
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.7713329667344568,
+          0.7802861932914824
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.7088912015011004,
+          0.7467989775270325
+        ],
+        "success_count_bounds": [
+          2125583,
+          2129667
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "orthohmm_high_sensitivity",
+      "observed_native_mean": 0.7765850417998846,
+      "population": {
+        "M": 2130059,
+        "P": 6902660
+      },
+      "precomputed_population_mean": 0.7905982663263148,
+      "returned_sample_mean": 0.7278450895140665,
+      "sample": {
+        "c": 9000,
+        "k": 29165,
+        "omitted_numeric_returns": 7,
+        "r": 8993
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.761929649005163,
+          0.7639067022544344
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.5445865601781135,
+          0.5825365591799607
+        ],
+        "success_count_bounds": [
+          304262,
+          305332
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "orthohmm_phylogeny_satellite_v2",
+      "observed_native_mean": 0.762993312100458,
+      "population": {
+        "M": 305821,
+        "P": 5653739
+      },
+      "precomputed_population_mean": 0.773667316374173,
+      "returned_sample_mean": 0.5635615596790371,
+      "sample": {
+        "c": 9000,
+        "k": 166384,
+        "omitted_numeric_returns": 27,
+        "r": 8973
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.6884295183314438,
+          0.6949151393587598
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.4890443426780983,
+          0.5269901130322082
+        ],
+        "success_count_bounds": [
+          2384608,
+          2392806
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "orthofinder_3_1_5_full",
+      "observed_native_mean": 0.6914221332471377,
+      "population": {
+        "M": 2396211,
+        "P": 11819171
+      },
+      "precomputed_population_mean": 0.728795273607176,
+      "returned_sample_mean": 0.5080172278551532,
+      "sample": {
+        "c": 9000,
+        "k": 44392,
+        "omitted_numeric_returns": 25,
+        "r": 8975
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.5464999449886019,
+          0.5777241793793809
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.5147301643683422,
+          0.5526992097949779
+        ],
+        "success_count_bounds": [
+          133118353,
+          133664208
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "orthofinder_3_1_5_sequence_only",
+      "observed_native_mean": 0.5617530837830421,
+      "population": {
+        "M": 133974278,
+        "P": 29303161
+      },
+      "precomputed_population_mean": 0.6913786720589632,
+      "returned_sample_mean": 0.53371468708166,
+      "sample": {
+        "c": 9000,
+        "k": 1969,
+        "omitted_numeric_returns": 36,
+        "r": 8964
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.7321152677865167,
+          0.7385120442195913
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.6969301015586867,
+          0.7348357701335525
+        ],
+        "success_count_bounds": [
+          2568174,
+          2572794
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "sonicparanoid_2_0_9",
+      "observed_native_mean": 0.7366801871402051,
+      "population": {
+        "M": 2573142,
+        "P": 12675597
+      },
+      "precomputed_population_mean": 0.7392568865584793,
+      "returned_sample_mean": 0.7158829358461196,
+      "sample": {
+        "c": 9000,
+        "k": 44335,
+        "omitted_numeric_returns": 6,
+        "r": 8994
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.8135651738593142,
+          0.8136895275162895
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.7168658831999685,
+          0.7547610197892526
+        ],
+        "success_count_bounds": [
+          15385,
+          15394
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "proteinortho_6_3_6",
+      "observed_native_mean": 0.8135948641193671,
+      "population": {
+        "M": 15395,
+        "P": 4679990
+      },
+      "precomputed_population_mean": 0.8138832491308742,
+      "returned_sample_mean": 0.7358134514946105,
+      "sample": {
+        "c": 9000,
+        "k": 2735947,
+        "omitted_numeric_returns": 1,
+        "r": 8999
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.6435835343028571,
+          0.6625395059699315
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.5067797081407418,
+          0.5447763157672015
+        ],
+        "success_count_bounds": [
+          7331620,
+          7366500
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "fastoma_0_3_5",
+      "observed_native_mean": 0.6543663364244952,
+      "population": {
+        "M": 7391882,
+        "P": 7616298
+      },
+      "precomputed_population_mean": 0.775903865659537,
+      "returned_sample_mean": 0.5257780119539717,
+      "sample": {
+        "c": 9000,
+        "k": 9273,
+        "omitted_numeric_returns": 49,
+        "r": 8951
+      },
+      "status": "conditional_design_range_computed"
+    },
+    {
+      "database_historically_hash_bound": false,
+      "error": null,
+      "interval": {
+        "component_error": 0.003125,
+        "expected_native_mean_bounds": [
+          0.7317065012221262,
+          0.7350083980600659
+        ],
+        "method_error_bound": 0.00625,
+        "return_mean_bounds": [
+          0.6043488980329675,
+          0.6451889039804554
+        ],
+        "success_count_bounds": [
+          1063057,
+          1090063
+        ],
+        "target": "expected_native_post_attrition_ratio_under_fixed_design"
+      },
+      "method": "orthomcl_1_4",
+      "observed_native_mean": 0.7337522155738427,
+      "population": {
+        "M": 1250881,
+        "P": 13127208
+      },
+      "precomputed_population_mean": 0.7422821028588105,
+      "returned_sample_mean": 0.6247689010067115,
+      "sample": {
+        "c": 9000,
+        "k": 94449,
+        "omitted_numeric_returns": 1252,
+        "r": 7748
+      },
+      "status": "conditional_design_range_computed"
+    }
+  ],
+  "observed_native_scores_changed": false,
+  "other_endpoint_uncertainty_admitted": false,
+  "publication_ready": false,
+  "references": {
+    "attrition": {
+      "bytes": 23197,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_sample_attrition_20260928.json",
+      "sha256": "1f6ddfd5aadf9f5be8147164b23904d2e5db1ffee69a6fc18b654a54f3f25d36"
+    },
+    "audit": {
+      "bytes": 8357,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_fas_stratum_weights.py",
+      "sha256": "8712b7e36fc756b61c161847493f7c65b7b376d5ef675c6c803f52ab21d5fbc3"
+    },
+    "context": {
+      "bytes": 58118,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_fas_context_probe_20261010_v2.json",
+      "sha256": "845b4baea528f7633830e5a26ec58267da95165d8c4f79f2a0112c6063826f33"
+    },
+    "driver": {
+      "bytes": 12617,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/report_native_fas_conditional.py",
+      "sha256": "fd38669685d91e9f958d8977d4836964c371f4aabacc4f4ab9e9dac1fcf0f8ac"
+    },
+    "kernel": {
+      "bytes": 5735,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/native_fas_sampling_interval.py",
+      "sha256": "803ff0f455213e6a55b83e30c586ab1c57566830f8f877c916b78e84bf3658f9"
+    },
+    "population": {
+      "bytes": 98178,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_fas_population_completed_22383/report.json",
+      "sha256": "05f1ab3f7f0ffed8ddcffe2a6bfd4ce26ef46b974dbb946cb60883857803eeaf"
+    },
+    "protocol": {
+      "bytes": 5258,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md",
+      "sha256": "c22a7b602614b37327a3d64d50b9fcb36053ca9d7f643ebe92390c057f99c347"
+    },
+    "provenance_helper": {
+      "bytes": 14896,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_native_fas_context.py",
+      "sha256": "d722944a7cadeee3e25433fc472cdf724ba58309aaac29952338e5c7575bae06"
+    },
+    "validation": {
+      "bytes": 17766,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json",
+      "sha256": "236ffb82887d816904d08df0e5b350a358badd8e9f5f6fc088004cd0d021ac57"
+    }
+  },
+  "schema": "retained_conditional_native_fas_v1",
+  "scipy_version": "1.15.3",
+  "status": "conditional_expected_native_ranges_complete",
+  "target": "expected_native_post_attrition_ratio_under_fixed_design",
+  "unconditional_historical_interval_admission": false
+}

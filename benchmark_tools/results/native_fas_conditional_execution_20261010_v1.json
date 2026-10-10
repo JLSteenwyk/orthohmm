@@ -1,0 +1,78 @@
+{
+  "schema": "conditional_native_fas_reporting_execution_v1",
+  "source_commit_pushed_before_application": "c7200cc4",
+  "execution": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import os,resource,sys; from pathlib import Path; os.sched_setaffinity(0,[min(os.sched_getaffinity(0))]); resource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3)); sys.path.insert(0,str(Path.cwd())); from benchmark_tools.report_native_fas_conditional import main; raise SystemExit(main())' --protocol benchmark_tools/results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_conditional_report_20261010_v1",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "observations": [
+      {
+        "chunk_id": "3b3aba",
+        "wall_time_seconds": 0.891218817,
+        "exit_code": 0,
+        "original_token_count": 135,
+        "output": "orthohmm_high_sensitivity conditional_design_range_computed\northohmm_phylogeny_satellite_v2 conditional_design_range_computed\northofinder_3_1_5_full conditional_design_range_computed\northofinder_3_1_5_sequence_only conditional_design_range_computed\nsonicparanoid_2_0_9 conditional_design_range_computed\nproteinortho_6_3_6 conditional_design_range_computed\nfastoma_0_3_5 conditional_design_range_computed\northomcl_1_4 conditional_design_range_computed\n{\"status\": \"conditional_expected_native_ranges_complete\", \"methods\": 8, \"contrasts\": 28}\n"
+      }
+    ]
+  },
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_report_native_fas_conditional.py tests/unit/test_validate_native_fas_sampling.py tests/unit/test_native_fas_sampling_interval.py tests/unit/test_probe_native_fas_context.py tests/unit/test_probe_native_fas_context_lowercase.py tests/unit/test_audit_fas_sample_attrition.py tests/unit/test_audit_fas_stratum_weights.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2000
+    },
+    "observations": [
+      {
+        "chunk_id": "881d88",
+        "wall_time_seconds": 1.001076321,
+        "session_id": 61085,
+        "original_token_count": 0,
+        "output": ""
+      },
+      {
+        "chunk_id": "ac71cc",
+        "wall_time_seconds": 0.000015243,
+        "exit_code": 0,
+        "original_token_count": 65,
+        "output": "........................................................................ [ 47%]\n........................................................................ [ 95%]\n.......                                                                  [100%]\n151 passed in 2.50s\n"
+      }
+    ]
+  },
+  "independent_recurrence_readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c '\nfrom decimal import Decimal,localcontext\nfrom fractions import Fraction\nfrom functools import lru_cache\nfrom itertools import combinations\nfrom pathlib import Path\nimport hashlib,json,os,resource\nos.sched_setaffinity(0,[min(os.sched_getaffinity(0))])\nresource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3))\nroot=Path.cwd(); output=root/\"benchmark_tools/results/native_fas_conditional_report_20261010_v1\"\nreport=json.loads((output/\"report.json\").read_text())\nsample=json.loads((root/\"benchmark_tools/results/qfo_fas_sample_attrition_20260928.json\").read_text())\npopulation=json.loads((root/\"benchmark_tools/results/qfo_fas_population_completed_22383/report.json\").read_text())\nvalidation=json.loads((root/\"benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json\").read_text())\n@lru_cache(maxsize=None)\ndef distribution(M,G,c):\n lo=max(0,c-M+G); hi=min(c,G); anchor=min(hi,max(lo,c*G//M))\n weights={anchor:Decimal(1)}\n for n in range(anchor,hi):\n  weights[n+1]=weights[n]*Decimal((G-n)*(c-n))/Decimal((n+1)*(M-G-c+n+1))\n for n in range(anchor,lo,-1):\n  weights[n-1]=weights[n]*Decimal(n*(M-G-c+n))/Decimal((G-n+1)*(c-n+1))\n total=sum(weights.values(),Decimal())\n assert total>0 and all(x>0 for x in weights.values())\n return weights,total\ndef weight(M,G,c,k):\n probabilities,total=distribution(M,G,c)\n return sum((p*Decimal(k)/Decimal(k+r) for r,p in probabilities.items()),Decimal())/total\ndef upper_tail(M,G,c,r):\n probabilities,total=distribution(M,G,c)\n return sum((p for n,p in probabilities.items() if n>=r),Decimal())/total\ndef lower_tail(M,G,c,r):\n probabilities,total=distribution(M,G,c)\n return sum((p for n,p in probabilities.items() if n<=r),Decimal())/total\ndef decimal_fraction(value):\n return Decimal(value.numerator)/Decimal(value.denominator)\nmax_error=0.; endpoints={}\nwith localcontext() as ctx:\n ctx.prec=80\n reference_error=Decimal(0)\n for config,row in zip(validation[\"plan\"],validation[\"cells\"]):\n  P=sum(n for n,_ in config[\"pre\"]); M=sum(n for n,_ in config[\"missing\"]); G=sum(n for n,s in config[\"missing\"] if s is not None)\n  muP=sum((n*Fraction(s) for n,s in config[\"pre\"]),Fraction())/P\n  muG=sum((n*Fraction(s) for n,s in config[\"missing\"] if s is not None),Fraction())/G if G else Fraction()\n  w=weight(M,G,config[\"c\"],config[\"k\"])\n  point=w*decimal_fraction(muP)+(1-w)*decimal_fraction(muG)\n  reference_error=max(reference_error,abs(point-decimal_fraction(Fraction(row[\"target_fraction\"]))))\n assert reference_error<Decimal(\"1e-60\")\n assert [r[\"method\"] for r in report[\"methods\"]]==[r[\"method\"] for r in sample[\"methods\"]]==[r[\"method\"] for r in population[\"methods\"]]\n assert len(report[\"methods\"])==8 and len(report[\"contrasts\"])==28\n threshold=Decimal(1)/640\n for row,raw,full in zip(report[\"methods\"],sample[\"methods\"],population[\"methods\"]):\n  M=full[\"missing\"]; c=raw[\"strata\"][\"missing\"][\"requested\"]; r=raw[\"strata\"][\"missing\"][\"saved\"]; k=raw[\"strata\"][\"precomputed\"][\"requested\"]\n  assert row[\"status\"]==\"conditional_design_range_computed\" and row[\"error\"] is None\n  assert row[\"population\"]==dict(P=full[\"precomputed\"],M=M)\n  assert row[\"sample\"]==dict(k=k,c=c,r=r,omitted_numeric_returns=c-r)\n  assert row[\"observed_native_mean\"]==raw[\"saved_mean\"] and row[\"precomputed_population_mean\"]==full[\"precomputed_mean\"] and row[\"returned_sample_mean\"]==raw[\"strata\"][\"missing\"][\"mean\"]\n  assert row[\"database_historically_hash_bound\"]==full[\"database_historically_hash_bound\"] is False\n  muP=Decimal(str(full[\"precomputed_mean\"])); muR=Decimal(str(raw[\"strata\"][\"missing\"][\"mean\"]))\n  observed=(Decimal(k)*Decimal(str(raw[\"strata\"][\"precomputed\"][\"mean\"]))+Decimal(r)*muR)/Decimal(k+r)\n  assert abs(observed-Decimal(str(row[\"observed_native_mean\"])))<Decimal(\"1e-12\")\n  interval=row[\"interval\"]; gl,gh=interval[\"success_count_bounds\"]\n  assert r<=gl<=gh<=M-c+r\n  assert upper_tail(M,gl,c,r)>=threshold and lower_tail(M,gh,c,r)>=threshold\n  assert gl==r or upper_tail(M,gl-1,c,r)<threshold\n  assert gh==M-c+r or lower_tail(M,gh+1,c,r)<threshold\n  width=(Decimal(640).ln()/Decimal(2*r)).sqrt()\n  means=[max(Decimal(0),muR-width),min(Decimal(1),muR+width)]\n  corners=[w*muP+(1-w)*mean for w in (weight(M,gl,c,k),weight(M,gh,c,k)) for mean in means]\n  expected=[min(corners),max(corners)]\n  max_error=max(max_error,*(abs(x-float(y)) for x,y in zip(interval[\"expected_native_mean_bounds\"],expected)),*(abs(x-float(y)) for x,y in zip(interval[\"return_mean_bounds\"],means)))\n  assert interval[\"component_error\"]==.05/16 and interval[\"method_error_bound\"]==.05/8\n  assert interval[\"target\"]==report[\"target\"]==\"expected_native_post_attrition_ratio_under_fixed_design\"\n  endpoints[row[\"method\"]]=expected\n for row,(left,right) in zip(report[\"contrasts\"],combinations(report[\"methods\"],2)):\n  assert row[\"left\"]==left[\"method\"] and row[\"right\"]==right[\"method\"] and row[\"status\"]==\"conditional_design_range_computed\"\n  assert row[\"observed_difference\"]==left[\"observed_native_mean\"]-right[\"observed_native_mean\"]\n  a,b=endpoints[row[\"left\"]],endpoints[row[\"right\"]]\n  expected=[a[0]-b[1],a[1]-b[0]]\n  max_error=max(max_error,*(abs(x-float(y)) for x,y in zip(row[\"conditional_expected_difference_bounds\"],expected)))\n  lo,hi=row[\"conditional_expected_difference_bounds\"]\n  assert row[\"zero_included\"]==(lo<=0<=hi)\nassert max_error<=1e-12\nfor ref in report[\"references\"].values():\n raw=Path(ref[\"path\"]).read_bytes()\n assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\nfor flag in (\"observed_native_scores_changed\",\"historical_scores_rerun\",\"unconditional_historical_interval_admission\",\"biological_generalization_intervals\",\"other_endpoint_uncertainty_admitted\",\"publication_ready\"):\n assert report[flag] is False\nassert report[\"historical_parser_hash_identity_established\"] is False\nassert report[\"all_eight_ranges_computed\"] is True and report[\"conditional_design_ranges_computed\"] is True\nassert report[\"alpha\"]==.05 and report[\"component_error\"]==.05/16\ntext=(output/\"summary.md\").read_text(); tables=[line for line in text.splitlines() if line.startswith(\"| \")]\nassert len(tables)==40\nfor line,row in zip(tables[2:10],report[\"methods\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[0]==row[\"method\"] and float(fields[1])==round(row[\"observed_native_mean\"],9)\n assert fields[2]==\"[%.9f, %.9f]\" % tuple(row[\"interval\"][\"expected_native_mean_bounds\"])\nfor line,row in zip(tables[12:],report[\"contrasts\"]):\n fields=[x.strip() for x in line.split(\"|\")[1:-1]]\n assert fields[:2]==[row[\"left\"],row[\"right\"]] and float(fields[2])==round(row[\"observed_difference\"],9)\n assert fields[3]==\"[%.9f, %.9f]\" % tuple(row[\"conditional_expected_difference_bounds\"])\nassert \"not biological error bars\" in text and \"Unknown G and mu_G\" in text\nprint(json.dumps(dict(status=\"independent_decimal_recurrence_readback_passed\",methods=8,contrasts=28,count_tail_and_neighbor_checks=32,reference_test_cells=15,reference_test_max_error=str(reference_error),maximum_native_numerical_error=max_error,report_sha256=hashlib.sha256((output/\"report.json\").read_bytes()).hexdigest(),report_bytes=(output/\"report.json\").stat().st_size,summary_sha256=hashlib.sha256((output/\"summary.md\").read_bytes()).hexdigest(),summary_bytes=(output/\"summary.md\").stat().st_size,scope=\"Independent 80-digit recurrence and full-support normalization; no producer/kernel/SciPy imports, score change or historical certification.\"),sort_keys=True))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "observations": [
+      {
+        "chunk_id": "d67baf",
+        "wall_time_seconds": 0.349278213,
+        "exit_code": 0,
+        "original_token_count": 156,
+        "output": "{\"contrasts\": 28, \"count_tail_and_neighbor_checks\": 32, \"maximum_native_numerical_error\": 2.8255175976710234e-14, \"methods\": 8, \"reference_test_cells\": 15, \"reference_test_max_error\": \"1E-80\", \"report_bytes\": 21615, \"report_sha256\": \"83548e93afd5ffe0eeeef13250684dd65485b9efba1934d3377787659f7b3d7f\", \"scope\": \"Independent 80-digit recurrence and full-support normalization; no producer/kernel/SciPy imports, score change or historical certification.\", \"status\": \"independent_decimal_recurrence_readback_passed\", \"summary_bytes\": 4709, \"summary_sha256\": \"55dc72d5f0da6c5432fcae6e8252919494621f5a4e51c4612027750ae59275ff\"}\n"
+      }
+    ]
+  },
+  "outputs": {
+    "report": {
+      "path": "native_fas_conditional_report_20261010_v1/report.json",
+      "bytes": 21615,
+      "sha256": "83548e93afd5ffe0eeeef13250684dd65485b9efba1934d3377787659f7b3d7f"
+    },
+    "summary": {
+      "path": "native_fas_conditional_report_20261010_v1/summary.md",
+      "bytes": 4709,
+      "sha256": "55dc72d5f0da6c5432fcae6e8252919494621f5a4e51c4612027750ae59275ff"
+    }
+  },
+  "conditional_design_ranges_computed": true,
+  "unconditional_historical_interval_admission": false,
+  "biological_generalization_intervals": false,
+  "publication_ready": false
+}
