@@ -1,0 +1,71 @@
+{
+  "schema": "controlled_fragment_relocation_execution_v1",
+  "status": "replay_failed_missing_configured_fasta_ownership",
+  "source_commit": "43f1e398",
+  "attempts": [
+    {
+      "step": "prepare",
+      "command": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B benchmark_tools/relocate_controlled_fragment_stages.py prepare --root \"$PWD\" --report benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json --readback benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json --readback-sha256 2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35 --output benchmarks/work/controlled_fragment_relocated_stages_20261010_v1",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "80ca43",
+        "wall_time_seconds": 0.000010767,
+        "exit_code": 0,
+        "original_token_count": 101,
+        "output": "{\"added_checkpoint_fastas\": 112, \"artifact_files\": 1726, \"artifact_payload_bytes\": 37621435, \"manifest\": {\"bytes\": 1040735, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/controlled_fragment_relocated_stages_20261010_v1/manifest.json\", \"sha256\": \"a2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21\"}, \"status\": \"pinned_fragment_component_prepared\"}\n"
+      }
+    },
+    {
+      "step": "copy",
+      "command": {
+        "cmd": "benchmarks/work/native_factorial_review_py310_20261004/bin/python -I -S -B -c 'from pathlib import Path; import hashlib,json,shutil,tempfile; original=Path(\"benchmarks/work/controlled_fragment_relocated_stages_20261010_v1\").resolve(); parent=Path(tempfile.mkdtemp(prefix=\"orthohmm-fragment-relocated-20261010-\")); copied=parent/\"component\"; shutil.copytree(original,copied); old=(original/\"manifest.json\").read_bytes(); new=(copied/\"manifest.json\").read_bytes(); assert old==new; manifest=json.loads(new); expected={r[\"target\"] for r in manifest[\"artifacts\"]}|{\"manifest.json\"}; actual={str(p.relative_to(copied)) for p in copied.rglob(\"*\") if p.is_file()}; assert actual==expected; print(json.dumps({\"copied_component\":str(copied),\"manifest_sha256\":hashlib.sha256(new).hexdigest(),\"copied_files\":len(actual),\"artifact_payload_bytes\":manifest[\"artifact_payload_bytes\"]}))'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "max_output_tokens": 2000,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "8f5614",
+        "wall_time_seconds": 0.220806503,
+        "exit_code": 0,
+        "original_token_count": 71,
+        "output": "{\"copied_component\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component\", \"manifest_sha256\": \"a2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21\", \"copied_files\": 1727, \"artifact_payload_bytes\": 37621435}\n"
+      }
+    },
+    {
+      "step": "replay",
+      "command": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 '/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/release_alert_refresh_20261001/venv/bin/python' -I -B -c 'import json, os, runpy, sys\nfrom pathlib import Path\ncomponent = Path(\"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component\")\nmanifest = json.loads((component / \"manifest.json\").read_text())\ndenied = {row[\"logical_path\"] for row in manifest[\"artifacts\"]}\nobserved = {\"original_artifact_open_attempts\": 0}\ndef audit(event, args):\n    if event == \"open\" and isinstance(args[0], (str, bytes, os.PathLike)):\n        path = os.path.abspath(os.fsdecode(args[0]))\n        if path in denied:\n            observed[\"original_artifact_open_attempts\"] += 1\n            raise RuntimeError(\"Refused original artifact read: \" + path)\nsys.addaudithook(audit)\nrunner = component / \"runner/benchmark_tools/relocate_controlled_fragment_stages.py\"\nsys.argv = [str(runner), \"replay\", \"--component\", str(component), \"--manifest-sha256\", \"a2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21\", \"--output\", \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v1.json\"]\nrunpy.run_path(str(runner), run_name=\"__main__\")\nprint(json.dumps({\"python_open_audit\": observed, \"original_artifact_paths_guarded\": len(denied), \"os_containment_claimed\": False}))\n'",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component",
+        "max_output_tokens": 2500,
+        "yield_time_ms": 1000
+      },
+      "terminal": {
+        "chunk_id": "f14f81",
+        "wall_time_seconds": 0.704473281,
+        "exit_code": 1,
+        "original_token_count": 531,
+        "output": "Traceback (most recent call last):\n  File \"<string>\", line 16, in <module>\n  File \"<frozen runpy>\", line 286, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/runner/benchmark_tools/relocate_controlled_fragment_stages.py\", line 225, in <module>\n    main()\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/runner/benchmark_tools/relocate_controlled_fragment_stages.py\", line 215, in main\n    result = replay(args.component, args.manifest_sha256)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/runner/benchmark_tools/relocate_controlled_fragment_stages.py\", line 184, in replay\n    result = reader.verify(access.path(manifest[\"report\"][\"path\"]), manifest[\"report\"][\"sha256\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/kernels/benchmark_tools/readback_controlled_fragment_stage_table.py\", line 47, in verify\n    contexts = {key: previous.read_context(bindings[key[1]][key[2]][key[0]], key[0], queries) for key, queries in query_sets.items()}\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/kernels/benchmark_tools/readback_controlled_fragment_stages.py\", line 172, in read_context\n    need(bool(owners), \"Missing FASTA ownership\")\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component/kernels/benchmark_tools/readback_controlled_fragment_stages.py\", line 23, in need\n    raise ValueError(message)\nValueError: Missing FASTA ownership\n"
+      }
+    }
+  ],
+  "prepared_component": "benchmarks/work/controlled_fragment_relocated_stages_20261010_v1",
+  "relocated_component": {
+    "copied_component": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component",
+    "manifest_sha256": "a2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21",
+    "copied_files": 1727,
+    "artifact_payload_bytes": 37621435
+  },
+  "diagnosis": {
+    "native_contexts": 44,
+    "configured_fasta_reads": 352,
+    "unique_missing_original_input_fastas": 56,
+    "reason": "Plan included stage/selection pins and copied checkpoint FASTAs, but not every configured original input FASTA used for ownership."
+  },
+  "new_inference_or_scoring": false,
+  "historical_inference_reproduced": false,
+  "publication_ready": false
+}

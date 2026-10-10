@@ -39,7 +39,7 @@ Those files must be retained to verify native stages. A clone containing only
 Git summaries cannot reconstruct missing raw outputs or validate native causes.
 
 Recorded paths are absolute to the original workspace. The frozen readers keep
-those labels; `relocate_controlled_fragment_stages.py` provides a separate,
+those labels; `relocate_controlled_fragment_stages_v2.py` provides a separate,
 read-only mapping to copied raw artifacts. Do not rewrite the old manifests or
 claim that summary-only replay proves raw inference reproduction. The previous
 relocated components retain their own documented, narrower scope.
@@ -48,17 +48,26 @@ relocated components retain their own documented, narrower scope.
 
 The new component contains the stage report/table, selection and its pinned
 inputs, expected independent readback, unchanged independent reader kernels,
-and the small relocation runtime. Copied OrthoFinder input FASTAs required by
-the sequence-only checkpoint are added only from the original parent's output
+and the small relocation runtime. Ownership FASTAs for every selected native
+context are added only from retained execution input inventories; copied
+OrthoFinder FASTAs for the sequence-only checkpoint use the parent's output
 inventory. Preparation refuses changed inputs, conflicting mappings, an occupied
 destination or more than 64 MiB of pinned payloads. Raw artifacts stay local;
 this is not another release candidate or a public redistribution claim.
+
+The first actual relocation attempt, source `43f1e398`, failed at ownership
+lookup because 56 original configured FASTAs were absent from its copied map.
+It and its component remain preserved in
+`results/controlled_fragment_relocation_execution_20261010_v1.json`. The separate
+`v2` planner reuses the frozen copy writer and native replay, adding ownership
+bindings for all selected contexts. It records that preparation revision in the
+same component layout, without changing native source or historical metadata.
 
 From the original repository, prepare at a fresh path:
 
 ```bash
 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B \
-  benchmark_tools/relocate_controlled_fragment_stages.py prepare \
+  benchmark_tools/relocate_controlled_fragment_stages_v2.py prepare \
   --root "$PWD" \
   --report benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json \
   --readback benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json \
@@ -71,7 +80,7 @@ printed by preparation, replay with Python and NumPy (no repository imports or
 native inference executables are required):
 
 ```bash
-python -I -B /new/path/fragment-component/runner/benchmark_tools/relocate_controlled_fragment_stages.py replay \
+python -I -B /new/path/fragment-component/runner/benchmark_tools/relocate_controlled_fragment_stages_v2.py replay \
   --component /new/path/fragment-component \
   --manifest-sha256 MANIFEST_SHA256_FROM_PREPARATION \
   --output /fresh/path/fragment-readback.json
@@ -150,7 +159,8 @@ benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest \
   tests/unit/test_controlled_fragment_stage_table.py \
   tests/unit/test_controlled_fragment_trace_integration.py \
   tests/unit/test_fragment_trace_artifact_access.py \
-  tests/unit/test_relocate_controlled_fragment_stages.py
+  tests/unit/test_relocate_controlled_fragment_stages.py \
+  tests/unit/test_relocate_controlled_fragment_stages_v2.py
 ```
 
 These check native-reader kernels, unavailable-versus-false serialization,

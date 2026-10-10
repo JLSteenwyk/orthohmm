@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Real Relocation Failure Preserved; Ownership Correction Tested (2026-10-10)
+
+Source43f1e398 committed/pushed before actual preparation. One actual prepare
+EXIT0:1726 files/37621435 payload bytes,112 copied-checkpoint FASTAs, manifest
+1040735bytes/SHAa2135c06a3887d424902daef4f27a5da4e6665eaa3c4e95247c88d919c101f21.
+One complete copy EXIT0 to
+/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/tmp/build_tmp/orthohmm-fragment-relocated-20261010-armrwi6b/component.
+One copied-runner native readback EXIT1 at Missing FASTA ownership. No successful
+v1 readback is claimed. Actual commands/tool terminals retained in
+controlled_fragment_relocation_execution_20261010_v1.json; both original and
+relocated components and attempt-bound source stay unchanged.
+
+Bounded diagnosis of44 selected native contexts/352 configured FASTA reads
+found56 unique baseline-original ownership FASTAs absent from the map.
+These have identities in original execution verified_inputs.inputs. Implemented
+separate relocate_controlled_fragment_stages_v2.py: append all configured
+ownership FASTAs from retained input inventories (checkpoint copies remain
+output-inventoried), not newly invented current hash bindings. Reuse unchanged
+copy writer via a temporary plan binding restored on success/failure, and
+unchanged strict native replay. Manifest explicitly records preparation revision;
+no historical JSON/labels/scope or frozen native checks are changed.
+
+Actual affected/adjacent tests EXIT0:74 passed in5.07s. New fixture deliberately
+omits configured originals from stage/selection pins, launches copied v2 after
+removing its originals, verifies all four methods, and rejects incomplete
+historical inventories. Read-only actual corrected plan passed:1783 files,
+39428185bytes (before any later source edit),56 added configured originals,
+112 copied checkpoint FASTAs,44contexts/352 FASTA reads. Original relocation
+source byte-equal to43f1e398;SHA9b00de075bf638a0ffd47a4d93ac5a7a97fa27e5afd430b66e4b5f317bbafe25.
+
+NEXT commit/push the tested correction and failure receipt, then execute once
+the documented v2 prepare command at
+benchmarks/work/controlled_fragment_relocated_stages_20261010_v2. Copy its full
+component to a fresh location and invoke that copied v2 runner once, using the
+actual manifestSHA and fresh output
+benchmark_tools/results/controlled_fragment_relocated_readback_20261010_v2.json.
+Retain failure if any; no v1 overwrite or inference/timing/scoring retries.
+No live handle. Full goal remains ACTIVE/incomplete; resource contention is not
+blocking this deterministic original7.4 postprocessing task.
+
 ## Fragment Relocation Source Tested; Real Copy Next (2026-10-10)
 
 Previous maintenance turn made progress:5829b34a committed/pushed the explicit
