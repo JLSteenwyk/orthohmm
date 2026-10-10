@@ -23,6 +23,18 @@ The [prospective conditional reporting plan](results/NATIVE_FAS_CONDITIONAL_REPO
 froze the retained-data application, separate observed/expected targets,
 all 28 contrasts and historical provenance qualifications before interval viewing.
 
+The [newer four-cell native FAS result](results/NATIVE_FACTORIAL_FAS_SAMPLING_RESULT_20261010.md)
+separately accounts for unknown means in BOTH sampled strata. Its
+[frozen derivation](results/NATIVE_FACTORIAL_FAS_SAMPLING_PROTOCOL_20261010.md)
+and [actual execution/readback](results/native_factorial_fas_sampling_execution_20261010_v1.json)
+retain four conditional expected-ratio ranges and all six simultaneous contrasts.
+The approximately 0.010 observed reconciliation increase is not resolved by
+these bounds. R-on versus candidate-expanded R-off ranges exclude zero but do
+not isolate a single-component causal effect. Logs are newly pinned, not
+historically admission-bound; score/timing failures remain unchanged. This is
+native sampling uncertainty, not biological/generalization error bars or
+uncertainty for other endpoints. No native scores were rerun.
+
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
 links the controlled-fragment comparisons, observed stage decisions, actual
 relocated replay and restricted count-model outcomes to their limits. It keeps

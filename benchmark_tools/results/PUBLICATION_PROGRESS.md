@@ -1,5 +1,50 @@
 # Publication Progress
 
+## Four Native FAS Ranges Completed; Manuscript Insertion Tested (2026-10-10)
+
+88ddb696 pushed tested source/protocol BEFORE actual retained-data application.
+Actual reporting EXIT0 in 2.703s, four complete cell ranges and six contrasts,
+no numerical failure. Own driver restricted to one CPU/4 GiB address space and
+one numerical thread, with 650486 MiB available; other jobs untouched.
+Report SHA785921f29f176d92417e9ef239c69dc896410e00ad764594d8ea7119b63d7be1;
+summary SHA18bfe1c1a08f6b53d9b0106944107122bc277f24f02e41609fa8e69fcdaf635e.
+No new native scoring, inference, samples, timings or full database recounts.
+
+Independent stdlib/80-digit recurrence readback EXIT0, four raw samples,
+16 count endpoint/neighbor conditions, eight mean intervals, all corner/weight
+ranges and six contrasts. Maximum numerical error7.044019369886139e-16.
+All four logs historically hash-bound=False, explicitly retained. No cross-cell
+or biological-pair independence claim. Reconciliation observed +.010062 remains
+zero-overlap under these simultaneous bounds; both R-on versus C-expanded/R-off
+contrasts exclude zero but do not isolate a single component's causal effect.
+P refinement near-zero comparison includes zero, not equivalence.
+
+Actual result prose/table check EXIT0: four means/ranges/counts agree with JSON,
+four links resolve and execution/readback terminals preserved. Source/tests,
+commands, actual tests/execution/readback and generic insertion-test outcomes
+are in native_factorial_fas_sampling_execution_20261010_v1.json. Manuscript
+supplement NATIVE_FACTORIAL_FAS_SAMPLING_RESULT_20261010.md has SHA
+85d88d856e87c61409601e554c148fb70a08d619c8f7f0f342145b265b0e86e8.
+
+Prepared small reusable insert_manuscript_supplement.py rather than another
+copied scientific/reporting adapter. It checks pinned inputs, fresh sibling
+paths and exact complete-parent byte restoration. First test fixture incorrectly
+called a string containing its anchor an absent anchor (1 failed,64 passed);
+fixed that fixture and protected dangling output symlinks. Corrected actual
+tests EXIT0:66 passed in1.91s. No successor generated yet. All handles terminal.
+Full seven-part goal ACTIVE/incomplete; biological/other-endpoint uncertainty,
+failed factorial cells and publication readiness remain unresolved.
+
+NEXT commit/push the completed result/prose and tested generic insertion source,
+then generate ONCE a sibling publication_native_factorial_fas_manuscript_20261010_v1.md
+with generation record publication_native_factorial_fas_generation_20261010_v1.json.
+Use parent publication_conditional_fas_manuscript_20261010_v1.md (SHA
+d357f148b9c7b3b5596bd289a13802f2e98ee632cab0e1b88a3f77bd55738977),
+above pinned supplement and anchor `### Retrospective Native-Cell Comparator Sensitivity\n`.
+Check complete parent restoration, new table/link scopes and update current
+guide; no new render/archive gate. Then select another genuinely unresolved
+original scientific requirement, not another conditional toy validation.
+
 ## Four Native FAS Cells: Actual Design Located And Adapter Tested (2026-10-10)
 
 Previous turn made progress: 2388e296 consolidated the active contract and

@@ -1,0 +1,126 @@
+{
+  "schema": "native_factorial_fas_sampling_execution_v1",
+  "source_commit_pushed_before_application": "88ddb696",
+  "tests": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_native_fas_two_sample_interval.py tests/unit/test_report_native_factorial_fas_sampling.py tests/unit/test_native_fas_sampling_interval.py",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 4000,
+      "yield_time_ms": 1000
+    },
+    "observations": [
+      {
+        "chunk_id": "413827",
+        "wall_time_seconds": 1.000987898,
+        "session_id": 2495,
+        "original_token_count": 0,
+        "output": ""
+      },
+      {
+        "chunk_id": "803a68",
+        "wall_time_seconds": 0.000014672,
+        "exit_code": 0,
+        "original_token_count": 45,
+        "output": "........................................................................ [ 85%]\n............                                                             [100%]\n84 passed in 2.36s\n"
+      }
+    ]
+  },
+  "execution": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import json,os,resource,sys,time; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.report_native_factorial_fas_sampling import run; os.sched_setaffinity(0,{min(os.sched_getaffinity(0))}); resource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3)); start=time.monotonic(); r=run(Path.cwd(),Path(\"benchmark_tools/results/native_factorial_fas_sampling_20261010_v1\")); print(json.dumps(dict(status=r[\"status\"],methods=len(r[\"methods\"]),contrasts=len(r[\"contrasts\"]),elapsed_seconds=time.monotonic()-start,own_process_cpu_limit=1,own_process_address_space_limit_bytes=4*1024**3))); sys.exit(0 if r[\"status\"]==\"conditional_design_ranges_complete\" else 1)'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "observations": [
+      {
+        "chunk_id": "ea6be6",
+        "wall_time_seconds": 1.001803604,
+        "session_id": 98173,
+        "original_token_count": 0,
+        "output": ""
+      },
+      {
+        "chunk_id": "cbc6f0",
+        "wall_time_seconds": 0.000012028,
+        "exit_code": 0,
+        "original_token_count": 50,
+        "output": "{\"status\": \"conditional_design_ranges_complete\", \"methods\": 4, \"contrasts\": 6, \"elapsed_seconds\": 2.7029580948874354, \"own_process_cpu_limit\": 1, \"own_process_address_space_limit_bytes\": 4294967296}\n"
+      }
+    ],
+    "safe_memory_before_application_mib": 650486
+  },
+  "independent_readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nfrom pathlib import Path\nfrom decimal import Decimal, localcontext\nfrom fractions import Fraction\nfrom itertools import combinations\nimport csv,gzip,hashlib,json,math\nbase=Path(\"benchmark_tools/results/native_factorial_fas_sampling_20261010_v1\")\nreport=json.loads((base/\"report.json\").read_text())\ndef distribution(M,G,c):\n lo,hi=max(0,c-M+G),min(c,G)\n mode=max(lo,min(hi,((c+1)*(G+1))//(M+2)))\n q={mode:Decimal(1)}\n for t in range(mode,hi):\n  q[t+1]=q[t]*Decimal((G-t)*(c-t))/Decimal((t+1)*(M-G-c+t+1))\n for t in range(mode,lo,-1):\n  q[t-1]=q[t]*Decimal(t*(M-G-c+t))/Decimal((G-t+1)*(c-t+1))\n total=sum(q.values())\n return {t:v/total for t,v in q.items()}\ndef weight(M,G,c,k):\n return sum(p*Decimal(k)/Decimal(k+t) for t,p in distribution(M,G,c).items())\nwith localcontext() as ctx:\n ctx.prec=80\n toy=distribution(4,2,2)\n assert max(abs(toy[t]-Decimal(x.numerator)/Decimal(x.denominator)) for t,x in enumerate([Fraction(1,6),Fraction(2,3),Fraction(1,6)])) < Decimal(\"1e-70\")\n assert abs(weight(4,2,2,2)-Decimal(25)/36) < Decimal(\"1e-70\")\n delta=Decimal(1)/240\n numerical_errors=[];checked=[];projected=[]\n for row in report[\"methods\"]:\n  M,c,k,r,P=(row[x] for x in (\"M\",\"c\",\"k\",\"r\",\"P\"))\n  gl,gh=row[\"interval\"][\"success_count_bounds\"]\n  tail_lo=sum(p for t,p in distribution(M,gl,c).items() if t>=r)\n  tail_hi=sum(p for t,p in distribution(M,gh,c).items() if t<=r)\n  assert tail_lo>=delta/2 and tail_hi>=delta/2\n  if gl>r: assert sum(p for t,p in distribution(M,gl-1,c).items() if t>=r)<delta/2\n  if gh<M-c+r: assert sum(p for t,p in distribution(M,gh+1,c).items() if t<=r)<delta/2\n  sums=[Decimal(0),Decimal(0)]; n=0\n  with gzip.open(row[\"raw\"][\"path\"],\"rt\") as stream:\n   reader=csv.reader(stream,delimiter=\"\\t\");assert next(reader)==[\"Acc1\",\"Acc2\",\"FAS\"]\n   for _,_,value in reader:\n    sums[0 if n<k else 1]+=Decimal(value);n+=1\n  assert n==k+r\n  a,b=sums[0]/k,sums[1]/r\n  z=(sums[0]+sums[1])/(k+r)\n  numerical_errors += [abs(a-Decimal(str(row[\"precomputed_sample_mean\"]))),abs(b-Decimal(str(row[\"returned_sample_mean\"]))),abs(z-Decimal(str(row[\"observed_native_mean\"])))]\n  h_old=((Decimal(2)/delta).ln()/(2*k)).sqrt()\n  h_new=((Decimal(2)/delta).ln()/(2*r)).sqrt()\n  old=[max(Decimal(0),a-h_old),min(Decimal(1),a+h_old)]\n  new=[max(Decimal(0),b-h_new),min(Decimal(1),b+h_new)]\n  if k==P:old=[a,a]\n  weights=[weight(M,g,c,k) for g in (gl,gh)]\n  corners=[w*x+(1-w)*y for w in weights for x in old for y in new]\n  bounds=[min(corners),max(corners)]\n  for actual,expected in ((old,row[\"interval\"][\"precomputed_mean_bounds\"]),(new,row[\"interval\"][\"return_mean_bounds\"]),(bounds,row[\"interval\"][\"expected_native_mean_bounds\"])):\n   numerical_errors.extend(abs(x-Decimal(str(y))) for x,y in zip(actual,expected))\n  projected.append((row[\"cell\"],bounds))\n  checked.append(dict(cell=row[\"cell\"],G_bounds=[gl,gh],lower_tail=str(tail_lo),upper_tail=str(tail_hi),raw_scores=n,theta_bounds=list(map(str,bounds))))\n for (ln,lb),(rn,rb) in combinations(projected,2):\n  found=[v for v in report[\"contrasts\"] if v[\"left\"]==ln and v[\"right\"]==rn]\n  assert len(found)==1\n  bounds=[lb[0]-rb[1],lb[1]-rb[0]];saved=found[0]\n  numerical_errors.extend(abs(x-Decimal(str(y))) for x,y in zip(bounds,saved[\"conditional_expected_difference_bounds\"]))\n  assert saved[\"zero_included\"]==(bounds[0]<=0<=bounds[1])\n assert max(numerical_errors)<Decimal(\"1e-12\")\n for ref in list(report[\"references\"].values())+report[\"evidence\"]:\n  data=Path(ref[\"path\"]).read_bytes()\n  assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\n assert report[\"components\"]==12 and report[\"component_error\"]==.05/12 and len(report[\"contrasts\"])==6\n for key in (\"historical_scores_rerun\",\"observed_scores_changed\",\"biological_generalization_intervals\",\"unconditional_historical_interval_admission\",\"other_endpoint_uncertainty_admitted\",\"failed_factorial_cells_repaired\",\"publication_ready\"):assert report[key] is False\n print(json.dumps(dict(status=\"independent_native_four_cell_readback_passed\",decimal_precision=80,methods=4,contrasts=6,count_endpoint_and_neighbor_conditions=16,max_numerical_error=str(max(numerical_errors)),log_historical_bindings=[row[\"native_log_historically_hash_bound\"] for row in report[\"methods\"]],checked_cells=checked),sort_keys=True))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 3000
+    },
+    "observations": [
+      {
+        "chunk_id": "bb6929",
+        "wall_time_seconds": 0.819561558,
+        "exit_code": 0,
+        "original_token_count": 552,
+        "output": "{\"checked_cells\": [{\"G_bounds\": [2115934, 2120750], \"cell\": \"p0_c0_r0\", \"lower_tail\": \"0.0020875653445831585679691029860271914615949033085239780721541724182179489016761015\", \"raw_scores\": 38205, \"theta_bounds\": [\"0.76271398524784190093037945459545126704898215112098661518434810720251466263022499\", \"0.78717980669286045165012345888577375688773205916131675687472901420119212534006810\"], \"upper_tail\": \"0.0020952284699095742799640509452225101384182803315937043557965830844310785542108819\"}, {\"G_bounds\": [181511, 182067], \"cell\": \"p0_c0_r1\", \"lower_tail\": \"0.0021148699643029226370306580364221764106238983187185173907557369601542657867907808\", \"raw_scores\": 252451, \"theta_bounds\": [\"0.78090605443625104952241000922595495150675932785472304613495283210204020898203677\", \"0.78910961852972129784713814687127468306951324502197778366075116517121561509781960\"], \"upper_tail\": \"0.0021303389285858190742923013803188365939326152770443010895396773704494092728864147\"}, {\"G_bounds\": [3190468, 3200270], \"cell\": \"p0_c1_r0\", \"lower_tail\": \"0.0020848247581278306974491976287376239389057686264281169198466407693287952928729793\", \"raw_scores\": 32941, \"theta_bounds\": [\"0.73697352051771724693819159980850513549029967392922352743556885692980739293626993\", \"0.76363829526986935833231644320928378642531726695899231261323606888212386681002702\"], \"upper_tail\": \"0.0020853920558096634049347423905457672777836602797091239657668467627406654120778949\"}, {\"G_bounds\": [178046, 178668], \"cell\": \"p1_c0_r1\", \"lower_tail\": \"0.0020868087800988571068946979340773854354762474198392384494303265122360262638548054\", \"raw_scores\": 257182, \"theta_bounds\": [\"0.78095517836086193299728565831944528884074254580345606740105456826099596224557576\", \"0.78907539852071561757510496182191470601475395586140454865613235668026122823972389\"], \"upper_tail\": \"0.0021376378669475671359727996718540264462316138456536344178914229720510271550215179\"}], \"contrasts\": 6, \"count_endpoint_and_neighbor_conditions\": 16, \"decimal_precision\": 80, \"log_historical_bindings\": [false, false, false, false], \"max_numerical_error\": \"7.0440193698861383251937633511583800569742888796167960920417980203E-16\", \"methods\": 4, \"status\": \"independent_native_four_cell_readback_passed\"}\n"
+      }
+    ]
+  },
+  "report_sha256": "785921f29f176d92417e9ef239c69dc896410e00ad764594d8ea7119b63d7be1",
+  "summary_sha256": "18bfe1c1a08f6b53d9b0106944107122bc277f24f02e41609fa8e69fcdaf635e",
+  "conditional_design_ranges_computed": true,
+  "biological_generalization_intervals": false,
+  "unconditional_historical_interval_admission": false,
+  "publication_ready": false,
+  "manuscript_insertion_tests": {
+    "first_failed_attempt": {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_insert_manuscript_supplement.py tests/unit/test_native_fas_two_sample_interval.py tests/unit/test_report_native_factorial_fas_sampling.py",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 3000
+      },
+      "observations": [
+        {
+          "chunk_id": "4979ea",
+          "wall_time_seconds": 1.001455671,
+          "session_id": 24197,
+          "original_token_count": 0,
+          "output": ""
+        },
+        {
+          "chunk_id": "059ecf",
+          "wall_time_seconds": 0.000012048,
+          "exit_code": 1,
+          "original_token_count": 249,
+          "output": ".F...............................................................        [100%]\n=================================== FAILURES ===================================\n_ test_ambiguous_empty_or_duplicate_insertion_rejected[no anchor-text-anchor] __\n\nparent = 'no anchor', supplement = 'text', anchor = 'anchor'\n\n    @pytest.mark.parametrize(\"parent,supplement,anchor\", [\n        (\"no anchor\", \"text\", \"anchor\"), (\"anchor anchor\", \"text\", \"anchor\"),\n        (\"anchor\", \"\", \"anchor\"), (\"text\\n\\nanchor\", \"text\\n\", \"anchor\"),\n    ])\n    def test_ambiguous_empty_or_duplicate_insertion_rejected(parent, supplement, anchor):\n>       with pytest.raises(ValueError):\nE       Failed: DID NOT RAISE ValueError\n\ntests/unit/test_insert_manuscript_supplement.py:21: Failed\n=========================== short test summary info ============================\nFAILED tests/unit/test_insert_manuscript_supplement.py::test_ambiguous_empty_or_duplicate_insertion_rejected[no anchor-text-anchor]\n1 failed, 64 passed in 1.97s\n"
+        }
+      ]
+    },
+    "corrected": {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_insert_manuscript_supplement.py tests/unit/test_native_fas_two_sample_interval.py tests/unit/test_report_native_factorial_fas_sampling.py",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 3000
+      },
+      "observations": [
+        {
+          "chunk_id": "9be7c6",
+          "wall_time_seconds": 1.000383428,
+          "session_id": 71305,
+          "original_token_count": 0,
+          "output": ""
+        },
+        {
+          "chunk_id": "f3dc2b",
+          "wall_time_seconds": 0.00001254,
+          "exit_code": 0,
+          "original_token_count": 25,
+          "output": "..................................................................       [100%]\n66 passed in 1.91s\n"
+        }
+      ]
+    }
+  }
+}
