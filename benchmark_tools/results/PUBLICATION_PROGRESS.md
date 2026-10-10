@@ -1,5 +1,27 @@
 # Publication Progress
 
+## Fragment Trace Integration Prepared (2026-10-10)
+
+Verified observations/readback and actual recovery receipt committed/pushed
+88f04ed3. Do not repeat their producers/readbacks. Working on the next actual
+task: integrate_controlled_fragment_trace.py/tests. New draft adds bounded
+Methods/Results/limitations, all11 method/location count rows and three
+explicitly illustrative records, without claiming prevalence or causality.
+One recorded status sentence changes from "remains separate work" to the
+trace now reported. Removing insertions and reversing that named replacement
+must restore exact frozen fragment parent. Old draft/results stay unchanged.
+Test affected integration then commit/push source before one fresh generation
+at controlled_fragment_trace_integration_20261010_v1 and
+controlled_fragment_trace_manuscript_20261010_v1.md. Independently check cells,
+identities/parent restoration and render/review affected sections afterward.
+Goal ACTIVE/incomplete, no live handle or resource gate.
+Prepared integration/tests now pass 66 affected/adjacent checks in 1.40s.
+Initial development tests caught exact vocabulary mismatch: empty bins use
+"empty_bin", not "empty"; unexecuted source corrected and tested. Original
+scientific selection unchanged. Scoped diff check passed. Commit/push source,
+tests and this ledger before the fresh sanitized inline invocation:
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.integrate_controlled_fragment_trace import run; b=root/"benchmark_tools/results"; r=run(root,b/"controlled_fragment_trace_integration_20261010_v1",b/"controlled_fragment_trace_manuscript_20261010_v1.md"); print(json.dumps({k:r[k] for k in ("schema","location_rows","selected_cases","stage_rows")}))'`
+
 ## Fragment Stages Independently Verified; Integration Next (2026-10-10)
 
 Progress: independent reader e49fd970 and separately tested NA recovery
