@@ -1,5 +1,59 @@
 # Publication Progress
 
+## Current Review And Claims Done; Native Biological Uncertainty Route Unresolved (2026-10-10)
+
+This turn made actual progress: e706348d pushed the current HTML/34-page PDF,
+41 passing renderer tests and ten-page scoped visual review; d52e926d pushed
+the native FAS claim checklist with eight checked rows. Both pushes completed.
+No owned command handle remains live. Current scientific text, original scores,
+interval results, conditional FAS figure and failed outcomes remain unchanged.
+Do not repeat the rendering, checklist production or producer calculations.
+
+Then advanced original requirement 4, reviewing the actual retained VGNC
+block/transition result, methodological decision, functional-pair composition
+and TreeFam search outcome. VGNC reference overlap blocks and method-dependent
+prediction components do not supply independently justified biological units;
+the rare-error/shared-clade failures remain failures. GO/EC are deterministic
+scored-membership means with shared proteins, not random FAS strata. The new
+FAS law cannot be used for their biological uncertainty or a joint six-metric
+secondary-mean interval. Original full TreeFam family resources remain missing.
+
+Read-only local candidate screening looked for a concrete new source lead in
+the saved public container inventories, not a new search/download. The first
+inline reader refused the older receipts' actual `inventory` nesting before
+emitting results. After inspecting that schema, the corrected read-only
+invocation EXIT0 checked 211/214/1756 saved header entries across the three
+receipts: no archive-suffix member candidate. It also inspected 419 history
+commands in the 34-new-context receipt: no TreeFam/mapping directive. The
+older receipts use a different metadata structure and their history commands
+were NOT counted by that reader. Counts include reused layers; they are not
+independent contexts. No raw layer was re-downloaded, extracted or executed,
+no contact occurred and no new original-source lead was established. The
+first schema refusal and harmless absent guessed functional-result filename
+are exploration failures, not a scientific execution/admission failure.
+
+This is the first current end-state impasse observation AFTER the completed
+delivery work, not three consecutive blocked goal turns. No immediately
+executable, independently justified native biological-CI calculation was
+identified under the existing evidence/constraints. It is not proof that no
+method or public artifact could ever exist. Full completion remains unproven;
+no goal-complete, goal-blocked or publication-ready status is asserted here.
+
+NEXT revalidate this specific scientific boundary against newly available
+evidence, not another render, prompt repair, toy estimator, receipt/archive or
+resource census. The authoritative retained sources are
+VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md,
+NATIVE_QFO_VGNC_BLOCK_RESULT_20261006.md,
+NATIVE_QFO_FUNCTIONAL_PAIR_RESULT_20261006.md and
+TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md. New original family files must
+reconstruct the pooled reference before use; a new dependence/sampling route
+must justify the actual paired statistic and units before calculation. Advance
+any genuinely unfinished original requirement if an authorized route is found.
+Otherwise apply the goal tool's three-consecutive-turn genuine-impasse audit;
+do not convert documented unavailability into scientific completion. Existing
+shared-host timings are complete within their retained attempt scope and are
+not the blocker. Goal remains ACTIVE/incomplete.
+
 ## Conditional FAS Claim Checklist Integrated (2026-10-10)
 
 e706348d pushed the actual unchanged current manuscript HTML/34-page PDF,
