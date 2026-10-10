@@ -38,10 +38,53 @@ the stage report's `checked_inputs` identify exactly which files were read.
 Those files must be retained to verify native stages. A clone containing only
 Git summaries cannot reconstruct missing raw outputs or validate native causes.
 
-Recorded paths are absolute to the original workspace. These readers do not
-currently implement a relocated-native-input mapping. Do not rewrite the old
-manifests or claim that summary-only replay proves raw inference reproduction.
-The previous relocated components retain their own documented, narrower scope.
+Recorded paths are absolute to the original workspace. The frozen readers keep
+those labels; `relocate_controlled_fragment_stages.py` provides a separate,
+read-only mapping to copied raw artifacts. Do not rewrite the old manifests or
+claim that summary-only replay proves raw inference reproduction. The previous
+relocated components retain their own documented, narrower scope.
+
+## Relocated Native-Stage Check
+
+The new component contains the stage report/table, selection and its pinned
+inputs, expected independent readback, unchanged independent reader kernels,
+and the small relocation runtime. Copied OrthoFinder input FASTAs required by
+the sequence-only checkpoint are added only from the original parent's output
+inventory. Preparation refuses changed inputs, conflicting mappings, an occupied
+destination or more than 64 MiB of pinned payloads. Raw artifacts stay local;
+this is not another release candidate or a public redistribution claim.
+
+From the original repository, prepare at a fresh path:
+
+```bash
+benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B \
+  benchmark_tools/relocate_controlled_fragment_stages.py prepare \
+  --root "$PWD" \
+  --report benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json \
+  --readback benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json \
+  --readback-sha256 2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35 \
+  --output /fresh/path/fragment-component
+```
+
+Copy the complete component to its new location. Using the manifest SHA-256
+printed by preparation, replay with Python and NumPy (no repository imports or
+native inference executables are required):
+
+```bash
+python -I -B /new/path/fragment-component/runner/benchmark_tools/relocate_controlled_fragment_stages.py replay \
+  --component /new/path/fragment-component \
+  --manifest-sha256 MANIFEST_SHA256_FROM_PREPARATION \
+  --output /fresh/path/fragment-readback.json
+```
+
+The copied kernels are loaded privately and unchanged. Only their `Path`
+binding is redirected; NumPy receives verified copied paths through
+`os.PathLike`. Logical historical labels remain in results, with their physical
+copies explicitly listed in `manifest.json`. Missing/unindexed originals are
+never a fallback. Replay must reproduce the entire retained readback object,
+including native numerical checks, summary and exact `NA` table serialization.
+This verifies portable raw-stage postprocessing, not reproduction of historical
+inference, benchmark scores, all-tool dependency closure or OS-level isolation.
 
 ## Execution Order
 
@@ -105,12 +148,17 @@ Focused tests, run using the retained scientific interpreter:
 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest \
   tests/unit/test_controlled_fragment_stage_readback.py \
   tests/unit/test_controlled_fragment_stage_table.py \
-  tests/unit/test_controlled_fragment_trace_integration.py
+  tests/unit/test_controlled_fragment_trace_integration.py \
+  tests/unit/test_fragment_trace_artifact_access.py \
+  tests/unit/test_relocate_controlled_fragment_stages.py
 ```
 
 These check native-reader kernels, unavailable-versus-false serialization,
 bounded integration, exact parent restoration and changed-input refusals.
-Tests alone do not establish that raw files are available on another machine.
+The relocation fixture also launches the copied standalone runner after moving
+its component and removing all synthetic original files. It checks all four
+methods, including numeric checkpoints and copied-input ownership. Tests alone
+do not establish availability of the actual raw files on another machine.
 
 ## Interpretation
 

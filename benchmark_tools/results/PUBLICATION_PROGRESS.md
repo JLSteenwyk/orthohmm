@@ -1,5 +1,36 @@
 # Publication Progress
 
+## Fragment Relocation Source Tested; Real Copy Next (2026-10-10)
+
+Previous maintenance turn made progress:5829b34a committed/pushed the explicit
+shared-host decision and corrected handoff. No further prompt change needed.
+Implemented relocate_controlled_fragment_stages.py plus read-only
+fragment_trace_artifact_access.py and focused tests. Frozen independent reader,
+NA wrapper and MCL parser remain unchanged. Component copies original pinned
+selection/stage artifacts, kernels/runtime and execution-inventoried checkpoint
+FASTAs; logical labels are preserved and all reads use checked copied files.
+Fixed the new adapter's duplicate-physical-target check before production.
+Private reader loading restores existing package/modules, including on failure.
+
+Actual tests EXIT0:69 passed in2.53s across the two new suites and adjacent
+native-reader, NA-table and integration suites. Standalone fixture replay moves
+the component, removes all synthetic originals, and verifies all four methods,
+eight observations/eight contexts, including NumPy and copied FASTA ownership.
+Changed payload/source/runtime/manifest and changed expected outcomes refuse;
+no inference or benchmark scoring is run. Read-only real-input planning passed:
+1726 files, approximately38MB including112 additional inventoried checkpoint
+FASTAs, within the64MiB bound. This is planning, NOT actual copy/replay success.
+No live handle. Instructions updated with prepare/replay commands and limits.
+
+NEXT after this tested-source commit/push: run once
+`benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B benchmark_tools/relocate_controlled_fragment_stages.py prepare --root "$PWD" --report benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json --readback benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json --readback-sha256 2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35 --output benchmarks/work/controlled_fragment_relocated_stages_20261010_v1`
+Then copy that complete new component to a fresh temporary location and execute
+its COPIED runner once with isolated Python and the actual prepared manifest
+SHA. Retain actual results and mapping; do not rewrite original artifacts or
+claim raw historical inference reproduction. This resolves original7.4's
+specific absolute-native-path diagnostic gap, not another release candidate,+all-tool/OS certification, new statistical evidence or full goal completion.
+Preserve failures if any, unrelated samples/profiles/rasters and rc6 archive.
+
 ## Goal Maintenance; Exact Unfinished Handoff (2026-10-10)
 
 User requested fixing repeated goal stops. get_goal reports ACTIVE, no token
