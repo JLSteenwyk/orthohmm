@@ -1,5 +1,55 @@
 # Publication Progress
 
+## Native FAS Controlled Context Check Completed And Read Back (2026-10-10)
+
+Previous goal turn was progress: c18c9c8d pushed the corrected partial-work
+handoff. This turn completed reviewed source, tests and actual native use.
+f8124a75 pushed the original tested check before its first execution; v1
+EXIT1 fixture-schema failure and source remain preserved. dd10c4ce pushed
+the separately tested lowercase fixture correction before v2 execution.
+Native featuretypes lowercases tool configuration; only fixture keys/path
+preparation changed. Native helper, CLI and scientific kernels stay unchanged.
+
+Actual corrected tests EXIT0: 89 passed in 0.96s. Actual native v2 EXIT0:
+12 contexts, 40 pair evaluations, 34 numeric returns, 6 NA returns, no within-
+pair variations. Each focal pair has six observations/20 focal comparisons
+total. C/F native paths 65536 each; G 1125899906842624. Independent raw-text
+readback EXIT0 checks all means/omissions, contexts, CLI settings, source and
+protocol bindings, fixture transformation and false non-admission flags.
+Corrected result 58118 bytes, SHA
+845b4baea528f7633830e5a26ec58267da95165d8c4f79f2a0112c6063826f33.
+Summary/record/guide check also EXIT0. Actual commands and both terminals are
+in native_fas_context_execution_20261010_v1.json; concise scope/result in
+NATIVE_FAS_CONTEXT_RESULT_20261010.md, linked from the current guide.
+
+These finite successful fixtures support investigating the stated fixed-pair
+assumption; they are not proof for all pairs, historical missingness causes,
+all worker assignments or batch/file failures. No historical inference,
+scores, annotations, samples or timings were repeated. No native confidence
+interval or sampling-law admission. Full goal ACTIVE/incomplete. No live handle.
+
+Advanced next prerequisite without interval viewing: scoped retained JSON
+mapping EXIT0 verifies all eight identities, P/M/k/c/r constraints and each
+full precomputed sum/P. No large database/lookup scan. Historical parser hash
+identity and database hash bindings remain unestablished, explicitly retained
+as false; summary agreement is not a repair or historical certification.
+
+NEXT original4.1: implement/test the prospective native count/conditional-mean
+confidence construction and random-denominator target from the already-frozen
+NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md. Start with
+`sed -n '102,166p' benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md`.
+Use a focused reusable numerical module and tests, not another whole pipeline.
+Test hypergeometric tail inversion against exact integer/Fraction subset sums,
+zero/complete returns, G=0/1, score-dependent omissions, unequal strata,
+method swapping and the 107/240-versus-9/20 target distinction. Project the
+actual expected native ratio; preserve observed native means. Freeze tested
+source BEFORE a prospective validation panel; do not apply to eight-method
+intervals until native target mapping/assumptions and coverage are justified.
+An explicit context-dependent-return failure control is outside this design.
+No gene-independence toy, new historical sample/rescore, interval for another
+endpoint, historical retry, new gate or declaration of readiness. Preserve
+the completed context outputs; do not rerun them to update this checkpoint.
+
 ## Native FAS Fixture Failure Preserved; Lowercase Correction Tested (2026-10-10)
 
 Reviewed source/tests pushed f8124a75 BEFORE actual v1 container execution.

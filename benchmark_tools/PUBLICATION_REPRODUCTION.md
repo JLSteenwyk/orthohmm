@@ -4,8 +4,13 @@
 
 The [FAS sampling-design investigation](results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md)
 derives a prospective target for the actual random-denominator, post-attrition
-mean. Pair-return/value invariance and finite-sampling coverage are still to
-be validated. No FAS interval, new sample, rescore or native admission has run.
+mean. The [actual native context check](results/NATIVE_FAS_CONTEXT_RESULT_20261010.md)
+completed 12 contexts/40 controlled pair evaluations without score or return
+differences after a separately frozen fixture-key correction; its first
+schema failure remains preserved. This finite fixture evidence is not proof
+for all historical pairs. Count/mean coverage and joint projection still
+require validation. No FAS interval, new historical sample, benchmark rescore
+or native sampling-law admission has run.
 
 The [current claim-to-evidence addendum](results/PUBLICATION_CURRENT_EVIDENCE_ADDENDUM_20261010.md)
 links the controlled-fragment comparisons, observed stage decisions, actual

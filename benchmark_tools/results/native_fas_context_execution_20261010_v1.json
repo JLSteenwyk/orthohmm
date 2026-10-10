@@ -1,0 +1,144 @@
+{
+  "schema": "native_fas_context_execution_v1",
+  "retained_parameter_mapping": {
+  "args": {
+    "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nimport json,math\nfrom pathlib import Path\np=json.loads(Path(\"benchmark_tools/results/qfo_fas_population_completed_22383/report.json\").read_text())\ns=json.loads(Path(\"benchmark_tools/results/qfo_fas_stratum_weights_20261001.json\").read_text())\npopulation={x[\"method\"]:x for x in p[\"methods\"]}\nassert set(population)=={x[\"method\"] for x in s[\"methods\"]} and len(population)==8\nout=[]\nfor row in s[\"methods\"]:\n full=population[row[\"method\"]]; P=full[\"precomputed\"]; M=full[\"missing\"]; k=row[\"requested_precomputed\"]; c=row[\"requested_new\"]; r=row[\"saved_new\"]\n assert P+M==full[\"eligible_pairs\"]==row[\"eligible_pairs\"]\n assert 1<=k<=P and c==min(M,9000) and 0<=r<=c\n assert full[\"native_counts_match\"] and full[\"saved_lookup_strata_and_values_match\"]\n assert math.isfinite(full[\"precomputed_score_sum\"]) and 0<=full[\"precomputed_mean\"]<=1\n assert math.isclose(full[\"precomputed_score_sum\"]/P,full[\"precomputed_mean\"],rel_tol=1e-15,abs_tol=1e-15)\n out.append(dict(method=row[\"method\"],P=P,M=M,k=k,c=c,r=r,missing_numeric_returns=c-r,precomputed_population_mean=full[\"precomputed_mean\"],database_historically_hash_bound=full[\"database_historically_hash_bound\"]))\nassert p[\"uncertainty_admitted\"] is False and s[\"uncertainty_admitted\"] is False\nprint(json.dumps(dict(status=\"retained_native_parameter_mapping_passed\",methods=out,historical_parser_hash_identity_established=p[\"reuse\"][\"historical_parser_hash_identity_established\"],intervals_computed=False),sort_keys=True))\n'",
+    "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "yield_time_ms": 1000,
+    "max_output_tokens": 2000
+  },
+  "result": {
+    "chunk_id": "49924e",
+    "wall_time_seconds": 0.000012609,
+    "exit_code": 0,
+    "original_token_count": 487,
+    "output": "{\"historical_parser_hash_identity_established\": false, \"intervals_computed\": false, \"methods\": [{\"M\": 2130059, \"P\": 6902660, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 29165, \"method\": \"orthohmm_high_sensitivity\", \"missing_numeric_returns\": 7, \"precomputed_population_mean\": 0.7905982663263148, \"r\": 8993}, {\"M\": 305821, \"P\": 5653739, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 166384, \"method\": \"orthohmm_phylogeny_satellite_v2\", \"missing_numeric_returns\": 27, \"precomputed_population_mean\": 0.773667316374173, \"r\": 8973}, {\"M\": 2396211, \"P\": 11819171, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 44392, \"method\": \"orthofinder_3_1_5_full\", \"missing_numeric_returns\": 25, \"precomputed_population_mean\": 0.728795273607176, \"r\": 8975}, {\"M\": 133974278, \"P\": 29303161, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 1969, \"method\": \"orthofinder_3_1_5_sequence_only\", \"missing_numeric_returns\": 36, \"precomputed_population_mean\": 0.6913786720589632, \"r\": 8964}, {\"M\": 2573142, \"P\": 12675597, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 44335, \"method\": \"sonicparanoid_2_0_9\", \"missing_numeric_returns\": 6, \"precomputed_population_mean\": 0.7392568865584793, \"r\": 8994}, {\"M\": 15395, \"P\": 4679990, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 2735947, \"method\": \"proteinortho_6_3_6\", \"missing_numeric_returns\": 1, \"precomputed_population_mean\": 0.8138832491308742, \"r\": 8999}, {\"M\": 7391882, \"P\": 7616298, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 9273, \"method\": \"fastoma_0_3_5\", \"missing_numeric_returns\": 49, \"precomputed_population_mean\": 0.775903865659537, \"r\": 8951}, {\"M\": 1250881, \"P\": 13127208, \"c\": 9000, \"database_historically_hash_bound\": false, \"k\": 94449, \"method\": \"orthomcl_1_4\", \"missing_numeric_returns\": 1252, \"precomputed_population_mean\": 0.7422821028588105, \"r\": 7748}], \"status\": \"retained_native_parameter_mapping_passed\"}\n"
+  }
+},
+  "scope": "New controlled-fixture context checks only; no historical benchmark rerun or native interval admission.",
+  "container_sha256": "62b8f97bca23b67d451384f94108a5510d5fafc1bc398f95ab93532d324563fe",
+  "attempts": [
+    {
+      "name": "display_case_fixture_v1",
+      "source_commit_pushed_before_execution": "f8124a75",
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 singularity exec --cleanenv --env PYTHONHASHSEED=0,PYTHONDONTWRITEBYTECODE=1,OPENBLAS_NUM_THREADS=1,OMP_NUM_THREADS=1,MKL_NUM_THREADS=1 qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img python -B benchmark_tools/probe_native_fas_context.py --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_context_probe_20261010_v1.json",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 2000
+      },
+      "observations": [
+        {
+          "chunk_id": "2d224f",
+          "wall_time_seconds": 1.001139108,
+          "session_id": 60578,
+          "original_token_count": 0,
+          "output": ""
+        },
+        {
+          "chunk_id": "8ddeaf",
+          "wall_time_seconds": 0.000013741,
+          "exit_code": 1,
+          "original_token_count": 220,
+          "output": "Computing fas.runMultiTaxa failed: Traceback (most recent call last):\n  File \"/usr/local/bin/fas.runMultiTaxa\", line 8, in <module>\n    sys.exit(main())\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/calcFASmulti.py\", line 373, in main\n    calcFAS.fas(j)\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/calcFAS.py\", line 305, in fas\n    greedyFAS.fc_start(option_dict)\n  File \"/usr/local/lib/python3.9/site-packages/greedyFAS/mainFAS/greedyFAS.py\", line 118, in fc_start\n    raise Exception(tool + \" is missing in the seed annotation\")\nException: pfam is missing in the seed annotation\n\nsingleton_0 1\n{\"status\": \"controlled_native_context_invariance_not_established\", \"assessment\": {\"planned_contexts\": 12, \"executed_contexts\": 1, \"complete\": false, \"pair_evaluations\": 0, \"failures\": [\"singleton_0\"], \"variations\": [], \"all_tested_contexts_invariant\": false}}\n"
+        }
+      ],
+      "result": "native_fas_context_probe_20261010_v1.json",
+      "result_sha256": "0e5a0d4d6482a0fcc8ab46b1ef469a1275f06669a43cb3530d5816a436e0a176",
+      "outcome": "Fixture-schema failure before any numeric or NA pair result; retained unchanged."
+    },
+    {
+      "name": "lowercase_fixture_v2",
+      "source_commit_pushed_before_execution": "dd10c4ce",
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 singularity exec --cleanenv --env PYTHONHASHSEED=0,PYTHONDONTWRITEBYTECODE=1,OPENBLAS_NUM_THREADS=1,OMP_NUM_THREADS=1,MKL_NUM_THREADS=1 qfo_benchmark/scoring/container_cache/qfobenchmark-fas_benchmark-2022.1.img python -B benchmark_tools/probe_native_fas_context_lowercase.py --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_context_probe_20261010_v2.json",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 1500
+      },
+      "observations": [
+        {
+          "chunk_id": "3c01ba",
+          "wall_time_seconds": 1.000344051,
+          "session_id": 76312,
+          "original_token_count": 0,
+          "output": ""
+        },
+        {
+          "chunk_id": "ba510e",
+          "wall_time_seconds": 5.002073085,
+          "session_id": 76312,
+          "original_token_count": 29,
+          "output": "singleton_0 0\nsingleton_1 0\nsingleton_2 0\nsingleton_3 0\nfull_forward_one 0\nfull_reverse_one 0\nfull_rotated_two 0\n"
+        },
+        {
+          "chunk_id": "5d6f05",
+          "wall_time_seconds": 0.000013921,
+          "exit_code": 0,
+          "original_token_count": 77,
+          "output": "full_reverse_two_hash1 0\nsubset_0 0\nsubset_1 0\nsubset_2 0\nsubset_3 0\n{\"status\": \"controlled_native_context_invariance_passed\", \"assessment\": {\"planned_contexts\": 12, \"executed_contexts\": 12, \"complete\": true, \"pair_evaluations\": 40, \"failures\": [], \"variations\": [], \"all_tested_contexts_invariant\": true}}\n"
+        }
+      ],
+      "result": "native_fas_context_probe_20261010_v2.json",
+      "result_sha256": "845b4baea528f7633830e5a26ec58267da95165d8c4f79f2a0112c6063826f33",
+      "outcome": "All 12 controlled contexts completed; all 40 pair outcomes invariant."
+    }
+  ],
+  "tests": [
+    {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_probe_native_fas_context.py tests/unit/test_audit_fas_sample_attrition.py tests/unit/test_audit_fas_stratum_weights.py",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 2000
+      },
+      "result": {
+        "chunk_id": "5c64be",
+        "wall_time_seconds": 0.847904771,
+        "exit_code": 0,
+        "original_token_count": 45,
+        "output": "........................................................................ [ 83%]\n..............                                                           [100%]\n86 passed in 0.75s\n"
+      }
+    },
+    {
+      "args": {
+        "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_probe_native_fas_context_lowercase.py tests/unit/test_probe_native_fas_context.py tests/unit/test_audit_fas_sample_attrition.py tests/unit/test_audit_fas_stratum_weights.py",
+        "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+        "yield_time_ms": 1000,
+        "max_output_tokens": 1500
+      },
+      "first_result": {
+        "chunk_id": "125222",
+        "wall_time_seconds": 1.001249771,
+        "session_id": 79642,
+        "original_token_count": 40,
+        "output": "........................................................................ [ 80%]\n.................                                                        [100%]"
+      },
+      "terminal_result": {
+        "chunk_id": "0b8aa3",
+        "wall_time_seconds": 0.000011888,
+        "exit_code": 0,
+        "original_token_count": 5,
+        "output": "\n89 passed in 0.96s\n"
+      }
+    }
+  ],
+  "independent_readback": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME PYTHONDONTWRITEBYTECODE=1 python3 -I -B -c '\nimport hashlib,json,math\nfrom pathlib import Path\nroot=Path.cwd()\nold=json.loads((root/\"benchmark_tools/results/native_fas_context_probe_20261010_v1.json\").read_text())\npath=root/\"benchmark_tools/results/native_fas_context_probe_20261010_v2.json\"\ndata=json.loads(path.read_text())\nassert old[\"assessment\"][\"executed_contexts\"]==1 and old[\"assessment\"][\"pair_evaluations\"]==0\nassert old[\"contexts\"][0][\"terminal\"][\"returncode\"]==1 and \"pfam is missing\" in old[\"contexts\"][0][\"terminal\"][\"stderr\"]\nmapping={key:key.lower() for key in (\"Pfam\",\"SMART\",\"fLPS\",\"COILS2\",\"SEG\",\"SignalP\",\"TMHMM\")}\nexpected=json.loads(json.dumps(old[\"fixture_annotations\"]))\nfor doc in expected.values():\n for gene,features in doc[\"feature\"].items():\n  doc[\"feature\"][gene]={mapping.get(key,key):value for key,value in features.items()}\nassert data[\"fixture_annotations\"]==expected and data[\"owners\"]==old[\"owners\"] and data[\"tool_key_normalization\"]==mapping\nassert hashlib.sha256(json.dumps(expected,sort_keys=True).encode()).hexdigest()==data[\"fixture_sha256\"]\nassert data[\"native_path_counts\"]=={\"C\":2**16,\"F\":2**16,\"G\":2**50}\nfocal=[[\"A\",\"D\"],[\"B\",\"E\"],[\"C\",\"F\"],[\"G\",\"H\"]]\ncompanions=[[\"I\",\"J\"],[\"K\",\"L\"]]\nfull=focal+companions\nplan=[(\"singleton_\"+str(i),[pair],1,\"0\") for i,pair in enumerate(focal)]\nplan += [(\"full_forward_one\",full,1,\"0\"),(\"full_reverse_one\",full[::-1],1,\"0\"),(\"full_rotated_two\",full[2:]+full[:2],2,\"0\"),(\"full_reverse_two_hash1\",full[::-1],2,\"1\")]\nplan += [(\"subset_\"+str(i),[companions[0],pair,companions[1]],2,\"0\") for i,pair in enumerate(focal)]\nassert len(data[\"contexts\"])==len(plan)==12\nobserved={}; count={}; numeric=na=0\nfor row,(name,pairs,workers,seed) in zip(data[\"contexts\"],plan):\n assert row[\"context\"]==dict(name=name,pairs=pairs,workers=workers,hash_seed=seed)\n assert row[\"error\"] is None and row[\"terminal\"][\"returncode\"]==0 and not row[\"terminal\"][\"timed_out\"]\n argv=row[\"terminal\"][\"command\"]\n assert argv[0]==\"fas.runMultiTaxa\" and argv[argv.index(\"--cpus\")+1]==str(workers)\n assert argv[argv.index(\"--max_cardinality\")+1]==\"40\" and argv[argv.index(\"--paths_limit\")+1]==\"15\"\n assert argv[argv.index(\"--pairLimit\")+1]==\"30000\" and all(flag in argv for flag in (\"--bidirectional\",\"--tsv\",\"--domain\",\"--no_config\",\"--json\",\"--mergeJson\"))\n raw=json.loads(row[\"raw_text\"])\n assert raw==row[\"raw\"] and set(raw)=={\"_\".join(pair) for pair in pairs}\n for pair in pairs:\n  key=\"_\".join(pair); directions=raw[key]\n  assert isinstance(directions,list) and len(directions)==2 and all(isinstance(value,str) for value in directions)\n  if \"NA\" in directions:\n   assert pair==[\"G\",\"H\"] and directions==[\"NA\",\"NA\"]\n   returned=False; value=None; na+=1\n  else:\n   scores=[float(x) for x in directions]\n   assert all(math.isfinite(x) and 0<=x<=1 for x in scores)\n   returned=True; value=sum(scores)/2; numeric+=1\n  normalized=dict(pair=pair,directions=directions,returned=returned,value=value)\n  assert row[\"normalized\"][key]==normalized\n  if key in observed: assert observed[key]==normalized\n  else: observed[key]=normalized\n  count[key]=count.get(key,0)+1\nassert numeric==34 and na==6 and sum(count.values())==40\nassert all(count[\"_\".join(pair)]==6 for pair in focal)\nassert observed[\"A_D\"][\"value\"]==1 and 0<observed[\"B_E\"][\"value\"]<1 and observed[\"C_F\"][\"returned\"]\nassert data[\"assessment\"]==dict(planned_contexts=12,executed_contexts=12,complete=True,pair_evaluations=40,failures=[],variations=[],all_tested_contexts_invariant=True)\nassert data[\"status\"]==\"controlled_native_context_invariance_passed\" and data[\"assessment_error\"] is None\nfor key in (\"historical_scores_rerun\",\"historical_omissions_attributed\",\"native_sampling_law_admitted\",\"native_intervals_admitted\",\"publication_ready\"): assert data[key] is False\nfor key in (\"scorer\",\"calcFAS\",\"calcFASmulti\",\"engine\",\"driver_original\"):\n original=\"driver\" if key==\"driver_original\" else key\n assert data[\"sources\"][key]==old[\"sources\"][original]\nfor key in (\"driver\",\"driver_original\"):\n ref=data[\"sources\"][key]; source=Path(ref[\"path\"]).read_bytes()\n assert hashlib.sha256(source).hexdigest()==ref[\"sha256\"] and len(source)==ref[\"bytes\"]\nprotocol=Path(data[\"protocol\"][\"path\"]).read_bytes()\nassert hashlib.sha256(protocol).hexdigest()==data[\"protocol\"][\"sha256\"]\nassert data[\"protocol\"]==old[\"protocol\"]\nprint(json.dumps(dict(status=\"independent_readback_passed\",result_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),result_bytes=path.stat().st_size,contexts=12,pair_evaluations=40,numeric_returns=numeric,na_returns=na,focal_comparisons=20,pairs=observed,occurrences=count),sort_keys=True))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "yield_time_ms": 1000,
+      "max_output_tokens": 2500
+    },
+    "result": {
+      "chunk_id": "ac1f1d",
+      "wall_time_seconds": 0.000009946,
+      "exit_code": 0,
+      "original_token_count": 226,
+      "output": "{\"contexts\": 12, \"focal_comparisons\": 20, \"na_returns\": 6, \"numeric_returns\": 34, \"occurrences\": {\"A_D\": 6, \"B_E\": 6, \"C_F\": 6, \"G_H\": 6, \"I_J\": 8, \"K_L\": 8}, \"pair_evaluations\": 40, \"pairs\": {\"A_D\": {\"directions\": [\"1.0\", \"1.0\"], \"pair\": [\"A\", \"D\"], \"returned\": true, \"value\": 1.0}, \"B_E\": {\"directions\": [\"0.5\", \"1.0\"], \"pair\": [\"B\", \"E\"], \"returned\": true, \"value\": 0.75}, \"C_F\": {\"directions\": [\"0.9985\", \"0.9986\"], \"pair\": [\"C\", \"F\"], \"returned\": true, \"value\": 0.99855}, \"G_H\": {\"directions\": [\"NA\", \"NA\"], \"pair\": [\"G\", \"H\"], \"returned\": false, \"value\": null}, \"I_J\": {\"directions\": [\"1.0\", \"1.0\"], \"pair\": [\"I\", \"J\"], \"returned\": true, \"value\": 1.0}, \"K_L\": {\"directions\": [\"0.5\", \"1.0\"], \"pair\": [\"K\", \"L\"], \"returned\": true, \"value\": 0.75}}, \"result_bytes\": 58118, \"result_sha256\": \"845b4baea528f7633830e5a26ec58267da95165d8c4f79f2a0112c6063826f33\", \"status\": \"independent_readback_passed\"}\n"
+    }
+  },
+  "native_sampling_law_admitted": false,
+  "native_intervals_admitted": false,
+  "publication_ready": false
+}
