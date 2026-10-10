@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Four Native FAS Cells: Actual Design Located And Adapter Tested (2026-10-10)
+
+Previous turn made progress: 2388e296 consolidated the active contract and
+dead2899 completed/pushed conditional manuscript integration. This turn follows
+the genuinely unfinished newer four-cell uncertainty route, not another prompt
+rewrite. Retained successful native task logs expose P/M/k/c/r and six-decimal
+stratum means. Pinned native writer emits precomputed rows before missing rows;
+exact stratum means can be recovered from admitted raw files without database
+joins, full lookup classification or new scoring.
+
+Prepared native_fas_two_sample_interval.py, reusing unchanged count/weight
+kernels and adding uncertainty for BOTH unknown population means. Three
+components per each of four cells at delta=.05/12; all six contrasts use the
+same simultaneous rectangle, with arbitrary cross-cell dependence. Prospective
+derivation/scope are in NATIVE_FACTORIAL_FAS_SAMPLING_PROTOCOL_20261010.md.
+Report adapter pins snapshot/source/logs/context, checks actual successful
+task/execution/raw bindings and rounded-log/exact-raw arithmetic, and preserves
+numerical failures/dependent unavailable contrasts. No older population mean
+or shared-pair endpoint is substituted. New log hashes do not impersonate
+historical admission pins; finite context checks are not universal proof.
+
+Actual focused/adjacent tests EXIT0: 84 passed in 2.36s, including all selected
+two-stratum subsets, varying precomputed samples, score-dependent omissions,
+corner/count/census cases, changed native bindings, malformed logs, preserved
+failure outputs and all-six-contrast scope. No native data interval application
+yet, no live handle. Full seven-part goal ACTIVE/incomplete. No new inference,
+score, timing, RNG sample, biological uncertainty or readiness claim.
+
+NEXT commit/push these tested source/tests/protocol before first application,
+then run report_native_factorial_fas_sampling.run ONCE at fresh
+benchmark_tools/results/native_factorial_fas_sampling_20261010_v1. Use tested
+SciPy 1.15.3, one numerical thread, own-process CPU/RAM limits. Independently
+check retained native count endpoints, weights, corner arithmetic and all six
+contrasts; integrate actual outcomes/limitations into current reporting. If
+outputs already exist, validate/integrate rather than rerun the producer.
+
 ## Goal Continuation Contract Consolidated; Stale Handoff Resolved (2026-10-10)
 
 Direct user maintenance request: investigate repeated stops and fix the goal
