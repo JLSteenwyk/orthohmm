@@ -1,0 +1,30 @@
+{
+  "inputs": {
+    "parent": {
+      "bytes": 112030,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_factorial_fas_manuscript_20261010_v1.md",
+      "sha256": "ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0"
+    },
+    "supplement": {
+      "bytes": 2529,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/NATIVE_FACTORIAL_FAS_FIGURE_20261010.md",
+      "sha256": "827b3e2772eace9e669936e6070bf3972570ce51449cffe49802b9262c67b97f"
+    }
+  },
+  "inserted_section": "### Conditional Native FAS Sampling Figure\n\n![Conditional native FAS ranges and all six differences](native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.png)\n\nFigure. Native FAS sampling uncertainty in four admitted QfO ablations.\nPanel A shows simultaneous conditional 95% ranges for expected repeated native\npost-attrition FAS; offset open circles show the actual descriptive native Z.\nPanel B shows all six expected-ratio difference ranges; its offset circles\nshow observed differences of Z, not expected-difference point estimates.\nBars have no fitted central estimate. The dashed line marks zero. Four\ndifference ranges include zero, including the reconciliation and additional\nprofile-refinement contrasts; inclusion is not equivalence. Two ranges\nexclude zero for R-on versus candidate-expanded R-off, without isolating a\nsingle-component causal effect. Labels preserve original contrast orientation.\n\nThe same joint rectangle covers four cells and six contrasts, using three\ncomponents per cell with error 0.05/12 each. Both finite-population stratum\nmeans and the number of numeric-return missing pairs are unknown. The\nconstruction assumes uniform without-replacement within-cell sampling and\nfixed pair outcomes, not biological pair/family IID, cross-cell independence\nor missing-at-random outcomes. This is conditional sampling uncertainty in\ndevelopment-exposed QfO data, not biological generalization or overall accuracy\nsuperiority. Initial HMM search stays on; P denotes profile refinement, C\ncandidate expansion, R reconciliation. Three failed native cells and the\nfailed P0/C0/R1 timing remain unavailable. No inference/scoring/sample was rerun.\n\nThe figure source was committed/pushed before production rendering. All 19\nfocused tests passed; actual PNG, SVG and PDF rendering completed once. Scoped\nreadback verifies all four original rows and six contrasts, four zero-overlap\nranges, output hashes, vector labels and 2900x1360 raster dimensions with\n147168 nonwhite pixels. Actual visual inspection found no overlapping or\ncropped labels/captions. This does not render or certify the complete manuscript.\n\n[Editable SVG](native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.svg),\n[vector PDF](native_factorial_fas_sampling_figure_20261010_v1/native_factorial_fas_sampling.pdf),\n[plotted values and provenance](native_factorial_fas_sampling_figure_20261010_v1/figure.json),\n[actual render/readback](native_factorial_fas_figure_execution_20261010_v1.json).\n\n",
+  "manuscript": {
+    "bytes": 114560,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md",
+    "sha256": "cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1"
+  },
+  "manuscript_rendered": false,
+  "new_inference_or_scoring": false,
+  "parent_unchanged_except_insertion": true,
+  "publication_ready": false,
+  "schema": "pinned_manuscript_supplement_v1",
+  "source": {
+    "bytes": 2355,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/insert_manuscript_supplement.py",
+    "sha256": "bcc017d57bc963e14917b70eda474addcd7bb60f9b42facfe5f4b786301041ce"
+  }
+}

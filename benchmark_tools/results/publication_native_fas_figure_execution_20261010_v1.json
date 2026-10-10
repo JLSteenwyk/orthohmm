@@ -1,0 +1,43 @@
+{
+  "schema": "native_fas_figure_manuscript_execution_v1",
+  "source_and_caption_pushed_before_generation": "4b8d4a28",
+  "generation": {
+    "args": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import json,sys; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.insert_manuscript_supplement import run; from benchmark_tools.prepare_ob_candidate_neighborhood import record; b=Path(\"benchmark_tools/results\"); p=record(b/\"publication_native_factorial_fas_manuscript_20261010_v1.md\"); s=record(b/\"NATIVE_FACTORIAL_FAS_FIGURE_20261010.md\"); assert p[\"sha256\"]==\"ba3699f4d25a8b5084b541e671c3c93483d25b55a6a1a74fce1f2834d8d584b0\"; assert s[\"sha256\"]==\"827b3e2772eace9e669936e6070bf3972570ce51449cffe49802b9262c67b97f\"; r=run(p,s,b/\"publication_native_fas_figure_manuscript_20261010_v1.md\",b/\"publication_native_fas_figure_generation_20261010_v1.json\",\"## References\\n\"); print(json.dumps(r[\"manuscript\"],sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 1500,
+      "yield_time_ms": 1000
+    },
+    "result": {
+      "chunk_id": "d896b4",
+      "wall_time_seconds": 0.000010025,
+      "exit_code": 0,
+      "original_token_count": 62,
+      "output": "{\"bytes\": 114560, \"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md\", \"sha256\": \"cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1\"}\n"
+    }
+  },
+  "readback": {
+    "args": {
+      "cmd": "python3 -I -B -c 'from pathlib import Path; import hashlib,json,re; b=Path(\"benchmark_tools/results\"); g=json.loads((b/\"publication_native_fas_figure_generation_20261010_v1.json\").read_text()); parent=Path(g[\"inputs\"][\"parent\"][\"path\"]).read_bytes(); manuscript=Path(g[\"manuscript\"][\"path\"]).read_bytes(); piece=g[\"inserted_section\"].encode(); assert len(parent)==112030 and manuscript.count(piece)==1 and manuscript.replace(piece,b\"\",1)==parent\nfor ref in list(g[\"inputs\"].values())+[g[\"source\"],g[\"manuscript\"]]:\n raw=Path(ref[\"path\"]).read_bytes(); assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\nlinks=re.findall(r\"\\]\\(([^)]+)\\)\",piece.decode()); assert len(links)==5\nfor link in links: assert (b/link).resolve().exists()\nassert \"not expected-difference point estimates\" in piece.decode(); assert g[\"publication_ready\"] is False and g[\"new_inference_or_scoring\"] is False and g[\"manuscript_rendered\"] is False\nprint(json.dumps(dict(status=\"native_fas_figure_manuscript_readback_passed\",parent_restored_byte_exact=True,parent_bytes=len(parent),manuscript_bytes=len(manuscript),manuscript_sha256=hashlib.sha256(manuscript).hexdigest(),new_links=len(links),figure_included=True,manuscript_rendered=False),sort_keys=True))'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "max_output_tokens": 1500,
+      "yield_time_ms": 1000
+    },
+    "result": {
+      "chunk_id": "81ff03",
+      "wall_time_seconds": 0.000008293,
+      "exit_code": 0,
+      "original_token_count": 77,
+      "output": "{\"figure_included\": true, \"manuscript_bytes\": 114560, \"manuscript_rendered\": false, \"manuscript_sha256\": \"cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1\", \"new_links\": 5, \"parent_bytes\": 112030, \"parent_restored_byte_exact\": true, \"status\": \"native_fas_figure_manuscript_readback_passed\"}\n"
+    }
+  },
+  "manuscript": {
+    "path": "publication_native_fas_figure_manuscript_20261010_v1.md",
+    "bytes": 114560,
+    "sha256": "cb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1"
+  },
+  "new_inference_or_scoring": false,
+  "biological_generalization_intervals": false,
+  "publication_ready": false,
+  "manuscript_rendered": false
+}

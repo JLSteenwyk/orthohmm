@@ -1,5 +1,43 @@
 # Publication Progress
 
+## Conditional Native FAS Analysis, Figure And Manuscript Integration Complete (2026-10-10)
+
+This goal turn made concrete original4/7 progress, not a verified wait or another
+prompt repair. Tested source/protocol88ddb696 preceded actual four-cell interval
+application; bc37d4fb retained the four ranges/six contrasts and 80-digit check;
+c93fee9c integrated the native result into the manuscript. Tested renderer
+e4a2f8f2 preceded production; actual inspected PNG/SVG/PDF and caption were
+pushed4b8d4a28. No historical inference, scoring, sample, timing or completed
+coverage/context panel was repeated. Negative and zero-overlap results retained.
+
+Reused tested generic insertion, no copied adapter. Actual figure-caption
+manuscript generation EXIT0: publication_native_fas_figure_manuscript_20261010_v1.md,
+114560 bytes/SHAcb5076f91b267b9250e7508a51d56bd25af8a015ba0d4db85c13b14443556db1.
+Actual scoped readback EXIT0 checks five new links, pins and full112030-byte
+parent restoration after removing insertion. Generation/readback records:
+publication_native_fas_figure_generation_20261010_v1.json and
+publication_native_fas_figure_execution_20261010_v1.json. Current guide links
+this text and preserves earlier manuscript/PDF scope. The figure itself was
+visually checked; the complete current manuscript has not yet been rendered.
+
+The figure commit's broad git whitespace check flagged matplotlib-generated
+SVG path-line trailing whitespace, not numerical/source defects. Exact rendered
+SVG bytes/hashes were deliberately preserved. Focused source/prose checks pass;
+this is not a claimed clean whitespace check for generated vector output.
+All handles terminal. Full seven-part goal remains ACTIVE/incomplete: conditional
+native sampling ranges do not resolve biological/family generalization, other
+unprovided QfO uncertainty, failed cells or missing original TreeFam resources.
+
+NEXT after committing/pushing this completed integration, advance original7's
+current-manuscript presentation using existing render_manuscript_review.py,
+which was inspected this turn. Locate the existing bibliography/current render
+bindings with `rg --files benchmark_tools/results -g '*bibliography*.json' -g '*manuscript*assets*.json' -g '*controlled_fragment*review*.json'`.
+Use the actual114560-byte manuscript and new FAS figure at a fresh dated HTML/
+render-record path; do not redo inference/statistics/figure production or copy
+another renderer. This updates the required manuscript deliverable, not a new
+all-tool/OS/upload/archival gate. If existing current render already exists,
+inspect/integrate it rather than replay. Keep scientific completion unproven.
+
 ## Native FAS Figure Rendered And Actually Inspected (2026-10-10)
 
 e4a2f8f2 pushed tested renderer BEFORE production. Actual rendering EXIT0 once,
