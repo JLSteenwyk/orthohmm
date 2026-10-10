@@ -1,5 +1,51 @@
 # Publication Progress
 
+## Native FAS Prospective Validation Driver Prepared (2026-10-10)
+
+Previous goal turn was progress: a5880096 pushed tested numerical kernels;
+65713838 retained actual native context check and scoped parameter mapping.
+No completed producer or historical scientific analysis was repeated.
+
+Prepared `benchmark_tools/validate_native_fas_sampling.py` with 15 fixed cells
+defined in source before production. It reuses the frozen interval kernels
+and existing provenance helper, with explicit source/protocol SHA bindings.
+Exact integer category multiplicities represent every uniform finite subset,
+with no random draw or omitted tail. The actual native ratio is independently
+averaged across both strata; expected-count substitution stays separate.
+Reference count endpoints are checked by exact rational acceptance/rejection
+tails; reference weights are rational, and mean/corner endpoints use 80-digit
+Decimal arithmetic. Coverage mass is rational, with a stated 1e-60 reference
+endpoint-equality margin; floating-kernel agreement has separate 1e-12 tolerance.
+
+Cases cover zero/singleton/all/partial returns, no draws, complete draws,
+score-dependent omissions, unequal strata and both mixture-score directions.
+Four cells use the literal 9000 cap with M=12000; the others use explicitly
+lowered finite-laboratory caps, not historical benchmark executions. An eight-
+method common-uniform rank coupling (alternate reversed ordering) tests all
+28 differences and swapping; a separate marginal union bound allows arbitrary
+cross-method dependence. Precomputed selections remain independent within
+each method. The context-dependent control has A returning only with B;
+direct expected ratio 22/45 differs from singleton-fixed-return target 8/15.
+It is rejected as a design violation, with no coverage/native admission claim.
+
+Initial focused tests EXIT0: 43 passed in 1.43s. Expanded focused/adjacent suite
+EXIT0: 132 passed in 2.30s. No live test handle remains. No full prospective
+validation panel has run and no native eight-method intervals have been viewed.
+Fresh output is absent; available memory 650887 MiB. Only this new numerical
+driver receives one-CPU affinity, four-GiB address-space limit and one numerical
+thread. Shared-host contention is accepted, not a launch gate.
+Full goal remains ACTIVE/incomplete. No historical sample/rescore/timing retry.
+
+NEXT commit/push tested driver/tests before
+the first prospective execution. Then run once at the fresh output
+`benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json`:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import os,resource,sys; from pathlib import Path; os.sched_setaffinity(0,[min(os.sched_getaffinity(0))]); resource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3)); sys.path.insert(0,str(Path.cwd())); from benchmark_tools.validate_native_fas_sampling import main; main()' --protocol benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_sampling_validation_20261010_v1.json`
+Observe the same handle to terminal, retain actual command/outcome, then read
+back numerical/coverage scopes and integrate. If output exists, validate it
+instead of replaying. Do not admit historical intervals merely because this
+conditional construction passes. Fixed-pair/design assumptions, historical
+hash-binding gaps and other native endpoint uncertainty remain distinct.
+
 ## Native FAS Numerical Kernel Tested; Prospective Validation Next (2026-10-10)
 
 This turn completed the actual native context prerequisite and scoped input
