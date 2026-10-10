@@ -1,5 +1,45 @@
 # Publication Progress
 
+## Goal Continuation Contract Consolidated; Stale Handoff Resolved (2026-10-10)
+
+Direct user maintenance request: investigate repeated stops and fix the goal
+prompt, not start another scientific panel. Actual goal inspection: ACTIVE,
+no goal token budget. The objective points to the editable attachment, which
+already matched the repository copy. No observed evidence establishes the
+platform interruption's cause; no private goal state was inspected or changed.
+
+Consolidated the execution contract from 195 to 114 lines rather than adding
+another recovery layer. Shared Threadripper authorization explicitly overrides
+older resource gates; contention is neither a launch nor admission threshold.
+Safe memory, enforced limits and accounting remain. Continuations reconcile
+actual files/terminals, finish the first unfinished phase, and move past commits
+without asking for a new resume. No duplicate scientific/timing runs, expanded
+completion gates or repeated prompt repairs are authorized.
+
+Actual focused prompt check EXIT0: active attachment and repository copy are
+identical, all seven scientific requirements are byte-unchanged, nine resource/
+continuation/lifecycle safeguards remain. The first checker failed by decoding
+the preserved Unicode scientific suffix as ASCII; restricting ASCII validation
+to the new contract corrected the checker, not the retained requirements.
+
+The previous NEXT commit was genuinely pending. Verified five retained
+integration identities and the recorded test/generation/readback terminals
+without rerunning any producer. Completed and pushed that integration as
+dead2899. The 107595-byte conditional manuscript remains current. No new
+scientific inference, scores, samples, render or readiness claim. No live
+handles. Full seven-part goal remains ACTIVE/incomplete.
+
+NEXT original requirement 4.1: inspect retained newer four-cell native FAS
+aggregates/logs for actual k/c/r, sampling design and target mapping before
+deciding whether uncertainty with an unknown full precomputed mean is supported.
+The older eight-method ranges do not close this requirement. Start with
+`sed -n '1,180p' benchmark_tools/results/native_qfo_scientific_scores_20261007_v3/report.json`
+and follow its retained FAS source paths. Do not repeat the completed manuscript
+commit/generation, prompt rewrite, native scoring, old context/validation panels
+or large lookup recounts. Any justified extension needs prospective derivation,
+tests and freeze before application; otherwise retain the specific unavailable
+outcome and advance another original requirement. No renewed resource approval.
+
 ## Conditional Native FAS Is In The Current Manuscript (2026-10-10)
 
 This turn pushed actual eight-method ranges, all28 contrasts and independent

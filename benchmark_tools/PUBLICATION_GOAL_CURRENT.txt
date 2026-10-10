@@ -1,197 +1,116 @@
 Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
 
-Execution Contract (2026-10-10)
+Execution Contract (2026-10-10, consolidated continuation repair)
 
-Continue the full seven-part goal below autonomously. QfO and OrthoBench are
-primary; Three Kingdoms is supplementary. Preserve an HMM-centered method
-without presuming that it will outperform OrthoFinder. Use the existing shared
-Threadripper (bizon); no DGX, dedicated host, quiet window, spare uncontended
-cores or renewed contention approval is required.
+Continue the seven scientific requirements below autonomously. QfO and
+OrthoBench are primary; Three Kingdoms is supplementary. Preserve an
+HMM-centered method; report unfavorable evidence rather than presume
+superiority over OrthoFinder.
 
-Closed Resource Decision
+Settled Resource Authorization
 
-The user has authorized proceeding on the shared Threadripper despite competing
-analyses. This decision is settled: do not ask again for a dedicated timing
-host, a quiet window, free CPU cores or acceptance of timing distortion. Apply
-the Resources And Timing safeguards below to an individual launch, not to the
-whole goal. The 27-identity timing panel has already been attempted; reuse its
-retained results and limitations rather than restarting it.
+Use the existing shared Threadripper (bizon) despite other analyses. No DGX,
+dedicated host, quiet window, free CPU cores or renewed approval for contention
+is required. This instruction supersedes older resource-gate wording in
+historical checkpoints and prospective timing instructions below.
+CPU load, competing core counts and estimated timing distortion are NOT
+launch or evidence-admission thresholds. Keep enforced CPU/RAM limits, safe
+memory and valid accounting; genuinely unsafe capacity defers only that
+launch. Work independently or wait on the existing scheduler allocation.
+Do not stop, suspend, renice or re-affinitize unrelated processes, modify
+services/scheduler configuration, or access the DGX.
 
-Immediate Continuation Decision
-
-At every automatic continuation, reconcile the newest ledger entry with the
-actual task files, outputs, terminal results and relevant live handles. Include
-untracked and uncommitted implementation files: an absent result does not mean
-that implementation has not started. Read and finish those files; do not
-recreate them or discard partial work because the handoff is stale.
-
-Resume the current task at its first unfinished phase:
-- Existing draft: review and run focused tests; correct supported defects.
-- Tested implementation: complete any pending review, then commit/push the
-  scoped source before its first prospective scientific execution.
-- Running command: inspect or wait on the same handle; do not submit a duplicate.
-- Completed execution: validate its retained result, integrate it and commit/push.
-- Preserved failure: diagnose that specific failure without replaying historical
-  inference, scoring or timing; use another unfinished route if necessary.
-
-Observed state overrides a stale NEXT instruction. A passing unit test is not
-an observed native execution, and a completed producer must never be relaunched
-to make the checkpoint match reality. Keep draft, tested, committed, executed,
-validated and integrated states distinct in the latest ledger entry.
-
-A checkpoint, commit or concise progress message is not an autonomous stopping
-condition. Continue to the next dependent phase in the same turn when feasible.
-If only an existing job can advance work, wait and inspect that job as specified
-below. Do not ask the user to resume or renew routine resource approval.
-A direct user maintenance request may receive a concise final answer while
-the full goal remains ACTIVE; it does not authorize pausing the goal.
-
-Continuation Recovery Order
-
-Finish pending integration of an already completed, validated result before
-starting another candidate. Otherwise finish the existing partial task before
-starting a replacement implementation or another prompt rewrite. Then select
-an unfinished scientific requirement. A restricted-model result does not close
-a native benchmark uncertainty requirement.
-
-Keep the concrete next action distinct from full-goal status. If all useful
-authorized routes are exhausted, apply the goal tool's genuine-impasse rule
-honestly instead of generating an indefinite sequence of substitute analyses.
-
-Authority And Current State
-
-- Follow fresh user instructions and system/developer rules first. This editable
-  attachment is the file referenced by the active goal. Keep it identical to
-  benchmark_tools/PUBLICATION_GOAL_CURRENT.txt when instructions change.
-- Read only the newest relevant entry at the TOP of
-  benchmark_tools/results/PUBLICATION_PROGRESS.md, then reconcile it against
-  actual outputs, receipts, commits and any relevant live handles. Older
-  checkpoints are history, not commands. Correct a stale handoff rather than
-  repeating its completed action. Keep transient job/task state in the ledger,
-  not in this prompt.
-- Preserve benchmark_tools/PUBLICATION_GOAL_20261003.txt and frozen scientific
-  evidence. Changing this execution contract does not alter a frozen manifest
-  or authorize rebuilding historical results.
-- This editable prompt is not an execution-manifest input. Do not substitute
-  it for any historical frozen goal binding or change historical checksums
-  when updating continuation instructions.
-
-Continue By Doing The Next Unfinished Task
-
-1. If a useful authorized task is executable, perform it, test or validate it,
-   and proceed to its next dependent step when feasible. Implementation,
-   diagnosis, integration and manuscript work all count; a plan or status-only
-   response is not a substitute for executable work.
-2. If a prerequisite is RUNNING or scheduler-resource-PENDING, work on a
-   genuinely unfinished independent task. If none exists, wait 30-300 seconds
-   with an available wait tool and inspect the SAME handles again. Every
-   wait-only continuation includes a real wait and a post-wait observation,
-   unless new user input or an actual interruption preempts it.
-3. If a task fails, preserve the failure, prevent ONLY its dependent scoring or
-   admission, and diagnose it with focused checks. Implement and test a
-   supported recovery or document that specific unavailable outcome, then
-   advance another unfinished requirement. A recoverable parser, label,
-   validation or reporting failure is not a whole-goal stop.
-4. At a necessary turn boundary, persist the actual unfinished action,
-   uncommitted task files, relevant handles, validation state and exact next
-   command in the ledger. Leave the goal ACTIVE when useful work remains.
-   A milestone, commit, completed wait or status update requires neither a new
-   user resume nor routine approval.
-5. Make the newest handoff executable: name the actual unfinished task, its
-   existing files, the next command and any live handle. Distinguish observed
-   test/command results from planned or unseen results. Replace an obsolete
-   next action when its output already exists; do not bury that correction
-   under another completed-work summary. This is a checkpoint update, not a
-   new evidence, validation or publication requirement.
-
-Recovery And Provenance
-
-- Do not silently overwrite attempt-bound source, inputs, outputs or prior
-  evidence. For an established defect, use a separately named prospective
-  correction and retain the failed attempt. Reuse unchanged scientific kernels
-  and validated components rather than duplicating the whole pipeline.
-- Deterministic postprocessing recovery is explicitly authorized after focused
-  tests: a corrected exporter, parser or reporting adapter may run against
-  retained valid inputs at a fresh output path. This is NOT an automatic retry
-  of failed biological inference, BLAST, benchmark scoring or timing runs.
-  Preserve original input bytes and provenance, validate identities, and
-  explicitly record any metadata vocabulary or unit conversion.
-- Compatibility normalization may occur in a separate in-memory view after the
-  original input and its identity bindings are checked. Preserve the original
-  labels and the mapping in provenance; do not weaken numerical, biological or
-  admission checks, impersonate an old schema or claim new scientific evidence.
-- Validate affected requirements, not every unchanged historical artifact.
-  Once a defect is diagnosed, execute its supported correction. Do not spend
-  further turns reclassifying that same defect or rewriting this prompt.
-- No duplicate submissions or automatic inference/timing retries. Inspect
-  existing identities and handles first. Use the existing scheduler and
-  validated limits for this project's authorized jobs, without modifying
-  scheduler configuration, services or unrelated processes.
-- Do not stop, suspend, renice or re-affinitize unrelated jobs; modify private
-  goal stores or application settings; or access the DGX.
-
-Finite Scope And Scientific Integrity
-
-- Reuse completed analyses, fixtures, calibration, scores, diagnostics,
-  figures and the already-attempted 27-identity scaling panel. Do not relaunch
-  completed panels or invent new analyses merely to keep the goal busy.
-- Work toward the seven requirements and completion criteria below. Do not add
-  new all-tool hermeticity, family-disjoint validation, operating-system
-  certification, archival-upload or DOI gates. A separately tested clade is an
-  allowed generalization route, with its overlap limitations stated.
-- Keep unresolved uncertainty, missing original TreeFam resources, failed
-  factorial cells and unsupported biological explanations explicit. Narrow
-  unsupported claims; never fabricate scores, confidence intervals, superiority,
-  causality or publication readiness. Documenting a limitation does not falsely
-  mark an unmet scientific requirement as fulfilled.
-- Repeat exhausted public searches only with a concrete new lead; do not
-  contact anyone. Do not make more release candidates, copied-verifier layers,
-  integrity receipts or prompt revisions without a specific remaining
-  requirement they resolve. Prefer one focused validation and integration per
-  changed scientific or software boundary.
-- Commit and push focused, tested milestones to the existing authorized remote.
-  Stage explicit task paths only; preserve unrelated working-tree changes and
-  do not commit large raw datasets. Routine polls need no new commit.
-- Give concise progress updates. A direct user status check or bounded
-  maintenance request should be answered promptly; it is not a pause or
-  completion of the full goal.
-
-Resources And Timing
-
-Ordinary competing workloads never block the whole goal. Preserve safe memory,
-enforced CPU/RAM limits and valid accounting; genuinely unsafe capacity defers
-only that launch. Use independent work or the existing scheduler wait instead.
-CPU load, competing core counts and estimated timing distortion are NOT launch
-or evidence-admission thresholds. Launch within validated CPU/RAM limits when
-safe memory and accounting requirements pass, even with competing analyses.
-Scheduler-resource-PENDING is authorized waiting work, not a request for a quiet
-window or renewed user approval. Keep failed/invalid attempts distinct from
-otherwise valid shared-host measurements annotated for contention.
-Disclose in tables, figures, Methods and limitations:
+The 27 timing identities have already been attempted: 25 measured, 24 eligible;
+0, 17 and 20 retain failed/ineligible outcomes. Reuse them; no replacement
+panel, duplicate submission or automatic failed inference/scoring/timing retry.
+Keep historical and new shared-host measurements separate. In tables, figures,
+Methods and limitations disclose:
 "Timing measurements were collected on a shared Threadripper while other
 analyses were running. Competition for CPU, memory bandwidth and I/O may have
 affected elapsed times, with an unknown and potentially tool-dependent impact.
 These are observed shared-host timings, not estimates of isolated performance."
 Do not assume slight distortion, infer isolated speed rankings, subtract
-background overhead, select fastest repeats or require a quiet host.
+background overhead, or select fastest repeats.
 
-Lifecycle And Stop Diagnosis
+One Continuation Loop
 
-Keep the full goal ACTIVE while required work remains and meaningful progress
-is possible. Pause only on an explicit user request; mark complete only on
-verified completion; use blocked only under the goal tool's sustained genuine
-impasse rule. Running jobs, a recoverable failure, an unavailable external
-artifact or shared-host contention alone are not whole-goal blockers.
-When a stop is reported, inspect actual goal status and the current checkpoint
-before claiming a cause. Correct an established workflow issue once, then
-return to executable work. Prompt changes do not guarantee automatic
-continuation or repair platform interruptions, lifecycle controls or budgets.
-Do not modify private platform state to force continuation.
-Distinguish goal status from a temporarily interrupted command runner. Diagnose
-an observed interruption with bounded permitted checks; work on independent
-tasks if any tools remain usable. Preserve terminal results before ending a
-turn and replace any stale run/wait handoff with the actual next unfinished
-step. Never claim that a prompt edit guarantees platform continuation.
+1. Read the newest relevant TOP entry of
+   benchmark_tools/results/PUBLICATION_PROGRESS.md. Reconcile its next action
+   with actual files (including drafts/untracked work), retained outputs,
+   commits, command terminals and live handles. Observed state wins over stale
+   instructions. Older NEXT entries are history, not a queue to replay.
+2. Finish the current task's first unfinished phase: draft -> focused tests ->
+   scoped source commit/push -> first prospective execution -> affected-result
+   validation -> integration and result commit/push. Finish pending integration
+   before a new candidate. Passing tests are not proof of scientific execution.
+   If output already exists, inspect/integrate it; never rerun its producer to
+   satisfy an outdated checkpoint.
+3. Proceed directly to the next dependent phase and then a genuinely unfinished
+   original requirement when feasible. A commit, milestone, ledger update,
+   completed wait, prompt repair or progress message is NOT a stop condition.
+   During automatic goal work, do not end with "resume the goal", a proposal
+   instead of executable work, or another request for settled resource approval.
+4. If a necessary job is running/pending, advance independent unfinished work.
+   If none is executable, wait 30-300 seconds with an available wait tool and
+   inspect the SAME handle afterward. Do not duplicate it. Preserve terminal
+   outcomes; an interruption is not evidence of completion or failure.
+5. Preserve a task failure, block only its dependent scoring/admission, and
+   diagnose it once with focused checks. Execute a supported correction after
+   tests, or retain that unavailable outcome and advance another original
+   requirement. Do not repeatedly reclassify the failure or rewrite the prompt.
+6. At an unavoidable turn boundary, make the TOP handoff executable: actual
+   unfinished requirement/phase, existing files, live handle or "none", observed
+   validation state, and exact next command. Keep the full goal ACTIVE while
+   useful required work remains. Do not leave a completed action as NEXT.
+
+Finite Scope And Evidence
+
+Reuse completed scores, panels, fixtures, diagnostics and figures. Validate
+only the changed software/scientific boundary; use existing helpers/kernels.
+A focused readback and integration are sufficient unless a specific defect
+requires more. Do not invent substitute analyses, extra release candidates,
+copied verifiers, integrity receipts, all-tool hermeticity, family-disjoint
+validation, OS certification, upload or DOI gates just to keep working.
+A separately tested clade is allowed, with overlap limitations stated.
+
+Retain attempt-bound source/input/output bytes and frozen scientific protocols.
+For an established defect, use a separately named prospective correction.
+Deterministic exporter/parser/reporting recovery on retained valid inputs at
+fresh paths is authorized after focused tests; it is not permission to retry
+biological inference, BLAST, native benchmark scoring or timing. Preserve
+identity bindings, original labels and any normalization mapping. Do not
+weaken numerical/biological/admission checks or impersonate an old schema.
+
+Keep failed factorial cells, missing TreeFam originals, development exposure,
+unresolved uncertainty and unsupported causal explanations explicit. Native
+sampling uncertainty is not biological generalization uncertainty; restricted
+models do not fulfill unmet native requirements. Do not fabricate intervals,
+scores or readiness. An unavailable outcome can narrow claims but does not
+silently fulfill a requirement. Search exhausted public archives again only
+with a concrete new lead; never contact anyone.
+Commit and push focused tested milestones to the authorized remote, staging
+explicit paths only. Preserve unrelated changes; do not commit large raw data.
+
+Authority, Lifecycle And Honest Stopping
+
+Follow fresh user/system/developer instructions first. This attachment is
+referenced by the ACTIVE goal; keep it identical to
+benchmark_tools/PUBLICATION_GOAL_CURRENT.txt. Preserve
+benchmark_tools/PUBLICATION_GOAL_20261003.txt and historical goal/checksum
+bindings. This editable execution contract is not a frozen manifest input.
+Keep transient state in the ledger, not in repeated prompt revisions.
+
+Pause only when explicitly requested. Mark complete only when the criteria
+below are actually satisfied. If no useful authorized route remains, apply
+the goal tool's sustained genuine-impasse rule, not endless substitute work.
+Running jobs, a recoverable defect, one missing artifact or ordinary contention
+alone do not block the whole goal.
+
+A direct user status/maintenance request may receive a concise final response
+without pausing or completing the full goal. Diagnose reported stops using
+actual goal status and checkpoint evidence, not guesses. Prompt edits cannot
+guarantee automatic continuation or repair platform interruptions/budgets.
+Never change private goal stores/application settings to force continuation.
 
 Scientific Requirements (Preserved)
 
