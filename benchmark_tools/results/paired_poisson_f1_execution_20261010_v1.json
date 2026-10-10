@@ -1,0 +1,47 @@
+{
+  "schema": "paired_poisson_f1_execution_v1",
+  "source_commit": "e7dbf881",
+  "scope": "Completed conditional-model validation; no native interval admission",
+  "runs": {
+    "focused_tests": {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest tests/unit/test_validate_paired_poisson_f1.py tests/unit/test_validate_dyadic_f1_uncertainty.py tests/unit/test_audit_dyadic_f1_screen.py tests/unit/test_validate_sparse_dyadic_f1.py -q",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "9ecbbd",
+        "wall_time_seconds": 0.000017166,
+        "exit_code": 0,
+        "original_token_count": 25,
+        "output": "............................................................             [100%]\n60 passed in 2.52s\n"
+      }
+    },
+    "conditional_enumeration": {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path; import runpy,sys; sys.path.insert(0,str(Path.cwd())); sys.argv=[\"validate_paired_poisson_f1\",\"--root\",str(Path.cwd()),\"--protocol-sha256\",\"3892ab86ee810740e85a3c968cc81142d2b9d542f89d535ba2f085ff7f0196b1\",\"--output\",\"benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json\"]; runpy.run_module(\"benchmark_tools.validate_paired_poisson_f1\",run_name=\"__main__\")'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "062ff6",
+        "wall_time_seconds": 0.706989956,
+        "exit_code": 0,
+        "original_token_count": 37,
+        "output": "{\"status\": \"conditional_exact_boundary_enumeration_complete\", \"cells\": 12, \"all_conditional_cells_pass\": true, \"native_intervals_admitted\": false}\n"
+      }
+    },
+    "independent_readback": {
+      "command": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'from pathlib import Path\nfrom fractions import Fraction\nfrom itertools import product\nimport hashlib,json,math\nimport numpy as np\nfrom scipy.optimize import brentq\nfrom scipy.stats import poisson\npath=Path(\"benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json\")\nraw=path.read_bytes()\nresult=json.loads(raw)\nassert len(result[\"rows\"])==12 and len(result[\"model_violation_controls\"])==2\nfor ref in (result[\"source\"],result[\"protocol\"]):\n    data=Path(ref[\"path\"]).read_bytes()\n    assert len(data)==ref[\"bytes\"] and hashlib.sha256(data).hexdigest()==ref[\"sha256\"]\nalpha=.05\ntail=alpha/6\ncache={}\ndef bounds(count):\n    if count not in cache:\n        bracket=2*(count+1)+50.\n        lo=0. if count==0 else brentq(lambda rate: poisson.sf(count-1,rate)-tail,0.,bracket,xtol=1e-13)\n        hi=brentq(lambda rate: poisson.cdf(count,rate)-tail,0.,bracket,xtol=1e-13)\n        cache[count]=(lo,hi)\n    return cache[count]\ndef delta(truth,c,a,b):\n    k=2.*truth\n    return k/(k+c+a)-k/(k+c+b)\nmaximum_error=0.\nfor row in result[\"rows\"]:\n    truth=row[\"truth_mass\"]\n    c,a,b=[Fraction(str(v)) for v in row[\"means\"]]\n    k=2*truth\n    target=float(k/(k+c+a)-k/(k+c+b))\n    assert abs(target-row[\"target\"])<2e-16\n    axes=[list(range(n+1)) for n in row[\"cutoffs\"]]\n    values=[np.array([bounds(n) for n in axis]) for axis in axes]\n    probability=[np.array([math.exp(-mean)*mean**n/math.factorial(n) for n in axis]) for mean,axis in zip(row[\"means\"],axes)]\n    corners=[]\n    for i,j,l in product((0,1),repeat=3):\n        corners.append(delta(truth,values[0][:,i,None,None],values[1][None,:,j,None],values[2][None,None,:,l]))\n    lower=np.min(np.stack(corners),axis=0)\n    upper=np.max(np.stack(corners),axis=0)\n    weights=probability[0][:,None,None]*probability[1][None,:,None]*probability[2][None,None,:]\n    mass=float(weights.sum())\n    coverage=float(weights[(lower<=target)&(target<=upper)].sum())\n    width=float((weights*(upper-lower)).sum())\n    rectangle=math.prod(float(p[(v[:,0]<=mean)&(mean<=v[:,1])].sum()) for p,v,mean in zip(probability,values,row[\"means\"]))\n    for observed,expected in ((mass,row[\"enumerated_mass\"]),(coverage,row[\"covered_enumerated_mass\"]),(width,row[\"mean_width_enumerated_mass\"]),(rectangle,row[\"rectangle_covered_mass\"])):\n        maximum_error=max(maximum_error,abs(observed-expected))\n        assert abs(observed-expected)<=5e-12\n    assert 0<=row[\"omitted_tail_mass\"]<=1e-12\n    assert coverage>=rectangle-5e-12 and coverage>=.95\nfor row in result[\"model_violation_controls\"]:\n    truth=row[\"truth_mass\"]\n    target=delta(truth,0.,10.,0.)\n    assert abs(target-row[\"target\"])<2e-16\n    covered=0.\n    for outcome in row[\"outcomes\"]:\n        corners=[delta(truth,c,a,b) for c,a,b in product(bounds(0),bounds(outcome[\"left_only_count\"]),bounds(0))]\n        interval=[min(corners),max(corners)]\n        assert max(abs(a-b) for a,b in zip(interval,outcome[\"interval\"]))<2e-13\n        correct=interval[0]<=target<=interval[1]\n        assert correct==outcome[\"covers_target\"]\n        covered+=outcome[\"probability\"] if correct else 0.\n    assert covered==row[\"coverage\"]==0.\nassert all(result[k] is False for k in (\"native_intervals_admitted\",\"overall_uncertainty_method_admitted\",\"publication_ready\",\"independent_biological_confirmation\"))\nassert result[\"new_bootstrap_draws\"]==0\nprint(json.dumps({\"status\":\"independent_poisson_tail_and_eight_corner_readback_passed\",\"conditional_cells\":12,\"out_of_model_controls\":2,\"maximum_mass_or_width_discrepancy\":maximum_error,\"result\":{\"path\":str(path.resolve()),\"bytes\":len(raw),\"sha256\":hashlib.sha256(raw).hexdigest()},\"no_native_interval_admission\":True}))\n'",
+      "workdir": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+      "terminal": {
+        "chunk_id": "85f816",
+        "wall_time_seconds": 0.890658276,
+        "exit_code": 0,
+        "original_token_count": 118,
+        "output": "{\"status\": \"independent_poisson_tail_and_eight_corner_readback_passed\", \"conditional_cells\": 12, \"out_of_model_controls\": 2, \"maximum_mass_or_width_discrepancy\": 1.4432899320127035e-15, \"result\": {\"path\": \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json\", \"bytes\": 11041, \"sha256\": \"314ddd68b690fb8a8ef210f49fa5be85e3a1a6a17b8f6362cefbf9d091ebee07\"}, \"no_native_interval_admission\": true}\n"
+      }
+    }
+  },
+  "result": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/paired_poisson_f1_validation_20261010_v1.json",
+    "bytes": 11041,
+    "sha256": "314ddd68b690fb8a8ef210f49fa5be85e3a1a6a17b8f6362cefbf9d091ebee07"
+  },
+  "native_intervals_admitted": false,
+  "publication_ready": false
+}

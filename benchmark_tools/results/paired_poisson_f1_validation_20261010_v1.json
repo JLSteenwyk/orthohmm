@@ -1,0 +1,418 @@
+{
+  "all_conditional_cells_pass": true,
+  "excluded_laws": [
+    "imperfect_recall",
+    "unequal_size_latent_node",
+    "shared_clade",
+    "native_VGNC",
+    "other_QfO_endpoints"
+  ],
+  "independent_biological_confirmation": false,
+  "joint_law": "Independent Poisson shared/left-only/right-only whole-panel counts; fixed perfect-recall truth mass",
+  "model_violation_controls": [
+    {
+      "coverage": 0,
+      "law": "Non-Poisson common-shock mixture: zero with probability .99; 1000 with probability .01",
+      "mean_left_only": 10.0,
+      "native_dependence_model": false,
+      "outcomes": [
+        {
+          "covers_target": false,
+          "interval": [
+            -0.004653528334284041,
+            0.004653528334284041
+          ],
+          "left_only_count": 0,
+          "probability": 0.99
+        },
+        {
+          "covers_target": false,
+          "interval": [
+            -0.512918217926566,
+            -0.4668605189990757
+          ],
+          "left_only_count": 1000,
+          "probability": 0.01
+        }
+      ],
+      "poisson_marginal_assumption_satisfied": false,
+      "target": -0.009671179883945842,
+      "truth_mass": 512
+    },
+    {
+      "coverage": 0,
+      "law": "Non-Poisson common-shock mixture: zero with probability .99; 1000 with probability .01",
+      "mean_left_only": 10.0,
+      "native_dependence_model": false,
+      "outcomes": [
+        {
+          "covers_target": false,
+          "interval": [
+            -0.00010000444915825727,
+            0.00010000444915825727
+          ],
+          "left_only_count": 0,
+          "probability": 0.99
+        },
+        {
+          "covers_target": false,
+          "interval": [
+            -0.022030592738666244,
+            -0.01887149198388535
+          ],
+          "left_only_count": 1000,
+          "probability": 0.01
+        }
+      ],
+      "poisson_marginal_assumption_satisfied": false,
+      "target": -0.00020886419649943606,
+      "truth_mass": 23934
+    }
+  ],
+  "native_intervals_admitted": false,
+  "new_bootstrap_draws": 0,
+  "new_inference_or_benchmark_scoring": false,
+  "numpy_version": "2.2.6",
+  "overall_uncertainty_method_admitted": false,
+  "protocol": {
+    "bytes": 5562,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/PAIRED_POISSON_F1_PROTOCOL_20261010.md",
+    "sha256": "3892ab86ee810740e85a3c968cc81142d2b9d542f89d535ba2f085ff7f0196b1"
+  },
+  "publication_ready": false,
+  "rows": [
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        1.0,
+        1.0
+      ],
+      "covered_enumerated_mass": 1.0,
+      "cutoffs": [
+        0,
+        0,
+        0
+      ],
+      "enumerated_mass": 1.0,
+      "enumerated_triples": 1,
+      "mean_width_enumerated_mass": 0.009307056668568082,
+      "means": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 0.0,
+      "rectangle_covered_mass": 1.0,
+      "target": 0.0,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999999356,
+        1.0
+      ],
+      "covered_enumerated_mass": 0.9999999999999356,
+      "cutoffs": [
+        19,
+        0,
+        0
+      ],
+      "enumerated_mass": 0.9999999999999356,
+      "enumerated_triples": 20,
+      "mean_width_enumerated_mass": 0.009302375364011583,
+      "means": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 6.439293542825908e-14,
+      "rectangle_covered_mass": 0.9954661944737511,
+      "target": 0.0,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999361022,
+        0.9999999999367022
+      ],
+      "covered_enumerated_mass": 0.9999999999361022,
+      "cutoffs": [
+        14,
+        14,
+        0
+      ],
+      "enumerated_mass": 0.9999999999994,
+      "enumerated_triples": 225,
+      "mean_width_enumerated_mass": 0.011111982482273876,
+      "means": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.999645225074346e-13,
+      "rectangle_covered_mass": 0.9926937008241123,
+      "target": -0.000973707982693862,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999361022,
+        0.9999999999367022
+      ],
+      "covered_enumerated_mass": 0.9999999999361022,
+      "cutoffs": [
+        14,
+        0,
+        14
+      ],
+      "enumerated_mass": 0.9999999999994,
+      "enumerated_triples": 225,
+      "mean_width_enumerated_mass": 0.011111982482273876,
+      "means": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.999645225074346e-13,
+      "rectangle_covered_mass": 0.9926937008241123,
+      "target": 0.000973707982693862,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999884017,
+        0.9999999999887975
+      ],
+      "covered_enumerated_mass": 0.9999999999884017,
+      "cutoffs": [
+        11,
+        10,
+        13
+      ],
+      "enumerated_mass": 0.9999999999996043,
+      "enumerated_triples": 1848,
+      "mean_width_enumerated_mass": 0.011182854707564489,
+      "means": [
+        0.5,
+        0.3,
+        0.7
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 3.957945082788683e-13,
+      "rectangle_covered_mass": 0.9889324827639664,
+      "target": 0.0003898631915236432,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.999583309608098,
+        0.999583309608667
+      ],
+      "covered_enumerated_mass": 0.999583309608098,
+      "cutoffs": [
+        40,
+        60,
+        44
+      ],
+      "enumerated_mass": 0.9999999999994301,
+      "enumerated_triples": 112545,
+      "mean_width_enumerated_mass": 0.037560535430961994,
+      "means": [
+        10.0,
+        20.0,
+        12.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.689893001203927e-13,
+      "rectangle_covered_mass": 0.9637348045158234,
+      "target": -0.00743049332235207,
+      "truth_mass": 512
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        1.0,
+        1.0
+      ],
+      "covered_enumerated_mass": 1.0,
+      "cutoffs": [
+        0,
+        0,
+        0
+      ],
+      "enumerated_mass": 1.0,
+      "enumerated_triples": 1,
+      "mean_width_enumerated_mass": 0.00020000889831651455,
+      "means": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 0.0,
+      "rectangle_covered_mass": 1.0,
+      "target": 0.0,
+      "truth_mass": 23934
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999999356,
+        1.0
+      ],
+      "covered_enumerated_mass": 0.9999999999999356,
+      "cutoffs": [
+        19,
+        0,
+        0
+      ],
+      "enumerated_mass": 0.9999999999999356,
+      "enumerated_triples": 20,
+      "mean_width_enumerated_mass": 0.00020000673886371356,
+      "means": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 6.439293542825908e-14,
+      "rectangle_covered_mass": 0.9954661944737511,
+      "target": 0.0,
+      "truth_mass": 23934
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999361022,
+        0.9999999999367022
+      ],
+      "covered_enumerated_mass": 0.9999999999361022,
+      "cutoffs": [
+        14,
+        14,
+        0
+      ],
+      "enumerated_mass": 0.9999999999994,
+      "enumerated_triples": 225,
+      "mean_width_enumerated_mass": 0.00023916129465163737,
+      "means": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.999645225074346e-13,
+      "rectangle_covered_mass": 0.9926937008241123,
+      "target": -2.0889473775922898e-05,
+      "truth_mass": 23934
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999361022,
+        0.9999999999367022
+      ],
+      "covered_enumerated_mass": 0.9999999999361022,
+      "cutoffs": [
+        14,
+        0,
+        14
+      ],
+      "enumerated_mass": 0.9999999999994,
+      "enumerated_triples": 225,
+      "mean_width_enumerated_mass": 0.00023916129465163737,
+      "means": [
+        1.0,
+        0.0,
+        1.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.999645225074346e-13,
+      "rectangle_covered_mass": 0.9926937008241123,
+      "target": 2.0889473775922898e-05,
+      "truth_mass": 23934
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9999999999884017,
+        0.9999999999887975
+      ],
+      "covered_enumerated_mass": 0.9999999999884017,
+      "cutoffs": [
+        11,
+        10,
+        13
+      ],
+      "enumerated_mass": 0.9999999999996043,
+      "enumerated_triples": 1848,
+      "mean_width_enumerated_mass": 0.00024064006021882572,
+      "means": [
+        0.5,
+        0.3,
+        0.7
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 3.957945082788683e-13,
+      "rectangle_covered_mass": 0.9889324827639664,
+      "target": 8.355964065853767e-06,
+      "truth_mass": 23934
+    },
+    {
+      "alpha": 0.05,
+      "coverage_tail_only_bounds": [
+        0.9995596086048356,
+        0.9995596086054046
+      ],
+      "covered_enumerated_mass": 0.9995596086048356,
+      "cutoffs": [
+        40,
+        60,
+        44
+      ],
+      "enumerated_mass": 0.9999999999994301,
+      "enumerated_triples": 112545,
+      "mean_width_enumerated_mass": 0.0008394432415404493,
+      "means": [
+        10.0,
+        20.0,
+        12.0
+      ],
+      "numerical_check_pass": true,
+      "numerical_rounding_certified": false,
+      "omitted_tail_mass": 5.689893001203927e-13,
+      "rectangle_covered_mass": 0.9637348045158234,
+      "target": -0.0001669448601456211,
+      "truth_mass": 23934
+    }
+  ],
+  "schema": "conditional_paired_poisson_f1_v1",
+  "scipy_version": "1.15.3",
+  "source": {
+    "bytes": 8532,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/validate_paired_poisson_f1.py",
+    "sha256": "29886e4ebd842555836856bf85a39a1c29aa5d47697eac1e83e34d6d413bb46a"
+  },
+  "status": "conditional_exact_boundary_enumeration_complete",
+  "target": "Difference of F1 ratios at expected count vectors, not expectation of sample F1"
+}

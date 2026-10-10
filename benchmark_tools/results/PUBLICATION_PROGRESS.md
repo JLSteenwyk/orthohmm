@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Goal Maintenance: Completed Output Supersedes Stale Handoff (2026-10-10)
+
+User requested a fix for repeated stopping. Actual get_goal reports ACTIVE,
+with no token budget; its objective still references the editable attachment.
+The attachment and PUBLICATION_GOAL_CURRENT.txt were identical and already
+authorize shared Threadripper work without a quiet window or DGX. No observed
+platform stop reason has been established; prompt edits cannot guarantee
+automatic continuation. No lifecycle status was changed.
+
+Established workflow defect: the previous TOP entry still says to commit the
+source and run the Poisson enumeration. Those actions already completed:
+source/tests/protocol e7dbf881 was pushed before the actual command. Enumeration
+EXIT0 at paired_poisson_f1_validation_20261010_v1.json, 11041 bytes, SHA
+314ddd68b690fb8a8ef210f49fa5be85e3a1a6a17b8f6362cefbf9d091ebee07.
+All 12 restricted-model cells pass; both explicitly non-Poisson controls have
+coverage zero. Independent Poisson-tail/eight-corner readback EXIT0 confirms
+12 cells and 2 controls; maximum numerical discrepancy 1.4432899320127035e-15.
+Focused/adjacent tests EXIT0: 60 passed in 2.52s. No live handle remains.
+Actual commands and terminal outputs are retained in
+paired_poisson_f1_execution_20261010_v1.json. DO NOT repeat the enumeration or
+the completed readback. Native and overall interval admission, publication
+readiness and independent biological confirmation remain FALSE.
+
+Both editable prompt copies now explicitly prioritize existing terminal outputs
+over stale NEXT instructions, finish pending result integration before starting
+new candidates, and distinguish ordinary continuation from a genuine exhausted
+scientific route. The original seven requirements and frozen evidence remain
+unchanged. Resource contention alone is not a blocker or approval request.
+
+NEXT unfinished action: integrate this completed conditional result and its
+failure controls into a concise scoped result summary and the mutable
+PUBLICATION_REPRODUCTION.md guide; do not edit the frozen source/protocol or
+claim native intervals. Start with:
+`sed -n '1,160p' benchmark_tools/results/PAIRED_POISSON_F1_PROTOCOL_20261010.md`
+and the existing validation JSON. Then commit/push that focused integration and
+choose a genuinely unfinished original requirement. No new inference, timing,
+benchmark scoring, bootstrap draws, archive, DGX work or renewed resource approval.
+This maintenance is not full scientific completion. Full goal remains ACTIVE.
+
 ## Conditional Exact Boundary Source Tested; Enumeration Next (2026-10-10)
 
 Previous goal turn was progress:d0b6988f pushed the completed real fragment
