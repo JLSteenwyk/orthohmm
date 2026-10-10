@@ -1,5 +1,48 @@
 # Publication Progress
 
+## Native FAS Numerical Kernel Tested; Prospective Validation Next (2026-10-10)
+
+This turn completed the actual native context prerequisite and scoped input
+mapping; summary/results/actual execution/readback record pushed 65713838.
+The detailed entry immediately below retains the 12-context/40-evaluation
+outcome, first fixture-schema failure, corrected source commits and limits.
+Do not rerun either native producer. All tool sessions are terminal.
+
+Continued the next dependent original4.1 phase: added the focused reusable
+`benchmark_tools/native_fas_sampling_interval.py` and
+`tests/unit/test_native_fas_sampling_interval.py`. Kernels invert inclusive
+hypergeometric count tails on integer support, compute E[k/(k+R)] over the
+full support (not substitution of E[R]), form a bounded conditional-mean
+rectangle and project method/difference intervals. G=0, no draws, and the
+trivial G=1 return case are explicit. No biological pair independence, missing-
+at-random assumption, endpoint replacement or historical-score rerun.
+
+Actual final focused/adjacent tests EXIT0: 116 passed in 2.02s:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_native_fas_sampling_interval.py tests/unit/test_probe_native_fas_context.py tests/unit/test_probe_native_fas_context_lowercase.py tests/unit/test_audit_fas_sample_attrition.py tests/unit/test_audit_fas_stratum_weights.py`.
+Tests independently use exact integer/Fraction masses for populations 0..8
+and four error levels, inclusive boundary/full-population count cases, all
+subset native ratios for the 107/240-vs-9/20 example, conditional subset
+coverage with score-dependent omissions, full-support corner comparisons,
+zero returns and swapping. This is unit evidence, not a completed prospective
+validation panel or eight-method uncertainty admission. No native interval
+has been computed. Historical parser/database binding gaps remain explicit.
+
+NEXT commit/push this tested numerical source/tests, then implement a focused
+prospective validation driver reusing these kernels, with exact combinatorial
+finite-population outcome masses and independently summed native ratio targets.
+Start with `sed -n '131,166p' benchmark_tools/results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md`.
+Include zero/complete returns, score-dependent omissions, unequal strata,
+nontrivial partial returns and both mean-score directions; independently
+evaluate the confidence projection, joint union-bound/difference scope and
+expected-count substitution error. Retain a context-dependent-return control
+as a violated design assumption, not a covered native regime. Tests and a
+prospective source/plan freeze must precede the actual validation execution.
+No eight-method application until coverage, target mapping and stated
+assumptions are justified; no automatic historical retries or completed-panel
+replay. If this source is already committed, advance to the validation driver
+rather than recommitting or rerunning the tests solely to update the ledger.
+Full seven-part goal remains ACTIVE/incomplete; no native admission/readiness.
+
 ## Native FAS Controlled Context Check Completed And Read Back (2026-10-10)
 
 Previous goal turn was progress: c18c9c8d pushed the corrected partial-work
