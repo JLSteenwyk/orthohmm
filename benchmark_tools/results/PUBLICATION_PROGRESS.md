@@ -1,5 +1,39 @@
 # Publication Progress
 
+## Trace Package Retained; All-Dataset Provenance Next (2026-10-10)
+
+Full continuation made progress, not a wait: independent native stage reader,
+preserved NA-only recovery, 106 verified observations, tested manuscript
+integration, numeric/PDF readback and scoped visual review all completed.
+Integrated draft, review PDF/receipts, instructions and results committed and
+pushed c900fedb. Prior source/results milestones e49fd970,49b808e5,88f04ed3,
+f10580cb also pushed. No repeat selector, tracer, native reader, integration,
+render/print, timing panel or completed commit. Newest manuscript and receipt
+identities and limitations are immediately below. Goal confirmed ACTIVE with
+no budget, not complete. No live handle/resource gate.
+
+Advanced the next actual unfinished original1.2/1.4 task by inspecting retained
+registers (no new raw audit/scoring). current_benchmark_scores_20260926_v2 has
+8 method rows/9 score fields; orthobench_provenance_register_20260927 has
+8 rows with commands, prediction pins, conversion/inference/replay times,
+memory units and timing bases. HS319.467197s is cached downstream replay,
+NOT initial/full inference; retain inference NULL. Three Kingdoms OrthoMCL
+content audit confirms all12 native FASTAs/443217 IDs/sequences and merged
+all.fa/all.gg, but not immutable historical consumption or downstream closure.
+Never promote this check to all-method identical-input proof.
+
+NEXT implement one finite publication provenance table (24method-dataset
+rows), joining existing score/register/native admissions with explicit missing
+fields, units, source pointers and output semantics. Reuse existing exporters
+and original input/content reports; do not hash all raw datasets anew, rerun
+inference or invent missing historical costs/versions. First inspect the
+five source bindings in current_benchmark_scores_20260926_v2/manifest.json
+and existing provenance exporter code to find QfO/Three Kingdoms command/
+resource records. Target tested consolidated reporting, not new hermeticity
+or certification. Keep original registers unchanged. Preserve all other
+scientific gaps, including missing paired uncertainty for other-QfO endpoints.
+Unrelated samples, browser profiles, rasters and local rc6 archive untouched.
+
 ## Fragment Trace Integrated And Reviewed (2026-10-10)
 
 Staged whitespace check reports only the three generated section-ending blank
