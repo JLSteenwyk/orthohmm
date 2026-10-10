@@ -1,5 +1,23 @@
 # Publication Progress
 
+## Independent Fragment Stage Readback In Progress (2026-10-10)
+
+Previous turn was progress: continuation fix 36fb7087 committed/pushed, actual
+goal ACTIVE. Read linked prompt/newest ledger and confirmed retained stage
+report exists; do not rerun completed selector or producer. Implementing
+readback_controlled_fragment_stages.py with independent native group/pair,
+NumPy checkpoint, BFS graph and observed-node/constraint readers. Reuse only
+the established MCL syntax parser, not producer/reconstruction algorithms.
+Actual report has active membership filters in 14 of its 36 phylogenetic
+observations, so a no-constraints shortcut is invalid. Test synthetic roots,
+mapping-only uncertain calls and supported/unsupported constraints, commit
+tested source before one independent real readback. Scientific outputs remain
+uncommitted pending this check. No inference/scoring/live job or resource gate.
+Reader now prepared/tested: 74 focused/adjacent tests passed in 1.54s;
+scoped diff whitespace check passed. Commit/push reader/tests/ledger before
+one actual readback at controlled_fragment_stage_readback_20261010_v1.json.
+Fresh readback takes the retained report SHA 0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c.
+
 ## Continuation Contract And Stale Handoff Corrected (2026-10-10)
 
 User requested a fix for repeated goal stops. Actual goal is ACTIVE with no
