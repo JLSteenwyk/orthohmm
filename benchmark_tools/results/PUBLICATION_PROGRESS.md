@@ -1,5 +1,41 @@
 # Publication Progress
 
+## Conditional Native FAS Adapter Tested Before First Application (2026-10-10)
+
+Previous goal turn was progress: 25505498 pushed completed finite validation
+and the prospective conditional reporting plan. Those producers stay complete;
+no replay. This turn implements `report_native_fas_conditional.py`, importing
+the frozen interval kernel and existing audit_fas_stratum_weights.panel.
+All eight count/identity/full-mean/provenance mappings are validated before
+the first interval. Actual source/input/protocol SHA checks and matching
+validated SciPy runtime precede reporting. No native intervals viewed yet.
+
+The adapter preserves observed means exactly, separates expected-ratio ranges,
+records G bounds and all 28 left-minus-right contrasts, and does not generate
+theta point estimates or biological error bars. A numerical method failure
+retains its original observed score and traceback; seven dependent contrasts
+remain unavailable. Fatal input/runtime failures preserve a fresh failure.json.
+Old reports/flags are unchanged. Unconditional historical, biological, other-
+endpoint and full-publication admission remain false.
+
+Actual expanded focused/adjacent tests EXIT0: 151 passed. Tests use synthetic
+scalar mappings, not retained-data intervals, and check full vs sampled pre-
+mean selection, unchanged observed scores, method order, all 28 contrasts,
+numerical failure, late-row validation, provenance scope, changed protocol/
+runtime, occupied outputs and fatal failure preservation. No live test handle.
+New output directory is absent; available memory 651189 MiB. One own CPU,
+four-GiB address-space limit and one numerical thread will be enforced without
+changing unrelated workloads. Contention is accepted, not a launch gate.
+
+NEXT commit/push tested adapter/tests, then apply once at the fresh namespace:
+`env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import os,resource,sys; from pathlib import Path; os.sched_setaffinity(0,[min(os.sched_getaffinity(0))]); resource.setrlimit(resource.RLIMIT_AS,(4*1024**3,4*1024**3)); sys.path.insert(0,str(Path.cwd())); from benchmark_tools.report_native_fas_conditional import main; raise SystemExit(main())' --protocol benchmark_tools/results/NATIVE_FAS_CONDITIONAL_REPORTING_PROTOCOL_20261010.md --output benchmark_tools/results/native_fas_conditional_report_20261010_v1`
+Observe the same handle to terminal; preserve complete/partial/failure outcome
+and inspect report.json/summary.md without replay. Validate all target/input
+mappings and projections separately, then integrate the actual conditional
+result with its assumptions and historical parser/database-binding gaps.
+The full seven-part goal remains ACTIVE/incomplete. No completion is claimed
+from passing a conditional model or producing tables; other endpoints remain open.
+
 ## Native FAS Finite Coverage Validation Completed; Reporting Plan Frozen (2026-10-10)
 
 Previous goal turn was progress: a5880096 pushed the tested native-design
