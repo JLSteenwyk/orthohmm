@@ -1,5 +1,44 @@
 # Publication Progress
 
+## Fragment Stages Independently Verified; Integration Next (2026-10-10)
+
+Progress: independent reader e49fd970 and separately tested NA recovery
+49b808e5 committed/pushed before their executions. Initial readback EXIT1
+only at null serialization (expected empty, actual NA); preserve that source
+and failure. After 81 focused/adjacent tests passed in 1.71s, one authorized
+deterministic recovery EXIT0: independent_native_stages_and_na_table_verified,
+106 stages/53 cases/44 native contexts. No inference/scoring/stage production
+retry. Readback controlled_fragment_stage_readback_20261010_v2.json is11509bytes,
+SHA2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35.
+Original stage reportSHA0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c
+and stages.tsv unchanged. Actual commands/terminal results from selector,
+independent selection, tracer tests/production and both stage readbacks saved
+in controlled_fragment_trace_execution_20261010_v1.json; initial readback
+terminal is explicitly identified as a transcript transcription.
+
+53 unique method-pair representatives: HS12, PHY18, OF11, checkpoint12;
+31 of84 bins empty. All negative/neutral/control records retained. Location
+counts baseline->fragment: HS group retention9->6/separation3->6;
+PHY candidate separation1->4/event retention6->7/duplication exclusion6->4/
+bypass retention5->3; OF MCL separation0->2/native retention8->7/within-MCL
+exclusion3->2; checkpoint separation3->3/retention9->9. These are selected
+representative counts, NOT prevalences or independent accuracy endpoints.
+Example Case0000 HS FN: no direct significant hits, connected graph, separate
+groups. Case0026 PHY FN: both significant directions and graph connected,
+recorded duplication excludes pair. OF Case0030 FN: same MCL group, absent
+native pair; no matching tree-event evidence. No causal or biological-truth
+claim follows from these localizations.
+
+Retain verified scientific stage report/table/readback/receipt in a focused
+commit/push, then integrate Methods/Results/limitations and representative
+counts into a NEW draft, preserving exact latest fragment parent outside
+explicit insertions. Reuse integration helpers, not a new inference or CI.
+NEXT read existing integrator insertion/write logic:
+`sed -n '250,390p' benchmark_tools/integrate_controlled_fragment_results.py`
+Parent controlled_fragment_manuscript_20261009_v1.md SHA71b499efab6a54b2d8557ed7c04241001abf08b436e4d56344e6fdc14f93e41a.
+Full goal ACTIVE/incomplete; no live job/session/resource gate. Unrelated
+samples/browser profiles and local rc6 archive remain untouched.
+
 ## Stage Readback NA Serialization Recovery Prepared (2026-10-10)
 
 Tested independent reader e49fd970 committed/pushed before its one actual

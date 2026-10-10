@@ -1,0 +1,147 @@
+{
+  "schema": "controlled_fragment_trace_actual_execution_v1",
+  "publication_ready": false,
+  "new_inference_or_scoring": false,
+  "new_bootstrap_draws": 0,
+  "automatic_inference_retries": 0,
+  "source_commits": {
+    "selector": "9a9b076b",
+    "stage_producer": "b2b2e222",
+    "original_independent_reader": "e49fd970",
+    "na_serialization_recovery": "49b808e5"
+  },
+  "selection": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.select_controlled_fragment_trace import run; r=run(root,root/\"benchmark_tools/results/controlled_fragment_trace_selection_20261009_v1\"); print(json.dumps({k:r[k] for k in (\"status\",\"planned_bins\",\"selected_records\",\"unique_method_pair_records\")}))'",
+      "tool_result": {
+        "chunk_id": "6b0380",
+        "wall_time_seconds": 1.001340394,
+        "session_id": 2302,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "ec9251",
+      "wall_time_seconds": 0.000011648,
+      "exit_code": 0,
+      "original_token_count": 28,
+      "output": "{\"status\": \"selected_untraced\", \"planned_bins\": 84, \"selected_records\": 53, \"unique_method_pair_records\": 53}\n"
+    }
+  },
+  "independent_selection_readback": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import csv,hashlib,itertools,json,sys; from pathlib import Path; from Bio import SeqIO; sys.path.insert(0,str(Path.cwd())); from benchmark_tools.orthofinder_mcl_to_orthogroups import iter_mcl_clusters,load_sequence_ids\nroot=Path.cwd(); b=root/\"benchmark_tools/results\"; target=b/\"controlled_fragment_trace_selection_20261009_v1/selection.json\"; selected=json.loads(target.read_text()); report=json.loads((b/\"controlled_fragment_results_20261009_v1/report.json\").read_text()); panel=json.loads(Path(report[\"manifest\"][\"absolute_path\"]).read_text()); methods=(\"orthohmm_high_sensitivity\",\"orthohmm_satellite_v2\",\"orthofinder_full\",\"orthofinder_sequence_only\"); categories=(\"fragment_fn\",\"fragment_fp\",\"new_fn\",\"new_fp\",\"recovered_fn\",\"removed_fp\",\"retained_tp\"); records={(r[\"arm\"],r[\"seed\"],r[\"method\"]):r for r in report[\"records\"]}; bins={(m,n,c):[] for m in methods for n in range(3) for c in categories}; byseed={}; snapshots={}\ndef group_pairs(groups,owners):\n seen=set(); pairs=set()\n for group in groups:\n  assert group and len(set(group))==len(group) and set(group)<=set(owners) and not seen.intersection(group); seen.update(group); pairs.update(tuple(sorted(p)) for p in itertools.combinations(group,2) if owners[p[0]]!=owners[p[1]])\n assert seen==set(owners); return pairs\ndef predictions(method,files,owners):\n if method==methods[0]: return group_pairs([line.split()[1:] for line in Path(files[0][\"absolute_path\"]).read_text().splitlines()],owners)\n if method==methods[1]:\n  with Path(files[0][\"absolute_path\"]).open() as f: rows=list(csv.DictReader(f,delimiter=\"\\t\"))\n  assert all(owners[r[\"gene_a\"]]==r[\"species_a\"] and owners[r[\"gene_b\"]]==r[\"species_b\"] and r[\"species_a\"]!=r[\"species_b\"] for r in rows); return {tuple(sorted((r[\"gene_a\"],r[\"gene_b\"]))) for r in rows}\n if method==methods[2]:\n  orientations={}\n  for item in files:\n   with Path(item[\"absolute_path\"]).open() as f: rows=csv.reader(f,delimiter=\"\\t\"); header=next(rows); assert len(header)==3 and header[0]==\"Orthogroup\"; a,b=header[1:]; assert (a,b) not in orientations; pairs=set()\n   with Path(item[\"absolute_path\"]).open() as f:\n    rows=csv.reader(f,delimiter=\"\\t\"); next(rows)\n    for row in rows:\n     left=[g.strip() for g in row[1].split(\",\")]; right=[g.strip() for g in row[2].split(\",\")]; assert all(owners[g]==a for g in left) and all(owners[g]==b for g in right); pairs.update(tuple(sorted(p)) for p in itertools.product(left,right))\n   orientations[a,b]=pairs\n  assert set(orientations)==set(itertools.permutations(set(owners.values()),2)); assert all(p==orientations[b,a] for (a,b),p in orientations.items()); return set.union(*orientations.values())\n mapping_path=next(Path(r[\"absolute_path\"]) for r in files if Path(r[\"absolute_path\"]).name==\"SequenceIDs.txt\"); clusters=next(Path(r[\"absolute_path\"]) for r in files if \"id_pairs\" in Path(r[\"absolute_path\"]).name); mapping=load_sequence_ids(mapping_path); assert set(mapping.values())==set(owners) and len(mapping)==len(owners); return group_pairs([[mapping[g] for g in cluster] for cluster in iter_mcl_clusters(clusters)],owners)\nfor ref in selected[\"checked_inputs\"]:\n p=Path(ref[\"path\"]); raw=p.read_bytes(); assert len(raw)==ref[\"bytes\"] and hashlib.sha256(raw).hexdigest()==ref[\"sha256\"]\nfor d in panel[\"datasets\"]:\n seed=d[\"seed\"]; flags={r[\"gene\"]:r[\"fragment\"] for r in json.loads(Path(d[\"coordinates\"][\"absolute_path\"]).read_text())}; owners={s.id:p.stem for p in Path(d[\"input\"]).glob(\"*.fasta\") for s in SeqIO.parse(p,\"fasta\")}; truth={tuple(sorted(p)) for p in json.loads(Path(d[\"truth\"]).read_text())[\"ortholog_pairs\"]}; baseline={r[\"method\"]:r for r in d[\"baseline_admission\"]}; byseed[seed]=dict(flags=flags,truth=truth,owners=owners)\n for method in methods:\n  arms={}\n  for arm in (\"baseline\",\"fragment\"):\n   row=records[arm,seed,method]; files=baseline[method][\"predictions\"] if arm==\"baseline\" else row[\"prediction_artifacts\"]; pairs=predictions(method,files,owners); assert (len(pairs&truth),len(pairs-truth),len(truth-pairs))==(row[\"score\"][\"tp\"],row[\"score\"][\"fp\"],row[\"score\"][\"fn\"]); arms[arm]=pairs; snapshots[arm,seed,method]=pairs\n  for pair in truth|arms[\"baseline\"]|arms[\"fragment\"]:\n   t=pair in truth; before=pair in arms[\"baseline\"]; after=pair in arms[\"fragment\"]; tests=(t and not after,after and not t,t and before and not after,after and not t and not before,t and after and not before,before and not t and not after,t and before and after); n=sum(flags[g] for g in pair)\n   for category,eligible in zip(categories,tests):\n    if eligible: digest=hashlib.sha256((method+\":\"+category+\":\"+str(seed)+\":\"+pair[0]+\":\"+pair[1]).encode()).hexdigest(); bins[method,n,category].append((digest,seed,*pair))\nassert len(selected[\"bins\"])==84 and len(selected[\"cases\"])==53\nfor row,(key,choices) in zip(selected[\"bins\"],bins.items()):\n assert (row[\"method\"],row[\"fragment_endpoints\"],row[\"category\"])==key and row[\"eligible_records\"]==len(choices)\n if choices: assert (row[\"selection_sha256\"],row[\"seed\"],row[\"gene_a\"],row[\"gene_b\"])==min(choices) and row[\"status\"]==\"selected\"\n else: assert row[\"status\"]==\"empty_bin\" and all(row[k] is None for k in (\"seed\",\"gene_a\",\"gene_b\",\"selection_sha256\"))\nfor case in selected[\"cases\"]:\n seed=case[\"seed\"]; pair=case[\"gene_a\"],case[\"gene_b\"]; d=byseed[seed]; assert case[\"truth\"]==(pair in d[\"truth\"]) and case[\"fragment_flags\"]==[d[\"flags\"][g] for g in pair] and case[\"species\"]==[d[\"owners\"][g] for g in pair]\n assert case[\"comparator_predictions\"]=={a:{m:pair in snapshots[a,seed,m] for m in methods} for a in (\"baseline\",\"fragment\")}\nwith (target.parent/\"bins.tsv\").open() as f: table=list(csv.DictReader(f,delimiter=\"\\t\"))\nassert len(table)==84\nfor actual,expected in zip(table,selected[\"bins\"]): assert all(actual[k]==(\"NA\" if v is None else str(v)) for k,v in expected.items())\nprint(json.dumps(dict(status=\"independent_all_bin_minima_counts_and_comparators_verified\",planned_bins=84,selected_records=53,empty_bins=31,native_score_counts_checked=80,selection_sha256=hashlib.sha256(target.read_bytes()).hexdigest()),sort_keys=True))'",
+      "tool_result": {
+        "chunk_id": "11f251",
+        "wall_time_seconds": 1.001608351,
+        "session_id": 37921,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "8be7e9",
+      "wall_time_seconds": 0.000012289,
+      "exit_code": 0,
+      "original_token_count": 65,
+      "output": "{\"empty_bins\": 31, \"native_score_counts_checked\": 80, \"planned_bins\": 84, \"selected_records\": 53, \"selection_sha256\": \"e072dbff2c570f1926bf46ba2ad1dcdbf31ce5197d8c3461dc3576edb41b8594\", \"status\": \"independent_all_bin_minima_counts_and_comparators_verified\"}\n"
+    }
+  },
+  "stage_tests": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -m pytest -q tests/unit/test_controlled_fragment_stages.py tests/unit/test_controlled_fragment_trace_selection.py tests/unit/test_reconstruct_reconciliation_trace.py tests/unit/test_trace_simulation_upstream.py tests/unit/test_trace_native_qfo_swiss_reconciliation.py tests/unit/test_audit_accuracy_checkpoint.py tests/unit/test_simulation_method_outputs.py",
+      "tool_result": {
+        "chunk_id": "83fe4f",
+        "wall_time_seconds": 1.001042572,
+        "session_id": 49586,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "da3f8c",
+      "wall_time_seconds": 0.000011397,
+      "exit_code": 0,
+      "original_token_count": 45,
+      "output": "........................................................................ [ 62%]\n...........................................                              [100%]\n115 passed in 1.94s\n"
+    }
+  },
+  "stage_trace": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import json,sys; from pathlib import Path; root=Path.cwd(); sys.path.insert(0,str(root)); from benchmark_tools.trace_controlled_fragment_stages import run; b=root/\"benchmark_tools/results\"; r=run(root,b/\"controlled_fragment_trace_selection_20261009_v1/selection.json\",\"e072dbff2c570f1926bf46ba2ad1dcdbf31ce5197d8c3461dc3576edb41b8594\",b/\"controlled_fragment_stage_trace_20261010_v1\"); print(json.dumps({k:r[k] for k in (\"status\",\"stage_rows\")}))'",
+      "tool_result": {
+        "chunk_id": "4f62ec",
+        "wall_time_seconds": 1.001551388,
+        "session_id": 44738,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "b98ee6",
+      "wall_time_seconds": 0.000011868,
+      "exit_code": 0,
+      "original_token_count": 15,
+      "output": "{\"status\": \"retained_stages_verified\", \"stage_rows\": 106}\n"
+    }
+  },
+  "independent_stage_readback_failed": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import runpy,sys; from pathlib import Path; sys.path.insert(0,str(Path.cwd())); sys.argv=[\"readback\", \"--report\", \"benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json\", \"--sha256\", \"0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c\", \"--output\", \"benchmark_tools/results/controlled_fragment_stage_readback_20261010_v1.json\"]; runpy.run_module(\"benchmark_tools.readback_controlled_fragment_stages\",run_name=\"__main__\")'",
+      "tool_result": {
+        "chunk_id": "262c82",
+        "wall_time_seconds": 1.001017297,
+        "session_id": 90545,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal_output_transcription": {
+      "chunk_id": "304379",
+      "exit_code": 1,
+      "output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<frozen runpy>\", line 229, in run_module\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stages.py\", line 354, in <module>\n    result = verify(args.report, args.sha256)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stages.py\", line 339, in verify\n    need(row == {k: \"\" if expected[k] is None else str(expected[k]) for k in row}, \"Stage TSV value mismatch\")\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_controlled_fragment_stages.py\", line 23, in need\n    raise ValueError(message)\nValueError: Stage TSV value mismatch\n"
+    },
+    "failure": "TSV null serialization expected empty string; frozen table contains NA. All native observations and summary comparisons completed before this refusal.",
+    "scientific_outputs_modified": false
+  },
+  "independent_stage_readback_recovery": {
+    "invocation": {
+      "cmd": "env -u PYTHONPATH -u PYTHONHOME -u PYTHONUSERBASE -u LD_PRELOAD -u LD_LIBRARY_PATH -u LD_AUDIT PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 benchmarks/work/release_alert_refresh_20261001/venv/bin/python -I -B -c 'import runpy,sys; from pathlib import Path; sys.path.insert(0,str(Path.cwd())); sys.argv=[\"readback\", \"--report\", \"benchmark_tools/results/controlled_fragment_stage_trace_20261010_v1/report.json\", \"--sha256\", \"0d5f5777effd9e33a5fe14a188e07af118f0c783b91bc0655264dfd707751b8c\", \"--output\", \"benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json\"]; runpy.run_module(\"benchmark_tools.readback_controlled_fragment_stage_table\",run_name=\"__main__\")'",
+      "tool_result": {
+        "chunk_id": "76041e",
+        "wall_time_seconds": 1.001175152,
+        "session_id": 25457,
+        "original_token_count": 0,
+        "output": ""
+      }
+    },
+    "terminal": {
+      "chunk_id": "8e67ff",
+      "wall_time_seconds": 0.000017997,
+      "exit_code": 0,
+      "original_token_count": 32,
+      "output": "{\"status\": \"independent_native_stages_and_na_table_verified\", \"stage_rows\": 106, \"selected_cases\": 53, \"native_contexts\": 44}\n"
+    },
+    "readback_path": "benchmark_tools/results/controlled_fragment_stage_readback_20261010_v2.json",
+    "readback_sha256": "2d37e635fb9d9f08d1b1857d829e0798c19452936785b92e5dd40a058658da35",
+    "tests": {
+      "exit_code": 0,
+      "passed": 81,
+      "elapsed_seconds": 1.71
+    },
+    "compatibility_mapping": {
+      "JSON null": "TSV NA",
+      "JSON false": "TSV False",
+      "JSON true": "TSV True"
+    },
+    "original_reader_preserved": true
+  },
+  "limitations": [
+    "Representatives are retrospective minimum-hash selections, not prevalence estimates or independent biological confirmation.",
+    "Raw significant-hit absence does not separate prefilter from scoring decisions.",
+    "Recorded event/root rules locate observed predictions without proving inferred-tree or biological correctness.",
+    "OrthoFinder search and reconciliation stages have no matched adapter in this trace.",
+    "No new inference, score, confidence interval, initial-HMM-off control or timing result."
+  ]
+}
