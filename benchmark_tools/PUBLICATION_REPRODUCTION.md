@@ -2,6 +2,13 @@
 
 ## Current Supplements (2026-10-10)
 
+The [conditional native FAS claim checklist](results/PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md)
+updates the requested claim-to-evidence deliverable without overwriting older
+checklists. It distinguishes September eight-method and newer four-cell
+expected-ratio ranges from observed scores, biological/generalization
+uncertainty and other QfO endpoints. Favorable, adverse and zero-overlapping
+contrasts are retained; no overall superiority, equivalence or readiness follows.
+
 The [FAS sampling-design investigation](results/NATIVE_FAS_SAMPLING_DESIGN_PROTOCOL_20261010.md)
 derives a prospective target for the actual random-denominator, post-attrition
 mean. The [actual native context check](results/NATIVE_FAS_CONTEXT_RESULT_20261010.md)

@@ -1,5 +1,35 @@
 # Publication Progress
 
+## Conditional FAS Claim Checklist Integrated (2026-10-10)
+
+e706348d pushed the actual unchanged current manuscript HTML/34-page PDF,
+executed tests, scoped visual review and guide links. Continued directly into
+original requirement 7's requested claim-to-evidence delivery: added
+PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md while preserving all prior dated
+checklists and native scientific outputs. No new manuscript/render/interval,
+native scoring, sample, timing or release candidate.
+
+Actual structured readback EXIT0: eight three-column rows, 25 link occurrences,
+23 existing tracked targets with present hashes checked. All quoted interval
+endpoints/observed reconciliation difference match retained JSON. Eight-method/
+28-contrast and four-cell/six-contrast inventories, four zero-including newer
+ranges, non-biological/non-readiness flags, historical-binding qualifications
+and failed/ineligible timing are explicitly checked. This is scoped reporting
+validation, not renewed scientific assumption proof. All handles terminal.
+
+NEXT advance the genuinely unresolved original requirement 4, not another
+render/checklist/release cycle. Inspect current native uncertainty targets and
+independent-unit evidence in VGNC_UNCERTAINTY_METHOD_REVIEW_20260927.md,
+NATIVE_QFO_VGNC_BLOCK_RESULT_20261006.md and the original TreeFam search outcome.
+GO/EC are deterministic scored-membership means; the new conditional FAS law
+does not supply their biological CIs or a six-metric-mean interval. Use retained
+evidence to determine whether a scientifically justified native route actually
+exists. Do not replay the already-completed block export, population/database
+joins, context/coverage tests, failed sparse estimators or exhausted public
+searches without a concrete new lead. If no route exists, retain the unmet
+science and audit genuine impasse across goal turns rather than manufacture
+another toy or infer readiness. Full goal ACTIVE/incomplete.
+
 ## Current Conditional FAS Manuscript Actually Rendered And Inspected (2026-10-10)
 
 Previous maintenance turn changed the authoritative prompt/checkpoint and pushed
