@@ -1,5 +1,45 @@
 # Publication Progress
 
+## User-Approved VGNC And GO/EC Reporting Scope (2026-10-12)
+
+The user approved revising the goal based on the literature-compatible
+recommendation discussed in this thread. The attachment actually referenced
+by the goal and PUBLICATION_GOAL_CURRENT.txt now explicitly permit retained
+native VGNC/GO/EC scores and available, correctly labeled native error bars
+with descriptive comparisons. Missing new dependence-aware intervals for
+these endpoints alone are no longer a publication completion gate. The
+October 10 impasse entries below are historical and do not override this
+fresh authorization. Do not request the same scope decision again.
+
+This is a reporting-scope amendment, not new scientific evidence, an interval
+admission, or a declaration of readiness. Inferential claims still require
+supported paired analyses. Exact retained scorer/schema semantics determine
+whether stderr denotes SE or an approximate interval half-width; unavailable
+bars remain unavailable. No invented F1/secondary-mean propagation, paired
+significance from marginal bars, or general superiority follows.
+TreeFam, conditional FAS and secondary-summary limitations remain distinct;
+the user has not yet waived any other uncertainty requirement in this turn.
+
+No scientific jobs, rescores, timings, estimators or manuscript renders were
+launched for this maintenance request. Live handle: none created in this
+turn. The API goal remains BLOCKED until an explicit user resumption;
+editing the linked prompt does not change that lifecycle state. On resume,
+restart the blocked audit and integrate the amendment before re-evaluating
+remaining requirements; do not replay completed producers or the old scope
+question. Existing manuscript/checklist bytes remain unchanged for now.
+
+NEXT on explicit resumption: inspect retained native error-field semantics
+and the existing manuscript Methods/limitations, then integrate the reporting
+amendment using existing helpers and separately named manuscript output.
+First command from the repository root:
+`rg -n 'stderr|StdErr|1\.96|sqrt' qfo_benchmark -g 'vgnc_benchmark.py' -g 'GoTest.drw' -g 'EcTest.drw' -g 'VGNC.json' -g 'GO.json' -g 'EC.json'`
+If scorer source is not under that root, resolve its retained path/version
+through existing provenance; absence is not authority to substitute master
+or rerun scoring. The current manuscript is
+`benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md`;
+the current supplement checklist is
+`benchmark_tools/results/PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md`.
+
 ## Sustained Native Uncertainty Impasse, Third Observation (2026-10-10)
 
 Previous turn was no new scientific progress and no verified wait: it

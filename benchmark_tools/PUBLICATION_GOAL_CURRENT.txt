@@ -1,6 +1,6 @@
 Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
 
-Execution Contract (2026-10-10, consolidated continuation repair)
+Execution Contract (2026-10-12, VGNC and GO/EC reporting amendment)
 
 Continue the seven scientific requirements below autonomously. QfO and
 OrthoBench are primary; Three Kingdoms is supplementary. Preserve an
@@ -98,6 +98,55 @@ with a concrete new lead; never contact anyone.
 Commit and push focused tested milestones to the authorized remote, staging
 explicit paths only. Preserve unrelated changes; do not commit large raw data.
 
+User-Approved VGNC And GO/EC Reporting Amendment (2026-10-12)
+
+For VGNC, GO and EC, publication completion does not require new
+dependence-aware confidence intervals or biological/generalization intervals.
+Retain the native QfO scores and available native error bars as
+benchmark-standard reporting, with descriptive comparisons. This explicit
+scope decision supersedes older ledger entries treating missing validated
+VGNC/GO/EC intervals as a mandatory whole-goal completion gate. Do not ask
+for this same scope decision again or block solely on those missing intervals.
+
+On resumption, integrate this reporting distinction into Methods, Results,
+tables/figure captions, limitations and the claim-to-evidence checklist.
+Reuse retained outputs; no new inference, native scoring, BLAST, timing or
+uncertainty-estimator experiment is authorized just to implement this amendment.
+Verify available error fields against the exact retained scorer implementation
+and its output schema. State whether a field is a standard error or an
+approximate interval half-width, its formula, multiplier and denominator;
+do not assume a field named stderr has the same meaning across benchmarks.
+If an error field is absent or its meaning cannot be established, retain the
+point estimate descriptively and state that limitation rather than fabricate
+a bar. Preserve observed scores, identities and historical provenance limits.
+
+The literature-compatible reporting reference is QfO's VGNC precision/recall
+with approximate binomial bars, and GO/EC mean pairwise functional similarity
+with its native standard error and evaluated-pair coverage. Explain that
+shared proteins/families and method-dependent prediction sets are not
+accounted for by those conventional bars. GO/EC means are functional
+agreement proxies, not orthology F1 or accuracy on a complete truth set.
+Retain evidence-code, annotation-transfer and incomplete-reference caveats.
+Public reference implementations, not substitutes for the retained version:
+https://github.com/qfo/benchmark-webservice/blob/master/vgnc_benchmark.py
+https://github.com/qfo/benchmark-webservice/blob/master/GoTest.drw
+https://github.com/qfo/benchmark-webservice/blob/master/EcTest.drw
+
+Do not label these native bars as validated dependence-aware biological
+intervals, obtain paired significance from separate marginal-bar overlap,
+or propagate them into an unsupported VGNC F1 or six-metric-mean interval.
+Keep supported paired analyses on appropriate units for inferential claims;
+recompute the actual statistic within replicates where those analyses apply.
+Report observed VGNC/GO/EC differences without significance or unseen-dataset
+superiority claims that require the unavailable stronger uncertainty analysis.
+Preserve unfavorable results and all existing supported uncertainty analyses.
+
+This amendment is limited to VGNC and GO/EC reporting. It does not resolve
+TreeFam source/family uncertainty, turn conditional FAS sampling ranges into
+biological intervals, or supply uncertainty for the secondary six-metric mean.
+Their evidence limitations and the remaining scientific requirements remain
+explicit; no other blocker is silently waived and readiness is not automatic.
+
 Authority, Lifecycle And Honest Stopping
 
 Follow fresh user/system/developer instructions first. This attachment is
@@ -119,7 +168,7 @@ actual goal status and checkpoint evidence, not guesses. Prompt edits cannot
 guarantee automatic continuation or repair platform interruptions/budgets.
 Never change private goal stores/application settings to force continuation.
 
-Scientific Requirements (Preserved)
+Scientific Requirements (With Explicit VGNC And GO/EC Amendment Above)
 
   > 1. Establish and freeze the publication baseline
   >
@@ -144,7 +193,7 @@ Scientific Requirements (Preserved)
   >
   > 4. Quantify uncertainty and explain errors
   >
-  > - Calculate paired confidence intervals for method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations.
+  > - Calculate paired confidence intervals for supported method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations. For VGNC and GO/EC, apply the explicit 2026-10-12 reporting amendment: native scores and appropriately labeled native bars with descriptive comparisons are sufficient; new dependence-aware intervals are not a completion requirement for those endpoints.
   > - Recompute the actual benchmark statistic within bootstrap replicates. Report effect sizes, family-level wins and losses, and multiplicity handling where applicable.
   > - Analyze errors by divergence, duplication history, family size, fragments, domain architecture, and composition bias using prespecified, label-independent strata.
   > - Trace representative errors through search, candidate selection, grouping, and reconciliation. Test explanations rather than assuming the cause of a score difference.
@@ -175,7 +224,7 @@ Scientific Requirements (Preserved)
   > 7. Produce the publication package
   >
   > - Generate tables and publication-quality figures directly from machine-readable results.
-  > - Include a method diagram, accuracy comparisons with uncertainty, HMM/phylogeny ablations, error analyses, scaling measurements, and a biological application.
+  > - Include a method diagram, accuracy comparisons with appropriately scoped uncertainty, HMM/phylogeny ablations, error analyses, scaling measurements, and a biological application. Distinguish supported paired uncertainty from conventional native VGNC/GO/EC error bars and descriptive-only endpoints.
   > - Draft Methods, Results, limitations, data/code availability, and a claim-to-evidence checklist.
   > - Package executable workflows, pinned dependencies, seeds, dataset manifests, scoring tests, and instructions for reproducing the main results.
   > - Prepare a versioned release and archival bundle. Document external submission or archival steps that remain unexecuted.
@@ -190,4 +239,4 @@ Scientific Requirements (Preserved)
   >
   > Completion criteria
   > Finish when the frozen method has independent validation, interpretable ablations, appropriate uncertainty estimates, documented failure modes, comparable resource evidence within the authorized shared-host scope, and a reproducible manuscript package. Resource completion requires the planned matched-resource panel and honest contention reporting, not an uncontended host or a claim of isolated performance. All other scientific and reproducibility requirements remain intact. Every major claim must link to supporting results. If the evidence does not support a claimed advantage, narrow the claim or
-  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished.
+  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished. Apply the 2026-10-12 VGNC/GO/EC amendment when evaluating appropriate uncertainty: documented benchmark-standard reporting satisfies the scoped reporting requirement without new dependence-aware intervals for those endpoints, but does not itself establish biological generalization or full-goal completion.
