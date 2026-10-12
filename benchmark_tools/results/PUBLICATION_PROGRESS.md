@@ -1,5 +1,63 @@
 # Publication Progress
 
+## Active Resumption And Reporting Integration (2026-10-12)
+
+The user resumed the goal. The actual goal tool reports ACTIVE; the earlier
+blocked maintenance/impasse entries below are historical, not current state.
+Read the linked attachment and retained manuscript/evidence. All three approved
+reporting amendments are integrated in the new manuscript and current claim
+checklist, committed/pushed at `4e7272bb`. No old uncertainty scope question or
+DGX/quiet-host prerequisite remains. The amendments are post-results reporting
+choices, not new evidence or a prospective scientific protocol.
+
+Actual native-bar readback verified all 24 admission-bound VGNC/GO/EC aggregates,
+participant consistency, axes, values and counts for all eight tools. Retained
+scorer hashes match their execution pins. VGNC uses approximate binomial
+95% half-widths; GO/EC's native Darwin StdErr uses a Student-t 95% half-width,
+not one SEM. New tables preserve scores and denominators. The first handling
+of null manifest participants stopped before output; corrected checking binds
+the actual consistent aggregate IDs through retained admissions, without
+normalization, rescoring or changed labels. Existing runtime arithmetic audit
+is reused, not rerun as new statistical evidence.
+
+The unchanged six-helper review/audit test suite passed 56 cases in 3.44s.
+Actual render/style/print/bounds commands exited zero, producing 19 citation
+IDs, 163 local occurrences, 156 tracked direct targets, a 37-page PDF and zero
+page-bounds violations. All 13 selected images (13-18, 27-29, 32-35) were actually
+inspected. The [review record](PUBLICATION_REPORTING_SCOPE_REVIEW_20261012.md)
+states the selected-page and direct-asset scope. Original October 10 manuscript
+and checklist hashes remain unchanged. The reproduction guide now links the
+new manuscript, checklist and actual review; older snapshots remain intact.
+
+The remaining seven-part completion reconciliation is underway, not established
+by this reporting milestone. Already checked the older requirement registers
+against later all-tool metadata, development inventory, controlled-fragment
+results/relocation and rc6 delivery. The older terminal-resource NEXT is already
+finished: all 13 ablation identities are joined, 11 have resource observations
+and ten admitted accuracy. Do not replay that exporter, native jobs, simulations,
+timings, FAS estimators, render or exhausted TreeFam searches. Original failure,
+development-exposure, raw-data/dependency and biological-descriptor limits
+remain explicit; historical unresolved flags cannot resurrect the approved
+uncertainty completion gate. No new release candidate is needed merely to
+replace those flags.
+
+Live own handle: none. Render session 60927 and layout session 37106 returned
+exit zero; prior source push session 5102 returned exit zero. No inference,
+BLAST, native scoring, timing, source search or uncertainty experiment launched.
+Unrelated dirty sample files remain untouched. This entry and actual review
+artifacts form the next focused documentation/result commit and push.
+
+NEXT: finish a current requirement-by-requirement reconciliation under the
+amended goal, including retained separate-clade validation and biological
+application evidence not yet checked in this resumed pass. Then resolve only
+an actual unfinished original deliverable, not a new administrative gate.
+First command from the repository root:
+`sed -n '1,220p' benchmark_tools/results/YGOB_FROZEN_INTERPRETATION_20260916.md`
+Follow with the retained YGOB protocol, WGD result and current source/release
+instructions; write a separately dated assessment preserving historical audits.
+Keep the goal ACTIVE while required evidence integration remains; no user
+permission or manual resumption is needed for these already authorized steps.
+
 ## User-Approved Nonblocking FAS And Secondary-Summary Scope (2026-10-12)
 
 The user approved making the remaining discussed limitations nonblocking

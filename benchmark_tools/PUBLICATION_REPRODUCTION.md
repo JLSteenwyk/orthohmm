@@ -1,6 +1,33 @@
 # Publication Reproduction Guide
 
-## Current Supplements (2026-10-10)
+## Current Reporting Scope (2026-10-12)
+
+Use the [revised manuscript](results/publication_reporting_scope_manuscript_20261012_v1.md)
+and [current claim checklist](results/PUBLICATION_REPORTING_SCOPE_CLAIMS_20261012.md).
+They implement all three user-approved reporting amendments in the
+[current goal](PUBLICATION_GOAL_CURRENT.txt): conventional native VGNC/GO/EC
+bars with descriptive comparisons, supporting pooled-reference TreeFam,
+conditional FAS ranges, and the descriptive six-metric secondary mean.
+Missing stronger uncertainty for these endpoints is nonblocking, individually
+and collectively; no new biological evidence or superiority claim follows.
+These are post-results reporting decisions, not a newly prespecified study.
+
+The revised text has an actual
+[HTML review](results/publication_reporting_scope_manuscript_20261012_v1_review_v2.html)
+and [37-page PDF](results/publication_reporting_scope_manuscript_20261012_v1_print/document.pdf).
+The [review record](results/PUBLICATION_REPORTING_SCOPE_REVIEW_20261012.md)
+reports 56 passing focused tests, 19 citation IDs, 156 tracked direct targets,
+zero page-bounds violations, and actual inspection of 13 selected pages.
+All 24 admission-bound native aggregates were checked; GO/EC's `stderr` is
+a native Student-t 95% half-width, not one SEM. Shared-family dependence,
+method-dependent evaluated sets and annotation limitations remain explicit.
+No scientific producer was rerun. Historical reviews and local rc6 preserve
+their own snapshots; neither is silently relabeled as this later manuscript.
+The newest progress-ledger entry supplies current execution state. Earlier
+blocked, queued, running and uncertainty-gate text below is dated history,
+not authority to revive the settled reporting limitations or repeat producers.
+
+## Historical Supplements (2026-10-10)
 
 The [conditional native FAS claim checklist](results/PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md)
 updates the requested claim-to-evidence deliverable without overwriting older
