@@ -1,5 +1,64 @@
 # Publication Progress
 
+## Current Delivery And Configuration Consolidation (2026-10-12)
+
+Actual goal status is ACTIVE. The goal attachment matches the tracked current
+prompt; all three reporting amendments and shared-Threadripper authorization
+remain in force. No further scope permission, DGX, quiet window, TreeFam
+recovery or new native uncertainty experiment is required to proceed.
+
+Completed the [43-bullet reconciliation](PUBLICATION_REQUIREMENT_RECONCILIATION_20261012.md)
+using the current goal and retained separate-clade/application evidence.
+Rehashed YGOB admission/full-result and four WGD native admissions against
+their retained summary pins: all match. YGOB prospective Git chronology and
+overlap limits are explicit. WGD retains all 240 pairs, exclusions, selected
+examples, competitor comparisons and unfavorable supported-separation/coverage
+outcomes. This is bounded readback, not repeated scientific execution.
+
+The [current delivery index](../PUBLICATION_STUDY_DELIVERY_20261012.md) links
+the current 37-page manuscript/review, exact main-result commands, actual
+reproduction routes and local rc6 availability. All 24 statistics and five
+archive/anchor records match the executed earlier rc2 route in path, bytes,
+mode and SHA256. This is reuse of executed equivalent payloads, not new
+execution or a claim that current text is inside the older rc6 snapshot.
+Corrected source/reproduction guidance identifies the October 4 helper-export
+omission as already repaired; it is not a new pending defect or build request.
+
+The [method catalogue](../PUBLICATION_METHOD_CONFIGURATIONS_20261012.md)
+consolidates all 24 tool/dataset configurations, including nested historical
+commands/settings and Three Kingdoms supplements. Original SonicParanoid OB
+argv stays null after a bounded launch-source Git-history check found no
+matches in the selected paths/date window; that is not global absence.
+No private session/shell logs were read. Cached replay, native inference,
+checkpoint conversion, workflow ceilings and measurement scopes are distinct.
+
+Actual documentation validation passed: Pandoc plus the existing asset helper
+resolved 570 local occurrences/403 unique tracked targets across the six reader
+documents before the final handoff additions; all 24 catalogue rows and
+OrthoHMM/OrthoFinder version declarations match the structured register.
+Whitespace checks passed. The earlier 56 tests/37-page render remain their
+actual earlier executions, not fresh claims for this documentation-only edit.
+No code, scores, defaults, intervals, inputs or historical protocols changed.
+Final checks including the new TOP links resolve 575 local occurrences/403
+unique tracked targets; the linked attachment/current goal remain identical.
+
+Live own handle: none. All inspection/history commands returned terminal exit
+zero; broad exploratory searches were terminal, not running analyses. No
+inference, BLAST, scoring, timing, bootstrap, archive producer or exhausted
+TreeFam search launched. Unrelated dirty samples remain untouched. These
+seven explicit documentation paths form the current scoped commit/push.
+
+NEXT: finish the bounded whole-goal completion assessment from the current
+43-bullet reconciliation and delivered manuscript/package. Identify actual
+unfinished original work, or conclude at the supported scope; no additional
+integrity layer, release candidate or stronger scientific requirement is a
+prerequisite. First command from the repository root:
+`rg -n -A 50 '^## (Discussion And Limitations|Reproducibility And Availability)' benchmark_tools/results/publication_reporting_scope_manuscript_20261012_v1.md`
+Read the matching conclusion/availability alongside the current reconciliation
+and delivery index. Reuse their executed evidence. Keep ACTIVE until the actual
+full completion criteria have been assessed; no manual resumption or settled
+resource permission is needed for that authorized final assessment.
+
 ## Active Resumption And Reporting Integration (2026-10-12)
 
 The user resumed the goal. The actual goal tool reports ACTIVE; the earlier

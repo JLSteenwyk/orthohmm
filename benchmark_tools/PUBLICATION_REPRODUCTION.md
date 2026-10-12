@@ -2,6 +2,15 @@
 
 ## Current Reporting Scope (2026-10-12)
 
+Start with the [current study delivery index](PUBLICATION_STUDY_DELIVERY_20261012.md)
+for selected results, executed reproduction routes and explicit availability
+limits. The older instructions below preserve their historical source choices;
+they are not a queue of unfinished jobs or current publication gates.
+
+The [method-configuration catalogue](PUBLICATION_METHOD_CONFIGURATIONS_20261012.md)
+consolidates settings and recorded command scopes for all 24 method/dataset
+cells, preserving missing argv and historical execution limitations.
+
 Use the [revised manuscript](results/publication_reporting_scope_manuscript_20261012_v1.md)
 and [current claim checklist](results/PUBLICATION_REPORTING_SCOPE_CLAIMS_20261012.md).
 They implement all three user-approved reporting amendments in the
@@ -2012,7 +2021,13 @@ to redistribute. Original TreeFam trees and mapping remain
 [unrecovered](results/TREEFAM_SOURCE_RETRIEVAL_20260918.md); the pooled reference
 does not supply original family identities for uncertainty estimation.
 
-### Remaining Publication Gates
+### Historical Publication Gate Assessment (2026-10-04)
+
+This dated assessment predates the later native outcomes, rc6, fragment/FAS
+supplements and October 12 reporting amendments. It is preserved as chronology,
+not the current completion decision. In particular, missing stronger QfO
+uncertainty cannot become a completion gate under the amended goal. Use the
+current delivery index and newest progress entry for actual remaining work.
 
 The [three actual export repairs](results/PUBLICATION_EXPORT_INTEGRATION_20261004.md)
 are now integrated after all 27 terminal reviews; 339 combined tests pass.
