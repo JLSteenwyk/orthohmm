@@ -1,6 +1,6 @@
 Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
 
-Execution Contract (2026-10-12, VGNC and GO/EC reporting amendment)
+Execution Contract (2026-10-12, VGNC/GO/EC and TreeFam reporting amendments)
 
 Continue the seven scientific requirements below autonomously. QfO and
 OrthoBench are primary; Three Kingdoms is supplementary. Preserve an
@@ -144,8 +144,42 @@ Preserve unfavorable results and all existing supported uncertainty analyses.
 This amendment is limited to VGNC and GO/EC reporting. It does not resolve
 TreeFam source/family uncertainty, turn conditional FAS sampling ranges into
 biological intervals, or supply uncertainty for the secondary six-metric mean.
-Their evidence limitations and the remaining scientific requirements remain
-explicit; no other blocker is silently waived and readiness is not automatic.
+Their evidence limitations remain explicit. The separately authorized
+TreeFam amendment below changes its reporting requirement, not its evidence;
+FAS and secondary-mean uncertainty are not resolved by either amendment.
+
+User-Approved TreeFam Supporting-Evidence Amendment (2026-10-12)
+
+Use retained pooled-reference TreeFam-A scores as descriptive supporting
+evidence within QfO, not as a required TreeFam-specific significance or
+generalization claim. Present the available scores and coverage for all
+retained methods, including unfavorable outcomes, without changing the
+reference, endpoints, outputs or method configuration.
+
+Document that the original TreeFam-A release-7 trees and
+treefam2reference.txt have not been recovered by the bounded recorded
+searches. Their absence limits validation of original family assignments,
+reference reconstruction and family-level uncertainty; it is not proof
+that these resources are globally unavailable. Missing originals and
+missing TreeFam family-level confidence intervals are not publication
+completion gates under this explicit supporting-evidence scope. Do not
+block solely on those gaps or repeat the settled scope question.
+
+Use existing supported OrthoBench/SwissTrees paired analyses for
+family-level inferential comparisons, preserving development-exposure and
+generalization limits. Do not fabricate TreeFam family labels from graph
+components, use newer/derived trees without establishing suitability, treat
+dependent pairs as independent, or imply a supported TreeFam superiority
+claim from a descriptive score difference.
+
+On resumption, integrate this distinction into the manuscript, tables/figure
+captions, limitations and claim-to-evidence checklist alongside the VGNC/GO/EC
+amendment. Reuse completed searches, retained scores and existing helpers.
+Search public archives again only if a concrete new lead appears; no contacts
+or repeated exhausted searches are required for completion. Validate any
+promising originals against the pooled reference before admitting family
+labels. This amendment supplies no new scientific evidence, conditional FAS
+biological uncertainty, secondary-mean interval or automatic readiness.
 
 Authority, Lifecycle And Honest Stopping
 
@@ -168,7 +202,7 @@ actual goal status and checkpoint evidence, not guesses. Prompt edits cannot
 guarantee automatic continuation or repair platform interruptions/budgets.
 Never change private goal stores/application settings to force continuation.
 
-Scientific Requirements (With Explicit VGNC And GO/EC Amendment Above)
+Scientific Requirements (With Explicit Reporting Amendments Above)
 
   > 1. Establish and freeze the publication baseline
   >
@@ -195,6 +229,7 @@ Scientific Requirements (With Explicit VGNC And GO/EC Amendment Above)
   >
   > - Calculate paired confidence intervals for supported method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations. For VGNC and GO/EC, apply the explicit 2026-10-12 reporting amendment: native scores and appropriately labeled native bars with descriptive comparisons are sufficient; new dependence-aware intervals are not a completion requirement for those endpoints.
   > - Recompute the actual benchmark statistic within bootstrap replicates. Report effect sizes, family-level wins and losses, and multiplicity handling where applicable.
+  > - Treat retained pooled-reference TreeFam-A results as descriptive supporting evidence under the 2026-10-12 TreeFam amendment. Document missing originals and unavailable family-level uncertainty; those gaps are not completion gates, and descriptive differences do not establish TreeFam-specific significance or generalization.
   > - Analyze errors by divergence, duplication history, family size, fragments, domain architecture, and composition bias using prespecified, label-independent strata.
   > - Trace representative errors through search, candidate selection, grouping, and reconciliation. Test explanations rather than assuming the cause of a score difference.
   > - Present individual QfO metrics, precision–recall trade-offs, and prediction coverage. Label the six-metric mean as a project-defined secondary summary.
@@ -234,9 +269,9 @@ Scientific Requirements (With Explicit VGNC And GO/EC Amendment Above)
   > - Make focused commits and push to the existing authorized remote at validated milestones, including analysis scripts, tests, and result summaries. Do not commit unrelated changes or large raw datasets.
   > - Test changes according to their scientific and computational impact. Preserve checkpoints and record provenance for resumed jobs.
   > - Maintain a progress ledger with completed work, running jobs, unresolved issues, and next actions. Give concise progress updates.
-  > - Search public internet sources and archives for the original TreeFam-A release-7 trees and treefam2reference.txt used to generate the retained QfO reference. Download and validate promising original artifacts when available, preserving provenance and verifying reconstruction against the pooled reference before using family-level labels. Do not contact maintainers or anyone else, and do not substitute newer releases, derived trees or inferred family labels without establishing their suitability. If the originals remain unavailable, retain the explicit limitation.
+  > - Retain the completed public search evidence for the original TreeFam-A release-7 trees and treefam2reference.txt used to generate the retained QfO reference. Under the 2026-10-12 supporting-evidence amendment, search again only on a concrete new lead; further exhausted searches or recovery of the originals are not completion requirements. Download and validate promising original artifacts when available, preserving provenance and verifying reconstruction against the pooled reference before using family-level labels. Do not contact maintainers or anyone else, and do not substitute newer releases, derived trees or inferred family labels without establishing their suitability. If the originals remain unavailable, retain the explicit limitation and descriptive supporting scores.
   > - Never fabricate missing results, hide failures, change endpoints after seeing outcomes, or claim general superiority from a custom aggregate.
   >
   > Completion criteria
   > Finish when the frozen method has independent validation, interpretable ablations, appropriate uncertainty estimates, documented failure modes, comparable resource evidence within the authorized shared-host scope, and a reproducible manuscript package. Resource completion requires the planned matched-resource panel and honest contention reporting, not an uncontended host or a claim of isolated performance. All other scientific and reproducibility requirements remain intact. Every major claim must link to supporting results. If the evidence does not support a claimed advantage, narrow the claim or
-  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished. Apply the 2026-10-12 VGNC/GO/EC amendment when evaluating appropriate uncertainty: documented benchmark-standard reporting satisfies the scoped reporting requirement without new dependence-aware intervals for those endpoints, but does not itself establish biological generalization or full-goal completion.
+  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished. Apply both 2026-10-12 reporting amendments when evaluating appropriate uncertainty: documented benchmark-standard VGNC/GO/EC reporting does not require new dependence-aware intervals for those endpoints, and descriptive pooled-reference TreeFam supporting evidence does not require recovery of the original trees/mapping or family-level intervals. Neither amendment establishes biological generalization, resolves FAS/secondary-mean uncertainty, or proves full-goal completion; all remaining requirements and claim-to-evidence limits still apply.

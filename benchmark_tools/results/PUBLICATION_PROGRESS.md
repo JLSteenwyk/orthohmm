@@ -1,5 +1,40 @@
 # Publication Progress
 
+## User-Approved TreeFam Supporting-Evidence Scope (2026-10-12)
+
+The user explicitly approved treating TreeFam as supporting evidence and
+updating the goal accordingly. Both the goal-linked attachment and tracked
+PUBLICATION_GOAL_CURRENT.txt now retain pooled-reference TreeFam scores as
+descriptive supporting results. Missing original release-7 trees/mapping and
+family-level intervals remain evidence limitations, not completion gates.
+Earlier impasse/scope entries are historical; do not request either settled
+TreeFam or VGNC/GO/EC scope decision again.
+
+No scores, method settings, frozen protocols, historical results, manuscript
+bytes or existing intervals were changed. No source search, scientific run,
+rescore, timing or render was launched. Further public archive searches need
+a concrete new lead, not repeated exhausted inventories; no contacts.
+Existing OrthoBench/SwissTrees paired evidence supports appropriately scoped
+inferential comparisons, not invented TreeFam family labels or significance.
+Conditional FAS and the secondary-mean uncertainty remain separate questions;
+the amendment does not prove readiness or waive their remaining requirements.
+
+Live handle: none created in this maintenance turn. The API goal remains
+BLOCKED; this request updates its linked prompt but does not resume analyses.
+On explicit resume, restart the blocked audit and integrate BOTH approved
+reporting amendments before evaluating the remaining original requirements.
+
+NEXT on explicit resumption: read the current manuscript's TreeFam,
+VGNC/GO/EC and uncertainty passages, then integrate the approved reporting
+scopes using retained outputs and existing helpers at separately named paths.
+First command from the repository root:
+`rg -n -i 'treefam|vgnc|uncertainty|completion|readiness|gene ontology|enzyme' benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md benchmark_tools/results/PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md`
+For VGNC/GO/EC error bars, also complete the retained scorer/schema semantic
+check in the preceding entry. Do not substitute public master for the exact
+retained scorer version or rerun scoring. The retained TreeFam search record
+is `benchmark_tools/results/TREEFAM_REMAINING_CONTEXT_RESULT_20260930.md`;
+its historical timing/lifecycle statements do not override current state.
+
 ## User-Approved VGNC And GO/EC Reporting Scope (2026-10-12)
 
 The user approved revising the goal based on the literature-compatible
