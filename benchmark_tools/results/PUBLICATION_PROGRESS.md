@@ -1,5 +1,40 @@
 # Publication Progress
 
+## User-Approved Nonblocking FAS And Secondary-Summary Scope (2026-10-12)
+
+The user approved making the remaining discussed limitations nonblocking
+using scientifically appropriate reporting. Both linked prompt copies now
+explicitly permit conditional FAS reporting and a descriptive six-metric
+secondary mean. Missing biological/generalization FAS intervals and aggregate
+uncertainty are not completion gates. Together with the prior VGNC/GO/EC and
+TreeFam amendments, this settles the recorded native uncertainty scope
+questions; those gaps cannot be reassembled into the same whole-goal impasse.
+
+No evidence, score, endpoint, protocol, scientific source or existing interval
+changed. Observed FAS scores remain distinct from conditional expected-ratio
+ranges; assumptions, attrition, historical provenance, multiplicity, missing
+cells and adverse outcomes remain explicit. The unchanged six-metric mean
+is descriptive, not a significance test or overall-superiority claim.
+Independent validation and other original requirements still apply. This is
+a post-results reporting amendment, not a prospective experiment or proof
+of publication readiness. Historical unmet-uncertainty/readiness flags remain
+dated records, not authority to override the current approved completion scope.
+
+No scientific producers, source searches, renders or manuscript edits were
+executed in this prompt-maintenance turn. Live handle: none created. The API
+goal remains BLOCKED until explicit user resumption; no lifecycle status was
+changed by this edit. On resume, restart the blocked audit and advance actual
+reporting integration rather than repeat settled questions or prior producers.
+
+NEXT on explicit resumption: integrate ALL THREE reporting amendments into
+the current manuscript/checklist using existing helpers and retained outputs
+at separately named paths, verify affected content, commit/push, then reconcile
+remaining deliverables under the amended completion criteria. First command:
+`rg -n -i 'treefam|vgnc|fas|six.metric|uncertainty|readiness' benchmark_tools/results/publication_native_fas_figure_manuscript_20261010_v1.md benchmark_tools/results/PUBLICATION_NATIVE_FAS_CLAIMS_20261010.md`
+Resolve native VGNC/GO/EC error-field semantics from retained scorer/schema
+provenance as prescribed in the earlier handoff. No new uncertainty experiment
+or benchmark rerun is required for these approved reporting scopes.
+
 ## User-Approved TreeFam Supporting-Evidence Scope (2026-10-12)
 
 The user explicitly approved treating TreeFam as supporting evidence and

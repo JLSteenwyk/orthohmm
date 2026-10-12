@@ -1,6 +1,6 @@
 Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package.
 
-Execution Contract (2026-10-12, VGNC/GO/EC and TreeFam reporting amendments)
+Execution Contract (2026-10-12, consolidated uncertainty-reporting amendments)
 
 Continue the seven scientific requirements below autonomously. QfO and
 OrthoBench are primary; Three Kingdoms is supplementary. Preserve an
@@ -145,8 +145,8 @@ This amendment is limited to VGNC and GO/EC reporting. It does not resolve
 TreeFam source/family uncertainty, turn conditional FAS sampling ranges into
 biological intervals, or supply uncertainty for the secondary six-metric mean.
 Their evidence limitations remain explicit. The separately authorized
-TreeFam amendment below changes its reporting requirement, not its evidence;
-FAS and secondary-mean uncertainty are not resolved by either amendment.
+TreeFam and FAS/secondary-summary amendments below change reporting
+requirements, not the evidence; unresolved uncertainty stays documented.
 
 User-Approved TreeFam Supporting-Evidence Amendment (2026-10-12)
 
@@ -180,6 +180,54 @@ or repeated exhausted searches are required for completion. Validate any
 promising originals against the pooled reference before admitting family
 labels. This amendment supplies no new scientific evidence, conditional FAS
 biological uncertainty, secondary-mean interval or automatic readiness.
+
+User-Approved FAS And Secondary-Summary Amendment (2026-10-12)
+
+Missing FAS biological/generalization intervals and missing uncertainty for
+the project-defined QfO six-metric mean are nonblocking reporting limitations,
+not publication completion gates. Together with the approved VGNC/GO/EC and
+TreeFam amendments, these decisions settle the previously identified native
+uncertainty impasse. Do not block on these gaps singly or collectively, ask
+the same scope questions again, or launch new estimators just to fill them.
+
+Retain observed native FAS scores descriptively and report existing sampling
+ranges only for their stated conditional expected-statistic target. Preserve
+the fixed-population/design, score-return/attrition and historical provenance
+assumptions, multiplicity handling, unfavorable contrasts and unavailable
+cells. Distinguish observed scores from conditional expected-ratio ranges;
+do not recenter the ranges on observed scores, interpret them as orthology
+F1 intervals, or imply that they validate unseen-family/species performance.
+Unknown historical sampling/context or identity bindings remain explicit
+limitations; complete recovery or proof of those assumptions is not a new
+completion gate for this bounded reporting. If a conditional contrast is
+reported, qualify it by its exact target, assumptions and snapshot. Do not
+use it to claim overall accuracy superiority or a causal phylogenetic benefit.
+
+Keep the six-metric mean as an unchanged project-defined descriptive
+secondary summary alongside all individual metrics and coverage measures.
+Explain that it combines distinct benchmark quantities and is not a
+standard QfO overall accuracy metric. Do not fabricate aggregate intervals,
+assume independence among metrics, combine native marginal bars into a
+paired interval, or use this mean as the basis of statistical significance,
+general superiority, headline claims or selection of a winning method.
+Preserve the original aggregation definition and all adverse results.
+
+Use supported paired analyses on appropriate units for inferential claims,
+with their actual development-exposure, multiplicity and generalization
+limits. These reporting amendments do not supply new independent validation,
+repair failed analyses, relax correctness/provenance checks, change frozen
+endpoints, or make completion automatic. This is a user-approved reporting
+scope amendment after existing results, not a newly prespecified experiment.
+
+On resumption, integrate all three approved amendments into Methods, Results,
+captions, limitations and claim-to-evidence reporting using retained outputs
+and existing helpers. Then check the remaining deliverables against the
+amended goal and finish genuinely unfinished work. No confidence interval is
+required for every QfO endpoint: clearly scoped descriptive/conditional
+reporting satisfies the amended uncertainty requirement for these endpoints.
+Do not revive superseded uncertainty completion gates from historical ledgers,
+audits or readiness flags. Preserve those historical records; revise current
+publication claims and completion assessment transparently.
 
 Authority, Lifecycle And Honest Stopping
 
@@ -230,9 +278,10 @@ Scientific Requirements (With Explicit Reporting Amendments Above)
   > - Calculate paired confidence intervals for supported method differences using reference families or other appropriate independent units; do not treat dependent gene pairs as independent observations. For VGNC and GO/EC, apply the explicit 2026-10-12 reporting amendment: native scores and appropriately labeled native bars with descriptive comparisons are sufficient; new dependence-aware intervals are not a completion requirement for those endpoints.
   > - Recompute the actual benchmark statistic within bootstrap replicates. Report effect sizes, family-level wins and losses, and multiplicity handling where applicable.
   > - Treat retained pooled-reference TreeFam-A results as descriptive supporting evidence under the 2026-10-12 TreeFam amendment. Document missing originals and unavailable family-level uncertainty; those gaps are not completion gates, and descriptive differences do not establish TreeFam-specific significance or generalization.
+  > - Apply the 2026-10-12 FAS/secondary-summary amendment: retain observed FAS scores descriptively and existing ranges only for their conditional target; keep the six-metric mean descriptive. Missing biological FAS or aggregate uncertainty is nonblocking, without inventing intervals or unsupported significance/generalization claims.
   > - Analyze errors by divergence, duplication history, family size, fragments, domain architecture, and composition bias using prespecified, label-independent strata.
   > - Trace representative errors through search, candidate selection, grouping, and reconciliation. Test explanations rather than assuming the cause of a score difference.
-  > - Present individual QfO metrics, precision–recall trade-offs, and prediction coverage. Label the six-metric mean as a project-defined secondary summary.
+  > - Present individual QfO metrics, precision–recall trade-offs, and prediction coverage. Label the unchanged six-metric mean as a project-defined descriptive secondary summary, not a standard overall accuracy endpoint or basis for selecting a winning method.
   >
   > 5. Test robustness and practical efficiency
   >
@@ -274,4 +323,4 @@ Scientific Requirements (With Explicit Reporting Amendments Above)
   >
   > Completion criteria
   > Finish when the frozen method has independent validation, interpretable ablations, appropriate uncertainty estimates, documented failure modes, comparable resource evidence within the authorized shared-host scope, and a reproducible manuscript package. Resource completion requires the planned matched-resource panel and honest contention reporting, not an uncontended host or a claim of isolated performance. All other scientific and reproducibility requirements remain intact. Every major claim must link to supporting results. If the evidence does not support a claimed advantage, narrow the claim or
-  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished. Apply both 2026-10-12 reporting amendments when evaluating appropriate uncertainty: documented benchmark-standard VGNC/GO/EC reporting does not require new dependence-aware intervals for those endpoints, and descriptive pooled-reference TreeFam supporting evidence does not require recovery of the original trees/mapping or family-level intervals. Neither amendment establishes biological generalization, resolves FAS/secondary-mean uncertainty, or proves full-goal completion; all remaining requirements and claim-to-evidence limits still apply.
+  > explicitly identify the unmet scientific requirement; do not declare publication readiness solely because the analyses finished. Apply all three 2026-10-12 reporting amendments: benchmark-standard VGNC/GO/EC reporting, descriptive pooled-reference TreeFam supporting evidence, conditional FAS reporting and the descriptive secondary mean satisfy their scoped reporting requirements once accurately integrated. Recovery of missing TreeFam originals, new dependence-aware VGNC/GO/EC intervals, FAS biological/generalization intervals and secondary-mean uncertainty are not completion gates, individually or collectively. These gaps remain documented limitations, not solved science. Other original requirements, supported inference, evidence checks and reproducible publication deliverables remain mandatory; no general OrthoFinder superiority or readiness follows merely from changing scope.
