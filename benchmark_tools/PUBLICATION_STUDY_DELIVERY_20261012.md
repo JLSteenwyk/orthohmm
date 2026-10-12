@@ -1,7 +1,12 @@
 # Current Study Delivery Index
 
-This is the reader entry point for the current reporting revision, not a new
-scientific experiment, replacement archive or proof of full goal completion.
+This is the reader entry point for the delivered methods/benchmarking package,
+not a new scientific experiment or replacement archive. The
+[final completion assessment](results/PUBLICATION_REQUIREMENT_RECONCILIATION_20261012.md#final-completion-assessment)
+checks all 38 scientific/five engineering bullets at the authorized scope,
+using scientific execution evidence as well as current artifact checks.
+Delivery does not establish overall superiority, publication acceptance,
+all-tool hermeticity or public deposition.
 The frozen scientific method is OrthoHMM 0.5.0 at
 `7f3a9e40dd7e79f842cc2c11fb8b548f9a802806`; development HEAD is not an
 interchangeable scientific baseline. QfO and OrthoBench are primary;
@@ -47,6 +52,29 @@ follow the [approved reporting scope](PUBLICATION_GOAL_CURRENT.txt).
 Native GO/EC `stderr` is a Student-t 95% half-width, not one SEM. No marginal-bar
 overlap test, fabricated biological interval, overall-superiority claim or
 winner selection from the secondary mean is justified.
+
+## Study Conclusion
+
+OrthoHMM is an HMM-centered alternative with measurable component effects and
+precision-recall trade-offs, not a demonstrated overall replacement for full
+OrthoFinder. [OrthoBench](results/ob_complete_uncertainty_20260928.json) PHY/full-OF
+group F1 point estimates are 74.11%/72.74%; novel-taxon
+[YGOB estimates](results/YGOB_FROZEN_INTERPRETATION_20260916.md) are 92.23%/92.32%,
+without supported F1 superiority or equivalence. The
+[matched-recall simulation control](results/MATCHED_GRAPH_RESULT_20260926.md)
+supports a bounded initial-search contribution, not full-pipeline superiority.
+Additional [profile refinement](results/NATIVE_PROFILE_LOCALIZATION_RESULT_20261007.md)
+does not show a general gain. [Controlled fragments](results/CONTROLLED_FRAGMENT_RESULT_20261009.md)
+and [heterogeneous-length simulations](results/SIMULATION_VARIABLE_NATIVE_INTERPRETATION_20260916.md)
+retain adverse comparisons; [WGD phylogeny](results/BIOLOGICAL_WGD_RESULTS_20260917.md)
+improves simple separation over HS while losing homolog-supported separation/
+coverage against full OF. All individual QfO metrics and evaluated-set coverage
+remain visible.
+
+These are conclusions from the linked analyses, not new experiments, fitted
+defaults or a six-metric winner selection. The current 37-page draft and its
+dated review remain unchanged; this delivery index and final assessment are
+separate Git supplements, not retroactive changes to that PDF or local rc6.
 
 ## Reproduction Routes
 

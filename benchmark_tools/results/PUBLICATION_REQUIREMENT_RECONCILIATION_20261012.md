@@ -103,8 +103,10 @@ checks all 24 statistics records and five nested-archive/anchor records against
 the executed rc2 index: paths, byte counts, modes and SHA256 values all match.
 The four original copied-worker commands now appear in the current reader index,
 with native input/base exclusions and original scientific/runtime scope.
-The current goal is ACTIVE and full completion remains unproven, not inferred
-from document edits, 56 tests or pre-existing archive-verifier success.
+At that routing milestone the goal was ACTIVE and full completion remained
+unproven. The final assessment below additionally checks the scientific
+requirements, actual executions and current artifact state; it is not an
+inference from document edits, 56 tests or an archive verifier alone.
 
 The remaining assessment cannot silently turn explicit historical metadata
 unknowns into exact commands or consumption proof. The retained SonicParanoid
@@ -131,10 +133,94 @@ untracked file. All 24 catalogue rows and OrthoHMM/OrthoFinder version
 declarations match the register. These counts precede this final reconciliation
 update and do not claim whole-study restoration or new scientific validation.
 
-Next is the final bounded completion assessment against these 43 original
-requirements and actual deliverables: use the current manuscript conclusion,
-availability and linked evidence to identify any concrete unfinished original
-work, or conclude at the supported scope. Do not invent an attestation layer,
-new archive, new experiment or stronger generalization standard merely because
-historical unknowns remain. The full goal stays ACTIVE pending that assessment;
-the approved uncertainty/resource limitations are not renewed blockers.
+## Final Completion Assessment
+
+The seven-part methods/benchmarking package is delivered under the actual
+amended goal. This conclusion follows the individual 43-row assessment above,
+the retained prospective protocols, numerical/native execution evidence and
+the additional current-state checks below. It does not follow merely from the
+reporting amendments, completed inference jobs, passing tests or a lack of
+obvious remaining work. No mandatory original task remains to execute at the
+authorized scope; unsupported scientific propositions remain unsupported.
+
+| Requirement IDs | Completion Finding |
+| --- | --- |
+| 1.1, 1.2, 1.3, 1.4, 1.5 | Baseline inspection, score/version/command/input/output/resource consolidation, OrthoMCL failure investigation, output/conversion distinctions and prospective method/claim freeze delivered. The 24-cell register and catalogue consolidate known records and explicit unknowns. They do not supply missing historical argv, CPU/RSS, consumed FASTA bytes or universal runtime attestations |
+| 2.1, 2.2, 2.3 | Development exposure inventoried; the prospectively frozen separate-taxon YGOB curated-reference experiment and overlap screen completed. This is the permitted separately tested taxon/reference route, not family-disjoint confirmation, universal generalization or an accuracy advantage |
+| 3.1, 3.2, 3.3, 3.4 | Both original eight-cell cached factorials, matched-recall search control, C-by-R interactions and supplied/inferred-tree distinctions delivered. Every configuration's accuracy/coverage and known/unavailable resource scope is reported. Later fresh-native outcomes remain four admitted/three unavailable; their partial factorial is not called complete or substituted for the original controls |
+| 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7 | Supported appropriate-unit paired analyses recompute benchmark statistics and retain multiplicity/family outcomes. Prespecified error strata, observed stage traces and rule interventions are delivered. Approved descriptive native bars/TreeFam/secondary mean and conditional FAS reporting are integrated; stronger missing intervals are not fabricated or revived as gates |
+| 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11 | Seeded evolutionary simulation, tree/parameter sensitivity and all 27 scaling attempts are accounted for. Twenty-five measured/24 eligible observations and exclusions 0/17/20 remain. Enforced native resources, stage/accounting scopes, workload monitoring, shared-host disclosure and separate historical times are preserved. Failed runs are outcomes, not successful replacements |
+| 6.1, 6.2, 6.3 | Independent experimental cohort, all 240 biological case rows for five method outputs, six prospectively selected examples, exclusions, supported-separation/coverage comparisons and negative diagnostic interventions delivered. Neither experimental classes nor competitor predictions are substituted for orthology truth |
+| 7.1, 7.2, 7.3, 7.4, 7.5 | Machine-derived tables/figures, method diagram, manuscript/checklists, executed native/statistical/reporting workflows, locks/seeds/manifests/tests, reader commands and versioned local archive delivered. Later Git supplements are distinct from the immutable rc6 snapshot. Public deposition, DOI, submission and redistribution review remain explicitly unexecuted external steps, not claimed successes |
+| Engineering 1, Engineering 2, Engineering 3, Engineering 4, Engineering 5 | Focused tested source/results were committed/pushed; provenance, checkpoints, progress and public-only bounded TreeFam search retained. No unrelated worktree changes, large raw-data commit, fabricated result, hidden failure, changed endpoint or custom-aggregate superiority claim introduced |
+
+Historical unknowns in item 1.2 remain unknown, not newly verified facts.
+The completed consolidation is the requested documentation task, not proof
+of unavailable historical execution details. Similarly, reported missing
+measurements and failed experiments are not successful scientific results.
+The finite execution contract requires retaining these limitations rather
+than adding all-tool historical attestation, hermeticity or automatic retry
+as completion gates. The actual completion criteria require interpretable
+controls, scoped uncertainty, documented failures, the attempted authorized
+resource panel and reproducible main-result routes; those have evidence above.
+
+### Additional Actual Readback
+
+The final pass inspected the current manuscript's Methods, Discussion and
+availability; the structured 24-cell metadata/score register; YGOB scores and
+six adjusted endpoints; both factorial result inventories; original ablation
+protocol including its completed unconstrained diagnostic; matched-search
+results; OB/SwissTrees uncertainty controls; simulation/tree/parameter reports;
+development inventory; complete WGD methods/examples; error-stratum/localization
+reports; main-statistics delivery and restored native OB execution records.
+The bootstrap implementations accumulate weighted OB counts and recompute
+F1/P/R, or average prior-adjusted SwissTrees P/R before harmonic F1 within
+each shared family draw. They do not bootstrap a mean of family F1 values.
+
+Readback confirms 70 OB/18 SwissTrees families, eight cells in each original
+factorial, 12/14 planned factorial contrasts, and their 36/42 endpoint
+adjustments. The separate tree panel retains 560 outcomes, 537 scores and
+23 failures. The fixed/variable simulation panels retain 134/267 completed
+outcomes out of 280 each, with the other outcomes explicitly failed. The
+parameter neighborhood retains all variants and null/negative outcomes.
+All five biological method tables have 240 rows, with 239 input-/231
+reference-eligible pairs and all six selected examples. These checks retain
+each study's statistic, successful-pair conditioning and generalization limits.
+
+The existing artifact checker freshly verifies all 166 current HTML render
+records (nine source records, HTML and 156 direct targets) plus the 37-page
+PDF against their actual byte counts/hashes. The local 151785046-byte rc6
+archive matches SHA256
+`2b5f06534de05cf2b1c3778a0db28aff398cb0ed40af3e5e11a7bd680dc34207`.
+Five actual restored-native OB outputs (root partition plus four native TSVs)
+also match their retained pins. The original native comparison has all
+59,770 groups identical, all 70 score objects equal and zero checkpoint reuse.
+This is bounded current readback, not repetition of inference/scoring/timing,
+whole-study raw re-admission, OS certification or a new archive candidate.
+The earlier selected-page visual review and actual copied-worker executions
+are reused at their stated scope, not claimed as fresh executions here.
+
+The live scheduler query shows only the unrelated `fungal-rm2-full` array for
+this account, not an owned publication job awaiting completion. It was left
+untouched. Exploratory lookups of two guessed helper filenames failed because
+those paths do not exist; the actual statistic/review helpers were then located
+and inspected. Those lookups produced no scientific output or rerun.
+
+### Supported Conclusion And External Work
+
+The defensible contribution is a frozen HMM-centered alternative with measured
+component effects and explicit precision-recall trade-offs. Neither the OB
+point advantage, conditional FAS target nor close YGOB F1 point estimates
+establish overall OrthoFinder superiority or equivalence. Heterogeneous-length
+simulations, controlled fragments and supported WGD coverage retain unfavorable
+comparisons. No new default is promoted and the independent transfer test was
+not reused for tuning.
+
+Submission-specific editing, redistribution review before public uploads,
+external archival deposition and DOI registration remain unexecuted. The
+original task requires preparation and documentation of those steps, not
+their execution; they are listed in the current delivery index. Missing
+TreeFam originals, stronger biological uncertainty, historical provenance,
+failed native cells and unknown tool-dependent timing distortion remain
+scientific limitations after task completion. Completion of this package
+is not publication acceptance, solved uncertainty or an all-dataset advantage.

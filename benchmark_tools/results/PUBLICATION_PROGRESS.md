@@ -1,5 +1,75 @@
 # Publication Progress
 
+## Final Seven-Part Completion Assessment (2026-10-12)
+
+Previous goal turn was PROGRESS: current delivery/configuration consolidation
+was committed/pushed at `3b5d8e3b`. This turn read the actual attachment/current
+TOP entry and executed the named manuscript/availability assessment, not an
+outdated producer or another uncertainty-scope question.
+
+The [final assessment](PUBLICATION_REQUIREMENT_RECONCILIATION_20261012.md#final-completion-assessment)
+now concludes the amended seven-part methods/benchmarking package is delivered.
+Every original scientific/engineering bullet has an individual evidence row
+and an explicit grouped completion finding. Prospective freeze/transfer,
+complete original cached controls, supported uncertainty, error/robustness
+analyses, all attempted shared-host resources, full biological cohort and
+executed native/statistical/reporting delivery routes were assessed together.
+This is not completion inferred from prompt repair, missing-interval amendments,
+one green verifier or merely having finished jobs. No new default/superiority
+claim, smaller substitute study or stronger generalization standard is used.
+
+Concrete current readback confirmed: all 24 comparator rows; both original
+eight-cell factorials and 12/14 contrast inventories; 70 OB/18 SwissTrees
+family controls; four admitted/three unavailable newer native QfO cells;
+13 ablation resource rows, 11 measured/ten admitted accuracy; 560 tree outcomes
+(537 scored/23 failed); and all five 240-row biological outputs/six examples.
+Original fixed/variable simulations retain 134/267 completed outcomes out of
+280 each, not universal success. Examined the actual bootstrap implementations,
+unconstrained control, parameter neighborhood, phenotype/stratum protocols and
+stage diagnostics. Historical exact argv/provenance/full-cost unknowns and
+unsupported biological propositions remain explicitly unknown, not fulfilled
+measurements or successful scientific results.
+
+The existing checker freshly verified 166 current render records, the
+37-page PDF, the actual local rc6 archive and five actual restored native OB
+outputs against their byte/hash pins. The original 59,770-group/70-score-object
+comparison and zero checkpoint reuse remain. Earlier copied main-statistics
+executions, visual review and tests are reused at their actual scopes; no
+scientific producer, fresh draw, new native admission or archive candidate
+was created. Missing native outcomes are not imputed or automatically retried.
+
+Current scheduler query lists only unrelated `fungal-rm2-full` jobs for this
+account. They were left untouched. Live own handle: none; all inspection/
+checking commands terminal. Two guessed helper-path lookups returned file-not-
+found; the actual statistic/review sources were then located and inspected.
+No DGX, private session logs, external contacts or exhausted TreeFam search.
+Unrelated dirty samples remain untouched.
+
+The [delivery index](../PUBLICATION_STUDY_DELIVERY_20261012.md) now includes the
+supported conclusion and final assessment. The claim checklist links that
+assessment separately from the still-invalid assertion that amendments alone
+prove readiness. The current manuscript/PDF, all scores/protocols/defaults and
+immutable rc6 are unchanged; final Git supplements are separately versioned.
+Submission formatting, rights review before public redistribution, external
+deposition/DOI/submission remain documented unexecuted steps, not required
+scientific launches or claimed achievements.
+
+Actual final documentation checks passed: 204 local occurrences/115 unique
+tracked targets across the four changed documents (new TOP only for this
+ledger), with no missing/untracked file. All 43 original row identities match
+all 43 final finding identities, without omissions or duplicate coverage;
+the new completion/conclusion anchors exist. Whitespace checks passed and
+the attachment/current prompt remain identical. These are documentation
+checks, not new biological execution or interval validation.
+
+No further authorized original analysis or delivery phase remains after these
+focused documentation changes pass link/whitespace validation and are pushed.
+Final lifecycle action: verify that scoped push, then mark the active goal
+complete using the goal tool. This entry records the completion audit and
+decision, not a fabricated earlier API state. There is no next scientific
+job, new release candidate, native retry, quiet-window request or uncertainty
+gate to replay. Retained scientific limitations persist after task completion.
+
 ## Current Delivery And Configuration Consolidation (2026-10-12)
 
 Actual goal status is ACTIVE. The goal attachment matches the tracked current
