@@ -45,7 +45,10 @@ def reporter_sources():
     names = ("metric_frontier.py", "run_full_search_hillclimb.py", "run_membership_hillclimb.py",
              "score_ygob_groups.py", "validate_qfo_native_assessment.py", "admit_qfo_factorial_cell.py",
              "audit_historical_profile_ablation.py", "qfo_summarize_scores.py", "simulation_method_outputs.py",
-             "summarize_three_kingdoms_parity.py", "orthobench_stage_diagnostics.py", "score_orthobench_partition.py")
+             "summarize_three_kingdoms_parity.py", "orthobench_stage_diagnostics.py", "score_orthobench_partition.py",
+             "report_deferred_cells.py", "run_deferred_copy_split.py", "deferred_qfo_inferred.py",
+             "run_deferred_inferred_supplement.py", "run_held_tree_hillclimb.py",
+             "run_three_kingdoms_membership_supplement.py", "prepare_ob_candidate_neighborhood.py")
     return [record(Path(__file__)), *[record(Path(__file__).with_name(name)) for name in names]]
 
 
@@ -285,7 +288,8 @@ def screen(vectors, control):
             "scope": "Development point-estimate screening only, not default promotion, statistical equivalence or independent confirmation."}
 
 
-def build_report(repo, registry_path, membership_root, supplement_path, full_root, output):
+def build_report(repo, registry_path, membership_root, supplement_path, full_root, output,
+                 deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None):
     output.mkdir(parents=True, exist_ok=False)
     snapshots = output / "snapshots"
     snapshots.mkdir()
@@ -338,11 +342,28 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
             if label not in observed and not (kind == "supplement" and label == "control_path"):
                 cells.append({"method_key": ("membership" if kind == "supplement" else kind) + ":" + label,
                     "dataset": dataset, "status": "not_yet_reported_execution_state_not_inferred", "scores": {}})
+    deferred_specs = []
+    if deferred_fixed_root is not None:
+        deferred_specs.append(("deferred_fixed", "QfO", deferred_fixed_root))
+    if deferred_inferred_root is not None:
+        deferred_specs.extend(("deferred_inferred", dataset, deferred_inferred_root)
+                              for dataset in ("OrthoBench", "ThreeKingdoms"))
+    if deferred_qfo_root is not None:
+        deferred_specs.append(("deferred_inferred", "QfO", deferred_qfo_root))
+    for kind, dataset, root in deferred_specs:
+        from benchmark_tools.report_deferred_cells import collect_deferred_cells
+        write_json(output / "progress.json", {"status": "content_readback_running",
+            "active_cell": {"kind": kind, "dataset": dataset}, "processed_cells": len(cells)})
+        admitted, extra_captures = collect_deferred_cells(repo, kind, dataset, root, snapshots)
+        cells.extend(admitted)
+        captures.extend(extra_captures)
     combine_cells(methods, cells)
     for item in sources:
         check(item)
     screenings = {}
-    for kind, labels in ROUND_ARMS.items():
+    rounds = dict(ROUND_ARMS)
+    rounds.update({kind: ("control", "deferred500") for kind, _, _ in deferred_specs})
+    for kind, labels in rounds.items():
         vectors = {label: methods.get(kind + ":" + label, {"scores": {}})["scores"] for label in labels}
         screenings[kind] = screen(vectors, labels[0])
     report = {"schema_version": 1, "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -354,6 +375,7 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
             "TreeFam is supporting evidence. Functional similarity is not orthology correctness; Three Kingdoms is BUSCO-reference co-membership.",
             "FAS is unseeded: small point differences and Pareto dominance involving it are descriptive, not demonstrated superiority.",
             "Resource observations retain their original scopes; cached replay and fresh full-pipeline times must not be ranked together.",
+            "Fixed-tree copy-deferral diagnostics are separate from candidate-specific inferred-tree vectors and cannot fill their missing endpoints.",
             "Incomplete cells remain missing, not zero. Content snapshots do not imply all scheduler tasks have completed."]}
     write_json(output / "report.json", report)
     write_json(output / "progress.json", {"status": "content_snapshot_readback_finished",
@@ -371,9 +393,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "registry", "membership-root", "supplement", "full-root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root"):
+        parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     report = build_report(args.repo.resolve(), args.registry.resolve(), args.membership_root.resolve(),
-                          args.supplement.resolve(), args.full_root.resolve(), args.output.resolve())
+                          args.supplement.resolve(), args.full_root.resolve(), args.output.resolve(),
+                          args.deferred_fixed_root.resolve() if args.deferred_fixed_root else None,
+                          args.deferred_inferred_root.resolve() if args.deferred_inferred_root else None,
+                          args.deferred_qfo_root.resolve() if args.deferred_qfo_root else None)
     print(json.dumps({"methods": len(report["methods"]), "readback_failures": len(report["readback_failures"])}))
     return 1 if report["readback_failures"] else 0
 
