@@ -1,0 +1,74 @@
+{
+  "control_policy": "OrthoBench retry requires exact matching fresh cap100 candidate/constraints and native products. QfO requires terminal parent admission, all raw gene trees reused and reproduced inferred control scores. No gate is weakened.",
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T17:29:06.396846+00:00",
+  "goal_completed": false,
+  "jobs": [
+    {
+      "cpu": 16,
+      "dataset": "OrthoBench",
+      "execution_plan": {
+        "bytes": 15111573,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/execution_plan.json",
+        "sha256": "09668363ef39e063f9124c403c560b1f0b9810bfd037657a120bc4e80f4d31f5"
+      },
+      "initial_input_records": 44712,
+      "job_id": "24202",
+      "scheduler": "JobId=24202 JobName=ohmm-deferred-ob-r2\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:02:09 TimeLimit=3-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T13:26:57 EligibleTime=2026-10-13T13:26:57\n   AccrueTime=2026-10-13T13:26:57\n   StartTime=2026-10-13T13:26:57 EndTime=2026-10-16T13:26:57 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T13:26:57 Scheduler=Backfill\n   Partition=gpu AllocNode:Sid=bizon-link:709929\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=cpu=16,mem=64G,node=1,billing=16\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/run_deferred_inferred_supplement.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/slurm-24202.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/slurm-24202.log\n   TresPerTask=cpu=16\n   \n\n",
+      "scope": "Development-exposed lossless native HMM/profile graph reconstruction with candidate-specific inferred phylogeny; not fresh full-pipeline timing.",
+      "source_records": 1140,
+      "source_revision": "021027f802808ebe4c12f9ecf954ad744988f3c6",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013"
+    },
+    {
+      "cpu": 16,
+      "dataset": "QfO",
+      "execution_plan": {
+        "bytes": 373669,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/execution_plan.json",
+        "sha256": "e8f3c91d008ab16422d2be467eb682b9387594d4d62bfdb51aa42ba970e913de"
+      },
+      "initial_input_records": 94,
+      "job_id": "24203",
+      "scheduler": "JobId=24203 JobName=ohmm-deferred-qfo-r2\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterany:24202(unfulfilled)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=3-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T13:27:23 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T13:27:23 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:710224\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/run_deferred_copy_split.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/slurm-24203.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/slurm-24203.log\n   TresPerTask=cpu=16\n   \n\n",
+      "scope": "Development-exposed cached HMM-derived candidates/raw gene trees with candidate-specific native inferred species trees; not fresh pipeline timing.",
+      "source_records": 1140,
+      "source_revision": "021027f802808ebe4c12f9ecf954ad744988f3c6",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013"
+    }
+  ],
+  "limitations": [
+    "Launch/admission receipt, not completed native inference or accuracy evidence.",
+    "Cached-stage shared-host resource observations are not fresh full-pipeline timing.",
+    "Original failures and successful Three Kingdoms results are retained unchanged."
+  ],
+  "prior_terminal_attempts": [
+    {
+      "job_id": "24199",
+      "results": {
+        "bytes": 164347,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v1_20261013/results.json",
+        "sha256": "3ce7d2d48980e385511a646e4d1252d06e4119ac5c84e8e7fd98b887ca78f4c3"
+      }
+    },
+    {
+      "job_id": "24200",
+      "results": {
+        "bytes": 143186,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v1_20261013/results.json",
+        "sha256": "ade843a107d357f131024a7aaa33267f6712a59037731966509de1bdb20d6a3f"
+      }
+    }
+  ],
+  "protocol": {
+    "bytes": 3216,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_deferred_recovery_20261013.json",
+    "sha256": "0e8332a0ac476de1e4423bfa60d3c2fcf4cf305b31c412df296944b549e5bf2e"
+  },
+  "retained_successful_three_kingdoms": {
+    "bytes": 30592,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v1_20261013/ThreeKingdoms/results.json",
+    "sha256": "b96f47e4476b97cfea7a0983658eeaed3e51d73c23bb55330fa902df8a9367a1"
+  },
+  "status": "recovery_jobs_submitted_with_prespecified_controls"
+}
