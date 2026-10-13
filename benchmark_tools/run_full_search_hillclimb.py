@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import importlib
 from itertools import zip_longest
 import json
@@ -15,8 +16,9 @@ import sys
 import time
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from Bio import SeqIO
+from Bio import Phylo, SeqIO
 from orthohmm.accuracy import load_accuracy_checkpoint
+from orthohmm.files import fetch_fasta_files
 from benchmark_tools.admit_qfo_factorial_cell import check_pairs
 from benchmark_tools.audit_accuracy_checkpoint import audit
 from benchmark_tools.audit_historical_profile_ablation import read_partition
@@ -31,6 +33,19 @@ from benchmark_tools.score_ygob_groups import read_predictions, membership
 from benchmark_tools.validate_profile_runtime import require_profile_runtime
 
 PLAN_NAME = "hillclimb_full_search_20261012.json"
+
+
+def input_records(fasta, expected_species):
+    paths = [fasta / name for name in fetch_fasta_files(str(fasta))]
+    if len(paths) != expected_species or len(set(paths)) != expected_species:
+        raise ValueError("Unexpected input proteome inventory: " + str(fasta))
+    return [record(path) for path in sorted(paths)]
+
+
+def verify_input_inventory(case):
+    observed = {Path(p).name for p in fetch_fasta_files(case["fasta"])}
+    if observed != {Path(item["path"]).name for item in case["inputs"]}:
+        raise ValueError("Input FASTA inventory changed")
 
 
 def runtime():
@@ -74,15 +89,14 @@ def prepare(repo, source, output, cpu=32):
         if not (source / "orthohmm/search/csrc" / name).is_file():
             raise ValueError("Missing CPU extension: " + name)
     cases = []
+    namespace = hashlib.sha256(str(output).encode()).hexdigest()[:16]
     for dataset in DATASETS:
         historical, _, evidence = original_commands(repo, dataset)
         fasta = Path(argument(historical, "--fasta-directory"))
         tools = [argument(historical, flag) for flag in ("--aligner", "--tree-builder")]
         tool_records = [record(shutil.which(tool) or tool) for tool in tools]
-        inputs = [record(p) for p in sorted(fasta.iterdir()) if p.is_file()]
         expected_species = {"OrthoBench": 12, "QfO": 78, "ThreeKingdoms": 12}[dataset]
-        if len(inputs) != expected_species:
-            raise ValueError("Unexpected input proteome inventory: " + dataset)
+        inputs = input_records(fasta, expected_species)
         baseline = Path(argument(historical, "--output-directory")) / "orthohmm_phylogeny"
         golden = {name: record(baseline / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}
         for index, arm in enumerate(plan["arms"]):
@@ -90,7 +104,7 @@ def prepare(repo, source, output, cpu=32):
             cases.append({"dataset": dataset, **arm, "fasta": str(fasta), "inputs": inputs,
                 "evidence": evidence, "tools": tool_records, "golden": golden,
                 "scorers": scoring_records(repo, dataset), "output": str(folder),
-                "scoring_id": f"fullsearch_20261012_{dataset}_{index}",
+                "scoring_id": f"fullsearch_{namespace}_{dataset}_{index}",
                 "command": native_command(source, fasta, folder, tools, arm["search_max_candidates_per_query"], cpu)})
     report = {"schema_version": 1, "status": "prepared_unrun", "repo": str(repo),
         "source_root": str(source), "source_revision": subprocess.check_output(
@@ -149,9 +163,19 @@ def validate_native(case, cpu):
         raise ValueError("Wrong input/output directory metadata")
     native = json.loads((phylo / "provenance_manifest.json").read_text())
     summary = json.loads((phylo / "reconciliation_summary.json").read_text())
+    native_expected = {"species_tree_mode": "infer", "species_tree_rooting": "min_variance",
+                       "root_duplication_rule": "species_overlap", "pair_orthology_rule": "positive_paralogy"}
+    if any(native.get(key) != value for key, value in native_expected.items()):
+        raise ValueError("Native phylogeny configuration differs")
     taxa = {item["filename"]: item["taxon"] for item in native["input_proteomes"]}
-    if len(taxa) != len(case["inputs"]) or len(set(taxa.values())) != len(taxa):
+    input_hashes = {Path(item["path"]).name: item["sha256"] for item in case["inputs"]}
+    if (len(native["input_proteomes"]) != len(taxa) or len(taxa) != len(case["inputs"])
+            or len(set(taxa.values())) != len(taxa)
+            or {item["filename"]: item["sha256"] for item in native["input_proteomes"]} != input_hashes):
         raise ValueError("Nonbijective native species inventory")
+    tree_taxa = [tip.name for tip in Phylo.read(phylo / "species_tree.rooted.nwk", "newick").get_terminals()]
+    if len(tree_taxa) != len(taxa) or set(tree_taxa) != set(taxa.values()) or set(native["species_tree_taxa"]) != set(tree_taxa):
+        raise ValueError("Inferred species tree taxa differ from inputs")
     owners, filenames = {}, {}
     for item in case["inputs"]:
         path = Path(item["path"])
@@ -216,6 +240,7 @@ def run(path, dataset):
         write_json(folder / "results.json", report)
         started = time.monotonic()
         try:
+            verify_input_inventory(case)
             for item in [record(path), *checked_records(plan, case)]:
                 check(item)
             if runtime() != plan["runtime"]:
@@ -252,6 +277,7 @@ def run(path, dataset):
         finally:
             row["total_full_pipeline_and_scoring_wall_s"] = time.monotonic() - started
             try:
+                verify_input_inventory(case)
                 for item in [report["execution_plan"], *checked_records(plan, case)]:
                     check(item)
                 if runtime() != plan["runtime"]:

@@ -10,6 +10,20 @@ from benchmark_tools import run_full_search_hillclimb as runner
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
+def test_input_inventory_matches_production_reader_not_staging_metadata(tmp_path):
+    (tmp_path / "species.fasta").write_text(">gene\nACDE\n")
+    (tmp_path / "staging_manifest.json").write_text("{}")
+    inputs = runner.input_records(tmp_path, 1)
+    assert [Path(item["path"]).name for item in inputs] == ["species.fasta"]
+    case = {"fasta": str(tmp_path), "inputs": inputs}
+    runner.verify_input_inventory(case)
+    (tmp_path / "extra.faa").write_text(">foreign\nACDE\n")
+    with pytest.raises(ValueError, match="inventory changed"):
+        runner.verify_input_inventory(case)
+    with pytest.raises(ValueError, match="Unexpected input proteome inventory"):
+        runner.input_records(tmp_path, 1)
+
+
 def test_command_changes_only_initial_cap(tmp_path):
     tools = ["mafft", "FastTree"]
     control = runner.native_command(tmp_path, tmp_path, tmp_path, tools, 100, 32)
@@ -56,7 +70,7 @@ def fake_plan(tmp_path, monkeypatch):
     for label in ("control100", "cap400"):
         folder = Path(plan["output"]) / "OrthoBench" / label
         plan["cases"].append({"dataset": "OrthoBench", "label": label,
-            "output": str(folder), "command": [label]})
+            "output": str(folder), "command": [label], "fasta": str(tmp_path), "inputs": []})
     path = tmp_path / "plan.json"
     path.write_text(json.dumps(plan))
     monkeypatch.setattr(runner, "checked_records", lambda *args: [])
@@ -154,4 +168,12 @@ def test_real_small_full_pipeline_and_independent_native_validation(tmp_path):
     data["metadata"]["search_max_candidates_per_query"] = 400
     metrics_path.write_text(json.dumps(data))
     with pytest.raises(ValueError, match="parameters differ"):
+        runner.validate_native(case, 2)
+    data["metadata"]["search_max_candidates_per_query"] = 100
+    metrics_path.write_text(json.dumps(data))
+    manifest_path = phylo / "provenance_manifest.json"
+    native = json.loads(manifest_path.read_text())
+    native["input_proteomes"][0]["sha256"] = "foreign"
+    manifest_path.write_text(json.dumps(native))
+    with pytest.raises(ValueError, match="native species inventory"):
         runner.validate_native(case, 2)

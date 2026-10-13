@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "failed_preparation_before_job_submission",
+  "source_revision": "12daf8c1",
+  "source_root": "benchmarks/work/full_search_hillclimb_r1_20261012",
+  "attempted_output": "benchmarks/results/full_search_hillclimb_r1_20261012",
+  "exit_code": 1,
+  "error_type": "ValueError",
+  "error": "Unexpected input proteome inventory: QfO",
+  "cause": "The corrected input directory contains staging_manifest.json in addition to the 78 FASTA proteomes. Preparation incorrectly counted every regular file as a proteome.",
+  "correction": "Use production fetch_fasta_files for inventory selection, add a regression for non-FASTA staging metadata and added FASTA detection, and bind scoring namespaces to the unique execution output directory.",
+  "outputs_created": false,
+  "benchmark_job_submitted": false,
+  "accuracy_evaluated": false,
+  "historical_results_modified": false,
+  "retry_policy": "Preserve this frozen source and failure receipt; prepare corrected committed source in a new v2 namespace."
+}
