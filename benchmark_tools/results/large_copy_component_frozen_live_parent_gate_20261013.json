@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/home/bizon/anaconda3/bin/python",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py",
+    "prepare",
+    "--repo",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm",
+    "--source-root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013",
+    "--output",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v1_20261013/QfO",
+    "--dataset",
+    "QfO",
+    "--branch-root",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013",
+    "--comparison",
+    "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v7_20261013/summary.json"
+  ],
+  "comparison": {
+    "bytes": 529521,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v7_20261013/summary.json",
+    "sha256": "e8b28c5cb3933b18bc4fe9676b21fb139f8d487c5083df0c6a4a589416b458b3"
+  },
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "new_inference_launched": false,
+  "output_namespace_uncreated": true,
+  "returncode": 1,
+  "runner": {
+    "bytes": 20268,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py",
+    "sha256": "c9ec6aeb18f3ea9d5aee9fc511d82e85b717c865438fec0722b750dfa96f4939"
+  },
+  "scheduler": "             JOBID      STATE       TIME   CPUS                           NAME\n             24204    PENDING       0:00     32           ohmm-qfo-cap-recover\n           24190_2    PENDING       0:00     32                  ohmm-full-cap\n             24207    RUNNING    2:22:46     16               ohmm-copy-branch\n           24190_1    RUNNING   14:01:02     32                  ohmm-full-cap\n",
+  "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013",
+  "status": "expected_negative_control_partial_vector_refused_before_preparation",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py\", line 300, in <module>\n    raise SystemExit(main())\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py\", line 293, in main\n    result = (prepare(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.dataset,\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py\", line 90, in prepare\n    cells = admitted_branch_cells(comparison, dataset)\n  File \"/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py\", line 38, in admitted_branch_cells\n    raise ValueError(\"Require complete independently admitted branch vectors before component inference\")\nValueError: Require complete independently admitted branch vectors before component inference\n",
+  "stdout": ""
+}

@@ -1,0 +1,123 @@
+{
+  "available_cpu_extensions_and_c_sources": [
+    {
+      "bytes": 9098,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/pair_align.c",
+      "sha256": "c5a3c2bc869ec59ca8261c976d6e77e5938faf5bfd8571566315b81cf5b08e9a"
+    },
+    {
+      "bytes": 20784,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/pair_align.so",
+      "sha256": "81c26c6ce92b1da37285824ea1b8dcea007a7fc18a11ee5fa3d150628fa800c7"
+    },
+    {
+      "bytes": 46143,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/hmm_viterbi.c",
+      "sha256": "109bfbadd8af9b5e19a5f0d496e2b7a78503567ab4a8095fceafbb171b3d6693"
+    },
+    {
+      "bytes": 58856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/hmm_viterbi.so",
+      "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+    },
+    {
+      "bytes": 10657,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/kmer_prefilter.c",
+      "sha256": "8124e2652cb382549f2a282c3122aaa9f5c393da2b304b5d4f6cb92fae243f01"
+    },
+    {
+      "bytes": 20632,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/search/csrc/kmer_prefilter.so",
+      "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+    }
+  ],
+  "defaults_promoted": false,
+  "errors": 0,
+  "extension_scope": "Available copied local artifacts with matching C identities, not proof that all native kernels were exercised by unit tests.",
+  "failures": 0,
+  "goal_completed": false,
+  "junit": {
+    "bytes": 70498,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_pipeline_frozen_tests_20261013.xml",
+    "sha256": "5c53e797611766c147118d855f230f24edcdd9b1a7aad6cdad0b2072d0f9aae8"
+  },
+  "live_parent_negative_control": {
+    "bytes": 3674,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_frozen_live_parent_gate_20261013.json",
+    "sha256": "6b18863d3283f5dc1b8ccdff23005fd7cffc707233be95ba90de241b61626001"
+  },
+  "new_component_accuracy_scores": false,
+  "new_inference_launched": false,
+  "next_steps": [
+    "Finish QfO medium-only FAS scoring and the existing branch postflight without duplicate native inference.",
+    "Independently admit the terminal QfO branch vector and update the comparison in a fresh namespace.",
+    "Prepare each dataset with the frozen runner, submit bounded sequential local allocations, and use the frozen independent reader to reconstruct candidates and read raw scores.",
+    "Report all eight endpoints and retain failure/tradeoff records; no default promotion from development-only results."
+  ],
+  "passed": 326,
+  "prespec": {
+    "bytes": 5121,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_large_copy_components_20261013.json",
+    "sha256": "97fd6734477d784227aaa8c0b1d09d7854f20a73a855c4dd24b3fade8e43a187"
+  },
+  "source_records": [
+    {
+      "bytes": 20268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.py",
+      "sha256": "c9ec6aeb18f3ea9d5aee9fc511d82e85b717c865438fec0722b750dfa96f4939"
+    },
+    {
+      "bytes": 6608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/readback_large_copy_components.py",
+      "sha256": "126f00890f33a552260c35ecc48ab7d55855eca5664bc5bda6bf1cce10eb7893"
+    },
+    {
+      "bytes": 445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_large_copy_components.slurm",
+      "sha256": "5eb01b47a8b3665226bd1b35149f5dc32ac7e91bdfa0e7b70884c5e7c60d860b"
+    },
+    {
+      "bytes": 28532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_copy_branch_ablation.py",
+      "sha256": "e2a6cdd7f0e7ce87978ad74222345bc6a9430f367df972cbcbf3cadadcf67f1a"
+    },
+    {
+      "bytes": 20131,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/run_deferred_copy_split.py",
+      "sha256": "736ec511fcf6d91c65fe303da63aa6210902f7c552d1bc63928b7af4a9753413"
+    },
+    {
+      "bytes": 12050,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/replay_phylogeny.py",
+      "sha256": "17e2637f7367bb23430fbe4d31ff0a21e3bfece418f305a38f3ff412fc795879"
+    },
+    {
+      "bytes": 27033,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/report_hillclimb.py",
+      "sha256": "1f9f93d2adde242e6e4132ef9b1cc25bc58572409652bbc5badd64c395be6b97"
+    },
+    {
+      "bytes": 10824,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/benchmark_tools/prepare_orthobench_factorial.py",
+      "sha256": "8363f1f5720424ed2aa79ad073eac3b09d726be0f8c63157293dfb20683f8bdd"
+    },
+    {
+      "bytes": 15046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/tests/unit/test_run_large_copy_components.py",
+      "sha256": "3e897fb026bb8f8cb7697e67a562ddc529cdfe2e6f443d5716967447ff2205b2"
+    },
+    {
+      "bytes": 3846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/tests/unit/test_readback_large_copy_components.py",
+      "sha256": "92642417cd1e19b293b4d2ae8beac9f3b2d7be51ea36b7b55ec85f2a239c7781"
+    },
+    {
+      "bytes": 68431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013/orthohmm/refinement.py",
+      "sha256": "738f7c328d17c08911b2a2face38dd59b13e6c9a3dabafcc7c5241149c80e3eb"
+    }
+  ],
+  "source_revision": "9e2584495ce78cf475cb41eefb4fcaab4fbd66e6",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_pipeline_r1_v1_20261013",
+  "status": "frozen_component_benchmark_workflow_ready_pending_terminal_branch_admission"
+}
