@@ -17,11 +17,19 @@
     {
       "name": "CGOB curated fungal groups",
       "primary_sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC2880306/", "https://www.repository.cam.ac.uk/handle/1810/309455", "http://cgob3.ucd.ie/info.html", "http://cgob3.ucd.ie/Public_Data/Sequences/"],
-      "status": "metadata_and_public_sequence_route_verified_no_sequence_or_reference_download_yet",
-      "evidence": "Authors describe curated groups informed by synteny and sequence evidence. Official directory exposes AA.fsa and documentation, allowing release-matched sequence staging rather than substituting a newer unrelated annotation release.",
-      "decision": "Potential novel-taxon curated-group transfer panel, not admitted as an independent orthology gold standard. Before any scoring, stage the official release, document ON/OFF eligibility and taxon mappings, audit overlap with all development-exposed sources including YGOB, and establish what the curated groups mean relative to the intended ancestral level.",
+      "status": "official_sequence_release_staged_overlap_audited_and_independently_reproduced_reference_labels_unopened",
+      "evidence": "Authors describe curated groups informed by synteny and sequence evidence. The official 2019 AA.fsa snapshot was staged without substituting current annotations. A label-blind audit and independent raw-FASTA readback agree on 109204 records and the reported sequence overlaps.",
+      "audit": "benchmark_tools/results/confirmation_cgob_overlap_20261013.json",
+      "readback": "benchmark_tools/results/confirmation_cgob_overlap_readback_20261013.json",
+      "candidate_proteins": 109204,
+      "proteins_matching_corrected_qfo": 8180,
+      "proteins_matching_three_kingdoms": 6361,
+      "proteins_matching_ygob": 6390,
+      "union_matching_candidate_records": 8846,
+      "decision": "The complete release is not strictly sequence-disjoint. Potential curated fungal transfer panel, not admitted as an independent orthology gold standard. Do not treat the nonmatching remainder as automatically independent. Freeze the candidate before label access, document ON/OFF eligibility and taxon mappings, and establish the curated groups' ancestral-level semantics and redistribution permissions before any scoring.",
       "transport_limitation": "The legacy CGOB public archive is available over HTTP. Hashes bind a snapshot but do not authenticate that transport. Prefer authenticated publisher mirrors if available; keep this limitation explicit.",
       "annotation_release_warning": "Current Candida Genome Database protein downloads exist, but must not be substituted for the older curated CGOB release without a validated mapping.",
+      "reference_classifications_downloaded": false,
       "accuracy_evaluated": false
     },
     {
