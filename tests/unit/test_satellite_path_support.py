@@ -132,3 +132,30 @@ def test_replay_rejects_path_policy_without_constraints_before_writing(tmp_path)
               '--json', str(tmp_path / 'report.json'),
               '--satellite-membership-rule', 'high_confidence_path'])
     assert not (tmp_path / 'out').exists()
+
+
+@pytest.mark.parametrize('extra', [[], ['--phylogeny', 'reconcile', '--species_tree_mode', 'infer']])
+def test_production_rejects_path_without_satellite_v2(tmp_path, extra):
+    from orthohmm.args_processing import process_args
+    from orthohmm.parser import create_parser
+    args = create_parser().parse_args([
+        str(tmp_path), '--accuracy_profile', 'high_sensitivity',
+        '--satellite_membership_rule', 'high_confidence_path', *extra])
+    with pytest.raises(SystemExit) as error:
+        process_args(args)
+    assert error.value.code == 1
+
+
+def test_production_passes_opt_in_rule_without_changing_default(tmp_path, monkeypatch):
+    import orthohmm.args_processing as processing
+    from orthohmm.parser import create_parser
+    monkeypatch.setattr(processing, 'validate_phylogeny_config', lambda config, files: config)
+    default = processing.process_args(create_parser().parse_args([str(tmp_path)]))
+    assert default['satellite_membership_rule'] == 'high_confidence_pair'
+    args = create_parser().parse_args([
+        str(tmp_path), '--accuracy_profile', 'high_sensitivity',
+        '--phylogeny', 'reconcile', '--species_tree_mode', 'infer',
+        '--phylogeny_candidates', 'satellite_v2',
+        '--satellite_membership_rule', 'high_confidence_path'])
+    configured = processing.process_args(args)
+    assert configured['satellite_membership_rule'] == 'high_confidence_path'

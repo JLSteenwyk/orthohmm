@@ -792,6 +792,8 @@ def _execute(
         candidate_membership_constraints = candidate_result.pop(
             "_membership_constraints", None
         )
+        if "membership_policy" in candidate_result:
+            candidate_result["membership_policy"] = satellite_membership_rule
         metrics.add_metadata(phylogeny_candidate_profile=candidate_result)
         metrics.add_counts(
             phylogeny_seed_families=candidate_result["seed_families"],
