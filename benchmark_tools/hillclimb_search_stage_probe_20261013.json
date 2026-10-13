@@ -1,0 +1,40 @@
+{
+  "schema": "label_free_search_stage_probe_v1",
+  "status": "prespecified_before_micro_search_evaluation",
+  "motivation": "The live 78-species initial search has 6084 directed species tasks and uses four workers with eight scoring threads each. A passive sample found about 25 scoring core equivalents, but non-blocking stack profiling was denied. Measure stage costs in a separate bounded process before proposing a computational optimization.",
+  "live_frozen_search_plan": "benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+  "cohort": {
+    "species": "Three FASTA filenames with smallest SHA256(filename) among the frozen QfO inputs; no reference labels or outcome-based selection.",
+    "pairs": "Cyclic directed comparisons A->B, B->C, C->A in selected-species hash order.",
+    "queries_per_pair": 32,
+    "query_selection": "Smallest SHA256(gene identifier), restored to original FASTA order for encoding and local-index interpretation.",
+    "targets": "Complete corresponding target proteome, not a truncated database."
+  },
+  "settings": {
+    "matrix": "BLOSUM62",
+    "band_width": 64,
+    "kmer_k": 3,
+    "prefilter_phase_a_topk": 5000,
+    "min_total_hits": 4,
+    "min_diag_hits": 1,
+    "diag_bin_width": 10,
+    "candidate_caps": [100, 400],
+    "evalue_threshold": 0.0001,
+    "threads": 4,
+    "cuda_visible_devices": ""
+  },
+  "execution": "For each pair and cap, run the native search once without wrappers and once with transparent timing wrappers. Require byte-identical indices, scores, E-values and candidate counts. Timing wrappers return the original result unchanged, preserve exceptions and record inclusive stage costs; do not alter search code or running benchmarks.",
+  "report": ["Full consumed input/source/runtime identities", "selected gene identifiers and original indices", "FASTA load wall/CPU time", "index/prefilter/profile/Viterbi/E-value inclusive stage wall/CPU times", "candidate and significant-hit counts", "native output fingerprints and instrumentation-equivalence checks", "Linux post-exec peak RSS", "shared-host activity", "failures and unavailable stages"],
+  "resources": {"host": "local shared Threadripper", "cpus": 4, "memory_gib": 16, "wall_limit_minutes": 20},
+  "selection_rule": "Use measured costs only to prioritize a future bounded, opt-in, output-preserving computational experiment. No new default, accuracy selection, reference-family exception, full-pipeline speedup estimate or extrapolated ETA from this probe.",
+  "limitations": [
+    "Reference-free sampling does not make previously examined QfO inputs independent confirmation.",
+    "Tiny query subsets and three species comparisons are not representative of all 6084 tasks or all protein lengths.",
+    "Uninstrumented first runs and instrumented second runs have different warm-up/cache conditions; their total times must not be interpreted as an optimization contrast.",
+    "Inclusive stages may contain nested work. Do not sum overlapping stage intervals or claim isolated/shared-host speed rankings.",
+    "Significant-hit counts are not orthology accuracy; actual full-search cap trials and component phylogeny benchmarks remain authoritative for those endpoints.",
+    "No source or parameters of live jobs, no scientific environment packages, and no unrelated workloads may be changed."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
