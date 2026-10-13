@@ -16,6 +16,7 @@ Adapted from ClustKIT's kmer_index.py / kmer_score.c.
 import ctypes
 import logging
 import os
+import operator
 from dataclasses import dataclass
 import numpy as np
 from numba import njit, prange, int32, int64, int16
@@ -541,6 +542,7 @@ def prefilter_candidates(
     n_threads=4,
     sub_matrix=None,
     prepared_index=None,
+    phase_a_topk=5000,
 ):
     """K-mer pre-filtering with ungapped extension re-ranking.
 
@@ -561,12 +563,25 @@ def prefilter_candidates(
     max_candidates_per_query : cap on candidates per query
     n_threads : OpenMP thread count (C path only)
     sub_matrix : 20x20 int8 substitution matrix for extension scoring
+    phase_a_topk : shortlist size before extension ranking (C path only)
 
     Returns
     -------
     all_candidate_ids : int32 array (flat)
     all_candidate_offsets : int64 array (N_queries + 1)
     """
+    if isinstance(phase_a_topk, (bool, np.bool_)):
+        raise ValueError("phase_a_topk must be a positive int32 integer")
+    try:
+        phase_a_topk = operator.index(phase_a_topk)
+    except TypeError as exc:
+        raise ValueError("phase_a_topk must be a positive int32 integer") from exc
+    if not 0 < phase_a_topk <= np.iinfo(np.int32).max:
+        raise ValueError("phase_a_topk must be a positive int32 integer")
+    _, c_available = _load_c_prefilter()
+    if phase_a_topk != 5000 and (not c_available or sub_matrix is None):
+        raise ValueError("nondefault phase_a_topk requires C extension ranking")
+
     if prepared_index is None:
         prepared_index = prepare_kmer_index(
             target_species,
@@ -597,14 +612,14 @@ def prefilter_candidates(
     num_db = target_species.num_sequences
 
     # Prefer C/OpenMP path
-    _, c_available = _load_c_prefilter()
     if c_available:
         return _prefilter_c(
             query_flat, query_species.offsets, query_species.lengths,
             k, alpha_size,
             kmer_offsets, kmer_entries, kmer_freqs, int32(freq_thresh),
             num_db, min_total_hits, min_diag_hits, diag_bin_width,
-            max_candidates_per_query, n_threads=n_threads,
+            max_candidates_per_query, phase_a_topk=phase_a_topk,
+            n_threads=n_threads,
             # Pass original sequences for extension re-ranking
             query_flat_original=query_species.flat_sequences,
             target_flat_original=target_species.flat_sequences,

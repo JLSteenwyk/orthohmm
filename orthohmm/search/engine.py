@@ -152,6 +152,7 @@ def search_species_pair_indexed(
     max_candidates_per_query: int = 0,
     n_threads: int = 4,
     prepared_index=None,
+    prefilter_phase_a_topk: int = 5000,
 ) -> IndexedSpeciesPairResults:
     """Execute profile HMM search for one species pair.
 
@@ -210,6 +211,7 @@ def search_species_pair_indexed(
         n_threads=n_threads,
         sub_matrix=sub_matrix,
         prepared_index=prepared_index,
+        phase_a_topk=prefilter_phase_a_topk,
     )
     del prepared_index
 
