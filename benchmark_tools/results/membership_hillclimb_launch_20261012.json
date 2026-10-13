@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "status_at_recording": "launched_first_two_orthobench_arms_scored",
+  "prespecified_plan": "benchmark_tools/hillclimb_round1_20261012.json",
+  "plan_commit": "e1406609",
+  "implementation_commit": "5b12b6ff",
+  "frozen_execution_revision": "8986323dd0d43c990326745ba63629b79b9f7dac",
+  "production_cli_metadata_followup": "80b9b743",
+  "execution_plan": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/execution_plan.json",
+    "bytes": 1011650,
+    "sha256": "ba9cc7ee905fd0423abfc9edb1466b74a64660808d363838f41dfee4c3886119"
+  },
+  "scheduler": {
+    "array_job_id": "24180",
+    "datasets": {"0": "OrthoBench", "1": "QfO", "2": "ThreeKingdoms"},
+    "concurrent_dataset_tasks": 1,
+    "node": "bizon",
+    "cpus_per_task": 32,
+    "memory_per_task": "128G",
+    "unrelated_jobs_modified": false
+  },
+  "prepared_cases": 10,
+  "unavailable_cases": 2,
+  "unavailable_scope": "The two broader Three Kingdoms arms require a separate CPM 0.08 candidate preparation; these are not zero scores or successful runs.",
+  "early_orthobench_results": {
+    "control_direct": {"F1": 0.7410607351873405, "retained_output_hashes_match": true},
+    "control_path": {"F1": 0.7399513851533019, "path_supported_constraints": 393, "additional_retained_pair_predictions": 2880},
+    "interpretation": "The first membership-only arm has a small F1 regression, not demonstrated accuracy improvement. Finish the prespecified panel and report each metric separately."
+  },
+  "tests": {
+    "frozen_runner_suite": {"passed": 119, "artifact": "benchmark_tools/results/membership_hillclimb_tests_20261012.xml"},
+    "production_cli_followup_suite": {"passed": 122, "artifact": "benchmark_tools/results/membership_hillclimb_cli_tests_20261012.xml"},
+    "retained_baseline_scoring_smoke": "Independent formula reproduced OrthoBench F1 0.7410607351873405 and agreed with the one-decimal official script."
+  },
+  "superseded_unexecuted_preparation": {
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_20261012/execution_plan.json",
+    "sha256": "98e8eeb6fadba1b2b6a8972a04fd1b44e2d34ab8e935221c8f057b8178afae47",
+    "reason": "Correct the official-score comparison tolerance for one-decimal percentage output before any benchmark execution."
+  },
+  "live_results": "benchmarks/results/membership_hillclimb_r1_v2_20261012/<dataset>/results.json",
+  "automatic_summary": "benchmarks/results/membership_hillclimb_r1_v2_20261012/summary.json",
+  "defaults_promoted": false,
+  "publication_baseline_replaced": false,
+  "limitations": [
+    "Cached HMM-derived candidates and native reconciliation replay do not test recovery of missing initial-search hits.",
+    "Incremental timing on the shared Threadripper is not isolated full-pipeline efficiency evidence.",
+    "Existing datasets are development-exposed; no new independent-generalization claim.",
+    "QfO FAS sampling is unseeded; small differences need sampling-aware interpretation.",
+    "This receipt records launch and early results, not completion of the full optimization program."
+  ]
+}
