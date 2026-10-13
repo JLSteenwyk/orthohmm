@@ -1,0 +1,79 @@
+{
+  "accuracy_scores_admitted": false,
+  "crash_location": "original frozen report_hillclimb.py replay_native line 136 candidate ownership reconstruction",
+  "defaults_promoted": false,
+  "failed_job": "24214",
+  "faulthandler": {
+    "bytes": 1528,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/job_24214.err",
+    "sha256": "dac55426106e5c15ecd929e07b2605344b7052409f576d22a0996d6f2a6ec874"
+  },
+  "frozen_probe_tests": {
+    "bytes": 1482,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_native_recovery_probe_frozen_tests_20261013.xml",
+    "sha256": "520adf67834d2209dc90c035e5b2ba79ebf9834c6c18835ef216b3c66e13753e"
+  },
+  "goal_completed": false,
+  "native_counts_not_yet_independently_admitted": {
+    "bypassed_families": 268858,
+    "candidate_families": 293719,
+    "checkpoint_hits": 23255,
+    "duplications": 263666,
+    "ortholog_pairs": 6977340,
+    "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/components500/output/orthohmm_phylogeny",
+    "reconciled_families": 24861,
+    "remapped_checkpoint_hits": 23240,
+    "root_hogs": 309112,
+    "speciations": 275140,
+    "species_tree_checkpoint_hit": false,
+    "species_tree_families": 25,
+    "uncertain_events": 86044
+  },
+  "native_exit_status_observed": 0,
+  "native_inference_rerun": false,
+  "native_metrics": {
+    "bytes": 9291,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/components500/metrics.json",
+    "sha256": "df5bc64e775e6cd7adc23cf30e7f3525cc6143487df9157e252fad7c58581ab9"
+  },
+  "native_metrics_status": "complete",
+  "native_time": {
+    "bytes": 2189,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/components500/native.time.txt",
+    "sha256": "fbadaa30a0468b1c62f4f170ef4b9e243f4bfba932acd0db219cbcbe4cf2b624"
+  },
+  "producer_snapshot": {
+    "bytes": 75549,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/large_copy_components_r1_v2_20261013/QfO/results.json",
+    "sha256": "96b8cf8b5f4145d086caeccc4623add3f4cb710df550b72f479d1cdc7a9e5596"
+  },
+  "producer_status": "native_running is stale after terminal parent failure",
+  "recovery_allocation": {
+    "cpus": 1,
+    "memory_gib": 64,
+    "wall_limit_minutes": 30
+  },
+  "recovery_helper": {
+    "bytes": 5223,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_native_recovery_probe_r1_v1_20261013/benchmark_tools/probe_component_native_recovery.py",
+    "sha256": "d5b91a1cf9db495a9cb0303f0c172d1d7ea20453c0b78f9a9354af3bd036c246"
+  },
+  "recovery_launcher": {
+    "bytes": 470,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_native_recovery_probe_r1_v1_20261013/benchmark_tools/probe_component_native_recovery.slurm",
+    "sha256": "3bdad5b459744111729b1cd1ffa8eba965ea069aa535224e80ab837d16157f7d"
+  },
+  "recovery_probe_job": "24219",
+  "recovery_probe_source_revision": "56fdbd11",
+  "recovery_probe_source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_native_recovery_probe_r1_v1_20261013",
+  "recovery_protocol": {
+    "bytes": 1634,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_native_recovery_probe_r1_v1_20261013/benchmark_tools/hillclimb_component_native_recovery_probe_20261013.json",
+    "sha256": "881e00faf98de52c1d4df080761fac66e4bd6ec37f2e6b0b0b6f7f3de9fd226b"
+  },
+  "scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS\n24214|FAILED|0:11|00:55:16|16\n",
+  "scientific_parameters_changed": false,
+  "scope": "Complete native receipt and zero native exit do not establish correctness, final benchmark scores, or a diagnosed cause of parent signal 11.",
+  "status": "parent_signal11_after_native_completion_accuracy_unadmitted",
+  "tests_passed": 8
+}
