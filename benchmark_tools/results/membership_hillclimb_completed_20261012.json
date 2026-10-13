@@ -1,0 +1,192 @@
+{
+  "comparison": {
+    "bytes": 3132518,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v3_20261012/report.json",
+    "sha256": "0b455b8133d6ca8818dc55d14450b857ab4af5898813068c1bc2c9b7a8beca34"
+  },
+  "comparisons": {
+    "broader_direct": {
+      "complete_eight_endpoint_contrast": true,
+      "deltas_from_matched_control": {
+        "OrthoBench: OrthoBench F1": 0.004800733525556544,
+        "QfO: EC": 0.0015365000000000517,
+        "QfO: FAS": -0.0025174450740028664,
+        "QfO: GO": 0.0009670099999999904,
+        "QfO: SwissTrees F": -0.042499487995931284,
+        "QfO: TreeFam-A F": -0.006708122367401703,
+        "QfO: VGNC F": -0.01342557140820766,
+        "ThreeKingdoms: Three Kingdoms F1": 0.0017276048717634884
+      },
+      "passes_point_estimate_screen": false
+    },
+    "broader_path": {
+      "complete_eight_endpoint_contrast": true,
+      "deltas_from_matched_control": {
+        "OrthoBench: OrthoBench F1": 0.00019960098593241327,
+        "QfO: EC": 0.0013372999999999857,
+        "QfO: FAS": -0.0028937322553234113,
+        "QfO: GO": 0.0009751700000000252,
+        "QfO: SwissTrees F": -0.041046781126742315,
+        "QfO: TreeFam-A F": -0.005985409420092069,
+        "QfO: VGNC F": -0.013373944424099782,
+        "ThreeKingdoms: Three Kingdoms F1": 0.0017276048717634884
+      },
+      "passes_point_estimate_screen": false
+    },
+    "control_direct": {
+      "complete_eight_endpoint_contrast": true,
+      "deltas_from_matched_control": {
+        "OrthoBench: OrthoBench F1": 0.0,
+        "QfO: EC": 0.0,
+        "QfO: FAS": 0.0,
+        "QfO: GO": 0.0,
+        "QfO: SwissTrees F": 0.0,
+        "QfO: TreeFam-A F": 0.0,
+        "QfO: VGNC F": 0.0,
+        "ThreeKingdoms: Three Kingdoms F1": 0.0
+      },
+      "passes_point_estimate_screen": false
+    },
+    "control_path": {
+      "complete_eight_endpoint_contrast": true,
+      "deltas_from_matched_control": {
+        "OrthoBench: OrthoBench F1": -0.0011093500340385587,
+        "QfO: EC": -0.00017769000000000812,
+        "QfO: FAS": -0.0018599001532024761,
+        "QfO: GO": -0.00016328999999998262,
+        "QfO: SwissTrees F": 0.001426360646228808,
+        "QfO: TreeFam-A F": 0.0018585387698059064,
+        "QfO: VGNC F": 0.0,
+        "ThreeKingdoms: Three Kingdoms F1": 0.0
+      },
+      "passes_point_estimate_screen": true
+    }
+  },
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T03:16:40.670031+00:00",
+  "goal_completed": false,
+  "held_tree_native_control_snapshot": {
+    "retained_report_snapshot": {
+      "bytes": 96449,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/held_tree_own_native_snapshot_20261012.json",
+      "sha256": "3ab2116a6158c8484666ef9b825adc523bc45c9f6ce4d92f52d613573a7539b1"
+    },
+    "golden_matches": {
+      "orthohmm_pairwise_orthologs.tsv": true,
+      "orthohmm_pairwise_orthologs_confidence.tsv": true,
+      "orthohmm_root_hogs.tsv": true
+    },
+    "live_report_receipt": {
+      "bytes": 96449,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/results.json",
+      "sha256": "3ab2116a6158c8484666ef9b825adc523bc45c9f6ce4d92f52d613573a7539b1"
+    },
+    "outputs": [
+      {
+        "bytes": 34733759,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/broader_own_tree/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+        "sha256": "2f6574baa8a9db479bbfc80a5e65b513e4cb4e456d8129af8469e55e0982bd6e"
+      },
+      {
+        "bytes": 495756609,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/broader_own_tree/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+        "sha256": "9def6a661557949801aff77d849cbba7f5a2752be2be8d395b4b69623c1a1962"
+      },
+      {
+        "bytes": 531358755,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/broader_own_tree/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+        "sha256": "a83d81e6a7cf086041127d0e3189b62e6d051bff30d377ed8ecd9803b6189746"
+      }
+    ],
+    "producer_status_at_read": "native_outputs_verified_scoring_pending",
+    "scope": "Native own-tree equivalence and raw-tree reuse; scoring and variant evaluation still pending. Not terminal job admission.",
+    "summary": {
+      "bypassed_families": 337428,
+      "candidate_families": 361165,
+      "checkpoint_hits": 23737,
+      "duplications": 228179,
+      "ortholog_pairs": 5959141,
+      "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/broader_own_tree/output/orthohmm_phylogeny",
+      "reconciled_families": 23737,
+      "remapped_checkpoint_hits": 0,
+      "root_hogs": 374407,
+      "schema_version": 1,
+      "speciations": 249341,
+      "species_tree_checkpoint_hit": false,
+      "species_tree_families": 0,
+      "uncertain_events": 77140
+    }
+  },
+  "limitations": [
+    "Three fixed metadata/score receipts are directly rehashed; their prior raw prediction/input/runtime audits are reused, not rerun. Transitive artifact identities remain inherited.",
+    "All 24 original rows, including exact scores, versions, semantics, commands, input notes, gaps and resources, are preserved. Version text is not universal runtime attestation.",
+    "Seven historical Three Kingdoms supplements add recorded argv, metrics, source/harness chronology and recovery events. Directory/output association is not immutable historical execution or input-consumption proof.",
+    "The contemporary matched Sonic row is unchanged; do not attach its replaced historical run's timing or commands.",
+    "Thirty-seven table entries preserve 29 earlier resource entries, including unavailable placeholders, and add eight supplemental intervals. Not 37 independent runs: wrappers, native intervals, cached replay, checkpoint conversion and recovered stages are not summed, replaced or treated as independent repeats.",
+    "GNU-time process RSS, sampled tree RSS, driver/container scopes and historical allocations remain distinct. Unknown is not zero. Shared-host contention is unknown and potentially method dependent; no isolated speed ranking.",
+    "The sequence-only OrthoFinder output remains a same-full-run MCL checkpoint, not a separately timed sequence-only inference. FastOMA supplied-tree dependence remains disclosed.",
+    "The completed replacement timing panel and original factorial resource observations remain separate. No new cost is imputed to unmatched configurations or historical score runs.",
+    "QfO GO/EC/FAS are similarities and the six-metric mean is secondary. OrthoBench group F1 and Three Kingdoms BUSCO co-membership are not interchangeable endpoints or universal generalization evidence.",
+    "All evaluated datasets are development-exposed.",
+    "TreeFam is supporting evidence. Functional similarity is not orthology correctness; Three Kingdoms is BUSCO-reference co-membership.",
+    "FAS is unseeded: small point differences and Pareto dominance involving it are descriptive, not demonstrated superiority.",
+    "Resource observations retain their original scopes; cached replay and fresh full-pipeline times must not be ranked together.",
+    "Incomplete cells remain missing, not zero. Content snapshots do not imply all scheduler tasks have completed."
+  ],
+  "live_scheduler_snapshot": "             JOBID     STATE       TIME   CPUS NODELIST(REASON)\n     24190_[1-2%1]   PENDING       0:00     32 (JobArrayTaskLimit)\n             24192   RUNNING      11:27     16 bizon\n           24190_0   RUNNING      58:52     32 bizon\n",
+  "marker_diagnostic": {
+    "bytes": 105063,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_species_tree_marker_diagnostic_20261012.json",
+    "sha256": "7203079c5dcbb434b900d3898af04f2d14e4b98563edea6a490d939582ceb05f"
+  },
+  "qfo_terminal_readback": {
+    "bytes": 279213,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/membership_hillclimb_qfo_complete_snapshot_20261012.json",
+    "sha256": "0e7871879ea36bc09a6ee24551a4b2037f1df99b8d6ea6a3d8b635174b84aa97"
+  },
+  "remaining_work": [
+    "Complete deterministic own-tree scoring gate and then evaluate the baseline-tree handoff.",
+    "Complete fresh full-pipeline cap100/cap400 panel across OrthoBench, QfO and Three Kingdoms.",
+    "Select the next bounded mechanism-specific round from these outcomes, retaining failures and costs.",
+    "Freeze any promising candidate before seeking genuinely unexposed confirmation where feasible."
+  ],
+  "scores_table": {
+    "bytes": 2249,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v3_20261012/scores.tsv",
+    "sha256": "debdf49c8b009b3e4f735e25cac927fc4531a7ec17c7402a4216b9ffc5581418"
+  },
+  "selection": {
+    "broader_arms": "Reject for promotion: VGNC, SwissTrees and TreeFam-A F1 declines exceed the point-estimate tolerance.",
+    "development_screen_candidate": "control_path",
+    "interpretation": "Small SwissTrees/TreeFam gains with a small OrthoBench decline; development screen only, not all-metric improvement or promotion.",
+    "pareto": {
+      "dominated_by": {
+        "broader_direct": [],
+        "broader_path": [],
+        "control_direct": [],
+        "control_path": []
+      },
+      "endpoints": [
+        "OrthoBench: OrthoBench F1",
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "excluded_incomplete": {},
+      "nondominated_complete_labels": [
+        "broader_direct",
+        "broader_path",
+        "control_direct",
+        "control_path"
+      ],
+      "scope": "Development point-estimate dominance only; not uncertainty-aware superiority or independent validation."
+    }
+  },
+  "status": "membership_factorial_complete_with_explicit_supplement",
+  "supplement_semantics": "Original broader Three Kingdoms cells remain unavailable in original producer. Separate completed supplement supplies their validated scores; duplicate direct controls agree exactly.",
+  "terminal_scheduler_evidence": "JobID|State|ExitCode|Elapsed|AllocCPUS|MaxRSS\n24180_0|COMPLETED|0:0|00:05:40|32|\n24180_0.batch|COMPLETED|0:0|00:05:40|32|\n24180_1|COMPLETED|0:0|02:26:20|32|\n24180_1.batch|COMPLETED|0:0|02:26:20|32|\n24180_2|COMPLETED|0:0|00:04:02|32|\n24180_2.batch|COMPLETED|0:0|00:04:02|32|\n24188|COMPLETED|0:0|01:16:36|16|\n24188.batch|COMPLETED|0:0|01:16:36|16|\n"
+}
