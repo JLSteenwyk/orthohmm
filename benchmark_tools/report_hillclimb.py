@@ -48,7 +48,8 @@ def reporter_sources():
              "summarize_three_kingdoms_parity.py", "orthobench_stage_diagnostics.py", "score_orthobench_partition.py",
              "report_deferred_cells.py", "run_deferred_copy_split.py", "deferred_qfo_inferred.py",
              "run_deferred_inferred_supplement.py", "run_held_tree_hillclimb.py",
-             "run_three_kingdoms_membership_supplement.py", "prepare_ob_candidate_neighborhood.py")
+             "run_three_kingdoms_membership_supplement.py", "prepare_ob_candidate_neighborhood.py",
+             "run_qfo_recovered_assessment.py")
     return [record(Path(__file__)), *[record(Path(__file__).with_name(name)) for name in names]]
 
 
@@ -289,7 +290,7 @@ def screen(vectors, control):
 
 
 def build_report(repo, registry_path, membership_root, supplement_path, full_root, output,
-                 deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None):
+                 deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None, deferred_tk_root=None):
     output.mkdir(parents=True, exist_ok=False)
     snapshots = output / "snapshots"
     snapshots.mkdir()
@@ -346,7 +347,8 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
     if deferred_fixed_root is not None:
         deferred_specs.append(("deferred_fixed", "QfO", deferred_fixed_root))
     if deferred_inferred_root is not None:
-        deferred_specs.extend(("deferred_inferred", dataset, deferred_inferred_root)
+        deferred_specs.extend(("deferred_inferred", dataset,
+                               deferred_tk_root if dataset == "ThreeKingdoms" and deferred_tk_root else deferred_inferred_root)
                               for dataset in ("OrthoBench", "ThreeKingdoms"))
     if deferred_qfo_root is not None:
         deferred_specs.append(("deferred_inferred", "QfO", deferred_qfo_root))
@@ -393,14 +395,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "registry", "membership-root", "supplement", "full-root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root"):
+    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root", "deferred-tk-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     report = build_report(args.repo.resolve(), args.registry.resolve(), args.membership_root.resolve(),
                           args.supplement.resolve(), args.full_root.resolve(), args.output.resolve(),
                           args.deferred_fixed_root.resolve() if args.deferred_fixed_root else None,
                           args.deferred_inferred_root.resolve() if args.deferred_inferred_root else None,
-                          args.deferred_qfo_root.resolve() if args.deferred_qfo_root else None)
+                          args.deferred_qfo_root.resolve() if args.deferred_qfo_root else None,
+                          args.deferred_tk_root.resolve() if args.deferred_tk_root else None)
     print(json.dumps({"methods": len(report["methods"]), "readback_failures": len(report["readback_failures"])}))
     return 1 if report["readback_failures"] else 0
 

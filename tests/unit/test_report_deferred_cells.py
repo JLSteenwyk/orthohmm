@@ -302,3 +302,18 @@ def test_comparison_report_optional_deferred_rounds_are_separate(tmp_path, monke
     assert "deferred_fixed:control" in (output / "scores.tsv").read_text()
     assert "deferred_inferred:deferred500" in (output / "scores.tsv").read_text()
     assert report["defaults_promoted"] is False
+
+
+def test_original_three_kingdoms_results_are_read_separately_from_orthobench_retry(tmp_path, monkeypatch):
+    registry = tmp_path / "registry.json"
+    write(registry, {"rows": [], "limitations": []})
+    calls = []
+    def collect(repo, kind, dataset, root, snapshots):
+        calls.append((dataset, root))
+        return [], []
+    monkeypatch.setattr(deferred, "collect_deferred_cells", collect)
+    reporting.build_report(tmp_path, registry, tmp_path / "membership", tmp_path / "supplement.json",
+        tmp_path / "full", tmp_path / "comparison", None, tmp_path / "ob_retry", tmp_path / "qfo_retry",
+        tmp_path / "original_tk")
+    assert calls == [("OrthoBench", tmp_path / "ob_retry"), ("ThreeKingdoms", tmp_path / "original_tk"),
+                     ("QfO", tmp_path / "qfo_retry")]

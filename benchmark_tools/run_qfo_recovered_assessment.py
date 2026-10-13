@@ -41,9 +41,13 @@ def environment_records(manifest):
               for r in manifest[key]]]
 
 
-def command_for(root, stage, manifest, work, results):
+def require_darwin_work_path(work):
     if len(str(work)) + len("/xx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/predictions.db") > 159:
         raise ValueError("Darwin work path exceeds validated length limit")
+
+
+def command_for(root, stage, manifest, work, results):
+    require_darwin_work_path(work)
     pipeline = Path(manifest["pipeline"])
     return ["/home/bizon/bin/nextflow", "-c", manifest["execution_config"]["path"], "run", str(pipeline / "main.nf"),
             "-profile", "singularity", "-ansi-log", "false", "--input", stage["filtered_pairs"]["path"],

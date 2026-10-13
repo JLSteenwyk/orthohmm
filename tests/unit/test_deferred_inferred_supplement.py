@@ -153,3 +153,20 @@ def test_preparation_failure_retained_and_next_dataset_attempted(tmp_path, monke
     assert attempted == list(runner.DATASETS)
     assert all(r["status"] == "failed_preparation_or_gate" and r["arms"] == [] for r in result["datasets"])
     assert result["defaults_promoted"] is False and result["goal_completed"] is False
+
+
+def test_only_failed_orthobench_dataset_is_attempted_in_retry(tmp_path, monkeypatch):
+    path = setup_runner(tmp_path, monkeypatch)
+    plan = json.loads(path.read_text())
+    plan["datasets"] = ["OrthoBench"]
+    plan["cases"] = plan["cases"][:1]
+    path.write_text(json.dumps(plan))
+    calls = []
+    def failed(command, *_args):
+        calls.append(command[-2:])
+        return {"returncode": 1}
+    monkeypatch.setattr(runner, "timed_stage", failed)
+    result = runner.run(path)
+    assert calls == [["OrthoBench", "control"]]
+    assert len(result["datasets"]) == 1
+    assert not (tmp_path / "ThreeKingdoms").exists()

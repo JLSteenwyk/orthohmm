@@ -68,15 +68,35 @@ def load_native_edges(path, names, count):
     return IndexedEdges(names, sources, targets, weights)
 
 
-def prepare(repo, source, output, comparison, cpu):
+def selected_datasets(names):
+    names = tuple(names)
+    if not names or tuple(d for d in DATASETS if d in names) != names:
+        raise ValueError("Require a nonempty ordered unique subset of the supplement datasets")
+    return names
+
+
+def native_control_paths(dataset, native_output, original):
+    if dataset == "OrthoBench":
+        working = native_output / "orthohmm_working_res"
+        return (native_output / "orthohmm_phylogeny", working / "phylogeny_candidate_superfamilies.txt",
+                working / "phylogeny_candidate_merges.json", native_output)
+    if dataset != "ThreeKingdoms":
+        raise ValueError("Unknown inferred supplement dataset")
+    baseline = Path(argument(original, "--output-directory"))
+    return (baseline / "orthohmm_phylogeny", Path(argument(original, "--candidate-clusters")),
+            Path(argument(original, "--membership-constraints")), baseline)
+
+
+def prepare(repo, source, output, comparison, cpu, datasets=DATASETS):
     if output.exists() or isinstance(cpu, bool) or not 1 <= cpu <= 16:
         raise ValueError("Require fresh namespace and 1-16 CPUs")
+    datasets = selected_datasets(datasets)
     subprocess.run(["git", "-C", str(source), "diff", "--exit-code", "HEAD", "--",
                     "orthohmm", "benchmark_tools"], check=True)
     comparison_report = json.loads(comparison.read_text())
     method = next(m for m in comparison_report["methods"] if m["key"] == "membership:control_direct")
     cases, inputs = [], [record(comparison), record(source / "benchmark_tools" / PROTOCOL)]
-    for dataset in DATASETS:
+    for dataset in datasets:
         cell = next(c for c in method["cells"] if c["dataset"] == dataset)
         if cell["status"] != "independent_content_readback_verified":
             raise ValueError("Require independently validated control cell")
@@ -118,10 +138,10 @@ def prepare(repo, source, output, comparison, cpu):
             raise ValueError("Native graph and checkpoint provenance directories differ")
         tools = [record(shutil.which(argument(original, flag)) or argument(original, flag))
                  for flag in ("--aligner", "--tree-builder")]
-        phylo = baseline / "orthohmm_phylogeny"
+        phylo, control_candidate, control_constraints, control_checkpoint = native_control_paths(dataset, native_output, original)
         golden = {name: record(phylo / name) for name in (*PRODUCTS, "species_tree.rooted.nwk")}
-        baseline_candidate = record(Path(argument(original, "--candidate-clusters")))
-        baseline_constraints = record(Path(argument(original, "--membership-constraints")))
+        baseline_candidate = record(control_candidate)
+        baseline_constraints = record(control_constraints)
         dataset_inputs = [*evidence, record(metrics_path), *cell["checked"], cell["source_snapshot"],
             *tools, *golden.values(), baseline_candidate, baseline_constraints,
             record(working / "orthohmm_edges.txt"), *[record(p) for p in sorted(checkpoint.iterdir())],
@@ -136,6 +156,7 @@ def prepare(repo, source, output, comparison, cpu):
         for label in LABELS:
             folder = output / dataset / label
             command = derive_command(original, source, folder, "high_confidence_pair", cpu)
+            command[command.index("--checkpoint-source") + 1] = str(control_checkpoint)
             for flag, value in (("--candidate-clusters", folder / "candidate/orthohmm_working_res/orthohmm_edges_clustered.txt"),
                                 ("--membership-constraints", folder / "candidate/orthohmm_working_res/phylogeny_candidate_merges.json")):
                 command[command.index(flag) + 1] = str(value)
@@ -145,13 +166,14 @@ def prepare(repo, source, output, comparison, cpu):
             "native_graph": record(working / "orthohmm_edges.txt"), "native_edges": metrics["counts"]["network_edges"],
             "expected_genes": {"OrthoBench": 251378, "ThreeKingdoms": 443217}[dataset], "expected_species": 12,
             "baseline_candidate": baseline_candidate, "baseline_constraints": baseline_constraints,
-            "golden": golden, "expected_control_scores": cell["scores"], "arms": arms})
+            "golden": golden, "expected_control_scores": (
+                readback["fresh_orthobench_control"]["scores"] if dataset == "OrthoBench" else cell["scores"]), "arms": arms})
     inputs = list({item["path"]: item for item in inputs}.values())
     for item in inputs:
         check(item)
     result = {"status": "prepared_unrun", "repo": str(repo), "source_root": str(source), "output": str(output),
         "source_revision": subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip(),
-        "cpu": cpu, "inputs": inputs, "sources": [*source_records(source),
+        "cpu": cpu, "datasets": list(datasets), "inputs": inputs, "sources": [*source_records(source),
             record(source / "benchmark_tools/run_deferred_inferred_supplement.slurm")],
         "runtime": runtime(), "tool_path": os.environ["PATH"], "cases": cases,
         "scope": "Development-exposed lossless native HMM/profile graph reconstruction with candidate-specific inferred phylogeny; not fresh full-pipeline timing."}
@@ -217,7 +239,8 @@ def run(path):
     source, repo, output = (Path(plan[k]) for k in ("source_root", "repo", "output"))
     if Path(__file__).resolve() != source / "benchmark_tools/run_deferred_inferred_supplement.py":
         raise ValueError("Execute frozen source")
-    if tuple(c["dataset"] for c in plan["cases"]) != DATASETS or (output / "results.json").exists():
+    datasets = selected_datasets(plan.get("datasets", DATASETS))
+    if tuple(c["dataset"] for c in plan["cases"]) != datasets or (output / "results.json").exists():
         raise ValueError("Unexpected dataset inventory or existing attempt")
     for case in plan["cases"]:
         if tuple(a["label"] for a in case["arms"]) != LABELS or any(
@@ -311,10 +334,11 @@ def main():
     for name in ("repo", "source-root", "output", "comparison"):
         prep.add_argument("--" + name, type=Path, required=True)
     prep.add_argument("--cpu", type=int, default=16)
+    prep.add_argument("--datasets", nargs="+", choices=DATASETS, default=list(DATASETS))
     execution = commands.add_parser("run")
     execution.add_argument("--plan", type=Path, required=True)
     args = parser.parse_args()
-    result = (prepare(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.comparison.resolve(), args.cpu)
+    result = (prepare(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.comparison.resolve(), args.cpu, args.datasets)
               if args.mode == "prepare" else run(args.plan.resolve()))
     print(json.dumps({"status": result["status"]}))
     return 0 if result["status"] in ("prepared_unrun", "finished_all_datasets_verified") else 1

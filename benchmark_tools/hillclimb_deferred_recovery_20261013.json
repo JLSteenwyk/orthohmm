@@ -1,0 +1,16 @@
+{
+  "status": "prespecified_execution_recovery_not_new_method_round",
+  "mechanism": "Same opt-in default versus deferred500 copy refinement, same HMM-derived graph/checkpoint inputs, satellite rules, rooting and pair rules. No inference parameter or selection criterion is relaxed.",
+  "terminal_attempts": {"fixed_qfo": "24198 COMPLETED 0:0", "inferred_supplement": "24199 FAILED 1:0", "inferred_qfo": "24200 FAILED 1:0"},
+  "qfo_failure": "Own-inferred control native reconciliation succeeded with exact golden products, all raw trees reused and 26 species-tree families; scoring failed before launch because its work path exceeded Darwin's validated 159-character bound. Variant was correctly gated.",
+  "qfo_recovery": "Use a short deterministic di_<16-hex>_<arm> scoring identifier validated at preparation. Reject invalid work paths before pair conversion. Retain the failed run unchanged and evaluate both arms in a new namespace using existing compatible raw-tree caches; no fresh HMM search or raw gene-tree construction is needed. Reproduce the own-inferred control before variant evaluation.",
+  "orthobench_failure": "The reconstruction uses the fresh full cap100 native graph/checkpoint but its gate incorrectly compared with older retained cached candidates. There are 12 differing member groups involving 53 genes, despite identical OrthoBench F1. Do not use identical F1 as proof of input equivalence.",
+  "orthobench_recovery": "Regenerated control candidates and membership constraints are byte-identical to the fresh native cap100 run. Pin that matching native control's candidate, constraints, four native products, raw-tree cache and independently reproduced score. Require exact matches before variant evaluation; do not weaken byte-identity gates or overwrite the older baseline. Run only the failed OrthoBench dataset.",
+  "three_kingdoms": "Both own-inferred arms completed and were independently scored within 24199. Reuse them rather than rerunning the successful dataset. Allow the comparison reporter to read OrthoBench retry and original Three Kingdoms results separately.",
+  "reporting_recovery": "Propagate failed preparation states and reasons for unrun arms; do not label terminal-gated experiments as merely pending. Retain original failed attempts as well as separately identified recoveries.",
+  "fixed_tree_screen": "The completed fixed-tree diagnostic reports primary F1 gains but GO declines more than 0.005. Preserve all six endpoints and retain the original development screening rule. This is not evidence for promotion or full inferred-pipeline superiority.",
+  "resources": {"cpus_per_inference": 16, "memory_gib": 64, "wall_hours": 72, "new_native_arms_sequential": true, "host": "local Threadripper, shared-host timing confounded"},
+  "gates": ["Focused regression tests pass", "Commit and push recovery plan and tested code before launch", "Frozen source revisions and input/runtime pins in fresh namespaces", "Require native universe, outputs, control scores and checkpoint validation", "Preserve all old failures and successful results", "Leave live QfO search-cap job and unrelated workloads untouched"],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

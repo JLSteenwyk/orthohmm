@@ -222,7 +222,12 @@ def score_qfo(repo, phylogeny, folder, index):
     from benchmark_tools.prepare_qfo_factorial_pairs import write_native_pairs
     from benchmark_tools.qfo_filter_pairs import filter_pairs, load_mapping
     from benchmark_tools.qfo_summarize_scores import summarize, METRICS, metric_path
-    from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records
+    from benchmark_tools.run_qfo_recovered_assessment import command_for, environment_records, require_darwin_work_path
+    work = repo / "qfo_benchmark/w" / f"hc1_{index}"
+    results = folder / "qfo_scoring"
+    require_darwin_work_path(work)
+    if work.exists() or results.exists():
+        raise FileExistsError("QfO scoring namespace already exists")
     environment_path = repo / "benchmark_tools/results/qfo_assessment_environment_20260917.json"
     environment = json.loads(environment_path.read_text())
     identities = [record(environment_path), *environment_records(environment)]
@@ -245,10 +250,6 @@ def score_qfo(repo, phylogeny, folder, index):
     total, retained = filter_pairs(pairs, filtered, load_mapping(Path(mappings[0]["path"])))
     if not 0 < written == total == retained:
         raise ValueError("Corrected QfO pair conversion has mapping loss")
-    work = repo / "qfo_benchmark/w" / f"hc1_{index}"
-    results = folder / "qfo_scoring"
-    if work.exists() or results.exists():
-        raise FileExistsError("QfO scoring namespace already exists")
     stage = {"filtered_pairs": record(filtered), "participant": f"ohmm_hillclimb_r1_{index}"}
     command = command_for(repo, stage, environment, work, results)
     env = {**os.environ, **environment["environment_overrides"],

@@ -20,7 +20,8 @@ def planned_case(plan, dataset, label):
         settings = plan
     else:
         datasets = plan["cases"]
-        if tuple(c["dataset"] for c in datasets) != ("OrthoBench", "ThreeKingdoms"):
+        names = tuple(c["dataset"] for c in datasets)
+        if not names or tuple(d for d in ("OrthoBench", "ThreeKingdoms") if d in names) != names:
             raise ValueError("Unexpected inferred supplement dataset inventory")
         settings = next(c for c in datasets if c["dataset"] == dataset)
         cases = settings["arms"]
@@ -160,6 +161,7 @@ def collect_deferred_cells(repo, kind, dataset, root, snapshots):
             "status": row["status"], "producer_status": row["status"],
             "producer_job_id": producer.get("job_id"), "producer_scope": producer.get("scope"),
             "source_snapshot": capture["snapshot"], "claimed_scores": row.get("scores", {})}
+        cell.update({k: row[k] for k in ("error", "error_type") if k in row})
         if row["status"] == "independent_content_readback_verified":
             try:
                 if plan is None:
@@ -172,6 +174,10 @@ def collect_deferred_cells(repo, kind, dataset, root, snapshots):
             except Exception as problem:
                 cell.update(status="readback_failed", error_type=type(problem).__name__, error=str(problem))
         cells.append(cell)
+    terminal = report.get("status", "").startswith(("failed", "finished"))
     cells.extend({"method_key": kind + ":" + label, "dataset": dataset, "scores": {},
-                  "status": "not_yet_reported_execution_state_not_inferred"} for label in LABELS if label not in observed)
+                  "status": "not_run_terminal_producer_gap" if terminal else "not_yet_reported_execution_state_not_inferred",
+                  "producer_status": report.get("status"), "source_snapshot": capture["snapshot"],
+                  **{k: report[k] for k in ("error", "error_type") if k in report}}
+                 for label in LABELS if label not in observed)
     return cells, captures

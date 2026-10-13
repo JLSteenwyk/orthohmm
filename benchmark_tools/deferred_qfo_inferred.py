@@ -22,6 +22,16 @@ LABELS = ("control", "deferred500")
 PROTOCOL = "hillclimb_deferred_qfo_inferred_20261013.json"
 
 
+def scoring_id(repo, output, index):
+    from benchmark_tools.run_qfo_recovered_assessment import require_darwin_work_path
+    if isinstance(index, bool) or not isinstance(index, int) or index not in (0, 1):
+        raise ValueError("Require one of the two planned arm indices")
+    nonce = hashlib.sha256(str(output).encode()).hexdigest()[:16]
+    name = f"di_{nonce}_{index}"
+    require_darwin_work_path(repo / "qfo_benchmark/w" / f"hc1_{name}")
+    return name
+
+
 def inferred_command(original, source, folder, cpu):
     command = list(original)
     if (argument(command, "--species-tree-mode") != "supplied" or command.count("--species-tree") != 1
@@ -58,7 +68,6 @@ def prepare(repo, source, output, parent_plan, parent_results, cpu, parent_job):
     fasta = Path(parent["fasta_directory"])
     inputs.extend(record(fasta / name) for name in sorted(fetch_fasta_files(str(fasta))))
     cases = []
-    nonce = hashlib.sha256(str(output).encode()).hexdigest()[:16]
     for i, case in enumerate(parent["cases"]):
         for flag in ("--candidate-clusters", "--membership-constraints"):
             inputs.append(record(Path(argument(case["command"], flag))))
@@ -69,7 +78,7 @@ def prepare(repo, source, output, parent_plan, parent_results, cpu, parent_job):
         folder = output / case["label"]
         cases.append({"label": case["label"], "output": str(folder),
                       "command": inferred_command(case["command"], source, folder, cpu),
-                      "scoring_id": f"deferred_own_{nonce}_{i}"})
+                      "scoring_id": scoring_id(repo, output, i)})
     inputs = list({item["path"]: item for item in inputs}.values())
     for item in inputs:
         check(item)
