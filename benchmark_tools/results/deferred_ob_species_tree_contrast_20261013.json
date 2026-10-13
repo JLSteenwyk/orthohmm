@@ -1,0 +1,61 @@
+{
+  "F1_delta": -0.005421154186494359,
+  "contrast": {
+    "normalized_rooted_clade_distance": 0.0,
+    "rooted_clade_distance": 0,
+    "taxa": 12
+  },
+  "defaults_promoted": false,
+  "full_readback": {
+    "bytes": 32173107,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/report.json",
+    "sha256": "66f8eb97663fc4c495b36cb8fd9b9093700bc7b562076935c721817bcad54398"
+  },
+  "goal_completed": false,
+  "interpretation": "The OB inferred species trees are byte-identical. A changed species tree cannot explain this particular decline; candidate/constraint, raw gene-tree and downstream membership effects remain to diagnose.",
+  "limitations": [
+    "Development-exposed references, not independent confirmation.",
+    "Identical species trees do not imply identical raw gene trees or reconciliation/membership outputs.",
+    "No reference-specific inference rules or changed benchmark conventions."
+  ],
+  "localization": {
+    "bytes": 8481,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_family_localization_20261013.json",
+    "sha256": "837bed8669131281c21fb89c3d25a6fcc33518dbf446c6bfb4cb0479a1cd4c48"
+  },
+  "marker_families": [
+    200,
+    200
+  ],
+  "same_bytes": true,
+  "sources": [
+    {
+      "bytes": 13672,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_held_tree_hillclimb.py",
+      "sha256": "7eed22476e9ebbe7510316b323ff5f62c972a34b4a1d2123aca11893a5bb8dc6"
+    },
+    {
+      "bytes": 6187,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_species_tree_robustness.py",
+      "sha256": "ffe5fa2cea6b99535f39c12b5bf6fad24a908f459ac30a64a0de5f08a9a8a299"
+    }
+  ],
+  "status": "independently_pinned_species_tree_comparison",
+  "summary": {
+    "bytes": 52918,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/summary.json",
+    "sha256": "2b9fbf3ebe14ee181564ffdf0da680dbc1134f5a6d09ddc640d5b84edec93060"
+  },
+  "trees": [
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    },
+    {
+      "bytes": 717,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+    }
+  ]
+}
