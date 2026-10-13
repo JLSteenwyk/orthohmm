@@ -11,14 +11,15 @@ from orthohmm.orthohmm import execute
 from orthohmm.parser import create_parser
 
 
-def refine(size, maximum=0, dataset_species=78, scope="both"):
+def refine(size, maximum=0, dataset_species=78, scope="both", trace=None):
     species = np.array([0] * 14 + [1 + i % (dataset_species - 1) for i in range(size - 14)]
                        + list(range(dataset_species)), dtype=np.int32)
     clusters = [list(range(size))] + [[i] for i in range(size, len(species))]
     empty = np.array([], dtype=np.int32)
     return refinement.refine_cluster_indices(clusters, empty, empty, np.array([]),
         np.array([0], dtype=np.int32), np.array([14], dtype=np.int32), species,
-        rbnh_scores=np.array([2.]), defer_copy_split_max_size=maximum, defer_copy_split_scope=scope)
+        rbnh_scores=np.array([2.]), defer_copy_split_max_size=maximum, defer_copy_split_scope=scope,
+        copy_split_trace=trace)
 
 
 @pytest.mark.parametrize("size", [70, 149, 150, 500])
@@ -299,3 +300,21 @@ def test_benchmark_wrapper_forwards_scoped_profile(tmp_path, monkeypatch, branch
         "--cpu", "1", "--refinement-profile", profile]) == 0
     command = captured["command"]
     assert command[command.index("--refinement_profile") + 1] == profile
+
+
+@pytest.mark.parametrize("size,branch", [(70, "medium"), (149, "medium"), (150, "large"), (500, "large"), (501, "large")])
+@pytest.mark.parametrize("scope", ["both", "large", "medium"])
+def test_optional_trace_records_executed_eligibility_without_changing_output(size, branch, scope):
+    trace = []
+    assert refine(size, 500, scope=scope, trace=trace) == refine(size, 500, scope=scope)
+    assert len(trace) == 1
+    assert trace[0]["members"] == list(range(size)) and trace[0]["size"] == size
+    assert trace[0][branch + "_copy_eligible"] is True
+    assert trace[0]["deferred"] is (size <= 500 and scope in ("both", branch))
+    assert trace[0]["dataset_species_count"] == 78
+
+
+@pytest.mark.parametrize("value", [True, {}, (), "trace", np.array([])])
+def test_diagnostic_trace_rejects_nonlist_sinks(value):
+    with pytest.raises(ValueError, match="diagnostic trace"):
+        refine(70, trace=value)

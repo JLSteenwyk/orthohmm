@@ -37,13 +37,14 @@ PROTOCOL = "hillclimb_deferred_copy_split_20261013.json"
 LABELS = ("control", "deferred500")
 
 
-def regenerate_refinement(clusters, edges, species, names, preset, seed, hits=None):
+def regenerate_refinement(clusters, edges, species, names, preset, seed, hits=None, copy_split_trace=None):
     from orthohmm.refinement import refine_cluster_indices, resolve_refinement_profile
     empty = np.array([], dtype=np.int32)
     if hits is None:
         hits = (empty, empty, np.array([], dtype=np.float64))
     groups = refine_cluster_indices(clusters, *hits,
-        edges[0], edges[1], species, rbnh_scores=edges[2], **resolve_refinement_profile(preset))
+        edges[0], edges[1], species, rbnh_scores=edges[2], copy_split_trace=copy_split_trace,
+        **resolve_refinement_profile(preset))
     with seed.open("x") as stream:
         for group in groups:
             stream.write(" ".join(sorted(names[i] for i in group)) + "\n")

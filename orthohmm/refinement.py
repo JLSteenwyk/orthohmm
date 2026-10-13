@@ -1216,6 +1216,7 @@ def _split_high_duplication_index_clusters(
     broad_mode: bool = False,
     defer_copy_split_max_size: int = 0,
     defer_copy_split_scope: str = "both",
+    copy_split_trace: List[dict] | None = None,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
@@ -1296,8 +1297,15 @@ def _split_high_duplication_index_clusters(
             large_copy and defer_copy_split_scope in ("both", "large")
             or medium_copy and defer_copy_split_scope in ("both", "medium")
         )
-        if (0 < defer_copy_split_max_size and len(cluster_list) <= defer_copy_split_max_size
-                and deferred_branch):
+        deferred = 0 < defer_copy_split_max_size and len(cluster_list) <= defer_copy_split_max_size and deferred_branch
+        if copy_split_trace is not None and (large_copy or medium_copy):
+            copy_split_trace.append({
+                "members": sorted(cluster_list), "large_copy_eligible": large_copy,
+                "medium_copy_eligible": medium_copy, "deferred": deferred,
+                "size": len(cluster_list), "maximum_species_copies": max(species_counts.values()),
+                "dataset_species_count": dataset_species_count,
+            })
+        if deferred:
             refined.append(cluster_list)
             continue
         if large_copy:
@@ -1484,6 +1492,7 @@ def refine_cluster_indices(
     rbnh_scores: Sequence[float] | None = None,
     defer_copy_split_max_size: int = 0,
     defer_copy_split_scope: str = "both",
+    copy_split_trace: List[dict] | None = None,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if (isinstance(defer_copy_split_max_size, (bool, np.bool_))
@@ -1492,6 +1501,8 @@ def refine_cluster_indices(
         raise ValueError("Deferred copy-split maximum size must be a nonnegative integer")
     if not isinstance(defer_copy_split_scope, str) or defer_copy_split_scope not in ("both", "large", "medium"):
         raise ValueError("Deferred copy-split scope must be both, large or medium")
+    if copy_split_trace is not None and not isinstance(copy_split_trace, list):
+        raise ValueError("Copy-split diagnostic trace must be a list or None")
     if not clusters:
         return []
     total_genes = len(gene_to_species)
@@ -1538,6 +1549,7 @@ def refine_cluster_indices(
                 broad_mode=True,
                 defer_copy_split_max_size=defer_copy_split_max_size,
                 defer_copy_split_scope=defer_copy_split_scope,
+                copy_split_trace=copy_split_trace,
             )
 
         sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1589,6 +1601,7 @@ def refine_cluster_indices(
             broad_mode=True,
             defer_copy_split_max_size=defer_copy_split_max_size,
             defer_copy_split_scope=defer_copy_split_scope,
+            copy_split_trace=copy_split_trace,
         )
 
     sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
@@ -1619,6 +1632,7 @@ def refine_cluster_indices(
             rbnh_scores=rbnh_scores,
             defer_copy_split_max_size=defer_copy_split_max_size,
             defer_copy_split_scope=defer_copy_split_scope,
+            copy_split_trace=copy_split_trace,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1665,4 +1679,5 @@ def refine_cluster_indices(
         rbnh_scores=rbnh_scores,
         defer_copy_split_max_size=defer_copy_split_max_size,
         defer_copy_split_scope=defer_copy_split_scope,
+        copy_split_trace=copy_split_trace,
     )
