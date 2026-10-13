@@ -1,0 +1,15 @@
+{
+  "status": "prespecified_contingent_native_output_recovery_not_launched",
+  "parent": {"array_task": "24190_1", "raw_job_id": "24201", "execution_plan": "benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json"},
+  "diagnosis": "Both frozen full-search QfO scoring IDs produce a 113-character work directory. The validated Darwin prediction database suffix has 47 characters, giving 160 versus the 159-character limit. The native HMM search itself is not affected.",
+  "live_job_policy": "Leave the running immutable parent, source files, execution plan and unrelated analyses untouched. Do not start a duplicate initial HMM search or terminate a valid live handle.",
+  "activation": "After authoritative scheduler termination, inspect the parent report and independently validate native outputs. If both arms are already independently scored, do nothing. For the specific Darwin-path scoring failure, recover the completed native control using a short fresh scoring namespace. Unexpected native, source, input or runtime failures must remain explicit and must not bypass validation.",
+  "control_recovery": "Require the frozen original full-source revision, complete 78-proteome and 984137-gene universe, CPU/profile/search provenance, native root/pair/confidence outputs, and input/runtime/source revalidation. Score existing completed control outputs without repeating its initial HMM search or rebuilding raw gene trees.",
+  "variant_recovery": "Only after the fresh control is independently scored and verified, inspect cap400. If its native pipeline completed, validate and score it without recomputing it. If it was explicitly not run because the control scoring gate failed, run only this missing fresh cap400 native arm using the original frozen core and settings in a new namespace. Never equate the retained historical score with a reproduced fresh control.",
+  "resource_limits": {"cpus": 32, "memory_gib": 128, "wall_hours": 240, "host": "local Threadripper", "native_arms_sequential": true},
+  "timing": "Keep original fresh native inference timings separate from cached-output scoring recovery. Record any new full cap400 inference as fresh, shared-host and potentially confounded; do not relabel recovery wall time as full-pipeline speed.",
+  "implementation_gates": ["Test scheduler/terminal-state checks, native validation, zero repeated control searches, missing-versus-completed variant handling, control-before-variant scoring, path-length preflight and immutable failed-attempt retention", "Commit and push tested recovery implementation before launch", "Freeze the worker source and all available parent identities; explicitly resolve terminal parent outputs before use"],
+  "scientific_policy": "No method parameter, scoring convention, dataset subset, decline tolerance or promotion criterion changes. Completed cap400 OrthoBench F1 decline remains in the ledger, and full QfO/Three Kingdoms evaluation remains outstanding.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
