@@ -337,7 +337,7 @@ def create_parser() -> ArgumentParser:
         type=str,
         required=False,
         default="default",
-        choices=["default", "qfo", "phylogeny_deferred", "phylogeny_deferred_large", "phylogeny_deferred_medium"],
+        choices=["default", "qfo", "phylogeny_deferred", "phylogeny_deferred_large", "phylogeny_deferred_medium", "phylogeny_components"],
         help=SUPPRESS,
         metavar="refinement_profile",
     )

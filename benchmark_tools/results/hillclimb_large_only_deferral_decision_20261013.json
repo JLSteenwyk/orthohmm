@@ -1,0 +1,59 @@
+{
+  "declines_exceeding_005": {
+    "QfO: GO": -0.007497240000000016
+  },
+  "defaults_promoted": false,
+  "deltas_from_matched_control": {
+    "OrthoBench: OrthoBench F1": 0.0,
+    "QfO: EC": -0.0029375600000000057,
+    "QfO: FAS": 0.002450830642280133,
+    "QfO: GO": -0.007497240000000016,
+    "QfO: SwissTrees F": 0.0014405835144730705,
+    "QfO: TreeFam-A F": 0.06587422813347554,
+    "QfO: VGNC F": 0.045248858945525994,
+    "ThreeKingdoms: Three Kingdoms F1": 0.0
+  },
+  "goal_completed": false,
+  "large_only_deferral": {
+    "OrthoBench: OrthoBench F1": 0.7410607351873405,
+    "QfO: EC": 0.96271294,
+    "QfO: FAS": 0.7654623759454323,
+    "QfO: GO": 0.48285204,
+    "QfO: SwissTrees F": 0.8349538040292612,
+    "QfO: TreeFam-A F": 0.6807379325454895,
+    "QfO: VGNC F": 0.9469389545723749,
+    "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+  },
+  "limitations": [
+    "QfO medium-only arm still incomplete at readback capture; no imputed scores.",
+    "Large-only branch is inactive on OrthoBench and Three Kingdoms; those exact reused values are not improvements or validation of the large branch.",
+    "FAS is unseeded; its small increase is descriptive.",
+    "Cached-graph own-tree inference and shared-host timing are not isolated fresh full-pipeline costs."
+  ],
+  "matched_control": {
+    "OrthoBench: OrthoBench F1": 0.7410607351873405,
+    "QfO: EC": 0.9656505,
+    "QfO: FAS": 0.7630115453031522,
+    "QfO: GO": 0.49034928,
+    "QfO: SwissTrees F": 0.8335132205147882,
+    "QfO: TreeFam-A F": 0.614863704412014,
+    "QfO: VGNC F": 0.9016900956268489,
+    "ThreeKingdoms: Three Kingdoms F1": 0.872133159469203
+  },
+  "narrow_panel_readback": {
+    "bytes": 527530,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v6_20261013/summary.json",
+    "sha256": "3fb552ae623f7fa0352410e461a75d29c91c014dc8a4fd8cae01cbd10cb7418e"
+  },
+  "next_actions": [
+    "Finish existing medium-only QfO and fresh-HMM cap panel without duplicate inference.",
+    "Validate the opt-in bounded component mechanism against matched controls after complete branch admission.",
+    "No default promotion from this vector."
+  ],
+  "readback": {
+    "bytes": 21247,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_qfo_partial_readback_compact_v1_20261013.json",
+    "sha256": "7f946d87d289d64698beb3c1e1535e7e70eb825638761fb2214e50031025191b"
+  },
+  "status": "complete_large_only_eight_endpoint_vector_rejected_for_default_promotion"
+}

@@ -56,6 +56,7 @@ PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE = 500
 PHYLOGENY_DEFERRED_PROFILES = frozenset({
     "phylogeny_deferred", "phylogeny_deferred_large", "phylogeny_deferred_medium",
 })
+PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES = PHYLOGENY_DEFERRED_PROFILES | {"phylogeny_components"}
 
 # Tunable refinement presets. "default" preserves current production behavior.
 _REFINE_PROFILE_PRESETS: Dict[str, Dict[str, object]] = {
@@ -79,6 +80,9 @@ _REFINE_PROFILE_PRESETS: Dict[str, Dict[str, object]] = {
     "phylogeny_deferred_medium": {
         "defer_copy_split_max_size": PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE,
         "defer_copy_split_scope": "medium",
+    },
+    "phylogeny_components": {
+        "retain_large_copy_components_max_size": PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE,
     },
 }
 
@@ -1217,6 +1221,7 @@ def _split_high_duplication_index_clusters(
     defer_copy_split_max_size: int = 0,
     defer_copy_split_scope: str = "both",
     copy_split_trace: List[dict] | None = None,
+    retain_large_copy_components_max_size: int = 0,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
@@ -1309,6 +1314,30 @@ def _split_high_duplication_index_clusters(
             refined.append(cluster_list)
             continue
         if large_copy:
+            if retain_large_copy_components_max_size > 0:
+                # These bounded components are tree candidates, not ortholog cliques.
+                components = sorted(
+                    (sorted(component) for component in _split_index_cluster_by_components(
+                        cluster_list, component_adjacency,
+                    )), key=lambda component: component[0],
+                )
+                if copy_split_trace is not None:
+                    copy_split_trace[-1].update(
+                        component_min_edge_weight=panel_copy_component_min_edge_weight,
+                        retain_large_copy_components_max_size=int(retain_large_copy_components_max_size),
+                        component_sizes=[len(component) for component in components],
+                        retained_component_sizes=[len(component) for component in components
+                                                  if 1 < len(component) <= retain_large_copy_components_max_size],
+                        oversized_component_sizes=[len(component) for component in components
+                                                   if len(component) > retain_large_copy_components_max_size],
+                        isolated_genes=sum(len(component) == 1 for component in components),
+                    )
+                for component in components:
+                    if len(component) <= retain_large_copy_components_max_size:
+                        refined.append(component)
+                    else:
+                        refined.extend([[gene] for gene in component])
+                continue
             refined.extend([[gene] for gene in cluster_list])
             continue
         if medium_copy:
@@ -1493,6 +1522,7 @@ def refine_cluster_indices(
     defer_copy_split_max_size: int = 0,
     defer_copy_split_scope: str = "both",
     copy_split_trace: List[dict] | None = None,
+    retain_large_copy_components_max_size: int = 0,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
     if (isinstance(defer_copy_split_max_size, (bool, np.bool_))
@@ -1503,6 +1533,28 @@ def refine_cluster_indices(
         raise ValueError("Deferred copy-split scope must be both, large or medium")
     if copy_split_trace is not None and not isinstance(copy_split_trace, list):
         raise ValueError("Copy-split diagnostic trace must be a list or None")
+    if (isinstance(retain_large_copy_components_max_size, (bool, np.bool_))
+            or not isinstance(retain_large_copy_components_max_size, (int, np.integer))
+            or not 0 <= retain_large_copy_components_max_size <= PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE):
+        raise ValueError("Large-copy component maximum size must be a nonnegative integer at most 500")
+    if retain_large_copy_components_max_size:
+        if defer_copy_split_max_size:
+            raise ValueError("Component retention and whole-family copy deferral cannot be combined")
+        queries, targets = np.asarray(rbnh_queries), np.asarray(rbnh_targets)
+        scores = np.asarray(rbnh_scores if rbnh_scores is not None else [], dtype=np.float64)
+        if (queries.ndim != 1 or targets.ndim != 1 or scores.ndim != 1
+                or len(queries) != len(targets) or len(scores) != len(queries)):
+            raise ValueError("Component retention requires aligned one-dimensional scored edges")
+        if (len(queries) and (not np.issubdtype(queries.dtype, np.integer)
+                             or not np.issubdtype(targets.dtype, np.integer))):
+            raise ValueError("Component retention requires integer edge endpoints")
+        if (np.any(queries < 0) or np.any(targets < 0)
+                or np.any(queries >= len(gene_to_species)) or np.any(targets >= len(gene_to_species))):
+            raise ValueError("Component retention edge endpoint is outside the gene universe")
+        if (not np.all(np.isfinite(scores)) or np.any(scores <= 0)
+                or not math.isfinite(panel_copy_component_min_edge_weight)
+                or panel_copy_component_min_edge_weight <= 0):
+            raise ValueError("Component retention requires finite positive edge scores and threshold")
     if not clusters:
         return []
     total_genes = len(gene_to_species)
@@ -1550,6 +1602,7 @@ def refine_cluster_indices(
                 defer_copy_split_max_size=defer_copy_split_max_size,
                 defer_copy_split_scope=defer_copy_split_scope,
                 copy_split_trace=copy_split_trace,
+                retain_large_copy_components_max_size=retain_large_copy_components_max_size,
             )
 
         sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1602,6 +1655,7 @@ def refine_cluster_indices(
             defer_copy_split_max_size=defer_copy_split_max_size,
             defer_copy_split_scope=defer_copy_split_scope,
             copy_split_trace=copy_split_trace,
+            retain_large_copy_components_max_size=retain_large_copy_components_max_size,
         )
 
     sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
@@ -1633,6 +1687,7 @@ def refine_cluster_indices(
             defer_copy_split_max_size=defer_copy_split_max_size,
             defer_copy_split_scope=defer_copy_split_scope,
             copy_split_trace=copy_split_trace,
+            retain_large_copy_components_max_size=retain_large_copy_components_max_size,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1680,4 +1735,5 @@ def refine_cluster_indices(
         defer_copy_split_max_size=defer_copy_split_max_size,
         defer_copy_split_scope=defer_copy_split_scope,
         copy_split_trace=copy_split_trace,
+        retain_large_copy_components_max_size=retain_large_copy_components_max_size,
     )

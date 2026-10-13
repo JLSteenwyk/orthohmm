@@ -42,6 +42,8 @@ from .parser import create_parser
 from .metrics import PipelineMetrics
 from .refinement import (
     PHYLOGENY_DEFERRED_PROFILES,
+    PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES,
+    DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
     DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
     merge_supported_satellite_candidate_clusters,
     resolve_refinement_profile,
@@ -447,15 +449,30 @@ def _execute(
     deferred_copy_splitting = (
         isinstance(refinement_profile, str) and refinement_profile.lower() in PHYLOGENY_DEFERRED_PROFILES
     )
-    if deferred_copy_splitting and (
+    component_copy_splitting = (
+        isinstance(refinement_profile, str) and refinement_profile.lower() == "phylogeny_components"
+    )
+    guarded_candidate_refinement = (
+        isinstance(refinement_profile, str) and refinement_profile.lower() in PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
+    )
+    if guarded_candidate_refinement and (
         accuracy_config.name != "high_sensitivity" or phylogeny != "reconcile"
         or phylogeny_candidates != "satellite_v2" or phylogeny_root_rule != "species_overlap"
         or phylogeny_pair_rule != "positive_paralogy" or start is not None
     ):
         raise ValueError(
-            "phylogeny_deferred refinement requires fresh high_sensitivity accuracy, "
+            ("phylogeny_components" if component_copy_splitting else "phylogeny_deferred")
+            + " refinement requires fresh high_sensitivity accuracy, "
             "phylogeny reconcile, satellite_v2 candidates, species_overlap rooting, "
             "and positive_paralogy pair inference"
+        )
+    if component_copy_splitting and (
+        satellite_membership_rule != "high_confidence_pair" or species_tree_mode != "infer"
+        or species_tree_rooting != "min_variance"
+    ):
+        raise ValueError(
+            "phylogeny_components refinement requires high_confidence_pair satellite membership "
+            "and an inferred min_variance species tree"
         )
     search_cap_override = kwargs.pop("search_max_candidates_per_query", None)
     search_candidate_cap = resolve_search_candidate_cap(
@@ -494,6 +511,14 @@ def _execute(
             refinement_profile=refinement_profile.lower(),
             defer_copy_split_max_size=deferred_parameters["defer_copy_split_max_size"],
             defer_copy_split_scope=deferred_parameters.get("defer_copy_split_scope", "both"),
+        )
+    if component_copy_splitting:
+        component_parameters = resolve_refinement_profile(refinement_profile)
+        metrics.add_metadata(
+            refinement_profile=refinement_profile.lower(),
+            retain_large_copy_components_max_size=component_parameters["retain_large_copy_components_max_size"],
+            large_copy_component_min_edge_weight=DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
+            oversized_large_copy_component_policy="singletons",
         )
     if phylogeny != "off":
         metrics.add_metadata(

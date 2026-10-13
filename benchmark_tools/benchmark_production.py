@@ -62,7 +62,7 @@ def parse_args(argv=None):
     parser.add_argument("--clustering", choices=("leiden", "mcl"), default="leiden")
     parser.add_argument("--cpm-resolution", default="0.1")
     parser.add_argument("--refinement-profile", choices=("default", "qfo", "phylogeny_deferred",
-                        "phylogeny_deferred_large", "phylogeny_deferred_medium"), default="default")
+                        "phylogeny_deferred_large", "phylogeny_deferred_medium", "phylogeny_components"), default="default")
     parser.add_argument(
         "--accuracy-profile",
         choices=("standard", "high_sensitivity"),

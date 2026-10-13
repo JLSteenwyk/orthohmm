@@ -1,0 +1,55 @@
+{
+  "base_revision": "925fc44f3cc46e002921bc5d5eac6ed721cd85bf",
+  "defaults_promoted": false,
+  "errors": 0,
+  "failed": 0,
+  "goal_completed": false,
+  "junit": {
+    "bytes": 39856,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_components_extended_tests_20261013.xml",
+    "sha256": "df09a192ee9e87abebaad6017b29c8ab40819c1ab06773c88effaa9b5888e267"
+  },
+  "new_accuracy_scores": false,
+  "passed": 272,
+  "prespec": {
+    "bytes": 5121,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_large_copy_components_20261013.json",
+    "sha256": "97fd6734477d784227aaa8c0b1d09d7854f20a73a855c4dd24b3fade8e43a187"
+  },
+  "python": "3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0]",
+  "skipped": 0,
+  "source_records": [
+    {
+      "bytes": 68431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/refinement.py",
+      "sha256": "738f7c328d17c08911b2a2face38dd59b13e6c9a3dabafcc7c5241149c80e3eb"
+    },
+    {
+      "bytes": 10742,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/args_processing.py",
+      "sha256": "294478696e499e27c4a821c51ed1460e094c60baae38ba181ece0a7c4252074b"
+    },
+    {
+      "bytes": 34133,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/orthohmm.py",
+      "sha256": "a6f904b3fc91ac5f747d67aef8bd24a4c22b6630801aa47f8fc9ac78d4f79467"
+    },
+    {
+      "bytes": 16611,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/parser.py",
+      "sha256": "578905528ed2a0dd97efa9d151070e5a7b0a8f52514a7b90f5c8d195039f5b7f"
+    },
+    {
+      "bytes": 8363,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/benchmark_production.py",
+      "sha256": "21ab5ec92a3f401e78403ca800ebe07f4b9efb3d6b6bcab334442272fb4ee1d9"
+    },
+    {
+      "bytes": 13966,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_large_copy_components.py",
+      "sha256": "4c28c0ecde90b39abcc4775d7bb70ff3b5b303fd52f786996e93ec6bf44b5a0c"
+    }
+  ],
+  "source_scope": "Task-owned worktree source at extended test execution; not a frozen whole-repository or benchmark execution attestation.",
+  "status": "worktree_focused_regression_passed"
+}

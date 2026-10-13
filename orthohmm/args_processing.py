@@ -15,7 +15,7 @@ from .helpers import (
 )
 from .files import fetch_fasta_files
 from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap
-from .refinement import PHYLOGENY_DEFERRED_PROFILES
+from .refinement import PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
     PhylogenyConfigurationError,
@@ -183,16 +183,26 @@ def process_args(args) -> dict:
         ),
     )
     try:
-        if refinement_profile.lower() in PHYLOGENY_DEFERRED_PROFILES and (
+        if refinement_profile.lower() in PHYLOGENY_CANDIDATE_REFINEMENT_PROFILES and (
             accuracy_profile != "high_sensitivity" or phylogeny_config.mode != "reconcile"
             or phylogeny_candidates != "satellite_v2"
             or phylogeny_config.root_duplication_rule != "species_overlap"
             or phylogeny_config.pair_orthology_rule != "positive_paralogy"
         ):
             raise PhylogenyConfigurationError(
-                "phylogeny_deferred refinement requires high_sensitivity accuracy, "
+                ("phylogeny_components" if refinement_profile.lower() == "phylogeny_components"
+                 else "phylogeny_deferred") + " refinement requires high_sensitivity accuracy, "
                 "phylogeny reconcile, satellite_v2 candidates, species_overlap rooting, "
                 "and positive_paralogy pair inference."
+            )
+        if refinement_profile.lower() == "phylogeny_components" and (
+            args.start is not None or phylogeny_config.satellite_membership_rule != "high_confidence_pair"
+            or phylogeny_config.species_tree_mode != "infer"
+            or phylogeny_config.species_tree_rooting != "min_variance"
+        ):
+            raise PhylogenyConfigurationError(
+                "phylogeny_components refinement requires fresh inference, high_confidence_pair "
+                "satellite membership and an inferred min_variance species tree."
             )
         if phylogeny_config.satellite_membership_rule != "high_confidence_pair" and (
             phylogeny_config.mode != "reconcile" or phylogeny_candidates != "satellite_v2"

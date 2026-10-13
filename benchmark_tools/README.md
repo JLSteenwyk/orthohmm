@@ -663,3 +663,26 @@ This checks receipt-bound native coverage and raw endpoint counts/means without
 rerunning inference or scoring. High/medium event labels are not calibrated
 correctness probabilities; annotated subsets and shared-pair conditioning do
 not replace the original benchmark endpoints.
+
+## Bounded Large-Copy Components
+
+`hillclimb_large_copy_components_20261013.json` prespecifies the opt-in
+`phylogeny_components` refinement profile. It retains within-family components
+at the existing edge-weight threshold of 1.5 only when each component has at
+most 500 genes. Oversized components and isolated genes retain singleton
+fallback. The unchanged large-copy eligibility predicate controls activation;
+medium-panel refinement is unchanged. Components supply candidate context,
+not ortholog assignments.
+
+The native CLI/API requires fresh built-in high-sensitivity search, Leiden,
+phylogenetic reconciliation, `satellite_v2` candidates, `species_overlap`
+rooting, `positive_paralogy` pair inference, `high_confidence_pair` satellite
+membership and an inferred `min_variance` species tree. Whole-family deferral
+cannot be combined with component retention. Production defaults are unchanged.
+
+The all-family feasibility probe and independent union-find readback are
+retained in `results/large_copy_component_feasibility_v3_20261013.json` and
+`results/large_copy_component_independent_readback_20261013.json`. They do not
+measure accuracy. Finish and independently admit the existing copy-branch
+vectors before launching the next component inference round; then freeze
+source, inputs, scoring and resource settings and evaluate all eight endpoints.
