@@ -1,0 +1,32 @@
+{
+  "schema": "qfo_native_graph_stage_localization_v1",
+  "status": "prespecified_unrun",
+  "motivation": "The verified baseline trace found 3794 of 4274 VGNC false negatives separated across candidate families, including 3315 with at least one initial HMM hit. Direct hit presence alone does not establish graph admission or a valid merge.",
+  "hypothesis": "Saved native edge admission and full-universe partition transitions can distinguish graph-threshold omission from clustering and heuristic-refinement separation, prioritizing a label-blind change to candidate construction before phylogenetic reconciliation.",
+  "cohort": "All 23934 asserted rows in the completed qfo_reference_stage_trace_v3_20261012, preserving its 79 resolved database aliases and two within-species reference rows. No subset chosen by observed graph support.",
+  "observations": [
+    "Direct native edge presence and weight in initial RBNH, multipass, profile-base, and profile-expanded saved graphs.",
+    "Co-membership in initial, multipass, multipass-refined, profile-base, profile-expanded, profile-refined, satellite-candidate, and final RootHOG partitions.",
+    "Per-stage and transition counts separately for native TP, cross-species FN, and within-species asserted FN rows."
+  ],
+  "gates": [
+    "Reuse the admitted corrected replay; require its input plan to match the corrected candidate factorial ancestry.",
+    "Pin saved graph arrays, ordered gene tables, metadata, native partitions, retained admission, previous stage trace, helper sources and this protocol before and after execution.",
+    "Require identical full gene order to the numeric initial checkpoint, finite positive weights, canonical unique ordered graph endpoints, valid indices, exact saved/native graph fingerprints and expected graph counts.",
+    "Validate every partition over the complete 984137-gene universe and reproduce recorded group counts.",
+    "Require candidate-family and RootHOG membership to reproduce the previous trace. Preserve native pair labels rather than interpreting group co-membership as orthology.",
+    "Test graph and partition integrity, transition accounting, stage-label preservation, reference eligibility, evidence mutation, and fresh output namespaces."
+  ],
+  "resource_limits": {"cpus": 1, "memory_gib": 8, "wall_limit_minutes": 30},
+  "selection_rule": "Use this descriptive localization and outstanding held-tree/full-search results to prespecify the next candidate-construction experiment. Do not alter defaults or select parameters from this trace alone.",
+  "limitations": [
+    "This is a development-exposed cached-output diagnostic, not a fresh search, rerun clustering, new accuracy result, or independent confirmation.",
+    "Absence of an initial HMM hit still cannot distinguish prefilter, cap, ranking, or significance rejection.",
+    "Graph admission and partition changes localize a stage but do not prove that merging a pair is biologically correct or explain the complete nonlinear pipeline effect.",
+    "The profile-base stage replaces earlier singleton-assignment edges; its transition is not necessarily a monotonic expansion.",
+    "RootHOG co-membership is not native pairwise orthology; species-overlap and duplication evidence must remain explicit in any follow-up.",
+    "Shared-host diagnostic timings are not full-pipeline inference timing."
+  ],
+  "defaults_changed": false,
+  "fresh_inference_submitted": false
+}
