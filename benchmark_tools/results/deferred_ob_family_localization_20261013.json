@@ -1,0 +1,320 @@
+{
+  "F1_delta": -0.005421154186494137,
+  "changed_families": 8,
+  "changes": [
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 57.0,
+        "false_positive": 60.0,
+        "genes": 30,
+        "refog": "RefOG033.txt",
+        "splits": 3,
+        "true_positive": 378.0
+      },
+      "delta": {
+        "false_negative": 0.0,
+        "false_positive": 229.0,
+        "splits": 0,
+        "true_positive": 0.0
+      },
+      "genes": 30,
+      "refog": "RefOG033.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 57.0,
+        "false_positive": 289.0,
+        "genes": 30,
+        "refog": "RefOG033.txt",
+        "splits": 3,
+        "true_positive": 378.0
+      },
+      "weighted_delta": {
+        "false_negative": 0.0,
+        "false_positive": 7.896551724137931,
+        "true_positive": 0.0
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 70.0,
+        "false_positive": 57.0,
+        "genes": 20,
+        "refog": "RefOG039.txt",
+        "splits": 5,
+        "true_positive": 120.0
+      },
+      "delta": {
+        "false_negative": -1.0,
+        "false_positive": 57.0,
+        "splits": -1,
+        "true_positive": 1.0
+      },
+      "genes": 20,
+      "refog": "RefOG039.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 69.0,
+        "false_positive": 114.0,
+        "genes": 20,
+        "refog": "RefOG039.txt",
+        "splits": 4,
+        "true_positive": 121.0
+      },
+      "weighted_delta": {
+        "false_negative": -0.05263157894736842,
+        "false_positive": 3.0,
+        "true_positive": 0.05263157894736842
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 17.0,
+        "false_positive": 0.0,
+        "genes": 10,
+        "refog": "RefOG065.txt",
+        "splits": 3,
+        "true_positive": 28.0
+      },
+      "delta": {
+        "false_negative": 0.0,
+        "false_positive": 12.0,
+        "splits": 0,
+        "true_positive": 0.0
+      },
+      "genes": 10,
+      "refog": "RefOG065.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 17.0,
+        "false_positive": 12.0,
+        "genes": 10,
+        "refog": "RefOG065.txt",
+        "splits": 3,
+        "true_positive": 28.0
+      },
+      "weighted_delta": {
+        "false_negative": 0.0,
+        "false_positive": 1.3333333333333333,
+        "true_positive": 0.0
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 33.0,
+        "false_positive": 11.0,
+        "genes": 13,
+        "refog": "RefOG053.txt",
+        "splits": 4,
+        "true_positive": 45.0
+      },
+      "delta": {
+        "false_negative": 0.0,
+        "false_positive": 3.0,
+        "splits": 0,
+        "true_positive": 0.0
+      },
+      "genes": 13,
+      "refog": "RefOG053.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 33.0,
+        "false_positive": 14.0,
+        "genes": 13,
+        "refog": "RefOG053.txt",
+        "splits": 4,
+        "true_positive": 45.0
+      },
+      "weighted_delta": {
+        "false_negative": 0.0,
+        "false_positive": 0.25,
+        "true_positive": 0.0
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 345.0,
+        "false_positive": 35.0,
+        "genes": 27,
+        "refog": "RefOG013.txt",
+        "splits": 22,
+        "true_positive": 6.0
+      },
+      "delta": {
+        "false_negative": -1.0,
+        "false_positive": 2.0,
+        "splits": -1,
+        "true_positive": 1.0
+      },
+      "genes": 27,
+      "refog": "RefOG013.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 344.0,
+        "false_positive": 37.0,
+        "genes": 27,
+        "refog": "RefOG013.txt",
+        "splits": 21,
+        "true_positive": 7.0
+      },
+      "weighted_delta": {
+        "false_negative": -0.038461538461538464,
+        "false_positive": 0.07692307692307693,
+        "true_positive": 0.038461538461538464
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 1097.0,
+        "false_positive": 241.0,
+        "genes": 50,
+        "refog": "RefOG058.txt",
+        "splits": 14,
+        "true_positive": 128.0
+      },
+      "delta": {
+        "false_negative": 0.0,
+        "false_positive": -6.0,
+        "splits": 0,
+        "true_positive": 0.0
+      },
+      "genes": 50,
+      "refog": "RefOG058.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 1097.0,
+        "false_positive": 235.0,
+        "genes": 50,
+        "refog": "RefOG058.txt",
+        "splits": 14,
+        "true_positive": 128.0
+      },
+      "weighted_delta": {
+        "false_negative": 0.0,
+        "false_positive": -0.12244897959183673,
+        "true_positive": 0.0
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 96.0,
+        "false_positive": 67.0,
+        "genes": 34,
+        "refog": "RefOG037.txt",
+        "splits": 4,
+        "true_positive": 465.0
+      },
+      "delta": {
+        "false_negative": 0.0,
+        "false_positive": -5.0,
+        "splits": 0,
+        "true_positive": 0.0
+      },
+      "genes": 34,
+      "refog": "RefOG037.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 96.0,
+        "false_positive": 62.0,
+        "genes": 34,
+        "refog": "RefOG037.txt",
+        "splits": 4,
+        "true_positive": 465.0
+      },
+      "weighted_delta": {
+        "false_negative": 0.0,
+        "false_positive": -0.15151515151515152,
+        "true_positive": 0.0
+      }
+    },
+    {
+      "control": {
+        "exact": false,
+        "false_negative": 0.0,
+        "false_positive": 14.0,
+        "genes": 14,
+        "refog": "RefOG032.txt",
+        "splits": 1,
+        "true_positive": 91.0
+      },
+      "delta": {
+        "false_negative": 13.0,
+        "false_positive": -14.0,
+        "splits": 1,
+        "true_positive": -13.0
+      },
+      "genes": 14,
+      "refog": "RefOG032.txt",
+      "variant": {
+        "exact": false,
+        "false_negative": 13.0,
+        "false_positive": 0.0,
+        "genes": 14,
+        "refog": "RefOG032.txt",
+        "splits": 2,
+        "true_positive": 78.0
+      },
+      "weighted_delta": {
+        "false_negative": 1.0,
+        "false_positive": -1.0769230769230769,
+        "true_positive": -1.0
+      }
+    }
+  ],
+  "control": {
+    "F1": 0.7410607351873405,
+    "precision": 0.8177045380181867,
+    "recall": 0.6775533630827973,
+    "weighted_counts": {
+      "false_negative": 305.5181884790494,
+      "false_positive": 143.12060832971704,
+      "true_positive": 641.9818115209503
+    }
+  },
+  "defaults_promoted": false,
+  "families": 70,
+  "full_readback": {
+    "bytes": 32173107,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/report.json",
+    "sha256": "66f8eb97663fc4c495b36cb8fd9b9093700bc7b562076935c721817bcad54398"
+  },
+  "goal_completed": false,
+  "input_pins_reverified": true,
+  "input_summary": {
+    "bytes": 52918,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/summary.json",
+    "sha256": "2b9fbf3ebe14ee181564ffdf0da680dbc1134f5a6d09ddc640d5b84edec93060"
+  },
+  "limitations": [
+    "Previously examined references are development-exposed; this is mechanistic diagnosis, not confirmation.",
+    "Per-family weighted count changes are additive; F1 is nonlinear and has no claimed additive family attribution.",
+    "Do not introduce reference-family-specific inference rules or selectively exclude declining families."
+  ],
+  "source": {
+    "bytes": 5269,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/localize_orthobench_delta.py",
+    "sha256": "9bf2755768fc15ea4d1fc372004bd3d36a53fbc2e1473bbaa1b129144b0a9f47"
+  },
+  "status": "verified_family_count_localization_not_independent_validation",
+  "variant": {
+    "F1": 0.7356395810008464,
+    "precision": 0.8059760634974724,
+    "recall": 0.6765940946051286,
+    "weighted_counts": {
+      "false_negative": 306.4270953616405,
+      "false_positive": 154.3265292560813,
+      "true_positive": 641.0729046383592
+    }
+  },
+  "weighted_delta": {
+    "false_negative": 0.9089068825911113,
+    "false_positive": 11.205920926364257,
+    "true_positive": -0.9089068825910545
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "arms": [
+    {
+      "fresh_native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_scoring_recovery_r1_v1_20261013/control100/native",
+      "label": "control100",
+      "native_source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+      "original_native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/control100",
+      "policy": "Never repeat completed native inference. Only explicitly unrun cap400 may run after verified control scoring.",
+      "scoring_id": "fq_3ee1da21156134cb_0"
+    },
+    {
+      "fresh_native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_scoring_recovery_r1_v1_20261013/cap400/native",
+      "label": "cap400",
+      "native_source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+      "original_native_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/QfO/cap400",
+      "policy": "Never repeat completed native inference. Only explicitly unrun cap400 may run after verified control scoring.",
+      "scoring_id": "fq_3ee1da21156134cb_1"
+    }
+  ],
+  "defaults_promoted": false,
+  "dependency": "afterany:24201",
+  "execution_plan": {
+    "bytes": 1224408,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_qfo_scoring_recovery_r1_v1_20261013/execution_plan.json",
+    "sha256": "19f26a8b55972954b02a075aa112d1872a7ee329b15ef0aa9720fe5d8f5ac1d9"
+  },
+  "generated_at_utc": "2026-10-13T18:09:50.012815+00:00",
+  "goal_completed": false,
+  "job_id": "24204",
+  "original_failure_policy": "Preserve immutable parent outputs/report/source; recover only the specific scoring path error after authoritative scheduler termination.",
+  "parent_job": "24201",
+  "parent_plan": {
+    "bytes": 838335,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+    "sha256": "2b9cdb799330d7a89e95bb437ea9910b638094394aa0cc693ef32ea0fbff54eb"
+  },
+  "protocol": {
+    "bytes": 3530,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_qfo_scoring_recovery_r1_v1_20261013/benchmark_tools/hillclimb_full_qfo_scoring_recovery_20261013.json",
+    "sha256": "25e47432aaba9b398b74c6368d73fa98069b83a6574ef754da72f91e7135d977"
+  },
+  "resources": {
+    "cpus": 32,
+    "host": "local Threadripper",
+    "memory_gib": 128,
+    "wall_hours": 240
+  },
+  "source_revision": "0f60c98373bbd04c7f3dc4236420e8080ebe2268",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_qfo_scoring_recovery_r1_v1_20261013",
+  "status": "queued_waiting_for_live_parent_not_an_accuracy_result",
+  "tests": {
+    "bytes": 38522,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/full_qfo_recovery_tests_20261013.xml",
+    "sha256": "3ea7dfec435bbd4d551b4461cc53f32fd3cc8a5bedf4feb819ee66f213655268"
+  },
+  "tests_passed": 268,
+  "timing_scope": "Cached-output scoring recovery and any missing fresh cap400 native timings remain distinct; shared-host measurements are confounded."
+}
