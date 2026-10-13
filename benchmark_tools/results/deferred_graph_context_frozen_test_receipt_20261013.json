@@ -1,0 +1,82 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "passed_tests": {
+    "bytes": 21573,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_frozen_tests_v2_20261013.xml",
+    "sha256": "8bbf1ec2baf97e5ccadf08655d49ff03b3eb19348f845f16d3a4d99eb906c5ee"
+  },
+  "preserved_failed_test_attempt": {
+    "bytes": 41134,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_frozen_tests_20261013.xml",
+    "sha256": "e4618da0f7787344ec8221391fe116a1de9416cc88f79a772a1c679c95b2a21f"
+  },
+  "producer": {
+    "bytes": 24534,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_baseline_graph_context_v2_20261013.json",
+    "sha256": "56904e75caab81d739343a15cd01acf6c1771b2510b59299d751fa6d44b72258"
+  },
+  "producer_source_revision": "25a326d921443eaa0a37b83ae2efb729b87e6a56",
+  "scope": "Frozen diagnostic module imported before pytest; __file__ bound to source root and all five consumed Python source hashes checked before/after. Includes complete-cohort, provenance, malformed graph/partition, native-label accounting, output preservation, and wall/RSS budget tests. Not a full publication-suite passing claim.",
+  "source_hashes_checked_before_and_after_tests": [
+    {
+      "bytes": 10064,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/diagnose_deferred_graph_context.py",
+      "sha256": "bd532e230873d5897282a08b44c92d404d173f33364cc5ed3501be6011190977"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 14079,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/trace_deferred_reference_pairs.py",
+      "sha256": "26087ac24bfd34ec0ea210e08aaba03883a740b36e40d2f84db32b4f4c6e3eac"
+    },
+    {
+      "bytes": 13633,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/trace_qfo_graph_stages.py",
+      "sha256": "bd0ac6224a5fd42aaf9d7a06c43933eb840979469b21d63ba0112e1ddd470ca8"
+    }
+  ],
+  "staging_gap": "First frozen test attempt omitted *.slurm from the sparse view; five existing paired-tracer preparation tests could not find trace_deferred_reference_pairs.slurm. Expanded the checkout view at the same frozen Git revision without changing any consumed Python source or scientific input bytes; all 133 then passed.",
+  "status": "frozen_source_bound_133_targeted_regressions_passed",
+  "test_source_records": [
+    {
+      "bytes": 9558,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_diagnose_deferred_graph_context.py",
+      "sha256": "e1554ab0359ae791f4c4531ae9526a4c29915f6dcebdaa76e53f8c080cfb10ff"
+    },
+    {
+      "bytes": 15129,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_trace_deferred_reference_pairs.py",
+      "sha256": "5fead39c69ee4c8c19f31981db1ef8ddd6e5683b815d3268bea36de5ecd79353"
+    },
+    {
+      "bytes": 11264,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_qfo_reference_stages.py",
+      "sha256": "540efbd42227de1e8cbe85ce395d8c0f1b1f281d8c4679bf3469a0b6178dacc2"
+    },
+    {
+      "bytes": 7453,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_qfo_graph_stages.py",
+      "sha256": "71b5db728af27e3d8ba5ca0488a81c6ef41731ec7cfcfb002b6f724d4b965b5c"
+    },
+    {
+      "bytes": 3782,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_audit_qfo_vgnc_mapping.py",
+      "sha256": "55917202d17dbf5b4e5bbce8ad6077b4fc418c743c0c07f341a3446f9c273845"
+    }
+  ],
+  "test_support_slurm": {
+    "bytes": 422,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_graph_context_r1_v2_20261013/benchmark_tools/trace_deferred_reference_pairs.slurm",
+    "sha256": "15abbce86fa76f4d0b0a4d23b385959eedc319e19b7b69fe7aee3d37044b4ae5"
+  }
+}

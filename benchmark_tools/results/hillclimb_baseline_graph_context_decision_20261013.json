@@ -1,0 +1,58 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "limitations": [
+    "All graph and intermediate partition counts here describe the baseline, not variant execution. Their association with remaining misses motivates investigation, not causal proof.",
+    "An initial graph edge is not an orthology certificate; component retention could still overmerge paralogs and worsen functional similarity.",
+    "The component hypothesis is not yet an accepted parameter change, measured improvement or promoted default."
+  ],
+  "next_actions": [
+    "Finish and independently admit live QfO large-only and medium-only endpoint vectors and the fresh HMM cap panel, including queued scoring recovery. No duplicate inference.",
+    "Use those results plus complete-cohort eligibility/coherence diagnosis to prespecify and implement one component-preserving mechanism test if justified; do not expand caps or hide failed endpoints.",
+    "Compare the full eight-endpoint vector, precision/recall/coverage/pairs and resource scopes against matched controls and OrthoFinder 3.1.5 full pipeline before promotion.",
+    "Keep existing OrthoBench/GO regression rejection and unexposed-confirmation requirements intact."
+  ],
+  "prior_rejected_vector": {
+    "bytes": 7762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_copy_deferral_decision_20261013.json",
+    "sha256": "65e49d08f3a5e998104c35536f0c4c8f9628755b7adc04935bd8b0ddb4ceb36a"
+  },
+  "proposed_next_mechanism_hypothesis": {
+    "fixed_existing_component_score_threshold": 1.5,
+    "fixed_existing_max_component_genes": 500,
+    "motivation": "Broad-mode large-copy refinement currently singletonizes entire eligible clusters. Compare retaining strong HMM/RBNH-supported components as candidates for duplication-aware native gene trees, not as final ortholog cliques.",
+    "name": "bounded_hmm_supported_component_preserving_large_copy_refinement",
+    "not_implemented_or_launched": true,
+    "proposed_safeguards": [
+      "Keep behavior opt-in and retain the unchanged published control.",
+      "Preserve complete gene universe, singleton/fragment/isolated-gene handling and deterministic partitions.",
+      "Retain components only within the unchanged 500-gene bound; do not infer orthology from connectedness.",
+      "Require HMM high-sensitivity candidate inference and native duplication-aware phylogenetic reconciliation; preserve species-overlap/paralogy evidence.",
+      "Hold unrelated search, expansion, species/root/pair and satellite settings fixed in the first component ablation."
+    ],
+    "required_preimplementation_diagnosis": [
+      "Join actual executed copy-splitting eligibility predicates to the complete trace, with the numeric checkpoint gene order. Distinguish bound-limited, eligible, inactive and other refinement cases without selecting reference families.",
+      "Validate component-edge score semantics against the actual directed RBNH inputs used by refinement; saved undirected graph weights cannot be silently substituted.",
+      "Measure label-blind family/component size, species/copy structure and sequence/alignment coherence across all eligible families, not only reference errors."
+    ]
+  },
+  "readback": {
+    "bytes": 3311,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_independent_readback_20261013.json",
+    "sha256": "d1e92dcf5d9bec9fce50c810ec36d29af3cbaa6981aa707a1863d155a94d3927"
+  },
+  "status": "complete_context_diagnostic_prioritizes_candidate_refinement_no_inference_selection",
+  "tests": {
+    "bytes": 4792,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_frozen_test_receipt_20261013.json",
+    "sha256": "7c457a45b9a9c8edccdff78675b0bde6ab4a392fe156a070e045cd91267e35fc"
+  },
+  "verified_baseline_context": {
+    "remaining_baseline_profile_refinement_separations": 1176,
+    "remaining_candidate_separated_pairs": 1761,
+    "remaining_same_profile_expanded_family": 1176,
+    "remaining_with_initial_graph_edge": 1307,
+    "rescued_baseline_multipass_refinement_separations": 1864,
+    "rescued_with_initial_graph_edge": 1872
+  }
+}

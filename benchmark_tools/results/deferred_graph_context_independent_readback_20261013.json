@@ -1,0 +1,49 @@
+{
+  "all_edge_partition_boundary_and_hit_counts_match": true,
+  "cohort_rows": 23934,
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "next_actions": [
+    "Finish live branch ablations and fresh HMM cap panel before choosing another inference round.",
+    "Diagnose executed eligibility predicates and family coherence for the remaining profile-expanded co-family pairs. Consider a bounded HMM-supported component-preserving large-copy refinement alternative to wholesale singletonization, using the actual refinement edge-score semantics and preserving duplication evidence for native trees.",
+    "Do not blindly expand the 500-gene bound, merge every admitted edge, tune reference-specific rules, or label baseline transitions as variant causes."
+  ],
+  "observations": [
+    "Of 1943 rescued pairs, 1872 had an admitted baseline initial graph edge, 1908 were baseline multipass co-clustered, and 1864 were separated at the baseline multipass-to-refinement boundary.",
+    "Of 1761 still candidate-separated misses, 1307 had an admitted baseline initial edge. Baseline profile expansion co-clustered 1176 of them, then baseline profile refinement separated all 1176.",
+    "The remaining 585 were baseline profile-expanded separated already; this stratum cannot be repaired solely by retaining an existing baseline profile-expanded family.",
+    "14 of 16 lost true positives had a baseline initial graph edge; confidence or raw hit presence alone is not a sufficient correctness discriminator."
+  ],
+  "original_resource_scope_audit": {
+    "bytes": 1548,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_rusage_scope_audit_20261013.json",
+    "sha256": "d7ec6d6efa926e6a99d2c0ff0db6ba4556638fd66b4f9e533efbc6506d39643c"
+  },
+  "producer_source_revision": "25a326d921443eaa0a37b83ae2efb729b87e6a56",
+  "report": {
+    "bytes": 24534,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_baseline_graph_context_v2_20261013.json",
+    "sha256": "56904e75caab81d739343a15cd01acf6c1771b2510b59299d751fa6d44b72258"
+  },
+  "resources": {
+    "cpu_s": 1.236117517,
+    "linux_post_exec_peak_rss_kib": 182784,
+    "rss_scope": "Linux /proc/self/status VmHWM covers this exec, including imports. getrusage maxrss can retain pre-exec launch history; it is not the diagnostic's attributable peak.",
+    "rusage_maxrss_at_diagnostic_start_kib": 8071360,
+    "rusage_maxrss_kib": 8071360,
+    "wall_s": 1.2386058180127293
+  },
+  "scientific_counts_unchanged_from_preserved_first_attempt": true,
+  "scope": "Independent physical-table filtered-stratum recount, exact control-prefix join, v1/v2 scientific counter equality, and rehash of all directly consumed producer files/sources. Earlier graph-array and native-prediction audits remain inherited, not rerun.",
+  "status": "all_paired_baseline_graph_context_strata_independently_recounted",
+  "strata_counts": {
+    "transition:FN->FN": 2331,
+    "transition:FN->TP": 1943,
+    "transition:TP->FN": 16,
+    "transition:TP->TP": 19644,
+    "variant:FN/different_candidate_families": 1761,
+    "variant:FN/reference_within_species": 2,
+    "variant:FN/within_candidate_not_predicted": 584,
+    "variant:TP/predicted": 21587
+  }
+}
