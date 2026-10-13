@@ -1,0 +1,27 @@
+{
+  "schema": "deferred_pair_baseline_graph_context_v1",
+  "status": "prespecified_descriptive_diagnostic",
+  "hypothesis": "The complete paired VGNC trace can be joined to the admitted baseline graph-stage trace to identify which baseline edge and partition states characterize rescued, lost, and still-missed reference pairs. This will prioritize a general-property-based candidate-construction mechanism without rerunning or relabeling the baseline graph as a variant graph.",
+  "cohort": "All 23934 asserted VGNC rows, with unchanged labels, native aliases, HMM-hit evidence, and both within-species assertions. No selection by observed graph support.",
+  "inputs": ["qfo_graph_stage_readback_20261013.json and its pinned graph-stage table", "deferred_pair_localization_independent_readback_20261013.json and its pinned paired tables"],
+  "gates": [
+    "Require completed independently read-back producer statuses, immutable receipt/report/table/plan hashes, and the same original control-table identity.",
+    "Require every graph-stage row to reproduce every control-table field exactly and pair immutable control-to-variant fields exactly, preserving row order and the full cohort.",
+    "Validate canonical unique pairs, boolean graph/partition columns, finite positive present-edge weights and explicit NA absent-edge weights.",
+    "Reproduce native TP/FN counts, rescue/loss counts, and both unchanged within-species assertions from the admitted paired trace.",
+    "Execute tested frozen source, bind actual source and input bytes before and after diagnosis, and refuse existing output namespaces."
+  ],
+  "observations": ["baseline graph-edge presence by TP/FN transition", "baseline partition co-membership and boundaries by TP/FN transition", "baseline graph and partition context of each final variant stage", "initial directed HMM-hit counts in each descriptive stratum"],
+  "resource_limits": {"cpus": 1, "memory_gib": 2, "wall_limit_minutes": 10, "host": "local Threadripper"},
+  "selection_rule": "No parameter selection, new inference, or default promotion. Join all rows and summarize prespecified strata. Finish current fresh-search and copy-branch rounds before selecting a new bounded mechanism experiment.",
+  "limitations": [
+    "All graph and intermediate partition fields are BASELINE context, not execution states of the deferral variant. No causal attribution to a variant stage is justified by this join.",
+    "Stage traces inherit their previously verified native graph/checkpoint audits; this diagnostic rechecks consumed receipts, tables, plans, and executed sources, not every transitive array or native prediction file.",
+    "Reference-exposed descriptive diagnosis is not independent validation; graph connectivity and functional similarity are not orthology truth.",
+    "Rows contribute to both transition and variant-outcome summaries; these are separate views of the same cohort, not independent observations.",
+    "Reference assertions can share genes and labels; no independent-family uncertainty is claimed.",
+    "Shared-host diagnostic resource observations are not full-pipeline inference timings."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
