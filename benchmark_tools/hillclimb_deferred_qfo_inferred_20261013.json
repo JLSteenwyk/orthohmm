@@ -1,0 +1,29 @@
+{
+  "status": "prespecified_not_submitted",
+  "parent": "benchmark_tools/hillclimb_deferred_copy_split_20261013.json",
+  "purpose": "Complete the corrected QfO inferred-species-tree evaluation of the same default and bounded-copy-deferral candidate sets. Combine its six endpoints with the OrthoBench/Three Kingdoms inferred-tree supplement for an eight-endpoint accuracy vector.",
+  "hypothesis": "Any accuracy changes from the bounded copy-deferral policy must be assessed with each candidate set's own species-tree inference, rather than assuming the fixed-baseline-tree diagnostic represents the full phylogenetic method.",
+  "arms": ["control", "deferred500"],
+  "changes": "No additional search, clustering, refinement, satellite, root-event or pair-inference parameter changes. Replace the fixed species-tree handoff with native infer mode using the current candidate set. Keep species_overlap, positive_paralogy, min_variance and direct high-confidence satellite retention.",
+  "reuse": "Reuse the exact admitted HMM-derived candidate and merge files, and all compatible completed raw gene trees from each matching fixed-tree arm. Require every reconciled family to hit its validated raw-tree checkpoint. Do not repeat search/profile scoring or rebuild valid gene trees.",
+  "parent_gate": "Run only after Slurm 24198 has completed successfully and both fixed-tree arms have terminal independent native-output and score readback. Independently reread those products and scores, snapshot the terminal parent report, and fingerprint all consumed alignment/checkpoint/tree files before new inference. Failed or incomplete parent arms are explicit gaps, not substituted inputs or grounds for an automatic duplicate attempt.",
+  "input_resolution": "The initial execution plan pins already produced candidate/seed/merge files, original parent plan, FASTAs, tools, frozen source and runtime. Parent raw-tree products still being generated are declared deferred inputs, not falsely called frozen. After authoritative parent completion, resolve them into an immutable input manifest and verify before/after inference and scoring.",
+  "control_gates": [
+    "Control candidate and merge bytes must equal the retained native baseline.",
+    "Own-inferred control RootHOG, pair, confidence and rooted-species-tree bytes must reproduce the original native inferred-tree baseline.",
+    "Recompute all six assessments and independently read them back; require exact reproduction of the five deterministic control endpoints. FAS remains stochastic.",
+    "Both arms retain all 984137 input genes and 78 species, native canonical pairs and confidence annotations, and use infer mode without a supplied tree.",
+    "Verify checkpoint identities and complete raw-gene-tree reuse. A failed contemporary control prevents variant inference; preserve every failure."
+  ],
+  "evaluation": "Report VGNC, SwissTrees and supporting TreeFam-A F1, EC/GO/FAS similarity, precision, recall, relation counts, coverage, native pair/family/event counts, marker counts, tree contrasts, failures and incremental resources separately. Compare own-inferred variants against matched own-inferred controls and fixed-tree diagnostics. Use all eight endpoints and Pareto tradeoffs before promotion, preserving the development 0.005 decline screen without statistical-equivalence claims.",
+  "resources": {"cpus": 16, "memory_gib": 64, "wall_hours": 72, "arms_sequential": true, "dependency": "afterany:24199, whose own dependency follows 24198; do not overlap new native arms"},
+  "limitations": [
+    "All data are development-exposed; this does not establish independent biological confirmation.",
+    "Cached upstream HMM graphs/candidates/raw trees with candidate-specific native species-tree inference; not fresh full-pipeline execution or timing.",
+    "Shared-host incremental timing is confounded and FAS is unseeded.",
+    "The first fixed-tree variant has not been scored at prespecification. Keep both arms and the fixed 500-gene ceiling regardless of subsequent exposed scores.",
+    "A complete metric vector and reproducible improvement are required before considering default promotion."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

@@ -219,6 +219,13 @@ def run(plan_path):
         raise ValueError("Execute the frozen source")
     if tuple(c["label"] for c in plan["cases"]) != LABELS or (output / "results.json").exists():
         raise ValueError("Unexpected case inventory or existing attempt")
+    evaluation_mode = plan.get("evaluation_mode", "fixed_species_tree")
+    if evaluation_mode not in ("fixed_species_tree", "inferred_parent"):
+        raise ValueError("Unknown deferred copy-split evaluation mode")
+    inferred_parent = evaluation_mode == "inferred_parent"
+    if inferred_parent and any(argument(c["command"], "--species-tree-mode") != "infer"
+                               or "--species-tree" in c["command"] for c in plan["cases"]):
+        raise ValueError("Own-tree follow-up requires infer mode without a supplied tree")
     checked = [identity, *plan["inputs"], *plan["sources"], *plan["runtime"]["files"]]
     for item in checked:
         check(item)
@@ -231,7 +238,17 @@ def run(plan_path):
     env = {**os.environ, "PATH": plan["tool_path"], "PYTHONPATH": str(source), "PYTHONHASHSEED": "0",
            "CUDA_VISIBLE_DEVICES": "", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1"}
     try:
-        construct(plan, report, output)
+        if inferred_parent:
+            from benchmark_tools.deferred_qfo_inferred import resolve
+            resolved = resolve(plan, output)
+            report["arms"] = resolved["arms"]
+            report["parent_admission"] = resolved["receipt"]
+            report["parent_readbacks"] = resolved["readbacks"]
+            checked.extend(resolved["checked"])
+            for case in plan["cases"]:
+                Path(case["output"]).mkdir(exist_ok=False)
+        else:
+            construct(plan, report, output)
         for item in checked:
             check(item)
         control_valid = False
@@ -254,11 +271,15 @@ def run(plan_path):
                 native = replay_native(row, case)
                 if native["genes"] != 984137 or native["species"] != 78:
                     raise ValueError("Wrong native input universe")
-                if case["label"] == "control":
+                if inferred_parent:
+                    from benchmark_tools.deferred_qfo_inferred import require_inferred_summary
+                    require_inferred_summary(native["summary"])
+                elif case["label"] == "control":
                     require_reuse(native["summary"])
+                if case["label"] == "control":
                     row["golden_matches"] = compare_golden(phylo, plan["golden"])
                 row["tree_handoff"] = tree_contrast(plan["tree"]["path"], phylo / "species_tree.rooted.nwk")
-                if row["tree_handoff"]["rooted_clade_distance"]:
+                if not inferred_parent and row["tree_handoff"]["rooted_clade_distance"]:
                     raise ValueError("Fixed species-tree handoff changed")
                 row["native_summary"] = native["summary"]
                 row["status"] = "native_outputs_verified_scoring_pending"
@@ -301,13 +322,25 @@ def main():
     for name in ("repo", "source-root", "output", "graph-plan", "comparison"):
         preparation.add_argument("--" + name, type=Path, required=True)
     preparation.add_argument("--cpu", type=int, default=16)
+    inferred = commands.add_parser("prepare-inferred")
+    for name in ("repo", "source-root", "output", "parent-plan", "parent-results"):
+        inferred.add_argument("--" + name, type=Path, required=True)
+    inferred.add_argument("--cpu", type=int, default=16)
+    inferred.add_argument("--parent-job", required=True)
     execution = commands.add_parser("run")
     execution.add_argument("--plan", type=Path, required=True)
     args = parser.parse_args()
-    result = (prepare(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.graph_plan.resolve(),
-                      args.comparison.resolve(), args.cpu) if args.mode == "prepare" else run(args.plan.resolve()))
+    if args.mode == "prepare":
+        result = prepare(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.graph_plan.resolve(),
+                         args.comparison.resolve(), args.cpu)
+    elif args.mode == "prepare-inferred":
+        from benchmark_tools.deferred_qfo_inferred import prepare as prepare_inferred
+        result = prepare_inferred(args.repo.resolve(), args.source_root.resolve(), args.output.resolve(), args.parent_plan.resolve(),
+                                  args.parent_results.resolve(), args.cpu, args.parent_job)
+    else:
+        result = run(args.plan.resolve())
     print(json.dumps({"status": result["status"]}))
-    return 0 if result["status"] in ("prepared_unrun", "finished_all_arms_verified") else 1
+    return 0 if result["status"] in ("prepared_unrun", "prepared_waiting_for_terminal_parent", "finished_all_arms_verified") else 1
 
 
 if __name__ == "__main__":
