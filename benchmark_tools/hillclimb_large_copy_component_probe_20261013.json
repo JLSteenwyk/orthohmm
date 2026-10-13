@@ -1,0 +1,21 @@
+{
+  "schema": "large_copy_component_feasibility_v1",
+  "status": "prespecified_before_component_probe",
+  "motivation": "The complete executed-predicate join found 1176 remaining co-family VGNC misses in 28 eligible large families above the existing 500-gene bound. Large-only whole-family deferral also has a GO decline beyond the development screen. Probe a safer general candidate decomposition before changing inference.",
+  "cohort": "All 251 executed large-copy eligible QfO families, not a reference-selected subset; describe reference outcomes only after computing every component label without reference data.",
+  "mechanism_hypothesis": "Within-family connected components using the existing refinement component edge threshold may retain HMM-supported candidate context without retaining an entire oversized or weakly connected high-copy family. Components are not orthology assignments.",
+  "fixed_parameters": {"component_min_edge_weight": 1.5, "maximum_retained_component_genes": 500, "oversized_component_policy": "legacy singleton fallback", "isolated_gene_policy": "keep singleton"},
+  "gates": [
+    "Use the exact saved profile-expanded edge arrays passed as rbnh_queries/targets/scores by the frozen regenerated-refinement runner; preserve the original score semantics, not a renamed or rescaled edge statistic.",
+    "Verify all consumed array hashes, native saved-graph fingerprint, full gene order, positive finite canonical unique edge endpoints/weights, completed structural sidecars and the prior complete eligibility join.",
+    "Use frozen native component traversal and confirm every family retains every gene exactly once. Component labels must be assigned before reference joins.",
+    "Describe species/copy structure and sequence-length heterogeneity for all eligible families/components using exact full-universe FASTA genes and frozen input checksums; length is only a proxy, not alignment coherence or proof of orthology.",
+    "Join the entire paired reference cohort after component construction and report prospective retained versus oversized-fallback context separately. No predicted accuracy scores are imputed from connectivity.",
+    "Record actual executed helper/runtime identities and consumed inputs before and after analysis; preserve original attempts and enforce local bounded resource use."
+  ],
+  "selection_rule": "Use feasibility only to decide whether to implement one opt-in bounded component-retention ablation. Do not launch the next inference round before current branch vectors are independently admitted; never promote from this probe or tune thresholds on reference pairs.",
+  "resource_limits": {"cpus": 1, "memory_gib": 8, "wall_limit_minutes": 20, "host": "local Threadripper"},
+  "limitations": ["Reference-exposed diagnostic, not a new search, orthology inference or accuracy improvement.", "Strong graph connectivity and sequence-length coherence are not orthology certificates; native duplication-aware gene trees remain necessary.", "Saved graph/checkpoint ancestry and existing native scores retain inherited audits. Fresh full-pipeline timing cannot be inferred from this probe.", "No reference-specific changes, component threshold search, or expansion of the 500-gene bound.", "GO/EC/FAS similarity changes are not biological truth labels and are not used to construct components."],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

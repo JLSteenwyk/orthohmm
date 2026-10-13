@@ -1,0 +1,331 @@
+{
+  "analysis_recipe": "from collections import Counter\nfrom pathlib import Path\nimport csv,json,os,resource,subprocess,sys,time\nimport numpy as np\nstarted=time.monotonic()\nrepo=Path.cwd()\nroot=repo/\"benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO\"\nplan_path=root/\"execution_plan.json\"\nplan=json.loads(plan_path.read_text())\nsource=Path(plan[\"source_root\"])\nsys.path.insert(0,str(source))\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record,check\nfrom benchmark_tools.run_membership_hillclimb import write_json\nfrom benchmark_tools.audit_historical_profile_ablation import read_partition\nfrom orthohmm import refinement\noutput=repo/\"benchmark_tools/results/copy_eligibility_context_20261013.json\"\nsnapshot=repo/\"benchmark_tools/results/copy_eligibility_structural_snapshot_20261013.json\"\nassert not output.exists() and not snapshot.exists()\nlive=json.loads((root/\"results.json\").read_text())\nassert live[\"dataset\"]==\"QfO\" and live[\"job_id\"]==\"24207\" and live[\"execution_plan\"]==record(plan_path)\nstructural=live[\"structural_controls\"]\nassert tuple(structural)==(\"control\",\"deferred500\")\nwrite_json(snapshot,{\"status\":\"immutable_structural_snapshot_not_terminal_score_admission\",\"source_revision\":live[\"source_revision\"],\"producer_job_id\":live[\"job_id\"],\"execution_plan\":live[\"execution_plan\"],\"parent_admission\":live[\"parent_admission\"],\"structural_controls\":structural,\"scheduler_at_capture\":subprocess.check_output([\"scontrol\",\"show\",\"job\",\"24207\"],text=True)})\nchecked=[record(snapshot),record(plan_path),live[\"parent_admission\"],record(repo/\"benchmark_tools/hillclimb_copy_eligibility_context_20261013.json\")]\nparent=json.loads(Path(live[\"parent_admission\"][\"path\"]).read_text())\nassert all(c[\"status\"]==\"independent_content_readback_verified\" for c in parent[\"cells\"])\nfor i,label in enumerate((\"control\",\"deferred500\")):\n    row=structural[label]\n    for key,parent_key in ((\"candidate_partition\",\"candidate\"),(\"membership_constraints\",\"constraints\")):\n        assert row[\"candidate\"][key][\"sha256\"]==plan[\"parent_candidates\"][i][parent_key][\"sha256\"]\n        checked.extend([row[\"candidate\"][key],plan[\"parent_candidates\"][i][parent_key]])\n    checked.extend([row[\"seed\"],row[\"copy_split_trace\"]])\nassert structural[\"control\"][\"seed\"][\"sha256\"]==plan[\"data\"][\"golden_refinement\"][\"sha256\"]\nchecked.append(plan[\"data\"][\"golden_refinement\"])\nreference_plan_path=repo/\"benchmark_tools/results/qfo_reference_stage_plan_v3_20261012.json\"\nreference_plan=json.loads(reference_plan_path.read_text())\nname_record=reference_plan[\"inputs\"][\"checkpoint_gene_names.txt\"]\nspecies_record=reference_plan[\"inputs\"][\"checkpoint_gene_to_species.npy\"]\nassert Path(name_record[\"path\"]).parent==Path(plan[\"data\"][\"checkpoint\"])\nassert plan[\"data\"][\"checkpoint_manifest\"]==reference_plan[\"inputs\"][\"checkpoint_manifest\"]\nchecked.extend([record(reference_plan_path),name_record,species_record,plan[\"data\"][\"checkpoint_manifest\"],plan[\"data\"][\"partition\"]])\nnames=Path(name_record[\"path\"]).read_text().splitlines()\nspecies=np.load(species_record[\"path\"],mmap_mode=\"r\",allow_pickle=False)\nassert len(names)==len(set(names))==len(species)==984137 and len(np.unique(species))==78 and np.issubdtype(species.dtype,np.integer)\nindex={name:i for i,name in enumerate(names)}\npartitions=read_partition(Path(plan[\"data\"][\"partition\"][\"path\"]),set(names))\nlarge_members={tuple(sorted(index[g] for g in group)) for group in partitions if len(group)>=70}\nevents=[json.loads(Path(structural[label][\"copy_split_trace\"][\"path\"]).read_text())[\"events\"] for label in (\"control\",\"deferred500\")]\nassert len(events[0])==len(events[1])==470\nowners={}\nsummary=Counter()\nfor ordinal,(a,b) in enumerate(zip(*events)):\n    assert {k:v for k,v in a.items() if k!=\"deferred\"}=={k:v for k,v in b.items() if k!=\"deferred\"}\n    members=a[\"members\"]\n    assert members==sorted(set(members)) and len(members)==a[\"size\"] and tuple(members) in large_members\n    assert all(type(i) is int and 0<=i<len(names) for i in members)\n    counts=Counter(int(species[i]) for i in members)\n    assert max(counts.values())==a[\"maximum_species_copies\"] and a[\"dataset_species_count\"]==78\n    large=refinement._should_split_large_copy_cluster(len(members),counts,78,refinement.DEFAULT_COPY_SPLIT_MIN_SIZE,refinement.DEFAULT_BROAD_COPY_SPLIT_MIN_SPECIES_COUNT,refinement.DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES)\n    medium=refinement._should_split_medium_panel_copy_cluster(len(members),counts,78,refinement.DEFAULT_PANEL_COPY_SPLIT_MIN_SIZE,refinement.DEFAULT_PANEL_COPY_SPLIT_MAX_SIZE,refinement.DEFAULT_PANEL_COPY_SPLIT_MIN_SPECIES_COUNT,refinement.DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES)\n    assert type(a[\"large_copy_eligible\"]) is bool and type(a[\"medium_copy_eligible\"]) is bool\n    assert (large,medium)==(a[\"large_copy_eligible\"],a[\"medium_copy_eligible\"]) and large!=medium\n    assert a[\"deferred\"] is False and b[\"deferred\"]==((large or medium) and len(members)<=500)\n    kind=\"large_over_500\" if large and len(members)>500 else \"large_at_most_500\" if large else \"medium_at_most_500\"\n    summary[kind+\"_families\"]+=1\n    summary[kind+\"_genes\"]+=len(members)\n    for i in members:\n        assert i not in owners\n        owners[i]=(ordinal,kind)\ngraph_readback_path=repo/\"benchmark_tools/results/deferred_graph_context_independent_readback_20261013.json\"\ngraph_readback=json.loads(graph_readback_path.read_text())\nassert graph_readback[\"status\"]==\"all_paired_baseline_graph_context_strata_independently_recounted\"\ncontext=json.loads(Path(graph_readback[\"report\"][\"path\"]).read_text())\npair_readback_path=repo/\"benchmark_tools/results/deferred_pair_localization_independent_readback_20261013.json\"\npair_readback=json.loads(pair_readback_path.read_text())\npaired=json.loads(Path(pair_readback[\"checked\"][0][\"path\"]).read_text())\nold_graph_readback_path=repo/\"benchmark_tools/results/qfo_graph_stage_readback_20261013.json\"\nold_graph_readback=json.loads(old_graph_readback_path.read_text())\nold_graph=json.loads(Path(old_graph_readback[\"checked\"][0][\"path\"]).read_text())\nchecked.extend([record(graph_readback_path),graph_readback[\"report\"],record(pair_readback_path),pair_readback[\"checked\"][0],record(old_graph_readback_path),old_graph_readback[\"checked\"][0]])\ntables=[]\nfor item in [paired[\"arms\"][0][\"table\"],paired[\"arms\"][1][\"table\"],old_graph[\"table\"]]:\n    checked.append(item)\n    with Path(item[\"path\"]).open() as stream:\n        tables.append(list(csv.DictReader(stream,delimiter=\"\\t\")))\nassert all(len(t)==23934 for t in tables)\ngroups={}\nfor a,b,g in zip(*tables):\n    assert all(g[k]==a[k] for k in a)\n    assert all(a[k]==b[k] for k in (\"left\",\"right\",\"reference_label\",\"native_gene_left\",\"native_gene_right\",\"reference_is_cross_species\",\"initial_hit_directions\",\"forward_normalized_score\",\"reverse_normalized_score\"))\n    ia,ib=(index[a[k]] for k in (\"native_gene_left\",\"native_gene_right\"))\n    oa,ob=owners.get(ia),owners.get(ib)\n    if oa is not None and ob is not None and oa[0]==ob[0]:\n        kind=oa[1]\n        assert g[\"same_profile_expanded\"]==\"True\"\n    elif oa is not None and ob is not None:\n        kind=\"different_eligible_families\"\n        assert g[\"same_profile_expanded\"]==\"False\"\n    elif oa is not None or ob is not None:\n        kind=\"one_eligible_family\"\n        assert g[\"same_profile_expanded\"]==\"False\"\n    else:\n        kind=\"no_eligible_family\"\n    for key in (\"transition:\"+a[\"category\"]+\"->\"+b[\"category\"],\"variant:\"+b[\"category\"]+\"/\"+b[\"stage\"]):\n        bucket=groups.setdefault(key,{\"pairs\":0,\"eligibility\":Counter(),\"same_profile_expanded_by_eligibility\":Counter()})\n        bucket[\"pairs\"]+=1\n        bucket[\"eligibility\"][kind]+=1\n        bucket[\"same_profile_expanded_by_eligibility\"][kind+\"/same_\"+g[\"same_profile_expanded\"]]+=1\nassert {k:v[\"pairs\"] for k,v in groups.items()}==graph_readback[\"strata_counts\"]\nassert sum(v[\"pairs\"] for k,v in groups.items() if k.startswith(\"transition:\"))==23934\nfor module in (refinement,sys.modules[\"benchmark_tools.audit_historical_profile_ablation\"],sys.modules[\"benchmark_tools.prepare_ob_candidate_neighborhood\"],sys.modules[\"benchmark_tools.run_membership_hillclimb\"]):\n    checked.append(record(Path(module.__file__)))\nfor item in checked:\n    check(item)\nmemory=dict(line.split(\":\",1) for line in Path(\"/proc/self/status\").read_text().splitlines() if \":\" in line)\npeak=int(memory[\"VmHWM\"].split()[0])\nassert peak<=2*1024**2 and time.monotonic()-started<=600\nwrite_json(output,{\"status\":\"complete_all_reference_executed_copy_eligibility_join_verified\",\"source_revision\":plan[\"source_revision\"],\"checked\":checked,\"eligible_family_summary\":dict(summary),\"strata\":groups,\"fixed_component_threshold\":refinement.DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,\"fixed_deferral_bound\":500,\"resources\":{\"wall_s\":time.monotonic()-started,\"linux_post_exec_peak_rss_kib\":peak,\"rusage_maxrss_kib\":resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},\"analysis_recipe\":os.environ[\"DIAGNOSTIC_RECIPE\"],\"scope\":\"Complete-cohort descriptive join to immutable executed structural sidecars from a live branch job. Native score admission and raw graph-array audits are inherited; no new inference or variant-causal graph claim.\",\"defaults_promoted\":False,\"goal_completed\":False})\nprint(json.dumps({\"summary\":dict(summary),\"remaining_separated\":groups[\"variant:FN/different_candidate_families\"],\"rescued\":groups[\"transition:FN->TP\"]},indent=2))",
+  "checked": [
+    {
+      "bytes": 10007,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_eligibility_structural_snapshot_20261013.json",
+      "sha256": "d23de5b3de6bf76c786335e8bd414a6827e4792c46afb571b19cd974743765de"
+    },
+    {
+      "bytes": 108208672,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/execution_plan.json",
+      "sha256": "1d734b73acbbafe6d2fa7b5ee38750d520708b7ad485b104940d7c09a109476b"
+    },
+    {
+      "bytes": 437113671,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/resolved_parent_inputs.json",
+      "sha256": "ced434543be85a640fb4c161f277aff7ecc7ef94e9840fdd832783c450f1e9af"
+    },
+    {
+      "bytes": 3058,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_copy_eligibility_context_20261013.json",
+      "sha256": "9791e0257f42e2a3ca7c9aeefaedc77fb538faf55dad7e2bb2dea93090afbfdf"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/control/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "dd1bf10c01a3d5f23f69d4fba566bac7a33f1239b38dab327d548f85fbde32cb"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/control/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "dd1bf10c01a3d5f23f69d4fba566bac7a33f1239b38dab327d548f85fbde32cb"
+    },
+    {
+      "bytes": 76375383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/control/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "826f89e18c9fad515eeb60bf7b7a110ec7914e3c8bb17507fc834ba2e54a8064"
+    },
+    {
+      "bytes": 76375383,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/control/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "826f89e18c9fad515eeb60bf7b7a110ec7914e3c8bb17507fc834ba2e54a8064"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/control/refined_seed.txt",
+      "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+    },
+    {
+      "bytes": 1787075,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/control/copy_split_trace.json",
+      "sha256": "17a330d6be899c9149d8bc58dd649ce009db2ba9a64075c6eb53c4539a383b2a"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/deferred500/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "1eae5dd1ff1048d49995c49650576b158500b22108bd5fd1074c9481661b8b65"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/deferred500/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "1eae5dd1ff1048d49995c49650576b158500b22108bd5fd1074c9481661b8b65"
+    },
+    {
+      "bytes": 93136705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/deferred500/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "658155543297d1b49f828fa99b6b903a375278fdbb4cb2c27dae376ec4ac40ae"
+    },
+    {
+      "bytes": 93136705,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/deferred500/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+      "sha256": "658155543297d1b49f828fa99b6b903a375278fdbb4cb2c27dae376ec4ac40ae"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/deferred500/refined_seed.txt",
+      "sha256": "086a7b073288f712643a05dfda2df7b32ade70c8168f3f721bdfde8c10530442"
+    },
+    {
+      "bytes": 1786633,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/deferred500/copy_split_trace.json",
+      "sha256": "1aea64771f32366a7cb5f5ffdd94723652f25100a5ddaf476637e783630df778"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/replay/orthogroups_profiles_refined.txt",
+      "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+    },
+    {
+      "bytes": 7918,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_v3_20261012.json",
+      "sha256": "89468169bf0c9b7a5129352bf856519d6d1385be3aa63ff4a42360c0e28b64dd"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 3936676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ac95c21f52c2954a7d18b09f64ccfd2d831a68b99fe284a928803dffeaff229d"
+    },
+    {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "30d1718e0ad1ec080b9783b0f94f3e8855063459c4b2999d86f93eb8d1b4c8e1"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/partition.txt",
+      "sha256": "aec4b3aff78d7284d647669a25305008d0b23de2fa7366a14137a0fdedbc4a27"
+    },
+    {
+      "bytes": 3311,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_graph_context_independent_readback_20261013.json",
+      "sha256": "d1e92dcf5d9bec9fce50c810ec36d29af3cbaa6981aa707a1863d155a94d3927"
+    },
+    {
+      "bytes": 24534,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_baseline_graph_context_v2_20261013.json",
+      "sha256": "56904e75caab81d739343a15cd01acf6c1771b2510b59299d751fa6d44b72258"
+    },
+    {
+      "bytes": 10815,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_independent_readback_20261013.json",
+      "sha256": "6af15cc5c2e4dd59fd450345d77d0167e479497e0582be45fee8a579145f0692"
+    },
+    {
+      "bytes": 22501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/results.json",
+      "sha256": "6e123455a27681cc61fd79beb31a90077419f8e7b5d4240e05d7b3632b81ec9a"
+    },
+    {
+      "bytes": 21371,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_graph_stage_readback_20261013.json",
+      "sha256": "f16e2f83b4f5ef3b437dac26047ab7c5b81dd87750ca3edac7e9dff1a980bb5e"
+    },
+    {
+      "bytes": 25985,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_graph_stage_trace_20261013/report.json",
+      "sha256": "345b7224374c4ee0ac311a85a94ecd8251141df83170334636b221a3f2b8ccc6"
+    },
+    {
+      "bytes": 3163944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/control/reference_pair_stages.tsv",
+      "sha256": "7f747ff02e47a95a27f5659780951a9bf76b4e2556d19a3bcb711372a1132c4c"
+    },
+    {
+      "bytes": 3125510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/deferred500/reference_pair_stages.tsv",
+      "sha256": "08e9fa897c3acacc36d7891b348a5d4f9f8752067f959495e01caf1acb86e968"
+    },
+    {
+      "bytes": 6266856,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_graph_stage_trace_20261013/reference_graph_stages.tsv",
+      "sha256": "70c9b36bb9dd07f6b773bf6bddbf50a0d1ef781a36ca7f2f55ebe6ca7c9f7d33"
+    },
+    {
+      "bytes": 64352,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013/orthohmm/refinement.py",
+      "sha256": "531b2c6880f5cc3501b1eaa1fa0eb64fc43d222d0a725469a05f17472a165c77"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    }
+  ],
+  "defaults_promoted": false,
+  "eligible_family_summary": {
+    "large_at_most_500_families": 223,
+    "large_at_most_500_genes": 58251,
+    "large_over_500_families": 28,
+    "large_over_500_genes": 24393,
+    "medium_at_most_500_families": 219,
+    "medium_at_most_500_genes": 23356
+  },
+  "fixed_component_threshold": 1.5,
+  "fixed_deferral_bound": 500,
+  "goal_completed": false,
+  "resources": {
+    "linux_post_exec_peak_rss_kib": 1600524,
+    "rusage_maxrss_kib": 8071360,
+    "wall_s": 7.0424865279346704
+  },
+  "scope": "Complete-cohort descriptive join to immutable executed structural sidecars from a live branch job. Native score admission and raw graph-array audits are inherited; no new inference or variant-causal graph claim.",
+  "source_revision": "6aa77a08099874ff77c4584af323f15d498132a2",
+  "status": "complete_all_reference_executed_copy_eligibility_join_verified",
+  "strata": {
+    "transition:FN->FN": {
+      "eligibility": {
+        "different_eligible_families": 15,
+        "large_at_most_500": 108,
+        "large_over_500": 1177,
+        "medium_at_most_500": 39,
+        "no_eligible_family": 728,
+        "one_eligible_family": 264
+      },
+      "pairs": 2331,
+      "same_profile_expanded_by_eligibility": {
+        "different_eligible_families/same_False": 15,
+        "large_at_most_500/same_True": 108,
+        "large_over_500/same_True": 1177,
+        "medium_at_most_500/same_True": 39,
+        "no_eligible_family/same_False": 308,
+        "no_eligible_family/same_True": 420,
+        "one_eligible_family/same_False": 264
+      }
+    },
+    "transition:FN->TP": {
+      "eligibility": {
+        "different_eligible_families": 1,
+        "large_at_most_500": 1893,
+        "medium_at_most_500": 5,
+        "no_eligible_family": 14,
+        "one_eligible_family": 30
+      },
+      "pairs": 1943,
+      "same_profile_expanded_by_eligibility": {
+        "different_eligible_families/same_False": 1,
+        "large_at_most_500/same_True": 1893,
+        "medium_at_most_500/same_True": 5,
+        "no_eligible_family/same_False": 2,
+        "no_eligible_family/same_True": 12,
+        "one_eligible_family/same_False": 30
+      }
+    },
+    "transition:TP->FN": {
+      "eligibility": {
+        "medium_at_most_500": 3,
+        "no_eligible_family": 8,
+        "one_eligible_family": 5
+      },
+      "pairs": 16,
+      "same_profile_expanded_by_eligibility": {
+        "medium_at_most_500/same_True": 3,
+        "no_eligible_family/same_True": 8,
+        "one_eligible_family/same_False": 5
+      }
+    },
+    "transition:TP->TP": {
+      "eligibility": {
+        "large_over_500": 19,
+        "medium_at_most_500": 426,
+        "no_eligible_family": 19134,
+        "one_eligible_family": 65
+      },
+      "pairs": 19644,
+      "same_profile_expanded_by_eligibility": {
+        "large_over_500/same_True": 19,
+        "medium_at_most_500/same_True": 426,
+        "no_eligible_family/same_False": 70,
+        "no_eligible_family/same_True": 19064,
+        "one_eligible_family/same_False": 65
+      }
+    },
+    "variant:FN/different_candidate_families": {
+      "eligibility": {
+        "different_eligible_families": 15,
+        "large_over_500": 1176,
+        "no_eligible_family": 305,
+        "one_eligible_family": 265
+      },
+      "pairs": 1761,
+      "same_profile_expanded_by_eligibility": {
+        "different_eligible_families/same_False": 15,
+        "large_over_500/same_True": 1176,
+        "no_eligible_family/same_False": 305,
+        "one_eligible_family/same_False": 265
+      }
+    },
+    "variant:FN/reference_within_species": {
+      "eligibility": {
+        "no_eligible_family": 2
+      },
+      "pairs": 2,
+      "same_profile_expanded_by_eligibility": {
+        "no_eligible_family/same_True": 2
+      }
+    },
+    "variant:FN/within_candidate_not_predicted": {
+      "eligibility": {
+        "large_at_most_500": 108,
+        "large_over_500": 1,
+        "medium_at_most_500": 42,
+        "no_eligible_family": 429,
+        "one_eligible_family": 4
+      },
+      "pairs": 584,
+      "same_profile_expanded_by_eligibility": {
+        "large_at_most_500/same_True": 108,
+        "large_over_500/same_True": 1,
+        "medium_at_most_500/same_True": 42,
+        "no_eligible_family/same_False": 3,
+        "no_eligible_family/same_True": 426,
+        "one_eligible_family/same_False": 4
+      }
+    },
+    "variant:TP/predicted": {
+      "eligibility": {
+        "different_eligible_families": 1,
+        "large_at_most_500": 1893,
+        "large_over_500": 19,
+        "medium_at_most_500": 431,
+        "no_eligible_family": 19148,
+        "one_eligible_family": 95
+      },
+      "pairs": 21587,
+      "same_profile_expanded_by_eligibility": {
+        "different_eligible_families/same_False": 1,
+        "large_at_most_500/same_True": 1893,
+        "large_over_500/same_True": 19,
+        "medium_at_most_500/same_True": 431,
+        "no_eligible_family/same_False": 72,
+        "no_eligible_family/same_True": 19076,
+        "one_eligible_family/same_False": 95
+      }
+    }
+  }
+}
