@@ -1,0 +1,203 @@
+{
+  "comparisons": {
+    "EC": [
+      {
+        "category": "added",
+        "confidence": "high",
+        "score_sum_millionths": 5242928044,
+        "scored_relations": 5536,
+        "serialized_mean": 0.9470607015895954
+      },
+      {
+        "category": "added",
+        "confidence": "medium",
+        "score_sum_millionths": 8967890465,
+        "scored_relations": 9810,
+        "serialized_mean": 0.9141580494393475
+      },
+      {
+        "category": "removed",
+        "confidence": "high",
+        "score_sum_millionths": 641496319,
+        "scored_relations": 724,
+        "serialized_mean": 0.8860446395027625
+      },
+      {
+        "category": "removed",
+        "confidence": "medium",
+        "score_sum_millionths": 2752360646,
+        "scored_relations": 2957,
+        "serialized_mean": 0.9307949428474805
+      },
+      {
+        "category": "shared",
+        "confidence": "high->high",
+        "score_sum_millionths": 36976416164,
+        "scored_relations": 38068,
+        "serialized_mean": 0.9713254219817169
+      },
+      {
+        "category": "shared",
+        "confidence": "high->medium",
+        "score_sum_millionths": 2024451712,
+        "scored_relations": 2059,
+        "serialized_mean": 0.9832208411850413
+      },
+      {
+        "category": "shared",
+        "confidence": "medium->high",
+        "score_sum_millionths": 1928790377,
+        "scored_relations": 2002,
+        "serialized_mean": 0.9634317567432567
+      },
+      {
+        "category": "shared",
+        "confidence": "medium->medium",
+        "score_sum_millionths": 69101792821,
+        "scored_relations": 71650,
+        "serialized_mean": 0.9644353499092813
+      }
+    ],
+    "GO": [
+      {
+        "category": "added",
+        "confidence": "high",
+        "score_sum_millionths": 4171358516,
+        "scored_relations": 9526,
+        "serialized_mean": 0.4378919290363216
+      },
+      {
+        "category": "added",
+        "confidence": "medium",
+        "score_sum_millionths": 6057544493,
+        "scored_relations": 13215,
+        "serialized_mean": 0.45838399493000376
+      },
+      {
+        "category": "removed",
+        "confidence": "high",
+        "score_sum_millionths": 268602146,
+        "scored_relations": 636,
+        "serialized_mean": 0.42233041823899375
+      },
+      {
+        "category": "removed",
+        "confidence": "medium",
+        "score_sum_millionths": 798979728,
+        "scored_relations": 1636,
+        "serialized_mean": 0.4883739168704157
+      },
+      {
+        "category": "shared",
+        "confidence": "high->high",
+        "score_sum_millionths": 21118692520,
+        "scored_relations": 43414,
+        "serialized_mean": 0.48644889943336256
+      },
+      {
+        "category": "shared",
+        "confidence": "high->medium",
+        "score_sum_millionths": 436180515,
+        "scored_relations": 862,
+        "serialized_mean": 0.5060098781902552
+      },
+      {
+        "category": "shared",
+        "confidence": "medium->high",
+        "score_sum_millionths": 642031487,
+        "scored_relations": 1351,
+        "serialized_mean": 0.4752268593634345
+      },
+      {
+        "category": "shared",
+        "confidence": "medium->medium",
+        "score_sum_millionths": 18028316405,
+        "scored_relations": 36312,
+        "serialized_mean": 0.49648370800286407
+      }
+    ]
+  },
+  "defaults_promoted": false,
+  "evidence": [
+    {
+      "bytes": 12870,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_own_qfo_complete_readback_20261013/summary.json",
+      "sha256": "fb3c788c4caae938d9612ca391057a8be6df6016617acefed11fd0279c5fb0fb"
+    },
+    {
+      "bytes": 225207496,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_own_qfo_complete_readback_20261013/report.json",
+      "sha256": "978c417f9797650e557e5752c7f597aee934664b966817888e5eb356c942ad09"
+    },
+    {
+      "bytes": 373669,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_own_qfo_complete_readback_20261013/snapshots/deferred_inferred_QfO_plan.json",
+      "sha256": "e8f3c91d008ab16422d2be467eb682b9387594d4d62bfdb51aa42ba970e913de"
+    },
+    {
+      "bytes": 790051,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_274aeedaf291_raw.txt.gz",
+      "sha256": "d059f28384919517db1672e1e6b29087e2757d0fb75dab5355558100b939de51"
+    },
+    {
+      "bytes": 642060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_6cb9cf028a8e_raw.txt.gz",
+      "sha256": "a6c5d54658b5fd2ea8b1a410dc4594aca619a2b7c7db50d8e56ecd51b987aac0"
+    },
+    {
+      "bytes": 968084,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/qfo_scoring/results/GO/GO_ohmm-hillclimb-r1-di-c787d3572ccc6375-1_1f3c61af1735_raw.txt.gz",
+      "sha256": "f78633c8556aae1ad5f023542fc9ab25e86a8df25e0f9ff6fb8eb7c10d503a8f"
+    },
+    {
+      "bytes": 706004,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/qfo_scoring/results/EC/EC_ohmm-hillclimb-r1-di-c787d3572ccc6375-1_bed98961e8c9_raw.txt.gz",
+      "sha256": "b270c9302086588038169ea558d7acdaeb29387f618afedabd15d8bde22daeb1"
+    },
+    {
+      "bytes": 531490969,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "cc12a5d23172c340df5ad158552a7a2a80caadb608cd378aa1e4a1f3bf02182d"
+    },
+    {
+      "bytes": 641038994,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+      "sha256": "d83995380a56d094a7b2b669bfb1fcfe79680688e6e9b03cc23fd650a879afde"
+    }
+  ],
+  "goal_completed": false,
+  "limitations": [
+    "GO/EC are eligible annotated subsets, not orthology truth or all predicted pairs.",
+    "Native high/medium labels describe reconciliation evidence, not calibrated posterior probabilities or bootstrap support.",
+    "Shared/added/removed conditioning is descriptive; original benchmark denominators remain unchanged.",
+    "Reference annotations do not control inference; no new search, inference, scoring, tuning, or uncertainty estimation."
+  ],
+  "native_confidence_counts": [
+    {
+      "high": 2987859,
+      "medium": 2971701
+    },
+    {
+      "high": 3572587,
+      "medium": 3608799
+    }
+  ],
+  "sources": [
+    {
+      "bytes": 6776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pair_confidence_diagnostic_r1_v1_20261013/benchmark_tools/diagnose_hillclimb_pair_confidence.py",
+      "sha256": "ba21901d4c2ad4f9ba1c596508f6b3c3609bce3ffcebe14e273fc9e259620a30"
+    },
+    {
+      "bytes": 4290,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pair_confidence_diagnostic_r1_v1_20261013/benchmark_tools/compare_qfo_scored_pairs.py",
+      "sha256": "c86184be5a06238d520ff892ffe2b85ca32e2014d432c6051a01bbe48cb37bbc"
+    },
+    {
+      "bytes": 4479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/pair_confidence_diagnostic_r1_v1_20261013/qfo_benchmark/og_to_pairwise.py",
+      "sha256": "28e5236d45dfe057a90b00f28b5f739ead4ff8c4a2bd87e267088d19f84c020d"
+    }
+  ],
+  "status": "descriptive_functional_pair_confidence_localization"
+}
