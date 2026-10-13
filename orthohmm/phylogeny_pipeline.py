@@ -744,20 +744,69 @@ def _bypass_family(
     )
 
 
+def _high_confidence_root_components(
+    outcomes: Sequence[FamilyOutcome],
+) -> dict[str, str]:
+    """Index support paths without treating orthology as transitive predictions."""
+
+    parent: dict[str, str] = {}
+    size: dict[str, int] = {}
+
+    def find(gene: str) -> str:
+        while parent[gene] != gene:
+            parent[gene] = parent[parent[gene]]
+            gene = parent[gene]
+        return gene
+
+    for outcome in outcomes:
+        group_by_gene = {
+            gene: index
+            for index, group in enumerate(outcome.root_groups)
+            for gene in group
+        }
+        predicted = set(outcome.ortholog_pairs)
+        for left, right, confidence in outcome.ortholog_pair_confidence:
+            if (confidence != "high" or (left, right) not in predicted
+                    or left not in group_by_gene or right not in group_by_gene
+                    or group_by_gene[left] != group_by_gene[right]):
+                continue
+            for gene in (left, right):
+                if gene not in parent:
+                    parent[gene] = gene
+                    size[gene] = 1
+            left_root, right_root = find(left), find(right)
+            if left_root != right_root:
+                if size[left_root] < size[right_root]:
+                    left_root, right_root = right_root, left_root
+                parent[right_root] = left_root
+                size[left_root] += size[right_root]
+    return {gene: find(gene) for gene in parent}
+
+
 def apply_satellite_membership_constraints(
     outcomes: Sequence[FamilyOutcome],
     constraints: Sequence[Mapping[str, object]],
+    policy: str = "high_confidence_pair",
 ) -> tuple[list[FamilyOutcome], dict[str, int | str]]:
     """Detach candidate satellites lacking high-confidence tree support."""
 
+    if policy not in {"high_confidence_pair", "high_confidence_path"}:
+        raise PhylogenyConfigurationError(
+            f"Unsupported satellite-membership rule: {policy!r}"
+        )
     high_confidence_pairs = {
         (gene_a, gene_b)
         for outcome in outcomes
         for gene_a, gene_b, confidence in outcome.ortholog_pair_confidence
         if confidence == "high"
     }
+    components = (
+        _high_confidence_root_components(outcomes)
+        if policy == "high_confidence_path" else {}
+    )
     detached_sources: list[frozenset[str]] = []
     supported = 0
+    path_supported = 0
     for constraint in constraints:
         source = frozenset(str(gene) for gene in constraint["source_genes"])
         target = frozenset(str(gene) for gene in constraint["target_genes"])
@@ -770,6 +819,11 @@ def apply_satellite_membership_constraints(
             for source_gene in source
             for target_gene in target
         )
+        if not has_support and components:
+            source_components = {components[gene] for gene in source if gene in components}
+            target_components = {components[gene] for gene in target if gene in components}
+            has_support = bool(source_components & target_components)
+            path_supported += int(has_support)
         if has_support:
             supported += 1
         else:
@@ -824,8 +878,8 @@ def apply_satellite_membership_constraints(
                 ortholog_pair_confidence=pair_confidence,
             )
         )
-    return refined, {
-        "policy": "high_confidence_pair",
+    audit = {
+        "policy": policy,
         "constraints": len(constraints),
         "supported_constraints": supported,
         "detached_constraints": len(detached_sources),
@@ -833,6 +887,12 @@ def apply_satellite_membership_constraints(
         "root_hogs_added": groups_added,
         "ortholog_pairs_removed": pairs_removed,
     }
+
+    if policy == "high_confidence_path":
+        audit["path_supported_constraints"] = path_supported
+    return refined, audit
+
+
 def _write_stage_outputs(
     outcomes: Sequence[FamilyOutcome],
     cluster_path: Path,
@@ -1109,6 +1169,7 @@ def run_phylogeny_stage(
         outcomes, membership_audit = apply_satellite_membership_constraints(
             outcomes,
             membership_constraints,
+            policy=config.satellite_membership_rule,
         )
 
     manifest = {

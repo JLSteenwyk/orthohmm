@@ -162,8 +162,19 @@ def process_args(args) -> dict:
         species_tree_rooting=(
             getattr(args, "species_tree_rooting", "midpoint") or "midpoint"
         ),
+        satellite_membership_rule=(
+            getattr(args, "satellite_membership_rule", "high_confidence_pair")
+            or "high_confidence_pair"
+        ),
     )
     try:
+        if phylogeny_config.satellite_membership_rule != "high_confidence_pair" and (
+            phylogeny_config.mode != "reconcile" or phylogeny_candidates != "satellite_v2"
+        ):
+            raise PhylogenyConfigurationError(
+                "Experimental satellite membership requires --phylogeny reconcile "
+                "and --phylogeny_candidates satellite_v2."
+            )
         phylogeny_config = validate_phylogeny_config(
             phylogeny_config,
             fetch_fasta_files(fasta_directory),
@@ -207,4 +218,5 @@ def process_args(args) -> dict:
         phylogeny_pair_rule=phylogeny_config.pair_orthology_rule,
         phylogeny_candidates=phylogeny_candidates,
         species_tree_rooting=phylogeny_config.species_tree_rooting,
+        satellite_membership_rule=phylogeny_config.satellite_membership_rule,
     )

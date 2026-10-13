@@ -126,6 +126,7 @@ def create_parser() -> ArgumentParser:
                                                     (default: lca)
 
         --phylogeny_candidates <seed, satellite_v1, satellite_v2> candidate-family expansion policy
+        --satellite_membership_rule <high_confidence_pair, high_confidence_path> satellite support policy (path is experimental)
                                                     (default: seed)
 
         --species_tree_rooting <policy>              internally inferred tree rooting policy
@@ -447,6 +448,14 @@ def create_parser() -> ArgumentParser:
         default="seed",
         help=SUPPRESS,
         metavar="phylogeny_candidates",
+    )
+
+    optional.add_argument(
+        "--satellite_membership_rule",
+        choices=["high_confidence_pair", "high_confidence_path"],
+        default="high_confidence_pair",
+        help=SUPPRESS,
+        metavar="satellite_membership_rule",
     )
 
     optional.add_argument(

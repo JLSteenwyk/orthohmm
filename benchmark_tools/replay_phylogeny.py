@@ -61,6 +61,12 @@ def build_parser() -> argparse.ArgumentParser:
         default="midpoint",
     )
     parser.add_argument("--official-benchmark", type=Path)
+    parser.add_argument(
+        "--satellite-membership-rule",
+        choices=("high_confidence_pair", "high_confidence_path"),
+        default="high_confidence_pair",
+        help="Opt-in development rule; the direct-pair default is unchanged",
+    )
     membership = parser.add_mutually_exclusive_group()
     membership.add_argument(
         "--membership-constraints", type=Path,
@@ -176,6 +182,9 @@ def main(argv=None) -> int:
             args.membership_constraints, args.candidate_clusters
         )
         membership_record = file_provenance(args.membership_constraints)
+    if (args.satellite_membership_rule != "high_confidence_pair"
+            and args.membership_constraints is None):
+        raise SystemExit("Experimental satellite membership requires --membership-constraints")
 
     output_directory = args.output_directory.resolve()
     cluster_path = (
@@ -209,6 +218,7 @@ def main(argv=None) -> int:
         root_duplication_rule=args.root_rule,
         pair_orthology_rule=args.pair_rule,
         species_tree_rooting=args.species_tree_rooting,
+        satellite_membership_rule=args.satellite_membership_rule,
     )
     result_json = args.json.resolve()
     with PipelineMetrics(str(result_json)) as metrics:
@@ -220,6 +230,7 @@ def main(argv=None) -> int:
             pair_orthology_rule=args.pair_rule,
             species_tree_rooting=args.species_tree_rooting,
             membership_constraints=membership_record,
+            satellite_membership_rule=args.satellite_membership_rule,
         )
         with metrics.stage("phylogeny"):
             stage_result = run_phylogeny_stage(

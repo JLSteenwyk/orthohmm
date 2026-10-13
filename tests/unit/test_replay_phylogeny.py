@@ -80,7 +80,8 @@ def test_membership_constraints_accept_empty_and_valid_trace(tmp_path):
         replay_phylogeny.load_membership_constraints(trace, candidates)
 
 
-def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch):
+@pytest.mark.parametrize('policy', ['high_confidence_pair', 'high_confidence_path'])
+def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch, policy):
     candidates = tmp_path / "candidates.txt"
     candidates.write_text("a b\n")
     constraints = [{"source_genes": ["a"], "target_genes": ["b"]}]
@@ -92,6 +93,7 @@ def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch):
         pass
     def fake_stage(*args, **kwargs):
         captured.update(kwargs)
+        captured['config'] = args[3]
         raise StageReached()
     monkeypatch.setattr(replay_phylogeny, "run_phylogeny_stage", fake_stage)
     with pytest.raises(StageReached):
@@ -101,8 +103,10 @@ def test_main_passes_membership_to_production_stage(tmp_path, monkeypatch):
             "--output-directory", str(tmp_path / "out"),
             "--json", str(tmp_path / "metrics.json"),
             "--membership-constraints", str(trace),
+            "--satellite-membership-rule", policy,
         ])
     assert captured["membership_constraints"] == constraints
+    assert captured['config'].satellite_membership_rule == policy
     metrics = json.loads((tmp_path / "metrics.json").read_text())
     assert metrics["metadata"]["membership_constraints"]["sha256"] == (
         replay_phylogeny.file_provenance(trace)["sha256"]

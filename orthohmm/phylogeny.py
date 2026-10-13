@@ -26,6 +26,7 @@ class PhylogenyConfig:
     root_duplication_rule: str = "supported_children"
     pair_orthology_rule: str = "lca"
     species_tree_rooting: str = "midpoint"
+    satellite_membership_rule: str = "high_confidence_pair"
 
 
 @dataclass(frozen=True)
@@ -788,6 +789,13 @@ def validate_phylogeny_config(
             "Unsupported species-tree rooting policy: "
             f"{config.species_tree_rooting!r}"
         )
+    if config.satellite_membership_rule not in {
+        "high_confidence_pair", "high_confidence_path"
+    }:
+        raise PhylogenyConfigurationError(
+            "Unsupported satellite-membership rule: "
+            f"{config.satellite_membership_rule!r}"
+        )
 
     canonical_species_names(proteome_files)
     species_tree = config.species_tree
@@ -811,4 +819,5 @@ def validate_phylogeny_config(
         root_duplication_rule=config.root_duplication_rule,
         pair_orthology_rule=config.pair_orthology_rule,
         species_tree_rooting=config.species_tree_rooting,
+        satellite_membership_rule=config.satellite_membership_rule,
     )
