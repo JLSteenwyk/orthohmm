@@ -15,6 +15,7 @@ from .helpers import (
 )
 from .files import fetch_fasta_files
 from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap
+from .refinement import PHYLOGENY_DEFERRED_PROFILES
 from .phylogeny import (
     PhylogenyConfig,
     PhylogenyConfigurationError,
@@ -182,7 +183,7 @@ def process_args(args) -> dict:
         ),
     )
     try:
-        if refinement_profile.lower() == "phylogeny_deferred" and (
+        if refinement_profile.lower() in PHYLOGENY_DEFERRED_PROFILES and (
             accuracy_profile != "high_sensitivity" or phylogeny_config.mode != "reconcile"
             or phylogeny_candidates != "satellite_v2"
             or phylogeny_config.root_duplication_rule != "species_overlap"

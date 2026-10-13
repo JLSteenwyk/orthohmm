@@ -41,6 +41,7 @@ from .helpers import (
 from .parser import create_parser
 from .metrics import PipelineMetrics
 from .refinement import (
+    PHYLOGENY_DEFERRED_PROFILES,
     DEFAULT_COPY_SPLIT_MIN_DATASET_SPECIES,
     merge_supported_satellite_candidate_clusters,
     resolve_refinement_profile,
@@ -444,7 +445,7 @@ def _execute(
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
     deferred_copy_splitting = (
-        isinstance(refinement_profile, str) and refinement_profile.lower() == "phylogeny_deferred"
+        isinstance(refinement_profile, str) and refinement_profile.lower() in PHYLOGENY_DEFERRED_PROFILES
     )
     if deferred_copy_splitting and (
         accuracy_config.name != "high_sensitivity" or phylogeny != "reconcile"
@@ -488,9 +489,11 @@ def _execute(
     )
     metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
     if deferred_copy_splitting:
+        deferred_parameters = resolve_refinement_profile(refinement_profile)
         metrics.add_metadata(
-            refinement_profile="phylogeny_deferred",
-            defer_copy_split_max_size=resolve_refinement_profile(refinement_profile)["defer_copy_split_max_size"],
+            refinement_profile=refinement_profile.lower(),
+            defer_copy_split_max_size=deferred_parameters["defer_copy_split_max_size"],
+            defer_copy_split_scope=deferred_parameters.get("defer_copy_split_scope", "both"),
         )
     if phylogeny != "off":
         metrics.add_metadata(
