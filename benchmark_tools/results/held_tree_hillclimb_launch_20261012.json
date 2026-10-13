@@ -1,0 +1,105 @@
+{
+  "broader_direct_screen": {
+    "complete_eight_endpoint_contrast": true,
+    "deltas_from_matched_control": {
+      "OrthoBench: OrthoBench F1": 0.004800733525556544,
+      "QfO: EC": 0.0015365000000000517,
+      "QfO: FAS": -0.0025174450740028664,
+      "QfO: GO": 0.0009670099999999904,
+      "QfO: SwissTrees F": -0.042499487995931284,
+      "QfO: TreeFam-A F": -0.006708122367401703,
+      "QfO: VGNC F": -0.01342557140820766,
+      "ThreeKingdoms: Three Kingdoms F1": 0.0017276048717634884
+    },
+    "passes_point_estimate_screen": false
+  },
+  "comparison": {
+    "bytes": 2774549,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v2_20261012/report.json",
+    "sha256": "da8031d9dee536eb58ed98b296c56dc6dc03cf65da9adef494a76bc61157a4a3"
+  },
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T03:06:09.801369+00:00",
+  "goal_completed": false,
+  "held_tree_job": {
+    "cpus": 16,
+    "execution_plan": {
+      "bytes": 69815077,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/held_tree_hillclimb_r1_v1_20261012/execution_plan.json",
+      "sha256": "514953e4d70b22c3171e458876960522edc8e8d9ee02193ae86882c4d95498bf"
+    },
+    "input_files": 212200,
+    "job_id": 24192,
+    "memory_gib": 64,
+    "prespecification": {
+      "bytes": 3186,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_held_tree_20261012.json",
+      "sha256": "b77952d5247b3759c1ef3f5255168e18b080a0b704d5a631b121240a5d76313c"
+    },
+    "scope": "Development-exposed fixed-candidate cached-gene-tree reconciliation; not full-pipeline timing or default promotion.",
+    "source_revision": "00a6880ab91dc0db03bab3ecb37a28fd65ee2ff1",
+    "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/held_tree_hillclimb_r1_v1_20261012",
+    "wall_limit_hours": 12
+  },
+  "limitations": [
+    "Shared-host timing is confounded; cached replay timing is not fresh full-pipeline timing.",
+    "FAS is unseeded stochastic; small differences do not support fine causal claims.",
+    "BUSCO pair co-membership is supplementary, not genome-wide accuracy.",
+    "Missing historical TreeFam archives and annotation uncertainty are nonblocking limitations."
+  ],
+  "readback_failures": 0,
+  "remaining_work": [
+    "Finish original membership panel including QfO broader_path and Three Kingdoms control_path.",
+    "Read back held-tree control before evaluating baseline-tree substitution.",
+    "Finish and independently validate fresh full-search cap100/cap400 on all three datasets.",
+    "Use these outcomes for the next bounded mechanism-specific round; no default promotion yet.",
+    "Freeze a promising method before independent confirmation where feasible; all existing datasets are development-exposed."
+  ],
+  "scheduler_snapshot": "             JOBID     STATE       TIME   CPUS NODELIST(REASON)\n     24190_[1-2%1]   PENDING       0:00     32 (JobArrayTaskLimit)\n             24192   RUNNING       0:56     16 bizon\n           24180_2   RUNNING       3:13     32 bizon\n           24190_0   RUNNING      48:21     32 bizon\n",
+  "scores": {
+    "bytes": 2157,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v2_20261012/scores.tsv",
+    "sha256": "1d41d881d543cd69f1c16db8bb8865bca4fc5ba16f7717709dba4821fbdcdc98"
+  },
+  "species_tree_diagnostics": {
+    "OrthoBench": {
+      "inputs": [
+        {
+          "bytes": 717,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/OrthoBench/control_direct/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+          "sha256": "61ba4deadbc1f1e357b892bad11ac6b605e0495393816f077badaeb35b183878"
+        },
+        {
+          "bytes": 717,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/OrthoBench/broader_direct/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+          "sha256": "1092edd6d9c3f5a9eaf8c2f3c11d7d709bf3d55160431968e03a4e88ea12b218"
+        }
+      ],
+      "normalized_rooted_clade_distance": 0.0,
+      "rooted_clade_distance": 0,
+      "taxa": 12
+    },
+    "QfO": {
+      "normalized_rooted_clade_distance": 0.42105263157894735,
+      "rooted_clade_distance": 64,
+      "taxa": 78
+    },
+    "interpretation": "Different inferred species-tree context is a possible mediator, not causal proof. Held-tree substitution includes branch lengths and root context."
+  },
+  "status": "diagnostic_submitted_existing_panels_incomplete",
+  "tests": {
+    "includes_real_fixture_native_equivalence_and_source_checkpoint_integrity": true,
+    "passed": 59,
+    "receipt": {
+      "bytes": 8144,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/held_tree_hillclimb_tests_20261012.xml",
+      "sha256": "3142d0bf8c3e4aed7022f0d4eb50fb60532a68ff16065b4026794e28e83c2457"
+    }
+  },
+  "three_kingdoms_supplement_report": {
+    "bytes": 169650,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/tk_membership_supplement_r1_20261012/results.json",
+    "sha256": "b61066545de11948b77a771eca19f2c896405a2b94c8d44a8158ff3fb0b28445"
+  },
+  "three_kingdoms_supplement_scheduler": "JobID|State|ExitCode|Elapsed|AllocCPUS|MaxRSS\n24188|COMPLETED|0:0|01:16:36|16|\n24188.batch|COMPLETED|0:0|01:16:36|16|\n"
+}
