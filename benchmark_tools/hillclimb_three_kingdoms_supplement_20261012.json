@@ -31,7 +31,7 @@
     "BUSCO scoring must recompute F1 from TP/FP/FN. Recheck all inputs/sources after scoring; changed evidence invalidates the result."
   ],
   "selection": "This supplement fills missing endpoints of an already prespecified factorial. It does not revise the eight-endpoint metric-vector/Pareto reporting or the 0.005 point-estimate development screening tolerance, and does not authorize default promotion.",
-  "execution": "Execute controls and variants sequentially in a new namespace. Retain every failed attempt and the original array 24180 results unchanged. The original pending baseline/path task is not duplicated; its existing native control checkpoint is reused for control authentication and only a matching graph/candidate control replay is added here.",
+  "execution": "Execute controls and variants sequentially in a new namespace. Retain every failed attempt and the original array 24180 results unchanged. Do not resubmit that pending task. Authenticate this supplement's newly rebuilt graph/candidate control with a native direct-control replay using the retained baseline raw-tree checkpoint; this is incremental control validation, not repeated initial search or a new full-pipeline timing observation.",
   "resources": {
     "host": "local Threadripper / bizon",
     "cpus": 16,
