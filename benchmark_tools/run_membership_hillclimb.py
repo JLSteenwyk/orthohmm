@@ -194,7 +194,8 @@ def score_orthobench(repo, prediction):
                  if (refogs / "low_certainty_assignments" / name).is_file() else set() for name in names}
     score = score_partition(read_clusters(prediction), references, uncertain)
     official = run_official_benchmark(benchmark / "benchmark.py", prediction)
-    if any(abs(official[key] - score[key]) > .0001 for key in ("f_score", "precision", "recall")):
+    # The official script prints percentages to one decimal place.
+    if any(abs(official[key] - score[key]) > .05000001 for key in ("f_score", "precision", "recall")):
         raise ValueError("Independent and official OrthoBench scores disagree")
     return {"scores": {"OrthoBench F1": score["f_score"] / 100},
             "details": score, "official": official,
@@ -266,6 +267,42 @@ def score_qfo(repo, phylogeny, folder, index):
             "scope": "Native descriptive endpoints; FAS sampling is unseeded. Not an independent scoring admission."}
 
 
+def summarize_round(output):
+    vectors = {}
+    states = []
+    for dataset in DATASETS:
+        path = output / dataset / "results.json"
+        if not path.exists():
+            states.append({"dataset": dataset, "status": "pending"})
+            continue
+        report = json.loads(path.read_text())
+        states.append({"dataset": dataset, "status": report["status"], "receipt": record(path)})
+        for row in report["arms"]:
+            if row.get("status") == "scored_development_result":
+                values = vectors.setdefault(row["label"], {})
+                for metric, value in row["scores"].items():
+                    values[dataset + ": " + metric] = value
+    baseline = vectors.get("control_direct", {})
+    labels = ("control_direct", "control_path", "broader_direct", "broader_path")
+    comparisons = []
+    for label in labels:
+        values = vectors.get(label, {})
+        deltas = {metric: values[metric] - baseline[metric] for metric in values.keys() & baseline.keys()}
+        complete = len(values) == len(baseline) == 8 and values.keys() == baseline.keys()
+        primary = [v for key, v in deltas.items() if key.startswith("OrthoBench:") or key.endswith(" F")]
+        eligible = label != "control_direct" and complete and any(v > 0 for v in primary) and all(v >= -.005 for v in deltas.values())
+        comparisons.append({"label": label, "scores": values, "deltas_from_control": deltas,
+                            "all_eight_endpoints_available": complete,
+                            "passes_point_estimate_development_screen": eligible})
+    summary = {"status": "complete_metric_vectors" if all(r["all_eight_endpoints_available"] for r in comparisons) else "partial_metric_vectors",
+               "datasets": states, "comparisons": comparisons, "defaults_promoted": False,
+               "limitations": ["Development-exposed point estimates; screening is not statistical noninferiority or independent validation.",
+                               "FAS sampling is unseeded; small differences may reflect sampling.",
+                               "Shared-host incremental replay resource use is not full-pipeline efficiency evidence."]}
+    write_json(output / "summary.json", summary)
+    return summary
+
+
 def run(plan_path, dataset):
     plan = json.loads(plan_path.read_text())
     repo, source = Path(plan["repo"]), Path(plan["source_root"])
@@ -283,8 +320,9 @@ def run(plan_path, dataset):
     direct_valid = {}
     for case in [c for c in plan["cases"] if c["dataset"] == dataset]:
         row = {"label": case["label"], "membership_rule": case["membership_rule"],
-               "cpm_resolution": case["cpm_resolution"], "scores": {}}
+               "cpm_resolution": case["cpm_resolution"], "scores": {}, "status": "running"}
         report["arms"].append(row)
+        write_json(folder / "results.json", report)
         if case["status"] == "unavailable":
             row.update(status="unavailable", reason=case["reason"])
             write_json(folder / "results.json", report)
@@ -335,6 +373,7 @@ def run(plan_path, dataset):
             write_json(folder / "results.json", report)
     report["status"] = "finished_all_arms_scored" if all(r["status"] == "scored_development_result" for r in report["arms"]) else "finished_with_explicit_gaps"
     write_json(folder / "results.json", report)
+    summarize_round(Path(plan["output"]))
     return report
 
 

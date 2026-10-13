@@ -158,3 +158,18 @@ def test_failed_scoring_keeps_native_evidence_and_does_not_abort_other_arms(tmp_
         assert row['error'] == 'scorer failed'
         assert row['outputs']
         assert row['native_summary']['ortholog_pairs'] == 1
+
+
+def test_partial_metric_vectors_cannot_pass_development_screen(tmp_path):
+    dataset = tmp_path / 'OrthoBench'
+    dataset.mkdir()
+    runner.write_json(dataset / 'results.json', {
+        'status': 'finished_all_arms_scored',
+        'arms': [{'label': label, 'status': 'scored_development_result',
+                  'scores': {'OrthoBench F1': value}}
+                 for label, value in [('control_direct', .74), ('control_path', .75)]]})
+    report = runner.summarize_round(tmp_path)
+    assert report['status'] == 'partial_metric_vectors'
+    assert report['comparisons'][1]['deltas_from_control']['OrthoBench: OrthoBench F1'] == pytest.approx(.01)
+    assert not any(row['passes_point_estimate_development_screen'] for row in report['comparisons'])
+    assert not report['defaults_promoted']
