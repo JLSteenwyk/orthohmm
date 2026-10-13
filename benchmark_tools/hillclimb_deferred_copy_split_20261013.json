@@ -1,0 +1,46 @@
+{
+  "schema": "bounded_phylogeny_deferred_copy_split_v1",
+  "status": "prespecified_not_submitted",
+  "evidence": "qfo_graph_stage_readback_20261013.json: final profile graph refinement separates 3180 cross-species VGNC pairs later missed, 3059 with native profile-expanded edges; 3179 remain separated after satellite construction. Nineteen eventual TP rows also separate at refinement, showing that downstream rescue is not a simple monotonic effect.",
+  "hypothesis": "Retaining bounded copy-rich graph families for explicit duplication-aware tree reconciliation can recover orthologs lost to pre-phylogeny singletonization or copy-component splitting without the regressions from globally broader CPM clustering.",
+  "mechanism": "Add an opt-in phylogeny_deferred refinement preset. Defer existing large-copy and medium-panel-copy split rules only for families of at most 500 genes; retain all original merge rules, graph edges, HMM/profile evidence, larger-family split safeguards, satellite constraints and downstream duplication/pair rules. Default preset remains unchanged.",
+  "arms": [
+    {"label": "control", "refinement_profile": "default", "defer_copy_split_max_size": 0},
+    {"label": "deferred500", "refinement_profile": "phylogeny_deferred", "defer_copy_split_max_size": 500}
+  ],
+  "fixed_parameters": {
+    "search": "Retain admitted HMM-derived search and profile-expanded native graph for the initial mechanistic screen; no inference labels used in candidate construction.",
+    "clustering": "Existing Leiden CPM 0.1 graph/partition; no resolution change.",
+    "candidate_expansion": "satellite_v2 with unchanged support thresholds and high_confidence_pair retention.",
+    "root_duplication_rule": "species_overlap",
+    "pair_orthology_rule": "positive_paralogy",
+    "species_tree_rooting": "min_variance"
+  },
+  "stages": [
+    "Regenerate default final refinement and satellite candidates from admitted native graph/partition inputs. Require exact baseline partitions and compatible constraints before evaluating the variant.",
+    "Reconcile both candidate sets with the same frozen baseline species tree as a mechanism-specific QfO diagnostic. Reproduce native control products and all deterministic control scores, preserving FAS stochastic variation.",
+    "Evaluate the variant with its independently inferred species tree and matched controls across OrthoBench, corrected QfO, and supplementary Three Kingdoms before considering promotion. Reuse compatible native gene-tree checkpoints with explicit reuse counts and checksum validation.",
+    "If the screen fails, retain all failures and scores; do not expand the deferral ceiling or choose a subset of reference families to conceal regressions."
+  ],
+  "evaluation": {
+    "endpoints": ["OrthoBench F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A F1", "QfO EC similarity", "QfO GO similarity", "QfO FAS similarity", "Three Kingdoms BUSCO-pair F1"],
+    "diagnostics": ["precision", "recall", "coverage", "native pair counts", "family size distribution", "number of deferred copy-rich families", "gene-tree failures", "checkpoint reuse", "wall/CPU time", "peak memory", "shared-host activity"],
+    "selection": "Compare per-endpoint changes and Pareto tradeoffs against matched controls and retained tool comparators. A decline greater than 0.005 is a development screening failure, not a statistical equivalence claim. Functional similarity is not orthology proof."
+  },
+  "resource_limits": {"cpus_per_inference": 16, "memory_gib": 64, "wall_hours": 72, "new_inference_arms_sequential": true},
+  "implementation_gates": [
+    "Experimental native CLI use requires high_sensitivity, phylogeny reconcile, satellite_v2 candidates, species_overlap rooting and positive_paralogy pair inference.",
+    "Defaults and default output semantics are unchanged. Validate bounded deferral, gene-universe preservation, deterministic ordering, boundary sizes, invalid values, CLI/API context guards, and benchmark-wrapper forwarding.",
+    "Commit and push plan and tested implementation before inference; freeze sources and all input/runtime identities in a new execution namespace."
+  ],
+  "limitations": [
+    "This development hypothesis is motivated by exposed VGNC data; it does not establish universal improvement.",
+    "Graph-stage separation does not prove biological correctness of restoring every affected family.",
+    "The 500-gene ceiling is a prespecified computational safeguard, not a fitted accuracy optimum.",
+    "Larger families and unrelated split/merge behavior retain baseline policy.",
+    "The fixed-tree screen is not the final full inferred-tree pipeline or fresh full-search timing.",
+    "Existing full-search cap and held-tree experiments must finish without duplicate submissions; this mechanism uses different cached native graph inputs."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

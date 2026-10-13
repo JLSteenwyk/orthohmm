@@ -1,0 +1,486 @@
+{
+  "accounting": {
+    "stages": {
+      "FN/candidate/same_False": 3794,
+      "FN/candidate/same_True": 478,
+      "FN/initial/edge_False": 578,
+      "FN/initial/edge_True": 3694,
+      "FN/initial/same_False": 647,
+      "FN/initial/same_True": 3625,
+      "FN/multipass/edge_False": 576,
+      "FN/multipass/edge_True": 3696,
+      "FN/multipass/same_False": 622,
+      "FN/multipass/same_True": 3650,
+      "FN/multipass_refined/same_False": 3761,
+      "FN/multipass_refined/same_True": 511,
+      "FN/profile_base/edge_False": 578,
+      "FN/profile_base/edge_True": 3694,
+      "FN/profile_base/same_False": 641,
+      "FN/profile_base/same_True": 3631,
+      "FN/profile_expanded/edge_False": 576,
+      "FN/profile_expanded/edge_True": 3696,
+      "FN/profile_expanded/same_False": 620,
+      "FN/profile_expanded/same_True": 3652,
+      "FN/profiles_refined/same_False": 3800,
+      "FN/profiles_refined/same_True": 472,
+      "FN/root/same_False": 3795,
+      "FN/root/same_True": 477,
+      "TP/candidate/same_True": 19660,
+      "TP/initial/edge_False": 529,
+      "TP/initial/edge_True": 19131,
+      "TP/initial/same_False": 147,
+      "TP/initial/same_True": 19513,
+      "TP/multipass/edge_False": 522,
+      "TP/multipass/edge_True": 19138,
+      "TP/multipass/same_False": 140,
+      "TP/multipass/same_True": 19520,
+      "TP/multipass_refined/same_False": 190,
+      "TP/multipass_refined/same_True": 19470,
+      "TP/profile_base/edge_False": 529,
+      "TP/profile_base/edge_True": 19131,
+      "TP/profile_base/same_False": 148,
+      "TP/profile_base/same_True": 19512,
+      "TP/profile_expanded/edge_False": 522,
+      "TP/profile_expanded/edge_True": 19138,
+      "TP/profile_expanded/same_False": 140,
+      "TP/profile_expanded/same_True": 19520,
+      "TP/profiles_refined/same_False": 159,
+      "TP/profiles_refined/same_True": 19501,
+      "TP/root/same_True": 19660,
+      "within_species_FN/candidate/same_True": 2,
+      "within_species_FN/initial/edge_False": 1,
+      "within_species_FN/initial/edge_True": 1,
+      "within_species_FN/initial/same_True": 2,
+      "within_species_FN/multipass/edge_False": 1,
+      "within_species_FN/multipass/edge_True": 1,
+      "within_species_FN/multipass/same_True": 2,
+      "within_species_FN/multipass_refined/same_True": 2,
+      "within_species_FN/profile_base/edge_False": 1,
+      "within_species_FN/profile_base/edge_True": 1,
+      "within_species_FN/profile_base/same_True": 2,
+      "within_species_FN/profile_expanded/edge_False": 1,
+      "within_species_FN/profile_expanded/edge_True": 1,
+      "within_species_FN/profile_expanded/same_True": 2,
+      "within_species_FN/profiles_refined/same_True": 2,
+      "within_species_FN/root/same_True": 2
+    },
+    "transitions": {
+      "FN/candidate:False/root:False": 3794,
+      "FN/candidate:True/root:False": 1,
+      "FN/candidate:True/root:True": 477,
+      "FN/initial:False/multipass:False": 616,
+      "FN/initial:False/multipass:True": 31,
+      "FN/initial:True/multipass:False": 6,
+      "FN/initial:True/multipass:True": 3619,
+      "FN/multipass:False/multipass_refined:False": 622,
+      "FN/multipass:True/multipass_refined:False": 3139,
+      "FN/multipass:True/multipass_refined:True": 511,
+      "FN/multipass_refined:False/profile_base:False": 630,
+      "FN/multipass_refined:False/profile_base:True": 3131,
+      "FN/multipass_refined:True/profile_base:False": 11,
+      "FN/multipass_refined:True/profile_base:True": 500,
+      "FN/profile_base:False/profile_expanded:False": 616,
+      "FN/profile_base:False/profile_expanded:True": 25,
+      "FN/profile_base:True/profile_expanded:False": 4,
+      "FN/profile_base:True/profile_expanded:True": 3627,
+      "FN/profile_expanded:False/profiles_refined:False": 620,
+      "FN/profile_expanded:True/profiles_refined:False": 3180,
+      "FN/profile_expanded:True/profiles_refined:True": 472,
+      "FN/profiles_refined:False/candidate:False": 3794,
+      "FN/profiles_refined:False/candidate:True": 6,
+      "FN/profiles_refined:True/candidate:True": 472,
+      "TP/candidate:True/root:True": 19660,
+      "TP/initial:False/multipass:False": 139,
+      "TP/initial:False/multipass:True": 8,
+      "TP/initial:True/multipass:False": 1,
+      "TP/initial:True/multipass:True": 19512,
+      "TP/multipass:False/multipass_refined:False": 140,
+      "TP/multipass:True/multipass_refined:False": 50,
+      "TP/multipass:True/multipass_refined:True": 19470,
+      "TP/multipass_refined:False/profile_base:False": 138,
+      "TP/multipass_refined:False/profile_base:True": 52,
+      "TP/multipass_refined:True/profile_base:False": 10,
+      "TP/multipass_refined:True/profile_base:True": 19460,
+      "TP/profile_base:False/profile_expanded:False": 138,
+      "TP/profile_base:False/profile_expanded:True": 10,
+      "TP/profile_base:True/profile_expanded:False": 2,
+      "TP/profile_base:True/profile_expanded:True": 19510,
+      "TP/profile_expanded:False/profiles_refined:False": 140,
+      "TP/profile_expanded:True/profiles_refined:False": 19,
+      "TP/profile_expanded:True/profiles_refined:True": 19501,
+      "TP/profiles_refined:False/candidate:True": 159,
+      "TP/profiles_refined:True/candidate:True": 19501,
+      "within_species_FN/candidate:True/root:True": 2,
+      "within_species_FN/initial:True/multipass:True": 2,
+      "within_species_FN/multipass:True/multipass_refined:True": 2,
+      "within_species_FN/multipass_refined:True/profile_base:True": 2,
+      "within_species_FN/profile_base:True/profile_expanded:True": 2,
+      "within_species_FN/profile_expanded:True/profiles_refined:True": 2,
+      "within_species_FN/profiles_refined:True/candidate:True": 2
+    }
+  },
+  "checked": [
+    {
+      "bytes": 24783,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_graph_stage_plan_20261013.json",
+      "sha256": "e1084e6d5292c73e6446436963839c5a135261858e05c10fcaac8f817caf3932"
+    },
+    {
+      "bytes": 10329,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_trace_v3_20261012/report.json",
+      "sha256": "4b7830391d55103b554af54e7b30b82c3bfb62feadd1423c26cd542a6233eb9e"
+    },
+    {
+      "bytes": 108715,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_corrected_replay_admission_21757.json",
+      "sha256": "1eec5ffb675fff234e5ce0db7e65abfa9bec09bdea8f5bd13ca72ad72d7ec40e"
+    },
+    {
+      "bytes": 3163944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_trace_v3_20261012/reference_pair_stages.tsv",
+      "sha256": "7f747ff02e47a95a27f5659780951a9bf76b4e2556d19a3bcb711372a1132c4c"
+    },
+    {
+      "bytes": 7918,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_v3_20261012.json",
+      "sha256": "89468169bf0c9b7a5129352bf856519d6d1385be3aa63ff4a42360c0e28b64dd"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/candidates/p1_c1/orthohmm_working_res/orthohmm_edges_clustered.txt",
+      "sha256": "dd1bf10c01a3d5f23f69d4fba566bac7a33f1239b38dab327d548f85fbde32cb"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 3936676,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/gene_to_species.npy",
+      "sha256": "ac95c21f52c2954a7d18b09f64ccfd2d831a68b99fe284a928803dffeaff229d"
+    },
+    {
+      "bytes": 362749436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_queries.npy",
+      "sha256": "6b5a9f87ebd6f3f344ff15a85f5b45349ac686981cedfc7385534668ed342e3f"
+    },
+    {
+      "bytes": 725498744,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_scores.npy",
+      "sha256": "95a797d60b4fd1cddc4172d2e13c4b17766fe996b4e20518392302adf05d8072"
+    },
+    {
+      "bytes": 362749436,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/hit_targets.npy",
+      "sha256": "108f7e1d317c06ef779f45b4bdaa4e95305b01e8904ec114943e93d03ba2ba18"
+    },
+    {
+      "bytes": 806,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_primary_v1/orthohmm_high_sensitivity/orthohmm_working_res/high_sensitivity_checkpoint/manifest.json",
+      "sha256": "30d1718e0ad1ec080b9783b0f94f3e8855063459c4b2999d86f93eb8d1b4c8e1"
+    },
+    {
+      "bytes": 3132518,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v3_20261012/report.json",
+      "sha256": "0b455b8133d6ca8818dc55d14450b857ab4af5898813068c1bc2c9b7a8beca34"
+    },
+    {
+      "bytes": 418156544,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/QfO/control_direct/qfo_scoring/other/ohmm_hillclimb_r1_0.db",
+      "sha256": "4701b390278a1dbd9e190a1d3b215fd10e8b5eda252799fa6984bf38918a7ed0"
+    },
+    {
+      "bytes": 125233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_factorial_v1/manifest.json",
+      "sha256": "d8385c50426e690afd6d32f3c5302e678de6977c9841451d013201b0f75b564a"
+    },
+    {
+      "bytes": 495749756,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/QfO/control_direct/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+      "sha256": "22916193404283c4257e682529b7012c95a7fd3b14a500d0f086d76a988b65f6"
+    },
+    {
+      "bytes": 4233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_qfo_failure_localization_20261012.json",
+      "sha256": "72947cac5a5f632c1218102194cab157d8becf23f0d370775d9bf41b168e8b31"
+    },
+    {
+      "bytes": 339531,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/QfO/control_direct/qfo_scoring/results/VGNC/VGNC_ohmm-hillclimb-r1-0_raw.txt.gz",
+      "sha256": "2ed14a744241f87c605891151e57cb47f1c49c1430c6127adc59328ddd4a66fe"
+    },
+    {
+      "bytes": 183364,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/benchmark-webservice/reference_data/2020/vgnc-orthologs.txt.gz",
+      "sha256": "3f9898487b1b3dab866eaf93255bb25ab7b7699f32753828ba7d2851eafce5dc"
+    },
+    {
+      "bytes": 1578,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/vgnc_reference_inventory_20260917.json",
+      "sha256": "a97a9a9e74eed6185672100dd8b4613a5885cdc5cb83ae2c6c4621cf0e1ef68c"
+    },
+    {
+      "bytes": 34491928,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/membership_hillclimb_r1_v2_20261012/QfO/control_direct/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+      "sha256": "3077a405ef9d9694a7c7561d10f87fd392620e1cf73fe532c7faef828476dd23"
+    },
+    {
+      "bytes": 17083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_qfo_reference_stages.py",
+      "sha256": "c2b69372e3e7ff19ca90d104697acbcf876af6a8ce1ebd3efb8eacf9e57d4cdf"
+    },
+    {
+      "bytes": 14777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/accuracy.py",
+      "sha256": "1d3356e2a10581b170ea96402c3bce06b71f86b65e723044bfaafe8d5b1c69e3"
+    },
+    {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 7060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_qfo_vgnc_mapping.py",
+      "sha256": "6c11df1bce76bcecde91632af10c147b50326186064289686ebea72fa2d6486a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 23212,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "061bdcb2b187dfb077bea58afbec2dd14ed82e983c053d8d0f329fe1369a5f02"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 4479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/qfo_benchmark/og_to_pairwise.py",
+      "sha256": "28e5236d45dfe057a90b00f28b5f739ead4ff8c4a2bd87e267088d19f84c020d"
+    },
+    {
+      "bytes": 3449,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_qfo_graph_localization_20261013.json",
+      "sha256": "b302c10d27243de84653619d2580cce0e4a960d443973c17f4e90e426263db7c"
+    },
+    {
+      "bytes": 150990,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/qfo_corrected_replay_commands_20260918.json",
+      "sha256": "e7657732bc94438fb0602f3246680308a075b9fda1c68909ddfac1138b164c0c"
+    },
+    {
+      "bytes": 3600,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload_manifest.json",
+      "sha256": "16c7fe3cd86a4caa1aabbae7fddd36349c59c3f010f9db851e958859a4e34312"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 98222680,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload/sources.npy",
+      "sha256": "a0e1f3dcce605b83c631e3b1967555f72669bef0a23425da55e1bafea915d7ee"
+    },
+    {
+      "bytes": 98222680,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload/targets.npy",
+      "sha256": "3a05f0ed8a28124749c04745eeb57de145f85865b203c7ee41be04ada4a9bf58"
+    },
+    {
+      "bytes": 196445232,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload/weights.npy",
+      "sha256": "5e9ac72c3bc1ef382ec023adfad552eed3cc355317e0192e93d4193a03cf93de"
+    },
+    {
+      "bytes": 201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/payload/metadata.json",
+      "sha256": "569de65202fb65858f91795071825239487c8ad5766d153e02acf86a9d318ea2"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_0_initial/partition.txt",
+      "sha256": "6d0e015421ff4f0b42b401b0da8728432112ef37f8d9e7608c9e90ad3d741310"
+    },
+    {
+      "bytes": 3616,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload_manifest.json",
+      "sha256": "6b7218243bf6d51065da4cde046d22361ccea9eff3cfe3302a90c0cb25e80fb7"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 102521340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload/sources.npy",
+      "sha256": "8e80e7ed1ec9229b26ee6f767cac00f3815cce8e817aab132d618efcf9fdc816"
+    },
+    {
+      "bytes": 102521340,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload/targets.npy",
+      "sha256": "127f0e5d6319652803fdb34622c367a61449f534a08c093f199618d2d4ac1fcb"
+    },
+    {
+      "bytes": 205042552,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload/weights.npy",
+      "sha256": "a7ac7dac3bdb423eb11326eaddc81609b3061db79e7779488960445384ea45a6"
+    },
+    {
+      "bytes": 201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/payload/metadata.json",
+      "sha256": "569de65202fb65858f91795071825239487c8ad5766d153e02acf86a9d318ea2"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_1_multipass/partition.txt",
+      "sha256": "d7fe1219361cb2fb4242b0a71b2ee9269330f348d42b7393185112a76bc3b01f"
+    },
+    {
+      "bytes": 3630,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload_manifest.json",
+      "sha256": "28a36ee73012c71495b89f7974b4e61c17460530f9923e80c137b3f0d005ffa6"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 98447176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload/sources.npy",
+      "sha256": "bc23e4b5c4b42a9fb06fed52729e6bf153b40e1979cfe6408c48886295294121"
+    },
+    {
+      "bytes": 98447176,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload/targets.npy",
+      "sha256": "234dcac674df99b3a0bb4d8232ce1e643b4f26ab30e06d11dcbc0bbb2a3d3524"
+    },
+    {
+      "bytes": 196894224,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload/weights.npy",
+      "sha256": "367d5f0d9029272a6a3800def69af485772175367d2b7e02e086c9effc7acc0c"
+    },
+    {
+      "bytes": 201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/payload/metadata.json",
+      "sha256": "569de65202fb65858f91795071825239487c8ad5766d153e02acf86a9d318ea2"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_2_profile_base/partition.txt",
+      "sha256": "404a099d0eb4211b8fd22d045c8c8139fa132f67b177a9f7a0fc425a4924cd74"
+    },
+    {
+      "bytes": 3658,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload_manifest.json",
+      "sha256": "0992f5bcbf2e9188db8e2adf1c65dbeac76108deef5f594af61e7c343035763c"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload/gene_names.txt",
+      "sha256": "ad6ee208adc2c3e90bab86d68e40c32857c0f93a89989bd1a70d76385ef0edd7"
+    },
+    {
+      "bytes": 102368776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload/sources.npy",
+      "sha256": "df1e36dae9b6f8eb1889149103c0be8b831ccbe6aa351ee37500b1aa758adfcb"
+    },
+    {
+      "bytes": 102368776,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload/targets.npy",
+      "sha256": "005e91e820fabce7c049eff6abb5a36caef0bb70caf10f19836ef87f97eb6790"
+    },
+    {
+      "bytes": 204737424,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload/weights.npy",
+      "sha256": "5ad2b72e4067f5fd572b0ea1598862b188544c0dedc22387a0b6a8d914f56760"
+    },
+    {
+      "bytes": 201,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/payload/metadata.json",
+      "sha256": "569de65202fb65858f91795071825239487c8ad5766d153e02acf86a9d318ea2"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/clustering/cluster_3_profile_expanded/partition.txt",
+      "sha256": "aec4b3aff78d7284d647669a25305008d0b23de2fa7366a14137a0fdedbc4a27"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/replay/orthogroups_multipass_refined.txt",
+      "sha256": "4dadc740f64cd0a539a099e0577094e47ad4ba5862374dd8a8aca86a78eabdbf"
+    },
+    {
+      "bytes": 23875927,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/qfo_corrected_checked_replay_v1/replay/orthogroups_profiles_refined.txt",
+      "sha256": "d21bf01bae3bf2392818cc23babbc6fc1af0d6a0d1f144831ce05dfa9ec85e77"
+    },
+    {
+      "bytes": 13633,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/trace_qfo_graph_stages.py",
+      "sha256": "bd0ac6224a5fd42aaf9d7a06c43933eb840979469b21d63ba0112e1ddd470ca8"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 6768,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_leiden_boundary.py",
+      "sha256": "c9dc0dd592e9a21c621b302500740de55fe14204228961766d4ac36fdc380f14"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    }
+  ],
+  "counts": {
+    "FN": 4274,
+    "TP": 19660
+  },
+  "defaults_changed": false,
+  "goal_completed": false,
+  "job_id": "24197",
+  "limitations": [
+    "Development-exposed saved graph/partition trace; no fresh search or inference was run.",
+    "Graph edges and co-membership are not biological orthology truth or evidence that all split pairs should merge.",
+    "Stage changes localize separation, not all threshold, optimization, or refinement decisions that caused it.",
+    "Within-species asserted rows and native pair labels remain unchanged.",
+    "Shared-host diagnostic timing is not inference timing."
+  ],
+  "reference_pairs": 23934,
+  "resources": {
+    "cpu_s": 27.073944239,
+    "process_peak_rss_kib": 690672,
+    "wall_s": 27.078463461017236
+  },
+  "source_revision": "cf2374e5dd6f01b766cc510db4699fbcb50ac1a0",
+  "status": "admitted_native_graph_partition_stages_traced",
+  "table": {
+    "bytes": 6266856,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_graph_stage_trace_20261013/reference_graph_stages.tsv",
+    "sha256": "70c9b36bb9dd07f6b773bf6bddbf50a0d1ef781a36ca7f2f55ebe6ca7c9f7d33"
+  }
+}
