@@ -175,6 +175,7 @@ class TestArgsProcessing(object):
             "phylogeny_pair_rule",
             "phylogeny_candidates",
             "species_tree_rooting",
+            "satellite_membership_rule",
         ]
         assert sorted(res.keys()) == sorted(expected_keys)
 

@@ -12,6 +12,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 import os
+import operator
 from pathlib import Path
 import shutil
 import tempfile
@@ -70,6 +71,23 @@ def resolve_accuracy_profile(name: str) -> AccuracyProfile:
         raise ValueError(
             f"Unknown accuracy profile {name!r}; expected one of: {choices}"
         ) from exc
+
+
+def resolve_search_candidate_cap(profile: AccuracyProfile, override=None) -> int:
+    """Resolve an opt-in search cap; zero retains adaptive engine selection."""
+    if override is None:
+        return profile.max_candidates_per_query
+    if isinstance(override, (bool, np.bool_)):
+        raise ValueError("search candidate cap must be a nonnegative int32 integer")
+    try:
+        value = operator.index(override)
+    except TypeError as exc:
+        raise ValueError(
+            "search candidate cap must be a nonnegative int32 integer"
+        ) from exc
+    if not 0 <= value <= np.iinfo(np.int32).max:
+        raise ValueError("search candidate cap must be a nonnegative int32 integer")
+    return value
 
 
 def _sha256(path: Path) -> str:

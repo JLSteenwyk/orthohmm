@@ -14,6 +14,7 @@ from .helpers import (
     SubstitutionMatrix,
 )
 from .files import fetch_fasta_files
+from .accuracy import resolve_accuracy_profile, resolve_search_candidate_cap
 from .phylogeny import (
     PhylogenyConfig,
     PhylogenyConfigurationError,
@@ -120,6 +121,19 @@ def process_args(args) -> dict:
     inflation_value = args.inflation_value or 1.5
     refinement_profile = getattr(args, "refinement_profile", None) or "default"
     accuracy_profile = getattr(args, "accuracy_profile", None) or "standard"
+    search_cap_override = getattr(args, "search_max_candidates_per_query", None)
+    if search_cap_override is not None:
+        try:
+            search_cap_override = resolve_search_candidate_cap(
+                resolve_accuracy_profile(accuracy_profile), search_cap_override
+            )
+            if search_mode != "builtin" or args.start:
+                raise ValueError(
+                    "--search_max_candidates_per_query requires fresh built-in search"
+                )
+        except ValueError as exc:
+            logger.warning(str(exc))
+            sys.exit(1)
     if accuracy_profile == "high_sensitivity" and search_mode != "builtin":
         logger.warning("--accuracy_profile high_sensitivity requires --search_mode builtin.")
         sys.exit()
@@ -219,4 +233,6 @@ def process_args(args) -> dict:
         phylogeny_candidates=phylogeny_candidates,
         species_tree_rooting=phylogeny_config.species_tree_rooting,
         satellite_membership_rule=phylogeny_config.satellite_membership_rule,
+        **({"search_max_candidates_per_query": search_cap_override}
+           if search_cap_override is not None else {}),
     )

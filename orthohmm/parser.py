@@ -353,6 +353,14 @@ def create_parser() -> ArgumentParser:
     )
 
     optional.add_argument(
+        "--search_max_candidates_per_query",
+        type=int,
+        default=None,
+        help=SUPPRESS,
+        metavar="search_max_candidates_per_query",
+    )
+
+    optional.add_argument(
         "--clustering",
         type=str,
         required=False,

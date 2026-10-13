@@ -1,10 +1,12 @@
 import json
+import pytest
 from types import SimpleNamespace
 
 from benchmark_tools import benchmark_production
 
 
-def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch):
+@pytest.mark.parametrize("cap", [None, 0, 400])
+def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch, cap):
     input_directory = tmp_path / "input"
     input_directory.mkdir()
     (input_directory / "species.faa").write_text(">gene\nACDE\n")
@@ -28,10 +30,15 @@ def test_main_passes_accuracy_profile_to_production_cli(tmp_path, monkeypatch):
         str(result_json),
         "--cpu", "2",
         "--accuracy-profile", "high_sensitivity",
+        *([] if cap is None else ["--search-max-candidates-per-query", str(cap)]),
     ]) == 0
 
     command = captured["command"]
     profile_index = command.index("--accuracy_profile")
     assert command[profile_index + 1] == "high_sensitivity"
+    if cap is None:
+        assert "--search_max_candidates_per_query" not in command
+    else:
+        assert command[command.index("--search_max_candidates_per_query") + 1] == str(cap)
     payload = json.loads(result_json.read_text())
     assert payload["harness"]["command"] == command

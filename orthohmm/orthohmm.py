@@ -15,6 +15,7 @@ from .accuracy import (
     combine_edges,
     read_index_clusters,
     resolve_accuracy_profile,
+    resolve_search_candidate_cap,
     write_accuracy_checkpoint,
 )
 from .args_processing import process_args
@@ -442,6 +443,16 @@ def _execute(
             "and satellite_v2 candidates"
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    search_cap_override = kwargs.pop("search_max_candidates_per_query", None)
+    search_candidate_cap = resolve_search_candidate_cap(
+        accuracy_config, search_cap_override
+    )
+    if search_cap_override is not None and (
+        search_mode != "builtin" or start is not None
+    ):
+        raise ValueError(
+            "search_max_candidates_per_query requires fresh built-in search"
+        )
     if accuracy_config.multipass_graph and (
         search_mode != "builtin" or clustering != "leiden"
     ):
@@ -458,9 +469,7 @@ def _execute(
         evalue_threshold=evalue_threshold,
         accuracy_profile=accuracy_config.name,
         search_kmer_k=accuracy_config.kmer_k,
-        search_max_candidates_per_query=(
-            accuracy_config.max_candidates_per_query
-        ),
+        search_max_candidates_per_query=search_candidate_cap,
         leiden_seed=accuracy_config.leiden_seed,
         cpu_budget=cpu,
     )
@@ -550,9 +559,7 @@ def _execute(
                 cpu,
                 substitution_matrix,
                 kmer_k=accuracy_config.kmer_k,
-                max_candidates_per_query=(
-                    accuracy_config.max_candidates_per_query
-                ),
+                max_candidates_per_query=search_candidate_cap,
                 evalue_threshold=evalue_threshold,
                 threads_per_worker=threads_per_worker,
             )

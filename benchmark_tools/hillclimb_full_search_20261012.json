@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_development_experiment",
+  "hypothesis": "Increasing the initial HMM prefilter candidate cap from 100 to 400 recovers homologous links missing upstream of graph construction and phylogenetic reconciliation, with a measurable accuracy/resource tradeoff.",
+  "selection_evidence": "benchmark_tools/results/search_recovery_all_readback_20261012.json",
+  "selected_intervention": "cap400",
+  "selection_reason": "Among six independently read-back fresh-search arms, cap400 recovered 4301 additional watched same-family links without losing control links at E=1e-4. It scored 7893538 candidates versus 2034503. Shortlist20000, reduced_k4, and exact_k3 lost more watched control links than they gained; shared_hit1 had smaller gains and displaced 748 control links. Watched-link counts are reference-conditioned diagnostics, not accuracy validation.",
+  "arms": [
+    {"label": "control100", "search_max_candidates_per_query": 100},
+    {"label": "cap400", "search_max_candidates_per_query": 400}
+  ],
+  "datasets": ["OrthoBench", "QfO", "ThreeKingdoms"],
+  "fixed_parameters": {
+    "accuracy_profile": "high_sensitivity",
+    "substitution_matrix": "BLOSUM62",
+    "evalue": 0.0001,
+    "clustering": "leiden",
+    "cpm_resolution": 0.1,
+    "refinement_profile": "default",
+    "phylogeny": "reconcile",
+    "phylogeny_candidates": "satellite_v2",
+    "species_tree_mode": "infer",
+    "phylogeny_root_rule": "species_overlap",
+    "phylogeny_pair_rule": "positive_paralogy",
+    "species_tree_rooting": "min_variance",
+    "satellite_membership_rule": "high_confidence_pair",
+    "search_backend": "CPU HMM and compiled prefilter; CUDA disabled"
+  },
+  "execution": {
+    "initial_search": "Fresh all-to-all search of every protein against every complete input proteome. No query subset, cached hits, reference-driven candidate selection, or historical tree reuse.",
+    "source": "Frozen committed revision, with all executed Python and native libraries fingerprinted before and after execution.",
+    "resources": {"cpus": 32, "memory": "128G", "wall_limit_per_dataset": "48:00:00", "concurrent_datasets": 1, "threads_per_search_worker": 8},
+    "host": "Local Threadripper, shared-host confounding recorded; unrelated workloads untouched.",
+    "control_gate": "Require successful fresh control, validated complete gene universe, validated native pair outputs, recorded actual parameters, and independent scoring before interpreting the cap400 arm. Record exact native-product comparisons and metric differences against the historical baseline. If the historical control differs, retain both as distinct results; no historical-baseline or promotion claim until the discrepancy is explained or a matched contemporary control is reproduced.",
+    "failures": "Retain failed and skipped cases; any retry requires a new namespace after authoritative terminal-state confirmation. Never silently overwrite products or substitute missing scores."
+  },
+  "evaluation": {
+    "primary": ["OrthoBench F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A F1"],
+    "secondary": ["QfO GO", "QfO EC", "QfO FAS", "Three Kingdoms BUSCO-reference pair F1"],
+    "diagnostics": ["precision", "recall", "coverage", "native ortholog pair counts", "initial candidates", "significant hits", "failed families", "wall time", "CPU time", "sampled process-tree RSS", "competing host activity"],
+    "selection": "Require a complete eight-endpoint vector, improvement in at least one primary endpoint, and no observed decline exceeding 0.005 against the matched control. Report Pareto tradeoffs and all deltas. This is development point-estimate screening, not statistical equivalence. Promotion also requires reproducibility and an explicitly justified computational cost.",
+    "comparators": "Retained OrthoHMM high-sensitivity and phylogenetic baselines, OrthoFinder 3.1.5 full pipeline and sequence-only checkpoint diagnostic, SonicParanoid, Proteinortho, FastOMA, and OrthoMCL 1.4. Preserve each output's benchmark semantics.",
+    "limits": "All current datasets are development-exposed. TreeFam is supporting evidence. FAS sampling is unseeded. Functional similarity is not proof of orthology correctness; Three Kingdoms assesses narrow BUSCO-reference co-membership. Shared-host runtime is descriptive, not an isolated speed ranking."
+  },
+  "defaults": "Keep production defaults unchanged throughout this round.",
+  "next_round": "Diagnose complete-pipeline error changes before testing interactions with broader candidates or additional search changes; do not force unpromising diagnostic arms into expensive trials.",
+  "git": "Commit and push this plan before executing benchmark variants; commit tested implementation and independently validated result milestones."
+}

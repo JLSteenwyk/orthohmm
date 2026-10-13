@@ -68,6 +68,7 @@ def parse_args(argv=None):
         default="standard",
     )
     parser.add_argument("--full-output", action="store_true")
+    parser.add_argument("--search-max-candidates-per-query", type=int, default=None)
     parser.add_argument("--phylogeny", choices=("off", "reconcile"), default="off")
     parser.add_argument(
         "--species-tree-mode", choices=("supplied", "infer"), default="supplied"
@@ -141,6 +142,11 @@ def main(argv=None) -> int:
         "--metrics_json",
         str(result_json),
     ]
+    if args.search_max_candidates_per_query is not None:
+        command.extend([
+            "--search_max_candidates_per_query",
+            str(args.search_max_candidates_per_query),
+        ])
     if not args.full_output:
         command.extend(["--stop", "infer"])
     if args.phylogeny == "reconcile":
