@@ -1,0 +1,38 @@
+{
+  "status": "prespecified_not_submitted",
+  "parent": "benchmark_tools/hillclimb_deferred_copy_split_20261013.json",
+  "hypothesis": "The same bounded 500-gene copy-split deferral can improve HMM-derived family context for duplication-aware reconciliation on OrthoBench and supplementary Three Kingdoms without forcing a species tree from another configuration.",
+  "arms": ["control", "deferred500"],
+  "datasets": ["OrthoBench", "ThreeKingdoms"],
+  "mechanism": "Change only final native graph refinement via the existing opt-in phylogeny_deferred preset. Reconstruct the complete profile-expanded native graph from its lossless gene-name/tab/full-precision-float edge file and rerun Leiden CPM 0.1, seed 4, including isolates. Apply the native narrow-panel directed-hit refinement branch, then unchanged satellite_v2 expansion.",
+  "inputs": "Use the already independently scored fresh OrthoBench cap100 control's numeric HMM checkpoint and final native graph. Use the retained Three Kingdoms full native baseline's numeric HMM checkpoint and final native graph. No initial search or HMM profile scoring is repeated. Require complete unique FASTA ownership and frozen graph/checkpoint identities.",
+  "control_gates": [
+    "Validate strict canonical native edge ordering, positive finite full-precision weights, gene indices, exact native edge counts, and complete gene universes.",
+    "Regenerated default satellite candidate and merge files must reproduce retained baseline bytes exactly before constructing or reconciling the variant.",
+    "Native inferred-tree control root groups, pairs, confidence and rooted species tree must reproduce the retained baseline exactly; independently rescore the control before variant inference.",
+    "Both arms infer species trees using their own candidate sets; never supply the control species tree to the variant. Reuse only independently validated compatible native alignment/raw-tree checkpoints and report reuse counts.",
+    "Check all source, input, runtime and generated candidate identities before and after inference and scoring. Failed controls gate variants; preserve failed attempts."
+  ],
+  "fixed_settings": {
+    "search": "Existing native HMM normalized hits; BLOSUM62, E=1e-4, initial candidate cap100",
+    "clustering": "Leiden CPM 0.1, seed4, include isolates",
+    "candidate_profile": "satellite_v2",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance",
+    "root_rule": "species_overlap",
+    "pair_rule": "positive_paralogy",
+    "satellite_membership_rule": "high_confidence_pair",
+    "deferred_ceiling": 500
+  },
+  "evaluation": "Report OrthoBench F1 and supplementary Three Kingdoms BUSCO-pair F1 with precision, recall, coverage, pair counts, tree failures, candidate sizes, reuse counts and resources. Combine with the six corrected QfO endpoints only after a matched candidate-specific inferred-tree QfO evaluation. The fixed-tree QfO screen is not that final full metric vector. Compare each endpoint and Pareto tradeoffs against matched controls and retained tools; retain regressions. No default promotion from this supplement alone.",
+  "resources": {"cpus": 16, "memory_gib": 64, "wall_hours": 72, "datasets_and_arms_sequential": true, "dependency": "afterany:24198; do not overlap new native inference with the existing bounded fixed-tree screen"},
+  "limitations": [
+    "Development-exposed cached HMM/profile graph reconstruction with inferred phylogeny; not fresh full-pipeline execution or timing.",
+    "Shared-host timing is confounded and unrelated jobs remain untouched.",
+    "Exact candidate/control reproduction is required rather than assuming a graph replay is equivalent.",
+    "Three Kingdoms BUSCO-reference co-membership is supplementary, not genome-wide orthology truth.",
+    "First QfO screen results are pending at prespecification. Do not alter the ceiling or conceal adverse scores based on subsequent observations."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
