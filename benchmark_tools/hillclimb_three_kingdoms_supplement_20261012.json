@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_development_supplement",
+  "parent_plan": "benchmark_tools/hillclimb_round1_20261012.json",
+  "purpose": "Complete the two previously unavailable CPM 0.08 Three Kingdoms membership-factorial arms without rerunning initial HMM search or overwriting the original panel.",
+  "hypothesis": "The same broader HMM-derived seed/candidate procedure used on OrthoBench and corrected QfO can be evaluated on the complete Three Kingdoms input and its BUSCO-reference pair endpoint.",
+  "baseline_metadata": "three_kingdoms/results/parity_20260907/orthohmm_phylogeny_satellite_v2/metrics.json",
+  "checkpoint_manifest_sha256": "f097107bd6aef9814fb79d1e4f94bc180a5ad4f8e69b0819e6a2ea9e0f886657",
+  "arms": [
+    {"label": "control_direct", "cpm_resolution": 0.1, "membership_rule": "high_confidence_pair", "purpose": "Replay HMM graph/profile/candidate stages and require exact retained candidate and membership-constraint hashes, then exact native control products."},
+    {"label": "broader_direct", "cpm_resolution": 0.08, "membership_rule": "high_confidence_pair", "purpose": "Rebuild broader HMM seeds/candidates; infer missing gene trees and an independent species tree; score native root groups."},
+    {"label": "broader_path", "cpm_resolution": 0.08, "membership_rule": "high_confidence_path", "purpose": "Reuse only the validated broader arm's identical raw gene/species-tree checkpoint; vary retention alone."}
+  ],
+  "fixed_settings": {
+    "matrix": "BLOSUM62",
+    "leiden_seed": 4,
+    "profile_iterations": 1,
+    "profile_min_species": 1,
+    "candidate_profile": "satellite_v2",
+    "root_rule": "species_overlap",
+    "pair_rule": "positive_paralogy",
+    "species_tree_mode": "infer",
+    "species_tree_rooting": "min_variance"
+  },
+  "validation": [
+    "Fingerprint immutable source, CPU extensions, interpreter, scientific dependencies, tool executables, FASTAs, original metadata/products, BUSCO reference/scorer, and numeric checkpoint before and after execution.",
+    "Audit checkpoint hashes, dtypes, counts, finite scores and valid gene indices; independently require a complete one-to-one FASTA species ownership map for all 443217 genes and 12 proteomes.",
+    "Require CPM 0.1 replay candidate groups and satellite membership constraints to match retained native baseline bytes before starting CPM 0.08. If reproduction fails, preserve the failure and diagnose rather than relabel a new baseline.",
+    "Require native control root-group, pair, confidence, and rooted species-tree products to reproduce retained outputs exactly. Validate full unique gene coverage after every grouping stage.",
+    "The broader path arm requires successful native broader-direct validation and the same species tree; never add transitive pair predictions.",
+    "BUSCO scoring must recompute F1 from TP/FP/FN. Recheck all inputs/sources after scoring; changed evidence invalidates the result."
+  ],
+  "selection": "This supplement fills missing endpoints of an already prespecified factorial. It does not revise the eight-endpoint metric-vector/Pareto reporting or the 0.005 point-estimate development screening tolerance, and does not authorize default promotion.",
+  "execution": "Execute controls and variants sequentially in a new namespace. Retain every failed attempt and the original array 24180 results unchanged. The original pending baseline/path task is not duplicated; its existing native control checkpoint is reused for control authentication and only a matching graph/candidate control replay is added here.",
+  "resources": {
+    "host": "local Threadripper / bizon",
+    "cpus": 16,
+    "memory": "64G",
+    "wall_limit": "12:00:00",
+    "concurrent_supplement_runs": 1,
+    "unrelated_jobs_modified": false
+  },
+  "limitations": [
+    "Development-exposed Three Kingdoms BUSCO-reference gene pairs are supplementary evidence, not genome-wide orthology truth or independent validation.",
+    "Graph/profile/candidate replay and selective tree-cache reuse exclude the original initial search; shared-host resource measurements are descriptive incremental costs, not isolated full-pipeline efficiency.",
+    "Known OrthoBench and QfO development results remain retained; completing this supplementary endpoint cannot erase regressions elsewhere."
+  ],
+  "git": "Commit and push this plan before executing/scoring; freeze tested implementation and retain validated completion or failure receipts at subsequent commits."
+}
