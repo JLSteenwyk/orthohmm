@@ -310,4 +310,3 @@ def test_native_admission_checks_exact_harness_sources_inputs_and_checkpoint_pin
     harness["source_manifest"][0]["sha256"] = "changed"
     with pytest.raises(ValueError, match="manifests differ"):
         helper.verified_native(case)
-
