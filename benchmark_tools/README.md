@@ -686,3 +686,38 @@ retained in `results/large_copy_component_feasibility_v3_20261013.json` and
 measure accuracy. Finish and independently admit the existing copy-branch
 vectors before launching the next component inference round; then freeze
 source, inputs, scoring and resource settings and evaluate all eight endpoints.
+
+After all four branch vectors are independently admitted, prepare one fresh
+component namespace per dataset with the frozen runner:
+
+```bash
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=16 PYTHONHASHSEED=0 \
+python "$SOURCE/benchmark_tools/run_large_copy_components.py" prepare \
+  --repo "$REPO" --source-root "$SOURCE" --output "$OUTPUT" \
+  --dataset "$DATASET" --branch-root "$BRANCH_ROOT" \
+  --comparison "$COMPLETE_BRANCH_COMPARISON"
+```
+
+Preparation requires the actual successful terminal branch job and verified
+cells for all eight endpoints; a live or partial report cannot trigger new
+inference. Submit `run_large_copy_components.slurm` with source root and
+execution-plan path. The worker reproduces the original default seed,
+candidates and constraints before evaluating the new profile. QfO uses
+candidate-specific inferred trees; inactive narrow panels reuse native results
+only after exact candidate checks and reread their original scores. Identical
+QfO candidate/constraint bytes also avoid duplicate native inference.
+
+Independently reconstruct candidates and reread terminal outputs with:
+
+```bash
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=16 PYTHONHASHSEED=0 \
+python "$SOURCE/benchmark_tools/readback_large_copy_components.py" \
+  --execution-plan "$OUTPUT/execution_plan.json" --output "$NEW_READBACK"
+```
+
+Candidate reconstruction is a separate cached validation cost, not another
+native inference run. Keep its cost separate from shared-host native/scoring
+timings, and do not interpret an inactive panel's unchanged score as evidence
+that the large-copy branch generalizes.

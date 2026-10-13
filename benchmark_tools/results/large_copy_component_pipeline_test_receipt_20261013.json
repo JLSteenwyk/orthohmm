@@ -1,0 +1,81 @@
+{
+  "base_revision": "06339684a9458b08f17fc63e70d0a2045b6f9470",
+  "defaults_promoted": false,
+  "errors": 0,
+  "failures": 0,
+  "goal_completed": false,
+  "junit": {
+    "bytes": 50612,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_pipeline_tests_v2_20261013.xml",
+    "sha256": "89bc235c49727ae12acbf53235d0420529c08b746e8837808d5c9714e1d9585d"
+  },
+  "passed": 326,
+  "prespec": {
+    "bytes": 5121,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_large_copy_components_20261013.json",
+    "sha256": "97fd6734477d784227aaa8c0b1d09d7854f20a73a855c4dd24b3fade8e43a187"
+  },
+  "prior_attempts": [
+    {
+      "junit": {
+        "bytes": 29215,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_runner_initial_tests_20261013.xml",
+        "sha256": "7996aaa5db5da7a278a6707848b2fee45c65d40a6ff1b19b1983d5499bb287ca"
+      },
+      "passed": 185
+    },
+    {
+      "junit": {
+        "bytes": 48872,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_runner_extended_tests_20261013.xml",
+        "sha256": "63f8d5952d0d2dde4fc40a9b8e9bfaecc5b60f513c93f3220322e699488ad00e"
+      },
+      "passed": 315
+    },
+    {
+      "diagnosis": "The unit worker fixture omitted the production candidate's seed_partition identity, so the independent reader failed before reaching the intended checks. Added the actual schema field to the fixture; production validation was not relaxed.",
+      "failed": 7,
+      "junit": {
+        "bytes": 79271,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_pipeline_tests_20261013.xml",
+        "sha256": "39ca5957606f9934293c984e6edeafab04d82fe9216a42c08ab0052f8e4c678b"
+      },
+      "passed": 319
+    }
+  ],
+  "scope": "Worktree targeted regression, not a frozen benchmark execution or measured accuracy change.",
+  "slurm_syntax_checked": true,
+  "source_records": [
+    {
+      "bytes": 20268,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_large_copy_components.py",
+      "sha256": "c9ec6aeb18f3ea9d5aee9fc511d82e85b717c865438fec0722b750dfa96f4939"
+    },
+    {
+      "bytes": 6608,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/readback_large_copy_components.py",
+      "sha256": "126f00890f33a552260c35ecc48ab7d55855eca5664bc5bda6bf1cce10eb7893"
+    },
+    {
+      "bytes": 445,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_large_copy_components.slurm",
+      "sha256": "5eb01b47a8b3665226bd1b35149f5dc32ac7e91bdfa0e7b70884c5e7c60d860b"
+    },
+    {
+      "bytes": 15046,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_run_large_copy_components.py",
+      "sha256": "3e897fb026bb8f8cb7697e67a562ddc529cdfe2e6f443d5716967447ff2205b2"
+    },
+    {
+      "bytes": 3846,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/tests/unit/test_readback_large_copy_components.py",
+      "sha256": "92642417cd1e19b293b4d2ae8beac9f3b2d7be51ea36b7b55ec85f2a239c7781"
+    },
+    {
+      "bytes": 68431,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/orthohmm/refinement.py",
+      "sha256": "738f7c328d17c08911b2a2face38dd59b13e6c9a3dabafcc7c5241149c80e3eb"
+    }
+  ],
+  "status": "worktree_component_benchmark_and_independent_reader_tests_passed"
+}
