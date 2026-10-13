@@ -650,3 +650,16 @@ handoffs, and executed deferral traces. All eight endpoints remain separate;
 the 0.005 decline threshold is a development screen, not an equivalence claim.
 Missing or failed cells stay scoreless. Local shared-host timings and cached
 HMM graph replays must not be ranked as isolated fresh full-pipeline runtimes.
+
+For a completed own-inferred deferral round, localize its retained GO/EC scored
+pair changes against native reconciliation-confidence tables with:
+
+```bash
+python benchmark_tools/diagnose_hillclimb_pair_confidence.py \
+  --receipt "$INDEPENDENT_READBACK/summary.json" --output "$NEW_DIAGNOSTIC"
+```
+
+This checks receipt-bound native coverage and raw endpoint counts/means without
+rerunning inference or scoring. High/medium event labels are not calibrated
+correctness probabilities; annotated subsets and shared-pair conditioning do
+not replace the original benchmark endpoints.
