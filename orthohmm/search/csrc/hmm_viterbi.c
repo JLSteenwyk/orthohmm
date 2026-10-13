@@ -895,7 +895,8 @@ static void hmm_viterbi_batch8_avx2(
     __m256i*        Ip, __m256i* Ic,
     __m256i*        Dp, __m256i* Dc,
     int32_t*        targets_packed,     /* (max_T, 8) int32 — per-column letters */
-    int32_t         out_scores[8]
+    int32_t         out_scores[8],
+    int32_t         center_recurrence
 ) {
     const int32_t t_mm = transitions[0];
     const int32_t t_mi = transitions[1];
@@ -969,6 +970,15 @@ static void hmm_viterbi_batch8_avx2(
         lane_bw[l] = (band_width <= 0 || max_dim <= 50) ? max_dim : band_width;
     }
     const __m256i v_one_i = _mm256_set1_epi32(1);
+    int32_t lane_center[8] = {0};
+    int32_t lane_quotient[8], lane_remainder[8];
+    int64_t lane_residual[8] = {0};
+    if (center_recurrence) {
+        for (int l = 0; l < 8; l++) {
+            lane_quotient[l] = target_lens[l] / L;
+            lane_remainder[l] = target_lens[l] % L;
+        }
+    }
 
     for (int32_t i = 1; i <= L; i++) {
         const int8_t* emit_row_i8 = match_emit + (i - 1) * 20;
@@ -984,7 +994,19 @@ static void hmm_viterbi_batch8_avx2(
         for (int l = 0; l < 8; l++) {
             int32_t tl = target_lens[l];
             if (tl == 0) { jlo_arr[l] = max_T + 1; jhi_arr[l] = 0; continue; }
-            int32_t jc = (int32_t)(((int64_t)i * tl) / L);
+            int32_t jc;
+            if (center_recurrence) {
+                /* Exactly floor(i*T/L), with a wide residual for int32 lengths. */
+                lane_center[l] += lane_quotient[l];
+                lane_residual[l] += lane_remainder[l];
+                if (lane_residual[l] >= L) {
+                    lane_center[l]++;
+                    lane_residual[l] -= L;
+                }
+                jc = lane_center[l];
+            } else {
+                jc = (int32_t)(((int64_t)i * tl) / L);
+            }
             int32_t bw = lane_bw[l];
             int32_t jl = jc - bw; if (jl < 1) jl = 1;
             int32_t jh = jc + bw; if (jh > tl) jh = tl;
@@ -1075,7 +1097,7 @@ static void hmm_viterbi_batch8_avx2(
  * trailing group of <8 pairs falls back to the scalar kernel.
  * Each lane uses the scalar kernel's band-width and short-pair rules.
  */
-void batch_hmm_viterbi_multipair_avx2_c(
+static void batch_hmm_viterbi_multipair_avx2_impl(
     const int8_t*   flat_match_emit,
     const int8_t*   insert_emit,
     const int32_t*  transitions,
@@ -1087,7 +1109,8 @@ void batch_hmm_viterbi_multipair_avx2_c(
     const int32_t*  pairs,             /* MUST be sorted by pairs[*,0] */
     int32_t         M,
     int32_t         band_width,
-    int32_t*        out_scores
+    int32_t*        out_scores,
+    int32_t         center_recurrence
 ) {
     /* Determine max target length across all pairs for workspace sizing */
     int32_t max_T_all = 0;
@@ -1169,7 +1192,7 @@ void batch_hmm_viterbi_multipair_avx2_c(
                 hmm_viterbi_batch8_avx2(
                     emit, insert_emit, transitions, L,
                     tgt, tlens, band_width,
-                    Mp, Mc, Ip, Ic, Dp, Dc, pack, group_scores);
+                    Mp, Mc, Ip, Ic, Dp, Dc, pack, group_scores, center_recurrence);
                 for (int l = 0; l < 8; l++) out_scores[g + l] = group_scores[l];
             }
             /* Tail <8 pairs: scalar fallback. Uses a small scratch via
@@ -1200,6 +1223,28 @@ void batch_hmm_viterbi_multipair_avx2_c(
         free(packs[t]);
     }
     free(ws); free(packs);
+}
+
+void batch_hmm_viterbi_multipair_avx2_c(
+    const int8_t* flat_match_emit, const int8_t* insert_emit, const int32_t* transitions,
+    const int64_t* prof_offsets, const int32_t* prof_lengths,
+    const uint8_t* target_flat, const int64_t* target_offsets, const int32_t* target_lengths,
+    const int32_t* pairs, int32_t M, int32_t band_width, int32_t* out_scores
+) {
+    batch_hmm_viterbi_multipair_avx2_impl(flat_match_emit, insert_emit, transitions,
+        prof_offsets, prof_lengths, target_flat, target_offsets, target_lengths,
+        pairs, M, band_width, out_scores, 0);
+}
+
+void batch_hmm_viterbi_multipair_recurrence_c(
+    const int8_t* flat_match_emit, const int8_t* insert_emit, const int32_t* transitions,
+    const int64_t* prof_offsets, const int32_t* prof_lengths,
+    const uint8_t* target_flat, const int64_t* target_offsets, const int32_t* target_lengths,
+    const int32_t* pairs, int32_t M, int32_t band_width, int32_t* out_scores
+) {
+    batch_hmm_viterbi_multipair_avx2_impl(flat_match_emit, insert_emit, transitions,
+        prof_offsets, prof_lengths, target_flat, target_offsets, target_lengths,
+        pairs, M, band_width, out_scores, 1);
 }
 
 #endif /* HMM_HAVE_AVX2 */

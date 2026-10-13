@@ -1,0 +1,14 @@
+{
+  "schema": "viterbi_center_benchmark_design_clarification_v1",
+  "status": "prespecified_before_any_timing_comparison",
+  "parent_plan": "hillclimb_viterbi_center_recurrence_20261013.json",
+  "cohort": "Reuse the label-free stage probe's three filename-hash-selected QfO species and 32 gene-ID-hash-selected queries per cyclic species pair, retaining original query order and each complete target proteome.",
+  "candidate_settings": {"k": 3, "use_reduced_alphabet": false, "min_total_hits": 4, "min_diag_hits": 1, "diag_bin_width": 10, "phase_a_topk": 5000, "caps": [100, 400]},
+  "scoring_settings": {"matrix": "BLOSUM62", "band_width": 64, "threads": 4},
+  "arms": ["original_division", "division", "recurrence"],
+  "order": "Warm all three arms, then measure all six permutations of their ordering on identical arrays. Original division loads the existing frozen live-search library; the other two arms share one newly compiled library and identical compiler flags.",
+  "purpose": "Control for changes in default-path cost caused by the opt-in refactor, rather than assuming recurrence versus refactored division implies improvement versus the actual original kernel.",
+  "limitations": "Shared-host short kernel measurements remain noisy, and the original frozen library may have different historical compilation provenance. No truth labels, new orthology scores, default promotion, or full-pipeline speed claims.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}

@@ -92,15 +92,17 @@ def _load_c_hmm():
                 ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32,
                 ctypes.c_int32, ctypes.c_void_p, ctypes.c_void_p,
             ]
-        if hasattr(lib, "batch_hmm_viterbi_multipair_avx2_c"):
-            lib.batch_hmm_viterbi_multipair_avx2_c.restype = None
-            lib.batch_hmm_viterbi_multipair_avx2_c.argtypes = [
-                ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
-                ctypes.c_void_p, ctypes.c_void_p,
-                ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
-                ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32,
-                ctypes.c_void_p,
-            ]
+        for name in ("batch_hmm_viterbi_multipair_avx2_c", "batch_hmm_viterbi_multipair_recurrence_c"):
+            if hasattr(lib, name):
+                function = getattr(lib, name)
+                function.restype = None
+                function.argtypes = [
+                    ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
+                    ctypes.c_void_p, ctypes.c_void_p,
+                    ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p,
+                    ctypes.c_void_p, ctypes.c_int32, ctypes.c_int32,
+                    ctypes.c_void_p,
+                ]
         if hasattr(lib, "hmm_have_avx2"):
             lib.hmm_have_avx2.restype = ctypes.c_int32
             lib.hmm_have_avx2.argtypes = []
@@ -118,7 +120,7 @@ def batch_viterbi_multipair_c(
     flat_match_emit, insert_emit, transitions,
     profile_offsets, profile_lengths,
     target_flat, target_offsets, target_lengths,
-    pairs, band_width, n_threads=4,
+    pairs, band_width, n_threads=4, band_center_mode="division",
 ):
     """Inter-pair SIMD Viterbi (AVX2). Each AVX2 int32 lane runs an
     independent DP for one pair — 8 pairs are processed in lockstep.
@@ -130,10 +132,17 @@ def batch_viterbi_multipair_c(
 
     Expected speedup: ~2-3x over the scalar banded kernel on realistic
     data (many pairs per query — the typical prefilter output pattern).
+
+    The opt-in recurrence mode changes only exact integer band-center
+    arithmetic; the default division path remains unchanged.
     """
+    if not isinstance(band_center_mode, str) or band_center_mode not in ("division", "recurrence"):
+        raise ValueError("Band-center mode must be division or recurrence")
+    symbol = ("batch_hmm_viterbi_multipair_avx2_c" if band_center_mode == "division"
+              else "batch_hmm_viterbi_multipair_recurrence_c")
     lib, available = _load_c_hmm()
-    if not available or not hasattr(lib, "batch_hmm_viterbi_multipair_avx2_c"):
-        raise RuntimeError("Multipair AVX2 Viterbi not available")
+    if not available or not hasattr(lib, symbol):
+        raise RuntimeError(f"Multipair AVX2 Viterbi {band_center_mode} mode not available")
     lib.hmm_set_num_threads(n_threads)
 
     M = len(pairs)
@@ -157,7 +166,7 @@ def batch_viterbi_multipair_c(
     _pr = np.ascontiguousarray(pairs_sorted.flatten(), dtype=np.int32)
     out_scores_sorted = np.empty(M, dtype=np.int32)
 
-    lib.batch_hmm_viterbi_multipair_avx2_c(
+    getattr(lib, symbol)(
         _me.ctypes.data, _ie.ctypes.data, _tr.ctypes.data,
         _po.ctypes.data, _pl.ctypes.data,
         _tf.ctypes.data, _to.ctypes.data, _tl.ctypes.data,

@@ -28,7 +28,7 @@ def compiled_kernel(tmp_path_factory):
         pytest.skip("Native host has no compiled AVX2 backend")
     lib.hmm_set_num_threads.argtypes = [ctypes.c_int32]
     lib.hmm_set_num_threads.restype = None
-    for name in ("batch_hmm_viterbi_c", "batch_hmm_viterbi_multipair_avx2_c"):
+    for name in ("batch_hmm_viterbi_c", "batch_hmm_viterbi_multipair_avx2_c", "batch_hmm_viterbi_multipair_recurrence_c"):
         function = getattr(lib, name)
         function.argtypes = [ctypes.c_void_p] * 9 + [ctypes.c_int32, ctypes.c_int32, ctypes.c_void_p]
         function.restype = None
@@ -54,7 +54,8 @@ def boundary_data():
 @pytest.mark.parametrize("band", [0, 1, 8, 64, 128])
 @pytest.mark.parametrize("order", ["original", "reverse", "shuffle"])
 @pytest.mark.parametrize("threads", [1, 4])
-def test_per_pair_band_semantics(compiled_kernel, boundary_data, monkeypatch, band, order, threads):
+@pytest.mark.parametrize("mode", ["division", "recurrence"])
+def test_per_pair_band_semantics(compiled_kernel, boundary_data, monkeypatch, band, order, threads, mode):
     monkeypatch.setattr(viterbi, "_c_hmm_lib", compiled_kernel)
     monkeypatch.setattr(viterbi, "_c_hmm_available", True)
     pairs = boundary_data[-1]
@@ -66,5 +67,47 @@ def test_per_pair_band_semantics(compiled_kernel, boundary_data, monkeypatch, ba
         indices = indices[::-1].copy()
     elif order == "shuffle":
         np.random.Generator(np.random.PCG64(20260921)).shuffle(indices)
-    actual = viterbi.batch_viterbi_multipair_c(*boundary_data[:-1], pairs[indices], band, n_threads=threads)
+    actual = viterbi.batch_viterbi_multipair_c(*boundary_data[:-1], pairs[indices], band,
+                                             n_threads=threads, band_center_mode=mode)
     np.testing.assert_array_equal(actual, reference[indices])
+
+
+@pytest.mark.parametrize("mode", [None, True, "approximate", [], np.array(["recurrence"])])
+def test_invalid_center_mode_is_rejected_before_loading_native_code(monkeypatch, mode):
+    monkeypatch.setattr(viterbi, "_load_c_hmm", lambda: pytest.fail("Invalid mode must fail before loading"))
+    with pytest.raises(ValueError, match="Band-center mode"):
+        viterbi.batch_viterbi_multipair_c(*([None] * 9), 64, band_center_mode=mode)
+
+
+def test_missing_recurrence_export_does_not_silently_fall_back(monkeypatch):
+    from types import SimpleNamespace
+    monkeypatch.setattr(viterbi, "_load_c_hmm", lambda: (SimpleNamespace(batch_hmm_viterbi_multipair_avx2_c=object()), True))
+    with pytest.raises(RuntimeError, match="recurrence mode not available"):
+        viterbi.batch_viterbi_multipair_c(*([None] * 9), 64, band_center_mode="recurrence")
+
+
+@pytest.mark.parametrize("band", [0, 1, 64])
+@pytest.mark.parametrize("threads", [1, 4])
+def test_zero_length_profiles_long_targets_and_scalar_tails_match(compiled_kernel, monkeypatch, band, threads):
+    monkeypatch.setattr(viterbi, "_c_hmm_lib", compiled_kernel)
+    monkeypatch.setattr(viterbi, "_c_hmm_available", True)
+    rng = np.random.Generator(np.random.PCG64(20261013))
+    lengths = np.array([0, 1, 2, 7, 49, 50, 51, 97], dtype=np.int32)
+    target_lengths = np.array([0, 1, 3, 49, 50, 51, 89, 100, 201, 512], dtype=np.int32)
+    offsets = np.concatenate(([0], np.cumsum(lengths, dtype=np.int64)[:-1]))
+    target_offsets = np.concatenate(([0], np.cumsum(target_lengths, dtype=np.int64)[:-1]))
+    emissions = rng.integers(-5, 11, (int(lengths.sum()), 20), dtype=np.int8)
+    targets = rng.integers(0, 21, int(target_lengths.sum()), dtype=np.uint8)
+    pairs = np.array([(q, t) for q in range(len(lengths)) for t in range(len(target_lengths))], dtype=np.int32)
+    data = (emissions, np.full(20, -1, dtype=np.int8), np.array([0, -12, -12, -2, -3, -2, -3], dtype=np.int32),
+            offsets, lengths, targets, target_offsets, target_lengths, pairs)
+    before = [a.tobytes() for a in data]
+    scalar = viterbi.batch_viterbi_c(*data, band, n_threads=1)
+    division = viterbi.batch_viterbi_multipair_c(*data, band, n_threads=threads)
+    recurrence = viterbi.batch_viterbi_multipair_c(*data, band, n_threads=threads, band_center_mode="recurrence")
+    np.testing.assert_array_equal(division, scalar)
+    np.testing.assert_array_equal(recurrence, scalar)
+    assert [a.tobytes() for a in data] == before
+    empty = viterbi.batch_viterbi_multipair_c(*data[:-1], np.empty((0, 2), dtype=np.int32), band,
+                                            n_threads=threads, band_center_mode="recurrence")
+    assert empty.shape == (0,) and empty.dtype == np.int32
