@@ -1,0 +1,841 @@
+{
+  "counts": {
+    "errors": 78,
+    "failed": 77,
+    "passed": 21677,
+    "skipped": 16
+  },
+  "defaults_promoted": false,
+  "findings": [
+    "78 setup errors and 3 failures require a fresh private tmpfs path matching the workflow run identity.",
+    "27 failures concern a historical publication-goal text/hash contract, not the active hill-climb prompt.",
+    "33 native-factorial adapter failures and other release/resource checks report exact historical source-byte or retained-payload mismatches.",
+    "Four dependency checks report biopython, pillow and setuptools version mismatches and absent sqlglot; another Swiss readback expects a different biopython version.",
+    "Other failures include publication-manuscript expectations, native cost/source lengths, shared-prenative worker source identity, and runtime sanitization. Preserve detailed messages; do not blanket-dismiss them."
+  ],
+  "followup": [
+    "Do not mutate shared scientific runtimes while frozen benchmark jobs are live.",
+    "Reproduce relevant failed fixture groups under explicitly isolated, declared runtimes and historical source fixtures; keep archival pins intact.",
+    "Require a clean relevant frozen-source regression panel before any algorithm/default promotion. This sweep is not a publication-ready clean-test attestation."
+  ],
+  "goal_completed": false,
+  "initial_worktree_revision": "139ae0a3",
+  "issues": [
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_complete_design_and_exact_numerical_budget_are_not_full_admission"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_exact_median_boundary_not_float_rounding_tolerance[105000000000-True]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_exact_median_boundary_not_float_rounding_tolerance[105000000001-False]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_exact_per_pair_budget_boundary[0-True]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_exact_per_pair_budget_boundary[1-False]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_negative_ratios_are_retained"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_any_failed_unrun_or_nonterminal_task_prevents_complete_median[invalid_evidence]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_any_failed_unrun_or_nonterminal_task_prevents_complete_median[native_failure]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_any_failed_unrun_or_nonterminal_task_prevents_complete_median[nonterminal_requires_live_check]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_any_failed_unrun_or_nonterminal_task_prevents_complete_median[scheduler_failed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_any_failed_unrun_or_nonterminal_task_prevents_complete_median[unrun]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[missing]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[order]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[bool_index]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[admitted]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[unknown]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_outcome_contract_rejects_drift[identity]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_invalid_integer_clock_duration_cannot_form_a_pair[0]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_invalid_integer_clock_duration_cannot_form_a_pair[-1]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_invalid_integer_clock_duration_cannot_form_a_pair[True]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_invalid_integer_clock_duration_cannot_form_a_pair[1000000000000000]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_mismatched_outputs_and_panel_issues_prevent_panel_conclusion"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[seed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[budget]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[resources]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[status]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[authorized]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[statistic]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[host]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[missing]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[order]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[native]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[input]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_frozen_design_drift_is_rejected[environment]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_real_plan_complete_unrun_inventory"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_audit_reads_copied_pins_not_workstation_paths"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_changed_copied_evidence_is_not_admitted[protocol]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_changed_copied_evidence_is_not_admitted[helper]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_scheduler_failures_and_live_records_are_not_inspected_or_retried[FAILED-scheduler_failed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_scheduler_failures_and_live_records_are_not_inspected_or_retried[TIMEOUT-scheduler_failed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_scheduler_failures_and_live_records_are_not_inspected_or_retried[RUNNING-nonterminal_requires_live_check]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[skip]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[retry]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[duplicate_job]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[bool_job]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[history_plan]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[history_schema]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_history_cannot_select_or_retry_attempts[retry_allowed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_unrecorded_artifacts_and_evidence_mutation_fail_closed"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_new_unrun_artifacts_during_audit_are_not_a_stable_empty_panel"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_attempt_prefix_pair_binding_and_stopping[none]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_attempt_prefix_pair_binding_and_stopping[mismatch]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_attempt_prefix_pair_binding_and_stopping[overlap]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_audit_threadripper_overhead::test_attempt_prefix_pair_binding_and_stopping[boot]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'bd079a3be265...8a18b65d9e073' == '5a4a46210cbe...bba9c7b01656c'\n  \n  - 5a4a46210cbeae65d33c5ebf827d24d9265fbd71122368c7323bba9c7b01656c\n  + bd079a3be2651222dda73b1ad77eae1e118a3717ac17a5881c38a18b65d9e073",
+      "test": "tests.unit.test_current_publication_goal::test_scientific_scope_and_completion_requirements_preserved_byte_for_byte"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'not an execution-manifest input' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_historical_evidence_is_not_replaced_by_current_instructions"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'At every automatic continuation' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[At every automatic continuation]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'use a concrete tool call for the next unfinished authorized task' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[use a concrete tool call for the next unfinished authorized task]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'advance to unfinished validation or integration; never replay the producer' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[advance to unfinished validation or integration; never replay the producer]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'wait and inspect that same job' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[wait and inspect that same job]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Do not ask the user to resume after a milestone' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Do not ask the user to resume after a milestone]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'full goal remains ACTIVE' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[full goal remains ACTIVE]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Older checkpoints are history, not commands' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Older checkpoints are history, not commands]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Keep transient job/task state in the ledger, not in this prompt' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Keep transient job/task state in the ledger, not in this prompt]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Every wait-only continuation includes a real wait and a post-wait observation' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Every wait-only continuation includes a real wait and a post-wait observation]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'prevent ONLY its dependent scoring or admission' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[prevent ONLY its dependent scoring or admission]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'A recoverable parser, label, validation or reporting failure is not a whole-goal stop' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[A recoverable parser, label, validation or reporting failure is not a whole-goal stop]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Deterministic postprocessing recovery is explicitly authorized after focused tests' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Deterministic postprocessing recovery is explicitly authorized after focused tests]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'No duplicate submissions or automatic inference/timing retries' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[No duplicate submissions or automatic inference/timing retries]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Do not stop, suspend, renice or re-affinitize unrelated jobs' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Do not stop, suspend, renice or re-affinitize unrelated jobs]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'do not commit large raw datasets' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[do not commit large raw datasets]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Ordinary competing workloads never block the whole goal' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Ordinary competing workloads never block the whole goal]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'safe memory and accounting requirements pass, even with competing analyses' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[safe memory and accounting requirements pass, even with competing analyses]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Scheduler-resource-PENDING is authorized waiting work' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Scheduler-resource-PENDING is authorized waiting work]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Pause only on an explicit user request' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Pause only on an explicit user request]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'mark complete only on verified completion' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[mark complete only on verified completion]"
+    },
+    {
+      "kind": "failure",
+      "message": "assert \"use blocked only under the goal tool's sustained genuine impasse rule\" in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[use blocked only under the goal tool's sustained genuine impasse rule]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Distinguish goal status from a temporarily interrupted command runner' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Distinguish goal status from a temporarily interrupted command runner]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Never claim that a prompt edit guarantees platform continuation' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_current_execution_safety_and_continuation_rules[Never claim that a prompt edit guarantees platform continuation]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: substring not found",
+      "test": "tests.unit.test_current_publication_goal::test_immediate_action_precedes_long_scientific_scope"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert 'Do not add new all-tool hermeticity' in 'Goal: Bring OrthoHMM to a publication-ready methods and benchmarking package. Execution Contract (2026-10-12, consoli... stores/application settings to force continuation. Scientific Requirements (With Explicit Reporting Amendments Above)'",
+      "test": "tests.unit.test_current_publication_goal::test_no_new_gates_or_placeholder_work_are_authorized"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert False\n +  where False = contains('1.86')\n +    where contains = <SpecifierSet('==1.87')>.contains\n +      where <SpecifierSet('==1.87')> = <Requirement('biopython==1.87')>.specifier\n +    and   '1.86' = <function version at 0x75b8cb8c7c70>('biopython')\n +      where <function version at 0x75b8cb8c7c70> = metadata.version",
+      "test": "tests.unit.test_declared_test_dependencies::test_workflow_test_dependencies_are_declared_and_importable[biopython-Bio]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert False\n +  where False = contains('12.2.0')\n +    where contains = <SpecifierSet('==12.3.0')>.contains\n +      where <SpecifierSet('==12.3.0')> = <Requirement('pillow==12.3.0')>.specifier\n +    and   '12.2.0' = <function version at 0x75b8cb8c7c70>('pillow')\n +      where <function version at 0x75b8cb8c7c70> = metadata.version",
+      "test": "tests.unit.test_declared_test_dependencies::test_workflow_test_dependencies_are_declared_and_importable[pillow-PIL]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert False\n +  where False = contains('81.0.0')\n +    where contains = <SpecifierSet('==83.0.0')>.contains\n +      where <SpecifierSet('==83.0.0')> = <Requirement('setuptools==83.0.0')>.specifier\n +    and   '81.0.0' = <function version at 0x75b8cb8c7c70>('setuptools')\n +      where <function version at 0x75b8cb8c7c70> = metadata.version",
+      "test": "tests.unit.test_declared_test_dependencies::test_workflow_test_dependencies_are_declared_and_importable[setuptools-setuptools]"
+    },
+    {
+      "kind": "failure",
+      "message": "importlib.metadata.PackageNotFoundError: No package metadata was found for sqlglot",
+      "test": "tests.unit.test_declared_test_dependencies::test_workflow_test_dependencies_are_declared_and_importable[sqlglot-sqlglot]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p0_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p0_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p0_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p0_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p1_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p1_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p1_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_exact_ast_scope_for_every_factor_combination[p1_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p0_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p0_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p0_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p0_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p1_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p1_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p1_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_profile_off_keeps_sensitive_search_graph_seed_and_production_globals[p1_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_factor_controls_are_independent_and_cannot_mutate_each_other"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change2]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change3]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change4]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change5]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change6]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_changed_factorial_recipe_rejected_before_pipeline[change7]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p0_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p0_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p0_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p0_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p1_c0_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p1_c0_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p1_c1_r0]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require exact frozen pipeline source bytes",
+      "test": "tests.unit.test_native_factorial_adapter::test_candidate_gate_with_actual_nonzero_merges_independent_of_reconciliation[p1_c1_r1]"
+    },
+    {
+      "kind": "failure",
+      "message": "assert 8339 == 7954\n +  where 8339 = len(b'#!/usr/bin/env python3\\n\"\"\"Run and record a reproducible benchmark of the production OrthoHMM CLI.\"\"\"\\n\\nfrom __futu...   print(result_json)\\n    return completed.returncode\\n\\n\\nif __name__ == \"__main__\":\\n    raise SystemExit(main())\\n')",
+      "test": "tests.unit.test_native_factorial_cost::test_actual_prepared_plan_and_policy_bytes"
+    },
+    {
+      "kind": "failure",
+      "message": "assert (8339 == 7954)\n +  where 8339 = len(b'#!/usr/bin/env python3\\n\"\"\"Run and record a reproducible benchmark of the production OrthoHMM CLI.\"\"\"\\n\\nfrom __futu...   print(result_json)\\n    return completed.returncode\\n\\n\\nif __name__ == \"__main__\":\\n    raise SystemExit(main())\\n')",
+      "test": "tests.unit.test_native_factorial_cost::test_actual_repaired_plan_preserves_factors_and_failed_attempt"
+    },
+    {
+      "kind": "failure",
+      "message": "IndexError: list index out of range",
+      "test": "tests.unit.test_ob_complete_manuscript::test_reproduction_guide_distinguishes_completed_runs_from_open_release_work"
+    },
+    {
+      "kind": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_actual_parent_manifest_and_sources_still_match_the_retained_rc2.<locals>.<genexpr> at 0x75b834990430>)",
+      "test": "tests.unit.test_prepare_publication_package_rc3::test_actual_parent_manifest_and_sources_still_match_the_retained_rc2"
+    },
+    {
+      "kind": "failure",
+      "message": "assert False\n +  where False = all(<generator object test_actual_rc3_sources_and_reader_still_match_the_prior_payloads.<locals>.<genexpr> at 0x75b834422340>)",
+      "test": "tests.unit.test_prepare_publication_package_rc4::test_actual_rc3_sources_and_reader_still_match_the_prior_payloads"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require fresh private tmpfs input path matching the run identity",
+      "test": "tests.unit.test_prepare_threadripper_overhead::test_complete_paired_plan"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require fresh private tmpfs input path matching the run identity",
+      "test": "tests.unit.test_prepare_threadripper_overhead::test_command_values_are_not_rewritten_by_substring"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Require fresh private tmpfs input path matching the run identity",
+      "test": "tests.unit.test_prepare_threadripper_overhead::test_cli_pins_and_no_overwrite[None]"
+    },
+    {
+      "kind": "failure",
+      "message": "AssertionError: assert {'biopython_v...ked': 51, ...} == {'biopython_v...ked': 51, ...}\n  \n  Omitting 15 identical items, use -vv to show\n  Differing items:\n  {'biopython_version': '1.86'} != {'biopython_version': '1.87'}\n  Use -v to get more diff",
+      "test": "tests.unit.test_readback_native_qfo_swiss_reconciliation::test_actual_independent_newick_readback"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_complete_conditional_engineering_decision_is_never_production_admission"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_complete_review_keeps_exact_numerical_failure"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[review_count]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[review_plan]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[wrong_history]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[scheduler]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[native_outputs]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[native_wall]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[review_reference]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[unbound_native]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[production_schema]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[raw_identity]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_mixed_or_unsupported_review_cannot_produce_a_decision[missing_raw]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_last_review_incomplete_or_failed_has_no_budget_decision[None]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_last_review_incomplete_or_failed_has_no_budget_decision[failed]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_last_review_incomplete_or_failed_has_no_budget_decision[unresolved]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_incomplete_raw_panel_cannot_be_rescued_by_passing_reviews"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_real_unrun_panel_replays_copied_pins_without_native_or_host_work"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[None]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[plan_hash]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[attempts_hash]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[reviews_hash]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[existing]"
+    },
+    {
+      "kind": "error",
+      "message": "failed on setup with \"ValueError: Require fresh private tmpfs input path matching the run identity\"",
+      "test": "tests.unit.test_review_threadripper_overhead::test_cli_keeps_external_pins_and_never_overwrites[baseline_missing]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Frozen input/source identity changed: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_environment_worker.py",
+      "test": "tests.unit.test_shared_prenative_reporting::test_retained_actual_snapshot_and_pdf_pixels[v18-18-17-16]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Frozen input/source identity changed: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_environment_worker.py",
+      "test": "tests.unit.test_shared_prenative_reporting::test_retained_actual_snapshot_and_pdf_pixels[v19-19-18-17]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Frozen input/source identity changed: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/threadripper_environment_worker.py",
+      "test": "tests.unit.test_shared_prenative_reporting::test_retained_actual_snapshot_and_pdf_pixels[v20-20-19-18]"
+    },
+    {
+      "kind": "failure",
+      "message": "ValueError: Unsanitized runtime",
+      "test": "tests.unit.test_swiss_model_divergence::test_one_failed_family_retained_no_subset_cutoff_and_other_families_continue"
+    }
+  ],
+  "issues_by_module": {
+    "tests.unit.test_audit_threadripper_overhead": 54,
+    "tests.unit.test_current_publication_goal": 27,
+    "tests.unit.test_declared_test_dependencies": 4,
+    "tests.unit.test_native_factorial_adapter": 33,
+    "tests.unit.test_native_factorial_cost": 2,
+    "tests.unit.test_ob_complete_manuscript": 1,
+    "tests.unit.test_prepare_publication_package_rc3": 1,
+    "tests.unit.test_prepare_publication_package_rc4": 1,
+    "tests.unit.test_prepare_threadripper_overhead": 3,
+    "tests.unit.test_readback_native_qfo_swiss_reconciliation": 1,
+    "tests.unit.test_review_threadripper_overhead": 24,
+    "tests.unit.test_shared_prenative_reporting": 3,
+    "tests.unit.test_swiss_model_divergence": 1
+  },
+  "readback_worktree_revision": "83fad74e1fff25f64e8edc10ae4f059212f5b203",
+  "scope": "Mutable-worktree exploratory sweep while scoped commits and independent Slurm jobs progressed; not a frozen end-revision test certification. No earlier-revision baseline sweep was run, so failures are not claimed to be proven pre-existing. The final wrapper has a separate 99-test passing check.",
+  "status": "exploratory_full_unit_sweep_failed_with_explicit_followup",
+  "suites": [
+    {
+      "errors": "78",
+      "failures": "77",
+      "hostname": "bizon",
+      "name": "pytest",
+      "skipped": "16",
+      "tests": "21848",
+      "time": "788.837",
+      "timestamp": "2026-10-13T15:59:32.722526-04:00"
+    }
+  ],
+  "targeted_final_wrapper_result": "99 passed",
+  "targeted_final_wrapper_tests": {
+    "bytes": 15717,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_inherited_source_tests_20261013.xml",
+    "sha256": "196ce290b9d843e2201a35b8d48f6e857be3fd9196e9e21c94f03e98164446d2"
+  },
+  "xml": {
+    "bytes": 3437449,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_deferred_tracer_full_unit_tests_20261013.xml",
+    "sha256": "5d0262828bdeec3633381dd6a49af71d6c045bbfeef99fa5a0c228797e6269f4"
+  }
+}
