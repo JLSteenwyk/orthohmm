@@ -1,0 +1,28 @@
+{
+  "schema": "exact_viterbi_center_recurrence_round_v1",
+  "status": "prespecified_before_opt_in_kernel_implementation",
+  "motivation": "The label-free stage probe measured Viterbi as the largest sampled search stage. The current eight-lane kernel computes floor(i*T/L) with integer division in each lane on every profile row. Test an exact quotient/remainder recurrence, not a score or sensitivity heuristic.",
+  "hypothesis": "Hoisting T/L and T%L once per lane and incrementing the band center by quotient plus remainder carry can reduce scalar division overhead without changing any visited DP cell or integer score.",
+  "mechanism": {
+    "identity": "For row i, center=floor(i*T/L). With q=T/L and r=T%L, initialize center=0 and residual=0, then add q and r per row and add one to center when residual>=L. Subtract L on carry. This is exactly the same nonnegative integer division.",
+    "residual_type": "int64_t to avoid overflow when L approaches the int32 limit",
+    "zero_lengths": "Preserve existing early returns and dummy/empty lane behavior",
+    "default": "Existing division path and public ABI remain the default; recurrence gets a separate exported entry point and explicit Python opt-in.",
+    "unchanged": ["band width", "short-pair full-matrix policy", "query/target ordering", "emission/transition arrays", "M/I/D recurrence", "gap penalties", "score normalization", "E-values", "candidate selection", "phylogeny integration"]
+  },
+  "validation": [
+    "Compile only isolated test/frozen-checkout libraries; do not overwrite libraries used by live experiments.",
+    "Compare recurrence against original division, scalar C and Numba on boundary sizes, empty/unknown-residue targets, tail batches, reordered pairs, multiple bands and thread counts.",
+    "Reject invalid mode names and missing recurrence exports rather than silently selecting another algorithm.",
+    "Preserve inputs and caller pair order byte-for-byte; test default behavior and ABI compatibility."
+  ],
+  "benchmark": {
+    "resource_limits": {"host": "local shared Threadripper", "cpus": 4, "memory_gib": 16, "wall_limit_minutes": 20},
+    "design": "Fixed label-free native/synthetic kernel batches; identical arrays and compiler flags for both paths. Warm both modes, interleave paired repeats and retain failures. No benchmark reference labels or threshold fitting.",
+    "selection": "Advance only with exact integer-score equality and repeatable directional cost reduction on multiple batch shapes. Otherwise retain the unsuccessful opt-in experiment without default promotion.",
+    "scope": "Kernel cost only; no isolated full-pipeline speed claim or imputed eight-endpoint accuracy vector. Any pipeline adoption needs broader output-preserving validation."
+  },
+  "live_jobs": "Do not modify, stop, restart or repin the fresh-HMM cap or component-phylogeny jobs.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
