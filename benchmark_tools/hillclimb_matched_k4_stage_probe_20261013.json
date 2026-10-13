@@ -1,0 +1,14 @@
+{
+  "schema": "matched_live_k4_label_free_stage_probe_v1",
+  "status": "prespecified_before_matched_stage_probe",
+  "motivation": "Audit confirms the live frozen high_sensitivity profile uses k=4. The earlier transparent stage probe and exact-center kernel experiment intentionally prescribed k=3; their results are valid for those samples but not an exact parameter match to the live pipeline. Do not revise their historical plans or infer a live-pipeline speedup from them.",
+  "source": "Import the untouched original live source root from full_search_hillclimb_r1_v3_20261012/execution_plan.json; retain original compiled CPU libraries and default scoring route. No package rebuild or running source mutation.",
+  "sample": "Same three filename-hash-selected QfO species, 32 gene-ID-hash-selected queries in original order per cyclic species pair, and complete target proteomes as the earlier label-free stage probe.",
+  "settings": {"matrix": "BLOSUM62", "band_width": 64, "kmer_k": 4, "candidate_caps": [100, 400], "phase_a_topk": 5000, "threads": 4, "cuda_visible_devices": ""},
+  "design": "For each of six cases, run the original native search once uninstrumented and once with transparent function timing wrappers. Require identical query/target index, score, E-value and candidate-count fingerprints. Record actual call parameters, input/source/runtime pins and post-exec RSS.",
+  "resources": {"cpus": 4, "memory_gib": 16, "wall_limit_minutes": 20, "host": "local shared Threadripper"},
+  "selection": "Use sampled stage costs only to prioritize later computational experiments. Do not interpret instrumented versus uninstrumented wall differences as an optimization contrast, extrapolate full-pipeline speed, or infer orthology accuracy from hit counts. A k4 sample cannot validate the rejected k3 recurrence experiment as a general speed improvement.",
+  "limitations": "Small development-exposed sample on a shared host; neither independent biological confirmation nor a full-dataset profile.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
