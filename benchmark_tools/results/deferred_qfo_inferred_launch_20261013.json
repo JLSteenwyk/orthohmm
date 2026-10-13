@@ -1,0 +1,46 @@
+{
+  "defaults_promoted": false,
+  "deferred_inputs": "Terminal parent report, independently verified parent native products/assessments, and matching completed native alignment/raw-tree checkpoints. Resolve and freeze before inference.",
+  "evaluation_mode": "inferred_parent",
+  "execution_plan": {
+    "bytes": 377975,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v1_20261013/execution_plan.json",
+    "sha256": "790fc69aa591d2d9be2aeef79eebc69e073f4d99f2af6fcdd1a11f06c1e8e86a"
+  },
+  "fixed_tree_control_readback": {
+    "bytes": 31517,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_fixed_control_readback_20261013/report.json",
+    "sha256": "46aed8150ba90a8b2fd1356a17476b9ef2115e6b0fcb1a5fe2b4ea3fc670caca"
+  },
+  "generated_at_utc": "2026-10-13T05:51:46.015865+00:00",
+  "goal_completed": false,
+  "initial_input_records": 94,
+  "job_id": 24200,
+  "limitations": [
+    "No variant accuracy improvement established yet.",
+    "Deferred raw-tree inputs are explicitly unresolved until parent completion; initial plan does not falsely attest nonexistent files.",
+    "Cached upstream HMM evidence and compatible raw gene trees; not fresh full-pipeline timing.",
+    "Development-exposed data, stochastic FAS and shared-host timing limitations remain nonblocking and explicit."
+  ],
+  "next_actions": [
+    "Finish 24198 fixed-tree variant native inference and all six assessments.",
+    "Run 24199 matched inferred-tree OrthoBench/Three Kingdoms trials sequentially.",
+    "At 24200 startup, independently validate terminal 24198 products/scores and freeze all matching raw-tree inputs; then run control and deferred500 with their own native species-tree inference.",
+    "Independently combine complete own-inferred scores into the eight-endpoint vector and compare with matched controls and retained tools before any promotion."
+  ],
+  "protocol": {
+    "bytes": 4234,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_deferred_qfo_inferred_20261013.json",
+    "sha256": "b3fed833b395615007068aa4e935e64a6790a60ae0f15208b452a57817b119a2"
+  },
+  "scheduler": "JobId=24200 JobName=ohmm-deferred-qfo-own\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterany:24199(unfulfilled)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=3-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T01:47:30 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T01:47:30 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2987986\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_qfo_inferred_r1_v1_20261013/benchmark_tools/run_deferred_copy_split.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v1_20261013/slurm-24200.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v1_20261013/slurm-24200.log\n   TresPerTask=cpu=16\n   \n\n",
+  "source_records": 1139,
+  "source_revision": "013677449123748078fc43adf875294752cb17b3",
+  "status": "submitted_pending_verified_sequential_dependency",
+  "tests": {
+    "bytes": 22079,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_qfo_inferred_final_tests_20261013.xml",
+    "sha256": "bbf858d051167a202a86d250e514910a83aea590682ff9ff779bfdc764bc017d"
+  },
+  "tests_passed": 150
+}
