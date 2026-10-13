@@ -1,0 +1,26 @@
+{
+  "schema": "paired_deferred_reference_stage_diagnostic_v1",
+  "status": "prespecified_development_diagnostic_not_new_inference",
+  "hypothesis": "The completed combined copy-deferral trial improves VGNC recall by preserving family context, but remaining asserted misses may still arise from candidate separation or from native pair omission inside a candidate. Localize both before choosing another mechanism.",
+  "cohort": "All 23934 asserted VGNC rows under unchanged native reference, last-label, and exact participant-database alias conventions. Keep both within-species assertions in the original denominator and flag them separately.",
+  "cases": ["own-inferred matched control", "own-inferred combined deferred500"],
+  "controls": [
+    "Use the independently admitted cells in deferred_own_qfo_complete_readback_20261013; require full 984137-gene/78-species coverage and immutable native product identities.",
+    "Require control native products to match the original admitted VGNC stage trace and reproduce its complete reference-pair table exactly.",
+    "Reuse the original numeric HMM checkpoint and the tested trace_qfo_reference_stages.py runner. Bind current candidates, native roots/pairs, participant database, raw scorer rows, references, executed source, and plan bytes before and after each diagnostic.",
+    "Reproduce native VGNC precision, recall, F1, and every TP/FN pair exactly. RootHOG co-membership must never substitute for native ortholog predictions.",
+    "Compare per-pair control-to-variant transitions only after both complete traces pass content checks. Preserve failed diagnostic attempts in fresh namespaces."
+  ],
+  "observations": ["all asserted TP/FN stages", "initial directed hit presence and normalized scores", "candidate-family separation", "native RootHOG separation", "rescued and lost asserted pairs", "unchanged reference-within-species rows"],
+  "resource_limits": {"cpus": 1, "memory_gib": 8, "wall_limit_minutes": 30, "sequential_cases": true, "host": "local Threadripper"},
+  "selection_rule": "No parameter selection or default promotion from this diagnostic. Motivate a separately prespecified, general-property-based mechanism experiment after current branch ablations finish.",
+  "limitations": [
+    "Development-exposed localization, not independent confirmation, a new search, new inference, or a new accuracy gain.",
+    "Cached absent hits cannot distinguish prefilter, ranking, candidate-cap, significance, or other filtering causes.",
+    "Within-candidate omission combines tree, reconciliation, and membership effects; stage labels alone are not causal explanations.",
+    "VGNC reference rows can share proteins and labels; no independent-family uncertainty is claimed.",
+    "Shared-host diagnostic wall time and memory are not fresh full-pipeline inference measurements."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
