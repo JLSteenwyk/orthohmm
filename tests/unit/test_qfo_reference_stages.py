@@ -152,12 +152,21 @@ def test_duplicate_unwatched_hits_do_not_claim_global_duplicate_audit():
 
 
 @pytest.mark.parametrize("species,candidates,predicted,match", [
-    ([0, 0], {"A": 0, "B": 0}, set(), "cross-species"),
+    ([0, 0], {"A": 0, "B": 0}, {("A", "B")}, "within-species"),
     ([0, 1], {"A": 0, "B": 1}, {("A", "B")}, "crosses candidate")])
 def test_invalid_reference_or_native_candidate_pair_rejected(species, candidates, predicted, match):
     with pytest.raises(ValueError, match=match):
         trace.trace_rows({("A", "B"): "f"}, predicted, ["A", "B"], {"A": 0, "B": 1},
             np.array(species), candidates, {"A": 0, "B": 1}, {})
+
+
+def test_within_species_asserted_rows_are_preserved_but_not_recovery_opportunities():
+    rows = trace.trace_rows({("A", "B"): "f"}, set(), ["A", "B"], {"A": 0, "B": 1},
+        np.array([0, 0]), {"A": 0, "B": 0}, {"A": 0, "B": 0}, {(0, 1): 1.})
+    assert len(rows) == 1 and rows[0]["category"] == "FN"
+    assert rows[0]["stage"] == "reference_within_species"
+    assert not rows[0]["reference_is_cross_species"]
+    assert rows[0]["initial_hit_directions"] == 1
 
 
 def test_native_pair_not_raw_label_controls_trace(tmp_path):

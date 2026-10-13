@@ -1,0 +1,32 @@
+{
+  "defaults_changed": false,
+  "error": "VGNC reference pair is not cross-species",
+  "goal_completed": false,
+  "job_id": 24195,
+  "observed_within_species_pairs": [
+    {
+      "family": "PLAC8",
+      "left": "A0A5F4BPW8",
+      "right": "A0A5F4CDF1",
+      "taxon": "CANLF"
+    },
+    {
+      "family": "PLAC8",
+      "left": "Q3ZCB2",
+      "right": "Q56JW2_BOVIN",
+      "taxon": "BOVIN"
+    }
+  ],
+  "plan": {
+    "bytes": 7918,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_v2_20261012.json",
+    "sha256": "c17bebfa6e2f1d71bdf86a20dbed6873f0ed18ddf408b002960c16d62aff1955"
+  },
+  "reached_stage": "After raw pooled precision/recall/F1 and exact native TP/FN were verified; pair-stage table not published.",
+  "remedy": "Preserve original reference and native denominator; flag two within-species asserted rows separately. New v3 plan/output namespace and regression test.",
+  "scheduler_receipt": "JobID|State|ExitCode|Elapsed|AllocCPUS|MaxRSS\n24195|FAILED|1:0|00:00:35|1|\n24195.0|FAILED|1:0|00:00:35|1|\n",
+  "scorer_and_checkpoint_species_ownership_agree": true,
+  "scoring_changed": false,
+  "source_revision": "766e44f6",
+  "status": "failed_overstrict_reference_scope_preserved"
+}

@@ -104,17 +104,20 @@ def trace_rows(truth, predicted, names, index, species, candidates, roots, hits)
     for (a, b), family in sorted(truth.items()):
         i, j = index[a], index[b]
         left, right = names[i], names[j]
-        if species[i] == species[j]:
-            raise ValueError("VGNC reference pair is not cross-species")
+        cross_species = bool(species[i] != species[j])
         same_candidate = candidates[left] == candidates[right]
         retained = (a, b) in predicted
+        if retained and not cross_species:
+            raise ValueError("Native predicted pair is within-species")
         if retained and not same_candidate:
             raise ValueError("Native predicted pair crosses candidate families")
-        stage = ("predicted" if retained else "within_candidate_not_predicted" if same_candidate
+        stage = ("predicted" if retained else "reference_within_species" if not cross_species
+                 else "within_candidate_not_predicted" if same_candidate
                  else "different_candidate_families")
         forward, reverse = hits.get((i, j)), hits.get((j, i))
         rows.append({"left": a, "right": b, "reference_label": family,
             "native_gene_left": left, "native_gene_right": right,
+            "reference_is_cross_species": cross_species,
             "category": "TP" if retained else "FN", "stage": stage,
             "initial_hit_directions": int(forward is not None) + int(reverse is not None),
             "forward_normalized_score": forward, "reverse_normalized_score": reverse,
@@ -265,6 +268,7 @@ def run(plan_path, output):
         "reference_pairs": len(rows), "raw_categories": raw, "mapping_sha256": mapping_digest,
         "mapping_extra_rows": aliases, "table": record(table),
         "selected_reference_accessions_resolved_via_database_alias": resolved_aliases,
+        "within_species_reference_pairs_preserved": sum(not r["reference_is_cross_species"] for r in rows),
         "summary": dict(Counter(f'{r["category"]}/{r["stage"]}/hits_{r["initial_hit_directions"]}/root_{r["same_root_hog"]}' for r in rows)),
         "resources": {"wall_s": time.monotonic() - started, "cpu_s": time.process_time() - cpu,
                       "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},
@@ -274,6 +278,7 @@ def run(plan_path, output):
             "Direct hit presence is not native RBNH edge presence or a causal explanation of grouping.",
             "Within-candidate omission combines reconciliation and membership mechanisms; RootHOGs are not pair cliques.",
             "VGNC rows may share proteins and labels; no independent-family uncertainty is asserted.",
+            "Within-species asserted reference rows remain in native pooled scores and are flagged separately from cross-species recovery opportunities.",
             "Input/reference aliases are resolved only through pinned participant database rows; native selected-label scoring conventions are unchanged.",
             "Duplicate ordered hits are rejected for watched pairs only; this is not a global duplicate-hit audit.",
             "Diagnostic resource receipts are shared-host analysis timings, not inference timings."]}

@@ -8,7 +8,8 @@
     "Native TP/FN status, checked exactly against retained raw scorer rows.",
     "Same or different candidate-family membership.",
     "Same or different RootHOG membership, never substituted for native pair predictions.",
-    "Presence and normalized scores of each directed significant initial HMM hit."
+    "Presence and normalized scores of each directed significant initial HMM hit.",
+    "Reference cross-species eligibility; retain all within-species asserted rows in the native denominator and flag them separately from recoverable cross-species FN stages."
   ],
   "gates": [
     "Pin reference, participant database, raw scorer rows, original factorial manifest, comparison report, checkpoint arrays, partitions, native pairs, and helper source bytes before and after analysis.",
@@ -27,6 +28,11 @@
   ],
   "defaults_changed": false,
   "fresh_search_submitted": false,
+  "reference_cohort_amendment": {
+    "reason": "Alias-corrected attempt 24195 reached exact native TP/FN agreement, then stopped at an overstrict cross-species reference assumption. Two asserted PLAC8 pairs are within-species (CANLF and BOVIN), confirmed by both checkpoint species ownership and scorer metadata.",
+    "scope": "Keep all 23934 reference rows and all native pooled scores unchanged. Add an explicit reference_within_species diagnostic category; do not filter, merge or infer same-species ortholog predictions to improve reported recall.",
+    "failed_attempt_preserved": "qfo_reference_stage_plan_v2_20261012.json and Slurm 24195; use a new v3 plan/output namespace."
+  },
   "mapping_amendment": {
     "reason": "Strict direct selected-accession matching stopped before pair-stage analysis on 79 selected accessions. All 79 had an exact alternate accession for the same indexed protein in the input checkpoint; 174 asserted rows involve them.",
     "scope": "Correct diagnostic alias reconstruction only; reference cohort, benchmark scores, inference behavior, and planned stage categories remain unchanged.",
