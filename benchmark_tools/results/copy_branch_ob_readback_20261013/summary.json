@@ -1,0 +1,243 @@
+{
+  "captures": [
+    {
+      "snapshot": {
+        "bytes": 285046,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_ob_readback_20261013/snapshots/copy_branch_OrthoBench_producer.json",
+        "sha256": "e361075fb223a589fe6ae4acf6a6c23c12c1592135a8402fc34160fdbb3ff190"
+      },
+      "source_bytes": 285046,
+      "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/OrthoBench/results.json",
+      "source_sha256": "e361075fb223a589fe6ae4acf6a6c23c12c1592135a8402fc34160fdbb3ff190"
+    },
+    {
+      "snapshot": {
+        "bytes": 37439690,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_ob_readback_20261013/snapshots/copy_branch_OrthoBench_plan.json",
+        "sha256": "3f6fc7c16a449179544b2a7f562acabd8d3a7c5cbd7d19db96198cd2d7102555"
+      },
+      "source_bytes": 37439690,
+      "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/OrthoBench/execution_plan.json",
+      "source_sha256": "3f6fc7c16a449179544b2a7f562acabd8d3a7c5cbd7d19db96198cd2d7102555"
+    }
+  ],
+  "cells": [
+    {
+      "coverage": {
+        "genes": 251378,
+        "groups": 59770,
+        "pairs": 966439,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "execution_kind": "independently_reused_matched_parent",
+      "method_key": "copy_branch:control",
+      "resources": {
+        "native_and_scoring_wall_s": 126.56718235788867,
+        "native_execution": {
+          "command": [
+            "/home/bizon/anaconda3/bin/python",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/replay_phylogeny.py",
+            "--fasta-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+            "--candidate-clusters",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "--output-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output",
+            "--json",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/metrics.json",
+            "--cpu",
+            "16",
+            "--species-tree-mode",
+            "infer",
+            "--aligner",
+            "mafft",
+            "--tree-builder",
+            "FastTree",
+            "--root-rule",
+            "species_overlap",
+            "--pair-rule",
+            "positive_paralogy",
+            "--species-tree-rooting",
+            "min_variance",
+            "--membership-constraints",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+            "--checkpoint-source",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output",
+            "--satellite-membership-rule",
+            "high_confidence_pair"
+          ],
+          "log": {
+            "bytes": 181,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/native.log",
+            "sha256": "d549e1f1d039dd139abe8da06f5146f3e96a4290ecaf2496c31e71cedb159819"
+          },
+          "resources": {
+            "elapsed_seconds": 97.15,
+            "exit_status": 0,
+            "max_process_rss_kib": 1672816,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 20.81,
+            "user_seconds": 92.76
+          },
+          "returncode": 0,
+          "time": {
+            "bytes": 2173,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/native.time.txt",
+            "sha256": "77623ab7ce30db0cd19a1958b093491b4710f9c065dfae96e4043a35f4279fc1"
+          }
+        }
+      },
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "status": "independent_content_readback_verified"
+    },
+    {
+      "coverage": {
+        "genes": 251378,
+        "groups": 59336,
+        "pairs": 980184,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "execution_kind": "independently_reused_matched_parent",
+      "method_key": "copy_branch:deferred500",
+      "resources": {
+        "native_and_scoring_wall_s": 679.843301855959,
+        "native_execution": {
+          "command": [
+            "/home/bizon/anaconda3/bin/python",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/replay_phylogeny.py",
+            "--fasta-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+            "--candidate-clusters",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "--output-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output",
+            "--json",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/metrics.json",
+            "--cpu",
+            "16",
+            "--species-tree-mode",
+            "infer",
+            "--aligner",
+            "mafft",
+            "--tree-builder",
+            "FastTree",
+            "--root-rule",
+            "species_overlap",
+            "--pair-rule",
+            "positive_paralogy",
+            "--species-tree-rooting",
+            "min_variance",
+            "--membership-constraints",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+            "--checkpoint-source",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output",
+            "--satellite-membership-rule",
+            "high_confidence_pair"
+          ],
+          "log": {
+            "bytes": 185,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/native.log",
+            "sha256": "a4e5cd0de47bfc341c9f46c4f066722807d03a3f3e378cb636fb08dd8cee0c50"
+          },
+          "resources": {
+            "elapsed_seconds": 650.72,
+            "exit_status": 0,
+            "max_process_rss_kib": 1700740,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 218.65,
+            "user_seconds": 5621.78
+          },
+          "returncode": 0,
+          "time": {
+            "bytes": 2199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/native.time.txt",
+            "sha256": "75b1623e5ca9455285c3243786f5c3b73520c1b9a33e89170efd4605c3c62aa0"
+          }
+        }
+      },
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7356395810008461
+      },
+      "status": "independent_content_readback_verified"
+    },
+    {
+      "copy_split_counts": {
+        "medium_eligible_families": 114
+      },
+      "coverage": {
+        "genes": 251378,
+        "groups": 59770,
+        "pairs": 966439,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "execution_kind": "exact_candidate_structural_reuse_no_native_rerun",
+      "method_key": "copy_branch:large_only500",
+      "resources": {
+        "candidate_wall_s": 15.458413341781124
+      },
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "status": "independent_content_readback_verified"
+    },
+    {
+      "copy_split_counts": {
+        "medium_deferred_families": 114,
+        "medium_deferred_genes": 11806,
+        "medium_eligible_families": 114
+      },
+      "coverage": {
+        "genes": 251378,
+        "groups": 59336,
+        "pairs": 980184,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "execution_kind": "exact_candidate_structural_reuse_no_native_rerun",
+      "method_key": "copy_branch:medium_only500",
+      "resources": {
+        "candidate_wall_s": 15.181696786079556
+      },
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7356395810008461
+      },
+      "status": "independent_content_readback_verified"
+    }
+  ],
+  "defaults_promoted": false,
+  "full_report": {
+    "bytes": 160797172,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_ob_readback_20261013/report.json",
+    "sha256": "9154f9b9560fc19e29f9d4091aaf2cbcee5bba307c2c390a8203130399211c6c"
+  },
+  "goal_completed": false,
+  "readback_failures": 0,
+  "reporter_source_revision": "cccd8481",
+  "reporter_sources": [
+    {
+      "bytes": 15566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_reporting_r1_v1_20261013/benchmark_tools/report_copy_branch_cells.py",
+      "sha256": "e35070332da749641dddc14d3d80f4aa7bd8bf88fe506b74b28d5fcba39924de"
+    },
+    {
+      "bytes": 28532,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_reporting_r1_v1_20261013/benchmark_tools/run_copy_branch_ablation.py",
+      "sha256": "e2a6cdd7f0e7ce87978ad74222345bc6a9430f367df972cbcbf3cadadcf67f1a"
+    }
+  ]
+}

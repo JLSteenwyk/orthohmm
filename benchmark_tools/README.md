@@ -608,3 +608,45 @@ This uses the same production benchmark harness and accuracy profile, then
 scores the final orthogroups against the local BUSCO-derived reference. The
 workflow expects exactly 12 FASTA files and refuses to replace an existing
 result directory.
+
+## Bounded Copy-Branch Hill-Climb
+
+`hillclimb_copy_branch_ablation_20261013.json` prespecifies separate deferral of
+the large-copy and medium-panel copy-splitting branches, retaining the original
+500-gene ceiling and all eligibility safeguards. The experimental profiles are
+`phylogeny_deferred_large` and `phylogeny_deferred_medium`; neither changes
+production defaults. HMM-derived graph inputs, satellite expansion, species-
+overlap evidence, and positive-paralogy inference remain matched to the control.
+
+Prepare each dataset in a new namespace using an immutable source checkout:
+
+```bash
+CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=16 PYTHONHASHSEED=0 \
+python "$SOURCE/benchmark_tools/run_copy_branch_ablation.py" prepare \
+  --repo "$REPO" --source-root "$SOURCE" --output "$OUTPUT" \
+  --dataset "$DATASET" --parent-root "$PARENT" --parent-job "$PARENT_JOB"
+```
+
+For QfO, additionally pass `--fixed-root` pointing to the admitted fixed-tree
+copy-deferral graph experiment. Submit the frozen Slurm launcher with source
+root and execution-plan path as its two arguments, after the parent terminates.
+The worker independently admits the parent using scheduler accounting and
+content readback before constructing candidates. The recorded launch receipt
+is `results/copy_branch_ablation_launch_20261013.json`.
+
+The large-copy branch cannot activate on the 12-species OrthoBench and Three
+Kingdoms panels. Their large-only arm must exactly reproduce control candidates
+and constraints; the medium-only arm must reproduce combined deferral. After
+downstream-source equivalence checks, these arms reuse the corresponding native
+inference and independently re-read scores. They are structural controls, not
+new accuracy gains or inference timings. QfO's two new native arms run
+sequentially with candidate-specific inferred species trees.
+
+Add `--copy-branch-root` to `report_hillclimb.py` to include the experiment's
+`OrthoBench`, `QfO`, and `ThreeKingdoms` subdirectories. The independent reader
+verifies parent admission, exact reuse, native gene/pair coverage, scoring
+handoffs, and executed deferral traces. All eight endpoints remain separate;
+the 0.005 decline threshold is a development screen, not an equivalence claim.
+Missing or failed cells stay scoreless. Local shared-host timings and cached
+HMM graph replays must not be ranked as isolated fresh full-pipeline runtimes.

@@ -1,0 +1,54 @@
+{
+  "candidate_equivalence_own_vs_fixed": {
+    "control": {
+      "candidate_partition": true,
+      "membership_constraints": true,
+      "seed_partition": true
+    },
+    "deferred500": {
+      "candidate_partition": true,
+      "membership_constraints": true,
+      "seed_partition": true
+    }
+  },
+  "defaults_promoted": false,
+  "fixed_producer": {
+    "bytes": 182343,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/results.json",
+    "sha256": "d57441a3843d787fb5dc2fd2c00f05860fdec76498f52844d4273e6fdf273954"
+  },
+  "fixed_vs_own_scope": "Same candidate/constraint inputs must be verified before contrasting fixed and own-tree outcomes. Neither topology difference nor marker count proves tree correctness or causal attribution of score differences.",
+  "goal_completed": false,
+  "helper_source": {
+    "bytes": 13672,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_held_tree_hillclimb.py",
+    "sha256": "7eed22476e9ebbe7510316b323ff5f62c972a34b4a1d2123aca11893a5bb8dc6"
+  },
+  "marker_families": {
+    "control": 26,
+    "deferred500": 25
+  },
+  "own_control_vs_deferred500": {
+    "normalized_rooted_clade_distance": 0.3815789473684211,
+    "rooted_clade_distance": 58,
+    "taxa": 78
+  },
+  "own_producer": {
+    "bytes": 170281,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/results.json",
+    "sha256": "5c1a623b235c9a6db4f4b783df5d12276894d6e109d2abfb2bd37c3e7f0e3d4c"
+  },
+  "status": "descriptive_native_tree_diagnostic_not_a_species_tree_accuracy_assessment",
+  "trees": {
+    "control": {
+      "bytes": 3582,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "24198609aaaa7d9bd1c7f9a6ba7ee160e3450572be4c6869933681099afff26e"
+    },
+    "deferred500": {
+      "bytes": 3572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "a1dd5311d61c94e97a8a2ca629c5bbca1fc8fc979532459083cd4720727a5904"
+    }
+  }
+}
