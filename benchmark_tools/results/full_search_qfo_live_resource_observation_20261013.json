@@ -1,0 +1,477 @@
+{
+  "declared_allocation_cpu": 32,
+  "declared_parallelism": {
+    "scoring_threads_per_worker": 8,
+    "worker_processes": 4
+  },
+  "defaults_promoted": false,
+  "driver_pid": 236164,
+  "goal_completed": false,
+  "interpretation": [
+    "The initial search has 6084 directed species tasks, not 78 tasks; fixed candidate cap applies within each query/target species comparison.",
+    "Four observed workers with eight declared scoring threads fit the 32-CPU scoring budget; process coordinator/helper threads are reported separately.",
+    "The driver outer inference log is empty while the native benchmark.log is actively updated. Empty outer log is not a stopped run.",
+    "Completion events describe only initial species-pair search, not graph, profile expansion, phylogenetic inference, scoring or the pending cap400 arm.",
+    "A denied non-blocking stack probe provides no stage-level bottleneck evidence; mapped libraries and symbols show availability, not which function currently dominates."
+  ],
+  "limitations": [
+    "Five-second shared-host sample, not isolated throughput, scaling, full-pipeline runtime or an ETA.",
+    "No source, running parameters, job allocations or unrelated workloads changed.",
+    "Profiler attempted only non-blocking reads; elevated access was not requested.",
+    "Source/checkpoint ancestry remains inherited from frozen experiment audits."
+  ],
+  "native_library_symbol_probe": {
+    "matching_symbols": [
+      "000000000000b160 T batch_hmm_viterbi_multipair_avx2_c",
+      "0000000000009770 T hmm_have_avx2",
+      "0000000000009760 T hmm_set_num_threads"
+    ],
+    "returncode": 0
+  },
+  "observed_scoring_core_equivalents": 25.452971301157618,
+  "plan": {
+    "bytes": 838335,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+    "sha256": "2b9cdb799330d7a89e95bb437ea9910b638094394aa0cc693ef32ea0fbff54eb"
+  },
+  "profile_probe": {
+    "command": [
+      "py-spy",
+      "dump",
+      "--pid",
+      "236286",
+      "--nonblocking",
+      "--json",
+      "--full-filenames"
+    ],
+    "no_elevation_or_process_stop": true,
+    "returncode": 1,
+    "stderr": "Permission Denied: Try running again with elevated permissions by going 'sudo env \"PATH=$PATH\" !!'\n",
+    "stdout": ""
+  },
+  "progress_after": {
+    "bytes": 124155,
+    "completion_events": 4759,
+    "header_sha256": "9b2d31f686f9ba8ae49f441cea3cfb09b597956c990756f50c40801223953a76",
+    "last_reported_percent": 78.22,
+    "total_directed_species_pairs": 6084,
+    "utc": "2026-10-13T21:50:36.995308+00:00"
+  },
+  "progress_before": {
+    "bytes": 124129,
+    "completion_events": 4758,
+    "header_sha256": "9b2d31f686f9ba8ae49f441cea3cfb09b597956c990756f50c40801223953a76",
+    "last_reported_percent": 78.21,
+    "total_directed_species_pairs": 6084,
+    "utc": "2026-10-13T21:50:31.986547+00:00"
+  },
+  "sampling_seconds": 5.005309537053108,
+  "source_records": [
+    {
+      "bytes": 21351,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/engine.py",
+      "sha256": "0382696556ead1896929ecadf02af9f54cc55484b5430f7e949313388933927f"
+    },
+    {
+      "bytes": 8236,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/benchmark_tools/benchmark_production.py",
+      "sha256": "baf96b0f7bc80a5486b5a1bf26fa9ca7402dea5b80b4dc579f71df8ce8bfc909"
+    }
+  ],
+  "source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "status": "passive_live_fresh_search_progress_and_allocation_observed",
+  "workers": [
+    {
+      "core_equivalents": 8.007496779832227,
+      "cpu_affinity": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "cpu_s_delta": 40.0800000000163,
+      "create_time": 1791876971.67,
+      "mapped_frozen_native_libraries": [
+        {
+          "bytes": 1062904,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi_cuda.so",
+          "sha256": "0c6ab0ca50e5daade05b861f7f4c033323f8380527f2383c16b50d70611634dc"
+        },
+        {
+          "bytes": 58856,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi.so",
+          "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+        },
+        {
+          "bytes": 20632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/kmer_prefilter.so",
+          "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+        }
+      ],
+      "pid": 236286,
+      "rss_bytes": 740114432,
+      "status": "running",
+      "thread_cpu_deltas": [
+        {
+          "cpu_s_delta": 5.010000000002037,
+          "tid": 236286
+        },
+        {
+          "cpu_s_delta": 5.010000000002037,
+          "tid": 236293
+        },
+        {
+          "cpu_s_delta": 5.010000000002037,
+          "tid": 236294
+        },
+        {
+          "cpu_s_delta": 5.010000000002037,
+          "tid": 236295
+        },
+        {
+          "cpu_s_delta": 5.010000000002037,
+          "tid": 236296
+        },
+        {
+          "cpu_s_delta": 5.0,
+          "tid": 236297
+        },
+        {
+          "cpu_s_delta": 5.0,
+          "tid": 236298
+        },
+        {
+          "cpu_s_delta": 5.009999999994761,
+          "tid": 236299
+        },
+        {
+          "cpu_s_delta": 0.0,
+          "tid": 236307
+        }
+      ],
+      "threads": 9
+    },
+    {
+      "core_equivalents": 8.047454348596174,
+      "cpu_affinity": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "cpu_s_delta": 40.28000000002794,
+      "create_time": 1791876971.67,
+      "mapped_frozen_native_libraries": [
+        {
+          "bytes": 1062904,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi_cuda.so",
+          "sha256": "0c6ab0ca50e5daade05b861f7f4c033323f8380527f2383c16b50d70611634dc"
+        },
+        {
+          "bytes": 58856,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi.so",
+          "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+        },
+        {
+          "bytes": 20632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/kmer_prefilter.so",
+          "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+        }
+      ],
+      "pid": 236287,
+      "rss_bytes": 709197824,
+      "status": "running",
+      "thread_cpu_deltas": [
+        {
+          "cpu_s_delta": 5.040000000000873,
+          "tid": 236287
+        },
+        {
+          "cpu_s_delta": 5.019999999996799,
+          "tid": 236479
+        },
+        {
+          "cpu_s_delta": 5.040000000000873,
+          "tid": 236480
+        },
+        {
+          "cpu_s_delta": 5.040000000000873,
+          "tid": 236481
+        },
+        {
+          "cpu_s_delta": 5.029999999998836,
+          "tid": 236482
+        },
+        {
+          "cpu_s_delta": 5.040000000000873,
+          "tid": 236483
+        },
+        {
+          "cpu_s_delta": 5.029999999998836,
+          "tid": 236484
+        },
+        {
+          "cpu_s_delta": 5.040000000000873,
+          "tid": 236485
+        },
+        {
+          "cpu_s_delta": 0.0,
+          "tid": 236603
+        }
+      ],
+      "threads": 9
+    },
+    {
+      "core_equivalents": 8.091407674228376,
+      "cpu_affinity": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "cpu_s_delta": 40.5,
+      "create_time": 1791876971.67,
+      "mapped_frozen_native_libraries": [
+        {
+          "bytes": 1062904,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi_cuda.so",
+          "sha256": "0c6ab0ca50e5daade05b861f7f4c033323f8380527f2383c16b50d70611634dc"
+        },
+        {
+          "bytes": 58856,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi.so",
+          "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+        },
+        {
+          "bytes": 20632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/kmer_prefilter.so",
+          "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+        }
+      ],
+      "pid": 236288,
+      "rss_bytes": 744497152,
+      "status": "running",
+      "thread_cpu_deltas": [
+        {
+          "cpu_s_delta": 5.059999999997672,
+          "tid": 236288
+        },
+        {
+          "cpu_s_delta": 5.059999999997672,
+          "tid": 236300
+        },
+        {
+          "cpu_s_delta": 5.060000000004948,
+          "tid": 236301
+        },
+        {
+          "cpu_s_delta": 5.069999999999709,
+          "tid": 236302
+        },
+        {
+          "cpu_s_delta": 5.060000000004948,
+          "tid": 236303
+        },
+        {
+          "cpu_s_delta": 5.059999999997672,
+          "tid": 236304
+        },
+        {
+          "cpu_s_delta": 5.059999999997672,
+          "tid": 236305
+        },
+        {
+          "cpu_s_delta": 5.059999999997672,
+          "tid": 236306
+        },
+        {
+          "cpu_s_delta": 0.0,
+          "tid": 236308
+        }
+      ],
+      "threads": 9
+    },
+    {
+      "core_equivalents": 1.30661249850084,
+      "cpu_affinity": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167
+      ],
+      "cpu_s_delta": 6.539999999979045,
+      "create_time": 1791876971.67,
+      "mapped_frozen_native_libraries": [
+        {
+          "bytes": 1062904,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi_cuda.so",
+          "sha256": "0c6ab0ca50e5daade05b861f7f4c033323f8380527f2383c16b50d70611634dc"
+        },
+        {
+          "bytes": 58856,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/hmm_viterbi.so",
+          "sha256": "f21d902852d727d6270b65ba900db52e7216cd874ee2d2b89fa72b6f16dcd5c0"
+        },
+        {
+          "bytes": 20632,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/csrc/kmer_prefilter.so",
+          "sha256": "348b1c715e2e305dae7e889bae1d2498e609e48ce5d50cd668db71b548c60b88"
+        }
+      ],
+      "pid": 236289,
+      "rss_bytes": 208461824,
+      "status": "running",
+      "thread_cpu_deltas": [
+        {
+          "cpu_s_delta": 5.0900000000037835,
+          "tid": 236289
+        },
+        {
+          "cpu_s_delta": 0.22000000000116415,
+          "tid": 236364
+        },
+        {
+          "cpu_s_delta": 0.16999999999825377,
+          "tid": 236365
+        },
+        {
+          "cpu_s_delta": 0.18000000000029104,
+          "tid": 236366
+        },
+        {
+          "cpu_s_delta": 0.22000000000116415,
+          "tid": 236367
+        },
+        {
+          "cpu_s_delta": 0.1900000000023283,
+          "tid": 236368
+        },
+        {
+          "cpu_s_delta": 0.23000000000320142,
+          "tid": 236369
+        },
+        {
+          "cpu_s_delta": 0.23000000000320142,
+          "tid": 236370
+        },
+        {
+          "cpu_s_delta": 0.0,
+          "tid": 236478
+        }
+      ],
+      "threads": 9
+    }
+  ]
+}

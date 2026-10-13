@@ -1,0 +1,116 @@
+{
+  "comparison": {
+    "bytes": 536571,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_comparison_readback_v8_20261013/summary.json",
+    "sha256": "be8a896a0274d82b2ae5705ace178af9cb42b8566bc2bb1b216118ab0a061f0c"
+  },
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "next_action": "Evaluate the prespecified bounded strong-component retention profile with matched HMM graphs and candidate-specific inferred trees. Do not increase thresholds/caps or exclude reference families to hide regressions.",
+  "rejected_variants": {
+    "deferred500": {
+      "OrthoBench: OrthoBench F1": -0.005421154186494359,
+      "QfO: GO": -0.008364910000000003
+    },
+    "large_only500": {
+      "QfO: GO": -0.007497240000000016
+    },
+    "medium_only500": {
+      "OrthoBench: OrthoBench F1": -0.005421154186494359
+    }
+  },
+  "screen": {
+    "comparisons": {
+      "control": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": 0.0,
+          "QfO: EC": 0.0,
+          "QfO: FAS": 0.0,
+          "QfO: GO": 0.0,
+          "QfO: SwissTrees F": 0.0,
+          "QfO: TreeFam-A F": 0.0,
+          "QfO: VGNC F": 0.0,
+          "ThreeKingdoms: Three Kingdoms F1": 0.0
+        },
+        "passes_point_estimate_screen": false
+      },
+      "deferred500": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": -0.005421154186494359,
+          "QfO: EC": -0.0034644899999999312,
+          "QfO: FAS": 0.001640760439764244,
+          "QfO: GO": -0.008364910000000003,
+          "QfO: SwissTrees F": 0.0060820142634002705,
+          "QfO: TreeFam-A F": 0.07147646675604868,
+          "QfO: VGNC F": 0.045357373005247226,
+          "ThreeKingdoms: Three Kingdoms F1": 0.000691677633135046
+        },
+        "passes_point_estimate_screen": false
+      },
+      "large_only500": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": 0.0,
+          "QfO: EC": -0.0029375600000000057,
+          "QfO: FAS": 0.002450830642280133,
+          "QfO: GO": -0.007497240000000016,
+          "QfO: SwissTrees F": 0.0014405835144730705,
+          "QfO: TreeFam-A F": 0.06587422813347554,
+          "QfO: VGNC F": 0.045248858945525994,
+          "ThreeKingdoms: Three Kingdoms F1": 0.0
+        },
+        "passes_point_estimate_screen": false
+      },
+      "medium_only500": {
+        "complete_eight_endpoint_contrast": true,
+        "deltas_from_matched_control": {
+          "OrthoBench: OrthoBench F1": -0.005421154186494359,
+          "QfO: EC": -0.00035826999999999387,
+          "QfO: FAS": -0.001198384501789218,
+          "QfO: GO": -0.0014271799999999724,
+          "QfO: SwissTrees F": 0.004652104166745219,
+          "QfO: TreeFam-A F": 0.004983336223683854,
+          "QfO: VGNC F": 0.0,
+          "ThreeKingdoms: Three Kingdoms F1": 0.000691677633135046
+        },
+        "passes_point_estimate_screen": false
+      }
+    },
+    "control": "control",
+    "pareto": {
+      "dominated_by": {
+        "control": [],
+        "deferred500": [],
+        "large_only500": [],
+        "medium_only500": []
+      },
+      "endpoints": [
+        "OrthoBench: OrthoBench F1",
+        "QfO: VGNC F",
+        "QfO: SwissTrees F",
+        "QfO: TreeFam-A F",
+        "QfO: EC",
+        "QfO: GO",
+        "QfO: FAS",
+        "ThreeKingdoms: Three Kingdoms F1"
+      ],
+      "excluded_incomplete": {},
+      "nondominated_complete_labels": [
+        "control",
+        "deferred500",
+        "large_only500",
+        "medium_only500"
+      ],
+      "scope": "Development point-estimate dominance only; not uncertainty-aware superiority or independent validation."
+    },
+    "scope": "Development point-estimate screening only, not default promotion, statistical equivalence or independent confirmation."
+  },
+  "status": "all_own_tree_copy_branch_vectors_complete_no_default_promotion",
+  "terminal_readback": {
+    "bytes": 34884,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_qfo_terminal_readback_compact_v1_20261013.json",
+    "sha256": "7b7210776c411e4d18fc4768bc44aee820d7d85987f2d12a303d47cf8ab2a00e"
+  }
+}
