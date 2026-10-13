@@ -443,6 +443,19 @@ def _execute(
             "and satellite_v2 candidates"
         )
     accuracy_config = resolve_accuracy_profile(accuracy_profile)
+    deferred_copy_splitting = (
+        isinstance(refinement_profile, str) and refinement_profile.lower() == "phylogeny_deferred"
+    )
+    if deferred_copy_splitting and (
+        accuracy_config.name != "high_sensitivity" or phylogeny != "reconcile"
+        or phylogeny_candidates != "satellite_v2" or phylogeny_root_rule != "species_overlap"
+        or phylogeny_pair_rule != "positive_paralogy" or start is not None
+    ):
+        raise ValueError(
+            "phylogeny_deferred refinement requires fresh high_sensitivity accuracy, "
+            "phylogeny reconcile, satellite_v2 candidates, species_overlap rooting, "
+            "and positive_paralogy pair inference"
+        )
     search_cap_override = kwargs.pop("search_max_candidates_per_query", None)
     search_candidate_cap = resolve_search_candidate_cap(
         accuracy_config, search_cap_override
@@ -474,6 +487,11 @@ def _execute(
         cpu_budget=cpu,
     )
     metrics.add_counts(species=len(files), species_pairs=len(files) ** 2)
+    if deferred_copy_splitting:
+        metrics.add_metadata(
+            refinement_profile="phylogeny_deferred",
+            defer_copy_split_max_size=resolve_refinement_profile(refinement_profile)["defer_copy_split_max_size"],
+        )
     if phylogeny != "off":
         metrics.add_metadata(
             phylogeny=phylogeny,

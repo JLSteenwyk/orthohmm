@@ -61,7 +61,7 @@ def parse_args(argv=None):
     parser.add_argument("--evalue", type=float, default=1e-4)
     parser.add_argument("--clustering", choices=("leiden", "mcl"), default="leiden")
     parser.add_argument("--cpm-resolution", default="0.1")
-    parser.add_argument("--refinement-profile", choices=("default", "qfo"), default="default")
+    parser.add_argument("--refinement-profile", choices=("default", "qfo", "phylogeny_deferred"), default="default")
     parser.add_argument(
         "--accuracy-profile",
         choices=("standard", "high_sensitivity"),

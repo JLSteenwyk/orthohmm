@@ -52,6 +52,7 @@ DEFAULT_BROAD_RECIPROCAL_MIN_COVERAGE = 2.0
 DEFAULT_BROAD_RECIPROCAL_MIN_NORM = 1.0
 DEFAULT_BROAD_MAX_RECIPROCAL_MERGES = 32
 DEFAULT_REFINE_PROFILE = "default"
+PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE = 500
 
 # Tunable refinement presets. "default" preserves current production behavior.
 _REFINE_PROFILE_PRESETS: Dict[str, Dict[str, object]] = {
@@ -64,6 +65,9 @@ _REFINE_PROFILE_PRESETS: Dict[str, Dict[str, object]] = {
         "broad_reciprocal_min_coverage": 1.6,
         "broad_reciprocal_min_norm": 0.8,
         "copy_split_min_size": 180,
+    },
+    "phylogeny_deferred": {
+        "defer_copy_split_max_size": PHYLOGENY_DEFERRED_COPY_SPLIT_MAX_SIZE,
     },
 }
 
@@ -1199,6 +1203,7 @@ def _split_high_duplication_index_clusters(
     panel_copy_component_min_edge_weight: float,
     rbnh_scores: Sequence[float] | None,
     broad_mode: bool = False,
+    defer_copy_split_max_size: int = 0,
 ) -> List[IndexCluster]:
     gene_to_cluster = _gene_to_cluster_array(clusters, total_genes)
     edge_queries = np.asarray(rbnh_queries, dtype=np.int64)
@@ -1257,17 +1262,15 @@ def _split_high_duplication_index_clusters(
             refined.append(cluster_list)
             continue
         species_counts = Counter(int(species[gene]) for gene in cluster_list)
-        if _should_split_large_copy_cluster(
+        large_copy = _should_split_large_copy_cluster(
             len(cluster_list),
             species_counts,
             dataset_species_count,
             copy_split_min_size,
             copy_split_min_species_count,
             copy_split_min_dataset_species,
-        ):
-            refined.extend([[gene] for gene in cluster_list])
-            continue
-        if _should_split_medium_panel_copy_cluster(
+        )
+        medium_copy = _should_split_medium_panel_copy_cluster(
             len(cluster_list),
             species_counts,
             dataset_species_count,
@@ -1275,7 +1278,16 @@ def _split_high_duplication_index_clusters(
             panel_copy_split_max_size,
             panel_copy_split_min_species_count,
             panel_copy_split_min_dataset_species,
-        ):
+        )
+        # Opt-in bounded families retain copy evidence for tree reconciliation.
+        if (0 < defer_copy_split_max_size and len(cluster_list) <= defer_copy_split_max_size
+                and (large_copy or medium_copy)):
+            refined.append(cluster_list)
+            continue
+        if large_copy:
+            refined.extend([[gene] for gene in cluster_list])
+            continue
+        if medium_copy:
             if broad_mode and not (cluster_set & component_nodes):
                 refined.append(cluster_list)
                 continue
@@ -1454,8 +1466,13 @@ def refine_cluster_indices(
     panel_copy_split_min_dataset_species: int = DEFAULT_PANEL_COPY_SPLIT_MIN_DATASET_SPECIES,
     panel_copy_component_min_edge_weight: float = DEFAULT_PANEL_COPY_COMPONENT_MIN_EDGE_WEIGHT,
     rbnh_scores: Sequence[float] | None = None,
+    defer_copy_split_max_size: int = 0,
 ) -> List[IndexCluster]:
     """Refine int-indexed clusters without materializing string hit triples."""
+    if (isinstance(defer_copy_split_max_size, (bool, np.bool_))
+            or not isinstance(defer_copy_split_max_size, (int, np.integer))
+            or defer_copy_split_max_size < 0):
+        raise ValueError("Deferred copy-split maximum size must be a nonnegative integer")
     if not clusters:
         return []
     total_genes = len(gene_to_species)
@@ -1500,6 +1517,7 @@ def refine_cluster_indices(
                 panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
                 rbnh_scores=rbnh_scores,
                 broad_mode=True,
+                defer_copy_split_max_size=defer_copy_split_max_size,
             )
 
         sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1549,6 +1567,7 @@ def refine_cluster_indices(
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
             rbnh_scores=rbnh_scores,
             broad_mode=True,
+            defer_copy_split_max_size=defer_copy_split_max_size,
         )
 
     sources, targets, totals, counts, max_scores = _cluster_pair_arrays(
@@ -1577,6 +1596,7 @@ def refine_cluster_indices(
             panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
             panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
             rbnh_scores=rbnh_scores,
+            defer_copy_split_max_size=defer_copy_split_max_size,
         )
 
     sizes = np.asarray([len(cluster) for cluster in clusters], dtype=np.int64)
@@ -1621,4 +1641,5 @@ def refine_cluster_indices(
         panel_copy_split_min_dataset_species=panel_copy_split_min_dataset_species,
         panel_copy_component_min_edge_weight=panel_copy_component_min_edge_weight,
         rbnh_scores=rbnh_scores,
+        defer_copy_split_max_size=defer_copy_split_max_size,
     )

@@ -182,6 +182,17 @@ def process_args(args) -> dict:
         ),
     )
     try:
+        if refinement_profile.lower() == "phylogeny_deferred" and (
+            accuracy_profile != "high_sensitivity" or phylogeny_config.mode != "reconcile"
+            or phylogeny_candidates != "satellite_v2"
+            or phylogeny_config.root_duplication_rule != "species_overlap"
+            or phylogeny_config.pair_orthology_rule != "positive_paralogy"
+        ):
+            raise PhylogenyConfigurationError(
+                "phylogeny_deferred refinement requires high_sensitivity accuracy, "
+                "phylogeny reconcile, satellite_v2 candidates, species_overlap rooting, "
+                "and positive_paralogy pair inference."
+            )
         if phylogeny_config.satellite_membership_rule != "high_confidence_pair" and (
             phylogeny_config.mode != "reconcile" or phylogeny_candidates != "satellite_v2"
         ):
