@@ -1,0 +1,54 @@
+{
+  "schema": "bounded_copy_branch_ablation_v1",
+  "status": "prespecified_not_evaluated_or_submitted",
+  "evidence": [
+    "results/deferred_ob_recovery_readback_20261013/summary.json: own-inferred OrthoBench F1 declines from 0.7410607351873405 to 0.7356395810008461, beyond the unchanged 0.005 development screen.",
+    "results/deferred_ob_family_localization_20261013.json: eight of seventy RefOGs change, weighted false positives increase by 11.205920926364257, and weighted true positives decrease by 0.9089068825910545.",
+    "results/deferred_ob_species_tree_contrast_20261013.json: the two native inferred species trees are byte-identical; the OB decline cannot be attributed to changed species-tree inference.",
+    "results/hillclimb_comparison_readback_v5_20261013/summary.json: fixed-tree QfO copy deferral improves VGNC, SwissTrees and TreeFam-A F1 but decreases GO similarity by 0.0076259. These diagnostic gains cannot substitute for outstanding own-inferred QfO evaluation."
+  ],
+  "hypotheses": [
+    "Large-copy singletonization and medium-panel component splitting remove different kinds of family context. Their contributions to recall gains and precision/functional regressions should be measured separately before changing either rule.",
+    "Deferring only large-copy singletonization may retain useful broad-panel context while preserving the medium-panel component safeguard; the opposite ablation tests whether medium-panel deferral is responsible for the observed losses or gains."
+  ],
+  "arms": [
+    {"label": "large_only500", "refinement_profile": "phylogeny_deferred_large", "defer_copy_split_max_size": 500, "defer_copy_split_scope": "large"},
+    {"label": "medium_only500", "refinement_profile": "phylogeny_deferred_medium", "defer_copy_split_max_size": 500, "defer_copy_split_scope": "medium"}
+  ],
+  "controls": [
+    "Reproduce the default refinement/candidate graph products before comparing with independently re-read native default results.",
+    "Retain the completed both-branches deferred500 results, including every decline and failed attempt, as the interaction reference."
+  ],
+  "fixed_parameters": {
+    "graph": "Admitted HMM-derived profile-expanded graph and original Leiden CPM 0.1 partition; no initial HMM, graph, hit threshold or edge-weight changes.",
+    "bounds": "Retain the existing 500-gene ceiling, copy-count requirements, species-count eligibility, reciprocal merge rules, component edge threshold and larger-family safeguards.",
+    "phylogeny": "Candidate-specific inferred species tree, min_variance rooting, species_overlap duplication evidence, positive_paralogy pair inference.",
+    "satellites": "Unchanged satellite_v2 construction, constraints and high_confidence_pair policy."
+  },
+  "structural_controls": [
+    "With the unchanged large-copy minimum dataset size of 50 species, large-only deferral cannot activate on the 12-species OrthoBench or Three Kingdoms panels. It must reproduce baseline candidate and constraint products exactly there; report this as inactivity, not a demonstrated accuracy improvement.",
+    "Medium-only deferral must reproduce the both-branches candidate/constraint products on those narrow panels. Reuse valid inference only after exact input/product and downstream-source equivalence checks; do not rerun native trees merely to change a profile label.",
+    "In corrected QfO, count eligible large and medium families separately before reference scoring. No benchmark identifiers or reference-family labels may control inference."
+  ],
+  "launch_gates": [
+    "Finish and independently validate the ongoing own-inferred deferred500 QfO experiment, or preserve a specific terminal failure, before launching this ablation's new native QfO arms.",
+    "Leave the frozen fresh cap trial, queued scoring recovery and unrelated workloads untouched. Do not duplicate successful HMM searches or native arms.",
+    "Commit and push tested opt-in implementation and a frozen execution plan before reference evaluation. Keep the original default and both-branches profile behavior unchanged.",
+    "Require full 984137-gene/78-species QfO coverage, exact matched-control reproduction, input/source/runtime checks, deterministic candidate output, explicit raw-tree reuse counts and independent six-endpoint scoring readback."
+  ],
+  "evaluation": {
+    "endpoints": ["OrthoBench F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A F1", "QfO EC similarity", "QfO GO similarity", "QfO FAS similarity", "Three Kingdoms BUSCO-pair F1"],
+    "diagnostics": ["precision", "recall", "coverage", "native pair counts", "eligible versus actually deferred family counts by branch", "gene-tree/checkpoint failures", "wall/CPU time", "peak memory", "shared-host activity"],
+    "selection": "Evaluate each endpoint and Pareto tradeoffs against matched defaults, both-branches deferral and retained tools. A decline greater than 0.005 remains a development screening failure. Do not select solely by the six-score QfO mean, assume FAS point differences are reproducible, or reinterpret functional similarity as orthology truth."
+  },
+  "resource_limits": {"cpus_per_inference": 16, "memory_gib": 64, "wall_hours": 72, "new_native_arms_sequential": true, "host": "local Threadripper"},
+  "limitations": [
+    "All current references are development-exposed; these two hypotheses are not independent confirmation.",
+    "Branch eligibility depends on protein-family and panel properties, not benchmark names. This is still a size-regime-specific mechanism whose transfer must be tested where the relevant branch actually activates.",
+    "Narrow fungal panels, including CGOB, cannot independently confirm the broad-panel large-copy branch; full CGOB also has known sequence overlap.",
+    "Cached-stage timings are not fresh full-pipeline runtimes. Shared-host timing confounding is nonblocking and must be disclosed.",
+    "If both ablations fail, retain them and diagnose downstream membership/gene-tree evidence; do not expand bounds or selectively exclude reference families to hide regressions."
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
