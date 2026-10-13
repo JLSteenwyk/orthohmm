@@ -1,0 +1,72 @@
+{
+  "allocation": {
+    "cpus": 1,
+    "host": "local Threadripper",
+    "memory_gib": 8,
+    "sequential_cases": true,
+    "wall_limit_minutes": 60
+  },
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 38309,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/execution_plan.json",
+    "sha256": "69a1521b15c414662db73685d27f332ed5a9128be94234e38929b1c662556d04"
+  },
+  "goal_completed": false,
+  "job_id": "24208",
+  "preparation_failures": [
+    {
+      "bytes": 1823,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_preparation_failure_v1_20261013.json",
+      "sha256": "af3757fdfe1a076d901dc379d95cc150ea8a0d5679635ffb1c22d16c629ab392"
+    },
+    {
+      "bytes": 1566,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_preparation_failure_v2_20261013.json",
+      "sha256": "4738d9ec331655bc5186b85900358f90c27921ea1e53cb94a8eb505d033e94b4"
+    }
+  ],
+  "protocol": {
+    "bytes": 3313,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/hillclimb_deferred_pair_localization_20261013.json",
+    "sha256": "3be3d2b52c014e03eb729764b02676567d1328543d5924a85fdb200e752d0a98"
+  },
+  "scheduler_at_capture": "JobId=24208 JobName=ohmm-deferral-trace\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:25 TimeLimit=01:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T16:04:06 EligibleTime=2026-10-13T16:04:06\n   AccrueTime=2026-10-13T16:04:06\n   StartTime=2026-10-13T16:04:06 EndTime=2026-10-13T17:04:06 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T16:04:06 Scheduler=Backfill\n   Partition=gpu AllocNode:Sid=bizon-link:976191\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=1,mem=8G,node=1,billing=1\n   AllocTRES=cpu=1,mem=8G,node=1,billing=1\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_deferred_reference_pairs.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/slurm-24208.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/slurm-24208.log\n   TresPerTask=cpu=1\n   \n\n",
+  "scope": "Diagnostic reuses completed inference and original HMM checkpoint, not new accuracy results or full-pipeline timings.",
+  "slurm": {
+    "bytes": 422,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_deferred_reference_pairs.slurm",
+    "sha256": "15abbce86fa76f4d0b0a4d23b385959eedc319e19b7b69fe7aee3d37044b4ae5"
+  },
+  "source_revision": "4c582808ac0638b318b82bf2e1f70db8e3ef8764",
+  "status": "prepared_and_submitted_not_yet_complete",
+  "targeted_test_result": "99 passed",
+  "targeted_tests": {
+    "bytes": 15717,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_inherited_source_tests_20261013.xml",
+    "sha256": "196ce290b9d843e2201a35b8d48f6e857be3fd9196e9e21c94f03e98164446d2"
+  },
+  "tracer_source_equivalence": [
+    {
+      "executed_source": {
+        "bytes": 23273,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/run_membership_hillclimb.py",
+        "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+      },
+      "historical_revision": "74b39c6a9be09ee12346b149ab8e362c0c927ad5",
+      "historical_source": {
+        "bytes": 23212,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+        "sha256": "061bdcb2b187dfb077bea58afbec2dd14ed82e983c053d8d0f329fe1369a5f02"
+      },
+      "proof": "Historical blob hash verified; full module AST identical except unused score_qfo body.",
+      "tracer_import": "argument",
+      "unused_function": "score_qfo"
+    }
+  ],
+  "wrapper": {
+    "bytes": 14079,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_deferred_reference_pairs.py",
+    "sha256": "26087ac24bfd34ec0ea210e08aaba03883a740b36e40d2f84db32b4f4c6e3eac"
+  }
+}
