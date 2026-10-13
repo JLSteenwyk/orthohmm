@@ -15,6 +15,7 @@ import time
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from benchmark_tools.prepare_ob_candidate_neighborhood import check, record
+from benchmark_tools.metric_frontier import ENDPOINTS, PRIMARY_ENDPOINTS, metric_frontier
 
 DATASETS = ("OrthoBench", "QfO", "ThreeKingdoms")
 PRODUCTS = ("orthohmm_root_hogs.tsv", "orthohmm_pairwise_orthologs.tsv",
@@ -267,7 +268,7 @@ def score_qfo(repo, phylogeny, folder, index):
             "scope": "Native descriptive endpoints; FAS sampling is unseeded. Not an independent scoring admission."}
 
 
-def summarize_round(output):
+def summarize_round(output, summary_name="summary.json"):
     vectors = {}
     states = []
     for dataset in DATASETS:
@@ -288,18 +289,19 @@ def summarize_round(output):
     for label in labels:
         values = vectors.get(label, {})
         deltas = {metric: values[metric] - baseline[metric] for metric in values.keys() & baseline.keys()}
-        complete = len(values) == len(baseline) == 8 and values.keys() == baseline.keys()
-        primary = [v for key, v in deltas.items() if key.startswith("OrthoBench:") or key.endswith(" F")]
+        complete = set(values) == set(baseline) == set(ENDPOINTS)
+        primary = [v for key, v in deltas.items() if key in PRIMARY_ENDPOINTS]
         eligible = label != "control_direct" and complete and any(v > 0 for v in primary) and all(v >= -.005 for v in deltas.values())
         comparisons.append({"label": label, "scores": values, "deltas_from_control": deltas,
                             "all_eight_endpoints_available": complete,
                             "passes_point_estimate_development_screen": eligible})
     summary = {"status": "complete_metric_vectors" if all(r["all_eight_endpoints_available"] for r in comparisons) else "partial_metric_vectors",
                "datasets": states, "comparisons": comparisons, "defaults_promoted": False,
+               "pareto": metric_frontier({label: vectors.get(label, {}) for label in labels}),
                "limitations": ["Development-exposed point estimates; screening is not statistical noninferiority or independent validation.",
                                "FAS sampling is unseeded; small differences may reflect sampling.",
                                "Shared-host incremental replay resource use is not full-pipeline efficiency evidence."]}
-    write_json(output / "summary.json", summary)
+    write_json(output / summary_name, summary)
     return summary
 
 

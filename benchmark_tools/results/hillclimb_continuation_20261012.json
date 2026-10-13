@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "goal_status": "active_incomplete",
+  "objective_attachment": "/home/bizon/.codex/attachments/8e442bf3-6222-41cd-804f-06e71511658e/pasted-text-1.txt",
+  "scope": "Continue HMM-based hill climbing against OrthoFinder 3.1.5 full pipeline and retained comparators, prioritizing OrthoBench and corrected QfO; Three Kingdoms supplementary.",
+  "prior_round": {
+    "plan": "benchmark_tools/hillclimb_round1_20261012.json",
+    "array_job_id": "24180",
+    "orthobench": "All four arms complete; retained in membership_hillclimb_orthobench_20261012.json.",
+    "qfo": "Direct control complete; path and broader arms still in progress at this milestone. Do not submit duplicate scoring jobs.",
+    "qfo_snapshot": {
+      "artifact": "benchmark_tools/results/membership_hillclimb_qfo_control_snapshot_20261012.json",
+      "sha256": "4e5bcc7e3eec40ba37cf5fc10cc7dcc17571b2d2852d455d1cecbfc227e650b0",
+      "scope": "A partial running-panel snapshot, not completion of all QfO arms.",
+      "native_pairs": 5959560,
+      "removed_mapping_pairs": 0,
+      "control_scores": {
+        "VGNC F": 0.9016900956268489,
+        "SwissTrees F": 0.8335132205147882,
+        "TreeFam-A F": 0.614863704412014,
+        "GO": 0.49034928,
+        "EC": 0.9656505,
+        "FAS": 0.7630493448405659
+      },
+      "interpretation": "The five deterministic endpoints reproduce the retained baseline. FAS differs from the original 0.7629933121 because native sampling is unseeded; do not attribute this to a method change."
+    },
+    "three_kingdoms": "Task 24180_2 pending behind QfO. Baseline and path arms prepared; CPM 0.08 arms remain explicitly unavailable pending separate candidate/tree preparation."
+  },
+  "fresh_search_round": {
+    "prespecified_plan": "benchmark_tools/hillclimb_search_recovery_20261012.json",
+    "plan_commit": "096701a7",
+    "frozen_source_revision": "109f8ff3a14c2b92cb64253a623b950ea06487af",
+    "source_root": "benchmarks/work/search_recovery_r1_20261012",
+    "execution_plan": {
+      "path": "benchmarks/results/search_recovery_r1_20261012/execution_plan.json",
+      "bytes": 27355,
+      "sha256": "aacbc6124f7e38a8cebd38646d7279dd6d556c6fcf34205b531f1db337e518a4"
+    },
+    "scheduler": {
+      "array_job_id": "24183",
+      "arms": {"0": "control", "1": "cap400", "2": "shared_hit1", "3": "reduced_k4", "4": "exact_k3", "5": "shortlist20000"},
+      "concurrent_arms": 1,
+      "cpus_per_arm": 8,
+      "memory_per_arm": "64G",
+      "wall_limit_per_arm": "12:00:00",
+      "host": "bizon / local Threadripper",
+      "control_terminal": "24183_0 COMPLETED 0:0, elapsed 00:04:29",
+      "cap400_state_at_recording": "RUNNING",
+      "other_arms_state_at_recording": "PENDING (JobArrayTaskLimit)",
+      "unrelated_jobs_modified": false
+    },
+    "independent_control_readback": {
+      "artifact": "benchmark_tools/results/search_recovery_control_readback_20261012.json",
+      "sha256": "786bfd7c6227b2744756d0779b1eb5b5c8c9c42d41f741d8d4cfe851cc1c6384",
+      "directions": 144,
+      "historical_comparison": "Exact sequence identities, candidate arrays, scores, and E-values versus independently audited persisted CPU observations for every direction.",
+      "scored_candidates": 2034503,
+      "watched_directed_same_family_links": 81466,
+      "at_evalue_1e4": {"accepted": 31479, "prefilter_excluded": 48368, "scored_nonsignificant": 1619},
+      "threshold_only_1e3": {"additional_accepted_watched_links": 134, "lost_control_links": 0},
+      "resources": {"wall_s": 255.4506010490004, "cpu_s": 1432.434409, "peak_rss_GiB": 0.5159072875976562},
+      "scope": "Fresh reference-conditioned query subset against complete target proteomes. These counts are not full-pipeline F1, precision, or isolated efficiency evidence.",
+      "interpretation": "Candidate selection exclusions dominate this watched cohort; significance relaxation alone has limited observed recovery. Await all separate prefilter interventions before choosing full-pipeline trials."
+    },
+    "automatic_readback": "Each successful arm invokes audit_search_recovery.py and updates benchmarks/results/search_recovery_r1_20261012/summary.json; raw arrays and watched tables are retained and independently reclassified.",
+    "production_default": "Phase A shortlist remains 5000. Nondefault shortlist changes require C extension ranking; no silent backend substitution. Other search and phylogeny defaults are unchanged."
+  },
+  "reporting": {
+    "metric_vector": "Eight explicitly named endpoints, primary-only improvement requirement, existing 0.005 absolute point-estimate screening tolerance.",
+    "pareto": "Descriptive Pareto dominance among complete metric vectors; missing endpoints are excluded rather than set to zero. No uncertainty-aware superiority claim.",
+    "current_membership_summary": "benchmarks/results/membership_hillclimb_r1_v2_20261012/summary_pareto.json",
+    "timing": "Shared-host measurements, with competing activity recorded. Incremental phylogenetic replay and query-restricted fresh search are not full-pipeline isolated timings."
+  },
+  "tests": {
+    "frozen_executor_and_readback": {"passed": 100, "artifact": "benchmark_tools/results/search_recovery_tests_20261012.xml"},
+    "extended_engine_regression": {"passed": 116, "artifact": "benchmark_tools/results/search_recovery_extended_tests_20261012.xml"},
+    "engine_and_metric_frontier": {"passed": 140, "artifact": "benchmark_tools/results/search_recovery_frontier_tests_20261012.xml"}
+  },
+  "remaining_required_work": [
+    "Revalidate live scheduler handles and finish or recover all outstanding membership and fresh-search arms; preserve failed attempts.",
+    "Independently read back and summarize intervention gains, control losses, candidate burden, and resource scopes before selection.",
+    "Prespecify and execute a bounded fresh full-pipeline round for at most two supported search interventions; query-restricted diagnostics cannot replace this stage.",
+    "Evaluate all eight endpoints for any promotion candidate and compare with frozen OrthoHMM, OrthoFinder full/sequence diagnostic, and other retained tools.",
+    "Investigate subsequent duplication-aware candidate, satellite-retention, and profile-expansion changes only where error evidence supports them.",
+    "Address independent-confirmation feasibility and overlap auditing after freezing a development candidate; all already-used datasets remain development-exposed.",
+    "Deliver reproducible configurations, per-metric comparison/delta tables, uncertainty where supported, complete unsuccessful-trial records, and a promotion or plateau conclusion."
+  ],
+  "nonblocking_limitations": [
+    "Missing original TreeFam family files limit supporting evidence, not execution.",
+    "VGNC and GO/EC conventional native summaries do not require fabricated family confidence intervals.",
+    "Unseeded FAS variability requires sampling-aware interpretation.",
+    "No DGX or quiet-window prerequisite; shared-host timing confounding is disclosed."
+  ],
+  "defaults_promoted": false,
+  "publication_baseline_replaced": false,
+  "goal_completion_claimed": false
+}

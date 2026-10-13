@@ -173,3 +173,30 @@ def test_partial_metric_vectors_cannot_pass_development_screen(tmp_path):
     assert report['comparisons'][1]['deltas_from_control']['OrthoBench: OrthoBench F1'] == pytest.approx(.01)
     assert not any(row['passes_point_estimate_development_screen'] for row in report['comparisons'])
     assert not report['defaults_promoted']
+
+
+@pytest.mark.parametrize('improved,expected', [
+    ('OrthoBench: OrthoBench F1', True),
+    ('QfO: VGNC F', True),
+    ('QfO: GO', False),
+    ('ThreeKingdoms: Three Kingdoms F1', False),
+])
+def test_complete_vector_requires_primary_improvement(tmp_path, improved, expected):
+    vectors = {label: dict.fromkeys(runner.ENDPOINTS, .75) for label in
+               ('control_direct', 'control_path', 'broader_direct', 'broader_path')}
+    vectors['control_path'][improved] += .01
+    for dataset in runner.DATASETS:
+        folder = tmp_path / dataset
+        folder.mkdir()
+        runner.write_json(folder / 'results.json', {
+            'status': 'finished_all_arms_scored',
+            'arms': [{'label': label, 'status': 'scored_development_result',
+                      'scores': {metric.split(': ', 1)[1]: value for metric, value in scores.items()
+                                 if metric.startswith(dataset + ': ')}}
+                     for label, scores in vectors.items()]})
+    report = runner.summarize_round(tmp_path, 'summary_pareto.json')
+    assert report['status'] == 'complete_metric_vectors'
+    assert report['comparisons'][1]['passes_point_estimate_development_screen'] is expected
+    assert report['pareto']['nondominated_complete_labels'] == ['control_path']
+    assert not (tmp_path / 'summary.json').exists()
+    assert not report['defaults_promoted']
