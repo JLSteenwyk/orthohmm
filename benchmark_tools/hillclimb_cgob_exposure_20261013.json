@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_sequence_exposure_staging_not_accuracy_evaluation",
+  "purpose": "Assess whether CGOB release-matched sequence inputs can support a later frozen-candidate transfer panel, without reading orthology labels or selecting accuracy-favorable subsets.",
+  "primary_sources": [
+    "https://academic.oup.com/mbe/article/30/6/1281/1137418",
+    "http://cgob3.ucd.ie/Public_Data/Sequences/",
+    "http://cgob3.ucd.ie/Public_Data/Sequences/README"
+  ],
+  "download": {
+    "url": "http://cgob3.ucd.ie/Public_Data/Sequences/AA.fsa",
+    "observed_content_length": 64057909,
+    "observed_last_modified": "Wed, 17 Jul 2019 22:43:41 GMT",
+    "observed_etag": "3d17235-58de8398ca140",
+    "output_directory": "benchmarks/work/confirmation_cgob_sequences_20261013",
+    "bound_bytes": 134217728,
+    "timeout_s": 120,
+    "transport": "Official legacy HTTP archive. HTTPS connection failed. Checksums bind the downloaded snapshot but do not authenticate transport; do not execute upstream files."
+  },
+  "implementation": "Use the existing tested audit_confirmation_overlap.py audit API. Package the unchanged combined AA.fsa as one local stored ZIP member for streaming; this is one FASTA member, not one species or proteome. Pin the original FASTA, wrapper ZIP, development FASTAs, audit sources, and this protocol before processing and recheck afterward.",
+  "development_inputs": [
+    "Corrected QfO, OrthoBench, and Three Kingdoms: use the previously pinned confirmation staging manifest, verify checksums and protein counts.",
+    "YGOB v7-Aug2012: audit the complete previously examined AA.fsa, including ON/OFF sequences, without reopening Pillars.tab.",
+    "Fixed and variable simulation panels: use all sequence input directories in the retained publication manifests, deduplicate identical paths, and do not read truth.json or simulation gene trees.",
+    "ParaBench: its previously staged sequence inputs remain exposure-audited rather than accuracy-evaluated; prior near-total QfO overlap is already documented. Do not call CGOB overlap auditing alone a complete audit against every historically inspected file."
+  ],
+  "sequence_rule": "Uppercase and remove one terminal stop only; preserve internal stops, ambiguous residues and gaps. Count candidate occurrences rather than only unique sequence hashes; identifier renaming must not hide exposure.",
+  "resources": {"cpus": 1, "target_memory_gib": 4, "inference_jobs": 0},
+  "label_policy": "Do not download, read, or score CGOB pillars, curated assignments, alignments, trees, or predictions during this audit. Do not tune OrthoHMM using these candidate inputs. Freeze the selected method and a separate reference-semantics/eligibility protocol before any confirmation scoring.",
+  "admission": "Any exact match rules out strict sequence-disjoint confirmation of the complete release. Absence of exact matches does not establish species, family, label, or evolutionary independence. Do not select the nonmatching remainder and automatically call it independent. Species/taxon synonyms, ON/OFF eligibility, annotation provenance, ancestral-level semantics, and redistribution permissions remain separate gates for later transfer scoring.",
+  "git": "Commit and push this protocol and the audit test receipt before downloading sequence bytes. Keep raw third-party data local; commit only provenance, aggregate overlap results, and interpretation receipts.",
+  "limitations_nonblocking": true,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
