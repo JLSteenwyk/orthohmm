@@ -1,0 +1,137 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "load_average": [
+    97.1044921875,
+    97.44970703125,
+    98.37109375
+  ],
+  "logical_cpus": 192,
+  "memory_available_bytes": 655793299456,
+  "observed_process_cpu_core_equivalents": 95.72306479569501,
+  "scheduler": "             JOBID      STATE         TIME     CPUS                     NAME\n             24204    PENDING         0:00       32     ohmm-qfo-cap-recover\n           24190_2    PENDING         0:00       32            ohmm-full-cap\n23002_[297-525%12]    PENDING         0:00        8          fungal-rm2-full\n             24208    RUNNING         1:24        1      ohmm-deferral-trace\n             24207    RUNNING        51:11       16         ohmm-copy-branch\n           24190_1    RUNNING     12:29:27       32            ohmm-full-cap\n         23002_296    RUNNING   1-05:04:01        8          fungal-rm2-full\n         23002_290    RUNNING   2-02:59:10        8          fungal-rm2-full\n         23002_276    RUNNING   3-00:29:03        8          fungal-rm2-full\n         23002_274    RUNNING   3-00:46:30        8          fungal-rm2-full\n         23002_249    RUNNING   3-10:20:18        8          fungal-rm2-full\n         23002_246    RUNNING   3-11:37:23        8          fungal-rm2-full\n         23002_242    RUNNING   3-12:07:00        8          fungal-rm2-full\n         23002_156    RUNNING   5-05:43:26        8          fungal-rm2-full\n         23002_154    RUNNING   5-07:29:54        8          fungal-rm2-full\n         23002_102    RUNNING   6-02:45:54        8          fungal-rm2-full\n          23002_37    RUNNING   6-18:49:23        8          fungal-rm2-full\n          23002_11    RUNNING   6-22:37:50        8          fungal-rm2-full\n",
+  "scope": "Approximately one-second process CPU sample, not run-average contention or an isolated timing audit. Includes OrthoHMM jobs and test runner; no processes stopped.",
+  "top_processes": [
+    {
+      "cpu_core_equivalents": 8.241827662617712,
+      "name": "python",
+      "pid": 236286,
+      "rss_bytes": 405303296
+    },
+    {
+      "cpu_core_equivalents": 8.241288658649143,
+      "name": "python",
+      "pid": 236287,
+      "rss_bytes": 399986688
+    },
+    {
+      "cpu_core_equivalents": 8.240215482386212,
+      "name": "python",
+      "pid": 236289,
+      "rss_bytes": 249888768
+    },
+    {
+      "cpu_core_equivalents": 8.127918706329673,
+      "name": "rmblastn",
+      "pid": 895938,
+      "rss_bytes": 188461056
+    },
+    {
+      "cpu_core_equivalents": 8.099809860443347,
+      "name": "rmblastn",
+      "pid": 955775,
+      "rss_bytes": 359088128
+    },
+    {
+      "cpu_core_equivalents": 8.088471587844277,
+      "name": "rmblastn",
+      "pid": 977556,
+      "rss_bytes": 191889408
+    },
+    {
+      "cpu_core_equivalents": 8.078839726290276,
+      "name": "rmblastn",
+      "pid": 977662,
+      "rss_bytes": 171442176
+    },
+    {
+      "cpu_core_equivalents": 8.075703329180675,
+      "name": "rmblastn",
+      "pid": 981103,
+      "rss_bytes": 122683392
+    },
+    {
+      "cpu_core_equivalents": 8.029397544684544,
+      "name": "iqtree3",
+      "pid": 2473441,
+      "rss_bytes": 323747741696
+    },
+    {
+      "cpu_core_equivalents": 7.94848483997225,
+      "name": "iqtree3",
+      "pid": 2891758,
+      "rss_bytes": 30023118848
+    },
+    {
+      "cpu_core_equivalents": 1.033263612210623,
+      "name": "rmblastn",
+      "pid": 14102,
+      "rss_bytes": 102494208
+    },
+    {
+      "cpu_core_equivalents": 1.03187472582412,
+      "name": "rmblastn",
+      "pid": 156331,
+      "rss_bytes": 364273664
+    },
+    {
+      "cpu_core_equivalents": 1.030133676170036,
+      "name": "rmblastn",
+      "pid": 325738,
+      "rss_bytes": 100126720
+    },
+    {
+      "cpu_core_equivalents": 1.0232644590472941,
+      "name": "python",
+      "pid": 644758,
+      "rss_bytes": 8046452736
+    },
+    {
+      "cpu_core_equivalents": 1.0223149301851766,
+      "name": "python",
+      "pid": 236288,
+      "rss_bytes": 170045440
+    },
+    {
+      "cpu_core_equivalents": 1.0215312013806845,
+      "name": "rmblastn",
+      "pid": 667924,
+      "rss_bytes": 142319616
+    },
+    {
+      "cpu_core_equivalents": 1.0167128944375436,
+      "name": "FastTree",
+      "pid": 953696,
+      "rss_bytes": 281915392
+    },
+    {
+      "cpu_core_equivalents": 1.0144408708697745,
+      "name": "python",
+      "pid": 960936,
+      "rss_bytes": 951209984
+    },
+    {
+      "cpu_core_equivalents": 1.014010973515994,
+      "name": "rmblastn",
+      "pid": 923925,
+      "rss_bytes": 135843840
+    },
+    {
+      "cpu_core_equivalents": 1.0088621630187122,
+      "name": "rmblastn",
+      "pid": 2964865,
+      "rss_bytes": 376537088
+    }
+  ],
+  "utc": "2026-10-13T20:05:30.519804+00:00"
+}

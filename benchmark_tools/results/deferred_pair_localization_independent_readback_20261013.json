@@ -1,0 +1,219 @@
+{
+  "arms": [
+    {
+      "category_stages": {
+        "FN/different_candidate_families": 3794,
+        "FN/reference_within_species": 2,
+        "FN/within_candidate_not_predicted": 478,
+        "TP/predicted": 19660
+      },
+      "label": "control",
+      "metrics": {
+        "f1": 0.9016900956268489,
+        "precision": 0.9993391958521832,
+        "recall": 0.8214255870310019
+      },
+      "physical_asserted_pairs": 23934,
+      "raw_categories": {
+        "FN": 4274,
+        "FP": 13,
+        "TP": 19660
+      },
+      "remaining_fn_stage_hits": {
+        "different_candidate_families/hits_0": 479,
+        "different_candidate_families/hits_1": 32,
+        "different_candidate_families/hits_2": 3283,
+        "reference_within_species/hits_1": 1,
+        "reference_within_species/hits_2": 1,
+        "within_candidate_not_predicted/hits_0": 35,
+        "within_candidate_not_predicted/hits_1": 6,
+        "within_candidate_not_predicted/hits_2": 437
+      }
+    },
+    {
+      "category_stages": {
+        "FN/different_candidate_families": 1761,
+        "FN/reference_within_species": 2,
+        "FN/within_candidate_not_predicted": 584,
+        "TP/predicted": 21587
+      },
+      "label": "deferred500",
+      "metrics": {
+        "f1": 0.9470474686320962,
+        "precision": 0.9969058834395492,
+        "recall": 0.9019386646611515
+      },
+      "physical_asserted_pairs": 23934,
+      "raw_categories": {
+        "FN": 2347,
+        "FP": 67,
+        "TP": 21587
+      },
+      "remaining_fn_stage_hits": {
+        "different_candidate_families/hits_0": 414,
+        "different_candidate_families/hits_1": 25,
+        "different_candidate_families/hits_2": 1322,
+        "reference_within_species/hits_1": 1,
+        "reference_within_species/hits_2": 1,
+        "within_candidate_not_predicted/hits_0": 41,
+        "within_candidate_not_predicted/hits_1": 6,
+        "within_candidate_not_predicted/hits_2": 537
+      }
+    }
+  ],
+  "category_transition_initial_hits": {
+    "FN->FN/hits_0": 454,
+    "FN->FN/hits_1": 32,
+    "FN->FN/hits_2": 1845,
+    "FN->TP/hits_0": 60,
+    "FN->TP/hits_1": 7,
+    "FN->TP/hits_2": 1876,
+    "TP->FN/hits_0": 1,
+    "TP->FN/hits_2": 15,
+    "TP->TP/hits_0": 487,
+    "TP->TP/hits_1": 44,
+    "TP->TP/hits_2": 19113
+  },
+  "category_transitions": {
+    "FN->FN": 2331,
+    "FN->TP": 1943,
+    "TP->FN": 16,
+    "TP->TP": 19644
+  },
+  "checked": [
+    {
+      "bytes": 22501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/results.json",
+      "sha256": "6e123455a27681cc61fd79beb31a90077419f8e7b5d4240e05d7b3632b81ec9a"
+    },
+    {
+      "bytes": 38309,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/execution_plan.json",
+      "sha256": "69a1521b15c414662db73685d27f332ed5a9128be94234e38929b1c662556d04"
+    },
+    {
+      "bytes": 17083,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_qfo_reference_stages.py",
+      "sha256": "c2b69372e3e7ff19ca90d104697acbcf876af6a8ce1ebd3efb8eacf9e57d4cdf"
+    },
+    {
+      "bytes": 14777,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/orthohmm/accuracy.py",
+      "sha256": "1d3356e2a10581b170ea96402c3bce06b71f86b65e723044bfaafe8d5b1c69e3"
+    },
+    {
+      "bytes": 4044,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/audit_accuracy_checkpoint.py",
+      "sha256": "b71fa9cf1d2cb954206e61179535d7e22fc39946c4de97af6fa45533f7eb9643"
+    },
+    {
+      "bytes": 10140,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/audit_historical_profile_ablation.py",
+      "sha256": "ffdafda2b55c9580eccc7497881f0e160450af6c9029e3540009bebba2081b31"
+    },
+    {
+      "bytes": 7060,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/audit_qfo_vgnc_mapping.py",
+      "sha256": "6c11df1bce76bcecde91632af10c147b50326186064289686ebea72fa2d6486a"
+    },
+    {
+      "bytes": 7448,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/prepare_ob_candidate_neighborhood.py",
+      "sha256": "03843ed17fa9c44ea1ce5249782cdf009d8c7db9ceb85c62aa85bc2b4156ec29"
+    },
+    {
+      "bytes": 23273,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/run_membership_hillclimb.py",
+      "sha256": "1e96bcadd1e3feed68ef39534735227e84134d07d9858d409d7d98f1dabba966"
+    },
+    {
+      "bytes": 8335,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/score_ygob_groups.py",
+      "sha256": "b18e86dafa7370b75386890d1c8acedf721b8d026a2cd150c0565645698eb51a"
+    },
+    {
+      "bytes": 4479,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/qfo_benchmark/og_to_pairwise.py",
+      "sha256": "28e5236d45dfe057a90b00f28b5f739ead4ff8c4a2bd87e267088d19f84c020d"
+    },
+    {
+      "bytes": 14079,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_deferred_reference_pairs.py",
+      "sha256": "26087ac24bfd34ec0ea210e08aaba03883a740b36e40d2f84db32b4f4c6e3eac"
+    },
+    {
+      "bytes": 422,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v3_20261013/benchmark_tools/trace_deferred_reference_pairs.slurm",
+      "sha256": "15abbce86fa76f4d0b0a4d23b385959eedc319e19b7b69fe7aee3d37044b4ae5"
+    },
+    {
+      "bytes": 3163944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_trace_v3_20261012/reference_pair_stages.tsv",
+      "sha256": "7f747ff02e47a95a27f5659780951a9bf76b4e2556d19a3bcb711372a1132c4c"
+    },
+    {
+      "bytes": 11621,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/control/report.json",
+      "sha256": "a67c516fa889094a8218dc412d6016b508feb6f5dea92364b2cb217503a1d671"
+    },
+    {
+      "bytes": 3163944,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/control/reference_pair_stages.tsv",
+      "sha256": "7f747ff02e47a95a27f5659780951a9bf76b4e2556d19a3bcb711372a1132c4c"
+    },
+    {
+      "bytes": 339551,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/qfo_scoring/results/VGNC/VGNC_ohmm-hillclimb-r1-di-c787d3572ccc6375-0_raw.txt.gz",
+      "sha256": "98e6614cda22c12cc60c786304ccbeb72472c87b72bdab766b870c5a0fca05e9"
+    },
+    {
+      "bytes": 11648,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/deferred500/report.json",
+      "sha256": "d6410d66b9f9441fb6b919b5a475fb1ba592d6223dd31cd53ce32a4beff5431c"
+    },
+    {
+      "bytes": 3125510,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v3_20261013/deferred500/reference_pair_stages.tsv",
+      "sha256": "08e9fa897c3acacc36d7891b348a5d4f9f8752067f959495e01caf1acb86e968"
+    },
+    {
+      "bytes": 341276,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/qfo_scoring/results/VGNC/VGNC_ohmm-hillclimb-r1-di-c787d3572ccc6375-1_raw.txt.gz",
+      "sha256": "8c4df04ea1ab5286923ef011b46b680846b8e796879eabc26f760c468dd198a6"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "job_id": "24208",
+  "limitations": [
+    "Development-exposed diagnostic, not new inference or accuracy evidence.",
+    "Stage transitions locate outcomes, not causal proof or reliable orthology outside the reference.",
+    "Initial hit presence does not prove an admitted graph edge; absent hits cannot identify prefilter versus ranking, caps, significance or downstream filtering.",
+    "No family-independent uncertainty or generalization claim."
+  ],
+  "lost_pairs": 16,
+  "net_rescued_pairs": 1927,
+  "observations": [
+    "1928 of 1943 rescued asserted pairs were separated across candidate families in the control; 15 were already co-candidate.",
+    "16 original true positives are lost: 5 become candidate-separated and 11 remain co-candidate but unpredicted.",
+    "Variant retains 1761 candidate-separated misses, 584 within-candidate omissions, and 2 within-species assertions. 1322 candidate-separated misses retain both initial directed HMM hits.",
+    "Combined deferral remains rejected for default promotion because its completed OrthoBench and GO declines exceed the development screen. This localization does not overturn that decision."
+  ],
+  "producer_source_revision": "4c582808ac0638b318b82bf2e1f70db8e3ef8764",
+  "rescued_pairs": 1943,
+  "scheduler": "24208|COMPLETED|0:0|00:02:47|1|\n24208.batch|COMPLETED|0:0|00:02:47|1|\n",
+  "scope": "Independent physical CSV and raw VGNC recount, immutable row pairing, exact control hash, executed-source hashes and terminal scheduler verification. Original checkpoint and native prediction validation inherited from pinned completed tracer audits; not a second full native-pair or numeric-array audit.",
+  "stage_transitions": {
+    "different_candidate_families->different_candidate_families": 1756,
+    "different_candidate_families->predicted": 1928,
+    "different_candidate_families->within_candidate_not_predicted": 110,
+    "predicted->different_candidate_families": 5,
+    "predicted->predicted": 19644,
+    "predicted->within_candidate_not_predicted": 11,
+    "reference_within_species->reference_within_species": 2,
+    "within_candidate_not_predicted->predicted": 15,
+    "within_candidate_not_predicted->within_candidate_not_predicted": 463
+  },
+  "status": "independently_recounted_paired_tables_and_raw_vgnc_verified",
+  "within_species_assertions_preserved": 2
+}

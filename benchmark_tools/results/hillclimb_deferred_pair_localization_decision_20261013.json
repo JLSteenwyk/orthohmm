@@ -1,0 +1,43 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "independent_readback": {
+    "bytes": 10815,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_localization_independent_readback_20261013.json",
+    "sha256": "6af15cc5c2e4dd59fd450345d77d0167e479497e0582be45fee8a579145f0692"
+  },
+  "lost_pairs": 16,
+  "net_rescued_pairs": 1927,
+  "next_actions": [
+    "Finish and independently read back the live QfO large-only/medium-only branch ablations and fresh HMM cap trial; preserve queued scoring recovery without duplicate inference.",
+    "Use complete branch endpoint vectors to decide whether one deferral scope merits further opt-in evaluation. Keep bounds and the existing regression screen unchanged.",
+    "If branch isolation still regresses, prespecify a reference-free family-coherence and duplication/gene-tree evidence diagnostic. Examine aligned coverage, fragment/domain heterogeneity, relative HMM support and graph/refinement stages before proposing a single new mechanism.",
+    "Evaluate any proposed mechanism across primary endpoint vectors with a reproduced control; do not select reference-family-specific rules, blindly discard medium-confidence pairs, or treat species-marker stabilization as a proven standalone fix.",
+    "Freeze any broadly supported candidate before overlap-audited unexposed confirmation; exposed data and inactive small-panel branches are not independent validation."
+  ],
+  "prior_complete_vector_decision": {
+    "bytes": 7762,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_copy_deferral_decision_20261013.json",
+    "sha256": "65e49d08f3a5e998104c35536f0c4c8f9628755b7adc04935bd8b0ddb4ceb36a"
+  },
+  "remaining_variant_misses": {
+    "candidate_separated": 1761,
+    "candidate_separated_with_both_initial_directed_hits": 1322,
+    "within_candidate_not_predicted": 584,
+    "within_species_reference_assertions": 2
+  },
+  "rescued_pairs": 1943,
+  "scientific_interpretation": [
+    "Most observed recall recovery reunites previously separated candidate families, while a smaller set of correct assignments is lost. This motivates candidate-context and phylogenetic discrimination work, not indiscriminate merging.",
+    "Many remaining candidate-separated reference pairs already have two initial directed HMM hits. More search sensitivity alone is not established as the remedy; graph admission, clustering, refinement and expansion remain plausible bottlenecks.",
+    "584 co-candidate omissions cannot be attributed to gene-tree accuracy or membership filtering from stage labels alone.",
+    "60 rescued pairs have no retained initial directed hits. Do not impose a universal direct-HMM-hit requirement on native ortholog pairs.",
+    "Functional similarity decline and OrthoBench regression still invalidate combined deferral as a general default."
+  ],
+  "shared_host_observation": {
+    "bytes": 4773,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_shared_host_snapshot_20261013.json",
+    "sha256": "7cc2ca8c1f500c75cc3e97e6e496fff9ce4de8bb9e79abebd185f92a8bc786e3"
+  },
+  "status": "verified_localization_completed_no_default_promotion"
+}
