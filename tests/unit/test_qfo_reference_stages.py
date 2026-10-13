@@ -89,6 +89,33 @@ def test_alias_mapping_uses_last_row_without_querying_predictions(tmp_path):
     assert mapped == {("B", "alias"): "family"}
 
 
+def test_selected_alias_maps_to_exact_database_input_accession(tmp_path):
+    plan, manifest, paths = fixture_plan(tmp_path)
+    with sqlite3.connect(paths["database"]) as db:
+        db.execute("INSERT INTO proteomes VALUES (1,'A_species','s0')")
+    with gzip.open(paths["raw"], "rt") as stream:
+        rows = list(csv.reader(stream, delimiter="\t"))
+    with gzip.open(paths["raw"], "wt") as stream:
+        for row in rows:
+            row[:2] = ["A_species" if value == "A" else value for value in row[:2]]
+        csv.writer(stream, delimiter="\t", lineterminator="\n").writerows(rows)
+    for key in ("database", "raw"):
+        manifest["inputs"][key] = trace.record(paths[key])
+    plan.write_text(json.dumps(manifest))
+    result = trace.run(plan, tmp_path / "trace")
+    assert result["selected_reference_accessions_resolved_via_database_alias"] == 1
+    assert result["raw_categories"]["counts"] == {"TP": 1, "FP": 0, "FN": 3}
+
+
+@pytest.mark.parametrize("index", [{"unrelated": 0}, {"A": 0, "alias": 1}])
+def test_missing_or_multiple_input_aliases_are_not_guessed(tmp_path, index):
+    _, _, paths = fixture_plan(tmp_path)
+    with sqlite3.connect(paths["database"]) as db:
+        db.execute("INSERT INTO proteomes VALUES (1,'alias','s0')")
+    with pytest.raises(ValueError, match="exactly one input"):
+        trace.input_reference_mapping(paths["database"], {1: "f"}, index)
+
+
 @pytest.mark.parametrize("names", [["sp|A|one", "tr|A|two"], ["A", "A"]])
 def test_ambiguous_accession_normalization_rejected(names):
     with pytest.raises(ValueError, match="Ambiguous"):

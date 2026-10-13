@@ -12,7 +12,7 @@
   ],
   "gates": [
     "Pin reference, participant database, raw scorer rows, original factorial manifest, comparison report, checkpoint arrays, partitions, native pairs, and helper source bytes before and after analysis.",
-    "Preserve native last-label and accession-alias conventions; assert injective accession mapping into the complete checkpoint gene universe.",
+    "Preserve native last-label and accession-alias conventions; resolve selected reference accessions through exact pinned database aliases into exactly one input gene per reference protein. Reject absent or ambiguous input mapping; never strip species suffixes heuristically.",
     "Reproduce VGNC pooled precision, recall, and F1; require native truth pairs to match raw TP/FN exactly.",
     "Verify checkpoint numeric integrity, full candidate and RootHOG gene universes, native pair order, uniqueness, and admitted count.",
     "Test stage classification, directional hits, ambiguous mappings, malformed arrays and partitions, native-pair semantics, and evidence mutation."
@@ -26,5 +26,10 @@
     "Candidate and root membership do not resolve which reconciliation, tree, or satellite rule caused an omitted pair."
   ],
   "defaults_changed": false,
-  "fresh_search_submitted": false
+  "fresh_search_submitted": false,
+  "mapping_amendment": {
+    "reason": "Strict direct selected-accession matching stopped before pair-stage analysis on 79 selected accessions. All 79 had an exact alternate accession for the same indexed protein in the input checkpoint; 174 asserted rows involve them.",
+    "scope": "Correct diagnostic alias reconstruction only; reference cohort, benchmark scores, inference behavior, and planned stage categories remain unchanged.",
+    "failed_attempt_preserved": "Slurm 24194 and qfo_reference_stage_plan_20261012.json; use a new v2 execution plan and output namespace for corrected alias handling."
+  }
 }

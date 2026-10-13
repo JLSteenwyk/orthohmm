@@ -1,0 +1,36 @@
+{
+  "defaults_changed": false,
+  "failed_alias_fixture_test": {
+    "bytes": 6419,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stages_v2_tests_20261012.xml",
+    "sha256": "12599de8001658d475c787bd88e82af7e2b525ac4514c27fcade7337a871aabc"
+  },
+  "failures": [
+    {
+      "error": "/home/bizon/.local/bin/env: Permission denied",
+      "exit_code": 13,
+      "job_id": 24193,
+      "remedy": "Use absolute /usr/bin/env and configured /home/bizon/anaconda3/bin/python; inputs and analysis unchanged.",
+      "stage": "execve_before_analysis"
+    },
+    {
+      "diagnosis": "All 79 selected species-suffixed aliases have an exact bare-accession alternate for the same indexed protein in the pinned participant database and input checkpoint. 174 asserted rows involve them.",
+      "error": "Reference accession missing from checkpoint: 79",
+      "exit_code": 1,
+      "job_id": 24194,
+      "remedy": "Resolve exactly one input gene through pinned database alias rows, preserving native selected labels and all pooled scores; amend protocol and use new plan/output namespace.",
+      "stage": "strict_reference_accession_input_mapping_before_pair_localization"
+    }
+  ],
+  "fixture_test_failure_reason": "The initial test changed family annotations as well as endpoint accessions by unrestricted text substitution; corrected fixture uses parsed columns and does not change annotations.",
+  "generated_at_utc": "2026-10-13T04:07:36.937449+00:00",
+  "goal_completed": false,
+  "scheduler_receipt": "JobID|State|ExitCode|Elapsed|AllocCPUS|MaxRSS\n24193|FAILED|13:0|00:00:00|1|\n24193.0|FAILED|13:0|00:00:00|1|\n24194|FAILED|1:0|00:00:05|1|\n24194.0|FAILED|1:0|00:00:05|1|\n",
+  "source_revision": "6a82fd89",
+  "status": "failed_attempts_preserved_before_corrected_alias_trace",
+  "strict_plan": {
+    "bytes": 7918,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_20261012.json",
+    "sha256": "ed55eec046d301d9ebec02280a49930acd43fbf3b621af392518e7af51c2ce19"
+  }
+}

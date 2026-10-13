@@ -55,6 +55,30 @@ def accession_truth(database, truth, labels):
     return result
 
 
+def input_reference_mapping(database, labels, index):
+    aliases = {}
+    with sqlite3.connect(database.resolve().as_uri() + "?mode=ro", uri=True) as db:
+        for protein, accession in db.execute("SELECT prot_nr, uniprot_id FROM proteomes ORDER BY rowid"):
+            if protein in labels:
+                aliases.setdefault(protein, []).append(accession)
+    if set(aliases) != set(labels):
+        raise ValueError("Incomplete reference alias mapping")
+    selected_index, native_to_selected = {}, {}
+    resolved = 0
+    for accessions in aliases.values():
+        selected = accessions[-1]
+        present = set(accessions) & index.keys()
+        if len(present) != 1:
+            raise ValueError("Reference aliases require exactly one input gene")
+        native = next(iter(present))
+        if selected in selected_index or native in native_to_selected:
+            raise ValueError("Non-bijective reference-to-input alias mapping")
+        selected_index[selected] = index[native]
+        native_to_selected[native] = selected
+        resolved += native != selected
+    return selected_index, native_to_selected, resolved
+
+
 def watched_hits(names, species, queries, targets, scores, wanted, chunk_size=1000000):
     summary = check_arrays(names, species, queries, targets, scores, chunk_size)
     if summary["nonpositive_scores"]:
@@ -90,6 +114,7 @@ def trace_rows(truth, predicted, names, index, species, candidates, roots, hits)
                  else "different_candidate_families")
         forward, reverse = hits.get((i, j)), hits.get((j, i))
         rows.append({"left": a, "right": b, "reference_label": family,
+            "native_gene_left": left, "native_gene_right": right,
             "category": "TP" if retained else "FN", "stage": stage,
             "initial_hit_directions": int(forward is not None) + int(reverse is not None),
             "forward_normalized_score": forward, "reverse_normalized_score": reverse,
@@ -97,7 +122,7 @@ def trace_rows(truth, predicted, names, index, species, candidates, roots, hits)
     return rows
 
 
-def native_truth_pairs(path, names, wanted, expected_count):
+def native_truth_pairs(path, names, wanted, expected_count, native_to_selected=None):
     index = normalized_index(names)
     selected, previous, count = set(), None, 0
     with path.open() as stream:
@@ -116,6 +141,10 @@ def native_truth_pairs(path, names, wanted, expected_count):
             a, b = _strip_to_uniprot(a), _strip_to_uniprot(b)
             if a not in index or b not in index:
                 raise ValueError("Native gene absent from initial checkpoint")
+            if native_to_selected is not None:
+                if a not in native_to_selected or b not in native_to_selected:
+                    continue
+                a, b = native_to_selected[a], native_to_selected[b]
             pair = tuple(sorted((a, b)))
             if pair in wanted:
                 selected.add(pair)
@@ -196,10 +225,10 @@ def run(plan_path, output):
                                     ("f1", 2 * tp / (2 * tp + fp + fn), plan["expected_f1"])):
         if not math.isfinite(value) or not math.isclose(value, expected, rel_tol=0, abs_tol=5e-8):
             raise ValueError("Raw VGNC metric differs from verified baseline: " + metric)
-    missing = set(annotations) - index.keys()
-    if missing:
-        raise ValueError(f"Reference accession missing from checkpoint: {len(missing)}")
-    wanted = {tuple(sorted((index[a], index[b]))) for a, b in asserted}
+    selected_index, native_to_selected, resolved_aliases = input_reference_mapping(inputs["database"], labels, index)
+    if set(selected_index) != set(annotations):
+        raise ValueError("Selected raw labels differ from reference-to-input mapping")
+    wanted = {tuple(sorted((selected_index[a], selected_index[b]))) for a, b in asserted}
     hits, summary = watched_hits(names, species, queries, targets, scores, wanted)
     if summary != plan["expected_universe"]:
         raise ValueError("Initial checkpoint universe differs from admitted baseline")
@@ -208,7 +237,7 @@ def run(plan_path, output):
     roots = membership(read_predictions(inputs["roots"], "root_hogs"))
     if set(roots) != universe:
         raise ValueError("Root-HOG gene universe differs from checkpoint")
-    predicted = native_truth_pairs(inputs["pairs"], names, asserted, plan["expected_pairs"])
+    predicted = native_truth_pairs(inputs["pairs"], names, asserted, plan["expected_pairs"], native_to_selected)
     # Native pair output, not RootHOG co-membership, determines true positives.
     observed = {"TP": set(), "FN": set()}
     with gzip.open(inputs["raw"], "rt") as stream:
@@ -222,7 +251,7 @@ def run(plan_path, output):
     mapped_truth = accession_truth(inputs["database"], truth, labels)
     if set(mapped_truth) != asserted:
         raise ValueError("Selected reference mappings disagree")
-    rows = trace_rows(mapped_truth, predicted, names, index, species, candidates, roots, hits)
+    rows = trace_rows(mapped_truth, predicted, names, selected_index, species, candidates, roots, hits)
     for value in checked:
         check(value)
     output.mkdir(parents=True, exist_ok=False)
@@ -235,6 +264,7 @@ def run(plan_path, output):
         "source_revision": plan["source_revision"], "checkpoint": summary,
         "reference_pairs": len(rows), "raw_categories": raw, "mapping_sha256": mapping_digest,
         "mapping_extra_rows": aliases, "table": record(table),
+        "selected_reference_accessions_resolved_via_database_alias": resolved_aliases,
         "summary": dict(Counter(f'{r["category"]}/{r["stage"]}/hits_{r["initial_hit_directions"]}/root_{r["same_root_hog"]}' for r in rows)),
         "resources": {"wall_s": time.monotonic() - started, "cpu_s": time.process_time() - cpu,
                       "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},
@@ -244,6 +274,7 @@ def run(plan_path, output):
             "Direct hit presence is not native RBNH edge presence or a causal explanation of grouping.",
             "Within-candidate omission combines reconciliation and membership mechanisms; RootHOGs are not pair cliques.",
             "VGNC rows may share proteins and labels; no independent-family uncertainty is asserted.",
+            "Input/reference aliases are resolved only through pinned participant database rows; native selected-label scoring conventions are unchanged.",
             "Duplicate ordered hits are rejected for watched pairs only; this is not a global duplicate-hit audit.",
             "Diagnostic resource receipts are shared-host analysis timings, not inference timings."]}
     with (output / "report.json").open("x") as stream:
