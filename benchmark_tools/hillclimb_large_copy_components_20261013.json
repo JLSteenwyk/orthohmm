@@ -1,0 +1,58 @@
+{
+  "schema": "large_copy_component_refinement_round_v1",
+  "status": "prespecified_before_opt_in_core_implementation",
+  "hypothesis": "Replace whole-family singletonization only in the existing broad-panel large-copy guard with bounded strong-edge components as candidates for duplication-aware phylogenetic reconciliation. This may recover homologous context without retaining an entire oversized or weakly connected family.",
+  "evidence": {
+    "feasibility": "benchmark_tools/results/large_copy_component_feasibility_v3_20261013.json",
+    "independent_component_readback": "benchmark_tools/results/large_copy_component_independent_readback_20261013.json",
+    "prior_rejected_combined_deferral": "benchmark_tools/results/hillclimb_copy_deferral_decision_20261013.json",
+    "note": "Feasibility is not accuracy. All 251 eligible families were decomposed without reference labels before the complete paired reference join. No component threshold or size-bound search was performed."
+  },
+  "candidate": {
+    "profile": "phylogeny_components",
+    "retain_large_copy_components_max_size": 500,
+    "component_min_edge_weight": 1.5,
+    "eligibility": "Unchanged existing large-copy predicate: broad dataset, minimum family size and maximum within-species copy count; no dataset name or reference-family identity in inference.",
+    "oversized_component_policy": "Legacy singleton fallback",
+    "isolated_gene_policy": "Keep singleton",
+    "medium_copy_and_other_refinement": "Unchanged",
+    "whole_family_deferral": "Disabled; combinations rejected for first-mechanism ablation",
+    "required_native_context": {
+      "accuracy_profile": "high_sensitivity",
+      "search_mode": "builtin",
+      "clustering": "leiden",
+      "phylogeny": "reconcile",
+      "phylogeny_candidates": "satellite_v2",
+      "phylogeny_root_rule": "species_overlap",
+      "phylogeny_pair_rule": "positive_paralogy",
+      "satellite_membership_rule": "high_confidence_pair",
+      "species_tree_mode": "infer",
+      "species_tree_rooting": "min_variance"
+    }
+  },
+  "comparisons": [
+    "Matched unchanged refinement with own inferred trees",
+    "Existing completed large-only and medium-only whole-family deferral ablations",
+    "OrthoFinder 3.1.5 full phylogenetic pipeline",
+    "Retained sequence-only OrthoFinder comparator and other benchmarked methods, with their original execution/timing semantics"
+  ],
+  "metrics": ["OrthoBench F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A F1", "QfO EC similarity", "QfO GO similarity", "QfO FAS similarity", "Three Kingdoms BUSCO-pair F1"],
+  "additional_reporting": ["precision", "recall", "coverage", "predicted pairs", "failures", "wall time", "CPU consumption", "peak memory", "shared-host competing activity"],
+  "execution_order": [
+    "Preserve diagnostic failures and independently verify component feasibility before committing the plan.",
+    "Implement opt-in profile, canonical bounded components, score-array validation, native CLI/API context guards and focused tests; preserve default output and existing experimental policies.",
+    "Finish or recover existing fresh-HMM cap trials and branch ablations; independently admit complete branch vectors before submitting the next inference round. Do not duplicate successful inference.",
+    "Freeze tested source, input identities, runtime, scoring and resource plan before one cached-graph component ablation with own inferred trees. Verify narrow-panel inactivity before reusing matched outputs.",
+    "Compare the full endpoint vector; if broadly promising, freeze the candidate for fresh full-pipeline evaluation and overlap-audited unexposed confirmation that exercises the affected branch."
+  ],
+  "resources": {"host": "local shared Threadripper", "next_inference_cpus": 16, "next_inference_memory_gib": 64, "next_inference_wall_limit_hours": 72, "policy": "Leave unrelated jobs untouched; shared-host timing confounding and cached versus fresh scopes remain explicit."},
+  "selection": {
+    "development_screen_max_decline": 0.005,
+    "rule": "Report per-endpoint changes and Pareto tradeoffs, not mean-only selection. Retain failed or missing cells honestly. No default promotion without reproducible broad support and appropriate unexposed confirmation.",
+    "fas": "Unseeded point differences are descriptive; account for sampling variability before claiming improvements.",
+    "fallback": "If the mechanism fails the screen, reject default promotion and diagnose family/alignment and duplication evidence before any bounded follow-up; do not increase caps or exclude reference families to hide regressions."
+  },
+  "limitations": ["All current panels are development-exposed.", "Components establish candidate context, not orthology or predicted accuracy.", "Sequence-length summaries are not alignment coherence.", "TreeFam is supporting evidence; incomplete archival provenance is nonblocking.", "Large-copy behavior is inactive on narrow panels, so unchanged OrthoBench or Three Kingdoms scores would not validate this branch."],
+  "defaults_promoted": false,
+  "goal_completed": false
+}

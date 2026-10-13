@@ -1,0 +1,108 @@
+{
+  "accepted_edges": 2544649,
+  "counts": {
+    "bounded_component_genes": 57199,
+    "bounded_components": 1987,
+    "components": 9942,
+    "families": 251,
+    "genes": 82644,
+    "isolated_genes": 7935,
+    "over500_family_bounded_component_genes": 4330,
+    "over500_family_bounded_components": 361,
+    "over500_family_components": 2934,
+    "over500_family_families": 28,
+    "over500_family_genes": 24393,
+    "over500_family_isolated_genes": 2553,
+    "over500_family_oversized_component_genes": 17510,
+    "over500_family_oversized_components": 20,
+    "oversized_component_genes": 17510,
+    "oversized_components": 20
+  },
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "method": "Independent canonical-min-root union-find; no native component traversal imported; all 251 eligible family sizes, gene partitions and all 23934 paired reference rows rebuilt from checked edge arrays.",
+  "recipe": "import csv,hashlib,json,sys,time\nfrom collections import Counter\nfrom pathlib import Path\nimport numpy as np\nrepo=Path.cwd();started=time.monotonic()\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import check,record\nfrom benchmark_tools.run_membership_hillclimb import write_json\np=repo/\"benchmark_tools/results/large_copy_component_feasibility_v3_20261013.json\"\nr=json.loads(p.read_text());assert r[\"status\"]==\"complete_all_large_copy_component_feasibility_verified\"\nfor pin in r[\"checked\"]: check(pin)\ntraces=[pin for pin in r[\"checked\"] if Path(pin[\"path\"]).name==\"copy_split_trace.json\"]\nassert len(traces)==1\nevents=json.loads(Path(traces[0][\"path\"]).read_text())[\"events\"]\nfamilies={i:e for i,e in enumerate(events) if e[\"large_copy_eligible\"]}\nnamespins=[pin for pin in r[\"checked\"] if Path(pin[\"path\"]).name==\"gene_names.txt\" and Path(pin[\"path\"]).parent.name==\"payload\"]\nassert len(namespins)==1\npayload=Path(namespins[0][\"path\"]).parent\nnames=Path(namespins[0][\"path\"]).read_text().splitlines();index={g:i for i,g in enumerate(names)}\nn=len(names);owner=np.full(n,-1,np.int32);parent=np.arange(n,dtype=np.int32)\nfor i,event in families.items(): owner[event[\"members\"]]=i\ndef find(i):\n    i=int(i)\n    while parent[i]!=i:\n        parent[i]=parent[parent[i]];i=int(parent[i])\n    return i\nq,t,w=[np.load(payload/(name+\".npy\"),mmap_mode=\"r\",allow_pickle=False) for name in (\"sources\",\"targets\",\"weights\")]\naccepted=0\nfor start in range(0,len(q),1000000):\n    a=q[start:start+1000000];b=t[start:start+1000000];v=w[start:start+1000000]\n    fa,fb=owner[a],owner[b];mask=(fa>=0)&(fa==fb)&(v>=1.5)\n    accepted+=int(mask.sum())\n    for left,right in zip(a[mask],b[mask]):\n        x,y=find(left),find(right)\n        if x!=y: parent[max(x,y)]=min(x,y)\ncomponents={};size={};count=Counter()\nfor i,event in families.items():\n    local={}\n    for gene in event[\"members\"]: local.setdefault(find(gene),[]).append(gene)\n    groups=sorted(local.values(),key=lambda c:c[0])\n    claimed=next(f for f in r[\"families\"] if f[\"trace_ordinal\"]==i)\n    assert [len(c) for c in groups]==claimed[\"component_sizes\"]\n    assert sorted(g for c in groups for g in c)==event[\"members\"]\n    for c in groups:\n        size[find(c[0])]=len(c)\n        for gene in c: components[gene]=find(gene)\n    localcounts={\"families\":1,\"genes\":len(event[\"members\"]),\"components\":len(groups),\"bounded_components\":sum(2<=len(c)<=500 for c in groups),\"bounded_component_genes\":sum(len(c) for c in groups if 2<=len(c)<=500),\"oversized_components\":sum(len(c)>500 for c in groups),\"oversized_component_genes\":sum(len(c) for c in groups if len(c)>500),\"isolated_genes\":sum(len(c)==1 for c in groups)}\n    assert localcounts==claimed[\"counts\"]\n    count.update(localcounts)\n    if len(event[\"members\"])>500: count.update({\"over500_family_\"+k:v for k,v in localcounts.items()})\nassert dict(count)==r[\"counts\"] and accepted==r[\"accepted_edges\"]\npins=[pin for pin in r[\"checked\"] if Path(pin[\"path\"]).name==\"reference_pair_stages.tsv\"]\nassert len(pins)==2\ntables=[]\nfor pin in pins:\n    with Path(pin[\"path\"]).open() as f: tables.append(list(csv.DictReader(f,delimiter=\"\\t\")))\ngroups={}\nfor a,b in zip(*tables):\n    x,y=index[a[\"native_gene_left\"]],index[a[\"native_gene_right\"]];fa,fb=int(owner[x]),int(owner[y])\n    if fa>=0 and fa==fb:\n        cx,cy=components[x],components[y]\n        kind=(\"bounded_same_component_context\" if size[cx]<=500 else \"oversized_same_component_singleton_fallback\") if cx==cy else \"different_components_same_family\"\n        kind=(\"over500_family/\" if len(families[fa][\"members\"])>500 else \"bounded_family/\")+kind\n    elif fa>=0 and fb>=0: kind=\"different_large_eligible_families\"\n    elif fa>=0 or fb>=0: kind=\"one_large_eligible_family\"\n    else: kind=\"outside_large_copy_predicate\"\n    for key in (\"transition:\"+a[\"category\"]+\"->\"+b[\"category\"],\"variant:\"+b[\"category\"]+\"/\"+b[\"stage\"]):\n        bucket=groups.setdefault(key,{\"pairs\":0,\"component_context\":Counter()})\n        bucket[\"pairs\"]+=1;bucket[\"component_context\"][kind]+=1\nassert groups==r[\"reference_strata\"]\nfor pin in r[\"checked\"]: check(pin)\noutput=repo/\"benchmark_tools/results/large_copy_component_independent_readback_20261013.json\";assert not output.exists()\nwrite_json(output,{\"status\":\"all_large_copy_components_rebuilt_by_independent_union_find\",\"report\":record(p),\"counts\":dict(count),\"accepted_edges\":accepted,\"reference_strata\":groups,\"method\":\"Independent canonical-min-root union-find; no native component traversal imported; all 251 eligible family sizes, gene partitions and all 23934 paired reference rows rebuilt from checked edge arrays.\",\"wall_s\":time.monotonic()-started,\"recipe\":sys.argv[1],\"defaults_promoted\":False,\"goal_completed\":False})\nprint(json.dumps({\"status\":\"verified\",\"over500_bounded_genes\":count[\"over500_family_bounded_component_genes\"],\"prospective_context_pairs\":groups[\"variant:FN/different_candidate_families\"][\"component_context\"][\"over500_family/bounded_same_component_context\"]}))\n",
+  "reference_strata": {
+    "transition:FN->FN": {
+      "component_context": {
+        "bounded_family/bounded_same_component_context": 108,
+        "different_large_eligible_families": 8,
+        "one_large_eligible_family": 262,
+        "outside_large_copy_predicate": 776,
+        "over500_family/bounded_same_component_context": 141,
+        "over500_family/different_components_same_family": 2,
+        "over500_family/oversized_same_component_singleton_fallback": 1034
+      },
+      "pairs": 2331
+    },
+    "transition:FN->TP": {
+      "component_context": {
+        "bounded_family/bounded_same_component_context": 1893,
+        "different_large_eligible_families": 1,
+        "one_large_eligible_family": 30,
+        "outside_large_copy_predicate": 19
+      },
+      "pairs": 1943
+    },
+    "transition:TP->FN": {
+      "component_context": {
+        "one_large_eligible_family": 5,
+        "outside_large_copy_predicate": 11
+      },
+      "pairs": 16
+    },
+    "transition:TP->TP": {
+      "component_context": {
+        "one_large_eligible_family": 63,
+        "outside_large_copy_predicate": 19562,
+        "over500_family/bounded_same_component_context": 2,
+        "over500_family/oversized_same_component_singleton_fallback": 17
+      },
+      "pairs": 19644
+    },
+    "variant:FN/different_candidate_families": {
+      "component_context": {
+        "different_large_eligible_families": 8,
+        "one_large_eligible_family": 264,
+        "outside_large_copy_predicate": 313,
+        "over500_family/bounded_same_component_context": 141,
+        "over500_family/different_components_same_family": 2,
+        "over500_family/oversized_same_component_singleton_fallback": 1033
+      },
+      "pairs": 1761
+    },
+    "variant:FN/reference_within_species": {
+      "component_context": {
+        "outside_large_copy_predicate": 2
+      },
+      "pairs": 2
+    },
+    "variant:FN/within_candidate_not_predicted": {
+      "component_context": {
+        "bounded_family/bounded_same_component_context": 108,
+        "one_large_eligible_family": 3,
+        "outside_large_copy_predicate": 472,
+        "over500_family/oversized_same_component_singleton_fallback": 1
+      },
+      "pairs": 584
+    },
+    "variant:TP/predicted": {
+      "component_context": {
+        "bounded_family/bounded_same_component_context": 1893,
+        "different_large_eligible_families": 1,
+        "one_large_eligible_family": 93,
+        "outside_large_copy_predicate": 19581,
+        "over500_family/bounded_same_component_context": 2,
+        "over500_family/oversized_same_component_singleton_fallback": 17
+      },
+      "pairs": 21587
+    }
+  },
+  "report": {
+    "bytes": 2901335,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_feasibility_v3_20261013.json",
+    "sha256": "9a1574a7043aa81d3b236d81f0f7791af7bc497f91f1d01ab30f0ff449a22950"
+  },
+  "status": "all_large_copy_components_rebuilt_by_independent_union_find",
+  "wall_s": 7.735995636088774
+}

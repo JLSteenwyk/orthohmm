@@ -1,0 +1,27 @@
+{
+  "defaults_promoted": false,
+  "diagnosis": "The final provenance loop looked up an unused runner in sys.modules although the recipe had not imported it. The replacement will bind the frozen runner file as score-semantics evidence and collect actual executed modules separately, with early source checks.",
+  "eligibility": {
+    "bytes": 25318,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_eligibility_context_20261013.json",
+    "sha256": "edf456a86b20cbc65d86d4570a52704120a4640b23f253d68e477439516dec7a"
+  },
+  "error": "benchmark_tools.run_deferred_copy_split",
+  "error_type": "KeyError",
+  "goal_completed": false,
+  "intended_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_feasibility_20261013.json",
+  "observed_exec_session": 51757,
+  "observed_exit_code": 1,
+  "protocol": {
+    "bytes": 3417,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_large_copy_component_probe_20261013.json",
+    "sha256": "84f63ee0eeee9ffa87dd0f80ea53d8f2858a52bbc1d7dd8979408b5122cbc1a5"
+  },
+  "scope": "Observed retrospective failure receipt, not a captured full recipe or a valid component-result attestation. No native inference duplicated or restarted.",
+  "status": "diagnostic_recipe_failed_before_output_not_inference_failure",
+  "structural_snapshot": {
+    "bytes": 10007,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_eligibility_structural_snapshot_20261013.json",
+    "sha256": "d23de5b3de6bf76c786335e8bd414a6827e4792c46afb571b19cd974743765de"
+  }
+}
