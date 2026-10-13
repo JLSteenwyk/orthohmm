@@ -1,0 +1,21 @@
+{
+  "schema": "complete_paired_reference_executed_copy_eligibility_v1",
+  "status": "prespecified_descriptive_join_before_component_mechanism",
+  "hypothesis": "Executed baseline/combined-deferral predicates may explain which existing profile-expanded families remain outside bounded deferral. Determine whether remaining co-family misses are bound-limited, eligible-but-deferred, or outside these predicates before proposing a graph-component alternative.",
+  "cohort": "All 23934 paired VGNC rows and all executed QfO eligible-family events; no reference-family selection or threshold tuning.",
+  "gates": [
+    "Capture only completed immutable structural sidecars and source/input identities from the live branch job, not partial scores or a claimed terminal inference result.",
+    "Require the control refined seed to match the admitted golden refinement and both structural candidates to match their independently admitted parent candidates.",
+    "Require identical event memberships/predicates across control and combined-deferral traces except the deferred boolean, with valid unique canonical numeric indices and gene/species universes.",
+    "Reproduce size, maximum species copies, large/medium eligibility, and the existing 500-gene deferral rule using actual executed frozen refinement helpers.",
+    "Require every event membership to match a complete original profile-expanded family; use exact native-gene aliases from the audited paired table.",
+    "Validate every control-prefix graph row and immutable paired row field; retain both within-species assertions and all paired TP/FN transitions.",
+    "Bind consumed receipts, structural snapshot, sidecars, native partitions, numeric gene/species metadata, executed helpers and this protocol before and after analysis. Inherit previous array/native-output audits explicitly."
+  ],
+  "observations": ["all eligible-family size/copy-count distributions", "same-family large bounded/over-bound and medium eligibility by paired transition and variant outcome", "baseline profile-expanded co-membership consistency"],
+  "selection_rule": "Descriptive prerequisite only. Preserve the 500-gene bound and existing component threshold; implement one opt-in component mechanism only if justified, and do not launch another inference round until current branch endpoint vectors are admitted.",
+  "resource_limits": {"cpus": 1, "memory_gib": 2, "wall_limit_minutes": 10},
+  "limitations": ["Reference-exposed diagnosis, not a new search, native accuracy gain or independent confirmation.", "The branch job is live: immutable structural products may be consumed without admitting unfinished scoring arms or their timing as complete.", "Baseline graph/partition fields remain baseline context; eligibility associations are not causal proof of variant errors.", "Connectivity and retained components are homology candidate context, not final orthology assignments.", "Shared-host diagnostic timing is separate from fresh full-pipeline timing."],
+  "defaults_promoted": false,
+  "goal_completed": false
+}
