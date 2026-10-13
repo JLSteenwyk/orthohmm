@@ -53,6 +53,18 @@ def test_source_equivalence_records_historical_blob_and_only_unused_body_change(
     assert commands == [["git", "-C", str(source), "show", "old-revision:benchmark_tools/run_membership_hillclimb.py"]]
 
 
+def test_only_verified_historical_source_leaves_live_checks(tmp_path, monkeypatch):
+    repo, source, old, _, _, _ = helper_sources(tmp_path, monkeypatch)
+    executed, proof = wrapper.tracer_source_identity(repo, source, old, "old-revision")
+    data = write(tmp_path / "input.json", {"original": True})
+    assert wrapper.live_checks([data, old], [proof]) == [data]
+    assert wrapper.live_checks([data], []) == [data]
+    with pytest.raises(ValueError, match="differs"):
+        wrapper.live_checks([data, {**old, "sha256": executed["sha256"]}], [proof])
+    with pytest.raises(ValueError, match="absent"):
+        wrapper.live_checks([data], [proof])
+
+
 @pytest.mark.parametrize("mutation", ["argument", "imports", "constant", "decorator", "default", "signature", "duplicate", "missing", "old_hash", "old_size", "revision", "other_module"])
 def test_source_equivalence_rejects_changed_dependency_or_unproven_history(tmp_path, monkeypatch, mutation):
     repo, source, old, current, _, _ = helper_sources(tmp_path, monkeypatch)

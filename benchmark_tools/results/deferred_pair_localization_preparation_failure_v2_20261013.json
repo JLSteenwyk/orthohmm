@@ -1,0 +1,21 @@
+{
+  "defaults_promoted": false,
+  "diagnosis": "Historical helper receipt was also inherited in the original trace checked list. Preserve it as historical provenance and require exact correspondence to the historical-blob/AST proof; recheck executed frozen source bytes instead.",
+  "evidence_scope": "Observed exec session 67662 exited 1; no output namespace. Retrospective receipt, not a captured traceback.",
+  "goal_completed": false,
+  "intended_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v2_20261013",
+  "observed_error": "Frozen input/source identity changed: /mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/run_membership_hillclimb.py",
+  "observed_error_type": "ValueError",
+  "protocol": {
+    "bytes": 3313,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v2_20261013/benchmark_tools/hillclimb_deferred_pair_localization_20261013.json",
+    "sha256": "3be3d2b52c014e03eb729764b02676567d1328543d5924a85fdb200e752d0a98"
+  },
+  "source_revision": "139ae0a3fe988d8018c0c5ff7c8ba6a896595b0b",
+  "status": "preparation_failed_before_output_or_scheduler_submission",
+  "wrapper": {
+    "bytes": 13413,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v2_20261013/benchmark_tools/trace_deferred_reference_pairs.py",
+    "sha256": "f318d996f7e021d654a5833558675f508a968a25dee371790cf569633aa08792"
+  }
+}

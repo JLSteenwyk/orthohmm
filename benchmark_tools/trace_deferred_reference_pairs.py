@@ -49,6 +49,21 @@ def tracer_source_identity(repo, source, old, revision):
         "tracer_import": "argument", "unused_function": "score_qfo"}
 
 
+def live_checks(inherited, equivalence):
+    historical = {proof["historical_source"]["path"]: proof["historical_source"] for proof in equivalence}
+    retained, seen = [], set()
+    for item in inherited:
+        if item["path"] in historical:
+            if item != historical[item["path"]]:
+                raise ValueError("Inherited historical source receipt differs from equivalence proof")
+            seen.add(item["path"])
+        else:
+            retained.append(item)
+    if seen != set(historical):
+        raise ValueError("Historical source proof is absent from original trace audit")
+    return retained
+
+
 def paired_transitions(left, right):
     if len(left) != len(right) or not left:
         raise ValueError("Require complete paired reference cohorts")
@@ -92,7 +107,7 @@ def prepare(repo, source, receipt_path, previous_plan_path, previous_trace_path,
             or trace["checked"][0] != record(previous_plan_path)):
         raise ValueError("Require the original complete, alias-corrected reference trace")
     checked = [record(receipt_path), receipt["full_report"], record(previous_plan_path), record(previous_trace_path),
-               trace["table"], *trace["checked"], record(source / "benchmark_tools" / PROTOCOL)]
+               trace["table"], record(source / "benchmark_tools" / PROTOCOL)]
     captures = [c for c in full["captures"] if c["source_path"].endswith("execution_plan.json")]
     if len(captures) != 1:
         raise ValueError("Ambiguous admitted inferred-plan snapshot")
@@ -107,6 +122,7 @@ def prepare(repo, source, receipt_path, previous_plan_path, previous_trace_path,
         sources.append(current)
         if proof is not None:
             equivalence.append(proof)
+    checked.extend(live_checks(trace["checked"], equivalence))
     sources.extend([record(Path(__file__)), record(source / "benchmark_tools/trace_deferred_reference_pairs.slurm")])
     cases = []
     for cell, case in zip(cells, parent["cases"]):
