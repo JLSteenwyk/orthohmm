@@ -9,6 +9,16 @@ from benchmark_tools import diagnose_deferred_graph_context as diagnostic
 from benchmark_tools.prepare_ob_candidate_neighborhood import record
 
 
+def test_exec_memory_counter_is_not_an_inherited_rusage_peak():
+    assert diagnostic.exec_peak_rss_kib("VmRSS:\t12 kB\nVmHWM:\t42 kB\n") == 42
+
+
+@pytest.mark.parametrize("status", ["VmRSS: 12 kB", "VmHWM: -1 kB", "VmHWM: 1 MB", "VmHWM: NaN kB", "VmHWM: 1 kB extra"])
+def test_missing_or_invalid_exec_memory_accounting_is_explicit(status):
+    with pytest.raises(ValueError):
+        diagnostic.exec_peak_rss_kib(status)
+
+
 def row(left, right, category="TP", stage="predicted", cross="True"):
     return {"left": left, "right": right, "reference_label": "family", "native_gene_left": "sp|" + left,
         "native_gene_right": "sp|" + right, "reference_is_cross_species": cross, "category": category,
@@ -115,6 +125,7 @@ def setup_driver(tmp_path, monkeypatch):
         "arms": [{"label": a["label"], "raw_categories": a["raw_categories"]["counts"]} for a in arms]})
     monkeypatch.setattr(diagnostic, "EXPECTED_PAIRS", 4)
     monkeypatch.setattr(diagnostic.subprocess, "check_output", lambda *a, **k: "fixture\n")
+    monkeypatch.setattr(diagnostic, "exec_peak_rss_kib", lambda status: 1024)
     return Path(diagnostic.__file__).resolve().parent.parent, graph_receipt, pair_receipt
 
 
@@ -131,7 +142,7 @@ def test_driver_rechecks_inputs_writes_new_receipt_and_never_overwrites(tmp_path
         diagnostic.run(source, graph, pair, output)
 
 
-@pytest.mark.parametrize("mutation", ["graph_receipt", "paired_receipt", "producer", "order", "native_counts", "control_hash", "file_changed", "full_cohort", "source_root"])
+@pytest.mark.parametrize("mutation", ["graph_receipt", "paired_receipt", "producer", "order", "native_counts", "control_hash", "file_changed", "full_cohort", "source_root", "memory", "wall"])
 def test_driver_rejects_unadmitted_changed_or_incomplete_inputs_before_output(tmp_path, monkeypatch, mutation):
     source, graph, pair = setup_driver(tmp_path, monkeypatch)
     receipt = json.loads(pair.read_text())
@@ -157,6 +168,11 @@ def test_driver_rejects_unadmitted_changed_or_incomplete_inputs_before_output(tm
         (tmp_path / "variant.tsv").write_text("changed")
     elif mutation == "full_cohort":
         monkeypatch.setattr(diagnostic, "EXPECTED_PAIRS", 5)
+    elif mutation == "memory":
+        monkeypatch.setattr(diagnostic, "exec_peak_rss_kib", lambda status: 2 * 1024 ** 2 + 1)
+    elif mutation == "wall":
+        clock = iter((0, 601))
+        monkeypatch.setattr(diagnostic.time, "monotonic", lambda: next(clock))
     else:
         source = tmp_path
     write_json(pair, receipt)

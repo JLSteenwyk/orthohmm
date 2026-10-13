@@ -20,7 +20,8 @@
     "Reference-exposed descriptive diagnosis is not independent validation; graph connectivity and functional similarity are not orthology truth.",
     "Rows contribute to both transition and variant-outcome summaries; these are separate views of the same cohort, not independent observations.",
     "Reference assertions can share genes and labels; no independent-family uncertainty is claimed.",
-    "Shared-host diagnostic resource observations are not full-pipeline inference timings."
+    "Shared-host diagnostic resource observations are not full-pipeline inference timings.",
+    "Linux post-exec VmHWM is used for the diagnostic memory budget. Preserve getrusage maxrss separately because the current launcher can carry a much larger pre-exec high-water mark; do not interpret it as attributable diagnostic RSS."
   ],
   "defaults_promoted": false,
   "goal_completed": false

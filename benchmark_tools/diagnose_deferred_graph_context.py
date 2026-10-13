@@ -21,6 +21,16 @@ PROTOCOL = "hillclimb_deferred_graph_context_20261013.json"
 EXPECTED_PAIRS = 23934
 
 
+def exec_peak_rss_kib(status):
+    fields = dict(line.split(":", 1) for line in status.splitlines() if ":" in line)
+    if "VmHWM" not in fields:
+        raise ValueError("Require Linux post-exec RSS high-water accounting")
+    value = fields["VmHWM"].split()
+    if len(value) != 2 or value[1] != "kB" or not value[0].isdigit():
+        raise ValueError("Malformed Linux RSS high-water field")
+    return int(value[0])
+
+
 def diagnose(control, variant, baseline):
     paired = paired_transitions(control, variant)
     if len(baseline) != len(control):
@@ -74,6 +84,7 @@ def run(source, graph_receipt_path, paired_receipt_path, output):
     if Path(__file__).resolve() != source / "benchmark_tools/diagnose_deferred_graph_context.py":
         raise ValueError("Require explicitly bound source root")
     started, cpu = time.monotonic(), time.process_time()
+    rusage_at_start = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
     checked = {}
 
     def consume(item):
@@ -127,10 +138,17 @@ def run(source, graph_receipt_path, paired_receipt_path, output):
         consume(record(Path(sys.modules[module].__file__)))
     for item in checked.values():
         check(item)
+    peak = exec_peak_rss_kib(Path("/proc/self/status").read_text())
+    if peak > protocol["resource_limits"]["memory_gib"] * 1024 ** 2:
+        raise ValueError("Post-exec diagnostic memory exceeds prespecified budget")
+    if time.monotonic() - started > protocol["resource_limits"]["wall_limit_minutes"] * 60:
+        raise ValueError("Diagnostic wall time exceeds prespecified budget")
     result.update(status="complete_paired_baseline_graph_context_verified", checked=list(checked.values()),
         source_revision=subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip(),
         resources={"wall_s": time.monotonic() - started, "cpu_s": time.process_time() - cpu,
-                   "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss},
+                   "linux_post_exec_peak_rss_kib": peak, "rusage_maxrss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+                   "rusage_maxrss_at_diagnostic_start_kib": rusage_at_start,
+                   "rss_scope": "Linux /proc/self/status VmHWM covers this exec, including imports. getrusage maxrss can retain pre-exec launch history; it is not the diagnostic's attributable peak."},
         limitations=protocol["limitations"], defaults_promoted=False, goal_completed=False)
     write_json(output, result)
     return result

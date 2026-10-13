@@ -1,0 +1,32 @@
+{
+  "controlled_child_probe": {
+    "proc_status_memory": [
+      "VmHWM:\t    7680 kB",
+      "VmRSS:\t    7680 kB"
+    ],
+    "rusage_maxrss_kib": 46080
+  },
+  "controlled_parent_allocation_bytes": 33554432,
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "interpretation": "Local getrusage maxima exceed current-exec /proc VmHWM even for tiny Python probes. Original diagnostic named this launch-history counter process_peak_rss_kib; do not use it to attest an attributable diagnostic peak or the 2 GiB budget. Preserve original counts and rerun tested frozen diagnostic into a fresh namespace with explicit post-exec HWM and separate raw rusage counters.",
+  "local_probe": {
+    "proc_status_memory": [
+      "VmHWM:\t   13824 kB",
+      "VmRSS:\t   13824 kB"
+    ],
+    "rusage_maxrss_kib": 8071360
+  },
+  "original_diagnostic": {
+    "bytes": 24013,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_pair_baseline_graph_context_20261013.json",
+    "sha256": "eef3e00789fda6f289788129208fa4e90fdd77a96cc6fafad6cc8c6211fc6aa8"
+  },
+  "prior_tiny_process_observation": {
+    "proc_status_vmhwm_kib": 6144,
+    "proc_status_vmrss_kib": 6144,
+    "rusage_maxrss_kib": 8071360
+  },
+  "scope": "Instrumentation diagnosis only; this does not invalidate paired scientific counts or establish that all historical benchmark RSS measurements share this problem. No fresh inference or timing ranking.",
+  "status": "resource_counter_scope_mismatch_observed_original_attempt_preserved"
+}
