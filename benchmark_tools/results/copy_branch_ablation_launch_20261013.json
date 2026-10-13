@@ -1,0 +1,78 @@
+{
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T19:00:09.902252+00:00",
+  "goal_completed": false,
+  "jobs": [
+    {
+      "arms": [
+        "large_only500",
+        "medium_only500"
+      ],
+      "dataset": "OrthoBench",
+      "dependency": null,
+      "execution_plan": {
+        "bytes": 37439690,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/OrthoBench/execution_plan.json",
+        "sha256": "3f6fc7c16a449179544b2a7f562acabd8d3a7c5cbd7d19db96198cd2d7102555"
+      },
+      "execution_policy": "Exact candidate/constraint and downstream-equivalence proof precedes reused inference; no new native runs on narrow panels. QfO new arms are sequential after terminal parent admission.",
+      "job_id": "24205",
+      "parent_job": "24202",
+      "scope": "Development-exposed cached HMM graph branch ablation with own inferred trees; exact structural reuse for inactive narrow-panel branches. Not fresh full-pipeline runtime."
+    },
+    {
+      "arms": [
+        "large_only500",
+        "medium_only500"
+      ],
+      "dataset": "ThreeKingdoms",
+      "dependency": "afterany:24205",
+      "execution_plan": {
+        "bytes": 95698469,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/ThreeKingdoms/execution_plan.json",
+        "sha256": "dbb950f1da8d5c666261ec66253573321d6a35034bbb81d32e88eaa662984c60"
+      },
+      "execution_policy": "Exact candidate/constraint and downstream-equivalence proof precedes reused inference; no new native runs on narrow panels. QfO new arms are sequential after terminal parent admission.",
+      "job_id": "24206",
+      "parent_job": "24199",
+      "scope": "Development-exposed cached HMM graph branch ablation with own inferred trees; exact structural reuse for inactive narrow-panel branches. Not fresh full-pipeline runtime."
+    },
+    {
+      "arms": [
+        "large_only500",
+        "medium_only500"
+      ],
+      "dataset": "QfO",
+      "dependency": "afterany:24203:24206",
+      "execution_plan": {
+        "bytes": 108208672,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/copy_branch_ablation_r1_v1_20261013/QfO/execution_plan.json",
+        "sha256": "1d734b73acbbafe6d2fa7b5ee38750d520708b7ad485b104940d7c09a109476b"
+      },
+      "execution_policy": "Exact candidate/constraint and downstream-equivalence proof precedes reused inference; no new native runs on narrow panels. QfO new arms are sequential after terminal parent admission.",
+      "job_id": "24207",
+      "parent_job": "24203",
+      "scope": "Development-exposed cached HMM graph branch ablation with own inferred trees; exact structural reuse for inactive narrow-panel branches. Not fresh full-pipeline runtime."
+    }
+  ],
+  "protocol": {
+    "bytes": 6151,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013/benchmark_tools/hillclimb_copy_branch_ablation_20261013.json",
+    "sha256": "32491c9628a4588891b02aed755de35a80a4b29fa9b4d7a1caba1cf1c96e4820"
+  },
+  "resources": {
+    "cpus": 16,
+    "host": "local Threadripper",
+    "memory_gib": 64,
+    "wall_hours": 72
+  },
+  "source_revision": "6aa77a08099874ff77c4584af323f15d498132a2",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v2_20261013",
+  "status": "submitted_not_an_accuracy_result",
+  "tests": {
+    "bytes": 64388,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_runner_tests_20261013.xml",
+    "sha256": "42caf445f1a8fad8e759596696a58b250ac0779acc090331f35189f9b123399f"
+  },
+  "tests_passed": 442
+}
