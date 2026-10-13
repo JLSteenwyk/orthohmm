@@ -1,0 +1,78 @@
+{
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T18:30:01.931121+00:00",
+  "goal_completed": false,
+  "live_job_dependencies": {
+    "fresh_qfo_cap_trial": "24201",
+    "full_qfo_scoring_recovery": "24204",
+    "qfo_own_inferred": "24203"
+  },
+  "preserved_invariants": [
+    "Default profile and existing both-branches bounded deferral inference behavior unchanged.",
+    "500-gene ceiling, copy and panel eligibility thresholds, graph/profile evidence, satellite constraints and duplication/pair inference rules unchanged.",
+    "Experimental CLI/API profiles require fresh high_sensitivity reconcile, satellite_v2, species_overlap and positive_paralogy.",
+    "No running frozen sources, inputs, execution plans, unrelated worktree edits or competing jobs changed."
+  ],
+  "profiles": [
+    "phylogeny_deferred_large",
+    "phylogeny_deferred_medium"
+  ],
+  "protocol": {
+    "bytes": 6151,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/benchmark_tools/hillclimb_copy_branch_ablation_20261013.json",
+    "sha256": "32491c9628a4588891b02aed755de35a80a4b29fa9b4d7a1caba1cf1c96e4820"
+  },
+  "remaining_before_new_accuracy_evaluation": [
+    "Finish or preserve a terminal failure of existing own-inferred QfO variant; retain all endpoints including negative results.",
+    "Implement and test the branch-specific execution runner and exact structural controls, freeze its execution plan and pin admitted graph/candidate/raw-tree inputs.",
+    "Independently reproduce default candidate/constraint products; record eligible and actually deferred families by branch.",
+    "Commit and push before new reference evaluation; evaluate all eight endpoints and preserve inactivity versus actual mechanism activation."
+  ],
+  "runtime_scope": "No new timing result. Future cached-stage experiments remain distinct from fresh pipeline timings; shared-host measurements are confounded.",
+  "source_files": [
+    {
+      "bytes": 63451,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/orthohmm/refinement.py",
+      "sha256": "56d313de64cb38d3c64c3792218b0e6e99209d5483e657950bad2b1d13d7437b"
+    },
+    {
+      "bytes": 10049,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/orthohmm/args_processing.py",
+      "sha256": "e37e83c30d8aafe9809ea121ebbd6fa66c511e7f5e7e8dcf213a3816205ebe49"
+    },
+    {
+      "bytes": 32798,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/orthohmm/orthohmm.py",
+      "sha256": "c795efda8f5ec12bc8d6204ceab8ccfc4d89a50afc50153e51943ee7c9f593d4"
+    },
+    {
+      "bytes": 16587,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/orthohmm/parser.py",
+      "sha256": "3f1f807306bd1756dbacdcf8873fafdbc7f8f6cc5d2ca407253bb225ab1bec89"
+    },
+    {
+      "bytes": 8339,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/benchmark_tools/benchmark_production.py",
+      "sha256": "e60fe40980f1d6a2768a1ebae8a469952ce0c066adc1ef1509e9389217c18125"
+    },
+    {
+      "bytes": 7689,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/benchmark_tools/report_full_qfo_recovery.py",
+      "sha256": "86d2c9b999c04e27c5082de61c892fd1a710a11f422ca73314c745d0ae88210a"
+    },
+    {
+      "bytes": 25942,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013/benchmark_tools/report_hillclimb.py",
+      "sha256": "695985a75c6c8adf0e3f09520139b8a36ef892b964ed7052307cc3ba8051d1cc"
+    }
+  ],
+  "source_revision": "98c477d1864ef5b37d9f805e8fd1e3855d01cc36",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/copy_branch_ablation_r1_v1_20261013",
+  "status": "tested_opt_in_implementation_frozen_new_native_arms_not_launched",
+  "tests": {
+    "bytes": 55989,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/copy_branch_ablation_tests_20261013.xml",
+    "sha256": "6809151097e830143a69aab41e7e9766cc319f28a1481000b939b66a248fbe1d"
+  },
+  "tests_passed": 389
+}
