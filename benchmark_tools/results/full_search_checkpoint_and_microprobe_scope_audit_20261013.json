@@ -1,0 +1,32 @@
+{
+  "accuracy_profiles": {
+    "bytes": 14777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/accuracy.py",
+    "sha256": "1d3356e2a10581b170ea96402c3bce06b71f86b65e723044bfaafe8d5b1c69e3"
+  },
+  "actual_high_sensitivity_k": 4,
+  "checkpoint_scope": "execute_builtin_search keeps completed pair results in memory. The durable high_sensitivity checkpoint is written after the complete initial search, in the network_edges stage. Current initial-search percentages are not durable per-task checkpoints or whole-pipeline completion.",
+  "declared_wall_limit_hours": 240,
+  "defaults_promoted": false,
+  "engine": {
+    "bytes": 21351,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/search/engine.py",
+    "sha256": "0382696556ead1896929ecadf02af9f54cc55484b5430f7e949313388933927f"
+  },
+  "goal_completed": false,
+  "job_id": "24201",
+  "live_job_source_parameters_or_allocation_changed": false,
+  "maximum_profile_build_fraction": 0.0008180608607175974,
+  "microprobe_scope_correction": "Earlier k3 stage and center-recurrence experiments remain valid for their prescribed inputs/settings, but do not exactly match the initial live k4 search. Matched k4 replay now supports sampled Viterbi prioritization independently; it does not validate a recurrence speedup.",
+  "pipeline": {
+    "bytes": 31679,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/orthohmm/orthohmm.py",
+    "sha256": "7c3c008562114910308c75d7946b2ea52ae802886585ccd73bdc83181b994328"
+  },
+  "scheduler": "JobId=24201 ArrayJobId=24190 ArrayTaskId=1 ArrayTaskThrottle=1 JobName=ohmm-full-cap\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=16:23:41 TimeLimit=10-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-12T22:17:48 EligibleTime=2026-10-13T03:36:03\n   AccrueTime=2026-10-12T22:17:48\n   StartTime=2026-10-13T03:36:03 EndTime=2026-10-23T03:36:03 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T03:36:03 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:1083655\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=32 NumTasks=1 CPUs/Task=32 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=32,mem=128G,node=1,billing=32\n   AllocTRES=cpu=32,mem=128G,node=1,billing=32\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=32 MinMemoryNode=128G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/full_search_hillclimb_r1_v3_20261012/benchmark_tools/run_full_search_hillclimb.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/slurm-24190_1.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/slurm-24190_1.log\n   TresPerTask=cpu=32\n   \n\n",
+  "status": "live_job_budget_and_checkpoint_scope_verified",
+  "viterbi_fraction_range": [
+    0.6114710892033064,
+    0.9372396055603152
+  ]
+}

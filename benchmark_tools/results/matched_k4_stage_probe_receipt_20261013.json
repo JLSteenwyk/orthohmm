@@ -1,0 +1,41 @@
+{
+  "defaults_promoted": false,
+  "executor_revision": "88e8dcad",
+  "frozen_tests": {
+    "bytes": 2777,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/matched_k4_stage_probe_frozen_tests_20261013.xml",
+    "sha256": "3804986d5bdbcd68ef4bc27b113c688b6285d113ef229373e6ba10c63461b504"
+  },
+  "goal_completed": false,
+  "helper": {
+    "bytes": 6269,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_live_k4_stage_probe_r1_v1_20261013/benchmark_tools/probe_matched_live_k4_search.py",
+    "sha256": "d5485e1b687bc349720a7d2277ae1243d25d2f22606e8e9b555ccc5703fad4fd"
+  },
+  "independent_readback": {
+    "bytes": 9636,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/matched_k4_stage_probe_independent_20261013.json",
+    "sha256": "3a5d43c4ff3ab562ee436907556ebb9f58f3ee185b2540785308552b75812479"
+  },
+  "job_id": "24223",
+  "launcher": {
+    "bytes": 458,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_live_k4_stage_probe_r1_v1_20261013/benchmark_tools/probe_matched_live_k4_search.slurm",
+    "sha256": "3f1ca5927570cb3a0e9926778ad8cb034c7a9e60f03b6e17773c39e19162a2e2"
+  },
+  "protocol": {
+    "bytes": 2068,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/matched_live_k4_stage_probe_r1_v1_20261013/benchmark_tools/hillclimb_matched_k4_stage_probe_20261013.json",
+    "sha256": "58e2d6b0274fce5d52356bd1c95c9568b527b9c936969aa3bdd9fba44b97a4d6"
+  },
+  "raw_report": {
+    "bytes": 176357,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/matched_live_k4_stage_probe_r1_v1_20261013/report.json",
+    "sha256": "6cb4fce9308eb101bc1540d3f327b0751b9c05b423878f3cf5fe6077f2c63d3e"
+  },
+  "readback_recipe": "import csv,hashlib,importlib.util,json,subprocess,sys\nfrom pathlib import Path\nrepo=Path.cwd()\npath=repo/\"benchmarks/results/matched_live_k4_stage_probe_r1_v1_20261013/report.json\"\nreport=json.loads(path.read_text())\ntext=subprocess.check_output([\"sacct\",\"-j\",\"24223\",\"-X\",\"--format=JobID,State,ExitCode,AllocCPUS\",\"--parsable2\"],text=True)\njobs=list(csv.DictReader(text.splitlines(),delimiter=\"|\"))\nif len(jobs)!=1 or jobs[0]!=dict(JobID=\"24223\",State=\"COMPLETED\",ExitCode=\"0:0\",AllocCPUS=\"4\"): raise ValueError(\"Matched diagnostic not successfully terminal\")\nif report[\"status\"]!=\"complete_matched_live_k4_stages_byte_equivalent\" or len(report[\"cases\"])!=6 or report[\"actual_high_sensitivity_k\"]!=4: raise ValueError(\"Incomplete matched diagnostic\")\nlive_path=repo/\"benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json\"\nlive=json.loads(live_path.read_text());source=Path(live[\"source_root\"]);sys.path.insert(0,str(source))\nfrom orthohmm.search import engine\nfrom orthohmm.search.sequences import SpeciesSequences\nfrom orthohmm.accuracy import resolve_accuracy_profile\nif Path(engine.__file__).resolve()!=source/\"orthohmm/search/engine.py\" or resolve_accuracy_profile(\"high_sensitivity\").kmer_k!=4: raise ValueError(\"Wrong inference source or actual k\")\nhelper_path=repo/\"benchmarks/work/search_stage_probe_r1_v1_20261013/benchmark_tools/probe_search_stage_cost.py\"\nspec=importlib.util.spec_from_file_location(\"independent_matched_k4_helpers\",helper_path);h=importlib.util.module_from_spec(spec);spec.loader.exec_module(h)\nraw_pin=h.record(path)\nfor pin in [*report[\"checked\"],*report[\"runtime\"][\"files\"]]: h.check(pin)\ninputs=next(c[\"inputs\"] for c in live[\"cases\"] if c[\"dataset\"]==\"QfO\" and c[\"label\"]==\"control100\")\npins={Path(p[\"path\"]).name:p for p in inputs};names=h.selected_names(list(pins),3)\nexpected=[(n,names[(i+1)%3],cap) for i,n in enumerate(names) for cap in (100,400)]\nif [(c[\"query_species\"],c[\"target_species\"],c[\"candidate_cap\"]) for c in report[\"cases\"]]!=expected: raise ValueError(\"Sample identities changed\")\nloaded={n:SpeciesSequences.from_fasta(pins[n][\"path\"],n) for n in names}\nrows=[]\nfor case in report[\"cases\"]:\n query,indices=h.subset_species(loaded[case[\"query_species\"]],32);target=loaded[case[\"target_species\"]]\n if query.ids!=case[\"selected_query_ids\"] or indices!=case[\"original_query_indices\"]: raise ValueError(\"Sample query IDs or ordering changed\")\n result=engine.search_species_pair_indexed(query,target,\"BLOSUM62\",band_width=64,kmer_k=4,max_candidates_per_query=case[\"candidate_cap\"],n_threads=4,prefilter_phase_a_topk=5000)\n actual=h.fingerprint_result(result)\n if any(run[\"fingerprint\"]!=actual for run in case[\"runs\"]): raise ValueError(\"Independent native output differs from original or instrumented run\")\n cost=case[\"runs\"][1];stages=cost[\"inclusive_stages\"]\n viterbi=sum(stages.get(n,{}).get(\"wall_s\",0) for n in (\"batch_viterbi_multipair_c\",\"batch_viterbi_c\",\"batch_viterbi_score\"))\n rows.append({\"query\":case[\"query_species\"],\"target\":case[\"target_species\"],\"cap\":case[\"candidate_cap\"],\"candidate_count\":actual[\"candidate_count\"],\"significant_hits\":case[\"runs\"][0][\"significant_hits\"],\"fingerprint\":actual,\"viterbi_fraction_of_instrumented_wall\":viterbi/cost[\"wall_s\"],\"profile_build_fraction_of_instrumented_wall\":stages[\"build_profiles_batch\"][\"wall_s\"]/cost[\"wall_s\"]})\nh.check(raw_pin)\nout=repo/\"benchmark_tools/results/matched_k4_stage_probe_independent_20261013.json\"\nif out.exists(): raise ValueError(\"Independent receipt already exists\")\nh.write_json(out,{\"status\":\"terminal_matched_live_k4_samples_independently_replayed\",\"scheduler\":jobs[0],\"raw_report\":raw_pin,\"source_revision\":report[\"source_revision\"],\"engine_source\":h.record(engine.__file__),\"cases\":rows,\"resources\":report[\"resources\"],\"scope\":\"Six label-free query/complete-target comparisons at actual high_sensitivity k4; cost prioritization only, not a full-dataset profile or accuracy result.\",\"prior_k3_scope\":\"Prior k3 stage and center-recurrence results remain unchanged and valid for their prescribed samples, but are not exact live-k4 parameter matches.\",\"defaults_promoted\":False,\"goal_completed\":False})\nprint(json.dumps({\"cases\":len(rows),\"viterbi_fraction_range\":[min(r[\"viterbi_fraction_of_instrumented_wall\"] for r in rows),max(r[\"viterbi_fraction_of_instrumented_wall\"] for r in rows)],\"maximum_profile_build_fraction\":max(r[\"profile_build_fraction_of_instrumented_wall\"] for r in rows)}))\n",
+  "scope": "Small label-free live-parameter-matched k4 stage-cost confirmation, not accuracy improvement or a fresh full-pipeline speed comparison.",
+  "source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+  "status": "matched_live_k4_stage_diagnostic_completed_and_independently_replayed",
+  "tests_passed": 16
+}

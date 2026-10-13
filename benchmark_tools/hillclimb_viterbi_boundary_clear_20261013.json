@@ -1,0 +1,14 @@
+{
+  "schema": "exact_viterbi_boundary_clear_round_v1",
+  "status": "prespecified_before_implementation_or_timing",
+  "motivation": "The independent live-k4 stage probe confirms Viterbi dominates the six sampled search cases (61-94 percent of instrumented wall), while profile building is below 0.1 percent. Target-length SIMD grouping already exists. The prior center-recurrence experiment showed no gain on its k3 sample and remains unpromoted.",
+  "hypothesis": "The SIMD kernel clears Mc/Ic/Dc over every interior cell in the row's global band union, then immediately overwrites those same cells in left-to-right DP evaluation. Clearing only the two exterior boundary cells may reduce redundant stores without changing the final row state or any score.",
+  "mechanism": "Opt-in compile flag for the CPU AVX2 kernel only. Preserve the existing full-clear build as default. For each active row, clear the global j_lo_min-1 and j_hi_max+1 boundary cells; leave interior initialization to the existing unconditional M/I/D stores, including NEG_INF masking for inactive lanes. Keep center arithmetic on division for the primary contrast.",
+  "invariants": ["unchanged per-lane bands and short-pair full-matrix policy", "unchanged emissions, transitions, gaps, visited DP cells and local restarts", "unchanged pair ordering, target-length grouping and scalar tails", "zero-length and inactive-row handling unchanged", "every interior store executes before any same-row read of that cell", "default exported ABI, pipeline parameters and compiled live libraries unchanged"],
+  "validation": "Compare isolated full-clear and opt-in builds with scalar C and Numba across band and length boundaries, unknown residues, empty inputs, tail batches, pair permutations and thread counts. Require exact integer scores and unchanged input arrays. Do not replace any library used by live jobs.",
+  "benchmark": "Use matched k4 label-free native batches, both candidate caps and identical compiler flags except the explicit opt-in definition. Warm and balance three arms: original frozen live library, newly compiled full-clear library and opt-in boundary-clear library. Record source/input/runtime pins, every repeat, wall and CPU cost, failures and post-exec memory.",
+  "resources": {"cpus": 4, "memory_gib": 16, "wall_limit_minutes": 20, "host": "local shared Threadripper"},
+  "selection": "Advance only with exact scores and reproducible directional cost reductions across multiple batch shapes. Do not infer orthology accuracy or isolated full-pipeline speed from a kernel microbenchmark. Any later pipeline adoption requires broader output-preserving validation.",
+  "defaults_promoted": false,
+  "goal_completed": false
+}
