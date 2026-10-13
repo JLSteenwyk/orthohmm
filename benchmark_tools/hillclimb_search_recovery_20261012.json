@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_development_diagnostic",
+  "prior_round": "benchmark_tools/hillclimb_round1_20261012.json",
+  "baseline_revision": "5edb2f75ba57ae20ed9e92e6719a69dc8636ee6f",
+  "hypothesis": "Missing initial HMM links can reflect exact-kmer sensitivity, the minimum shared-hit threshold, the extension-ranked final cap, the pre-extension shortlist, or HMM significance. Separate interventions can localize recoverable links before expensive full-pipeline trials.",
+  "dataset": "OrthoBench",
+  "input_manifest": "benchmark_tools/results/ob_family_trace_verified_20260916.json",
+  "input_manifest_sha256": "bda00fb593b357bc8f07e43544feae598150ae891ed82c988fb339a92349de0c",
+  "query_scope": "All 1944 retained reference-family genes in their native FASTA order, against complete target proteomes. Query selection is reference-conditioned; this is a diagnostic, not an unbiased accuracy benchmark.",
+  "base_settings": {
+    "matrix_name": "BLOSUM62",
+    "band_width": 64,
+    "kmer_k": 4,
+    "use_reduced_alphabet": false,
+    "min_total_hits": 4,
+    "min_diag_hits": 1,
+    "diag_bin_width": 10,
+    "max_candidates_per_query": 100,
+    "prefilter_phase_a_topk": 5000
+  },
+  "arms": [
+    {"label": "control", "overrides": {}},
+    {"label": "cap400", "overrides": {"max_candidates_per_query": 400}},
+    {"label": "shared_hit1", "overrides": {"min_total_hits": 1}},
+    {"label": "reduced_k4", "overrides": {"use_reduced_alphabet": true}},
+    {"label": "exact_k3", "overrides": {"kmer_k": 3}},
+    {"label": "shortlist20000", "overrides": {"prefilter_phase_a_topk": 20000}}
+  ],
+  "significance_thresholds": [0.0001, 0.001],
+  "significance_scope": "Reuse saved unfiltered E-values at the two prespecified thresholds; do not rescore or claim calibrated orthology significance from this comparison.",
+  "invariants": [
+    "Use a clean immutable source revision and fingerprint Python, dependencies, C extensions, scorer files, FASTAs, reference-pair trace, and plan before and after each arm.",
+    "Require the C/OpenMP prefilter and CPU HMM scorer; never substitute the differently ranked Numba prefilter silently. Set CUDA_VISIBLE_DEVICES to empty before importing the engine.",
+    "Do not force reference pairs into candidate selection. Labels only select diagnostic queries and classify observed watched pairs; candidate scoring remains label-free.",
+    "Save every scored candidate, normalized score, and E-value, not only accepted reference pairs. Preserve full target database length for E-values.",
+    "Require exact candidate and numerical agreement between implicit production settings and the explicit control settings on a CPU fixture. Compare fresh control with independently validated historical CPU observations separately; do not assume historical execution equivalence.",
+    "Default search, membership, graph, and reconciliation settings remain unchanged. No automatic default promotion."
+  ],
+  "evaluation": {
+    "diagnostic_endpoints": ["accepted watched pairs", "scored nonsignificant watched pairs", "prefilter-excluded watched pairs", "gained and lost watched links versus control", "total candidate and significant-hit counts", "historically absent-link recovery", "wall seconds", "CPU seconds", "peak RSS", "competing host activity"],
+    "classification": "A link gained by a single prefilter intervention with unchanged HMM significance supports that intervention as a sufficient recovery mechanism, not a unique historical causal attribution. A link scored but nonsignificant localizes the observed failure downstream of candidate selection. Remaining absent links are unresolved, not automatically HMM failures.",
+    "selection": "Rank development hypotheses by recovered historically absent accepted links, control-link losses, candidate burden, and scope. Do not estimate precision from unlabelled pairs or treat diagnostic recall as orthogroup F1. Prespecify a subsequent small full-pipeline round for at most two promising interventions, including interactions only after separate effects are known.",
+    "full_pipeline_followup": "Reevaluate all eight existing endpoints on complete dataset inputs with fixed candidate/phylogenetic controls and native scoring. Use metric-vector/Pareto reporting and the existing 0.005 point-estimate development screen. Preserve all failures, missing endpoints, and sampling limitations.",
+    "generalization": "Development-exposed data only; no independent confirmation or universal accuracy claims."
+  },
+  "resources": {
+    "host": "local Threadripper / bizon",
+    "cpus": 8,
+    "memory": "64G",
+    "maximum_wall_per_arm": "12:00:00",
+    "concurrent_arms": 1,
+    "timing_scope": "Fresh query-restricted search diagnostic on a shared host, not fresh full-pipeline timing or isolated comparative efficiency.",
+    "unrelated_jobs": "Do not stop, suspend, or modify unrelated work. No DGX or quiet-window prerequisite."
+  },
+  "execution": "Retain round-one jobs and outputs. Prepare and test this distinct diagnostic while they run; use sequential Slurm arms and new output namespaces. Inspect existing handles before retries and retain failed attempts.",
+  "git": "Commit and push this plan before evaluating its arms, then tested implementation and validated evidence milestones. Stage only task-owned files."
+}
