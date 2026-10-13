@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_development_mechanistic_diagnostic",
+  "hypothesis": "The QfO loss from broader CPM 0.08 candidates may partly arise from changed inferred species-tree context rather than the broader candidates alone.",
+  "design": "Retain the completed QfO broader_direct candidate partition, satellite constraints, raw gene trees, aligner, tree builder, species_overlap rooting rule, positive_paralogy pair rule, and high_confidence_pair satellite policy. Change only the supplied species-tree input after establishing supplied-own-tree control equivalence.",
+  "arms": [
+    {"label": "broader_own_tree", "tree_source": "broader_direct", "gate": "Exact RootHOG, native pair and confidence products reproduce broader_direct; supplied rooted topology is preserved; all reconciled raw gene trees hit their checkpoints."},
+    {"label": "broader_baseline_tree", "tree_source": "control_direct", "gate": "Run only after successful own-tree native equivalence. All other inputs and flags remain identical."}
+  ],
+  "datasets": ["QfO"],
+  "resource_limits": {"cpus": 16, "memory_gib": 64, "wall_hours": 12, "arms_sequential": true},
+  "evaluation": {
+    "endpoints": ["VGNC F", "SwissTrees F", "TreeFam-A F", "EC", "GO", "FAS"],
+    "diagnostics": ["precision", "recall", "gene coverage", "native pair counts", "root group counts", "rooted species-tree clade distance", "checkpoint reuse", "incremental wall time", "CPU time", "peak RSS", "failures"],
+    "interpretation": "Compare the held-tree arm with the reproduced own-tree control and retained CPM 0.1 control separately. This diagnoses species-tree handoff conditional on fixed broader candidates; it does not prove an independent anchor-inference method will improve other datasets. No parameter search or defaults promotion in this diagnostic.",
+    "scoring": "Validate native output and frozen input/source hashes before scoring; independently read back all six native assessments. Own-tree control must reproduce deterministic VGNC, SwissTrees, TreeFam-A, EC and GO endpoints; FAS is unseeded and reported descriptively, not required to match exactly."
+  },
+  "stop_rules": "If supplied-own-tree control equivalence, gene coverage, checkpoint reuse, runtime/source/input pins, or deterministic control scoring fail, preserve the failure and do not evaluate the held-tree variant. Do not silently relax gates or rerun into an existing namespace.",
+  "limitations": ["All inputs are development-exposed.", "TreeFam is supporting evidence.", "Species-tree substitution changes the complete tree, including branch lengths and rooting context; topology difference alone does not identify the causal feature.", "Functional similarity is not orthology accuracy; FAS is stochastic.", "Cached reconciliation and shared-host timings are not fresh full-pipeline or isolated timing measurements.", "This is a bounded follow-up to completed membership cells, not a duplicate of ongoing full-search or satellite-policy experiments."],
+  "git": "Commit and push this plan and tested runner before evaluation; freeze the execution source; retain successful and failed cases and push verified milestones."
+}
