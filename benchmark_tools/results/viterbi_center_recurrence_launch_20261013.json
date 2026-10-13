@@ -1,0 +1,60 @@
+{
+  "addendum": {
+    "bytes": 1481,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_center_recurrence_r1_v1_20261013/benchmark_tools/hillclimb_viterbi_center_benchmark_addendum_20261013.json",
+    "sha256": "f9b73b861006ef47500dd827e6b7b65c272aa66bd7bf5fd37d88939c2824c3e1"
+  },
+  "allocation": {
+    "cpus": 4,
+    "memory_gib": 16,
+    "wall_limit_minutes": 20
+  },
+  "defaults_promoted": false,
+  "frozen_tests": {
+    "bytes": 23250,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_center_recurrence_frozen_tests_20261013.xml",
+    "sha256": "afbebef3ac009ae2d60a47e0f99028ecfe7823ae719db1ee86adc8aa4895ea76"
+  },
+  "frozen_tests_passed": 149,
+  "frozen_tests_skipped": [
+    {
+      "reason": "C Viterbi kernel not built",
+      "test": "test_viterbi_c_matches_numba"
+    },
+    {
+      "reason": "C Viterbi kernel not built",
+      "test": "test_viterbi_multipair_matches_scalar"
+    },
+    {
+      "reason": "C kernel not built",
+      "test": "test_viterbi_xdrop_bounded_by_exact"
+    },
+    {
+      "reason": "CUDA kernel not available",
+      "test": "test_viterbi_cuda_matches_scalar"
+    }
+  ],
+  "goal_completed": false,
+  "helper": {
+    "bytes": 10027,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_center_recurrence_r1_v1_20261013/benchmark_tools/benchmark_viterbi_center_recurrence.py",
+    "sha256": "f500d3e604b677250702db329908f17efb9b0d1a5216e00f7de5f76873e1e4d4"
+  },
+  "job_id": "24217",
+  "launcher": {
+    "bytes": 488,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_center_recurrence_r1_v1_20261013/benchmark_tools/benchmark_viterbi_center_recurrence.slurm",
+    "sha256": "501caf9a71e2436fa9534e089cd75f903eaf20e1718b4a88fc6b46a09cbb7740"
+  },
+  "live_libraries_overwritten": false,
+  "plan": {
+    "bytes": 2929,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_center_recurrence_r1_v1_20261013/benchmark_tools/hillclimb_viterbi_center_recurrence_20261013.json",
+    "sha256": "5a15fad86ac0ba97c0fbd1049b9eb1fb42a01681eca3c701977f4629daeb6162"
+  },
+  "source_revision": "2f924dbf",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/viterbi_center_recurrence_r1_v1_20261013",
+  "status": "frozen_opt_in_kernel_comparison_submitted",
+  "working_tests_passed": 152,
+  "working_tests_skipped": 1
+}

@@ -1,0 +1,49 @@
+{
+  "accuracy_scores_added": false,
+  "case_count": 6,
+  "cases_faster_by_median_cpu": 0,
+  "cases_faster_by_median_wall": 0,
+  "comparison_table": "benchmark_tools/results/hillclimb_comparison_readback_v9_20261013/scores.tsv remains unchanged; this score-equivalent microbenchmark is not a new eight-endpoint method evaluation.",
+  "cpu_ratio_range_recurrence_over_original": [
+    1.0085613845231483,
+    1.0276793277510214
+  ],
+  "decision": "No advancement or default promotion: all six paired median wall and CPU ratios exceed 1. Retain the opt-in experiment and unsuccessful outcome. Shared-host measurements do not prove a universal slowdown.",
+  "defaults_promoted": false,
+  "exact_integer_scores_and_input_arrays_replayed": true,
+  "goal_completed": false,
+  "independent_readback": {
+    "bytes": 3846,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_center_recurrence_independent_r1_v2_20261013/report.json",
+    "sha256": "6325ab5ecaea816426e27a62dc93de0af887c838e3a14c68496234dda69b7bef"
+  },
+  "job_id": "24217",
+  "live_jobs_observed": {
+    "24190_1": "RUNNING fresh QfO initial search, 86.44 percent of that stage at observation",
+    "24190_2": "PENDING array limit",
+    "24204": "PENDING dependency",
+    "24214": "RUNNING QfO phylogeny components"
+  },
+  "live_libraries_overwritten": false,
+  "next_action": "Continue fresh HMM candidate-sensitivity and bounded large-copy phylogeny-component experiments; independently admit their actual native/scoring outputs when terminal. Do not infer their outcomes from kernel timing.",
+  "raw_capture": {
+    "bytes": 56641,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/viterbi_center_recurrence_raw_capture_20261013.json",
+    "sha256": "ea59b8d11f5fd56cc803baecc4e32b2c466343804d2af2af8aeedb911c2ff874"
+  },
+  "retained_raw_report": {
+    "bytes": 183978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/viterbi_center_recurrence_r1_v1_20261013/report.json",
+    "sha256": "3442f26a178556adede6cec01fc2b17bf6f4a8a3f6c9c1b7fe64ca3fb915c604"
+  },
+  "scientific_environment_changed": false,
+  "selection_rule": "Advance only with exact scores and repeatable directional reductions on multiple batch shapes.",
+  "source_revision": "2f924dbf69a2f3cee4f8297b8fd43cdfae29c97c",
+  "status": "exact_kernel_experiment_rejected_for_advancement",
+  "timed_runs_per_case": 18,
+  "unrelated_jobs_stopped": false,
+  "wall_ratio_range_recurrence_over_original": [
+    1.0055205472858177,
+    1.0238676530852122
+  ]
+}

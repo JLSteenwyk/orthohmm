@@ -1,0 +1,79 @@
+{
+  "cases": [
+    {
+      "candidate_pairs": 3200,
+      "cap": 100,
+      "median_recurrence_over_division_process_cpu_s": 1.0116843414603838,
+      "median_recurrence_over_division_wall_s": 1.0128431834913534,
+      "median_recurrence_over_original_division_process_cpu_s": 1.0085613845231483,
+      "median_recurrence_over_original_division_wall_s": 1.0055205472858177,
+      "query": "UP000001312_665079.fasta",
+      "target": "UP000002485_284812.fasta"
+    },
+    {
+      "candidate_pairs": 12800,
+      "cap": 400,
+      "median_recurrence_over_division_process_cpu_s": 1.0143334159459965,
+      "median_recurrence_over_division_wall_s": 1.0068247755141442,
+      "median_recurrence_over_original_division_process_cpu_s": 1.0276793277510214,
+      "median_recurrence_over_original_division_wall_s": 1.0238676530852122,
+      "query": "UP000001312_665079.fasta",
+      "target": "UP000002485_284812.fasta"
+    },
+    {
+      "candidate_pairs": 3200,
+      "cap": 100,
+      "median_recurrence_over_division_process_cpu_s": 1.0137356602805707,
+      "median_recurrence_over_division_wall_s": 1.0140802596996576,
+      "median_recurrence_over_original_division_process_cpu_s": 1.015293205406799,
+      "median_recurrence_over_original_division_wall_s": 1.015379858334444,
+      "query": "UP000002485_284812.fasta",
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "candidate_pairs": 12800,
+      "cap": 400,
+      "median_recurrence_over_division_process_cpu_s": 1.0132108138914775,
+      "median_recurrence_over_division_wall_s": 1.0204902502264215,
+      "median_recurrence_over_original_division_process_cpu_s": 1.0153178468960604,
+      "median_recurrence_over_original_division_wall_s": 1.0223732024070737,
+      "query": "UP000002485_284812.fasta",
+      "target": "UP000001570_224308.fasta"
+    },
+    {
+      "candidate_pairs": 3200,
+      "cap": 100,
+      "median_recurrence_over_division_process_cpu_s": 1.0106318063303534,
+      "median_recurrence_over_division_wall_s": 1.0124130913336324,
+      "median_recurrence_over_original_division_process_cpu_s": 1.0128738463129041,
+      "median_recurrence_over_original_division_wall_s": 1.0087856492950151,
+      "query": "UP000001570_224308.fasta",
+      "target": "UP000001312_665079.fasta"
+    },
+    {
+      "candidate_pairs": 12800,
+      "cap": 400,
+      "median_recurrence_over_division_process_cpu_s": 1.0091809752610372,
+      "median_recurrence_over_division_wall_s": 1.0045665229529028,
+      "median_recurrence_over_original_division_process_cpu_s": 1.011282039992405,
+      "median_recurrence_over_original_division_wall_s": 1.0072957855128475,
+      "query": "UP000001570_224308.fasta",
+      "target": "UP000001312_665079.fasta"
+    }
+  ],
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "raw_report": {
+    "bytes": 183978,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/viterbi_center_recurrence_r1_v1_20261013/report.json",
+    "sha256": "3442f26a178556adede6cec01fc2b17bf6f4a8a3f6c9c1b7fe64ca3fb915c604"
+  },
+  "scheduler": {
+    "ExitCode": "0:0",
+    "JobID": "24217",
+    "State": "COMPLETED"
+  },
+  "scope": "Exact kernel-output replay and raw timing arithmetic; no new accuracy or full-pipeline speed claim.",
+  "source_revision": "2f924dbf69a2f3cee4f8297b8fd43cdfae29c97c",
+  "status": "terminal_kernel_arrays_scores_and_timings_independently_verified"
+}
