@@ -23,6 +23,72 @@ def row(a="A", b="B", category="TP", stage="predicted", cross="True"):
         "reverse_normalized_score": "4.3", "same_root_hog": "True"}
 
 
+def helper_sources(tmp_path, monkeypatch):
+    repo, source = tmp_path / "repo", tmp_path / "source"
+    relative = Path("benchmark_tools/run_membership_hillclimb.py")
+    historical = ("import os\nPRODUCTS = ('pairs',)\n"
+        "def argument(argv, flag):\n    return argv[argv.index(flag) + 1]\n"
+        "def score_qfo(repo, folder):\n    return folder\n")
+    for root in (repo, source):
+        path = root / relative
+        path.parent.mkdir(parents=True)
+        path.write_text(historical)
+    old = record(repo / relative)
+    current = source / relative
+    current.write_text(historical.replace("return folder", "return repo / folder"))
+    commands = []
+    def git_show(command):
+        commands.append(command)
+        return historical.encode()
+    monkeypatch.setattr(wrapper.subprocess, "check_output", git_show)
+    return repo, source, old, current, historical, commands
+
+
+def test_source_equivalence_records_historical_blob_and_only_unused_body_change(tmp_path, monkeypatch):
+    repo, source, old, current, _, commands = helper_sources(tmp_path, monkeypatch)
+    executed, proof = wrapper.tracer_source_identity(repo, source, old, "old-revision")
+    assert executed == record(current) and executed["sha256"] != old["sha256"]
+    assert proof["historical_source"] == old and proof["executed_source"] == executed
+    assert proof["tracer_import"] == "argument"
+    assert commands == [["git", "-C", str(source), "show", "old-revision:benchmark_tools/run_membership_hillclimb.py"]]
+
+
+@pytest.mark.parametrize("mutation", ["argument", "imports", "constant", "decorator", "default", "signature", "duplicate", "missing", "old_hash", "old_size", "revision", "other_module"])
+def test_source_equivalence_rejects_changed_dependency_or_unproven_history(tmp_path, monkeypatch, mutation):
+    repo, source, old, current, _, _ = helper_sources(tmp_path, monkeypatch)
+    code = current.read_text()
+    revision = "old-revision"
+    if mutation == "argument":
+        code = code.replace("argv.index(flag) + 1", "argv.index(flag)")
+    elif mutation == "imports":
+        code = code.replace("import os", "import sys")
+    elif mutation == "constant":
+        code = code.replace("('pairs',)", "('different',)")
+    elif mutation == "decorator":
+        code = code.replace("def score_qfo", "@decorator\ndef score_qfo")
+    elif mutation == "default":
+        code = code.replace("repo, folder):", "repo, folder=side_effect()):")
+    elif mutation == "signature":
+        code = code.replace("repo, folder):", "repo, folder, extra):")
+    elif mutation == "duplicate":
+        code += "\ndef score_qfo(repo, folder):\n    return folder\n"
+    elif mutation == "missing":
+        code = code.replace("def score_qfo", "def renamed")
+    elif mutation == "old_hash":
+        old["sha256"] = "wrong"
+    elif mutation == "old_size":
+        old["bytes"] += 1
+    elif mutation == "revision":
+        revision = None
+    else:
+        path = source / "benchmark_tools/other.py"
+        path.write_text("changed")
+        old["path"] = str(repo / "benchmark_tools/other.py")
+    current.write_text(code)
+    with pytest.raises(ValueError):
+        wrapper.tracer_source_identity(repo, source, old, revision)
+
+
 def test_paired_transitions_keep_rescues_losses_and_within_species_rows():
     left = [row("A", "B", "FN", "different_candidate_families"), row("C", "D"),
             row("E", "F", "FN", "reference_within_species", "False")]

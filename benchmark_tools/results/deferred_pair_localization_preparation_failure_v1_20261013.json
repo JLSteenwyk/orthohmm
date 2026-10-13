@@ -1,0 +1,26 @@
+{
+  "defaults_promoted": false,
+  "diagnosis": "Historical-to-current source diff changes only unused score_qfo body. Current argument parser and remaining module AST are unchanged; a tested historical-blob/AST admission proof will be required by the replacement attempt.",
+  "evidence_scope": "Prior observed exec session 11682 exited 1; current check confirms no output namespace. This receipt is a retrospective failure record, not a captured traceback.",
+  "goal_completed": false,
+  "intended_output": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_reference_localization_r1_v1_20261013",
+  "observed_error": "Existing reference-trace helper changed: benchmark_tools/run_membership_hillclimb.py",
+  "observed_error_type": "ValueError",
+  "previous_plan": {
+    "bytes": 7918,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_v3_20261012.json",
+    "sha256": "89468169bf0c9b7a5129352bf856519d6d1385be3aa63ff4a42360c0e28b64dd"
+  },
+  "protocol": {
+    "bytes": 2909,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v1_20261013/benchmark_tools/hillclimb_deferred_pair_localization_20261013.json",
+    "sha256": "3afc97152e2f0e779a4ea00dab0414b644d8258c5f5dc43b92b163a691d81ea8"
+  },
+  "source_revision": "84cfed28150a1ca5985bd8801264cef98fb105e1",
+  "status": "preparation_failed_before_output_or_scheduler_submission",
+  "wrapper": {
+    "bytes": 11629,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_reference_localization_r1_v1_20261013/benchmark_tools/trace_deferred_reference_pairs.py",
+    "sha256": "3ae7dc0b0ae810457b5a932fbada6c699123caa7f86bd989f6667e867f590189"
+  }
+}

@@ -1,9 +1,11 @@
 """Reuse the tested VGNC stage tracer for independently admitted deferral cells."""
 
 import argparse
+import ast
 from collections import Counter
 from copy import deepcopy
 import csv
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -19,6 +21,32 @@ PROTOCOL = "hillclimb_deferred_pair_localization_20261013.json"
 LABELS = ("control", "deferred500")
 IMMUTABLE_FIELDS = ("left", "right", "reference_label", "native_gene_left", "native_gene_right",
     "reference_is_cross_species", "initial_hit_directions", "forward_normalized_score", "reverse_normalized_score")
+
+
+def tracer_source_identity(repo, source, old, revision):
+    relative = Path(old["path"]).relative_to(repo)
+    current = record(source / relative)
+    if current["sha256"] == old["sha256"]:
+        return current, None
+    if relative != Path("benchmark_tools/run_membership_hillclimb.py"):
+        raise ValueError("Existing reference-trace helper changed: " + str(relative))
+    if not isinstance(revision, str) or not revision:
+        raise ValueError("Require historical source revision for helper equivalence")
+    historical = subprocess.check_output(["git", "-C", str(source), "show", revision + ":" + relative.as_posix()])
+    if len(historical) != old["bytes"] or hashlib.sha256(historical).hexdigest() != old["sha256"]:
+        raise ValueError("Historical helper blob does not match original source receipt")
+    trees = [ast.parse(historical), ast.parse((source / relative).read_bytes())]
+    # The unchanged tracer imports only argument; score_qfo is never invoked.
+    for tree in trees:
+        scorers = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name == "score_qfo"]
+        if len(scorers) != 1:
+            raise ValueError("Require one unused scoring function in historical and current helpers")
+        scorers[0].body = [ast.Pass()]
+    if ast.dump(trees[0], include_attributes=False) != ast.dump(trees[1], include_attributes=False):
+        raise ValueError("Tracer dependency changed outside unused score_qfo body")
+    return current, {"historical_source": old, "historical_revision": revision, "executed_source": current,
+        "proof": "Historical blob hash verified; full module AST identical except unused score_qfo body.",
+        "tracer_import": "argument", "unused_function": "score_qfo"}
 
 
 def paired_transitions(left, right):
@@ -73,13 +101,12 @@ def prepare(repo, source, receipt_path, previous_plan_path, previous_trace_path,
     parent = json.loads(Path(captures[0]["snapshot"]["path"]).read_text())
     if Path(parent["repo"]).resolve() != repo or tuple(c["label"] for c in parent["cases"]) != LABELS:
         raise ValueError("Wrong inferred-parent repository or ordered cases")
-    sources = []
+    sources, equivalence = [], []
     for old in previous["sources"]:
-        relative = Path(old["path"]).relative_to(repo)
-        current = record(source / relative)
-        if current["sha256"] != old["sha256"]:
-            raise ValueError("Existing reference-trace helper changed: " + str(relative))
+        current, proof = tracer_source_identity(repo, source, old, previous.get("source_revision"))
         sources.append(current)
+        if proof is not None:
+            equivalence.append(proof)
     sources.extend([record(Path(__file__)), record(source / "benchmark_tools/trace_deferred_reference_pairs.slurm")])
     cases = []
     for cell, case in zip(cells, parent["cases"]):
@@ -117,6 +144,7 @@ def prepare(repo, source, receipt_path, previous_plan_path, previous_trace_path,
         case["trace_plan"]["source_revision"] = revision
     plan = {"status": "prepared_unrun", "repo": str(repo), "source_root": str(source), "source_revision": revision,
         "output": str(output), "inputs": checked, "sources": sources, "cases": cases,
+        "tracer_source_equivalence": equivalence,
         "original_control_table": trace["table"], "cpus": 1, "memory_gib": 8,
         "scope": "Development-exposed diagnostic reusing completed native inference; not new search, accuracy gain, or inference timing."}
     output.mkdir(parents=True)
