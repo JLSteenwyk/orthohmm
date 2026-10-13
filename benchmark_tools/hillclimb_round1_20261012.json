@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_development_experiment",
+  "baseline_revision": "a14a24cd",
+  "scientific_baseline": "OrthoHMM 0.5.0 high_sensitivity / satellite_v2",
+  "hypothesis": "Indirect high-confidence ortholog paths within a reconciled root group can support satellite retention without inventing ortholog pairs; broader candidates may preserve missing duplication evidence.",
+  "arms": [
+    {"label": "control_direct", "cpm_resolution": 0.1, "membership_rule": "high_confidence_pair"},
+    {"label": "control_path", "cpm_resolution": 0.1, "membership_rule": "high_confidence_path"},
+    {"label": "broader_direct", "cpm_resolution": 0.08, "membership_rule": "high_confidence_pair"},
+    {"label": "broader_path", "cpm_resolution": 0.08, "membership_rule": "high_confidence_path"}
+  ],
+  "constraints": {
+    "initial_search": "Retain original HMM-derived hits for this factorial. Cached replays cannot assess recovery of hits absent from the initial search.",
+    "candidate_expansion": "Use unchanged satellite_v2 parameters on previously prepared CPM-specific HMM seeds.",
+    "tree_rules": "species_overlap / positive_paralogy / min_variance",
+    "path_support": "Only existing high-confidence ortholog edges inside the same native root group. Do not add transitive pair predictions or join native root groups.",
+    "defaults": "Do not change production defaults based on this development round.",
+    "baseline_integrity": "Use new output directories, immutable cached inputs, and exact direct-control output checks before interpreting variants.",
+    "resources": "Use the local Threadripper. Do not stop unrelated jobs. Shared-host and incremental replay times are descriptive, not isolated full-pipeline efficiency rankings."
+  },
+  "evaluation": {
+    "primary": ["OrthoBench weighted RefOG F1", "QfO VGNC F1", "QfO SwissTrees F1", "QfO TreeFam-A pooled F1"],
+    "secondary": ["QfO EC similarity", "QfO GO similarity", "QfO FAS similarity", "Three Kingdoms BUSCO-reference pair F1"],
+    "diagnostics": ["precision", "recall", "protein coverage", "ortholog pair count", "failures", "wall time", "CPU time", "peak RSS"],
+    "selection": "Report the complete metric vector and nondominated configurations, not a rank based on the six-metric mean. A development candidate requires an improvement in at least one primary endpoint and no decline greater than 0.005 on any measured endpoint relative to the direct control. This is a screening tolerance, not a statistical noninferiority claim. Missing endpoints mean screening remains incomplete.",
+    "uncertainty": "Use paired family uncertainty where supported; retain conventional native VGNC/GO/EC summaries, descriptive pooled TreeFam and conditional FAS sampling limits.",
+    "generalization": "All existing datasets, including YGOB and simulations already inspected, are development-exposed. Freeze any selected method before confirmation on genuinely unexposed data."
+  },
+  "stages": [
+    "Implement opt-in membership rule and regression tests; preserve direct-policy semantics.",
+    "Run all four arms on OrthoBench with validated cached trees, record all successes and failures, and score after inference.",
+    "Run the same prespecified arms on corrected QfO and Three Kingdoms where compatible complete checkpoints exist; preserve unavailable endpoints explicitly.",
+    "Summarize every metric and exact control comparisons before selecting any development candidate.",
+    "Design a separate bounded fresh-HMM candidate-recovery experiment after this factorial; do not describe cached clustering experiments as fresh search improvements."
+  ],
+  "git": "Commit and push the plan, tested implementation, and verified result milestones. Stage only experiment-owned files."
+}
