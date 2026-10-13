@@ -1,0 +1,31 @@
+{
+  "defaults_promoted": false,
+  "errors": 0,
+  "failures": 0,
+  "goal_completed": false,
+  "junit": {
+    "bytes": 70720,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_repaired_reader_frozen_tests_20261013.xml",
+    "sha256": "fbb842405b8380e22ef1e666b850777090aaecf8040cd8b5e04e17621a50ffd8"
+  },
+  "orthobench": {
+    "bytes": 762054,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_components_independent_r1_v2_20261013/OrthoBench/report.json",
+    "sha256": "0fc8cceed739f80d246c8a3efbe408320a5c253cc65cba03ef5e29d9bf78d0ff"
+  },
+  "passed": 330,
+  "prior_reader_failure": {
+    "bytes": 1494,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/large_copy_component_orthobench_reader_failure_20261013.json",
+    "sha256": "3e9e9aab917700cb3e5964bf58aa09688cc04cb17cc69095ab0bb181e071f3b3"
+  },
+  "reader": {
+    "bytes": 8074,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_reader_r1_v2_20261013/benchmark_tools/readback_large_copy_components.py",
+    "sha256": "d75cb6cbfc6eccee45ec14a26decf4d0d2dae8dc31b1355cc0703f0c42c70035"
+  },
+  "scope": "Reader-only JSON ownership correction; actual readback checks byte identity of every scientific Python module and non-reader benchmark helper against the original producer. No inference changes or relaxed ownership checks.",
+  "source_revision": "079ccc8ef9f1cb6d435de6dabc0778bf4118d69b",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/large_copy_component_reader_r1_v2_20261013",
+  "status": "frozen_repaired_reader_regression_and_orthobench_real_readback_passed"
+}
