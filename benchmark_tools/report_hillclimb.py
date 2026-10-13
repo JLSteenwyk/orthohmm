@@ -49,7 +49,7 @@ def reporter_sources():
              "report_deferred_cells.py", "run_deferred_copy_split.py", "deferred_qfo_inferred.py",
              "run_deferred_inferred_supplement.py", "run_held_tree_hillclimb.py",
              "run_three_kingdoms_membership_supplement.py", "prepare_ob_candidate_neighborhood.py",
-             "run_qfo_recovered_assessment.py")
+             "run_qfo_recovered_assessment.py", "report_full_qfo_recovery.py", "recover_full_qfo_search.py")
     return [record(Path(__file__)), *[record(Path(__file__).with_name(name)) for name in names]]
 
 
@@ -290,7 +290,8 @@ def screen(vectors, control):
 
 
 def build_report(repo, registry_path, membership_root, supplement_path, full_root, output,
-                 deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None, deferred_tk_root=None):
+                 deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None, deferred_tk_root=None,
+                 full_qfo_recovery_root=None):
     output.mkdir(parents=True, exist_ok=False)
     snapshots = output / "snapshots"
     snapshots.mkdir()
@@ -329,6 +330,7 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
                     "dataset": dataset, "producer_status": row["status"], "status": row["status"], "scores": {},
                     "source_snapshot": capture["snapshot"], "claimed_scores": row.get("scores", {}),
                     "producer_job_id": report.get("job_id"), "producer_scope": report.get("scope")}
+            cell.update({k: row[k] for k in ("error", "error_type") if k in row})
             if row["status"] == "scored_development_result":
                 write_json(output / "progress.json", {"status": "content_readback_running",
                     "active_cell": {"kind": kind, "dataset": dataset, "label": label}, "processed_cells": len(cells)})
@@ -343,6 +345,13 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
             if label not in observed and not (kind == "supplement" and label == "control_path"):
                 cells.append({"method_key": ("membership" if kind == "supplement" else kind) + ":" + label,
                     "dataset": dataset, "status": "not_yet_reported_execution_state_not_inferred", "scores": {}})
+    if full_qfo_recovery_root is not None:
+        from benchmark_tools.report_full_qfo_recovery import collect_recovered_cells
+        write_json(output / "progress.json", {"status": "content_readback_running",
+            "active_cell": {"kind": "full_search_recovery", "dataset": "QfO"}, "processed_cells": len(cells)})
+        admitted, extra_captures = collect_recovered_cells(repo, full_qfo_recovery_root, snapshots)
+        cells.extend(admitted)
+        captures.extend(extra_captures)
     deferred_specs = []
     if deferred_fixed_root is not None:
         deferred_specs.append(("deferred_fixed", "QfO", deferred_fixed_root))
@@ -378,6 +387,7 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
             "FAS is unseeded: small point differences and Pareto dominance involving it are descriptive, not demonstrated superiority.",
             "Resource observations retain their original scopes; cached replay and fresh full-pipeline times must not be ranked together.",
             "Fixed-tree copy-deferral diagnostics are separate from candidate-specific inferred-tree vectors and cannot fill their missing endpoints.",
+            "Full-search QfO scoring recoveries retain original failed attempts; recovered scoring wall time is not fresh inference runtime.",
             "Incomplete cells remain missing, not zero. Content snapshots do not imply all scheduler tasks have completed."]}
     write_json(output / "report.json", report)
     write_json(output / "progress.json", {"status": "content_snapshot_readback_finished",
@@ -395,7 +405,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "registry", "membership-root", "supplement", "full-root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root", "deferred-tk-root"):
+    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root", "deferred-tk-root", "full-qfo-recovery-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     report = build_report(args.repo.resolve(), args.registry.resolve(), args.membership_root.resolve(),
@@ -403,7 +413,8 @@ def main():
                           args.deferred_fixed_root.resolve() if args.deferred_fixed_root else None,
                           args.deferred_inferred_root.resolve() if args.deferred_inferred_root else None,
                           args.deferred_qfo_root.resolve() if args.deferred_qfo_root else None,
-                          args.deferred_tk_root.resolve() if args.deferred_tk_root else None)
+                          args.deferred_tk_root.resolve() if args.deferred_tk_root else None,
+                          args.full_qfo_recovery_root.resolve() if args.full_qfo_recovery_root else None)
     print(json.dumps({"methods": len(report["methods"]), "readback_failures": len(report["readback_failures"])}))
     return 1 if report["readback_failures"] else 0
 
