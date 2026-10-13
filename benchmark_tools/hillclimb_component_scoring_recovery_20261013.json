@@ -1,0 +1,15 @@
+{
+  "schema": "component_scoring_only_recovery_v1",
+  "status": "prespecified_before_scoring_recovery",
+  "motivation": "The component parent failed with signal 11 during post-native readback. A clean process running the original frozen native verifier completed successfully in job 24219, preserving the full gene universe and verifying pairs, confidence and tree outputs. Recover scoring only; preserve both failed parent attempts.",
+  "native_source": "large_copy_components_r1_v2_20261013/QfO, frozen revision 9e2584495ce78cf475cb41eefb4fcaab4fbd66e6",
+  "operation": "Require successful terminal clean native probe, frozen original inputs/source/runtime, exact native artifact hashes and unchanged command. Call the original frozen score_qfo helper in a fresh scoring namespace. Do not call candidate construction, native inference or default promotion.",
+  "endpoints": ["VGNC F", "SwissTrees F", "TreeFam-A F", "EC", "GO", "FAS"],
+  "admission": "Recover all six native endpoints and retain precision, recall and assessed-relation counts. Raw scoring readback must reproduce the reported values. Keep the cell provisional until separate candidate reconstruction and independent terminal scoring admission; no scores enter comparison tables solely from a successful process exit.",
+  "resources": {"cpus": 16, "memory_gib": 64, "wall_limit_hours": 12, "host": "local shared Threadripper"},
+  "timing_scope": "Scoring recovery plus verification only; retained original native runtime is separate. Shared-host confounding remains disclosed. No fresh-inference or full-pipeline speed claim.",
+  "scientific_parameters_changed": false,
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
