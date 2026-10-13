@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-13T02:18:18Z",
+  "goal_status": "active_incomplete",
+  "objective_attachment": "/home/bizon/.codex/attachments/8e442bf3-6222-41cd-804f-06e71511658e/pasted-text-1.txt",
+  "fresh_search_diagnostics": {
+    "array_job": 24183,
+    "status": "all_six_arms_completed_and_independently_read_back",
+    "audit": "benchmark_tools/results/search_recovery_all_readback_20261012.json",
+    "audit_sha256": "6f5c725730b91478be06aea0b494516be1e2132f594d5bfd502c1d58d3cd191f",
+    "control_candidates": 2034503,
+    "at_evalue_1e4": [
+      {"label": "control", "accepted_watched_links": 31479, "gained": 0, "lost": 0},
+      {"label": "cap400", "accepted_watched_links": 35780, "gained": 4301, "lost": 0},
+      {"label": "shared_hit1", "accepted_watched_links": 31905, "gained": 1174, "lost": 748},
+      {"label": "reduced_k4", "accepted_watched_links": 27376, "gained": 313, "lost": 4416},
+      {"label": "exact_k3", "accepted_watched_links": 29056, "gained": 228, "lost": 2651},
+      {"label": "shortlist20000", "accepted_watched_links": 31267, "gained": 204, "lost": 416}
+    ],
+    "interpretation": "Select cap400 alone for the next full-pipeline trial. All counts concern reference-conditioned same-family query links, not resolved orthology accuracy or independent validation. Its 7893538 scored candidates are approximately 3.88 times control burden. No default promotion is justified."
+  },
+  "full_pipeline_panel": {
+    "array_job": 24190,
+    "source_revision": "2ccc411520d9e63678178a50207ba1fca87bfbb3",
+    "source_root": "benchmarks/work/full_search_hillclimb_r1_v3_20261012",
+    "execution_plan": "benchmarks/results/full_search_hillclimb_r1_v3_20261012/execution_plan.json",
+    "execution_plan_bytes": 838335,
+    "execution_plan_sha256": "2b9cdb799330d7a89e95bb437ea9910b638094394aa0cc693ef32ea0fbff54eb",
+    "tasks": [
+      {"index": 0, "dataset": "OrthoBench", "proteomes": 12, "state_at_recording": "RUNNING", "task_handle": "24190_0", "raw_job_id": "24191"},
+      {"index": 1, "dataset": "QfO", "proteomes": 78, "state_at_recording": "PENDING JobArrayTaskLimit"},
+      {"index": 2, "dataset": "ThreeKingdoms", "proteomes": 12, "state_at_recording": "PENDING JobArrayTaskLimit"}
+    ],
+    "arms_per_dataset": ["control100", "cap400"],
+    "resources": {"cpus": 32, "memory": "128G", "wall_limit_per_dataset": "240:00:00", "concurrent_datasets": 1},
+    "actual_first_stage_observed": "Native OrthoBench log reports 12 complete proteomes, 32 CPUs, high_sensitivity, BLOSUM62, E=1e-4, Leiden CPM=0.1, and fresh all-to-all built-in HMM search.",
+    "scope": "Fresh full-proteome initial search, profiles, graph construction and independently inferred phylogeny. CUDA disabled. Shared-host resource measurements are descriptive, not isolated speed comparisons.",
+    "submission": "run_full_search_hillclimb.slurm submitted with v3 source root and execution plan as positional arguments; working directory and slurm-%A_%a.log explicitly bound to the v3 result root.",
+    "superseded_preparations": [
+      {"namespace": "full_search_hillclimb_r1_20261012", "status": "failed_preparation_no_submission", "receipt": "benchmark_tools/results/full_search_preparation_failure_20261012.json"},
+      {"namespace": "full_search_hillclimb_r1_v2_20261012", "status": "prepared_unrun_no_submission", "reason": "Wall-time ceiling amended before benchmark execution; frozen preparation retained."}
+    ]
+  },
+  "membership_panel": {
+    "array_job": 24180,
+    "orthobench": "All four arms previously scored; retained baseline remains unchanged.",
+    "qfo_state_at_recording": "Direct and path controls scored; broader_direct scoring in progress. Do not resubmit.",
+    "qfo_snapshot": "benchmark_tools/results/membership_hillclimb_qfo_two_control_snapshot_20261012.json",
+    "qfo_snapshot_sha256": "887f4617f913c30bc44f4ba64c5695b7c305b14c3e468e0c76f0f42355a75bf8",
+    "qfo_path_interpretation": "Relative to matched direct control, SwissTrees and TreeFam increase slightly, VGNC is unchanged, and GO/EC/FAS point estimates decline. FAS is unseeded; do not attribute its small difference unconditionally to the method."
+  },
+  "three_kingdoms_supplement": {
+    "job": 24188,
+    "source_revision": "31b77e461b034097468d29eb36a3ab46c03f41a8",
+    "execution_plan": "benchmarks/results/tk_membership_supplement_r1_20261012/execution_plan.json",
+    "execution_plan_sha256": "2d6da10b359b1b25a73f878d3209b4cc1a4c4625e57d698c37663f970dde9784",
+    "snapshot": "benchmark_tools/results/three_kingdoms_membership_control_snapshot_20261012.json",
+    "snapshot_sha256": "d466cff72a19c1ce3d4acc68e062d1a3d6447a99bedd185d9df976381afc0590",
+    "state_at_recording": "Control scored; broader_direct running.",
+    "control_F1": 0.872133159469203,
+    "control_reproduced": "Exact candidate partition, membership constraints, native RootHOGs, pairs, confidence rows, species tree, and deterministic score match the retained control.",
+    "scope": "Numeric initial-hit checkpoint replay with graph/profile/candidate reconstruction and native control validation; not fresh full-pipeline timing. Original pending 24180_2 task was not changed."
+  },
+  "tests": {
+    "candidate_override_and_existing_search": {"passed": 136, "artifact": "benchmark_tools/results/search_candidate_override_tests_20261012.xml"},
+    "extended_latest": {"passed": 188, "artifact": "benchmark_tools/results/full_search_hillclimb_extended_tests_20261012.xml", "scope": "Opt-in candidate flag, existing search/routing, numeric and ownership audits, metrics, runner failure gates, staging inventory, and a small real full CPU-HMM/profile/inferred-phylogeny fixture with independent native output validation. Not full-benchmark accuracy evidence."}
+  },
+  "remaining_work": [
+    "Finish and independently verify both membership panels, preserving unavailable original cells and supplemental provenance.",
+    "Finish or recover the fresh all-proteome panel; validate native outputs, control differences, all eight endpoint scores and resources before judging cap400.",
+    "Reproduce or explain contemporary control differences before any historical-baseline or promotion claim.",
+    "Produce complete per-metric comparisons with retained tools and Pareto tradeoffs; missing cells remain incomplete, not zero.",
+    "Diagnose remaining errors and prespecify subsequent HMM, candidate/duplication, retention or profile interactions where justified.",
+    "Freeze any candidate before investigating genuinely unexposed confirmation and audit overlap; disclose limits where no independent confirmation is feasible.",
+    "Deliver reproducible successful and unsuccessful experiments and a justified promotion or plateau conclusion."
+  ],
+  "defaults_promoted": false,
+  "historical_baseline_overwritten": false,
+  "unrelated_workloads_modified": false,
+  "goal_complete": false
+}
