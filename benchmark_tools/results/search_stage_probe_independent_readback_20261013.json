@@ -1,0 +1,134 @@
+{
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "limitations": [
+    "Reference-free sampling does not make previously examined QfO inputs independent confirmation.",
+    "Tiny query subsets and three species comparisons are not representative of all 6084 tasks or all protein lengths.",
+    "Uninstrumented first runs and instrumented second runs have different warm-up/cache conditions; their total times must not be interpreted as an optimization contrast.",
+    "Inclusive stages may contain nested work. Do not sum overlapping stage intervals or claim isolated/shared-host speed rankings.",
+    "Significant-hit counts are not orthology accuracy; actual full-search cap trials and component phylogeny benchmarks remain authoritative for those endpoints.",
+    "No source or parameters of live jobs, no scientific environment packages, and no unrelated workloads may be changed."
+  ],
+  "prioritized_next_hypotheses": [
+    "Investigate scoring workload and candidate efficiency before changing already-vectorized profile construction.",
+    "Do not implement query-profile caching or claim a large speedup solely from this micro sample.",
+    "Finish actual fresh-HMM cap and component-phylogeny metric vectors before accuracy selection; more significant hits are not more correct orthology."
+  ],
+  "recipe": "import hashlib,json,subprocess,sys\nfrom collections import defaultdict\nfrom pathlib import Path\nfrom Bio import SeqIO\nfrom benchmark_tools.prepare_ob_candidate_neighborhood import record,check\nfrom benchmark_tools.run_membership_hillclimb import write_json\nrepo=Path.cwd();root=repo/\"benchmarks/results/search_stage_probe_r1_v1_20261013\";path=root/\"report.json\"\nr=json.loads(path.read_text())\nassert r[\"status\"]==\"complete_label_free_search_stage_probe_byte_equivalent\" and len(r[\"cases\"])==6 and not r[\"truth_labels_loaded\"]\nfor pin in [*r[\"checked\"],*r[\"runtime\"][\"files\"]]: check(pin)\nlive=json.loads(Path(r[\"live_search_plan\"][\"path\"]).read_text())\ncase=next(c for c in live[\"cases\"] if c[\"dataset\"]==\"QfO\" and c[\"label\"]==\"control100\")\npins={Path(p[\"path\"]).name:p for p in case[\"inputs\"]}\nselected=sorted(pins,key=lambda name:(hashlib.sha256(name.encode()).hexdigest(),name))[:3]\nassert r[\"selected_species\"]==selected\nids={};lengths={}\nfor name in selected:\n    records=list(SeqIO.parse(pins[name][\"path\"],\"fasta\"))\n    ids[name]=[s.id for s in records];lengths[name]=[len(s) for s in records]\n    assert len(ids[name])==len(set(ids[name]))==r[\"fasta_load_costs\"][name][\"genes\"]\n    assert sum(lengths[name])==r[\"fasta_load_costs\"][name][\"residues\"]\nstrata=[];totals=defaultdict(lambda:{\"candidates\":0,\"significant_hits\":0})\nfor i,name in enumerate(selected):\n    target=selected[(i+1)%3]\n    indices=sorted(sorted(range(len(ids[name])),key=lambda j:(hashlib.sha256(ids[name][j].encode()).hexdigest(),ids[name][j]))[:32])\n    for cap in (100,400):\n        row=next(c for c in r[\"cases\"] if c[\"query_species\"]==name and c[\"target_species\"]==target and c[\"candidate_cap\"]==cap)\n        assert row[\"original_query_indices\"]==indices and row[\"selected_query_ids\"]==[ids[name][j] for j in indices]\n        assert row[\"query_lengths\"]==[lengths[name][j] for j in indices] and row[\"target_genes\"]==len(ids[target])\n        a,b=row[\"runs\"];assert a[\"instrumented\"] is False and b[\"instrumented\"] is True\n        assert a[\"fingerprint\"]==b[\"fingerprint\"] and row[\"instrumentation_byte_equivalent\"] is True\n        assert a[\"significant_hits\"]==b[\"significant_hits\"]\n        stages=b[\"inclusive_stages\"]\n        assert all(s[\"calls\"]==1 and s[\"wall_s\"]>=0 and s[\"process_cpu_s\"]>=0 for s in stages.values())\n        v=stages[\"batch_viterbi_multipair_c\"][\"wall_s\"]/b[\"wall_s\"]\n        prof=stages[\"build_profiles_batch\"][\"wall_s\"]/b[\"wall_s\"]\n        strata.append({\"query\":name,\"target\":target,\"cap\":cap,\"viterbi_fraction_of_instrumented_wall\":v,\"profile_build_fraction_of_instrumented_wall\":prof,\"candidate_count\":b[\"fingerprint\"][\"candidate_count\"],\"significant_hits\":b[\"significant_hits\"],\"stage_wall_s\":{k:s[\"wall_s\"] for k,s in stages.items()}})\n        totals[cap][\"candidates\"]+=b[\"fingerprint\"][\"candidate_count\"];totals[cap][\"significant_hits\"]+=b[\"significant_hits\"]\nassert totals[100]=={\"candidates\":9600,\"significant_hits\":26} and totals[400]=={\"candidates\":38400,\"significant_hits\":32}\nfor pin in [*r[\"checked\"],*r[\"runtime\"][\"files\"]]: check(pin)\nout=repo/\"benchmark_tools/results/search_stage_probe_independent_readback_20261013.json\";assert not out.exists()\nwrite_json(out,{\"status\":\"search_stage_sample_inputs_output_equivalence_and_counts_independently_verified\",\"report\":record(path),\"scheduler\":subprocess.check_output([\"sacct\",\"-j\",\"24215\",\"--parsable2\",\"--format=JobIDRaw,State,ExitCode,Elapsed,NodeList,AllocCPUS\"],text=True),\"sample_selection\":\"Recomputed SHA256 ordering and original query indices using Bio.SeqIO, independently of probe subset helpers.\",\"strata\":strata,\"totals_by_cap\":dict(totals),\"prioritized_next_hypotheses\":[\"Investigate scoring workload and candidate efficiency before changing already-vectorized profile construction.\",\"Do not implement query-profile caching or claim a large speedup solely from this micro sample.\",\"Finish actual fresh-HMM cap and component-phylogeny metric vectors before accuracy selection; more significant hits are not more correct orthology.\"],\"limitations\":r[\"limitations\"],\"recipe\":sys.argv[1],\"defaults_promoted\":False,\"goal_completed\":False})\nprint(json.dumps({\"verified\":True,\"cap_totals\":totals,\"viterbi_wall_fraction_range\":[min(s[\"viterbi_fraction_of_instrumented_wall\"] for s in strata),max(s[\"viterbi_fraction_of_instrumented_wall\"] for s in strata)],\"profile_build_max_fraction\":max(s[\"profile_build_fraction_of_instrumented_wall\"] for s in strata)}))\n",
+  "report": {
+    "bytes": 181651,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/search_stage_probe_r1_v1_20261013/report.json",
+    "sha256": "566fa83426b3b1dfb2a3e20964f5fb0add38032ad3f92108a62823251818863a"
+  },
+  "sample_selection": "Recomputed SHA256 ordering and original query indices using Bio.SeqIO, independently of probe subset helpers.",
+  "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24215|COMPLETED|0:0|00:00:10|bizon|4\n24215.batch|COMPLETED|0:0|00:00:10|bizon|4\n",
+  "status": "search_stage_sample_inputs_output_equivalence_and_counts_independently_verified",
+  "strata": [
+    {
+      "candidate_count": 3200,
+      "cap": 100,
+      "profile_build_fraction_of_instrumented_wall": 0.0006955847556690052,
+      "query": "UP000001312_665079.fasta",
+      "significant_hits": 8,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 5.001691170036793e-05,
+        "batch_viterbi_multipair_c": 0.12091319495812058,
+        "build_profiles_batch": 0.00015661888755857944,
+        "prefilter_candidates": 0.07620342401787639,
+        "prepare_kmer_index": 0.027364545967429876
+      },
+      "target": "UP000002485_284812.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.53700659277538
+    },
+    {
+      "candidate_count": 12800,
+      "cap": 400,
+      "profile_build_fraction_of_instrumented_wall": 0.0002957336617860218,
+      "query": "UP000001312_665079.fasta",
+      "significant_hits": 9,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 8.453894406557083e-05,
+        "batch_viterbi_multipair_c": 0.41901515307836235,
+        "build_profiles_batch": 0.00015459582209587097,
+        "prefilter_candidates": 0.07818512595258653,
+        "prepare_kmer_index": 0.024681863840669394
+      },
+      "target": "UP000002485_284812.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.8015539093084212
+    },
+    {
+      "candidate_count": 3200,
+      "cap": 100,
+      "profile_build_fraction_of_instrumented_wall": 0.0008210535474782345,
+      "query": "UP000002485_284812.fasta",
+      "significant_hits": 16,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 5.426304414868355e-05,
+        "batch_viterbi_multipair_c": 0.155061025172472,
+        "build_profiles_batch": 0.00018821703270077705,
+        "prefilter_candidates": 0.06026026792824268,
+        "prepare_kmer_index": 0.013179450994357467
+      },
+      "target": "UP000001570_224308.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.6764180848386329
+    },
+    {
+      "candidate_count": 12800,
+      "cap": 400,
+      "profile_build_fraction_of_instrumented_wall": 0.00027710694976233367,
+      "query": "UP000002485_284812.fasta",
+      "significant_hits": 19,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 8.000200614333153e-05,
+        "batch_viterbi_multipair_c": 0.586119901156053,
+        "build_profiles_batch": 0.00018306891433894634,
+        "prefilter_candidates": 0.06028774892911315,
+        "prepare_kmer_index": 0.013309159083291888
+      },
+      "target": "UP000001570_224308.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.8871953962847166
+    },
+    {
+      "candidate_count": 3200,
+      "cap": 100,
+      "profile_build_fraction_of_instrumented_wall": 0.0005118554996441196,
+      "query": "UP000001570_224308.fasta",
+      "significant_hits": 2,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 5.145813338458538e-05,
+        "batch_viterbi_multipair_c": 0.2088192340452224,
+        "build_profiles_batch": 0.00019196304492652416,
+        "prefilter_candidates": 0.10645032417960465,
+        "prepare_kmer_index": 0.058050597086548805
+      },
+      "target": "UP000001312_665079.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.5568013021382897
+    },
+    {
+      "candidate_count": 12800,
+      "cap": 400,
+      "profile_build_fraction_of_instrumented_wall": 0.00021653061503878565,
+      "query": "UP000001570_224308.fasta",
+      "significant_hits": 4,
+      "stage_wall_s": {
+        "batch_estimate_evalues": 8.148397319018841e-05,
+        "batch_viterbi_multipair_c": 0.6823309420142323,
+        "build_profiles_batch": 0.00018393108621239662,
+        "prefilter_candidates": 0.10639270604588091,
+        "prepare_kmer_index": 0.058832117822021246
+      },
+      "target": "UP000001312_665079.fasta",
+      "viterbi_fraction_of_instrumented_wall": 0.8032657316214877
+    }
+  ],
+  "totals_by_cap": {
+    "100": {
+      "candidates": 9600,
+      "significant_hits": 26
+    },
+    "400": {
+      "candidates": 38400,
+      "significant_hits": 32
+    }
+  }
+}

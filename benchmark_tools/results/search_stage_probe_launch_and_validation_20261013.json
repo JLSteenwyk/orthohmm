@@ -1,0 +1,48 @@
+{
+  "allocation": {
+    "cpus": 4,
+    "memory_gib": 16,
+    "wall_limit_minutes": 20
+  },
+  "default_parameters_changed": false,
+  "defaults_promoted": false,
+  "goal_completed": false,
+  "helper": {
+    "bytes": 10251,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_stage_probe_r1_v1_20261013/benchmark_tools/probe_search_stage_cost.py",
+    "sha256": "7e76e9f0f7a1f97dbaee273d820ee226e9eb1d287d6db238f38fee0434e2ac8b"
+  },
+  "independent_readback": {
+    "bytes": 10628,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/search_stage_probe_independent_readback_20261013.json",
+    "sha256": "44d9a674749c5df3cbc69895465b95f898475b6515bf998926b1f3daaea47ac4"
+  },
+  "job_id": "24215",
+  "launcher": {
+    "bytes": 476,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_stage_probe_r1_v1_20261013/benchmark_tools/probe_search_stage_cost.slurm",
+    "sha256": "7ad7f8cea80a57faf09b5b717cfcdf62ac659163ad042797941afca7d52640a1"
+  },
+  "protocol": {
+    "bytes": 3418,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_stage_probe_r1_v1_20261013/benchmark_tools/hillclimb_search_stage_probe_20261013.json",
+    "sha256": "195a97b9f185360d8a8c9df7ac53b4ebc6f0b2bd35a5ac4fd1b5a8bf5a7bd413"
+  },
+  "raw_report": {
+    "bytes": 181651,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/search_stage_probe_r1_v1_20261013/report.json",
+    "sha256": "566fa83426b3b1dfb2a3e20964f5fb0add38032ad3f92108a62823251818863a"
+  },
+  "scientific_environment_changed": false,
+  "scope": "Six tiny label-free query/complete-target comparisons; runtime-stage prioritization only, not accuracy selection or full-pipeline speedup.",
+  "source_revision": "4621ab375bf21db0dda5eec1bbccce70c1f1a50e",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/search_stage_probe_r1_v1_20261013",
+  "status": "frozen_label_free_probe_completed_and_independently_read_back",
+  "tests": {
+    "bytes": 5239,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/search_stage_probe_frozen_tests_20261013.xml",
+    "sha256": "eb98a8f899aaa78c4987d23305a3fe181a8d3599aa9e70ad8b3fa0caf5e513bd"
+  },
+  "tests_passed": 27,
+  "unrelated_jobs_stopped": false
+}
