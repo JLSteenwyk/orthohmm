@@ -1,0 +1,71 @@
+{
+  "arms": [
+    "control",
+    "deferred500"
+  ],
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 40230348,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/execution_plan.json",
+    "sha256": "39e56cc7c73c168576627419997fec882fa5e588c8fd29f8c4bc49d628e83d4e"
+  },
+  "gates": [
+    "Exact admitted default final-refinement seed bytes",
+    "Exact baseline candidate and satellite merge bytes",
+    "All native control outputs and deterministic control scores reproduced",
+    "Identical fixed baseline species tree and full corrected QfO input universe",
+    "Sources, inputs, runtime and checkpoint identities checked before and after"
+  ],
+  "generated_at_utc": "2026-10-13T05:00:16.973655+00:00",
+  "goal_completed": false,
+  "held_tree_readback": {
+    "bytes": 67710,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/held_tree_completed_readback_20261013.json",
+    "sha256": "1a6e4adb1f4fa6e1376962f3fd549bacb4f8083bca289d77a74d7549a2f7cddb"
+  },
+  "input_records": 121967,
+  "job_id": 24198,
+  "limitations": [
+    "Development-exposed mechanism screen; no accuracy improvement or default promotion yet.",
+    "Cached HMM graph and compatible raw gene trees; not fresh full-pipeline timing.",
+    "FAS unseeded; shared-host timing confounded.",
+    "Full inferred-tree evaluation across all eight endpoints remains required.",
+    "The fresh full-search cap panel 24190 continues independently; no duplicate submissions."
+  ],
+  "protocol": {
+    "bytes": 4919,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_deferred_copy_split_20261013.json",
+    "sha256": "d51d332180a670f8a140666cca143136aa5e86739c1a437329519e395a0eaaec"
+  },
+  "resource_limits": {
+    "cpu": 16,
+    "memory_gib": 64,
+    "new_native_arms": "sequential",
+    "wall_hours": 72
+  },
+  "scheduler": "JobId=24198 JobName=ohmm-copy-deferral\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:01:14 TimeLimit=3-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T00:59:02 EligibleTime=2026-10-13T00:59:02\n   AccrueTime=2026-10-13T00:59:02\n   StartTime=2026-10-13T00:59:02 EndTime=2026-10-16T00:59:02 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T00:59:02 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2920138\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=bizon\n   BatchHost=bizon\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=cpu=16,mem=64G,node=1,billing=16\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_copy_split_r1_v1_20261013/benchmark_tools/run_deferred_copy_split.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/slurm-24198.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/slurm-24198.log\n   TresPerTask=cpu=16\n   \n\n",
+  "source_records": 1137,
+  "source_revision": "8d6f0d265b839b1a8f316618a4b0d68867b72053",
+  "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_copy_split_r1_v1_20261013",
+  "status": "submitted_and_confirmed_running",
+  "test_invocation_failure": {
+    "reason": "Initial harness test command used two nonexistent test filenames and collected no tests; corrected invocation passed 99 tests.",
+    "receipt": {
+      "bytes": 231,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_copy_split_harness_tests_20261013.xml",
+      "sha256": "9764e314143d4869fa19bdf0cb4c02712d4ca61a24c50d63708831622e57af0d"
+    }
+  },
+  "test_receipts": [
+    {
+      "bytes": 16455,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_copy_split_extended_tests_20261013.xml",
+      "sha256": "32ab4986f415a2339c2769c306fd61bf530419ec49622264a7cd002a4a9a8fde"
+    },
+    {
+      "bytes": 14727,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_copy_split_harness_extended_tests_20261013.xml",
+      "sha256": "991e6558d32288cf1ae13a4490a96121a21b3132a6e8912b0c7634a92923af23"
+    }
+  ]
+}
