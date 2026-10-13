@@ -1,0 +1,78 @@
+{
+  "candidate_separated_fn_with_initial_hit": 3315,
+  "control_gates": {
+    "fresh_orthobench_f1": 0.7410607351873405,
+    "held_own_tree_all_five_deterministic_scores_reproduced": true
+  },
+  "counts": {
+    "different_candidate_families": 3794,
+    "predicted": 19660,
+    "reference_within_species": 2,
+    "within_candidate_not_predicted": 478
+  },
+  "cross_species_false_negatives": {
+    "total": 4272,
+    "with_initial_hit": 3758,
+    "without_initial_hit": 514
+  },
+  "defaults_promoted": false,
+  "evidence": {
+    "alias_corrected_failure": {
+      "bytes": 1275,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_v2_failure_20261012.json",
+      "sha256": "504eeb62b8d5dfebbed92fef4465f06344d06fe2fdbcdf4aeeda29d1d5c2ea85"
+    },
+    "control_readbacks": {
+      "bytes": 817006,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/hillclimb_controls_readback_v1_20261012/report.json",
+      "sha256": "91af4968f1d7b3c8e42da4bfeff9db3e19371f491d3670b29fef30a6d79234f5"
+    },
+    "initial_failures": {
+      "bytes": 2107,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_failures_20261012.json",
+      "sha256": "3bcc9147a18c3a8e4de0ba84e9a8bb4bca4724766b042f3d480068d56ea21b94"
+    },
+    "plan": {
+      "bytes": 7918,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_plan_v3_20261012.json",
+      "sha256": "89468169bf0c9b7a5129352bf856519d6d1385be3aa63ff4a42360c0e28b64dd"
+    },
+    "protocol": {
+      "bytes": 4233,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_qfo_failure_localization_20261012.json",
+      "sha256": "72947cac5a5f632c1218102194cab157d8becf23f0d370775d9bf41b168e8b31"
+    },
+    "stage_readback": {
+      "bytes": 10509,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_readback_20261012.json",
+      "sha256": "9f8e32d208c039adef79deda6ddca03d0f5455b102a64a8997309883dd59e68a"
+    },
+    "stage_trace": {
+      "bytes": 10329,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_reference_stage_trace_v3_20261012/report.json",
+      "sha256": "4b7830391d55103b554af54e7b30b82c3bfb62feadd1423c26cd542a6233eb9e"
+    },
+    "tests": {
+      "bytes": 13355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/qfo_stage_and_hillclimb_regression_tests_20261012.xml",
+      "sha256": "358d270389bf9272619835beaef65334cb74e9172e9bbe30ef68e2170dc562ac"
+    }
+  },
+  "generated_at_utc": "2026-10-13T04:14:52.461870+00:00",
+  "goal_completed": false,
+  "interpretation": "Native stage evidence shifts the next diagnostic toward graph/seed/profile/candidate partition admission; it does not justify unrestricted merging. Current full-search and held-tree experiments remain necessary and must finish without duplication.",
+  "limitations": [
+    "The current diagnostic changes no inference or benchmark score; it prioritizes the next optimization round.",
+    "All reference rows are development-exposed. Alias and within-species handling preserve the original scoring cohort.",
+    "Both active experiments remain incomplete; no full cap400 accuracy or held-baseline-tree score is admitted here.",
+    "Shared-host timings are confounded and diagnostic timing is not inference timing."
+  ],
+  "next_actions": [
+    "Finish cap100/cap400 fresh full-pipeline comparison and held-species-tree substitution without duplication.",
+    "Prespecify native graph-edge admission and seed/profile/candidate-partition localization for the candidate-separated reference cohort. Preserve overlap/duplication evidence and do not broadly lower clustering resolution based only on VGNC recall.",
+    "Test a label-blind, evidence-aware candidate-construction change only after this finer diagnostic and the running tree/search results support it. Evaluate the complete eight-endpoint vector."
+  ],
+  "scheduler_snapshot": "             JOBID     STATE         TIME   CPUS NODELIST(REASON)\n     24190_[1-2%1]   PENDING         0:00     32 (JobArrayTaskLimit)\n             24192   RUNNING      1:09:39     16 bizon\n           24190_0   RUNNING      1:57:04     32 bizon\n",
+  "status": "verified_stage_localization_completed_full_experiments_continue",
+  "tests_passed": 97
+}
