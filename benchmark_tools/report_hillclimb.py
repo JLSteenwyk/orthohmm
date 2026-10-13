@@ -49,7 +49,8 @@ def reporter_sources():
              "report_deferred_cells.py", "run_deferred_copy_split.py", "deferred_qfo_inferred.py",
              "run_deferred_inferred_supplement.py", "run_held_tree_hillclimb.py",
              "run_three_kingdoms_membership_supplement.py", "prepare_ob_candidate_neighborhood.py",
-             "run_qfo_recovered_assessment.py", "report_full_qfo_recovery.py", "recover_full_qfo_search.py")
+             "run_qfo_recovered_assessment.py", "report_full_qfo_recovery.py", "recover_full_qfo_search.py",
+             "report_copy_branch_cells.py", "run_copy_branch_ablation.py")
     return [record(Path(__file__)), *[record(Path(__file__).with_name(name)) for name in names]]
 
 
@@ -291,7 +292,7 @@ def screen(vectors, control):
 
 def build_report(repo, registry_path, membership_root, supplement_path, full_root, output,
                  deferred_fixed_root=None, deferred_inferred_root=None, deferred_qfo_root=None, deferred_tk_root=None,
-                 full_qfo_recovery_root=None):
+                 full_qfo_recovery_root=None, copy_branch_root=None):
     output.mkdir(parents=True, exist_ok=False)
     snapshots = output / "snapshots"
     snapshots.mkdir()
@@ -368,12 +369,23 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
         admitted, extra_captures = collect_deferred_cells(repo, kind, dataset, root, snapshots)
         cells.extend(admitted)
         captures.extend(extra_captures)
+    if copy_branch_root is not None:
+        from benchmark_tools.report_copy_branch_cells import collect_branch_cells
+        for dataset in DATASETS:
+            write_json(output / "progress.json", {"status": "content_readback_running",
+                "active_cell": {"kind": "copy_branch", "dataset": dataset}, "processed_cells": len(cells)})
+            admitted, extra_captures = collect_branch_cells(repo, dataset, copy_branch_root / dataset, snapshots)
+            cells.extend(admitted)
+            captures.extend(extra_captures)
     combine_cells(methods, cells)
     for item in sources:
         check(item)
     screenings = {}
     rounds = dict(ROUND_ARMS)
     rounds.update({kind: ("control", "deferred500") for kind, _, _ in deferred_specs})
+    if copy_branch_root is not None:
+        from benchmark_tools.report_copy_branch_cells import LABELS
+        rounds["copy_branch"] = LABELS
     for kind, labels in rounds.items():
         vectors = {label: methods.get(kind + ":" + label, {"scores": {}})["scores"] for label in labels}
         screenings[kind] = screen(vectors, labels[0])
@@ -388,6 +400,7 @@ def build_report(repo, registry_path, membership_root, supplement_path, full_roo
             "Resource observations retain their original scopes; cached replay and fresh full-pipeline times must not be ranked together.",
             "Fixed-tree copy-deferral diagnostics are separate from candidate-specific inferred-tree vectors and cannot fill their missing endpoints.",
             "Full-search QfO scoring recoveries retain original failed attempts; recovered scoring wall time is not fresh inference runtime.",
+            "Copy-branch narrow-panel cells reuse exact candidate/constraint-matched inference after downstream-equivalence checks; inactive large-copy branches are not accuracy improvements.",
             "Incomplete cells remain missing, not zero. Content snapshots do not imply all scheduler tasks have completed."]}
     write_json(output / "report.json", report)
     write_json(output / "progress.json", {"status": "content_snapshot_readback_finished",
@@ -405,7 +418,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("repo", "registry", "membership-root", "supplement", "full-root", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root", "deferred-tk-root", "full-qfo-recovery-root"):
+    for name in ("deferred-fixed-root", "deferred-inferred-root", "deferred-qfo-root", "deferred-tk-root", "full-qfo-recovery-root", "copy-branch-root"):
         parser.add_argument("--" + name, type=Path)
     args = parser.parse_args()
     report = build_report(args.repo.resolve(), args.registry.resolve(), args.membership_root.resolve(),
@@ -414,7 +427,8 @@ def main():
                           args.deferred_inferred_root.resolve() if args.deferred_inferred_root else None,
                           args.deferred_qfo_root.resolve() if args.deferred_qfo_root else None,
                           args.deferred_tk_root.resolve() if args.deferred_tk_root else None,
-                          args.full_qfo_recovery_root.resolve() if args.full_qfo_recovery_root else None)
+                          args.full_qfo_recovery_root.resolve() if args.full_qfo_recovery_root else None,
+                          args.copy_branch_root.resolve() if args.copy_branch_root else None)
     print(json.dumps({"methods": len(report["methods"]), "readback_failures": len(report["readback_failures"])}))
     return 1 if report["readback_failures"] else 0
 
