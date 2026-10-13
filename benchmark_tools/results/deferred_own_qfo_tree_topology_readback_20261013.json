@@ -1,0 +1,42 @@
+{
+  "defaults_promoted": false,
+  "dendropy_version": "5.0.8",
+  "distances": {
+    "rooted_clade_distance": 58,
+    "unrooted_split_distance": 58
+  },
+  "evidence": [
+    {
+      "bytes": 2355,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_own_qfo_species_tree_contrast_20261013.json",
+      "sha256": "2d74f91bd8dddbbc1956c039def3c2cc86805de5340849cdd2609f9dffe8cfe6"
+    },
+    {
+      "bytes": 22116,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_own_qfo_species_marker_contrast_20261013.json",
+      "sha256": "74676009821fac7ab6e1f047e965df2abaf63f07d515a636d197b6de8927f91c"
+    },
+    {
+      "bytes": 3582,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/control/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "24198609aaaa7d9bd1c7f9a6ba7ee160e3450572be4c6869933681099afff26e"
+    },
+    {
+      "bytes": 3572,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_qfo_inferred_r1_v2_20261013/deferred500/output/orthohmm_phylogeny/species_tree.rooted.nwk",
+      "sha256": "a1dd5311d61c94e97a8a2ca629c5bbca1fc8fc979532459083cd4720727a5904"
+    },
+    {
+      "bytes": 19685,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/probe_simulation_gene_tree_oracle.py",
+      "sha256": "3fd49552afcce4b09a58ecbbc5b1290429c0019392bc5a8b29422f9a3a55ff8c"
+    }
+  ],
+  "goal_completed": false,
+  "limitations": [
+    "Neither inferred tree is ground truth. Distances describe topology changes, not tree accuracy, uncertainty, or causal attribution.",
+    "The variant omits one 44-species core marker; its 25 shared marker memberships and alignment bytes match the control."
+  ],
+  "status": "independent_library_rooted_and_unrooted_topology_comparison",
+  "taxa": 78
+}
