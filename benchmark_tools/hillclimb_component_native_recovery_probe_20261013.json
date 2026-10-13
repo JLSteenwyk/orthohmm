@@ -1,0 +1,15 @@
+{
+  "schema": "component_native_readback_recovery_probe_v1",
+  "status": "prespecified_before_clean_process_recovery_probe",
+  "failed_job": "24214",
+  "failed_namespace": "benchmarks/results/large_copy_components_r1_v2_20261013/QfO",
+  "observation": "Job 24214 failed with signal 11 after native inference. Faulthandler locates the parent crash at report_hillclimb.replay_native line 136, during candidate membership reconstruction. Native metrics say complete and GNU time reports exit status 0. This does not establish valid benchmark scores or the cause of the crash.",
+  "hypothesis": "A clean process may complete the unchanged native readback on retained products without the parent's earlier graph construction state. Test this without weakening invariants or rerunning successful inference.",
+  "operation": "Load the original frozen report_hillclimb reader; require terminal failed job, matching frozen command/source and complete native metrics, verify candidate and constraint pins, revalidate the full gene universe, roots, inferred tree, native pairs and confidence records. Do not invoke graph construction, inference or scoring.",
+  "resources": {"cpus": 1, "memory_gib": 64, "wall_limit_minutes": 30, "host": "local shared Threadripper"},
+  "selection": "If unchanged native readback succeeds, prepare a separate scoring-only recovery with independent admission. If it fails, retain explicit failure and diagnose before another attempt. Never admit accuracy from files merely existing.",
+  "scientific_parameters_changed": false,
+  "inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
