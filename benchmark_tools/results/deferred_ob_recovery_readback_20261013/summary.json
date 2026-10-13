@@ -1,0 +1,1564 @@
+{
+  "F1_delta": -0.005421154186494359,
+  "captures": [
+    {
+      "snapshot": {
+        "bytes": 330559,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/snapshots/deferred_inferred_OrthoBench_producer.json",
+        "sha256": "6e34f76898451daddc88ebc81bb9df0eb98ba357c88af279b68eff2d2053ea46"
+      },
+      "source_bytes": 330559,
+      "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/results.json",
+      "source_sha256": "6e34f76898451daddc88ebc81bb9df0eb98ba357c88af279b68eff2d2053ea46"
+    },
+    {
+      "snapshot": {
+        "bytes": 15111573,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/snapshots/deferred_inferred_OrthoBench_plan.json",
+        "sha256": "09668363ef39e063f9124c403c560b1f0b9810bfd037657a120bc4e80f4d31f5"
+      },
+      "source_bytes": 15111573,
+      "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/execution_plan.json",
+      "source_sha256": "09668363ef39e063f9124c403c560b1f0b9810bfd037657a120bc4e80f4d31f5"
+    },
+    {
+      "snapshot": {
+        "bytes": 183495,
+        "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/snapshots/deferred_inferred_OrthoBench_cells.json",
+        "sha256": "8a2a13f314bfedfd7d48d7c2beda0c5ccd0c02a1c6ba2eb956eb448384cd13ec"
+      },
+      "source_bytes": 183495,
+      "source_path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/results.json",
+      "source_sha256": "8a2a13f314bfedfd7d48d7c2beda0c5ccd0c02a1c6ba2eb956eb448384cd13ec"
+    }
+  ],
+  "cells": [
+    {
+      "coverage": {
+        "genes": 251378,
+        "groups": 59770,
+        "pairs": 966439,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "details": {
+        "family_details": {
+          "exact_refogs": 15,
+          "f_score": 74.10607351873405,
+          "precision": 81.77045380181866,
+          "recall": 67.75533630827974,
+          "refog_records": [
+            {
+              "exact": false,
+              "false_negative": 14.0,
+              "false_positive": 0.0,
+              "genes": 15,
+              "refog": "RefOG001.txt",
+              "splits": 2,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 150.0,
+              "false_positive": 38.0,
+              "genes": 19,
+              "refog": "RefOG002.txt",
+              "splits": 11,
+              "true_positive": 21.0
+            },
+            {
+              "exact": false,
+              "false_negative": 97.0,
+              "false_positive": 96.0,
+              "genes": 50,
+              "refog": "RefOG003.txt",
+              "splits": 3,
+              "true_positive": 1128.0
+            },
+            {
+              "exact": false,
+              "false_negative": 11.0,
+              "false_positive": 1.0,
+              "genes": 12,
+              "refog": "RefOG004.txt",
+              "splits": 2,
+              "true_positive": 55.0
+            },
+            {
+              "exact": false,
+              "false_negative": 93.0,
+              "false_positive": 33.0,
+              "genes": 34,
+              "refog": "RefOG005.txt",
+              "splits": 2,
+              "true_positive": 468.0
+            },
+            {
+              "exact": false,
+              "false_negative": 224.0,
+              "false_positive": 15.0,
+              "genes": 48,
+              "refog": "RefOG006.txt",
+              "splits": 5,
+              "true_positive": 904.0
+            },
+            {
+              "exact": false,
+              "false_negative": 748.0,
+              "false_positive": 171.0,
+              "genes": 57,
+              "refog": "RefOG007.txt",
+              "splits": 7,
+              "true_positive": 848.0
+            },
+            {
+              "exact": false,
+              "false_negative": 25.0,
+              "false_positive": 4.0,
+              "genes": 14,
+              "refog": "RefOG008.txt",
+              "splits": 3,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 99.0,
+              "false_positive": 55.0,
+              "genes": 23,
+              "refog": "RefOG009.txt",
+              "splits": 5,
+              "true_positive": 154.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 3,
+              "refog": "RefOG010.txt",
+              "splits": 1,
+              "true_positive": 3.0
+            },
+            {
+              "exact": false,
+              "false_negative": 3336.0,
+              "false_positive": 171.0,
+              "genes": 94,
+              "refog": "RefOG011.txt",
+              "splits": 9,
+              "true_positive": 1035.0
+            },
+            {
+              "exact": false,
+              "false_negative": 173.0,
+              "false_positive": 54.0,
+              "genes": 46,
+              "refog": "RefOG012.txt",
+              "splits": 4,
+              "true_positive": 862.0
+            },
+            {
+              "exact": false,
+              "false_negative": 345.0,
+              "false_positive": 35.0,
+              "genes": 27,
+              "refog": "RefOG013.txt",
+              "splits": 22,
+              "true_positive": 6.0
+            },
+            {
+              "exact": false,
+              "false_negative": 238.0,
+              "false_positive": 6.0,
+              "genes": 24,
+              "refog": "RefOG014.txt",
+              "splits": 11,
+              "true_positive": 38.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 23,
+              "refog": "RefOG015.txt",
+              "splits": 1,
+              "true_positive": 253.0
+            },
+            {
+              "exact": false,
+              "false_negative": 47.0,
+              "false_positive": 20.0,
+              "genes": 25,
+              "refog": "RefOG016.txt",
+              "splits": 3,
+              "true_positive": 253.0
+            },
+            {
+              "exact": false,
+              "false_negative": 28.0,
+              "false_positive": 0.0,
+              "genes": 29,
+              "refog": "RefOG017.txt",
+              "splits": 2,
+              "true_positive": 378.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 12,
+              "refog": "RefOG018.txt",
+              "splits": 1,
+              "true_positive": 66.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG019.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 78.0,
+              "false_positive": 797.0,
+              "genes": 28,
+              "refog": "RefOG020.txt",
+              "splits": 4,
+              "true_positive": 300.0
+            },
+            {
+              "exact": false,
+              "false_negative": 5625.0,
+              "false_positive": 1730.0,
+              "genes": 125,
+              "refog": "RefOG021.txt",
+              "splits": 15,
+              "true_positive": 2125.0
+            },
+            {
+              "exact": false,
+              "false_negative": 22.0,
+              "false_positive": 73.0,
+              "genes": 23,
+              "refog": "RefOG022.txt",
+              "splits": 2,
+              "true_positive": 231.0
+            },
+            {
+              "exact": false,
+              "false_negative": 1968.0,
+              "false_positive": 172.0,
+              "genes": 69,
+              "refog": "RefOG023.txt",
+              "splits": 10,
+              "true_positive": 378.0
+            },
+            {
+              "exact": false,
+              "false_negative": 0.0,
+              "false_positive": 663.0,
+              "genes": 51,
+              "refog": "RefOG024.txt",
+              "splits": 1,
+              "true_positive": 1275.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG025.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 40,
+              "refog": "RefOG026.txt",
+              "splits": 1,
+              "true_positive": 780.0
+            },
+            {
+              "exact": false,
+              "false_negative": 69.0,
+              "false_positive": 95.0,
+              "genes": 20,
+              "refog": "RefOG027.txt",
+              "splits": 4,
+              "true_positive": 121.0
+            },
+            {
+              "exact": false,
+              "false_negative": 176.0,
+              "false_positive": 0.0,
+              "genes": 24,
+              "refog": "RefOG028.txt",
+              "splits": 5,
+              "true_positive": 100.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG029.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG030.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 31.0,
+              "false_positive": 0.0,
+              "genes": 32,
+              "refog": "RefOG031.txt",
+              "splits": 2,
+              "true_positive": 465.0
+            },
+            {
+              "exact": false,
+              "false_negative": 0.0,
+              "false_positive": 14.0,
+              "genes": 14,
+              "refog": "RefOG032.txt",
+              "splits": 1,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 57.0,
+              "false_positive": 60.0,
+              "genes": 30,
+              "refog": "RefOG033.txt",
+              "splits": 3,
+              "true_positive": 378.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 21,
+              "refog": "RefOG034.txt",
+              "splits": 1,
+              "true_positive": 210.0
+            },
+            {
+              "exact": false,
+              "false_negative": 170.0,
+              "false_positive": 489.0,
+              "genes": 32,
+              "refog": "RefOG035.txt",
+              "splits": 6,
+              "true_positive": 326.0
+            },
+            {
+              "exact": false,
+              "false_negative": 45.0,
+              "false_positive": 360.0,
+              "genes": 46,
+              "refog": "RefOG036.txt",
+              "splits": 2,
+              "true_positive": 990.0
+            },
+            {
+              "exact": false,
+              "false_negative": 96.0,
+              "false_positive": 67.0,
+              "genes": 34,
+              "refog": "RefOG037.txt",
+              "splits": 4,
+              "true_positive": 465.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 9,
+              "refog": "RefOG038.txt",
+              "splits": 1,
+              "true_positive": 36.0
+            },
+            {
+              "exact": false,
+              "false_negative": 70.0,
+              "false_positive": 57.0,
+              "genes": 20,
+              "refog": "RefOG039.txt",
+              "splits": 5,
+              "true_positive": 120.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG040.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG041.txt",
+              "splits": 1,
+              "true_positive": 136.0
+            },
+            {
+              "exact": false,
+              "false_negative": 26.0,
+              "false_positive": 0.0,
+              "genes": 11,
+              "refog": "RefOG042.txt",
+              "splits": 3,
+              "true_positive": 29.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG043.txt",
+              "splits": 1,
+              "true_positive": 136.0
+            },
+            {
+              "exact": false,
+              "false_negative": 13.0,
+              "false_positive": 104.0,
+              "genes": 14,
+              "refog": "RefOG044.txt",
+              "splits": 2,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG045.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 32,
+              "refog": "RefOG046.txt",
+              "splits": 1,
+              "true_positive": 496.0
+            },
+            {
+              "exact": false,
+              "false_negative": 128.0,
+              "false_positive": 0.0,
+              "genes": 36,
+              "refog": "RefOG047.txt",
+              "splits": 2,
+              "true_positive": 502.0
+            },
+            {
+              "exact": false,
+              "false_negative": 113.0,
+              "false_positive": 65.0,
+              "genes": 40,
+              "refog": "RefOG048.txt",
+              "splits": 3,
+              "true_positive": 667.0
+            },
+            {
+              "exact": false,
+              "false_negative": 16.0,
+              "false_positive": 0.0,
+              "genes": 10,
+              "refog": "RefOG049.txt",
+              "splits": 2,
+              "true_positive": 29.0
+            },
+            {
+              "exact": false,
+              "false_negative": 25.0,
+              "false_positive": 0.0,
+              "genes": 14,
+              "refog": "RefOG050.txt",
+              "splits": 3,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 16.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG051.txt",
+              "splits": 2,
+              "true_positive": 120.0
+            },
+            {
+              "exact": false,
+              "false_negative": 14.0,
+              "false_positive": 14.0,
+              "genes": 15,
+              "refog": "RefOG052.txt",
+              "splits": 2,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 33.0,
+              "false_positive": 11.0,
+              "genes": 13,
+              "refog": "RefOG053.txt",
+              "splits": 4,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 498.0,
+              "false_positive": 9.0,
+              "genes": 44,
+              "refog": "RefOG054.txt",
+              "splits": 8,
+              "true_positive": 448.0
+            },
+            {
+              "exact": false,
+              "false_negative": 55.0,
+              "false_positive": 17.0,
+              "genes": 29,
+              "refog": "RefOG055.txt",
+              "splits": 3,
+              "true_positive": 351.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 7,
+              "refog": "RefOG056.txt",
+              "splits": 1,
+              "true_positive": 21.0
+            },
+            {
+              "exact": false,
+              "false_negative": 29.0,
+              "false_positive": 0.0,
+              "genes": 16,
+              "refog": "RefOG057.txt",
+              "splits": 3,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 1097.0,
+              "false_positive": 241.0,
+              "genes": 50,
+              "refog": "RefOG058.txt",
+              "splits": 14,
+              "true_positive": 128.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 10,
+              "refog": "RefOG059.txt",
+              "splits": 1,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 262.0,
+              "false_positive": 0.0,
+              "genes": 68,
+              "refog": "RefOG060.txt",
+              "splits": 5,
+              "true_positive": 2016.0
+            },
+            {
+              "exact": false,
+              "false_negative": 221.0,
+              "false_positive": 40.0,
+              "genes": 30,
+              "refog": "RefOG061.txt",
+              "splits": 3,
+              "true_positive": 214.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 11,
+              "refog": "RefOG062.txt",
+              "splits": 1,
+              "true_positive": 55.0
+            },
+            {
+              "exact": false,
+              "false_negative": 39.0,
+              "false_positive": 6.0,
+              "genes": 21,
+              "refog": "RefOG063.txt",
+              "splits": 3,
+              "true_positive": 171.0
+            },
+            {
+              "exact": false,
+              "false_negative": 46.0,
+              "false_positive": 56.0,
+              "genes": 14,
+              "refog": "RefOG064.txt",
+              "splits": 5,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 17.0,
+              "false_positive": 0.0,
+              "genes": 10,
+              "refog": "RefOG065.txt",
+              "splits": 3,
+              "true_positive": 28.0
+            },
+            {
+              "exact": false,
+              "false_negative": 13.0,
+              "false_positive": 0.0,
+              "genes": 14,
+              "refog": "RefOG066.txt",
+              "splits": 2,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 12.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG067.txt",
+              "splits": 2,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 26.0,
+              "false_positive": 0.0,
+              "genes": 27,
+              "refog": "RefOG068.txt",
+              "splits": 2,
+              "true_positive": 325.0
+            },
+            {
+              "exact": false,
+              "false_negative": 267.0,
+              "false_positive": 14.0,
+              "genes": 31,
+              "refog": "RefOG069.txt",
+              "splits": 4,
+              "true_positive": 198.0
+            },
+            {
+              "exact": false,
+              "false_negative": 12.0,
+              "false_positive": 36.0,
+              "genes": 13,
+              "refog": "RefOG070.txt",
+              "splits": 2,
+              "true_positive": 66.0
+            }
+          ],
+          "refogs": 70,
+          "weighted_false_negative": 305.5181884790494,
+          "weighted_false_positive": 143.12060832971704,
+          "weighted_true_positive": 641.9818115209503
+        },
+        "precision": 0.8177045380181867,
+        "recall": 0.6775533630827973
+      },
+      "native_summary": {
+        "bypassed_families": 45764,
+        "candidate_families": 54445,
+        "checkpoint_hits": 8681,
+        "duplications": 59379,
+        "ortholog_pairs": 966439,
+        "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output/orthohmm_phylogeny",
+        "reconciled_families": 8681,
+        "remapped_checkpoint_hits": 0,
+        "root_hogs": 59770,
+        "schema_version": 1,
+        "speciations": 104016,
+        "species_tree_checkpoint_hit": true,
+        "species_tree_families": 200,
+        "uncertain_events": 13034
+      },
+      "products": {
+        "orthohmm_pairwise_orthologs.tsv": {
+          "bytes": 100248198,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "4987854aa79ef4affe2c3c15997b4111885849ffa69b65ed1f3fce9ff05920d8"
+        },
+        "orthohmm_pairwise_orthologs_confidence.tsv": {
+          "bytes": 105315262,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "037bc38e2963451524cf58449ceaa8335ce6ba4e722af50ac50f1d1e96ddf00d"
+        },
+        "orthohmm_root_hogs.tsv": {
+          "bytes": 6301075,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "c2981e6f041be76aef676bf9b1c8fc97e6f758f57dc8b1aea97c3f5ba970495d"
+        }
+      },
+      "resources": {
+        "native_and_scoring_wall_s": 126.56718235788867,
+        "native_execution": {
+          "command": [
+            "/home/bizon/anaconda3/bin/python",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/replay_phylogeny.py",
+            "--fasta-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+            "--candidate-clusters",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "--output-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/output",
+            "--json",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/metrics.json",
+            "--cpu",
+            "16",
+            "--species-tree-mode",
+            "infer",
+            "--aligner",
+            "mafft",
+            "--tree-builder",
+            "FastTree",
+            "--root-rule",
+            "species_overlap",
+            "--pair-rule",
+            "positive_paralogy",
+            "--species-tree-rooting",
+            "min_variance",
+            "--membership-constraints",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+            "--checkpoint-source",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output",
+            "--satellite-membership-rule",
+            "high_confidence_pair"
+          ],
+          "log": {
+            "bytes": 181,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/native.log",
+            "sha256": "d549e1f1d039dd139abe8da06f5146f3e96a4290ecaf2496c31e71cedb159819"
+          },
+          "resources": {
+            "elapsed_seconds": 97.15,
+            "exit_status": 0,
+            "max_process_rss_kib": 1672816,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 20.81,
+            "user_seconds": 92.76
+          },
+          "returncode": 0,
+          "time": {
+            "bytes": 2173,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/control/native.time.txt",
+            "sha256": "77623ab7ce30db0cd19a1958b093491b4710f9c065dfae96e4043a35f4279fc1"
+          }
+        }
+      },
+      "scope": "Independent content readback of cached-stage accuracy; not fresh full-pipeline timing or terminal scheduler admission.",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7410607351873405
+      },
+      "status": "independent_content_readback_verified",
+      "tree_mode": "candidate_specific_inferred"
+    },
+    {
+      "coverage": {
+        "genes": 251378,
+        "groups": 59336,
+        "pairs": 980184,
+        "species": 12
+      },
+      "dataset": "OrthoBench",
+      "details": {
+        "family_details": {
+          "exact_refogs": 15,
+          "f_score": 73.56395810008462,
+          "precision": 80.59760634974724,
+          "recall": 67.65940946051286,
+          "refog_records": [
+            {
+              "exact": false,
+              "false_negative": 14.0,
+              "false_positive": 0.0,
+              "genes": 15,
+              "refog": "RefOG001.txt",
+              "splits": 2,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 150.0,
+              "false_positive": 38.0,
+              "genes": 19,
+              "refog": "RefOG002.txt",
+              "splits": 11,
+              "true_positive": 21.0
+            },
+            {
+              "exact": false,
+              "false_negative": 97.0,
+              "false_positive": 96.0,
+              "genes": 50,
+              "refog": "RefOG003.txt",
+              "splits": 3,
+              "true_positive": 1128.0
+            },
+            {
+              "exact": false,
+              "false_negative": 11.0,
+              "false_positive": 1.0,
+              "genes": 12,
+              "refog": "RefOG004.txt",
+              "splits": 2,
+              "true_positive": 55.0
+            },
+            {
+              "exact": false,
+              "false_negative": 93.0,
+              "false_positive": 33.0,
+              "genes": 34,
+              "refog": "RefOG005.txt",
+              "splits": 2,
+              "true_positive": 468.0
+            },
+            {
+              "exact": false,
+              "false_negative": 224.0,
+              "false_positive": 15.0,
+              "genes": 48,
+              "refog": "RefOG006.txt",
+              "splits": 5,
+              "true_positive": 904.0
+            },
+            {
+              "exact": false,
+              "false_negative": 748.0,
+              "false_positive": 171.0,
+              "genes": 57,
+              "refog": "RefOG007.txt",
+              "splits": 7,
+              "true_positive": 848.0
+            },
+            {
+              "exact": false,
+              "false_negative": 25.0,
+              "false_positive": 4.0,
+              "genes": 14,
+              "refog": "RefOG008.txt",
+              "splits": 3,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 99.0,
+              "false_positive": 55.0,
+              "genes": 23,
+              "refog": "RefOG009.txt",
+              "splits": 5,
+              "true_positive": 154.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 3,
+              "refog": "RefOG010.txt",
+              "splits": 1,
+              "true_positive": 3.0
+            },
+            {
+              "exact": false,
+              "false_negative": 3336.0,
+              "false_positive": 171.0,
+              "genes": 94,
+              "refog": "RefOG011.txt",
+              "splits": 9,
+              "true_positive": 1035.0
+            },
+            {
+              "exact": false,
+              "false_negative": 173.0,
+              "false_positive": 54.0,
+              "genes": 46,
+              "refog": "RefOG012.txt",
+              "splits": 4,
+              "true_positive": 862.0
+            },
+            {
+              "exact": false,
+              "false_negative": 344.0,
+              "false_positive": 37.0,
+              "genes": 27,
+              "refog": "RefOG013.txt",
+              "splits": 21,
+              "true_positive": 7.0
+            },
+            {
+              "exact": false,
+              "false_negative": 238.0,
+              "false_positive": 6.0,
+              "genes": 24,
+              "refog": "RefOG014.txt",
+              "splits": 11,
+              "true_positive": 38.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 23,
+              "refog": "RefOG015.txt",
+              "splits": 1,
+              "true_positive": 253.0
+            },
+            {
+              "exact": false,
+              "false_negative": 47.0,
+              "false_positive": 20.0,
+              "genes": 25,
+              "refog": "RefOG016.txt",
+              "splits": 3,
+              "true_positive": 253.0
+            },
+            {
+              "exact": false,
+              "false_negative": 28.0,
+              "false_positive": 0.0,
+              "genes": 29,
+              "refog": "RefOG017.txt",
+              "splits": 2,
+              "true_positive": 378.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 12,
+              "refog": "RefOG018.txt",
+              "splits": 1,
+              "true_positive": 66.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG019.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 78.0,
+              "false_positive": 797.0,
+              "genes": 28,
+              "refog": "RefOG020.txt",
+              "splits": 4,
+              "true_positive": 300.0
+            },
+            {
+              "exact": false,
+              "false_negative": 5625.0,
+              "false_positive": 1730.0,
+              "genes": 125,
+              "refog": "RefOG021.txt",
+              "splits": 15,
+              "true_positive": 2125.0
+            },
+            {
+              "exact": false,
+              "false_negative": 22.0,
+              "false_positive": 73.0,
+              "genes": 23,
+              "refog": "RefOG022.txt",
+              "splits": 2,
+              "true_positive": 231.0
+            },
+            {
+              "exact": false,
+              "false_negative": 1968.0,
+              "false_positive": 172.0,
+              "genes": 69,
+              "refog": "RefOG023.txt",
+              "splits": 10,
+              "true_positive": 378.0
+            },
+            {
+              "exact": false,
+              "false_negative": 0.0,
+              "false_positive": 663.0,
+              "genes": 51,
+              "refog": "RefOG024.txt",
+              "splits": 1,
+              "true_positive": 1275.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG025.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 40,
+              "refog": "RefOG026.txt",
+              "splits": 1,
+              "true_positive": 780.0
+            },
+            {
+              "exact": false,
+              "false_negative": 69.0,
+              "false_positive": 95.0,
+              "genes": 20,
+              "refog": "RefOG027.txt",
+              "splits": 4,
+              "true_positive": 121.0
+            },
+            {
+              "exact": false,
+              "false_negative": 176.0,
+              "false_positive": 0.0,
+              "genes": 24,
+              "refog": "RefOG028.txt",
+              "splits": 5,
+              "true_positive": 100.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG029.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG030.txt",
+              "splits": 1,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 31.0,
+              "false_positive": 0.0,
+              "genes": 32,
+              "refog": "RefOG031.txt",
+              "splits": 2,
+              "true_positive": 465.0
+            },
+            {
+              "exact": false,
+              "false_negative": 13.0,
+              "false_positive": 0.0,
+              "genes": 14,
+              "refog": "RefOG032.txt",
+              "splits": 2,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 57.0,
+              "false_positive": 289.0,
+              "genes": 30,
+              "refog": "RefOG033.txt",
+              "splits": 3,
+              "true_positive": 378.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 21,
+              "refog": "RefOG034.txt",
+              "splits": 1,
+              "true_positive": 210.0
+            },
+            {
+              "exact": false,
+              "false_negative": 170.0,
+              "false_positive": 489.0,
+              "genes": 32,
+              "refog": "RefOG035.txt",
+              "splits": 6,
+              "true_positive": 326.0
+            },
+            {
+              "exact": false,
+              "false_negative": 45.0,
+              "false_positive": 360.0,
+              "genes": 46,
+              "refog": "RefOG036.txt",
+              "splits": 2,
+              "true_positive": 990.0
+            },
+            {
+              "exact": false,
+              "false_negative": 96.0,
+              "false_positive": 62.0,
+              "genes": 34,
+              "refog": "RefOG037.txt",
+              "splits": 4,
+              "true_positive": 465.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 9,
+              "refog": "RefOG038.txt",
+              "splits": 1,
+              "true_positive": 36.0
+            },
+            {
+              "exact": false,
+              "false_negative": 69.0,
+              "false_positive": 114.0,
+              "genes": 20,
+              "refog": "RefOG039.txt",
+              "splits": 4,
+              "true_positive": 121.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG040.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG041.txt",
+              "splits": 1,
+              "true_positive": 136.0
+            },
+            {
+              "exact": false,
+              "false_negative": 26.0,
+              "false_positive": 0.0,
+              "genes": 11,
+              "refog": "RefOG042.txt",
+              "splits": 3,
+              "true_positive": 29.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG043.txt",
+              "splits": 1,
+              "true_positive": 136.0
+            },
+            {
+              "exact": false,
+              "false_negative": 13.0,
+              "false_positive": 104.0,
+              "genes": 14,
+              "refog": "RefOG044.txt",
+              "splits": 2,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 23.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG045.txt",
+              "splits": 3,
+              "true_positive": 55.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 32,
+              "refog": "RefOG046.txt",
+              "splits": 1,
+              "true_positive": 496.0
+            },
+            {
+              "exact": false,
+              "false_negative": 128.0,
+              "false_positive": 0.0,
+              "genes": 36,
+              "refog": "RefOG047.txt",
+              "splits": 2,
+              "true_positive": 502.0
+            },
+            {
+              "exact": false,
+              "false_negative": 113.0,
+              "false_positive": 65.0,
+              "genes": 40,
+              "refog": "RefOG048.txt",
+              "splits": 3,
+              "true_positive": 667.0
+            },
+            {
+              "exact": false,
+              "false_negative": 16.0,
+              "false_positive": 0.0,
+              "genes": 10,
+              "refog": "RefOG049.txt",
+              "splits": 2,
+              "true_positive": 29.0
+            },
+            {
+              "exact": false,
+              "false_negative": 25.0,
+              "false_positive": 0.0,
+              "genes": 14,
+              "refog": "RefOG050.txt",
+              "splits": 3,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 16.0,
+              "false_positive": 0.0,
+              "genes": 17,
+              "refog": "RefOG051.txt",
+              "splits": 2,
+              "true_positive": 120.0
+            },
+            {
+              "exact": false,
+              "false_negative": 14.0,
+              "false_positive": 14.0,
+              "genes": 15,
+              "refog": "RefOG052.txt",
+              "splits": 2,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 33.0,
+              "false_positive": 14.0,
+              "genes": 13,
+              "refog": "RefOG053.txt",
+              "splits": 4,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 498.0,
+              "false_positive": 9.0,
+              "genes": 44,
+              "refog": "RefOG054.txt",
+              "splits": 8,
+              "true_positive": 448.0
+            },
+            {
+              "exact": false,
+              "false_negative": 55.0,
+              "false_positive": 17.0,
+              "genes": 29,
+              "refog": "RefOG055.txt",
+              "splits": 3,
+              "true_positive": 351.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 7,
+              "refog": "RefOG056.txt",
+              "splits": 1,
+              "true_positive": 21.0
+            },
+            {
+              "exact": false,
+              "false_negative": 29.0,
+              "false_positive": 0.0,
+              "genes": 16,
+              "refog": "RefOG057.txt",
+              "splits": 3,
+              "true_positive": 91.0
+            },
+            {
+              "exact": false,
+              "false_negative": 1097.0,
+              "false_positive": 235.0,
+              "genes": 50,
+              "refog": "RefOG058.txt",
+              "splits": 14,
+              "true_positive": 128.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 10,
+              "refog": "RefOG059.txt",
+              "splits": 1,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 262.0,
+              "false_positive": 0.0,
+              "genes": 68,
+              "refog": "RefOG060.txt",
+              "splits": 5,
+              "true_positive": 2016.0
+            },
+            {
+              "exact": false,
+              "false_negative": 221.0,
+              "false_positive": 40.0,
+              "genes": 30,
+              "refog": "RefOG061.txt",
+              "splits": 3,
+              "true_positive": 214.0
+            },
+            {
+              "exact": true,
+              "false_negative": 0.0,
+              "false_positive": 0.0,
+              "genes": 11,
+              "refog": "RefOG062.txt",
+              "splits": 1,
+              "true_positive": 55.0
+            },
+            {
+              "exact": false,
+              "false_negative": 39.0,
+              "false_positive": 6.0,
+              "genes": 21,
+              "refog": "RefOG063.txt",
+              "splits": 3,
+              "true_positive": 171.0
+            },
+            {
+              "exact": false,
+              "false_negative": 46.0,
+              "false_positive": 56.0,
+              "genes": 14,
+              "refog": "RefOG064.txt",
+              "splits": 5,
+              "true_positive": 45.0
+            },
+            {
+              "exact": false,
+              "false_negative": 17.0,
+              "false_positive": 12.0,
+              "genes": 10,
+              "refog": "RefOG065.txt",
+              "splits": 3,
+              "true_positive": 28.0
+            },
+            {
+              "exact": false,
+              "false_negative": 13.0,
+              "false_positive": 0.0,
+              "genes": 14,
+              "refog": "RefOG066.txt",
+              "splits": 2,
+              "true_positive": 78.0
+            },
+            {
+              "exact": false,
+              "false_negative": 12.0,
+              "false_positive": 0.0,
+              "genes": 13,
+              "refog": "RefOG067.txt",
+              "splits": 2,
+              "true_positive": 66.0
+            },
+            {
+              "exact": false,
+              "false_negative": 26.0,
+              "false_positive": 0.0,
+              "genes": 27,
+              "refog": "RefOG068.txt",
+              "splits": 2,
+              "true_positive": 325.0
+            },
+            {
+              "exact": false,
+              "false_negative": 267.0,
+              "false_positive": 14.0,
+              "genes": 31,
+              "refog": "RefOG069.txt",
+              "splits": 4,
+              "true_positive": 198.0
+            },
+            {
+              "exact": false,
+              "false_negative": 12.0,
+              "false_positive": 36.0,
+              "genes": 13,
+              "refog": "RefOG070.txt",
+              "splits": 2,
+              "true_positive": 66.0
+            }
+          ],
+          "refogs": 70,
+          "weighted_false_negative": 306.4270953616405,
+          "weighted_false_positive": 154.3265292560813,
+          "weighted_true_positive": 641.0729046383592
+        },
+        "precision": 0.8059760634974724,
+        "recall": 0.6765940946051286
+      },
+      "native_summary": {
+        "bypassed_families": 45286,
+        "candidate_families": 53898,
+        "checkpoint_hits": 8449,
+        "duplications": 60031,
+        "ortholog_pairs": 980184,
+        "output_directory": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output/orthohmm_phylogeny",
+        "reconciled_families": 8612,
+        "remapped_checkpoint_hits": 8443,
+        "root_hogs": 59336,
+        "schema_version": 1,
+        "speciations": 104287,
+        "species_tree_checkpoint_hit": false,
+        "species_tree_families": 200,
+        "uncertain_events": 13119
+      },
+      "products": {
+        "orthohmm_pairwise_orthologs.tsv": {
+          "bytes": 101683040,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs.tsv",
+          "sha256": "918ced9589057f49058d496bf28f2588fbc46b1c2756b2890991b761d5520ab8"
+        },
+        "orthohmm_pairwise_orthologs_confidence.tsv": {
+          "bytes": 106820707,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output/orthohmm_phylogeny/orthohmm_pairwise_orthologs_confidence.tsv",
+          "sha256": "9b01faaa35c4ed247625eafcbf238c401c3195bf801b5e8f6847f388eacad290"
+        },
+        "orthohmm_root_hogs.tsv": {
+          "bytes": 6288489,
+          "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output/orthohmm_phylogeny/orthohmm_root_hogs.tsv",
+          "sha256": "d00fd289b40a77fc2e3db5cc9d07cfc188c3778bf6d073280fe1cff041480c32"
+        }
+      },
+      "resources": {
+        "native_and_scoring_wall_s": 679.843301855959,
+        "native_execution": {
+          "command": [
+            "/home/bizon/anaconda3/bin/python",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_recovery_r1_v2_20261013/benchmark_tools/replay_phylogeny.py",
+            "--fasta-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/Open_Orthobench/BENCHMARKS/Input",
+            "--candidate-clusters",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/candidate/orthohmm_working_res/orthohmm_edges_clustered.txt",
+            "--output-directory",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/output",
+            "--json",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/metrics.json",
+            "--cpu",
+            "16",
+            "--species-tree-mode",
+            "infer",
+            "--aligner",
+            "mafft",
+            "--tree-builder",
+            "FastTree",
+            "--root-rule",
+            "species_overlap",
+            "--pair-rule",
+            "positive_paralogy",
+            "--species-tree-rooting",
+            "min_variance",
+            "--membership-constraints",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/candidate/orthohmm_working_res/phylogeny_candidate_merges.json",
+            "--checkpoint-source",
+            "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/full_search_hillclimb_r1_v3_20261012/OrthoBench/control100/output",
+            "--satellite-membership-rule",
+            "high_confidence_pair"
+          ],
+          "log": {
+            "bytes": 185,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/native.log",
+            "sha256": "a4e5cd0de47bfc341c9f46c4f066722807d03a3f3e378cb636fb08dd8cee0c50"
+          },
+          "resources": {
+            "elapsed_seconds": 650.72,
+            "exit_status": 0,
+            "max_process_rss_kib": 1700740,
+            "semantics": {
+              "elapsed_seconds": "GNU-time native child wall time, rounded by GNU time; wrapper launch overhead is excluded",
+              "max_process_rss_kib": "Reported maximum process RSS, not simultaneous sum across native processes or cgroup memory",
+              "system_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded",
+              "user_seconds": "Native child and waited-for descendants, as reported by GNU time; collector CPU excluded"
+            },
+            "system_seconds": 218.65,
+            "user_seconds": 5621.78
+          },
+          "returncode": 0,
+          "time": {
+            "bytes": 2199,
+            "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v2_20261013/OrthoBench/deferred500/native.time.txt",
+            "sha256": "75b1623e5ca9455285c3243786f5c3b73520c1b9a33e89170efd4605c3c62aa0"
+          }
+        }
+      },
+      "scope": "Independent content readback of cached-stage accuracy; not fresh full-pipeline timing or terminal scheduler admission.",
+      "scores": {
+        "OrthoBench: OrthoBench F1": 0.7356395810008461
+      },
+      "status": "independent_content_readback_verified",
+      "tree_mode": "candidate_specific_inferred"
+    }
+  ],
+  "control_F1": 0.7410607351873405,
+  "defaults_promoted": false,
+  "generated_at_utc": "2026-10-13T17:48:05.361686+00:00",
+  "goal_completed": false,
+  "limitations": [
+    "Other own-inferred QfO endpoints are not filled by this result or the fixed-tree diagnostic.",
+    "Cached-stage shared-host native timings are not fresh full-pipeline timing."
+  ],
+  "report": {
+    "bytes": 32173107,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_ob_recovery_readback_20261013/report.json",
+    "sha256": "66f8eb97663fc4c495b36cb8fd9b9093700bc7b562076935c721817bcad54398"
+  },
+  "scheduler": "JobIDRaw|State|ExitCode|Elapsed|NodeList|AllocCPUS\n24202|COMPLETED|0:0|00:14:34|bizon|16\n24202.batch|COMPLETED|0:0|00:14:34|bizon|16\n",
+  "scope": "Matched fresh-native control; old mismatched-source attempt retained. This is a development decline, not a statistical equivalence claim. Raw HMM search was not repeated.",
+  "status": "both_own_inferred_orthobench_recovery_arms_independently_verified",
+  "variant_F1": 0.7356395810008461
+}
