@@ -1,0 +1,30 @@
+{
+  "schema": "qfo_reference_stage_localization_v1",
+  "status": "prespecified_unrun",
+  "hypothesis": "Corrected-QfO baseline recall losses can be prioritized by candidate-family separation versus native pair omission within a candidate, with initial HMM hit presence providing context rather than causal attribution.",
+  "baseline": "Independently read-back membership:control_direct in hillclimb_comparison_readback_v3_20261012; its original corrected-QfO numeric initial-search checkpoint and matching CPM 0.1 satellite_v2 candidate partition.",
+  "cohort": "Every asserted VGNC reference pair; no sampling by observed success, family size, or score.",
+  "observations": [
+    "Native TP/FN status, checked exactly against retained raw scorer rows.",
+    "Same or different candidate-family membership.",
+    "Same or different RootHOG membership, never substituted for native pair predictions.",
+    "Presence and normalized scores of each directed significant initial HMM hit."
+  ],
+  "gates": [
+    "Pin reference, participant database, raw scorer rows, original factorial manifest, comparison report, checkpoint arrays, partitions, native pairs, and helper source bytes before and after analysis.",
+    "Preserve native last-label and accession-alias conventions; assert injective accession mapping into the complete checkpoint gene universe.",
+    "Reproduce VGNC pooled precision, recall, and F1; require native truth pairs to match raw TP/FN exactly.",
+    "Verify checkpoint numeric integrity, full candidate and RootHOG gene universes, native pair order, uniqueness, and admitted count.",
+    "Test stage classification, directional hits, ambiguous mappings, malformed arrays and partitions, native-pair semantics, and evidence mutation."
+  ],
+  "resource_limits": {"cpus": 1, "memory_gib": 8, "wall_limit_minutes": 30},
+  "selection_rule": "Use the complete descriptive trace to motivate a separately prespecified mechanism-specific experiment. This diagnostic selects no default and establishes no new accuracy gain.",
+  "scope": "Development-exposed post-hoc localization using cached outputs, not fresh initial-search recovery or independent confirmation.",
+  "causal_limits": [
+    "Cached hit absence cannot distinguish prefilter sensitivity, candidate cap, ranking, or significance threshold rejection.",
+    "Direct hit presence does not imply native RBNH edge admission or prove a causal clustering error.",
+    "Candidate and root membership do not resolve which reconciliation, tree, or satellite rule caused an omitted pair."
+  ],
+  "defaults_changed": false,
+  "fresh_search_submitted": false
+}
