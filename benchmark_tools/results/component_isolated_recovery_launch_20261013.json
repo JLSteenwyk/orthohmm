@@ -1,0 +1,58 @@
+{
+  "defaults_promoted": false,
+  "frozen_candidate_tests": {
+    "bytes": 5342,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_isolated_recovery_frozen_tests_20261013.xml",
+    "sha256": "aad30bebc518033371ac62e34f95da25d97f1f5fcbd1a85bbd88fa8163b45798"
+  },
+  "frozen_scoring_tests": {
+    "bytes": 2673,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/component_scoring_recovery_frozen_tests_20261013.xml",
+    "sha256": "b53d62f37631ff5f1df5e3bb119d891919a3f0a2b841dc84714dfa9a107ce1d6"
+  },
+  "goal_completed": false,
+  "jobs": {
+    "admission": {
+      "cpus": 1,
+      "dependency": "afterany:24220:24221",
+      "job_id": "24222",
+      "memory_gib": 64,
+      "revision": "a5fe7fa6",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_recovery_admission_r1_v1_20261013",
+      "wall_hours": 1
+    },
+    "candidates": {
+      "cpus": 16,
+      "job_id": "24221",
+      "memory_gib": 64,
+      "revision": "c83e6df1",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_candidate_recovery_r1_v1_20261013",
+      "wall_hours": 1
+    },
+    "scoring": {
+      "cpus": 16,
+      "job_id": "24220",
+      "memory_gib": 64,
+      "revision": "9e139aa2",
+      "source_root": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/component_scoring_recovery_r1_v1_20261013",
+      "wall_hours": 12
+    }
+  },
+  "native_inference_rerun": false,
+  "original_failed_jobs": [
+    "24211",
+    "24214"
+  ],
+  "scientific_parameters_changed": false,
+  "scoring_execution_plan": {
+    "bytes": 2499,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_scoring_recovery_r1_v1_20261013/execution_plan.json",
+    "sha256": "a6291bfeb87d13fce068e831aa2f8fe66deb624accaac7073bd3ba68ec772af0"
+  },
+  "status": "scoring_and_candidate_recovery_with_dependent_independent_admission_submitted",
+  "verified_native_probe": {
+    "bytes": 406440,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/component_native_recovery_probe_r1_v1_20261013/report.json",
+    "sha256": "e075d747865f250d0add8c3309b83dd8d76d0790dff651ae9ca9b55d460cbf7e"
+  }
+}
