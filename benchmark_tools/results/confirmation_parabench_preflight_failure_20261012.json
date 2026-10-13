@@ -1,0 +1,43 @@
+{
+  "archive_files_reverified_unchanged": [
+    {
+      "bytes": 21525952,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__1-4.zip",
+      "sha256": "33a1d65b6a93d0cf5daa95d79254d74cd7f07ff718a1ce6e30e44ea83b889a0e"
+    },
+    {
+      "bytes": 17417567,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__2-4.zip",
+      "sha256": "a485f325a9f6656d1daa4b7c2e38a3fdc7ccf0e59e3d57d53a566534bacd294a"
+    },
+    {
+      "bytes": 24371854,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__3-4.zip",
+      "sha256": "13738e452f7d8d7e6b6e8601414af401c43eac5873d68a461fa29aeefcd1f823"
+    },
+    {
+      "bytes": 16873501,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_parabench_20261012/proteomes__4-4.zip",
+      "sha256": "5a44349999f7871bba07d99facd2d0d073f2702f46f3f28133feb03e7cacc1f8"
+    }
+  ],
+  "auditor": {
+    "bytes": 9142,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/confirmation_overlap_source_20261012/benchmark_tools/audit_confirmation_overlap.py",
+    "sha256": "c51bc2fea32a529906ccaef8428f261cc986e80b8e6d54fe9d28c5bbaec95de9"
+  },
+  "error": "Strict record identity comparison rejected publisher metadata fields inside archive records.",
+  "error_type": "ValueError",
+  "exit_code": 1,
+  "generated_at_utc": "2026-10-13T03:31:20.001416+00:00",
+  "inference_launched": false,
+  "manifest": {
+    "bytes": 31556,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_acquisition_20261012.json",
+    "sha256": "1d5008dc161d26bbc30844244ebcd826f5012590fd3731821edf9e165b4802a3"
+  },
+  "recovery": "Create a new manifest namespace separating exact checksum identity from publisher acquisition metadata; preserve original receipt and validator semantics.",
+  "scoring_performed": false,
+  "source_revision": "9930f733c03232ba28989a71f79634eb9e390eba",
+  "status": "audit_preflight_failed_before_sequence_reading"
+}

@@ -1,0 +1,877 @@
+{
+  "instrumented_auditor": {
+    "bytes": 9142,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/audit_confirmation_overlap.py",
+    "sha256": "c51bc2fea32a529906ccaef8428f261cc986e80b8e6d54fe9d28c5bbaec95de9"
+  },
+  "interpretation": "Retain both raw rusage and Linux exec-image VmHWM; differences can arise from process lifecycle accounting. Do not silently replace earlier resource receipts.",
+  "manifest": {
+    "bytes": 33367,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_acquisition_v2_20261012.json",
+    "sha256": "6c84df4fdebbf1bd4094959599fc0fc2dbfb724fe93bf853eab0c544cbb51744"
+  },
+  "original_audit": {
+    "bytes": 42666,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_overlap_v2_20261012.json",
+    "sha256": "e6367234a32e78f63efabaf2395990d80b051d210743512d4cc74085131e5f48"
+  },
+  "reference_classifications_read": false,
+  "repeat_resources": {
+    "cpu_s": 19.255589299,
+    "peak_rss_kib": 197272,
+    "scope": "Single-process exposure audit, not tool inference timing; shared-host wall time may be confounded.",
+    "wall_s": 19.25665417080745
+  },
+  "samples": [
+    {
+      "VmHWM": 35328,
+      "VmRSS": 35328,
+      "phase": "before_audit",
+      "proteins": null,
+      "rusage_self_maxrss_kib": 35328
+    },
+    {
+      "VmHWM": 50688,
+      "VmRSS": 50688,
+      "phase": "protein_stream_complete",
+      "proteins": 27475,
+      "rusage_self_maxrss_kib": 50688
+    },
+    {
+      "VmHWM": 52224,
+      "VmRSS": 52224,
+      "phase": "protein_stream_complete",
+      "proteins": 8610,
+      "rusage_self_maxrss_kib": 52224
+    },
+    {
+      "VmHWM": 59904,
+      "VmRSS": 59904,
+      "phase": "protein_stream_complete",
+      "proteins": 17614,
+      "rusage_self_maxrss_kib": 59904
+    },
+    {
+      "VmHWM": 64512,
+      "VmRSS": 64512,
+      "phase": "protein_stream_complete",
+      "proteins": 12739,
+      "rusage_self_maxrss_kib": 64512
+    },
+    {
+      "VmHWM": 67584,
+      "VmRSS": 67584,
+      "phase": "protein_stream_complete",
+      "proteins": 7154,
+      "rusage_self_maxrss_kib": 67584
+    },
+    {
+      "VmHWM": 79696,
+      "VmRSS": 79696,
+      "phase": "protein_stream_complete",
+      "proteins": 20874,
+      "rusage_self_maxrss_kib": 79696
+    },
+    {
+      "VmHWM": 82768,
+      "VmRSS": 82768,
+      "phase": "protein_stream_complete",
+      "proteins": 8038,
+      "rusage_self_maxrss_kib": 82768
+    },
+    {
+      "VmHWM": 85840,
+      "VmRSS": 85840,
+      "phase": "protein_stream_complete",
+      "proteins": 9188,
+      "rusage_self_maxrss_kib": 85840
+    },
+    {
+      "VmHWM": 95056,
+      "VmRSS": 95056,
+      "phase": "protein_stream_complete",
+      "proteins": 24429,
+      "rusage_self_maxrss_kib": 95056
+    },
+    {
+      "VmHWM": 99664,
+      "VmRSS": 99664,
+      "phase": "protein_stream_complete",
+      "proteins": 9759,
+      "rusage_self_maxrss_kib": 99664
+    },
+    {
+      "VmHWM": 121168,
+      "VmRSS": 120688,
+      "phase": "protein_stream_complete",
+      "proteins": 39461,
+      "rusage_self_maxrss_kib": 121168
+    },
+    {
+      "VmHWM": 132976,
+      "VmRSS": 132976,
+      "phase": "protein_stream_complete",
+      "proteins": 30792,
+      "rusage_self_maxrss_kib": 132976
+    },
+    {
+      "VmHWM": 139120,
+      "VmRSS": 139120,
+      "phase": "protein_stream_complete",
+      "proteins": 15349,
+      "rusage_self_maxrss_kib": 139120
+    },
+    {
+      "VmHWM": 140656,
+      "VmRSS": 140656,
+      "phase": "protein_stream_complete",
+      "proteins": 5448,
+      "rusage_self_maxrss_kib": 140656
+    },
+    {
+      "VmHWM": 145264,
+      "VmRSS": 145264,
+      "phase": "protein_stream_complete",
+      "proteins": 11717,
+      "rusage_self_maxrss_kib": 145264
+    },
+    {
+      "VmHWM": 166768,
+      "VmRSS": 166768,
+      "phase": "protein_stream_complete",
+      "proteins": 50190,
+      "rusage_self_maxrss_kib": 166768
+    },
+    {
+      "VmHWM": 168304,
+      "VmRSS": 168304,
+      "phase": "protein_stream_complete",
+      "proteins": 6788,
+      "rusage_self_maxrss_kib": 168304
+    },
+    {
+      "VmHWM": 185200,
+      "VmRSS": 185200,
+      "phase": "protein_stream_complete",
+      "proteins": 20191,
+      "rusage_self_maxrss_kib": 185200
+    },
+    {
+      "VmHWM": 185200,
+      "VmRSS": 185200,
+      "phase": "protein_stream_complete",
+      "proteins": 20257,
+      "rusage_self_maxrss_kib": 185200
+    },
+    {
+      "VmHWM": 185200,
+      "VmRSS": 185200,
+      "phase": "protein_stream_complete",
+      "proteins": 16671,
+      "rusage_self_maxrss_kib": 185200
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 30313,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 13947,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 16878,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 23485,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 21384,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 22866,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 23534,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 22250,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 19602,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 2001,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 1552,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 895,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 25698,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 2301,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 18116,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 8038,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 2423,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 4406,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 6035,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 6788,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 3402,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 21989,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 39461,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 4391,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 1982,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 1795,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 1553,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 13811,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 1787,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 483,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 186736,
+      "VmRSS": 186736,
+      "phase": "protein_stream_complete",
+      "proteins": 7271,
+      "rusage_self_maxrss_kib": 186736
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 23617,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 15998,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 6449,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 14445,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 9188,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 3676,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 4782,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 3507,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 11717,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 5388,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 188272,
+      "VmRSS": 188272,
+      "phase": "protein_stream_complete",
+      "proteins": 21792,
+      "rusage_self_maxrss_kib": 188272
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 189808,
+      "phase": "protein_stream_complete",
+      "proteins": 50190,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 189808,
+      "phase": "protein_stream_complete",
+      "proteins": 7971,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 188056,
+      "phase": "protein_stream_complete",
+      "proteins": 28542,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 188056,
+      "phase": "protein_stream_complete",
+      "proteins": 20473,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 188056,
+      "phase": "protein_stream_complete",
+      "proteins": 4260,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 189808,
+      "VmRSS": 188056,
+      "phase": "protein_stream_complete",
+      "proteins": 3993,
+      "rusage_self_maxrss_kib": 189808
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 24428,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 1602,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 9759,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 19819,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 8038,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 2938,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 3850,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 6604,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 12739,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 20649,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 23053,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 21225,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 6049,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 5564,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 5141,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 4468,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 21587,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 2046,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 3085,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 8253,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 9647,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 15349,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 20600,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 195736,
+      "VmRSS": 195736,
+      "phase": "protein_stream_complete",
+      "proteins": 27500,
+      "rusage_self_maxrss_kib": 195736
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 30857,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 17614,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 12533,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 8610,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 16568,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 39400,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 1743,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 17272,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 16678,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 1852,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 15688,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 23845,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 23328,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 18318,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 197272,
+      "phase": "protein_stream_complete",
+      "proteins": 43672,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 189248,
+      "phase": "protein_stream_complete",
+      "proteins": 43615,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 189248,
+      "phase": "protein_stream_complete",
+      "proteins": 19176,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 189248,
+      "phase": "protein_stream_complete",
+      "proteins": 48321,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 189248,
+      "phase": "protein_stream_complete",
+      "proteins": 9623,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 52089,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 42582,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 6600,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 13194,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 34825,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 5146,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188920,
+      "phase": "protein_stream_complete",
+      "proteins": 36461,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 188744,
+      "phase": "protein_stream_complete",
+      "proteins": 131585,
+      "rusage_self_maxrss_kib": 197272
+    },
+    {
+      "VmHWM": 197272,
+      "VmRSS": 78116,
+      "phase": "after_audit",
+      "proteins": null,
+      "rusage_self_maxrss_kib": 197272
+    }
+  ],
+  "scope": "Exploratory diagnostic rerun with an in-process protein-stream wrapper and Linux proc RSS observations; not a frozen inference benchmark.",
+  "scoring_performed": false,
+  "status": "same_overlap_counts_reproduced_with_memory_observations"
+}

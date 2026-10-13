@@ -1,4 +1,4 @@
-from pathlib import Path
+import json
 from zipfile import ZipFile
 
 import pytest
@@ -113,3 +113,41 @@ def test_cross_member_id_collisions_are_disclosed_not_merged(tmp_path):
     result = auditor.audit([candidate], {"exposed": [old]})
     assert result["candidate_identifier_collisions_across_members"] == 1
     assert result["overlaps"]["exposed"]["matching_candidate_proteins"] == 1
+
+
+def test_cli_requires_strict_identities_and_separates_publisher_metadata(tmp_path, monkeypatch):
+    candidate = archive(tmp_path, [("A.fa", ">a\nACDE\n")])
+    old, protocol = tmp_path / "old.fa", tmp_path / "protocol.json"
+    old.write_text(">old\nACDE\n")
+    protocol.write_text("{}")
+    identity = auditor.record(candidate)
+    download = {**identity, "url": "https://example.invalid/pinned.zip", "publisher_git_blob_verified": True}
+    manifest = {"protocol": auditor.record(protocol), "archives": [download],
+        "development_inputs": {"exposed": [auditor.record(old)]},
+        "expected_development_proteins": {"exposed": 1}, "expected_candidate_proteomes": 1,
+        "upstream": {"revision": "fixture"}}
+    path, output = tmp_path / "manifest.json", tmp_path / "result.json"
+    path.write_text(json.dumps(manifest))
+    monkeypatch.setattr(auditor.sys, "argv", ["audit", "--manifest", str(path), "--output", str(output)])
+    with pytest.raises(ValueError, match="identity changed"):
+        auditor.main()
+    assert not output.exists()
+    manifest.update(archives=[identity], download_receipts=[download])
+    path.write_text(json.dumps(manifest))
+    auditor.main()
+    result = json.loads(output.read_text())
+    assert result["strict_sequence_disjoint_confirmation_ruled_out"]
+    assert not result["reference_classifications_read"]
+    assert not result["goal_completed"]
+    with pytest.raises(FileExistsError):
+        auditor.main()
+
+
+@pytest.mark.parametrize("expected", [{}, {"exposed": True}, {"exposed": 0}, {"different": 1}])
+def test_cli_inventory_schema_is_strict(tmp_path, monkeypatch, expected):
+    path = tmp_path / "manifest.json"
+    path.write_text(json.dumps({"expected_development_proteins": expected,
+                               "development_inputs": {"exposed": []}}))
+    monkeypatch.setattr(auditor.sys, "argv", ["audit", "--manifest", str(path), "--output", str(tmp_path / "result")])
+    with pytest.raises(ValueError, match="inventory/count schema"):
+        auditor.main()

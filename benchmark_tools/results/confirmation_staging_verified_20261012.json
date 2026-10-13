@@ -1,0 +1,58 @@
+{
+  "candidate_review": {
+    "bytes": 4382,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/confirmation_candidate_review_20261012.json",
+    "sha256": "9b494d0cc4a95d10f9dce6a74727e9fbdc90d184d5a9703c921563831549e390"
+  },
+  "counts": {
+    "matching_qfo": 305131,
+    "matching_qfo_fraction": 0.9983836400817996,
+    "proteins": 305625
+  },
+  "defaults_promoted": false,
+  "evidence": {
+    "acquisition": {
+      "bytes": 33367,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_acquisition_v2_20261012.json",
+      "sha256": "6c84df4fdebbf1bd4094959599fc0fc2dbfb724fe93bf853eab0c544cbb51744"
+    },
+    "memory_readback": {
+      "bytes": 21385,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_overlap_memory_readback_20261012.json",
+      "sha256": "f0935933218afe4752da24da064f3889a5bde87ce1ae55693258b28119453f89"
+    },
+    "original_acquisition": {
+      "bytes": 31556,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_acquisition_20261012.json",
+      "sha256": "1d5008dc161d26bbc30844244ebcd826f5012590fd3731821edf9e165b4802a3"
+    },
+    "overlap": {
+      "bytes": 42666,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_overlap_v2_20261012.json",
+      "sha256": "e6367234a32e78f63efabaf2395990d80b051d210743512d4cc74085131e5f48"
+    },
+    "preflight_failure": {
+      "bytes": 2246,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_parabench_preflight_failure_20261012.json",
+      "sha256": "643b0baddf51a315f657fb6943b180560977c1e75a7cd38dd793e8180edbae6c"
+    },
+    "tests": {
+      "bytes": 3543,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/confirmation_overlap_cli_tests_20261012.xml",
+      "sha256": "2d9028bc6a885f75a6398e9ad9de5fccbd69f9483a0b077ac2c299f1f5303fde"
+    }
+  },
+  "generated_at_utc": "2026-10-13T03:45:23.205450+00:00",
+  "goal_completed": false,
+  "interpretation": "ParaBench is unsuitable as strict sequence-disjoint confirmation; no reference labels or method predictions were inspected. Confirmation limitations remain nonblocking for development optimization.",
+  "next_actions": [
+    "Complete held-tree deterministic control scoring and then its gated variant.",
+    "Complete fresh full-search cap100/cap400 panel and independent readback.",
+    "Use results to choose the next bounded mechanism-specific round.",
+    "Freeze a candidate and confirmation protocol before reading new reference labels or benchmarking new datasets."
+  ],
+  "raw_archives_committed": false,
+  "scheduler_snapshot": "             JOBID     STATE       TIME   CPUS NODELIST(REASON)\n     24190_[1-2%1]   PENDING       0:00     32 (JobArrayTaskLimit)\n             24192   RUNNING      40:10     16 bizon\n           24190_0   RUNNING    1:27:35     32 bizon\n",
+  "status": "confirmation_candidate_overlap_verified_no_independent_validation_claimed",
+  "tests_passed": 25
+}

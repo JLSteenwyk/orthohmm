@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "bounded_confirmation_source_review_not_accuracy_evaluation",
+  "goal_completed": false,
+  "candidates": [
+    {
+      "name": "paraBench",
+      "primary_source": "https://github.com/rderelle/paraBench/tree/05cae01b38122792d77386ea223d48aeea47681c",
+      "status": "proteome_inputs_staged_and_overlap_audited_reference_labels_unopened",
+      "audit": "benchmark_tools/results/confirmation_parabench_overlap_v2_20261012.json",
+      "candidate_proteins": 305625,
+      "proteins_matching_corrected_qfo": 305131,
+      "decision": "Not eligible as strict sequence-disjoint confirmation. May supply supplementary reference-label transfer after method freeze, reference-semantics review, and licensing review; do not claim independent input or family generalization. Do not choose the small nonmatching subset as a surrogate independent test.",
+      "reference_classifications_downloaded": false,
+      "accuracy_evaluated": false
+    },
+    {
+      "name": "CGOB curated fungal groups",
+      "primary_sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC2880306/", "https://www.repository.cam.ac.uk/handle/1810/309455", "http://cgob3.ucd.ie/info.html", "http://cgob3.ucd.ie/Public_Data/Sequences/"],
+      "status": "metadata_and_public_sequence_route_verified_no_sequence_or_reference_download_yet",
+      "evidence": "Authors describe curated groups informed by synteny and sequence evidence. Official directory exposes AA.fsa and documentation, allowing release-matched sequence staging rather than substituting a newer unrelated annotation release.",
+      "decision": "Potential novel-taxon curated-group transfer panel, not admitted as an independent orthology gold standard. Before any scoring, stage the official release, document ON/OFF eligibility and taxon mappings, audit overlap with all development-exposed sources including YGOB, and establish what the curated groups mean relative to the intended ancestral level.",
+      "transport_limitation": "The legacy CGOB public archive is available over HTTP. Hashes bind a snapshot but do not authenticate that transport. Prefer authenticated publisher mirrors if available; keep this limitation explicit.",
+      "annotation_release_warning": "Current Candida Genome Database protein downloads exist, but must not be substituted for the older curated CGOB release without a validated mapping.",
+      "accuracy_evaluated": false
+    },
+    {
+      "name": "Newer QfO reference proteome releases",
+      "primary_source": "https://www.ebi.ac.uk/reference_proteomes/",
+      "status": "source_reviewed_not_downloaded_or_scored",
+      "decision": "Useful possible annotation-update robustness panel after matching the release-specific reference/mapping and rerunning all comparators. Not automatically independent confirmation: audit sequence, taxa and reference-label reuse before assigning that interpretation.",
+      "accuracy_evaluated": false
+    },
+    {
+      "name": "New prespecified simulation seeds",
+      "local_source": "benchmark_tools/prepare_simulation_panel.py",
+      "status": "existing_fixed_and_variable_panels_are_development_exposed_no_new_panel_generated",
+      "decision": "After candidate freeze, a disjoint prespecified seed panel can test reproducibility and transfer within the declared simulator. It is not independent biological validation, and changing only the random seed does not validate the model assumptions. Audit seed/parameter reuse before generation.",
+      "accuracy_evaluated": false
+    }
+  ],
+  "continuation_policy": "Do not stop local development optimization because independent reference data are limited. Complete the fresh HMM-search and held-tree experiments, freeze any selected candidate before confirmation scoring, and limit generalization claims to the evidence actually obtained.",
+  "resource_note": "The first exact-overlap audit reported a much larger raw rusage peak than an instrumented repeat. The repeat reproduced all overlap counts and observed a Linux VmHWM of 197272 KiB. Preserve both receipts; the cause of the discrepancy is not established. These are audit-process resources, not orthology inference performance measurements.",
+  "licensing": "Commit acquisition provenance and overlap summaries, not downloaded proteome archives; verify redistribution permissions separately before publishing raw data."
+}
