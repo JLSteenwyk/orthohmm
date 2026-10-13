@@ -1,0 +1,12 @@
+{
+  "schema": "isolated_component_candidate_reconstruction_v1",
+  "status": "prespecified_before_isolated_candidate_reconstruction",
+  "motivation": "The original component parent crashed during native membership readback after graph/candidate construction. Clean original native readback succeeded in a new process. Independently reconstruct candidates in another process, without mixing graph construction and native readback or rerunning inference.",
+  "operation": "Bind the original frozen run_large_copy_components helper; verify all original plan inputs, sources and scientific runtime; reconstruct both control and components500 candidates; require exact seed, copy-split trace, candidate partition and membership constraint hashes, component counts and JSON-canonical ownership versus the preserved original producer. Reverify inputs and exit successfully before admission.",
+  "resources": {"cpus": 16, "memory_gib": 64, "wall_limit_hours": 1, "host": "local shared Threadripper"},
+  "selection": "Only a successfully terminal reconstruction with exact artifact matches can support subsequent independent scoring admission. Retain mismatches or crashes as failures. This diagnostic has no benchmark labels, native inference or scoring.",
+  "scientific_parameters_changed": false,
+  "native_inference_rerun": false,
+  "defaults_promoted": false,
+  "goal_completed": false
+}
