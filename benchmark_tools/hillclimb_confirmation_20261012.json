@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "prespecified_candidate_confirmation_exposure_audit",
+  "purpose": "Seek additional confirmation evidence without mislabeling reused development inputs as independent validation. Stage sequence inputs and audit overlap only; do not evaluate accuracy until a candidate method and protocol are frozen.",
+  "candidate": "paraBench proteomes, repository revision 05cae01b38122792d77386ea223d48aeea47681c",
+  "primary_source": "https://github.com/rderelle/paraBench/tree/05cae01b38122792d77386ea223d48aeea47681c",
+  "authors_declared_origin": "17 proteomes from QfO 2019, with simplified sequence names. This makes species and protein reuse plausible despite renamed identifiers.",
+  "downloads": [
+    {"name": "proteomes__1-4.zip", "bytes": 21525952, "git_blob_sha1": "483cad42a3739ade2288e127f99488b6d30b8e3b"},
+    {"name": "proteomes__2-4.zip", "bytes": 17417567, "git_blob_sha1": "e3ac7be74a026539c9bc0a36cc6a1af59e5fec41"},
+    {"name": "proteomes__3-4.zip", "bytes": 24371854, "git_blob_sha1": "97d54d110a660bb4ea378ff7c1036c91951299be"},
+    {"name": "proteomes__4-4.zip", "bytes": 16873501, "git_blob_sha1": "77196e6c53b7c8275394eaf79fb02fdb89b01e57"}
+  ],
+  "comparison_inputs": {"OrthoBench": 251378, "QfO": 984137, "ThreeKingdoms": 443217},
+  "sequence_rule": "Reuse the established YGOB overlap fingerprint: uppercase amino-acid sequence and remove one terminal translation stop; preserve internal stops, gaps, and ambiguous residues. Report this normalization explicitly; identifier renaming must not defeat the audit.",
+  "admission": "Any matching candidate sequence rules out strict sequence-disjoint confirmation. Lack of exact matches does not establish species, gene-family, label, or evolutionary independence. Do not select subsets based on accuracy outcomes. Newer QfO releases are annotation-update robustness candidates, not automatically independent datasets.",
+  "reference_label_policy": "Do not download, read, or score reference_classification.txt, OG alignments, family trees, or precomputed predictions in this staging audit. Validate reference/scoring semantics and redistribution permissions separately if the dataset is subsequently used.",
+  "resources": {"cpus": 1, "target_memory_gib": 4, "maximum_uncompressed_archive_bytes": 2147483648, "maximum_archive_members": 256},
+  "implementation": "Read ZIP members as streams without extracting paths or executing upstream code; reject unsafe archive paths, encryption, duplicate member names, empty or invalid FASTA inputs; hash all archives and development FASTAs before and after the audit.",
+  "limitations": ["This audits sequence exposure, not inferred orthology accuracy or benchmark reference quality.", "All previously evaluated YGOB and simulation panels remain development-exposed.", "Novel random seeds can support confirmation conditional on a simulator, but do not establish independent biological generalization.", "Public availability alone does not establish permission to redistribute dataset bytes; keep raw archives local and commit provenance rather than proteomes.", "Missing suitable independent reference data remains nonblocking for development hill-climbing; disclose that limitation rather than inventing independence."],
+  "git": "Commit and push the plan and tested audit implementation before the audit; then retain and push verified acquisition, overlap, and interpretation receipts. Production defaults are unchanged."
+}
