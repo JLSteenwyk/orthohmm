@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "dataset": "OrthoBench",
+      "expected_genes": 251378,
+      "expected_species": 12,
+      "native_edges": 1935903
+    },
+    {
+      "dataset": "ThreeKingdoms",
+      "expected_genes": 443217,
+      "expected_species": 12,
+      "native_edges": 2242431
+    }
+  ],
+  "defaults_promoted": false,
+  "execution_plan": {
+    "bytes": 44060761,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v1_20261013/execution_plan.json",
+    "sha256": "652722ccf2b8b2311e50ce842cfa420d55fde3af21efca0dffae0fab4423f9e9"
+  },
+  "generated_at_utc": "2026-10-13T05:23:09.663334+00:00",
+  "goal_completed": false,
+  "input_records": 137038,
+  "job_id": 24199,
+  "limitations": [
+    "This is a cached native HMM/profile graph reconstruction with inferred phylogeny, not fresh full-pipeline timing.",
+    "Exact baseline candidate, membership, native-product and deterministic-score control gates remain to be exercised on actual datasets.",
+    "QfO fixed-tree scores remain pending; candidate-specific inferred-tree QfO follow-up and a complete eight-endpoint vector remain required.",
+    "All data are development-exposed; shared-host timing is confounded and production defaults remain unchanged."
+  ],
+  "parent_screen": {
+    "execution_plan": {
+      "bytes": 40230348,
+      "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_copy_split_r1_v1_20261013/execution_plan.json",
+      "sha256": "39e56cc7c73c168576627419997fec882fa5e588c8fd29f8c4bc49d628e83d4e"
+    },
+    "job_id": 24198
+  },
+  "protocol": {
+    "bytes": 4016,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/hillclimb_deferred_inferred_supplement_20261013.json",
+    "sha256": "06eac8c92786d857be00b766f1da47dba1c1ca75788d8a91b1e8680ba0cd8a3c"
+  },
+  "scheduler": "JobId=24199 JobName=ohmm-deferred-infer\n   UserId=bizon(1000) GroupId=bizon(1000) MCS_label=N/A\n   Priority=1 Nice=0 Account=(null) QOS=normal\n   JobState=PENDING Reason=Dependency Dependency=afterany:24198(unfulfilled)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=00:00:00 TimeLimit=3-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-13T01:21:48 EligibleTime=Unknown\n   AccrueTime=Unknown\n   StartTime=Unknown EndTime=Unknown Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-13T01:21:48 Scheduler=Main\n   Partition=gpu AllocNode:Sid=bizon-link:2951274\n   ReqNodeList=bizon ExcNodeList=(null)\n   NodeList=\n   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=16,mem=64G,node=1,billing=16\n   AllocTRES=(null)\n   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*\n   MinCPUsNode=16 MinMemoryNode=64G MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/work/deferred_inferred_supplement_r1_v1_20261013/benchmark_tools/run_deferred_inferred_supplement.slurm\n   WorkDir=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm\n   StdErr=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v1_20261013/slurm-24199.log\n   StdIn=/dev/null\n   StdOut=/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmarks/results/deferred_inferred_supplement_r1_v1_20261013/slurm-24199.log\n   TresPerTask=cpu=16\n   \n\n",
+  "scope": "Development-exposed lossless native HMM/profile graph reconstruction with candidate-specific inferred phylogeny; not fresh full-pipeline timing.",
+  "source_records": 1138,
+  "source_revision": "fca0a83f13e3f92c339182a26a57cefceefb6c2c",
+  "status": "submitted_pending_verified_parent_dependency",
+  "tests": {
+    "bytes": 19110,
+    "path": "/mnt/ca1e2e99-718e-417c-9ba6-62421455971a/ORTHOHMM/orthohmm/benchmark_tools/results/deferred_inferred_supplement_final_tests_20261013.xml",
+    "sha256": "53555816918cb1a8e1c059d22ef2a0668e8bde70dc1d49f93f29526c42946876"
+  },
+  "tests_passed": 127
+}
